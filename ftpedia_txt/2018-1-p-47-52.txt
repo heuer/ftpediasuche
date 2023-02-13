@@ -1,0 +1,222 @@
+
+Getriebe
+
+Getriebe
+
+Automatische Differentialsperre
+Martin Wanke
+Eine ft:pedia ohne Differential? – Nein. Es war bisher in zwei Dritteln aller Ausgaben enthalten, und diese hier soll sich einreihen. fischertechnik-Differentiale wurden bereits in mechanischen Wunderwerken wie Planetarien, Uhren oder Rechenmaschinen verbaut, in anderen
+Beiträgen wurde ihre Funktion anschaulich erklärt, und es kam – natürlich – in verschiedenen
+Fahrzeugantrieben zum Einsatz. Hier kommt nun ein weiteres Kapitel hinzu, in welchem dieses
+vielseitige Bauteil zur automatischen Sperre eines Antriebsdifferentials verwendet werden soll.
+Eine Differentialsperre
+findet
+man
+typischerweise in Geländewagen. Sie wird
+– manuell oder automatisch – aktiviert, um
+die Wirkung eines Antriebsdifferentials zu
+unterdrücken, wenn sich auf rutschigem
+Boden alle Räder zwangsweise gleich
+schnell drehen sollen.
+
+
+In Abb. 1 ist eine nicht-automatische
+Differentialsperre zu sehen. Durch das
+manuelle Absenken der schwarzen Zahnräder drehen sich das rechte Rad und das
+Außenzahnrad des Differentials und
+folglich auch das linke Rad zwangsweise
+gleich schnell.
+Ohne die Sperre würde sonst die gesamte
+Leistung an einem durchdrehenden Rad
+sinnlos verpulvert werden. Im Automobilbau gibt es dafür u. a. automatische hydraulische und elektromechanische Lösungen,
+
+hier soll aber eine rein mechanische gezeigt
+werden, die automatisch aktiviert wird.
+
+Idee: Drehzahlen differenzieren
+Mit einem Differential kann man ja auch
+rechnen, und zwar, wie der Name schon
+sagt, beispielsweise Drehzahlen differenzieren. Hier wird ein „Rechendifferential“
+verwendet, um den Drehzahlunterschied
+der zwei Antriebsräder zu ermitteln und um
+das Antriebsdifferential zu sperren, wenn
+beim Durchdrehen eines Rades der Unterschied zu groß wird.
+Fachleute merken beim Betrachten der
+Bilder bestimmt gleich, dass es sich im
+Prinzip um ein Gleichlaufgetriebe handelt,
+nur dass hier nicht aktiv eine Drehzahl auf
+ein Rad „aufaddiert“ wird, sondern die
+Drehzahldifferenz passiv „gemessen“ wird.
+Die Differenzdrehzahl wird dann auf eine
+Fliehkraftbremse geleitet, die ab einem
+bestimmten Wert blockiert und in diesem
+Moment zwangsweise die Differenz auf
+null setzt. Das wirkt wiederum rückwärts
+über das Rechendifferential auf das
+Antriebsdifferential, an welchem sich jetzt
+beide Räder gezwungenermaßen gleich
+schnell drehen müssen.
+
+
+
+
+
+Technik: Alte fischertechnikDifferentiale
+Die alten fischetechnik-Differentiale eignen
+sich vorzüglich für diesen Zweck, weil sie
+mit ihrem Z15-Außenzahnrad in Kombination mit den Zahnrädern Z10 und Z20
+passende und gleichzeitig platzsparende
+Übersetzungsmöglichkeiten bieten.
+In Abb. 2 sieht man rechts den Motor im
+Heck des Modellfahrzeugs. Er wirkt auf das
+hintere Differential, das ist das Antriebsdifferential. Dessen Außenzahnrad wirkt
+auf das vordere, das Rechendifferential.
+Davor befindet sich senkrecht stehend mit
+den alten Reifen die Fliehkraftbremse.
+Vorne, unter dem Akku, befindet sich die
+Vorderachse mit einer simplen Lenkung.
+In der Draufsicht in Abb. 3 ist die senkrecht
+stehende Fliehkraftbremse abgenommen,
+damit das Getriebe besser sichtbar wird. Die
+beiden Außenzahnräder der Differentiale
+drehen sich durch die 1:1-Übersetzung
+immer mit der gleichen Drehzahl.
+
+
+
+
+Getriebe
+
+
+ist abgenommen. Dabei ist vielleicht der
+Hinweis wichtig, dass das Fahrzeug nur auf
+den Rädern mit den gelben Felgen steht.
+Alle Räder mit roten Felgen sind Teil des
+Getriebes der Differentialsperre, wobei die
+beiden alten Reifen ein Winkelgetriebe
+bilden.
+Bei normaler Geradeausfahrt dreht sich
+auch das rechte Z20 mit dieser Drehzahl,
+das von ihm angetriebene Z10 wegen der
+1:2-Übersetzung aber doppelt so schnell.
+Diese doppelte Drehzahl auf der rechten
+Seite des Rechendifferentials ergibt zusammen mit der einfachen Drehzahl seines
+Außenzahnrads einen Stillstand auf der
+linken Seite des Rechendifferentials.
+In einer Rechtskurve dreht sich das Z20
+langsamer als das Außenzahnrad des
+Antriebsdifferentials, und folglich das Z10
+nicht mehr doppelt so schnell wie das
+Außenzahnrad des Rechendifferentials.
+
+Dadurch beginnt sich die linke Seite des
+Rechendifferentials im gleichen Sinn mitzudrehen – das ist dann die gesuchte Drehzahldifferenz der Antriebsräder. Diesen
+Zusammenhang hat Thomas Püttmann
+bereits in den Ausgaben 3/2011 und 4/2014
+der ft:pedia sehr gut dargestellt [1, 2].
+Nun wird diese Drehzahldifferenz nur noch
+mit Hilfe der beiden Z20 und dem Winkelgetriebe auf die Fliehkraftbremse übertragen.
+In Abb. 5 sieht man diese Kurvenfahrt. Die
+Drehzahldifferenz ist dabei so klein, dass
+die locker hängenden Statikstreben noch
+nicht durch die Fliehkraft nach außen
+getragen werden und sich also noch nicht an
+dem Grundbaustein, an dem der Akku
+befestigt ist, verhaken. Die Fliehkraftbremse unterbindet also noch nicht die
+unterschiedlichen Drehzahlen der Antriebsräder und die Differentialsperre ist noch
+nicht wirksam.
+
+
+
+
+Dann, in Abb. 8, bleibt es in der Differentialfalle hängen und wie erwartet dreht das
+obere Rad durch, während das untere
+blockiert. Die Fliehkraftbremse beginnt
+sich mit der Differenzdrehzahl zu drehen,
+welches genau die Drehzahl des durchdrehenden Rades ist.
+
+
+Wirkung bei durchdrehendem
+Rad
+Jetzt kommen wir zu dem Fall, in dem die
+Differentialsperre wirkt. Dazu ist zunächst
+in Abb. 6 eine „Differentialfalle“ aufgebaut.
+Oben sind Rollen, auf denen das eine
+Antriebsrad durchdrehen soll, während das
+andere unten vor dem kleinen Hindernis auf
+den Gummis blockieren soll. Damit kann
+die eingangs geschilderte „Durchdrehsituation“ simuliert werden.
+In Abb. 7 kommt das Fahrzeug geradeaus
+angefahren und die Fliehkraftbremse dreht
+sich nicht.
+
+
+Da das aber deutlich schneller ist als
+während der Kurvenfahrt, schlagen jetzt die
+Statikstreben aus und eine verhakt sich an
+dem Grundbaustein (Abb. 9).
+Die Drehzahldifferenz wird dadurch
+zwangsweise auf null gesetzt, und durch die
+dargestellten Zusammenhänge an dem
+Getriebe wirkt das rückwärts auf die
+Antriebsachse, wo sich jetzt beide Räder
+gleichschnell drehen müssen. Die Differentialsperre wirkt also, das untere Rad beginnt
+sich wieder mitzudrehen und hebt das Auto
+über das Hindernis, siehe Abb. 10. Voilà!
+Wie in Abb. 11 zu sehen ist, löst sich die
+Statikstrebe durch die nachlassende Kraft
+und die Vibrationen wieder und die Differentialsperre ist bereit für den nächsten
+Einsatz.
+
+
+Getriebe
+
+Leider ist die Idee nicht neu
+
+Referenzen
+
+Wer den Artikel von Thomas Püttmann in
+der ft:pedia 4/2014 oder die „Technikgeschichte mit fischertechnik“ [3] gelesen
+hat, weiß, dass bereits die alten Chinesen
+mit dem Kompasswagen den wichtigsten
+Teil des hier gezeigten Getriebes erfunden
+hatten. Sie nutzten die Differenzdrehzahl,
+um einen Zeiger auf einem Wagen immer in
+die gleiche Himmelsrichtung zeigen zu
+lassen. Zur Differentialsperre fehlte ihnen
+nur noch die Fliehkraftbremse (und der
+Motor mit Geländewagen drumherum).
+Wirklich erstaunlich, oder?
+
+[1]
+
+Thomas Püttmann: Zahnräder und
+Übersetzungen (Teil 2), in: 2011-3, S. 25-28.
+
+[2]
+
+Thomas Püttmann: Das
+Differentialgetriebe, in: 2014-4, S. 12-19.
+
+[3]
+
+Dirk Fox und Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt-Verlag, Heidelberg 2015.
+
+[4]
+
+Martin Wanke: fischertechnik:
+Automatische Differentialsperre
+Modellvideo auf youtube, 2018.
+
+
+
+
+
+
+
+
+
+
+

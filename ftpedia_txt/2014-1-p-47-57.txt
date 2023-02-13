@@ -1,0 +1,983 @@
+
+Computing
+
+Computing
+
+I²C mit dem TX – Teil 9: LC-Displays
+Dirk Fox
+Das Display des TX eignet sich nur sehr eingeschränkt als Ausgabeeinheit oder zur Kontrolle
+des Programmablaufs: Der Kontrast ist schwach und das 16 Zeichen breite Display sehr
+klein (2 x 3 cm) und unbeleuchtet. Zudem schaltet es sich bei einigen Programmen nach
+kurzer Zeit ab – offenbar ein Designfehler. Dank I²C-Schnittstelle ist jedoch Abhilfe möglich:
+Für kleines Geld gibt es leistungsfähige LC-Displays, die sich vom TX ansteuern lassen.
+
+Hintergrund
+Tatsächlich ist die „Benutzerschnittstelle“
+des TX, das Display, in mehrerlei Hinsicht
+ein Ärgernis: Je nach Lichteinfall ist es
+kaum ablesbar, da der Kontrast schwach ist
+und eine Hintergrundbeleuchtung fehlt.
+Zudem neigt es bei manchen Programmen
+dazu, nach z. T. sehr kurzer Betriebszeit
+den Dienst zu quittieren. Eine effektive
+Unterstützung bei der Fehlersuche im
+Download-Mode ist daher damit ebenso
+wenig möglich wie eine verlässliche
+Anzeige von Mess- oder Zählwerten.
+Bis vor wenigen Jahren waren Flüssigkristallanzeigen (Liquid Crystal Displays,
+LCD) relativ kostspielig, daher wurde an
+LCDs gerne gespart. Inzwischen sind großflächige und mit einer LED-Hintergrundbeleuchtung ausgestattete LCDs zumindest
+für monochrome Textausgabe zu moderaten Preisen als I²C-Komponenten erhältlich.
+
+1 Das Conrad-LCD
+LCDs mit einem Controller für die zeilenweise Textausgabe richten sich meist nach
+der Spezifikation des HD44780 von
+Hitachi [1]. Ein ebensolches – zweizeiliges
+– 5 V-Display (1,5 x 5 cm, ohne Hintergrundbeleuchtung) gibt es „ready for TX“
+von Conrad Electronic (Best.-Nr. 198330,
+
+gerade günstig. Dafür enthält die I²CBibliothek von Robo Pro bereits einen
+Treiber (LCD-PCF8574-HD44780) für
+dieses Display, und der Wannenstecker des
+dem TX beiliegenden Extension-Kabels
+passt exakt in die Anschlussbuchse.
+
+
+Für die Ansteuerung über das I²C-Protokoll kommt der 8-bit-Expander PCF8574
+[2] von NXP (aus dem Jahr 1994, damals
+noch Philips) zum Einsatz, der das serielle
+I²C-Protokoll in eine parallele Ansteuerung
+des Displays umsetzt.1 Der Kontrast des
+Displays lässt sich manuell über ein Poti
+einstellen (Abb. 2).
+
+Von diesem IC wird noch an anderer Stelle zu
+reden sein, denn mit ihm lassen sich die
+begrenzten I/O-Ports des TX um ein Vielfaches
+erweitern.
+
+
+
+Voreingestellt ist die I²C-Adresse 0x20;
+sieben weitere Adressen, 0x21 bis 0x27,
+können über Jumper auf dem Board des
+PCF8574 ausgewählt werden (Abb. 2).
+Damit lassen sich bis zu acht LCDs an
+einem I²C-Bus getrennt adressieren.
+Poti (Kontrast)
+Adress-Jumper
+
+des Conrad-Displays
+
+Der PCF8574 beherrscht lediglich den
+Standard Mode. Tatsächlich sind aber
+nicht die 100 kHz des I²C-Protokolls der
+‚Flaschenhals’, sondern die Verarbeitungsgeschwindigkeit des HD44780.
+Seit kurzem gibt es ein Nachfolgemodell,
+das ebenfalls zweizeilige (2 x 16 Zeichen)
+LC-Display C-Control Pro AVR 32-bit
+(Conrad Best.-Nr. 192602) mit blauem
+Display und Hintergrundbeleuchtung – für
+nur noch 25 € (zzgl. Versand), ebenfalls
+mit TX-kompatiblem Wannenstecker.
+
+2 Das LCD2004
+Wer bereit ist, sich ein passendes
+Anschlusskabel zu basteln, erhält für einen
+niedrigeren Preis ein erheblich größeres
+Display (vierzeilig mit je 20 Zeichen;
+2,5 x 7,5 cm) inklusive LED-Backlight:
+das LCD2004 mit einem PCF8574T
+(Abb. 3).
+
+
+Die Helligkeit der LED-Hintergrundbeleuchtung kann mit einem auf der Platine
+des PCF8574T angebrachten Poti mit
+einem kleinen Schraubenzieher manuell
+eingestellt werden (Abb. 4). Der mit ‚LED’
+bezeichnete Jumper aktiviert die LED-Hintergrundbeleuchtung. Das Display wird
+unter anderem angeboten von Sainsmart
+(15 US$ inkl. Versand) und EXP (20 €
+zzgl. Versand).
+
+Der I²C-Treiber aus der Robo ProBibliothek funktioniert sicherlich auch mit
+diesem Board – das habe ich allerdings
+nicht getestet.
+Auf die Ansteuerung dieses Displays unter
+Robo-Pro will ich hier nicht näher eingehen, da es interessante Alternativen gibt –
+und die Programmierung der des im folgenden Abschnitt vorgestellten LCD2004
+ähnelt.
+
+
+des LED-Backlights
+
+Der zweizeilige „kleine Bruder“ des
+LCD2004, das Board LCD1602 – bei EXP
+für knapp 14 € (zzgl. Versand) erhältlich –
+ähnelt technisch dem neuen ConradDisplay, verfügt allerdings wie das
+LCD2004 nur über die feste I²C-Adresse
+0x27 (siehe unten).
+
+Anschluss an den TX
+Der PCF8574T erfordert eine Betriebsspannung zwischen 2,5 und 6 V. Das
+Display kann daher direkt am TX betrieben
+werden. Geliefert wird es mit einem
+vieradrigen Anschlusskabel. Wer über ein
+Messer und eine sechspolige Pfostenbuchse verfügt, hat daraus im Handumdrehen ein TX-kompatibles Anschlusskabel
+gefertigt (siehe ft:pedia 4/2013, S. 28 [3]).
+Die Kabel haben bereits die „richtige“
+Belegungsreihenfolge (GND, VCC, SDA,
+SCL) und müssen daher zwischen Wannenstecker und Display-Kontakten nicht
+gekreuzt werden. Die Belegung der Kontakte ist außerdem gut lesbar auf dem
+Board gekennzeichnet.
+
+Computing
+
+entwickelt – sogar eine Wikipedia-Seite ist
+ihm gewidmet [5].
+Der Controller verfügt über ein 8-bit Data
+Register und ein ebenso großes Instruction
+Register. An den Controller können 8-bitASCII-kodierte Zeichen zur Ausgabe auf
+dem Display (Data) und eine Auswahl von
+Befehlen (Instructions) übermittelt werden.
+Neben den Datenleitungen werden dafür
+die folgenden vier Steuerleitungen benötigt:
+· RS: Register Selection – Data (= 1),
+Instruction (= 0)
+· RW: Read (= 1), Write (= 0)
+· EN: Enable, lässt den Controller, das
+Daten-/Instruction-Register auswerten
+
+I²C-Protokoll
+
+· BL: Backlight on (= 1), off (= 0)
+
+Da das LCD via I²C über den schon etwas
+angejahrten PCF8574 adressiert wird, ist
+auch hier die Übertragungsgeschwindigkeit
+auf den Standard Mode (100 kHz) beschränkt [4].
+
+Die maximale Ausführungszeit des Controllers für Instructions liegt bei 37 μs;
+einzig der Return Home-Befehl benötigt
+1,52 ms.
+
+Die feste I²C-Slave-Adresse des Expanders
+ist 0x27 (= 0100 111). Anders als beim
+oben erwähnten Conrad-LCD-Modul ist
+die Adresse beim LCD2004 fest. Daher
+können auf einem I²C-Bus ohne Multiplexer nicht mehrere LCD2004 unabhängig voneinander adressiert werden.
+
+Instructions
+
+Der PCF8574 kennt nur einen Schreib- und
+einen Lesebefehl. Der Schreibbefehl legt
+die acht übermittelten Datenbits auf acht
+Datenleitungen, über die der HD44780 angeschlossen ist. Der Lesebefehl liest die an
+diesen acht Leitungen anliegenden Potentiale aus und schickt sie als Datenbyte über
+den I²C-Bus.
+
+Wert
+
+Befehl (Instruction)
+
+0x01
+
+Clear Screen
+
+0x02
+
+Cursor Home
+
+0x04-0x07
+
+Entry Mode Set
+
+0x08-0x0F
+
+Display Control
+
+0x10-0x1C
+
+Cursor/Display Shift
+
+Der HD44780U
+
+0x20-0x3C
+
+Function Set
+
+Die Spezifikation des Hitachi-Controllers
+HD44780 aus dem Jahr 1999 [1] hat sich
+zum „De-facto-Standard“ für die Ansteuerung von LC-Text- (Dot Matrix) Displays
+
+0x40-0x7F
+
+Set CGRAM Address
+
+0x80-0xFF
+
+Set DDRAM Address
+
+Der HD44780 beherrscht die in Tab. 1
+zusammengefassten Kommandos. Sie werden über das Instruction Register an den
+Controller übergeben (Steuerleitung RS =
+0).
+
+Tab. 1: Instructions des HD44780
+
+Die Befehle Clear Screen (löscht das
+Display und setzt den Adresszähler = 0)
+
+
+
+und Cursor Home (setzt nur den Adresszähler = 0, also den Cursor auf die Position
+links oben) kommen dabei ohne Parameter
+aus. Bei allen anderen, im Folgenden näher
+erläuterten Instructions ändert sich der
+Befehlswert in Abhängigkeit von den
+Parametern.
+Entry Mode Set
+Der Befehl Entry Mode Set (Bit 2 = 1)
+wählt die Schreibrichtung auf dem Display
+und legt fest, ob das Display bei Zeicheneingabe „geschoben“ werden soll:
+· Schreibrichtung: rechts (Hochzählen
+des Display-Adresszählers): Bit 1 = 1;
+links: Bit 1 = 0.
+· Shift: Verschieben des Displays (Bit 0 =
+1).
+Um beispielsweise die Schreibrichtung auf
+„rechts“ bei gleichzeitigem Verschieben
+des Displays zu stellen, muss der Befehlswert 0x07 an den Controller übergeben
+werden.
+Display Control
+Der Befehl Display Control (Bit 3 = 1)
+schaltet das Display an bzw. aus und legt
+fest, ob der Cursor sichtbar sein und
+blinken soll:
+· Display: An: Bit 2 = 1; Aus: Bit 2 = 0
+· Cursor: An: Bit 1 = 1; Aus: Bit 1 = 0.
+· Blinken: An: Bit 0 = 1; Aus: Bit 0 = 0.
+Einen sichtbar blinkenden Cursor stellt
+man also mit dem Befehlswert 0x0F ein.
+Cursor/Display Shift
+Der Befehl Cursor/Display Shift (Bit 4 =
+1) verschiebt den Cursor oder den Displayinhalt um eine Position nach rechts oder
+links:
+· Shift: Display: Bit 3 = 1, Cursor: Bit 3 =
+0.
+
+
+· Richtung: rechts: Bit 2 = 1, links: Bit 2
+= 0.
+So lässt sich beispielsweise mit dem
+Befehl 0x18 und einer Schleife eine Ausgabe in eine Laufschrift verwandeln; der
+Befehl 0x10 bewegt den Cursor nach links,
+0x14 nach rechts. Dabei ist zu beachten,
+dass aufgrund der Adressierung des
+HD44780 (siehe unten) die Zeilen eins und
+drei sowie zwei und vier jeweils wie eine
+Zeile behandelt werden: Zeichen, die aus
+Zeile eins nach links „herausfallen“, werden in Zeile drei von rechts „eingeschoben“.
+Function Set
+Mit dem Befehl Function Set (Bit 5 = 1)
+erfolgen mehrere, für das Funktionieren
+der Schnittstelle zwischen PCF8574T und
+HD44780 wesentliche Festlegungen: die
+Zahl der Datenbits (4/8), die Zahl der
+Display-Zeilen (ein-/mehrzeilig) und der
+verwendete Character Font (5 x 8 bzw.
+5 x 10 Punkte):
+· Data Length (DL): acht Bits: Bit 4 = 1,
+vier Bits: Bit 4 = 0.
+· Number of Lines (N): mehrzeilig: Bit 3
+= 1, einzeilig: Bit 3 = 0.
+· Character Font (F): 5 x 10: Bit 2 = 1,
+5 x 8: Bit 2 = 0.
+Die Bits 1 und 0 können beliebige Werte
+annehmen. Bei mehrzeiligen Displays wird
+nur der Font 5 x 8 unterstützt.
+Das Display-Board LCD2004 arbeitet mit
+vier Datenbits, einem mehrzeiligen Display
+und dem einfachen Character Font (5 x 8)
+– einzustellen mit dem Befehlswert 0x28
+(siehe Abschnitt Initialisierung).
+Set DDRAM Address
+Die für die Ausgabe auf dem LC-Display
+vorgesehenen Zeichen werden in einem 80
+Byte großen RAM-Bereich (Display Data
+RAM, DDRAM) abgelegt. Der ‚Zeiger’
+auf die aktuelle Schreibposition wird mit
+
+dem Befehl Set DDRAM Address gesteuert. Dafür wird im Instruction-Byte Bit 7
+gesetzt; Bit 0 bis 6 enthalten die gewählte
+DDRAM-Adresse.
+Will man die Schreibposition auf die erste
+Position der ersten Zeile setzen, muss der
+Befehlswert 0x80 an den Controller übergeben werden.
+Zeichensatz
+Der HD44780 unterstützt den Zeichensatz
+des American Standard Code for Information Interchange (ASCII) [6]. Darin ist die
+Bedeutung der Zeichenkodes 0x20 bis
+0x7E international vereinheitlicht. Die Zeichenkodes 0x00 bis 0x1F sowie 0x7F sind
+darin mit Steuerzeichen belegt; die 128
+Zeichen von 0x80 bis 0xFF können unterschiedliche Zeichen repräsentieren.
+
+Computing
+
+im Zeichensatz nicht an den gewohnten
+Stellen, sind jedoch enthalten.
+Mit dem Befehl Set CGRAM Address
+können einige wenige eigene Zeichen
+spezifiziert werden – entweder acht im
+5 x 8-Font oder vier im 5 x 10-Font. Dazu
+werden die Zeichen in das 64 Byte große
+CGRAM geschrieben (je eine 5 bit breite
+Bitmuster-Zeile je CGRAM-Byte). Auf
+eine nähere Erläuterung dieser für die
+meisten Anwendungen nicht relevanten
+Funktion verzichte ich an dieser Stelle;
+Details finden sich in der Hitachi-Spezifikation [1].
+
+Der HD44780 wird mit zwei verschiedenen Character ROMs angeboten: einer
+japanischen (ROM-Code A00) und einer
+europäischen Variante (ROM-Code A02).
+Die beiden Zeichensätze unterscheiden
+sich wie folgt (siehe Tabelle 4 der Spezifikation [1], S. 17-18):
+· Der japanische Zeichensatz enthält statt
+des Backslash (‚\’) in 0x5C das Währungszeichen für Yen (‚¥’), und statt der
+Tilde (‚~’) steht der Zeichencode 0x7E
+für einen Pfeil (‚→’).
+· Der europäische Zeichensatz entspricht
+in den oberen 128 Zeichen dem Standard ISO/IEC 8859-1 [7], der japanische dem Shift-JIS-Zeichensatz von
+1982 [8].
+· Alle Steuerzeichen (0x00 bis 0x1F)
+werden im japanischen Zeichensatz als
+Leerzeichen angezeigt; im europäischen
+Zeichensatz sind sie mit Sonderzeichen
+und grafischen Symbolen belegt.
+Das LCD2004 wird mit dem japanischen
+Character ROM geliefert. Deutsche Umlaute und Sonderzeichen finden sich daher
+
+
+Initialisierung
+Nach dem Einschalten der Stromzufuhr ist
+der LCD-Controller im 8-bit-Modus und
+erwartet ein einzeiliges Display. Display
+und Cursor sind ausgeschaltet, der
+Eingabe-Modus auf ‚No Shift’ voreinge-
+
+
+
+
+stellt, d. h. kein Scrollen des Displays, und
+‚Inkrement’, d. h. Schreiben von links nach
+rechts (S. 23 [1]).
+
+denn der Adressraum verteilt sich wie folgt
+auf die Zeilen:
+
+Diese Default-Einstellung muss für unser
+LCD2004 zu Programmbeginn auf den 4bit-Modus und ein mehrzeiliges Display
+umgestellt werden (Function Set). Diese
+Initialisierung ist trickreich – geht man
+nicht exakt nach der Spezifikation vor,
+dann sind die Resultate nicht vorhersagbar.
+
+· Zweite Zeile: Adressen 0x40-0x53
+
+· Erste Zeile: Adressen 0x00-0x13
+· Dritte Zeile: Adressen 0x14-0x27
+· Vierte Zeile: Adressen 0x54-0x67
+
+sehr gut wieder: In dem roten Kästchen
+erkennt man den Function Set-Befehl.
+Daran sollte sich die Einstellung des Entry
+Mode (siehe oben) anschließen. Wer den
+Ablauf lieber als Programmcode möchte,
+dem sei [9] empfohlen.
+Zeichenausgabe
+Die auf dem LC-Display auszugebenden
+Zeichen werden vom Controller in einen
+80 Byte großen Zeichenpuffer (DDRAM)
+geschrieben. Das erfolgt – bei entsprechender Initialisierung – mit einem Auto-Inkrement, d. h. der Adresszähler des DDRAM
+wird nach jedem Zeichen-Ausgabebefehl
+automatisch um eins erhöht, die Zeichen
+werden von rechts nach links geschrieben.
+Bei der Initialisierung (Clear Display) wird
+der Adresszähler des DDRAMs auf Null
+gesetzt. Die erste Zeichenausgabe beginnt
+also in der linken oberen Ecke des
+Displays, sofern man den Adresswert nicht
+mit der Set DDRAM Address Instruction
+verändert hat (siehe oben).
+Die Ausgabe eines einzelnen ASCII-Zeichens erfolgt durch einen Daten-Schreibbefehl (Abb. 6).
+Da der HD44780 zweizeilige Displays
+erwartet, bilden die ersten 40 Byte (0x000x27) die erste Ausgabezeile, die Adressen
+0x40-0x67 die zweite. Bei unserem vierzeiligen Display muss die Cursorposition
+nach der Zeichenausgabe korrigiert
+werden, wenn ein Zeilenende erreicht ist,
+
+
+an die aktuelle Position im DDRAM
+
+RoboPro-Treiber
+Der oben erwähnte, mit Robo Pro ausgelieferte I²C-Treiber für das Conrad-Display
+(LCD-PCF8574-HD44780)
+funktioniert
+nicht mit dem LCD2004 – nicht nur, weil
+jener die I²C-Adresse 0x20 verwendet,
+sondern auch, weil die Anschlüsse zwischen PCF8574 und HD44780 beim
+LCD2004 anders belegt sind (Tab. 2).
+
+
+
+
+
+
+
+
+D3
+
+D2 D1
+
+D0
+
+BL
+
+EN RW RS
+
+Tab. 2: I²C-Datenbyte an den PCF8574:
+vier Datenbits, vier Steuerbits
+
+Im Downloadbereich der ft:c habe ich
+einen Treiber für das LCD2004 hochgeladen, der – bis auf die Erzeugung eigener
+Zeichen – alle Kommandos des LCD2004
+unterstützt. Bei Bedarf lässt sich der Trei-
+
+
+Computing
+
+ber mit wenigen Änderungen an das zweizeilige LCD1602 anpassen.
+
+3 Das LCD05
+Eine etwas teurere Alternative ist das
+LCD05 von Devantech Ltd. [10], das ebenfalls mit einer Betriebsspannung von 5 V
+arbeitet. Es ist in vier Varianten erhältlich:
+mit zwei Zeilen à 16 Zeichen (wie die
+Conrad-LCDs und das LCD1602) und
+vierzeilig mit je 20 Zeichen (wie das
+LCD2004), entweder mit weißer Schrift
+auf blauem oder mit schwarzer Schrift vor
+grünem Hintergrund (Abb. 7).
+
+
+Das LCD05 wird unter anderem von
+nodna, manu systems und lipoly.de angeboten und kostet in der 4 x 20-ZeichenVariante knapp 30 €.
+Anschluss an den TX
+Die Ansteuerung des LCD erfolgt über
+einen PIC18F23K22 von Microchip Technology Inc., der eine Betriebsspannung von
+2,3 bis 5,5 V erwartet und daher direkt am
+I²C-Bus des TX betrieben werden kann
+[11]. Dazu muss der auf dem Board mitgelieferte Mode-Jumper (siehe Abb. 8) entfernt werden. Die Belegungsreihenfolge
+der I²C-Anschlüsse entspricht der anderer
+Devantech-Sensoren (siehe z. B. [12]):
+· Rot: VCC (5 V)
+
+und Mode-Jumper
+
+Die Verwendung des PIC18F23K22 wirkt
+ein wenig, als wolle man mit Kanonen auf
+Spatzen schießen, denn der IC ist ein sehr
+leistungsfähiger, mit 64 MHz getakteter
+RISC-Prozessor mit 512 Byte SRAM,
+256 Byte EEPROM, 8 kB Flash Memory
+Programmspeicher, 25 I/O-Ports, 19 A/DWandlern (10 bit) sowie drei 8-bit- und
+vier 16-bit-Timern. Allerdings unterstützt
+der Controller nach Datenblatt nicht die
+volle Spezifikation des I²C Fast Mode. Der
+Betrieb mit 400 kHz funktionierte bei
+meinen Tests jedoch problemlos.
+Ohne Hintergrundbeleuchtung liegt der
+Stromverbrauch aller vier Varianten des
+Displays bei lediglich 5 mA; mit Hintergrundbeleuchtung benötigen die grünen 80
+bzw. 135 mA, die blauen lediglich 40 bzw.
+55 mA. Text auf dem blauen Display ist
+allerdings nur mit Hintergrundbeleuchtung
+lesbar.
+Die I²C-Adresse des Displays ist auf 0x63
+voreingestellt. Sie kann via I²C-Befehl umgestellt werden auf 0x64, 0x65, 0x66 oder
+0x67. Damit lassen sich bis zu fünf
+LCD05-Displays auf demselben Bus separat adressieren. Beim Einschalten des Displays wird die eingestellte I²C-Adresse
+angezeigt, sofern die Anzeige nicht unterdrückt oder geändert wurde (siehe unten).
+
+· Schwarz: SDA (Datenleitung)
+
+Datenregister
+
+· Gelb: SCL (Clock)
+
+Das LCD05 verfügt über insgesamt vier
+Datenregister. Register 0x00 enthält die
+Zahl der noch freien Bytes des 100 Byte
+
+· Weiß: GND
+
+
+
+
+großen FIFO-Anzeigepuffer (First In –
+First Out). Dieser Wert ist relevant, um die
+Geschwindigkeit des Programms mit der
+des Displays zu synchronisieren, wenn
+man z. B. schnell wechselnde Anzeigeoder Lauftexte ausgeben möchte. In der
+Regel ist der Puffer jedoch groß genug, um
+auszugebende Zeichen zwischenzuspeichern, bis sie auf dem Display angezeigt
+werden.
+
+(0x09), Line Feed (0x0A), Vertical Tab
+(0x0B), Clear Screen (0x0C) und Carriage
+Return (0x0D) setzt der Controller geeignet für das verwendete Display um.
+
+Reg.
+0x00
+
+Wert
+
+Kommando
+
+0x01
+
+Cursor Home
+
+0x02
+
+Set Cursor (1-80/32)
+
+0x03
+
+Set Cursor (Zeile, Spalte)
+
+Inhalt
+
+0x04
+
+Hide Cursor
+
+Command Register (write)
+
+0x05
+
+Show Underline Cursor
+
+Freie Bytes im FIFO-Puffer
+(read)
+
+0x06
+
+Show Blinking Cursor
+
+0x08
+
+Backspace
+
+0x01
+
+Keypad Low Byte (read only)
+
+0x09
+
+Horizonzal Tab (Default: 4)
+
+0x02
+
+Keypad High Byte (read only)
+
+0x0A
+
+Smart Line Feed
+
+0x03
+
+Version (read only)
+
+0x0B
+
+Vertical Tab
+
+0x0C
+
+Clear Screen
+
+0x0D
+
+Carriage Return
+
+0x11
+
+Clear Column
+
+0x12
+
+Tab Set
+
+0x13
+
+Backlight On
+
+0x14
+
+Backlight Off (Default)
+
+0x15
+
+Disable Startup Screen
+
+0x16
+
+Enable Startup Screen
+
+0x17
+
+Save as Startup Screen
+
+0x18
+
+Set Display Type
+
+0x19
+
+Change Address
+
+0x1B
+
+Custom Char Generation
+
+0x1E
+
+Contrast Set
+
+0x1F
+
+Brightness Set
+
+Tab. 3: Datenregister des LCD05
+
+Register 0x01 und 0x02 sind nur bei
+gleichzeitiger Verwendung einer direkt
+anschließbaren Zifferntastatur relevant und
+werden im Folgenden nicht weiter betrachtet.2 Register 0x03 enthält die Versionsnummer der Firmware; mein Exemplar des
+LCD05 liefert die Versionsnummer 1
+(Tab. 3).
+Befehlsregister
+Wie bei anderen Devantech-Sensoren [12]
+ist auch beim LCD05 das Register 0x00
+das Command Register. Auszuführende
+Befehle werden mit einem I²C-SchreibKommando in dieses Register geschrieben.
+Der Controller des Displays unterstützt
+insgesamt 26 Kommandos (Tab. 4). Sie
+wurden im Wertebereich der nicht druckbaren Zeichen des ASCII-Codes (1 bis 31)
+untergebracht. Die sechs Steuerkommandos Backspace (0x08), Horizontal Tab
+
+
+
+Mit diesen beiden Registern – respektive der
+anschließbaren Zifferntastatur – wird sich ein
+eigener I²C-Beitrag beschäftigen.
+
+Tab. 4: Kommandos des LCD05 (Devantech)
+
+Fast alle Kommandos – bis auf die im
+Folgenden näher erläuterten Befehle –
+kommen ohne Parameter aus.
+
+Set Cursor
+Mit den beiden Set Cursor-Befehlen 0x02
+und 0x03 wird der Cursor auf ein bestimmtes Ausgabefeld gesetzt. An dieser Stelle
+erfolgt die Ausgabe des nächsten Zeichens.
+Als Parameter erwartet das Kommando
+0x02 die absolute Zeichenposition, auf der
+der Cursor platziert werden soll (je nach
+Display-Typ also 1-80 resp. 1-32). Das
+Kommando 0x03 erwartet die Koordinaten: Zeile (1-4/2) und Spalte (1-20/16) in
+jeweils einem Byte-Parameter.
+Anders als beim LCD2004 übernimmt hier
+der PIC18F23K22 die Umrechnung der
+Positionsdaten in die Display-RAMAdresse des HD44780. Das macht die
+Ansteuerung wesentlich einfacher und
+intuitiver.
+Set Display Type
+Damit die Umrechnung der Cusor-Position
+PIC18F23K22 in Zeile und Spalte korrekt
+erfolgt, muss – am besten bei der Initialisierung, siehe unten – das richtige Display
+eingestellt sein. Vier verschiedene DisplayTypen lassen sich per Set Display TypeBefehl (0x18) einstellen:
+Kennung LCD-Typ
+0x03
+
+20 x 4 (grün)
+
+0x04
+
+20 x 4 (blau)
+
+0x05
+
+16 x 2 (grün)
+
+0x06
+
+16 x 2 (blau)
+Tab. 5: LC-Display-Typen
+
+Computing
+
+zwischen 0 und 10. Er wird als Byte-Parameter übergeben. Damit ändert sich die
+Schrittweite des Horizontal Tab-Kommandos.
+Contrast und Brightness Set
+Mit den beiden Kommandos Contrast Set
+(0x1E) und Brightness Set (0x1F) werden
+Kontrast und Helligkeit der Zeichen auf
+dem Display zwischen 0 und 255 eingestellt. Als Parameter wird jeweils ein Byte
+übergeben. Brightness Set stellt die Helligkeit der Hintergrundbeleuchtung ein. Ist sie
+ausgeschaltet, wird sie durch dieses Kommando automatisch wieder eingeschaltet.
+Zeichenausgabe und Zeichensatz
+Wird ein Wert größer oder gleich 32
+(0x20) in das Befehlsregister geschrieben,
+wird das entsprechende ASCII-Zeichen
+direkt auf dem Display ausgegeben.
+Der Zeichensatz ist wie beim LCD2004 die
+japanische Variante des Character ROMs
+(siehe Abschitt 2).
+Mit dem Befehlscode 0x1B können acht
+eigene Zeichen (Format 5 x 8) erzeugt und
+im Zeichensatz des Controllers an den
+Adressen 0x80 bis 0x87 abgelegt werden.
+Dazu wird der Befehl Custom Char Generation in das Command Register geschrieben, gefolgt von der Adresse des Zeichensatzes (ein Byte) und acht Bytes, die die
+5 x 8-bit-Matrix des Zeichens zeilenweise
+(in den niederstwertigen fünf Bit) beschreiben. In diesen acht Byte muss jeweils das
+höchstwertige Bit gesetzt sein.
+
+Der Wert war bei meinem Display bereits
+korrekt voreingestellt – daher muss man
+diese Setzung bei der Initialisierung eigentlich nur vornehmen, wenn man nicht sicher
+sein kann, dass kein anderes Programm die
+Einstellung verändert hat.
+
+Anschließend können die neu generierten
+Zeichen einfach durch Übermittlung der
+Speicheradresse auf dem Display ausgegeben werden.
+
+Tab Set
+
+Vor der Nutzung des Displays sollte – z. B.
+in einer Initialisierungsfunktion – das korrekte Display eingestellt werden (Set
+Display Type), damit bei der Ausgabe die
+
+Der Befehl Tab Set (0x12) ändert den
+Tabulatorwert (default: 4) auf einen Wert
+
+Initialisierung
+
+
+
+Modell
+
+Conrad-LCD
+
+LCD2004
+
+LCD05
+
+
+
+
+100 kHz
+
+100 kHz
+
+400 kHz
+
+Anschluss
+
+TX-Ext.-Kabel
+
+Wannenstecker
+
+Wannenstecker
+
+Zeichen
+
+2 x 16
+
+4 x 20
+
+4 x 20
+
+Helligkeit
+
+Poti
+
+Poti
+
+Software
+
+Kommandos
+
+
+
+
+Besonderheiten
+
+–
+
+Laufschrift
+
+Start-Screen,
+Anschluss Keypad
+
+25-37 €
+
+20 €
+
+30 €
+
+I²C-Adressen
+Geschwindigkeit
+
+Preis
+
+Tab. 6: Eigenschaften der drei vorgestellten LC-Displays
+
+Displaypositionen der Zeichen richtig
+berechnet werden. Außerdem empfiehlt es
+sich, die Helligkeit und den Kontrast des
+Bildschirms einzustellen.
+Möchte man mehrere LCD05-Displays an
+einem I²C-Bus betreiben oder kollidiert die
+Adresse 0x63 mit einem anderen I²CDevice, muss zuvor noch eine I²C-Adressänderung bei den Displays vorgenommen
+werden, damit sie einzeln adressiert
+werden können. Devantech-Sensoren verwenden dafür eine längere Befehlsfolge,
+die mit dem Change Address-Kommando
+0x19 beginnt:
+0x19 0xA0 0xAA 0xA5,
+gefolgt von der gewünschten (8-bit-) I²CAdresse (0xC6, 0xC8, 0xCA, 0xCC oder
+0xCE). Sofern das Start-Display nicht per
+Kommando deaktiviert wurde, wird beim
+nächsten Einschalten des Displays die I²CAdresse des LCD angezeigt.
+RoboPro-Treiber
+Für das Vorgängermodell von Devantech,
+das LCD03, gibt es in der Robo ProBibliothek der aktuellen Programmversion
+– Rubrik I²C – einen Treiber von Rei Vilo,
+der auch mit dem LCD05 genutzt werden
+kann, da die Befehle des LCD03 auch vom
+LCD05 unterstützt werden. Allerdings
+beschränkt sich der Treiber auf die Befehle
+
+
+Set Cursor, Clear Screen und Backlight
+On/Off.
+Im Download-Bereich der ft:c findet sich
+ein umfangreicher LCD05-Treiber, der (bis
+auf den Zeichengenerator) alle 26 Kommandos des LCD05 über Unterprogramme
+zugänglich macht. Einige zusammengehörige Kommandos wurden darin
+kombiniert – so z. B. die Darstellung des
+Cursors (0x04-0x06) oder die Aktivierung
+bzw. Deaktivierung der Hintergrundbeleuchtung (0x13, 0x14).
+Bei den Tests des Treibers zeigte es sich,
+dass es im Download-Mode zu Fehlern
+(oder Verzögerungen) bei den I²C-Kommandos kommen kann. Mit der Option
+„Wiederholen bis erfolgreich“ arbeiten die
+Befehle jedoch zuverlässig.
+
+Beispielanwendungen
+Auf dem LC-Display lassen sich deutlich
+mehr Informationen unterbringen als auf
+dem TX oder der LED-Anzeige aus
+ft:pedia 4/2012 [13]. Eine nahe liegende
+Anwendung ist daher ein Display für die
+Real Time Clock (RTC) oder die ftFunkuhr (ft:pedia 4/2013 [3] bzw. 3/2012 [14]). Im Downloadbereich der ft:c
+findet ihr einige Robo Pro-Beispielprogramme.
+Auch der GPS-Empfänger aus 3/2013 [15] wäre für ein größeres Display
+
+dankbar. Und für Abfahrts-Anzeigen an SBahn-Modell-Haltestellen oder –Bahnhöfen eignen sich die LC-Displays ebenfalls hervorragend – mit Laufschriften für
+Fahrplanabweichungen oder Meldungen.
+Besonders interessant ist in diesem Zusammenhang, dass sich an das LCD05 ein Zifferntastenblock anschließen und über die
+Datenregister auslesen lässt. Damit kann
+man die ft-Funkuhr mit RTC DS3231 zu
+einem Alarm-Wecker erweitern… – mehr
+dazu in der nächsten Ausgabe der ft:pedia.
+
+Empfehlung
+Die vorgestellten Displays haben unterschiedliche Vor- und Nachteile. Um eure
+Kaufentscheidung zu erleichtern, habe ich
+die meiner Ansicht nach wesentlichen
+Kriterien in einer Tabelle zusammengefasst (siehe Tab. 6).
+
+Quellen
+[1]
+
+Hitachi: HD44780U (LCD-II): Dot
+Matrix Liquid Crystal Display Controller/Driver, Datasheet Rev. 0.0,
+September 1999.
+
+Computing
+
+[4]
+
+NXP: PCF8574; PCF8574A:
+Remote 8-bit I/O expander for I2Cbus with interrupt, Product data sheet
+v.5, 27.05.2013.
+
+[5]
+
+Wikipedia: HD44780.
+
+[6]
+
+Wikipedia: American Standard Code
+for Information Interchange.
+
+[7]
+
+Wikipedia: ISO 8859-1.
+
+[8]
+
+Microsoft: Windows Codepage 932 –
+Japanese Shift-JIS.
+
+[9]
+
+Tim Starling (et.al.):
+LiquidCrystal_I2C, Arduino-Code
+(C++), dfrobot.com, 21.12.2011.
+
+[10] Devantech: LCD05 – I2C/Serial
+LCD, Technical Documentation.
+[11] Microchip: PIC18F23K22, Data
+Sheet, Revision F, 05.06.2012.
+[12] Dirk Fox: I²C mit dem TX – Teil 8:
+Ultraschall-Sensor. ft:pedia 4/2013,
+S. 35-40.
+[13] Dirk Fox: I²C mit dem TX – Teil 2:
+LED-Display. ft:pedia 4/2012, S. 3237.
+
+[2]
+
+Philips: PCF8574: Remote 8-bit I/O
+expander for I2C-bus, Datasheet,
+September 1994.
+
+[14] Dirk Fox, Dirk Ottersmeyer: Bau
+einer ft-Funkuhr. ft:pedia 3/2012, S.
+4-10.
+
+[3]
+
+Dirk Fox: I²C mit dem TX – Teil 7:
+Real Time Clock (RTC). 4/2013, S. 28-34.
+
+[15] Dirk Fox: I²C mit dem TX – Teil 6:
+GPS-Sensor. ft:pedia 3/2013, S. 5462.
+
+
+

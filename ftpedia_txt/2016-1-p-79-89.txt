@@ -1,0 +1,811 @@
+
+Computing
+
+Computing
+
+I²C mit dem TX(T) – Teil 13: Farbsensor
+Dirk Fox
+Seit der ft:pedia-Ausgabe 3/2012 [1] stellen wir in loser Folge I²C-Senoren sowie die zugehörigen Robo Pro-Treiber vor. Inzwischen beherrscht auch der TX-Nachfolger TXT das I²CProtokoll. Die I²C-Anschlüsse an dessen Erweiterungsport (EXT) arbeiten aber nicht mit den
+beim TX anliegenden 5 V, sondern mit 3,3 V. In dieser Folge stellen wir daher zwei Farbsensoren vor – einen für den TX, den anderen für den TXT.
+
+Vorbemerkung
+Für die Bestimmung der Farbe eines Objekts bietet fischertechnik einen Farbsensor.
+
+
+Der Farbsensor verfügt über eine rote LED,
+deren Licht von verschiedenfarbigen
+Flächen unterschiedlich stark reflektiert
+wird. Genau genommen wird vom Sensor
+also nicht die Farbe erkannt, sondern die
+Helligkeit der Reflexion. Der Sensor liefert
+einen
+analogen
+(Spannungs-) Wert
+zwischen 0 und 10.000 mV zurück.
+
+Das Ergebnis ist allerdings stark abhängig
+vom Abstand des Sensors von der Farbfläche – und vor allem vom Umgebungslicht. Daher sollten der Sensor möglichst
+dicht an das Objekt herangeführt und Störlicht abgeschirmt werden.
+Eine Alternative zum fischertechnik-Sensor
+sind RGBC-Farbsensoren, die die Farbe in
+die Farbbestandteile Rot, Grün, Blau (und
+Weiß) zerlegen und deren Anteil bestimmen. Sie sind wesentlich genauer und unabhängiger von Umgebungseinflüssen. Zwei
+sehr leistungsfähige und über das I²C-Protokoll ansprechbare Sensoren mit integriertem Infrarot-Filter stellen wir im Folgenden
+vor. Zunächst aber vorab ein paar grundsätzliche Erläuterungen zum Thema Farbe
+und Licht.
+
+Was ist Licht?
+
+Zur Bestimmung der Farbe werden im Beispielprogramm zum Begleitheft des Baukastens ROBO TX Explorer für die Farben
+rot, grün und blau die folgenden Wertebereiche angegeben:
+• rot: 1.075 bis 1.175
+
+
+• grün: 1.500 bis 1.600
+
+Als Licht bezeichnen wir das Spektrum der
+für Menschen sichtbaren Wellenlängen
+elektromagnetischer Strahlung. Es umfasst
+
+• blau: 1.700 bis 1.800
+
+
+
+
+die Wellenlängen von 380 nm (violett) bis
+780 nm (dunkelrot), siehe Abb. 2. Die
+maximale Empfindlichkeit des Auges liegt
+bei 550 nm (gelbgrün). An den Rändern des
+Spektrums geht das Licht in UV- (Ultraviolett, 100-380 nm) und IR-Strahlung (Infrarot, 780-1000 nm) über.
+Weißes Licht ist eine Mischung der Frequenzen aus dem gesamten Spektrum. Aber
+weiß ist nicht gleich weiß: je nach Intensität
+der verschiedenen Wellenlängen wirkt das
+weiß „wärmer“ oder „kälter“. Abb. 3 bis 6
+zeigen die Farbanteile von Tageslicht, dem
+Licht einer Leuchtstofflampe und dem
+Licht einer (weißen) LED. Man spricht in
+diesem Zusammenhang auch von der Lichtfarbe oder, noch intuitiver, von der Farbtemperatur. Sie wird in Kelvin (K) angegeben: Tageslicht erreicht etwa 6500 K,
+eine weiße LED ca. 3000-4500 K und
+Kerzenlicht etwa 1000 K.
+
+
+(warm)weißen LED
+
+Eigentlich nimmt das Auge jedoch gar nicht
+das gesamte Spektrum wahr, sondern im
+Wesentlichen die Farben Rot, Grün und
+Blau, weil es über drei verschiedene, für
+genau diese drei Farben empfindliche
+Rezeptoren (Zapfen) verfügt. Licht wird
+daher bereits dann als „weiß“ empfunden,
+wenn es – wie bei der Leuchtstofflampe –
+intensive Rot-, Grün- und Blauanteile
+besitzt, die die Zapfen anregen.
+
+Was sind Farben?
+Wie aber sehen wir Farben? Farben entstehen, wenn wir nur einen Teil des Lichtspektrums sehen – z. B. durch Filterung.
+Ein Objekt erscheint farbig, wenn seine
+Oberfläche nur einen ausgewählten Frequenzbereich des sichtbaren Lichts reflektiert. Ein Farbsensor misst also die Frequenzbereiche des von einem Objekt reflektierten Lichts. Dazu ist er oft mit einer
+eigenen Lichtquelle (LED) ausgestattet, um
+eine einheitliche Farbtemperatur des auf das
+Objekt treffenden Lichts sicherzustellen.
+
+Der TCS34725
+Leuchtstofflampe
+
+
+Von der Firma Taos (Texas Advanced
+Optoelectronic Solutions Inc., inzwischen
+Teil von AMS) stammt der I²C-Farbsensor
+TCS34725, der bei einer Betriebsspannung
+von 3,3-5 V eingesetzt werden kann – damit
+ist ein Betrieb sowohl am EXT2-Port des
+TX als auch am TXT möglich. Der Sensor
+ist auf einer Platine von Adafruit z. B. bei
+exp-tech für 7-9 € erhältlich (Abb. 7).
+
+
+Computing
+
+Inzwischen wurde von der Firma Knobloch
+klargestellt, dass der 3,3 V-Pin des EXTAnschlusses am TXT – anders als der 5 VPin beim EXT2-Anschluss des TX – nicht
+für die Stromversorgung eines I²C-Sensors
+ausgelegt ist. Bei dem in [3] vorgestellten
+Temperatursensor als auch beim Farbsensor
+TCS34725 gelang das dennoch ohne Probleme, da der Stromverbrauch der Sensoren
+deutlich unter 1 mA liegt – zumindest dann,
+wenn die LED deaktiviert wird, indem der
+Pin LED mit einem GND-Anschluss des
+TXT verbunden wird.
+
+
+Die Fotodioden zur Farbbestimmung sind
+mit einem IR-Filter ausgestattet. Die Platine
+ist außerdem mit einer LED bestückt, mit
+der das Objekt beleuchtet werden kann. Um
+den Sensor sowohl mit 3,3 V als auch mit
+5 V zu nutzen, sollte der Anschluss Vin
+(statt 3V3) für die Stromzufuhr genutzt werden.
+Technische Daten
+
+Wer auf Nummer sicher gehen oder I²CSensoren bzw. vor allem -Aktoren mit meist
+deutlich höherem Strombedarf anschließen
+will, sollte beim TXT die Stromversorgung
+über einen Step-Down-Wandler aus dem
+9 V-Ausgang des Controllers gewinnen.
+Mehr dazu in einem späteren Beitrag.
+System-Status
+Der Sensor kann vier verschiedene Zustände annehmen: Ruhezustand (Sleep), IdleZustand, Warte-Zustand (Wait) und Auswerte-Zustand (RGBC), siehe Abb. 8.
+
+• Betriebsspannung: 3,3-5 V
+• Stromaufnahme: max. 0,235 mA
+• I²C-Adresse: 0x29 (fest)
+• I²C-Geschwindigkeit: 400 kbit/s
+• Auflösung: 16 bit
+• A/D-Wandlung: 2,4 bis 612 ms
+Die LED des Sensors hat eine Farbtemperatur von 4150 K. Wenn man lediglich die
+Helligkeit oder die Farbtemperatur einer
+Lichtquelle messen möchte, kann man die
+LED abschalten, indem man den Kontakt
+LED (Abb. 7, links unten) mit einem GNDAnschluss des TX(T) verbindet.
+Anschluss an den Controller
+Für den Anschluss an den TX(T) habe ich
+in [2, 3] geeignete Verbindungskabel bzw.
+Adapter vorgestellt.
+
+
+Nach dem Einschalten der Stromversorgung befindet sich der Sensor im SleepZustand. Durch I²C-Befehle, die die in der
+Abbildung angegebenen Status-Flags setzen, kann er in die anderen Zustände überführt werden:
+
+
+
+
+• In den Idle-Zustand geht er über, wenn
+Power On gewählt ist (PON-Flag).
+• Der Wait-Zustand wird eingenommen,
+wenn der Energiesparmodus des Sensors
+(WEN-Flag) ausgewählt wird.
+• Im Wait-Zustand verbraucht der Sensor
+nur 0,065 mA, gegenüber 0,235 mA im
+RGBC-Zustand.
+
+In den Bits 0-4 steht die Adresse des Registers, das nachfolgend (zuerst) gelesen bzw.
+beschrieben werden soll.
+Mit der Special Function (0b11 in Bit 5/6)
+wird eine im Status Register (0x13) gesetzte
+Interrupt-Signalisierung wieder gelöscht
+(0b11100110 = 0xE6).
+Register
+
+Die Zeit, die der Sensor im Wait-Zustand
+verbleibt, bevor er automatisch in den
+RGBC-Zustand übergeht, kann in WTIME
+eingestellt werden. Ist außerdem das
+WLONG-Flag gesetzt, verlängert sich die
+eingestellte Wartezeit auf das 12-Fache. Bei
+maximaler Einstellung (Messung nur alle
+7,37 s) sinkt der durchschnittliche Energieverbrauch auf 0,067 mA.
+
+Der TCS34725 verfügt über 20 zugängliche
+Byte-Datenregister (Tab. 1).
+
+Tatsächlich dürfte die Energieersparnis für
+TX(T)-Anwendungen in der Regel nicht
+relevant sein. Dennoch wird die Nutzung
+dieser Option im Robo Pro-Treiber berücksichtigt. Außerdem unterstützt der Sensor
+Interrupts, die an einem eigenen Ausgang
+(INT, Abb. 6) abgefragt werden können. Für
+die Interrupt-Auslösung können eine untere
+und eine obere Schwelle für den WeißSensorwert definiert werden. Wurde die
+Interrupt-Signalisierung aktiviert, wird das
+Anliegen eines Interrupts außerdem über
+ein Status-Bit angezeigt.
+Command-Befehl
+Ein Command-(Byte-)Befehl ist an einem
+gesetzten Bit 7 (0x80) erkennbar, gefolgt
+von der Selektion des Lese- oder Schreibmodus in Bit 5 und 6:
+• Repeated Byte (0b00, es wird immer
+dasselbe Byte-Register ausgelesen bzw.
+geschrieben) oder
+• Auto Increment (0b01, der Adresszähler
+wird nach jedem gelesenen bzw. geschriebenen Byte automatisch hochgezählt).
+
+
+Register
+
+Bedeutung
+
+0x00
+
+Enable Register
+
+0x01
+
+RGBC Timing Register
+
+0x03
+
+Wait Time Register
+
+0x04-07
+
+Interrupt Threshold
+
+0x0C
+
+Persistence Register
+
+0x0D
+
+Configuration Register
+
+0x0F
+
+Control Register
+
+0x12
+
+ID Register
+
+0x13
+
+Status Register
+
+0x14-1B
+
+RGBC Channel Data
+
+Tab. 1: Register des TCS34725 [4]
+
+Enable Register
+Das Enable Register (0x00) dient zum Aktivieren und Deaktivieren des Sensors und
+einzelner Funktionen:
+• Bit 0: „Power On“ (PON); wenn gesetzt
+wird der Sensor aus dem Sleep-Modus
+geweckt und geht in den Idle-Zustand
+über.
+• Bit 1: „ADC Enable“ (AEN) aktiviert
+den A/D-Wandler zur Bestimmung der
+RGBC-Werte; der Sensor geht in den
+Zustand RGBC über. Vor der ersten
+Messung muss ein Warm-up Delay von
+2,4 ms abgewartet werden.
+• Bit 3: Aktiviert die Energiesparfunktion
+(WEN) über den Wait-Zustand. Die
+Dauer des Warte-Zyklus (WTIME) wird
+durch das Wait Time Register (0x03) und
+
+das WLONG-Flag im Configuration
+Register (0x0D) festgelegt.
+• Bit 4: Ist dieses Bit (AIEN) gesetzt, ist
+die Signalisierung eines Interrupts im
+Status Register (0x13) aktiviert.
+RGBC Timing Register
+Im RGBC Timing Register (0x01) kann die
+Integrationszeit (ATIME) der Analog-Digital-Wandlung (ADC) auf einen Wert zwischen 2,4 ms (0xFF, ein Integrationszyklus)
+und ca. 614 ms (0x00, 256 Integrationszyklen) festgelegt werden; sie wird als
+Zweierkomplement gespeichert.
+Je länger die Integrationszeit, desto höher
+ist die Auflösung des Sensors und die Genauigkeit der Messung. Die Default-Einstellung ist 0xFF (ein Integrationszyklus).
+Wait Time Register
+Im Wait Time Register (0x03) wird die
+Länge der Wartezeit vor einer Messung
+(WTIME) eingestellt. Die Einstellung ist
+nur erforderlich, wenn die Energiesparfunktion mit dem WEN-Flag im Enable Register
+(0x01) gewählt ist. Sie wird als Byte-Zweierkomplement eingetragen und kann zwischen 2,4 ms (Wert 0xFF, default) und ca.
+614 ms (Wert 0x00) gewählt werden.
+Ist außerdem das WLONG-Flag im Configuration Register (0x0D) gesetzt, multipliziert sich die Wartezeit mit 12 (28,8 ms bis
+7,37 s).
+RGBC Interrupt Threshold
+
+Computing
+
+ausgelöst. Wie viele Messwerte hintereinander diese Bedingung erfüllen müssen,
+wird im Persistence Register (0x0C) eingestellt.
+Persistence Register
+Im Persistence Register (0x0C) wird die
+Zahl der Messwerte eingestellt, die in Folge
+die gewählten Schwellenwerte unter- bzw.
+überschreiten müssen, bevor ein Interrupt
+ausgelöst wird. Wählbar sind diskrete
+Werte zwischen eins (0x01) und 60 (0x0F);
+ab fünf (0x04) in Fünferschritten.
+Ist der Wert 0x00 eingestellt, veranlasst
+jede RGBC-Bestimmung einen Interrupt.
+Mit der Integrationszeit (ATIME) und der
+Wartezeit (WTIME) kann so auch eine Zeitspanne festgelegt werden, die ein Schwellenwert maximal unter- oder überschritten
+werden darf, bevor ein Interrupt erfolgt.
+Configuration Register
+Im Configuration Register (0x0D) kann
+lediglich das WLONG-Flag durch das
+Setzen von Bit 1 aktiviert werden. Damit
+wird die im Wait Time Register (0x03) festgelegte Dauer WTIME des Wartezyklus vor
+einer Messung um den Faktor 12 verlängert.
+Die Default-Einstellung ist 0x00.
+Control Register
+In den niederstwertigen beiden Bits vom
+Control Register (0x0F) wird der Verstärkungsfaktor (Gain) für die RGB-Fotodioden eingestellt. Wählbar sind:
+
+Für die Auslösung eines Interrupts (bzw.
+dessen Signalisierung im Status Register)
+können in den RGBC Interrupt Threshold
+Registern 0x04 bis 0x07 ein unterer (0x040x05) und ein oberer (0x06-0x07) 16-bitSchwellenwert für den Weiß-Sensor eingetragen werden – niederstwertiges Byte
+(LSB) zuerst.
+
+• 0b00: einfach (default)
+
+Liegt der vom Weiß-Sensor gemessene
+Wert unter dem unteren oder über dem
+oberen Schwellenwert, wird ein Interrupt
+
+Beim TCS34725 ist im ID Register (0x12)
+der Wert 0x44 (= 68) fest eingetragen. Das
+Register kann daher zur Prüfung verwendet
+
+• 0b01: vierfache Verstärkung
+• 0b10: 16fache Verstärkung
+• 0b11: 60fache Verstärkung
+Alle anderen Bits (2-7) sind ungenutzt.
+ID Register
+
+
+
+
+werden, ob der (richtige) Sensor angeschlossen ist.
+Status Register
+Das Status Register (0x13) zeigt an, wenn
+die RGBC-Bestimmung abgeschlossen ist
+und der Wert ausgelesen werden kann:
+• Bit 0: Der Berechnungszyklus einer
+RGBC-Bestimmung ist abgeschlossen;
+die RGBC-Werte können in den Datenregistern gelesen werden.
+• Bit 4: Ein Interrupt liegt vor, d. h. – je
+nach Einstellung im Persistence Register
+– erfolgte eine (mehrfache) Unter- oder
+Überschreitung der in den Threshold
+Registern eingestellten Schwellenwerte.
+Die Abfrage des Status-Registers vermeidet
+einen Wartezyklus über die Dauer der
+Analog-Digital-Wandlung (ADC), die sich
+aus dem Wert des RGBC-Timing-Registers
+berechnen lässt.
+RGBC Channel Data Registers
+Die gemessenen RGBC-Werte werden als
+vier 16-bit-Werte in den Registern 0x14 bis
+0x1B (mit dem niederwertigen Byte zuerst)
+bereitgestellt. Sie verteilen sich wie folgt:
+
+Farbtemperatur und Helligkeit
+Mit den vom Sensor gemessenen Werten
+lässt sich aber nicht nur die „gesehene“
+Farbe identifizieren, sondern auch die
+Temperatur des (weißen) Lichts (in Kelvin)
+sowie die Helligkeit (in Lux) bestimmen.
+Wie das geht ist in [5] beschrieben: Die
+Helligkeit H berechnet sich aus den (um IRAnteile bereinigten) RGB-Werten (R´, G´
+und B´) nach der folgenden Formel:
+= (0,136 ∙ ´ + ´ − 0,444 ∙ ´)
+∙ 129,17
+
+Der trotz IR-Filter verbleibende IR-Anteil
+an den Messwerten kann wie folgt näherungsweise bestimmt und von den RGBWerten R, G und B abgezogen werden:
+=( +
+
++
+
+− )/2
+
+Der Parameter 129,17 ist passend zu einem
+ATIME-Wert von 2,4 ms und einem Verstärkungsfaktor (Gain) von eins gewählt
+(Default-Einstellungen).
+Den Temperaturwert gewinnen wir nach
+der Gleichung von C. McCamy [5]:
+
+• Rot: 0x16-0x17
+
+´
++ 1391
+´
+Auch hier muss mit den IR-bereinigten
+RGB-Werten gerechnet werden.
+
+• Grün: 0x18-0x19
+
+Robo Pro-Treiber
+
+• Blau: 0x1A-0x1B
+
+Im Downloadbereich der ft:c findet ihr den
+Robo Pro-Treiber für den TCS34725 zum
+Herunterladen.
+
+• Weiß: 0x14-0x15
+
+Da in jeder Oberflächenreflexion alle drei
+Farbanteile enthalten sind, ist der Farbanteil
+maßgeblich, der den größten Wert aufweist.
+Rote, grüne und blaue Oberflächen lassen
+sich so eindeutig identifizieren. Um möglichst unabhängig vom Umgebungslicht zu
+sein (wenn man die LED bei der Messung
+nicht nutzt), sollte man den Mittelwert der
+RGB-Werte bestimmen und für jede Farbe
+die (relative) Abweichung von diesem
+Wert.
+
+
+= 3810 ∙
+
+Er umfasst die folgenden Funktionen:
+• Mit der Funktion TCS34725_Init wird
+der Sensor aus dem Sleep- in den IdleZustand versetzt und die RGBC-Erkennung aktiviert. Dabei wird die ID des
+Sensors geprüft (TCS34725_GetID); ist
+sie fehlerhaft, wird ein Fehler (NC) zurückgeliefert.
+• Die Funktion TCS34725_GetID liefert
+die ID des Sensors (Register 0x12)
+
+zurück; der Rückgabewert muss gleich
+0x44 sein.
+• Mit der Funktion TCS34725_On wird der
+Sensor aus dem Sleep- in den RGBCZustand versetzt; die komplementäre
+Funktion TCS34725_Off versetzt den
+Sensor in den Sleep-Zustand (Power
+Off).
+
+Computing
+
+Der ISL29125
+Von Intersil stammt ein recht junger Farbsensor, der ISL29125 [6]. Er arbeitet mit
+einer Betriebsspannung von 3,3 V und wird
+von Sparkfun auf einem Breadboard angeboten, das u. a. bei exp-tech für unter 9 €
+erhältlich ist (Abb. 9).
+
+• Die Funktion TCS34725_GetRGBC pollt
+den Status (Register 0x13), bis das
+Ergebnis einer RGBC-Messung vorliegt,
+und liefert die digitalen 16-Bit-RGBCWerte Clear, Red, Green und Blue
+zurück.
+• Mit der Funktion TCS34725_SetGain
+kann die Verstärkung des Sensors eingestellt werden; übergeben wird ein Wert
+von 0 (default) bis 3 (16fache Verstärkung).
+• Mit der Funktion TCS34725_SetITime
+wird die Zahl der Integrationszyklen
+zwischen 1 (default) und 256 festgelegt.
+• Der untere und der obere 16-bit-Schwellenwert für den Interrupt (Clear
+Channel) werden mit der Funktion
+TCS34725_SetThresholds eingestellt.
+• Mit der folgenden Funktion wird festgelegt, wie viele aufeinander folgende
+Werte die Schwellenwerte übersteigen
+müssen, damit ein Interrupt ausgelöst
+wird: TCS34725_SetPersistence (0:
+Interrupt nach jeder Konvertierung, 15:
+60 Werte außerhalb Schwellenwerte).
+• Mit den Funktionen TCS34725_CalcTemperature und TCS34725_CalcLux
+wird aus den übergebenen RGB-Werten
+die Farbtemperatur (in Kelvin) und die
+Helligkeit (in Lux) berechnet.
+• Die Funktion TCS34725_CalcHue berechnet aus den RGB-Werten den Farbton, bestimmt die Farbbrillanz und die
+Farbsättigung (siehe Abschnitt Farbbestimmung).
+
+
+Technische Daten
+• Betriebsspannung: 3,6 V
+• Stromaufnahme: max. 0,085 mA
+• I²C-Adresse: 0x44 (fest)
+• I²C-Geschwindigkeit: bis 500 kbit/s
+• Auflösung: 12-16 bit
+• Messbereich: 0,0057-275 Lux (Bereich
+0) bzw. 0,152-10.000 Lux (Bereich 1)
+• A/D-Wandlung: 101 ms
+Anschluss an den Controller
+Der Farbsensor kann mit dem in [3] vorgestellten Adapter direkt am EXT-Ausgang
+des TXT Controllers angeschlossen werden. Da der Stromverbrauch deutlich unter
+0,1 mA liegt, ist keine Überlastung des
+Anschlusses zu befürchten.
+
+
+
+
+Der Betrieb am TX Controller, dessen I²CBus mit 5 V arbeitet, erfordert hingegen die
+Verwendung eines Step-Down-Spannungswandlers und eines Level-Shifters für die
+I²C-Signale. In einem späteren Beitrag
+werden wir dafür Lösungen vorstellen.
+System-Status
+Die A/D-Wandlung der Sensorwerte ist
+nach dem Einschalten und einem Reset
+(Rücksetzen der Registereinstellungen auf
+die Default-Werte) zunächst deaktiviert
+(Power Down). In diesem Zustand liegt der
+Stromverbrauch unter 0,5 µA.
+Zur Stromeinsparung kann der Sensor im
+Betrieb in den Standby Mode versetzt werden (keine A/D-Wandlung); der Stromverbrauch sinkt dabei auf maximal 37 µA. Da
+der Verbrauch im Betrieb nach Datenblatt
+85 µA nicht übersteigt, lohnt das üblicherweise nicht.
+Die Dauer einer A/D-Wandlung kann nicht
+beeinflusst werden; sie liegt fest bei 101 ms.
+Register
+Der ISL29125 verfügt über insgesamt 15
+Datenregister, die über das I²C-Protokoll
+direkt adressiert und ausgelesen bzw. beschrieben werden können (siehe Tab. 2).
+Register
+
+Bedeutung
+
+0x00
+
+Device ID / Reset
+
+0x01
+
+Configuration 1
+
+0x02
+
+Configuration 2
+
+0x03
+
+Configuration 3
+
+0x04-05
+
+Low Threshold, LSB first
+
+0x06-07
+
+High Threshold, LSB first
+
+0x08
+
+Status Register
+
+0x09-0A
+
+Green Data
+
+0x0B-0C
+
+Red Data
+
+0x0D-0E
+
+Blue Data
+
+Tab. 2: Register des ISL29125 [6]
+
+
+Device ID/Reset Register
+Das Register 0x00 enthält die Device ID des
+Sensors, den Wert 0x7D. Durch Auslesen
+des Registerinhalts kann überprüft werden,
+ob der (richtige) Sensor angeschlossen ist.
+Wird das Device Register mit dem Wert
+0x46 beschrieben, werden alle Registereinträge auf die Default-Werte zurückgesetzt
+(Device Reset).
+Konfigurations-Register
+Die Register 0x01-0x03 enthalten alle wesentlichen Einstellungen für die Arbeit des
+Farbsensors.
+Im Configuration Register 1 (0x01) können
+die folgenden Einstellungen vorgenommen
+werden:
+• Bit 0-2: RGB Operating Mode; hier wird
+zwischen Power Down (default, 0b000),
+nur grün (0b001), nur rot (0b010), nur
+blau (0b011), Standby (0b100), rot/grün/
+blau (0b101), grün/blau (0b110) und
+grün/blau (0b111) gewählt werden.
+• Bit 3: Sensing Range – Auswahl des
+Messbereichs (bis 375 Lux oder bis
+10.000 Lux)
+• Bit 4: Resolution – hier kann zwischen
+einer 16-bit-Auflösung (0) und einer 12bit-Auflösung (1) gewählt werden.
+Das Configuration Register 2 (0x02) erlaubt, zusätzlich zu den passiven IR-Filtern
+in den Dioden, die Einstellung einer aktiven
+IR-Kompensation. Die Anpassung dieses
+Registers ist allerdings nur für sehr spezielle
+Anwendungen zu empfehlen (und wurde im
+RoboPro-Treiber daher nicht berücksichtigt).
+Das Configuration Register 3 (0x03) enthält
+alle Einstellungen zur Interrupt-Steuerung:
+• Bit 0-1: Interrupt-Zuweisung; hier können Interrupts deaktiviert (default, 0b00)
+oder für die Farben Grün (0b01), Rot
+(0b10) oder Blau (0b11) aktiviert
+werden.
+
+
+Computing
+
+• Bit 2-3: Zahl der Integrationszyklen,
+nach denen ein Interrupt ausgelöst wird:
+1 (default, 0b00), 2 (0b01), 4 (0b10) oder
+8 (0b11).
+• Bit 4: Aktivierung
+(default: 0).
+
+des
+
+INT-Pins
+
+Schwellenwerte
+Die 16-bit-Schwellenwerte für das Auslösen eines Interrupts werden in den Registern 0x04-0x07 gesetzt. Per Default sind die
+Schwellenwerte auf 0x00 (untere Grenze)
+und 0xFF (obere Grenze) gesetzt.
+Status Register
+Das Register 0x08 enthält mehrere FlagBits, die den Status der A/D-Wandlung
+anzeigen:
+• Bit 0: Interrupt-Status-Bit; es ist gesetzt,
+wenn die Schwellenwerte des Interrupts
+überschritten wurden. Das Bit wird erst
+nach dem Auslesen zurückgesetzt.
+• Bit 1: Das Konvertierungs-Status-Bit
+wird gesetzt, sobald eine A/D-Wandlung
+abgeschlossen ist.
+• Bit 2: Das „Brownout“-Bit zeigt eine
+Störung an. Es ist nach dem Starten des
+Sensors gesetzt (0x04) und muss daher
+zunächst mit einem Schreibkommando
+auf 0x00 zurückgesetzt werden.
+• Bit 4-5: Anzeigebits für die Sensorwerte
+(0b01 = grün, 0b10 = rot, 0b11 = blau),
+die gerade konvertiert werden.
+Data Register
+Die Register 0x09-0x0E enthalten die 12bzw. 16-bit-Werte der Analog-DigitalWandlung der Grün-, Rot- und Blau-Sensoren. Die Werte werden nach jeder A/DWandlung aktualisiert. Beim Einschalten
+enthalten die Register den Wert 0x00.
+
+Robo Pro-Treiber
+Im Downloadbereich der ft:c findet ihr den
+Robo Pro-Treiber für den ISL29125 zum
+Herunterladen.
+Er umfasst die folgenden Funktionen:
+• Die Funktion ISL29125_Init setzt alle
+Registerwerte auf die Default-Einträge
+und prüft die Device ID des Sensors
+(ISL29125_GetID); ist sie fehlerhaft,
+wird ein Fehler (NC) zurückgeliefert.
+Anderenfalls wird das Brownout-Bit im
+Status-Register gelöscht und die A/DWandlung für alle Farbsensoren aktiviert
+(ISL29125_SetRGBOperation).
+• Die Funktion ISL29125_GetID liefert
+die Device ID des Sensors (Register
+0x00) zurück; der Rückgabewert muss
+gleich 0x7D sein.
+• Mit der Funktion ISL29125_GetRGB
+wird zunächst das Status-Register gepollt, bis die nächste A/D-Wandlung abgeschlossen ist; dann werden die digitalen 16-bit-Messwerte der Farbsensoren
+für Green, Red und Blue ausgelesen.
+• Die Einstellung des RGB Operating
+Mode erfolgt mit der Funktion
+ISL29125_SetRGBOperation:
+Power
+down (0), nur grün (1), nur rot (2) nur
+blau (3), Standby (4), RGB (5), grün/rot
+(6) oder grün/blau (7).
+• Der Messbereich wird mit der Funktion
+ISL29125_SetSensingRange
+ausgewählt (0: bis 375 Lux, 1: bis 10.000
+Lux).
+• Die Sensor-Auflösung kann mit der
+Funktion
+ISL29125_SetResolution
+geändert werden (0: 16 bit, 1: 12 bit).
+• Zur Aktivierung der Interrupts wählt die
+Funktion ISL29125_SetInterrupt den
+Interrupt-Typ (0: keiner, 1: bei grün, 2:
+bei rot, 3: bei blau) und die Zahl der A/DWandlungen vor der Auslösung eines
+Interrupts (Persistance; 0: 1, 1: 2, 2: 4, 3:
+8).
+
+
+
+• Die 16-bit-Schwellenwerte für die Interrupt-Auslösung werden mit der Funktion
+ISL29125_SetThresholds festgelegt.
+• Mit der Funktion ISL291255_CalcHue
+bestimmt man den Farbton, die Farbbrillanz und die Farbsättigung (siehe
+Abschnitt Farbbestimmung).
+
+Vergleich der Sensoren
+Der TAOS-Sensor ist zweifellos der leistungsfähigere: Er kann die Sensor-Messwerte verstärken, ermöglicht eine schnellere A/D-Wandlung, liefert den Wert des
+Weißlichts und erlaubt eine automatische
+Mittelwertbildung aus einer größeren Zahl
+von Messungen. Außerdem verfügt er über
+eine eigene LED mit einer dem Tageslicht
+ähnlichen Farbtemperatur von 4150 K.
+Dafür punktet der Intersil-Sensor mit sehr
+niedrigen Stromverbrauch und einer einfacheren Schnittstelle. Allerdings müssen
+die Objekte sehr nah an den Sensor gehalten
+werden, um vernünftige Werte zu erhalten.
+Offenbar ist er auch anfälliger für Störlicht
+(schließlich verfügt er auch über keine
+eigene Lichtquelle wie der TAOS-Sensor).
+Schließlich werden die Messwerte schnell
+größer 32.767 – und werden damit in
+ROBO Pro negativ; da hilft nur eine Konvertierung in Fließkommazahlen.
+
+Farbbestimmung
+Üblicherweise wird eine Farbe durch den
+Farbton, die Farbsättigung und die Farbbrillanz (Helligkeit) beschrieben [7].
+Die Farbbrillanz ist der größte Farbwert
+(das Maximum von R, G, B), und die Farbsättigung der Quotient aus der Helligkeitsdistanz und der Brillanz:
+=
+
+( , , )−
+( , , )
+( , , )
+
+Die Bestimmung des Farbtons ist etwas
+komplizierter und nicht als geschlossene
+Formel darstellbar: Er ist die Differenz der
+beiden kleineren Farbwerte geteilt durch die
+Helligkeitsdistanz. Falls Max(R, G, B) = G
+
+wird zwei, falls Max(R, G, B) = B wird vier
+hinzuaddiert; schließlich wird das Ergebnis
+durch sechs geteilt. Ist es kleiner 0, wird 1
+hinzuaddiert [7].
+Der Farbton hat die schöne Eigenschaft,
+auch bei Änderung des Umgebungslichts
+konstant zu bleiben. Somit lassen sich Farben sehr zuverlässig erkennen, indem man
+zunächst in einer Kalibrierungsphase die zu
+erkennenden Farbtöne „anlernt“ (tabelliert)
+und dann nach einer Farberkennung den
+Farbton mit den Werten dieser erlernten
+Farbtontabelle vergleicht.
+Die folgende Grafik (Abb. 10) zeigt eine
+grobe Zuordnung der Farbtöne zu den Farbtonwerten:
+
+
+Man sieht leicht, dass diese Farberkennung
+umso besser funktioniert, je größer die
+Farbsättigung der zu erkennenden Farbtöne
+ist – oder, anders ausgedrückt: je weiter der
+kleinste und der größte Farbwert auseinanderliegen.
+Die Implementierung einer geeigneten
+Kalibrierung und der Farbtonerkennung
+überlasse ich euch als erste kleine Fingerübung mit den neuen Sensoren…
+
+Referenzen
+[1]
+
+Dirk Fox: I²C mit TX und Robo Pro –
+Teil 1: Grundlagen. ft:pedia 3/2012,
+S. 32-37.
+
+[2]
+
+Dirk Fox: I²C mit dem TX – Teil 7:
+Real Time Clock (RTC). 4/2013, S. 28-34.
+
+[3]
+
+Dirk Fox: I²C mit dem TX(T) – Teil
+12: Temperatursensor. 4/2015, S. 44-48.
+
+[4]
+
+ams (TAOS): TCS3472 Color Light
+to digital Converter with IR Filter.
+Datasheet, TAOS135, August 2012.
+
+Computing
+
+[5]
+
+H. Burton: Lux and CCT Calculations using ams Color Sensors.
+Application Note DN 40, v1.0, ams,
+26.08.2013.
+
+[6]
+
+Intersil: Digital Red, Green and Blue
+Color Light Sensor with IR Blocking
+Filter. Datasheet ISL29125,
+15.01.2016.
+
+[7]
+
+Jack Berlien: Color Classification
+with the TCS230: Identifying and
+Sorting Colors by Hue. Designers
+Notebook Number 11, TAOS,
+03.04.2004.
+
+
+

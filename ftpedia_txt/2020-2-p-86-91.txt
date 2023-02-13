@@ -1,0 +1,328 @@
+
+
+Computing
+
+fischertechnik-Interface für den Calliope mini
+Marcel André
+Der Mikrocontroller Calliope mini wird immer häufiger im Informatik-Unterricht in Grundund weiterführenden Schulen eingesetzt. Die einfache Möglichkeit zur Steuerung von fischertechnik-Modellen erhöht dabei deutlich den Spaß und den Lerneffekt.
+
+Hintergrund
+Seit einiger Zeit betreue ich die InformatikAG in unserer örtlichen Grundschule. Dort
+arbeiten wir mit dem Calliope mini (Abb. 1)
+[1], einem kindgerechten, robusten und
+bereits mit vielen Sensoren und Aktoren
+ausgestatteten Mikrocomputer. Als grafische Programmier-Umgebung haben wir
+bisher OpenRobertas NEPO [2] des Fraunhofer IAIS verwendet, steigen aber für die
+fortgeschrittenen Schüler später auf MakeCode [3] um, da es dafür einfach mehr Möglichkeiten zur Integration externer Bausteine gibt.
+
+schäftigt sind (LED-Matrix für Textausgabe, RGB-LED, Mikrofon, Lautsprecher,
+Bewegungs-/Lagesensoren usw.).
+Prozessor
+
+ARM Cortex M0 (32
+bit)
+
+Takt
+
+16 MHz
+
+RAM
+
+16 kB
+
+Flash
+
+256 kB
+
+Ports
+
+4 analoge Eingänge,
+8-11 digitale Ein-/
+Ausgänge
+
+Last
+
+max. 100 mA bei 3,3V
+
+Sensoren
+
+MEMS Mikrofon,
+Piezo-Lautsprecher,
+Beschleunigungs-,
+Gyro- und Kompasssensor (BMX055),
+LED-Matrix, RGB LED,
+2 Taster,
+
+Schnittstellen
+
+BLE 4.0, SPI, I2C,
+serielle Schnittstelle
+
+Programmiersprachen
+
+NEPO [2], MakeCode
+[3], Swift, Python,
+JavaScript, uLisp [4]
+Tab. 1: Technische Daten des Calliope mini
+
+
+Meine Erfahrungen haben gezeigt, dass
+viele Schüler mit den eingebauten Möglichkeiten des Calliope mini hinreichend be-
+
+
+Gerade bei den fortgeschritteneren Schülern
+wächst aber das Bedürfnis, über den Tellerrand zu schauen und den Calliope mit Dingen des Alltags zu verbinden. So entstanden
+Projekte wie eine Wasserstands-/Feuchtigkeitsmessung für Blumen, selbstnachführende Sonnenblumen, ein Lärm-Messer für
+
+die Klasse mit Servo-Motor (Pegelanzeige)
+usw. Leider erwiesen sich die Gebilde aus
+Holz und Klebestreifen (Kostengründe) und
+die fliegenden Verdrahtungen als nicht sonderlich langzeitstabil.
+Die Einführung der Erweiterung Calli:bot
+[5] (ein kleiner fahrender Roboter) brachte
+da schon einen erheblichen Vorteil. Für den
+Einsatz in weiterführenden Schulen (Klasse
+5 aufwärts) scheint auch das zumindest für
+ambitionierte Schüler nicht mehr ausreichend. An einigen Schulen findet man Lego
+Mindstorms/EV3-Systeme, leider eher selten fischertechnik-TXT-Systeme.
+
+Das Calliope-Board
+Also wäre es schön, wenn man den Calliope
+mini (welcher auch per JavaScript und
+Python programmierbar ist und damit
+durchaus Ansprüchen des InformatikUnterrichts genügt) für ähnliche Anwendungen weiterverwenden könnte. In meinem Fundus hatte ich noch einige fischertechnik Computing-Baukästen aus den 80er
+Jahren wiederentdeckt – und damit war die
+Idee geboren, diese Komponenten und
+Modelle für die Schüler in der heutigen Zeit
+nutzbar zu machen.
+
+Computing
+
+Bei meinen weiteren Recherchen bin ich
+dann auch auf verschiedene andere Projekte
+gestoßen (z. B. die tollen Erweiterungen auf
+Thingiverse zur Integration von günstigen
+Sensoren und Aktoren in fischertechnik,
+welche hier in der ft:pedia ja schon vorgestellt wurden). Erwähnen muss ich natürlich
+auch die spannenden Projekte wie den TXPI [7, 8] mit der StartIDE [9] und den
+ftDuino [10, 11].
+Ich wollte aber aus oben genannten
+Gründen beim Calliope bleiben. Entscheidend war dann der Kontakt zu Michael
+Klein, der bereits erste Platinen zur Anbindung von fischertechnik an den Calliope
+entwickelt hatte – mit der genialen Idee, die
+fischertechnik-Stecker direkt in die Platine
+stecken zu können [12].
+Angeregt durch dieses Board und die Erweiterungen für die „Schwester“ des
+Calliope mini, den BBC „micro:bit“ (Abb.
+3) [13], von Kitronik [14], DFRobot [15]
+und Didacta [16] wurden diese Idee weitergesponnen und verschiedene Ideen kombiniert.
+
+Von fischertechnik selber gibt es bereits ein
+Kit (547470) zur Kombination von fischertechnik und Calliope mini (Abb. 3) [6], jedoch erschienen mir die Möglichkeiten zu
+beschränkt.
+
+
+
+Herausgekommen ist das Board in Abb. 4
+auf einer 10x10 cm großen Platine. Da die
+ICs ohnehin nur in SMD zu bekommen sind
+und ich das Format kostengünstig halten
+wollte, habe ich gleich alles in SMD ausgelegt (allerdings schön groß im Format
+1206 – das ist wirklich schneller zu löten als
+klassische Bauelemente).
+
+
+
+
+Das Board hat folgende Funktionen:
+ Es gibt einen Eingang (Hohlbuchse) als
+Spannungsversorgung für die fischertechnik-üblichen Spannungen von 9V
+(für Motoren/Lampen). Daraus werden
+mittels Spannungsreglern noch 5V und
+3,3V für weitere Sensoren/Aktoren und
+die Versorgung des Calliope mini abgeleitet (Anzeige durch 2 LEDs).
+ Die Herausführung aller relevanten analogen und digitalen Ein- und Ausgänge
+des Calliope mini erfolgt auf fischertechnik-kompatible Buchsen. Es stehen auch
+
+die Anschlüsse C4-C12 zur Verfügung,
+welche aber nur nutzbar sind, wenn man
+das Display abschaltet (dazu gibt es
+passende Funktionen in NEPO und
+MakeCode). Auch funktionieren an
+diesen Pins zwar die Pullup-Widerstände
+„Lege Pin x als Schalter fest“ und die
+Auswertungen „Pin x gedrückt bzw.
+losgelassen“, nicht jedoch die ereignisgesteuerte Ausführung „wenn Pin x
+gedrückt“ etc.
+ Für die analogen Eingänge P1, P2, C16,
+C17 (sofern sie als solche konfiguriert
+
+sind) kann per Jumper eingestellt werden, ob Spannungen bis 3,3V oder bis
+5V erfasst werden sollen (Spannungsteiler). Natürlich muss das Signal dann
+auch am richtigen Pin (es gibt je Kontakt
+zwei!) angeschlossen werden. Hier ist
+Vorsicht bei hohen Spannungen geboten.
+
+Computing
+
+Ich habe mich entschieden, die Ausgänge
+der Motortreiber wie bei den oben beschriebenen Boards auf normale Schraubanschlüsse zu legen. Wer aber hier direkt die
+fischertechnik-Stecker anschließen möchte,
+kann ein kleines Adapterboard verwenden
+(Abb. 5).
+
+ Möchte man z. B. die (fischertechnik-)
+Fotowiderstände als Sensoren betreiben,
+benötigt man einen Spannungsteiler mit
+Pullup für den Widerstand am analogen
+Eingang. Dieser kann auf der Platine
+ebenfalls über Jumper für P1 und P2
+geschaltet werden. Das erspart externe
+Beschaltungen.
+ Es gibt Anschlüsse für zwei Servos
+(C16, C17) – diese können direkt ohne
+weitere Extension über NEPO oder
+MakeCode gesteuert werden.
+ Das Board hat Anschlüsse für acht
+weitere Servos oder anderweitige Nutzung wie LEDs mit Spannungsversorgung mittels dem verbreiteten PCA9685.
+Die Basis-Adresse (0x40) kann über
+zwei Lötbrücken verändert werden. Der
+PCA9685 steuert auch die beiden MotorTreiber.
+
+
+Wenn man jeden zweiten Pin abschneidet,
+passt der Adapter direkt in die Schraubklemmen. Alternativ kann mal auch die
+senkrechten Stiftleisten des Adapters bestücken und die Adapterplatine anstelle der
+Schraubleisten auf dem Board auflöten.
+ein fischertechnik-Projekt.
+
+ Dazu gibt es zwei Motor-Treiber (HBrücken DRV8833) für den Anschluss
+von vier Motoren, Lampen, Magneten
+usw. oder zwei Stepper-Motoren. Die
+Drehrichtung (Polung) wird jeweils
+durch rote bzw. grüne LEDs angezeigt.
+ Dann gibt es noch einen I2C-Hub mit
+zwei weiteren I2C-Grove-Anschlüssen in
+Ergänzung zum Anschluss A0 auf dem
+Calliope selber.
+Um den Calliope mini mit dem Board zu
+verbinden, müssen unter (!) dem Calliope
+die passenden Buchsenleisten für Motor
+und Expension gelötet werden (Teile siehe
+BOM). Dann wird der Calliope einfach auf
+die Platine gesteckt (dort befinden sich
+passende Stiftleisten).
+
+fischertechnik-Projekt
+
+
+
+
+Damit man die Platine auf einem fischertechnik-Board anbringen kann, habe ich auf
+Basis des Designs von Jan [17] einen
+15 mm Baustein mit Schraubloch erstellt.
+
+
+Alle Unterlagen (Schaltpläne, Stücklisten,
+Gerber-Files, Druckvorlagen und ein Testprogramm) sind auf der Projektseite bei
+hackster.io hinterlegt [18]. Abschließend
+noch ein Bild, wie der Calliope an den
+fischertechnik-Roboter angeschlossen wird.
+
+Referenzen
+[1]
+
+Calliope gGmbH: Calliope.cc.
+
+[2]
+
+Open Roberta: NEPO.
+
+[3]
+
+Microsoft: MakeCode.
+
+[4]
+
+David Johnson-Davies: μLisp.
+
+[5]
+
+Knotech: Calli:bot.
+
+[6]
+
+fischertechnik: fischertechnik
+Calliope (547470)
+
+[7]
+
+ftCommunity: TX-Pi: A Raspberry Pi
+setup for fischertechnik. Github.com
+
+[8]
+
+Peter Habermehl: Der (schnelle Weg
+zum) TX-PI. ft:pedia 1/2019, S. 7982.
+
+[9]
+
+Peter Habermehl: startIDE für die
+Community-Firmware. 1/2018, S. 102-107.
+
+[10] Till Harbaum: ftDuino.de.
+Github.com
+[11] Till Harbaum: ftDuino – Open
+Source trifft Konstruktionsbaukasten.
+ft:pedia 1/2018, S. 85-91.
+[12] Michael Klein: Calliope mini und
+fischertechnik. Hackster.io
+[13] Axel Chobe: Micro:bit. 4/2019, S. 47-51.
+[14] Kitronik: All-in-one Robotics Board
+for BBC micro:bit.
+[15] DFRobot: micro:bit Driver
+Expension Board.
+[16] Didacta: micro:bit IO T5 board.
+[17] Juh: fischertechnik-Baustein 15 mit
+sechs Nuten. Thingiverse.com
+
+Abb.
+
+Ein Video, wie der Calliope den Turm von
+Hanoi löst, ist unter [19] zu sehen. Für die
+Nutzung des Boards unter MakeCode hat
+Michael seine Erweiterung angepasst [20],
+welche einfach integriert werden kann;
+siehe auch ft:pedia 4/2019 [13] (Tab. 2).
+
+
+[18] Marcel André: Calliope mini
+fischertechnik-Interface. Hackster.io
+[19] Marcel André: Calliope mini löst
+Turm von Hanoi. Youtube.com
+[20] Michael Klein: pxt-fischertechnikmotor. Github.com
+
+
+Computing
+
+Funktion
+
+Ansteuerung in MakeCode
+
+Steuerung der acht Servo-Anschlüsse
+
+Ansteuerung der vier Motoren mit
+Geschwindigkeit, Richtung und Stopp
+
+Ansteuerung der Stepper-Motoren
+
+Bausteine, um den analogen
+Fotowiderstand zu verwenden, auch als
+Event-Auslöser
+
+Abfragen von Tastern (geht nicht bei allen
+Anschlüssen!), auch als Event-Auslöser
+
+Tab. 2: Befehlsblöcke in MakeCode
+
+

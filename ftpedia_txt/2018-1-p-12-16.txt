@@ -1,0 +1,241 @@
+
+
+Tipps & Tricks
+
+Löten leichtgemacht
+Christian Bergschneider
+Viele Modding-Artikel in der ft:pedia stellen mit einfachen Schaltungen praktische Erweiterungen für fischertechnik vor. Auch wenn für den Nachbau das nötige Elektronikwissen meist im
+Artikel beschrieben wird, bleibt das Handwerk des Lötens unerklärt. Doch Löten ist nicht
+schwer und man kann es an einem Abend lernen.
+
+Die Geschichte des Lötens
+
+deutlich niedrigeren Schmelzpunkt als die
+reinen Metalle wie Gold mit 1064°C. Somit
+konnten Verbindungen geschaffen werden,
+ohne dabei die Einzelteile erneut zu
+verformen.
+
+Tutanchamun wurde im 14. Jahrhundert vor
+Christus gelötet
+
+Archäologische Funde beweisen, dass die
+Menschheit schon 5000 v. Chr. das Löten
+als Technik zur Metallverarbeitung beherrschte. Löten wurde z. B. für die Herstellung von Kult- oder Schmuckgegenständen
+verwendet, um die damals bekannten
+Metalle Gold, Silber und Kupfer zu verbinden. Dabei wurden Kupfersalze in der COAtmosphäre eines Holzkohlefeuers reduziert, die Kupferanteile verbanden sich in
+einer chemischen Reaktion mit Gold oder
+Silber zu einer lötfähigen Legierung. Die
+Legierung ist die Mischung von mindestens
+zwei Metallen; sie hat andere Eigenschaften
+als jede ihrer Komponenten. Das prähistorische Lot hatte z. B. mit 889°C einen
+
+Heute wird das Löten hauptsächlich in der
+Elektrotechnik angewandt. Mit dem Löten
+werden leitende Verbindungen zwischen
+den Bauteilen hergestellt und die Bauteile
+selbst auf der Platine befestigt.
+
+Werkzeug
+Für den Anfang braucht man keine Spitzenausstattung. Für eine solide Grundausstattung muss man 50 bis 100 € investieren, je
+nachdem was sich bereits in der eigenen
+Werkzeugkiste findet.
+
+
+Es gibt sehr viele verschiedene Arten von
+Lötkolben. Für Elektronikbauteile genügt
+
+ein normaler, elektrischer Lötkolben
+(Abb. 3). Der Lötkolben sollte eine Dauerlötspitze haben, am besten in Bleistiftspitzenform. Die Dauerlötspitze ist mit
+einem edlen Metall überzogen, so dass
+diese nicht oxidieren kann. An oxidiertem
+Kupfer würde das Lot nicht halten und
+könnte nicht gelötet werden. Die Dauerlötspitze muss man u. U. extra kaufen. Die
+Leistung des Lötkolbens sollte zwischen 15
+und 30 W liegen. Hat der Lötkolben eine zu
+geringe Leistung, so kann man die Lötstelle
+nicht ausreichend erhitzen, bei zu hoher
+Leistung wird es der Platine und den Bauteilen schnell einmal zu heiß.
+Bei einer Lötstation kann man die Löttemperatur genau einstellen. Der Lötkolben
+wird je nach Nutzung nachgeregelt, so dass
+man sehr schnell und effektiv arbeiten kann.
+Aufgrund der hohen Anschaffungskosten,
+ist eine Lötstation für den Anfänger jedoch
+nicht sinnvoll.
+Ein normaler Lötkolben ist so ausbalanciert,
+dass er gut auf dem Arbeitsplatz liegen
+bleibt. Wer etwas mehr lötet, wird recht
+bald in einen Lötständer investieren. Dieser
+hält den Lötkolben bei Nichtgebrauch griffbereit und hat meist noch für ein
+Lötschwämmchen Platz (Abb. 4).
+
+Tipps & Tricks
+
+Am Lötschwämmchen streift man überflüssiges Lot ab. Vor dem Arbeiten wird das
+Lötschwämmchen leicht angefeuchtet.
+Niemals eine Dauerlötspitze mit spitzem
+Werkzeug oder Schmirgelpapier bearbeiten, da sonst die Beschichtung abgeschabt
+würde!
+Lötabsaugungen sind ebenfalls nur für den
+Profi. Sie saugen die Lötdämpfe auf und
+neutralisieren sie in einem Filter. Die hohen
+Kosten können durch gutes Lüften gespart
+werden.
+Beim Lötzinn muss man sich die berühmte
+Gretchenfrage stellen: Bleihaltige Lote
+setzen beim Löten bleihaltige Dämpfe frei
+und sind später auf der Mülldeponie
+Sondermüll. Deshalb sind sie schon längst
+im kommerziellen Bereich verboten. Allerdings sind die Löteigenschaften von bleihaltigem Lot etwas besser, so dass es sich
+viel leichter verarbeiten lässt. In bleifreiem
+Lot wird das Blei durch Silber ersetzt. Der
+Schmelzpunkt liegt etwas höher und das Lot
+fließt schlechter, so dass bleifreies Lot
+etwas mehr Übung benötigt. Egal für
+welches Lot man sich entscheidet, es sollte
+Flussmittel im Lötzinn enthalten sein.
+Am Anfang sollte man das Lot etwas dicker
+wählen (0,75 bis 1 mm Durchmesser). Für
+feine Bauteile wie SMDs benötigt man mit
+Lot 0,5 bis 0,75 mm Durchmesser. 100
+Gramm reichen als Erstausstattung völlig
+aus; man kann damit sehr viele Schaltungen
+löten.
+Das Lot und der Lötkolben werden beim
+Löten zwischen 350 und 450°C heiß. Eine
+feste Unterlage schützt den Arbeitsbereich
+vor Brandflecken und hilft später beim Aufräumen kleiner Kabelreste und Lotspritzern.
+
+
+
+
+
+
+Wer lötet, macht auch Fehler. Dann hilft
+eine Entlötpumpe, das vorhandene Lot
+abzusaugen (Abb. 5). Hier gibt es kaum
+technische Unterschiede.
+Die normale Spitzzange aus dem Werkzeugkasten hilft dabei, die Pins der Bauteile
+zurechtzubiegen und beim Löten ggf. auch
+festzuhalten.
+Den besten Halt gibt jedoch eine „Dritte
+Hand“ (Abb. 6). Bauteile beim Löten
+einfach mit der eigenen Hand festzuhalten
+ist die schlechteste Alternative und führt zu
+verbrannten Fingern.
+
+
+
+Die Schaltung besteht nur aus einer LED,
+die mit einem Vorwiderstand in Reihe
+geschaltet wurde. Die LED-Farbe und
+Größe kann frei gewählt werden. Für den
+Betrieb an der fischertechnik-Bordspannung von 9 V muss der Vorwiderstand
+zwischen 360 und 680 Ω liegen.
+
+Mit einem kleinen Seitenschneider werden
+Kabel und Pins der Bauteile auf die richtige
+Länge zurechtgeschnitten. Wie die Spitzzange findet sich dieser häufig im heimischen Werkzeugkasten.
+Eine Abisolierungszange hilft beim Entmanteln von Kabeln. Ein einfaches Modell
+mit Rändelschraube ist völlig ausreichend,
+Automatikzangen bieten für den Preis
+keinen angemessenen Vorteil. Verarbeitet
+man ausschließlich Drähte, so reicht häufig
+auch ein Seitenschneider aus.
+
+Kleiner Lötkurs
+Löten lernt man am besten an einer einfachen Schaltung. In unserem Lötkurs soll
+eine LED an einen fischertechnik-Batteriekasten angeschlossen werden. Als Bauteile
+werden ein Widerstand mit 470 Ω, eine
+LED, etwas Kabel, ein Stück PrototypenPlatine sowie zwei fischertechnik-Stecker
+benötigt (Abb. 7).
+
+
+
+Als Erstes werden die Drähte am Widerstand mit der Spitzzange in der Nähe des
+Bauteils um 90° umgebogen und in die
+Platine gesteckt. Der Körper des Widerstands soll direkt auf der Platine aufliegen.
+Anschließend wird der Widerstand auf der
+Unterseite der Platine festgelötet: Die heiße
+Spitze des Lötkolbens an Platine und Bauteil ansetzen und Lot an der Lötspitze zuführen. Das Lot wird flüssig und legt sich
+
+sowohl auf die Kupferseite als auch um das
+Bauteil.
+Die Lötdauer sollte so kurz wie möglich
+sein, damit sich das elektronische Bauteil
+nicht unnötig erwärmt. Zu langes Erhitzen
+führt an der Platine dazu, dass sich die
+Kupferschicht vom Trägermaterial löst.
+
+Tipps & Tricks
+
+Polung vertauscht werden kann. Als Halbleiter ist die LED beim Verlöten etwas temperaturempfindlicher als der Widerstand.
+Nun müssen nur noch zwei Kabelenden
+angelötet werden: Ein kurzes Stück Isolierung mit der Abisolierzange oder dem
+Seitenschneider entfernen und die Litze
+oder den Draht von der Bestückungsseite
+aufstecken. Die Isolierung muss direkt an
+der Oberseite der Platine anliegen; sonst
+kann es später bei größeren Schaltungen zu
+unerwünschten Kurzschlüssen kommen.
+
+„Dritte Hand“ Platine und Kabel fest
+
+(oben) und mit der Platine verlötet (unten)
+
+Das Kabel und die Platine werden am einfachsten in der dritten Hand eingeklemmt,
+so dass beide Hände für das Löten frei sind.
+Die Lötseite der Platine ist dann nach oben
+zu drehen und das Kabel zu verlöten.
+
+Den Lötpunkt danach kurz abkühlen lassen
+und kontrollieren: Das Lot muss sich glatt
+um alle Metallteile gelegt haben.
+Sind zwei Lötpunkte aus Versehen miteinander verbunden worden, muss das Lötzinn wieder entfernt werden. Dazu den Lötpunkt nochmals erhitzen und mit der Entlötpumpe überflüssiges Lot absaugen.
+Bevor nun die LED aufgesteckt und verlötet
+wird, müssen noch die Drahtenden des
+Widerstands am Lötpunkt abgeschnitten
+werden.
+In unserem Fall ist die Polung der Leuchtdiode egal, da am Batteriekasten ggf. die
+
+
+Bei Litzen muss ggf. das Ende des Kabels
+verzinnt werden, damit es besser in die
+Platine gesteckt werden kann. Dazu die
+
+
+freien Kabelenden zwischen Daumen und
+Zeigefinger verdrillen, das Kabel in der
+dritten Hand befestigen und das Ende mit
+Lot überziehen.
+
+Bildnachweis: Abb. 3, 4 und 5 entstammen
+mit freundlicher Genehmigung den Webseiten von Ersa.
+
+Überstehende Kabelenden auf der Lötseite
+werden wieder mit dem Seitenschneider
+abgeschnitten. Dabei sollten die Platine
+oben und die Zange unten sein, so dass die
+Schnipsel nicht auf die Platine fallen und
+sich irgendwo verfangen können. Auf der
+Bestückungsseite sollte nochmals die Isolierung kontrolliert werden, um Kurzschlüssen vorzubeugen.
+Sind beide Kabelenden eingelötet, so
+werden diese noch mit einem fischertechnik-Stecker konfektioniert. Die braucht ihr
+nur noch an der Batteriebox anzuschließen
+und die LED leuchtet.
+
+Referenzen
+[1]
+
+Wikipedia: Löten.
+
+[2]
+
+Christian Bergschneider, Stefan
+Fuss: Alternative Controller (3): Der
+ftPi – ein Motor Shield für den
+TX(T). ft:pedia 2/2016, S. 68-72.
+
+
+
+

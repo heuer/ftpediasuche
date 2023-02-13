@@ -1,0 +1,471 @@
+
+Elektronik
+
+Elektronik
+
+9V-Block-Akkus im fischertechnikBatteriehalter
+Till Harbaum
+Die Standard-Stromversorgung für fischertechnik-Modelle ist seit vielen Jahren der klassische
+9V-Block im Batteriehalter (135719). Das klingt zunächst nach einer sinnvollen Lösung. Die
+Batteriehalter sind günstig in der Herstellung, die passenden Batterien gibt (gab) es an jeder
+Straßenecke und es lassen sich alle Motoren, Aktoren und Controller aus dem fischertechnikSortiment damit betreiben. Aus gutem Grund liegt der Batteriehalter praktisch allen Baukästen
+bei, die Elektrokomponenten enthalten. Ganz so einfach ist es leider nicht.
+
+Hintergrund
+Speziell bei fischertechnik-Modellen, die
+eine starke Motorisierung erwarten, wie das
+Advanced Racing Set (540584) oder das
+Tractor Set (524325) kommt beim Einsatz
+handelsüblicher 9V-Einwegbatterien keine
+Freude auf. Woran liegt das?
+Die Stromaufnahme eines fischertechnikMotors schwankt je nach Motor, Einsatzgebiet und Belastung zwischen 50 und
+1100 mA. Bei 9 V bedeutet das, dass die
+Motoren zwischen einem knappen halben
+Watt bis zu zehn Watt Leistung aufnehmen.
+Schauen wir uns im Vergleich mal die entsprechenden (Marken-) Batterien dazu an.
+
+Einwegbatterien
+Ein Klassiker ist die Duracell-MN1604Alkali-Mangan-Batterie. Interessant ist auf
+der ersten Seite des Datenblatts [1] das
+rechte Bild – „Coppertop 9V Constant
+Current“. Die dort abgebildete Stromentnahme reicht von 50 bis 250 mA. Sie deckt
+damit nur geringe Leistungen bis 2 Watt ab.
+Aber selbst dabei schwächelt die Batterie
+bereits stark und sie hält bei 250 mA nur
+eine Stunde durch, was einer entnehmbaren
+elektrischen Ladung von 250 mAh entspricht. Entlädt man die Batterie dagegen
+
+mit nur 50 mA, so hält sie über 8,5 Stunden
+durch, was 425 mAh entspricht, also fast
+dem doppelten. Belastet man die Batterie
+noch stärker, dann verstärkt sich dieser
+Effekt weiter und die entnehmbare Energie
+wird immer geringer. Ist das ein Einzelfall?
+Ein Blick ins Datenblatt der Energizer
+MAX 9V [2] zeichnet ein ähnliches Bild.
+Während man der Batterie bei 25 mA Strom
+noch insgesamt 600 mAh entnehmen kann
+sind es bei 500 mA nur noch 300 mAh. Das
+ist zwar etwas mehr als Duracell angibt, die
+Fahrmotoren der o. g. Modelle entleeren so
+eine Batterie aber in deutlich unter einer
+Stunde. Das ist auf Dauer ein teurer und
+ökologisch kaum vertretbarer Spaß. Die
+Batterie entlädt sich und nur ein Bruchteil
+der Energie landet wirklich im Modell – der
+Rest geht verloren.
+Was passiert hier? Wohin verschwindet die
+Energie? Die Antwort ist einfach: Die
+Batterie erwärmt sich. Aus technischen
+Gründen haben die Batterien einen vergleichsweise hohen sogenannten Innenwiderstand, so dass bei starker Belastung
+ein großer Teil der Energie direkt in der
+Batterie in Form von Abwärme verloren
+geht. „Normale“ Einsatzgebiete für diese
+9V-Blockbatterien sind Rauchmelder,
+
+
+
+
+einfache Messgeräte, Transistorradios und
+Ähnliches. Diese Geräte haben eine äußerst
+geringe Stromaufnahme, die eine solche
+Batterie leicht erfüllen kann. Hier spielen
+diese Batterien auch ihre Stärke aus, denn
+durch die geringe Selbstentladung über eine
+lange Zeit halten diese Batterien in solch
+einem Fall durchaus mehrere Jahre durch.
+In einem Spielzeug spielt die Selbstentladung allerdings keine Rolle. Hier wird die
+Batterie in kurzer Zeit entladen und es ist
+egal, dass man sie zwischendurch monatelang unbenutzt lagern könnte. Einwegbatterien sind also eher ungeeignet für den
+Einsatz im Batteriehalter.
+
+Akkus
+Sind die Batteriehalter also völlig unbrauchbar? Nicht unbedingt. Wiederverwendbare Akkus besitzen deutlich andere
+elektrische Eigenschaften als Primärzellen
+(Einwegbatterien). Zum einen haben sie
+eine deutlich höhere Selbstentladung:
+Selbst wenn man sie nicht benutzt entladen
+sich Akkus je nach Typ binnen weniger
+Wochen bis Monate selbst, was sie in vielen
+klassischen Einsatzgebieten wie Rauchmeldern disqualifiziert. Stattdessen haben
+Akkus aber einen eher geringen Innenwiderstand. Diesen Vorteil können die
+klassischen Einsatzgebiete von Blockbatterien nicht ausnutzen, wohl aber unser
+fischertechnik-Modell.
+Akkus können dadurch einen wesentlich
+höheren Strom liefern als Einwegzellen,
+und tatsächlich eignen sich Akkus wesentlich besser für energiehungrige Modelle als
+Einwegbatterien. Der Nachteil der früher
+eingesetzen Nickel-Cadmium- (NiCd) oder
+Nickel-Metallhydrid-Akkus (NiMH) ist
+aber ihre, vor allem in der Bauform einer
+9V-Batterie, eher geringe Kapazität von
+150 bis 250 mAh. Damit lassen sich die
+Modelle wiederum nur wenige Minuten
+betreiben. Außerdem braucht man ein
+passendes Ladegerät, das bei generell
+immer seltener anzutreffenden 9V-Blöcken
+
+immer häufiger in der hintersten Ecke einer
+selten geöffneten Schublade liegt und im
+Bedarfsfall unauffindbar ist.
+Moderne Akkus auf Lithium-Ionen-Basis
+bieten dagegen eine wesentlich höhere
+Kapazität. Während eine einzelne NiCdoder NiMH-Zelle eine Spannung von 1,2 V
+liefert, kommt eine Li-Ion-Zelle auf 3,7 V.
+Um in die Nähe der 9 V zu kommen, benötigt man also nicht wie bei NiCd- oder
+NiMH-Akkus bis zu sieben einzelne Zellen
+im Inneren des 9V-Blocks, sondern kommt
+mit zwei in Serie geschalteten Zellen bereits
+auf 7,4 V.
+Hier zeigt sich aber ein Nachteil von Akkus:
+Übliche Batteriespannungen (1,5 V, 4,5 V
+oder 9 V) sind Vielfache der 1,5V-Zellenspannung von Einwegbatterien. Diese
+Spannungen lassen sich leider nicht durch
+Vervielfachung der Zellen-Spannungen von
+1,2V- oder 3,7V-Akkus erreichen. Zudem
+liegen die Spannungen von Akku-Zellen
+direkt nach dem Laden deutlich über ihrer
+Nennspannung und können 1,35 V (NiCd
+oder NiMHh) bzw. 4,2 V (Li-Ion) erreichen, so dass man mit der Zahl der Zellen
+nicht zu großzügig umgehen kann, wenn
+man nicht sicher ist, dass der Verbraucher
+auch Spannungen über 9 V verträgt.
+
+9V-Li-Ion-Akkus
+Bei einem 9V-Block auf Basis von Li-IonZellen stellt sich diese Frage nicht. Mit zwei
+Zellen erreicht man eine Nennspannung
+von 7,4 V, direkt nach dem Laden ergibt
+sich eine Spannung von knapp 8,5 V. Näher
+kommt man auf diese Weise nicht an die
+9 V heran.
+Ich habe mir einen solchen Akku in Form
+einer „POOVER 9V Lithium-Ion“-Batterie
+einmal näher angeschaut. Diese gibt es im
+Online-Handel im Doppelpack inklusive
+separatem USB-Ladegerät (Abb. 1) für gut
+15 Euro, was ungefähr dem Preis von sechs
+bis acht Duracell-Alkali-Einwegbatterien
+entspricht.
+
+
+Elektronik
+
+einer Einwegbatterie, allerdings liegt die
+Ausgangsspannung dann mit knapp unter
+7 V fast 25% unter dem Sollwert und die
+Motoren erreichen damit nicht ihre Maximalleistung. Für die meisten Anwendungen
+inklusive der diversen TXT/BT/etc.-Controller reichen Spannung und Stromstärke
+aber aus.
+
+Für den Einsatz in fischertechnik-Modellen
+sind vor allem zwei Werte interessant:
+Welche Stromstärke kann die Batterie liefern und wie lange hält sie durch? Die
+Stromstärke allein sagt nur bedingt etwas
+aus, da der entnommene Strom einen Einfluss auf die Ausgangsspannung hat. Je
+höher die Stromstärke, desto stärker bricht
+die Spannung ein (Abb. 2).
+
+Die Kapazität des Akkus beträgt laut Aufdruck 700 mAh. Das ist ein realistischer
+Wert. Deutlich höhere Angaben sollten
+einen stutzig machen. Der Praxistest an
+einer elektronischen Last ergab dann sogar
+knapp 740 mAh. Dabei wurde die Batterie
+mit 300 mA belastet (Abb. 3), was einem
+moderat belasteten Motor und einer
+Leistungsabgabe von knapp zwei Watt
+entspricht. Dabei hält die Batterie über zwei
+Stunden durch und liefert die doppelte
+Energie einer konventionellen AlkaliEinwegbatterie.
+
+Die Poover-Zellen liefern frisch geladen
+und unbelastet ca. 8,25 V. Ich habe sie mit
+bis zu einem Ampere (1000 mA) belastet.
+Dabei sinkt die Ausgangsspannung der
+nach wie vor vollen Batterie auf 6,86 V
+(Abb. 2), steigt aber wieder an, sobald die
+Last entfernt wird. Die entnehmbare Stromstärke liegt also deutlich über dem Wert
+
+Damit rückt sie den guten alten 9V-Batteriehalter in den nutzbaren Bereich. Ein
+Manko bleibt aber die vergleichsweise
+große Selbstentladung, sodass die Wahrscheinlichkeit hoch ist, dass man nach
+wenigen Wochen Nichtbenutzung erstmal
+wieder das passende Ladegerät heraussuchen muss.
+
+
+
+
+wenig. Also hatte sich das Thema erstmal
+wieder erledigt.
+
+
+9V-USB-Li-Ion-Akkus
+Als ich diesen Batterietyp vor ein paar
+Jahren im chinesischen Versandhandel sah,
+war ich begeistert: 9V-Li-Ion-Akkus mit
+eingebauter Ladeelektronik. Einfach die
+leere Batterie per USB-Kabel an PC oder
+Handy-Ladegerät hängen und wieder auftanken. Keine Suche nach dem passenden
+Spezial-Ladegerät; selbst auf einer Convention würde ich damit immer einen Weg zu
+frischer Energie finden.
+
+Anfang 2019 gab es dann schon eine breitere Auswahl solcher Batterien, und eine
+400 mAh-Variante von einem Hersteller
+mit dem unaussprechlichen Namen ZNter
+(Abb. 4, Mitte) hatte einige vielversprechende Bewertungen aufzuweisen. Und
+tatsächlich war diese Batterie brauchbar.
+Ein oder zwei Motoren oder Lampen konnte
+man damit betreiben und auch die Laufzeit
+schien den angegebenen 400 mAh nahe zu
+kommen.
+Ein weiteres Jahr später kam die 600 mAhVariante des gleichen Akkus auf den Markt,
+die ebenfalls zu halten schien, was sie
+versprach. Bis dahin hatten auch anderen
+Forums-Mitglieder diese Batterien entdeckt
+[3] und ebenfalls für brauchbar befunden.
+Inzwischen gibt es eine noch neuere Version von ZNter, wiederum mit 10% mehr
+Kapazität und einer neuen Schnelllademöglichkeit per USB-C. Diese Batterie hat
+mich aber nicht mehr rechtzeitig für diesen
+Beitrag erreicht. Sobald sie aus Fernost
+eintrifft werde ich sie im Forum vorstellen.
+
+
+Die erste Batterie dieser Art, die ich bestellt
+habe, war eine 800 mAh Okcell (Abb. 4,
+links). Und, um es direkt zu sagen: Diese
+Batterie hat meine Erwartungen in keiner
+Weise erfüllt. Die Ausgangsspannung brach
+schon beim Anschluss einer einzelnen
+fischertechnik-Glühlampe auf 6 V ein und
+auch bei moderater Belastung durch einen
+ftDuino mit angeschlossener Leuchtdiode
+konnte nicht im Ansatz von 800 mAh die
+Rede sein. Angenehm erschien auf den ersten Blick die ebenfalls eingebaute Ladestandanzeige. Da die Batterie die versprochene Leistung partout nicht erbringen
+kann, nützt so eine Anzeige allerdings
+
+
+
+Die USB-Zellen unterscheiden sich aber
+nicht nur im Ladeverfahren von den per
+externem Ladegerät zu ladenden Li-IonZellen, sondern stellen auch ihre Ausgangsspannung ganz anders bereit. Dass es kaum
+möglich ist, 9 V per Li-Ion-Zelle(n) direkt
+bereitzustellen, wurde bereits im vorigen
+Abschnitt erklärt. Tatsächlich ist es aber
+durch entsprechende Elektronik möglich,
+
+
+Elektronik
+
+Spannungen umzuformen. Neben der USBLadeelektronik enthalten diese USB-Zellen
+daher auch einen sogenannten Step-UpWandler, der die Batteriespannung auf 9 V
+anhebt. Das hat den großen Vorteil, dass
+diese Batterien tatsächlich die gewünschte
+9V-Ausgangsspannung liefern und das
+sogar (fast) unabhängig vom Ladezustand.
+Es hat aber auch den Nachteil, dass mit
+diesem Wandler ein potenzieller Flaschenhals ins Spiel kommt. Genau daran krankt
+die Okcell-Batterie, deren Wandler maximal 100 mA liefert – zu wenig für die
+meisten fischertechnik-Motoren, -Controller und -Lampen, selbst wenn der im Inneren der Batterie verbaute Akku vielleicht
+genug Energie liefern könnte.
+Anlass genug, diese Batterien mal einem
+genauen Test zu unterziehen. Tatsächlich
+verhalten sich die beiden ZNter-Batterien
+im Modell sehr ähnlich. Beide liefern
+Ströme bis ca. 700 mA und können damit
+sogar einen TXT antreiben. Für ein paar
+Lampen und leicht belastete Motoren reicht
+es auch. Aber bei den Power-Motoren wird
+man mit 700 mA auch nicht glücklich.
+Überlastet man die Batterien, so schalten sie
+den 9V-Ausgang ab. Erst ein kurzer Anschluss via USB-Ladeport schaltet den 9VAusgang dann wieder ein.
+
+Die Messkurven in Abb. 6 spiegeln das
+gefühlte Verhalten deutlich wieder: Die
+Okcell liefert zu wenig Strom und bleibt mit
+239 mAh weit hinter den beworbenen 800
+mAh zurück. Die 400 mAh-ZNter liefert
+praxistaugliche 600 mA, bleibt mit einer
+Kapazität von knapp 300 mAh aber ebenfalls deutlich unter Nennwert. Erst die
+600 mAh-Batterie liefert 700 mA und
+kommt mit der Kapazität von 550 mAh in
+die Nähe des versprochenen Wertes.
+Man muss dabei im Hinterkopf behalten,
+dass diese Batterien konstant 9 V abgeben.
+Dadurch ist die bei 550 mAh abgegebene
+Energie von fünf Wattstunden (Wh) nahezu
+gleich der nur 7 V liefernden reinen Li-IonZelle mit 700 mAh. Einfach direkt die
+Ladekapazitäten in mAh zu vergleichen
+hinkt hier aufgrund der unterschiedlichen
+Spannungen also etwas.
+Im Inneren der USB-Batterien steckt jeweils sehr ähnliche Technik. Ein YoutubeVideo [4] und ein Review [5] zeigen die
+beiden parallel geschalteten 500-mAAkkus im Inneren der 400-mAh-ZNterBatterie sowie die Lade- und Step-UpElektronik am Fuß. Foren-Mitglied juh hat
+unter [3] die 600 mAh-Variante geöffnet.
+
+
+
+
+
+Hier kommen zwei 750-mAh-Batterien
+zum Einsatz, und die Elektronik befindet
+sich im Kopf der Batterie.
+Kurz vor Drucklegung der ft:pedia erreichte
+mich dann doch noch das aktuelle 2022erModell der ZNter-Batterie (Abb. 7). Meine
+Erwartung war, etwas mehr Kapazität und
+ggf. etwas mehr Stromstärke zu erhalten.
+
+Fazit
+Wer heute auf Aliexpress oder ähnlichen
+Plattformen schaut, wird Batterien in 9-VBauform finden, bei denen abenteuerliche
+Kapazitäten von bis zu 12500 mAh angegeben werden. Diese Werte sind natürlich
+völlig utopisch. Realistische Kapazitäten
+liegen bei maximal 800 mAh für USBZellen und bei 1000 mAh für Li-ion-Zellen
+in 9V-Block-Bauform ohne eigene Ladeelektronik. Das entspricht ca. 6 Wh als
+maximal zu erwartendem Energieinhalt.
+Es ist unmöglich, generelle Tipps zur
+Unterscheidung guter und schlechter Zellen
+zu geben. Die ZNter-Zellen haben sich als
+praktisch herausgestellt und scheinen zuverlässig verfügbar zu sein. Wer mag, der
+bestelle gerne eine andere Marke und
+berichte im Forum über das Ergebnis. Vor
+allem eine Zelle mit größerer Stromstärke
+als die hier beobachteten 700 mA wäre
+interessant.
+
+
+Tatsächlich verhält sich das neue Modell
+deutlich anders als die Vorgänger: Bei
+Belastung hält es die Spannung weniger
+konstant. Unbelastet liefert es 9,6 V; mit
+steigender Last sinkt diese Spannung und
+erreicht bei 500 mA Last noch 9.1 Volt. Bei
+weiter steigender Last sinkt die Ausgangspannung schnell weiter: bei 500 mA sind es
+nur noch 8.6 V. Während die Vorgänger bei
+700 mA noch stabile 9 V liefern, bricht das
+aktuelle Modell hier auf gut 7 V ein. Auch
+bei der entnehmbaren Kapazität bleibt es
+trotz höherem Nennwert hinter dem Vorgänger zurück und nach 102 Minuten bei
+300 mA ist Schluss. Dabei erwärmt sich die
+Batterie deutlich spürbar.
+
+Wer „maximale Power“ braucht, dem wird
+der 9V-Batteriehalter nicht helfen. Daran
+ändern auch aktuelle Akkus nichts. Wem
+aber der Betrieb mit Einwegbatterien lediglich etwas schwächlich vorkam und das
+Vergnügen etwas zu kurz erschien, dem
+können Li-Ion-basierte 9V-Akkus gefallen.
+Sie bieten je nach Belastung mehr als die
+doppelte Kapazität einer Einwegbatterie
+und sind auch bei der Stromstärke deutlich
+im Vorteil.
+Der Einkauf birgt allerdings immer ein
+gewisses Risiko. Qualität und Preis schwanken stark und häufig sind völlig utopische
+Kapazitätsangaben zu finden. Mit den
+2021er ZNter-Batterien habe aber nicht nur
+ich gute Erfahrungen gemacht. Doch die
+Tests zeigen: Neuer ist nicht immer besser.
+9V-Akkus mit eingebautem USB-Ladegerät punkten vor allem durch ihre Alltagstauglichkeit, muss man sich doch keine
+Gedanken über eine passende Energiequelle
+machen. Zusätzlicher Vorteil dieser Akkus
+ist die konstante elektronisch erzeugte
+
+Ausgangsspannung. Diese geht aber etwas
+auf Kosten des maximalen Entladestroms
+und der Kapazität. Wer das Maximum aus
+dem 9V-Batteriehalter herausholen will
+greift also eher zu Li-Ion-Akkus mit
+separatem Ladegerät.
+Preislich macht man dabei wenig falsch.
+Ein Doppelpack Akkus kostet in beiden
+Fällen um die 15 Euro, was dem Gegenwert
+von 6 bis 8 Markeneinwegbatterien entspricht. In stromhungrigen fischertechnikAnwendungen hat sich die Anschaffung
+schnell amortisiert.
+Dennoch gilt: Ob sich eine Batterie für den
+Einsatz im fischertechnik-Modell eignet
+muss man für jede Batterie-Variante erneut
+testen.
+
+Exkurs: Milliampere (mA) vs.
+Milliamperestunden (mAh)
+Bei Batterien interessieren uns vor allem
+zwei Werte, die leicht zu verwechseln sind,
+aber nicht verwechselt werden sollten. Die
+Stromstärke in mA gibt an, einen wie starken Strom man der Batterie maximal entnehmen kann. Je höher die Stromstärke,
+desto mehr und stärkere Verbraucher kann
+man anschließen. Wie lange die Batterie
+dabei aber durchhält, darüber sagt die
+Stromstärke nichts aus. Die maximale
+Stromstärke wird bei Batterien leider in der
+Regel nicht angegeben; sie ist aber genau
+das, was klassische Einwegbatterien in
+fischertechnik-Modellen disqualifiziert.
+Die Kapazität in Milliamperestunden
+(mAh) gibt dagegen an, wieviel Ladung in
+der Batterie insgesamt gespeichert ist. Sie
+bestimmt, über welchen Zeitraum man
+einen bestimmten Strom entnehmen kann.
+Eine Batterie mit 700 mAh liefert zum
+Beispiel 10 Stunden lang einen Strom von
+70 mA. Bei einem Strom von 1 A hält die
+
+Elektronik
+
+Batterie (sofern sie einen solch hohen Strom
+überhaupt liefern kann, s. o.) hingegen
+deutlich kürzer als 0,7 Stunden durch.
+Welcher Gesamtenergie die Kapazität entspricht hängt zusätzlich von der Spannung
+ab. Und die ist bei vielen Batterien über die
+Entladung noch nicht einmal konstant, sondern sinkt langsam, wenn sich die Batterie
+leert. Die Gesamtenergie in Watt entspricht
+der Ladungskapazität in Ampere mal durchschnittlicher Spannung in Volt während der
+Entladung. Diesen Wert kann man dann
+z. B. mit den aktuellen Energiekosten vergleichen. Kostet eine Kilowattstunde z. B.
+30 ct, dann enthält eine 9V-Batterie mit
+550 mAh insgesamt fünf Wattstunden
+Elektrizität im Wert von 0,125 ct bzw. dem
+Äquivalent der Energie in weniger als
+0,5 ml fossilem Treibstoff (gut 10 kWh pro
+Liter). Das entspricht etwa 1/10 Teelöffel
+Benzin.
+
+Referenzen
+[1]
+
+Duracell: MN1604 datasheet.
+
+[2]
+
+Energizer: MAX 9V datasheet.
+
+[3]
+
+ftcommunity-Forums-Thread zu 9VZellen.
+
+[4]
+
+bigclivedotcom: Inside a ZNter
+lithium 9V battery. Youtube.com
+
+[5]
+
+BudgetLightForum.com: Test/review
+of Znter S19 9V 400mAh USB
+(Black-green).
+
+[6]
+
+Adam Welch: OkCell 9V PP3
+Lithium Battery. Youtube.com
+
+[7]
+
+KJDOT: How to Make USB
+Rechargeable 9V Li-Ion Battery.
+Youtube.com
+
+[8]
+
+Penguin DIY: So stellen Sie einen
+wiederaufladbaren 9V-Li-Ion-Akku
+her. Youtube.com
+
+
+

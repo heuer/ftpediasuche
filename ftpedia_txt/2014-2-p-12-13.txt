@@ -1,0 +1,93 @@
+
+
+Tipps & Tricks
+
+ft-Spezialteile made by TST (Teil 8)
+Andreas Tacke
+In einer lockeren Reihe stellt TST einige von ihm entwickelte Spezialteile vor, die so manche
+Lücke beim Bauen mit fischertechnik schließen. Im heutigen Beitrag geht es um Fahrzeugtechnik, genauer gesagt um eine Modifikation des Differentialgetriebes mit stabilen Metallachsen.
+Wer kennt sie noch, die guten alten
+Differentialgetriebe aus den Anfängen von
+fischertechnik, speziell die Getriebe 31500
+(Abb. 1) aus den 80er Jahren [1] sowie das
+31043 (Abb. 2, auch in rot [2]) aus den
+Anfängen von fischertechnik? Beide hatten
+Metallachsen, die beim Fahrzeugbau für
+eine stabile Achskonstruktion sorgten.
+
+
+Nachdem ich ein größeres Modell mit
+Kunststoffachsen gebaut hatte, musste ich
+allerdings feststellen, dass die Achsen aus
+Kunststoff die Last nicht tragen konnten.
+Also was tun?
+Schön wäre es, bei den neuen Getrieben
+auch Metallachsen einsetzen zu können.
+Da bleibt nur: Selbermachen …
+Dazu nahm ich mir Rundstahl aus V2A mit
+4 mm Durchmesser. An einem Ende fräste
+ich zwei Flächen an, genau wie bei den
+Rastachsen. Anschließend wurde in dem
+Bereich der Flächen noch eine Rändelung
+aufgebracht, damit die Zahnräder 31413
+festen Halt auf der Achse bekommen.
+Gefertigt habe ich mir diese Achsen in 45,
+60, 75 und 90 mm Länge; das reicht
+eigentlich für den Fahrzeugbau aus (siehe
+
+
+Bei den heutigen Differentialgetrieben
+kommen die Rastachsen aus Kunststoff
+zum Einsatz, die es ja in verschiedenen
+Längen gibt. Das bringt natürlich beim
+Bauen Flexibilität, und alle Achslängen
+liegen im ft-Raster. Das ist ein klarer
+Vorteil gegenüber den alten Getrieben,
+denn dort sind die Längen fix.
+
+
+
+So erhielt ich ein Differentialgetriebe mit
+Metallachsen, welches auch höhere Achs-
+
+
+Tipps & Tricks
+
+lasten zulässt, ähnlich wie die Getriebe
+31500 aus den 80er Jahren (Abb. 4).
+
+Die Vorteile überwiegen allerdings, wie
+ich meine. Auch die Realisierung einer
+Zwillingsbereifung ist damit in stabiler
+Weise möglich (Abb. 6).
+
+
+mit 45 mm- und rechts mit 60 mm-Achse
+
+Bei dieser Variante muss man allerdings
+das Getriebe vorher mit den Achsen
+zusammenbauen, da sich die Achsen nicht
+mehr nachträglich von außen einschieben
+lassen (Abb. 5).
+
+Und wieder mal zeigt sich, wie aus einem
+aktuellen Konstruktionsproblem und ein
+paar kreativen Gedanken ein Spezialteil
+entsteht, das perfekt zu fischertechnik
+passt…
+
+Referenzen
+[1]
+
+Andreas Tacke: ft-Spezialteile made
+by TST (Teil 1). ft:pedia 2/2012, S.
+24-25.
+
+[2]
+
+Stefan Falk: Perlentauchen (Teil 2).
+ft:pedia 4/2012, S. 14-21.
+
+
+
+

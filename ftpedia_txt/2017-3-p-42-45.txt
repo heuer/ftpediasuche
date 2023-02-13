@@ -1,0 +1,167 @@
+
+
+Modell
+
+Power-Synchronmotor
+Gerhard Birkenstock
+In der ft:pedia wurden schon einige richtig schöne Projekte mit Synchronmotoren gezeigt. Oft
+benötigen diese jedoch besondere Bauteile (z. B. Stabmagnete, Spulen, große Räder). Auch das
+Starten der Synchronmotoren verlangt etwas Geschick: Sie wollen mit geübter Hand in
+Schwung gebracht werden. Ich möchte euch hier eine andere Möglichkeit aufzeigen: Ein
+normaler Gleichstrommotor soll der Antrieb sein, mit Kraft und Präzision aus dem Stand
+heraus. Einschalten – läuft!
+
+Die Konstruktionsidee
+Die fischertechnik-Motoren werden mit
+Gleichstrom betrieben. Um die Drehzahl zu
+regeln muss die Spannung beeinflusst werden. Dies werden wir mit Software und
+einem ROBO TX Controller (oder Nachfolger) realisieren. Die interne Uhr des TX
+Controllers soll dabei im ersten Schritt als
+Referenz dienen. Die Uhr liefert den Referenztakt in Form von Sekundenschritten.
+
+dass der Motor mit einer moderaten Drehzahl laufen kann. Sie sollte nicht zu groß
+sein, der Motor würde sonst unnötig schnell
+drehen. Aber auch nicht zu langsam, so dass
+er eine dem Modell angemessene Leistung
+abgeben kann.
+
+Die Software
+Die Software hat nun die Aufgabe, das
+Uhrensignal mit der Sekundenwelle zu
+vergleichen und den Motor zu regeln. Läuft
+die Sekundenwelle zu langsam, muss die
+Spannung am Motor größer werden. Läuft
+die Sekundenwelle hingegen zu schnell, ist
+die Motorspannung zu reduzieren.
+Um eine möglichst feinfühlige Regelung zu
+erhalten, habe ich den Ausgang des TX
+Controllers auf 512 Stufen gestellt. Mit der
+einfachen Abstufung in acht Schritten würde die Regelung sehr ruppig ausfallen.
+
+(nach dem Modell aus [2])
+
+Da der Elektromotor keine Umdrehungssignale zurückgibt, muss diese Information an
+der Sekundenwelle des Modells abgegriffen
+werden. Zwischen Sekundenwelle und
+Motor ist die Übersetzung so zu wählen,
+
+
+Um eine gute Ganggenauigkeit zu erzielen
+werden wir die Impulse der Sekunden und
+die der Sekundenwelle getrennt summieren.
+Die Differenz der beiden Summen ist die
+Gangabweichung. Diese gilt es stetig auf
+Null zu bringen. Je größer die Gangabweichung, desto größer muss die Anpassung
+der Regelgröße sein.
+Nach dem Start muss der Motor erst an
+Drehzahl gewinnen. In diesem Moment
+wird die Gangabweichung am größten sein.
+
+
+Modell
+
+Nach weiteren Sekunden kommt es zur
+Ausregelung. Da wir die Sekunden zählen,
+läuft der Motor mit sehr guter Langzeitpräzision. Durch das Zählen von jedem Impuls wird keine Sekunde vergessen. Auch
+bei wechselnder Last wird die angelegte
+Spannung nachgestellt.
+Auf der Anzeige des TX Controllers sind in
+der ersten Zeile die Ist-Impulse (fischertechnik-Uhr) zu sehen. Gleich darunter sind
+die Soll-Impulse (Quarz) dargestellt. Die
+berechnete Differenz wird darunter angezeigt.
+Die letzte Zeile gibt die Regelgröße aus.
+Der Wert kann zwischen 0 und 512 variieren. Hier kann man erkennen, welche
+Leistung der Motor in das fischertechnikModell abgeben muss. Sollte sich hier eine
+große Spannung einstellen, ist die Übersetzung noch einmal zu überdenken.
+Das ROBO Pro-Programm in Abb. 2 zeigt
+eine Steuerung: Die Zeit auf der fischertechnik-Uhr läuft stetig um die Schritte der
+Leistungsabgabe hinter der Quarzzeit nach.
+
+
+Diese Steuerung ist jedoch sehr stabil. Es
+kommt zu keinem Aufschaukeln oder Übersteuern der Zeitdarstellung.
+Eine echte Regelung stellt das ROBO ProProgramm in Abb. 3 dar.
+
+
+In diesem Regelkreis wird die angesteuerte
+Leistung zum Motor wieder aus der Regelgröße heraus gerechnet. Die Uhr läuft dann
+genau neben der Quarzuhr mit. Bevor die
+Regelung zur Ruhe kommt, kann es ein paar
+Mal zu einem Übersteuern kommen. Abhilfe würde hier eine Mittelwertbildung
+schaffen.
+DCF77
+Noch präziser geht es mit dem echten Zeitzeichensignal. Jede Sekunde wird ein Impuls über Funk geliefert. Es gibt nichts Genaueres, was man als Privatmensch bekommen kann. Das Modul mit Spannung versorgen und das Signal an den Eingang 2
+legen. Aber ein kleines Problem bringt
+dieses Signal mit sich: Wie in der 3/2012 zu lesen, wird zur Synchronisation
+immer die 59ste Sekunde ausgelassenen [1].
+Zur Lösung dieses Problems gibt es zwei
+Möglichkeiten: Entweder wird bei jeder
+59sten Sekunde auch ein Impuls der Sekundenwelle herausgerechnet. Oder es wird bei
+der Zeit eine Sekunde hinzugenommen. Ich
+habe hier die zweite Lösung gewählt: Nach
+59 Sekundenimpulsen wird einfach noch
+ein 60ster hinzuaddiert.
+Für die beiden Zähler habe ich eine Variable
+mit ganzen Zahlen gewählt. Nach 32767
+Sekunden würde es dadurch zum Überlauf
+kommen. Diesem Problem komme ich mit
+einer Abfrage zuvor. Wird die Variable
+
+
+
+
+größer als 10.000, werden bei beiden Zählern (Quarz und Uhr) jeweils 900 Impulse
+ab gezogen. Die Zeitwaage bleibt dadurch
+unverändert. Da der TX Controller dies sehr
+schnell macht, kommt es zu keinem Ausfall
+oder Ruckeln des Systems.
+Da bei dieser Anwendung die Signale im
+Sekundentakt ankommen, kann man sehr
+schön die Regelung beobachten. Mit der
+Funktion „Liste“ von ROBO Pro ist man in
+der Lage, das Regelverhalten auf dem PC
+abzuspeichern und mittels Excel in einer
+Kurve darzustellen. Die unterschiedlichen
+Regelalgorithmen können so auf ihre Wirkungsweise hin untersucht werden.
+Als Beispiel habe ich in Abb. 4 den Kurvenverlauf des Startverhaltens der einfachen
+Steuerung dargestellt. Die blaue Linie gibt
+die Sollgröße, also die vom Programm oder
+von der DCF77-Uhr gelieferten Sekunden
+wieder. Dies liefert, wie zu erwarten, einen
+linearen Kurvenverlauf. In den ersten 100
+Sekunden wird die Regelgröße aufgebaut.
+Der Gleichstrommotor läuft noch nicht an.
+Ab der Stellgröße 110 beginnt der Motor
+
+sich zu drehen und die ersten Impulse der
+Sekundenwelle werden gezählt. Durch die
+Berechnung der Differenz geht die Uhr um
+den Betrag der Stellgröße nach. Mittels
+einer Konstante (in diesem Fall ein Wert
+von 150) kann man die Abweichung fast
+kompensieren. Dies geht jedoch nicht komplett. Wenn man sich die grüne Linie sich
+genau ansieht, erkennt man, dass sie wieder
+abfällt. Das kommt von den sich erwärmenden Bauteilen wie Motor und Lagerstellen.
+Auch beginnt das von mir verwendete
+Schmiermittel in den Lagern der fischertechnik-Steine seinen Schmierfilm aufzubauen. All dies kann man aus der Leistungskurve, also der Regelgröße, ableiten.
+
+Referenzen
+[1]
+
+Dirk Fox, Dirk Ottensmeyer: Bau
+einer Funkuhr. ft:pedia 3/2012, S. 410.
+
+[2]
+
+Gerhard Birkenstock: Uhrwerk mit
+Z80 und Z100. ft:pedia 4/2014, S.
+20-24.
+
+
+
+
+Modell
+
+
+
+

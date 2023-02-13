@@ -1,0 +1,903 @@
+
+
+Elektromechanik
+
+Programmsteuerungen
+Stefan Falk
+Als Fortsetzung der Motorsteuerungen-Artikelserie schauen wir uns heute an, wie man nur
+mit elektromechanischen Mitteln programmgesteuerte Maschinen bauen kann. Den Ablauf
+der einzelnen Vorgänge in der Maschine kann man dann durch Austausch des „Programms“
+beliebig neuen Anforderungen anpassen.
+Unsere in der ft:pedia bisher gebauten
+elektromechanischen Maschinen lösten
+einen auszuführenden Teilvorgang dadurch
+aus, dass ein vorheriger fertiggestellt
+wurde. Das wurde z. B. dadurch realisiert,
+dass am Ende eines Vorgangs ein Taster
+von der Maschine selbst betätigt wurde,
+der dann einen anderen Vorgang – etwa
+durch Einschalten eines Motors – auslöste.
+Für manche Aufgaben führt das aber zu
+sehr komplizierten Schaltungen und einem
+hohen Aufwand an Bauteilen.
+Für komplexe Abläufe gibt es programmgesteuerte Maschinen, die eine gestellte
+Aufgabe mit relativ einfacher Schaltung
+und wenig Materialaufwand lösen. Zwei
+solcher Modelle wollen wir heute vorstellen.
+
+Der Klassiker: Verkehrsampeln
+Schon 1968 kam der erste Elektromechanik-Kasten[1], [2] von fischertechnik
+heraus, der e-m bzw. e-m1 (etwas später
+erschien nämlich mit dem e-m2 sein
+kleiner Bruder). Er enthielt unter anderem
+zwei Schleifringe nebst darauf anzubringenden Unterbrecherstücken, Federgelenksteine und Kontaktstücke (siehe den
+Artikel „Perlentauchen“ in dieser ft:pediaAusgabe). Damit konnten recht elegant
+programmgesteuerte Maschinen gebaut
+werden. Ein echter Klassiker ist die
+Verkehrsampel:
+
+auf der Titelseite des e-m1-Handbuchs
+
+Durch die auf den umlaufenden Metallbahnen der Schleifringe anzubringenden
+Unterbrecherstücke
+konnte
+so
+die
+wirklichkeitsgetreue Ansteuerung der
+roten, gelben und grünen Lampe realisiert
+werden:
+Phase
+
+Rot Gelb Grün
+
+Rot
+
+X
+
+-
+
+-
+
+Rot-Grün-Übergang
+
+X
+
+X
+
+-
+
+Grün
+
+-
+
+-
+
+X
+
+Grün-Rot-Übergang
+
+-
+
+X
+
+-
+
+Natürlich lässt sich eine Ampel auf
+unzählige Arten realisieren – mechanisch,
+
+
+Elektromechanik
+
+elektromechanisch,
+elektronisch
+und
+computergesteuert. Die unterschiedlichen
+Lösungen gleichen sich aber alle in einem:
+Sie brauchen nichts weiter zu tun, als die
+Lampen zum richtigen Zeitpunkt ein und
+aus zu schalten. Das wiederholt sich dann
+einfach ständig, und schon arbeitet die
+Ampel endlos nach dem vorgegebenen
+„Programm“.
+
+Anstelle der Schleifkontakte des 1968er
+Modells verwenden wir also drei Minitaster (für rot und grün auf der einen, für
+gelb auf der anderen Seite), und anstelle
+von Schleifringen geeignet mit Bausteinen
+bestückte Drehscheiben.
+Das ganze kommt ohne eine Grundplatte
+aus, denn alles ist auf folgendem Gestell
+aufgebaut:
+
+Um das praktisch nachzuvollziehen, bauen
+wir uns selber eine kleine Verkehrsampel:
+
+grün
+rot
+
+
+Ein Motor dreht eine selbstgebaute
+Schaltwalze, die drei Taster betätigt, die
+wiederum je eine der Lampen der
+Verkehrsampel steuern.
+
+Die vielen Bausteine 5 und 7,5 erleichtern
+den rasterkonformen Aufbau. Die ftDrehscheibe ist nämlich genau 5 mm dick.
+Auch der Motor ist genau justierbar: Unter
+ihm sitzen zwei Bausteine 5, die genau den
+richtigen Abstand vom Boden bilden.
+Auf der folgenden Abbildung sieht man
+auch gut, wie die „Sonnenblenden“ der
+Lampen gebaut sind: Nur die unterste,
+grüne Lampe sitzt direkt auf dem Baustein
+30. Gelb und grün sitzen stattdessen auf je
+einem Baustein 15, und jede Lampe hat
+eine Bauplatte 15 • 45 als Blende. Die
+Bausteine 15 werden nur durch eine
+Bauplatte 15 • 60 auf der Rückseite
+zusammengehalten:
+
+gelb
+
+
+
+
+
+
+Die elektrische Schaltung für die Ampel ist
+recht einfach: Der Motor läuft einfach
+immer durch, und jeder Taster hängt im
+Stromkreis einer Lampe – wird er betätigt,
+leuchtet „seine“ Lampe auf.
+
+
+Jetzt brauchen wir nur noch das geeignete
+„Programm“, nachdem die Lampen angesteuert werden. Dazu bestücken wir zwei
+Drehscheiben wie folgt:
+
+DC
+
+M
+
+rot
+
+gelb
+
+grün
+
+
+
+Die linke Scheibe in Abb. 8 trägt die
+Bestückung für die rote Lampe, die rechte
+die für die gelbe (die ja nur zwei Mal im
+gesamten Zyklus kurz aufleuchten muss).
+Die Bauteile, die neben der rechten Drehscheibe liegen, gehören auf deren Unterseite – das sind die für die grüne Lampe.
+Mit unseren „Ersatz-Schleifringen“ wie
+abgebildet bestückt gibt es Phasen, in
+denen keine der Lampen leuchtet. Bestückt
+man aber ohne „Pausen“, leuchten zeitweise Lampen gemeinsam, die nicht
+gemeinsam leuchten sollten. Das lässt sich
+in dieser Bauart mit den Minitastern kaum
+
+
+Elektromechanik
+
+vermeiden – probiert am besten selbst, was
+euch besser gefällt.
+Der Motor muss dann noch richtig herum
+angeschlossen werden, damit die Ampel
+auch den richtigen Ablauf hat. Die rote und
+gelbe Lampe müssen im Ablauf zusammen
+vor der grünen aufleuchten, nicht danach.
+Wer noch keinen Führerschein hat, schaue
+sich das mal an einer echten Ampel an.
+Damit ist unsere erste programmgesteuerte
+Maschine fertig! Viel Spaß beim Ausprobieren, Tüfteln, Verbessern, Ergänzen
+und Weiterentwickeln…
+Aber natürlich können wir noch viel
+spannendere Sachen programmgesteuert
+bauen als Ampeln. Deshalb stellen wir als
+nächstes Modell eine wirklich „frei
+programmierbare“ Maschine vor.
+
+Initialen-Schreiber
+Nach der Ampel als relativ einfachem
+Beispiel für eine programmgesteuerte
+Anlage wollen wir uns nun einer größeren
+
+Herausforderung stellen: Zu bauen ist eine
+Maschine, die rein elektromechanisch die
+Initialen von jemandem, also die Anfangsbuchstaben von dessen Vor- und Nachnamen, auf ein Blatt Papier schreiben
+kann. Was da genau geschrieben wird, soll
+von einem Programm gesteuert werden,
+das auf einem austauschbaren Datenträger
+gespeichert ist. Je nach eingelegtem
+Programm schreibt die Maschine dann
+beliebige Zeichen aufs Papier.
+Das klingt ganz schön nach Computerei,
+oder? Dennoch werden wir das schaffen.
+Allerdings benötigt das Modell schon eine
+recht komfortable Ausstattung an elektromechanischen Teilen. Insgesamt werden
+wir verbauen (siehe Bauanleitung[3]):
+Drei Motoren,
+sechs Taster,
+einen Elektromagneten sowie
+ein Relais.
+
+
+
+
+Das Relais kann eines der fertigen fischertechnik-Relaisbausteine sein oder alternativ (dazu brauchen wir aber einen
+zweiten Elektromagneten) ein ft:pediaSelbstbaurelais, wie es in Ausgabe 4/2011
+ausführlich beschrieben ist.
+Die Funktionsweise des Schreibers
+Zunächst müssen wir aber festlegen, wie
+die Buchstaben zu Papier kommen sollen.
+Unser Modellvorschlag enthält einen
+Wagen mit folgenden Eigenschaften:
+1. Er wird einfach auf das zu beschreibende Blatt Papier gestellt und kann darauf
+
+Schritte mit einer bestimmten Länge
+fahren. Das Papier bleibt also einfach
+auf der Tischplatte liegen, und der
+Wagen fährt in einer Richtung darauf
+hin und her.
+2. Quer zur Fahrtrichtung lässt sich ein
+Stift-Träger verschieben. Auf diese
+Weise können wir den Schreibstift auch
+senkrecht zur Fahrtrichtung verschieben. Auch das muss in definierten
+Schritten
+geschehen,
+damit
+die
+Maschine immer an einem bekannten
+Ort steht und also den nächsten korrekt
+anfahren kann.
+
+
+
+Elektromechanik
+
+3. Schließlich kann der Stift abgehoben
+oder aufs Papier niedergedrückt werden.
+Dazu dient der eine Teil unseres Gesamtmodells, der Schreibwagen. Es ist ein Dreiradfahrzeug mit angetriebenem Hinterrad.
+
+
+In den Stiftträger kann ein Schreibstift
+eingeklemmt werden (je nach Dicke des
+Stifts müsst ihr die Konstruktion hierfür
+vielleicht etwas anpassen).
+
+
+Vorne kann ein Stiftträger auf einem querliegenden Achsenpaar per Zahnstangenantrieb quer zur Fahrtrichtung verschoben
+werden.
+
+
+Um die Kabel zum noch ausstehenden
+Steuergerät komfortabel anschließen zu
+können, sind im Modellvorschlag zwei
+dreipolige Verteilerplatten aus dem älteren
+ft-Elektromechanik-Programm angebaut.
+Wer keine hat, kann dasselbe auch mit drei
+leeren Leuchtsteinsockeln erreichen oder
+eben gleich entsprechend lange Kabel
+verwenden. Insgesamt werden zwischen
+Schreibwagen und Steuergerät fünf
+Leitungen benötigt werden.
+
+
+
+
+Damit das Schreiben der Buchstaben
+richtig funktioniert, definieren wir die
+Operationen, die die Maschine ausführen
+können muss:
+
+können (wenn Leerraum überfahren
+werden muss) als auch mit abgesenktem
+(wenn tatsächlich eine Linie zu
+zeichnen ist).
+
+1. Sie muss einen Schritt auf dem Papier
+fahren können, z. B. für die waagerechten Linien des „F“.
+
+Die Maschine arbeitet also ähnlich wie ein
+computergesteuerter Plotter. Wir brauchen
+zum Zeichnen von Buchstaben oder
+Ziffern aber nur eine ganz geringe
+„Auflösung“: Es genügen wenige Schritte
+in waagerechter Richtung bis zum
+Papierende, und es genügen zwei Schrittlängen quer zur Fahrtrichtung. Das ermöglicht es uns, gänzlich ohne „richtigen“
+Computer auszukommen, wie wir noch
+sehen werden.
+
+2. Sie muss den Stift quer zur Fahrtrichtung einen Schritt versetzen können,
+z. B. für die Distanz zwischen den
+beiden waagerechten Linien des „F“.
+3. Sie muss diese beiden Bewegungen in
+beide Richtungen ausführen können:
+nach rechts und auch zurück nach links
+fahren, sowie den Stift in Richtung
+Ober- und Unterkante der Buchstaben
+verschieben.
+4. Sie muss all diese Operationen sowohl
+mit abgehobenem Stift durchführen
+
+Allerdings müssen wir die Schrittlängen
+schon hinreichend genau einhalten können,
+damit beim Zurückfahren auch wieder
+genau genug die Ausgangsposition angefahren werden kann. Das sehen wir, wenn
+
+
+Elektromechanik
+
+wir uns anschauen, wie das „F“ zu
+zeichnen ist:
+
+Die Grundschaltung jedes Motors sieht
+dann so aus:
+
+
+
+M
+
+
+
+
+
+Wir fahren also in folgender Reihenfolge
+von der Ausgangsposition (in der der Stift
+am linken unteren Eck stehen soll):
+1. Zwei Schritte mit abgesenktem Stift
+quer zur Fahrtrichtung nach oben.
+2. Mit immer noch abgesenktem Stift
+einen Schritt nach rechts fahren.
+3. Mit angehobenem Stift einen Schritt
+zurück nach links unten. Hier ist es
+wichtig, die Position hinreichend genau
+zu treffen, damit der nächst Querstrich
+sauber beginnt.
+4. Schließlich einen Schritt nach rechts
+fahren bei abgesenktem Stift, um das
+„F“ zu vollenden.
+Damit wir die Schritte in definierter Länge
+zeichnen, rüsten wir die beiden Motoren
+zum Fahren des Wagens und zum
+Verschieben des Stifts quer dazu mit je
+einem Positionstaster aus. Einer sitzt beim
+Heckmotor und wird von einem Impulszahnrad direkt auf der Antriebsachse
+betätigt. Der andere sitzt oben auf dem
+Fahrzeug
+und
+wird
+von
+der
+Z40/Drehscheiben-Kombination mit eingesteckten Verbindern 15 betätigt.
+
+Die beiden Anschlüsse oben sollen Strom
+liefern – für die jeweils benötigte Drehrichtung richtigherum gepolt. Der Motor
+läuft, solange sein Impulstaster nicht
+betätigt wird. Sobald er soweit gedreht hat,
+dass der Taster gedrückt wird, unterbricht
+dieser seine Stromzufuhr.
+Damit erreichen wir, dass der Motor immer
+ganze, definiert lange Schritte ausführt.
+Der in der Schaltung orangefarbig eingezeichnete zweite Taster kann den
+Impulstaster überbrücken, um den Motor
+zum Loslaufen zu bewegen. Dieser braucht
+also nur kurz gedrückt zu werden (bis der
+Impulstaster losgelassen wird nämlich), um
+einen Schritt zu fahren. Diesen Taster
+müssen wir später noch geeignet ergänzen;
+er wird nicht auf dem Fahrzeug sitzen,
+sondern in einem externen Steuergerät.
+Am besten baut ihr den Schreibwagen
+anhand der Abbildungen auf und erprobt
+diese Schaltung ausführlich in beiden
+Drehrichtungen für beide Motoren. Erst
+wenn alles gut funktioniert, wenden wir
+uns dem nächsten Schritt zu.
+Die Steuerung
+Ganz getrennt vom Schreibwagen müssen
+wir noch eine geeignete Steuerung bauen.
+Die muss folgendes können:
+Sie muss den Stift nach Bedarf absenken oder anheben können.
+
+
+
+Sie muss die Taster zur Überbrückung
+der Impulstaster im Wagen geeignet
+ansteuern, um die Motoren einen Schritt
+fahren zu lassen.
+Schließlich muss sie die Stromversorgung der Motoren in der jeweils
+gerade benötigten Polung bereitstellen,
+damit die Motoren jeweils in die
+richtige Richtung fahren.
+Das Steuergerät muss seine Befehle von
+den Datenträgern mit dem jeweils
+auszuführenden Programm lesen und
+korrekt umsetzen können.
+Überlegen wir zunächst mal, wie wir überhaupt die „Datenträger“ mit ihrem
+„Programm“ darauf realisieren können.
+Dazu spicken wir ein wenig in der
+Geschichte der Datenverarbeitung und
+schauen uns eine Lochkarte[4] der ersten
+Computer an:
+
+stellen, eine schwarze Bauplatte 90 • 120,
+und stecken da in einem bestimmten
+Muster Teile drauf. Wie wir im Folgenden
+noch entwickeln werden, benötigen wir für
+das Programm zum Schreiben von „FT“
+mindestens zwei Platten, von denen wir
+sowohl die Vorder- als auch die Rückseite
+verwenden.
+
+
+Für unsere Programm-Karten verwenden
+wir, wie ihr seht, Federnocken. Warum wir
+für unser Modell die oberen beiden Reihen
+waagerecht und die unteren beiden
+senkrecht ausgerichtet bestücken, wird
+später noch klar werden.
+
+die Rückkehr in die Ausgangsposition
+
+Solche Karten wurden in den 1960er und
+1970er Jahren verwendet, um Daten und
+Programme einem Computer bereitstellen
+zu können. Ein geeignetes Gerät, der
+Lochkartenleser, tastete die Lochkarte
+Spalte für Spalte ab. Jedes in die Karte
+gestanzte Loch stand für ein bestimmtes
+Signal (ein „Bit“), welches nur zwei
+Zustände annehmen konnte: Loch gestanzt
+oder Loch nicht gestanzt. Durch die
+Kombination mehrerer solcher Bits
+(nämlich alle in einer Spalte der Lochkarte) konnten auch mehr Informationen
+als nur zwei verschiedene dargestellt
+werden.
+Na, das können wir doch auch! Nehmen
+wir doch, um nur eine Möglichkeit vorzu12
+
+„Teil vorhanden“ entspricht dann bei der
+Lochkarte „Loch gestanzt“, „Teil nicht
+vorhanden“ entspricht „Loch nicht
+gestanzt“. Und das Beste: Durch einfaches
+Umstecken können wir – anders als bei
+echten Lochkarten – unser „Programm“
+jederzeit ändern, ohne eine neue Karte zu
+benötigen.
+Die Karten müssen von einem noch zu
+bauenden Lesegerät von links nach rechts
+spaltenweise gelesen werden. Immer vier
+übereinander liegende Positionen (eine
+Spalte) legen zusammen einen Befehl fest,
+den die Maschine ausführen soll.
+Entsprechend der Aufgabenstellung, die
+das Steuergerät erfüllen muss, verwenden
+wir also vier „Bits“. Jede Spalte unserer
+Karten enthält vier Positionen, an denen
+
+eine Federnocke eingeschoben oder eben
+nicht eingeschoben sein kann.
+Was genau bedeuten nun die Teile auf der
+Karte? Wir definieren:
+1. Bit 1: Die von oben gesehen erste
+Position sagt aus, ob der Stift aufs
+Papier gedrückt (Federnocke vorhanden) oder abgehoben (keine Federnocke) sein soll.
+2. Bit 2: Die zweite Position von oben gibt
+die Polung für die Stromversorgung und
+damit die Drehrichtung der beiden
+Motoren im Schreibwagen an. Ist dort
+keine Federnocke eingeschoben, sollen
+das Fahrzeug nach rechts und/oder der
+Stiftträger nach oben fahren. Steckt eine
+
+Elektromechanik
+
+Federnocke in dieser Position, soll die
+Bewegung in die andere Richtung
+gehen, also zurück nach links bzw.
+unten.
+3. Bit 3: Die dritte Position von oben, also
+die zweite von unten gesehen, gibt bei
+Bestückung mit einer Federnocke ein
+Signal, das den Impulstaster des Stiftträgers überbrückt. Wenn das Lesegerät
+hier eine Federnocke erkennt, wird es
+also bewirken, dass der Stift genau
+einen Schritt nach oben bzw. (je nach
+Polung durch Bit 2) nach unten bewegt
+wird – es überbrückt kurz den Impulstaster, bis der Motor von alleine weiter
+läuft.
+
+
+
+
+
+4. Bit 4: Das unterste Bit schließlich wirkt
+wie Bit 3, nur für den Fahrmotor des
+ganzen Wagens. Es stößt mit Federnocken also das Verfahren des ganzen
+Wagens um genau einen Schritt nach
+rechts bzw. (je nach Polung durch Bit 2)
+nach links an.
+Das Steuergerät
+Damit wir unsere Programmkarten automatisch lesen können, legen wir sie in ein
+Steuergerät ein, welches sie per Kettenzug
+langsam durch eine Leseeinheit schiebt.
+Auf diese Weise wird Spalte für Spalte
+abgetastet, an welchen Positionen Federnocken stecken und wo nicht. Insgesamt
+sieht die Anlage dann so aus wie in
+Der Schreibwagen steht auf einem DINA4-Blatt.
+
+
+Das Steuergerät steht separat und ist mit
+dem Schreibwagen nur über eine Reihe
+von Kabeln verbunden.
+Im Steuergerät ist die erste Programmkarte so eingelegt, dass ihre Oberseite
+von links nach rechts abgetastet und
+damit abgearbeitet wird.
+Die Programmkarten werden von einem
+Motor durch die Leseeinheit geschoben,
+wie die nächsten Bilder zeigen. Die
+Leseeinheit selber besteht aus vier Tastern
+und ist in der folgenden Abb. 23 auf dem
+Kopf liegend dargestellt.
+Die Taster sind mit je einem Baustein
+5 • 15 • 30 und einem Verbinder 15 an
+einem Querbalken hängend befestigt. Die
+Taster zeigen also im Betrieb nach unten
+und lesen den durch die Federnocken
+gebildeten Programmcode von der Oberseite der durchs Lesegerät geschobenen
+
+Programmkarte. Alle vier Taster sind
+genau im Raster angeordnet, passend zu
+den Federnocken auf den Programmkarten.
+
+
+Die Leseeinheit ist von oben in zwei
+seitlich am Steuergerät hoch ragenden
+Bauplatten 15 • 60 eingeschoben. Das
+erlaubt die genaue Justierung, denn die
+Taster müssen von den Federnocken der
+Programmkarten zuverlässig gedrückt
+werden, dürfen sich aber nicht daran
+verhaken und den Transport der
+Programmkarten behindern.
+
+Elektromechanik
+
+ganz nach Eurem Bestand an Schaltern
+auch anders lösen.
+
+Motoraufhängung
+
+
+Der Motor treibt eine Kette an, auf der an
+zwei Stellen (eine würde zur Not auch
+genügen) Bausteine 30 und zur Verstärkung ein Winkelstein 10 • 15 • 15 auf
+einem Förderkettenglied angebracht sind.
+Zur Befestigung des Motors dienen ein
+Winkelstein 15 °, zwei Winkelsteine 7,5 °
+und zwei Federnocken.
+Im Modellvorschlag ist direkt am Motor
+ein Ein-/Ausschalter für die gesamte
+Anlage angebracht. Das könnt ihr natürlich
+
+
+Auf der Rückseite des Steuergerätes haben
+wir auch gleich ein em-5-Relais
+angebracht, welches wir für die elektrische
+Schaltung brauchen werden. Jeder andere
+fischertechnik-Relaisbaustein, jedes andere
+Relais mit Betätigung durch 9 V Gleich15
+
+
+
+spannung und mit zwei Umschaltkontakten
+oder auch das ft:pedia-Selbstbaurelais aus
+ft:pedia 4/2011 können natürlich genauso
+verwendet werden.
+Die Programmkarten werden also einfach
+oben auf das Steuergerät gelegt und automatisch durch die Leseeinheit geschoben.
+Damit die Antriebskette nicht durchhängt,
+wird sie von Bauplatten 30 • 90 und
+30 • 45 von unten unterstützt (Abb. 28).
+Antriebskette auf der Unterseite
+
+DC
+
+Lesegerät
+
+M
+Stift
+
+Polung
+
+Quermotor
+
+Fahrmotor
+
+Position
+Fahrmotor
+M
+Position
+Quermotor
+
+Fahrmotor
+
+M
+Quermotor
+
+Stiftmagnet
+
+
+
+Es genügt aber schon ein kurzer Impuls
+(durch einen quer zur Leserichtung eingesetzten Federnocken nämlich), um die
+Motoren zu einem ganzen Schritt zu
+bewegen. Sobald der Fahr- oder Quermotor sich nämlich etwas bewegten, geben
+sie ja ihren jeweiligen Impulstaster frei.
+Sobald der aber losgelassen wurde, überbrückt er über seinen Ruhekontakt den
+Lesetaster des jeweiligen Motors. Deshalb
+läuft der auch bei einem kurzen Impuls am
+
+Jetzt können wir auch das Programm
+besprechen, welches durch Stecken von
+Federnocken
+auf
+die
+Bauplatten
+gespeichert wird, und das uns ja – in
+unserem Beispiel – ein „F“ und ein „T“
+zeichnen soll. Selbstverständlich könnt ihr
+auch andere Buchstaben oder auch Ziffern
+stecken. Probiert, testet, tüftelt!
+
+
+
+
+
+Der so in seiner Richtung festgelegte
+Strom kann nun zu den Fahr- und Quermotoren des Schreibwagens und wieder
+zurück fließen, und zwar genau dann,
+wenn der zugehörige Taster für Fahr- bzw.
+Quermotor (Bit 3 bzw. 4 der Leseeinheit)
+betätigt sind.
+
+Das F und das T
+
+
+
+Fangen wir mit dem Polungstaster (Bit 2)
+an: Sobald der gedrückt ist, fließt Strom
+durch das Relais, welches also anzieht.
+Durch die Beschaltung der beiden
+Wechselkontakte des Relais wirkt es wie
+ein Polwendeschalter (siehe die vorherigen
+Ausgaben der ft:pedia). Das Relais stellt
+also Strom in der einen oder anderen
+Polung bereit, je nach Betätigung des
+Polungstasters.
+
+Und das ist schon die gesamte Schaltung!
+Für die komplexen Operationen, die unsere
+Maschine ausführen kann, ist das wahrlich
+wenig Aufwand. Wir haben nicht mal
+Elektronik dafür benötigt, ganz zu
+schweigen von einem Computer.
+
+
+Wenn am Schalter der Strom eingeschaltet
+wird, läuft der Antriebsmotor für die Kette
+des Lesegerätes die ganze Zeit. Nun legen
+wir die erste Programmkarte mit der abzutastenden Seite nach oben auf den Kettenbereich des Lesegerätes. Sie wird von den
+an der Kette angebrachten Mitnehmern
+durchs Lesegerät mit den vier Tastern
+getrieben.
+
+Bleibt uns nur noch der Stift. Damit wir
+möglichst wenige Leitungen zwischen
+Steuergerät und Schreibwagen brauchen,
+lassen wir den Elektromagneten für den
+Stift vom selben Strom speisen wie die
+Fahr- und Quermotoren. Durch die
+Wiederverwendung der evtl. umgepolten
+Spannung am Ausgang des Relais sparen
+wir zwei Stromzufuhrleitungen. Dem
+Elektromagneten ist es ja auch egal, wie
+herum der Strom durch ihn durchfließt. Die
+Metallachsen zur Bewegung des Stiftes
+zieht er in jedem Fall an.
+
+
+gesamten Anlage. Alles oberhalb des
+blauen Balkens gehört zum Steuergerät,
+alles darunter zum Schreibwagen. Wie
+man sieht, benötigen wir fünf lange
+Leitungen zwischen den beiden Komponenten. Aber der Reihe nach:
+
+Lesetaster einen vollständigen Schritt
+weiter, bis er seinen Impulstaster wieder
+betätigt. Dann bekommt der Motor wieder
+keinen Strom mehr und bleibt stehen.
+
+
+Die Schaltung des
+Initialenschreibers
+
+Elektromechanik
+
+
+
+„FT“ und Rückkehr zum Ursprung
+
+Insgesamt muss der Schreibstift für das
+Schreiben von „FT“ die Bewegungen laut
+
+
+
+ausführen.
+Wir fangen also links unten an. Achtet
+darauf, dass der Quermotor den Stift
+wirklich auf der unteren Position stehen
+hat, bevor ihr die Maschine anschaltet!
+Eine Vergrößerung von Abb. 19 zeigt die
+ersten Schritte:
+
+der Motor würde rattern – das wäre dann
+wohl ein „Programmfehler“, wenn wir drei
+Schritte nach oben stecken würden.
+Für die nächste Linie muss der Stift immer
+noch abgesenkt bleiben, aber der Fahrmotor muss einen Schritt nach rechts
+machen.
+Das
+erledigt
+die
+dritte
+„Anweisung“ auf unserer Programmkarte.
+Die nächste Bewegung (4) ist die um einen
+Schritt nach links unten. Damit der Fahrmotor aber genügend Zeit hat, seinen
+Schritt ganz bestimmt zu vollenden, fügen
+wir einen Schritt 3' ein, in dem einfach nur
+der Stift noch eine Zeitlang abgesenkt
+bleibt.
+
+
+In Schritt 1 – die Karten werden ja von
+rechts ins Lesegerät geschoben und also
+von links nach rechts abgetastet – hat also
+Bit 1 und 3 gesetzt. Es wird also der Stift
+abgesenkt (Bit 1), und ein Fahrimpuls geht
+an den Quermotor. Da Bit 2 nicht gesetzt
+ist, bleibt das Relais unbetätigt, und der
+Quermotor schiebt den abgesenkten Stift
+um einen Schritt nach oben. Linie 1 des
+„F“ ist gezeichnet!
+Jetzt leuchtet auch ein, warum die oberen
+beiden Bits mit Federnocken in Leserichtung versehen werden, während die für
+die Motoren (Bit 3 und 4) quer dazu
+gesteckt werden: Wenn wir einen Fahrimpuls auf die Motoren geben, müssen ja
+sowohl die Polung für die Fahrtrichtung
+bereits korrekt eingestellt und auch der
+Stift bereits abgesenkt oder angehoben
+sein. Deshalb lassen wir Stift und Polung
+einfach zeitlich etwas vorher korrekt
+schalten, bevor die Fahrmotoren ihren Fahrimpuls bekommen.
+Schritt 2 läuft wie Schritt 1: Der immer
+noch abgesenkte Stift wird einen weiteren
+Schritt nach oben bewegt. Damit ist die
+linke Seite des „F“ fertig. Noch weiter
+nach oben kann die Mechanik nicht fahren,
+
+Erst jetzt kommt Schritt 4: Der Stift wird
+abgehoben, weil der Magnet keinen Strom
+mehr bekommt. Das Relais wird durch das
+erstmals gesetzte Bit 2 umgepolt. Und
+beide Motoren bekommen gleichzeitig
+einen Impuls zum Losfahren. Das bewirkt,
+dass der Schreibstift in abgehobenem
+Zustand gleichzeitig sowohl einen vollständigen Schritt zurück nach links als
+auch zurück nach unten fährt.
+Damit die Motoren sicher Zeit haben,
+diesen Schritt zu beenden, ist wieder ein
+„Leerschritt“ eingefügt, in dem die Polung
+des Relais noch hinreichend lange
+umgeschaltet bleibt.
+Nun kommt die letzte Linie des „F“ dran:
+Schritt 5 aktiviert den Stift, fährt einen
+Schritt nach rechts und gibt dem Motor
+wieder genügend Zeit, seine Bewegung zu
+vollenden, bevor der Stift wieder angehoben wird.
+Jetzt könnt ihr den Rest unseres
+Programms bestimmt alleine „lesen“. Hier
+nochmal das gesamte Programm zum
+Schreiben von „FT“:
+
+
+Elektromechanik
+
+4. Wenn gerade kein Mitnehmer stört, legt
+die Programmplatte mit dem ersten Teil
+des „F“ auf die Förderstrecke rechts
+vom Lesegerät ein (vgl. Abb. 21).
+
+die Rückkehr in die Ausgangsposition
+
+Vergleicht das Programm bitte mit dem
+Zeichenweg in Abb. 29. An mehreren
+Stellen sind wieder Pausen eingebaut,
+damit eine gestartete Bewegung korrekt
+vollendet werden kann, bevor der Stift oder
+die Polung der Motoren umgeschaltet wird.
+Ganz am Ende schließlich sind Programmschritte eingefügt, die den Wagen und den
+Stift wieder zurück in seine Ausgangsposition bewegen.
+Der gesamte Ablauf
+Wenn ihr die Programmkarten wie gezeigt
+bestückt habt, muss die Maschine also wie
+folgt bedient werden:
+1. Stellt sicher, dass der Quermotor den
+Stift in der unteren Endlage stehen hat.
+2. Stellt sicher, dass der Stift so eingeklemmt ist, dass er das Papier in
+abgehobenem Zustand nicht berührt, in
+abgesenktem Zustand aber zuverlässig
+zeichnet. Zur Justage dient auch der
+kleine Winkelstein 10 • 15 • 15 beim
+Stiftträger. Mit dem könnt ihr genau
+einstellen, wie weit der Stift beim
+Abschalten des Magneten zurück fallen
+soll – aber nur so weit, dass der Magnet
+die Metallachsen noch anziehen kann!
+3. Schaltet die Maschine ein. Die
+Transportkette muss in die Leseeinheit
+hinein loslaufen (sonst polt den
+Antriebsmotor um).
+
+5. Die erste Programmplatte wird abgearbeitet. Wenn sie durchgezogen wurde,
+könnt ihr gleich die zweite auflegen, um
+das „F“ vollenden zu lassen.
+6. Dreht die erste Platte um und legt sie in
+die Maschine, um das „T“ zu beginnen.
+Tipp: Steckt die Verbinder 30 mit abgeflachter Seite in den Bauplatten so ein,
+dass sie immer in eine Richtung zeigen.
+Dann steckt man die Karten nicht so
+leicht verkehrt herum hinein.
+7. Wenn sie durch ist, legt die zweite
+ebenfalls umgedreht ein, um das „T“
+fertig zu stellen und die Maschine in die
+Ausgangsposition fahren zu lassen.
+Wenn irgendetwas schief gehen sollte,
+könnt ihr die Maschine ja schnell mit dem
+Hauptschalter abschalten. Wenn alles
+richtig eingestellt, verdrahtet und justiert
+ist, läuft die Maschine fehlerfrei und
+zuverlässig.
+Dann habt ihr natürlich ein weites Feld der
+„Programmierung“ vor euch! Vielleicht
+legt ihr euch eine „Programmbibliothek“
+mit den zehn Ziffern an? Oder lasst die
+Anfangsbuchstaben eures Vor- und Nachnamens zeichnen? Wir wünschen euch
+jedenfalls viele spannende Experimente
+und recht viel Spaß beim Herstellen und
+Betrieb eures selbstgebauten „Schreibcomputers“!
+
+Quellen
+[1]
+
+Anleitung zum Ur-ElektromechanikKasten, fischerwerke 1968
+
+[2]
+
+hobby 3 Begleitbuch Band 1,
+fischerwerke 1973
+
+[3]
+
+Thomas Kaiser, Sven Engelke:
+Bauanleitung Initialenschreiber.
+
+[4]
+
+Wikipedia: Lochkarte.
+
+

@@ -1,0 +1,2332 @@
+
+Antriebstechnik
+
+Antriebstechnik
+
+Kenndaten der ft-Motoren
+René Trapp
+Bei der Planung eines motorbetriebenen Funktions- oder Anschauungsmodells fällt es
+mangels entsprechender Motordaten oft schwer, den „richtigen“ Motor auszuwählen. Mit
+Kenntnis der Motordaten ließe sich vorab eine Aussage über die Eignung eines Motors für
+den geplanten Einsatz treffen, den voraussichtlichen Arbeitspunkt könnte man an Hand eines
+Rechenmodells ermitteln. Die dazu notwendigen Kenndaten eines Motors selbst zu
+bestimmen, ist gar nicht so schwer wie es vielleicht auf den ersten Blick scheint. Professionelle Motorenprüfstände sind dafür nicht erforderlich – einfache Aufbauten reichen aus. Der
+Umgang mit dem Rechenmodell ist auch kein Hexenwerk.
+Jeder ft:pedia-Leser kennt (hoffentlich) das
+Prinzip des elektrischen Gleichstrommotors: Spannungsversorgung anschließen,
+einschalten, Strom fließt und schon dreht
+sich die Motorwelle. Je nach Last oder
+Änderungen der Versorgungsspannung
+variieren Stromaufnahme und Drehzahl.
+Diese Verhältnisse, auch als Arbeitspunkte
+bezeichnet, werden üblicherweise vom
+Motorenhersteller
+mittels
+Kenndaten
+angegeben.
+
+Motoren zu. Ohne Motordaten ist unklar,
+wie der Motor optimal eingesetzt werden
+kann. Häufig wird ein Motor daher am
+falschen Arbeitspunkt betrieben. Insbesondere bei Akkubetrieb aber sollte ein Motor
+die verfügbare Energie möglichst gut
+nutzen, also
+mit
+höchstmöglichem
+Wirkungsgrad arbeiten.
+Fehlende Motordaten lassen sich über eine
+Modellbildung berechnen. Dazu ist die
+Kenntnis der physikalischen Zusammenhänge und der zu ermittelnden Parameter
+nötig.
+Versuch 1: Der Motor als Generator
+Beginnen wir einfach einmal mit einer
+unerwarteten Fragestellung: Was passiert
+bei einem Motor, an dessen Klemmen ein
+DigitalVoltMeter (DVM) angeschlossen
+ist, wenn die Welle gedreht wird?
+
+
+Autor angesammelt haben. Datenblätter
+mit den vollständigen Angaben gibt es zu
+diesen Motoren nicht. Leider trifft dies
+auch für die vergleichsweise teuren ft-
+
+Um diese Frage zu beantworten ist bereits
+ein einfacher Versuchsaufbau geeignet.
+(Mini-Motor 32293, rechts im Bild) dreht
+die Welle des Prüflings (Mini-Motor links
+im Bild) möglichst gleichmäßig und mit
+verschiedenen Drehzahlen.
+
+
+
+
+heraus. Wird die Welle durch den Hilfsantrieb gedreht, dann kommt eine von Null
+verschiedene Spannung heraus. Dreht die
+Welle schneller, dann ist der Betrag der
+Spannung höher. Dreht die Welle anders
+herum, dann ändert sich das Vorzeichen
+der Spannung.
+
+
+Die Motoren sind jeweils mit einem
+Stückchen Silikonschlauch an eine 4 mmWelle angekoppelt. Die 4 mm-Welle trägt
+lediglich die Unterbrecherscheibe für die
+Drehzahlmessung und ist möglichst
+reibungsarm gelagert. Außer dem mechanischen Aufbau wird auch noch eine
+veränderbare Spannungsversorgung, hier
+der Modellbahntrafo, für den Hilfsmotor
+(UMot), ein Spannungsmessgerät mit hochohmigem Eingang (DVM) für UEMK und
+ein Drehzahlmessgerät für die Drehzahl n
+(montiert auf der Platine im Hintergrund)
+benötigt. Der Schaltplan dazu ist nicht sehr
+umfangreich. Zur vollständigen Übersicht
+wurden in Abb. 3 auch noch die Drehzahlmessung und der Drehsinn bei positiver
+Spannung aufgenommen.
+
+
+M symbolisiert den antreibenden Motor, G
+symbolisiert den als Generator arbeitenden
+Prüfling. Die gestrichelte Wirklinie symbolisiert die mechanische Verbindung der
+Wellen mit der Drehzahlmesseinrichtung.
+EMK steht hier für Elektro-Motorische
+Kraft, englisch „EMF“, bei Motorbetrieb
+„back-EMF“.
+Wird die gemeinsame Welle nicht bewegt,
+dann kommt an den Anschlussklemmen
+des Prüflings die Spannung UEMK = 0 V
+
+Eine negative Drehzahl bedeutet in dieser
+Anwendung einfach die andere Drehrichtung der Welle; also der mathematische
+Ausdruck für „rückwärts“ (oder auch
+„vorwärts“, das ist eine Frage der Philosophie). Der angetriebene Motor arbeitet nun
+also als Generator und erzeugt eine
+Spannung. Wegen des extrem geringen
+Stromflusses durch das DVM wird der
+Generator als unbelastet angesehen. Das
+DVM zeigt daher die sogenannte Leerlaufspannung des Generators an [8].
+Misst man nun die Drehzahl der Welle und
+ordnet die bei dieser Drehzahl erzeugte
+Spannung UEMK zu, so kann man daraus
+das Verhältnis Spannung zu Drehzahl
+bilden. Dieses Verhältnis wird als Motorkonstante kU bezeichnet.
+kU
+
+U EMK
+n
+
+(1)
+
+U EMK
+
+n kU
+
+(2)
+
+Die am Versuchsaufbau aus Abb. 2 ermittelten Werte sind in Tab. 1 zusammengefasst. Die Motorkonstante kU ist dabei
+entsprechend (1) errechnet.
+Das Drehzahlmessgerät kennt natürlich
+kein Vorzeichen, daher ist von Hand ein
+Minus zu ergänzen, wenn die Welle anders
+herum dreht. Außerdem sind die Werte für
+kU nicht alle identisch. Das kommt zum
+einen von Messfehlern, hauptsächlich aber
+vom unruhigen Lauf der gekoppelten
+Maschinen, die einen gewissen Ablesefehler der Anzeigen nach sich ziehen. Über
+die Messergebnisse wird kU gemittelt zu
+kU = 0,0008428 V/min-1.
+
+
+Antriebstechnik
+
+Generator- Konstante
+Drehzahl
+spannung
+kU
+n [min-1]
+UEMK [V]
+[V/min-1]
+-4.350
+
+-3,67 0,0008437
+
+-3.000
+
+-2,54 0,0008467
+
+-2.200
+
+-1,87 0,0008500
+
+-1.000
+
+-0,852 0,0008520
+
+
+
+Um diese Frage zu beantworten, wird der
+vorhandene Versuchsaufbau abgeändert.
+An den zu prüfenden Motor ist diesmal nur
+noch die Drehzahlmesseinrichtung angekoppelt – deswegen das „fast“ in der
+Überschrift. Der Hilfsantrieb (rechter
+Motor) ist abgekoppelt (Abb. 5).
+
+k. A.
+
+1.000
+
+0,843 0,0008430
+
+1.760
+
+1,47 0,0008352
+
+3.900
+
+3,26 0,0008359
+
+4.330
+
+3,62 0,0008360
+Tab. 1
+
+Für eine elektrische Maschine (so heißen
+Motoren und Generatoren in der Fachsprache [6]) ist also schon das erste
+Element eines Modells gefunden: eine
+drehzahlproportionale
+Spannungsquelle
+(Abb. 4).
+
+
+Außer dem mechanischen Aufbau wird
+auch noch eine veränderbare Spannungsversorgung für den Motor, ein Spannungsmessgerät, ein Strommessgerät und ein
+Drehzahlmessgerät benötigt. In Abb. 6 ist
+der Schaltplan angegeben.
+
+
+Die erzeugte Spannung UEMK wird durch
+die Induktionswirkung hervorgerufen [1].
+Nun tritt aber die Induktionswirkung
+grundsätzlich immer auf wenn sich die
+Motorwelle dreht [7]. Es ist also völlig
+unerheblich ob der Motor als solcher oder,
+wie in diesem Versuch, als Generator
+betrieben wird.
+Das Verhältnis kU ist konstant, der Zusammenhang von Drehzahl n und induzierter
+Spannung UEMK ist linear.
+Versuch 2: der Motor treibt (fast)
+nichts an
+Die nächste Fragestellung ist ebenfalls
+einfach: Was passiert auf der elektrischen
+Seite bei einem leer laufenden Motor?
+
+
+M symbolisiert den antreibenden Prüfling.
+Damit das später ermittelte Motormodell
+(nicht das ft-Modell) auch richtig funktioniert, muss unbedingt der Motor als Motor
+verwendet werden, der vorher als Generator betrieben wurde.
+Sobald nun der Motor mit der Spannungsquelle verbunden wird, beschleunigt er die
+Welle auf eine bestimmte Drehzahl. Die
+Drehzahl steigt mit zunehmender Klemmenspannung, der Drehsinn der Motorwelle ändert sich wenn die Spannung am
+Motor umgepolt wird. Unterhalb einer
+
+
+
+
+bestimmten Mindestspannung dreht der
+Motor nicht.
+Die am Versuchsaufbau ermittelten Werte
+sind in Tab. 2 zusammengefasst.
+MotorDrehzahl
+spannung
+n [min-1]
+UMot [V]
+
+Motorstrom
+IMot [A]
+
+-4.360
+
+-5,26
+
+-0,1296
+
+-3.300
+
+-3,97
+
+-0,0996
+
+-2.200
+
+-2,81
+
+-0,0796
+
+
+
+
+2.000
+
+2,73
+
+0,0819
+
+2.800
+
+3,54
+
+0,0977
+
+4.000
+
+4,85
+
+0,1246
+
+Tab. 2
+
+Bekanntlich besteht der Rotor des Motors
+aus verschiedenen Wicklungsteilen. Der
+verwendete (Kupfer-)Draht hat einen
+bestimmten Durchmesser und eine
+bestimmte Länge. Daher ergibt sich ein
+bestimmter Widerstand solch einer Wicklung [2]. Völlig naiv kann man nun im
+Ersatzschaltbild einfach diesen Widerstand
+in Reihe zur drehzahlabhängigen Spannungsquelle anordnen. Er heißt hier, nicht
+ohne Hintersinn, RDyn.
+Das im vorhergehenden Versuch ermittelte
+Ersatzschaltbild der idealen elektrischen
+Maschine (Abb. 4) wird also um einen
+Serienwiderstand RDyn ergänzt zu Abb. 7.
+
+
+Wie schon ausgeführt, tritt die Induktionswirkung immer auf wenn die Welle sich
+dreht. Daher entsteht die drehzahlabhängige Spannung UEMK auch, wenn der
+Motor als solcher arbeitet. Die ermittelten
+Messwerte aus der vorstehenden Tabelle
+
+werden nun etwas ergänzt, nämlich um die
+mittels Gleichung (2) aus n und kU errechnete Spannung UEMK. Die Spannungsdifferenz zwischen der Spannung an den
+Motorklemmen UMot und der induzierten
+Spannung UEMK treibt nun den Strom IMot
+durch den dynamischen Innenwiderstand
+RDyn. Und gemäß dem bekannten
+Ohm’schen Gesetz [13], benannt zu Ehren
+seines Entdeckers Georg Simon Ohm [10],
+R
+
+U
+I
+
+(3)
+
+ist dieser RDyn damit bestimmbar:
+
+RDyn
+RDyn
+
+U Mot
+
+U EMK
+
+(4)
+
+I Mot
+U Mot
+
+n kU
+
+(5)
+
+I Mot
+
+Tab. 3 enthält nochmals die bereits gemessenen Werte vom Versuchsaufbau. Zusätzlich ist RDyn gemäß (5) errechnet. kU ist
+bereits im vorhergehenden Versuch zu
+kU = 0,0008428 V/min-1 bestimmt worden.
+MotorMotorDrehzahl
+spannung strom
+n [min-1]
+UMot [V] IMot [A]
+
+Innenwiderstand
+RDyn [ ]
+
+-4.360
+
+-5,26 -0,1296
+
+12,2
+
+-3.300
+
+-3,97 -0,0996
+
+11,9
+
+-2.200
+
+-2,81 -0,0796
+
+12,0
+
+
+
+
+k.A.
+
+2.000
+
+2,73 0,0819
+
+12,8
+
+2.800
+
+3,54 0,0977
+
+12,1
+
+4.000
+
+4,85 0,1246
+
+11,9
+
+Tab. 3
+
+Auch hier sind die errechneten Werte
+untereinander nicht identisch. Wiederum
+liegt dies am ungleichmäßigen Motorlauf
+und den Schwankungen der Anzeigen.
+Über die Messergebnisse wird RDyn zu
+12,15 gemittelt.
+
+Wer mit seinem Widerstandsmessgerät
+zum Vergleich den Widerstand eines
+stehenden(!) Motors messen möchte, sollte
+das bei verschiedenen Teildrehungen der
+Welle tun. Je nachdem wo der Stromwender gerade steht, ergeben sich sehr
+unterschiedliche Werte. Der kleinste so
+ermittelte Wert kann immerhin verwendet
+werden um die zu erwartende Einschaltstromspitze (oder den Blockadestrom) zu
+errechnen. Das ist wichtig für die Auswahl
+des Motortreibers.
+
+Antriebstechnik
+
+Der Motor treibt hierfür eine möglichst
+reibungsarm gelagerte Seilwinde an, an die
+unterschiedliche Massestücke als Last
+angehängt werden. Je länger der mögliche
+Hubweg umso besser ist das für praktische
+Versuche. Abb. 8 zeigt die verwendete
+Windenmechanik: Ein Endschalter oben,
+der den Hubmotor am oberen Ende
+abschaltet, hilft Schäden an der Mechanik
+zu verhindern. Ein zweiter, hier nicht
+sichtbarer Endschalter am unteren Ende
+verhindert Seilsalat.
+
+Selbstverständlich taugen diese Werte aber
+nicht für das Motormodell, denn tatsächlich entsteht ein mittlerer Wert durch die
+Drehung der Welle, die Kommutierung
+und noch weitere dynamische Effekte.
+Daher wird der Widerstand als RDyn
+bezeichnet.
+Versuch 3: der Motor bekommt
+Arbeit
+Nun sind also schon zwei Teile eines
+brauchbaren Motormodells aufgefunden.
+Das ist aber noch nicht alles. Beim vorhergehenden Versuch zeigte sich eine (halbwegs) konstante Stromaufnahme des
+Motors, obwohl er mit unterschiedlichen
+Drehzahlen bei unterschiedlichen Betriebsspannungen arbeitete. Allerdings war die
+Welle immer nur mit dem Drehzahlgeber
+angekoppelt, mithin eine als konstant
+angenommene Last.
+Machen wir also ein nächstes Experiment.
+Die Fragestellung lautet diesmal: Was
+passiert auf der elektrischen Seite eines
+Motors, der verschiedene, aber bekannte,
+Drehmomente aufbringen muss?
+Mit unbekannten Drehmomenten lernt man
+zwar auch etwas, aber es lässt sich kein
+Parameter für das Motormodell errechnen.
+Eine Küchenwaage ist hier also sehr
+hilfreich.
+Bekannte Drehmomente lassen sich auch
+ohne die Zuhilfenahme teurer, industriell
+gefertigter Drehmomentsensoren erzeugen.
+
+
+Das an der Motorwelle wirksame Drehmoment M lässt sich aus der am Seil angehängten Masse m, dem Seiltrommelradius
+r und der Erdgravitation g errechnen. Für g
+reicht der ungefähre Wert 9,81 m/s² völlig
+aus [3]. Wer es trotzdem präziser haben
+möchte schaut mal bei [4], allerdings rechtfertigen die auftretenden Messfehler diese
+Präzision keineswegs.
+M Mot
+
+r m g
+
+(6)
+
+Außer dem mechanischen Aufbau wird
+auch noch eine veränderbare Spannungsversorgung für den Motor und ein Strommessgerät benötigt.
+
+
+
+
+
+Auch hier wird wieder exakt der Motor
+genommen, der im ersten Experiment als
+Generator arbeiten und im vorherigen
+Experiment fast leer laufen durfte. Wegen
+der Ankopplung an die Welle ist allerdings
+eine Getriebeanordnung eingefügt.
+
+ment ins Verhältnis setzen, zum Beispiel
+Drehmoment/Strom.
+
+Ist kein Massestück angehängt, läuft der
+Motor während des Hubes (fast) leer. Der
+Motor nimmt dabei einen bestimmten
+Strom auf. Wird ein Massestück angehängt, nimmt der Motor einen höheren
+Strom auf. Wird ein anderes Massestück
+angehängt, nimmt der Motor einen anderen
+Strom auf.
+
+kI ist der Proportionalitätsfaktor, der Drehmoment und Strom verknüpft.
+
+Misst man nun die Masse m des jeweiligen
+Massestückes (zum Beispiel mit einer
+guten Küchenwaage), errechnet daraus
+mittels (6) das vom Motor aufzubringende
+Drehmoment M und ordnet diesem den
+aufgenommen Strom I zu, so ergibt sich
+Tab. 4. Der Seiltrommelradius r beträgt
+2 mm, g ist mit 9,81 m/s² eingesetzt.
+Drehmoment
+M [Nm]
+
+Masse
+m [kg]
+
+Motorstrom
+IMot [A]
+
+
+
+0,071
+
+0,109
+
+0,0021
+
+0,098
+
+0,051
+
+0,0010
+
+0,082
+
+0,238
+
+0,0047
+
+0,129
+
+Tab. 4
+
+Nun ist dieser Versuchsaufbau meilenweit
+von einem idealen Motor entfernt, der
+dynamische Widerstand RDyn macht sich
+bemerkbar und die diversen Lagerreibungen stellen eine Art Grundlast dar. Daher
+ist bei jedem Durchgang die Leerlaufstromaufnahme (mit der angekoppelten
+Seilwinde!) vom jeweiligen Laststrom
+abzuziehen.
+I
+
+I Mot
+
+I Leer ,Winde
+
+(7)
+
+So korrigiert lassen sich die Stromwerte
+zum jeweiligen vorgegebenen Drehmo-
+
+
+kI
+
+M
+I
+
+(8)
+
+M
+
+I kI
+
+(9)
+
+Dreh- MotorMasse
+Konstante
+moment strom
+m [kg]
+kI [Nm/A]
+M [Nm] IMot [A]
+
+
+0,071
+
+k.A.
+
+0,109
+
+0,0021
+
+0,098
+
+0,07921
+
+0,051
+
+0,0010
+
+0,082
+
+0,09097
+
+0,238
+
+0,0047
+
+0,129
+
+0,08051
+
+Tab. 5
+
+Dieser Versuch ist leider mit mehr Messfehlern und Toleranzen behaftet als die
+beiden vorherigen Versuche. Schon ein
+geringer Messfehler reicht aus, um das
+Ergebnis deutlich abweichen zu lassen.
+Über die Messergebnisse wird kI zu
+0,08356 Nm/A gemittelt. Aber dieser Wert
+gilt hierbei mit dem Vorsatzgetriebe (siehe
+Versuchsaufbau Abb. 8). Ohne Vorsatzgetriebe, also für den Motor alleine, liegt kI
+bei etwa 0,00805 Nm/A.
+Wer allerdings erwartet, dass kI nun um
+das Übersetzungsverhältnis des Getriebes
+(ca. 64,8:1) größer ist als kI des Motors
+alleine, der sei noch auf die mechanischen
+Getriebeverluste insbesondere bei Schneckengetrieben aufmerksam gemacht. Im
+Abschnitt über den Zusammenhang von kU
+mit kI und dem Abschnitt über die Getriebemotoren wird hierauf nochmal näher
+eingegangen. Außerdem wurde in diesem
+Versuch mit Getriebe gemessen, in den
+anderen Versuchen wurde ohne Getriebe
+gemessen – dies ist ein erheblicher
+Unterschied!
+Trotz der Probleme einer korrekten
+Messung zur Berechnung von kI wird das
+
+erzeugte Drehmoment durch die Lorentzkraft hervorgerufen, siehe [5]. So wie die
+Induktion immer auftritt sobald die Welle
+sich dreht, tritt die Lorentzkraft, und somit
+ein Drehmoment, immer auf, wenn Strom
+durch die elektrische Maschine fließt. Es
+ist an dieser Stelle fast unerheblich ob
+Motorbetrieb oder Generatorbetrieb vorliegt. Fast: Bei einem Generator ist die
+Stromrichtung genau andersherum als bei
+Motorbetrieb mit gleicher Drehrichtung
+der Welle.
+Die Stromrichtung ist hierbei eine willkürliche Festlegung. Bei einem Verbraucher (Widerstand oder auch Motor)
+zeigen der Spannungszählpfeil und der
+Stromzählpfeil in die gleiche Richtung.
+
+Antriebstechnik
+
+Versuch 4: der Motor läuft wirklich
+leer
+Wieso denn nochmal? Nun ja, beim letzten
+Mal (Versuch 2) war der Drehzahlaufnehmer angekoppelt. Der braucht selbst ein
+gewisses Drehmoment, das der Motor
+aufbringen muss. Bislang war das nicht
+weiter störend oder wurde per Rechnung
+unschädlich gemacht. Aber für einen
+echten Motor möchte man ja noch genau
+wissen, welches Drehmoment seine Lager
+und sein Kommutator erzeugen. Die sind
+nämlich für den Strom im Leerlauf
+verantwortlich. Diesmal ist der Versuchsaufbau beschämend einfach:
+
+
+Bei einem Erzeuger (Batterie oder auch
+Generator) zeigen die beiden Zählpfeile in
+entgegen gesetzte Richtungen (vgl. Abb.
+10 und 11).
+
+
+Multipliziert man die beiden Größen Strom
+und Spannung mit Vorzeichen, dann geht
+in einen Verbraucher eine positive Leistung, bei einem Generator eine negative
+Leistung hinein. Im letzteren Fall kommt
+faktisch eine positive Leistung heraus. Der
+Kniff mit dem Vorzeichen vereinfacht die
+Mathematik, wie bei den Drehrichtungen.
+Jedenfalls ist jetzt auch der Zusammenhang von Strom und Drehmoment hergestellt. Das bisher zusammengestellte elektrische Ersatzschaltbild aus Abb. 7 behält
+weiter seine Gültigkeit.
+
+
+Außer dem mechanischen Aufbau – na ja,
+der Motor liegt einfach auf dem Tisch –
+wird auch noch eine veränderbare
+Spannungsversorgung für den Motor und
+ein Strommessgerät benötigt.
+
+
+
+
+
+Gemessen wird die Stromaufnahme des
+Motors. Mit der bereits vorliegenden
+Konstanten kI und (9) ist das auftretende
+Verlustdrehmoment im Motor nun schnell
+ermittelt. Zur Vereinfachung seien diese
+Verluste alle dem Lager zugeschrieben.
+M Lager
+
+I Leer k I
+
+(10)
+
+Die am Versuchsaufbau ermittelten und
+errechneten Werte sind in Tab. 6
+zusammengefasst. Das Verlustmoment
+MLager ist mittels (10) errechnet.
+Motorstrom
+IMot [A]
+
+Verlustmoment
+MLager [Nm]
+
+-0,0656
+
+-0,000528
+
+-0,0601
+
+-0,000484
+
+-0,0550
+
+-0,000443
+
+
+k.A.
+
+0,0500
+
+0,000402
+
+0,0581
+
+0,000468
+
+0,0606
+
+0,000488
+
+Über die Messergebnisse wird MLager zu
+0,000469 Nm gemittelt.
+Eine Anwendung für kI – der Motor
+als Drehmomentsensor
+Aus (9) ergibt sich eine interessante
+Anwendungsmöglichkeit für den Motor
+(oder auch einen Generator). Sie gilt ja
+nicht nur im Leerlauf sondern immer wenn
+Strom durch die elektrische Maschine
+fließt. Die dabei auftretenden Verluste im
+Motor müssen natürlich abgezogen werden
+um das nutzbare Drehmoment zu errechnen.
+I kI
+
+M Lager
+
+(11)
+
+Aus einer Strommessung kann mit
+Kenntnis von kI und MLager das gerade vom
+Motor abgegebene Drehmoment unmittel-
+
+
+M Gen
+
+I kI
+
+M Lager
+
+(12)
+
+So kann das Drehmoment eines Motors
+oder auch eines Generators ohne teure
+Drehmomentsensoren ermittelt werden. Im
+Falle eines Motors könnten damit die
+mechanischen Verluste in einem vorgesetzten Getriebe ermittelt werden.
+Die Sache mit dem Wirkungsgrad
+
+Tab. 6
+
+M Mot
+
+bar errechnet werden (11). Wird der Motor
+als Generator betrieben, so stellt der Strom
+aus dem Generator das unmittelbare Maß
+für das an der Generatorwelle wirksame
+Drehmoment dar. In diesem Fall ist
+natürlich das Verlustmoment noch aufzuaddieren.
+
+Generatoren und Motoren sind Energiebzw. Leistungswandler. Sie wandeln
+mechanische Energie in elektrische
+Energie und umgekehrt. Überall wo eine
+Energieform durch reale (nichtideale)
+Maschinen in eine andere umgewandelt
+wird, treten Verluste auf. In diesem
+Zusammenhang ist die Größe Wirkungsgrad definiert als Verhältnis von abgegebener Leistung zu eingespeister Leistung
+[15]. Im Falle des Generatorbetriebs ist der
+Wirkungsgrad selbstverständlich durch das
+Verhältnis von elektrischer Leistung (abgegeben) zu mechanischer Leistung (aufgenommen) definiert:
+Gen
+
+Pel
+Pmech
+
+(13)
+
+Im Falle des Motors ist es also das
+Verhältnis von mechanischer Leistung zu
+elektrischer Leistung.
+Mot
+
+Pmech
+Pel
+
+(14)
+
+Der Wirkungsgrad kann niemals größer als
+1 sein! Das ist physikalisch unmöglich.
+Errechnet man hier einen Wert größer als
+1, dann sollte man seine Rechnung und
+eventuell auch seine Überlegungen sehr
+genau nachprüfen.
+
+
+Antriebstechnik
+
+Das kleine Geheimnis von kU und kI
+In der elektrischen Maschine passieren
+immer zwei Dinge gleichzeitig. Einmal ist
+es die Induktionswirkung, die die Spannung UEMK bestimmt und für deren komplexes Wirkungsgesetz ku die vereinfachte
+Kurzfassung darstellt. Zum anderen ist es
+die Lorentzkraft, die durch den mechanischen Aufbau in ein Drehmoment umgewandelt wird. kI dient hierfür als Kurzfassung. Beide Effekte werden faktisch
+durch das gleiche Magnetfeld im gleichen
+Motor hervorgerufen. Also erscheint es nur
+logisch, dass kU und kI, als zwei verschiedene Aspekte einer gemeinsamen Grundlage, irgendwie miteinander zusammenhängen.
+Bildet man das Verhältnis ku/kI, so ergeben
+sich im Zähler und im Nenner formal
+Leistungseinheiten. Zur Erinnerung:
+Elektrische Leistung [11]:
+U I [W
+
+Pel
+
+V A]
+
+(15)
+
+Mechanische Leistung [12]:
+Pmech
+
+
+M n [W
+
+Pmech
+
+M n
+[W
+
+Nm s 1 ]
+
+Nm s
+
+M n [W
+
+Nm s 1 ]
+
+(18)
+
+Dies ist wird gleich noch nützlich sein.
+Doch zurück zu kU/kI: mit der gängigen
+Denkweise für n in „Umdrehungen pro
+Minute“ eingesetzt und mathematisch
+umgeformt, führt das schließlich auf einen
+konstanten Faktor:
+
+kU
+kI
+
+U EMK
+n
+M
+I
+
+U EMK I
+60 M n
+
+
+(19)
+
+Da es sich hier um kU und kI einer idealen
+elektrischen Maschine handelt, sind die
+elektrische Leistung im Zähler des dritten
+Terms und die mechanische Leistung im
+Nenner des dritten Terms exakt gleich. Es
+gilt daher:
+U EMK I
+2 M n
+
+
+(20)
+
+Beziehungsweise
+(16)
+
+ausgedrückt
+in
+„Newtonmeter
+pro
+Sekunde“ (nicht „pro Minute“!). Für die
+mechanische Leistung ist vorher immer die
+Drehzahl in die richtige Einheit s-1
+umzurechnen. Oder aber, für n in den
+gewohnten „Umdrehungen pro Minute“,
+gilt die Größengleichung
+
+Pmech
+
+
+]
+
+(17)
+
+Gemeinerweise ist (16) ohne die explizite
+Angabe der Einheiten dieser kleine Unterschied bei der korrekten Drehzahleinheit
+nicht direkt anzusehen und man kann ganz
+böse Überraschungen erleben, wenn die
+Einheit nicht stimmt!
+(16) kann man auch noch so notieren:
+
+U EMK I
+M n
+
+
+(21)
+
+kU wurde bereits in Versuch 1 bestimmt. kI
+kann nun ohne Versuch 3 wegen der
+konstanten Verknüpfung unmittelbar aus
+kU errechnet werden. (19) umgeformt
+ergibt
+kI
+
+kU
+
+(22)
+
+kU
+
+kI
+
+(23)
+
+In letzter Konsequenz bedeutet dies, dass
+nur drei der vier Versuche erforderlich
+sind. Sobald entweder kU oder kI bekannt
+ist, ist ihr Komplementär mittels (22) oder
+(23) ebenfalls gefunden. Für Getriebemotoren ist hierbei zu beachten, dass der
+meist unbekannte Getriebewirkungsgrad
+
+
+
+
+die korrekte Ermittlung von kI verhindert;
+damit wird dann auch kU falsch berechnet.
+
+Getriebemotoren
+Nun ist es so, dass der Versuch 1 (Generatorversuch mit Hilfsantrieb) bei hohen
+Übersetzungen oder mit Schneckengetrieben nicht durchgeführt werden kann. Es
+muss also eine Möglichkeit gefunden
+werden, die nötigen Parameter des Motormodells auch für Getriebemotoren auszumessen.
+
+
+Motoren mit angeflanschtem Getriebe
+werden prinzipiell nicht anders berechnet
+als Motoren ohne Getriebe. Das Getriebe
+wird dabei vereinfacht als integraler
+Bestandteil des Motors betrachtet. Das
+Motormodell funktioniert weiterhin und
+liefert in diesem Fall die Werte für die
+Einheit Motor + Getriebe.
+Es gibt allerdings, wie bereits erwähnt,
+Einschränkungen bei der Ermittlung der
+Parameter für das Motormodell. Diese
+Einschränkungen muss man kennen und
+berücksichtigen.
+Was ändert sich nun durch ein Getriebe?
+Bei jedem Getriebe gibt es ein Übersetzungsverhältnis. Dieses gibt an wie oft sich
+die Antriebswelle drehen muss, um der
+Abtriebswelle eine ganze Umdrehung zu
+erteilen. Bei Zahnradgetrieben, Zahnriemengetrieben und Kettengetrieben stimmt
+
+dieses Drehzahlverhältnis exakt wegen der
+Verkämmung der Zähne, bei Riemengetrieben dagegen kommt Schlupf hinzu,
+so dass die Drehzahlverhältnisse nur noch
+ungefähr stimmen. Weiter gibt es in jedem
+Getriebe bauartunabhängig Drehmomentverluste. Vor diesem Hintergrund ist der
+Begriff Getriebewirkungsgrad nun sicher
+etwas verständlicher. Und eben dieser
+Getriebewirkungsgrad wurde bei unseren
+Messungen, z. B. bei Versuch 3, implizit
+mit gemessen.
+Kennt man diesen Getriebewirkungsgrad,
+dann kann er mathematisch erfasst und die
+Ergebnisse können korrigiert werden.
+Typischerweise ist er aber zunächst unbekannt. Dadurch werden die Gleichungen
+(19) bis (23) zwar nicht unbrauchbar, aber
+sie können nicht eingesetzt werden.
+Wird die Messung von kI wie bei Versuch
+3 beschrieben durchgeführt, so verfälscht
+der Getriebewirkungsgrad das Ergebnis.
+Trotzdem können, auch bei Getriebemotoren, durch entsprechende Messungen
+die Parameter des Motormodells ermittelt
+werden. Im Prinzip betreibt man den zu
+prüfenden Motor mit Getriebe an zwei
+verschiedenen bekannten Lasten bzw.
+Drehmomenten. Dabei notiert man außer
+dem Drehmoment noch Drehzahl, Motorspannung und Motorstrom. Aus den Messwerten lassen sich nun die benötigten
+Parameter errechnen.
+Zunächst liefert (11) die Grundlage für kI.
+Sie ist hier für die beiden Arbeitspunkte
+unterschiedlich indiziert angegeben:
+M1
+
+I1 k I
+
+M Lager
+
+(24)
+
+M2
+
+I 2 kI
+
+M Lager
+
+(25)
+
+Gleichung (25) wird von (24) abgezogen
+und durch diesen Kniff das (noch) unbekannte Verlustmoment MLager von Motor
+mitsamt Getriebe eliminiert. Übrig bleibt
+
+M1
+
+M2
+
+I1 k I
+
+I 2 kI
+
+und ergibt nach kI umgeformt
+
+(26)
+
+
+Antriebstechnik
+
+M1
+I1
+
+kI
+
+M2
+I2
+
+(27)
+
+Dabei kann man Gleichung (11) bzw. ihre
+Entsprechungen (24) oder (25) gleich noch
+heranziehen, um die Lagerverluste mit dem
+frisch gewonnen kI zu errechnen. Am
+Beispiel von (24) sieht das dann so aus:
+M Lager
+
+I1 k I
+
+I1 RDyn
+
+U1 U 2
+n1 n2
+
+n1
+
+RDyn
+
+I1 I 2
+n1 n2
+
+der außer RDyn nur noch bekannte Größen
+(Messwerte) enthält. Dieser Ausdruck kann
+nach RDyn umgeformt werden und es ergibt
+sich
+U1
+
+(28)
+
+M1
+
+Für den Parameter kU wird hier (5) als
+Grundlage genommen. Um hilfreich zu
+sein, wird sie nach UMot aufgelöst und
+ergibt gleich wieder für die zwei Arbeitspunkte angeschrieben das Gleichungssystem
+
+RDyn
+I1
+
+n1
+n1
+
+n2
+n1
+
+n1
+
+n2
+
+U1 U 2
+
+(33)
+I1
+
+I2
+
+U1
+
+I1 RDyn
+
+n1 kU
+
+(29)
+
+Nachdem RDyn nun aus den Messwerten
+errechnet werden kann, wird (31) angewendet, um kU zu bestimmen. Damit
+liegen alle nötigen Parameter des Motormodells vor.
+
+U2
+
+I 2 RDyn
+
+n2 kU
+
+(30)
+
+Versuch 5: Seilwinde, aber richtig
+
+Gleichung (30) wird von (29) subtrahiert,
+und es ergibt sich ein Ausdruck, der nach
+kU umgestellt werden kann:
+
+kU
+
+U1
+
+U1 U 2
+n1 n2
+
+R Dyn
+
+I1
+n1
+
+I2
+n2
+
+Basierend auf der Seilwinde aus Versuch 3
+werden die Modellparameter des Prüflings
+mit Getriebe nochmals ermittelt. Den
+Aufbau zeigt Abb. 15.
+
+(31)
+
+RDyn ist an diesem Punkt allerdings immer
+noch unbekannt.
+Zweckmäßigerweise widmet man sich nun
+als nächstes dem noch fehlenden Parameter
+RDyn. Die Herkunft von (29) wurde bereits
+erklärt. (30) ist hier equivalent zu benutzen, nur die dargestellten Indizes würden
+sich ändern. Zurück zu Gleichung (29), die
+hier nochmals angegeben wird:
+U1
+
+I1 RDyn
+
+n1 kU
+
+(32)
+
+kU und RDyn sind unbekannt. Für kU wurde
+bereits (31) als Ersatz gewonnen. Diesen
+Ausdruck hier anstelle kU einzusetzen
+ergibt auf den ersten Blick keinen Sinn, da
+ja auch dort noch RDyn enthalten ist.
+Allerdings erhält man einen unhandlichen
+Ausdruck
+
+
+Diesmal wird die eben betrachtete Vorgehensweise mit zwei verschiedenen Dreh19
+
+
+
+momenten verwendet. Um alle Werte
+gleichzeitig zu ermitteln, wird die
+Verschaltung des Prüflings gemäß Abb. 6
+vorgenommen. Die Messwerte sind aus
+Tab. 7 ersichtlich.
+Motor- MotorMasse
+Drehzahl
+spannung strom
+m [kg]
+n [min-1]
+U [V]
+IMot [A]
+0,143
+
+8,38
+
+0,118
+
+
+0,039
+
+8,67
+
+0,081
+
+
+Tab. 7
+
+Mittels (27), (28), (31) und (33) errechnen
+sich hierfür die Parameter inklusive dem
+Vorsatzgetriebe gemäß Tab. 8.
+
+Wie kommt man auf den Getriebewirkungsgrad?
+Beim verwendeten Getriebe ist kein
+Schlupf vorhanden, somit ist kU mit
+Getriebe um exakt das Übersetzungsverhältnis Ü größer als kU_Motor des Motors
+alleine. kI mit Getriebe liegt allerdings
+nicht um eben diesen Faktor Ü höher als
+kI_Motor ohne Getriebe, sondern um lediglich rund ein Zehntel dieses Wertes. Zum
+Vergleich siehe die Messdaten im
+Abschnitt
+„Kenndaten
+eines
+ftMinimotors“.
+(19) gilt für den Motor ohne Getriebe bzw.
+einen Getriebewirkungsgrad von 100 %,
+also, mit erweitertem Index,
+
+kU
+
+0,054209 V/min-1
+
+kU _ Motor
+
+kI
+
+0,0551 Nm/A
+
+k I _ Motor
+
+Ri
+
+12,67
+
+MLager
+
+Es ist sicherlich interessant auf diese Art
+die zusätzlichen Getriebeverluste bestimmen zu können. Beim vorliegenden Prüfling, Mini-Motor mit Getriebe (32293,
+31078) und ft-Abtriebsachse (31082), liegt
+der Wirkungsgrad des Getriebes bei ~10%.
+
+kU
+Ü
+
+kU _ Motor
+
+Tab. 8
+
+Ist das Getriebe abnehmbar, wie in den
+Beispielen mit den ft-Mini-Motoren, so
+kann man die Daten des Motors alleine
+ebenfalls ermitteln. Mit angeflanschtem
+Getriebe ändert sich nun die Motorkonstante kU um den Übersetzungsfaktor
+(gerundet 64,8 für ft-Getriebe 31078), die
+Motorkonstante kI um eine Verknüpfung
+aus Übersetzungsfaktor und Getriebewirkungsgrad, die Leerlaufstromaufnahme
+erhöht sich um das vom Getriebe eingeforderte zusätzliche Drehmoment, der dynamische Innenwiderstand des Motors bleibt
+jedoch gleich.
+
+100%
+
+(34)
+
+Es wird nun angesetzt
+
+0,0037 Nm
+
+Man vergleiche diese Werte einmal mit
+den Parametern des Motors ohne Getriebe
+sowie dem errechneten kI aus Versuch 3.
+
+
+(35)
+
+und
+
+k I _ Motor
+
+kI
+Ü
+
+(36)
+
+Getriebe
+
+Ersetzen der jeweiligen Ausdrücke in (34)
+durch (35) und (36) ergibt nach entsprechender Umformung:
+Getriebe
+
+kI 2
+kU 60
+
+(37)
+
+Man verwechsle bitte den Getriebewirkungsgrad nicht mit dem Wirkungsgrad
+des Motors. Der Gesamtwirkungsgrad
+eines Motors mit Getriebe ist übrigens
+Gesamt
+
+Motor
+
+Getriebe
+
+(38)
+
+Diese ganze Betrachtung für Getriebemotoren ist ohne Einschränkungen auch
+auf Motoren bzw. Generatoren ohne
+Getriebe zu übertragen; Getriebe ist dann
+formal gleich 1.
+
+Motordaten ohne Versuche
+Die bisherigen Versuche waren nicht
+besonders aufwendig, aber sie stellen halt
+doch eine gewisse Arbeitsleistung dar. Wer
+bereits entsprechende Datenblätter seiner
+Motoren hat, kann die enthaltenen Angaben zur Ermittlung der dargestellten Kenndaten nutzen. Die beschriebenen Versuche
+sind dann nicht notwendig.
+In jedem vernünftigen Motorendatenblatt
+sind die Leerlaufdaten eines Motors
+enthalten:
+Leerlaufdrehzahl nLeer
+Leerlaufstromaufnahme ILeer
+Motor-Nennspannung ULeer
+Diese Leerlaufdaten gelten für die so genannte Nennspannung. Für diese Spannung
+wurde der Motor gebaut und dort erreicht
+er die optimalen Betriebsdaten. Der Index
+‚Leer’ soll hier bedeuten, dass es sich um
+die Angaben für den Leerlauf handelt.
+Formal sind das alles die Angaben, die aus
+Versuch 2 vertraut sind. Allerdings mit
+dem Unterschied, dass keine extra Verluste
+durch den Drehzahlgeber entstanden sind.
+Was jedoch zur direkten Auswertung fehlt,
+ist kU.
+In jedem vernünftigen Motordatenblatt
+sind auch wenigstens die Daten eines
+Lastfalles am Motor enthalten. Üblicherweise gilt auch hier wieder die Nennspannung. Meist sind aufgeführt:
+Nenn-Drehzahl nNenn
+Nenn-Stromaufnahme INenn
+mechanische Nenn-Leistungsabgabe
+PNenn
+Formal entspricht das den aus Versuch 3
+vertrauten Werten. Aber hier fehlt zur Auswertung kI. Mit zwei Arbeitspunkten (hier:
+Leerlauf und Nenn-Lastfall) kann man die
+fehlenden Parameter für das Motormodell
+
+Antriebstechnik
+
+berechnen (siehe auch den Abschnitt
+„Getriebemotoren“).
+Zuerst das Nenn-Drehmoment MNenn: dazu
+wird (17) nach M umgestellt. Die Drehzahl
+n ist dabei bequem in min-1 einzusetzen:
+M Nenn
+
+60 PNenn
+2 n
+
+(39)
+
+Nun kümmern wir uns um den Strom. Im
+Leerlauf nimmt der Motor einen bestimmten Strom auf, um die Drehmomentverluste
+in den Lagern, dem Kommutator usw.
+aufzubringen. Dabei wird an der Welle
+kein Drehmoment abgegeben. Daher ist die
+Differenz zwischen Nenn-Strom und
+Leerlaufstrom für das an der Welle
+erzeugte Nenn-Moment verantwortlich.
+Auch in Versuch 3 wurde aus genau
+diesem Grund die Leerlaufstromaufnahme
+abgezogen um kI zu ermitteln – siehe (7).
+(8) entsprechend erweitert führt auf
+
+kI
+
+M Nenn
+I Nenn I Leer
+
+(40)
+
+Damit ist per Gleichung (23) auch sofort
+kU bekannt – sofern kein Getriebe vorhanden ist. Mittels Kenntnis von kI und (9)
+lässt sich aus dem Leerlaufstrom das
+Lagerverlustmoment MLager errechnen.
+Gleichung (5) wird ein wenig modifiziert:
+
+RDyn
+
+U Leer
+
+n Leer kU
+I Leer
+
+(41)
+
+und liefert sofort den dynamischen Innenwiderstand.
+Das war es auch schon. Ein seriöses Datenblatt des Motors, ein wenig „know-how“
+und schon hat man sich die Versuche
+gespart.
+Im Abschnitt „Ein Beispiel zur Abrundung“ wird diese theoretische Betrachtung
+aufgegriffen und mit echten Motordaten
+gerechnet.
+Das einzige Problem mit den Angaben zu
+den Motoren: Man muss sich absolut
+
+
+
+sicher sein können, dass die diversen
+Angaben auch alle vom gleichen Arbeitspunkt stammen. Bei Leerlauf ist das noch
+halbwegs so. Aber sobald es um Lastfälle
+geht, wird es meist inkonsistent.
+Dann steht der Imax mal für maximal
+möglichen Strom (wenn die Welle
+blockiert), mal für Strom bei maximaler
+Leistungsabgabe und mal für Strom bei
+maximalem Wirkungsgrad. Entsprechend
+gilt das unabhängig für Drehzahlen und
+Leistungen. Imax und nmax haben also
+manchmal nur zufällig den gleichen Index.
+Im Zweifel muss dann doch nachgemessen
+werden.
+
+Auch ein elektrisches Ersatzschaltbild
+konnte aus den Versuchsergebnissen ermittelt werden, Abb. 7.
+Zusammen mit dem Ersatzschaltbild einer
+realen Spannungsquelle (zum Beispiel ein
+Generator) ergibt sich ein Stromkreis nach
+
+Speisespannung
+
+Benutzen der aufgefundenen
+Parameter: das Motormodell
+
+Und nun lassen sich die Zusammenhänge
+auch ganz gut erklären.
+
+Aus den vorangegangenen Versuchen sind
+jetzt vier Parameter bekannt:
+
+Zuerst sei noch ein Ausdruck für den
+Strom I angegeben. Dieser folgt aus Gleichung (5), unter Zugabe von Ri der
+Spannungsquelle.
+
+Der Zusammenhang von Spannung und
+Drehzahl kU.
+Der Zusammenhang von Drehmoment
+und Strom kI.
+Der dynamische Innenwiderstand RDyn.
+Die
+internen
+MLager.
+
+Drehmomentverluste
+
+Alle diese Parameter konnten bereits durch
+die beschriebenen, einfachen Versuche mit
+kostengünstigen Messmitteln aufgefunden
+werden:
+Versuch 1: kU => kI
+bzw.
+Versuch 3: kI => kU
+Versuch 2: RDyn
+Versuch 4: MLager
+Weniger Arbeitsaufwand, umfangreicherer
+Versuchsaufbau und sowohl für Maschinen
+mit und ohne Getriebe geeignet:
+Versuch 5: kI, kU, RDyn, MLager
+
+
+I
+
+U 0 n kU
+RDyn Ri
+
+(42)
+
+Wir erinnern uns noch an Gleichung (2):
+UEMK = n·kU. Zuerst ist der Stromkreis
+unterbrochen, der Motor dreht nicht. In
+dem Augenblick in dem der Stromkreis
+nun geschlossen wird, ist UEMK=0 V da die
+Welle steht. (42) vereinfacht sich zu
+I Stop
+
+U0
+RDyn
+
+Ri
+
+(43)
+
+Das entstehende Drehmoment
+M Stop
+
+I Stop k I
+
+M Lager
+
+(44)
+
+übersteigt normalerweise das von der Last
+abgeforderte Drehmoment. Dieser Drehmomentüberschuss führt nun zu einer
+Drehbeschleunigung der Motorwelle; die
+Drehzahl steigt an. Mit steigender Drehzahl sinkt nun aber gemäß (42) die Stromaufnahme I bis zu dem Punkt, an dem
+exakt das von der Last abgeforderte Drehmoment erzeugt wird – das Ganze ist eine
+Gleichgewichtsreaktion. (44) wird zur
+
+
+Antriebstechnik
+
+Berechnung des Stromes an diesem
+Gleichgewichtspunkt umgestellt zu
+I Last
+
+M Last
+
+M Lager
+
+(45)
+
+kI
+
+(42) und (45) beschreiben nun den
+gleichen Strom im Stromkreis und somit
+dürfen sie auch gleichgesetzt werden. Das
+führt dann zuerst einmal zu
+M Last
+
+M Lager
+kI
+
+U 0 nLast kU
+RDyn Ri
+
+(46)
+
+Unter der Voraussetzung, dass alle bisher
+genannten Parameter des Motormodells
+(kU, kI, RDyn, MLager) sowie das Lastmoment (MLast) und die Daten der Spannungsquelle (U0, Ri) bekannt sind, bleibt als
+einzige Unbekannte die sich einstellende
+Drehzahl nLast übrig. (46) umgestellt nach
+nLast ergibt schießlich
+nLast
+
+U0
+kU
+
+M Last
+
+M Lager
+k I kU
+
+RDyn
+
+Ri
+
+(47)
+
+Mit der bisher benutzten Einheit von kU in
+‚V/min-1’ erhält man die Drehzahl n in der
+gewohnten Einheit ‚min-1’. Wird für kU
+jedoch ‚V/s-1’ angegeben, dann erhält man
+n auch in ‚s-1’ und muss noch entsprechend
+umrechnen.
+Das war ganz schön viel Arbeit um
+herauszufinden, wie schnell ein bestimmter
+Motor bei einer bestimmten Last an einer
+bestimmten Versorgungsspannung dreht.
+Anstelle nun aber alle diese Arbeitspunkte
+einzeln auszumessen, sind als Vorleistung
+gerade einmal die beschriebenen Versuche
+notwendig. Ersatzweise kann ein seriöses
+Motordatenblatt verwendet werden. Sind
+die vier Parameter des Motormodells bekannt, dann lässt sich das Motorverhalten
+beliebig berechnen. Man denke nur an die
+Kombination von Motor und Akku. Akkus
+haben bekanntlich eine nicht konstante
+Spannung, die mit fortschreitender Entladung absinkt. Der ft-Akku ist mit 8,4 V
+angegeben – vollgeladen. Der Entlade-
+
+schluss (= Akku leer) ist bei 7 V erreicht.
+Aus den Motornenndaten, bei beispielsweise 9 V, lässt sich mittels Motormodell
+auf die Verhältnisse bei Akkubetrieb, z. B.
+bei 7,2 V, umrechnen.
+Ohne es explizit hergeleitet zu haben, sind
+die beschriebenen Versuche und die abgeleiteten mathematischen Gleichungen, insbesondere (42), (45) und (47), der Kern des
+mathematischen Rechenmodells für die ftMotoren mit und ohne Getriebe; natürlich
+auch für alle anderen baugleichen elektrischen Gleichstrommotoren mit Fremderregung.
+Drei kleine Helferlein
+Ohne weitere Herleitung oder Hintergrundinformationen seien noch drei Gleichungen
+angegeben, mit denen die Drehzahlen im
+Leerlauf, bei optimalem Wirkungsgrad und
+bei maximaler Leistungsabgabe für eine
+gegebene
+Motorspannung
+errechnet
+werden können. Mit vorgegebener Motorspannung, bekannter Drehzahl, bekannten
+Modellparametern und den bereits angegebenen Gleichungen sind die restlichen
+Betriebsdaten der Arbeitspunkte schnell
+errechnet.
+Drehzahl im Leerlauf
+n Leer
+
+RDyn M Lager
+
+U Mot
+kU
+
+kU k I
+
+(48)
+
+Drehzahl bei optimalem Wirkungsgrad
+
+U Mot
+
+U Mot RDyn M Lager
+
+nOpt
+
+kI
+
+(49)
+
+kU
+
+Drehzahl bei maximaler Leistungsabgabe (Leistungsanpassung)
+nMax
+
+1 U Mot
+2 kU
+
+R Dyn M Lager
+kU k I
+
+(50)
+
+Die Gleichungen (48) bis (50) gelten
+allgemein für Motoren (nicht Generatoren)
+mit und ohne Getriebe.
+
+
+
+Ein Beispiel zur Abrundung
+Gegeben sei ein Motor mit den Angaben:
+Nennspannung UNenn = 9 V
+Leerlaufdrehzahl nLeer = 10000 min-1
+Leerlaufstrom ILeer = 80 mA
+
+Allerdings sehe man sich die Überlegungen an, die zu Gleichung (23) führten.)
+MLager ist durch (10) nun schnell errechnet:
+M Lager
+
+Nennleistung PNenn_mech = 390 mW
+
+Zunächst wird mittels (39) das Nennmoment MNenn bestimmt:
+60 0,5W
+2 8500 min 1
+
+554,2 Nm
+
+Weiter wird die Nennaufnahmeleistung
+PNenn_elektr benötigt. Gleichung (14) wird
+entsprechend umgestellt und eingesetzt:
+
+PNenn _ elektr
+
+0,5W
+0,47
+
+1,064W
+9V
+
+165,4mA
+
+561,7 Nm
+118,2mA 80mA
+
+Nm
+A
+
+Und mit (23) wird, weil kein Getriebemotor vorliegt, kU, gleich in der gewohnten
+Einheit ‚min-1’, daraus errechnet:
+kU
+
+0,00649
+
+Nm 2
+A 60
+
+679,6
+
+V
+min 1
+
+(Anmerkung: von Nm/A auf V/s-1 umzurechnen sieht zuerst nach Pfusch aus.
+
+Aufgabe 1: der Anlauf- bzw. Blockadestrom soll ermittelt werden. Welches Stillstandsdrehmoment erzeugt dieser Strom?
+
+I Stop
+
+7,2V
+27,6
+
+bereits
+
+260,9mA
+
+Mittels (44) errechnet sich das gesuchte
+Stillstandsdrehmoment:
+260,9mA 0,0649
+M Stop
+
+0,00649
+
+27,6
+
+Damit sind die Parameter des Motormodells bekannt. Der vorgenannte Motor
+wird aus einem Akkusatz mit Nennspannung 7,2 V versorgt. Zur Vereinfachung sei angenommen, dass der Innenwiderstand Ri des Akkus 0 beträgt. Die
+angetriebene Mechanik benötigt vom
+Motor 400 µNm (= 0,0004 Nm) an Drehmoment.
+
+M Stop
+
+Weiter geht es mit (40) zu kI:
+
+kI
+
+10000
+679,6 V min
+min
+0,08 A
+
+Für den Strom kennen wir
+Gleichung (43) und benutzen sie:
+
+1,489W
+
+Gleichung (11) definiert die elektrische
+Leistung als Produkt von Strom und
+Spannung. Entsprechend errechnet sich der
+Nennstrom INenn zu:
+I Nenn
+
+9V
+RDyn
+
+= 26,2 %
+
+Bei der Nennleistung ist man sich sicher,
+dass es sich um die abgegebene, also
+mechanische, Leistung handelt. Ebenso ist
+man sich sicher, dass der Wirkungsgrad für
+den Nennarbeitspunkt gegeben ist.
+
+M Nenn
+
+Nm
+0,08 A 0,519mNm
+A
+
+Auch RDyn ist, Dank (5), kein Geheimnis
+mehr:
+
+Nenndrehzahl nNenn = 6720 min-1
+Wirkungsgrad
+
+0,00649
+
+Nm
+0,519mNm
+A
+
+1174 Nm
+
+Aufgabe 2: Welche Betriebsdaten stellen
+sich mit dem vorgesehenen Drehmoment
+ein?
+Angegeben sind 400 µNm. Durch (45)
+wird der Motorstrom errechnet:
+
+
+Antriebstechnik
+
+0,4mNm 0,519mNm
+141,6mA
+mNm
+6,49
+A
+
+I
+
+Die aufgenommene elektrische Leistung ist
+gemäß (15):
+Pelektr
+
+7,2V 0,1416 A 1,02W
+
+Für UEMK bleiben übrig:
+
+U EMK
+
+7,2V
+
+0,1416 A 27,6
+
+3,292V
+
+Der Stromkreis basiert auf Abb. 16. Und
+mit (2), nach n umgeformt, kann die
+Drehzahl errechnet werden:
+
+3,292V
+V
+679,6
+min 1
+
+n
+
+4844,0 min 1
+
+(47) hätte natürlich auch direkt, anstelle
+des Umweges über UEMK, benutzt werden
+können.
+Nun kann man auch noch die abgegebene
+mechanische Leistung mittels (17) angeben:
+Pmech
+
+
+0,4mNm 4844 min 1
+min 1
+s1
+
+angegeben. Dabei wird das Lastmoment M
+als Variable verändert während alle
+anderen Parameter konstant bleiben. Die
+Rechnung ist für jeden Stützpunkt absolut
+identisch zum Rechenweg aus Aufgabe 2.
+Um eine brauchbare Übersicht zu bekommen legt man beispielsweise 21 Stützpunkte fest. Das Stillstandsdrehmoment
+MStop gibt das maximal sinnvolle Lastmoment vor, Leerlauf stellt sich ein bei
+0 Nm. Die Stützwerte dazwischen werden
+entsprechend errechnet.
+Von Hand 21 mal die Berechnungen für
+jeden Arbeitspunkt durchzuführen artet in
+Fleißarbeit aus. Es bietet sich an alle diese
+Rechenschritte in ein Tabellenkalkulationsprogramm einzuspeisen. Mittels der meist
+vorhandenen Schaugrafiken lassen sich die
+entsprechenden
+Kennlinien
+durchaus
+ansprechend und für die gewünschte
+Betriebsspannung angepasst erzeugen.
+Für den vorgegebenen Motor sind die
+Kennlinien in Abb. 17 angegeben.
+
+202,9mW
+
+Der Wirkungsgrad für diesen Arbeitspunkt
+errechnet sich mit (14) zu:
+Mot
+
+202,9mW
+1020mW
+
+0,1989 20%
+
+Satte 80 % der eingespeisten elektrischen
+Energie bleiben in diesem Beispiel letztendlich als Verlustwärme im Motor und
+heizen diesen auf – obwohl der Motor in
+der Nähe des bei dieser Betriebsspannung
+erreichbaren optimalen Wirkungsgrades
+betrieben wird! Für Akkubetrieb sollte man
+sich jetzt nach Alternativen umsehen;
+entweder ein anderer Motor oder ein Akku
+mit höherer Nennspannung.
+
+Wirkungsgrad (Beispielmotor)
+
+Mit Hilfe der Möglichkeiten gängiger
+Tabellenkalkulationsprogramme
+lassen
+sich auch die Auswertungen der Versuche
+dem Computer übertragen und die manuellen Berechnungen der Modellparameter
+können entfallen.
+
+Aufgabe 3: Wie sehen die Kennlinien für
+Abgabeleistung und Wirkungsgrad aus?
+In den Datenblättern von Motoren sind
+meist die Kennlinien bei Nennspannung
+
+
+
+Kenndaten eines ft-Mini-Motors
+Im Internet ist, mehr oder weniger bekannt,
+eine Sammlung von ft-Motordaten zu
+finden [21]. Darin sind zwar für die
+verschiedenen Motoren einige Werte
+angegeben, jedoch keine Daten für deren
+optimalen Einsatz. Es lassen sich auch
+keine vernünftigen Modellparameter aus
+diesen Angaben errechnen. Um nun alle
+interessierenden Größen kennen zu lernen,
+bleibt also nichts anderes übrig, als diese
+Motoren alle zu messen.
+Für den Motor (32293) aus den beschriebenen Versuchen ergeben sich ohne
+Getriebe die Modellparameter nach Tab. 9.
+0,000843
+
+V/min
+
+kI
+
+0,00805
+
+Nm/A
+
+Ri
+
+12,15
+0,000463
+
+kU
+
+0,054209
+
+V/min-1
+
+kI
+
+0,0551
+
+Nm/A
+
+Ri
+
+12,67
+
+MLager
+
+0,0037
+
+Nm
+
+Tab. 10: Modellparameter (Getriebemotor)
+
+Für eine Betriebsspannung von 9 V
+ergeben sich daraus die Motordaten nach
+Tab. 12 (siehe nächste Seite).
+Die zugehörigen Kennlinien zeigt Abb. 19.
+
+-1
+
+kU
+
+MLager
+
+Für exakt den gleichen Mini-Motor mit
+Getriebeeinheit (32293, 31078 und 31082)
+ergeben sich die Modellparameter nach
+Tab. 10.
+
+Nm
+
+Tab. 9: Modellparameter (Motor)
+
+Für eine Betriebsspannung von 9 V ergeben sich die Motordaten nach Tab. 11
+(siehe nächste Seite).
+Die Kennlinien für Abgabeleistung und
+Wirkungsgrad sind in Abb. 18 dargestellt.
+
+Wirkungsgrad (Getriebemotor)
+
+Man beachte die unterschiedlichen Skalierungen in den Diagrammen Abb. 18 und
+
+Wirkungsgrad (Motor)
+
+
+Bei diesen Beispielen ist zu bedenken, dass
+es sich jeweils um die Werte für ein
+bestimmtes Motor-Exemplar handelt. Ohne
+typische Werte oder umfangreiche Untersuchungen nach statistischen Methoden
+sind diese Werte nur bedingt zu verallgemeinern. Mit Abweichungen bis zu 30 %
+der typischen Daten dürfte von Motor zu
+Motor zu rechnen sein.
+
+
+Antriebstechnik
+
+Leerlauf
+
+Leerlauf
+
+ILeer
+
+0,058 A
+
+ILeer
+
+0,067 A
+
+VEMK_Leer
+
+8,292 V
+
+VEMK_Leer
+
+8,149 V
+
+nLeer
+
+9.839 min-1
+
+nLeer
+
+150 min-1
+
+Pelek_Leer
+
+0,52 W
+
+Pelek_Leer
+
+0,60 W
+
+max. Effizienz
+
+max. Effizienz
+
+IOpt
+
+0,21 A
+
+IOpt
+
+0,22 A
+
+VEMK_Opt
+
+6,48 V
+
+VEMK_Opt
+
+6,23 V
+
+nOpt
+
+7.684 min-1
+
+nOpt
+
+115 min-1
+
+MOpt
+
+0,0012 Nm
+
+MOpt
+
+0,0083 Nm
+
+Pmech_Opt
+
+0,97 W
+51,8 %
+
+Opt
+
+Pmech_Opt
+
+5,1 %
+
+Opt
+
+max. Leistung
+
+0,10 W
+
+max. Leistung
+
+Imax
+
+0,40 A
+
+Imax
+
+0,39 A
+
+VEMK_Max
+
+4,15 V
+
+VEMK_Max
+
+4,07 V
+
+nMax
+
+4.919 min-1
+
+nMax
+
+75 min-1
+
+Mmax
+
+0,0027 Nm
+
+Mmax
+
+0,0177 Nm
+
+PMech_Max
+Max
+
+1,41 W
+39,3 %
+
+PMech_Max
+Max
+
+Stillstand
+
+0,14 W
+4,0 %
+
+Stillstand
+
+Mstop_AP
+
+0,0055 Nm
+
+Mstop_AP
+
+0,0355 Nm
+
+Istop_AP
+
+0,74074 A
+
+Istop_AP
+
+0,71014 A
+
+Tab. 11: Kenndaten Motor bei 9 V
+
+Grenzen des Motormodells
+In der Praxis lässt sich beim Leerlaufversuch feststellen, dass die Stromaufnahme nicht wirklich konstant ist sondern
+mit steigender Drehzahl leicht ansteigt.
+Nicht allzu dramatisch, aber doch dezent
+sichtbar. Dafür ist das so genannte
+„viskose Reibmoment“ verantwortlich. Die
+die rotierenden Teile umgebende Luft wird
+mit verwirbelt und mit steigendem Tempo
+steigt der Luftwiderstand überproportional
+an [16]. Damit steigt auch das erforderliche
+Drehmoment in gleichem Maße. Für das
+Motormodell wird dieser Effekt ignoriert
+und so ergibt sich bei hohen Motordrehzahlen eine gewisse geringe Abweichung
+
+Tab. 12: Kenndaten Getriebemotor bei 9 V
+
+von der Realität. In der ft-Modellbaupraxis
+ist dieser Fehler meist vernachlässigbar.
+Mit steigender Drehzahl nehmen die
+Wirbelstromverluste im magnetischen
+Material des Rotors zu [17]. Auch dies
+führt zu einem Anstieg der Stromaufnahme
+mit steigender Drehzahl. Dieser Effekt
+wird im Motormodell nicht berücksichtigt.
+Völlig unterschlagen wird die Tatsache,
+dass der magnetische Kreis im Motor
+nichtlineare Eigenschaften besitzt. Je höher
+der Motorstrom liegt, umso stärker machen
+sich Sättigungseffekte bemerkbar [18].
+Diese Effekte führen in der Realität mit
+steigendem Motorstrom zu einer Reduktion von kU und kI.
+
+
+
+Dieser Effekt wird hier ebenfalls ignoriert.
+Weiter gibt es Rückwirkungen vom
+Magnetfeld des Rotors auf das Magnetfeld
+des Stators [19]. Der Effekt führt mit zu
+den bekannten Funken am Stromwender
+(Kommutator) sobald die Maschine
+größere Leistung übertragen muss.
+Auch der dynamische Innenwiderstand ist
+Schwankungen unterworfen. Man denke
+nur an die thermische Beanspruchung der
+Wicklung durch den Stromfluss. Höhere
+Temperaturen bedingen auch höhere
+Wicklungswiderstände, die in RDyn eingehen.
+Die Lagermomente sind sicherlich auch
+nicht ganz konstant. Je nach tatsächlich
+auftretender radialer und axialer Belastung
+variieren sie zum Teil erheblich. Insbesondere beim Anlaufen eines Motors aus
+dem Stillstand tritt noch der Unterschied
+zwischen Haftreibung und Gleitreibung am
+Kommutator und in allen Wellenlagern auf
+[20]. Der Strom muss einen bestimmten
+Wert überschreiten um die Welle „loszubrechen“, danach schießt die Drehzahl auf
+einen recht hohen Wert, die Stromaufnahme sinkt wieder ab. Auch diese Effekte
+sind im verwendeten vereinfachten Motormodell nicht berücksichtigt.
+
+punkt durch bloßes Ablesen im Handumdrehen abgeschätzt werden. Auch der
+Vergleich verschiedener Motoren wird so
+recht anschaulich ermöglicht.
+Für einen Mini-Motor (32293) ohne und
+mit U-Getriebe (31078 + 31082) liegen
+durch die Untersuchungen erstmals die
+Modellparameter und die vollständigen
+Kenndaten für 9 V-Betrieb vor. Kenndaten
+für andere Betriebsspannungen lassen sich
+errechnen.
+
+Service
+Zur Hilfe für die Versuchsauswertung und
+auch zur Verwendung der Modellparameter sind im Download-Bereich der
+ft:community zwei vorbereitete ExcelSheets bereitgestellt [22, 23]. Beide
+Dateien kommen ohne jegliche Makros
+aus. Die Inhalte sollten nach der Lektüre
+dieses Artikels selbsterklärend sein.
+
+Quellen
+[1]
+
+Wikipedia: Induktionsgesetz.
+
+[2]
+
+Wikipedia: Spezifischer elektrischer
+Widerstand.
+
+[3]
+
+Wikipedia: Erdbeschleunigung.
+
+[4]
+
+Physikalisch-Technische Bundesanstalt: Erdbeschleunigung für
+beliebige Orte.
+
+[5]
+
+Wikipedia: Lorentzkraft.
+
+[6]
+
+Wikipedia: Elektrische Maschinen.
+
+[7]
+
+Wikipedia: Elektrische Gleichstrommaschine.
+
+[8]
+
+Wikipedia: Leerlaufspannung.
+
+[9]
+
+Walter Fendt: Animiertes Schaubild
+Elektromotor.
+
+Zusammenfassung
+Das hier benutzte Motormodell eignet sich
+zur Ermittlung von statischen Arbeitspunkten. Für dynamische Vorgänge
+(Beschleunigen, Bremsen) fehlt das Trägheitsmoment JMot (vom Motor und der Last
+auch noch). Für Untersuchungen zur Auslegung von Motortreibern fehlt zumindest
+die dynamische Induktivität LDyn.
+In der Praxis werden solche idealisierten
+Motormodelle dennoch häufig angewendet. Sind die Parameter für das Motormodell ermittelt, lässt sich damit durchaus
+recht brauchbar das Verhalten des Motors
+voraussagen. Die Kennlinien lassen sich
+erzeugen. Liegen sie vor, kann der Arbeits-
+
+
+[10] Walter Fendt: Animiertes Schaubild
+Generator.
+[11] Wikipedia: Elektrische Leistung.
+[12] Wikipedia: Mechanische Leistung.
+[13] Wikipedia: Ohm’sches Gesetz.
+
+[14] Wikipedia: Georg Simon Ohm.
+[15] Wikipedia: Wirkungsgrad.
+[16] Wikipedia: Strömungswiderstand.
+[17] Wikipedia: Wirbelstrom.
+[18] Wikipedia: Magnetische Sättigung.
+[19] Wikipedia: Ankerrückwirkung.
+[20] Wikipedia: Losbrechmoment.
+
+Antriebstechnik
+
+[21] fischertechnik: Daten einiger ftMotoren, fischertechnik.
+[22] Zum Download: Spreadsheet zur
+Versuchsauswertung.
+[23] Zum Download: Spreadsheet zur
+Motorberechnung
+[24] Forumsbeitrag: Daten von ftMotoren, ftcommunity.de
+
+
+

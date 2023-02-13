@@ -1,0 +1,274 @@
+
+
+Computing
+
+TXT 4.0 Controller – ein Blick unter die Haube
+Till Harbaum
+In wenigen Wochen läutet fischertechnik die nächste Runde seiner Robotics Controller ein. Mit
+dem TXT 4.0 tritt nach acht Jahren ein Nachfolger in die Fußstapfen des 2013 auf den Markt
+gekommenen TXT. Im Schlepptau hat der TXT 4.0 die Software ROBO Pro Coding, die – anders
+als der Name vermuten lässt – mit der langen ROBO Pro-Tradition bricht. Grund genug, das
+bisher verbreitete Wissen um die neue Plattform zusammenzutragen. Hier zunächst der Blick
+auf die Hardware.
+Als der TXT 2013 auf den Markt kam war
+sein Herz auf Basis eines 600-Mhz-SingleCore-ARM-Prozessors mit 256 MB RAM
+zeitgemäß und lag z. B. mit dem zur gleichen Zeit auf den Markt gebrachten ersten
+Raspberry Pi gleichauf. Als Software kam
+ROBO Pro zum Einsatz, wie damals gängig
+eine reine Windows-Lösung, die speziell
+für fischertechnik entwickelt wurde und in
+der Historie von Lucky Logic und Co. eine
+grafische Programmierung durch Flussdiagramme erlaubte [1].
+Mit dem TXT wagte fischertechnik sich das
+erste Mal aus der bis dahin üblichen CloseSource-Ecke und bediente sich mit dem
+Linux des TXT bei quelloffener und frei
+kopierbarer Software.
+
+Der TXT 4.0
+Mitte 2021 wird der TXT 4.0 erscheinen.
+Optisch ist der Neuling leicht als fischertechnik-TXT zu erkennen: Nahezu alle Anschlüsse sind in gleicher Form an gleicher
+Stelle vorhanden und auch der zentrale
+Bildschirm wurde weitgehend übernommen. Das ganze Design ist flacher und sieht
+durch die glatte und glänzende Oberfläche
+wesentlich edler aus als der alte TXT (Abb.
+1). Vor allem die Zwergstecker-Anschlüsse
+für die Taster, Motoren und anderen Sensoren und Aktoren scheinen weitgehend unverändert.
+
+
+Unter der Haube sind die Unterschiede
+schon etwas größer. Erste Hinweise zu seinem Innenleben gibt fischertechnik auf
+Seite 27 im aktuellen Katalog (Abb. 2). fischertechnik beschreibt die CPU im TXT
+4.0 als „Arm Dual Cortex-A7 650MHz +
+Cortex M4“, der 512 MB RAM zur Seite
+stehen. Gegenüber dem TXT ist das eine
+recht exakte Verdoppelung der Rechenleistung und ein deutlicher Fortschritt.
+Berücksichtigt man die acht Jahre, die seit
+dem Erscheinen des alten TXT vergangen
+sind, sieht der TXT 4.0 allerdings nicht
+mehr ganz so glanzvoll aus, wie der neuerliche Vergleich mit dem Raspberry Pi zeigt.
+
+
+Computing
+
+
+Dessen aktuelles Modell 4B ist inzwischen
+seit einem Jahr auf dem Markt und verfügt
+über vier mit 1,5 GHz getaktete 64-BitKerne und (je nach Modell) über 1 bis 8 GB
+RAM. Waren TXT und Rasp-Pi 2013 also
+noch gleichauf, so liegt zwischen ihnen
+heute – was Rechenleistung und Speicherausbau angeht - ein Faktor von mehr als 10.
+Das ist allerdings, wie jeder Arduino-Fan
+weiß, nicht zwangsläufig ein Nachteil.
+
+Den STM32MP157 bietet ST in Varianten
+von 650 und 800 MHz an. Dass fischertechnik hier nicht die schnellere Version gewählt hat, überrascht zunächst, zumal sie im
+Zusammenhang mit dem alten TXT gerne
+auf dessen höhere Taktung gegenüber den
+Lego-Controllern verwiesen haben. Warum
+also hier die geringere Taktung?
+
+Aber was genau steckt im TXT 4.0? Dazu
+verrät fischertechnik keine weiteren Details. Aber die recht auffälligen Eckdaten
+der CPU lassen genauere Rückschlüsse zu.
+Vor allem der zusätzliche Cortex-M4-Kern
+ist markant und passt z. B. exakt auf die
+650 MHz-Variante des STM32MP157 von
+STMicroelectronics [1].
+Dieser Chip besticht laut ST vor allem
+durch seinen 3D-Grafik-Prozessor. Zielanwendung für diesen Prozessor sind laut ST
+Linux-betriebene
+Industriesteuerungen,
+also recht genau das, was fischertechnik mit
+dem TXT 4.0 auch macht. Der integrierte
+kleine Cortex-M4 ist mit maximal 209 MHz
+getaktet und soll einfache Echtzeit-Aufgaben wie z. B. Motorsteuerungen übernehmen. Er übernimmt damit wohl die Aufgaben, für die im alten TXT noch ein separater
+Arm-Prozessor auf der sogenannten Motorplatine verbaut wurde.
+
+
+Eine naheliegende Lösung dieses Rätsels
+ergibt sich, wenn man davon ausgeht, dass
+fischertechnik die CPU diesmal nicht separat einkauft, sondern im TXT 4.0 ein „rundum-sorglos“-Paket einsetzt. Der gerne betonte Fokus auf Made-in-Germany engt den
+Kreis der Verdächtigen schnell ein und man
+landet recht bald im bayerischen Ismaning
+bei der Firma Kontron. Mit dem SOM-SL
+
+
+
+STM32MP157 hat Kontron ein kleines Modul im Angebot, das es allerdings nur in einer Variante mit der 650-MHz-CPU gibt [3]
+(Abb. 3).
+Das klingt sehr nach unserem TXT 4.0. Zusätzlich ist das Modul in Varianten mit 256
+oder 512 MB RAM erhältlich sowie mit
+256 MB oder 512 MB NAND-Flash. Letzteres scheint nicht ganz zu den von fischertechnik angegebenen 4 GB eMMC-Flash zu
+passen. Allerdings werden die 256 bzw.
+512 MB-NAND-Flash zum Laden des
+Linux-Kerns benötigt. Es ist also davon
+auszugehen, dass fischertechnik hier zusätzlich für das übrige Linux-System verbauten 4 GB eMMC-Speicher erwähnt.
+eMMC kann man sich als eine fest im Gerät
+verlötete SD-Karte vorstellen. Der Zugriff
+auf eine eMMC erfordert in der Regel einen
+bereits laufenden Betriebssystemkern mit
+passenden Treibern, was eben wieder genau
+die Zweiteilung in 256/512 MB NANDFlash für den Betriebssystem-Kern und
+4 GB eMMC für das übrige Dateisystem erklärt.
+Was steckt sonst noch im TXT 4.0? Hier
+müssen wir leider etwas mehr raten. Da das
+Kontron-Modul kein WLAN oder Bluetooth mitbringt (dafür aber Ethernet!) wird
+ein zusätzlicher Baustein dafür nötig. Die
+Tatsache, dass es sich für fischertechnik anscheinend finanziell lohnt, für den TXTSmart-Controller auf eben diesen Baustein
+zu verzichten und stattdessen einen USBWLAN-Dongle beilegt, sagt uns vor allem
+eines: Der von fischertechnik für WLAN
+und Bluetooth eingesetzte Baustein ist überraschend teuer. Aus dem Umfeld von fischertechnik kam der Hinweis auf das
+PAN9026-Modul von Panasonic [4]. Vor
+allem der recht hohe Einkaufspreis von
+knapp zehn Euro lässt das Modul plausibel
+erscheinen. Dieses sehr leistungsfähige Modul beherrscht alle gängigen und aktuellen
+Bluetooth- und WLAN-Varianten und wird
+mit passenden Linux-Treibern geliefert
+(Abb. 4).
+
+
+Interessant ist auch das Display. Neben
+WLAN/Bluetooth und Lautsprecher ist das
+Display die dritte Komponente, auf die fischertechnik am TXT-Smart laut Katalog
+gegenüber dem TXT 4.0 verzichtet. Danach
+hat das Display nach wie vor eine Auflösung von 240x320 Bildpunkten bei einer
+Größe von 2,4 Zoll. Dessen im alten TXT
+recht unzuverlässig auf mechanischen
+Druck reagierender Touchsensor wurde laut
+Katalog durch ein auf reine Annäherung reagierenden kapazitiven Sensor ersetzt. Das
+ist interessant, da es überraschenderweise
+die einzige Komponente ist, zu der nichts
+weiter in Erfahrung zu bringen war.
+Man darf gespannt sein, wie die Anbindung
+dieses Displays an den Hauptprozessor erfolgt. Ist die Verbindung wie beim TXT
+SPI/seriell und erlaubt damit nur den vom
+TXT bekannten langsamen Bildaufbau? Oder ist der Bildschirm des TXT 4.0 an die
+von ST beworbene leistungsfähige 3D-fähige Videohardware angeschlossen? Das ist
+bisher nicht bekannt.
+Gewagt scheint der Einsatz dieses etwas
+exotischen Bildschirms. Ich habe es nicht
+geschafft, ein entsprechendes Modell im
+Handel zu finden. Angesichts der Tatsache,
+dass der alte TXT über acht Jahre unverändert in Produktion war, erscheint die Wahl
+eines exotischen Bildschirms mutig.
+Damit sind die wesentlichen Komponenten
+des TXT 4.0 bekannt. Es bleibt die Beschaltung der Ein- und Ausgänge. Hier bestünde
+eigentlich kein Grund, von der schon im TX
+und eben auch im TXT nahezu identisch
+
+eingesetzten Kombination aus 4051-Multiplexern an den Eingängen und den
+MC33879-Treibern für die Ausgänge abzuweichen – wenn es den MC33879 noch zu
+kaufen gäbe. Leider wurde er aber abgekündigt und wird offiziell nicht mehr hergestellt, was z. B. auch den ftDuino betrifft.
+Der MC33879 unterscheidet sich von nahezu allen z. B. im Arduino-Umfeld verwendeten Motortreibern dadurch, dass er per
+SPI-Bus angesprochen wird, was gerade bei
+den vielen Ausgängen am fischertechnikController intern einiges an Verbindungen
+spart.
+Der ftDuino wird in Zukunft einen Chip wie
+den TLE94108EL von Infineon oder den
+dazu Pin-kompatiblen DRV8908 von Texas
+Instruments einsetzen [5, 6]. Es ist davon
+auszugehen, dass auch fischertechnik einen
+vergleichbaren Ersatz einsetzen wird, zumal diese Chips billiger und leistungsfähiger als die beiden MC33879 des alten TXT
+sind.
+
+Was kostet es?
+Damit sind wir am Ende unserer kleinen
+Reise durch das vermutete Innenleben des
+TXT 4.0. Gegenüber dem alten TXT ist der
+TXT 4.0 vor allem einfacher und preisgünstiger aufgebaut. Die teuerste Komponente
+ist das CPU-Modul, das mit gut 30 € zu Buche schlägt, gefolgt vom WLAN/ Bluetooth-Modul mit knapp zehn Euro. Der gesamte Rest dürfte unter „Kleinkram“ abgehakt werden können und für weniger als
+20 € zu haben sein. Inklusive des Gehäuses
+könnte der Einkaufspreis des TXT 4.0 damit bei ca. 65 € liegen. Hier hat fischertechnik in Zukunft durchaus noch Spielraum,
+wenn sie auf den Einsatz des CPU-Moduls
+verzichten und Prozessor und Speicher direkt beziehen – auch für das WLAN/Bluetooth-Modul sollte sich günstiger Ersatz finden lassen.
+Während der TXT 4.0 laut fischertechnik
+für 549 € verkauft werden soll, ist der Kasten mit TXT-Smart-Controller schon für
+
+Computing
+
+249 € zu bekommen. Dass die Einsparungen am TXT-Smart gegenüber dem TXT
+4.0 auch nur ansatzweise diesen Unterschied rechtfertigen darf bezweifelt werden.
+Der Einkaufspreis des TXT-Smart dürfte
+bei ca. 50 € liegen und damit deutlich näher
+an dem des TXT 4.0 als die Verkaufspreise
+der beiden Komplett-Kästen suggerieren.
+
+Und Lego?
+An dieser Stelle ist ein Blick über den Tellerrand in Richtung Lego interessant. Noch
+vor wenigen Jahren standen sich mit TXT
+und EV3 zwei sehr ähnliche Linux-Controller gegenüber, die allerdings auf sehr unterschiedliche Weise programmiert wurden.
+Interessanterweise geht die Entwicklung
+der Programmierumgebungen inzwischen
+in die gleiche Richtung, während nun die
+technische Entwicklung der Controller stark
+auseinander läuft.
+Mit Blockly-basierter grafischer Programmierung nutzen fischertechnik und Lego in
+Zukunft eine identische Basis. Und auch
+wenn es um fortgeschrittene Programmierung gehen soll, setzen beide auf Python.
+Für den Anwender werden sich beide Systeme also in Zukunft sehr viel ähnlicher anfühlen als bisher.
+Sehr unterschiedlich ist aber die in den Controllern verwendete Technik. fischertechnik
+setzt weiterhin auf Linux und ist gerade dabei, die Leistung seines Controllers zu verdoppeln. Lego geht den entgegengesetzten
+Weg und setzt kein Linux mehr ein. Stattdessen kommt bei Lego eine 100-Mhz-CPU
+(immerhin auch ein STM32 aus dem Hause
+ST) mit 320 kB RAM und 32 MB Flash zu
+Einsatz. Zwischen TXT 4.0 und Lego Spike
+liegt damit – was Rechenleistung und Speicher angeht – ein Faktor von deutlich mehr
+als 10.
+Man kann davon ausgehen, dass das Innenleben des aktuellen Lego-Controllers damit
+bei großen Stückzahlen einen Einkaufspreis
+von unter 10 € hat. Lego verliert damit z. B.
+die Möglichkeit, einfache USB-Kameras
+
+
+
+anzuschließen und wird sich, anders als fischertechnik, mit intelligenten Kameras á là
+Pixy begnügen müssen. Ob solche Möglichkeiten den ungleich höheren Hardwareaufwand auf fischertechnik-Seite rechtfertigen,
+muss sich zeigen.
+Der Preisunterschied der Baukästen von
+Lego und fischertechnik spiegelt diese Unterschiede jedenfalls in keiner Weise wieder. Der Verdienst auf Lego-Seite dürfte
+ungleich höher sein.
+
+den Einsatzzweck zuschneidet. Die fischertechnik-Hardware lässt hier ungleich mehr
+Spielraum für zukünftige Erweiterungen.
+Ob fischertechnik dieses Potenzial nutzen
+wird oder ob sie es wie beim TXT der Community überlassen, zu zeigen, was in ihrem
+Produkt für verborgene Fähigkeiten
+schlummern, wird sich zeigen.
+
+Referenzen
+[1]
+
+Till Harbaum: Von Lucky Logic zu
+RoboPro Coding. ft:pedia 1/2021,
+S. 103–109.
+
+[2]
+
+STMicroelectronics: STM32MP157.
+
+[3]
+
+Kontron: SOM-SL STM32MP157.
+
+[4]
+
+Panasonic: PAN9026.
+
+[5]
+
+Infineon: TLE94108EL.
+
+[6]
+
+Texas Instruments: DRV8908.
+
+Fazit
+Der neue TXT 4.0 ist dem alten Gerät deutlich überlegen und dürfte auch günstiger
+herzustellen sein als sein Vorgänger. Aus
+Sicht des Bestands-fischertechnikers ist der
+TXT 4.0 also ein uneingeschränkter Gewinn.
+Die Frage ist, ob das reicht. Lego macht vor,
+wie sich der Herstellungspreis deutlich senken lässt, wenn man die Hardware exakt auf
+
+
+

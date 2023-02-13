@@ -1,0 +1,1485 @@
+
+Messen
+
+Messen
+
+„Einmessen“ eines digitalen Messgeräts
+Dirk Fox
+Will man Sensoren für die Messung physikalischer Größen verwenden, müssen Spannung,
+Stromstärke, Widerstandswert oder Zeit ins Verhältnis zu der zu messenden Größe gesetzt
+werden. Einige Sensoren leisten das in Hardware – so bestimmt z. B. der Ultraschall-Sensor
+von fischertechnik aus den Signallaufzeiten den Abstand in cm. Die meisten einfachen
+Sensoren (wie z. B. der ft-Temperatursensor) liefern jedoch nur einen Widerstandswert
+zwischen 0 und 5 kOhm zurück. Der Beitrag stellt vor, wie man eine geeignete Ausgleichsfunktion ermittelt, die die Messwerte des Sensors in eine physikalische Größe umrechnet.
+Dabei ist ein wenig angewandte Mathematik unvermeidlich – lasst euch von den Formeln
+nicht abschrecken, darin kommen fast ausschließlich die Grundrechenarten vor…
+
+Messgeräte
+Für die Messung physikalischer Größen
+wie Entfernung, Gewicht oder Temperatur
+standen über Jahrhunderte lediglich analoge Messgeräte zur Verfügung. Verwendet wurden dafür Konstruktionen, die sich
+proportional zur zu messenden Größe
+verändern, wie beispielsweise eine Waage:
+
+An geeigneter Stelle wurden eine Ablesemarke (meist ein mechanisch bewegter
+Zeiger) und eine Skale angebracht, deren
+Einteilung mithilfe von Norm-Gewichten
+vorgenommen wurde.1
+Analoge Messgeräte (nicht nur aus fischertechnik) haben jedoch meist eine sehr
+begrenzte Genauigkeit und sind anfällig für
+mechanische Dejustierungen (Drift). Daher
+müssen sie von Zeit zu Zeit kalibriert
+werden – dabei wird mit Norm-Größen die
+Abweichung der Skalenbeschriftung von
+den tatsächlichen Messgrößen bestimmt.
+Seit den ec-Kästen, die Anfang der 70er
+Jahre des vergangenen Jahrhunderts auf
+den Markt kamen, bietet fischertechnik
+Sensoren an, die auf Änderungen physikalischer Zustände wie Helligkeit, Nässe
+oder Temperatur mit veränderter Leitfähigkeit (Widerstand) reagieren, wie den Fotowiderstand T9011 (31361), den FeuchteSensor (36718) oder den Heißleiter 2 k
+(36386), siehe Abb. 2.
+
+
+
+Die grauen B 30 mit Loch wiegen ziemlich
+genau 5g – perfekt für die Justierung der Briefwaage in Abb. 1.
+
+
+
+Größe umgerechnet, grafisch angezeigt
+und in Tabellen gespeichert werden. Wie
+aber lässt sich diese Umrechnung bewerkstelligen?
+
+
+Mit diesen Sensoren und den „Silberlingen“ ließen sich einfache Steuerungs- und
+Regelungsschaltungen realisieren [2]. Messen konnte man damit allerdings nur sehr
+unzulänglich.
+Mittlerweile sind weitere Sensoren wie der
+Fotowiderstand LDR03 (32698), der NTCWiderstand2 (36437) und ein optischer
+Farbsensor (128599) verfügbar (Abb. 3).
+
+NTC 1,5 k (1987) und Farbsensor (2007)
+
+Diese z. T. über 40 Jahre alten Sensoren
+lassen sich auch an das Robo Interface und
+den TX Controller anschließen. Damit
+lassen sich digitale Messgeräte konstruieren (siehe z. B. [3, 4] und den Beitrag
+von Georg Stiegler in dieser ft:pedia), die
+keinem mechanischen Drift unterliegen.
+Durch die Kombination mehrerer Sensoren
+kann sogar die Abhängigkeit der Widerstandswerte eines Sensors von Umgebungsbedingungen wie beispielsweise der
+Temperatur
+rechnerisch
+kompensiert
+werden. Vor allem aber können die Messwerte direkt in die jeweilige physikalische
+
+
+
+Negative Temperature Coefficient Thermistor,
+d. h. der elektrische Widerstand des Heißleiters
+sinkt mit steigender Temperatur.
+
+Bei einigen Sensoren kann dem Datenblatt
+eine Umrechnungsformel entnommen werden. Manchmal findet man dort jedoch nur
+eine Kennlinie, aber keine Funktionsgleichung für die Umrechnung. Und
+gelegentlich hat man nicht einmal das,
+sondern lediglich ein paar Werte aus
+eigenen (Vergleichs-)Messungen.
+Wie aber kann man aus Messwerten eine
+Umrechnungsformel für den Sensor
+gewinnen?
+Um die Vorgehensweise mit echten Messwerten illustrieren zu können, habe ich mit
+dem NTC und einem Haushaltsthermometer bei unterschiedlichen Temperaturen
+ca. 100 Messungen durchgeführt. Damit
+ich dabei die durch die einfache Messanordnung und das Gehäuse des Thermometers ohnehin begrenzte Genauigkeit der
+Ergebnisse nicht weiter beeinträchtige,
+habe ich alle Messungen in geschlossenen
+Räumen (frei von Luftzug, auf den der
+NTC sehr empfindlich reagiert) vorgenommen. Bei offensichtlichen „Ausreißern“
+habe ich nachgemessen. Tab. 1 zeigt eine
+Auswahl der Messergebnisse:
+R
+
+T
+
+R
+
+T
+
+R
+
+T
+
+1341
+
+25,7
+
+1727
+
+21,8
+
+2478
+
+15,3
+
+1509
+
+24,1
+
+1796
+
+19,3
+
+2685
+
+13,7
+
+1544
+
+24,1
+
+1843
+
+18,2
+
+3177
+
+10,1
+
+1641
+
+21,8
+
+2094
+
+17,6
+
+3285
+
+9,2
+
+1704
+
+
+2249
+
+
+3711
+
+7,8
+
+Tab. 1: Gemessene Temperaturwerte T und
+zugehörige NTC-Widerstandswerte R
+
+Für eine zuverlässige „Einmessung“ eines
+Sensors sind das zwar noch viel zu wenige
+– besser wäre die zehnfache Menge an
+Messwerten. Aber als „Illustration“ des im
+Folgenden erläuterten Rechenwegs sollen
+sie jedoch genügen.
+
+
+Messen
+
+Für die Umrechnung dieser Widerstandswerte des NTC in eine Temperatur T liefert
+fischertechnik das Robo Pro-Unterprogramm ‚NTC->T’ [3], das aus dem Widerstandswert R des 1,5 k -Heißleiters (0 bis
+5 kOhm) die Temperatur °C nach der
+folgenden Formel bestimmt:
+T
+
+1,3932 (ln R) 2 43,942 ln R 271,87
+
+
+Für die Suche nach einer Ausgleichsfunktion benötigen wir zweierlei: Eine
+Methode, um optimierte Kandidaten für
+eine solche Funktion zu finden, und ein
+Maß, um die Güte dieser Funktion zu
+vergleichen.
+
+
+T (°C)
+
+
+
+Methode
+
+
+1.000
+
+Im besten Fall stimmen alle Funktionswerte f(xi) mit unseren Messwerten yi überein (Interpolation). In der Praxis ist das
+aber nicht das Ziel, denn die „Punktwolke“
+der Messwerte ist das Ergebnis unvermeidlicher Messungenauigkeiten (z. B. wegen
+Sensortoleranzen), die durch eine geeignete Ausgleichsfunktion „geglättet“ werden
+sollen. Ziel ist daher, eine möglichst gute
+Näherung an den Verlauf der „Punktwolke“ zu finden.
+
+1.500
+
+2.000
+
+2.500
+
+3.000
+
+3.500
+
+4.000
+
+Grob lässt sich die Vorgehensweise in den
+folgenden Schritten beschreiben:
+
+R (Ohm)
+
+Mit Hilfe eines möglichst fehlerfreien
+Messverfahrens und eines hinreichend
+genauen Messgeräts für unsere gesuchte
+physikalische Größe bestimmen wir n
+(n > 2) unterschiedliche Messwerte yi in
+einem für die spätere Nutzung interessanten Messintervall sowie die zugehörigen Sensorwerte xi (siehe Tab. 1).
+
+aus Tab. 1 (blau) und Berechnungen der
+Robo Pro-Funktion ‚NTC->T’ (rot)
+
+Aber liefert diese Funktion wirklich eine
+geeignete Näherung an den tatsächlichen
+Temperaturverlauf? Einige der berechneten
+Temperaturwerte weichen, wie Abb. 4
+zeigt, deutlich von meinen Messwerten ab.
+Sofern mir bei meinen Messungen kein
+systematischer Fehler unterlaufen ist,
+liefert die Robo Pro-Funktion vor allem bei
+niedrigen Temperaturwerten keine gute
+Näherung.
+
+Anschließend wählen wir eine Funktionsklasse f(x), deren Kurve dem
+Verlauf der Messkennlinie ähnelt.3
+Dann bestimmen wir die Parameter der
+Funktion so, dass die damit berechneten
+Werte f(xi) die Messwerte yi möglichst
+gut annähern bzw. prognostizieren.
+
+Ausgleichsfunktion
+Wir suchen also eine stetige Funktion, die
+den gemessenen Sensorwerten jeweils eindeutig eine physikalische Größe zuordnet.
+Diese Zuordnung hätten wir gerne als
+Funktionsgleichung f ausgedrückt, um zu
+jedem gemessenen Sensorwert xi die entsprechende Größe direkt in der passenden
+Maßeinheit ausrechnen zu können.
+
+Schließlich bestimmen wir ein „Näherungsmaß“, das die Güte unserer Ausgleichsfunktion angibt.
+Dabei kommt der Güte unserer Messungen
+(Abdeckung des Messbereichs, keine
+
+Für manche Sensoren – auch für den NTC, siehe
+weiter unten – ist eine Funktionsklasse bekannt,
+die eine gute Ausgleichsfunktion liefert.
+
+
+
+systematischen Messfehler, Gleichverteilung der Messungenauigkeiten) eine große
+Bedeutung zu, da die Parameter der Ausgleichsfunktion auf die Messwerte hin
+optimiert werden. Die Ergebnisse der
+Ausgleichsrechnung sollten mit wiederholten Messwerten reproduzierbar sein.
+„Naives“ Beispiel
+Stünden Sensorwerte und zugehörige
+physikalische Größen in einem linearen
+Verhältnis, dann wäre die Bestimmung
+einer Ausgleichsfunktion einfach. Die
+beste Annäherung an die Messkennlinie
+unseres Sensors wäre eine Gerade
+
+f ( x)
+
+y2
+
+f ( x1 )
+
+f ( x2 )
+
+a( x1 x2 )
+
+also: a
+
+( y1 y2 )
+( x1 x 2 )
+
+(1)
+
+und: b
+
+y1 a x1
+
+(2)
+
+Je weiter dabei die Werte x1 und x2 auseinander liegen, desto genauer trifft die
+Funktion f den tatsächlichen Kennlinienverlauf. Bei einem Heißleiter erhält man
+einen Messwert sogar „frei Haus“: Der
+Nennwert des NTC gibt den Widerstandswert an, den er bei 25°C einnimmt [5].
+Beim NTC 1,5 k (Abb. 3) kann daher
+(x1, y1) = (1.500, 25) gewählt werden. 4
+Leider ist die Messkennlinie eines Sensors
+meist nicht linear. Auch für unseren NTCWiderstand stellt eine lineare Ausgleichsfunktion keine allzu gute Näherung der
+Messkennlinie dar, wie die Grafik in
+Abschnitts zeigen.
+
+
+
+Die Grundidee zur Bestimmung einer Ausgleichsfunktion geht auf den Mathematiker
+Carl Friedrich Gauß (1777-1855) zurück,
+der damit im Jahr 1801 erstmals aus Planetenbeobachtungen deren nicht kreisförmige
+Umlaufbahnen berechnete [6]. Entwickelt
+hatte er seine „Methode der kleinsten
+Quadrate“ [7] bereits sechs Jahre zuvor –
+im zarten Alter von 18 Jahren.
+
+a x b
+
+Für die Bestimmung der Parameter a (Steigung) und b (Konstante) genügen zwei
+Messwertpaare (x1, y1) und (x2, y2):
+
+y1
+
+Kleinste Quadrate
+
+In den Begleitheften der Computing-Kästen ist
+irrtümlich von 20°C die Rede (siehe z. B. Robo
+TX Training Lab Begleitheft, 11/2009, S. 6).
+
+auf einem alten Zehn-Mark-Schein
+
+Die Idee selbst ist bestechend einfach: Man
+wähle zunächst eine Funktionsklasse für
+die Ausgleichsfunktion f(x), z. B. eine
+Linearfunktion: f ( x)
+
+a x b
+r
+
+ak x k
+
+Polynomfunktion: f ( x )
+k 0
+
+b e ax
+
+Exponentialfunktion: f ( x)
+Potenzfunktion: f ( x)
+
+b xa
+
+Dann gilt: Die Parameter a, b (bzw. ak) von
+f(x) sind optimal, wenn die Summe q der
+Quadrate der Abweichungen der Funktionswerte f(xi) von den Messwerten yi
+(auch Residuen genannt) minimal ist:
+n
+
+( f ( xi )
+
+q
+
+yi )2
+
+(3)
+
+i 1
+
+Minimal ist die Summe (3) genau dann,
+wenn die partiellen Ableitungen der
+Fehlerquadratsumme nach den Parametern
+a, b (bzw. ak) gleich Null sind. Die mit den
+so gewonnenen optimalen Parametern a
+und b gebildete Ausgleichsfunktion wird
+Regressionsfunktion genannt.
+
+
+Messen
+
+Dann ist nach (3) der folgende Summenwert zu minimieren:
+n
+
+yi )2
+
+(a xi b
+
+q
+i 1
+
+Die Fehlerquadratsumme q ist minimal,
+wenn die partiellen Ableitungen nach a
+bzw. b Null sind, wenn also gilt:
+n
+
+q
+a
+den Messpunkten (Quelle: Wikipedia [7])
+
+Natürlich ließen sich die Parameter a, b
+(bzw. ak) der Ausgleichsfunktion wie in
+unserem „naiven“ Beispiel auch bestimmen, indem man zwei (bzw. r+1) Punkte
+(xi, yi) in die Funktionsgleichung einsetzt
+und das resultierende Gleichungssystem
+mit zwei (bzw. r+1) Unbekannten löst.
+Aber das Ergebnis wäre nur hinsichtlich
+dieser drei Punkte eine optimale Näherung.
+
+Linearfunktion als
+Ausgleichsfunktion
+Wählen wir zur Veranschaulichung des
+Verfahrens zunächst als Ausgleichsfunktion eine lineare Funktion. Anders als in
+unserer Beispielrechnung oben berücksichtigen wir nicht nur zwei, sondern alle n
+Messwerte unserer Messreihe (Tab. 1).
+
+b
+
+yi ) 0
+
+i 1
+n
+
+a
+
+xi
+
+(4)
+
+n
+
+n
+
+
+b
+
+xi
+
+xi yi
+i 1
+
+i 1
+
+i 1
+n
+
+q
+b
+
+(a xi
+
+
+b
+
+yi ) 0
+
+i 1
+
+(5)
+
+n
+
+n
+
+a
+
+xi
+
+b n
+
+yi
+i 1
+
+i 1
+
+Mit diesen beiden Formeln können wir nun
+die Parameter a und b der Linearen
+Ausgleichsfunktion bestimmen [8]:
+
+Die Güte der Näherung, die wir mit der
+resultierenden, für die gewählte Funktionsklasse optimalen Ausgleichsfunktion erhalten, können wir über die Fehlerquadratsumme (3) bestimmen: je kleiner q desto
+besser die Näherung. Falls q = 0 liegen alle
+Messwerte auf dem Funktionsgraphen.
+Wenden wir dieses Gütemaß auf unsere
+Messwerte und die Ergebnisse des
+Robo Pro-Unterprogramms ‚NTC->T’ an,
+so erhalten wir q = 203,4. Das entspricht
+bei 75 Messwerten einer durchschnittlichen Abweichung von 1,65°C – kein
+besonders überzeugender Wert.
+
+xi (a xi
+
+
+xi yi
+
+xi
+
+n
+
+n
+
+xi
+
+n
+
+
+n
+
+yi
+b
+
+i 1
+
+(6)
+
+xi
+i 1
+
+i 1
+n
+
+yi
+i 1
+
+i 1
+
+i 1
+
+a
+
+n
+
+n
+
+n
+
+n
+
+xi
+
+n
+
+n
+
+
+xi
+
+xi yi
+i 1
+
+i 1
+
+i 1
+n
+
+n
+
+xi
+i 1
+
+
+
+n
+
+(7)
+
+xi
+i 1
+
+Aus den Formeln (6) und (7) erhalten wir
+für n = 2 unsere bekannten Formeln (1)
+bzw. (2) für die Steigung und Konstante
+einer Gerade durch zwei Messpunkte in
+unserer einfachen Beispielrechnung oben.
+Für unsere Messwerte aus Tab. 1 erhalten
+wir die Parameter a = -0,0078 und
+b = 34,6255. Die Fehlerquadratsumme
+liegt bei q = 165,29 (Abb. 7). Damit liefert
+diese Gerade sogar eine bessere Näherung
+als das ‚NTC->T’-Unterprogramm in
+Robo Pro.
+
+
+
+n
+
+n
+
+n
+
+xi yi (
+i 1
+
+K xy
+
+n
+
+n
+
+xi
+
+
+(
+
+xi ) 2
+
+i 1
+
+i 1
+n
+
+n
+
+yi
+
+
+T (°C)
+
+
+
+
+1.500
+
+2.000
+
+2.500
+
+3.000
+
+3.500
+
+4.000
+
+R (Ohm)
+
+
+Wie gut unsere Ausgleichsfunktion unsere
+Messpunkte annähert, lässt sich bei Linearen Ausgleichsfunktionen nicht nur über
+die Fehlerquadratsumme, sondern mit dem
+Korrelationskoeffizienten Kxy bestimmen
+(8). Er drückt die Güte der Annäherung als
+einen Wert zwischen 0 und 1 aus – je näher
+der Wert bei 1 liegt, desto besser ist unsere
+Näherung [8].
+Für unsere Messwerte liegt Kxy bei 0,96.
+Das deutet auf einen fast linearen Kurvenverlauf in unserem Wertebereich hin –
+auch wenn man an der xy-Grafik in Abb. 4
+erkennt, dass mit einer nichtlinearen Funktion möglicherweise eine noch bessere Annäherung an die Messwerte erreicht werden kann.
+Polynom als Ausgleichsfunktion
+Versuchen wir es also einmal mit einer
+Polynomfunktion r-ten Grades, eine
+bessere Ausgleichsfunktion hinzubekommen (9):
+r
+
+f ( x)
+k 0
+
+
+yi )2
+
+(
+i 1
+
+i 1
+
+ak x k
+
+(9)
+
+Allerdings ist eine Polynomfunktion (n-1)ten Grades für große n meist als Näherung
+für eine Messkurve nicht geeignet, da diese
+üblicherweise (streng) monoton steigt bzw.
+fällt, der Kurvenverlauf einer Polynomfunktion jedoch um die Messpunkte
+„schwingt“. Polynomfunktionen ab Grad
+fünf spielen daher in der Praxis als
+Ausgleichsfunktion keine Rolle.
+Die Bestimmung der optimalen Parameter
+ai einer Polynomfunktion ist etwas aufwändiger als bei einer Linearen Funktion,
+denn es müssen die Nullstellen von n
+partiellen Ableitungen berechnet werden.
+Dafür muss ein lineares Gleichungssystem
+mit r+1 Gleichungen und ebenso vielen
+Unbekannten (den Parametern ak) gelöst
+werden.
+Für den (noch recht einfachen) Fall r = 2
+werden die Nullstellen der partiellen
+Ableitungen wie folgt bestimmt:
+
+q
+a2
+
+n
+
+
+(a2 xi
+
+
+a1 xi
+
+yi ) xi
+
+a0
+
+
+
+i 1
+n
+
+a2
+
+xi
+
+n
+
+
+a1
+
+i 1
+n
+
+q
+a1
+
+xi
+
+n
+
+
+a0
+
+i 1
+
+
+(a2 xi
+
+
+xi
+
+
+n
+
+xi
+
+i 1
+
+i 1
+
+a1xi
+
+a0
+
+yi ) xi
+
+
+a0
+
+
+yi
+
+
+i 1
+n
+
+a2
+
+xi
+i 1
+
+
+(8)
+
+n
+
+Polynomfunktionen dienen vor allem dazu,
+eine Messwertkurve zu glätten. Mit einer
+Polynomfunktion vom Grad r = n-1
+können wir den Punkteverlauf sogar interpolieren, denn es gibt immer eine Polynomfunktion vom Grad n-1, bei der alle
+unsere Messpunkte exakt auf der Kurve
+liegen – die Methode der kleinsten
+Quadrate liefert uns dann eine Ausgleichsfunktion ohne Fehler (q = 0).
+
+
+1.000
+
+yi )
+
+i 1
+n
+
+i 1
+
+n
+
+xi )(
+
+
+n
+
+a1
+
+xi
+i 1
+
+n
+
+n
+
+xi
+i 1
+
+xi yi
+i 1
+
+
+Messen
+
+n
+
+q
+a0
+
+
+(a2 xi
+
+
+a1 xi
+
+a0
+
+xi
+
+a0 n
+
+yi )
+
+Die Summe der Fehlerquadrate liegt bei
+dieser Regressionsfunktion bei q = 96,32 –
+wieder ein etwas besseres Ergebnis.
+
+
+i 1
+
+a2
+
+n
+
+xi
+
+
+n
+
+a1
+
+i 1
+
+i 1
+
+n
+
+yi
+
+i 1
+
+Dieses lineare Gleichungssystem mit den
+drei Unbekannten a0, a1 und a2 lässt sich
+wie folgt in Matrixnotation darstellen und
+nach den vielleicht noch aus der Schule
+bekannten Methoden (Gaußsches Eliminationsverfahren) lösen:
+n
+
+xi
+i 1
+n
+
+xi
+i 1
+n
+
+xi
+
+n
+
+
+
+
+xi
+i 1
+n
+
+xi
+i 1
+n
+
+i 1
+
+
+
+n
+
+xi
+i 1
+n
+
+xi
+i 1
+
+xi
+
+n
+
+
+n
+
+
+xi yi
+
+a2
+
+i 1
+n
+
+a1
+a0
+
+i 1
+n
+
+xi yi
+
+i 1
+
+yi
+
+i 1
+
+Wer das manuelle Lösen des Gleichungssystems vermeiden möchte, dem sei der
+Online-Rechner von Arndt Brünner wärmstens empfohlen. Auch mit der Funktion
+Polyfit in MATLAB oder dem freien
+GNU Octave lässt sich die Polynomfunktion automatisch bestimmen. Für unsere
+Messwerte aus Tab. 1 liefert das
+Gleichungssystem die folgenden Parameter
+(Abb. 8):
+
+Exponentialfunktion als
+Ausgleichsfunktion
+Als nicht-lineare Ausgleichsfunktion für
+eine monotone Messkurve eignen sich
+auch Exponentialfunktionen:
+
+Bei einer Exponentialfunktion sind nicht
+nur lediglich zwei Parameter a und b zu
+optimieren. Mit zwei einfachen Substitutionen lässt sich zudem die Berechnung der partiellen Ableitungen nach a und
+b vermeiden, indem wir die Funktionsgleichung auf den einfachen Fall einer
+linearen Ausgleichsfunktion zurückführen:
+
+ln y ln( b e ax ) a x ln b
+B ln b, Y ln y
+(11)
+Y
+
+a x B
+
+Aus den Formeln (6) und (7) können wir
+nun die Bestimmung der Parameter a und
+B ableiten:
+xi ln yi
+n
+
+xi
+
+n
+
+
+xi
+
+n
+
+n
+
+ln yi
+B
+
+xi
+
+xi
+
+xi ln yi
+i 1
+
+i 1
+n
+
+xi
+
+
+
+n
+
+xi
+i 1
+
+i 1
+
+T (°C)
+
+n
+
+n
+
+
+i 1
+
+n
+
+
+(12)
+
+i 1
+
+i 1
+
+i 1
+
+ln yi
+i 1
+
+i 1
+
+
+(13)
+
+
+Anschließend lässt sich aus B der Parameter b mit einer Potenzierung gewinnen:
+b = eB. Mit den Messwerten aus Tab. 1
+erhalten wir die folgenden Parameter
+unserer Regressionsfunktion (Abb. 9):
+
+
+1.000
+
+xi
+
+i 1
+
+n
+
+
+n
+
+n
+
+n
+
+n
+a
+
+a0 = 47,27, a1 = -0,0196 und
+a2 = 2,4474·10-6.
+
+b e ax (10)
+
+f ( x)
+
+1.500
+
+2.000
+
+2.500
+
+3.000
+
+3.500
+
+R (Ohm)
+
+4.000
+
+a = 0,0005 und b = 50,1933.
+
+Ausgleichsfunktion
+
+
+
+Die erneut etwas kleinere Fehlerquadratsumme q = 98,85 bestätigt den guten Eindruck des Funktionsverlaufs aus Abb. 9:
+Die Exponentialfunktion liefert eine
+ähnlich gute Näherung an unsere Messwerte wie die Polynomfunktion.
+
+ln y ln( b x a ) a ln x ln b
+Y ln y, B ln b, X ln x
+Y
+
+a X
+
+(15)
+
+B
+
+Die Parameter a und B der solcherart
+„linearisierten“ Ausgleichsfunktion (15)
+bestimmen wir auch hier mit den angepassten Formeln (16) und (17) für unsere
+Messwerte aus Tab. 1. Wieder erhalten wir
+dabei den Parameter b aus B mit einer
+Potenzierung b = eB:
+
+
+
+T (°C)
+
+a = -1,1582 und b = 116867,91.
+Die Güte dieser Ausgleichsfunktion liefert
+uns die Fehlerquadratsumme: q = 101,18 –
+fast so gut wie die bisher besten Näherungen. Abb. 10 veranschaulicht den Kurvenverlauf.
+
+
+
+1.000
+
+1.500
+
+2.000
+
+2.500
+
+3.000
+
+3.500
+
+
+4.000
+
+R (Ohm)
+
+Exponentialfunktion
+
+
+Potenzfunktion als
+Ausgleichsfunktion
+
+T (°C)
+
+
+
+Das Vorgehen bei einer Potenzfunktion
+ähnelt dem der Exponentialfunktion: Auch
+bei ihr sind nur zwei Parameter a und b zu
+bestimmen:
+f ( x)
+
+
+b x a (14)
+
+1.000
+
+Wieder können wir durch einfache Substitutionen die Berechnung der partiellen
+Ableitungen nach a und b auf den einfachen Fall einer linearen Ausgleichsfunktion zurückführen:
+n
+
+n
+a
+
+n
+
+i 1
+
+n
+
+n
+
+ln yi
+B
+
+i 1
+
+
+ln xi
+n
+
+n
+
+ln xi
+
+n
+
+(ln xi )
+
+
+n
+
+ln xi
+i 1
+
+ln xi ln yi
+i 1
+
+i 1
+
+i 1
+
+i 1
+
+(16)
+
+i 1
+
+(ln xi )2
+
+n
+
+2.500
+R (Ohm)
+
+ln yi
+
+i 1
+
+n
+
+(ln xi )2
+
+i 1
+
+n
+
+ln xi
+
+i 1
+
+n
+
+2.000
+
+3.000
+
+3.500
+
+4.000
+
+
+ln xi ln yi
+n
+
+1.500
+
+(17)
+
+
+Messen
+
+Qualität
+solcher.
+
+Steinhart-Hart-Gleichung als
+Ausgleichsfunktion
+Für die Berechnung des Temperaturwerts T
+(in Kelvin) aus dem Widerstandswert R
+eines NTC wird üblicherweise die folgende
+Steinhart-Hart-Gleichung [5, 9] verwendet:
+
+Näherungsfunktion
+
+als
+
+
+
+
+c (ln R) 3 b(ln R) a
+
+(18)
+
+T (°C)
+
+T
+
+der
+
+Die Temperatur in °C erhält man aus T
+durch Subtraktion von 273,15.
+
+
+Auf diese Funktion lässt sich die Methode
+der Kleinsten Quadrate nicht anwenden,
+denn in (18) dürfen wir nicht y = 1/T
+substituieren – das Gauss-Verfahren ist
+nicht invariant unter Kehrwertbildung.
+Daher bestimmt man die Parameter a, b
+und c der Regressionsfunktion durch die
+Auswahl dreier Messwerte aus dem
+betrachteten Intervall und löst das daraus
+resultierende lineare Gleichungssystem mit
+drei Unbekannten:
+
+
+a
+b
+c
+
+y1
+y2
+y3
+
+Besonders einfach gelingt die Berechnung
+mit dem Online Thermistor Calulator der
+Stanford Research Systems Inc.
+Für die Punkte (1.353 ; 26,1°C),
+(2.100 ; 15,9°C) und (3.177 ; 10,1°C)
+liefert das Verfahren die Lösung
+
+1.000
+
+1.500
+
+2.000
+
+2.500
+R (Ohm)
+
+3.000
+
+3.500
+
+4.000
+
+Steinhart-Hart-Gleichung
+
+Schließlich kann man auf die R/T-Kennlinien im Datenblatt des NTC (Nr. 1013)
+zurückgreifen und die Steinhart-HartAusgleichsfunktion über die darin in 5°Schritten angegebenen Widerstandswerte
+bestimmen [10]. Das Ergebnis ist fast
+deckungsgleich mit den Werten des ‚NTC>T’-Unterprogramms (Abb. 4, 12).
+
+
+T (°C)
+
+1 ln( x1 ) ln( x1 )3
+1 ln( x2 ) ln( x2 )3
+1 ln( x3 ) ln( x3 )3
+
+273,15
+273,15
+273,15
+
+
+
+
+-3
+
+a0 = 1,124018613 10
+a1 = 3,422680237 10-4
+a2 = -6,707557136 10-7.
+Die Summe der Fehlerquadrate liegt bei
+dieser Steinhart-Hart-Ausgleichsfunktion
+bei sehr guten q = 96,09 – die bisher beste
+Näherung (Abb. 11). Aber Vorsicht: Die
+Güte sagt hier mehr über die geeignete
+Wahl der drei Kurvenpunkte als über die
+
+1.000
+
+1.500
+
+2.000
+
+2.500
+
+3.000
+
+3.500
+
+4.000
+
+R (Ohm)
+
+
+
+
+
+Fazit
+Mit den vorgestellten Rechenwegen dürfte
+nun der Bestimmung einer Regressionsgleichung zu euren eigenen Messwerten
+beliebiger Sensoren nichts mehr im Wege
+stehen.
+Sollten die aus den in diesem Beitrag
+vorgestellten Funktionsklassen gewonnenen Regressionsfunktionen keine zufrieden stellende Näherung darstellen, könnt
+ihr es auch mit Linearkombinationen
+verschiedener
+Funktionsklassen
+oder
+weiteren Substitutionen versuchen – die
+Vorgehensweise ist dieselbe, der Rechenweg im einen oder anderen Fall allerdings
+möglicherweise etwas komplizierter.
+Bei euren eigenen Messungen solltet ihr
+berücksichtigen, dass Messergebnisse von
+zahlreichen Umwelteinflüssen wie Wind,
+Temperatur oder Luftfeuchtigkeit beeinflusst werden können. Auch in der Messanordnung selbst (korrodierte Kontakte,
+schlecht sitzende ft-Stecker etc.) können
+Fehlerquellen stecken. Zudem solltet ihr
+eine möglichst große Zahl (>> 100) an
+Messungen durchführen, damit die Messungenauigkeiten möglichst gleich verteilt
+auftreten. Je genauer und zahlreicher eure
+Messwerte, desto präziser die spätere
+Ausgabe eures „eingemessenen“ fischertechnik-Messgeräts.5
+Kennt ihr die Funktionsgleichung, dann ist
+die Programmierung der Umrechnung
+bspw. der NTC-Werte in Robo Pro kinderleicht – Abb. 13 zeigt ein Unterprogramm
+nach der Steinhart-Hart-Gleichung.
+Die Parameter des Beispielprogramms
+könnt ihr gerne an die Ergebnisse aus
+euren eigenen Messungen anpassen.
+
+
+
+Umrechnung des NTC-Widerstands in
+Temperaturwerte (Steinhart-Hart-Gleichung))
+
+Quellen
+[1]
+
+Artur Fischer: fischertechnik hobby.
+Experimente + Modelle. Bd. 1-1.
+Fischer-Werke, Tumlingen, 1973.
+
+[2]
+
+Artur Fischer: fischertechnik hobby.
+Experimente + Modelle. Bd. 4-1/3.
+Fischer-Werke, Tumlingen, 1973.
+
+[3]
+
+Dirk Fox: Der TX Controller als
+Messgerät. ft:pedia 1/2011, S. 33-36.
+
+[4]
+
+Dirk Fox: Radar und Sonar. 2/2011, S. 4-8.
+
+[5]
+
+Wikipedia: Heißleiter.
+
+[6]
+
+Wikipedia: Carl Friedrich Gauß.
+
+[7]
+
+Wikipedia: Methode der kleinsten
+Quadrate.
+
+[8]
+
+G. Krucker: Ausgleichs- und Interpolationsrechnung. Kapitel 3, Vorlesungsskript, Institut für Informatik
+und angewandte Mathematik, Hochschule für Technik und Architektur,
+Bern, 1996/98.
+
+[9]
+
+John S. Steinhart, Stanley R. Hart:
+Calibration curves for thermistors.
+In: Deep Sea Research and Oceanographic Abstracts, August 1968, Vol.
+15, Issue 4, S. 497-503.
+
+[10] Siemens Matsushita: Datenblatt
+B57164, K164. S. 112-113.
+Vielen Dank an Thomas Püttmann für die
+wertvollen Anmerkungen zu einer Vorversion des Beitrags.
+
+Wer misst, misst Mist: Messen ohne systematische Fehler ist eine Herausforderung – und
+zweifellos einen eigenen ft:pedia-Beitrag wert...
+
+

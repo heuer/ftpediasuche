@@ -1,0 +1,432 @@
+
+Modell
+
+Modell
+
+Schrägseilbrücke und Hängebahn (Teil 1)
+Tilo Rust
+In diesem Zweiteiler stelle ich mein Großprojekt vor, das eigentlich zwei Projekte umfasst. Zum
+einen die Brücke als Bauwerk, zum anderen den Antrieb des Fahrzeugs mit gegenläufigen
+Seilen und einer elektromechanischen Regelung. In diesem Projekt sind einige technische
+Raffinessen versteckt, die bei erster Betrachtung nicht erkennbar sind – hier aber in den
+Mittelpunkt gestellt werden. Der zweite Teil des Beitrags wird sich mit dem Seilantrieb, der
+Regelung sowie Energiemanagement und Fernbedienung beschäftigen.
+
+Die Challenge
+Mein Sohn Jan (damals sieben Jahre alt)
+wünschte sich eine Brücke über unseren
+Gartenteich. Als gestalterisches Vorbild
+wollte er eine Brücke ähnlich jener Schrägseilbrücke von Speyer über den Rhein.
+Dazu legte er mir sogar eine Entwurfszeichnung vor. Er begann selbst zu bauen
+und zu experimentieren. Nicht lange und
+die Strecke von 90 cm stand stabil im
+Garten. Da noch Teile übrigblieben, ver-
+
+größerten wir die Spannweite und entdeckten, dass wir an der Statik arbeiten mussten.
+Jan ist ein Experte in Sachen Statik. Und so
+verstrebte er den Turm vorbildlich.
+Da aber Gigantismus bekanntlich keine
+Grenzen kennt (mein Wahlspruch) wurde
+die Brücke größer und größer… Bis wir in
+der Endversion eine freie Spannweite von
+340 cm überbrückten, die Türme 160 cm
+hoch und das Bauwerk über alles 520 cm
+maß.
+
+umsetzen konnten. Auch die Gondel (siehe Teil 2) ist bereits berücksichtigt.
+
+
+
+
+Das Konstruktionsprinzip
+Bei einer Schrägseilbrücke wird die Brücke
+(Fahrbahn) an schrägen Seilen gehalten.
+Hinter den Türmen sind diese landseitig im
+Grund fest verankert. Die Last wird so auf
+eine rein senkrechte Kraft in den Turm
+abgeleitet.
+Dies ist auch bei unserem Bauwerk der Fall.
+Die Besonderheit aber ist, dass wir den
+oberen Turmabschnitt landseitig nach
+hinten kippen lassen. Damit trägt sein
+Gewicht die Brücke zum großen Teil mit,
+was zusätzlich durch eine FlaschenzugKonstruktion erreicht wird. Solche Brücken
+gibt es tatsächlich. (Beispiel: Puente del
+Alamillo, Sevilla.)
+In Abb. 2 zeigen die sechs Teilbilder die
+Theorie des Brückenbaus:
+① Die Schrägseilbrücke ist aufgebaut wie
+ein Kran: Die Last der Fahrbahn wird über
+den Turm in das Gegengewicht geleitet.
+②③ Das Gegengewicht kann erheblich
+reduziert werden, wenn das Gewicht des
+Turmes mit in die Balance einbezogen wird.
+④ Bei einer Brücke wird das Gegengewicht des Kranes durch einen Erdanker
+ersetzt. Gleichzeitig haben wir eine andere
+
+Seilkonstruktion gewählt. Nun muss der
+Oberträger aber nicht nur druckstabil,
+sondern auch biegestabil sein.
+⑤ Zusätzliche Erdkabel stabilisieren den
+Oberträger gegen Durchbiegung.
+⑥ Bei der finalen Konstruktion werden
+alle Lasten der Fahrbahn über den Mast in
+den Boden abgeleitet. Dabei entstehen
+Schubkräfte, welche die Fahrbahn zum
+Turm drücken – sie werden durch den
+zweiten „Kran“ abgefangen (die Fahrbahn
+also auf Zug belastet). Dafür muss der Turm
+nach hinten abgestützt werden.
+
+Zwei Kräne
+Nun könnte man die Brücke auch unter
+anderem Winkel betrachten – dann könnte
+man sie als „Zwei Kräne, die sich an der
+Spitze des Auslegers berühren“ bezeichnen.
+Und tatsächlich: Wenn man die Fahrbahn in
+der Mitte teilt, passiert – nichts!
+Die Kräne halten die Fahrbahn-Teile wie
+ihren Ausleger. Dabei werden Belastungen
+aufgrund der schrägen Seile in die Horizontale umgelenkt und die Fahrbahn so gegen
+den Mast gedrückt. Das ist der Grund,
+warum eine Fahrbahn druckstabil in der
+Längsrichtung sein muss.
+
+
+
+
+Modell
+
+bleibt das System dennoch stabil. Sowohl beim Trennen in der Fahrbahnmitte (zwei Kräne mit
+Ausleger, mittleres Bild) als auch beim Entfernen der Auflagelager (unten).
+
+Selbst der Gegenversuch gelingt: Hakt man
+die Fahrbahn an den Lagern am Mast aus,
+so scheint sie an den Seilen zu schweben –
+die Schrägseile ziehen die Fahrbahn gegenseitig zum eigenen Mast.
+
+Höhenunterschied
+Eine Besonderheit fällt kaum auf, wenn
+man die Brücke nicht im Ganzen sieht: Die
+Bergstation steht höher als die Talstation.
+Grund dafür ist in unserem Garten zu
+
+
+
+
+finden: Die Terrasse liegt ca. 9 cm niedriger
+als der Rasen.
+Dadurch müssen die Obertürme unterschiedlich gekippt werden und die Schrägseile unterschiedlich lang sein. Da aber die
+Fahrbahn an den Stationen möglichst
+waagerecht ankommen sollte, wurde die
+Fahrbahn labil (also nicht als Kastenkonstruktion) ausgeführt. Das brachte uns zur
+Idee, die Bodenanker der Tragseile so zu
+gestalten, dass man mit wenigen Handgriffen die Seillängen millimetergenau einstellen kann. Und daraus wiederum entsteht die
+Option, die Bergstation bis zu 40 cm höher
+zu positionieren und dennoch das Bauwerk
+stabil zu halten. In diesem Fall biegt sich die
+Fahrbahn erheblich, doch durch die Justierung der einzelnen Seillängen ist das kein
+Problem bei der Auslastung. (Später sollte
+sich diese Option als Grund gegen ein
+umlaufendes Antriebsseil herausstellen.)
+Bei jedem Aufbau des Modells an einem
+anderen Ausstellungsort müssen die Spannseile mit diesem Block nachgespannt werden. (In der Realität wird eine Brücke nicht
+transportiert, daher ist solch eine Vorrichtung nicht vorhanden – die Seile sind fest im
+Grund eingelassen.)
+Die Tragseile sind hinter dem Turm mit
+dem Block in Abb. 4 (hier die Bergstation)
+als Bodenanker auf der Bauplatte befestigt.
+Sie kommen im Bild von links oben aus
+dem Oberturm und führen auf einzelne
+Achsen bzw. Spulen, die jeweils mit unterschiedlichen Zahnrädern als „Anfasser“
+leicht gedreht werden können. Blockiert
+werden sie mit verschiebbaren Bauteilen,
+die in die Zahnräder greifen. So lässt sich
+jedes der vier Seile millimetergenau in der
+Länge anpassen und damit nicht nur ein
+Höhenunterschied der Stationen ausgleichen und die Spannung auf der Fahrbahn
+und dem Turm verteilen, sondern auch das
+genaue Fahrbahnprofil erstellen.
+
+
+Die Last wird im Block mit insgesamt elf
+Nuten in die Bauplatte eingeleitet; der
+Block selbst ist mit Verbindern und Stahlachsen so weit wie möglich versteift. Links
+am Block sieht man eine der LED zur Bauwerksbeleuchtung.
+
+
+Lose Lager
+Da bei unserer Konstruktion die Last der
+Fahrbahn in Schubkräfte längs der Fahrbahn gewandelt wird, wird ein Fahrzeug,
+das später als Gondel an der Brücke hängt,
+unterschiedliche Last auf die Türme erzeugen, wenn es sich bewegt. Daher müssen die
+Enden der Fahrbahn an beiden Enden beweglich aufgehängt werden.
+Wir realisieren dies mit Alu-Profilen, die in
+zwei Winkelachsen 90° (31035) eingeschoben sind. So kann sich das Fahrbahnende
+nicht nur längs bewegen, sondern auch nach
+oben und unten (Durchbiegung), aber nicht
+seitlich ausweichen.
+Die Fahrbahn (kommt von links unten,
+mit Loch. Bevor wir diese Notwendigkeit
+erkannten, war sie mit einer durchgehenden
+Achse in der Ebene (magentafarbene Linie)
+fixiert.
+
+
+
+Optimierungen
+Als die Türme größer wurden und die Fahrbahn länger, war es nötig, die Winkel der
+Seile besser zu gestalten. Ziel war es, am
+Oberturm die Lager gleichmäßig möglichst
+weit über die Fahrbahn zu heben.
+
+Modell
+
+Turm (rechts) von der Fahrbahnseite aus
+gesehen
+
+Version des Turms (rechts) und die
+optimierte, größere (links) mit Markierungen, die zeigen, in welcher Höhe sich die
+Seile befinden und (in Cyanblau) die Fahrbahn. Damit konnte eine größere Spannweite realisiert werden. Die geschwungenen „Gabeln“ am Boden verbinden die
+Türme mit der hinteren Stütze – sie sind
+nicht wirklich nötig, aber das Design hat Jan
+so gefallen, dass wir es dran ließen.
+
+
+
+der Fahrbahn ein serielles Kabel. Somit hat
+die Anlage nur einen Stromanschluss.
+Die Türme der Stationen können etwa in
+Fahrbahnhöhe nach hinten umgekippt
+werden (die Streben und Tragseile liegen
+lose auf dem Boden). Zur Transportsicherung hilft eine kleine Aluschiene, die
+Turmspitze zu stützen. Beide Türme stehen
+auf Holzplatten und sind dort festgeschraubt, was das Tragen erleichtert und
+später für schnelles Aufstellen sorgt.
+
+Turm (rechts) von der Seite gesehen
+
+Transportabel
+
+Die Alustütze an der Spitze hält den Turm
+(links). Die ganze Anlage ist auf dem Brett (mit
+schwarzem Dekostoff) festgeschraubt (mit
+Metallplatten an den Ecken der Bauplatte, am
+unteren Bildrand.)
+
+Jeder Modellbauer eines Großmodells steht
+vor der Herausforderung, sein Modell zur
+Ausstellung zu transportieren, ohne viel
+auseinander nehmen zu müssen. Glücklicherweise haben wir das gleich von
+Anfang an berücksichtigt.
+Prinzipiell besteht die Anlage aus der Fahrbahn, die in der Mitte getrennt und zusammengeklappt werden kann (= 175 cm), aus
+dem Fahrzeug, der Fernbedienung (Kleinkram) und den beiden Türmen. Die Fahrbahnbeleuchtung wird an der Bergstation
+ausgehängt und durch die Talstation versorgt. Auch alle später zugefügten elektrischen Teile wie Endschalter und Turmbeleuchtung werden ausschließlich von der
+Talstation versorgt. Unsichtbar führt unter
+
+
+Convention. Die Holzkisten beinhalten die
+Deko und sorgen für unterschiedliches
+Geländeniveau. Die Cola-Kisten dienen als
+Unterbau, damit das Bauwerk nicht auf dem
+Boden steht.
+
+
+Modell
+
+Über den Auf- und Abbau, der inkl. Einhängen der Förderseile und Kalibrieren der
+Gondel in weniger als 10 Minuten erfolgt,
+gibt es ein Video auf meinem YouTubeKanal [1].
+Die Gondel (Abb. 10) wird durch die zwei
+gegenläufigen Seile (blauer und roter Pfeil,
+Seile farbig markiert) an der Fahrbahn
+gezogen. Diese hängt an den Schrägseilen
+(grüner Pfeil), welche durch die Löcher der
+Statik-Bausteine geführt und unter den
+Schienen um diese gelegt wurden. Unter der
+Fahrbahn ist das serielle Kabel (gelber
+Pfeil) versteckt, welches die Bergstation mit
+Strom für Licht versorgt und Schaltsignale
+überträgt. Für den Transport werden die
+Stecker ausgesteckt und die Fahrbahn kann
+mit dem Kabel entnommen werden. Das
+„Dach“ über der Gondel ist das Fahrgestell
+mit einer Schräge, die später unter eine
+Gabel fährt, um die Endposition in der
+Station zu signalisieren (siehe Teil 2 in
+einer späteren ft:pedia-Ausgabe).
+
+Fails
+Natürlich gibt es bei einer Entwicklung
+auch Rückschläge. Nachdem wir den Oberturm einmal beim Aushängen der Fahrbahn
+nach hinten fallen ließen, rissen die Gelenke
+aus. Die neue Version überträgt die Kräfte
+besser.
+
+
+Aber genau das ist die „Seele von fischertechnik“: das Tüfteln! Dazu gehören Rückschläge, Ursachenforschung, das Nachdenken, wie eine Lösung besser sein könnte –
+und dank einzelner Bauteile die leichte Veränderung von Details.
+
+
+
+
+Deko
+Zu einem Modell, das auf Ausstellungen
+gezeigt wird, gehört natürlich auch Dekoration. Am Turm montiert Herr Fischer die
+Fahrbahnbeleuchtung, während Artur mit
+der Handlampe für Erleuchtung sorgt.
+Schilder und Abschrankungen sorgen für
+Sicherheit.
+
+
+Die Problemlösung führte insgesamt zu
+einem besseren und stabileren Aufbau des
+oberen Maschinenraumes und dem Gelenk
+zum Oberturm.
+
+Oberturm
+
+Stabilität
+Über all die Jahre haben wir jedoch unser
+Bauwerk so weit entwickelt, dass es fähig
+ist, 4 kg in der Mitte der Fahrbahn zu
+tragen! Ein Video davon gibt es auf meinem
+YouTube-Kanal [1].
+
+
+Die Last wird planmäßig über die Türme in
+die Bodenanker abgeleitet. Die flexible
+Fahrbahn leitet die Kräfte gleichmäßig in
+die 2 · 4 Schrägseile ein. Klar, das Bauwerk
+bewegt sich, aber das wäre auch bei einer
+echten Brücke der Fall.
+Dennoch – die Augen der Besucher wurden
+immer größer, jedes Mal, wenn ich das
+Gewicht bei einer Ausstellung einhing.
+
+
+
+
+Modell
+
+Fahrbahn- und Bauwerksbeleuchtung, beleuchteter Bedienstand und Arbeitslichter in
+den Türmen sowie im Maschinenraum sorgen auch abends für ein spannendes Spielerlebnis.
+
+Zudem müsste sich die Seillänge auf unterschiedliche Geländehöhen anpassen lassen
+(siehe oben) und alles leicht abzubauen sein
+– alles Argumente gegen ein umlaufendes
+Antriebsseil.
+
+Die Hängebahn – Vorschau auf
+Teil 2
+
+Die Lösung: zwei gegenläufige Seile mit
+automatischer Längenregelung ohne Verwendung eines Controllers. Und genau um
+diese Lösung dreht sich Teil 2 des Beitrags
+in einer kommenden ft:pedia.
+
+Kaum war die Brücke fertig gestellt, kam
+Jan und brachte mir die Gondel mit den
+Worten: „So, Papa, die muss jetzt daran
+fahren!“ Mein letztes Wort vor einer wirklichen technischen Herausforderung war
+„Klar – kein Problem!“ Wie hatte ich mich
+doch geirrt.
+Nicht die Konstruktion der Gondel war
+schwierig. Da brauchten nur Details verbessert zu werden. Es war der Antrieb selbst.
+Denn durch die (absichtlich) labil ausgelegte Fahrbahn entsteht eine erhebliche
+Längenänderung, die mit einem umlaufenden Antriebsseil nicht zu machen war. Das
+Problem: Erhöht man die Seilspannung, um
+genügend Reibung am Antrieb zu erzeugen,
+zieht man quasi die Türme zueinander – die
+Fahrbahn würde ein Versagen zweiten bis
+vierten Grades aufweisen (also in S-Form).
+
+Spielzeug
+Details für Aussteller: Alle Riegel wurden
+soweit nötig mit Scheiben gesichert (an den
+Turm-Spannern). Alle Kappen der LEDs
+wurden mit Tesa befestigt. Alle Stecker
+wurden frisch „gespitzt“ und ggf. mit
+Isolierband gesichert und versteckt. Herr
+Fischer wurde mit Kabelbindern befestigt
+und die Kabel sauber geführt (siehe auch
+mein Beitrag „Verkabelung (Teil 3)“ [4]).
+Die Brücke wurde so konstruiert, dass sie
+ohne viel Erklärung den Besuchern zum
+Spielen mit der Gondel überlassen werden
+kann. Alle Abschnitte sind gesichert und die
+Bedienung „failsafe“ konstruiert. So ist sie
+ein Ausstellungsstück zum Betrachten geworden, das unsere Gäste ab und zu auch im
+
+
+
+
+Garten bei Nacht sehen können. Damit
+bleibt fischertechnik das, was es ist: ein
+Technik-Erlebnis für Groß und Klein mit
+Herausforderungen zum Tüfteln bei der
+Konstruktion und als Anschauungsobjekt
+für faszinierende Ingenieurleistungen aus
+dem richtigen Leben.
+Alle Bauteile sind im Privatbesitz und
+stammen zum großen Teil noch aus den
+1970er Jahren. Die Schrägseilbrücke war
+vier Jahre lang auf vielen Ausstellungen
+unterwegs und wurde vielen Schülern und
+Studenten als Lehrstück vorgeführt. Sie
+sollte zum letzten Mal auf der SüdConvention im Oktober 2020 im Erlebnismuseum Fördertechnik in Sinsheim zu
+sehen sein (die ja leider ausfallen muss),
+bevor sie in alle Einzelteile zerlegt wird,
+denn die Teile werden für Prototypen des
+Community-Projektes „Seilbahn“ [3] (Bericht folgt) benötigt.
+Das ganze Bauwerk mit 540 cm Länge
+(Abb. 16) steht auf Holzplatten (Transporthilfe) und Holzkästen, die mit Cola-Kisten
+angehoben sind. Die Talstation (links) liegt
+ca. 9 cm tiefer. Oben drüber hängt die Fahrbahnbeleuchtung mit Positionslampen. In
+der Mitte unter der Brücke ist die Kabelfernbedienung (siehe Teil 2) zu sehen. Die
+Gondel steht gerade an der Bergstation. Gut
+zu erkennen sind die Schrägseile und die
+Profilierung der Fahrbahn. Die Abspannungen an der Bergstation führen alle in den
+Bodenanker (rechter unterer Bildrand).
+Man erkennt, wie der Oberturm landseitig
+gekippt ist. Anmerkung: Die Strebe, die ca.
+Mitte des Oberturms ansetzt und fast
+senkrecht nach unten geht, wurde später aus
+optischen Gründen entfernt; sie hat keine
+Wirkung. Als Deko ist Herr Fischer in der
+Mitte des Oberturms der Bergstation zu
+erkennen. Unten auf dem Boden befindet
+sich ein Monitor, auf dem Bilder von
+Details zu sehen sind. Der schwarze
+Vorhang hilft, die Seile besser zu sehen.
+
+
+Vater und Sohn konnten sich nicht nur untern
+den Weihnachtsbaum (im Hintergrund) legen,
+sondern auch „unter der Brücke schlafen.“
+(Anmerkung: So ein Bauwerk im Wohnzimmer
+ist übrigens kein Scheidungsgrund.)
+
+Quellen
+Alle Fotos und Grafiken: Tilo Rust aka
+„ClassicMan“.
+[1]
+
+YouTube Channel ClassicMan
+
+[2]
+
+Tilo Rust: Schrägseilbrücke. Im
+Bilderpool der ft:Community, 2016.
+
+[3]
+
+Community Projekt Seilbahn im
+fischertechnik-Forum.
+
+[4]
+
+Tilo Rust: Verkabelung (Teil 3). In
+ft:pedia 2/2020, S. 61-67.
+
+

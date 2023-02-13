@@ -1,0 +1,90 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Kaulquappen (Teil 10)
+Stefan Falk
+Bei den Arbeiten an einem Kipper-LKW ergaben sich ein paar zwar letztlich für das Modell
+verworfene, aber grundsätzlich doch nützliche Kleinode.
+
+BS7,5 kraftschlüssig mit einer
+Hubzahnstange verbinden
+Wer schon mal einen BS7,5 auf eine
+Hubzahnstange gesetzt hat, wird bemerkt
+haben, dass der leicht durchrutscht. Das
+kann man mit eingeschobenen Papierstückchen verbessern, oder man geht so vor:
+Man verwendet mindestens zwei Hubzahnstangen. Ebenso werden zwei BS7,5
+aufgeschoben, und zwar so, dass zwischen
+den beiden – genau in den Zwischenraum
+der Federn der beiden Zahnstangen – ein
+Leuchtstein-Stopfen (36495, vielleicht auch
+bekannt als Leuchtstein-Abdeckplättchen)
+eingefügt wird:
+
+Hubzahnstange abstützt. Damit das Plättchen nicht herausfällt, wird es durch einen
+zweiten BS7,5, der keinerlei großen Kräfte
+aufnehmen muss, gesichert.
+
+
+Ein drehbares Kipp-Gelenk
+
+Zahnstangen
+
+Damit kann, z. B. wie in der Abb. 1 gezeigt,
+eine Strebe in einer Richtung (hier: auf
+Druck nach links) kraftschlüssig geschoben
+werden. Der linke BS7,5 mag versuchen,
+durchzurutschen, wird aber vom Abdeckplättchen daran gehindert, das sich nämlich
+an der Feder der nächsten (hier: rechten)
+
+
+An einer anderen Stelle im geplanten LKW
+wurde folgende Idee entwickelt: Abb. 3
+zeigt ein kompaktes Gelenk, das auch noch
+
+
+drehbar ist. Es besteht – von links nach
+rechts – aus folgenden Bauteilen:
+
+
+· Ein ankommendes Bauteil, hier ein
+Statikträger,
+· ein Lagerstück 1 (31771),
+· zwei Scheiben 4 16 (105195, die graue
+Fassung 31647 geht auch)
+· ein Lagerstück 2 (31772),
+· eine Kunststoffachse 15 grau (38226, die
+nicht stark klemmt, anders als der rote
+Seilklemmstift 107356) und schließlich
+· eine Klemmhülse 7,5 (35980), von der
+ab weitergebaut werden kann.
+
+Eingefahren wird sie durch Druck von
+außen.
+Der springende Punkt ist der Abstand
+zwischen den äußeren Streben. Eine IStrebe 15 ist nämlich etwas zu kurz, sodass
+die inneren Streben hoffnungslos eingeklemmt würden. Aber eine graue (36330)
+oder rote (31669) Statik-Gelenk-Lasche
+findet hier mal eine sinnvolle Anwendung:
+Die Abstände passen wie dafür gemacht.
+
+Um ein bereits zusammengestecktes Lagerstück wieder in die beiden Teile zu zerlegen, braucht man etwas Geschick, weil
+die Achse in der Mitte kräftig einrastet. Da
+helfen ein gelber fischertechnik-Schraubendreher, Geduld – und Vorsicht, dass man
+sich nicht dabei verletzt.
+Die beiden „Unterlegscheiben“ sind notwendig, damit die Klemmhülse beim
+Drehen nicht an der Drehachse des Lagerstücks anstößt.
+Das so gebildete Gelenk kann gut auf
+Druck, aber nicht auf Zug beansprucht
+werden. Anders ausgedrückt: Man kann es
+durch Ziehen leicht lösen (die beiden Lagerstück-Hälften trennen sich dabei voneinander) und ebenso leicht wieder zusammenstecken.
+
+Eine Teleskop-Stange aus
+Streben
+Teleskop-Stange. Um die Rollen kann ein
+Seil gelegt werden, um sie auszufahren.
+
+
+
+

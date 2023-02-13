@@ -1,0 +1,246 @@
+
+
+Tipps & Tricks
+
+Achteck-Variationen
+Ralf Geerken, Martin Westphal, René Trapp
+Es könnte so einfach sein, etwas Achteckiges mit fischertechnik-Teilen zu bauen. Es fehlt allerdings bislang an Winkelsteinen 45° oder Phantasie.
+Seit über 50 Jahren gibt es nun fischertechnik, und bis vor kurzem fehlte tatsächlich ein Winkelstein 45°. Jetzt gibt es Dank
+des 3D-Druckers und einer passenden Datei
+zwar die Möglichkeit, sich selbst zu helfen,
+aber so ein richtig echter Winkelstein 45°
+aus Waldachtaler Produktion ist das nicht.
+Am Rande der Maker Faire (Hannover
+2016) ergab es sich bereits, dass die Autoren in Ralfs Hobbykeller beisammensaßen.
+Martin berichtete von Problemen beim Bau
+seines Riesenrades [1]: Seine zweite
+Nabenkonstruktion (Abb. 1) basiert auf
+einer achteckigen Geometrie.
+
+recht gering. Kräfte parallel zur Drehachse
+verschieben die zahlreichen Winkelsteine
+gegeneinander, und nur vier der 16 Speichen sind mit dem Achslager (der Baustein
+15 mit Loch – BS15-L) fest verbunden.
+Auf Ralfs Arbeitstisch lag just an diesem
+Abend seine interessante achteckige Grundkonstruktion, bestehend aus je acht Winkelsteinen 60° (31010) und Winkelsteinen 15°
+(31981).
+
+
+Allerdings war es sein Ziel, ein 16-Eck zu
+bauen, um 16 Speichen für das Riesenrad zu
+bekommen. Wie man sieht, wird der Winkel
+von 90° zweimal halbiert. Aufgrund der
+vielen Verbindungsstellen ist die Stabilität
+
+Mit nur 15 mm Baubreite ist dieser Ring
+extrem schmal, und auch der Durchmesser
+ist minimal. Die Konstruktion bietet im
+Inneren nicht nur jede Menge Platz für
+Durchführungen aller Art; sie besitzt genau
+die richtige Öffnungsweite für einen BS15
+(z. B. 31005), BS30 (z. B. 31003) oder ein
+entsprechendes Aluprofil (z. B. 31220).
+
+
+
+Dabei gleitet der achteckige Ring sehr leicht
+und absolut klemmfrei auf dem verwendeten BS30, wobei ein Drehmoment
+jedoch formschlüssig übertragen wird!
+Wofür man das alles einsetzen könnte, sei
+der Phantasie des Lesers überlassen. Spontan kommt einem Autor die Anwendung an
+einem Fahrgeschäft-Modell in den Sinn.
+
+Tipps & Tricks
+
+Vergleich größer. Zusammengesetzt wird
+dieses Achteck aus zwei identischen
+klauenförmigen Hälften. Zentral wurde
+ursprünglich je Klauenhälfte ein BS15 mit
+rundem Zapfen (z. B. 31059) verwendet,
+nach außen sitzen je vier BS5 mit zwei
+Zapfen (37238) und BS5 (37237) aufeinander. In Abb. 4 ist allerdings eine Version
+mit BS15-L anstelle des BS15-2Z zu sehen.
+Es ergibt sich zunächst ein kreuzförmiges
+Kernstück. Zwei oder auch mehr dieser
+Kreuze werden mit den runden Zapfen in
+das nächste Kreuz eingeschoben und
+abwechselnd um etwa 45° gegeneinander
+verdreht; Augenmaß ist hier ausreichend.
+Winkelsteine werden nicht benötigt, BS30
+(z. B. 31003) schließen jede Klauenhälfte
+nach außen hin ab. Sie werden erst aufgeschoben, nachdem die Kreuze miteinander
+verbunden sind. Für einen zusätzlichen
+festen Halt werden die Klauenhälften mit
+Statiklaschen 15 (z. B. 36326) in den Nuten
+der BS30 zusammengesteckt.
+
+In Renés Schatzkiste findet sich ebenfalls
+ein Achteck. Seit 2014 ist es im Einsatz,
+allerdings nicht als Nabe eines Riesenrades,
+sondern für eine Stützkonstruktion mit acht
+Armen.
+
+
+
+Die Baubreite ist mit mindestens 30 mm
+allerdings doppelt so breit wie bei Ralfs
+Umsetzung. Auch der Durchmesser ist im
+
+Wie man in Abb. 5 sieht, geht das auch als
+hohler Ring. Die Stabilität gegen radial einwirkende Kräfte ist dann allerdings gering.
+Die Geometrie kann beliebig verlängert
+werden und bildet im Beispiel den Schaft
+eines Turmes.
+Beim Übergang auf eine Zwölfeckstruktur
+passen die unterschiedlichen Grundgeome-
+
+
+
+
+trien an vier Seiten durchaus maßhaltig aneinander. Abb. 6 zeigt Verbinder 45, die in
+vier der acht BS30 stecken. Das Zwölfeck
+liegt auf dem Achteck auf, die vier Verbinder 45 ragen in jeweils vier der 12 BS5 und
+halten so das Zwölfeck auf dem Sockel. Das
+ZwölfEck besteht aus jeweils sechs Stück
+WS60° und sechs Stück BS15 in der bekannten Ringkonstruktion. Zusätzlich sind
+auf den 12 Außenflächen noch BS5 angebracht.
+
+
+Ursprünglich für die Stützarme der Kugelbahn-Laufschienen erdacht, kann dieses
+Achteck auch mit einer Aufnahme für
+Metallachsen konstruiert werden. Zu diesem Zweck werden die BS15 mit rundem
+Zapfen durch BS15-L (z. B. 32064) ersetzt.
+Zwei BS5 mit zwei Zapfen sowie sechs BS5
+vervollständigen den Kern des Ensembles.
+Die Stabilität der Konstruktion ist sehr
+hoch, und so eignet sie sich auch als achteckige Nabe für schwere Objekte. Ungelöst
+ist hier bislang noch die Übertragung von –
+nicht allzu großen – Drehmomenten auf die
+Metallachse. Aber eines ist noch interessant: Anstelle der Statiklaschen würden tatsächlich 3D-Druck-Winkelsteine zwischen
+die BS30 passen und könnten die Statiklaschen ersetzen. Die Stabilität der Anordnung würde sich dadurch nochmals deutlich
+erhöhen.
+
+
+Spontan übernahm Martin eine der Ideen,
+um eine neue, stabilere Nabe für das Riesenrad zu konstruieren.
+
+
+Bei diesem Kranz (Abb. 8) bildet das Achteck aus BS30 den stabilen Kern und trägt
+direkt acht Speichen. Weitere acht Speichen
+sind allerdings wieder nur mit Winkelsteinen fixiert und biegen sich unter Last
+seitlich weg.
+
+Darüber noch nicht müde geworden, verabredeten die Autoren, zur Convention ihre
+Achtecke für einen gemeinsamen Fototermin mitzubringen. Im Trubel der Convention blieben die „Models“ dann anschließend unbeachtet auf dem Tisch liegen
+und es fanden sich andere kreative Köpfe,
+die mit den Strukturen etwas experimentierten. Eigentlich sollte wohl nur ein Turm
+aus den Achtecken entstehen, und beim
+Stapeln gerieten durch Zufall zwei
+Achtecke ineinander – nahezu exakt passend (Abb. 9). Die Bildqualität entspricht
+nicht dem Anspruch der ft:pedia, allerdings
+ist es das einzige existierende Foto, entstanden während der Convention 2016.
+
+
+Der äußere Ring (schwarz/rot, Ralf) gleitet
+axial auf dem inneren Ring (grau/rot, René)
+entlang. Die Achtecke können sich auch –
+leicht schleifend allerdings – ineinander
+drehen. Ersetzt man den BS15-L durch eine
+Schneckenmutter, ergibt sich schon die
+nächste Kaulquappe für etwas Ausfahrbares
+– dafür sind die beiden Konstruktionen
+natürlich in der Höhe deutlich zu verlängern. Mittels der Lücken in und zwischen
+den Ringen lassen sich sogar Seilzüge,
+Kabel oder Schläuche unterbringen.
+
+Tipps & Tricks
+
+Achteckiges zusammenzusetzen. Im Bilderpool finden sich weitere dokumentierte
+Ideen für achteckige Naben oder Konstruktionen [2, 3], zum Teil allerdings mit selbstgebauten Komponenten.
+Eigentlich könnte die Geschichte jetzt hier
+enden, aber Ralf erleidet eine heftig kreative Phase und (er)findet noch mehr achteckige Konstruktionen. Im Prinzip bestehen
+auch diese meist aus klauenförmig zusammengesteckten Hälften. Allerdings sind
+auch schmale Ringe dabei. Abb. 10 zeigt
+zunächst eine Version, bei der die Speichen
+an zwei Positionen miteinander verbunden
+sind.
+
+Achteck-Nabe
+
+Die folgende Variante bietet rasterkonforme Abmessungen auf den Armen. Diese
+Version (Abb. 11) besteht aus zwei identischen Viereck-Hälften und hält einfach
+dadurch zusammen, dass beide zusammengesteckt werden.
+
+Nun sind dies nicht die ersten und einzigen
+Versuche, aus fischertechnik-Teilen etwas
+
+
+
+Die Idee mit den Klauenhälften scheint
+Potenzial zu haben. Abb. 13 enthüllt ein
+Schaufelrad mit, wer hätte es gedacht, acht
+Schaufeln.
+Hier sind die Klauen nicht ganz identisch,
+auch wenn sie jeweils die gleichen Teile
+verwenden. Bei einer Hälfte müssen die
+Schaufeln andersherum montiert werden.
+
+
+
+Mit Speichenrädern, BS15 und Achsen
+gelingt auch die sehr ungewöhnliche Konstruktion in Abb. 15. Naheliegend ist es, die
+Speichenräder zu verwenden, da jedes acht
+Speichen besitzt. Werden sie entsprechend
+gegeneinander verdreht, ergibt sich eine Art
+16-eckiger Grundriss. Besondere Beachtung verdient die Anordnung der Achsen,
+die jeweils knapp 11 mm Abstand zueinander haben.
+
+
+
+zum 16-Eck
+
+Die beiden Hälften werden hier durch die
+Kunststoffachsen miteinander verbunden.
+Diese Anordnung kann daher auch auseinandergezogen werden, um weitere Elemente im Zwischenraum unterzubringen.
+
+Tipps & Tricks
+
+Dieses Achteck sieht nicht nur elegant aus,
+die beiden Hälften sind durch die VSchaufelhalter (so heißen diese 45°-Winkel
+offiziell) fest miteinander verbunden. Allerdings wird es wegen der verkippten BS15
+nicht ganz einfach, dieses Achteck als Nabe
+mit Speichen zu verwenden. Ein prima
+Grundstock für ein großes Schaufelrad ist es
+aber allemal.
+Erwähnenswert ist schließlich das auf Rollenböcken beruhende Achteck aus Haralds
+„Kaulquappen“ in der ft:pedia 2/2011 [4].
+Fortsetzung folgt…
+
+Quellen
+[1]
+
+Westphal, Martin: Riesenrad 2015
+im ftc Bilderpool.
+
+[2]
+
+Baumgart, Kai: Kastanienmühle im
+ftc Bilderpool.
+
+
+[3]
+
+Weihnachtlich mutet die Konstruktion an,
+mit der dieser Artikel seinen Abschluss
+finden soll (Abb. 16):
+
+Brickwedde, Wilhelm: Riesenrad im
+ftc Bilderpool.
+
+[4]
+
+Steinhaus, Harald: Kaulquappen
+(Teil 2). ft:pedia 2/2011, S. 9-13.
+
+
+

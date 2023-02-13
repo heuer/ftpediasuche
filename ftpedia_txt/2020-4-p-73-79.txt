@@ -1,0 +1,467 @@
+
+Elektronik
+
+Elektronik
+
+Rollende Steine – die ftcSoundBar
+Christian Bergschneider, Stefan Fuss, Oliver Schmiel
+„Der Takt setzte sich fort, sprang von Bewusstsein zu Bewusstsein, schnippte mit den Fingern
+und kräuselte die Lippen. Lebendige Musik. Sich wild und ungehemmt entfaltende Musik mit
+Steinen drin… Endlich frei! Die Klänge rasten von Kopf zu Kopf, drangen durch die Ohren ein
+und setzten ihren Weg zum Rautenhirn fort.“ [1]
+In Terry Pratchetts Klassiker „Rollende
+Steine“ ist Musik der Antrieb der ganzen
+Scheibenwelt und Auslöser des Urknalls.
+Selbst der Tod legt Wert auf gute, wilde
+Musik. Er würde sich deshalb vehement
+dagegen wehren, den im TXT verbauten
+Piezo-Beeper mit dem Begriff „SoundWiedergabe“ in Verbindung zu bringen.
+Auch in der fischertechnik-Community
+wird immer wieder diskutiert, die vorgegebenen Sounds in ROBOPro zu pimpen.
+Doch ein Beeper bleibt ein Beeper und kann
+nur Geräusche.
+
+Die ftcSoundBar
+Das ftcSoundBar-Projekt setzt deshalb auf
+eine externe Soundkarte mit echten Boxen
+und erreicht so ungeahnte Klangwelten
+(Abb. 1).
+
+entdeckt. Sie sind leistungsfähiger als die
+Atmel-Prozessoren auf den ArduinoBoards und glänzen zusätzlich mit Dual
+Core Bluetooth und integriertem Wifi. Da
+der Prozessor „alles drin“ hat, wird er gerne
+für SmartHome- und IoT-Anwendungen
+verwendet.
+Der Hersteller espressif hat verschiedene
+Development Boards aufgelegt, u. a. eine
+Serie von Audioboards inklusive eines umfangreichen Frameworks. Die Hardware der
+ftcSoundBar ist ein solches Development
+Board – das LyraT (Abb. 2). Es enthält
+bereits alle Bauteile für eine gute Soundkarte. Für den kristallklaren Sound ist ein
+eigener Audio Codec zuständig; der Prozessor muss nur schnell genug den Stream
+liefern.
+
+LyraT-Hardware [2]
+beiden Boxentypen
+
+Wie der Thread im Forum um den ft-Swarm
+zeigt, haben bereits einige Mitglieder der
+Community die ESP32-Prozessoren für sich
+
+Der Audio Codec kann auch als Eingang
+genutzt werden. Eine Spracheingabe ist mit
+dem Board technisch möglich, aber bisher
+nicht implementiert. Mit einem 3D-ge-
+
+
+
+
+druckten Gehäuse und Boxen mit fischertechnik-Nuten wird aus dem LyraT die
+ftcSoundBar.
+Die Boxen gibt es in zwei Ausführungen
+(Abb. 3): Die linke Variante ist nur einen
+Baustein tief, die rechte Variante hat durch
+das größere Gehäuse und einen anderen
+Speaker einen Tick bessere Bässe.
+
+für die ftcSoundBar
+
+Eine SD-Karte speichert die Sounddateien.
+Sie können entweder über den auf der
+ftcSoundBar integrierten Webserver via
+Browser oder direkt mit ROBOPro-Kommandos abgespielt werden. Für die Fans der
+cfw gibt es eine Python Library. Unterstützt
+werden die gängigen Audioformate wie
+z. B. mp3, ogg und wav.
+Spannungsversorgung
+Am einfachsten wird die ftcSoundBar über
+ein USB-Netzteil versorgt. Aufgrund des
+hohen Strombedarfs für die 2 x 3W Endstufe sollte mindestens ein 15 W-Netzteil
+verwendet werden. Alternativ kann ein
+flacher 3,7 V-LiPo-Akku mit zweipoligem
+Stecker im Gehäuse untergebracht werden.
+Eine Ladeelektronik ist auf dem Board
+vorhanden. Für akzeptable Laufzeiten wird
+
+
+Auch moderne Fertigungsanlagen verzichten
+immer mehr auf komplexe Datenbusse und nutzen kabellose Übertragungsprotokolle. An bewegten Elementen entfällt die „Schleifringübertragung“ der Steuersignale; es muss nur
+noch die Spannungsversorgung sichergestellt
+werden. Wifi oder der neue Mobilfunkstandard
+5G ersetzen die Steuerleitung. Die Wifi-Übertragung aus der fertigenden Industrie ist natürlich
+
+ein Akku mit mindestens 500 mAh benötigt.
+Anschluss
+Die ftcSoundBar wird über Wifi angesprochen. Sie muss dafür ins heimische WLAN
+integriert werden. Der Standalone-Betrieb
+am TXT im AP-Modus ist auch möglich,
+sodass auf Conventions und Ausstellungen
+keine weitere Hardware benötigt wird.
+Außerdem kann die ftcSoundBar ohne
+Kabelsalat an einer beliebigen Stelle im
+Modell eingebaut werden.2
+Ursprünglich sollte die ftcSoundBar über
+den I2C-Bus an den TXT angeschlossen
+werden. Die vorbereitete Schnittstelle – ein
+10-poliger Stecker – ist am Gehäuse auch
+schon vorgesehen. Leider verhindert ein
+Bug im espressif-Framework bislang den
+Betrieb als I2C-Slave. Beim TXT ersetzt die
+Wifi-Integration die I2C-Schnittstelle; TX
+und ftDuino können leider noch nicht mit
+der ftcSoundBar kommunizieren.
+Integrierter Webserver
+Der Zugriff auf den integrierten Webserver
+ist einfach: Im Browser http://ftcSoundBar
+aufrufen.
+Die Webseite zeigt die erkannten Musiktitel
+bzw. Tracks (Abb. 4). Die Tracks werden
+durch Anklicken abgespielt; über die Icons
+können verschiedene Funktionen wie z. B.
+die Lautstärkeregelung ausgewählt werden.
+Mit dem Button „Einstellungen“ gelangt
+man auf die Setup-Seite (Abb. 5). Hier
+können die Wifi-Parameter eingestellt werden. Für ein Firmwareupdate wird die Datei
+ftcSoundBar.bin von github auf die SD-
+
+auch bei großen fischertechnik-Modellen eine
+gute Möglichkeit, Komplexität und damit auch
+Fehleranfälligkeit zu reduzieren. Man baut nur
+noch einzelne Module mit einer kleinen, autarken
+Steuereinheit und lässt diese untereinander per
+Wifi kommunizieren. Et voilà: Die Idee des
+ftSwarm ist geboren.
+
+Karte geladen. Über den Knopf „update
+firmware“ speichert man die neue Firmware
+im Flash-Speicher der ftcSoundBar.
+
+Elektronik
+
+basiert auf dem HTTP-Protokoll und
+tauscht Daten nicht in HTML, sondern
+stattdessen in Textform zwischen Sender
+und Empfänger aus.3
+Das HTTP-Protokoll ist mehr als die reine
+HTML-Syntax: Bei einer Anfrage an einen
+Server gibt das Protokoll auch eine
+Verarbeitungsmethode mit. Dabei bedeutet
+GET das Abrufen von Informationen. So
+beantwortet beispielsweise der Webserver
+www.ftcommunity.de eine GET-Anfrage
+an die URL „/ftpedia“ mit dem HTML-Text
+der ftpedia-Webseite.
+
+
+Mit PUT werden Daten gesendet, z. B. nach
+dem Ausfüllen eines Formulars im Browser. Dabei werden die Daten aus dem
+Formular als Parameter an den Webserver
+übertragen.
+Die Abfrage der aktuellen Lautstärke an der
+ftcSoundBar ist daher nur eine HTTP-GETAnfrage. Der TXT sendet an den Server
+ftcSoundBar die Anfrage
+GET /api/v1/volume
+
+und erhält als Antwort die aktuelle Lautstärke:4
+{ “volume“: 50 }
+
+Verwendet man anstelle des GETs ein PUT
+und gibt den Parameter
+{ “volume“: 70 }
+
+mit, so setzt man umgekehrt die Lautstärke
+auf den Wert 70.
+
+REST-API
+
+Auch die Funktionen der ftcSoundBarWebseite lösen wieder nur REST-APIAufrufe an sich selbst aus.
+
+Der TXT steuert die ftcSoundBar über Wifi
+und eine REST-API. Das REST-Protokoll
+
+Das REST-API-Protokoll steckt heute hinter
+jeder modernen Webseite in Angular oder React
+und ist Basis für alle Smartphone-Apps. Als
+Steuerprotokoll ist es – wie bei der ftcSoundBar
+– eine gute Wahl, wenn sich immer nur zwei
+Systeme in einem Master-Slave-Betrieb austauschen. In einer komplexen Umgebung wird
+normalerweise das MQTT-Protokoll als virtueller Datenbus verwendet. Wir haben MQTT nicht
+
+eingesetzt, da damit auch die technischen Randbedingungen komplexer werden.
+
+Die Daten werden im JSON-Format ausgetauscht. Damit lassen sich sehr komplexe Datenstrukturen aufbauen. Durch die Repräsentation in
+Textform ist JSON unabhängig von Programmiersprache oder Betriebssystem.
+
+
+
+
+Nachbau der ftcSoundBar
+Für den Nachbau werden nur einfache
+Lötkenntnisse und 3D-gedruckte Gehäuseteile benötigt. Wer dies nicht selbst machen
+möchte, kann das fertige Gerät bei Björn im
+Webshop bestellen [5]. Für die Maker folgt
+nun die Beschreibung des Nachbaus des
+Gerätes. Wer ein fertiges Gerät nutzt, liest
+einfach ab dem Abschnitt „Wifi konfigurieren“ weiter.
+Material
+Die Platine wird als „esp32 LyraT“ [2] im
+Internet über verschiedene Shops angeboten. Achtung: Das LyraT mini hat eine
+andere Form, sodass das Gehäuse nicht
+passt. Außerdem verfügt das Mini nur über
+einen Monoausgang.
+Den silbernen Speaker gibt es bei Digi-Key
+[6], der Schwarze ist von gikfun (und z. B.
+bei Amazon erhältlich) [7]. Es kann grundsätzlich auch jeder andere 4-Ohm-Lautsprecher verwendet werden; die 3D-Druckdateien für die Boxen müssen dann gegebenenfalls angepasst werden.
+
+Befestigung der Bundhülsen und des 10poligen Steckers
+
+Am 10-poligen I2C-Stecker werden die Pins
+1, 5 und 6 mit einem Stück Flachbandkabel
+belegt. Das Löten ist einfacher, wenn zunächst eine 10-polige Buchse auf den
+Stecker gesteckt wird. Auf der Unterseite
+des I2C-Steckers (Position 2 in Abb. 7)
+werden die Kabel angeschlossen (Abb. 8).
+
+Darüber hinaus werden noch acht Bundhülsen, ein 10-poliger Wannenstecker und 14
+Blechschrauben der Größe 2,2 x 4,5 mm
+benötigt.
+Zusammenbau der SoundBar
+Als erstes werden die STL-Dateien für das
+Gehäuse und die Boxen bei thingiverse [4]
+heruntergeladen und gedruckt.
+Die vier Bundhülsen für das Gehäuse der
+ftcSoundBar werden dann an kurze Kabel
+gelötet. Der Kabelquerschnitt ist bei 3WSpeakern fast egal; normale fischertechnikKabel sind sehr gut geeignet.
+Die beiden zweipoligen Lautsprecherstecker auf dem LyraT-Board (Position 1 in
+Lautsprecherkabel von unten eingelötet.
+
+
+
+Die Stecker werden in die Auflagen des
+Gehäuses gesteckt und mit Repair- oder
+Sekundenkleber befestigt (Abb. 7).
+Zusammenbau der Boxen
+Beim Zusammenbau der Boxen werden die
+Bundhülsen zunächst in das Halteplättchen
+gesteckt und die Kabel an Bundhülsen
+angelötet. Dabei ist darauf zu achten, dass
+der lange Teil der Bundhülse durch das
+Halteblättchen gesteckt wird.
+
+
+Elektronik
+
+> git clone
+https://github.com/elektrofuzzis/
+ftcSoundBar.git
+> esp-idf/export.bat
+> cd ftcSoundBar/firmware
+> idf.py build
+
+geklont und kompiliert.
+
+Gehäusedeckel der Box
+
+Anschließend werden die Bundhülsen auf
+den Gehäusedeckel gesteckt und verschraubt (Abb. 9). Das andere Ende des
+Kabels wird nun an den Lautsprecher
+gelötet. Die schwarzen Lautsprecher werden mit Hilfe von zwei Haltblättchen an der
+Box fixiert, der silberne Lautsprecher wird
+nur geklemmt. Gehäusedeckel verschrauben und fertig ist die Box.
+
+Die ftcSoundBar wird nun mit den beiden
+USB-Anschlüssen an den PC (UART) und
+am Netzteil (POWER) angeschlossen.
+Dann kann man den Power Switch auf der
+Platine einschalten und im Gerätemanager
+die emulierte serielle Schnittstelle bestimmen.
+Der Befehl
+> idf.py -p <COM-Port> flash
+
+flasht die Firmware. Über den RESETButton wird die ftcSoundBar gebootet.
+Wenn nun die grüne LED am Prozessor
+blinkt, war das Flashen erfolgreich.
+
+Inbetriebnahme
+
+Wifi konfigurieren
+
+Firmware aufspielen
+
+Um die ftcSoundBar zum ersten Mal ins
+Wifi-Netz zu bekommen, muss auf der SDKarte die Konfigurationsdatei bearbeitet
+werden:
+
+Um die Firmware selbst zu kompilieren und
+zu flashen sind einige Schritte nötig. Wer
+bereits ein geflashtes Gerät besitzt, kann die
+fertige Software als Release in [3] herunterladen und wie oben beschrieben über die
+SD-Karte flashen.
+Die beiden espressif-Frameworks lassen
+sich am einfachsten über git installieren:5
+> git clone -b v4.1
+https://github.com/espressif/espidf.git
+> cd esp-idf
+> install.bat
+> git clone
+https://github.com/espressif/espadf.git
+
+In der Datei esp-isf/export.bat muss anschließend noch die Variable ADF_PATH
+mit dem Pfad auf das esp32-adf-Framework
+gesetzt werden. Die Firmware wird mit
+
+
+Das esp-adf-Framework ist nur zu bestimmten
+esp-idf-Versionen kompatibel. Deshalb muss
+beim Klonen des esp-idf-Frameworks darauf
+
+ftcSoundBar.conf
+
+Dazu wird die SD-Karte mit fat32 formatiert, in die ftcSoundBar gesteckt und diese
+mit dem RESET-Button neu gestartet. Der
+Neustart erzeugt eine Beispieldatei, so dass
+diese nun am PC bearbeitet werden kann.
+In der Datei müssen nur die Parameter
+WIFI_SSID und WIFI_PASSWORD gesetzt werden; die restlichen Parameter
+werden nicht verändert. Nun erneut die
+ftcSoundBar booten. Ist die grüne LED
+dauerhaft an, kann die ftcSoundBar über
+Wifi erreicht werden: http://ftcSoundBar.
+Zur Fehlersuche kann man die Konsole der
+ftcSoundBar einsehen mit
+> idf.py -p <COM-Port> monitor
+
+geachtet werden, dass die zum adf-Framework
+passende Version verwendet wird.
+
+
+
+
+Nutzung in ROBOPro
+REST-APIs werden von ROBOPro nicht
+direkt unterstützt. Eine C-Library auf dem
+TXT stellt daher die notwendige Funktionalität zur Verfügung. Die Befehle in der
+ROBOPro-Bibliothek sind nur „Fassade“ –
+sie rufen die Kommandos der Library auf.
+Hochladen der ROBOPro-Library
+Zur Programmierung unter ROBOPro muss
+dafür die Library libftcSoundBar.so über
+den Webserver des TXT in das Verzeichnis
+„libs“ geladen werden. Dazu muss der TXT
+in den Einstellungen als Wifi-Client konfiguriert werden. Anschließend wird die IPAdresse des TXT im Browser eingegeben.6
+
+„eigene Bibliotheken/ftcSoundBar“ zugegriffen werden.
+Steuerung der ftcSoundBar
+Das Beispielprogramm in Abb. 6 spielt
+zunächst zehn Sekunden lang Track 1, danach wird für zehn Sekunden Track 5 abgespielt. Zum Schluss wird der Shuffle-Mode
+gesetzt, d. h. die ftcSoundBar spielt nun die
+Tracks in zufälliger Reihenfolge.
+Auch wenn das ROBOPro-Programm an
+dieser Stelle endet, bleibt die ftcSoundBar
+als eigenständiges Device im Shufflemodus
+und spielt weiterhin Tracks ab.
+
+Der TXT verlangt nun nach einer Anmeldung. Der Benutzername ist „TXT“, das
+Passwort die vierstellige Seriennummer des
+TXT. Nach dem Wechsel in das
+Verzeichnis „libs“ kann mit dem +-Icon die
+libftcSoundBar.so-Library
+hochgeladen
+werden.
+Wird zum ersten Mal eine .so-Library
+hochgeladen, fehlen die Schreibrechte für
+dieses Verzeichnis. In diesem Fall muss
+man sich über ein SSH-Terminal (wie z. B.
+putty) mit dem TXT verbinden.7 Das Kommando
+chmod 744 /opt/knobloch/libs
+
+setzt die richtigen Rechte; anschließend
+lässt sich die Library hochladen.
+Die eigentliche ROBOPro-Bibliothek wird
+im eigenen Bibliotheksverzeichnis gespeichert.8 Auf die Programmelemente kann
+nun unter „Elementegruppen“ im Bereich
+
+
+Im Menü „Einstellungen“, „Netzwerk“,
+„WLAN“ wählen; die benötigte IP-Adresse steht
+im Bereich WLAN/Client.
+
+
+Username ROBOPro, Passwort ROBOPro.
+
+
+Das Bibliotheksverzeichnis kann in ROBOPro
+im Menu unter „Datei/Eigenes Bibliotheksverzeichnis“ eingestellt werden.
+
+
+
+Wie auch bei der Nutzung des I2C-Interfaces in ROBOPro tritt bei der Verwendung
+von externen Libraries der „Fünf-Sekunden-Bug“ auf. Liegen zwischen der Ausführung von zwei Library-Aufrufen fünf
+Sekunden oder mehr, so wird der zweite
+Aufruf von ROBOPro nicht durchgeführt.9
+
+
+In der ROBOPro-Bibliothek ftcSoundBar.rpp
+gibt es eine Funktion, die alle vier Sekunden die
+Library im Hintergrund nutzt und so den Bug
+umgeht.
+
+
+Elektronik
+
+Schlussbemerkung
+
+Quellen
+
+Das Wifi-Passwort wird auf der SD-Karte
+im Klartext gespeichert. Die Webseite der
+ftcSoundBar und die Ansteuerung via Wifi
+erfolgen unverschlüsselt und ohne Autorisierung über das HTTP-Protokoll. Im
+öffentlichen Internet wäre dies ein No-Go.
+Auf höhere Sicherheitsstandards wurde
+aber bewusst verzichtet. Die Firmware, der
+Aufbau und die Inbetriebnahme der
+ftcSoundBar werden so massiv vereinfacht.
+
+[1]
+
+Terry Pratchett: Rollende Steine.
+Goldmann Verlag, 1996
+
+[2]
+
+espressif: Dokumentation des LyraT
+Development Boards.
+
+[3]
+
+Christian Bergschneider, Stefan
+Fuss, Oliver Schmiel: ftcSoundBarProjekt. github.com
+
+[4]
+
+Christian Bergschneider, Stefan
+Fuss, Oliver Schmiel: ftcSoundBar &
+loudspeaker boxes. thingiverse.com
+
+[5]
+
+Webshop von Björn Gundermann
+
+[6]
+
+Silberner Lautsprecher von Digi-Key
+
+[7]
+
+Schwarzer Lautsprecher bei Amazon
+
+Da die ftcSoundBar nur im eigenen WifiNetzwerk betrieben wird, besteht kein Risiko, dass das Wifi-Passwort unerwünscht in
+den Händen Dritter landet. Somit ist die
+ftcSoundBar in diesem Umfeld hinreichend
+sicher.
+
+
+
+

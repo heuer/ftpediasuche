@@ -1,0 +1,194 @@
+
+
+Sensoren
+
+Anwendungen für Magneten (1):
+Induktionssensor
+Andreas Gail
+Unter der Überschrift „Anwendung von Magneten“ sind zukünftig verschiedene Beiträge
+geplant. Gerne dürfen sich an dieser Themenreihe auch andere Autoren beteiligen. Heute soll
+als Einstieg ein berührungsloser elektromagnetischer Näherungsschalter gezeigt werden.
+
+Berührungslose
+Näherungsschalter
+In der fischertechnik-Welt werden solche
+Aufgaben normalerweise in Form von
+Lichtschranken oder mithilfe von Reedkontakten aufgebaut.
+Erstaunlicherweise hatte es offenbar sogar
+von fischertechnik selbst einen Initiator
+gegeben, der die Näherung metallischer
+Gegenstände detektieren konnte. Initiatoren
+werden in der Technik häufig eingesetzt.
+Zugegeben, die hier gezeigte Lösungsmöglichkeit unter Anwendung von zwei
+Elektromagneten ist aufwändig und auch
+nicht besser als die oben genannten
+üblichen Verfahren. Es soll jedoch gezeigt
+werden, dass es noch weitere Möglichkeiten
+gibt, die sich mit fischertechnik-Standardteilen aufbauen lassen. Zum Beleg der
+Praxistauglichkeit wurde ein automatisiertes Schienenfahrzeug aufgebaut.
+
+
+Prinzipieller Aufbau
+Im Grunde soll nur der Unterschied der
+Positionierung der beiden Elektromagnete
+automatisch erkannt werden können, wie in
+muss der eine Elektromagnet mit einer
+Wechselspannung angeregt werden, damit
+im anderen eine Spannung induziert wird,
+die dann detektiert werden kann.
+
+
+Induktionssensor-Messstrecke
+
+
+Sensoren
+
+Zur Erzeugung der Wechselspannung und
+auch zur messtechnischen Auswertung wird
+ein ROBO TX Controller (RTXC) verwendet. Den Gesamtaufbau zeigt Abb. 2.
+
+an dieser Stelle deutlich kleinere Einstellungen vorgenommen werden. Bei der
+Einstellung Glättung=1 ist Beruhigungsfunktionalität im Grunde abgeschaltet.
+
+Software für Induktionssensor
+
+Erwähnt sein soll weiterhin, dass die Eingangsart I1 auf A 10V eingestellt wurde,
+also auf analoge Spannungsmessung mit
+einem maximalen Messwert von 10 V.
+
+Die Software besteht aus zwei getrennten
+Prozessen, die unabhängig voneinander
+laufen.
+Programmteil 1: Erzeugung von
+Wechselspannung
+Nachfolgend wird gezeigt, wie die
+Wechselspannung erzeugt wird. Alle 0,1 s
+findet eine Umpolung des Motorenausgangs M1 statt. Eine Periode dieser
+Wechselspannung dauert somit etwa 0,2 s,
+d. h. als Frequenz der Wechselspannung
+sind somit etwa 5 Hz (Hertz) zu erwarten.
+
+
+Programmteil 2: Messtechnische
+Auswertung
+Die Auswertung des InduktionssensorSignals gemäß Programmablauf in Abb. 4
+sieht auf den ersten Blick komplizierter aus
+als nötig. Diese Programmierung erlaubt
+jedoch eine Beruhigung des Signals
+(Glättung) je nach Anwendungsfall. So ist
+es möglich, wie in Abb. 5 gezeigt ein
+stabiles Messergebnis anzuzeigen. Ohne
+Beruhigung wurde im gezeigten Aufbau
+trotz fehlender Eingriffe ein unstetes Signal
+beobachtet. Die Einstellung der Beruhigungsintensität kann im Programm beim
+Tuning Parameter Glättung vorgenommen
+werden. Bei der obigen Einstellung
+Glättung=10000 kommt es zu einem sehr
+stabilen Signal, mit ca. 1s Ansprechverzögerung. Bei schnellen Vorgängen müssen
+
+Induktionssensor-Signals
+
+
+Alternative Wechselspannung
+Heutzutage leider bei fischertechnik nicht
+mehr im Lieferprogramm, aber ggf. doch
+noch an manchen Stellen vorhanden ist der
+gute alte Transformator, der auch einen
+Wechselspannungsausgang hat. Auf diese
+Weise lässt sich die Detektionsempfindlichkeit des Systems wesentlich verbessern, wie
+in Abb. 6 gezeigt. Die oben erwähnte
+Signalberuhigung ist dabei nicht mehr
+erforderlich und kann parametrisch
+
+
+
+
+abgeschaltet oder ganz aus dem Programm
+entfernt werden.
+
+Initiator mit Rückschlussplatte
+Wechselspannungsquelle
+
+Software für den Initiator
+
+Initiatoren
+Der oben genannte Initiator, den es vormals
+von fischertechnik gab, lässt sich mit Bordmitteln nachbauen. Hierzu wird der
+Versuchsaufbau gemäß Abb. 6 verwendet.
+Die Anordnung der Elektromagnete ist
+jedoch gemäß Abb. 7 und 8 zu ändern.
+
+Initiator. Rechts wird das Metall der
+Rückschlussplatte erkannt.
+
+
+(Änderungen im Vergleich zu Abb. 4 markiert)
+
+Die Software für den Initiator ist sehr
+ähnlich zu der, die oben für den Induktionssensor eingesetzt wurde. Die Änderungen
+wurden in Abb. 9 rot markiert. Gemessen
+wird hierbei eine Induktion, die vom
+Wechselstrom beaufschlagten Elektromagneten auf den anderen Magneten einwirkt.
+Die Wirkung der Induktion wird durch die
+Annäherung der runden Rückschlussplatte
+
+verändert. Diese Veränderung kann am
+Eingang I1 am RTXC erkannt werden.
+
+Nachteile des Verfahren
+Es soll nicht verschwiegen werden, dass das
+Verfahren hinsichtlich des Einsatzes an
+fischertechnik-Modellen eine Reihe von
+Nachteile hat. Diese sind:
+a) Der mit Wechselspannung beaufschlagte
+Elektromagnet wird nach einiger Zeit
+heiß und sollte aus diesen Gründen nicht
+zu lange ununterbrochen in Betrieb sein.
+b) Es muss ein relativ hoher Gesamtaufwand betrieben werden.
+c) Bei Verwendung des RTXC als
+Wechselspannungsgenerator gibt es
+gewisse Detektionsunsicherheiten.
+
+Sensoren
+
+gezeigten Induktionssensoren (Abb. 6)
+detektiert. Es werden 2 RTXC verwendet:
+Einer an der Strecke, der andere auf dem
+Zug. Die Kommunikation der beiden RTXC
+erfolgt über Bluetooth. Die Wechselstrombeaufschlagung der Elektromagnete an der
+Strecke erfolgt über Relais nur bedarfsorientiert, wenn der Zug am zugehörigen
+Endpunkt erwartet wird. Eine gelbe oder
+blaue Lampe zeigt an, wenn ein Elektromagnet aktiviert ist. Ansonsten sind diese
+Elektromagnete abgeschaltet. Bei einem
+Endpunkt angekommen, wartet der Zug
+20 s, dann erfolgt ein Warnsignal und
+schließlich fährt der Zug ab zum anderen
+Endpunkt. Solange eine grüne Lampe
+blinkt, ist der automatische Fahrbetrieb
+aktiv.
+
+Nutzung zur Modellsteuerung
+Das alles klappt tatsächlich auch in der
+praktischen Anwendung.
+
+Endpunkt
+
+Referenzen
+der Induktionssensoren
+
+Es wurde ein automatischer Zug auf gerader
+Strecke gebaut, der zwischen zwei Endpunkten hin- und herfährt (gelber und
+blauer Bahnhof). Die jeweiligen Endpositionen werden gemäß der oben
+
+[1]
+
+fischertechnik: Initiator.
+
+[2]
+
+Gail, Andreas: Vollautomatischer
+Bahnbetrieb mit Elektromagneten.
+yotube.com
+
+
+

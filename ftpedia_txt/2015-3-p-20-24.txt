@@ -1,0 +1,270 @@
+
+
+Elektromechanik
+
+Selbstenttwistung
+Thomas Püttmann
+Sich drehende Lampen, Motoren oder Elektromagneten verbindet man durch einen Schleifring
+mit einer Spannungsquelle. Es klingt zunächst unglaublich, aber man kann auf dieses Bauteil
+verzichten und ein durchgehendes Kabel benutzen. Wie das funktioniert, erklären wir in diesem
+Beitrag und erläutern Vor- und Nachteile dieser Lösung.
+
+Drehende Lampen und Kerzen
+Verkabelt man eine sich drehende Lampe
+mit einer stationären Spannungsquelle, so
+verdrillt sich das Kabel. Zunächst verdrillen
+sich die Adern miteinander, dann in zweiter
+Stufe der verdrillte Strang mit sich selbst.
+Im Dauerbetrieb kommt es zwangsweise zu
+einem Schaden.
+
+Dass so etwas möglich ist, demonstrieren
+asiatische Kerzentänzerinnen schon seit
+vielen Jahrhunderten: Auf der geöffneten
+Handfläche steht eine brennende Kerze. Die
+Aufgabe ist, nur durch Bewegen des Arms
+die Kerze auf der Handfläche im gleichen
+Drehsinn immer weiter zu drehen. Natürlich
+soll die Flamme dabei die ganze Zeit nach
+oben zeigen.
+Die Kerze entspricht der zu drehenden
+Lampe (auch wenn ihr Schein ungerichtet
+ist), der Arm entspricht dem Kabel zur
+stationären Stromquelle. Statt einer Kerze
+kann man natürlich auch eine Tasse oder ein
+Glas benutzen.
+Auf der fischertechnik-Geburtstagsfeier in
+Tumlingen im Juli dieses Jahres machte ich
+den Praxistest: Von 37 Probanden gaben 32
+zum Teil ratlos nach der ersten Drehung auf
+und nur fünf schafften es, die Tasse
+kontinuierlich zu drehen – darunter drei
+Kinder.
+
+
+Um das Verdrillen zu vermeiden, werden
+Schleifringe eingesetzt. Weitgehend unbekannt ist, dass man sich drehende Lampen,
+Motoren oder Elektromagneten auch mit
+einem durchgehenden Kabel mit einer
+stationären Spannungsquelle verbinden
+kann.
+
+Jeder Leser kann sich herausgefordert
+fühlen, dieses Experiment selbst durchzuführen. Die Auflösung wird in einem Video
+auf dem YouTube-Kanal math-meetsmachines zu sehen sein. Hat man den Bogen
+erst einmal heraus, so macht es natürlich
+großen Spaß, seine Bekannten an dieser
+Aufgabe scheitern zu lassen.
+
+
+Elektromechanik
+
+Ein einfaches Modell
+Um unser Ausgangsproblem einer sich
+drehenden Lampe zu lösen, könnte man
+jetzt einen Roboterarm nehmen, ihm die
+Lampe in die Hand geben, sie mit einem am
+Arm entlang geführten Kabel mit einer
+stationären Spannungsquelle verbinden und
+die Bewegung der Kerzentänzerinnen
+programmieren – aber diesen Overkill
+wollen wir natürlich nicht betreiben.
+Stattdessen geben wir eine Lösung an, an
+der das Funktionsprinzip sichtbar wird.
+Dazu betrachten wir zunächst einmal das
+einfache Modell aus den Abbildungen 2 und
+3. Die Bausteine 7,5 sind in diesem Modell
+mit Klemmstiften an den Zahnrädern
+befestigt.
+
+
+Statt am Steg unten halten wir das Modell
+jetzt an der längeren Metallachse fest und
+drehen den Steg. Am eigentlichen Vorgang
+hat sich nichts geändert. Ein Beobachter,
+der sich mit dem Steg dreht, sieht, wie sich
+die beiden Zahnräder gegensinnig drehen
+und wie die beiden Adern abwechselnd eine
+unter der anderen durchgezogen werden. Es
+findet also mit Sicherheit keine Vertwistung
+statt.
+Von außen dagegen sieht man, wie das
+Zahnrad mit der längeren Metallachse ruht
+und wie sich das Zahnrad mit der Lampe
+mit der doppelten Geschwindigkeit des
+Stegs dreht.
+
+
+Hält man den Steg unten fest und dreht an
+der längeren Metallachse, so drehen sich die
+beiden Zahnräder gegensinnig. Dabei wird
+abwechselnd der rote Draht unter dem
+blauen durchgezogen und dann der blaue
+Draht unter dem roten. Die Adern verdrillen
+sich also nicht miteinander. Jede Ader für
+sich vertwistet sich auch nicht. Da die
+Adern einen 180°-Bogen machen, werden
+sie über ihre gesamte Länge gleichmäßig in
+eine Richtung gedreht, obwohl uns die
+Drehung der Enden gegensinnig erscheint.
+
+Die entscheidende Idee liegt jetzt natürlich
+auf der Hand: Ist die längere Metallachse
+eine Hohlachse, so können wir das Kabel
+einfach dort hindurch zur stationären
+Spannungsquelle führen. Ein passendes
+Messingrohr mit 4 mm Durchmesser ist in
+jedem Baumarkt erhältlich. Damit haben
+wir eine sich drehende, fest verkabelte,
+leuchtende Lampe!
+Bis jetzt dreht sich die Lampe allerdings
+exzentrisch – das Drehzentrum der Lampe
+dreht sich selbst. Für Kirmesmodelle muss
+das kein Nachteil sein, für die meisten
+Anwendungen wird man aber konzentrische
+Drehungen bevorzugen.
+
+
+
+Konzentrische Drehungen
+Um die Lampe direkt über der Hohlachse
+anbringen zu können, muss sich dort ein
+Zahnrad mit der doppelten Geschwindigkeit
+des Stegs drehen. Abbildung 4 zeigt ein
+Modell, in dem das umgesetzt wurde.
+
+Verbindungsstücken 15 mit der Drehscheibe und dem Zahnrad 40 (beide ohne
+Nabe) verbunden und kann darüber angetrieben werden. Die Details des Aufbaus
+unten erkennt man in Abbildung 5.
+
+
+
+In diesem Modell kommt ein 50 mm langes
+Messingrohr mit 4 mm Durchmesser als
+Hohlachse zum Einsatz. Es steckt unten in
+einer roten Seiltrommel. Das Kabel verläuft
+von der Lampe zunächst durch die Gelenkwürfelklaue, dann durch das Messingrohr
+und schließlich durch die Bohrung und Nut
+eines Bausteins 30 mit Bohrung, in dem die
+Seiltrommel steckt. Der Steg ist mit zwei
+
+
+Die genaue Kabelführung ist entscheidend
+dafür, dass das Modell funktioniert und sich
+das Kabel nicht im oberen und unteren
+Abschnitt entgegengesetzt vertwistet. Der
+Kabelabschnitt zwischen Gelenkwürfelklaue und Lampe entspricht den beiden
+Kabeln in unserem einfachen Modell aus
+dem vorigen Abschnitt. Hier sollte die
+Selbstenttwistung stattfinden. Dem entsprechend wurden die beiden Adern unseres
+zweiadrigen Kabels in diesem Bereich
+getrennt. Der Kabelabschnitt vom Messingrohr bis zur Gelenkwürfelklaue sollte sich
+für einen nicht mitbewegten Beobachter gar
+nicht verdrillen.
+Auf der fischertechnik-Geburtstagsfeier
+hatte ich eine größere Variante dieses
+Modells im Einsatz, die ganz ohne Fremdteile auskommt. Durch die Verwendung
+von Drehkränzen ist diese Variante aber
+deutlich schwergängiger als die hier
+abgebildete Variante.
+
+
+Elektromechanik
+
+Vor- und Nachteile
+
+Rück- und Ausblick
+
+Die hier vorgestellte Lösung hat viele
+Vorteile gegenüber dem Einsatz eines
+Schleifrings: Sie erfordert kein spezielles
+Bauteil (das Messingrohr ist praktisch, aber
+nicht wirklich notwendig) und funktioniert
+ohne zusätzlichen Aufwand auch mit
+mehradrigen Kabeln. Bei einem Schleifring
+kommt es während des Drehens leicht zum
+Prellen der Kontakte auf den Schleifbahnen,
+so dass die Verwendung zur Datenübertragung problematisch ist. Durchgehende
+Kabel ermöglichen dagegen eine störungsfreie Verbindung. Schließlich funktionieren
+unsere Modelle statt mit Kabeln auch mit
+Pneumatikschläuchen. Man kann also sich
+drehende Pneumatikzylinder fest mit einem
+stationären Kompressor verschlauchen –
+eine Alternative zu der von René Trapp in
+ft:pedia 3/2014 vorgeschlagenen pneumatischen Drehdurchführung [4].
+
+Das früheste Patent für diese Lösung wurde
+meines Wissens im Jahr 1971 Dale A.
+Adams zugesprochen [1], siehe Abbildung 6.
+
+Industrielle Anwendung findet die hier
+vorgestellte Lösung zum Beispiel in einigen
+Durchfluss-Zentrifugentypen. Bei der Blutplasma-Spende kommen solche Zentrifugen zum Einsatz. Das Blut wird während
+des Zentrifugiervorgangs kontinuierlich
+dem Körper entnommen und ohne Plasma
+wieder zugeführt.
+Eine Einschränkung der Einsatzmöglichkeiten ergibt sich aus der Kabelführung.
+Dient beispielsweise ein rotierender Elektromagnet zur Kupplung, so kann das Kabel
+diese Kupplung nicht passieren. Damit
+scheidet die hier vorgestellte Lösung für
+diesen Anwendungsfall aus.
+Dass das Kabel bei jeder zweiten Umdrehung der Lampe einmal den Lichtstrahl
+verdeckt, ist oft nur von geringem Nachteil.
+Will man zum Beispiel einen Ultraschallsensor oder Infrarotsensor zur Aufnahme
+eines Umgebungsbilds kontinuierlich
+derhen, so entsteht bei jedem zweiten
+Durchlauf ein Fehlsignal durch das Kabel.
+
+
+Das Funktionsprinzip ist direkt mit einem
+fundamentalen mathematischen Sachverhalt verknüpft, das seit dem Anfang des 20.
+Jahrhunderts bekannt ist: Die sogenannte
+Fundamentalgruppe der mathematischen
+Drehgruppe SO(3) besteht nur aus zwei
+Elementen. Einfacher ausgedrückt lässt sich
+ein 720°-Twist in einem langen Papierstreifen auflösen, ohne dessen Enden zu
+drehen, ein 360°-Twist dagegen nicht. Die
+typische Visualisierung der Auflösung des
+720°-Twists wird nach dem berühmten
+Physiker Paul Dirac (1902-1984) häufig
+Dirac Belt Trick genannt. Dreht sich ein
+Fermion (z. B. ein Elektron, Proton oder
+Neutron), so kehrt es nämlich erst nach 720°
+in seinen Ausgangszustand zurück und
+nicht schon nach 360° – eine aus unserer
+
+
+
+Alltagserfahrung heraus ziemlich unvorstellbare Eigenschaft, die eng mit dem
+Paulischen Ausschließungsprinzip „Wo ein
+Ding ist, kann kein anderes sein“ zusammenhängt.
+
+[2]
+
+Bolker, Ethan D.: The spinor
+spanner, The American
+Mathematical Monthly, Vol 80, No.
+9, 977-984, 1973.
+
+[3]
+
+Burton, Joshua W.: Post in der
+Newsgroup sci.physics.research vom
+28.04.1996.
+
+[4]
+
+Trapp, René: Pneumatische
+Drehdurchführung. Tipps & Tricks,
+ft:pedia 3/2014, S. 17-19.
+
+Literatur und Links
+[1]
+
+
+Adams, Dale A.: Apparatus for
+providing energy connections
+between a moving and a stationary
+terminal, US Patent 3 586 413, 1971.
+
+

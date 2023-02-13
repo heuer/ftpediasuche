@@ -1,0 +1,247 @@
+
+
+Modell
+
+Mechanisches Tresorschloss
+Frederik Vormann
+Es gibt einige Tresormodelle, die mit dem fischertechnik-Interface arbeiten, elektronisch
+verriegeln und durch Eingabe einer Nummernfolge auf Tastern ihre Tür öffnen. Tresoren gab
+es ja aber schon lange vor Elektronik und Computern – das muss also auch rein mechanisch
+zu realisieren sein. fischertechnik ist doch ein System mit vielen Möglichkeiten, dachte ich
+mir, und so entstand das hier beschriebene Modell, welches sich auch auf der ft Community[1]
+und auf youtube[2] findet. Dieser Artikel beschreibt die Mechanik im Inneren genauer.
+
+Das Tresormodell
+Wir beschreiben hier den in Bild 1
+gezeigten Tresor. Er hat auf der rechten
+Seite eine Tür, die man nur dann öffnen
+kann, wenn man das Zahlenrad links nacheinander und in der richtigen Reihenfolge
+auf die richtigen Ziffern eingestellt hat. Die
+Tür selbst hat nur einen einfachen Griff,
+aber keine Klinke, mit der sie geöffnet
+werden könnte.
+
+Das Zahlenrad muss auf die richtigen
+Zahlen eingestellt werden, um die Tür
+zu entriegeln.
+Die Zahlen müssen in der richtigen
+Reihenfolge eingestellt werden; erst
+dann darf die Tür freigegeben werden.
+Bei wieder geschlossener Tür muss ein
+einfaches Verdrehen des Zahlenrades
+genügen, um die Tür zuverlässig zu
+verriegeln.
+Anforderungen genug also! Und doch gibt
+es eine raffinierte rein mechanische
+Lösung dafür. Das Funktionsmodell stellen
+wir im Folgenden ausführlich dar.
+
+Blockierung der Tür mit
+Sperrklinken
+
+Bild 1: Der Tresor von außen
+
+Der Tresor muss also folgende Eigenschaften haben:
+Seine Tür muss zunächst verriegelt sein
+und darf sich nicht öffnen lassen.
+
+Die Grundidee besteht darin, das Öffnen
+der Tresortür innen durch mehrere verriegelnde Sperrklinken zu verhindern. In
+Bild 2 sieht man, dass die Tür zusätzlich
+einen nach hinten zeigenden Hebel trägt,
+der sich mit ihr dreht, wenn die Tür
+geöffnet wird. An diesem Hebel lassen wir
+Sperrklinken angreifen, die ihn festhalten
+und so das Öffnen der Tür verhindern.
+
+
+Modell
+
+Bild 2: Hebel bei halb geöffneter Tür
+
+Bild 4: Türhebel von Sperrklinke festgehalten
+
+Nur wenn alle Sperrklinken betätigt werden, ist die Tür freigegeben. Die Sperrklinken wiederum werden von je einer drehbaren Scheibe mit einer geeigneten Nocke
+angehoben – aber nur, wenn die jeweilige
+Scheibe auch in der richtigen Position sitzt.
+Bild 3 zeigt das Innere des Tresors bei abgebautem Deckel und zwecks besseren
+Einblicks hochgeklappten Sperrklinken:
+Bild 5: Türhebel freigegeben
+
+B
+C
+A
+
+Da vier Sperrklinken existieren, müssen sie
+alle angehoben werden, damit man die Tür
+öffnen kann. Solange auch nur eine Sperrklinke nicht angehoben ist, hält sie die Tür
+fest und verhindert so den Zugang zum
+Tresorinhalt.
+
+Das Herz – die Steuerscheiben
+Bild 3: Überblick
+
+Der Hebel (A) ist fest mit der Tresortür
+verbunden (die in diesem Bild nicht sichtbar rechts vorne sitzt) und dreht sich mit
+ihr nach rechts, wenn die Tür geöffnet
+wird. Die Tür ist nur zu öffnen, wenn der
+Hebel (A) von keinem der vier Sperrkleinken (B) festgehalten wird. Diese sind hier
+nur hochgeklappt, um den Blick auf die
+Steuerwalzen (C) freizugeben und sind
+normalerweise nach rechts umgelegt.
+Bild 4 zeigt, wie eine Sperrklinke den Türhebel blockiert. Wenn die Sperrklinke etwas angehoben wird, kann die Tür hingegen geöffnet werden (Bild 5).
+
+Bild 6: Die Steuerscheiben
+
+Im Inneren des Tresors sind mehrere
+Scheiben verbaut. Alle bis auf die erste (in
+Bild 6 linke) sitzen auf Freilaufnaben. Das
+Zahlenrad auf der Außenseite des Tresors
+
+
+ist also nur mit der ersten Scheibe kraftschlüssig verbunden, die restlichen Scheiben sind frei drehbar. Unser Schloss hat
+vier von diesen Scheiben: Es müssen vier
+richtige Zahlen eingestellt werden, damit
+die Tür aufgeht. Die Hebel für die Verriegelung fallen zwischen die Scheiben – die
+Tür ist verriegelt. Nur wenn eine Scheibe
+gerade so steht, dass der auf ihr angebrachte Winkelstein 38423 gerade oben steht,
+wird der jeweilige Sperrhebel dadurch angehoben.
+
+Einstellung der Ziffernfolge
+Nachdem alle Scheiben so in ihre Grundstellung gebracht wurden, kann der Öffnungsvorgang beginnen. Mein fischertechnik Tresor nutzt die Winkelsteine 38423,
+um die Sperrklinken anzuheben (bei echten
+Schlössern hätten die Scheiben Schlitze, in
+die sich die Hebel senken können, aber das
+Prinzip ist ansonsten dasselbe). Die Scheiben werden von hinten nach vorne bedient,
+auf Bild 6 also von rechts nach links. Ziel
+ist es jetzt, dass bei allen vier Scheiben die
+Winkelsteine oben stehen und die Tür freigeben:
+Das Schloss wird rechts herum gedreht,
+bis der Winkel oben steht und die Anzeige draußen am Tresor auf „10“.
+Jetzt wird das Schloss links herum
+gedreht, und zwar zweimal. Dabei werden die Mitnehmer (31690) der ersten
+beiden Scheiben auf die andere Drehrichtung eingestellt.
+
+Bild 7: Alle vier Winkelsteine stehen oben
+
+Jede Scheibe trägt außerdem einen Mitnehmer, bestehend aus einer Achse 20, die
+mit einem Klemmring gesichert ist. Der
+erste Schritt um das Schloss zu öffnen ist,
+das Eingaberad so lange zu drehen, bis alle
+Mitnehmer die nächste Scheibe mit drehen.
+Im ungünstigsten Fall sind dazu etwa vier
+Umdrehungen notwendig.
+Zu Beginn des Einstellvorgangs wird das
+Schloss also ggf. mehrere Umdrehungen –
+bis zum Anschlag – nach rechts gedreht.
+Jede Scheibe nimmt dadurch die jeweils
+nächste mit, weil der Mitnehmer einer
+Scheibe irgendwann das jeweilige Gegenstück der nächsten Scheibe berührt. In
+Bild 6 berührt z. B. gerade der nach rechts
+zeigende Mitnehmerstift von Scheibe 2 den
+nach links zeigenden von Scheibe 3. Nach
+einigen Umdrehungen stehen so alle
+Scheiben bis zum jeweiligen Anschlag
+nach rechts gedreht.
+
+Bei der dritten Umdrehung wird die
+dritte Scheibe eingestellt. Am Einstellrad wird dazu die „55“ angefahren,
+dann steht der Winkel oben.
+Dadurch, dass die Scheiben nicht fest verbunden sind, sondern nur durch die Mitnehmer, verdreht sich die letzte Scheibe
+nicht mehr. Die Reibung durch den auf
+dem Winkelstein aufliegenden Balken
+genügt, um das Rad festzuhalten. Das gilt
+entsprechend für alle anderen Scheiben.
+Jetzt einmal rechts herum, bei der
+nächsten Umdrehung bis zur „25“.
+Dann liegt auch der Winkel von Scheibe
+2 oben.
+Jetzt noch einmal links herum bis zur
+„50“: Nun ist bei der ersten Scheibe
+auch der Winkel oben.
+Die anzusteuernden Zahlen hängen natürlich von der Einstellung ab (dazu später
+mehr), und davon, wie das Einstellrad
+beschriftet wurde.
+
+Damit sind nun alle Winkel oben. Bei
+meinem fischertechnik-Schloss werden die
+Hebel nun durch die Winkel hochgedrückt
+und geben die Tür frei.
+
+Kann man das Schloss
+„knacken“?
+Jetzt stellt sich die Frage, wieso man nicht
+einfach so lange am Schloss herumdrehen
+kann, bis es öffnet. Das klappt aber nicht:
+Wenn z. B. die hintere Scheibe richtig
+steht, dann kann diese sich durch die Mitnehmer erst einmal nicht mehr verdrehen.
+Jetzt geht es an die zweite Scheibe. Wenn
+diese sich dreht und der Punkt kommt, an
+dem der Winkel oben steht, bemerkt man
+das nicht (von ganz leichten Drehmomentschwankungen abgesehen, die es aber bei
+echten Tresoren nicht gibt), und die richtige Zahl ist ja unbekannt. Es wird also
+weiter gedreht. Dadurch kommt der Mitnehmer aber wieder an die hintere Scheibe
+und verdreht sie – diese wird also die Tür
+schon wieder verriegeln. So ist es fast unmöglich, das Schloss nur durch Probieren
+zu öffnen – selbst bei dieser einfachen
+Variante gibt es immerhin 1.296 mögliche
+Kombinationen.
+Bei echten Tresoren mit Zahlenschlössern
+hört man übrigens kein Klicken oder
+Ähnliches – auch nicht mit Abhörgeräten,
+wie sie in Filmen oft gezeigt werden.
+
+Wie wird die Kombination
+geändert?
+Bei dem fischertechnik-Schloss kann die
+Kombination geändert werden, in dem die
+Winkel an anderen Stellen auf die Scheiben geschoben werden. Dadurch ändern
+sich die nötigen Drehwinkel zwischen dem
+Einstellrad am Tresor und den Scheiben,
+und eine andere Kombination wird benötigt.
+Allerdings haben wir dabei nur sechs Stufen zur Verfügung (die sechs Nuten in der
+fischertechnik-Drehscheibe nämlich). Bei
+
+Modell
+
+einem echten Zahlenschloss will man natürlich mehr verschiedene Zahlen einstellen können. Man muss also die Verstellung
+feiner justierbar machen.
+Eine Möglichkeit, wie man das mit fischertechnik machen könnte, zeigt Bild 8. Dort
+sitzt ein ft-Innenzahnrad auf einem Z30,
+und die beiden Mitnehmer sitzen auf je
+einem der Zahnräder. Dadurch können die
+beiden Stifte in 30 Schritten gegeneinander
+versetzt werden.
+
+Bild 8: Die beiden Zahnräder können gegeneinander verdreht eingesteckt werden
+
+Der äußere Mitnehmer spielte dann die
+Rolle unserer Winkelsteine, der innere
+dient wie in unserem Modell zur Drehung
+der jeweils nächsten Scheibe.
+Man bräuchte von diesen Elementen nun
+vier Stück – anstelle der vier Drehscheiben
+im oben beschriebenen Modell. Wer über
+genug Material verfügt, kann diese Variante ja einmal testen. Viel Spaß beim Nachbauen und Ausprobieren!
+
+Quellen
+[1]
+
+Der Tresor auf der ft Community:
+http://www.ftcommunity.de/categori
+es.php?cat_id=2104
+
+[2]
+
+Der Tresor auf einem Video:
+http://www.youtube.com/watch?v=U
+fIhHXfaScc
+
+[3]
+
+Weitere Beschreibungen zu solchen
+Zahlenschlössern:
+http://www.ssdev.axs.de/wissen/treso
+r_schloss/index.htm
+
+

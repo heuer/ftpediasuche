@@ -1,0 +1,189 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Modellfotografie
+Thomas Püttmann
+Wer seine fischertechnik-Modelle anderen in der ft:pedia oder im Internet präsentieren möchte,
+muss sie fotografieren. In diesem Beitrag beschreibe ich, wie ich dabei vorgehe.
+
+Ausrüstung
+Gleich vorweg: Ich bin kein Profifotograf.
+Meine Kenntnisse sind beschränkt und
+meine Ausrüstung klein. Was ich hier
+wiedergebe, ist kein Expertenwissen. Ich
+hoffe trotzdem, dass der Artikel für den
+einen oder die andere nützlich sein kann,
+wenn er oder sie öfter fischertechnikModelle fotografiert.
+
+Abhilfe schafft ein Mikrofonstativ, auf das
+ich den Kopf eines billigen Kamerastativs
+geschraubt habe, siehe Abb. 1. Durch die
+doppelte Ausziehmöglichkeit lassen sich
+Kamerahöhen von zwei Metern und Fotos
+aus allen möglichen Richtungen erzielen.
+Natürlich empfiehlt es sich dabei, zeitverzögert auszulösen, da die Kamera durch den
+Druck auf den Auslöser schwingt.
+
+Kamera
+Ich arbeite mit der Kompaktkamera Lumix
+TZ10 von Panasonic, die vor ein paar
+Jahren etwas mehr als 200 € gekostet hat.
+Kompaktkameras haben in der Regel kleine
+Bildsensoren. Dadurch ist es sehr einfach,
+Fotos mit großer Tiefenschärfe zu
+bekommen. Für die technische Dokumentation von Modellen halte ich das für
+angebracht.
+Von den vielfältigen Einstellungsmöglichkeiten der Kamera nutze ich meist nur
+wenige. Die wichtigsten sind für mich die
+manuelle Belichtungskorrektur und die zeitverzögerte Auslösung.
+Stativ
+Für die Modellfotografie ist es vorteilhaft,
+wenn die Kamera schnell in verschiedene,
+zum Teil extreme Positionen gebracht
+werden kann. Mit einem herkömmlichen
+Fotostativ ist es zum Beispiel unmöglich,
+ein auf einem Tisch stehendes Modell
+senkrecht von oben aus einem Abstand von
+einem Meter zu fotografieren.
+
+eines billigen Kamerastativs montiert wurde
+
+
+
+Hintergrund
+Meiner Meinung nach fotografiert man
+fischertechnik-Modelle am besten vor
+weißem Hintergrund. Damit verhindert man
+vom Modell ablenkende Objekte im
+Hintergrund, lässt die Bauteile in ihren
+natürlichen Farben zur Geltung kommen
+und erzielt maximal viel Licht von hinten
+und unten. Da die schwarzen Bausteine und
+Grundplatten sehr viel Licht schlucken und
+Details dadurch oft nur schwer abbildbar
+sind, ist das sehr wichtig.
+Um einen homogenen Hintergrund zu
+bekommen, kann man auf sogenannte
+Lichtzelte zurückgreifen. Die deutlichen
+Nachteile dieser Zelte sind, dass die
+Kameraposition sehr eingeschränkt ist und
+man sehr viel Licht in das geschlossene Zelt
+hineinbringen muss. Die günstigste und bei
+weitem stärkste Lichtquelle – die Sonne –
+kann dabei gar nicht genutzt werden.
+Nachdem ich verschiedene im Haus
+befindliche Textilien wie Bettlaken und
+Tischdecken ausprobiert hatte, war mir klar,
+dass ich mattes weißes Papier verwenden
+wollte. Bei Winkler&Volkmann in Bochum
+fand ich ein Angebot für eine 50-m-Rolle
+unbeschichteten Plotterpapiers in 91,4 cm
+Breite für nur ungefähr 10 €.
+
+
+Für diese Papierrolle habe ich mir einen
+einfachen U-Ständer aus drei alten Brettern
+
+zusammengeschraubt, auf dem oben eine
+alte, passend abgelängte Gardinenstange
+primitiv mit zwei Schrauben drehbar
+gelagert ist, siehe Abb. 2. So kann man das
+Papier extrem schnell auf- und abrollen, bei
+ausgedehnteren Modellen einen ganzen
+Tisch überdecken lassen oder bei hohen
+Modellen vom Tisch bis auf den Boden
+ziehen. Damit kann ich einen Hintergrund
+ohne Kanten und Knicke erzeugen.
+Schließlich lässt sich der komplette Aufbau
+einfach in den Keller tragen und nimmt
+vergleichsweise wenig Platz weg.
+
+
+Licht
+Belichtungskorrektur
+Wegen des weißen Hintergrunds muss die
+Belichtung manuell erhöht werden. Dadurch werden zum einen die Details in den
+Regionen, wo sich viele schwarze Bauteile
+befinden, sichtbar. Zum anderen verschwinden die Details des weißen Hintergrunds,
+der dadurch sehr homogen wird. Bei
+kleineren bis mittleren Baugruppen ohne
+Grundplatte liegt meine Belichtungskorrektur normalerweise zwischen 1 und 12/3.
+Etwas Vorsicht ist geboten, wenn gelbe
+Teile im Bild sind. Durch die Belichtungskorrektur können hier in ungünstigen Fällen
+Informationen unwiederbringlich verschwinden.
+Blende
+Verwendet man keine Kompaktkamera, so
+erhält man in automatischen Modi in der
+
+Regel Fotos, die eine gewisse Tiefenunschärfe aufweisen. Dies ist bei der Personen- und Objektfotografie oft durchaus
+wünschenswert, da der Betrachter seine
+Aufmerksamkeit unmittelbar auf eine Tiefenebene konzentriert. Bei der technischen
+Dokumentation von Modellen möchte man
+in der Regel aber Details in allen Tiefen
+scharf abbilden. Um eine größere Tiefenschärfe herzustellen, kann man manuell die
+Blende weiter schließen, d. h. eine große
+Blendenzahl F wählen. Dadurch steigt
+natürlich die Belichtungszeit, was bei der
+Verwendung eines Stativs und der zeitverzögerten Auslösung allerdings kein Problem darstellt.
+Lichtquellen
+Wie oben schon geschrieben ist die beste
+und stärkste Lichtquelle die Sonne. Ich
+fotografiere am liebsten bei gutem Wetter in
+unserem Esszimmer, das zu zwei Seiten
+Fensterflächen und an den Wänden homogen weißen Kalkputz besitzt. Dadurch ist in
+der Regel keine weitere Lichtquelle erforderlich. Die meiste Zeit im Jahr steht die
+Sonne zu hoch, um direkt auf den Tisch zu
+scheinen, so dass es mit Schattenwürfen
+keinerlei Probleme gibt. Ansonsten schatte
+ich das Modell während des Fotografierens
+mit meinem Körper ab.
+Bei schlechtem Wetter greife ich auf die
+Deckenleuchte, eine Energie sparende
+Leuchtstoffröhre mit 6000 Kelvin Farbtemperatur und einem Farbwiedergabeindex Ra von mehr als 90 zurück. Ein hoher
+Farbwiedergabeindex ist wichtig für natürlich aussehende Fotos. Bei Leuchten mit
+einem Farbwiedergabeindex von 80 und
+weniger besteht das Spektrum nur aus
+wenigen Linien bzw. Bereichen (siehe Abb.
+4), während bei guten Leuchten Licht im
+gesamten Bereich von 400 nm bis 700 nm
+Wellenlänge möglichst gleich stark abgestrahlt wird. Sehr gut kontrollieren lässt sich
+
+Tipps & Tricks
+
+die Qualität von Leuchten mit einem
+Karton-Taschenspektroskop der Firma
+Astromedia für 7,80 €. In einem anderen
+Raum unseres Hauses kommen übrigens
+hochwertige LED-Panels zum Einsatz, die
+eine phänomenal gute Farbwiedergabe
+besitzen und die ich inzwischen jeder
+Leuchtstoffröhre vorziehen würde.
+
+Leuchtstoffröhre (Foto: Anton,
+Quelle: Wikipedia GFDL 1.2)
+
+Nachbearbeitung
+In der Regel bearbeite ich Fotos nur sehr
+wenig nach. Die wichtigste Funktion ist
+sicherlich das Ausschneiden, um das Objekt
+ins Zentrum des Bildes zu bringen und
+überflüssige Ränder zu beseitigen. Diese
+wird von jedem Bildbearbeitungsprogramm
+bereitgestellt. Ab und zu benötige ich fortgeschrittene Funktionen wie stufenloses
+Drehen, das Anpassen des Weißpunkts und
+die Überlagerung mehrerer Aufnahmen.
+Ich selbst nutze auf dem Mac den GraphicConverter 9 von Lemke Software – ein Programm, das für 34,95 € unglaublich viele
+Funktionen in exzellenter Qualität anbietet.
+Ein kostenloses Tool für Windows-Nutzer
+ist der ft Community Publisher von Stefan
+Falk, der außerdem ein komfortables Hochladen von Fotos in den Bilderpool der ftCommunity ermöglicht.
+Einen leicht grauen oder leicht schattigen
+Hintergrund zum Beispiel kann man mit
+diesen Programmen durch Anpassen des
+Weißpunkts beseitigen (GraphicConverter)
+oder durch Veränderung der Gamma-Korrektur bei anschließender Kontrast-Anpassung.
+
+
+

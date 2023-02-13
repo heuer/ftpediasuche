@@ -1,0 +1,258 @@
+
+
+Modell
+
+6-Achs-Roboterarm RS 816
+Dirk Wölffel
+Im Jahr 1985 brachte fischertechnik den Baukasten Computing Trainings-Roboter (Abb. 1) auf
+den Markt. Der Roboter bestand aus vier Motoren zum Ansteuern der drei Achsen und des
+Greifers. Schon damals wurden Alu-Profile für den Greifer verwendet. Inzwischen ist die Robotertechnik weiter fortgeschritten und Roboter sind viel komplexer geworden. Sie verfügen
+über Schrittmotoren, Sensorik und künstliche Intelligenz. Entwicklungen aus der Community
+und der 3D-Druck haben mich inspiriert einen 6-Achs-Roboterarm (Abb. 2) zu bauen.
+ Modularer Roboterkopf
+ Kamera mit Lageerkennung
+ Software ROBO Pro mit WLAN
+ Not-Aus-Taster
+ keine sichtbaren Kabel
+
+
+Die Anforderungen
+Beim Konstruieren des 6-Achsen Roboterarm habe ich großen Wert auf Stabilität gelegt. Mein Ziel war es, möglichst viele fischertechnik-Bauteile zu verbauen. 3DDruck-Bauteile sollten dabei eher als Hilfsbauteile eingesetzt werden. Dazu sollte der
+Roboter über kräftige Motoren verfügen.
+Hier meine Anforderungen an das Modell:
+ sechs Achsen in stabiler Bauform
+ Konstruktion mit Alu-Profilen
+ Achsen kugelgelagert
+ Ansteuerung über einen TXT Controller
+und einen ftPwrDrive
+ Einsatz von Schrittmotoren
+
+
+Der Grundaufbau
+Bei der Konstruktion habe ich mich für eine
+Bauplatte 1000 als Plattform entschieden.
+Darauf ist der 3D-Druck-Drehkranz Z100
+mit Axialrillenkugellager (Abb. 3) von Till
+Harbaum verbaut worden. Der Drehkranz
+hat einen Durchmesser von 150 mm und
+bietet daher eine stabile Plattform für den
+Aufbau.
+
+Modell
+
+von 60 Ncm. Dieses wird benötigt, da der
+komplette Arm ein hohes Gewicht hat. Der
+Halter für den Nema-17-Schrittmotor ist ein
+3D-Druck und stammt aus thingiverse.de
+
+
+Die komplette Unterkonstruktion des Roboters besteht aus fischertechnik-Alu- Profilen
+(Abb. 6, 7), welche anschließend, für die
+bessere Optik, mit Bauplatten verkleidet
+wurden.
+
+Im seitlichen Aufbau (Abb. 4) sieht man
+den Drehkranz Z100 angetrieben von einem
+Nema-14-Schrittmotor aus dem fischertechnik-3D-Drucker. Der Drehkranz ist mit
+einem 360 Grad Schleifring ausgestattet.
+Damit wird der 6-Achs-Roboterarm mit
+Strom versorgt und die Steuerleitung des
+Not-Halt-Tasters zu den Controllern geführt.
+
+
+Damit die Achsen möglichst wenig Spiel
+haben und sich leichtgängig bewegen, wurden insgesamt fünf kugelgelagerte Drehkränze (Abb. 7) von Andreas Tacke verbaut.
+
+
+Für den Antrieb des Schultergelenks habe
+ich zwei Nema-17-Schrittmotoren 17HS240644S (Abb. 5) von Stepperonline verbaut.
+Diese verfügen über ein hohes Drehmoment
+
+
+
+
+Die Verkleidung zwischen den beiden
+Drehkränzen ist entfernt worden (Abb. 8).
+Man sieht links und rechts die Lagerung
+durch zwei Drehkränze. Darüber ist der
+Drehkranz zum Rotieren des Arms zu erkennen. Dieser wird über eine Schnecke mit
+Ritzel am Ende angetrieben.
+
+Um bei dem Ritzel 10 links und rechts die
+gleiche Drehrichtung zu erzeugen, muss das
+Kegelzahnrad links (Abb. 11) hinter und
+das Kegelzahnrad rechts (Abb. 12) vor der
+Mittelachse liegen.
+
+
+Angetrieben werden diese beide Drehkränze über eine Kette mit Untersetzung.
+Dafür sind zwei Nema-14-Schrittmotoren
+aus dem fischertechnik-3D-Drucker verwendet worden (Abb. 9).
+
+
+
+Das Neigen und das Drehen des Roboterkopfs werden jeweils über zwei Encoder
+Motoren gesteuert (Abb. 10). Über zwei
+Kegelzahnräder links und rechts außen wird
+die Drehbewegung auf den Zahnkranz vom
+Kopf übertragen.
+
+
+
+
+Modell
+
+Der Roboterkopf
+Der Roboterkopf (Abb. 13) ist modular aufgebaut. Er kann einfach abgenommen werden und gegen einen anderen Kopf getauscht werden. Er besteht aus zwei 3DDruck-Hälften, welche mit jeweils zwei Neodym-Magneten
+gehalten
+werden
+(Abb. 14).
+
+
+
+Die Elektronik
+Der 6-Achs-Roboterarm verfügt über eine
+Vielzahl von elektronischen Komponenten.
+ TXT Controller und ftPwrDrive [1, 2]
+ 6 pol. Schleifring für das Drehen von
+Rumpf und 12 pol. Schleifring für den
+Kopf
+
+Der Greifer
+Der Greifer (Abb. 15) wird von einem SMotor mit einem Greifzangengetriebe von
+Andreas Tacke angetrieben. Er besitzt zwei
+Endschalter (Abb. 16) und ist in der Lage
+sich in allen Greifpositionen abzuschalten,
+da ein Endschalter auf der beweglichen
+Greifzange sitzt.
+
+ Kopf mit I2C-Anschluss, Endschalter,
+Motorausgängen, Servo-Anschluss
+ Kamera mit Lageerkennung
+ Gyro-Sensor für den Greifer
+ 1,3“ OLED Info Display
+ Not-Aus-Taster
+ Ansteuerung über WLAN
+ Steuerbar mit IR-Fernbedienung
+
+
+
+
+Die Controller
+Für die Ansteuerung der fischertechnik Encoder Motoren des 6-Achs-Roboterarms
+habe ich einen Robotics TXT Controller
+(153513) verwendet (Abb. 17). Für die
+Schrittmotoren kommt der ftPwrDrive mit
+ft-Extender von Björn Gundermann und
+Stefan Fuss zum Einsatz (Abb. 18).
+
+Der Kombisensor
+Für die Lageerkennung des Greifers ist ein
+Kombisensor (158402) von fischertechnik
+im Roboterkopf verbaut worden (Abb. 20).
+Durch den Gyroskop-Sensor ist der Greifer
+in der Lage, waagerecht zu bleiben.
+
+
+Die Pixy-Kamera
+
+Die Kopfplattform
+Die modulare Kopfplattform (Abb. 19) hat
+diverse Anschlüsse, welche über einen 12poligen Schleifring versorgt werden. Durch
+den Schleifring ist der Kopf sehr flexibel
+einsetzbar, ohne störende verdrehte Kabel.
+Folgende Anschlüsse sind vorhanden:
+ M1 und M2 Motorausgang
+ I7 und I8 Eingang
+ I2C mit 3,3V und I2C 5,0 V
+ ein Servo-Anschluss
+ 9V und 5V Stromversorgung
+
+Neben dem Greifer ist eine Pixy-Kamera
+für die Lageerkennung von Werkstücken
+verbaut (Abb. 21) [3]. Sie kann über die
+Länge und Breite des Werkstücks die Greifposition bestimmen (Abb. 22, 23). Wird ein
+Werkstück erkannt, so blinkt der grüne
+Leuchtstein und dreht den Kopf so lange,
+bis das Werkstück vom Greifer gegriffen
+werden kann. Auch Farben können mit der
+Pixy-Kamera unterschieden werden.
+
+
+Modell
+
+Das OLED Display
+Über das 1,3“ OLED-Display (Abb. 24)
+werden die jeweiligen Parameter der PixyKamera, der Endschalter und des Kombisensors ausgegeben. Das Display und der
+Kombisensor werden über den I2C-Anschluss vom TXT Controller angesteuert.
+
+
+
+Der Not-Aus-Taster
+Der 6-Achs-Roboterarm verfügt über einen
+Not-Aus-Taster (Abb. 25). Dieser unterbricht die Bewegungen der Schritt- und Encodermotoren. Eine gute Idee, da die
+Schrittmotoren über mehr Drehmoment
+verfügen als die fischertechnik-Motoren.
+Dadurch konnte das ein oder andere fischertechnik-Bauteil vor dem sicheren Tod gerettet werden.
+
+
+Darunter der Ein- und Ausschalter für die
+12 Volt 5 Ampere Stromversorgung.
+
+
+
+
+
+Die Beschriftung
+
+Das Fazit
+
+Die Beschriftung wurde mit Hilfe eines
+Plotters und Vinyl-Folie erstellt (Abb. 25,
+26); die sehr kleinen Schriften auf der Kopfplattform mit einem Beschriftungsgerät.
+
+Mit dem Bau des 6-Achs-Roboterarms
+möchte ich euch zeigen, dass immer noch
+Luft nach oben ist. Nur durch die Lösungen
+aus der fischertechnik-Community ist der
+Bau möglich gewesen. Deshalb gebührt
+mein Dank den Tüftlern und Erbauern dieser Lösungen. Ein Video zum 6-Achs-Roboterarm findet ihr auf meinem YouTubeKanal.
+
+Quellen
+[1]
+
+Dirk Wölffel, Christian Bergschneider, Stefan Fuss, Björn Gundermann,
+Christian Lauff: Der ftPwrDriveController für Schrittmotoren und
+Servos – Teil 1. ft:pedia 4/2018, S.
+67-70.
+
+[2]
+
+Stefan Fuss, Christian Bergschneider, Björn Gundermann, Christian
+Lauff, Dirk Wölffel: Von Schrittmotoren und Servos – Teil 2. 4/2019, S. 52-57.
+
+[3]
+
+Dirk Wölffel, Dirk Fox: I²C mit dem
+TX – Teil 11: Pixy-Kamera (1). ft:pedia 4/2014, S. 43-51.
+
+
+
+Die Software
+Angesteuert wird der 6-Achs-Roboterarm
+über die fischertechnik-Software ROBO
+Pro mit Hilfe von WLAN. Das geht Online
+oder auch über einen Download. Es gibt ein
+Teach-In-Programm (Abb. 22), mit dem
+alle Parameter der Motoren abgespeichert
+werden.
+
+
+
+
+Modell
+
+6-Achs-Roboterarm von Dirk Wölffel
+
+
+

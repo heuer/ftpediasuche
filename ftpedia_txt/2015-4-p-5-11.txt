@@ -1,0 +1,347 @@
+
+Modell
+
+Modell
+
+Die Geheimnisse der Turmbergbahn
+Ralf Geerken
+Hier sollen nicht nur die Geheimnisse der echten Turmbergbahn aus Karlsruhe/Durlach
+gelüftet werden, sondern auch die Geheimnisse meines fischertechnik-Modells. Für die Realisierung eines einwandfrei laufenden Modells waren nämlich doch einige Tricks, Kniffe und fast
+nicht sichtbare Modifikationen an Bauteilen notwendig.
+
+Geheimnis Nummer 1:
+Was mich mit dieser Bahn
+verbindet
+Mit dieser Bahn verbindet mich meine
+Oma, sie sagte übrigens immer liebevoll
+„Bähnle“ zu ihr und wohnte nur ein paar
+hundert Meter vom „Bähnle“ entfernt. Als
+Kind bin ich oft mit ihr (also mit der
+Turmbergbahn – nicht mit meiner Oma)
+gefahren und habe mich damals schon
+immer gefragt, wie die in der Mitte liegende
+
+Weiche der Bahn denn wohl funktioniert.
+Nicht einmal mein technisch sehr versierter
+Vater, seines Zeichens MaschinenbauIngenieur, konnte mir darauf eine Antwort
+geben. Ich habe damals geschaut, beobachtet, gequengelt – aber es bewegte sich
+weder etwas an der Weiche, noch nützte es
+etwas. Ich bekam es damals einfach nicht
+heraus. Das Prinzip der Abt'schen (Aus-)
+Weiche hatte ich dann vor ein paar Jahren
+zwar gegoogelt und das Prinzip war mir
+dann auch schnell klar, wie aber die
+Seilführung, also die Lage des
+Seils in der Weiche und
+schlussendlich die Befestigung
+an dem Wagen funktioniert,
+habe ich erst durch Ausprobieren bzw. durch dieses Modell
+herausgefunden.
+
+Geheimnis Nummer 2:
+Der Antrieb
+
+
+Die beiden Wagen sind mit
+einem Seil verbunden. Im
+Original wird ein Stahlseil mit
+26 mm Durchmesser verwendet,
+bei mir tut es ein fischertechnikSeil. Dieses Seil wird an der
+Bergstation mehrfach um eine
+Walze geführt, wobei diese dann
+von einem Elektromotor bzw. im
+Original von einem Leonardsatz
+angetrieben wird. Das Gewicht
+beider Wagen hängt also an der
+
+
+
+
+Antriebswalze. Da sich die Gewichte
+gegenseitig aufheben, muss der Antrieb
+nicht das Gewicht eines einzelnen Wagens
+nach oben ziehen, sondern nur den
+Gewichtsunterschied beider Wagen. Und
+auch nur dann, wenn der untere Wagen
+schwerer ist. Ist der obere Wagen schwerer,
+muss der Motor sogar als Bremse dienen.
+Der Leonardsatz kann die Bremsenergie
+dann auch wieder ins Stromnetz einspeisen.
+Ich habe zwar keinen Beweis dafür
+gefunden, dass dieses Prinzip auch bei der
+Turmbergbahn verwendet wird, meines
+Erachtens nach kann es aber gar nicht
+anders sein, weil die entstehende Energie
+bei schwererem, abwärts fahrenden Wagen
+ja irgendwo hin muss.
+Anfangs habe ich das Seil auch mehrfach
+um eine Drehscheibe gelegt, um durch die
+höhere Reibung mehr Energie auf die
+Wagen zu bringen. Das führte aber sehr oft
+zu einem Hakeln oder gar zu einem
+Verheddern des Seils. Jetzt ist das Seil
+wieder nur halb um die Drehscheibe gelegt,
+in die Drehscheibe ist allerdings ein
+einfacher Haushaltsgummiring eingelegt,
+der verhindert, dass das Seil durchrutscht.
+Für eine ordentliche Untersetzung habe ich
+
+seinerzeit den Drehkranz (31390) auseinandergenommen und zu einem Z58 umfunktioniert. Diese Kaulquappe hat Harald
+Steinhaus in der ft:pedia 3/2015 beschrieben, wobei es eine Richtigstellung meinerseits gibt: Da Ludgers Monster-LKW [2]
+wesentlich älter ist, stammt diese Kaulquappe von ihm [3] (Anm. d. Red.: Siehe
+auch den Hinweis beim Impressum). Das
+zweite Z58 ist ein Überbleibsel aus der
+Testphase und hat einen Freilauf. Die
+Zahnradkette kann während der Fahrt auf
+dieses Z58 umgehängt werden, der Motor
+läuft dann weiter, aber das Bähnle kann von
+jetzt an per Hand geschoben werden.
+Dadurch ist es auf einfache Art und Weise
+möglich, Fehlerursachen zu finden, ohne
+die Bahn jedes Mal umzubauen.
+
+Geheimnis Nummer 3:
+Seilführung und -befestigung
+Zuerst muss man wissen, dass die beiden
+Wagen niemals die Seite wechseln. Das
+heißt, der eine Wagen fährt von oben
+gesehen an der Ausweichstelle immer
+rechts und der andere von oben gesehen
+immer links. Das heißt aber auch, dass die
+Seile sich nicht kreuzen. Bis 1965 war es
+
+
+Modell
+
+sogar so, dass die Strecke der Turmbergbahn aus 3 einzelnen Schienen bestand,
+wobei die mittlere Schiene von beiden
+Wagen befahren wurde.
+
+weiß ich leider nicht, weil ich dann doch
+nicht so dreist war, unter den Wagen zu
+klettern, als ich im Sommer 2015 dort war.
+Der Befestigungspunkt liegt unterhalb der
+Schiene (siehe Abb. 3), das heißt er liegt
+tiefer als die Oberkante der Schiene.
+
+Schienenniveaus
+
+Nur in der Abt'schen Ausweiche befuhren
+und befahren sie logischerweise jeweils
+zwei Schienenstränge – die Wagen müssen
+ja aneinander vorbeifahren. Die Seile sind
+unter dem Wagen im oberen Drittel befestigt. Das ist jedenfalls bei meinem Modell
+so. Ob das beim Original auch der Fall ist,
+
+
+Das muss auch so sein, damit das Seil bei
+Links-/Rechtsfahrt in der Abt'schen Ausweiche mit dem Wagen zusammen in die
+Kurve geht. Würde das Seil oberhalb der
+Schiene am Wagen befestigt werden, dann
+
+
+
+würde es geradewegs über die Ausweiche
+hinweggehen und der entgegen kommende
+Wagen müsste das Seil überfahren, was
+dem Seil gar nicht gut tun würde. Den klein
+gehaltenen Befestigungspunkt habe ich mit
+einer kleinen Clipsachse (32870) realisiert,
+bei der ich den Clipsteil der Achse kürzen
+musste, weil er sonst zu weit ins Gleisbett
+hineingeragt hätte. Im Original wird das
+schwere Drahtseil über die ganze Strecke
+von schräg und gerade liegenden Rollen
+geführt, damit es nicht einfach im Gleisbett
+auf dem Boden schleift. Beim Nachbau
+habe ich in den Kurven auf die Seilrollen
+verzichten müssen, weil hier einfach kein
+Platz war. Nichtsdestotrotz habe ich aber
+mehrere Rollen (38258) auf den geraden
+Strecken eingebaut, weil das Seil dann
+wesentlich besser dageblieben ist, wo es
+sein muss, nämlich unterhalb der oberen
+Schienenkante.
+
+Spurkranzes ein wenig abgeschrägt, damit
+das Rad besser von der Schiene in die
+richtige Richtung gedrückt werden kann.
+
+Geheimnis Nummer 4:
+Die Räder
+Im Original und im Nachbau haben die
+Führungsräder einen doppelten Spurkranz.
+Das heißt sie umschließen die Schiene wie
+ein auf dem Kopf stehendes U. Die Führungsräder bleiben immer auf der äußeren
+Schiene, wodurch der linke Wagen auf der
+Abt'schen Ausweiche auch links bleibt und
+der rechte Wagen immer rechts (siehe
+breitere Walzenräder und haben keinen
+Spurkranz. Den dürfen sie auch nicht haben,
+weil der Spurkranz dann bei der Einfahrt in
+die Ausweiche ja irgendwie auf die andere
+Seite der Schiene (und wieder zurück)
+gelangen müsste.
+Die ft-Spurkränze (36331) hatten sich zwar
+als brauchbar erwiesen, ich musste sie aber
+trotzdem modden, weil sie oft nicht in der
+Spur blieben. Das hinderliche Gummi habe
+ich einfach nur vom Rad heruntergenommen. Den sehr kleinen Ring, der
+normalerweise das Gummi auf der
+Lauffläche hält, habe ich abgeschliffen.
+Schließlich habe ich noch die Innenseite des
+
+(Quelle: Wikipedia [4])
+
+Bei den Walzenrädern habe ich die alten
+Reifen (31017) genommen, wobei ich diese
+aber soweit herunter geschliffen habe, dass
+sie denselben Durchmesser wie die Spurkranzräder haben (siehe Abb. 7). Als die
+Durchmesser noch (wenn auch nur sehr
+geringfügig) unterschiedlich waren, drückten die Räder schon auf der geraden Strecke
+immer in eine Richtung. Inzwischen haben
+die Führungsräder aber durch Freilaufnaben
+(68535) quasi Einzelradaufhängungen
+
+erhalten, womit sie jetzt richtig gut in der
+Spur bleiben.
+
+
+Geheimnis Nummer 5:
+Die Steuerung
+Das Bähnle sollte von Anfang an immer
+einige Zeit an den Bahnhöfen warten und
+dann (logischerweise) in entgegengesetzter
+Richtung wieder automatisch weiterfahren.
+Am oberen Punkt sitzt dafür ein Taster, der
+vom ankommenden Wagen betätigt wird.
+Anfänglich hatte ich einen TX-Controller
+zur Steuerung eingesetzt. Das Programm
+war auch schnell geschrieben; es musste ja
+nicht viel tun: Wenn Taster nicht gedrückt,
+
+Modell
+
+dann Motor in einer Richtung einschalten
+und solange eingeschaltet lassen, bis der
+Taster gedrückt wird. Dann einige Zeit
+warten und den Motor in entgegengesetzter
+Richtung wieder einschalten, und so fort.
+Dann fragte mich jemand auf der Convention 2014 in Erbes-Büdesheim, ob ein TX
+für eine solch einfache Steuerung nicht
+„etwas“ überdimensioniert sei; das müsste
+doch auch mit Silberlingen gehen. Wieder
+zu Hause angekommen habe ich dann etwa
+die dreifache Zeit, die ich bisher für die
+Realisierung der gesamten Bahn aufgewendet hatte, in die Steuerung mit Silberlingen
+gesteckt. Die Lampen an den Bahnsteigen
+sind LEDs und werden direkt über A2 des
+unteren Grundbausteins angesteuert. Dieser
+sorgt dafür, dass die LEDs während der
+Fahrt blinken, und während sie steht dienen
+sie der Bahnsteigbeleuchtung. Die Silberling-Steuerung kann aber noch einiges
+mehr: Durch einen zusätzlichen Taster kann
+die Bahn während der Wartezeit frühzeitig
+gestartet werden. Mit einem weiteren Taster
+kann während der Fahrt die Richtung
+gewechselt werden, dadurch kann man die
+Bahn bspw. in der Mitte auf der Weiche
+‚tanzen‘ lassen. Falls mich meine Erinnerung nicht täuscht hat der Schaffner das
+im Original bei irgendwelchen Anlässen auch
+manchmal getan, dafür
+habe ich aber weder Belege
+oder Beweise, noch können sich meine Eltern
+daran erinnern – vielleicht
+habe ich das ja damals auch
+nur geträumt.
+
+Kein Geheimnis…
+… sondern der Wikipedia
+entnommen: Die Turmbergbahn ist eine Standseilbahn, die von Karlsruhe-Durlach aus auf den
+Turmberg führt. Sie wurde
+1888 eröffnet und ist damit
+
+
+
+die drittälteste Standseilbahn in Deutschland, und die älteste, die noch in Betrieb ist.
+Auf einer Streckenlänge von 315 m überwindet die Bahn eine Höhendifferenz von
+100 m bei einer maximalen Steigung von
+36,2 %.
+Die Turmbergbahn wurde am 1. Mai 1888
+dem Betrieb übergeben. Der Antrieb erfolgte durch Schwerkraft mit Wasserballast,
+d. h. ein Tank im talwärts fahrenden Wagen
+wurde mit der erforderlichen Menge
+Wasser befüllt und zog den bergwärts
+fahrenden nach oben. Die Strecke war
+ursprünglich zweigleisig. (Anm.: Nach
+Erzählungen meiner Eltern bin ich mit
+dieser wasserbetriebenen Variante auch
+schon gefahren, allerdings nur im Kinderwagen.)
+Die Bahn wurde 1966 umfassend umgebaut. Dabei wurden der WasserballastAntrieb durch einen elektrischen Antrieb
+ersetzt, neue Wagen beschafft und die
+zweigleisige Strecke zu einer eingleisigen
+mit in der Mitte liegender Abt'scher
+Ausweiche umgebaut. Die Bahnhofsgebäude an der Tal- und Bergstation
+wurden durch Neubauten ersetzt.
+
+entgegenkommender Fahrzeuge beziehungsweise Bahnkabinen selbsttätig („automatisch“) zu bewerkstelligen. Die Abt'sche
+Weiche ermöglicht auch eine problemlose
+Führung des Antriebsseils, welches mit
+schräg gestellten Rollen zwischen den
+Fahrschienen korrekt in das jeweilige
+Ausweichgleis geführt wird.
+Jeder Radsatz eines Wagens ist mit zwei
+unterschiedlichen Rädern ausgerüstet: auf
+einer Seite mit einem Doppelspurkranzrad
+mit beidseitigen Spurkränzen (auch Doppelflanschrad genannt) und auf der anderen
+Seite mit einem breiten Walzenrad ohne
+Spurkränze.
+Die Weiche selbst ist starr, muss also
+aufgrund systembedingt fehlender beweglicher Teile nie gestellt werden. Damit ist
+sie sowohl weitestgehend wartungsfrei als
+auch völlig ausfallsicher, was bei Bahnen
+dieser Art mit ihren zum Teil sehr steilen
+Strecken einen wichtigen Sicherheitsfaktor
+darstellt.
+
+Quellen
+[1]
+
+Wikipedia: Turmbergbahn.
+
+[2]
+
+Mäsig, Ludger: Riesen-LKW.
+
+Auch kein Geheimnis…
+
+[3]
+
+… sondern Wikipedia entnommen, aber um
+einige Textstellen gekürzt: Die Abt'sche
+Weiche:
+
+Mäsig, Ludger: Selbstgebautes
+Differenzial.
+
+[4]
+
+Wikipedia: Abtsche Weiche.
+
+Die abtsche Weiche (auch Abt'sche
+Weiche) ist eine vom Schweizer EisenbahnKonstrukteur Carl Roman Abt (1850-1933)
+als „passive Weiche“ erfundene Gleiskonstruktion für Standseilbahnen, die eine
+selbsttätige Vorbeifahrt der Fahrzeuge an
+einer Ausweichstelle eingleisiger Strecken
+ermöglicht.
+Diese Weichenkonstruktion ohne Weichenzunge und sonstige bewegliche Teile findet
+an den in der Streckenmitte nötigen
+Ausweichstellen eingleisiger Standseilbahnen Anwendung, um die Vorbeifahrt
+
+
+
+Modell
+
+
+
+

@@ -1,0 +1,98 @@
+
+
+Physik
+
+Kettenrätsel
+Rüdiger Riedel
+Kettenfontänen und Kettenfünfecke – manchmal versucht man das Eine und findet das Andere.
+
+Kettenfünfecke
+
+
+Wickeln wir eine alte fischertechnik-Kette
+(36263) spiralförmig auf, ergibt sich immer
+(?) ein einigermaßen regelmäßiges Fünfeck.
+Aber warum? Liegt es an der fischertechnik-Kette? Erwartet habe ich Sechsecke;
+beim kleinen Wickel ist in der innersten
+Schicht eine Andeutung davon zu sehen.
+
+
+Die neue fischertechnik-Kette (36248) verhält sich ähnlich.
+
+
+
+Der Wickelsinn scheint unerheblich zu sein,
+vergleiche Abb. 1 rechts und Abb. 2.
+
+Die Gestaltbildung in Abb. 4 ist noch nicht
+abgeschlossen; die Zahl der Glieder (31426
+und 31436) ist zu gering. Könnte sich hier
+auch eine fünfstrahlige Symmetrie herausbilden?
+
+
+
+Physik
+
+Kettenfontäne
+Im Internet bin ich auf das Phänomen der
+aufsteigenden Kette beim Rutschen aus
+einem Glas gestoßen [1, 2].
+Ich startete den Versuch mit einer 9 m
+langen Kugelkette, wie sie den Stöpsel im
+Waschbecken hält. Sie wird in ein kleines
+Glas gefüllt und am Anfang mit einem Baustein beschwert, damit sie schneller auf
+Geschwindigkeit kommt. Das Ganze wird
+an den Rand des Tisches gestellt (Abb. 5).
+
+Der Behälter von Abb. 7 ist so gestaltet,
+dass die Kette mäanderförmig darin zu
+liegen kommt. Dann wird das Kettenende
+herausgenommen und fallengelassen [3].
+
+
+Während die Kette herunter fällt, zieht sie
+sich selbst aus dem Glas. Aber statt am
+Glasrand herunterzurutschen, steigt sie ein
+Stück auf zu einem in der Luft schwebenden
+Bogen (Abb. 6).
+So etwas hätte ich gerne mit fischertechnikBauteilen realisiert. Aber das ist eine
+Herausforderung. Eine Schwierigkeit besteht im flachen Aufbau der fischertechnikKetten. Der Ablauf muss also so geführt
+werden, dass keine Drehung erfolgt.
+
+
+Der Bogen, den die Kettenfontäne in Abb. 8
+beschreibt, ist nicht sehr hoch, weil die
+Kettenglieder sehr leicht sind. Bei der
+schwereren Kette in Abb. 5, 6 bewirkt das
+Beschleunigen der Glieder nach oben, dass
+durch deren Trägheit die Fontäne deutlich
+sichtbar wird – die Glieder wehren sich
+sozusagen dagegen, einfach flach aus dem
+
+
+
+
+Glas gezogen zu werden, weil sie ja Impuls
+in Richtung nach oben besitzen.
+Dieser Effekt ist bei der fischertechnikKette erkennbar, aber eben deutlich weniger
+ausgeprägt.
+
+
+
+Referenzen
+[1]
+
+A. Ruh: Kettenfontäne. Der MouldEffekt. 2015.
+
+[2]
+
+J. S. Biggins, M. Warner: Unterstanding the Chain Fountain. Submitted
+to Royal Society, 2013.
+
+[3]
+
+Rüdiger Riedel und Stefan Falk:
+Kettenfontäne mit fischertechnik. Auf
+YouTube, 2022.
+
+

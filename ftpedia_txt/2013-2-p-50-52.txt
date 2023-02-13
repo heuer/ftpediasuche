@@ -1,0 +1,165 @@
+
+
+Computing
+
+I²C mit dem TX – Teil 5: Multiplexer
+Georg Stiegler
+Seit dem Firmware-Update vom April 2012 auf Version 1.30 lassen sich am TX beliebige I²CKomponenten anschließen und mit den Robo Pro Versionen ab 3.1.3 ansteuern. Will man
+dabei mehrere Komponenten mit der gleichen I²C-Adresse betreiben kann man drohende
+Adress-Konflikte mit einem sogenannten Multiplexer vermeiden.
+
+Hintergrund
+Wer ebenso wie ich vom „I2C-Virus“
+infiziert ist und Spaß an den vielen
+zusätzlichen Möglichkeiten findet, die der
+I2C-Bus bietet, ist vielleicht auch schon
+mal in die missliche Lage gekommen
+gleichzeitig mehrere Komponenten mit der
+gleichen I2C-Adresse betreiben zu wollen.
+Da aber jede Komponente eine eindeutige
+Identifikation im Daten-Bus benötigt muss
+man, sofern es die jeweilige Komponente
+zulässt, entweder per Hardware (z. B.
+Jumper beim „Thermometer-DS1631“ von
+Conrad) oder durch programmierbare
+eigene Adressen (z. B. „rgb-LED-BlinkM“
+von ThingM) dafür sorgen, dass es nicht zu
+Konflikten zwischen den Komponenten
+kommt. Aber nicht jedes Modul bietet
+diese Möglichkeit. Eine prima funktionierende Lösung kann ein Multiplexer
+sein, der hier vorgestellt wird.
+
+Der PCA9544A
+Dieser Baustein [1,2] ist eine Art digitaler
+Umschalter zwischen vier Datenausgangskanälen, die am Dateneingangskanal per
+I2C-Befehle angesteuert werden können
+(Abb. 1). Oder anders ausgedrückt fächert
+sich ein so genanntes „SCL/SDA upstream
+pair“ in vier „SCx/SDx downstream pairs“
+auf (Abb. 2).
+
+
+Dabei kann immer nur ein Kanal aktiviert
+werden. Erst nachdem dieser wieder
+deaktiviert wird kann ein anderer Kanal
+angesprochen werden. Von besonderem
+Interesse ist die Möglichkeit, jeden einzelnen Kanal oder I2C-Subbus mit unterschiedlicher Spannung zu versorgen,
+sodass 1,8 V-, 2,5 V- oder die weit verbreiteten 3,3 V-Komponenten ohne weitere
+Schutzmaßnahmen mit 5 Volt-Komponenten kommunizieren können. Der VDDAnschluss des Multiplexers gibt die
+maximal durchgelassene Spannung der
+Signalleitungen vor.
+
+
+
+Tipps & Tricks
+
+Der Vollständigkeit halber sei erwähnt,
+dass für jedes SCx/SDx Downstream Paar
+auch noch je ein Interrupt-Eingang zur
+Verfügung steht (INT0-INT3). Der Interrupt-Ausgang (INT) wirkt dabei als ein
+AND für die vier Interrupt-Eingänge. Falls
+man wie ich als reiner RoboPro-Anwender
+diese nicht nutzt, soll man die InterruptEingänge wie im Datenblatt empfohlen
+über Pullup-Widerstände gegen Masse
+legen. Auf dem bereits gezeigten Breakout
+Borad der Firma DSS Circuits sind diese
+Widerstände bereits integriert.
+Da ein Großteil der I²C-Komponenten mit
+5 V oder 3,3 Volt betrieben werden kann,
+beschränke ich mich in meiner Lötarbeit
+auf diese Typen (Abb. 3 und 4).
+
+I²C-Kommandos
+Die 7-Bit-Adresse des Multiplexers lautet
+0x70, sofern die Kontakte A0 bis A2 gegen
+Masse gelegt wurden (wird im Binär-Code
+jeweils als „0“ interpretiert):
+1110 A2 A1 A0
+
+1110000 = 0x70
+
+So lassen sich dann bis zu acht Multiplexer
+adressieren:
+1110 A2 A1 A0
+
+1110111 = 0x77
+
+Da der PCA9544A eine I²C-Datenübertragungsgeschwindigkeit von bis zu 400 kHz
+zulässt, können wir unter Geschwindigkeit
+den „Fast Mode“ mit 400 kHz auswählen.
+Beim Anlegen der Versorgungsspannung
+an den Multiplexer sind alle Kanäle
+deaktiviert. Um einen Kanal zu öffnen
+sendet man einfach ein Datenbyte mit
+folgendem Aufbau:
+Binärcode: 00000 B2 B1 B0
+Dabei ist B2 das so genannte „enable Bit“
+(0 = deaktivieren, 1 = aktivieren), B1 und
+B0 stehen für die vier Kanäle 0, 1, 2 und 3.
+Beispiel: Aktivierung des Kanals 2 ergibt
+den Wert 00000 1 1 0 (binär) = 0x06 (hex).
+
+Spannungswandler
+
+Kanal 0: 00000 1 0 0 = 0x04
+Kanal 1: 00000 1 0 1 = 0x05
+Kanal 3: 00000 1 1 1 = 0x07
+
+
+
+
+Danach ist der entsprechende Kanal quasi
+geöffnet und die angeschlossenen Slaves
+werden so angesprochen, als wäre sie
+direkt mit dem TX-Controller verbunden.
+Um einen anderen Kanal zu wählen, muss
+der offene Kanal erst wieder geschlossen
+werden. Also sendet man ein Datenbyte, in
+dem das „enable Bit“ B2 auf „0“ gesetzt ist
+(einen Kanal muss man nicht wählen):
+00000 0 x x
+
+00000 0 0 0 = 0x00
+
+
+
+Da man ja immer – außer beim ersten
+Kanal-Öffnen – den „Schließen-Befehl“
+schicken muss, kann man es sich einfach
+machen und beides kombinieren:
+Zuerst kommt die Geräteadresse, gefolgt
+von dem „Schließen-Befehl“ als Unteradresse und danach dann als „Datenwert“
+über den Dateneingang der Befehl „KanalÖffnen“ (Abb. 6).
+Der große Vorteil des Multiplexers ist,
+dass man in RoboPro den Kanal und die
+daran angeschlossenen Komponenten
+mittels Datenwert über den Dateneingang
+anwählen kann. Dadurch kann man bei
+identischen Sensoren an mehreren Kanälen
+auf die gleichen I2C-Programmelemente
+zugreifen ohne diese – mit jeweils einer
+separaten Geräteadresse versehen –
+entsprechend duplizieren zu müssen.
+Wer mag kann hier den RoboPro-Treiber
+downloaden:
+Multiplexer-Treiber_PCA9544A.rpp
+Diese Datei enthält drei Varianten, den
+Multiplexer anzusteuern.
+
+
+Quellen
+[1]
+
+NXP: PCA9544A / 4-channel I2Cbus multiplexer with interrupt logic.
+Product data sheet, Rev. 04,
+15.06.2009.
+
+[2]
+
+P. Boogaards, J.-M. Irazabal, S.
+Blozis: PCA954X Family of I²C /
+SMBus Multiplexers and Switches.
+Application Note AN262_2, Philips
+Semiconductors (NXP), 27.10.2004.
+
+

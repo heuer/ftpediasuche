@@ -1,0 +1,208 @@
+
+
+Modell
+
+Multiplexausgänge am Robo(tics) TX(T)
+Andreas Gail
+Der ROBO TX Controller und auch sein Nachfolger haben nur acht Ausgänge. Bei klassischer
+Verschaltung können also maximal acht Lampen oder LEDs angeschlossen werden (oder alternativ natürlich auch Motoren usw.). Bei einer reinen Visualisierungsaufgabe können mit diesen
+acht Ausgängen unter Anwendung des Multiplexverfahrens aber bis zu 16 LEDs individuell
+angesteuert werden. Wer hätte das gedacht?
+
+Das Grundprinzip
+Die Anwendung des Multiplexverfahrens
+wurde bereits in einer früheren Ausgabe der
+ft:pedia gezeigt [1]. Hierbei wurde ein
+Tastenfeld (Nummernblock) in schneller
+Folge wiederkehrend abgefragt und auf
+diese Weise betätigte Tasten erkannt. Das
+Grundprinzip der ähnlich funktionierenden
+Multiplexausgänge zeigt Abb. 1:
+
+Ausgänge O5…8 eingeschaltet. Die 16
+LEDs müssen alle so eingebaut sein, dass
+bei dieser Einstellung keine leuchtet. Um
+z. B. LED 7 alleine einzuschalten, muss
+Ausgang O3 ein- und Ausgang O6 ausgeschaltet werden. Unter diesen Bedingungen
+leuchtet nur LED 7. Sollen LED 7 und LED
+10 gleichzeitig leuchten, gibt es allerdings
+ein Problem: Es würde dazu kommen, dass
+die LEDs 6, 7, 10 und 11 gleichzeitig
+leuchten würden, wenn nach demselben
+Prinzip wie oben beschrieben die Ausgänge
+O2 und O3 ein- und die Ausgänge O6 und
+O7 ausgeschaltet werden.
+Um zu vermeiden, dass die nicht erwünschten LEDs 6 und 11 leuchten, muss in möglichst schneller Folge zwischen den Einstellungen für LED 7 und LED 10 hin- und her
+geschaltet werden. Umso schneller das
+passiert, desto weniger erkennt man ein
+Flackern oder Blinken.
+
+acht Ausgängen am Controller
+
+Die acht zur Verfügung stehenden Ausgänge des Robo(tics) TX(T) Controllers
+(RTXTC) sind benannt O1…8. Damit sich
+einzelne LEDs gezielt ansteuern lassen,
+werden zunächst als Grundeinstellung die
+Ausgänge O1…4 ausgeschaltet und die
+
+Für die systematische Ansteuerung aller 16
+LEDs wird zeilenweise vorgegangen: O5,
+O6, O7, O8 und wieder beginnend bei O5
+usw. Je nach gewünschter Einstellung
+innerhalb einer Zeile müssen die Ausgänge
+O1, O2, O3, O4 eingestellt werden. Nach
+einer gewissen Anzeigezeit einer Zeile
+werden die Zeileneinstellungen wieder
+zurückgestellt und die Einstellungen für die
+nächste Zeile vorgenommen.
+
+
+Computing
+
+Modellaufbau
+
+Motoren lassen sich auf diese Weise gar
+nicht betreiben.
+
+In Abb. 2 ist der Modellaufbau zu sehen. Im
+Grunde besteht dieser nur aus dem RTXTC
+und 16 LEDs mit der entsprechenden
+Verkabelung. Die beiden Taster ermöglichen die Einstellung, wie viele LEDs
+angesteuert werden sollen. Wenn z. B. über
+die Taster die Zahl 7 vorgewählt wird,
+werden die LEDs 1…7 angesteuert. Auf
+diese Weise kann das zeitliche Verhalten
+des Systems bis zur maximalen Ansteuerung beobachtet werden.
+
+Die Software in ROBO Pro
+Die Software besteht aus zwei parallel
+laufenden Schrittketten. Die erste Schrittkette gemäß Abb. 3 dient nur dazu, um eine
+Zahl im Bereich 0…16 einzustellen, die
+dann über die LEDs angezeigt werden soll:
+
+per Multiplexverfahren mit 16 LEDs
+
+Ansteuerung von Glühlampen
+oder Motoren
+Aus gutem Grund wurde bislang nur davon
+gesprochen, LEDs anzusteuern. Mit Glühlampen alleine klappt das nämlich nicht.
+Wenn Glühlampen statt LEDs verwendet
+werden sollen, ist eine zusätzliche Diode
+erforderlich (z. B. Typ 1N4007). Allerdings
+ist unter Verwendung der von fischertechnik bereitgestellten Lampen nur mit
+einer geringen Helligkeit zu rechnen.
+
+zur Einstellung eines Anzeigewertes per Taster
+und Anzeige des aktuellen Werts auf der
+Systemanzeige
+
+Die zweite Schrittkette verwendet den eingestellten Anzeigewert Count und stellt
+diesen über die 16 LEDs dar. Abb. 4 zeigt
+die Schrittkette und Abb. 5 die zugehörigen
+Unterprogramme.
+Programmablauf Schrittkette 2
+Wie Abb. 4 also zeigt, wird zu Beginn die
+Grundeinstellung aller Zeileneinstellungen
+
+
+
+gesetzt (Unterprogramm ON_5678). So
+wird sichergestellt, dass zum jetzigen Zeitpunkt keine LED angesteuert wird.
+Der Wert Count wird über die Schrittkette 1
+bereitgestellt. Da Count nicht über Schrittkette 2 geändert werden darf, wird eine
+Kopie davon erzeugt, die CountShow heißt.
+Der Wert in CountShow wird bis zur vollständigen Darstellung im nachfolgenden
+Programmablauf je nach Bedarf mehrfach
+geändert.
+Zunächst wird die Zeileneinstellung O5
+aktiviert. Wenn der Wert von CountShow
+kleiner als vier ist, verzweigt das Programm
+weiter nach unten und die Fälle CountShow
+= 0…3 werden bearbeitet. Hierbei werden
+die Spalteneinstellungen über die Unterprogramme ON_1, ON_12, ON_123 oder
+OFF_1234 vorgenommen. Für eine Zeile
+sind nun alle Einstellungen vollständig und
+eine minimale Wartezeit wird begonnen.
+Diese ist mit 0,001 s (= 1 ms) deutlich
+schneller abgelaufen als der Controller es
+bearbeiten kann. Trotzdem ist diese Wartezeit wichtig, um alle Definitionsänderungen
+an den Ausgängen tatsächlich einzustellen.
+Weitere Zeileneinstellungen sind bei einem
+Wert von CountShow = 0…3 nicht erforderlich. Deshalb läuft dieser Zyklus am
+schnellsten.
+
+Ansteuerung von vier LEDs in einem Feld
+von 2 ∙ 2 LEDs. Hierfür würden bei nur vier
+LEDs auch vier Ausgänge am RTXTC
+benötigt – die direkte Ansteuerung der
+LEDs wäre dabei zu bevorzugen.
+
+Einschränkungen
+Die im Modell gezeigten LEDs sind von
+fischertechnik (152223) und können ohne
+Vorwiderstand betrieben werden, Typen
+aus dem Elektronikhandel benötigen
+überlicherweise einen Vorwiderstand zur
+Begrenzung des Stroms. Zum zusätzlichen
+Schutz der LEDs wegen der anstehenden
+Sperrspannungen könnte eine Diode z. B.
+1N4148 in Reihen verwendet werden.
+Das beschriebene Verfahren ist zeitkritisch.
+Deshalb funktioniert es praktisch nur, wenn
+das Programm in den RTXTC geladen wird
+und dort autark abläuft. Beim Programmablauf auf einem PC ist die Kommunikation
+zwischen PC und RTXTC deutlich zu
+langsam.
+
+Die übrigen Programmschritte werden verwendet, wenn mehr als eine Zeileneinstellung erforderlich ist. Die Grundidee dabei
+ist, dass geprüft wird, ob in der nächsten
+Zeile alle vier LEDs angesteuert werden
+sollen. Wenn ja, erfolgt dieses mit einer
+eigenen Wartezeit.
+
+Allgemein sind die vorhandenen fischertechnik-Controller
+hinsichtlich
+ihrer
+Zykluszeit vergleichsweise stark limitiert.
+Selbst der relativ neue aktuelle TXT Controller gemäß Abb. 2 (App-Version 4.2.3.0,
+Sys 4.2.3.0) schafft keine für das menschliche Auge flackerfreie Ansteuerung.
+Mikrocontroller können so etwas normalerweise. Es bleibt zu vermuten, dass es durch
+geeignete Software möglich sein könnte,
+einen Controllermodus einzurichten, der
+eine maximal schnelle Steuerprogrammabarbeitung erlaubt, ggf. unter Verzicht auf
+weitere Kommunikationsaufgaben und
+sonstige Systemverwaltungen.
+
+Weniger LEDs ansteuern
+
+Quellen
+
+Prinzipiell ist es natürlich auch möglich,
+weniger als 16 LEDs (in einem Feld 4 ∙ 4,
+vergl. Abb. 1) nach der hier beschriebenen
+Methode anzusteuern. Es können z. B. auch
+neun LEDs in einem Feld 3 ∙ 3 eingesetzt
+werden, was dann sechs Ausgänge am
+RTXTC benötigt. Nicht sinnvoll ist z. B. die
+
+[1]
+
+Gail, Andreas: Nummernblock am
+Robo TX Controller. ft:pedia 1/2015,
+S. 91-98.
+
+[2]
+
+Gail, Andreas: fischertechnik:
+Multiplexausgänge mit Robo TX(T)
+bis zu 16 LEDs ansteuern. YouTubeVideo, 2017.
+
+
+
+Computing
+
+ausgehend vom Wert, der unter Schrittkette 1 eingestellt wurde
+
+
+
+

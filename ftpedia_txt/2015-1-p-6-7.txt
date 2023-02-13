@@ -1,0 +1,71 @@
+
+
+Schienenfahrzeuge
+
+fischertechnik auf Holzschienen
+Gerhard Birkenstock
+Man nehme: einen Mini-Motor, einen E-Magnet und vier Reibräder. Und im Handumdrehen
+wird daraus eine fischertechnik-Rangierlok für die Holzeisenbahn.
+Meine Kinder haben zu Weihnachten von
+mehreren unabhängigen Christkindern die
+gleichen Komponenten für eine Holzeisenbahn geschenkt bekommen.
+Obwohl die Züge und Gleise von unterschiedlichen Herstellern stammen, passte es
+doch recht gut zusammen. Und da, wo es
+nicht passte, wurde nachgeholfen. So ist
+eine beachtliche Anlage entstanden. Dass
+auf diesem großen Gleis eine fischertechnik-Rangierlok fahren musste, war natürlich klar.
+
+Für die ersten Fahrversuche wurde ein
+fischertechnik-Dauermagnet als Kupplung
+verwendet. Der hat sehr gut gehalten –
+jedoch war damit kein Rangeierbetrieb
+möglich, es musste immer Hand angelegt
+werden. Das machte keinen Spaß – für den
+realistischen Betrieb musste daher eine
+Fernbedienung für die Kupplung her.
+Da fiel mir der Elektromagnet ein. Allerdings ‚klebte‘ der Magnet des angehängten
+Waggons auch nach dem Ausschalten des
+Stromes weiter am Magnetkern.
+Die Lösung brachte die Polwendung des
+Elektromagneten. Damit wird sicher gehalten und abgekuppelt (abgestoßen).
+Ein weiterer schöner Effekt ist, dass man
+die Waggons in jeder Richtung anhängen
+kann: Ganz gleich, ob der (magnetische)
+Nord- oder Südpol zur fischertechnikLokomotive zeigt, mittels Polwendung
+kann das ausgeglichen werden.
+
+
+Für den Antrieb sorgt ein kleiner fischertechnik-Mini-Motor. Das kleine Getriebe
+bringt das Drehmoment auf die Starrachse.
+Die Anordnung der Antriebsachse zwischen
+Motor und Elektromagnet liefert ordentlich
+Gewicht für die Reibräder (Abb. 1). So ist
+das kleine Modell in der Lage, alle acht
+Waggons zu bewegen.
+Der Antriebsmotor wird aus einem fischertechnik-Transformator mit Energie versorgt. Die Fahrtrichtung und Geschwindigkeit lassen sich damit gut regeln.
+
+Die von der Fahrtrichtung unabhängige
+Versorgungsspannung kann man mittels
+Gleichrichterbaustein aus der Wechselstromseite des Transformators gewinnen
+(Abb. 2).
+
+
+
+Schienenfahrzeuge
+
+Wenn jemand eine weitere Variante als
+Lokomotive für diese Holzeisenbahn hat –
+kleiner, schöner, mehr Ausstattung, … –
+würde ich gerne davon erfahren!
+
+Querverweis
+[1]
+
+Walter-Mario Graf: fischertechnikEisenbahn (Teil 1). ft:pedia 4/2012,
+S. 11-13.
+
+und Gleichrichterbaustein
+
+
+
+

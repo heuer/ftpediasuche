@@ -1,0 +1,219 @@
+
+
+Computing
+
+Sensoren am TXT: Die Kamera
+Kurt Mexner
+Mit verschiedenen Sensoren werden die Möglichkeiten des TXT Discovery Sets erheblich
+erweitert. Mit dieser Reihe möchte ich einige dieser Sensoren vorstellen. In diesem Beitrag
+beschäftigen wir uns mit der mitgelieferten USB-Kamera.
+
+Die Möglichkeiten der Kamera
+Die Entwickler des TXT haben der Kamera
+in ROBO Pro einige erstaunliche sensorische Fähigkeiten beigebracht. Die Kamera
+erkennt:
+
+
+
+
+
+
+
+Bewegung
+Licht und Infrarotlicht
+Farbe
+Linien
+eine runde Form
+Geräusche (über das eingebaute Mikrofon)
+
+Natürlich kann sie auch einfach nur Bilder
+erzeugen und via WLAN/USB zum PC
+übertragen. Im TXT Discovery Set spielt
+die Kamera beim Linien- und Ballverfolger
+eine große Rolle.
+
+Schalten mit Papier
+Hättet ihr gedacht, dass man mit gemalten
+Schaltknöpfen (Abb. 1) richtig schalten
+kann?
+
+
+Des Rätsels Lösung offenbart sich im
+nächsten Bild: Es gelingt mit einer darüber
+montierten Kamera. Ein 7,5°-Winkelstein
+sorgt für eine leichte Schrägstellung:
+
+Dadurch kann die Kamera das davor liegende Blatt besser erkennen (Abb. 2).
+
+
+Einstellung des Sensorfeldes
+Nach dem Anklicken des Reiters ‚Kamera‘
+wird der Bildschirm der Kamera angezeigt.
+Hierfür müssen im linken oberen Bereich
+das Häkchen „Kamera einschalten“ gesetzt
+und die Kamera am TXT Controller angeschlossen sein.
+Ganz links oben unter ‚Elementgruppen‘
+findet sich die Eintragung „Sensorfelder“.
+Beim Anklicken werden die verschiedenen
+Sensorfelder angezeigt. Wir klicken das
+Feld ‚Bewegung‘ an und gehen mit der
+Maus in den Kamerabildschirm. Der Mauszeiger verwandelt sich in einen Bleistift, mit
+dem wir jetzt ein Viereck beliebiger Größe
+in dem Kamerabildschirm platzieren können. Mit einem Doppelklick wird es fertiggestellt.
+
+
+Computing
+
+Obwohl noch kein Programm vorhanden
+ist, kann man testen, ob die Kamera eine
+Bewegung erkennt. Dazu wird der StartKnopf gedrückt. Wenn man nun mit der
+Hand unter der Kamera eine Bewegung
+durchführt, wechselt die Farbe des Vierecks
+von blau zu gelb, und bei Kontrast und
+Größe werden Werte angezeigt.
+Das funktioniert aber nur, wenn eine relativ
+schnelle Bewegung vorgenommen wird.
+Eine langsame Bewegung wird nicht
+erkannt. Die Empfindlichkeit des Sensorfeldes lässt sich einstellen, in dem man das
+Feld mit der rechten Maustaste anklickt.
+Im Programm „4 Lampen als Schalter“
+werden auf diese Weise vier Sensorfelder
+angelegt, die sich genau über den aufgemalten Punkten befinden (Abb. 3). Dabei
+sollte die Kamera eingeschaltet sein, damit
+man die Sensorfelder richtig positionieren
+kann.
+
+Bedienung
+Wenn ein Finger schnell in den aufgemalten
+Schaltknopf bewegt und schnell wieder
+herausgezogen wird, wird auf dem Monitor
+die entsprechende Lampe 1, 2, 3 oder 4
+eingeschaltet. Wird der Finger sehr spät
+wieder entfernt, besteht die Gefahr, dass
+zusätzlich ein Ausschaltimpuls erzeugt
+wird. Man benötigt daher für die Bedienung
+etwas Fingerspitzengefühl.
+Durch Einstellung der folgenden Variablen
+(Grundeinstellungen) kann die optimale
+persönliche Variante gefunden werden.
+
+
+
+
+Verzweigungselement A>10: eine
+Verkleinerung des Vergleichswerts steigert die Empfindlichkeit. Der Nachteil
+besteht darin, dass dann bereits der
+Schatten der Hand oder eines Fingers
+einen Schaltimpuls auslöst.
+Das Element Wartezeit wurde von mir
+auf 1,4 s eingestellt. Wenn die Wartezeit
+vergrößert wird, kann man sich mit dem
+„Rückzug“ des Fingers mehr Zeit
+lassen.
+
+
+
+
+
+
+
+Anklicken des Sensorfeldes im Kamerareiter: Es öffnet sich ein Menü, in dem
+die Stärke und Größe der Bewegung
+eingestellt werden können.
+
+Es werden vier Programme gleichzeitig
+gestartet. Jedes Programm überwacht ein
+Sensorfeld, das seinerseits den aufgemalten
+Schaltknopf im Kamera-Blick hat (Abb. 4).
+Ein Verzweigungselement wartet auf einen
+Wert größer 10 und erzeugt dann den Befehl
+zum Einschalten eines Motors bzw. einer
+Lampe. Danach wird 1,4 Sekunden gewartet. Eine neue Bewegung schaltet danach
+Motor oder Lampe wieder aus.
+
+Das Programm
+
+Gesten erkennen
+
+
+Eine kleine Programmänderung und ein
+Aufstellen der Kamera auf dem Boden mit
+Blickrichtung zur Decke ermöglichen eine
+Steuerung des TXT mit Gesten. Wenn man
+vor der Kamera steht und die linke Hand
+nach vorne bewegt, wird eine Lampe oder
+ein Motor eingeschaltet. Mit der rechten
+Hand kann ein weiteres Gerät eingeschaltet
+werden. Eine nochmalige Bewegung nach
+vorne schaltet aus. Mit einer weiten Bewegung von rechts nach links (oder umgekehrt) können auch beide Sensorfelder
+angesteuert werden.
+
+
+
+
+Computing
+
+Im Reiter ‚Kamera‘ werden zwei Sensorfelder angelegt (Abb. 5). Beide Felder sind
+flach und breit. Das Sensorfeld „Bewegung1“ beginnt ganz links und endet ein
+gutes Stück vor der Mitte. Das Sensorfeld
+„Bewegung2“ beginnt ganz recht und endet
+auch kurz vor der Mitte. Somit entsteht in
+der Mitte ein Bereich, in dem keine
+Bewegung wahrgenommen wird. Die
+folgende Abb. 6 verdeutlicht die Zusammenhänge.
+
+„warten auf“ wartet darauf, dass es von
+Bewegungselement1 oder Bewegungselement2 einen Wert erhält, der größer 10 ist.
+Der Nutzer muss somit mit seinen Armen
+eine Bewegung nach vorne machen.
+Daraufhin wird eine Lampe eingeschaltet.
+ROBO Pro wartet zwei Sekunden, damit es
+nicht mehrere Befehle erhält und der Nutzer
+aus Versehen die Lampe ausschaltet. Nach
+zwei Sekunden schaltet eine erneute Bewegung die Lampe wieder aus.
+Das Programm „Gestenerkennung“ (Abb.
+7) kann über die Webseite zu dieser Ausgabe der ft:pedia heruntergeladen werden.
+
+Anwendungen
+
+
+Programmablauf
+Es laufen zwei Programme gleichzeitig,
+jeweils eins für die rechte und eins für die
+linke Bewegung. Sie müssen beide mit dem
+Knopf „Ein“ gestartet werden. Das Element
+
+Das Programm ermöglicht, durch eine Bewegung einen Motor, eine Lampe oder
+einen anderen Aktor zu steuern. Es wäre
+auch möglich, komplexere Programmabläufe zu kontrollieren: z. B. einen Greifarm,
+der nacheinander Objekte aufnimmt und an
+unterschiedlichen Stellen wieder ablegt.
+Das Weiterschalten zu einem nächsten Programmschritt könnte durch Gesten gesteuert werden.
+
+
+
+
+
+Ich habe noch ein weiteres Hobby, die
+Zauberei. Ich arbeite daran, fischertechnik
+dort ebenfalls zu nutzen. Denkbar wäre eine
+Kiste, deren Deckel sich hebt und dann ein
+Pumuckl herauskommt. Auch Donner oder
+Blitz könnten von einer Bewegung ausgelöst werden.
+
+
+Referenzen
+Bisher sind in der Reihe „Sensoren am
+TXT“ die folgenden Beiträge erschienen:
+[1]
+
+Kurt Mexner: ROBO Pro wird
+sensibel - Lichtempfindliche
+Widerstände. ft:pedia 3/2021, S. 67–
+69.
+
+[2]
+
+Kurt Mexner: Sensoren am TXT: IRDioden und -Transistoren. 4/2021, S. 31–34.
+
+

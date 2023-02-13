@@ -1,0 +1,228 @@
+
+
+Computing
+
+Revival: Relais und Gabellichtschranke an TXT
+und ftDuino
+Matthias Dettmer
+Mal Hand auf’s Herz: Wer hat zuletzt etwas mit einem oder mehreren Silberlingen, etwa dem
+h4RB (36392), dem alten Relaisbaustein RBII (37683) oder gar einer Gabellichtschranke
+(32357) aus dem ersten Robotics-Baukasten gebaut? Für mein Projekt „Solarfarm“ brauchte
+ich mindestens sechs, besser acht Relais, um zwischen Solarzellen, Verbrauchern und Speichern „herumschalten“ zu können. Tief unten in meinem Fundus fand ich acht h4RB – also los.
+
+Relais am Controller
+Mit der heutigen Technik, also einem TX
+oder TXT, können die Relaisbausteine nicht
+direkt verwendet werden. Sie werden nämlich in „negativer Logik“ angesteuert: 0
+Volt am Eingang „E“ sorgt dafür, dass das
+Relais anzieht. Schließt man den Relaiseingang direkt an einen Ausgang O1 bis O8 des
+TXT an, dann zieht das Relais während der
+Initialisierung des TXT sofort an.
+Ein Programm im TXT müsste jetzt den
+Ausgang auf „High“ („Ein“) setzen, damit
+das Relais wieder abfällt. Ein erneutes Anziehen müsste invers angesteuert werden.
+
+So etwas ist im Programm hakelig, und der
+Zustand beim Anlaufen ist nicht gesteuert.
+Nun hat fischertechnik inzwischen interessante Elemente im Portfolio, die mir bei den
+Relais weitergeholfen haben. Alles was ich
+brauche, um einen Inverter zu bauen, der
+aus Plus eben Minus macht, sind eine LED
+für 9 Volt (162134, oder mit Linse 162135)
+und einen Transistor, bestehend aus dem
+Gehäuse (152059) und entweder der Platine
+(152218) und einem NPN-Transistor BC
+547C (152860) oder dem „allerneuesten“,
+bereits aufgelöteten BC847C (185516) aus
+dem Profi E-Tronic-Baukasten (Abb. 1).
+
+
+
+Auf dem Schaltbild in Abb. 1 ist nicht die
+LED zu sehen, sondern an ihrer Stelle ein
+2k2 Widerstand. Das war der erste, gleich
+erfolgreiche Versuch. Zu beachten ist, dass
+der Relaisbaustein über seine Buchsen mit
+9 Volt versorgt werden muss. Hier kommt
+nicht der Gleichrichterbaustein zum Einsatz, sondern ich hole mir die Betriebsspannung direkt beim TXT ab. Weitere
+Relaisbausteine werden über die roten
+Steckbrücken mit Spannung versorgt – das
+Prinzip war damals schon genial, und das ist
+es meiner Meinung nach immer noch.
+Steuere ich den Ausgang (zwischen 1 und
+8) mit „1“ an, dann fließen so um die 3 mA
+durch den Widerstand und die Basis. Der
+Transistor öffnet, das Relais zieht an. Nun
+könnte man meinen, weil das ja an O1 mit
+„1“ pulsweitenmoduliert ist, müsste das
+Relais anfangen wie verrückt zu rasseln.
+Zur Beruhigung: nein, das tut es nicht. Die
+Grundfrequenz des pulsweitenmodulierten
+Ausganges ist so um die 208 Hertz, mithin
+etwas weniger als 5 ms. Das Relais hat aber
+Abfallzeiten von bis zu 12 ms, und deswegen hört man nicht einmal etwas.
+Natürlich kann der Ausgang gerne auch mit
+„8“, also zu 100% durchgeschaltet werden.
+Streng genommen ist das ein wenig sozialverträglicher für die Elektronik, es fließen
+ca. 10 mA. Vielleicht ebenfalls interessant:
+Ein angezogenes Relais zieht etwa 33 mA
+(bei O1 = 1) bis 30 mA (bei O1 = 8) Strom
+aus der „Versorgung“.
+
+und Ansteuerung
+
+Computing
+
+Der Widerstand ist ein handelsüblicher
+Metallschichtwiderstand, der anstelle eines
+Birnchens in einer Klemm-Lampenfassung
+eingebracht wurde: Birnchen raus, Widerstand rein, festgeklemmt, fertig. Das Prinzip
+ist „fischertechnik-kompatibel“; im Profi
+Electronics-Baukasten gibt es genauso aufgebaute Widerstände, nur mit anderen
+Werten. Auch die sind neuerdings als fest
+verlötete Elemente zu haben.
+Nun wollte ich eigentlich sehen, ob das
+Relais „angezogen“ oder im Ruhezustand
+ist. Die oben erwähnte LED erspart mir das
+Gefummel mit dem Widerstand und spendiert mir im gleichen Zug die gewünschte
+Funktion. Ich muss nicht einmal ein fischertechnik-Originalteil verändern – perfekt!
+
+Gabellichtschranke an TXT
+und ftDuino
+Ein weiteres Element in meinem Projekt
+(über das ich hoffentlich bald auch einen
+Artikel schreiben kann 😉) ist eine Drehzahlmessung an einem Solarmotor. Der
+einfachste Ansatz ist ein Finger, der einmal
+pro Umdrehung eine Lichtschranke durchbricht. Zu schwer darf das Gebilde nicht
+werden; so stark ist der kleine Solarmotor ja
+nicht.
+Mitte der 1980er Jahr hatte fischertechnik
+nicht nur Interfaces für die wichtigsten damals gängigen Personal Computer (Atari,
+Apple, Schneider-CPC, IBM-PC) sondern
+auch einen Robotics-Baukasten herausgebracht. Mit diesem Baukasten konnte ein
+schon recht komplexer mehrachsiger Greifarm aufgebaut werden. Drehwinkel und
+damit indirekt Wege konnten über drei
+Sätze aus Walzenrädern (32367) und
+Gabellichtschranken (32357) gemessen,
+genauer: „abgezählt“ werden.
+Die Interfaces haben damals maximal 5
+Volt an ihren Eingängen „verkraftet“, die
+Ansteuerung der Motoren geschah über
+auch heute noch übliche H-Brücken, die
+aber ein separates Netzteil benötigten [1].
+
+
+
+
+
+Beim Betrieb an den 9 Volt des TXT
+werden die Gabellichtschranken sehr heiß
+und können zerstört werden. Einen kurzen
+Versuch halten sie aus – aber nicht nachahmen!
+Unter anderem bei fischerfriendsman, aber
+auch im Forum ist eine Schaltung mit einem
+Vorwiderstand und einem Transistor als
+Signalformer beschrieben. Scheut man die
+Fummelei mit anderen als den fischertechnik-üblichen Widerständen nicht, dann
+kann man die dort beschriebene Vorschaltung recht einfach umsetzen.
+
+Ein erster Versuch erfolgt über den Interface-Test in ROBO Pro: Einen Motor an
+M1 anschließen, Drehzahl eingeben, und
+auf Pulse warten. Eventuell muss am Stellpotentiometer der Gabellichtschranke nachjustiert werden – das hat aber bei allen
+meinen Versuchen auf Anhieb (und in der
+Nähe eines Anschlags, aber hey!) geklappt.
+Das Innenleben eines fischertechnikSteckers diente hier als „Angriffspunkt“ für
+eine Messung mit einem Oszilloskop. Aber
+wie oben gesagt: Eine Justage mit einem
+gelben ft-Schraubendreher im kleinen Loch
+im Deckel der Gabellichtschranke und unter
+Verwendung des Interface-Tests funktioniert auch ohne Oszilloskop – einmal bei
+laufendem Motor hin und her drehen,
+irgendwo stellen sich Pulse an C1 ein.
+Um nun verschiedene „Sprünge“ austesten
+zu können, wurden das Hauptprogramm
+und ein Unterprogramm für den TXT getrennt (Abb. 5, 6).
+
+Walzenrad am TXT
+
+Die „Pulsweiten-Schrittweite“ wurde bewusst so gewählt, dass sie auf einem
+ftDuino nachgebildet werden konnte. Der
+ftDuino erlaubt meiner Meinung nach eine
+viel flexiblere Anwendung des I2C-Bus,
+deswegen wird mein späteres Projekt zuerst
+auf einem solchen umgesetzt werden. Also:
+gleiche Beschaltung, ftDuino ersetzt TXT
+(Abb. 7).
+
+
+Computing
+
+
+Schritte mit 16 Punkten Abstand)
+
+Die Programmierung setzt das Ganze nur in
+Text statt in ROBO-Pro-Klötzchen um
+(Sketch Listing 1).
+
+dann links herum
+Listing 1: ftDuino-Sketch (Hauptprogramm)
+
+
+
+
+Der ftDuino bietet statt den 512 Schritten
+für die Pulsweitenmodulation nur 64
+Schritte, also nur ein Achtel an. Die über
+jeweils 5 Sekunden hinweg gezählten Pulse
+werden in einer Datei abgelegt.
+Ansonsten macht das Unterprogramm des
+ftDuino nichts anderes als das ROBO ProProgramm. Die vom Hauptprogramm eingestellte „Schrittweite“ wird erst rechts-,
+dann linksherum an den Motorausgang
+ausgegeben. Statt in eine Datei werden die
+gezählten Pulse über die serielle Schnittstelle des ftDuino ausgegeben und mit
+einem Terminalprogramm als Textdatei
+aufgezeichnet (Listing 2).
+
+(Drehzahlreduktion)
+
+Das Walzenrad hat 32 Striche auf dem
+Umfang. Für die wirklichen Umdrehungen
+muss die Zahl dann durch 32 geteilt werden.
+450 Pulse, geteilt durch 32 Striche, geteilt
+durch 5 wegen der 5 Sekunden „Zählzeit“
+und multipliziert mit 60 ergibt um die 170
+Umdrehungen pro Minute am Getriebeabgang. Das ist ein Wert, wie er schon an
+anderer Stelle bestätigt wurde [2].
+Mein Hauptziel, nämlich die uralten Elektronik-Bauteile h4RB und die Gabellichtschranke wiederzubeleben, ist damit erreicht. Bei ebay werden selbst für den
+allereinfachsten Gleichrichterbaustein nicht
+selten Mondpreise über 40 € und mehr aufgerufen; ein MonoFlop (h4MF) ist nicht
+unter 89 € zu haben. Was machen eigentlich
+die Käufer später damit? In eine Vitrine
+stellen? Weiter oder wieder verkaufen?
+
+Listing 2: Unterprogramm „GetOne“
+
+Hier zeigt sich ein wirklich interessanter
+Umstand: während die gezählten Pulse
+beim TXT in etwa linear abnehmen, fallen
+sie beim ftDuino eher exponentiell ab. Im
+Diagramm in Abb. 8 sind die absolut gezählten Pulse über der Anzahl von 5
+Sekunden langen Messungen abgetragen.
+
+
+Die Silberlinge gehören nicht ins Museum
+– sie verdienen immer noch, in Modelle
+eingebaut, genutzt – und ja, bespielt zu
+werden.
+
+Referenzen
+[1]
+
+René Trapp: V. I. P. – Ein I²C-nachComputing-Interface-Umsetzer (Teil
+2). ft:pedia 3/2017, S. 57–68.
+
+[2]
+
+René Trapp: Kenndaten der ftMotoren. ft:pedia 3/2013, S. 9–29.
+
+

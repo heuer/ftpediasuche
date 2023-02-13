@@ -1,0 +1,394 @@
+
+Elektronik
+
+Elektronik
+
+Silberlinge: Original oder Nachbau (Teil 5)
+Peter Krijnen
+Diese Folge dreht sich um den Nachbau des h4-Flip-Flop-Bausteins.
+Zuerst wusste ich nicht, was ich über das
+Flip-Flop 36479 erklären sollte. Ich könnte
+natürlich beschreiben, was das Flip-Flop
+(Abb. 120) macht (Speichern von Signalen)
+und kann (Teilen von Signalen) und wofür
+es verwendet werden kann. Ich könnte mich
+auch nur an einen Schaltplan und ein paar
+Fotos halten. Ich werde das trotzdem
+machen, aber ich fand es etwas wenig.
+
+
+Zur Bedienung und Verwendung des FlipFlops verweise ich deshalb auf das Kapitel
+zum Flip-Flop, Seite 63 bis 74, in „Experimente + Modelle hobby 4 Band 3“ [1]. Es
+macht wenig Sinn, ganze Teile dieses
+
+Kapitels zu kopieren. Nachdem ich es selbst
+mehrmals gelesen hatte, gingen mir die
+Themen „elektronische Orgeln“ und
+„Grenzfrequenz“ immer wieder durch den
+Kopf.
+Auf Seite 65 von hobby 4 Band 3 heißt es,
+dass in elektronischen Orgeln Frequenzteilung verwendet wird. Für Orgeln beträgt
+die Frequenz für Chigh 8,36 kHz. Für jede
+tiefere Oktave wird diese Frequenz durch
+zwei geteilt. Ich weiß, dass dies der Fall ist,
+weil ich selbst zwei Jahre bei Emminent
+Orgels in Bodegraven Niederlande gearbeitet habe.
+Als ich 1974 eine Führung durch die
+Fischerwerke bekommen konnte, stand im
+Musterzimmer eine kleine Orgel – eine
+Tastatur mit 49 Tasten, aufgebaut aus
+grauen Bausteinen. Das umfasst also vier
+Oktaven. Die zwölf Töne wurden mit zwölf
+Grundbausteinen erzeugt und mittels drei
+Flip-Flops (insgesamt 36) pro Ton aufgeteilt. Soweit ich mich erinnern kann,
+gingen die Ausgänge dann zu Schaltern, die
+sich unter den Tasten befanden. Die
+Schalter wurden dann so angeschlossen,
+dass immer nur ein Ton zu hören war. Ob
+das der höchste oder der tiefste Ton der
+gedrückten Tasten war, weiß ich allerdings
+nicht mehr. Als Lautsprecher fungierte ein
+Mikrofon/Lautsprecher-Baustein.
+Auf Seite 65 von hobby 4 Band 3 wird auch
+die Grenzfrequenz des Flip-Flops besprochen. Wenn man nur Steuerungen für alle
+Arten von Maschinen baut, ist das nicht
+wirklich wichtig. Für diejenigen, die sich
+
+
+auch mit Audio, also Klängen, beschäftigen, ist es hilfreich zu wissen, welche
+Frequenzen die Silberlinge verarbeiten
+können.
+
+Grenzfrequenz
+Für die folgenden Messungen habe ich Ausgang A2 mit „5“ und „7“ eines Grundbausteins verbunden und einen 100-nFKondensator zwischen „-“ und E1 gelegt.
+Die maximal einstellbare Frequenz beträgt
+22,7 kHz. Ausgang A1 ist mit CP des FlipFlops verbunden.
+
+A1 (gelb) schwingt mit 2,21 kHz,
+Q (blau) mit 1,11 kHz
+
+Wenn wir auf Abb. 121, meinen Oszilloskop-Bildschirm, schauen, sehen wir auf
+Kanal 1 (gelb) den Ausgang A1 des Grundbausteins. Die Frequenz beträgt 2,21 kHz.
+Auf Kanal 2 (blau) sehen wir den QAusgang des Flip-Flops und Kanal 3
+(violett) zeigt Q. Die Frequenz beträgt jetzt
+1,11 kHz.
+
+Q = 600 Hz: Teilung durch 2
+
+In Abb. 122 sehen wir wieder Ausgang A1
+auf Kanal 1. Die Frequenz ist diesmal etwas
+
+
+höher: 2,40 kHz. Kanal 2 zeigt den Ausgang Q des Flip-Flops. Wir sehen jedoch
+jetzt, dass die Frequenz nicht mehr die
+Hälfte beträgt. Das sollte 2,40 kHz ÷ 2 =
+1,20 kHz sein, ist aber jetzt nur noch
+600 Hz. Dies bedeutet, dass dieses FlipFlop eine Grenzfrequenz von 1,11 kHz hat.
+In Abb. 121 sehen wir, dass die Breite
+(Periode) der auf Q sichtbaren Rechteckwelle das Zweifache der Breite der Rechteckwelle auf A1 beträgt. In Abb. 122 sieht
+man deutlich, dass die Breite jetzt 4 mal A1
+geworden ist: 2,40 kHz ÷ 4 = 600 Hz.
+
+Teilung durch 6
+
+Für Abb. 123 habe ich die Frequenz auf
+3,38 kHz erhöht. Die Rechteckwelle ist jetzt
+6-mal so breit wie A1. Das bedeutet, dass
+die Frequenz von Q auf 3,38 kHz ÷ 6 =
+564 Hz abfällt.
+Wenn ich die Frequenz für Abb. 124 weiter
+erhöhe, sehen wir, dass die Rechteckwelle
+auf Q nicht mehr symmetrisch ist. Wir
+sehen jetzt eine Rechteckwelle, deren
+unterer Teil 3-mal und der obere Teil 4-mal
+so breit wie A1 ist. A1 ist hier 4,03 kHz. Q
+hat eine Frequenz von 4,03 kHz ÷ (3 + 4) =
+576 Hz.
+Die maximale Frequenz, die das für diesen
+Test verwendete Flip-Flop verarbeiten
+kann, liegt bei etwa 4,17 kHz. In Abb. 125
+ist zu erkennen, dass die Rechteckwelle nun
+wieder symmetrisch ist und die Teilung 8
+beträgt: 4,17 kHz ÷ 8 = 513 Hz. Auf
+„verirrt“. 4,38 kHz sind also zu viel des
+Guten.
+
+
+Die Teilung geht jetzt durch 3 und 4
+und ist nicht symmetrisch
+
+Teilung durch 8
+
+Das Flip-Flop kann nicht mehr folgen
+
+Was für den CP-Eingang gilt, gilt auch für
+die SP- und RP-Eingänge. SP ist mit A1 und
+RP mit A2 verbunden. In Abb. 127 sehen
+wir, dass das Flip-Flop ab 2,5 kHz nicht
+mehr richtig folgen kann. Die meiste Zeit
+kann es das zwar noch, beginnt aber bereits,
+Impulse zu überspringen. Bei 7,35 kHz
+überspringt das Flip-Flop bereits drei
+Impulse (siehe Abb. 128). Oberhalb von
+7,35 kHz ist hier Schluss.
+
+Elektronik
+
+
+Das Flip-Flop verliert mehrere Impulse
+
+An beiden Ausgängen sieht das Signal aus
+wie eine Rechteckwelle
+
+Für die Eingänge SD und RD sieht es besser
+aus. In Abb. 129 sehen wir, dass die Rechteckwellen an den beiden Q-Ausgängen bei
+2,21 kHz immer noch wie Rechteckwellen
+aussehen. Abb. 130 zeigt deutlich, dass sich
+bei einer Frequenz von 22 kHz die Form der
+Rechteckwelle zu einer Art Sägezahn
+verändert hat, dessen Amplitude auch noch
+kleiner geworden ist.
+
+
+
+
+Gedanken
+
+An beiden Ausgängen sieht das Signal
+nicht mehr aus wie ein Rechteck
+
+Noch ein paar Zusatzinfos
+Wird der oben erwähnte 100-nF-Kondensator am Grundbaustein auf 1 nF geändert, ist
+die höchste einzustellende Frequenz
+96 kHz. Wird der Kondensator komplett
+weggelassen, beträgt die Frequenz
+117 kHz. Das kann jedoch bei jedem Exemplar anders sein. Um eine stabile Frequenz
+zu erhalten, ist es jedoch wichtig, dass die
+Versorgungsspannung für den Grundbaustein von einem 9-V-Stabilisator gespeist
+wird. Wenn die Spannung durch einen
+Motor oder ein anziehendes Relais variiert,
+variiert auch die Frequenz. Ich habe dies mit
+mehreren Grundbausteinen getestet. Mit
+dem Grundbaustein mit einem 25-kΩPotentiometer, mit einem 1-nF-Kondensator zwischen „-“ und E1, A2 an „6“ und
+„7“ messe ich eine Frequenz von 133 kHz
+bei 3 V. Bei 6 V ist die auf 99 kHz gefallen,
+bei 9 V auf 77 kHz und bei 12 V sind es nur
+noch 68 kHz. Bei der Version mit einem
+50-kΩ-Potentiometer sind dies nacheinander: 118 kHz bei 3 V, 71 kHz bei 6 V,
+64 kHz bei 9 V und 63 kHz bei 12 V.
+
+Zwei Tage nach den oben genannten
+Messungen kam mir die Idee, dass etwas
+dafür verantwortlich sein muss, dass das
+Flip-Flop eine so niedrige Grenzfrequenz
+hat. Normalerweise wird eine Frequenz teilweise durch Kondensatoren in Kombination
+mit Widerständen bestimmt, in der Elektronikwelt besser bekannt unter dem Namen
+RC-network.
+Wenn wir uns die Schaltung des Flip-Flops
+ansehen (Abb. 131), sehen wir insgesamt
+sechs Kondensatoren von jeweils 22 nF. Es
+dauert eine gewisse Zeit, einen Kondensator
+vollständig aufzuladen. Diese Zeit wird
+bestimmt durch das Produkt der Größe der
+Kapazität und der des Widerstandes und,
+wie wir oben gesehen haben, auch durch die
+Größe der Spannung. Es versteht sich, dass
+sich ein Kondensator mit geringer Kapazität
+schneller auflädt als einer mit hoher Kapazität. Ist der Widerstandswert niedrig, wird
+schneller geladen als bei einem hohen
+Widerstandswert. Das Aufladen auf
+beispielsweise 3 V geht schneller als auf
+12 V. Das gleiche gilt fürs Entladen. Genau
+das wird beim Mono-Flop verwendet.
+Ich habe mich jedoch auf die Kondensatoren konzentriert. Um zu überprüfen, ob
+meine Gedanken richtig waren, baute ich
+ein weiteres Flip-Flop. Ich hatte noch ein
+paar Platinen herumliegen. Ich habe jedoch
+alle sechs 22-nF-Kondensatoren auf 10 nF
+gesenkt. Das Ergebnis davon ist in
+
+Der Mono-Flop kommt nur auf magere
+100 Hz.
+Die ZOR- und ZAND-Ausgänge von ORNOR und AND-NAND sind bis 10 kHz
+noch zuverlässig. ZNOR und ZNAND gehen
+jedoch nur bis 7,35 kHz. Wird die Frequenz
+höher, verschlechtern sich Form und
+Amplitude so stark, dass von einem zuverlässigen Betrieb nicht mehr gesprochen
+werden kann.
+
+Rise Time 26 µs für Q mit 22 nF (blau)
+und 12,5 µs für Q mit 10 nF (violett)
+
+
+Elektronik
+
+
+Kanal 1 (gelb) ist wieder A1 des Grundbausteins, Kanal 2 (blau) ist Q des FlipFlops mit den 22-nF-Kondensatoren und
+Kanal 3 (violett) ist Q der Version mit
+10 nF. Mein Oszilloskop kann die Ladezeit,
+besser bekannt als Anstiegszeit oder auf
+Englisch „Rise Time“, selbst messen. Um
+den Unterschied der Anstiegszeiten der
+beiden Flip-Flops genauer messen zu
+können, musste ich auf 50 µs pro Teilung
+„hineinzoomen“. Es wurde deutlich, dass
+die Anstiegszeit des Grundbausteins am
+Ausgang A1 bei einer Frequenz von
+2,21 kHz weniger als 2 µs beträgt. Abb. 132
+zeigt deutlich, dass die Anstiegszeit der
+10-nF-Version mit einer Zeit von 12,5 µs
+geringer ist als die 26 µs der Version mit
+22 nF.
+Für Abb. 133 habe ich das Oszilloskop
+wieder auf 200 µs pro Teilung eingestellt.
+Damit sich die beiden Flip-Flops nicht
+gegenseitig beeinflussen, habe ich das
+zweite Flip-Flop für weitere Messungen an
+
+A2 des Grundbausteins angeschlossen. Auf
+Impuls verschoben ist.
+
+beider Flip-Flops sieht das Signal gut aus
+
+Wenn wir nun die Frequenz auf 2,4 kHz
+erhöhen, sehen wir auf Abb. 134, dass das
+Flip-Flop mit den 22 nF (Kanal 2) bereits
+wieder Impulse überspringt, während das
+Flip-Flop mit den 10 nF (Kanal 3) noch
+ordentlich durch zwei teilt. Bei weiterer
+Erhöhung der Frequenz kann die 10-nFVersion bis zu 6,41 kHz ordentlich folgen,
+
+
+
+siehe Abb. 135. Bei 6,58 kHz geht auch die
+10-nF-Version in die Knie (Abb. 136). Bei
+11,9 kHz am CP-Eingang ist auch die
+10-nF-Version am Ende (Abb. 137).
+An die SP- und RP-Eingänge angeschlossen,
+läuft das Flip-Flop bis zu 5 kHz reibungslos. Oberhalb von 5 kHz endet es auch hier.
+An den SD- und RD-Eingängen sieht es
+genauso aus wie in Abb. 130. Die
+Amplitude ist jedoch dieselbe wie bei A1.
+
+Q mit 10 nF (violett) ist nun auch am Ende
+
+Nachbau
+Ich habe auch das Flip-Flop auseinandergenommen, um den Schaltplan und das
+Layout zu übernehmen. Abb. 138 zeigt die
+Komponentenanordnung und Abb. 139
+zeigt die Leiterbahnseite. Das Layout zeigt
+ein
+alternatives
+Layout
+entwickelt
+(Abb. 141).
+
+Q mit 22 nF (blau) verliert Impulse,
+Q mit 10 nF (violett) nicht
+
+Q mit 22 nF (blau) ist am Ende,
+Q mit 10 nF (violett) noch nicht
+
+
+Q mit 22 nF (blau) ist am Ende,
+Q mit 10 nF (violett) verliert nun auch Impulse
+
+
+
+
+Elektronik
+
+Einbau in das Original-Silberlinggehäuse
+
+Das Ergebnis des Nachbaus gefällt mir sehr
+gut. Schauen wir uns noch einmal den
+Schaltplan in Abb. 131 an. Wenn wir eine
+Linie von CP aus ziehen, sehen wir, dass die
+untere Hälfte mit der oberen Hälfte
+identisch ist. Das Bild wird jedoch um die
+Linie von CP gespiegelt. Lässt man das
+Lämpchen mit Widerstand R19 weg, sind
+nur noch die beiden Widerstände R7 und
+R16 unterschiedlich. Dies ist in Abb. 143
+viel besser zu sehen. Hätte ich die LED in
+der Mitte platziert und die Widerstände R7
+und R19 vertauscht, wäre die Symmetrie
+perfekt gewesen. Trotzdem habe ich die
+LED am Originalplatz belassen.
+Die Abb. 142, 143 und 144 zeigen meine
+Version für mein alternatives 45 × 75Gehäuse.
+
+
+
+für das 45 × 75-Gehäuse
+
+
+für mein 45 × 75-Gehäuse
+
+Die Abb. 145, 146 und 147 zeigen eine
+Ausführung für die 60 × 60-Kassette
+(32076).
+
+in das 45 × 75-Gehäuse
+
+
+für das 60 × 60-Gehäuse
+
+
+Elektronik
+
+für das 60 × 60-Gehäuse
+
+für das Batteriegehäuse (32263)
+
+Layout für 60er Kassette (32076)
+
+für das Batteriegehäuse (32263). Auf den
+beiden Abb. 151 und 152 ist die ShieldVersion zu sehen.
+
+Platine in das 30 × 60-Gehäuse
+
+
+
+
+Gibt es noch etwas zu
+erwähnen? Ja!
+Wenn wir uns den Schaltplan noch einmal
+ansehen, sehen wir, dass der Widerstand
+R19 in Reihe mit der Lampe liegt. Diese
+Kombination liegt dann parallel zum
+Widerstand R16. Beim Nachbau wurde die
+Lampe durch eine LED ersetzt. Da eine
+LED aber einen höheren Vorwiderstand
+benötigt als eine Lampe, wird der Endwiderstand von LED + R19 parallel zu R16
+zu hoch. Das heißt, im Gegensatz zum
+Original leuchtet die LED bereits in dem
+Moment, in dem das Modul mit Spannung
+versorgt wird. Um zur ursprünglichen Ausgangslage zu gelangen, müssen wir den
+Widerstand R16 auf 560 Ω absenken.
+
+für das Batteriegehäuse (32263)
+
+Die beiden X-Anschlüsse können beim
+Nachbau entfallen. Diese werden nur in
+Verbindung mit dem Dyn.-AND-Baustein
+verwendet und haben dann grundsätzlich
+die gleiche Wirkung wie die SP- und RPEingänge.
+Damit komme ich zum Ende meines
+Beitrags. In der nächsten Folge werde ich
+auf das Mono-Flop eingehen.
+
+Quellen
+Flip-Flop als Shield in SMD Technik
+
+Doppelseitiges Layout des Shields
+
+
+[1]
+
+fischertechnik: Experimente +
+Modelle hobby 4 Band 3. Auf der
+Website des fischertechnik-Clubs
+NL.
+
+

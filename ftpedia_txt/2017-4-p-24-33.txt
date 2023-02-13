@@ -1,0 +1,525 @@
+
+
+Grundlagen
+
+Elektrische Uhren
+Rüdiger Riedel
+Sowohl in der ft:pedia als auch im Bilderpool der ft:community gibt es großartige und perfekt
+funktionierende Uhren. Viele davon sind auch noch ausgesprochen dekorativ. Mit diesen
+Vorbildern möchten sich die Uhren dieses Beitrags nicht messen – hier geht es um
+Funktionsmodelle für einige ganz besondere Uhrenvarianten. Alltagstauglich sind die Modelle
+überwiegend nicht; sie sollen in erster Linie das Funktionsprinzip veranschaulichen.
+Am einfachsten macht man eine Uhr „elektrisch“, indem der mechanische Energiespeicher (Federwerk oder Gewichtsantrieb)
+durch einen Elektromotor ersetzt oder ergänzt wird. Die früheren Autouhren hatten
+beispielsweise ein Federwerk mit geringer
+Gangreserve (ca. eine Minute bei einer
+VDO-Uhr), das bei Entlastung durch einen
+Elektromagneten wieder gespannt wurde.
+Bevor ich loslege, vorab noch ein Hinweis
+zu den unterschiedlichen Definitionen der
+Schwingungsdauer in Uhrmacherkreisen
+und in der Physik: Für einen Uhrmacher ist
+das die Zeit vom einen (z. B. linken) Maximalausschlag zum anderen (z. B. rechten)
+Maximalausschlag eines Pendels oder einer
+Unruh. In der Physik ist das nur die halbe
+Schwingungsdauer, hier kommt die Rückkehr zum Ausgangspunkt hinzu. Das
+„Sekundenpendel“ (eines Uhrmachers) hat
+also eine physikalische Frequenz von 0,5
+Hz, und entsprechend eine (physikalische)
+Schwingungsdauer von zwei Sekunden.
+Der Drehmomentgeber
+Für meine Modelle habe ich folgende
+Antriebsvariante gewählt: Die Nutzung des
+Drehmomentes eines E-Motors aus dem
+Stillstand heraus. Damit der Motor nicht
+elektrisch überlastet wird (XS-Motor mit
+Getriebe), habe ich ein Glühbirnchen vorgeschaltet (9 V, 100 mA, Nr. 37869).
+Schaltet man nun den Motor ein und hält die
+
+Getriebeachse fest, spürt man das Drehmoment, und gleichzeitig leuchtet das Birnchen hell. Lässt man die Getriebeachse los,
+läuft der Motor und das Birnchen wird
+dunkler.
+
+Püttmann
+
+Nicht ratsam ist es, z. B. bei der Waagbalken-Hemmung in Abb. 1, 2 die MotorGetriebeachse direkt mit der Antriebsachse
+zu verbinden. Die Hemmung dreht das
+Räderwerk immer auch ein Stück rückwärts, wodurch Stöße auf die Getriebeachse
+und die Zahnräder erfolgen würden.
+Ausprobiert habe ich eine Rutschkupplung
+aus einer Seiltrommel 15 (31016), in die
+von einer Seite zur Hälfte die Antriebsachse
+und von der anderen Seite zur Hälfte die
+Abtriebsachse ragen (Abb. 4), sowie eine
+Flexkupplung aus einem Stück Silikon-
+
+Pneumatikschlauch und zwei Pneumatik-TStücken (31642), siehe Abb. 2.
+Ist die Rutschkupplung gut eingestellt, dann
+überträgt sie das Drehmoment sehr gleichmäßig. Die flexible Kupplung in Abb. 2
+wirkt dagegen stoßweise: Wenn der Motor
+arbeitet, verdrillt sich der Schlauch etwas,
+bis das Gegenmoment den Motor zum
+Stillstand zwingt. Der Waagbalken arbeitet
+weiter, wenn auch ungleichmäßig, das
+Verdrillungsmoment wird aufgebraucht bis
+der Motor wieder anläuft. Der Betrieb ist
+vergleichbar mit der oben erwähnten Autouhr, nur braucht das An-Aus des Motors
+hier keinen Schaltkontakt.
+
+Grundlagen
+
+unter [4]. Hierfür eignet sich der Drehmoment-Antrieb ebenfalls; zweckmäßig ist die
+Rutschkupplung.
+
+
+Ebenso wie der Waagbalken hat das
+Fliegende Pendel keine Eigenfrequenz, der
+Zeitablauf hängt entscheidend von dem
+Antriebsmoment ab. Der XS-Motor mit UGetriebe läuft gut mit etwa 6 V Spannung.
+
+
+Für die Hemmung (engl. escapement) in
+benutzt. Die Einstellung der Stifträder dazu
+ist etwas knifflig. Einfacher ist eine Hemmung aus einem BS15 und einer Bauplatte
+30x45 wie in Abb. 2.
+Schwingen und Umschlingen
+Ein ungewöhnliches Uhrenkonzept, das
+Flying Pendulum (fliegendes Pendel), habe
+ich vor vielen Jahren bei einem Uhrmacher
+als sein Meisterstück bewundert. Es ist auch
+als Spielzeug bekannt, z. B. als Slingerding
+oder Slinger Machine. Das Video eines
+fischertechnik-Modells davon findet man
+
+
+In Abb. 4 seht ihr eine vereinfachte Variante: Das Seil wird herumgeschwenkt,
+windet sich um eine der beiden Stangen,
+windet sich zurück und wird zur anderen
+Stange geschwenkt. Für eine vollständige
+Umdrehung braucht der Antriebsstab etwa
+zehn Sekunden.
+In Abb. 3 erfolgt eine zusätzliche Umschlingung an den beiden herabhängenden
+Stabstücken.
+
+
+
+Die Quarzuhr
+Das Vorbild
+Die meisten preisgünstigen Quarzuhren
+nutzen die Frequenz eines Quarzkristalls
+von 32768 Hz. Diese wird von Frequenzteilern 16-mal halbiert, sodass eine Frequenz von 0,5 Hz entsteht. In der Endstufe
+wird diese Frequenz so umgeformt, dass der
+Synchronmotor von einem positiven und
+einem negativen Impuls angetrieben wird.
+Dabei wird ein Lavet-Motor eingesetzt,
+benannt nach dem französischen Erfinder,
+dem Ingenieur Marius Lavet (1894-1980).
+Näher betrachtet habe ich eine einfache
+Wanduhr für wenige Euro.
+
+verschiedenen Rotorpositionen
+
+Die Drehrichtung ist rechts, sie ist durch die
+Form der Stator-Pole vorgegeben, wodurch
+der Rotor stromlos um etwa 30° gegen die
+Symmetrieachse gedreht ist.
+
+sich auf der Rückseite die Elektronik
+
+Die Batterie in Abb. 5 ist entnommen, sie
+befindet sich sonst im Fach unten. Mit der
+schwarzen Rändel links werden die Zeiger
+eingestellt. Das weiße Räderwerk schimmert durch, ebenso der Antriebsmotor mit
+seiner großen Kupferspule.
+Nach Öffnen der Rückwand und Entfernen
+des Räderwerkes wird der Antriebsmotor
+sichtbar. Die Pole sind so geformt, dass der
+Rotor stromlos zwei stabile Positionen
+einnimmt, in Abb. 6 ist die zweite Position
+hineinkopiert. Ein magnetischer Pol des
+Rotors ist markiert. Erhält die Spule einen
+positiven Impuls, springt der Rotor in die
+eine Position, erhält sie einen negativen
+Impuls, dreht der Rotor sich um 180° in die
+andere Position.
+
+Der Rotor ist in Abb. 7 herausgenommen
+und oben links zu sehen. Im rechten Teil der
+Abbildung sieht man die Platine und erkennt den Zylinder, der den Quarz enthält,
+und links daneben den schwarzen Fleck,
+unter dem sich die Elektronik verbirgt.
+
+
+Das zeitbestimmende Element ist ein
+Quarzkristall, wegen seiner besonderen
+
+
+Grundlagen
+
+Form Stimmgabel-Quarz genannt. Durch
+diese Form kann er bei kleinen Abmessungen mit der relativ niedrigen Frequenz
+von 32768 Hz schwingen. Die Schwingungen werden von der Elektronik angeregt
+und vom Quarz stabil gehalten. Die Elektronik enthält die Frequenzteiler.
+Die Endstufe liefert auf einen positiven
+Impuls nach einer Sekunde einen negativen
+und nach einer weiteren Sekunde wieder
+einen positiven Impuls. Nach jedem Impuls
+hat der Rotor sich um 180° gedreht. Das
+Räderwerk macht daraus durch Untersetzung um den Faktor 30 den SekundenAntrieb und weiter den Minuten- und den
+Stunden-Antrieb.
+Das Quarzuhr-Modell
+Wir beginnen mit der Konstruktion des
+Lavet-Motors.
+
+Stabmagnet waagerecht aus.
+
+Schieben wir nun eine Achse 30 in die
+Klemmhülse 7,5 ein (35980), wird sich der
+Stabmagnet in der stromlosen Position
+etwas verdrehen (Abb. 11).
+
+
+Er besteht aus einem Elektromagneten (Nr.
+32363 oder 31324), einer Schnecke M1
+(35977) mit Rastadapter (36227) und darin
+einem Neodym-Magneten mit 4 mm
+Durchmesser und 10 mm Länge. Das Ganze
+wird sehr leichtgängig gelagert in zwei SKupplungen 15 (38253) und mit einem
+Klemmring gegen Verschieben gesichert.
+Zu der Achse 30 im Vordergrund kommen
+wir gleich.
+Zur besseren Darstellung habe ich in den
+haben.
+
+
+Wird jetzt der Elektromagnet eingeschaltet,
+dreht sich der Stabmagnet bei richtiger
+Polung der Spannung um den großen
+Winkel nach rechts und verharrt nach
+Abschaltung in der nur scheinbar gleichen
+Position wie vorher, aber jetzt sind Nordund Südpol des Stabmagneten vertauscht.
+Polt man die Spannung am Elektromagneten um, erfolgt die nächste Halbdrehung
+des Stabmagneten usw.
+
+
+
+
+Motor mit dem kleinen Stabmagneten. Zur
+Funktionsprobe schaltet man einen Umschalter zwischen Batterie bzw. Netzgerät
+und E-Magnet. Auch beim raschen Umschalten soll der Rotor saubere Drehungen
+vollführen; die günstigste Stellung der
+Achse 30 wird durch Versuche ermittelt.
+
+
+Nun brauchen wir noch das zeitbestimmende Element, den Stimmgabel-“Quarz“.
+
+Die Streben sind mit Statik-Adapterlaschen
+(31674) an je einem Winkelträger 15 (mit
+einem Zapfen) befestigt. Über einen BS5,
+einen BS7,5 und einen Strebenadapter
+(31848) wird das Ganze in eines der drei
+Löcher am Umfang des Z30 eingeklinkt. Da
+der Strebenadapter nicht satt aufliegt, habe
+ich je eine Scheibe (105195) auf die Achse
+unter den Winkelträger gelegt; eine kleine
+Unterlegscheibe tut es auch. Das Ganze ist
+auf drei U-Trägern 150 (32854) aufgebaut.
+Oben rechts in Abb. 14 sieht man den verschiebbaren Reedkontakt (36120 oder
+36783), unten rechts den ebenfalls verschiebbaren Elektromagneten (31324 oder
+32363, wahrscheinlich geht auch der Topfmagnet). Rechts am E-Magneten befindet
+sich ein Stabmagnet in einer Klemmhülse
+7,5. Er ist so gepolt, dass er den schwingenden Arm abstößt und so die anziehende
+Wirkung des Eisenkerns vom E-Magneten
+aufhebt.
+Die Schwingungs-Anregung der „Stimmgabel“ kann wie bei den Gleichstrommotoren in [2] erfolgen. Ich habe hier den BT
+Smart Controller (161944) mit dem Programm von Abb. 15 und mit dem ReedKontakt an I1 sowie dem Magneten an M1
+benutzt (nach offizieller Auskunft von
+fischertechnik, Herrn Haizmann, ist das
+ohne weitere Maßnahmen zulässig). Einstellung M1 auf V = 3, damit wird eine
+Schwingfrequenz von etwa 3 Hz erreicht.
+Die Polung des E-Magneten ist so eingestellt, dass er den Schwingarm abstößt.
+
+
+Wie Abb. 14 zeigt, kämmen zwei Z30 ineinander, so dass die beiden Arme gemeinsam nach innen oder nach außen schwingen
+können. Als federndes Element erhalten die
+beiden I-Streben 120 je einen Stabmagneten
+am Ende, mit Riegelscheiben gesichert und
+so gepolt, dass sie sich abstoßen.
+
+
+
+Grundlagen
+
+Wenn wir jetzt noch den Lavet-Motor einbinden, haben wir die Grundbausteine der
+„Quarz-“ Uhr zusammen. Dazu wird der EMagnet des Lavet-Motors an M2 angeschlossen und das Programm entsprechend
+= 100:1. Damit erreichen wir grob 30
+Sekunden für eine Umdrehung; für einen
+Sekundenzeiger müssen wir noch einmal
+halbieren.
+
+Die Schnecke treibt eine Rastachse 30 mit
+Kegelzahnrad Z10 (35061) und daran eine
+Rastschnecke (35072), die ein Z10 mit der
+senkrechten Sekundenachse antreibt. Alles
+muss sehr leichtgängig montiert werden.
+
+Elektromechanische Uhr mit
+Unruhmotor
+
+Unruhmotor
+
+Statt die Drehzahl zu halbieren können wir
+auch die Frequenz durch zwei teilen. Das
+geht leicht mit ROBO Pro Light, wie Abb.
+17 zeigt. Es wird einfach ein Schwingtakt
+eingefügt ohne den Motor anzusteuern.
+
+Vorbild des folgenden Funktionsmodells
+sind die elektromechanischen Uhren der
+1960er und ‘70ger Jahre, z. B. von der
+Firma Junghans. Eine sehr schöne Seite mit
+diesen Uhren und deren ausführlicher Funktionsbeschreibung von Hartmut Wynen
+findet sich in [3].
+
+
+
+Oben rechts in Abb. 18 ist die Antriebsachse zu sehen mit der Schnecke M1 und
+Rastadapter sowie darin dem NeodymMagneten.
+
+Die vergrößerte und aus zwei Scheiben
+bestehende Unruh in Abb. 19 trägt Dauermagnete, die bei der Schwingung über eine
+Spule geführt werden. Die dabei induzierte
+Spannung wird von einem Transistor
+
+
+verstärkt und setzt den zweiten Teil der
+Spule so unter Strom, dass die Schwingung
+angefacht wird. Über das Schaltrad mit
+Sperrklinke (hier nicht zu sehen) wird die
+Schwingung in die Drehbewegung umgesetzt, die dann mit dem üblichen Räderwerk
+die Zeiger antreibt.
+Die fischertechnik-Unruh
+Eine funktionsfähige Unruh mit Hemmung
+wurde in [1] vorgestellt.
+Als rückstellendes Element stelle ich hier
+ein Magnetsystem vor, das die sonst übliche
+Spiralfeder ersetzt. Diese Unruh kann zu
+einem Antriebselement erweitert werden.
+
+Die Unruh besteht aus einem Speichenrad
+(19317 oder 36916). Hinten in Abb. 22
+sieht man die „Federmagnete“, es sind vier
+Stück, die von Klemmhülsen 7,5 gehalten
+werden. Die wiederum stecken oben und
+unten in zwei BS7,5, die auf je eine Speiche
+geschoben und durch einen Klemmring
+gesichert werden. Die Magnete werden über
+den Rand des Speichenrades geschoben,
+dadurch ist sicherer Halt gewährleistet. Die
+beiden oberen Magnetpole sind gleich
+ausgerichtet, die beiden unteren mit
+umgekehrter Polung ebenfalls.
+
+
+Rückstellung, rechts der Lavet-Motor
+
+Statt Schaltrad mit Sperrklinke verwende
+ich den magnetisch angetriebenen LavetMotor, denn das wechselnde Magnetfeld
+muss nicht von einem geschalteten E-Magneten kommen, es kann auch durch schwingende Dauermagnete erzeugt werden.
+
+Vorne in Abb. 22 sieht man die Magnete für
+den Lavet-Motor-Antrieb. Zunächst werden
+zwei gegensätzlich gepolte Magnete in
+Klemmhülsen in einen BS7,5 gesteckt.
+Dieser wird senkrecht auf die Speiche
+geschoben und hinten von einem Klemmring gesichert. Um den Polabstand zu vergrößern, werden zwei weitere Magnete auf
+die ersten gesetzt und durch Klemmhülsen
+und BS7,5 gesichert.
+
+
+Die Unruh wird in der rechten Bohrung des
+BS15 in Abb. 23 gelagert. Hinten sieht man
+zwei Magnete, die genauso gepolt sind wie
+die „Federmagnete“ der Unruh. Gehalten
+werden sie von einer Klemmhülse in einem
+Winkelstein (38423), einem BS5 und einem
+Baustein 5 15x30 (35049).
+
+Grundlagen
+
+einem Neodym-Magneten. Die Achse 30
+zur Einstellung der magnetischen Grundposition des Läufers ist hier parallel dicht
+am Lager angeordnet.
+
+
+Der Elektromagnet (31324) sitzt verschiebbar auf einem Baustein 5 15x30. Er ist so
+gepolt, dass er den Unruh-Magneten abstößt
+sobald er vom Reed-Kontakt eingeschaltet
+wird. Zum Schutz des Reed-Kontaktes
+gegen Überspannungen ist ein Widerstand
+von 220 ς parallel zum Elektromagneten
+geschaltet [2]. Alternativ kann die Schwingungs-Anregung wie weiter oben beschrieben vom BT Smart Controller erfolgen,
+dann entfällt der Widerstand.
+
+Drehbewegung
+
+Wie beim Quarzuhr-Modell besteht der
+Lavet-Motor aus einer Schnecke M1
+(35977) mit Rastadapter (36227) und darin
+
+Die Schnecke M1 treibt eine Rastachse 30
+mit Kegelzahnrad Z10 (35061) und daran
+eine Rastschnecke (35072), die wiederum
+ein Z10 mit der senkrechten Sekundenachse
+antreibt. Alles muss wieder sehr leichtgängig montiert werden.
+Justierung
+Die Abstimmung zwischen sauberer
+Schwingung der Unruh und ordentlichem
+Arbeiten des Lavet-Motors ist etwas knifflig. Deshalb habe ich den Motor auch komplett auf einer eigenen Platte aufgebaut; so
+kann der Abstand zur Unruh in kleinen
+Schritten angepasst werden.
+Zunächst muss aber die Unruh ans Schwingen gebracht werden. Dazu benutze ich eine
+Spannung von etwa 8 V. Wechselweise
+werden E-Magnet und Reed-Kontakt verschoben, bis die Unruh heftig mit ungefähr
+3 Hz schwingt. Bringt man jetzt den Magnet
+des Lavet-Motors in die Nähe der UnruhAntriebsmagneten, wird deren Schwingung
+gedämpft. Bei zu großer Annäherung bleibt
+sie stehen, bei zu großem Abstand pendelt
+der Motor ohne sich zu drehen. Das Modell
+in den obigen Abbildungen hat eine
+Schwingfrequenz von annähernd 1,7 Hz, so
+dass durch die Untersetzung 100:1 der
+Sekundenzeiger 50 bis 60 Sekunden für
+eine Umdrehung braucht.
+
+
+
+Synchronuhr
+In der ft:community und in der wurden bereits zahlreiche, wunderschöne
+Synchronuhren vorgestellt, angetrieben
+vom 50 Hz-Netz. Allen gemeinsam ist die
+Notwendigkeit, den Motor von Hand
+anzuwerfen.
+
+Leider ist die Drehrichtung dabei nicht
+festgelegt, sondern zufallsbedingt. Deswegen benötigen wir einen mechanischen
+Gleichrichter, der hier aus der Zahnradwippe mit den beiden roten Rast-Z20
+besteht. Je nach Drehrichtung des Rast-Z10
+greift das rechte oder das linke Z20 in das
+Z30 ein, siehe Abb. 28.
+
+
+Hier stelle ich das Grundprinzip einer selbst
+anlaufenden Synchronuhr vor. Entscheidend für die Funktion ist das sehr geringe
+Trägheitsmoment des Motors, der wie der
+Lavet-Motor (s. o.) aus einer Schnecke M1
+mit Rastadapter und darin einem NeodymMagneten besteht sowie einem Elektromagneten. Statt der Achse 30 wird hier ein
+lose aufgehängter Stabmagnet aus zwei
+Einzelmagneten in einer GelenkwürfelKlaue (31436) verwendet, mit einer
+Klemmhülse gegen Herunterfallen gesichert, siehe den Pfeil in Abb. 27. Nach
+Anschluss an 6 bis 10 V Wechselspannung
+(z. B. von dem alten fischertechnik-Transformator 814 (30173) mit dem seitlichen
+Wechselspannungsausgang) beginnt der
+Rotor zu schwingen und durch Kopplung
+mit dem losen Magneten kommt es zu
+chaotischen Ausschlägen, die den Rotor
+rasch auf die Synchrondrehzahl „springen“
+lassen. Wegen der beiden Pole des Rotors
+(Polpaarzahl ist eins) beträgt die Drehzahl
+3000 U/min. Mit einer vierstufigen Untersetzung (dreimal Schnecke zu Z10, einmal
+1:3, ergibt 3000:1) beträgt die Drehzahl am
+grauen Zeiger eine Umdrehung pro Minute.
+
+
+Im linken Teil der Abbildung dreht sich
+vorne das Rast-Z10 links herum und drückt
+so das obere Z20 an das Z30. Im rechten
+Teil dreht sich das Rast-Z10 rechts herum
+und drückt das untere Z20 an das Z30,
+welches sich auf diese Weise immer rechts
+herum dreht (siehe auch [7]). Diese Art der
+„Gleichrichtung“ wurde auch kurzzeitig in
+den mechanischen Automatik-Uhren genutzt [5], durchgesetzt haben sich aber die
+Sperrklinken in verschiedenster Form, ein
+Beispiel findet sich in [6].
+Magnetische Gleichrichtung der
+Drehrichtung
+Wie wir bei der elektrischen Unruh gesehen
+haben, dreht der Lavet-Motor immer in die
+gleiche Richtung, unabhängig davon, woher
+das antreibende Magnetfeld kommt. Das
+können wir uns auch hier zunutze machen.
+Zunächst wird die Drehzahl des Synchronmotors links in Abb. 29 zweimal 10:1
+untersetzt auf 30 Umdrehungen pro Minute.
+Damit wird eine Rastachse 30 mit
+Kegelzahnrad Z10 (35061) und eine damit
+verbundene
+Rastaufnahmeachse
+22,5
+(130593) und daran ein BS5 angetrieben.
+
+
+Grundlagen
+
+In Abb. 30 ist die Kombination aus Synchronmotor und Lavet-Motor aus einer
+anderen Perspektive zu sehen.
+Beim Nachbau des Modells muss darauf
+geachtet werden, dass alle SchneckeZahnrad- und die Zahnrad-Zahnrad-Übersetzungen genügend Luft haben und sehr
+leichtgängig sind.
+Eine besondere Eigenschaft hat die Konstruktion: Der Synchronmotor ist erstaunlich laut! Und das liegt nicht an dem rappelnden Stabmagneten daneben.
+
+In dem Baustein befinden sich zwei Stabmagneten in gegenüber liegenden Bohrungen, mit gegensätzlicher Polung. Seitlich
+davon ist der Lavet-Motor angeordnet mit
+Rastadapter, Stabmagneten und Schnecke
+M1. Dieser „sieht“ bei Drehung des BS5 ein
+wechselndes Magnetfeld und dreht sich
+seinerseits mit der konstruktiv festgelegten
+Drehrichtung. Diese bestimmt wieder eine
+Achse 30, befestigt mit zwei Klemmbuchsen in einem BS7,5 und dieser auf
+einem BS5 15x30. Die Drehrichtung ist
+dadurch links, auf den Magneten blickend.
+Die Drehzahl des Lavet-Motors beträgt
+wieder 30 U/min und wird 10:1 und 3:1
+untersetzt. Somit dreht sich das Z30 in
+genau einer Minute einmal um seine Achse.
+
+Quellen
+[1]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt-Verlag, 2015, Seite 63.
+
+[2]
+
+Rüdiger Riedel: Funktionsmodelle
+von Gleich- und Wechselstrommotoren. ft:pedia 4/2016, S. 52-58.
+
+[3]
+
+Hartmut Wynen: Junghans ATO-Mat
+W794.
+
+[4]
+
+Video: Slinger machine van fischertechnik, een model van Walther
+Eigeman.
+
+[5]
+
+Gisbert L. Brunner: Die moderne
+ETA-Automatik ... und was
+dahintersteckt.
+
+[6]
+
+John Davis: The Seiko Diver's 200
+Meter SKX779.
+
+[7]
+
+Thomas Püttmann: Handaufzug-Mechanismus. ft:pedia 4/2012, S. 22-23.
+
+
+
+

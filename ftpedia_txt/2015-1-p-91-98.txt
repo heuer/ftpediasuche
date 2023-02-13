@@ -1,0 +1,362 @@
+
+Computing
+
+Computing
+
+Nummernblock am Robo TX Controller
+Andreas Gail
+An vielen Stellen wird die Eingabe von Geheimnummern verlangt, um Zugang zu Systemen oder
+auch Gebäuden oder Gebäudeteilen zu erlangen. Nachfolgend wird gezeigt, wie einfach Standardkomponenten von Fremdanbietern in die Welt von fischertechnik integriert werden können.
+
+Der Nummernblock
+Der nachfolgend gezeigte Nummernblock
+ist ein Standardbauteil, welches bis heute
+mechanisch seit Jahrzehnten praktisch unverändert zur Verfügung stand (z. B. Conrad Elektronik 709840).
+
+mechanischer Systemintegration
+
+Elektrische Anschlüsse
+Gesamtmaß 51 mm · 64 mm
+
+Mit seiner erhabenen Tastenfeldgröße von
+46 mm ∙ 57,5 mm lässt sich der Nummernblock akzeptabel in das fischertechnikSystem integrieren. Wer es genauer eingepasst haben möchte, muss halt doch zur
+Feile greifen, was gemäß Abb. 2 nicht erfolgte.
+Die einzelnen Tasten sind in einer Matrix
+von 3x4 angeordnet, d. h. es gibt 3 Spalten
+und 4 Zeilen, was zusammen 12 Tasten
+ergibt.
+
+mit 7 Anschluss-Stiften
+
+
+
+
+Betrachtet man den Nummernblock von unten, kann man sieben Anschluss-Stifte erkennen. Das erscheint etwas wenig, da es
+doch 12 Tasten gibt. Es kann also nicht für
+jede Taste einen eigenen Anschluss-Stift
+geben. Hier den Zusammenhang zu verstehen, ist für die spätere Programmierung
+wichtig. Nachfolgend wird das scheinbare
+Rätsel gelüftet.
+
+Ausgänge (O) benötigt. Man kann sich
+jedoch auch dazu entscheiden, auf einzelne
+oder mehrere Zeilen oder Spalten zu verzichten, um Anschlüsse auf dem RTXC zu
+sparen. Werden z. B. nur die Tasten „1“ bis
+„6“ benötigt, braucht man nur die Anschluss-Stifte 1, 2, A, B und C. Auf dem
+RTXC würde man in diesem Fall mit fünf
+Anschlüssen auskommen.
+Unabhängig davon, wie viele Tasten des
+Nummernblocks verwendet werden sollen,
+werden stets Eingänge und Ausgänge auf
+dem RTXC benötigt. Dabei kann man sich
+dazu entscheiden, die Tastenreihen 1…4
+mit den Eingängen (I1…4) des RTXC zu verbinden und die Tastenspalten A…C mit den
+Ausgängen (O1…3). Es geht jedoch auch
+umgekehrt, die Tastenreihen 1…4 mit den
+Ausgängen (O1…4) sowie die Tastenspalten
+A…C mit den Eingängen (I 1…3) zu nutzen.
+Je nachdem wie man sich entschieden hat,
+hat man einen freien Eingang oder Ausgang
+mehr zur Verfügung. Weiterhin ist die getroffene Entscheidung in der Software des
+RTXC zu berücksichtigen.
+
+
+Die Zahlen erscheinen in Abb. 4 spiegelverkehrt im Vergleich zu Abb. 1. In Abb. 4
+wird die Ansicht von unten gezeigt. Die
+Tasten sind in den Spalten A, B und C angeordnet, sowie in den Zeilen 1, 2, 3 und 4.
+Wenn also z. B. die Taste "5" (Spalte B,
+Zeile 2, d. h. B2) gedrückt wird, werden so
+die Anschluss-Stifte B und 2 miteinander
+verbunden. Die obige Darstellung erklärt
+auch, warum auf dem Tastenfeld nicht beliebig viele Tasten gleichzeitig gedrückt
+werden dürfen, wenn eine eindeutige Auswertung der gedrückten Tasten erforderlich
+ist.
+Bei uneingeschränkter Nutzung aller Tasten
+werden auf dem Robo TX Controller
+(RTXC) stets sieben Eingänge (I) bzw.
+
+Es gilt folgende Tabelle hinsichtlich der
+Anschluss-Stifte für das Drücken einzelner
+Tasten:
+Taste Anschluss-Stifte
+
+C1
+
+
+B1
+
+
+A1
+
+
+C2
+
+
+B2
+
+
+A2
+
+
+C3
+
+
+B3
+
+
+A3
+
+
+B4
+
+#
+
+A4
+
+*
+
+C4
+
+Tab. 1: Zusammenhang von gedrückten Tasten
+und Verbindung der Anschluss-Stifte
+
+Kabelverbindungen
+Natürlich kann man an die Anschluss-Stifte
+einfach Kabel anlöten. Im vorliegenden Fall
+wurden folgende Kabeladapter hergestellt:
+
+
+Für den Gesamtaufbau ergibt sich Folgendes:
+
+Computing
+
+Die Stecker für die Anschluss-Stifte gibt es
+z. B. bei Conrad Elektronik unter der Artikelnummer 1182193.
+Vorsichtshalber sei erwähnt, dass der Nummernblock hinsichtlich der Schaltung von
+Strömen recht limitiert ist. 30 mA sollen gemäß Herstellerangaben nicht überschritten
+werden. Das ist bei der Nutzung mit dem
+RTXC kein Problem. Die direkte Ansteuerung von Glühlampen oder Motoren über
+den Nummernblock würde diesen vermutlich schnell zerstören.
+
+Programmierung
+Vorab sei erwähnt, dass der Programmablauf in gewisser Weise zeitkritisch ist, um
+eine verlässliche Eingabe zu ermöglichen.
+Gut funktioniert das Programm im onlineModus, d. h. mit PC-Verbindung, wenn die
+Verbindung über USB-Kabel besteht. Bei
+einer Verbindung über Bluetooth kommt es
+offenbar zu Zeitproblemen aufgrund der
+Funkverbindung – mit einem ungenügenden Gesamtergebnis. Gut klappt es auch in
+offline-Modus, d. h. das Programm wird
+vom RTXC ausgeführt, gänzlich ohne PC.
+Nachfolgend wird beschrieben, wie die Tasteneingaben erkannt werden. Zur Verbesserung der Übersichtlichkeit wurden die
+Funktionalitäten in verschiedene Unterprogramme (UP) aufgeteilt. Gezeigt wird die
+Variante unter Nutzung der Ausgänge O1…3
+sowie den Eingängen I1…4. Gemäß Abb. 4
+und 5 werden die Ausgänge mit A, B und C
+verbunden und die Eingänge mit 1, 2, 3 und
+4.
+Hauptprogramm
+
+
+Das Hauptprogramm gemäß Abb. 7 besteht
+im Wesentlichen aus der einmaligen Definition
+der
+Variablen
+DigitCount,
+TotalResult und DoEnter. Es folgt die
+Hauptprogrammschleife, die aus einigen
+Unterprogrammaufrufen besteht. Diese Unterprogramme werden beim Einlesen eines
+einzigen Tastendrucks alle durchlaufen. Bei
+
+
+
+
+der Eingabe von Ziffern werden diese hintereinander geschrieben, und unter
+TotalResult gespeichert. Welche Stelle von
+TotalResult als nächste beschrieben werden
+soll wird unter DigitCount mitgezählt. Der
+Beginn einer neuen Eingabe kann durch die
+Taste „*“ angezeigt werden. Dabei werden
+TotalResult = 10000 und DigitCount = 0
+wieder auf die Starteinstellung zurückgesetzt. Die Taste „#“ ist die Bestätigung des
+Eingabeabschlusses (Enter).
+
+
+Unterprogramm WdKeyPress
+
+Tasteneingaben über RTXC
+
+Unterprogramm ReadSet0
+Dies ist ein eher langweiliges Unterprogramm: Hier werden alle zwölf Variablen
+zum Einlesen der Tastenbetätigung auf null
+zurückgesetzt. Trotzdem ist das wichtig, um
+Lesefehler nach der Betätigung einer vorherigen Taste zu vermeiden.
+
+
+
+Dieses Unterprogramm gemäß Abb. 9 hat
+die Funktion eines Wachhunds (watchdog
+[1]). Das Programm wartet hier so lange, bis
+eine Taste gedrückt wurde. Damit das Auslesen überhaupt funktioniert, werden alle 3
+verwendeten Ausgänge (Spalten A, B und
+C) auf Masse gelegt, d. h. mit 0 V beschaltet. So ist es möglich, an den Eingängen
+einen Tastendruck zu erkennen. Um keinen
+Fehler zu provozieren, muss 0,03 s = 30 ms
+
+gewartet werden, bis der RTXC die Ausgänge auch wirklich geschaltet hat.
+Unterprogramm ReadColA
+Nun werden die gedrückten Tasten der
+Spalte A ausgelesen und in den Variablen
+InpA1, InpA2, InpA3 und InpA4 gespeichert
+(siehe Abb. 10). Im Falle einer gedrückten
+Taste wird unter der zugehörigen Variable
+eine 1 gespeichert, andernfalls ein 0. Um
+nur die Spalte A auszulesen wird nur der
+Ausgang O1 auf 0 V gesetzt. Auch hier wird
+wieder 30 ms gewartet, um einen Lesefehler
+zu vermeiden.
+
+Computing
+
+Unterprogramm ShowMatrix
+Dieses ist nur eine Funktion zur Anzeige
+aller Variablen die mit den Unterprogrammen ReadColA, ReadColB und ReadColC
+ausgelesen wurden.
+Unterprogramm WdKeyRelease
+Dieses Unterprogramm ist fast identisch mit
+dem Unterprogramm WdKeyPress. Der einzige Unterschied ist, dass in der Entscheidungsraute J und N vertauscht sind. Hier
+wird also gewartet, bis die zuletzt gedrückte
+Taste wieder losgelassen wird.
+Unterprogramm ConvMatrix
+Das Unterprogramm ConvMatrix ist Bestandteil eines weiteren Unterprogramms
+ResultDisplay welches nachfolgend beschrieben wird. Es dient dazu, aus den
+schnell ausgelesenen Variablen InpA1,
+InpA2, InpA3, InpA4, InpB1, InpB2, InpB3,
+InpB4, InpC1, InpC2, InpC3 und InpC4 das
+Ergebnis des Tastendrucks in einer einigen
+Variablen zusammenzufassen.
+
+
+Es folgen die Unterprogramme ReadColB
+und ReadColC in analoger Weise. Dabei
+werden die Variablen InpB1, InpB2, InpB3
+und InpB4 sowie InpC1, InpC2, InpC3 und
+InpC4 beschrieben. Zusammen hat man
+dann schließlich alle Spalten ausgewertet.
+Es mag manchem vielleicht umständlich
+vorkommen, 12 Variablen nur mit 1 oder 0
+zu beschreiben. Es hat jedoch den Vorteil,
+die drei Spalten mit maximaler Geschwindigkeit hintereinander auszuwerten – innerhalb von 0,1 s. Das ist dann auch gleichzeitig die Mindestdauer, für die eine Taste gedrückt sein muss, um eindeutig ausgelesen
+zu werden. Schnelleres Tippen führt also zu
+Lesefehlern. Das wiederum muss man allerdings erstmal hinbekommen.
+
+Bei den Ziffern wird jeweils der Ziffernwert
+ausgegeben. Bei der Taste „*“ wird der
+Wert 99 zurückgegeben und bei der Taste
+„#“ der Wert 98. Weiterhin ist sichtbar, dass
+die Einzelauswertungsergebnisse addiert
+werden. Sollten also zwei oder mehr Tasten
+gleichzeitig gedrückt worden sein, so liegt
+dieses Additionsergebnis nicht im Bereich
+0…9 und beträgt auch sicher nicht 98 oder
+99. Auf diese Wiese können fehlerhafte
+Eingaben erkannt werden. Wie auf Fehler
+reagiert wird, ist im nachfolgenden Unterprogramm ResultDisplay ersichtlich.
+
+
+
+
+100 = 1
+101 = 10
+102 = 100
+103 = 1000
+Ausgehend vom ausgewerteten Ergebnis,
+welches unter NextKey gespeichert ist, und
+dem Zähler DigitCount, in dem mitgezählt
+wird, wie viele Ziffern einer Zahl inzwischen eingegeben wurden (vier Ziffern,
+DigitCount = 0…3) kann nun der bislang
+unter TotalResult eingegebene Geheimcode
+schnell ergänzt werden. Beispielhaft ergibt
+sich folgende Rechnung bei einem angenommenen Zwischenstand:
+TotalResult(alt)
+DigitCount = 2
+NextKey = 5
+
+= 10089
+
+NextKey · 10DigitCount = 500
+TotalResult(neu) = TotalResult(alt) + 500
+TotalResult(neu) = 10089 + 500
+TotalResult(neu) = 10589
+Diese Berechnung ist der Kern der Bildung
+des Eingabeergebnisses. Die Darstellung
+der Berechnung sieht komplizierter aus,
+weil die Zahlen von Ganzzahlen zu Gleitkommazahlen umgeformt werden müssen
+und später wieder zurück.
+
+
+Unterprogramm ResultDisplay
+Dieses zunächst vielleicht kompliziert erscheinende Unterprogramm gemäß Abb. 12
+ist ein schönes Beispiel, dass Mathematik
+durchaus helfen kann, Dinge einfacher zu
+machen. Es gelten folgende mathematische
+Zusammenhänge:
+
+Diese Berechnung wird im Übrigen nur
+durchgeführt, wenn die letzte Tastenauswertung eine Ziffer im Bereich 0…9 ergeben hat. Außerdem wird noch die Auswertung der Werte 98 und 99 vorgenommen.
+Alle
+anderen
+Auswertungsergebnisse
+werden einfach übergangen. Im Falle des
+Auswertungsergebnisses 98 (Taste „#“)
+wird die Variable DoEnter = 1 gesetzt.
+Dieses kann an einer anderen Programmstelle ausgewertet, die parallel zum Hauptprogramm läuft. Hierbei könnte dann der
+eingegebene Code TotalResult mit einem
+geheimen Code verglichen werden.
+
+
+Computing
+
+
+Anwendungsbeispiel Zugangskontrolle
+
+Quellen
+[1]
+
+Wikipedia: Watchdog.
+
+Hier nun ein Beispiel, wie der Nummernblock in eigene Modelle eingebaut werden
+kann. Nach folgender Eingabe öffnet sich
+das Tor, bleibt 15 Sekunden geöffnet und
+schließt sich wieder mit einem Warnton.
+
+[2]
+
+Caseblo Cosijal: fischertechnik
+Kontoautomat. YouTube, 2013
+
+[3]
+
+kinderundtechnik: fischertechnik
+ROBO TX Controller + Keypad +
+LC Display I²C. YouTube, 2013.
+
+[4]
+
+Gail, Andreas: fischertechnik Nummernblock Zugangskontrolle.
+YouTube, 2015.
+
+*
+
+= Eingabe Beginn
+
+1234 = gewählter „geheimer“ Zugangscode
+#
+
+= Bestätigung der Eingabe
+
+
+
+
+
+

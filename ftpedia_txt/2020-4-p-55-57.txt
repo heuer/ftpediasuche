@@ -1,0 +1,119 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Eingänge vermehren
+Kurt Mexner
+Die acht Eingänge des TXT sind schnell belegt. Wenn Endlagenschalter, Steuerungsschalter,
+Fototransistor oder weitere Module angeschlossen werden müssen, gelangt der Controller
+schnell an seine Grenzen. Ein weiterer TXT oder eine Erweiterung über den EXT-Anschluss
+geht ins Geld. Hier kommt eine einfache und kostengünstige Eigenbaulösung, wie ein Eingang
+als Mehrfach-Eingang benutzt werden kann.
+Die Lösung liegt in den Eingängen selbst
+verborgen. Es sind Analog-Eingänge. Das
+bedeutet: die Eingänge erkennen nicht nur
+„EIN“ und „AUS“, sondern auch Zwischenwerte. Je nach Beschaltung werden diese in
+Ohm oder Volt ausgegeben. Wir nehmen
+nun vier Taster in Reihenschaltung. Drei
+davon sind mit einem Widerstand von 1 kΩ
+(= 1000 Ω) miteinander verbunden. Das
+folgende Schaltbild zeigt diese einfache
+Schaltung (Abb. 1).
+
+
+Sie kann auch von Ungeübten auf einem
+Steckboard aufgebaut werden. Mit geringen
+Lötkenntnissen ist sie auch auf einer
+Streifenrasterplatine schnell umgesetzt.
+Widerstände, Steckboard oder Streifenrasterplatine sind bei den Bauteilehändlern
+(Pollin, Reichelt, Conrad, Völkner usw.)
+leicht erhältlich.
+Die Widerstände sind hintereinandergeschaltet. Wenn sie mit den Tastern T1 bis
+T4 nacheinander angesteuert werden,
+liefern sie theoretisch einen analogen Wert
+von 3000 Ω, 2000 Ω, 1000 Ω und 0 Ω. Bei
+meiner Schaltung maß ich die Werte
+3295 Ω, 2162 Ω, 1320 Ω und 280 Ω.
+
+Handelsübliche Widerstände haben Toleranzen von ca. 5-10 %. Hinzu kommt der
+Innenwiderstand des TXT. Das erklärt die
+Unterschiede.
+
+Widerstände messen
+Der TXT hat ab Werk ein WiderstandsMessgerät eingebaut, das aber nur Werte bis
+15 kΩ misst. Wenn der Interfacetest angeklickt wird, öffnet sich ein Fenster, bei dem
+die Eingänge und Ausgänge angezeigt
+werden. Wenn man bei einem Eingang,
+z. B. I1, auf das Auswahlmenü klickt und
+dann Analog 5 kΩ NTC wählt, kann man am
+Ausgang I1 Widerstände messen. Man
+muss aber 100 Ω abziehen, da der TXT
+bereits intern mit einem 100 Ω-Schutzwiderstand abgesichert ist.
+
+Programm in ROBO Pro
+Die Auswertung der Werte übernimmt
+ROBO Pro für uns. Das Programm steht
+unter [1] zum Download bereit.
+Das Verzweigungselement I1 ist im Menü
+Sensortyp auf NTC-Widerstand eingestellt.
+I1 wird mehrmals abgefragt und entsprechend den Werten verzweigt.
+Die Schaltstufe wurde in das Unterprogramm Schalten verlegt. Das dortige Befehlselement erzeugt die Befehle „EIN“ und
+„AUS“ jeweils im Wechsel. Bei Rückkehr
+aus dem Unterprogramm wird der Befehl
+
+
+
+
+umgesetzt, entweder in einem Anzeigeelement auf dem Monitor oder über die
+Ansteuerung einer fischertechnik-LED an
+O1-O4 in einem fischertechnik-Modell.
+
+Bedienung
+Bei kurzen Druck auf einen der Taster
+(diese sind als Schließer geschaltet) leuchtet
+das jeweilige Anzeigeelement und/oder
+eine der LEDs (O1-O4) auf. Wenn man zu
+lange drückt, blinkt die entsprechende
+Anzeige/LED. Will man ausschalten,
+einfach nochmals drücken.
+Je nach Wert der benutzten Widerstände
+sind Anpassungen bei den Werten der Verzweigung I1 zu machen. Die „größer“- bzw.
+„kleiner“-Werte müssen evtl. geändert
+werden.
+
+Ausbaumöglichkeiten
+Es ist möglich, sechs oder acht Widerstände
+mit entsprechenden Schaltern zu kombinieren, um so aus einem Eingang sechs bis acht
+Eingänge zu erzeugen.
+
+Beschränkungen
+Es gibt eine kleine Zeitverzögerung, die
+durch das Element Wartezeit verursacht
+wird. Ich habe dies auf 0,5 s eingestellt. In
+ROBO Pro ist diese Stelle durch Time
+gekennzeichnet. Wenn man diese Zeit
+verkürzt, gibt es manchmal Probleme mit
+Lampe 1/O1. Sie schaltet, wenn T2 oder T3
+gedrückt wird. Ich habe lange gesucht, aber
+keine Erklärung für dieses Problem gefunden. Bei der Einstellung von 0,5 s gibt es
+aber keine Probleme.
+
+
+Das gleichzeitige Drücken von zwei oder
+mehr Tastern ist im Programm nicht vorgesehen. Das Programm eignet sich also nur
+für einfache EIN/AUS-Aufgaben. Zeitkritische oder komplexere Aufgaben
+scheiden aus. Aber für viele einfache
+Schaltaufgaben ist es eine gute und kostengünstige Lösung, falls weitere Eingänge
+benötigt werden.
+
+Tipps & Tricks
+
+Quellen
+[1]
+
+Kurt Mexner: FT 4fach Eingang.rpp.
+Im Downloadbereich der ft Community, 2020.
+
+
+

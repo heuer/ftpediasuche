@@ -1,0 +1,229 @@
+
+Modell
+
+Modell
+
+Die beschwingte Schaukel
+Rüdiger Riedel
+Schaukeln ist kinderleicht, die physikalische Erklärung ist es nicht. Und dann gibt es noch die
+Schiffsschaukel…
+Wie lässt sich die Bewegung eines schaukelnden Kindes modellmäßig imitieren?
+Am Saubersten durch Regelungstechnik mit
+Sensoren, die den Bewegungszustand ermitteln.
+Mein Ansatz ist einfacher: Da eine Schaukel wie ein physikalisches Pendel einen einfachen Rhythmus zeigt, verwende ich einen
+einstellbaren Oszillator. Ich nehme dazu die
+Einstellung „Frequenzgenerator“ des Electronics-Moduls rt-tp (152063):
+
+werden mit dem Minus-Pol verbunden. An
+den Ausgängen O1 und O2 habe ich jeweils
+die Plus-Seite einer LED angeschlossen und
+die Minus-Seiten an die Batterie. Parallel zu
+den LEDs werden zwei Magnetventile angeschlossen. Ich verwende die von fischerfriendsman [2].
+Die Pneumatik benötigt noch den Kompressor (121470) und den Pneumatik-Tank
+(156493). Die Ausgänge der Ventile werden mit einem Pneumatik-Zylinder verbunden, der das jeweilige Modell antreibt. Im
+Falle des Pneumatik-Zylinders mit Federrückstellung (133027) benötigen wir nur einen Magnetventil-Anschluss, der zweite
+wird dann mit einem Stopfen (31708) verschlossen.
+
+Schaukeln im Sitzen
+Diese Art des Schaukelns sieht man am häufigsten.
+
+
+Im [3] ist im Kapitel 1.4.7 die Schaltung für
+zwei unabhängige Wechselblinker beschrieben. Wir übernehmen die DIP-Schalterstellungen laut Abb. 1. Die Taster an den
+Eingängen brauchen wir nicht: E1 wird an
+den Plus-Pol angeschlossen, E2 und E3
+
+Der Antrieb einer Schaukel auf einem
+Spielplatz, ohne den Schubser einer weiteren Person, beruht auf dem Austausch des
+Drehimpulses von der Bewegung des
+Schauklers zur Schaukelschwingung um
+den Punkt, an dem die Schaukel aufgehängt
+ist. Weitere Einflüsse wie die Verlagerung
+des Schwerpunktes kommen dazu.
+Das Männlein ist mit einem S-Scharnier
+(36329) beweglich gelagert und wird vom
+Pneumatik-Zylinder 45 zu ruckartigen, alternierenden Drehbewegungen angetrieben.
+
+
+
+
+
+Betrachten wir Abb. 5:
+
+Am Ende der Schaukelbewegung nach links
+wird das Männlein von der Seite gesehen
+eine Drehung entgegen dem Uhrzeigersinn
+ausführen, es lehnt sich zurück. Dieser
+Drehimpuls wird auf die momentan ruhende Schaukel übertragen und treibt damit
+die Rechtsbewegung an. In dieser liegenden
+Position schwingt das Männlein nach
+rechts. Ist die Schaukel am rechten Höchstpunkt, erfolgt die Drehung des Männleins
+im Uhrzeigersinn und die Schaukel
+schwingt nach links.
+
+
+Die Schaukelfrequenz und der Takt der
+Magnetventile müssen ungefähr übereinstimmen, dann beginnt das Männlein aus
+dem Ruhezustand heraus zu schwingen und
+zu schaukeln.
+
+
+
+Modell
+
+Mit der Rückkehr zum linken Höchstpunkt
+ist ein Takt der Schaukel und des Wechselblinkers abgeschlossen
+
+Schaukeln im Stehen
+Erfahrene Kinder können die Schaukel auch
+im Stehen antreiben. Sie halten sich mit den
+Händen an den Seilen oder den Ketten fest
+und bewegen ihren Körper abwechselnd
+nach vorne und zurück.
+
+
+
+Das Modell in Abb. 6 imitiert diese Bewegung durch Rotation des Oberkörpers um
+die Hüftachse. Kinder unterstützen dies mit
+ihren Händen, sie ziehen sich vor und drücken sich dann zurück.
+Statt der Arme verwende ich eine V-Achse
+80 (35405). Deren Enden werden in Bausteine 7,5 geschoben, die mit zwei Förderkettengliedern (37192) an der Kette befestigt werden.
+
+
+
+
+Die Füße sind zwei Bausteine 5 15 × 30
+(35049) und fest mit dem Schaukelbrett
+„Bodenplatte 30 × 90 × 7,5“ (32861) verbunden.
+
+Die Schiffsschaukel
+… oder das Parametrische Pendel.
+Wer sich schon einmal in eine Schiffsschaukel gewagt hat, der weiß: Mit der Kinderschaukel hat der Antrieb nichts zu tun, hier
+wird eine andere Bewegungsabfolge benötigt.
+Jetzt müssen nicht nur in den Extremstellungen Bewegungen ausgeführt werden,
+sondern auch beim Durchgang der Schaukel
+durch den tiefsten Punkt. In Abb. 11 wird
+das auf einer Kinderschaukel demonstriert.
+Im linken Teil des Bildes geht man in die
+Hocke, in der Mitte muss man aufstehen um
+im rechten Teil des Bildes wieder in die Hocke zu gehen.
+
+
+Der Bewegungsablauf wird in Abb. 10 gezeigt.
+
+Eine Schaukelschwingung ist mit der Rückkehr zum linken Teil des Bildes abgeschlossen. In der gleichen Zeit muss der Schaukler
+zweimal in die Hocke gehen und zweimal
+wieder aufstehen.
+Diese Art des Antriebs nennt man auch
+„Pumpen“ und dessen Frequenz muss gerade doppelt so hoch sein wie die Schaukelfrequenz. Es ist eine Parametrische Anregung. Ein Parameter der Schaukel wird
+rhythmisch verändert, hier ist es der Abstand des Schwerpunktes von der Aufhängung.
+
+
+Bei der rückwärtigen Auslenkung: Po raus!
+Bei der Vorwärtsauslenkung: Brust raus!
+
+
+
+Modell
+
+Etwas näher an der Schiffsschaukel ist das
+Modell in Abb. 14:
+
+
+Mit einem Fadenpendel lässt sich das demonstrieren. Der Motor in Abb. 12 treibt
+eine Kurbel (bestehend aus einem V-Rad
+23 × 10 (36581), in dessen Nut eine
+Klemmbuchse 10 (31023) mit einer Achse
+geschoben wird) und hebt und senkt das
+Männlein. Typisch für die parametrische
+Anregung ist die Erfordernis des ersten
+Schubses. Aus dem Stillstand heraus erfolgt
+kein Schwingungsaufbau, eine kleine Anfangsauslenkung ist nötig. Bei richtiger Motordrehzahl (doppelte Frequenz der Kurbel
+zur Pendelfrequenz) gerät das Männlein in
+heftige Schwingungen.
+
+
+Die weiter oben beschriebene Steuerung benötigt jetzt nur ein Magnetventil, der Ausgang des zweiten wird durch einen Stopfen
+verschlossen. Das Heben und Senken des
+Schaukelschwerpunktes übernimmt ein
+Pneumatik-Zylinder mit Federrückstellung
+(133027).
+
+
+Hinweis: Das anregende Element muss
+recht genau auf die erforderliche Frequenz
+eingestellt werden, was etwas Geduld und
+eine fein verstellbare Stromversorgung erfordert.
+
+
+Das fischertechnik-Männchen steht auf einem BS15 mit zwei seitlichen BS5. Die
+Füße werden vorne gehalten von einer E25
+
+
+
+
+Magnet-Führungsplatte (32455), der Körper wird hinten gestützt durch zwei Bausteine 5 15 × 30 3N (38428), die mit einer
+Bauplatte 15 × 45 2Z (38242) verbunden
+sind. Die Anlenkung des Pneumatik-Zylinders erfolgt hier genauso wie bei den anderen Modellen mit einer Gelenkwürfel-Klaue
+7,5 (31436) mit zwei hineingedrückten Abstandsringen 3 (31597) und einer V-Achse
+20 Rastachse (31690).
+
+zu sehen. Wegen der größten Pendelgeschwindigkeit in der unteren Position ist das
+mittlere Bild unscharf, der ausgefahrene
+Zustand des Zylinders und damit die angehobene Position des Männleins sind aber
+gut zu erkennen.
+Woher kommt der Energiegewinn, wenn
+beim unteren Durchgang der Schaukel ein
+Gewicht angehoben, aber in den äußeren
+Positionen wieder abgesenkt wird?
+
+
+Besonders bei der parametrischen Anregung ist eine große Schaukellänge vorteilhaft bei der Verfolgung der Bewegungsabläufe. Die geringere Frequenz hilft auch der
+pneumatischen Anregung, die ja mit der
+doppelten Schaukelfrequenz arbeiten muss.
+Die drei Bilder der Abb. 17 sind Schnappschüsse aus einem Video [4]. In den beiden
+Endpositionen ist die Schaukel recht scharf
+und der Zylinder im eingefahrenen Zustand
+
+
+Beim Hub wird nicht nur die Gewichtskraft
+überwunden, sondern zusätzlich die Zentripetalkraft, mit der die Schaukel auf der
+
+Kreisbahn geführt wird. Demgegenüber
+wird bei der in den Umkehrpunkten zum
+Stillstand kommenden Schaukel nur die potenzielle Energie wieder frei.
+
+Modell
+
+Es gibt einen sehr schönen Artikel von Herbert Möller, in dem das Prinzip der Schiffsschaukel und der Spielplatz-Schaukel erklärt wird [1].
+
+der parametrischen Anregung.
+Ein Merkmal einer parametrisch erzeugten
+Schwingung ist, dass sie im Unterschied zu
+einer erzwungenen Schwingung nicht ohne
+eine anfängliche Auslenkung aus der Ruhelage entstehen kann.
+
+
+Quellen
+
+
+[1]
+
+Herbert Möller: Physik des Schaukelns und parametrische Verstärkung. Auf solstice.de.
+
+[2]
+
+fischerfriendsman: Magnetventil
+11200s.
+
+[3]
+
+fischertechnik: Ergänzendes Material
+zum Profi Electronics.
+
+[4]
+
+Rüdiger Riedel: Rudis ft Projekt Die
+Schaukel. Auf youtube.
+
+

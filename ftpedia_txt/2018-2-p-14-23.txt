@@ -1,0 +1,538 @@
+
+
+Modell
+
+Optisches Entfernungsmessgerät
+René Trapp
+Technikgeschichte trifft auf fischertechnik – so könnte man dieses kleine Projekt beschreiben.
+Geometrie und Strahlenoptik ermöglichen eine berührungslose Entfernungsmessung. Die
+Besucher der Süd²-Convention 2018 in Karlsruhe konnten sich von der einwandfreien Funktion
+des Gerätes überzeugen, wenngleich die Handhabung etwas umständlich war. Die hier vorgestellte Version kommt mit weniger optischen Bauteilen aus und ist einfacher zu bedienen.
+Zugegeben, Entfernungen kann man auch
+mit anderen Messgeräten ermitteln. Die
+meisten gängigen Methoden erfordern jedoch das Überwinden der Strecke zwischen
+den Messpunkten, um das Messmittel
+anzulegen. Man denke nur mal an den
+Holzgliedermaßstab („Zollstock“), das
+Bandmaß und ähnliche Dinge. Dabei gibt es
+aber manchmal unüberwindbare Hindernisse. Die begrenzte Länge eines Bandmaßes ist wohl der offensichtlichste Grund.
+Meist handelt es sich bei diesen Hindernissen jedoch um unüberbrückbare Zwischenräume oder einen Einsatz unter Lebensgefahr. Wer bei Wikipedia unter dem
+Stichwort „Triangulation“ nachstöbert,
+bemerkt sicher die historische Darstellung
+eines Schlachtfeldes aus 1607 [1, 2]. Das
+Verfahren selbst wurde bereits in der Antike
+angewendet [3].
+
+zeitig die unbekannte Distanz D. Rechtwinklig zu dieser Sichtlinie liegt in einer
+genau bestimmten Entfernung, der Basisbreite B, ein zweiter Punkt,von dem aus das
+Zielobjekt unter einem bestimmten Winkel
+β zu sehen ist. Diese Sichtlinie ist blau
+dargestellt (Abb. 1).
+Die Präzision des Ergebnisses steht und fällt
+hierbei mit der zweimalig gleichen exakten
+Ausrichtung des Nullpunktes bei der
+Winkelmessung.
+
+Die Entfernungsmessung per Triangulation
+geht auf eine Winkelbestimmung im rechtwinkligen Dreieck zurück. Dabei muss eine
+Seitenlänge bekannt sein. Zweckmäßigerweise wird diese bekannte Seitenlänge auf
+der Seite des Beobachters liegen.
+
+Nimmt man einen drehbar gelagerten
+Spiegel, so gelingt es, die blau dargestellte
+Sichtlinie zu einem einzigen Beobachter an
+einer einzigen Position umzulenken. Der
+Beobachter bekommt dieses Bild über einen
+zweiten, fest auf 45° eingestellten Spiegel
+ebenfalls zu sehen. Beide Bilder, das der
+direkten Sicht und das über die beiden
+Spiegel, werden überlagert, und wenn sie
+deckungsgleich sind, kann auf der Skala des
+Drehspiegels der Sichtwinkel abgelesen
+werden. Sind die Bilder deckungsgleich
+überlagert, so nennt man das „koinzidente
+Bilder“. Es handelt sich bei dieser Bauart
+also um einen Koinzidenzentfernungsmesser (KEM).
+
+Ein entferntes Zielobjekt (hier das fischertechnik-Männchen) wird vom Beobachter
+zweimal angepeilt. Die rote Sichtlinie stellt
+eine Seite des Dreiecks dar und ist gleich-
+
+Eine sehr gute und lesenswerte Dokumentation eines „Telemeters“ ist im Netz zu
+finden [4], wenngleich die Profi-Geräte
+etwas anders funktionieren.
+
+Geometrie-Dreieck
+
+
+
+Modell
+
+Bei der Winkelbestimmung ist noch zu
+beachten, dass bei einem Spiegel „Einfallswinkel = Ausfallswinkel“ gilt. Wird der
+Spiegel um 5° gedreht, so überstreicht die
+Sichtlinie einen Bereich von
+10°. Der mechanische
+Drehwinkel des Spiegels
+ist also nur halb so groß
+wie der optische Sichtwinkel.
+
+
+
+Hat man nun den optischen Sichtwinkel
+ermittelt und kennt die Basislänge B, so
+lässt sich gemäß Tangenssatz („Tangens =
+Gegenkathete zu Ankathete“) die gesuchte
+Seitenlänge D errechnen. Diese Umrechnung kann man auch bereits vornehmen,
+wenn die Skala gezeichnet wird. So ergibt
+sich die Ablesung direkt in einer gängigen
+Maßeinheit anstelle in Winkelgraden.
+Gemäß dem Tangenssatz ist die Skalenteilung erheblich nichtlinear. Je spitzer der
+Winkel α wird, desto extremer wird das
+Verhältnis aus Distanz und Basisbreite. Der
+KEM kann daher bis maximal 100 m
+brauchbare Ablesungen liefern.
+
+D (Distanz, unbekannt)
+
+Von der Theorie zur Praxis
+Was auf dem Papier so einfach erscheint,
+hat in der fischertechnik-Praxis durchaus
+einige Tücken. Es beginnt mit der Idee,
+zwei Bilder an einer gemeinsamen Position
+zu überlagern. Halbdurchlässige Spiegel
+gibt es zwar zu kaufen, aber sie sind leider
+nicht Bestandteil des aktuellen ProfiOptics Kastens (520399).
+
+D = B √ tan α
+
+Drehspiegel
+Rechter Winkel
+
+α
+
+Koinzidenzbild
+
+B (Basisbreite, bekannt)
+
+
+
+
+Ein nächstes Problem stellt die präzise Einstellung sehr kleiner Drehwinkel dar. Der
+Drehspiegel wird zu diesem Zweck über ein
+Schneckengetriebe 40:1 bewegt.
+Dabei entspricht die Drehung von 1° am
+Skalenrad einer Spiegeldrehung von 1,5′
+(eins-komma-fünf Bogenminuten). Der
+optische Winkel ändert sich dadurch um 3′.
+Das setzt eine präzise Fertigung der
+Schnecke und des Z40 voraus – und ein
+absolut spielfreies Getriebe. Das Getriebespiel lässt sich durch eine entsprechende
+sanfte Vorspannung in den Griff bekommen. Für die präzise Fertigung der
+Schnecke liegt das Vertrauen zur Gänze auf
+fischertechnik.
+Schließlich ist die Anordnung aus Visier,
+Spiegeln und Drehmechanismus auf einer
+stabilen Grundlage zu befestigen. Je länger
+die Basisbreite B gewählt ist, umso größer
+wird die größte messbare Distanz D. Mit
+wachsender Länge wächst die Anforderung
+an die Stabilität der Anordnung. Auch hier
+findet sich eine Lösung: Ein Aluminiumprofil.
+
+
+Vergleichsweise entspannt ist die Montage
+des feststehenden Spiegels unter exakt 45°.
+In diesem Fall sind es eher Beschaffungsprobleme, die dem fischertechniker das
+Leben schwermachen können.
+Damit bleibt noch das Problem mit der
+gewünschten Überlagerung der Bilder: Zur
+Süd²-Convention in Karlsruhe konnte man
+einen Blick durch den Sextanten von
+Thomas Püttmann werfen [5]. Auch beim
+Sextanten wird ein eingespiegeltes Bild mit
+einem direkt sichtbaren Bild auf ein Auge
+des Betrachters gegeben. Der Sextant
+verwendet dafür einen der randlosen
+Spiegel aus dem Profi-Optics und ein
+Visier. Der Sextant ist übrigens auch ein
+Winkelmessgerät, allerdings für einen
+anderen Verwendungszweck optimiert.
+Nach dem erhellenden Blick durch den
+Sextanten und der dort gezeigten überzeugenden Lösung des Koinzidenzproblems entstand innerhalb weniger Tage aus
+dem vom Autor in Karlsruhe gezeigten
+ersten Prototypen [6] die hier vorgestellte
+verbesserte Version des Koinzidenzentfernungsmessers (Abb. 2).
+
+Die fischertechnik-Umsetzung
+Sozusagen das Rückgrat des Entfernungsmessers bildet ein 390-mm-Aluminiumprofil aus dem Teilebestand.
+Nun sind die fischertechnik-Aluminiumprofile, besonders die aus neuerer Produktion, üble Zapfenkiller. Das fachgerechte
+und saubere Entgraten der Nutenden ist bei
+der Produktion nicht immer gemacht
+worden und nachträglich kaum möglich.
+Eingeschobene Bauteilzapfen werden von
+den rasiermesserscharfen Aluminiumkanten abgeschält oder wenigstens zerdrückt.
+Derartig verwendete Bausteine gleiten
+anschließend sehr leichtgängig in Standardnuten anderer Bausteine. Generell,
+insbesondere jedoch für seltene Bausteine,
+ist eine derartige Schädigung inakzeptabel,
+daher werden bei diesem Modell ausschließlich billige und gut erhältliche
+Federnocken ins Aluminiumprofil eingeschoben:
+
+Modell
+
+mit Muffenstopfen an der Drehscheibe
+befestigt. Auf dem Umfang der Drehscheibe ist ein Seil befestigt. Dieses führt
+über eine Umlenkrolle zum Spanngewicht,
+zwei Bausteinen 30. Die so erzeugte
+Umfangskraft drückt das Z40 immer gleichmäßig und in einer Richtung gegen die
+Flanke der Klemmschnecke. Die Feder auf
+der Schneckenwelle drückt die Klemmschnecke präzise gegen das Wellenlager.
+Das Getriebespiel wird auf diese Art eliminiert. Abb. 4 zeigt die Mechanik.
+
+
+Ein Anschlag begrenzt die Drehung etwas
+oberhalb der „Unendlich“-Stellung. Dies
+erleichtert den Zusammenbau, die präzise
+Einstellung und auch die Benutzung des
+Gerätes.
+
+
+Obendrein werden dabei normalerweise die
+Federnocken nicht beschädigt; wer mag,
+kann sicherheitshalber diese Federnocken
+beim Zerlegen des Modells getrennt sortieren und zukünftig wieder für Aluminiumprofile verwenden.
+Der Drehspiegel wird, wie schon weiter
+oben ausgeführt, über ein Schneckengetriebe 40:1 angetrieben. Dieses ist konventionell mit Klemmschnecke und
+Zahnrad 40 (Z40) aufgebaut. Das Z40 wird
+
+
+Auf der Drehscheibe sitzt ein Spiegel
+möglichst genau über der Drehachse. Dieser
+
+
+
+
+Spiegel ist per Rastschnecke und Gegenmutter in der Höhe minimal schwenkbar
+und in Statikscharnieren gelagert. Der
+Schwenk ist nur in engen Grenzen sinnvoll,
+deswegen wird bewusst auf die sonst
+üblichen weiteren Gelenke verzichtet. Ein
+Gummiring verhindert hier das Getriebespiel.
+Auf der Welle der Klemmschnecke sitzt ein
+Speichenrad als Träger der Skala (Abb. 6).
+Je größer der Skalendurchmesser gewählt
+ist, umso so mehr Skalenlänge überstreicht
+ein bestimmter Drehwinkel dieses Rades.
+
+
+Das Spanngewicht ist mittels Schlaufe und
+Federnocken unverlierbar am Seil befestigt.
+Ein Kranhaken erwies sich beim Transport
+der Ursprungsversion als suboptimal.
+Am anderen Ende des Aluminiumprofils
+sitzt der fixierte Umlenkspiegel unter 45°.
+Auch dieser Spiegel ist in der Höhe minimal
+schwenkbar gelagert. Der Mechanismus ist
+nahezu baugleich mit der Lagerung des
+Drehspiegels auf der Drehscheibe.
+Besondere Beachtung verdient hier die feste
+Einstellung des 45°-Winkels, die durch
+zwei Bausteine 15 mit runden Zapfen
+realisiert wird. Diese beiden besonderen
+Bausteine sind über einen Winkel aus
+Grundbausteinen verbunden und in eine
+einzige lange Nut eingeschoben. Sie sitzen
+nicht im Aluminiumprofil.
+
+
+Der in Abb. 1 dargestellte blaue Strahlengang ist nun Dank der beiden Spiegel schon
+vorhanden. Es fehlt allerdings noch die
+direkte Sichtlinie als Referenz, in Abb. 1 rot
+gezeichnet.
+Für die direkte Sichtlinie ist eines schon
+einmal klar: Der feste Umlenkspiegel soll
+nur etwa halb im Bild zu sehen sein. Der
+Blick fällt, wie beim Sextant, streifend über
+den Rand hinweg. Aus diesem Grund eignet
+sich ein randloser Spiegel aus dem ProfiOptics-Kasten vorzüglich. Überhaupt hat
+der Sextant hier eine Schlüsselrolle gespielt.
+Die von Thomas Püttmann ausgesuchten
+Teile für die Visier-Einrichtung haben sich
+auch für den Einsatz am Koinzidenzentfernungsmesser als optimal erwiesen.
+Der Blick des Bedieners fällt, in Abb. 8 von
+hinten kommend, durch einen Baustein 15
+mit Loch und Ansenkung streifend über den
+Spiegelrand in Richtung Zielobjekt. Ein
+Rastadapter steht aus Beobachtersicht
+hinter, in Abb. 8 allerdings vor dem Spiegel
+und definiert zusammen mit dem Loch im
+Baustein die Blickachse. Die Blickachse
+muss senkrecht zur Längsachse des Aluminiumprofils verlaufen. Bei beiden Bauteilen ist auch die Höhe entscheidend für
+den Effekt.
+
+
+Modell
+
+
+Freihändig ist das Gerät durchaus schon gut
+einsetzbar. Ein Stativ mit Richt-Einrichtung
+veredelt die Konstruktion. Wer den ProfiOptics sein Eigen nennt, erkennt in Abb. 9
+sicherlich die Grundkonstruktion des Dreibeins mit dem horizontalen Drehteller
+wieder.
+
+
+Diese Konstruktion ist etwas modifiziert.
+Zum einen stimmt die in der Bauanleitung
+angegebene Position der oberen inneren
+Verstrebung nicht und führt zu Verspannungen, zum anderen war dem Autor die
+vertikale Schwenkeinrichtung zu groß und
+aufwändig. Da hier meist horizontale
+Abstände gemessen werden sollen, reicht
+ein erheblich kleinerer vertikaler Schwenkwinkel aus (Abb. 10). Außerdem sind die
+Beine verlängert, was die Torsionssteifigkeit insgesamt etwas beeinträchtigt.
+
+
+
+
+„Malen nach Zahlen“
+Das große Speichenrad wird als Träger der
+Skala verwendet. Für dieses Rad ist die
+Skala in Abb. 13 als Vorlage geeignet. Sie
+ist 15 mm breit und 160 mm lang.
+Am einfachsten dürfte es sein, die ft:pediaSeite auszudrucken. Der Ausdruck sollte
+allerdings vor dem Zerschneiden noch auf
+Maßhaltigkeit kontrolliert werden: Die
+„2,5 m“-Linie und die „∞“-Linie sind
+140 mm voneinander
+entfernt. Stimmt das
+nicht, so ist der Druckmaßstab entsprechend
+anzupassen.
+
+
+Mit zwei möglichst genau unter dem
+Schwerpunkt des Entfernungsmessers
+platzierten Federnocken wird das Aluminiumprofil in den Stativkopf eingeschoben
+(Abb. 11 und 12).
+
+
+Die Skala wird zuerst
+an den beiden kurzen
+Seiten ausgeschnitten.
+Danach wird sie mit
+Klebefilm überklebt
+und die langen Seiten
+werden ausgeschnitten. Der Klebefilm ist
+nun genauso breit wie
+die Skala, steht aber an
+den Enden über. Die
+vorbereitete
+Skala
+kann so passgenau und
+straff auf dem Umfang
+des Speichenrades befestigt werden.
+Wer die Skala selbst
+anfertigen
+möchte,
+kann dies natürlich
+tun. Der „∞“-Punkt
+wird als Bezugspunkt
+bei 0 mm genommen
+und die anderen Strecken davon abgetragen.
+Die Berechnung dieses Abstandes s erfolgt
+gemäß folgender Gleichung, das Ergebnis
+wird
+kaufmännisch
+auf 0,1 mm gerundet.
+
+390 mm Basisbreite
+
+
+Mit:
+
+= 90° − arctan
+
+• D = Distanz in Meter
+
+Modell
+
+∙
+
+∙
+
+∙
+720°
+
+• B = Basisbreite (hier 0,39 m)
+• n = Übersetzung des Schneckengetriebes (hier 40)
+• dSkala = Durchmesser des Skalenrades
+(hier 90 mm)
+Das Ergebnis s erhält man in Millimetern.
+Wer lieber in Zentimetern denkt, nimmt
+9 cm für den Durchmesser der Skala.
+
+Die erste Inbetriebnahme
+Die präzise Einstellung der beiden Spiegel
+und des Visiers ist für die Funktion des
+Entfernungsmessers elementar.
+Zuerst wird der feststehende Spiegel so an
+der Höhenverstellung eingestellt, dass vom
+Drehspiegel etwa 90% der Fläche zu sehen
+sind, wenn man durch den Baustein 15 des
+Visiers geradeaus blickt. Das Rast-Z20
+dient als griffiger Drehknopf.
+Nun wird die Visiereinrichtung mit dem
+feststehenden Spiegel eingerichtet. Dabei
+ist ein Tischlerwinkel oder notfalls ein
+Geometrie-Dreieck hilfreich. Durch den
+Baustein 15 blickt man auf den feststehenden Spiegel. Das Aluminiumprofil ist darin
+zu sehen und muss genau unter 90° zum
+realen Profil verlaufen. Mittels Winkel wird
+diese Einstellung kontrolliert. Minimale
+Korrekturen erfolgen durch seitliches Verschieben der in Abb. 8 vorderen beiden
+Bausteine 30 unter dem Spiegelträger.
+Der Rastadapter steht in der Verlängerung
+des gespiegelten Aluminiumträgers. Seine
+genaue Höhe wird nach Geschmack am
+tragenden Baustein 30 eingestellt.
+aussehen soll. Dieses Bild ist allerdings mit
+dem Kameraobjektiv an ungefähr der
+Position des „Gucklochs“ gemacht und
+stimmt deswegen nicht ganz exakt.
+
+Richtet man das Gerät nun auf ein Objekt
+aus und dreht am Skalenrad, so sollte das
+Objekt irgendwann auch im Drehspiegel
+erscheinen. Genau muss das jetzt nicht
+passen. Die Höheneinstellung des Drehspiegels wird nun so verstellt, dass das
+Objektbild etwas unterhalb des Direktbildes
+liegt; Abb. 14 hilft auch hier nochmal
+weiter.
+Das Gerät wird nun per Visier auf ein
+möglichst viele Kilometer entferntes, gut
+sichtbares und möglichst großes Objekt
+ausgerichtet. Der Drehspiegel wird per
+Skalenrad verstellt, bis beide Bilder exakt
+übereinanderliegen (Abb. 15). Jetzt beginnt
+die Fummelei: Das Skalenrad wird mitsamt
+der (nicht allzu fest angezogenen) Nabe
+gegenüber der Schneckenwelle soweit
+verdreht, bis die Unendlich-Markierung
+(die liegende Acht) unter dem Zeiger steht.
+Die exakte Ausrichtung auf das Objekt und
+auch die Einstellung des Drehspiegels wird
+dabei verloren gehen und man wiederholt
+diese letzten Schritte so lange, bis die Bildkoinzidenz und die Skala exakt aufeinander
+abgestimmt sind. Jetzt erst wird die Nabe
+vom Skalenrad fest zugedreht. Dabei
+rutscht das Skalenrad gerne nochmal ein
+wenig in der Nabe. Das lässt sich durch
+Festhalten der Nabe und Zurückdrehen des
+Skalenrades mit etwas Kraft wieder korrigieren.
+
+Die Bedienung
+Egal ob frei aus der Hand oder auf dem
+Stativ, die Visiereinrichtung gestattet es,
+das Zielobjekt direkt und genau anzupeilen.
+Dabei schneidet der Rand des 45°-Spiegels
+den sichtbaren Bereich in zwei Teile und
+das Zielobjekt ist zunächst nur über dem
+Spiegel sichtbar (Abb. 14). Das vordere
+Visierteil (die Spitze des Rastadapters) ist
+hierbei unscharf, aber über dem Spiegel
+noch zu erkennen.
+
+
+
+
+überein. Die handgezeichnete Skala ist
+etwas unvollkommen; der erste kurze Strich
+unter der „15“ stellt die 20 m-Marke dar.
+
+
+Im zweiten Schritt wird mittels des Skalenrades der Drehspiegel so ausgerichtet, dass
+das etwas kleinere Bild des Zielobjekts
+exakt unter dem Originalbild liegt. In
+Bilder zu erkennen. Der ist meiner einfachen Fotoausrüstung beziehungsweise
+meiner fehlenden dritten Hand geschuldet.
+
+
+Antiquarisches
+Bei diesem Modell kommen nicht nur Geometriekenntnisse aus der Antike, sondern
+auch ein paar antiquierte fischertechnikBauteile zum Einsatz. Wer sie (noch) nicht
+in der Sammlung hat, muss aber dennoch
+nicht auf den Nachbau des Gerätes verzichten:
+∂ 2 x Statikscharnier (36329): Die grauen
+Filmscharniere gibt es im seriösen
+Gebrauchtteilehandel [7, 8]. Ob mit oder
+ohne Steg ist für diese Anwendung
+unerheblich.
+
+
+Die nun angepeilte Entfernung wird auf
+dem Skalenrad abgelesen (Abb. 16). Das
+sieht nach rund 18 m aus und stimmt trotz
+des leichten Versatzes (Abb. 15) mit der
+Anzeige vom Maßband (17,5 m) ganz gut
+
+∂ 2 x Baustein 15 mit rundem Zapfen
+(31059: grau oder 103448: schwarz):
+Auch die gibt es im Netz [7, 8], allerdings sind sie etwas seltener anzutreffen.
+Als Notbehelf ginge eventuell auch eine
+Schneckenmutter (37925), die über zwei
+runde Zapfen verfügt. Der Halter für den
+feststehenden Spiegel muss dann allerdings anders aufgebaut werden.
+∂ 2 x Gelenkstein (38459): Derzeit nur bei
+fischerfriendsman [7] gelistet, aber
+immerhin nicht selten. Als etwas wackligerer Ersatz kann auch je ein Gelenk-
+
+würfel (31423 oder 31426 + 31436) herhalten. Dazu kommen noch zwei Federnocken.
+∂ 1 x Aluminiumprofil (31230): Das ist im
+Handel momentan seltener als rar [7, 8].
+Alternativ sollte sich auch ein sogenanntes Open-Beam-Aluminiumprofil
+verwenden lassen.
+Die Ersatzlösungen sind bislang nur Ideen.
+Der Autor hat sie mangels Bedarf nicht
+ausprobiert.
+
+Modell
+
+Quellen
+[1]
+
+Wikipedia: Triangulation (Messtechnik)
+
+[2]
+
+Wikipedia: Optische Entfernungsmessung anno 1607
+
+[3]
+
+Wikipedia: Entfernungsmessung –
+Triangulation
+
+[4]
+
+fernglasmuseum.at: Wild Heerbrugg
+Koinzidenzentfernungsmesser TM2
+
+[5]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt-Verlag, 2015
+
+[6]
+
+Bilderpool der ftc: KEM1
+
+[7]
+
+fischerfriendsman
+
+[8]
+
+santjohanser
+
+
+

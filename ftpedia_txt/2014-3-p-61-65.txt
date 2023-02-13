@@ -1,0 +1,278 @@
+
+Computing
+
+Computing
+
+Parallel Interface – durch Arduino gesteuert (3)
+Jens Lemkamp
+Im dritten Teil der Parallel-Interface- und Arduino-Reihe wollen wir unser erstes Modell zum
+Leben erwecken. Es handelt sich um einen Klassiker der MSR-Technik (Messen-SteuernRegeln). Ich habe aus dem Ur-Computing-Kasten (30554) des Jahres 1984 das Modell
+‚Antennenrotor‘ gewählt, um die Analog-Eingänge des Arduinos für eine typische Regelungsaufgabe zu verwenden, die immer wieder für unterschiedliche Zwecke auftaucht [1].
+
+Aufgabenstellung
+Eine drehbar gelagerte Antenne soll mittels
+eines Drehrades, welches als sogenanntes
+Stellglied fungiert, ferngesteuert werden.
+Die Antenne ist auf einem Zahn-Drehkranz
+montiert. In der Mitte ist ein Potentiometer
+verbaut, welches bei Rotation der Antenne
+verstellt wird und somit die Winkelposition
+misst. Der Drehkranz wird durch einen
+Minimot mit Getriebe und Schnecke angetrieben (Abb. 1).
+Damit gliedert sich der Gesamtaufbau in
+folgende Komponenten:
+1. Drehrad mit Poti (Sollwert-Eingabe)
+2. Poti im Drehkranz (Istwert-Messung)
+3. Motor, Getriebe, Zahnkranz (Stellglied)
+
+Regelung
+Hier haben wir es schon mit den drei
+wesentlichen Teilen einer einfachen Regelung zu tun. Warum der Aufbau eine echte
+Regelung ist und keine Steuerung, erklärt
+sich aus dem geschlossenen Regelkreis
+(Abb. 2) [2]. Für unser Antennenmodell
+bedeutet das:
+· Geregelt wird die Regelgröße x (Drehwinkel der Antenne). x ist damit auch der
+sogenannte Istwert.
+
+
+· Die Führungsgröße w ist der Sollwert
+des Antennenwinkels, einstellbar durch
+das Handrad.
+· e ist die Regelabweichung. Diese ist
+Null, wenn Soll- und Istwert gleich sind,
+d. h. die Antenne hat die von uns eingestellte (Soll-) Position angefahren.
+· Der Regler (in unserem Modell der
+Arduino mit Programm) bildet aus dem
+Soll- und Istwert die Stellgröße y. Das ist
+der Wert, um den die Antenne verfahren
+werden muss, wenn sie nicht die Sollposition hat.
+
+
+
+
+· Die Regelstrecke besteht aus Motor,
+Schnecke und Zahnrad.
+· z ist die Störgröße. In der Realität könnte
+z. B. der Wind eine Kraft auf die Antenne bringen, welche zur Veränderung
+des Istwertes (also des Drehwinkels der
+Antenne) führt. Der Regler stellt dann
+automatisch nach.
+Somit haben wir einen
+geschlossen Regelkreis.
+
+vollständig
+
+Schaltung
+Ein Potentiometer (kurz: Poti) ist ein verstellbarer Widerstand mit drei Anschlüssen.
+Ein Schleifer wird durch die Verstellung
+des Drehwinkels einer Achse über eine
+Widerstandsbahn geführt. Die beiden äußeren Anschlüsse werden mit 0 V und +5 V
+verbunden (Abb. 3).
+
+
+Das Poti verhält sich wie ein Spannungsteiler (Abb. 4). Widerstände werden mit
+dem Formelzeichen R bezeichnet, Spannungen mit U. Die Einheiten sind W (sprich:
+Ohm) für den elektrischen Widerstand und
+V (sprich: Volt) für die Spannung. Dabei
+gelten die folgenden Gesetzmäßigkeiten:
+· Die beiden Einzelwiderstände addieren
+sich zu einem Gesamtwiderstand:
+R1 + R2 = Rges.
+· Die Spannungen am Spannungsteiler
+verhalten sich zueinander im Verhältnis
+wie die Widerstände zueinander:
+U1 + U2 = Uges.
+Dabei ist U1 die Spannung über R1 und U2
+über R2. Uges. ist die Spannung über beide
+Widerstände, hier also 5 V.
+
+
+Der Schleifer ist mit dem Anschluss ‚X‘
+verbunden. Wenn das Poti ganz nach rechts
+bzw. im Schaltbild nach oben gedreht wird,
+ist der Schleifer direkt mit + bzw. 5 V
+verbunden, auf Linksanschlag bzw. unten
+entsprechend mit 0 V.
+Bei Einstellungen zwischen 5 V und 0 V
+stellen sich analog zum Drehwinkel Zwischenwerte ein. Sollte z. B. der Schleifer
+exakt auf Mittelstellung stehen, erhalten wir
+2,5 V am Anschluss ‚X‘.
+
+
+Wenn unser Poti einen Gesamtwiderstand
+von z. B. 100 kW hat (dieser Wert ist meist
+auf dem Gehäuse aufgedruckt; manchmal
+wird das W-Zeichen weggelassen und man
+findet nur ‚100 k‘) und das Poti auf Mittelstellung gedreht wird, teilen sich die Widerstandswerte genau auf.
+Mit einem Ohm-Meter (ist in den meisten
+Multimetern bzw. Vielfach-Messgeräten
+enthalten) kann man dann also zwischen
+dem Mittelabgriff und jedem der beiden
+anderen Anschlüssen jeweils 50 kW (also
+genau die Hälfte von 100 kW) messen.
+Achtung: Wenn man Widerstandswerte mit
+einem Messgerät messen möchte, muss jede
+
+
+Computing
+
+externe Spannung (also unsere 5 V aus dem
+Beispiel) abgeschaltet sein, sonst kann das
+Messgerät zerstört werden. Außerdem sollten alle Anschlüsse frei und nicht mit anderen Schaltungsteilen verbunden sein, weil
+man sonst fehlerhafte Messwerte erhalten
+kann.
+Die Spannungen verhalten sich wie die
+Widerstandswerte, demnach stellen sich bei
+Uges. = 5 V und Poti auf Mittelstellung folgende Werte ein:
+R1 = 50 kW, R2 = 50 kW
+R1 + R2 = Rges. = 50 kW + 50 kW = 100 kW
+U1 = 2,5 V, U2 = 2,5 V
+U1 + U2 = Uges. = 2,5 V + 2,5 V = 5 V
+Ein weiteres Beispiel:
+Der Schleifer des Potis steht nahe bei dem
+5 V- und deutlich vom 0 V-Anschluss entfernt, sagen wir bei ca. 10 %. Dann haben
+wir folgende Verhältnisse:
+
+
+Daher erklären sich auch die 5 V aus den
+Rechenbeispielen, denn der Arduino wird
+mit 5 V versorgt und die Analog-DigitalWandler vertragen ohne zusätzliche Beschaltung maximal 5 V. Ein zweites Poti
+stellt als Handrad die Istwerteingabe dar.
+
+R1 = 10 kW, R2 = 90 kW
+R1 + R2 = Rges. = 10 kW + 90 kW = 100 kW
+Und für die Spannungen gilt:
+U1 = 0,5 V (10 %), U2 = 4,5V (90 %)
+U1 + U2 = Uges. = 0,5 V + 4,5 V = 5 V
+Man kann auch sagen, dass sich die Spannung am Mittelanschluss des Potis proportional zum Drehwinkel verhält. Das setzt
+ein ideales, lineares Potentiometer voraus.
+Damit können wir jetzt den Drehwinkel
+einer Poti-Achse mittels der Spannung
+messen, die sich mit dem Drehwinkel
+verändert.
+
+Modell
+Der Aufbau des Modells ist trivial: Ich habe
+es aus der Anleitung des 1984er Computing-Kastens weitestgehend original nachgebaut [1]. Wir treiben einen Drehkranz
+mittels Mini-Motor und Schnecke an. In der
+Mitte des Drehkranzes ist ein Poti montiert,
+welches den Istwert (Drehwinkel der
+Antenne) misst und an den Arduino weitergibt (Abb. 5).
+
+
+Der Analog0-Eingang des Arduinos wird
+mit dem Mittelabgriff des Handrades verbunden, der Mittelabgriff des Potis vom
+Drehkranz mit dem Analog1-Eingang
+(Abb. 6). Die beiden anderen Anschlüsse
+der Potis werden jeweils mit 0 V und 5 V
+verbunden, und zwar der Anschluss am
+Linkseinschlag mit 0 V, der Anschluss am
+Rechtseinschlag mit +5 V (dabei die Spannungsversorgung vom Arduino verwenden!).
+
+
+
+Programm
+Das Programm ist im Ablauf den alten
+Basic-Programmen aus dieser Baukastenreihe nachempfunden:
+
+· Das entsprechende Bit wird im Ausgabebyte gesetzt und der Motor durch die
+Funktion motout() gestartet. motout()
+ist eine Funktion, welche die die Bits des
+outbyte zum Interface überträgt (siehe
+Gesamtprogramm) und damit den Motor
+startet.
+· Wenn i < 1 ist die Sollposition erreicht
+(Istwert = Sollwert), und es werden eine
+Lampe ein- und der Motor ausgeschaltet.
+
+
+Die beiden Variablen ‚soll‘ und ‚ist‘ werden
+mit den Messwerten aus dem Analog/Digitalwandlern des Arduino versorgt. Aus diesen beiden Werten wird die Regelabweichung e gebildet und in der Variablen i
+hinterlegt. Das ist der Absolutwert der
+Differenz von Soll- und Istwert.
+
+Jetzt kommt es zu einer Besonderheit, ohne
+die das Programm bzw. der Regler nicht
+ordentlich arbeiten würde. Dieser Effekt ist
+auch in der Programmieranleitung des UrComputing-Kastens beschrieben, und die
+Lösung dieses typischen Regel-Problems
+habe ich – mit abgewandelten Parametern –
+übernommen.
+
+Diese Werte (Soll, Ist, Differenz) werden
+über die serielle Schnittstelle an einen evtl.
+angeschlossenen Computer gesendet und
+können dort mit einem Terminal-Programm
+angezeigt werden.
+Jetzt wird ausgewertet und der Motor ggf.
+gefahren:
+· Wenn der Sollwert kleiner als der Istwert
+ist, muss der Motor die Antenne links
+herum drehen.
+· Ist der Sollwert größer als der Istwert,
+muss die Antenne entsprechend nach
+rechts rotiert werden.
+
+
+
+Bei Erreichen der Soll-Position genügt es
+nicht, den Motor einfach nur zu stoppen:
+
+
+Computing
+
+durch die Masse des Antennenmastes, des
+Drehkranzes und des Getriebes läuft die
+Antenne etwas nach. Das führt dann dazu,
+dass beim nächsten Durchlauf des Loops
+der Regler feststellt, dass der Sollwert überschritten wurde und nachregelt, d. h. der
+Motor fährt zurück, wird beim Ziel (Sollwert = Istwert) wieder gestoppt, und läuft
+wieder etwas nach, diesmal aber in der
+anderen Richtung.
+Damit zittert die Antenne um ihre eigentlich
+Soll-Position bzw. fährt je nach Masse hin
+und her: Der Regler „schwingt“. Eigentlich
+ist aber gewünscht, das die Antenne bei
+Erreichen der Soll-Position stoppt und dort
+bleibt, bis ein neuer Sollwert kommt oder
+aber eine Störgröße die Antenne aus der
+Position bringt und der Regler deshalb
+eingreifen muss.
+Daher erfolgt im letzten Teil der Hauptschleife eine Abfrage, wie weit der Istwert
+vom Sollwert entfernt ist. Ist die Differenz
+kleiner 30, wird eine kleine Pause eingelegt
+und der Motor gestoppt. Die Länge dieser
+Pause bis zum Abschalten ist abhängig von
+der Differenz. Je kleiner die Differenz,
+desto eher wird der Motor abgeschaltet.
+Danach geht der Regelkreis weiter im
+Durchlauf, d. h. wir fragen erneut die Sollund Istwerte ab und durchlaufen den Regler
+wie gehabt; der Motor wird eingeschaltet,
+falls noch eine Differenz zwischen Soll und
+Istwert besteht.
+Durch die Pause (Differenz i∙3) in Millisekunden wird der Motor schon vor Erreichen des Sollwertes abgebremst, weil wir
+ihn nicht durchlaufen lassen, sondern abschalten. Damit wird der Motor langsamer,
+je näher wir dem Ziel kommen, und der
+Regler schwingt nicht über.
+Die Länge der Pause und der Beginn der
+Bremsphase sollte der Mechanik des Modells angepasst werden, da sie abhängig von
+der Masse der Konstruktion, dem Getriebe,
+dem Motor und der genauen Spannung ist,
+mit der unsere Anlage versorgt wird.
+
+
+Quellen
+[1]
+
+fischertechnik: Programmieranleitung. fischertechnik Computing,
+fischerwerke 1984.
+
+[2]
+
+Gerhard Bader: Grundlagen der digitalen Regelung. In: fischertechnik
+und Computer, CHIP Special 1987,
+S. 19-25.
+
+
+

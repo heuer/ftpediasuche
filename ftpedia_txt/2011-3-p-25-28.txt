@@ -1,0 +1,253 @@
+
+Getriebe
+
+Getriebe
+
+Zahnräder und Übersetzungen (Teil 2)
+Thomas Püttmann
+Im ersten Teil dieser Miniserie ging es überwiegend um die Stirnräder im fischertechnikSystem und die Übersetzungen, die mit ihnen erzielt werden können. In diesem zweiten Teil
+werden Schnecken und vor allem Differentiale benutzt, um die Konstruktion vorgegebener
+Übersetzungen deutlich zu vereinfachen.
+Im ersten Teil haben wir gesehen, dass man
+mit fischertechnik-Stirnrädern mit Modul
+m = 1,5 theoretisch alle Übersetzungen der
+Form (2j • 3k) : (2m • 3n) konstruieren (also
+z. B. 8:3, 16:9 oder 27:128) und damit
+jedes vorgegebene Übersetzungsverhältnis
+beliebig genau annähern kann.
+Praktikabel ist das jedoch schon bei vielen
+einfachen Verhältnissen nicht. Um zum
+Beispiel das Verhältnis 5:1 bis auf zwei
+Stellen hinter dem Komma zu realisieren,
+bräuchte man 24 Stirnräder. In diesem Teil
+kannst du lernen, wie du das Differential
+einsetzt, um Getriebe mit gewünschten
+Übersetzungen mit deutlich weniger Bauteilen zu konstruieren. Doch zuvor wenden
+wir uns kurz den Schnecken- und Kronengetrieben zu. Die Formeln brauchst du
+beim ersten Lesen nicht zu verstehen.
+Versuche lieber die Beispiele abzuändern
+und zu untersuchen, was dabei passiert.
+
+Schnecken- & Kronengetriebe
+Abbildung 1 zeigt ein Schneckengetriebe.
+Die Achse mit der Schnecke treibt die
+Achse mit dem Stirnrad Z20 an. Bei einer
+Umdrehung der Antriebswelle wird das
+Stirnrad genau einen Zahn weiterbewegt.
+Bei 20 Umdrehungen der Antriebswelle hat
+das Z20 also genau eine volle Umdrehung
+gemacht: Die Übersetzung ist 20:1.
+
+Ersetzt du das Z20 durch ein Z10, Z15,
+Z30 oder Z40, so erhältst du die Verhältnisse 10:1, 15:1, 30:1 bzw. 40:1.
+
+
+Abbildung 2 zeigt dir, wie du mit einem
+Schneckengetriebe die Übersetzung 5:1
+konstruieren kannst. Theoretisch kann man
+mit den Stirnrädern und den Schnecken alle
+Übersetzungen der folgenden Form
+konstruieren:
+(2j • 3k • 5l) : (2m • 3n)
+Im Nenner tritt der Faktor 5 nicht auf, da
+das
+fischertechnik-Schneckengetriebe
+selbstsperrend ist: Das Stirnrad kann die
+Schnecke nicht antreiben. Es gibt noch
+zwei weitere Schnecken im fischertechnikSystem: Die erste hat den Modul m = 1,0
+und eignet sich eigentlich nur in Verbindung mit der zugehörigen Schneckenmutter.
+
+
+
+
+Die zweite hat den Modul m = 1,5. In diese
+Schnecke werden Rastachsen eingesteckt.
+Sie hat den Vorteil, besser zur Evolventenverzahnung der fischertechnik-Stirnräder
+zu passen und daher spielfreier zu sein.
+Wenn du sie verwendest, hast du weniger
+Leerlauf beim Ändern der Drehrichtung.
+Andererseits ist sie größer und passt nicht
+so gut ins Raster.
+
+Das Differential
+Das entscheidende Bauteil im Weiteren ist
+das Differential (siehe Abbildung 4). Es
+besitzt drei koaxiale An-/Abtriebe: Zwei
+Rastachsen können in die beiden Seiten
+eingesteckt werden und der Differentialkäfig in der Mitte selbst trägt ein Stirnrad
+mit 20 Zähnen sowie einen Kegelzahnkranz mit 26 Zähnen.
+
+
+
+Auch mit einem Kronenrad kannst du die
+Übersetzung 5:1 erzielen: Das Kronengetriebe in Abbildung 3 hat eine Übersetzung
+von 10:32 = 5:16. Wenn du also zusätzlich
+mit einem zweistufigen Getriebe zweimal
+4:1 übersetzt (Z10 auf Z40), hast du
+insgesamt die Übersetzung 5:1.
+
+Nimm die eine der eingesteckten Rastachsen zwischen Daumen und Zeigefinger
+der linken Hand, die andere zwischen Daumen und Zeigefinger der rechten Hand.
+Drehe nun zunächst die beiden Achsen
+gleich schnell in dieselbe Richtung. Auch
+der Käfig dreht sich genauso schnell in die
+gleiche Richtung. Drehe jetzt die beiden
+Achsen ungefähr gleich schnell in entgegen
+gesetzte Richtungen. Der Käfig sollte sich
+jetzt fast gar nicht drehen.
+Dieses Phänomen wollen wir nun mathematisch genauer fassen. Drehe dazu das
+Differential vor deinen Augen so, dass du
+frontal auf das Z20 schaust (Abbildung 5).
+Jetzt kannst du von Umdrehungen im und
+gegen den Uhrzeigersinn sprechen. Umdrehungen gegen den Uhrzeigersinn sollen
+positiv, Umdrehungen im Uhrzeigersinn
+sollen negativ gezählt werden.
+
+
+Mit Schnecken, Stirn- und Kronenrädern
+kann man somit theoretisch alle Übersetzungen der folgenden Form konstruieren:
+(2j • 3k • 5l) : (2m • 3n • 5p).
+
+
+Bezeichne mit x bzw. y die Anzahl der
+Umdrehungen der beiden Rastachsen und
+mit z die Anzahl der Umdrehungen des
+Käfigs. Die drei Variablen x, y und z sind
+offensichtlich nicht unabhängig. Wenn du
+gleichzeitig an zwei der drei Stellen (zwei
+Rastachsen und Käfig) drehst, ist die Drehbewegung der dritten Stelle schon festgelegt.
+
+
+Getriebe
+
+Halte zum Beispiel einmal den Käfig fest
+(z = 0). Die Gleichung lautet also jetzt
+x + y = 0. Wenn du die eine Achse drehst,
+dreht sich die andere genauso weit, nur
+entgegengesetzt. Oder halte eine Achse fest
+(x = 0). Die Gleichung lautet jetzt
+y - 2z = 0 oder umgestellt y = 2z. Drehst du
+nun den Käfig, so dreht sich die andere
+Achse in die gleiche Richtung, aber doppelt
+so weit!
+
+
+Falls du die Experimente von oben ausgeführt hast, vermutest du vielleicht schon,
+dass z der Mittelwert aus x und y ist. Als
+Gleichung schreibt man z = (x+y)/2. Überprüfe diese Gleichung jetzt noch einmal
+genau, indem du einen Zahn des Z20 auf
+dem Käfig markierst und die beiden Enden
+der Rastachsen genau beobachtest: Hältst
+du die linke Rastachse fest und drehst die
+rechte Rastachse zweimal im positiven
+Sinn (x = 0, y = 2), so dreht sich der Käfig
+genau einmal im positiven Sinn (z = 1).
+Drehst du beide Achsen genau einmal im
+positiven Sinn (x = 1, y = 1), so dreht sich
+der Käfig genau einmal im positiven Sinn
+(z = 1). Drehst du beide Achsen genau
+einmal entgegengesetzt (x = 1, y = -1), so
+ist der Käfig nach den beiden Drehungen
+genau da, wo er vorher war (z = 0).
+Die Gleichung z = (x + y)/2 eignet sich in
+dieser Form vor allem, wenn die beiden
+Seiten angetrieben werden und die Mitte
+den Abtrieb bildet. Für unsere Zwecke ist
+es praktischer alle drei An-/Abtriebe als
+gleichberechtigt anzusehen. Dann kann
+man die Gleichung viel besser als
+x + y - 2z = 0
+schreiben und nach Bedarf nach der
+Abtriebsvariablen auflösen.
+
+Wahrscheinlich hast du das Differential
+zuerst beim Bau von Fahrzeugen kennengelernt. Bei einer Kurvenfahrt legt das
+äußere Rad einer Antriebachse einen
+größeren Weg zurück als das innere und
+sollte entsprechend die Möglichkeit haben,
+sich mehr zu drehen. Genau das leistet in
+diesem Fall das Differential: Der Käfig
+wird angetrieben (die Variable z ist also
+vorgegeben) und die beiden Achsen drehen
+sich nach Bedarf: Nur die Summe
+x + y = 2z liegt fest. Wie sich 2z auf die
+beiden Seiten verteilt, hängt von der
+Kurvenfahrt (Reibung am Boden) ab. Fährt
+das Fahrzeug geradeaus, so ist x = y. Je
+stärker die Kurve gekrümmt ist, desto mehr
+ruht eines der Räder, während sich das
+andere entsprechend mehr dreht. Es kann
+sogar sein, dass sich das eine Rad rückwärts bewegt, während sich das andere um
+entsprechend mehr als 2z vorwärts bewegt.
+Wie kannst du nun mit Hilfe des
+Differentials ungewöhnliche Übersetzungen erhalten? Das funktioniert, indem du
+zwei der An-/Abtriebe durch ein normales
+Stirnradgetriebe koppelst. Am besten
+schauen wir uns gleich ein Beispiel an
+(siehe Abbildung 6): Zwischen der einen
+Rastachse und dem Käfig ergibt sich durch
+das Stirnradgetriebe eine Übersetzung von
+3:1. Dies bedeutet z = 3y. Setzt du in der
+allgemeinen Gleichung x + y - 2z = 0 für
+das Differential z = 3y ein, so erhältst du x 5y = 0, also x = 5y. Wir haben somit jetzt
+eine ganz andere Möglichkeit gefunden,
+die Übersetzung 5:1 mit Standardfischertechnik-Teilen zu konstruieren.
+
+
+
+Für den Merkur kann man also in guter
+Näherung ein Getriebe mit Übersetzung
+83:20 = 4,15:1 verwenden. Der Faktor 4,15
+lässt sich mit einem Differential in der
+Form 4 + 3/20 erhalten, was zu dem
+Getriebe in Abbildung 7 führt.
+
+
+Versuche doch am besten jetzt gleich einmal, eine Übersetzung 11:1 mit Hilfe eines
+Differentials zu konstruieren! Es gibt dafür
+verschiedene Möglichkeiten. Für eine
+davon brauchst du außer dem Differential
+noch ein Z40, ein Z10 und ein Z30. Mit
+einem Differential und einigen Stirnrädern
+kannst du sehr viele Übersetzungen praktisch realisieren. Dazu gehören alle ganzzahligen Verhältnisse der Form m:1 mit
+m < 59. So sind z. B. 43 = 3•3•3 + 4•4 oder
+37 = 3•3•4+1. (Die Additionen werden
+dabei jeweils mit dem Differential
+durchgeführt, die Multiplikationen mit den
+Stirnrädern.) Theoretisch lassen sich mit
+beliebig vielen Stirnrädern und einem
+Differential alle Verhältnisse der Form
+
+
+Für die Venus kann man 1,626 durch 1,625
+(= 13/8) annähern. Das entsprechende Getriebe ist in Abbildung 8 dargestellt, wobei
+der Antrieb rechts oben und der Abtrieb der
+Differentialkäfig ist.
+
+(2j1 • 3j2 ± 2j3 • 3j4) : (2j5 • 3j6 ± 2j7 • 3j8)
+konstruieren. Die Möglichkeiten steigen
+noch einmal deutlich bei Verwendung
+eines zweiten Differentials. In der Praxis
+wirst du jede gewünschte Übersetzung mit
+Hilfe zweier Differentiale und weniger
+Stirnräder genau erzielen oder ausreichend
+gut annähern können.
+
+Anwendungsbeispiele
+Als Anwendungsmodell habe ich eine
+Planetenmaschine (Orrery) mit Sonne,
+Merkur, Venus und Erde konstruiert. Der
+Merkur braucht für seinen Umlauf um die
+Sonne 0,241 Jahre, die Venus 0,615 Jahre.
+Die Kehrwerte dieser beiden Zahlen sind
+ungefähr 4,149 bzw. 1,626.
+
+
+
+Vielleicht überlegst du dir einmal selbst ein
+passendes Getriebe für den Mars: Er hat
+eine Umlaufzahl von 1,881 Jahren.
+Ein ausführlicher Beitrag über die Planetenmaschine folgt in einer der nächsten
+Ausgaben.
+
+

@@ -1,0 +1,680 @@
+
+Computing
+
+Computing
+
+Hard- und Softwareübersicht zur Ansteuerung
+von fischertechnik
+Axel Chobe
+Eine der besonderen Merkmale von fischertechnik ist die Möglichkeit, Modelle anzusteuern –
+mit Mikrocontrollern und Fernsteuerungen. Der Beitrag gibt eine aktuelle Übersicht.
+Seit Mitte der 1980er Jahre beschäftigt sich
+fischertechnik auch mit Computing. Jeweils
+dem Stand der Technik entsprechend entwickelte fischertechnik passende Hard- und
+Software zur Ansteuerung von Modellen.
+Es begann mit dem Parallel-Interface und
+endet z. Z. mit dem TXT 4.0. Auch die
+Software passte sich den Entwicklungen der
+Betriebssysteme an: von DOS über alle
+möglichen Windows-Versionen bis schließlich auch für Android und Linux gab bzw.
+gibt es passende Entwicklungsumgebungen, von LLWIN bis ROBO Pro Coding
+[1].
+Daneben entwickelte auch die Fan-Gemeinschaft eigene Hard- und Software. Die
+Motivation ist zum einen sicherlich die
+Verbesserung der Software, um deren Möglichkeiten zu erweitern. Zum anderen soll
+die Hardware preisgünstig sein und ebenfalls erweitert genutzt werden können. An
+dieser Stelle dafür von mir herzlichen Dank
+
+an alle Beteiligten für das solcherart
+erweitere „Spielvergnügen“.
+Drittens gibt es zusätzliche HardwareAdapter für verbreitete Mikrocontroller wie
+z. B. den micro:bit, den Calliope oder den
+Arduino. Aber auch verbreitete Programmiersprachen wie z. B. Scratch wurden an
+fischertechnik-Schnittstellen
+angepasst
+bzw. passende Treiber entwickelt.
+Vor diesem Hintergrund wird klar, dass das
+inzwischen ein komplexes Thema ist, und
+es schon eine Herausforderung darstellt,
+hier den Überblick zu behalten. Aber auch
+bei einem historischen Dachbodenfund von
+fischertechnik-Bauteilen ist es sicherlich
+interessant, diesen passend einzuordnen zu
+können.
+Im Folgenden wird zuerst die Entwicklung
+der Mikrocontroller dargestellt; anschließend werden die historische Entwicklung
+und die Möglichkeiten der Software beschrieben.
+
+
+
+
+Hardware zur Steuerung von fischertechnik-Modellen
+Beschreibung
+Parallel-Interfaces (30520)
+Die ersten Interfaces datieren aus den Jahren
+1984/85 und waren für die damaligen HomeComputer von Atari, Commodore und Schneider
+vorgesehen. Mit der Verbreitung der IBM-PCs
+setzten sich Interfaces mit CentronicsSchnittstelle durch.
+Software: Basic, Maschinensprache
+Heute noch aktuell; siehe [2].
+Flip-Flop (36121)
+Einführungsjahr: 1991
+Software: keine (Steuerung über 1 DIP und 2
+Potis)
+Verbindung: keine
+Eingänge: 2 universal
+Ausgänge: 2 (Motor, Lampe, Summer)
+Baustein ist das Herzstück des Sensoric
+Baukastens; kann als „komplexer Silberling“
+verstanden werden.
+Intelligent Interface (30402)
+Einführungsjahr: 1997
+Software: LLWin
+Verbindung: serielle Schnittstelle (SubD9)
+Eingänge: 8 digital (TTL), 2 analoge Widerstände, Fotozelle
+Ausgänge: 4 Motoren oder 8 Lampen
+Einfache Abfragen können mit Python realisiert
+werden. Sehr selten und daher teuer.
+E-Tec-Modul (91083)
+Einführungsjahr: 2003
+Software: keine (8 Programme über DIPSchalter)
+Verbindung: keine (läuft autark)
+Eingänge: 3 digital
+Ausgänge: 1 Motor oder 2 Lampen
+Neben den DIP-Schalter-Programmen können
+auch Grundlagen der Digitaltechnik erlernt
+werden [3].
+
+
+Artikel
+
+Handbuch
+
+Beschreibung
+
+Computing
+
+Artikel
+
+Handbuch
+
+ROBO Interface (93293)
+Einführungsjahr: 2004
+Software: ROBO Pro, Basic, Python [4]
+Verbindung: seriell 9 polig, USB
+Eingänge: 8 digital (TTL), 2 analoge Widerstände, 2 analoge Spannungen, 2 Abstandssensoren
+Ausgänge: 4 Motoren oder 8 Lampen
+Fernbedienbar: IR-Control Set (30344), Data
+Link (93295/112833)
+Erster Controller mit ROBO Pro. Selten und
+daher teuer.
+ROBO I/O Extension (93294)
+Einführungsjahr: 2006
+Software: ROBO Pro
+Verbindung: USB für direkte Nutzung, 10 pol.
+Flachbandkabel an ROBO Interface
+Eingänge:8 digital (TTL), 1 analoger Widerstand
+Ausgänge: 4 Motoren oder 8 Lampen
+Läuft selbstständig oder als Erweiterung zum
+ROBO Interface.
+ROBO TX Controller (500995) [5]
+Einführungsjahr: 2009
+Software: ROBO Pro, C
+Verbindung: USB, Bluetooth, I²C (5V)
+Eingänge: 8 universal, 4 schnelle Zähleingänge
+Ausgänge: 4 Motoren oder 8 Lampen
+Fernbedienbar: mit App RoboTXdroid (via
+Bluetooth)
+Display: 128×64 Pixel monochrom
+Weitere Infos zu I²C unter [6, 7].
+ROBO LT Controller (139308/147225)
+Einführungsjahr: 2010
+Software: ROBO Pro Light
+Verbindung: USB
+Eingänge: 3 universal
+Ausgänge: 2 Motorausgänge
+Der 147225 kann auch über USB mit Strom
+versorgt werden.
+
+
+
+
+Beschreibung
+Electronics-Modul (152063)
+Einführungsjahr: 2014
+Software: keine, 8 Programme über DIPSchalter
+Verbindung: keine, läuft autark
+Eingänge: 3 digital
+Ausgänge: 2 Motoren oder 4 Lampen
+Zweite Variante des E-Moduls, mit Potentiometer und höheren Eingangsfrequenzen.
+TXT Controller (153513)
+Einführungsjahr: 2014
+Software: ROBO Pro, C, Python, Scratch
+Verbindung: USB, WLAN, Bluetooth, I²C (3,3 V)
+Eingänge: 8 universal,4 schnelle Zähleingänge,
+USB-Kamera inkl. Mikrofon
+Ausgänge: 4 Motoren oder 8 Lampen, Lautsprecher
+Fernbedienbar: Plus Control-Set (500881/
+136581), App TXTCamControl (iOS),
+TXTCamdroid (Android)
+Display: 6,1 cm, 320×240 Pixel, farbig, touch
+Auslaufmodell; z.T. günstig zu bekommen.
+Robotics MiniBots-Modul (156499)
+Einführungsjahr: 2016
+Software: keine, 8 Programme über DIPSchalter
+Verbindung: keine, läuft autark
+Eingänge: 3 digital (Schalter, Spurensucher)
+Ausgänge: 2 Motoren
+Für Kinder ohne Programmierkenntnisse.
+ROBOTICS BT Smart Beginner (161944)
+Einführungsjahr: 2017
+Software: ROBO Pro Light, Scratch
+Verbindung: USB, Bluetooth
+Eingänge: 4 universal
+Ausgange. 2 Motoren oder 4 Lampen
+Fernbedienbar: ROBOPro Smart für Android
+und iOS
+Sehr gut für Einsteiger geeignet; erstmals mit
+Bluetooth.
+
+
+Artikel
+
+Handbuch
+
+Beschreibung
+
+Computing
+
+Artikel
+
+Handbuch
+
+E-Tronics-Modul (182323)
+Einführungsjahr: 2021
+Software: keine, 8 Programme über DIPSchalter
+Verbindung: keine, läuft autark
+Eingänge: 3 digital
+Ausgänge: 2 Motor oder 4 Lampen
+Dritte Variante des E-Moduls.
+TXT 4.0 Controller (560166) [8]
+Einführungsjahr: 2022
+Software: ROBO Pro Coding, C, Python
+Verbindung: USB, WLAN, Bluetooth, I²C (5 V)
+Eingänge: 8 universal, 4 schnelle Zähleingänge
+Ausgänge: 4 Motoren oder 8 Lampen, Lautsprecher, 3 Servoausgänge
+Fernbedienbar: ja
+Display: 320×240 Pixel, kapazitives TouchDisplay
+Komplettkasten leider teuer, sonst top.
+
+Fernsteuerungen
+Beschreibung
+
+Artikel
+
+Handbuch
+
+Funkfernsteuerung (30270), Fernlenkset
+(30375)
+Einführungsjahr: 1983
+Zweiter Fernsteuerungsempfänger möglich.
+Motorblock mit 3-Gang-Schaltung inkl. Differenzial
+und Gelenkwelle sowie einem Servomotor.
+Sehr selten und darum teuer.
+IR Control Set (30344)
+Einführungsjahr: 1998
+Empfänger: kann auch direkt vom ROBO Interface
+gesteuert werden; es kann ein zweiter Empfänger
+angesprochen werden
+3 Motorausgänge
+Sender: IR, Raupenfunktion möglich
+Sehr selten und darum teuer.
+
+
+
+
+Beschreibung
+ROBO RF Data Link (93295/112833)
+Einführungsjahr: 2004
+Empfänger: muss in ROBO Interface verbaut
+werden.
+Sender: mit USB-Typ-B an PC
+Nicht mehr zu erhalten.
+Control Set (500881/136581)
+Einführungsjahr: 2008
+Empfänger: kann auch vom TXT gesteuert
+werden. Es kann ein zweiter Empfänger
+angesprochen werden.
+Ausgänge: 3 Motorausgänge, 1 Servoausgang
+Sender: IR, 2 Frequenzen, Raupenfunktion
+möglich
+Ideale Ergänzung zum TXT, einfache
+Programmierung.
+Bluetooth Control Set (540585)
+Einführungsjahr: 2017
+Ausgänge: 3 Motorausgänge, 1 Servoausgang
+Sender: Raupenfunktion und Tempomat-Funktion
+möglich; auch über Bluetooth Control App für
+Android und iOS mit Smartphone oder Tablet
+Fernbedienung über Bluetooth.
+Plus Control Set – Bluetooth-Steuerung
+Einführungsjahr: 2022
+Ausgänge: 3 Motorausgänge, 1 Servoausgang
+Sender: Bluetooth Control App für Android und
+iOS mit Smartphone oder Tablet
+Preiswerte Möglichkeit einer Bluetooth-Steuerung,
+da kein Sender benötigt wird.
+
+
+Artikel
+
+Handbuch
+
+
+Computing
+
+Controller und Adapter, die nicht von fischertechnik stammen
+Beschreibung
+
+Artikel
+
+Handbuch
+
+ftDuino [9]
+Einführungsjahr: 2017
+Software: Arduino IDE, Scratch, Blockly,
+ROBO Pro (online) [10]
+Verbindung: Mini-USB, I²C (5 V)
+Eingänge: 8 universell, 4 schnelle
+Zähleingänge
+Ausgänge: 4 Motoren oder 8 Lampen
+Fernbedienbar: ja
+Display: teilweise mit OLED 128×32 Pixel
+Preisgünstiger als das Original; hoher
+Lerneffekt, Zugang zur „Arduino-Welt“.
+Calliope mini 2.0
+Einführungsjahr: 2017
+Software: MakeCode, OPEN Roberta Lab,
+Scratch, MInd+
+Verbindung: USB
+Eingänge: 4 analoge
+Ausgänge: 8-11 Ein-/Ausgangsanschlüsse
+Display: 5×5 Pixel
+Einsatz hauptsächlich in Schulen, da
+preisgünstig. fischertechnik-Interface
+verfügbar [11].
+micro:bit (IO F5 Adapter) [12, 13]
+Einführungsjahr: 2018
+Software: MakeCode, Python, Scratch
+Verbindung: USB
+Eingänge: 6
+Ausgänge: 4 Motoren oder 8 Lampen
+Fernbedienbar: ja (Bluetooth oder weiteren
+micro:bits)
+Display: 5×5 Pixel
+Einfache Programmierung mit MakeCode.
+
+
+
+
+Beschreibung
+micro:bit
+(BBCZ INTERFACE) [14]
+Einführungsjahr: 2018
+Software: MakeCode, Python, Scratch
+Verbindung: USB
+Eingänge: 4
+Ausgänge: 2 Motoren oder 4 Lampen
+Fernbedienbar: ja (Bluetooth oder weiteren
+micro:bits)
+Display: 5×5 Pixel
+Einfache Programmierung mit MakeCode.
+Arduino UNO/MEGA
+(fischertechnik UNO/Mega-F5-Shield)
+Einführungsjahr: 2018
+Software: frei wählbar (C, Scratch, …)
+Verbindung: Aufsteckplatine auf Arduino
+Uno bzw. Arduino Mega
+Eingänge: 12 digital/analog
+Ausgänge: 12
+Display: keins
+Gute Anleitung im Buch rechts [15].
+Raspberry PI
+(fischertechnik Raspberry PI-F5)
+Einführungsjahr: 2018
+Software: frei wählbar (C, Scratch, …)
+Verbindung: Aufsteckplatine auf Raspberry
+PI
+Eingänge: 8 digitale, 4 analoge, I²C
+Ausgänge: 4 Motoren od. 8 Lampen
+Display: keins
+Schlägt eine Brücke zwischen Raspberry
+PI und fischertechnik.
+Raspberry PI (TX-Pi-HAT)
+Einführungsjahr: 2019
+Software: frei wählbar (C, Scratch, …)
+Verbindung: Aufsteckplatine auf Raspberry
+PI
+Eingänge: 4 digitale, I²C
+Ausgänge: 2 Motoren
+Display: optional
+
+
+Artikel
+
+Handbuch
+
+Beschreibung
+
+Computing
+
+Artikel
+
+Handbuch
+
+ftSwarm [16, 17]
+Einführungsjahr: 2021
+Software: C (Python in Vorbereitung
+Verbindung: Micro-USB, WLAN, I²C (3.3V)
+Eingänge: 4 universal, Gyro (optional)
+Ausgänge: 2 Motoren, 1 Servo, bis zu 18
+RGB-LEDs
+Fernbedienbar: ja (WLAN oder weitere
+ftSwarm/ftSwarmControl)
+Display: keins
+Klein, preisgünstig, mehrere Controller
+werden über WLAN vernetzt.
+ftSwarmControl [16, 17]
+Einführungsjahr: 2021
+Software: C (Python in Vorbereitung
+Verbindung: Micro-USB, WLAN, I²C
+(3,3/5V)
+Eingänge: 4 digital, 8 Taster, 2 Joysticks,
+Gyro (optional)
+Ausgänge: 2 Motoren
+Fernbedienbar: ja (WLAN oder weitere
+ftSwarm/ftSwarmControl)
+Display: OLED 128x64 Pixel
+
+
+
+
+Programmiermöglichkeiten der Controller
+Beschreibung
+LLWIN (Lucky Logic for Windows)
+Das Programm LLWin steuert die
+fischertechnik-Modelle über das am
+PC angeschlossene Interface. Mit
+der Version LLWin 2.1 kann man
+dabei sowohl das Intelligent
+Interface (30402) als auch das
+frühere Universal-Interface (30520)
+betreiben.
+Heute kaum noch in Gebrauch.
+ROBO Pro
+(für alle fischertechnik-Controller
+inklusive ftDuino [10])
+In ROBO Pro werden Programme
+wie ein grafischer Programmablaufplan aus Kommandos und Verzweigungen zusammengesetzt. Das
+fertige Programm kann entweder auf
+dem PC gestartet werden und
+steuert dann via USB-Schnittstelle
+den Controller (Online-Mode), oder
+aber mit einem Klick übersetzt und
+auf den TX- bzw. TXT-Controller
+übertragen werden.
+Meistgenutztes Programm, großer
+Leistungsumfang. Befehlsübersicht
+unter [18].
+ROBO Pro Light
+(für ROBO LT und BT Smart)
+Abgespeckte Version von ROBO
+Pro. Für den BT Smart gibt es
+ROBO Pro Smart für Android und
+iOS.
+Geeignet für Einsteiger, geringer
+Leistungsumfang.
+
+
+Screenshot
+
+Beschreibung
+
+Computing
+
+Screenshot
+
+ROBO Pro Coding (für TXT 4.0)
+Die Software ROBO Pro Coding
+bietet in ihrer Umgebung neben der
+Möglichkeit zur grafischen Programmierung eine textbasierte mit Python
+und läuft unter Windows, Linux oder
+MacOS sowie auf mobilen Endgeräten (Android oder iOS). Selbst
+erstellte Programme können lokal
+auf dem Gerät und online in der
+Cloud gespeichert werden. Über den
+Interface-Test können Aktoren und
+Sensoren schnell getestet werden.
+Leider zurzeit noch nicht ausführlich
+dokumentiert [19].
+ftScratch 3 / Scratch 3
+(für TXT, BT Smart / ftDuino,
+Arduino, Calliope, micro:bit)
+Scratch ist eine grafische Programmiersprache. Statt schriftlicher
+Anweisungen werden Befehlsblöcke
+in der richtigen Reihenfolge
+angeordnet. Syntaxfehler werden
+durch die Gestaltung der Blöcke
+verhindert.
+Hervorragende Programmiersprache
+für Einsteiger [20]. Ausführliche
+Dokumentation zu Scratch unter
+[21].
+MakeCode
+(für micro:bit)
+Die Programmierung erfolgt
+entweder in einer Blocksprache oder
+durch Umschalten in der oberen
+Zeile in JavaScript. Alternativ kann
+der micro:bit auch über den Python
+Editor Mu programmiert werden [22].
+Webbasierte Oberfläche.
+Beschreibung unter [12].
+
+
+
+
+Beschreibung
+OPEN Roberta Lab
+(für Calliope Mini)
+Open Roberta ist ein vom Fraunhofer Institut entwickelter Editor, mit
+dem sich verschiedene Mikrocontroller und Roboter in der
+grafischen Programmiersprache
+NEPO® programmieren lassen [23].
+Webbasierte Programmieroberfläche; basiert auf Blockly.
+Brickly [24]
+(für TXT; erfordert die Community
+Firmware [25])
+Mit Brickly kann man im Browser,
+z. B. auf einem Tablet oder einem
+PC grafisch Programme erstellen,
+die auf dem TXT laufen. Der TXT
+dient dabei als Webserver, auf den
+man über WLAN zugreifen kann. Die
+Programme können die Eingänge
+des TXT auslesen und seine
+Ausgänge ansteuern.
+Basiert auf Blockly; Vorläufer von
+ROBO Pro Coding.
+startIDE [26]
+(für TXT; erfordert die Community
+Firmware [25])
+startIDE ist eine Programmier-App
+für die Community Firmware des
+TXT Controllers (auch für den TXPi), mit der sich eine Vielzahl
+einfacher Steuerungen programmieren lässt.
+Auf dem TXT-Display etwas
+fummelig. Es besteht auch die
+Möglichkeit, das Programm in einem
+Texteditor zu schreiben. Übersicht
+der Befehle unter [27].
+
+
+Screenshot
+
+Beschreibung
+
+Computing
+
+Screenshot
+
+ftrobopy [28] (für TXT, TXT 4.0)
+Ansteuerung des TXT und des TXT
+4.0 Controllers in Python. Es wird
+die Bibliothek „ftrobopy“ benötigt.
+Kurzdokumentation unter [29].
+FT-Robo-Snap (für TXT)
+Ein Webinterface und eine IDE für
+den fischertechnik ROBOTICS TXT
+Controller, basierend auf Snap! [30]
+Snap!, bis zu Version 3.1.1 unter
+dem Namen BYOB bekannt, ist eine
+auf Scratch aufbauende und von
+Scheme und damit auch Lisp
+inspirierte bildungsorientierte
+visuelle Programmiersprache.
+nanoFramework [31]
+(für NetDuino, ESP32, …)
+Eine .net-Runtime nebst Framework
+für 32-Bit-Microcontroller wie
+NetDuino, ESP32 u.v.a. Man
+programmiert und debugged in C#
+unter Microsoft Visual Studio (nur
+Windows) oder Visual Studio Code.
+Richtet sich an professionelle
+Produktentwicklung, ist aber auch
+für fischertechnik nutzbar. Ggf. wird
+zusätzlich zum CPU-Board
+Motortreiber-Hardware benötigt.
+
+
+
+Referenzen
+[1]
+
+Till Harbaum: Von Lucky Logic zu
+RoboPro Coding. ft:pedia 1/2021,
+S. 103–109.
+
+[15] Dirk Fox, Thomas Püttmann:
+fischertechnik-Roboter mit Arduino.
+dpunkt.verlag, 2020.
+[16] Christian Bergschneider, Stefan
+Fuss: ftSwarm – Das Prinzip
+Heinzelmännchen. ft:pedia 2/2021,
+S. 107–111
+
+[2]
+
+Jens Lemkamp: Parallel-Interface
+durch Arduino gesteuert (1). 1/2014, S. 24–30.
+
+[3]
+
+Axel Chobe: E-Tec Analog/Digital.
+Übersicht über die DIPEinstellungen des E-Tec-Moduls, auf
+chobe.info.
+
+[4]
+
+Erik Andresen: The fischertechnik
+Interface for the Rest of us. 2/2012, S. 32–38.
+
+[5]
+
+Stefan Brunner: Die Ein- und
+Ausgänge des TX Controllers.
+ft:pedia 4/2012, S. 24–31.
+
+[6]
+
+Axel Chobe: I²C. Überblick über I²C
+mit fischertechnik, auf chobe.info.
+
+[20] Dirk Fox: Scratch mit fischertechnik
+– Update 2022. ft:pedia 1/2022,
+S. 86–92.
+
+[7]
+
+Dirk Fox: I²C mit TX und Robo Pro –
+Teil 1: Grundlagen. ft:pedia 3/2012,
+S. 32–37.
+
+[21] Axel Chobe: Scratch – Einführung in
+die Programmiersprache. Auf
+chobe.info.
+
+[8]
+
+Till Harbaum: TXT 4.0 Controller –
+ein Blick unter die Haube. 2/2021, S. 112–116.
+
+[22] microbit.org: MakeCode.
+
+Till Harbaum: ftDuino – OpenSource trifft KonstruktionsBaukasten. ft:pedia 1/2018, S. 85–91.
+
+[24] Till Harbaum: Brickly auf dem TXT:
+Grafische Programmierung à la
+Google-Blockly. ft:pedia 1/2017,
+S. 92–98.
+
+[9]
+
+[10] Dirk Fox: TX-Simulator für den
+ftDuino. ft:pedia 3/2022, S. 110–120.
+[11] André Marcel: Calliope Mini
+fischertechnik-Interface. 2/2020, S. 86–91.
+[12] Axel Chobe: micro.bit. Auf
+chobe.info.
+[13] Axel Chobe: Micro:Bit. 4/2019, S. 47–51.
+[14] Axel Chobe: Micro:Bit (Teil 2).
+ft:pedia 3/2020, S. 90–92.
+
+
+[17] Stefan Fuss, Christian Bergschneider: ftSwarm (2) – Codierst Du noch
+oder schwärmst Du schon? 2/2022, S. 134–137.
+[18] Axel Chobe: Übersicht der RoboPro
+Befehle für Robo Interface, TX, TXT.
+Auf chobe.info.
+[19] Till Harbaum: ROBO Pro Coding –
+ein Blick hinter die Kulissen. 2/2021, S. 117–122.
+
+[23] Open Roberta Lab: NEPO.
+
+[25] Till Harbaum: Auf zu neuen Ufern:
+Die Geschichte der „CommunityFirmware“ für den TXT. 4/2016, S. 59–67.
+[26] Peter Habermehl: startIDE für die
+Community Firmware –
+Programmieren direkt auf dem TXT
+oder TX-Pi. ft:pedia 1/2018, S. 102–
+107.
+[27] Beschreibung der fischertechnik
+TXT Community Firmware auf
+chobe.info.
+
+[28] Torsten Stuehn: Programmierung
+des TXT mit Python. ft:pedia 2/2017,
+S. 58–62.
+
+Computing
+
+[30] UC Berkeley: Snap!
+[31] .NET nanoFramework:
+https://nanoframework.net/
+
+[29] Axel Chobe: Kurzdokumentation zu
+ftrobopy auf chobe.info.
+
+
+

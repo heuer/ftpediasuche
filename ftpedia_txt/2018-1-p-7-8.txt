@@ -1,0 +1,87 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Kaulquappen (Teil 9):
+Eine schräge Übertragung
+Ralf Geerken
+Mit Ketten und der Ur-Version der fischertechnik-Kegelzahnräder gelingt eine kraftschlüssige
+Übertragung auf schrägstehende Achsen, wie dieser Beitrag zeigt.
+In manchen Bausituationen hat man ja das
+Problem, dass eine Drehbewegung auf eine
+andere Achse übertragen werden muss, die
+aber leider nicht parallel zur Antriebsachse
+liegt. In vielen Fällen wird das Problem mit
+Kardangelenken (31044, 35971, 35115 +
+38446) gelöst.
+Eine 90 Grad Übertragung ist auch mit
+∂ einem Z40 + Z10 oder mit
+∂ zwei Rastkegelzahnrädern möglich.
+Es gibt noch einige Möglichkeiten mehr,
+eine Drehbewegung um 90 Grad zu übertragen. Nur zwei weitere davon seien hier
+noch genannt:
+∂ Das Differential 85983 oder 75218 (mit
+Differentialkäfig 31411 und Differential-Kegelzahnrädern 31414, 35143 oder
+137196), welches dann die Drehzahl
+obendrein noch halbiert bzw. verdoppelt,
+wenn eine Seite befestigt wird sowie
+∂ die Kegelzahnräder Z10 35146 (neuere
+Bauform) und 31051 (alte Bauform).
+Auf das Kegelzahnrad 31051 der alten Bauform möchte ich hier etwas näher eingehen,
+weil man damit nämlich noch andere
+Winkel als 90 Grad übertragen kann.
+Mithilfe einer Zahnradkette lässt sich
+nämlich ein Winkel von 7,5° problemlos
+und kraftschlüssig übertragen. Kleinere
+Winkel stellen kein Problem dar, größere
+Winkel lassen sich bis ca. 12° noch sehr gut
+übertragen.
+
+
+Bei 15 Grad war dann Schluss, weil dann
+der breitere Teil des Kegelzahnrads in die
+Außenseite der Kette greift.
+Bisher ist das noch nicht so weltbewegend,
+denn man kann diese Winkel, wie Martin
+Romann [1] und Thomas Püttmann [2] das
+in ihren Uhrenkonstruktionen bereits vor
+Jahren gezeigt haben, auch mit normalen
+Zahnrädern erreichen. Diese werden dazu
+einfach in einer Ebene gegeneinander
+gekippt. Diese Konstruktion hat aber den
+Nachteil, dass der Abstand der beiden
+Achsen festgelegt ist und dass sich die
+Drehrichtung umkehrt, was je nach Situation auch erwünscht ist.
+
+
+
+Eine weitere Möglichkeit bei der Kombination aus Kegelzahnrad und Zahnradkette ist
+es, die beiden Achsen nicht nur in einer
+Ebene winklig zu versetzen, sondern sie in
+der zweiten Ebene auch noch gegeneinander zu verdrehen. Das ist ebenfalls in
+einem Winkel bis ca. 12° problemlos möglich (Abb. 2).
+Die neuere Variante des Kegelzahnrads
+35146 ist übrigens für diese Konstruktion
+ziemlich ungeeignet, weil sich die Zähne
+schon bei viel kleineren Winkeln in der
+Kette verklemmen.
+Es sind bestimmt noch viele weitere
+Kombinationen möglich. Diese zu (er)finden möchte ich aber ab dieser Stelle euch
+überlassen.
+
+Referenzen
+
+
+
+[1]
+
+Martin Romann: Pendeluhr in der ft
+Community, 2010.
+
+[2]
+
+Thomas Püttmann: Die RastO’Clock-Uhr. ft:pedia 1/2017,
+S. 42-47.
+
+

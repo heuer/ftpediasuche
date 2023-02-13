@@ -1,0 +1,150 @@
+
+
+Modell
+
+Savonius-Rotor mit Magnetlager
+Rüdiger Riedel
+Die Maisonne verwöhnt uns, da möchte man doch auch etwas mit Solarzellen machen. Leider
+sind meine bisherigen Versuche gescheitert – sollte daraus noch etwas werden, berichte ich.
+Zum Glück weht ein ordentlicher Wind, da lässt sich auf die Schnelle was Passendes bauen.
+Es gibt sie als Werbeträger und Kunstwerke: Windräder mit senkrechter Achse,
+manchmal nur aus zwei gebogenen Blechen
+bestehend, die sich langsam und bedächtig
+im Wind drehen. Bekannt sind auch die
+Anemometer, die Windmesser, die meist
+aus vier kugeligen Halbschalen bestehen
+(deshalb auch Schalenanemometer genannt) und die Windgeschwindigkeit anzeigen.
+
+
+
+Das Windrad in Abb. 1 und 2 besteht aus
+den V-Schaufelteilen (37353, 37354 und
+37355) und S-Aufnahmestreifen 60
+(35771). Es lässt sich auch mit einfachen
+Bauplatten realisieren (Abb. 3).
+Um den Reibungswiderstand zu verringern,
+habe ich unten an der Achse 30 einen Stabmagneten (Durchmesser 4 mm, Länge
+10 mm) angefügt. Ein gleichartiger befindet
+sich im Baustein 30 so, dass sie sich abstoßen (Abb. 4).
+
+
+
+
+Modell
+
+Diese Windräder sind Widerstandsläufer,
+ihr Funktionsprinzip beruht auf dem unterschiedlichen Strömungswiderstand der
+Halbschalen. Im Gegensatz dazu sind die
+weit verbreiteten Windkraftanlagen mit
+ihren waagerechten Achsen sogenannte
+Auftriebsläufer.
+Der Baggerlöffel 45 (156104) funktioniert
+bestimmt sehr gut, leider besitze ich nur
+einen. Mit den Kotflügeln (35050) hatte ich
+keinen Erfolg.
+
+Ein wenig Aerodynamik
+Jeder kennt den Luftwiderstand, den Fahrtwind, vom Fahrradfahren: Je schneller man
+fährt, desto größer ist der Widerstand.
+Wenn man sich aber duckt wie die Radrennfahrer, kommt man schneller voran oder
+braucht weniger Kraft.
+Der Luftwiderstand Fw hängt unter anderem
+von der Querschnittsfläche des Körpers und
+vom Quadrat der Geschwindigkeit ab und
+lässt sich wie folgt berechnen:
+
+Dabei gilt:
+
+=
+
+
+A Querschnittsfläche des Körpers zur
+Strömungsrichtung
+
+
+Bei Autos soll der Widerstandsbeiwert
+möglichst klein sein, um Energie zu sparen,
+und liegt unter 0,5. Überraschend ist der
+recht hohe cw-Wert von Formel-1-Rennwagen, der laut Internet bei 0,7 bis 1,2
+liegen soll. Begründung: Der Anpressdruck
+auf die Straße ist wichtiger und Leistung zur
+Überwindung des Luftwiderstandes ist
+reichlich vorhanden.
+
+Der Savonius-Rotor
+In den sechziger Jahren des letzten Jahrhunderts sah man oft Rotoren auf dem Dach
+von Transportfahrzeugen, Omnibussen und
+Eisenbahnwaggons: Vom Wind bzw. Fahrtwind angetrieben sorgten sie für die Entlüftung (Abb. 6).
+
+cw Widerstandsbeiwert
+ρ Dichte des Fluids (Gas bzw. Flüssigkeit)
+v Geschwindigkeit des Fluids
+Für uns interessant ist der Widerstandsbeiwert, der von der Geometrie des Körpers
+abhängt. Umgangssprachlich ausgedrückt
+ist der cw-Wert ein Maß für die „Windschlüpfrigkeit“ eines Körpers.
+In Abb. 5 sieht man im Querschnitt eine
+offene Halbkugel (z. B. ein halber Tischtennisball) mit dem Rücken zum Luftstrom,
+eine ebene Platte und eine offene Halbkugel
+mit der Öffnung zum Luftstrom. Die unterschiedlichen Widerstandsbeiwerte werden
+für die Windräder mit Widerstandsläufer
+ausgenutzt.
+
+Eisenbahn-Waggon
+
+Das Windrad drehte sich im Fahrtwind,
+darunter befestigt war ein Lüfterrad, das die
+Luft aus dem Fahrzeug herauszog. Das
+Antriebsprinzip beruht auf dem Savonius5
+
+
+Rotor. Sigurd Johannes Savonius (18841931) war ein finnischer Architekt und
+Erfinder. Savonius hatte den Flettner-Rotor
+(Anton Flettner, 1885-1961, deutscher
+Lehrer, Ingenieur und Erfinder) im Blick,
+der auf dem Magnus-Effekt beruht. Jeder
+Fußball- oder Tennis-Spieler kennt den
+Effekt: Ein sich drehender (angeschnittener) Ball fliegt eine veränderte Flugbahn
+(mit „Effet eine Bananenflanke“).
+Der Flettner-Rotor war ein einfacher, um
+die lange Achse rotierender Zylinder, der
+bei Wind eine dazu senkrechte Kraft entwickelte. Als Ersatz für die damaligen
+Segelschiffe konnte er sich nicht durchsetzen. Die Idee von Savonius bestand im
+Halbieren des Zylinders und der Versetzung
+der Halbschalen um einen Durchmesser
+(Abb. 7). Das ergab eine analoge Form zum
+Halbschalen-Anemometer.
+
+beschleunigend: Der Wirkungsgrad wird
+höher.
+
+
+In Abb. 8 wird die Luft von der unteren
+offenen Halbschale weitergeleitet in die
+andere Halbschale und verstärkt so das
+Drehmoment. Hier erfolgt eine Linksdrehung.
+
+
+Die wichtigste Verbesserung von Savonius
+bestand dann in der Verringerung des
+Abstandes der Halbschalen.
+Jetzt wird die Luft nicht gezwungen rückwärts wieder hinaus zu strömen (bei Widerstandsläufern ist die Drehgeschwindigkeit
+des Rotors stets kleiner als die Windgeschwindigkeit), was zu Turbulenzen führt,
+die Energie kosten, sondern umgelenkt. Das
+Hindurchfließen wirkt auf die Innenseite
+der
+bremsenden
+Schale
+zusätzlich
+
+
+Die Halbschalen in Abb. 9 sind mit Federnocken (31982) am BS30 mit Loch befestigt und können so verschoben werden.
+Wie in Abb. 1 und 4 erhalten die Achse 30
+und der senkrechte graue BS30 je einen
+Stabmagnet zur Entlastung des Lagers.
+Außerdem erhält die Achse einen Klemmring, der trägt den BS30 mit Loch. Alle
+vorgestellten Rotoren drehen sich munter
+schon bei mäßigem Wind.
+Überraschenderweise gibt es diese Savonius-Lüfter heute noch zu kaufen, allerdings
+unter der Bezeichnung Flettner-Ventilator.
+
+

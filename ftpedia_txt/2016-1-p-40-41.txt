@@ -1,0 +1,124 @@
+
+
+Modell
+
+Schlauchquetschpumpe
+Andreas Gail
+In der Welt der Chemie- und Bioverfahrenstechnik sind Rohrleitungen das wichtigste
+Transportmittel. Die dazu erforderliche treibende Kraft wird häufig von Pumpen aufgebracht.
+Schlauchquetschpumpen sind hierbei eine gängige Pumpenart. Auch in Labor und
+Krankenhaus sind Schlauchquetschpumpen zu finden. Dieser Pumpentyp eignet sich besonders
+zum Aufbau mit fischertechnik.
+
+Vorteile von
+Schlauchquetschpumpen
+Eine
+Schlauchquetschpumpe
+kann
+vergleichsweise einfach aufgebaut werden.
+Der besondere Vorteil dieses Pumpentyps
+ist, dass die geförderten Flüssigkeiten
+keinen Kontakt zu den verbauten
+fischertechnik-Teilen haben (solange der
+Pumpschlauch nicht defekt ist). Die
+Pumpleistung einer Schlauchquetschpumpe, angegeben in z. B. Liter pro Stunde
+(L/h), ist eher gering. Stattdessen wird
+dieser Pumpentyp häufiger für Dosiervorgänge verwendet, bei denen es auf
+genaue Fördermengen ankommt.
+
+Aufbau mit fischertechnik
+Das Kernstück der Schlauchquetschpumpe
+ist in Abb. 1 gezeigt (frühere Modelle
+finden sich in [3] und [4]). Hier ist ein
+Schlauch (Silikon, Außendurchmesser
+4 mm) zu sehen, der durch stets mindestens
+eines von drei kleinen Rädchenpaaren
+gegen das Schlauchgehäuse gequetscht
+wird. Die Rädchen sind drehbar zwischen
+zwei schwarzen Zahnrädern befestigt.
+Dieses Bauteil wird auch als Pumpenrotor
+bezeichnet und wird in Abb. 3 gesondert
+gezeigt.
+Die
+schwarzen Zahnräder
+wiederum werden motorisch angetrieben.
+Durch drehendes Vorwärtsrollen auf dem
+gequetschten Schlauch wird die davor
+
+befindliche Flüssigkeitsmenge vorangetrieben. Insgesamt wird Wasser aus dem
+Wasserbehälter gemäß Abb. 2 über die
+Saugseite des Schlauchs angesaugt und
+über die Druckseite ausgestoßen.
+Rädchen, drehbar
+
+Schlauch
+
+Schlauchgehäuse
+
+Kernstück einer Schlauchquetschpumpe;
+Lagerhalterung zur besseren Ansicht entfernt
+Schlauch,
+Druckseite
+
+Lagerhalterung
+
+Schlauch,
+Saugseite
+
+WasserBehälter
+
+
+
+Modell
+
+denkbar, den Pumpenrotor so zu verbreitern, dass durch mehrere Schläuche
+gleichzeitig parallel gepumpt wird.
+
+
+Der Antrieb
+Der Antrieb erfolgt über einen Encodermotor, wie in Abb. 4 und Abb. 5 gezeigt.
+Das hat den Vorteil, dass eine Volumendosierung im Bedarfsfall möglich wird. Um
+das zu realisieren, muss die Pumpe eine
+Zeitlang laufen. Dabei werden die Encodermotorschritte gezählt und gleichzeitig das
+dabei geförderte Wasservolumen gemessen.
+Je größer das geförderte Wasservolumen,
+desto genauer ist die spätere Dosierung.
+
+
+Darstellung ohne Schlauchgehäuse
+
+Da die Quetschung des Silikonschlauchs an
+mindestens einer Stelle für eine fischertechnik-Konstruktion schon eine merkliche
+Belastung darstellt, ist das Pumpengehäuse
+stark versteift aufgebaut. Zudem wird mit
+einer starken Untersetzung gearbeitet, um
+den Motor nicht zu stark zu belasten. Das
+bedeutet entsprechend eine geringere
+Pumpleistung. Für eine höhere Pumpleistung muss ein anderer Motorentyp
+eingesetzt werden, z. B. ein oder mehrere
+Power-Motoren. Weiterhin wäre es auch
+
+Referenzen
+[1]
+
+Wikipedia: Schlauchpumpe
+
+[2]
+
+Gail, Andreas:
+Schlauchquetschpumpe (youtubeVideo)
+
+[3]
+
+fischertechnik: Neues vom
+fischertechnik-Club. Clubheft 1973-2,
+S. 9-13. Fischer-Werke, 1973.
+
+[4]
+
+fischertechnik: Niveauregelung bei
+bewegten Flüssigkeiten. Begleitbuch
+hobby 4 Band 5, S. 42-45. FischerWerke, 1975.
+
+
+

@@ -1,0 +1,158 @@
+
+
+Tipps & Tricks
+
+Axiales Kugellager für fischertechnik
+René Trapp
+fischertechnik wird als System ohne Grenzen bezeichnet. Dank der metrischen Abmessungen
+eignet es sich wie kaum ein anderes Konstruktionsspielzeug zur Erweiterung mit handelsüblichen Fremdteilen.
+Ein axiales Lager wird dort verwendet, wo
+achsparallele Kräfte abzufangen sind. Im
+Allgemeinen wird auf diese Art das seitliche Verschieben eines rotierenden
+Maschinenteils verhindert. Aber auch
+größere Gewichtskräfte senkrecht rotierender Teile können so abgestützt werden [1].
+Viele fischertechniker dürften solch ein
+axiales Lager unter dem Begriff „Drehkranz“ kennen.
+
+Im konkreten Anwendungsfall ist ein senkrecht rotierendes Maschinenelement, also
+eine Königswelle, im unteren Lager gegen
+die auftretende Gewichtskraft abzustützen.
+Nennenswerte radiale Kräfte treten hierbei
+nicht auf. Am oberen Ende sitzt ebenfalls
+eine Lagerung, die die Welle senkrecht hält.
+Das axiale Kugellager überträgt die
+Gewichtskraft der rotierenden Anordnung
+auf das feststehende Fundament. Ein Drehkranz ist allerdings zu groß und zu schwergängig.
+An sich ist die Lösung natürlich nicht neu;
+im Bilderpool der fischertechnik-Community (ftc) finden sich schon etliche Modelle,
+bei denen axiale Kugellager dokumentiert
+sind – sei es mit Teilen ausschließlich aus
+dem fischertechnik-Sortiment [2] oder auch
+mit käuflichen Axialkugellagern [3].
+
+
+Der fischertechnik-Drehkranz (bestehend
+aus den Teilen 31390 und 31391, Abb. 1) ist
+ein Beispiel für ein derartiges Lager. Es
+kann sowohl Druckkräfte als auch Zugkräfte übertragen und eignet sich daher
+optimal für Bagger, Kräne und ähnliche
+Anwendungen. Der fischertechnik-Drehkranz verwendet zwei Hälften, die per Rastklammern zusammengehalten werden und
+stellt ein Gleitlager dar. Dieses ist, bedingt
+durch die auftretende Gleitreibung, leider
+meist schwergängig.
+
+
+Nun bietet der Fachhandel nicht nur die
+großen Axiallager für Kranmodelle; es gibt
+die Baugrößen sogar für 4 mm Wellendurchmesser – eigentlich optimal für
+fischertechnik geeignet. Aber es gibt da ein
+kleines Problem: fischertechnik-Metallachsen sind nicht besonders eng toleriert
+und so ergibt sich schon bei Radialkugellagern mit 4-mm-Bohrung das Problem, die
+Lager auf die Achse aufzuschieben [4, 5].
+Diesem Umstand kann man Rechnung
+tragen. Entweder kauft man im einschlägigen Fachhandel selektierte fischertechnikMetallachsen, man verwendet eng tolerierte
+Stahlachsen anderer Herkunft oder man
+nehme Kugellager mit größerer Bohrung
+
+
+Tipps & Tricks
+
+und eine passende Reduzierhülse. Letztere
+findet sich sogar schon im fischertechnikSortiment.
+Zunächst allerdings zum verwendeten
+Axiallager. Es kommt aus dem Modellbaubedarf und besteht aus drei Baugruppen:
+Einem Ring mit Bohrung mit Nenndurchmesser, dem Kugelkäfig und einem zweiten
+Ring mit etwas größerer Bohrung (Abb. 2,
+von links nach rechts).
+
+
+Der Ring mit Nennbohrung sitzt üblicherweise reibschlüssig auf der Welle; der
+Kugelkäfig und der zweite Lagerring berühren die Welle nicht.
+
+Dieser Ring liegt auf der Seite des BS15
+auf, der Abstandsring zentriert das Lager im
+Rand der Bohrung des BS15. Der Kugelkäfig wird aufgelegt, ein wenig Schmiermittel kann jetzt aufgebracht werden. Zum
+Abschluss wird der Lagerring mit der etwas
+größeren Bohrung aufgelegt (Abb. 4). Das
+Bild zeigt die Anordnung liegend.
+
+Für den konkreten Einsatz wurde hier ein
+axiales Rillenkugellager mit der Nennbohrung 6 mm und dem Außendurchmesser
+14 mm ausgesucht (z. B. Conrad 214531
+[6]).
+Ein Abstandsring 3 (31597) stellt die Reduzierhülse dar. Er liegt in der Fase der großen
+Bohrung eines Bausteins 15 (BS15) mit
+Bohrung und Senkung (32321). Der
+Abstandsring selbst liegt nur locker auf, er
+ist nicht in das Bohrloch hineingepresst!
+Einpressen schnürt den Ring zusammen; er
+klemmt dann auch auf der eingeschobenen
+Welle. Der Abstandsring dient als Reduzierhülse dazu, das Axiallager zentrisch zur
+Welle zu halten, ohne dass die Maßtoleranzen der fischertechnik-Stahlachsen
+das Aufschieben behindern. Der genannte
+BS15 führt die Welle als radiales Lager seitlich. Vom Axiallager wird nun zuerst der
+Ring mit der Nennbohrung über den
+Abstandsring gesteckt. Fertig montiert steht
+der Abstandsring beidseitig über (Abb. 3).
+Im Hintergrund ist der Baustein 32321 zu
+sehen.
+
+
+Die Königswelle besteht aus einer
+Metallachse mit Nenndurchmesser 4 mm.
+Eine Flachnabe (31015) liegt auf dem
+axialen Rillenlager plan auf und überträgt
+die achsparallele Kraft. Gleichzeitig kann
+die Flachnabe noch ein entsprechendes
+Bauteil aufnehmen.
+Der Abstandsring 3 passt exakt in das angegebene Lager: in den Ring mit der Nennbohrung 6 mm. Je nach den Gegebenheiten
+ist möglicherweise auch eine Hülse mit
+Scheibe (35981) eine Option für die Aufnahme des Axiallagers.
+
+
+
+
+Bei zusätzlicher großer radialer Krafteinwirkung kann die bekannte Lösung mit
+radialen Kugellagern in einer Schneckenmutter ergänzt werden [4, 5]. Dabei ist
+allerdings darauf zu achten, dass das Axiallager nicht auf die Deckscheibe des Radiallagers drückt.
+Auch wenn erfahrene Maschinenbauer nun
+angesichts dieser Bastelvariante im fischertechnik-Stil die Hände über dem Kopf
+zusammenschlagen: Die Anordnung ist ausreichend stabil und vermeidet jegliche
+abrasive Gleitreibung. Weniger Antriebsleistung und eine erheblich verlängerte
+Lebensdauer der beteiligten Bauteile sind
+eindeutige Vorteile dieser Lösung.
+Der Kniff mit dem Abstandsring funktioniert natürlich auch mit den entsprechenden
+Radialkugellagern. Erfreulicherweise gibt
+es Sorten mit 6 mm Bohrungsdurchmesser
+und 12 mm Außendurchmesser.
+
+
+Quellen
+[1]
+
+Wikipedia: Axiallager.
+
+[2]
+
+Jens Lemkamp: Transformer. ftcBilderpool, 2015.
+
+[3]
+
+Peter Krijnen: Demag CC1400. ftcBilderpool, 2016.
+
+[4]
+
+Ludger Mäsing: Kugellager in
+Schneckenmutter 37925. ftcBilderpool, 2006.
+
+[5]
+
+Peter Damen: Kugellager in
+Schneckenmutter 35973. ftcBilderpool, 2005.
+
+[6]
+
+Conrad Electronic: Axiallager 6 mm /
+14 mm.
+
+

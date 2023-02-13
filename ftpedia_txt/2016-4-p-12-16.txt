@@ -1,0 +1,160 @@
+
+
+Modell
+
+Spielautomat
+Daniel Canonica
+Die „Einarmigen Banditen“ mit dem magischen Klimpern der Münzen haben wohl viele
+Menschen in den Ruin getrieben und einigen unerwartetes Glück gebracht. Mit fischertechnik
+kann man schöne Modelle davon bauen, elektromechanisch oder elektronisch gesteuert.
+Dieses Modell hat eine sehr, sehr lange
+Geschichte. So konnte man 1975 eine
+Anleitung mit dem folgenden Titel
+bestellen:
+
+
+
+Leider fehlten mir damals nicht nur ein
+paar, sondern viele Teile, um auch nur
+annähernd ein solches Modell zu bauen:
+
+
+
+41 Jahre später und um ein paar Erfahrungen reicher habe ich im Bilderpool auf
+ftcommunity.de einige schöne Modelle
+entdeckt. Nun war der Antrieb da, selber
+etwas zu bauen.
+
+
+Modell
+
+Etwas Geschichte
+Der sogenannte Einarmige Bandit, auch slot
+machine genannt, wurde bereits im 19.
+Jahrhundert erfunden und rasch weiterentwickelt. Hier ist eines der ältesten Exemplare abgebildet:
+
+
+Wenn beim Stopp beide Lampen auf Grün
+stehen, hat man gewonnen und die Kassette
+mit dem bisher eingeworfenen Geld wird
+ausgefahren. (Die Maschine behält, im
+Gegensatz zu kommerziellen Geräten,
+nichts für sich!)
+
+
+Schon bald wurden die geldgierigen Geräte
+in vielen Bundesstaaten der USA verboten,
+was auch dazu führte, dass es immer mehr
+Spielfreudige und -süchtige nach Las Vegas
+zog.
+
+
+Das Modell
+Mein erster Ansatz war ein rein elektromechanisches Modell mit drehenden
+Walzen, verschiedenen Farben und sehr
+vielen Tastern. Dies funktionierte leidlich.
+Im zweiten Anlauf habe ich Lampen eingebaut und die alten Silberlinge hervorgeholt. Die beiden von Motoren angetriebenen Drehscheiben mit aufgesetzten
+BS15 bedienen in rascher Folge die Taster,
+wodurch die Lampen von rot zu grün und
+zurück wechseln.
+
+
+
+
+
+Ich musste pro Drehscheibe zwei Minitaster
+hintereinander schalten. Einer bedient die
+Lampen, der zweite schaltet das Signal für
+die Gewinnstellung durch. Bei Verwendung
+eines AND-Bausteins würde ein Taster pro
+Drehscheibe genügen.
+Natürlich kann man die Gewinnchancen
+erhöhen oder verringern, indem mehr oder
+weniger Bausteine auf die Drehscheiben
+gesteckt werden.
+Beim Münzeinwurf fällt die Münze in
+einem 30°-Winkel seitlich auf den Taster.
+Unten wird sie von einem Statikverbinder
+festgehalten, der an einem simplen Hebel
+angebracht ist (nicht ganz im Stile des
+Einarmigen Banditen, aber mechanisch und
+vom Platzbedarf her einfacher zu realisieren).
+
+Münzführung ist demontiert
+
+(von oben)
+
+Sobald ich den Hebel ziehe, fällt die Münze
+in den Behälter und der Start/Stopp-Taster
+geht wieder in den Ruhezustand. Ich
+betreibe den Mechanismus mit 2-FrankenMünzen, es funktioniert aber auch mit 2Euro-Münzen. Man muss den Taster genau
+justieren, damit die Münze nicht eingeklemmt und die Maschine in den ewigen
+Umlauf versetzt wird.
+
+
+
+Und hier oben befindet sich noch der Hebel
+mit dem Statikverbinder, welcher die Münze unter dem Taster festhält, bis der Hebel
+gezogen wird:
+
+Modell
+
+Sobald die nächste Münze eingeworfen
+wird, wird über den Arbeitskontakt des
+Start/Stopp-Tasters, welcher auch die
+Motoren steuert, das Flip-Flop zurückgesetzt, das Relais fällt ab und der Motor
+zieht den Geldbehälter wieder zurück.
+
+
+
+Wenn beide Taster auf Gewinnstellung und
+der Start-Stopp-Taster in Ruhestellung sind,
+wird über das Flip-Flop das Relais betätigt,
+welches als Polwender funktioniert. Der
+Motor mit dem Hubgetriebe schiebt den
+Münzbehälter zur Vorderseite, wo er mit
+einem End-Taster gestoppt wird.
+
+Wie man sieht, wurde das ganze Modell mit
+den alten Silberlingen und dem Uralt-Trafo
+konstruiert. Ich betreibe bewusst alles mit
+ca. 6 Volt ab Gleichrichter. Es ist durchaus
+erwünscht, dass die Motoren etwas langsamer drehen als mit der Nennspannung
+von 9 Volt. In Abb. 14 findet ihr den vollständigen Schaltplan.
+Es ist wichtig, dass das Setzen des FlipFlops bei Gewinnschaltung der beiden
+Taster erst über den Ruhekontakt des
+Start/Stopp-Tasters erfolgt (also wenn die
+Münze heruntergefallen ist), sonst ruckelt
+der Hub-Motor ständig ein bisschen vor und
+zurück, weil während der Drehung die
+Gewinnstellung immer wieder mal kurzzeitig erreicht wird.
+
+Erweiterungsmöglichkeiten
+Reizvoll wären zusätzliche Lampen bzw.
+LEDs in verschiedenen Farben, welche mit
+zusätzlichen Kontakten angesteuert werden.
+Dann könnte man mit zusätzlicher Elektronik mehrere, abgestufte Gewinnmöglichkeiten programmieren.
+Geldbehälters
+
+
+
+Schließlich könnte man anstelle des
+mechanischen Hebels eine Zeitsteuerung
+einbauen, welche die Maschine nach Einwurf der Münze für eine fixe oder variable
+Zeit zum Laufen bringt.
+
+Quellen
+[1]
+
+fischertechnik: Club-Modell 2-75:
+Bauanleitung Spielautomat in der ftDatenbank. Fischer-Werke,
+Tumlingen, 1975.
+
+[2]
+
+WikiPedia: Slot machine. Photo:
+Nazox, Lizenz CC BY-SA 3.0.
+
+
+
+

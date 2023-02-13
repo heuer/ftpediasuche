@@ -1,0 +1,244 @@
+
+
+Modell
+
+Citroën DS régénérée
+Harald Steinhaus
+Die Citroën Déesse hatte ich vor fast 10 Jahren schon mal gebaut, siehe im Bilderpool unter
+[1]. Das Kürzel „DS“ wird im Französischen wie „Déesse“ ausgesprochen und bedeutet dann
+„die Göttin“. Götter werden nicht „reloaded“, und mangels Sterblichkeit auch nicht wieder
+geboren. Dann eben „régénérée“. Und jetzt liegt der Ball bei Citroën, PSA oder Stellantis: es
+wird Zeit für eine neue DS, mit Elektroantrieb!
+In ihren Grundzügen geht die DS auf die
+Citroën Traction Avant („Frontantrieb“,
+vom Schnitt her ein „Gangsterauto“ im Stil
+der 1930er Jahre, [2]) zurück, so unterschiedlich das Äußere erscheinen mag: Die
+Traction Avant hat eine angetriebene Vorderachse mit einzeln aufgehängten Radschwingen, die von vorstehenden „Hörnern“ der Karosserie getragen werden. Der
+Motor liegt hinter der Vorderachse, das
+Getriebe davor.
+Die Déesse war bahnbrechend beim hydropneumatischen Fahrwerk: Jedes Rad wird
+mit einem Zylinder abgestützt, der teilweise
+mit Öl gefüllt ist und darüber eine mit Stickstoff gefüllte Kammer aufweist. Je nach
+Ölmenge liegt die Zelle höher oder tiefer,
+was zur Niveauregulierung bei variabler
+
+Beladung ausgenutzt wird. Bei starker
+Beladung wird der Stickstoff stärker komprimiert und die Federung wird härter.
+Weitere Erläuterungen findet man unter [3].
+Außerdem kommt die Déesse beim Radwechsel ohne Wagenheber aus: man hebt
+die Déesse komplett an, stellt auf einer Seite
+einen Bock unter und senkt sie wieder ab:
+nun schweben zwei Räder in der Luft und
+können getauscht werden.
+Dieser Artikel zeigt Details und Werdegang
+der „neuen“ Déesse als eine Reihe von
+Bildern mit zugehörigen Beschreibungen.
+Wie das Vorbild hat das Modell Frontantrieb, Servolenkung, mitlenkende Scheinwerfer, Blinker vorn und hinten (unter der
+Dachkante), rote Rückleuchten in der Stoßstange, Türen rund herum, Ledersitze und
+
+
+
+Modell
+
+
+pneumatisch abgestütztes Fahrwerk vorn
+und hinten. Auch die Spaltmaße sind sehr
+originalgetreu ausgefallen.
+Den Anfang der neuen Déesse machte eine
+Art Drahtgerüst, das die Grundzüge der
+Geometrie andeutet. Die Motorhaube ist
+geblieben, nur jetzt mit Streben beplankt.
+Hier liegt der Motor vor der Vorderachse,
+es gibt vorne noch keine Hubmechanik, der
+mittlere Längsträger hat eine unschöne
+Stufe, die Hinterradschwingen sind ziemlich lang ausgefallen und die P-Zylinder
+stützen sich steil nach oben an der hinteren
+Dachkante ab. Da wird sich noch einiges
+ändern.
+
+Vor der Vorderachse eingebaut sind, in
+den Kompressor, Lenkservo, Antriebsmotor, Kompressor. Die Antriebswellen
+verlaufen durch Gelenksteine hindurch, die
+zur Hubmechanik gehören.
+
+
+
+
+
+
+
+Die Vordersitze (Abb. 5) haben verstellbare
+Rückenlehnen und sitzen auf einem Drehzapfen, um das Einsteigen zu erleichtern.
+Die starre Variante mit Armlehnen (links
+und rechts außen) stammt aus dem Fendt
+GTA reloaded [4].
+
+
+Mit nunmehr fast durchgehend roten
+Winkelträgern und mit allen Türen ist die
+Déesse fast fertig (Abb. 6). Hinter der Stoßstange hat ein Überdruckschalter für die
+
+
+
+Modell
+
+Pneumatik Platz gefunden: ein P-Betätiger
+arbeitet gegen einen Gummizug und drückt
+einen Minitaster, wenn der Abschaltdruck
+erreicht wird. Die Scheinwerfer lenken
+noch nicht mit, die Nylonseile wollen nicht
+recht passen. Die Rücksitze fehlen auch
+noch.
+Das Heck (Abb. 7) kann richtig weit angehoben werden. Das Dumme daran ist, dass
+dadurch die Nase tiefer gedrückt wird, und
+die vordere Hubmechanik nicht genug
+Arbeitsweg hat, um das wettzumachen. Die
+Rückleuchten sind liegend im gelben
+Winkelträger verbaut. Die Blinker sind da,
+wo sie hingehören: an der Dachkante (die
+hier etwas verzogen ist). Der Kofferraumdeckel ist sehr weit oben gelagert.
+Die Türen (Abb. 8) haben Streben-15 zur
+Verriegelung und werden durch BSBGrundplatten zusammengehalten. In der
+Mittelkonsole sieht man die Taster für den
+Blinker, das P-Handventil für die Fahrwerksabstimmung
+und
+die
+IRFernbedienung. Der P-Zylinder mit dem
+Gummizug dient nur als Anzeige für den
+Druck in der Pneumatik. Die Türen sind in
+schwarzen Knubbeln (163204 D4 mm
+Schlauchanschluss gerade) gelagert. Unter
+
+dem Lenkrad befindet sich der Lichtschalter.
+Die beiden Platten 30 · 30 der Mittelkonsole bilden das Ende des Hebels, mit
+dem die Frontpartie mit Hilfe zweier kurzer
+P-Zylinder angehoben wird. Der Hebel ist
+vor der Fahrgastzelle gelagert und wird
+dann zu einem Parallelogramm ergänzt, an
+dem der ganze Antriebsblock befestigt ist.
+Die IR-Fernbedienung (im schwarzen
+Gehäuse in Abb. 9 mittig) ist Teil des
+Längsträgers. Daneben ist der Hauptschalter angebracht. In der Mittelkonsole
+stecken die beiden kurzen P-Zylinder, die
+die Front anheben und absenken.
+Die Bowdenzüge für die mitlenkenden
+Scheinwerfer sind an den Teilen der
+Lenkung angebunden.
+Ganz hinten in Abb. 10 sieht man die roten
+Leuchten in der hinteren Stoßstange.
+Die Bowdenzüge für die mitlenkenden
+Scheinwerfer sind noch nicht verbaut, die
+Nylonschnur baumelt noch „nur so“ herum.
+
+
+
+
+
+Die Spurstange musste geteilt werden (die
+Länge ging nicht anders auf) und hat einen
+BS7,5, der als Schlitten auf einer schwarzen
+K-Achse hin und her läuft. Hier dient er
+auch als Endpunkt für die Nylonseile für die
+mitlenkenden Scheinwerfer, aber das
+musste nochmal geändert werden. Die
+Messingachse oberhalb der Spurstange
+gehört zur vorderen Hubvorrichtung.
+
+In Abb. 12 ist das Fahrwerk drucklos und
+abgesenkt. In der Mittelkonsole liegt die
+vordere Platte 30 · 30 tiefer als die hintere.
+In Abb. 13 ist das Fahrwerk voll angehoben
+(die vordere Platte 30 · 30 in der Mittelkonsole zeigt es an). Hinten sieht man einen
+deutlichen Unterschied zur Lage „unten“;
+vorne nicht so sehr.
+
+
+
+Modell
+
+Antriebseinheit (Motor, Vorderachse,
+Lenkung, Kompressor) hebt oder senkt. Die
+Vorderachse gewinnt damit also kein bisschen Bodenfreiheit.
+
+
+
+Die vordere Hubvorrichtung ist ein wenig
+„fake“: die P-Zylinder in der Mittelkonsole
+arbeiten über ein Parallelogrammgestänge,
+das die Karosserie (Kotflügel, Stoßstange,
+Motorhaube) gegenüber der gesamten
+
+
+Durch die ungleich weiten Hubwege
+(hinten viel, vorne wenig) bleibt die
+Schnauze trotz „Anheben“ in ihrer Höhe
+„über Grund“ nahezu unverändert. Der
+
+
+
+
+
+Stolz des Erbauers hat aber verhindert, dem
+hinteren Hubweg engere Grenzen zu setzen.
+Dachschräge, Heckklappe, Radkasten, CSäule – lauter Winkel, die irgendwie
+zusammenpassen müssen (Abb. 14). Der
+Sitzbaustein ist wohl da, aber in den Maßstab passt er nicht. Ganz rechts ist ein
+Leuchtstein im gelben Winkelträger
+erkennbar.
+Den Kofferraum (Abb. 15) füllt der ft-Akku
+komplett aus. Die rechte Radschwinge trägt
+auch die ft-Blinkelektronik, die von den
+Minitastern in der Mittelkonsole wahlweise
+auf die linken oder rechten Blinker geschaltet wird. Die Heckklappe wird von BSBGrundplatten Spur N (36093) zusammengehalten.
+Die vordere Hubmechanik (Abb. 16) ist ein
+Parallelogrammgestänge, das je Seite oben
+einen roten Winkelträger 30 enthält, und
+
+unten ein Päckchen aus drei Streben I-45Loch. Der obere Teil ist nach hinten verlängert, wo er zur Mittelkonsole wird, die
+von den beiden P-Zylindern angehoben
+wird.
+Die Frontscheinwerfer in Abb. 17 werden
+von der Lenkung über Bowdenzüge [5]
+angesteuert. Die Nylonseile (124875 oder
+beliebige Angelschnur) verlaufen in den
+beiden hellblauen P-Schläuchen und arbeiten gegen Gummizüge (in Weiß, im Supermarkt unter „Haushaltswaren“).
+Das Differential, die Messingachse rechts
+davon und die schwarze K-Achse vor der
+Mittelkonsole sind Enden und Drehpunkt
+des Hebels, mit dem die vordere Karosserie
+angehoben wird. Diese Mechanik verbraucht hier eine ganze Menge Platz. Beim
+Original sieht das ganz anders aus.
+
+
+Modell
+
+
+Ein ft-Frontantrieb mit gefederter Einzelradaufhängung steht noch aus.
+
+[3]
+
+Wikipedia: Hydropneumatik.
+
+[4]
+
+Harald Steinhaus: Fendt GTA380
+reloaded. Im Bilderpool der ft
+Community, 2015.
+
+[5]
+
+Ralf Geerken: Bowdenzug. 1/2017, S. 13–16.
+
+Quellen
+[1]
+
+Harald Steinhaus: Citroen DS
+(Déesse, die Göttin). Im Bilderpool
+der ft Community, 2012.
+
+[2]
+
+Wikipedia: Citroën Traction Avant.
+
+
+

@@ -1,0 +1,384 @@
+
+
+Elektronik
+
+Elektronikmodule (Teil 1): Einleitung
+Hans-Christian Funke
+Silberlinge – Nostalgie oder aktuell? Mit dieser Überschrift hatte ich Ende letzten Jahres eine
+Umfrage im Forum der ft:c gestartet, um zu erfahren, ob ein Ersatz für die Silberlinge überhaupt interessant wäre. 70% der Teilnehmer gaben eine positive Rückmeldung.
+
+Der Anfang
+Der eigentliche Anfang liegt weit, weit
+zurück, über 40 Jahre, zu der Zeit, als
+fischertechnik noch ein heutigen ft-pedia – für seine Fans herausgegeben hat (Abb. 1).
+
+und das Rückporto für die Anleitung enthielt.
+Meine erste angeforderte Anleitung war die
+aus dem einen Tresor. Wow – das Modell hatte mich
+fasziniert, und ich konnte es damals kaum
+erwarten, bis die Bauanleitung endlich ankam. Die Spannung war unerträglich, und
+als die Anleitung endlich da war, hielt die
+Faszination bis zur vorletzten Seite an…
+Auf der letzten Seite war ein Schaltplan
+abgebildet. Der Schaltplan enthielt sage und
+schreibe sieben (!) Silberlinge!
+Ich war elf Jahre alt, verfügte über ein
+bescheidenes Taschengeld, und ein Elektronikbaustein (so die offizielle Bezeichnung
+der Silberlinge) kostete zu dieser Zeit
+60 DM – das wären heute umgerechnet
+60 €, für mich als Kind zu dieser Zeit unerschwinglich. Zwei bis drei Jahre dauerte es
+schließlich, bis ich mit Unterstützung und
+eisernem Sparkurs endlich alle Silberlinge
+zusammen hatte.
+
+
+Zu dieser Zeit wurde in den Heften immer
+eine Bauanleitung für ein größeres Modell
+angepriesen, die man sich zuschicken lassen
+konnte – wie zu dieser Zeit üblich per Brief,
+der die Anfrage für das gewünschte Modell
+
+
+Zu dieser Zeit fing ich an, mich intensiver
+mit der Elektronik auseinander zu setzen
+und war schon zu dieser Zeit der Meinung,
+dass so ein Elektronikbaustein doch auch
+preiswerter anzufertigen sein müsste, denn
+die enthaltenen Teile waren gar nicht so
+teuer.
+
+
+Elektronik
+
+Der Beginn eines Abenteuers
+
+Die Idee wurde Realität
+
+So besorgte ich mir Uhrenmacher-Schraubendreher, öffnete die Bausteine und fing
+an, die Teile zu notieren und die Schaltungen abzuzeichnen. Die Zeichnungen
+sahen wie Kraut und Rüben aus, denn es
+fehlte mir noch am technischen Verständnis.
+
+Das Projekt wurde im Vorfeld zur 50-Jahrefischertechnik-Convention in Waldachtal
+wiederbelebt. In den vergangenen Jahrzehnten hatte ich alle notwendigen technischen Details gesammelt, so dass ich meine
+ursprünglichen Ideen inzwischen alle umsetzen konnte. Folgendes sollte bei den Modulen erfüllt sein:
+
+Schließlich war mein Interesse daran so
+groß, dass ich mich darüber informierte, wie
+man Leiterplatten (selbst) anfertigt. Von
+den ersten selbst gefertigten Modulen
+funktionierten drei von vier (Abb. 2).
+
+• kleiner und preiswerter als die Silberlinge sollten sie sein,
+• einen Ersatz schaffen für die nicht mehr
+produzierten Silberlinge,
+• erweiterte Funktionen anbieten (digitales
+Zählwerk, 8stufigen Taktgenerator, …),
+• vielseitig einsetzbar,
+• variabel in der Betriebsspannung (am
+einfachsten mit dem Akku-Pack zu versorgen),
+• auf digitaler Technik basieren unter
+Verwendung einer positiven Logik,
+• kombinierbar mit Computer-Interfaces
+(z. B. ROBO, TXT, Arduino) und
+• sich einfach in die fischertechnik-Welt
+integrieren lassen.
+Anlässlich der Convention wollte ich meine
+Idee mit den Elektronikmodulen präsentieren. Somit begann ich fieberhaft, alles auf
+Papier zu bringen und die ersten Module in
+Handarbeit anzufertigen. Die Module dieser
+ersten Generation waren noch mit einer
+Plexiglas-Abdeckung (Abb. 3) und Bundhülsen für die fischertechnik-Stecker versehen.
+
+
+Dann kehrte eine Pause von mehreren Jahrzehnten ein, weil es mit meinen damaligen
+Kenntnissen nicht möglich war, die Platinen
+in einer annehmbaren Form in Verbindung
+mit fischertechnik zu bringen, so dass die
+Schaltungen – wie die Silberlinge – einfach
+irgendwo angesteckt und mit den fischertechnik-Kabeln verbunden werden konnten.
+
+Die Resonanz auf der Convention war mehr
+als dünn – nur ein Einziger zeigte Interesse
+daran. Aber dieser Eine hat mich beflügelt,
+das Projekt doch weiter zu verfolgen und er
+hat mich auch mit seinem 3D-Drucker dabei
+unterstützt, das Design der Module zu perfektionieren – das Ergebnis kann sich sehen
+lassen (Abb. 4).
+Natürlich gab es Überlegungen, dass wahrscheinlich auch andere ein Interesse an
+solchen Modulen haben könnten. Aber es
+gab keine sichere Rückmeldung, wie groß
+
+
+
+das Interesse sein würde und ob es sich
+lohnen könnte, die Module auch in größeren
+Stückzahlen anfertigen zu lassen, damit
+auch andere von diesen Modulen profitieren
+können.
+
+
+Das Ergebnis
+
+
+Daraufhin habe ich zum Ende des Jahres
+2018 im Forum der ftc eine Umfrage gestartet, die eine sehr erfreuliche Resonanz hervorbrachte und mich somit in meiner Annahme bestätigte.
+Heute gibt es 21 Elektronikmodule, die zum
+einen die fehlenden Silberlinge ersetzen
+und zum anderen neue und erweiterte Funktion zur Verfügung stellen. Alle, denen ich
+diese Module vorstellte, waren begeistert,
+sowohl von der Idee als auch vom Aussehen
+der Module.
+
+
+ Die Verbindung zur Fischertechnik-Welt
+erfolgt über eine Grundplatte 90 · 30 mm
+und mit Bundhülsen für die Stecker –
+damit lassen sich die Module sehr leicht
+in jedes Modell integrieren (Abb. 5).
+ Die Elektronikmodule basieren auf
+CMOS-Technik und ermöglichen somit
+den Betrieb mit Spannungen von 3-15 V.
+Damit ist gewährleistet, dass die Elektronikmodule mit den Silberlingen oder
+Computer-Systemen sich kombinieren
+lassen – alle Systeme, die in diesem
+Spannungsbereich arbeiten, können
+diese Module nutzen.
+ Die CMOS-Technik hat darüber hinaus
+den Vorteil eines sehr geringen Strombedarfes, was dem Betrieb mit Batterien/Akkus in einem Modell entgegenkommt.
+
+ Alle Elektronikmodule stellen am Ausgang einen minimalen Strom von 2 mA
+(high oder low) zur Verfügung, womit
+ausreichend Strom zur Ansteuerung der
+Silberlinge oder von 1-mA-LED-Bausteinen geliefert wird.
+
+Elektronik
+
+Wie in Abb. 6 zu sehen lassen sich die
+Module leicht kombinieren und aneinanderreihen. Eine Begrenzung der Anreihung von
+Elektronikmodulen ist nur beschränkt durch
+den maximalen durchleitbaren Strom von
+5 A.
+
+ Die Elektronikmodule verfügen über
+einen internen Schutz, damit die CMOSBausteine in den Elektronikmodulen
+nicht bei einer Spannungsverpolung
+zerstört werden.
+ Überspannungen (> 15 V) würden die
+CMOS-Bausteine ebenfalls zerstören.
+Aus diesem Grund gibt es ein Versorgungsmodul, das die Elektronikbausteine vor Überspannungen schützt.
+ Jedes Modul ist mit einer Betriebsanzeige ausgestattet, so dass schnell festgestellt werden kann, ob das Elektronikmodul – nach Verbindung mit der
+Betriebsspannung – einsatzbereit ist.
+ Die Anschlüsse für die Betriebsspannung liegen bei allen Modulen an der
+gleichen Stelle, so dass über einen kleinen Doppelverbindungsstecker (wird bei
+jedem Elektronikmodul mitgeliefert) die
+Module leicht untereinander mit der Betriebsspannung versorgt werden können.
+
+nebeneinander5
+
+Die Elektronikmodule haben meistens zwei
+oder vier der Funktion z. B. Gatter (AND,
+OR, EXOR) oder Speicher (MF, FF) auf
+einem Modul vereint. Dadurch habe ich ein
+viel besseres Preis-Leistungsverhältnis erzielen können; mit 39,95-45,95 € liegt der
+Preis weit unter dem der Silberlinge, wenn
+man die Mehrfachfunktion in den Modulen
+berücksichtigt. Nur das Königsmodul – der
+Leistungstreiber – enthält so viele Teile,
+dass der Preis bei 49,95 € liegt. Alle Elektronikmodule können – sobald diese online
+
+
+Das Zählermodul ganz rechts hat noch eine
+20-mA-Standard-LED zur Anzeige der Betriebsspannung; die anderen Module haben schon die
+
+neue 1-mA-LED – deutlich heller bei weniger
+Strombedarf!
+
+
+
+
+sind – über den fischertechnik-EinzelteilHandel bei Franz Santjohanser [1] bestellt
+werden.
+In weiteren ft:pedia-Artikeln werde ich auf
+technische Details eingehen und die einzelnen Module vorstellen.
+
+Kombination mit anderen
+Systemen
+Die Verbindung der Elektronikmodule mit
+anderen Systemen ist ohne weiteres möglich. So können z. B. die Silberlinge einfach
+an die Elektronikmodule angeschlossen
+werden (Abb. 7) oder umgekehrt die Elektronikmodule an die Silberlinge (Abb. 8).
+
+
+dass beide Systeme, z. B. Elektronikmodule
+und TXT-Interface, aus der gleichen Spannungsquelle versorgt werden oder bei Verwendung unterschiedlicher Quellen GND
+(Masse oder „-“) von beiden Systemen
+miteinander verbunden sind und sichergestellt wird, dass die gleiche Betriebsspannung verwendet wird (also für beide Systeme z. B. 9,0 V). Bei Akku- oder Batteriebetrieb ist dies nicht immer gewährleistet,
+weil bei einem verbrauchten Akku oder
+Batterie die Spannung absinkt.
+Es kann vorkommen, dass Ausgänge von
+anderen Systemen kein eindeutiges Ausgangssignal liefern, das heißt es liegt ein
+Spannungswert am Ausgang vom Fremdsystem, den die Elektronikmodule weder als
+low noch als high einstufen können. Für
+diesem Fall kann einfach ein Treiber
+zwischen dem Ausgang vom Fremdsystem
+und dem Elektronikmodul geschaltet werden. Der Treiber übersetzt sozusagen das
+Signal in ein eindeutiges low oder high für
+die Elektronikmodule.
+Als Treiber können ODER-Gatter (70012 &
+70013), AND-Gatter (alle Eingänge zusammenschließen, 70010 & 70011), das Inverter-Plus-Modul (70019) oder der Leistungstreiber (70009) eingesetzt werden.
+
+Kurzüberblick zu den
+Elektronikmodulen
+
+Elektronikmodul
+
+Ebenso können Elektronikmodule mit anderen Systemen (ROBO, TXT, Arduino)
+kombiniert werden. Wichtig ist lediglich,
+
+
+Zum Abschluss dieser Einleitung ein Überblick zu den Elektronikmodulen. Fortsetzung folgt!
+
+Referenzen
+[1]
+
+Franz Santjohanser: Offizieller
+fischertechnik-Einzelteilvertrieb.
+
+
+Elektronik
+
+Modul
+
+Beschreibung
+
+70001 Zählermodul V1
+
+Ein zweistelliger digitaler Aufwärtszähler mit 7-SegmentAnzeige (0-99); Erweiterung um jeweils zwei weitere Stellen
+durch Anreihen eines weiteren Zählers möglich (0-9999;
+0-999999; usw.); gut sichtbar bei größerem Abstand!
+
+70002 Zählermodul V2
+
+Ein zweistelliger digitaler Auf- und Abwärtszähler mit 7-Segment-Anzeige (0-99); Erweiterung um jeweils zwei weitere
+Stellen durch Anreihen eines weiteren Zählers möglich (0-9999;
+0-999999; usw.); gut sichtbar bei größerem Abstand!
+
+70003 Versorgungsmodul
+(voraussichtlich ab
+Dezember 2019 lieferbar)
+
+Gleichspannung, pulsierende Gleichspannung (fischertechnikTrafo) oder Wechselspannung werden umgewandelt in eine feste
+Gleichspannung mit Strombegrenzung auf 2 A (kurzschlussfest).
+Speisespannung 5-15 V können über Schraubklemme, Stecker
+oder Niedervoltbuchse (fischertechnik-Netzteil 505287) zugeführt werden; konstante Ausgangsspannung.
+
+70004 Taktgeneratormodul
+
+An acht Ausgängen werden Taktsignale zur Verfügung gestellt
+(Binärzähler). Die Taktfrequenz kann über ein Potentiometer
+variiert werden; mit Anhalt- und Rücksetzfunktion. Der Taktgenerator kann abgekoppelt werden, so dass der 8-Bit-Binärzähler zur eigenen Verwendung genutzt oder mit einem externen
+Takt versorgt werden kann.
+
+70005 Mono-Flop-Modul
+
+Zwei unabhängige Mono-Flops mit unterschiedlichen voreingestellten Zeitintervallen, die zusätzlich noch mit einem Potentiometer verändert werden können; eigene Zeitintervalle können
+individuell definiert werden; Ausgänge Q und Q.
+
+70006 D-Flip-Flop-Modul
+
+Zwei unabhängige D-Flip-Flops; Ausgänge Q und Q.
+
+70007 JK-Flip-Flop-Modul Zwei unabhängige JK-Flip-Flops; Ausgänge Q und Q.
+70008 RS-Flip-Flop-Modul Vier unabhängige RS-Flip-Flops; Ausgänge Q und Q.
+70009 Leistungsmodul
+(voraussichtlich ab
+Dezember 2019 lieferbar)
+
+Zwei leistungsstarke unabhängige schnelle Treiberstufen mit
+zuschaltbarer Inverter-Funktion, externer Einspeisung von Spannungen bis 30 V (Schraubklemme oder Niedervoltbuchse für
+fischertechnik-Netzteil 505287). Die Eingänge und Ausgänge
+sind galvanisch voneinander getrennt (gemeinsame Masse).
+Schaltleistung von 30 V mit bis 2,3 A je Treiber (Vdd oder GND);
+Schaltvorgänge mit bis zu 50 kHz.
+
+70010 AND-NAND-Modul Zwei getrennte UND-Gatter mit je vier Eingängen; Ausgänge Y
+und Y.
+70011 AND-NAND-Modul Vier getrennte UND-Gatter mit je zwei Eingängen; Ausgänge Y
+und Y.
+70012 OR-NOR-Modul
+
+Zwei getrennte ODER-Gatter mit je vier Eingängen; Ausgänge
+Y und Y.
+
+
+
+Modul
+
+Beschreibung
+
+70012 OR-NOR-Modul
+
+Vier getrennte ODER-Gatter mit je zwei Eingängen; Ausgänge
+Y und Y.
+
+70014 EXOR-EXNORModul
+
+Vier getrennte EXODER-Gatter mit je zwei Eingängen; Ausgänge Y und Y.
+
+70015 Multifunktionsmodul Differenzverstärker für die Auswertung kleiner Signale von
+Sensoren, Lichtschranken oder Fühlern. Nachbildung von RSFlip-Flop, Mono-Flop, Taktgenerator oder eines Tongenerators
+möglich; integrierter Mini-Lautsprecher (entspricht einem h4 G
+mit h4 MF); Ausgänge A und A.
+70016 Steuermodul
+
+Acht logische Ausgänge mit Speicherfunktion; Ergänzung mit
+weiteren Steuermodulen durch internes Schieberegister möglich
+(8, 16, 24, ... Ausgänge); ideal als Ergänzung für ComputerInterface (ROBO, TXT, Arduino).
+
+70017 Meldemodul
+
+Acht Eingänge mit Speicherfunktion; Abruf der einzelnen
+Speicher über einen Demultiplexer; zurücksetzen einzelner
+Speicher möglich; ideal als Ergänzung für Computer-Interface
+(ROBO, TXT, Arduino).
+
+70018 Relaismodul 1A
+
+Zwei unabhängige Relais; jedes Relais steuert zwei Umschalter
+mit maximal 30 V / 1 A Schaltleistung; Ansteuerung mit high
+oder low möglich.
+
+70019 Inverter-Plus-Modul
+
+Das Modul stellt nicht nur vier unabhängige Inverter zur Verfügung, sondern mit einem high am Ausgang (= Vdd = Betriebsspannung) können Verbraucher bis 250 mA versorgt werden,
+z. B. herkömmliche Glühfadenlampen. Darüber hinaus sind
+schnelle Schaltvorgänge bis 50 kHz möglich; die Invertierung
+des Ausgangs kann abgeschaltet werden (Treiberfunktion). Extra
+Masse-Anschluss zum zweipoligen Anschluss eines Verbrauchers an jedem Ausgang.
+
+70020 Versorgungsmodul
+(voraussichtlich ab
+Dezember 2019 lieferbar)
+
+Gleichspannung, pulsierende Gleichspannung (fischertechnikTrafo) oder Wechselspannung werden umgewandelt in eine feste
+Gleichspannung mit Strombegrenzung auf 2 A (kurzschlussfest);
+Speisespannung 12-32 V können über Schraubklemme, Stecker
+oder Niedervoltbuchse (fischertechnik-Netzteil 505287) zugeführt werden; konstante Ausgangsspannung von 9,0 V.
+
+70021 Experimentiermodul Freie Steckplätze, vergleichbar mit dem Experimentierfeld(in Planung)
+Silberling.
+70022 Messmodul
+(in Planung)
+
+Modul zur Messung von Spannungen – digitale dreistellige
+Anzeige.
+
+70023 Relaismodul 2A
+
+Zwei unabhängige Relais; jedes Relais steuert zwei Umschalter
+mit maximal 30 V / 2 A Schaltleistung; Ansteuerung mit high
+oder low möglich.
+
+
+

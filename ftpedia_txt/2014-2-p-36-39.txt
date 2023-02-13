@@ -1,0 +1,284 @@
+
+
+Computing
+
+ft-Interface durch Arduino gesteuert (2)
+Jens Lemkamp
+1981 brachte fischertechnik die Elektronik 30253 heraus – als Nachfolger der guten alten
+Silberlinge. Viele Fans haben noch Bestände im Schrank, auch kann man noch gebrauchte
+Module günstig erwerben. Unser kleines Projekt zeigt, wie man diese Bausteine mit dem
+Arduino verknüpfen kann: Wir erzeugen damit Töne, steuern Motoren und Lampen.
+
+Die Elektronik
+In diesem zweiten Teil konzentrieren wir
+uns auf den Anschluss der Elektronik an
+den Arduino.
+Zum Arduino selbst will ich nicht viel
+erklären, sondern verweise auf den Artikel
+in der ftpedia 1/2014 [1], in dem ich erläutert habe, wie sich mit dem Arduino ein
+‚altes‘ ft-Computing-Interface ansteuern
+lässt. Ferner ist die Arduino-Hompage sehr
+ergiebig [2, 3].
+
+an den Arduino ‚andocken‘ zu können
+(Abb. 2). Davon sollte man sich einige
+Exemplare anfertigen, am besten in verschiedenen Farben und Längen. Für den
+Anfang benötigen wir nur je ein rotes und
+ein blaues Kabel.
+
+
+
+Um schnell in die Materie einzusteigen,
+starten wir mit einem einfachen Experiment.
+
+Weiterhin benötigen wir für den ersten
+Versuch die folgende Teile:
+· ein Baustein IC-Spannungsversorgung
+· ein Baustein Leistungsstufe (LST)
+· ein Arduino mit USB-Kabel
+
+Ansteuerung einer Lampe
+
+· eine Lampe
+
+Zunächst benötigen wir Adapterkabel, um
+von den Pins der fischertechnik-Elektronik
+
+· ein Netzgerät (oder den ft-Akku)
+
+
+· ein ft-Interface
+
+Wir verbinden nun die +5 V- und MasseSchienen der beiden Bausteine und versorgen die IC-Spannungsversorgung nach
+Anleitung mit Strom.
+Den Anschluss ‚B1‘ der Leistungsstufe
+verbinden wir mit dem Arduino-Pin 13,
+und den Masse-Anschluss (GND) des
+Arduinos mit 0 V der ft-Elektronik (GND
+liegt direkt neben Pin 13). Die Pins bitte
+nicht verwechseln; eine Verpolung kann
+den sofortigen und endgültigen Halbleitertod des Arduinos bedeuten. Deswegen
+stellen wir alle Verbindungen immer im
+spannungslosen Zustand her, kontrollieren
+diese am besten zwei Mal und schalten
+dann erst die Spannungsversorgung ein.
+Zwischen den Anschluss ‚C1‘ der Elektronik und +5-10 V schalten wir eine
+Lampe. Der Regler ‚P1‘ darf auf Rechtsanschlag gedreht werden.
+
+Software
+Nun laden wir das Programm ‚Blink‘ in
+den Arduino. Aus der Arduino-Bibliothek
+kann es einfach aufgerufen werden (File –
+Examples – 1. Basics – Blink). Je nach
+Softwareversion kann der Verzeichnispfad
+abweichen, aber eigentlich sollte man
+‚Blink‘ finden können. Zur Sicherheit ist
+das Programm hier nochmal abgedruckt; es
+darf frei verwendet werden:
+/*
+
+Blink
+Turns on an LED on for one second, then
+off for one second, repeatedly.
+
+This example code is in the public
+domain.
+*/
+void setup() {
+// initialize the digital pin as an
+output:
+pinMode(13, OUTPUT);
+}
+void loop() {
+digitalWrite(13, HIGH); // set the LED on
+delay(1000);
+// wait for a second
+digitalWrite(13, LOW); // set the LED off
+delay(1000);
+// wait for a second
+}
+
+Computing
+
+Das Programm macht nichts anderes, als
+zunächst den Anschluss Pin 13 als Ausgang zu definieren und anschließend in
+einer Endlosschleife diesen Ausgang
+zunächst auf +5 V (high) zu setzen, dann
+eine Sekunde Pause einzufügen, darauf den
+Pin 13 wieder auf 0 V (low) zu schalten
+und erneut eine Sekunde Pause einlegen.
+Der Ausgang Pin 13 des Arduino ist ja mit
+dem ‚B1‘-Eingang unserer LST verbunden
+und schaltet bei +5 V via Transistor die
+Lampe ein und bei 0 V wieder aus. Wem
+es zu hell ist, der kann das Poti ‚P1‘ nach
+links verdrehen und damit den Strom durch
+die Lampe herunter regeln (siehe Anleitung der Elektronik).
+Man könnte jetzt den ‚B2‘ unserer LST mit
+einem anderen Ausgang des Arduino verbinden, die beiden Brücken ‚BR‘ der
+Elektronik mit 0 V verbinden, eine weitere
+Lampe oder einen Motor anschließen und
+dann entsprechend eine zweite Funktion
+mit dem Arduino steuern.
+In Verbindung mit dem ft-Parallel-Interface ergeben sich neue Möglichkeiten: vier
+Kanäle links/rechts steuerbar auf dem
+Interface [1] und jetzt zusätzlich zwei weitere Ein-/Aus-Schaltfunktionen z. B. für
+Signalleuchten. Natürlich lässt sich auch
+ein Elektro-Magnet oder ein Magnetventil
+anschliessen – oder auch ein Lautsprecher.
+
+Ansteuerung eines Lautsprechers
+In den Versuchen des Anleitungsbuchs der
+Elektronik wird beschrieben, wie man
+Töne erzeugen kann, in dem man statt der
+Lampe einen Lautsprecher an den Ausgang
+der Elektronik anschliesst.
+Natürlich geht das auch hier. Dem Arduino
+ist es prinzipiell natürlich egal, was hinten
+dranhängt. Wenn wir das gleiche Programm ‚Blink‘ mit einem angeschlossenen
+Lautsprecher starten, wird dieser in einem
+Takt von einer Sekunde aus- und wieder
+eingeschaltet. Das macht sich dann in
+
+
+einem deutlichen Knacken bemerkbar;
+evtl. hört man im Hintergrund noch ein
+leichtes Brummen, das durch die nicht
+ganz saubere Gleichspannung der Spannungsversorgung hervorgerufen wird.
+
+(siehe [4], S. 27-28)
+
+Die Maßeinheit für die Anzahl der Einund Ausschaltvorgänge pro Sekunde heißt
+übrigens ‚Hertz‘ (abgekürzt: Hz), benannt
+nach dem deutschen Physiker Heinrich
+Hertz, (1857-1894), Formelzeichen ‚f‘.
+
+LED des Arduino, die immer mit Pin 13
+verbunden ist, kann man das gut beobachten.
+Zum Vergleich: Die Frequenz unseres
+Stromnetzes, also die Anzahl der Polaritätswechsel unserer Spannung aus der
+Steckdose, beträgt 50 Hz, d. h. die Netzspannung wechselt ihre Polarität 50 Mal
+pro Sekunde. Mit dem grauen alten fischertechnik-Travo konnte man diese Frequenz
+am Wechseltromanschluss abgreifen und
+z. B. als Takt einer 50-Hz-Uhr verwenden
+[5].
+In unserem Experiment würde sich das als
+Brummen im Lautsprecher bemerkbar
+machen. Aber Achtung: Nie den Lautsprecher an eine Steckdose anschließen,
+das ist lebensgefählrich – und der Lautsprecher ist auch nicht für eine Netzspannung von 230 V ausgelegt.
+
+Man sagt also: die Frequenz f beträgt 1 Hz,
+wenn die Zeit vom Einschalten bis zum
+nächsten Einschalten genau eine Sekunde
+beträgt. Da wir eine Sekunde einschalten,
+dann noch eine Sekunde Pause machen,
+beträgt die Zeit aber zwei Sekunden für
+einen vollen Zyklus. Man spricht dabei
+auch von einer Periode. Unsere Frequenz
+ist damit nur halb so groß und beträgt
+0,5 Hz.
+Wenn wir die Zeiten in den Delays für Einund Auschalten halbieren, also auf 500
+Einheiten (Millisekunden) ändern, erhalten
+wir am Ausgang eine Frequenz von 1 Hz.
+Die Frequenz wird vom internen Takt des
+Arduinos bestimmt und ist aus bestimmten
+technischen Gründen am Ausgang nicht
+ganz genau 1 Hz, aber das soll uns
+zunächst nicht stören.
+Bei diesen vergleichsweise niedrigen Frequenzen hören wir aber etwas anderes,
+denn der Lautsprecher knackt einmal beim
+Einschalten und nochmal beim Ausschalten. Damit hören wir die doppelte Impulszahl – beim Vergleich mit der internen
+
+Elektronik an den Arduino
+
+Wenn wir die Delays auf jeweils ‚50‘
+setzen, wird das Knacken langsam zum
+Dauerton, und bei ‚10‘ hören wir wir nur
+noch ein Brummen. Die 2x10 ms sind kein
+Zufall, sondern entsprechen 50 Hz – eine
+50stel Sekunde sind 0,02 s (= 20 ms).
+Anders ausgedrückt: Der Kehrwert der
+Frequenz ist die sogenannte Periodendauer
+– Ausschaltzeit plus Abschaltzeit.
+Setzen wir das Delay auf 1 ms, erhalten
+wir eine Frequenz, die 10 mal so hoch ist,
+also 500 Hz. Das ist die höchste Frequenz,
+die wir auf diesem Wege erzeugen können
+
+
+Computing
+
+– der so erzeugte Ton entspricht etwa der
+Note „b“ (siehe Frequenztabelle).
+
+anstalten, der während der Sendepause
+bzw. des Testbildes ausgestrahlt wurde.
+
+Der Arduino kann aber noch schneller und
+hat dafür einen Befehl, der uns in die Lage
+versetzt, die Frequenz, die wir hören
+möchten, direkt anzugeben. Hier das komplette Programm:
+
+Für die jüngeren Leser: Es gab einmal eine
+Zeit, da wurden nur drei Fernsehprogramme ausgestrahlt, und nicht mal rund
+um die Uhr. Irgendwann in der Nacht war
+„Sendeschluss“ – und ab da gab es bis
+morgens das Testbild mit dem 1-kHzTestton.
+
+void setup() {
+}
+void loop() {
+tone(13, 1000, 100);
+delay(1000);
+}
+
+Der Befehl „tone“ benötigt die folgenden
+drei Parameter (in der Klammer):
+· 13 ist der Ausgangspin, also der Pin, an
+dem unser Lautsprecherbaustein über
+die LST angeschlossen wurde. Es geht
+auch jeder ander Pin des Arduinos
+
+Heute verwenden diesen Ton oft noch
+Tontechniker
+zum Einmessen
+von
+Systemen und Lautstärkepegeln.
+
+Quellen
+[1]
+
+Jens Lemkamp: Parallel-Interface
+durch Arduino gesteuert (1). 1/2014, S. 24-30.
+
+· 1000 ist die Frequenz (in Hz)
+
+[2]
+
+http://www.arduino.cc
+
+· 100 ist die Dauer in ms, für die dieser
+Ton ausgegeben wird – hier also wird
+der Ton nach 100 ms deaktiviert
+
+[3]
+
+http://www.fritzing.org
+
+[4]
+
+Stefan Falk: Perlentauchen (4).
+ft:pedia 2/2013, S. 18-30.
+
+Wir machen eine Sekunde Pause
+delay(1000) und die Schleife beginnt von
+vorn. Ich habe die Frequenz 1.000 Hz (=
+1 kHz) nicht willkürlich gewählt: Dieser
+Ton war früher der Testton der Fernseh-
+
+[5]
+
+Dirk Fox: Der Elektromotor. 3/2013, S. 4-8.
+
+
+

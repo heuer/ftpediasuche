@@ -1,0 +1,277 @@
+
+
+Elektronik
+
+ft-Soccer – IR-Sensor für den RoboCup-JuniorWettbewerb „Soccer“
+Björn Gundermann, Christian Lauff, Stefan Fuss
+Seit dem Jahr 2000 gibt es bei dem weltweit ausgetragenen Robotik-Wettbewerb RoboCup
+einen Junior-Wettbewerb. Eine der Disziplinen ist „Soccer“ – ein Fußballwettkampf. Andreas
+Kempf hat 2015 darüber in der ft:pedia berichtet [1]. Für die Lokalisierung des Fußballs, der
+in hoher Frequenz IR-Signale aussendet, benötigt man einen Sensor, der die aktuelle Position
+und die Bewegungsrichtung des Balls feststellen kann. Das gelingt mit dem in diesem Beitrag
+vorgestellten Sensormodul „ft-Soccer“.
+
+Hintergrund
+
+IR-Signal des Fußballs
+
+Vor einiger Zeit erhielt ich (Björn) eine
+Anfrage, ob ich nicht einen Sensor für den
+RoboCup-Junior-Wettbewerb ‚Soccer‘ entwickeln könnte. Einige Monate zuvor hatte
+ich schon einmal eine ähnliche Anfrage
+erhalten. Die Zeit passte besser und meine
+Neugierde war geweckt. Für die Prüfung
+erhielt ich die Beschreibung des vorhandenen Sensors und einen funktionierenden
+sowie einen defekten Sensor. Hierbei handelte es sich um einen Tris10 Findball, der
+jedoch nicht mehr vertrieben wird (Abb. 1).
+
+Erster Punkt war also die Spezifikation des
+verwendeten Fußballs. In der RoboCupBeschreibung steht [2]: In der Lightweight
+League sendet der Ball Infrarot-Licht aus,
+sodass er mit den Infrarot-Sensoren des
+Roboters erkannt werden kann. Die eigentlichen Soccer-Regeln spezifizieren den Ball
+dann wie folgt [3]:
+The ball emits infrared (IR) light of wavelengths in the range 920nm - 960nm, pulsed
+at a square-wave carrier frequency of 40
+kHz. The 40 kHz carrier output of the ball
+shall be modulated with a trapezoidal
+(stepped) waveform of frequency 1.2 kHz.
+Each 833-microsecond cycle of the modulation waveform shall comprise 8 carrier
+pulses at full intensity, followed (in turn) by
+4 carrier pulses at 1/4 of full intensity, four
+pulses at1/16 of full intensity and four
+pulses at 1/64 of full intensity, followed by a
+space (i.e. zero intensity) of about 346
+microseconds.
+
+
+Während der Analyse war also zu klären,
+auf was der Sensor überhaupt reagieren soll.
+
+
+Bildlich sieht das dann so wie in Abb. 2 aus.
+
+Der IR-Sensor
+Nachdem die Art des Sendesignals bekannt
+war, galt es als Nächstes dazu passende
+Sensoren zu finden. Die Soccer-Regeln
+erwähnten TSOP-Sensoren, daher fiel
+meine Wahl auf einen TSP31240. Dieser
+verfügt über drei Pins. Zwei sind die Spannungsversorgung und ein Pin ist der Ausgang. Im nächsten Schritt galt es herauszufinden, wie sich der TSP31240 verhält.
+Was passiert bei Empfang des Signals und
+was bei den verschiedenen Empfangsstärken?
+
+Elektronik
+
+Der TSOP hält den Ausgangspin also, wie
+in der Spezifikation beschrieben, während
+der Pulsausgabe auf Low. Erkennt der
+TSOP kein Signal, dann gibt er High aus. Je
+kürzer die Low-Phase, desto schlechter ist
+also der Empfang des TSOP. Auf diese Art
+kann eine Auswertung über die Empfangsqualität erfolgen.
+Darauf folgten weitere Untersuchungen mit
+verschiedener Empfangsqualität. Für diese
+Untersuchungen wechselte ich zu einem
+anderen Oszilloskop. Abb. 5 zeigt eine
+Messung bei guter Empfangsqualität.
+
+
+
+Diese ließ sich einfach durch Abdecken der
+Sensoren mit den Händen verringern. Abb.
+6 und Abb. 7 zeigen das Signalverhalten bei
+immer schlechterem Empfang.
+
+
+Jetzt galt es noch zu prüfen, wie sich die
+Low-Phase in Verbindung mit dem Fußball verhält. Ein erstes Bild vom Oszilloskop zeigte dann Folgendes:
+
+
+
+
+Wenn der Ball direkt neben dem Sensor
+liegt, also beste Empfangsverhältnisse herrschen, dann messen wir High 320μs und
+Low 520μs. Jetzt legen wir die Hand auf
+den Sensor, um den Empfang zu verschlechtern. Zu erwarten ist eine verkürzte
+Low-Phase. Dies konnte so reproduziert
+werden: Gesehen wurden High 672μs und
+Low 172μs. Das Minimum lag bei ungefähr
+164μs. Dann verliert der Sensor die Verbindung und wir sind bei einem konstanten
+High-Signal.
+
+
+
+Die Schaltung
+Nachdem das Verhalten des Sensors geklärt
+war ging es zusammen mit Stefan an einen
+Schaltplan. Der ft-Soccer verfügt über fünf
+IR-Sensoren, um die Richtung des Balles
+besser identifizieren zu können (Abb. 8).
+Dies folgt dem Design des Tris10.
+
+
+Anschluss an den Controller
+
+Um kompatibel zu bleiben wurde die gleiche Registerbelegung verwendet. Genutzt
+wurde ein Arduino ATMEGA328P-AU.
+Als externe Anschlüsse wurden zwei Möglichkeiten vorgesehen: Einmal unsere Standard 6-polige Pfostenwanne mit der I2CAnschlussbelegung des TX/ftDuino und
+zusätzlich eine RJ12-Buchse mit der Belegung für ein Lego-System. Auf der Platine
+befinden sich nur noch die notwendigen
+Kondensatoren und Widerstände.
+Die Bestückung wurde auf unserem Bestückungsautomaten vorgenommen. Einen bestückten Nutzen und einen bestückten
+Sensor zeigen Abb. 9 und 10.
+
+
+Die Stromversorgung erfolgt über den I2CBus. Sowohl die TSOP-Sensoren als auch
+der Arduino können mit 3,3V oder auch 5V
+betrieben werden. Die Versorgungsspannung der TSOP-Sensoren kann über den
+Arduino ein- und ausgeschaltet werden.
+Die Buchsen an den Flachbandkabeln lassen sich auch ohne Spezialwerkzeug crimpen. An der Buchse ist Pin 1 mit einem Pfeil
+markiert. Für ein 1:1-Kabel wird hier die
+markierte Ader des Flachbandkabels angelegt. Ob das Kabel links oder rechts aus
+der Buchse geführt wird ist völlig egal, die
+Pinbelegung am Kabel bleibt gleich.
+Danach wird entweder mit einer Wasserpumpenzange oder mit dem Schraubstock
+der Sicherungsclip auf die Buchse gedrückt.
+Dabei wird das Flachbandkabel automatisch kontaktiert. Auf jeden Fall ist dabei
+
+darauf zu achten, dass dies gefühlvoll passiert. So kann leicht das benötigte Verbindungskabel zum Sensor erstellt werden.
+Der TX/ftDuino ist – wie bereits erwähnt –
+direkt mit einer 1:1 Belegung anschließbar.
+Für den TXT bietet sich die Nutzung des
+ftExtender an [5].
+
+Ansteuerung
+Um kompatibel mit dem Tris10 zu sein
+wurde dessen Registerbelegung übernommen. Die I2C-Adresse wurde jedoch geändert, da der Tris10 mit der Adresse 0 eine
+reservierte Adresse belegt hat. Der ftSoccer reagiert auf die I2C-Adresse 0x21.
+Die Registerbelegung ist in zwei Gruppen
+unterteilt. Die erste Gruppe beschäftigt sich
+mit den wichtigen Informationen des
+Gerätes.
+
+Tab. 1: Registerbelegung (Teil 1)
+
+Die zweite Gruppe liefert rein statische Informationen, um mit LEGO-NXT/EV3Geräten kompatibel zu sein.
+
+Tab. 2: Registerbelegung (Teil 2)
+
+Die Registerbelegung bis 0x48 entspricht
+der des Tris10. Die nachfolgenden Register
+aus der ersten Gruppe wurden von mir
+ergänzt.
+
+Elektronik
+
+Firmware
+Mit den analysierten Daten galt es jetzt
+einen Algorithmus zu erstellen. Der verwendete Arduino hat nicht genügend Interrupts, um für jeden Sensor einen eigenen
+nutzen zu können. Mit Interrupts wäre aber
+auch keine gemeinsame Zeitbasis vorhanden gewesen. Die Auswertung erfolgt daher
+über einen Timer, der alle fünf Sensoren
+gleichzeitig abfragt. Die Sensoren sind alle
+an einem Port angeschlossen, sodass der
+einzelne Sensor durch Maskieren des kompletten Ports abgefragt werden kann. Die
+Auswertung innerhalb des Timer Interrupts
+muss auch sehr schnell erfolgen, da dieser
+alle 20μs aufgerufen wird. So kommen wir
+auf ein Intervall von 840μs, das geringfügig
+über der Telegrammlänge von 833μs liegt.
+Die Sensoren werden nach jedem Auswerteintervall für 5ms ausgeschaltet und
+dann wieder eingeschaltet. Nach Einschalten der Versorgungsspannung liefern die
+Sensoren jedoch direkt noch keine gültigen
+Werte. Daher wird hier eine Verzögerung
+von 800μs eingefügt. Ohne diese Verzögerung können keine stabilen Werte aus dem
+Register PIND gelesen werden. Die Sensoren sind alle am Port D angeschlossen.
+Das Auswerteintervall besteht jetzt aus der
+Summe der gelesenen Telegramme, deren
+Anzahl konfiguriert wurde. Wie bereits
+erwähnt gilt: je höher der Low Anteil, desto
+besser der Empfang. Die Periode unseres
+Telegramms hat 840μs, im optimalen Fall
+320μs High und 520μs Low. Diese maximale Low Zeit gilt dann auch als 100% und
+ist die Basis für die Register mit der Sensorintensität in %.
+Je größer das Auswerteintervall desto genauer das Ergebnis bei statischer Betrachtung. Das Ergebnis selbst ist aber auch eher
+statisch und eine Bewegung des Balles wird
+somit nicht sehr gut erkannt. Hier gilt es
+jetzt den Mittelweg zwischen stabiler Auswertung pro Sensor und der gewünschten
+Agilität zu erhalten. Dafür dient Register
+
+
+
+
+0x80. Mit diesem kann das Auswerteintervall konfiguriert werden. Der Initialwert
+von 100 führt erst einmal zu stabilen Werten, um sich mit dem Sensor vertraut zu
+machen. Eine Reduzierung führt zu einem
+agileren Verhalten des Sensors.
+Die Registerwerte für die Sensoren sind
+vom Typ Byte. Bei einem größeren Auswerteintervall wird die Anzahl der LowPhasen den Wertebereich überschreiten.
+Daher werden diese erst einmal vor der
+finalen Bereitstellung angepasst. Dazu
+werden alle Werte halbiert, sofern ein
+Sensor den Wertebereich verlassen hat.
+Diese Prüfung wird für alle Sensoren
+durchgeführt. Die Berechnung der %-Werte
+erfolgt jedoch mit den Originalwerten ohne
+diese Anpassung.
+
+Gehäuse
+Beim Gehäuse ist es wichtig, dass die internen Kammern der Sensoren untereinander
+abgeschirmt sind. Andernfalls führt der
+Einfall des Infrarot-Signals zu einer fehlerhaften Erkennung bei einem anderen Sensor. Direkt vor jedem Sensor ist ein Loch im
+Gehäuse. Je größer der Durchmesser, desto
+besser ist der Empfang. Allerdings verbessert sich damit auch der Empfang des
+Nachbarsensors. Hier muss also ein Kompromiss zwischen der Lochgröße, dem Empfang des eigenen und dem des benachbarten Sensors gefunden werden.
+
+Suchalgorithmus
+Die einfachste Möglichkeit ist, den Sensor
+zyklisch abzufragen und in Abhängigkeit
+vom gelieferten Wert für den besten Sensor
+den Roboter zu steuern. In RoboPro könnte
+dies so wie in Abb. 11 gezeigt aussehen.
+
+Derzeit befindet sich der Sensor im Praxistest; er kann im Webshop bezogen werden.
+
+Quellen
+
+Hier wird jedoch immer nur hart zwischen
+zwei Positionen unterschieden. Wenn sich
+der Ball jedoch von einem Sensor zum
+anderen bewegt, dann wird die Qualität des
+einen Sensors sinken und die des anderen
+sich erhöhen. Auf diese Art kann die
+Bewegungsrichtung ermittelt werden und
+schon im Vorfeld eine Richtungskorrektur
+erfolgen. Der Algorithmus hierfür ist deutlich umfangreicher als die simple Auswertung rein über den besten Sensorwert. Der
+Sensor könnte bei fallenden Werten schon
+in die Richtung des Sensors gedreht werden, dessen Werte steigen.
+
+[1]
+
+Andreas Kempf: RoboCup German
+Open. ft:pedia 2/2015, S. 4-7.
+
+[2]
+
+RoboCup German Open: RoboCup
+Junior Soccer.
+
+[3]
+
+RoboCup: RoboCupJunior Soccer
+Rules 2020.
+
+[4]
+
+Vishay Semiconductors: IR Receiver
+Modules for Remote Control. Datasheet Rev. 1.7, 24.09.2018.
+
+[5]
+
+Stefan Fuss, Christian Bergschneider, Björn Gundermann, Christian
+Lauff, Rudenz Schulz: Plug & Play
+am I2C-Bus mit dem ftExtender.
+ft:pedia 2/2018, S. 55-59.
+
+

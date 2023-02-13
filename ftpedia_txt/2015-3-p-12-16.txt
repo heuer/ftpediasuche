@@ -1,0 +1,119 @@
+
+
+Modell
+
+Baupraxis: Containermodule
+Jens Lemkamp
+Immer wieder steht man vor der Aufgabe, mit geringem Aufwand die Modelle zu verschönern
+und Zubehör darzustellen. Oft gesehen: Container in allen Formen und Farben. Hier mal eine
+Anregung, wie man schöne, neue Varianten bauen könnte – der Artikel soll inspirieren, diese
+ersten Ideen zu variieren und zu erweitern.
+
+Version 1: „Einfacher gelber
+Container“
+
+Der erste Container ist ein einfacher, unifarbener, gelber Container. In Rot kann man
+den natürlich genauso bauen.
+In Abb. 2 sieht man den Container von
+unten. Abb. 3 zeigt die Front- und Seitenansicht – an sich nichts Spektakuläres.
+
+
+
+
+
+Modell
+
+Die Ober und Unterschalen werden einfach
+mittels der vier Verbinder 45 zusammengesteckt. Hier die Stückliste:
+· 4 ∙ 32856 Muldenabschluss (gelb)
+· 12 ∙ 32858 Muldenseite 30x35 (gelb)
+· 6 ∙ 32861 Bodenplatte 30x90x7,5 (gelb)
+· 4 ∙ 31330 Verbinder 45 (rot)
+
+
+Natürlich können die Bodenplatten noch
+mittels 38268 Bauplatten 15 ∙ 30 2Z (gelb)
+verbunden werden:
+
+
+In Abb. 5 bis 8 kann man die Baustufen
+erkennen:
+
+
+Version 2: „Erweiterter
+Container“
+Die nächste Ausbaustufe wäre der Einzug
+eines „Streifens“ – das geht nach Belieben
+auch in Rot oder Blau:
+
+
+
+
+Jetzt wird der Innenaufbau etwas spannender. Die Mulden werden zunächst mit 15er
+Verbindern 31060 verbunden (Abb. 10).
+
+
+
+
+
+
+Natürlich können einige Teile durch andere
+mit gleicher Funktion ersetzt werden.
+
+Version 3: „Rot & Bunt“
+Die letzte Version ist die „Bastelversion“
+und als weitere Anregung gedacht.
+
+Verbindern zusammengeschoben
+
+Der Mittelteil wird wie in Abb. 11 ersichtlich aufgebaut.
+
+
+Im Inneren von Version 3 sieht man hier,
+wie auch mit anderen Bausteinen ein
+optisch gleichwertiger Zustand (von außen
+betrachtet) erzielt werden kann – wie immer
+sind der Fantasie keine Grenzen gesetzt.
+Daher hier keine weitere Stückliste. Bitte
+selber machen!
+
+
+Modell
+
+
+
+Was könnte man noch alles tun?
+· Den Mittelteil vergrößern, auf 30er oder
+45er Breite, das Ganze zweifarbig, also
+z. B. mit gelben Mulden, einem roten
+Streifen, einem gelben Streifen, und als
+dritten wieder einen roten Streifen.
+
+· Das Ganze in groß als Sattelauflieger,
+Milchtanker, Flugzeugrumpf, Space
+Shuttle, Turm, …
+· Viele Container als Flugzeug- oder,
+Schiffsfracht, Tiefbettlader-Last, Containerkran-Terminal-Ladung, …
+· Mehrstufige große Aufbauten, etwa wie
+ein Castor-Transporter.
+· Raumfrachter, Shuttleschiffe, Rettungskapseln für die „Enterprise“ (B, C, D
+oder E-Generation, versteht sich)
+
+
+· Die Mittelteile evtl. mit transparenten
+Teilen (31556 Glasflachsteinen 30 aus
+der 1970er Ära), Linsen aus den ec3Kästen, Leuchtsteinen, Türen, Klappen
+ausführen. Licht einbauen!
+
+
+
+· Im Inneren alles Mögliche verstecken, z. B. Kompressoren, ElektronikBausteine, Lautsprecher, Motoren,
+
+
+Akkus, Gewichte, Computer (z. B.
+Arduinos),
+Displays
+einbauen
+(Uhren, LED, LCD usw.)
+
+

@@ -1,0 +1,393 @@
+
+Getriebe
+
+Getriebe
+
+Drehmomentverstärker
+Getriebe unterscheiden sich von elektrischen Schaltkreisen dadurch, dass sie überwiegend
+aus passiven Komponenten bestehen. Der Drehmomentverstärker von Henry W. Nieman ist
+eine aktive mechanische Einheit – in seiner Funktion grob vergleichbar mit einem Transistor.
+Seine Erfindung im Jahre 1925 ermöglichte die Entwicklung des komplexesten und
+faszinierendsten mechanischen Analogcomputers, des Differential Analyzers. Der Erfinder
+des Verstärkers hatte diesen Verwendungszweck nicht vorausgesehen und dachte eher an die
+synchrone manuelle Steuerung von Schiffsrudern, Schleusentoren oder Geschütztürmen. Der
+Artikel geht auf die Entstehungsgeschichte des Verstärkers ein, stellt ein Funktionsmodell aus
+Fischertechnik vor und beschreibt einige Experimente und Anwendungen.
+
+Die Entstehungsgeschichte
+Im ausgehenden Mittelalter werden in
+Europa die Voraussetzungen für die Eroberung der Weltmeere und den damit aufkommenden Überseehandel geschaffen:
+Neue Schiffstypen entstehen, der Kompass
+durchläuft weitreichende Entwicklungen
+und wird seetauglich, es gibt Fortschritte in
+der Kartographie, ein Hafenkran wird zum
+ersten Mal in Utrecht im Jahr 1244 eingesetzt. In diese Epoche fällt auch die Erfindung des Spills, einer Vorrichtung zum
+synchronen manuellen Bewegen schwerer
+Lasten (siehe Abbildung 1).
+
+
+Das Spill ist ein unidirektionaler Kraftverstärker (Seile kann man nur ziehen, nicht
+schieben). Um eine sich drehende Trommel – zur Zeit der Erfindung noch mit
+
+Muskelkraft angetrieben – wird ein Seil
+mehrmals gewickelt. Wird an dem Seil
+gezogen, strafft sich das Seil auf der
+Trommel. Die Trommel nimmt es durch
+Reibung mit und verstärkt die Zugkraft
+deutlich. Der Verstärkungsfaktor steigt
+prinzipiell exponentiell mit der Anzahl der
+Windungen (was man sehr gut an der Lage
+der Windungen in Abbildung 6 erkennen
+kann: am Ausgang liegen sie enger aneinander wegen der gestiegenen Schnurspannung). Allerdings lassen sich wegen der
+Reibungsschwankungen, die mitverstärkt
+werden, in der Praxis nur wenige Windungen nutzen. Die Vorteile eines Spills gegenüber einer Seilwinde sind vor allem die
+feinfühlige Steuerung, und dass man Seile
+oder Ketten benutzen kann, die zu lang
+sind, um auf eine Winde zu passen (z. B.
+bei Ankern).
+Mehr als ein halbes Jahrtausend später im
+Jahre 1925 ist Betlehem in Pennsylvania
+eine der Hauptstädte der Stahl-, Schiffsbau-, Bau- und Rüstungsindustrie. Der bei
+der Bethlehem Steel Corporation angestellte Ingenieur Henry W. Nieman nutzt das
+Grundprinzip des Spills und erfindet einen
+Verstärker zur synchronen manuellen Kontrolle schwer drehbarer Maschinenteile
+(wie Schiffsruder, Absperrhähne oder Ge-
+
+
+
+
+schütztürme). Die bekannteste Anwendung
+dieser Erfindung wird jedoch erst drei
+Jahre später gefunden: Am Massachusetts
+Institute of Technology arbeiten im Jahre
+1928 Vannevar Busch und sein
+Mitarbeiter Harold Hazen gerade an der
+Entwicklung des so genannten Differential
+Analyzers, eines komplexen und faszinierenden Analogrechners zur Lösung gewöhnlicher Differentialgleichungen.
+Kernelemente dieses Differential Analyzers sind verkoppelte Disk-Wheel-Integratoren, die Bush und Hazen wiederentdeckt
+haben, deren Prinzip aber schon Jahrzehnte
+zuvor vorgeschlagen worden ist. Den prinzipiellen Aufbau eines solchen DiskWheel-Integrators zeigt Abbildung 2.
+
+Hazon und Bush passen die Erfindung ihren Zwecken optimal an und konstruieren
+einen zweistufigen Verstärker mit einem
+Verstärkungsfaktor von mehr als 10.000.
+Es dauert danach nicht mehr lange und der
+erste Differential Analyzer ist fertiggestellt.
+
+Das Drehmoment
+Zu einer Drehbewegung gehören verschiedene Größen: Der Drehwinkel gibt die
+Lage des gedrehten Objektes an, die Ableitungen des Drehwinkels sind die Winkelgeschwindigkeit (umgangssprachlich auch
+Drehzahl genannt) und die Winkelbeschleunigung. Das Drehmoment dagegen
+gibt an, wie stark die Drehbewegung ist.
+Dass dafür der Begriff der Kraft alleine
+nicht ausreicht, ist jedem von uns seit den
+Kindertagen von Wippen auf Spielplätzen
+her vertraut. Will man jemand anderen auf
+einer Wippe in die Höhe drücken, muss
+man nicht unbedingt schwerer sein als er –
+es reicht, wenn man weit genug nach aussen rückt (Hebelgesetz). Greift eine Kraft
+senkrecht an einen drehbar gelagerten
+Arm, so nennt man das Produkt der Größe
+der Kraft und des Abstands zwischen der
+Drehachse und dem Angriffspunkt der
+Kraft Drehmoment.
+
+
+Für eine möglichst hohe Genauigkeit muss
+die rotierende Scheibe aus Glas und das
+Reibrad – eher ein Schneidrad – aus Stahl
+sein. Es steht somit nur ein sehr kleines
+Drehmoment an der Ausgangsachse zur
+Verfügung. Gleichwohl muss diese Ausgangsachse weitere rotierende Scheiben
+und Funktionsschreiber treiben können.
+Dies ist das verbliebene ungelöste Problem
+des Entwurfs. Als Hazon sich im Heimaturlaub befindet, überbringt ihm ein ehemaliger Lehrer eine Ausgabe der wöchentlich
+erscheinenden populären Zeitschrift American Machinist, in der Henry W. Nieman
+seinen Drehmomentverstärker vorstellt.
+
+
+Bei der Übertragung von Drehbewegungen
+von einer Achse auf eine andere durch
+Zahnräder verändert sich das Drehmoment.
+Hat das erste Zahnrad n1 Zähne und das
+zweite n2, so wird der Drehwinkel und
+damit auch die Winkelgeschwindigkeit um
+den Faktor n1/n2 verändert, während sich
+das Drehmoment um den Faktor n2/n1
+ändert. Man kann also entweder langsamer
+und gleichzeitig stärker oder schneller und
+gleichzeitig schwächer drehen.
+Eine Möglichkeit, synchron mit höherem
+Drehmoment zu drehen, gibt es mit passiven Bauteilen wie Zahnrädern nicht. Genau das leistet der Drehmomentverstärker.
+
+Zum Bau des Modells
+Die Funktionsweise des Drehmomentverstärkers erschließt sich am besten durch
+den Nachbau. Der Nachbau des hier vorgestellten Funktionsmodells aus fischertechnik ist trotz der geringen Anzahl der Teile
+nicht ganz einfach. Mit etwas Fingerspitzengefühl und Geduld bekommt man dafür
+aber ein faszinierendes, stabil arbeitendes
+Aggregat, mit dem man interessante Experimente durchführen kann und das vielfältige Anwendungsmöglichkeiten bietet.
+
+
+Die Komponenten für den bidirektionalen
+Verstärker sieht man in Abbildung 3. Bei
+der Auswahl der Bauteile ist auf Folgendes
+zu achten:
+
+Getriebe
+
+de. Die Einstellung der genauen Schnurspannung am Ende des Aufbaus ist allerdings bei Verwendung der Klemmstifte
+einfacher.
+Man benötigt Freilaufnaben (68535) für
+zwei der vier Zahnräder Z30.
+Der Austausch der Lager auf der Ausgangsseite gegen die von Ludger
+Mäsing vorgeschlagenen Doppelkugellagerbausteine bringt eine Verbesserung.
+Die fischertechnik-Seile sind wegen der
+hohen Elastizität von Nylon nicht gut
+für unseren Zweck geeignet. Ich verwende einen Zwirn aus 100% Ramie,
+einer Naturfaser deren Elastizitätsmodul
+etwa 24 Mal so groß ist wie der von
+Nylon (das bedeutet, dass sich Nylon
+bei gleicher Spannung 24 Mal so weit
+dehnt wie Ramie).
+In zwei 24 cm lange Schnüre macht man
+jeweils an beiden Enden sich selbst zuziehende Schlingen. Die Befestigung der
+Schnüre an den Zahnrädern Z30 ist in Abbildung 4 dargestellt.
+
+Die Achsen sollten trotz der geringen
+Länge so gerade wie möglich sein. Jede
+Asymmetrie führt zu Schwankungen in
+der Schnurspannung auf den Trommeln
+und damit zu Gleichlaufschwankungen.
+Die Räder 23 sollten möglichst fest auf
+den Achsen sitzen und eine möglichst
+glatte Oberfläche besitzen.
+Die vier 5 mm langen Klemmstifte
+(107356) klemmen sehr fest in den
+Zahnrädern Z30, was für unsere Zwecke
+ideal ist.
+
+Es wird jeweils ein Z30 mit Freilaufnabe
+mit einem Z30 ohne Freilaufnabe verbunden.
+
+Alternativ kann man Rastachsen 20
+(31690) verwenden. Diese arretiert man
+mit einer Klemmbuchse, die zuvor mit einer Zange etwas zusammengedrückt wur-
+
+Es ist empfehlenswert, zunächst einen unidirektionalen Verstärker aufzubauen (siehe
+Abbildung 5), da er das Grundprinzip sehr
+gut verdeutlicht und man die etwas kniffe-
+
+
+
+
+lige Einstellung der Schnurbefestigungen
+in vereinfachter Situation üben kann. Die
+Komponenten müssen dazu etwas abgeändert werden. Man benötigt zusätzlich eine
+Seiltrommel und einen Gummiring als
+Bremse. Zunächst baut man den linken
+Getriebeblock ohne Motor inklusive Bremse auf. Dann wickelt man die Schnur in der
+
+
+
+späteren Drehrichtung auf die Trommel
+(Rad 23). Dabei müssen die Abstände der
+Klemmbuchsen auf den Klemmstiften geeignet eingestellt werden (Abbildung 5).
+
+Sitzt die Schnur sicher auf der Trommel,
+arretiert man das rechte Z30 mit einem
+Grundbaustein 15, den man in die Grundplatte einschiebt. Dann baut man den
+Motorblock auf. Bevor der Motor eingeschaltet wird, entfernt man den Baustein 15
+wieder und nimmt die rechte Eingangsachse in die Hand. Nach dem Einschalten
+des Motors kann man die Drehmomentverstärkung sofort fühlen. Man darf natürlich
+nur in Drehrichtung der Trommel drehen,
+ansonsten wickelt sich die Schnur von der
+Trommel.
+Nach dieser Vorübung ist man für den Bau
+des bidirektionalen Verstärkers gemäß Abbildung 6 gut vorbereitet. Der Motorblock
+wird entfernt und die Verstärkerstufe für
+die zweite Drehrichtung wird analog zur
+ersten aufgebaut. Die Einstellung der
+Schnurspannung muss durch Verdrehen
+der Klemmbuchsen auf den Klemmstiften
+so erfolgen, dass sich die Trommeln ohne
+wesentliche Bremswirkung durch Reibung
+unter den Schnüren drehen können und die
+Schnüre trotzdem nicht von den Trommeln
+abspringen.
+Nach Anbringen des Motors muss die
+Feineinstellung der Klemmbuchsen erfolgen. Der Motor muss mit fast voller Drehzahl laufen und trotzdem dürfen die Schnüre unter Last nicht von den Trommeln
+springen. Eventuell läuft der Verstärker
+nicht ganz „rund“, d. h. die Drehbewegung
+beschleunigt und verlangsamt sich je nach
+Stellung der Eingangsachse. Das liegt dann
+meistens daran, dass die Eingangs- und
+Ausgangsachsen nicht genau fluchten und
+kann durch leichtes Verschieben des
+Eingangsblocks in der Grundplatte verbessert werden.
+
+Experimente
+Nach dem Zusammenbau prüft man als
+erstes die Drehmomentverstärkung mit den
+Händen: Wenn man eine der zwei Eingangsachsen mit zwei Fingern nur leicht
+dreht, entsteht an den Ausgangszahnrädern
+
+Getriebe
+
+trotzdem ein vergleichsweise großes Drehmoment – man kann die Zahnräder kaum
+mit dem Druck allein eines Fingers bremsen. Als nächstes kann man einen Seilwindenaufsatz gemäß Abbildung 7 konstruieren, um die Verstärkung zu bestimmen. Ich
+habe 60 g Gewicht an das Seil gehängt und
+konnte den entstehenden Zug durch Anbringen einer Klemmkupplung 20, deren
+Gewicht etwa 0,7 g beträgt, an die Handkurbel ausgleichen.
+
+
+Berücksichtigt man die unterschiedlichen
+Radien der Seiltrommel (mit Seil etwa
+7 mm) und der Handkurbel (2,5 cm) sowie
+die Übersetzung zwischen dem Z20 und
+dem Z30, so ergibt sich eine Verstärkung
+um den Faktor 36. Wenn man zum Vergleich den zweistufigen Verstärker von
+Bush und Hazen betrachtet, könnte man
+unseren Verstärker als Vorverstärker bezeichnen: Er ist recht empfindlich, aber
+nicht sehr leistungsstark. In einer Endstufe
+würde man einen stärkeren Motor und
+stärkere Seile verwenden.
+Mit einem gut eingestellten Verstärker lassen sich interessante Rückkopplungsexperimente durchführen. Zunächst wird der
+Zusatz gemäß Abbildung 8 angebaut (wer
+nur neue Differentiale besitzt, modifiziert
+den Anbau entsprechend). Die Nabe links
+dient als Klemmkupplung. Man sollte sie
+zunächst weglassen und die Achse im laufenden Betrieb ganz leicht zwischen zwei
+Fingern halten, bis der Verstärker folgende
+Eigenschaften bekommt: Wenn man die
+
+
+Eingangsachse in eine Richtung dreht,
+stellt sich eine stabile Drehbewegung mit
+hohem Drehmoment am Ausgang in diese
+Richtung ein.
+
+und Zahnrad Z15 vertauscht. Verwendet
+man nun die rechte Achse des Differentials
+als neuen Eingang, so kann man die ursprüngliche Eingangsdämpfung weitgehend durch positive Rückkopplung kompensieren. Gibt man nun dem Eingang
+einmal Schwung (am besten mit einer
+aufgesetzten Dreh- oder Schwungscheibe),
+so führen sämtliche Z30 mehr als eine
+ganze Umdrehung aus, bis sie zum Stillstand kommen. Dies ändert sich auch
+nicht, wenn der Ausgang weitere, nicht zu
+große Lasten treibt.
+
+
+Man kann diese Bewegung aber problemlos am Eingang stoppen und den gleichen
+Effekt in umgekehrter Richtung erzielen!
+Man hat also ein funktionierendes Perpetuum mobile gebaut, das natürlich keine
+Energie liefert – wie es die Zielsetzung der
+klassischen Erfinder war –, sondern verbraucht. Perpetuum mobile bedeutet übersetzt ja nur „sich ständig Bewegendes”.
+Die Nabe als Klemmkupplung wird im
+laufenden Betrieb vorsichtig genau soweit
+zugedreht, dass sich dieser Effekt
+dauerhaft einstellt. Der vorgeführte Effekt
+ist durchaus mit der akustischen
+Rückkopplung zu vergleichen, die entsteht,
+wenn ein Mikrofon direkt vor einen
+Lautsprecher gehalten wird. Er kommt in
+unserem Fall auf folgende Art zustande: Ist
+die linke Achse des Differentials blockiert,
+wird der Ausgang durch das Differential
+mit doppelter Drehzahl auf den Eingang
+zurückgekoppelt. Dies kann natürlich nur
+solange erfolgen, bis die Schnur gestrafft
+ist. Von da an drehen sich Eingang und
+Ausgang synchron und die linke Achse
+rutscht zur Kompensation in den Fingern
+bzw. der Nabe durch.
+Ein weiteres lehrreiches Experiment ergibt
+sich, wenn man in dem Aufbau gemäß
+Abbildung 8 die Position von Differential
+
+
+
+Dieser Effekt kommt wie folgt zustande:
+Der Drehwinkel des mittleren Zahnkranzes
+eines Differentials ist der Mittelwert der
+Drehwinkel an den äußeren Achsen. Die in
+Abbildung 9 angegebene Rückkopplung
+des Zahnkranzes über den Verstärker an
+eine äußere Achse erlaubt es, dass alle drei
+Ein-/Ausgänge sich synchron mit dem
+Drehwinkel x drehen. Ändert man nun den
+Drehwinkel an der linken Achse in
+Abbildung 9 von x auf x+ x, so verbleibt
+die rechte Achse aufgrund geringer Verzögerungen im Verstärker zunächst beim
+Drehwinkel x. Das Differential mittelt nun
+beide Seiten zu x+ x/2. Der weitere Vorgang ist in Abbildung 9 dargestellt. Man
+erkennt, dass der dargestellte Aufbau das
+Drehmoment des Verstärkers nutzt, um
+den Ausgang dem Eingang präzise nachfolgen zu lassen. Man hat also einen Drehwinkelfolger konstruiert, der den in elektrischen Schaltkreisen oft genutzten Spannungsfolgern analog ist.
+
+Anwendungen
+Der Drehmomentverstärker lässt sich zu
+vielen Zwecken einsetzen: Wie von seinem
+Erfinder vorgesehen, lassen sich schwergängig drehbare Aufbauten und Maschinenteile – z. B. ein großer Kran auf einem
+Drehkranz – manuell feinfühlig und doch
+schnell bewegen.
+Eine weitere Einsatzmöglichkeit sind
+Modellfahrzeuge: Treibt man den Eingang
+des Verstärkers mit einem über eine Fernsteuerung regelbaren schwachen Motor
+(z. B. dem XS-Motor) an, so lässt sich am
+Ausgang schon bei kleinen Geschwindigkeiten das sehr viel größere Drehmoment
+des S-Motors (oder eines Power-Motors
+bei entsprechender Modifikation) abrufen,
+die mit voller Spannung und damit mit
+optimaler Drehzahl kontinuierlich betrieben werden. Man hat also hiermit eine
+fischertechnik-Variante eines stufenlosen
+Getriebes (Continuous Variable Transmission – CVT) realisiert und kann damit prinzipiell Modellfahrzeuge bauen, die gerade
+bei langsamen Geschwindigkeiten ein sehr
+kräftiges Fahrverhalten aufweisen.
+Ich bin mir nicht sicher, ob Niemans Verstärker überhaupt in der Fahrzeugtechnik
+ausprobiert wurde – auf jeden Fall scheint
+er sich im Rahmen des fischertechnikSystems besser für CVT zu eignen als andere mir bekannte Verfahren. Schließlich
+kann man den Drehmomentverstärker in
+jedem komplexen Getriebe als Puffer benutzen – vergleichbar einem Leistungstreiber in elektrischen Schaltkreisen – und
+
+Getriebe
+
+muss dann weniger Arbeit in die Minimierung von Reibungsverlusten stecken.
+
+Zu den Quellen
+Drehmomentverstärker wurden in den
+letzten Jahren fast nur mit Meccano realisiert. Tim Robinson hat eine sehr schöne
+Internetseite zu diesem Thema zusammengestellt [2]. Die hier vorgestellte Konstruktion weicht von diesen Modellen wie auch
+von Niemans Vorlage ab. Bei diesen sitzen
+in der Regel beide Trommeln auf einer
+Ein-/Ausgangsachse und drehen sich
+gegensinnig.
+Unser Entwurf ist angelehnt an die LegoVariante von Adam Eppendahl [3] und
+ermöglicht einen Aufbau mit Standardfischertechnik-Bausteinen. Von Adam
+Eppendahl stammt auch die Idee, zunächst
+einen unidirektionalen Verstärker zur Erklärung des Prinzips zu benutzen. Die historischen Details zum Einsatz des Drehmomentverstärkers im Differential Analyzer
+stammen aus [1].
+
+Literatur
+[1]
+
+Bennett, Stuart: A history of control
+engineering 1930-1955. Peter Peregrinus Ltd., London, 1993.
+
+[2]
+
+Modell
+von
+Tim
+Robinson:
+http://www.meccano.us/differential_
+analyzers/robinson_da/index.html
+
+[3]
+
+Modell von Adam Eppendahl:
+http://homepage.mac.com/a.eppenda
+hl/work/torque-amp.html
+Thomas Püttmann
+
+
+

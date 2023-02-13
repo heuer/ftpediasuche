@@ -1,0 +1,244 @@
+
+Elektronik
+
+Elektronik
+
+Labor für digitale Elektronik
+Hans-Christian Funke
+Auf digitaler Elektronik basiert jeder PC, jedes Notebook, Tablet, Smartphone usw. Ohne die
+digitale Elektronik geht in unserer Gesellschaft kaum noch etwas. Aber wie funktioniert das mit
+der digitalen Technik? Was sollte man darüber wissen? Wie kann man einen Einstieg bekommen? Und kann man die auch für fischertechnik einsetzen, ohne nur eine Black Box in seinem
+Modell zu integrieren?
+Klar, und dafür eignen sich die Elektronikmodule ganz hervorragend. Diese Module
+bieten alle grundlegenden Bausteine der
+digitalen Elektronik. Aus diesem Grund
+habe ich ein „Labor für digitale Elektronik“
+zusammengestellt für alle, die sich mit der
+digitalen Welt vertraut machen wollen.
+Natürlich gibt es viele Möglichkeiten im
+Internet, sich die Grundlagen der digitalen
+Technik erklären zu lassen. Mit dem Labor
+
+könnt ihr aber etwas erleben! Schaltungen
+selbst zusammenstecken, knobeln am leibhaftigen Objekt und eigene Ideen ausprobieren.
+Heute möchte ich euch erst einmal nur einen
+Einblick in das Labor geben. Die Technik
+ist fertiggestellt, aber zum Labor gehört
+auch ein ordentliches Handbuch.
+
+
+
+
+
+So soll – ähnlich wie die Bücher zu den
+Hobby-Baukästen – ein Leitfaden die
+Interessenten Stück für Stück in die digitale
+Welt einführen, von den Grundlagen über
+die Logik bis zu den elektrischen Elementen
+der Gatter und Speicher. Zu jeder neuen
+Erkenntnis solle es auch eine kleine Schaltung zum Nachbauen geben, die das theoretisch vermittelte Wissen durch Aufbau einer
+Schaltung praktisch festigen soll. In Abb. 2
+ist ein Beispiel für den Aufbau einer Laborschaltung zu sehen.
+Dieser Leitfaden ist derzeit noch im Aufbau. Dadurch dass ich diese Elektronikmodule völlig im Alleingang aus dem
+Boden gestampft habe, ohne ein Heer an
+Personal, an Designern, Ingenieuren und
+anderen Fachleuten, sondern nur mit meiner
+Familie zusammen, dauert alles ein wenig
+länger und ist auch nicht so zielsicher mit
+einem Termin belegbar. So ist der
+Wunschtermin für die Fertigstellung zwar
+
+
+Ende Oktober 2021, aber dies kann ich heut
+noch nicht mit Sicherheit garantieren.
+Es gibt aber schon Bilder des Labors, und es
+gibt einiges zu der späteren Veröffentlichung und Gestaltung des Labors zu berichten. Den ersten Prototyp von dem Labor
+könnt ihr auf den Abb. 3 und 4 sehen.
+Das ist natürlich Elektronik kompakt. Diese
+kompakte Version ist mit der Idee entstanden, dass die meisten doch schon ausreichend mit Kabeln, Tastern und fischertechnik-Teilen ausgestattet sind, und so
+habe ich diese Komponenten einfach weggelassen.
+Das Labor beinhaltet alle notwendigen
+Elektronikmodule und einige Zubehörteile,
+die nicht zu den Standard-Teilen von
+fischertechnik gehören (Abb. 5 und 6). Bis
+auf die acht Stecker, die für die beiliegenden passiven Elektronikteile benötigt werden, sind keine weiteren fischertechnik
+Teile enthalten.
+
+
+Elektronik
+
+
+
+
+
+
+
+In den Leuchtbausteinen sind spezielle
+LEDs enthalten, die nur 1-2 mA benötigen
+und somit an den Ausgängen der Elektronikmodule direkt angeschlossen werden
+können. Des Weiteren finden sich vier
+Dioden, drei Kondensatoren und zwei
+Widerstände beim Zubehör.
+
+ 75003 Ergänzungsset V (Versorgung)
+ 75004 Labor für digitale Elektronik –
+Ausbildungsversion
+ 75005 Ergänzungsset A (Akku) für Ausbildungsstätten
+
+Ergänzungsset E
+
+
+Zum Labor gibt es Ergänzungssets, die
+jeder nach seiner persönlichen Situation
+damit kombinieren kann (die Ergänzungssets können nur zusammen mit einem Labor
+bestellt werden – eine spätere nachträgliche
+Bestellung ist aber auch noch möglich):
+ 75001 Ergänzungsset E (Elektronik)
+ 75002 Ergänzungsset T (Technik)
+
+
+
+Elektronik
+
+Ergänzungsset T
+Hier wurden alle notwendigen fischertechnik-Teile für das Labor zusammengestellt – Abb. 9. Wer wenig oder noch kein
+fischertechnik besitzt, sollte sich dieses
+Paket holen. Die Teile in dem Set sind
+günstiger als bei einer Einzelteilebestellung:
+Anzahl Bezeichnung
+
+Art.-Nr.
+
+6 S-Lasche 15, rt
+
+31667
+
+11 Federnocke, rt
+
+31982
+
+8 Baustein 15, sw
+
+32881
+
+1 Grundplatte
+259 × 187, sw
+
+32985
+
+10 Kabelhalter, rt
+
+35969
+
+6 S-Riegel, rt
+
+36323
+
+3 Baustein 7.5, rt
+37468
+Tab. 2: Stückliste Ergänzungsset T
+
+
+In diesem Set sind sechs Minitaster und die
+komplett vorkonfigurierten Kabel enthalten, die für den Aufbau der Laborschaltungen benötigt werden – Abb. 7 und
+8. Das Set enthält also alle zusätzlichen zum
+Labor benötigten elektronischen Komponenten:
+Anzahl Bezeichnung
+
+Art.-Nr.
+
+6 Minitaster
+
+37783
+
+8 Kabel 200 mm mit
+Steckern
+10 Kabel 80 mm mit
+Steckern
+12 Kabel 50 mm mit
+Steckern
+3 Doppellitze 50mm mit
+Steckern
+1 Doppellitze 200mm
+mit Steckern
+Tab. 1: Stückliste Ergänzungsset E (alle Kabel
+sind mit Steckern fertig montiert)
+
+(nicht auf dem Foto: die enthaltene
+Grundplatte 259 × 187)
+
+
+
+Ergänzungsset V
+Das Labor ist so konzipiert, dass es ideal mit
+einem Akku-Pack (8,4 V) betrieben werden
+kann. Alternativ kann das Labor auch über
+ein Versorgungsmodul betrieben werden,
+an dem ein Trafo oder Steckernetzteil angesteckt wird. Stehen beide Möglichkeiten
+nicht zur Verfügung, bietet dieses Set eine
+Versorgung über USB mit 5 V – Abb. 10.
+
+Labor für digitale Elektronik –
+Ausbildungsversion
+Für Ausbildungsstätten, Schulen, Universitäten oder andere Lehrbereiche gibt es eine
+Ausbildungsversion, die das Labor (75000),
+alle Ergänzungssets (75001-3) und zwei
+Sortierwannen zum praktischen Stapeln des
+Lehrmaterials beinhaltet – siehe Abb. 11 bis
+14.
+
+
+
+geliefert
+
+Anzahl Bezeichnung
+1 Netzstecker für 230 V auf
+USB-A
+1 Kabel USB-A – fischertechnik
+Stecker
+Tab. 3: Stückliste Ergänzungsset V
+
+
+
+
+Elektronik
+
+Anzahl Bezeichnung
+6 Akku-Pack 8,4 V
+NiMH
+
+Art.-Nr.
+35537
+
+1 Akku-Ladegerät für
+522460
+8,4V NiMH Akkus
+Tab. 4: Stückliste Ergänzungsset A
+
+Sortierwannen
+
+Ergänzungsset A
+Die Ausbildungsversion enthält von Hause
+aus das USB-Steckernetzteil. Sollte sich ein
+Akku-Betrieb als sinnvoller erweisen, kann
+das Labor problemlos mit dem Akku-Set
+ergänzt werden (5er Set + Ersatzakku; 1 ×
+Ladegerät).
+
+Das Labor und alle Ergänzungssets werden
+über den offiziellen fischertechnik-Servicepartner Franz Santjohanser „santjohanser
+Spielen. Lernen. Technik.“ im Online-Shop
+erhältlich sein [1].
+Wir wollen das Labor für digitale Elektronik und die Erweiterungssets bereits in den
+nächsten Tagen online stellen, damit diese
+vorbestellt werden können.
+
+Quellen
+[1]
+
+„santjohanser Spielen. Lernen.
+Technik.“: Online-Shop von Franz
+Santjohanser: https://santjohanser.de
+
+
+

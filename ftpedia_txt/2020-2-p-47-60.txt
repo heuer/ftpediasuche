@@ -1,0 +1,519 @@
+
+Getriebe
+
+Getriebe
+
+Harmonic Drives von Z10 bis Z40
+Stefan Falk
+Vor einer ganzen Reihe von Jahren „entdeckte“ der fischertechnik-Community-Chat die
+Existenz von „Harmonic Drives“. Das sind besondere Getriebe, die in einem Schritt enorme
+Untersetzungsverhältnisse realisieren können. Über die Zeit gab es eine ganze Reihe von
+Vorschlägen, wenigstens Funktionsmodelle davon mit fischertechnik zu realisieren. Dieser
+Beitrag stellt Aufbauten für Z40, Z30, Z20, Z15 und Z10 vor.
+
+Das Original und seine
+Wirkungsweise
+Das erste Harmonic Drive entwickelte 1955
+C. Walton Musser von der United Shoe
+Machinery Corp. im Auftrag der NASA.
+Am 29.09.1959 wurde es unter der Patent
+No. 2906143 in den USA patentiert [1].
+Ein echtes Harmonic Drive sieht so aus:
+
+Was passiert da nun? Das Zahnband
+schmiegt sich an den äußeren Enden des
+Ellipsoids an das Innenzahnrad an. Da sich
+das Ellipsoid dreht, wandert die „Anschmiegestelle“ mit diesem mit. Da das
+Zahnband aber weniger Zähne als das
+Innenzahnrad besitzt, verdreht es sich – und
+zwar ganz langsam! – gegenüber dem
+(blauen) Innenzahnrad. Wenn das Zahnband z. B. zwei Zähne weniger als das
+Innenzahnrad hat, wird es sich mit jeder
+Umdrehung des (grünen) Ellipsoids um
+zwei Zähne weiterdrehen – und zwar in die
+entgegengesetzte Drehrichtung wie die
+Antriebswelle.
+
+Die Umsetzung mit
+fischertechnik
+
+
+Meine ersten Versuche zielten auf einen
+recht originalgetreuen Nachbau. Eine Kette
+mit 28 Zähnen sollte in das fischertechnikInnenzahnrad mit 30 Zähnen (35694) eingelegt und geeignet angetrieben werden.
+
+Das äußere (blaue) Innenzahnrad steht still,
+wird also festgehalten. Die Antriebswelle
+liegt mittig und dreht das ellipsenförmige
+(grüne) Element um die Mittelachse. Der
+Trick ist, dass das rote Zahnband zwischendrin zwei (oder einige wenige) weniger
+Zähne hat als das äußere (blaue) Innenzahnrad. Das Zahnband selbst ist die Abtriebswelle!
+
+
+Die Konstruktion eines geeigneten Ellipsoid-ähnlichen Gebildes im kleinen Innenraum des Innenzahnrads gelang mir aber
+leider nicht.
+Eine erste Umsetzung gelang aber, als die
+Kette außen um ein Zahnrad verlief [3].
+Nun musste die Kette einige Glieder länger
+sein als das Zahnrad Zähne hat (Abb. 3).
+
+60 Glieder lang – zwei mehr als das Zahnrad Zähne besitzt. Die Antriebswelle hob
+die Kette an zwei gegenüberliegenden
+Stellen über eine Anordnung mit Unterbrecherstücken 60° (31304) zweiseitig vom
+Zahnrad ab und legte sie nach Vorbeilaufen
+der Unterbrecher um genau einen Zahn
+versetzt wieder auf dem Zahnrad ab.
+Das Abnehmen der resultierenden Drehbewegung von der Kette war knifflig. Die
+erste, allerdings wackelige und umständliche Lösung, ließ Federfüße 30 (31307)
+von den Förderkettengliedern (37192), die
+als jedes zweite Kettenglied eingefügt
+waren, mitnehmen.
+
+
+
+
+Das Zahnrad war das Drehkranz-Oberteil
+Z58 m1,5 (31390, schwarz). Die Kette war
+
+Diese erste grundsätzlich funktionierende
+Version reizte natürlich zur Verbesserung.
+Harald Steinhaus ertüftelte mehrere kompakte Varianten zum Thema, die obendrein
+
+
+
+Getriebe
+
+ohne seltene ältere Spezialteile auskommen, wie z. B. die in Abb. 4 und 5 [4].
+Bei dieser Gelegenheit drängt es mich, auf
+eine „Schwester“ der Harmonic Drives
+aufmerksam machen, die Hypozykloidgetriebe [5], und hier ganz besonders auf
+eine wunderbare Perle von Getriebetechnik,
+ebenfalls von Harald Steinhaus konstruiert
+[6]:
+
+weiter. Jede davon enthält eine dreistufige
+Untersetzung, bestehend aus drei gleich
+aufgebauten Harmonic Drives, und am
+Schluss wird jeweils eine fischertechnikDrehscheibe als letztes Glied und Abtrieb
+gedreht.
+Die hier vorgestellten Getriebevarianten
+funktionieren alle nach demselben Prinzip
+(Abb. 8):
+Drehung der
+Kette abnehmen
+Kette
+abheben
+und
+versetzen
+Abtrieb
+
+fest
+
+Neue Varianten von Harmonic
+Drives
+Zurück zum Thema: Abb. 7 und 9 geben
+einen Überblick über eine ganze Batterie
+von mehrstufigen Harmonic Drives. Ein
+XM-Motor treibt das erste Z40 an, und über
+Freilauf-Kettenzahnräder
+Z20
+m1,5
+(31779) geht es jeweils zur nächsten Station
+
+Antrieb
+
+
+Angetrieben wird z. B. eine fischertechnikDrehscheibe. Die dreht sich also um die
+allen Getriebestufen gemeinsame, lange
+Achse. Danach folgt auf der (sich nicht
+drehenden!) Achse ein starr befestigtes, also
+ebenfalls nicht (!) drehendes Zahnrad. Das
+trägt eine Kette, die genau ein Kettenglied
+mehr besitzt als das Zahnrad Zähne hat.
+
+
+
+
+
+Diese Kette wird von einem an der angetriebenen Drehscheibe befestigten, also umlaufenden Element etwas abgehoben und – das
+ist der Gag – einen Zahn weiter wieder
+abgelegt.
+
+Das eine „überzählige“ Kettenglied ist bei
+all diesen Vorschlägen ein Förderkettenglied (37192), von dem die Drehung auch
+für die jeweils nächste Stufe abgenommen
+wird.
+
+Dadurch dreht sich die Kette, immer wenn
+das abhebende Element vorbeikommt, um
+genau einen Zahn um das (feststehende)
+Zahnrad. Eben diese Drehung der Kette
+wird nun abgegriffen und geeignet auf die
+nächste – drehbare – Drehscheibe übertragen. Diese dreht sich dann also, aber viel
+langsamer als der ursprüngliche Antrieb.
+
+Wichtig ist, dass die durchgehende lange
+Achse sich selbst nicht dreht, sondern starr
+fixiert ist! Auf der sitzen (ebenfalls fest) die
+Zahnräder, um die die jeweiligen Ketten bewegt werden. Ebenfalls wichtig ist die richtige Justierung, sodass die Mechanik zuverlässig „greift“, aber hinreichend leichtgängig läuft.
+
+Im hier vorgestellten Funktionsmodell sind
+alle diese Getriebe jeweils dreifach ausgeführt. Es sind also auf derselben Achse
+immer drei gleich aufgebaute Getriebe
+hintereinandergeschaltet. Der Abtrieb der
+einen Getriebestufe ist gleichzeitig der
+Antrieb der nächsten. Zwischendrin befindet sich je ein starr befestigtes Zahnrad, um
+das die Kette sich – sehr langsam, in
+unseren Modellen Zahn für Zahn – bewegt.
+
+Bei diesen Getrieben gibt es immer zwei
+konstruktive Probleme zu lösen:
+
+Das Modell enthält zwei verschiedene
+Lösungen für Harmonic Drives mit Z40
+(und Ketten mit 41 Gliedern) sowie je eine
+für Z30, Z20, Z15 und Z10 (mit Ketten von
+31, 21, 16 und 11 Gliedern Länge).
+
+
+a) Wie kann die Antriebs-Drehbewegung
+genutzt werden, um die Kette geeignet
+abzuheben und um einen Zahn versetzt
+wieder abzulegen?
+b) Wie kann die so resultierende langsame
+Drehbewegung der Kette selbst um ihr
+Zahnrad auf die nächste Untersetzungsstufe abgenommen und übertragen
+werden?
+Je mehr Platz zur Verfügung steht, desto
+einfacher gelingt die Sache. Mit aufsteigendem Schwierigkeitsgrad arbeiten wir uns
+deshalb von den Z40-Getrieben bis zu dem
+mit Z10 vor.
+
+Z40-Variante 1
+beachte: Alle Drehscheiben (31019) inkl.
+das mit dem vom Motor angetriebenen
+ersten Z40, sitzen auf Freilauf-Flachnabenzangen („Freilaufnaben“), während alle
+anderen Z40 fest auf der fixierten langen
+Achse angebracht sind. Die Achse selbst
+sitzt ganz vorne in einer Seiltrommel 15
+(31016) fest.
+
+Getriebe
+
+jeweiligen Stufe) sitzt über einen Winkelstein 15° und eine V-Aufnahmeachse
+(31124) wiederum eine Freilauf-Flachnabe
+(129697). Die greift butterweich und elegant unter die Kette und hebt sie so vom
+Z40 ab.
+Auf dem Rastkettenglied ist ein BS7,5 mit
+zwei Verbindern 30 befestigt. Darin sitzt
+der Klemmring einer Achse 30, die von
+außen in der Drehscheibe der nächsten
+Getriebestufe steckt und diese somit dreht.
+
+Übertragsmechanik
+
+
+
+Die Übertragsmechanik funktioniert hier
+so: An der Drehscheibe (dem Antrieb der
+
+Da die Drehung einer „Antriebs-Drehscheibe“ die Kette immer nur um einen
+Zahn weiterdreht, erreichen wir in einer
+einzigen Getriebestufe eine Untersetzung
+von 41:1 (wir kommen später noch darauf
+zurück, dass hier sogar eine 41 und nicht nur
+eine 40 steht). Mit den drei aufgebauten
+Getriebestufen bekommen wir also eine
+
+
+
+Gesamtuntersetzung vom ersten (dem angetriebenen) Z40 bis zur letzten Drehscheibe
+von
+
+68.921
+( ) =
+Das angetriebene Z40 muss also fast siebzigtausend Umdrehungen vollführen, bis
+sich die letzte Drehscheibe einmal herumgedreht hat!
+
+Mitnehmer zur jeweils nächsten Drehscheibe bleiben gleich.
+Eine V-Aufnahmeachse (31124) trägt, mit
+einem Klemmring 5 als Abstandshalter,
+eine Hülse mit Scheibe (35981). Die Aufnahmeachse steckt einfach in der Drehscheibe und die Hülse passt genau unter die
+Kette.
+
+
+
+Drehscheibe
+
+Z40-Variante 2
+Bei dieser Variante ist lediglich das Abheben der Kette etwas anders realisiert; die
+
+
+von der Antriebsseite gesehen
+
+Dieses Getriebe bietet genau dasselbe
+Untersetzungsverhältnis wie die Z40Variante 1, nämlich 41:1 in jeder Stufe und
+also 68.921:1 über alle drei Stufen hinweg.
+
+Getriebe
+
+einfach in einer der Bohrungen der drehenden Z30 und trägt nach einem Klemmring 5
+als Abstandshalter wieder eine Hülse mit
+Scheibe. Das passt wunderbar und hebt die
+Kette sauber ab.
+Der Übertrag zur nächsten Stufe ist dafür
+etwas aufwändiger, aber auch nicht schwer
+zu bauen: Auf dem Förderkettenglied sitzt
+wieder ein BS7,5, der über eine V-Achse 20
+(31690) eine I-Strebe 30 trägt. Deren anderes Ende sitzt auf einem ins nächste Z30
+eingesetzten S-Verbindungsstopfen 6
+(32316) und treibt es dadurch an.
+
+hebt die Kette ab
+
+Z30-Variante
+
+
+Hier benötigen wir Zahnräder Z30 sowohl
+für die feststehenden Räder für die Ketten
+als auch für die drehenden Teile, die bei den
+Z40-Varianten aus Drehscheiben bestanden. Dafür gestaltet das Abheben der Kette
+besonders einfach: Eine Ache 15 steckt
+
+gesehen
+
+Das Untersetzungsverhältnis ist also jeweils
+31:1 und damit über die drei Getriebestufen
+31 3 29.791
+( ) =
+
+
+
+
+Der Antrieb muss sich also fast dreißigtausendmal drehen, bis die endgültige
+Abtriebs-Drehscheibe sich einmal dreht!
+
+beim Z30 die Kette ab
+
+der letzten Abtriebs-Drehscheibe
+
+Z20-Variante
+Hier geschieht das Abheben der Kette sehr
+einfach: Ein BS15 mit Bohrung sitzt auf der
+Achse, und darauf einfach ein Baustein 15
+RZ mit rotem, runden Zapfen (31059). Das
+passt genau zu den 21 Kettengliedern, die
+um das Z20 geschlungen sind.
+
+gesehen
+
+hebt die Kette ab
+
+
+
+Getriebe
+
+Direkt nach dem Antriebs-Z40 ist der BS15
+mit Bohrung ganz an das Z20 (auf einer
+Flachnabe) drangeschoben (Abb. 23). Das
+erlaubt dem Nabenflügel des Z40, in die
+Nut des BS15 mit rundem Zapfen einzugreifen und diesen anzutreiben.
+
+Abtriebsseite gesehen
+
+Das Untersetzungsverhältnis beträgt in
+jeder Stufe 21:1 und somit über drei Stufen
+hinweg
+
+Antriebsseite gesehen
+
+Der Ausgang zur letztlich zu drehenden Abtriebs-Drehscheibe muss über ein Gelenk
+erfolgen, weil die Kette beim Abheben ja
+ihre Entfernung zur Achse ändert.
+
+21 3 9.261
+( ) =
+Der Antrieb muss sich also über neuntausendmal drehen, um den Abtrieb einmal
+zu drehen.
+
+
+
+
+(rechts) und zur letzten Abtriebs-Drehscheibe
+
+
+Die Federnocke im BS7,5 greift locker (!)
+in die rechteckige Nut-Aussparung des
+BS15 mit rotem Zapfen ein. Bedenkt, dass
+der BS7,5 ja beim Abheben der Kette seine
+Position gegenüber dem BS15 ändert.
+Z15-Variante
+Es wird enger – aber es geht immer noch.
+Wir schlingen also 16 Kettenglieder – 15
+normale und ein Förderkettenglied – um
+Zahnräder Z15. Damit die zuverlässig fest
+auf der Achse sitzen (sie dürfen sich ja nicht
+drehen), werden sie mit einem auf der
+Achse festgeschraubten Z10 am Drehen
+gehindert. Von der anderen Seite (hier der
+Antriebsseite) genügen die Bauteile der
+Übertragsmechanik, um das Z15 vor dem
+Herausrutschen aus der Z10-Spannzange zu
+schützen (Abb. 28, 29).
+
+
+Antriebsseite gesehen
+
+
+Getriebe
+
+Auf dem Föderkettenglied sitzt diesmal ein
+BS5, der einen BS7,5 mit einem nicht ganz
+eingeschobenen Federnocken trägt, der –
+wiederum locker beweglich – in die Nuten
+eines BS15 eingreift. Dieser ist per Verbinder 15 gerade genug mit einem BS7,5
+verbunden, der auf der durchgehenden
+Achse sitzt (Abb. 30, 31, 32). Der BS15
+trägt zudem einen S-Verbindungsstopfen 6
+(32316), der wunderbar passend die Kette
+um das nächste Z15 abhebt.
+
+hebt die Kette ab
+
+Die Anbindung an die erste Antriebs-Drehscheibe geschieht wie in Abb. 32 gezeigt:
+Der BS7,5 mit S-Verbindungsstopfen, der
+die Kette des ersten Z15 abheben soll, ist
+über zwei Bauplatten 15 · 30 2Z (38241)
+mit einem weiteren (senkrecht zur Achse
+stehenden) BS7,5 verbunden, der über
+einen in der Drehscheibe sitzenden Federnocken angetrieben wird.
+Abtriebsseite gesehen
+
+
+
+
+
+
+Auch wenn es in Abb. 32 vielleicht nicht so
+aussieht, berührt der Verbinder 15 die
+Zähne des Z10 nicht. Er wird problemlos an
+dem ja festsitzenden Z10 vorbei gedreht.
+
+Z10-Variante
+
+Den „Ausgang“ zur letztlich anzutreibenden Drehscheibe zeigt Abb. 33. Der letzte
+BS15 wird wie die vorherigen per Verbinder 15 von einem BS7,5 gehalten. Sein
+Zapfen steckt aber in einem weiteren BS7,5,
+der über einen Federnocken die Drehscheibe antreibt.
+
+
+Das Untersetzungsverhältnis ist hier besonders interessant. Es beträgt pro Getriebestufe 16:1 (eine Zweierpotenz – 2·2·2·2!)
+und somit über die drei Getriebestufen gesehen
+16 3 4.096 212
+( ) =
+=
+Die Abtriebs-Drehscheibe dreht sich also
+genau 212-mal so langsam wie die des
+Antriebs.
+Antriebsseite gesehen
+
+
+
+Getriebe
+
+
+Der Übertrag vom Rastkettenglied einer
+Kette aufs Anheben der Kette der nächsten
+Getriebestufe geschieht über die Baugruppe
+in Abb. 37.
+
+
+Abtriebsseite gesehen
+
+Beim Z10 wird es schon richtig eng. Diese
+Variante ist mit einem Rast-Z10 auf Rastachsen realisiert. Die Fixierung der Achse
+(sie darf sich ja nicht drehen) geht z. B. über
+einen Rastadapter 20 (36227) und einen
+Verbinder 15, der in die Nut eines BS15
+eingreift:
+
+Der Winkelstein 10 · 15 · 15 (38423, rechts
+im Bild) sitzt im Förderkettenglied. Das
+Gelenk sorgt für den Ausgleich beim
+Anheben dieser Kette. Über BS7,5 und
+Federnocken wird ein Baustein 15 mit
+rundem roten Zapfen gedreht. Wenn der mit
+seiner (in Abb. 37 unten liegenden) Nut in
+der Achse gelagert wird, hebt sein runder
+Zapfen die Kette des nächsten Rast-Z10
+gerade passend an.
+Vom ersten Antriebs-Z40 aus wird der erste
+BS15 mit rundem Zapfen wie in Abb. 38
+
+
+
+
+gezeigt mit einem darauf per Verbinder 15
+angebrachten BS7,5 angetrieben. Der wiederum umfasst mit seiner Nut einen der
+Nabenmutterflügel und wird somit gedreht.
+
+11 3 1.331
+( ) =
+Immerhin muss sich das Antriebsrad weit
+über tausendmal drehen, bevor das Abtriebsrad sich einmal dreht.
+
+
+
+Zum Untersetzungsverhältnis
+Beim Z10-Getriebe lässt sich nun besonders
+einfach ausprobieren, dass man für einen
+Durchgang einer Getriebestufe so viele
+Umdrehungen benötigt, wie die Kette
+Glieder hat, und nicht nur so viele, wie das
+Zahnrad Zähne besitzt. Probierte es aus!
+
+Ein Video über das gesamte Modell findet
+sich in [6].
+
+Quellen
+[1]
+
+Musser, C. Walton: Strain Wave
+Gearing. Patentschrift zum
+Harmonic Drive, 1955/1959, auf
+patentimages.storage.googleapis.com
+
+[2]
+
+Wikipedia: Harmonic Drive.
+
+[3]
+
+Falk, Stefan: Harmonic Drive. ft
+Community Bilderpool, 2008.
+
+[4]
+
+Steinhaus, Harald: Harmonic Drive.
+ft Community Bilderpool von der
+fischertechnik-Convention 2010.
+
+[5]
+
+Steinhaus, Harald: HypozykloidGetriebe. ft Community Bilderpool,
+2014.
+
+[6]
+
+Falk, Stefan: Harmonic Drives von
+Z10 bis Z40. Auf YouTube, 2020.
+
+Getriebestufe
+
+Am Ende wird fast derselbe Aufbau verwendet. Es genügt aber ein BS5, der in der
+letzten Abtriebs-Drehscheibe steckt. Das
+Untersetzungsverhältnis lautet also in jeder
+Getriebestufe 11:1 und deshalb insgesamt
+
+
+

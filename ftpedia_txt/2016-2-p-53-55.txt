@@ -1,0 +1,133 @@
+
+Computing
+
+Computing
+
+TXT Controller – Tipps & Tricks (2):
+Screenshots
+Raphael Jacob
+So genannte „Screenshots“ (Bilder vom Bildschirminhalt) helfen, Fehler zu dokumentieren
+oder Vorgehensweisen zu veranschaulichen – z. B. im fischertechnik community forum. In
+diesem Beitrag erkläre ich, wie ihr Screenshots vom TXT erstellt und anschließend in ein
+‚handelsübliches‘ Format konvertiert.
+
+Screenshot erstellen
+Vorbedingung
+Um Screenshots zu erstellen braucht ihr
+eine SSH- und SFTP-Verbindung zum
+TXT. Wie man diese einrichtet, kann man
+in [1] nachlesen.
+
+TXT auswählt. Jetzt navigiert man rechts
+zum Ordner /opt/knobloch und lädt die
+Datei mit einem Doppelkick herunter.
+
+Bildkonvertierung
+Die Bildkonvertierung kann sowohl unter
+Linux als auch unter Windows erfolgen.
+
+Die Arbeit am TXT
+
+Konvertierung unter Linux
+
+Am TXT geht es recht schnell. Man sollte
+sich bereits als „ROBOPro“ mit dem
+Passwort „ROBOPro“ eingeloggt haben
+(„root“ ist nicht erforderlich, funktioniert
+aber ebenfalls). Jetzt muss nur ein
+Kommando ausgeführt werden:
+
+Um diese raw-Datei in ein nutzbares Format
+zu bringen, benötigt man die Software
+avconv (enthalten in libav-tools). Zum
+Installieren gebe ich im Ubuntu-Terminal
+folgendes Kommando ein:
+
+cp /dev/fb0 /
+opt/knobloch/screenshot.raw
+
+Jetzt kopiere ich die raw-Datei mittels USBStick auf den Ubuntu-Computer und verschiebe sie in einen Ordner nach Wahl. Um
+mit dem Terminal dorthin zu navigieren,
+gibt man folgendes Kommando ein (wobei
+„…“ durch Ordnernamen zu ersetzen ist):
+
+Damit ist die Arbeit am TXT bereits abgeschlossen und man kann zum nächsten
+Schritt übergehen.
+Dateiübertragung
+Jetzt muss die Datei screenshot.raw zum
+Computer übertragen werden. Dazu verwende ich die Software Filezilla [1]. Auch
+hier ist es wiederum egal, mit welchem der
+beiden Accounts man sich einloggt. Links
+navigiert man zu dem Ordner, in dem man
+später die raw-Datei abspeichern möchte.
+Dann verbindet man sich mit dem TXT,
+indem man auf den kleinen Pfeil am Icon
+des Servermanagers drückt und dann den
+
+sudo apt-get install libav-tools
+
+cd /…/…/…/
+
+Um die Datei nun zu konvertieren, gibt man
+folgendes Kommando ein:
+avconv -vcodec rawvideo -f rawvideo
+-pix_fmt rgb565 -s 240x320 -i
+[Dateiname der Ursprungsdatei] -f
+image2 -vcodec png [Dateiname der
+Ausgabedatei(PNG)]
+
+In unserem Fall:
+
+
+
+
+avconv -vcodec rawvideo -f rawvideo
+-pix_fmt rgb565 -s 240x320 -i
+screenshot.raw -f image2 -vcodec
+png screenshot.png
+
+Jetzt hat man eine png-Datei, die man nun
+beispielsweise mit einem USB-Stick auf
+den Windows-PC kopieren kann.
+Konvertierung unter Windows
+Unter Windows kann man sich des bekannten Programms IrfanView (Download:
+http://www.irfanview.com/; nicht die 64Bit-Version) bedienen. Die Konvertierung
+ist denkbar einfach. In IrfanView muss man
+oben links auf
+File > Open As > Raw File
+drücken und dann die raw-Datei öffnen. Im
+nächsten Dialog müssen einige Einstellungen getroffen werden (siehe Abb. 3).
+Nach dem Festlegen der Eigenschaften und
+einem Klick auf „OK“ kann man den
+Screenshot bereits sehen. Um das Bild jetzt
+auch als PNG nutzen zu können muss man
+unter
+File > Save As
+
+
+Quellen
+[1]
+
+Raphael Jacob: TXT Controller –
+Tipps und Tricks (1): Das RootPasswort. ft:pedia 1/2016, S. 65-68.
+
+[2]
+
+MasterOfGizmo: TXT-Tricks #2:
+Screenshots. ft:c fischertechnik
+community forum, 31.05.2015.
+
+einen Speicherort angeben und folgende
+Einstellungen rechts wählen (Abb. 1):
+
+1.Ordnerinhalt vor dem Konvertieren,
+2. Kommando zum Konvertieren (Ausgabe weggeschnitten),
+3. Ordnerinhalt nach dem Konvertieren
+
+
+
+Computing
+
+
+
+

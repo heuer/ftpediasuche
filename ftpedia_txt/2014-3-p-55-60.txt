@@ -1,0 +1,311 @@
+
+Elektronik
+
+Elektronik
+
+LEDs in Leuchtsteinen
+Gerhard Birkenstock
+Wenn man heute eine neue Lampe kauft, ist mit hoher Wahrscheinlichkeit LED-Technik eingebaut. Dank des guten Wirkungsgrades und ihrer langen Lebensdauer stoßen LEDs in alle
+Bereiche des täglichen Lebens vor. Dieser Beitrag zeigt, wie man auf elegante Weise von der
+ft-Glühlampe zur ft-LED in den Leuchtsteinen umstellen kann.
+
+Ärger mit den ft-Glühlampen
+Kennst du das? Man hat ein ft-Modell
+gebaut. Ein selbst steuerndes Fahrzeug mit
+einem Lichtsensor in Richtung Fahrbahn,
+welches einer Bodenmarkierung folgt. Oder
+eine Fertigungsstraße mit Lichtschranken
+und Farbsortierungen. Und dann... auf
+einmal fährt das Fahrzeug einfach weg, rast
+unter die Nähmaschine und versucht, mit
+durchdrehenden Antriebsrädern die Hauswand zu versetzen. Und bei der Fertigungsstraße... fliegen die zu bearbeitenden Teile
+völlig unkontrolliert vom Transportband.
+Alles fällt in einen Topf. Von Bearbeiten
+und Sortieren ist keine Rede mehr.
+Nach wenigen Sekunden der Fehlersuche
+steht fest: es ist mal wieder eine ft-Glühlampe ausgefallen. Der Glaskörper ist einfach schwarz. Durchgebrannt.
+Bei mir ging der Frust so weit, dass ich
+schon keine Modelle mit Lampe mehr
+gebaut habe. Ich wollte einfach nicht schon
+wieder eine der ft-Glühlampen verwenden.
+Es musste ein Lösung her.
+
+Lösungsfindung und Idee
+Es sollte etwas Leuchtendes sein, was nicht
+stetig durchbrennt, sondern eine höhere
+Lebensdauer hat. Also eine LED!
+Auch im Jahre 2007, in dem ich diese
+Gedanken alle hatte, hatten die LEDs schon
+eine gute Lichtausbeute. Es war der Anfang
+
+des heute schon allgegenwärtigen Siegeszuges der LED-Technologie. Somit war der
+Gedanke schnell gefasst. Einziges Problem:
+LEDs wollen Gleichstrom. Wenn man sie
+verpolt, sind sie sehr schnell genauso defekt
+wie die Version mit Glühfaden. Hier musste
+Abhilfe geschaffen werden. Der LEDErsatz musste gleiche oder bessere Eigenschaften wie die Lampen haben.
+Es musste eine Schaltung her, welche den
+Strom an der LED immer in der gleichen
+Richtung anbietet, egal, wie ich außen die
+Kontakte anschließe: Die Graetz-Brücke
+[1]. Zudem wird ein sogenannter Vorwiderstand zur Stromeinstellung zwingend
+benötigt (ft:pedia 2/2011 [2]).
+Nach diesen Überlegungen stand fest:
+· eine LED,
+· ein Widerstand und
+· vier Dioden
+müssen verwendet werden. Um das nicht
+fliegend verdrahten zu müssen, wurde auch
+eine Platine notwendig. Um Bauraum zu
+sparen, sollte alles in SMD-Technik
+(Surface Mounted Device, zu Deutsch:
+Oberflächenmontage
+[3])
+ausgeführt
+werden.
+
+LED mit Vorwiderstand:
+Berechnung
+Die zu verwendeten Bauteile müssen nun
+berechnet werden.
+
+
+
+Eine LED, welche gelblich-weißes Licht
+abgibt, benötigt eine Spannung von ca.
+1,8 V. Jede der Dioden für den Gleichrichter
+hat eine Schwellspannung von ca. 0,7 V.
+Wie in den Bildern zu erkennen, sind immer
+zwei Dioden in Durchlassrichtung geschaltet.
+Weiterhin muss man noch etwas über die
+viel verwendeten ft-Transformatoren wissen. Es wird immer angegeben, dass mit 9 V
+gearbeitet wird. Sobald ein Motor als Last
+angeschlossen wird, ist dies auch richtig.
+Wird jedoch nur wenig Strom von einem
+Transformator abgenommen, beträgt die
+Spannung gut 12 V. Daher muss bei der
+Berechnung der Komponenten mit der
+maximalen Spannung gerechnet werden.
+Die Spannung am Vorwiderstand ergibt
+sich nun aus den bekannten Informationen:
+=
+
+−
+
+Wir verwenden keine bedrahteten, sondern
+SMD-Widerstände.
+Erstere vertragen
+typischerweise 0,25 W. Ein Blick in das
+Datenblatt zeigt aber, dass die SMDWiderstände in der angestrebten Baugröße
+nur bis 0,125 W belastbar sind.
+Nach kurzer Überlegung war die Lösung
+da: Die Verlustleistung wird einfach auf
+zwei Widerstände aufgeteilt. Wir verwenden zweimal 220 Ω anstatt einmal 440 Ω,
+und jeder muss nur die halbe Leistung verkraften, da nur die halbe Spannung an ihm
+abfällt (während der Strom gleich bleibt):
+8,8 V
+∙ 0,02 A = 0,088 W
+Super, so geht es tadellos.
+=
+
+∙ =
+
+Diese Widerstände sind sogar aus der allgemeinen E6-Normreihe direkt erhältlich.
+
+−2
+
+= 12 V − 1,8 V − 2 ∙ 0,7 V = 8,8 V
+
+Es ist natürlich energietechnisch nicht
+gerade toll, mehr als das Vierfache der
+elektrischen Energie am Widerstand in
+Wärme umzusetzen, die in der LED für
+Licht sorgt. Wenn man sich jedoch überlegt,
+dass die Glühlampen bis zu 0,1 A brauchen,
+sind die LEDs mit ihren 0,02 A richtige
+Sparer.
+Mittels Ohm’schem Gesetz ergibt sich nun
+der Vorwiderstand aus:
+=
+
+=
+
+8,8 V
+= 440
+0,02 A
+
+Die elektrische Leistung an den Gleichrichterdioden und an der LED braucht nicht
+berücksichtigt zu werden. Der verwendete
+Diodentyp LL4148 kann mehr als 100 mA
+vertragen und die LED ist ja für die 20 mA
+vom Hersteller ausgelegt worden. Nur der
+von mir bestimmte Widerstand muss
+kontrolliert werden. An ihm fällt folgende
+Leistung ab:
+=
+
+∙ = 8,8 V ∙ 0,02 A = 0,176 W
+
+
+Diese Schaltung versorgt die LED unabhängig von der außen anliegenden Spannung immer in der korrekten Richtung mit
+Strom. Das zeigen die folgenden Abbildungen, in denen die je nach Stromrichtung
+ungenutzten Dioden des Gleichrichters der
+Übersichtlichkeit wegen weggelassen
+wurden:
+
+
+Elektronik
+
+Super! Hier habe ich das erste Mal gesehen,
+dass die Schaltung auf die benötigte Größe
+gebracht werden kann. Die Schaltung passte
+somit in die ft-Leuchtsteine unter die alten
+Kappen. Es konnte also weiter gehen.
+Die daraus entstandene Datei habe ich
+einem Platinen-Layouter per E-Mail übergeben. Dieser hat dann innerhalb von
+wenigen Tagen die Platinen hergestellt.
+Damit ich den Arbeitsfortschritt beobachten
+konnte, bekam ich die Bilder der einzelnen
+Arbeitsschritte zugesendet. Diese Bilder
+folgen nun hier:
+
+
+
+Eingabe in das PCB-Programm
+
+
+Die Grundlagen sind berechnet. Die Größe
+und Art der Bauteile stehen auch fest. Somit
+kann alles in ein Layout-Programm eingegeben werden. Wir verwenden die
+folgenden Bauteile:
+· D1 bis D4: LL4148
+· R1 und R2: 220 Ohm 1206
+· LED: KP-3216YC 1206 (gelb)
+Ich hatte alles eingegeben, per Transferfunktion im Programm auf die PCB-Seite
+(Printed Cirquit Board, zu Deutsch: Leiterplatte) übertragen und die Außenabmessungen der Platine von den ft-Leuchtkappen
+abgenommen.
+
+
+
+
+ft-Produktionsstraße
+Wenn man eine Platine bestellt, muss man
+heutzutage immer mindestens 1 dm² abnehmen. Die kleinen Platinen sind nicht
+wirklich groß. Somit wurden aus einer ganz
+viele...
+
+
+Lötstopplack brauchte ich bei der kleinen
+Platine nicht. Daher ist das Auftragen in
+
+Ich hielt nach zwei Wochen Lieferzeit gute
+60 Stück in meinen Händen. Das war etwas
+viel, aber es gibt ja eBay J. Alle, die mir zu
+viel waren, wurden dort angeboten – und sie
+wurden mir innerhalb weniger Wochen aus
+den Händen gerissen. Der schöne kleine
+Nebeneffekt war, dass ich bei jedem Verkauf einen kleinen Gewinn machte. Gerade
+so groß, dass am Ende der Materialwert von
+allen abgedeckt war. Die LEDs, welche ich
+mir zurückgelegt hatte, waren somit
+bezahlt. Ich hatte nur meine Arbeitszeit
+selbst zu tragen, und das tat ich mit Freude.
+
+Zinn auftragen
+
+Die Platinen sind nun gebrauchsfertig. Die
+Lötpads für die Bauteile sind gut zu
+erkennen. Die beiden Löcher für die
+Anschlussdrähte sind an der richtigen
+Position, sodass die Anschlussdrähte an
+genau derselben Stelle heraus kommen, wie
+die Glühlampen es fischertechnik vorgegeben haben. Die Außenumrandung ist gut
+am Rand des Lötstopplacks zu erkennen.
+Die Ecken halten den Platz für die vier
+Steckstifte der alten ft-Leuchtstein-Kappen
+frei.
+Was ich zu diesem Zeitpunkt noch nicht
+wusste: Für den nach der Biegung zurück
+kommenden Draht brauche ich noch zwei
+Bohrungen. Diese fügte ich nachträglich per
+Standbohrmaschine ein.
+
+
+und die LED-Lösung
+
+
+Elektronik
+
+
+Produktions-Plattform
+
+
+Hier sieht man sehr schön die nachträglich
+eingebrachten Löcher für die zurück
+kommenden Anschlussdrähte (Abb. 10).
+
+Um die vielen Lötungen einfacher zu
+gestalten, habe ich mir damals einen kleinen
+Drehtisch mit fischertechnik gebaut. Die
+Platine wurde aufgesteckt, dann die
+Anschlussdrähte. Die darunter befindlichen
+Löcher waren in der richtigen Länge vorbestimmt. Die Drähte wurden abgeschnitten
+und verlötet. Dann habe ich von innen nach
+außen bestückt und gelötet. Erst die LED,
+dann die Widerstände und zum Schluss die
+Gleichrichter-Dioden. Bei den Dioden ist
+natürlich immer die Polung wichtig.
+Es hat Spaß gemacht und gut funktioniert.
+
+Ausblick: Was geht noch...
+Im Text habe ich erwähnt, dass diese von
+mir gemachten LEDs nur für die alte
+Version der Leuchtkappen funktionieren.
+Zum damaligen Zeitpunkt besaß ich keine
+Leuchtkappen mit Verriegelung – das ist
+heute anders. Von den Kappen habe ich
+bereits die Maße abgenommen. Auch hier
+passt die Schaltung unter die Kappen. Den
+Beweis hat mein PCP-Programm schon
+geliefert...
+
+
+Mit den Platinen kann man natürlich auch
+etwas spielen. Beispielsweise kann man den
+Gleichrichter weglassen und setzt nur die
+Widerstände und eine zweifarbige LED ein.
+Nun leuchtet die LED in einer Polung in der
+ersten Farbe und in der anderen Polung in
+der zweiten. Im Wechselstrom-Betrieb wird
+daraus die Mischfarbe. Wenn man ROBO
+Pro verwendet, kann man durch Zeitversatz
+
+
+
+
+(Impulsbreitensteuerung, [4]) sogar die
+Farbe verschieben.
+Da LEDs sehr schnell reagieren (der Glühfaden der klassischen Lämpchen verhält
+sich viel träger) sind auch StroboskopAnwendungen denkbar. Hier ist nur die
+Verarbeitungsgeschwindigkeit von ROBO
+Pro die Bremse.
+
+
+Quellen
+[1]
+
+Wikipedia: Gleichrichter.
+
+[2]
+
+Thomas Habig: LEDs mit Vorwiderstand. ft:pedia 2/2011, S. 14-18.
+
+[3]
+
+Wikipedia: Surface-mounted device.
+
+[4]
+
+Wikipedia: Pulsweitenmodulation.
+
+

@@ -1,0 +1,301 @@
+
+
+Pneumatik
+
+Druckluftsteuerungen (Teil 4)
+Stefan Falk
+In dieser Folge der Druckluftsteuerungen geht es um mit Druckluft betriebene Motoren. Wir
+stellen bereits gebaute Motoren kurz vor und bauen dann selbst einen kompakten
+Druckluftmotor, der ausschließlich mit aktuellen fischertechnik-Teilen auskommt.
+
+Die Mutter aller Motoren
+Die ersten Motoren, die ihre Kraft aus
+Druckluft schöpften, waren zweifellos die
+Dampfmaschinen. Schon Anfang des 18.
+Jahrhunderts gab es die ersten praktisch
+verwendbaren Exemplare davon [1, 2, 6].
+
+Auch im fischertechnik-System durften
+druckluftbetriebene Motoren natürlich nicht
+fehlen, als 1981 der erste Pneumatik-Kasten
+herauskam. Eines der durchaus sehr verschiedenen Modelle aus dessen Bauanleitung zeigt Abb. 1 (die Bauanleitung ist
+unter [3] verfügbar).
+Es handelt sich um einen einzylindrigen,
+aber doppeltwirkenden Motor. Das bedeutet, dass vom Pneumatikzylinder beide
+Anschlüsse verwendet werden. Er stößt also
+das Exzenter sowohl aktiv nach unten, zieht
+es aber auch aktiv wieder hoch. Kenner
+entdecken sofort das Festo-Pneumatikventil
+[4], von dem es in diesem Modell zwei gibt
+(eines ist auf der Rückseite angebracht).
+Wie wir sehen, konnte man so einen
+funktionierenden Druckluftmotor wirklich
+kompakt und mit nur wenigen Bauteilen
+herstellen.
+
+Baukasten „Pneumatik“ von 1981 [3]
+
+
+
+
+Pneumatik
+
+Einige weitere interessante Konstruktionen
+zeigt auch die Kategorie Membranpumpen
+und Luftmotoren auf der Webseite der
+ft:Community [5]. Zwei Modelle möchte
+ich hervorheben, weil sie gänzlich ohne
+fischertechnik-Ventile auskommen. Das
+erste ist von Alfred Pettera aus dem Jahr
+2003, verwendet einen Selbstbau-Zylinder
+und steuert die Druckluft über das Abquetschen von Schläuchen (Abb. 2).
+
+Der zweite (Abb. 3) verwendet ebenfalls
+das Zuklemmen von Schläuchen als Ventilersatz und wurde von Stefan Reinmüller in
+2015 gebaut. Zu diesem Motor ist dort
+übrigens auch ein toll gemachtes Video
+verlinkt.
+
+Das Modell
+Da wir in der ft:pedia schon so gute Erfahrungen mit dem Abknicken von Schläuchen
+gemacht haben, stellen wir heute einen
+Druckluftmotor vor, der sich dieser Technik
+bedient. Eine Einführung in diese Ventilart
+zeigen die vorangegangenen Beiträge dieser
+Artikelserie in den ft:pedia-Ausgaben
+1/2014 bis 3/2014.
+Unser Motor hat folgende Eigenschaften:
+∂ Er besitzt einen Zylinder.
+∂ Der ist doppeltwirkend betrieben, drückt
+und zieht also aktiv.
+
+Stefan Reinmüller
+
+∂ Er verwendet ein selbstgebautes 4/2Wegeventil
+mit
+SchlauchabknickTechnik.
+
+
+
+
+Das Knicken hat den Charme, dass das
+Ventil recht leichtgängig bleibt. Im Gegensatz zum Abquetschen eines Schlauches
+benötigt das Abknicken nur geringe Kraft.
+Über den zum Umschalten benötigten Weg
+hinweg gesehen ergibt das eine ordentliche
+Leistung, die durch die Leichtgängigkeit
+des Ventils gespart wird und also dem
+Abtriebsausgang des Motors zur Verfügung
+steht.
+
+Die Wirkungsweise der
+Steuerung
+
+Das Modell besteht aus folgenden Komponenten:
+
+Da uns ein 4/2-Wege-Ventil direkt nicht zur
+Verfügung steht, wird unser Selbstbauventil
+aus zwei identisch gebauten 3/2-Wegeventilen gebildet.
+
+∂ Ein aus Standardbauteilen hergestellter
+Rahmen trägt sämtliche Mechanik. Das
+gesamte Modell kommt ausschließlich
+mit unveränderten, aktuell hergestellten
+Bauteilen aus.
+
+Das Schaltbild in Abb. 5 macht deutlich,
+wie die Druckluftsteuerung realisiert ist.
+Die beiden Kreise rechts stehen für Kurbelwelle und Steuer-Exzenter. Durch die
+Drehung der Kurbelwelle wird der Zylinder
+einfach immer zwischen Aus- und Einfahren umgesteuert.
+
+∂ Ein waagerecht liegender Pneumatikzylinder treibt eine Kurbelwelle an.
+∂ Auf derselben Welle sitzt der Exzenter
+für die periodische Umschaltung des 4/2Wegeventils, welches den Zylinder
+ansteuert.
+∂ Schließlich sorgt ein kleines Schwungrad für den gleichmäßigen Lauf der
+Maschine.
+
+
+
+
+Das bewegliche Element des Ventils ist ein
+Baustein 30 auf einem Gelenkstein. An dem
+ist für jedes der beiden 3/2-Wegeventile ein
+Baustein 7,5 angebracht, der ein Pneumatik-T-Stück trägt. Dessen mittlerer
+Anschluss ist per Schlauch mit einem der
+Zylinderanschlüsse verbunden.
+
+Die beiden anderen Anschlüsse des beweglichen T-Stücks gehen mit je einem 30 mm
+langen Schlauchstück wie in den Abbildungen gezeigt zu je einem unbeweglich
+angebrachten T-Stück. Eines davon bleibt
+ansonsten einfach offen (das ist der Abluftausgang), das andere wird mit Druckluft
+versorgt und der dritte Anschluss seines TStücks mit einem P-Stopfen verschlossen.
+Somit haben wir eine Anordnung, die den
+Zylinder wahlweise mit Druckluft oder mit
+Abluft verbinden kann – das jeweils andere
+Schlauchstückchen ist durch Abknicken
+verschlossen.
+
+Pneumatik
+
+können die Ventile genau justiert werden –
+dazu später mehr.
+
+
+Tatsächlich haben wir damit also folgende,
+zu Abb. 5 äquivalente Schaltung aufgebaut:
+
+
+Genau dieselbe Anordnung gibt es auch auf
+der anderen Ventilseite, nur – das ist der
+springende Punkt – sind hier die Zu- und
+Abluftanschlüsse vertauscht. Man beachte,
+dass auf den Aufnahmen beider Ventile die
+Zuluft von rechts kommt. Von der
+Gesamtansicht in Abb. 4 aus gesehen führt
+also beim linken Ventil der vordere und
+beim rechten Ventil der hintere Anschluss
+Druckluft. Die jeweils anderen Anschlüsse
+sind die offenen T-Stücke für den Abluftausgang.
+Die „Türme“ von BS7,5 sind mit einem
+Verbinder 45 stabilisiert, die oberen BS7,5Paare mit Verbindern 15 verbunden. So
+
+
+Hinweise zum Bau des Modells
+Rahmen
+Wie Abb. 10 zeigt, hat der Zylinder in der
+Breite durch die BS5 hinreichend Platz,
+damit er nicht an den benachbarten
+
+
+
+
+Bausteinen reibt. Nach links geht es weiter
+zur Befestigung des Ventils. Zwischen den
+beiden BS15 dort ist ein Verbinder 15
+eingeschoben. Der erleichtert das Justieren
+der Ventilgruppe in der Nut des Rahmens
+unterhalb des Zylinders, weil er für einen
+konstanten Abstand der BS15 sorgt.
+Die vertikale Ausrichtung der Nuten der
+beiden BS15 ist auch nützlich, um die
+gesamte Ventilgruppe anzusetzen oder auch
+wieder abzutrennen.
+In Abb. 13 sieht man, wie der Rahmen dort,
+wo die Bausteine beim Zylinder nach links
+und rechts abgehen, mit Winkelsteinen
+10x15x15 (und Federnocken darin) gegen
+Verdrehen ihrer Zapfen verstärkt wurden.
+Der Kompressor kann einfach mit einem
+einzelnen BS5 am Rahmen befestigt
+werden.
+Kurbelwelle
+Der Zylinder greift an einer Achse 30 an
+und ist mittels zweier Klemmringe gegen
+Verrutschen gesichert. Die Kurbelwelle
+selbst besteht aus Rastaufnahmeachsen
+
+22,5. Sie tragen je einen BS7,5, und darauf
+Klemmhülsen 7,5. Diese Konstruktion
+erlaubt das Justieren der Auslenkung so,
+dass der komplette Hub des Zylinders
+gerade vollständig ausgenutzt wird. Beide
+Seiten der Kurbelwelle müssen natürlich
+gleich justiert sein, damit die nach beiden
+Seiten abgehenden Achsen sauber fluchten.
+
+
+Exzenter für die Ventilsteuerung
+In Richtung Ventil geht es auf der Achse
+weiter mit einer Rastkupplung und einer
+weiteren Rastaufnahmeachse. Auf der sitzt
+eine Kombination von Baustein 5 15x30,
+
+BS7,5 und wiederum einer Klemmhülse
+7,5. Eine X-Strebe 42,4 sitzt auf einem
+Seilklemmstift, der ganz von alleine fest in
+der Klemmhülse steckt. Auf der anderen
+Seite ist die Strebe mittels Klemmring
+gegen Herausrutschen geschützt.
+
+Pneumatik
+
+∂ Der Exzenter wird durch Verschieben
+des Baustein 30 5x15 auf der Rastaufnahmeachse so justiert, dass insgesamt etwa 7,5 mm (eine halbe Bausteinlänge) Auslenkung des Ventils erreicht
+werden.
+∂ Anschließend werden die vier Anordnungen von BS7,5 und T-Stücken so
+justiert, dass beim Drehen der Kurbelwelle von Hand die beweglichen Teile
+des Ventils gerade nicht anstoßen.
+Würden sie das, würde der Motor
+dadurch an Kraft verlieren. Ist der
+Abstand zu groß, werden die Schlauchstückchen nicht scharf genug abgeknickt.
+
+
+Wenn alles justiert ist, kann’s losgehen! Der
+Motor dreht sehr ordentlich und läuft in
+vielen Fällen sogar selbst an. Für alle Fälle
+steht ein Video bereit. Das ersetzt aber
+selbstverständlich keinesfalls den Selbstbau
+des Motors und das Experimentieren damit.
+
+Schwungrad
+
+Quellen
+
+Ein Ring von Bausteinen 30 und Winkelsteinen 60° dient als Schwungmasse. In drei
+der Bausteine 30 wird je ein Federnocken so
+eingeschoben, dass der ganze Ring einfach
+mit drei Bausteinen 5 15x30, die zuletzt
+eingeschoben werden, an der Drehscheibe
+befestigt werden kann.
+
+[1]
+
+Fox, Dirk: Die Dampfmaschine.
+ft:pedia 4/2012, S. 38-45.
+
+[2]
+
+Wikipedia: Dampfmaschine.
+
+[3]
+
+fischertechnik: Pneumatik. Baukasten und Anleitung. fischerwerke,
+1981.
+
+[4]
+
+Falk, Stefan: Perlentauchen (Teil 5).
+ft:pedia 4/2013, S.
+
+[5]
+
+ft:Community: Membranpumpen und
+Luftmotoren.
+
+[6]
+
+Fox, Dirk und Püttmann, Thomas:
+Bauen, erleben, begreifen: Technikgeschichte mit fischertechnik. 16
+Meilensteine zum Nachbauen.
+dpunkt-Verlag, 2015.
+
+Justierung des Ventils
+Damit das Modell gut läuft, empfehle ich,
+die Kurbelwelle in dieselbe Richtung zu
+justieren wie in Abb. 11 dargestellt. Kurbelwelle und Exzenter müssen so angeordnet
+werden wie in Abb. 4 gezeigt. Dann kann
+die Justage des Ventils beginnen:
+∂ Zunächst wird die gesamte Ventilanordnung durch Verschieben der BS15
+(siehe Abb. 10) so eingestellt, dass der
+gelenkig gelagerte BS30 des Ventils
+senkrecht steht, wenn der Exzenter sich
+in Mittellage befindet.
+
+
+
+
+
+
+

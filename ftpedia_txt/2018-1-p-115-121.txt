@@ -1,0 +1,337 @@
+
+Computing
+
+Computing
+
+startIDE (4): Focus Stacking
+Rolf Meingast
+Unter dem Begriff Focus Stacking versteht man Verfahren zur Erweiterung der Schärfentiefe
+beim Fotografieren durch Kombination mehrerer Bilder, die aus unterschiedlichen Gegenstandsentfernungen entstanden sind. Dieser Beitrag beschäftigt sich mit dem Aufbau eines
+Makroschlittens und dem Programm zur Steuerung des ROBO Interfaces, das auf dem TXT
+oder dem TX-Pi mit der App startIDE [1] läuft.
+
+Aufbau des Makroschlittens
+Die Anforderungen an den Makroschlitten
+waren u. a.:
+∂ stabile Geradführung
+∂ kleinste Schrittweiten im µm-Bereich
+Nach ersten Versuchen nur mit Bauteilen
+von fischertechnik habe ich zur exakten
+
+Führung des Objekts bzw. der Kamera
+zunächst ein Mikroskopstativ [2] und dann
+den auf den ersten beiden Bildern zu
+sehenden Schlitten mit MikrometerSchraube verwendet (Abb. 1). Als Antrieb
+dient ein kleiner aus einem DiskettenLaufwerk [4] ausgebauter Schrittmotor, der
+mit ausreichendem Drehmoment am ROBO
+
+
+
+
+
+Interface (M1 und M2) betrieben werden
+kann. 32 Halbschritte des Schrittmotors
+ergeben mit der gezeigten Zahnradkombination einen Vorschub von 10 µm. Der
+Schlitten kann von Hand 50 mm weit
+bewegt werden und lässt sich alle 0,5 mm
+an die Mikrometerschraube ankoppeln.
+Die Auslösung der Kamera erfolgt über ein
+fischertechnik-Relais, das an M3 angeschlossen ist.
+Das ROBO Interface ist über USB-Kabel
+entweder mit einem TXT oder mit dem TXPi [3] verbunden. Letzterer kann komfortabel über eine Funkmaus bedient werden.
+
+
+Steuerprogramm
+Die Anforderungen an das Steuerprogramm
+lauten: Der Schlitten soll mit definierter
+Schrittweite zwischen den Bildern vorwärts
+oder rückwärts von Aufnahme zu Aufnahme bewegt werden. Diese Parameter,
+die Anzahl der Bilder und die Dauer der
+Pausen gegen Verwacklung werden vom
+Benutzer eingegeben oder bei der Initialisierung der Variablen vorgegeben.
+Zur genauen Justierung der Startposition
+soll der Schlitten zurück oder vorwärts
+gesteuert werden können. Dies kann auch
+über die fischertechnik-IR-Steuerung erfolgen. Darüber gelangt man in eine Testroutine, mit der die für einen ruhigen Lauf
+
+des Schrittmotors erforderliche Pausenlänge zwischen den Halbschritten ermittelt
+werden kann.
+Programmiert wurde mit den Befehlen der
+startIDE.
+Initialisierung der Variablen:
+# Schrittmotor
+Init Position 0
+Init Richtung 1
+Init Vorzeichen 1
+Init Unterbrechung 4
+Init Testschritte 512
+Init schritte 32
+Init kl-schritte 8
+Init Bilder 10
+Init summe 0
+Init noch Bilder
+Init Pause 3000
+Init menu 0
+Init ir 0
+# Hauptmenue
+
+Tag mainloop
+Init ir 0
+FromButtons menu Start Schritt_vor
+Schritt_zurueck Foto Parameter
+retour irSteuerung STOP
+IfVar menu == 1 start
+IfVar menu == 2 Schrittvor
+
+Computing
+
+IfVar menu == 3 Schrittzur
+IfVar menu == 4 Foto
+IfVar menu == 5 parameter
+IfVar menu == 6 retour
+IfVar menu == 7 AIR
+Stop
+Jump mainloop
+# IR Fernbedienung
+Tag AIR
+Clear
+Print Foto: M3r
+Print Test: M3l
+Print Abbruch: 1
+Print oder Taster I3
+Call Motor-aus 1
+Tag AIR1
+Init ir 0
+FromRIIR ir
+IfVar ir == 11 mainloop
+IfVar ir == 8 Schrittvor
+IfVar ir == 7 Schrittzur
+IfVar ir == 1 Foto
+IfVar ir == 2 test
+IfIn RIF 3 S == 1 mainloop
+Jump AIR1
+
+# alle Schritte zurueck
+Tag retour
+IfVar summe == 0 mainloop
+Clear
+Calc Vorzeichen 0 - Richtung
+
+
+
+Call SM summe
+Calc summe 0 + 0
+Call Motor-aus 1
+Jump mainloop
+# Schritt vorwärts
+Tag Schrittvor
+Calc Vorzeichen 1 + 0
+Call SM kl-schritte
+Call Motor-aus 1
+IfVar ir != 0 AIR
+Jump mainloop
+
+Jump mainloop
+# Parameter
+Tag parameter
+# Bilderzahl:
+FromKeypad Bilder 1 32768
+# Schrittzahl:
+FromKeypad schritte 0 32768
+
+# Schritt rückwärts
+
+# Pausenlaenge:
+
+Tag Schrittzur
+Calc Vorzeichen 0 - 1
+Call SM kl-schritte 1
+Call Motor-aus
+IfVar ir != 0 AIR
+Jump mainloop
+Calc schritte 8 + 0
+Call SM schritte
+Jump mainloop
+
+FromKeypad Pause 0 32768
+Jump mainloop
+# stacking-Start
+Tag start
+IfVar schritte == 0 mainloop
+
+# Aufnahme
+
+# Richtungswahl
+
+Tag Foto
+Motor RIF 3 l 7
+Delay 500
+Motor RIF 3 s 0
+IfVar ir != 0 AIR
+Delay 1000
+
+Tag neu1
+Calc Richtung Vorzeichen + 0
+FromDial Richtung -1 1 nur -1 oder
++1
+IfVar Richtung == 0 neu1
+
+
+Computing
+
+# Zahl der restlichen Bilder
+
+Jump mainloop
+
+Calc noch Bilder + 0
+Tag Wdh
+Call Aufnahme 1
+Calc noch noch - 1
+Clear
+
+# Schrittfolge
+
+# Anzeige der restlichen Bilder
+
+# Berechnung des nächsten Schritts
+
+QueryVar noch
+Calc summe summe + schritte
+Calc Vorzeichen Richtung + 0
+Call SM schritte
+TimerClear
+Print Abbruch: I3
+
+Calc Position Position mod 8
+IfVar Position == 0 S0
+IfVar Position == 1 S1
+IfVar Position == 2 S2
+IfVar Position == 3 S3
+IfVar Position == 4 S4
+IfVar Position == 5 S5
+IfVar Position == 6 S6
+IfVar Position == 7 S7
+Tag S0
+Motor RIF 1 r 7
+Motor RIF 2 l 7
+Jump SM_END
+Tag S1
+Motor RIF 1 s 0
+Motor RIF 2 l 7
+Jump SM_END
+Tag S2
+Motor RIF 1 l 7
+Motor RIF 2 l 7
+Jump SM_END
+Tag S3
+Motor RIF 2 s 0
+Motor RIF 1 l 7
+Jump SM_END
+Tag S4
+Motor RIF 2 r 7
+Motor RIF 1 l 7
+Jump SM_END
+Tag S5
+Motor RIF 1 s 0
+Motor RIF 2 r 7
+Jump SM_END
+Tag S6
+Motor RIF 1 r 7
+Motor RIF 2 r 7
+Jump SM_END
+Tag S7
+Motor RIF 1 r 7
+Motor RIF 2 s 0
+Jump SM_END
+Tag SM_END
+TimerClear
+Tag Z
+IfTimer < Unterbrechung Z
+MEnd
+
+# Pause
+Tag warten
+IfIn RIF 3 S == 1 mainloop
+IfTimer < Pause warten
+IfVar noch > 0 Wdh
+Call Aufnahme 1
+Jump mainloop
+
+# Testlauf
+Tag test
+FromDial Unterbrechung 0 20 msec
+FromDial Testschritte 1 4096 Set
+level
+Call SM Testschritte
+IfVar ir != 0 AIR1
+
+Module SM
+Calc Position Position +
+Vorzeichen
+
+
+
+
+# Strom aus
+Module Motor-aus
+Motor RIF 1 s 0
+Motor RIF 2 s 0
+MEnd
+
+Eine Achatdruse [5] (51 mm · 35 mm)
+wurde mit dieser Vorrichtung im Maßstab
+2:3 mit einer Schrittweite von 150 µm 164mal fotografiert. Die nachfolgenden Abbildungen zeigen das Ergebnis.
+
+# Einzelbild
+
+Referenzen
+
+Module Aufnahme
+
+[1]
+
+Peter Habermehl: CFW: startIDE
+v1.0, Modelle direkt auf dem TXT
+programmieren im ftc-Forum, 2018.
+
+Motor RIF 3 l 7
+Delay 500
+Motor RIF 3 s 0
+
+[2]
+
+Rolf Meingast: ROBO + TX-Pi mit
+startIDE im Einsatz im ftc-Forum,
+2018.
+
+# Belichtungszeit maximal 1 sec
+
+[3]
+
+Delay 1000
+MEnd
+
+Till Harbaum: tx-pi auf GitHub:
+https://github.com/harbaum/tx-pi
+
+[4]
+
+Wikipedia: Diskette.
+
+[5]
+
+Wikipedia: Achat
+
+# Kameraauslösung
+
+Listing 1
+
+
+
+
+Computing
+
+
+
+
+

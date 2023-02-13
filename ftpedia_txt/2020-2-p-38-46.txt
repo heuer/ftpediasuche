@@ -1,0 +1,372 @@
+
+
+Elektromechanik
+
+Synchronpendel und extreme
+Synchronmaschinen
+Rüdiger Riedel
+Ja gibt’s denn sowas? Aus einer Laune heraus habe ich probiert, ein Pendel mit einem
+Synchronantrieb auszurüsten. Tatsächlich, es funktioniert!
+Es schwingt und schwingt, obwohl das Pendel zumindest am Anfang ungleichmäßig
+weit ausschlägt. Es kann sich also nicht
+ständig synchron bewegen. Erst nach
+einiger Zeit sind die Ausschläge in beiden
+Richtungen konstant weit.
+
+Trafo führen; die Magnete müssen sich
+wieder gegenseitig abstoßen. Jetzt liegt an
+jedem E-Magneten eine Spannung von 8 V
+an, was sie dauerhaft vertragen.
+
+Wie (fast, siehe unten) alle unsere Synchronmaschinen muss auch das Pendel
+angeworfen werden; es startet nach Einschalten der Versorgungs-Wechselspannung nicht von allein. Nach ausreichendem
+Anfangsschwung sind die Ausschläge mal
+größer, mal kleiner bis sie ganz gleichmäßig
+werden.
+Der Aufbau ist einfach. Die Elektromagnete
+– ich verwende die stärkeren mit Nr. 32363
+(gibt es noch bzw. immer wieder bei
+fischerfriendsman.de) – werden auf zwei
+Bausteinen 5 15 · 30 (35049), zwei BS 5
+und zwei BS 15 aufgebaut. Die Verschaltung erfolgt gemäß Abb. 2 so, dass sie sich
+gegenseitig abstoßen. Zur Spannungsversorgung verwende ich ein altes fischertechnik-Netzgerät (30173) mit 6,8 V Wechselspannung. Für einen kurzzeitigen Betrieb
+kann man auch den 16-V-Wechselspannungsausgang eines Eisenbahntrafos verwenden (drei Minuten sind problemlos,
+habe ich probiert). Für den Dauerbetrieb mit
+16 V Wechselspannung schalten wir die
+beiden Magnete in Reihe, indem wir die
+oberen beiden Anschlüsse miteinander
+verbinden und die unteren beiden zum
+
+
+
+
+Elektromechanik
+
+Jetzt ein ausreichender Schubs und es
+pendelt.
+
+
+Hinweis: Elektromagnete müssen und
+dürfen im Dauerbetrieb heiß werden, sonst
+sind sie nicht aktiv [2].
+
+Sie werden so parallel geschaltet, dass sie
+sich gegenseitig anziehen. Die Spannungsversorgung erfolgt wie bei den fischertechnik-Elektromagneten.
+
+
+Als Alternative zu den fishertechnik-Elektromagneten eignen sich Topfmagnete sehr
+gut [5], die gibt es auch bei fischerfriendsman.de. Ein Dauerbeitrieb mit ihnen ist
+über Stunden hinweg stabil.
+
+
+Die beiden Arme des Pendels werden benötigt, um das Schwingen zur Seite zu mindern.
+
+
+
+
+Etwas Theorie
+Bei den Rotationsmaschinen ist die Drehzahl für die Synchronizität maßgebend [1].
+Beim Pendel oder den Linearmotoren ist es
+die Geschwindigkeit der Dauermagnete,
+des „Läufers“. Auf die Rotationsmaschinen
+bezogen wäre es die Umfangsgeschwindigkeit.
+Die Länge des Pendels beträgt etwa
+35 ∙ 1,5 cm + 4 cm = 56,5 cm
+Eine große Länge ist vorteilhaft, denn dadurch bewegen sich die Pendelmagnete mit
+fast gleichem Abstand über die Elektromagnete.
+
+Damit er synchron arbeitet, müssen wir
+seine Geschwindigkeit kennen. Vorgegeben
+ist die Netzfrequenz von 50 Hz.
+Alle zehn Millisekunden wechselt der Elektromagnet seine Polung Nord-Süd. In dieser
+Zeit muss der „Läufer“ um einen Stabmagneten weiter gegangen sein. Der Abstand
+zwischen den Stabmagneten beträgt
+7,5 mm, bis zum nächsten gleicher
+Ausrichtung sind es 15 mm. Das ist auch der
+Abstand der Pole zwischen den beiden
+Elektromagneten. Dieser Abstand wird als
+Polteilung bezeichnet.
+In 10 ms muss ein Stabmagnet den nächsten
+ablösen bzw. in 20 ms muss ein Stabmagnet
+gleicher Polung auftauchen. Somit beträgt
+die synchrone Geschwindigkeit
+15 mm
+m
+= 0,75
+20 ms
+s
+Diese Geschwindigkeit muss das Pendel
+haben, wenn es gerade über den E-Magneten schwingt.
+𝑣𝑠𝑦𝑛 =
+
+
+beiden Elektromagnete stehen still, sie sind
+der Kurz-Stator (im Gegensatz zum Transrapid, der einen Lang-Stator benutzte; die
+Wicklung war über den gesamten Fahrweg
+verteilt).
+Unser „Läufer“ wird von den fünf Stabmagneten gebildet, die am Pendel befestigt
+sind (siehe Abb. 3 vorne links).
+
+
+Das Pendel startet in Position 1 in der Höhe
+ℎ. Es bewegt sich entlang der Kreisbahn
+zum tiefsten Punkt 2 über den Elektromagneten. Dann schwingt es weiter nach links
+und zurück usw.
+Die potenzielle Energie am Punkt 1 beträgt:
+𝐸𝑝𝑜𝑡 = 𝑚 ∙ 𝑔 ∙ ℎ
+
+Millisekunden
+
+
+
+Elektromechanik
+
+Die kinetische Energie am Punkt 2 beträgt:
+
+ℎ = 0,029 m = 2,9 cm
+
+𝐸𝑘𝑖𝑛 = 𝑚 ∙ 𝑣 2
+Wenn wir alle Verluste vernachlässigen,
+wird die potenzielle Energie an Punkt 1
+vollständig in kinetische Energie an Punkt 2
+umgesetzt, also gilt:
+
+Wir starten das Pendel also mit einer
+Anfangshöhe von etwas mehr als 2,9 cm,
+die Pendelauslenkung ist dann größer als
+18,4° und die seitliche Auslenkung größer
+als 17,8 cm.
+
+𝐸𝑝𝑜𝑡 = 𝐸𝑘𝑖𝑛
+𝑚 ∙ 𝑔 ∙ ℎ = 𝑚 ∙ 𝑣2
+Die Masse 𝑚 kürzt sich heraus und somit
+gilt:
+
+Synchronmotoren extrem
+
+𝑔 ∙ ℎ = 𝑣2
+
+Soll heißen: extrem klein oder kompakt
+oder ungewöhnlich, nur mit fischertechnikMitteln (zuzüglich der externen Stabmagnete, die es z. B. bei ffm gibt [9]).
+
+𝑣 = √2 ∙ 𝑔 ∙ ℎ
+und umgekehrt
+ℎ=
+
+𝑣2
+2∙𝑔
+
+Mit der Geschwindigkeit
+𝑚
+𝑠
+und der Erdbeschleunigung
+𝑚
+𝑔 = 9,81 2
+𝑠
+liegt die nötige Anfangshöhe ℎ bei mindestens
+𝑣 = 0,75
+
+Dass die Pendelmagnete im richtigen Moment bei den Elektromagneten ankommen,
+um synchron angetrieben zu werden, ist unwahrscheinlich. Wir erkennen die zeitweise
+bremsende, dann wieder stark beschleunigende Bewegung, die nach einiger Zeit in
+gleichmäßiges Pendeln übergeht.
+
+Die Polpaarzahlen in Abb. 9 sind von links
+nach rechts: 1, 1, 2, 2, 3, 4, 5. Wesentlicher
+Teil des Aufbaus sind, ebenfalls von links
+nach rechts: Ein Rastadapter 20, zwei
+Klemmbuchsen 5, eine Schubstange 60
+(37283), zwei Hülsen mit Scheibe (35981),
+zwei umgedrehte Hülsen mit Scheibe und
+eine Spannzange.
+
+
+
+
+
+Aquarium- und Brunnenpumpen
+
+
+Mit Magnetketten lassen sich Motoren mit
+größerer Polpaarzahl, also kleinerer Synchrondrehzahl bauen.
+Die Polpaarzahlen in Abb. 11 sind von links
+nach rechts: 5, 7, 12, 14. Der Aufbau
+geschieht hauptsächlich mit Hilfe von einer
+Rastschnecke 57,5 m1 (35977) mit
+Schneckenmutter, zweimal Seilrolle 12 mit
+Gummiring 8 · 3, zwei Kreuzlaschen
+vierarmig, zweimal Drehschalter-Oberteil
+Z80 m0,5 Computing (32117). Die letzten
+beiden Rotoren enthalten Achsen 30. Diese
+ersetzen jeweils einen Stabmagneten; die
+beiden anliegenden Magnete müssen so
+gepolt sein, dass sie sich abstoßen.
+Alle unsere Synchronmotoren müssen
+angeworfen werden, bis auf… siehe unten.
+
+
+Für praktische Anwendungen von Synchronmotoren müssen diese unbedingt von
+selbst anlaufen. Das gelingt mit dem Läufer
+in Abb. 9 links [6]. In Ruhelage richtet sich
+der Läufer nach den Eisenkernen des Elektromagneten aus. Mit der Achse 30 sorgen
+wir für eine geringe Abweichung davon,
+also Unsymmetrie (siehe Abb. 14). Dadurch
+und wegen seines geringen Trägheitsmomentes „springt“ der Läufer beim Einschalten der Wechselspannung sofort auf die
+Synchrondrehzahl. Wegen der Polpaarzahl
+1 beträgt diese hier 3000 U/min.
+Die Drehrichtung, ob rechts oder links
+herum, ist unbestimmt. Das ist aber bei der
+bekanntesten Anwendung, den kleinen
+Wasserpumpen, egal. Wir betrachten hier
+nur diejenigen, die ohne Netzteil direkt an
+230 V Wechselspannung angeschlossen
+werden.
+
+
+Elektromechanik
+
+
+
+Eine defekte Pumpe habe ich in der Mitte
+durchgesägt. Wie erwartet ist der Eisenkern
+unsymmetrisch ausgeführt (Abb. 12, 13).
+Wegen der einfachen Form des Pumpenrades ist die Drehrichtung egal.
+
+Dauermagnet
+
+Das Wasser wird mittig angesaugt und
+durch die passende Form des Pumpenraumes nach außen zur Druckseite gepumpt.
+
+
+
+
+Verrückte Synchronmotoren
+Wir nehmen eine Magnetkette wie in
+beiden Enden zusammen zu einem Ring.
+Ein Ring mit 16 Magneten lässt sich locker
+in eine Felge 30 einlegen, ein Ring mit 24
+Magneten in ein Walzenrad 40 · 12 (35386)
+und ein Ring mit 40 Magneten in eine
+Schwungscheibe 60 · 15 (31718). Wegen
+der inneren Stege eignet sich der Typ
+„Schwungscheibe 60 · 15 Classic Line“
+(39006) nicht.
+Das Ganze wird leicht drehbar gelagert und
+einem Wechsel-Magnetfeld ausgesetzt.
+Hier habe ich 6 bis 10 V Spannung angelegt.
+Die Magnete fangen an zu zittern, suchen
+sich eine Drehrichtung aus, drehen sich
+immer schneller, nehmen dabei ihr Behältnis mit – und dann drehen sie sich synchron!
+
+Es sind selbstanlaufende Synchronmotoren.
+
+
+Nun ja, was die Motoren angeht: Ihr Drehmoment ist sehr gering.
+
+
+
+Elektromechanik
+
+
+Es ist einfach lustig zu sehen, wie sich die
+Kette aus Stabmagneten in Bewegung setzt,
+sobald das Wechselfeld sie erfasst und das
+Rad auf Synchrondrehzahl bringt.
+und Stroboskop
+
+Mit dem Stroboskop [3] können wir die
+Drehzahl bestimmen. In Abb. 16 ist 𝑝 = 12.
+sind die Striche auf der kleinen Scheibe
+kaum zu erkennen. Mit einem Frequenzmessgerät ließ sich die Drehzahl bestätigen
+[2]; sie ist synchron.
+
+
+Die letzten drei Maschinen sind ihrem Verhalten nach keine üblichen Synchronmaschinen, beginnend mit ihrem Selbstanlauf.
+Versuchen wir vorsichtig, etwas Drehmoment abzunehmen, dann sinkt die Drehzahl,
+bei Entlastung läuft der Rotor wieder hoch.
+Eine Synchronmaschine kann mit einem
+maximalen Drehmoment unter Beibehaltung der synchronen Drehzahl belastet werden, darüber hinaus „kippt“ sie; sie fällt
+„außer Tritt“ und bleibt stehen.
+Unsere Motoren ähneln Asynchronmotoren
+mit hartmagnetischem Läufer. Asynchronmotoren laufen aus dem Stand heraus an,
+erreichen aber nicht ganz die Synchrondrehzahl; es bleibt eine Differenz, Schlupf
+genannt. Mit einem hartmagnetischen
+Läufer wird das Eisen bei Erreichen der
+maximalen Drehzahl selbst zu Dauermagneten, die den Läufer in die Synchrondrehzahl ziehen.
+Versuche mit „freien“ Magnetketten haben
+bei mir zu keinem Erfolg geführt. Die ganz
+freie Kette in Abb. 21 wird vom wechselnden Magnetfeld einfach weggedrückt.
+
+
+Wird das verhindert, dann fängt sie an wild
+zu zappeln; eine Drehbewegung wird leider
+nicht daraus.
+
+Das Blitzlicht hält in Abb. 19 den Momentanzustand der Bewegung fest.
+
+
+
+
+Quellen
+
+
+
+Somit können wir schlussfolgern, dass die
+Drehbewegungen in den Bildern 15 bis 20
+auf der Wechselwirkung zwischen Magnetkette und drehbarem Rad bestehen. Die
+Verformungen der Magnetkette vor dem
+Elektromagneten. Hat sich eine Drehrichtung durchgesetzt, dann gibt es einen Knick
+in der Kette seitlich vom E-Magnet. Dieser
+Knick weist auf die Drehrichtung hin, somit
+dreht sich die Kette in Abb. 16 rechts herum
+(im Uhrzeigersinn) und in den Abb. 18 und
+20 links herum.
+
+
+[1]
+
+Matthias Dettmer: Synchronmotoren.
+ft:pedia 2/2016, S. 48-52.
+
+[2]
+
+Rüdiger Riedel: Der Elektromagnet:
+Was kann er (vertragen)? 4/2016, S. 46-51.
+
+[3]
+
+Rüdiger Riedel: Funktionsmodelle
+von Gleich- und Wechselstrommotoren. ft:pedia 4/2016, S. 52-58.
+
+[4]
+
+Rüdiger Riedel: Neue Synchronmotoren. ft:pedia 2/2017, S. 25-31.
+
+[5]
+
+Rüdiger Riedel: Ersatz für die
+Elektromagnete. ft:pedia 3/2017,
+S. 19-22.
+
+[6]
+
+Rüdiger Riedel: Elektrische Uhren.
+ft:pedia 4/2017, S. 24-33.
+
+[7]
+
+Uwe Hinrichs: Elektromagnetisches
+Pendel ohne Lichtschranke. 4/2019, S. 25-27.
+
+[8]
+
+Thomas Püttmann: Gelenksteinketten. ft:pedia 1/2020, S. 12-14.
+
+[9]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt.verlag Heidelberg, 2015,
+S. 218.
+
+

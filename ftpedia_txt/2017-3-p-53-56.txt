@@ -1,0 +1,223 @@
+
+Computing
+
+Computing
+
+Der alte fischertechnik-Plotter mit neuen
+Treibern
+Helmut Jawtusch
+Vor 32 Jahren war der Plotter von fischertechnik eine Sensation [2]. Er besaß zwei große
+Schrittmotoren und wurde mit einem Basic-Programm über das Parallelinterface gesteuert.
+Wer seinen Plotter noch nicht ausrangiert hat und noch ein ROBO Interface besitzt, der kann
+ihn wieder zum Leben erwecken. Wie das geht, wird hier beschrieben.
+
+
+Voraussetzungen
+Da einer der Motoren über die Profilstange
+gezogen werden muss, werden erhebliche
+Kräfte gebraucht. Deshalb hat jeder Schrittmotor eine Leistung von ca. 8 W. Ein
+Schrittmotor wird mit zwei Motorausgängen des Interfaces verbunden und jeder
+muss ca. 500 mA liefern. Solche Stromstärken kann das ROBO Interface abgeben,
+wenn es mit einem Netzteil für 8V und 1,5A
+betrieben wird.
+Wenn man auch den Stift über das Interface
+steuern möchte, benötigt man einen fünften
+Ausgang – und sollte daher zusätzlich eine
+ROBO I/O Extension verwenden (Abb. 2).
+Der Plotter, das ROBO Interface und die
+ROBO I/O Extension werden auch gelegentlich bei ebay angeboten.
+
+fischertechnik ROBO Interface
+und ROBO I/O Extension
+
+Im originalen fischertechik-Plotter erfolgt
+die Absenkung des Stifts durch einen Elektromagneten (Abb. 3).
+
+Die Treibersoftware
+Als Treiber dient FtLib.dll (08.06.2011)
+von Msc. Da die FtLib.dll eher für Profis
+gedacht ist, hat Ulrich Müller dazu die
+Bibliothek umfish40.dll (10.08.2010) in
+C++ entwickelt, die einfache Befehle
+bereitstellt. Eine ausführliche Dokumentation dieser Bibliothek findet sich in der
+Datei umFish43.pdf.
+
+
+
+
+void sleep(int m)
+{
+for (int n=0; n < (m * 5000);
+n++)
+{ // m = 1 entspricht ca. 1 ms
+Sleep(0);
+}
+}
+
+Listing 1: Ausschnitt aus dem
+C++-Treiber-Programm
+
+
+Ich habe noch die Befehle rbStepperV und
+rbStepperZ zur Steuerung von Schrittmotoren hinzugefügt. Durch vier Umpolungen dreht sich der Schrittmotor um 30°.
+Damit die Bewegung stattfinden kann, muss
+nach jeder Umpolung eine kleine Pause
+gemacht werden.
+int __stdcall rbStepperV(int
+iHandle, int MotNr1, int MotNr2,
+int v)
+{
+MotNr1--; MotNr2--;
+motorLinks(iHandle,MotNr1);
+int dirmode = getmotor(iHandle,
+MotNr2); // Motorzustand?
+if (dirmode != 1)
+{
+motorLinks(iHandle, MotNr2);}
+Sleep(v);
+motorRechts(iHandle, MotNr2);
+Sleep(v);
+motorRechts(iHandle, MotNr1);
+Sleep(v);
+motorLinks(iHandle, MotNr2);
+Sleep(v);
+return 0;
+}
+}
+
+
+Ein Problem ist die Dauer dieser Pausen.
+Der C++-Befehl Sleep(1) sollte eigentlich
+eine Pause von 1 ms bewirken. Auf meinem
+PC ergibt sich mit Sleep aber eine Pause
+von minimal 15 ms. Das resultiert dann in
+ca. 80 U/min. Durch einen Artikel von Ryan
+Geis [3] bin ich auf den System-Befehl
+timeBeginPeriod(1) gestoßen, der bewirkt, dass Sleep(ms) tatsächlich kürzere
+Pausen macht. Dafür müssen noch
+WinMM.lib und MMSystem.h eingebunden
+werden.
+Eine mögliche Alternative ist die oben
+angegebene sleep-Methode, die aber stärker
+vom System abhängt. Die Pausen sollten
+nicht unter 11 ms liegen, da der Motor dann
+ruckelt und Schritte überspringt. Bei 11 ms
+ergeben sich immerhin ca. 120 U/min und
+damit eine recht flotte Bewegung des Stiftes.
+Die erweiterte Version von umfish40.dll
+kann auf ftcommunity.de unter Downloads/
+Software heruntergeladen werden.
+
+Die Praxis
+Um Kosten zu sparen habe ich die langen
+Aluschienen durch einfache Stangen ersetzt
+und statt der Plexiglas-Scheibe ein Brett
+verwendet (Abb. 4). Die Funktionsgraphen
+wurden mit einem Terrapin Logo-Programm gemalt.
+
+
+Computing
+
+
+Ein Java-Programm
+
+Mit Logo kann man die Graphen gleichzeitig auf dem Graphikschirm anzeigen
+lassen (Abb. 5). Kern des Plotter-Programms ist der lineto-Befehl, der den
+Plotterstift vom Ausgangspunkt entlang der
+Verbindungsstrecke zum Zielpunkt bewegt.
+Hier kommt einfache Vektorrechnung zum
+Einsatz.
+
+Zum Schluss zeige ich noch ein JavaProgramm, bei dem man durch Drücken der
+Tasten 1 bis 9 den Stift in unterschiedliche
+Richtungen bewegen kann. GetKeyState
+dient dem schnellen Zugriff auf die Tastatur
+und wurde in umfish40.dll ergänzt. Damit
+sind auch einfache Konsolenanwendungen
+möglich.
+
+import ftcomputing.robo.*;
+…
+FishFace rb = new FishFace();
+int stepperdelay = 11; // ca. 11 ms Verzögerung
+…
+private void Action()
+{
+try { rb.openInterface(0, 0); } // USB-Verbindung
+// rb.openInterface(200, 1) Connect Box
+// rb.openInterfaceRFdis(1, 1) RF Data Link
+lblHinweis.setText("Plotten: Ziffern '1' - '9' Stift: ',' '0' Ende:
+ESC");
+do {
+lblTaster.setText("Taster I7 / I8 : " + rb.getInput(7) + " / " +
+rb.getInput(8));
+if (rb.getInput(5)) Spurl = 0; else Spurl = 1; // Option für Scanner
+if (rb.getInput(6)) Spurr = 0; else Spurr = 1;
+lblSpur.setText("Spur I5 / I6 : " + Spurl + " " + Spurr);
+if (rb.getKeyState(110)) { rb.setLamp(9,1); }
+if (rb.getKeyState(96)) { rb.setLamp(9,0); }
+if (rb.getKeyState(102)) // if-Kaskade zur Steuerung des PlotterStiftes
+{ rb.stepperV(1,2,stepperdelay); }
+else if (rb.getKeyState(100))
+{ rb.stepperZ(1,2,stepperdelay); }
+else if (rb.getKeyState(98))
+{ rb.stepperZ(3,4,stepperdelay); }
+else if (rb.getKeyState(104))
+{ rb.stepperV(3,4,stepperdelay); }
+
+
+
+}
+
+else if (rb.getKeyState(97))
+{ rb.stepperZ(1,2,stepperdelay); rb.stepperZ(3,4,stepperdelay); }
+else if (rb.getKeyState(103))
+{ rb.stepperZ(1,2,stepperdelay); rb.stepperV(3,4,stepperdelay); }
+else if (rb.getKeyState(105))
+{ rb.stepperV(1,2,stepperdelay); rb.stepperV(3,4,stepperdelay); }
+else if (rb.getKeyState(99))
+{ rb.stepperV(1,2,stepperdelay); rb.stepperZ(3,4,stepperdelay); }
+else {
+rb.setMotor(1,0); rb.setMotor(2,0);
+rb.setMotor(3,0); rb.setMotor(4,0);
+}
+} while (!rb.finish());
+
+Listing 2: Plottersteuerung über die Tastatur
+
+Alle Beispiel-Programme können im
+Download-Bereich der ft-Community heruntergeladen werden.
+Die Entwicklung von Software für den
+fischertechnik-Plotter ist ein reizvolles
+Projekt im Rahmen einer Robotik-Reihe für
+Informatikkurse der Oberstufen.
+Zum Schluss noch ein paar Anregungen für
+eigene Projekte:
+
+∂ Malen von (skalierbaren) Ziffern
+∂ Umbau des Plotters zum Scanner (Spursensor an I5/I6)
+
+Referenzen
+[1]
+
+Helmut Jawtusch: Programmierung
+des TX in Java, C, C++, C# und
+Logo. ft:pedia 2/2017, S. 51-57.
+
+[2]
+
+fischertechnik: Bauanleitung
+Plotter/Scanner (30571).
+
+[3]
+
+Ryan Geis: Results on some quick
+research on timing in Win32.
+Geisswerks.com
+
+∂ Malen nach vorgegebenen Punkten
+∂ Malen von Kreisen und Spiralen
+∂ Malen von Mandalas
+
+
+

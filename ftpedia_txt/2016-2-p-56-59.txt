@@ -1,0 +1,296 @@
+
+
+Computing
+
+Alternative Controller (1): Der Arduino
+David Holtz
+In der Reihe „Alternative Controller“ werden wir einige Projekte vorstellen, die zeigen, dass
+und wie man fischertechnik-Modelle mit unterschiedlichen Microcontrollern (an)steuern kann.
+In diesem ersten Beitrag wird die Arduino-Plattform eingeführt, die ja schon Gegenstand
+früherer Beiträge war, und ein Vergleich mit dem TXT-Controller unternommen.
+
+Hintergrund
+Im Jahr 2005 entwickelten Studenten aus
+Italien mit ihrem Dozenten Massimo Banzi
+das erste Arduino-Board. David Mellis
+schrieb die passende Software dazu, mit der
+man das Board in C/C++ programmieren
+kann und die unter die Creative-CommonsLizenz gestellt wurde [1, 2].
+Von der ersten kleinen Auflage des Boards
+waren 50 Stück für eine Schule bestimmt.
+In den Folgejahren wurden mehr und mehr
+Boards entwickelt und verkauft [1]. So
+eroberte der Arduino als einfaches und
+günstiges Mikrocontroller-Board, das
+zusammen mit einer IDE (engl. integrateted
+development environment) ausgeliefert
+wurde, Klassenzimmer und die Herzen von
+Bastlern und Quereinsteigern weltweit.
+Seit dem Rechtsstreit um die Marke
+Arduino im Jahr 2015 werden die Boards
+von zwei offiziellen Stellen entwickelt und
+vertrieben [3]: Die Arduino LLC [4] vertreibt die Produkte unter dem Namen
+Arduino in den USA und unter dem Namen
+Genuino im restlichen Teil der Welt. Smart
+Projects S.R.L [5] besitzt die Namensrechte
+an der Marke Arduino in einigen europäischen Ländern, darunter Italien und
+Deutschland.
+Mittlerweile gibt es sehr viele unterschiedliche Arduino-Boards. Einige sind mit
+Funktionen wie Ethernet, WLAN, einem
+
+SD-Kartenslot oder Ähnlichem erweitert
+worden.
+
+Hardware
+Prozessor und Speicher
+Der Arduino UNO R3 ist der am weitesten
+verbreitete Arduino. Er basiert wie die
+meisten Arduino-Boards auf einem Atmel
+AVR Mikrocontroller. Dieser wird über
+einen 16-MHz-Schwingungsquarz getaktet.
+Für Programme stehen 32 kB Speicher zur
+Verfügung; außerdem verfügt er über 2 kB
+RAM [6].
+
+
+Im Vergleich zum TXT-Controller erscheinen die Taktrate und der Speicher winzig:
+Der TXT-Controller verfügt über den ARM
+Cortex A8 Prozessor mit 600 MHz
+Taktrate, er hat 64 MB Flashspeicher und
+128 MB RAM.
+
+In der Praxis reichen die Ressourcen des
+Arduino jedoch vollkommen aus. Für anspruchsvollere Aufgabe gibt es Boards mit
+mehr Speicher (z. B. den Arduino Mega)
+oder mit mehr Rechenleistung (z. B. den
+Arduino Due). Dennoch kommen alle diese
+Alternativen nicht an die Rechenleistung
+des TXT-Controllers heran, weshalb
+rechenlastige Aufgaben ausgelagert werden
+sollten.
+Während der TXT-Controller zur Objekterkennung mittels Kamera in der Lage ist,
+sollte am Arduino eine Kamera mit eigenem
+Bildverarbeitungsprozessor verwendet werden, wie z. B. die Pixy Cam [7].
+Verbindung zum PC
+Des Weiteren zeichnen sich ArduinoBoards durch ihre USB-Schnittstelle aus,
+über die sie komfortabel programmiert
+werden können. Aufgrund des vorprogrammierten Boot-Loaders ist kein externes
+Programmiergerät zum Beschreiben des
+Chips notwendig. Serielle Kommunikation
+zwischen dem PC und dem Arduino (beispielsweise zur Übertragung von Messwerten) ist über ein USB-Kabel möglich.
+Verschaltung von Aktoren und
+Sensoren
+Kennzeichnend für alle Arduino-Boards ist
+die mehr oder weniger große Zahl an Pins.
+Der zentrale Unterschied zum TXT besteht
+darin, dass alle Pins sowohl als Eingang als
+auch als Ausgang genutzt werden können.
+Ein als INPUT konfigurierter Pin kann
+Sensorwerte durch Bestimmen des anliegenden Potentials einlesen; ein Pin, der als
+OUTPUT definiert ist, kann Aktoren
+steuern.
+Einige der Pins verfügen über spezielle
+Eigenschaften:
+
+
+Zur Veranschaulichung: Durch ein fischertechnik-Glühlämpchen fließen etwa 100 mA Strom,
+bei Powermotoren bis zu 1 A. LEDs mit einer
+
+Computing
+
+∂ Sechs Pins können das anliegende elektrische Potential mit 10 Bit-Auflösung
+(analog) messen.
+∂ Bei allen Pins, die als INPUT definiert
+werden, kann ein interner 10-kΩ-PullupWiderstand aktiviert werden.
+∂ Sechs der Pins unterstützen, als OUTPUT initialisiert, die Pulsweitenmodulation (PWM), mit der eine analoge Spannung zwischen 0 und 5 Volt durch
+schnelles An- und Ausschalten moduliert wird (markiert durch eine Tilde: ~).
+∂ Einige der Pins lassen sich als externer
+Interrupt nutzen.
+∂ Einige der Pins ermöglichen die Kommunikation über I²C, SPI und UART.
+Die obige Aufzählung trifft auf ArduinoBoards mit einem Atmel AVR Mikrocontroller zu. Bei anderen Boards (Arduino
+Zero/Due) können die Funktionen abweichen.
+Bei der Verschaltung sollte unbedingt
+darauf geachtet werden, dass die Spannung
+an den Pins je nach Board 3,3 oder 5 V
+beträgt. Da die Stromstärke je Pin beim
+Arduino Uno 20 mA (in der Spitze 40 mA)
+nicht überschreiten darf, ist die Ansteuerung von fischertechnik-Hardware wie
+Motoren nicht ohne Weiteres möglich. 1
+Zum Betreiben von fischertechnik-Motoren
+benötigt man daher eine Half-Bridge,
+entweder in Form einer separaten Schaltung
+oder eines Motor Shields.
+Für Aktoren, die nur die Zustände ‚an‘ und
+‚aus‘ einnehmen können (Magnetventile,
+Glühlämpchen), sollte eine Verstärkerschaltung verwendet werden, um die einzelnen Pins nicht zu überlasten und den
+Mikrocontroller dadurch zu zerstören.
+
+Stromaufnahme von rund 20 mA können hingegen direkt angeschlossen werden.
+
+
+
+
+Zusätzliche Schaltungen bedeuten bei der
+Umsetzung eines Projekts mehr Aufwand.
+Dies ist beim TXT-Controller nicht notwendig, da er bereits Single- und Half-Bridges zur Aktoransteuerung besitzt. Wie dies
+beim TX-Controller funktioniert, hat Stefan
+Brunner in der ft:pedia beschrieben [8].
+Der Anschluss von fischertechnik-Sensoren
+ist vergleichsweise simpel. Es muss lediglich darauf geachtet werden, dass der
+Sensor mit der Board-Spannung betrieben
+wird (in der Regel sind das 5 V). Man kann
+den Arduino als vielseitige Schnittstelle zu
+verschiedenen Sensoren oder Aktoren
+nutzen: Da die Protokolle SPI (Serial Peripheral Interface) und TWI (Two Wire Interface bzw. I²C) unterstützt werden, steht der
+Ansteuerung von Kameras wie z. B. der
+Pixy Cam [7] oder ähnlicher Hardware
+nichts im Wege. Die in der Reihe „I²C mit
+dem TX“ in der ft:pedia vorgestellten
+Sensoren und Aktoren können auch mit den
+Arduino-Boards gesteuert werden. In dieser
+Hinsicht ist der Arduino dem TXT-Controller überlegen, da er flexibler genutzt
+werden kann.2
+Welcher Arduino passt zu mir?
+Die Wahl des Arduino-Boards richtet sich
+nach dem Einsatzgebiet. Der Arduino Uno
+ist das klassische Board zum Steuern eines
+Roboters mit zwei Motoren und ein paar
+Sensoren. Kauft man eines der Originale
+und unterstützt die Organisation (Made in
+Italy), liegt man preislich bei maximal 30 €.
+Ein Upgrade auf den Arduino Mega mit
+deutlich mehr Pins und Speicher (ca. 40 €)
+lohnt sich, wenn man den Arduino als
+wirkliche Alternative zum TXT-Controller
+verwenden möchte. Für Basteleien gibt es
+kleinere Boards, die preislich etwas unter
+dem Uno liegen. Über Shields kann man
+
+
+
+Allerdings bleibt abzuwarten, wie sich der TXTController mit der Community-Firmware weiterentwickelt.
+
+Ethernet, WLAN, einen SD Kartenslot und
+vieles mehr nachrüsten.
+
+SainSmart Mega 2560
+
+Da alle Boards Open Source sind, gibt es
+zahlreiche günstigere Nachbauten (vgl.
+bis niedrigen zweistelligen Euro-Bereich
+bewegen.
+
+Software
+Integrierte Entwicklungsumgebung
+Die Arduino-Plattform bietet eine quelloffene C/C++-Entwicklungsumgebung, mit
+der man ein Programm (im Arduino Jargon
+„Sketch“ genannt) schreiben, kompilieren
+und auf das Board laden kann. Sie steht für
+Linux, Windows und MacOS zur Verfügung. Die Robo Pro-Software für den TXTController, eine graphische Entwicklungsumgebung, ergänzt um den Interfacetest
+und die Möglichkeit des Online-Betriebs,
+gibt es nur für Windows-Systeme.
+Compiler
+Als Compiler wird der avr-gcc Compiler
+aus der GNU Compiler Collection verwendet. Dieser bindet vor dem Übersetzen
+des Programmcodes in eine Hex-Datei
+automatisch einige Arduino-StandardBibliotheken ein, die dem Programmierer
+beispielsweise das Abfragen oder Schalten
+
+einzelner Pins sowie die Bildschirmausgabe
+am Computer erleichtern [9].
+Programmstruktur
+Jeder Sketch besteht aus dem void setupTeil und der void loop. Der Programmabschnitt setup wird unmittelbar nach dem
+Starten des Boards einmal ausgeführt, der
+Abschnitt loop im Anschluss daran als
+Endlosschleife.
+void setup()
+{
+pinMode(13, OUTPUT);
+}
+void loop()
+{
+digitalWrite(13, HIGH);
+delay(1000);
+digitalWrite(13, LOW);
+delay(1000);
+}
+
+
+Der oben abgebildete Sketch lässt eine LED
+an Pin 13 blinken. Zunächst wird Pin 13 mit
+dem Befehl pinMode als OUTPUT definiert. In void loop wird Pin 13 über den
+Befehl digitalWrite auf 5 V (HIGH) und auf
+0 V (LOW) gesetzt, wodurch die LED anund ausgeschaltet wird.
+
+Computing
+
+deutlich leistungsfähigeren TXT-Controllers wird hingegen durch Robo Pro auf den
+ms-Bereich begrenzt.
+
+Ausblick
+Der TXT-Controller ist dank seiner vollen
+Kompatibilität zu fischertechnik die Plugand-Play-Lösung, mit der man, egal ob Einsteiger oder Fortgeschrittener, komfortabel
+programmieren kann.
+Arduino-Boards können eine kostengünstige und flexible Alternative sein, wenn
+man einige Hürden beim Verbinden mit der
+fischertechnik-Hardware überwunden hat.
+Dieser Aufwand ist je nach Projekt und
+Vorkenntnissen überschaubar bis groß.
+In einigen Beiträgen in der ft:pedia wurden
+bereits verschiedene Möglichkeiten vorgestellt, wie man mit Arduino-Boards fischertechnik-Modelle steuern kann. Das werden
+wir in weiteren Beiträgen fortsetzen.
+
+Referenzen und Links
+[1]
+
+Wikipedia: Arduino.
+
+[2]
+
+Alexander Weber: Shake, rattle ’n’
+roll. c’t 16/2009, S. 164 ff.
+
+[3]
+
+Peter König: Arduino vs. Arduino –
+der Graben wird tiefer. heise.de
+Make:, 30.07.2015.
+
+[4]
+
+arduino.cc: Arduino.cc.
+
+[5]
+
+arduino.org: Arduino.org.
+
+[6]
+
+arduino.cc: Arduino Uno.
+
+[7]
+
+Dirk Wölffel, Dirk Fox: I²C mit dem
+TX – Teil 11: Pixy-Kamera. 4/2014, S. 43-51.
+
+[8]
+
+Stefan Brunner: Die Ein- und Ausgänge des TX Controllers. 4/2012, S. 24-31.
+
+[9]
+
+arduino.cc: BuildProcess.
+
+Besonderheiten
+Im Gegensatz zum TXT-Controller wird bei
+den Arduino-Boards mit Atmel AVR
+Mikrocontroller kein Multithreading unterstützt. Das gleichzeitige Ausführen zweier
+Prozesse wird dadurch erschwert; trotzdem
+können beispielsweise mehrere Bewegungen Interrupt gesteuert parallel ausgeführt
+werden.
+Arduino-Boards haben einen sehr präzisen
+Timer, der im einstelligen μs-Bereich
+auflöst. Die Auflösung des Timers des
+
+
+

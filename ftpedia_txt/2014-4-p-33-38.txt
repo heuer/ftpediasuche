@@ -1,0 +1,453 @@
+
+Computing
+
+Computing
+
+TX-Fernsteuerung mit dem Raspberry Pi
+Raphael Jacob
+In Ausgabe 3/2014 der ft:pedia wurde vorgestellt, wie man den TX-Controller mit dem IREmpfänger verbinden kann [1]. Diese Art der Fernsteuerung des TX-Controllers hat jedoch
+verschiedene Nachteile. In diesem Beitrag wird gezeigt, wie man den TX-Controller über ein
+Web-Interface steuern kann.
+
+Hintergrund
+Für viele fischertechnik-Modelle könnte
+man eine komplexe Fernsteuerung gut
+gebrauchen. Weil man mit der IR-Fernbedienung von Fischertechnik nicht viele
+Funktionen auslösen kann und die Reichweite sehr begrenzt ist, musste eine andere
+Lösung her. Da ich ein wenig Erfahrung mit
+Linux habe und einen Raspberry Pi (kurz:
+RPi) besitze, habe ich diesen über die
+GPIO-Pins mit dem TX Controller
+verbunden.
+
+Datenleitung verwendet, um binäre Werte
+seriell zu übertragen.
+
+mit dem TX Controller [3, 4]
+
+
+Das Konzept
+Mein Plan war, ein kleines Web-Interface
+zu programmieren (es ist ein sehr einfaches
+Web-Interface, daher sind individuelle
+Modifikationen leicht möglich). Darüber
+werden von einem Python-Skript Binärdaten an den TX-Controller geschickt, die
+dieser verarbeiten kann.
+
+Der Versuchsaufbau
+wird ein Eingang des TX als unidirektionale
+
+· Die Verbindung zwischen dem GPIO
+Ground Pin (Pin 6) und dem Ground Pin
+des TX ist Voraussetzung dafür, dass der
+TX-Controller und der RPi überhaupt
+miteinander kommunizieren können
+(wie beim I²C-Bus).
+· Die Verbindung zwischen dem GPIO
+Pin 18 (Pin 12) und dem I8-Anschluss
+des TX dient der Datenübertragung vom
+RPi an den TX Controller.
+Zusätzlich benötigen wir noch eine Internetverbindung für den RPi. Am einfachsten
+ist es, den RPi per Ethernet-Kabel an einen
+Router oder Switch anzuschließen. Für
+mobile Modelle wird später eine WLANVerbindung konfiguriert.
+
+
+
+
+Die Inbetriebnahme
+Zunächst wird die mit dem aktuellen Image
+bespielte SD-Karte in den RPi eingelegt.
+Nun wird der Raspberry Pi mit dem
+Ethernet-Kabel verbunden.
+Jetzt verbinden wir den TX-Controller mit
+dem RPi und dem PC (via USB oder
+Bluetooth) und stellen die Stromversorgung
+her: beim RPi mit einem Handyladegerät
+oder einem Micro-USB-Kabel, das mit dem
+PC verbunden wird, beim TX mit dem
+Netzteil oder einem fischertechnik-Akku.
+Nun verbinden wir uns mit dem RPi. Dafür
+laden wir die Software putty herunter und
+geben folgende Daten ein:
+· Hostname: raspberrypi oder IP-Adresse
+· Connection type: ssh
+· Open-Button drücken
+· Username: pi
+· Password: raspberry
+Nach einer erfolgreichen Verbindung
+sollten wir noch das Betriebsystem des RPi
+durch folgende Befehle aktualisieren [5]:
+· sudo -i (mit finish bestätigen)
+· sudo -i
+· apt-get update
+· apt-get upgrade
+Um die Dateneingabe zu vereinfachen,
+findet ihr im Download-Bereich der ft:c (in
+der neuen Rubrik „ft:pedia Dateien“) ein
+Paket mit allen Dateien und Befehlen.
+
+Der Webserver
+Als Webserver installieren wir Apache 2.
+Das gelingt mit dem folgenden Befehl:
+· apt-get install apache2 apache2-doc
+apache2-utils libapache2-mod-php php5
+php-pear php5-xcache
+Nun kann man unter der IP-Adresse des
+RPis die Apache-Testseite sehen (Abb. 3).
+
+
+Sollte dies nicht der Fall sein, habt ihr etwas
+falsch gemacht.
+
+
+Nun möchten wir unsere eigene Webseite
+erstellen. Auf dieser sollen ein Start- und
+ein Stopp-Button angezeigt werden, über
+die das fischertechnikmodell gestartet und
+gestoppt werden kann. Die Befehle lauten:
+· sudo -i
+· cd /var/www
+· wget
+https://www.iconfinder.com/icons/6144
+7/download/png/64
+· mv 64 start.png
+· wget
+https://www.iconfinder.com/icons/6144
+1/download/png/64
+· mv 64 stop.png
+· nano index.html
+Jetzt sehen wir einen Texteditor, in dem wir
+zuerst den gesamten Text löschen. Der neue
+Text lautet:
+<html>
+<head>
+<title>Fischertechnik</title>
+</head>
+<body>
+<br><br><br>
+<center>
+<a href="start.php"><img
+src="start.png"></a>
+<a href="stop.php"><img
+src="stop.png"></a>
+</center>
+</body>
+</html>
+
+Gespeichert wird mit Strg+O und Enter; mit
+Strg+X verlässt man den Editor.
+
+Ein erneuter Blick auf die Website zeigt die
+beiden Buttons (Abb. 4).
+
+
+Wenn man auf eines der Symbole klickt,
+bekommt man eine ‚Error 404 Not Found‘Meldung, denn noch fehlen die php-Skripte,
+die beim Anklicken aufgerufen werden
+sollen. Legen wir nun die php-Skripte an:
+
+Computing
+
+Die Datenübertagung
+Die Daten werden in drei Bits vom RPi zum
+TX Cotroller übertragen. So sind acht verschiedene Werte (0 bis 7) möglich (Tab. 1).
+Dieses einfache „Protokoll“ lässt sich ausbauen: Wenn ein Bit übertragen wird, sendet der RPi ein High-Signal. Fällt dieses
+innerhalb von 0,1 Sekunden ab, ist der Wert
+dieses Bits 0; bleibt das Signal auf High, ist
+der Wert 1. Erst nach Abfallen der Spannung ist der TX Controller bereit, weitere
+Bits anzunehmen.
+Bit 0
+
+Bit 1
+
+Bit 2
+
+Wert
+
+· nano start.php
+
+
+
+
+
+Im Editor geben wir ein:
+
+
+
+
+
+<?php
+shell_exec("sudo python
+/var/www/start.py");
+header ("Location:index.html");
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+Wir speichern das Skript und schließen mit
+Strg+O, Enter und Strg+X.
+Es folgt das zweite php-Skript:
+· nano stop.php
+<?php
+shell_exec("sudo python
+/var/www/stop.py");
+header ("Location:index.html");
+?>
+
+Wenn man nun erneut auf eines der
+Symbole auf der Startseite klickt, wird im
+Hintergrund versucht, eines der beiden
+Python-Skripte start.py bzw. stop.py
+auszuführen – was wieder mit einer Fehlermeldung im Apache-Log endet, und man
+wird zurück auf die Startseite geleitet. Um
+keine Fehler hervorzurufen, muss der RPi
+neu gestartet werden:
+· reboot
+
+…
+
+Tab. 1: Binäre Kodierung der Daten
+
+Die Software auf der Seite des RPi ist ein
+Python-Skript, welches von einer php-Datei
+aufgerufen wird. Wir programmieren nur
+die Python-Skripte für die Werte 0 und 1.
+Weitere Skripte lassen sich ohne Probleme
+ergänzen.
+Auf dem RPi werden mit die Skripte den
+folgenden Befehlen erstellt:
+· sudo –i
+· cd /var/www
+· nano start.py
+Der Text lautet:
+#!/usr/bin/python
+import RPi.GPIO as GPIO
+import time
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+GPIO_toTX = 18
+GPIO.setup(GPIO_toTX,GPIO.OUT)
+GPIO.output(GPIO_toTX, GPIO.LOW)
+time.sleep(0.1)
+GPIO.output(GPIO_toTX, GPIO.HIGH)
+time.sleep(0.1)
+GPIO.output(GPIO_toTX, GPIO.HIGH)
+
+
+
+time.sleep(0.2)
+GPIO.output(GPIO_toTX, GPIO.LOW)
+time.sleep(0.1)
+GPIO.output(GPIO_toTX, GPIO.HIGH)
+time.sleep(0.1)
+GPIO.output(GPIO_toTX, GPIO.LOW)
+time.sleep(0.2)
+GPIO.output(GPIO_toTX, GPIO.LOW)
+time.sleep(0.1)
+GPIO.output(GPIO_toTX, GPIO.HIGH)
+time.sleep(0.1)
+GPIO.output(GPIO_toTX, GPIO.LOW)
+time.sleep(0.2)
+GPIO.output(GPIO_toTX, GPIO.LOW)
+time.sleep(0.1)
+
+An das Ende der Datei hängen wir an:
+
+Wir speichern den Text ab und schreiben
+das Skript zum Starten des Modells:
+
+· sudo –i
+
+· nano stop.py
+#!/usr/bin/python
+import RPi.GPIO as GPIO
+import time
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+GPIO_toTX = 18
+GPIO.setup(GPIO_toTX,GPIO.OUT)
+GPIO.output(GPIO_toTX, GPIO.LOW)
+time.sleep(0.1)
+GPIO.output(GPIO_toTX, GPIO.HIGH)
+time.sleep(0.1)
+GPIO.output(GPIO_toTX, GPIO.LOW)
+time.sleep(0.2)
+GPIO.output(GPIO_toTX, GPIO.LOW)
+time.sleep(0.1)
+GPIO.output(GPIO_toTX, GPIO.HIGH)
+time.sleep(0.1)
+GPIO.output(GPIO_toTX, GPIO.LOW)
+time.sleep(0.2)
+GPIO.output(GPIO_toTX, GPIO.LOW)
+time.sleep(0.1)
+GPIO.output(GPIO_toTX, GPIO.HIGH)
+time.sleep(0.1)
+GPIO.output(GPIO_toTX, GPIO.LOW)
+time.sleep(0.2)
+GPIO.output(GPIO_toTX, GPIO.LOW)
+time.sleep(0.1)
+
+Damit diese Skripte ausgeführt werden
+können geben wir ein:
+· chmod 777 start.py
+· chmod 777 stop.py
+· visudo
+
+
+www-data ALL=(ALL) NOPASSWD: ALL
+
+Die Änderungen werden wirksam, wenn der
+Raspberry Pi neu gestartet wird. Der Befehl
+dafür lautet (wie oben):
+· reboot
+
+Passwortschutz
+Um unsere Webseite vor fremder Benutzung zu schützen, kann ein Passwortschutz
+eingerichtet werden [6]:
+· nano /etc/apache2/apache2.conf
+An das Ende der Datei hängen wir an:
+<directory /var/www>
+AuthType Basic
+AuthName "Passwort eingeben:"
+AuthUserFile
+"/etc/htpasswd/.htpasswd"
+# in der naechsten Zeile muss an# gegeben werden ob nur ein be# stimmter Benutzer oder alle
+# Benutzer auf die Datei Zugriff
+# haben.
+# Bei ‚alle Benutzer‘ heisst die
+# Zeile:
+# Require valid-user
+Require user ft
+Order allow,deny
+Allow from all
+</directory>
+
+· mkdir /etc/passwd
+· htpasswd -c /etc/.htpasswd NAMEDES-NUTZERS
+Passwort eingeben, dann weiter:
+· /etc/init.d/apache2 reload
+· reboot
+
+
+Computing
+
+Markierung der Informationen
+von Google Chrome
+
+W-LAN Verbindung
+Damit auch mobile Modelle kabellos gesteuert werden können, benötigen wir einen
+W-LAN-Adapter. Dieser wird an einen der
+USB-Anschlüsse gesteckt und wie folgt
+konfiguriert [7]:
+· sudo -i
+· nano /etc/network/interfaces
+Wir löschen den gesamten Text und schreiben:
+auto lo
+iface lo inet loopback
+iface eth0 inet dhcp
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet dhcp
+wpa-conf
+/etc/wpa_supplicant/wpa_supplicant
+.conf
+
+· iwlist scanning
+Dort merken wir uns folgende Dinge zu
+unserem Netzwerk:
+
+Diese Daten werden in die folgende Datei
+eingetragen:
+· nano /etc/wpa_supplicant/
+wpa_supplicant.conf
+ctrl_interface=DIR=/var/run/wpa_su
+pplicant GROUP=netdev
+update_config=1
+network={
+ssid=MEINE-SSID
+scan_ssid=1
+proto=RSN
+key_mgmt=WPA-PSK
+pairwise=CCMP
+group=TKIP
+psk="MeinPasswort"
+}
+
+Damit sich nach einer abgebrochenen WLAN-Verbindung der RPi wieder automatisch verbindet, müssen vorab folgende
+Befehle eingegeben werden. [9]:
+· cd /etc/ifplugd/action.d
+· mv ifupdown ifupdown.original
+· cp /etc/wpa_supplicant/ifupdown.sh
+/etc/ifplugd/action.d/ifupdown
+
+· pairwise
+· group
+
+
+
+
+Schlusswort
+
+Referenzen
+
+Mit dieser Art der Fernsteuerung des TX
+Controllers lassen sich theoretisch unendlich viele Funktionen steuern, jedoch dürfen
+das Modell und das Steuergerät (Smartphone, Tablet, PC, …) nur ca. 50 m (im
+Freifeld) voneinander entfernt sein.
+
+[1]
+
+Andreas Gail: Detail Engineering
+R2D3 (3) IR-Fernbedienung am
+Robo TX Controller, ft:pedia 3/2014,
+S. 51-54
+
+[2]
+
+WebRaPi: Raspberry – Remote
+installieren, swek.de
+
+Wie der Raspberry Pi Daten vom TX
+Controller empfangen und diese in Form
+einer E-Mail an uns weiterleiten kann,
+erfahrt ihr in der nächsten Ausgabe der
+ft:pedia.
+
+[3]
+
+Software für den Schaltplan:
+fritzing.org
+
+[4]
+
+Thomas Dragon: TX Controller für
+fritzing (fischertechnik Robo TX
+Controller), 22.06.2014
+
+[5]
+
+Manfred Steger: Der eigene
+Webserver mit dem Raspberry Pi.
+22.06.2013
+
+[6]
+
+sempervideo: Alarm-Anlage (Teil 1
+von 5), Youtube
+
+[7]
+
+sempervideo: WLAN AutoReconnect, Youtube
+
+
+

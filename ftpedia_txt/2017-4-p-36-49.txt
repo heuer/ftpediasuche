@@ -1,0 +1,1017 @@
+
+
+Computing
+
+V. I. P. – Ein I²C-nach-Computing-InterfaceUmsetzer (Teil 3)
+René Trapp
+Interface-Technik: Die Eingänge, deren Abfrage und ein Wachhund.
+Im letzten Teil der Reihe ging es um den
+Leistungsteil, also die Stromversorgung
+und die Motorendstufen mitsamt Ansteuerung [54]. Diesmal kommen die diversen
+Eingänge dran. Und den Wachhund
+besuchen wir auch in seiner Hütte. Keine
+Sorge, der will nur spielen, nicht beißen.
+
+nicht vorhersagen, da die Schaltschwellen
+des Schieberegisters nicht auf einen derartigen Analogbetrieb optimiert sind [55].
+
+Die Schaltereingänge
+Die Schaltereingänge sind bei allen Interfaces identisch aufgebaut. Dieser Schaltungsteil wurde nie verändert – wenn man
+mal von den ergänzenden LEDs der CVKVersionen absieht. Die Eingänge E1…E8
+für die Schalter sind mit jeweils einem
+Widerstand von 1 kς nach GND geschaltet.
+Ein offener Eingang wird als ‚0‘ erkannt.
+Gibt es eine leitende Verbindung zwischen
+einem Eingang und der 5 V-Sammelschiene
+„COM“, wird dieser Eingang als ‚1‘
+erkannt. Dabei fließt ein Strom von 5 mA
+durch die Verbindung über den jeweiligen
+Widerstand nach GND.
+Nun ist bei den Interfaces 30565 und 30567
+im weiteren Signalpfad zum Computer
+noch ein Inverter vorhanden. Speziell bei
+diesen Interfaces wird der offene Eingang
+als ‚1‘ gelesen, der geschlossene Schalter
+dagegen als ‚0‘.
+Ist anstelle eines Schalters beispielsweise
+ein Fototransistor angeschlossen, so wird
+der Wechsel von ‚0‘ und ‚1‘ irgendwo
+zwischen 30 % und 70 % der Betriebsspannung stattfinden. Genau lässt sich das
+
+
+Im Gegensatz zu den vollmundigen Aussagen in der Begleit-Literatur, z. B. [56],
+sind die Eingänge allerdings nicht gegen
+eine Überspannung oberhalb 5V geschützt.
+Es ist zwar richtig, dass ICs aus der CMOSFamilie 4000 (IC2) im Betriebsspannungsbereich von 3 V bis 15 V arbeiten und daher
+mit 9 V an einem Eingang durchaus
+zurechtkommen können. Trotzdem werden
+Schäden auftreten, wenn die Eingangsspannung die Betriebsspannung um mehr
+als 0,5 V übersteigt (siehe Absolute
+Maximum Ratings im Datenblatt des 4014
+
+[55]). Um den Mechanismus zu verstehen,
+muss man sich die Schutzschaltungen der
+ICs gegen statische Aufladung anschauen.
+In CMOS-ICs sind MOSFETs enthalten.
+Diese reagieren sehr empfindlich auf
+Spannungen über 20 V zwischen ihren
+Gate- und Source-Anschlüssen. Es kommt
+bei Überspannung zur Zerstörung der Isolationsschicht zwischen Gate und dem Kanal.
+Daher sind überall entsprechende Schutzstrukturen an den Außenanschlüssen der
+ICs angebracht. Abb. 26 zeigt das Prinzip.
+Tritt am Anschluss „In“ eine Spannung über
+der Betriebsspannung VDD auf, so werden
+die beiden oberen Dioden leitend. Die
+Diode hinter dem Widerstand wird weniger
+Strom führen als ihre Schwester davor. Ist
+die Spannung niedriger als das Potential an
+VSS, übernehmen die beiden unteren
+Dioden die gegengleiche Aufgabe. Die
+Ableitung statischer Elektrizität gelingt so
+ohne besondere Maßnahmen und erleichtert
+die Handhabung der ICs. VSS ist übrigens
+im Interface mit GND identisch.
+
+Computing
+
+Versorgung wird also durch diesen Strom in
+einen Eingang „hochgehoben“. Nun
+vertragen die verwendeten ICs zwar eine
+Betriebsspannung bis zu 15 V, aber der
+fließende hohe Dauerstrom zerstört
+zuverlässig die Schutzdiode im 4014. Der
+Eingang wird dauerhaft auf ‚1‘ zurückgelesen.
+Weiterhin sind alle Ausgänge zum Computer nun ebenfalls überversorgt und geben als
+‚1‘ ihre volle, und in diesem Fall überhöhte,
+Betriebsspannung an den Computer ab. Die
+ICs im Computer vertragen das keinesfalls
+und der Computer nimmt Schaden.
+Der schädliche Effekt auf den angeschlossenen Computer ist der gleiche, wenn versehentlich COM mit der Netzteilspannung
+verbunden wird.
+Durch eine derartige „Misshandlung“ kann
+auch der 7805 Schaden leiden und seine
+Regelfunktion für die 5 V verlieren. Meist
+kommt dann dauerhaft die volle Netzteilspannung auf die 5 V-Versorgung. Auch
+hier wird der angeschlossene Computer
+beschädigt.
+Bei der Verkabelung jedes Modells ist
+daher immer besonders sorgfältig zu
+arbeiten.
+Bei den CVK-Versionen sind für die Schaltereingänge noch LEDs zur Statusanzeige
+vorgesehen. Um die an den Eingängen
+angeschlossenen Schalter bzw. entsprechende Elektronik nicht anders zu
+belasten als ohne LEDs, sind eigene
+Treiberstufen dafür vorgesehen (Abb. 27).
+
+
+Handelt es sich bei der Überspannungsquelle aber um ein leistungsfähiges Netzteil, so wird über diese Schutzstruktur ein
+Strom vom Eingang „In“ zur VDD-Leitung
+abfließen. Im Interface ist diese mit dem
+Spannungsregler 7805 verbunden und führt
+5 V. Der Spannungsregler ist nicht dafür
+gebaut, eine zu hohe Spannung am Ausgang
+zu reduzieren. Die Spannung auf der 5 V-
+
+Jede LED wird von einem Gatterausgang
+angesteuert. Sie leuchtet, wenn der Eingang
+per Schalter mit der Sammelschiene COM
+verbunden ist. Vorwiderstände sind
+entbehrlich, da der jeweilige Gatterausgang
+nur einen begrenzten Strom abgibt. Laut
+Datenblatt darf er 12 mA nicht überschreiten [58], [59].
+
+
+
+Im Ruhezustand liegen CLOCK auf ‚1‘,
+LOAD-IN auf ‚0‘ und der Pegel an DATAIN ist im Ruhezustand uninteressant.
+
+
+Das Schieberegister für die
+Schalter
+Das IC2 vom Typ 4014 setzt ein parallel
+eingelesenes Datenwort
+(ein Byte,
+D7…D0) in einen seriellen Datenstrom um.
+Es ist damit das Gegenstück zu IC4, dem
+4094 der Motorsteuerung.
+In Teil 1 haben wir schon gesehen, dass für
+diese Übertragung lediglich die 3 Leitungen
+CLOCK, DATA-IN und LOAD-IN benötigt werden. Die Schaltung zeigt Abb. 28.
+
+Die Übertragung beginnt mit einer fallenden Flanke auf CLOCK. Bereits kurz zuvor,
+zeitgleich oder unmittelbar danach wird
+LOAD-IN auf ‚1‘ geschaltet. Mit der
+nächsten steigenden Flanke an CLOCK
+wird das parallele Datenwort von den Eingängen P1 bis P8 ins Schieberegister übernommen. Die Pegel von P6…P8 stehen
+unmittelbar an den Ausgängen Q6 bis Q8
+an. Die IC-Ausgänge Q6 und Q7 werden im
+Interface nicht benutzt. LOAD-IN wird nun
+wieder auf ‚0‘ gesetzt um die gewünschte
+Schiebefunktion zu erhalten. Das Einlesen
+des Bits von DATA-IN in den Computer
+rundet die Aktion ab.
+Der Zyklus aus fallender Flanke auf
+CLOCK, steigender Flanke auf CLOCK
+und rücklesen eines Bits auf DATA-IN
+wiederholt sich für jedes weitere Bit.
+Ist das letzte Bit abgeholt, wurde das Byte
+zum Computer übertragen.
+Es ergibt sich der Impulszug gemäß
+
+Schaltereingänge
+
+Schaltereingänge
+
+Im Handbuch zum 67319 [32] (und in den
+anderen Handbüchern auch) ist der serielle
+Ablauf wie folgt angegeben:
+
+Schaltereingänge [32]
+
+Diese Sequenz ist ein kleines bisschen
+anders als die Sequenz aus dem Handbuch
+(dort sind nämlich 9 Taktimpulse für den
+gleichen Ablauf dargestellt), entspricht aber
+den Anforderungen des 4014 [55].
+Der Eingang DATA-IN* wird mit dem
+Ausgang DATA-IN eines eventuell angeschlossenen Slave-Interfaces verbunden.
+LOAD-IN wird zeitgleich an alle Slaves
+verteilt. Daher übernehmen alle Eingänge
+der Slave-Kette auch gleichzeitig die anliegenden Pegel. Auf diese Art ist sichergestellt, dass alle Eingangspegel vom exakt
+gleichen Abtastzeitpunkt stammen.
+
+Bei den Interfaces 30565 und 30567 ist
+zusätzlich noch ein Inverter in die Datenleitung geschaltet. Die Schalterzustände ‚1‘
+und ‚0‘ sind daher beim Auslesen
+vertauscht. Im Kapitel über die Analogeingänge wird auf diese Eigenheit näher
+eingegangen.
+
+Computing
+
+nichts anderes als zwei der legendären
+Timer 555 in einem Gehäuse [60]. Die
+Geschichte der Entwicklung dieses Schaltkreises und noch einiges mehr ist vom
+Designer selbst in seinem Buch beschrieben
+[61]. Zurück zur Schaltung.
+
+Schieberegister im SlaveBetrieb
+Wie das mit der seriellen Kommunikation
+im Slave-Betrieb funktioniert, hat Dirk
+Uffmann in der ft:pedia 2/2014 ausführlich
+dargestellt [4]. Der interessierte Leser sei
+daher auf diese Publikation verwiesen.
+
+Auf den Hund gekommen
+Heutzutage als Watchdog, früher auch als
+Totmann-Schaltung bezeichnet, ist es die
+Aufgabe dieses Schaltungsteils, unkontrolliert laufende Motoren abzuschalten.
+Ohne den Watchdog wäre es möglich, einen
+Schaltbefehl an die Motoren zu senden, das
+Programm zu beenden und die Motoren auf
+diese Art einfach weiterlaufen zu lassen, bis
+irgendetwas an einen Anschlag fährt,
+Getriebe überlastet werden oder sonstige
+unerwünschten Dinge passieren. Auch
+Programmabstürze werden so abgefangen.
+Es gibt heutzutage sehr hochentwickelte
+Möglichkeiten, zu erkennen, ob ein
+Programmzugriff eine gezielte Aktion
+darstellt. Der damaligen einfachen Technik
+angemessen wird lediglich die generelle
+Aktivität auf der Taktleitung CLOCK überwacht. Läuft das Programm ordnungsgemäß, werden die Schieberegister regelmäßig bedient. Läuft das Programm nicht,
+bleiben auch die Taktimpulse für die
+Schieberegister aus, so die Überlegung.
+Die Schaltung des Watchdog, Abb. 31,
+sieht zunächst unübersichtlich aus, ist aber
+doch recht einfach zu verstehen. IC6A, eine
+Hälfte eines MC3456, entspricht dem
+NE556 und noch ganz vielen weiteren ICs,
+die alle unter dem Oberbegriff 556 zusammengefasst werden können. Der 556 ist
+
+
+Zunächst entspricht die Kernschaltung aus
+IC6A, C3 und R22 der bekannten Schaltung
+der monostabilen Kippstufe des 555. Im
+Ruhezustand liegt der Ausgang Q auf ‚0‘;
+LED1 ist aus. Am Eingang TR (TRigger)
+liegt eine Spannung oberhalb 1/3 der
+Betriebsspannung, da über R19 dieser
+Knoten an 5 V liegt. Am Eingang THR
+(THRreshold) liegen nahezu 0 V an, der
+Ausgang DIS (DIScharge) ist nach GND
+durchgeschaltet und hält den Kondensator
+C3 entladen. Das Flipflop im IC ist zurückgesetzt und die Leitung CLOCK liegt auf
+‚1‘. Beide Seiten von C8 sind daher auf 5 V
+gelegt, dieser Kondensator ist entladen.
+Ebenso liegt die Leitung disable WD auf ‚1‘
+und gibt das Flipflop frei.
+
+
+
+C12 entkoppelt den internen Referenzknoten und hat keine weitere Funktion.
+R30 simuliert eine ‚1‘ auf CLOCK, wenn
+kein Computer angeschlossen ist.
+C8 überträgt nun jede Flanke auf CLOCK
+an den Eingang TR. Mit der ersten fallenden
+Flanke fällt die Spannung am Eingang TR
+(Trigger) unter 1/3 der Betriebsspannung
+und das Flipflop in IC6A wird gesetzt. Der
+Ausgang DIS wird hochohmig und C3 wird
+über R22 aufgeladen. Gleichzeitig schaltet
+der Ausgang Q auf ‚1‘, LED1 leuchtet und
+die Motoren werden freigegeben.
+Passiert nun nichts weiter, erreicht die
+Spannung am Kondensator C3, und damit
+auch am Eingang THR, nach etwa 1/2 s die
+Schaltschwelle bei etwa 2/3 der Betriebsspannung. Dadurch wird das Flipflop
+wieder in den Ruhezustand zurückversetzt,
+LED1 verlischt und die Motorausgänge
+schalten ab. DIS schaltet wieder durch und
+entlädt C3.
+Über Transistor T12 jedoch entlädt jede
+fallende Flanke von CLOCK auch den
+Kondensator C3 und die Zeit bis zum
+Erreichen der THR-Schwelle verlängert
+sich entsprechend.
+Der Fachmann spricht hier von einem
+‚retriggerbaren Monoflop‘.
+Liegt die Leitung disable WD auf ‚0‘, wird
+unverzüglich das Flipflop in den Ruhezustand zurückgesetzt, LED1 verlöscht und
+die Motoren werden abgeschaltet.
+
+
+Ohne C8 würde eine dauerhafte ‚0‘ an
+CLOCK direkt auf TR wirken und den
+Watchdog unmittelbar nach Ablauf der Zeit
+sofort wieder starten. Ein Programmabsturz
+
+kann solch einen statischen Zustand durchaus bewirken. C8 wird sich in dem Fall
+innerhalb einer sehr kurzen Zeit aufladen,
+so dass am Eingang TR die ‚1‘ anliegt
+obwohl CLOCK (noch) auf ‚0‘ steht. So
+wird verhindert, dass eine Dauer-‚0‘ auf
+CLOCK die Motoren weiterlaufen lässt.
+In Abb. 33 ist dieses Verhalten skizziert,
+allerdings sind die Zeiten nicht maßstäblich
+dargestellt.
+
+
+Auch der Watchdog ist bei allen Interfaces
+gleich aufgebaut und wurde nie verändert.
+Es gibt allerdings in der Umbauanleitung
+des Herrn Merkert einen Hinweis auf eine
+Änderung an C8 [14]. Demnach könnte es
+einige Exemplare der Interfaces mit C8 =
+1 nF anstelle 4,7 nF geben.
+Auf eine Besonderheit sei hier noch hingewiesen: Wird von der Schutzschaltung
+der diskreten Endstufen ein verbotener
+Zustand erkannt, so wird der Watchdog
+über die Leitung disable WD sofort ausgelöst. enable Motors geht daraufhin auf ‚0‘
+und sperrt die Motorausgänge. Dadurch
+verschwindet aber auch der verbotene
+Zustand und die Schutzschaltung gibt den
+WD wieder frei. Die nächste fallende
+Flanke auf CLOCK startet den Watchdog,
+die Motorausgänge werden wieder freigeben, haben aber noch den verbotenen
+Zustand gespeichert, die Schutzschaltung
+schaltet den Watchdog und damit die
+Motorausgänge sofort wieder ab. Jedes
+Mal, wenn die Ausgänge des 4094 niederohmig werden, schalten auch die diskreten
+Motorendstufen auf Kurzschluss und es gibt
+eine Stromspitze, die so lange dauert, bis
+der Watchdog erneut auf die Notabschaltung reagiert.
+
+Dieses Spiel wiederholt sich mit jeder
+fallenden Flanke auf CLOCK, bis ein neues
+Bitmuster ohne verbotenen Zustand in IC4
+gespeichert wird. Der Watchdog kann dann
+allerdings erst mit der nächsten fallenden
+CLOCK-Flanke erneut starten und die
+Motoren endlich freigeben.
+
+Computing
+
+borgen. Das entsprechende Steuerprogramm wird daher diese internen I/OAnschlüsse bedienen, um die Widerstandswerte zu ermitteln.
+Gibt es eine Überspannung auf einen der
+Eingänge EX oder EY, kann aus dem Apple
+ganz schnell ein Bratapfel werden.
+
+Die Analogeingänge
+Wenn man mal vom Interface für den Apple
+(30563) absieht, wird auch für die Abfrage
+der Potis an den Analogeingängen EX und
+EY jeweils eine Hälfte eines 556 in der
+beschriebenen monostabilen Applikation
+verwendet. Die Schaltung darf diesmal
+allerdings ein bisschen einfacher sein.
+Im Handbuch zum 67319 ist diese Übersicht für die Signale der analogen Eingänge
+angegeben:
+
+
+Man sieht in Abb. 34 schon, dass es drei
+unterschiedliche Verfahren gibt, die
+verschiedenen Computern zugeordnet
+werden. Dabei ist die Liste der Computer
+etwas zu kurz und ältere Modelle wie der
+Acorn B sind gar nicht mehr aufgeführt.
+Außerdem verwenden einige CommodoreModelle das Schema „Drucker“.
+
+
+30561
+Beim nächsten Interface, dem 30561 für die
+Commodore CBM 4xxx / CBM 8xxx und
+vermutlich auch den VC20, und auch allen
+weiteren Interfaces kommt IC7 hinzu. Auch
+hier ist es eine Hälfte eines 556 in der
+Applikation als monostabile Kippstufe. Die
+Funktion beider Kanäle für EX und EY ist
+gleich, so dass anhand EX die Funktion
+erklärt wird, siehe Abb. 36.
+
+30563
+Fangen wir mal mit dem 30563 für den
+Apple II an. Beim Apple II sind die
+Monoflops schon im Computer integriert,
+und so sind im Interface 30563 nur die Zeitglieder vorhanden, an die die Potis
+angeschlossen sind. Die Knoten POTI_X
+und POTI_Y sind direkt mit dem Innenleben des Apple verbunden.
+Der Ablauf ist an sich der gleiche wie mit
+dem 556, aber im Computer selbst ver-
+
+
+Von der Beschreibung des Watchdog ist die
+Funktion eines monostabilen Multivibrators
+bereits bekannt, hier sind allerdings keine
+Zusätze für den Retrigger oder die Sperre
+gegen Dauer-‚0‘ auf der Leitung
+TRIGGER-X nötig. Daher ist die Schaltung
+auf das nötige Minimum reduziert.
+C14 puffert den internen Referenzknoten.
+
+
+
+Am Eingang TRIGGER-X liegt im Ruhezustand eine ‚1‘, Der Ausgang PULSE liegt
+auf ‚0‘ und der Kondensator C6 wird via
+DIS entladen. Durch R16 und das
+angeschlossene Poti fließt ein Strom von bis
+zu 10 mA.
+Das Computerprogramm zieht nun gezielt
+und für einige wenige Mikrosekunden den
+Eingang TRIGGER-X auf ‚0‘. Dies wiederum löst das Monoflop aus, der Ausgang
+PULSE geht auf ‚1‘, DIS wird hochohmig
+(das entspricht einem geöffneten Schalter)
+und C6 wird über R16 plus das Poti aufgeladen. Dabei bestimmt der Widerstand
+des Potis zusammen mit R16 die Zeitdauer,
+bis die Spannung am Pin THR die kritische
+Schwelle erreicht und das Monoflop
+ablaufen lässt. PULSE geht wieder auf ‚0‘
+und der Kondensator wird über DIS wieder
+entladen. Das Computerprogramm misst
+die Zeitdauer während der PULSE auf ‚1‘
+liegt. Der Startzeitpunkt liegt dabei in der
+Hand des Programmierers.
+
+Widerstand nicht höher als 5 kΩ) mit COM
+zu verbinden.
+Für das Poti an EY gibt es eine identische
+Schaltung mit der zweiten Hälfte von IC7.
+Um nun aber nicht für jedes Poti einen
+eigenen Impulseingang am Computer zu
+belegen, teilen sich die beiden Monoflops
+eine gemeinsame Rückleitung. Die
+komplette Schaltung ist in Abb. 37 dargestellt.
+Die Sammelleitung zum Computer hat je
+nach Unterlagen unterschiedliche Namen.
+MMV_PULSES wird einheitlich für die
+weiteren Beschreibungen verwendet.
+
+Für drei ausgewählte Potistellungen
+ergeben sich diese typischen Zeitdauern:
+PotiWiderstand
+/ kΩ
+
+Pulsdauer
+/ µs
+
+
+
+2,5
+
+1530
+
+
+2820
+
+Tab. 5: Typische Impulsdauern 30561
+
+Bedingt durch Bauteiltoleranzen weichen
+die tatsächlich erzeugten Pulslängen von
+den angegebenen Werten ab.
+Ist an EX nichts angeschlossen, fließt kein
+Ladestrom zu C6. Lediglich die Leckströme
+aus IC7B laden C6 sehr langsam auf und der
+erzeugte Impuls dauert extrem lange. Daher
+wird in der Anleitung empfohlen,
+unbenutzte Analogeingänge immer mit
+einer Drahtbrücke (oder zumindest einem
+
+
+
+Weil die Ausgänge Q des verwendeten 556
+sowohl ‚0‘ als auch ‚1‘ niederohmig
+treiben, kommt es bei unterschiedlichen
+Ausgangspegeln zu einem Kurzschluss. Der
+wird dadurch vermieden, dass jeweils eine
+Diode (D22, D23) in Reihe zum Ausgang
+liegt. Dadurch kann nur eine ‚1‘ vom jeweiligen Ausgang Q aktiv zur Sammelschiene
+gereicht werden. Liegt der Ausgang auf ‚0‘
+
+
+Computing
+
+ist er von der Sammelschiene entkoppelt.
+Liegen alle Ausgänge Q auf ‚0‘ sorgt R11
+dafür,
+dass
+die
+Sammelschiene
+MMV_PULSES ebenfalls die ‚0‘ führt.
+
+Oszillator verschaltet, Abb. 39. Diese
+Schaltung wird auch als astabile Kippstufe
+bezeichnet.
+
+Diese Schaltung der Ausgänge auf die
+Sammelschiene gemäß Abb. 38 nennt sich
+Wired-OR.
+
+
+Die dazu gehörende logische Verknüpfung
+ist in Tab. 6 aufgeführt.
+Alternativ kann natürlich auch ein ‚echtes‘
+OR-Gatter Verwendung finden; in den
+Interfaces mit diskreten Motorendstufen ist
+die Sammelschiene mittels eines 4071
+entsprechend gebaut.
+
+A
+
+B
+
+Y
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tab. 6: OR-Kombinatorik
+
+Es dürfte sofort klar sein, dass durch die
+OR-Verknüpfung immer nur ein Monoflop
+aktiv sein kann. Über den Programmablauf
+ist jedoch ebenso klar definiert welches der
+beiden Monoflops ausgelöst wurde und
+gerade die Pulsdauer bestimmt.
+30564
+Die nächste Erweiterung kommt mit dem
+Interface 30564 für den Acorn B. Die noch
+freie Hälfte des IC6, IC6B, ist als Rechteck-
+
+
+C11 puffert den internen Referenzknoten an
+CV (Control Voltage).
+Mit einer ‚0‘ auf der Leitung
+MMV_PULSES wird der Oszillator über
+den Eingang R (Reset) angehalten. Der
+Ausgang Q liegt auf ‚0‘ und Ausgang DIS
+entlädt den Kondensator C7 über R12 nach
+GND. Beide Eingänge TR und THR liegen
+damit unterhalb der Schaltschwelle bei 1/3
+der Betriebsspannung.
+Sobald MMV_PULSES auf ‚1‘ springt, ist
+der Oszillator freigegeben. Weil TR unter
+der Schaltschwelle liegt, springt das Flipflop im 556 um; Q geht auf ‚1‘, DIS wird
+hochohmig, C7 lädt sich über die Reihenschaltung R12 und R17 auf. Erreicht die
+Spannung über C7, und damit der Steuereingang THR, 2/3 der Betriebsspannung,
+schaltet das Flipflop zurück. Q geht auf ‚0‘,
+DIS schaltet wieder auf GND durch, und C7
+entlädt sich, allerdings nur über R12. Unterschreitet die Spannung die Schaltschwelle
+von TR, beginnt der Zyklus erneut. Die
+erzeugten Impulse stoppen sofort, wenn
+MMV_PULSES wieder auf ‚0‘ wechselt.
+
+
+
+Wegen des Schaltverhaltens ist der erste
+erzeugte Impuls etwas länger. Nominal liegt
+die Frequenz der abgegebenen Impulse bei
+etwa 85 kHz, ist aber von den Bauteiltoleranzen abhängig. Abb. 40 skizziert die
+Abläufe in der Schaltung.
+
+und einen Transistor invertiert weiterreicht.
+
+
+Abhängig von der Zeitdauer des ‚1‘-Impulses auf MMV_PULSES werden nun unterschiedlich viele Taktimpulse auf der
+Leitung COUNT-IN2 abgegeben. Das
+Computerprogramm, eventuell unterstützt
+von einem Hardware-Zähler, muss nun
+nicht die Zeitdauer der Impulse ausmessen,
+sondern es zählt die Anzahl der ankommenden Taktimpulse. Je höher der Widerstandswert des Potis ist, umso mehr Taktimpulse
+werden erzeugt. Tabelle Tab. 7 zeigt
+typische Werte, die wegen der Bauteiltoleranzen allerdings auch abweichen
+können.
+PotiWiderstand
+/ kΩ
+
+Impulsanzahl
+
+
+
+2,5
+
+
+
+
+Tab. 7: Typische Impulsanzahlen
+
+Je nach benutztem Dokument wird der Ausgang COUNT-IN2 auch als COUNT_IN
+oder Z2 bezeichnet. Die Funktion ist jeweils
+identisch.
+30562
+Beim Interface 30562 sind alle diese
+Schaltungsteile auch vorhanden, es funktioniert also prinzipiell wie das Interface für
+den Acorn B. Zusätzlich ist allerdings noch
+eine Baugruppe vorhanden, die die erzeugten Zählimpulse Z2 über ein AND-Gatter
+
+
+
+Liegt an einem der Eingänge von IC3A,
+LOAD-IN oder Z2, eine ‚0‘ so ist auch am
+Ausgang des Gatters eine ‚0‘ zu sehen und
+der Transistor sperrt. Z1 wird durch R18 zur
+‚1‘ hochgezogen. Nur wenn LOAD-IN auf
+‚1‘ liegt, kommen die Zählimpulse auf Z2
+auch zum Ausgang des Gatters durch.
+Immer wenn an Z2 eine ‚1‘ liegt, ist Z1 auf
+‚0‘ und umgekehrt. Der Transistor macht
+aus dem AND-Gatter ein NAND-Gatter.
+Die entsprechenden Tabellen wurden schon
+in Teil 2 der Reihe vorgestellt (Tab. 3,
+Tab. 4) [54].
+Es ist nicht unbedingt die feine Art, die
+Basis des Transistors direkt mit dem Gatterausgang anzusteuern, weil dann ein sehr
+hoher Basisstrom fließt. Der Kollektorstrom wird normalerweise durch R18 auf
+einen geringeren Wert begrenzt, und ein
+derart hoher Basisstrom erscheint völlig
+unnötig.
+Der Sinn und Zweck dieser Schaltung liegt
+im Dunkeln. Gemäß den Handbüchern wird
+LOAD-IN nur zu Beginn des seriellen
+Transfers kurz auf ‚1‘ gelegt und steht sonst
+immer auf ‚0‘. Wegen dieser ‚0‘ kommen
+allerdings keine Impulse auf Z1 durch, die
+Potistellungen können so nicht erfasst
+werden. Eventuell wird bei den Programmen der Commodore-Computer LOAD-IN
+hier gezielt manipuliert um die Impulse zum
+Computer sperren zu können.
+
+30565 und 30567
+Abgesehen vom Anschluss an den Computer sind diese beiden Interfaces baugleich.
+
+Computing
+
+CLOCK erscheint dann dieser ‚0‘-Pegel
+vom letzten SI am Ausgang von IC2.
+
+Die Analogeingänge werden mittels der
+gleichen Schaltung wie im 30561 abgefragt,
+siehe Abb. 37.
+Weil aber die Schneider Computer, als
+damaliges Maß der Dinge, nur einen
+einzigen Eingang BUSY am CentronicsPort zur Verfügung stellen, muss die Rücklesung der Schaltereingänge und der
+Impulsdauern über eben diese eine gemeinsame Leitung erfolgen. Beim IBM-PC gibt
+es zwar mehrere Eingangssignale vom
+Drucker, das wird aber leider nicht vom
+Interface 30567 unterstützt.
+Um nun die Impulsdauern der Monoflops
+mit den Daten aus dem Schieberegister zu
+vereinen, wird das Wired-OR mit einer
+zusätzlichen Diode (D27) um einen
+Eingang erweitert, so wie in Abb. 38 schon
+vorweggenommen. Die Analogabfrage
+wird wie sonst auch mit TRIGGER-X und
+TRIGGER-Y gestartet, die Impulslänge
+wird auf der gleichen Leitung gemessen,
+wie auch die Daten von den Schaltern seriell
+eingelesen werden. Abb. 42 gibt eine übersichtliche Darstellung.
+Um nun jeweils den gewünschten Ausgang
+per Sammelschiene abfragen zu können, ist
+es unbedingt nötig, die anderen beiden Ausgänge sicher auf ‚0‘ zu halten. Und genau
+hier liegt das Problem. Solange wenigstens
+eines der Monoflops aus IC7 oder das
+Schieberegister IC2 eine ‚1‘ an seinem Ausgang führt, wird auch die Sammelschiene
+DATA-IN eine ‚1‘ abgeben.
+Das Schieberegister IC2 ist hier relativ
+unproblematisch. Normalerweise liegt sein
+serieller Eingang SI über einen Widerstand
+oder eine Drahtbrücke auf ‚0‘-Pegel. Oder
+aber er ist an einem Slave angeschlossen.
+Das Computerprogramm muss dann
+entsprechend 8 Bits mehr von den Interfaces abholen. Mit einem extra Impuls auf
+
+
+Aber nun machen sich offene Eingänge EX
+und EY extrem unangenehm bemerkbar!
+Wie schon erklärt, verlängert sich die
+Impulsdauern, also die Zeitdauer der ‚1‘ auf
+einem der Q-Ausgänge von IC7, proportional zum Widerstand zwischen EX bzw. EY
+und COM. Ein offener Eingang entspricht
+einem unendlich hohen Widerstandswert
+und der Timer läuft ewig. In der Praxis gibt
+es Leckströme, und irgendwann ist der
+jeweilige Timer dann doch mal abgelaufen.
+Diese Zeitdauer wird allerdings jenseits
+mehrerer Sekunden, manchmal im Bereich
+über einer Minute liegen. Im Computerprogramm ist üblicherweise ein Timeout
+eingebaut, der die Zeitdauermessung
+begrenzt und das Programm dann abbricht.
+Während einer der Timer (Monoflop) ausgelöst ist und läuft, ist allerdings keine
+Abfrage der Schaltereingänge möglich,
+denn vom noch laufenden Timer wird die
+
+
+
+Sammelschiene auf ‚1‘ festgehalten. Die
+Schaltzustände aus IC2 haben über das
+Wired-OR keine Chance. Und es ist nicht
+möglich, einen noch laufenden Timer
+gezielt vom Programm aus anzuhalten. So
+hilft auch ein Neustart des Programms
+nichts, denn die Schalterzustände werden
+vom laufenden Timer immer noch maskiert.
+Nur genug Wartezeit, Spannungsausfall am
+Interface oder ein Widerstand an EX bzw.
+EY helfen hier noch.
+Erstmals in den Interfaces 30565 und
+30567, sowie dann später auch bei 30566,
+39319, 30520 und 66843, ist genau deswegen an jedem Analogeingang ein Widerstand von je 100 kΩ vorgesehen. Abb. 43
+zeigt die Ergänzung. Im Vergleich mit
+R33 wurde ergänzt.
+Ist nun kein Widerstand an EX angeschlossen, so fließt doch ein minimaler Ladestrom
+über die Reihenschaltung aus R33 und R16
+in den Kondensator C6. Der bekannte
+Ablauf spielt sich auch hier ab, die Zeitdauer des Impulses liegt allerdings bei etwa
+50 ms. Tab. 8 gibt die erweiterte Übersicht.
+
+
+R33, und auch sein Kollege R34 an EY,
+sind auf einen Kompromiss hin ausgewählt.
+Sind sie zu hochohmig, verlängern sich die
+Zeitdauern unerwünscht, sind sie zu niederohmig, verändern sie wegen der Parallelschaltung zum Poti dessen lineare Kennlinie spürbar.
+Vergleicht man die Werte aus Tab. 8 mit
+denen aus Tab. 5, fällt der Einfluss von R33
+beziehungsweise R34 durchaus auf.
+
+PotiWiderstand
+/ kΩ
+
+Pulsdauer
+/ µs
+
+
+
+2,5
+
+1500
+
+
+2700
+
+⁄
+
+51900
+
+Tab. 8: Typische Impulsdauern 30565 / 30567
+
+Nun dürfte ganz klar sein, warum in einigen
+Anleitungen ausdrücklich darauf hingewiesen wird, nicht benutzte Analogeingänge mit einer Drahtbrücke an COM zu
+legen; oder irgendeinen Widerstand bis
+5 kΩ als Abschluss zu verwenden.
+Ein letzter Schaltungsteil ist jetzt noch
+offen. Da ist in Abb. 42 zunächst IC3A, das
+AND-Gatter mit den verbundenen Eingängen. Weil beide Eingänge so immer den
+gleichen Zustand haben, reicht es den Pegel
+der Sammelschiene einfach nur an seinen
+Ausgang weiter. Immer wenn dort eine ‚1‘
+anliegt, wird der Transistor durchgesteuert,
+und die Leitung zum Computer, DATA-IN,
+geht auf ‚0‘. Liegt am Ausgang von IC3A
+eine ‚0‘, ist der Transistor gesperrt und
+DATA-IN leitet ‚1‘ an den Computer.
+Warum der Transistor als Inverter
+zwischengeschaltet wurde, ist nicht nachzuvollziehen. Laut Centronics-Standard
+(IEEE 1284) wird die Leitung BUSY im
+Computer nicht nochmals invertiert [62].
+Vermutlich war es aber die preisgünstigste
+Möglichkeit einen leistungsschwachen
+CMOS-Ausgang an einen TTL Eingang im
+Computer anzubinden.
+30566, 39319, 30520 und 66843
+Die Interfaces 30566, 39319, 30520 und
+66843 können mit ihrer universellen
+Steckerbelegung jedes der vorgenannten
+Interfaces ersetzen, die entsprechende
+Verdrahtung vorausgesetzt. Allerdings
+wurden erst 30520 sowie 66843 als
+„Universal-Interface“ vermarktet.
+
+
+Computing
+
+Einzig der spezielle Ausgang Z1 des 30562
+ist nicht vorhanden. Es ist, wie schon
+ausgeführt, völlig unklar, wofür der genau
+benötigt wurde.
+
+Quellen
+[1]
+
+Dirk Fox: I²C mit TX und Robo Pro –
+Teil 1: Grundlagen. ft:pedia 3/2012,
+S. 32
+
+Impulsanzahl
+
+[2]
+
+Dirk Fox: I²C mit dem TX(T) –
+Teil 12: Temperatursensor. 4/2015, S. 44
+
+[3]
+
+Jens Lemkamp: Parallel-Interface
+durch Arduino gesteuert (1). 1/2014, S. 24
+
+[4]
+
+Dirk Uffmann: Nutzung des
+Universal-Interfaces 30520 als PortErweiterung an einem
+Mikrocontroller. ft:pedia 2/2014,
+S. 30
+
+[5]
+
+Dirk Uffmann: Altes FT UniversalInterface (Parallelschnittstelle)
+gesteuert durch AVR
+Mikrocontroller.
+
+[6]
+
+Thomas Kaiser: C-64 Interface an
+RoboPro.
+
+[7]
+
+Forumsdiskussion: I²C clock
+stretching am TXT.
+
+[8]
+
+Forumsanfrage an fischertechnik:
+Unterstützung von i2c clock
+stretching beim TXT controller?.
+
+Die Leitung CLOCK wird für die Abfrage
+der Analogeingänge eigentlich nicht benötigt. Der in Abb. 34 dargestellte Impuls
+wirkt auf den Watchdog und verlängert
+dessen Ablaufzeit erneut um 0,5 s. Zusätzlich stellt er bei den Interfaces 30565 und
+30567 sicher, dass der Ausgang von IC2
+den nötigen ‚0‘-Pegel einnimmt um die
+Abfrage der Pulslängen zu ermöglichen.
+
+[9]
+
+Erneute Forumsanfrage an fischertechnik: Unterstützung von i2c clock
+stretching beim TXT controller?.
+
+Und so geht es weiter
+
+[12] Klaus Merkert: Zwei Schaltpläne.
+
+Im nächsten Teil der Artikelserie wird der
+I²C-nach-Interface-Adapter V. I. P. vorgestellt.
+
+[13] Holger Howey: Kombi-Schaltplan.
+
+PotiWiderstand
+/ kΩ
+
+Pulsdauer
+/ µs
+
+
+
+
+2,5
+
+1500
+
+
+
+2700
+
+
+⁄
+
+51900
+
+4409
+
+Tab. 9: Analogeingänge ‚Universal‘
+
+Die Analogeingänge sind grundsätzlich mit
+jeweils 100 kΩ gegen vergessene Potis
+bzw. Drahtbrücken gesichert. Zum
+Abschluss zeigt Tab. 9 noch die typischen
+Zeiten und Impulsanzahlen dieser Interfaces.
+Die Unterschiede zu den Interfaces ohne
+R33/R34 dürften keine wahrnehmbare Auswirkung auf das angeschlossene Modell
+haben, wenn man zum Beispiel am C64 sein
+30562 durch ein 66843 ersetzt.
+Alle Zusammen
+
+[10] Forumsdiskussion: TXT und clockstretching.
+[11] J. P. M. Steeman: Robotik mit dem
+Homecomputer. Aachen: Elektor,
+1987
+
+[14] Klaus Merkert: Umbau Apple IIInterface auf PC.
+[15] Ulrich Müller: Übersicht der
+Interfaces.
+
+
+
+
+[16] fischertechnik-Datenbank: 30561
+(Interface CBM).
+
+[36] Larry Davis: PC Parallel Port PinOut.
+
+[17] fischertechnik-Datenbank: 30562
+(Interface Commodore).
+
+[37] CPC Wiki: CPC Printerport.
+
+[18] fischertechnik-Datenbank: 30563
+(Interface Apple).
+
+[38] fischertechnik-Datenbank: 32680
+(Stecker-Netzgerät 220V:6,8V 1,5A
+Computing Experimental).
+
+[19] fischertechnik-Datenbank: 30564
+(Interface Acorn).
+
+[39] alldatasheet: Datenblatt 1N4001
+(NXP).
+
+[20] fischertechnik-Datenbank: 30565
+(Interface Schneider).
+
+[40] Texas Instruments Incorporated:
+Datenblatt 7805.
+
+[21] fischertechnik-Datenbank: 30567
+(Interface IBM).
+
+[41] René Trapp: V. I. P. – Teil 1. 2/2017, S. 63
+
+[22] fischertechnik-Datenbank: 30566
+(Interface Centronics).
+
+[42] alldatasheet: Datenblatt BD135
+(NXP).
+
+[23] fischertechnik-Datenbank: 39319
+(Centronics Schul-Interface CVK).
+
+[43] alldatasheet: Datenblatt BD136
+(NXP).
+
+[24] fischertechnik-Datenbank: 66843
+(Universal Schul-Interface CVK).
+
+[44] alldatasheet: Datenblatt BC547
+(NXP).
+
+[25] fischertechnik-Datenbank: 30520
+(Interface Universal).
+
+[45] alldatasheet: Datenblatt TLE4201
+(Siemens).
+
+[26] Fischertechnikclub Nederland: Twee
+robotarmen om je fantasie te
+prikkelen. Clubblad 2/1992, S. 6
+
+[46] Stefan Falk: Motorsteuerungen
+(Teil 1). ft:pedia 1/2011, S. 4
+
+[27] Gerhard Bader: Fischer-Technik und
+Computer: Programme für Atari ST,
+Commodore 64/128, Schneider CPC,
+IBM PC u. Kompatible. CHIPSPECIAL 1987, Vogel Verlag,
+Würzburg, 1987
+[28] CPC Wiki: Foto eines 30562.
+[29] CPC Wiki: Foto eines 30567.
+[30] C. Hehr: Platine eines 30566.
+fischertechnik community.
+[31] Fischertechnikclub Nederland:
+Computing Dozen.
+[32] fischertechnik: CVK-fischertechnik
+Schul-Interface (67319).
+[33] C64 Wiki: C64 Userport.
+[34] A2wiki: Apple II Game-IO.
+[35] Chris Whytehead: Acorn Pinouts.
+
+[47] Dirk Uffmann: PWMMotorsteuerung am fischertechnikUniversal-Interface. ft:pedia 4/2015,
+S. 30
+[48] Wikipedia: Induktion.
+[49] Wikipedia: Freilaufdiode.
+[50] alldatasheet: Datenblatt 1N4148
+(Vishay).
+[51] alldatasheet: Datenblatt 4011 (NXP).
+[52] alldatasheet: Datenblatt 4081 (NXP).
+[53] alldatasheet: Datenblatt 4094 (NXP).
+[54] René Trapp: V. I. P. – Teil 2. 3/2017, S. 57
+[55] alldatasheet: Datenblatt 4014 (NXP).
+[56] fischertechnik-Datenbank: 39485
+(Interface Commodore Computer).
+
+[57] U. Tietze, C. Schenk: HalbleiterSchaltungstechnik. Berlin,
+Heidelberg, New York: Springer,
+1993, 10. Auflage, S. 215
+[58] alldatasheet: Datenblatt 4050 (NXP).
+
+Computing
+
+[60] alldatasheet: Datenblatt 556 (ON).
+[61] H. Camenzind: Designing Analog
+Chips.
+[62] Wikipedia: IEEE_1284.
+
+[59] alldatasheet: Datenblatt 4071 (NXP).
+
+Nächste Seite: 19,7 m lange „Tischtennisball-Weitergabemaschine“ aus fischertechnik
+auf dem 2. fischertechnik-Tag der fischertechnik-AGs Karlsruher Grundschulen am 08.07.2017
+
+
+

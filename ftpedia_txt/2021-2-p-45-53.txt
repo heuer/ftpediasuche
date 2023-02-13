@@ -1,0 +1,334 @@
+
+Modell
+
+Modell
+
+Großprojekt Seilbahn (Teil 2): Erste Elemente
+Tilo Rust
+Diese Serie begleitet das Großprojekt „Kuppelbare Einseilumlaufbahn/Doppelmayr (10MGD)“ im Fördertechnik-Museum Sinsheim von Anfang bis zur Fertigstellung und Ausstellung
+auf der BUGA 2023 in Mannheim. In dieser Folge zeigen wir die ersten Ergebnisse beim Bau.
+Zu den Kernelementen einer Seilbahn gehören die Gondeln mit Klemme, die Rollenbatterien auf den Stützen und die Seilscheiben – das sind die großen Räder, um welche
+das Seil in den Stationen geführt ist. Diese
+Elemente sind nicht nur in der Form nachzubauen, sondern in der Dimension unseres
+1:10-Modells besonders stabil zu gestalten.
+Hinzu kommt, dass sie präzise gefertigt
+werden müssen, damit der Betrieb ohne
+ständige Eingriffe funktioniert und die Zuverlässigkeit über Monate des täglichen Betriebes gewährleistet ist. Schließlich soll die
+
+Seilbahn auf der BUGA23 jeden Tag von
+morgens bis abends durchgehend fahren –
+monatelang.
+Die Station in Abb. 1 wird von Doppelmayr/Garaventa gebaut und ist eine kuppelbare Einseilumlaufbahn (10-MGD), die
+Station eine D-Line mit Medienfassade.
+Diese Seilbahn werden wir im Maßstab
+1:10 aus fischertechnik im FördertechnikMuseum Sinsheim bauen und hoffentlich
+dort ausstellen.
+
+Quelle: Doppelmayr Seilbahnen GmbH [5], mit freundlicher Genehmigung.
+
+
+
+Gondel
+Schmuckstück einer jeden Seilbahn sind die
+Gondeln. Auf der BUGA23 in Mannheim
+werden diese von der Firma CWA [3] stammen und die Bezeichnung OMEGA V-10
+tragen. Dankenswerterweise haben wir von
+CWA die exakten Pläne der Gondeln erhalten, so dass wir bis auf wenige Millimeter
+an den Maßstab 1:10 herankommen konnten. Unsere Modelle besitzen aktuell noch
+weder Boden, Seiten noch Türen – diese
+müssen erst aus Kunststoff gefertigt werden, um später dem edlen Look & Feel zu
+entsprechen.
+Am Seil gehalten werden die Gondeln von
+den Klemmen. Wir haben diese nach dem
+Vorbild der Totpunktklemmen von Doppelmayr gebaut. Dabei stoßen wir an die Machbarkeitsgrenze mit fischertechnik. Sicher
+wäre es möglich, die Klemmen auch pur,
+also aus Originalteilen herzustellen, aber
+
+nicht in diesem Maßstab, dieser Zuverlässigkeit und mit diesen Eigenschaften für einen Dauerbetrieb. Aus diesem Grund mussten wir hier Teile im 3D-Druck herstellen.
+Im endgültigen Modell werden sogar Komponenten aus Alu gefräst. Diese Klemmen
+werden mit dem rückwärtigen Hebel bei
+Einfahrt in der Station geöffnet, das Seil
+nach unten weggeführt und die Gondel abgebremst, sodass Passagiere sicher und
+komfortabel aus- und einsteigen könnten.
+Auch die Türen werden mit einem weiteren
+Hebel und einem Bowdenzug geöffnet und
+geschlossen. Hierbei setzt uns die Miniaturisierung mit fischertechnik abermals Grenzen. Auch diese Mechanik kann zwar mit
+Originalteilen gebaut werden, aber nicht so
+klein, kompakt und leicht wie mit 3DDruckteilen. Schließlich steht nicht viel
+Raum für die Mechanik zur Verfügung und
+das Gewicht beeinflusst den Bau von Seilscheibe und Rollenbatterien.
+
+
+
+Modell
+
+Die Bauanleitung und die ft-Designer-Datei
+stehen bei uns zum Download bereit. Wir
+suchen außerdem Helfer, die nach diesen
+weitere 25 Gondeln fertigen können (Bauteile werden natürlich gestellt). Vom ersten
+Entwurf bis zur finalen Version zeichnet
+sich Michael Sengstschmid aus.
+Die erste Version (v1 links oben) war schon
+nicht schlecht und hatte bereits funktionierende Türen. Allerdings stimmten die Maße
+nicht mit dem Original von CWA überein.
+Dennoch konnten wir damit Bauplanungen
+durchführen (oben Mitte) und schließlich
+eine leichtere Version v2 (unten rechts) erstellen. Doch erst nachdem wir Originalbilder und Konstruktionszeichnungen erhielten (rechts oben und unten Mitte; Quelle:
+CWA, mit freundlicher Genehmigung)
+konnten wir die Version v3_1 (links unten)
+bauen. Sie weicht nur wenige Millimeter
+vom Maßstab 1:10 ab.
+
+Seilscheibe
+Das absolute Kernstück einer Seilbahn ist unscheinbar. Seilscheibe nennt der
+Fachmann das „große
+Rad“, um welches sowohl
+bei kuppelbaren Einseilumlaufbahnen (wie unserer 10-MGD) als auch bei
+Schleppliften, aber auch
+bei großen Pendelbahnen
+das Zugseil geschlungen
+ist. Sie muss zum einen
+das Seil spannen, zum anderen antreiben. Die Seilscheibe ist absolut sicherheitskritisch und wird bei
+den echten Anlagen mehrfach überdimensioniert,
+perfekt gefertigt und ständig geprüft. Auch in unserem 1:10 Modell ist sie
+kritisch.
+
+später mit Türen und Fenstern aus Kunststoff ein Gewicht von ca.
+1,5 kg. Gut erkennbar ist auch die Totpunktklemme oben. Etwa 25
+Stück werden auf der Förderlänge von 30 m (72 m Seillänge) im Abstand von ca. 3 m fahren.
+
+
+
+(Michael Sengstschmid)
+
+Auf ihr lastet nicht nur eine statische Spannkraft von 500 N (entsprechend einem
+Spanngewicht von 50 kg), sie ist auch jeden
+Tag stundenlang in Betrieb und muss trotz
+der Stöße, die auf sie wirken, bis auf wenige
+Millimeter genau in der Spur laufen, ohne
+sich mit der Zeit zu verziehen. Ein Bruch
+wäre fatal. Nicht nur, weil das Modell Schaden nimmt, sondern auch, weil das Seil fallen und die Gondeln auf unsere Besucher
+stürzen könnten.
+Aus diesem Grund haben wir die Seilscheibe so konstruiert, dass sich keine der
+Zapfenverbindungen verschieben kann oder
+gar Teile herausfallen könnten. Um die Stabilität und Fertigungsgenauigkeit nachzuweisen, wurden Test- und Messstände konstruiert und die Abweichungen dokumentiert. Ein Video darüber wird kurz nach Erscheinen dieser ft:pedia auf unserem YouTube-Kanal [8] zu sehen sein. Die Fertigungsgenauigkeit liegt bei ±2 mm Höhenschlag und ±2,5 mm Seitenschlag (beim
+Fahrrad „Achter“ genannt). Selbst bei Volllast verzieht sich die Seilscheibe in diesen
+Tests auch nach zehn Tagen nicht mehr als
+±1 mm. Mit Hilfe einer Neoprenauflage erreichen wir eine Traktion von mindestens
+100 N am Seil.
+
+
+Alle diese Anforderungen zeigen: Wir beschreiten hier mit fischertechnik Dimensionen, die bei Erfolg zeigen werden, was dieses „Spielzeug“ alles kann.
+Eine Herausforderung wartet allerdings
+noch auf uns: Wir haben die Seilscheibe in
+unserem Montage- und Teststand senkrecht
+stehen. Im Modell muss sie aber waagerecht
+unter einem Schlitten hängen und in der Antriebsstation über die Achse vom Motor gedreht werden. Sie wird also einseitig hängend gelagert. Hierzu wird die aktuelle
+Nabe mit 7-mm-Achse noch durch eine größere ersetzt. In den weiteren Ausgaben der
+ft:pedia werden wir darüber noch berichten.
+Die Seilscheibe wurde von Michael Sengstschmid konstruiert, von Tilo Rust erweitert
+und von Ralf Geerken verriegelt. Sie besteht aus ca. 1.000 Einzelteilen und ist so
+kompliziert zu bauen, dass wir davon abgesehen haben, eine komplette Bauanleitung
+zu erstellen. Die ft-Designer-Datei ist dennoch frei verfügbar. Das Video über die
+Seilscheibe auf unserem YouTube-Kanal
+zeigt nicht nur die Funktion und Konstruktion, sondern auch den genauen Test.
+
+
+Modell
+
+
+auf dem Montagegestell
+
+Die Seilscheibe wird später waagerecht in
+den Stationen laufen und das 6-mm-Stahlseil (in Abb. 5 bereits eingehängt) spannen
+und antreiben. Der innere Kranz ist mit
+Zahnstangen besetzt. Dieser dient in der
+Talstation später für den Notantrieb. Sein
+Höhenschlag darf daher nicht mehr als
+1 mm betragen. Zur Stabilisierung trägt er
+nicht bei – ganz im Gegenteil, mit Hilfe von
+in den Profilen eingeschobenen Stangen
+stützt er sich am äußeren Kranz ab. Am unteren Rand ist die Messeinrichtung eingehängt, mit der wir die Spurgenauigkeit und
+Verformungen unter Belastung messen und
+dokumentieren können.
+Der Aufbau der Scheibe ist also ganz schön
+kompliziert – oder raffiniert, wie man es betrachtet. Ralf Geerken hat die Teile der Seilscheibe so gegeneinander verriegelt, dass
+kein Bauteil herausfallen kann. Insgesamt
+sind die erforderlichen über 1.000 Teile
+ohne Modifikation oder Klebstoff verbaut
+(mit Ausnahme des Zahnkranzes; hier wurden acht Teile gekürzt).
+
+
+Die Messeinheit zeigt Abb. 8: Rechts ist im
+Kardangelenk der Fixpunkt. Über die lange
+Stange, die genau in der Spur der Seilscheibe läuft und an der Kontaktstelle (nicht
+sichtbar) auf 6,1 mm erweitert wurde – das
+entspricht dem Seildurchmesser – wird am
+
+
+
+
+
+anderen Ende mit einem Stift auf das Messprotokoll geschrieben. So können wir Höhenschlag und Spurlage ermitteln und dokumentieren.
+Das Messprotokoll (Abb. 9) enthält die
+(nachträglich übereinandergelegten) Aufzeichnungen von vier Prüfungen:
+1. In der Grundmessung wurde die Seilscheibe nach der Endmontage auf Fertigungsgenauigkeit geprüft.
+
+2. Wiederholung der Messung, nachdem
+die Scheibe zehn Tage lang statisch mit
+der Spannlast von 500 N ohne Bewegung belastet wurde.
+3. Danach wurde die Seilscheibe 100-mal
+um 90° und wieder zurück gedreht – das
+simuliert eine Belastung im Betrieb.
+4. Anschließend wurden über zwei Stunden
+Vibrationen in unterschiedlichen Frequenzen und Stärken zur Last aufgebracht.
+
+
+
+Modell
+
+Die ausführliche Messung wurde per Video
+für unseren YouTube Kanal [8] dokumentiert.
+Das Ergebnis: Die Abweichung bewegt sich
+bei ±1,5 mm in der Spurlage (horizontale
+Aufzeichnung) und ±1 mm im Höhenschlag. Trotz aller Strapazen erkennen wir
+keine Verformung gegenüber der Grundmessung. Wir können also beweisen, dass
+man mit fischertechnik nicht nur stabil, sondern auch genau und haltbar bauen kann!
+
+Rollenbatterie
+Auf der Spitze einer Stütze sitzt bei den
+Seilbahnen eine Traverse, „Joch“ oder
+„Hauptjoch“ genannt, die seitlich in Spurweite die Rollenbatterien trägt. Üblich sind
+hier vier bis 16 Rollen, teilweise sogar
+mehr, in einer Reihe, welche das Seil und
+die Gondeln tragen und die Seilbahnstrecke
+der Geländeform anpassen. Unterschieden
+wird zwischen Traglast-, Niederhalte- (welche das Seil herunterdrücken, z. B. vor der
+Talstation) und Wechsellastrollenbatterien.
+
+Unser Modell wird vier Stützen haben, ca.
+alle 10 m eine. Die Stützen 1 (vor der Tal/Antriebsstation „Spinelli“) und 4 (vor der
+Berg-/Umkehrstation „Luisenpark“) werden Niederhalter sein. Die Stützen 2 und 3
+werden in ca. 4,60 m Höhe heraufragen, da
+die Besucher unter unseren Gondeln durchlaufen dürfen, aber es nicht zu einer Berührung (z. B. Kinder auf Schultern der Väter)
+kommen darf.
+Eine Stütze trägt jeweils die Hälfte aller
+Lasten der beiden Abschnitte vor und hinter
+ihr. Sie besteht aus dem Seilgewicht und
+dem Gewicht der maximalen Gondelzahl in
+dieser Strecke. Dazu übt die Seilspannung
+Kraft aus. Die Last, welche von unseren
+Rollenbatterien getragen werden muss, haben wir mit ca. 20 kg pro Fahrspur abgeschätzt. Hinzu kommen dynamische Lasten,
+z. B. vom Schwingen des Seils oder bei
+Überfahrt der Gondelklemmen an den Rollen. Mit acht Rollen pro Seite bricht sich das
+auf max. 3 kg Last pro Rolle herunter, entsprechend 1,5 kg pro Lager. Nach unserer
+
+
+
+Meinung ist das mit fischertechnik machbar. Dennoch sind die Rollen mit je zwei
+Kugellagern und Alu-Profilen gelagert. Die
+Hauptachse ist eine 8 mm Stahlstange.
+Befestigt wird die Rollenbatterie über eine
+Stahlplatte (in der Form wie eine fischertechnik-Bauplatte) durch die eine Gewindestange führt. Direkt daran ist ein Stahlseil
+befestigt, das durch das Kunststoffrohr in
+das Fundament auf der Europalette die
+Kraft einleitet. Mehr als ein Detail hierbei:
+Die Stütze muss später um einiges gekippt
+werden, damit der resultierende Kraftvektor
+senkrecht in die Stütze wirkt. Zudem muss
+alles leicht demontierbar sein und auf der
+Palette zum Transport gesichert werden
+können.
+Nach einigen Prototypen und Lastversuchen haben wir uns für diese Version entschieden. Sie besteht aus ca. 900 Bauteilen.
+Seilabweiser und Seilfang sind bereits angebracht. Später wird noch eine elektronische Seilüberwachung hinzukommen und
+über dem Oberjoch ein Träger die Signalleitung führen.
+
+Details zeigt Abb. 11: Am jeweils ersten
+und letzten Rollenpaar sind Seilabweiser
+(grüner Pfeil: Winkelstein 60° mit abgesägtem Zapfen) und Seilfang (gelber Pfeil, M4Schraube mit Unterlegscheibe) angebracht.
+Das ist nicht nur eine Nachbildung des Originals, sondern es sind tatsächlich notwendige Sicherheitseinrichtungen in unserem
+Modell. Der Seilabweiser verhindert das
+Verklemmen des 6mm Stahlseils hinter den
+Rollen, während der Seilfänger einen Absturz des Seils nach einem etwaigen Entgleisen auffangen soll. Die Rollen selbst bestehen aus der Felge 43 mit aufgezogenen
+O- und X-Profil-Dichtringen als Lauffläche. Die Achsen sind Edelstahlschrauben,
+welche in der Schneckenmutter (37925) mit
+verpressten 4-mm-Kugellagern gelagert
+sind.
+
+Wer diese Rollenbatterie genauer anschauen möchte oder uns helfen will, die
+weiteren drei Exemplare zu bauen (alle
+Bauteile werden gestellt), der kann sowohl
+die Bauanleitung als auch die ft-DesignerDatei herunterladen und ein Video zur
+Montage anschauen. (Entwurf, Berechnung
+und Bau: Tilo Rust.)
+Die fertige 8-fach-Tragbatterie zeigt Abb.
+10 mit Joch auf einer Stütze montiert. Sie
+muss auf jeder Seite das Seil und die Gondeln tragen und im Dauerbetrieb fehlerfrei
+die Spur über 10 m Spannweite halten. Dieses Exemplar wird in 4,60 m Höhe dafür
+sorgen, dass die Besucher unter der Gondel
+durchlaufen können. Es fehlen noch die
+Wartungspodeste – das ist aber Dekoration
+und wird erst später hinzugefügt, wenn die
+Anlage funktioniert.
+
+
+
+
+Modell
+
+Form follows Function
+
+Quellen
+
+Im nächsten Schritt werden die Stationen
+um die Seilscheibe herum gebaut. Wir werden mit der Berg-/Umkehrstation „Luisenpark“ beginnen, da diese weder einen
+Spannschlitten noch einen Antrieb besitzt
+und somit einfacher ist (hierüber werden
+wir in der nächsten ft:pedia berichten). Auf
+den dort gewonnenen Erkenntnissen können dann die Tal-/Antriebsstation „Spinelli“
+und nachfolgend die Garagierung gebaut
+werden. Herausforderungen hierbei sind
+vor allem die Kraftaufnahme (Seilspannkraft von 50 kg ≙ 500 N) sowie die Anforderung, die Stationen in Module aufzuteilen
+und auf Euro-Paletten zu befestigen.
+
+[1]
+
+ftc-Bilderpool: Seilbahnen.
+
+[2]
+
+Alle Bauanleitungen und ft-Designer-Dateien zum Download auf
+Google Drive.
+
+[3]
+
+Firma CWA (Gondelhersteller):
+Homepage.
+
+[4]
+
+ftc-Forum: Community-Projekt: Seilbahn.
+
+[5]
+
+Doppelmayr/Garaventa: Homepage.
+
+[6]
+
+ftc-Bilderpool: Kuppelbare Doppelmayr Seilbahn. Projektwebsite im
+Bilderpool.
+
+[7]
+
+Öffentlicher Media Pool des Seilbahnprojekts auf Google Drive.
+
+[8]
+
+YouTube-Kanal des Projekts
+
+[9]
+
+Kontakt zur Projektgruppe „Seilbahn“: Projektleiter Tilo Rust, Schifferstadt, ft.seilbahn@gmail.com
+
+
+

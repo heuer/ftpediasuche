@@ -1,0 +1,482 @@
+
+
+Modell
+
+Großprojekt Seilbahn (Teil 1):
+Von der Idee zum Kick-Off
+Tilo Rust
+Diese Serie begleitet das Großprojekt „Kuppelbare Einseilumlaufbahn / Doppelmayr (10MGD)“ im Erlebnismuseum Fördertechnik Sinsheim von Anfang bis zur Fertigstellung und
+Ausstellung auf der BUGA 2023 in Mannheim. Wir berichten über Hintergründe des Projekts,
+Technik und Entwicklung, sowie Modell und Team.
+
+
+Die Dimension der gesamten Anlage wird
+erst begreiflich, wenn sie als Ganzes gesehen wird. In den Stationen drehen sich Seilscheiben (Räder) mit einem Durchmesser
+von 80 cm, während die Gondeln 25 cm
+hoch sind (ohne Gehänge). Unter dem Seil
+kann man gefahrlos durchlaufen und unter
+der Bergstation wird man stehen können,
+um die Technik von unten zu betrachten.
+Eine Seilbahn ist ein Standardwerk, das
+wohl schon fast jedes Spielkind unter uns
+schon einmal gebaut hat. Schnell sind zwei
+Räder genommen, ein Seil drum herum gelegt und einige Bausteine als Gondeln daran
+gehängt. Nur noch die Stationen etwas auseinanderziehen und damit das Seil auf
+Spannung bringen, einen Motor dran und es
+geht los. Strecken vom Boden auf den
+Schreibtisch oder gar auf das Regal sind
+auch gar nicht so schwer. Tatsächlich gibt
+es selbst von fischertechnik Originalanleitungen für eine Seilbahn, und das legendäre
+blaue Nylonseil ist dabei ein wichtiger
+Hauptbestandteil.
+
+Mich selbst haben Seilbahnen und Skilifte
+bei jedem Winterurlaub fasziniert und der
+Blick geht beim Einsteigen eher nach oben,
+um die Technik unter der Haube zu verstehen. Der Trick dieser Anlagen ist, dass die
+Gondeln in der Station deutlich langsamer
+laufen als am Seil. Besonders interessant ist
+diese zuverlässige Klemme. So etwas muss
+doch mit fischertechnik zu machen sein. Tagelang habe ich nach Lösungen gesucht und
+Detailaufnahmen aus dem Internet studiert.
+Doch mit Hilfe unserer Standardteile ist der
+Miniaturisierung eine Grenze gesetzt. Eine
+Grenze, die allerdings weit vom Begriff
+„Mini“ entfernt ist.
+Ein guter Tüftler schaut sich erst einmal an,
+was andere Ingenieure schon erfunden haben. So fand ich aus anderen Bausteinwelten funktionierende kuppelbare Seilbahnen,
+die allerdings bei genauerem betrachten alles andere als „sanft davon gleiten“. Einzig
+ein Modell aus handgefertigten Metallteilen
+bildet die Funktion sauber ab, basiert aber
+nicht auf einem Baukastenprinzip.
+
+
+Modell
+
+Auch hier in der Szene gibt es interessante
+Lösungsansätze [1], die allerdings einige
+meiner selbst an mein Projekt gestellten Anforderungen nicht erfüllen. Dennoch nahm
+ich Kontakt mit Michael auf, der mit seinem
+Modell [2] einer Lösung schon ziemlich nahekam.
+
+Großes Problem: kleine
+Klemme
+Michael und ich trafen uns im Sommer
+2020 (zwischen den Lockdowns, ganz legal) im Urlaub. Er hatte nicht nur sein „fischertechnik-Reiseset“ dabei, sondern bereits eine funktionierende Seilklemme mit
+Gondel! Die Seilklemme hatte er aus Holz
+geschnitzt.
+
+
+Bei unserem Treffen tüftelten wir eine verbesserte Version aus, die nun auch die Besonderheit der Firma Doppelmayr zeigte:
+eine so genannte Totpunktklemme (mehr
+zur Technik in den nächsten Ausgaben der
+ft:pedia).
+
+
+Michael S. Die eigentlichen Bauteile sind aus
+Holz handgeschnitzt. Noch ist dies keine Doppelmayr-Totpunktklemme.
+
+Dennoch wurden wir uns einig, dass wir es
+mit den fischertechnik-Standardteilen nicht
+schaffen würden, eine Seilklemme mit den
+technischen Anforderungen herzustellen.
+
+
+
+
+
+
+
+Die aktuelle Version 3 ist eine Weiterentwicklung des Prototyps. Das ist eine Doppelmayr-Totpunktklemme. Lediglich die eigentliche Klemme und die Federbeine
+stammen aus dem 3D-Drucker. Der Rest
+wurde im fischertechnik-Designer entwickelt und ist pures fischertechnik.
+
+Dank der Original-Konstruktionspläne der
+Firma CWA (Hersteller der Gondeln für
+Doppelmayr) konnten wir die aktuelle Version 3 unserer Gondel so genau bauen, dass
+sie nur noch wenige Millimeter von den
+Originalmaßen der Omega V abweicht.
+(man vergleiche Abb. 8 mit unserer Version
+2 in Abb. 9). Selbst die Türen (in Abb. 6
+und 7 mit Pappe dargestellt) werden mit einem Bowdenzug nach Idee von Ralf Geerken [3] bewegt. Auch der Gehängearm und
+die Klemme (hier herunterhängend) sind
+nun so weit entwickelt, dass wir sie testen
+können.
+
+Diesen ersten Entwurf einer Gondel (bereits
+mit angesetztem Türmechanismus) hat Michael S. zu unserem ersten Treffen mitgebracht. Anhand dieses Entwurfs ergaben
+sich die Abschätzung der Modellgröße und
+später die Festlegung des Maßstabs 1:10.
+
+
+
+Modell
+
+grund der schon erwähnten Miniaturisierungsgrenze verhältnismäßig groß ausgefallen.
+Also nahm ich Anfang 2020 das Telefon in
+die Hand und bemühte mich, in Kontakt mit
+den zwei weltgrößten Seilbahnherstellern
+zu kommen. Wenn man mir doch nur ein
+wenig mit Know-How helfen könnte…
+
+Aus klein wird groß
+Tatsächlich halfen mir die Techniker in wenigen Minuten dabei, die wichtigsten Eckdaten des Modells abzuschätzen:
+
+
+Die Profis fragen
+Doch selbst wenn es mir gelänge, eine solche Klemme zu konstruieren, müsste ich
+abschätzen, welche Spannkraft am Seil ziehen muss. Und beim Betrachten der vielen
+Detailfotos und Videos im Internet wurde
+mir immer klarer, dass hinter diesem Modell viel mehr Know-How steckt, als ich erwartet hatte. Erste Prototypen waren auf-
+
+
+Mit der funktionalen (rein aus fischertechnik bestehenden) Lösung einer Seilklemme
+ergab sich die Grenze der Miniaturisierung.
+Daraus leitete ich mit den Ingenieuren ab,
+dass die Gondel ca. 20 cm groß werden
+
+
+würde. Die Seilscheibe benötigt daher einen
+Mindestdurchmesser von 60 cm, was auch
+der Spurweite entspricht. Damit wird die
+Station mindestens 120 cm lang.
+Dabei wurde mir klar, dass der Platz auf
+meinem Boden im Spielzimmer zu klein
+werden wird. Und für eine Strecke von
+1-2 m bis auf den Schreibtisch ist der Aufwand viel zu groß. Eine Seilbahn im Treppenhaus? Oder einmal quer durch den Garten? Ich glaube, das wäre ein Scheidungsgrund.
+
+Eckdaten des Projekts:
+ Länge: 30 m (Abstand der Stationen
+horizontal)
+ Spurweite: 80 cm
+ Anzahl Gondeln: (erwartet) 15-25;
+Türen schwenkbar zu öffnen; Gondelgewicht ca. 1 kg
+ Bauzeit: Januar 2021 – Januar 2023
+(Einweihung auf der BUGA 2023 in
+Mannheim)
+ Maßstab: 1:10 (Länge der Strecke
+verkürzt)
+ Anzahl der Stützen: 4; Stütze 2 und 3
+mit einer Jochhöhe von ca. 4,60 m
+ Talstation „Franklin“ mit Garagierung. Dach mit automatischer Öffnung (um Technik zu zeigen und zu
+warten).
+ Bergstation „Luisenpark“ mit transparentem Boden (Besucher können
+unter die Station treten)
+ohne Alu!) bilden diese schon jetzt ein imposantes Modell.
+
+Größerer Platz, noch größeres
+Modell
+Glücklicherweise habe ich vor einigen Jahren Konstantin Eck, den Museumsdirektor
+des Erlebnismuseum Fördertechnik [4] in
+Sinsheim kennengelernt. Die Süd-Convention 2019 fand dort in einer großen (leeren)
+Halle des Museums statt.
+
+
+Auch die Stütze mit den Rollenbatterien
+wurden als Prototyp gebaut (Abb. 10). Auf
+jeder Seite halten vier Rollenpaare das Seil
+und formen einen sanften Übergang der
+Steigung. Zusammen mit der Seilscheibe
+(in Abb. 11 rechts unten noch als Prototyp
+
+
+Ein Telefonat später wusste ich nicht, wo
+mir der Kopf steht: Ich hatte eine Zusage,
+die Seilbahn dort zu bauen – und lange Zeit
+stehen zu lassen. Ab diesem Moment war
+klar, dass es für die Größe der Anlage eigentlich keine Grenze mehr gibt, denn die
+Halle ist etwa 47 m lang und fast 8 m hoch.
+
+Die Community hilft
+Natürlich ist Michael und mir klar gewesen,
+dass wir die Klemmen später nicht einzeln
+schnitzen wollen. Eine Anfrage im Forum
+
+
+Modell
+
+[5] half binnen weniger Stunden: Peter Habermehl meldete sich und bot an, den Prototyp der Sonderteile mit seinem 3D-Drucker zu fertigen. Wenige Tage später erhielten Michael und ich Post. Danke!
+
+Wir suchen noch aktive Mit-Bauer, die aus
+der (weiteren) Umgebung von Sinsheim
+kommen und nach unserer Anleitung die
+Anlage mit bauen möchten – bitte melden
+[10]!
+
+Ebenso hatten sich nun weitere Mitstreiter
+gemeldet, die zum einen Know-How beisteuern und (sobald die COVID-19Situation es wieder legal zulässt) auch im
+Museum mit bauen (dass das nötig ist, wird
+erst später klar).
+
+Aus groß wird riesig
+Als Michael und ich die ersten Versionen
+der Seilscheibe (so nennt man das große
+Rad, um das das Trag- und Förderseil läuft)
+konstruierten, wurde uns beiden klar: Mit
+den eigenen Teilen schaffen wir es nicht,
+
+Pflichtenheft
+Hier einige der (uns selbst) auferlegten Pflichten des Projekts:
+ Kuppelbare Gondeln mit Totpunktklemme (Doppelmayr). Die Gondeln müssen in der
+Station vom Seil entkuppelt werden und mit Hilfe einer Klemme nach dem Originalvorbild am Seil eingehängt werden. Dabei muss eine Steigung von mindestens 45° sicher
+bewältigt werden.
+ Die Seilbahn muss eine Einseilumlaufbahn (10 MGD) sein. Verwendet wird ein Stahlseil,
+endlos gespleißt. Die Gondeln entsprechen in Design und Funktion einer „Omega V“
+(Firma CWA).
+ Stationsabstand mindestens 30 m (horizontal). Umlaufendes Seil ca. 75 m. Verschiedene
+Seillängen müssen möglich sein (für Stationsabstände von 10 m etc.).
+ Der mittlere Abschnitt muss eine freie Durchfahrt von min. 4,20 m garantieren. Alle Anlagenteile müssen kindersicher und sicher für Ausstellungen gebaut oder abgeschrankt
+werden.
+ Anlage komplett transportierbar (auf Euro-Paletten verlastet/fest montiert). Alle Dekomaterialien und Zubehör (Kabel etc.) müssen mit verpackt werden. Transportsicherungen
+müssen einen schadfreien Transport auf LKW und Stapler garantieren.
+ Der Betrieb der Anlage muss wie beim Original funktionieren. Ein auf Originalanlagen
+eingewiesener Bediener muss in der Lage sein, das Modell zu bedienen. (Anm.: Möglicherweise verwenden wir hierzu einen original Doppelmayr Connect-Leitstand.) Ein
+bedienerloser Betrieb (ähnlich dem Doppelmayr/Garaventa „AURO“-System) sollte
+möglich sein (für den Betrieb im Museum).
+ Die Anlage muss eine (automatische) Garagierung haben. Bei Betriebsschluss werden
+die Gondeln automatisch wie beim Original in die Garagen in den Stationen verbracht.
+Eine Entnahme von Gondeln zur Wartung erfolgt wie beim Original auf einem Wartungsgleis.
+ Die Gestaltung der Stationen und Gondeln hält sich weitest möglich an die BUGA-23Anlage.
+ Es werden soweit möglich original fischertechnik-Teile verwendet. 3D-Drucke oder gemoddete Teile sind deutlich zu markieren (in einer nicht fischertechnik-Farbe) und werden in einer Vitrine ausgestellt.
+ Die Anlage muss so gut dokumentiert sein, dass sie auch nach Jahren „im Keller“ von
+fremden (technisch versierten) Personen wieder in Betrieb genommen werden könnte.
+
+
+
+diese Anlage zu bauen. Wir besitzen zwar
+eine Menge, aber das übersteigt unsere
+Reichtümer bei Weitem. Zukaufen?
+
+nommen wird. Da aber alle Teile neu beschafft und somit in einer Hand sind, kann
+die Seilbahn jahrelang ausgestellt werden.
+
+Also wieder ans Telefon, mit Doppelmayr
+gesprochen, das Projekt, die Größe, die
+technischen Features vorgestellt, den Plan
+eröffnet, wer was bezahlen könnte und was
+mit der Anlage später gemacht werden
+könnte.
+
+Das bringt einen weiteren Punkt auf das
+„Pflichtenheft“ des Projektes: die Seilbahn
+muss transportabel sein. Das Modell wird
+deshalb von Beginn an so konstruiert, dass
+es aus Modulen besteht, die auf Euro-Paletten montiert sind. Diese werden hochkant
+gestellt und mit Transportsicherungen verpackt. So kann die Seilbahn an jedem ausreichend großen Ort innerhalb vertretbar
+kurzer Zeit wieder aufgestellt werden.
+
+Ich war so nervös, wie bei einem Bewerbungsgespräch – dann die Zusage noch
+während des Telefonats: Doppelmayr wird
+unser Hauptsponsor.
+
+Vier gewinnt
+Und das ist der (grobe) Plan, auf dem das
+Projekt nun steht:
+ Die Firma Doppelmayr Garaventa [6]
+wird als Hauptsponsor die Bauteile kaufen. Dafür ist das Modell später deren Eigentum.
+ Das Erlebnismuseum Fördertechnik in
+Sinsheim [4] wird als Sponsor den Bauplatz in der Halle des Museums zur Verfügung stellen. Dafür steht das Modell
+später als Dauerleihgabe in der Ausstellung.
+ Die Firma fischertechnik unterstützt uns
+mit Sonderpreisen bei den Bauteilen und
+kann die Anlage für Ausstellungen ausleihen.
+ Wir, einige Mitglieder der ftc-„Projektgruppe Seilbahn“ [10] werden die Anlage mit Know-How von Doppelmayr
+nach deren technischem und DesignVorbild konstruieren, bauen und betreiben.
+Bei so einem großen Projekt mit solch großen Partnern ist es sinnvoll, darüber nachzudenken, ob und wie sich das Projekt rentiert. Der Aufwand, solch eine riesige Anlage über Monate zu konstruieren, würde
+sich nicht lohnen, wenn das Modell nach
+Fertigstellung bald wieder auseinanderge-
+
+
+
+ Die Firma Doppelmayr Garaventa erhält
+ein individuelles, riesiges Modell mit
+technischer Funktion und kann es auf
+Ausstellungen, Messen und Veranstaltungen nutzen.
+ Das Erlebnismuseum Fördertechnik erhält ein weiteres Ausstellungsstück, das
+besonders Kinder, aber auch technikbegeisterte Erwachsene ansprechen wird,
+da die Seilbahn später in den Ausstellungsräumen installiert wird. Auch das
+wurde im Pflichtenheft berücksichtigt:
+Der mittlere Streckenabschnitt ist so
+hoch, dass Besucher gefahrlos darunter
+durchlaufen können. Die Gondeln werden mehr als 4 m über dem Boden
+
+schweben – die Stützen also entsprechend groß werden.
+ Die Firma fischertechnik hat ein Modell,
+in dem eindrucksvoll gezeigt werden
+kann, was mit fischertechnik möglich ist.
+ Schon während des Baus wird das Projekt gut dokumentiert und filmisch begleitet, so dass auch eine virale Nutzung
+möglich ist. Informationsmaterial und
+Videos neben dem fertigen Modell werden später die Besucher in die Welt der
+kleinen und großen Seilbahnen führen.
+ Die BUGA 23 bekommt ein interessantes Ausstellungsstück, das Kinder wie
+Erwachsene für die Fahrt mit der großen
+Seilbahn begeistert.
+
+Modell
+
+dann als Bestellliste, die direkt von fischertechnik ins System eingespielt werden
+kann.
+
+Remote Engineering
+Nun ist nicht nur COVID „schuld“ daran,
+dass unsere Konstrukteure weit verteilt
+sind. Wir benötigen bestimmte Kompetenzen im Modellbau. Und so sind wir froh,
+dass wir Lösungen haben, um auch über
+hunderte von Kilometern hinweg miteinander technisch zu kommunizieren. Zu den
+etablierten Videokonferenz-Systemen benutzen wir eine Software aus der Community.
+Der fischertechnik-Designer [7] von Michael Samek ist für uns das Werkzeug, um
+die Baupläne weiterzugeben. Letztlich ermöglicht dieser auch, dass wir die Teile bei
+fischertechnik bestellen können und im Museum unsere „Bauarbeiter“ diese nach den
+Daten des Designers zusammensetzen.
+Schon seit langem bietet der fischertechnikDesigner die Möglichkeit, eine Bestellliste
+herauszugeben. Die Preise darin sind allerdings nicht aktuell. Wieder griff ich zum
+Telefon – und wenige Minuten später überraschte mich Michael Samek mit einer
+neuen Version des fischertechnik-Designers. Nun kann eine Bauteilliste des Modells ohne Preise als CSV-Datei ausgegeben werden. Kurz aufbereitet nutzen wir sie
+
+mit Klemme, Gehängearm und Gondel lässt
+sich im fischertechnik-Designer bearbeiten. In
+diesem Bild sind fast 1000 Bauteile dargestellt.
+
+im fischertechnik-Designer konstruieren. Die
+über 700 Bauteile ergeben ein Rad mit ca.
+80 cm Durchmesser, welches später eine Zugkraft von etwa 500 N aufnehmen muss. Dazu
+ist es überwiegend aus Alu hergestellt (mehr
+dazu im 2. Teil über das Projekt)
+
+Da wir alle Elemente unseres Modells im fischertechnik-Designer dokumentieren, benutzen wir diesen häufig und intensiv. Michael hat daher einige unserer Feature-Requests aufgenommen und umgesetzt und
+glänzt immer wieder mit neuen Versionen.
+
+
+
+Wer die Software noch nicht kennen sollte
+– meine (Tilo) Empfehlung!
+
+BUGA 23
+Ich komme aus Mannheim („mein Herz
+schlägt im Quadrate-Takt“). So freue ich
+mich auf die Bundesgartenschau, die 2023
+in zwei Parkanlagen stattfinden wird. Noch
+mehr freut mich, dass diese Parks mit einer
+Seilbahn verbunden werden. Ganz riesig
+freut mich, dass diese Seilbahnanlage von
+Doppelmayr gebaut wird. Denn davon profitiert unser Projekt mächtig.
+ Wir haben ein Vorbild en nature, das wir
+in unserem Modell umsetzen können.
+Hierfür erhalten wir früh Einsicht in
+Baupläne und Architektur und gestalten
+die Seilbahn entsprechend.
+ Ein so großes Modell einer Anlage
+könnte auch auf der BUGA 23 ausgestellt werden. Dank Doppelmayr werden
+wir versuchen, dies zu realisieren – entsprechende Dekoration und Information
+zur Seilbahn inbegriffen.
+ In dieser Ausstellung können die fischertechnik-Werke, das Erlebnismuseum
+Fördertechnik und die ft-Community
+sich präsentieren, ein „Return on Investment“ für alle Beteiligten.
+ Während des Baus der original Seilbahn
+dürfen wir ab und zu dabei sein, um dies
+zu dokumentieren. Daraus entsteht später ein Film, der Original und Modell
+Seite an Seite zeigt.
+Nach der BUGA wird die Anlage dann
+(s. o.) ins Museum transportiert.
+
+Gigantismus
+Zusammen mit diesen Partnern und Randparametern ist es nun möglich, alle Grenzen
+des privaten Modellbaus zu sprengen. Die
+Festlegung der technischen Maße der Anlage zeigt, dass es ein gigantisches Vorhaben wird.
+Klar wird, dass die Teile nur dank der
+Sponsoren beschafft werden können. Dank
+des Museums ist ein Bauplatz vorhanden,
+
+der trocken, warm, beleuchtet und groß genug ist und uns kostenfrei über mehrere
+Jahre Bauzeit zur Verfügung steht. Dank
+der Firma fischertechnik und guter Preisunterstützung können wir uns das Ganze leisten und bekommen die Bauteile direkt ins
+Museum geliefert. Dank der hellen Köpfe
+aus der Community lösen wir die technischen Modell-Probleme, dank des fischertechnik-Designers auch remote. Und dank
+des guten Kontakts zum Seilbahnhersteller
+und den dortigen Ingenieuren erhalten wir
+einmalige Einsichten in die Technik, die begeistert.
+Letzteres ist mein (Tilo) persönlicher Antrieb dabei: Ich möchte Technik verstehen
+und hinter die Kulissen schauen. Ein Besuch unseres Modellbauer-Teams im Werk
+von Doppelmayr in Österreich ist geplant,
+sobald die Grenzen offen sind. Dort die
+Herstellung einer Seilbahn zu sehen und in
+Mannheim beim Bau der Anlage dabei sein
+zu können, die wir letztlich nachbilden, ist
+etwas, das man nicht jeden Tag erleben
+kann – und wenn, dann auch nur mit guten
+Beziehungen. Auf der BUGA Aussteller zu
+sein, mit dem Modell durch die Gegend zu
+ziehen und Menschen, Jung und Alt für (fischer-)Technik zu begeistern macht mir
+Spaß.
+
+Große Ausdauer
+Auch für uns Modellbauer wird dieses Projekt eine Herausforderung. Nicht nur die
+technischen Feinheiten, die es zu lösen gibt,
+die gigantischen Kräfte und Dimensionen,
+mit denen wir hantieren, sondern auch die
+Logistik der Teile und des fertigen Modells
+wird uns auf lange Zeit fordern. Bei dem gigantischen Budget, das es verantwortungsvoll zu verwalten gilt, und der Koordination
+der Helfer sowie anderer Beteiligter über
+Ländergrenzen hinweg ist es nötig, tief in
+die Kiste des professionellen Projektmanagements zu greifen. Gut, dass ich das beruflich schon machen durfte – da ist das eigent-
+
+liche Zusammenschieben der Bausteine geradezu meditativ entspannend im Vergleich.
+Doch so, wie unser Modell lange brauchen
+wird, bis die Technik funktioniert und es
+schließlich 2023 ausgestellt wird, werden
+wir mit Artikeln in der ft:pedia und Filmen
+auf YouTube fortwährend berichten. Die
+Fotos und Videos sowie die ftm-Dateien in
+unserem Mediapool [9] sind öffentlich zugänglich und werden beinahe tagesaktuell
+ergänzt.
+In der nächsten ft:pedia zeigen wir die ersten Prototypen und stellen den Bauplatz im
+Museum vor. Wir erklären die Grundlagen
+einer Seilbahn und was dieses Modell so gigantisch werden lässt.
+
+Modell
+
+Quellen
+[1]
+
+Seilbahnprojekte im Bilderpool der
+ftc.
+
+[2]
+
+Michael Sengstschmid: Sessellift
+Mirose. Im Bilderpool der ftc.
+
+[3]
+
+Ralf Geerken: Bowdenzug. 1/2017, S. 13–16.
+
+[4]
+
+Erlebnismuseum Fördertechnik Sinsheim
+
+[5]
+
+Community-Projekt: Seilbahn im fischertechnik-Forum.
+
+[6]
+
+Doppelmayr Garaventa
+
+[7]
+
+fischertechnik-Designer von Michael
+Samek:
+
+[8]
+
+Kuppelbare Doppelmayr Seilbahn:
+Projektwebsite im Bilderpool der ftc.
+
+[9]
+
+Öffentlicher Mediapool des Seilbahnprojekts auf Google Drive
+
+[10] Kontakt zur Projektgruppe „Seilbahn“: Projektleiter Tilo Rust, Schifferstadt (ft.seilbahn@gmail.com) sowie auf YouTube.
+
+
+

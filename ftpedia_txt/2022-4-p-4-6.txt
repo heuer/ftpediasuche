@@ -1,0 +1,48 @@
+
+
+Modell
+
+Ein Stern für Weihnachten
+Lutz Mänche
+Dieses Jahr habe ich früh genug angefangen, einen langsam drehenden Stern für das Fenster
+mit LEDs aufzubauen. Es waren mehrere Versuche nötig, angefangen mit dem alten Schleifring,
+einem Getriebe und dem Gerüst. Deshalb ist das hier die Kurzform, in einer Bilderstrecke ohne
+viele Erklärungen.
+Alles begann mit dem Drehkranz und einem
+sechspoligen Schleifring von fischerfriendsman [1] (Abb. 1, 2).
+
+
+
+Verkabelung
+
+
+wie in Abb. 4 zu sehen.
+
+
+Modell
+
+2 × 7,2° = 14,4°) verbaut.
+
+Die Leitungen für die LEDs wurden durch die
+Statikteile gezogen.
+
+
+
+
+LED-Beleuchtung ist fertig.
+aufgebaut: klein, groß, klein, groß usw., bis
+sich der Stern langsam dreht.
+
+von der Straße aus gesehen
+
+Quellen
+[1]
+
+aus Alu Maker Beams gebaut. Damit die
+Gardine nicht ins Getriebe kommt, wurde noch
+ein Schutz aus Statikteilen angebaut.
+
+Stefan Roth: fischerfriendsman
+(ffm).
+
+

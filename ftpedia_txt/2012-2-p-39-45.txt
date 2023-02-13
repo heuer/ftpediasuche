@@ -1,0 +1,660 @@
+
+Projekt
+
+Projekt
+
+HP-GL-Plotter (Teil 3)
+Dirk Fox
+Im ersten Teil des Beitrags wurde die Konstruktion eines fischertechnik-HP-GL-Plotters vorgestellt [1]. Der zweite Teil des Beitrags führte in Version 1 der Steuersoftware ein, die
+einfache HP-GL-Grafiken aus .csv-Dateien einlesen und plotten kann [2]. Im dritten Teil wird
+die Steuersoftware um HP-GL-Vektorgrafik-Befehle erweitert, mit denen Kreise, Kreisbögen,
+Kreissektoren, Rechtecke und regelmäßige N-Ecke geplottet werden können.
+Version 1 der Steuersoftware für unseren
+ftpedia-Plotter war auf die Implementierung der fünf Befehle des HP-GL-Standards beschränkt, die für das Plotten einfacher HPGL-Dateien (wie z. B. in HP-GL
+konvertierter Zeichnungen aus gängigen
+CAD-Formaten) ausreichen: die HP-GLKommandos IN, PU, PD, PA und PR [2].
+Tatsächlich umfasst der gesamte HP-GLStandard mehr als 60 Befehle [3]. Einige
+davon sind bei unserem HP-GL-Plotter
+funktionslos, wie die Auswahl des Stifts
+und seiner Eigenschaften (SP: Select Pen,
+PT: Pen Thickness, PW: Pen Width) oder
+der Papierauswurf (PG: Advance Full
+Page), denn der funktioniert nur manuell.
+Weitere Befehlsgruppen wie die FüllBefehle (RA, RR: Fill Rectangle) oder die
+Stricharten (LT: Line Type, FT: Fill Type)
+lassen sich mit unserem einfachen Stiftplotter nicht sinnvoll nutzen, denn Schraffuren sind viel zu aufwändig. Auch diese
+Befehle habe ich daher ausgeklammert.
+Verzichtet habe ich – bisher – auch auf die
+Implementierung der Schreibkommandos
+(Character Plot Instructions), da Robo Pro
+keine String-Verarbeitung beherrscht. Eine
+HP-GL-Standard konforme Implementierung des Befehls LB (Label) würde nämlich die Übergabe der zu plottenden Zeichen als Zeichenkette (String) erfordern.
+
+Vektorgrafik-Befehle
+Will man mit einem Plotter geometrische
+Formen zeichnen – wie z. B. Kreise, Quadrate, Rechtecke, regelmäßige Vielecke –
+oder ansprechende Computergrafiken (Balken- oder Kreisdiagramme) erzeugen, ist
+das mit den einfachen Plot-Befehlen PA
+und PR aufwändig. Daher beherrscht HPGL komplexere Vektorgrafik-Befehle, die
+das Zeichnen von geometrischen Körpern
+erheblich vereinfachen.
+Die wichtigsten dieser Vektorgrafik-Befehle sind die Kreisbogen-Befehle (AA, AR)
+und das Kreis-Kommando (CI). Mit letzterem können auch gleichmäßige N-Ecke
+geplottet werden. Dazu zählen außerdem
+die Rechteck-Befehle (EA, ER) und der
+Kreissektor-Befehl (EW). Diese sechs
+Befehle haben eine Gemeinsamkeit: Sie
+plotten immer – unabhängig davon, ob der
+Stift zuvor gesenkt oder angehoben war.
+In Version 2 der Steuersoftware habe ich
+diese sechs Befehle ergänzt, sodass die
+Implementierung nun die in der folgenden
+Tabelle zusammengefassten elf HP-GLKommandos beherrscht (Tab. 1).
+
+
+
+Funktion
+
+Param.
+
+Kürzel
+
+Nr.
+
+
+
+IN
+
+Initialize
+
+
+
+PU
+
+Pen Up
+
+
+
+PD
+
+Pen Down
+
+
+
+PA
+
+Plot Absolute
+
+
+
+PR
+
+Plot Relative
+
+
+
+AA
+
+Plot Arc Absolute
+
+3-4
+
+
+AR
+
+Plot Arc Relative
+
+3-4
+
+
+CI
+
+Circle
+
+1-2
+
+
+EA
+
+Edge Absolute
+Rectangle
+
+
+
+ER
+
+Edge Relative
+Rectangle
+
+
+
+EW
+
+Edge Wedge
+
+3-4
+
+Tab. 1: Liste der in Version 2 der Steuersoftware implementierten HP-GL-Befehle
+
+Die neuen Befehle erfordern jedoch ein
+paar grundsätzliche Änderungen an der
+Robo Pro-Implementierung.
+
+Erweiterter Parser
+Die Ergänzung des HP-GL-Befehlsumfangs der Steuersoftware zwang mich zu
+einer Überarbeitung des Parsers (Hauptprogramm): Wie man an der vierten Spalte
+von Tabelle 1 erkennen kann, muss der
+Parser nun auch HP-GL-Befehle mit vier
+Parametern verarbeiten können. Dazu muss
+er fünf Listenelemente einlesen – den
+Befehl selbst und die bis zu vier Parameter.
+Damit dies nicht die Anlage von fünf
+verschiedenen Dateien erfordert, habe ich
+in Version 2 des Steuerprogramms den
+Einlesemechanismus modifiziert: Befehle
+und Parameter werden aus einer einzigen
+.csv-Datei beliebigen Namens eingelesen.
+Diese Datei muss mit der Zeile
+Befehl;X;Y;Alpha;Beta
+
+beginnen; anschließend folgen zeilenweise
+die Befehle mit je vier Parametern. 3 Eine
+solche Datei lässt sich leicht durch einen
+csv-Export aus einer Excel-Tabelle erzeugen. Vor dem Starten des Programms wird
+diese Datei über die Menu-Option „Datei“
+/ „.csv-Speicher für Listen laden“ ausgewählt und eingelesen. 4
+Das in der Datei verwendete Trennzeichen
+(Semikolon, Komma oder Tabulator) kann
+vorher unter „Datei“ / „Trennzeichen für
+.csv-Dateien“ gewählt werden – anders als
+frühere Versionen von Robo Pro verarbeitet die aktuelle Version 3.1.3 das nun
+korrekt. Exportiert man die .csv-Datei aus
+Excel, wird als Default-Trennzeichen ein
+Semikolon verwendet. Die dem Steuerprogramm beiliegenden Beispiel-Dateien verwenden daher alle einheitlich ein Semikolon.
+
+Neue Programmstruktur
+Die zahlreichen Unterprogramme und
+Parameter des Steuerprogramms machen
+die Nutzung globaler Variablen zu einer
+Fehlerquelle – zu leicht übersieht man
+dabei einen Seiteneffekt. Daher werden in
+Version 2, wie es sich für eine saubere Programmierung gehört, Parameter an die
+Unterprogramme übergeben. Innerhalb der
+Unterprogramme wird fast ausschließlich
+mit lokalen Variablen gearbeitet.
+Ausnahmen sind weiterhin die aktuellen
+Koordinaten (X, Y) des Schreibkopfs und
+die Position des Stifts (PenUp), sowie die
+Geschwindigkeitsvorgaben für die beiden
+Encoder-Motoren, die Konstanten TempoX
+und TempoY.
+
+
+Sollte ein Befehl weniger Parameter benötigen,
+wird für die nicht erforderlichen Parameter der
+Wert „0“ angegeben.
+
+
+In der im Download-Bereich der ft-Community
+verfügbaren zip-Datei mit dem neuen Steuerprogramm sind die auf fünf Spalten erweiterten
+Plot-Dateien der Version 1.1 enthalten.
+
+
+Projekt
+
+Neue HP-GL-Kommandos
+
+AA und AR
+
+Die sechs neuen Befehle werden im
+Folgenden kurz vorgestellt – mit etwas
+mathematischem Hintergrund zum besseren Verständnis der Implementierung und
+der verwendeten Algorithmen. Wie dabei
+deutlich wird, ist eine Vektorgrafik-Implementierung eine sehr schöne Anwendung
+für trigonometrische Funktionen.
+
+Die Befehle AA (Plot Arc Absolute) und
+AR (Plot Arc Relative) zeichnen ab der
+aktuellen Position des Zeichenstifts (X, Y)
+einen Kreisbogen bezogen auf den angegebenen Kreis-Mittelpunkt (XC, YC) gegen
+den Uhrzeigersinn um den Mittelpunktswinkel (Alpha):
+
+Selbstverständlich könnt ihr die Erläuterungen auch überspringen und gleich mit
+der neuen Programmversion herumexperimentieren. Die am Ende des Beitrags
+gezeigten Beispiel-Plots sind dafür ein
+guter Einstieg. Abb. 1 erläutert die wichtigsten Bezeichnungen.
+
+Beim AR-Kommando5 werden die Koordinaten von (XC, YC) relativ zur Ausgangsposition (X, Y) angegeben:
+
+Kreisbogen
+Kreissehne
+Kreissektor
+Mittelpunktswinkel
+
+Kreissektor und Mittelpunktswinkel
+
+Die neuen HP-GL-Kommandos wurden
+gemäß der HP-GL-Spezifikation implementiert. Mit einer Einschränkung: Als
+Parameter werden ausschließlich ganze
+Zahlen akzeptiert, obwohl nach Spezifikation die Winkel als Fließkomma-Werte
+angegeben werden.
+Diese Einschränkung habe ich vorgenommen, da ich anderenfalls alle Parameter als
+Fließkomma-Werte hätte einlesen müssen,
+denn Winkel können je nach Befehl an
+unterschiedlichen Stellen in der Parameterliste auftreten. Das hätte erheblichen
+zusätzlichen Speicherbedarf verursacht und
+eine befehlsabhängige Umrechnung der
+Koordinatenangaben in Ganzzahlen erfordert. Es zeigte sich aber, dass die
+Beschränkung auf ganzzahlige Winkel die
+Genauigkeit unseres Plotters nicht beeinträchtigt.
+
+AA XC, YC,
+
+AR dx, dy,
+
+[, ]
+
+[, ]
+
+Nach Durchführung des Kommandos steht
+der Schreibkopf an der Endposition des
+Kreisbogens (XE, YE).
+Um den Kreisbogen plotten zu können,
+müssen wir zunächst aus den beiden gegebenen Punkten – der aktuellen Position
+(X, Y) und dem Kreis-Mittelpunkt (XC, YC)
+bzw. dem Abstand (dx, dy) – sowie dem
+Mittelpunktswinkel
+den Endpunkt des
+Kreisbogens (XE, YE) berechnen (Abb. 2).
+Dazu benötigen wir ein wenig Trigonometrie. Zum Glück stehen alle erforderlichen
+mathematischen Funktionen in Robo Pro
+als Operatoren zur Verfügung; inzwischen
+auch im Download-Modus.
+
+(XE,YE)
+ye
+
+(X,Y)
+r
+
+(XC,YC)
+
+xe
+
+dy
+dx
+
+von (X, Y) bis (XE, YE) zum Mittelpunkt (XC, YC)
+
+Parameter in eckigen Klammern ([ ]) sind optional, dürfen also fehlen (Wert = 0).
+
+
+
+Aus dem Abstand (dx, dy) zwischen den
+Punkten (X, Y) und (XC, YC) lässt sich zunächst der Radius r des Kreises bestimmen, denn dx und dy bilden die Katheten
+eines rechtwinkligen Dreiecks mit dem
+Kreisradius r als Hypothenuse. Nach dem
+Satz des Pythagoras (1) gilt:
+dx² + dy² = r²
+
+(1)
+
+Da die Quadrate von dx und dy ab Werten
+von 180 den Zahlenbereich einer 16-bitZahl übersteigen, müssen wir sie vorher in
+Fließkommazahlen umwandeln. Die Berechnung des Kreisradius erfordert dann
+zwei Fließkomma-Multiplikationen und
+eine Quadratwurzelberechnung (2):
+r
+
+(2)
+
+dx ² dy ²
+
+Aus dem Radius r und der Kathete dx können wir jetzt den ‚Startwinkel’ des Kreisbogens berechnen (Abb. 2), denn in unserem rechtwinkligen Dreieck gilt:
+cos
+
+x
+r
+
+(3)
+
+Aber Achtung: Vom Punkt (X, Y) aus gesehen ist der Abstand dx zwischen XC und X
+negativ, wenn X im ersten oder vierten,
+und positiv, wenn X im zweiten oder dritten Quadranten liegt. Damit folgt (4.1):
+arccos(
+
+dx
+)
+r
+
+(4.1)
+
+Der Kreisbogen von (X, Y) bis (XE, YE)
+wird jetzt allerdings nicht, wie man vielleicht erwarten würde, exakt Punkt für
+Punkt geplottet, sondern durch Kreissehnen angenähert (Abb. 3). Die exakte
+Bestimmung jedes einzelnen Kreispunkts
+nach der allgemeinen Kreisgleichung (2)
+würde die Berechnung von
+y
+
+arccos(
+
+dx
+)
+r
+
+Durch die Annäherung des Kreisbogens
+mit Kreissehnen sinkt der Aufwand für die
+Punktberechnung erheblich – nur für die
+Endpunkte der Sehnen ist der jeweilige
+Kreispunkt genau zu bestimmen. Allerdings gilt: Je kürzer die verwendeten Sehnen, desto größer die Zahl der zu berechnenden Kreispunkte – und damit die
+Genauigkeit der Näherung.
+Die Länge der Sehne wird durch den
+Mittelpunktswinkel
+(Delta) bestimmt,
+der als vierter Parameter des Befehls AA
+bzw. AR angegeben werden kann. Ist
+dessen Wert 0, wird nach der HP-GLSpezifikation als Default-Winkel = 5°
+gesetzt.
+
+(X2,Y2)
+(X1,Y1)
+
+xe = r cos ( + )
+XE = r cos ( + ) + XC (5)
+ye = r sin ( + )
+YE = r sin ( + ) + YC
+
+(X,Y)
+r
+
+(4.2)
+
+Aus lässt sich der Endpunkt des Kreisbogens (XE, YE) nun leicht bestimmen:
+
+(6)
+
+(7)
+
+für jeden ganzzahligen x-Wert zwischen
+[-r, r] erfordern. Der Rechenaufwand wäre
+beträchtlich: Insgesamt wären 4·r Fließkomma-Multiplikationen und 2·r Wurzelberechnungen durchzuführen.
+
+Und noch ein Aspekt ist zu beachten: Die
+Cosinus-Funktion nur im Bereich von 0 bis
+180° umkehrbar. Falls (X, Y) im dritten
+oder vierten Quadranten liegt (dy
+0),
+berechnet sich daher wie folgt (4.2):
+
+r ² x²
+
+(XC,YC)
+Kreissehnen zum Winkel
+
+Im allgemeinen Fall werden also die beiden Punkte (X, Y) und (XE, YE) schrittweise
+
+
+Projekt
+
+durch Kreissehnen zum Mittelpunktswinkel
+verbunden. Die Berechnung der
+Zwischenpunkte (Xi, Yi) erfolgt analog der
+Bestimmung des Endpunkts (XE, YE) des
+Kreisbogens:
+Xi = r cos ( + i· ) + Xi-1
+Yi = r sin ( + i· ) + Yi-1
+
+(8)
+(9)
+
+Dies wird bis zum Index imax wiederholt,
+bei dem der Restwinkel kleiner ist als :
+– imax· <
+Dann wird im letzten Schritt die Kreissehne zum Restwinkel – imax· geplottet.
+
+sind dann auch mehr Hilfspunkte zu berechnen und die Zeichnung wird aufwändiger. Ob die Abweichung von der tatsächlichen Kreislinie mit bloßem Auge erkennbar ist oder nicht, hängt dabei nicht nur
+vom Mittelpunktswinkel der Sehne (bzw.
+der Sehnenanzahl) ab, sondern natürlich
+auch von der Größe des Kreises (also dem
+Radius r). Tatsächlich ist die Abweichung
+von einer exakten Kreislinie beim DefaultWert = 5°, also einem 72-Eck, sehr gering, wie sich leicht nachrechnen lässt.
+
+(X1,Y1)
+
+CI
+Das CI-Kommando (Circle) erhält als
+Parameter den Radius r und plottet – durch
+Kreissehnen angenähert – einen Vollkreis
+um den aktuellen Punkt (X, Y):
+CI r [, ]
+Der Schreibkopf wird zum Schluss wieder
+am Kreismittelpunkt (X, Y) platziert. Auch
+hier kann optional ein Kreissehnen-Winkel
+(Delta) als zweiter Parameter übergeben
+werden; ist der Wert 0, wird als DefaultWert = 5° verwendet.
+Genau besehen ist der Circle-Befehl damit
+ein Vektorgrafik-Befehl für ein N-Eck.
+Falls ein ganzzahliger Teiler von 360°
+ist, dann plottet der Befehl sogar ein
+gleichseitiges N-Eck:
+
+h
+(X,Y)
+(XC,YC)
+
+r
+
+bestimmten Kreissegments
+
+Denn die Höhe h der von den Kreissehnen
+gebildeten Kreissegmente (Abb. 4) kann
+nach der folgenden Gleichung aus und r
+bestimmt werden [4]:
+h r (1 cos )
+
+(10)
+
+Tab. 2: Zahl der Ecken des N-Ecks in
+Abhängigkeit vom Mittelpunktswinkel
+
+Bei einem Kreis (oder Kreisbogen) mit
+einem Radius von 1.000 Punkten liegt die
+maximale Abweichung h von einer exakten
+Kreislinie bei einem Sehnen-Mittelpunktswinkel von 5° bei knapp einem Punkt
+(genau: 0,95) – das entspricht 0,02 mm, ist
+also mit bloßem Auge nicht zu erkennen.
+Selbst bei einem von unserem Plotter
+maximal darstellbaren Radius von 2.250
+Punkten liegt die maximale Abweichung
+unter drei Punkten (genau: 2,62), also bei
+etwa 0,06 mm – bei einer Linienstärke von
+ca. 0,4 mm (Kugelschreibermine).
+
+Je kürzer die Sehne (also je kleiner ),
+desto ‚runder’ die Kreislinie – allerdings
+
+Das bedeutet umgekehrt, dass bei kleineren
+Kreisen auch ein größerer Wert für ge-
+
+Winkel
+
+N-Eck
+
+120°
+
+Gleichseitiges Dreieck
+
+90°
+
+Quadrat
+
+72°
+
+Regelmäßiges Fünfeck
+
+60°
+
+Regelmäßiges Sechseck
+
+…
+
+…
+
+5°
+
+72-Eck (Default)
+
+
+
+
+wählt werden kann, ohne dass die Abweichung von der Kreislinie erkennbar ist.
+Aus (10) folgt mit ein paar einfachen
+Umformungen für einen festen Wert hmax:
+2 arccos(1
+
+hmax
+)
+r
+
+(11)
+
+Wollen wir eine maximale Abweichung
+hmax von fünf Punkten (also etwa 0,1 mm)
+zulassen, dann darf bei einem Kreis mit
+einem Radius von 500 Punkten (= Kreisdurchmesser von ca. 2 cm) demnach der
+Sehnen-Mittelpunktswinkel
+bis zu 16°
+erreichen. Ohne Lupe ist in dieser Größe
+ein gleichmäßiges 24-Eck ( = 15°) von
+einem Kreis nicht zu unterscheiden.
+Neben der Annäherung mit Kreissehnen
+gibt es eine weitere Möglichkeit, das Plotten eines Kreises zu beschleunigen: mit
+einem von Berthold Horn, heute Professor
+am MIT, im Jahr 1976 vorgestellten Verfahren [5]. Dabei wird zu jedem Punkt
+(xi, yi) der Kreislinie geprüft, ob (xi, yi + 1)
+innerhalb eines ein Punkt breiten
+‚Schlauchs’ um den idealen Kreisbogen
+liegt. Wenn ja, wird dieser Punkt, sonst
+wird (xi – 1, yi + 1) geplottet. Dazu genügt
+es, wie bei Bresenhams Algorithmus für
+schräge Linien [6, 2], einen Fehlerwert f
+mitzuführen, der größer als Null sein muss:
+f = (x – ½)² + y² – r²
+
+(12)
+
+Zur Bestimmung des Fehlerwerts wird f
+mit dem Kreisradius r initialisiert (f := r)
+und dann bei jedem x-Schritt 2y + 1
+addiert. Ist f 0, wird 2x – 2 subtrahiert.
+Ein ähnlicher Algorithmus wurde knapp
+ein Jahr nach Horns Veröffentlichung von
+Bresenham publiziert [7].
+Damit lässt sich der Aufwand für die Berechnung der Kreispunkte auf ein bis zwei
+Ganzzahl-Additionen bzw. –Subtraktionen
+reduzieren – und so erheblich beschleunigen. Allerdings sind die Algorithmen
+von Horn und Bresenham nur für einen
+Achtelkreis (beginnend am Endpunkt eines
+Viertelkreises und in der Mitte des Viertel44
+
+kreises endend) definiert; die Kreislinie
+lässt sich daher nicht an einem Stück, sondern nur in acht Kreisbögen ab je einem
+Endpunkt eines Viertelkreises plotten.
+EA und ER
+Die Befehle EA (Edge Absolute Rectangle)
+und ER (Edge Relative Rectangle) plotten
+Rechtecke, deren Seiten aus horizontal
+und vertikal verlaufenden Linien bestehen.
+Sie werden relativ zur aktuellen CursorPosition geplottet, d. h. an den Befehl werden die absoluten bzw. relativen Koordinaten (XC, YC) der gegenüberliegenden Ecke
+übergeben:
+EA XC, YC
+ER dx, dy
+Die Implementierung zeichnet (mit gesenktem Stift) zunächst eine Linie der Länge dx in horizontaler, dann eine der Länge
+dy in vertikaler, erneut eine in horizontaler
+(-dx) und dann wieder in vertikaler Richtung (-dy); der Cursor steht anschließend
+wieder an der Ausgangsposition (X, Y).
+EW
+Der Befehl EW (Edge Wedge) zeichnet
+einen Kreissektor, ausgehend von der aktuellen Position (X, Y) als Mittelpunkt, zu
+gegebenem Radius r mit dem Mittelpunktswinkel
+bezüglich des ‚Startwinkels’ , d. h. dem Winkel der gegen den
+Uhrzeigersinn ersten Begrenzungslinie des
+Kreissektors zur X-Achse (siehe Abb. 1):
+EW r, ,
+
+[, ]
+
+Wird kein Kreissehnenwinkel angegeben
+(also = 0), wird der Kreisbogen aus
+Kreissehnen mit Mittelpunktswinkel 5° angenähert. Anschließend steht der Schreibkopf wieder am Ausgangspunkt (X, Y).
+Die Implementierung des Befehls ist einfach: Zunächst wird eine Linie zum ersten
+Kreispunkt im Abstand (dx, dy) mit
+dx = r cos und dy = r sin geplottet.
+Von dort wird mit dem Kommando
+
+
+Projekt
+
+AR dx, dy,
+
+[, ]
+
+Quellen
+
+ein Kreisbogen zum Endpunkt (XE, YE)
+gezogen. Schließlich wird der Kreissektor
+durch eine Linie zum Mittel- und Startpunkt (X, Y) abgeschlossen.
+
+[1]
+
+Fox, Dirk: HP-GL-Plotter (Teil 1),
+ft:pedia 4/2011, S. 26-34.
+
+[2]
+
+Fox, Dirk: HP-GL-Plotter (Teil 2),
+ft:pedia 1/2012, S. 4-12.
+
+Beispiel-Plots
+
+[3]
+
+Mit dem so erweiterten Befehlssatz lassen
+sich mit relativ wenigen Kommandos komplexe geometrische Grafiken plotten.
+
+Hewlett-Packard: The HP-GL/2 and
+HP RTL Reference Guide. Second
+Edition, September 1996.
+
+[4]
+
+Wikipedia: Kreissegment.
+
+[5]
+
+Berthold K. P. Horn: Circle Generators for Display Devices. Computer
+Graphics and Image Processing 5, 2
+(June 1976), S. 280-288.
+
+[6]
+
+Wikipedia: Bresenham-Algorithmus.
+
+[7]
+
+Jack Bresenham: A linear algorithm
+for incremental digital display of
+circular arcs. Communications of
+the ACM 20, 2 (1977), S. 100-106.
+
+Um die Leistungsfähigkeit des Befehlsumfangs zu demonstrieren, habe ich beispielhaft ein paar optische Täuschungen in HPGL ‚programmiert’ (Abb. 5). Die HP-GLBefehlsdatei, mit der die Plots erzeugt wurden, wurde aus einer Excel-Datei exportiert, die die Befehlskürzel entsprechend
+der Zuordnung aus Tabelle 1 automatisch
+durch Befehlsnummern ersetzt. Beide
+Dateien findet ihr, zusammen mit den an
+den neuen Parser angepassten HP-GL-Beispielen aus [2] und Version 2 des Steuerprogramms, im Download-Bereich der ft:c.
+
+rechts die HP-GL-Datei der beiden unteren Zeichnungen
+
+
+

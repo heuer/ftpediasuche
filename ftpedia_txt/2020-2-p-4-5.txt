@@ -1,0 +1,144 @@
+
+
+Modell
+
+Mini-Modelle (25): Parallelzeichner
+Gerhard Birkenstock
+Immer wieder kommt es auch beim Heimwerken vor, dass eine kleine Hilfe gebraucht wird.
+Gerade bei einfachen Problemen kann fischertechnik helfen. Hier ist es ein simpler
+Parallelzeichner. Eine Kontur wird damit auf einfachste Art auf das Werkstück übernommen.
+
+Einfacher Parallelzeichner
+Wie bekommt man eine parallele Linie auf
+ein Brett? Mit dem Gliedermaßstab geht es,
+jedoch ist das umständlich: Mit der einen
+Hand den Bleistift auf Anschlag halten und
+mit der anderen Hand an dem zu
+übernehmenden Rand entlang fahren.
+Genau bei dieser Arbeit ist mir eine Idee
+gekommen. Mit fischertechnik kann man
+doch richtig gut auch beliebige Abstände
+einstellen – mit einem Abstandshalter in der
+Nut eines Grundbausteins 30. Und die Statik-I-Streben lassen richtig viele Möglichkeiten zu. Den Blick über die fischertechnik-Kästen schweifend findet sich
+schon sehr bald das Richtige: Hier im
+folgenden Bild (Abb. 1) zu erkennen. Total
+einfach und doch genau das Gewünschte.
+
+Dank der Möglichkeit, die Strebe an den SRiegeln in der Nut des BS 30 zu verschieben, kann man jeden beliebigen Abstand
+einstellen. Kommt man an die Grenze des
+Steins, wird einfach einer der S-Riegel um
+ein Loch versetzt. Wenn die Länge nicht
+ausreicht, wird eine längere Strebe gewählt.
+Und für noch längere Versionen kommen
+dann mehrere der Streben mit einer Lasche
+15 dazu. Alles machbar.
+
+
+Konturübertragung
+Mit dem Wissen und der Übung im Umgang mit der fischertechnik habe ich mich
+dann in Gedanken noch an eine weitere
+Aufgabe gewagt: Ein gerades Brett soll an
+eine schiefe Wand angepasst werden. Somit
+ist eine Kontur mit einem gewissen Abstand
+auf ein Brett zu übernehmen. Hier wird es
+vom Aufbau her etwas aufwändiger, bewegt
+sich aber für fischertechniker noch immer
+im einfachsten Segment.
+einfachsten Version
+
+
+Es werden zwei Streben genutzt. Die eine
+um weiterhin den variablen Abstand einstellen zu können. Auch in dieser Strebe ist
+noch das Loch für den Bleistift vorhanden.
+
+Die andere Strebe wird zur Abtastung der
+gekrümmten Wand genutzt. Der Abstand
+zur Wand wird justiert und dann mit der
+Abtastung begonnen. Abb. 3 zeigt die einfache Anordnung der fischertechnik-Teile.
+
+Modell
+
+Parallelzeichner einfach
+Bauteil-Nr.
+
+Anz.
+
+Bezeichnung
+
+36323
+
+
+S-Riegel, rot
+
+32879
+
+
+Baustein 30,
+schwarz
+
+38546
+
+
+I-Strebe mit Loch
+
+Für die Verlängerung:
+
+
+Es sind sehr wenige fischertechnik-Bauteile
+vonnöten. Aber der dabei entstehende
+Nutzen ist toll. Im folgenden Bild (Abb. 4)
+erkennt man die Anwendung der kleinen
+Vorrichtung.
+
+31667
+
+
+Lasche 15, rot
+
+xxxxx
+
+
+I-Strebe mit Loch
+xxx
+
+36323
+
+
+Weitere S-Riegel
+
+Abtastversion
+Bauteil-Nr.
+
+Anz.
+
+Bezeichnung
+
+36323
+
+
+S-Riegel, rot
+
+32879
+
+
+Baustein 30,
+schwarz
+
+38546
+
+
+I-Strebe mit Loch
+
+35975
+
+
+Statikadapter, rot
+
+38541
+
+
+I-Strebe 45, gelb
+
+
+
+

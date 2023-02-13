@@ -1,0 +1,216 @@
+
+Computing
+
+Computing
+
+Sustainable smart home with the TXT
+Martin Giger
+fischertechnik launched the smart home kit last year. A very good move on a conceptual level.
+Smart home and IoT (internet of things) are rapidly growing technology sectors. The unique
+placement of the TXT allows it to be a perfect introductory platform to this world.
+However, the smart home platform from
+fischertechnik relies on a central cloud
+server. This leads to vendor lock-in and
+challenges to integrate it with other
+products. Making the cloud your primary
+interface also means you're vulnerable to
+internet outages. Of course, the risk really
+depends on the device type, but you
+
+wouldn't want your thermostat to stop
+working, just because your internet was
+down.
+Mozilla started venturing into IoT recently
+[1]. They are trying to advocate for better
+privacy and user freedom by promoting
+interoperability. These goals are unified in
+
+Img. 1: The TXT IoT demo setup
+
+
+
+Img. 2: The web user interface
+
+a proposal for a device API that is based on
+web protocols called “Web of Things” [2].
+It is developed in collaboration with smart
+home and “industry 4.0” manufacturers.
+This API isn't necessarily implemented by
+each device directly, some devices are too
+
+low powered to provide a web server or are
+using other successful local mesh networks
+like Z-Wave or Zigbee. In these cases, a
+gateway that is connected to the user's local
+network would provide the web thing API.
+
+The web thing API breaks physical devices
+down into three attributes: properties,
+actions and events. Properties as stateful
+values that can both be changed by the
+device and the user (I'll often refer to the
+user as the client). A device can however
+declare a property as read-only or add input
+value restrictions. Actions let the user
+execute an action on the device that either
+isn't stateful or affects multiple properties.
+Lastly, events are fired by the device to
+indicate a momentary effect that is not
+reflected in the state. Above that is a capabilities [3] system, with which devices can
+indicate the semantics of their features. For
+example, a light bulb can advertise itself as
+being a “Lamp”, it's brightness property
+will be a “BrightnessProperty” and the
+power toggle will be an “OnOffProperty”.
+These allow clients to expose appropriate
+UIs and behaviors for devices. The protocol
+is available over HTTP(S) and optionally
+WebSockets for real-time communication
+of changes.
+Mozilla is developing both a reference gateway to control devices using this protocol
+and reference implementations in multiple
+languages to build web things with. The
+gateway also has an adapter system to
+bridge other smart home protocols to the
+web of things data model.
+
+Computing
+
+adapt that to the web of things? MQTT is
+only a protocol and the actual packets aren't
+standardized. Further, you would have to
+figure out how to make the TXT connect
+with a custom MQTT consumer. All in all,
+I decided it was much simpler and resilient
+to write an implementation of the web thing
+protocol that runs on the TXT.
+The “WebOfTXT” app, the application
+connecting the TXT to the web of things I
+wrote, offers configuration for the sensor
+and actor types connected to the TXT. After
+the configuration is set, the user has to start
+the web thing server. Before starting the
+server, the schema for the thing is built
+based on the selections made by the user. A
+QTimer is started to get updated property
+values. As an exception, the actor properties
+are only changed by clients of the web thing
+API, setting the speeds or levels for the
+outputs. The two actions trigger the respective functions in the TXT API based on the
+provided inputs. All inputs from API clients
+are verified by the web thing python
+package to be valid inputs. For example, the
+actor levels are checked to be integers in the
+allowed range for the actor type. These
+limits are also published as a schema in the
+web thing API, so clients can also expose
+these limits to the user.
+
+A TXT is easily powerful enough to run the
+web server required for the web thing API
+on its own and be a proper web thing. I've
+taken the python APIs from the community
+firmware [4] and Mozilla's python web
+thing library to create an app that can turn
+the TXT into a web thing. It currently
+exposes all inputs (I1-I8), outputs (M1M4/O1-O8), telemetry of the TXT, the
+camera as well as the counter inputs (C1C4) as properties. Only the actor properties
+are writable. Further it provides actions to
+play a built-in sound and reset a counter
+input.
+
+A special case is the camera. It is exposed
+as an image snapshot. However, the image
+is not served via the web thing API. HTTP
+can already handle images just fine and
+there's no need for scaffolding information.
+Furthermore, an image can't be written, only
+read. Thus, the image property just points to
+an image file hosted by the TXT. The TXT
+updates this image about ten times a second.
+However, refreshing it is entirely up to the
+client and no notification is sent when a new
+image is available. For all other properties,
+the web thing sends an event whenever a
+property value is changed, so the client can
+immediately display the updated value.
+
+The fischertechnik solution for smart home
+functionality uses MQTT. Why not just
+
+I found out, that starting the web thing
+server in the main app thread blocks the
+
+
+
+TXT UI. Thus, the web thing server is
+started in a separate python thread with its
+own event loop. Otherwise, the application
+could not be stopped from the TXT, since it
+would no longer be registering touch screen
+inputs.
+fischertechnik’s smart home solution is
+focused on getting the user up and running
+with little effort and little first party infrastructure. It is relatively simple to build
+solutions for the TXT that can be used in
+conjunction with other smart home or IoT
+devices, though. I believe building your
+own solution is even more valuable for
+education on the topic, for example because
+you can easily consume the data yourself
+afterwards. Bringing up privacy, security
+and interoperability in IoT education is
+important, especially considering that major
+manufacturers are avoiding these topics.
+Source code of my python bridge can be
+found in the freaktechnik/WebOfTXT
+GitHub repository [5]. The python script is
+only about 750 lines of code; however, it
+requires a couple of python packages to do
+the heavy lifting. Those are installed by the
+build.sh script, which produces a ZIP file
+that can be uploaded to the TXT via the web
+
+
+UI of the community firmware. This should
+be a good starting point to create a more
+specific web thing with the TXT and annotate it with the proper capabilities.
+I want to thank all Mozilla employees and
+friends from the fischertechnik community
+that have helped me during the creating of
+this app, as it was my first time seriously
+writing python.
+I've uploaded a demo video of the app in
+action (without TXT camera) to youtube
+[6].
+
+References
+[1]
+
+Mozilla Corporation: Project Things.
+
+[2]
+
+Mozilla Corporation: Web Thing
+API.
+
+[3]
+
+Mozilla Corporation: WoT
+Capability Schemas.
+
+[4]
+
+fischertechnik Community: TXT
+Community Firmware.
+
+[5]
+
+Giger, Martin: WebOfTXT. GitHub.
+
+[6]
+
+Giger, Martin: Web of TXT demo.
+youtube.
+
+

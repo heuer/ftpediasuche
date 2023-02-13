@@ -1,0 +1,231 @@
+
+
+Modell
+
+Dominostein-Aufsteller
+Thomas Püttmann
+Millionen von Fernsehzuschauern konnten in den 80er und 90er Jahren lange Reihen aus
+Dominosteinen umkippen sehen. Auch heute noch faszinieren solche Kettenreaktionen große
+und kleine Kinder überall auf der Welt. Das Aufstellen der Reihen ist allerdings zeitaufwendig
+und nichts für Nervenschwache. Was liegt da näher, als ein ferngesteuertes fischertechnikFahrzeug zu bauen, das die Aufgabe zu einem reinen Vergnügen macht?
+Dominosteinreihen umkippen zu sehen fasziniert Kinder und Erwachsene gleichermaßen. Und die Faszination ist umso
+größer, je länger die Reihen und je aufwendiger die Effekte sind. Wer aber schon
+einmal versucht hat, interessante Reihen mit
+mehr als 200 Steinen aufzustellen, weiß,
+wie anstrengend es ist, stets einen funktionierenden Abstand zu finden, und wie frustrierend es sein kann, wenn man versehentlich einen Stein umwirft und damit das
+Ergebnis der letzten halben Stunde in
+wenigen Sekunden zunichte macht.
+
+Natürlich gab es schon immer Aufstellhilfen in Form von Kämmen. Wer sich aber
+auch nur etwas für Technik begeistert, wird
+das im Jahr 2010 von Matthias Wandel auf
+YouTube vorgestellte LEGO-Fahrzeug viel
+spannender finden. Aus einem horizontalen
+Magazin schiebt es die Steine während der
+Fahrt mit einem Exzentermechanismus aus.
+Allerdings kann es nur geradeaus fahren.
+Hier wird nun eine ferngesteuerte fischertechnik-Variante präsentiert, die die Steine
+auch in Kurven oder Schlangenlinien aufstellen kann.
+
+
+
+
+Modell
+
+
+Funktion
+Wie das Fahrzeug funktioniert erkennt man
+am besten anhand von Abb. 2. Die Dominosteine befinden sich dicht gestapelt zwischen den beiden roten Laufschienen. Sie
+werden mit dem Fahrzeug mitbewegt und
+gleiten dabei über den Boden. Auf der
+Abbildung ist das Magazin gerade fast leer,
+um einen besseren Blick auf das Innere des
+Fahrzeugs zu ermöglichen.
+Die Steine werden von der roten Grundplatte 45 x 45 ausgeschoben, die an der hinteren Kante des Fahrzeugs in einem Schlitz
+geführt wird. Die Schiebebewegung ergibt
+sich durch eine Schubstange aus der Drehbewegung des Zahnrads Z30 ganz links in
+Am anderen Ende der Welle, auf der dieses
+Zahnrad Z30 sitzt, befindet sich ein Z10,
+das ein weiteres Zahnrad Z30 kämmt.
+Dieses zweite Z30 dreht sich daher nur ein
+Drittel so schnell wie das erste. Über zwei
+
+Rastritzel Z10, die mit einer Kette verbunden sind, und zwei Kegelzahnräder wird die
+Drehbewegung des zweiten Z30 weitergegeben an die Vortriebsachse des Fahrzeugs.
+Auf dieser Achse sitzt, quasi in der Mitte
+des Fahrzeugs, das Vortriebsrad. Fahren
+und Schieben sind also insgesamt so miteinander verkoppelt, dass während einer
+vollen Umdrehung des Vortriebsrads drei
+Dominosteine in gleichmäßigem Abstand
+ausgeschoben werden.
+Man kann das Fahrzeug per Hand schieben
+und lenken. Vor allem Kinder haben aber
+noch mehr Freude an der motorisierten und
+ferngesteuerten Version aus Abb. 1.
+
+Zusammenbau
+Wir beginnen den Zusammenbau mit der
+inneren der beiden roten Laufschienen. An
+dieser Laufschiene bauen wir zwei schwarze Bausteine 15 an und schieben einen
+schwarzen Winkelträger 15 mit zwei Zapfen dazwischen, siehe Abb. 3.
+
+
+Um das Herausschieben der Bausteine mit
+der Vorwärtsbewegung des Fahrzeugs zu
+verkoppeln, muss die Drehbewegung der
+Antriebsachse um 90° gedreht werden.
+Dazu dient das Kegelzahnradgetriebe aus
+
+
+Ein zweites Rad in der Flucht der Antriebsachse stützt das Fahrzeug auf der anderen
+Seite, siehe Abb. 6.
+
+Eine Grundplatte 45 x 45 schiebt den jeweils letzten Dominostein aus der Reihe
+nach außen. Diese Platte muss an der Rückseite des Fahrzeugs an einer glatten Fläche
+entlang gleiten. Abb. 4 zeigt die glatte Hinterkante des Fahrzeugs mit einer Bauplatte
+4 x 1.
+
+des Fahrzeugs
+
+Mit Hilfe dreier zusätzlicher Bausteine 30
+und eines Verbindungsstücks 15 wird der
+Unterbau des Fahrzeugs fertiggestellt, siehe
+eingesteckte Vortriebsachse
+
+Das Fahrzeug wird durch ein Rad 23 mit
+einem Reifen 32 vorwärtsbewegt. In diesem
+Rad steckt eine Rastachse 45.
+
+
+
+Damit die Dominosteine einander sicher
+umwerfen, dürfen die Abstände zwischen
+den Steinen nicht zu klein und nicht zu groß
+sein. Unsere Steine haben eine Abmessung
+von 45 mm x 20 mm x 6 mm. Experimente
+ergaben, dass drei bis vier Dominosteine
+
+
+Modell
+
+aufgestellt werden müssen, wenn das Vortriebsrad unseres Fahrzeugs eine ganze Umdrehung macht. Das Rad, das über die
+Pleuelstange die Steine ausschiebt, dreht
+sich daher dreimal so schnell wie die Vortriebsachse.
+
+
+
+Genau dies leistet der Aufbau in Abb. 8.
+Über eine Kette wird die Drehbewegung auf
+eine obere Welle übertragen, auf der ein
+Z30 sitzt, das ein Z10 auf einer mittleren
+Welle kämmt. Diese mittlere Welle dreht
+sich daher dreimal so schnell wie die Vortriebswelle. Auf ihr sitzt ein weiteres Z30,
+das für das Ausschieben der Dominosteine
+verantwortlich ist.
+In Abb. 9 sieht man die Führung der nicht
+abgebildeten schiebenden Grundplatte 45 x
+45 hinten am Fahrzeug. Der Verbund aus
+einem Winkelträger 30 und einem Winkelträger 60 sollte sich möglichst dicht über
+dem Boden befinden, ohne zu schleifen.
+Der Schlitz für den Schieber sollte eine
+konstante Breite besitzen. Das klappt bei
+mir mit gelben Winkelträgern deutlich
+besser als mit schwarzen – leider, denn die
+schwarzen sehen an dieser Stelle meines
+Erachtens deutlich besser aus.
+
+Die Schubstange besteht aus einer Rastachse 75, zwei Rastadaptern und zwei roten
+Rastachsen 20. Die schiebende Platte ist
+eine Grundplatte 45 x 45, an der als Gewichte zwei Bausteine 15 angesteckt und
+eine Achse 30 eingesteckt ist. Dadurch wird
+ein Verkanten während des Schiebens verhindert. Wichtig ist, dass die Rastachse 20
+nur so weit in die Bohrung der Grundplatte
+gesteckt wird, dass sie nicht auf der anderen
+Seite hinausragt. Ansonsten wird nicht nur
+ein Dominostein ausgeschoben, sondern ein
+zweiter mitgenommen.
+
+Grundplatte 45 x 45 mit Gewichten
+
+
+
+
+Die Dominosteine werden außen durch eine
+zweite Laufschiene geführt. In Abb. 11 ist
+zu sehen, mit welchen Zwischenteilen diese
+an der inneren Laufschiene befestigt wird.
+
+der Dominosteine
+
+Das Vorderrad besteht aus einem Rad 23
+mit einem Reifen 32, einer K-Achse 30,
+zwei Kupplungsstücken 3, einem Baustein
+30 und einer Rastachse mit Platte.
+
+
+Dazu werden zwei weitere Bausteine 15
+ergänzt: einer zur Verlängerung des Lenkarms über dem Vorderrad und einer hinter
+dem Akku. An dem zweiten Baustein 15
+wird dann auch der Empfänger angesteckt.
+Der Servo wird an der Rückseite der vertikalen Bausteinsäule angebaut und lenkt das
+Fahrzeug über eine I-Strebe 90 als Schubstange.
+
+
+Das Fahrzeug wird mit dem IR-Controller
+ferngesteuert (siehe Abb. 1).
+und I-Strebe 90 als Schubstange
+
+
+Modell
+
+Bemerkungen
+Der Aufsteller kommt ohne Änderungen
+mit Dominosteinen verschiedener Größen
+zurecht. Selbst Jengasteine lassen sich
+damit aufstellen. Falls die Steine kürzer
+sind als 45 mm, sind die Abstände zwischen
+den Dominosteinen allerdings zu groß.
+Dann sollte das obere Z30 gegen ein Z40
+ausgetauscht werden. Natürlich muss dabei
+auch ein Baustein 7,5 eingefügt und die
+Kette verlängert werden.
+Mit fischertechnik lassen sich auch viele
+tolle Effekte in die Dominostrecken einbauen. Für anregende Ideen verweise ich
+auf das Video [2]. Kombinationen aus
+Dominostrecken und Kugelbahnstrecken
+sind besonders attraktiv.
+Zum Austesten habe ich das Fahrzeug zweimal in unseren Kindergarten mitgenommen, da dort viel freie Fläche und genügend
+Dominosteine vorhanden sind. Die Kinder
+haben begeistert damit gespielt und gemeinschaftlich lange Reihen aufgestellt. Durch
+den offenen Aufbau lassen sich die Funktion des Fahrzeugs und das Zusammenspiel
+der einzelnen technischen Komponenten
+(Räder, Getriebe, Schubmechanismus, Lenkung, Fernsteuerung) auch kleineren Kindern schon sehr gut erklären.
+Vielen Dank an dieser Stelle an das
+freundliche Team des Kindergartens Liebfrauen in Altenbochum für die Unterstützung!
+
+Magazin ist leer und muss neu aufgefüllt
+werden
+
+Links
+[1]
+
+Matthias Wandel: Lego domino row
+building machine, Youtube.
+
+[2]
+
+hevesh5, kaplamino: Unconventional
+Domino Tricks, Youtube.
+
+[3]
+
+Thomas Püttmann: Dominosteine
+aufstellen mit fischertechnik,
+Youtube.
+
+[4]
+
+Thomas Püttmann: Liste der Einzelteile zum Bau des DominosteineAufstellers, Downloadbereich der ftCommunity.
+
+
+

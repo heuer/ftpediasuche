@@ -1,0 +1,66 @@
+
+
+Editorial
+
+AI
+Dirk Fox, Stefan Falk
+Künstliche Intelligenz (englisch: Artificial
+Intelligence, AI) ist derzeit das Zukunftsthema der Informatik. Dabei ist es uralt:
+Geprägt wurde der Begriff schon 1956.
+Damals versuchte man mit formaler Logik
+z. B. mathematische Sätze zu beweisen oder
+Knobelaufgaben zu lösen. Andere Ansätze
+verwendeten (z. B. medizinische) Expertensysteme und durchsuchten deren Datenbank
+nach Empfehlungen, oder gingen brute
+force vor, indem sie alle Reaktionsmöglichkeiten durchprobierten und bewerteten –
+wie der berühmte IBM-Schachcomputer
+„Deep Blue“, der am 10.02.1996 den amtierenden Schachweltmeister Gary Kasparov
+schlug. Doch ließen sich diese Ansätze
+nicht verallgemeinern, da sie auf bestimmte
+Probleme zugeschnitten waren.
+Der Durchbruch gelang schließlich „Neuronalen Netzen“, die ganz ähnlich wie das
+menschliche Gehirn funktionieren: Angelernt mit Beispieldaten korrigieren sie die
+„Gewichte“ der Eingänge in ihren miteinander verknüpften „Knoten“ so lange, bis
+das Ergebnis den Erwartungen entspricht.
+Die Lernqualität hängt damit natürlich von
+den Lerndaten ab: Je mehr und je aussagekräftiger, desto verlässlicher löst das neuronale Netz eine Aufgabe. Dieser auch „maschinelles Lernen“ (ML) genannte KI-Ansatz wurde erst mit heutigen Rechnern effizient möglich – und erobert derzeit immer
+neue Anwendungen, denn er lässt sich für
+praktisch alles nutzen, was ein Computer
+„üben“ kann. Der Nachteil: Wie beim
+menschlichen Gehirn weiß man nicht, was
+das neuronale Netz genau gelernt hat – und
+es kann zu Fehlentscheidungen kommen.
+
+
+Eine solche KI-Anwendung, die vor zwei
+Jahren durch einen Artikel des Guardian
+Furore machte, ist GPT-3 – ein Text-Erzeugungs-Algorithmus der Firma OpenAI.
+Gefüttert wird er mit Inhalten aus dem Internet – und erzeugt zu einem ausgewählten
+Thema kurze Notizen bis hin zu ganzen
+Büchern, die sogar an unterschiedliche
+Schreibstile angepasst werden können.
+Die Wahrheit eines Sachverhalts kann
+GPT-3 nicht prüfen und ist daher auf eine
+Bewertung der Plausibilität angewiesen.
+Was aber könnte plausibler sein als eine
+sehr oft wiederholte Behauptung? Wenn
+(was sicher bereits passiert) immer mehr
+Texte von einem solchen Automaten erzeugt werden, wird die Verbreitung (und
+damit wiederum die Plausibilität) häufiger
+Behauptungen verstärkt – und Widerlegungen, die es schon heute schwer haben (wie
+z. B. der Mythos vom hohen Eisengehalt
+von Spinat), dürften keine reelle Chance
+haben. Ähnliches könnte für neues Wissen
+gelten – denn das hat ja gerade die Eigenschaft, selten publiziert worden zu sein.
+Immerhin könnt ihr sicher sein, dass (auch)
+diese ft:pedia von den Autoren „handverfasst“ ist – denn sie hält exklusives Wissen
+für euch bereit. Und damit unsere Kinder
+die Grenzen von KI-Systemen verstehen,
+sollten sie damit experimentieren – und die
+ft:pedia lesen…
+Beste Grüße,
+Euer ft:pedia-Team
+P.S.: Am einfachsten erreicht ihr uns unter
+ftpedia@ftcommunity.de oder über die Rubrik ft:pedia im Forum der ft-Community.
+
+

@@ -1,0 +1,464 @@
+
+
+Computing
+
+Bau einer ft-Funkuhr
+Dirk Fox, Dirk Ottensmeyer
+Der TX Controller kann nicht nur Sensoren auswerten, sondern auch andere analoge und
+digitale Signale. Ein besonders interessantes Signal, das in ganz Europa empfangen und mit
+einer Investition von ca. 10 Euro direkt über einen der Digitaleingänge eingelesen werden
+kann, ist das Zeitsignal DCF77 der Physikalisch-Technischen Bundesanstalt – die „Atomuhrzeit“. Der Beitrag skizziert die Entstehung dieses Zeitsignals und zeigt, wie ihr mit Robo Pro
+aus dem TX Controller eine fischertechnik-Funkuhr machen könnt.
+Am 1. August 1978 trat in Deutschland ein
+merkwürdiges Gesetz in Kraft: Das
+„Gesetz über die Zeitbestimmung“ (Zeitgesetz), das das „Gesetz betreffend die Einführung einer einheitlichen Zeitbestimmung“ aus dem Jahr 1893 ablöste. Es
+erklärte nicht nur die Mitteleuropäische
+Zeit (MEZ) zur „gesetzlichen Zeit“ in
+Deutschland und ermächtigte die Bundesregierung, durch Rechtsverordnung die
+Sommerzeit einzuführen, sondern verpflichtete die Physikalisch-Technische
+Bundesanstalt (PTB) in Braunschweig,
+diese Zeit zu definieren, darzustellen und
+zu verbreiten. Am 12. Juli 2008 ging das
+Zeitgesetz in einem neuen „Einheiten und
+Zeitgesetz“ auf [1]. Was hatte es damit auf
+sich?
+
+warte zu Berlin erhielt. Damals wurde die
+genaue Zeit astronomisch bestimmt. Die
+Synchronisation erfolgte über eine direkte
+Stromverbindung zur Sternwarte, die alle
+zwei Sekunden einen elektrischen Impuls
+erhielt, über den die Pendelschwingung der
+Berliner Normaluhren reguliert wurde.
+
+Die gesetzliche Zeit
+
+Dank der Arbeiten von Guglielmo Marconi
+(1974-1937), dem am 27.03.1899 die erste
+Funkverbindung über den Ärmelkanal
+gelang, entstanden Anfang des 20. Jahrhunderts erste drahtlose Zeitdienste, zunächst in den USA, dann in Europa. FunkZeitdienste ermöglichten eine höchst präzise Bestimmung der geographischen
+Länge – nicht zuletzt für die Seeschifffahrt
+ein bedeutender Fortschritt.
+
+Dem Astronom und Mitbegründer der Physikalisch-Technischen Reichsanstalt (Vorgängerinstitution der PTB) Wilhelm Julius
+Foerster (1832-1921) verdanken wir die
+gesetzliche Zeit in Deutschland. Er setzte
+sich in der zweiten Hälfte des 19. Jahrhunderts intensiv für die Einführung eines einheitlichen Zeitsignals ein. Am 20.07.1869
+wurde auf seine Initiative in Berlin die
+erste „Normaluhr“ aufgestellt, die ihren
+Sekundentakt von der Königlichen Stern4
+
+1895 wurde diese Aufgabe einer privaten
+Gesellschaft, der Normal-Zeit GmbH
+(später T&N, dann Telenorma) übertragen,
+die die Normaluhren-Synchronisation in
+ganz Deutschland über Telefonverbindungen realisierte [2], nachdem 1893 mit dem
+bereits erwähnten „Gesetz betreffend die
+Einführung einer einheitlichen Zeitbestimmung“ die mittlere Sonnenzeit am 15.
+Längengrad Ost als einheitliche deutsche
+Zeit festgelegt worden war [3].
+
+Die Nutzung als Funkmast für ein Zeitsignal rettete 1904 übrigens den Eiffelturm
+
+– denn ursprünglich sollte das zur Weltausstellung 1889 errichtete, ungeliebte Bauwerk 1909 abgerissen werden. Es wurde
+sogar beschlossen, dass es am 01.07.1913
+als „Leuchtturm der Zeit“ die Ausstrahlung
+einer koordinierten Weltzeit übernehmen
+sollte; der Ausbruch des Ersten Weltkriegs
+verhinderte allerdings die Umsetzung [2].
+
+Computing
+
+Rufzeichen DCF77 liegt bei etwa
+2.000 km; er versorgt also ganz Europa mit
+dem Zeitsignal (Abb. 1). Bis etwa 600 km
+Entfernung (also innerhalb von Deutschland) ist das Signal sehr stabil; zwischen
+600 und 1.100 km können sich Boden- und
+Raumwelle überlagern und Schwankungen
+in der Amplitude des Signals verursachen.
+
+Heute wird die gesetzliche Zeit nicht mehr
+astronomisch, sondern atomphysikalisch
+bestimmt: Seit 1991 liefert die Cäsium-Uhr
+CS2, eine von vier so genannten „Atomuhren“, die in der PTB betrieben werden,
+die Referenzzeit für Deutschland. Sie
+weicht eine Stunde von der 1972 eingeführten „koordinierten Weltzeit“ (Coordinated Universal Time, UTC) ab, während
+der Mitteleuropäischen Sommerzeit zwei
+Stunden (MESZ = UTC+2).
+Die Standardabweichung (also die Genauigkeit der Zeitangabe) liegt für die CS2 bei
+1,2 10-14, also einer Sekunde alle 2,64 Mio.
+Jahre [3].
+Das Zeitsignal wird von der PTB auf drei
+Wegen verbreitet [4]:
+über das öffentliche Telefonnetz: Europäischer Telefonzeitcode aus 80 ASCIIZeichen, abrufbar unter der Nummer
++49 (0)531 512038 mit einem archaischen 1200 Baud-Modem (vollduplex,
+keine Parität, 8 Daten- und ein Stoppbit,
+kein Autolinefeed);
+etwas zeitgemäßer über das Internet mit
+dem Network Time Protocol (NTP) von
+drei Servern (ptbtime1, ptbtime2 und
+ptbtime3.ptb.de);
+und seit dem 01.01.1959 über eine
+Langwellen-Sendeanlage in Mainflingen (25 km südöstlich von Frankfurt)
+mit einer Trägerfrequenz von 77,5 kHz.
+Die Verbreitung des Zeitsignals über eine
+Langwelle hat den Vorteil, dass ihr Empfang durch Vegetation oder Bebauung
+nicht signifikant beeinträchtigt wird. Die
+Reichweite des 50 kW-Senders mit dem
+
+(Quelle: PTB/Wikipedia)
+
+Empfangsstörungen können insbesondere
+durch Fernsehgeräte oder Pulsstörungen
+von Schaltnetzteilen, aber auch durch Gewitter verursacht werden [3]. Senderseitige
+Störungen können bei starken Auslenkungen der Antenne (Sturm oder Eisregen)
+auftreten. Seit dem 01.09.1970 wird das
+Zeitsignal im Dauerbetrieb ausgestrahlt.
+Die Verfügbarkeit des Funk-Zeitsignals lag
+in den vergangenen Jahren bei über
+99,85 %; der Betreiber Media Broadcast
+garantiert vertraglich eine Verfügbarkeit
+von jährlich 99,7 %. Beim Umschalten auf
+den Ersatzsender kann es allerdings zu
+Ausfällen von mehreren Minuten Dauer
+kommen [3].
+
+D: Deutschland, C: Langwellensender, F: Lage
+bei Frankfurt, 77: Trägerfrequenz
+
+
+DCF77-Zeitcode
+Das Zeitsignal der PTB übermittelt seit
+dem 05.06.1973 jede Minute die vollständige Zeitinformation: das Datum und die
+Uhrzeit der auf das Signal folgenden
+Minute, einige Paritätsbits (zur Feststellung von Empfangsfehlern), Statusbits für
+spezielle Betriebsinformationen (Sommer/Winterzeit, Ruf-Bit, Einfügung einer
+Schaltsekunde) und 14 Bits, in denen der
+Betreiber der Sendeanlage, die Firma
+MeteoTime GmbH, regionale Wetterinformationen übermittelt. Für die Entschlüsselung der Wetterinformationen ist jedoch
+eine Lizenz erforderlich.
+
+(Quelle: Herbertweidner/Wikipedia)
+
+Minute (Bits 21-27): die ersten vier Bits
+liefern die Einerstelle, die folgenden
+drei die Zehnerstelle – Bit 25 für 10, Bit
+26 für 20 und Bit 27 für 40.
+Stunde (Bits 29-34): die ersten vier Bits
+liefern die Einerstelle, die folgenden
+beiden die Zehnerstelle – Bit 33 für 10,
+Bit 34 für 20.
+Kalendertag (Bits 36-41): die ersten vier
+Bits ergeben die Einerstelle, die folgenden beiden die Zehnerstelle – Bit 40 für
+10, Bit 41 für 20.
+Wochentag (Bits 42-44): Montag = „1“
+Monat (Bits 45-49): die ersten vier Bits
+bilden die Einerstelle, Bit 49 die Zehnerstelle.
+Kalenderjahr (Bits 50-57): nur die Zehner- und Einerstelle werden übermittelt;
+die ersten vier Bits ergeben die Einer,
+die folgenden vier die Zehner – Bit 54
+für 10, Bit 55 für 20, Bit 56 für 40 und
+Bit 57 für 80.
+
+Die insgesamt 59 Informationsbits eines
+DCF77-Datagramms werden als digitales
+Signal auf die Trägerfrequenz aufmoduliert
+(Amplitudenmodulation). Der Wert „0“
+wird mit einer Amplitudenabsenkung auf
+15% für 100 ms, gefolgt von 900 ms ohne
+Absenkung kodiert, der Wert „1“ durch
+eine Absenkung für 200 ms, gefolgt von
+800 ms ohne Absenkung. In der 60.
+Sekunde erfolgt keine Amplitudenabsenkung; daran kann ein Empfänger den
+Anfang des nächsten Datagramms erkennen ([3, 5], Abb. 2).
+Damit werden jede Minute Datum (Tag,
+Wochentag, Monat und Jahr) und Uhrzeit
+(Minute, Stunde) der nächsten Minute
+BCD-kodiert2 übertragen (Abb. 3):
+Zeitzone (Bits 17 und 18): MEZ, wenn
+Bit 17 = 1 und MESZ, wenn Bit 18 = 1.
+
+
+
+BCD: Binary Coded Decimal.
+
+(Quelle: PTB/Wikipedia)
+
+Bit 28, Bit 35 und Bit 58 sind Paritätsbits –
+Prüfbits zur Erkennung von Übertragungsfehlern. Sie müssen den Wert „1“ haben,
+wenn die Zahl der „1“-Bits im Block davor
+ungerade ist, sonst muss ihr Wert „0“ sein.
+
+Bei einem korrekten Datagramm müssen
+außerdem Bit 0 = 0 und Bit 20 = 1 sein; Bit
+17 und 18 dürfen nicht denselben Wert
+haben. Nicht korrekte Datagramme dürfen
+nicht zum Stellen einer Funkuhr verwendet
+werden und müssen daher erkannt und
+verworfen werden.
+
+Computing
+
+zu verbinden sind (1: GND, 2: +9V). Die
+beiden anderen sind Ausgänge, an denen
+das demodulierte DCF-Signal (3: normal,
+4: invertiert) anliegt.
+
+DCF77-Empfänger
+Waren in den 80er Jahren DCF77-Empfänger zur Uhrensynchronisation noch teuer
+und daher selten, sind heute viele Wanduhren bereits mit Empfänger und Decoder
+ausgestattet. Seit einigen Jahren gibt es sie
+auch als Bausatz – genau das, was wir für
+unsere fischertechnik-Funkuhr benötigen.
+Im Internet finden sich zahlreiche Anleitungen, darunter eine von Wolfgang Back
+(einem der beiden Macher hinter dem
+WDR Computerclub) aus dem Jahr 2003
+[6] und eine Beschreibung eines Unterrichtsprojekts aus dem Jahr 2008 mit der
+auch von uns verwendeten Empfängerplatine [7].
+Die Hardware
+Im Elektronik-Versandhandel sind zahlreiche einfache DCF-Empfängerplatinen
+mit Ferritantenne zum Preis von 5-10 €
+erhältlich (Abb. 4). Wir empfehlen das
+Modul von Conrad Electronic [8], das eine
+Betriebsspannung zwischen 2,5 und 15V
+benötigt – es lässt sich daher perfekt am
+9V-Ausgang des TX Controllers betreiben.
+Zudem ist es solide konstruiert, hat kräftige
+Ausgangstransistoren (BC547) mit offenem Kollektor und kommt mit 3 mA aus.3
+Das DCF77-Modul hat vier Anschlüsse,
+von denen zwei mit der Stromversorgung
+
+
+Zum Anschluss an den TX benötigen wir
+noch einen 4,7 k -Widerstand (ConradBest.-Nr. 403334) und einen 100 nF-Kondensator (Conrad-Best.-Nr. 500812). Mit
+dem Widerstand verbinden wir die Anschlussklemmen 2 und 4, der Kondensator
+wird an den Klemmen 1 und 2 befestigt
+(siehe das Schaltbild in Abb. 5).
+Damit das Bit-Signal eine positive Flanke
+liefert, verbinden wir den Ausgang 4 mit
+einem der Eingänge des TX, den wir auf
+5 k digital (z. B. als „Taster“) konfigurieren. Ist der Empfänger korrekt angeschlossen, sollte der Interface-Test jetzt an
+dem von uns gewählten Eingang im
+Sekundenrhythmus eine anliegende „1“
+anzeigen.
+
+
+
+
+
+4,7 k
+
+
+Zwar gibt es preisgünstigere DCF-Module z. B.
+bei Reichelt und Pollin, die allerdings nicht an
+9V arbeiten und wesentlich „empfindlicher“
+sind als das Conrad-Modul. Eins der Module
+braucht einen Treibertransistor am Ausgang,
+auch wird eine Flanke an einem Eingang zum
+Start des Empfangs benötigt.
+
+100 nF
+
+I
+
++9V
+
+GND
+
+
+
+
+Allen, die die Ästhetik von Platine und
+Ferritstab nicht überzeugt oder die den
+Empfänger wackelfrei in einem Modell
+verbauen möchten, sei das Batteriefach
+(32263) mit Deckel (32958) empfohlen –
+ggf. dem transparenten (32264).
+Bei der Aufstellung des Empfängers müsst
+ihr darauf achten, dass ihr die Platine nicht
+zu dicht an einem PC, einem eingeschalteten Handy (mind. 50 cm Abstand) oder
+dem TX (mind. 20 cm Abstand) platziert,
+da sonst Störstrahlung den Empfang behindern kann. Die drei Anschlusskabel für
+Stromzufuhr und Datenausgang solltet ihr
+also lang genug wählen (mind. 25 cm). Die
+Ferritantenne sollte horizontal (quer) Richtung Frankfurt/Mainflingen ausgerichtet
+und so aufgestellt werden, dass möglichst
+keine Hindernisse dazwischen liegen (z. B.
+auf einer Fensterbank).
+Die Software
+Die Decodierung des DCF77-Signals
+haben wir komplett in Robo Pro implementiert.4 Das geht dank der Möglichkeit,
+parallele Prozesse ablaufen zu lassen, sehr
+elegant. So besteht das Programm aus zwei
+Hauptprozessen:
+einer Uhr, die am Montag, dem
+01.01.1990 um 00:00:00 Uhr startet und
+bei jeder ansteigenden Flanke des InputSignals die Zeit um eine Sekunde
+weiterzählt, und
+einem DCF-Decoder, der direkt nach
+dem Einschalten und immer zu Beginn
+der 59. Minute gestartet wird und nach
+Dekodierung eines DCF-Datagramms
+die Zeit- und Datumsanzeige der Uhr
+aktualisiert.
+Der DCF-Decoder synchronisiert sich zunächst auf den Beginn des nächsten Datagramms. Dazu wartet das Unterprogramm
+
+
+Unsere Robo Pro-Programme können im Download-Bereich der ft:c (RoboPro) heruntergeladen
+werden: Variante 1 und Variante 2.
+
+„Sync“ auf den nächsten Flankenwechsel
+(erst ansteigend, dann fallend) und misst
+anschließend, wie lange kein Signal am
+Eingang anliegt. Bleibt der Eingang länger
+als eine Sekunde auf ‚Low’ ist die 59.
+Sekunde des Datagramms erreicht – mit
+der nächsten ansteigenden Flanke beginnt
+das nächste Datagramm.
+Das Unterprogramm „GetTime“ wertet
+den ersten Teil des Datagramms, die Zeitangaben (Minute, Stunde) aus. Er beginnt
+immer mit einer „0“, gefolgt von 16 Bits,
+die übersprungen werden können. Bit 17
+gibt die Zeitzone an („0“ = MESZ, „1“ =
+MEZ); das nachfolgende Bit wird für die
+Prüfung der Intaktheit ausgewertet. Bit 20
+zeigt den Beginn der Zeitangabe an und hat
+immer den Wert „1“.
+Die folgenden sieben Bits bilden – beginnend mit dem jeweils niederstwertigen Bit
+– die Einer- und die Zehner-Stelle der
+Variable „Minuten“ (BCD-kodiert). Sie
+werden über Shift-Operatoren an die richtige Stelle „geschoben“. Es folgt ein Paritätsbit, das mit den sieben vorausgegangenen Bits XOR-verknüpft wird. Da
+es die Zahl der Einsen auf eine gerade
+Anzahl ergänzt, muss das Ergebnis der
+Wert „0“ sein.
+Mit den nächsten sechs Bit wird verfahren
+wie oben: Sie bilden die Einer- und die
+Zehner-Stelle der Variable „Stunden“
+(BCD-kodiert), gefolgt von einem weiteren
+Paritätsbit. Die XOR-Verknüpfung der
+Stunden-Bits mit dem Paritätsbit muss
+wieder den Wert „0“ ergeben. Die invertierten Ergebnisse der Paritätsprüfungen
+werden mit dem Ergebnis der Prüfung der
+Intaktheit AND-verknüpft; das Ergebnis
+wird als „OK“-Wert zurückgeliefert. Ist
+eine Parität fehlerhaft oder war eine
+Intaktheitsprüfung nicht erfolgreich, liefert
+„GetTime“ den Wert „0“.
+Anschließend werden analog vom Unterprogramm „GetDate“ die Datumsangaben
+(Tag, Wochentag, Monat, Jahr) in den Bits
+
+
+Computing
+
+36-57 des Datagramms ausgewertet; der
+Paritätstest erfolgt hier über alle 22 Datenbits und das Paritätsbit in Bit 58. Das
+Ergebnis wird invertiert als „OK“-Wert
+zurückgegeben.
+Anschließend sind Minuten-, Stunden- und
+Datumsangaben noch aus dem BCD-Format in eine Dezimalzahl zu konvertieren.
+Jeweils vier BCD-Bits bilden dabei den
+Wert einer Dezimalstelle. Besonders
+schnell gelingt die Konvertierung mit BitOperationen: Die Zehnerstelle erhält man,
+indem man den Variablenwert zunächst um
+vier Bits nach rechts shiftet und die so
+erhaltenen Bits 5-8 mit 10 multipliziert; die
+Einerstelle erhält man aus den unteren vier
+Bits – dazu wird die Variable mit dem
+binären Wert 1111 (15) bitweise AND-verknüpft (Unterprogramm „BCD2DEC“,
+siehe Abb. 6).
+
+einen zweistelligen Dezimalwert
+
+Schließlich wird noch die Plausibilität der
+Uhrzeit und der Datumsangabe überprüft:
+nur, wenn die Angaben im jeweiligen
+Wertebereich liegen [9], darf das Datagramm zum Stellen der Uhr genutzt
+werden, anderenfalls ist es zu verwerfen.
+Das übernehmen die Unterprogramme
+„TimePlausibilityCheck“ (Abb. 7) und
+„DatePlausibilityCheck“.
+Derweil schaltet die parallel laufende Uhr
+sekündlich die Uhrzeit (inklusive Minuten
+und Stunden) fort. Zu Beginn des nächsten
+Datagramms werden das aktuelle Datum
+und die Uhrzeit an die Anzeigeeinheit, in
+unserem Programm das TX-Display, übermittelt. Alternativ kann beispielsweise
+auch ein mehrzeiliges I²C-LCD-Display
+für die Ausgabe verwendet werden.
+
+empfangenen Zeitangabe
+
+Das „Nachstellen“ unserer ft-Funkuhr erfolgt in unserem Beispielprogramm alle 60
+Minuten jeweils zur halben Stunde. Eine
+mögliche Ergänzung wäre ein „Knopf“,
+der es erlaubt, die Synchronisation der Uhr
+zu jedem beliebigen Zeitpunkt zu starten.
+Fehlerhafte, also entweder inkorrekte oder
+unplausible Datagramme, werden verworfen, aber gezählt. Diesen Wert könnte man
+sich – zum Beispiel zur Messung der
+Empfangsqualität – auch anzeigen lassen.
+Weitere Funktionen
+Eine so exakte Uhr kann man nun um
+allerhand praktische Funktionen ergänzen.
+Sehr einfach ist die Programmierung eines
+Kurzzeitweckers für das perfekte Frühstücksei (mit Summer 36119) oder einer
+Stoppuhr zur automatischen Zeitmessung
+(mit Fototransistor 36134 oder Reed-Kontakt 36120).
+Über die I²C-Schnittstelle könnte man auch
+eine Echtzeituhr (Real Time Clock) initialisieren – dabei könnte man sich sogar die
+Umrechnung vom BCD ins Dezimalformat
+sparen. Oder man stellt eine mechanische
+Uhr nach der gesetzlichen Zeit.
+Wir sind gespannt, was Euch noch alles
+einfällt – und freuen uns auf Fotos Eurer
+Modellideen mit der ft-Funkuhr im Bilderpool der ft:c.
+
+
+
+Quellen
+[1]
+
+Wikipedia, Gesetz über die Zeitbestimmung.
+
+[2]
+
+Graf, Johannes: Wilhelm Foerster,
+Vater der Zeitverteilung im Deutschen Kaiserreich. In: PTB-Mitteilungen, 119. Jahrgang, S. 209-215.
+
+[3]
+
+Andreas Bauch, Peter Hetzel und
+Dirk Piester: Zeit- und Frequenzverbreitung mit DCF77: 1959 – 2009
+und darüber hinaus. In: PTB-Mitteilungen, 119. Jahrgang, S. 217-240; Vorfassung erschienen
+in PTB-Mitteilungen, 114. Jahrgang,
+
+[4]
+
+Physikalisch-Technische Bundesanstalt (PTB), Fachbereich 4.4 „Zeit
+und Frequenz“.
+
+[5]
+
+Wikipedia: DCF77.
+
+[6]
+
+Back, Wolfgang: DCF77 – Unser
+Zeitnormalsignal. 2003
+
+[7]
+
+Elektronikschule Tettnang: Unterrichtsprojekt: DCF77-Funkuhr. 2008
+
+[8]
+
+Conrad Electronic, C-Control DCFEmpfängerplatine, Best.-Nr. 64113862.
+
+[9]
+
+Ottensmeyer, Dirk: DCF77-Decoder
+als Bascom-Library, RoboterNetz,
+12.12.2006.
+
+
+

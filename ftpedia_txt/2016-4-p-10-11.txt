@@ -1,0 +1,103 @@
+
+
+Tipps & Tricks
+
+Die elektrifizierte Mini-Eisenbahn (Spur N)
+Gerhard Birkenstock
+fischertechnik hatte im Juli des vergangenen Jahres zum 50. Geburtstag nach Waldachtal
+eingeladen. Diesem Ruf sind viele bis zur Spritzgießmaschine gefolgt. Und wer etwas Geduld
+mitbrachte, konnte sich einen Bausatz der überarbeiteten kleinen Mini-Eisenbahn (Spur N) aus
+dem Jahre 1979 mitnehmen. Nur zum Hinstellen ist diese aber zu schade.
+Eines Abends ist mir in meiner Post mal
+wieder eine Verkaufsbroschüre in die
+Hände gefallen. Lokomotiven, Waggons,
+kleine Häuser. Ah, der Winter kommt: Die
+Kaufhäuser wollen unsere freie Zeit mit
+nützlichen Dingen bereichern.
+Beim Durchblättern ist mir ein motorisiertes Spur-N-Lok-Chassis ohne Aufbau
+aufgefallen. Das ist mal was Schönes: Man
+kann kreativ werden. Nicht nur einfach
+kaufen und fahren lassen (das hat mich noch
+nie ausgefüllt). Nur, welcher Aufbau soll
+aufgesetzt werden?
+Ein paar Tage später bin ich an den Tüten
+der kleinen fischertechnik Mini-Eisenbahn
+vorbeigekommen. Da kam mir das LokChassis wieder in den Sinn.
+
+Spur N im Maßstab 1:160 bei Conrad Electronic (Best.-Nr. 246473, Firma KATO, Japan)
+
+
+Leider gab es keine technischen Zeichnungen zu dem Angebot. Daher musste ich mir
+das Chassis mit der Ungewissheit eines
+möglichen Fehlkaufes zulegen...
+Bis das Chassis eintraf, hatte ich in der
+Zwischenzeit die fischertechnik-Lok mit
+Anhänger zusammengesetzt.
+Die Länge von Chassis und Lok passten
+recht gut zusammen. Die Zusammenfügung
+geht aber nicht ohne Adapter: Bei der Lok
+wird angeklickt, bei der fischertechnik-Lok
+wollte ich schrauben. Und das, ohne den
+fischertechnik-Teilen etwas anzutun.
+
+Realisierung
+Adapter als Maßzeichnung.
+
+
+Das Chassis hat zwei diagonal angeordnete
+Nasen. Diese sind zum Anklipsen des
+
+
+Tipps & Tricks
+
+Chassis gedacht; auf der Zeichnung oben
+mit 1 mm bezeichnet. Der Aufbau des
+Motors und der Abtrieb zu den Achsen
+nehmen recht viel Raum in Anspruch. Der
+Adapter wird dadurch an zwei Stellen recht
+dünn. Da der Adapter aus Polycarbonat
+(PC) hergestellt ist, ist die Festigkeit
+trotzdem gut.
+
+
+Leider ist der Kondensator am Motor der
+KATO-Lafette im Weg. Den Klemmstein
+habe ich entfernt und den Kondensator abgenommen. Die Lok wird dadurch etwas
+mehr elektromagnetische Störung abgeben.
+
+
+In Richtung fischertechnik wird die Grundplatte mit vier Schrauben M2×6 mm am
+Adapter angeschraubt. Die Unterlegscheiben aus Kunststoff (D = 5 mm, d = 2 mm,
+
+h = 0,8 mm) verhindern unschöne Abdrücke auf der fischertechnik-Grundplatte.
+Wenn man die Positionen der Schrauben
+übernimmt, können die Aufbauten der Lok
+ohne Verklemmen aufgesteckt werden.
+Da der Lok-Aufbau nur um 5 mm angehoben wurde, können noch immer die Steckkupplungen mit den Stiften von fischertechnik verwendet werden. Gleichzeitig
+schauen auch noch die Haken der Spur N
+am Chassis heraus. Somit können die Waggons der Spur N parallel verwendet werden.
+Es passt alles zusammen.
+
+Tipps zum Betrieb
+Die Waggons der fischertechnik-Bahn
+haben für die Spur N sehr schlechte
+Laufeigenschaften: Der Schwerpunkt liegt
+ungünstig weit oben, Kurvenfahrten sollte
+man daher nur vorsichtig durchführen.
+Rückwärtsfahren durch eine Kurve geht
+nicht, Rückwärtsfahren in gerader Richtung
+ist machbar.
+Ein weiteres Problem sind die Randbildungen, die beim Spritzen an den Formrändern
+der Spritzgießmaschine entstehen. Diese
+Ränder habe ich mit einem Messer an den
+Achsen und auf den Laufflächen der Räder
+entfernt. Die Waggons laufen nun leichter
+und gleichmäßig. Etwas Nivea-Creme auf
+der Achse verbessert die Laufeigenschaften
+noch erheblich.
+Na, wer baut es nach? Vielleicht mit einem
+der aktuellen 3D-Filament-Drucker?
+
+
+
+

@@ -1,0 +1,274 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Die Welt der ft-Winkelbausteine (Teil 3):
+UFO-Ringe
+Rüdiger Riedel
+Wie ich in der ft:pedia 1/2017 beschrieben habe, lassen sich mit den fischertechnik-Winkelsteinen auch dreidimensionale Gebilde, Schrauben und Wellenringe bauen. Das will ich hier
+ergänzen um Ringe mit scharfem Rand, die UFO-Ringe.
+
+Es ist nur ein kleiner Dreh
+Setzen wir die Winkelsteine immer
+abwechselnd um 90° gedreht und dann
+zurückgedreht aufeinander, ergibt sich ein
+neuer effektiver Winkel, der zu Kreisringen
+(genauer: Vielecken) mit höherer Bausteinzahl führt. Bisher galt für Winkelsteinringe:
+360° / 7,5° = 48 Steine WS7,5
+360° / 15° = 24 Steine WS15
+360° / 30° = 12 Steine WS30
+
+
+Erste Erkenntnis: Da wir immer einen Stein
+nach oben und den nächsten nach unten
+drehen, muss die Gesamtzahl an Steinen
+eines Ringes gerade sein.
+
+360° / 60° = sechs Steine WS60
+Für UFO 1, das nur aus Winkelsteinen 7,5°
+zusammengesetzt ist, benötigen wir jetzt 68
+Steine.
+
+
+
+Die breitere Seite des Winkelsteins liegt
+abwechselnd an der oberen und der unteren
+Schräge des Ringes. Beim UFO 2 in Abb. 4
+sieht man es deutlicher.
+
+Der Ring UFO 2 aus 34 Winkelsteinen 15°
+gelingt genauso gut.
+
+
+
+sperrig. Ohne Kraftaufwand lassen sich 23
+der Kombisteine einfügen, wodurch der
+Ring aber nicht geschlossen wird.
+
+
+Die äußere Kontur ist ebenfalls scharf und
+gleichmäßig.
+
+
+Bis jetzt haben wir die Winkelsteine WS7,5
+(7,5°) und WS15 (15°) verwendet. Als
+nächster käme der WS30 dran, aber wir
+können auch die Steine kombinieren und
+dadurch haben wir auch die Winkel 22,5°,
+30°, 37,5°, 45°, 52,5° und 60°.
+
+Nach der oben gewonnenen Erkenntnis und
+dem Winkelverhalten müssen wir einen
+vierundzwanzigsten einfügen. Mit etwas
+Nachdruck gelingt es, die fischertechnikBausteine machen das problemlos mit!
+Noch widerspenstiger zeigt sich der Ring
+aus Winkelsteinen 30° (Abb. 7)
+
+
+Mit einer Kombination aus WS15 und
+WS7,5 kann er auf etwas unschöne Weise
+geschlossen werden (Abb. 8).
+
+Variante 1
+entsprechend 24 WS22,5
+
+Wir setzen also die WS22,5 aus je einem
+WS7,5 und einem WS15 zusammen und
+fügen 24 dieser Kombisteine zu einem Ring
+zusammen (Abb. 6). Dieser Ring ist etwas
+
+Ein etwas besseres Aussehen erhält man
+durch diagonales Anbringen der beiden
+Zusatzsteine (Abb. 9).
+
+
+Tipps & Tricks
+
+Für den Ring aus Kombisteinen WS37,5
+nehmen wir 14-mal WS30 + WS7,5
+(Abb. 11).
+Zwölf der aus je einem WS30 und einem
+WS15 zusammengesetzten WS45 lassen
+sich problemlos zu einem Ring zusammenfügen (Abb. 12).
+
+Variante 2
+
+entsprechend 12 WS45
+
+
+Fügen wir statt eines WS15 und eines
+WS7,5 vier Stück WS7,5 ein, ergibt sich
+eine etwas veränderte Ringstruktur
+(Abb. 10). Der effektive Einzelwinkel ist
+jetzt 30° + 7,5°/4 = 31,875° oder ungefähr
+31,9°.
+
+Auf entsprechende Weise erhalten wir
+einen Ring aus zehn zusammengesetzten
+WS52,5 (Abb. 13). Hier machen wir uns
+negative Winkel zunutze wie in [1] auf Seite
+20 beschrieben, also WS60 – WS7,5.
+
+entsprechend zehn WS52,5
+
+entsprechend 14 WS37,5
+
+Der Ring aus acht WS60 schließt sich nicht
+(Abb. 14), wir müssen also Ergänzungsbausteine einfügen. Mit zusätzlichen vier
+WS7,5 lässt sich der Ring vervollständigen.
+
+
+
+
+Bezieht man die Zusatzsteine auf die Hauptbausteine, dann wären das acht WS63,75.
+
+
+Für ein besseres Aussehen habe ich vier
+Winkelsteine 60° 3N (31918) benutzt, so
+dass keine Zapfen überstehen (Abb. 15).
+
+
+Erweiterung
+Es gibt noch mehr Möglichkeiten für UFORinge, indem die „Original“-Winkelsteine
+15°, 30° und 60° ersetzt werden durch
+Winkelsteinkombinationen:
+
+Die bisher vorgestellten Ringe habe ich in
+Abbildung 16 zu einem Turm zusammengestellt. Den Fuß bilden zwei Speichenräder
+90x15 (36916) und dazwischen eingeklemmt UFO 1. Dann folgen nach oben die
+Ringe aus WS22,5, WS15, WS37,5, WS30
+Variante 1, WS45, WS30 Variante 2.
+WS52,5 und WS63,75.
+
+
+15° → 2 · 7,5°
+30° → 2 · 15°
+1 · 15° + 2 · 7,5°
+4 · 7,5°
+60° → 2 · 30°
+1 · 30° + 2 · 15°
+1 · 30° + 1 · 15° + 2 · 7,5°
+1 · 30° + 4 · 7,5°
+4 · 15°
+3 · 15° + 2 · 7,5°
+2 · 15° + 4 · 7,5°
+1 · 15° + 6 · 7,5°
+8 · 7,5°
+
+
+Tipps & Tricks
+
+WS15
+
+Der Ring 34 WS15 in Abb. 17 hat etwa die
+gleichen Abmessungen wie UFO 1 in
+
+
+entsprechend 18 WS30
+
+Einige der bisher vorgestellten Ringe lassen
+sich recht gut zu einem Kegel stapeln:
+
+
+entsprechend 24 WS22,5
+
+
+entsprechend 18 WS30
+
+
+
+
+Verwenden wir wieder negative Winkel wie
+oben beschrieben, bekommen wir eine besondere Variante des Ringes aus 18 WS30.
+Wir bilden 18-mal die Kombination WS60
+– WS30 und bekommen den zackigen Ring
+nach Abb. 25:
+
+Die wirksamen Winkel der Bausteingruppen betragen 67,5° in Abb. 28 und 90° in
+
+
+In den Abb. 26 und 27 seht ihr eine Variante
+des Ringes von Abb. 13, jetzt zusammengesetzt aus zehn WS(15+30+7,5) entsprechend zehn WS52,5.
+
+entsprechend acht WS67,5
+
+
+Wie bei allen zusammengesetzten Winkelbausteinen verändert sich die Seitenkontur
+girlandenförmig.
+
+entsprechend sechs WS90
+
+
+
+Zwei weitere Beispiele:
+
+Bis auf den kleinen Knick in der Mulde des
+Ringes sechs WS90, verursacht durch die
+WS30, sitzt der BS15 genau darin. Rechts
+in Abb. 30 sieht man ein kleines Stück
+davon aus der Rückseite des Ringes herausschauen.
+
+
+Tipps & Tricks
+
+In Abb. 29 haben wir eine Bausteinkombination mit einem Gesamtwinkel von 90°
+eingesetzt, aber da war doch noch was…?
+
+
+
+Der „Winkelstein 90°“ wurde in [2] erläutert und so können wir den Ring sechs
+WS90 auch aus je sechs Bausteinen 15 oder
+Winkelsteinen 10x15x15 bauen.
+
+Das Modell in Abb. 32 bleibt auch ohne die
+Stange aufrecht stehen!
+
+Anwendung
+Versehen wir UFO 2 (Abb. 4 und 5) mit
+Speichen und Achse, erhalten wir ein Rad
+für ein einachsiges Modell mit O-Beinen.
+Zur Zentrierung und Fixierung werden auf
+beiden Seiten der Räder je vier Federnocken
+in die BS7,5 eingeschoben (siehe Abb. 34).
+
+Will man die Räder antreiben, werden Rastaufnahmeachsen 22,5 (130593) als Basis
+der Achse genommen, mit der Fixierung
+aus je einer Bauplatte 15·30·3,75 1N
+(32330) und zwei V-Achsen 20 (31690) mit
+Klemmbuchsen 5 (37679) (Abb. 34).
+Mit weiteren Bauteilen und einer Fernsteuerung wird daraus das M-Zeug nach Abb. 33.
+Und es fährt hierhin, dorthin, rückwärts und
+im Kreis, zur Freude des Erbauers.
+
+
+
+
+
+Der kleine Dreh
+All diese Figuren basieren auf diesem ganz
+einfachen Prinzip:
+Achsbefestigung
+
+Über die Ringe hinaus ergibt sich die
+Möglichkeit, um 45° gedrehte Bausteine zu
+verwenden.
+
+
+Quellen
+
+
+Daraus lässt sich zum Beispiel eine
+Pyramide konstruieren; den Ansatz zeigt
+
+
+[1]
+
+Rüdiger Riedel: Die Welt der ftWinkelbausteine. ft:pedia 1/2017,
+S. 17-23.
+
+[2]
+
+Rüdiger Riedel: Die Welt der ftWinkelbausteine (Teil 2). 4/2018, S. 38-48.
+
+

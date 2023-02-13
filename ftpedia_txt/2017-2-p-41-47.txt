@@ -1,0 +1,451 @@
+
+Tipps & Tricks
+
+Computing
+
+I²C mit dem TX(T) – Teil 16: Servo-Driver
+Dirk Fox
+Die fischertechnik-Controller TX und TXT können keine Servo-Motoren ansteuern. Das ist ein
+Ärgernis, ist doch der Einsatz von Servos nicht nur in Fahrzeugmodellen ein Muss: Immer
+dann, wenn eine schnelle und Winkel-genaue Motorbewegung (mit geringer Last) benötigt
+wird, ist ein Servo einem „ausgewachsenen“ Elektromotor vorzuziehen – zumal sich der
+schlanke fischertechnik-Servo auch sehr elegant verbauen lässt. Den TXT kann man sogar mit
+der IR-Fernsteuerung ansprechen – wegen der fehlenden Servo-Unterstützung kann der TXT
+das Empfängermodul jedoch nicht ersetzen. Aber auch hier ist, wie so oft bei fischertechnik,
+Abhilfe möglich.
+
+Servos
+Servo-Motoren sind 5V-Elektromotoren
+mit einer Steuerelektronik, die über ein
+pulsweitenmoduliertes (PWM-) Signal gesteuert wird. Das Signal stellt den Winkel
+der Ausgangswelle ein – üblicherweise
+zwischen 0° und 180°. Diese Position wird
+vom Servo dann selbstständig gehalten.
+Die Steuerelektronik des Servos vergleicht
+den Ist-Stand der Ausgangswelle über ein
+Potentiometer mit dem Soll-Wert, der über
+das PWM-Signal übermittelt wird, und
+regelt erforderlichenfalls nach.
+Eingesetzt werden Servos überwiegend im
+Modellbau. Sie nehmen einen vorgegebenen Winkel extrem schnell und genau ein –
+vertragen jedoch meist keine großen Lasten.
+Bei Überlast (z. B. durch Verklemmen)
+hauchen sie daher schnell ihr Leben aus; das
+gilt auch für die fischertechnik-Servos.
+Der gewünschte Winkel wird über die Pulslänge eines (in der Regel) 50-Hz-Signals
+übermittelt, also mit einer Periodenlänge
+von 20 ms. Die Pulslänge liegt üblicherweise zwischen 0,5 und 2,5 Millisekunden,
+bei manchen Servos auch zwischen einer
+und zwei Millisekunden.
+
+Die Werte für das Minimum und das Maximum sollte man für den verwendeten
+Servo-Typ experimentell bestimmen, um
+ein Übersteuern (und damit eine Überlast)
+des Servos zu verhindern.
+Die Signal-Frequenz von 50 Hz ist keine
+strikte Vorgabe; einige Servos akzeptieren
+bis zu 400 Hz (2,5 ms Periodenlänge). Auch
+der fischertechnik-Servo arbeitet mit unterschiedlichen Frequenzen; ich empfehle, ihn
+mit den üblichen 50 Hz anzusteuern.
+Servos sind als Lenkmotoren für Modellfahrzeuge ideal. Daher ist es besonders ärgerlich, dass sich die fischertechnik-ServoMotoren ausschließlich an die Empfänger
+der (alten) IR- und der (neuen) BluetoothFernsteuerung anschließen lassen. Eine Ansteuerung über den TX(T), den LT-Controller oder den neuen BT Smart Controller
+ist nicht möglich, was zahlreiche interessante Anwendungen ausschließt.
+Aber – wie so oft in der ‚fischertechnikWelt‘ – gibt es auch für dieses Problem
+zumindest für TX und TXT dank des von
+beiden Controllern unterstützten I²C-Protokolls eine elegante Lösung.
+
+
+
+Der 16-Kanal-Servo-Driver
+In [1] haben Christian Bergschneider und
+Stefan Fuss vorgestellt, wie sich das Arduino Motor Shield von Adafruit via I²C-Protokoll am TX(T) betreiben und sich dieser
+damit um zusätzliche Motor-Anschlüsse
+erweitern lässt. Von Adafruit gibt es ein
+weiteres interessantes Arduino-Shield, das
+ausschließlich für die Ansteuerung von (bis
+zu 16!) Servo-Motoren gedacht ist und
+ebenfalls über das I²C-Protokoll angesprochen wird – das 16-Channel 12-bit
+PWM/Servo Shield. Erfreulicherweise gibt
+es davon eine in Anschlüssen und Maßen
+nicht auf den Arduino zugeschnittene
+Variante mit sehr kleiner Baugröße: den 16Channel Servo Driver (Abb. 1). Dieser
+Servo Driver ist mit ca. 16 € nicht nur günstiger als das Motor Shield, sondern mit 62,5
+x 25,4 x 3 mm auch deutlich kleiner, wenn
+auch ein paar Millimeter zu lang für das
+fischertechnik-Batteriegehäuse (32263).
+
+
+Anschluss und Stromversorgung
+Der Servo Driver benötigt am V+ und
+GND-Anschluss (Abb. 1, oben Mitte) eine
+Versorgungsspannung von 5V. Da einzelne
+Servos unter Last durchaus 1 A und mehr
+ziehen können, empfiehlt Adafruit für die
+Ansteuerung mit einer Stromquelle für bis
+zu 2 A – und beim Einsatz von n Servos die
+Verwendung eines Kondensators an C2
+(Abb. 1, links oben) mit einer Kapazität von
+100 ∙ ∙ 100
+(nicht im Lieferumfang
+des Servo Driver enthalten).
+
+Eine geeignete 5V-Spannungsversorgung
+können wir mit einem Spannungswandler –
+bspw. dem D24V10F5 von Pololu (Abb. 2),
+erhältlich z. B. bei Exp-Tech für ca. 8 € –
+
+aus der 9V-Ausgangsspannung eines TX(T)
+gewinnen.
+
+
+Die I²C-Pins (VCC, SCA, SDL, GND) des
+Servo Driver können wir beim TX mit dem
+I²C-Universal-Adapter aus [2] oder mit vier
+Female-Jumpern direkt mit dem EXT2-Anschluss verbinden.
+Beim TXT ist es nicht ganz so einfach, da
+dessen I²C-Bus mit 3,3 V arbeitet. Die
+Logik des Servo Driver ist jedoch für 3-5V
+ausgelegt, daher ist grundsätzlich auch ein
+direkter Anschluss an die EXT-Schnittstelle
+des TXT möglich. Allerdings wird von
+fischertechnik nicht empfohlen, die VCCVersorgung des EXT-Anschluss zu nutzen,
+da sie nur eine Last von wenigen mA
+verträgt. Da das ‚Herz‘ des Servo Driver,
+ein PCA9685, maximal 10 mA Strom zieht,
+sollte der direkte Anschluss an die EXTSchnittstelle eigentlich unproblematisch
+sein. Wer auf Nummer sicher gehen will,
+der beschafft einen weiteren Spannungswandler auf 3,3V – wie den D24V6F3 von
+Pololu, erhältlich z. B. bei Exp-Tech für ca.
+5,50 € – für den VCC- und GND-Anschluss
+des Servo Driver.
+Eine Alternative zu diesem zweiten Spannungswandler ist die Verwendung des I²CAdapters, den Stefan Fuss und Christian
+Bergschneider kürzlich in der vorgestellt haben [3].
+
+Die I²C-Pins SCL und SDA können wir
+über zwei Female-Jumper direkt mit den
+entsprechenden Pins des EXT-Anschlusses
+vom TXT verbinden.
+
+Computing
+
+Software Reset Address genutzt. Die drei
+voreingestellten Sub Call Addresses 0x71,
+0x72 und 0x74 sind beim Power Up
+deaktiviert.
+
+Befehle und Register
+Der PCA9685 verfügt über insgesamt 255
+Register, von denen allerdings nicht alle
+genutzt werden. Tabelle 1 zeigt die nutzbaren Register und ihre Inhalte.
+Register
+
+Bedeutung
+
+0x00
+
+Mode 1 Register
+
+0x01
+
+Mode 2 Register
+
+0x02-04
+
+Sub Address Register
+
+0x05
+
+All Call Address Register
+
+0x06-45
+
+LED/Servo Register
+
+0xFA-FB
+
+All LED On Register
+
+0xFC-FD
+
+All LED Off Register
+
+0xFE
+
+Prescale Register
+
+Tab. 1: Register des PCA9685 [4]
+
+Technische Daten
+Die technischen Daten des Servo Driver
+sind denen des Motor Shield sehr ähnlich,
+da das Herzstück ebenfalls ein PCA9685 [4]
+ist:
+∂ Betriebsspannung: 3-5V
+∂ Stromaufnahme (ohne Servos): ≤ 10 mA
+∂ I²C-Adresse: 0x40 (0x41-0x7F)
+∂ I²C-Geschwindigkeit: bis 1 Mbit/s (Fast
+Mode Plus)
+∂ PWM-Auflösung: 12 bit (0-4095)
+Die I²C-Adresse kann hardwareseitig durch
+das Setzen von Lötpunkten auf einen Wert
+von 0x41 bis 0x7F geändert werden.
+Außerdem reagiert der Servo Driver auf die
+All Call Address 0x70, die alle 16 ServoAusgänge gleichzeitig anspricht, und die
+General Call Address 0x00, hier als
+
+Die im Folgenden angegebenen DefaultEinstellungen der jeweiligen Register werden nach jedem Power Up (Einschalten der
+Stromversorgung) und einem Software
+Reset aktiviert.
+Mode 1 Register
+Im Mode 1 Register (0x00) werden die folgenden Eigenschaften und Zustände des
+PCA9685 (vor)eingestellt:
+∂ Bit 0: Aktivierung der All Call Address
+(default: 1)
+∂ Bit 1-3: Aktivierung der drei Sub Call
+Addresses (default: 0)
+∂ Bit 4: Aktivierung des Sleep Mode
+(default: 1)
+∂ Bit 5: Auto Increment, d. h. das automatische Hochzählen der Adresse beim
+Lesen oder Schreiben (default: 0)
+∂ Bit 6: Externer Takt (default: 0)
+
+
+∂ Bit 7: Restart enable (default: 0)
+Für den Betrieb des Servo Driver muss der
+Sleep Mode bei der Initialisierung deaktiviert werden (0).
+Mode 2 Register
+Das Mode 2 Register enthält die Einstellungen für spezielle Sonderfälle (wie das Invertieren der Ausgänge oder die Einstellung
+von Open Drain), die unsere Servo-Anwendung nicht betreffen – daher verzichte ich
+hier auf eine nähere Darstellung und auf
+eine Implementierung im ROBO Pro-Treiber; für Details siehe [4].
+Sub und All Call Address Register
+In den drei Sub Address Registern (0x020x04) können I²C-Adressen eingetragen
+werden, auf die der PCA9685 reagieren
+soll. Damit lässt sich z. B. eine Auswahl
+mehrerer am selben I²C-Bus angeschlossenen PCA9685 gleichzeitig adressieren.
+Voreingestellt sind die Adressen 0x71,
+0x72 und 0x74; beim Power Up ist deren
+Nutzung deaktiviert (zu aktivieren über das
+Mode 1 Register).
+Das All Call Address Register (0x05)
+erlaubt die Einstellung einer I²C-Adresse,
+unter der alle über einen I²C-Bus erreichbaren PCA9685 angesprochen werden können. Voreingestellt ist die Adresse 0x70; sie
+ist nach einem Power Up aktiviert.
+LED und PWM Control Register
+Die 16 PWM-Ausgänge werden mit einer
+Auflösung von 12 Bit gesteuert – sie lassen
+sich also in Stufen von 0-4095 (0x0000xFFF) regeln. Dabei werden der Zeitpunkt
+innerhalb eines Signal-Zyklus, zu dem ein
+Ausgang ein- (LED_ON), und der, zu dem
+er wieder ausgeschaltet (LED_OFF) wird,
+separat festgelegt. Für die meisten Anwendungen (wie LED- oder Servo-Motor-Steuerung) können wir den LED_ON-Wert auf
+0 belassen und über den LED_OFF-Wert
+die Länge des PWM-Signals festlegen.
+
+
+Zusätzlich stellen die PWM Control Register für jeden der 16 Ausgänge zwei Bits zur
+Verfügung, über die die Ausgänge full on
+und full off gesetzt werden können. Die 16
+PWM-Ausgänge werden daher über je vier
+Byte lange PWM Control Register (0x060x45) gesteuert, die wie folgt belegt sind:
+∂ Byte 1, Bit 0-7: acht niederstwertige Bit
+(LSB) des 12-Bit-PWM-Wertes für
+LED_ON
+∂ Byte 2, Bit 0-3: vier höchstwertige Bit
+(MSB) des 12-Bit-PWM-Wertes für
+LED_OFF
+∂ Byte 2, Bit 4: full on Bit; wenn gesetzt,
+werden die LED_OFF-Werte ignoriert
+∂ Byte 3, Bit 0-7: acht niederstwertige Bit
+(LSB) des 12-Bit-PWM-Wertes für
+LED_OFF
+∂ Byte 4, Bit 0-3: vier höchstwertige Bit
+(MSB) des 12-Bit-PWM-Wertes für
+LED_OFF
+∂ Byte 4, Bit 4: full off Bit; wenn gesetzt,
+werden die LED_ON-Werte ignoriert
+Per default (also nach einem Power Up oder
+Reset) sind alle full off-Bits auf 1, alle weiteren Bits auf 0 gesetzt.
+All LED ON/OFF Register
+Die Register All LED on (0xFA, 0xFB) und
+All LED off (0xFC, 0xFD) belegen jeweils
+alle entsprechenden 32 PWM Control Bytes
+mit demselben Wert:
+∂ 0xFA, Bit 0-7: acht niederstwertige Bit
+(LSB) des einheitlichen 12-Bit-PWMWertes für LED_ON
+∂ 0xFB, Bit 0-3: vier höchstwertige Bit
+(MSB) des einheitlichen 12-Bit-PWMWertes für LED_ON
+∂ 0xFB, Bit 4: full on Bit
+∂ 0xFC, Bit 0-7: acht niederstwertige Bit
+(LSB) des einheitlichen 12-Bit-PWMWertes für LED_OFF
+
+
+Computing
+
+∂ 0xFD, Bit 0-3: vier höchstwertige Bit
+(MSB) des einheitlichen 12-Bit-PWMWertes für LED_OFF
+∂ 0xFD, Bit 4: full off Bit
+Damit kann man über alle 16 Ausgänge
+zugleich dasselbe PWM-Signal ausgeben.
+Prescale Register
+Über das Prescale Register (0xFE) wird die
+PWM-Frequenz eingestellt. Möglich sind
+Werte von 24 Hz (0xFF) bis 1.526 Hz
+(0x03). Für einen Servo-Motor sind allerdings nur Frequenzen bis 400 Hz sinnvoll,
+da sonst die Periodenlänge kürzer als 2,5 ms
+wird (siehe nächster Abschnitt).
+Die Berechnung des Prescale-Werts aus der
+gewünschten Periodenlänge erfolgt nach
+der folgenden Formel:
+=
+
+4096 ∙
+=
+
+4096 ∙
+
+−1
+
+−1
+
+Der voreingestellte Default-Wert 0x1E
+entspricht einer Frequenz von 200 Hz. Die
+für Servo-Motoren typische Frequenz von
+50 Hz erhalten wir bei einem Prescale-Wert
+von 0x79. Der Prescale-Wert kann nur im
+Sleep Mode geändert werden.
+
+ROBO Pro-Treiber
+Der ROBO Pro-Treiber für den Adafruit
+Servo Driver umfasst die im Folgenden
+vorgestellten Kommandos und kann im
+Downloadbereich der ft:c oder von meiner
+ROBO Pro-I²C-Treibersammlung heruntergeladen werden:
+∂ PCA9685_Init: Durchführung eines
+Software-Reset (0,5 ms), Aufwecken aus
+dem Sleep Mode.
+∂ PCA9685_SetPWM: Setzt den „LED_ON“
+und den „LED_OFF“-Wert für einen der
+Kanäle (PWM-Ausgänge) 0-15.
+∂ PCA9685_SetPWMFreq: Berechnet aus
+einem Frequenzwert von 24 bis 1.526 Hz
+
+den zugehörigen Prescale-Wert und trägt
+ihn ein (kurzzeitiger Wechsel in den
+Sleep Mode).
+∂ PCA9685_SetS1Address: Setzt eine
+neue Sub-Adresse S1, S2 oder S3
+(Default: 0x71, 0x72, 074) und aktiviert
+sie im Mode 1 Register.
+∂ PCA9685_SetACAddress: Setzt eine
+neue All Call Address (Default: 0x70)
+und aktiviert sie im Mode 1 Register.
+∂ PCA9685_Reset: Auslösen eines Software-Resets über die Adresse 0x00.
+Servo-Ansteuerung
+Die Werte zur Winkelansteuerung eines
+180°-Servos hängen von der über den Prescaler eingestellten Frequenz und die Auflösung des PWM-Werts ab: Bei typischen
+50 Hz und einer 12-Bit-PWM-Auflösung
+entsprechen 0,5 ms (≈ 0°) einem PWMWert von etwa 100 und 2,5 ms (≈ 180°)
+einem Wert von 512. Allgemein lassen sich
+das Minimum und das Maximum für die
+Servo-Ansteuerung wie folgt berechnen:
+= 0,5 ms ∙
+
+= 2,5 ms ∙
+
+1000
+
+∙ 4095
+
+∙ 4095
+1000
+Damit Servomax ≤ 4095 dürfen maximal
+400 Hz als Frequenz eingestellt werden. Bei
+manchen Servos liegen die Pulslängen in
+einem kleineren Intervall, daher sollten
+Servomin und Servomax experimentell angepasst werden, um den Servo im Betrieb
+nicht zu übersteuern.
+Das Anbaugehäuse des fischertechnikServo hat außerdem einen mechanischen
+„Anschlag“ bei etwa 30° bzw. 150°. Bei
+einer Frequenz von 50 Hz konnte ich mit
+dem untenstehenden einfachen ROBO ProProgramm (Abb. 3) die folgenden PWMWerte für Servomin und Servomax ermitteln:
+∂ 30°: ca. 187 (Servomin mit Gehäuse)
+∂ 90°: ca. 318
+
+
+
+∂ 150°: ca. 446 (Servomax mit Gehäuse)
+
+Servomin und Servomax
+
+Nach jedem Power Up des Servo Driver
+wird der Servo automatisch auf die Mittelstellung (90°) eingestellt.
+IR-Fernsteuerung
+Eine nahe liegende Anwendung für den
+Servo-Treiber ist natürlich die Steuerung
+der Achsschenkellenkung eines Fahrzeugs
+mit einem Lenk-Servo. Da der TXT über
+eine IR-Empfängerdiode verfügt, kann er
+die Signale der fischertechnik-Fernsteuerung empfangen und auswerten. Damit
+können wir ein Fahrzeug mit umfangreichen Steuerungsmöglichkeiten konstruieren, denn der TXT kann auch die DIP-
+
+Schalter-Stellungen auswerten [5] und
+darüber die Steuerhebel mit weiteren Funktionen belegen – oder auch unterschiedliche
+IR-Fernsteuerungen unterscheiden.
+Das Beispielprogramm in Abb. 5 zeigt, wie
+sich der Lenk-Servo in ROBO Pro über die
+IR-Fernbedienung ansteuern lässt. Der
+linke Steuerhebel bestimmt (in Y-Richtung,
+also vor und zurück) die Geschwindigkeit
+des Antriebsmotors M1, der zuvor auf eine
+Auflösung von 512 eingestellt werden
+muss. Negative Joystick-Werte kehren die
+Antriebsrichtung um.
+Der rechte Steuerhebel ist (wie beim IREmpfängermodul) für die Lenkung zuständig: Der vom Joystick gelieferte Wert aus
+{-15, …, 15} wird zunächst auf den
+Gültigkeitsbereich {Servomin, …, Servomax}
+des Servos abgebildet und dann an den
+Servo Driver übergeben. Der Servo wird an
+den Anschluss von Kanal 0 angesteckt.
+So, nun wünsche ich Euch viel Spaß mit
+Servo-Motoren am TX(T) – und bin
+gespannt auf die zahlreichen Modelle, die
+diese neue Fähigkeit des Controllers nutzen
+werden.
+
+
+
+Referenzen
+[1]
+
+[2]
+
+Christian Bergschneider, Stefan
+Fuss: Alternative Controller (3): Der
+ftPi – ein Motor Shield für den
+TX(T). ft:pedia 2/2016, S. 68-72.
+Dirk Fox: I²C mit dem TX – Teil 7:
+Real Time Clock (RTC). 4/2013, S. 28-34.
+
+Computing
+
+[3]
+
+Christian Bergschneider, Stefan
+Fuss: Ein universeller I²C-Adapter
+für den TX(T). ft:pedia 4/2016, S. 7279.
+
+[4]
+
+NXP Semiconductors: PCA 9685 16channel 12-bit PWM Fm+ I²C-bus
+LED controller. Product Data Sheet,
+Rev. 4, 16.04.2015.
+
+[5]
+
+Dirk Wölffel: Große Modelle mit nur
+einer fischertechnik-IR-Fernsteuerung ansteuern. ft:pedia 3/2016, S.
+33-34.
+
+
+

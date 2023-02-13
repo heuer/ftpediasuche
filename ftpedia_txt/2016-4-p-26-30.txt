@@ -1,0 +1,218 @@
+
+
+Modell
+
+Gottwald MK500
+Peter Krijnen
+Mitten in den 1970er Jahren gab es in Boskoop (NL) einen Unfall an einer Hebebrücke.
+Während des Anhebens brach in einem der beiden Türme eine Achse, was zur Folge hatte, dass
+die Brücke durch ihre Schieflage nicht mehr zu bewegen war. Für eine Gemeinde, die von
+dieser Brücke abhing, ergab das große Probleme: Schifffahrt war nicht mehr möglich; LKWs
+und PKWs mussten Umwege fahren. Nur für Fußgänger und Radler gab es eine kleine Fähre.
+Zur Reparatur haben die Behörden der Provinz Zuid-Holland die Firma Biglift um Hilfe
+gebeten. Biglift hat dazu ihren damals schwersten Kran eingesetzt: den Gottwald MK500-88.
+Als ich das erfuhr, bin ich jeden Tag auf
+meinem Fahrrad nach Boskoop gefahren,
+um den Aufbau zu beobachten. Leider hatte
+ich damals keine Kamera und durfte auch
+die meines Vaters nicht mitnehmen.
+Damals versuchte ich natürlich, diesen Kran
+mit fischertechnik nachzubauen. Ich erinnere mich noch, dass ich die 32 Stück 45er
+Räder in ein 90 mm breites Fahrgestell eingebaut hatte. Ob ich auch die Abstützarme
+angebaut hatte, kann ich nicht mehr sagen.
+Ich weiß nur, dass ich die 180 x 90-Grundplatten als Basis für Fahrgestell und Oberbau benutzt habe – ohne Drehkranz.
+
+einzubauen. Auch der Versuch mit drei
+Mini-Motoren schlug fehl. Im selben Zeitraum fand ich auf der Website von Conrad
+endlich die 12-Volt-Versionen der „Micro
+Metal Gear Motoren“, die dort mit fünf
+verschiedenen Übersetzungen angeboten
+werden (Abb. 1). Damals bestellte ich von
+jeder Variante einen.
+
+Während der letzten 25 Jahre war ich mehrfach Teilnehmer der „Modelshow Europe“.
+Während einer dieser Shows kaufte ich das
+Buch „Gottwald: 100 Jahre Bagger – Krane
+– Rammen…“ [1]. Auf Seite 254 findet sich
+eine kleine Zeichnung des MK500-88, auf
+Seite 259 eine des MK600-89. Da von
+letzterem mehr Details beschrieben wurden,
+verwendete ich den MK600 als Basis für
+meine Modelle.
+In den 1970er Jahren gab es fischertechnik
+nur in Grau und Rot, daher wollte ich das
+erste Modell auch in Grau/Rot bauen.
+Allerdings wollte die Motorisierung nicht
+recht gelingen. Wegen des Maßstabs von
+1:27 (an dem der 45er Reifen schuld ist) gab
+es keinen Platz, um drei graue M-Motoren
+
+und ein aufgebohrter Baustein 15 mit Bohrung
+und zwei Federnocken
+
+
+Modell
+
+Später kaufte ich neun Stück 1:50 für die
+Seilwinden und vier Stück 1:1000 zum
+Drehen der Kräne. Für die Abstützarme
+meines Demag CC4800 habe ich auch noch
+vier Stück 1:100 bestellt und eingebaut.
+Außerdem stehen die Varianten 1:150 und
+1:298 zur Verfügung. Die Motoren haben
+einen Durchmesser von 12 mm; die Achse
+ist 3 mm dick.
+
+Im Demag-Modell schraubte ich die Motoren auf je einen Flachstein 30 x 30. Das war
+beim Gottwald aber nicht möglich. Als
+nächstes versuchte ich, die Motoren mit
+Hilfe der Schneckenmutter m1,5 (37925),
+einzubauen (Abb. 1). Mit der Fräsmaschine
+bohrte ich das Loch auf 12 mm auf. Da aber
+die Abschlussplatte an der Anschlussseite
+der Motoren um einige Zehntel Millimeter
+größer ist, wird der Motor nie wirklich fest
+gehalten. Mit einem aufgebohrten Baustein
+
+
+
+15 mit Bohrung (32064) ergab sich eine
+bessere Lösung (Abb. 3). Mit der Fräsmaschine wurde wieder das Loch aufgebohrt, aber jetzt so weit, dass der Motor
+hineinpasste. Die Getriebe haben ein Querschnitt von 12 ∙ 10 mm, sodass sie gegen
+Verdrehen geschützt sind. Zwei Federnocken 31982 befestigen die Motoren
+zusätzlich.
+
+Breite des MK500-88 beträgt 115 mm, die
+des MK600-89 130 mm.
+Der Kranoberwagen ist 105 mm breit und
+besteht aus zwei Längsträgern, die mehrfach miteinander verbunden sind. An drei
+dieser Verbindungen sind die Motoren für
+die Seilwinden montiert (Abb. 4), davor
+liegen die Seilrollen. Natürlich ist zwischen
+den beiden Trägern auch der Drehkranz
+eingebaut. Das Maschinenhaus sitzt weit
+vorne und trägt an seiner Frontseite die
+Kabine (Abb. 2). Die Länge vom Drehkranz
+bis zum Gegengewicht beträgt 330 mm.
+Der Auslegerfuß ist 95 mm vom Drehkranz
+entfernt gelagert. Um ein Durchbiegen zu
+verhindern, steckt in jedem Träger eine
+Metallachse.
+
+aufgebohrten Baustein 15 mit Bohrung
+
+
+Zum Antrieb der Seilwinden brauchte ich
+nur das Loch des Rastritzels mit der Drehmaschine auf 2,9 mm aufzubohren. Für die
+1:1000-Motoren bohrte ich aber erst eine
+Achse auf 2,9 mm auf und presste sie auf
+die Motorachse. Das Rastritzel wurde auf
+3,9 mm aufgebohrt.
+
+Die drei Seilwinden bestehen aus je einer
+Achse 110, einem Zahnrad Z30, einem
+Spurkranz 30 und fünf Klemmbuchsen 10.
+Für die doppelte Seilwinde fertigte ich mit
+der Drehmaschine eine Scheibe mit 34 mm
+an. Statt der fünf Klemmbuchsen 10 kamen
+dann vier 10er und zwei 5er zum Einsatz.
+
+Das 550 mm lange Fahrgestell baute ich
+zwischen den Anbolzungen der Abstützarme wie ein umgedrehtes 60 mm breites U
+auf. Es wurde mit vier doppelt bereiften
+Achsen bestückt. Am einen Ende ist eine
+einzelne Achse angebaut, am anderen sind
+es drei. Insgesamt benötigte das Fahrwerk
+damit 32 Reifen. Zum Schleppen befindet
+sich am langen Ende eine Deichsel. Am
+anderen Ende wurde ein Warnstreifen aufgeklebt. Wegen des Maßstabs von nur 1:27
+ist das Fahrgestell ganz einfach gehalten:
+keine Steuerung, keine Motorisierung. Die
+
+Das weiße Seil stammt aus dem Baumarkt
+und ist 1 mm dick. Auf der doppelt breiten
+Seilwinde sind davon 16 m aufgewickelt,
+die beiden anderen fassen je 9 m.
+
+
+Da der Bau des 630 mm langen Auslegers
+doch ein wenig problematischer war als
+zunächst angenommen, habe ich in AutoCAD eine Zeichnung davon erstellt. Das
+war sehr hilfreich, gibt es in AutoCAD doch
+mehrere Messfunktionen, z. B. für die
+erforderliche Länge der Streben. Das ergab
+aber Längen, die mit einer Kombination
+
+
+Modell
+
+
+von Streben nur ungefähr realisierbar sind.
+Deswegen musste ich die Anzahl Verstrebungen verringern. Es gelang mir aber,
+die Form des Auslegers beizubehalten.
+Später baute ich noch Zwischenstücke zu
+12 m und 6 m ein. Der Querschnitt des
+Auslegers beläuft sich auf 105 x 90 mm.
+Erst nachdem die grau/rote Version fertig
+war, fragte ich mich, wie der Kran wohl in
+den Originalfarben der damaligen Betreiber
+aussehen mag. In Abb. 2 und 5 ist das
+Ergebnis zu sehen: zwei MK500-88 und
+zwei MK600-89. Später baute ich auch
+noch einen geschleppten MK600 und drei
+MK650 (siehe Bilderpool [2]).
+Bei einem solchen Projekt bemerkt man
+natürlich gleich, dass man sein Modell nicht
+ganz in gelb, rot oder schwarz aufbauen
+
+kann: Bestimmte Teile gibt es eben nicht in
+allen Farben. Das Sarens-Modell habe ich
+deswegen einfach in originalen fischertechnik-Farben gehalten: ohne blaue Teile.
+Auch das Fehlen roter Streben ist ärgerlich.
+Obwohl ich ein einfaches Modell bauen
+wollte, sollte es doch über eine Fernsteuerung verfügen. Ich besitze zwei RC-Geräte;
+mein Zweikanal-Accoms-Gerät hat zwei
+Kanäle zu wenig, und mein auf 22 Kanäle
+ausgebautes Robbe/Futaba F14 ist fest im
+Demag CC4800 eingebaut. Da blieb also
+nur die fischertechnik-IR-Fernsteuerung.
+Der Empfänger des IR-Control-Sets verfügt
+über drei Motoranschlüsse und einen Servoanschluss – ich brauchte aber vier Motorausgänge. Bei der Bestellung der Motoren
+
+
+
+
+
+kaufte ich auch gleich vier Micro-Fahrtregler. Obwohl die kleiner sind als eine
+Bauplatte 15 x 15 halten sie doch Ströme
+bis zu 1,8 A aus. Anstelle eines Servos
+schloss ich einfach einen Fahrtregler am
+Servoausgang an. Mit ein wenig Knetmasse
+auf einer V-Bauplatte 15 x 15 war der
+Regler einfach zu befestigen (Abb. 7).
+Empfänger, Regler und eine 9 V-Batterie
+konnte ich in eins der Gegengewichte einbauen (Abb. 6). Auf jedem Kranmodell sitzt
+eine Platine mit acht Kontaktflächen, an
+denen die acht Leitungen für die Motoren
+angelötet sind. Mit Hilfe von vier halbierten
+Federn unterhalb des Gegengewichts wird
+der Kontakt mit der Steuerung auf einfache
+Weise hergestellt.
+
+Quellen
+[1]
+
+Weinbach, Wolfgang: Gottwald: 100
+Jahre Bagger – Krane – Rammen…
+Podszun Motorbücher GmbH, 2006,
+ISBN 3-86133-421-6.
+
+[2]
+
+Gottwald-Kranmodelle im ft
+Community Bilderpool.
+
+
+Anschluss an den IR-Empfänger
+
+

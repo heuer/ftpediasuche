@@ -1,0 +1,501 @@
+
+
+Computing
+
+I²C mit TX und Robo Pro – Teil 1: Grundlagen
+Dirk Fox
+Mit der im April 2012 veröffentlichten Robo Pro-Version 3.1.3 und dem TX-Firmware-Update 1.30 hat fischertechnik das Tor zur „I²C-Welt“ aufgestoßen: Am TX Controller lassen
+sich nun nahezu beliebige I²C-Module anschließen und nutzen. Was steckt technisch
+dahinter? Und wie spricht man I²C-Komponenten in Robo Pro-Programmen an?
+
+Hintergrund
+I²C – Inter-Integrated Circuit – bezeichnet
+ein verbreitetes Bus-Protokoll für die
+Kommunikation zwischen IC-gesteuerten
+Komponenten elektronischer Schaltungen.
+Es wurde vor über 30 Jahren von Philips
+Semiconductors (der heutigen NXP Semiconductors) entwickelt. 1992 veröffentlichte Philips die Spezifikation 1.0, die bereits
+verschiedene Erweiterungen umfasste
+(schnellere Übertragungsmodi und einen
+größeren Adressraum); sie wurde in den
+Jahren 1998, 2000 und 2007 durch die
+Versionen 2.0, 2.1 und 3.0 abgelöst. Am
+13.02.2012 publizierte NXP die heute
+gültige Version 4.0 der Spezifikation [1].
+Der erste Teil unserer „I²C-Beitragsserie“
+führt in die Grundlagen des I²C-Busses ein,
+soweit sie für den Betrieb von I²C-Komponenten am TX relevant sind. In Folgebeiträgen werden wir ausgewählte I²CSensoren und –Aktoren vorstellen und
+deren Ansteuerung in Robo Pro erläutern.
+
+Das I²C-Bus-Protokoll
+I²C ist ein sehr einfacher serieller Bus mit
+einem Master-Slave-Protokoll: Ein Master
+Device (hier: unser TX Controller) sendet
+die Befehle, und ein oder mehrere Slave
+Devices (hier: an den TX angeschlossene
+I²C-Sensoren oder Aktoren) reagieren oder
+antworten. Der Bus benötigt lediglich zwei
+
+Leitungen: eine serielle Datenleitung
+(Serial Data Line, SDA) und eine Taktleitung (Serial Clock Line, SCL). Der
+Master gibt den Bus-Takt (und damit die
+Übertragungsgeschwindigkeit) vor.
+Betriebsarten
+Bis zur Veröffentlichung der Spezifikation
+1992 war die Bus-Geschwindigkeit auf
+maximal 100 kBit/s begrenzt. Inzwischen
+unterscheidet die Spezifikation fünf Betriebsarten mit den folgenden maximalen
+Takt- (Übertragungs-) Raten:
+Standard Mode: 100 kBit/s
+Fast Mode: 400 kBit/s (seit Version 1.0)
+Fast Mode Plus: 1 MBit/s (seit 2007,
+Version 3.0)
+High Speed Mode: 3,4 MBit/s (seit
+1998, Version 2.0)
+Ultra Fast Mode: 5 MBit/s (seit 2012,
+Version 4.0)
+Der TX unterstützt den Standard und den
+Fast Mode, daher werden in der weiteren
+Darstellung Besonderheiten der anderen
+Betriebsarten nicht betrachtet.
+Datenübertragung
+Im Ruhezustand sind die Pegel beider
+Leitungen (SDA und SCL) auf High. Der
+Beginn einer Datenübertragung wird vom
+
+Master mit dem Steuerbefehl Start (S)
+signalisiert: Dazu wird bei SCL = High
+eine fallende Flanke auf der Datenleitung
+(SDA) „gesendet“. Der Bus ist damit für
+den sendenden Master reserviert (Abb. 1).
+Während der Übertragung wird die Datenleitung nur bei SCL = Low geschaltet. Ein
+High-Pegel auf der SCL-Leitung signalisiert dem Empfänger das Anliegen eines
+Datenbits.
+
+Computing
+
+Adressierung
+An einen Bus können mehrere Master und
+Slave Devices angeschlossen werden. Jede
+I²C-Komponente besitzt eine feste 7-BitAdresse, über die sie angesprochen werden
+kann.5 Damit lassen sich auf einem Bus
+theoretisch bis zu 112 verschiedene Komponenten adressieren; 16 Adressen sind für
+Sonderzwecke reserviert (siehe Abschnitt
+unten und Tab. 1).
+
+
+Damit an denselben I²C-Bus auch mehrere
+gleichartige Komponenten angeschlossen
+(und getrennt adressiert) werden können,
+erlauben einige Devices die Einstellung der
+niederstwertigen zwei bis drei Adress-Bits
+mittels Jumpern [2]. Beim Anschluss mehrerer gleicher Devices an einen Bus müssen diese Jumper so gesetzt werden, dass
+keine Adresse doppelt vergeben wird.
+
+Statt eines Stop-Befehls kann auch mit
+einem Repeated Start-Steuerbefehl (Sr) der
+Beginn einer weiteren Datenübertragung
+desselben Masters signalisiert werden.
+
+Die Datenübertragung beginnt immer mit
+der Adresse des Empfängers, die in den
+ersten sieben (also höchstwertigen) Bits
+des ersten Datenbytes übermittelt wird.
+
+Die Übertragung von Befehlen oder Daten
+erfolgt byteweise seriell, beginnend jeweils
+mit dem höchstwertigen Bit (Most Significant Bit First). Der Empfang muss vom
+Empfänger mit einem Acknowledge (ACK)
+Bit (SDA = High) bestätigt werden (siehe
+
+Befehle: Write und Read
+
+Beendet wird die Übertragung mit einem
+Stop-Steuerbefehl (P), einer steigenden
+Flanke auf SDA bei SCL = High (siehe
+
+Bestätigungs-Bit (ACK) [1]
+
+Empfängt der Sender kein ACK-Bit, geht
+er davon aus, dass der Empfänger entweder
+nicht erreichbar ist, die gesendeten Daten
+(bspw. wegen eines Übertragungsfehlers)
+nicht interpretieren oder keine weiteren
+Daten empfangen kann und bricht die
+Übertragung mit einem Stop-Steuerbefehl
+zur Freigabe der Leitung ab.
+
+Das I²C-Protokoll kennt nur zwei elementare Befehle: Write (Datenübertragung
+vom Master an einen Slave) und Read
+(Datenübertragung vom Slave an den
+Master).
+Der Befehl wird vom Master im niederstwertigen Bit des ersten gesendeten Byte
+übermittelt (0 = Write, 1 = Read), dessen
+höchstwertige sieben Bit die Adresse des
+Slave enthalten. Die angesprochene SlaveKomponente bestätigt mit einem ACK-Bit
+ihre Empfangs- bzw. Sendebereitschaft.
+
+
+Seit Version 1.0 der Spezifikation ist auch ein
+10-Bit-Adressierungsschema spezifiziert, mit
+dem bis zu 1.136 verschiedene Komponenten
+auf einem Bus adressiert werden können. Dieses
+Schema hat sich bisher nicht durchsetzen
+können; offenbar genügt die 7-Bit-Adressierung
+in der Praxis.
+
+
+
+Ablauf der Übertragung
+Welche und wie viele Daten-Bytes dem
+Adress-Byte (mit Befehlsbit) folgen, hängt
+vom Befehlsbit (Read bzw. Write) und
+vom Typ der Slave-Komponente ab und
+wird vom Hersteller im Datenblatt der
+Komponente dokumentiert. Die Gesamtzahl der Datenbytes je Übertragung ist
+seitens des I²C-Protokolls nicht beschränkt.
+
+können für am TX betriebene Komponenten relevant sein und werden daher im
+Folgenden kurz erläutert.
+Adresse
+
+R/W Funktion
+
+0000 000
+
+
+General Call
+
+0000 000
+
+
+Start Byte
+
+0000 001
+
+X
+
+CBUS Address
+
+Der Ablauf entspricht immer dem folgenden generellen Schema:
+
+0000 010
+
+X
+
+Different Bus
+
+0000 011
+
+X
+
+Future Purpose
+
+Einem Write-Befehl folgt meist zunächst ein Byte, das eine „Subadresse“
+enthält – eine Komponenten spezifische
+Adresse eines Registers des Slave –,
+gefolgt von einem Wert, mit dem der
+Master dem Slave die Bedeutung der
+anschließenden Daten-Bytes mitteilt.
+
+0000 1XX
+
+X
+
+High-speed Mode
+
+1111 100
+
+X
+
+Device ID
+
+1111 1XX
+
+X
+
+Future Purpose
+
+1111 0XX
+
+X
+
+10 Bit Address
+
+Bei einem Read-Befehl dreht sich die
+Übertragungsrichtung um und es folgt
+eine Sequenz von Datenbytes, die der
+Slave an den Master übermittelt. Der
+Empfang jedes Bytes muss vom Master
+mit einem ACK-Bit bestätigt werden;
+der Master stoppt die Datenübermittlung mit einem NACK-Bit (Not Acknowledged).
+
+So können mit der General Call Address
+alle am I²C-Bus angeschlossenen Slave
+Devices zugleich angesprochen werden.
+Die Unterstützung dieser Adresse durch
+eine I²C-Komponente ist optional; Komponenten dürfen den Ruf daher ignorieren.
+Zur Unterscheidung von der Start ByteAdresse wird das Befehlsbit 0 gesendet.
+
+Auch ein Wechsel der Übertragungsrichtung innerhalb des Protokolls ist
+möglich. Dazu sendet der Master statt
+eines Stop- ein Repeated Start-Steuersignal, gefolgt von der Adresse6 des
+Slave mit einem neuerlichen Read/
+Write-Befehlsbit.
+Reservierte Adressen
+Zwei Gruppen von je acht Adressen (0000
+XXX und 1111 XXX, siehe Tab. 1) sind
+für Sonderfunktionen vorgesehen, die von
+speziellen Komponenten benötigt werden.
+Die in Tab. 1 grau unterlegten Funktionen
+
+
+Hier kann auch die Adresse einer anderen SlaveKomponente gewählt werden; dann richtet sich
+der Befehl an ein anderes Device.
+
+Tab. 1: Reservierte Adressen [1]
+
+Sofern von mindestens einem Slave ein
+ACK-Bit gesendet wird, schickt der
+Master als zweites Byte
+entweder 0000 0110 (= 6) bzw. 0000
+0100 (= 4; mit/ohne Software-Reset),
+gefolgt von einem Device-spezifischen
+Byte zum Schreiben des programmierbaren Teils der Slave-Adresse, oder
+ein Adressbyte mit seiner eigenen
+Adresse und dem Befehlsbit 1 (= Read),
+beantwortet von n Daten-Bytes eines
+Hardware-Slaves (z. B. den Eingaben
+an einer PIN-Tastatur).
+Der Beginn eines Datentransfers kann auch
+mit dem Start Byte (0000 0001) signalisiert
+werden. Bei leistungsschwachen SlaveKomponenten hat das den Vorteil, dass sie
+den Steuerbefehl „Start“ ignorieren können
+und den Bus nur mit der Taktrate der
+
+Betriebsart abfragen müssen: Empfangen
+sie sieben „0“-Bits in Folge, zeigt ihnen
+das den Beginn der Übertragung an. Nach
+dem Start Byte schickt der Master den
+Steuerbefehl „Sr“ (Repeated Start), danach
+erst das Adress-Byte mit Befehlsbit.
+Einige Komponenten sind mit einer eindeutigen, drei Byte langen Device ID ausgestattet, die sich aus 12 Bits für die von
+NXP vergebene Hersteller-ID, neun Bits
+für die Teile-ID und drei Bits für die
+Versionsnummer zusammensetzt. Verfügt
+ein Slave über eine Device ID, kann diese
+wie folgt ausgelesen werden:
+Start-Steuerbefehl, gefolgt von der reservierten Adresse 1111 100 und dem
+Befehlsbit 0 (= Write).
+Adress-Byte: Slave-Adresse mit beliebigem Befehlsbit.
+Repeated Start-Steuerbefehl,
+gefolgt
+von der reservierten Adresse 1111 100
+und dem Befehlsbit 1 (= Read).
+Slave sendet die drei Byte lange Device
+ID; letztes Byte wird von Master mit
+NACK bestätigt, gefolgt von einem
+Stop-Steuerbefehl.
+Kollisionsauflösung
+Damit an einem I²C-Bus mehrere Master
+Devices gleichzeitig betrieben werden können, muss das Protokoll verhindern, dass
+mehrere Master gleichzeitig senden. Vor
+Beginn einer Übertragung muss ein sendebereiter Master daher zuerst prüfen, ob der
+Bus belegt ist. Beginnen zwei Master
+gleichzeitig Daten zu senden, wird die
+Kollision erkannt, da jeder Master auf der
+Datenleitung „mitliest“: Falls ein Master
+ein High-Signal sendet, auf der Datenleitung aber ein Low-Signal liest, bricht er
+die Übertragung ab (Collision Avoidance),
+ohne ein Steuersignal zu senden. Dadurch
+bemerkt der „siegreiche“ Master nichts
+von der Kollision, und die Datenübertragung wird auch nicht gestört.
+
+Computing
+
+Vorteile des Protokolls
+Zwar ist ein serieller Datenbus wesentlich
+langsamer als ein paralleler, dafür reduziert
+er wichtige Teile der Komponentenkosten
+erheblich:
+die Steuerung (da Datenbits nicht in
+Registern gepuffert werden müssen),
+die Ein- und Ausgänge (da nur ein
+Daten-Pin benötigt wird, was ein kleineres IC-Gehäuse ermöglicht), sowie
+die Verkabelung (da neben der Taktleitung nur eine einzige Datenleitung
+erforderlich ist).
+Der hohe Nutzdatenanteil (Payload) des
+I²C-Protokolls – ein Start- und ein Stop-Bit
+je Übertragung sowie ein ACK-Bit je
+Datenbyte – reduziert den Geschwindigkeitsvorteil paralleler Protokolle, die meist
+zusätzliche Bytes für die Fehlererkennung
+(CRC, Zähler), die Adressierung und das
+Acknowledgement benötigen.
+I²C-Komponenten können sogar während
+des Betriebs hinzugefügt oder herausgenommen werden (Hot Plugging); daher
+eignet sich der Bus gut für Schaltungstests.
+Der Datenbus ist zudem relativ robust
+(hohe Störsicherheit) und hat einen geringen Stromverbrauch. Allerdings ist die
+Reichweite begrenzt – für eine Datenübertragung über mehrere Meter oder mehr
+sind Feldbussysteme (z. B. CAN, Profibus,
+…) geeigneter.
+
+I²C und der TX Controller
+Für die Nutzung IC-gesteuerter Komponenten wie komplexer Sensoren, Displays,
+Schrittmotoren oder Echtzeituhren am TX
+ist der I²C-Bus ideal:
+Der Bus ist sehr verbreitet und inzwischen in vielen ICs bereits integriert; es
+gibt daher nicht nur eine große Auswahl
+an direkt nutzbaren, I²C-gesteuerten
+Sensoren und Aktoren, sie sind zudem
+zu moderaten Preisen erhältlich.
+
+
+
+Über denselben Bus können mit Hilfe
+eines passiven Verteilers zahlreiche I²CKomponenten gleichzeitig an einen TX
+angeschlossen und von diesem genutzt
+werden. Der Bus belegt am TX nur den
+EXT 2-Anschluss – keiner der 12 Einund acht Ausgänge wird benötigt.
+Die Ansteuerung von I²C-Komponenten
+lässt sich in Software sehr einfach realisieren; die I²C-spezifischen Elemente
+lassen sich durch die Implementierung
+geeigneter Unterprogramme oder Hilfsfunktionen („Treiber“) weitestgehend
+„verbergen“.
+Die eingeschränkte Eignung des Busses für
+eine Datenübertragung über größere Distanzen fällt bei vielen ft-Modellen in der
+Praxis nicht ins Gewicht. Die Kabellänge
+der Verbindung von Sensor bzw. Aktor mit
+dem TX sollte jedoch immer möglichst
+kurz gewählt werden und die Länge des
+mitgelieferten sechsadrigen ExtensionKabels nicht wesentlich überschreiten.
+Anschluss an den TX
+Angeschlossen werden die I²C-Devices an
+den Erweiterungsport EXT 2 des TX. Die
+Belegung der Kontakte zeigt Abb. 3.
+
+rungs-Port angeschlossen werden, muss
+dafür der EXT 1-Anschluss verwendet
+werden.
+Einige interessante I²C-Komponenten sind
+bereits mit der richtigen Anschlussbelegung und einem 2 x 3-poligen passenden
+Pfosten- oder Wannenstecker ausgestattet.
+Sie lassen sich ganz ohne Lötkolben und
+Bastelei direkt mit dem Extension-Kabel
+an den Erweiterungsport EXT 2 des TX
+anstecken – echtes Plug and Play.
+Unter diesen „100% TX-kompatiblen“ I²CDevices finden sich sowohl Sensoren (Beschleunigungssensor, Kompass) als auch
+Aktoren (Schrittmotoren, Displays). Zwar
+wird die Hardware zumeist ohne Gehäuse
+geliefert, aber die Module lassen sich z. B.
+an einer ft-Grundplatte befestigen oder in
+einem Batteriefach bzw. einer Kassette mit
+Deckel unterbringen.
+I²C-Befehle in Robo Pro
+Die Ansteuerung von I²C-Devices am TX
+erfolgt in Robo Pro mit den seit Version
+3.1.3 verfügbaren Befehlen „I2C Lesen“
+(Read) und „I2C Schreiben“ (Write).
+
+EXT 2
+SCL
+
+SDA
+
++5V
+
+GND
+
+EXT 2-Anschluss des TX Controllers
+
+Für den Anschluss genügen ein vier- oder
+sechsadriges Flachbandkabel und ein
+2 x 3-poliger Pfostenverbinder (Wannenstecker). Sollen an den Master zugleich
+weitere TX Controller über den Erweite36
+
+
+Der „I2C Schreiben“-Befehl ist ab Level 4
+im Menu unter „Senden/Empfangen“ auswählbar. Er ermöglicht es, einen komplexen Sendevorgang in einem einzigen
+
+Kommando zusammenzufassen. So kann
+der TX veranlasst werden, das Adress-Byte
+(inklusive Write-Bit) und bis zu vier
+weitere Daten-Bytes zu senden [4]. In den
+Eigenschaften des Befehls (rechte Maustaste) sind dafür festzulegen (Abb. 4):
+Die Geräteadresse des Slave (7 Bit, Angabe ohne das Write/Read-Bit).
+Eine bis zu zwei Byte lange Unteradresse (Subaddress); die Länge und Auswertungsreihenfolge (LSB = Least Significant Byte oder MSB = Most Significant Byte zuerst) kann gewählt werden.
+
+Computing
+
+pakete (Länge der
+„Keiner“) hinterher.
+
+Unteradresse
+
+=
+
+Der „I2C Lesen“-Befehl ist in Robo Pro
+ebenfalls ab Level 4 im Menu “Senden/
+Empfangen” verfügbar. Auch dieser Befehl
+fasst mehrere Schritte des Kommunikationsprotokolls zusammen: das SendeKommando an den Slave (Adress-Byte
+plus bis zu zwei weitere Bytes) und den
+Empfang der vom Slave übermittelten
+Daten (bis zu zwei Bytes).
+
+Ein bis zu zwei Byte langer Datenwert,
+dessen Länge und Auswertungsreihenfolge ebenfalls gewählt werden kann.
+Der Datenwert kann fest vorgegeben
+oder über einen Dateneingang (Häkchen
+setzen) übermittelt werden.
+Schließlich müssen dem Bus-Controller
+des TX noch die gewünschte Übertragungsgeschwindigkeit (Betriebsart) und
+Fehlerbehandlung mitgeteilt werden:
+Der TX kann den I²C-Bus wahlweise
+mit 100 oder 400 kHz takten, also im
+Standard oder im Fast Mode betrieben
+werden. Die gewählte Betriebsart sollte
+der des langsamsten am I²C-Bus angeschlossenen Device entsprechen.
+Bei Übertragungsfehlern oder Kollisionen kann entweder die Übertragung
+abgebrochen, eine zehnmalige Wiederholung oder dauerhafte Wiederholungen
+bis zu einem erfolgreichen Versand
+gewählt werden. In den beiden ersten
+Fällen erhält der Befehl automatisch
+einen zweiten (Fehler-) Ausgang; bei
+der letzen Option „hängt“ das Programm, wenn es z. B. ein Device nicht
+erreichen kann.
+Sollen weitere Datenbytes gesendet werden, setzt man bei „Offen lassen“ ein
+Häkchen, damit die Verbindung nicht mit
+einem Stop-Steuerbefehl beendet wird, und
+schickt die gewünschte Anzahl Daten-
+
+
+Wie nun eine bestimmte I²C-Komponente
+konkret angesteuert wird und welche
+Befehle für welche Funktionen erforderlich
+sind, muss den Datenblättern des jeweiligen Sensors oder Aktors entnommen
+werden. In den folgenden Beiträgen stellen
+wir euch ausgewählte I²C-Komponenten
+und deren Ansteuerung aus Robo Pro im
+Detail vor.
+
+Quellen
+[1]
+
+NXP: I²C-bus specification and user
+manual, UM10204, Rev. 4 vom
+13.02.2012.
+
+[2]
+
+Wikipedia: I²C.
+
+[3]
+
+Ralph Timmermann: I2C-Grundlagen. (abgerufen am 26.07.2012)
+
+[4]
+
+fischertechnik: Robo Pro OnlineHilfe, Abschnitt 8.2.7 und 8.2.8,
+Version 3.1.3, 2012.
+
+

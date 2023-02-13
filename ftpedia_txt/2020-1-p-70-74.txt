@@ -1,0 +1,158 @@
+
+
+Modell
+
+Modulix
+Hans-Christian Funke
+Robotik ist das aktuelle Thema – Maschinen, die uns Arbeit abnehmen und in eigener Regie
+einen Arbeitsvorgang erledigen. Das wird in der Regel durch eine Programmsteuerung
+realisiert, aber auch hier lagen einmal die Anfänge in einfachen logischen Verknüpfungen.
+
+Darf ich vorstellen – MODULIX
+Ziel ist war es, ein kleines Fahrzeug zu
+bauen, das einem schwarzen Streifen folgen
+kann, und dabei nur herkömmliche Elektronik einzusetzen (ohne Programmierung).
+Basierend auf dieser Grundidee wird ein
+Fahrzeug mit zwei Sensoren, einem Antrieb
+und einer Lenkung benötigt. Durch Verwendung von zwei Motoren beim Antrieb
+konnte ich auf die Lenkung verzichten,
+denn durch Anhalten eines Motors (eines
+
+Rades) wird automatisch eine Drehung des
+Fahrzeuges erreicht.
+Mit diesen Voraussetzungen ergab sich eine
+recht simple Schaltung für das Fahrzeug
+(Abb. 2) und die Konstruktion des Fahrzeugs konnte ebenfalls einfach gehalten
+werden.
+Für den Aufbau der Schaltung werden
+neben den zwei Motoren also auch zwei
+Fotozellen (Fotowiderstände), zwei Linsenkopf-Lampen und zwei Elektronikmodule
+70011 (4 AND-NAND-Gatter) und 70018
+
+
+
+Modell
+
+
+(zwei Relais) benötigt. Alternativ können
+für das Relaismodul 70018 auch das Relaismodul 70023, der Leistungstreiber 70009
+oder das Inverter-Plus-Modul 70019 eingesetzt werden.
+Vorteilhaft wäre der Einsatz der Module
+70009 oder 70019, weil diese schneller
+schalten als ein Relais, aber darauf komme
+ich später noch einmal zu sprechen.
+
+Aufbau
+Beginnen solltet ihr mit der Sensor-Baugruppe, die aus den beiden Fotozellen besteht (Abb. 3 und 4).
+
+
+
+Eine weitere separate Einheit bildet das
+Laufrad hinten, das Stabilisierung und
+Unterstützung bei der Lenkung des Fahrzeuges bietet (Abb. 7). Nachdem die beiden
+kleinen Baugruppen fertiggestellt sind,
+kann es auch schon an das Grundgerüst
+gehen (Abb. 5, 6, 8).
+
+
+
+
+
+
+Sobald ihr alles – wie auf den Bildern zu
+sehen – montiert habt, könnt ihr Modulix
+wieder auf die Räder stellen und den Batteriehalter mit Schalter montieren (Abb. 9).
+
+
+Auf der Frontseite wird nun noch die Sensor-Baugruppe angesteckt (Abb. 10). Der
+Sensor muss später noch ausgerichtet werden. Schlussendlich können die Module
+oberhalb des Batteriehalters montiert werden (Abb. 9 und 11).
+
+
+Modell
+
+
+verbunden (siehe auch Abb. 1)
+
+Geschafft – der Aufbau des Fahrzeuges ist
+fertig!
+
+Was jetzt noch fehlt, ist die Verkabelung.
+Stellt die Verkabelung nach dem Schaltplan
+in Abb. 2 her.
+Wie ihr auch schon auf den Bildern sehen
+konntet, habe ich die Kabel für Motoren,
+Lampen und Sensoren schon während der
+Montage angesteckt. Somit sind alle Kabel
+bereit, um an die Elektronikmodule gesteckt
+zu werden.
+
+Schalter (siehe auch Abb. 1)
+
+
+
+Besonderheiten
+Ja, Modulix hat ein paar Besonderheiten,
+die der einfachen Konstruktion geschuldet
+sind. Es bleibt also eurer Fantasie und
+eurem Erfinderreichtum überlassen, hier
+noch Verbesserungen vorzunehmen.
+In den Batteriehalter habe ich Akkus eingesetzt (4,8 V statt 6,0 V), damit Modulix
+nicht zu schnell rollt, aber selbst das reichte
+noch nicht. Durch seine Bauart (Abstand
+Räder – Sensoren) wird beim Stoppen eines
+Rades ein ziemlich starker Schwenk ausgeführt. Ist Modulix zu schnell, kann es leicht
+passieren, dass er die Spur verliert. Dazu
+kommt noch, dass die langsamen Schaltzeiten der Relais die Reaktion von Modulix
+auch noch verzögern (daher, wie schon
+eingangs erwähnt, lieber den 70009 oder
+70019 verwenden). Somit musste ich die
+Geschwindigkeit noch einmal mit einem
+Widerstand von 5 Ω (2 · 10 Ω ¼ W parallelgeschaltet) in der Leitung zu den Motoren drosseln – damit funktioniert es.
+
+Justierung
+Die Ausrichtung der Sensoren (Abstand
+zwischen den Fotozellen und Abstand zum
+Boden) nehmt ihr besser ohne laufende
+Motoren vor. Als Laufstreifen für Modulix
+könnt ihr ein 1-2 cm breites schwarzes
+Klebeband verwenden und auf Papier
+kleben. Abb. 12 zeigt eine Streckenführung,
+die keine sehr starken Kurven haben sollte,
+weil Modulix nur einen bestimmten Radius
+fahren kann. Den Klebestreifen habe ich auf
+ein DIN-A2-Blatt aufgebracht (vier Blätter
+DIN A4 zusammengeklebt = DIN A2) und
+dann Modulix über den Streifen gehalten.
+
+
+Sobald ein Sensor über dem schwarzen
+Klebeband steht, muss ein Relais deutlich
+klicken – auch die LEDs signalisieren die
+Reaktion der Fotowiderstände. Sobald
+beide Fotozellen reagieren, könnt ihr die
+Motoren anstecken und noch einmal prüfen,
+ob alles stimmt.
+
+auf DIN-A2-Papier
+
+Letzter Test
+Schaltet Modulix ein und haltet ihn in der
+Hand. Beide Räder sollten sich in die
+gleiche Richtung drehen, und zwar so, dass
+Modulix in Richtung der Fotozellen fährt
+(ansonsten müsst ihr die Anschlüsse am
+Motor vertauschen). Stimmt alles, dann ist
+Modulix einsatzbereit und kann auf die
+Stecke gesetzt werden. Viel Spaß beim
+Testen, Probieren und Justieren.
+Auf [1] gibt es einen kleinen Video-Clip,
+der Modulix in Aktion zeigt.
+
+Verweise
+[1]
+
+Funke, Hans-Christian: Modulix.
+yotube.com.
+
+

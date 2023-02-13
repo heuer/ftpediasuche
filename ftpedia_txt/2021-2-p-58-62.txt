@@ -1,0 +1,338 @@
+
+
+Elektronik
+
+Echtzeitgenerator
+Hans-Christian Funke
+Zu der von mir vorgestellten digitalen Uhr [1] wurde ich mehrfach angefragt, ob man nicht
+statt der recht aufwendigen Justierung einen Sekunden-Taktgeber bauen und anschließen
+könnte. Das wäre tatsächlich sehr praktisch und auch für andere Anwendung sinnvoll, z. B.
+könnte man die echte Laufzeit eines Pakets durch die Sortierstation, die eines Autos durch die
+Waschanlage oder die einer Kugel durch die Kugelbahn ermitteln.
+
+Wer liefert den Takt?
+Zunächst musste ich Überlegungen anstellen, wie so ein genauer Taktgeber aussehen
+müsste und wie garantiert wird, dass dieser
+tatsächlich zuverlässig einen SekundenTakt liefert.
+Für zuverlässige Taktgeberquellen wird in
+der digitalen Elektronik in der Regel auf einen Quarz zurückgegriffen, der äußerst genau eine Schwingung (Takt) mit konstanter
+Frequenz erzeugt. In der Praxis sieht es aber
+so aus, dass die Taktfrequenzen der Quarze
+im Megahertz- (MHz) oder Gigahertzbereich (GHz) gebraucht werden und somit im
+Wesentlichen auch nur solche zu finden
+sind. Allerdings gibt es einen Quarz im
+Elektronikbereich mit 32.768 kHz, der auch
+noch im Handel erhältlich ist – damit kommen wir unserem Ziel schon viel näher.
+Diese Art von Quarzen wurde schon in der
+Anfangszeit der Computertechnik (Commodore 64, Apple II, ATARI, …) für die
+Uhrenkarten oder als Zeitgeber verwendet.
+Für die weiteren Betrachtungen müssen wir
+uns einer Formel aus der Physik bedienen,
+die den Zusammenhang zwischen Frequenz
+(Hz) und Periodendauer (s) beschreibt:
+𝑃𝑒𝑟𝑖𝑜𝑑𝑒𝑛𝑑𝑎𝑢𝑒𝑟 𝑖𝑛 𝑠 =
+
+𝐹𝑟𝑒𝑞𝑢𝑒𝑛𝑧 𝑖𝑛 𝐻𝑧
+
+𝑇=
+
+𝑓
+
+Wollen wir also einen Quarz mit einer Frequenz von 32.768 kHz einsetzen, dann erhalten wir folgende Taktdauer:
+𝑇=
+
+=
+≈ 30,518 μs
+𝑓 32768 Hz
+
+Wir brauchen aber einen Sekundentakt für
+unseren Echtzeitgenerator mit
+= 1 Hz
+1s
+Die Frequenz muss somit kleiner werden,
+damit die Taktdauer größer wird. Hier hilft
+uns die digitale Technik mit ihrem binären
+Zählsystem weiter. Es gibt z. B. Zählerbausteine, die Takte nach dem binären Zahlensystem zählen. Ein 4-bit Binärzähler zählt
+dezimal von 0 – 15; in Tab. 1 kann man sehen, wie es im binären Zählsystem aussieht.
+𝑓=
+
+Daran kann man erkennen, dass sich immer
+nach zwei Takten eine Änderung am Bit 2
+ergibt, nach vier Takten am Bit 3 und nach
+acht Takten am Bit 4. Das lässt sich beliebig
+fortsetzen, aber wir können hier schon erkennen, dass ein Binärzähler nichts anderes
+macht, als von Ausgang zu Ausgang (Bit zu
+Bit) den Takt zu verdoppeln bzw. die Frequenz zu halbieren.
+Und genau dieses Prinzip machen wir uns
+zu nutze. Wir setzen einen Binärzähler ein,
+
+
+
+Elektronik
+
+der unsere Frequenz mehrmals halbiert
+(siehe Tab. 2).
+Takt
+
+Bit 1
+
+Bit 2
+
+Bit 3
+
+Bit 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tab. 1: 4-bit Binärzähler
+
+Frequenz Taktdauer
+(Hz) (s)
+
+Frequenz Taktdauer
+(Hz) (s)
+4 0,25
+2 0,5
+Tab. 2: Teilungssequenz
+
+Teilung
+(n)
+
+Wir müssen die Frequenz von 32.768 kHz
+also 15-mal durch 2 teilen, damit wir eine
+Frequenz von 1 Hz erhalten.
+
+Zusatzmodul 70051
+Soweit die Theorie. In der Praxis ist es so,
+dass auch häufig ein Halbsekunden-Takt
+benötigt wird. Aus diesem Grund habe ich
+eine Schaltung entworfen, die einen 0,5-Sekunden-Takt liefert. Das Ergebnis ist das
+Zusatzmodul 70051, das mit drei Kabeln
+ausgestattet ist:
+
+Teilung
+(n)
+
+32.768 0,000030517
+
+
+16.384 0,000061035
+
+
+8.192 0,000122070
+
+
+4.096 0,000244140
+
+
+2.048 0,000488281
+
+
+1.024 0,000976562
+
+
+512 0,001953125
+
+
+256 0,00390625
+
+
+128 0,0078125
+
+
+64 0,015625
+
+
+32 0,03125
+
+
+16 0,0625
+
+
+8 0,125
+
+
+
+
+Die rote Leitung mit rotem Stecker wird mit
+„+“ (Vdd 3 V bis 15 V) verbunden, entsprechend die grüne Leitung mit grünem Stecker mit „-“ und kann so an jedem Elektronikmodul über „+“ und „-“ angesteckt werden. Das Zusatzmodul ist auch gegen Verpolung empfindlich, so dass auch hier ein
+
+
+
+
+
+Verpolungsschutz integriert ist, der bis 2 A
+standhält. Die gelbe Leitung mit dem gelben Stecker liefert das Echtzeitsignal als
+Rechteck-Takt (Abb. 2).
+
+Schaltung
+Der Schaltungsaufbau ist sehr klein, um ein
+leicht handhabbares Zusatzmodul zu erhalten (Abb. 3).
+Der verwendete CMOS-Baustein gibt nur
+14 Teilungen her, aber damit wird gerade
+die Taktdauer von 0,5 Sekunden erreicht.
+Der Ausgang des Echtzeitgenerators (gelbe
+Leitung) verfügt über keinerlei Endstufe
+und kann maximal einen Eingang ansteuern, oder man schließt ihn zur Verstärkung
+
+an ein Gatter- (AND-NAND, OR-NOR oder EXOR-EXNOR) oder ein Flip-FlopModul (D-FF oder JK-FF) an. Die Ausgänge der Gatter- und FF-Elektronikmodule
+(70010-14 und 70006-7) sind wesentlich
+höher belastbar und man erhält damit auch
+eine optische Anzeige, ob das Taktsignal
+anliegt bzw. funktioniert. Zur Verwendung
+des 0,5-Sekunden-Taktes ist ein Gatter zu
+verwenden und für einen 1-Sekunden-Takt
+ein Flip-Flop.
+Nach der Inbetriebnahme des Echtzeitgenerators kann es passieren, dass dieser noch
+eine kurze Einschwingphase benötigt.
+Sollte sich dieses Verhalten störend auf das
+Modell auswirken, müsste diese Zeit mit einem Mono-Flop überbrückt werden.
+
+
+Wie erhält man einen
+Ein-Sekunden-Taktgenerator?
+Wenn ein Sekundentakt benötigt wird,
+schließt man den Echtzeitgenerator an ein
+T-Flip-Flop (T-FF) an. Die eingehende
+Taktfrequenz wird durch das T-FF halbiert.
+Ein T-FF lässt sich aus einem D-Flip-Flop
+(D-FF) oder ein JK-Flip-Flop (JK-FF) aufbauen. Bei einem D-FF erhält man durch
+Stecken einer Verbindung zwischen dem
+Ausgang Q und dem Steuereingang D ein TFF. Beim JK-FF müssen die beiden Steuereingänge J und K auf high gelegt werden,
+damit das JK-FF zum T-FF wird.
+Im Diagramm in Abb. 4 ist zu erkennen,
+dass die Periodendauer am Ausgang Q doppelt so lang ist wie der Takt am Eingang Clk
+des D-FF.
+
+Digitale Uhr mit Zusatzmodul
+70051
+Den Echtzeitgenerator habe ich gleich in die
+eingangs erwähnte Uhr eingebaut. Mit ein
+paar kleinen Änderungen erhält man eine
+Echtzeit-gesteuerte digitale Uhr (Abb. 5).
+
+Elektronik
+
+Der Echtzeitgenerator wird hier an eines der
+freien ODER-Gatter eines Moduls 70013
+angeschlossen, sodass der Takt sichtbar und
+das Signal verstärkt wird. Der Taktgenerator, der vorher die Sekunden vorgegeben
+hat und dafür justiert werden musste, wird
+nun in einen Binärzähler umkonfiguriert, in
+dem der erste Jumper auf „ext.“ (externer
+Takt) und der zweite auf „D“ (digitales Signal, vom Echtzeitgenerator) gesetzt wird.
+Der Ausgang des ODER-Gatters wird auf
+den Takt-Eingang des Taktgenerators gelegt und gibt jetzt den Takt an. Die Schaltung mit den erforderlichen Änderungen ist
+in Abb. 6 zu sehen.
+Der Echtzeitgenerator liefert aber einen
+0,5-Sekunden-Takt; damit würde die Uhr
+doppelt so schnell laufen wie gewünscht.
+Dafür kann man entweder ein T-FF statt des
+ODER-Gatters einsetzen oder man muss
+alle Anschlüsse auf der Ausgangsseite des
+Taktgenerators um eine Position nach oben
+verschieben (Ck8 → Ck7; Ck7 → Ck6
+usw.), wobei die Leitung von Ck1 jetzt direkt an den Ausgang des ODER-Gatter angeschlossen wird.
+
+
+
+
+Verfügbarkeit
+
+Quellen
+
+Das Zusatzmodul 70051 ist seit Anfang Juni
+bei Franz Santjohanser im Online-Shop erhältlich. Das Gleiche gilt für das Zusatzmodul 70050 Überspannungsschutz.
+
+[1]
+
+Hans-Christian Funke: Digitale Uhr.
+ft:pedia 3/2020, S. 78–82.
+
+[2]
+
+Online-Shop von Franz Santjohanser: https://santjohanser.de/fischertechnik/einzelteile/elektronik/module/
+
+Schlusswort
+Weitere Informationen zu den Elektronikmodulen findet ihr auf Instagram, Videos
+mit Modellen auf youtube, jeweils unter
+dem Stichwort „Elektronikmodule“. Einen
+Gesamtüberblick über alle verfügbaren
+Elektronikmodule findet ihr im OnlineShop von Franz Santjohanser [2].
+
+
+

@@ -1,0 +1,309 @@
+
+
+Elektromechanik
+
+Synchronmotoren
+Matthias Dettmer
+Habt ihr schon mal eine Zeitreise gemacht? Also ich schon, mindestens zwei Mal in diesem
+Jahr. Nachdem ich mir Ende letzten Jahres das Buch zur „Technikgeschichte mit
+fischertechnik“ [1] gekauft hatte, war zuerst die Turmuhr aus Kapitel 4 (ab Seite 51) dran.
+Einen ersten Versuch eine Pendeluhr zu bauen, hatte ich vor etwa 43 Jahren unternommen, mit
+damals eher bescheidenem Erfolg. Und dann ist da das Kapitel 10 zum Elektromotor. Die
+beiden dort beschriebenen Synchronmotoren, also Motoren die „nur“ mit der Netzfrequenz von
+50 Hertz betrieben werden, haben mich dann um 26 Jahre zurückgeschickt.
+Anfang der 90er Jahre hatte ich beruflich
+mit dem Aufbau und der Programmierung
+von Prüfständen für elektrischen Maschinen
+zu tun, und ich dachte, dass man einen
+Synchronmotor eigentlich auch mit fischertechnik nachbauen kann. Heraus kam,
+hauptsächlich inspiriert von der Drehscheibe 60 (31019) mit ihrer 6-er Teilung,
+ein Motor mit drei Polpaaren. Der war von
+zwei Elektromagneten „umschlossen“ und
+von meiner Lötstation (Achtung! Empfindliche Geister bitte jetzt nicht weiterlesen,
+sondern erst weiter unten) mit 12 V
+Wechselstrom bestromt. Aber das Ding lief
+nach dem Anwerfen satt mit den erwarteten
+1000 Umdrehungen pro Minute, nachgewiesen über eine Lichtschranke und ein
+Oszilloskop. Die Spulen haben die 12 V
+übrigens überlebt, wenn sich auch ein
+wenig Kondenswasser an den Innenseiten
+gebildet hatte. Leider habe ich damals keine
+Fotos gemacht, das war mangels Digitalkameras auch nicht so einfach wie heute.
+Gleich nach dieser Zeitreise ging ich daran,
+auch noch andere Drehzahlen mit Synchronläufern umzusetzen. Bahnbrechend
+dazu war die Verwendung von NeodymStabmagneten mit 10 mm Länge und 4 mm
+Durchmesser wie im Kapitel 10 (Seite 218,
+
+Neben dem leicht veränderten Modell aus
+dem Buch (Polpaarzahl sechs, resultierend
+in 500 U/min, ganz rechts) zeigt mein
+Modell jetzt auch die Polpaarzahlen drei
+(wieder 1000 U/min, ganz links) und fünf
+mit 600 U/min (in der Mitte des Bildes).
+Inzwischen etwas „gesitteter“ was die
+Belastung der Bauteile anbelangt: Hier
+kommt für die Stromversorgung aller
+Synchronläufer wieder ein altes Netzgerät
+mit seinen 6,8 V zum Einsatz.
+
+von 3, 5 und 6
+
+Beim Aufbau der drei Motoren wollte ich
+den Grundrahmen möglichst immer gleich,
+aber etwas flexibler als beim „Urvater“ aus
+dem Artikel gestalten. Dort sind nämlich
+die Spulen in einem konstruktionsbedingt
+festen Abstand angebracht, und ich wollte
+mehr Einstellmöglichkeiten haben.
+
+
+Elektromechanik
+
+Hauptwelle erlaubt verschiedene Ansätze zum Befestigen des Läufers auf der Achse.
+
+Die Spulen sollten in der Entfernung zum
+Läufer einstellbar sein, und die Lagerung
+des Läufers sollte auch andere „Kraftkoppelung“ an der Achse erlauben als mit den
+Naben sonst üblich.
+
+Das führte dann aber zu Hürde Nummer
+drei: Wie hält man die Neodym-Magneten
+sinnvoll in den Nuten der Bausteine fest?
+
+Erste Hürde bei anderen Polpaarzahlen:
+Wie stelle ich sicher, dass die Pole in etwa
+gleichen Abständen auf dem Umfang
+liegen? Und zweitens: wenn ich mit
+Winkelsteinen gleiche Abstände hinbekomme: Wie befestige ich das dann auf der
+Achse?
+Hürde eins war mittels Winkelsteinen
+schnell übersprungen. Es ist wirklich faszinierend, wie viele Möglichkeiten es hier
+gibt. Nahezu alles „durch drei teilbare“ lässt
+sich so umsetzen. Die einfachste Methode
+bieten die Winkelsteine 60°, wahrscheinlich
+ginge Ähnliches auch wieder mit der
+Drehscheibe. Hürde zwei war schon
+schwieriger, konnte aber mit zwei gegeneinander auf der Achse verspannten Kegelzahnrädern umgesetzt werden.
+
+Kegelzahnräder sieht wackelig aus, ist aber
+absolut symmetrisch.
+
+
+
+
+Folgt mein erstes Geständnis: Ich habe
+geschummelt. Ein Fetzchen Papier liefert
+die nötige Spannkraft, und wenn man ein
+wenig fummelt, dann kommt das Fetzchen
+so unter dem Magnetstab zu liegen, dass
+man es nicht sieht. Das gelingt aber nicht
+immer, siehe Abb. 3, ist aber immer noch
+besser – weil lösbar – als mit Cyanacrylat.
+Der Begriff „Polpaarzahl“ hilft bei elektrischen Maschinen, eine Idee von der zu
+erwartenden Drehzahl zu bekommen.
+Synchronmotoren funktionieren nur dann,
+wenn die Anzahl der Pole auf dem Durchmesser auch gerade ist, es also „ganzzahlige“ Polpaarzahlen gibt.
+Der verwendete Wechselstrom hat 50 Hertz
+(Dimension: 1/s). Will man die Umdrehungen statt „pro Sekunde“ in „pro Minute“
+haben, dann muss man die 50 1/s mit 60
+
+multiplizieren, das ergibt dann 3000 1/min.
+Dividiert man diese durch die Polpaarzahl,
+dann erhält man die zu erwartende Drehzahl
+des Motors:
+
+=
+
+ℎ
+
+ℎ
+
+
+
+∙ 60 [
+
+ℎ
+
+]
+
+Damit ergeben sich die in Tab. 1 zusammengestellten möglichen Drehzahlen.
+Als meine „anderen“ Synchronmotoren
+prinzipiell liefen, habe ich eine weitere Idee
+aus dem Buch umgesetzt und alle Achsen in
+Kugellagern (anders als im Buch mit 9 mm
+Durchmesser, die passen in die Schneckenlager für die Rastachsen-Schnecken) gelagert.
+
+Pole
+
+Polpaare
+
+Drehzahl
+[U/min]
+
+Besonderheit
+
+
+
+3000
+
+Fast nicht umzusetzen
+
+
+
+1500
+
+Ist mir einmal gelungen, lief aber nicht dauerhaft
+
+
+
+1000
+
+Befestigung auf der Achse mit Kegelzahnrädern
+
+
+
+
+Im Modell nicht umgesetzt
+
+
+
+
+Das sind 10 Umdrehungen pro Sekunde ⇓ Uhr!
+
+
+
+
+… wie im Buch
+
+
+
+157,89
+
+
+
+
+Siehe Text
+... auch wie im Buch
+
+Tab. 1: Drehzahlen der Synchronmotoren
+
+Dann ist mir ein kleiner technischer Kniff
+aufgefallen. Im Uhrenmodell in Kapitel 10
+(ab S. 219) sind nur 38 Magneten im
+Einsatz, zwei Magneten fallen wegen der
+beiden Mittelspeichen (S. 221 Abb. 10-18)
+weg. Mit einer Polpaarzahl von 19 würde
+die Frequenz um einige Hertz „nicht
+stimmen“ – 150 U/min (entsprechend 2,5
+
+Hertz) gibt es nur bei einer Polpaarzahl von
+genau 20. Da mag jemand fragen: Und
+warum läuft es dann trotzdem? Ganz
+einfach: Weil insgesamt zwei Elektromagneten im Einsatz sind, die um 60° =
+⅓ ∙ 180° (zwei fehlende Magneten) versetzt
+sind. Wenn also eine der beiden „Fehlstellen“ an einer der Spulen vorbeikommt,
+
+dann übernimmt die jeweils andere das
+„Weiterschubsen“. Es gibt also 38 Magneten plus zwei „Fehlstellen“, und das ergibt
+eine Polpaarzahl von 20. Na bitte.
+
+Elektromechanik
+
+das Ganze von vorne. Auf die Multiplikation mit zehn (wegen der Minute) habe ich
+verzichtet.
+
+„Förderglied“ 37192 multipliziert mit fünf
+passen genau auf ein Zahnrad mit 20 Zähnen.
+
+Star meiner Sammlung ist für mich der
+Motor mit der Polpaarzahl fünf. Mit seinen
+600 Umdrehungen pro Minute dreht er sich
+also zehn Mal pro Sekunde. Auch hier sind
+wir wieder beim Thema Uhr, wobei ich
+noch nicht ausprobiert habe, ob sich mit
+fischertechnik-Zahnrädern vernünftige Teilungen herstellen lassen und man das verwerten kann.
+Es ist schon ein enorm zufriedenstellendes
+Geräusch, wenn alle drei Motoren vor sich
+hin schnurren. Ein letzter Akt bleibt noch:
+Stimmt denn das mit den Drehzahlen? Der
+Nachweis sollte über Lichtschranken und
+den TX-Baustein erbracht werden.
+
+Zählereingänge sich nur über die EncoderMotoren ansprechen lassen. M1 bis M3 sind
+hier nämlich gar nicht wirklich angeschlossen
+– einen Zählereingang ohne Encoder Motor zu
+benutzen heißt, auf einen Motorausgang zu
+verzichten.
+
+Das funktionierte zuerst allerdings gar
+nicht. Irgendwie wurde für die schnelleren
+Motoren immer eine höhere – genau doppelt so hohe – Drehzahl angezeigt.
+
+Sicher hätte man die Drehzahlmessung
+auch „diskret“ über kleine Zählprogramme
+umsetzen können. Da ich nicht weiß, wie oft
+pro Sekunde ich den TX „messen lassen“
+kann, mussten die für die Encoder-Motoren
+gedachten Zählereingänge herhalten.
+Also: Motor und damit Zähler zurücksetzen
+(drei Mal für die drei Drehzahlen), dann
+Motor mit mittlerer Geschwindigkeit rechts
+starten, sechs Sekunden warten, Zähler auslesen und anzeigen, drei Sekunden warten,
+Anzahl Messungen Zähler hochzählen und
+
+möglich gehalten.
+
+Und schon wieder muss ich eine kleine
+Schummelei beichten: Ursache für die
+„doppelte“ Anzeige war die Nut des „Unterbrechers“ der Lichtschranke. Mit einem
+
+
+
+
+schwarzen Colli-Marker-Stift wurde das
+behelfsmäßig geändert (siehe Abb. 6).
+Folgt noch der Ausblick auf weitere Modellvariationen und eine kleine Manöverkritik. Im Moment sind jeweils nur zwei
+Elektromagneten „im Einsatz“. Würde man
+weitere Spulen in der den Polpaarzahlen
+entsprechenden Teilungen anbringen, dann
+würde das jeweilige erzielbare Drehmoment deutlich ansteigen.
+Als Erweiterungen sind etwa eine „Anlaufhilfe“ oder eine berührungslose, elektronische Steuerung mit einer Art Frequenzumrichter denkbar – sicher werde ich den
+TX damit mal an seine Grenzen treiben. Die
+oben beschriebene Drehzahlformel würde
+dann durchaus auch höhere Drehzahlen und
+eine Anlaufhilfe (mit niedriger Frequenz
+beginnen und dann steigern) ermöglichen.
+Die Polpaarzahlen zwei (1500 U/min) und
+eins (3000 U/min) sind da schon kniffliger.
+Ohne Kugellager und ein Konzept zum
+Anwerfen, etwa durch Seilzug, wird das
+vermutlich nicht gehen.
+
+
+Der Aufbau der drei Varianten hat eine
+Menge Spaß gemacht, jede Variante (auch
+die aus dem Buch!) hat mindestens drei
+Konstruktionsstufen durchlaufen bis es
+wirklich „rund“ lief. Manchmal hilft es
+auch, nochmal völlig neu mit einer leeren
+Platte zu beginnen.
+Alle Modelle sind am Ende direkt vom
+Beispiel aus dem Buch abgeleitet. Mit einer
+anderen als dieser Positionierung (seitlich
+vom Rotor und unten) kommt man auch
+zum Ziel, das ist aber umständlicher und
+braucht mehr Platz.
+Das Zählprogramm zählt manchmal „einen
+Puls zu wenig“. Insbesondere, wenn die
+„Beruhigungszeit“ von drei Sekunden weggelassen wird. Würde man dabei noch mit
+zehn multiplizieren, dann würde man den
+Fehler ebenfalls verzehnfachen.
+
+Referenzen
+[1]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt Verlag, 2015.
+
+

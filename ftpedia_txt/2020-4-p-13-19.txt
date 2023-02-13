@@ -1,0 +1,457 @@
+
+Modell
+
+Modell
+
+Eine dreizeigrige Uhr
+Ralf Geerken
+Es ist erst ein paar Wochen her, dass ich ein mir bisher unbekanntes fischertechnik-Bauteil in
+den Händen hielt – nämlich das Mini-Speichenrad (35171), welches in einem eigenen Artikel
+[1] beschrieben ist. Es ist das Innenteil, also der Käfigdeckel, des alten Differentials (31043).
+Bei der Suche nach einer Anwendungsmöglichkeit stieß ich auf die Möglichkeit das MiniSpeichenrad in den neuen Differentialkäfig einzupassen. Es entstand dann recht schnell die
+Idee eine Uhr mit drei Zeigern zu konstruieren.
+Bevor das Differenzial-Z20 auf den Käfig
+gerastet wird, darf der Stundenzeiger nicht
+vergessen werden. Also bitte erst die Drehscheibe aufsetzen (siehe Abb. 15) und dann
+das Z40 mit den drei Riegelscheiben als
+Abstandshalter aufsetzen.
+Das Z20 muss unbedingt in die Nuten des
+Differentialkäfigs einrasten. Jetzt sollte sich
+der Unterbau des Stundenzeigers, also die
+Drehscheibe mit verbundenem Z40, sehr
+leicht drehen lassen.
+
+
+Das Geheimnis dieser Uhr ist natürlich, wie
+die drei Zeiger auf einer Achse montiert
+werden konnten, und es liegt in diesen
+Teilen:
+
+
+Vor einem Nachbau empfiehlt es sich aber,
+alle Bilder dieses Beitrags zu betrachten.
+
+Das Rad 14 legt man danach einfach in die
+andere Seite des Käfigs hinein und drückt
+dann mit relativ viel Kraft das MiniSpeichenrad hinterher dazu. Das Rad 14
+dient hierbei als Abstandshalter, damit das
+
+
+
+
+Speichenrad nicht zu weit nach innen
+gedrückt werden kann.
+
+
+Das Z15 und das Z20 schließen ziemlich
+genau mit der Metallachse 60 ab. Hierbei
+kommt es nicht auf ein Zehntel-Millimeter
+an, sondern eher darauf, dass die Achse frei
+drehen kann. Am linken Baustein 15 in
+dient dazu, dass man den Baustein 15 nicht
+zu tief montiert. Ansonsten würden nämlich
+die Zahnräder des U-Getriebes auf der
+Grundplatte schleifen.
+
+mit Motor
+
+
+Minutenübertragung
+
+
+
+Modell
+
+Achse
+
+
+oben
+
+Achse
+
+In Abb. 13 gibt es die Besonderheit zu
+beachten, dass die beiden Riegelscheiben
+rechts neben dem Z15 mit ihren Noppen
+
+
+zueinander gekehrt sind. Damit sind sie
+etwas schmaler und der Abstand passt
+besser zum anderen Kegelzahnrad.
+
+Bei der Konstruktion der Zeiger muss man
+darauf achten, dass sie sich in Waage befinden. Deswegen ist der kurze Teil der Zeiger
+bei fast allen Uhren zwar kürzer, aber viel
+dicker. Ansonsten passiert es immer wieder,
+dass die Zeiger an einer bestimmten Stelle
+hängen bleiben oder auch plötzlich kippen,
+weil das Übergewicht dann das Spiel in den
+antreibenden Zahnrädern herausdrückt.
+
+
+
+
+
+
+
+Die Uhr lässt sich leicht stellen, wenn man
+den links oben in Abb. 19 sichtbaren Baustein 15 mit Bohrung ganz an den Rand des
+Federnockens zieht – gerade soweit, dass er
+noch von ihm gehalten wird. Dann können
+nämlich das Z40 und die beiden Kegelzahnräder frei drehen. Der Minutenzeiger
+
+kann dann von Hand auf die korrekte Uhrzeit eingestellt werden, wobei sich der
+Stundenzeiger mit dreht.
+
+
+Auf die Beschreibung des Gehäuses bzw.
+des Zifferblattes verzichte ich. Diese Teile
+sind auch nicht in der Teileliste aufgeführt.
+Hier kann jeder seiner Fantasie freien Lauf
+lassen. Das eckige Gehäuse mit Zifferblatt
+ist lediglich am Federnocken des vorderen
+Baustein 30 befestigt. Man kann es jederzeit
+austauschen gegen ein neues. Dann sieht die
+Uhr ganz anders aus – tickt aber noch
+genauso.
+Der Motor wird über ein sehr einfach gehaltenes ROBOPro-Programm jede Sekunde
+um 1/4 Umdrehung weitergedreht. Er dreht
+so lange, bis der Mini-Taster einmal gedrückt und wieder freigegeben wird, also
+einen 1-0-Sprung an I1 des Controllers verursacht hat. Er stoppt dann so lange, bis er
+wieder seinen Sekundentakt erhält. Die Uhr
+hört sich damit an, wie eine alte Küchenuhr
+(und ist leider auch genauso laut).
+Mit einem geeigneten Sketch ist die Uhr
+sicherlich auch über einen ftDuino zu
+betreiben. Wie gesagt, das Programm ist
+sehr einfach gehalten.
+
+Modell
+
+Die Teileliste:
+Artikel
+
+Bezeichnung
+
+Anzahl
+
+31031
+
+Achse 110, Metall
+
+
+31034
+
+Achse 30, Metall
+
+
+31032
+
+Achse 60, Metall
+
+
+31124
+
+Aufnahmeachse, rot
+
+
+32330
+
+Bauplatte
+3,75 · 15 · 30, mit 1
+Langnut
+
+
+38428
+
+Bauplatte
+5 · 15 · 30, mit 3
+Teilnuten
+
+
+116252
+
+Baustein 15, neurot
+
+
+32064
+
+Baustein 15 mit
+Bohrung
+
+
+116251
+
+Baustein 30, neurot
+
+
+37237
+
+Baustein 5, rot
+
+
+31411
+
+Differentialkäfig,
+schwarz
+
+
+31019
+
+Drehscheibe 60, rot
+
+
+38240
+
+Eckstein 15, rot
+
+
+31982
+
+Federnocken
+
+
+31015
+
+Flachnabe,
+einflügelig komplett
+
+
+31001
+
+Grundplatte, rot
+180 · 90
+
+
+35981
+
+Hülse mit Scheibe
+15 mm, rot
+
+
+37157
+
+Impulszahnrad 4
+
+
+35146
+
+Kegelzahnrad,
+schwarz neue
+Bauform
+
+
+37679
+
+Klemmbuchse 5
+
+
+38253
+
+Kupplungsstück
+zweifach, rot
+
+
+36819
+
+Lagerhülse 15,
+schwarz
+
+
+
+
+
+Artikel
+
+Bezeichnung
+
+Anzahl
+
+Artikel
+
+Bezeichnung
+
+Anzahl
+
+35171
+
+Mini-Speichenrad,
+auch unter Rad
+17 mm freilaufend
+zu finden
+
+
+31047
+
+Zahnrad 10, rot
+
+
+35695
+
+
+37783
+
+Minitaster, schwarz
+
+
+Zahnrad 15, rot mit
+Verzahnung innen
+und außen freilaufend rot
+
+137096,
+31062
+
+Motor XS, Motor
+Classic geht auch
+
+
+35983
+
+
+36573
+
+Rad 14, schwarz
+unbedingt freilaufend also mit
+größerem Innendurchmesser
+
+
+Zahnrad 20, Deckel
+für Differentialkäfig
+schwarz
+
+36264
+
+Zahnrad 30, rot
+
+
+31022
+
+Zahnrad 40, rot
+
+
+31915
+
+Zangenmutter
+
+
+36581
+
+Rad 23mm, rot
+
+
+35064
+
+Rastachse 45
+
+
+36227
+
+Rastadapter
+
+
+36248
+
+Rastkettenglied
+
+
+35945
+
+Rastritzel Z10
+
+
+31082
+
+Rastritzel Z28 m0,5
+
+
+142251
+
+Reifen 35, weicher
+Gummi
+
+
+36334
+
+Riegelscheibe
+
+
+36323
+
+S-Riegel 4
+
+
+37858
+
+Schnecke klemmbar
+
+
+35113
+
+Spannzange, rot
+
+
+38544
+
+Statikstrebe 15, gelb
+
+
+38538
+
+Statikstrebe 30, mit
+Loch gelb
+
+
+31848
+
+Strebenadapter
+
+
+31078
+
+U-Getriebe für Minimotor, schwarz
+
+
+31060
+
+Verbindungsstück
+
+
+31061
+
+Verbindungsstück
+30, hier tut es auch
+ein 15er
+
+
+31330
+
+Verbindungsstück
+
+
+38423
+
+Winkelstein 10, rot
+
+
+78728
+
+Winkelträger 60, rot
+
+
+
+
+Und weil‘s so schön war, gibt‘s zum
+Schluss nochmal dieselbe Uhr mit einem
+anderen Zifferblatt (Abb. 21).
+
+Quellen
+[1]
+
+Ralf Geerken: Das Mini-Speichenrad. ft:pedia 4/2020 (in dieser
+Ausgabe).
+
+
+Modell
+
+
+
+

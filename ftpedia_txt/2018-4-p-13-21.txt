@@ -1,0 +1,598 @@
+
+Modell
+
+Modell
+
+Schwungradauto
+Rüdiger Riedel
+Zurück zu den Wurzeln der fahrenden Spielzeugautos: Da gab es den Federwerk-Antrieb und
+den Schwungrad-Antrieb. Das Federwerk wurde mit einem Schlüssel aufgezogen (neuere
+Versionen arbeiten mit einem Ratschen-Antrieb und das Aufziehen geschieht durch Vor- und
+Rückwärtsziehen); das Schwungrad wurde durch Vorwärtsbewegung auf Drehzahl gebracht.
+
+Vorbemerkung
+Denke ich an ein fischertechnik-Schwungrad, fallen mir die Schwungscheibe 60·15
+(31718 oder 39006) ein und das Speichenrad 90·15 (19317 oder 36916).
+In meinen Versuchen funktionierte die
+Schwungscheibe wirklich gut (leider ist sie
+nur noch gebraucht erhältlich), dagegen war
+das Speichenrad eine Enttäuschung. Recht
+gut funktionierte auch die Drehscheibe
+60·5,5 (31019). Grundsätzlich sollte sich
+erstens die Masse eines Schwungrades
+möglichst weit außen am Durchmesser
+befinden. Das ist bei den ersten beiden der
+Fall. Wegen der hohen Drehzahl spielt der
+Luftwiderstand eine Rolle und da hat die
+glatte Schwungscheibe einen großen
+Vorteil. Beim Speichenrad spürt man den
+Luftzug; es arbeitet wie ein Ventilator und
+hat deshalb große Luftreibungsverluste.
+
+Beim Start soll sich das Schwungrad
+möglichst schnell drehen, das Fahrzeug
+muss aber aus dem Stand heraus beschleunigt werden, also mit Drehzahl 0 beginnen.
+Technisch erreicht man das bei unseren
+Autos mit einer Kupplung, die am Anfang
+durchrutscht und langsam die hohe Drehzahl überträgt, „schleifende“ Kupplung
+genannt. Beim folgenden Modell ist der
+Übergang von der Antriebsachse auf die
+Räder gleichzeitig die Kupplung, die beim
+Start immer durchrutschen muss.
+
+Jetzt wird gebaut
+Ein Fahrzeug mit Gummiantrieb wurde
+bereits vorgeschlagen [1] und auch Mausefallenautos [2, 3].
+Unser Schwungradauto wird mit einem
+Seilstart ausgerüstet, das erfordert eine
+besondere Art der Achslagerung.
+
+Zweitens ist die Masse des Schwungrades
+verantwortlich für die speicherbare Energie.
+Die Gewichte [4] sind:
+∂ Schwungscheibe:
+
+15 g
+
+∂ Speichenrad:
+
+8g
+
+∂ Drehscheibe 60·5,5:
+
+9g
+
+Drittens steigt die gespeicherte Energie mit
+der Drehzahl.
+
+
+Da haben wir aber auch den großen
+Schwachpunkt eines Schwungradautos:
+
+Im Betrieb liegt die Achse der Schwungscheibe auf den Hinterrädern, beim
+
+
+
+Anwerfen muss sie aber angehoben werden.
+Wir erreichen das durch Verwendung von
+Gelenkwürfel-Klauen 7,5 (31436). Diese
+haben einen Innendurchmesser von etwa
+5,5 mm, also mehr als die 4 mm Achsdurchmesser. Die Schwungradachse treibt die
+50 mm-Reifen an, die für die Fortbewegung
+sorgen.
+
+Niederhalter
+
+
+
+Das Fahrzeug wird auf der Service-Station
+betriebsfertig gemacht. Dazu sitzen die
+grauen Winkelträger 15 des Fahrzeuges auf
+den beiden roten Winkelträgern 10 der
+Station.
+
+
+der Seite
+
+Anschließend wird die Service-Station zum
+Startplatz.
+
+
+
+Modell
+
+15·30 unter dem Fahrzeug von der Bauplatte 15·45 2Z (38242) an der ServiceStation niedergehalten werden.
+
+
+Das fischertechnik-Seil ist etwa 60 cm lang
+und an einem Ende zu einer Schlinge
+gebunden. Am anderen Ende wird gezogen,
+dafür verwende ich einen Kranhaken; das
+Seil wird darin mit einem Seilklemmstift 15
+(107356) fixiert.
+
+Nummer Bezeichnung
+
+Anzahl
+
+31978
+
+Figur-Sitzbaustein
+30·60·15
+
+
+31718
+
+Schwungscheibe
+60·15
+
+
+31984
+
+Figur-Schalensitz
+
+
+106767
+
+TraktorGummireifen 50
+
+
+116913
+
+Felge 30 chromfarben
+
+
+35033
+
+Nabenmutter
+
+
+37237
+
+Baustein 5
+
+
+38428
+
+Baustein 5 15·30
+3N
+
+
+38260
+
+S-Kupplung 22,5
+
+
+31011
+
+Winkelstein 30°
+
+
+das Seil aufgewickelt
+
+31994
+
+Figur-Schalthebel
+
+
+Gemäß Abb. 7 wird die Seilschlinge in die
+Klemmbuchse eingelegt, dann wird das Seil
+auf die Achse gewickelt (Abb. 8).
+
+35806
+
+Figur weiß + blau
+(schwarz)
+
+
+31909
+
+Figur-Integralhelm
+weiß
+
+
+31031
+
+Metallachse 110
+
+
+38413
+
+Kunststoffachse 30
+
+
+38414
+
+Kunststoffachse 40
+
+
+Zum Start wird die Service-Station herumgedreht, sodass die beiden Bausteine 5
+15·30 (35049) auf die beiden V-Bausteine
+15 Eck (38240) am Ende des Fahrzeugs
+drücken. Außerdem soll der Baustein 5
+
+
+
+
+Nummer Bezeichnung
+
+Anzahl
+
+32230
+
+Lenkradhalter R30
+
+
+31916
+
+Lenkrad2 Inbus
+
+
+31915
+
+Zangenmutter Z22
+m0,5
+
+
+116252
+
+Baustein 15 rot
+
+
+37468
+
+Baustein 7,5 rot
+
+
+146535
+
+V-Rad 23·10
+chrom-farben
+(silber)
+
+
+34995
+
+Gummireifen
+32,5·8 schwarz
+
+
+32330
+
+Bauplatte
+15·30·3,75 1N rot
+
+
+38240
+
+V-Baustein 15 Eck
+
+
+38423
+
+Winkelstein
+10·15·15
+
+
+31436
+
+GelenkwürfelKlaue 7,5
+
+
+31061
+
+Verbinder 30
+
+
+31982
+
+Federnocken rot
+
+
+36304
+
+S-Winkelträger 15
+2Z grau
+
+
+Flachnabe 25
+komplett rot
+
+
+37679
+Klemmbuchse 5 rot
+Tabelle1:Stückliste Schwungradauto
+
+
+31015
+
+Nummer Bezeichnung
+
+Leichtbau-Renner
+Auch mit der Drehscheibe 60·5,5 sind
+ordentliche Fahrleistungen zu erzielen,
+indem man das Fahrzeug etwas leichter
+baut.
+
+
+Anzahl
+
+Grundplatte
+120·60·7,5
+schwarz
+
+
+37237
+
+Baustein 5
+
+
+38242
+
+Bauplatte 15·45 2Z
+rot
+
+
+31005
+
+Baustein 15 grau
+
+
+35049
+
+Baustein 5 15·30
+rot
+
+
+Winkelstein
+10·15·15
+Tabelle 2: Stückliste Service-Station
+
+
+
+Für die Geschwindigkeit des Fahrzeuges ist
+der Durchmesser der Hinterräder unerheblich; entscheidend ist der Durchmesser der
+Schwungradachse. Will man das Fahrzeug
+„frisieren“, kann man zwei Klemmkupplungen 20 (31024) auf die Enden der Achse
+stecken. Die haben einen Durchmesser von
+8 mm, so dass das Fahrzeug mit fast doppelter Geschwindigkeit losfahren sollte.
+
+Modell-Varianten
+
+35129
+
+38423
+
+Überlegung zum Tuning
+
+mit Sidestick Steuerung
+
+
+Modell
+
+Die Sidestick Steuerung wurde von Daimler
+in einem Mercedes-Benz SL der Baureihe
+R 129 erprobt [5].
+
+
+
+Das Aufwickeln des Seils erfolgt wieder auf
+der Service-Station.
+
+
+Die Antriebsachse erhält nur eine Klemmbuchse. Der Abstand zur Gelenkwürfelklaue sollte etwa 1 mm betragen. In diese
+Klemmbuchse wird die Schlaufe des Seils
+eingehängt.
+
+
+Zum Start wird die Service-Station wieder
+herumgedreht; sie hält das Fahrzeug beim
+Anwerfen nieder.
+
+
+
+
+
+Ein Doppel-Schwungrad-Fahrzeug
+Dies soll eine Anregung für eigene
+Versuche sein, deshalb verzichte ich auf
+eine genaue Beschreibung.
+
+
+
+Das Seil wird wie bisher aufgewickelt;
+dabei hilft das überstehende Ende der Achse
+(Abb. 22). Dann hält man das Fahrzeug mit
+dem Schwungrad nach oben in der Hand
+und zieht das Seil rasch nach oben, diesmal
+aber nicht vollständig! Kurz vor dem Ende
+lässt man los. Das Schwung- und Antriebsrad dreht sich schnell und das Seil wickelt
+sich verkehrt herum auf. Wir setzen das
+Fahrzeug auf den Boden und ab geht’s!
+
+
+Experimental-Fahrzeug
+Dies ist der Versuch einer radikalen Vereinfachung.
+
+
+in Schwung bringen
+
+Das Seil ist jetzt nur etwa 30 cm lang und
+wird durch eine Klemmhülse (35980) fest
+mit der Achse verbunden. Das andere Ende
+erhält einen Knoten zum besseren Festhalten.
+
+
+Das Seil stört nicht beim Fahren. Zum
+Neustart wird es abgewickelt und in der
+richtigen Weise wieder aufgewickelt.
+Abgeschaut habe ich diese Art des Seilzuges von einem Kreisel, den ich auf einem
+Flohmarkt erstanden hatte.
+Den großen O-Ring 54·3 gibt es z. B. bei
+Stefan Roth [4] unter der Nummer 35678.
+
+Mini
+Mein kleinstes Schwungrad-Fahrzeug hat
+ein horizontales Schwungrad.
+Der S-Riegelstein (32850) dient als Griff
+zum Anwerfen und Starten. Das Starterseil
+wird um die Rastkupplung (35073) gewickelt. Nicht durch die seitliche Öffnung
+durchstecken! Das Seil könnte sich sonst
+verhaken und die Rastkupplung würde
+abgerissen.
+
+Modell
+
+gebildet, die in dem Kegelzahnrad klemmt.
+Das linke Hinterrad ist eine Seilrolle 12·5,5
+(38255), sie sollte so ausgesucht werden,
+dass sie auf der Clipachse klemmt.
+Die Vorderräder werden von Seilrollen
+12·5,5 (38255) gebildet, alle vier Reifen
+sind O-Ringe 8·3 (35677) [4]. Für einen
+guten Geradeauslauf ist die vordere Spurweite recht groß gewählt, die Zwischenräume werden mit sechs Abstandsringen
+(31597) aufgefüllt.
+
+
+
+
+Wie in Abb. 25 zu sehen ist, besteht das
+Getriebe aus einer „Rastachse 30 + Kegelzahnrad Z10“ (35061) und einem Rastkegelzahnrad Z10 (35062). Das rechte
+Hinterrad ist eine Rast-Seilrolle 12·5,5
+(136775). Die linke Hinterradachse wird
+von einer „V-Achse 34 Clipachse“ (32870)
+
+
+Naja, die Fahrleistungen sind bescheiden:
+Über 1 m Fahrtstrecke komme ich nicht
+hinaus.
+
+
+
+Elektrischer Schwung
+Zum Abschluss geben wir dem Fahrzeug
+von Abb. 12 neuen Schwung mit dem
+Anwurf-Motor aus [6] (siehe Abb. 7).
+
+
+Die Heckpartie wird vereinfacht, die
+Schwungradachse wird verlängert und steht
+jetzt auf der rechten Seite über.
+
+
+
+Die Startrampe ist gerade so hoch, dass die
+Räder nicht den Boden berühren. Der
+Silikonschlauch des Anwurf-Motors wird
+über das freie Achsende geschoben. Nach
+ein paar Sekunden Motorlauf wird der
+
+
+Anwurf-Motor abgezogen und das Fahrzeug startet durch leichtes Kippen der Startrampe.
+
+Geschichtliche Entwicklung
+Historisch brauchten die Dampfmaschinen
+und die frühen Verbrennungsmotoren große
+Schwungräder zur Überwindung der Totpunkte des Kurbelgetriebes bzw. Pleuels
+[7]. Energiespeicherung und -abgabe erfolgten innerhalb einer Umdrehung, also für
+sehr kurze Zeit.
+Dagegen sollte das mechanische „Kinetic
+Energy Recovery System“ (KERS) in der
+Formel 1 über einen Zeitraum von ein bis
+zwei Minuten Bremsenergie in einem
+Schwungrad speichern und über ein stufenloses Getriebe wieder an die Antriebsachse
+abgeben. Von 2009 bis 2013 war KERS in
+der Formel 1 zur Benutzung freigegeben,
+allerdings war ihm kein Erfolg beschieden.
+Durchgesetzt hat sich die Energiespeicherung in Akkus.
+Der Gyrobus aus der Schweiz stellte einen
+Großversuch dar und wurde ab 1953 auf
+mehreren Strecken erprobt. Das System
+arbeitete elektro-mechanisch, wurde aber
+nach wenigen Jahren wieder aufgegeben
+[8]. Die Reichweite betrug 6 bis 8 km, die
+Aufladung erfolgte an den Haltestellen über
+Drehstrom-Stromabnehmer.
+Einen neuen Versuch mit Oberleitungen für
+Busse und LKWs, allerdings mit Batteriespeichern, kann man auf der A5 zwischen
+Frankfurt und Darmstadt besichtigen. Die
+Oberleitung ist im Gegensatz zu Bahn und
+Straßenbahn zweipolig. Wie bei Straßenbahnen wird mit 750 V Gleichstrom gearbeitet. Im Vergleich zu den drei bestehenden O-Bus-Linien in Solingen, Eberswalde
+und Esslingen sind nur die Stromabnehmer
+innovativ.
+Bekanntermaßen sind Schwungräder nichts
+anderes als Kreisel und haben auch deren
+Eigenschaften [6]. Damit sie auch in Fahrzeugen genutzt werden können, sind
+
+besondere Maßnahmen erforderlich. Die
+auf das Fahrgestell wirkenden Kreiselkräfte
+würden sonst die Fahreigenschaften stark
+beeinflussen. Sie lassen sich drastisch
+verringern durch zwei gegensinnig
+drehende Schwungräder.
+
+Modell
+
+Eine kardanische Aufhängung vermeidet
+jegliche Kräfte nach außen. Sie ist vor
+einigen Jahrzehnten intensiv diskutiert worden, zusammen mit ultrahoch drehenden
+Schwungrädern (ca. 50.000 U/min) aus
+hochfesten Fasermaterialien und mit Vakuum-Gehäusen.
+
+Quellen
+[1]
+
+René Trapp: Das Papa-Mobil.
+Bilderpool der ft-Community
+(Unsere Modelle | Radfahrzeuge |
+Fahrzeugtechnik+Prototypen |
+Gummibandauto | Das Papa-Mobil).
+
+[2]
+
+Esther Mietzsch: Mausefallenauto
+2.0. Bilderpool der ft-Community
+(Unsere Modelle | Radfahrzeuge |
+Fahrzeugtechnik+Prototypen |
+Mausefallenauto 2.0)
+
+[3]
+
+Thomas Dragon: Mausefallenauto.
+„der fischertechnik-blog“, 2016.
+
+[4]
+
+fischerfriendsman:
+www.fischerfriendsman.de
+
+[5]
+
+Daimler: Mercedes-Benz SL der
+Baureihe R 129 erlaubte 1998 den
+Blick in die Zukunft des Lenkens.
+
+[6]
+
+Rüdiger Riedel: Kreisel und mehr.
+ft:pedia 3/2018, S. 9-16.
+
+[7]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt.verlag, Heidelberg, 2015,
+S. 174.
+
+[8]
+
+Wikipedia: Gyrobus.
+
+
+Beim Modell nach Abb. 30 und 31 treten
+beim Kippen kaum fühlbare Kreiselkräfte
+auf.
+
+
+
+

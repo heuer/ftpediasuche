@@ -1,0 +1,305 @@
+
+
+Fahrzeugtechnik
+
+Mecanum-Räder und Omniwheels
+Dirk Fox
+Wie konstruiert man einen mobilen Roboter, der sich omnidirektional – also in alle Richtungen
+– bewegen kann? Eine Antwort darauf sind Mecanum-Räder und Omniwheels. Wie genau funktionieren die – und wie baut man sie mit fischertechnik?
+
+Omnidirektionale mobile
+Roboter
+Autonome mobile Roboter operieren häufig
+unter beengten Verhältnissen oder müssen
+sehr präzise bewegt und positioniert werden. Dafür sind „klassische“ Vierradantriebe oft ungeeignet, da sie platz- und zeitaufwändige Rangierbewegungen erfordern.
+Mobile Roboter werden daher entweder auf
+Schienen gesetzt – damit spart man sich
+Lenkbewegungen – oder aber mit einem
+Raupenantrieb ausgestattet bzw. mit zwei
+Antriebs- und einem Stützrad versehen.
+Raupen und Dreiräder können auf der Stelle
+drehen.
+Es gibt jedoch zwei elegante Alternativen,
+bei denen nicht der Antrieb, sondern der
+Aufbau der Räder verändert wird: Mit Mecanum-Rädern oder Omniwheels kann ein
+Roboter nicht nur auf der Stelle drehen, sondern sich unmittelbar in alle Richtungen bewegen.
+Beide Radkonstruktionen stammen aus den
+frühen 70er Jahren des vergangenen Jahrhunderts und kommen heute bei vielen Industrie-Robotern zum Einsatz, z. B. bei Gabelstaplern oder Lasttransportern, sowie im
+Boden von Frachtflugzeugen, um das Positionieren der Ladung zu erleichtern. Auch
+Rollstühle mit Motorantrieb werden mit
+Mecanum-Rädern extrem wendig und lassen sich auch noch in schmalen Gängen navigieren.
+
+(Patentschrift 1975) [1]
+
+Das Mecanum-Rad
+Die Bezeichnung „Mecanum-Rad“ geht auf
+den Namen des Unternehmens seines Erfinders zurück, des schwedischen Ingenieurs
+Bengt Erlan Ilon (1923-2008), der diese
+Konstruktion am 13.11.1972 als US-Patent
+einreichte. Veröffentlicht wurde das Patent
+am 08.04.1975 [1].
+
+Fahrzeugtechnik
+
+und zwei, in denen die Rollen von rechts unten nach links oben weisen.
+
+Die Lauffläche eines Mecanum-Rads besteht aus im 45°-Winkel angeordneten Rollen (Abb. 1, 2).
+
+
+Für die Bewegung des Fahrzeugs lassen
+sich sechs verschiedene Antriebsvarianten
+unterscheiden (Abb. 4):
+ Vorwärts-/Rückwärtsfahrt: Alle Räder
+drehen sich nach vorne bzw. nach hinten
+
+(Foto: Imetron GmbH, CC-BY SA 3.0)
+
+Damit der Roboter sich omnidirektional,
+also in alle Richtungen bewegen kann, benötigen wir ein Fahrwerk mit Vierradantrieb, dessen Antriebsachsen unabhängig
+angesteuert werden können.
+Die vier Mecanum-Räder werden so montiert, dass die Achsen der Rollen jeweils im
+90°-Winkel zu den Achsen der Rollen der
+beiden benachbarten Räder stehen. Alle
+Achsen weisen dabei zum Mittelpunkt des
+Fahrzeugs. Abb. 3 zeigt die Anordnung der
+Räder schematisch. Dafür benötigen wir
+zwei verschiedene Räder: zwei, in denen
+die Rollen von links unten nach rechts oben
+
+ Seitwärtsfahrt: Alle benachbarten Räder
+drehen sich gegensinnig, also diagonal
+gleichsinnig. Je nach Drehrichtung fährt
+der Roboter nach links oder rechts.
+ Diagonal-/Schrägfahrt: Wie die Vorwärts-/Rückwärtsfahrt, jedoch drehen
+sich jeweils zwei diagonale Räder nicht
+oder langsamer.
+ Kurvenfahrt: Wie Vorwärts-/Rückwärtsfahrt, jedoch drehen die beiden linken oder rechten Räder nicht oder langsamer.
+ Drehung um Achsmittelpunkt: Die vorderen oder hinteren Räder stehen still,
+das andere Räderpaar dreht sich gegensinnig.
+ Drehung um Robotermittelpunkt: Die
+linken (bzw. rechten) Räder drehen sich
+vorwärts, die jeweils anderen rückwärts.
+
+
+
+
+
+Mecanum-Räder lassen sich auch mit fischertechnik konstruieren. Die erste solche
+Konstruktion stammt von Frederik aus dem
+Jahr 2012 [2] (Abb. 5).
+
+mit Seilrollen (Foto: Fredy, 2012)
+
+
+Der 45°-Winkel wird durch je einen Winkelstein 30 und einen Winkelstein 15 gebildet. Als Rollen verwendet die Konstruktion
+die fischertechnik-Seilrollen. Der Lauf wird
+etwas ruhiger, wenn man eine zweite Drehscheibe 60 und mehrere Seilrollen (Abb. 6)
+verwendet.
+
+zwei Drehscheiben 60 (2014)
+
+
+Fahrzeugtechnik
+
+Die Auflagefläche der Rollen lässt sich
+auch durch die Verwendung von V-Rädern
+23 (36581) anstelle der Seilrollen vergrößern (Abb. 7, 8).
+
+der Rollenachsen (2021)
+
+Die 3D-Druck-Variante von Richard (Abb.
+10) bietet Achslager für ebenfalls sechs
+Rollen als Aufsatz auf einer Drehscheibe
+60; durch den kleineren Umfang des Rads
+und den größeren Durchmesser der Seilrollen hoppelt das Rad nicht ganz so stark.
+mit V-Rädern 23 (2020)
+
+
+Beide Varianten haben allerdings den
+Nachteil, dass die Winkelsteine die Achse
+seitlich verschieben und die Räder in der
+Folge mit der Lauffläche nicht ganz exakt
+im richtigen Winkel aufliegen. Von Thomas
+Püttmann stammt eine präzisere Konstruktion mit sechs V-Rädern 14 (36573) (Abb.
+9). Hier liegen die Räder im richtigen Winkel; aber auch diese Räder „hoppeln“ wie
+Räder aus regelmäßigen Sechsecken.
+
+Viele Mecanum-Räder verwenden mehr als
+sechs Rollen, da die Bewegung des Fahrzeugs mit jeder weiteren Rolle gleichmäßiger wird.
+Inzwischen gibt es auch ein Mecanum-Rad
+von fischertechnik (Abb. 11), das Mitte
+2021 in den Handel kommt. Es hat die Besonderheit, dass die Achsen entnommen
+und um 90° gedreht eingesetzt werden können – daher genügt eine Radkonstruktion
+
+
+
+für beide Laufrichtungen. Das Rad verfügt
+über acht Rollen und rollt damit nicht ganz
+so holprig ab wie die oben gezeigten Konstruktionen.
+
+
+Montiert werden die Räder so, dass die
+Achsen der Rollen zur Fahrzeugmitte zeigen (Abb. 12).
+Eine Geradeausfahrt des Roboters erreichen
+wir, indem wir alle vier Räder nach vorne,
+für eine Rückwärtsfahrt nach hinten drehen
+lassen (siehe Abb. 4). Lassen wir die beiden
+nebeneinander liegenden Motoren gegenläufig drehen, bewegt sich das Fahrwerk
+nach links bzw. rechts. Über die Geschwindigkeit der einzelnen Antriebsmotoren kann
+jeder Bewegungswinkel eingestellt werden.
+Wenn die beiden linken Räder in eine und
+die beiden rechten in die entgegengesetzte
+Richtung angetrieben werden, dreht das
+Fahrzeug auf der Stelle.
+
+(Rollen stehen im 90°-Winkel zu den Rollen der jeweils benachbarten Räder,
+Rollenachsen „zeigen“ zur Fahrzeugmitte)
+
+
+Das Omniwheel
+Ein dem Mecanum-Rad sehr ähnliches
+Konzept, bei dem die Laufflächen der Räder durch orthogonal zur Laufrichtung ausgerichtete Rollen ersetzt werden, wurde
+sechs Monate zuvor, am 17.04.1972, von
+Josef F. Blumrich (1913-2002), einem Mitarbeiter der NASA, als „Omniwheel“ zum
+Patent eingereicht [3] (Abb. 13).
+
+Fahrzeugtechnik
+
+Tatsächlich ist das Omniwheel noch sehr
+viel älter: Bereits am 03.06.1919 hatte Joseph Grabowiecki aus Detroit für sein „Vehicle Wheel“ (Abb. 15) ein US-Patent erhalten [4]. Seine Idee geriet jedoch wieder
+in Vergessenheit.
+
+(Patentschrift 1919) [4]
+
+(Patentschrift 1974) [3]
+
+Omniwheels (oder „Allseitenräder“) werden üblicherweise nicht an den äußeren
+Ecken eines Fahrzeugs, sondern seitlich so
+montiert, dass die Antriebsachsen zur Mitte
+zeigen.
+Wie bei Mecanum-Rädern wird jedes Rad
+von einem Motor angetrieben. Die Fahrtrichtung lässt sich über Geschwindigkeit
+und Drehrichtung der Motoren steuern
+(Abb. 16). Steht ein Rad still, rollt es widerstandslos in Achsrichtung.
+
+
+Dabei erkennt man, dass die Geradeaus- oder Seitwärtsfahrt im Unterschied zu Mecanum-Rädern nur mit zwei der vier Motoren erfolgt; sie müssen daher entsprechend
+stärker ausgelegt sein. Tatsächlich genügen
+sogar drei Omniwheels, um einen Roboter
+in jede gewünschte Richtung fahren zu lassen.
+
+
+
+
+
+Auch Omniwheels lassen sich mit Standard-fischertechnik-Bauteilen konstruieren.
+Holprig, aber funktionsfähig ist zum Beispiel das in Abb. 17 gezeigte, das wie ein
+dreieckiges Rad „abrollt“.
+
+
+
+Schon etwas bessere Laufeigenschaften hat
+das Omniwheel aus Abb. 18 mit sechs VRädern 14.
+
+
+Die Konstruktion von Thomas Püttmann
+mit 12 V-Rädern 14 (Abb. 19) fährt trotz
+des größeren Radumfangs gleichmäßiger;
+tauscht man die V-Räder gegen Seilrollen,
+wird die Steuerung präziser (Abb. 20). Ganz
+ähnliche Omniwheels hatte schon 2009
+pcrom konstruiert und sein mit einem Arduino angetriebenes Fahrzeug gefilmt [5].
+2011 baute Julián Dávila ein vergleichbares
+Fahrzeug und filmte es ebenfalls [6].
+
+
+Fahrzeugtechnik
+
+In zwei Youtube-Videos von Želimir Bistrović wird die Ansteuerung eines fischertechnik-Fahrzeugs mit drei bzw. vier Omniwheels demonstriert [8]. Ein dreirädriges
+Fahrzeug mit einer Bluetooth-Steuerung hat
+auch Lars konstruiert und gefilmt [9].
+
+Foto: Thomas Püttmann)
+
+Auf die 4-mm-fischertechnik-Achsen passende Omniwheels gibt es zahlreich – und
+mit ihnen lassen sich nicht nur Fahrzeuge
+konstruieren, wie Willem Evert Nijenhuis
+schon 2014 mit seinem Ball-Balancier-Roboter gezeigt hat (Abb. 22) [10].
+
+von Willem Nijenhuis (2014,
+Foto: Willem Nijenhuis) [10]
+
+Foto: Thomas Püttmann)
+
+Die kroatische Firma Didacta Advance bietet seit 2020 ein (3D-gedrucktes) Omniwheel mit sechs breiten Rollen an, das auf
+fischertechnik-Naben montiert wird (Abb.
+21) [7].
+
+
+Fazit
+Mecanum-Räder und Omniwheels sind eine
+Bereicherung des fischertechnik-Systems,
+die eine Vielzahl interessanter Konstruktionen im Roboterbau ermöglichen. Zwar werden die Roboter durch die benötigten vier
+Motoren deutlich schwerer und verbrauchen näherungsweise die doppelte Energie
+eines einfachen Zwei-Motor-Roboters, dafür gewinnt der Roboter erheblich an Wendigkeit.
+Mit den neuen, mit rund 40g vergleichsweise leichten Mecanum-Rädern von fischertechnik ist man dabei zukünftig auch
+nicht mehr auf „holprige“ Eigenkonstruktionen oder „gewichtige“ Fremdteile angewiesen.
+
+
+
+
+Referenzen
+[1]
+
+Bengt Erland Ilon: Wheels for a
+course stable selfpropelling vehicle
+movable in any desired direction on
+the ground or some other base. United States Patent No. 3,876,255,
+08.04.1975.
+
+[2]
+
+ftcfredy: fischertechnik MecanumRad Roboter Version 1. Video, Youtube.com
+
+[3]
+
+Josef F. Blumrich: Omnidirectional
+Wheel. United States Patent No.
+3,789,947, 05.02.1974.
+
+[4]
+
+
+Joseph Grabowiecki: Vehicle Wheel.
+United States Patent No. 1,305,535,
+03.06.1919.
+
+[5]
+
+pcrom: Omnidirectional Wheels 3,
+30.09.2009 und Triangle manual 2,
+20.12.2009, Videos, Youtube.com
+
+[6]
+
+Julián Dávila: Omniwheels Fischertechnik V4, 30.11.2011, Video, Youtube.com
+
+[7]
+
+Didacta Advance: Omniwheel.
+
+[8]
+
+Želimir Bistrović: Omni quad model
+with S motors, 30.04.2020. Model
+with three omni wheels, 05.05.2020.
+Videos, Youtube.com
+
+[9]
+
+Lars: fischertechnik Omniwheel Roboter mit BT-Fernsteuerung (ftDuino). 19.02.2021, Video, Yotube.com
+
+[10] Willem Evert Nijenhuis: Fischertechnik Robot Balancing on a Ball,
+18.01.2014, Video, Youtube.com
+
+

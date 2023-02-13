@@ -1,0 +1,563 @@
+
+
+Modell
+
+Großprojekt Seilbahn (Teil 3): Die Stationen
+Tilo Rust
+Diese Artikelserie begleitet das Großprojekt „Kuppelbare Einseilumlaufbahn/Doppelmayr
+(10-MGD)“ im Fördertechnik-Museum Sinsheim von Anfang bis zur Fertigstellung und
+Ausstellung auf der BUGA 2023 [1] in Mannheim. In dieser Folge zeigen wir die Planung der
+Stationen.
+Die Stationen einer Seilbahn sind technisch
+gesehen die Kernelemente der Anlage. Viel
+zu oft lassen wir uns jedoch von den ausgefallenen Designs der Gebäude beeindrucken, ohne unter die Haube zu schauen.
+Dabei beginnt erst dort die faszinierende
+Reise ins Land der Technik.
+Tatsächlich bestehen alle Stationen (je nach
+Typ der Anlage) aus den gleichen Komponenten, die von den Herstellern [2] wie in
+einem Baukastensystem nach den Anforderungen zusammengestellt werden. Im Fall
+unseres Vorbildes auf der BUGA [1] ist die
+Station relativ einfach aufgebaut, birgt aber
+für uns Modellbauer einige Herausforderungen. Zusätzlich wird uns der Transport
+
+des Modells vor weitere Rätsel stellen, denn
+mit ihrer Größe müssen die Stationen mehrfach geteilt werden.
+
+Typfrage
+Es gibt mehrere Arten von Seilbahnen; die
+wichtigsten seien hier grundsätzlich vorgestellt. Mehr dazu werden wir auf unserem
+YouTube Kanal [3] zeigen und in einem
+weiteren Projekt – derzeit noch Top-Secret.
+ Standseilbahnen fahren auf Schienen
+und werden mit Seilen gezogen. Sie
+können große Steigungen erklimmen
+und sind mit die ältesten Seilbahnen.
+Andererseits transportieren sie z. B. auf
+Flughäfen [4] häufig Passagiere
+
+der Station, die Medienfassade und rechts die Garagierung
+(Quelle: Doppelmayr Seilbahnen GmbH [5], mit freundlicher Genehmigung.)
+
+zwischen den Terminals. (Modelle
+davon sieht man auch im Bilderpool der
+ftCommunity [5].)
+ Fix gekuppelte Einseilumlaufbahnen
+kennen wir als Skilifte, Ankerlifte oder
+fixgeklemmte Sessellifte. Die „Fahrzeuge“ sind dabei fest an ein endloses
+kombiniertes Trag- und Zugseil gekuppelt, das in den Stationen um eine Seilscheibe umgelenkt wird.
+ Kuppelbare Einseilumlaufbahnen (wie
+unser Modell): Hier werden die Fahrzeuge (Sessel oder Gondeln) in den
+Stationen vom Seil getrennt und abgebremst, um ein leichteres Ein- und
+Aussteigen zu ermöglichen.
+ Pendelbahnen kennen wir als klassische
+paarweise „Gondeln“, die viele Leute
+gleichzeitig nach oben bringen, während
+die zweite Gondel nach unten fährt. Hier
+dienen ein oder zwei Seile als Tragseile,
+ein weiteres als Zugseil. (Auch hier gibt
+es im Bilderpool schöne Modelle.)
+
+Modell
+
+ Dreiseil-Bahnen: Umlaufbahnen mit
+großen Kabinen, zwei Tragseilen und
+einem Zugseil, um weniger seitenwindanfällig zu sein.
+ Funitel bestehen aus zwei kombinierten
+Trag- und Zugseilen, in welche die Gondeln beidseitig in der Mitte hängend
+gekuppelt werden. (Tipp für Modellbauer: sehr interessant zu bauen.)
+Wer mehr über die unterschiedlichen Seilbahntypen erfahren möchte, sollte unbedingt auf der Website von Doppelmayr/Garaventa [2] im Bereich „Systeme“
+stöbern. Dort finden sich viele Anregungen
+für neue fischertechnik-Projekte von klein
+bis groß.
+
+Grundsätzlicher Aufbau
+Die Stationen sind (auch im Original)
+grundsätzlich wie folgt aufgebaut (Abb. 3):
+ Mehrere Steher (= Pfeiler) (im Bild A, B,
+C) tragen die komplette Konstruktion
+
+An den in grau dargestellten Industrieprofilen formt sich ein nach unten führendes Stück bis zur
+Laufschiene (schwarz) und nach oben bis zur gelben Stabilisationsschiene. In diesem Luftraum
+befindet sich das Seil und fährt die Klemme der Gondel hinein.
+
+
+
+
+
+
+
+
+
+
+
+und sind im Original auf massive Betonfundamente gestellt. In unserem Vorbild
+der BUGA23-Anlage und im Modell
+sind dies drei Steher, wobei der mittlere
+der massive Hauptsteher ist. Wir werden
+unsere Station auf ein Untergestell aufbauen – hierzu gleich mehr.
+Über den Stehern liegen Quertraversen,
+an denen Längsträger befestigt sind
+(welche hinten in eine Rundung übergehen).
+An diesen Trägern hängen Haltevorrichtungen (wir nennen Sie „C-Stücke“,
+da ihre Form daran erinnert), welche
+dann die Laufschiene und Stabilisierungsschiene tragen.
+Ebenso auf den Trägern eingehängt ist
+der Spannwagen, welcher die Seilscheibe und den Antrieb (10) trägt. Die
+Reifenförderer sind dort ebenfalls aufgesetzt.
+Auf den Trägern sitzt ein Teil der elektrischen Anlagen und das Dach in Form
+einer Haube.
+Am Hauptsteher befinden sich die
+Spannzylinder, welche wir in unserem
+Modell durch ein verstecktes Gewicht
+(10a) unterstützen.
+
+Funktionsabschnitte
+Die Aufteilung der Station ist wieder in
+mehre
+Funktionsabschnitte
+aufgeteilt
+(Abb. 3 und 4). Bei einer kuppelbaren Einseilumlaufbahn (kurz MGD) sind das:
+ Die der Station vorgelagerte Stütze mit
+Niederhaltebatterie (1, blauer Bereich):
+Sie sorgt dafür, dass das Seil horizontal
+in die Station einläuft.
+ Der Bereich zum Eingleisen (2): Die
+Gondeln fahren jetzt gleichzeitig auf
+dem Seil und auf Schienen, die sie dann
+durch die ganze Station leiten. Dieser
+Bereich muss später starke Belastungen
+der schwingenden Gondeln aushalten.
+ Kuppelbereich (3 – grüner Bereich): Die
+Kuppelklemmen (bei unserem Modell
+sind das Totpunktklemmen nach dem
+Vorbild von Doppelmayr) werden in ca.
+0,85 Sekunden geöffnet. Die Gondel ist
+noch so schnell wie das Seil, fährt aber
+nur noch auf den Schienen. Danach
+taucht das Seil nach unten ab und wird
+nach innen zur Seilscheibe geführt.
+ Verzögerer (4 – roter Bereich): Die Gondeln werden mit den Reifenförderern
+gebremst. Wir werden in 13 Stufen von
+
+(Die Gondeln sind hier als fischertechnik-Kästchen an den Statik Trägern symbolisiert. Zum
+Größenvergleich die Gondel des Originalmodells, links neben der Station.) Die Grundlinie der Station
+(blau) steht auf einem Grundgestell (s. u.). Sie kann in zwei Module getrennt werden (türkise Pfeile).
+
+
+Modell
+
+Die Bauteile sind (soweit möglich) nach Farben getrennt: klassisch in Grau stellt alle Industrieprofile
+dar, schwarz die Laufschiene, gelb die Stabilisationsschiene.
+
+
+
+
+
+
+
+60 cm/s auf 3 cm/s bremsen, genau wie
+die Originale (im Maßstab 1:10).
+Türöffnungsbereich (6 – hinter der Dachhaut verborgen): Über einen Hebel am
+Gondelgehänge wird die Tür geöffnet.
+Ausstiegsbereich (7): Hier befindet sich
+der Bahnsteig, der passgenau an die
+Gondel geführt wird.
+Regelbereich (8 – orange): In der Kurve
+der Station, in der keine Passagiere ausoder zusteigen, befinden sich einige
+Rollen des Reifenförderers, die bedarfsgerecht etwas schneller oder langsamer
+laufen können, um den Abstand der
+Gondeln am Seil zueinander zu regeln.
+Weiche (9, etwa hinter dem Regelbereich): Ein ziemlich komplizierter
+Bereich, an dem die Gondeln aus der
+Station gefahren werden können, um sie
+zu reparieren oder in Betriebspausen in
+eine Garage zu bringen. (Wir werden die
+Garagierung in unserem Modell ebenfalls bauen.)
+
+Danach kommen wieder die Bereiche in
+umgekehrter Reihenfolge, also Einstieg,
+Türschließen, Beschleunigen, Einkuppeln,
+Ausfahrt.
+
+Die Seilscheibe und der Antrieb (10) sind in
+den Stationen je nach Anforderung untergebracht. In der Anlage von Doppelmayr
+auf der BUGA23 werden in beiden Stationen Spannwagen mit je 7 m Spannweg
+vorhanden sein. Der Antrieb befindet sich
+in der Station „Spinelli“. (Der Name kommt
+vom Parkgelände, in dem die Station stehen
+wird. Es entspricht der Tal- oder Antriebsstation. Die Umkehr- oder Bergstation wird
+etwa auf gleicher Höhe im Luisenpark
+gebaut.) In unserem Modell müssen wir
+aber aus Platzgründen auf den Spannweg in
+der „Luisenpark“-Station verzichten, da das
+Modell im Fördertechnik-Museum in Sinsheim [6] nicht so viel Platz haben wird.
+
+Problembewältigung
+Jeder Bereich der Station bringt seine eigenen technischen Herausforderungen mit.
+Um diese anzugehen, haben wir zuerst ein
+Mini-Modell gebaut, also ein Modell unseres Modells. Es ist nicht maßstabsgetreu
+und die Verhältnisse stimmen nicht, es
+funktioniert nicht und ist nicht stabil. An
+diesem Mini-Modell können wir aber die
+
+
+
+
+einzelnen Bereiche sowie Fallstricke erkennen und umgehen. Im Folgenden sind
+einige davon beschrieben.
+Dieses Mini-Modell wird auch auf unserem
+YouTube-Kanal ausführlich vorgestellt und
+ist auf der ftc:süd:convention 2021 in Sinsheim zu sehen.
+Seilspannung
+Das kombinierte Trag- und Zugseil unseres
+Modells muss mit 500 N (entspricht etwa
+dem Gewicht einer Masse von 50 kg) gespannt werden. Wir haben hierüber bereits
+in der ft:pedia 2/2021 berichtet [7] und ein
+Video auf unserem YouTube-Kanal veröffentlicht [8]. Dazu ist die Seilscheibe mit ca.
+80 cm Durchmesser samt Antrieb auf einem
+Wagen montiert, der leicht schräg nach
+unten entlang der Bahnachse geschoben
+werden kann und somit das Seil strafft. Mit
+den Hydraulikzylindern von fischertechnik
+ist es aber definitiv nicht möglich, diese
+Kraft aufzubringen, geschweige denn
+70 cm Hub zu erzeugen.
+Wir gestalten also modifizierte Zylinder nur
+für die Optik. Die Zugkraft wird von einem
+Gewicht unter der Station aufgebracht. Es
+ist versteckt; die Seile werden bestmöglich
+kaschiert. Im Mini-Modell können wir
+tüfteln, wo das Seil entlanggeführt werden
+muss, um später im Hauptsteher untergebracht zu sein. Knifflig: Das Gewicht
+muss im Unterbau untergebracht werden
+und hat nur 35 cm Hub. Deswegen werden
+wir ein Gewicht von 100 kg einbauen, das
+an einem Flaschenzug angebracht ist.
+Transportproblem
+Die Anlage muss später transportabel sein.
+Unsere erste Idee war, sie auf Europaletten
+zu montieren. Mit deren Größe von nur 80
+× 120 cm müssten wir aber unsere Station
+in viele Module teilen. Immerhin wird sie
+ca. 320 cm lang, über 140 cm breit und fast
+80 cm hoch (ohne Unterbau). Deswegen
+haben wir uns entschlossen, die Station in
+nur zwei Teile zu trennen, und zwar genau
+am Hauptsteher.
+
+Wir werden die Anlage dann auf einen
+eigens konstruierten Unterbau stellen –
+hierzu gleich mehr. Wir denken, dass wir
+damit durch normale Doppelflügeltüren
+durchkommen sollten (wie sie z. B. beim
+Aufbau auf einer Messe zu erwarten sind).
+Im Mini-Modell können wir überlegen, wo
+wir die Station teilen. Wir können die
+Verbindungen sehen und erkennen, wie
+viele Stellen wir trennen müssen. Über die
+Elektrik und die Dachkonstruktion haben
+wir uns natürlich auch Gedanken gemacht.
+Die Stützen und Gondeln sowie Zubehör
+werden wir aber nach wie vor auf Europaletten verlasten.
+Dachkonstruktion
+Eine der Herausforderungen wird die Dachkonstruktion sein. Weniger der Umstand,
+dass wir wie bei der BUGA23 eine Medienfassade einbauen möchten, also Bildschirme, die unseren Besuchern Informationen zeigen, sondern mehr, dass das Dach
+ebenfalls teilbar sein muss und zusätzlich
+geöffnet werden kann. Schließlich können
+wir nicht, wie in den großen Originalen, mit
+einer Treppe in den Maschinenraum gelangen, um Wartungen durchzuführen.
+Hier zeigt sich der Vorteil des MiniModells: Ursprünglich hatten wir geplant,
+die Dachhaube nach hinten wie eine Kofferraumhaube zu öffnen. Dabei würde aber,
+selbst bei einem komplexeren Hubmechanismus, die Haube mit der Überführung in
+die Garage kollidieren. An der Trennstelle
+kämen sich die Hauben außerdem selbst ins
+Gehege.
+Unser Projektmitglied Alexander Salameh
+hat während eines unserer Bautage im
+Museum die Lösung gefunden: Das Dach
+wird in einige Segmente getrennt, die dann
+seitlich wie Flügeltüren von Sportwagen
+hochgeklappt werden. Dazu erhält die
+Anlage einen zusätzlichen Längsträger in
+der Mitte des Daches, der außerdem zur
+Stabilität beiträgt.
+
+
+Modell
+
+Stationsteilung
+
+Daches. Doch zeigt das Mini-Modell eindeutig,
+dass wir an der Trennlinie und im Übergang
+zur Garagierung (durch Faust angedeutet) mit
+der Haube anstoßen würden (Pfeile). Die Laufschiene symbolisiert hier die Unterkante der
+Dachhaube.
+
+Die Teilung der Station wirft aber noch
+weitere Probleme auf: Der Spannwagen
+muss definiert auf einem einzigen Modul
+lokalisiert sein und darf nicht darüber
+hinweg ragen. Antrieb und Technik müssen
+auf die Module elegant verteilt werden.
+Besonders der Antrieb der Reifenförderer
+wird hier zum Problem. Im Original besitzt
+eine Seilbahn nur einen einzigen Motor!
+Den Hauptantrieb nämlich, der über die
+Seilscheibe das Förderseil bewegt und
+damit auch die Reifenförderer antreibt. Und
+zwar wirklich trickreich: Zwei Rollen am
+Eingang und Ausgang der Station erhalten
+vom Seil Abtrieb, werden also von diesem
+angetrieben! Und diese Rollen treiben über
+Keilriemen den kompletten Reifenförderer
+an. Das hat den Vorteil, dass alle Elemente
+vollkommen synchron laufen, egal wie
+schnell die Anlage fährt, und bei einem Halt
+wirklich alles steht. Ein Ausfall eines
+
+Industrieprofilen nach oben geklappt. Wir können sogar Linearantriebe einsetzen, um dies zu
+automatisieren. Das Bild gibt auch einen herrlichen Überblick über die Station und zeigt, dass das
+Dach wie eine Haube in der Mitte von den Stehern und der Trägerkonstruktion getragen wird.
+
+
+
+zusätzlichen Motors oder der Energieversorgung wird dadurch ebenfalls ausgeschlossen. Wird die Anlage im Notbetrieb
+gefahren, funktioniert dennoch jede Komponente auch ohne Strom.
+Für uns ist das nur teilweise machbar. Nicht
+nur wegen der Kräfte, die zu bewältigen
+sind, sondern auch wegen der Teilung der
+Anlage. Deswegen werden wir (versteckte)
+Hilfsmotoren einsetzen, deren Positionen
+schon im Mini-Modell zu ermitteln sind.
+
+getrennt. Für alle Träger, die elektrischen
+Verbindungen und die Mechanik müssen
+Trennstellen definiert werden, die beim
+Zusammenbau einfach einzustecken sind und
+dennoch exakt und nahtfrei passen sowie den
+Belastungen standhalten.
+
+Ein weiteres Problem ist, dass die Anlagenteile exakt montiert und beim Zusammenfügen genau ausnivelliert werden müssen.
+
+
+Hierzu haben wir Führungs- und Verbindungsmechanismen entwickelt, über die wir
+in weiteren Beiträgen berichten werden.
+Zusätzlich müssen wir daran denken, dass
+wir die Steuerleitungen (im Mini-Modell
+mit blauen Pneumatikschläuchen dargestellt) zu den Stützen und Bergstation an
+den Stationsenden trennbar vorsehen.
+
+Trennung. Zu sehen sind einige Kontaktstellen
+sowie die Verriegelung des Unterbaus. Nun
+erkennt man auch die Seilscheibe, die im MiniModell allerdings viel zu klein ist, und das
+Spanngewicht, das im Untergestell untergebracht wird.
+
+Seilführung
+Ein Problem, das nur wir Modellbauer
+haben, ist das Seil. Es ist in unserem Modell
+wie im Original endlos gespleißt, hat also
+keine Öffnung. Schaut man sich die Seilführung an, so stellt sich heraus, dass die
+
+Anlage nicht mehr demontiert werden kann,
+wenn das Seil einmal eingelegt wurde. Im
+Original kein Problem, denn dort wird die
+Anlage errichtet, als letztes das Seil aufgelegt, dann erst zusammengespleißt und nie
+wieder auseinandergenommen. Im Modell
+ist das keine Option, da es mehrfach aufund wieder abgebaut werden soll, um an
+unterschiedlichen Orten ausgestellt zu
+werden.
+Unser Projektmitglied Ulrich Bessler entwickelte die Lösung: Nachdem alle Gondeln abgehängt wurden und das Spanngewicht vollkommen entlastet ist, kann das
+Seil aus der Station ausgebaut werden.
+Zuerst müssen die Laufschienen nacheinander demontiert werden, das Seil wird
+nach unten fallen gelassen. Dann wird der
+vordere Steher geteilt. Er besitzt ein
+Segment, welches nach Entriegelung
+herausgeschoben werden kann. Dieses ist
+wiederum zweigeteilt. Zuerst wird der
+Steher hinten geöffnet, das Seil in die Mitte
+geführt. Dann das entfernte Teil wieder
+eingesetzt und verriegelt, so dass die Stabilität der Anlage wieder hergestellt wird.
+
+Modell
+
+Dann wird am Steher der vordere Bereich
+geöffnet und das Seil ist frei.
+Der Aufbau geschieht sinngemäß in umgekehrter Reihenfolge.
+Erst nachdem wir dieses Problem gelöst
+hatten, konnten wir sagen, dass die Anlage
+tatsächlich transportabel ist. Die Verbindungsstellen zur Aufhängung der Laufschiene und der genaue Mechanismus im
+Steher wurden als Prototyp gebaut und
+können jetzt im Modell eingesetzt werden.
+Unterbau
+Dass unsere Anlage kein „Tischmodell“
+mehr ist, wird bei der Dimension klar. Nicht
+nur die 30 m Förderstrecke und die über
+4,60 m hohen Stützen sind gewaltig,
+sondern auch die Station. Dennoch muss sie
+im Museum relativ einfach zerlegt werden
+können, um auf anderen Ausstellungen
+wieder aufgebaut zu werden. Gleichzeitig
+kann sie nicht einfach auf dem Boden
+stehen.
+Die Talstation (Spinelli) wird ihre Nulllinie
+etwa auf Kniehöhe haben. Die Bergstation
+
+heruntergenommen werden.
+
+
+(Luisenpark) soll sogar auf einem eigenen
+Gestell montiert werden, in das die Besucher eintreten können, wobei die Station
+dann auf einer Plexiglasscheibe über den
+Köpfen steht und so von unten betrachtet
+werden kann.
+
+(auch nicht mit den Alu-Profilen) und
+gleichzeitig stabil und modular bleiben
+könnten. Die Profile werden mit fischertechnik verdeckt. Sie haben außerdem einen
+wesentlich geringeren Kostenfaktor, denn
+bei den Längen, die wir benötigen, würden
+unsere Aluprofile jedes Budget sprengen.
+An den Untergestellen werden auch versenkbare Rollen montiert, sodass wir die
+Module leicht an den Ausstellungsort
+schieben können. Aufnahmen für Gabeln
+von Hubfahrzeugen werden vorgesehen, da
+im Museum die Station auf einer Empore
+stehen wird, von der sie beim Verleih
+heruntergehoben werden muss. Außerdem
+kann das Modul damit leicht auf einen Lkw
+verladen werden. Justierbare Stützen zum
+Nivellieren und Halterungen für Transportsicherungen müssen vorgesehen werden.
+Um das alles zu verstehen, haben wir sogar
+ein Mikro-Modell gebaut: ein Modell vom
+Modell des Modells (Abb. 11).
+
+durch ein entriegeltes Stück geöffnet werden.
+Das Seil wird in die Mitte eingelegt, dann das
+Stück wieder eingesetzt. Anschließend folgt die
+vordere/linke Öffnung und das Seil ist frei.
+
+Diese Gestelle werden von uns aus speziellen Industrieprofilen gebaut, welche sowohl
+die Lasten aufnehmen als auch präzise gefertigt werden können.
+Diese Profile bilden aber auch den statischen Grundaufbau der Station: Aus ihnen
+sind die Steher, Quertraversen und Längsträger gefertigt. Das ist nötig, da wir mit
+fischertechnik die Lasten nicht aufnehmen
+
+grau) aus Industrieprofilen. Es ist mit Hubwagen zu transportieren, fährt auf eigenen
+Rollen, hat justierbare Stützen und trägt das
+komplette Modell.
+
+Alleine dieser Unterbau wird also eine
+Menge Grips erfordern und uns noch lange
+beschäftigen. Dennoch: Die Mini- und
+Mikro-Modelle haben uns sehr geholfen,
+die Grundprobleme zu lösen – jetzt geht es
+ans Detail.
+
+
+Modell
+
+Vom Mini-Modell zum Original
+
+Die Zeit drängt
+
+Ein Modell in dieser Komplexität (und
+diesem Kostenfaktor) zu bauen, ist nicht nur
+eine Herausforderung mit fischertechnik.
+Auch Logistik und Technik für die Ausstellung sind zu beachten. Deswegen war es
+jetzt schon klug, ein Mini-Modell zu bauen.
+Viele Fallstricke können wir damit jetzt
+schon erkennen und umgehen. Vor allem
+aber verstehen wir (und unsere Sponsoren)
+nun, wie komplex alles ist und wo wir im
+Modell vom Original abweichen müssen.
+
+Doch es ist noch ein langer Weg und die
+Zeit wird knapp. Nicht nur die Statik, auch
+die Mechanik und Elektrik müssen gebaut
+werden. Wir müssen testen und optimieren,
+damit die Anlage den Dauerbetrieb aushält.
+
+Im nächsten Schritt bauen wir nun einige
+Elemente im finalen Maßstab:
+ Ein Segment der Führungsschienen und
+Stabilisierung, inklusive Trennmöglichkeit für die Entnahme des Seils ist bereits
+gebaut. Damit lassen sich der Luftraum
+und die Stabilität sowie die Kräfte
+ermitteln.
+ Der Bereich zum Ein- und Auskuppeln
+wird im Original gebaut und getestet.
+Schließlich donnern hier alle 10 Sekunden die Gondeln hindurch und werden in
+weniger als 0,9 s ausgekuppelt bzw. eingekuppelt – den ganzen Tag lang, über
+mehrere Monate.
+ Der Reifenförderer muss gebaut und
+getestet werden. Wie groß muss der
+Anpressdruck sein, wieviel Drehmoment
+benötigt die Förderung?
+ Der Spannschlitten kann mit den Industrieprofilen gebaut werden, um den
+Antrieb aufzunehmen. Passen die Übergänge ins fischertechnik-Raster?
+Anhand dieser Module können wir dann die
+Anzahl der Teile, die wir benötigen, berechnen und bestellen. Hier danken wir insbesondere dem Fördertechnik Museum [6] in
+Sinsheim, das uns für die Prototypen
+fischertechnik leihweise zur Verfügung
+stellt und in deren Werkstatt die Industrieprofile gesägt und montiert werden.
+
+Dokumentation [9] und Videoproduktion,
+Artikel schreiben, am Original forschen und
+Bestellungen auslösen, auf Teile warten und
+diese dann zusammenbauen. An Deko und
+Ausstellungsmaterial ist noch nicht mal
+gedacht. Wir brauchen noch viele Helfer
+[10].
+
+Quellen
+[1]
+
+Bundesgartenschau BUGA23 in
+Mannheim
+
+[2]
+
+Webseite von
+Doppelmayr/Garaventa
+
+[3]
+
+Youtube-Kanal des Projekts
+
+[4]
+
+Standseilbahnen von
+Doppelmayr/Garaventa: Cable-Liner
+
+[5]
+
+Seilbahnprojekte im Bilderpool der
+ftc.
+
+[6]
+
+Fördertechnik-Museum Sinsheim
+
+[7]
+
+Tilo Rust: Großprojekt Seilbahn
+(Teil 2): Erste Elemente. 2/2021, S. 45–53.
+
+[8]
+
+Video: Seilspannung von Seilbahnen
+/ Spanngewicht. Yotube.com
+
+[9]
+
+Bauanleitungen und fischertechnikDesigner-Dateien zum Download.
+
+[10] Kontakt zur Projektgruppe „Seilbahn“: Projektleiter Tilo Rust,
+Schifferstadt, ft.seilbahn@gmail.com
+[11] fischertechnik community Forum
+„Community-Projekt: Seilbahn“
+[12] Öffentlicher Mediapool des
+Seilbahnprojekts auf Google Drive
+
+
+

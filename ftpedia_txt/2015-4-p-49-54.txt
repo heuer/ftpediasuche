@@ -1,0 +1,428 @@
+
+Computing
+
+Computing
+
+PWM-Motorsteuerung am fischertechnikUniversal-Interface
+Dirk Uffmann
+In der ft:pedia 2/2014 [2] habe ich vorgestellt, wie man das fischertechnik-Universal-Interface
+an einem AVR-Mikrocontroller betreiben kann – allerdings ohne PWM-Steuerung der Motoren.
+Das Interface, das für den Betrieb an der Parallel-Schnittstelle des PC vorgesehen war, bietet
+mit seinen Motortreibern TLE4201 keine explizite Hardware-Unterstützung für eine PWMSteuerung. Eine Software von Ulrich Müller für den PC ermöglichte schließlich eine PWMSteuerung [1]. Der vorliegende Beitrag stellt zwei Varianten vor, wie man mit einem AVR
+ATMEGA2560 an bis zu zwei Universal-Interfaces im Master-Slave-Betrieb alle acht Motorausgänge getrennt voneinander mit PWM steuern kann.
+
+Die Idee
+Die Idee von Ulrich Müller war, zur Umsetzung einer Geschwindigkeitsvorgabe die
+Motoren schnell genug (mit Zeiten im
+Bereich von 12-36 ms) jeweils ein- und
+dann zeitlich kontrolliert wieder auszuschalten. Genau diese Idee habe ich hier
+auch verfolgt. Ulrich Müller gibt an, dass
+man das parallele Interface (Abb. 1) sogar
+mit noch geringeren Zeiten ansteuern kann.
+Wie ich in meinem Beitrag in 2/2014 [2] gezeigt habe, benötigt man für
+das parallele Interface weniger als 12 µs für
+die Datenübertragung eines neuen Ausgangs-Zustandes. Bei zwei fischertechnikInterfaces im Master-Slave-Betrieb und 16
+MHz Takt des AVR sind es ca. 32 µs. Selbst
+mit zwei fischertechnik-Interfaces könnte
+man bei einer Auflösung bzw. Granularität
+von 100 PWM-Stufen also PWM-Frequenzen von bis zu 300 Hz realisieren
+(1/(100•32 µs)).
+Das ist aber gar nicht nötig: Eine Frequenz
+zwischen 70 und 100 Hz ist vollkommen
+ausreichend und sogar besser für die Motoren geeignet. Auch bei Lampen am Ausgang sieht man so noch kein Flackern. Für
+den benötigten Zweck kann man sehr
+
+geschickt einen Timer-Overflow-Interrupt
+und – bei der zweiten Variante – verschiedene
+Output-Compare-Interrupts
+des
+Mikrocontrollers nutzen.
+
+wird ein PORT des Mega 2560 angeschlossen.
+
+Die Hardware
+Derzeit sind fertige Boards mit großzügig
+ausgestatteten Atmel AVR Mega-Controllern sehr günstig erhältlich. Einen Arduino
+Klon des MEGA 2560R3 (Abb. 2) erhält
+man in China bei Aliexpress für weniger als
+zehn Euro inklusive Versand. Ein solches
+Board habe ich hier genutzt und am PORT
+K das fischertechnik-Universal-Interface
+mit der in Tab. 1 dargestellten Pin-Zuordnung angeschlossen.
+
+
+
+wird in der Header-Datei FTUI_PWM.h
+definiert, hier am Beispiel M1:
+#define M1
+
+
+→ im Ruhezustand sind beide Ausgänge
+auf +V.
+
+unten rechts, bezeichnet als A8-A15.
+MEGA2560-----FTUI(20-pol.Pfostenstecker)
+---------------------------------------PK1-------------LoadIn-(20P Pin 7)
+PK2------------LoadOut-(20P Pin 8)
+PK3--------------Clock-(20P Pin 9)
+PK4------------DataOut-(20P Pin 10)
+PK5-----------------EY-(20P Pin 13)
+PK6-----------------EX-(20P Pin 14)
+PK7------------DataIn*-(20P Pin 17)
+GND----------------GND-(20P Pin 19)
+
+Tab. 1: Pin-Zuordnung zwischen ATMEGA
+2560 und fischertechnik-Universal-Interface
+
+Eigentlich liegt DataIn auf Pin 18. Der
+Ausgang des Eingangs-Schieberegisters
+wird auf dem Weg zu Pin 18 über ein OderGatter mit dem Ausgangssignal der NE556
+Timer der beiden Analogeingänge verknüpft und dann über einen Treibertransistor BC548 invertiert. Da wir die TimerSignale nicht brauchen und diese sogar
+stören, wenn die Trigger-Signale dafür
+nicht auf high gelegt und die analogen
+Eingänge nicht auf den Timer durchgeschleift werden, verwenden wir lieber Pin
+17 als direkten Ausgang des Schieberegisters. Hier hat das Ausgangssignal auch noch
+eine geringere Verzögerungszeit zur positiven Takt-Flanke und daher können wir dann
+mit einer höheren Übertragungsrate arbeiten.
+Eine Besonderheit der TLE4201-Motortreiber im fischertechnik-Universal-Interface ist, dass diese deutlich weniger Strom
+verbrauchen, wenn beide Ausgänge auf V+
+geschaltet sind, als im umgekehrten Fall
+(beide Ausgänge auf GND). Bei Beschaltung mit Motoren empfiehlt es sich daher,
+diese dadurch abzuschalten, dass beide
+Ausgänge auf V+ geschaltet werden. Dies
+
+Verbraucher, die einphasig gegen Masse
+angeschlossen sind (Lampen, Magnetventile etc.), werden im Ruhezustand auf
+GND gelegt. Hier am Beispiel der beiden
+Ausgänge an M1:
+#define M1
+
+
+→ im Ruhezustand sind beide Ausgänge
+auf GND.
+Ebenfalls wird in der Header-Datei definiert, ob nur ein fischertechnik-Interface
+angeschlossen ist oder noch ein zweites im
+Slave-Betrieb. Im letzteren Fall muss der
+Parameter slave mit dem Wert 1 definiert
+werden.
+#define slave 1
+
+Die Software
+Die Software wurde mit Atmel-Studio in C
+geschrieben und mit XLoader auf den AVR
+geladen (damit umgehe ich die ArduinoTools). Ich stelle zwei Varianten vor, die
+sich hinsichtlich Rechenlast und Speicherbedarf unterscheiden. Die erste Variante
+verursacht eine höhere Rechenlast im
+Mikrocontroller als die zweite, benötigt
+aber nur einen 8-bit-Timer mit OverflowInterrupt und belegt deutlich weniger
+Programmspeicher als die zweite Variante.
+Variante 1 ist daher auch für kleinere
+Mikrocontroller geeignet (wie z. B. den
+ATMEGA 328). Die zweite Variante benötigt mehrere 16-bit-Timer mit OverflowInterrupt und zusätzlich bis zu acht Output
+Compare-Match-Interrupts (vier je angeschlossenes fischertechnik-Interface). Für
+Variante 2 ist daher ein großzügig ausgestatteter Mikrocontroller erforderlich
+(wie z. B. ein ATMEGA 2560).
+
+
+Computing
+
+Variante 1
+Nicht jeder Mikrocontroller ist so üppig
+ausgestattet wie der MEGA 2560. Häufig
+hat man nur zwei oder gar keine PWMKanäle zur Verfügung. Hier bietet sich zur
+Implementierung der PWM-Funktionalität
+für alle acht Motoren folgende Methode an:
+∂ Es wird ein Timer-Overflow-Interrupt
+mit 128 µs Periode genutzt.
+∂ In dieser Interrupt-Routine wird ein
+PWM-Zähler inkrementiert und bei
+Erreichen des Wertes 100 auf 0 zurückgesetzt und mit diesem Ereignis werden
+dann alle aktiven Motoren eingeschaltet.
+∂ Weiterhin wird geprüft, ob die in einem
+Array uint8_t pwm[8] gespeicherten
+PWM-Werte der acht Motoren mit dem
+Zähler übereinstimmen. Sofern dies
+
+zutrifft, wird der jeweilige Motor abgeschaltet.
+Auf diese Art kommt man auf eine PWMFrequenz von 78 Hz und eine Granularität
+von 1 % (PWM-Steuerung mit 100 Stufen).
+Tab. 2 zeigt den Code zur Initialisierung.
+Mit dem Timer-Overflow-Interrupt muss
+jeweils ein Datentransfer zum fischertechnik-Interface erfolgen. Da ich einen Funktionsaufruf mit Stack-Nutzung aus der
+Interrupt-Routine heraus vermeiden wollte,
+habe ich die Funktion FTUI_update() als
+inline-Funktion vor der Interrupt-ServiceRoutine definiert (Tab. 3). Das bewirkt,
+dass der entsprechende Code beim Kompilieren direkt in der Interrupt-Service-Routine (Tab. 4) platziert und dort ohne weitere
+Stack-Last ausgeführt wird.
+
+/****************************************************************************
+FTUI Init Routine
+****************************************************************************/
+void FTUI_Init (void)
+{
+//
+internen Pull-up Widerstand für DataIn einschalten
+FTUI_Port_Write = (1<<FTUI_DataIn);
+//
+Ausgänge auf low setzen
+FTUI_Port_Write &= ~((1<<FTUI_LoadIn)|(1<<FTUI_DataOut)|(1<<FTUI_Clock)|(1<<FTUI_LoadOut));
+//
+Ausgänge definieren bzw. aktiv schalten
+FTUI_Port_DDR = (1<<FTUI_LoadOut)|(1<<FTUI_LoadIn)|(1<<FTUI_DataOut)|(1<<FTUI_Clock);
+//
+system clock 16 MHz is used (external quartz oscillator)
+//
+start timer2 with prescaler clock/8
+TCCR2B = _BV(CS21);
+//
+activate 8-bit Timer0 overflow interrupt with prescaler divide by 8
+//
+-> 8 * 256 / (16 MHz) = 128 µs or ca. 7,8 kHz
+TIMSK2 = _BV(TOIE2);
+sei();
+//
+Motorausgänge initial high oder low schalten entsprechend der gewählten Beschaltung
+#if slave
+motorcontrol = output;
+#else
+motorcontrol = output1;
+#endif
+}
+
+Tab. 2: C-Code zur Initialisierung (Variante 1)
+
+
+
+
+/******************************************************************************
+FTUI_update überträgt das motorword und liest parallel das inputword ein.
+Diese Funktion muss mindestens alle 300 ms aufgerufen werden, um den
+Watchdog im FT-Interface zurückzusetzen (durch das Clocksignal). Das
+passiert hier automatisch über den Timer1-Overflow-Interrupt alle 12,8 ms.
+Bei einem Systemtakt von 16 MHz braucht die Routine mit einem Interface
+nur ca. 12 µs, mit zwei Interfaces sind es ca. 32 µs.
+******************************************************************************/
+inline void FTUI_update (void)
+{
+#if slave
+uint16_t mask_motor=(1<<15);
+uint16_t mask_input=(1<<7);
+#else
+uint8_t mask_motor=(1<<7);
+uint8_t mask_input=(1<<7);
+#endif
+FTUI_Port_Write &= ~(1<<FTUI_Clock); //Clock low-Phase einleiten
+//
+
+Zunächst werden alle Eingänge als 0 angenommen.
+inputword = 0;
+
+//
+//
+
+CMOS4014: Nun werden die Eingangszustände in das Schieberegister übernommen.
+Dazu muß LoadIn gesetzt werden und danach eine positive Clockflanke erzeugt werden.
+FTUI_Port_Write |= (1<<FTUI_LoadIn);
+FTUI_Port_Write |= (1<<FTUI_Clock); //Clock high-Phase einleiten
+mit dieser positiven Clockflanke steht das erste Bit auf der
+DataIn-Leitung an, jedoch mit einer Verzögerung. Daher wird
+es erst in der nächsten Clock-Low-Phase eingelesen
+
+//
+//
+//
+//
+
+CMOS4014: Dann werden die Eingänge wieder vom Schieberegister entkoppelt
+FTUI_Port_Write &= ~(1<<FTUI_LoadIn);
+
+//
+//
+//
+
+Dann werden die Bits 7 bis 0 (ein FT-Interface) bzw. 15 bis 0 (zwei
+FT-Interfaces) gesendet (motorword) und parallel die Bits 7 bis 0 und
+dann 15 bis 8 (zwei FT-Interfaces) eingelesen (inputword)
+while (mask_motor)
+{
+Wenn das jeweilige Sende-Bit high sein soll, dann wird DataOut = 1
+gesetzt, sonst DataOut = 0
+if(motorword & mask_motor) FTUI_Port_Write |= (1<<FTUI_DataOut);
+else FTUI_Port_Write &= ~(1<<FTUI_DataOut);
+FTUI_Port_Write &= ~(1<<FTUI_Clock); //Clock low-Phase einleiten
+mask_motor = (mask_motor>>1); // Schiebe das Maskierungsbit eins nach rechts
+
+//
+//
+
+//
+//
+//
+
+Nun wird das jeweilige Bit im Datenstream auf der Leitung DataIn
+daraufhin getestet, ob der zugehörige Eingang "high" ist,
+und dann wird inputword an der jeweilige Bitposition auf 1 korrigiert
+if (FTUI_Port_Read & (1<<FTUI_DataIn)) inputword |= mask_input;
+mask_input = (mask_input>>1); //Maskierungsbit nach rechts weiterschieben
+#if slave
+if (mask_input==0) mask_input = (1<<15); //Maskierungsbit auf Position 15 setzen
+#endif
+FTUI_Port_Write |= (1<<FTUI_Clock); //Clock high-Phase einleiten
+}
+
+//
+//
+
+CMOS4094: Durchschalten der Daten aus dem Schieberegister ins Speicherregister
+für die Motorausgänge
+FTUI_Port_Write |= (1<<FTUI_LoadOut);
+FTUI_Port_Write |= (1<<FTUI_LoadOut);
+FTUI_Port_Write |= (1<<FTUI_LoadOut);
+
+//
+
+wieder Entkoppeln von Speicherregister und Schieberegister
+FTUI_Port_Write &= ~(1<<FTUI_LoadOut);
+
+}
+
+Tab. 3: C-Code mit der in der Interrupt-Service-Routine genutzten
+inline-Funktion FTUI_update(). Diese Funktion ist für beide Varianten identisch.
+
+
+
+Computing
+
+ISR (TIMER2_OVF_vect) //findet alle 128µs statt
+{
+uint8_t i;
+uint8_t update_flag = 0;
+pwm_counter++;
+if (pwm_counter == 100)
+{
+pwm_counter = 0;
+//
+Ausgänge gemäß der Variable motorcontrol einschalten
+motorword = motorcontrol;
+update_flag = 1;
+}
+
+//
+
+i = 4 + (4*slave);
+do
+{
+i--;
+if (pwm_table[i] == pwm_counter)
+{
+Ausgänge gemäß der PWM Tabelle pwm_table[] abschalten
+if (output & (0x0003 << (2*i))) motorword |= (0x0003 << (2*i));
+else motorword &= ~(0x0003 << (2*i));
+update_flag = 1;
+}
+} while (i);
+if (update_flag) FTUI_update();
+
+}
+
+Tab. 4: C-Code für die Interrupt-Service-Routine (Variante 1)
+/*********************************************************************************
+M () stellt die Funktion zur Manipulation von motorcontrol zur Steuerung
+einzelner Motoren bereit. Der pwm Wert gilt auch bei Einzelbeschaltung
+der Ausgänge immer für beide Ausgänge.
+*********************************************************************************/
+void M (uint8_t motor_number, uint8_t state, uint8_t pwm)
+{
+//
+Abfangen unsinniger Werte
+if (motor_number == 0) return;
+if (motor_number > (4 + (4*slave))) return;
+if (state > 3) return;
+uint8_t position = (motor_number-1)*2;
+pwm_table[motor_number-1] = pwm;
+//
+//
+//
+//
+
+Zunächst wird "state" in "motorcontrol" an der gewünschten Position hinzugef uegt
+dazu werden zunächst die jeweiligen 2 bits an den Bit-Positionen für motor_number
+auf 0 gesetzt
+motorcontrol &= ~(3 << position);
+und dann die 2 neuen Bits dem motorcontrol hinzugefügt
+motorcontrol |= state << position;
+
+}
+
+Tab. 5: C-Code mit der Motor-Funktion (Variante 1)
+
+Variante 2
+Der AVR ATMEGA 2560 bietet zu dem
+benötigten Zweck vier verschiedene 16-bit
+Timer (1, 3, 4, 5), die jeder mit jeweils drei
+Output-Compare-Registern
+kombiniert
+sind. Damit können bis zu 12 PWM-Ausgänge gesteuert werden. Über einen TimerInterrupt werden jeweils alle Motoren eingeschaltet, die laufen sollen. Über die
+
+jeweiligen Output-Compare-Interrupts wird
+dann je nach gewünschtem PWM-Wert der
+zugeordnete Motor – bis zum erneuten
+Einschalten durch den Timer-Interrupt –
+abgeschaltet.
+Die 16-bit Timer werden auf eine Periodendauer von 12,8 ms bzw. eine PWM-Frequenz von 78 Hz eingestellt. Tab. 2 zeigt
+die Initialisierung. Die Timer zählen von 0
+
+
+
+bis 25599 (Top-Wert im Register ICR). Für
+die Compare-Matches werden nur die
+oberen acht Bits der 16-Bit-OCR-Register
+genutzt, wodurch eine Granularität der
+PWM-Steuerung von genau einem Prozent
+erreicht wird (100 Stufen – dies ergibt sich
+aus den 25600 Timer-Schritten geteilt durch
+die 256 Timer-Schritte für die unteren acht
+Bits).
+Sowohl mit dem Timer-Overflow-Interrupt
+als auch mit den jeweiligen Output-Compare-Match-Interrupts muss jeweils ein
+Datentransfer zum fischertechnik-Interface
+erfolgen. Dafür wird dieselbe inlineFunktion FTUI_update() wie bei Variante 1
+verwendet.
+Um einen Motor mit PWM-Wert einzuschalten, muss der PWM-Wert in das entsprechende OCR-Register übertragen werden und im Register TIMSK der OutputCompare-Match-Interrupt aktiviert werden.
+
+Das Video
+Ich habe beide Varianten des Codes ausgiebig mit meinem Modell eines Industrieroboters getestet und keine Fehler mehr
+gefunden. In einem Youtube-Video kann
+die Wirkung der PWM-Steuerung beobachtet werden. Sie wird beim Anfahren der
+verschiedenen Positionen genutzt. Vor dem
+Erreichen der jeweiligen Zielposition wird
+der PWM-Wert linear heruntergefahren
+(langsamer werdendes Anfahren des Ziels).
+
+
+der Motoren am fischertechnik-UniversalInterface, gesteuert durch einen ATMEGA2560
+
+Download
+Die benötigten Funktionen für den Programmcode des Mikrocontrollers stehen in
+einem Downloadpaket zur Verfügung. Für
+jede Variante ist eine eigene C-Datei vorgesehen. Bitte beim Kompilieren nur die
+eine jeweils ausgewählte Variante bzw. nur
+eine der beiden C-Dateien verlinken. Die
+Header-Datei FTUI_PWM.h ist für beide
+Varianten identisch.
+Ich freue mich auf die Wiederbelebung
+eurer alten fischertechnik-Universal-Interfaces mit PWM-Funktionalität.
+
+Quellen
+[1]
+
+Müller, Ulrich: Drehzahlsteuerung
+von Motoren am Interface
+(ftSlow.ZIP). ftcommunity.de
+
+[2]
+
+Uffmann, Dirk: Nutzung des Universal-Interfaces 30520 als Port-Erweiterung an einem Mikrocontroller.
+ft:pedia 2/2014.
+
+

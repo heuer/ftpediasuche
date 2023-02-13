@@ -1,0 +1,79 @@
+
+
+Tipps & Tricks
+
+ft-Spezialteile made by TST (Teil 12)
+Andreas Tacke
+In einer lockeren Reihe stellt TST einige von ihm entwickelte Spezialteile vor, die so manche
+Lücke beim Bauen mit fischertechnik schließen. Im heutigen Beitrag geht es um ein sehr
+nützliches Teil: um einen Kulissenstein für die fischertechnik-Nut.
+Gerade wenn man größere Modelle baut
+kommt man irgendwann an einen Punkt, an
+dem es wieder mal hakt. Wie bekomme ich
+ein Sonderteil an der fischertechnik-Nut
+befestigt – am besten verschraubt?
+Bei den Aluprofilen in der Industrie kennt
+man ja Kulissensteine, die in die Nuten
+eingeschoben werden. Warum sollte so
+etwas also nicht auch bei fischertechnik
+möglich sein?
+In das fischertechnik-Profil passt ja
+bekanntlich eine 4 mm-Achse hinein. Also
+habe ich eine 4 mm-Messingwelle auf
+11 mm Länge abgelängt und mit einem M3Gewinde versehen.
+
+und Schraube
+
+
+So hat man nun die Möglichkeit etwas
+anzuschrauben. Aber dieses Bauteil lässt
+sich auch noch für andere Zwecke nutzen!
+Ein weiterer Gedanke war eine Möglichkeit
+zu schaffen, um Bausteine in dem Aluprofil
+so zu fixieren, dass sie sich nicht verschieben können. Daher kommt auch die etwas
+ungewöhnliche Länge von 11 mm: Diese
+Länge entspricht dem Abstand der Zapfen
+zweier nebeneinanderliegender Bausteine.
+Befestigt man nun einen Kulissenstein mittels einer Madenschraube im Profil können
+sich die Bausteine nicht mehr verschieben.
+
+als Stopper im Aluprofil
+
+Aber sollte das schon alles gewesen sein
+was sich mit so einem Teil anstellen lässt?
+Keineswegs.
+
+
+Tipps & Tricks
+
+Mit dem Kulissenstein lässt sich auf
+einfache Weise eine recht spielfreie, leicht
+verschiebbare Linearführung herstellen.
+Gebraucht werden drei Aluprofile und
+sechs dieser Kulissensteine. Und so sieht es
+dann fertig aus (Abb. 3).
+
+
+
+Zuerst werden drei Kulissensteine mit
+Madenschrauben M3x8 im Aluprofil fixiert
+(Abb. 4, 5).
+
+Anschließend werden dann die nächsten
+drei Kulissensteine auf die Gewindestifte
+geschraubt. Über diese stellt man nun das
+Spiel der Führung ein. Sie dürfen nicht zu
+locker, aber auch nicht zu fest sitzen. Das
+Spiel muss so eingestellt werden, dass sich
+das dazugehörige zweite Profil leicht verschieben lässt.
+
+
+Aber warum nur drei Führungspunkte und
+nicht vier? Ich habe festgestellt, dass es mit
+dreien besser geht – ein Tisch steht auf drei
+Beinen ja auch am besten …
+Und wieder zeigt sich, dass ein kleines Teil
+die Möglichkeiten des fischertechnikSystems unglaublich erweitern kann.
+
+
+

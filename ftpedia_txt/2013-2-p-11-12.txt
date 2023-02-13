@@ -1,0 +1,90 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+ft-Spezialteile made by TST (Teil 4)
+Andreas Tacke
+In einer lockeren Reihe stellt TST einige von ihm entwickelte Spezialteile vor, die so manche
+Lücke beim Bauen mit fischertechnik schließen. Diesmal geht es um den richtigen Dreh an
+der Flach- bzw. Doppelnabe sowie der Spannzange 35113.
+In meinem heutigen Beitrag geht es um
+den Nabenschlüssel sowie den Kombinabenschlüssel.
+Erst mal etwas zur Entstehungsgeschichte.
+Es wurde vor einigen Jahren im Forum mal
+über einen Nabenschlüssel diskutiert. Es
+wurden dann von ein paar Usern Prototypen aus Kunststoff ausgesägt und
+vorgestellt. Da ich damals für meine
+Sonderlösungen bekannt war, habe ich
+mich an die Entwicklung der Geometrie zu
+diesem Nabenschlüssel gemacht.
+
+Daher gab es dann bald die zweite Version.
+Mit dieser lässt sich ein Nachgreifwinkel
+durch Umsetzen des Schlüssels von 45°
+erreichen.
+
+
+In Abbildung 3 ist zu sehen, wie der
+Nachgreifwinkel von 45° erreicht wird.
+
+
+Dieser Schlüssel löste das Problem, das wir
+ja alle kennen – wie bekomme ich die
+Nabe richtig festgedreht? Mit Zange und
+Co. beschädigt man sich nur seine schönen
+Teile.
+Die schmale Seite lässt sich z. B. perfekt
+zum Festziehen der Nabenmuttern an den
+Felgen verwenden, da sie sehr schmal
+gehalten ist. Bei der Anwendung stellte
+sich aber bald heraus, dass der Schlüssel
+noch nicht ganz ausgereift war. Mit ihm
+ließ sich nur ein Nachgreifwinkel von 180°
+erreichen, was an engen Stellen im Modell
+unpraktisch ist.
+
+
+
+
+Zum zweiten gibt es im fischertechnikSortiment noch die Spannzange 35113.
+Wer kennt nicht das Problem, dass die
+Spannzange immer wieder durchrutscht
+und man sie, da man sie so schlecht greifen
+kann, nicht richtig fest bekommt.
+
+Durch die schmal gehaltene Öffnung
+kommt man mit diesem Schlüssel auch an
+Stellen heran, um die Spannzangen fest zu
+ziehen, an denen selbst eine Zange keinen
+Platz hat.
+
+Diesem Problem habe ich mich gestellt
+und eine dritte Version meines Schlüssels
+entworfen. Ich nenne ihn den „Kombinabenschlüssel“, da er sowohl für die
+Nabenmuttern als auch für die Spannzangen genutzt werden kann (Abb. 4).
+
+
+Er besitzt an der einen Seite die schlanke
+Geometrie des Nabenschlüssels und an der
+zweiten Seite eine Verzahnung, mit der
+sich die Spannzange 35113 festhalten lässt.
+Die Konstruktion dieser Geometrie war am
+CAD-System schon etwas aufwendiger, da
+es sich ja um ein Zahnrad Modul 0,5 mit
+22 Zähnen handelt. Die Geometrie musste
+so angepasst werden, damit der Schlüssel
+von der Seite auf das Zahnrad geschoben
+werden kann (Abb. 5).
+
+
+
+
+Das Außenmaß beträgt 14,7 mm, damit
+man mit dem Schlüssel auch zwischen
+zwei Bausteinen montieren kann (Abb. 6).
+Dies ist ein Werkzeug, das neben dem
+gelben Schraubendreher bei keinem
+fischertechnik-Konstrukteur fehlen sollte.
+
+

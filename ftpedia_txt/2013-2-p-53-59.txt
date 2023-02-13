@@ -1,0 +1,369 @@
+
+Computing
+
+Computing
+
+fischertechnik und Lego
+Helmut Wunder
+Auch wenn zur Zeit der aktuelle Lego NXT dem Ende seiner Vertriebszeit entgegen geht (ab
+Herbst kommt der abwärtskompatible Nachfolger EV3), so ist er doch zur Zeit z. B. bei ebay
+recht preiswert gebraucht erhältlich (unter 100 €) und daher sicher auch für viele
+fischertechniker – ähnlich wie Arduino-basierte Systeme – als Spiel- und Experimentierfeld
+interessant.
+Die Verbindung der beiden Systeme ist im
+Prinzip sehr einfach und mit höchstens ein
+ganz klein wenig Bastelei verbunden.
+Gerade für die elektrische Verbindung
+muss ich natürlich um Vorsicht bitten, und
+ich muss aus juristischen Gründen vorausschicken:
+
+technik-Kunststoffachsen habe ich noch
+keine Lösung gefunden.
+
+Achtung: Ohne Gewähr und unter
+Haftungsausschluss für etwaige entstehende Defekte und/oder Folgeschäden
+beim Nachbau!
+
+Mechanische Verbindung
+
+
+
+Elektrische Verbindung
+
+der Loch-Balken
+
+Bei den Achsen verwende ich MessingAchsadapter von vier auf fünf mm von
+Andreas Tacke (TST). Mit ihnen lassen
+sich die 5 mm-Lego-Achsen mit „+“förmigem Querschnitt perfekt mit den
+4 mm-fischertechnik-Metallachsen
+verbinden. Zur Verbindung mit den fischer-
+
+Die elektrische Verbindung mit den LegoKabel/Stecker-Systemen und dem NXT
+Baustein klappt ebenfalls. Aber Achtung –
+nochmals: Das Folgende gilt ohne Gewähr
+und unter Haftungsausschluss für etwaige
+Defekte und/oder Folgeschäden beim
+Nachbau.
+Lego verwendet beim NXT ein abgewandeltes
+Westernsteckersystem
+mit
+asymmetrischer Sicherung. Das soll es
+wahrscheinlich
+Kindern
+erschweren,
+andere Westernstecker einfach dranzu53
+
+
+
+stecken, womit Beschädigungen oder sogar
+Gefahren verbunden sein können.
+Die NXT-Stecker und -Kabel sind 6-polig;
+längst nicht alle Litzen werden dabei
+unbedingt für fischertechnik gebraucht:
+
+Programm z. B. auch als Analogeingang
+(Fotowiderstand, Geräusch- oder aktiver
+Lichtsensor) oder als Taster konfigurieren,
+je nachdem, welchen Sensor man gerade
+zur Hand hat.
+
+Auf Sensorseite:
+Pin Farbe
+
+Sensoranschluss
+(Standardwerte)
+
+
+weiß
+
+ANA Analog +9V
+
+
+schwarz GND (-)
+
+
+rot
+
+GND (-)
+
+
+grün
+
++4,3V
+
+
+gelb
+
+SCL (digital, I²C: Serial
+CLock Line)
+
+
+blau
+
+SDA (digital, I²C: Serial
+DAta Line)
+
+Auf der Motorseite:
+Pin Farbe
+
+Motoranschluss
+
+
+weiß
+
+Motor +9V; PWMSteuerung
+
+
+schwarz Motor -9V; PWMSteuerung
+
+
+rot
+
+GND (-)
+
+
+grün
+
++4,3V
+
+
+gelb
+
+Motorencoder (Kanal a;
+Schmitt-TriggerFunktion)
+
+
+blau
+
+Motorencoder (Kanal b;
+Schmitt-TriggerFunktion)
+
+Oben die drei Motorports (mit integrierten
+Encoderkontakten)
+und
+der
+USBAnschluss, unten die vier I²C/AnalogSensorports, in der Mitte vier fest eingebaute programmierbare Taster (Buttons).
+Wichtig zu wissen: Alle Sensorports sind
+einerseits sechsadrige I²C-Ports, man kann
+sie aber andererseits im eigenen Software54
+
+
+Für passive Analog-Sensoren und Taster
+sind nur die weiße und die schwarze Litze
+des
+sechspoligen
+Verbindungskabels
+interessant. Praktischerweise werden genau
+diese beiden auch für die PWM-Steuerung
+von Gleichstrom-Motoren (wie die von
+fischertechnik) verwendet.
+
+
+
+Computing
+
+Also: Einfach ein NXT-Kabel durchschneiden, die weiße und schwarze Litze
+abisolieren, Bananenstecker dran – fertig!
+
+Auch hier lässt sich an den Bananensteckern wieder fischertechnik-Hardware
+anschließen.
+
+Die restlichen Litzen kann man natürlich
+noch für kompliziertere Elektronik
+verwenden. An den Bananensteckern lässt
+sich
+jetzt
+fischertechnik-Hardware
+anschließen.
+
+Nur der Vollständigkeit halber: Es gibt
+auch ein fertiges Lego-Adapterkabel zur
+Verbindung von alten und neuen Systemen
+(RCX-Sensoren und Motoren an NXTSteckersystem):
+
+
+
+Neben diesem neueren Kabelsystem
+verwendet Lego auch noch ein älteres
+zweipoliges, das vorwiegend für die
+„normale“ Technic-Linie und früher auch
+für den Vorgänger RCX Verwendung fand.
+Es hat endständig einen 2 x 2-Flachbaustein mit vier Kontakten, von denen je
+zwei Verbindung zum damit gepaarten
+Kontakt herstellen. (Durch Verdrehung der
+Steckpartner gegeneinander entsteht eine
+Umpolung, das soll uns hier nicht weiter
+interessieren.)
+
+Hier ein Anschlussbeispiel: Ein NXT Baustein mit ft-Taster, ft-Fototransistor und ftMotor:
+
+
+
+Sensor- und Motor-Multiplexer
+Bananensteckern
+
+Was macht man nun, wenn die Anschlüsse
+nicht ausreichen für die Sensoren und
+Motoren, die man hat? Ganz einfach: man
+verwendet einen zweiten oder dritten
+
+
+gekoppelten NXT – oder einen Multiplexer. Fertige Multiplexer sind meist vom
+I²C-Typ. An ihnen lassen sich ganz
+verschiedene „Endgeräte“ anschließen.
+
+Lego-Ultraschall-Sensor, einem ft-Taster,
+einem ft-Fototransistor und einem RCXTast-Sensor an einem NXT-Port.
+
+Es gibt Multiplexer für drei bis vier Taster
+(Abb. 11) oder für vier beliebige Sensoren
+(Abb. 12 und 13) oder auch für zwei bis
+acht Motoren, z. B. von Hitechnic und/oder
+Mindsensors (Abb. 14). Diese lassen sich
+teilweise sogar kaskadieren (16 Taster oder
+Analog-Sensoren an einem NXT-Port).
+
+
+Anschluss selbstgebauter
+Sensoren und Geräte
+Außer „Fremd“-Hardware wie fischertechnik lassen sich auch selbstgebaute
+Sensoren am Lego NXT anschließen, etwa
+wie in Abb. 15 PCF8574-Muxer (hier ein
+8 x Taster- und ein 8 x LED-Multiplexer
+nebeneinander).
+
+
+Mit den oben beschriebenen KabelBananenstecker-Adaptationen sind diese
+Multiplexer auch für viele fischertechnikSensoren und Motoren geeignet (vgl.
+
+
+
+Die zwei sechsadrigen I²C-Kabel gehen an
+den NXT (per Portsplitter an 1 NXT-Port),
+während beide I/O-Steckerleisten mit
+Einzel- oder Flachbandkabel an ft-
+
+Buchsenplatten (Abb. 16) angeschlossen
+werden können:
+
+Computing
+
+gebaut. An diesem kann man z. B. vier
+fischertechnik-Fotowiderstände
+gleichzeitig anschließen.
+Sehr interessant ist auch ein MAX127basierter Muxer für 8 x Sharp GP2D*
+Infrarot-Distanzsensoren („Mightyboard“
+Platine von Xander Soldaat):
+
+(Foto: Danke an fischerfriendswoman.de)
+
+Schon hat man einen Anschluss z. B. für
+acht fischertechnik-Taster und acht steuerbare LEDs an einem einzigen NXT-Port.
+Per Portsplitter, einer Art mehrfach-YKabel (siehe Abb. 17), können noch
+weitere Einzelsensoren oder diverse Multiplexer am selben NXT-Port angeschlossen
+werden. Sie müssen nur jeweils eine
+andere I²C-Adresse haben. Dann hätte man
+16, 24, 32... Taster an einem NXT-Port.
+
+
+(MAX127, ohne ICs)
+
+Da sie alle I²C Devices sind, kann man sie
+gleichzeitig mit anderen Geräten per Portsplitter am selben NXT-Port betreiben und
+so auch nahezu beliebig viele Taster und
+Analogsensoren anschließen.
+Analog/I²C-Multiplexer brauchen teilweise
+eine zusätzliche externe Spannungsversorgung. Für einen Sensor-Mux reicht ein
+kleiner 9 V-Block, für einen Motor-Mux
+samt angeschlossener Motoren verwendet
+man besser einen 9 V bis 12 V fischertechnik- oder RC-Akkupack. Der versorgt
+dann alle anderen Verbraucher mit, den
+NXT (via externem DC-Stecker) eingeschlossen.
+
+Beispielanwendung
+
+
+Andere Bastler haben einen PCF8591 für
+einen vierfach-Analog-Sensor-Multiplexer
+
+Hier zur Veranschaulichung mein Schachroboter auf der Basis eines fischertechnik
+Trainingsroboters aus den 1980ern, gebaut
+etwa 2011. Er besitzt bisher einen NXT
+mit sieben „Motoren“ (elektromagnetische
+Ventile mitgerechnet) und zehn Sensoren
+über zwei Multiplexer (ein Motor-Mux und
+ein Taster-Mux): Drei Lego-EncoderMotoren steuern Drehturm, Ober- und
+Unterarm direkt über die drei NXT
+Encodermotor-Ports.
+
+
+
+sowie rechts dahinter fischertechnikTaster, die am PCF8574 Taster-Mux
+angeschlossen sind.
+
+Buchsenplatte am PCF8574 Mux
+
+Über einen Motor-Mux an einem NXTPort sind angeschlossen: ein fischertechnik-Motor für die Hand (auf/ab), zwei
+elektromagnetische fischertechnik-Ventile
+für den Greifer (auf/zu) und ein weiterer
+Lego-Motor für den Luftkompressor.
+
+am Motor-Mux
+
+
+Außerdem sind bisher acht Taster (teilweise über einen Taster-Mux) und ein
+analoger Pneumatik-Drucksensor verbaut.
+Zusätzlich werden noch zwei EOPD- (ein
+optischer Näherungssensor) und/oder FarbSensoren
+zur
+Figuren-Lokalisierung
+folgen.
+
+
+Zur genauen Positionierung der RoboterHand war es wichtig, dass die Encodermotoren auch Richtungssignale korrekt
+verarbeiten: wegen des passiven Nachlaufs, für die PD-Regler-Steuerung und zur
+manuellen Nachjustierung bei der Erstellung der Lookup-Positionierungstabelle.
+Daraus resultierte hier die ausschließliche
+Verwendung der NXT-Encoder-Motoren.
+
+Zur Programmierung
+Ich persönlich programmiere nur mit
+schriftbasierten Sprachen und auch nur für
+den autonomen Betrieb, am liebsten mit
+
+NXC. Das ist einfach, trotzdem Multitasking-fähig, hat aber zugegebenermaßen
+auch die einen oder anderen Nachteile und
+Mängel. Unter [1] findet sich eine kurze
+Funktionsübersicht als Einführung.
+Für objektorientierte Programmierung (mit
+einer riesigen Klassenbibliothek) ist Java
+(LeJos) empfehlenswert [2].
+Selbstverständlich gibt es aber auch Iconbasierte „Programmiersprachen“, zum
+einen das mitgelieferte (inzwischen kostenlose) „NXT-G“ [3], zum anderen auch das
+recht teure Labview, sowie noch weitere
+andere.
+
+Computing
+
+Ich hoffe, ich konnte ein paar interessante
+Perspektiven in einem anderen RobotikBereich aufzeigen, und ich wünsche allen
+Interessierten viel Spaß beim Experimentieren mit dieser alternativen RobotikPlattform!
+
+Quellen
+[1]
+
+Mindstorms Forum: NXC: Einfache
+Programme für Einsteiger.
+
+[2]
+
+Julian Schill und Boris Stach: Programmierung der Lego Mindstorms
+NXT-Roboter mit leJOS, Karlsruher
+Institut für Technologie.
+
+[3]
+
+NXT-G ISO-Image, Lego
+
+
+

@@ -1,0 +1,186 @@
+
+Computing
+
+Computing
+
+Sensoren am TXT: Der LDR
+Kurt Mexner
+Mit verschiedenen Sensoren werden die Möglichkeiten des TXT Discovery Sets erheblich
+erweitert. Mit dieser Reihe möchte ich einige dieser Sensoren vorstellen. Heute geht es um die
+Wahrnehmung von Licht.
+
+„Fremdsensoren“ für den TXT
+Das Gute am TXT ist seine Offenheit für
+„Fremdsensoren“. Ohne große Probleme
+lassen sich preisgünstige Sensoren der
+Elektronik-Bauteile-Händler
+(Conrad,
+Pollin, Reichelt u. a.) anschließen und in
+ROBO Pro nutzen.
+An den Eingängen I1 bis I8 können beispielsweise
+ LDR (lichtempfindliche Widerstände)
+ Reedkontakte (schalten bei Kontakt mit
+einem Magneten)
+ Infrarot-Fotodioden und -transistoren
+ Temperatursensoren
+ Miniaturschalter
+ Neigungsschalter
+angeschlossen werden und ermöglichen
+ROBO Pro recht sensibel zu werden.
+Auch „Fremdaktoren“ wie handelsübliche
+LED in allen Farben können an den Ausgängen des TXT angeschlossen werden. Sie
+können mit 3-9 Volt angesteuert werden
+und verbrauchen ca. 20mA bis 100mA.
+Wichtig ist, auf die richtige Polung zu achteten und einen Vorwiderstand zu verwenden. Da der Ausgang des TXT mit 9 Volt
+arbeitet, sind wir mit einem Wert von 390
+Ohm/0,25 Watt auf der sicheren Seite.
+
+Alle diese Bauteile kosten nur Centbeträge
+und erlauben vielfältige Experimentiermöglichkeiten und Anwendungen. Häufig gelingt es auch, diese mit Heißkleber in
+fischertechnik-Bausteine zu „integrieren“
+(Abb. 2).
+Alle von mir im Folgenden vorgestellten
+Sensoren, Schaltungen und Programme
+wurden von mir ausprobiert und getestet.
+Trotz aller Sorgfalt meinerseits kann ich
+keine Haftung für Schäden übernehmen, die
+durch die Umsetzung meiner Vorschläge
+entstehen.
+Im Gegensatz zu meinen früheren Beiträgen
+muss hier der TXT Controller eingeschaltet
+werden, da die Sensoren im Simulationsmodus nicht ausgewertet werden können.
+
+ROBO Pro geht ein Licht auf
+LDR mit Schwellenwert-Einstellung
+Ein LDR (Light Dependent Resistor) reagiert ähnlich wie der fischertechnik-Fototransistor auf Licht. Im Unterschied zu
+jenem muss man hier nicht auf die richtige
+Polung achten und kann ihn direkt an einen
+Universaleingang anschließen. Im Eingangselement wählt man „Fotowiderstand“
+und erhält dann Werte zwischen 0 und
+15.000. Mit steigender Helligkeit sinkt der
+Widerstandswert; bei Abschattung oder
+Verdunklung steigt sein Wert. Mit weiterem
+Programmcode kann man Schwellenwerte
+bestimmen und LEDs, Motoren oder
+Summer ansteuern.
+
+
+Im herunterladbaren Programm „LDR mit
+Schwellenwerteinstellung“ (siehe Downloaddatei zum Beitrag) übernimmt die Variable VAR1 den aktuell gemessenen Helligkeitswert. Über den Regler wird der
+Schwellenwert (Schaltpunkt) der Varibalen
+VAR2 mitgeteilt. Das Vergleichselement
+wertet beide Variablen aus. Wenn VAR1
+größer ist, wird die Lampe im Programmierfeld ein-, ansonsten ausgeschaltet. Der
+Regler erhöht den Bedienkomfort. Die
+Empfindlichkeit kann so entsprechend den
+jeweiligen Lichtverhältnissen angepasst
+werden.
+Folgende Anwendungen bieten sich an:
+ Dämmerungsschalter (wenn das Zimmer
+verdunkelt wird, geht die Beleuchtung
+am fischertechnik-Modell an)
+ Lichtschranke (Rundenzähler bei einer
+Eisenbahn oder Autorennbahn, Alarmanlage)
+Wer keinen der fischertechnik-LDR-Sensoren besitzt (Abb. 1), findet im ElektronikBauteile-Handel für unter einem Euro
+Ersatz (Abb. 2).
+
+LDR mit automatischer und kontinuierlicher Schwellenwert-Anpassung
+Am Beispiel einer Eisenbahn mit Rundenzähler wird folgendes Problem deutlich:
+Der LDR ist so angebracht, dass die vorbeifahrende Eisenbahn ihn abdunkelt. Im
+Laufe des Tages verändert sich jedoch die
+Helligkeit: Wolken treten vor die Sonne
+oder die Sonne steht tiefer. Der Schwellenwert des LDR müsste alle ca. 10 Minuten
+verändert werden. Es wäre doch schön,
+wenn ROBO Pro das automatisch tun
+würde.
+Genau das macht das Programm „LDR mit
+automatischer und kontinuierlicher Schwellenwert-Anpassung“, das ebenfalls von der
+ft:pedia-Webseite heruntergeladen werden
+kann.
+Im Hauptprogramm finden sich grau
+gefärbte Bereiche. In einem kann mit dem
+Schieberegler ein Prozentwert eingestellt
+werden. Dieser Wert regelt die Empfindlichkeit. Je höher der Prozentwert, desto
+unempfindlicher ist die Anlage. Der Zug
+muss sehr nahe am LDR vorbeifahren,
+damit er schaltet. Je geringer der Prozentwert, desto empfindlicher ist die Anlage.
+Hier wird eine Annäherung des Zuges viel
+früher erkannt.
+Darunter wird der Schwellenwert berechnet. Er liegt x Prozent über dem aktuell
+gemessenen Wert.
+
+(31361, 32697, 32698)
+
+
+
+Im grauen Feld rechts oben wird der aktuell
+gemessene Wert angezeigt.
+Darunter wird durch die grüne Lampe signalisiert, wenn der Schwellenwert überschritten wurde und ROBO Pro einen
+Schaltvorgang (z. B. einen Zählvorgang,
+ein Signal, eine Bahnschranke) auslöst. Die
+rote Lampe signalisiert, dass aktuell kein
+Schaltvorgang ausgelöst werden kann, da
+neu gemessen wird. Dies dauert nur den
+Bruchteil einer Sekunde. Es könnte aber
+theoretisch ein Zug, der vorbeifährt, nicht
+erkannt werden. Dies ist nur ein Detail – in
+
+
+Computing
+
+einer professionellen Schaltung könnte dies
+aber wichtig sein.
+Im grauen rechten unteren Feld (alle x
+Sekunden wird gemessen) wird die Variable „Zeit“ angezeigt. Bei einer Einstellung
+von z. B. 60 wird alle 60 Sekunden der
+aktuelle Helligkeits-Wert abgefragt und in
+eine der Variablen Wert 1 bis Wert 4
+übertragen.
+Grundeinstellungen:
+ Beim Starten sollte ein Prozentwert
+eingegeben werden. Ich empfehle 10%.
+ Im grauen Feld (alle x Sekunden wird
+gemessen) ist als Standardwert 60
+eingetragen. Dies kann geändert werden
+Programmbeschreibung:
+Beim Start wird im Hauptprogramm einmal
+der Wert des LDR gemessen und den
+Variablen Wert 1 bis Wert 4 zugewiesen.
+Im weiteren Verlauf wird der Wert alle 60
+Sekunden neu gemessen und nacheinander
+Wert 1 bis Wert 4 zugewiesen. Dies geschieht im Unterprogramm „Messen“, das
+viermal hintereinander aufgerufen wird.
+Nach dem Messen wird der Wert verarbeitet. Die vier gemessenen Werte werden
+addiert, durch 4 geteilt und damit ein
+Durchschnittswert (Variable Wert 5) errechnet. Somit führt eine schleichende
+Helligkeitsveränderung zu einem geänderten Durchschnittswert. Im grauen Bereich
+des Hauptprogrammes (Schwellenwert liegt
+x Prozent ...) wird daraus der Schwellenwert (= Schaltpunkt) berechnet, der x
+Prozent über dem Wert von Wert 5 liegt.
+
+
+Diese Reihenfolge (Messen, Verarbeiten,
+Schalten) wird noch dreimal wiederholt.
+Dann geht es von vorne los.
+Hinweis:
+Wenn der aktuelle Messwert bei ca. 13.00014.000 liegt, ist es zu dunkel. Der errechnete Schwellenwert liegt dann über 15.000;
+das ist der Maximalwert, den ROBO Pro
+beim LDR erfassen kann.
+
+ROBO Pro sucht Saarländer
+Ich stehe euch für Fragen, Anregungen oder
+Korrekturen gerne zur Verfügung. Zum
+Schluss noch ein persönliches Anliegen:
+Falls es im Saarland noch mehr fischertechniker gibt, würde ich mich über eine
+Kontaktaufnahme zum Erfahrungsaustausch freuen. Mein Schwerpunkt ist der
+Robotics TXT Controller mit der ROBO
+Pro Software.
+
+Im letzten Unterprogramm „Schalten“ wird
+der Schwellenwert mit dem aktuellen Wert
+(Var10) verglichen. Wenn der aktuell
+gemessene Wert über dem Schwellenwert
+liegt, wird geschaltet (Abb. 3).
+
+
+

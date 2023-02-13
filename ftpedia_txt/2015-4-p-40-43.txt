@@ -1,0 +1,157 @@
+
+
+Elektronik
+
+Nikon-Kamera-Ansteuerung über IR
+Andreas Gail
+Was hat dieses Thema mit fischertechnik zu tun? Zunächst sollte erst einmal die Möglichkeit
+geschaffen werden, Aufnahmen aus der fischertechnik-Welt heraus anstoßen zu können. Der
+nachfolgende Artikel zeigt, wie das über einen einfachen Taster, die guten alten „Silberlinge“
+oder auch einen Robo TX/TXT Controller ermöglicht werden kann. In einer späteren Ausgabe
+der ft:pedia wird eine Anwendung gezeigt.
+
+Die Kamera darf nicht zerstört
+werden
+Bei aller Experimentierfreude ist es nach
+der persönlichen Sicherheit oberstes Gebot,
+dass die vergleichsweise teure KameraAusrüstung nicht durch irrtümliche Verschaltungen zerstört wird. Deshalb wurde
+zur Ansteuerung die durch Nikon bereitgestellte Infrarot-Fernbedienung (IR) als
+Grundlage verwendet; siehe Abb. 1. Diese
+Fernbedienung arbeitet gemäß Hersteller
+mit einer ganzen Reihe von Nikon-Kameras
+zusammen.
+
+Wenn es im Rahmen der Verwendung zu
+einem Fehler kommen sollte, wird höchstens die Fernbedienung zerstört. Wegen der
+fehlenden Kabelverbindung ist die Kamera
+selbst jedoch geschützt. Es soll nicht
+verschwiegen werden, dass die Möglichkeiten über die IR-Fernbedienung recht
+bescheiden sind: Damit kann nur ein Bild
+ausgelöst werden, solange die Kamera
+selbst in Bereitschaft ist. Parametereinstellungen oder sonstiges sind nicht möglich.
+
+Die IR-Fernbedienung
+Die Fernbedienung kann recht einfach
+geöffnet werden. Hierzu wird die obere
+Verschlussfolie entfernt:
+
+Fernbedienung
+
+
+
+Das eigentliche Innenleben der IR Fernbedienung besteht aus einer kleinen Platine
+und einer 3 V-Knopfzelle zur Stromversorgung. An die Platine der IR-Fernbedienung müssen drei Kabel angelötet
+
+werden: ein Anschluss als Eingangssignal
+(gelb) zur Kamera-Ansteuerung und zwei
+Anschlüsse zur Stromversorgung (+3 V =
+rot; Masse = blau). Abb. 3 und 4 zeigen das.
+Der Hinweis zum Anlöten des Signaleingangs wurde bereits zuvor im Internet in
+abgewandelter Form veröffentlicht [1, 2].
+
+angelöteten Kabeln
+
+zur externen Ansteuerung
+
+Diese Lötarbeit gemäß Abb. 4 bedarf neben
+einer ruhigen Hand auch gute Sicht auf die
+Dinge. Gelötet wurde mit einem 8 WLötkolben.
+
+Anforderungen an das zu
+erstellende IR Modul
+∂ Die Verwendung soll einfach sein.
+∂ Ein fehlerhafter Anschluss z. B. an den
+Robo TX Controller (RTXC) darf das
+Modul nicht zerstören.
+∂ Die Spannungsversorgung soll mit Hilfe
+von 9 V möglich sein.
+
+Elektronik
+
+Verbindung der Welten
+Mit dem Anlöten von drei Kabeln an die
+Fernbedienung ist es leider noch nicht
+getan, denn die IR-Fernbedienung arbeitet
+mit 3 V und fischertechnik mit 9 V.
+Stromversorgung
+Um die Handhabung des späteren IRModuls möglichst einfach zu gestalten, soll
+die 3 V-Stromversorgung aus fischertechnik heraus erfolgen. Nun könnte man auf
+die Idee kommen, dass hierzu ein Motorenausgang eines Robo TX Controllers einfach
+so parametriert wird, dass hier eine Spannung von 3 V dauerhaft ansteht. Das klappt
+jedoch leider nicht! Bei Mikrocontrollern
+ist es üblich, dass die Leistungseinstellung
+an „analogen“ Ausgängen über das PWMVerfahren (Pulsweitenmodulation) erfolgt.
+Hierbei wird die volle bereitstehende
+Spannung (9 V) in sehr schneller Folge als
+Rechtecksignal ein- und ausgeschaltet. Die
+variable Leistungseinstellung ergibt sich
+dabei aus dem Verhältnis der ein- bzw.
+ausgeschalteten Pulslänge.
+Um eine Gleichspannung von 3 V zu erzeugen, wird in der Schaltung gemäß Abb. 5
+ein Spannungsregel-IC verwendet, Typ
+Texas Instruments LP2950 (Conrad
+#1014267). Die Spannungsstabilisierung
+erfolgt mit zwei Elektrolytkondensatoren.
+Als Verpolungsschutz wird zusätzlich ein
+Brückengleichrichter eingesetzt.
+Signalweitergabe
+Das Signal aus der fischertechnik-Welt,
+welches an die IR-Fernbedienung weitergegeben werden soll, hat wiederum eine
+Spannung von 9 V. Zur Verbindung dieser
+beiden Systeme wird ein Optokoppler
+eingesetzt, Typ Everlight EL817 (Conrad
+#156422). Die im Optokoppler befindliche
+IR-Diode wird durch einen 510 ΩVorwiderstand strombegrenzt.
+
+∂ Das Modul soll in einem eigenen
+Gehäuse eingebaut sein.
+
+
+
+
+
+Schaltungsaufbau
+Schaltplan
+Die oben beschriebene Schaltung ist in
+Erster Test auf dem Steckbrett
+
+Derartiges lässt sich vergleichsweise einfach auf einem Steckbrett gemäß Abb. 6
+durchführen.
+Fertiger Aufbau des IR Moduls
+In Abb. 7 und Abb. 8 ist der vollständige
+Aufbau des neuen IR Moduls gezeigt. Alles
+passt zusammen in ein fischertechnikBatteriegehäuse.
+
+fischertechnik mit der Nikon-Fernbedienung
+
+Bei allen Schaltungsplanungen kann die
+Überlegung so gut sein wie sie will: Ob am
+Ende wirklich alles zusammen wunschgemäß funktioniert zeigt nur der Versuch.
+
+
+
+
+Elektronik
+
+
+Hinweis zur Bewaffnung der
+Augen
+Als sehr hilfreich bei kleinsten Lötarbeiten
+hat sich die Verwendung einer Lupenbrille
+(Abb. 9) erwiesen: vierfache Vergrößerung,
+Arbeitsabstand 25 cm.
+
+Quellen
+[1]
+
+Modifikation Nikon ML-L3,
+Variante 1.
+
+[2]
+
+Modifikation Nikon ML-L3,
+Variante 2.
+
+
+
+

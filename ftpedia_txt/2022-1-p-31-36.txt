@@ -1,0 +1,181 @@
+
+Modell
+
+Modell
+
+Gabelstapler – ferngesteuert (1)
+Claus Ludwig
+Ferngesteuerte Modelle sind schon immer fester Bestandteil meines fischertechnik-Programms. Anfangs nur mit Fernsteuerungen von fischertechnik, später auch mit Multifunktionsfernsteuerungen aus dem Modellbaubereich. In loser Folge möchte ich einige Modelle und
+deren Fernsteuerungen in der ft:pedia vorstellen. Den Anfang macht der Ende 2021
+entstandene Gabelstapler.
+
+Hintergrund
+Die Idee, einen Gabelstapler zu bauen, ist
+über zehn Jahre alt und hat ihren Ursprung
+in dem von Harald Steinhaus 2009 vorgestellten Modell [1]. „Gut Ding will Weile
+haben“ – nun war die Zeit reif. Die Hubvorrichtung habe ich von Harald übernommen und nach meinen Vorstellungen weiterentwickelt. Der Stapler selbst und der
+Gabelhalter mit Gabeln sind Neukonstruktionen.
+
+
+Zur Steuerung wird die aktuelle Fernsteuerung von fischertechnik verwendet.
+Neben den Fahrfunktionen kann der Gabelhalter mit den Gabeln gehoben und gesenkt
+sowie nach vorne und hinten geneigt
+werden.
+
+
+
+Hubfunktion/-vorrichtung
+In der Grundkonstruktion der Hubvorrichtung von Harald Steinhaus wurde im unteren Bereich der Winkelträger durch Grundbausteine ersetzt und das Ganze durch
+zusätzliche Bausteine versteift. Für den Antrieb wird ein Powermotor 50:1 (rote
+Kappe) verwendet – wie auch von Harald
+empfohlen (Abb. 5).
+Die Lage des Motors wurde so weit wie
+möglich nach unten verlegt, um einen tiefen
+Schwerpunkt zu erreichen. Um die Kraft
+des Motors auf die Schneckenspindeln links
+und rechts zu übertragen, kann ein normales
+Anziehen des Z20 mit Hand – nach meinen
+Erfahrungen – nicht ausreichend sein. Bei
+größerer Belastung (zu hebenden Gewichten) kann das Z20 auf der Antriebswelle
+durchrutschen.
+Es gibt mehrere Möglichkeiten damit umzugehen:
+ Es reicht einem aus, was auf diese Weise
+gehoben werden kann, und man nutzt das
+Durchrutschen des Z20 als natürlichen
+Überlastungsschutz (Rutschkupplung);
+
+
+ man zieht die Nabenmutter mit dem
+Spezialschlüssel von Andreas Tacke an
+[2], was aber zu Verwerfungen des dünnen Z20-Rings führen kann und einen
+„eirigen“ Lauf des Z20 zur Folge hat;
+oder
+ man verklebt die Flachnarbe und Steckachse mit Sekundenkleber, mit dem
+Nachteil, dass man die Teile später nicht
+anders verwenden kann.
+Um die Stabilität weiter zu verbessern
+wurde der Abstand zwischen den beiden
+Schneckenmuttern auf der linken und
+rechten Spindel (Abb. 6) jeweils um 15 mm
+vergrößert. Zuletzt wurde die Hubvorrichtung am oberen Anschlag noch mit einem
+Endschalter versehen (Abb. 8).
+
+
+
+
+Modell
+
+
+
+
+Gabelhalter und Gabeln
+Der Gabelhalter mit den Gabeln wurde neu
+konstruiert. Um möglichst flache und stabile Gabeln zu erhalten, wurde eine Konstruktion aus Messingstangen und Bausteinen 7,5 gewählt (Abb. 10). Jede Gabel
+besteht aus zwei Messingstangen mit einem
+Durchmesser von 4 mm und einer Länge
+von 105 mm und sieben Bausteinen 7,5. Zur
+Befestigung der Teile wurden diese an den
+Enden mit Sekundenkleber verklebt.
+Sekundenkleber wurde auch eingesetzt bei
+der oberen Verbindung vom Vorderteil des
+Gabelträgers und den Führungen (Abb. 11).
+
+
+Neigetechnik
+Wie beim Original wurde die Hubvorrichtung mit einer Neigetechnik ausgestattet.
+Dies erfolgt über einen Powermotor 20:1
+(graue Kappe), eine 4 mm-Gewindestange,
+
+
+
+einen Baustein 15 mit Gewinde und entsprechendem Gestänge. Motor und Gewindestange werden über einen Verbinder/
+Adapter von Andreas Tacke verbunden.
+
+
+Der Stapler
+
+
+Wer nicht über einen entsprechenden Baustein mit Gewinde verfügt und diesen auch
+nicht über fischerfriendsman (Stefan Roth)
+beziehen kann, der kann diesen auch selbst
+bauen. Benötigt werden ein Baustein 15 mit
+Ansenkung (32321), eine M4 Gewindemutter, etwas Gewindestange und eine Flügelmutter. Die Mutter wird auf die Gewindestange aufgeschraubt und erwärmt. Der
+Baustein mit Ansenkung wird Richtung
+Mutter auf die Gewindestange aufgeschoben und mittels der Flügelschraube auf die
+Gewindemutter gepresst.
+
+Der Stapler selbst ist eine komplette Neukonstruktion. Möglich wurde dies insbesondere durch die bei Aufräumarbeiten gefundenen Reifen von Conrad, die für die Vorderräder verwendet wurden und die den
+Maßstab vorgeben. Die Reifen werden seit
+ca. 2005 immer wieder gern von vielen
+Kollegen für fischertechnik-Modelle eingesetzt, sind aber seit einigen Jahren nicht
+mehr im Programm. Was man auf den
+Bildern nicht sehen kann, ist, dass ich,
+seitdem ich mit diesen Reifen arbeite, sie
+gerne mit den großen fischertechnik-Traktorreifen fülle. Von den Traktorreifen habe
+ich in der Regel mehr als ich brauche, und
+die Conrad-Reifen erhalten so eine deutlich
+bessere Festigkeit und Belastbarkeit.
+
+
+Der Antrieb erfolgt über einen Powermotor
+50:1 und dem aktuellen Differenzial. Anstelle der Rastachsen aus Kunststoff wurden
+Metallachsen von Andreas Tacke verwendet (Abb. 14).
+
+
+Modell
+
+Ein weiteres Feature des Staplers ist die
+aufklappbare Heckhaube (Abb. 16), unter
+der sich der Akku befindet. Erstmals habe
+ich hier auch die neuen Rund-Bausteine für
+das Design verwendet. Ebenfalls zum
+Design gehört das gläserne Oberteil der
+Haube. Das lässt sich allerdings nur realisieren, wenn man bereit ist, die gläsernen
+Bauplatten auf der Längsseite etwas zu
+kürzen. Neben dem Akku und vor dem
+Hauptschalter befindet sich noch ein
+Batteriegehäuse mit Metallkugeln, um mehr
+Gegengewicht für die zu hebenden Lasten
+zu haben (Abb. 17).
+
+Die Lenkung gestaltete sich anfangs etwas
+schwierig, da der Servo nicht so eingebaut
+werden konnte, wie es in den fischertechnik-Bauanleitungen beschrieben ist. Grund
+dafür ist die Hinterradlenkung (Abb. 15).
+Hier kommt eine der Schwächen der
+fischertechnik-Fernsteuerung zum Tragen:
+Bei einer Fernsteuerung für den Modellbaubereich wäre es kein Problem, denn
+diese verfügen in der Regel über eine Servoumkehrfunktion. Mit der Servoumkehrfunktion kann die Ausschlagrichtung umprogrammiert werden, sodass es keine Rolle
+spielt, wie der Servo eingebaut wurde. Bei
+der fischertechnik-Fernsteuerung geht das
+nicht. Es kann nur durch einen entsprechend
+veränderten Einbau gelöst werden. Zusätzlich war bei diesem Modell auch eine Anpassung der Servolasche erforderlich. Diese
+musste in der Breite um 2 mm gekürzt
+werden, damit ein – dem Stapler – angemessener Lenkeinschlag möglich ist.
+
+
+
+
+
+
+
+Die Stromversorgung wird neben dem
+Hauptschalter noch über zwei Taster neben
+dem Fahrersitz gesteuert (Abb. 19). Dabei
+dient der eine Taster für die Stromversorgung des Empfängers, und der andere
+Taster schaltet die Lichtfunktionen ein.
+
+Referenzen
+[1]
+
+Harald Steinhaus: Gabelstapler. ftcBildersammlung, 05.02.2009.
+
+[2]
+
+Andreas Tacke: ft-Spezialteile made
+by TST (Teil 4). ft:pedia 2/2013,
+S. 11–12.
+
+
+
+

@@ -1,0 +1,471 @@
+
+
+Computing
+
+The fischertechnik Interface for the Rest of us
+Erik Andresen
+Wer sein fischertechnik-Interface unter Linux nutzen möchte, stellt fest, dass es von Robo Pro
+keine Linux-Version gibt. Um nicht doch auf eine Windows-Installation zurückgreifen zu
+müssen, gibt es Bibliotheken, mit denen das Interface auch von Linux aus programmiert
+werden kann. Dieser Beitrag beschreibt die Installation so einer Bibliothek unter einem
+Ubuntu Linux mit Inbetriebnahme des Robo Explorers.
+
+fischertechnik und Linux
+Als „unwirtschaftlich“ wurde eine versprochene Linux Version bezeichnet: Wer ein
+Robo-Interface kaufte in dem Glauben,
+dass die angekündigte Linux-Version mit
+der Artikelnummer 93297 [3] wirklich
+erscheint, wurde eines Besseren belehrt.
+Da sich der typische Linux-Anwender aber
+nicht mit rein mechanischen Modellen
+zufrieden gibt, wurden mit der ftApi [5]
+und der libroboint [1] (früher unter dem
+Namen libft) zwei Bibliotheken entwickelt,
+mit denen sich das Robo-Interface unter
+Linux betreiben lässt. Bei der ftApi handelt
+es sich um eine von Mitarbeitern der
+Goethe-Universität in Frankfurt geschriebene objektorientierte C++-Bibliothek.
+Die alternative C-Bibliothek libroboint ist
+der im C-Compiler-Paket für Windows
+enthaltenen Knobloch-Bibliothek ftlib [7]
+nachempfunden: Programme, die für die
+ftlib geschrieben wurden, sollten ohne
+große Änderungen mit der libroboint lauffähig sein.
+Beide Bibliotheken unterstützen nur das
+Arbeiten im „Online“-Modus, können die
+Modelle also nur steuern, wenn das Modell
+mit dem PC verbunden ist. Für den
+„Download“-Betrieb kann das RoboIntBasic [6] verwendet werden. Das neue TX
+
+
+Interface wird bislang von keiner der
+beiden unterstützt.
+Eigenschaften der libroboint sind unter
+anderem:
+Kompatibilität mit
+Bibliothek libft.
+
+der
+
+Knobloch-
+
+In der Programmiersprache C geschrieben, was die Anbindung von vielen
+Programmiersprachen ermöglicht.
+Durch die Verwendung von libusb [8]
+ist kein Kernel-Modul erforderlich.
+Damit ist der Betrieb unter vielen
+Betriebssystemen, wie Linux, BSDVarianten, Mac OS-X und Android
+möglich.
+Alternative Anbindung in der höheren
+Programmiersprache Python [10].
+Unterstützt werden Intelligent Interface
+mit Extension, Robo Interface, Robo
+I/O Extension und Robo RF Data Link.
+Grafisches Diagnose- und Testprogramm ftdiagnose zum schnellen
+Testen eines Interface.
+Upload von mit RoboIntBasic erstellten
+Programmen über das Konsolenprogramm ftuploader.
+Wir ihr Name schon sagt, ist die libroboint
+eine Bibliothek: Sie ist damit kein eigen-
+
+ständiges Programm wie Robo Pro, mit ihr
+können aber eigene Programme erstellt
+werden, die Modelle kontrollieren. In
+diesem Beitrag soll die libroboint unter
+Linux installiert und ein Robo Explorer
+damit kontrolliert werden.
+
+Installation der libroboint
+Aktuell ist libroboint 0.5.0, die mit einem
+Browser direkt als gepacktes Archiv unter
+dem Namen libroboint-0.5.0.tar.gz von der
+Homepage [1] herunter geladen werden
+kann und hier unter einem Ubuntu 12.04
+[2] installiert wird. Unter anderen Distributionen verläuft die Installation ähnlich.
+Die Software muss vor der Installation
+kompiliert werden: Dazu müssen ein CCompiler sowie weitere Hilfsprogramme
+vorhanden sein. Unter Ubuntu sind dies die
+Pakete cmake, gcc, libc6-dev, libusb-dev
+und python-qt4. Bei anderen Linux-Distributionen sollten die Pakete einen
+ähnlichen, wenn nicht identischen Namen
+haben.
+Für die Installation wird eine Konsole
+benötigt. Diese findet man in Ubuntus
+Unity-Oberfläche unter dem normalerweise links oben positionierten DashKnopf
+Installierte Anwendungen
+Terminal.
+
+Computing
+
+Listing 1 zeigt den kompletten Vorgang;
+die Befehle werden alle nacheinander in
+die Konsole eingegeben. Dabei wird die
+libroboint zuerst aus dem vom Browser
+Firefox
+standardmäßig
+verwendeten
+Ordner Downloads entpackt und mit dem
+Dreisatz cmake, make und make install
+kompiliert und installiert.
+
+Erscheint hier kein Fehler, kann die Bibliothek
+installiert werden.
+
+CMake prüft dabei, ob auf dem Computer
+alle benötigten Bibliotheken und Programme vorhanden sind und erstellt
+abschließend die Anweisungen, die make
+benutzt, um die Software zu kompilieren
+(vergleiche Abb. 1). Mit dem als root aufgerufenen make install wird die Bibliothek
+in das Verzeichnis /usr/local installiert und
+mit ldconfig wird dem Betriebssystem mitgeteilt, dass eine neue Bibliothek vorhanden ist. Dazu sollte der Pfad /usr/local/lib
+in die Datei /etc/ld.so.conf eingetragen
+sein. Unter Ubuntu ist dies bereits der Fall.
+
+> tar xvzf ~/Downloads/libroboint-0.5.0.tar.gz
+> cd libroboint-0.5.0
+>
+> cmake .
+> make
+> sudo make install
+> sudo ldconfig
+>
+> sudo cp udev/fischertechnik.rules /etc/udev/rules.d/
+> sudo udevadm control --reload-rules
+>
+> sudo make diag
+> sudo cp diag/ftdiagnose /usr/local/bin
+> sudo chmod 755 /usr/local/bin/ftdiagnose
+
+Listing 1: Vollständige Installation der Bibliothek mit Diagnoseprogramm.
+Das Kommandoprompt, üblicherweise „username@hostname:/Arbeitsordner$“,
+wird hier verkürzt durch ein „>“ dargestellt.
+
+
+
+Damit man als Benutzer die Berechtigungen für den Zugriff auf die ft-Hardware
+erhält, wird eine udev-Regel kopiert und
+anschließend udev durch neu laden mitgeteilt, die Regel gleich anzuwenden. udev
+ist ein Systemdienst, der bei Ereignissen
+wie dem Einstecken eines USB-Gerätes
+Regeln, z. B. das Setzen von Berechtigungen, ausführt.
+Mit make diag wird das Python-basierte
+Diagnoseprogramm kompiliert und installiert. Die letzten zwei Zeilen kopieren das
+Diagnoseprogramm und machen es ausführbar.
+Mit einem abschließenden Test wird alles
+überprüft. Dazu wird ein Robo-Interface
+mit Sensoren und Aktoren (z. B. einem
+Taster und einem Motor) über USB mit
+dem Computer verbunden. Das Diagnoseprogramm wird über die Konsole mit
+ftdiagnose gestartet.
+
+Ist das Interface korrekt angeschlossen,
+kann es, wie in Abb. 3 zu sehen, getestet
+werden: Dabei können Aktoren wie Motoren und Lampen gesteuert und alle digitalen und analogen Eingänge ausgelesen
+werden. Sollte etwas nicht wie erwartet
+funktionieren, lohnt sich ein Blick in die
+Datei README der libroboint. Zusätzlich
+kann z. B. im Forum der ft Community [4]
+um Hilfe gebeten werden.
+Besteht das Interface alle Tests, kann nun
+ein komplettes Modell in Betrieb genommen werden. Ein C-Beispiel ist in der
+libroboint im Ordner examples/ zu finden.
+Die erweiterte Dokumentation im Ordner
+doc/html/ kann mit dem Befehl make doc
+generiert werden.
+
+wird verwendet.
+
+Im Dialog File
+Open Interface zum
+Verbinden mit dem Interface können die
+verschiedenen Interface-Arten geöffnet
+werden. Zur Verfügung stehen die Interfaces aus der Robo-Familie über USB und
+RS232 (seriell) sowie das Intelligent Interface mit und ohne Extension. Da wir das
+Interface über USB angeschlossen haben,
+wird es, wie in Abb. 2 dargestellt, unter
+den USB-Geräten angezeigt und kann
+durch Drücken auf den Knopf „OK“
+geöffnet werden.
+
+
+Eingänge und Steuern von Motoren ohne erst
+ein Programm zu schreiben.
+
+Die Welt erkunden
+Für Programmieranfänger ist die Sprache
+C schwer zugänglich, deswegen wird hier
+beispielhaft ein Robo Explorer (Bild 4) mit
+Python gesteuert. Wer noch nie mit Python
+gearbeitet hat, dem sei das Tutorial [9] auf
+der Homepage empfohlen. Es gibt keinen
+Unterschied, ob der Explorer dabei direkt
+
+über USB oder mit dem Robo RF Data
+Link mit dem Rechner verbunden ist.
+Die Dokumentation zur Python-Schnittstelle bekommt man auf die bei Python
+übliche Weise durch die Anweisungen
+import robointerface
+und
+help(robointerface)
+aus dem Python-Interpreter.
+Die Python-Schnittstelle kennt einfache
+Befehle zum Steuern einzelner Motoren.
+Für komplexere Befehle wie „fahre vorwärts“ fügen wir der Bibliothek die neue
+Funktion setSpeed(l, r) aus Listing 2 hinzu:
+Mit setSpeed(7, 7) fährt unser mobiler
+Roboter mit maximaler Geschwindigkeit
+vorwärts, mit setSpeed(-7, -7) mit maximaler Geschwindigkeit rückwärts, mit
+setSpeed(-3, 3) dreht er mit mittlerer
+
+Computing
+
+Geschwindigkeit nach links usw. Dabei
+wird auf die Funktion setMotor(iMotor,
+cDirection,
+iSpeed)
+zurückgegriffen:
+iMotor ist die Nummer des Motors, der
+angesteuert wird, im Bereich von eins bis
+vier, cDirection ist „l“ für Links, „r“ für
+Rechts und „s“ für Stopp. Das letzte,
+optionale Argument ist die Geschwindigkeit als Zahl von eins bis sieben (Standardwert ist sieben).
+Mit Hilfe der Funktion setSpeed() soll der
+Roboter jetzt
+1. solange kein Hindernis vorhanden ist,
+vorwärts fahren,
+2. bei einem Hindernis links drehen, bis
+die Sicht frei ist, und
+3. anschließend wieder wie in 1. vorwärts
+fahren.
+
+def setSpeed(self, l, r):
+"""Set the speed and direction of the Explorer in one command
+l = speed of left engine -7 <= l <= 7
+r = speed of right engine -7 <= r <= 7
+"""
+# handle left engine
+if l > 0:
+# left forward
+self.SetMotor(1, 'l', l)
+elif l < 0:
+# left reverse
+l*=-1
+self.SetMotor(1, 'r', l)
+else:
+# left stop
+self.SetMotor(1, 's', l)
+# handle right engine
+if r > 0:
+# right forward
+self.SetMotor(2, 'l', r)
+elif r < 0:
+# right reverse
+r*=-1
+self.SetMotor(2, 'r', r)
+else:
+# right stop
+self.SetMotor(2, 's', r)
+# add new function to lib
+RoboInterface.setSpeed = setSpeed
+
+Listing 2: Erweiterung der robointerface-Bibliothek durch die für den
+Robo Explorer geschriebene Funktion setSpeed().
+
+
+
+
+from time import sleep
+from robointerface import *
+DIST = 50
+SPEED = 7
+SPEED_TURN = 7
+ri = RoboInterface(bEnableDist=1)
+while True:
+# normally forward
+ri.setSpeed(SPEED, SPEED)
+# forward until we see an obstacle
+while ri.GetD1() > DIST:
+sleep(0.1)
+# obstacly ahead, stop
+ri.setSpeed(0, 0)
+# turn left
+ri.setSpeed(-SPEED_TURN, SPEED_TURN)
+# until free
+while ri.GetD1() < DIST:
+sleep(0.1)
+
+Listing 3: Python-Quelltext, der den Robo Explorer fahren lässt.
+Hindernissen wird durch eine Drehung nach links ausgewichen.
+
+Den Algorithmus, realisiert in Python,
+zeigt Listing 3.
+Zeile 8 öffnet das Robo Interface: da die
+Distanzsensoren standardmäßig deaktiviert
+sind, müssen sie mit bEnableDist=1 aktiviert werden. Ausgelesen wird der erste
+Distanzsensor mit getD1(), was die Entfernung zum ersten Ziel in Zentimetern
+zurückgibt. Die sleep()-Befehle verhindern, dass der Prozess die komplette CPU
+belegt.
+
+
+Erweiterungen sind immer möglich. So
+nutzt Listing 4 in einem separaten Thread
+den Fotowiderstand an AX, um je nach
+Helligkeit die Lampen an- und auszuschalten.
+Listing 5 zeigt das komplette Programm.
+Es kann als Basis für eigene Programme
+verwendet werden, damit der Robo
+Explorer – auch von Linux aus – die Welt
+erkunden kann.
+
+def light_thread():
+while True:
+if ri.GetAX() > 1000:
+# dark: turn on lights
+ri.SetOutput(5, 7)
+ri.SetOutput(6, 7)
+else:
+# bright: turn off lights
+ri.SetOutput(5, 0)
+ri.SetOutput(6, 0)
+sleep(0.1)
+thread.start_new_thread(light_thread, ())
+
+Listing 4: Ein- und ausschalten der Lampen am Explorer, je nach Helligkeit.
+
+
+Computing
+
+Quellen
+[1]
+
+Andresen, Erik: ROBO Interface
+Bibliothek für Unix-artige Systeme.
+http://defiant.homedns.org/~erik/ft/li
+bft/
+
+[6]
+
+Kaiser, Thomas: Basic für das Robo
+Interface von fischertechnik.
+http://www.ftfanpage.de/roboint/robobas.html
+
+[2]
+
+Canonical Ltd.: Ubuntu.
+http://www.ubuntu.com
+
+[7]
+
+[3]
+
+ft Community: Computing ROBO
+Pro Linux, ArtNr 93297.
+http://www.ftdatenbank.de/search.php?keyword=9
+3297
+
+Knobloch GmbH: C-Compiler für
+ROBO Interface Version 1.66.
+http://www.fischertechnik.de/Resour
+ceImage.aspx?raid=4363
+
+[8]
+
+Libusb.org: Bibliothek für den
+Zugriff auf USB-peripherie vom
+Userspace. http://www.libusb.org
+
+[9]
+
+Python.org: Einführung in die
+Programmiersprache Python.
+http://docs.python.org/tutorial/
+(Deutsche Übersetzung:
+http://tutorial.pocoo.org/)
+
+[4]
+
+ft Community: Forum der
+fischertechnik Community.
+http://forum.ftcommunity.de
+
+[5]
+
+Holger Friedrich, David D.: ftApi,
+c++ Bibliothek für Linux und
+MacOS-X. http://www.vsi.cs.unifrankfurt.de/fischer/
+
+[10] Python.org: Homepage der
+Programmiersprache Python.
+http://www.python.org
+
+
+
+
+
+#!/usr/bin/env python
+import thread
+from time import sleep
+from robointerface import *
+DIST = 50
+SPEED = 7
+SPEED_TURN = 7
+def setSpeed(self, l, r):
+"""Set the speed and direction of the Explorer in one command
+l = speed of left engine -7 <= l <= 7
+r = speed of right engine -7 <= r <= 7
+"""
+# handle left engine
+if l > 0:
+# left forward
+self.SetMotor(1, 'l', l)
+elif l < 0:
+# left reverse
+l*=-1
+self.SetMotor(1, 'r', l)
+else:
+# left stop
+self.SetMotor(1, 's', l)
+# handle right engine
+if r > 0:
+# right forward
+self.SetMotor(2, 'l', r)
+elif r < 0:
+# right reverse
+r*=-1
+self.SetMotor(2, 'r', r)
+else:
+# right stop
+self.SetMotor(2, 's', r)
+# add new function to lib
+RoboInterface.setSpeed = setSpeed
+def light_thread():
+while True:
+if ri.GetAX() > 1000:
+# dark
+ri.SetOutput(5, 7)
+ri.SetOutput(6, 7)
+else:
+# bright
+ri.SetOutput(5, 0)
+ri.SetOutput(6, 0)
+sleep(0.1)
+if __name__ == "__main__":
+ri = RoboInterface(bEnableDist=1)
+thread.start_new_thread(light_thread, ())
+while True:
+# normally forward
+ri.setSpeed(SPEED, SPEED)
+# forward until we see an obstacle
+while ri.GetD1() > DIST:
+sleep(0.1)
+# obstacly ahead, stop
+ri.setSpeed(0, 0)
+# turn left
+ri.setSpeed(-SPEED_TURN, SPEED_TURN)
+# until free
+while ri.GetD1() < DIST:
+sleep(0.1)
+
+Listing 5: Komplettes Robo Explorer Programm aus dem Beitrag.
+
+

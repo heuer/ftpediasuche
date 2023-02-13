@@ -1,0 +1,203 @@
+
+
+Uhren
+
+Synchronuhr mit Stirnradgetriebe
+Dirk Fox
+In der ft:pedia und im Bilderpool der fischertechnik-Community wurden schon zahlreiche
+großartige Synchronuhren – von einem 50-Hz-Wechselstrom-Motor angetriebene Uhrengetriebe – vorgestellt. Hier kommt eine weitere Variante mit einem reinen Stirnradgetriebe,
+ausschließlich mit (ungemoddeten) fischertechnik-Zahnrädern.
+
+Hintergrund
+Synchronuhren üben eine ganz besondere
+Faszination aus. Wenn sie gelingen, surren
+sie leise vor sich hin und zeigen die Zeit mit
+großer Präzision an [1, 2] – jedenfalls
+soweit und solange die Netzfrequenz im
+Mittel bei 50 Hz liegt [3] und man ein
+fischertechnik-Netzteil mit Wechselstromausgang sein eigen nennt.
+Ihre Konstruktion birgt eine faszinierende
+Herausforderung: das passende Getriebe.
+Die Netzfrequenz von 50 Hz, die am Synchronmotor über Elektro- und PermanentMagnete die Welle (Antrieb) in Drehung
+versetzt, muss in eine Umdrehungsgeschwindigkeit der Minutenachse (Abtrieb)
+von 3600 Hz gewandelt werden, damit sich
+der Minutenzeiger genau einmal pro Stunde
+dreht.
+Wir benötigen also eine Übersetzung von
+1:180000 ins Langsame. Eine erste Untersetzung nimmt der die Uhr antreibende
+Elektromotor vor; der Faktor wird von der
+Zahl der verwendeten Permanent-Magnete
+am Rotor bestimmt [1, 4, 5].
+Für meine Synchronuhr mit Schrittschaltwerk, die den Minutenzeiger alle 60 Sekunden um ein 60stel weiterdreht, habe ich
+sechs Neodym-Magnete verwendet [6]. Bis
+zum Schrittschaltwerk benötigte ich eine
+Untersetzung von 1:500, die ich über drei
+
+
+Schneckengetriebe 1:10 und eine Übersetzung 2:1 realisierte. Zusammen mit dem
+Motor (1:6) entsprach das einer Untersetzung von 1:3000; das Schrittschaltwerk
+untersetzte 1:6 und ein nachfolgendes
+Schneckengetriebe ein weiteres Mal 1:10.
+Schneckengetriebe an einem Z10 haben
+aber leider viel Spiel und lassen sich nicht
+besonders elegant verbauen. Sie haben
+außerdem etwa den dreifachen Reibungsverlust im Vergleich mit einem Zahnradgetriebe [7]. Außerdem ändern sie die Achsausrichtung, was nach meinem Empfinden
+die Ästhetik der Uhr beeinträchtigt.
+Ein Stirnradgetriebe, das – ohne Schrittschaltwerk – eine Übersetzung ins Langsame von 1:30.000 bildet, ist jedoch mit
+fischertechnik-Zahnrädern nicht konstruierbar – es fehlen Zahnräder, mit denen ein
+durch fünf teilbares Übersetzungsverhältnis
+gelingt. Dachte ich jedenfalls.
+
+Getriebe mit Differential
+Da fiel mir Thomas Püttmanns genialer Beitrag zur Konstruktion kompakter Getriebe
+mit Differentialen ein [8]. Durch die Koppelung von zwei der drei An- bzw. Abtriebsachsen eines Differentials über ein
+Getriebe lassen sich mit etwas Geschick
+beliebige Übersetzungsverhältnisse konstruieren – das hat Thomas bereits mit
+seinem Planetarium beispielhaft gezeigt [2,
+9].
+
+
+mit Z15 als Differentialkäfig (31043)
+
+Im Folgenden bezeichnen wir die Zahl der
+Umdrehungen der einen Achse des Differentials mit 𝑥, die der anderen mit 𝑦 und die
+des Differentialkäfigs in der Mitte mit 𝑧.
+Damit gilt die von Thomas in [8] hergeleitete folgende Gleichung für das Verhältnis
+der Umdrehungen der drei An-/Abtriebe
+zueinander:
+𝑥 + 𝑦 = 2𝑧
+Der Trick besteht nun darin, zwei der drei
+möglichen An-/Abtriebe 𝑥, 𝑦 und 𝑧 in ein
+festes Übersetzungsverhältnis zueinander
+zu zwingen. Wenn wir beispielsweise den
+Differentialkäfig (𝑧) über ein Getriebe mit
+der 𝑦-Achse koppeln, dann können wir in
+obiger Gleichung die Umdrehungen des
+Differentialkäfigs 𝑧 durch die Umdrehungen der 𝑦-Achse ausdrücken. Abb. 2 zeigt
+einen solchen Getriebeentwurf mit dem
+Differential aus Abb. 1.
+
+Uhren
+
+Jede Umdrehung dieser Achse sorgt über
+das Z30 für drei Umdrehungen des Z10 in
+der Mitte von Abb. 2 (1:3). Mit dem Z15 auf
+derselben Achse entspricht diese Umdrehungszahl bis auf die Drehrichtung der Zahl
+der Umdrehungen des Differentialkäfigs (𝑧Achse, 1:1). Damit gilt:
+𝑧 = − −3(−4𝑦) = −12𝑦
+Das negative Vorzeichen bezeichnet jeweils
+eine Umkehr der Achsdrehrichtung. Wenn
+sich die 𝑦-Achse einmal dreht, dreht sich
+der Differentialkäfig also zwölfmal in
+entgegengesetzter Richtung.
+Setzen wir diese Relation in Thomas‘ Differentialgetriebegleichung ein, ersetzen wir
+also 𝑧 durch −12𝑦, so erhalten wir:
+𝑥 + 𝑦 = −24𝑦
+Damit gilt für die Übersetzung zwischen der
+Antriebsachse 𝑥 und der Abtriebsachse 𝑦
+des Getriebes:
+𝑥
+2 als fischertechnik-Modell. (Es ist nicht die
+einzige mögliche Konstruktion – auch mit
+anderen Zahnradkombinationen erreichen
+wir eine Übersetzung 1:12 zwischen 𝑦Achse und Differentialkäfig.)
+𝑦=−
+
+
+Man erkennt, dass eine Umdrehung der 𝑦Achse zu vier Umdrehungen des Z10 in
+umgekehrter Drehrichtung führt (1:4).
+
+
+
+Wenn wir nun das Z10 auf der 𝑦-Achse ein
+Z40 antreiben lassen, dann erhalten wir eine
+Übersetzung von 1:100 ins Langsame (mit
+gleicher Drehrichtung).
+Schalten wir ein zweites solches Getriebe
+1:25 dahinter, liefert uns das ein Stirnradgetriebe, das 1:2500 ins Langsame übersetzt. Mit drei weiteren Übersetzungen 2:3,
+1:2 und 1:4 (zusammen also 1:12) erhalten
+wir das gewünschte Getriebe mit einer
+Untersetzung von 1:30000 – ausschließlich
+mit fischertechnik-Stirnrädern (Abb. 4).
+
+Synchronuhr
+Jetzt müssen wir nur noch den Synchronmotor aus [6] auf die Antriebsachse sowie
+Zeiger und Zifferblatt mit einer Untersetzung 1:12 auf die Abtriebsachse montieren,
+und schon haben wir eine fischertechnikSynchronuhr mit Stirnradgetriebe.
+Bei der Konstruktion habe ich eine etwas
+größere Bauhöhe in Kauf genommen, damit
+Antrieb (Synchronmotor) und Abtrieb
+(Zeiger) der Uhr in einer Flucht liegen und
+die Uhr exakt auf eine Experimentierplatte
+500 (32985) passt.
+Das Resultat zeigen Abb. 5 und 6. Auf der
+Webseite zu dieser ft:pedia-Ausgabe findet
+ihr eine fischertechnik-Designer-Datei der
+Uhr zum Download.
+
+Quellen
+[1]
+
+Dirk Fox: Der Elektromotor. 3/2013, S. 4–8.
+
+[2]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt-Verlag, 2015; Kapitel 10:
+Der Elektromotor.
+
+[3]
+
+Dr. Gobmaier: Netzfrequenzmessung.
+
+[4]
+
+Matthias Dettmer: Synchronmotoren.
+ft:pedia 2/2016, S. 48–52.
+
+[5]
+
+Rüdiger Riedel: Neue Synchronmotoren. ft:pedia 2/2017, S. 25–31.
+
+[6]
+
+Dirk Fox: Synchronuhr mit Schrittschaltwerk. ft:pedia 1/2017, S. 48–
+53.
+
+[7]
+
+Artur Fischer: fischertechnik Hobby
+– Experimente und Modelle. Hobby 2
+Band 1 (39521), S. 41 und 44.
+
+[8]
+
+Thomas Püttmann: Zahnräder und
+Übersetzungen (Teil 2). 3/2011, S. 25–28.
+
+[9]
+
+Thomas Püttmann: Planetarium.
+ft:pedia 4/2011, S. 39–51.
+
+
+Das ginge grundsätzlich noch etwas einfacher mit zwei (statt drei) Übersetzungen
+1:3 und 1:4 ins Langsame. Die zusätzliche
+Übersetzung habe ich gewählt, damit die
+gesamte Getriebekonstruktion möglichst
+kompakt bleibt.
+Insgesamt besteht das Getriebe aus 10 Stirnradgetrieben und zwei Differentialen. Die
+Reibungsverluste sollten geringer sein als
+bei meiner ursprünglichen Konstruktion mit
+vier Schnecken-, einem Stirnrad- und einem
+Schrittschaltgetriebe – dessen Reibung entsprach etwa der von mindestens 14 Stirnradgetrieben. Tatsächlich ist das Getriebe
+ganz ohne spezielle Achslager überraschend leichtgängig – auch dank der verwendeten alten Differentiale – und hat nur
+minimales Spiel: perfekt für eine Synchronuhr.
+
+
+
+Uhren
+
+
+

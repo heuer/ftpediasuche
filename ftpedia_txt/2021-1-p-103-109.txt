@@ -1,0 +1,412 @@
+
+Computing
+
+Computing
+
+Von Lucky Logic zu ROBO Pro Coding
+Till Harbaum
+Im Sommer geht mit dem Erscheinen des TXT-4.0 und seiner Programmierumgebung „RoboPro Coding“ eine ziemlich genau 30-jährige Geschichte der Programmierung durch Ablaufdiagramme bei fischertechnik zu Ende. Wir blicken zurück und in die Zukunft.
+
+Die Anfänge
+Die ersten Interfaces für die Homecomputer
+der 80er lieferte fischertechnik noch ohne
+eigene Programmierumgebung aus. Die Interfaces von damals waren noch nicht mit
+den heutigen Controllern vergleichbar. Sie
+machten lediglich bereits am Computer vorhandene Schnittstellen wie den User-Port
+des C64 für fischertechnik-Modelle zugänglich, indem Spannungen und Ströme
+der Computertechnik an die für die Modellsteuerung nötigen Pegel angepasst wurden.
+Eigene Intelligenz hatten diese Interfaces
+nicht und einen Offline-Modus gab es dementsprechend auch nicht. Sie wurden in der
+Programmiersprache BASIC programmiert
+[1], was für den Anwender ganz natürlich
+war, denn das BASIC war sowieso sein einziger Zugang zum Computer, den er zum
+Laden, Speichern und Starten von Programmen nutzen musste.
+
+„Lebendige“ Flussdiagramme
+Das änderte sich Anfang der 90er, als von
+fischertechnik auch DOS-PCs, der Atari-ST
+sowie der Commodore Amiga aufgegriffen
+wurden. Die Rechenleistung dieser Geräte
+erlaubte nun grafische Benutzeroberflächen. Mit Lucky Logic brachte fischertechnik eine Software auf den Markt, die eine
+grafische Programmierung auf Basis von
+Flussdiagrammen erlaubte (Abb. 1).
+
+
+Flussdiagramme an sich waren zu der Zeit
+nichts Neues und vor allem zur Dokumentation bekannt. Der Clou an Lucky Logic
+war, dass diese Flussdiagramme „lebendig“
+werden konnten. Der Nutzer konnte dem
+Computer per Klick befehlen, das Flussdiagramm tatsächlich auszuführen, sich dabei
+an Tasterzuständen am Modell zu orientieren und z. B. Motoren passend zu steuern.
+An diesem Ansatz hat sich in den folgenden
+30 Jahren nichts fundamental geändert. Auf
+Lucky Logic für MS-DOS, Atari-TOS und
+Amiga-OS folgte Lucky Logic für Windows (LLWIN) und darauf die diversen bis
+heute bekannten ROBO Pro-Versionen für
+MS-Windows.
+Die größte technische Änderung kam 1997
+mit dem Intelligent Interface. Während bis
+dato immer der Computer für die Programmausführung verantwortlich war, kam
+mit diesem neuen Interface der Offline-Modus ins Spiel, bei dem der PC das Programm
+
+
+
+
+auf das Interface überträgt, um es dort unabhängig vom PC auszuführen.
+ROBO Pro wurde über die Jahre ständig
+weiterentwickelt, um den erweiterten Fähigkeiten der neueren Controller gerecht zu
+werden (Abb. 2).
+
+3). Leider wurde diese Software nicht weiterentwickelt und befindet sich nach wie vor
+auf dem recht rudimentären Stand ihrer
+Veröffentlichung im Jahr 2017.
+Für fischertechnik stellt sich bei diesen
+Apps noch viel mehr das Problem, dass sie
+sich auf einzelne Geräte-Familien festlegen
+und die entsprechende Software auf einem
+PC zum Beispiel nicht nutzbar ist. So gibt
+es für den BT Smart Controller gleich drei
+Programmvarianten für Android, iOS und
+Windows. Trotzdem sehen sich viele
+Apple- und Linux-User ausgeschlossen.
+
+Browser-Programmierung
+Scratch
+ROBO Pro auf dem PC
+
+Programmier-Apps
+LLWIN und ROBO Pro sind Kinder der
+Microsoft-Windows-Ära der späten 90er
+und frühen 00er-Jahre, als der Windows-PC
+auch in Privathaushalten dominierte. Mit
+dem Aufkommen der Touchscreen-basierten Smartphones und Tablets verlieren
+diese Geräte vor allem außerhalb des Arbeitszimmers rapide an Bedeutung.
+
+
+Diese Zeichen hat auch fischertechnik erkannt und bereits mit dem BT Smart Controller (161944) primär auf die Verwendung
+mit Mobilgeräten gesetzt. Dazu wurde mit
+ROBO Pro Smart der Versuch unternommen, die Flussdiagramm-Bearbeitung nach
+ROBO Pro-Art vom PC möglichst direkt
+auf das Smart Device zu übernehmen (Abb.
+
+Anfang 2018 veröffentlichte fischertechnik
+eine von der Hochschule für angewandte
+Wissenschaften
+Würzburg-Schweinfurt
+programmierte Erweiterung der am MIT
+entwickelten, Browser-basierten grafischen
+Einsteiger-Programmiersprache Scratch [2]
+zunächst für die Entwicklerversion
+ScratchX, dann für Scratch 3 (Abb. 4). Die
+grafische Programmentwicklung erfolgt im
+Browser, der Controller wird via USBKabel oder BLE verbunden.
+
+
+ftScratch verfügt über Befehlsblöcke, die
+die bekannten fischertechnik-Aktoren und
+Sensoren ansteuern [3, 4]. Kleine „Bridging“-Programme für den LT Controller,
+den TXT und den BT Smart Controller
+übermitteln die Sensor- und Aktor-Kommandos an den Controller und zeigen den
+
+Status der Input- und Output-Anschlüsse an
+[5, 6] (Abb. 5, 6). Die „Bridging“-Programme laufen allerdings nur unter Windows –
+bei Linux und MacOS im Windows-Emulator. Für die Programmierung ist eine Internet-Verbindung erforderlich.
+
+Computing
+
+selbst programmierten Spiel verknüpft werden. Beim BT Smart Controller, dessen vier
+Eingänge in ROBO Pro Light und in der
+ROBO Pro-Light-App nur digital ausgewertet werden, können in Scratch auch analoge Sensoren wie der Farbsensor, der Fotowiderstand oder der Heißleiter genutzt
+werden (0-65 kOhm). Die kabellose BLEVerbindung benötigt unter Windows 10 allerdings einen speziellen BLE-Dongle.
+Für den TXT bringt die Scratch-Umgebung
+verschiedene Einschränkungen mit: Die
+entwickelten Programme können nur Online (also mit USB- bzw. BLE-Verbindung)
+gestartet und nicht auf den TXT Controller
+geladen werden. Die Kamera und die I2CSchnittstelle werden von der Scratch-Erweiterung nicht unterstützt. Damit beschränkt sich die Scratch-Programmierung
+des TXT auf eher einfache Anwendungen
+und schöpft die Möglichkeiten des TXT
+nicht aus.
+
+
+Blockly
+Parallel hatte die fischertechnik-Community ab 2016 eine eigene Firmware für den
+TXT-Controller entwickelt. Da fischertechnik den Code zu den grafischen Programmierumgebungen unter Verschluss hält,
+war die Community auf andere Wege angewiesen, ihren eigenen Projekten eine grafische Programmierumgebung zur Seite zu
+stellen. Die Wahl fiel auf Googles BlocklyProjekt [7]. Die Community-Firmware erhielt eine Blockly-basierte Programmierumgebung namens Brickly [8] (Abb. 7).
+
+
+Die Einbindung in Scratch bietet vor allem
+für Einsteiger eine Vielzahl interessanter
+Programmiermöglichkeiten. So kann z. B.
+eine fischertechnik-Steuerung mit einem
+
+
+
+Anfang 2021 kündigte fischertechnik an, im
+Sommer 2021 ebenfalls komplett auf
+Blockly zu wechseln. Es ist zu erwarten,
+dass damit die 30-jährige Geschichte der
+„lebendigen“ Flussdiagramme zu Ende
+geht. Blockly verfolgt nämlich ein gänzlich
+anderes Programmiermodell. Wie Scratch
+setzt Blockly auf das vertikale Stapeln von
+Puzzle-Teil-ähnlichen
+Befehlsblöcken,
+während die Flussdiagramme von ROBO
+Pro frei auf dem Bildschirm angeordnet
+werden konnten. Blockly bietet auch horizontale Anbaumöglichkeiten; diese beschränken sich aber auf die Parametrierung
+eines Hauptblocks. So kann man an den
+„print“-Block zur Textausgabe rechts einen
+weiteren Block ansetzen, der angibt, welcher Text ausgegeben werden soll. Der eigentliche Programmfluss erfolgt aber immer vertikal. So werden z. B. die einzelnen
+Pfade einer bedingten Programmierung
+(„wenn dies, dann mach das, sonst mach jenes“) untereinander dargestellt.
+Wer mag, der kann Blockly direkt unter [7,
+9] ausprobieren. Im Gegensatz zu Lucky
+Logic und ROBO Pro ist Blockly nicht als
+Anwendung für ein bestimmtes Betriebssystem oder eine bestimmte Gerätefamilie
+ausgelegt. Stattdessen läuft Blockly wie
+Scratch in allen gängigen Browsern und unter allen gängigen Betriebssystemen und
+lässt sich von den meisten Geräten, vom
+Smart-Device bis zu den verschiedenen PCFamilien nutzen. Während Lucky Logic
+und ROBO Pro immer auch auf die Ausführung der erstellten Programme ausgelegt
+waren, ist Blockly selbst ein reiner CodeEditor. Blockly an sich beschränkt sich auf
+das Schreiben von Programmabläufen. Um
+ein Blockly-Programm tatsächlich auszuführen muss von Blockly spezieller Code
+
+Brickly-Lite [12] für den ftDuino sieht zwar
+Brickly zum Verwechseln ähnlich, erzeugt aber
+Javascript-Code, der im Browser ausgeführt
+wird. Der Anwender merkt davon (fast) nichts,
+aber es gibt einen fundamentalen Unterschied:
+
+
+exportiert werden, der dann von einer anderen Instanz ausgeführt wird. Um das zu ermöglichen wird Blockly mit einer ganzen
+Sammlung so genannter Code-Generatoren
+ausgeliefert. Auf Knopfdruck kann Blockly
+so das grafisch erstellte Programm in Programmcode diverser gängiger Programmiersprachen wie Javascript, PHP oder Python übersetzen. Je nach Anwendungsfall
+lässt sich so die passende Programmiersprache wählen. Die unter [10] zu findenden
+Blockly-Games sind zum Beispiel dazu gedacht, einfache Rätselaufgaben durch
+Blocky-Programmierung zu lösen. Dazu
+wird der in diesem Fall von Blockly erzeugte Code direkt im Browser des Anwenders
+ausgeführt. Da im Browser Javascript verwendet wird, nutzen die Games folgerichtig
+einen Javascript-Generator.
+Das ebenfalls auf Blockly basierende Community-Projekt Brickly [11] für die TXTCommunity-Firmware erzeugt dagegen Python-Code mit Hilfe eines Blockly-PythonGenerators. Dieser Code wird nicht im
+Browser ausgeführt, sondern direkt auf den
+TXT geladen, der einen passenden PythonInterpreter mitbringt, mit dessen Hilfe er
+das Brickly-Programm dann ausführen
+kann. 1 Brickly entspricht damit den
+ROBO Pro-Offline-Programmen, die – einmal auf das Gerät geladen – dort unabhängig immer wieder gestartet werden können.
+Lego hat diesen Weg vor etwa einem Jahr
+ebenfalls eingeschlagen und verwendet für
+den Spike-Controller der Education-Linie
+sowie sein Endkundenpendant aus dem
+„Robotik-Erfinder“-Baukasten Blockly in
+Kombination mit Python (Abb. 8), genau
+wie wir es mit der Community-Firmware
+
+Brickly-Python-Code bleibt auf dem TXT gespeichert und kann dort immer wieder direkt gestartet werden. Bricky-Lite mit seinen Browserbasierten Javascript-Programmen entspricht dem
+ROBO Pro-Online-Modus und erfordert zur Programmausführung den steuernden Browser.
+
+vorgemacht haben. Allerdings wäre es etwas vermessen anzunehmen, dass Lego unsere Aktivitäten überhaupt kannte. Bei fischertechnik sieht das natürlich etwas anders aus.
+
+Computing
+
+Erfahrungen
+Aus unseren Erfahrungen mit Blockly können wir einiges für den TXT 4.0 Controller
+(und seine Verwandten) ableiten. Auf dem
+Screenshot des Promo-Videos von fischertechnik ist deutlich Blockly zu erkennen
+(Abb. 11). Man sieht dort links den bekannten Blockly-Code, der sich nur in der Farbgebung etwas von Brickly und Co unterscheidet. Auf der rechten Seite sieht man
+den äquivalenten Python-Code, der offensichtlich aus Blockly erzeugt wurde.
+
+Blockly/Python-Zug auf
+
+Auch die (neue) Einsteiger-Programmiersprache von fischertechnik, Early Coding,
+basiert auf Blockly. Und mit dem ftDuino32
+setzt auch die fischertechnik Community
+wieder auf Blockly (Abb. 9, 10).
+
+
+
+
+Um zu verstehen, was das bedeutet lohnt es
+sich zu erklären, warum Brickly den erzeugten Python oder Javascript-Code nicht
+sichtbar macht. Automatisiert generierter
+Code hat immer das Problem, dass die Maschine eine Aufgabenstellung nicht tatsächlich versteht und der erzeugte Code in der
+Regel den ästhetischen und didaktischen
+Ansprüchen eines Menschen nicht gerecht
+wird. Im Fall von Blockly kommt erschwerend hinzu, dass Blockly nicht speziell auf
+Python ausgelegt ist. Der erzeugte Code
+muss also ggf. ein paar Python-untypische
+Abkürzungen nehmen, um das zu tun, was
+der Nutzer in Blockly formuliert hat.
+recht einfache Blockly-Programm links legt
+eine Variable „Count“ an, die aber nicht
+weiter benutzt wird und ruft die Funktion
+„do something“ auf. Der daraus automatisch erzeugte Python-Code auf der rechten
+Seite erwähnt die unbenutzte Variable
+„Count“ gleich dreimal. Sie wird zunächst
+völlig unnötiger Weise auf „None“ gesetzt
+
+
+und dann noch viel unnötiger in der Funktion do_something per „global“-Statement
+verfügbar gemacht, dort aber nicht weiter
+verwendet. Diese beiden Zeilen hätte ein
+menschlicher Python-Programmierer gar
+nicht erst niedergeschrieben. Sie sind in diesem Fall nutzlos, stören die Programmausführung aber auch nicht weiter.
+
+
+Didaktisch ist es aber natürlich nicht sinnvoll, einem Programmieranfänger Code zu
+geben, der automatisch erzeugte und in dem
+Zusammenhang sinnlose Teile enthält.
+Noch viel unleserlicher wird es, wenn man
+Blockly veranlasst, den Code zu „instrumentieren“. Von ROBO Pro ist zum Beispiel bekannt, dass während der OnlineAusführung der jeweils aktive Block des
+Flussdiagramms aufleuchtet, so dass man
+den Programmablauf im Flussdiagramm
+verfolgen kann. Als reiner Editor kann
+Blockly das so direkt zunächst nicht, denn
+es führt kein Weg aus dem erzeugten Python-Programm zurück zu Blockly. Wenn
+ein Python-Programm ausgeführt wird, erfährt Blockly davon zunächst nichts.
+Wer einmal Brickly benutzt hat wird aber
+genau dieses Verhalten gesehen haben.
+Dass in Brickly der gerade ausgeführte
+Block am Bildschirm aufleuchtet, erfordert
+ein paar Tricks. Man kann als Programmierer Blockly dazu veranlassen, den erzeugten
+Code mit kryptischen Zusatzinformationen
+und -codes zu versorgen, die Rückschlüsse
+auf den dazugehörigen Blockly-Code erlauben. Ein von Brickly entsprechend instrumentiertes Python-Programm sieht z. B. so
+aus:
+
+
+highlightBlock('ccH%.hD|vu0[=TFoG02r')
+# program start
+highlightBlock('gk;c]Lukt}rcM^ktea`d')
+print('Hallo ft:pedia!')
+highlightBlock(')A/f0INa,#hl[_1UvxSV')
+setOutput(0, (100))
+highlightBlock('H3zJl]!`59^zsveWOF9B')
+while True:
+highlightBlock(';IkzdN[PY{R=CNmmR0G')
+print(„Hallo“)
+
+Wenn die Community-Firmware dieses Python-Programm ausführt, sendet sie die
+kryptischen Zeichenketten in den highlightBlock()-Funktionsaufrufen zurück
+an
+Brickly im Browser. Aus der empfangenen
+Zeichenkette kann Brickly dann den passenden Block ableiten und aufleuchten lassen, sodass der Benutzer im Browser sieht,
+wie sein Programm Block für Block abläuft.
+So hilfreich die Möglichkeit für den
+Blockly-Anfänger ist, den Programmablauf
+in Blockly zu verfolgen, so verwirrend ist
+der erzeugte Python-Code. Das ist der
+Grund weswegen Brickly diesen Code gar
+nicht erst anzeigt. Er ist schlicht unverständlich.
+fischertechnik hat sich nicht nur entschieden, diesen Code anzuzeigen, sie nutzen ihn
+auch didaktisch und der Benutzer soll auf
+diese Weise programmieren lernen. Es wird
+spannend sein zu sehen, wie fischertechnik
+dies praktisch umsetzt, wie dem Benutzer
+der Übergang von Blockly zu Python erklärt
+wird und ob und wie er den Programmablauf in der Blockly-Darstellung angezeigt
+bekommt.
+
+
+Es gibt noch mehr Probleme bei diesem Ansatz. Da die Programmausführung völlig
+unabhängig von Blockly erfolgt, treten auch
+Fehler außerhalb von Blockly auf. Bei der
+Ausführung von Python-Code tritt folgerichtig ein Python-Fehler auf. Abb. 13 enthält gleich zwei kritische Fehler: Zunächst
+versucht das Programm, durch Null zu teilen und dann teilt es die Zahl 1 durch die in
+der Variablen x gespeicherte Zeichenkette
+„Hallo“. Beides führt zu einem Programmabbruch während der Ausführung. Ein solcher Programabbruch wird auf dem ausführenden TXT ungefähr folgendermaßen angezeigt:
+Traceback (most recent call last):
+File „./blockly_python_fehler.py“,
+line 4, in <module>
+print(1 / 0)
+ZeroDivisionError: integer division or modulo by zero
+
+bzw.
+
+Traceback (most recent call last):
+File „./blockly_python_fehler.py“,
+line 6, in <module>
+print(1 / x)
+TypeError: unsupported operand
+type(s) for /: 'int' and 'str'
+
+Diese Fehlermeldungen stehen in keinem
+trivial erkennbaren Zusammenhang mit
+dem ursprünglichen Blockly-Programm.
+Bei der instrumentierten Ausführung (wir
+erinnern uns, diese ganzen kryptischen
+highlightBlock()-Dinger) kann man noch
+versuchen, etwas zu retten und im Fehlerfall
+z. B. den zuletzt angezeigten Block rot hervorheben, um darauf hinzuweisen, wo der
+Fehler wohl auftrat.
+Wie geht die Community mit diesen Hürden
+um? Seit einer Weile ist der ftDuino32 in
+Entwicklung. Er folgt der Brickly-Idee und
+schlägt damit den gleichen Weg wie fischertechnik ein und macht den erzeugten
+Python-Code auf Wunsch sichtbar. Wie wir
+die beschriebenen Hürden umschiffen ist
+
+Computing
+
+noch nicht ganz klar, allerdings adressiert
+der ftDuino32 nicht das Kinderzimmer,
+sondern eher Schulen und Unis.
+Wir sind gespannt, ob und wie fischertechnik mit diesem Problem umgeht. So großzügig wie fischertechnik sich beim Wechsel
+auf Blockly und Python bei den Ideen der
+Community bedient hat, liegt die Hemmschwelle natürlich niedrig, sich im Gegenzug auch die ein oder andere clevere Lösung
+bei fischertechnik abzuschauen. Wir erwarten also gespannt den TXT-4.0 und seine
+Blockly- und Python-Nutzung und hoffen
+auf intuitive und benutzerfreundliche Lösungen bei der nicht ganz trivialen Nutzung
+von Blockly.
+
+Referenzen und Links
+[1]
+
+fischerwerke: Anleitung zum C64Computing-Interface, 1985 (39485)
+
+[2]
+
+MIT: Scratch.
+
+[3]
+
+fischertechnik: ftScratch3.
+
+[4]
+
+Dirk Fox: Scratch mit fischertechnik.
+ft:pedia 1/2018, S. 69-78.
+
+[5]
+
+fischertechnik: FTScratchTXT.
+Github.io.
+
+[6]
+
+fischertechnik: FTScratchBTSmart.
+Github.io.
+
+[7]
+
+Google: Blockly, Google Developers.
+
+[8]
+
+Till Harbaum: Brickly auf dem TXT:
+Grafische Programmierung à la
+Google-Blockly. ft:pedia 1/2017, S.
+92-98.
+
+[9]
+
+Bundesweite Informatikwettbewerbe: Blockly. BWInf.de
+
+[10] Google: Blockly-Games.
+[11] fischertechnik-Community: Brickly.
+[12] fischertechnik-Community: BricklyLite. Github.io.
+
+
+

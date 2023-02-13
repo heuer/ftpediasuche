@@ -1,0 +1,596 @@
+
+
+Elektronik
+
+Die Ein- und Ausgänge des TX Controllers
+Stefan Brunner
+Unter dem Weihnachtsbaum befindet sich dein neues fischertechnik ROBO Computing Set. So
+klein – der ROBO TX Controller – und so viele Anschlüsse: 10 V- oder 5k-Modus, Analog
+oder Digital – huch? M- und O-Ausgänge? Du weißt zwar nicht genau, was man mit dem
+ROBO TX Controller alles machen kann, aber eines erkennst du sofort: Es könnte kompliziert
+werden, da etwas anzuschließen…
+
+Konsequente Weiterentwicklung der Silberlinge
+Als Kind bin ich mit den Silberlingen aufgewachsen. Damals war mir nie ganz klar,
+was die ganzen Anschlüsse am h4-GB
+machen. Heute bin ich selbst der Papa und
+wollte wissen, was man so alles an den TX
+Controller anschließen kann – und habe
+den TX dazu etwas genauer unter die Lupe
+genommen (Abb. 1).
+
+8 channel
+Analog
+Mux
+
+8 line
+Priority
+Encoder
+
+MOSFET
+Octal
+Switch
+MOSFET
+Octal
+Switch
+
+Display
+Connector
+
+Quad
+Switch RS485
+XCVR
+EPROM
+Quartz
+
+CPU
+Atmel ARM9
+AT91SAM9260
+SDRAM
+1M x 16 Bits
+x 4 Banks
+
+LED
+Bluetooth
+
+Flash
+16 Mbits
+2M x 8 Bits
+9V DC
+Triple Output Step Down on/off
+Switching Regulator
+(back)
+
+USB
+
+BT
+antenna
+
+Ground (-)
+
+analog/digital Inputs
+
+Outputs
+
+Vcc (+)
+
+digital/counter Inputs
+
+RS485/I2C
+© 2012 http://stefanbrunner.com
+
+‚unter die Haube’ geschaut
+
+
+Im Prinzip machen alle Elektronikbausteine, der Ur-h4-GB der 70er Jahre, der
+Schwellenwertschalter der 80er, der FlipFlop der 90er und der E-Tec-Baustein des
+Millenniums das gleiche wie der moderne
+TX Controller: Sie messen einen analogen
+Eingangswert von einem Sensor oder
+Schalter und geben einen Ausgangszustand
+weiter, mit dem sich Lampen oder Motoren
+steuern lassen.
+Analoge Daten werden von Sensoren
+empfangen und in digitale High- und LowWerte umgewandelt. Um ein Oszillieren,
+also das schnelle, ungewollte Umschalten
+zwischen ‚Ein’ und ‚Aus’ zu vermeiden,
+sind Ein- und Aus-Pegel einzeln veränderbar: früher via Poti, heute programmierbar.
+Man spricht von einem Schmitt-Trigger,
+der einen Bereich hat, in dem er nicht den
+Zustand ändert – dieser wird Hysterese
+genannt (Abb. 5).
+Mit den Ausgängen konnte man Lampen
+und Motoren steuern, wobei die Ausgangsleistung über die Spannung, entweder über
+das Netzgerät oder bei der Leistungsendstufe über Transistoren, geregelt werden
+konnte – zusätzlich zur Polarität, die über
+die Beschaltung vorbestimmt war.
+Das funktioniert beim TX Controller ähnlich. Die Ansteuerung der Ausgänge
+erfolgt nicht über ein Relais, sondern über
+
+Transistoren. Die Leistung wird nicht über
+die Versorgungsspannung, sondern über
+das schnelle Ein-/Aus-Pulsen gesteuert.
+Der Effekt ist der gleiche: Es lässt sich
+eine Last ein- und ausschalten. Der Unterschied beim TX Controller ist, dass die
+Leistungsabgabe an die Last nicht nur voreingestellt werden kann, sondern auch
+während des Programmablaufes veränderbar und sogar die Polarität dort vertauschbar ist.
+
+Elektronik
+
+toren verknüpft werden können. Man kann
+sicher viele ROBO Pro-Programme mit
+Silberlingen nachbauen, nur bräuchte man
+dafür sehr viele solcher Bausteine, was bei
+den Liebhaberpreisen nicht nur ein
+Vermögen kosten, sondern auch ein unsägliches Kabelgewirr nach sich ziehen
+würde. Ganz schön viele Logikoperatoren
+wären zum Beispiel erforderlich, um einfache arithmetische Funktionen durchführen zu können, und jedes Speicherbit
+benötigte ein Flip-Flop. Zusätzlich zu den
+Grundoperatoren unterstützt der TX
+Controller auch höhere Programmabläufe
+wie Bedingungen und Schleifen.
+Als ich das erste Mal den TX Controller in
+der Hand hatte, dachte ich: fantastisch,
+eine unendliche Zahl von Silberlingen –
+was für Möglichkeiten. Aber diesmal
+wollte ich zuerst genau wissen, was man
+wie anschließen kann.
+
+Eingänge
+
+
+Wir können also einen analogen Wert
+messen, bestimmen, ob etwas ein- oder
+ausgeschaltet werden soll, und dann eine
+Last, deren Leistungsabgabe und die Polarität schalten.
+Fehlt nur noch die Verknüpfung zwischen
+‚Ein’ und ‚Aus’. Historisch waren das bei
+fischertechnik der Flip-Flop, der MonoFlop und die Logikoperatoren AND, OR
+und NOT – die logischen Grundoperatoren.
+Das alles kann der TX Controller auch.
+Der große Unterschied ist, dass der TX
+Controller acht Ein- und acht Ausgänge
+besitzt, die mit einer beliebigen Anzahl
+von Software-programmierbaren Opera-
+
+
+
+
+Der TX Controller hat acht analoge Eingänge. Zusätzlich hat er auch noch vier
+digitale Eingänge, deren Hauptaufgabe es
+ist, die Achsenstellung der Encodermotoren zu erfassen.
+Die Eingänge heißen Universaleingänge
+und messen die Spannung (mV) in Hardware wie ein Voltmeter. Das hört sich
+ziemlich einfach an. Aber warum gibt es in
+ROBO Pro so viel einzustellen? Diese Einstellungen haben nur eine Auswirkung auf
+die Software, nämlich wie diese die
+gemessene Spannung interpretiert. Und
+dies soll auch möglichst intuitiv zu den
+entsprechenden Sensoren passen, schließlich ist fischertechnik ja als Lernspielzeug
+gedacht.
+Um es vorwegzunehmen: Die Einstellung
+auf Digital liefert einen boolschen Wert (1
+oder 0) an die Software, wenn bestimmte
+Schwellenwerte für ‚Ein’ bzw. ‚Aus’ überschritten werden – genau wie bei den
+klassischen Bausteinen, wie oben beschrieben. Im Unterschied dazu liefert die Einstellung Analog einen variablen Wert, der
+entweder als Spannung ausgegeben oder in
+einen Widerstandswert umgerechnet wird.
+Da es keinen definierten Ein- oder AusZustand im Analog-Modus gibt, gibt es
+auch keine Hysterese, sondern nur einen
+diskreten Wert. Da die Digital-Einstellung
+nur eine Softwarefunktion ist, kann diese
+auch in ROBO Pro mit eigenen Schwellwerten selbst zusammengebastelt werden.
+Digital hat also weniger mit der klassischen Verarbeitung von digitalen Signalen
+zu tun, sondern ist nur eine Programmierhilfe mit zu den Lichtschranken und Schaltern passenden, voreingestellten Schwellenwerten und Hysterese.
+Bei beiden Einstellungen, Analog und
+Digital, sind die 10 V- und die 5k-OhmEinstellung nur verschiedene Interpretationen desselben Spannungswertes durch die
+Software. Und das funktioniert so
+(Abb. 4): Intern wird dem Eingang immer
+eine Spannung zugeführt. Aber über einen
+
+internen Widerstand ist die Stromstärke
+stark begrenzt. Daher kann man den Wert
+mit einer extern angelegten Spannung
+unbedenklich bis zu 10 V selber überschreiben, oder über einen Widerstand auf
+Masse ziehen. Durch diese Dualität büßt
+der Eingang im unteren Bereich etwas
+Messgenauigkeit ein.
+ADC
+
+Vcc
+
+I1
+
+0-5kO
+
+0-10V
+
+
+In der 10V-Einstellung kann man Spannungen zwischen 75 mV und 10 V messen,
+mit einer Auflösung von 100 mV. Dabei
+wird ein Strom von nur 10 µA gezogen. In
+der 5k-Einstellung liegt am Eingang ein
+Prüfstrom von 2,2 V und 60 µA an, und es
+können Widerstandswerte von 50
+bis
+5 k mit einer Auflösung von 1 gemessen werden. Diese Eingänge sind also nicht
+so empfindlich wie die des h4-GB oder des
+Schwellenwertschalters (Tab. 1). Für den
+Feuchtigkeitssensor z. B. würde es nicht
+reichen, aber man könnte natürlich den h4GB, den Schwellenwertschalter oder die
+Leistungsendstufe als Messvorverstärker
+einsetzen.
+Hysterese
+
+Min
+
+Universal 10V 75 mV
+Universal 5k
+
+
+Max
+10 V
+5k
+
+Tab. 1: Min- und Max-Werte
+
+Dasselbe gilt für den Analog- und den
+Digital-Modus. Nur im Digital-Modus
+werden die Analogwerte von der Software
+in digitale 1- (High) oder 0- (Low) Werte
+umgerechnet. Der Wert in der Software ist
+im Analog-Modus vom Typ Integer (nicht
+
+
+Elektronik
+
+Fließkomma), und im Digital-Modus ein
+boolscher Wert (1 oder 0). Liegen in der
+10 V-Einstellung am Eingang weniger als
+540 mV an, liefert das den Zustand Low,
+oberhalb 840 mV den Zustand High, mit
+einer Hysterese von 300 mV: Für Werte
+von 540 mV bis 840 mV ändert sich der
+Zustand nicht.
+
+Boolean. Im Zähler-Modus wird ein langes
+High als Reset interpretiert und der Wert
+auf Null zurückgesetzt.
+
+Universal 5k
+
+
+
+In der 5k-Einstellung wird der Eingang auf
+Masse gezogen, genauso wie im AnalogModus. Ein Wert über 725 ist Low, und
+ein Wert unter 435 ist High. Dazwischen
+gibt es wieder die Hysterese, in der sich
+der Zustand nicht ändert (Tab. 2).
+
+Zähler 10V
+
+1V
+
+2V
+
+Zähler 5k
+
+1.520
+
+
+Hysterese
+
+Low
+
+Universal 10V 0,54 V
+
+High
+0,84 V
+
+Tab. 2: Schwellwerte im Digital-Modus
+
+Im Normalfall schließt man an die Zählereingänge den Achsenwinkel-Sensor des
+Encodermotors an, der über ein Getriebe
+75 Impulse pro Umdrehung zählt, also eine
+Auflösung von etwa vier Grad hat (Abb.
+6). Das ist nicht ganz die Genauigkeit eines
+Schrittmotors – dafür braucht man auch
+keine bis zu acht Ausgänge, und Encodermotoren sind billiger.
+
+
+Wie bereits erwähnt sind die Zähler-Eingänge getrennt zu betrachten. Dies sind
+echte digital Eingänge, die intern direkt am
+Prozessor angeschlossen sind. Daher sind
+hier auch die Schwellenwerte andere.
+Wenn man diese Eingänge nicht mit den
+Encodermotoren einsetzt, kann man sie
+auch als weitere Sensor-Eingänge nutzen.
+In der 10V-Einstellung ist in etwa alles
+über 2 V High und unter 1 V Low. In der
+5k-Einstellung ist über 630
+Low und
+unter 1.520 High. Der Prüfstrom ist mit
+5,5 V und 1,8 mA höher als bei den Universaleingängen. Der Unterschied zwischen Zähler- und Digital-Einstellung liegt
+darin, dass der Software mitgeteilt wird, ob
+bei jedem Low/High-Übergang eine Eins
+addiert werden soll, oder nur der Zustand
+gewechselt wird. Damit ändert sich natürlich auch der Datentyp von Integer zu
+
+
+Nun stellt sich euch vielleicht die Frage:
+Kann ich mein Arduino-Board oder den
+IC-Digitalbaustein (oder Ähnliches) an
+diese universellen Digitaleingänge anschließen? Die Antwort: Im Prinzip ja.
+Aber das klappt nur in der Digital-Einstellung, wenn die Schwellenwerte kompatibel
+sind. Ansonsten muss man den Eingang
+auf Analog stellen und sich seine eigenen
+Schwellenwerte programmieren, oder mit
+ein paar Widerständen erden.
+Besonders der relativ niedrige High-Wert
+könnte Probleme bereiten. Man sollte den
+Eingang in jedem Fall auf die 10 V-Ein27
+
+
+
+Low
+
+High
+
+TTL
+
+0,35 V
+
+3,3 V
+
+CMOS
+
+0,2 V
+
+4,7 V
+
+LowV
+
+0,4 V
+
+2,4 V
+
+Pulse
+Width
+
+Ausgang
+
+Polarität anschließen, oder vier Lasten mit
+programmierbarer Polarität oder eine
+Kombination aus beidem.
+
+Pulse
+Width
+
+stellung setzen. Die Schaltschwelle um
+0,5 V herum sollte mit vielen TTL- und
+CMOS-Bausteinen funktionieren, selbst
+mit 3,3 V-High-Pegeln (Tab. 3). Das
+könnte etwas einfacher sein mit den
+Zähler-Eingängen im Digital-Modus.
+
+Tab. 3: Schwellen gängiger Chip-Familien
+
+
+Der Sensortyp in ROBO Pro ist nur eine
+Hilfe, um den Eingang für den jeweiligen
+Sensor und den typischen Gebrauch richtig
+einzustellen. Der fortgeschrittene Benutzer
+kann natürlich den Eingang selbst setzen,
+und je nach Beschaltung sind mehrere
+Kombinationen möglich.
+
+Ein MOSFET ist ein Transistor, ähnlich
+wie die Transistoren in der Leistungsendstufe. Ein bedeutender Unterschied ist
+jedoch, dass die MOSFETs in Sättigung
+betrieben werden. Das heißt, der Transistor
+schaltet entweder durch – oder gar nicht.
+Bei den bipolaren TIPs in der Leistungsendstufe kann mit dem Eingangsstrom der
+Ausgangsstrom bestimmt werden. Das geht
+mit den MOSFETs im TX Controller allerdings nicht – aus gutem Grund: Die
+Leistungsaufnahme ist das Produkt aus
+Spannung und Strom, was wiederum vom
+Innenwiderstand des Verbrauchers abhängig ist. Der gleiche Strom, der zwischen
+Basis und Emitter fließt, kann ganz
+verschiedene Auswirkungen auf die Stromstärke der Last und daher der Leistungsaufnahme haben, abhängig von der
+Spannung, die an der Last anliegt, und dem
+Innenwiderstand.
+
+Die Eingänge sollten recht robust gegen
+Fehlschaltung sein. Dennoch ist dringend
+angeraten, Optokoppler einzusetzen, wenn
+man andere Geräte als fischertechnik integrieren will, besonders wenn diese hohe
+interne Spannungen haben wie z. B. Radiosender (Amateurfunk oder WLAN),
+Verstärker, R/C-Steuerungen oder sogar
+Röhrengeräte – selbst die beliebten NixieRöhren arbeiten mit 180 V.
+Man beachte dabei, dass Spannung immer
+ein relativer Wert ist – und sogar zwei
+Masseleitungen einen gewaltigen Potentialunterschied aufweisen können, wenn sie
+nicht an dieselbe Erdung angeschlossen
+sind, besonders bei den kleinen Strömen,
+die die Eingänge aufnehmen.
+
+Ausgänge
+Die Ausgänge sind keine Relais, sondern
+acht individuelle MOSFET-Leistungstreiber, die sich als vier H-Bridges verschalten
+lassen. Die H-Bridges ermöglichen das
+programmierbare Umschalten der Polarität
+(später mehr dazu). Man kann jedenfalls
+entweder acht Lasten mit vorbestimmter
+
+Zudem sind die Fertigungstoleranzen bei
+Transistoren gewaltig. Dazu noch sind
+Transistorkennlinien nicht linear, abhängig
+von Spannung, Stromstärke und Temperatur. Das alles passt nicht in die digitale,
+deterministische Welt der Highs und Lows.
+Daher hat man sich etwas ganz Geniales
+ausgedacht: die Pulse Width Modulation
+(PWM). Die Leistungsaufnahme der Last
+wird durch sehr schnelles Ein- und Ausschalten kontrolliert, wobei die Leistungsaufnahme direkt vom Verhältnis zwischen
+
+An- und Auszeit abhängig ist. Das nennt
+sich der Duty Factor (Abb. 7), also der
+Teil des Signals, das als Leistung an dem
+Verbraucher zur Verfügung steht. Im
+Prinzip ist das eine Wechselspannung mit
+Rechtecksignal, die auf die Gleichspannung mit halber Amplitude aufmoduliert
+worden ist – mit anderen Worten: das
+Signal wechselt nicht von Plus nach
+Minus, sondern zwischen 0 V und Plus.
+Wenn wir daher den Ausgang auf 50 %
+Leistung programmieren, nimmt die Last
+auch nur 50 % Leistung auf, egal wie hoch
+die Versorgungsspannung oder deren
+Innenwiderstand ist.
+PWM-Steuerungen sind Stand der Technik
+und auch der Grund, warum die Motoren
+in der U-Bahn summen, wenn sie anfährt.
+Die PWM-Frequenz liegt hier bei 210 Hz,
+daher ist das Summen der Motoren bei
+weniger als der vollen Leistung auch beim
+TX Controller deutlich zu hören.
+
+Elektronik
+
+Schema gar nicht mit den Motoren funktionieren. Im 512-Stufen-Schema gibt es
+im unteren und oberen Bereich mehr
+Granularität und mehr Steilheit in der
+Mitte; das ist im 8-Stufen-Schema genau
+umgekehrt.
+
+
+Oben habe ich die H-Bridges erwähnt. Ihr
+mögt euch vielleicht schon gewundert
+haben, warum man eine Last z. B. zwischen O1 und Masse, aber auch zwischen
+O1 und O2 anschließen kann. Der Grund:
+Eine H-Bridge hat vier MOSFET-Schalter,
+jeder Ausgang hat zwei. Zwei Schalter sind
+jeweils miteinander verbunden und an
+jeder Seite mit Plus und Minus (Masse)
+verbunden, sodass, wenn beide Schalter
+geschlossen würden, Minus und Plus überbrückt würden (daher Bridge), und es zu
+einem Kurzschluss käme. Im Nullzustand
+ist immer der Schalter, der mit Masse verbunden ist, geschlossen. Daher sind alle
+Ausgänge im Urzustand auf Masse gelegt.
+Wenn man jetzt den Ausgang einschaltet,
+sperrt der Schalter, der mit Masse verbunden ist, und der andere schließt (Abb. 9).
+Daher kann man eine Last genauso mit
+einem Pol an Masse als auch mit einem
+anderen Ausgang, der auf Null steht, verbinden, während der andere Pol an einem
+Ausgang hängt, der gesteuert wird.
+
+
+In ROBO Pro kann man nun die Leistung
+in acht oder 512 Stufen steuern (Abb. 8).
+Überraschend ist, dass zum einen die
+Stufeneinteilung nicht linear ist, und zum
+anderen der Kurvenverlauf der beiden
+Stufen sich unterscheidet. Ich stellte fest,
+dass die unteren Stufen im 8-Stufen-
+
+
+
+
+Beim Verdrahten sieht es vielleicht etwas
+schöner aus, wenn man nicht mehr als vier
+Ausgänge braucht. Genauso kann man aber
+auch die Polarität ändern, also die Drehrichtung eines Motors. In dem Fall schließt
+man den Motor zwischen zwei Ausgängen
+an und regelt dann entweder den einen
+oder den anderen. Man verdrahtet also
+zwei Brücken (Abb. 10) zu einem H (daher
+H-Bridge). Während in ROBO Pro alle
+Eingänge gleich sind und per Einstellung
+verändert werden können, gibt es zwei
+verschiedene Objekte für die Ausgänge:
+Das eine steuert die acht Ausgänge unabhängig voneinander, bei dem anderen
+werden immer zwei Ausgänge zusammengesteuert, paarweise O1 und O2, O3 und
+O4 usw., genannt M1, M2, etc. (Abb. 12).
+Die Drehrichtung kann dann vom Programm gesteuert werden, wobei ROBO
+Pro automatisch entscheidet, welcher der
+beiden Ausgänge einzuschalten, also auf
+Plus zu schalten ist. Das gleiche lässt sich
+natürlich auch weniger elegant mit dem
+Objekt für acht Ausgänge steuern
+(Abb. 11), nur muss man dann per Software entweder den einen oder den anderen
+Ausgang einzeln schalten. Schaltet man
+beide, sind beide Pole mit Plus verbunden
+und es fließt kein Strom, dasselbe gilt,
+wenn beide auf Null sind. Man kann
+natürlich auch einen Motor zwischen
+einem Ausgang und Masse betreiben. Das
+geht genauso. Nur ist dann die Drehrichtung
+durch
+die
+Verdrahtung
+vorbestimmt.
+Außerdem muss man darauf achten, dass
+man genug Strom hat für alle Motoren. Ein
+M-Motor kann unter Last locker 1 A
+ziehen, aber der TX Controller ist nur auf
+die Bedienung von maximal 2 A ausgelegt.
+Das wird mit vier Motoren schon knapp,
+und noch knapper mit acht. Zerstören sollte
+man den TX Dank des eingebauten Überhitzungsschutzes nicht können. Und natürlich ist die Stromaufnahme auch von der
+Belastung des Motors abhängig.
+
+Das ‚Bild’, das man in ROBO Pro unter
+den Ausgangsobjekten wählen kann (Abb.
+11), hat keinen Einfluss darauf, wie der
+Ausgang funktioniert – ob in H-Bridge
+oder Single Bridge – und welchen Aktor
+man tatsächlich anschließt.
+
+
+Die MOSFETs sind sehr tolerant gegenüber induktiven Lasten wie den Pneumatikmagnetventilen, mögen jedoch keine
+Lasten mit Wechselstromfiltern, wie
+bestimmte Filter zur Funkentstörung, weil
+dies mit der PWM-Lastkontrolle im Konflikt steht. MOSFETs reagieren sehr
+empfindlich gegen Überspannung selbst
+bei sehr kleinen Strömen, dazu gibt es aber
+auf dem Treiber-IC eine Schutzschaltung.
+Ansonsten sind die Treiber-ICs auch gegen
+Überlastung geschützt. Sollte der TX
+Controller plötzlich in den Reset oder gar
+ganz ausgehen, dann liegt das höchstwahrscheinlich daran, dass die Leistungsaufnahme der Last höher ist als die Stromquelle, die auch die CPU mit Strom versorgt, hergeben kann. Dann ist ein stärkeres Netzteil mit 2 A oder eine frisch
+aufgeladene Batterie zu empfehlen.
+
+
+Elektronik
+
+man beachten, um den TX Controller mit
+den alten Silberlingen zu verbinden
+(Stichwort ‚negative Logik’)? Oder wie
+steuert man mehr als acht Lasten mit mehr
+als acht Sensoren, ohne dafür mehrere TX
+Controller zu verketten?
+Ziel dieses Beitrags war es jedoch, zunächst einen Überblick zu schaffen und
+darzustellen, dass man so ziemlich alles an
+die Ein- oder Ausgänge des TX Controllers
+anschließen kann, unabhängig davon, was
+im fischertechnik Computing-Programm
+dokumentiert ist. Ich wollte auch erklären
+wie ROBO Pro die Programmierung vereinfacht und die Hardware abstrahiert.
+
+Schlusswort
+Man kann natürlich noch so viel mehr
+machen mit dem TX Controller, und es
+gibt noch so viel mehr an der Hardware zu
+erkunden. Wie wird z.B. der UltraschallSensor angesteuert? Oder wie funktioniert
+das mit dem I2C-Bus? Was genau muss
+
+Alles Weitere ist Stoff für einen neuen
+Beitrag …
+Nun aber erstmal viel Spaß beim Experimentieren und Basteln.
+
+Quellennachweis
+[1]
+
+Brunner, Stefan: Hacking the fischertechnik ROBO TX Controller, 2011.
+
+
+

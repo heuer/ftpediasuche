@@ -1,0 +1,272 @@
+
+
+Elektronik
+
+Der Zauberling (Teil 3): Ein erster Trick
+Arnoud van Delden
+Der neumodische Magier ist in den Startlöchern. Der Zauberstab wurde poliert. Die ersten
+Zaubersprüche sind gelernt. Es ist noch nicht perfekt, aber das große Zauberbuch kann jederzeit ergänzt oder verbessert werden. In wenigen Sekunden sieht er einen Raum voller alter
+Bekannter, mit denen er zusammenarbeiten kann. Dann geht der Vorhang auf. Es ist an der
+Zeit, seine magischen Künste zu zeigen!
+
+Vor und zurück, auf und ab
+Eine immer wiederkehrende Herausforderung für den Bauherren von bewegten
+fischertechnik-Modellen ist die Hin- und
+Her- bzw. Auf- und Abbewegung. Ein
+Aufzug muss hoch und runter fahren, ein
+Karren von links nach rechts, ein Schieber
+auf und zu oder eine
+Schubstange von vorne
+nach hinten. Obwohl bei
+kleineren Bewegungen
+heutzutage der Einsatz
+eines Servos die naheliegende Wahl ist, kommt
+man bei einem größeren
+Hub nicht um eine mechanische Konstruktion
+oder einen Drehrichtungswechsel eines
+Motors an den Extrempunkten herum.
+Am besten ist eine Lösung mit berührungslosen Sensoren und bei der der Motor an
+seinen Extrempunkten nicht abrupt umgekehrt wird, sondern eine allmähliche Drehzahländerung stattfindet. In diesem Artikel
+beschreibe ich meine Suche nach Lösungen
+und der Rolle, die die Magie des Zauberlings dabei spielen könnte.
+
+Traditionell: rein mechanisch
+Eine Lösung ohne jegliche Hilfe von
+Elektronik ist das rein mechanische Uhrwerk. Mit einem Exzenter, einer azentrisch
+
+rotierenden Stangen- oder Kurbelwellenkonstruktion kann eine rotierende Bewegung in eine lineare umgewandelt werden.
+Dieses Prinzip ist auch in den fischertechnik
+hobby-Büchern schön erklärt. Die Bewegungen einer Nähmaschine oder einer
+Stichsäge sind dafür gute Beispiele. Wenn
+die bewegliche Stange eine andere Stange
+mit Drehpunkt antreibt,
+entsteht eine Schwingbewegung, wie wir sie
+beispielsweise von unseren
+Scheibenwischern
+kennen. Weitere Hintergrundinformationen finden Interessierte in den
+Büchern „Elemente der
+Technik“ in der Bibliothek auf der Website des niederländischen
+fischertechnik-Clubs [1].
+Ein rein mechanisches Verfahren ist zuverlässig und einfach. Die Geschwindigkeit um
+den „Wendepunkt“ der Gleitbewegung
+folgt einem allmählichen Verlauf. Die
+Bewegung an den Extrempunkten ist nicht
+abrupt oder ruckartig. Dadurch wird die
+Konstruktion durch die Trägheit des
+beweglichen (gleitenden) Teils nur minimal
+belastet. Die Drehbewegung hat eine feste
+Geschwindigkeit und der Motor kann sich
+einfach in eine Richtung weiterdrehen. Und
+weil sie ohne störanfällige Kontakte oder
+Sensoren
+arbeitet,
+müssen
+keine
+
+
+Elektronik
+
+Schutzvorrichtungen eingebaut werden, um
+zu verhindern, dass die Gleitbewegung
+unerwartet ihre Grenzen überschreitet und
+sich die Konstruktion „zerreißt“. Für ein
+mechanisches Verfahren ist jedoch eine
+aufwändige Hilfskonstruktion für das
+Getriebe etc. erforderlich. Außerdem ist der
+Bauraum im Vergleich zum begrenzten
+Hub der Schubbewegung groß.
+
+Elektromechanisch
+Die einfachste elektromechanische Lösung
+ist die Verwendung eines Polwendeschalters. Wenn die Verkabelung genügend
+Bewegungsfreiheit hat und der Verfahrweg
+relativ klein ist, kann der Polwendeschalter
+am beweglichen Teil der Struktur montiert
+werden. Bei längeren Trajektorien können
+Nocken abwechselnd den entlang der
+Trajektorie positionierten Schalter betätigen (Abb. 1). Eine andere Lösung besteht
+darin, eine am beweglichen Element
+befestigte Schnur durch das kleine Loch im
+Hebel des Polwendeschalters zu führen und
+diesen durch Knoten in der Schnur
+umschalten zu lassen.
+
+
+Gegenphasig geschaltete LEDs können
+ohne großen zusätzlichen Verdrahtungsaufwand direkt abwechselnd mit der
+Bewegungsrichtung als Anzeige aufleuchten. Dieses Verhalten können wir auch
+durch den Einsatz von Dioden in den
+Anschlüssen herkömmlicher Glühbirnen
+erreichen.
+
+
+Kontrolle mit Silberlingen
+Nostalgiker können die obige Lösung mit
+dem traditionellen Silberling Flipflop h4 FF
+(30815) aufbauen, bei dem das Relaismodul
+h4 RB (30812) immer die Versorgungsspannung des Motors umkehrt. Schalter
+können auf diese Weise an die FlipflopImpulseingänge angeschlossen werden. Bei
+passiven Sensoren wie Fotowiderständen
+oder Transistoren, bei denen die Detektionsschwelle einstellbar sein muss, werden
+diese Signale über Grundbausteine h4 G
+(30813) geführt. Theorie und zahlreiche
+Baubeispiele findet ihr im Digital Praktikum oder hobby 4, Band 3.
+Im Experiment in Abb. 3 wurden Fotowiderstände (32698) als Grenzsensoren verwendet, aber natürlich können auch Fototransistoren (36134) als Lichtsensoren verwendet werden. Eine weitere berührungslose Art der Endpunkterkennung ist mit
+dem Reedkontakt (36120) möglich.
+
+
+
+
+Mit mechanischen Impulsschaltern oder
+Magnetschaltern an den Extrempunkten des
+Hubwegs kann mit dem Flip-Flop-Silberling eine elektronische Lösung geschaffen
+
+werden. Dazu können wir die flankensensitiven Eingänge SP und RP verwenden.
+Vergesst jedoch nicht die Entstörung mit
+einem 100-nf-Kondensator gegen Schaltrauschen und Störimpulse, die bei mechanischen Stromstoßschaltern auftreten können (siehe auch hobby 4, Band 3, Abb. 66.3
+und 66.4). Bei Verwendung von berührungslosen Sensoren wie dem Foto-Widerstand (32698) oder dem Foto-Transistor
+(36134) kann die Schwellenwerterkennung
+des Lichtsensors mit dem Grundbaustein
+(36391) eingestellt werden. Die beiden
+Ausgangssignale
+der
+Grundbausteine
+können über ein ODER-Gatter mit dem CP
+verbunden werden, so dass die Sensoren als
+Umschalter arbeiten.
+
+
+
+
+Elektronik
+
+Sobald innerhalb der am Modul einstellbaren Entfernung ein Objekt erkannt wird,
+sinkt diese Ausgangsspannung auf null.
+Dies ist im Grunde dieselbe negative Logik,
+die die Silberlinge verwenden.
+
+gegen das Prellen des Tasters
+
+Ein zusätzlicher Vorteil ist, dass diese
+Module bei einer höheren Versorgungsspannung, wie den 9 V der Silberlinge,
+ohne größere Probleme betrieben werden
+können. Der auf dem Modul eingesetzte
+Spannungskomparator LM393 hält laut
+Datenblatt sogar bis zu 36 V problemlos
+aus. Das einzige Problem ist, dass die
+beiden SMD-LEDs auf der Platine auf 5 V
+eingestellt sind und bei einer Spannung von
+9 V sehr hell leuchten. Und dieses visuelle
+Erkennungsfeedback ist tatsächlich sehr
+nützlich, daher wäre es schade, wenn sie
+deswegen durchbrennen.
+Um diese Sensoren für die Verwendung mit
+den Silberlingen (oder dem TXT-Controller) geeignet zu machen, habe ich zwei
+verschiedene Modifikationen ausprobiert,
+die beide gut funktionierten:
+ Bei einem Modul habe ich die 1 kΩ
+SMD-Vorwiderstände der LEDs durch
+(leider nicht-SMD) 2,2 kΩ ersetzt,
+sodass die LEDs bei 9 V einfach
+schwächer leuchten. Die Versorgungsund die Signalausgangsspannung dieses
+Moduls entsprechen daher voll und ganz
+den Silberlingen.
+
+direkt mit Tastern
+
+Aktive Sensoren
+Anstelle eines Leuchtsteins schien es ein
+lustiges Experiment zu sein, zwei IRHindernissensoren zu verwenden, um die
+Endpunkte zu erkennen. Dies sind „aktive“
+Sensoren, die eine Versorgungsspannung
+von 5 V benötigen und im Ruhezustand ihre
+Versorgungsspannung am Ausgang ausgeben.
+
+ Bei einem zweiten Modul bin ich einen
+anderen Weg gegangen und habe einen
+78L05 Spannungsregler hinzugefügt, sodass die gesamte Schaltung mit 9 V
+versorgt werden kann, aber intern nur
+mit 5 V läuft. Zum Glück wird die
+Signalspannung von nur 5 V von den
+Silberlingen noch ordentlich als LOW
+erkannt, daher scheint dies eine sinnvolle
+Idee für diejenigen zu sein, die direkt mit
+9 V arbeiten möchten (mit dem TXTController oder den Silberlingen).
+
+
+
+ Auch bei Verwendung mechanischer
+Druckschalter ist eine Entstörung gegen
+Schaltgeräusche nicht mehr erforderlich.
+ Das modifizierte „Basisprogramm“ mit
+den schrittweisen Drehrichtungswechseln kann unnötige(n) Motorbelastung
+und -verschleiß vermeiden und verhindert, dass bei jedem abrupten Polaritätswechsel eine Stoßwelle durch das
+Modell geht.
+
+
+Mit dem Zauberling und dem
+„Basisprogramm“
+Nach einem kurzen Test, bei dem ich die
+Fotowiderstände des Vorgängermodells
+durch die Silberlinge mit den modifizierten
+IR-Sensoren ersetzt habe, kam der Zauberling auf den Plan. Mit ihm konnten einige
+Punkte verbessert werden:
+ Da der Zauberling den direkten
+Anschluss von 5-V-betriebenen aktiven
+Sensoren unterstützt, ist es nicht notwendig, Sensoren zu modifizieren.
+
+
+
+Elektronik
+
+Fazit
+Der Zauberling löst einige praktische
+Probleme wie von Zauberhand. Seine
+flexiblen Eingänge ermöglichen das Experimentieren mit praktischen Sensoren außerhalb des bekannten fischertechnik-Sortiments. Die allmählichen Drehrichtungswechsel werden von fischertechnikMotoren sehr geschätzt und wären mit
+diskreter Elektronik nicht so einfach zu
+realisieren. Auf den Projektseiten des
+Zauberlings [2] findet ihr weitere Informationen und ein Video, das die Motorsteuerung in Aktion zeigt. Mr. Möbius [3]
+bestand darauf, dass er auf dem so wunderbar allmählich „schwebenden“ Stuhl sitzen
+darf.
+
+
+Es ist ein schöner erster Trick des Zauberlings. Ich bin gespannt, was er in Zukunft
+noch aus dem Hut zaubern wird. Er arbeitet
+gut mit den Silberlingen zusammen und
+wurde bei meinen Experimenten bereits
+liebevoll in diese traditionsreiche fischertechnik-Familie aufgenommen.
+
+Quellen
+
+
+[1]
+
+Fischer-Werke: Elemente der
+Technik. Teil 1, S. 15. Auf der
+Website des fischertechnik-Club NL.
+
+[2]
+
+Arnoud van Delden: Website zu
+diesem Artikel auf Niederländisch
+und Englisch.
+
+[3]
+
+Arnoud van Delden: Die unendliche
+Lemniskate. ft:pedia 2/2021, S. 36–
+44.
+
+[4]
+
+Arnoud van Delden: Der Zauberling
+(Teil 1): Der Zauberstab. 3/2021, S. 56–66.
+
+[5]
+
+Arnoud van Delden: Der Zauberling
+(Teil 2): Das Zauberbuch. In dieser
+Ausgabe der ft:pedia.
+
+
+

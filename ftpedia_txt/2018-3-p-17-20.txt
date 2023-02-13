@@ -1,0 +1,196 @@
+
+Kinematik
+
+Kinematik
+
+Ein Kreiselspiel
+Stefan Falk
+Mit dem hier beschriebenen Modell kann man nicht nur das Verhalten eines Kreisels studieren
+– es fällt auch noch ein kleines Spiel dabei ab.
+
+Überblick
+Der Kern des Modells ist eine schnell angetriebene, senkrecht stehende Achse mit
+einem robusten (älteren) Kardangelenk
+(31044), über dem schließlich die rotierende Schwungmasse – der Kreisel – sitzt.
+Das Modell verwendet ein fischertechnikSpeichenrad. Falls ihr einen Aufbau z. B.
+auf einer fischertechnik-Drehscheibe verwenden möchtet, achtet darauf, alles daran
+Angebaute gut zu sichern, denn der Kreisel
+wird sich sehr schnell drehen!
+
+
+Der Antrieb besteht aus einem XM-Motor,
+auf dem direkt ein Z40 mit einer Flachnabe
+(mit den Nabenflügeln nach unten) sitzt.
+Das treibt über ein Z10 eine über vier SKupplungen 15 2 (38253) sehr leichtgängig
+gelagerte Achse an. Zusammen mit einem
+fischertechnik Power Controller oder einem
+anderen regelbaren Netzteil ergibt das eine
+gut regelbare Drehgeschwindigkeit von
+Null bis „sehr schnell“.
+
+
+
+Der Fuß
+Das Ganze sitzt auf einem gefederten
+Gestell. Dadurch ist das Modell nicht so
+laut, es wandert weniger auf dem Tisch
+herum und man kann die Kreiselkräfte auch
+sehr schön beobachten, wenn die Federn im
+Takt der Kreiselbewegungen mehr oder
+weniger stark belastet werden.
+
+einen Abstandsring 3 (31597) und wird
+ganz unten mit einem Klemmring gesichert.
+Wegen des schnellen Laufs empfiehlt es
+sich sehr, die Achse an den Lagerstellen mit
+etwas Vaseline zu schmieren. Auch bei
+Dauerbetrieb bleibt sie dann leichtgängig
+und quietscht nicht.
+
+
+Die Nabe des Z40 ist etwas schwierig
+anzuziehen. Es geht aber recht einfach,
+wenn ihr das Z40 festhaltet und die Flügel
+der Nabenmutter mit einer Metallachse von
+außen anstoßend dreht.
+
+
+Der Antrieb
+Die folgenden Abbildungen sollten den
+Nachbau leicht ermöglichen.
+Die Metallachse wird von den vier S-Kupplungen 15 2 (38253) „kreuz und quer“
+sicher, aber leichtgängig gelagert. Die
+Metallachse 110 trägt unterhalb des Z10
+
+
+Der waagerechte Baustein in der Mitte von
+mit einem Federnocken an den senkrecht
+stehenden Bausteinen befestigt.
+
+Kinematik
+
+nach unten knickt und damit schwer anläuft
+oder das Kardan beschädigt.
+Er wird mit folgenden Bauteilen zwischen
+Drehscheibe und dem waagerechten BS 30
+aus Abb. 6 befestigt (von unten nach oben):
+Winkelstein 15°, Winkelstein 7,5°, Baustein 5 mit zwei Zapfen, Winkelstein 7,5°,
+Winkelstein 15°, zwei Bausteine 5.
+
+Der Kreisel im Betrieb
+Achtet darauf, dass der XM-Motor immer
+nur in der Richtung dreht, in der sich die
+Flachnabe des Z40 im Zweifelsfall stärker
+zudreht, nicht aber in die Richtung, in der
+sie sich öffnen würde. Sonst dreht der
+Motor einfach durch und ihr bekommt nicht
+die höchstmögliche Drehgeschwindigkeit
+heraus.
+Versuch 1: Ganz langsam anlaufen
+lassen
+
+
+Der Sicherungsring
+
+Wenn man den Drehknopf der Stromversorgung ganz langsam aufdreht, bleibt
+der Kreisel normalerweise auf den Rädern
+liegen – er kommt einfach nicht über das
+„nächste“ Rad drüber, selbst wenn man voll
+aufdreht.
+Versuch 2: Schneller aufdrehen
+Dreht man hinreichend schnell auf, schafft
+es der Kreisel über die Räder, auf denen er
+im Ruhezustand aufliegt. In dem Moment
+beginnt er, „frei“ über den Rädern zu
+schweben und sich gleichzeitig mit seiner
+schnellen Rotation langsam um die senkrechte Achse zu bewegen. Das ist die
+„Präzession“ [1] – siehe auch Rüdiger
+Riedels Beitrag „Kreisel und mehr“ in
+dieser ft:pedia-Ausgabe [2].
+
+
+Schließlich haben wir noch einen einfachen
+Ring aus Vorstufe-Rädern (V-Rad 23x10)
+und V-Radachsen (36586) angebracht. Der
+verhindert, dass der Kreisel beim zu langsamen Lauf oder beim Ausschalten zu weit
+
+Diese Drehbewegung wird desto kleiner
+und schneller, je mehr Spannung wir auf
+den Motor geben und je schneller der
+Kreisel sich also dreht.
+Versuch 3: Sofort voll aufdrehen
+Wenn wir bei voll aufgedrehtem Knopf die
+Stromversorgung schlagartig einschalten,
+
+
+
+
+stellt sich der Kreisel praktisch augenblicklich senkrecht und bleibt in dieser Position.
+In dieser Situation könnt ihr auch heftig am
+gesamten Modell wackeln. Der Kreisel wird
+unerschütterlich senkrecht stehen bleiben,
+weil er sich so schnell dreht.
+Versucht auch einmal, das Modell selbst
+hochzuheben und schräg zu stellen. Selbst
+dabei wird der Kreisel immer aufrecht
+stehen bleiben.
+Versuch 4: Den Kreisel ablenken
+Während der Kreisel dreht, könnt ihr z. B.
+einen Baustein 30 in der Hand halten und
+oben auf seine Achse aufsetzen. Dann könnt
+ihr den Kreisel aus seiner Position heraus
+zwingen, indem ihr den Baustein bewegt.
+Fühlt die Kraft, mit der er sich gegen diese
+Auslenkung „wehrt“. Beobachtet, wie er
+nach dem Loslassen wieder in die Senkrechte geht.
+Dasselbe könnt ihr auch durch Anstoßen
+des Kreisels oder Schütteln des ganzen
+Modells bewirken. Je schneller der Kreisel
+dreht, desto weniger wird ihn eine solche
+Störung interessieren – je rascher er läuft,
+desto sturer bleibt er in seiner Position.
+Versuch 5: Langsamer werden
+Wenn ihr vom senkrecht stehenden, schnell
+rotierenden Kreisel ausgehend die Motorspannung langsam verringert, wird er also
+immer langsamer drehen und anfangen zu
+taumeln. Je langsamer der Kreisel dreht,
+desto stärker wird die Taumelbewegung –
+bis er schließlich wieder auf dem Räderkranz aufliegt.
+
+
+Beobachtet die Taumelbewegung einmal
+genau: In einer mittleren Stellung des Drehknopfes der Stromversorgung führt der
+Kreisel interessante Bewegungen aus. Er
+schlägt weit aus, rappelt sich sozusagen
+wieder auf und bleibt näher an der senkrechten Achse, fällt wieder in stärkeres
+Taumeln, richtet sich wieder auf, usw.
+Diese Bewegungen zu berechnen ist
+übrigens möglich, kommt aber selbst im
+Physikstudium nicht gerade im ersten
+Semester dran – dazu braucht man schon
+erhebliches mathematisches Rüstzeug.
+Versuch 5: Ein kleines Spiel
+Aus dieser Beobachtung könnt ihr einen
+kleinen Wettbewerb ableiten.
+a) Wer schafft es, den Kreisel mit der
+geringsten Drehgeschwindigkeit zum
+Abheben vom Radkranz zu bringen?
+b) Wer schafft es, den Kreisel am langsamsten drehen zu lassen, ohne dass er
+die Räder berührt?
+c) Wer schafft es, den Kreisel am langsamsten drehen zu lassen, ohne dass er in
+den Radkranz abfällt und nicht mehr
+hochkommt?
+Viel Spaß beim Erfahren und Erspüren der
+Kreiselkräfte!
+
+Quellen
+[1]
+
+Wikipedia: Präzession.
+
+[2]
+
+Riedel, Rüdiger: Kreisel und mehr.
+ft:pedia 3/2018.
+
+

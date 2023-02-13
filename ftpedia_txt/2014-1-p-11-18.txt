@@ -1,0 +1,427 @@
+
+Fahrzeugtechnik
+
+Fahrzeugtechnik
+
+Bergbau-Radlader
+Erik und Jörg Busch
+Der Bergbau-Radlader ist unser erstes Modell, das wir auf der ft-Convention ausgestellt
+haben. Die Herausforderung bei Baufahrzeugen mit Knicklenkung ist die Ansteuerung der
+Pneumatik-Zylinder für die Lenkung, wenn diese mit der ft-Fernsteuerung proportional
+angesteuert werden sollen. Kernstück des Radladers ist deshalb ein mechanischer Regler, der
+eine gefühlvolle Lenkung mit Pneumatik ermöglicht.
+Nach dem Besuch der ft-Convention 2012
+stand für Erik (damals sechs Jahre alt) fest,
+dass wir im nächsten Jahr Aussteller sein
+werden. Eine Idee wurde auch schnell
+gefunden, das „Dübel“-Bergwerk. Ein
+Radlader und ein Seilbagger fördern
+verschiedene Dübel und FischerTip aus
+einem Bergwerk. Eine Förderanlage trennt
+anschließend die Dübel vom FischerTip.
+Und als letzter Schritt werden in einer
+zweiten Förderanlage die guten FischerDübel mittels Farbsensor erkannt und in
+einen Original-Karton sortiert.
+Trotz vieler Besuche auf diversen Baustellen, Kiesgruben und dem Bergwerk in
+Oberkochen haben wir weder einen Seilbagger noch einen Bergbau-Radlader im
+Original gesehen. Erste Eindrücke der
+Fahrzeuge haben wir auf YouTube
+gesammelt. Hier gibt es genügend Filme
+der beiden Fahrzeuge in Aktion. Einem
+Sechsjährigen vermittelt das zwar einen
+ersten Eindruck, für die Vorstellung der
+riesigen Dimensionen dieser Fahrzeuge
+muss man jedoch einfach die OriginalFahrzeuge sehen.
+Deshalb planten wir dann einen Besuch auf
+der großen Baumaschinen-Messe in München, der BAUMA. Die Besichtigung der
+Giganten der Baufahrzeuge begeisterte die
+ganze Familie. Auch durch die Verwendung einer Radladerschaufel als Rutsche
+
+bleiben die riesigen Dimensionen im
+Gedächtnis. Eine Sitzprobe in den Fahrerhäusern gehörte natürlich auch dazu. Am
+Stand der Firma Schopf haben wir dann
+unser Vorbild für den Bergbauradlader
+gefunden. Die Mitarbeiter nahmen sich
+viel Zeit, uns ihren Radlader und seine
+Technik näher zu erklären. Und natürlich
+durfte Erik am Steuer des Radladers Platz
+nehmen (Abb. 3 links).
+
+Das Original
+
+SFL 60 XLP [1]
+
+Der SFL 60 XLP (Abb. 1 und Abb. 2) ist
+mit einer Nutzlast von 6 t einer der kleineren Radlader, bei einem Gesamtgewicht
+von 19,8 t. Der größte Schopf-Radlader
+besitzt eine Nutzlast von 18 t. Dafür ist der
+„kleine“ SFL 60 XLP nur 1,38 m hoch und
+damit für niedrigste Schachthöhen im Erzund Kohlebergbau geeignet.
+In der niedrigen Ausführung sind der
+gesamte Radlader und insbesondere auch
+die Kabine nur so hoch wie die Reifen. Der
+
+
+
+Fahrer sitzt quer zur Fahrtrichtung. Da die
+Kabine seitlich die Karosserie überragt,
+kann er am Fahrzeug entlang schauen, für
+die Übersicht auf der anderen Seite gibt es
+eine Kamera.
+Eine Besonderheit der Schopf-Radlader ist
+das Drehknickgelenk. Neben dem Knicken
+ermöglicht es ein Verdrehen um ±8 Grad.
+Durch diese Verdreh-Möglichkeit ist ein
+stabiler und einfacher Fahrwerksaufbau
+möglich; eine aufwändige Pendelachse ist
+nicht erforderlich.
+
+unermüdlichen Einsatz des Testfahrers
+konnte die Stabilität des Radladers immer
+weiter optimiert werden. Die großen Fahrten in der großen Halle der ft-Convention
+(Abb. 3) außerhalb der Besichtigungszeiten
+hielt das Modell trotz Hindernissen wie
+Kabelkanälen problemlos aus [3].
+
+bei der ft-Convention
+
+Die Radlader werden zum Teil erst im
+Bergwerk zusammengebaut, je nach Größe
+der Aufzugskörbe des Bergwerks. In
+besonders extremen Fällen werden sogar
+auch die Rahmen erst unten im Bergwerk
+zusammengeschweißt.
+
+
+Der Testfahrer
+Das Modell des Radladers sollte mit der
+Fernsteuerung gut steuerbar sein und auch
+für den Spielbetrieb ausreichend robust
+ausgelegt werden. Bei vielen Testfahrten
+im Testgelände „Wohnzimmer“ wurden
+die verschiedenen Bauzustände durch Erik
+bis zum Ausfall getestet. Durch diesen
+
+Das Modell
+Die Schaufelsteuerung und die Knicklenkung, im Original hydraulisch betätigt,
+werden im Modell (Abb. 4 und Abb. 5)
+pneumatisch gesteuert. Die proportionale
+Ansteuerung der Lenkung über die Pneumatik-Zylinder ist das Kernelement dieses
+Radladers. Proportionale Ansteuerung bedeutet, dass sich entsprechend der Stellung
+des Fernsteuerhebels ein definierter Lenkeinschlag ergibt.
+Eine proportionale Steuerung basiert
+immer auf einem Abgleich des aktuellen
+Ist-Knickwinkels mit dem gewünschten
+Soll-Knickwinkel. Die Steuerung, d.h. der
+Abgleich von Soll- und Ist-Knickwinkel,
+lässt sich natürlich auf viele Arten
+elektronisch oder mit einer elektronischen
+Steuerung (z. B. TX) lösen.
+In unserem Modell wird diese Steuerung
+elektromechanisch gelöst. Über Schalter
+wird jeweils ein Magnetventil aktiviert und
+damit ein Pneumatik-Zylinder angesteuert.
+Anstelle von Schalter und Magnetventil
+könnte man natürlich auch direkt ein leicht
+schaltbares Pneumatik-Ventil verwenden.
+Im aktuellen Fischertechnik-Sortiment gibt
+
+es jedoch nur noch die Möglichkeit mit
+Schalter und Magnetventil.
+Die mechanische Regelung ist im hinteren
+Teil des Radladers untergebracht. Aus
+Platzgründen wird ein linearer gerader
+Fahrweg verwendet. Mit der entsprechend
+großen Länge erreicht man dadurch eine
+hohe Stellgenauigkeit. Doch davon später
+mehr.
+
+Fahrzeugtechnik
+
+modul für das Dieselmotor-Geräusch darf
+natürlich auch nicht fehlen.
+
+Der Aufbau
+Der Grundrahmen besteht aus zwei
+270 mm langen Alu-Profilen (Abb. 6).
+Daran anschließend befindet sich das sehr
+stabil aufgebaute Gelenk. Im hinteren Teil,
+d. h. im Bild rechts, sieht man die Achsen
+für die Linear-Führung der Ist-Position.
+
+
+Der obere Teil des Gelenks wird identisch
+dem unteren Teil aufgebaut (Abb. 7). Die
+doppelten vertikalen Stützen sind für die
+Halterung des Motors. Hinter dem Gelenk
+ist genügend Platz für die später beschriebenen Hydraulikzylinder der Lenkung.
+
+
+
+Der Fahrantrieb erfolgt über drei Differentiale auf alle vier Räder. Und das Sound-
+
+Im nächsten Schritt werden nun der Motor
+und der zentrale Antrieb mit Mittendifferential ergänzt (Abb. 8). Eine Antriebskette
+überträgt das Drehmoment von dem
+Zahnrad Z10 der Motorwelle auf das
+Zahnrad Z20 des Differentials. Als Kette
+wurden, abweichend von der Darstellung,
+normale Kettenglieder ohne Vierkant an
+der Seite aus Platzgründen verwendet (im
+ft-Designer waren diese Elemente nicht
+vorhanden). Ein Kardan-Gelenk überträgt
+
+
+
+das Drehmoment dann über das Knickgelenk.
+
+
+Der obere der Hebe-Zylinder ist über die
+Achse mit dem Schaufel-Arm verbunden
+(Abb. 11). Der Kipp-Mechanismus ist eine
+Z-Kinematik, die mit einem „roten“ Pneumatik-Zylinder mit Rückstellfeder angesteuert wird. Die Feder stellt sicher, dass
+ohne Betriebsdruck die Schaufel in jeder
+Lage des Arms sicher nach vorne kippt.
+Ohne diese Feder müsste man beide Seiten
+des Pneumatik-Zylinders ansteuern. Dazu
+würde ein zusätzliches Magnetventil
+benötigt.
+
+Der vollständige Antrieb mit allen drei
+Differentialen und den breiten Reifen ist
+aus Abb. 9 ersichtlich. Das Differential
+zwischen den Hinterrädern ist aus Platzgründen ohne Stirnrad.
+
+
+Die Hebevorrichtung der Schaufel (Abb.
+10) wird pro Seite durch jeweils zwei
+Pneumatik-Zylinder angesteuert. Damit
+sind die Hebekräfte auch für gut gefüllte
+Schaufeln ausreichend. Die beiden Pneumatik-Zylinder sind mit Verbindern gekoppelt und liegen mit ihren Achsen in der
+unteren roten Bauplatte.
+
+
+Die komplette Mechanik mit der Schaufel
+ist in Abb. 12 dargestellt.
+Bei den doppelten Hebezylindern gibt es
+noch eine kleine Besonderheit. Jeweils
+einer der beiden Zylinder ist ein „roter“
+Pneumatik-Zylinder mit Rückstellfeder.
+Für die normale Abwärtsbewegung ist die
+Schwerkraft der Schaufel absolut ausreichend. Da aber für die Kipp-Bewegung der
+Schaufel auch ein Pneumatik-Zylinder mit
+Feder eingebaut ist, ergibt sich ein Aufkanten über die vordere Schaufelkante. Die
+Ladung fällt dadurch leicht wieder aus der
+Schaufel. Mit den Rückstellfedern in den
+Hebezylindern wird die Schaufel immer
+plan auf den Boden gedrückt und
+ermöglicht so eine gute Aufnahme der
+Ladung.
+
+
+Fahrzeugtechnik
+
+zur hinteren Linearführung
+
+Auf dem unteren Baustein BS30 der
+Linearführung sind zwei Bauplatten mit
+drei Nuten (38428) mit Hilfe zweier
+Federnocken angebracht. Auf diesen sind
+dann, für jede Schalterseite, ein Winkelstein 15° und ein Baustein 7,5 angebracht –
+sozusagen als Rampe mit Verlängerung,
+jeweils abgedeckt mit einer Bauplatte
+15x15. Damit passt die Bauhöhe ins
+15-mm-ft-Raster und die Schalter gleiten
+weich darüber (Abb. 15).
+
+Nach Antrieb und Schaufel-Mechanik
+kommen wir nun zum Kernstück des Radladers, der Knicklenkung. Die beiden
+Hydraulik-Zylinder sind links und rechts
+im Rahmen eingebaut (Abb. 13).
+
+
+Über den Schaltflächen für die Ist-Position
+des Knickgelenks kommt nun eine zweite
+Linearführung. Auf dieser gleitet ein Baustein BS30 mit zwei Schaltern (Abb. 16).
+
+Die Winkelstellung des Knickgelenks wird
+durch eine lange Dreifachstrebe (Abb. 14)
+unter dem Grundrahmen nach hinten zu
+der Linear-Führung übertragen. Diese
+Strebe muss keine Lenkkräfte, sondern nur
+die Position übertragen, d. h. es ergeben
+sich nur minimale Reibungskräfte. Die
+Schubstange ist über einen Streben-Adapter mit dem Baustein BS30 verbunden, der
+auf den Achsen der Linearführung verschiebbar ist.
+
+mit Schaltern
+
+
+
+Diese Schalter werden mit den Magnetventilen elektrisch verbunden. Die Magnetventile wiederum steuern die beiden Pneumatik-Zylinder der Lenkung an.
+Die Schalter sind so auf dem Baustein
+BS30 eingestellt, dass immer nur ein
+Schalter geschlossen ist.
+
+das Magnetventil angesteuert und der
+Pneumatik-Zylinder der Lenkung korrigiert
+den Lenkeinschlag so lange, bis wieder
+Soll- und Ist-Position übereinstimmen. Die
+Auslegung der Ansteuerung wird im
+nächsten Kapitel noch näher erläutert.
+
+Die Schalter werden von dem Servo der
+Fernsteuerung über ein Viergelenk auf der
+Linearführung verschoben (Abb. 17 und
+Die Schaltereinheit hätte, wenn sie direkt
+mit dem Servohebel verbunden wäre, d. h.
+ohne die Viergelenk-Kinematik, einen viel
+geringeren Verschiebeweg. Die Spiele in
+der gesamten Kinematik hätten dadurch
+einen zu großen Einfluss auf die Lenkung,
+die Lenkung hätte nur ca. 2–3 Stufen
+zwischen Mittelstellung und Endanschlag.
+Durch die Viergelenk-Kinematik ergibt
+sich ein großer Verschiebeweg, der Einfluss der Spiele wird wesentlich geringer
+und man erhält eine sehr feinfühlige
+Lenkung.
+
+
+In dem hinteren „Motorraum“ des Radladers ist auf der rechten Seite noch der
+Fernsteuerungsempfänger
+untergebracht
+(Abb. 19). Auf der linken Seite sind die
+vier Magnetventile und das Sound-Modul
+(Darstellung nur ähnlich) angeordnet.
+
+für die Soll-Vorgabe
+
+Weicht die Soll-Position – die Schalter auf
+dem oberen BS30 – von der Ist-Position –
+die schrägen Ebenen auf dem unteren
+BS30 – ab, wird ein Schalter geschlossen,
+
+
+
+Fahrzeugtechnik
+
+Die folgende Übersicht zeigt noch die
+elektrischen und pneumatischen Verbindungen für die Knicklenkung des Modells.
+
+
+Der Verfahrweg der Schalteinheit ist durch
+die Hebel-Kinematik wesentlich größer als
+bei direkter Ansteuerung und auch nahezu
+linear über der Servo-Auslenkung (Abb.
+23).
+Verbindungen
+
+Die Kinematik und Regelung
+Zum Verständnis der Regelung ist in Abb.
+21 ein Prinzipbild des „Reglers“ mit den
+zwei Schaltern dargestellt. Zwischen dem
+Schalten des einen oder anderen Schalters
+befindet sich eine sogenannte Totzone.
+Diese ist abhängig von der Kinematik und
+dem Spiel in der Kinematik.
+
+
+
+Damit sich die Totzone möglichst wenig
+auf die Lenkung auswirkt, sollte der
+Verfahrweg der Schalteinheit möglichst
+groß sein. Der Hebelarm des Servos ist
+dafür leider zu kurz. Deshalb wurde die
+abgebildete Hebel-Kinematik (Abb. 22)
+verwendet.
+
+Im Original ist der Knickwinkel des
+Radladers auf beiden Seiten identisch. Im
+Modell besteht die Möglichkeit, den
+Lenkausschlag nach links, d.h. zum Fahrer
+hin, zu vergrößern. Zur rechten Seite
+beschränkt die Lage des Akkus den
+Lenkeinschlag.
+Durch Verschieben des Anlenkpunktes für
+die Schubstange am Knickgelenk kann
+man das Lenkverhalten einfach anpassen.
+
+
+
+
+Liegt der Anlenkpunkt in Längsrichtung
+gesehen auf Höhe des Knickgelenks,
+ergeben sich symmetrische Lenkausschläge. Durch Verschieben des Anlenkpunktes nach vorne (Abb. 24) ergeben sich
+größere Lenkausschläge nach links. Der
+Abstand des Anlenkpunktes von der
+Drehachse des Knickgelenks beeinflusst
+die absoluten Lenkausschläge.
+
+Zylinder mit einer Drossel, z. B. einem
+Pneumatik-Handschaltventil,
+verbinden.
+Damit lässt sich die Bewegung dämpfen
+und die Totzone des Reglers, also der
+Abstand der beiden Schalter, weiter
+verringern.
+Da die Regelung auch ohne zusätzliche
+Dämpfung sehr gut funktioniert, haben wir
+darauf verzichtet. Dadurch entfällt eine
+zusätzliche Einstellung.
+Auf der ft-Convention funktionierte unser
+Radlader trotz „Dauereinsatz“ zwei Tage
+lang ohne jede Korrektur.
+
+Resümee
+Unser Ziel, ein Familienprojekt für die
+ft-Convention umzusetzen, hat sich erfüllt.
+
+
+Durch die Wahl des Anlenkpunktes lässt
+sich also die Lenkcharakteristik nach
+Wunsch einstellen.
+Der Knickwinkel zur linken Seite wird
+durch den möglichen Weg des PneumatikZylinders begrenzt.
+Mit dieser Auslegung lässt sich der
+Radlader schon sehr gefühlvoll steuern.
+Wichtig sind geringe Spiele in der
+Kinematik.
+Die notwendige Totzone des Reglers kann
+man noch weiter verkleinern, wenn man
+die Bewegung der Lenkung noch etwas
+dämpft. Die Dämpfung lässt sich z. B.
+durch die Gegenkammern in mindestens
+einem der beiden Lenk-PneumatikZylinder erreichen. Dafür kann man die
+„unbenutzte“ Seite der Lenk-Pneumatik-
+
+
+Wichtig waren dafür natürlich die Unternehmungen, um zunächst die Informationen über die Fahrzeuge zu bekommen.
+Und auch nur durch das unermüdliche
+Testen von Erik und dem anschließenden
+Weiterentwickeln konnte gemeinsam so
+ein stabiles Modell entstehen. Auch unsere
+„Mädels“ unterstützten uns mit dem Bau
+des Bergwerks aus Pappmaché und
+FischerTip. Und gemeinsam erlebten wir
+dann ein unvergessliches Wochenende bei
+der ft-Convention. Die Begeisterung von
+Erik wurde am Ende der ft-Convention
+deutlich: „Nächstes Jahr sind wir wieder
+dabei“.
+
+Quellen
+[1]
+
+Firmenprospekt SCHOPF Maschinenbau GmbH: Underground Mining
+Equipment, Ausgabe 04/2013.
+
+[2]
+
+SCHOPF Maschinenbau GmbH:
+SFL60XLP – Untertage-Fahrlader.
+
+[3]
+
+Bilderpool ft community: Ferngesteuerter Schopf-BergbauRadlader.
+
+

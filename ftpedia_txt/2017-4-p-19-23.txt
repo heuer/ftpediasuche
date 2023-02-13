@@ -1,0 +1,151 @@
+
+Modell
+
+Modell
+
+Geländegängiges Fahrzeug mit 4-Rad-Antrieb
+Daniel Canonica
+Fahrzeuge mit Allradantrieb dienen vielen Zwecken, z. B. in der Landwirtschaft oder auf
+schwierigen Bergstrecken. Hier wird ein relativ leicht gebautes Modell vorgestellt.
+
+Die Entwicklung des Jeeps
+Schon früh in der Geschichte des Automobils erkannte man, dass man die
+Antriebskraft besser nutzen kann, wenn vier
+oder noch mehr Räder angetrieben werden.
+Abgesehen von frühen zivilen Nutzungen
+waren – wie bei vielen anderen Entwicklungen – Anforderungen und Beschaffungsprogramme des Militärs von großer
+Bedeutung für die Serienfertigung von
+strapazierfähigen Fahrzeugen mit Allradantrieb.
+
+Die militärische Entwicklung ging dann
+über verschiedene Zwischenstufen bis zum
+HMMWV (umgangssprachlich „Humvee“)
+weiter, als Straßenfahrzeuge wurden viele
+Modelle bis zum Jeep Cherokee gefertigt
+und verkauft.
+
+Das Modell mit 4-Rad-Antrieb
+Das Modell entspricht in der Form weitgehend dem Jeep von 1945 (siehe Abb. 2
+und 3):
+
+Nachdem bereits in den 1930er Jahren erste
+Entwürfe verfügbar waren, startete die USArmee 1940 eine große Ausschreibung für
+den späteren „Jeep“ – ein relativ leicht
+gebautes, geländegängiges Fahrzeug mit
+Vierrad-Antrieb und bis zu 250 kg
+Zuladung. Bis Kriegsende wurden von
+verschiedenen Herstellern mehrere 100.000
+Stück produziert [1].
+
+Die Sitze sind mit Verbindern 45 am seitlichen Rahmen der Karosserie befestigt,
+welche sich, wie wir weiter unten sehen, mit
+einem Handgriff entfernen lässt.
+mal nötigen) Wartungsarbeiten werden
+dadurch enorm erleichtert.
+
+
+
+
+
+Die Achse führt durch die beiden BS30 mit
+Loch, welche die Karosserie halten, und die
+unteren Nuten der beiden BS7,5, welche mit
+der Vorderseite des Fahrgestells verbunden
+sind.
+
+Die Karosserie ist vorne mit einer Achse mit
+dem Fahrgestell verbunden (siehe Abb. 5).
+
+von unten. Weil ich anfänglich einen
+schwächeren Akku verwendet habe, habe
+ich alles sehr leicht gebaut.
+
+
+
+Modell
+
+Ein Wort zum Akku: Um kleine und leichte
+Modelle zu bauen, verwende ich nun einen
+zweizelligen (2S) LiPo-Akku. Die Nennspannung ist 7,4 V, voll aufgeladen gibt er
+etwa 8,4 V ab und speichert 800 mAh.
+
+Antrieb und Lenkung
+Die folgende Abbildung zeigt das Fahrgestell von unten mit den beiden Differentialgetrieben und der Lenkung.
+
+
+Die Abbildungen 9 und 10 zeigen die
+Details der Lenkung und der Vorderradaufhängung.
+
+
+Der Motor treibt über eine kurze Kette die
+Antriebswelle an, welche die Kraft auf
+beide Differentiale überträgt (Abb. 7). Der
+zur Dekoration montierte Schalthebel ist
+sinnigerweise direkt vornedran.
+
+
+
+
+
+Die Lenkung mit der Handkurbel aus den
+uralten fischertechnik-Kästen sieht etwas
+improvisiert aus, sie funktioniert aber recht
+gut und spricht schnell an. (Mit dem Servo
+ginge es natürlich ebenso gut, aber mein
+Servo funktioniert nicht mehr einwandfrei.)
+
+Die Abbildungen 12 bis 14 zeigen die
+Lagerung der Pendelachse (von unten)
+sowie die ausgebaute Pendelachse.
+
+
+Weil die roten Gelenke unter Last immer
+etwas nachgeben, habe ich am äußeren
+BS15 einen kleinen Winkelstein angebracht. Dadurch ergibt sich ein erwünschter
+Radsturz (das Rad steht leicht schief). Unter
+Last oder nach einigen Kollisionen mit
+Möbeln gleicht sich das wieder aus.
+
+Pendelachse
+Um Hindernisse gut zu überwinden, ist die
+Hinterachse als sogenannte Pendelachse
+ausgeführt, d. h. sie ist um die Antriebswelle drehbar gelagert (siehe dazu auch
+verschiedene interessante Modelle im
+Bilderpool). Abb. 11 zeigt den starken
+Niveauausgleich:
+
+
+
+
+
+Modell
+
+Fazit
+Dank dem Allradantrieb bewegt sich das
+Auto recht flink über Boden und Teppiche
+hinweg. Ebenso überwindet es Hindernisse
+mit einigem Anlauf gut. Die Lenkung
+tendiert aber zum Einsteuern bei Hindernissen. Hier wäre eine Lenkung mit der
+Schneckenmutter (oder eben dem Servo)
+robuster.
+
+Weil ich über keinen Powermotor verfüge,
+habe ich bisher keine Tests bezüglich der
+Steigfähigkeit gemacht. Auch habe ich es
+weder im Sandkasten noch im Schlamm
+getestet. Für derartige harte Einsätze sind
+die neueren Reifen mit dem guten Profil
+sicher besser geeignet.
+
+Quellen
+[1]
+
+Wikipedia: Jeep
+
+[2]
+
+Wikimedia: Jeep Willys MB 1945
+(Foto: Pahu)
+
+
+

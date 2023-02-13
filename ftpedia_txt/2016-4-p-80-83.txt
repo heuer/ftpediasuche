@@ -1,0 +1,319 @@
+
+
+Computing
+
+LED-Backpack im Retrodesign
+Christian Bergschneider, Stefan Fuss
+Handy-Apps mit pixeliger Grafik sind cool, Retro ist in. Höchste Zeit, dem TX(T) etwas 80er
+Look zu verpassen. Warum nicht mit einer 8x8-LED-Anzeige mit C64-Zeichensatz? Wer will,
+kann sich mit einfachen Mitteln selbst seinen Zeichensatz für die ftpiLED definieren.
+Die Matrix
+Die ftpiLED besteht aus einer 8x8-BicolorMatrix von Adafruit (Abb. 1). Wie die
+meisten Arduino- und Raspberry Pi-Breakoutboards kommt die kleine Matrix mit I²CBus-Interface.
+
+Die 8x8-Matrizen lassen sich alle mit der
+hier beschriebenen ROBO Pro-Bibliothek
+ansteuern; für die 7-Segmentanzeige können nur Teile aus der vorliegenden Bibliothek genutzt werden.
+Der Anschluss am TX(T)
+Mit dem ftUNIpi aus [1] ist der elektrische
+Anschluss schnell erledigt. Der ftUNIpi
+wird mit einem 5 V-Spannungsregler bestückt. Für den Anschluss am TXT wird
+zusätzlich der beschriebene Levelshifter
+(R1, R2, T1, T2) benötigt. Der TX als 5 VI²C-Busdevice kommt ohne Levelshifter
+aus. Lady Ada [2] gibt zwar an, der Baustein würde auch direkt mit 3,3 V Betriebsspannung funktionieren; dies liegt aber
+außerhalb der Spezifikation des HT16K33.
+
+
+Jedes der 64 Pixel besteht aus einer roten
+und einer grünen LED. Obwohl das
+Breakoutboard als Bicolor-Matrix verkauft
+wird, lassen sich so drei Farben darstellen:
+Schaltet man die rote und die grüne LED
+eines Pixels gleichzeitig an, so leuchtet das
+Pixel gelb.
+Kern der Matrix ist der 16x8-LED-Treiber
+HT16K33. Adafruit hat eine ganze Reihe
+unterschiedlicher Breakoutboards mit
+diesem Baustein im Programm: Mehrere
+8x8-Matrizen in verschieden Farben sowie
+7-Segmentanzeigen mit vier Digits [2].
+
+
+Die Matrix von Adafruit wird fast fertig
+geliefert. Es muss nur noch die LED-Matrix
+auf die Platine aufgelötet werden. Beim
+anlöten der Matrix muss auf die Ausrichtung geachtet werden; sie funktioniert
+nur, wenn der Aufdruck an der Matrix zum
+weißen Punkt auf der Platine passt.
+Im Standard hat das Board die I²C-BusAdresse 0x70. Diese sollte vermieden
+werden – u. a. benutzt der I²C-PWM-IC
+PCA9685 diese Adresse. Die rpp-Bibliothek im Downloadbereich arbeitet mit
+Adresse 0x71. Dazu muss auf dem Board
+der Lötjumper A0 gesetzt werden. Damit
+der ftUNIpi komplett hinter der Matrix
+verschwindet, wird das Breakoutboard am
+
+
+Computing
+
+ftUNIpi über die vier Pins JP1.4 bis JP1.8
+angeschlossen. Die Lötjumper werden wie
+in Tab. 1 beschrieben gesetzt.
+Matrix
+
+Lötbrücken am
+ftUNIpi
+
+Funktion
+
+C
+
+J4 auf SDC
+
+I²C Clock
+
+D
+
+J15 auf SDA
+
+I²C Data
+
+-
+
+J6 auf GND
+
+GND
+
++
+
+J17 auf VCC
+
++5V
+
+Wert 0x0E und das Byte #7 den Wert 0x0A.
+Dies führt dazu, dass in der vierten Zeile
+jeweils eine LED grün, eine rot und eine
+gelb leuchtet. Die anderen LEDs sind ausgeschaltet (Tab. 2).
+Listen in ROBO Pro
+
+Tab. 3: Anschluss der Matrix an den ftUNIpi
+
+Die Register
+Der Baustein benötigt nur acht Register.
+Diese werden nicht über Unteradressen
+adressiert, sondern über die I²C-Adresse des
+Bausteins.
+Beim Schreiben an den HT16K33 wird in
+den oberen vier Bits eines Befehls das
+Register definiert, über die unteren vier Bits
+werden die gewünschten Einstellungen
+übertragen.
+Um Pixel auf der Matrix zu setzen, muss in
+den internen Display Buffer geschrieben
+werden. Dieser ist ein 16 Byte großer RAMBereich im Baustein. Jedes Bit entspricht
+darin einer LED. Ist das Bit gesetzt, so ist
+die LED angeschaltet. Die Bytes an den
+geraden Adressen (0, 2, 4, …) steuern die
+grünen LEDs, die Bytes an den ungeraden
+Adressen (1, 3, 5, …) steuern die roten
+LEDs an.
+Der Display Buffer wird über den Display
+Data Address Pointer angesprochen. Bei
+diesem Wert sind die vier oberen Bits 0, in
+den vier unteren Bits wird eine Adresse im
+Display Buffer mitgegeben.
+0x0E
+
+
+
+
+
+
+
+
+
+0x0A
+
+
+
+
+
+
+
+
+
+LED
+
+Tab. 2: Farbmischung über zwei aufeinander
+folgende Bytes im Display Buffer
+
+Werden die Daten 0x06, 0x0E, 0x0A an den
+ftpiLED in einem Block übertragen, so
+erhalten im Display Buffer das Byte #6 den
+
+Für die Programmierung ist es einfacher,
+einen zweiten Display Buffer in ROBO Pro
+zu implementieren. Alle Operationen finden zunächst auf dem ROBO Pro Display
+Buffer statt. Soll die Änderung auf die
+Matrix übertragen werden, so werden alle
+16 Bytes in den Baustein übertragen.
+Arrays sind in ROBO Pro als Listen implementiert. Eine Liste ist eine Aufzählung von
+n Werten. Die einzelnen Werte können über
+deren Position in der Liste [0 .. n-1] angesprochen werden.
+
+in ein ROBO Pro-Listenelement
+
+Um in einer Liste an Position „Index“ den
+Wert „Value“ zu schreiben, wird die
+Position an den I-Eingang der Liste und der
+Wert mit einem = Befehl an den S-Eingang
+übergeben (Abb. 2).
+Zum Auslesen wird die Position mit einem
+= Befehl an den I-Eingang der Liste gesendet. Der Wert wird dann am R-Ausgang
+ausgegeben (Abb. 3).
+Multidimensionale Listen gibt es in ROBO
+Pro nicht. Dies muss über mehrere
+getrennte Listen abgebildet werden. Listen
+in ROBO Pro können ihre Werte in CSVDateien speichern oder zum Programmstart
+auslesen. Diese Funktionen können über
+das Eigenschaftsfenster der Liste eingestellt
+werden (Abb. 4).
+
+
+
+Der Zeichensatz
+Der Zeichensatz wird als CSV-Datei in die
+ROBO Pro-Bibliothek übertragen. Da das
+Editieren des Zeichensatzes in der CSVDatei kompliziert ist, haben wir eine ExcelDatei erstellt haben, in der man jedes
+Zeichen selbst gestalten kann.
+
+Jedes Pixel entspricht einer Zelle im ExcelArbeitsblatt. Je nach Wert der Zelle wird
+das Pixel später ausgeschaltet, grün, gelb
+oder rot sein.
+Über ein kleines VBA-Makro wird die
+CSV-Datei mit dem Zeichensatz geschrieben. Dazu muss man einfach nur auf dem
+Arbeitsblatt den Button „Zeichensatzdatei
+für den ftpiLED schreiben“ drücken. Die
+Datei landet im aktuellen Verzeichnis, in
+der Regel ist dies „%USER%/Dokumente“.
+Bei Bedarf kann auch im Feld für den
+Dateinamen der gewünschte Pfad ergänzt
+werden.
+
+
+Im Feld „Aus .CSV Datei laden“ kann man
+eine CSV-Datei auf dem PC angeben, deren
+Werte in die Liste geladen werden. Im
+Standard wird die erste Spalte aus der CSVDatei in die Liste übernommen. Sind in der
+CSV-Datei mehrere Spalten vorhanden, so
+kann man die gewünschte Spalte über die
+Combobox hinter dem Dateinamen auswählen. Die erste Zeile in der CSV-Datei
+wird als Überschrift interpretiert und nicht
+in die Liste übernommen.
+
+Nun muss noch der Zeichensatz in der
+Bibliothek geladen werden. Normalerweise
+lädt ROBO Pro den Zeichensatz selbständig
+nach. Bei Problemen können im Unterprogramm piL1_WriteChar über die Eigenschaftsfenster der Listen CharsetGreen
+und CharsetRed die Datei neu geladen
+werden.
+
+Nach dem Laden stehen die Daten im
+Programmtext. Die Datei muss dann nicht
+mehr vorhanden sein. Ist sie vorhanden, so
+aktualisiert ROBO Pro den Inhalt im Programm automatisch.
+
+Die ROBO Pro-Bibliothek ist recht umfangreich. Das Hauptprogramm zeigt dabei
+ein Beispiel für die Nutzung des Bausteins.
+Sie kann im Downloadbereich der heruntergeladen werden.
+
+
+
+Die Bibilothek
+
+
+Computing
+
+Am Anfang eines ROBO Pro-Programms
+muss der Baustein immer mit dem
+Kommando piL1_init initialisiert werden.
+Danach können beliebige Kommandos
+benutzt werden. Kommandos, deren Namen
+mit einem „_“ beginnt, sind interne Funktionen und sollten von außen nicht angesprochen werden. piL1_ftNOP führt alle
+vier Sekunden eine Leseoperation auf den
+ftpiLED durch und vermeidet so den in [1]
+beschriebenen „Fünf-Sekunden-Bug“.
+
+sie zu speichern. Importiert man die Bibliothek in sein Projekt, so wird das Speichern
+des Projektes ebenfalls sehr träge. Der
+Nachbau der Platine erfolgt auf eigenes
+Risiko.
+[1]
+
+Christian Bergschneider, Stefan
+Fuss: ftUNIpi: universeller I²CAdapter für den TX(T). 4/2016, in dieser Ausgabe.
+
+Nebenwirkungen
+
+[2]
+
+Lady Ada: Adafruit LED Backpacks.
+
+Die Bibliothek ist recht umfangreich.
+ROBO Pro benötigt erstaunlich lange um
+
+[3]
+
+Holtec: RAM Mapping 16*8 LED
+Controller Driver with keyscan
+HT16K33.
+
+Quellen
+
+Initialisiert den Baustein, schaltet
+auf maximale Helligkeit und
+schaltet das Display ein.
+
+Löscht den Inhalt der Anzeige.
+
+Stellt die Helligkeit des Displays
+auf einen Wert zwischen 0
+(Minimum) und 15 (Maximum).
+
+Schaltet mit 0 das Blinken aus,
+1 das Blinken auf 2Hz, 2 auf
+1Hz und 3 auf 0,5 Hz
+
+Schaltet das Display ein.
+
+Schaltet das Display aus.
+
+Zeichnet ein Rechteck über die
+angegebenen
+Koordinaten
+[x1,y1,x2,y2] in der Farbe Co. Hat
+fl – flootfill - den Wert 1, so wird
+das Rechteck ausgefüllt.
+
+Setzt einen Punkt an der
+Koordinate [x,y] auf die
+gewünschte Farbe Co.
+
+Zeichnet eine horizontale Line
+beginnend am Punkt [x1,y1] mit
+Le Pixel Länge in der Farbe Co.
+
+Zeichnet eine vertikale Line
+beginnend am Punkt [x1,y1]
+mit He Pixel Länge in der
+Farbe Co.
+
+Schreibt das Zeichen Ch in den Bildschirm-Puffer. Ch ist die Nummer des Zeichens im
+Zeichensatz. Mit Op kann gesteuert werden, ob die ganze Anzeige überschrieben wird
+(1) oder nur die eingeschalteten Pixel des Zeichens in der Anzeige gesetzt werden (0).
+Mit dem Parameter Co wird die Farbe festgelegt: 0 = Farben aus dem Zeichensatz, 1 =
+alle Pixel in rot, 2 = alle Pixel in grün, 3 = alle Pixel in gelb.
+
+
+
+

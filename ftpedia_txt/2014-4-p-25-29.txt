@@ -1,0 +1,177 @@
+
+Modell
+
+Modell
+
+Detail Engineering: Schreiender Wecker
+Andreas Gail
+Der Schreiende Wecker ist aus der Reihe ‚Drei ???‘ literaturbekannt. Ist das nun Dichtung
+oder Wahrheit? In diesem Fall zumindest ist aus Dichtung Wahrheit geworden: Unter Verwendung von drei Schrittmotoren und einer Echtzeituhr habe ich einen solchen Wecker gebaut.
+Auch dieses Bauprojekt führte zu einer Reihe von Detaillösungen, die sich als Lösungsansätze
+für diverse andere Bauprojekte eignen können.
+
+Das Gesamtprojekt
+Eine Uhr mit Zeigern sollte sich nach dem
+Einschalten auf die aktuelle Uhrzeit
+einstellen. Mit einem dritten Zeiger sollte
+die gewünschte Weckzeit eingestellt werden können, und damit ein solcher Wecker
+auch seinen Namen verdient, galt es ein
+schreiendes Wecksignal zu realisieren.
+
+Weckers ab; dabei werden die Zeiger über
+einzelne Schrittmotoren auf die Zeit der
+Echtzeituhr eingestellt und es wird ermittelt, auf welche Uhrzeit die Weckfunktion
+eingestellt wurde.
+Die Weckzeit kann über die beiden Taster
+(6) verstellt werden. Der Schalter (7) dient
+zum Ein- oder Ausschalten der Weckfunktion. Die gesamte Uhr wird durch einen
+Robo TX Controller gesteuert.
+
+
+
+
+
+
+
+
+
+(1), Stundenzeiger (2), Zeiger der Weckzeit
+(3), Taster zur manuellen Neukalibrierung
+der Zeiger (4) und die Kontrollleuchte, die
+die Kalibrierung anzeigt (5). Die Kalibrierfunktion läuft bei jedem Einschalten des
+
+
+Eine Anleitung zur Einbindung der Echtzeituhr findet sich in der ft:pedia 4/2013 [1].
+Im Folgenden werden drei Detaillösungen
+vorgestellt: die Verriegelung zweier gekoppelter mechanischer Systeme, die Einstellung der Uhr auf eine vorgegebene Zeit und
+der Antrieb des Weckzeit-Zeigers.
+
+
+
+
+Detail-Lösung A
+
+Detail-Lösung B
+
+Verriegelung zweier gekoppelter
+mechanischer Systeme
+
+Kalibrierung der Zeigerposition und
+Einstellung der Uhrzeit
+
+Wie eingangs beschrieben werden die
+beiden Zeiger (Minutenzeiger und Stundenzeiger) getrennt über Schrittmotoren angesteuert. Auf diese Weise kann die aktuelle
+Uhrzeit leicht eingestellt werden.
+
+Nach dem Einschalten des Weckers sollen
+die Zeiger auf die aktuelle Uhrzeit eingestellt werden.
+
+Problem: Der schnellere Minutenzeiger hat
+bei der Erstkonstruktion gelegentlich den
+eigentlich langsameren Stundenzeiger ‚mitgeschleppt‘. Dadurch war die Stundenanzeige stark fehlerhaft.
+Lösung: Das Mitschleppen des Stundenzeigers (Abb. 3, rot/schwarz) wird durch die
+Nutzung eines Schneckengetriebes verriegelt. Eine Antriebsschnecke verlangsamt
+nicht nur die Drehbewegung [2], sondern
+hat den hier genutzten Vorteil, dass die
+motorisch angetriebene Welle nicht in umgekehrter Richtung bewegt werden kann.
+Wird also der Minutenzeiger angetrieben
+(Abb. 3, violett), kann der Stundenzeiger
+nicht mitbewegt werden, weil er durch das
+Schneckengetriebe blockiert wird.
+
+Problem: Die aktuelle Zeigerposition ist
+zunächst nicht bekannt. Folglich weiß die
+Steuerung nicht, wie weit sie die Zeiger
+drehen muss, um diese auf die korrekte
+Position zu stellen.
+Lösung: Die Kalibrierung läuft in drei
+aufeinanderfolgenden Schritten ab.
+· Schritt 1: Zunächst wird der Zeiger in
+einer Richtung gedreht, bis der Reedkontakt den auf der Drehscheibe befindlichen Magnetbaustein detektiert (Abb.
+4, violett). Der Motor wird dabei nicht
+als Schrittmotor angesteuert, sondern
+einfach nur ein- und bei Reedkontaktmeldung abgeschaltet. Wichtig ist dabei,
+dass die einmal festgelegte Drehrichtung
+und die Geschwindigkeit später nicht
+mehr geändert werden.
+
+
+Modell
+
+
+Einstellung der aktuellen Zeigerposition auf Basis der aktuellen Uhrzeit, dec_h = Uhrzeit in Stunden,
+dec_min = Uhrzeit in Minuten, 1.500 Schritte entsprechen 12 Stunden
+
+
+
+
+· Schritt 2: Ausgehend von der Position
+des Reedkontakts wird der Zeiger auf die
+12-Uhr-Position gefahren. Der Verfahrweg wird dabei mithilfe der Schrittmotorfunktionalität durchgeführt. Dazu
+wurde im Vorfeld die hierzu erforderliche Anzahl an Schritten ermittelt.
+· Schritt 3: Entsprechend der aktuellen
+Uhrzeit und der zugehörigen erforderlichen Zeigerstellung wird berechnet, um
+wie viele Schritte der Zeiger abschließend gedreht werden muss.
+
+jedoch beim violett markierten Teil. Dieses
+Teil passt normalerweise nicht in die
+Riegellöcher der grauen Statikbauteile.
+Deshalb ist es erforderlich den Zapfen
+dieses Bauteils an zwei Seiten mit einer
+Schlüsselfeile so weit zu bearbeiten, bis er
+hineinpasst. Wenn dann eine 90°-Drehung
+erfolgt sitzt der Zapfen im grauen Riegelloch fest. Die spätere Demontage vom
+Statikbauteil ist beschädigungsfrei möglich.
+
+Dieses Verfahren wird nacheinander für
+den Stunden- und den Minutenzeiger angewendet. Abb. 5 zeigt das zugehörige
+Programm, die Spalten entsprechen den o.g.
+Vorgängen.
+
+Detail-Lösung C
+Antrieb des ringförmig gelagerten
+Zeigers der Weckzeit
+Es gibt eine Reihe von Veröffentlichungen
+zum Thema Zahnräder im Internet; die
+folgende Variante habe ich bislang dort
+noch nicht gefunden. Im Aufbau sollten
+möglichst keine Spezialteile gefertigt
+werden müssen.
+Problem: Wie kann der Ring angetrieben
+werden, und welche Lagerung ist dafür
+erforderlich?
+Lösung: Der Aufbau eines Zahnrings unter
+Verwendung von fischertechnik-Standardteilen ist möglich, wie in Abb. 7 und 8
+gezeigt. Der Knackpunkt hierbei liegt
+
+
+markierten Zapfenkanten
+
+Schlüsselfeilen gibt es in jedem Baumarkt.
+Gemäß Abb. 6 die Kanten leicht abfeilen,
+bis der Zapfen in das gewünschte Riegelloch passt.
+
+Quellen
+[1]
+
+Dirk Fox: I²C mit dem TX – Teil 7:
+Real Time Clock (RTC). 4/2013, S. 28-34.
+
+[2]
+
+Thomas Püttman: Zahnräder und
+Übersetzungen (Teil 2). 3/2011, S. 25-28.
+
+[3]
+
+Andreas Gail: Schreiender Wecker,
+Youtube
+
+
+Modell
+
+
+violett markiertes Teil muss jedoch modifiziert werden
+
+
+

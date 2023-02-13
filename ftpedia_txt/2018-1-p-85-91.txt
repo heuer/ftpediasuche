@@ -1,0 +1,424 @@
+
+Computing
+
+Computing
+
+ftDuino – Open-Source trifft KonstruktionsBaukasten
+Till Harbaum
+Ein fischertechnik-Controller, der das Universum der erfolgreichen Arduino-Plattform mit der
+mechanischen und elektrischen Welt von fischertechnik verknüpft – genau das hat bisher
+gefehlt. Ein Community-Projekt hat dies nun Wirklichkeit werden lassen…
+
+Teil 1: Der ftDuino im
+Schnellüberblick
+Der ftDuino ist ein brandneuer Robotics
+Controller für fischertechnik. Er ist ein Verwandter des TXT und des BT Smart
+Robotics Controller. Das Besondere: Er ist
+kein Produkt von fischertechnik, sondern
+wurde von der Community für die
+Community entwickelt. Seit Mitte Februar
+2018 gibt es die ersten ftDuinos zu kaufen.
+Aktuelle Informationen zur Verfügbarkeit
+gibt es unter info@ftduino.de.
+
+Der ftDuino gehört zur Familie der so
+genannten Arduino-Experimentier-Boards,
+wurde aber speziell für den Einsatz in
+fischertechnik-Modellen entworfen. Er
+bietet die gleichen Anschlüsse wie ein TXT
+und kann diesen bei einem Preis von ca. 50
+Euro in den meisten Modellen direkt preisgünstig ersetzen.
+Die Programmierung des ftDuino erfolgt
+textbasiert in der Arduino-IDE (Abb. 2) in
+den Programmiersprachen C und C++. Er
+ermöglicht damit einen einfachen Einblick
+in die professionelle Programmierung, wie
+sie auch in der Industrie zum Einsatz
+kommt.
+
+
+
+Wie alle Arduinos richtet sich der ftDuino
+an Personen, die hinter die Kulissen
+schauen wollen. Er wendet sich an Schüler
+
+
+weiterführender Schulen, Berufsschüler,
+Studenten und alle anderen, die einen
+Einblick in die die professionelle Entwicklung sogenannter eingebetteter Geräte
+erhalten wollen.
+Der ftDuino ist keine Black-Box, sondern
+vollständig dokumentiert, sowohl was die
+Hardware als auch die Software angeht.
+Wer verstehen will, wie das Herz seines
+Roboters tatsächlich funktioniert, erhält mit
+dem ftDuino die Möglichkeit, sämtliche
+Aspekte zu entdecken und zu begreifen.
+Alle Software liegt entsprechend der OpenSource-Philosophie vollständig im so
+genannten Quellcode vor und lädt dazu ein,
+entdeckt, modifiziert und angepasst zu
+werden.
+Wie wertet der Controller Eingangsspannungen aus? Wie lässt er einen Motor mit
+einer bestimmten Geschwindigkeit drehen?
+Diese Fragen und viele mehr beantwortet
+die ausführliche Bedienungsanleitung.
+Keine Geduld, auf ein neues SoftwareFeature zu warten? Hilf‘ Dir selbst, dank
+Open-Source! Open-Source bedeutet unter
+anderem „Jeder kann mitmachen“. Die
+Grenze zwischen Hersteller und Anwender
+verwischt und jeder kann auf Seiten wie
+Github zum Projekt beitragen.
+Der ftDuino kostet trotz der viel geringeren
+Stückzahl nur ein Bruchteil des TXT.
+Trotzdem kann er in fast allen TXTbasierten Modellen als vollwertiger Ersatz
+eingesetzt werden.
+fischertechnik hat die Zeichen der Zeit
+erkannt und setzt neuerdings ebenfalls mit
+dem Calliope auf einen vollständig dokumentierten Open-Source-Controller. Aber
+während sich fischertechnik an den Calliope anpassen muss und spezielle Sensoren
+und Motoren zum Einsatz kommen, geht
+der ftDuino einen Schritt weiter und passt
+sich an fischertechnik an, indem er die
+üblichen fischertechnik-Aktoren und Sensoren verwendet, vom XS-Motor bis zum
+
+
+Kompressor, vom Fototransistor bis zum
+Ultraschallsensor.
+Informationen zur Verfügbarkeit gibt es
+unter info@ftduino.de, alles weitere im
+Web oder im Computing-Bereich des
+fischertechnik-Forums.
+Happy Hacking mit dem ftDuino!
+
+Teil 2: Der ftDuino im Detail
+Mit dem TXT und dem BT Smart Controller hat fischertechnik zwei recht unterschiedliche Robotics Controller auf den
+Markt gebracht. Nimmt man die gelegentlich noch erhältlichen TX und Robo LT
+Controller hinzu, so hat man die Wahl
+zwischen vier ganz verschiedenen Geräten
+zu unterschiedichen Preisen und mit unterschiedlicher Ausstattung.
+Diese fischertechnik-eigenen Controller
+folgen wie z. B. auch die Lego-Controller
+seit über 30 Jahren klassischen Entwicklungsmodellen und bilden jeweils in sich
+geschlossene Systeme. Der Anwender kauft
+den Controller im Paket mit einer passenden
+Programmiersoftware für den heimischen
+PC. Das Ganze ist dabei in erster Linie auf
+einfache Benutzbarkeit ausgelegt, und das
+komplexe Innenleben der Controller bleibt
+soweit möglich verborgen. Während bei
+den Robotermodellen anschauliche und
+begreifbare Mechanik im Vordergrund
+stehen, bleibt der informationstechnische
+Aspekt dahinter weitgehend im Dunklen.
+Aus Benutzersicht sind diese Geräte daher
+„Black-Boxes“, deren Arbeitsweise nur
+oberflächlich erkennbar ist.
+Parallel hat sich seit der Jahrtausendwende
+mit Geräten wie dem Raspberry-Pi und dem
+Arduino die Gerätefamilie der „Open
+Source Controller“ etabliert, die die Veranschaulichung von Informationstechnologie
+in den Vordergrund stellt. Diese billigen
+und handlichen Geräte laden dazu ein, ihr
+Innenleben zu erkunden und zu verstehen.
+Der Aufbau von interessanten Robotermodellen scheitert hier eher an der Mechanik,
+
+die man sich im Zweifelsfall selbst bauen
+muss.
+Diese beiden so unterschiedlichen Welten
+zu kombinieren, jeweils das Beste zu
+nehmen und zu vereinen ist keine neue Idee.
+Viele Projekte im Internet kombinieren die
+Mechanik der fischertechnik- und LegoBaukästen mit dem Raspberry-Pi, dem
+Arduino oder ähnlichen Projekten. Die
+mechanische und elektrische Anpassung
+der Open-Source-Controller an die Sensoren und Aktoren des jeweiligen Baukastensystems ist aber selbst keine triviale
+Aufgabe, so dass relativ viel Know-How
+benötigt wird, bevor ein einfach zu verwendendes System entsteht.
+
+Computing
+
+endlich wird so nicht nur der mechanische
+Aspekt sondern auch der informationstechnische Aspekt eines Modells im Wortsinne begreifbar.
+Vom Konzept ...
+Der ftDuino wurde anders als die meisten
+Arduino-basierten Bastelprojekte von vornherein mit dem Ziel einer Serienproduktion
+entworfen. Dieser Anspruch hatte massive
+Auswirkungen auf das Konzept des ftDuino
+und bedeutete u. a.:
+∂ die Hardware muss so einfach wie
+möglich sein, um auch bei geringer
+Stückzahl einen vertretbaren Preis zu
+ermöglichen
+
+Genau diese Lücke zu schließen ist das Ziel
+des ftDuino.
+
+∂ alle verwendeten Komponenten müssen
+zuverlässig erhältlich sein
+
+Die Hardware
+
+∂ das Gerät muss mechanisch
+elektrisch robust sein
+
+und
+
+∂ das Gerät muss zu aktuellen fischertechnik-Baukästen kompatibel sein
+∂ die Inbetriebnahme muss auch für Laien
+möglich sein
+... über die ersten Prototypen ...
+
+im transparenten Gehäuse
+
+Der ftDuino ist ein vollständiges, betriebsbereites Gerät und beinhaltet bereits die
+komplette mechanische und elektrische
+Anpassung an das fischertechnik-System
+sowie die softwareseitige Integration in das
+Arduino-Ökosystem. Ein passendes Gehäuse schützt die Elektronik und macht sie
+spielzeugtauglich.
+Damit ist der ftDuino genauso einfach in
+einem fischertechnik-Modell einsetzbar wie
+jeder andere fischertechnik-Controller,
+bietet aber gleichzeitig die Offenheit und
+Flexibilität der Arduino-Controller. Und
+
+Die Einfachheit der Hardware lag beim
+allerersten Prototyp Ende 2016 am stärksten
+im Fokus. Der ftDuino 1.0 basierte auf der
+Technik des einfachsten Arduino, dem
+Arduino-Nano, und kombinierte diesen mit
+den preisgünstigsten für fischertechnikMotoren geeigneten sogenannten HBrücken als Motor-Treibern.
+Er verzichtete bewusst auf den Einsatz eines
+echten Arduino, war also kein so genannter
+„Shield“, sondern selbst ein kompletter
+Arduino und kam daher mit sehr wenigen
+Bauteilen aus. Sämtliche Ein- und
+Ausgänge waren bereits Kurzschluss- und
+Überspannungsfest, sodass Verdrahtungsfehler zu keinen Beschädigungen führten.
+Die gesamte Elektronik basierte auf robusten industriell hergestellten Platinen und es
+gab von vornherein ein stabiles 3D-gedrucktes Gehäuse. Der ftDuino wurde
+
+
+mechanisch und elektrisch so nah wie
+möglich an den TXT-Controller angelehnt,
+um diesen in sämtlichen fischertechnikModellen direkt ersetzen zu können.
+Dadurch, dass der erste ftDuino auf dem
+Arduino-Nano basierte, ließ er sich wie
+dieser sofort aus der Arduino-IDE direkt
+ansprechen und konnte zum Aufbau erster
+einfacher Modelle verwendet werden.
+... zum Seriengerät
+So hat der erste ftDuino bereits die wichtigste Aufgabe eines Spielzeugcontrollers
+im Hause Harbaum erfüllt: Als Teil von
+„Idas Ampel“ hat er Schleichtiere sicher
+durch den Playmobil-Straßenverkehr gebracht. Die prinzipielle Machbarkeit und
+Alltagstauglichkeit des Konzepts war damit
+bewiesen. Ein paar Dinge erwiesen sich
+aber recht schnell als verbesserungswürdig.
+Als Benutzer der fischertechnik-Controller
+ist man es zum Beispiel gewohnt, dass man
+an einen Motorausgang alternativ auch zwei
+Lampen oder Ähnliches anschließen kann,
+da die beiden einen Motorausgang bildenden Anschlüsse hardwareseitig komplett
+unabhängig sind. Das ist bei üblichen
+Motortreiber-Chips, wie sie auch der erste
+ftDuino verwendete, leider nicht der Fall,
+und die beiden Einzelausgänge ließen sich
+eben doch nicht vollständig unabhängig
+steuern.
+Das führte bereits bei „Idas Ampel“ dazu,
+dass die Zuordnung der Lampen zu den
+Ausgängen des ftDuinos nicht frei wählbar
+war. Diese Beschränkungen wären einem
+unerfahrenen Benutzer nur schwer zu erklären gewesen.
+Ein zweiter Schwachpunkt waren die fehlenden Erweiterungsmöglichkeiten. Die
+vielleicht größte Stärke der Arduino-Plattform ist, dass man fast beliebige Hardware
+anschließen kann, allem voran billige Sensoren aller Art. Dadurch, dass der ftDuino
+alle Ein- und Ausgänge mit Schutzschaltungen versieht bzw. die Ausgänge mit
+
+
+fischertechnik-tauglichen Motorleistungsstufen versehen sind, verlieren die Anschlüsse leider ihre Universalität. Man kann
+nicht mehr wie bei einem echten Arduino
+einen Eingang mal eben zum Ausgang
+umdefinieren. An dieser Tatsache lässt sich
+bei einem für den fischertechnik-Einsatz
+entworfenen Gerät leider wenig ändern.
+Allerdings gibt es einen in der ArduinoWelt für den Einsatz von Sensoren sehr
+verbreiteten Anschluss, den sogenannten
+I²C-Bus. Da auch der TXT-Controller und
+der TX-Controller über einen I²C-Anschluss verfügen, lag es nahe, auch dem
+ftDuino einen solchen I²C-Anschluss zu
+verpassen. Es wurde dabei die 5V-Variante
+des TX-Controllers übernommen und der
+I²C-Anschluss auch mechanisch an diesen
+angelehnt, so dass für den TX entworfene
+Geräte auch direkt an den ftDuino
+anschließbar sind und umgekehrt. Der I²CAnschluss des TXT wird im Gegensatz zu
+dem des ftDuino und dem des TX Controllers nicht mit 5 Volt, sondern mit 3,3
+Volt betrieben und ließ sich daher nicht
+ohne zusätzlichen Aufwand direkt am
+ftDuino nachbilden. Entsprechende Adapter
+schlagen allerdings auch diese Brücke und
+verbinden den ftDuino mit dem TXT sowie
+mit für diesen angebotenen I²C-Sensoren.
+Die dritte große Änderung betrifft die
+Arduino-Technik, auf der der ftDuino
+basiert. Der erste Prototyp basierte auf dem
+Arduino-Nano, dem kleinsten und günstigsten Mitglied der Arduino-Familie. Dieser
+Arduino ist allerdings relativ beschränkt,
+was seine USB-Fähigkeiten angeht, und
+wird lediglich als sogenannter COM-Port
+am PC erkannt. Der etwas neuere ArduinoLeonardo ist hier sehr viel flexibler und
+lässt USB-seitig sehr viel mehr Raum für
+Kreativität. Er kann sich gegenüber einem
+PC (oder Smartphone) u. a. als USB-Tastatur, USB-Joystick oder gar als Audio-Gerät
+ausgeben. Für den Serien-ftDuino wurde
+daher auf die gleichen Komponenten gewechselt, auf denen auch der Arduino-
+
+
+Computing
+
+Leonardo basiert, wodurch sich auf Basis
+des ftDuino z. B. auch Joysticks und Gamepads bauen lassen. Beibehalten wurde der
+bewährte Formfaktor des ersten ftDuino, so
+dass sich der ftDuino weiterhin direkt als
+TXT-Ersatz eignet.
+
+Die Software
+Die Programmierung des ftDuino erfolgt in
+der Regel textbasiert in der offiziellen
+Arduino-IDE auf einem Windows-, Linuxoder MacOS-PC. Die Arduino-IDE ist
+
+schnell installiert und bietet eine schlichte,
+aber praktische Oberfläche rund um den
+eigentlichen Programmeditor.
+Ab Werk bringt die Arduino-IDE alle
+nötigen Zusatz-Werkzeuge inklusive CodeBibliotheken und -Beispiele für die Original-Arduinos mit. Zusätzlich lässt sich die
+Arduino-IDE mit wenigen Klicks für
+weitere Arduino-basierte Geräte wie den
+ftDuino erweitern.
+
+
+
+
+Die Arduino-IDE kann kostenlos heruntergeladen werden und ist mit wenigen Klicks
+installiert. Alles was es zum ftDuino an
+Dokumentation, Software und sonstigen
+Informationen gibt, findet sich auf Github.
+Vor allem findet sich dort die ftDuinoKonfiguration für die Arduino-IDE. Die
+Konfigurationsdatei wird einfach in den
+Voreinstellungen der Arduino-IDE eingetragen wie in Abb. 4 dargestellt. Der
+ftDuino taucht daraufhin im sogenannten
+Boardverwalter der Arduino-IDE auf, wie
+in Abb. 5 zu sehen.
+Im Boardverwalter lässt sich die eigentliche
+ftDuino-Installation mit einem Klick starten. Die Arduino-IDE installiert automatisch die neueste Version aller nötigen
+Dateien inklusive diverser Beispiele und
+hält den Benutzer in Zukunft über Aktualisierungen auf dem Laufenden. Nach der
+ftDuino-Installation kann man unter anderem (wie in Abb. 6 dargestellt) direkt im
+Datei-Menü die Beispiele auswählen, die
+auch in der ausführlichen Anleitung im
+Detail beschrieben sind.
+
+Integration in das
+fischertechnik-System
+Der ftDuino wurde auf maximale Kompatibilität zu den aktuellen fischertechnikRobotics-Kästen ausgelegt. Seine mechanische Größe entspricht den TX und TXT
+Controllern, und er ist auch elektrisch zu
+beiden Geräten weitgehend kompatibel.
+Unterstützt werden unter anderem die
+folgenden Aktoren und Sensoren:
+∂ sämtliche Motoren von XS bis XM
+∂ alle Encoder-Motoren aus den TXT- und
+TX-Baukästen
+∂ sämtliche Lampen und Leuchtdioden
+∂ sämtliche Schalter und Taster
+∂ Farbsensor, Magnetventile und Kompressor aus „Electro Pneumatic“
+∂ NTC-Temperatursensor, Potis, Fototransistoren und Fotowiderstände
+∂ Ultraschall-Abstandssensor und IRSpursensor aus „Robo TX Explorer“
+(Abb. 7)
+∂ Kombisensor (Orientierungssensor) aus
+„Robotics Competition Set“ (Adapter
+nötig)
+
+Beispiele gleich mit
+
+Die komplette Anleitung findet sich im
+Github. Sie wird wie die ganze ftDuinoInstallation regelmäßig aktualisiert.
+
+
+Und falls mit den fischertechnik-Aktoren
+und -Sensoren wirklich die Grenzen
+erreicht werden, dann bietet der ftDuino mit
+seinem I²C-Anschluss eine flexible und
+
+einfach zu benutzende Erweiterungsschnittstelle, an die sich kleine Bildschirme (siehe
+z. B. Servomotor-Treiber oder unzählige
+Sensoren vom einfach Temperaturfühler bis
+zum Umwelt- oder Laser-Distanz-Sensor.
+Die Arduino-Plattform spielt hier gegenüber z. B. ROBO Pro ihre besondere Stärke
+aus, denn mit ein wenig Suche im Internet
+findet man zu praktisch jedem I²C-Sensor
+oder -Aktor den passenden Treiber und
+Programmbeispiele.
+
+Computing
+
+ftDuino bei entsprechender Programmierung auch als USB-Joystick oder USBAudiogerät ausgeben und sich damit auch
+an Geräten betreiben, die sehr wählerisch
+beim Umgang mit USB-Peripherie sind. Als
+USB-Gamepad wird der ftDuino sogar von
+einigen Spielkonsolen als Eingabegerät
+akzeptiert und auch Smartphones oder
+Tablets können oft überraschend viel mit
+solchen ftDuino-basierten Eingabegeräten
+anfangen.
+
+am Raspberry-Pi inkl. Display
+
+Kontaktfreudig
+Der ftDuino ist zwar in sich bereits ein
+komplettes Produkt und lässt sich direkt zur
+Steuerung diverser Modelle einsetzen. Aber
+hier endet es nicht. Wie es sich für ein
+Open-Source-Projekt gehört ist der ftDuino
+sehr kommunikationsfreudig.
+Via USB lässt sich der ftDuino nicht nur mit
+dem PC verbinden. Auch am Raspberry-Pi,
+dem fischertechnik-TXT, dem Lego-EV3
+oder einem Smartphone lässt er sich
+betreiben und diesen Geräten den Zugriff
+auf seine fischertechnik-Anschlüsse ermöglichen. Und via I²C-Bus findet der ftDuino
+Anschluss an den TXT, den TX oder gar an
+seinesgleichen. Bis zu 126 ftDuinos lassen
+sich so koppeln.
+Auch auf der Softwareseite setzt sich die
+Kontaktfreudigkeit fort. So kann sich der
+
+Ausblick
+Der ftDuino soll erst der Anfang sein. Er ist
+der Versuch, die Maker-Idee in die fischertechnik-Welt zu tragen und soll beweisen,
+dass professionelles fischertechnik-Zubehör nicht unbedingt vom Originalhersteller
+kommen muss. So wie sich die ArduinoWelt weiter entwickelt öffnen sich auch für
+Projekte wie den ftDuino neue Möglichkeiten und ich bin gespannt, wo die Reise
+hingeht.
+
+Referenzen
+[1]
+
+Till Harbaum: ftDuino-Seite.
+
+[2]
+
+Till Harbaum: ftDuino-Handbuch.
+Github.com
+
+[3]
+
+Arduino-Präsenz im Internet
+
+[4]
+
+fischertechnik Community Forum
+
+
+

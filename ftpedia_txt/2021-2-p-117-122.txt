@@ -1,0 +1,358 @@
+
+Computing
+
+Computing
+
+ROBO Pro Coding – ein Blick hinter die
+Kulissen
+Till Harbaum
+ROBO Pro ist seit vielen Jahren die Programmierumgebung der Wahl für die Robotics-Controller von fischertechnik. Mit ROBO Pro Coding ändert sich das trotz des ähnlichen Namens
+fundamental.
+In der letzten Ausgabe der ft:pedia habe ich
+bereits über Blockly geschrieben [1]. Der
+Beitrag konzentrierte sich auf Blockly als
+Basis von ROBO Pro Coding und was von
+Blockly im Vergleich zum „alten“ ROBO
+Pro zu erwarten ist. Im vorliegenden Beitrag geht es dagegen um ROBO Pro Coding
+als Ganzes. Aus welchen Teilen besteht es?
+Wie funktioniert es?
+
+Die Puzzleteile
+
+Dass ich überhaupt den dafür nötigen tiefen
+Einblick nehmen kann ist der Tatsache geschuldet, dass ROBO Pro Coding keine
+klassische PC-Windows-Software mehr ist,
+sondern eine Browser-Anwendung, die zur
+Zeit über das Internet erreichbar ist.
+
+Als dafür nötigen Code-Editor verwendet
+fischertechnik den Monaco Editor von
+Microsoft.2 Viele fischertechnik-Benutzer
+hatten mit diesem Editor bereits Kontakt, da
+er auch die Basis vieler Online-Dienste von
+Microsoft darstellt und auch in Visual Studio Code eingesetzt wird.3 Blockly und der
+Monaco Editor sind zwei sehr beliebte, aktive und häufig genutzte Projekte und sicher
+keine schlecht Wahl für eine Neuentwicklung, die man noch einige Jahre betreiben
+möchte.
+
+Diese Anwendung war während des Erscheinens der ersten Werbevideos zu dem
+Thema Anfang des Jahres mit Hilfe gängiger Suchmaschinen zu finden. Inzwischen
+taucht sie nicht mehr als Suchergebnis auf,
+so dass man davon ausgehen kann, dass fischertechnik das Auffinden der Seite aktiv
+unterdrückt. Aus diesem Grund verweise
+ich an dieser Stelle auch nicht auf diese
+Seite.
+
+
+Google: Blockly.
+
+
+Microsoft: Monaco Editor, github.io.
+
+Wie bereits in der letzten Ausgabe beschrieben basiert ROBO Pro Coding für den Benutzer sehr offensichtlich auf Googles
+Blockly.1 Neben dieser grafischen Programmierung erlaubt ROBO Pro Coding
+aber auch eine klassische textbasierte Programmierung in Python.
+
+Die Editoren rahmt ROBO Pro Coding in
+eine so genannte Single-Page-Webapplikation ein (Abb. 1). Das bedeutet, dass man
+durch Interaktion mit den verschiedenen
+Bereichen der Webseite sich nicht wie üblich zwischen verschiedenen Webseiten
+hin- und her bewegt.
+
+
+Microsoft: VS Code, github.com.
+
+
+
+
+
+Stattdessen wird beim Aufruf einer SinglePage-Anwendung einmal die gesamte
+Funktion geladen und der Benutzer agiert
+die ganze Zeit mit ein und derselben Seite,
+die sich allerdings permanent dynamisch
+dem anpasst, was der Nutzer gerade machen
+möchte.
+ROBO Pro Coding basiert dafür auf Angular4, einem Google-Framework für SinglePage-Anwendungen. Angular bietet eine
+große Auswahl vorgefertigter Mechanismen, u. a. zur Anzeige von Dialogen und
+Hinweisen, für Menüs und für den fließenden Wechsel zwischen verschiedenen Ansichten (z. B. dem Blockly-Editor und dem
+Monaco-Editor). Zusätzlich passt sich eine
+
+Google: Angular.
+
+
+Angular-basierte Umgebung an das Endgerät an und die Anordnung der verschiedenen
+Elemente erfolgt z. B. auf dem kleinen
+Touchbildschirm eines Smartphones anders
+als auf einem mausgesteuerten PCBildschirm. Auf diese Weise erleichtert es
+Angular, Anwendungen zu schaffen, die
+unabhängig vom Endgerät nutzbar sind und
+die sich „wie aus einem Guss“ bedienen lassen. Auch Angular ist ein aktives und stabiles Produkt und dürfte für einige Jahre
+ROBO Pro Coding gut sein.
+Die letzte Komponente, auf der ROBO Pro
+Coding basiert, ist die MXGraph-Bibliothek5, eine Bibliothek zur Darstellung von
+Graphen. ROBO Pro Coding nutzt diese
+
+JGraph: MXGraph, github.com.
+
+Bibliothek, um dem Benutzer die Konfiguration der Bildschirmdarstellung am TXT
+bzw. die Kamera-Konfiguration zu ermöglichen. In beiden Fällen kann der Benutzer
+grafische Objekte in ein Fenster ziehen dort
+anordnen und konfigurieren (Abb. 2)
+
+Computing
+
+User. HTML5-basierte Webanwendungen
+wie ROBO Pro Coding sind immer in mehr
+oder weniger menschenlesbarem Javascript-Code geschrieben und lassen sich mit
+den Browser-eigenen Werkzeugen bereits
+trefflich in die Karten schauen. Wer das
+selbst ausprobieren möchte öffne seine
+Lieblingswebseite auf dem PC im Browser
+und drücke die F12-Taste. Der sich dann
+öffnende Bereich erlaubt tiefe Einblicke in
+den Code und die Kommunikation einer
+Webseite.
+Kommunikation ist in diesem Fall genau
+das, was wir suchen, denn irgendwie muss
+ROBO Pro Coding ja mit dem TXT-4.0 in
+Kontakt treten. Zusätzlich bieten sich Netzwerk-Analysetools wie Wireshark an.
+
+
+Leider wurde die Weiterentwicklung der
+MXGraph-Bibliothek bereits Ende 2020
+eingestellt, und auch davor stockte die Entwicklung bereits sehr. Vor allem die nicht
+mehr zeitgemäße Code-Basis, die noch aus
+vor-Smartphone-Zeiten stammt, macht das
+Projekt schwer zu warten und ist auf Touchoberflächen kaum benutzbar.
+Das erklärte Ziel von fischertechnik, ROBO
+Pro Coding auch auf aktuellen Smartphones
+und Tabletts laufen zu lassen, ist durch die
+Verwendung dieser Bibliothek zumindest
+gefährdet. Aber vor allem erscheint fragwürdig, dass ein frisches Projekt auf dieser
+Basis ein paar Jahre überleben soll. Ich habe
+fischertechnik bereits auf diese Problematik
+hingewiesen und sie sind zuversichtlich, das
+Problem im Griff zu haben.
+
+TXT-4.0-Kontaktaufnahme
+Mir steht kein TXT-4.0 zur Verfügung. Um
+mich dennoch ein wenig mit ROBO Pro
+Coding beschäftigen zu können und zu verstehen, wie ROBO Pro Coding und der TXT
+zusammenarbeiten, war also Kreativität gefragt.
+Prinzipiell sind im Browser laufende Anwendungen dankbare Ziele für neugierige
+
+Selbst wenn der TXT gar nicht existiert sind
+einseitige Kommunikationsversuche damit
+zu erkennen.
+Die ersten Analysen dieser Art führten sofort zu unerwarteter Verwirrung: Es gab
+laut Netzwerkanalyse schlicht keinen Kommunikationsversuch des Browsers. Einen
+ersten Hinweis lieferte ein Blick in die Console des Browsers (eines der Dinge, die man
+über F12 erreicht). Dort erscheint die Meldung:
+Blocked loading mixed active content
+“http://192.168.7.2/api/v1/ping”
+
+Im Klartext: Die Webseite hat sehr wohl
+versucht, mit dem Gerät unter 192.168.7.2
+Kontakt aufzunehmen. Aber der Browser
+erlaubt genau das nicht. Der Grund ist, dass
+viele Webseiten heute via „https“ verschlüsselt ausgeliefert werden. So auch
+ROBO Pro Coding. Die Nutzung von https
+verschlüsselt die Daten auf dem Transportweg zum User und verhindert Veränderungen auf diesem Weg. Das ist z. B. beim
+Homebanking offensichtlich wichtig. Findet die Kommunikation erstmal per https
+statt und fühlt sich der Nutzer entsprechend
+sicher, so darf natürlich nicht heimlich doch
+
+
+
+
+noch irgendein Teil unverschlüsselt übertagen werden.
+
+der Wahl, um die Kommunikation zu analysieren.
+
+Aber genau das ist hier der Fall. ROBO Pro
+Coding selbst wurde verschlüsselt an den
+Benutzer ausgeliefert. Der Verbindungsversuch zum TXT erfolgt aber unverschlüsselt.
+Aus Sicht des Browsers kommuniziert der
+Benutzer also verschlüsselt. Die Webseite
+versucht aber weitere Daten unverschlüsselt
+nachzuladen. Das verbieten aktuelle Browser seit Kurzem per Voreinstellung. Der
+Browser kann schließlich nicht zwischen
+wichtigen Bankgeheimnissen und den (unwichtigen) Daten eines TXT-4.0 unterscheiden. Und wer weiß, vielleicht baut ja
+jemand aus einem TXT einmal ein Pin-Terminal zur Online-Banking-GeheimzahlEingabe.
+
+Ab hier ist es reine Fleißarbeit. Ein kleines
+Programm wurde geschrieben, das auf jede
+Kommunikation seitens ROBO Pro Coding
+mit einer passenden Antwort zu reagieren
+versucht. Recht wenig Aufwand ist nötig,
+bis ROBO Pro Coding z. B. versucht, ein
+vom Anwender in ROBO Pro Coding selbst
+geschriebenes Programm auf den TXT herunterzuladen.
+
+Es ist daher anzunehmen, dass fischertechnik ROBO Pro Coding in anderer Form vertreiben wird und die aktuelle Webseite nur
+eine Übergangslösung ist.
+
+ROBO Pro Coding schickt gleich mehrere
+Dateien an den TXT-4.0, wenn dort ein Programm ausgeführt werden soll. Die meisten
+davon enthalten Python-Programmcode.
+Eine Datei enthält sogenannten QML-Code:
+
+Dem Ziel, der Kommunikation von ROBO
+Pro Coding auf den Zahn zu fühlen, war ich
+keinen Schritt näher gekommen.
+Es gibt mehrere Wege, unverschlüsselten
+Inhalt zu erlauben. Einige Browser erlauben
+des, die Sicherheitseinstellungen entsprechend zu senken. Außerdem kann man ganz
+ROBO Pro unverschlüsselt übertragen.
+Dann ist auch die weitere Kommunikation
+unverschlüsselt erlaubt. Oder aber man
+kommuniziert nur mit dem eigenen PC. Das
+darf man jederzeit auch unverschlüsselt. Ich
+habe die letzteren Wege verfolgt.
+Zunächst wurde ROBO Pro Coding auf einen lokalen PC heruntergeladen und dort
+über einen eigenen kleinen Webserver bereitgestellt. Das hat den zusätzlichen Vorteil, dass diese Experimente nicht ständig
+auf fischertechniks Web-Präsenz aufschlagen.
+Zusätzlich habe ich die Kommunikation auf
+meinen eigenen PC umgeleitet. Das wäre
+mangels echtem TXT ja sowieso das Ziel
+
+
+Die Rolle des TXT übernimmt dabei mein
+kleines selbstgeschriebenes Programm:
+Statt die von ROBO Pro Coding empfangenen Daten auszuführen, wie es ein echter
+TXT machen würde, schreibt es die empfangenen Daten jedoch einfach zur weiteren
+Analyse auf die Festplatte.
+
+// auto generated content from
+display configuration
+import QtQuick 2.2
+import QtQuick.Window 2.0
+import QtQuick.Controls 1.1
+import QtQuick.Controls.Styles 1.1
+import QtQuick.Extras 1.4
+TXTWindow {
+Rectangle {
+id: rect
+color: "grey"
+anchors.fill: parent
+}
+TXTButton {
+id: txt_button
+text: "press me"
+font.pixelSize: 24
+enabled: true
+x: 40
+y: 20
+width: 100
+height: 40
+}
+...
+
+Das ist eine sogenannte QML-Beschreibung einer Benutzeroberfläche in QtQuick
+bzw. Qt. Qt ist die Grafikbibliothek, die
+
+auch die Community-Firmware zur Darstellung der Benutzeroberfläche am Gerät verwendet. QtQuick bzw. QML sind lediglich
+eine etwas modernere Variante davon. Für
+uns bedeutet das zweierlei:
+Erstens hat fischertechnik (oder der für die
+Entwicklung von ROBO Pro Coding verantwortliche Dienstleister) sich die Community-Firmware noch etwas genauer angeschaut, als bisher angenommen.
+Und zweitens nutzt fischertechnik damit
+Bibliotheken, die auch auf jedem Raspberry-Pi (und jedem Linux-PC generell)
+mitgeliefert werden.
+Was liegt also näher, als die von ROBO Pro
+Coding heruntergeladenen Daten einfach
+den entsprechenden Grafikbibliotheken
+vorzulegen? Das Ergebnis ist in Abb. 3 zu
+sehen. Mein PC verhält sich wie ein TXT
+und zeigt die eigentlich für diesen bestimmte Benutzeroberfläche in einem kleinen Fenster selbst an.
+
+Computing
+
+Linux-PC oder einem Raspberry-Pi ausgeführt werden [2]. Bindet man dann noch einen ftDuino per USB an den PC an, dann
+können sogar dessen Ein- und Ausgänge in
+ROBO Pro Coding genutzt werden. Und
+schließlich spricht nichts dagegen, diese
+Programme auch auf dem alten TXT (z. B.
+mit Hilfe der Community-Firmware) zu
+nutzen und so den alten TXT für ROBO Pro
+Coding fit zu machen. Die Grundlagen dafür sind nun alle vorhanden.
+
+Kommunikation zur Laufzeit
+Ist ein Programm einmal auf den TXT übertragen, dann öffnet ROBO Pro Coding einen Kommunikationskanal, um z. B. Textausgaben vom TXT zu empfangen und im
+Browser darzustellen. Der Anwender kann
+sich so Ausgaben aus dem laufenden Programm in den Browser schicken. Auch weitergehende Kommunikation z. B. zum Debugging scheint vorgesehen zu sein. Diesen
+Teil habe ich aber bisher nicht ausprobiert.
+Generell nutzt ROBO Pro Coding an diesen
+Stellen eher altbackene Technik zur Kommunikation zwischen TXT-4.0 und Browser bzw. ROBO Pro Coding. Der Einsatz
+moderner Techniken wie Websockets hätte
+einige der eingangs erwähnten Probleme
+vermeiden können und würde eine wesentlich flüssigere Kommunikation in beide
+Richtungen ermöglichen.
+
+Weitere Community-Projekte?
+ROBO Pro Coding basiert wie der TXT-4.0
+selbst auf Open-Source-Technik. Wie weit
+fischertechnik diese Philosophie selbst verfolgt ist bisher nicht bekannt.
+
+In einem zweiten Schritt müssen nun nur
+noch die ebenfalls empfangenen PythonProgramme mit den Grafikdaten kombiniert
+und ausgeführt werden, und schon können
+ROBO Pro Coding-Programme statt auf einem echten TXT-4.0 einfach auf einem
+
+Die Funktionen des TXT-4.0 sind aus
+ROBO Pro Coding-Sicht eher schlicht und
+lassen sich leicht nachbilden, wie sich gezeigt hat. Tatsächlich erschließt sich an dieser Stelle kaum der Hardwareaufwand, den
+fischertechnik beim TXT-4.0 treibt und der
+die Kosten für das Gerät in die Höhe treibt.
+Um durch ROBO Pro Coding steuerbar zu
+
+
+
+
+sein bräuchte es nur einen Bruchteil der
+Technik, die im TXT-4.0 steckt.
+Aber auch ROBO Pro Coding selbst könnte
+ein lohnendes Ziel für Veränderungen und
+Erweiterungen durch die Community sein.
+Fehlende Funktionen in ROBO Pro Coding
+selbst nachzurüsten ist zumindest theoretisch möglich. In der Praxis steht dem allerdings eine besondere Eigenart des Angular
+Frameworks entgegen: Um die zu übertragende Datenmenge gering zu halten,
+schrumpft Angular den Code so weit es geht
+ein. Aus eigentlich gut lesbarem Code wird
+dabei ein minimalistisches Kauderwelsch,
+das z. B. von allen erklärenden Kommentaren im Code bereinigt wurde und das keinerlei Text-Formatierungen mehr enthält.
+Im Klartext: Das was z. B. von Blockly als
+Teil von ROBO Pro Coding beim Endanwender ankommt ist kaum lesbar und praktisch nicht durch den Endanwender erweiterbar. So wie es jetzt aussieht wäre der
+Aufwand, ROBO Pro Coding durch die
+Community zu erweitern, kaum zu rechtfertigen. Auch hier liegt es also primär in der
+Hand von fischertechnik, durch Veröffentlichung zusätzlicher Dokumentation und
+Quellcodes eine Mitentwicklung durch die
+Community zu ermöglichen.
+
+
+Fazit
+Wie schon beim TXT-4.0 setzt fischertechnik auch bei ROBO Pro Coding überwiegend etablierte und robuste Technik ein.
+Wenn Lego das nahezu gleiche Ziel mit wesentlich einfacherer Technik anvisiert dürften die Aufwände im Projektmanagement
+und der Entwicklung entsprechend höher
+sein. Hier macht sich vor allem eine hohe
+Stückzahl bemerkbar, die Optimierungen
+der Hardware bei Lego lohnender macht.
+Die Lösung von fischertechnik setzt an vielen Stellen auf etablierte und frei verfügbare
+fertige Komponenten. Den Preis dafür zahlt
+der Kunde mit der im Vergleich mit Lego
+um ein Vielfaches aufwändigeren und teureren Hardware des TXT-4.0. Zugleich bietet sich aber die Chance für zukünftige Erweiterungen, die die Möglichkeiten des
+TXT-4.0 gegenüber den aktuellen LegoControllern ausschöpfen. Vor allem hier
+könnte fischertechnik von einer Zusammenarbeit mit der Community profitieren.
+
+Referenzen
+[1]
+
+Till Harbaum: Von Lucky Logic zu
+RoboPro Coding. ft:pedia 1/2021, S.
+103-109.
+
+[2]
+
+Till Harbaum: SofTXT, github.com.
+
+

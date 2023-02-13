@@ -1,0 +1,794 @@
+
+Computing
+
+Computing
+
+I²C mit dem TX – Teil 4:
+Nunchuk-Fernsteuerung
+Dirk Fox
+Seit dem Firmware-Update vom April 2012 auf Version 1.30 lassen sich am TX beliebige I²CKomponenten anschließen. Nach einer Einführung in die Grundlagen des I²C-Protokolls [1],
+in die Ansteuerung eines LED-Displays [2] und in die Luftdruckmessung [3] wird in diesem
+Beitrag vorgestellt, wie aus einem Nunchuk – einem „Steuerknüppel“ für die NintendoSpielkonsole Wii – eine I²C-Fernsteuerung wird.
+
+Hintergrund
+Die Videospielkonsole Wii der japanischen
+Firma Nintendo, seit 2006 auf dem Markt,
+ermöglicht durch Verwendung einer Infrarotkamera und Beschleunigungssensoren
+im Wiimote genannten Controller dreidimensionale Spielerlebnisse: Position und
+Bewegungen des Spielers werden ausgewertet, sodass dieser den Spielverlauf über
+Körperbewegungen steuern kann. Mittlerweile sind ergänzende Steuerungen verfügbar wie ein klassisches Gamepad, ein
+Lenkrad oder ein Balance Board, das
+Gewichtsverlagerungen auswertet.
+
+Die Kommunikation zwischen Nunchuk
+und Wiimote erfolgt dabei – ihr ahnt es
+bereits – über das I²C-Protokoll. Klone des
+Nunchuk wie den Freebird Wireless
+ThumbStick von Logic3 gibt es sogar
+kabellos (Abb. 2) – für weniger als 10 €.
+
+
+
+Und es gibt den Nunchuk, einen an die
+Wiimote ansteckbaren zweiten Controller,
+der aus einem analogen Joystick, zwei
+Tastern und einem 3-Achs-Beschleunigungssensor in einem ‚handschmeichlerischen’ Gehäuse besteht (Abb. 1) und ein
+beidhändiges Spielen ermöglicht.
+
+Das ist nur ein Bruchteil des Preises, den
+man sonst allein für ein Breakout Board
+mit I²C-Beschleunigungssensor zahlt –
+ohne Gehäuse, Joystick und Taster. Da
+liegt es nahe, über den Nunchuk als I²CSteuerung für den TX nachzudenken.
+
+Der Nunchuk
+Vom Hersteller sind – wie nicht anders zu
+erwarten – keinerlei Informationen über
+die Ansteuerung des I²C-Buscontrollers
+des Nunchuk erhältlich. Das macht aller41
+
+
+
+dings nichts, denn schon kurz nach dessen
+Erscheinen haben sich zahlreiche Bastler
+auf den Nunchuk gestürzt und via Reverse
+Engineering die wichtigsten Eigenschaften
+des Controllers in Erfahrung gebracht [4].
+So ist bekannt, dass
+der Nunchuk eine Stromversorgung von
+3,3 V benötigt,
+der I²C-Controller des Nunchuk den
+Fast Mode (400 kbit/s) beherrscht,
+der Nunchuk über die feste I²C-DeviceAdresse 0x52 angesprochen wird,
+der im Nunchuk verbaute Joystick mit
+zwei 30 k -Potentiometern arbeitet und
+daraus zwei digitale 8-bit-Werte (0-255)
+berechnet,
+der ADXL330 von Analog Devices [5]
+als Beschleunigungssensor Verwendung
+findet – ein 3-Achs-Sensor mit einem
+Messbereich von +/-3g, der für jede
+Achse einen 10-bit-Wert zwischen 0
+und 1.023 (realistisch zwischen 250 und
+750) liefert, und
+die Taster ‚C’ und ‚Z’ jeweils den Wert
+0 liefern, wenn sie gedrückt sind (low
+active).
+Die Werte des Poti, der Taster und des
+Beschleunigungssensors werden vom Controller in sechs aufeinander folgenden
+Bytes gespeichert:
+Bit
+
+7 6
+
+
+
+
+
+
+
+Byte 1
+
+Joystick (X-Achse, 0-255)
+
+Byte 2
+
+Joystick (Y-Achse, 0-255)
+
+Byte 3
+
+Beschleunigung (X, Bits 9-2)
+
+Byte 4
+
+Beschleunigung (Y, Bits 9-2)
+
+Byte 5
+
+Beschleunigung (Z, Bits 9-2)
+
+Byte 6
+
+Z 1/0
+
+Y 1/0
+
+X 1/0
+
+C
+
+Z
+
+Tab. 1: Speicherbelegung der
+Sensordaten [4, 6, 7]
+
+Damit lässt sich der Nunchuk sowohl als
+I²C-Beschleunigungssensor als auch – ins42
+
+besondere in der kabelloser Version, bspw.
+von Logic3 – als Fernsteuerung eines ftModells (Kran, Bagger, Fahrzeug etc.)
+einsetzen.
+Im Folgenden werden wir vorstellen, wie
+der Nunchuk an den TX angeschlossen und
+via I²C-Protokoll ausgelesen werden kann.
+Eine ausführliche Darstellung inklusive
+einer Einführung in das I²C-Protokoll
+findet sich in [7].
+
+Anschluss an den TX
+Ein kurzer Blick auf den proprietären
+Stecker des Nunchuk zeigt, dass man für
+die Verbindung mit dem EXT-2-Anschluss
+des TX einen Adapter benötigt.
+Auf den Nunchuk passende Buchsen findet
+man nicht im Elektronikfachhandel. Daher
+muss man sich für die Realisierung des
+Adapters etwas einfallen lassen. Die eine
+Seite erhält man, indem man ein 6-adriges
+TX-Flachbandkabel kappt (erhältlich bei
+Knobloch Elektronik, siehe Abb. 3).
+SCL
+
+SDA
+
+GND
+
+VCC
+
+
+Die Belegung des EXT-2-Anschlusses am
+TX ist bekannt [1, 7]. Danach liegen die
+I²C-Signale an den beiden oberen, GND
+und VCC an den beiden unteren Kabeln
+an. Für die andere Seite des Adapters
+bieten sich zwei Möglichkeiten an:
+
+
+Kauf eines Nunchuk-Adapters (erhältlich z. B. bei Watterott für ca. 2,50 €,
+
+
+Computing
+
+Kappen des Nunchuk-Kabels oder eines
+Nunchuk-Verlängerungskabels (erhältlich für ca. 5 €); da es beim kabellosen
+Nunchuk kein Kabel gibt, das sich kappen ließe, benötigt man in diesem Fall
+ohnehin ein Verlängerungskabel.
+Die Belegung des Nunchuk-Steckers ist
+gut dokumentiert [6, 7, 8] – Abb. 5 zeigt
+die Anschlussbelegung der I²C-Kontakte.
+
+VCC
+SCL
+
+SDA
+GND
+
+Stecker des Nunchuk
+
+Hat man das Kabel gekappt, muss man
+allerdings wissen, welche Ader des Nunchuk- bzw. des Verlängerungskabels zu
+welchem Anschluss gehört. Tabelle 2 zeigt
+die Belegung der Adern meines (originalen) Nunchuk und des Verlängerungskabels. Aber Vorsicht: Da die Adernfarben
+einiger Klons nicht mit denen des originalen Nunchuk übereinstimmen, sollte man
+die Belegung sicherheitshalber am abgeschnittenen Kabelstück mit dem NunchukStecker durch Durchmessen prüfen.
+Signal Aderfarbe
+VCC
+
+Rot
+
+GND
+
+Weiß
+
+SDA
+
+Grün
+
+SCL
+
+Gelb
+
+Tab. 2: Anschlussbelegung des (originalen)
+Nunchuk- und Verlängerungskabels
+
+Nun müssen nur noch die passenden
+Kabelenden verbunden werden: mit ftFlachsteckern, durch Löten, mit einer TX-
+
+kompatiblen sechspoligen Pfostenbuchse
+oder über ein Steckboard.
+Doch halt: Der VCC-Anschluss des TX
+liefert 5 V, der Beschleunigungssensor des
+Nunchuk verträgt jedoch nur 3,3 V. Was
+tun? Wer den Beschleunigungssensor nicht
+außerhalb der Spezifikation betreiben und
+auch keine Platine mit Spannungswandler
+(siehe z. B. [9, 10]) bauen oder kaufen und
+zwischen die Anschlüsse löten möchte,
+kann den von Georg Stiegler im folgenden
+Beitrag vorgestellten I²C-Multiplexer mit
+Level Shifter dazwischenschalten. Damit
+spart man sich sogar das Zerschneiden
+eines TX-Extension-Kabels: es genügt, an
+die (richtigen) Adern des Nunchuk-(Verlängerungs-)Kabels eine sechspolige Pfostenbuchse zu klemmen.
+Alternativ kann man auch zu einer 4-CentLösung greifen: Zwei in Stromflussrichtung in Reihe geschaltete Dioden (siehe
+„Motorsteuerungen“ in ft:pedia 3/2011)
+sorgen für einen Spannungsabfall von je
+0,7 V – die verbleibende Spannung von
+3,6 V liegt noch in der Toleranz des
+Beschleunigungssensors.
+
+I²C-Treiber
+Die Ansteuerung des Nunchuk über das
+I²C-Protokoll, bei dem der TX (anstelle der
+Wiimote) als Master und der Nunchuk als
+Slave agiert, umfasst drei Schritte [8]:
+Initialisierung des Nunchuk
+(Rück-)Setzung des Speicher-Pointers
+auf das erste Byte
+Auslesen der Sensordaten (sechs Byte)
+Allerdings gehört die vom Nunchuk verwendete feste I²C-Device-Adresse 0x52 zu
+den von I²C-EEPROMs belegten Adressen
+(0x50 bis 0x57) – und damit auch zum
+Adressraum des internen EEPROMs des
+TX, das ebenfalls (bis auf die Adressen
+0x50 und 0x54) über den I²C-Bus angesprochen werden kann [11]. Jeder Schreibund Lesebefehl an Adresse 0x52 wird
+
+
+daher auch im EEPROM des TX ausgeführt. Dabei ist das Lesen unkritisch, da
+das EEPROM mit 0xFF vorbelegt ist und
+daher die Werte des Nunchuk bei der
+Übertragung im I²C-Protokoll nicht überlagert (falls dem nicht so ist, müssen die
+betroffenen Speicherbereiche zunächst mit
+0xFF beschrieben werden).
+Allerdings kann das I²C-Protokoll wegen
+der Adresskollision nicht feststellen, ob ein
+Nunchuk angeschlossen ist: Fehlt das
+Gerät (oder ist es defekt), werden die
+Werte des internen EEPROMs zurückgeliefert (also 0xFF).
+
+Auslesen der Sensordaten
+Vor dem Auslesen des Nunchuk muss die
+Speicheradresse (RAM-Pointer) zurückgesetzt werden:
+Datenwert 0x00 (ohne Subadresse)
+Anschließend sollte dem I²C-Controller
+des Nunchuk etwas Zeit (ca. 1 ms) für die
+Umsetzung des Kommandos eingeräumt
+werden, bevor man die Lesebefehle für die
+sechs Datenbytes folgen lässt; daher erfolgt
+der Schreibbefehl getrennt (Abb. 7).
+
+Initialisierung
+Die Initialisierung besteht aus zwei aufeinander folgenden Schreibbefehlen [8]:
+Datenwert 0x55 an Subadresse 0xF0
+Datenwert 0x00 an Subadresse 0xFB
+
+Beginn der Auslesefunktion (ReadNunchuk)
+
+
+Beide Werte werden zugleich auch in das
+interne EEPROM des TX geschrieben. Da
+bei der Initialisierung immer dieselben
+Werte an die Adressen 0xF0 und 0xFB
+geschrieben werden, verursacht auch die
+Kollision beim Schreibbefehl kein Problem: die Zahl der verbleibenden Schreib/Löschzyklen des EEPROMS wird dadurch
+nicht dezimiert.3
+
+
+
+Das interne EEPROM ist auf eine Mio. Schreib/Löschzyklen ausgelegt [11].
+
+Die ersten beiden Bytes liefern die Werte
+der beiden Potentiometer des Joysticks (0255). Der Wert in Ruhestellung liegt nicht
+genau bei 127/128 und kann von Nunchuk
+zu Nunchuk unterschiedlich sein. Er sollte
+daher beim Start des Steuerprogramms
+bestimmt werden (Kalibrierung).
+Die folgenden drei Byte liefern jeweils die
+höchstwertigen neun Bit der drei Werte des
+Beschleunigungssensors – X-Achse (AX),
+Y-Achse (AY) und Z-Achse (AZ). Sie
+werden jeweils um zwei Bit nach links
+geschoben; dann werden aus dem sechsten
+Byte je zwei Bit zu AX, AY und AZ
+addiert (siehe Tab. 1). Die beiden niederstwertigen Bits des sechsten Byte werden als
+Status der Taster C und Z zurückgeliefert
+(low active).
+
+Ein entsprechender I²C-Treiber für Robo
+Pro steht im Downloadbereich der ft:c zur
+Verfügung und ist in [7] abgedruckt. Darin
+enthalten ist ein kleines Testprogramm, das
+die Werte der Nunchuk-Sensoren auf dem
+TX-Display anzeigt (Abb. 8).
+Startet man das Programm im DownloadMode, verarbeitet der TX mehr als 350
+Nunchuk-Abfragen (inklusive Umrechung)
+pro Sekunde; das ist quasi ‚Echtzeit’.
+
+der Nunchuk-Werte
+
+Der I²C-Controller des kabellosen Nunchuk-Klons von Logic3 (Abb. 2) unterstützt allerdings nur den Standard Mode,
+also eine I²C-Busgeschwindigkeit von
+100 kBit/s. Daher müssen für diesen Controller die I²C-Befehle angepasst werden;
+eine entsprechend modifizierte Version der
+I²C-Treiber für Robo Pro findet sich ebenfalls im Downloadbereich der ft:c.
+
+Computing
+
+anderen, um z. B. Aktoren wie Lichter
+oder Sounds ein- und auszuschalten. Wie
+auch immer ihr die Möglichkeiten des
+Nunchuk nutzt – für die Motorsteuerung
+mit Joystick oder Bewegungssensor gibt es
+vor allem zwei Konzepte: die separate
+Motorsteuerung je Achse und die ‚2DSteuerung’ von Motoren, bspw. bei einem
+Ketten- oder Zweiradantrieb.
+Separate Motorsteuerung
+Will man (wie bei der originalen fischertechnik-Fernsteuerung) je Joystick-Achse
+bzw. Bewegungsrichtung (X-/Y-Achse)
+jeweils einen Motor steuern, muss bei Programmstart die ‚Nullstellung’ des Nunchuk
+bestimmt werden (Kalibrierung), denn
+weder Joystick noch Bewegungssensor
+liefern in Ruhestellung den Wert ‚0’. Der
+Joystick nimmt automatisch die Ausgangsstellung ein, wenn man ihn loslässt. Für die
+Feststellung der Nullstellung des Bewegungssensors muss der Nunchuk manuell
+in Ruhestellung gebracht werden, daher
+solltet ihr die Koordinaten erst speichern,
+wenn einer der beiden Taster gedrückt ist.
+
+Modellsteuerung
+Theoretisch kann man mit einem Nunchuk
+bis zu 16 Motoren steuern: für jede Kombination der Taster C und Z je zwei Motoren
+mit dem Joystick und zwei mit den
+Beschleunigungswerten der X- und YAchse (Bewegungssteuerung). Will man
+diese Möglichkeiten ausreizen, muss man
+allerdings vier TX-Controller in Reihe
+schalten, da ein TX maximal vier Motoren
+ansteuern kann. Oder man verwendet einen
+der beiden Taster zum Umschalten
+zwischen Joystick- und Bewegungssteuerung (für dasselbe Motorenpaar) und den
+
+(Unterprogramm JoystickControl)
+
+Die Motorgeschwindigkeit (Auflösung:
+512 Schritte) erhält man aus der Differenz
+zwischen aktuellem Sensorwert und Nullstellung, multipliziert mit einem Skalie45
+
+
+
+rungsfaktor. Der beträgt beim Joystick
+mindestens 512/128 = 4 und beim Bewegungssensor mindestens 512/256 = 2. Mit
+einem größeren Skalierungsfaktor könnt
+ihr steuern, wie frühzeitig die Motoren in
+der jeweiligen Richtung beschleunigen: Je
+größer der Faktor, desto früher sprechen
+sie an. Allerdings hängt es auch von der
+Last ab, die die Motoren in eurem Modell
+antreiben müssen, ob sie schon bei geringen Geschwindigkeitsstufen reagieren.
+Wollt ihr mit einem TX mehr als vier
+Motoren ansteuern, dann bleibt nur,
+mehrere Motoren an einen der O-Ausgänge
+anzuschließen und bspw. mit dem Joystick
+lediglich ein- oder auszuschalten – und den
+Richtungswechsel über einen Polwender
+(siehe „Perlentauchen“ in ft:pedia 1/2013)
+vorzunehmen.
+
+sticks (resp. Bewegungssensors) in Drehrichtung und Geschwindigkeit eines
+rechten und eines linken Motors umrechnen. Wie das geht wollen wir am
+Beispiel des Joysticks zeigen.
+h = 130
+v = 250
+
+v
+h = 31
+v = 212
+
+h = 207
+v = 211
+
+h = 130
+v = 131
+
+h=3
+v = 131
+
+h = 30
+v = 30
+
+h = 252
+v = 131
+
+h = 212
+v = 39
+h = 130
+v=3
+h
+
+
+Sehen wir uns erstmal die Werte des
+Joysticks (h, v) an den neun besonders
+wichtigen Positionen (Stand, Geradeausfahrt, Links- und Rechtskurve) an, die
+beim Nunchuk sogar durch eine Einkerbung am äußersten Rand des JoystickBewegungsfelds markiert sind (Abb. 11).
+MR = 512
+ML = 512
+MR = 512
+ML = 0
+
+(Unterprogramm JoystickOnOff)
+
+2D-Motorsteuerung
+Für die Fahrzeugsteuerung ist es besonders
+elegant, mit dem Joystick entlang der X-YEbene steuern zu können – wie die ‚intelligente Raupensteuerung’ der fischertechnik-Infrarot-Fernsteuerung (500881).
+Dazu müssen wir die vertikale Position v
+und die horizontale Position h des Joy-
+
+
+MR = 512
+ML = -512
+
+MR = 0
+ML = 512
+
+MR = 0
+ML = 0
+
+MR = -512
+ML = 512
+
+MR = -512
+ML = 0
+
+MR = 0
+ML = -512
+MR = -512
+ML = -512
+
+Motoren MR (rechts) und ML (links)
+
+
+Computing
+
+Der linke und der rechte Motor des Fahrzeugs sollen nun in diesen Positionen etwa
+die in Abb. 12 angegebenen Geschwindigkeitswerte (bei einer Auflösung von 512
+Stufen) erhalten. Wie man sieht ist das
+Koordinatensystem der Motoren zentriert
+und gegenüber dem des Joysticks in
+Wie können wir nun die Motor-Geschwindigkeit (und -Richtung) aus den JoystickKoordinaten berechnen? Dazu zentrieren
+wir zunächst das Koordinatensystem aus
+(x, y) um:
+
+x = 77
+y = 80
+
+x = 122
+y=0
+
+x=0
+y=0
+
+x = -127
+y=0
+
+P
+y
+.
+
+x
+
+
+Wenn wir jetzt eine Sekante im Winkel
+von 45° durch den Punkt P legen, erhalten
+wir ein gleichschenkliges rechtwinkliges
+Dreieck, dessen Seitenlängen wir mit dem
+Satz des Pythagoras sehr leicht bestimmen
+können (Abb. 16, rot).
+
+x=0
+y = 119
+x = -99
+y = 81
+
+Ihr erinnert euch sicher: Die Summe der
+Quadrate der beiden Katheten ist gleich
+dem Quadrat der Hypotenuse. Denken wir
+uns nun eine beliebige Position P des
+Joysticks. Dann liefert der Nunchuk uns
+die Koordinaten (x, y) von P.
+
+z2
+
+2 y2
+
+z
+
+2 y
+
+P
+x = -100
+y = -100
+
+x = 82
+y = -92
+
+z
+
+y
+
+x=0
+y = -128
+
+.
+
+x
+
+
+y
+
+45°
+
+Gesucht ist nun also eine Funktion
+
+
+f ( x, y )
+
+Mit einer Senkrechten auf der Sekante
+durch den Nullpunkt erhalten wir ein
+zweites gleichschenkliges, rechtwinkliges
+Dreieck (Abb. 17, blau).
+
+(M R , M L )
+
+Tatsächlich ist es gar nicht so schwierig,
+die Funktion f zu bestimmen – wir
+benötigen dafür lediglich ein Lineal, einen
+Bleistift und den berühmten Satz des
+Pythagoras über die Seitenverhältnisse in
+einem rechtwinkligen Dreieck (Abb. 14).
+.
+a
+
+.
+P
+l
+
+l
+y
+
+b
+
+c
+
+a2 b2
+
+
+c2
+
+x
+
+.
+y
+
+45°
+
+
+
+
+Die Katheten dieses Dreiecks haben die
+Länge l – aus dem wir die Geschwindigkeit, die wir an den linken Motor übergeben möchten, ablesen können. Aus x und y
+können wir l leicht bestimmen:
+
+2 l2
+l
+
+(x
+
+y) 2
+
+(x
+
+y)
+
+Damit können wir nun auch die Geschwindigkeit des rechten Motors r berechnen
+(Abb. 18, grün).
+
+.
+
+und y einen Wert aus {-250, …, 250}
+annehmen, ist der Skalierungsfaktor für MR
+und ML nur halb so groß, und es gilt:
+f ( x, y )
+
+2 ( y x), 2 ( x
+
+y)
+
+Auch hier könnt ihr mit einem größeren
+Skalierungsfaktor für eine frühere Beschleunigung der Motoren sorgen. Abb. 19
+zeigt das Robo Pro-Unterprogramm, das
+die Umrechnung vornimmt.
+
+r
+P
+
+l
+z
+
+y
+.
+
+x
+
+y
+
+r
+
+z l
+
+2 y
+
+r
+
+(y
+
+(x
+
+45°
+
+y)
+in Motorgeschwindigkeit und Richtung
+(Unterprogramm NunchukControl)
+
+x)
+
+
+Um aus (r, l) die endgültigen Geschwindigkeitswerte (MR, ML) zu erhalten, müssen
+wir die Werte noch auf den Wertebereich
+{-512, …, 512} umrechnen. Da die Punkte
+P innerhalb eines Kreises mit einem
+Radius von maximal 128 liegen, nehmen r,
+l Werte aus {-128, …, 128} an. Wir
+erhalten damit (MR, ML) aus (r, l) durch
+Multiplikation mit vier:
+
+MR
+
+4 r
+
+ML
+
+4 l
+
+Damit können wir jetzt die Funktion f(x, y)
+als geschlossene Formel angeben:
+f ( x, y )
+
+2 2 ( y x),2 2 ( x
+
+y)
+
+Mit den Beschleunigungssensoren erfolgt
+die Berechnung entsprechend. Da die
+Werte, die der Bewegungssensor liefert,
+zwischen etwa 270 und 770 liegen, also x
+
+Die Unterprogramme für die NunchukSteuerung finden sich im Downloadbereich
+der ft:c.
+
+Beispielmodell
+Die Funktionsweise der 2D-Steuerung soll
+das folgende Beispielmodell veranschaulichen. Es besteht im Wesentlichen aus
+einem einfachen Direktantrieb mit zwei
+XM-Motoren, die die beiden Achsen eines
+Differentialgetriebes antreiben (Abb. 20).
+Das Differential ist für die Funktion unbedeutend – es stabilisiert lediglich die
+beiden getrennten Achsen. Hinten hält ein
+kleines Spornrad das Gleichgewicht. Der
+TX und der Akku werden auf der Oberseite
+montiert (Abb. 21).
+Die Motoren werden an die TX-Ausgänge
+M1 und M2 angeschlossen, der TX-Ein-
+
+gang an den Akku (Polung beachten!) und
+der Empfänger des kabellosen Logic3Nunchuk an den EXT2-Ausgang des TX.
+
+Computing
+
+Sie sind getestet mit dem originalen
+Nintendo-Nunchuk sowie dem kabellosen
+Klon von Logic3; sehr wahrscheinlich
+funktionieren sie auch mit weiteren Klons.
+Die Reichweite des Logic3-Nunchuk liegt
+– genau wie die des IR Remote Control Set
+von fischertechnik – bei gut 10 Metern und
+wird auch nicht durch die Signale der IRFernbedienung beeinträchtigt.
+
+Quellen
+
+
+Beim Starten des Programms muss der
+Nunchuk zur Ermittlung der Nullstellung
+exakt gerade gehalten werden. Anschließend kann das kleine Fahrzeug wahlweise
+mit dem Joystick oder (bei gedrückter
+Taste) durch Handgesten gesteuert werden.
+
+
+Zum Schluss…
+Die verlinkten Robo Pro Programme erfordern die Robo Pro-Version 3.2.3 und ein
+TX-Firmware-Update auf Version 1.30.1.
+
+[1]
+
+Dirk Fox: I²C mit dem TX – Teil 1:
+Grundlagen. ft:pedia 3/2012, S. 3237.
+
+[2]
+
+Dirk Fox: I²C mit dem TX – Teil 2:
+LED-Display. ft:pedia 4/2012, S. 3237.
+
+[3]
+
+Georg Stiegler: I²C mit dem TX –
+Teil 3: Luftdruckmessung. 1/2013, S. 32-38.
+
+[4]
+
+Wiibrew: Wiimote/Extension
+Controllers/Nunchuk. 2011-2012.
+
+[5]
+
+Analog Devices: ADXL330. Data
+Sheet, Rev. A, 9/2006.
+
+[6]
+
+Maik Schmidt: Arduino. Kapitel 7:
+Experimente mit dem Wii-Nunchuk
+(Leseprobe), dpunkt.verlag, Oktober
+2011.
+
+[7]
+
+Dirk Fox: Wii-Nunchuk steuert
+Fischertechnik-Modelle. c’t Hardware Hacks 1/2013, S. 64-69.
+
+[8]
+
+Anthony Le Cren: Nunchuk-USBAdapter. elektor 9/2012, S. 16-22.
+
+[9]
+
+Herman Schutte: Bi-directional level
+shifter for I²C-bus and other systems.
+Application Note AN97055, Philips
+Semiconductors (NXP), 04.08.1997.
+
+[10] Peter Recktenwald: Wii-Nunchuk als
+Universalsteuerung. Robotfreak
+Blog, 12.07.2008.
+[11] RoboPro Application Notes, Version
+3.1.3.
+
+
+

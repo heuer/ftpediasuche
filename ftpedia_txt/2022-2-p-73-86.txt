@@ -1,0 +1,641 @@
+
+Elektronik
+
+Elektronik
+
+Eine zukunftssichere Stromversorgung
+Arnoud van Delden
+Das Basismodul in jedem Silberling-Aufbau ist das Gleichrichtermodul h4GB (30811), das die
+anderen Module mit einer Gleichspannung von ca. 10 V versorgen kann. Heutzutage wird die
+Herstellung von Gleichstrom aus Wechselstrom meistens externen Gleichstromadaptern überlassen. Weil sich hier nun der Mikrocontroller im Silberling-Gehäuse eingeschlichen hat,
+entstand der Bedarf nach einem zukunftsfähigeren Stromversorgungsmodul, mit dem auch 3,3und 5-Volt-Sensoren und andere Peripherieelektronik mit Strom versorgt werden können. Wenn
+so ein Modul auch noch eine gute Übersicht über die Stromaufnahme bietet und mit einer
+programmierbaren Strombegrenzung ausgestattet ist, sieht es schon nach einem würdigen
+Nachfolger des guten alten Gleichrichterbausteins aus...
+Seit das Experimentieren mit Mikrocontrollern wie dem Raspberry und Arduino stark
+verbreitet ist, hat sich das Angebot an
+erschwinglichen und interessanten Sensoren und Aktoren enorm erweitert. Es
+werden komplette Sensorsets mit teilweise
+Dutzenden verschiedener kleiner Platinen
+mit allen möglichen Sensoren angeboten,
+die zum Experimentieren einladen. Solche
+Kits enthalten oft Sensoren für Hinderniserkennung, Temperatur, Bewegung, Magnetismus, Wasser, Vibration, Licht usw. Sie
+enthalten oft auch Aktoren wie Relais,
+Piezo-Summer, Laser und LEDs. Die
+meisten dieser Platinen arbeiten mit einer
+Eingangsspannung von 3,3 bis 5 V.
+Obwohl einige dieser sogenannten Breakout-Boards sequenziell gelesen werden
+müssen, beispielsweise über den I²C-Bus,
+verfügen die meisten dieser Experimentierboards über einen einfachen logischen Einoder Ausgang. In einem solchen Fall kann
+die Erkennungsschwelle (und manchmal
+die Ausgangsimpulslänge) auf der Platine
+selbst eingestellt werden. Das zwischen 0 V
+und der zugeführten Versorgungsspannung
+wechselnde Ausgangssignal ist für die analogen Eingänge des TXT-Controllers geeignet und bei Verwendung von Silberlingen
+
+reicht ein h4GB (Elektronik-Gleichrichterbaustein 30811) für einen solchen Schaltimpuls aus.
+
+
+Es gibt jedoch ein Problem: Diese Breakout-Boards erwarten eine Versorgungsspannung von 5 V (einige Bussensoren
+3,3 V) und können nicht einfach an die 9 Vfischertechnik-Basisspannung angeschlossen werden. In einem früheren Beitrag habe
+ich bereits einige Lösungen skizziert, um
+beispielsweise den IR-Hindernissensor für
+
+
+
+
+den Einsatz auf dem TXT-Controller nutzbar zu machen [1]. Um zumindest mit
+Sensoren und Silberlingen experimentieren
+zu können, habe ich zunächst ein Steckmodul für den Gleichrichterbaustein h4GB
+mit einem Spannungsregler 7805 gebastelt.
+Den schlafenden Wunsch nach mehr „Spannungsflexibilität“ habe ich beim Zauberling
+gelöst, indem ich frontseitig Versorgungsspannungen von 5, 9 und 12 V zur Verfügung gestellt habe [2].
+
+Erfassungszeit
+
+Der klassische h4GB-Elektronikbaustein
+[3] ist ein Gleichrichter, der aus Wechselspannung eine feste, aber in diesem Fall zu
+hohe Gleichspannung erzeugt. Die Wechselspannungsstufe ist heutzutage etwas
+veraltet. Andererseits könnte ein erdachter,
+zukunftssicherer Stromversorgungs-Baustein mit gängigen DC-Adaptern verwendet
+werden, einen leicht zugänglichen Ein/Ausschalter haben und mehrere DCSpannungen zur Verfügung stellen, die
+derzeit für Peripheriegeräte oder Sensoren
+benötigt werden.
+Auf meiner Suche nach gebrauchsfertigen
+Modulen [4] zeichnete sich schnell ab, dass
+vor allem der Wunsch, all dies in einem
+Silberling-Gehäuse unterzubringen, zu
+einer großen Herausforderung werden
+würde. Die meisten Leistungsmodule waren
+relativ groß oder hatten keine Stromaufnahmeanzeige.
+
+Stromsensoren
+Aus dem Plan für die „zukunftssichere
+Stromversorgung“ wurde bald eine Anpassung, die die Spannungen und die verringerten Ströme auf einem kleinen Display wie
+dem SSD1306-Anzeigemodul anzeigt.
+Zusammen mit einem Arduino Pro Mini,
+Spannungsreglern und einem Stromsensor
+könnte es auf einem Sandwich aus zwei
+Leiterplatten untergebracht werden, die in
+ein 3D-gedrucktes Silberling-Gehäuse
+passen.
+Zur Messung von Strom und Spannung sind
+verschiedene Sensoren zu finden, die über
+den I²C-Bus ausgelesen werden können.
+Einige Sensoren messen mittels HallEffekt, andere bestimmen den Strom durch
+Messung über einen Shunt-Widerstand. Die
+Hall-Effekt-Messung kann im Allgemeinen
+größere Ströme verarbeiten, und der Vorteil
+der Messung über einem Shunt-Widerstand
+ist die Genauigkeit bei kleineren Strömen.
+
+5-Volt-Versorgung auf h4GB
+
+
+Auf vorgefertigten Sensorplatinen, die nach
+letzterem Prinzip arbeiten, ist der INA219
+ein weit verbreiteter Chip. Eine Variante
+
+
+Elektronik
+
+
+dieses Chips, die drei verschiedene Spannungen gleichzeitig überwachen kann, ist
+der INA3221. Dieser Chip kann fast alle
+unsere Wünsche auf einmal erfüllen [5].
+Ich habe eine fertige Platine mit dem Chip
+zum Experimentieren gefunden, aber leider
+erforderte diese Platine einige Modifikationen, bevor sie zur tatsächlichen Überwachung von drei unabhängigen Spannungsbussen verwendet werden konnte [6].
+
+Messprinzip des INA3221
+Stromsensors und zeigt das Prinzip der
+Messung. Links sind die drei Shunt-Widerstände zu sehen, über die gemessen wird.
+Diese sind auf dem Sensorboard als 2 W
+verkraftende
+SMD-Widerstände
+(mit
+R2512-Gehäuse) ausgeführt. Diese Widerstände sind immer in Reihe mit der „Last“
+geschaltet, dem angeschlossenen Verbraucher. Die abwechselnd gemessenen Werte
+jedes Busses werden von einem ADWandler (ADC, Mitte) abgetastet. Die
+Messwerte werden in über den I²C-Bus
+abrufbare Register des Chips abgelegt
+
+(rechts). Die Status- und Alarmsignale sind
+Ausgänge. Für dieses Projekt wird nur das
+Signal „Critical“ verwendet, um den
+Leistungsschalter zu aktivieren, wenn die
+konfigurierte Stromaufnahmegrenze überschritten wird.
+Das fertige Sensorboard mit dem INA3221
+ist relativ groß und mit diversen redundanten Anschlüssen und Anzeige-LEDs ausgestattet. Nach einigen Anpassungen kann
+es jedoch für den ersten Bau eines Prototyps
+unseres Moduls verwendet werden. Letztendlich ist der Ausgangspunkt, eine eigene
+Leiterplatte zu entwerfen, auf der nur die
+nötigste Peripherie des INA3221-Chips
+untergebracht wird. Außerdem kann dann
+die Bauteilanordnung der Shunt-Widerstände am Eingang verbessert werden,
+indem man sie nach den Hinweisen im
+Datenblatt platziert.
+Der Chip kann also über den I²C-Bus [7]
+ausgelesen und auch durch Beschreiben der
+Konfigurationsregister konfiguriert werden.
+Der INA3221 kann dann „alarmieren“,
+wenn die Messwerte die eingestellten Grenzen überschreiten. Der „Critical“-Ausgang
+
+
+
+
+wird aktiv, wenn der Strom den
+eingestellten Wert überschreitet. Wir
+könnten dieses Signal verwenden, um ein
+kleines Relais zu erregen, das die Ausgänge
+schließt. Dadurch ist das Modul besser vor
+Überhitzung durch zu hohe Ströme
+geschützt. Das ist ein netter zusätzlicher
+Schutz beim Testen und Experimentieren,
+aber auch wirklich nützlich, wenn der
+Strom in einem Modell ansteigt, weil zum
+Beispiel ein Motor blockiert ist.
+
+das Messprinzip getestet und die gesammelten Messwerte sowohl auf dem seriellen
+Monitor als auch auf dem Display angezeigt
+werden.
+
+Testaufbau
+Steckbrett platziert. Oben links die beiden
+größeren Spannungsregler, darunter die
+kleineren 3,3 V- und 9 V-Regler für die
+Systemspannung. Auch Display, Relais und
+der Steuertransistor für die „automatische
+Sicherung“ werden platziert und angeschlossen. Mit einem Test-Sketch konnten
+
+
+
+Sowohl die „Warning“- als auch die
+„Critical“-Schwellenwerte können vom
+Programm aus über den I²C-Bus in den
+Chip programmiert werden. Dadurch ist es
+
+
+Elektronik
+
+möglich, das Modul mit Drucktasten konfigurierbar zu machen. Mit den weißen
+Drucktasten kann die Anzeige auf dem
+Bildschirm ausgewählt werden. Die blaue
+Drucktaste dient zum Aufrufen des Einstellungsmodus für den Stromschwellenwert.
+Diese Taste kann auch verwendet werden,
+um den auf dem Bildschirm angezeigten
+Peak-Strom auf null zurückzusetzen.
+Abschließend kann mit dem roten Knopf
+der eingestellte Wert im EEPROM des
+Arduino gespeichert werden. Durch die
+Beibehaltung der Einstellungen im Modul
+muss es nicht für jede neue Verwendung
+neu konfiguriert werden. Die orangefarbene
+Schaltfläche kann zum Testen vorrübergehend einen 100 Ω-Leistungswiderstand
+an einen Ausgang angeschlossen werden,
+um den Stromschutz mit dieser Stromvariation testen zu können.
+
+Aufbau des Moduls
+Damit der Platz in einem SilberlingGehäuse optimal genutzt werden kann, habe
+ich die Schaltung wie beim Zauberling auf
+ein „Sandwich“ aus zwei Leiterplatten aufgebaut. Aus diesem Grund wurde der
+Schaltplan auch in zwei Teile geteilt.
+Die Bodenplatine befindet sich auf der
+Unterseite des Gehäuses, erzeugt die verschiedenen Spannungen aus den ankommenden 12 V des DC-Adapters und übernimmt die Messungen mit dem INA-Chip.
+Hier ist auch das Relais untergebracht, das
+die automatische Sicherung bildet. Auf der
+Frontplatine befinden sich die verschiedenen Anschlüsse, Taster, LEDs und der
+kleine Bildschirm. Auch der Arduino Pro
+Mini muss hier kopfüber hängend untergebracht werden. Um beide Seiten beider
+Leiterplatten optimal zu nutzen wurde bei
+(fast) allen Teilen die SMD-Bestückung
+gewählt.
+
+
+
+
+Die untere Platine
+Die 12 V vom externen DC-Adapter
+kommen über einen DC-Anschluss in das
+Gehäuse. Nach einer physikalischen Sicherung und dem Ein-/Ausschalter werden auf
+dieser Platine 9 V für das System bereitgestellt. Diese Spannung fließt nicht über
+die Kontakte des Relais. Diese 9 V gehen
+zur Frontplatte-Platine durch und werden
+auf dem Arduino Pro Mini-Board in 5 V
+umgewandelt. Die 5 V werden vom Mikrocontroller selbst gebraucht, kommen aber
+auch zurück, damit der INA-Chip damit
+gespeist werden kann. Die so gewonnene
+getrennte 5 V-Versorgung ist also vom 5 V„Verbraucherausgang“
+getrennt,
+um
+ungewollte
+Störungen
+auf
+die
+Stromversorgung des INA-Chips weitestgehend zu vermeiden.
+Aus den eingehenden 12 V, die über den
+Öffnerkontakt des Relais fließen, werden
+drei Spannungen erzeugt. Die 3,3 V fließen
+einfach zur anderen Platine mit den
+Anschlüssen, dem Display und den Tasten
+auf der Vorderseite des Moduls. Die anderen drei Spannungen laufen über die
+entsprechenden Messkanäle des INA-Chips
+und gelangen dann über einen Verbindungsstecker zur Frontleiterplatte, wo sie
+schließlich frontseitig zur Verfügung
+stehen.
+
+
+Über den I²C-Bus kann konfiguriert
+werden, bei welchem Strom das „Critical“Signal des jeweiligen Busses aktiv sein soll.
+Dieses Signal wird in den Eingang D8 des
+Arduino eingelesen (siehe Abb. 10). Ist es
+aktiv, wird über den Ausgang D9 das Signal
+„Fuse“ ausgegeben, um das Relais über
+einen Transistor zu erregen. Dadurch gehen
+alle Spannungen an den Ausgängen sofort
+auf 0 V und das Modul ist vor zu hohen
+Strömen,
+z. B.
+durch
+Kurzschluss,
+geschützt.
+
+
+
+Elektronik
+
+Die Systemspannung von 9 V und der
+3,3 V-Ausgang können von Spannungsreglern der SMD-Typen bis 100 mA geliefert werden. Bei den 9- und 5 V-Spannungsreglern der Ausgangsspannungen ist es
+klüger, größere Typen wie den 78S05 (bis
+max. 2 A) zu wählen. Um die 12 V-Eingangsspannung des DC-Adapters, die nicht
+nur zur Front des Moduls läuft, sondern
+auch zur Rückseite mit den beiden durchzuschleifenden
+Spannungsausgängen,
+müssen wir uns keine Gedanken machen.
+Dort gilt der maximale Strom, den der
+Adapter liefern kann. Der muss natürlich
+innerhalb der Grenzen der physikalischen
+Sicherung liegen.
+Die Frontplatten-Platine
+In Abb. 10 sieht man das Schema der
+Leiterplatte, die sich oben im Gehäuse unter
+der Frontabdeckung befindet. Auf dieser
+Leiterplatte sind das Display und die frontseitigen Anschlüsse für die verschiedenen
+Spannungen von 3,3 V, 5 V, 9 V und 12 V
+untergebracht.
+Wichtigster Teil ist hier natürlich der
+Arduino Pro Mini, der von der anderen
+Platine mit Strom versorgt wird und der die
+von ihm erzeugten 5 V der untersten Platine
+für den INA-Chip zur Verfügung stellt. Hier
+
+kommt das „Critical“-Signal des Stromsensors herein, und wenn der Sicherungsautomat eingreifen muss, können wir hier
+das „Fuse“-Signal zurückschicken, damit
+das Relais und damit der Ausgangsschutz
+aktiviert werden. In einem solchen Moment
+schaltet sich auch die „Overload“-LED ein.
+Weiterhin befinden sich auf dieser Leiterplatte die verschiedenen Drucktasten, das
+Display und einige LEDs, mit denen angezeigt werden kann, welche Spannungsschiene auf dem Display angezeigt wird.
+Ganz rechts schließlich folgt der FTDI-Programmierport zum Programmieren des
+Arduino über den USB-Bus. Da das Modul
+nur sporadisch mit neuer Firmware aktualisiert werden muss, wird dieser Stecker nicht
+nach außen geführt und befindet sich unter
+der Abdeckung des Moduls auf der Frontplatine.
+
+Lesen und konfigurieren des
+INA3221
+Für die Kommunikation mit dem INA-Chip
+habe ich eine Softwarebibliothek von
+SwitchDoc Labs gefunden [8]. Leider war
+die eher rudimentär und konnte nur Messwerte aus den Registern des Chips auslesen.
+Es gab noch keine Routinen, um Konfigurationswerte über den I²C-Bus in die Register
+des Chips zu schreiben. Das ist aber
+
+
+
+
+notwendig, wenn wir die Hardwareüberwachung durch den Chip nutzen möchten.
+Natürlich ist es möglich, den Strom in der
+Software zu überwachen, aber da der Chip
+diese Möglichkeit bietet, wollte ich das
+nutzen. Deshalb habe ich die Bibliothek so
+erweitert, dass ich auch die „Critical Alert“Werte pro Bus in den Chip schreiben kann.
+Ich habe ein Video zum Testen des Steckbrettaufbaus mit einem Test-Sketch erstellt
+[9]. Dieser Sketch, einschließlich der modifizierten Bibliothek, ist auf GitHub zu
+finden [10].
+
+Ein benutzerdefiniertes
+Gehäuse
+Der Abstand zwischen den Leiterplatten
+beträgt nur 11 mm und Teile auf der Unterseite der oberen Leiterplatte sollten nicht
+mit hohen Teilen auf der unteren Leiterplatte kollidieren. Außerdem muss auf der
+jetzt zu entwerfenden Platine ein Relais
+untergebracht werden, das bereits höher als
+11 mm ist. Glücklicherweise konnte ich die
+Platine am Gehäuseboden leicht absenken,
+sodass die Frontplatte mit allen LEDs,
+Anschlüssen, Tastern und dem Display auf
+gleicher Höhe wie beim Zauberling bleiben
+konnte.
+Beim Zauberling, der auch über den traditionellen h4GB-Gleichrichterbaustein mit
+Strom versorgt werden kann, ist der
+Anschluss eines externen Netzteils an der
+Rückseite des Moduls optional. Ein
+„Powermodul“ wie dieses sollte jedoch in
+der Lage sein, einen 12 V-DC-Adapter
+direkt anzuschließen. Das Modul sollte vorzugsweise auch einen leicht zugänglichen
+Ein-/Ausschalter haben. Da die Position
+dieses Stromversorgungsmoduls in der
+Praxis immer ganz links in einer Reihe von
+Silberlingen sein wird, kann die linke Seite
+des Moduls dafür verwendet werden.
+Schließlich müssen dort keine weiteren
+Module angeschlossen werden.
+
+
+mit einer flachen Seite
+
+Allerdings muss beim Design der Leiterplatten berücksichtigt werden, dass DCStecker und Schalter relativ weit in das
+Gehäuse hineinragen. Außerdem müssen
+diese Komponenten im Inneren ziemlich
+genau zwischen die beiden Leiterplatten
+fallen. Mit einem Erhöhungsring für den
+DC-Stecker konnte ich ein paar Millimeter
+wertvollen Bauraum einsparen.
+Für die kleineren Ströme, wie die Spannung
+von 3,3 V und die 9 V System- und Relaisspannung, genügen kleine 100 mA-Spannungsregler in SMD-Technik. Aber für die
+durchgeführten 5 und 9 V werden größere
+Spannungsregler benötigt. Unter Belastung
+könnten diese sogar (etwas) warm werden,
+daher wäre es schön, wenn sie hinten aus
+dem Gehäuse herausragen könnten. Da auf
+der Rückseite des Moduls weder ein externer I²C-Bus noch ein leicht zugänglicher
+FTDI-Programmierport (wie beim Zauberling) benötigt werden, ist dieser Teil für
+eine Öffnung für die Spannungsregler frei.
+Bliebe die Rückseite des Moduls komplett
+eben, könnte ein selbstklebendes Kühlelement für die erforderliche Kühlung
+sorgen.
+
+
+Elektronik
+
+dann möglich sein, was aber für den zu
+erwartenden Einsatz doch recht überdimensioniert ist. Ich selbst habe dem Modul eine
+physikalische Sicherung am Eingang von
+nur 1600 mA verpasst.
+
+Spannungsregler
+
+Entwurf der Leiterplatten
+Da der Platz zwischen den Leiterplatten so
+klein, das Relais relativ hoch ist und es auch
+einen DC-Stecker und einen Schalter gibt,
+die teilweise in das Gehäuse eingeführt
+werden, war das Design in KiCad eine
+mühsame Arbeit. Um störende Einflüsse
+möglichst zu vermeiden, habe ich mich bei
+der Platzierung der Bauteile um den INAChip möglichst an das Datenblatt gehalten.
+Ich habe auch den vorgeschlagenen HFFilter (Abschnitt 8.4.3 Filtering and Input
+Considerations in [5]) an den Buseingängen
+übernommen, um den Einfluss von Rauschen zu minimieren.
+Die Leiterbahnen der Ausgangsspannungen, die mehr Strom führen müssen, wurden
+so breit wie möglich gehalten. OnlineRechner und -Tabellen [11] weisen darauf
+hin, dass bei der gewählten Leiterbahnbreite
+von 1,5 mm Ströme bis 1,5 bis 2 A keine
+Probleme bereiten sollten. Im Moment habe
+ich einfach 1 oz/ft² (Unze pro Quadratfuß)
+Kupferdicke gewählt; diese könnte auf
+2 oz/ft² erhöht werden. Es ist auch möglich,
+die Leiterbahnen im Lötstopplack aufzubewahren, damit sie noch verzinnt werden
+können. Ströme von 5 A oder mehr sollten
+
+
+Aus den KiCad-Entwürfen ließen sich
+relativ schnell recht brauchbare Leiterplatten herstellen, die nach manuellem Einbau der fehlenden Teile schnell ein testbares
+Ergebnis lieferten. Die INA-Leiterplatte
+wurde vor dem Einbau mit dem Sketch
+getestet, der auch für den Testaufbau auf
+dem Steckbrett verwendet werden konnte.
+
+Funktioniert die
+Strommessung?
+Auf der Leiterplatte, auf der die Strommessungen durchgeführt werden, hatte ich
+bereits die meisten SMD-Teile vom
+Hersteller bestücken lassen. Obwohl ich die
+Löttechnik dafür habe, fand ich den Mehrpreis mehr als angemessen. Das spart viel
+Zeit, und gerade das Platzieren des INAChips ist eine Präzisionsarbeit. Nachdem
+die fehlenden Teile eingelötet waren,
+konnte die Leiterplatte getestet werden.
+
+
+
+
+Glücklicherweise konnte dies leicht kompensiert werden, indem vorübergehend ein
+5 V-Spannungsregler (78L05) in die dreipolige Buchse auf der linken Seite gesteckt
+wurde. Mit dem Test-Sketch stellte sich
+heraus, dass der INA-Chip tatsächlich
+„lebt“ und seine Messwerte sauber über den
+I²C-Bus liefert!
+
+
+herausgenommen
+
+Montage
+
+der Platine
+
+Die 5 V-Versorgungsspannung für den
+INA-Chip wird im fertigen LeiterplattenSandwich vom Arduino Pro Mini auf der
+noch fehlenden obersten Platine geliefert.
+
+Die meisten Komponenten der oberen
+Platine wurden in einer Art Semi-SMDähnlicher Technik aufgelötet. Beispielsweise hängt der Mikroprozessor kopfüber
+wie eine Art Stelzenhaus, das auf SMDKupferinseln gelötet ist – eine Technik, die
+ich bereits beim Zauberling angewendet
+habe und die eine optimale Nutzung aller
+Seiten der Leiterplatten ermöglicht.
+
+
+Elektronik
+
+ge auf dem Display und die Strombegrenzung funktionieren hervorragend. 3,3 V,
+5 V, 9 V und 12 V stehen frontseitig zur
+Verfügung, und das Modul lässt sich
+problemlos mit anderen Modulen kombinieren.
+
+Frontplatte
+
+Dadurch wird auch der Raum zwischen den
+beiden Leiterplatten optimal genutzt. Bei
+der Bauteilanordnung musste jedoch darauf
+geachtet werden, dass in dieser Lücke
+nichts mit dem Hochrelais „kollidiert“.
+Bauelemente, die durch die Front herausragen und sich daher fest an einer bestimmten Stelle befinden müssen, belegen bereits
+verschiedene Plätze auf der Leiterplatte.
+Andere Komponenten mussten sich daran
+anpassen. Das erklärt die vielleicht seltsame
+Anordnung der blauen Anschlussstecker.
+Für ernsthafte Interessenten gehe ich in
+einem Video etwas ausführlicher auf den
+Aufbau des Gehäuses und der Leiterplatten
+sowie die Bestückung und Prüfung ein [15].
+
+
+Die neueste Version des Sketches findet ihr
+auf GitHub [12]. Die Software befindet sich
+wahrscheinlich noch in der Entwicklung.
+Bei Belastung mit einer induktiven Last,
+wie z. B. einem Kohlebürstenmotor, der
+störendes HF-Rauschen erzeugt, ist das
+Messergebnis auf dem Display etwas
+unruhig; dafür werde ich in Zukunft sicher
+noch etwas mit der einstellbaren Abtastfrequenz und der automatischen Mittelung
+der Messwerte durch den INA3221-Sensor
+experimentieren. Das Datenblatt des
+Sensorchips skizziert dazu verschiedene
+Möglichkeiten.
+
+Schlussbemerkungen
+Nach dem Zusammenbau und der Programmierung des Arduino mit dem finalen (oder
+vorläufigen) Sketch war die zukunftssichere
+Stromversorgung Wirklichkeit. Die Anzei-
+
+
+
+
+oberen Platine vergessen. Glücklicherweise
+war dies mit Kenntnis der Fakten leicht zu
+korrigieren. Allerdings habe ich mir noch
+nicht die Mühe gemacht, das alles zu korrigieren. Deshalb hielt ich es nicht für sinnvoll, diese Dateien (bereits) zu veröffentlichen. Entwerft also eure eigene Leiterplatte oder fragt mich danach, wenn ihr es
+wirklich nicht herausfinden könnt.
+
+Fazit
+
+
+Wer das Modul nachbauen möchte, findet
+die 3D-Druckerdateien und das Frontdesign
+online zum Download [13]. Die Leiterplatten-Designdateien waren noch nicht
+ganz korrekt. Die sogenannten GerberDateien mit dem Druckdesign beider
+Leiterplatten erwiesen sich nach der
+Produktion als nicht ganz perfekt. Zwei
+Durchkontaktierungen haben gefehlt, und
+ich hatte die Löcher für die Montage in der
+
+Die Suche war mehr als erfolgreich. Das
+Modul kann den h4GB-Gleichrichterbaustein komplett ersetzen und in Kombination
+mit den Silberlingen, meinem Zauberling
+oder einfach als praktische Stromversorgung für Modelle ohne Steuerung verwendet werden. Die verschiedenen zuschaltbaren Ausgangsspannungen und die
+Spannungs-, Strom- und Leistungsmessung
+machen es sehr flexibel einsetzbar. Ich
+denke, dass ich das Modul dank der automatischen Sicherung auch für allgemeine
+Experimente an meinem ElektronikArbeitsplatz gut nutzen kann.
+
+
+
+Elektronik
+
+
+Schließlich kann nun eine „zukunftssichere“ Version des Fotos vom Anfang
+dieses Beitrags gemacht werden. An die
+Silberlinge kann ein handelsüblicher 5 VIR-Hindernissensor angeschlossen werden.
+Bei Erkennung läuft der Motor für die am
+Monoflop eingestellte Zeit. Auf dem
+Schlussfoto sieht man ein Demo-Setup mit
+vier 9 V-Motoren, die von zwei Zauberlingen gesteuert werden.
+Der Formfaktor der Silberlinge ist immer
+noch hervorragend und die heutigen 3DDrucktechniken begrenzen die Ideen für
+andere nützliche Silberling-Module, die
+gebaut werden können, nicht. Auf den Fotos
+ist ein stabiler gestalteter Konsolenstein für
+die Silberlinge zu sehen, was auch deren
+Aufbau stabiler macht denn je [14].
+
+Der h4GB-Gleichrichterbaustein schaut
+nun zufrieden zu und ich frage mich unwillkürlich, ob die Zeit für eine fünfte Reihe
+von „hobby 5“-Büchern gekommen ist? Es
+wäre ein logischer nächster Schritt. Für
+Inventarisierungsfragen aus dem Waldachtal bin ich immer offen...
+
+Referenzen
+[1]
+
+Arnoud van Delden: Der Zauberling
+(Teil 3): Ein erster Trick. 4/2021, S. 52–57, Abb. 7.
+
+[2]
+
+Arnoud van Delden: Der Zauberling
+(Teil 4). ft:pedia 1/2022, S. 71–79.
+
+[3]
+
+fischertechnik: hobby 4 ElektronikGrundbaustein. In der ft-Datenbank.
+
+
+
+
+[4]
+
+Arnoud van Delden: My Ultimate
+Multi Power Module – Part 1. Auf
+YouTube, 2022.
+
+[10] Arnoud van Delden: Ultimate-MultiPower-Board. Test-Sketch auf
+GitHub, 2022.
+
+[5]
+
+Texas Instruments: INA3221 TripleChannel, High-Side Measurement,
+Shunt and Bus Voltage Monitor with
+I²C- and SMBUS-Compatible
+Interface. Produktdetails und
+Datenblatt.
+
+[11] Kynix: External PCB Trace Max
+Current. Berechnungs-Tool auf
+apogeeweb.net.
+
+[6]
+
+Arnoud van Delden: The Ultimate
+Multi Power Module – Part 1.
+Abschnitt „Playing with the
+INA3221“, auf whizzbizz.com.
+
+[13] Arnoud van Delden: Multi-Power
+Module with programmable fuse.
+STL-Dateien und Frontdesign, auf
+Printables.com, 2022.
+
+[7]
+
+Dirk Fox: I²C mit TX und Robo Pro –
+Teil 1: Grundlagen. ft:pedia 3/2012,
+S. 32–37.
+
+[8]
+
+SwitchDoc Labs:
+SDL_Arduino_INA3221.
+Softwarebibliothek auf GitGitHub,
+2019.
+
+[14] Arnoud van Delden: Base for
+fischertechnik ‚Silberlingen‘. STLDatei für den SilberlingKonsolenstein, auf Printables.com,
+2022.
+
+[9]
+
+
+Arnoud van Delden: My Ultimate
+Multi Power Module – Part 2. Auf
+YouTube, 2022.
+
+[12] Arnoud van Delden: Ultimate-MultiPower-Board. Firmware-Sketch auf
+GitHub, 2022.
+
+[15] Arnoud van Delden: My Ultimate
+Multi Power Module – Part 3. Auf
+YouTube, 2022.
+
+

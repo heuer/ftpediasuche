@@ -1,0 +1,135 @@
+
+
+Computing
+
+Das Universal-Interface am LPT-Port unter
+Windows 10/64 bit
+Helmut Jawtusch
+Dieser Artikel richtet sich an Besitzer des legendären Universal-Interfaces (UI), deren PC noch
+einen LPT-Port besitzt. Möglicherweise wurde inzwischen ein 64-bit-System installiert. Ich
+beschreibe hier, wie man dennoch das Universal-Interface mit den Sprachen Terrapin Logo
+oder Java verwenden kann.
+In meinem Artikel Das Universal-Interface
+am LPT-Port [1] hatte ich vorgeschlagen,
+auf einer Partition ein 32-bit-System (z. B.
+Windows XP) zu installieren. Dazu müsste
+man zuerst eine Installations-CD mit
+Windows XP erstellen, auf der ein SATA
+AHCI-Treiber integriert wurde. Nach der
+Installation von Windows XP muss man
+nach geeigneten Treibern suchen. Da das
+recht aufwändig ist, habe ich nach einer
+
+einfacheren Lösung gesucht. Ulrich Müller
+hatte im Jahre 2000 beschrieben, wie man
+seine LPT-Treibersoftware unter Windows
+98 verwenden kann:
+1. WRTdev0.VXD nach
+Windows\System\VMM32 kopieren
+2. WinRTVXD.REG: Eintrag in die
+Registry durch Doppelklick
+
+
+
+Computing
+
+Um diesen VXD-Treiber unter Windows 10
+64 bit nutzen zu können, habe ich ein
+virtuelles Windows 98-System eingerichtet. Dazu habe ich den VMware Player [2]
+(freeware) installiert. Windows 98 befindet
+sich in der Datei Microsoft Windows 98
+Second Edition [VMware VM].7z [3]. Man
+braucht damit keine Windows 98-CD!
+
+Ich habe für die Verwendung von Java (in
+der Windows 98-VM) jdk-6-windows-i586
+und Eclipse-SDK-3.3-win32 installiert.
+Damit funktioniert auch die Ansteuerung
+des UI mit Java.
+
+Als Treiber für das UI habe ich wieder
+umfish.dll (von Ulrich Müller [4]) und
+meinen darauf aufbauenden Treiber
+umfishcount.dll verwendet.
+
+Damit der vorhandene LPT-Port von
+Windows 98 genutzt werden kann, musste
+ich im VMware Player noch Edit virtual
+machine settings aufrufen und dort explizit
+die Ressource LPT-Port hinzufügen: Add
+⇓ Parallelport ⇓ Use physical parallel
+port on the host.
+
+Unter Terrapin Logo hat die Ansteuerung
+des UIs damit sofort geklappt. Für Java
+musste ich noch die Wrapper-Datei
+javafish.dll
+und
+die
+Jar-Datei
+ftcomputing.jar überarbeiten.
+
+Windows 10 64 bit) Windows 98 emuliert
+wird.
+
+
+
+
+In C:\Windows\System habe ich die Treiber
+umfish.dll, umfishcount.dll, javafish.dll,
+ftcomputing.jar abgelegt und die Datei
+ftComputing.jar wie folgt eingebunden:
+1. Eclipse: Projekt anlegen (Eclipse in Java
+Perspektive mit Standard Einstellungen;
+Arbeiten im Package Explorer: KontextMenu über Rechtsklick).
+2. New, Java Project, Project Name: uitest,
+Finish.
+3. New, Package, Name: test.
+4. Package NeuesProjekt aufklappen, New,
+Class. Name: SimpleDemo, Checkbox
+public static void main aktivieren.
+5. NeuesProjekt: Build Path, Add External
+Archives. Verzeichnis ftComputing im
+Workspace suchen und ftcomputing.jar
+wählen.
+6. In class SimpleDemo (im Editor) hinter
+package
+NeuesProjekt
+import
+ftcomputing.*; einfügen.
+7. Weiter im Editor mit Programmdetails
+für reine Konsolen- bzw. einfache
+Swing-Programme.
+Bei Interesse kann ich die Windows 98Treiberdateien umfish.dll, umfishcount.dll,
+
+
+javafish.dll, ftcomputing.jar sowie die JavaInstallationsdateien
+jdk-6-windows-i586
+und Eclipse-SDK-3.3-win32 in einem Software-Paket zum UI auf der ftcommunity.de
+unter Downloads/Software hochladen,
+sobald das wieder möglich ist.
+Anmerkung: Sollte das Motherboard kein
+LPT-Port besitzen, kann die Karte Longshine LCS-6320 PCI Express mit ParallelPort (Preis ca. 10 €) eingesetzt werden.
+Beachtet dazu auch meinen Beitrag in
+ft:pedia 4/2017 [1]. Ich habe das mit dem
+virtuellen Windows 98 nicht erprobt, vermute aber, dass es wie unter winxp funktioniert. Über eine Rückmeldung, z. B. im Forum der fischertechnik-Community, würde
+ich mich freuen.
+
+Quellen
+[1]
+
+Helmut Jawtusch: Das UniversalInterface am LPT-Port. 4/2017, S. 34-35.
+
+[2]
+
+VMware: Workstation Player.
+
+[3]
+
+VMware-Image einer Windows 98VM.
+
+[4]
+
+Ulrich Müller: ftComputing. ftCommunity-Website.
+
+

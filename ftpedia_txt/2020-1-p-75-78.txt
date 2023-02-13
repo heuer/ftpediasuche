@@ -1,0 +1,213 @@
+
+Computing
+
+Computing
+
+Adapter für fischertechnik-Computing-Modelle
+Peter Gabriel
+Die fischertechnik-Computing-Modelle der 80er Jahre sind noch immer ein Hingucker – und
+eignen sich bis heute für den Einsatz im Unterricht, zumal sie noch in vielen Schulen vorhanden
+sind. Mit einem einfachen Arduino-Adapter lassen sie sich aus dem Dornröschenschlaf
+aufwecken und für einen modernen Informatik-Unterricht wiederbeleben.
+
+Hintergrund
+
+Mikrocontroller
+
+Seit Mitte der 80er Jahre gibt es die fischertechnik-Computing-Baukästen. Darin wurden die fischertechnik-Motoren und -Taster
+an ein spezielles Interface angeschlossen.
+Für die Schule gab es die CVK-Version, die
+mittels verschiedener Adapter den Anschluss an unterschiedliche Computersysteme ermöglichte. Ganz sicher liegen diese
+fischertechnik-Kästen noch in sehr vielen
+deutschen Schulen herum – nur selten wird
+Schuleigentum verkauft.
+
+Seit einigen Jahren sind in der Schule
+verschiedene Mikrocontroller etabliert. Die
+Arduino-Plattform gehört dazu, auch der
+Calliope mini gewinnt an Bedeutung.
+Gerade wurde in NRW das Pflichtfach
+Informatik in Jahrgang 5 und 6 beschlossen.
+Hier können – als ein Unterrichtsvorhaben
+von vielen – Mikrocontroller visuell programmiert werden. In NRW wurde dazu in
+den Regierungsbezirken Düsseldorf und
+Köln eine Calliope-Offensive gestartet [1].
+
+Eine Wiederbelebung der alten Kästen ist
+allerdings nicht ohne Weiteres möglich.
+Denn erstens müsste geprüft werden, welche Software sich zur Ansteuerung eignet –
+auch in der Schule ist man heute bei
+Windows 10 angekommen. Und zweitens
+benötigen die CVK-Schulinterfaces einen
+parallelen Anschluss, den es so nicht mehr
+an PCs gibt – hier müsste man sich also mit
+Adaptern behelfen. Schließlich überschreitet drittens das Alter der Interfaces allmählich auch die Lebensdauer handelsüblicher
+Elektrolyt-Kondensatoren (Elkos), sodass
+diese die Ladung nicht mehr halten können
+und die Interfaces deshalb nicht mehr
+funktionieren.
+
+fischertechnik bietet selbst kleine Sets für
+den Mikrocontroller Calliope an. Über
+Portpins am Calliope mini kann jedoch nur
+ein (schwacher) Motor in zwei Richtungen
+angesteuert werden. Da für den Arduino
+viel Zusatzhardware verfügbar ist, habe ich
+diese Plattform als Ersatz für die Steuerung
+über das fischertechnik-Interface gewählt.
+Außerdem können jüngere Schüler diese
+Plattform über moderne grafische Programmierumgebungen wie Ardublockly oder
+NEPO (Open Roberta) programmieren.
+Ältere Schüler können auch direkt den Cähnlichen Arduino-Code verwenden.
+
+Nach einem großen fischertechnik-Fund in
+unserem Schulkeller stand ich vor genau
+diesen Problemen. Was also tun, um die
+fischertechnik-Roboter wiederzubeleben?
+
+Auf dem Arduino kann die komplette Software abgelegt werden – der PC ist dann nur
+für die Programmierung erforderlich. Es ist
+auch denkbar, mithilfe eines Protokolls über
+die USB-Schnittstelle den angeschlossenen
+fischertechnik-Roboter vom PC aus fernzusteuern.
+
+
+
+
+Hardwareseitig wählte ich das Motor Shield
+v2 von Adafruit zusammen mit einem
+Arduino Leonardo. Das Shield kommuniziert über I²C mit dem Arduino, dadurch
+stehen genug Portpins für die fischertechnik-Taster zur Verfügung.
+Als Modell für den Proof of Concept musste
+der Teach-In-Roboter aus dem fischertechnik-Computing-Kasten 30554 herhalten.
+Beim Bau des Modells nach Anleitung [2]
+fiel auf, dass der Bau nach Anleitung in den
+80er Jahren alles andere als kinderleicht
+war. Man musste damals noch richtig überlegen, da z. B. neu anzubauende Teile auf
+dem Bild verdeckt waren.
+
+Anschluss an den Arduino
+Da ich das originale Flachbandkabel weiterverwenden wollte, war ein Adapter nötig.
+Das Motor Shield bietet für solche Zwecke
+einen genügend großen Prototyping-Bereich.
+Die Belegung des Steckers des OriginalInterfaces zeigt Abb. 2: Es gibt Anschlüsse
+für vier Motoren, acht Eingänge sowie zwei
+Analogwerte der Potentiometer (EX und
+EY).
+
+Motor Shield und Adapter sowie das angeschlossene Teach-In-Modell. Über ein 20x4
+Display (ebenfalls über I²C angesteuert)
+werden Statusanzeigen ausgegeben.
+
+
+
+Der Fertigungs-Ansatz des Adapters ist
+straight forward – die analogen und digitalen Pins und die Motor-Ports des Motor
+Shield werden direkt mit den Anschlüssen
+des Flachbandkabels verbunden; es sind
+keine weiteren Teile nötig. Auf Pull-Downoder Pull-Up-Widerstände kann verzichtet
+werden, da der Arduino über interne PullUp-Widerstände verfügt, die per Software
+zugeschaltet werden können.
+Die Verkabelung der Adapter-Anschlüsse
+mit den Arduino-Pins und Motor-Ports
+zeigt der Schaltplan in Abb. 3 (die
+Zeichnung habe ich in Fritzing realisiert).
+Die Farben der einzelnen Verbindungskabel
+entsprechen den Farben des Flachbandkabels.
+
+Computing
+
+Beispielen beschrieben. Die Bibliothek
+steht auf GitHub zum Download zur Verfügung [5].
+#include <FTControl.h>
+FTControl ftc;
+#define MOTORNUM 1
+#define FORWARD 1
+#define BACKWARD 2
+void setup() {
+ftc.begin();
+ftc.setSpeed(MOTORNUM, 180);
+ftc.forward(MOTORNUM);
+ftc.stop(MOTORNUM);
+}
+void loop() {
+if (ftc.checkE(FORWARD) == LOW) {
+ftc.forward(MOTORNUM);
+} else if (ftc.checkE(BACKWARD) == LOW) {
+ftc.backward(MOTORNUM);
+} else {
+ftc.stop(MOTORNUM);
+}
+delay(20);
+}
+
+Listing 1: Beispielprogramm
+
+Listing 1 zeigt ein Beispielprogramm zur
+Steuerung eines Motors (Vorwärts- und
+Rückwärtslauf) über zwei Taster E1 und
+E2: Wird Taster E1 gedrückt, läuft der
+Motor 1 vorwärts, bei E2 läuft der Motor
+rückwärts. Der Motor stoppt wenn kein
+Taster gedrückt ist.
+mit den Pins des Motor Shields
+
+Die Dokumentation der Adafruit-Motorsteuerung [3] zeigt, dass Pins 2 und 3 nicht
+verwendet werden dürfen, da hier bei einigen Arduino-Modellen der I²C-Bus anliegt.
+
+Steuerungssoftware
+Für die Ansteuerung und Fernsteuerung des
+Teach-In-Modells habe ich eine ArduinoBibliothek FTControl entwickelt, die einige
+Befehle bereitstellt. Sie enthält außerdem
+Beispielprogramme zum einfachen Motorund Tastertest sowie eine Fernsteuerung des
+Teach-In-Modells und eine Software zum
+tatsächlichen Teach-In von Bewegungen
+[4]. Dabei ist die richtige Zuordnung der
+Motoren und Taster wichtig; diese ist in den
+
+Im Internet finden sich auch andere Ansätze
+für die Steuerung alter fischertechnik-Computing-Modelle. Die meisten Ansätze achten auf eine Steckmöglichkeit der fischertechnik-Steckverbinder und nicht auf eine
+Kompatibilität mit dem alten Flachbandkabel. Mir kam es insbesondere darauf an,
+die alten Kästen in der Schule mit geringem
+Aufwand weiterverwendbar zu machen.
+
+Fazit
+Mithilfe des Arduino-Mikrocontrollers lassen sich alte fischertechnik-ComputingSets auch ohne Original-Interface weiterbenutzen. Das ist insbesondere sinnvoll, um
+modernere Unterrichtsansätze mit neuen
+Mitteln zu verfolgen. Das vorgestellte Interface lässt sich für weniger als zwanzig Euro
+(Motor Shield, Anlöt-Pins) anfertigen.
+
+
+
+
+Noch sinnvoller wäre es, für den Arduino
+ein erweitertes Motor Shield zu produzieren, mit dem die Taster ebenfalls über I²C
+angesprochen werden, so dass die Portpins
+des Arduinos weitgehend für andere Nutzungen frei bleiben.
+
+Referenzen und Links
+[1]
+
+
+Danina Esau: Wenn Kinder programmieren lernen. Schule und Ausbildung in Erkrath. RP Online,
+11.11.2019.
+
+[2]
+
+fischertechnik Computing: Bauanleitung zum Baukasten 30554 (TeachIn-Roboter), Fischerwerke, 1984.
+
+[3]
+
+Lady Ada: FAQ Adafruit Motor
+Shield V2, Adafruit.
+
+[4]
+
+Peter Gabriel: ftControl, ArduinoBibliothek, GitHub.
+
+[5]
+
+Peter Gabriel: FTControl Teach-In
+Roboter. Video, Youtube.com.
+
+

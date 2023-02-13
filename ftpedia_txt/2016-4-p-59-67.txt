@@ -1,0 +1,583 @@
+
+Elektromechanik
+
+Computing
+
+Auf zu neuen Ufern: Die Geschichte der
+„Community-Firmware“ für den TXT
+Till Harbaum
+Mit dem TXT hat fischertechnik vor gut zwei Jahren seinen bisher komplexesten RoboticsController auf den Markt gebracht und auch den Wettbewerb aus Billund in die Schranken
+verwiesen. Mit seiner Hardwareausstattung entspricht er ungefähr einem Arbeitsplatz-PC aus
+dem Jahre 2000 bzw. dem ersten Raspberry-Pi-Modell von 2011. Damit ist der TXT zwar 2016
+technisch auch im Vergleich zu anderen Embedded-Plattformen nicht mehr ganz aktuell. Aber
+mehr als das, was die mitgelieferte Software aus ihm herausholt, ist auf jeden Fall machbar.
+Die fischertechnik-Community verspricht daher mit der Bereitstellung einer unabhängigen
+Community-Firmware eine frische Brise in den Segeln des inzwischen leicht in die Jahre
+gekommenen TXTs.
+
+Doppelherz
+Der TXT besteht tief in seinem Innersten
+eigentlich aus zwei getrennten Computern,
+die, wie man auch ohne den eigenen TXT
+zu öffnen z. B. unter [1] sehen kann, sogar
+jeweils auf einer eigenen Platine untergebracht sind. Einer dieser Computer, der
+Linux-Controller, entspricht mit seiner 600MHz-CPU nebst 256 MB RAM der ersten
+Generation des bereits erwähnten Raspberry-Pi und läuft wie jener unter Linux.
+Der zweite, im folgenden Motor-Controller
+genannte Computer ist sehr viel einfacher
+gestrickt und verfügt nur über gut 10 % der
+CPU-Leistung sowie wenige Kilobyte
+RAM. Die Arbeitsteilung zwischen beiden
+Teilen entspricht der eines PCs und eines
+früheren fischertechnik-Robo-Interfaces im
+Online-Betrieb. Während sich der LinuxController wie damals der PC um die
+Kommunikation mit dem Anwender
+kümmert, ist es die Aufgabe des MotorControllers, die fischertechnik-spezifischen
+Ein- und Ausgänge zeitnah zu bedienen,
+genau wie es das Robo-Interface damals
+auch tat.
+
+
+Beide Controller des TXT verfügen über
+eine eigene fest verbaute Software, die
+sogenannte Firmware. Im Folgenden wird
+es ausschließlich um die Firmware des
+Linux-Controllers gehen. Den MotorController lässt die Community-Firmware
+zurzeit genauso unangetastet, wie es auch
+die regulären ROBO Pro-Updates machen,
+die ebenfalls nur den Code des LinuxControllers aktualisieren.
+
+
+
+Es war einmal ...
+Es ist kein Geheimnis, dass der TXT wie
+schon sein Vorgänger der TX etwas unfertig
+auf den Markt gebracht wurde. Trotz einer
+deutlichen verspäteten Markteinführung
+sind nach wie vor nicht alle beworbenen
+Funktionen in der offiziellen Firmware
+umgesetzt. Während die Kunden bei den
+früheren Controllern wenig mehr tun
+konnten, als ihren Unmut zu äußern, so sieht
+die Situation beim Linux-Controller des
+TXT fundamental anders aus. Mit dem
+Einsatz des bekannten Open-SourceBetriebssystems erhält fischertechnik zwar
+auf der einen Seite kostenlosen Zugriff auf
+Millionen von Codezeilen, sie gehen als
+Gegenleistung aber die Verpflichtung ein,
+den TXT-Kunden ihrerseits vollen Zugriff
+auf alles zu geben, was sie aus dieser CodeSpende abgeleitet haben. Dieser Vorgang
+wird oft als der „virale Aspekt“ der Gnu
+Public License [2] angesehen, also der
+Lizenz, unter der u. a. der Kern des LinuxBetriebssystems weitergegeben wird. Nur
+wenige Firmen sind sich dieser Konsequenzen sofort bewusst, und offensichtlich war
+auch fischertechnik zunächst nicht ganz
+klar, was ihre Verpflichtungen im Rahmen
+der Linux-Nutzung anging, denn es dauerte
+ein gutes Jahr, bis die Kollegen von fischertechnik der Lizenz entsprechend den Code
+des TXTs ihrerseits offenlegten.
+Damit hatten sie der Lizenz weitgehend
+genüge getan. Sehr viel gewonnen hatte die
+Community aber noch nicht, denn diese
+mehrere hundert Megabyte große CodeSammlung zurück in etwas zu verwandeln,
+das man auf dem TXT nutzen kann,
+erfordert die Überwindung einer ganzen
+Anzahl von Hürden.
+
+Backe, backe Kuchen
+Zunächst muss diese riesige QuellcodeMenge in sogenannte Binärform gebracht
+werden. Den veröffentlichen Code kann
+man sich wie ein viele Millionen Zeilen
+langes Kuchenrezept vorstellen. Erst wenn
+
+man alle Werkzeuge zusammen hat, sie
+bedienen kann und ausreichend Erfahrung
+als Bäcker mitbringt, kann man daraus
+letztlich wieder genau den richtigen Kuchen
+in Form der Firmware backen. Natürlich
+könnte man weiterhin auf den fertigen
+Kuchen, also die von fischertechnik als
+fertige Updates verteilte Firmware zurückgreifen. Aber ohne das Rezept und ohne das
+nötige Handwerkszeug und Know-How
+muss man mit dem fertig verkauften
+Kuchen leben und kann keine Veränderungen an der Rezeptur vornehmen.
+Genau darum ging es der Community aber.
+Wie bereits gesagt, ist der TXT technisch zu
+viel mehr in der Lage, als zu dem, was die
+Original-Firmware nutzt. Erst die Möglichkeit, eigene Rezeptideen umzusetzen,
+eröffnet die Möglichkeit, aus der mitgelieferten Napfkuchen-Firmware des TXT
+eine schmackhafte Sahnetorte zu machen.
+fischertechnik selbst bzw. ihre Zulieferer
+haben sich bei diversen öffentlich zugänglichen Rezeptquellen bedient. Und selbst
+wenn fischertechnik selbst nicht viel dazu
+sagen mag (und es auch nicht muss), wie
+man seine Rezepte zu lesen hat, so gibt es
+ausreichend Dokumentation bei der
+ursprünglichen Quelle, dem sogenannten
+Buildroot-Projekt [3]. Tatsächlich hat sich
+gar nicht fischertechnik selbst beim Buildroot-Projekt bedient, sondern es war der
+Mikroprozessor-Hersteller Texas Instruments. Dieser hat für seinen TI-SitaraProzessor ein Linux-Paket auf Basis des
+Buildroot-Projektes geschnürt. Das hat sich
+wiederum der Zulieferer von fischertechnik
+genommen, um den TXT auf Basis des
+Sitara zu bauen und mit Software zu
+versehen. So ging der Code durch viele
+Hände, bis er schließlich über diverse
+Umwege auf der Download-Seite von
+fischertechnik und in den Händen der
+Community landete. Vieles war auf dem
+langen Weg an Dokumentation und Wissen
+verloren gegangen, manche Dinge waren
+etwas unbeholfen verändert worden, vor
+allem war das alles aber deutlich veraltet
+
+seit der Abzweigung aus dem OriginalBuildroot-Projekt Mitte 2014. Das Buildroot-Projekt hat sich seitdem weiterentwickelt, und die gesamte Software war
+inzwischen auf einem Stand weit jenseits
+dessen, was fischertechnik ausliefert. Mit
+viel Linux-Know-How wurden die Fragmente von der Community wieder verbunden, aktualisiert und in geordneter Form
+unter [4] abgelegt. Damit war der Grundstein für eine eigene Firmware gelegt.
+Allerdings galt es, eine zweite große Hürde
+auf diesem Weg zu nehmen.
+Diese zweite große Hürde besteht darin, den
+TXT mit dem neuen, eigenen FirmwareCode zu befüllen. Die Community-Firmware wie ein Originalupdate durch eine
+eigens modifizierte ROBO Pro-Variante
+aufzuspielen, wäre ohne Know-How der
+ROBO Pro-Interna nicht ganz einfach
+gewesen. Vor allem aber hätte man die
+Funktion der Originalfirmware verloren,
+was gerade in der Anfangszeit ein Problem
+gewesen wäre, da die Community-Firmware zunächst u. a. mit den fischertechnikAnschlüssen des TXT nichts anfangen
+konnte. Aber auch heute noch würden die
+meisten Benutzer vor der CommunityFirmware verständlicherweise zurückschrecken, wenn sie dafür die gewohnte und
+erprobte Funktion der Originalfirmware
+auch nur zu einem kleinen Teil verlieren
+würden. Zum Glück verfügt der TXT über
+einen ungenutzten SD-Karten-Slot. Leider
+ignoriert der TXT den Slot im Auslieferzustand, so dass auch hier zunächst kein
+Zugang für eigene Entwicklungen war.
+Das änderte sich schlagartig Anfang 2016,
+als im Community-Forum der Tipp auftauchte, dass auf den Pins des EXTErweiterungssteckers
+die
+sogenannte
+„serielle Konsole“ verfügbar sei. Eine
+solche Konsole bildet einen Wartungs- und
+Kommandozugang über eine übliche
+serielle Schnittstelle. In den Anfangstagen
+der IT-Entwicklung verfügten Computer
+generell über keinen eigenen Bildschirm
+
+Computing
+
+und keine Tastatur, so dass Benutzereingaben standardmäßig über ein an die
+Konsole angeschlossenes sogenanntes Terminal erfolgte, dass seinerseits nichts großartig Anderes war als eben ein Bildschirm
+mit Tastatur und einer seriellen Schnittstelle. Viele eingebettete Geräte verfügen
+nach wie vor über diesen Konsolenanschluss, wenn sie über keinen eigenen
+Bildschirm und keine Tastatur verfügen. So
+auch der TXT, wie sich nun also herausstellte. Die am Erweiterungsstecker anliegenden Spannungen sind nicht zu den
+üblichen RS232-Schnittstellen kompatibel,
+so dass man einen Pegelwandler zwischen
+PC und TXT schalten muss, wenn man den
+TXT nicht beschädigen will. Oder man
+verwendet gleich einen passenden USBAdapter zum Anschluss an den PC.
+
+
+Die sogenannten „USB-TTL“-Konverter
+sind für wenig Geld online erhältlich; man
+sollte aber darauf achten, eine 3,3 VoltVersion zu erstehen. Die ebenfalls gängigen
+5 Volt-Adapter können dem TXT schaden.
+Nachdem dieser Adapter angeschlossen war
+erfüllte sich nicht nur die Hoffnung auf
+einen direkten Kommando-Zugang zum
+Linux des TXT, sondern es meldete sich
+dort direkt nach dem Einschalten des TXT
+der sogenannte Bootloader, also das Stück
+Software, das ähnlich dem BIOS des PCs
+den eigentlichen Startvorgang steuert. Beim
+Bootloader des TXT handelt es sich um ein
+Programm namens UBoot [5]. Dieser
+Bootloader ist weit verbreitet und kommt
+oft bei vergleichbaren Systemen zum
+
+
+Einsatz. Vor allem besitzt er die Fähigkeit,
+das System von allen möglichen Medien zu
+laden und zu starten, seien es USB-Sticks,
+interner Flash-Speicher, Netzwerkadapter
+oder eben SD-Karten. Schnell zeigte sich,
+dass der im TXT verbaute Bootloader nach
+wie vor auch von SD-Karte booten konnte,
+wenn man direkt nach dem Einschalten des
+TXT über den Adapter vom PC die richtigen Kommandos sendete.
+Damit waren alle Grundlagen für die
+Community-Firmware vorhanden. Die
+Community hatte den gesamten Code in der
+Hand und eine Möglichkeit, den TXT ein
+neues Betriebssystem von SD-Karte booten
+zu lassen. Es dauerte nur wenige Tage und
+die ersten Erfolgsmeldungen schlugen im
+Forum auf. An diesem Punkt war klar, dass
+es keine fundamentalen technischen Hürden
+mehr gab, sondern dass es nur noch an Fleiß
+und Arbeitseinsatz fehlte, um dem TXT ein
+frisches Innenleben zu verpassen.
+Die Tatsache, dass nun eine SD-Karte zum
+Einsatz kam, hatte zwei sehr angenehme
+Nebeneffekte: Zum einen kann man seinen
+TXT jederzeit in den Ursprungszustand
+zurückversetzen, einfach indem man die
+SD-Karte mit der Community-Firmware
+darauf aus dem TXT entfernt. Zum anderen
+ist der Speicherplatz auf der SD-Karte
+wesentlich größer als der interne 128MBFlash-Speicher des TXT, auf dem sich die
+Original-Firmware nach wie vor befindet.
+Kleine Anekdote am Rande: Dieser interne
+Flashspeicher ist 128 MB groß und nicht,
+wie von fischertechnik beworben, nur
+64 MB. Den gleichen Fehler machen die
+offiziellen Unterlagen auch beim RAMSpeicher des TXT, der 256 MB umfasst und
+nicht nur die beworbenen 128 MB.
+
+Puzzlesteinchen
+Ein Linux macht aber noch lange keinen
+TXT und die Community hatte noch einigen
+Weg vor sich, um von den ersten Bootmeldungen eines eigenen Linux-Kernels zu
+einer Firmware zu kommen, die auch für
+
+nicht-Hacker eine erkennbare Funktion hat
+und sich eben nicht nur über die serielle
+Kommando-Konsole
+bedienen
+lässt.
+Schnell teilten sich die Rollen unter den
+beteiligten Community-Mitgliedern auf,
+und so gab es Leute, die in der Folge die
+diversen Standard-Linux-Komponenten an
+den TXT anpassten und die Hardware des
+TXT Schritt für Schritt in Betrieb nahmen.
+Parallel entwickelten andere Mitglieder
+eine neue Benutzeroberfläche für den
+Touchscreen des TXT.
+Dass dabei überhaupt wieder relativ viel
+Arbeit anfiel, hat zwei Gründe. Zum einen
+war die Originalfirmware und ihr zugrundeliegender Code wie erwähnt deutlich in die
+Jahre gekommen. Da die Community-Firmware sofort mit aktuellen Komponenten
+startete, musste an vielen Stellen jede
+inzwischen weiter entwickelte Komponente
+erneut an den TXT angepasst werden. Vor
+allem der Linux-Kernel, der u. a. die
+gesamte Hardware des Systems verwaltet,
+hatte einige Versionssprünge seit der
+Veröffentlichung des TXT hinter sich, und
+viele Dinge funktionierten inzwischen
+einfach etwas anders. Der zweite Grund ist
+die Tatsache, dass fischertechnik nur einen
+Teil des Codes des TXT freigegeben hatte,
+und zwar nur genau den Teil, zu dem sie per
+Lizenz verpflichtet waren. Die Eigenentwicklungen, zu denen u. a. die gesamte
+Benutzeroberfläche sowie die Anbindung
+des Motor-Controllers gehören, hielt
+fischertechnik zunächst weiter unter
+Verschluss. Im Laufe der Zeit wurden auch
+hier ein paar Unterlagen von fischertechnik
+nachgeliefert, ganz komplett und vor allem
+aktuell waren diese Dokumente aber bisher
+nicht, so dass die Community sich nach wie
+vor hier und da mit Tricks behelfen musste
+oder gleich selbst mit einer Neuentwicklung
+aktiv wurde.
+
+Trick der Motor-ControllerAnbindung
+Die größte Lücke bildete lange Zeit die
+Anbindung des Motor-Controllers im TXT.
+
+Ohne die nötigen Unterlagen war es
+zunächst nicht möglich, aus der Community-Firmware auf die fischertechnik-Anschlüsse des TXT zuzugreifen. Der TXT
+war damit seiner eigentlichen Hauptfunktion beraubt, was zu der kuriosen Situation
+führte, dass der TXT unter der CommunityFirmware über einen per USB angeschlossenen Lego-WeDo-Hub Lego-Motoren
+steuerte, noch bevor er einen fischertechnik-Motor ansprechen konnte (Abb. 3).
+
+
+Der Trick, der diese Situation etwas entspannte, ergab sich aus der Erkenntnis, dass
+der gesamte Code der Originalfirmware ja
+noch im internen Flash-Speicher des TXT
+vorhanden war. Hier lag und liegt nach wie
+vor das Programm, das in einem TXT im
+Originalzustand die gesamte Kommunikation mit dem Motor-Controller übernimmt
+und z. B. über WLAN mit dem ROBO ProProgramm auf dem PC kommuniziert. Ein
+paar Kniffe waren nötig, um dieses eigentlich veraltete Programm unter der massiv
+aktualisierten Community-Firmware zum
+Laufen zu bringen und es zu überzeugen,
+sich z. B. beim Zugriff auf den Bildschirm
+des TXT mit der Bedienoberfläche der
+
+Computing
+
+Community-Firmware zu arrangieren. Aber
+letztlich gelang es, diesen Teil der OriginalFirmware wieder so zum Laufen zu
+bringen, dass auch Programme unter der
+Community-Firmware Zugriff auf die
+fischertechnik-Anschlüsse des TXT erhalten.
+
+Aufgehübscht
+Parallel zu diesen sehr technischen
+Aspekten wurde an der Benutzeroberfläche
+gefeilt. Die Originalfirmware setzt an dieser
+Stelle auf das „Simple DirectMedia Layer“Framework, kurz SDL [6]. Dieses Framework hat eigentlich nur genau einen Vorteil:
+Es ist klein und simpel. Als Basis für eine
+moderne Benutzerschnittstelle eignet es
+sich aber nur sehr eingeschränkt. Vor allem
+muss sich der Entwickler um sehr viele
+Dinge selbst kümmern, die ihm moderne,
+sogenannte GUI-Frameworks abnehmen.
+Ein Grund für die Verwendung von SDL in
+der Originalfirmware wird sicher auch der
+begrenzte Speicherplatz im TXT-internen
+Flash-Speicher gewesen sein. Da die
+Community-Firmware von vornherein
+darauf ausgelegt war, von SD-Karten zu
+laufen, existiert diese Beschränkung dort
+nicht, so dass komplexere und speicherintensivere Frameworks wie GTK [7] und
+Qt [8] zum Einsatz kommen können. LinuxBenutzer kennen diese beiden Frameworks
+in der Regel, da sie die Basis der populären
+Gnome- und KDE-Desktopumgebungen
+darstellen.
+Die Wahl fiel auf Qt, da es bereits im
+Buildroot-System vorhanden war und sich
+leicht aktivieren ließ. Entscheidend war
+aber die Tatsache, dass QT keinen so
+genannten Window-Manager benötigt,
+sondern auf kleinen Systemen wie dem
+TXT ohne komplexe Software-Infrastruktur
+direkt auf den eingebauten TFT-Bildschirm
+zugreifen kann. Damit war Qt auf dem TXT
+mit wenigen Handgriffen einsatzbereit. Bei
+der verwendeten Programmiersprache
+orientierten sich die Entwickler der
+Community-Firmware an dem, was sich
+
+
+bereits im Vorfeld etabliert hatte. Es gab
+bereits diverse in Python geschriebene
+Projekte für den TXT und mit ftrobopy [9]
+auch bereits Python-Unterstützung für die
+fischertechnik-Ein- und Ausgänge des
+TXT, so dass die Wahl auf Python fiel.
+
+Programmierer kann sich auf das „was“
+konzentrieren und kann das „wie“ dem
+Framework überlassen.
+
+Als Beispiel für die möglichen Benutzeroberflächen sei die Gegenüberstellung der
+Flipper-Steuerung im Original und in der
+Community-Firmware-Fassung
+gezeigt
+(Abb. 4 und 5).
+
+
+Als weiteres Beispiel zeigen Abb. 6 und 7
+einen Taschenrechner, wie er auf einem PC
+aussieht, und wie derselbe Programmcode
+mit nur minimalen Änderungen auf einem
+TXT gestartet wirkt.
+
+Das QT-Framework bietet die Möglichkeit,
+den Stil der grafischen Darstellung in
+weiten Grenzen zu verändern. Die Farben,
+Größen und Schriften die z. B. für
+„Buttons“ Verwendung finden, lassen sich
+sehr einfach in Konfigurationsdateien
+festlegen und werden automatisch immer
+dann angewendet, wenn eine Anwendung
+einen Button auf dem Bildschirm darstellen
+will. Ähnliches gilt auch für alle anderen
+Grafikelemente, aus denen eine moderne
+Benutzeroberfläche besteht. Der Anwendungsprogrammierer muss sich am Ende
+um diese Details überhaupt nicht mehr
+kümmern. Anders als z. B. unter SDL
+übernimmt das Qt-Framework die komplette Darstellung der Oberfläche. Der
+
+
+
+
+Wie das Handy
+Mit dem leistungsfähigen Qt-Framework
+im Rücken stellte sich die Frage, wie denn
+die neue Benutzeroberfläche generell aufgebaut sein soll. Hier haben es sich die
+Community-Entwickler einfach gemacht
+und sich großzügig bei den Konzepten der
+üblichen Smartphone-Oberflächen bedient.
+Große Icons symbolisieren auf dem Startbildschirm die einzelnen Anwendungen
+(Apps). Durch einen Klick auf das zugehörige Icon startet man eine App. Ebenfalls
+bekannt vom Smartphone ist der „AppStore“, der es der Community-Firmware
+erlaubt, weitere Programme aus dem Internet mit wenigen Klicks direkt auf den TXT
+zu übertragen. Es ist kein PC und kein
+ROBO Pro nötig, so dass der TXT mit der
+Community-Firmware in Zeiten aussterbender Heim-PCs lernt, auf eigenen Beinen
+zu stehen. Die ROBO Pro-Funktion ist
+natürlich nach wie vor vorhanden, und
+selbst die Original-Benutzeroberfläche versteckt sich hinter einem der Icons der
+Community-Firmware. Man kann jederzeit
+zur alten Oberfläche zurückkehren.
+
+Computing
+
+Community-Firmware
+
+
+Ziel der Community-Firmware ist es aber,
+die Original-Firmware und deren Benutzeroberfläche mittelfristig komplett abzulösen
+und sämtliche Funktionen der Originalfirmware inkl. der ROBO Pro-Anbindung
+besser, schneller und moderner selbst zur
+Verfügung zu stellen.
+
+
+
+Online-Controller
+Generell mutiert der TXT mit der
+Community-Firmware zu einem „online“Gerät. Aktuelle Entwicklungen konzentrieren sich auf Umgebungen wie Blockly [10]
+und Jupyter [11]. Beide Umgebungen
+laufen auf dem TXT und erlauben die
+Programmierung des TXT von jedem WebBrowser aus. Damit muss auf dem PC
+nichts installiert werden, und es eignen sich
+neben PCs auch Tablets und Smartphones
+zur Programmierung, sowie nichtWindows-PCs. Blockly erlaubt dabei eine
+mit ROBO Pro vergleichbare grafische Programmierung und eignet sich bereits für
+Grundschulkinder,
+während
+IPythonNotebook eher an Mathlab erinnert und eine
+fortgeschrittene Text-basierte Programmierung in Dokumentform ermöglicht.
+
+Risikominimierung
+Um das Benutzen der Community-Firmware auch ohne den eingangs erwähnten
+UART-Adapter zu ermöglichen, war bis
+Oktober 2016 eine nicht ganz risikolose
+Software-Modifikation am TXT nötig. Das
+permanente Ändern des Bootloaders, um
+den SD-Karten-Boot dauerhaft zu aktivieren, erforderte zwar nur wenige Kommandos, ein Tippfehler an der falschen Stelle
+konnte aber aus dem TXT einen Servicefall
+machen. fischertechnik hat dankenswerter
+Weise die wenigen bekannt gewordenen
+Fälle dieser Art kulant repariert.
+Viel wichtiger ist aber, dass fischertechnik
+mit dem ROBO Pro-Update auf Version
+4.2.4 und der damit einhergehenden Aktualisierung der Original-TXT-Firmware im
+Oktober 2016 einen risikolosen Weg
+geschaffen hat, die für den Betrieb der
+Community-Firmware nötigen Änderungen
+am TXT ohne Risiko vorzunehmen. Ein
+von fischertechnik mit dem Update ausgeliefertes PDF-Dokument [12] beschreibt
+die nötigen Handgriffe. Damit ist mit der
+Benutzung der Community-Firmware
+keinerlei Risiko für den TXT mehr
+
+verbunden. Zusammen mit den von der
+Community bereit gestellten sog. ImageDateien ist es damit in wenigen Minuten
+möglich, den TXT auf die CommunityFirmware umzustellen [13]. Vor allem kann
+man durch Entfernen der SD-Karte aus dem
+TXT den TXT mit einem einzigen
+Handgriff in seinen Originalzustand zurück
+zu versetzen. Die Community-Firmware ist
+damit zu einer Option für jedermann
+geworden.
+
+Wunschliste
+Nach wie vor gibt es in der CommunityFirmware Stellen, die nicht ganz ausgereift
+sind. Dies sind genau die Stellen, an denen
+der Community die Dokumentation fehlt.
+Konkret betrifft dies primär sämtliche
+Aspekte der Kommunikation mit dem
+Motorcontroller sowie die PC/ROBO ProAnbindung. An vielen Stellen ist durch
+Tricks und Hacks bereits eine Grundfunktion hergestellt. Es ist aber der ausdrückliche Wunsch der Community-Entwickler, auf Basis passender Dokumentation technisch befriedigende und für den
+Endanwender leicht verwendbare Lösungen
+anzubieten.
+
+Wiedervereinigung
+Die offizielle Firmware und die Community-Firmware gehen nach wie vor
+getrennte Wege. Das bedeutet an vielen
+Stellen, dass Arbeit doppelt gemacht wird.
+Die Community stellt ihre Arbeit auf
+Github [4] jedem zur freien Verfügung und
+jeder ist eingeladen, sich an der Weiterentwicklung zu beteiligen. Dies schließt
+explizit auch die Firma fischertechnik, ihre
+Mitarbeiter und ihre Zulieferer ein.
+Die Hoffnung von uns Entwicklern ist, dass
+auf lange Sicht nur noch eine Firmware für
+den TXT entwickelt wird, die die Bedürfnisse eines Einsteigers genauso erfüllt wie
+die eines IT-Profis. Das ist aber nur durch
+eine Zusammenarbeit aller Beteiligten
+möglich.
+
+
+Computing
+
+The day after TXT
+
+Quellen
+
+Die Zeiten, in denen sich ein IT-Produkt
+allein aus seinen Hardware-Spezifikationen
+definiert hat, sind vorbei. Vielmehr verkaufen sich Geräte inzwischen über Software-Funktionen. Damit stellt die Community-Firmware bereits einen möglichen
+ersten großen Schritt zu einem TXT-Nachfolger dar.
+
+[1] Boge, Dr.-Ing. Christian:
+fischertechnik “Robo TXT
+Controller”-Hardware, 2015.
+
+Dass die Benutzeroberfläche der Community-Firmware mit ihren Apps problemlos
+den Sprung auf z. B. den Raspberry-Pi
+geschafft hat [14], zeigt, wie sehr die
+konkrete Hardware immer weiter in den
+Hintergrund rückt. Solange die Hardware
+der nächsten fischertechnik-ControllerGeneration weiterhin unter Linux läuft,
+wird auch die Community-Firmware ihren
+Weg auf das neue Gerät finden.
+
+[2]
+
+Free Software Foundation: GNU
+General Public License, 2007.
+
+[3]
+
+The Buildroot developers: Buildroot
+
+[4]
+
+fischertechnik Community:
+fischertechnik ROBOTICS TXT
+firmware, community edition
+
+[5]
+
+DENX Software Engineering:
+U-Boot
+
+[6]
+
+Simple DirectMedia Layer
+
+[7]
+
+The GTK+ Team: The GTK+ Project
+
+[8]
+
+The Qt Company: Qt
+
+[9]
+
+fischertechnik TXT phyton (ftrobopy)
+
+[10] Google Developers: Blockly
+[11] Project Jupyter: jupyter
+[12] fischertechnik: Freischaltung des
+Bootloaders
+[13] fischertechnik Community:
+Anleitung: Einrichtung der
+ftcommunity TXT Firmware
+[14] Dr. Till Harbaum: Raspi mit Touch.
+heise Verlag, 2016.
+Raspberry Pi
+
+
+

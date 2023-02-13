@@ -1,0 +1,679 @@
+
+Computing
+
+Computing
+
+Digitalkamera mit Autofokus und
+Live-Video-Vorschau
+Torsten Stuehn
+Digitalkameras sind heute weit verbreitet und es gibt sie in den verschiedensten Spielarten –
+von der kompakten Systemkamera bis hin zur professionellen Spiegelreflex-Kamera (SLR). Mit
+dem Erscheinen des „TXT Discovery Sets“ findet man auch im fischertechnik-Sortiment alle
+benötigten Bauteile und Komponenten, um ein funktionierendes Digitalkamera-Modell mit
+Auto-Fokus und Live-Video-Vorschau bauen zu können.
+
+Hintergrund
+Beim Nachbau verschiedener Modelle des
+TXT Discovery Sets stößt man an einigen
+Stellen auf die Herausforderung, dass man
+den Fokus der mitgelieferten einfachen
+Webcam durch Drehen am Objektiv manuell so einstellen soll, dass ein Objekt in
+einem bestimmten Abstand scharf dargestellt wird. Die mitgelieferte ROBOPro
+Software bietet als Hilfe eine fluktuierende
+Balkenanzeige an, die ein ungefähres Maß
+für die Schärfe des aktuellen KameraBildes liefert. Es stellt sich die Frage, ob
+man diesen Prozess des manuellen
+Scharfstellens nicht mit fischertechnikMitteln automatisieren kann.
+Befestigung eines Zahnrads am
+Objektiv der Webcam
+Die Webcam bietet zunächst keinen
+Ansatzpunkt um mit Hilfe eines Motors die
+Fokuseinstellung vorzunehmen. Es fehlt
+eine offizielle Möglichkeit, zum Beispiel
+ein Zahnrad am Objektiv zu befestigen.
+Man kann sich jedoch mittels eines Streifens Papier oder dünner Pappe behelfen um
+das Zahnrad Z30 auf dem Objektiv der
+Webcam festzuklemmen. Der Streifen
+sollte knapp 1 cm breit und, je nach Dicke,
+
+etwa 20 cm lang sein und wird fest innen in
+das Zahnrad gewickelt (siehe Abb. 1).
+
+
+Das Zahnrad sollte sich dann mit dem
+Pappstreifen über das Objektiv der Kamera
+schieben lassen. Der Sitz kann einfach über
+die Länge des Pappstreifens variiert werden
+und sollte nicht zu fest sein. Es sollte sich
+auch noch weiterdrehen lassen, wenn das
+Objektiv am Anschlag ist, da das Objektiv
+sonst beschädigt werden könnte, falls der
+Fokus-Motor einmal zu weit drehen sollte.
+Als Fokus-Motor dient ein Encodermotor,
+der mit Hilfe einer Rastschnecke das Z30
+antreibt und damit die Schärfeebene der
+Webcam verändern kann.
+
+Das Modell
+Das Kamera-Modell kann komplett mit
+Teilen aus dem fischertechnik TXT Discovery Set aufgebaut werden. Die Teileliste
+sieht folgendermaßen aus:
+
+
+
+
+Stück
+
+Bezeichnung
+
+
+TXT Controller
+
+
+Webcam
+
+
+Encodermotor
+
+
+Zahnrad Z30
+
+
+Rastschnecke 20 m1,5
+
+
+Zahnrad rot zum Aufstecken
+
+
+Taster
+
+
+BS 15
+
+
+BS 30
+
+
+S-Winkelträger 60
+
+
+BS 15 rot mit Bohrung
+
+
+Verbinder 15
+
+
+Baustein 7,5 rot
+
+
+Baustein 5 rot 15 x 30
+
+
+Baustein 5
+
+
+Rastachse 30
+
+
+Rastachse 45
+
+
+Federnocken
+
+
+fischertechnik Akkupack
+
+
+Pappstreifen 1 x 20 cm
+
+
+
+Tab. 1: Teileliste
+
+Da das Modell nicht sehr kompliziert ist,
+sollte es für geübte fischertechnik-Fans
+nicht sehr schwierig sein, es anhand der
+Abbildungen 1 bis 9 nachzubauen. Die
+mehr oder weniger ästhetische Kabelführung bleibt dabei jedem Nachbauer selbst
+überlassen. Es sollte allerdings darauf
+geachtet werden, dass sich keine Kabel,
+insbesondere nicht das USB-Kabel der
+Webcam, zwischen den beiden roten Zahnrädern verfangen und diese blockieren
+können.
+
+
+
+Computing
+
+
+
+
+Wie wird die Schärfe gemessen?
+
+
+
+Selbst preiswerte Digitalkameras bringen so
+gut wie immer einen brauchbaren Autofokus mit, um dem Verbraucher das Scharfstellen der Bilder zu erleichtern bzw. abzunehmen. Diese einfachen Kameras haben
+typischerweise keine zusätzlichen Sensoren
+zur Abstandsmessung eingebaut, sondern
+ermitteln die optimale Schärfeeinstellung
+ausschließlich aus der aktuellen Bildinformation. Als Messgröße für die Schärfe
+verwendet man häufig den durchschnittlichen Kontrast des gesamten Bildes oder
+eines Bildausschnittes (manche Digitalkameras verwenden auch mehrere verschiedene Bildausschnitte gleichzeitig oder erlauben die Auswahl eines bestimmten Bildausschnittes für die Schärfeeinstellung).
+Der Kontrast ist dabei ein Maß dafür, wie
+stark sich die Helligkeit zwischen benachbarten Pixeln verändert. In unscharfen Bildbereichen ändert sich die Helligkeit nur
+
+
+allmählich, während sie sich in scharfen
+Bildbereichen abrupter verändert. Die Farbinformation des Bildes wird dabei nicht
+unbedingt benötigt, ein schwarz/weiß-Bild
+reicht für die Kontrastmessung aus.
+
+Dabei ist K der Kontrast und H der Helligkeitswert, jeweils an der Stelle x, bzw. x-1.
+
+
+Die beiden Bilder in Abb. 10 zeigen jeweils
+einen (nach schwarz/weiß konvertierten)
+Ausschnitt eines Bildes, das mit der fischertechnik-Webcam aufgenommen wurde. Die
+Helligkeit der einzelnen Pixel entlang einer
+horizontalen Linie (als rote Linien in Abb.
+10 gekennzeichnet) ist in Abb. 11 grafisch
+dargestellt. Die absolute Helligkeitsinformation reicht für die Schärfebestimmung
+noch nicht aus. Erst die daraus gewonnene
+Information
+der
+Helligkeitsdifferenz
+(= Kontrast) zwischen benachbarten Pixeln,
+die in Abb. 12 grafisch dargestellt ist, lässt
+Rückschlüsse auf die Schärfe des Bildes zu.
+
+
+In diesem einfachen Beispiel ist der
+Kontrast nur eindimensional entlang einer
+Linie aufgetragen. Im tatsächlichen zweidimensionalen Algorithmus zur Kontrastberechnung werden nicht nur die Punkte
+links und rechts, sondern auch die Punkte
+oberhalb und unterhalb des aktuellen
+Punktes durch Differenzbildung mit einbezogen. Der Gesamtkontrast des Bildausschnittes ergibt sich dann als Mittelwert
+aller Einzelkontraste und kann sehr gut für
+die Unterscheidung von scharfen und unscharfen Bildeinstellungen herangezogen
+werden. Der hier beschriebene Algorithmus
+kommt auch im Programm des fischertechnik-Digitalkamera-Modells zur Anwendung.
+Ansteuerung der Webcam und des
+TXT-Displays
+
+
+Um die Unterscheidung zwischen scharfem
+und unscharfem Bild noch zu verstärken, ist
+nicht nur die einfache Differenz zwischen
+benachbarten Punkten aufgetragen, sondern
+das Quadrat der Differenz:
+( ) = ( ( ) − ( + 1))
+
+In der aktuellen ROBOPro-Version 4.2.3
+kann die Webcam sowohl als Eingabesensor (Linienerkenner, Ballerkenner, Farbsensor oder Bewegungserkenner) als auch (im
+Online-Modus) zur Anzeige eines LiveKamerabildes auf einem PC- oder Smartphone-Display eingesetzt werden. Eine
+Live-Anzeige auf dem im TXT eingebauten
+Display ist mit ROBOPro-Mitteln nicht
+möglich. Bisher gibt es auch keine Möglichkeit, innerhalb von ROBOPro direkt auf
+die Kamerabilder zuzugreifen, um eigene
+
+Algorithmen zur Bildverarbeitung zu implementieren oder um die Bilder abzuspeichern. Die oben bereits erwähnte
+ROBOPro-Balkenanzeige als Hilfe zur
+manuellen Bildschärfe-Einstellung steht
+eigenen ROBOPro-Programmen nicht zur
+Verfügung. Aus diesen Gründen konnte die
+Software für das Kamera-Modell nicht mit
+ROBOPro programmiert werden. Stattdessen wurden alle benötigten Funktionen in C
+und Python implementiert.
+Die hardwarenahen Funktionen zur LiveAnzeige auf dem TXT-Display und die
+rechenintensiven Funktionen zur KontrastMessung und JPEG-Dekodierung wurden
+rein in C implementiert.
+Der Quelltext dieser Routinen ist in der
+Datei ftrobopytools.c zu finden [2]. Alle
+C-Funktionen wurden mit einer PythonSchnittstelle versehen, um die bereits für
+den
+TXT
+vorkompilierte
+Library
+ftrobopytools.so flexibel in PythonProgrammen verwenden zu können.
+Zusammen
+
+mit dem Python-Modul
+ftrobopy.py [3] zur Ansteuerung der Einund Ausgänge des TXTs kann damit die
+Software des Kamera-Modells übersichtlich in Python programmiert werden. Zu
+beachten ist, dass das komplette Programm
+auf dem TXT läuft (vergleichbar mit
+ROBOPro-Programmen im DownloadModus). Aufgrund der Funktionen zur
+direkten Ansteuerung des TXT-Displays
+kann das Programm nicht extern auf einem
+PC laufen (wie ROBOPro-Programme im
+Online-Modus).
+Die Routinen in ftrobopytools.c zur
+direkten Ansteuerung der Webcam greifen
+auf die im TXT-Betriebssystem bereits
+mitgelieferte Video-for-Linux-Bibliothek
+V4L2 zu [4]. Die Anzeige des Video-Bildes
+auf dem TXT-Display erfolgt mit Hilfe der
+ebenfalls bereits auf dem TXT vorhandenen
+Standard-Display-Library (SDL) [5].
+
+Computing
+
+Da bei der Initialisierung der SDL der
+aktuelle Bildschirminhalt des TXT-Displays verloren geht, wird jeweils vor dem
+SDL-Start eine Backup-Kopie des TXTDisplay-Inhalts (typischerweise ist dies das
+Bedienungsmenu des TXTs) über das
+direkte Auslesen des Linux Framebuffers
+(/dev/fb0) angelegt. Diese Kopie wird vor
+dem Beenden des Programms wieder in den
+Framebuffer zurückkopiert. Sollte das Programm unvorhergesehen beendet werden
+und der originale Displayinhalt des TXT
+dabei nicht wiederhergestellt werden, kann
+man den TXT evtl. nicht mehr richtig
+bedienen, weil das Menu nicht sichtbar ist
+(die Touch-Buttons des Menus bleiben jedoch nach wie vor aktiv). In diesem Fall
+hilft das einfache Aus- und wieder Einschalten des TXTs.
+Durch den unmittelbaren V4L2-Zugriff auf
+die Webcam stehen, im Vergleich zum
+Zugriff über ROBOPro (320 x 240 Pixel),
+deutlich höhere Bild-Auflösungen zur Verfügung. Vor dem Abspeichern eines Bildes
+auf die SD-Karte wird die Kamera deshalb
+auf die maximal mögliche Auflösung von
+1280 x 720 Pixeln umgeschaltet. Während
+der Anzeige des Live-Bildes wird die
+Kamera-Auflösung auf die TXT-DisplayAuflösung 320 x 240 Pixel angepasst.
+Das Farbdisplay des TXT hat eine RGBFarbtiefe von 16 Bit pro Pixel (rot: 5 Bit,
+grün: 6 Bit, blau: 5 Bit) und kann damit nur
+65535 verschiedene Farbtöne darstellen.
+Die Webcam liefert die Bilder im stark
+komprimierten JPEG-Format, die vor der
+Anzeige auf dem Display des TXT in
+dessen 16-Bit-Format umgewandelt und um
+90 Grad gedreht werden. Diese Aufgabe
+wird aus Gründen der Geschwindigkeit
+ebenfalls
+von
+C-Routinen
+in
+ftrobopytools.c übernommen.
+Das Python-Programm
+Das Hauptprogramm zur Steuerung des
+Digitalkamera-Modells wurde weitestge-
+
+
+
+hend als endlicher Automat in Python realisiert (Abb. 13) und findet sich in der Datei
+ftDigiCam.py.
+Zur Ansteuerung des am M1-Ausgang und
+C1-Eingang des TXT angeschlossenen
+Fokus-Motors und zum Einlesen des am I1Eingang angeschlossenen Auslöse-Tasters
+wird das Python-Modul ftrobopy.py verwendet [3].
+Während der Darstellung des Live-VideoBildes wird kontinuierlich der mittlere
+Kontrastwert bestimmt. Dabei wird nicht
+das gesamte Bild, sondern aus Geschwindigkeitsgründen nur ein Ausschnitt von
+80 x 60 Pixeln in der Bildmitte zur Kontrastberechnung herangezogen (siehe z. B.
+
+
+
+Der endliche Automat kann die folgenden
+fünf Zustände einnehmen:
+• Zustand 0: Warten auf den AuslöseTaster
+• Zustand 1: Während der Fokus-Motor
+sich in die erste Richtung dreht: darauf
+warten, dass der Kontrast schlechter wird
+• Zustand 2: Während der Fokus-Motor
+sich in die andere Richtung dreht: darauf
+warten, dass der Kontrast schlechter wird
+
+• Zustand 3: Während der Fokus-Motor
+sich wieder in die erste Richtung dreht:
+darauf warten, dass die Position des in
+Zustand 1 und 2 ermittelten KontrastMaximums erreicht wird
+• Zustand 4: Umschalten der KameraAuflösung auf 1280 x 720 Pixel, abspeichern des Bildes und zurückschalten der
+Auflösung auf 320 x 240.
+Die fünf Zustände werden der Reihe nach
+durchlaufen. Nach dem letzten Zustand
+springt der Automat wieder in den Zustand
+0. In den Zuständen 1 und 2 wird eine
+Tabelle (als Python-Liste) aufgebaut, in der
+die Werte der Kontrast-Messung und die
+Werte des Zählereingangs C1 des FokusMotors abgespeichert werden. Aus dieser
+Tabelle lassen sich dann das KontrastMaximum und damit die beste Schärfeeinstellung ermitteln, die im Zustand 3 angefahren wird.
+Grundsätzlich gilt, dass die Schärfe umso
+genauer eingestellt werden kann, je langsamer sich der Fokus-Motor dreht. Man
+muss also einen Kompromiss aus Geschwindigkeit und Bildschärfe eingehen,
+wenn man nicht allzu lange auf den AutoFokus warten möchte. Die Geschwindigkeit
+des Fokus-Motors kann im Python-Programm über die Variable focus_speed
+eingestellt werden.
+Wie immer beim Fotografieren, sollte man
+natürlich auch hier auf gute Lichtverhältnisse achten. Eine zu dunkle Umgebung
+führt zu verstärktem Bildrauschen und verhindert eine glatte Kontrastkurve, die für
+den hier beschriebenen Algorithmus notwendig ist. Außerdem sollte die Kamera
+möglichst ruhig gehalten werden, während
+der Auto-Fokus aktiv ist.
+Installation der Python-Software auf
+dem TXT
+Da der TXT ab Werk ohne Python ausgeliefert wird, muss zusätzlich zur Kamera-
+
+Software auch ein Python-Interpreter installiert werden [7]. Das komplette Softwarepaket (Kamera-Software, Python-Interpreter und Installations-Scripte) kann unter [9]
+als ZIP-Datei heruntergeladen werden und
+kann sowohl mit Windows und Mac OS X
+als auch mit Linux auf dem TXT installiert
+werden.
+Auf dem TXT sollte mindestens die Firmware-Version 4.1.5 installiert sein. Nach
+dem Entpacken der ZIP-Datei muss zuerst
+die Datei ftDigiCam.tar auf den TXT
+kopiert werden. Unter Linux und Mac OS X
+geschieht dies einfach über den folgenden
+Kopierbefehl auf der Kommandozeile
+(Terminal):
+
+Computing
+
+X geschieht dies wieder auf der Kommandozeile durch Eingabe des Befehls:
+ssh ROBOPro@192.168.7.2
+
+Das Passwort ist: ROBOPro.
+Unter Windows benötigt man dafür ein
+SSH-Terminal-Programm. Geeignet (und
+auch von fischertechnik empfohlen) ist z. B.
+das Programm Putty, welches unter [11]
+heruntergeladen werden kann. Die PuttyEinstellungen können der Abb. 16 entnommen werden.
+
+scp ftDigiCam.tar ROBOPro@192.168.
+7.2:
+
+(den Doppelpunkt am Ende der Zeile nicht
+vergessen). Das Passwort lautet: ROBOPro.
+Es wird hier davon ausgegangen, dass der
+TXT über das USB-Kabel mit dem PC
+verbunden ist. Die TAR-Datei landet dann
+im Verzeichnis /opt/knobloch auf dem
+TXT (dieses Verzeichnis ist das Home-Verzeichnis des ROBOPro-Users).
+Unter Windows kann die TAR-Datei z.B.
+mit Hilfe des Programmes WinSCP, das
+unter [10] heruntergeladen werden kann,
+auf den TXT kopiert werden. Die WinSCPEinstellungen können der Abb. 15 entnommen werden. Als Kennwort ist auch
+hier ROBOPro einzutragen.
+
+
+Nach dem Einloggen auf dem TXT wird
+nun mit dem Kommando:
+tar -xf ftDigiCam.tar
+
+das zuvor auf den TXT kopierte TARArchiv entpackt. Dabei werden die folgenden Verzeichnisse im Home-Verzeichnis
+des Users ROBOPro (/opt/knobloch)
+erzeugt:
+ftrobopy/
+lib/
+bin/
+
+(Kamera Software)
+(Python2.7 Libraries)
+(Python Executable)
+
+Um Speicherplatz zu sparen kann nach dem
+Entpacken die TAR-Datei auf dem TXT mit
+folgendem Befehl wieder gelöscht werden:
+rm ftDigiCam.tar
+
+
+Als nächstes muss man sich auf dem TXT
+per ssh einloggen. Unter Linux und Max OS
+
+Im Verzeichnis ftrobopy/ befindet sich
+das Python-Programm für die Steuerung
+
+
+
+
+des Digitalkamera-Modells. Außerdem
+findet man hier das Python-Modul
+ftrobopy.py zur Ansteuerung der MotorAusgänge (M1-M4) und zum Einlesen der
+Eingänge (I1-I8, C1-C4) des TXT. Wer die
+Möglichkeiten dieses Moduls ausführlich
+kennenlernen möchte, der sei auf das ftrobopy-Handbuch (manual.pdf) verwiesen.
+Beim Modul ftrobopytools.so handelt es
+sich um ein kompiliertes C-Programm, das
+die schnellen Routinen für das Einlesen des
+Live Video-Streams und der Bilder und die
+Berechnung des mittleren Kontrastes für die
+Schärfe-Bestimmung übernimmt. Außerdem enthält es einen JPEG-Dekodierer (die
+Bilder der fischertechnik Webcam werden
+im JPEG-Format an den TXT übermittelt)
+und die Routinen zur direkten Ansteuerung
+des TXT-Displays zur Anzeige des Live
+Video-Streams. Die Funktionen dieses
+Moduls sind mit einer Python-Schnittstelle
+ausgestattet und können dadurch bequem
+auch in eigenen Python-Programmen verwendet werden.
+Die Datei ftrobopytools.c enthält den
+kompletten C-Quellcode des Moduls zum
+Nachlesen, wird aber für die Funktion des
+Kamera-Modells nicht weiter benötigt.
+Unterhalb des Verzeichnisses ftrobopy/
+wird außerdem das Verzeichnis PICTURES/
+angelegt. In diesem Verzeichnis werden die
+mit der Webcam angefertigten Bilder abgespeichert. Dieses Verzeichnis wird außerdem als Web-Seite exportiert, solange das
+Kamera-Programm ausgeführt wird. Man
+hat damit die Möglichkeit, die geschossenen Bilder jederzeit über die URL
+http://192.168.7.2:8085 mit einem
+beliebigen Web-Browser anzuschauen,
+bzw. vom TXT herunterzuladen (diese
+Funktion kann durch das Setzen der Variablen startWebServer=False in Zeile 38
+des Programms ftDigiCam.py deaktiviert
+werden).
+Das Kamera-Programm kann jederzeit
+(nach dem Einloggen mit ssh) mit
+
+
+folgendem Befehl auf dem TXT gestartet
+werden:
+bin/python ftrobopy/ftDigiCam.py
+
+Das Programm beendet sich automatisch
+nach 1000 Durchläufen. Diese Zahl kann in
+der Zeile 106 der Datei ftDigiCam.py
+beliebig verändert werden. Die Ausführung
+des Programms kann außerdem jederzeit
+durch Drücken der Tastenkombination
+<Strg>-C abgebrochen werden.
+Die Software (und damit das Digitalkamera-Modell) ist auch ohne Verwendung
+einer Speicherkarte im microSD-Kartenslot
+des TXT uneingeschränkt verwendbar.
+Speichern auf SD-Karte und
+Autostart
+Da die microSD-Karte derzeit noch nicht
+automatisch beim Einschalten des TXT ins
+System eingebunden wird, muss diese
+Funktionalität vom Benutzer vorerst noch
+selbst aktiviert werden. Dazu ist es (einmalig) notwendig sich als root auf dem
+TXT einzuloggen und eine Systemdatei
+(/etc/fstab) um den Eintrag für das
+automatische Einbinden der SD-Karte zu
+erweitern.
+Im Verzeichnis ftrobopy/scripts werden
+zu diesem Zweck und für die Einrichtung
+eines Autostart-Mechanismus für PythonProgramme einige Hilfs-Skripte zur Verfügung gestellt (ausführlichere Informationen
+über die Einbindung der SD-Karte findet
+man auch unter [6]).
+Wer das Root-Passwort seines TXTs noch
+nicht ermittelt hat, sollte jetzt zunächst den
+Beitrag von Raphael Jacob [14] lesen – und
+sich anschließend als root auf dem TXT mit
+ssh einloggen. Als User root wechselt man
+nun in das Verzeichnis ftrobopy/scripts:
+cd /opt/knobloch/ftrobopy/scripts
+
+und führt dort das Shell-Skript zum
+Installieren der SD-Karte aus:
+./install_sdcard.sh
+
+Dieses Script verändert die Systemdateien
+/etc/fstab, zur automatischen Einbindung der SD-Karte beim Systemstart, und
+/etc/init.d/rc.local zum automatischen Starten der Kamera-Software nach
+dem Einschalten des TXT.
+Im Detail wird von dem Script jeweils eine
+Zeile an das Ende der System-Dateien
+angefügt. An /etc/fstab wird die
+folgende Zeile angefügt:
+/dev/mmcblk0p1 /mnt auto rw,noatim
+e,user,umask=0022,gid=1000,uid=100
+0 0 1
+
+und die folgende Zeile wird an das Ende der
+Datei /etc/init.d/rc.local angefügt:
+[ f '/mnt/autorun.sh' ] && su ROBOPr
+o -c screen -A -m -d S PYTHON /mnt/autorun.sh'
+
+Das Script überprüft vor Veränderung der
+Dateien anhand der Berechnung einer md5Prüfsumme, ob die Dateien noch im originalen Auslieferungszustand auf dem TXT
+vorliegen. Nur in diesem Falle werden die
+Dateien verändert. Falls die Prüfsummen
+nicht übereinstimmen, wird davon ausgegangen, dass ein erfahrener Anwender die
+Dateien bereits selbst verändert hat. Mit
+dem script ./restore_sysfiles.sh können die Systemdateien /etc/fstab und
+/etc/init.d/rc.local auch wieder in
+den originalen Auslieferungszustand versetzt werden, falls sie vorher ausschließlich
+über das Skript install_sdcard.sh bearbeitet wurden (auch hier findet wieder ein
+md5-Prüfsummencheck statt).
+Nachdem die Systemdateien angepasst
+wurden, wird eine SD-Karte im microSDSlot des TXT beim nächsten Einschalten
+automatisch in das System miteingebunden
+(die SD-Karte sollte mit dem VFATDateisystem formatiert sein, was typischerweise bei neu gekauften Karten der Fall ist).
+Die SD-Karte kann dann über das Verzeichnis /mnt auf dem TXT direkt angesprochen werden.
+
+Computing
+
+Um den Autostart-Mechanismus für die
+Kamera-Software zu aktivieren muss das
+Script autorun.sh aus dem Verzeichnis
+/opt/knobloch/ftrobopy/scripts
+ins
+Hauptverzeichnis der SD-Karte kopiert
+werden. Man muss sich dazu nicht mehr als
+User root auf dem TXT einloggen, eine
+Anmeldung als User ROBOPro reicht dafür
+aus:
+ssh ROBOPro@192.168.7.2
+cd ftrobopy/scripts
+cp autorun.sh /mnt
+
+Die Datei autorun.sh ist eine Shell-Datei,
+die
+nach
+Anpassung
+der
+/etc/init.d/rc.local-Datei
+automatisch nach jedem Einschalten des TXT
+einmal ausgeführt wird. Man kann in dieser
+Datei auch beliebige andere Prozesse beim
+Hochfahren des TXT automatisch starten.
+Das autorun.sh Skript startet in der
+aktuellen Form den Python-Interpreter mit
+dem ftDigiCam.py Programm. Der
+Parameter /mnt/PICTURES sorgt dafür, dass
+die Bilder auf der SD-Karte abgespeichert
+werden (der in Zeile 49 von ftDigiCam.py
+gesetzte Pfad picture_dir=... wird dann
+nicht verwendet).
+Soll der Autostart beim Hochfahren nicht
+mehr durchgeführt werden, kann man die
+Datei /mnt/autorun.sh einfach wieder
+löschen, mit dem Befehl:
+rm /mnt/autorun.sh
+
+Die im ftDigiCam-Paket enthaltene Datei
+autostart.sh hat folgenden Inhalt:
+#!/bin/sh
+export
+TSLIB_TSDEVICE=/dev/input/event0
+export TSLIB_TSEVENTTYPE=INPUT
+export TSLIB_CONFFILE=/etc/ts.conf
+export
+TSLIB_CALIBFILE=/etc/pointercal
+export SDL_MOUSEDRV=TSLIB
+export
+SDL_MOUSEDEV=$TSLIB_TSDEVICE
+# pictures will be written into
+the directory /mnt/PICTURES
+# create the directory if it does
+not yet exists
+
+
+
+[ -d "/mnt/PICTURES" ] || mkdir
+/mnt/PICTURES
+
+[3]
+
+Python-Modul zur Ansteuerung der
+Ein- und Ausgänge des TXTs
+
+# start the software for the
+camera model
+
+[4]
+
+Video-for-Linux-Bibliothek (V4L2)
+
+[5]
+
+Standard-Display-Library (SDL)
+
+[6]
+
+ft:community-Forum: Einbindung
+der SD-Karte
+
+[7]
+
+Python-Interpreter für den TXT
+
+[8]
+
+ftrobopy (v0.6)
+
+[9]
+
+ftDigiCam (v0.83)
+
+cd /opt/knobloch/ftrobopy
+/opt/knobloch/bin/python
+ftDigiCam.py /mnt/PICTURES
+
+Bei Fragen, Anregungen und Problemen
+rund um das ftDigiCam-Projekt steht auf
+der ftCommunity-Webseite das Forum
+unter [13] zur Verfügung.
+
+Quellen und Links
+
+[10] WinSCP
+
+[1]
+
+Xin Xu, Yinglin Wang, Jinshan
+Tang, Xiaolong Zhang, and
+Xiaoming Liu: Robust Automatic
+Focus Algorithm for Low Contrast
+Images Using a New Contrast
+Measure. Sensors 2011, Basel.
+
+[11] Putty
+
+C-Quelltext der Live-Anzeige auf
+dem TXT-Display, der Funktionen
+zur Kontrast-Messung und JPEGDekodierung
+
+[14] Raphael Jacob: TXT Controller –
+Tipps & Tricks (1): Das RootPasswort (in dieser ft:pedia).
+
+[2]
+
+[12] ft:community-Forum: CommunityFirmware für den TXT.
+[13] ft:community-Forum: ftDigiCamProjekt.
+
+
+
+

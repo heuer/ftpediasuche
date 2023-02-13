@@ -1,0 +1,104 @@
+
+
+Modell
+
+Mini-Modelle (26): Zentrierwinkel
+Gerhard Birkenstock
+Eine große Scheibe soll auf die Drehmaschine. Für die einzuspannende Achse muss der
+Mittelpunkt gefunden werden. Kein Zentrierwinkel zur Hand? Mit fischertechnik ist das
+Problem in wenigen Minuten gelöst.
+
+Grundlagen
+Legt man in ein Prisma einen runden
+Gegenstand, wird dieser sich immer mittig
+ausrichten.
+
+Schematisch sieht das so wie in Abb. 2
+dargestellt aus. Es entsteht eine Winkelhalbierende. Auch andere Winkel kleiner als
+90° würden funktionieren. Jedoch wird das
+Anlegen dann unhandlicher. Ein größerer
+Winkel als 90° macht das Anlegen ungenauer. Somit nimmt man das Optimum, die
+90°.
+Mit Hilfe dieses Wissens kann man sich ein
+geometrisches Hilfsmittel herstellen: den so
+genannten Zentrierwinkel. Mit dessen Hilfe
+ist man in der Lage, die (rote) Mittellinie auf
+einem Kreis einzuzeichnen.
+
+
+Da der Radius sich rechts und links immer
+im gleichen Abstand ablegt, kommt der
+Mittelpunkt des runden Körpers auf einer
+Senkrechten zu liegen. Dies ist mit einer
+roten Linie in Abb. 1 dargestellt.
+
+Beim Anlegen an den Kreis bildet der
+„rechte Winkel“ die Grundlage. Auf einer
+der Wangen setzt man mit 45° einen
+weiteren Schenkel auf. Mit diesem Schenkel wird die Winkelhalbierende auf dem
+Kreis eingezeichnet.
+Dreht man den Winkel um ca. 90° auf dem
+Kreis und zeichnet erneut eine Linie,
+welche die erste schneidet, hat man den
+Mittelpunkt des Kreises bestimmt.
+
+Realisierung mit fischertechnik
+
+
+
+Die beiden 90°-Wangen mit fischertechnik
+zu realisieren ist eine der einfachen Übungen. Die beiden Wangen lassen sich mit den
+Steinen BS 30 sehr einfach erstellen. Auf
+einer der Wangen wird der Schenkel im
+Winkel von 45° mit Winkelsteinen aufgebaut.
+
+
+Modell
+
+In Abb. 3 ist das an der rechten Ecke gut zu
+erkennen.
+Alle für die Konstruktion benötigten Steine
+sind in Abb. 3 gut sichtbar – und in der
+folgenden Tabelle zusammengefasst. Viel
+Spaß beim Anwenden!
+
+
+Da die Bausteine von fischertechnik eine
+richtig gute Passung haben, ist die Anordnung überraschend genau. Lediglich die
+Dicke des Bleistiftes muss durch Verschieben der rechten Wange eingestellt werden.
+
+BauteilNr.
+
+Anz.
+
+Bezeichnung
+
+32879
+
+
+Baustein 30,
+schwarz
+
+32881
+
+
+Baustein 15,
+schwarz
+
+31982
+
+
+Federnocken
+
+31011
+
+
+Winkelstein 30°
+
+31981
+
+
+Winkelstein 15°
+
+
+

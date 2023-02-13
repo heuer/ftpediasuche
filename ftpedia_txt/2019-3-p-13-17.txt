@@ -1,0 +1,204 @@
+
+Modell
+
+Modell
+
+Rüttelplatte
+Rüdiger Riedel
+Auf eine zünftige Baustelle gehört eine Rüttelmaschine: Wo immer gebuddelt, aufgegraben und
+wieder zugeschüttet wird, ist der Untergrund locker. Damit er nicht im Laufe der Zeit einsackt,
+sondern rasch begehbar, bebaubar oder sonst wie nutzbar wird, müssen wir ihn verdichten.
+Eine Unwucht betreibt das Ganze, das kennt
+jeder vom Handy oder Smartphone, wenn
+es brummt und rappelt. Die Achse des
+Mikro-Motors aus einem alten Handy in
+Achse des Messingzylinders, sondern ist
+seitlich versetzt.
+
+
+
+Bei der Drehung entstehen
+umlaufende Fliehkräfte, die zu
+Vibrationen führen.
+
+Unser Rüttler-Modell
+Als Vorbild habe ich den
+Borstenroboter genommen [1].
+Wie dort besteht die Unwucht
+aus einem V-Rad 23·10
+(146535, 36581 oder eine andere Farbe), einer Kunststoffachse 30 (38413) und einer
+Klemmbuchse 10 (31023),
+
+
+BS 7,5 mit einem Federnocken (31982)
+hinzu, sowie ein Verbinder 45 (31330) und
+zwei Winkelsteine 60° (31010).
+
+
+
+Gelagert wird sie in einem BS 15 mit
+Bohrung (32064), der auf zwei BS 5
+(37237) sitzt und einem Baustein 5 15·30
+(35049). Obendrauf sitzt ein Baustein 5 2Z
+(37238). Bleibt noch die Verbindung zum
+Motor. Da müssen wir ein fischertechnikFremdteil verwenden: Ich nehme ein Stück
+Silikonschlauch aus dem Internet mit 4 mm
+Innen- und 6 mm Außendurchmesser
+(Abb. 5).
+
+Der XS-Motor wird mit zwei BS 7,5 –
+zusammengehalten durch zwei Verbinder
+15 (31060) – auf dem äußeren Kotflügel
+befestigt und der Silikonschlauch (Abb. 5)
+über die Antriebsschnecke geschoben.
+
+
+Oben auf das Unwuchtlager setzen wir
+einen BS 15 (116252) und sichern das
+Ganze mit zwei Bauplatten 15·30·3,75 1N
+(32330) gegen Verschieben (Abb. 7).
+
+
+Für die Bodenwanne verwenden wir drei
+Kotflügel 75·30 3Z rot (31896) oder Kotflügel 75·30 3Z gelb (31895).
+Darauf kommen die Basisteile von Abb. 6:
+Zweimal zwei Bausteine 5 15·30 (35049),
+die mit je einem Baustein 5 15·30 3N
+(38428) verbunden werden. Auf der Seite
+des Handgriffs (Abb. 6 links) kommen ein
+
+
+Als Haltegriff verwenden wir vier Rastadapter 20 (36227), zwei Rastachsen 90
+(35066) und eine Kunststoffachse 40
+(38414).
+
+Modell
+
+einen BS 15 (116252). Der Batteriekasten
+wird über der Unwucht befestigt, während
+die andere Seite mit dem BS 15 am Motor
+nur aufliegt.
+Jetzt noch ein Kabel anschließen und der
+Betrieb kann beginnen.
+
+Wie funktioniert das?
+Die Unwucht führt dazu, dass die Bodenplatte neben den Seitbewegungen die gewünschte Auf- und Abbewegung durchführt.
+Die Fliehkraft lässt sich berechnen zu:
+=
+
+∙ ∙ (2 ∙ )
+
+= Fliehkraft, gemessen in N (Newton)
+= Masse der Unwucht, gemessen in kg
+= Abstand der Unwucht von der
+Drehachse in m
+= Drehzahl in Umdrehungen pro
+Sekunde
+
+
+Die Unwucht unseres Modells ist nicht
+leicht zu ermitteln, deshalb machen wir
+dazu ein Gedankenexperiment:
+
+
+Der Batteriekasten (135719) erhält an der
+Unterseite einen Baustein 5 15·30 (35049)
+mit einer S-Kupplung (38260) sowie am
+anderen Ende einen Baustein 5 15·30 3N
+(38428) mit Federnocken (31982) und
+
+Wir denken uns das V-Rad 23·10 vereinfacht zu einem Rechteck mit dem schwarzen Punkt als Drehachse und dem roten
+Kreuz als Mittelpunkt der Unwuchtmasse
+. Wenn die Masse des Radanteiles
+oberhalb der Achse (1) so groß ist wie der
+Anteil (2) darunter, dann gleichen sie sich
+aus und bewirken keine Unwucht. Es
+bleiben die Massen (3) und (4) mit ihrem
+Schwerpunkt am roten Kreuz. Somit ist der
+
+
+
+
+Abstand der Unwuchtmasse
+gleich dem
+Abstand von der Drehachse.
+
+Die Modelleigenschaften
+Wenn wir keinen allzu großen Wert auf
+Genauigkeit legen, können wir eine Abschätzung der Modelleigenschaften ermitteln.
+
+dass die Unwucht seitlich auf der Platte
+angebracht ist. Kommerzielle Rüttelplatten
+haben die Unwucht zentral vorne.
+Mit einem kleinen Umbau lässt sich das
+zeigen.
+
+Die Masse des V-Rades 23 mm beträgt etwa
+1,75 g [3].
+Meine Schätzungen:
+= 1,15 g = 1,15 ∙ 10
+
+kg
+
+= 10,5 mm = 10,5 ∙ 10
+
+m
+
+U
+U
+= 3600
+min
+s
+Somit ist die Rüttelkraft = 1,7 N.
+= 60
+
+Zum Vergleich: Das Gewicht der Maschine
+beträgt komplett 148 g, damit drückt sie mit
+der Gewichtskraft von
+m
+= 0,148 kg ∙ 9,81 2 = 1,45 N
+s
+auf den Boden.
+
+
+In Abb. 13 habe ich zwei Kotflügel angebaut; die Unwucht ist jetzt etwa in der Mitte
+(von vorne gesehen). Der Batteriekasten ist
+für einen Massenausgleich rechts-links seitlich verschoben.
+
+
+Zum Schluss noch der Hinweis, dass sich
+unsere Rüttelplatte zwar auch horizontal
+bewegt, aber nicht geradeaus nach vorne
+oder hinten: Sie macht immer einen Bogen
+rechts oder links herum. Das liegt daran,
+
+
+Das reicht aber noch nicht. Damit die Unwucht „vorne“ ist, muss der Schwerpunkt
+nach hinten verlagert werden (siehe
+
+Wir haben nun eine sowohl selbständig
+vorwärts laufende als auch reversierende
+(vor- und rückwärtslaufende) Maschine, so
+wie in der handelsüblichen Technik. Das
+hängt nur von der Drehrichtung der
+Unwucht ab.
+
+Modell
+
+Quellen
+[1]
+
+Rüdiger Riedel: Borstenroboter –
+Bristlebot. ft:pedia 3/2018, S. 33-36.
+
+[2]
+
+Wikipedia: Rüttelplatte.
+
+[3]
+
+ft-Datenbank: V-Rad 23·10 Nr.
+36581.
+
+
+

@@ -1,0 +1,293 @@
+
+
+Uhren
+
+Die Rast-O’Clock-Uhr
+Thomas Püttmann
+Diese Uhr mit separatem Sekundenzeiger ist bei höchster Funktionalität bis aufs Äußerste
+reduziert. Der Sekundenzeiger bewegt sich kontinuierlich, der Minutenzeiger rastet präzise in
+sechzig gleichgroßen Schritten pro Stunde. Die Sekunden und Minuten können extrem schnell
+einzeln eingestellt werden, während die Uhr läuft. Ohne Antrieb ist die Uhr durch ihren
+reduzierten und transparenten Aufbau und durch den Klang der Rastklicks ein ideales
+Lernspielzeug, angetrieben von einem Synchronmotor läuft sie zuverlässig im Dauerbetrieb.
+Die hier vorgestellte Uhr habe ich für die
+Lehrveranstaltung Modellierung von Zeit an
+der Ruhr-Universität Bochum im September 2016 gebaut. Mein Ziel war es, mit
+möglichst wenigen Teilen ein möglichst
+transparentes Zeigerwerk mit Sekunden-,
+Minuten- und Stundenzeiger zu entwerfen.
+Es sollte auch von Personen, die keine
+Erfahrung mit fischertechnik haben, leicht
+nachgebaut werden können. Diesen Test hat
+die Uhr bestanden. Darüber hinaus lief sie,
+von einem Synchronmotor angetrieben,
+zuverlässig ohne Unterbrechung von der
+Convention 2016 bis ins Jahr 2017.
+Beim Bauen von fischertechnik-Uhren
+muss man an mehreren Stellen Design-Entscheidungen treffen, zum Beispiel, ob sich
+der Sekunden-/Minutenzeiger ruckartig
+bewegen soll (springende Sekunde/Minute)
+oder gleichmäßig, und ob man eine zentrale
+oder eine separate Sekunde haben möchte.
+Diese Entscheidungen wurden hier so getroffen, dass sie zu einem möglichst einfachen, hochqualitativen und haptisch und
+akustisch überzeugenden Ergebnis führen.
+Zum Beispiel erfordert es einen hohen Aufwand, mit fischertechnik drei Zeiger verkoppelt um eine gemeisame Achse zu
+drehen. Daher hat diese Uhr eine separate
+Sekunde.
+
+
+Ein Problem, das häufig erst auffällt, wenn
+man ein detailliertes Ziffernblatt ergänzt, ist
+die 60:1-Übersetzung von der Sekundenauf die Minutenwelle. Wird sie mit einer
+Schnecke und einem Stirnradgetriebe realisiert, so muss die Minutenwelle gebremst
+werden, wenn sich der Minutenzeiger
+präzise bewegen soll. Wegen des großen
+Spiels im Getriebe hängt er sonst durch sein
+Eigengewicht sowohl auf der linken als
+auch auf der rechten Seite des Ziffernblatts
+nach unten, was einen Ablesefehler von
+mehr als einer Minute bewirkt. Ähnlich ist
+das auch bei Schrittschaltwerken, die mit
+einer Kombination aus Segment- und Drehscheibe und einer Schnecke zwischen
+Sekunden- und Minutenwelle arbeiten.
+In dieser Uhr wird dieses Problem gelöst,
+indem ein Schrittschaltwerk mit 30 Stellungen verwendet wird. Eine nachfolgende
+2:1-Übersetzung mit Stirnrädern liefert
+dann eine präzise 60er-Rastung der Minutenwelle.
+Die verwendete Rastung ist über den Einsatz in diesem Modell hinaus interessant,
+denn sie eignet sich für viele verschiedene
+Anwendungen und ermöglicht Schrittschaltwerke mit nahezu beliebig vielen
+Schritten (siehe auch den Beitrag Die
+Uhrzeit im Klartext in dieser Ausgabe [1]).
+
+
+Uhren
+
+
+Ein Rad 14 ist am Ende einer Bauplatte
+5 x 1 befestigt, die als Blattfeder eingesetzt
+wird. Im gerasteten Zustand ruht das Rad 14
+zwischen zwei Zähnen eines Zahnrads Z30
+(siehe Abb. 1 und 5). Zum Weiterdrehen des
+Z30 ist nur der kleine Kraftaufwand nötig,
+der das Rad mitsamt der Blattfeder minimal
+nach außen drückt. Das Rad selbst rollt mit
+äußerst geringer Reibung auf den Zähnen
+des Z30 ab. Dadurch bekommt man eine
+feine, aber doch spürbare Rastung des Z30
+mit einem fantastischen Klang! Der nicht
+mehr lieferbare Rollenhebel aus dem
+früheren Pneumatik-Programm wird mehr
+als gleichwertig ersetzt.
+Die Sekunden können bei laufendem Motor
+eingestellt werden, indem man den gelben
+
+Baustein 30 links unten im Ziffernblatt nach
+innen dreht. Dadurch wird die Schnecke
+vom Z20 der Sekundenwelle ausgekoppelt.
+Die Minuten können durch Drehen des Z40
+hinten schnell und präzise eingestellt
+werden. Wird es schnell gedreht, „schnurrt”
+die Uhr, verlangsamt man die Drehung,
+kann man die einzelnen Klicks sehr gut
+abzählen. Dieser akustische Wechsel übt
+gerade auf Kinder einen hohen Reiz aus und
+macht die Uhr zu einem idealen Lernspielzeug.
+Damit man die Stellung der schwarzen
+Zeiger gut erkennen kann, wurden im
+Uhrengerüst und beim Ziffernblatt nahezu
+ausschließlich die Farben Rot und Gelb
+verwendet.
+
+
+
+Schrittschaltwerk
+Die Sekundenwelle besteht aus drei Teilen:
+der Schaltklinke, einem Zahnrad Z20, an
+dem der Antrieb der Uhr erfolgt, und dem
+Sekundenzeiger.
+
+
+Pro Umdrehung der Sekundenwelle schaltet
+der Klemmstift der Klinke das Z30 der
+Schaltwelle um einen Zahn weiter. Das
+Zahnrad Z20 auf der Schaltwelle dient der
+2:1-Übersetzung auf die Minutenwelle.
+
+
+Der Baustein 15 der Schaltklinke sitzt exzentrisch auf der Rastachse mit Platte. Die
+Exzentrizität muss so eingestellt werden,
+dass der Schaltvorgang sicher und ohne
+Klemmen erfolgt. Die Richtung, in der man
+den Baustein 15 gegen die Rastachse mit
+Platte verschiebt, beeinflusst den Zeitpunkt
+des Schaltens. Wird sie wie in Abbildung 2
+gewählt, so endet das Weiterschalten sehr
+genau, wenn der Sekundenzeiger oben
+steht.
+
+
+
+
+Soll die Bewegung des Sekundenzeigers
+ohne kleinere Rucke verlaufen, so kann die
+Sekundenwelle leicht gebremst werden.
+
+
+Uhren
+
+Zeigerwerk und Ziffernblatt
+Der Minutenzeiger wird mit einem gut
+klemmenden Rastadapter an der Welle
+befestigt oder in eine fest verschraubte
+zweite Drehscheibe gesteckt. Im zweiten
+Fall können die Minuten unmittelbar am
+Zeiger eingestellt werden.
+
+
+
+Die notwendige 12:1-Übersetzung zwischen Minuten- und Stundenzeiger wird
+ähnlich wie bei Remadus' Pendeluhr durch
+eine Neigung der Stundenwelle erzielt.
+
+Nachdem des Ziffernblatt angebracht ist,
+wird der Stundenzeiger durch Drehen am
+hinteren Z40 exakt auf die 12-Uhr-Markierung ausgerichtet. Danach wird das Z40
+festgehalten und der Minutenzeiger gegen
+die Minutenwelle so verdreht, dass auch er
+exakt auf die 12-Uhr-Markierung ausgerichtet ist.
+
+Qualitätstest für jede Uhr. Hier wackelt nichts.
+
+Das Ziffernblatt wird an drei Punkten mit
+Statiksteinen befestigt: unten bei 5 Uhr
+bzw. 7 Uhr auf dem Ziffernblatt und oben
+bei 12 Uhr. Die zwölf mit S-Riegeln gesteckten Markierungen reichen zum genauen Ablesen der Minuten wegen der präzisen
+Rastung vollkommen aus.
+
+Dreht man den Sekundenzeiger im Uhrzeigersinn, so wird der Minutenzeiger jedes
+Mal einen Schritt weitergeschaltet, wenn
+der Sekundenzeiger die obere Stellung
+erreicht. Nach 5, 10, 15 usw. Schritten sollte
+der Minutenzeiger jeweils exakt auf die
+jeweilige Markierung des Ziffernblatts
+zeigen. Ansonsten muss das Ziffernblatt
+leicht in der Höhe korrigiert werden.
+
+
+
+Der Antrieb
+Wenn die Uhr die tatsächliche Zeit anzeigen
+soll, muss sich die Sekundenwelle mit einer
+Geschwindigkeit von 1 U/min drehen. Die
+Sekundenwelle wird von einer Schnecke
+angetrieben. Da pro Umdrehung der
+Schnecke das Zahnrad Z20 der Sekundenwelle einen Zahn weitergedreht wird, muss
+sich die Schnecke mit einer Geschwindigkeit von 20 U/min drehen.
+
+
+
+Das Zahnrad Z10 der Zwischenwelle aus
+Abbildung 11 wird von einer weiteren
+Schnecke angetrieben, die sich daher mit
+einer Geschwindigkeit von 200 U/min
+drehen muss.
+
+Einen solchen Motor hat Matthias Dettmer
+in der ft:pedia 2/2016 vorgestellt [2]. Zwei
+weitere finden sich im Bilderpool der
+ftCommunity. Einer davon verwendet eine
+Konstruktion von Ludger Mäsing aus zehn
+mit Rastachsen 20 verbundenen Rollenböcken, die ein Zahnrad Z30 umringen
+(Abb. 14). Die Neodym-Magneten haben
+einen Durchmesser von 4 mm und werden
+jeweils mit einem kurzen Stück Zwirn in die
+Nuten der Rollenböcke geklemmt. Die
+Polarität ändert sich in jedem Schritt. Die
+Funktionsweise solcher Synchronmotoren
+ist detailliert in [3] dargestellt.
+
+
+Das Z30 der Zwischenwelle aus Abb. 12
+wird direkt von einem Zahnrad Z10 auf der
+Motorwelle angetrieben. Der Synchronmotor muss sich somit mit 600 U/min
+drehen.
+
+
+
+Zum Betrieb des Motors ist eine Wechselspannung von 6 V bis 9 V nötig, wie sie zum
+Beispiel die alten grauen fischertechnikNetzteile zur Verfügung gestellt haben.
+
+Synchronmotoren müssen mit der richtigen
+Geschwindigkeit angeworfen werden,
+damit sie selbstständig laufen. Dies kann
+unter Umständen ein paar Versuche erfordern.
+
+Uhren
+
+In weiten Teilen Amerikas und einigen
+anderen Ländern beträgt die Netzfrequenz
+übrigens nicht 50 Hz, sondern 60 Hz. Dort
+dreht sich dann der originale 12-polige
+Synchronmotor aus [3] mit 600 U/min und
+kann in Kombination mit der Zwischenwelle aus Abbildung 12 zum Antrieb dieser
+Uhr eingesetzt werden.
+Spannend ist es, mit dieser Uhr die Abweichung der Netzzeit von der Normalzeit zu
+beobachten. Die aktuelle Abweichung im
+europäischen Stromnetz wird z. B. auf der
+Webseite der SwissGrid AG angezeigt.
+
+
+Die Lagerung der Motorwelle und der
+ersten Zwischenwelle in den Kupplungsstücken ermöglicht einen reibungsarmen
+Betrieb. Nach ein paar Monaten Dauerbetrieb kann man allerdings Abrieb in Form
+von schwarzem Staub vorfinden. Dies tut
+der Funktionalität allerdings so schnell
+keinen Abbruch.
+Der Motor läuft ohne Last geräuschlos. Im
+Zusammenspiel mit der Zwischenwelle
+kann es allerdings durch die nicht komplett
+runde Form der Öffnungen in den Kupplungsstücken zu hörbaren horizontalen
+Vibrationen kommen.
+Wer eine möglichst leise Uhr haben
+möchte, kann den originalen Synchronmotor aus [3] mit dem 5:2-Planetengetriebe
+aus [4] benutzen. Mit dieser Kombination
+lief die Uhr von der Convention 2016 bis ins
+Jahr 2017.
+
+Bei hohem Bedarf laufen die Kraftwerke
+mit einer leicht höheren Frequenz; dies wird
+aber immer wieder kompensiert. Die Abweichung beträgt in der Regel weniger als
+20 Sekunden. Schließlich werden noch
+viele technische Geräte wie Heizungen von
+Synchronuhren aus- und eingeschaltet.
+Ein Video der Uhr findet sich bei YouTube.
+Viel Freude beim Nachbauen!
+
+Literatur und Links
+[1]
+
+Ludger Mäsing und Thomas
+Püttmann: Die Uhrzeit im Klartext,
+ft:pedia 1/2017.
+
+[2]
+
+Matthias Dettmer: Synchronmotoren,
+ft:pedia 2/2016, S. 48-52.
+
+[3]
+
+Dirk Fox und Thomas Püttmann:
+Technikgeschichte mit fischertechnik,
+dpunkt.verlag, Heidelberg 2015.
+
+[4]
+
+Thomas Püttmann: Planetengetriebe,
+ft:pedia 2/2016, S. 38-43.
+
+einem 5:2-Planetengetriebe.
+
+
+

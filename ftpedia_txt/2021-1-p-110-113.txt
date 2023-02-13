@@ -1,0 +1,243 @@
+
+
+Computing
+
+ROBO Pro simuliert: Würfeln und Rechnen
+Kurt Mexner
+Ein kleines Würfelspiel in ROBO Pro gefällig, das ohne Würfel und TXT Controller auskommt
+und bei dem man nicht einmal Zahlen addieren muss? Oder hat Onkel Klaus dir 10.000 € vererbt, die du bei deiner Bank zu 3 % Zinsen für zehn Jahre anlegen möchtest – und ROBO Pro
+soll dir verraten, wie viel Geld du einschließlich Zinseszinsen nach 10 Jahren ausbezahlt bekommst?
+
+ROBO Pro simuliert
+ROBO Pro kann auch ohne Controller genutzt werden: Wenn keine externen Aktoren (Motoren, LEDs, …) angesteuert und
+keine Sensoren benutzt werden, kann man
+ROBO Pro im Simulationsmodus betreiben.
+Dafür muss man im Menu „COM/USB“ die
+Option „Simulation“ anklicken. Ist kein
+Controller angeschlossen, startet ROBO
+Pro automatisch im Simulationsmodus.
+Die Eingabe kann über den Bedienfeldeingang und die Elemente „Knopf“ oder „Regler“ vorgenommen werden. Der Bedienfeldausgang steuert auf dem Monitor ein
+Lampenmodul an.
+
+Zahl bilden, hat man Pech, eine kleine.
+Diese Zahl wird aufgeschrieben. Das Ganze
+wird viermal wiederholt, dann werden alle
+Zahlen addiert (dies übernimmt ROBO Pro
+für uns) und der nächste Spieler darf sein
+Glück versuchen. Wer die höchste Gesamtpunktzahl erwürfelt hat, ist der „ROBO Pro
+Master“.
+Beispiel 1:
+Wurf
+
+Zahl
+
+100er
+
+
+
+x
+
+
+
+
+
+10er
+x
+
+x
+
+Die gewürfelte Zahl ist 562.
+
+Wird der TXT Controller angesteuert, so
+sind maximal acht Eingänge und acht Ausgänge möglich. Diese Beschränkung gibt es
+im Simulationsmodus nicht. Aktuell arbeite
+ich an einem Programm, in dem 90 Lampenmodule auf dem Bildschirm angesteuert
+werden.
+
+Beispiel 2:
+
+ROBO Pro würfelt
+
+Die gewürfelte Zahl ist 154
+
+Aus den vielen bekannten Würfelspielen
+entschied ich mich für das Spiel „Große
+Hausnummer“. Dabei wird dreimal hintereinander mit einem Würfel gewürfelt. Nach
+jedem Wurf entscheidet man sich, ob man
+die Zahl als Hunderter-, Zehner- oder Einerstelle werten will. Nach drei Würfen bildet
+sich also eine Zahl. Mit Glück und den richtigen Entscheidungen wird sich eine große
+
+ROBO Pro bedient
+
+
+1er
+
+Wurf
+
+Zahl
+
+
+
+
+
+
+
+100er
+
+10er
+
+1er
+x
+
+x
+x
+
+Gespielt wird über das Bedienfeld. Der
+Knopf „Würfeln“ startet den Würfelvorgang. Über die Knöpfe „100“, „10“ und „1“
+wird die Entscheidung mitgeteilt. Ein erneuter Knopfdruck „Würfeln“ erzeugt eine
+neue Zahl. Wenn durch dreimal Würfeln
+eine Zahl gebildet wurde, wird sie in das
+erste Feld übertragen. Nachdem fünf Zahlen
+
+
+Computing
+
+erzeugt wurden, werden diese addiert und
+die Gesamtzahl angezeigt. Falls man mit
+mehreren Personen spielt, muss man sich
+diese aufschreiben. Wenn der Knopf
+„Nochmal“ gedrückt wird, startet eine neue
+Runde und der nächste Spieler darf sein
+Glück versuchen.
+ROBO Pro programmiert
+Im Hauptprogramm zählt ROBO Pro von 1
+bis 6 und beginnt immer wieder von vorne.
+Durch den Knopfdruck wird gestoppt, die
+aktuelle Zahl wird in die Würfelpunkte umgerechnet und die entsprechenden Anzeigeelemente (= Lampen) werden angesteuert. ROBO Pro erzeugt also keine richtigen
+
+Zufallszahlen. Der Zufall entsteht dadurch,
+dass jeder Bediener eine andere Zeitspanne
+benötigt, um den Knopf zu drücken. Zusätzlich braucht das Programm unterschiedliche
+Zeit, um die Ergebnisse umzusetzen. Es entstehen also Pseudo-Zufallszahlen.
+Im Unterprogramm (UP) „Zuordnen“ wird
+die erzeugte Zahl der Hunderter-, Zehneroder Einerstelle zugewiesen. Das UP
+„Punkte addieren“ ist für die Errechnung
+der Punktzahl zuständig. Das UP „Nein“ reklamiert, falls jemand eine Stelle belegen
+will, an der sich bereits eine Zahl befindet.
+
+
+
+
+
+Das Programm macht Spaß, da das Würfelspiel eine Mischung aus Glück und der richtigen Kombinationsgabe ist. Und vor allem
+das lästige Addieren der Zahlen entfällt.
+Viel Spaß dabei.
+
+ROBO Pro excelt
+Bei der Berechnung des Zinseszinseffekts
+simuliert ROBO Pro ganz gewaltig, denn
+ihr werdet aktuell keine Bank finden, die
+euch 3 % Zinsen anbietet. Dank der Niedrigzinspolitik der EZB bekommt ihr aktuell
+maximal 1,3 % für zehn Jahre angeboten.
+Vor sechs Jahren wäre das noch möglich gewesen. Hoffen wir also auf steigende Zinsen, damit ROBO Pro etwas zu rechnen hat.
+ROBO Pro rechnet
+Bisher haben wir uns mit Ganzzahlen begnügt. Zinsrechnung benötigt aber auch Dezimalzahlen. Ich brauchte längere Zeit um
+damit umzugehen. Dank der ROBO ProHilfe gelang es mir aber. Damit exakt gerechnet werden kann, muss die Gleitkommaarithmetik benutzt werden. Bei allen Variablen, Zahlen und Operatoren muss ein
+Häkchen bei „Gleitkomma 48 Bit“ gesetzt
+werden. Man erkennt dies daran, dass das
+entsprechende Objekt stärker umrandet
+wird.
+
+und steigern dadurch den jährlichen Zinsertrag. Dieser Zinses-Zins-Effekt ist umso
+größer, je länger das Kapital bei der Bank
+angelegt ist. Er steigert sich noch mehr,
+wenn der Zinsfuss (= die jährliche Verzinsung) hoch ist.
+Im Programm werden beide Varianten
+übereinander angezeigt. Bei der Erbschaft
+von Onkel Klaus werden mit einfachem
+Zins am Ende der zehn Jahre 13.000 € ausbezahlt; in der Zinseszins-Variante sind es
+13.439 € – ein gutes Stück mehr. Denn es
+gilt:
+10000 ∙ (1 + 0,03)10 = 13439
+ROBO Pro programmiert
+Hier laufen mehrere Programme parallel.
+Im Hauptprogramm werden die Einstellungen von Kapital, Verzinsung und Zeit vorgenommen. Die Berechnung und Umsetzung der Anzeige der einfachen Verzinsung
+erfolgt hier.
+Das UP Zinseszins erledigt die Berechnung
+und Anzeige der Zinseszinsen in Tabellenform über 20 Jahre. Die übliche Textanzeige ist nicht nutzbar. Es wird das Textelement benötigt, da es auf Gleitkomma 48 Bit
+eingestellt werden kann.
+
+Aus meiner alten Wirtschaftsgymnasiumszeit fand ich noch ein Buch über Finanzmathematik. Sicherheitshalber überprüfte ich
+die Berechnungen von ROBO Pro mit Excel
+und sie stimmten bei der Berechnung über
+zehn Jahre bis auf den letzten Cent überein.
+Ein
+Internetrechner
+(www.zinsenberechnen.de) kam bei zehn und 20 Jahren
+zum gleichen Ergebnis wie ROBO Pro. Das
+Programm rechnet also sehr genau.
+
+Im linken Bereich werden für jedes Jahr die
+aktuellen Zinsen (Zins1j, Zins2j, ...,
+Zins20j) errechnet und dem Kapital des
+Vorjahres zugeschlagen und dadurch das
+Endkapital des aktuellen Jahres gebildet
+(Kap1j, Kap2j, ..., Kap20j). Das Kapital am
+Anfang des Jahres, Zinsen und Kapital (und
+Zinsen und Zinseszinsen) am Ende des Jahres werden über das Textelement erfasst,
+formatiert und im Bedienfeld als Tabelle
+angezeigt.
+
+Der Zinses-Zins-Effekt
+
+Bedienung
+
+Bei der Kapitalanlage steht man vor der
+Wahl, sich die Zinsen jährlich auszahlen zu
+lassen oder sie dem Anfangskapital zuzuschlagen. Wenn die Zinsen dem Kapital
+hinzugefügt werden, werden sie mitverzinst
+
+Die Einstellung der Parameter und die Berechnung laufen gleichzeitig ab. Dies bedingt, dass die Einstellung der Parameter etwas verzögert reagiert. Mit dem Regler
+kann das Kapital in 1000er Schritten eingestellt werden. Mit dem „+100“ und „-100“
+
+
+Knopf erfolgt die Feineinstellung der 100er
+Schritte. Maximal kann das Kapital auf
+100.000 € eingestellt werden.
+Verzinsung und Zeit in Jahren werden nur
+durch Knopf-Einstellungen vorgenommen.
+Auch wenn bei der Zeit nur zehn Jahre eingestellt werden, zeigt die untere Tabelle die
+Werte bis zum 20. Jahr. Nur bei der Berechnung der Normalzinsen im oberen Bereich
+wird die Zeit berücksichtigt.
+Nach dem Start muss in das Bedienfeld gewechselt werden. Das Bedienfeld muss man
+so weit verkleinern, dass die untere Tabelle
+bis zum 20. Jahr sichtbar ist.
+Anwendungen
+Jeder sollte sich intensiver mit finanziellen
+Fragen auseinander setzen. Vermögensbildung ist planbar. Ein Weg dazu ist Sparen
+und Anlegen. Wer ein Auto für 20.000 €
+kauft statt für 40.000 € schont nicht nur die
+Umwelt (wenn das Fahrzeug weniger Sprit
+verbraucht), sondern legt einen Grundstein
+für sein Vermögen.
+
+Computing
+
+Ihr habt eine Versicherung mit Einmalzahlung, die nun fällig wird? Mit dem Programm könnt ihr eure Nettoverzinsung berechnen. Ihr legt euer Geld als Festgeld an?
+Nun könnt ihr die Berechnung eurer Bank
+kontrollieren.
+Viel Spaß und viel Erfolg bei den ersten
+Schritten zum Millionär.
+Die ROBO Pro-Programme stehen als Anlage zu diesem Beitrag zum Download auf
+der ft:pedia-Seite bereit.
+
+ROBO Pro sucht Saarländer
+Am Schluss noch ein persönliches Anliegen: Falls es im Saarland noch mehr Fischertechniker gibt, würde ich mich über
+eine Kontaktaufnahme zum Erfahrungsaustausch freuen. Mein Schwerpunkt ist der
+Robotics TXT Controller mit der ROBO
+Pro-Software, meine E-Mail-Adresse lautet
+kumexx@gmx.de.
+Und natürlich stehe ich auch bei Rückfragen oder Anregungen gerne zur Verfügung.
+
+
+

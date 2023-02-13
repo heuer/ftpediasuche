@@ -1,0 +1,568 @@
+
+
+Messtechnik
+
+Beschleunigung auf der schiefen Ebene
+David Holtz
+Seit 2011 flitzen die Stahlkugeln auf den grünen Flexschienen durch Kugelbahnparcours. Der
+eine oder andere hat sich dabei sicherlich schon einmal gefragt, mit welcher Geschwindigkeit
+die Kugeln unterwegs sind oder wie stark sie beschleunigen. Ich habe einen Versuchsaufbau
+aus Fischertechnik entworfen, mit dem man die Beschleunigung auf der schiefen Ebene
+ermitteln kann.
+
+Der Versuchsaufbau
+An den Versuchsaufbau werden folgende
+Anforderungen gestellt:
+• Flexschienen auf einer schiefen Ebene,
+damit die Beschleunigung konstant ist
+
+• Frei einstellbarer Neigungswinkel der
+schiefen Ebene
+• Starten der Kugel auf Knopfdruck
+Der Versuchsaufbau (Abb. 1) setzt diese
+Anforderungen um. Die schiefe Ebene
+
+
+
+Messtechnik
+
+besteht aus drei Grundplatten 120x60, auf
+denen zwei Flexschienen befestigt sind.
+Dieser Aufbau ist an einem Drehkranz
+montiert, sodass man den Neigungswinkel
+α zwischen 1° und 45° einstellen kann. Dies
+funktioniert, indem man den Neigungswinkel am Potentiometer (A) vorgibt und
+ein Motor den Drehkranz über einen SollIst-Abgleich in die gewünschte Position
+bewegt. Die Genauigkeit beträgt hierbei 1°.
+Der Elektromagnet (B) hält die Kugel, bis
+der Taster (C) betätigt wird. Beim Hinabrollen auf der schiefen Ebene unterbricht
+die Kugel die Lichtschranken (D), die
+jeweils aus einem Fototransistor und einer
+roten Punktlaserdiode bestehen.
+
+Ein bisschen Physik…
+Um zu verstehen, von welchen physikalischen Gesetzmäßigkeiten der Versuchsaufbau Gebrauch macht, sollte man einige
+Größen und deren Zusammenhänge
+kennen.
+
+Während im Alltag die Einheit 1
+für die
+Geschwindigkeit am gebräuchlichsten ist,
+wird die Geschwindigkeit in der Physik
+meistens in der Einheit 1 angegeben.
+Beschleunigung
+Die Beschleunigung
+beschreibt die
+momentane Änderungsrate der Geschwindigkeit eines Körpers pro Zeit. Somit ist die
+Einheit der Beschleunigung
+[ ]=1
+
+=1
+
+( )=
+
+∙ +
+
+²
+Bei konstanter Beschleunigung verändert
+sich die Momentangeschwindigkeit proportional zur Zeit mit dem Proportionalitätsfaktor a:
+Schiefe Ebene
+
+Geschwindigkeit
+
+Unter einer schiefen Ebene versteht man
+eine ebene Fläche, die um den Neigungswinkel α geneigt ist [1].
+
+Spricht man von der Geschwindigkeit, muss
+man zunächst die Durchschnittsgeschwindigkeit von der Momentangeschwindigkeit
+unterscheiden.
+
+Auf Körper, die sich auf der schiefen Ebene
+befinden, wirkt die sogenannte Hangabtriebskraft
+. Diese Kraft ist durch die
+Gewichtskraft
+bedingt.
+
+Die Durchschnittsgeschwindigkeit ̅ (oder
+mathematisch ausgedrückt: mittlere Änderungsrate) beschreibt, welchen Weg ein
+Körper im Zeitraum zurückgelegt hat:
+
+Energie
+
+∆
+∆
+Die Momentangeschwindigkeit
+(oder
+mathematisch ausgedrückt: momentane
+Änderungsrate) erhält man, wenn man in
+der obenstehenden Gleichung die Zeit null
+annähert. Der Quotient aus dem Weg und
+der nach null angenäherten Zeit beschreibt
+die Geschwindigkeit zum Zeitpunkt t.
+̅=
+
+∆
+∆ → ∆
+
+= lim
+
+Wenn Kräfte wirken, ändert sich das
+Energieniveau eines Körpers. Im Fall der
+schiefen Ebene wird die potenzielle Energie
+der Kugel in kinetische Energie umgewandelt, wodurch die Kugel die schiefe Ebene
+hinabrollt [2]. Allerdings entfällt ein Teil
+der potentiellen Energie auch auf das Rotieren der Kugel. Bei der sogenannten Rotationsenergie handelt es sich ebenfalls um
+kinetische Energie [3].
+Die Rotationsenergie lässt sich aus dem
+Trägheitsmoment der Kugel und ihrer
+Winkelgeschwindigkeit berechnen:
+= 0,5 ∙ J ∙
+
+
+
+
+
+Das Trägheitsmoment1 der fischertechnikKugel ist so gering, dass die Rotationsenergie bei den nachfolgenden Berechnungen vernachlässigt werden kann. Wäre
+die Kugel größer und schwerer oder gar ein
+hohler Zylinder, müsste man die Rotationsenergie berücksichtigen.
+Beschleunigung auf der schiefen
+Ebene
+Die Berechnung der Beschleunigung beruht
+auf dem Zusammenhang zwischen Gewichtskraft und Hangabtriebskraft. Man
+kann die Hangabtriebskraft über die
+Formel
+= sin
+
+∙
+
+∙
+
+ist die Erdbeschleunigung, die in Europa
+etwa 9,81 ² beträgt. Mit dieser Formel kann
+man die Beschleunigung eines Körpers auf
+der schiefen Ebene berechnen (vgl. Tab. 1).
+Neigungswinkel α
+
+Funktionsprinzip
+Die im Absatz Beschleunigung aufgestellte
+Formel ( ) = ∙ + würde genügen,
+um die Beschleunigung zu berechnen, wenn
+man sie nach
+umstellt. In der Praxis
+gestaltet sich dieser Ansatz allerdings als
+schwer umsetzbar, da man die relativ hohe
+Momentangeschwindigkeit v(t) ziemlich
+genau messen müsste, um ein sinnvolles
+Ergebnis zu erhalten.
+Optimierung
+
+berechnen [4]. Da in beiden Kräften die
+Masse des Körpers beziehungsweise die der
+Kugel enthalten ist ( = ∙ ) , kann man
+sie aus der Gleichung herauskürzen:
+= sin
+
+Körper durch Reibung gehemmt, weshalb
+die in Tab. 1 berechneten Beschleunigungen lediglich theoretisch maximal erreichbare Werte sind.
+
+1°
+
+Beschleunigung
+in ²
+
+10°
+
+1,70
+
+30°
+
+4,91
+
+45°
+
+6,94
+
+60°
+
+8,50
+
+0,17
+
+Die Bewegungsgleichung
+∙ ∙ + ∙
+beschreibt den zurückgelegten Weg
+während der Zeit mit einer konstanten
+Beschleunigung unter Berücksichtigung
+einer Anfangsgeschwindigkeit .
+( )=
+
+Um die Beschleunigung zu berechnen stellt
+man die oben genannte Formel nach um:
+=
+
+−2 ∙
+
++
+
+2∙
+
+Folgende Vorteile ergeben sich, wenn man
+diese Formel anwendet:
+• Die Zeit ist relativ genau mit einfachen
+Mitteln bestimmbar.
+
+Tab. 1: Beschleunigung
+auf der schiefen Ebene
+
+• Der zurückgelegte Weg ist eine konstante Größe, die man lediglich einmal
+ausmessen muss.
+
+Die Beschleunigung eines Körpers auf der
+schiefen Ebene ist konstant und unabhängig
+von dessen Masse.
+
+• Die Anfangsgeschwindigkeit
+ist vergleichsweise gering und somit einfacher
+messbar.
+
+Jetzt, wo man die Beschleunigung berechnen kann, scheint ein Versuchsaufbau doch
+überflüssig zu sein. Allerdings wird jeder
+
+
+= ∙
+
+∙
+
+≈ 1,25 ∙ 10
+
+kg m²
+
+Die folgende Abbildung 2 veranschaulicht
+die zu messenden Größen.
+
+
+
+Messtechnik
+
+∆
+∆
+Dabei ist der zurückgelegte Weg ∆ ein
+konstanter Wert. Er entspricht dem Durchmesser der Kugel2 (11 mm) unter der
+Voraussetzung, dass der Lichtstrahl an der
+breitesten Stelle auf die Kugel trifft. Die
+Verdunklungszeit wird für ∆ in die
+Gleichung eingesetzt.
+̅=
+
+
+1. Der Weg zwischen den Lichtschranken
+(konstant)
+2. Die Zeit, die die Kugel von Lichtschranke 1 zu Lichtschranke 2 benötigt
+3. Die Geschwindigkeit der Kugel an der
+ersten Lichtschranke
+Man könnte davon ausgehen, dass die
+Geschwindigkeit der Kugel beim Losrollen
+0 m/s beträgt.
+Erfahrungsgemäß wird die Kugel beim
+Losrollen durch Reibung gehemmt. Um
+daraus resultierende Messfehler zu vermeiden, beginnt die eigentliche Messung
+erst kurz nach dem Start der Kugel.
+Nachdem der Elektromagnet die Kugel
+losgelassen hat, rollt diese ein Stück, bevor
+sie die erste Lichtschranke unterbricht. Dort
+wird die Momentangeschwindigkeit gemessen. Anschließend wird die Zeit gemessen,
+die die Kugel benötigt, um den Weg
+zurückzulegen.
+Bei diesem Ansatz ergibt sich der Nachteil,
+dass man die Momentangeschwindigkeit
+kurz nach dem Losrollen ermitteln muss.
+Momentangeschwindigkeit
+bestimmen
+Der Messaufbau misst dazu die Verdunklungszeit an der ersten Lichtschranke
+(Abb. 3). Mit der im Absatz Geschwindigkeit aufgestellten Gleichung kann man die
+Momentangeschwindigkeit berechnen:
+
+
+Die Stahlkugeln aus den Dynamic Baukästen von
+Fischertechnik haben laut Einzelteilpreisliste
+einen Durchmesser von 12,5 mm.
+
+
+Mathematisch korrekt ausgedrückt berechnet man mit dieser Gleichung die Durchschnittsgeschwindigkeit der Kugel in einem
+sehr kleinen Intervall. In der Praxis ist das
+Intervall aufgrund der geringen Verdunklungszeit ausreichen klein, um von einer
+Momentangeschwindigkeit sprechen zu
+können.
+Mit den ermittelten Werten kann die
+Beschleunigung der Kugel nach der im
+Absatz Optimierung beschriebenen Gleichung berechnet werden. Man erhält ein
+ziemlich genaues Ergebnis, da alle zu
+bestimmenden Größen entweder konstant
+sind oder relativ präzise messbar.
+Zudem kann man ausgehend von der
+Beschleunigung, der Zeit und der Anfangsgeschwindigkeit die Momentangeschwindigkeit der Kugel an der zweiten Lichtschranke berechnen:
+( )=
+
+∙ +
+
+Beim Durchqueren der Lichtschranke wird der
+Lichtstrahl über eine Länge von 11 mm der
+Kugel unterbrochen.
+
+
+
+
+Die Berechnungen führt der Mikrocontroller durch. Anschließend gibt er die
+Beschleunigung und die Endgeschwindigkeit am Display aus.
+
+Implementierung
+Zunächst habe ich die Berechnungen nur in
+RoboPro implementiert. Allerdings fällt bei
+den berechneten Werten auf, dass diese
+auffällig stark von den theoretischen
+Werten abweichen. Aus diesem Grund habe
+ich zusätzlich zu dem RoboPro-Programm
+ein Arduino-Programm geschrieben.
+Das RoboPro-Programm
+Der Vorteil bei RoboPro und dem TX(T)
+Controller liegt in der einfachen Bedienbarkeit. Man kann alle benötigten elektronischen Komponenten einfach an den
+TX(T) Controller anschließen und ein Programm ist schnell geschrieben. Der entscheidende Nachteil liegt in der Genauigkeit der Zeitbestimmung, die dafür verantwortlich ist, dass die gemessenen Werte
+nicht den realistischen Bedingungen entsprechen.
+
+Neigungswinkel (°)
+
+TX
+(m/s²)
+
+Arduino
+(m/s²)
+
+Theorie
+(m/s²)
+
+
+0,33
+
+0,69
+
+0,86
+
+
+1,01
+
+1,42
+
+1,70
+
+
+1,68
+
+1,98
+
+2,54
+
+
+2,24
+
+2,87
+
+3,36
+
+
+3,01
+
+3,66
+
+4,15
+
+
+4,13
+
+4,56
+
+4,91
+
+Tabelle 2: Vergleich gemessene / errechnete
+Beschleunigung auf Flexschinen
+
+Letztlich ist die Wahl der Plattform eine
+Frage der Genauigkeit und des Komforts.
+
+Reibung auf Flexschienen
+Die gemessene Beschleunigung kann man
+nutzen, um die Reibung der Kugel beim
+Rollen zu berechnen. Als Vergleichspunkt
+zur Flexschiene dient eine Schienenkonstruktion bestehend aus zwei parallelen
+Edelstahlstangen.
+
+Das Arduino-Programm
+Der Arduino UNO bietet eine genauere
+Möglichkeit, die Zeit zu messen. Dies
+bewirkt, dass die daraus errechnete Beschleunigung größer und in diesem Fall
+näher am theoretischen Wert liegt (vgl. Tab.
+2). Für den Arduino UNO wird eine Cbasierte Programmieroberfläche bereitgestellt, mit der man komfortabel programmieren kann. Nutzt man kein separates
+Display, kann man sich die errechneten
+Werte am PC anzeigen lassen.
+Allerdings kann man die Sensoren nicht so
+einfach an den Arduino anschließen wie an
+den TX(T) Controller. Man benötigt für alle
+digitalen Sensoren einen Spannungsteiler
+und für Motoren einen Motortreiberchip
+beziehungsweise ein Motor Shield.
+
+
+Abbildung 4: Flexschiene und Edelstahlschiene
+
+Reibungskraft
+Abbildung 5 veranschaulicht die Wirkung
+der Hangabtriebskraft und die der Reibungskraft. Die Reibungskraft hemmt die
+Kugel in ihrer Bewegung, da sie der Hangabtriebskraft entgegengerichtet ist.
+Die Reibungskraft
+ist das Produkt aus
+der Normalkraft und des Rollwiderstandskoeffizienten
+. Beschreibt man sie in
+Abhängigkeit der Gewichtskraft und des
+
+
+Messtechnik
+
+Neigungswinkels der schiefen Ebene, erhält
+man folgende Formel [3]:
+=
+
+∙
+
+∙ cos
+
+Verwendung
+Tabelle 3 zeigt Rollwiderstandskoeffizienten für die Schienenkonstruktion und die
+Flexschienen. Im Idealfall ist der Rollwiderstandskoeffizient unabhängig vom
+Neigungswinkel. Allerdings ist dies aufgrund von Messtoleranzen nicht immer der
+Fall.
+
+
+Die beschleunigende Kraft (beziehungsweise die gemessene Beschleunigung) ist
+gleich der Differenz zwischen der wirkenden Hangabtriebskraft (ohne Reibung) und
+der Reibungskraft, die der Hangabtriebskraft entgegengerichtet ist:
+=
+
+.) −
+
+(
+
+Da die Masse der Kugel in allen Kräften
+enthalten ( = ∙ ) ist, kürzt sie sich
+raus:
+=
+
+∙ sin
+
+−
+
+∙
+
+∙ cos
+
+Für die Erdbeschleunigung wird der Wert
+= 9,81 ² verwendet. Die Beschleunigung
+ist bekannt, da man sie mit dem
+Versuchsaufbau messen kann. Mit diesem
+Wissen kann man den Rollwiderstandskoeffizienten berechnen, indem man die
+Formel nach umstellt:
+sin
+=
+cos
+
+−
+
+auf unterschiedlichen Schienen zu vergleichen.
+
+∙ cos
+
+Der Rollwiderstandskoeffizient hat keine
+Einheit. Da er indirekt über die Rollreibung
+bestimmt wurde, enthält er ungewollt auch
+eine Luftwiderstandskomponente und unvermeidbar Messtoleranzen. Da die Rotationsenergie in den Berechnungen vernachlässigt wurde, spiegelt der errechnete Wert
+nicht die reale Größenordnung wieder,
+sondern dient vielmehr dazu, die Reibung
+
+Neigungswinkel (°)
+
+Edelstahlschiene
+
+Flexschiene
+
+
+0,037
+
+0,059
+
+
+0,032
+
+0,053
+
+
+0,030
+
+0,055
+
+
+0,032
+
+0,041
+
+Tabelle 3: Errechnete
+Rollwiderstandskoeffizienten
+
+Die Tabelle zeigt, dass der Rollwiderstandskoeffizient und damit die Reibung auf den
+Flexschienen deutlich höher ist als auf den
+Edelstahlstangen. Dies liegt an der Mäanderstruktur der Flexschiene, die aufgrund
+ihrer kleinen Rillen für die höhere Reibung
+im Vergleich zur glatten Edelstahloberfläche verantwortlich ist. Der Rollwiderstandskoeffizient eignet sich somit gut zum
+Vergleichen der Reibung einer Kugel auf
+verschiedenen Schienen.
+
+Ausblick
+In der Praxis sind viele Streckenabschnitte
+leider keine schiefen Ebenen. In diesen
+Fällen wäre die Beschleunigung der Kugel
+nicht mehr konstant, sodass man die
+Bewegungsgleichungen nicht nutzen kann.
+Nichtsdestotrotz gibt der Versuchsaufbau
+einen Einblick in das große Themengebiet
+der Mechanik. Man kann damit die
+Beschleunigung bestimmen und relativ
+genau die Endgeschwindigkeit der Kugel
+berechnen, ohne sehr kleine Zeiten messen
+zu müssen. Steigt man tiefer in die Materie
+ein, kann man sogar die Reibung auf
+unterschiedlichen Schienen vergleichen.
+
+
+
+Quellen
+
+[3]
+
+Leifi Physik: Drehbewegungen.
+
+[1]
+
+Wikipedia: Schiefe Ebene.
+
+[4]
+
+Wikipedia: Hangabtriebskraft.
+
+[2]
+
+Leifi Physik: Energieeinheiten.
+
+[5]
+
+Wikipedia: Rollwiderstand.
+
+
+
+

@@ -1,0 +1,537 @@
+
+
+Elektromechanik
+
+Wolf, Schaf und Kohlkopf
+Stefan Falk
+Ein Bauer muss einen Wolf, ein Schaf und einen Kohlkopf mit seinem Floß sicher von einer
+Seite des Flusses auf die andere bringen. Er kann aber immer nur eines der drei auf dem Floß
+mitnehmen, und muss aufpassen, dass der allein zurückgelassene Wolf nicht das Schaf frisst
+und das Schaf nicht den Kohlkopf. Hätte der Bauer nur ein paar fischertechnik-Teile, könnte er
+seine Strategie erproben…
+Zum Glück verfügt die geneigte Leserschaft
+dieser Zeitschrift typischerweise über
+fischertechnik. Also wollen wir dem Bauern
+mit einem Modell helfen, mit dem er
+herausbekommen kann, was er in welcher
+Reihenfolge transportieren muss, damit
+alles klappt. Zwei Probleme gilt es für den
+Bauern zu vermeiden:
+1. Wenn er den Wolf und das Schaf alleine
+an einem der beiden Ufer zurück lässt,
+ohne dass er dabei ist, frisst der Wolf das
+Schaf.
+
+2. Wenn er das Schaf und den Kohlkopf an
+einem der beiden Ufer alleine zurücklässt, frisst das Schaf den Kohlkopf.
+Etwas formaler lässt sich das in einer
+Tabelle beschreiben, die für alle denkbaren
+Uferseiten von Wolf, Schaf, Kohlkopf und
+Bauer auflistet, wann welches Problem auftritt. Jeder der vier kann sich am diesseitigen oder jenseitigen Ufer befinden, woraus
+sich die folgenden 16 Möglichkeiten ergeben:
+
+Wolf
+
+Schaf
+
+Kohlkopf
+
+Bauer
+
+diesseits
+diesseits
+diesseits
+diesseits
+diesseits
+diesseits
+diesseits
+diesseits
+jenseits
+jenseits
+jenseits
+jenseits
+jenseits
+jenseits
+jenseits
+jenseits
+
+diesseits
+diesseits
+diesseits
+diesseits
+jenseits
+jenseits
+jenseits
+jenseits
+diesseits
+diesseits
+diesseits
+diesseits
+jenseits
+jenseits
+jenseits
+jenseits
+
+diesseits
+diesseits
+jenseits
+jenseits
+diesseits
+diesseits
+jenseits
+jenseits
+diesseits
+diesseits
+jenseits
+jenseits
+diesseits
+diesseits
+jenseits
+jenseits
+
+diesseits
+jenseits
+diesseits
+jenseits
+diesseits
+jenseits
+diesseits
+jenseits
+diesseits
+jenseits
+diesseits
+jenseits
+diesseits
+jenseits
+diesseits
+jenseits
+
+Wolf frisst
+Schaf
+nein
+ja!
+nein
+ja!
+nein
+nein
+nein
+nein
+nein
+nein
+nein
+nein
+ja!
+nein
+ja!
+nein
+
+Tabelle 1: Wann tritt welches Problem auf?
+
+Schaf frisst
+Kohlkopf
+nein
+ja!
+nein
+nein
+nein
+nein
+ja!
+nein
+nein
+ja!
+nein
+nein
+nein
+nein
+ja!
+nein
+
+Wir stellen Folgendes fest:
+1. Es gibt vier Kombinationen, bei denen
+der Wolf das Schaf frisst, weil sich Wolf
+und Schaf auf einer, der Bauer aber auf
+der anderen Seite des Ufers befinden.
+2. Ebenso gibt es vier Kombinationen, bei
+denen das Schaf den Kohlkopf frisst,
+weil sich Schaf und Kohlkopf auf einer,
+der Bauer aber auf der anderen Seite
+befindet.
+3. Bei zwei Kombinationen treten beide
+Probleme auf: Nämlich dann, wenn
+Wolf, Schaf und Kohlkopf alle drei auf
+einer Seite des Ufers sind, der Bauer aber
+auf der andern, und er somit wieder nicht
+aufpassen kann. Wer dann schneller ist
+im Fressen, wollen wir dahingestellt sein
+lassen, und einfach annehmen, das Schaf
+frisst den Kohlkopf und wird anschließend vom Wolf verspeist. Ein Problem
+hat der Bauer jedenfalls.
+
+Wann frisst der Wolf das
+Schaf?
+Greifen wir uns aus Tabelle 1 einmal nur
+diejenigen Kombinationen heraus, bei
+denen der Wolf das Schaf frisst. Das sind
+folgende:
+Wolf
+Schaf Kohlkopf Bauer
+diesseits diesseits diesseits jenseits
+diesseits diesseits jenseits jenseits
+jenseits jenseits diesseits diesseits
+jenseits jenseits jenseits diesseits
+Tabelle 2: Der Wolf frisst das Schaf
+
+Wenn wir genau hinschauen, können wir
+diese vier Kombinationen von Wolf, Schaf,
+Kohlkopf und Bauern auf nur zwei Kombinationen von Wolf, Schaf und Bauern reduzieren. Dafür, ob der Wolf das Schaf frisst,
+ist es nämlich völlig egal, an welchem Ufer
+sich der Kohlkopf befindet. Wir können
+also die ersten beiden und die letzten beiden
+Zeilen vereinfachend zu folgenden Kombinationen zusammenfassen:
+
+Elektromechanik
+
+Wolf
+Schaf Bauer
+diesseits diesseits jenseits
+jenseits jenseits diesseits
+Tabelle 3: Der Wolf frisst das Schaf vereinfacht
+
+Wann frisst das Schaf den
+Kohlkopf?
+Genau dieselbe Überlegung können wir
+auch für die Kombinationen anstellen, in
+denen das Schaf sich über den Kohlkopf
+hermachen kann. Aus den vier Kombinationen aus Tabelle 1…
+Wolf
+Schaf Kohlkopf Bauer
+diesseits diesseits diesseits jenseits
+diesseits jenseits jenseits diesseits
+jenseits diesseits diesseits jenseits
+jenseits jenseits jenseits diesseits
+Tabelle 4: Das Schaf frisst den Kohlkopf
+
+… können wir wieder nur zwei machen,
+weil das Schaf den Kohlkopf vertilgen
+kann, wenn sich nur beide ohne Bauern auf
+derselben Uferseite befinden – egal, wo der
+Wolf gerade sitzt (wir vereinbarten ja, dass
+das auch dann der Fall ist, wenn alle drei auf
+derselben Seite sitzen):
+Schaf Kohlkopf Bauer
+diesseits diesseits jenseits
+jenseits jenseits diesseits
+Tabelle 4: Das Schaf frisst den Kohlkopf vereinfacht
+
+Diesmal sind es die erste und dritte sowie
+die zweite und vierte Zeile, die wir zusammenfassen können. Überzeugt euch selbst:
+Egal, wo der Wolf sitzt, wird das Schaf den
+Kohl fressen.
+
+Ran an fischertechnik!
+Nachdem wir das Problem durch ein wenig
+Überlegung soweit wie möglich vereinfacht
+haben können wir uns an die Umsetzung mit
+unseren Bauteilen machen. In unserem Modell werden die Uferseiten von Wolf, Schaf,
+Kohlkopf und Bauern durch vier lange
+
+
+
+Stangen realisiert, die um 15 mm verschoben werden können. Ziehen wir sie zu uns,
+gilt das als „diesseitiges Ufer“; drücken wir
+sie nach hinten, soll das der Zustand „jenseitiges Ufer“ sein.
+
+Wolf und Schaf befinden sich am diesseitigen, der Bauer jedoch (mit dem Kohlkopf)
+am jenseitigen Ufer. Nichts hält also den
+Wolf davon ab, sich über das arme Schaf
+herzumachen – angezeigt durch die leuchtende rote Lampe.
+
+frisst gerade den Kohlkopf
+
+Die „Griffe“ zum Verschieben der Stangen
+repräsentieren die vier Objekte. In Abb. 1
+sieht man von links nach rechts die grobe
+Zahnstange (den Wolf mit seinen Reißzähnen), die feine Zahnstange (das Schaf mit
+seinen feinen Zähnen), einen Reedkontakthalter (den Kohlkopf) und einen unbebauten Baustein 30 (den Bauern).
+Man sieht den Wolf (ganz links) und den
+Bauern (ganz rechts) nach vorne gezogen –
+also am diesseitigen Ufer befindlich. Schaf
+und Kohlkopf befinden sich am jenseitigen
+Ufer (deren Stangen sind nach hinten geschoben). Das Schaf kann also, da der Bauer
+nicht aufpassen kann, genüsslich den Kohlkopf verspeisen. Das wird durch die leuchtende gelbe Kontrolllampe angezeigt.
+
+Bauer sich am jenseitigen Ufer befindet
+
+
+
+Ganz übel ist’s schließlich in Abb. 3: Der
+Bauer ist ganz alleine am jenseitigen Ufer,
+und so frisst das Schaf den Kohlkopf, nur
+um anschließend selber vom Wolf gerissen
+zu werden. In diesem Zustand leuchten die
+rote und die gelbe Lampe gleichzeitig.
+
+Die Kodierung der Stellungen
+Um die Stellungen und die ggf. auftretenden Probleme (Wolf frisst Schaf und/oder
+Schaf frisst Kohlkopf) darzustellen, verwendet unser Modell simple S-Riegel, die
+an „strategischen“ Stellen der verschiebbaren Stangen eingesetzt werden (Abb. 4).
+Dahinter steckt folgender Gedanke: Wir
+haben zwei Kombinationen von Stellungen,
+bei denen das Schaf den Kohlkopf isst, und
+auch zwei, bei denen der Wolf sich am
+Schaf gütlich tut. Das ergibt zusammen vier
+abzutastende Stellungen, in denen eine der
+beiden Warnlampen aufleuchten muss.
+Unsere S-Riegel sind so platziert, dass eine
+Lampe immer dann aufzuleuchten hat,
+wenn in einer Reihe kein Riegel steht. Wir
+denken uns also vier Abtast-Einheiten quer
+zu den Statikträgern mit ihren Riegeln.
+
+
+Elektromechanik
+
+müssen das Aufleuchten der roten Kontrolllampe verhindern.
+3. Der Kohlkopf wird aktuell auch nicht
+vom Schaf verspeist, denn das wird
+durch den Bauern (mit seinem S-Riegel
+in Reihe 3) verhindert.
+4. Reihe 4 schließlich steht für das Verspeisen des Kohls durch das Schaf, wenn
+sich Schaf und Kohl am jenseitigen Ufer
+befinden. In der Abb. 5 ist das eben
+schlicht nicht der Fall.
+Was passiert nun, wenn wir z. B. Schaf und
+Kohlkopf beide zum anderen Ufer bringen,
+den Bauern aber hier lassen? Abb. 6 zeigt
+diesen Zustand, in dem die beiden mittleren
+Stangen nach rechts geschoben sind:
+
+Bestückung mit S-Riegeln
+
+der vierten Reihe kein S-Riegel mehr steht
+
+
+In Abb. 5 ist die Stellung mit allen Beteiligten am diesseitigen Ufer dargestellt (hier:
+alle Stangen nach links geschoben). Man
+sieht (von links nach rechts):
+1. Wolf und Schaf haben keinen S-Riegel
+in Reihe 1; der Wolf könnte also das
+Schaf fressen. Das wird aber durch den
+auf demselben Ufer stehenden Bauern
+verhindert – der Riegel unten steht dafür.
+2. Das Fressen des Schafs durch den Wolf
+am anderen Ufer tritt hier nicht auf: Die
+Riegel von Wolf und Schaf in Reihe 2
+
+Wie man sieht, treten die ersten drei
+Probleme nicht auf – in den ersten drei Abtastreihen befindet sich jeweils mindestens
+ein S-Riegel. Aber Reihe 4 ist jetzt „blank“:
+Kein S-Riegel ist da, der verhindern soll,
+dass die gelbe Kontrollleuchte aufleuchtet.
+Man sieht hier übrigens gut, dass es für
+dieses Problem „Schaf und Kohl befinden
+sich ohne Bauern am jenseitigen Ufer“
+völlig egal ist, wo der Wolf gerade steht: In
+keiner der beiden Stellungen der in Abb. 6
+oberen Stange wäre da ein S-Riegel, der das
+Problem verhindern könnte.
+Die anderen vier problematischen Stellungen funktionieren mit dieser Bestückung
+der Statikträger mit Riegeln genauso. Es
+bleibt uns „nur“ noch, die Abtasteinheiten
+zu bauen.
+
+
+
+Wenn wir zu viele Taster im
+Bestand hätten...
+
+Seite des Modells größer.
+
+… könnten wir ja einfach an jede Position,
+an der ein S-Riegel zu stehen kommt, einen
+Taster einbauen. Wir benötigen dann so
+viele Taster, wie es Riegel gibt. Die Taster
+einer Reihe würden wir alle als Öffner [1]
+verwenden und in Serie schalten [2], und je
+zwei Reihen parallel schalten, um die jeweilige Lampe zu steuern (das große Fressen
+kann ja jeweils an zwei Ufern stattfinden,
+solange sich nur der Bauer am anderen befindet). Die Schaltung könnte dann so aussehen:
+DC
+
+
+
+Die lange Stromversorgungs-Achse auf der
+rechten Modellseite steckt in zwei BS7,5,
+die auf einer Kombination von BS15 und
+BS5 angebracht sind:
+
+Na prima. Da brauchen wir ja nur 12
+Taster… Wer von uns hat so viele?
+
+Eine Prise Mechanik dazu…
+… und schon schmecken Schaf und Kohlkopf nochmal so gut. Endlich kommen wir
+zum richtigen fischertechnik-Modell: Wir
+verwenden überhaupt keine fertigen Taster,
+sondern einfach Metallachsen. Die leiten
+den Strom wunderbar und können wie ein
+Schalter wirken, wenn sie in Kontakt gebracht werden. Das fertige Modell seht ihr
+in Abb. 8.
+Rechts läuft längs der Statikträger eine gemeinsame Stromzufuhr-Achse; links gibt es
+zwei kürzere Achsen für die Stromabnahme. Je zwei querliegende Metallachsen
+können die Verbindung zwischen Stromzufuhr und –abnahme herstellen, wenn sie unten liegen. Die Querachsen unterbrechen
+aber den Kontakt, wenn sie durch die
+S-Riegel in den Statikträgern über die Seilrollen auf den Achsen angehoben werden.
+
+
+
+Die Zuleitung wurde von ihrem Stecker befreit und zusammen mit der Achse so in den
+BS7,5 eingeschoben, dass a) der Kontakt
+zwischen Leitung und Achse hergestellt
+und b) die Achse durch die Klemmwirkung
+sogar gegen Herausrutschen gesichert ist.
+Wir benötigen also keine weiteren Klemmringe und kommen ohne den guten alten
+Klemmkontakt 31338 aus.
+Auf der linken Seite befinden sich zwei
+Stromabnahme-Achsen – je eine für die beiden Kontrolllampen (Abb. 11). Jede von
+ihnen trägt wieder eine Zuleitung ohne
+Stecker durch einfaches Einklemmen in den
+BS7,5. Die vordere Leitung (aus Sicht der
+Verschiebegriffe für Wolf, Schaf, Kohlkopf
+und Bauer) geht zur roten Kontrolllampe
+
+
+Elektromechanik
+
+
+(Wolf frisst Schaf), die hintere zur gelben
+(Schaf frisst Kohlkopf).
+
+Die Verkabelung nehmt ihr zweckmäßigerweise erst gegen Ende vor. Die beiden Lampen sitzen auf BS30, die außerdem Federnocken zum Halten der Statikträger besitzen:
+
+
+Herausheben der Statikträger
+
+verbunden ist
+
+Zum Bau des Modells
+Alles beginnt mit einigen BS15 auf einer
+Bauplatte 500 (Abb. 12).
+
+
+
+
+Bringt die Federnocken und Lampen auch
+erst an, nachdem die Statikträger eingesetzt
+sind. Das sieht dann so aus:
+
+nach vorne oder hinten schieben kann (hinten trägt auch der Batteriekasten dazu bei).
+
+eingesetzt
+
+Am hinteren Ende (in Abb. 15 rechts)
+werden sie gegen Herausheben von einer
+quer drüber gespannten I-Strebe 120 gehindert, vorne durch die Federnocken bei den
+BS30 der Lampen sowie durch einen 35049
+Baustein 5 15x30.
+Jetzt wird auch die Bedeutung der 32850
+S-Riegelsteine 15x15 klar: Sie verhindern,
+dass man die Stangen um mehr als 15 mm
+
+Aufhängung und den Rollen.
+
+
+Als nächstes bestückt die vier Querachsen
+mit Bausteinen 15 mit Bohrung und Gelenkstein, Seilrollen, Klemmringen (innen)
+und Riegelscheiben (außen). An den Enden
+können wir uns keine Klemmringe leisten,
+weil sonst die Achsen den Kontakt nicht
+mehr herstellen könnten. Verwendet
+stramm sitzende Riegelscheiben, damit sie
+nicht abrutschen können. Abb. 16 zeigt die
+Achsen in derselben Reihenfolge, wie sie
+im Modell stecken werden.
+Schließlich setzt die Querachsen mit ihren
+Gelenken in die grauen BS15 (siehe
+fertig aufgebaut. Nach der Verkabelung
+können wir unser Modell ausprobieren.
+
+Jetzt wird’s ernst!
+Zunächst bringen wir alle vier Stangen nach
+ganz vorne. Wolf, Schaf, Kohlkopf und
+Bauer befinden sich also am diesseitigen
+Ufer, der Bauer passt auf alles auf, niemand
+frisst etwas – keine der beiden Lampen darf
+leuchten.
+Prüft, was passiert, wenn nur der Bauer
+alleine auf seinem Floß ans andere Ufer
+fährt. Schiebt die rechte Stange nach hinten.
+Beide Warnlampen müssen nun leuchten:
+Das Schaf könnte den Kohlkopf vertilgen,
+und der Wolf das Schaf.
+Der Bauer darf ja immer höchstens ein
+Objekt auf dem Floß mitnehmen. Er kann
+also entweder eine Leerfahrt machen
+(nichts mitnehmen; wir verschieben nur den
+Bauern), oder ein Objekt mitnehmen (wir
+schieben also am Griff des Bauern und an
+genau einem anderen). Die Regeln sagen,
+dass wir nicht etwas anderes als den Bauern
+alleine verschieben dürfen, und auch dass
+wir nicht etwa zusätzlich zum Bauern zwei
+oder alle drei anderen Objekte gleichzeitig
+bewegen dürfen – immer nur den Bauern
+und höchstens eines.
+Probieren wir’s: Schiebt einmal den Bauern
+und den Kohlkopf gleichzeitig (also in einer
+Floßfahrt) aufs andere Ufer. Sofort leuchtet
+
+Elektromechanik
+
+die rote Lampe und zeigt an, dass jetzt der
+Wolf das Schaf fressen würde. So geht’s
+also nicht. Schieben wir Bauern und Wolf,
+verbleiben Schaf und Kohlkopf alleine am
+diesseitigen Ufer. Die gelbe Lampe zeigt
+sofort an, dass jetzt der Kohlkopf vom
+Schaf verspeist wird. Das war also auch nix.
+Bleibt nur, im ersten Zug den Bauern und
+das Schaf überzusetzen. Am diesseitigen
+Ufer bleiben jetzt nur der Wolf und der
+Kohlkopf übrig – der Wolf macht sich aber
+so gar nichts aus Gemüse.
+Damit wir nicht nur wieder in den alten
+Zustand zurückkehren, muss der Bauer als
+nächstes eine Leerfahrt machen. Er fährt
+also alleine zurück und lässt das Schaf am
+entfernten Ufer. Nun kann er entweder den
+Wolf oder den Kohlkopf als nächstes mit
+ans entfernte Ufer nehmen. Danach darf er
+aber nicht einfach alleine zurückfahren und
+das letzte Objekt nachholen – sofort würde
+drüben etwas gefressen. Er muss also das
+Schaf wieder mit zurück nehmen (das ist der
+wesentliche Trick!). Dann kann er das andere Objekt (Kohlkopf oder Wolf) übersetzen, sodass nun nur der Wolf und der Kohlkopf drüben sind – das ist ja ungefährlich.
+Endlich kann der Bauer alleine zurück, das
+Schaf holen, und hat die Aufgabe gelöst.
+Probiert alles aus! Stört euch nicht daran,
+wenn eine Lampe beim Übersetzen kurz
+aufflackert, weil man nicht wirklich gleichzeitig schiebt. Wichtig ist, dass in keiner
+Endposition irgendeine Lampe leuchtet.
+Dieses Spiel schreit natürlich geradezu
+danach, es von Verwandten und Freunden
+spielen zu lassen. Viel Vergnügen dabei!
+Wer schafft es auf Anhieb?
+
+Quellen
+[1]
+
+Falk, Stefan: Motorsteuerungen
+(Teil 1). ft:pedia 1/2011, S. 4.
+
+[2]
+
+Falk, Stefan: Motorsteuerungen
+(Teil 3). ft:pedia 3/2011, S. 8.
+
+
+

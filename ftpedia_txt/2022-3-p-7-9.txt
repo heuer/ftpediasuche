@@ -1,0 +1,122 @@
+
+Getriebe
+
+Getriebe
+
+Maxizahnräder – Modul 1,5 oder lieber 16?
+Rüdiger Riedel
+fischertechnik-Zahnräder haben Modul 1,5 und in den Getrieben 0,5. Braucht jemand für
+Demonstrationszwecke richtig große Zahnräder? Mit Modul 16? Hier sind sie.
+Zwei zusammengefügte Bausteine 15×30
+rund (163202, 163439, 172544 oder
+173043) erinnern an die Zähne unserer
+fischertechnik-Zahnräder. Da muss nur
+noch ein passendes Grundgerüst her.
+
+Wir beginnen mit dem Z10
+Der Ring wird aus zehn Baugruppen BS7,5
++ WS15 + BS5 + WS7,5 + BS5 + WS15
+plus 10 Federnocken (31982) in den BS7,5
+zusammengesetzt. Die Winkelsumme ist
+dann 375° statt der erforderlichen 360°,
+aber der Ring lässt sich problemlos
+schließen. In jeden der BS7,5 kommt außen
+eine Federnocke, in jeden zweiten ebenfalls
+auf der Innenseite. Mit strammem Sitz passt
+jetzt innen ein Speichenrad 90×15 (19317
+oder 36916) hinein.
+
+
+Die Ähnlichkeit mit den Zahnrädern nach
+[1] ist nur oberflächlich. Deshalb müssen
+wir den Abstand der Zahnräder zueinander
+ausprobieren, sodass sie einigermaßen
+sauber ineinander kämmen.
+
+Je zwei Bausteine 15×30 rund werden mit
+zwei Federnocken an einen Baustein 5
+15×30 3N (38428) gefügt und 10 von diesen
+Baugruppen mit dem Ring zum Z10 zusammengesetzt.
+
+
+Nochmal das Ganze und wir können ein
+„Getriebe“ bauen. Unter die je drei BS30
+und BS15 Loch kommt je ein BS5 oder
+Baustein 5 15×30 (35049). Damit können
+wir den Abstand zwischen den beiden
+Zahnrädern optimieren.
+
+
+
+
+Kleines Zahnrad Z6
+
+Modulberechnung
+
+Auf eine Drehscheibe 60×5,5 (31019)
+schieben wir sechs BS7,5 und mit Federnocken befestigen wir sechs der „Zähne“
+wie oben beschrieben.
+
+Der Modul 𝑚 berechnet sich aus dem Teilkreisdurchmesser (Wälzkreisdurchmesser)
+𝑑 geteilt durch die Anzahl der Zähne 𝑧 [1].
+𝑑 =𝑧∙𝑚
+Somit
+𝑚=
+
+𝑑
+𝑧
+
+6 Zähne
+Achsabstand 𝑑 = 96 mm:
+𝑚 = 96 mm / 6 = 16 mm
+Also 𝒎 = 16.
+10 Zähne
+Achsabstand 𝑑 = 163 mm:
+𝑚 = 163 mm / 10 = 16,3 mm
+Also ungefähr m = 16.
+16 Zähne
+Achsabstand 𝑑 = 262 mm:
+𝑚 = 262 mm / 16 = 16,375 mm
+Also ungefähr 𝒎 = 16.
+
+Großes Zahnrad Z16
+
+Zahnradkombinationen
+
+
+Die Statikräder werden mit je 16 Riegelsteinen 15 (32850) bestückt und daran seitlich die Zähne aus je zwei Bausteinen 30
+rund und zwei Federnocken befestigt.
+
+
+
+Mechanik
+
+
+
+
+Zahnstange
+Schieben wir auf eine Reihe von BS30
+Zähne gemäß Abb. 1 im Abstand von
+22,5 mm (ein BS15 plus ein BS7,5 als
+Abstandsmaß) und setzen wir unter die
+Stützen des großen Zahnrades statt der
+5 mm hohen Bausteine je ein BS7,5, dann
+kämmt die Zahnstange recht gut.
+
+Nochmal zur Beachtung: Gegenüber der
+Abhandlung von Thomas Püttmann ist
+dieser Beitrag vor allem auf die Schönheit
+und Größe der Modelle gerichtet. Die
+Ermittlung der Module erfolgt durch Einstellung des Abstandes der Zahnräder nach
+Gefühl. Irgendeine Genauigkeit ist da nicht
+gegeben. Technische Anwendungen sind
+auch nicht das Ziel.
+
+Quellen
+[1]
+
+Thomas Püttmann: Zahnräder und
+Übersetzungen (Teil 3). 1/2012, S. 13–21.
+
+
+

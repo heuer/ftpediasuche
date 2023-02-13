@@ -1,0 +1,111 @@
+
+Modell
+
+Modell
+
+Urlaubskasten-Modell 6: Berg- und Talbahn
+Stefan Falk
+Aus dem Wohnzimmer-Dienstreisen-Urlaubs-Notfallkasten aus ft:pedia 1/2016 [1] lässt sich
+eine einfache Berg- und Talbahn herstellen – bitteschön!
+
+Das Vorbild
+In der Anleitung der ersten fischertechnikStatik-Kästen findet sich folgendes reizvolle Modell zum Ur-Kasten 300S [3]:
+
+Ein Motor treibt drei Wagen an, die auf
+einer aus Statik-Bogenstücken 60° gebauten Kreisbahn laufen. An zwei Stellen ist –
+hier mit Statik-Scharnieren – ein Knick eingebaut.
+Das geht natürlich, wenngleich nicht so
+rund, auch mit Grundbausteinen, wie der
+folgende Modellvorschlag zeigt (Abb. 2).
+Der Modellvorschlag kommt mit den Teilen
+aus, die im „Urlaubskasten“ [1] und seiner
+Ergänzung laut [2] enthalten sind.
+
+Der Aufbau
+Die Mechanik ist einfach: Eine Kurbel
+geht über ein Kardangelenk auf ein
+Rast-Z20, welches das Z40 mit dem
+Karussell antreibt.
+
+
+
+
+Die drei Sitzträger sind in fischertechnikDrehscheiben befestigt und können dank je
+eines Gelenkbausteins der Berg- und Talbahn folgen. Letztere ist einfach aus BS30
+mit verschiedenen Winkelsteinen darin aufgebaut.
+Der Antrieb
+
+Zweckmäßigerweise beginnen wir bei der
+Kurbel: Zwei BS15 mit zwei Zapfen, zwei
+BS15, eine Platte 15·30 zur Versteifung und
+zwei BS7,5 für die Achsführung genügen
+schon. Die Achse wird auf Kurbelseite mit
+einem Abstandsring 3 und auf der Abtriebsseite mit einem Klemmring fixiert. Das
+Ganze ergänzen wir wie in Abb. 5 zum
+Grundaufbau.
+Der Ring
+
+
+
+
+Der Ring für die Berg- und Talbahn wird
+gebaut, wie es Abb. 6 zeigt.
+
+Modell
+
+Die Abbildungen 7-11 zeigen, wie die Bahn
+an verschiedenen Stellen an der Grundplatte
+befestigt wird.
+Die Sitzträger
+Die Tragarme für die Sitze beginnen mit
+einem BS15 mit zwei Zapfen (hier einer mit
+Bohrung), der später in die Drehscheiben
+eingeschoben wird.
+
+
+Über ein Gelenk, zwei BS5 und einen weiteren BS15 mit zwei Zapfen geht es zu
+einem BS7,5, der nach unten die Rolle (die
+im Urlaubskasten nämlich laut [2] ergänzt
+wurde) und nach rechts zwei BS30 trägt.
+Auf dem sind eine Platte 15·30 als Sitz und
+über Winkelstein 60° und BS15 eine Platte
+30·30 als Sitzlehne angebracht.
+Der Mittelteil
+Wie in Abb. 13 gezeigt, wird eine Metallachse 110 gelagert und mit einem Klemmring im unteren Rollenbock fixiert. Oben
+trägt er zwei Drehscheiben, die untere mitsamt einem Z40. Die obere Drehscheibe
+bekommt eine normale Nabe, die untere
+und das Z40 bekommen eine Flachnabe.
+
+
+
+
+
+in die Drehscheiben eingebracht und der
+gesamte drehbare Teil auf der Grundplatte
+so befestigt wird, dass das Z20 gerade satt
+ins Z40 eingreift.
+Und dann schaut mal, ob es jemand schafft,
+am Karussell vorbeizugehen und nicht
+unbedingt auch mal kurbeln zu wollen – viel
+Spaß!
+
+Quellen
+[1]
+
+Falk, Stefan: Der WohnzimmerDienstreisen-Urlaubs-Notfallkasten.
+ft:pedia 1/2016, S. 31-36.
+
+[2]
+
+Falk, Stefan: Ein kleines Update für
+den Urlaubskasten. ft:pedia 3/2018,
+S. 6.
+
+[3]
+
+fischertechnik: Bauanleitung Statik
+100S – 400S. fischerwerke, Tumlingen, 1970/1971.
+
+
+
+

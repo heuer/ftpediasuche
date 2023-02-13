@@ -1,0 +1,168 @@
+
+Computing
+
+Computing
+
+startIDE (8): Messung von Temperatur und
+relativer Luftfeuchtigkeit mit dem Si7021
+Rolf Meingast
+Der Sensor Si7021 von Silicon Labs ist für die Messung von Temperatur und Luftfeuchtigkeit
+konzipiert. Nach der Erweiterung von startIDE [1] um I2C-Funktionalitäten [2] lag es nahe,
+die mit einem Si7021 ermittelten Messwerte mit denen des fischertechnik-Psychrometers [3] zu
+vergleichen.
+
+Aufbau
+
+Programm
+
+Der Si7021 [4] ist ein I²C-Sensor mit 1,93,6V Betriebsspannung, maximal 0,18 mA
+Strombedarf und bis zu 400 kHz I²CBusfrequenz. Adafruit bietet ein BreakoutBoard, das mit Betriebsspannungen von
+sowohl 3,3V als auch 5V arbeitet (Abb. 1).
+
+Als Programmierumgebung habe ich
+startIDE gewählt. In einer Endlosschleife
+(Zeilen 2 bis 42) werden die Sensordaten
+ausgelesen, in Temperatur (in °C) bzw.
+relative Luftfeuchtigkeit (in %) umgerechnet und auf dem Display des TX-Pi angezeigt. Mit dem Befehl F3h = 243dez wird
+die Temperaturmessung initialisiert.
+Zuerst werden beide Werte im Array data
+gespeichert und anschließend über den
+ftDuino an den Sensor übertragen. Nach
+einer kurzen Pause (40 ms) wird das Ergebnis (zwei Byte) in das Array data übertragen. Die beiden Werte aus dem Array
+werden in den Variablen n256 und n1 gespeichert und in die Dezimalzahl p umgewandelt (Zeile 18 f.).
+
+I²C-Sensor Si7021
+
+Der Versuchsaufbau ist einfach: Das Board
+wird über ein 4-adriges Kabel an die Pins
+5V (VIN), GND, SCL und SDA des
+ftDuino [5] angeschlossen, der über USBKabel mit einem TX-Pi [6] verbunden ist.
+Die I2C-Adresse des Sensors ist 40h =
+64dez.
+
+Die Umwandlung des Messwerts in die
+Temperatur in °C erfolgt in den Zeilen 20
+bis 22 anhand der Formel aus dem Datenblatt [4]:
+175,72 ∙
+_
+− 46,85
+65536
+Anschließend wird das Ergebnis angezeigt
+(Zeile 23).
+=
+
+
+
+
+# new
+Tag Wdh
+Clear
+Print Si7021
+Print
+ArrayInit data 64;243
+I2CWrite FTD data
+Delay 40
+ArrayInit data 64;2
+I2CRead FTD data
+Delay 10
+Init n256 0
+Init n1 0
+Array n1 readFrom data 1
+Init p 0
+Init Temp_in_°C 0
+Calc p n256 * 256
+Calc p p + n1
+Calc p p * 176
+Calc p p / 65536
+Calc Temp_in_°C p - 47
+QueryVar Temp_in_°C
+ArrayInit data 64;245
+I2CWrite FTD data
+Delay 20
+ArrayInit data 64;2
+I2CRead FTD data
+Init f256 0
+Init f1 0
+Init Feuchte_in_% 0
+Array f256 readFrom data 0
+Array f1 readFrom data 1
+Calc p f256 bitShift 8
+Calc p p + f1
+Calc p p * 125
+Calc p p / 65536
+Calc Feuchte_in_% p - 6
+QueryVar Feuchte_in_%
+Print
+Delay 1000
+Jump Wdh
+
+Die folgenden Screenshots der Sensor(Abb. 2) und der Psychrometermessung
+(Abb. 3, [3]) sowie der Blick auf mein
+Haarhygrometer (Abb. 4) zeigen, dass die
+Messungen des Sensors und des Psychrometers übereinstimmen und – mit geringer Abweichung – durch das Haarhygrometer bestätigt werden.
+
+
+Listing 1: Temperatur-Messprogramm
+
+Analog wird bei der Bestimmung der relativen Luftfeuchtigkeit verfahren.
+Die Umrechnungsformel ist
+%
+
+=
+
+125 ∙
+_
+65536
+
+−6
+
+fischertechnik-Psychrometers
+
+
+
+Computing
+
+[3]
+
+Rolf Meingast: startIDE (7):
+Psychrometer. ft:pedia 1/2019, in
+dieser Ausgabe.
+
+[4]
+
+Silicon Labs: Si7021-A20: I²C
+Humidity and Temperature Sensor.
+Datasheet, Rev. 1.2, 8/2016.
+
+[5]
+
+Till Harbaum: ftDuino – Open
+Source trifft Konstruktionsbaukasten.
+ft:pedia 1/2018, S. 85-91. Siehe
+auch: ftDuino.de und Till Harbaum:
+fischertechnik compatible arduino.
+GitHub.
+
+[6]
+
+Peter Habermehl: Der (schnelle Weg
+zum) TX-Pi. ft:pedia 1/2019, in
+dieser Ausgabe. Siehe auch: Till
+Harbaum: TX-PI – A Raspberry PI
+setup for fischertechnik. GitHub.
+
+
+Quellen und Referenzen
+[1]
+
+Peter Habermehl: startIDE für die
+Community Firmware – Programmieren direkt auf dem TXT oder TXPi. ft:pedia 1/2018, S. 102-107.
+
+[2]
+
+Peter Habermehl: Neues von
+startIDE: Feldvariable, Servos, I2C.
+ft:pedia 1/2019, in dieser Ausgabe.
+
+
+

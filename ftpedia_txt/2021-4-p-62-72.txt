@@ -1,0 +1,583 @@
+
+
+Regelungstechnik
+
+PID-Regler – eine experimentelle Einführung
+Dirk Fox
+Regler finden wir in zahlreichen technischen Geräten. Und sie verbreiten sich immer weiter:
+Sie sind das Herzstück vieler (teil-)autonomer Systeme und zählen inzwischen zu den wichtigsten Anwendungen von Mikrocontrollern [1]. Eine zentrale Rolle spielen darunter PIDRegler [2]. Mit der Oszilloskop-Funktion von ROBO Pro lässt sich deren Funktionsweise am
+TXT-Controller wunderbar anschaulich zeigen.
+
+Steuerung und Regelung
+Die meisten Mikrocontroller-Anwendungen unserer fischertechnik-Modelle sind
+Steuerungen. Dabei stellen wir einen Aktor
+auf einen vorgegebenen Wert ein, beispielsweise eine LED auf eine bestimmte Helligkeit oder einen Motor auf eine feste Geschwindigkeit. Für viele solcher Steuerungen ist der TXT Controller bei weitem
+überdimensioniert – das könnten auch ein
+paar simple ICs.
+In der Praxis viel wichtiger und technisch
+auch erheblich spannender sind Regler. Im
+Unterschied zu einer Steuerung sorgt ein
+Regler dafür, dass eine vorgegebene „Führungsgröße“ (wie z. B. die Temperatur
+eines Kühlfachs, die Helligkeit eines Raums
+oder die Geschwindigkeit eines Fahrzeugs)
+auch bei plötzlichen Störungen (wie dem
+Öffnen der Kühlschranktür, abnehmendem
+Tageslicht oder hügeligem Gelände) möglichst schnell wieder erreicht wird.
+
+Ein Regler muss solche Störungen erkennen
+und die Steuerung des Aktors so anpassen,
+dass das System die Vorgabe wieder einhält.
+Dazu benötigt der Regler einen „Feedback“-Mechanismus, der ihn informiert,
+wenn es zu Abweichungen der Regelgröße
+von der vorgegebenen Führungsgröße
+kommt. Aus der gemessenen Abweichung
+berechnet der Regler eine neue Stellgröße
+für den Aktor, um die Abweichung der
+Regelgröße von der Führungsgröße zu verringern (Abb. 1).
+Beispiel: Will man bei einer motorgetriebenen Achse die Zahl der Umdrehungen pro
+Zeiteinheit auch bei variabler Last konstant
+halten, muss man die Winkelgeschwindigkeit der Achse messen und bei Abweichungen von der Sollvorgabe die Motorspannung erhöhen oder senken.
+
+
+
+Einfache Regelungsaufgaben mit einem
+Aktor, der nur an- oder ausgeschaltet werden kann, löst man mit einer so genannten
+Zweipunktregelung [3]: Sinkt die Regelgröße unter (bzw. steigt sie über) einen vorgegebenen Schwellenwert, wird der Aktor
+(bspw. ein Kühl- oder Wärmeaggregat) zugeschaltet, bis ein zweiter, höherer Schwellenwert erreicht ist. Solche einfachen Regler finden sich in Backöfen, Heizungen,
+Kühlschränken oder Klimaanlagen. Die
+Reglerkurve entspricht einem unregelmäßigen „Rechtecksignal“. Der Bereich, in dem
+die Regelgröße zwischen den Schwellenwerten „pendelt“, nennt man Hysterese.
+(„Nachwirkung“). Soll die Regelung in
+beide „Richtungen“ erfolgen, um beispielsweise einen festen Abstand einzuhalten [4,
+5], verwendet man meist eine Dreipunktregelung („zu nah“, „zu fern“, „Abstand ok“).
+Komplizierter wird es, wenn ein Regler die
+Regelgröße nach einer Störung so schnell
+wie möglich wieder auf die vorgegebene
+Führungsgröße einstellen soll. Voraussetzung dafür ist ein möglichst stetig steuerbarer Aktor (bspw. ein Motor), über den das
+System geregelt werden kann.
+
+Regelungstechnik
+
+und Genauigkeit der Messung der Regelgröße oder die Verzögerung, mit der eine
+Änderung der Stellgröße sich auf die Regelgröße auswirkt.
+Schließlich hat der gewählte Reglertyp
+maßgeblichen Einfluss auf die Wirkung.
+Besonders leistungsfähig und flexibel (und
+daher sehr verbreitet) sind P-, PI-, PD- und
+PID-Regler [2]. Die Funktionsweise und
+Wirkung dieser Regler werden wir nun am
+Beispiel eines „analogen Spurfolgers“ veranschaulichen.
+
+Regelungsaufgabe
+In [6] habe ich vorgestellt, wie man einen
+„digitalen“ Spurfolger mit dem fischertechnik-Spursensor sehr elegant als Endlichen
+Automaten in ROBO Pro programmieren
+kann.
+Der Schönheitsfehler dieser Lösung: Der
+Spurfolger folgt einem Zick-Zack-Kurs. Es
+ist offensichtlich, dass das Ergebnis nicht
+optimal ist, denn der vom Spurfolger
+zurückgelegte Weg ist deutlich länger als
+die Spur; außerdem muss der Spurfolger bei
+jedem Richtungswechsel verlangsamen.
+
+Bei einer solchen Regelung können verschiedene unerwünschte Effekte auftreten:
+ Der Regler stellt die Führungsgröße zu
+langsam wieder ein;
+ Der Regler schwingt über, d. h. aus einer
+zu kleinen wird eine zu große Regelgröße;
+ Der Regler fängt an zu oszillieren und
+schaukelt sich schlimmstenfalls sogar
+auf, anstatt in die gewünschte Ruhelage
+zurückzukehren.
+Um einen Regler für das gewünschte Regelungsziel zu optimieren, müssen zunächst
+einige Randbedingungen festgelegt oder
+bestimmt und verschiedene Annahmen getroffen werden. Dazu zählen insbesondere
+die maximale Größe einer Störung, auf die
+der Regler reagieren soll, die Auflösung
+
+Controller und Kamera
+
+Man kann die Spurfolger-Aufgabe aber
+auch als ein Regelungsproblem betrachten
+und mit Hilfe eines Reglers lösen. Dazu
+ersetzen wir an unserem kleinen „Buggy“
+zunächst einmal den Spursensor durch eine
+Kamera (Abb. 2).
+
+
+
+Eine fischertechnik-Designer-Datei des
+Modells findet ihr im Downloadbereich der
+ft:pedia. Die Konstruktion beschränkt sich
+auf das Wesentliche; aber natürlich darf der
+kleine Buggy um Stoßstangen, Beleuchtung
+etc. erweitert werden (Abb. 3) – oder auch
+ganz anders aussehen.
+
+Spurbreite müssen ggf. an den verwendeten
+Parcours angepasst werden.
+Die Kamera hat eine horizontale Auflösung
+von 320 Punkten; daher sollten die Koordinaten auf -160 bis +160 festgelegt werden,
+um eine möglichst hohe Genauigkeit der
+Messungen zu erreichen. Bei der Bildrate
+(frames per second, fps) habe ich mit 25 fps
+und hoher Genauigkeit gute Ergebnisse erzielt (Abb. 5). Damit wird zugleich die
+maximal mögliche Zahl der Richtungskorrekturen pro Sekunde (alle 40 ms) festgelegt. Diese Wahl beeinflusst die Wirkung
+des Reglers erheblich.
+Um die Abweichung von der Spur zu korrigieren, muss der Buggy nach links oder
+rechts gesteuert werden. Das erreichen wir,
+indem wir die Geschwindigkeit des einen
+Motors erhöhen und die des anderen verringern.
+
+
+Der Regler muss nun dafür sorgen, dass der
+Mittelpunkt der von der Kamera erkannten
+Spur in der Mitte des Bildausschnitts der
+Kamera liegt (Führungsgröße w). Die
+Linienerkennung von ROBO Pro liefert uns
+den Abstand vom Mittelpunkt (Abweichung
+e, Abb. 4) als „analogen“ Wert, aus dem der
+Regler die erforderliche Korrektur u der
+Motorspannung berechnet.
+Die Konfiguration der Linienerkennung ist
+einfach (Abb. 5): Sie sollte die gesamte
+Breite des Kamerabilds im oberen Drittel
+umfassen; die minimale und die maximale
+
+Dafür müssen wir zunächst eine „Basisgeschwindigkeit“ für die beiden Motoren definieren. Mit der Basisgeschwindigkeit legen
+wir zugleich den maximalen „Lenkeinschlag“ des Buggy fest, nämlich die Differenz zur Maximalgeschwindigkeit (512).
+Hier haben wir einen weiteren Optimierungsparameter unseres Reglers: Je höher
+die Basisgeschwindigkeit, desto schneller
+der Buggy – aber desto schwächer die
+Wirkung der Steuerung.
+Wir beginnen mit einer Basisgeschwindigkeit von 400; später können wir sie bei
+Bedarf noch anpassen. Damit der Buggy
+geradeaus fährt, müssen die Geschwindigkeiten der beiden Motoren in der Regel
+etwas unterschiedlich gewählt werden.
+
+
+
+
+Regelungstechnik
+
+
+Mit dem simplen ROBO Pro-Programm in
+einer schwarzen Spur testen und die Basisgeschwindigkeit des schnelleren Motors anpassen (senken). Wenn ihr das Programm
+im Onlinemodus startet, wird in ROBO Pro
+die Abweichung von der Spur angezeigt.
+
+‚Spurfolger Kamera.rpp‘ (Geradeausfahrt)
+
+Dreipunkt-Regler
+Für eine simple Dreipunktregelung können
+wir nun eine maximale Abweichung von
+der Spur nach links bzw. rechts als Schwellenwerte festlegen. Überschreitet der Buggy
+den einen, muss er nach rechts steuern,
+überschreitet er den anderen, nach links.
+
+‚Spurfolger Dreipunkt-Regler.rpp‘
+
+
+
+Pro-Programm. Das Ergebnis ist ein Fahrtverlauf mit mehr oder weniger demselben
+Zick-Zack-Kurs, dem unser Buggy auch mit
+einem IR-Spursensor folgen würde. Abb. 8
+zeigt den Verlauf des Spurabstands. Man
+erkennt, dass der Regler stark überschwingt: Es kommt zu Abweichungen von
+mehr als 100.
+
+ Die maximale Motorgeschwindigkeit ist
+512. Daher sollte der Korrekturwert bei
+der von uns gewählten Motor-Basisgeschwindigkeit (400) den Wert 110 nicht
+überschreiten.
+ Die Abweichung von der Spur kann bis
+zu ±130 betragen. Die Korrektur sollte
+aber möglichst schon bei kleinen Abweichungen (< 40) erfolgen.
+Der Proportionalitätsfaktor sollte also zwischen 0 und 2 liegen. Wir können uns an
+einen geeigneten Wert herantasten, indem
+wir mit 0,1 beginnen und den Wert schrittweise um 0,1 erhöhen, bis der Regler zu oszillieren beginnt, ohne sich aufzuschaukeln.
+
+
+Immerhin können wir hier nicht nur die
+Stärke des Lenkeinschlags, sondern auch
+die Schwellenwerte, bei denen der Regler
+reagieren soll, sehr fein anpassen. Damit
+lassen sich die Amplitude und die Frequenz
+der „Schwingung“ in Abb. 8 ändern und das
+Überschwingen etwas dämpfen. Viel besser
+wird die Regelung dadurch aber nicht.
+
+P-Regler
+Kann man die Größe der Abweichung der
+Regelgröße von der Führungsgröße messen,
+so verwendet man üblicherweise einen Proportionalregler, der die Änderung der Stellgröße abhängig von (oder proportional zu)
+der Größe der Abweichung vornimmt. Ein
+solcher Regler wird auch kurz P-Regler genannt. Die Güte des Reglers hängt dabei
+(auch) von der Auflösung und Genauigkeit
+dieser Messung ab. Von einem Zwei- und
+Dreipunktregler unterscheidet er sich durch
+seinen stetigen Verlauf.
+Um den Korrekturwert u für die Stellgröße
+zu erhalten, multiplizieren wir die Abweichung mit einem Proportionalitätsfaktor
+𝐾𝑝 . Zur Bestimmung dieses Faktors stellen
+wir ein paar Überlegungen an:
+
+
+Die Abweichung von der Spur 𝑒 und die
+berechnete Stellgröße 𝑢 (Korrekturwert der
+Motorgeschwindigkeiten) mit
+𝑢 = 𝐾𝑝 ∙ 𝑒
+könnt ihr euch im Online-Mode in ROBO
+Pro mit der Oszilloskop-Funktion anzeigen
+lassen. Das ROBO Pro-Programm für den
+P-Regler zeigt Abb. 10.
+Um den P-Regler zu testen, starten wir den
+Buggy parallel zur Spur, und zwar so, dass
+die Linienerkennung die Spur gerade noch
+rechts (oder links) im Bild findet. Abb. 9
+zeigt die Abweichung von der Spur über die
+ersten 10 Sekunden der Testfahrt mit einem
+P-Regler mit Proportionalitätsfaktor 0,4.
+
+(Abweichung e [Skala: 1s/25])
+
+Man erkennt, dass der Regler zunächst kurz
+überschwingt und sich dann um einen Wert
+von etwa -35 einpendelt.
+
+
+Regelungstechnik
+
+
+Erhöhen wir den Proportionalitätsfaktor, so
+reagiert der Regler schneller, schwingt
+dabei aber deutlich über. Bei einem Wert
+von 0,9 beginnt der Regler zu oszillieren
+(Abb. 11) und der Buggy folgt wieder
+einem Zick-Zack-Kurs.
+
+beginnt bei zu großem 𝐾𝑝 irgendwann zu
+oszillieren. Außerdem schwingt er sich auf
+einen festen Abstand zur Spur ein. Diese
+Nachteile versuchen wir nun zu mildern.
+
+Ungefähr hier liegt also die obere Grenze
+für den Proportionalitätsfaktor. Die Stellgröße u liegt dabei immer noch im Bereich
+von ±100; wir müssen die Basisgeschwindigkeit der Motoren also nicht senken, um
+den Regelungsbereich zu vergrößern.
+
+Das Überschwingen des P-Reglers können
+wir dämpfen, indem wir den Regler beim
+Zurückschwingen „abbremsen“: Wenn die
+Größe der Abweichung zunimmt, soll die
+Richtungskorrektur des Buggy verstärkt,
+wenn sie abnimmt, soll die Korrektur reduziert werden.
+
+D-Glied
+
+Dazu ergänzen wir die Berechnung der
+Stellgröße um einen Korrekturwert, der sich
+aus der Veränderung der Abweichung berechnet, also der ersten Ableitung des Verlaufs der Regelgröße. Dieser Korrekturwert
+wird daher auch Differentialglied (oder DGlied) genannt.
+zu oszillieren [Skala: 1s/25]
+
+Zusammengefasst: Der P-Regler korrigiert
+bei großen Abweichungen stärker als bei
+kleinen und passt sich so an eine Störung an.
+Allerdings schwingt er leicht über und
+
+Dabei muss die Veränderung immer über
+dieselbe Zeiteinheit gemessen werden. In
+unserem Programm erzwingen wir das mit
+einem Warte-Element von 20 ms in der
+Schleife (Abb. 12). Noch besser wäre, die
+Zeit zwischen zwei aufeinander folgenden
+Linienerkennungen zu messen.
+
+
+
+Auch hier benötigen wir einen Faktor (𝐾𝑑 ),
+mit dem wir die Veränderung der Abweichung multiplizieren, bevor wir sie zur
+Stellgröße addieren.
+𝑢 = 𝐾𝑝 ∙ 𝑒 + 𝐾𝑑 ∙ (𝑒 − 𝑒𝑙𝑎𝑠𝑡 )
+
+Mit etwas Aufwand kann man den PDRegler nun noch feiner justieren, bis das
+Überschwingen kaum noch zu erkennen ist.
+Die stabile Dauerabweichung von der Mitte
+der Spur liegt jedoch immer noch bei etwa
+20 – diesen Nachteil des P-Reglers
+schwächt das D-Glied zwar ab, gleicht ihn
+jedoch nicht vollständig aus.
+
+I-Glied
+Die stabile „Dauerabweichung“ des Buggys
+von der exakten Mitte der Spur können wir
+mit einem weiteren Regelglied korrigieren,
+das die Abweichungen summiert und in die
+Berechnung der Stellgröße einfließen lässt.
+Dieses „integrierende“ Reglerglied wird
+auch als I-Regler (oder I-Glied) bezeichnet.
+
+‚Spurfolger PD-Regler.rpp‘
+
+Es gibt verschiedene Ansätze, um einen
+geeigneten Wert für 𝐾𝑑 zu finden. Eine
+bewährte praktische Methode ist, zunächst
+einen möglichst großen Proportionalitätsfaktor zu wählen, bei dem der P-Regler
+gerade noch nicht oszilliert (hier z. B. 𝐾𝑝 =
+0,8). Dann startet man mit einem kleinen
+Wert für 𝐾𝑑 (z. B. 𝐾𝑑 = 1) und erhöht 𝐾𝑑 so
+lange schrittweise, bis der Regler sich
+schnell der Führungsgröße nähert, ohne
+überzuschwingen. Bei unserem Buggy erreichen wir das z. B. mit 𝐾𝑑 = 6 (Abb. 13).
+
+Damit der I-Anteil des Reglers sich nicht
+auf einen beliebig großen Wert aufaddiert,
+müssen wir den Wert „kappen“ oder auf
+andere Art das Wachstum begrenzen, z. B.
+indem wir vor dem Aufaddieren der aktuellen Abweichung den Wert verkleinern
+(bspw. halbieren) oder beim Erreichen der
+Führungsgröße den Wert auf Null zurücksetzen.
+
+𝐾𝑑 = 6,0 [Skala: 1s/25]
+
+
+
+Regelungstechnik
+
+In unserem Unterprogramm Constrain
+(Abb. 14) wird der Wert der Fehlersumme
+𝑠𝑢𝑚𝑒 auf ±500 begrenzt. Die Grenze kann
+nahezu beliebig gewählt werden – der Integralfaktor 𝐾𝑖 , mit dem wir den aufsummierten Fehler 𝑠𝑢𝑚𝑒 bei der Stellgrößenberechnung multiplizieren, bestimmt den Einfluss
+auf die Stellgröße.
+𝑢 = 𝐾𝑝 ∙ 𝑒 + 𝐾𝑑 ∙ (𝑒 − 𝑒𝑙𝑎𝑠𝑡 ) + 𝐾𝑖 ∙ 𝑠𝑢𝑚𝑒
+𝐾𝑖 müssen wir (abhängig vom Maximalwert
+der Fehlersumme) relativ klein wählen: Er
+soll ja wirken, wenn Proportional- und
+Differentialanteil klein sind und der Buggy
+mehr oder weniger geradeaus fährt.
+
+‚Spurfolger PID-Regler.rpp‘
+
+Pro-Programm. Die Faktoren 𝐾𝑝 und 𝐾𝑑
+übernehmen wir von unserem PD-Regler.
+Den Faktor 𝐾𝑖 müssen wir so lange vergrößern, bis der Buggy sich auf der Spur
+einschwingt. Da das Integralglied das Überschwingen verstärkt, müssen wir zum Ausgleich 𝐾𝑑 leicht vergrößern.
+In Abb. 16 sehen wir das Ergebnis eines
+Testlaufs mit 𝐾𝑖 = 0,035 , in dem die Annäherung an die Mitte der Spur recht gut
+gelingt. Das ist ein Reglerverlauf, wie wir
+ihn uns wünschen: Eine schnelle Reaktion
+in ca. 100 ms, minimales Überschwingen
+und kein dauerhafter Abstand zur Spur.
+
+𝐾𝑑 = 6,5 und 𝐾𝑖 = 0,035 [Skala: 1s/25]
+
+Offline-Mode
+Die ROBO-Pro-Programme zeigen (im Online-Mode) bei jeder Linienerkennung den
+gemessenen Abstandswert im Oszilloskop
+an – 25 Mal pro Sekunde. Wenn wir die
+Daten stattdessen innerhalb der MessSchleife ausgeben lassen, dann wird der
+Verlauf „eckiger“: Es werden nur noch etwa
+10-12 Messwerte je Sekunde angezeigt.
+Unser Programm schafft also statt 25 nur
+10-12 Schleifendurchläufe pro Sekunde. Da
+der Aufwand der Rechenoperationen im PC
+nicht ins Gewicht fällt, muss es die Übermittlung der Daten sein, die die Regelstrecke verlängert. Das können wir ändern,
+indem wir die Oszilloskopanzeige durch
+eine Ausgabe des Abstandswerts auf dem
+TXT-Display ersetzen und das Programm
+im Download-Mode starten.
+Allerdings sind nun unsere Regelungsparameter nicht mehr optimal: Durch die häufigeren Messungen reagiert der P-Regler
+öfter, und die Korrektur durch das D-Glied
+fällt geringer aus, da die Abstandsänderungen bei kürzeren Messintervallen natürlich
+betragsmäßig kleiner sind. Der Effekt wird
+noch verstärkt, wenn wir die Bildrate der
+Kamera auf den Maximalwert von 60 fps
+erhöhen.
+Das Nachjustieren des Reglers gelingt aber
+auch ohne Oszilloskop. So können wir den
+Proportionalfaktor 𝐾𝑝 in der DownloadVariante des P-Reglers (Programm ‚Spurfolger P-Regler (download).rpp‘) auch mit
+bloßem Auge einstellen: Wir passen dessen
+
+
+
+
+Wert (wie oben) so lange an, bis der PRegler gerade noch nicht oszilliert.
+Den Faktor 𝐾𝑑 können wir übernehmen,
+müssen ihn aber durch den Quotienten der
+beiden Messfrequenzen (fps) teilen: 60/25 =
+2,4. Durch Änderungen in kleinen Schritten
+können wir das Ergebnis erforderlichenfalls
+anpassen, bis das Überschwingen des Reglers kaum noch zu erkennen ist (Programm
+‚Spurfolger PD-Regler (download).rpp‘).
+Unseren Faktor 𝐾𝑖 sollten wir überhaupt
+nicht anpassen müssen. Wenn es zu mehr
+Messungen kommt, „zieht“ das I-Glied den
+Buggy schneller an die Linie – das hat
+höchstens Auswirkungen auf das D-Glied
+(Programm ‚Spurfolger PID-Regler (download).rpp‘).
+
+Optimierungen
+Gleich mehrere Parameter bestimmen die
+Wirkung des PID-Reglers und beeinflussen
+sich auch gegenseitig. Mit diesen Parametern könnt ihr insbesondere die DownloadVersion des Reglers experimentell weiter
+optimieren. Beachtet aber, dass ihr sie nur
+in kleinen Schritten ändert, da es sonst passieren kann, dass ihr den Regler komplett
+unbrauchbar macht.
+Diese Parameter sind:
+ Die Basisgeschwindigkeit: Sie begrenzt
+den Regelungsbereich zu Gunsten der
+Geschwindigkeit des Buggy.
+ Der Winkel der Kamera und die Position
+der Linienerkennung im Bild: Je weiter
+entfernt vom Buggy die Spur erkannt
+wird, desto früher reagiert die Richtungskorrektur. Dadurch „schneidet“ der
+Buggy allerdings engere Kurven (Abb.
+17). Umgekehrt kann die Spur bei kurzer
+Voraussicht in einer scharfen Kurve das
+Bild verlassen, bevor der Buggy seine
+Fahrtrichtung ausreichend korrigiert hat.
+
+
+
+ Die Bildrate (fps), das Zeitglied des
+Reglers, bestimmt die Länge der Regelungsstrecke: Je kürzer, desto häufiger
+erfolgt eine Fahrtrichtungskorrektur, und
+desto geringer die gemessene Änderung
+der Abweichung.
+ Die Faktoren 𝐾𝑝 , 𝐾𝑑 und 𝐾𝑖 des PIDReglers (mit der oben jeweils beschriebenen Wirkung).
+ Die Art der Begrenzung der Fehlersumme, damit dessen Wert nicht ins Unkontrollierte wächst.
+Den größten Effekt erzielt ihr mit einer Erhöhung der Basisgeschwindigkeit und der
+anschließenden Anpassung aller drei Faktoren. Dabei könnt ihr wie im vorangegangenen Abschnitt vorgehen – 𝐾𝑖 sollte konstant bleiben, 𝐾𝑝 bis kurz vor dem Oszillieren vergrößert werden und 𝐾𝑑 nur eine
+geringe Anpassung benötigen.
+
+Kreisparcours
+Der Regler funktioniert natürlich nicht nur
+auf einer Geraden – schließlich soll er die
+Fahrt des Buggy ja gerade an kurvige (also
+„gestörte“) Spurverläufe anpassen. Wir
+können ihn daher z. B. mit dem ROBO
+Explorer Parcours (128962) oder dem
+ROBO TX Training Lab Parcours 1 (Rückseite, 137652) oder Parcours 2 (Vorderseite,
+137676) testen. In der fischertechnikDatenbank gibt es alle drei Parcours‘ im
+A1-Format zum Ausdrucken.
+Im Download-Bereich der ft:pedia habe ich
+euch einen Parcours in A0 (ca. 1020 x 720
+mm) ohne Farbflächen bereitgestellt –
+darauf lässt sich der Spurfolger hervorragend testen (Abb. 18).
+
+
+Regelungstechnik
+
+auf die Regelung eine neue Kalibrierung
+des PID-Reglers (also die Bestimmung der
+Faktoren 𝐾𝑝 , 𝐾𝑑 und 𝐾𝑖 ) erforderlich
+machen kann.
+
+
+Damit die Regelung bei sehr engen Kurven
+noch „mitkommt“ und die Kamera die Spur
+nicht verliert, müsst ihr ggf. die Basis-Geschwindigkeit ein wenig senken. Eine
+geringfügig überhöhte Geschwindigkeit
+gleicht der Buggy aus: Verliert er die Spur,
+sorgt die Warteschleife im Programm dafür,
+dass die Einstellung der Motoren erhalten
+bleibt. So findet der Buggy die Spur normalerweise auch bei sehr scharfen Kurven
+kurz darauf wieder.
+Wer es probieren möchte: Mit meiner (leidlich optimierten) Download-Version des
+PID-Reglers mit einer Basisgeschwindigkeit von 485 benötigt mein Buggy knapp 10
+Sekunden für eine Runde auf dem Parcours
+in Abb. 18. Wer schafft das schneller?
+
+Fazit
+Der 1922 von Nicolas Minorsky (19851970), dem Erfinder des Gyrometers, für
+die US-Navy entwickelte PID-Regler ist
+heute Standard bei anspruchsvollen Regelungsaufgaben. Mit diesem äußerst mächtigen Werkzeug lassen sich – ganz ohne KI
+oder andere „Kanonen“ – beeindruckend
+autonome Systeme entwickeln.
+Seine volle Leistungsfähigkeit erreicht der
+PID-Regler, wenn er, wie beschrieben,
+Schritt für Schritt an das System angepasst
+wird. Abb. 19 zeigt den Verlauf der ReglerVarianten bei optimaler Wahl der Parameter im Vergleich.
+Dabei ist zu beachten, dass jede Änderung
+von Komponenten des Systems mit Einfluss
+
+Vergleich (Bild: rn-wissen.de)
+
+Das Experimentierbeispiel „analoger Spurfolger“ zeigt, dass das kein Hexenwerk ist,
+sondern – sofern man dabei systematisch
+vorgeht – mit begrenztem Aufwand gemeistert werden kann. Es ist auch faszinierend,
+die Wirkung des Reglers, die mit bloßem
+Auge kaum erkennbar ist, in der Oszilloskopanzeige von ROBO Pro zu verfolgen.
+Für komplexere Systeme als unseren Buggy
+gibt es außerdem heuristische Faustformelverfahren zur Bestimmung der Parameter
+eines PID-Reglers [7, 8].
+Beachten muss man allerdings, dass die
+wichtigste Grenze eines jeden (PID-) Reglers das Zeitglied ist: Da die Wirkung der
+Regelung fast immer erst etwas verzögert
+eintritt, kann der Regler nur Störungen bis
+zu einer bestimmten Größe ausgleichen.
+Wird bei unserem Buggy beispielsweise die
+Kurve zu eng, verliert die Kamera die Spur,
+bevor die Richtungskorrektur abgeschlossen ist. Diese Grenze sollte man zuvor
+abschätzen, um zu wissen, ob der Regler ein
+vorliegendes Regelungsproblem überhaupt
+lösen kann.
+Mit dem fischertechnik TXT Controller und
+ROBO Pro kann man die Wirkung eines
+PID-Reglers über die Oszilloskop-Funktion
+auch hervorragend veranschaulichen – z. B.
+im Informatik- oder Technik-Unterricht
+durch eine Projektion des Grafen via
+Beamer oder Wand-Display.
+
+
+
+Alle in diesem Beitrag verwendeten ROBO
+Pro-Programme findet ihr als Download zu
+dieser Ausgabe der ft:pedia.
+
+[4]
+
+Stefan Falk: Dreipunktregelung.
+ft:pedia 2/2019, S. 32–38.
+
+[5]
+
+Artur Fischer: Dreipunktregelung.
+Hobby 4 Band 5 (39545), FischerWerke, 1975, S. 10-13.
+
+Referenzen
+[1]
+
+Honeywell: Grundlagen der Reglerparametrierung. Einführung, 2007.
+
+[6]
+
+[2]
+
+Tim Wescott: PID without a PhD.
+2018.
+
+Dirk Fox: Endliche Automaten in
+Robo Pro. ft:pedia 3/2014, S. 42–50.
+
+[7]
+
+[3]
+
+Artur Fischer: Zweipunktregelung.
+Hobby 4 Band 2 (39052), FischerWerke, 1971, S. 48-51.
+
+Wikipedia: Faustformelverfahren
+(Automatisierungstechnik).
+
+[8]
+
+Jim Sluka: A PID Controller For
+Lego Mindstorms Robots. 20092018.
+
+
+
+

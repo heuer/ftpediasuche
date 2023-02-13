@@ -1,0 +1,386 @@
+
+Elektronik
+
+Elektronik
+
+PWM-Tongenerator für Robo TX(T) Controller
+Andreas Gail
+Einfach nur Töne zu erzeugen, ist mit den guten alten „Silberlingen“ kein Problem. Aber in der
+Welt der Microcontroller, die unendlich erscheinende Möglichkeiten bietet, haben wir mit der
+Erzeugung einfacher Töne Probleme. Das gilt auch für den neuen fischertechnik Robo TXT
+Controller.
+
+Die Welt der „Silberlinge“
+Die „Silberlinge“ wie in Abb. 1 gezeigt
+waren gemäß Internet [1] ab 1971 auf dem
+Markt und zuerst im Baukasten hobby 4
+enthalten. Damit konnte man Töne in einem
+weiten Frequenzbereich erzeugen.
+
+mit der fischertechnik Robo Pro-Software
+bis zur Version 4.1.8 nicht gelungen, diese
+auch abzuspielen (Stand 09/2015).
+
+Anforderungskatalog
+Für eine mögliche Zusatzhardware gibt es
+folgende
+allgemeine
+Anforderungen
+(Lastenheft):
+∂ Die Nutzung der „Silberlinge“ kommt
+nicht in Betracht, da diese nur noch
+schwer zu bekommen sind.
+∂ Der Nachbau soll möglichst einfach und
+kostengünstig möglich sein.
+∂ Die Ansteuerung soll über Robo Pro
+möglich sein.
+
+eines Tongenerators
+
+Die Microcontroller
+Mit Beginn der Microcontroller schien es,
+als hätten die Silberlinge ausgedient. Die
+Tonerzeugung mit dem Robo TX Controller
+alleine war aber nicht möglich: Der TX
+hatte keinen Lautsprecher. Der Nachfolger
+Robo TXT Controller wurde zwar mit
+einem Lautsprecher ausgestattet, aber die
+Möglichkeiten der Tonerzeugung sind stark
+eingeschränkt. Der TXT kann zwar einige
+wav-Sounds abspielen, aber ohne Weiteres
+nur die von fischertechnik vorgegebenen.
+Obwohl es möglich ist, eigene wav-Dateien
+in den TXT einzuspielen, ist es zumindest
+
+∂ Sounds sollen mit maximaler Geschwindigkeit begonnen oder auch abgebrochen
+werden können.
+
+Anschluss an den TX/TXT
+Zum Anschluss der neuen Zusatzhardware
+an den TX oder TXT bieten sich der I²CBus und die normalen Ausgänge für Motoren, Lampen usw. an. Nach einigen Vorversuchen wurden die normalen Ausgänge
+O1…8 zur Ansteuerung der neuen Zusatzhardware ausgewählt. Um zumindest diesen
+Punkt vorweg zu nehmen: Zur Erzeugung
+von vier Oktaven werden beim nachfolgenden Aufbau nur zwei Ausgänge (z. B. O1
+und O2) benötigt.
+
+
+
+
+Leistungseinstellung per PWM
+
+9V
+
+Gemäß Abb. 2 hat der TX acht Ausgänge
+(O1...O8). Als Beispiel können hier angeschlossene Lampen in ihrer Helligkeit
+mithilfe der Robo Pro-Software gemäß
+bietet dabei maximal 512 Stufen.
+0V
+
+(PWM) des TX, Leistungseinstellung 252
+
+9V
+
+0V
+
+(PWM) des TX, Leistungseinstellung 498
+
+beim TX/TXT mithilfe der Robo Pro-Software
+von fischertechnik
+
+Nun könnte man auf die Idee kommen, dass
+an einem solchen Ausgang eine Gleichspannung anliegt. Doch so einfach ist das
+leider nicht. In Wirklichkeit ist dieser Ausgang gepulst, und das stets mit der annähernd vollen Betriebsspannung des
+Controllers. Das Oszilloskop bringt es ans
+Licht (Abb. 4 und 5).
+
+
+Die oben genannte Abkürzung PWM steht
+für Pulsweitenmodulation. Die Grundidee
+dabei ist, dass bei gleichbleibender Frequenz am Ausgang abwechselnd 0 V oder
+z. B. 9 V anliegen. Mit der vorhandenen
+Messtechnik wurden 210 Hz gemessen. Die
+Leistungseinstellung erfolgt durch das
+Verhältnis der Dauer von anliegenden 0 V
+und 9 V. Gemäß Abb. 5 ist die 9 V-Dauer
+relativ lang (rot markiert) im Vergleich zur
+0 V-Dauer. Damit ist die am Ausgang
+vorhandene Leistung relativ hoch und eine
+angeschlossene Glühlampe würde relativ
+hell leuchten. Wird im Gegensatz dazu Abb.
+4 betrachtet, ist die 9 V-Dauer relativ kurz
+(rot markiert) und die 0 V-Dauer relativ
+lang (blau markiert). Deshalb würde eine
+angeschlossene
+Glühlampe
+dunkler
+leuchten als bei Abb. 5.
+
+
+Elektronik
+
+Aus dem PWM-Signal werden
+Töne
+Die verwendete Schaltung wird in Abb. 16
+gezeigt. Die Spannungsversorgung der
+Schaltung erfolgt über die Anschlüsse JP1
+und JP2. Der Brückengleichrichter B1 dient
+als Verpolungsschutz der Schaltung. Um
+aus dem über JP3 eingespeisten PWMSignal Töne werden zu lassen, wird dieses
+Signal zunächst in eine variable Spannung
+umgewandelt, dessen Spannungshöhe abhängig von der Leistungseinstellung des
+Controllers ist. Die Bauteile R1...3, C2...3
+und IC2A (Conrad #174440) sind für die
+Gleichspannungserzeugung zuständig. In
+Abhängigkeit von dieser Spannung wiederum wird eine variable Frequenz erzeugt.
+Dies erledigt IC1 (Conrad #152184), als
+Voltage Controlled Oscillator (VCO)
+betrieben [2, 3]. An JP4 und JP5 kann direkt
+ein Lautsprecher mit 8 Ω, 0,2 W angeschlossen werden.
+
+und Leiterbahnenführung (Ansicht von oben)
+
+Schaltungsaufbau
+Für vergleichsweise einfache Schaltungen
+bietet sich die Verwendung einer Lochrasterplatine an. Diese muss dann nur noch
+auf die passende Größe zugeschnitten
+werden. Im vorliegenden Fall ist das jedoch
+bereits ziemlich grenzwertig. Die einzelnen
+Schritte werden nachfolgend gezeigt.
+Zunächst werden die Bauteile zusammengestellt. Daraus ergibt sich der Montageplatzbedarf auf der Platine. Die Bauteile
+sind in Abb. 6 grün markiert. Die Leiterbahnen sind durch Striche gekennzeichnet
+und die gelb markierten Flächen sind für
+Bohrlöcher reserviert. Damit wäre die
+Anordnung geklärt. Das ist einfach gesagt,
+es kann jedoch durchaus eine Zeit lang
+dauern, bis alles mit möglichst wenig
+Leiterbahnenkreuzungen auf die Platine
+passt. Um die Anordnung schneller hinzubekommen, ist das Programm EAGLE von
+CadSoft [7] als Freeware für nicht-kommerzielle Anwendungen sehr zu empfehlen.
+
+und Leiterbahnenführung (Ansicht von unten)
+
+Der Unterschied zwischen Abb. 6 und
+Unterschied; die Leiterbahnen müssen unbedingt gemäß Abb. 7 hergestellt werden.
+Um die Leiterbahnen auf die Platine zu
+bekommen, wurde im vorliegenden Fall
+gemäß Abb. 8 ein 8 W-Lötkolben verwendet.
+
+
+
+
+A
+E
+B
+D
+F
+C
+
+und maximale Leistungseinstellung am
+Ausgang des TX vorgenommen werden, bei
+gleichzeitiger Frequenzmessung am Lautsprecher. Danach darf der Poti nicht mehr
+verstellt werden.
+Sind diese Vorarbeiten erledigt, wird eine
+Wertetabelle aufgenommen. Hier wird die
+Leistung am TX so eingestellt, dass man
+eine gegebene Tonfrequenz im gesuchten
+Bereich gemäß Abb. 15 erhält. Der zugehörige MIDI-Code [4] und PWM-Wert
+werden notiert. Schließlich erhalten wir
+Tab. 1.
+
+Mathematik spart Arbeit
+DC 9 V, B: JP2 DC 9 V, C: JP3 PWM
+Signaleingang, D: JP4 0 V, E: JP4
+Lautsprecher, F: JP5 Lautsprecher
+
+Wer es nicht glaubt, dem sei Nachfolgendes
+besonders empfohlen. Die Sache selbst ist
+eigentlich recht schnell getan, seitdem es
+Computer oder das Internet gibt.
+Die Aufgabe ist es, eine Möglichkeit zu
+finden, einen gegebenen MIDI-Code in eine
+PWM-Einstellung umzurechnen [5]. Dazu
+werden die Daten aus Tab. 1 gemäß der
+Darstellung in Abb. 17 als rote Punkte ins
+Diagramm eingetragen. Die Verwendung
+von Microsoft Excel bietet die Möglichkeit,
+eine Ausgleichskurve (schwarz) automatisch zu berechnen. Alternativ kann die
+Berechnung auch über die Internetseite [6]
+durchgeführt werden. Schließlich erhält
+man eine Funktionsgleichung:
+
+Lochrasterplatine
+
+Von Robo Pro zum
+gewünschten Ton
+Wie können mit der aufgebauten Schaltung
+gezielt gewünschte Töne erzeugt werden?
+Zunächst muss über das Potentiometer der
+Arbeitsbereich eingestellt werden, in dem
+die Töne erzeugt werden sollen. Hierbei
+hilft Abb. 18. Nachfolgend erfolgt eine
+Einstellung im Bereich von 65...988 Hz
+(MIDI 36...83). Hierzu muss eine minimale
+
+= 0,000010957678355 ∙
+− 0,002954323848880 ∙
++ 0,311229974344280 ∙
+− 16,257777205721100 ∙
++ 420,858828728566000 ∙
+− 3838,610375204770000
+
+Diese Gleichung sieht kompliziert aus. Sie
+ist es aber nicht, solange man sie nicht mit
+Papier und Bleistift berechnen muss. Die
+vielen Kommastellen sind übrigens durchaus von Bedeutung, auch wenn die Anzahl
+der Stellen nicht für die Anwendung optimiert wurde. Der Vorteil dieser Gleichung
+ist, dass nun für jeden MIDI-Code eine
+PWM-Einstellung errechnet werden kann.
+
+Bei den bisherigen Messungen wurden die
+MIDI-Codes der Halbtonschritte weggelassen.
+
+Elektronik
+
+Funktionsgleichung in
+Robo Pro
+Robo Pro ist eigentlich keine Programmierumgebung mit speziellem Fokus auf die
+Lösung mathematischer Aufgaben. Deshalb
+ist die Funktionsberechnung etwas aufwändig. Aber es klappt – siehe Abb. 10.
+Nun ist es möglich, den TX frei programmierbare, einstimmige Musikstücke spielen
+zu lassen. Dazu können z. B. Listenfelder
+gemäß Abb. 11 verwendet werden. Für
+jeden zu spielenden Ton muss die Variable
+Zaehler um 1 erhöht und die Listenfelder
+ausgelesen werden, die PWR-Umrechnung
+gemäß Abb. 10 erfolgen und schließlich das
+Setzen eines Ausgangs, z. B. O1, auf den
+errechneten Wert durchgeführt werden.
+
+innerhalb von RoboPro
+
+Das fertige Modul
+Die oben gezeigte Platine hat gemäß Abb. 8
+eine Reihe an Steckerstiften. Über die
+zugehörigen Steckschuhe erfolgt für die
+Gehäusemontage die Verkabelung an die
+folgenden
+nach
+außen
+geführten
+Anschlüsse:
+∂ 2 × Eingang
+Versorgungsspannung
+9 V DC mit Verpolungsschutz
+∂ 1 × Eingang PWM Signal
+
+PWM-Einstellung aus einem gegebenen MIDICode
+
+∂ 1 × Ausgang
+(mono)
+
+3,5 mm
+
+Audio-Klinke
+
+den Ecken ist jeweils eine von unten durchgesteckte Schraube mit einem aufgeschraubten Abstandsbolzen (Langmutter)
+
+
+
+zu sehen. Hierüber erfolgt schließlich die
+Montage des Deckels.
+
+Gehäuse von oben
+
+Gehäuse geöffnet
+
+Anschluss und Verwendung
+
+Gehäuse von unten
+
+Der gelbe Signaleingang wird an einen
+Ausgang des TX angeschlossen. Über
+diesen Anschluss wird die Tonhöhe eingestellt. Ein grüner Eingang zur Spannungsversorgung wird mit einem anderen Ausgang des TX verbunden. Somit wird die
+Spannungsversorgung des PWM-Tongenerators einfach unterbrochen, wenn eine
+Tonpause erfolgen soll. Über den AudioAusgang kann ein Verstärker angesteuert
+werden.
+Einen Eindruck von der Funktionsweise
+vermittelt ein kleines Youtube-Video.
+
+
+
+Elektronik
+
+Quellen
+
+Gesamtaufbau im Verbund
+
+[1]
+
+fischertechnik: Baukasten hobby 4.
+
+[2]
+
+Analogsignal aus PWM:
+http://om.dharlos.de/doku/
+
+[3]
+
+Spannungsabhängiger Frequenzgenerator (vco):
+http://tymkrs.tumblr.com/post/44965
+07556/19fm-vco-555timer-i-hamlesson-o-de-day
+
+[4]
+
+MIDI, Töne und Frequenzen:
+http://www.sengpielaudio.com/Rech
+ner-notennamen.htm
+
+[5]
+
+Dirk Fox: „Einmessen“ eines
+digitalen Messgeräts. 1/2013, S. 39-48.
+
+[6]
+
+Regressionsberechnung im Internet:
+http://www.xuru.org/rt/PR.asp
+
+[7]
+
+CadSoft: EAGLE Platinenlayout.
+
+in eine zugehörige Tonfrequenz im Bereich von vier Oktaven
+
+
+
+
+MIDI
+
+SollFrequenz
+
+IstFrequenz
+ohne
+ohne
+
+PWM
+mittel
+
+MIDI
+
+SollFrequenz
+
+IstFrequenz
+
+PWM
+mittel
+
+Tab. 1: Gemessener Zusammenhang zwischen MIDI-Code, Frequenz und PWM
+
+
+
+
+Elektronik
+
+
+
+

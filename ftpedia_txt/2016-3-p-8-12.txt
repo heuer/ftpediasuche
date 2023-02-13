@@ -1,0 +1,190 @@
+
+
+Modell
+
+Luftseilbahn – frei schwebend über die Berge
+Daniel Canonica
+Über steile Felsabhänge, wo keine Schienen gebaut werden können, schweben anmutig Luftseilbahnen. Ein Kindertraum, verwirklicht mit stabilen Elementen.
+Manches Kind träumt von einem Modell
+einer Luftseilbahn, mit Legoteilen oder
+einem Metallbaukasten verwirklicht. Und
+so mancher Traum zerplatzt, weil die
+Seilspannung zu groß wird oder die Kabine
+unversehens talwärts rast.
+Nach gefühlten 40 Jahren durfte ich meinen
+Traum in die Wirklichkeit umsetzen.
+
+Technische Meisterwerke
+Luftseilbahnen können große Höhenunterschiede rasch überwinden. In der
+Regel hängen sie an einem oder zwei
+Tragseilen und werden von einem Zugseil
+gezogen. Wie bei den Standseilbahnen
+hängen zwei Kabinen am selben Zugseil,
+welches an der Berg- und Talstation
+umläuft, sodass der Antriebsmotor vor
+allem den Gewichtsunterschied zwischen
+der bergwärts und der talwärts fahrenden
+Kabine überwinden muss (in der Praxis
+spielt auch das Seilgewicht eine Rolle.)
+Dieser Typ wird auch Pendelseilbahn
+genannt [1].
+Außerdem gibt es vor allem in Skiorten
+auch Gondelbahnen, welche sich in ein
+ständig laufendes Zugseil ein- und auskuppeln und in den Stationen langsam
+umlaufen. Der Vorteil der Gondelbahnen
+liegt vor allem in der hohen Beförderungskapazität.
+Die Kabinen vieler Luftseilbahnen fassen
+heute 100 Personen und mehr und wiegen
+10-15 Tonnen; sie bewegen sich mit etwa
+20-40 km/h berg- und talwärts.
+
+(Quelle: Wikipedia)
+
+Auch wenn einem beim Herunterschauen
+manchmal fast schwindlig wird, so ist die
+durchschnittliche Steigung vieler Luftseilbahnen nicht extrem hoch: die meisten
+Bahnen überwinden bei mehreren Kilometern horizontaler Länge einen Höhenunterschied von einigen hundert bis zu etwa
+2.000 Metern. So hat etwa die Bahn zum
+Klein Matterhorn mit der höchstgelegenen
+Bergstation in Europa (3.820 m ü. M.) eine
+durchschnittliche Steigung von ca. 25%.
+Allerdings haben viele Bahnen flachere und
+zwischendurch auch sehr steile Abschnitte.
+
+Eine Bahn, die offenbar viele Rekorde
+bricht, ist die Dagu Glacier-Bahn in
+Sichuan, China: Sie überwindet auf 2,4 km
+mehr als 1200 m Höhendifferenz und die
+Bergstation liegt auf 4.843 m über Meereshöhe [2].
+
+Das Modell
+Von Anfang an war klar, dass mit dem
+Modell verschiedene Herausforderungen zu
+bewältigen sind:
+• Insbesondere die Bergstation muss eine
+erhebliche Spannung des Tragseils aushalten.
+• Die Kabinen müssen so leicht sein, dass
+sie das Tragseil nicht übermäßig
+belasten.
+• Das Zugseil muss ebenfalls eine relative
+hohe Spannung haben.
+
+Modell
+
+Durch die Wahl des Neigungswinkels des
+Tragseils kann ein Kompromiss zwischen
+der auf das Zugseil wirkenden Kraft und der
+am Tragseil aufliegenden Kraft gefunden
+werden. Z. B. ist bei einem Winkel von 45°
+(also 100% Steigung) die senkrecht zum
+Tragseil wirkende Kraft genau gleich groß
+wie die Kraft am Zugseil (die Hangabtriebskraft), nämlich je die Gewichtskraft
+dividiert durch √2.
+Zu Beginn hatte ich eine wesentlich größere
+Kabine mit der Statik-Grundplatte 90 ∙
+180 mm gebaut, doch diese war einfach zu
+schwer und zudem ein Hindernis für die
+Einfahrt bei der Bergstation. Schließlich
+habe ich mich für eine ultraleichte Kabine
+mit 90 ∙ 120 mm Grundfläche entschieden,
+welche fast nur aus Statikteilen besteht. Sie
+bringt ohne das Laufwerk gerade mal 190 g
+auf die Waage.
+
+
+Die Bergstation ist mehrfach verstrebt und
+abgespannt. Da ich zu Beginn noch nicht
+wusste, welche Steigung ich wählen würde,
+ist sie relativ hoch gebaut (Abb. 4).
+(Quelle: Wikipedia [3])
+
+Das Tragseil ist ein Nylonfaden. Er ist in der
+Talstation verankert, wird hochgeführt, geht
+dort über eine Umlenkrolle, wieder runter,
+
+
+über zwei Umlenkspulen auf die andere
+Seite, wieder hoch, wieder runter und
+schließlich auf eine Spule mit einem kleinen
+Motor (Abb. 5).
+
+Das Zugseil läuft oben und unten über große
+Umlenkräder, wovon in der Talstation eines
+angetrieben ist. Bei der linken Kabine ist es
+einige Male um beide Haken gewickelt, bei
+der rechten am oberen Haken befestigt und
+unten kann es mit einer Spule angezogen
+oder gelockert werden.
+
+
+
+Das angetriebene Rad hat einen Gummiring, um den Faden mit der nötigen Reibung
+zu bewegen.
+
+
+Das Anziehen des Tragseils wird eher
+manuell durch Verschieben der Talstation
+bewirkt. Der Motor dient dazu, kleine
+Anpassungen der Spannung zu erleichtern.
+In der Wirklichkeit ist das Tragseil ein
+Stahlseil mit mehreren Zentimetern Durchmesser (je nach Last), welches pro Kilometer einige Tonnen (!) wiegt.
+
+
+
+Modell
+
+Die Talstation ist ordentlich ausgebaut, die
+Kabinen fahren punktgenau ein, damit die
+Passagiere ohne Stolpern ein- und aussteigen können.
+
+gefüllten, mehrere Kilogramm schweren
+Sammelbox verbunden habe. Dies genügt in
+der Praxis, sodass sich die Talstation nicht
+von selber verschiebt.
+
+Schließlich habe ich eine Abdeckung für
+das Maschinenhaus der Talstation gebaut:
+
+Bei der Antriebseinheit läuft das Zugseil
+über eine zusätzliche Rolle, damit der
+Winkel stimmt (dass ich das Antriebsrad
+auch waagrecht stellen könnte, ist mir erst
+später eingefallen):
+Einige Impressionen vom fertigen Modell:
+
+
+
+Übrigens noch ein Wort zur Verankerung
+der Talstation: diese sollte ja nicht einfach
+auf dem Boden rumrutschen, sonst hängen
+Trag- und Zugseil bald bedrohlich durch!
+Ich habe mir so geholfen, dass ich die
+Grundplatte mit einer Schnur fest mit der
+
+
+
+
+Und hier gibt‘s Fahrkarten:
+
+
+Quellen
+
+
+Die Führungen sorgen für eine ruhige
+Einfahrt auch bei böigem Wind:
+
+
+[1]
+
+Wikipedia: Luftseilbahn.
+
+[2]
+
+Wikipedia: Vergleich
+herausragender Luftseilbahnen.
+
+[3]
+
+Wikipedia: Hangabtriebskraft.
+
+

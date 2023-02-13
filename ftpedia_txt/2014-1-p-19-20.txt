@@ -1,0 +1,82 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+ft-Spezialteile made by TST (Teil 7)
+Andreas Tacke
+In einer lockeren Reihe stellt TST einige von ihm entwickelte Spezialteile vor, die so manche
+Lücke beim Bauen mit fischertechnik schließen. Im heutigen Beitrag geht es um Strom, bzw.
+eine zweipolige Verteilerleiste……
+Wer kennt das nicht: Da hat man ein
+Modell gebaut, und zum Schluss steht mal
+wieder die Verkabelung an. Oft gibt es
+eine zentrale Stelle, an der alle Kabel
+zusammenlaufen und die beiden Pole Plus
+und Minus verteilt werden müssen. Da
+braucht es z. B. eine Leitung für das
+Interface oder die Blinkelektronik oder
+andere Verbraucher, die dauerhaft Strom
+benötigen. Schnell entsteht durch das
+zusammenstecken von Steckern ein bizarr
+aussehendes Gebilde (Abb. 1).
+
+
+
+Leider sind diese Verteilerplatten nicht
+mehr lieferbar, und ich selbst besaß nie
+eine solche. Da ich in meinen Modellen
+aber nicht so einen „Steckerwust“ haben
+wollte, machte ich mir Gedanken, wie sich
+das Problem lösen lässt.
+
+Früher gab es von fischertechnik Verteilerplatten, die für solch einen Zweck genau
+geeignet sind. Die verbreitetsten sind die
+einpoligen Verteilerplatten 31327 und
+31328 in grün bzw. rot (Abb. 2, 3; auch [1,
+2]). Es gab auch in sehr alten Kästen mal
+mehrpolige, aber die sind sehr selten.
+
+Gesucht war ein Verteiler, der zweipolig
+ausgeführt ist und sich perfekt mit den
+fischertechnik-Bauteilen kombinieren lässt.
+Nach dem einen oder anderen Prototypen
+kam ich zu dem Entschluss, mir aus POM
+ein Gehäuse zu fräsen und dort zwei
+Messingwellen
+als
+Stromleiter
+zu
+integrieren.
+
+
+
+
+
+In dieser Leiste haben nun insgesamt 14
+Stecker Platz, z. B. sieben für den Plusund sieben für den Minuspol.
+Somit hat man einen zentralen Platz, an
+dem alles verteilt wird, und das Ganze ist
+dann auch noch sehr übersichtlich.
+Um die Sache abzurunden habe ich das
+Teil noch in 3D konstruiert (Abb. 5) – es
+sieht da echt schick aus, finde ich.
+
+
+Hier zeigt sich mal wieder, wie leicht zu
+einem vorliegenden Problem mit ein paar
+kreativen Gedanken ein Spezialteil entsteht, welches perfekt zu fischertechnik
+passt…
+
+Referenzen
+[1]
+
+Stefan Falk: Perlentauchen (Teil 3).
+fischertechnik-Basiswissen, 1/2013, S. 22-31.
+
+[2]
+
+Dirk Fox: Verkabelung. Tipps &
+Tricks, ft:pedia 2/2013, S. 13-17.
+
+

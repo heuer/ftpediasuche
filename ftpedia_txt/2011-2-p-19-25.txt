@@ -1,0 +1,427 @@
+
+Schaltungstechnik
+
+Schaltungstechnik
+
+Motorsteuerungen (Teil 2)
+Stefan Falk
+Im ersten Teil dieses Artikels – siehe ft:pedia Ausgabe 1/2011 – führten wir einfache
+Schaltungen für Motorsteuerungen ein, die nur Taster benötigen. In der heutigen Folge
+erweitern wir diese Schaltung um eine Endlagenabschaltung und einen Überlastschutz.
+In der vorherigen Ausgabe der stellten wir eine Schaltung vor, die es
+erlaubt, einen Motor mit zwei Tastern
+getrennt für Links- und Rechtslauf zu
+steuern. Hier nochmal das Schaltbild zur
+Erinnerung:
+
+Wem mehr Bauteile zur Verfügung stehen,
+kann den Kran natürlich nach Belieben
+vergrößern oder ausbauen.
+Am Ende dieses Artikels soll der Kran die
+folgenden Forderungen erfüllen:
+1. Wir wollen das Verfahren des Krans auf
+den Schienen mit zwei Tastern wie in
+Schaltung 1 steuern können.
+2. Am Ende der Schienen soll der Motor
+automatisch stoppen. Eine Bewegung
+soll dann nur noch in die andere
+Richtung möglich sein.
+
+Schaltung 1: Getrennte links/rechts-Taster
+
+Für die Erweiterung dieser Schaltung
+wollen wir ein konkretes Modell als
+Beispiel nutzen: einen kleinen Hafenkran:
+
+3. Ebenso soll das Kranseil über je einen
+Taster für hoch/herunter komfortabel
+gesteuert werden.
+4. Das Kranseil soll automatisch stoppen,
+sobald der Haken oben an der Spitze
+des Auslegers ankommt. Das Seil soll
+dann nur noch herabgelassen werden
+können.
+5. Das Kranseil soll gegen eine Überlastung geschützt sein. Sollte eine zu
+schwere Last angehängt werden, soll
+das Seil ebenfalls nur noch gesenkt
+werden können.
+
+
+Für all dies brauchen wir nichts weiter als
+einige zusätzliche Taster und ein paar
+fischertechnik-Teile! Aber eins nach dem
+anderen.
+
+
+
+Zum Bau des Modells
+Wir beginnen mit einem einfachen
+Rahmen, auf dem ein S-Motor mit Hubgetriebe hin- und herfahren kann. An den
+Enden der Strecke sind Endlagen-Taster
+angebracht, die einfach direkt vom Motor
+betätigt werden, wenn er dort ankommt.
+Wir versuchen, mit einem Minimum an
+Bauteilen auszukommen:
+
+Wie Ihr seht, haben wir gleich vier Taster
+vorgesehen – wir wollen ja später auch
+noch das Kranseil heben und senken
+können. Für den Augenblick genügen
+jedoch noch die beiden Taster für die
+Steuerung des Wagens. In Ergänzung zu
+Schaltung 1 wollen wir zunächst erreichen,
+dass der Motor an den Endlagen automatisch ausgeschaltet wird.
+
+Wann muss welche Leitung
+unterbrochen werden?
+
+
+Schon mit dieser Baustufe können wir –
+noch ohne die Endlagentaster anzuschließen – Schaltung 1 ausprobieren.
+Dazu dient eine Steuereinheit, die die
+Taster zur Bedienung des Krans enthält.
+Abbildung 3 zeigt einen Vorschlag unter
+Verwendung der älteren fischertechnikTaster. Ihr könnt diese oder auch die
+aktuellen Taster verwenden – sie funktionieren genau gleich.
+
+Seil
+abwärts
+
+Schaltung 2: Der untere Taster ist gedrückt
+
+Wagen
+nach rechts
+Wagen
+nach links
+
+Seil
+aufwärts
+
+
+Stellen wir uns zunächst vor, wir würden
+den unteren Taster von Schaltung 1
+drücken und den Motor damit zum
+Verfahren des Krans in eine bestimmte
+Richtung bringen. Die stromführenden
+Leitungen sind in diesem Zustand die in
+Schaltung 2 farbig dargestellten:
+
+Wenn der Kran am Ende der Schiene
+angekommen ist, müssen wir die – und nur
+die! – Leitung unterbrechen, die den Motor
+in diese Richtung laufen lässt. Wir dürfen
+keine Leitung unterbrechen, die für die
+entgegengesetzte
+Bewegungsrichtung
+benötigt wird, denn der Kran soll ja durchaus noch in die andere Richtung, also weg
+vom Ende der Schiene, bewegt werden
+können. Das erreichen wir, indem wir
+einen Öffner wie in Schaltung 3 gezeigt
+einsetzen:
+
+
+Schaltung 3: Endlagentaster 1
+
+Der zusätzliche, in orange eingezeichnete
+Endlagentaster ist so am Ende der Schiene
+angebracht, dass der Wagen bzw. der
+Motor selbst ihn betätigt, wenn er das Ende
+der Schiene erreicht hat. In diesem
+Moment unterbricht der Endlagentaster die
+Stromzufuhr. Sein dritter Kontakt (der
+Arbeitskontakt) bleibt im Augenblick noch
+unbeschaltet, wir nutzen nur den Zentralund den Ruhekontakt.
+Wenn der Endlagenschalter also erreicht
+ist, schaltet sich der Motor ab – wie
+gefordert. Aber lässt er sich noch in die
+andere Richtung bewegen? Dazu müssen
+wir den unteren Taster im Schaltbild loslassen und den oberen drücken. Schauen
+wir uns diese Situation in Schaltung 4 an:
+
+Schaltungstechnik
+
+Schaltung 5: Beide Endlagentaster sind
+eingebaut
+
+Voilà! Der Kranwagen hält am Ende der
+Schienen an und kann dennoch in die
+andere Richtung eingeschaltet werden.
+
+Der Kranaufbau
+Der in Abbildung 4 gezeigte Kranaufsatz
+wird einfach mittels zweier Federnocken
+direkt auf dem S-Motor angebracht. Zwei
+Vorstuferäder unter je einem Baustein 15
+stützen den Kran auf der vorderen Schiene
+ab:
+
+Schaltung 4: Umsteuern der Bewegungsrichtung bei gedrücktem Endlagentaster
+
+Wie wir sehen, funktioniert die Schaltung
+soweit schon: Der Motor bekommt wieder
+Strom, und zwar wie gewünscht andersherum gepolt, sodass er den Kran vom
+Ende der Schiene wegbewegt. Probiert es
+aus!
+Dasselbe müssen wir natürlich auch für die
+andere Endlage am anderen Ende der
+Schiene tun: Wir benötigen einen weiteren
+Endlagentaster an dieser Seite. Schaltung 5
+zeigt diesen Stand (alle Taster sind wieder
+in unbetätigter Position eingezeichnet):
+
+
+Abbildung 5 zeigt den Kranaufbau: Auf
+der Oberseite werden zentral zwei Bausteine 30 eingeschoben. Der S-Motor für
+das Kranseil wird aus Platzgründen quer
+eingebaut, indem er einfach mit zwei
+Federnocken direkt auf der Grundplatte
+120 * 60 befestigt wird. In der Seilwindentrommel 30 steckt eine Rastachse 30, auf
+der eines der beiden Rastkegelzahnräder
+sitzt.
+
+
+geklemmt. (Weil sie so nützlich sind,
+werden wir Flaschenzüge noch ausführlich
+in der ft:pedia behandeln.)
+Der Seilmotor wird zunächst einfach nach
+Schaltung 1 an die beiden bisher
+unbenutzten Taster der Steuerungseinheit
+angeschlossen. Damit funktioniert schon
+einiges wie gewünscht:
+Wir können den Wagen nach links und
+rechts bewegen.
+
+
+Die Seiltrommel und der Baustein 15, der
+die Antriebsachse führt, müssen alle auf
+der Höhe des Motorgetriebes sitzen, damit
+der Seilantrieb leicht läuft. Abbildung 6
+zeigt eine andere Sicht auf den Kran:
+
+Er wird an den Endpositionen automatisch stoppen und.
+Das Kranseil kann ebenfalls komfortabel auf und ab bewegt werden.
+Unsere Anforderungen 1, 2 und 3 haben
+wir damit bereits erfüllt. So lädt das
+Modell schon zum Spielen ein, oder?
+
+Die Wiedereinführung der
+Kurzschlussbremse
+
+
+Zur Vergrößerung der Tragkraft verwenden wir einen Flaschenzug. Kurz
+gesagt, verteilen wir die Last auf zwei
+Abschnitte des Seils, und erreichen damit
+eine höhere Tragkraft auf Kosten der
+Geschwindigkeit, mit der der Haken hochgezogen wird. Das Tragseil kommt wie in
+solche gelegt, und sein Ende schließlich an
+der Auslegerspitze befestigt.
+Das geht ganz einfach, wenn wir das Seil
+einmal um den Zapfen des Rollenlagers 15
+schlingen, bevor dieser in die Nut des
+Statikträgers eingeschoben wird. Dadurch
+wird das Seilende zuverlässig ein22
+
+Angespornt durch diesen Erfolg – immerhin ganz ohne Elektronik oder Computer!
+– wollen wir versuchen, die schon im vorherigen Artikel (siehe ft:pedia 1/2011)
+besprochene Kurzschlussbremse auch für
+die Endlagentaster zu realisieren. Wenn
+der Kranwagen ein Ende der Schienen
+erreicht hat, soll der Motor nicht etwa
+langsam auslaufen, sondern sofort stillstehen. Ansonsten könnte die Endlage
+durch den Schwung ja doch noch überschritten werden! (Anmerkung: Bei einem
+schweren Kran möchte man natürlich ein
+sanftes Auslaufen und keinen ruckartigen
+Halt erreichen – das realisieren wir in einer
+späteren Ausgabe der ft:pedia.)
+Die Kurzschlussbremse lässt sich überraschend einfach wieder einbauen: Wir
+brauchen nur dafür zu sorgen, dass die
+bisher unbeschalteten Arbeitskontakte der
+Endlagenschalter den Motor mit derselben
+Leitung verbinden, wie es die Ruhekontakte der Steuerungstaster tun. Mit
+anderen Worten: Wenn wir den Motor
+nicht per Kurzschlussbremse dadurch
+
+anhalten, dass wir den Steuerungstaster
+rechtzeitig loslassen, muss diese Aufgabe
+eben der Endschalter übernehmen.
+Schaltung 6 zeigt, wie’s geht. Alles, was
+wir dazu brauchen, sind zwei zusätzliche
+Leitungen (in orange eingezeichnet):
+
+Schaltung 6: Kurzschlussbremse für die Endlagentaster
+
+Wir wollen kurz überprüfen, ob die
+Schaltung wirklich korrekt ist. Wir nehmen
+wieder an, dass der untere Steuerungstaster
+gedrückt ist. Außerdem soll das
+betreffende Schienenende bereits erreicht
+sein, sodass auch der im Schaltbild unten
+eingezeichnete Endlagentaster bereits
+gedrückt ist. Damit sieht die Schaltung so
+aus:
+
+Schaltungstechnik
+
+matisch stoppt, wenn eine zu große Last
+am Haken hängt. Ebenso soll er sofort
+anhalten, sobald der Haken ganz oben am
+Ausleger ankommt. Damit wollen wir eine
+Überlastung des Seils oder gar das
+Umfallen des Krans verhindern.
+Wenn wir recht überlegen, ist die
+Forderung, dass der Motor abschalten soll,
+wenn der Haken oben ankommt, nichts
+anderes als eine Endlagenabschaltung. Na
+prima! Die Schaltung dafür kennen wir ja
+schon. Das ist nichts anderes als
+Schaltung 3, evtl. ergänzt durch die
+zusätzliche Leitung für eine Kurzschlussbremse, damit der Seilmotor bei Erreichen
+der Endlage schlagartig anhält. Schaltung 8
+zeigt diese Schaltung:
+
+Schaltung 8: Endlagentaster für das Kranseil
+
+Ein Überlastschutz für das
+Kranseil
+Schaltung 7: Unterer Steuerungstaster und
+zugehöriger Endlagentaster sind betätigt
+
+Nur die durchgezogen gezeichneten
+Leitungen könnten nun von Strom durchflossen werden, alle anderen sind in diesem
+Zustand bedeutungslos (überlegt selbst, ob
+das stimmt!). Die beiden Anschlüsse des
+Motors sind also wieder miteinander
+verbunden, der Motor ist also kurzgeschlossen und hält schlagartig an.
+Perfekt!
+
+Der Kranhaken stoppt
+automatisch
+In Forderung 3 verlangten wir, dass der
+Motor, der das Kranseil hochzieht, auto-
+
+Zusätzlich wollen wir ja aber, dass der
+Motor auch dann stillgesetzt wird, wenn
+eine zu große Last am Haken hängt. Dazu
+brauchen wir also eine Vorrichtung, die
+erkennt, ob das Seil zu sehr gespannt ist –
+dann muss wiederum ein Taster betätigt
+werden, der den Motor abschaltet.
+Abbildung 7 zeigt einen Vorschlag für die
+Konstruktion der Überlast-Erkennung. Wir
+verwenden die Federkraft einer Bauplatte
+45 * 15 mit zwei Zapfen zur Feststellung
+der Seilspannung. Solange das Seil nicht
+zu sehr gespannt ist, wird der Taster
+gedrückt – wir müssen den Taster anders
+als bisher also so beschalten, dass der
+Motor stehenbleibt, wenn der Taster
+losgelassen wird.
+
+
+
+Die Ansprechempfindlichkeit, also die
+Seilspannung, bei der der Taster losgelassen wird, können wir variieren, indem
+wir den Taster weiter nach außen oder
+nach innen justieren. Er muss gerade so
+weit nach innen geschoben werden, dass er
+von der federnd gelagerten Achse
+zuverlässig gedrückt wird, wenn eine zu
+hohe Seilspannung wieder gering genug
+wird. Abbildung 8 zeigt die Rückansicht
+unserer Überlastsicherung:
+
+selbstrückstellenden
+Pneumatikzylinder
+ausprobieren, oder auch einen mit mehr
+oder weniger Druck beaufschlagten
+Zylinder, mit dem Ihr die Ansprechempfindlichkeit
+ebenfalls
+einstellbar
+machen könnt. Ihr könnt auch die Seiltrommel mitsamt Motor beweglich lagern
+und gegen Federdruck den Taster betätigen
+lassen. Die Grenzen sind nur durch die
+Phantasie gesetzt! Vielleicht wollt Ihr ja
+ein paar Varianten selbst ausprobieren.
+Welche funktioniert am besten für welche
+Überlast-Grenzen?
+
+Zwei Fliegen mit einer Klappe
+Brauchen wir nun also noch einen Taster,
+um den Kranhaken sowohl beim oberen
+Anschlag als auch bei Überlastung zu
+stoppen? Nein! Wenn der Haken oben
+ankommt, wird er ja zwangsweise auch
+blockiert – er stößt ja schließlich oben am
+Ausleger an. Hier zahlt sich also doppelt
+aus, dass wir einen Flaschenzug eingebaut
+hatten. Ein nur einfach geführtes Seil mit
+einem Haken daran würde ohne weitere
+Schutzmaßnahmen einfach um die
+Umlenkrolle an der Auslegerspitze
+gezogen werden!
+Da der Kranhaken nun ganz oben zwangsweise angehalten wird und der Motor
+weiter am Seil zieht, wird das Seil ja wie
+bei einer Überlastung sofort gespannt –
+und unser Überlastschutz wird den Motor
+sofort stillsetzen.
+
+
+Viele weitere Varianten einer solchen
+Mechanik sind natürlich denkbar. Man
+könnte ein Gewicht anheben lassen, ein
+Haushaltsgummi als federndes Element
+einsetzen,
+eine
+fischertechnik-Feder
+verwenden, oder eine Feder aus einem
+Kugelschreiber (wenn sie gut 4 mm Innendurchmesser hat, können wir sie auf eine
+fischertechnik-Achse stülpen). Vielleicht
+wollt Ihr einen sich per eingebauter Feder
+
+Wir brauchen also den Endlagentaster aus
+Schaltung 8 nur durch den Überlasttaster
+zu ersetzen. Dieser eine Taster übernimmt
+dann gleichzeitig beide Funktionen, Überlastschutz und Abschaltung des Motors,
+sobald der Haken ganz oben am Ausleger
+ankommt.
+Damit haben wir alle Forderungen an unser
+Modell erfüllt! Wir können den Kran
+gefahrlos bis an die Enden der Schienen
+fahren lassen – er wird nötigenfalls automatisch anhalten. Außerdem können wir
+
+den Kranhaken nicht über den Ausleger
+ziehen, und das Kranseil ist gegen zu hohe
+Last geschützt.
+
+Und was kommt nun?
+Was könnten wir noch an unserem Modell
+verbessern?
+Vielleicht wollen wir den Seilmotor auch
+dann anhalten lassen, wenn der Haken am
+Boden ankommt und das Seil also zu
+locker hängt? Auch das können wir mit
+einem „Unterlast-Schutz“ und einem
+weiteren Taster realisieren. Ein Unterlastschutz muss wohl sehr feinfühlig reagieren
+können – aber das Tüfteln ist ja gerade der
+Sinn von fischertechnik und macht Euch
+hoffentlich viel Spaß!
+
+Schaltungstechnik
+
+Wenn Ihr den Kran und die Schaltung
+komplett aufbaut, seht Ihr, dass da eine
+ganz stattliche Anzahl von Leitungen notwendig ist – insbesondere zwischen der
+Steuereinheit und dem Kran. Im nächsten
+Artikel dieser Serie werden wir eine
+Schaltung kennen lernen, die zwar zwei
+elektronische Bauteile benötigt, dafür aber
+mit weniger Leitungen auskommt. Und wir
+lassen einen Motor langsam auslaufen –
+das Gegenteil der Kurzschlussbremse
+sozusagen.
+Und auch damit sind wir noch lange nicht
+am Ende von „viel Effekt mit wenig
+Aufwand.“ Es bleibt also spannend!
+
+
+

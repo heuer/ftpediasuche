@@ -1,0 +1,351 @@
+
+fischertechnik-Basiswissen
+
+fischertechnik-Basiswissen
+
+Perlentauchen (Teil 1)
+Stefan Falk
+Es kamen schon mehrfach Anfragen an die ft:pedia, wir mögen doch mal einige der heute
+nicht mehr hergestellten fischertechnik-Teile und natürlich ihre Einsatzzwecke vorstellen.
+Also bitteschön: Mit diesem Artikel eröffnen wir eine kleine Serie, die ältere Teile von
+Mechanik bis Elektronik beleuchtet – immerhin sind sie bei Bedarf ja einzeln oder gebraucht
+zu haben.
+In einer kleinen Artikelserie zeigen wir
+also Bauteile, die vielleicht nicht (mehr)
+weit bekannt sind. Abgesehen vom historischen Interesse gibt es darunter durchaus
+einige heute leider unersetzte Perlen. Man
+kann aber schön erkennen, wie sich das
+fischertechnik-Bauteilesystem über die
+Jahrzehnte wunderbar weiter entwickelt
+hat. Wenngleich man in den Anfangszeiten
+von fischertechnik mit weniger verschiedenen Teilen auskam (bzw. auskommen
+musste), sind die heutigen Modelle durch
+den technischen Fortschritt doch oftmals
+deutlich eleganter und wiegen vor allem
+weniger.
+
+Winkelsteine 30°
+Wir beginnen locker mit den ersten 30°Winkelsteinen. Da gab es den kaum noch
+bekannten, aber auch nicht besonders
+wichtigen 31012 Winkelstein 30° rechtwinklig.
+Wie in Abb. 1 konnte man damit schräge,
+aber recht massive Verstrebungen herstellen – Statikstreben wurden „erst“ 1970
+eingeführt. Die „Strebe“ hatte eben bis
+zum Ansatzpunkt eine nur gerade Optik,
+anders als wenn man sie mit dem heute
+noch üblichen 31011 Winkelstein 30°
+gleichschenklig baute.
+
+
+Ein anderer Einsatzzweck des rechtwinkligen Winkelsteines war eine Klinkensperre. Eine ähnliche Mechanik wie in
+Nachbauen“ des Clubheftes 1971-3
+verwendet: Man konnte die Schublade mit
+der Ware nicht herausziehen, bis die Sperre
+nach Einwurf einer Geldmünze elektromagnetisch angehoben wurde.
+
+
+
+denen man Teile genau genug positionieren kann.
+
+
+Winkelstein 30° gleichschenklig
+
+Ansonsten wird der Winkelstein 30°
+rechtwinklig wohl nicht weiter „vermisst“
+– seine Funktion kann man leicht auch
+anders erreichen.
+Eine interessante Veränderung hat aber der
+31011 Winkelstein 30° gleichschenklig
+erfahren. Die früheren Versionen waren
+nämlich etwas kleiner als die heutigen.
+Allerdings hatten beide Formgebungen
+gute, wohldurchdachte Gründe. Die UrVersion dieses Winkelsteins passte
+nämlich für bestimmte Arten von schrägen
+Verstärkungen
+zumindest
+in
+einer
+Richtung genau ins 15-mm-Raster von
+fischertechnik:
+Wie man sieht, kann man zusammen mit
+einem Baustein 30 und einem Winkelstein
+60° gleichseitig genau 30 mm Höhe überbrücken. Senkrecht dazu passt die Sache,
+wie man sieht, allerdings nicht genau ins
+Raster – aber dafür gibt’s ja die Nuten, in
+
+
+Die jüngere und heute noch aktuelle
+Version des Winkelstein 30° gleichschenklig ist größer geworden, und zwar
+so, dass drei davon genau 7,5 mm überbrücken, ein Halbkreis aus 6 also genau
+eine Bausteinbreite überbrückt, was auch
+nützlich sein kann:
+
+Winkelsteins 30° gleichschenklig
+
+Außerdem sind zwei davon entgegengesetzt aneinander gebaut genau 15 mm
+hoch:
+
+fischertechnik-Basiswissen
+
+Abgesehen von nicht ganz leichtgängigen
+Drehgelenken fand er gerne Einsatz, wenn
+es darum ging, Lichtschranken mit
+Linsenlampen zu betreiben. Linsenlampen
+hatten den Glaskolben des Lämpchens so
+geformt, dass eine Linse herauskam. Damit
+konnte mehr Licht weite Strecken bis zu
+einer Fotozelle überbrücken. So konnte
+man Lichtschranken bauen, die durchaus
+einen Meter überspannten.
+
+gleichschenklig
+
+Wenn wir schon dabei sind, wollen wir den
+gar nicht alten, aber vielleicht nicht jedermann bekannten 31918 Winkelstein 60°
+mit drei Nuten nicht unerwähnt lassen:
+Justierung einer Linsenlampe
+
+Allerdings saßen die Linse und das Lämpchen in der Fassung fertigungsbedingt
+nicht sauber zentriert. Deshalb hat man die
+Linsenlampe üblicherweise mittels zweier
+Bausteine 15 mit rundem Zapfen so
+justiert, dass der Haupt-Lichtkegel genau
+die gewünschte Richtung nahm.
+
+Reifen
+
+Rote runde Zapfen
+
+Ein kurzer Blick auf die frühen Reifen 30,
+45 und den etwas später verfügbaren
+Reifen 60 zeigt Abb. 9:
+
+Den Baustein 15 mit zwei Zapfen gibt es
+auch als Artikelnummer 31007 mit zwei
+roten, runden Zapfen. Ebenso gibt es ihn
+als 31059 bzw. in schwarz 103448 mit nur
+einem runden Zapfen (und Nut auf der
+gegenüberliegenden Seite).
+
+
+
+
+in die umlaufende Rille passten und so
+auf glatten Böden mehr Griff boten.
+Auch mit dem 35062 Rastkegelzahnrad
+lassen sich die Zahnstege dieser Reifen
+kombinieren, wie man bei Harald sieht:
+http://www.ftcommunity.de/details.php
+?image_id=23444
+
+Antriebsfeder
+
+Ein bisschen mehr als vielleicht auf den
+ersten Blick sichtbar steckt allerdings
+schon darin:
+Die erste Fassung des Reifen 30 hatte
+drei Spurrillen (oben Mitte in Abb. 9),
+eine spätere nur noch zwei.
+
+Ein enorm flexibel verwendbares Bauteil
+ist die schon erwähnte fischertechnik
+Antriebsfeder. Es handelt sich um eine
+lange, dünne Spiralfeder aus Metall. Ein
+Ende ist verjüngt, sodass man es ins andere
+stecken und mit etwas Hineindrehen
+zuverlässig verbinden kann:
+
+Ohne die Gummis passten die dehnbaren Antriebsfedern in die Rille, die
+wir im nächsten Abschnitt noch ausführlicher besprechen. Mit der jüngeren
+Fassung des Reifen 30 konnte man sie
+notfalls auch kombinieren.
+Paare von Reifen 45 oder 60 kann man
+etwas zueinander versetzt durchaus als
+Zahnradgetriebe einsetzen. Die kleinen
+Stege an den Flanken dienen dabei als
+Zähne.
+Im 45°-Winkel verbaut gelingen damit
+auch Winkelgetriebe.
+
+
+Auf dieselbe Art und Weise kann man
+auch beliebig viele Antriebsfedern miteinander verbinden und so verlängern. Ihr
+Name kommt natürlich nicht von ungefähr,
+war sie doch nicht weniger als der Vorläufer der 1970 zusammen mit der
+fischertechnik Statik eingeführten und
+heute noch beliebten fischertechnik-Kette:
+
+
+Für die Reifen 45 und 60 standen
+Gummiringe zur Verfügung, die genau
+
+der Antriebsfeder
+
+Wie man sieht, macht die Antriebsfeder
+alles mit, und so können auch schwierige
+Übertragungswege und -winkel gemeistert
+werden.
+
+fischertechnik-Basiswissen
+
+Verbinden von Achsen mit
+Bausteinen
+
+Ebenso kann sie als Federelement, etwa in
+einem kleinen Auto, verwendet werden:
+
+
+Achsverbindungen
+Um Achsen zu verlängern, gibt bzw. gab
+es zwei Bauteile:
+
+
+Für große Drehmomente ist die 31036
+Achskupplung 40 zu gebrauchen (ganz
+links in Abb. 11), bei kleineren genügt die
+31024
+Klemmkupplung
+(direkt
+daneben). Obwohl sie ähnlich aussehen
+wie die rechts gezeigten Distanzstücke,
+stecken in den linken beiden Bauteilen von
+drei Achsen durch die Abstandshalter
+hindurch gehen.
+
+Um eine Drehbewegung auf Bausteine zu
+übertragen, gibt es nicht nur die 31019
+Drehscheibe 60, sondern auch die ersten
+Seiltrommeln von fischertechnik konnten
+dafür verwendet werden.
+Man beachte, dass es von der 31016 Seiltrommel 15 zwei Varianten gibt: Die
+jüngere Version (im Bild die untere) hat
+auf einer Seite flachere Zapfen, die auch in
+die Nuten von Bausteinen 5 passen. Die
+frühere Fassung (oben im Bild) konnte das
+noch nicht – da gab es aber auch noch
+keine Bausteine 5 und 7,5.
+Der 31020 Klemmring Z36 (rechts im
+Bild) passt nicht nur genau da drauf, man
+kann ihn durch Verdrehen auch sicher eingerastet fixieren – er fällt nicht ab und
+klemmt zudem die Seiltrommel noch etwas
+fester auf die Achse.
+In neuerer Zeit kam die 38844 Achsverschraubung hinzu (Abb. 16).
+
+
+
+
+Kardangelenke
+
+
+Urversion des 31044 Kardangelenks, seine
+etwas moderner geformte nächste Fassung,
+und zum Vergleich das heutige RastKardangelenk.
+
+Gelenksteine
+Gelenkbausteine waren in den Anfangszeiten von fischertechnik eine echte
+Rarität: Der damals größte Kasten überhaupt, der fischertechnik 400, enthielt
+gerade mal zwei Stück davon:
+
+
+
+
+Es gibt ihn (oben rechts im Bild) auch mit
+einem roten runden Zapfen. Dieser
+Gelenkstein ist sehr robust, aber eben auch
+etwas klobig. Und hier haben wir ein
+Paradebeispiel dafür, dass sich das
+fischertechnik-System nicht nur immer
+treu bleibt – auch die ersten Teile von 1968
+passen mit den neuesten von heute
+zusammen – sondern auch immer wieder
+durch pfiffige Neuentwicklungen verbessert wird. Links unten im Bild sehen
+wir die erste Version eines nur 15 mm
+großen Gelenksteins. Das mittlere Bauteil
+in der Reihe ist das aktuelle Gelenk – trotz
+der geringen Größe kann man wieder, wie
+ganz früher, eine Achse mitten hindurch
+stecken.
+Ganz rechts schließlich sehen wir eine tolle
+Symbiose: Die äußere Gelenkklaue des
+linken Gelenks aus Abb. 15, kombiniert
+mit dem Kardanwürfel aus dem UrKardangelenk von 1968 ergibt ein kardanisches Gelenk für Bausteine anstatt
+Achsen.
+Wie perfekt man das einsetzen kann, zeigt
+zum Beispiel der Greifarm aus dem
+aktuellen Kasten Profi Pneumatic III (Abb.
+19).
+
+
+fischertechnik-Basiswissen
+
+unten im Bild eines erkennen kann. Heraus
+kommt ein Gelenkbaustein, der immer
+wieder in eine Richtung klappen möchte.
+Warum der Federgelenkstein so wichtig
+war, werden wir noch bei der Besprechung
+der Elektromechanik-Teile sehen.
+
+Die Winkelachse
+
+
+
+Die Gelenksteine gab es übrigens schon
+sehr früh auch als 31308 Federgelenkstein:
+
+Ein heute exotisch anmutendes, früher aber
+oft verbautes Teil ist die 31035 Winkelachse 30.
+Wie man sieht, ist sie an der Knickstelle
+verjüngt. Sie hat im Wesentlichen zwei
+Anwendungsbereiche: Zum einen als
+Sperrklinke, etwa bei handbetriebenen
+Kranseilen (Abb. 22).
+
+
+Im aufschraubbaren Inneren verbirgt sich
+eine auf Verdrehung beanspruchte Feder.
+Deren kurz umgeknickte Enden greifen in
+die winzigen Löcher ein, von denen man in
+der geöffneten Gelenksteinhälfte rechts
+
+
+
+Man kann das Zahnrad nur in eine Richtung kurbeln, typischerweise, um das auf
+der Seiltrommel aufgewickelte und in
+dessen Schlitz fixierte Kranseil anzuziehen. So bleibt ein anzuhebendes
+Gewicht von alleine oben.
+Erst wenn man die Klinke etwas anhebt,
+wird die andere Drehrichtung freigegeben.
+Dabei kann man auch noch ausnutzen, dass
+der verjüngte Mittelteil der Winkelachse es
+erlaubt, sie direkt in Baustein-Nuten einzuschieben: Die Sperrklinke bleibt offen:
+
+So kann man leicht gleitende Maschinenteile realisieren. Durch die drehbare
+Aufhängung des einzelnen Bausteins in
+Antriebe ansetzen.
+Mit vier dieser Winkelachsen kann man
+sogar ein homokinetisches Gelenk bauen
+und eine Drehbewegung gleichförmig „um
+die Ecke“ leiten:
+
+
+Eine weitere Anwendungsmöglichkeit sind
+Gleitlager (Abb. 24).
+
+Mehr Bilder gibt es auf der ft Community.
+Ein Video verdeutlicht die Funktionsweise:
+http://www.youtube.com/watch?v=tOIFqS
+wZJEI.
+
+Wie geht’s weiter?
+In der nächsten Folge werden wir einige
+weitere mechanische Bauteile und vor
+allem die vielen verschiedenen Motoren
+vorstellen, die im Laufe der Zeit auf den
+Markt kamen. Spätere Folgen stellen das
+weite Feld der fischertechnik-Elektromechanik dar und werden sich ausführlich
+mit sämtlichen Elektronik-Generationen
+befassen – vom 1969er LichtelektronikStab bis zum heutigen E-Tec-Modul.
+
+
+
+

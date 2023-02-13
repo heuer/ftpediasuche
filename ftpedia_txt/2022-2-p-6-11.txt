@@ -1,0 +1,196 @@
+
+
+Modell
+
+Der Holländer
+Rüdiger Riedel
+Mein Vater hat mir von seinen Kindheitserinnerungen erzählt. Beliebt war ein Fahrzeug mit
+einem Stangenantrieb wie bei einer Draisine auf Schienen.
+
+Entdeckt
+Kürzlich habe ich in Weinheim dieses
+Kinderfahrzeug entdeckt:
+
+Onkel und Tante arbeiteten bei der Sparkasse. Sie bekamen gelegentlich eine (!)
+Apfelsine, die in der Familie geteilt wurde,
+für jeden ein Stückchen. Ab und zu warf die
+Tante ein in Zeitungspapier gewickeltes 10Pfennigstück (10 ₰ ist ein Groschen) herunter, davon kauften sich mein Vater und
+seine Schwester zwei Stück Kuchen, das
+war ein Fest. Ebenso, wenn es Blaublickes
+gab, einfache Bonbons, aus dem Glas vom
+Krämer in ein Tütchen gefüllt.
+
+Der fischertechnik-Holländer
+Woher der Name stammt, habe ich nicht
+herausgefunden. Angetrieben wurde er mit
+den Händen, gelenkt wurde mit den Füßen
+an der Vorderachse.
+
+
+Von vornherein war klar: Der fischertechnik-Holländer muss den Original-Stangenantrieb haben, Lenkung, einen Fahrer und
+Fernsteuerung.
+
+Wie es damals war
+Damals, das war vor fast 90 Jahren; mein
+Vater ist jetzt 95. Er hatte keinen Holländer,
+das konnte sich die Familie nicht leisten. Sie
+waren zwar nicht arm, aber nur sein Vater
+hat auf seine „Stulle“ Wurst bekommen.
+Gekauft wurde 1/8 Pfund. Für das Pfund
+(½ Kilogramm) gab es ein eigenes Zeichen:
+
+
+
+
+Modell
+
+Zunächst probierte ich die Metall-Kurbelwelle 120 KR20 (31080). Der Hub des
+Antriebshebels wurde mir aber zu groß.
+Also brauchte ich einen kleinen Trick mit
+zwei Rastkurbeln KR12 Z10 m1 (35071),
+zwei Klemmbuchsen 10 (31023), einer
+Gelenkwürfelklaue 7,5 (31436) und einer
+Lagerhülse 15 (36819) – siehe Abb. 6.
+
+
+
+XS-Motor und Getriebe sind ebenfalls zu
+erkennen. Übersprungen haben wir den
+Aufbau des Hecks, das holen wir jetzt nach
+in den Abb. 4 und 5.
+
+
+Der Einbau der Fernsteuerung erfolgt nach
+
+Motor und Getriebe
+
+Anhand der Abbildungen sollte der Bau
+Schritt für Schritt keine Schwierigkeiten
+bereiten.
+
+
+Dahinter sitzt der Batteriehalter (135719).
+
+
+
+
+von oben gesehen
+
+
+Der Vorderwagen kann separat aufgebaut
+werden.
+
+Das Kabel des Servos ist recht lang, es wird
+nach Abb. 11 mit einer Schlaufe verlegt.
+
+
+Das Servo wird nach Abb. 10 an den Baustein 15 angebaut.
+
+
+Das Durchrutschen des Servos nach unten
+wird durch einen Baustein 5 verhindert,
+siehe Abb. 11. Oben erfolgt die Abdeckung
+mit einer Bauplatte 15×45 2Z (38242).
+
+
+Der Stangenantrieb besteht aus zwei SStreben 90 L (38543), einer Rastachse 45
+(35064), einer Rastachse 90 (35066), zwei
+Rastadaptern 20 (36227), zwei Rast-Seilrollen (136775), zwei Klemmbuchsen 5
+(37679), einem Rollenlager 15 (37636) und
+einer V-Achse 20 (31690).
+Der Einbau in den Wagen ist auf den Abb.
+13 und 14 zu sehen. Für die Vorderachse
+brauchen wir zwei Speichenräder 90×15
+(19317),
+zwei
+Freilauf-Flachzangen
+(68535), zwei Nabenmuttern (31058), zwei
+Rastaufnahmeachsen 22,5 (130593), zwei
+Rast-Seilrollen (136775), zwei Bausteine
+30, zwei Bausteine 15, zwei Bausteine 15
+Bohrung (32064), zwei Bauplatten
+
+
+Modell
+
+15×30×3,75 1N (32330), eine V-Achse 34
+Clipachse (32870), eine Klemmbuchse 5
+(37679), einen roten Baustein 15, zwei
+Bausteine 5 (37237) und einen Baustein 5
+15×30 3N (38428).
+
+Für die Lenkung brauchen wir auf der
+Unterseite einen S-Strebenadapter (31848)
+und als Auflage für die Füße des Fahrers
+zwei Winkelsteine 30° (31011) und zwei
+Federnocken (31982). Eine S-Strebe 42,4 X
+(36315) verbindet die Vorderachse mit dem
+Lenkhebel des Servos.
+
+miteinander verbunden
+
+
+
+
+Augen: Zwei S-Verbindungsstopfen 6
+(32316). Gesicht: V-Bauplatte 15×15 grau
+(32366). Mund: Kunststoffachse 15 Seilklemmstift (38226).
+Die graue V-Bauplatte 15×15 gibt es kaum
+noch, Alternativen wären rote, gelbe oder
+schwarze Platten. Auch den grauen Seilklemmstift gibt es kaum noch, hier kann ein
+Stück Silikonschlauch helfen.
+
+
+Nun brauchen wir noch ein Kind, das fährt
+und lenkt. Für den Körper nehmen wir zwei
+S-Winkelträger 7,5° (35052), vier Winkelsteine 7,5° (32071), zwei S-Riegelsteine
+(32850) und den Hals bildet eine V-Aufnahmeachse (31124).
+Der Kopf besteht aus Winkelsteinen 30°
+rechtwinklig (31012), die gibt es z. B. bei
+fischerfriendsman [2]. Verbunden werden
+sie mit zwei Bausteinen 15 Bohrung
+(32064), hinten zusammengehalten
+von einer Bauplatte 15×30×3,75 1N
+(32330) und zwei Federnocken.
+
+das ist natürlich unpassend. Wir wollen ein
+Kind fahren lassen, also bekommt es eine
+Kappe aus einer Nockenscheibe KR20 35
+(31038), einem V-Rad 23×10 (146535) und
+einer Radachse (172541).
+Schulter und Arme bestehen aus einer Rastachse 45 (35064), vier Rastachsen 30
+(35063), acht Rastkardangabeln 15 (35971),
+vier Rastkardanwürfeln 4,5 (35972), vier
+Hülsen 15 (31983) und zwei Rastadaptern
+20 (36227) als Hände.
+
+
+
+Modell
+
+Dann können wir auch gleich das Lenkrad
+zusammensetzen aus einer Rastachse 75
+(35087), zwei Rastkupplungen 15 (35073),
+zwei Lagerhülsen 15 (36819) und zwei
+Abstandsringen 3 (31597).
+Zwei Stücke Silikonschlauch (122363), je
+10 cm lang, werden zusammen mit zweimal
+sechs Hülsen 15 (31983) zu den Beinen mit
+vier Pneumatik-T-Stücken (31642) an den
+Enden. Die Füße bilden zwei Bausteine 5
+15×30 3N (38428).
+
+Referenzen
+[1]
+
+Rüdiger Riedel: Der fahrende
+Holländer. Auf YouTube, 2022.
+
+[2]
+
+Winkelstein 30° rechtwinklig bei
+fischerfriendsman
+
+
+
+

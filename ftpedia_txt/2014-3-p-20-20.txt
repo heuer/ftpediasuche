@@ -1,0 +1,53 @@
+
+
+Tipps & Tricks
+
+ft-Spezialteile made by TST (Teil 9)
+Andreas Tacke
+In einer lockeren Reihe stellt TST einige von ihm entwickelte Spezialteile vor, die so manche
+Lücke beim Bauen mit fischertechnik schließen. In diesem Beitrag geht es um Pneumatik,
+genauer gesagt um eine Alternative zu den Drosselventilen aus den 80er Jahren.
+Wer kennt sie noch, die Drosselventile
+(36077), die in den Pneumatik Kästen der
+80er waren? Und: Wer weiß, was der Einsatzzweck einer Drossel ist?
+Eine Drossel dient dazu den Luftstrom zu
+reduzieren. Somit lässt sich z. B. ein Pneumatikzylinder in seiner Aus- oder Einfahrgeschwindigkeit steuern [1]. Durch die Verengung des Leitungsquerschnitts wird der
+Luftstrom reduziert. In der Industrie werden
+solche Drosseln sehr häufig eingesetzt.
+
+Dann wird in die Nut ein Stück Messingwelle mit einem M3-Gewinde eingesetzt.
+Jetzt kommt noch eine Rändelschraube
+M3 x 10 hinein – und fertig ist unsere
+Drossel im ft-Lock (Abb. 2).
+
+Die Drosselventile 36077 sind super, aber
+leider auch rar geworden. Welche Alternative gibt es also?
+Peter Damen hat mich mit seiner Idee, eine
+Lüsterklemme zu nehmen (Abb. 1), auf eine
+Idee gebracht.
+
+rechts die Original-ft-Drossel (36077)
+
+Damit erhält man eine Drossel, die sich
+perfekt in das fischertechnik-System integrieren lässt. Des Weiteren bracht man, wie
+bei dem Original, kein Werkzeug, um sie
+einzustellen.
+Und wieder mal zeigt sich, dass durch eine
+tolle Idee ein noch tolleres Bauteil entstehen
+kann…
+
+Referenzen
+
+Ich nehme statt der Lüsterklemmen einen
+Baustein 15 mit Bohrung (32064) und versehe ihn mit einer zusätzlichen 3 mmBohrung von der Nut zur 4-mm Bohrung.
+
+[1]
+
+Stefan Falk: Druckluftsteuerungen
+(Teil 1), ft:pedia 1/2014, S. 58
+
+[2]
+
+Peter Damen: DrosselventilAlternative, ftcommunity.de
+
+

@@ -1,0 +1,256 @@
+
+
+Fahrzeugtechnik
+
+Lenkungen (Teil 1)
+Eines der wichtigsten Elemente eines Fahrzeugmodells ist eine funktionierende Lenkung. Für
+deren Konstruktion gibt es zahlreiche Möglichkeiten, von denen sich einige bereits in sehr
+frühen fischertechnik-Bauanleitungen finden. Mit der Zeit wurde die Zahl der Möglichkeiten
+durch die Entwicklung von Spezialbauteilen erheblich erweitert. Der Beitrag erläutert die
+technischen Hintergründe und stellt einige wichtige Basistechniken vor.
+
+Ein wenig Theorie
+Die beiden verbreitetsten Arten von Lenkungen sind die Drehschemel-Lenkung,
+bei der die Räder auf einer starren Achse
+sitzen und die gesamte Achse gedreht wird,
+und die Achsschenkel-Lenkung, bei der
+jedes Rad auf einer separaten Achse sitzt
+und die Lenkung auf beide gleichzeitig
+einwirkt.1 Der Vorteil der technisch einfacheren Drehschemellenkung, die ursprünglich vor allem bei Pferdekutschen
+Verwendung fand, liegt darin, dass beide
+Räder beim Lenken immer automatisch auf
+den Kreismittelpunkt M des Spurkreises
+ausgerichtet sind (Abb. 1).
+
+Hinterachse
+
+M
+
+
+
+Der größte Nachteil der Drehschemellenkung ist, dass die Stabilität des Fahrzeugs bei starkem Lenkeinschlag erheblich
+beeinträchtigt wird und das Fahrzeug zum
+Kippen neigt. In der Praxis wird diese Lenkung daher heute fast nur noch bei Anhängern verwendet. Außerdem benötigt die
+Lenkung eine größere Bodenfreiheit bzw.
+Bauhöhe, da beide Räder komplett unter
+den Fahrzeugboden passen müssen.
+Die Achsschenkellenkung, die heute im
+Automobilbau eingesetzt wird, wurde 1816
+von Georg Lankensperger, einem Wagenbauer aus München erfunden. Dabei werden einzeln aufgehängte Räder gelenkt. Sie
+können seitlich vom Fahrzeug unter einem
+Kotflügel montiert werden; die Breite des
+Kotflügels wird durch den maximalen
+Lenkeinschlag bestimmt. Die Stabilität des
+Fahrzeugs verändert sich durch den
+Lenkeinschlag nicht.
+
+Vorderachse
+
+1 Sehr ausführlich dazu der Hobby-Band 2-5.
+
+Zu beachten ist, dass sich die beiden Räder
+unabhängig voneinander drehen können,
+da das jeweils äußere Rad eine längere
+Wegstrecke zurücklegt (größerer Kreisradius) – eine Anforderung, die sich am einfachsten durch eine in der Mitte geteilte
+Achse oder ein Differential erfüllen lässt.
+
+Auch bei der Achsschenkel-Lenkung müssen beide Lenkachsen auf den Mittelpunkt
+desselben Spurkreises ausgerichtet werden,
+damit die Räder nicht „auseinander driften“. Da das äußere Rad bei der Kurvenfahrt einen größeren Kreisbogen abrollt als
+
+
+Fahrzeugtechnik
+
+das innere, dürfen die Achsen der beiden
+gelenkten Räder beim Lenkeinschlag nicht
+parallel stehen. Anderenfalls „drückt“ das
+äußere Rad nach innen. Das innere Rad
+muss daher schärfer einschlagen als das
+äußere. Die Einschlagwinkel müssen die
+beiden Achsschenkel daher so ausrichten,
+dass ihre Verlängerungen (dem „Radius“
+des Spurkreises) sich in demselben Punkt
+mit der seitlichen Verlängerung der Hinterachse schneiden (Abb. 2).
+
+Vorderachse
+
+Hinterachse
+
+M
+
+
+In der Praxis erreicht man das durch die
+Verwendung eines Lenktrapezes – eine
+Idee, die Georg Lankensperger in London
+über den Kunsthändler Rudolph Ackermann patentieren ließ. Daher spricht man
+auch von einer „Ackermann-Lenkung“.
+Die Achse, die Spurstange und die beiden
+Lenkhebel bilden dabei das (gleichschenklige) Lenktrapez (siehe Abb. 3).
+Lenkhebel
+Spurstange
+
+Lenktrapez
+Vorderachse Hinterachse
+
+Zwar stimmt auch beim Lenktrapez der
+Einschlagwinkel nur in zwei Positionen
+exakt; man erreicht aber in der Praxis eine
+gute Annäherung an die jeweils optimalen
+Winkel. Als Faustregel für die Justierung
+des Lenktrapezes gilt dabei, dass sich die
+Verlängerungen der beiden Seiten des
+Lenktrapezes (die Lenkhebel) bei Geradeausstellung genau in der Mitte der Hinterachse kreuzen müssen.
+Beim Lenkeinschlag ist zu beachten, dass
+Lenkhebel und Spurstange nie eine Gerade
+bilden (Strecklage), der Winkel zwischen
+beiden also immer kleiner als 180° bleibt –
+sonst würde die Lenkung beim „zurücklenken“ sperren. Als Faustregel gilt eine
+Maximalgröße des Winkels von 160°.
+Nicht immer lässt sich die Spurstange
+zwischen der Vorder- und der Hinterachse
+anordnen; vor allem bei Modellen mit
+Allradantrieb stört sie dort – und wird
+daher gelegentlich vor der Vorderachse
+platziert. In diesem Fall bildet die Spurstange die längste Seite des Lenktrapezes,
+dessen verlängerte Schenkel (Lenkhebel)
+sich auch hier in der Mitte der Hinterachse
+kreuzen müssen (siehe auch die Beispiele
+in den Abbildungen 7, 12, 16, 18). Dabei
+ist die Breite der Spurstange durch den
+Radabstand begrenzt.
+
+Drehschemellenkung
+Schon mit den „klassischen“ Bauteilen der
+frühen fischertechnik-Kästen ließen sich
+Drehschemellenkungen mit relativ wenigen Bauteilen realisieren.
+So findet man in den meisten frühen
+Bauanleitungen die in Abb. 4 gezeigte
+einfache Drehschemellenkung mit einer
+Starrachse unter Verwendung der Drehscheibe 60. Die Steuerung ist über ein
+Kardangelenk mit einem Lenkrad verbunden.
+
+
+
+
+Allerdings ist hier die Spurbreite durch das
+Maß des Lenkbalkens auf 7,5 cm festgelegt.
+
+Achsschenkellenkung
+Der Bau einer Achsschenkellenkung ist mit
+„klassischen“ fischertechnik-Bauteilen gar
+nicht so einfach. Konstruktionsvorschläge
+finden sich allerdings schon in sehr frühen
+fischertechnik-Baukästen, so z. B. in der
+Anleitung zum Grundkasten 50/3 (viertes
+Modell) oder im Hobby-Band 2-5 (S. 55).
+
+Alternativ lässt sich eine Drehschemellenkung auch mit einem Gelenkbaustein 45
+realisieren (wie im Traktormodell der Bauanleitung zum mot1-Kasten), gut geeignet
+für einen einfachen Anhänger (Abb. 5).
+
+Die Abbildungen 7 bis 9 zeigen eine solche
+Konstruktion mit einer Spur- und einer
+Gelenkstange aus Metall-Winkelachsen
+und den Gelenksteinen 45 als Achsschenkel. Die Spurstange wird über eine Zahnstange gesteuert.
+
+
+Etwas eleganter und mit geringerer Bauhöhe lassen sich Drehschemellenkungen mit
+einem Lenkbalken realisieren, wie bei dem
+einfachen Pferdefuhrwerk in Abb. 6.
+
+
+
+
+
+
+Fahrzeugtechnik
+
+
+Zwar ist die Lösung technisch pfiffig; mit
+den klassischen Bauteilen wirkt sie in
+einem fischertechnik-Fahrzeug aber etwas
+klobig.
+
+dient. Sie lässt sich einfach motorisieren.
+
+Im Grundkasten 50/2 finden sich weitere
+raffinierte Konstruktionen von Achsschemellenkungen, wie die in Abb. 10, die über
+eine Drehscheibe 60 gesteuert wird.
+
+
+
+Eine weitere ist die in Abb. 11 dargestellte
+Anhängerlenkung mit Deichsel, bei der das
+Lenktrapez fast ein Rechteck bildet –
+passend für einen sehr langen Anhänger.
+
+Diese Konstruktionen aus frühen fischertechnik-Kästen sind sehr lehrreich, aber
+vor allem in kleineren Modellen sperrig.
+Daher finden sich seit den 80er Jahren in
+fischertechnik-Kästen spezielle Bauteile
+wie Achsschenkel (32228), Anlenkhebel
+(31894), Lenkhebel (38473), Lenkklauen
+(35998), Lenkwürfel (31843), Spur(31614 bzw. 32229) und Zahnspurstangen
+(38472), Gelenkstangen (32884), Lenksäulen (35067 bzw. 32885), Lenkstock
+(32852) und Lenkrad (31916), die die Konstruktion von Lenkungen vereinfachen und
+
+
+
+wesentlich schlankere Realisierungen erlauben (siehe Abb. 13).
+
+
+Die ersten Spezialteile für Lenkungen wurden mit der Zusatzpackung 034 eingeführt
+und in den Club-Nachrichten 1978-1 erläutert. Abb. 14 zeigt einen Nachbau einer
+Achsschenkellenkung mit Lenkhebel, Rollenlager und Zahnspurstange.
+
+Clubnachrichten 1978-1
+
+An den Lenkwürfeln werden die Radachsen (Clipsachsen) eingeschoben und die
+Räder daran befestigt; die „Flügel“ der
+beiden Lenkwürfel werden mit einer
+Spurstange verbunden (Abb. 15).
+Die Spurstange hat in der Mitte ein Loch,
+in das eine Lenksäule eingesetzt werden
+kann. Soll das Lenkrad jedoch nicht mittig,
+sondern rechts auf der Fahrerseite montiert
+werden, wird zusätzlich eine Gelenkstange
+benötigt, an deren äußerstem Ende die
+Lenksäule befestigt wird. Sie kann dann
+z. B. über einen Lenkstock durch die Bodenplatte geführt werden (siehe Abb. 16).
+
+
+Die bis heute in den meisten fischertechnik-Modellbaukästen enthaltene Bauteilgruppe für Lenkungen besteht aus Lenkwürfeln, Lenkklauen und einer Spurstange.
+
+Eine sehr kompakte Lenkung für Kleinstfahrzeuge gelingt mit den Spezialbauteilen
+Lenkradhalter, Spurstange R 30 und Achsschenkeln, die sich z. B. im Baukasten
+„Racing“ finden (Abb. 17). Sie ist sehr
+leichtgängig und kompakt; allerdings ist
+das Lenktrapez eher ein „Lenkrechteck“.
+
+
+
+
+
+Fahrzeugtechnik
+
+Bei allen Modellen, die eine Spurstange
+oder die Zahnspurstange verwenden, ist die
+Spurweite auf 7,5 cm festgelegt – und
+damit indirekt natürlich auch die gesamte
+Fahrzeuggeometrie. Das passt gut zu den
+Fahrzeugmodellen und Führerhäuschen der
+Master-Serie, begrenzt aber die Möglichkeiten eigener Modell-Entwürfe.
+Die Spurweite kann jedoch verändert werden, indem die beiden „Flügel“ der Lenkwürfel oder die verwendeten Lenkhebel
+statt einer Spurstange über eine geeignete
+Statik-Strebe verbunden werden.
+Dafür werden zwei Spurstangengelenke
+(35068) als Verbindungselement benötigt.
+Die Statik-Strebe sollte eine I-Strebe mit
+Lochraster sein, da hier leicht eine Lenksäule eingepasst werden kann (Abb. 18).
+
+
+Alternativ kann auch bei dieser Konstruktion die Gelenkstange an einem der Spurstangengelenke aufgesetzt werden.
+Dirk Fox
+
+
+

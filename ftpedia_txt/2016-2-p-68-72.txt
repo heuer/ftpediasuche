@@ -1,0 +1,342 @@
+
+
+Computing
+
+Alternative Controller (3): Der ftPi – ein Motor
+Shield für den TX(T)
+Christian Bergschneider, Stefan Fuss
+Am TX(T)-Controller sind die vier Motorausgänge schnell belegt. Aber was, wenn das Modell
+etwas größer werden soll? Servos sind für Roboter klasse, lassen sich am TX(T) aber nicht
+direkt anschließen. Da liegt die Idee nahe, einen Motorsteuerungs-Bausatz mit PWM-Baustein
+an den I2C-Bus des TX(T)-Controllers anzuschließen. Vier zusätzliche Motor- und vier ServoAusgänge liefert uns unser ftPi. Aus einer Runde „An-Den-Lötkolben-Fertig-Los“ wurde
+schnell ein kleines Elektronikprojekt: zwar ist die Schaltung nicht kompliziert, aber der Platz
+für die zusätzlichen Bausteine beschränkt.
+
+Hintergrund
+DC-Motoren
+Die Geschwindigkeit eines DC-Motors lässt
+sich einfach über die Spannung regeln. Je
+höher die Spannung, desto schneller dreht
+sich der Motor. Die Spannung eines Motors
+über einen digitalen Ausgang zu steuern, ist
+hingegen relativ komplex. Als Abkürzung
+nutzt man deshalb gerne die Trägheit des
+Motors aus. Schaltet man einen digitalen
+Ausgang in sehr kurzen Abständen an und
+aus, so stellt sich dies für den Motor auch
+als Spannungsreglung dar.
+
+
+Ist z. B. das Steuersignal ¼ der Zeit ein- und
+¾ der Zeit ausgeschaltet, so wird der Motor
+auf ¼ der Maximaldrehzahl laufen. Der
+Motor verhält sich so, als ob er mit 2,25 V
+statt 9 V Gleichspannung betrieben würde.
+Die Frequenz eines solchen Pulsweitenmodulation- (PWM-) Signals wirkt sich nicht
+auf die Drehzahl aus. Ist sie allerdings zu
+
+gering, so läuft der Motor nicht rund. Je
+höher die Frequenz des PWM-Signals ist,
+desto besser läuft der Motor. Bei hohen
+Frequenzen treten jedoch Wirbelstromeffekte auf; der Motor kann dann die
+aufgenommene elektrische Leistung nicht
+mehr in Drehmoment umsetzen.
+Im Internet findet man ganze Diskussionsforen darüber, welches die richtige PWMFrequenz ist. Da diese stark vom Motor und
+der Anwendung abhängt, ist Ausprobieren
+die einfachste Lösung.
+fischertechnik-Motoren
+Alle Motoren von fischertechnik sind DCMotoren. Sie werden mit 9 V betrieben und
+lassen sich mit PWM-Technik sehr gut
+regeln. Für den Artikel haben wir S-, XS-,
+Encoder- und den klassischen grauen Motor
+getestet: Mit einer PWM-Frequenz zwischen 70 und 1.500 Hz laufen die Motoren
+rund.
+Servo-Motoren
+Servomotoren sind normale Gleichstrommotoren mit einer integrierten Steuerung.
+Sie haben drei Anschlüsse: Zwei für die
+Spannungsversorgung, der dritte Eingang
+ist das Steuersignal.
+
+Als Steuersignal wird ein PWM-Signal
+eingesetzt. Im Unterschied zum DC-Motor
+wird das Signal jedoch von der internen
+Steuerung ausgewertet und in eine Winkelposition des Servos umgesetzt. Im Standard
+wird das Signal alle 20 ms (entsprechend 50
+Hz) wiederholt.
+Die Servo-Steuerung interpretiert die Impulsbreite: Ist das Signal 1 ms breit, so stellt
+sich der Servo in die linke, bei 1,5 ms in die
+mittlere und bei 2 ms in die rechte Position.
+
+Computing
+
+Der fischertechnik Pi (ftPi)
+Nur vier Motorausgänge bieten TX und
+TXT – und keine Möglichkeit, einen
+fischertechnik-Servo anzuschließen. Dafür
+beherrschen beide Controller das I²C-Protokoll. Warum also nicht ein geeignetes
+Motor Shield aus der Arduino- oder
+Raspberry Pi-Welt fischertechnik-tauglich
+machen?
+Tatsächlich erhalten wir mit wenigen Modifikationen aus einer marktgängigen Motorsteuerung ein leistungsfähiges fischertechnik Motor Shield (kurz: ftPi), mit dem
+wir die fischertechnik-Controller um vier
+Gleichstrom- und vier Servo-Motorausgänge erweitern können – dank I²C sogar
+bis zu 32 mal.
+Die Adafruit DC Motor KITs
+
+
+Die Frequenz muss nicht genau 50 Hz betragen. Einige Servo-Typen können mit bis
+zu 400 Hz angesteuert werden.
+fischertechnik-Servos
+Die Spannungsversorgung bei den fischertechnik-Servos muss zwischen 4,8 und 6 V
+liegen. Die maximale Speisespannung von
+6 V darf nicht überschritten werden, da
+sonst die interne Steuerung Schaden nehmen kann. Das ist ungewohnt, da fischertechnik normalerweise mit 9 V arbeitet.
+
+
+Die Steuerelektronik ist auf 50 Hz ausgelegt. Sie arbeitet nur in einem kleinen Frequenzbereich bis ca. 85 Hz stabil; danach
+steigt die Steuerung aus und der Servo
+brummt. Das Steuersignal muss nicht genau
+der Speisespannung entsprechen. Eine
+Logikspannung von 3,3 V ist ausreichend –
+und die liefert unser „fischertechnik Pi“
+(ftPi).
+
+Von Adafruit gibt es zwei Motorsteuerungen, die sich für die Anbindung an den
+TX(T) eignen, da sich beide über die I²CSchnittstelle ansteuern lassen: das Arduino
+Motor Shield und das Motor HAT Mini Kit
+für den Raspberry Pi [1, 2]. Kern der Schaltung ist der programmierbare PWM-Modulator PCA9685, ein 16-Port-LED-Treiber
+mit I²C-Bus-Interface.
+Alle 16 Ausgänge des Treiberbausteins
+können mit unterschiedlichen PWM-Signalen beschaltet werden. Die Taktfrequenz
+ist programmierbar, allerdings ist diese für
+alle PWM-Ausgänge gleich. Als Leistungsendstufe für DC-Motoren kommen auf der
+Platine zwei TB6612 zum Einsatz. Die
+Ansteuerung pro Motor erfolgt über drei
+LED-Ausgänge.
+IN1
+
+IN2
+
+PWM
+
+L
+
+H
+
+H/L
+
+H
+
+L
+
+H/L
+
+L
+
+L
+
+H
+
+Motor
+
+STOP
+
+Tab. 1: Die Ansteuerung des TB6612
+
+
+
+
+Die Leistung des PWM-Modulators ist für
+LEDs ausgelegt. Somit können die Steuersignale für die Servomotoren direkt angeschlossen werden.
+Stromversorgung
+Beide Motor Kits können über das Netzgerät des Power Sets oder einen fischertechnik-Akku mit 9 V betrieben werden.
+Auf der Platine wird die Stromversorgung
+für die Leistungsendstufen bereits geglättet.
+Der LED-Treiber erhält in der Originalbeschaltung seine Betriebsspannung vom
+Raspberry Pi bzw. dem Arduino. Ohne ihn
+muss diese über einen 3,3 V Spannungsregler (LP2950CZ3) erzeugt werden (Abb.
+4).
+
+
+Jetzt muss man nur noch SDA, SCL und
+GND über Flachbandkabel mit dem TX(T)
+verbinden.
+Anpassung der Motor Shields
+Die Bausätze werden von Adafruit vorbestückt geliefert, d. h. die SMD-Bausteine
+sind bereits auf der Platine aufgelötet. Die
+beiliegenden Steckverbinder werden nicht
+benötigt.
+In unserem Projekt kam [1] zum Einsatz.
+Um Gewicht und Platz zu sparen wurden
+alle zusätzlichen Bauteile auf der Platine
+untergebracht. Der Prototypenbereich bietet
+nicht ausreichend Platz, daher wurden auch
+Stromversorgungs- und Raspberry-Pi-Anschlüsse umgebaut. Dazu mussten u. a.
+Leiterbahnen auf der Platine durchtrennt
+werden. Hierfür ist etwas Erfahrung erforderlich. Für den Nachbau empfiehlt es sich
+daher, die zusätzlichen Bauteile auf einer
+getrennten Prototypenkarte aufzubauen und
+beide Platinen mit Kabeln zu verbinden.
+
+
+Die Servo-Motoren müssen ebenfalls versorgt werden. Dies kann über den 5 VSpannungsregler (LM7805) erfolgen.
+
+TX mit und ohne T
+Das I²C-Interface am TX arbeitet mit 5 V,
+der TXT benötigt 3,3 V. Der Umbau
+zwischen TX und TXT ist einfach, da der
+PCA9685 mit beiden Spannungen betrieben
+werden kann.
+Für den TXT wird für die Logikspannung
+ein 3,3 V-Regler (LP2950CZ3) und für den
+TX die 5 V-Variante (LP2950CZ5) des
+gleichen Reglers eingesetzt.
+
+
+des Adafruit Motor HAT [1]
+
+Die Motorausgänge sind auf der Platine mit
+M1 bis M4 markiert. Die GND-Anschlüsse
+werden beim DC-Motor nicht benötigt. Für
+die fischertechnik-Stecker setzt man auf der
+Platine einen Lötnagel ein und schraubt
+darauf eine normale Zwergbananenbuchse
+fest. Die Abstände der Originalanschlüsse
+reichen allerdings nicht aus, so dass die
+Motoranschlüsse mit einem kurzen Kabel in
+den Prototypenbereich verlegt werden
+müssen.
+Der Prototypenbereich bei [2] ist etwas
+größer; es befinden sich auch schon zwei
+Steckverbinder für Servo-Motoren auf der
+Platine. Montiert man hier den 5 V-Spannungsregler stehend, so reicht der Platz auf
+der Platine aus (Abb. 7).
+
+Adafruit Arduino Motor Shield [2]
+
+Die Stromversorgung des Power Sets wird
+bei (5) und (6) angeschlossen. Dabei bitte
+unbedingt auf die Polung achten!
+Die beiden Spannungsregler werden an die
+9 V-Versorgung angeschlossen. Auf der
+Ausgangsseite werden die Signale mit je
+einem Elko mit 47 µF geglättet (siehe Abb.
+4). Für den TX wird bei I²C die 5 VVariante eingesetzt und dennoch mit dem
+3 V-Anschlüssen der Platine verbunden.
+Die PWM-Signale für die Servos werden an
+(8), (9), (A) und (B) angeschlossen. Bei [2]
+sind die Anschlüsse für S1 und S2 bereits
+auf der Platine vorhanden und können
+entfallen (Abb. 7).
+
+Computing
+
+
+Der TX(T) wird über eine Wannenleiste
+angeschlossen. SDA und SCL stehen bei
+(C) und (D) zur Verfügung.
+
+Programmierung des ftPi
+Für die Programmierung steht die RoboProBibliothek ftPi.rpp zur Verfügung. Mit dem
+Bespielprogramm ftPi-Example.rpp können
+erste Tests der Schaltung erfolgen. Die
+Programme finden sich im DownloadBereich der ft:Community.
+In jedem Programm muss der PWM-Baustein zunächst initialisiert werden. Dazu
+muss die Funktion INIT aufgerufen werden.
+Die Funktion bestimmt die Beschaltung der
+LED-Ausgänge und aktiviert den internen
+Oszillator. Dieser gibt den Takt für das
+PWM-Signal vor. Leider kann für alle Ausgänge nur eine Frequenz eingestellt werden.
+Die Bibliothek stellt den Frequenzteiler im
+Register 0xFE auf 0x50; dies entspricht
+76 Hz. Werden keine Servos im Modell
+eingesetzt, so kann über eine höhere Frequenz der Betrieb der DC-Motoren optimiert werden. Der Frequenzteiler kann mit
+der folgenden Formel berechnet werden:
+=
+
+25 000 000
+4096 ∙
+
+−1
+
+Zum Abschluss der Funktion werden alle
+Motoren ausgeschaltet und die Servos auf
+die mittlere Position gestellt.
+Die Ansteuerung der Motoren übernehmen
+die Unterprogramme M5 bis M8. Die Drehzahl kann in 256 Stufen eingestellt werden
+
+
+
+(0 = aus, 255 = maximale Drehzahl). Mit
+dem zweiten Eingang wird die Drehrichtung (> 0 rechts, ≤ 0 links) gewählt.
+Die Servo-Motoren werden über die Unterprogramme S1 bis S4 gesteuert. Sie können
+mit Werten zwischen -150 (linke Position)
+und 150 (rechte Position) angesteuert
+werden.
+Mehrere ftPis an einem Controller
+Die I²C-Geräteadresse des PCA9685 kann
+über fünf Jumper frei eingestellt werden.
+Theoretisch können so bis zu 32 ftPis an
+einen TX(T)-Controller angeschlossen werden. Die Basisadresse des PWM-Bausteins
+ist 0x60.
+RoboPro kann leider nicht mit flexiblen
+I²C-Adressen arbeiten. Beim Einsatz von
+mehreren fischertechnik Pis an einem
+TX(T)-Controller muss die Bibliothek
+mehrfach kopiert und die jeweils eingestellte I²C-Geräteadresse ausgetauscht
+werden.
+
+Dazu schließt man die Stromversorgung an
+und prüft mit einem Multimeter die Ausgangsspannung an den Spannungsreglern
+und den Servo-Anschlüssen. Dann erst sollte man den TX(T) anschließen.
+
+Risiken und Nebenwirkungen
+Obwohl die Schaltung recht einfach ist,
+müssen ein paar Dinge berücksichtigt
+werden:
+∂ Ist der ftPi für den TX-Betrieb mit einem
+5 V-Spannungsregler ausgestattet, so
+darf er nicht mit einem TXT-Controller
+verbunden werden.
+∂ Die Buchsen der Servos haben zwar
+einen Verpolungsschutz, allerdings ist es
+schwierig, den passenden Stecker zu
+bekommen. Beim Anschließen der
+Servos daher immer auf die Polung
+achten, um Schäden an der Platine und
+den Servos zu vermeiden.
+∂ Der PWM-Baustein arbeitet weitgehend
+autark. Er benötigt den TX(T)-Controller
+nur zur Parametrierung. Wird das
+Robo Pro-Programm abgebrochen oder
+der TX(T)-Controller abgeschaltet, so
+laufen die Motoren und Servos am ftPi
+weiter. Zum Not-Aus die Spannungsversorgung des ftPi unterbrechen. Typ [2]
+hat hierfür einen Reset-Taster auf der
+Platine.
+Der Nachbau erfolgt auf eigenes Risiko –
+für Schäden übernehmen die Autoren keine
+Haftung. Bei Fragen und Anregungen könnt
+ihr uns gerne eine E-Mail an ftpi@gmx.de
+schicken.
+
+
+Inbetriebnahme des ftPi
+Bei der Inbetriebnahme empfiehlt es sich,
+zunächst die Platine ohne TX(T) zu testen
+und die Anschlüsse der beiden Spannungsregler kontrollieren, denn sie sind unterschiedlich belegt.
+
+
+Quellen
+[1]
+
+Adafruit: DC & Stepper Motor HAT
+for Raspberry Pi – Mini Kit
+
+[2]
+
+Adafruit: Adafruit Motor/Stepper/
+Servo Shield for Arduino v2 Kit –
+v2.3
+
+

@@ -1,0 +1,317 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Neue ft-Teile selbst gemacht – 3D-Druck (6):
+Ein Lüfter für den fischertechnik-Drucker
+Matthias Dettmer
+Im Sommer des vergangenen Jahres hat Fischertechnik seinen viel beachteten 3D-Drucker
+herausgebracht. Schon kurz danach konnte man unter YouTube erste Erfahrungsberichte lesen,
+und einer der jedes Mal genannten Kritikpunkte ist der fehlende Lüfter für die Kühlung am
+„Druckgut“. Der Beitrag stellt vor, wie sich dieser Mangel beheben lässt…
+Nun ist es ja gerade einer der Vorteile von
+fischertechnik, dass man Modelle leicht
+erweitern kann – so lässt sich auch bein
+fischertechnik-3D-Drucker ein Lüfter nachrüsten. Ein kleiner, leiser PC-Lüfter mit
+12 V Betriebsspannung (11 dBA, 5 m³/h,
+2.800 U/min, 40 x 40 x 10 mm) ist etwa bei
+Conrad schon für 6 € zu haben (872056-62).
+Das Mechanische ist noch leicht: Conrad
+liefert den Lüfter mit vier Schrauben, die
+haargenau durch die 4-mm-Löcher der IStreben passen. Die Abstände der Löcher
+passen nicht hundertprozentig, eine flexible
+Adaption ist aber schnell hergestellt (siehe
+
+
+Als Ersatz für den hier vorgesehenen Schutz
+gegen Verbrennungen am „Hot End“ dient
+eine gelbe Bauplatte 30 x 45. Zugegeben,
+die Lösung könnte etwas eleganter aussehen, aber zunächst kam es mir nur auf
+
+eine funktionierende Lösung an. Eine
+Alternative ist die Verwendung des Halters
+von Thomas Dragon (siehe auch [a]).
+Die Unterkante des Lüfters muss immer
+noch ein Stückchen höher liegen als das
+untere Ende des Hot End, und der Luftstrom
+sollte nicht gegen irgendeinen Teil der tragenden Struktur, sondern am besten direkt
+auf das Druckgut pusten.
+Etwas schwieriger wird es mit der Adaptierung an eine Spannungsversorgung. Es
+erschien mir ungünstig, „nur“ für den Lüfter
+ein separates Netzteil beizufügen. Aus
+echter Neugierde – und im Bewusstsein,
+dass damit nominell die Garantie verloren
+geht – habe ich die Kabelverbindungen
+gelöst und das graue Elektronik-Kästchen
+der Steuerung des fischertechnik-Druckers
+aufgeschraubt.
+Für eventuelle Nachahmer vorab ein kleiner
+Tipp: Im Endausbau des Druckers kommt
+ein ganzer „Kabelbaum“ an der Box an.
+Nehmt Euch die Zeit und beschriftet die
+Stecker mit ihrer Funktion. Da die Stecker
+für die Endtaster (dreipolig, zwei Kabel)
+und die für die Schrittmotoren (vierpolig,
+vier Kabel) schon auf die Funktion hinweisen, reichen ein „X“, ein „Y“, ein „Z“
+oder ein „E“ (Abb. 2).
+
+
+
+dritte Leitung vom Lüfter, die für die
+Rückmeldung der Drehzahl verantwortlich
+ist, einfach offen gelassen.
+
+
+Zu meiner großen Freude bietet die von
+fischertechnik zugekaufte Elektronik zwei
+Pins „+“ und „–“ für den Anschluss eines
+Lüfters (neudeutsch „Fan“) an (Abb. 3).
+
+
+Im Bild ist auch noch ein nicht mit Pins
+bestückter Messeingang für eine HeizbettTemperatur („T-BED“) zu sehen. Deswegen liegt nahe, dass zumindest die
+Platine die Leistungselektronik für ein
+Heizbett mit anbietet, oder zumindest die
+Leiterbahnen dafür trägt. Schließlich wäre
+es wenig sinnvoll, mit der Ansteuerelektronik etwas zu messen, was man dann nicht
+regeln könnte.
+Ebenso sind auf der Platine – diesmal
+wieder bestückt – vier Pins vorhanden, die
+vermutlich den Anschluss eines weiteren
+Hot Ends erlauben.
+Für Arduino- oder RasPi-Fans gibt es bei
+Conrad, Reichelt und anderen Lieferanten
+Steckbrücken, die sonst eher für die Kontaktierung dieser Einplatinencomputer mit
+Experimentierplatten, sogenannten „Breadboards“ gedacht sind. Mit solchen Steckbrücken habe ich den Lüfter mit dem „Fan“Ausgang verbunden. Dabei habe ich die
+
+Ein kurzes Ausprobieren im manuellen
+Betrieb zeigt einen (meistens ausgeschalteten) kleinen Lüfter. Also: einschalten und
+mit dem Schieberegler langsam höher
+gehen. Bei etwa 40% läuft der Lüfter los,
+und bei 100% ist der Luftzug deutlich zu
+spüren.
+Das erste Experiment hat gleich einen
+positiven Nebeneffekt. Im Log-Protokoll
+des Druckerprogrammes konnte ich sehen,
+dass der Befehl zur Ansteuerung des Lüfters
+einfach „M106 Sxxx“ heißt – dabei steht
+„xxx“ für einen Zahlenwert von 0 bis 255.
+„0“ bedeutet Motor aus, „255“ entspricht
+der Maximaldrehzahl. So einfach ist das!
+Wie aber schalte ich den Lüfter beim
+Drucken ein? Das brauche ich gar nicht! Im
+Slicer-Programm gibt es einen Parameter,
+der festlegt, ab der wievielten Schicht der
+Lüfter eingeschaltet werden soll. Und tatsächlich: Wer in der GCode-Datei nach
+M106 sucht, wird schnell fündig. Bei allen
+Schichten (bis auf die erste) wird der
+Lüftermotor auch jetzt schon mit M106
+S255 aktiviert.
+Überhaupt ist es für das Verständnis des
+gesamten Druckprogrammes überaus interessant, einmal die entsprechende GCodeDatei „auseinander zu nehmen“. Klar, das
+geht theoretisch auch mit anderen 3DDruckern – aber es ist schon toll, wenn man
+einen direkten Bezug zu dem Teil hat, was
+man da druckt. Und mal Hand aufs Herz:
+Wer kennt die fischertechnik-Maße nicht
+auswendig: 15 mm, 30 mm, und Achsen
+brauchen ein Loch von 4 mm.
+Als erstes Druckbeispiel habe ich den Baustein 15 „mit ohne Zapfen“ („with groove“)
+ausgewählt. Den gesamten GCode wiederzugeben würde den Rahmen dieses Beitrags
+sprengen, daher hier nur der Anfang (Lüfter
+einschalten) und das Ende mit kurzen Kommentaren (blaue Ergänzungen von mir).
+
+
+Tipps & Tricks
+
+; generated by Slic3r 1.2.9 on 2016-07-06 at 10:51:46
+; external perimeters extrusion width = 0.50mm
+; perimeters extrusion width = 0.50mm
+; infill extrusion width = 0.60mm
+; solid infill extrusion width = 0.50mm
+; top infill extrusion width = 0.50mm
+M107
+M104 S200
+; set temperature
+G28
+; home all axes
+M109 S200
+; wait for temperature to be reached
+G21
+; set units to millimeters
+G90
+; use absolute coordinates
+M82
+; use absolute distances for extrusion
+G92 E0
+G1 E-8.00000 F9000.00000
+G92 E0
+G1 Z0.200 F2220.000
+; Erstes Level: HotEnd um 0.2 mm anheben
+G1 X37.864 Y19.538 F2220.000
+G1 E8.00000 F9000.00000
+G1 X38.985 Y17.976 E8.08016 F864.000
+G1 X40.639 Y16.996 E8.16032
+G1 X42.140 Y16.749 E8.22372
+; es folgen etwa 20 Zeilen
+...
+G1 X38.583 Y21.420 E18.63417
+G1 X38.958 Y19.871 E18.70063
+G1 F1776
+G1 X39.965 Y18.655 E11.10063
+G1 E10.70063 F9000.00000
+G92 E0
+; ... hier ist das Test-Quadrat gedruckt
+G1 X55.726 Y35.006 F2220.000
+; und es geht übergangslos weiter mit
+G1 E8.00000 F9000.00000
+; dem eigentlichen Bauteil
+G1 X53.304 Y35.006 E8.10096 F691.200
+G1 X53.304 Y32.007 E8.22598
+; es folgen ~200 Befehle (erste Ebene)
+...
+G1 X45.641 Y23.446 E8.40359
+M106 S255
+; Hier wird Lüftermotor eingeschaltet
+M104 S195 ; set temperature
+G1 F1776
+; es folgen sieben Befehle ...
+...
+G1 Z0.400 F2220.000
+; .. und es geht um weitere 0,2 mm
+G1 X53.054 Y31.569 F2220.000
+; auf 0,4 mm hoch.
+G1 E8.00000 F9000.00000
+G1 X53.787 Y32.002 E8.02913 F600.000 ; ab hier wird Stück für Stück gedrckt
+...
+; (ein paar tausend Zeilen lang)
+G1 X52.158 Y30.183 E11.59495 F600.000 ; letzte erkennbare Bewegung
+G92 E0
+M107
+G28 X0
+; home X axis
+G1 Y100
+; Y axis 100mm
+M104 S0
+; turn off extruder
+M84
+; disable motors
+; filament used = 882.9mm (2.1cm3)
+; avoid_crossing_perimeters = 0
+; bed_shape = 0x0,115x0,115x100,0x100
+; es folgen 125 Parameter als Kommentare
+
+Listing 1: GCode-Datei für einen Baustein 15
+
+
+Obwohl der Lüfter also hardwareseitig
+nicht vorgesehen ist: Softwareseitig ist er
+bereits „automatisch“ vorhanden.
+Bleibt noch die Frage: merkt man das überhaupt, ob ein Lüfter da ist oder nicht? Die
+Antwort: fast nicht.
+
+Den Unterschied kann man untersuchen,
+wenn man einmal mit und einmal ohne den
+Lüfter druckt. Die Ergebnisse sind in den
+folgenden Abbildungen nebeneinander gestellt: links (Abb. 4) mit und rechts (Abb. 5)
+ohne Lüfter.
+
+
+
+Was man an den Fotos gut erkennen kann:
+Jede einzelne Schicht ist sichtbar, fünf
+Schichten je Millimeter Höhe, 75 Schichten
+insgesamt. Mit Lüfter (links) erscheinen die
+Kanten etwas präziser, und es gibt keine
+Artefakte, wie sie im rechten Bild (ohne
+Lüfter) gut zu erkennen sind. Die leicht
+gelbliche Einfärbung rührt von dem von mir
+als Druckunterlage verwendeten Kreppband her. Auf den Fotos stehen die beiden
+Bausteine also auf dem Kopf.
+
+Zur Probe habe ich Verbinder und Winkelbausteine angebaut. Die ließen sich nur
+schwer oder gar nicht in die Nuten schieben
+– beim linken Bauteil (mit Lüfter) allerdings etwas leichter als beim rechten.
+
+Eigentlich vorhersehbar, aber auch eine
+leichte Enttäuschung: Die Nuten sind eher
+zu eng als zu weit. Gerade dieses interessante Bauteil ist also in „echten Modellen“
+nur bedingt einsetzbar. Sicher kann hier
+durch ein wenig Nacharbeit, etwa durch
+Aufbohren mit einem 4 mm-Bohrer, nachgeholfen werden.
+
+
+Die Textur ist bei Reiben mit dem Finger an
+der Oberfläche bei beiden Exemplaren
+deutlich spürbar, vielleicht ist das mit
+Lüfter produzierte Teil etwas glatter. Zuerst
+dachte ich: Naja, Schade, ist halt ein „Einfachst-Drucker“. Dann fielen mir von einem
+Kollegen ausgedruckte Steckergehäuse in
+die Hand, und die Textur war trotz des dafür
+verwendeten, 3.000 € teuren professionellen 3D-Druckers kaum besser. Meine Vermutung: Um feinere Texturen zu erreichen
+muss man eine deutlich feinere Düse am
+Extruder einsetzen und höchstwahrscheinlich deutlich mehr (Druck-)Zeit aufwenden.
+
+Manöverkritik und Ausblick
+Natürlich ist bei einem solchen Produkt die
+Neigung unheimlich hoch, sofort alles
+auszuprobieren, kaum dass der Drucker
+zusammengebaut ist. Die erste Erfahrung:
+Das mitgelieferte Druckbett ist ohne Hilfsmittel offenkundig nicht tauglich.
+Ob mit oder ohne Lüfter: Nach zwei bis drei
+Schichten löste sich das Druckgut von der
+Oberfläche, der Druck schlug fehl. Erst das
+(oft empfohlene) Kreppband als Druckunterlage (Nachjustieren der Z-Achse nicht
+vergessen!) brachte auf Anhieb gleichbleibend zufriedenstellende Ergebnisse –
+auch ohne beheizbares Druckbett.
+Eine weitere für alle Nachahmer vielleicht
+wichtige Erkenntnis: Der USB-Anschluss
+sollte immer direkt, also ohne einen USBHub erfolgen. Mit dem von mir verwendeten Hub brach der Druck einmal nach 25
+Minuten, einmal sogar erst nach 32 Minuten
+ab. So etwas ist dann sehr ärgerlich.
+Eine Möglichkeit wäre, mit den Einstellungen des Slicer Programmes zu spielen;
+das werde ich sicher noch tun. Immerhin:
+Die Reproduzierbarkeit des Druckguts ist
+gegeben – die Ergebnisse einer zweimal
+hintereinander ausgedruckten GCode-Datei
+waren identisch.
+
+Tipps & Tricks
+
+und Variationen der Hot-End-Temperatur
+auszuprobieren. Und ganz vielleicht baue
+ich auch einmal ein anderes Hot End mit
+einem kleineren Düsendurchmesser ein.
+Der Lüfter jedenfalls wird bis auf weiteres
+bei meinem Drucker im Einsatz bleiben.
+Noch einmal der Hinweis zur freundlichen
+Beachtung: Obwohl es sich bei dem fischertechnik-3D-Drucker um einen Baukasten
+mit vielen Möglichkeiten zur Veränderung
+handelt – nach dem Aufschrauben des Elektronikgehäuses ist fischertechnik zumindest
+für dieses Teil nicht mehr zur Gewährleistung verpflichtet. Etwaige Nachbauten oder
+eigene weiterführende Experimente geschehen also auf eigene Gefahr; eine
+Haftung für daraus entstehende Schäden an
+Euren Druckern schließe ich hiermit
+ausdrücklich aus...
+
+Quellen
+[1]
+
+Dirk Wölffel: Neue ft-Teile selbst
+gemacht – 3D-Druck (5): Qualitätsverbesserung des ft-Druckers.
+ft:pedia 1/2017, in dieser Ausgabe.
+
+[2]
+
+fischertechnik: Bedienhandbuch zum
+3D-Drucker. 2016.
+
+[3]
+
+raprap.org: G-Code.
+
+Mein nächster Schritt wird sein, mehr
+Material zuzugeben, langsamer zu fahren
+
+
+

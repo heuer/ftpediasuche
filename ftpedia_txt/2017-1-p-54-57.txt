@@ -1,0 +1,143 @@
+
+
+Uhren
+
+Die Uhrzeit im Klartext
+Ludger Mäsing, Thomas Püttmann
+Die Uhrzeit mit Worten anzugeben, ist für Kinder gar nicht so einfach zu erlernen. Wir stellen
+hier zwei mechanische Modelle vor, die dabei helfen können. Eines verwendet eine
+Kombination aus Schrittschaltwerk und Anzeigenkette, die auch für sich interessant ist, da sie
+sich leicht auf ähnliche Anwendungszwecke übertragen lässt.
+Die Idee zu diesem Modell kam Ludger
+Mäsing durch seine ehrenamtliche Tätigkeit
+im OT-Heim St. Nikomedes in SteinfurtBorghorst. In der von ihm gegründeten und
+betreuten fischertechnik-Bastelgruppe sind
+einige Kinder, die zwar schon lesen, aber
+nicht die Uhrzeit an einer normalen Zeigeruhr ablesen können. Also sollte eine Zeigeruhr her, die gleichzeitig die Uhrzeit im
+Klartext anzeigt.
+Eine sehr schöne Klartextuhr hat Stefan
+Falk im Bilderpool der ft:community vorgestellt. Wir wollten allerdings auf elektrischen Antrieb und Elektronik ganz verzichten und ein für Kinder möglichst nachvollziehbares, rein mechanisches Funktionsprinzip verwenden.
+
+Übergang von einer Stufe zur anderen
+müssen zwölf Textfelder eine Stufe weitergeschaltet werden.
+Wegen dieses gemeinsamen Funktionsprinzips stellen wir hier ein Modell mit nur
+einem Zeiger vor. Eine vollständige Uhr
+kann aus zwei dieser Einheiten durch eine
+Verkopplung mit einer 12:1-Übersetzung
+und etwas Anpassung leicht gebaut werden.
+Um das Ablesen einer Zeigeruhr zu erlernen, ist es ohnehin hilfreich, die verkoppelte
+Bewegung der beiden Zeiger zunächst
+einmal zu trennen und die Bedeutung der
+Zeigerpositionen einzeln zu verstehen.
+
+Das erste Modell
+Beim ersten Modell fiel die Wahl auf ein
+Schrittschaltwerk mit Anzeigekette. Im
+Verlauf einer Stunde soll die Zeigeruhr in
+zwölf Schritten die Texte „Punkt”, „fünf
+nach”, „zehn nach”, „viertel nach”,
+„zwanzig nach”, „fünf vor halb”, „halb”,
+„fünf nach halb”, „zwanzig vor”, „viertel
+vor”, „zehn vor” und „fünf vor” anzeigen.
+Zusätzlich soll die aktuelle Stunde („1” bis
+„12”) als Text angezeigt werden.
+Die mechanische Aufgabenstellung ist also
+in beiden Fällen die gleiche: Die Stundenund die Minutenwelle müssen in zwölf
+Stufen gerastet werden. Bei jedem
+
+
+
+Uhren
+
+
+Das Modell wird durch eine Kurbel angetrieben. Eine Umdrehung der Kurbel entspricht fünf Minuten. Die Drehbewegung
+der Antriebswelle wird 12:1 auf einen
+Zeiger übersetzt, so dass der Zeiger
+während zwölf Kurbelumdrehungen eine
+volle Umdrehung macht.
+
+Beim Nachbau ist eine genaue Einstellung
+des Schaltmechanismus wichtig: Der rote
+Klemmstift der Schaltklinke muss das Z10
+sicher und ohne zu Klemmen weiterschalten. Dazu wird der Baustein 15 gegenüber
+der Rastachse mit Platte ganz leicht in
+Richtung des Klemmstifts verschoben.
+
+
+Einmal pro Umdrehung der Antriebswelle
+wird durch eine Schaltklinke ein Z10 einen
+Zahn weitergeschaltet.
+
+Die Stellungen der Schaltwelle werden
+durch eine Blattfeder gerastet.
+
+
+
+
+
+einem Raupenbelag ausgestattet ist. Pro
+Kurbelumdrehung wird die Kette also um
+einen Raupenbelag weitergedreht, und wir
+können die Raupenbeläge zum Aufkleben
+von Texten nutzen.
+
+
+Durch die Verwendung eines Rades auf der
+Blattfeder muss fast nur zur Auslösung des
+Weiterschaltens – also zum Anheben der
+Feder – Energie aufgewendet werden. Das
+Abrollen beim Weiterschalten dagegen ist
+reibungsarm.
+
+Da es insgesamt 24 Raupenbeläge gibt, aber
+nur zwölf Texte pro Stunde, muss die
+Textfolge „Punkt” bis „fünf vor” zweimal
+aufgeklebt werden. Prinzipiell käme man
+zwar mit nur einer Textfolge und zwölf
+Raupenbelägen aus, hätte dann allerdings
+das Problem, die durch das Z20 angetriebene Kette aus 24 Gliedern zu spannen.
+Unsere Verdopplungslösung hat zusätzlich
+den Vorteil, dass sie eine 24-StundenKlartext-Anzeige ermöglicht, wenn man sie
+an der Stundenwelle einer Uhr verwendet.
+
+
+Auf der Schaltwelle sitzt ein Z20. Wegen
+des doppelten Radius wird es bei einer
+Kurbelumdrehung nicht einen Zahn wie das
+Z10, sondern zwei Zähne weitergeschaltet.
+Auf diesem Z20 läuft eine Kette mit 48
+Gliedern, bei der jedes zweite Glied mit
+
+
+Natürlich kann man verschiedene Texte auf
+die Raupenbeläge aufkleben. Die vierjährigen Zwillinge von Thomas Püttmann
+benutzen mit großer Freude die Textfolge
+„:00”, „:05”, „:10”, ..., „:55”, um die
+Anzeige des Radioweckers mit denen der
+Zeigeruhren vergleichen zu können.
+Eine pdf-Datei mit Texten zum Aufkleben
+für die unterschiedlichen Verwendungszwecke findet sich im Download-Bereich
+der ft:c, ein Video der Uhr bei YouTube.
+
+Das zweite Modell
+Dieses Modell hat eine minutengenaue
+Klartextanzeige auf einer Walze aus vier
+Speichenrädern, wie man in Abb. 11 sehr
+gut erkennen kann. Die Walze bewegt sich
+in diesem Fall ohne Schrittschaltung synchron mit der Minutenwelle.
+Für dieses Modell stehen eine DesignerDatei und eine pdf-Datei mit den Walzentexten zum Download zur Verfügung. Die
+Designer-Datei ist in 15 sinnvolle Baustufen unterteilt.
+
+Uhren
+
+Folgendes ist zu beachten: Die Schneckenlager müssen mit passenden Kugellagern
+gefüllt oder durch Bausteine 15 mit Bohrung oder Winkelträger 15 mit zwei Zapfen
+ersetzt werden. Wo zwischen den Rastelementen scheinbar keine Verbindung besteht, muss ein (eventuell kopfloser) Federnocken eingesteckt werden. Die Breite der
+Walze kann auch kleiner gewählt werden.
+Daher liegt die Liste mit den Uhrzeittexten
+in drei verschiedenen Breiten vor.
+Viel Freude mit den beiden Modellen!
+
+
+
+

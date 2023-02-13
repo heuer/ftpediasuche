@@ -1,0 +1,762 @@
+
+Elektromechanik
+
+Elektromechanik
+
+Vom Zählen und Abzählen (2)
+Stefan Falk
+In dieser Ausgabe stellen wir das im vorherigen Beitrag versprochene Modell vor, in dem wir
+einmal alle Register ziehen wollen: Ein Bausteinspender, der – natürlich ganz ohne Computer
+– eine einstellbare Anzahl von Bausteinen ausgibt.
+Bisher hatten wir in der ft:pedia ja schon
+eine ganze Reihe von elektrischen
+Schaltungen, elektromechanischen und
+elektronischen Bauteilen kennengelernt:
+Taster als Öffner, Schließer und Wechsler
+
+verschaltet, Polwendeschalter, Lampen,
+Elektromagnete, Relais mitsamt Schaltungen für Selbsthaltung und Selbstsperrung,
+Dioden, das E-Tec-Modul für lichtgesteuerte Modelle und natürlich Motoren.
+
+Magazin
+Auswurfmotor
+
+Relais
+Stopptaster
+Zählstange
+
+Zähltaster
+
+Auswurf
+
+Starttaster
+
+Handgriff
+Zählmotor
+
+
+
+In diesem Motorsteuerungs- und ZählArtikel wollen wir ein etwas komplizierteres Modell in Angriff nehmen, bei dem
+tatsächlich all diese Elemente vorkommen.
+Deshalb gleich vorweg der Hinweis:
+Dieses Modell verlangt beim Aufbau und
+beim Verstehen Geduld und Ausdauer.
+Damit ihr die Beschreibungen nachvollziehen könnt, solltet ihr die bisherigen
+Elektromechanik-Artikel
+der
+durchgearbeitet und verstanden haben.
+Wenn ihr aber durchhaltet, verspreche ich
+euch einige spannende Stunden und eine
+gut funktionierende, raffinierte Maschine.
+Wollen wir?
+
+
+
+Die Aufgabenstellung
+Das herzustellende Modell soll fischertechnik-Bausteine aus einem Magazin
+spenden. Das Besondere ist, dass wir die
+gewünschte Anzahl von Bausteinen vorab
+einstellen können, und genau diese Anzahl
+soll ausgegeben werden. Die Abbildungen
+geben euch von allen Seiten einen Überblick über das Modell. Wenn wir ganz
+fertig sind, wird das Modell so funktionieren:
+Die gewünschte Anzahl Bausteine stellt
+man ein, indem man die lange Zählstange
+an dem kleinen Handgriff so weit aus dem
+
+Modell heraus zieht, bis so viele Löcher
+des Statikträgers außerhalb des Modells
+sichtbar sind, wie man Bausteine haben
+möchte. Daraufhin drückt man kurz den
+Start-Taster (hier ein selbstgebauter, ein
+fertiger fischertechnik-Taster funktioniert
+natürlich genauso gut).
+Ab dann wird die Maschine den Auswurfmotor und den Zählmotor immer abwechselnd so ein- und ausschalten, dass die
+Zählstange für jeden durch den Exzenter
+ausgeworfenen Baustein um genau ein
+Loch zurück in die Maschine hinein
+gezogen wird. Dieses Spiel wiederholt
+sich, bis die Zählstange den Stopptaster
+betätigt, der das Modell schließlich wieder
+abschaltet.
+Aber der Reihe nach. Zum Aufbau des
+Modells gehen wir schrittweise vor:
+
+Elektromechanik
+
+Der mechanische Aufbau
+In den folgenden Abschnitten beschreiben
+wir zunächst den Aufbau des Modells,
+bevor wir die elektrische Schaltung
+besprechen.
+Das Magazin
+Das auffallendste Element des Modells ist
+das Bausteinmagazin, in dem bis zu neun
+Bausteine eingelagert werden können.
+Das Magazin besteht oben nur aus einem
+kleinen Rahmen von Bausteinen, auf dem
+vier Statikträger 120 angebracht sind. Es
+ist nur auf seiner Rückseite (in Abb. 2
+rechts) mit einem einzigen roten Baustein
+15 mit Bohrung mit dem Fuß verbunden.
+Der Fuß wiederum besteht aus einem
+Gestell von Bausteinen, die bis zum Auswurf vorne reichen. An seinen Seiten
+
+
+
+
+befinden sich einige weitere Bausteine mit
+drei Winkelsteinen 30 pro Seite als
+Führung für die herab fallenden Bausteine.
+
+mit einer kurzen Achse in einem Baustein
+15 gelagert ist:
+Der Auswurfmotor, der den Exzenter
+antreibt, ist lediglich mit zwei Winkelstücken und zwei Federnocken auf der
+Bauplatte angebracht.
+
+
+Eine lange Metallachse kommt von der
+Rückseite, durch einen zweiten Baustein
+15 mit Bohrung geführt. Abb. 2 zeigt sie
+ganz ins Magazin eingefahren: Man sieht
+ihr Ende über dem linken der drei Winkelsteine. Sie trägt in dieser Stellung sämtliche Bausteine im Magazin. Erst wenn sie
+durch den Exzenter nach hinten gezogen
+wird, fallen die Bausteine auf den Magazinboden, und beim nächsten Vorschub der
+Metallachse wird der unterste Baustein
+nach vorne ausgegeben.
+
+
+Das Relais
+Für die elektrische Schaltung benötigen
+wir ein Relais, also einen per Elektromagnet betätigten Schalter. Auf den
+Abbildungen seht ihr, wie unser ft:pediaRelais [1] mitten auf der Bauplatte untergebracht werden kann.
+
+Durch den von einem S-Motor angetriebenen Exzenter wird pro Umdrehung der
+Drehscheibe genau ein Baustein ausgeworfen. Am Auswurf vorne überwacht
+eine Lichtschranke den Ausstoß des Bausteins – der herausgeschobene Baustein
+unterbricht diese Lichtschranke so lange,
+bis er auf der Ausgaberutsche nach unten
+fällt.
+Der Exzenter
+Das periodische Vor und Zurück der
+Metallachse für den Bausteinauswurf wird
+ganz klassisch über einen Exzenter realisiert: Ein S-Motor dreht über ein Zahnrad
+Z40 eine Drehscheibe, auf der am Rand –
+exzentrisch eben, also nicht in der Mitte –
+eine Strebe angebracht ist, deren anderes
+Ende die besagte Metallachse treibt.
+
+
+Wer eines besitzt, kann natürlich auch
+eines der fertigen fischertechnik-Relais
+verwenden.
+Für
+eine
+ausführliche
+Beschreibung der Relais schaut bitte in
+Ausgabe 4/2011 der ft:pedia nach [1]. Dort
+findet ihr auch den genauen Aufbau
+
+
+Elektromechanik
+
+unseres selbstgebauten Relais. Die elektrische Schaltung besprechen wir später in
+diesem Artikel noch ausführlich.
+Die Zählstange
+Das nächste wichtige Element unseres
+Modells ist die Zählstange: Ein StatikFlachträger 120, beidseitig versteift mit je
+einem Flachstück, ist auf der Vorderseite
+mit einem als Handgriff gedachten
+Winkelstück versehen. Auf der anderen
+Seite wird die Stange mit vier Bausteinen
+30 verlängert, auf denen je zwei Hubzahnstangen 60 angebracht sind.
+
+
+Die Zählstange wird vorne am Modell von
+zwei Bausteinen 15 mit einer aufgeschobenen Platte 15 x 45 geführt, und etwa in
+ihrer Mitte von je zwei auf der Grundplatte
+befestigten Bausteinen 5 (Abb. 5 und 6).
+Für den Zählvorgang sind auf der Seite
+sieben S-Riegel im Abstand von 15 mm
+angebracht. Beim Verschieben der Zählstange betätigen die ein Paar zweier
+fischertechnik-Minitaster. Wir brauchen an
+dieser Stelle nämlich eine Polwendeschaltung, wie wir sie in ft:pedia 4/2011 auf
+Seite 7 beschrieben haben [1]. Dabei ist es
+besonders nützlich, dass man die fischertechnik-Minitaster einfach hintereinander
+befestigen kann, so dass durch einen
+Tastendruck mehrere Taster gleichzeitig
+umgeschaltet werden.
+Damit wir die Taster in jeder benötigten
+Richtung gut justieren können, hängen sie
+an zwei Bausteinen 7,5. Diese wiederum
+sind mit Federnocken auf zwei Bausteinen 5 15 x 30 angebracht, die in der
+Bauplatte 500 stecken. Durch diese Anordnung können wir die Zähltaster sowohl
+längs als auch quer zur Zählstange fein
+justieren.
+
+
+
+Am hinteren Anschlag befindet sich der
+Stopptaster. Damit der auch gut justiert
+werden kann, steckt er in einem via
+Federnocken auf der Bauplatte befestigten
+Baustein 15. Dessen Nuten liegen in
+Längsrichtung der Zählstange.
+
+
+
+Auf diesem Bild seht ihr auch einen
+Vorschlag, wie wir eine der beiden später
+benötigten Dioden sauber anbringen
+können (die andere sitzt neben dem Ausgabemagazin).
+Der Zählmotor
+Der zweite verbaute Motor treibt die Zählstange an und hat die Aufgabe, diese
+schrittweise zurück ins Modell zu ziehen.
+Er ist einfach mit zwei Federnocken auf
+der Bauplatte angebracht. Seine Schnecke
+geht auf ein Zahnrad Z20, das auf der
+
+
+Achse einer 31063 U-Achse 60 + Zahnrad
+Z28 m0,5 mini angebracht ist. Für den
+richtigen Abstand sitzt auf der Seite des
+kleinen Zahnrads noch ein 31579
+„Abstandsring 3“.
+Der Antrieb ist sehr stabil so angebracht,
+dass das kleine Zahnrad genau in die
+feinen Zahnstangen eingreift. Das gelingt
+durch die Kombination Winkelstein 30° –
+Baustein 15 – Winkelstein 60° – Baustein
+15 mit Bohrung. Auf der Innenseite wird
+das noch durch einige Bausteine verstärkt,
+wie Abb. 8 zeigt:
+
+
+
+Um die Antriebsachse gut zu führen, ist sie
+auf der Außenseite nochmal gelagert.
+Dabei steckt der äußere Winkelstein 30°
+nur lose in der Bauplatte (das Z20 muss ja
+vorbei passen). Das macht aber nichts,
+denn auf dieser Seite wird die Konstruktion nur auf Druck nach unten beansprucht.
+Das feine Zahnrad wird nämlich von den
+Zahnstangen hochgedrückt. Dadurch ergibt
+sich auf der anderen Seite des Achslagers
+ein Druck nach unten. Den abzufangen
+dient die äußere Achsaufhängung.
+Die Rutschkupplung
+Hier gibt es ein kleines Problem: Einerseits
+wollen wir die Zählstange ja mit Muskelkraft aus dem Modell heraus ziehen, um
+damit festzulegen, wie viele Bausteine wir
+ausgeworfen haben möchten: Pro Baustein
+muss ein Loch des Statikträgers sichtbar
+sein, die Zählstange also 15 mm herausgezogen werden.
+
+Elektromechanik
+
+gleiten können, bevor ihr den Motor und
+den Antrieb anbringt. Das Z20 muss dann
+gerade so fest angezogen werden, dass die
+Zahnstange vom Motor zuverlässig eingezogen werden kann. Sie muss aber so
+locker angezogen werden, dass das feine
+Zahnrad und damit die Antriebsachse im
+Z20 einfach „durchdrehen“ bzw. „durchrutschen“ können, wenn man bei stillstehendem Motor die Zählstange heraus
+zieht. Wegen dieser Wirkungsweise nennt
+man eine solche Konstruktion Rutschkupplung.
+Es erfordert also etwas Geduld und Justierarbeit, bis alles sauber läuft. Baut bitte erst
+weiter, wenn die Zählstange sowohl
+hinreichend leicht herausgezogen werden
+kann als auch zuverlässig vom Motor
+eingezogen wird. Bis dieser Zustand
+erreicht ist, müsst ihr die Führung der
+Zählstange und die Anzugsstärke der Nabe
+des Z20 justieren.
+Ein Tipp dazu: Bringt die Bausteine 15 am
+vorderen Ende und die Bausteine 5 in der
+Mitte der Zählstange so an, dass sie ein
+ganz kleines Bisschen mehr Platz als die
+15 mm Breite der Zählstange bieten. Die
+oberen Nuten der Bausteine 15 müsst ihr
+dazu quer zur Zählstange ausrichten. Erst
+wenn die Zählstange leichtgängig läuft,
+bringt den Antrieb an und stellt die Stärke
+der Rutschkupplung ein.
+
+Andererseits soll der Motor die Zählstange
+wieder zurück ins Modell ziehen. Das
+kleine Zahnrad ist aber ständig im Eingriff
+mit den feinen Zahnstangen. Wir müssten
+also schon mit Gewalt ziehen, und das
+Zahnrad würde an den Zahnstangen
+einfach nur entlang rattern. Sehr unschön!
+Aber die Lösung ist ganz einfach: Wir
+dürfen die Nabe des Z20 einfach nicht
+ganz fest ziehen! Dabei müssen wir genau
+das richtige Maß treffen: Die Zählstange
+muss bitte ganz leicht durchs Modell
+
+„4“ herausgezogene Zählstange
+
+
+
+
+Der Starttaster
+Das letzte Stückchen Mechanik ist einfach:
+Ein Selbstbautaster, später lediglich als
+Schließer verschaltet, passt vorne noch auf
+die Bauplatte 500. Seine Konstruktion ist
+in ft:pedia 4/2011 auf Seite 9 beschrieben
+[1].
+
+Die elektrische Schaltung
+Nachdem wir den mechanischen Aufbau
+des Modells gemeistert haben, müssen wir
+uns nun eine elektrische Schaltung überlegen, die alle beschriebenen Baugruppen
+wie gewünscht „zum Leben erweckt“.
+Relais mit Selbsthaltung
+Ganz grob funktioniert das Modell so, dass
+durch das Drücken des Start-Tasters das
+Relais anzieht und mittels Selbsthaltung
+angezogen bleibt (zur Selbsthaltung eines
+Relais könnt ihr nochmal in 4/2011 nachschauen [1]). Damit wird die
+Stromversorgung des restlichen Modells
+aktiviert, und zwar genau so lange, bis die
+Zählstange am Ende den Stopptaster
+betätigt. Der unterbricht dann die Stromzufuhr des Relais, es fällt also ab und
+schaltet das Modell aus. Soweit kennt ihr
+die Schaltung schon, wenn ihr die letzten
+Ausgaben der ft:pedia mitverfolgt habt.
+Die zu lösende Kernaufgabe ist aber, dass
+der Exzenter genau so oft drehen und
+damit einen Baustein auswerfen muss, wie
+die Anzahl außen sichtbarer Löcher auf der
+herausgezogenen Zählstange anzeigt. Da
+die beiden Motoren wegen der völlig
+anderen Getriebeaufbauten nicht gleich
+schnell arbeiten werden, genügt es aber
+nicht, einfach beide gleich lange laufen zu
+lassen. Wir müssen sie schritt- bzw. Bausteinweise synchron laufen lassen.
+Zwei Motoren steuern sich
+gegenseitig
+Das realisieren wir so, dass immer nur
+einer der Motoren läuft, bis er einen
+
+bestimmten Schritt vollendet hat. Dann soll
+nur der andere Motor laufen, bis auch
+dieser einen solchen Schritt gemacht hat.
+Die beiden Motoren warten also auf
+einander. Nach jedem ausgeworfenen Baustein haben beide Motoren einen kompletten Zyklus abgearbeitet: Genau ein Baustein wurde ausgeworfen, weil der Exzenter genau eine volle Umdrehung machte.
+Die Zählstange wurde um genau eine ZählLänge eingezogen, weil genau der nächste
+zur Zählung angebrachte S-Riegel vor den
+beiden Zähltastern ansteht.
+Eine kleine Zeitreise
+Eine ganz ähnliche Aufgabe wird übrigens
+in einem Modell „Bohrautomat“ im
+fischertechnik hobby-Begleitbuch 3-2 ab
+Seite 56 behandelt [3]. Dort werden ebenfalls zwei Motoren immer abwechselnd
+betrieben. Allerdings wird im damaligen
+Modell nichts gezählt; es läuft einfach
+endlos.
+
+hobby-Begleitbuch 3-2 von 1973 [3]
+
+Ihr erkennt auf Abb. 10 zwei der älteren
+fischertechnik-Motoren mit den großen
+Schnecken: Einer dreht den Drehteller mit
+den Werkstücken, der andere senkt bzw.
+hebt den Bohrer. Der Bohrer selbst wird
+von einem mini-mot 1 angetrieben, der
+
+tatsächlich nur so groß wie ein Baustein 30
+war und den man auf diesem Bild deshalb
+nicht sieht. Außerdem gibt es zwei Taster:
+Einer wird von Nocken auf dem Drehteller
+betätigt, der andere in der oberen Endlage
+des Bohrschlittens (oben in der Mitte in
+Der raffinierte Trick, die beiden Motoren
+genau synchron zu steuern, besteht in einer
+Schaltung, die bewirkt, dass einer der
+Motoren genau dann läuft, wenn beide
+Taster gedrückt oder beide nicht gedrückt
+sind. Der andere Motor läuft stattdessen
+genau dann, wenn jeweils genau einer der
+beiden Taster gedrückt ist. Das bewirkt
+folgenden Ablauf:
+1. Kein Taster ist gedrückt: Motor 1 läuft,
+bis er „seinen“ Taster betätigt. Jetzt ist
+also genau ein Taster gedrückt.
+Deshalb …
+2. … geht Motor 1 aus und Motor 2 läuft
+so lange, bis der auch „seinen“ Taster
+drückt. Dann sind beide Taster
+gedrückt, deshalb …
+3. … geht Motor 2 wieder aus und Motor
+1 wieder an. Bis der seinen Taster loslässt. Wiederum ist also nur ein Taster
+gedrückt und …
+4. … Motor 1 geht aus und Motor 2 läuft,
+bis auch der seinen Taster loslässt. Und
+damit sind wir wieder beim Zustand 1:
+Motor 1 läuft, Motor 2 ist aus, und das
+ganze Spiel wiederholt sich.
+Die Motoren arbeiten also in „Halbschritten“: Immer vom ungedrückten bis
+zum gedrückten Taster bzw. vom
+gedrückten zum ungedrückten. Ganz egal,
+welcher der Motoren also evtl. schneller
+läuft: Jeder wartet mit seinem nächsten
+Halbschritt, bis der jeweils andere „nachgekommen“ ist. Genial, oder?
+
+Elektromechanik
+
+Eine solche Wechselschaltung hatten wir
+schon einmal in der ft:pedia. Schaut mal in
+ft:pedia 4/2011 auf Seite 6 Schaltung 3 an,
+mittels der wir eine Lampe von zwei
+Stellen aus schalten können [1]:
+
+Schaltung 1: Wechselschaltung aus
+ft:pedia 4/2011
+
+Die Lampe leuchtet, wenn beide Taster
+gedrückt oder wenn beide nicht gedrückt
+sind. Wir brauchen nur noch etwas, was
+bei genau einem gedrückten Taster einen
+anderen Verbraucher (den zweiten Motor
+nämlich) einschaltet. Das geht aber leicht
+mit einem Relais, wie Schaltung 2 zeigt:
+M
+Motor 2
+
+M
+Motor 1
+
+DC
+
+Schaltung 2: Wechselschaltung für zwei
+Motoren
+
+Nun läuft Motor 1 genau dann, wenn beide
+Taster im selben Zustand sind (also beide
+gedrückt oder beide ungedrückt), und
+Motor 2 läuft dann, wenn sie sich in unterschiedlichen Zuständen befinden. Bedenkt,
+dass die Schaltzeichen immer den Ruhezustand darstellen. In der gezeigten Tasterstellung ist das Relais aber angezogen,
+deshalb läuft dann Motor 1 und nicht
+Motor 2.
+In der Schaltung des Bohrautomaten wird
+diese Schaltung lediglich um die Kurzschlussbremse ergänzt verwendet – ihr
+erinnert euch, siehe ft:pedia 1/2011 [2].
+
+
+
+Lichtschranke anstatt Taster
+Die beiden Motoren sind in unserem
+Bausteinspender natürlich der des Exzenters und der der Zählstange. Einen Taster
+können wir bei der Zählstange ja leicht von
+den darauf angebrachten S-Riegeln
+betätigen lassen. Den zweiten könnten wir
+direkt am Exzenter befestigen und wären
+schon fast fertig.
+Allerdings ist es eleganter, den Auswurf
+durch eine Lichtschranke zu überwachen,
+um festzustellen, ob tatsächlich ein Baustein ausgeworfen wurde. Ein Taster am
+Exzenter würde ja nur die Umdrehungen
+des Exzenters feststellen, aber nicht
+merken, wenn das Magazin leer ist. Für die
+Lichtschranke können wir einfach einen
+Fototransistor (oder je nach eurem Bauteilbestand auch einen Fotowiderstand) an
+die I1-Eingänge eines E-Tec-Moduls
+anschließen. Das E-Tec stellen wir so ein,
+dass es einfach nur den Zustand der
+Eingänge verstärkt und am Ausgang
+wiedergibt:
+
+Schaltung 3: Lichtschranke mit E-Tec-Modul
+
+Allerdings verhält sich das E-Tec elektrisch natürlich anders als ein Taster. Sein
+O1-Ausgang liefert „-“ und O2 „+“,
+solange I1 kein Signal erhält. Wenn der
+Fototransistor beleuchtet wird und also
+durchschaltet, liefert O1 „+“ und O2 „-“.
+In der vollständigen Schaltung 4 des
+Modells seht ihr, wie man das mit zwei
+
+immer gleichzeitig betätigten Tastern
+ergänzen kann: Die beiden Zähltaster sind
+ja direkt hintereinander angebracht, sodass
+einer den anderen mit betätigt. Verschaltet
+sind sie wie ein Polwendeschalter: In
+unbetätigtem Zustand (wenn die Taster
+also gerade zwischen zwei S-Riegeln
+stehen) sind der Zählmotor mit O1 und der
+Exzentermotor mit O2 verbunden. Bei
+gedrückten Zähltastern ist es genau
+umgekehrt.
+Die jeweils anderen Anschlüsse der
+Motoren sind über je eine Diode und das
+Relais mit dem Minuspol der Stromversorgung verbunden. Das Relais übernimmt wie schon beschrieben das Ein- und
+Ausschalten des ganzen Modells. Wozu
+aber die Dioden?
+Denken wir uns die Dioden mal weg und
+die Motoren über das gerade angezogene
+Relais mit dem Minuspol der Stromversorgung verbunden. Wenn nun die
+Lichtschranke beleuchtet ist, weil gerade
+kein
+ausgeschobener
+Baustein
+sie
+versperrt, liegt also an O1 des E-Tecs „+“
+an. Durch die gerade unbetätigt angenommenen Zähltaster geht das also durch den
+Zählmotor zurück zum Minuspol der
+Stromversorgung. Der Zählmotor läuft
+also.
+Aber vergesst nicht, dass am selben
+Anschluss ja auch noch der Exzentermotor
+angeschlossen ist. Das angezogene Relais
+verbindet zwar mit dem Minuspol, aber es
+hat doch einen gewissen Übergangswiderstand an der Kontaktstelle. Deshalb ist das
+Spannungspotenzial an der Verbindung der
+beiden Motoren und dem Relais nicht ganz
+identisch mit dem Minuspol der Stromversorgung. Es ist noch „ein bisschen
+positiv“. Deshalb fließt ein klein wenig
+Strom tatsächlich auch durch den
+Exzentermotor zurück zum E-Tec – an O2
+nämlich. O2 liegt aber gerade wirklich auf
+„-“. Der überraschende Effekt ist deshalb,
+dass sich der Exzenter ganz langsam dreht,
+und zwar rückwärts!
+
+
+Elektromechanik
+
+M
+Exzenter
+
+DC
+
+Start
+Zählen
+
+Stop
+
+M
+Zählstange
+
+Schaltung 4: Die vollständige Schaltung der Maschine
+
+Das können wir natürlich nicht gebrauchen
+und bauen deshalb die beiden Dioden als
+Sperre ein. Die verhindern, dass ein wenig
+Strom unerwünscht und auch noch in der
+falschen Richtung durch den Motor fließt,
+der gerade ausgeschaltet sein sollte.
+Probiert aber ruhig aus, wie sich das
+Modell ohne die Dioden verhält!
+Eine Alternative wäre übrigens, nur einen
+Zähltaster einzusetzen, der an O1 und O2
+angeschlossen ist und dessen Zentralkontakt ein zweites Relais ansteuert. Mit
+diesem könnte man dann einen der Taster
+in Schaltung 2 ersetzen. Vermutlich haben
+aber mehr von euch drei fischertechnikMinitaster als zwei Elektromagnete oder
+Relais.
+
+Zur Justage des Modells
+Damit euer Modell wirklich korrekt
+funktioniert, hier ein paar Tipps, wie alles
+ineinander greifen muss:
+Nicht vergessen: Die Zählstange muss
+noch ohne ihren Antrieb leichtgängig
+gezogen werden können.
+Die Rutschkupplung des Zählstangenantriebs muss so eingestellt werden,
+dass man die Stange manuell herausziehen und die Antriebsachse in der
+Nabe des Z20 durchdrehen kann. Sie
+muss aber auch hinreichend fest
+angezogen sein, sodass der Zählmotor
+die Stange wieder einziehen kann.
+Möglicherweise werden die beiden
+Zähltaster nicht beide satt durchgedrückt, sondern nur einer, bevor der
+Zählmotor anhält. Ihr könnt dann
+versuchen, die Nabe des Z20 etwas
+
+
+
+fester anzuziehen. Klappt das nicht,
+vertauscht die beiden Zähltaster miteinander, sodass der andere von den S-Riegeln betätigt wird.
+Die S-Riegel müssen so angebracht
+sein, dass die Taster nach dem Herausziehen auf eine bestimmte Anzahl
+sixchtbarer Löcher unbetätigt sind, also
+zwischen zwei S-Riegeln stehen.
+Beide Zähltaster müssen ganz aneinander anliegen, damit sie gleichzeitig
+betätigt werden.
+Die Zählstange muss nach dem letzten
+Baustein noch ein kleines Stückchen
+Weg fahren, um den Stopptaster zu
+betätigen, aber nicht so weit, dass die
+Zähltaster nochmal umschalten. Dazu
+könnt ihr die Justiermöglichkeit des
+Stopptasters in der Nut seines Bausteins
+15 ausnutzen.
+Je nach Lichtverhältnissen müsst ihr
+den Fotowiderstand evtl. mit einer
+schwarzen Störlichtkappe oder zur Not
+einer roten Kappe mit Loch abdecken,
+damit die Lichtschranke sauber schaltet.
+Das könnt ihr leicht testen, denn das ETec-Modul blinkt anders, wenn der
+Fototransistor durchschaltet bzw. sperrt.
+Vergesst nicht, dass der Fototransistor
+richtig herum angeschlossen werden
+muss: Sein roter Pluspol muss mit dem
+Pluspol von I1 des E-Tec verbunden
+werden. Bei einem Fotowiderstand
+(„Fotozelle“) ist die Polung egal (der
+hat auch keinen rot markierten
+Anschluss).
+Justiert das Relais sauber, so dass beide
+Kontakte satt durchschalten (siehe
+ft:pedia 4/2012 [1]).
+Es gibt ein youtube-Video vom fertigen
+Modell [4]. Dort könnt ihr vergleichen,
+wie das Modell funktioniert.
+
+
+Geschafft!
+Wenn alles richtig klappt, ist der Gesamtablauf damit so:
+1.
+
+Die Zählstange ist ganz eingeschoben
+und betätigt den Stopptaster. Die
+Zähltaster stehen vor dem ersten
+S-Riegel und sind unbetätigt. Der
+Exzenter steht so, dass die Stange ganz
+in den Auswurf hineingeschoben ist.
+Auf ihr drauf liegen die Bausteine im
+Magazin.
+
+2.
+
+Der Strom wird eingeschaltet. Nichts
+passiert.
+
+3.
+
+Der Mensch zieht die Zählstange um
+so viele Statiklöcher heraus, wie er
+Bausteine haben möchte. Die Zähltaster müssen danach zwischen zwei
+S-Riegeln stehen und also wiederum
+unbetätigt sein. Der Stopptaster ist
+jetzt unbetätigt, würde also über
+seinen Ruhekontakt Strom durchlassen.
+
+4.
+
+Der Starttaster wird kurz gedrückt.
+Das Relais zieht an und versorgt das
+Modell mit Strom. Es bleibt auch nach
+dem Loslassen des Starttasters
+angezogen, weil es sich über die
+Selbsthalteschaltung selber weiter mit
+Strom versorgt. Die zum Relaismagneten parallel geschaltete Lampe
+der Lichtschranke geht gleichzeitig
+mit an und beleuchtet den Fototransistor.
+
+5.
+
+Da die Lichtschranke gerade frei ist,
+liefert das E-Tec an O1 „+“ und der
+Zählmotor läuft an.
+
+6.
+
+Nach einem kurzen Augenblick
+betätigt der erste S-Riegel die Zähltaster. Dadurch geht der Zählmotor
+aus und der Exzentermotor läuft los.
+Er zieht die Stange zunächst ganz aus
+dem Magazin heraus. Die Bausteine
+fallen nach unten. Der Exzenter läuft
+weiter und schiebt mit der wieder
+
+
+Elektromechanik
+
+kleine Stück, bis die Zählstange den
+Stopptaster betätigt. Der unterbricht
+damit die Stromversorgung des Relais.
+Es fällt also ab, hebt damit seine
+eigene Selbsthaltung auf (bleibt also
+aus) und schaltet alle Motoren ab.
+
+einfahrenden Stange den untersten
+Baustein auf den Auswurf.
+7.
+
+Eben dieser ausgeschobene Baustein
+unterbricht, bevor er herunterfällt, die
+Lichtschranke. Augenblicklich schaltet
+das E-Tec um: Der Exzentermotor
+wird wieder stillstehen und der Zählmotor laufen. Die Zählstange wird
+also weiter eingezogen, bis …
+
+8.
+
+… die Zähltaster wieder zwischen
+zwei S-Riegeln stehen und also losgelassen werden.
+
+9.
+
+Und schon steht der Zählmotor wieder
+still und der Exzenter läuft wieder an.
+Es stößt den halb ausgeschobenen
+Baustein nun endgültig aus; der fällt
+die Rutsche hinab.
+
+10. Dadurch wird aber die Lichtschranke
+wieder freigegeben. Das E-Tec
+schaltet wieder um, und der Exzenter
+läuft weiter.
+11. Solange die eingestellte Anzahl Bausteine noch nicht ausgeworfen ist,
+wiederholen sich die Schritte 5 bis 10.
+Mit jedem Durchgang wird genau ein
+Baustein ausgeworfen und die Zählstange um genau einen S-Riegel
+eingezogen. Da die Riegel im 15-mmAbstand angebracht sind, entspricht
+das den Löchern des Statikträgers.
+12. Wenn aber die eingestellte Anzahl
+erreicht wurde, läuft der Zählmotor
+nach Schritt 10 nur noch das letzte
+
+Wenn ihr dieses Modell nachgebaut und
+zum Funktionieren gebracht habt, kann ich
+mich wieder nur herzlich bedanken und
+euch gratulieren! Gebt bitte im Forum
+Rückmeldung, ob ihr euch weitere solch
+komplexe Modelle in der ft:pedia zum
+Nachbauen wünscht. Auf jeden Fall
+werden wir hier noch viele Anwendungen
+der mittlerweile angesammelten Schaltungstricks sehen – es gibt noch so viel zu
+entdecken!
+
+Quellen
+[1]
+
+ft:pedia Ausgabe 4/2011,
+http://www.ftcommunity.de/ftpedia
+
+[2]
+
+ft:pedia Ausgabe 1/2011,
+http://www.ftcommunity.de/ftpedia
+
+[3]
+
+fischertechnik, hobby-Begleitbuch
+3-2, 1973. http://www.ftdatenbank.de/search.php?keyword=3
+9532
+
+[4]
+
+Stefan Falk, Bausteinspender aus
+ft:pedia 2/2012, youtube-Video des
+fertigen Modells, 2012.
+http://www.youtube.com/watch?v=u
+qTwxKc2xQQ
+
+
+

@@ -1,0 +1,178 @@
+
+Schaltungstechnik
+
+Schaltungstechnik
+
+Motorsteuerungen (7): WeinbergbahnSchaltung mit Relais
+Stefan Falk
+Zur Weinbergbahn aus ft:pedia 3/2018 [1] entwickeln wir hier eine Schaltung mit derselben
+Funktion, die aber anstatt Elektronik zwei Relais verwendet.
+Die Weinbergbahn ([1], Abb. 1) bestand
+aus einer (im Original durch einen Weinberg) geschlängelten Bahn, auf der ein Wagen mit Arbeitern und Material hoch und
+runterfahren konnte.
+
+Diese Schaltung war mit einem fischertechnik-E-Tec-Modul realisiert. Im fischertechnik-Forum wurde nach der Schaltung mit
+einem neueren Electronics-Modul gefragt.
+Die ist funktional identisch und wurde in einem Video [3] dokumentiert. Dabei klang
+auch eine Anregung an, die Steuerung nur
+mit Relais aufzubauen.
+
+
+
+Die Schaltung des Modells erlaubte eine
+„Einmal-Fahrt“ auf Druck eines Tasters –
+die Bahn fuhr einmal hoch, kehrte oben um
+und blieb in der Talstation stehen – und über
+einen Schalter wählbar auch die Dauerfahrt
+– immerzu hoch und wieder runter.
+
+Also bitte schön: Entwickeln wir eine Relais-Schaltung, die dieselbe Funktion bietet!
+
+Schritt 1: Das Relais als
+Polwender
+Ähnlich wie die Polwendeschalter von fischertechnik [4] und ähnlich wie man es mit
+zwei Tastern kann [5], kann auch ein Relais
+so verschaltet werden, dass es die Polung eines Motors umschaltet, je nachdem, ob es
+gerade angezogen oder abgefallen ist:
+
+
+
+Schritt 2: Selbsthalten und
+freigeben mit zwei Tastern
+M
+
+
+Der Motor läuft in dieser Schaltung immer,
+aber die Drehrichtung hängt davon ab, ob
+das Relais über den Taster Strom bekommt
+oder nicht.
+Als Relais können jedes beliebige fischertechnik-Relais und geeignete nicht-fischertechnik-Relais verwendet werden. Wer keines hat, aber einen fischertechnik-Elektromagneten besitzt, kann auch eines aus Standardteilen selbst bauen [6].
+
+Die Weinbergbahn aus [1] – oder ein Aufzug, Schrägaufzug, was auch immer man
+steuern möchte – hat zwei Endlagen, namentlich die Tal- und Bergstation. Bei jeder
+befindet sich ein Endlagen-Taster. Eine Relais-Schaltung mit „Selbsthaltung“ hatten
+wir in [6] bereits besprochen:
+Der in Abb. 6 rechts oben eingezeichnete
+Endlagentaster (nennen wir ihn schon mal
+„Talstation“) schaltet das Relais ein. Über
+den Arbeitskontakt des Relais und den als
+Öffner verschalteten zweiten Taster („Bergstation“) versorgt es sich danach aber selbst
+mit Strom. Es bleibt also angezogen, auch
+wenn der Taster der Talstation losgelassen
+wurde. Sobald aber der Taster der Bergstation betätigt wird, unterbricht dieser die
+Stromzufuhr zum Relais, sodass es wieder
+abfällt.
+
+nach rechts Ein-/Ausschalter, Start-Taster und Modus-Schalter
+(nach links Einzelfahrt, nach rechts Dauerbetrieb)
+
+
+Schaltungstechnik
+
+
+die Weitergabe des Signals des Selbsthaltungs-Relais ans Umpol-Relais.
+
+Schritt 4: Modussteuerung
+Für die vollständige Funktionalität fehlen
+uns noch drei Eigenschaften:
+
+
+Der rechte Taster schaltet das Relais also
+ein (und es bleibt eingeschaltet), der linke
+schaltet es aus (und es bleibt ausgeschaltet).
+
+Schritt 3: Kombination von
+Umpolung und Selbsthaltung
+Nun kombinieren wir die Schaltungen 3 und
+4, sodass das Relais mit Selbsthaltung die
+Umpolung des Motors steuert (Abb. 7). Die
+blau eingezeichnete Verbindung bewirkt
+
+ Wir benötigen eine Möglichkeit zum
+Anhalten (anstatt einfach nur Umpolen)
+in der Talstation.
+ Ein Taster soll bei Halt in der Talstation
+eine komplette Fahrt (zur Bergstation,
+dort Umpolen und wieder zurück zur
+Talstation) anstoßen.
+ Ein Modus-Schalter soll die Anlage auf
+den Dauerbetrieb stellen können, um
+wieder die ständige Fahrt mit Umpolen
+an beiden Endlagen zu erhalten.
+Nur der in der Schaltung rechte Endlagentaster (der der Talstation) muss dazu noch
+anders wirken können. Zu diesem Zweck
+führen wir drei Änderungen an der Schaltung durch:
+1. Die in Abb. 7 rot eingezeichnete Verbindung beim Umpol-Relais wird nicht direkt mit „+“ verbunden, sondern nur über
+
+
+
+
+M
+
+
+den Ruhekontakt des Talstation-Endlagentasters. Damit unterbrechen wir die
+Stromzufuhr in Talrichtung bei Erreichen der Talstation. Wohlgemerkt unterbrechen wir die Stromzufuhr nicht, wenn
+die Bergstation erreicht wurde. Dort soll
+der Motor ja weiterlaufen, nur eben zurück in Richtung Tal.
+2. Damit man trotzdem eine Fahrt starten
+kann, wird ein Taster verwendet, um den
+im Tal unterbrochenen Ruhekontakt des
+dortigen Endlagentaster zu überbrücken.
+3. Der Modusschalter schließlich wird einfach parallel zum Starttaster geschaltet.
+Er wirkt also in Stellung „Dauerfahrt“,
+wie wenn der Starttaster ständig gedrückt wäre und leitet bei Erreichen der
+Talstation sofort wieder die Bergfahrt
+ein.
+Damit haben wir die komplette Funktionalität der E-Tec-Schaltung mit zwei Relais
+gebildet. Abb. 10 zeigt die vollständige
+Schaltung. Dem Fahrbetrieb steht jetzt
+nichts mehr im Wege. Ein Video findet sich
+unter [7].
+
+
+
+
+Quellen
+[1]
+
+Stefan Falk: Weinbergbahn. 3/2018, S. 25–32.
+
+[2]
+
+Wernerhmt: Steuerung Weinbergbahn. Im ftc-Forum, 2019.
+
+[3]
+
+Schaltungstechnik
+
+Stefan Falk: fischertechnik: Weinbergbahn-Schaltung mit ElectronicsModul. Auf YouTube, 2020.
+
+[4]
+
+Stefan Falk: Perlentauchen (Teil 3).
+ft:pedia 1/2013, S. 22–31.
+
+[5]
+
+Stefan Falk: Motorsteuerungen
+(Teil 1). ft:pedia 1/2011, S. 4–8.
+
+[6]
+
+Stefan Falk: Motorsteuerungen
+(Teil 4). ft:pedia 4/2011, S. 6–20.
+
+[7]
+
+Stefan Falk: fischertechnik: Weinbergbahn-Schaltung mit Relais. Auf
+YouTube, 2021.
+
+Start
+
+Modus
+
+M
+
+
+
+

@@ -1,0 +1,147 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Zahnräder mit variablem Z
+Gerhard Birkenstock
+In fast jedem fischertechnik-Modell wird ein Getriebe gebraucht. Glücklich, wer keine genaue
+Übersetzung braucht. Aber wehe man benötigt genau die eine, und sie will einfach nicht mit
+den Zahnrädern Z=10, 15, 20, 30, 32, 40 von fischertechnik zusammenpassen. Hier kommt eine
+Lösung.
+
+Hintergrund
+Zwar lassen sich auch ausschließlich mit
+fischertechnik-Zahnrädern nahezu beliebige Über- oder Untersetzungen unter Verwendung von Differenzialen konstruieren,
+wie Thomas Püttmann gezeigt hat [1].
+Kompakter (und mit weniger Reibungsverlusten) geht es, wenn man die erforderlichen Zahnräder mit passender Zähnezahl
+zur Verfügung hat [2, 3].
+
+Mechanischer Aufbau
+Auch mir stand mal wieder dieses Problem
+ins Haus. Aber dieses Mal wollte ich eine
+Lösung. Nichts Halbes. Etwas Richtiges,
+und variabel sollte es sein.
+
+
+Um aus Ketten Zahnräder mit beliebiger
+Zähneanzahl zu machen, braucht man jedoch einen variablen Träger für die unterschiedlichen Durchmesser. Nach einigem
+Hin und Her ist mir die in Abb. 2 skizzierte
+Lösung eingefallen.
+
+Um Zahnräder mit vorgegebener Zähnezahl
+Z zu erhalten, habe ich schon viele Lösungen gesehen: Von geklebten Kunstwerken
+bis zu mit CNC-Maschinen gefrästen Präzisionsteilen. Leider habe ich nichts mit
+reinen fischertechnik-Teilen entdeckt – von
+den oben erwähnten Konstruktionen mit
+Differenzial einmal abgesehen.
+Meine Idee bedient sich des schon oft verwendeten Grundgedankens der fischertechnik-Kettenglieder – wie zum Beispiel von
+Harald Steinhaus (siehe Abb. 1 und [4]) und
+Triceratops (siehe seine „Trickfibel“).
+Dabei wurden die Ketten um runde fischertechik-Komponenten (Räder, Rollen, Zahnräder, Naben, Differentialkäfig) gelegt.
+
+
+
+
+
+Eine M8-Schraube wird mit 4,1 mm durchbohrt, passend für die fischertechnikAchsen. Zwei Kunststoffscheiben bekommen zentrisch eine Bohrung von 6,4 mm.
+Diese Bohrungen werden mittels Gewindebohrer auf M8 erweitert. Einseitig werden
+beide Scheiben mit einem Konus von 15°
+versehen. Um die Vorrichtung mit der
+fischertechnik-Welt zu verbinden, werden
+noch drei Bohrungen mit 4 mm Durchmesser gesetzt. Hier passen die Seilscheibe
+und die beiden Zahnräder Z30 und Z40
+dran.
+Nun werden die beiden Scheiben so auf die
+M8 Schraube gedreht, dass die Schrägen
+sich nach innen gegenüber stehen. In diesen
+variablen Zwischenraum wird eine Kette
+vorgefertigter Länge platziert. Die beiden
+konischen Flächen zentrieren die Kette
+automatisch beim Zusammendrehen und
+klemmen das System zu einer kraftschlüssigen Einheit zusammen. Da die Kettensegmente gleichmäßig zentriert und belastet
+werden, kommt es zu keiner Stauchung
+einzelner Kettensegmente.
+
+Übersetzung
+Nun zur eigentlichen Übersetzungs-Aufgabe. Rein mechanisch möchte ich von einer
+Minutenwelle zur Stundenwelle mit 24 h
+Umlaufdauer. Das Verhältnis ergibt sich zu:
+= 24ℎ ∙ 60
+
+= 1440
+
+Um dies mit möglichst wenigen Zahnrädern
+zu erreichen, habe ich folgende Aufteilung
+gewählt:
+40 ∙ 36 ∙ 10
+1 ∙ 1 ∙ 10
+Die jeweiligen x/1-Übersetzungen sind
+Schneckengetriebe. Hier wird ein Zahn pro
+Umdrehung transportiert.
+= 1440 =
+
+In Abb. 4 ist die Anordnung gut zu erkennen. Das schwarze Z15 holt die Eingriffsebene hoch und macht eine Drehrichtungsumkehr. Vom Sekundenrad werden über die
+Getriebe das Minutenrad und das Stundenrad angetrieben.
+
+Ist die benötigte Zähnezahl gering, ist der
+Eingriff zwischen den Scheiben sehr tief.
+Dann muss mit einem weiteren großen
+Zahnrad die Eingriffsebene herauf geholt
+werden (siehe Abb. 3).
+
+
+Technische Verbesserungen
+Eine Verbesserung wären Stufen auf den
+konischen Flächen (Abb. 5). Die Ketten
+würden sich ablegen und damit zentrieren.
+Die Abstände der Stufen sind im Durchmesser mit
+=
+
+∙
+
+−2
+
+=
+
+∙
+
+−4
+
+für die neuen Kettenglieder mit ihren seitlichen quadratischen Zapfen und mit
+
+
+Tipps & Tricks
+
+für die alten roten Kettenglieder mit 4 mm
+Kettenhöhe zu berechnen.
+Dabei steht das Modul für die von fischertechnik vorgegebenen 1,5.
+Eine weitere Verbesserung wären Ringsegmente (Abb. 5). Diese lassen sich je nach
+Bedarf stapeln. Der Durchmesser der
+Klemmscheiben würde nach Bedarf gewählt und das abtreibende Zahnrad nicht
+mehr stören.
+
+Referenzen
+[1]
+
+Thomas Püttmann: Getriebe. 4/2014, S. 12-19.
+
+[2]
+
+Gerhard Birkenstock: Uhrwerk mit
+Z80 und Z100. ft:pedia 4/2014, S.
+20-24.
+
+[3]
+
+Gerhard Birkenstock: PowerSynchronmotor. ft:pedia 3/2017, S.
+42-45.
+
+[4]
+
+Harald Steinhaus: Kaulquappen (Teil
+5). ft:pedia 3/2014, S. 14-16.
+
+
+
+

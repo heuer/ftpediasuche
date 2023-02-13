@@ -1,0 +1,256 @@
+
+Modell
+
+Modell
+
+Von der Spiralfeder zum Kameradolly
+Fabian Haas
+Die Folgen eines Besuchs der fischertechnik-Südconvention…
+
+Vorgeschichte
+In meiner Vorstellung eines 8x4-Trucks in
+der ft:pedia [1] blieb eine technische Frage
+unbeantwortet: Die nach der Federung der
+Achsen. Diese Frage trieb mich eigentlich
+schon einige Jahre um; es begann damit,
+dass ich vor Jahren für Videoaufnahmen
+eine Kamera auf einen fahrbaren Untersatz,
+einen sogenannten Dolly1 oder Kamerawagen, setzen wollte.
+Schnell war die Grundplatte 180x90 mit
+vier Bausteinen 30 zusammengesetzt und
+an den Metallachsen 120 die Reifen 45 (mit
+oder ohne Gummiring spielte keine Rolle)
+montiert, und los ging die Fahrt. Sie war
+sehr, sehr kurz. Ohne jede Federung in der
+Konstruktion übertrug sich jede kleine
+Unebenheit des Laminatbodens direkt auf
+die Kamera und führte zu deutlichen Stößen
+und Wackeln in den Videoaufnahmen.
+Damit verschwand das Projekt wieder in der
+Teilekiste.
+Nach einigen Jahren in der Kiste kam
+fischertechnik wieder hervor und es fanden
+sich Kunststofffedern 26 (38633, blau) in
+der Teilesammlung. Bei der Entwicklung
+des 8x4-Trucks gab es einige erfolglose
+Versuche, diese Federn zu verwenden. Das
+wesentliche Problem ist, dass die Feder eine
+zusätzliche Führung braucht, da sie sonst in
+alle Richtungen ausweichen kann. Vorne1
+
+hinten, links-rechts – sie ist in jede Richtung
+frei beweglich. Das ist sicher für einige
+Anwendungen von Vorteil, jedoch nicht für
+eine Radaufhängung. Eine Einschränkung
+der Freiheitsgrade ergibt sich durch die
+Verbindung zweier Federn über eine Achse
+120, jedoch bleiben sie weiterhin senkrecht
+zur Achse sehr frei beweglich.
+
+Lösungsidee
+Die Lösung blieb offen, bis ich die fischertechnik-Südconvention im Fördertechnikmuseum Sinsheim im Herbst 2022 besuchte. Dort zeigt mir ein Aussteller sein Fahrzeugmodell, für das er mehrere Radaufhängungen (31258) benutzt. Diese Teile hatte
+ich bisher völlig übersehen; außerdem sind
+sie nicht mehr so ganz einfach verfügbar.
+Die Radaufhängung erschien mir recht
+klobig und groß, mit einem Platzbedarf von
+etwa drei Bausteinen 30, und sie ist nur mit
+zwei I-Streben 30 komplett, die die Achse
+führen. Dennoch war diese Radaufhängung
+der Startpunkt für den Weg, auf dem sich
+die folgenden Lösungen bis zum Kameradolly ergaben – dank dem Aussteller auf der
+Südconvention in Sinsheim 2022.
+Ausgangspunkt war ein einfacher Nachbau
+der Radaufhängung. Wie viele Projekte fing
+es auf einer Grundplatte an. Aber kleiner als
+
+Dolly: A wheeled apparatus used to transport a
+movie camera steadily along the ground or along
+a track.
+
+
+vor Jahren; es sollte zunächst die Grundkonstruktion getestet werden (d. h. Grundplatte 120x60, Abb. 1).
+Zwischen zwei Bausteinen 30 ließen sich
+vier I-Streben 30 auf einer Kunststoffachse
+40 einbauen, außen mit Riegelscheiben
+gesichert. In passendem Abstand wurde
+eine Achse 120 durch die beiden Federböden und die I-Streben 30 geführt (Abb.
+1). Das ist praktisch ein direkter Nachbau
+der Radaufhängung, nur die Führung der
+Achse durch die I-Streben 30 erfolgt in der
+Mitte, und nicht auf den Seiten. Der
+Baustein 5, auf dem die Kunststofffedern 26
+stehen, erfüllt keine besondere Funktion;
+der Baustein 15x30x5 sichert den Abstand
+zwischen den Bausteinen 5.
+
+Achse 120 in den Kunststofffedern exakt
+auf und ab, und der ganze Block verschwindet hinter dem Reifen (Abb. 2).
+
+Federn, insgesamt noch sehr massiv
+
+So weit, so gut! Eine Grundplatte ist ideal
+für die Entwicklung; wie aber sieht das
+Ganze in einem Fahrzeug mit Rahmen aus?
+Als Basis dienten die Aluprofile 210, wie
+beim 8x4-Truck. Die I-Streben 30 schienen
+mir zu kurz, zumal es darum ging, den
+Radius um die Befestigung zu vergrößern.
+Daher verwendete ich I-Streben 75, die mit
+Baustein 7,5 über Federnocken am
+Aluprofil angebracht wurden.
+Original orientiert (siehe auch Abb. 2).
+
+Riegelscheiben und Klemmbuchsen sichern
+die Position der Achsen 60 und 120.
+
+Eine Eigenheit dieser Konstruktion ist, dass
+sich die Räder auf der Achse 120 bei
+Belastung auf einer Kreisbahn um die
+Grundbausteine 30 bewegen. Aufgrund des
+sehr kurzen Federwegs ist der Betrag
+gering. Außerdem waren, bedingt durch die
+Länge der I-Strebe 30, Teile der Radaufhängung außerhalb des Raddurchmessers
+zu sehen; sie waren also hinter dem Rad
+sichtbar.
+Da ließ sich doch sicher etwas machen
+(beginnender Optimierungsvirus). Weitere
+Versuche führten zur Parallelführung
+zwischen Bausteinen 30 mit Hilfe von
+Bausteinen 15. Dadurch bewegt sich die
+
+Fahrzeug in Rahmenbauweise, der Platz wurde
+für I-Streben 75 genutzt. Möglicherweise lässt
+sich der Aufbau für eine motorische Kontrolle
+der Fahrzeughöhe nutzen.
+
+Diese Führung geht aber weit über den
+Reifen hinaus, was mich ja oben schon
+störte. Daher ersetzte ich die Führung der
+Achse durch eine Führung der Feder, indem
+ich die Kunststofffeder 26 vorne und hinten
+mit je zwei Bausteinen V15 Eck begleitete.
+
+Modell
+
+Diese sind integraler Bestandteil jeder
+Federung, gerade bei Autos, und hier ergab
+sich zu meinen Anfängen vor einigen
+Jahren eine entscheidende Änderung.
+Anstatt der harten Reifen 45 oder Reifen 60
+nutze ich jetzt die Gummireifen 50 (32913)
+für die Felge 30. Allein dadurch ergibt sich
+schon ein deutlich weicherer, vibrationsärmerer Lauf. Diese Reifen waren mir
+damals nicht bekannt, und das ganze zeigt,
+wie wichtig eine mentale Teileliste ist!
+
+Problemen einer erhöhten Reibung, wurde hier
+die Führung der Feder realisiert.
+
+Befestigt wird die Kunststofffeder 26 über
+den Baustein 5 mit einem Baustein
+15x30x5, der über eine Federnocke oder ein
+Verbindungsstück 25 von oben mit dem
+Aluprofil verbunden wird. Das Ganze führt
+zu einer sehr geringen Höhe der Befestigung, und die gesamte Führung mit Feder
+ist schmaler als der verwendete Reifen. 2
+Die geringe Breite der gesamten Konstruktion – sie „versteckt“ sich ja hinter
+einem Reifen – ermöglich die beliebig enge
+Positionierung von Reifen (solange sie frei
+drehbar sind) auf dem Aluprofil. Die
+Abstände ergeben sich einzig durch den
+Reifendurchmesser, nicht aber durch die
+Radaufhängung. Daher lassen sich beliebig
+viele Reifen auf dem Profil positionieren. In
+meiner derzeitigen maximalen Ausbaustufe
+sind es vier Achsen, also acht Reifen.
+Einen wichtigen Aspekt der Federung habe
+ich bisher noch nicht diskutiert: die Reifen.
+
+
+
+Hier also die Gesamtkonstruktion, wie sie
+derzeit realisiert ist (Obacht, Optimierungsvirus!). Aufgrund des Gewichts der
+Kamera und der Kamerahalterung entschied
+ich mich für die vierachsige Konstruktion,
+
+Die beiden unteren, d. h. der Achsen-nahen
+Bausteine V15 Eck, lassen sich durch Winkelsteine 10x15x15 ohne Verlust von Führung
+ersetzen
+
+
+
+mit der Führung der Federn durch die
+Bausteine V15 Eck und Winkelsteine
+10x15x15 mit den weichen Gummireifen
+50 für die Felge 30.
+
+durch die Positionierung auf dem Dolly
+ausgeglichen werden muss.
+
+über holprigem Laminat sind nun möglich.
+lassen sich z. B. mit Bauplatten 30x45 sehr gut
+justieren. Da die Bauplatten nicht weiter
+stören (z. B. Bodenfreiheit) verblieben sie
+einfach in den Bausteine V15 Eck.
+
+Eines fehlt aber noch: Die Verbindung mit
+der „realen Welt“, der Kamera. Glücklicherweise hatte ich schon eine Klemme
+entwickelt [2], die ich soweit modifizierte,
+dass sie meine Kamera sicher halten kann.
+
+sich die Kamera sicher halten und auf dem
+Dolly befestigen
+
+Die Klemme wird dann mit vier Federnocken in den Aluprofilen befestig und so
+justiert, dass die Kamera horizontal schaut.
+Durch das Gewicht von Kamera und
+Objektiv kann sich der Dolly neigen, was
+
+
+Nachtrag
+Wer eine Antriebsachse in alle Richtungen
+federn möchte, findet die Konstruktion in
+die Achse ausschließlich von Kunststofffedern 26 gehalten und geführt wird. Das ist
+vermutlich weniger etwas für ein Fahrzeug,
+eher für eine Antriebswelle.
+
+nur mit Kunststofffedern 26 (Grundplatte
+120x60, Baustein 15x30x5, Bausteine 5 und
+Winkelsteine 60 für den richtigen Abstand)
+
+
+Modell
+
+Abbildungen 11-13 zeigen die derzeitige
+Ausbaustufe des Dollys. Der Abstand
+zwischen den Aluprofilen wurde um einen
+Baustein 30 vergrößert, was die Stabilität
+gegen seitliches Schwingen deutlich erhöht.
+
+
+Referenzen
+
+
+Aus Materialgründen verwende ich die
+Reifen 45 (bevorzuge aber die genannten
+Gummireifen). Als alternative Aufhängung
+passte ich die Geradführung aus Abb. 2 an,
+indem ich den Baustein 7,5 als Führungselement zwischen den Bausteinen 15
+einsetze.
+
+[1]
+
+Fabian Haas: Chassis für 8x4-Truck.
+ft:pedia 1/2022, S. 21–26.
+
+[2]
+
+Fabian Haas: Eine Kabelklemme mit
+beweglichen Klemmbacken. 1/2022, S. 27–30.
+
+Somit ergibt sich eine gefederte Einzelachsaufhängung, was die Dämpfung hoffentlich
+noch mal verbessert.
+
+
+
+

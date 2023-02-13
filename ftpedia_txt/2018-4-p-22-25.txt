@@ -1,0 +1,183 @@
+
+
+Modell
+
+Die Kettenuhr
+Bernd Bekehermes
+Angeregt für den folgenden Text wurde ich durch den Beitrag von Rüdiger Riedel in der
+ft:pedia-Ausgabe 2/2018 [3]. Darin wird auf Seite 24 in den Abbildungen 1 und 2 eine wegen
+ihrer Schlichtheit in der Farbe und in ihrer vollendeten Form sehenswerte Uhr vorgestellt. Statt
+Zeigern dreht sich ein leichter quadratischer Ziffernrahmen frei hängend, aber nur im entscheidenden Bereich sichtbar. Das Design folgt perfekt dem Credo eines der einflussreichsten
+Industriedesigner der Moderne, Dieter Rams [2]: „Weniger, aber besser.“ Rüdiger Riedel
+stellt zu seiner Zahnstangenuhr ausführlich mögliche Zahnstangengetriebe und einen Uhrennachbau mit fischertechnik vor. Bei meiner Förderketten-Wanduhr ging es mir darum, das
+Design einer Wanduhr möglichst schlicht mit fischertechnik-Teilen nachzugestalten.
+
+Hintergrund
+
+
+
+Auf einer Design-Ausstellung der Gruppe
+„anthologie quartett“ sah ich 2001 die
+„catena“ (Abb. 1) Die Catena (lateinisch für
+Kette) ist eine Wanduhr, die 1993 vom
+deutschen Designer Andreas Dober [3]
+entwickelt wurde. Die Catena ist eine
+mechanische Wanduhr mit Federwerk und
+Schlag. Das Uhrglas-förmige Gehäuse aus
+patiniertem Eisen hat einen Durchmesser
+von 170 mm. Die Tiefe ist mit 75 mm, die
+Höhe mit 500 mm angegeben. Die der
+Fahrradtechnik entlehnte Kette trägt 12
+kupferne Stundenziffern.
+Die Catena besticht durch ihr ungewohntes
+Design mit schlichtem technischen Aussehen. Das Uhrglas-förmig gewölbte runde
+Gehäuseschild verdeckt das Uhrwerk und
+weist gleichzeitig auf eine Uhr hin. Die
+unsichtbar langsame Auf- bzw. Abbewegung der Ziffernkette ist leicht zu überblicken und zu erfassen. Die Kette lässt
+Bewegung nur ahnen, die Zeit steht scheinbar still. Vorausgesetzt, man erwartet von
+einer unbekannten Uhr mit Ziffern die
+Drehrichtung im Uhrzeigersinn, lässt sich
+schnell herausfinden, wo und wie die Uhrzeit abzulesen ist. Natürlich ist ein minutengenaues Ablesen nicht möglich, aber Viertel- und halbe Stunden sind gut zu erkennen.
+
+Nachbau mit fischertechnik
+Der Nachbau eines technischen Gerätes ist
+sehr reizvoll und nicht immer einfach. Das
+betrifft nicht nur konstruktive Probleme.
+Auch das Design, die optische Ausstrahlung, ist zu berücksichtigen. Ein freiliegendes fischertechnik-Räderwerk, zum Beispiel eines Uhrwerks, kann allein schon
+begeistern. Wenn es aber darum geht, das
+Erscheinungsbild eines schlicht gestalteten
+Designobjektes mit fischertechnik-Bausteinen nachzugestalten, bedingen Nuten,
+Zapfen und Bohrungen der vielseitigen
+fischertechnik-Bausteine einige Kompromisse.
+Mein Nachbau der Catena sollte zwei
+Anforderungen erfüllen: Möglichst schlichtes Design des Gehäuses, welches nur die
+Bedingung erfüllen muss, das Uhrwerk zu
+verstecken. Außerdem war mir wichtig,
+fischertechnik-Bauteile möglichst unverändert heil zu verbauen.
+Die Drehscheibe (31019) eignet sich kaum,
+um mit Bauplatten bedeckt die glatte Vorderseite eines runden Uhrengehäuses zu
+bilden. Leichter lässt sich mit rechteckiger
+Fläche arbeiten. Darum dient bei meiner
+Kettenuhr eine Grundplatte 90x90x5,5
+(31002) mit zentraler 4 mm-Bohrung als
+Vorderseite (Abb. 2). Das Uhrwerk, ein
+Quarzwerk mit 1,5 V-Baby- oder Mignonbatterie, wird rundum durch vier Bausteine
+V15 Eck (38240) und vier rote Bauplatten
+30x90 (38251) verdeckt. Um das Werk
+nicht durch die langen Spalten der Grundplatte sichtbar werden zu lassen, trägt das
+Uhrwerk im durchscheinenden Bereich
+rechts und links je einen Streifen aus rotem
+Isolierband und zwischen den BS V15 Eck
+rückseitig vier rote Federnocken (31982)
+neben den Ecken, dazu senkrecht links und
+rechts je eine rote Bauplatte 15x60 (38464).
+Diese sind nur so schmal gewählt, damit das
+Uhrwerk ganz dicht mit Doppelklebestreifen mittig hinter die Grundplatte
+geklebt werden kann. Das gelingt, weil
+
+Modell
+
+mein Uhrwerk kein vorstehendes Gewinderohr zur Verschraubung mit einem
+„normalen“ Zifferngehäuse hat.
+
+im fischertechnik-Gehäuse
+
+Zwei von vier Federnocken sind in Abb. 2
+oben als Lückenfüller zu erkennen. Zum
+Antrieb reichen für längere Zeit sogar
+Batterien, die in anderen Geräten keine
+rechte Leistung mehr bringen oder als
+Fundstücke, in der Umwelt aufgelesen, ihre
+Restlaufzeit abarbeiten.
+Vor dem Ankleben ist das Quarzwerk noch
+etwas anzupassen. Das äußerste Röhrchen
+zur Aufnahme eines Zeigers ist für den
+Stundenzeiger gedacht, der erst in 12
+Stunden einen vollen Kreis beschreibt. Für
+den Antrieb der Stundenkette ist eine ganze
+Umdrehung des nächst kleineren Wellenröhrchens nötig. Den bietet nur die
+Minutenzeiger-Aufnahme. Mit Puksäge
+und Staubsauger ließ sich das äußere Röhrchen dicht am Gehäuse vorsichtig absägen.
+Eine eventuell vorhandene Sekundenachse
+kann ohne Zeiger bleiben. Sie ist eventuell
+noch zu kürzen.
+Der Minutenzeiger-Antrieb musste nun mit
+Klebeband oder einem ganz kurzen Plastikröhrchen mit unter 4 mm Stärke so verlängert werden, dass der Antrieb vorne aus
+
+
+
+
+mit Quarzwerk (mit Metallhaken), fixiert mit zwei weißen Doppelklebestreifen.
+
+der Mittenbohrung der Grundplatte herausragt. Darauf ist eventuell. nach leichter Aufweitung auf 4 mm vorn ein Zahnrad als
+Kettenantrieb festzuklemmen. Ich habe ein
+schwarzes Klemmzahnrad Z15 (37685)
+gewählt (Abb. 3).
+Die Metallkette der Catena ist leicht durch
+fischertechnik-Kettenglieder zu ersetzen,
+bei meiner Uhr in der ursprünglichen Art
+(36263) ohne Rastvierkant. Für die 12Stunden-Kette benötigt man 12 · 14 = 168
+rote Kettenglieder und für jede Stunde dazu
+ein Förderglied (37192) als Träger für 12
+Stundenziffern. An diesen habe ich versuchsweise zunächst Bausteine 15 und
+Winkelsteine 10x15x15 befestigt, jeweils
+bestückt mit roter Bauplatte 15x15. Sie
+erwiesen sich wegen des überhängenden
+Gewichts, besonders aber auch optisch als
+zu schwer. Auch Radachsen (36586) mit
+gelochten Ziffernscheiben wurden erwogfen.
+Schließlich habe ich eine hellgraue
+Zwischenwand aus einem Sortierkasten
+geritzt, gebrochen, gefeilt und die Kanten
+auf das Maß 15 mm · 15 mm geschliffen.
+
+
+und zwei Ziffernträgern
+
+Versehen mit 10 mm hohen Selbstklebeziffern folgte, auch mit kleinen Stückchen
+Doppelklebeband, die Fixierung an die
+geschlossene Seite von schmalen Raupenbelägen (37210; 14,5x4x9; schwarz;
+am Uhrgehäuse verhaken, dürfen sie nur
+wenig über die Förderglieder in Richtung
+Grundplatte aufgeschoben werden.
+Damit besonders die unteren Zifferblättchen durch die seitlich versetzt angreifende
+Schwerkraft nicht so schräg hängen, dreht
+sich mit der Kette unten in der Kettenschlaufe, wie bei der Catena, ein weiteres
+
+
+Modell
+
+Klemmzahnrad 15, beschwert mit rückseitig eingelegten Unterlegscheiben zur
+Erhöhung des Gewichts (Abb. 5).
+
+mit Zusatzgewichten
+
+Seit 2002 läuft die Kette schon rund. Eine
+Gangregulierung erfolgt rückseitig am
+Quarzwerk. Nach Stillstand kann die Kette
+umgehängt werden. Eine Rutschkupplung
+in meinem Uhrwerk erlaubt auch ein
+Verstellen durch leichten Zug an einer
+Kettenseite – zum Beispiel zur Umstellung
+auf Sommer- bzw. Winterzeit.
+
+Quellen
+[1]
+
+Rüdiger Riedel: Die ZahnstangenUhr. ft:pedia 2/2018, S. 24-37.
+
+[2]
+
+Wikipedia: Dieter Rams. Deutscher
+Industriedesigner, siehe: „Zehn
+Thesen für gutes Design“.
+
+[3]
+
+Andreas Dober: Catena Wanduhr
+(auf adero.de).
+
+um kurz nach halb eins
+
+
+

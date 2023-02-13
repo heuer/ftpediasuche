@@ -1,0 +1,1347 @@
+
+Elektronik
+
+Elektronik
+
+Der Transistor
+Frank Bruder
+Bald 100 Jahre wird er alt, der Transistor. Auch wenn seine offizielle Geburtsstunde erst 1947
+schlug und mit einem Nobelpreis belohnt wurde, reicht seine Geschichte doch bis ins Jahr 1925
+zurück. Julius Edgar Lilienfeld (1882-1963) ließ sich in diesem Jahr ein elektronisches Bauelement patentieren, das mit den heutigen Feldeffekttransistoren vergleichbar ist. Eine praktische Anwendung gelang nicht. Die technischen Voraussetzungen zur Herstellung waren
+einfach noch nicht gegeben.
+John Bardeen (1908-1991), Walter Brattain
+(1902-1987) und William Shockley (19101989) aus den Bell Laboratories stellten
+1947 den ersten bipolaren Spitzentransistor
+vor. Bipolar, weil es im leitenden Material
+definierte Bereiche mit unterschiedlichen
+elektrischen Eigenschaften gibt; Spitzentransistor, weil die Anschlüsse durch Drahtspitzen realisiert wurden, die einfach auf die
+unterschiedlichen
+Bereiche
+gedrückt
+wurden.
+
+Transistorverstärker, dass Experimente
+nahe am Transistor möglich sind [1].
+1974 folgte der Schulkasten u-t4 mit dem
+Verstärkerbaustein VB (36733), der ähnlich
+einfach wie der Schaltstab aufgebaut ist.
+Viel interessanter ist aber der enthaltene
+Transistor-Poti-Baustein TP (36735). Hier
+stand erstmals ein Transistor als natives
+Bauelement zur Verfügung (vom BasisSchutzwiederstand einmal abgesehen).
+1977 kam der erste richtige Elektronikbaukasten Elektronik Praktikum (30629) auf
+den Markt. Dieser hatte durchaus das Potenzial, den derzeit populären Experimentierkästen von kosmos und Philips Paroli zu
+bieten. Einzigartig war natürlich, dass sich
+fischertechnik-Modelle damit steuern ließen (Leistungstransistor BD 135, 36929).
+
+Kleinsignal-, Kleinleistungs- und zwei
+Leistungstransistoren
+
+1969 stellten die Fischerwerke den Baukasten l-e bzw. l-e1 (30081) mit dem legendären Schaltstab (31360) vor. Mit diesem
+war ein erster Einstieg in die Schaltungstechnik mit Transistoren möglich. Der
+Schaltstab enthält einen so einfachen
+
+Nach einer langen Pause und Einstieg in
+komplexe Elektronikbausteine bzw. das
+Computing wurden erst 2014 mit dem Baukasten PROFI Electronics (524326) wieder
+Experimente mit diskreten elektronischen
+Bauteilen ermöglicht. Die direkte Steuerung von Modellen ist zwar nur über das
+Electronics Modul (152063) oder dessen
+Vorgänger (E-Tec/E-Tech Modul) möglich,
+mit wenigen Cent lässt sich dieses Manko
+aber beheben.
+
+
+
+Warum dieser Streifzug durch die Geschichte von fischertechnik und Elektronik?
+Für Experimente mit Transistoren benötigen wir eine Basis, die es uns erlaubt,
+diskrete elektronische Bauteile im „Raster“
+zu verwenden. Das funktioniert, wie wir
+gesehen haben, mit folgenden Teilen:
+• Transistor-Potentiometer-Baustein TP
+aus u-t4 (36735)
+• Stecksockel aus Elektronik-Praktikum
+(38229/38230 und 38227/38228)
+• Transistorplatine und Elektronikgehäuse
+aus PROFI Electronics
+(152218/152059)
+• und natürlich dem Steckbrett.
+
+• 2 Multimeter oder ein Multimeter und
+ein Volt-/Amperemeter-Baustein
+(37142).
+• 1 Potentiometer 10…100 kΩ (größer
+geht auch), z. B. Elektronikbaustein
+hPB (37158), die Potis aus u-t4 oder
+einen Eigenbau.
+• 1 Widerstand 100 Ω mit Steckern.
+• 1 Widerstand 18 kΩ mit Steckern.
+• 1 Widerstand 5,6 kΩ mit Steckern.
+• 1 Widerstand 33 Ω 1 W (37206) mit
+Steckern.
+• 1 Stecklampe 9 V mit Fassung.
+• Kleinteile, Stecker, Kabel,
+Verbindungen zwischen fischertechnik
+und Multimeter, Bausteine.
+• Stromversorgung 9 V.
+
+Transistor Inside – was steckt
+da eigentlich drin?
+
+
+Wer noch nicht ausgerüstet ist, kann sich
+z. B. ein oder zwei Transistorplatinen
+(152218) und die passenden Elektronikgehäuse (152059) bei den einschlägigen Quellen gebraucht organisieren.
+Weitere Bauteile können für kleines Geld
+bei diversen Elektronik-Versendern bezogen werden. Hier eine kleine Materialliste
+mit den Bauteilen, die wir verwenden
+werden:
+• 1 Transistor-Potentiometer-Baustein TP
+aus u-t4 (36735) oder
+• 1 Stecksockel aus Elektronik-Praktikum
+(38229/38230) oder
+• Transistorplatine und Elektronikgehäuse
+aus PROFI Electronics
+(152218/152059) mit Transistor BC547,
+BC107, BC140 oder vergleichbar.
+
+
+Ein Transistor ist erst einmal nichts weiter
+als ein sehr reiner Halbleiterkristall. Anfänglich war Germanium das Material der
+Stunde. In den 1950er und 1960er Jahren
+wurde schnell klar, dass Silizium einige
+Vorteile bietet, einfacher zu beschaffen,
+einfacher zu handhaben und damit preiswerter ist. Daneben hat die Forschung
+weitere Halbleiter hervorgebracht wie
+Galliumarsenid (LED), Organische Halbleiter (OLED) und weitere teils keramische
+Verbindungen.
+Der Kristall wird gezielt mit einem geeigneten Stoff verunreinigt. Man spricht von
+Dotieren. In den Kristall werden an zwei
+dicht nebeneinander liegenden Stellen weitere kleine Dotierungen mit einem anderen
+Stoff vorgenommen (Umdotieren). Es wird
+darauf geachtet, dass zwischen diesen
+beiden Stellen ein sehr dünner Kanal des
+ursprünglichen Materials erhalten bleibt. Es
+entstehen drei Bereiche. Jeder Bereich
+erhält noch einen Anschluss und fertig ist
+der Transistor.
+Die Dotierung sorgt dafür, dass im Siliziumkristall an den entsprechenden Stellen
+entweder zu viele oder zu wenige
+
+
+Elektronik
+
+Bindungsmöglichkeiten zu Nachbaratomen
+vorhanden sind. Das besondere Kristallgefüge, das Silizium zu einem eher schlechten Leiter macht, wird verändert. Dem
+Kristall werden Stoffe mit einer Bindungsmöglichkeit zu viel (n-Dotierung) oder zu
+wenig (p-Dotierung) untergeschoben.
+
+sich durch die Wanderung der Ladungsträger ein elektrisches Feld bildet, das
+diesem Prozess entgegenwirkt. Es stellt sich
+ein Gleichgewicht ein.
+Das elektrische Feld bewirkt die Diffusionsspannung UD. Diese beträgt für Silizium etwa 0,7 V. Das Bilden dieser Zone ist
+der Trick, mit dem bipolare Transistoren
+und auch Dioden, Thyristoren, Triacs und
+ähnliche Halbleiterbauteile funktionieren.
+Sie wird als Sperrschicht oder Raumladungszone bezeichnet. Da ein Transistor
+aus drei Bereichen besteht, bilden sich zwei
+Sperrschichten.
+
+Damit gibt es plötzlich freie Elektronen
+oder Stellen – man spricht von Löchern oder
+Defektelektronen – die mit einem Elektron
+besetzt werden könnten. Die Elektronen
+haben natürlich nichts Besseres zu tun, als
+die Löcher zu stopfen. Sie diffundieren und
+rekombinieren mit den Löchern. Auch die
+Löcher diffundieren in die gegenüberliegende Zone und rekombinieren dort mit
+freien Elektronen. Bis in eine gewisse Tiefe
+(Diffusionslänge) des Materials gelingt das
+auch, dann ist aber schnell Schluss, weil
+
+Die Reihenfolge der Dotierung entscheidet
+über die elektrischen Eigenschaften des
+Transistors. Es gibt zwei Kombinationsmöglichkeiten (Abb. 3 und 4).
+
+Transistor
+
+Verwendung bei
+fischertechnik
+
+BC 108 A
+
+Transistor/Poti u-t4 TP
+(30609, 36735)
+Verstärker u-t4 VB
+(30609, 36733)
+Schaltstab l-e1
+(30081, 31360)
+
+
+0,1
+
+BC 140-16
+
+Verstärker u-t4 VB
+(30609, 36733)
+In jüngeren u-t4 VB ist
+BC 140-16 verbaut
+
+
+
+BC 238
+A, B, C
+
+Elektronik Praktikum
+(30629, 35651)
+
+
+0,1
+
+0,5 0,07-0,2 120-220 (A)
+180-460 (B)
+380-800 (C)
+
+BC 250 C
+
+hobby 4, Relais h4RB
+(30804, 37140)
+
+
+0,1
+
+0,3
+
+BC 547 C
+
+PROFI electronics
+(524236, 152860)
+
+
+0,1
+
+0,625 0,09-0,3 420-800
+
+
+1,5
+
+12,5
+
+BD 135
+Elektronik-Praktikum
+-6, -10, -16 (30629, 36929)
+
+UCE/V IC/A Ptot/W
+
+UCEsat/V
+
+B
+
+0,3 0,07-0,2 110-220
+
+3,7
+
+0,8 100-250
+
+0,4 200-600
+
+< 0,5
+
+40-100 (-6)
+63-160 (-10)
+100-250 (-16)
+Tab. 1: Transistoren, die in Experimentierkästen von fischertechnik Verwendung finden. Die Tabelle
+enthält die wichtigsten Parameter, die für Schaltanwendungen interessant sind.
+
+
+
+Kollektor C
+
+N
+Basis B
+
+P
+N
+
+Emitter E
+
+sich bei Stromfluss demzufolge von N nach
+P. Der Zusammenhang zwischen Basisspannung und Basis-Emitter-Strom ergibt
+die Eingangskennlinie eines Transistors.
+Sie ist die erste von vier Kennlinien, die
+benötigt werden, um Transistorschaltungen
+zu berechnen.
+IB [mA]
+
+NPN-Transistors
+
+Kollektor C
+
+P
+Basis B
+
+N
+P
+UBE [V]
+
+Emitter E
+
+Legen wir an die Basis eines NPN-Transistors eine gegenüber dem Emitter positivere Spannung an UBE, passiert bis zu
+einer Höhe der Diffusionsspannung von
+etwa 0,6 bis 0,7 V (Silizium) nichts. Dann
+geht es allerdings richtig los: Das elektrische Feld, das die anliegende Spannung an
+der Basis-Emitter-Strecke hervorruft, wirkt
+dem elektrischen Feld der Sperrschicht entgegen und drängt dieses zurück. Wird die
+Spannung größer als die Diffusionsspannung, ist das Feld der Sperrschicht im
+Prinzip neutralisiert. Die Elektronen und
+Löcher lösen ihre Rekombination auf und
+wirken als freie Ladungsträger. Es fließt
+ein Strom IB.
+Hat die Spannung eine gegensätzliche Polarität, ziehen beide Felder gewissermaßen an
+einem Strang, die Sperrschicht wird breiter,
+es fließt praktisch kein Strom. Das bedeutet,
+dass die technische Stromrichtung in einem
+PN-Übergang immer von P nach N verläuft
+und damit der Bewegungsrichtung der
+Löcher entspricht. Die Elektronen bewegen
+
+I/mA
+
+PNP-Transistors
+
+
+
+0,0 0,2 0,4 0,6 0,8 1,0 1,2 1,4
+U/V
+
+am Elektronikbaustein TP
+
+Mit der in Abb. 7 gezeigten Messanordnung
+können die Eingangskennlinie und die
+Durchbruchspannung ermittelt werden.
+Zum Einsatz kommt der Elektronikbaustein
+TP. Der Knick im Bereich der Durchbruchspannung ist sehr schön zu sehen.
+
+
+Elektronik
+
+
+R1 10…100KΩ
++ 5…9V
+
+A
+
+IB
+
+V
+
+UBE
+
+RTP 1KΩ
+Elektronikbaustein TP
+
+fließen. In einem einfachen Experiment
+kann das bewiesen werden.
+Der Kollektor ist schwächer dotiert als der
+Emitter, die Basis-Kollektor-Sperrschicht
+zeigt aber trotzdem ein ähnliches Verhalten
+wie die Basis-Emitter-Sperrschicht.
+
+Eingangskennlinie
+
+Der im Schaltplan angegebene Widerstand
+RTP von 1 kΩ ist im Elektronikbaustein TP
+fest eingebaut. Er sollte bei Messungen an
+einem nackten Transistor explizit zum
+Schutz vorgesehen werden (100 Ω…1 kΩ).
+Das Potentiometer R1 kann einen Wert „aus
+der Bastelkiste“ haben. Das hier verwendete
+Potentiometer aus dem Baustein TP hat
+27 kΩ.
+Da war doch noch eine zweite Sperrschicht?
+Richtig: Die Sperrschicht zwischen Kollektor und Basis. Hätte der Kollektor ein negativeres Potential als die Basis, würde bei
+Überschreiten der Diffusionsspannung auch
+hier ein Strom von der Basis zum Kollektor
+
+Durchlassrichtung: BC 140 Kleinleistungstransistor mit Basisvorwiederstand 10 kΩ
+
+
+
+
+Ein erster Versuch – es werde
+Licht!
+Im weiteren Verlauf dieses Beitrags befassen wir uns mit NPN-Silizium-Transistoren. Diese sind in den eingangs beschriebenen fischertechnik-Kästen enthalten und
+auch deutlich weiter verbreitet. Für meine
+Versuche habe ich den Kleinleistungstransistor BC 140-16 ausgewählt. Dieser ist
+für wenige Cent bei einschlägigen Versendern zu haben. BC 107/8, BC 237/8,
+BC 547/8 und Vergleichstypen können
+ebenso verwendet werden. Sie sind nicht so
+leistungsfähig (max. 500 mW).
+PNP-Transistoren funktionieren, bis auf die
+umgekehrte Polarität aller Spannungen, wie
+NPN-Transistoren.
+Im Schaltplan für die Ermittlung der Eingangskennlinie hängt der Kollektor in der
+Luft. Verbinden wir ihn über einen Leuchtbaustein mit LED oder über eine Stecklampe mit dem Pluspol der Spannungsversorgung, können wir den Transistor in
+Aktion sehen. Wir sind in der Lage, über
+den Basisstrom den Kollektorstrom zu
+steuern.
+
+Durch den Strom von Basis zu Emitter
+befinden sich sehr viele Ladungsträger,
+Elektronen und Löcher, in der Basis. Es
+herrscht so ein Gedränge, dass immer mehr
+Ladungsträger in die Sperrschicht zwischen
+Basis und Kollektor ausweichen – sie
+diffundieren. Der Vorgang wird begünstigt,
+weil die Basis sehr schwach und der Kollektor nicht so stark dotiert ist wie der Emitter.
+Damit ist auch die Sperrschicht zur Basis
+relativ klein und ruckzuck überschwemmt.
+Da, wo es Ladungsträger gibt, kann Strom
+fließen, und das tut er auch. Vom Kollektor
+fließt der Strom IC zum Emitter.
+Die Stärke des Stroms ist dabei vom
+Ladungsträgerangebot in der Basis abhängig. Ohne unterstützenden Basisstrom
+kommt der Vorgang zum Erliegen. Das passiert nicht abrupt, sondern braucht eine
+kurze Zeit. Die vielen Ladungsträger
+müssen abfließen. Das ist der Grund warum
+ein Transistor nicht unendlich schnell
+schalten kann, er hat eine Grenzfrequenz.
+Damit sind schnellen Anwendungen, z. B.
+in Computern, Grenzen gesetzt. Eine
+weitere Konsequenz: ein Transistor schaltet
+deutlich schneller ein als aus.
+
+Stromverstärkung
+
+R1 10…100KΩ
+
+T1
++
+
+R2 100Ω
+
+5…9V
+
+
+Wird der Schleifer des Potentiometers
+bewegt, ändert sich die Helligkeit der LED
+oder Lampe (bei welchem Drehwinkel der
+Effekt eintritt, ist vom Potentiometer abhängig). Was geht da vor? Die Sperrschicht
+zwischen Kollektor und Basis wird doch in
+Sperrrichtung betrieben.
+
+
+Die Stromverstärkung B ist ein vom Hersteller bestimmter Parameter. Sie gibt die
+Abhängigkeit zwischen Basisstrom IB und
+Kollektorstrom IC an. Die Stromverstärkung bewegt sich je nach Typ in einem
+Bereich von 5 bis 1000. Da dieser Zusammenhang nicht in jeder Betriebssituation
+gleich ist, wird er als Kennlinie angegeben.
+Wir sprechen von der Stromverstärkungs-,
+Stromsteuer- oder Übertragungskennlinie.
+Die Kennlinie wird für eine bestimmte
+Kollektor-Emitter-Spannung UCE angegeben (oft 5 V). Das bedeutet, es handelt sich
+eigentlich um eine Kennlinienschar.
+
+
+Elektronik
+
+Nebenkanal ausgelöst – ein Vergleich, den ich seit meiner Jugend nicht vergessen habe.
+
+Aus dem Aufbau eines Transistors erklärt
+sich übrigens auch, warum Leistungstransistoren einen deutlich geringeren Verstärkungsfaktor haben (5…100). Der Halbleiter
+ist deutlich größer, um den hohen Strömen
+gerecht zu werden (und dem Wärmetransport an die Umgebung). Das betrifft auch
+die Basiszone. Damit sind viel mehr
+Ladungsträger notwendig, um die typischen
+Vorgänge auszulösen; das ganze System
+arbeitet etwas träger.
+
+Auch die Übertragungskennlinie kann
+selbst aufgenommen werden. Dazu wird die
+Schaltung aus dem vorherigen Abschnitt
+um zwei Amperemeter erweitert. Da es hier
+um das Prinzip der Stromverstärkung und
+nicht um exakte Vermessungen geht,
+können auch ungenauere Messinstrumente
+(z. B. das fischertechnik Volt-/Amperemeter, 37142), vorzugsweise für den Kollektorstrom, zum Einsatz kommen.
+
+IC [mA]
+UCE
+
+A
+R1 10…100KΩ
+
+A
+
+T1
+
+IC
++
+
+IB
+
+RB 100Ω
+
+5…9V
+
+Übertragungskennlinie
+
+IB [µA]
+
+Ich habe bei meinen Messungen eine Stecklampe zwischen Betriebsspannung + und
+Kollektor des Transistors geschalten. Sie
+dient als Schutzwiderstand und Kontrollleuchte. Wird sie wegelassen (Kollektor an
++Ub) ist besondere Vorsicht geboten. Die
+
+
+
+
+Der Versuch lässt sich auch durch Umstecken eines einzelnen Messgerätes durchführen.
+Das jeweils nicht aktive Amperemeter muss dann durch eine Drahtbrücke o. Ä. ersetzt werden.
+
+CE-Strecke des Transistors und der Innenwiderstand der Spannungsquelle sind die
+beiden einzigen Strom begrenzenden
+Widerstände. Beide sind äußerst gering.
+Der Strom kann so groß werden, dass der
+Transistor zerstört wird.
+Wird ohne Stecklampe gemessen, muss
+der Schleifer des Potentiometers vor Einschalten der Betriebsspannung unbedingt am mit dem Minuspol verbundenen Anschluss liegen.
+Schalten wir die Betriebsspannung ein und
+bewegen den Schleifer des Potentiometers
+vorsichtig Richtung Pluspol der Spannungsquelle, wird irgendwann die Diffusionsspannung überschritten und die KollektorEmitter-Strecke leitet. Wir beobachten eine
+Zunahme von Basisstrom und Kollektorstrom. Tragen wir die Werte in eine Tabelle
+ein, können wir über einen gewissen
+
+𝐼
+
+Bereich feststellen, dass der Quotient 𝐼 𝐶
+
+𝐵
+
+nahezu gleich bleibt. Hier ist die Kennlinie
+linear.
+Das Ergebnis könnte wie in untenstehender
+Tabelle 2 aussehen. Sehr schön zu sehen ist
+der Bereich des Basisstroms von 20 bis
+300 µA. Hier ist die Stromverstärkung B
+nahezu gleichbleibend. In diesem Bereich
+würde z. B. ein Audioverstärker betrieben.
+Typisch sind der nur noch unwesentliche
+Anstieg des Kollektorstroms IC und der
+Einbruch von B bei höheren Basisströmen
+(hier ab etwa 500 µA).
+IB/µA
+
+IC/mA
+
+B
+
+
+1,06
+
+
+
+2,15
+
+
+
+4,51
+
+
+
+Elektronik
+
+IB/µA
+
+IC/mA
+
+B
+
+
+11,47
+
+
+IB = 40µA
+
+
+23,30
+
+
+IB = 30µA
+
+
+46,38
+
+
+IB = 20µA
+
+
+67,60
+
+
+IB = 10µA
+
+
+86,50
+
+
+IB = 0µA
+
+
+98,15
+
+
+UCE [V]
+
+1000
+
+99,40
+
+
+2000
+99,89
+Tab. 2: Messserie zur Ausgangskennlinie eines
+Silizium Kleinleistungstransistors Typ
+BC 140-16.
+
+Wir können also sagen: Der bipolare
+Transistor ist ein Stromverstärker.
+Dadurch, dass zum Ansteuern ein Strom
+fließen muss, ist die Ansteuerung nicht
+leistungslos. Für die Ansteuerung ist immer
+die Leistung UBE · IB erforderlich. Die hier
+umgesetzte Leistung ist sehr gering, belastet
+aber den Ausgang eines evtl. vorgeschalteten Schaltkreises.
+
+Die Ausgangskennline
+Wir haben gesehen, dass sich der Kollektorstrom (IC), der von der Basis zum Emitter
+fließt, durch eine Kennlinie beschreiben
+lässt. Da wir die Strecke Kollektor-Emitter
+als Ohmschen Widerstand sehen können,
+muss der Kollektorstrom auch von der
+anliegenden Spannung (UCE) abhängen.
+Weil es sich beim Kollektorstrom im
+Prinzip um den Ausgangsstrom handelt,
+sprechen wir von der Ausgangskennlinie.
+Die Kennlinie gibt die Abhängigkeit zwischen Kollektor-Emitter-Spannung UCE und
+Kollektorstrom IC an. Das ist auf den ersten
+Blick wenig interessant. Wir möchten doch
+mehr über die Auswirkungen zwischen
+Eingang (Basisstrom IB) und Ausgangsstrom (IC) erfahren. Deshalb ist die Ausgangskennlinie eine Kennlinienschar. Jede
+dargestellte Kennlinie steht für das Ausgangsverhalten bei einem bestimmten
+Basisstrom.
+
+IC [mA]
+
+
+Es kann abgelesen werden, wieviel Kollektorstrom bei welchem Basisstrom und
+welcher am Transistor anliegenden Spannung zu erwarten ist. Natürlich müssen wir
+berücksichtigen, dass es Vorwiderstände in
+der Eingangsbeschaltung und einen Lastwiderstand im Ausgangskreis geben muss.
+Diese lassen sich unter Anwendung des
+Ohmschen Gesetzes [2], der Kirchhoffschen Regeln [3, 4] und der physikalischen
+Eigenschaften des Transistors nur aus den
+Spannungen, Strömen und dem Verstärkungsfaktor berechnen.
+
+Die vier Quadranten
+Wir haben jetzt alle wichtigen Kennlinien
+des Transistors kennen gelernt. Interessant
+ist, dass Eingangskennlinie, Übertragungskennlinie und Ausgangskennlinie mit ein
+wenig Drehen und Spiegeln aneinandergefügt werden können. Dabei müssen identische Größen jeweils auf einer Achse
+liegen. In dem sich ergebenden Vier-Quadranten-Diagramm können auf einen Blick
+alle wesentlichen Parameter des Transistors
+und deren Abhängigkeiten dargestellt werden. Leider werden alle dafür benötigten
+Kennlinien nur noch von wenigen Halbleiterherstellern bereitgestellt. Soll eine
+Transistorschaltung sehr genau berechnet
+werden, kann es sinnvoll sein, den Transistor zu vermessen oder Bauteile (in der
+Regel Widerstände als Potentiometer)
+einstellbar zu planen, um später einen
+Abgleich durchführen zu können.
+
+
+
+
+Übertragungskennlinie
+
+IC [mA]
+
+Ausgangskennlinie
+IB = 100µA
+
+UCE
+9V
+
+IB = 75µA
+IB = 50µA
+
+10 mA
+
+IB = 25µA
+IB = 0µA
+IB [µA]
+
+50 µA
+
+9V
+
+UCE [V]
+
+IB
+
+0,8 V
+50 µA
+Eingangskennlinie
+
+UBE [V]
+
+Rückwirkungskennlinie
+
+Auskunft über unseren Arbeitspunkt. Wir können gedanklich die Punkte auf den Kennlinien
+verschieben und erahnen sofort, welche Konsequenzen das für andere Größen hat.
+
+RB
+
+RL
+
+UCB
+
+URL
+IC
+UB
+
+Der Transistor als Schalter
+
+IB
+UBE
+
+UCE
+IE
+
+Transistorschaltung
+
+Das Vier-Quadranten-Diagramm enthält
+eine vierte Kennlinie, die Rückwirkungskennlinie. Sie beschreibt die Veränderung
+
+der Basisspannung, wenn die Spannung
+UCE geändert wird. Der Rückwirkungsfaktor D ergibt sich aus den Spannungsgegebenheiten im Transistor selbst und ist
+bauartbedingt. Meist liegen die Kennlinien
+sehr eng zusammen und verlaufen nahezu
+waagerecht. Sie hat für Schaltanwendungen
+keine Bedeutung.
+
+Kehren wir wieder in die Praxis zurück. Seit
+1969 werden immer wieder fischertechnikModelle vorgestellt, die mit Hilfe von
+Aktoren wie LDRs, NTCs, Fototransistoren
+u. A. gesteuert werden. Wie kann eine
+einfache Schaltung berechnet werden, die
+mit den verfügbaren Aktoren funktionieren
+soll? Zuerst müssen wir uns klar werden,
+dass wir von der Physik des Transistors
+abhängig sind. Die Hersteller unterliegen
+
+
+Elektronik
+
+diesen Bedingungen, können aber in
+gewissen Grenzen die Parameter eines
+Transistors im Herstellungsprozess beeinflussen. Also sind die Datenblätter ein
+wichtiges Element. Haben wir die drei
+(bzw. vier) vorgestellten Kennlinien zur
+Verfügung, kommen wir schon sehr weit.
+Jetzt gilt es, die Steuergröße im Eingangskreis und die Wirkung im Ausgangskreis
+soweit abzustimmen, bis ein guter Kompromiss gefunden ist.
+
+Transistor von 0,05 bis 0,6 V. Sperrt der
+Transistor (Arbeitspunkt A1), ist die Kollektor-Emitter-Strecke extrem hochohmig;
+so gut wie die gesamte Betriebsspannung
+fällt am Transistor ab.
+
+Anders als in einer typischen Verstärkerschaltung wird ein Schalttransistor mit zwei
+Arbeitspunkten betrieben. Bei Arbeitspunkt
+A1 ist der Transistor „ausgeschaltet“, bei
+Arbeitspunkt A2 „eingeschaltet“.
+
+Punkte, erhalten wir die Widerstandsgerade, die die verschiedenen Kennlinien
+kreuzt. Interessant sind die Schnittpunkte
+mit der Kennlinie 0 µA und der Kennlinie,
+die ganz links zu finden ist. Dort befindet
+sich der Sättigungsbereich (rot schraffiert).
+Der Arbeitspunkt A2 muss am oder in
+diesem Bereich liegen. Dann ist der
+Transistor voll durchgesteuert, der Spannungsabfall UCE sehr niedrig.
+
+In Abb. 18 sind die Zusammenhänge dargestellt. Die Bereiche unterhalb der Kennlinie IB = 0 und links der Kennlinienschar
+für IB können technisch nicht erreicht
+werden.
+IC [mA]
+
+UCB = 0
+
+IB
+
+A2
+
+A1
+
+IB = 0
+UCE [V]
+
+als Schalter
+
+Woher bekommen wir die Arbeitspunkte?
+Nichts einfacher als das! Die orangefarbene
+Linie in der Grafik ist die Widerstandsgerade des Transistors bei Reihenschaltung
+mit einem Lastwiderstand RL. Nach Kirchhoff [3, 4] können wir sagen: Die Summe
+der Spannungsabfälle an RL und am Transistor (UCE) ist gleich der Betriebsspannung
+UB (Maschenregel, grafische Berechnung
+eines Spannungsteilers). Ist der Transistor
+voll durchgeschaltet (Arbeitspunkt A2) fällt
+(fast) die gesamte Spannung an RL ab; UCE
+ist nahezu 0 V. Es bleibt ein typischer
+Spannungsabfall am durchgeschalteten
+
+Auf der X-Achse (UCE) tragen wir einen
+Punkt in Höhe der Betriebsspannung ein,
+auf der Y-Achse (IC) den Strom, der sich aus
+Betriebsspannung und Lastwiderstand
+𝑈
+ergibt: 𝑅𝐵 . Verbinden wir die beiden
+𝐿
+
+Bei der Arbeitspunktbestimmung dürfen
+wir nicht in die grün schraffierten Bereiche
+gelangen. Diese Bereiche können nicht
+erreicht werden. Sie liegen außerhalb der
+gültigen Kennlinien, auf denen wir uns
+bewegen müssen.
+Links ist erkennbar, dass im Sättigungsbereich eine erhebliche Erhöhung des
+Basisstroms IB nur noch einen minimalen
+Anstieg des Kollektorstroms IC bewirkt.
+Dieses Verhalten ergibt sich aus den im
+Sättigungsbereich sehr steil verlaufenden
+Kennlinien. Der Effekt ist damit zu erklären, dass der Transistor noch mehr
+Ladungsträger (Elektronen) in die Basisschicht durchlässt, diese aber nicht zum
+Kollektor abfließen können, weil der Strom
+IC durch den Lastwiderstand begrenzt ist.
+Überschüssige Elektronen werden jetzt über
+den Basisanschluss abgeleitet, das Verhältnis aus IC zu IB wird kleiner, die Stromverstärkung sinkt. Damit wird auch die
+Spannung UCE kleiner als die Spannung
+UBE. Beim NPN-Transistor hat der
+Kollektor dann ein geringeres Potential als
+die Basis.
+
+
+
+Der Arbeitspunkt A2 wird gerne in den
+Sättigungsbereich gelegt. Je weiter der
+Arbeitspunkt dort hinein verschoben wird,
+desto schneller schaltet der Transistor ein,
+weil das Überschwemmen mit Ladungsträgern schneller erfolgen kann. Schalttransistoren werden meist mit dem Zweibis Zehnfachen des nötigen Basisstroms
+betrieben.
+Aus der Grafik ist zu erkennen, dass der
+Beispiel-Transistor bei Erreichen des
+Arbeitspunkts A2 nahezu voll durchgesteuert ist. Wir müssen dafür sorgen, dass,
+wenn der Transistor eingeschaltet werden
+soll, ein Strom in die Basis fließt, der
+mindestens dem der Kennlinie IB entspricht,
+auf der der Arbeitspunkt liegt. Diese Aufgabe kann beispielsweise ein Vorwiderstand übernehmen. Soll der Transistor ausgeschaltet werden muss der Stromfluss
+unterbrochen, also auf Arbeitspunkt A1
+zurückgefahren werden.
+
+Berechnung eines
+Schaltverstärkers
+Sind der Lastwiderstand und der Transistortyp bekannt, kann mittels der Gesetze von
+Ohm [2] und Kirchhoff [3, 4] die Schaltung
+berechnet werden. Da immer mehr Hersteller nur noch eingeschränkt Kennlinien veröffentlichen, müssen wir ggf. mit Parametern des Datenblatts auskommen.
+Wir arbeiten mit einer Versorgungsspannung von 9 V. Wir möchten einen maximalen Strom durch die Lampe fließen lassen.
+Wie groß muss der Basiswiderstand gewählt werden?
+fischertechnik-Stecklampe 9 V / 100 mA
+(37869)
+Betriebsspannung
+
+ULmax
+
+9V
+
+Maximaler Strom
+
+ILmax
+
+0,1A
+
+Sich ergebender
+Widerstand
+
+RL
+
+90Ω
+
+
+Transistor BC 140-16
+Maximale
+Kollektor-EmitterSpannung
+
+VCE0
+
+40 V
+
+Kollektor-Emitter
+Sättigungsspannung
+
+VCEs
+
+0,6V (<1V)
+
+Maximaler
+Kollektorstrom
+
+ICmax
+
+1A
+
+Maximaler
+Basisstrom
+
+IBmax
+
+0,1 A
+
+Maximale
+Verlustleistung
+
+Ptot
+
+3,7 W
+
+at
+
+StromB
+verstärkungs(100 - 250)
+faktor
+Tab. 3: Kenndaten von Lampe und Transistor
+
+Der verwendete Transistor hat in unserem
+Arbeitsbereich von 100 mA laut der Kennlinie in Abb. 19 eine Sättigungsspannung
+VCEsat von etwa 0,15 V. Allerdings bezieht
+sich dieser Wert auf einen Verstärkungsfaktor von 10 (hFE ist eine andere Bezeichnung für B), sodass wir mit Abweichungen
+rechnen müssen. Damit verbleiben für die
+Lampe 8,85 V. Ist die Kennlinie nicht
+vorhanden, müssen wir die Angabe aus dem
+Datenblatt von 0,6 V verwenden.
+Daraus kann der tatsächliche Lampen- und
+Kollektorstrom berechnet werden:
+𝐼𝑅𝐿 = 𝐼𝐶 =
+
+𝑈𝐵 − 𝑈𝐶𝐸𝑠𝑎𝑡
+=
+𝑅𝐿
+
+9V − 0,15V
+= 98,33mA
+90Ω
+Aus dem Kollektorstrom lässt sich über den
+Stromverstärkungsfaktor B der notwendige
+Basisstrom berechnen. Für die Stromverstärkung können wir wunderbar den
+Wert einsetzen, den wir bereits weiter oben
+ermittelt haben (ca. 170, nachgemessen):
+=
+
+𝐼𝐶
+98,33mA
+= 𝐼𝐵 =
+= 0,578mA
+𝐵
+
+Die Spannung am Widerstand UR1 ist die
+Betriebsspannung UB abzüglich der Sättigungsspannung. Sie beträgt laut der Kennlinie in Abb. 19 für unseren Kollektorstrom
+ca. 0,81 V. Steht die Kennlinie nicht zur
+Verfügung, müssen wir den Parameter
+UBEsat verwenden. Steht auch dieser nicht
+zur Verfügung, bleibt nur noch die Diffusionsspannung für Silizium von 0,7 V.
+𝑈𝑅1 = 𝑈𝐵 − 0,81V = 9V − 0,81V
+= 8,19V
+Mit dem Ohmschen Gesetz [2] kann R1
+berechnet werden. Der Widerstand ergibt
+sich aus der Spannung und dem vorher
+errechneten Strom:
+𝑅1 =
+
+𝑈𝑅1
+8,19V
+=
+= 14,17kΩ
+𝐼𝐵
+0,578mA
+
+Elektronik
+
+Wir verwenden den nächstgelegenen
+Widerstand aus der E12-Reihe von 15 kΩ.
+Nach Aufbau der Schaltung sollte die
+Lampe hell leuchten.
+Überprüfen wir die Spannungen und Ströme anhand der oben gezeigten Schaltung
+können wir feststellen, dass unsere Berechnung ganz gut hinkommt. Einzig die berechneten Werte rein nach Datenblatt
+weichen etwas ab. Das kann folgende
+Ursachen haben:
+• Die Stromverstärkung unterliegt einer
+sehr starken Streuung.
+• Die Stromverstärkung nimmt mit zunehmendem Kollektorstrom ab.
+• Die Sättigungsspannung stimmt auf
+Grund von Streuungen nicht.
+
+einigen Herstellern angegeben. Die markierten Punkte sind die verwendeten Werte bei 25°C.
+
+
+
+Messwert
+
+berechnet
+
+gemessen
+
+Kennlinie Datenblatt
+B = 170
+B = 160
+UBE
+
+0,81 V
+
+IB
+
+0,578 mA
+
+UCE
+
+0,15 V
+
+0,7 V
+
+0,805 V
+
+0,583 mA 0,577 mA
+0,6 V
+
+0,465 V
+
+Verlustleistung – Tod eines
+Transistors
+Im Baukasten hobbylabor 1 ist ein Widerstand 33 Ω 1 W (37206) enthalten. Wird
+dieser beispielsweise direkt (kurz!) an einen
+Batteriehalter 9 V oder an einen Power
+Controller angeschlossen, ist eine deutliche
+Erwärmung feststellbar.
+
+IC
+98,33 mA
+93,33 mA 99,03 mA
+Tab. 4: Berechnete und gemessene Werte der
+Transistorschaltung
+
+• Der Transistor erwärmt sich während des
+Betriebs.
+Das alles ist nicht tragisch, da ein Schalttransistor meist „über sein Ziel hinausschießen“ soll, also in die Sättigung gefahren wird. Wir haben erfahren, dass der
+zwei- bis zehnfache Basisstrom eingestellt
+werden sollte. In der Literatur wird häufig
+der dreifache Strom angenommen. Verringern wir also den Basiswiderstand auf
+5,6 kΩ, liegen wir (meine Messungen) mit
+1,47 mA Basisstrom beim gewünschten
+Wert. UBE steigt unwesentlich auf 0,89 V.
+Der Kollektorstrom wird in erster Linie
+vom Lastwiderstand bestimmt und veränderte sich bei meinen Messungen nur auf
+99,9 mA. Die Stromverstärkung nimmt
+rapide ab. Mein Wert: nur noch 68. Das
+alles erklärt sich durch das bisher beschriebene Verhalten von Transistoren im Sättigungsbereich (Kennlinien).
+Um dem Transistor zu ermöglichen, seine
+Ladungsträger in der Basis beim Ausschalten loszuwerden, kann zwischen Basis
+und Emitter ein hochohmiger Widerstand
+geschaltet werden (RBE >> R1, z. B.
+100 kΩ). Er ermöglicht den Ladungsträgern
+abzufließen. Außerdem sorgt er dafür, dass
+die Basis ein eindeutiges Potential hat,
+wenn der Eingang der Schaltung offen ist.
+Die Basis hängt nicht unkontrolliert in der
+Luft.
+
+
+
+Am Widerstand liegt eine Spannung U von
+ca. 9 V an. Diese treibt einen Strom I durch
+ihn, der sich nach dem Ohmschen Gesetz
+[1] berechnen (oder auch messen) lässt:
+𝑈
+9V
+=
+= 0,272A = 272mA
+𝑅 33Ω
+Auch die in Wärme umgesetzte Leistung
+kann berechnet werden:
+𝐼=
+
+𝑃 = 𝑈 ∙ 𝐼 = 9V ∙ 272mA = 2,45W
+Rund 2½ Watt werden im Widerstand in
+Wärme umgewandelt. Das ist mehr als das
+Doppelte der zulässigen Verlustleistung
+von 1 Watt.
+Für den Transistor gilt dieser Zusammenhang genauso. Der einzige Unterschied ist,
+dass er uns einen derartigen Betrieb jenseits
+seiner maximal zulässigen Verlustleistung
+sehr viel schneller als ein gutmütiger
+Widerstand übelnimmt. Das liegt u. A. an
+den filigranen inneren Strukturen, die auf
+Wärme (Hitze) viel empfindlicher reagieren. Gleichzeitig werden bei hohen Temperaturen die Ladungsträger immer beweglicher. Irgendwann brechen alle Dämme
+und die Sperrschichten schlagen durch. Die
+
+
+Elektronik
+
+übliche maximale Sperrschichttemperatur
+liegen für Silizium bei etwa 150-175°C. Die
+gebräuchliche Kennzeichnung für die
+maximale Verlustleistung ist passenderweise Ptot (von P total).
+Rufen wir uns noch einmal die Ausgangskennlinie in Erinnerung. Hier werden beide
+für die im Transistor entstehende Verlustleistung verantwortlichen Größen angegeben:
+• die Kollektor-Emitter-Spannung UCE
+und
+• der Kollektorstrom IC.
+Wir können durch Multiplikation der
+beiden Werte für jeden Punkt die im
+Transistor umgesetzte Leistung berechnen.
+Tun wir das für einige Punkte, markieren
+diese im Koordinatenkreuz und verbinden
+sie miteinander, erhalten wir die sogenannte
+Leistungshyperbel des Transistors. Jeder
+Punkt oberhalb dieser Kurve ist tabu
+(> Ptot). Tragen wir noch den maximalen
+Kollektorstrom (ICmax) und die maximale
+Kollektor-Emitter-Spannung (UCE0) ein,
+ergibt sich der weiße Bereich im Diagramm
+in Abb. 21, in dem der Transistor arbeiten
+muss, ohne dass er durch Wärme, Spannung
+oder Strom zerstört wird.
+Im Abschnitt Stromverstärkung ist eine
+Tabelle mit den Verstärkungsfaktoren angegeben. Wer diese Messung nachvollzogen
+hat, konnte feststellen, dass sich der Transistor bei Werten von IC um 50 mA stark
+erwärmte. Bei diesem Kollektorstrom und
+der dann an CE anliegenden etwa halben
+Betriebsspannung von 4,5 V ergeben sich
+0,225 W.
+
+Arbeitspunkt A
+
+IC
+
+UCB = 0
+
+ICmax
+A2
+
+IB
+
+A1
+
+IB = 0
+UCE0
+
+UCE
+
+Arbeitsbereich
+
+In Abb. 21 schneidet die Arbeitsgerade die
+Leistungshyperbel. Schaltet der Transistor,
+läuft der Arbeitspunkt auf der Geraden
+jedes Mal durch den Totbereich. Da die
+angestrebten Schaltzeiten sehr kurz sind,
+kann die beim Durchlaufen entstehende
+Verlustleistung vernachlässigt werden. In
+den Datenblättern von Schalttransistoren
+finden sich gewöhnlich zeitliche Informationen zu zulässigen Überschreitungen von
+Ptot im Impulsbetrieb.
+
+IC
+
+UCE
+
+Berechnung
+
+Ergebnis
+
+IC ~ 0 mA
+
+UCE ~ UB
+
+9 V · 0 mA
+
+0 mW
+
+Zwischen den Arbeitspunkten IC ~ 50 mA
+Arbeitspunkt B
+
+Das ist nicht viel und weit vom zulässigen
+Maximum entfernt, reicht aber für eine
+deutliche Erwärmung des Transistors (und
+der damit verbundenen Verfälschung der
+Messwerte). Im mittleren Bereich der
+Arbeitsgeraden ist die Verlustleistung im
+Transistor am höchsten, der Abstand zur
+Leistungshyperbel (der Kurve mit gleicher
+Leistung 𝑃 = 𝑈 ∙ 𝐼) an geringsten. Das können wir durch eine einfache Rechnung
+beweisen (Tab. 5).
+
+UCE ~ 4,5V 4,5 V · 50 mA
+
+225 mW
+
+IC ~ 100 mA UCE ~ 0,3V 0,3 V · 100 mA
+Tab. 5: Berechnung der Verlustleistung
+
+30 mW
+
+
+
+
+Alle in der fischertechnik-Literatur zu findenden Schaltungen sind so ausgelegt, dass
+die Arbeitspunktgerade die Leistungshyperbel nicht schneidet. Das wäre fatal.
+Nehmen wir z. B. einen Temperaturschalter
+mit
+NTC-Widerstand (1,5 kΩ/36437,
+2 kΩ/36386, 25 kΩ/36716, 60 kΩ/36577,
+60 kΩ/37400, 68 kΩ/36438). Bei einer
+einfachen Transistorschaltstufe müsste der
+Arbeitspunkt zwangsläufig gemächlich
+durch den Totbereich wandern, da sich die
+Temperatur eines NTC nur allmählich an
+seine Umgebung anpasst. Das würde nach
+Einschalten des Modells lange Gesichter
+geben.
+
+Ein Dämmerungsschalter –
+nachts sind alle BS30 grau
+Vermutlich stelle ich hier den 598. Dämmerungsschalter vor, der seit 1965 (1969) mit
+fischertechnik konstruiert wurde. Trotzdem
+wage ich einen neuen Anlauf. Nicht weil es
+neue wissenschaftliche Erkenntnisse gibt,
+
+sondern weil wir an einem Dämmerungsschalter sehr schön einige Eigenschaften
+eines Transistorschalters beobachten können.
+Die Idee ist, die Dämmerung künstlich und
+damit reproduzierbar zu erzeugen. Dazu
+eignet sich ein Transformator 812/814 oder
+besser ein Power Controller. An den Motorausgang wird der „Dämmerungserzeuger“,
+eine Steck- oder Gewindelampe, angeschlossen. Der Schaltverstärker aus dem
+vorherigen Abschnitt dient als Basis für den
+Versuchsaufbau.
+Ist der LDR nicht angeschlossen, funktioniert die Schaltung wie gehabt. Mit LDR
+gibt es einen Widerstand, der bei ausreichender Beleuchtung das Potential UBE
+gegen Masse verschiebt. Ist die Beleuchtung schwach, bewegt sich UBE oberhalb
+der Sättigungsspannung. Die Laterne leuchtet gleichbleibend. Wird die Sättigungsspannung unterschritten, dimmt die Laterne
+herunter. Nimmt die Beleuchtungsstärke
+
+
+
+Elektronik
+
+weiter zu, wird auch die Diffusionsspannung unterschritten und die Laterne
+erlischt vollständig. Die Zusammenhänge
+können in der Schaltung gemessen werden
+(Abb. 23).
+Power
+Controller
+0…9V
+
+R1 = 5,6kΩ
+
+T1
++
+9V
+
+LDR03
+
+
+Die Schaltung funktioniert sehr gut. Sie ist
+aber keinesfalls optimal, da die Laterne bei
+Veränderung der Beleuchtung langsam
+herunter (oder herauf) dimmt. Dabei kann
+u. U. im mittleren Bereich die Verlustleistung im Transistor über eine längere Zeit
+den Maximalwert Ptot überschreiten. Für
+uns spielt das keine Rolle, da wir auf Grund
+der geringen Versorgungsspannung UB von
+
+9 V zu keinem Zeitpunkt die Leistungshyperbel der maximal zulässigen Leistung
+schneiden.
+Ein Tipp für Besitzer eines ftDuino oder
+TX(T) Controllers, um die Messgeräteorgie
+zu vermeiden: Für ca. 8 € gibt es fertig
+aufgebaute Module mit dem 4-Kanal 18-Bit
+Präzisions-DA-Wandler MCP3424 [6]. Es
+handelt sich um einen Differenzwandler mit
+I²C-Interface und einer internen Referenzspannung von +/- 2,048 V. Er verfügt über
+einen integrierten, programmierbaren
+Messverstärker und erreicht damit eine
+Auflösung von ca. 16 µV. Der Baustein ist
+so interessant, weil mit den vier Kanälen
+vollkommen potentialfrei gemessen werden
+kann. In Abb. 24 wird ein Versuchsaufbau
+zur Messung von IB und IC gezeigt. Links
+sind die beiden benötigten Shunt-Widerstände (100 Ω für IB und 0,47 Ω für IC)
+abgebildet. Diese benötigen keine besondere Toleranz. Mit einem Multimeter wird
+lediglich durch Referenzmessungen der
+Umrechnungsfaktor bestimmt und im Programm auf den rohen Messwert angewendet. Die Genauigkeit ist beindruckend.
+
+
+
+
+Wichtig ist eine saubere Masseverbindung
+(vorne im Bild) zwischen Schaltung und
+Messeinheit (hier MCP 3424 und ftDuino).
+
+Ausblick
+Im nächsten Teil befassen wir uns mit Feldeffekttransistoren (FET, MOS-FET, IGFET). Diese sind im fischertechnik-Universum nicht als diskrete Bauelemente zu
+finden, aber im Computing-Bereich in den
+Ausgangsstufen der Motor-Ausgänge unverzichtbar.
+
+Quellen
+[1]
+
+
+fischertechnik: l-e1 Begleitbuch
+Band 2. Fischerwerke, 1969. In der
+ft-DB, S. 118 ff.
+
+[2]
+
+Wikipedia: Ohmsches Gesetz.
+
+[3]
+
+Wikipedia: Kirchhoffsche Regeln.
+
+[4]
+
+Leifiphysik: Kirchhoffsche Gesetze.
+
+[5]
+
+Alldatasheet.com/Siemens:
+Kennlinien BC 140.
+
+[6]
+
+Microchip: Datenblatt MCP 3424.
+
+[7]
+
+U. Tietze, Ch. Schenk: HalbleiterSchaltungstechnik. Springer-Verlag.
+
+[8]
+
+Elektronik Kompendium:
+www.elektronik-kompendium.de
+
+[9]
+
+Eigene Schulungsunterlagen und
+Lösungen: HPI Elektronik I bis III.
+Heinz-Piest-Institut an der Leibnitz
+Universität Hannover.
+
+

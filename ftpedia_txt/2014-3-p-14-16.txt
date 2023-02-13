@@ -1,0 +1,123 @@
+
+
+Tipps & Tricks
+
+Kaulquappen (Teil 5)
+Harald Steinhaus
+Einen kleinen Vorteil hat so ein nasser verregneter Sommer wie der jetzige schon: es gibt
+genügend Zeit, sich mit Kaulquappen (siehe auch Teil 1-4 [1]) zu befassen und dafür zu sorgen,
+dass der eine oder andere Frosch daraus hervor geht, den man durch den Kuss einer Muse zum
+Prinzen verwandeln kann. Trotz alledem, mit echtem Sonnenlicht würde zumindest das
+Fotografieren leichter fallen.
+Die Lok-Grundplatte 31557 der Bauspielbahn eignet sich als Träger für ein Winkelgetriebe (Abb. 1).
+
+
+Mit dem Reifen 60 auf Position kann das
+z. B. zum Obst- oder Weinbautraktor
+werden, der wie auf beräderten Stelzen über
+eine Reihe von Büschen oder Reben fährt
+(Abb. 2).
+Durch Umschlingen runder Bauteile mit der
+schwarzen Kette erhält man neue Zahnräder
+(Abb. 3). Das große Innenzahnrad wurde
+außen etwas dünner gedreht, damit die
+Kette darauf passte, und ergibt ein Z46.
+
+Erhard Kührer (wikipedia)
+
+Die Drehscheibe 60 ergibt ein Z42.
+
+und Z42 (aus Drehscheibe 60)
+
+Kupplungen: Die Achse links in Abb. 4 mit
+dem Z30 (die rote Kette mit den kurzen
+Stiften geht hier genauso gut) kann man auf
+der Freilaufnabe verschieben, bis die Stifte
+in die Ausnehmungen der Drehscheibe
+einfädeln und beide Elemente drehstarr
+verbinden. Das gleiche geht mit dem Z15
+auf der rechten Seite, das auf einer Seilrolle
+beruht.
+
+
+In der Kette auf dem rechten Z30 in Abb. 5
+sind nur fünf schwarze Kettenglieder verbaut. Das ergibt ein Schrittschaltwerk: mit
+jeder Umdrehung des rechten Zahnrads (nur
+gegen den Uhrzeigersinn) wird das linke
+Zahnrad um drei Zahnpositionen weit mitgenommen.
+
+Tipps & Tricks
+
+Die Stifte an den schwarzen Kettengliedern
+machen so ein Zahnrad zum Kronenrad, mit
+dem man Drehbewegung auch im Winkel
+übertragen kann. Als Innenzahnrad
+funktioniert so ein Ketten-umschlungenes
+Zahnrad ebenfalls: darauf beruhen die
+Hypozykloiden-Getriebe im Bilderpool.
+
+
+Um einen Container anzuheben, braucht
+man ein Containerschloss. Im einfachsten
+Fall ist das ein T-förmiger Hebel am Greifer, der in einem Langloch am Container
+längs (offen) oder quer (geschlossen) gedreht werden kann. Diese T-Form haben die
+ft-Statikriegel, und es fehlt nur noch der
+Übergang auf eine Achse, um sie per Hebel
+oder Motor zu drehen (Abb. 8).
+
+
+Mit den Teilen eines schwarzen Differenzials erhält man ein Z14, das starr mit dem
+Z20 verbunden ist, weil auch hier die Stifte
+in Ausnehmungen des Zahnrads passen.
+Rechts ein Z9 mit zwei Gelenkmuttern
+35019, das aber nur lose aufliegt (Abb. 6).
+
+
+Mit dem Lenkhebel (38473) kann man eine
+Achse genau auf der Verlängerung der
+Diagonalen des BS30 lagern.
+
+
+
+
+Mit der gelenkig gelagerten Achse aus Abb.
+10 kann man den Taster aus der Ferne betätigen. Gegebenenfalls muss die Achse
+etwas aufgepolstert werden, denn die ftTaster streuen recht stark bezüglich der
+Auslösepunkte.
+
+
+Der Anlenkhebel (31894) wurde gemoddet
+und hat jetzt einen sauber runden Kugelkopf. Dieser gleitet in der Längsnut des
+BS30. Zieht man die gelbe Strebe in Abb.
+11 nach links und rechts, schwenkt der
+BS30 nach hinten bzw. vorne.
+
+
+Der Prinz aus Abb. 12 ist eine Servolenkung: Man denke sich die gelbe Strebe als
+Spurstange einer Vorderachse und daran
+einen ft-Servo, sowie an der Laufrolle einen
+Hebel, den ein „ordentlicher“ Motor
+bewegt. Die Spurstange bewegt die beiden
+BS15-Lochsteine in Soll-Position und
+nimmt dabei die beiden Taster mit, soweit
+es deren Lagerung mit Gelenk und Gummiring zulässt. Ein schwarzes Kettenglied, das
+auf eine alte Seilrolle gesteckt ist, liefert die
+Ist-Position des Vorderrads. Beim Lenkeinschlag weichen Soll und Ist voneinander
+ab, einer der Taster ist gedrückt, und der
+Gummiring erlaubt die mechanische Fehlstellung. Der gedrückte Taster steuert den
+Lenkmotor solange an, bis das gelenkte Rad
+wieder mit den BS15 fluchtet.
+
+
+
+
+Referenzen
+[1]
+
+Harald Steinhaus: Kaulquappen.
+Teil 1: ft:pedia 1/2011, S. 22-28;
+Teil 2: ft:pedia 2/2011, S. 9-13;
+Teil 3: ft:pedia 3/2012, S. 24-26;
+Teil 4: ft:pedia 1/2014, S. 21-23.
+
+

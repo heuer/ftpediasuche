@@ -1,0 +1,178 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Reparieren eines Hubgetriebes (37272, 75067)
+Harald Steinhaus
+In vielen ft-Teilesammlungen genießt das Hubgetriebe „Reliquienstatus“ – denn schon immer
+war es nur in wenigen (eher hochpreisigen) Kästen enthalten, wie heute im Profi E-Tec oder
+Robo TX Training Lab – und es fehlt selbst im Motor Set XS. Mit einem Einzelteil-Neupreis
+von knapp 9 Euro zählt es auch nicht gerade zu den „Schüttgut-Komponenten“. Umso ärgerlicher, wenn dem seltenen Spezialgetriebe etwas zustößt …
+Der Kraftfluss durch das Hubgetriebe, vom
+Motor zur Hubzahnstange, verläuft in einer
+Spirale: vom Eingangszahnrad (unten
+Mitte) nach links oben, dann auf der rechten Seite bis zur Mitte nach unten, dann
+nach innen und dort wieder nach oben. In
+dieser Reihenfolge spielen die folgenden
+Zahnräder mit:
+
+hakt, ist sehr wahrscheinlich eins der Z11
+ausgeleiert oder weist einen Riss auf.
+Unter der Teilenummer 75067 gibt es auch
+ein Hubgetriebe, dessen höchst belastetes
+Z11 bereits in Messing ausgeführt ist (Abb.
+1).
+
+Z14 (75108), Eingang Motorschnecke
+Z11 (75104)
+Z11/Z20 (75106)
+Z28 (75106)
+Z11 (75104)
+Z11/Z20 (75105)
+Z11x5,5 (75107), innen
+Z14 (75108); Abtrieb, greift in Hubzahnstange
+Es tauchen einige Teile mehrfach auf – ein
+Zeichen guter Konstruktionsarbeit, die die
+Teilevielfalt in Grenzen hält. Das gilt nicht
+nur für das Hubgetriebe, denn diese Zahnräder werden auch in anderen ft-Getrieben
+eingesetzt.
+Die große Schwachstelle des Hubgetriebes
+heißt „Z11“ und kommt dreifach vor,
+davon einmal mit einem Bund, der es auf
+5,5 mm Breite bringt. Wenn das Getriebe
+rutscht oder an einer bestimmten Stelle
+
+
+Einen Riss findet man, indem man eine
+Zahnstange ganz langsam von Hand durchs
+Getriebe schiebt und die Stelle sucht, an
+der das gerissene Zahnrad wegen des
+Spaltes zwischen zwei Zähnen nicht mehr
+sauber in seinen Nachbarn eingreift.
+Der Bohrungsdurchmesser beträgt 4 mm
+beim Z28, 3 mm beim Z11/Z20, und 2 mm
+bei Z11 und Z14. Das Z11/Z20 ist frei
+laufend auf einem Bolzen gelagert, der im
+Gehäuse vernietet ist. Die anderen Zahnräder sitzen auf Achsen mit Rändelungen.
+
+
+
+Sollte der genietete Bolzen ausreißen, hat
+man einen Totalschaden vor sich. Alle
+anderen Elemente kann man ausbauen und
+wieder einsetzen; sprich: hier ist Reparieren möglich.
+
+die Positionen 2 und 5. Es muss daher
+etwas schmaler gemacht werden. Zahnräder kann man in ein Drehfutter spannen,
+wenn man sie in eine geschlitzte Messinghülse einpackt (Abb. 2).
+
+Die Ersatzteile sind bei Knobloch erhältlich. Bei der Zuordnung insbesondere der
+Achsen helfen die Vorschaubilder im
+Webshop und auch die 3D-Skizzen der ftDatenbank:
+
+Nun zur Reparatur: Öffnet man auf der
+Knobloch-Webseite die Detailseite zu einem der Ersatzteile, findet man folgenden
+Hinweis:
+
+Zahnrad Z11 m 0,5 (75104)
+Zwischenzahnrad
+(75105)
+
+Z11/Z20
+
+m 0,5
+
+Abtriebszahnrad Z28 m 0,5 (75106)
+Zahnrad Z11x5,5 (innenliegend) m 0,5
+(75107)
+Ritzel Z14 m 0,5 (75108)
+Hubachse 1 (75109)
+Achse 2 (75110)
+Hubachse 3 (75111)
+Hubachse 4 (75112)
+Hubachse 5 (75113)
+Wer auf „Nummer Sicher“ gehen will und
+auf eine Drehbank zugreifen kann, kann
+die Zahnräder Z11 auch durch solche aus
+Messing ersetzen. Eine Bezugsquelle ist
+z. B. Lemo-Solar, Stirnzahnrad mit Bund
+Messing, Artikel RBM0511 (1,90 €), 6 mm
+breit.
+
+
+Diese 6 mm Breite sind etwas zu viel für
+den Einsatz auf Position 7 (vgl. Abb. 1) im
+Innenraum des Hubgetriebes, erst recht für
+
+„Bitte beachten Sie: Der Austausch der
+Zahnräder ist ohne Fachwerkzeug / Vorrichtungen und ohne entsprechende Kenntnisse nicht möglich!!!“
+An diesen Kenntnissen arbeiten wir gerade, und das angesprochene Fachwerkzeug
+lässt sich in jedem Haushalt finden. Meine
+„Vorrichtung“ besteht aus:
+einem Bildernagel (Durchmesser kleiner als 2 mm) mit abgefeilter Spitze,
+einem Stück Holz mit einer Bohrung,
+einer Seilrolle (38258),
+einem S-Riegel 4 mm,
+einer 1-Cent-Münze,
+einer Pinzette,
+einem Verbindungsstück 15 (31060)
+und
+einem leichten Hammer.
+Der Nagel dient dazu, das defekte Zahnrad
+von seinem Sitz zu lösen, indem seine
+Achse mit leichten Hammerschlägen nach
+unten heraus getrieben wird. Dazu wird das
+Hubgetriebe so über der Bohrung ausgerichtet, dass die Achse nach unten heraus
+fallen kann (Abb. 3).
+Für den Austausch des Z11 an Position 5
+muss das gegenüber liegende Z28 mitsamt
+der Achse ausgetrieben werden; dazu muss
+die Bohrung größer als 15 mm sein oder
+man behilft sich durch „Hochbocken“ des
+Gehäuses.
+
+
+Tipps & Tricks
+
+leichten Hammerschlägen wieder auf
+seinen Sitz befördert. Damit die Achse
+dabei nicht entweicht, wird entweder die
+Cent-Münze auf der anderen Seite untergelegt, das Verbindungsstück 15 gegenüber
+eingeklemmt (für Z11 auf Position 7) oder
+der S-Riegel eingesetzt (Z14 auf Position
+8, Abb. 4).
+Die Seilrolle dient zum Unterlegen, wenn
+die Achse weiter auf ein unten liegendes
+Zahnrad wandern soll.
+Holz mit Bohrung – das ist alles
+
+Wenn das defekte Teil heraus ist, sollte
+man es sofort markieren oder entsorgen,
+damit es nicht aus Versehen wieder eingebaut wird.
+Beim Z11 auf Position 2 sollte man die
+Achse nur so weit heraus treiben, bis das
+Z11 frei ist. Klopft man weiter, ist auch
+das Z14 von Position 1 frei und muss
+später mit der Pinzette wieder auf seinen
+Platz gefummelt werden. Diese Fummelei
+ist bei Position 7 immer angesagt.
+
+Zum Schluss prüft man das Getriebe auf
+Leichtgängigkeit. Wenn Zahnräder zu eng
+sitzen und das Gehäuse zwischen sich
+einklemmen, wird das Getriebe schwergängig. Dann muss man noch etwas klopfen, bis alle Achsen ein bisschen seitliches
+Spiel zeigen.
+Damit sollte der eigenhändigen Reparatur
+des edlen Teils nichts mehr im Wege
+stehen. Wer sich dennoch nicht traut, der
+sollte sein Getriebe zur Reparatur an die
+Firma Knobloch GmbH schicken – billiger
+als ein Neuerwerb ist das allemal.
+
+Zum Einbau des neuen Zahnrads wird es
+mittig auf seine Achse aufgelegt und mit
+
+
+
+

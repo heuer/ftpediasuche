@@ -1,0 +1,269 @@
+
+Computing
+
+Computing
+
+Einbindung des TXT- bzw. TX-Pi-Touchscreens
+in startIDE
+Peter Habermehl
+Stay in touch!
+
+Einleitung
+Mit der kürzlich veröffentlichten Version
+1.5 hat die Community Firmware App
+„startIDE“ Funktionen zur Abfrage von
+Berührungs-Ereignissen auf dem Display
+von TXT bzw. TX-Pi erhalten. Diese neuen
+Funktionen sollen im Folgenden kurz
+vorgestellt werden.
+
+Die Funktionen
+
+Nach einem Berührungsevent stellen die
+Systemvariablen „touchXPos“ und „touchYPos“ die Koordinaten bereit, an denen das
+Berühren bzw. Loslassen erfolgte.
+Um festzustellen, ob die Berührung innerhalb eines definierten rechteckigen Bereiches stattgefunden hat, gibt es schließlich
+die Funktion „IfTouchArea <x1> <y1>
+<x2> <y2> <Sprungziel>“, siehe Abb. 1.
+
+Alle Touch-Funktionen stehen sinnvollerweise nur bei eingeblendeter Grafik-Leinwand zur Verfügung, da nur der GrafikZeichenbereich von ihnen erfasst wird.
+Sie sind in der Funktionsgruppe „Interaktion → Touch“ der startIDE-Befehlsliste zu
+finden. Zur Auswahl stehen die Funktionen
+„WaitForTouch“, „WaitForRelease“ und
+„IfTouchArea“. Weiterhin stehen zur Auswertung die Systemvariablen touchXPos
+und touchYPos zur Verfügung, die mit der
+bekannten Funktion „FromSys“ ausgelesen
+werden können.
+„WaitForTouch“ wartet, wie der Name
+nahelegt, auf die Berührung des Touchscreens durch den Benutzer. Die Funktion
+hat keine Parameter; der Programmablauf
+wird so lange angehalten, bis ein Antippen
+des Bildschirms (bzw. des Grafikbereichs)
+erfolgt. Analog dazu wartet „WaitForRelease“ auf das Wiederloslassen des
+Bildschirms.
+
+
+Lag die Berührung innerhalb des durch die
+Koordinaten (x1, y1) und (x2, y2) aufgespannten Rechtecks, so wird mit der Programmausführung an der mit „Tag
+
+
+<Sprungziel>“ gesetzten Marke fortgefahren, andernfalls an der auf IfTouchArea
+folgenden Programmzeile.
+
+Ein ganz simples Beispiel
+Nach dem Einblenden der Grafik-Leinwand
+soll auf ein Antippen derselben gewartet
+werden. Danach soll die Leinwand wieder
+ausgeblendet und die Koordinaten der
+Berührung ausgegeben werden (Listing 1).
+01 # Touch demo 1
+02 Init x 0
+03 Init y 0
+04 #
+05 Canvas show
+06 Canvas clear
+07 WaitForTouch
+08 Canvas hide
+09 #
+10 FromSys x touchXPos
+11 FromSys y touchYPos
+12 #
+13 QueryVar x
+14 QueryVar y
+
+In diesem Fall soll, während der Button
+betätigt und gehalten wird, der Ausgang O1
+des TXT eingeschaltet werden, an dem z. B.
+eine Lampe oder ein Motor angeschlossen
+sein kann. Bei Nichtbetätigung soll der
+Ausgang ausgeschaltet sein. Ein zweiter,
+kleiner Button in der oberen, linken Ecke
+des Displays soll zum Beenden des Programms dienen.
+Das so erzeugte grafische User Interface
+(GUI) ist in Abb. 2 zu sehen, das dazugehörige Programm in Listing 2.
+
+Listing 1: Warten auf eine
+Bildschirmberührung
+
+In den Zeilen 2 und 3 werden die Variablen
+für die x- und y-Koordinate initialisiert, in
+den Zeilen 5 und 6 die Leinwand eingeblendet und gelöscht, in Zeile 7 wird dann auf
+das Antippen gewartet. Nach dem Berühren
+des Bildschirms wird in Zeile 8 die Leinwand wieder ausgeblendet.
+In den Zeilen 10 und 11 werden die Koordinaten der Berührung ermittelt und schließlich in den Zeilen 13 und 14 auf dem Bildschirm ausgegeben.
+Die einfachste Anwendung von WaitForTouch wäre also z. B. das Warten auf eine
+Bildschirmberührung nach einer Grafikausgabe, um anschließend die Leinwand
+auszublenden und mit dem Programmablauf fortzufahren.
+
+Ein reaktiver Button
+Eine weitere, recht einfache Anwendung ist
+die Darstellung eines Startknopfes auf dem
+Display, mit dem eine Aktion ausgelöst
+werden kann.
+
+01 # Touch demo 3
+02 Canvas show
+03 Canvas clear
+04 #
+05 Call background 1
+06 Tag top
+07 Call foreground_0 1
+08 Call decoration 1
+09 Canvas update
+10 #
+11 WaitForTouch
+12 IfTouchArea 0 0 30 30 end
+13 Output TXT 1 512
+14 #
+15 Call foreground_1 1
+16 Call decoration 1
+
+17 Canvas update
+18 #
+19 WaitForRelease
+20 Output TXT 1 0
+21 Jump top
+22 #
+23 Tag end
+24 Stop
+25 #
+26 Module background
+27 Color pen 255 255 255
+28 Pen move 60 60
+29 Pen discTo 180 180
+30 Pen move 0 0
+31 Pen discTo 30 30
+32 Color pen 255 0 0
+33 Pen move 4 4
+34 Pen discTo 26 26
+35 Color pen 255 255 255
+36 Text Courier 20 X
+37 Pen text 6 24
+38 Pen text 7 24
+39 Pen text 8 24
+40 MEnd
+41 #
+42 Module foreground_0
+43 Color pen 0 127 0
+44 Pen move 66 66
+45 Pen discTo 174 174
+46 MEnd
+47 #
+48 Module foreground_1
+49 Color pen 0 255 0
+50 Pen move 66 66
+51 Pen discTo 174 174
+52 MEnd
+53 #
+54 Module decoration
+55 Color pen 255 255 255
+56 Pen move 117 90
+57 Pen boxTo 123 150
+58 MEnd
+
+Listing 2: Reaktiver Button
+
+Das Listing zu diesem Beispiel ist mit fast
+60 Zeilen nun schon etwas länger, aber der
+größere Teil des Programmes besteht aus
+den Grafikbefehlen zum Zeichnen des User
+Interfaces, so dass die Funktion recht leicht
+verständlich ist.
+Wie schon mehrfach gezeigt wird in den
+Zeilen 2 und 3 die Leinwand eingeblendet
+und gelöscht.
+Das in Zeile 5 aufgerufene Modul background, Zeilen 26-40, zeichnet nun einen
+
+Computing
+
+ausgefüllten weißen Kreis mit 120 Bildpunkten Durchmesser mittig auf dem Bildschirm.
+Anschließend wird das „Ende“-Symbol gezeichnet. Es besteht aus einem kleinen,
+weißen Kreis oben links, darüber dann
+einem nochmals kleineren roten Kreis und
+in diesen wird schließlich, drei Mal um
+jeweils einen Pixel versetzt, der Text „X“
+geschrieben.
+Das Modul foreground_0 zeichnet nun
+einen dunkelgrünen Kreis mittig in den
+bereits vorhandenen weißen Kreis, und das
+Modul decoration dann noch den senkrechten weißen Strich mittig in den Button.
+Der Aufruf der drei Zeichenmodule wird
+mit Canvas update zum Auffrischen des
+Bildschirminhalts in Zeile 9 abgeschlossen.
+Damit ist die grafische Benutzerschnittstelle – unsere zwei Buttons – auf dem
+Bildschirm dargestellt, und es wird in Zeile
+11 auf eine Berührung des Bildschirms
+gewartet.
+Wurde der Bildschirm angetippt, wird in
+Zeile 11 per „IfTouchArea“ geprüft, ob die
+Berührung in der oberen linken Ecke, also
+in dem Rechteck innerhalb der Koordinaten
+(0, 0) und (30, 30) stattfand. Ist dies der
+Fall, wird zu Zeile 23 gesprungen und damit
+das Programm in Zeile 24 beendet.
+Ist die Berührung hingegen außerhalb
+dieses Bereiches erfolgt, so wird mit Zeile
+13 fortgefahren und zunächst Ausgang O1
+des TXT auf volle Leistung geschaltet. Eine
+daran angeschlossene Lampe leuchtet jetzt.
+Danach werden in den Zeilen 15 und 16 die
+Module foreground_1 und decoration aufgerufen. Dadurch wird das Innere des Startbuttons hellgrün dargestellt. Anschließend
+wird in Zeile 19 auf ein Loslassen des Startbuttons gewartet.
+Nachdem dies erkannt wurde, wird umgehend der Ausgang O1 des TXT wieder
+abgeschaltet – Zeile 20 – und zur Sprungmarke „top“ gesprungen. Dort wird der
+
+
+
+Startbutton wieder in dunkelgrün umgefärbt
+und es wird von Neuem auf eine Bildschirmberührung gewartet.
+
+Ausblick
+Auch wenn die Erstellung einer grafischen
+Benutzerschnittstelle mit startIDE recht
+aufwändig ist, so bieten sich hier doch neue
+Möglichkeiten.
+
+So könnte man z. B. über eine Bedienoberfläche, wie in Abb. 3 skizziert, einen Säulenroboter mit Greifer steuern. Oder programmiert jemand Tic Tac Toe auf dem
+TXT in startIDE?
+Die Entwicklung von startIDE selbst wird
+zunächst in eine andere Richtung weitergehen – gäbe es Feldvariablen, so könnte
+man z. B. mit dem skizzierten Roboter User
+Interface eine Liste von Positionen abspeichern, die dann wieder angefahren werden
+können… stay in touch for v1.6!
+
+Quellen
+
+
+
+[1]
+
+Peter Habermehl: startIDE für die
+Community Firmware – Programmieren direkt auf dem TXT oder dem
+TX-Pi. ft:pedia 01/2018, S. 102-107.
+
+[2]
+
+Rolf Meingast: startIDE (1-4).
+ft:pedia 1/2018, S. 108-121.
+
+[3]
+
+Peter Habermehl: Grafik auf dem
+TXT mit startIDE. ft:pedia 3/2018, S.
+37-40.
+
+[4]
+
+Peter Habermehl: Handbuch für
+startIDE. v1.5, GitHub, 2018.
+
+[5]
+
+startIDE-Thread im ftCommunity
+Forum.
+
+[6]
+
+Till Harbaum: TX-Pi, der fischertechnik Raspberry Pi. GitHub, 2018.
+
+

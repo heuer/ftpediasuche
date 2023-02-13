@@ -1,0 +1,499 @@
+
+
+Pneumatik
+
+Manometer
+Stefan Falk
+In diesem Beitrag geht es um das Messen von Drücken, insbesondere des Luftdrucks in
+pneumatischen Modellen. Dafür gibt es Messgeräte – Manometer genannt – und natürlich
+stellen wir ein solches mit fischertechnik-Mitteln her.
+
+Was genau messen wir hier?
+Eine in der Pneumatik zu messende Größe
+ist der Luftdruck, der nichts anderes ist als
+das Verhältnis der Kraft, die die Luft (oder
+allgemeiner ein beliebiges Gas oder eine
+beliebige Flüssigkeit) auf eine Fläche
+ausübt, geteilt durch eben diese Fläche:
+𝐹
+𝐴
+Der Luftdruck p ist also die ausgeübte Kraft
+F geteilt durch die Fläche A, über die
+verteilt diese Kraft ausgeübt wird. Der Sinn
+dieser Gleichung – im Gegensatz zum
+reinen Messen der ausgeübten Kraft, ohne
+die Fläche zu beachten – erschließt sich
+leicht. Jeder fischertechnik-Pneumatiker
+lernt schnell, dass man anstatt einen einfach
+zwei Pneumatikzylinder „parallel“ schalten
+kann und somit – bei unverändertem Luftdruck des Kompressors – die doppelte Kraft
+erhält:
+𝑝=
+
+Warum ist das so? Weil derselbe Luftdruck
+– Kraft pro Fläche – jetzt auf die doppelte
+Fläche wirkt, nämlich auf zwei anstatt nur
+einen Kolben. Lösen wir obige Gleichung
+nach der Kraft auf, ergibt sich mit
+𝐹 =𝑝∙𝐴
+ein
+proportionaler
+Zusammenhang
+zwischen Kraft F und Fläche A bei konstantem Druck p. Die doppelte Fläche bei konstantem Druck ergibt auch die doppelte
+Kraft.
+Mit den SI-Einheiten N (Newton) für die
+Kraft und m² für die Fläche ergibt sich die
+Einheit für den Druck also als
+N
+= Pa
+m2
+1 Newton pro Quadratmeter ist 1 Pa
+(Pascal). Gebräuchlich ist aber auch das
+Bar, weil 1 Bar ungefähr dem Luftdruck auf
+der Erdoberfläche entspricht. Es ist einfach
+ein Newton pro cm², somit gilt:
+1 bar =
+
+1N
+
+100 ∙ 100 N
+m2
+1 cm2
+= 10000 Pa
+=
+
+Verstehen von Druck
+
+doppelte Kraft
+
+
+Wie immer stehen wir auf den Schultern
+von Giganten: Die ersten wissenschaftlichen Vorversuche für das, was später zu
+Barometer und Manometer wurde, führte
+ein Schüler und Nachfolger des berühmten
+
+
+Pneumatik
+
+Galileo Galilei (1564-1642), der italienische Physiker und Hofmathematiker
+Evangelista Torricelli (1608-1647) aus
+Florenz durch. Der war ein echtes Multitalent: Seine Forschungen über das Verhalten strömender Flüssigkeiten, Arbeiten zur
+Infinitesimalrechnung in der Mathematik,
+die Konstruktion eines der ersten Mikroskope und – deshalb ehren wir ihn hier –
+seine Erkenntnisse über das QuecksilberBarometer machten ihn in ganz Europa
+bekannt.
+V
+L
+
+Q
+Quecksilber-Barometers
+
+Man füllt Quecksilber – ein bei Zimmertemperatur flüssiges, schweres Metall – in
+ein gebogenes, nur einseitig offenes Rohr.
+Nach dem Drehen des Rohres in die in
+(Q) und hinterlässt im (in der Abbildung
+links oben) verschlossenen Teil tatsächlich
+ein Vakuum (V). Die Luft (L) drückt es mit
+ihrem Luftdruck – proportional zur offenliegenden Fläche des Quecksilbers – nach
+oben. Am linken Teil des Rohrs kann man
+nun eine Skala zum Ablesen des Drucks je
+nach Flüssigkeitsstand anbringen.
+Die Idee des Vakuums – des leeren Raums
+– war den Gelehrten zu dieser Zeit noch
+zutiefst zuwider. Die „Horror vacui“, die
+„Abscheu der Natur gegen alles Leere“,
+ging auf Aristoteles (384-322 v. Chr.)
+zurück und war im 17. Jahrhundert immer
+noch die unangefochtene wissenschaftliche
+Meinung. Torricelli widersprach also einer
+echten wissenschaftlichen und durchaus
+durch großartige Leistungen verdienten
+
+Autorität und hatte es damit natürlich
+schwer.
+Torricellis Erkenntnisse aber konnte der
+nicht minder berühmte Blaise Pascal
+(1623-1662) ausbauen. Auch er war ein
+grandioser Pfiffikus – großartige Beiträge
+zu Mathematik, Physik, Astronomie und
+Philosophie stammen von ihm. Und er
+konnte Torricellis Theorie, dass es der Luftdruck ist, der den Stand eines Quecksilberbarometers bestimmt, durch weiterführende
+Experimente und Beobachtungen stark
+stützen.
+Dies wiederum nutzte Otto von Guericke
+(1602-1686) für seine überaus einfallsreichen Weiterentwicklungen von Apparaturen und Messgeräten. Ihm gelang es, eine
+Vakuumpumpe zu konstruieren, und von
+ihm stammt das in der Physik berühmte
+Experiment der Magdeburger Halbkugeln:
+Insgesamt sechzehn Pferde schafften es
+nicht, zwei dicht aneinander gelegte Halbkugeln aus Kupfer, aus denen von Guericke
+die Luft herausgepumpt hatte, auseinander
+zu ziehen. Die Verblüffung der Zuschauer –
+unter ihnen Kaiser Ferdinand III. – war
+riesig, erst recht, als die Kugeln einfach
+auseinanderfielen, sobald von Guericke
+wieder Luft hineinströmen ließ. Und er
+beschäftigte sich eben nicht nur ausführlich
+mit dem Über- und Unterdruck von Luft,
+sondern auch mit Messinstrumenten dafür.
+
+Messgeräte für Drucke
+Den Luftdruck eines Kompressors – auf den
+wollen wir uns im Folgenden konzentrieren
+– kann mit unterschiedlich konstruierten
+Messinstrumenten festgestellt werden [1].
+Eine hinreichend einfache Variante ist das
+Kolbenmanometer. Wir lassen einen Kolben – einen Pneumatik-Zylinder – gegen
+eine Feder andrücken und lesen die Strecke,
+die der Kolben zurückgelegt hat, geeignet
+ab.
+Schon der einfachwirkende Pneumatikzylinder (133027) von fischertechnik könnte diesen Zweck erfüllen:
+
+
+
+L = der Weg, um der sich der Zylinder
+bewegt und um den die Feder eingedrückt wird
+D = die Federkonstante = das Verhältnis
+der Kraft F zur Auslenkung L laut dem
+Hookeschen Gesetz [2, 3]
+
+Allerdings ist er für kleine Drücke recht
+schwergängig. Besser geeignet ist der
+leichtgängigste fischertechnik-Pneumatikzylinder, der Kompressorzylinder (36937,
+mit schwarzer Kolbenstange):
+
+Die Kraft, mit der der Zylinder drückt, muss
+betragsmäßig gleich sein der Kraft, die die
+Feder aufbringt – dann ist das System im
+ruhenden Gleichgewichtszustand und
+bewegt sich nicht weiter:
+𝐹𝑍𝑦𝑙𝑖𝑛𝑑𝑒𝑟 = 𝐹𝐹𝑒𝑑𝑒𝑟
+𝑝∙𝐴 =𝐷∙𝐿
+Damit erhalten wir für den Verfahrweg L in
+Abhängigkeit von den anderen Größen:
+𝑝∙𝐴
+𝐴
+=𝑝∙( )
+𝐷
+𝐷
+Da A und D Konstanten sind (A ist die
+immer gleiche Kolbenfläche des Zylinders,
+und D ist eine inhärente Eigenschaft der
+verwendeten Feder), ist die wesentliche
+Aussage dieser Formel, dass die Auslenkung L proportional zum zu messenden
+Druck ist. Der Umrechnungsfaktor ist einfach der Quotient aus Fläche und Federkonstante.
+𝐿=
+
+
+Wir lassen ihn in folgender Anordnung
+gegen eine Feder drücken:
+
+
+Nun ist die Kraft, mit der man auf eine
+(ideale) Feder drückt oder mit der man an
+ihr zieht, wiederum proportional zu ihrer
+Auslenkung, also der Strecke, um die sie
+dabei verkürzt oder verlängert wurde.
+Die Kraft, mit der der Zylinder drückt, ist
+also proportional zum zu messenden Druck,
+und es ist, da Kraft = Gegenkraft, dieselbe
+Kraft, die die Feder aufbringt. Definieren
+wir die folgenden Größen:
+A = die wirksame Kolbenfläche des Zylinders
+p = der zu messende Druck, der am Zylinder anliegt
+
+
+Das ist für ein Messgerät sehr angenehm,
+denn wir können dann eine lineare Skala
+verwenden, also eine, in der die abzulesenden Zahlen (der Druck in einer geeigneten
+Maßeinheit) immer in der gleichen Entfernung zueinander angebracht werden
+können.
+
+Funktionsmodell eines
+Manometers
+vom Zylinder bis zur Feder. Alles findet auf
+einem U-Träger 150 Platz. Rechts sitzt, um
+5 mm erhöht, der Kompressorzylinder.
+Seine Kolbenstange steckt in der senkrecht
+stehenden Nut des Bausteins 30, der über
+
+
+Pneumatik
+
+
+zwei Kunststofffedern bis zur „Wand“ in
+Form eines Bausteins 5·15·30 führt. Die
+Verwendung von zwei hintereinander
+liegenden Federn ermöglicht es, den kompletten Verfahrweg des Zylinders auszunutzen. Der Baustein 30 gleitet auf einer
+Platte 15·90, damit er sich nirgends am UTräger verhaken kann. Auf dem Baustein
+30 sitzt eine fein verzahnte Hubzahnstange
+30, zu der wir gleich noch kommen.
+Als nächstes kommt ein zusätzlicher Baustein 15 mit zwei Verbindern 15 auf den UTräger, der unsere Mess-Skala tragen wird:
+
+in der Mitte
+
+Die Anzeige selbst besteht aus den wenigen
+zusätzlichen Bauteilen aus Abb. 8. Sie
+werden zum Rundinstrument in Abb. 9
+zusammengefügt.
+
+mit der Mess-Skala
+
+
+
+
+den Baustein 5 des Basisaufbaus aufgesteckt (Abb. 10 und 11), sodass die Riegelscheiben satt, aber leichtgängig in die Zahnstange eingreifen.
+Als Riegelscheiben sollten welche gewählt
+werden, die stramm auf der Achse sitzen.
+Zu dritt sorgen sie für eine schlupffreie
+Drehung der Zeigerachse auch bei schneller
+Bewegung des Zylinders.
+
+hinten unten gesehen
+
+Das drehende Teil der Anzeige besteht aus
+der Rastachse 30 mit drei S-Riegelscheiben
+auf der einen sowie einem Rastadapter 20,
+in der die K-Achse 30 als Zeiger steckt, auf
+der anderen Seite. Die Drehscheibe als
+„Skala“ wird über die Kombination von
+Baustein 5, Baustein 7,5 und Federnocken
+mit dem mittleren Block verbunden. Der
+(auf einer Seite flache) Verbinder 15 unten
+im Baustein 15 mit Bohrung dient dem
+Einhalten des richtigen Abstands. Die
+Anzeigeeinheit wird nämlich einfach auf
+
+Auf diese Weise erreichen wir, dass sich der
+Zeiger beim Abrollen der Riegelscheiben
+auf der Zahnstange proportional zur Auslenkung des Zylinders bewegt und somit die
+Linearität der Messung erhalten bleibt. Nun
+bleibt nur noch, den zu messenden Druck
+über einen Pneumatik-Schlauch der Bodenseite des Zylinders zuzuführen. Er drückt
+gegen die Federn und dreht dabei die Achse
+mit dem Zeiger für die Anzeige.
+
+Ein Testaufbau für das
+Manometer
+Um nicht nur qualitativ ablesen zu können,
+ob nun ein höherer oder geringerer Druck
+anliegt, sondern tatsächlich Messwerte in
+Form von Zahlen (z. B. in Bar oder in Pa)
+zu erhalten, müssen wir das Messgerät noch
+kalibrieren. Das ist technisch gesehen der
+Vorgang, die Skala des Messinstruments
+korrekt zu justieren, zu beschriften, kurz:
+
+
+
+Pneumatik
+
+
+für korrekt abzulesende Messergebnisse zu
+sorgen. (Nur wenn die Kalibrierung amtlich
+und damit rechtsgültig vorgenommen wird,
+spricht man vom Eichen. Technisch ist es
+derselbe Vorgang wie das Kalibrieren.)
+Zum Kalibrieren, da hilft alles nichts, brauchen wir ein schon bekannterweise korrekt
+funktionierendes Messinstrument zum Vergleich. Dazu dient eine kleine Einheit aus
+Kompressor, Ventil, selbst gebauter Drossel, Drucktank und einem „echten“ Manometer. Die pneumatische Schaltung des
+Testaufbaus ist nicht kompliziert (Abb. 12).
+Der Kompressor liefert seinen Druck über
+ein Handventil (auf das auch verzichtet
+werden könnte) und eine Drossel in den
+Drucktank. Durch mehr oder weniger starkes Drosseln können wir also steuern, wie
+schnell Druckluft in den Tank gelangt.
+
+
+
+
+
+Die Undichtigkeiten im Restsystem (Anschluss des Manometers und Kompressorzylinder des Messgeräts) genügen völlig,
+um hinreichend schnell Druckluft ins Freie
+entweichen zu lassen, sodass wir durch die
+Einstellung der Drossel den Druck langsam
+steigern oder verringern können.
+Wer keine fertige fischertechnik-Drossel
+sein Eigen nennt, kann sich aus wenigen
+Bauteilen leicht selbst eine herstellen. Sie
+ist fein einstellbar und leichtgängig.
+ft:pedia-Leser kennen sie vielleicht schon
+aus [4]. Abb. 14 bis 16 zeigen den Aufbau:
+
+
+
+
+
+Die Drossel wird mit dem Federnocken auf
+ihrer Unterseite auf einer Fläche (hier dem
+fischertechnik-Kompressor selbst) angebracht. Das 30 mm lange Stückchen
+Schlauch wird durch Drehen am Z10 mehr
+
+
+Pneumatik
+
+oder weniger stark abgeknickt. Auf einer
+beliebigen Seite lässt man die Druckluft
+hineinströmen, auf der anderen ist der Ausgang. Die ungenutzten beiden Anschlüsse
+der T-Stücke werden mit P-Stopfen verschlossen.
+
+Kompressorzylinder und die ganze Messmechanik unterliegen ja innerer Haft- und
+Gleitreibung). Die Anzeigewerte stiegen
+dann aber recht gut linear mit dem tatsächlichen Druck an.
+Druck/Bar Einheiten
+
+Die Kalibrierung –
+„Wer misst, misst Mist“
+Um das Messergebnis des echten Manometers mit dem Zeigerausschlag abzustimmen, wurde ein Video aufgenommen,
+das sowohl das echte Manometer als auch
+unser selbstgebautes frontal zeigte. Darin
+kann man sehr schön in kleinen Schritten
+vor- und zurückfahren und die beiden
+Zeigerstellungen ablesen. Das echte Manometer zeigt den Druck in Bar an. Die Skala
+der Drehscheibe des Selbstbau-Instruments
+teilte ich willkürlich in je „1“ pro Schlitz
+ein:
+
+
+
+0,00
+
+0,0
+
+0,09
+
+0,5
+
+0,15
+
+1,0
+
+0,20
+
+1,5
+
+0,26
+
+2,0
+
+0,32
+
+2,5
+
+0,38
+
+3,0
+
+0,23
+
+2,5
+
+0,19
+
+2,0
+
+0,13
+
+1,5
+
+0,09
+
+1,0
+
+0,04
+0,5
+Tab. 1: Messergebnisse
+3,5
+
+
+„Einheiten“
+
+Die Bohrungen für Achsen dazwischen
+entsprechen jeweils 0,5 – 1,5 – 2,5. Bei 3 ist
+der Endausschlag erreicht; der Zylinder ist
+dann voll ausgefahren.
+Die Messwerte wurden zunächst bei ansteigendem Druck und dann bei abfallendem
+gewonnen. Heraus kamen die Messergebnisse in Tab. 1. In einem Diagramm aufgetragen zeigt das Abb. 18.
+Die Kurve beginnt bei 0 Bar. Der Zeiger
+wurde so justiert, dass er dann auch auf 0
+steht. Bei ansteigendem Druck erkennt
+man, dass zunächst ein wenig Widerstand
+überwunden werden musste (auch der
+
+"Einheiten" auf der Anzeige
+
+3,0
+
+2,5
+
+2,0
+
+1,5
+
+1,0
+
+0,5
+
+0,0
+0,00
+
+0,10
+
+0,20
+
+0,30
+
+0,40
+
+Gemessener Druck/Bar
+
+Messergebnisse
+
+Interessent wird es, wenn man den Druck
+langsam wieder senkt. Die Anzeige des
+Selbstbau-Messinstrumentes folgt dem
+geminderten Druck nämlich nur verzögert –
+sie zeigt gegenüber den Ergebnissen bei
+ansteigendem Druck zu hohe Werte an. Das
+
+
+
+liegt natürlich wieder an den Reibungswiderständen im Instrument. Der Druck
+muss also relativ stark abfallen, bis sich
+Zylinder und Federn bequemen, die Haftreibung am Ende des Messbereichs zu überwinden und endlich wieder zurückzufahren.
+Das ergibt die im Diagramm gut sichtbare
+Hysterese [5], laut Duden „das Zurückbleiben einer Wirkung hinter der sie verursachenden veränderlichen Kraft“. Wir
+bekommen beim Zurückfahren immer noch
+0,5 Einheiten angezeigt, obwohl der tatsächliche Druck schon fast 0 Bar beträgt.
+
+immerhin ein Manometer nur aus fischertechnik hergestellt. Ideen und Weiterentwicklungen für genauere Messinstrumente
+und größere Wertebereiche (der fischertechnik-Kompressor kann ja fast 1 bar
+Druck liefern) können nun daraus entwickelt werden.
+
+Für eine ungefähre Messung des Drucks
+genügt der Aufbau aber – und wir haben
+
+
+Quellen
+[1]
+
+Wikipedia: Druckmessgerät.
+
+[2]
+
+Wikipedia: Hookesches Gesetz.
+
+[3]
+
+Wikipedia: Federkonstante.
+
+[4]
+
+Falk, Stefan: Druckluftsteuerungen
+(Teil 3). In: ft:pedia 3/2014, S. 25.
+
+[5]
+
+Wikipedia: Hysterese.
+
+

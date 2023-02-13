@@ -1,0 +1,301 @@
+
+
+Elektronik
+
+Elektronik-Module (Teil 6)
+Hans-Christian Funke
+Dieser Teil bildet den Abschluss meiner Beiträge zu den Elektronikmodulen. Von den inzwischen 25 verschiedenen Elektronikmodulen stelle ich euch in diesem Beitrag die drei jüngsten
+Module vor. Weitere Elektronikmodule sind zwar aus heutiger Sicht eher nicht angedacht, aber
+nicht ausgeschlossen.
+
+Definition
+Die Elektronikmodule arbeiten mit positiver Logik. In den folgenden Texten und Beschreibungen werden folgende Bezeichnungen verwendet:
+ logisch „0“ = low = minus (-) = Masse =
+GND
+ logisch „1“ = high = plus (+) = Betriebsspannung = Vdd
+
+Neuheiten
+Die neuen Elektronikmodule sind das
+Messmodul 70022, das Transformermodul
+70023 und das Servo-Modul 70025 (Abb. 1
+und 2; 70025 ist noch in Planung, dafür
+steht leider noch kein Bild zur Verfügung).
+
+
+Den Abschluss der Serie von Elektronikmodulen wird vorerst das Servo-Modul 70025
+bilden. Bei 70022 und 70023 wird die Verfügbarkeit von der Nachfrage und dem Bedarf bestimmt werden. Diese Module werden erst einmal nicht im Online-Shop von
+Franz Santjohanser zu finden sein, aber wer
+Interesse hat, kann eine E-Mail an [1] senden und eine Vorbestellung abgeben. Sobald zu einem Modul fünf Bestellungen
+vorliegen, würde ich mit der Produktion zu
+dem jeweiligen Elektronikmodul beginnen.
+Das Messmodul 70022 und das Transformermodul 70023 werden ebenfalls für
+39,95 € erhältlich sein.
+
+
+
+Das Messmodul (70022)
+Dieses Modul enthält ein V-A-Meter mit
+LED-Anzeige. Mit dem V-Meter (Voltmeter) lassen sich Spannungen im Bereich von
+0-30 V, mit dem A-Meter (Amperemeter)
+Ströme von 0-3 A messen.
+
+und Strom in blauen Ziffern angezeigt
+
+Die Spannungsmessung erfolgt über den
+Anschluss „V“ und den daneben liegenden
+„-“-Anschluss, der mit „GND“ der Versorgungsspannung verbunden ist. Für die
+Strommessung muss der mit „A“ gekennzeichnete und der daneben liegende „-“-Anschluss verwendet werden, der keine Verbindung zu „GND“ hat.
+Für die Spannungsmessung muss über den
+„-“-Anschluss ein gemeinsames Potential
+mit der Schaltung hergestellt werden, in der
+die Spannung gemessen werden soll. In der
+Regel verbindet man dafür die Minus-Anschlüsse beider Schaltungen miteinander
+und kann dann über ein Kabel, das an „V“
+angeschlossen ist, die gewünschte Spannung in der zu untersuchenden Schaltung
+messen.
+Für eine Strommessung muss der Schaltkreis, in dem der Stromfluss gemessen werden soll, an einer Stelle unterbrochen werden. Die offenen Enden werden mit dem
+Anschluss „A“ und dem daneben liegenden
+„-“-Anschluss verbunden.
+Bei Spannungs- und Strom-Messungen ist
+auf die Polarität zu achten, denn negative
+Werte können von diesem Messgerät nicht
+angezeigt werden. Bei der Strommessung
+und vertauschter Polarität fließt aber dennoch ein Strom, obwohl in diesem Fall das
+Messgerät Null anzeigt.
+
+Elektronik
+
+Hinweis: Das V-A-Meter wird zwar kalibriert, aber es handelt sich hierbei nicht um
+ein Präzisionsmessgerät. Wird die minimale
+Betriebsspannung unterschritten, werden
+die Messwerte verfälscht angezeigt.
+Das Potentiometer
+Ins Messmodul wurde noch ein Potentiometer integriert, das unabhängig vom V-AMeter verwendet werden kann. Bei Verwendung des Potentiometers ist auch keine
+Versorgungsspannung am Messmodul erforderlich. Die drei Anschlüsse des Potentiometers sind direkt nach außen gelegt und
+können so frei verwendet werden.
+Der Widerstandswert des Potentiometers
+beträgt 1 kΩ (linear) bei einer Leistung von
+maximal 250 mW. Es kann also eine maximale Spannung von 15 V an beiden Enden
+des Potentiometers angeschlossen werden,
+ohne die maximale Leistung von P =
+0,25 W zu überschreiten.
+𝑈 𝑈2
+=
+=
+𝑅
+𝑅
+(15V)2 (15V)2
+=
+=
+=
+VA=
+V
+1kΩ
+1000 A 1000
+= 0,225W < 250mW
+𝑃 =𝑈∙𝐼 = 𝑈∙
+
+Wird die maximale Leistung überschritten,
+kann dies zur teilweisen oder vollständigen
+Zerstörung des Potentiometers führen.
+
+Das Transformermodul (70023)
+Im ersten Moment könnte man annehmen,
+dass das Modul etwas mit einem Transformator zu tun hat. Dies ist insofern richtig,
+weil ein Transformator Spannungen wandelt, und genau zu diesem Zweck wurde das
+Transformermodul entwickelt.
+Es stehen vier Kanäle zur Verfügung, mit
+denen Signale vom Spannungsniveau der
+Elektronikmodule auf ein Spannungsniveau
+zwischen 15-30 V (high) angehoben werden können. Zusätzlich stehen vier weitere
+Kanäle zur Verfügung, um Signale von einem höheren Spannungsniveau (15-30 V)
+
+
+auf das Spannungsniveau der Elektronikmodule herunterzutransformieren. Auf diesem Weg können 24 V-Anlagen mit den
+Elektronikmodulen kombiniert werden.
+Das höhere Spannungsniveau für ein logisch 1 (high) wird durch eine separat zugeführte Referenzspannung bestimmt (Anschluss Vout).
+
+reich der Elektronikmodule gelangt, wurden die Eingänge In5-8 galvanisch vom Rest
+der Schaltung getrennt.
+Auf der Ausgangsseite Out1-4 wird lediglich
+der logische Zustand ausgegeben, daher ist
+keine leistungsstarke Endstufe vorgesehen.
+Hier stehen 1 mA bei 15 V bzw. 2 mA bei
+30 V für ein logisch 1 (high) zur Verfügung,
+allerdings können bei einem logisch 0 (low)
+bis zu 50 mA entnommen werden. Die Ausgänge Out5-8 auf der Seite der Elektronikmodule stellen 2-3 mA zur Verfügung (je
+nach Versorgungsspannung).
+
+Das Servo-Modul (70025)
+Die Idee ist, einen handelsüblichen Servo
+über die Motorausgänge (M1 = O1-O2) eines TXT-Controllers anzusteuern. Auf
+diese Weise könnten Modelle über Servos
+Computer gestützt gesteuert werden.
+
+Die Schaltung
+Um sicherzustellen, dass keine höhere
+Spannung (> 15 V) in den Schaltungsbe-
+
+Ergänzungen und Neuerungen
+Besonderheiten zwischen Relaismodul 70018 und ftDuino
+Der Entwurf des Relaismodules erfolgte in
+Anlehnung an die Konstruktion des Silberling-Relaisbausteins. Der später entwickelte
+
+
+
+Elektronik
+
+
+und auf den Markt gebrachte ftDuino kann
+auf Grund seines Designs das Relaismodul
+nicht direkt über den IN-Eingang ansteuern,
+sondern nur unter Zwischenschaltung eines
+Transferglieds (Inverter oder Gatter). Der
+Eingang des Transferglieds wird dazu direkt mit dem ftDuino verbunden und der
+Ausgang wird an den IN-Eingang des Relaismoduls angeschlossen. Der IN-Eingang
+des Relaismoduls kann jedoch direkt an den
+ftDuino angeschlossen werden (ohne Transferglied).
+Erklärung: Der ftDuino liefert auf der
+kleinsten Stufe (0) eine Ausgangsspannung
+von 1,0-1,1 V. Zur Aktivierung des Relaismodules über den IN-Eingang wird eine
+Spannung < 0,6 V benötigt. Gatter oder Inverter interpretieren Signale < 2,4 V bei Vdd
+5 V noch als low und liefern am Ausgang
+als logisch 0 eine Spannung von 0-0,1 V.
+
+
+Zusatzmodul 70050
+Dieses Zusatzmodul ist ein Überspannungsschutz für die Elektronikmodule. Es sorgt
+dafür, dass die Versorgungsspannung nicht
+über 15,3 V ansteigen kann. Der Einsatz ist
+empfehlenswert, wenn pulsierende Gleichspannungen zum Einsatz kommen oder das
+
+
+
+
+Versorgungsmodul V1 (70003) verwendet
+wird.
+Das Zusatzmodul wird einfach an die Betriebsspannung angeschlossen (Plus und
+Minus). Sollte die Spannung über 15,3 V
+ansteigen, wird sofort ein Kurzschluss eingeleitet, der erst mit Abschalten der Spannungsversorgung aufgehoben wird. Damit
+werden die Elektronikmodule vor Beschädigung durch Überspannungen geschützt.
+
+Aus diesem Grund wurde der Tiefpass entfernt und somit die volle Funktionalität wieder hergestellt. Die FFs ohne Tiefpass tragen die Bezeichnung D-Flip-Flop-Modul
+V1.1 und JK-Flip-Flop-Modul V1.1.
+Soll ein Taster zur Ansteuerung des Ck-Eingangs benutzt werden, dann kann zur Entfernung der Prellimpulse ein RS-FF vorgeschaltet werden.
+
+
+Dokumentation
+
+Wichtig: Der Überspannungsschutz darf
+auf keinen Fall zum Einsatz kommen, wenn
+die Versorgungsspannung durch Batterien
+oder Akkus bereitgestellt wird. Die Versorgungsquelle sollte über eine Strombegrenzung von 3 A verfügen und kurzschlussfest
+sein. Alternativ könnte eine Schmelzsicherung in die Zuleitung eingebaut werden.
+Ergänzung zu den Versorgungsmodulen 70003 und 70020
+Die Versorgungsmodule 70003 und 70020
+haben ein Update bekommen und werden
+ab sofort als 70003 V1.1 und 70020 V2.1
+ausgeliefert. Bei der x.1 Version wurde der
+Überspannungsschutz 70050 integriert.
+Optimierung des D-FF- und JK-FFModuls
+Bei den Flip-Flop-Modulen D-FF (70006)
+und JK-FF (70007) wurde für den ClockEingang (Ck) ein Tiefpass integriert, der bei
+Verwendung eines Tasters zur Ansteuerung
+des Ck-Einganges die Prellimpulse herausfiltern sollte. Dieser Filter hat jedoch die
+Funktionalität beim JK-FF so eingeschränkt, dass die T-FF-Funktion nicht
+mehr genutzt werden konnte (J und K an
+high; Zustandswechsel über Ck).
+
+
+Als Dokumentation der Elektronikmodule
+steht jetzt die Kurzfassung „Kurzbeschreibung und Vergleichstabellen“ (70098) zur
+Verfügung, die bei Interesse unter der EMail-Adresse [2] angefordert werden kann
+oder in Kürze auch bei den Elektronikmodulen im Online-Shop von Herrn Santjohanser zu finden sein wird.
+Die vollständige Dokumentation „Grundlagen der Elektronikmodule“ (70099) mit
+sämtlichen technischen Daten und Schaltungsbeispielen ist noch nicht abschließend
+fertiggestellt und kann ebenfalls bei Bedarf
+bei mir angefordert werden.
+99% der Elektronikmodule lassen
+sich reparieren!
+Sollte doch einmal ein Elektronikmodul in
+seiner Funktion beschädigt sein, dann lassen diese sich in der Regel für kleines Geld
+reparieren. Dies ist auch nur möglich, weil
+die gesamte Herstellung noch in einer Hand
+liegt. Wer Bedarf oder Fragen dazu hat,
+kann sich gerne an mich [2] oder an Herrn
+Santjohanser [1] wenden.
+Lehr- und Ausbildungsprogramm
+Folgendes Ausbildungsprogramm, das auf
+den Elektronikmodulen basiert, soll demnächst angeboten werden:
+
+75000 Labor für digitale Elektronik
+(light): Das Labor soll beim Erlernen der
+Grundfunktionen der digitalen Elektronik
+unterstützen. Mit einer ausführlichen Anleitung, Bildern und Schaltungen werden die
+Grundlagen erschlossen. Mit praktischen
+Beispielen und Nachbau von Schaltungen
+wird das aufgenommene Wissen praktisch
+erfahren. Zum Ende des Lehrgangs sind
+Volladdierer, Binärzähler oder Multiplexer
+keine Fremdwörter mehr. Diese Version
+enthält nur die minimal erforderlichen sechs
+Elektronikmodule, vier LED-Bausteine,
+Kabel und elektrische Kleinteile (Widerstände, Dioden, Kondensatoren).
+75001 Labor für digitale Elektronik
+(Lehr- und Ausbildungsbereich): Die
+Lehr- und Ausbildungsversion ist vom
+Lehrinhalt identisch mit dem Labor 75000,
+aber enthält zusätzlich alle erforderlichen
+fischertechnik-Teile zum Aufbau der Schaltungen auf einer Bauplatte. Zum Betrieb der
+Elektronikmodule wurde das Labor mit einer Stromversorgung ergänzt, so dass die
+Ausbildung mit diesem Baukasten sofort
+gestartet werden kann.
+Ihr könnt euch gerne bei Interesse bei mir
+[2] oder Franz Santjohanser [1] melden, damit wir einen Eindruck bekommen, inwieweit ein Interesse an dem „Labor für digitale Elektronik“ besteht.
+
+Wie geht es weiter?
+Wie schon einleitend berichtet, wird das
+Portfolio mit den 25 Elektronikmodulen
+erst einmal nicht erweitert werden.
+
+Elektronik
+
+In den kommenden Ausgaben der werde ich immer wieder einmal ein schönes
+Modell mit den Elektronikmodulen vorstellen, so dass ihr immer wieder Inspirationen
+bekommt, was damit so alles angestellt werden kann.
+Vielleicht wird es auch einen Themen-Baukasten zum Ende des Jahres geben, der speziell auf Funktionen der Elektronikmodule
+reflektiert (lasst euch überraschen).
+
+Schlusswort
+Wer sich einen Gesamtüberblick über die
+Elektronikmodule verschaffen möchte,
+kann entweder via Smartphone auf Instagram und unter „Elektronikmodule“
+schauen oder am PC unter [3]. Unter [4] findet ihr Videos von Modellen mit Elektronikmodulen. Über den Online-Shop von
+Franz Santjohanser könnt ihr weitere Informationen erhalten, herunterladen und die
+Elektronikmodule erwerben [5].
+
+Quellen und Links
+[1]
+
+Franz Santjohanser
+
+[2]
+
+Funke Elektronik
+
+[3]
+
+Hans-Christian Funke: Elektronikmodule auf Instagram.
+
+[4]
+
+Modelle mit Elektronikmodulen: Kugelzähler mit Soundeffekt, Modulix,
+Modell-Demo; youtube.com.
+
+[5]
+
+FUNKE-Elektronikmodule bei
+Santjohanser: Spielen. Lernen. Technik.
+
+
+

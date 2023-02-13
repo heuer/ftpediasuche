@@ -1,0 +1,77 @@
+
+
+Modell
+
+Der Selbstschrauber
+Rüdiger Riedel
+Der Traum aller Schrauber an den Metallbaukästen von Märklin, Trix, Construction, Eitech,
+Merkur, Stabil, Stokys, Meccano, Metallus, Tronico: Die vielen Schraubverbindungen mühelos
+herzustellen. Jetzt ist er da, der Prototyp des Selbstschraubers!
+Wir fischertechnik-Fans haben solche Probleme nicht: wir stecken, schieben, drehen.
+Wenn wir gelegentlich schrauben, dann in
+großem Stil, so wie hier.
+
+
+
+Die Schraube besteht aus einer Schnecke 45
+m1,5 (37858) mit Zangenmutter (31915)
+sowie zwei Schnecken 30 m1,5 (37926) auf
+einer Achse 110 (31031) und zum Abschluss einer V-Achse 20 Rastachse
+(31690). Die Schneckenmutter 15 · 15 · 15
+m1,5 (37925) ist das aktive Teil, die wollen
+wir nach oben befördern.
+
+Die Achse steckt in einer Seiltrommel 15
+(31016), diese in einem Baustein 5, der
+wiederum in einem Baustein 15 steckt (einfachere Version: BS15 um 90° drehen und
+die Seiltrommel direkt einschieben; dadurch sparen wir uns den BS5 und auch die
+in den Bildern nötige Federnocke (31982)).
+
+
+Und wie befördern wir die Schneckenmutter nach oben? Mit Schwingungen!
+
+
+
+Als Schwingungserzeuger käme auch die
+Unwucht der Rüttelplatte [1] in Frage; hier
+habe ich einen alten M-Motor (32618) verwendet. Auf dessen Schnecke sitzt eine
+Schneckenmutter mit Baustein 5. Der
+Motor muss unbedingt so angeschlossen
+werden, dass sich seine Schnecke links
+herum dreht, also auf die Schnecke gesehen
+gegen den Uhrzeigersinn! In Gegenrichtung
+schraubt sich die Schneckenmutter herunter
+und kann durch die Gegend fliegen.
+Deshalb unbedingt mit kleiner Spannung
+die Drehrichtung kontrollieren. Eine regelbare Spannungsversorgung ist sowieso sehr
+ratsam, um die günstigsten Schwingungen
+einzustellen.
+
+Modell
+
+beiden BS30 befestigt
+
+Vorne in Abb. 3 ist der Taster zu sehen, mit
+dem der Selbstschrauber eingeschaltet wird.
+Als Schutz gegen die Unwucht habe ich
+einen Kotflügel 75 · 30 3Z (31896) vorgesehen.
+
+
+
+Die günstigste Position der langen Schraube
+und die beste Drehzahl des Motors sollten
+ausprobiert werden; es gibt wirklich viele
+Möglichkeiten. Der vorgestellte Aufbau ist
+Ergebnis einer Reihe von Versuchen und
+stellt kein Endergebnis dar. Hat man gute
+
+
+Werte gefunden, dann dreht sich die Mutter
+gemächlich und zuverlässig nach oben
+
+Quellen
+[1]
+
+Rüdiger Riedel: Rüttelplatte. 3/2019, S. 13-17.
+
+

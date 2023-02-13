@@ -1,0 +1,70 @@
+
+
+Editorial
+
+Keep it simple? Stupid.
+Dirk Fox, Stefan Falk
+Am 26.10.2022 zauberte eine überraschende Nachricht große Fragezeichen auf die
+Stirn ungezählter MINT-Lehrer: Lego kündigte an, seine Robotik-Reihe Mindstorms
+zum Ende des Jahres 2022 einzustellen.
+Zwar bedeutet das keinen kompletten
+Rückzug von Lego aus der MikrocontrollerWelt, allerdings zielt das verbleibende
+Spike-Education-Konzept auf Fünft- bis
+Achtklässler – mit einem Controller, der mit
+sechs Ein-/Ausgängen eher dünnbrüstig
+daherkommt, trotz integriertem Gyro-Sensor und MicroPython-Betriebssystem.
+Ist das weise Voraussicht oder wurde die
+Entscheidung vom Markt erzwungen? Geht
+die Zeit der „Mikrocontroller-Boliden“ zu
+Ende, oder resigniert Lego vor der Komplexität der zu unterstützenden Betriebssysteme und der Konkurrenz von Raspberry Pi
+und Co. aus der Maker-Szene – oder gar vor
+Produktionsengpässen und damit verbundenen Preissteigerungen bei den benötigten
+Elektronik-Komponenten?
+Eines ist gewiss: Seit Jahren ist ein Trend zu
+„Click-and-Run“-Lösungen im Lernbereich
+zu beobachten. Technische Komplexität
+wird mehr und mehr unter glatten, hübschen
+Oberflächen versteckt, um Kindern schnelle
+Erfolgserlebnisse zu bieten. Da passt ein
+smarter „Hub“ besser ins Bild als ein komplexer, erklärungsbedürftiger Mikrocontroller wie der EV3. Auch fischertechnik
+kokettiert mit diesem Trend; der Baukasten
+„Early Coding“ und dessen Vorläufer „Mini
+Bots“ bedienen dieselbe Erwartung nach
+schnellen, nachdenkarmen Lernerfolgen.
+Aber sind das die Lernerlebnisse, die unsere
+Kinder wirklich brauchen?
+
+Das wirkt so, als wolle man das Erlernen
+von Schreiben und Lesen dadurch vereinfachen, dass man die Zeichensetzung (die
+ohnehin kaum noch jemand beherrscht), die
+Grammatik (viel zu komplex) und die
+Rechtschreibung weglässt – und zum
+Schluss das Alphabet auf zwei Buchstaben
+reduziert (z. B. „d“ und „a“). Dann lernt
+sogar ein zweijähriges Kind lesen…
+Der Vergleich ist übertrieben. Aber wenn
+wir Wissen so simpel vermitteln, dass
+nichts mehr zu lernen ist, dann wird natürlich auch nichts mehr gelernt. Tatsächlich
+sind die technischen Zusammenhänge heute
+komplexer als vor 50 Jahren, als ich zur
+Schule ging. Sie zu begreifen erfordert ein
+tieferes und umfassenderes Verständnis als
+das, was wir damals benötigten. Und wir tun
+so, als ob das heute alles viel einfacher zu
+lernen wäre – nur, weil wir bessere Methoden kennen, um Komplexität zu verstecken.
+Von Albert Einstein stammt das Bonmot
+„Man sollte alles so einfach wie möglich
+machen, aber nicht einfacher.“ Wenn wir
+das nicht beachten, bekommen wir eines
+Tages Schulabgänger, die glauben, Energieknappheit ließe sich durch die Installation
+weiterer Steckdosen lösen.
+Bestärken wir fischertechnik also darin,
+nicht in Legos Fußstapfen zu treten. Eines
+Tages wird uns das eine Generation von
+Ingenieuren danken.
+Schöne Weihnachten,
+Euer ft:pedia-Team
+P.S.: Am einfachsten erreicht ihr uns unter
+ftpedia@ftcommunity.de oder über die Rubrik ft:pedia im Forum der ft-Community.
+
+

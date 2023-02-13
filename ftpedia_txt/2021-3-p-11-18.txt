@@ -1,0 +1,342 @@
+
+Modell
+
+Modell
+
+Zweirad
+Rüdiger Riedel
+Der Hailfire Droid (Hagelfeuer Droide) aus der Star-Wars-Serie begeistert mich immer noch.
+Vierrad, Dreirad, Zweirad.
+
+Verkappte Dreiräder sind dagegen:
+
+Wikipedia erläutert:
+
+Sulky, Handwagen, Anhänger, Trolley.
+
+Das einspurige Zweirad-Prinzip wurde
+1817 von Karl Drais erfunden und mit der
+sogenannten Laufmaschine oder Draisine
+bekannt. Bei Stillstand fällt die Stabilisierung weg.
+
+Two-lane two-wheeler
+
+Heutige Formen von „Zwei Räder hintereinander“ sind Fahrrad, Bicycle, Bike,
+Motorrad, Scooter.
+
+Erstaunlich wenig ist das futuristische
+Konzept des Hailfire Droids untersucht
+worden. Mit einfachen Mitteln lässt es sich
+aufbauen. Mit einer Fernsteuerung versehen
+sind die Fahreigenschaften überprüfbar:
+Niemand wendet schneller!
+Bei der ganzen Flut von dreirädrigen
+„Buggies“, vollgepackt mit Hightech-Elektronik, ist das Konzept des Zweirades
+anscheinend vergessen oder aus Angst vor
+den Nickbewegungen beim Beschleunigen
+und Abbremsen weggelassen worden
+(Bewegungen wie bei Schiffen).
+Auf der Convention 2018 in Dreieich
+gesehen: Der Zweirad-Flitzer [3].
+Die Fans von Legos Nr. 4481 Hailfire Droid
+(Raddurchmesser 21,5 cm) haben es mit
+Motoren und Fernsteuerung versehen. Das
+Fahrverhalten ähnelt meinen S-MotorVersionen, ist also gemächlich.
+
+S-Motor Version
+
+Zweispurige Zweiräder sind sehr viel
+seltener. Erst die moderne Regelungstechnik ermöglichte die SelbstbalanceRoller wie den Segway Personal Transporter. „Menschliche“ Regelungstechnik
+ermöglicht das Fahren mit Inlineskates mit
+nur zwei Rollen.
+
+Im Forum hat hamlet [2] angedeutet, dass
+meine Konstruktion mit den Rädern aus
+Bogenstücken 30° etwas langsam ist. Nach
+einigem Herumprobieren musste ich einsehen: Die S-Motoren, neuerdings als MiniMotoren bezeichnet, geben nicht mehr her,
+es müssen auch bei den kleinen Hagelfeuer
+Droiden die XM-Motoren sein. Auf die
+Schrägstellung der Räder wie beim Vorbild
+und Abb. 1 verzichte ich ab jetzt.
+
+
+
+
+
+Der Aufbau beginnt mit Abb. 3. Zur Stabilisierung wird in die Seiten aus BS30 und je
+einem BS15 je eine Achse 110 (31031)
+geschoben.
+
+Der senkrechte BS15 und der BS15 Loch
+(32064) werden mit je einem Federnocken
+(31982) verbunden.
+
+
+
+Wir brauchen vier Führungsrollen-Kombinationen, je zwei linke und zwei rechte.
+
+
+Modell
+
+Dies ist das Material dafür:
+Nr.
+
+am anderen Ende zweimal zwei Stück mit
+der Nocke in den Bausteinen 30 (Abb. 8).
+
+Bezeichnung
+
+Anzahl
+
+136529 Baustein 15
+
+
+35668
+
+V-Radhalter 10
+
+
+36573
+
+V-Rad 14
+
+
+35053
+
+S-Winkelträger 15
+
+
+38268
+
+Bauplatte 15x30 2Z
+
+
+36586
+
+V-Radachsen
+
+
+146535 V-Räder 23x10 silber
+
+
+31011
+
+
+
+37237
+Baustein 5
+Tab. 1: Stückliste für die FührungsrollenKombinationen
+
+Für jeden Motor brauchen wir jetzt vier
+Bausteine 5 15 × 30 (35049), zwei davon
+werden ganz in die beiden Nuten geschoben
+mit der Nocke voran (Abb. 5). Die beiden
+anderen schieben wir zunächst ganz auf die
+gegenüber liegenden Bausteine 2,5. Wir
+verpassen den Motoren Rast-Kettenzahnräder 20 (137677) und setzen den ersten ein,
+indem wir seine Bausteine 5 15 × 30 über
+die Zapfen der Bausteine 2,5 schieben.
+Anschließend schieben wir die anderen
+beiden Bausteine 5 15 × 30 in die Motornuten.
+
+Winkelstein 30°
+
+
+Weitere Führungsrollen werden im Bereich
+der Antriebsräder benötigt. Sie bestehen aus
+zwei V-Radachsen (36586), zwei V-Aufnahmeachsen (31124) mit einem BS 5
+darunter, zwei S-Winkelträgern 15 (35053),
+vier V-Bausteinen 15 Eck (38240) und vier
+V-Rädern 23 × 10 silber (146535) oder
+beliebiger anderer Farbe.
+Für die Befestigung der Motoren werden 8
+Bausteine 2,5 15 × 45 2+2Z (38277) auf die
+Oberseite des Rahmens geschoben. An den
+Ecken befinden sich jetzt vier Bausteine 5
+15 × 30 (35049), die nehmen die Führungsrollen von Abb. 4 auf. Den Abstand zu den
+Bausteinen 2,5 stellen wir durch Federnocken sicher, an einem Ende zweimal drei,
+
+Die Antriebsräder befinden sich auf Achsen
+80. Zwei Spurkränze 30 34 (36331), jeweils
+mit Gummiring 30 (36332), stehen sich
+gegenüber, getrennt durch eine Klemmbuchse 5 (37679). Die Spurkränze mit
+Gummiring gibt es immer noch bei Martin
+Bössners „fischertechnik-Teilen“ und beim
+fischerfriendsman, wenn er wieder gesund
+ist.
+Je ein „Zahnrad Z15 m1,5 Z22 m0,5 anreihbar“ (35695) wird mit der Spannzange
+(35113) eines Ritzels Z10 (35112) fixiert.
+Wir drehen das Gestell herum und benutzen
+einen Baustein 30 für die Befestigung des
+Batteriefach-Gehäuses (32263); den Deckel
+brauchen wir nicht. Ich benutze gerne 9 VAkkus von Ansmann und erreiche damit
+Betriebszeiten von mehr als 20 Minuten.
+Den Akkuzustand überwache ich mit einem
+Spannungsanzeiger von Tianqin, der in ein
+
+
+
+
+Anschlussplatten-Gehäuse (152059) passt,
+wenn man die Laschen etwas abfeilt.
+
+Die Motoranschlüsse gehen an die Buchsen
+M1 und M2. Parallel dazu schalten wir die
+Beleuchtung, wobei die rote und die farblose antiparallel geschaltet werden [6].
+Noch ein Ein-/Aus-Schalter dazu, in der
+einfachsten Ausführung aus einem Minitaster (37780 oder 37783), einem BS7,5,
+einem S-Strebenadapter (31848) und einer
+S-Strebe 15 I (36914). Die Version in Abb.
+8 ist etwas luxuriöser.
+
+
+Der BT-Empfänger (161943) wird von
+Bausteinen 7,5 gehalten.
+
+
+Haben wir die Räder aus jeweils sechs SFlachträgern 120 (35054) und 12 S-Bogenstücken 60° (35055) zusammengesetzt (es
+darf natürlich auch die graue Variante sein)
+richten wir die Führungsrollen so aus, dass
+das seitliche Spiel nach beiden Seiten etwa
+gleich ist. Die Spurkränze mit ihren Gummis sollen satt auf den Rädern aufliegen.
+
+
+Modell
+
+Hagelfeuer Droiden besteht nicht, die Räder
+wurden per Zentralachse angetrieben und
+der Aufbau war nicht flach, sondern ging
+nach oben. Mit etwas Fantasie erkennt man
+in der Form den Buchstaben M, deshalb MFahrzeug.
+
+
+Jetzt noch am Empfänger die Raupenfunktion einschalten, dann geht’s los.
+Niemand wendet schneller!
+
+Schrägstehende Räder
+Mit den ft-Winkelbausteinen lässt sich der
+optische Eindruck der schrägen Räder beim
+Hagelfeuer Droiden nachempfinden.
+In der ft:pedia 1/2019 habe ich im Artikel
+„Die Welt der ft-Winkelbausteine Teil 3“
+[5] ein Fahrzeug mit schrägen Rädern
+vorgestellt. Weitere Ähnlichkeit mit dem
+
+Näher dran am Hagelfeuer Droiden ist das
+Modell in Abb. 11.
+Der Antrieb erfolgt wieder über Spurkränze, wobei die äußeren verkehrt herum
+stehen, um den Rädern mehr seitliches Spiel
+zu lassen.
+Wegen der Räder, die nicht rund, sondern
+vieleckig aufgebaut sind, dürfen wir keine
+überzeugenden Fahreigenschaften erwarten. Aber es fährt und lässt sich lenken.
+Die Räder sind Ufo-Ringe aus Winkelsteinen 7,5° [5]. Zwei XS-Motoren mit
+
+
+
+Getriebe und U-Achsen 60 (31063) sorgen
+für den Vortrieb.
+
+Die Verankerung der Räder erfolgt mit Bausteinen 5 15 × 30, die zur Hälfte über die
+offenen Seiten der Getriebe geschoben
+werden.
+Darauf sitzen je ein BS 5 und ein BS 15 mit
+Federnocke. Für die Eingliederung des
+Batteriekastens nehmen wir zwei Federnocken auf den BS 5 15 × 30, vier weitere
+Federnocken, zwei BS 5 und vier
+Bauplatten 15 × 30 × 3,75 1N (32330).
+
+Und noch ein ZweispurZweirad
+
+
+Auf der Convention 2018 hat mir der Zweirad-Flitzer sehr imponiert [1]. Darum habe
+ich ihm jetzt ein kleines Schwesterchen
+kreiert: Die Rollmaus (Abb. 15).
+
+
+
+XS-Motor, Getriebehalter 50 mini (31067)
+und ein Z10 werden zusammengebaut.
+
+
+
+
+Modell
+
+Auf den Motor kommt ein BS15 Loch und
+an diesen ein BS7,5 mit Federnocke. In die
+kreisförmigen Öffnungen des Getriebes
+kommt ein Verbinder 15 (31060), auf den
+wir den rechten Block in Abb. 16 schieben.
+Wir erhalten das Gebilde gemäß Abb. 17, in
+dem der unbenutzte Teil der Getriebeachse
+in die Nut des BS30 reicht. Das funktioniert, weil die Federnocke mit ihrem langen
+Teil im BS7,5 steckt.
+Den Motorblock nach Abb. 17 brauchen wir
+zweimal.
+
+
+Jede der Achsen 60 wird mit Speichenrad
+90 × 15 (19317 oder 36916), Zahnrad Z30
+(36264), Klemmbuchse 5 (37679) und
+Abstandsring 3 (31597) ausgerüstet und auf
+der anderen Seite des BS15 Loch mit einer
+Klemmbuchse 5 gesichert.
+Der Akku liegt auf den Motoren und kann
+mit einem 25 cm langen Silikonschlauch
+sowie mit zwei Pneumatik-Stopfen (31708)
+fixiert werden. Für eine bessere Bodenfreiheit habe ich zwei Raupenbänder
+230 × 12 (31057) aufgezogen (Abb. 19).
+
+
+Verwenden wir Haushaltsgummis zur
+Befestigung des Akkus, dann haben wir
+auch ohne die Raupenbänder genug Bodenfreiheit. Die vier BS7,5 werden dann durch
+vier Bausteine 5 15 × 30 ersetzt (Abb. 20).
+Fernsteuerung und Akku
+
+
+
+Quellen
+
+Haushaltsgummis
+
+Die kleine Maus macht mächtig Spaß! Wird
+die Geschwindigkeit schnell verringert,
+dann überschlägt sie sich, kann aber danach
+lustig weiterfahren.
+
+[1]
+
+ftCommunity: Zweirad-Flitzer.
+Bilderpool.
+
+[2]
+
+ftCommunity: I²C Motion Tracking.
+Forum.
+
+[3]
+
+ftCommunity: Hagelfeuer Droide.
+Forum.
+
+[4]
+
+ftCommunity: Katapult und
+Hagelfeuer Droide.
+
+[5]
+
+Rüdiger Riedel: Die Welt der ftWinkelbausteine (Teil 3), UFORinge. ft:pedia 1/2019, S. 15–22.
+
+[6]
+
+Rüdiger Riedel: Richtungsanzeige
+mit LEDs. ft:pedia 4/2020, S. 40–41.
+
+Zur Orientierung habe ich am Heck eine
+Blink-LED angebracht (Abb. 21).
+
+
+

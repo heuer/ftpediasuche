@@ -1,0 +1,600 @@
+
+
+Computing
+
+I²C mit dem TX – Teil 2: LED-Display
+Dirk Fox
+Seit dem Firmware-Update vom April 2012 auf Version 1.30 lassen sich am TX Controller
+I²C-Komponenten anschließen und mit Robo Pro Version 3.1.3 ansteuern. Nach der
+Einführung in die Grundlagen des I²C-Protokolls [1] wird in diesem Beitrag die Nutzung
+eines LED-Displays am TX vorgestellt.
+
+Vorbemerkung
+
+LED-Display
+
+Die korrekte Ansteuerung von I²C-Komponenten – welche Befehle sie beherrschen,
+welche Daten sie übermitteln bzw. an sie
+übermittelt werden müssen und wie sie
+konfiguriert werden – kann den Datenblättern der darin verbauten I²C-fähigen ICs
+entnommen werden. Dort sind die elementaren Befehle meist tabellarisch dokumentiert, die in Robo Pro mit den Kommandos
+„I2C Schreiben“ und „I2C Lesen“ an die
+Komponente zu schicken sind.
+
+Von Conrad Electronic wird unter der
+Bestellnummer 198344 ein vierstelliges
+LED-Display (Light Emmitting Diode) mit
+einem I²C-Treiberbaustein
+vertrieben
+(Abb. 1), das seit Februar 1991 von Philips
+Semiconductors unter der Produktbezeichnung SAA1064 hergestellt wird [2]. Die
+vergleichsweise geringe Übertragungsgeschwindigkeit von 100 kHz (Standard
+Mode) ist dem Alter des Bausteins zuzuschreiben: Er erschien ein Jahr vor der
+Veröffentlichung von Version 1 des I²CStandards, in dem der Fast Mode (400
+kHz) eingeführt wurde.
+AdressJumper
+
+Die in den Datenblättern beschriebenen
+Befehle steuern den IC auf „unterster“
+Ebene. Um die Kernfunktionen der I²CKomponente mit nur einem Aufruf ansteuern zu können, muss man aus diesen elementaren Befehlen zunächst komplexere
+Funktionen (Reset/Initialize, Set/Write,
+Get/Read, etc.) bilden. Für 18 verschiedene
+handelsübliche I²C-Komponenten wurden
+mit Version 3.1.3 von Robo Pro solche
+Bibliotheksfunktionen ausgeliefert. Viele
+davon verdanken wir Rei Vilo; inzwischen
+wurden weitere im Download-Bereich der
+ft:c (Rubrik „Robo Pro“) veröffentlicht.
+Zum besseren Verständnis der Funktionsweise erläutern wir in dieser und weiteren
+Folgen des Beitrags die Ansteuerung einiger ausgewählter Komponenten, die sich –
+aus verschiedenen Gründen – besonders
+für die Nutzung am TX eignen.
+
+Adress-Jumper (Bild: www.conrad.de)
+
+Das Display erfordert eine Betriebsspannung zwischen 4,5 und 15 V (empfohlen:
+5 V) und wird mit einem 6poligen Wan-
+
+nenstecker mit der vom TX benötigten
+Anschlussbelegung geliefert. Es kann
+daher mit dem Flachbandkabel, das für den
+Anschluss weiterer TX Controller jedem
+TX beiliegt, ohne Zuhilfenahme eines Lötkolbens an den EXP 2-Port des TX angeschlossen werden.
+In der Bibliothek der Version 3.1.3 von
+Robo Pro finden sich bereits I²C-Treiber
+für dieses Display („LED-SAA1064“). Da
+es jedoch ein gutes Beispiel ist, um die
+I²C-Programmierung in Robo Pro zu verstehen und die fertigen Treiber außerdem
+nur die Ausgabe von vierstelligen Dezimalzahlen auf einem Display mit der
+Default-Adresse erlauben, erläutern wir im
+Folgenden die Ansteuerung im Detail.
+Adressierung
+Die höchstwertigen fünf Bit der SlaveAdresse des LED-Displays sind vom Hersteller festgelegt; zwei Bits können über
+einen Jumper am Device eingestellt werden
+(01110xx). Damit lassen sich bis zu vier
+LED-Displays kollisionsfrei über denselben I²C-Bus ansteuern – das Display kann
+so z. B. auf eine Anzeige mit 16 Stellen erweitert werden, oder die Displays werden
+für die Anzeige der Punktstände mehrerer
+Spieler (z. B. die Rundenzähler einer
+Carrera-Bahn oder die Gewinnpunkte am
+Flipper) verwendet.
+
+Computing
+
+(siehe Abb. 2), das Conrad Electronic unter
+der Bestellnummer 191193-62 für knapp
+7 € anbietet, mit dem TX verbinden.
+Das LED-Display ist auf die Adresse
+0111 000 (0x38) vorkonfiguriert. Durch
+Versetzen des Adress-Jumpers (Abb. 1)
+können die Adressen 0x39, 0x3a und 0x3b
+eingestellt werden.
+
+Status-Abfrage
+Das LED-Display besitzt ein auslesbares
+Status Byte, in dem das höchstwertige Bit
+(Power Reset Flag) gesetzt ist, wenn die
+Stromzufuhr unterbrochen wurde.
+Zum Auslesen dieses Status Byte sendet
+der TX an das Display einen Read-Befehl
+– das Adress-Byte mit Read-Bit (Default:
+0111 0001 = 0x71) – und erhält daraufhin
+vom Device das Status Byte übermittelt:
+Byte
+
+binär
+
+hex.
+
+Funktion
+
+
+0111 0001
+
+0x71
+
+Adresse
+
+
+?000 0000
+
+0x?0
+
+Status
+
+Tab. 1: Auslesen des Status Byte
+
+Nach dem Anstecken („Einschalten“) des
+LED-Displays oder einer Stromunterbrechung liefert das Device den StatusWert 1000 0000 (= 0x80 oder 128). In
+Robo Pro sieht der Lesebefehl wie folgt
+aus (Abb. 3):
+
+(Bild: www.conrad.de)
+
+Wer über fünf der sechsadrigen TX-Flachbandkabel (bei Knobloch unter der Artikelnummer 135465 für 2,50 € erhältlich) verfügt, kann die Displays sehr einfach mit
+Hilfe des (passiven) I²C-Verteilermoduls
+
+
+Nach dem Auslesen setzt das Display das
+Status Byte auf den Wert 0 zurück.
+
+
+
+Anzeige
+Die vierstellige Sieben-Segment-Anzeige
+(mit Dezimalpunkt) muss vom TX ziffernweise angesteuert werden. Dazu wird nach
+dem Adress-Byte mit Write-Bit (0111 0xx0
+= 0x70, 0x72, 0x74 oder 0x76, je nach
+konfigurierter Adresse) ein Instruction
+Byte übermittelt, das einen 3-Bit-Befehlscode (Subaddress) enthält. Damit legt der
+Master fest, ob das folgende Datenbyte in
+die Control Register (C0 bis C6) oder in
+eine der vier Sieben-Segment-Anzeigen
+geschrieben werden soll.
+Hat die Subadresse den Wert 0x00, dann
+können dem Byte-Wert für die Control
+Register vier weitere Daten-Bytes folgen,
+die dann automatisch (von rechts nach
+links, also beginnend mit der niederstwertigen Ziffer) in die vier Sieben-SegmentAnzeigen geschrieben werden.
+Instruction Byte
+Das Instruction Byte beginnt mit fünf führenden Nullen, gefolgt von einem 3-BitBefehlscode:
+
+Segment-Anzeige in acht Stufen von 021 mA regeln. Die Helligkeit wird dabei
+für alle Segmente zugleich eingestellt.
+Reg.
+
+Bedeutung
+
+C0
+
+Betriebsart static (= 0) bzw.
+dynamic (= 1): wechselnde
+Anzeige der Stellen 1+3 / 2+4.
+
+C1
+
+Löschen Anzeigen 1+3 (= 0)
+
+C2
+
+Löschen Anzeigen 2+4 (= 0)
+
+C3
+
+Test aller Segmente (= 1)
+
+C4
+
++3 mA Anzeigestrom (= 1)
+
+C5
+
++6 mA
+
+C6
+
++12 mA
+
+C7
+
+Nicht genutzt
+Tab. 3: Inhalt des Control-Register
+
+Ein Test aller Segmente mit maximaler
+Anzeigehelligkeit erfordert demnach die
+Übermittlung der folgenden drei Bytes an
+das Display (Tab. 4, Abb. 4):
+Byte
+
+Binär
+
+Hex.
+
+Funktion
+
+
+0111 0000
+
+0x70
+
+Adresse,
+Write-Bit
+Cont. Reg.
+
+binär
+
+hex.
+
+Bedeutung
+
+0000 0000
+
+0x00
+
+Control Register
+
+
+0000 0000
+
+0x00
+
+0000 0001
+
+0x01
+
+1. Anzeige (links)
+
+
+0111 1111
+
+0x7F Test
+
+0000 0010
+
+0x02
+
+2. Anzeige
+
+0000 0011
+
+0x03
+
+3. Anzeige
+
+0000 0100
+
+0x04
+
+4. Anzeige
+
+Tab. 4: Funktionstest Display
+
+Tab. 2: Instruction Byte
+
+Alle anderen möglichen Bitkombinationen
+sind nicht belegt. Das Instruction Byte legt
+damit fest, wohin die im nächsten Datenbyte folgenden Bits geschrieben werden
+sollen.
+Control Register
+In dem sieben Bit großen Control Register
+werden Eigenschaften des LED-Displays
+eingestellt: Über die Werte der Registerbits
+C4 bis C6 lässt sich die Helligkeit der 734
+
+
+
+Computing
+
+Segment-Codierung
+Die vier Sieben-Segment-Anzeigen werden
+durch je einen Byte-Wert kodiert: Jedes Bit
+steht für ein Segment (Abb. 5); das höchstwertige Bit für den Dezimalpunkt. Ist ein
+Daten-Bit = 1, wird das entsprechende
+Segment aktiviert.
+Bit 0
+
+Bit 5
+
+Bit 1
+
+Treiber
+Bei der Gestaltung der Treiber-Software ist
+zunächst festzulegen, wie viele Eigenschaften und Optionen des LED-Displays
+vor einem Programmierer „verborgen“
+werden sollen.
+Sicherlich sollte die Ziffernkodierung
+durch den Treiber erfolgen – das geht sehr
+einfach über ein mit den Werten aus Tab. 5
+vorbelegtes Listen-Element (Abb. 6):
+
+Bit 6
+
+Bit 4
+
+Soll der Dezimalpunkt gesetzt werden,
+muss der Wert vor der Übermittlung an das
+I²C-Device mit 0x80 bitweise ODER-verknüpft werden. Auch ein Minus-Zeichen
+lässt sich anzeigen – dafür ist nur Bit 6 zu
+setzen (0100 0000 = 0x40).
+
+Bit 2
+Bit 3
+
+Bit 7
+
+
+Damit lassen sich die Ziffern 0-9 elegant
+über eine Tabelle (Tab. 5) in eine LEDKodierung überführen:
+Ziffer binär
+
+hex.
+
+dezimal
+
+
+0011 1111
+
+0x3f
+
+
+
+0000 0110
+
+0x06
+
+
+
+0101 1011
+
+0x5b
+
+
+
+0100 1111
+
+0x4f
+
+
+
+0110 0110
+
+0x66
+
+
+
+0110 1101
+
+0x6d
+
+
+
+0111 1101
+
+0x7d
+
+
+
+0000 0111
+
+0x07
+
+
+
+0111 1111
+
+0x7f
+
+
+
+0110 1111
+
+0x6f
+
+
+Tab. 5: Ziffern-Kodierung
+
+Listen-Element (BCD2LED)
+
+Für die Umrechnung einer Dezimalzahl in
+BCD-Darstellung kann ebenfalls eine
+einfache Funktion bemüht werden:
+
+BCD-Darstellung (DEC2BCD)
+
+Die Helligkeit der Anzeige sollte als Parameter übergeben werden.
+
+
+
+Aber muss der Programmierer angeben, an
+welcher Stelle der Dezimalpunkt erscheinen soll, oder stattet man den Treiber
+besser mit verschiedenen Funktionen für
+unterschiedliche Zahlenarten (Ganzzahl,
+Fließkommazahl, Jahreszahl etc.) aus?
+Sollen führende Nullen angezeigt werden?
+Sind negative Zahlen zur Darstellung
+zugelassen?
+
+Herausfordernder ist es, eine (möglicherweise negative) Fließkommazahl ohne führende Nullen anzuzeigen. Dazu ist die Zahl
+zunächst auf ein passendes Format (ggf.
+Minuszeichen, Ziffern vor- und nach dem
+Dezimalpunkt) zu normieren – das sei euch
+als kleine „Fingerübung“ überlassen.
+
+Vergleichsweise leicht ist es, eine Jahreszahl darzustellen – kein Dezimalpunkt,
+keine führenden Nullen. Übergeben werden dazu beispielsweise das Jahr als zweistellige BCD-Zahl und die Helligkeit der
+Anzeige (0-7):
+
+In Grenzen kann man mit den 7-SegmentDisplays auch Texte anzeigen. Allerdings
+lassen sich nur 14 Buchstaben des Alphabets gut erkennbar darstellen (Tab. 6).
+
+Leuchtschrift
+
+binär
+
+hex.
+
+dez.
+
+A
+
+0111 0110
+
+0x76
+
+
+B
+
+0111 1111
+
+0x7f
+
+
+C
+
+0011 1001
+
+0x39
+
+
+E
+
+0111 1001
+
+0x79
+
+
+F
+
+0111 0001
+
+0x71
+
+
+H
+
+0111 0110
+
+0x76
+
+
+I
+
+0011 0000
+
+0x30
+
+
+J
+
+0111 1000
+
+0x78
+
+
+L
+
+0011 1000
+
+0x38
+
+
+
+O
+
+0011 1111
+
+0x3f
+
+
+Mit drei LED-Displays und geringen Anpassungen des Unterprogramms aus Abb. 8
+lässt sich so die ft-Funkuhr aus 3/2012 [3] um eine 12-stellige LED-Zeitanzeige erweitern (Abb. 10).1
+
+P
+
+0111 0011
+
+0x73
+
+
+S
+
+0110 1101
+
+0x6d
+
+
+U
+
+0011 1110
+
+0x3e
+
+
+Z
+
+1101 1010
+
+0xda
+
+
+Leider muss man die Geräteadresse in den
+Eigenschaften des I²C-Schreib- bzw. Lesebefehls von Robo Pro festlegen; sie kann
+nicht als Parameter an den Befehl übergeben werden. Bei der Ansteuerung
+mehrerer LED-Displays mit unterschiedlichen Adressen müssen die Befehle daher
+einzeln an die Adressen angepasst werden.
+
+
+Das erweiterte Robo Pro-Programm der ftFunkuhr mit drei LED-Displays findet sich im
+Downloadbereich der ft:community.
+
+Tab. 6: Buchstaben-Kodierung
+
+Einige simple Wörter lassen sich damit
+immerhin „schreiben“, wie ALLE, PAPI,
+BALL, LOCH, FACH, SAAL, HOPP,
+ELCH, BUCH, PASS, HOCH, ESEL,
+LAUF, BASS, HUFE, BACH, PULS,
+FALL, HEFE, HAUS, HOHL, BOJE,
+FASS, HALS, LUPE, AFFE, LAUS,
+ZAHL oder PECH.
+Damit lässt sich sogar eine einfache Laufschrift realisieren. Und wer in drei LEDDisplays investiert, kann mit dem folgen-
+
+
+Computing
+
+den kleinen Programm immerhin versuchen, seinen Vater beim Marathon zu
+Höchstleistungen anzutreiben:
+
+Wenn ihr ein Programm schreibt, das
+auch durchlaufen soll, wenn kein LEDDisplay angeschlossen ist, dann müsst
+ihr in den I²C-Befehlen als Fehlerbehandlung „Sofort abbrechen“ wählen.
+Falls ihr mehrere LED-Displays ansteuert, solltet ihr darauf achten, dass sie
+nicht zu viel Strom ziehen – der TX ist
+auf insgesamt maximal 2 A ausgelegt.
+Gegebenenfalls müsst ihr die Helligkeit
+der Displays etwas reduzieren.
+
+Quellen
+
+
+[1]
+
+Dirk Fox: I²C mit dem TX – Teil 1:
+Grundlagen. ft:pedia 3/2012, S. 3237.
+
+[2]
+
+Philips Semiconductors: SAA1064 –
+4-digit LED-driver with I2C-Bus
+interface. Data Sheet, Feb. 1991.
+
+[3]
+
+Dirk Fox, Dirk Ottensmeyer: Bau
+einer ft-Funkuhr. ft:pedia 3/2012, S.
+4-10.
+
+Noch zwei Tipps zum Schluss:
+
+
+

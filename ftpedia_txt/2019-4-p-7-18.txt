@@ -1,0 +1,966 @@
+
+Modell
+
+Modell
+
+Konstruktionswettbewerb Gummi-Auto
+Stefan Falk (Hrsg.),
+Daniel Großmann, Rüdiger Riedel, Manfred Schendel, René Trapp
+Im Editorial der Ausgabe 3/2019 der ft:pedia [1] riefen wir dazu auf, ein Fahrzeug mit Gummiantrieb mit möglichst wenigen Teilen herzustellen. Heute dürfen wir euch die eingereichten
+Lösungen vorstellen – herzlichen Dank an alle Tüftler und Einsender!
+
+Die Aufgabe
+
+Daniel Großmann
+
+Wer baut ein funktionierendes Fahrzeug,
+das durch ein Haushaltsgummi angetrieben
+wird, mit den wenigsten Teilen?
+
+Daniel verwendet ein aufgetrenntes
+Gummi, das in zwei Naben geklemmt wird:
+
+Die Regeln lauteten:
+ Außer dem Gummi dürfen nur unveränderte fischertechnik-Teile verwendet
+werden.
+ Außer dem Gummi darf kein Motor verbaut werden.
+ Das Fahrzeug muss mit aufgezogenem
+Gummi mindestens einen Meter auf
+ebenem Grund fahren können.
+ Das Modell mit den wenigsten Bauteilen
+gewinnt. Falls mehrere Modelle mit
+gleich vielen Teilen eingereicht werden,
+entscheidet die Community im Forum –
+wir werden dann dort eine Abstimmung
+durchführen.
+
+
+ Jedes zusammenhängende Stück fischertechnik-Kette, egal ob mit oder ohne
+Raupenbelägen, zählt als ein Bauteil.
+
+Die Lösungen
+Hier kommen die Modellvorschläge in
+alphabetischer Reihenfolge der Konstrukteure:
+
+
+
+
+Daniel schreibt dazu: Das Modell schafft
+ca. 3 m, rollt aber durch den Gummi wieder
+60 cm zurück und bleibt so 240 cm vom
+Startpunkt entfernt stehen. Der geforderte
+Meter wird also erreicht.
+Art.-Nr. Bezeichnung
+
+Anz.
+
+106766 TraktorGummireifen 80
+Power Tractors
+
+
+107359 Felge 45 Power
+Tractors
+
+
+35129
+
+Grundplatte
+120·60·7,5
+
+
+31031
+
+Metallachse 110
+
+
+Gummi
+
+Gesamt
+
+
+
+Rüdiger Riedel
+Rüdiger hatte so viel Spaß am Konstruieren
+von Varianten, dass er sage und schreibe
+zehn Modelle eingereicht hat:
+1 – Speichenrad
+Art.-Nr. Bezeichnung
+19317
+
+Speichenrad 90·15
+Classic Line
+
+
+31057
+
+Raupenband 230·12
+
+
+36294
+
+S-Winkelträger 120
+
+
+31014
+
+Nabe 25 komplett
+
+
+31032
+
+Metallachse 60
+
+
+37679
+
+Klemmbuchse 5
+
+
+31008
+
+Gelenkstein 45
+
+
+35668
+
+V-Radhalter 10
+
+
+35787
+
+Seilrolle 12·5,5 +
+O-Ring 8·3
+Flugzeugrad
+
+
+37468
+
+Baustein 7,5
+
+
+Gummi
+
+Gesamt
+
+
+Anz.
+
+
+
+
+Modell
+
+2 – Rhönrad
+
+
+Art.-Nr. Bezeichnung
+
+
+Anz.
+
+143234
+
+Flexprofil 180 (grün)
+
+
+121641
+
+Flexprofil 180 (blau)
+
+
+36301
+
+S-Winkelträger 30
+
+
+36302
+
+S-Winkelträger 60
+
+
+32071
+
+Winkelstein 7,5°
+
+
+38428
+
+Baustein 5 15·30 3N
+
+
+31004
+
+Baustein 30
+Vierkantbohrung
+
+
+31982
+
+Federnocken
+
+
+78237
+
+Kunststoffachse 50
+Vierkant
+
+
+31024
+
+Klemmkupplung 20
+
+
+37679
+
+Klemmbuchse 5
+
+
+37468
+
+Baustein 7,5
+
+
+31981
+
+Winkelstein 15°
+
+
+Gummi
+
+Gesamt
+
+
+
+
+
+
+3 – Der Hoppler
+
+Art.-Nr. Bezeichnung
+
+Die Grundidee, das Gummi in eine Klemmbuchse einzuhängen, bietet Potenzial für
+noch mehr Modellideen:
+
+36051
+
+Gummiring 45
+37·2,5
+
+
+31015
+
+Flachnabe 25
+komplett
+
+
+31033
+
+Metallachse 50
+
+
+36701
+
+Hülse + Scheibe 15
+
+
+37679
+
+Klemmbuchse 5
+
+
+36302
+
+S-Winkelträger 60
+
+
+32064
+
+Baustein 15
+Bohrung
+
+
+32085
+
+Rollenbock 15
+
+
+36573
+
+V-Rad 14
+
+
+35408
+
+V-Achse 28
+
+
+Gummi
+
+
+
+Anz.
+
+Gesamt
+4 – Der kleine Rennfahrer
+Mit Kufe übers Eis:
+
+
+
+Rüdiger schreibt: Der Hoppler hoppelt
+mehr als 1 Meter weit.
+Art.-Nr. Bezeichnung
+31038
+
+Nockenscheibe
+KR20 35
+
+Anz.
+
+
+
+
+Modell
+
+5 – CD-Garnrolle
+Kreativität kennt keine Grenzen!
+
+
+
+Art.-Nr. Bezeichnung
+
+Anz.
+
+31979
+
+Figur-Sitzbaustein
+30·60·15
+
+
+31008
+
+Gelenkstein 45
+
+
+36934
+
+Pneumatik-Handventil sw bl 4-3Wege
+
+
+36581
+
+V-Rad 23·10
+
+
+34995
+
+Gummireifen 32,5·8
+
+
+31033
+
+Metallachse 50
+
+
+37679
+
+Klemmbuchse 5
+
+
+Gummi
+
+
+38138
+
+Figur (Zierde; für die
+Funktion nicht nötig)
+Gesamt
+
+
+
+Rüdiger merkt an: Die beiden CDs halten
+tatsächlich ausreichend fest auf dem Zylinder. Die Fahrstrecke ist erheblich größer
+als 1 m! Auf einem Turnier würde er gerne
+Ersatz-CDs verwenden ;-) Es sind aber fraglos alles originale fischertechnik-Teile mit
+fischertechnik-Artikelnummern.
+
+
+
+
+Art.-Nr. Bezeichnung
+
+Anz.
+
+31637
+
+Pneumatik-ZylinderRohrhülse 44
+
+
+93296
+
+CD-ROM ROBO
+Pro
+
+
+37527
+
+Rastachse 180
+
+
+34995
+
+Gummireifen 32,5·8
+
+
+Gummi
+
+Gesamt
+
+6 – Tolle Rolle
+
+
+Rüdiger schreibt: Prinzip Garnrolle: Die
+beiden Schalen müssen von einem starken
+Gummi zusammengehalten werden; der
+fischertechnik-Gummi ist dafür bestens
+geeignet. Die Fahrstrecke ist nach Aufdrehen der Antriebsstange um mindestens
+sechs Umdrehungen größer als 1 m!
+Art.-Nr. Bezeichnung
+
+Anz.
+
+36586
+
+V-Radachse
+
+
+155902
+
+Kugelbahn-Kreiseltrichter 90
+
+
+37527
+
+Rastachse 180
+
+
+37240
+
+Gummiring 60
+
+
+Gesamt
+7 – Kettenfahrzeug
+
+
+
+Klemmring eingehängt
+
+
+
+
+Modell
+
+
+Art.-Nr. Bezeichnung
+
+Anz.
+
+36294
+
+S-Winkelträger 120
+
+
+31015
+
+Flachnabe 25
+komplett
+
+
+37384
+
+Metallachse 80
+
+
+37679
+
+Klemmbuchse 5
+
+
+31008
+
+Gelenkstein 45
+
+
+31022
+
+Zahnrad Z40-32
+m1,5
+
+
+31021
+
+Zahnrad Z20 m1,5
+
+
+36263
+
+Kette aus Kettenglied m1,5
+
+
+38537
+
+S-Strebe 30 L
+
+
+
+36323
+
+S-Riegel 4
+
+
+Gummi
+
+
+Rüdiger bemerkt: Es fährt auch mit „OBeinen“! Wackel, wackel.
+
+
+Art.-Nr.
+
+Bezeichnung
+
+Anz.
+
+19317
+oder
+36916
+
+Speichenrad
+90·15 Classic
+Line
+
+
+31058
+
+Nabenmutter
+komplett
+
+
+31003
+
+Baustein 30
+
+
+31005
+
+Baustein 15
+
+
+37527
+
+Rastachse 180
+
+
+Gummi
+
+
+Gesamt
+
+
+8 – O-Beine
+
+
+Gesamt
+
+
+
+
+
+9 – Mit vielen Teilen
+Diese Variante bedarf eines etwas stärkeren
+Haushaltsgummis:
+
+
+Art.-Nr. Bezeichnung
+36300
+
+S-Winkelträger 15
+
+
+32071
+
+Winkelstein 7,5°
+
+
+32881
+
+Baustein 15
+(schwarz)
+
+
+31981
+
+Winkelstein 15°
+
+
+31011
+
+Winkelstein 30°
+
+
+36302
+
+S-Winkelträger 60
+
+
+136529
+
+Baustein 15 (gelb)
+
+
+37237
+
+Baustein 5
+
+
+31981
+
+Winkelstein 15°
+
+
+31010
+
+Winkelstein 60°
+
+
+32879
+
+Baustein 30
+
+
+31058
+
+Nabenmutter kompl.
+
+
+31731
+
+Distanzring 15
+fischerform
+
+
+35066
+
+Rastachse 90
+
+
+37527
+
+Rastachse 180
+
+
+35073
+
+Rastkupplung 15
+
+
+36227
+
+Rastadapter 20
+
+
+31025
+
+Seilhaken 30
+
+
+35668
+
+V-Radhalter 10
+
+
+36573
+
+V-Rad 14
+
+
+Gummi
+
+
+
+
+Gesamt
+
+Anz.
+
+
+
+Modell
+
+
+10 – Fahrrad
+
+
+
+
+
+Art.-Nr.
+
+Bezeichnung
+
+Anz.
+
+31014
+
+Nabe 25 komplett
+
+
+31033
+
+Metallachse 50
+
+
+37384
+
+Metallachse 80
+
+
+36303
+
+S-Winkelträger
+
+
+37679
+
+Klemmbuchse 5
+
+
+32064
+
+Baustein 15
+Bohrung
+
+
+35738
+
+S-Winkellasche
+
+
+36323
+
+S-Riegel 4
+
+
+Gummi
+
+
+Gesamt
+Rüdiger merkt an: Zwei Klemmbuchsen
+reichen aus, um den Rahmen des „Fahrrades“ zusammenzuhalten, die dritte wird
+für den Gummiantrieb benutzt. Fährt sehr
+hübsch!
+
+
+Manfred Schendel
+
+
+
+Art.-Nr.
+
+Bezeichnung
+
+Anz.
+
+36916
+oder
+19317
+
+Speichenrad
+90·15 Classic
+Line
+
+
+
+
+
+Modell
+
+Manfred ergänzt: Ich bin ein Freund von
+minimalistischen Ansätzen. Also muss die
+Lösung in einem Modell von drei Teilen
+liegen, so dachte ich: ein Rad, eine Achse
+und ein Gegenstück zur Befestigung des
+Gummi-Antriebs. Nur leider habe ich bisher
+kein zuverlässiges Einrad-Fahrzeug konstruieren können. Daher möchte ich hier
+meine Zweirad-Variante einreichen.
+
+Art.-Nr. Bezeichnung
+Gummi
+
+Anz.
+
+Gesamt
+
+
+René Trapp
+
+Der freundliche fischertechniker hält schon
+einen Ersatz bereit, wenn ich es mit dem
+Aufziehen übertrieben habe.
+Bei dem Versuch des Nachbaus können die
+folgenden Hinweise nützlich sein: Die
+Räder sind so eingestellt, dass ein wenig
+Reibung zum U-Träger erzeugt wird. Ohne
+Reibung drehen die Räder durch, da es ja
+keine Gummibereifung gibt und die Haftreibung der Räder auf dem Untergrund
+gering ist. Auch bin ich von einer „Standard-Oberfläche“ ausgegangen und habe
+z. B. nicht eine Gummimatte verwendet.
+Das Gummiband wird zum Aufziehen ca.
+1 cm parallel zur Achse gehalten und dann
+die ersten Wicklungen von Hand über das
+Ende gezogen. Dann hält das Band auf der
+Achse und nun kann der Rest auch durch
+Drehen der Räder aufgewickelt werden. Es
+empfiehlt sich, das Band immer straft zu
+ziehen, so dass kontinuierlich ein mehr oder
+weniger gleichmäßiger Zug beim Abrollen
+entsteht. Nach ca. 80-100 cm ist das Band
+abgewickelt und je nach Geschwindigkeit
+rollte das Fahrzeug noch 30-40 cm weiter.
+Wegen der Reibung, die das Durchdrehen
+der Räder verhindert, wird das Fahrzeug
+eben auch abgebremst. Die Entfernung von
+120 cm auf meiner Teststrecke habe ich
+nach einem gewissen Training aber dann
+immer erreicht.
+Art.-Nr. Bezeichnung
+
+
+
+Anz.
+
+32968
+
+U-Träger 150
+
+
+31040
+
+Metallachse 90
+
+
+36574
+
+V-Rad 23·10
+
+
+
+
+
+
+Art.-Nr. Bezeichnung
+
+Anz.
+
+106766 Traktor-Gummireifen 80, Power
+Tractors
+
+
+107359 Felge 45, Power
+Tractors
+
+
+31913
+
+Nabenmutter
+
+35697
+
+Das Ergebnis
+Schreiten wir zur Auswertung:
+Modell
+
+Teile
+
+Manfred
+
+
+Rüdiger (Tolle Rolle)
+
+
+
+Rüdiger (CD-Garnrolle)
+
+
+Metallachse 200
+
+
+Daniel
+
+
+31016
+
+Seiltrommel 15
+
+
+René
+
+
+35129
+
+Grundplatte
+120·60·7,5
+
+
+Rüdiger (Rennfahrer)
+
+
+Rüdiger (O-Beine)
+
+
+Gummi
+
+
+Rüdiger (Speichenrad)
+
+
+Rüdiger (Fahrrad)
+
+
+Rüdiger (Hoppler)
+
+
+Rüdiger (Kettenfahrzeug)
+
+
+Rüdiger (Rhönrad)
+
+
+Rüdiger (viele Teile)
+
+
+Gesamt
+René ergänzt: Die lange Metallwelle (nicht
+unter 17 cm) balanciert das Einrad während der Fahrt aus. Die optimale Position
+der Bauteile auf der Welle wird experimentell gefunden. Das Gummi sollte ca. 85 mm
+Durchmesser haben.
+
+Wir haben also zwei erste und zwei zweite
+Plätze: Rüdiger Riedel und Manfred Schendel haben es mit fünf Teilen inklusive
+Gummi geschafft, Daniel Großmann und
+René Trapp benötigten auch nur sieben
+Teile. Rüdiger gebührt wohl ein Ehrenpreis
+für die Vielfalt seiner Varianten. Alles in
+allem: fischertechnik at its best! Wir bedanken uns bei und gratulieren allen Teilnehmern. Bestimmt entspannt sich im Forum
+eine interessante Diskussion über die
+Ergebnisse – und natürlich über die Frage:
+Was machen wir als nächstes?
+
+Referenzen
+[1]
+
+
+Dirk Fox, Stefan Falk: Ran an die
+Kästen – wörtlich gemeint. Editorial
+mit Wettbewerbsaufruf in 3/2019, S. 2.
+
+

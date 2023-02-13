@@ -1,0 +1,156 @@
+
+
+Modell
+
+Pneukran
+Daniel Canonica
+Ein Pneukran vereint die Möglichkeit zum Bewegen von schweren Lasten mit Mobilität und
+schneller Einsatzbereitschaft. Durch ständig verbesserte Teleskoparme und modulare Gegengewichte werden enorme Höhen und Lastgrenzen erreicht.
+
+
+Bei mobilen Kränen unterscheidet man
+zwischen solchen mit Raupenantrieb und
+straßentauglichen mit einer größeren
+Anzahl von Achsen.
+Die eingesetzten Teleskoparme haben
+typischerweise etwa drei bis acht Stufen.
+Bei kleiner Auslenkung aus der Vertikalen
+können mehrere 100 Tonnen Last gehoben
+und bewegt werden.
+
+
+Das Modell
+Dem dargestellten Modell gingen viele
+Prototypen und Versuche voran. Die
+Herausforderung beim Entwurf ist, den
+Teleskoparm samt Aufhängung und Drehkranz relativ leicht und doch möglichst
+robust und belastbar zu bauen. Abb. 2 zeigt
+den beinahe voll ausgefahrenen Teleskoparm.
+
+
+Modell
+
+Der Auszug besteht aus zwei Alus mit je
+21 cm Länge. Auf der Unterseite wird er
+über Rollen geführt, seitlich und oben mit
+Statikteilen und flachen Bauplatten
+gehalten.
+Ohne dass er zu wackeln beginnt, kann der
+Auszug bis auf etwas mehr als 30 cm Länge
+ausgefahren werden.
+Im Folgenden betrachten wir die Konstruktion des ganzen Modells Schritt für Schritt.
+
+Antrieb
+Der Antriebsmotor ist mit Verbindungsstücken 30 oder 45 zwischen den zwei
+tragenden Alus befestigt (Abb. 3).
+
+
+Ein weiterer, quer montierter Alu dient zur
+optimalen Stabilität und zur Befestigung
+der ausschwenkbaren Stützen:
+
+
+
+
+
+Der Antrieb erfolgt über eine kurze Welle
+über die Kette auf die beiden hinteren
+Starrachsen (Abb. 5 – Sicht von unten).
+Der Drehkranz liegt nur 5 mm über den
+Alus und ist mit 4 BS5 sehr stabil befestigt.
+Die Drehung erfolgt über einen XS-Motor,
+welcher die Kraft gut übertragen kann,
+solange der Teleskoparm nicht zu stark
+ausgelenkt ist (Abb. 6).
+
+
+Lenkung
+Die vorderen zwei Achsen werden proportional ausgelenkt. Abb. 8 und 9 zeigen die
+Lenkung von oben und von unten.
+
+
+
+In Abb. 7 sehen wir nun die Aufhängung
+des Teleskoparms. Der hintere Aufbau auf
+dem Drehkranz muss ebenfalls ziemlich
+robust sein, um den ganzen Oberwagen und
+die Ballastgewichte zu tragen.
+
+
+
+
+Modell
+
+
+Teleskoparm
+Nun schauen wir uns den Aufbau des
+Teleskoparms genauer an. Abb. 10 zeigt
+den Auszug mit den Zahnstangen.
+Im Teleskoparm gleitet der Auszug sehr
+gut. Er wird auf der oberen Seite durch
+mehrere V-Bauplatten 15 · 90 geführt.
+Seitlich sind Winkelsteine 30 angebracht,
+damit er sich beim Zurückfahren nicht
+verhakt.
+
+
+
+Auf der Unterseite wird der Auszug über
+Rollen geführt (vgl. Abb. 11).
+ausgefahren wird. Abb. 13 zeigt den ganzen
+Teleskoparm von unten. Der äußere Arm ist
+ca. 36 cm lang. Voll ausgefahren erreicht er
+eine Höhe von etwa 70 cm.
+
+
+
+
+
+Zum Aufrichten des Arms ist eine erhebliche Kraft nötig. Mit einem 7-fachen
+Flaschenzug und einem XM-Motor
+funktioniert dies erstaunlich gut, sogar bei
+(teilweise) ausgefahrenem Arm.
+
+
+Auch das Ausfahren des Teleskoparms erfolgt durch einen XS-Motor (ersichtlich in
+als eher zu schwach erwiesen.
+
+Aufrichten des Teleskoparms
+
+Ende, Abb. 15 den Motor mit dem
+Flaschenzug, sowie den (kleinen) Lastmotor, die Steuerelektronik und die Gegengewichte unter der Abdeckung.
+
+Oberwagen
+Nun sehen wir den Oberwagen als Ganzes
+(Abb. 16). Der Oberwagen ist nur etwas
+mehr als 30 mm hoch (unten in der Mitte ist
+eine Abstützung für die Gegengewichte).
+Ganz rechts auf dem Bild erkennt man die
+um 90° ausschwenkbaren Stützen.
+
+oberen Ende des Arms
+
+Der Oberwagen hat natürlich eine eigene
+Kabine für den Kranführer (Abb. 17).
+
+
+Modell
+
+Quellen
+[1]
+
+Migl, Alexander: Liebherr-Fahrzeugkran zur Bergung verunglückter
+Rennwagen am Circuit de Monaco.
+Wikimedia Commons, 2019 (CC BY
+SA 4.0).
+
+
+Fazit
+Das ganze Modell funktioniert recht gut und
+ist belastbar gebaut. Dank des stabilen
+Drehkranzes und den Gegengewichten kann
+der voll ausgefahrene Teleskoparm problemlos bis auf etwa 60° aus der Vertikalen
+ausgelenkt werden.
+
+
+

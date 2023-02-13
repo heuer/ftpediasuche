@@ -1,0 +1,691 @@
+
+Astronomie
+
+Astronomie
+
+Planetarium
+Thomas Püttmann
+Das hier vorgestellte kleine Planetarium verdeutlicht den Lauf von Merkur, Venus und Erde
+um die Sonne. Insbesondere werden die von der Erde mit dem Feldstecher oder Fernrohr
+beobachtbaren Phasen der beiden inneren Planeten Venus und Merkur simuliert.
+
+Einleitung
+Astronomische Beobachtungen kann man
+mit unterschiedlichen Hilfsmitteln machen.
+Wer sich bisher nicht oder nur wenig für
+Astronomie interessiert hat, erwartet
+normalerweise, dass nur Teleskope interessante Phänomene zeigen können. Natürlich
+sehen die Saturnringe oder der rote Fleck
+des Jupiter in einem gehobenen Teleskop
+phantastisch aus. Tatsächlich kann man
+aber schon mit bloßem Auge sehr schöne
+Beobachtungen machen und viel über die
+Himmelsmechanik lernen.
+
+Venus als schmale Sichel sehen oder
+innerhalb von wenigen Stunden beobachten, wie die vier großen Monde des Jupiter
+ihre Position verändern.
+Diese beiden Phänomene wurden direkt
+nach der Erfindung der Fernrohrs von
+Galileo Galilei (1564-1642) entdeckt und
+lieferten entscheidende Argumente dafür,
+dass die Erde nicht mehr als Mittelpunkt
+des Weltalls angesehen wurde.
+
+
+Dieser Beitrag stellt ein kleines Planetarium vor (Abb. 3), mit dem sich die Venusund Merkurphasen simulieren lassen.
+
+
+Wenn dieser Aufsatz zu Weihnachten 2011
+erscheint, ist die Gelegenheit zur Beobachtung der beiden Planeten günstig, so
+dass man Wirklichkeit und Simulation sehr
+gut überprüfen kann.
+
+Mit einem einfachen Feldstecher gar kann
+man an geeigneten Tagen den Planeten
+
+
+
+
+Bei klarem Himmel kann man Merkur
+morgens nach 7 Uhr knapp über dem Horizont im Südosten sehen und Venus abends
+nach 17 Uhr im Südwesten (Abb. 4 und 5).
+Die Merkurphasen sind prinzipiell nur in
+einem Teleskop zu sehen und wegen der
+Horizontnähe und des damit verbundenen
+Dunstes immer schwierig zu erkennen – es
+ist aber etwas besonderes, Merkur über40
+
+haupt einmal in seinem Leben gesehen zu
+haben. Die Venusphasen kann man im
+Gegensatz zu den Merkurphasen schon
+durch einen guten Feldstecher mit Stativ
+oder Auflage beobachten. Im Lauf des
+nächsten halben Jahres wird die Venus wie
+in Abb. 1 immer größer und schmaler und
+spätestens im April sollte dann sogar ein
+einfaches Fernglas mit Auflage ausreichen.
+
+
+Astronomie
+
+und um 17:35 Uhr (simuliert mit Stellarium [8]),
+
+
+
+
+Das Sonnensystem
+Die Planeten Merkur, Venus, Erde, Mars,
+Jupiter, Saturn, Uranus, Neptun (und
+Pluto) umlaufen die Sonne (Abb. 7).
+
+Ebene am wichtigsten, in der die Erde um
+die Sonne läuft. Sie heißt Ebene der
+Ekliptik. Die Umlaufebenen der anderen
+Planeten sind gegen diese Ebene bis zu 7°
+geneigt (18° bei Pluto, siehe Abb. 7).
+Das zweite Keplersche Gesetz stellt einen
+Zusammenhang her zwischen der momentanen Geschwindigkeit eines Planeten und
+seiner momentanen Entfernung zur Sonne.
+In Sonnennähe ist der Planet am schnellsten und in Sonnenferne am langsamsten.
+
+
+Die ersten vier Planeten Merkur, Venus,
+Erde und Mars bilden das so genannte
+innere Sonnensystem. Danach folgen der
+Asteroidengürtel und dann das äußere
+Sonnensystem mit den restlichen Planeten.
+Die Planetenbahnen und Planetengeschwindigkeiten werden in hoher
+Genauigkeit durch die drei Keplerschen
+Gesetze beschrieben (Abb. 8).
+
+
+Die Keplerschen Gesetze würden exakt
+gelten, wenn sich die Planeten nicht gegenseitig beeinflussen würden. Nach dem
+ersten Keplerschen Gesetz sind die Bahnen
+der Planeten Ellipsen, in deren einem
+Brennpunkt die Sonne steht. Insbesondere
+umläuft jeder einzelne Planet die Sonne in
+einer Ebene. Für uns ist natürlich die
+
+Das dritte Keplersche Gesetz schließlich
+beinhaltet eine Formel, die es erlaubt, die
+Umlaufzeit der Planeten aus ihrer mittleren
+Entfernung zur Sonne zu berechnen. Je
+weiter sie von der Sonne entfernt sind,
+desto länger brauchen sie für einen Umlauf. So benötigt Merkur nur 88 Tage für
+seinen Weg um die Sonne, Neptun dagegen 165 Jahre. Das ist 685 mal so lang.
+Neptun ist 77,7 mal so weit von der Sonne
+entfernt wie Merkur. Der genaue Zusammenhang zwischen diesen Verhältnissen ist
+6852 = 77,73.
+Von der Erde aus
+Dieses Bild unseres Sonnensystems ist uns
+heute im Zeitalter von Teleskopen, Raketen und Raumsonden selbstverständlich
+geworden. Bis zur Erfindung des Fernrohrs
+im 17. Jahrhundert in den Niederlanden
+war der Mensch aber ausschließlich auf
+Beobachtungen mit bloßem Auge angewiesen. Damals wie heute sah man von der
+Erde aus, dass sich Sonne, Mond, Planeten
+und Fixsterne am Himmel alle einmal am
+Tag um den Polarstern drehen und im
+Osten auf- und im Westen untergehen.
+Die Sonne durchwandert im Laufe eines
+Jahres von der Erde aus gesehen einen
+bestimmten Kreis vor dem Fixsternhimmel, die so genannte Ekliptik (die rote
+Linie in Abb. 4, 5 und 6). Längs der
+Ekliptik wurden deshalb zwölf markante
+Sternkonfigurationen zu den Sternbildern
+des Tierkreises zusammengefasst (Widder,
+Stier, Zwillinge, Krebs, Löwe, Jungfrau,
+
+
+Astronomie
+
+Waage, Skorpion, Schütze, Steinbock,
+Wassermann, Fische). Die Planeten sind
+ebenfalls stets vor dem Hintergrund dieser
+Tierkreissternbilder zu sehen. Ihre Helligkeit schwankt und sie wandern den Tierkreis bis auf regelmäßig stattfindende
+Schleifen in einer Richtung entlang.
+
+die
+unterschiedlichen
+Entfernungen
+zwischen der Erde und den anderen
+Planeten auf ihren Bahnen um die Sonne
+zurückgeführt werden. Die Schleifenbewegungen fanden ihre Erklärung in den
+Überholvorgängen der Planeten untereinander.
+
+Die astronomischen Tierkreissternbilder
+weichen übrigens heute um ziemlich genau
+ein Sternbild von den in der Astrologie
+definierten Tierkreiszeichen mit gleichen
+Namen ab. Falls jemand zum Beispiel am
+1. Januar geboren wird, ist er der Astrologie nach ein Steinbock, obwohl die
+Sonne bei seiner Geburt nicht vor dem
+Sternbild des Steinbocks, sondern vor dem
+Sternbild des Schützen steht (siehe Abb. 4,
+5 und 6). Vor etwa 2000 Jahren stimmten
+beide Begriffe noch überein. Die zunehmende Abweichung liegt an der so
+genannten Präzession der Erde.
+
+Gleichzeitig lieferte das heliozentrische
+Weltbild auch eine einfache Ursache dafür,
+dass alle Himmelskörper einmal am Tag
+um den Polarstern drehen: die Eigendrehung der Erde um ihre Achse. Die
+Erklärungen für die anderen am Himmel
+beobachtbaren Bewegungen wurden nicht
+komplizierter: Das sichtbare jährliche
+Wandern der Sonne durch die Ekliptik
+erklärte sich durch die Bewegung der Erde
+um die Sonne; das sichtbare monatliche
+Wandern des Mondes und dessen Phasenwechsel von Neumond über Vollmond
+zurück zum Neumond behielt seine Erklärung in der monatlichen Bewegung des
+von der Sonne angestrahlten Mondes um
+die Erde.
+
+Ein neues Weltbild
+Bis ins 16. Jahrhundert sah der Mensch
+sich und damit die Erde im Zentrum des
+Weltalls. Man nahm an, dass alle anderen
+Himmelskörper sich im Wesentlichen um
+die Erde drehten. Viele der am Himmel
+sichtbaren Bewegungen ließen sich so
+überzeugend erklären, aber nicht die
+Helligkeitsschwankungen und Schleifenbewegungen der Planeten. Im ausgehenden
+16. Jahrhundert und zu Beginn des 17.
+Jahrhunderts setzte sich dann langsam das
+von Nicolaus Copernicus (1473-1543)
+begründete heliozentrische Weltbild durch.
+
+
+Die Erde verlor ihre zentrale Position und
+wurde selbst zu einem Planeten. Die
+Helligkeitsschwankungen konnten nun auf
+
+Johannes Kepler (1571-1630) konnte mit
+seinen Gesetzen die Bewegung des Mars
+am Himmel wesentlich genauer vorausberechnen als alle vor ihm, und Galileo
+Galilei entdeckte mit einem der ersten
+Fernrohre die Jupitermonde und Venusphasen. Die Jupitermonde zeigten klar,
+dass sich nicht alle Himmelskörper um die
+Erde drehten, und der genaue Verlauf der
+Venusphasen war mit dem geozentrische
+Weltbild nicht verträglich.
+Trotzdem blieb ein Unbehagen gegenüber
+dem heliozentrischen Weltbild. Daher
+wurden bald erste mechanische Apparate
+gebaut, die die unterschiedlichen Bewegungen im Sonnensystem gemäß der neuen
+Theorie sichtbar und greifbar machen
+konnten. Auch heute noch kann kein Buch
+und kein Film den Lehrwert eines solchen
+Modells erreichen.
+
+
+
+Planetarien, Tellurien, Orreries
+Mit dem Begriff Planetarium verbinden die
+meisten Menschen heutzutage eines der
+Projektionsplanetarien, die man häufig in
+größeren Städten findet. Als Planetarien
+wurden aber schon vor der Erfindung der
+Projektionsplanetarien Apparate bezeichnet, die den Lauf der Planeten um die
+Sonne mechanisch veranschaulichen.
+Tellurien sind Apparate, die speziell die
+Bewegungen der Erde um die Sonne, des
+Monds um die Erde und die Drehung der
+Erde um ihre Achse wiedergeben. Die
+Verwendung des Wortes Orrery war und
+ist uneinheitlich: Häufig versteht man
+darunter Geräte, bei denen neben Erde,
+Sonne und Mond auch Planeten bewegt
+werden. Als Grand Orreries wurden oft die
+Geräte bezeichnet, die zusätzlich zu Sonne,
+Erde und Mond alle zum Zeitpunkt des
+Baus bekannten Planeten umfassen.
+
+Ole Rømer (1644-1710) und vor allem
+Christiaan Huygens (1629-1695) entwickelt (Abb. 10). Huygens Maschine war
+ihrer Zeit in mehrfacher Hinsicht weit
+voraus.
+Populär wurden Planetarien im 18.
+Jahrhundert in England. In dieser Zeit hatte
+Bildung in den mittleren und oberen
+Schichten einen hohen Stellenwert (Abb.
+11) und gerne verschönerte man seine
+Bibliothek mit einem schmucken, lehrreichen Gerät.
+
+Geschichte
+Die Geschichte der Planetarien ist komplex
+und wird hier nur lückenhaft wiedergegeben. Zwei sehr interessante und
+umfangreiche Bücher zu diesem Thema
+sind [1, 2]. Schon Kepler entwarf im Jahre
+1598 eine heliozentrische Planetenmaschine. Seine Pläne waren aber in einigen Details unpraktisch und zu ambitioniert, weshalb er sie schließlich verwarf.
+Bedeutende frühe Planetarien wurden von
+
+Joseph Wright of Derby
+
+Der Name Orrery stammt aus dem Jahre
+1704, als ein Apparat für den 4. Earl of
+Orrery von John Rowley nach einer
+Vorlage von G. Graham gebaut wurde.
+Planetarien wurden damals vor allem von
+Herstellern wissenschaftlicher Instrumente
+wie Sextanten, Globen usw. angefertigt
+
+
+und vertrieben. Bedeutend waren unter
+anderem Benjamin Martin (Abb. 12),
+James Ferguson und William Pearson.
+
+1767 (Quelle: Wikipedia, Fotograf: Sage Ross)
+
+In der zweiten Hälfte des 18. Jahrhunderts
+und zu Beginn des 19. Jahrhunderts gab es
+herausragende Planetariumsuhren von
+meisterlichen Uhrmachern wie Philipp
+Matthäus Hahn in Deutschland, David
+Rittenhouse in den USA und Antide
+Janvier in Frankreich (Abb. 13).
+
+Astronomie
+
+Am 9. November 2010 wurden vier Werke
+von Janvier bei Sotheby’s versteigert,
+darunter eine Sphère mouvante für
+€ 324.750 [3]. Das lange Zeit größte Planetarium mit 3,5 m Durchmesser hat sich der
+Wollkämmerer Eise Eisinga aus Friesland
+in seine Wohnzimmerdecke gebaut. Die
+Mechanik befand sich im Raum darüber.
+Zu Beginn des 20. Jahrhunderts wurde
+schließlich das Projektionsplanetarium von
+Walther Bauersfeld (1879-1959) erfunden.
+Mechanische Planetarien wurden zu dieser
+Zeit nur noch selten gebaut. In Deutschland kann man mehrere Planetarien und
+Himmelsgloben im Astronomisch-Physikalischen Kabinett des Hessischen Landesmuseums in Kassel sehen. Werke von
+Philipp Matthäus Hahn stehen z. B. im
+Deutschen Uhrenmusem in Furtwangen.
+Technik
+In nahezu allen mechanischen Planetarien
+wurden Zahnradgetriebe eingesetzt, um die
+mittleren Geschwindigkeiten herzustellen.
+Um Übersetzungen wie 206:7 zu erzielen,
+wurden meist Zahnräder mit den entsprechenden Zahnzahlen kombiniert (Abb.
+14).
+
+Janvier [2]; das Bild stammt ursprünglich aus
+einem Buch von Janvier aus dem Jahr 1812
+
+[2]; das Bild stammt ursprünglich aus einem
+Buch von F. Berthoud aus dem Jahr 1802
+
+Das bedeutete, dass man nicht auf
+Standardzahnräder zurückgreifen konnte
+(die es in der vorindustriellen Zeit wahrscheinlich ohnehin nur in sehr begrenztem
+Umfang gab), sondern dass nahezu jedes
+Rad speziell angefertigt werden musste.
+Bei vielen Planetarien wurden der Einfachheit halber die realen Planetenbahnen
+
+
+durch Kreise ersetzt und auf die Wiedergabe der Exzentrizitäten und Geschwindigkeitsschwankungen während eines
+Umlaufs um die Sonne verzichtet.
+Von den bedeutenderen Konstrukteuren
+wurden allerdings eine Vielzahl raffinierter
+Mechanismen zur genauen Umsetzung der
+Bahnbewegungen ersonnen. So liefen z. B.
+in einigen Planetarien die Planeten auf
+echten Ellipsen und wurden aus dem
+Brennpunkt, in dem die Sonne nicht steht,
+mit konstanter Winkelgeschwindigkeit
+angetrieben. Das ergibt eine ausgezeichnete Annäherung an die durch das zweite
+Keplerschen
+Gesetz
+beschriebenen
+Geschwindigkeitsschwankungen.
+Zu gleichem Zweck wurden abrollende
+elliptische Zahnräder, Doppelkurbelschleifengetriebe und 1:2-übersetzte, in geeigneter Weise geneigte Kardangelenke eingesetzt. Wir gehen hier nur auf Huygens’
+Planetarium ein, das trotz seiner hohen
+Qualität in der damaligen Zeit so gut wie
+ohne Einfluss auf die unmittelbar folgenden Geräte blieb.
+In Huygens’ Planetarium werden die einzelnen Planetenbahnen durch exzentrische
+Kreise dargestellt, d. h. der Mittelpunkt
+eines Kreises ist von der Sonne verschieden. Außer beim Merkur sind wegen der
+geringen Exzentrizitäten Ellipsen optisch
+kaum von exzentrischen Kreisen zu unterscheiden. Die Geschwindigkeitsschwankungen gemäß dem zweiten Keplerschen
+Gesetz sind viel wesentlicher.
+
+Getriebe von C. Huygens
+
+
+Um diese in hoher Qualität nachzubilden,
+erfolgte der Antrieb des Planeten durch ein
+ungleichförmig übersetzendes Getriebe, in
+dem nochmals die gleiche Exzentrizität
+vorkommt. Ein fischertechnik-Funktionsmodell dieses Getriebes zeigt Abb. 15.
+Der Planetenzeiger besteht im Wesentlichen aus einem Grundbaustein (BS) 15
+und einem Grundbaustein 30, die über die
+seitlich angebrachten BS 7,5 so zusammengefügt sind, das man zwei Achsen 30
+unmittelbar
+nebeneinander
+hindurch
+stecken kann. Die eine Achse, die durch
+die Nut des BS 30 geht, wird in der Bauplatte drehbar gelagert. Auf die andere, die
+durch die Nut des BS 15 geht, kommt ein
+Klemmring, in dessen Öffnung der Zapfen
+des BS 15 steckt, so dass die Achse
+blockiert ist. Über den Klemmring wird ein
+Z40/Z32 angebracht, dessen Kronenrad
+von einem Z10 angetrieben wird.
+Die Sonne befände sich bei diesem Funktionsmodell jetzt zwischen dem Z10 und
+der Achse durch den BS 30. In Abb. 14
+kann man sehr gut erkennen, wie Janvier
+genau diese Technik in seinem Entwurf
+verwendet hat. Für weitere technische
+Details verschiedener Planetarien im Laufe
+der Geschichte sei noch einmal auf [1, 2]
+verwiesen.
+Baukastenmodelle und Bausätze
+Im 20. Jahrhundert wurden die Konstruktionssysteme Meccano, Lego und fischertechnik erfunden. Schon im Jahre 1918 gab
+es ein erstes Meccano-Planetarium, allerdings noch mit vollkommen unrealistischen Umlaufzeitverhältnissen. Einen
+umfassenden Überblick über MeccanoModelle kann man in [4] finden.
+Aus Lego kenne ich zwei nennenswerte
+Modelle: Die NASA stellt eine Bauanleitung für ein Planetarium mit vier Planeten
+und einem Mond zur Verfügung [5]. Allerdings wird dabei nicht unser Sonnensystem
+simuliert. Vielmehr geht es um eine
+Computer gestützte Demonstration, wie
+
+man erdähnliche Planeten in anderen
+Sonnensystemen findet. Das zweite LegoModell ist kein Planetarium im eigentlichen Sinn, sondern eine hervorragende
+Umsetzung des Antikythera-Mechanismus’
+in Lego von Andrew Carol [6]. Der
+Antikythera-Mechanismus ist ein antiker
+Analogcomputer zur Berechnung von
+Sonnen- und Mondfinsternisse. Andrew
+Carol war wahrscheinlich der erste, der die
+altbekannte Methode, Differentialgetriebe
+zum Erzielen beliebiger Übersetzungen zu
+nutzen, zum Bau astronomischer Apparate
+mit Konstruktionssystemen eingesetzt hat.
+Zwei schöne, aber sehr unterschiedliche
+Tellurien aus fischertechnik wurden von
+Thomas Habig und Michael Samek
+(wesentliche Verbesserungen von Robert
+Reiter) gebaut. Man kann diese im Bilderpool der ft-community finden.
+Seit ein paar Jahren liefert die Firma
+Astromedia für € 34,95 einen schönen
+Kartonbausatz für ein Planetarium, das
+Sonne, Merkur, Venus und Erde mit Mond
+umfasst [7]. Das fertige Gerät eignet sich
+hervorragend zur Demonstration der
+verschiedenen Bewegungsarten der beteiligten Himmelskörper, aber weniger zur
+genauen Vorhersage von Konstellationen
+und Simulation der Venusphasen. Die
+Übersetzungen werden nämlich über
+Riemengetriebe statt mit Zahnrädern realisiert. Daher tritt Schlupf auf, der ein halbwegs genaues Einstellen des Datums
+schwer möglich macht oder häufiges
+Rekalibrieren erfordert. Nachteilig ist auch
+die lange Bauzeit von über 30 Stunden.
+Mein Modell
+Mein fischertechnik-Planetarium gibt die
+Position der Planeten Merkur, Venus und
+Erde auf ihren Bahnen um die Sonne zu
+einem einstellbaren Datum zwischen 2004
+und 2023 an und simuliert die von der Erde
+sichtbaren Venus- und Merkurphasen. Die
+Positionsgenauigkeit von der Modellsonne
+aus gesehen beträgt bei der Erde ± 3°, bei
+
+Astronomie
+
+der Venus ± 4° und beim Merkur ± 25°
+über einen Zeitraum von 50 Jahren.
+
+
+Wenn man ein Auge unmittelbar über oder
+neben einen Modellplaneten bewegt,
+erscheint die leuchtende Modellsonne
+genauso groß, als stünde man real auf dem
+Planeten und würde die reale Sonne
+anschauen. Die anderen Modellplaneten
+sieht man dagegen so groß, als würde man
+ein Fernrohr mit 1.700facher Vergrößerung
+benutzen.
+Planeten: Die Planeten selbst sind aus
+Knetmasse geformt und haben einen
+Durchmesser von 15 mm (Erde), 14 mm
+(Venus) und 6 mm (Merkur). Sie
+wurden mit Hilfe zurechtgebogener
+Büroklammern an den äußeren Enden
+von Rastachsen befestigt. In den
+Abbildungen sind die Rastachsen von
+Erde und Venus unnötigerweise eine
+Stufe zu lang gewählt. In der aktuellen
+Version des Planetariums kommen
+Rastachsen 90, 75 und 30 zum Einsatz.
+Die Entfernungen von der Sonne betragen im Modell 10 cm bei der Erde, 7,2
+cm bei der Venus und 3,8 cm beim
+Merkur.
+Sonne: Die Sonne wird durch eine alte
+fischertechnik-Lampe dargestellt. Der
+Glühwendel hat eine Ausdehnung von
+
+
+
+1mm x 2mm. Damit passt er genau zum
+Maßstab der Planetenbahnen.
+Planetenbahnen: Die Planeten laufen
+in dem Modell auf konzentrischen
+Kreisen mit konstanten Geschwindigkeiten um die Sonne. Die realen Planetenbahnen sind mit hoher Genauigkeit
+Ellipsen mit Exzentrizitäten 0,017
+(Erde), 0,007 (Venus) und 0,206
+(Merkur), in deren einem Brennpunkt
+sich die Sonne befindet. Die numerischen Werte bedeuten, dass die reale
+Erdbahn und insbesondere die reale
+Venusbahn optisch kaum von exzentrischen Kreisen zu unterscheiden sind.
+Der Mittelpunkt der Erdbahn wäre in
+unserem Modell 1,7 mm von der Sonne
+entfernt, der der Venusbahn 0,7 mm.
+Bei unseren Planetendurchmessern ist
+diese Exzentrizität vom optischen
+Eindruck her vernachlässigbar. Beim
+Merkur ist das allerdings anders: Der
+Mittelpunkt seiner Bahn wäre deutlich
+wahrnehmbare 7,6 mm von der Sonne
+entfernt. Das zu vernachlässigen, ist ein
+prinzipieller Fehler des Modells.
+Geschwindigkeiten: Die Exzentrizitäten der Bahnen wirken sich nicht nur
+auf die Bahnform aus, sondern verursachen vor allem indirekt über das
+zweite Keplersche Gesetz Geschwindigkeitsschwankungen im Laufe eines
+Umlaufs. In meinem Modell wie in den
+meisten Planetarien sind die Planetengeschwindigkeiten konstant bezogen
+auf die simulierte Zeit. Dies führt zu
+einem Positionsfehler bei der Erde von
+maximal 2,5° von der Sonne aus
+gesehen und bei der Venus von etwa 1°.
+Beide Abweichungen fallen nicht stark
+ins Gewicht, wenn man das Planetarium
+von außen betrachtet. Blickt man dagegen von der Erde aus auf die Venus in
+der Nähe einer unteren Konjunktion,
+dann können aufgrund der kleinen Entfernung
+nennenswerte
+Winkelabweichungen entstehen. Beim Merkur
+
+beträgt der Fehler von der Sonne aus
+gesehen bis zu über 20° und es kommt
+zu Ungenauigkeiten bei der Vorhersage
+von oberen und unteren Konjunktionen
+bis zu fast einer Woche. All diese
+Fehler akkumulieren sich natürlich nicht
+über die Jahre hinweg.
+
+
+Getriebe: Die Verhältnisse der Planetengeschwindigkeiten sind im Modell
+konstant. Das Verhältnis der Geschwindigkeiten von Erde und Venus beträgt
+8:13 und das von Erde und Merkur
+20:83. Damit benötigt die Venus im
+Modell 224,77 Erdtage für einen Umlauf um die Sonne und in der Realität
+224,71 Erdtage. Beim Merkur sind es
+im Modell 88,01 Erdtage und in der
+Realität 87,97 Erdtage. Das bedeutet,
+dass die Verhältnisse der mittleren
+Geschwindigkeiten der Planeten so gut
+realisiert sind, dass in 50 Erdjahren
+hieraus nur ein Fehler von 3° bei der
+Venus und 2° beim Merkur resultiert.
+Wie die Getriebe mit Hilfe von Differentialen konzipiert wurden, ist in Ausgabe 3/2011 der ft:pedia beschrieben
+worden (Abb. 17).
+Getriebekopf: Der Getriebekopf ist in
+drei Zeiger konzentrisch um eine Achse
+zu bewegen und eignet sich daher auch
+sehr gut für Uhren mit Stunden-,
+Minuten- und Sekundenzeigern. Das
+obere Z40 besitzt überhaupt keine Nabe,
+
+wird von außen durch die vier Z20
+gelagert und durch eines davon angetrieben. Das untere Z40 besitzt eine
+Freilaufnabe. Seine Drehbewegung wird
+mit Hilfe der Drehscheibe, der Bauplatte und zweier Achsen 30 durch die
+obere Kombination von Z40 und Drehscheibe zu einer weiteren Bauplatte
+weitergeleitet.
+
+
+Astronomie
+
+adapter das Frühlings- und das Herbstäquinoktium sowie die Tage der Sommer- und Wintersonnenwende. Wegen
+der gleichmäßigen Verteilung der
+Markierungen auf dem Kranz im
+Gegensatz zu den ungleichen Monatslängen im Jahr entsteht eine Ungenauigkeit der Einstellung von ± 3
+Tagen.
+Motorisierung: Mit geringem Aufwand
+kann das Modell motorisiert werden
+(Abb. 20). Der Polwendeschalter wird
+unmittelbar am Jahreszähler angebracht
+und von den Noppen des Z40 geschaltet. So läuft das Planetarium einstellbare
+sieben Jahre immer wieder vor und
+zurück.
+
+Maßstäbe: Im Modell werden nur zwei
+Maßstäbe verwendet. Die Planetenbahnen und die Größe der Sonne sind
+im Maßstab 1 : 1,5•1012 (Abstand ErdeSonne im Modell 10 cm). Die Planeten
+selbst sind etwa im Maßstab 1 : 9•108.
+Also gegenüber dem ersten Maßstab
+etwa 1.700fach vergrößert.
+Datumseinstellung: Die Datumseinstellung funktioniert über den durch eine
+Schnecke angetriebenen Jahreszähler
+und die Positionierung der Erde über
+dem äußeren Datumskranz (Abb. 19).
+
+
+Die S-Riegel markieren dabei ungefähr
+die Monatsersten und die Streben-
+
+
+Sternbilder: Mit Hilfe des Planetariumprogramms Stellarium habe ich eine
+Merkatorprojektion des Sternenhimmels
+um die Ekliptik herum erstellt. Meine
+Tochter Jutta hat die Sterne mit Nadeln
+auf drei Bögen Tonpapier übertragen
+und die Sternbilder künstlerisch gestaltet. Die Helligkeit der Sterne wird durch
+die Dicke der aufgemalten weißen
+Punkte wiedergegeben. Der Maßstab
+der Projektion ist so gewählt, dass ein
+Tonpapierbogen genau an vier Flachträger mit Bogenstücken 30° angeschraubt werden kann. Immer zwei
+Tonpapierbögen können so je nach
+gewünschter Blickrichtung als Hintergrund verwendet werden.
+
+
+
+Venustransit 2012
+Am 6. Juni 2012 wird man bei klarem
+Himmel ein astronomisches JahrhundertEreignis beobachten können: Die Venus
+zieht morgens als kleiner dunkler Kreis vor
+der Sonnenscheibe her. Der nächste solche
+Venustransit wird danach erst wieder am
+11. Dezember 2117 zu beobachten sein.
+Um in die Sonne zu schauen, sollte man
+spezielle Schutzbrillen zur Sonnenbeobachtung benutzen, wie sie zum Beispiel
+1999 bei der Sonnenfinsternis eingesetzt
+wurden.
+Aber Achtung: Niemals sollte man ohne
+geeigneten Schutz die Sonne beobachten.
+Es besteht die Gefahr schwerer Augenschäden!
+
+Die letzten beiden Abbildungen zeigen die
+Konstellation von Sonne, Erde und Venus
+am 6. Juni 2012 mit dem Planetarium und
+eine Aufnahme des letzten Venustransits
+von 2004, die ich angefertigt habe, indem
+ich die Sonne durch einen Feldstecher auf
+einen Papierschirm projiziert habe.
+
+Nachbau
+Auf der ft-Convention 2011 und der
+Modellschau in Münster wurde ich verschiedene Male nach einer Bauanleitung
+gefragt. Falls jemand das Modell nachbauen möchte und diese Bilder und die der
+letzten Ausgabe nicht reichen, bitte ich um
+eine Nachricht. Bei entsprechendem
+Bedarf werde ich mehr Details bereitstellen.
+
+
+
+Literatur und Links
+
+aus dem Jahr 2004
+
+[1]
+
+Ludwig Meier: Der Himmel auf
+Erden. Die Welt der Planetarien.
+Johann Ambrosius Barth, Leipzig,
+Heidelberg, 1992.
+
+[2]
+
+Henry C. King: Geared to the Stars.
+The Evolution of Planetariums,
+Orreries, and Astronomical Clocks,
+University of Torronto Press,
+Torronto, Buffalo, 1978.
+
+[3]
+
+http://journal.hautehorlogerie.org/en/
+passion/auction/none-2252/
+
+[4]
+
+Michel Whiting: Orrery
+Developments: The Use of Meccano
+in Constructing Planetaria, Bulletin
+of the Scientific Instrument Society,
+94 (2004), 26-30.
+
+[5]
+
+http://kepler.nasa.gov/files/mws/
+LEGOorrery2011.pdf
+
+[6]
+
+http://acarol.woz.org/
+antikythera_mechanism.html
+
+Astronomie
+
+[7]
+
+http://astromedia.eu
+
+[8]
+
+Stellarium: Kostenlose
+Planetariumssoftware,
+http://www.stellarium.org
+
+[9]
+
+Mathematiker auf Briefmarken:
+http://www.wvolk.de/museum/stamps.html,
+http://jeff560.tripod.com/stamps.html
+
+
+

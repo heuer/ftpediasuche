@@ -1,0 +1,380 @@
+
+Elektronik
+
+Elektronik
+
+Silberlinge: Original oder Nachbau (Teil 7)
+Peter Krijnen
+Wie ich am Ende von Teil 6 erwähnt habe, werde ich mich in diesem Teil mit dem OR-NORund dem AND-NAND-Baustein befassen. Abschließend werde ich noch auf das Dynamische
+UND eingehen.
+
+Dyn.-AND
+
+Wie am Ende von Teil 6 erwähnt scheinen
+die Module OR-NOR und AND-NAND die
+gleiche Wirkung zu haben. Was hat es
+damit auf sich?
+
+OR-NOR
+
+Gehen wir davon aus, dass an den Eingängen nichts angeschlossen ist, dann wird
+beim OR-NOR (Abb. 187) die Basis des
+Transistors T3 über den 10 K-Widerstand
+R9A mit der Versorgungsspannung von 9 V
+verbunden. T3 ist dadurch leitend. Dadurch
+wird auch T2 leitend. Das Potenzial am
+Knotenpunkt von R2, R3, R10 und C2
+beträgt daher 0 V. Dies wiederum bewirkt,
+dass die Basis von T1 ebenfalls niedrig ist,
+T1 deshalb sperrt und das Licht aus ist. Am
+Ausgang ZNOR liegt also keine Spannung
+an, was in der negativen fischertechnikLogik „1“ bedeutet. Der Ausgang ZOR hat
+nun eine Spannung von ca. 8,5 V, was „0“
+bedeutet. ZOR – ZNOR: 0 – 1.
+
+Wenn wir uns zunächst die
+Schaltpläne beider Module
+ansehen (Abb. 187 und 188),
+sehen wir, dass die Schaltungen
+bis auf die vier Dioden und zwei
+Widerstände an den Eingängen
+gleich sind. Das war wohl der
+Grund dafür, dass beide Module
+die gleiche Platine haben. Der
+tatsächliche Betrieb der Module
+wird
+jedoch
+durch
+die
+Platzierung (Richtung) der
+Dioden und die Position der
+Widerstände auf der Leiterplatte
+bestimmt.
+
+
+
+
+Wenn wir nun den Eingang „A“ mit 9 V
+verbinden, sehen wir, dass nichts passiert.
+Erstens, weil die Basis von T3 bereits mit
+9 V verbunden ist, und zweitens, weil die
+Dioden in Sperrrichtung platziert sind.
+Wenn wir nun Eingang „A“ mit 0 V verbinden, sehen wir, dass die 9 V an der Basis
+von T3 weggezogen werden. T3 wird nun
+sperren, sodass auch T2 sperrt. Dadurch
+liegt der Knotenpunkt von R2, R3, R10 und
+C2 jetzt auf 9 V und T1 wird leitend,
+wodurch der ZOR-Ausgang 0 V anzeigt und
+die Lampe aufleuchtet. Der Ausgang ZNOR
+zeigt jetzt 9 V an.
+Wenn wir einen der anderen drei
+Eingänge mit 0 V verbinden, sehen
+wir, dass das den gleichen Effekt hat. Auch
+wenn wir zwei, drei oder alle vier Eingänge
+anschließen, bleibt die Wirkung gleich. ZOR
+– ZNOR: 1 – Ein unbeschalteter Eingang
+
+verhält sich so, als ob an ihm eine „0“
+anliegt.
+Eine vollständige Beschreibung des ORNOR findet ihr in „Experimente + Modelle
+hobby 4 Band 4“ [1] ab Seite 30.
+
+0.
+
+Analyzer: Zeitfolgediagramm des Messaufbaus
+
+Widerstand R9B ist nicht bestückt
+
+
+
+Elektronik
+
+Widerstand R9A ist nicht bestückt.
+
+
+AND-NAND
+Wenn wir uns nun den Schaltplan des ANDNAND (Abb. 188) ansehen, sehen wir, dass
+die vier Dioden vertauscht sind und statt
+R9A nun der 100 K-Widerstand R9B
+platziert ist.
+Beim OR-NOR lag die Basis von T3 auf
+9 V, beim AND-NAND liegt die Basis jetzt
+bei 0 V. Daher sperrt T3, so dass auch T2
+sperrt. Am Knotenpunkt von R2, R3, R10
+und C2 liegen 9 V an. T1 ist leitend, der
+ZAND-Ausgang zeigt 0 V und das Licht ist
+an. Am Ausgang liegt ZNAND bei 9 V. ZAND
+– ZNAND: 1 – 0.
+Wenn wir jetzt den Eingang „A“ mit 0 V
+verbinden, passiert nichts. Dies ist die
+gleiche, bereits beim OR-NOR beschriebene Situation. Da passiert nichts, wenn
+man einen Eingang mit 9 V verbindet.
+
+Beide Anschlüsse der Dioden haben dann
+den gleichen Spannungspegel.
+Wenn wir nun „A“ an die 9 V anschließen,
+sehen wir das Gleiche wie bei der
+Ausgangssituation beim OR-NOR: T3 und
+T2 leiten, T1 ist gesperrt und das Licht ist
+aus. Wie beim OR-NOR ist es egal, ob wir
+einen, zwei, drei oder alle vier Eingänge
+verbinden. ZAND – ZNAND: 0 – 1.
+Eine vollständige Beschreibung des ANDNAND findet ihr in „Experimente +
+Modelle hobby 4 Band 4“ [1] ab Seite 41.
+Um die AND-NAND-Verknüpfung zu
+erhalten, müssen wir im Gegensatz zur
+ODER-NOR-Verknüpfung zunächst alle
+Eingänge mit „+“ verbinden (entsprechend
+der logischen „0“) (Abb. 41.3 und 43.1 in
+[1]). Die Lampe ist dann aus. Dann müssen
+wir alle Eingänge mit „-“ (log. „1“) verbinden oder offen lassen, bevor das Licht
+
+
+wieder angeht. Der Vorteil ist, dass man,
+wenn man nur 2 oder 3 Signale kombinieren
+möchte, die anderen Eingänge einfach offen
+lassen kann. Ein unbeschalteter Eingang
+verhält sich so, als würde an ihm eine „1“
+anliegen.
+
+Um zu prüfen, ob beide Schaltungen richtig
+funktionieren, habe ich einen Testaufbau
+gemacht. Deren Aufbau ist in Abb. 185 zu
+sehen. Er besteht neben einem Gleichrichtermodul aus einem Grundbaustein, der
+als Taktgenerator geschaltet und mit einem
+auf einem Breadboard platzierten CD4024
+verschaltet ist. Der CD4024 ist ein TeilerIC mit sieben Ausgängen. Ich habe die vier
+untersten Ausgänge mit den Eingängen
+beider Module verbunden. Das Ergebnis
+des Tests ist in Abb. 186 zu sehen.
+
+
+Wie es in den Modulen aussieht, sehen wir
+in Abb. 190 bis 192 (OR-NOR) und den
+Bildern 194 bis 196 (AND-NAND). Wir
+sehen, dass die Platinen gleich sind. Am
+AND-NAND sind die Dioden jedoch
+vertauscht und wir können deutlich erkennen, dass der Widerstand R9B seine Position geändert hat. Ich habe auch eine Ersatzplatine für beide Module entworfen
+(Abb. 193 und 197).
+
+
+
+
+Elektronik
+
+
+
+für eine Ersatzplatine des OR/NOR
+
+
+
+
+Nachbau
+Wenn man ein Design für zwei Module
+erstellen möchten, die dieselbe Platine
+bekommen müssen, sollte man das in
+kürzerer Zeit tun können als für zwei verschiedene Platinen. Aber ich bin ein Perfektionist. Es dauerte also viel länger als es
+sollte. Aber das spielt keine Rolle – ich
+mache es gerne.
+Auf den Abb. 198 bis 201 sehen wir die
+Module in meinen 45×75-Gehäusen.
+
+
+für das 45×75-Gehäuse
+
+für eine Ersatzplatine des AND/NAND
+
+im 4575-Gehäuse
+
+
+
+Elektronik
+
+Die Abb. 202 bis 205 zeigen die Module in
+meinen 60×60-Gehäusen.
+
+für das 60×60-Gehäuse
+
+für das 45×75-Gehäuse
+im 60×60-Gehäuse
+
+für das 45×75-Gehäuse
+
+für in 60er Kassette (32076)
+
+
+
+
+für in 60er Kassette (32076)
+
+Auf den Abb. 206 bis 209 sieht man die
+Module im Batteriegehäuse 32263.
+
+im 30×60-Gehäuse
+
+für das Batteriegehäuse 32263
+für das Batteriegehäuse 32263
+
+
+
+Elektronik
+
+Dynamisches AND
+Das dynamische AND 36483 (Abb. 212)
+hat nur einen Zweck: eine definierte
+Impulslänge zu erzeugen. Wenn wir uns
+den Schaltplan in Abb. 215 ansehen, sehen
+wir, dass das Dynamische AND zwei
+gleiche Schaltungen hat. Die BP-Eingänge
+entsprechen den SP- und RP-Eingängen des
+Flip-Flops und dem SP-Eingang des MonoFlops. Die beiden AV-Eingänge sind gleich
+dem SV-Eingang des Mono-Flops.
+
+für das Batteriegehäuse 32263
+
+
+das OR/NOR und AND/NAND als Shield in
+SMD-Technik
+
+
+Layout des Shields
+
+
+
+
+
+
+Die Impulslängen bestimmenden Komponenten sind C1, R1, R2 und C2, R5, R6.
+
+Wenn wir BP mit „+“ verbinden, solange
+der AV-Eingang nicht verbunden ist, wird
+C1 über R1 und R2 geladen. Auf dem
+
+
+Oszilloskop (Abb. 217) sehen wir auf Kanal
+1 (gelb) ein Rechtecksignal von 88 Hz (A1
+aus einem Grundbaustein) und auf Kanal 2
+(blau) den Pegelverlauf am Knotenpunkt
+von C1, R1 und D1. Während sich der
+Kondensator auflädt, sehen wir den Pegelabfall. Dies liegt daran, dass der Pegel auf
+beiden Seiten des Kondensators gleich wird
+und der Ladevorgang langsamer wird. Wird
+dann BP mit „-“ verbunden, entlädt sich C1
+wieder über R1 und R2. Beim Entladen
+sehen wir, dass der Spannungspegel nun
+plötzlich negativ geworden ist. Das hat
+damit zu tun, dass die Polarität vertauscht
+ist.
+
+Elektronik
+
+
+Beim Laden liegt BP auf hohem und der
+Knotenpunkt auf niedrigem Potenzial, beim
+Entladen liegt BP auf niedrigem und der
+Knotenpunkt auf hohem Potenzial.
+
+
+Auf Kanal 3 (lila) ist den Verlauf des Ausgangs „Z“ zu verfolgen. Allerdings sehen
+wir hier nur den negativen Teil. Da die
+Diode D1 in Sperrrichtung geschaltet ist,
+lässt sie nur den negativen Teil passieren.
+
+
+
+
+
+Nachbau
+Zuerst sah ich keinen Sinn darin, auch das
+dynamische AND zu bauen. Ich habe selbst
+eines, habe es aber nie benutzt. Aber wie
+gesagt, ich mache das sehr gerne. Allerdings habe ich auf eine Shield-Version verzichtet.
+
+
+In Abb. 218 sehen wir dasselbe wie in
+der Eingang AV mit „-“ verbunden ist.
+Dadurch wird der Widerstand R2 überbrückt und die Lade-/Entladezeit dadurch
+kürzer.
+zeigen. Dass dies nicht der Fall ist, hat
+damit zu tun, dass ich für diese Messung die
+Frequenz der Rechteckwelle auf 413 Hz
+erhöht habe. Wir sehen, dass der Kondensator nicht mehr vollständig geladen wird.
+Die Impulsbreite der Rechteckwelle ist
+kürzer als die Ladezeit des Kondensators.
+
+Am Ende ist eine universelle Platine herausgekommen. Außerdem konnte ich den
+Verstärker-Baustein VB, den TransistorPotentiometer-Baustein TP und den
+Potentiometer-Baustein PB auf derselben
+Platine unterbringen. Jedes dieser Module
+hat nur wenige Komponenten, aber dazu
+mehr in Teil 8 dieser Artikelreihe.
+Auf den Abb. 221 bis 223 sehen wir die
+Module für meine 45×75-Gehäuse.
+
+Was nun passiert, wenn wir AV wieder mit
+„-“ verbinden, zeigt Abb. 220. Durch das
+erneute Überbrücken von R2 ist die Lade-/
+Entladezeit so kurz geworden, dass der
+Kondensator wieder voll aufgeladen wird.
+AV mit „+“ verbunden, ergibt keine Änderung, denn C1 wird dann auf beiden Seiten
+auf „+“-Pegel liegen. Sowohl Laden als
+auch Entladen sind daher nicht möglich.
+Was mir aufgefallen ist, ist, dass die Form
+der Rechteckwelle etwas beeinflusst wird,
+wenn R2 überbrückt wird. Die beiden
+Widerstände R1 und R2 zusammen ergeben
+22 + 5,6 = 27,6 kΩ. 5,6 kΩ ist also eine zu
+große Belastung für einen Ausgang des
+Grundbausteins.
+Eine vollständige Beschreibung des Dynamischen UND findet sich in „Experimente
++ Modelle hobby 4 Band 4“ [1] ab Seite 78
+und hobby 4 Band 5 [2] ab Seite 50.
+
+für das 45×75-Gehäuse
+
+
+Elektronik
+
+Die Abb. 224 bis 226 zeigen die Module für
+die 60×60-Gehäuse.
+
+für das 45×75-Gehäuse
+
+für das 45×75-Gehäuse
+
+für das 60×60-Gehäuse
+
+für das 60×60-Gehäuse
+
+
+
+
+für 60er Kassette (32076)
+
+Auf den Abb. 227 bis 229 sehen wir die
+Module im Batteriegehäuse 32263.
+im 30×60-Gehäuse
+
+für das Batteriegehäuse 32263
+
+für Batteriegehäuse 32263
+
+So viel zu den Gatter-Modulen. In Teil 8
+geht es weiter mit den Modulen aus den ut4und hobbylabor-Kästen.
+
+Quellen
+
+
+[1]
+
+fischertechnik: Experimente +
+Modelle hobby 4 Band 4. Auf
+docs.fischertechnikclub.nl.
+
+[2]
+
+fischertechnik: Experimente +
+Modelle hobby 4 Band 5. Auf
+docs.fischertechnikclub.nl.
+
+

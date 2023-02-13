@@ -1,0 +1,368 @@
+
+
+Mechanik
+
+Kardanische Gelenkwelle
+Stefanie Busch
+Wir Mädels wollten im Jahr 2014 nicht mehr nur als „Anhängsel“ unserer Jungs auf die
+ft-Convention nach Erbes-Büdesheim. Unsere Idee, ein Walzwerk zu bauen, haben wir dann
+mit viel Spaß und großem Lerneffekt umgesetzt. Der Knackpunkt waren die Antriebe der
+Anlage. In Walzwerken sind viele große und kleine Gelenkwellen in verschiedenen Anwendungen verbaut. Leider eignen sich die einfachen aus Standard-ft-Gelenkwellen-Teilen
+gebauten Wellen nicht für alle Antriebe. In diesem Artikel wird der Aufbau und Einsatz von
+Gelenkwellen in industriellen Anwendungen beschrieben und Anregungen gegeben, wie man
+diese mit fischertechnik bauen kann.
+Im Jahr 1501 wird in Pavia (Italien)
+Gerolamo Cardano geboren. Er gilt als
+einer der großen Universalgelehrten der
+Renaissance. Im Laufe seines Lebens hat er
+sich mit vielen Wissensbereichen wie z. B.
+Medizin, Mathematik, Philosophie, vergleichende Religionsgesellschaften, Physik,
+Chemie, Ingenieurs-Wissenschaften, Pharmazie und Architektur beschäftigt.
+Bereits zu Lebzeiten war er international
+sehr anerkannt, vor allem wegen seiner
+medizinischen Erfolge. Heute ist er vor
+allem durch das Kardangelenk bzw. die
+Kardangelenkwelle und durch die kardanische Aufhängung bekannt [1].
+
+Warum wird die Gelenkwelle auch
+Kardanwelle genannt?
+Gerolamo Cardano hat um das Jahr 1548 für
+eine Kutsche von Kaiser Karl V. eine
+Gelenkwelle entworfen. Deshalb wird die
+Gelenkwelle auch Kardanwelle genannt [2].
+Wozu braucht man Gelenkwellen?
+Gelenkwellen werden zur Übertragung des
+Drehmoments überall eingesetzt, wo Antriebs- und Abtriebswelle nicht in einer
+Flucht angeordnet werden können und das
+zu übertragende Drehmoment so groß ist,
+dass eine biegsame Welle nicht mehr
+ausreicht.
+
+Antriebs- und Abtriebswelle
+Abb 1: Gerolamo Cardano (1501-1576)
+
+
+Die Gründe für den Aufbau eines Antriebs
+mit nicht fluchtenden Antriebs- und Abtriebswellen können z. B. Platzprobleme
+
+
+Flanschdurchmesser
+
+Ein anderer Grund kann die Umgebungsbedingung in der Anlage sein. So ist es z. B.
+in dem Teil der Papiermaschine, in dem das
+Papier getrocknet wird, so heiß und feucht,
+dass Elektromotoren nicht betrieben werden
+können. Die Antriebe werden in einigen
+Metern Entfernung montiert, oft hinter einer
+Wand, und das Drehmoment wird mittels
+einer Gelenkwelle zur Abtriebswelle übertragen. Eine genaue Ausrichtung von Motor
+und Trockenzylinder wäre sehr aufwändig,
+in vielen Fällen technisch auch nicht
+möglich. Die Gelenkwelle ist die optimale
+Lösung.
+
+Rotationsdurchmesser
+
+innerhalb der Anlage sein. Zwei Abtriebswellen lassen sich nur so anordnen, dass
+kein Platz mehr für beide Antriebsmotoren
+in der richtigen Lage ist.
+
+Mechanik
+
+
+Die kleinsten Gelenkwellen für Industrieanwendungen gibt es ab einem Rotationsdurchmesser von ca. 1 cm und einer Länge
+von 16 cm (Standard-) Länge (zusammengeschoben). Sie wiegt ca. 200 g und kann
+6 Nm übertragen [3].
+
+Wo werden Gelenkwellen eingesetzt?
+Gelenkwellen werden hauptsächlich im
+Automotive-Bereich (z. B. Autos, Nutzfahrzeuge, Traktoren oder Baumaschinen)
+und im Industriebereich (Bergbau, Walzwerke, Papiermaschinen, Bahnantriebe, in
+Prüfständen, für Pumpantriebe oder im
+Schiffs- und Kranbau) eingesetzt. Sonderanwendungen sind z. B. Seilbahnen oder
+Fahrgeschäfte auf Rummelplätzen.
+Wie groß sind Gelenkwellen?
+Wie groß eine Gelenkwelle sein muss,
+hängt im Wesentlichen vom zu übertragenden Drehmoment ab. Wie groß das
+maximal von der Welle übertragene Drehmoment ist, wird durch die Größe des
+Gelenks bestimmt. Deshalb wird für die
+Angabe der Gelenkwellengrößen der Rotationsdurchmesser
+(Durchmesser
+des
+Gelenks) angegeben. Die Anschlussflansche am Gelenk können deutlich größer
+sein.
+
+einem 30er Baustein
+
+Sehr große Gelenkwellen haben einen Rotationsdurchmesser von 1.460 mm, eine
+Länge von mehreren Metern und können
+Drehmomente bis zu 20.000 kNm übertragen. Ein einzelnes Gelenk hat ungefähr
+die Dimension eines kleinen Kleinwagens
+und wiegt bis zu 20 t.
+Dazwischen gibt es je nach Hersteller verschiedene Abstufungen in den Baugrößen.
+In Sonderfällen (z. B. bei Platzknappheit an
+der Antriebsachse) werden auch Gelenkwellen mit zwei unterschiedlich großen
+Gelenken gebaut. Das größere Gelenk wird
+dann nur wenig belastet, das kleinere muss
+als Verschleißteil bei z. T. wesentlich geringerer Lebensdauer öfter getauscht werden.
+Wie ist eine Gelenkwelle aufgebaut?
+Eine Gelenkwelle besteht aus zwei kardanischen Gelenken und einem Mittelteil.
+
+
+
+
+Die Gelenke
+Die Gelenke bestehen im Wesentlichen aus
+einem Zapfenkreuz und zwei Gabeln (bei
+fischertechnik: Getriebeklauen). Bei industriell genutzten Wellen werden je nach Ausführung und Konstruktion weitere Teile wie
+z. B. Wälzlager, Abschmiereinrichtungen
+oder Sicherungsringe und Scheiben verbaut.
+Eine Besonderheit bei den Schmiernippeln:
+Standardmäßig werden Gelenke zentral,
+also an einem Punkt in der Mitte des
+Zapfenkreuzes abgeschmiert. In Abb. 5 sitzt
+dieser zentrale Schmiernippel unter dem
+roten Käppchen in der Bildmitte (blauer
+Pfeil).
+
+Revolutions und ft-Standard-Würfel (jeweils
+mit zugehörigen Gabeln bzw. Getriebeklauen)
+
+Die kürzeste Möglichkeit eine Gelenkwelle
+zu bauen, ist zwei Gelenke zu kombinieren.
+
+Das Mittelteil
+Über die Mittelteile wird die Länge bzw.
+der Längenbereich der Gelenkwelle bestimmt.
+
+Abb 5: Schmierstellen einer Kardanwelle
+
+In einigen Anwendungen ist jedoch eine
+Abschmiereinrichtung auch außen an den
+Enden des Zapfenkreuzes vorgesehen – im
+Bild an den roten Pfeilen. Diese Schmiernippel müssen genauso wie der Schmiernippel des Längenausgleichs – grüner Pfeil
+– besonders dicht sein. Wenn sich die Welle
+dreht, wirkt die Zentrifugalkraft. Werden
+keine Sonderschmiernippel verwendet, die
+ganz dicht schließen, spritzt das Fett durch
+die Anlage und die Lager des Gelenks
+laufen trocken.
+Zapfenkreuze sind in den „Standard-“ Kardangelenken bei fischertechnik als Würfel
+ausgeführt. Im Kasten Technical Revolutions wird ein Zapfenkreuz gebaut, das
+dem der Industrieanwendung eher entspricht und auf seinen Namen schließen
+lässt.
+
+
+Flanschen zum Anschrauben der Gelenke
+
+Die baulich einfachste Variante ist die Kardanwelle mit festem Mittelteil. Sie entspricht der „Standard“-ft-Gelenkwelle bestehend aus zwei Gelenken, die mit einer
+Achse verbunden sind.
+Für die Verbindung der Gelenke gibt es bei
+fischertechnik zwei Standardlösungen: die
+Achse wird geklemmt oder gesteckt.
+Bei Gelenkwellen für Industrieanwendungen werden die Gelenke entweder über
+Flanschverbindungen angeschraubt oder sie
+sind mit dem Mittelteil fest verschweißt.
+
+
+Mechanik
+
+Klemm- und Rastachse
+
+Die feste Länge der Gelenkwelle setzt
+voraus, dass die Position von Antriebs- und
+Abtriebswelle nicht veränderbar sind und
+an einer anderen Stelle ein Ausgleich
+vorhanden ist, um die Welle ein- und
+auszubauen. Anwendungen können z. B.
+Walzwerke mit festem Walzenabstand sein.
+Bei den ft-Gelenkwellen mit Spannzange
+besteht dieser Längenausgleich darin, dass
+man die Achsen innerhalb des Anschlussteils bei der Montage verschieben kann.
+Die häufigste Variante in Industrieanwendungen ist das Mittelteil mit Längenausgleich.
+
+verstellbarem Spaltmaß
+
+Eine Gelenkwelle mit variabler Länge lässt
+sich in der Anlage einfacher ein- und
+ausbauen.
+Das Mittelteil der Industriewellen mit Längenausgleich besteht aus einem profilierten
+Zapfen und zugehöriger Hülse. Zur Übertragung des Drehmoments ist eine Verzahnung des Zapfens und der Hülse nötig. Die
+Verbindung muss zentrierend sein. Gängige
+Profile sind SAE- oder Evolventen-Verzahnungen. Welches Profil für welche Anwendung bei welcher Welle verwendet wird ist
+das Knowhow des Herstellers.
+
+Möglicher Auszug
+
+Kürzeste Länge
+
+Bei einem Mittelteil mit Längenausgleich
+sind die Lage von Antriebs- und Abtriebswelle veränderbar. Diese Wellen werden
+z. B. für den Antrieb von Walzenpaaren mit
+einstellbarem Spaltmaß verwendet.
+
+gezogenem Längenausgleich
+
+Die Länge dieser Wellen ist auch im Betrieb
+änderbar. Ein Nachteil ist der große Widerstand beim Verschieben des Mittelteils.
+Diese Reibungen können durch mäßiges
+Schmieren oder eine Beschichtung der
+Laufflächen minimiert werden.
+
+
+
+Je größer der Verzahnungsdurchmesser im
+Verschiebeteil ist, desto geringer werden
+(bei gleichem Drehmoment) die Verzahnungskräfte. Damit werden auch die Reibkräfte beim Verschieben entsprechend
+niedriger.
+Wie weit Zapfen und Hülse im Betrieb
+überlappen müssen ist in den Einbauvorschriften des Herstellers nachzulesen.
+Für Anwendungen bei denen der Längenausgleich in der Gelenkwelle sehr leicht
+laufen muss oder sich die Länge der
+Gelenkwelle im Betrieb permanent ändert,
+gibt es von wenigen Herstellern Sonderkonstruktionen. Ein Beispiel ist die Aufrollung bei Papiermaschinen. Hier wird ein
+wälzgelagertes Schiebeteil verwendet
+(Tripodewelle).
+
+viele andere tolle und
+Lösungsmöglichkeiten.
+
+ausgeklügelte
+
+Ich habe an dieser Stelle das Rad nicht neu
+erfunden, sondern greife auf Tipps von
+anderen ft-Konstrukteuren zurück. Den Urheber habe ich jeweils nach bestem Wissen
+und Gewissen genannt.
+Für die beschriebenen Modelle wurde immer die gleiche Kardanwelle mit veränderbarer Länge verwendet.
+
+Längenausgleich
+
+Als Gelenke sind rote kardanische Lager
+verbaut. Gefunden habe ich dieses Bauteil
+in der ft:pedia 3/2012, Seite 16 – dem
+Beitrag „Perlentauchen (Teil 1)“. Vielen
+Dank an Stefan Falk [4].
+Diese Gelenksteine haben den Vorteil, dass
+sie direkt auf einen 30er Baustein passen.
+Mit Hilfe eines BS 7,5 und einer Achsverschraubung kommt man wieder auf eine
+Achse um einen Antrieb oder Abtrieb anzubauen.
+
+deren Länge im Betrieb verändert wird
+
+Möglichkeiten mit fischertechnik
+Dieser Teil des Artikels erhebt keinen
+Anspruch auf Vollständigkeit. Es sollen
+hier Anregungen geben werden, wie Gelenkwellen mit fischertechnik gebaut
+werden können. Zweifelsfrei gibt es noch
+
+
+Mein Mittelteil habe ich aus zwei Achsen,
+zwei 30er-Bausteinen und 10 cm Schnur
+gebaut. Beide Achsen wurden mit Hilfe der
+Schnur in einen der Bausteine geklemmt.
+Damit die beiden Achsen später im zweiten
+Grundbaustein sauber laufen, muss auf die
+Lage der Schnur – eine rechts und eine links
+– geachtet werden.
+
+
+Mechanik
+
+Achsen und einer – hier grünen – Hülse
+
+Von Mirose stammt die Grundidee, den
+Auszug aus einem Vierkant-Material und
+einem passenden Vierkant-Hohlmaterial –
+als Hülse in Abb. 17 grün – zu bauen.
+beim Klemmen der Achsen
+
+4 mm Rundmaterial
+
+4-Kant-Material
+
+4-Kant-Material
+
+4 mm Rundmaterial
+
+mit Vierkant-Material
+
+Für meine Modelle war die Größe der Welle
+genau richtig und für das zu übertragende
+Drehmoment ausreichend. Um größere
+Gelenkwellen-Modelle zu bauen, gibt es
+mit Sicherheit noch viele weitere Möglichkeiten. So kann man auch aus den in Bild 5
+gezeigten Gelenkteilen aus dem Kasten
+Technical Revolutions eine Gelenkwelle
+bauen.
+
+Ein Beispiel einer solchen Welle habe ich
+nicht gefunden und ich habe auch (noch)
+nicht versucht, ein solches Mittelteil zu
+bauen. Mal schauen ob ich eine Möglichkeit
+finde, die Teile zu bearbeiten.
+
+Größere Gelenkwellen passen aber in der
+Regel nicht mehr in ft-Modelle. Deshalb
+gehe ich an dieser Stelle nicht weiter darauf
+ein, wie man noch größere Gelenkwellen –
+egal ob mit oder ohne Längenausgleich –
+bauen kann.
+
+Die Möglichkeiten mit fischertechnik sind
+im Allgemeinen sehr vielfältig und man
+findet fast immer eine Lösung für sein
+Bauproblem. Das stöbern im Forum und
+Bilderpool der ft-community und der
+bisherigen Artikel in den ft-pedias sind
+dabei sehr hilfreich.
+
+Für Gelenkwellen mit Längenauszug und
+kleinerer Bauweise bleibt wohl nur: Teile
+„modden“ oder Fremdteile verwenden.
+Im Bilderpool gibt es dazu ein Beispiel von
+Harald Steinhaus.
+
+Fazit
+
+Leider sind die Möglichkeiten, Gelenkwellen bzw. Mittelteile mit Längenauszug zu
+bauen, eher gering. Wem die Gelenkwelle
+aus Abb. 13 zu groß ist, dem bleibt nur die
+Möglichkeit, Teile zu „modden“ oder
+Fremdteile zu verwenden.
+
+Quellen
+
+von Harald Steinhaus
+
+Bei diesem Prinzip werden zwei Achsen
+angeschäftet, gegeneinander gelegt und mit
+einer Hülse gesichert.
+
+[1]
+
+Wikipedia: Gerolamo Cardano
+
+[2]
+
+Lebenslauf Gerolamo Cardano
+
+[3]
+
+Elso-Elbe: Technische Daten der
+kleinen Gelenkwelle.
+
+[4]
+
+Stefan Falk: Perlentauchen (Teil 1).
+ft:pedia 3/2012, S. 11-18.
+
+[5]
+
+Voith Turbo GmbH & Co. KG,
+Heidenheim
+
+Abb. 18: Hochleistungs-Gelenkwelle © Voith Turbo GmbH & Co. KG [5]
+
+
+
+

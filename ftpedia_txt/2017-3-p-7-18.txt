@@ -1,0 +1,649 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Fotografieren von Modellen (2): Die Technik
+Paul Bataille
+Ein Bild sagt mehr als tausend Worte: Hast du je versucht, eine komplizierte mechanische
+Konstruktion, die du mit fischertechnik gebaut hast, zu beschreiben? Dann weißt du, was ich
+meine… Fotografieren ist Schreiben mit Licht. Dabei ist das Licht das Wichtigste; vor allem
+darauf muss man achten. Da es kaum noch schlechte Kameras gibt, kann man mit wenigen
+Kenntnissen über die Eigenschaften des Lichts, von Objektiven, der Kamera-Technik und der
+Nachbearbeitung ohne viel Aufwand und ohne Profi-Apparat gute Ergebnisse erzielen, die
+einen starken Eindruck hinterlassen.
+
+Setting und Hintergrund
+Keine Ablenkung
+Wo fotografiert man und in welcher Umgebung? Um die Aufmerksamkeit der Betrachter auf das Modell zu richten, kann
+man versuchen, nichts anderes ins Bild zu
+bekommen als allein das Modell. In der
+ft:pedia 1/2016 [1] hat Thomas Püttmann
+gezeigt, dass das sehr einfach mit einer
+Rolle weißen Papiers als Hintergrund gelingt.
+
+Für kleinere Modelle reicht schon ein
+einziges Blatt Papier von etwa 50 x 80 cm
+Größe. Wenn man keine Horizontlinie im
+Bild will, stellt man das Blatt gebogen
+gegen die Wand oder eine Rückenlehne.
+Wenn nötig verhindert man mit einem
+Stückchen Klebeband, dass es abrutscht
+(Abb. 1).
+Übrigens ist eine Horizontlinie zwischen
+Blatt und Wand nicht wirklich ein Problem,
+vor allem, wenn die Wand ebenfalls weiß
+ist.
+
+die Wand ist nicht ganz weiß
+
+
+Natürlich kann man auch andere neutrale
+Hintergründe nutzen. Eine Couch aus weißem Leder ist prima, auch ein Tisch mit
+einer Tischdecke oder einer hellen Tischplatte, bevorzugt vor einer weißen Wand, ist
+hervorragend. Oder man verwendet ein
+ausgemustertes Bettlaken oder etwas
+Ähnliches.
+
+
+
+Wer es richtig spannend machen will, kann
+das Modell in einer passenden Umgebung
+zeigen. Das heißt zum Beispiel: Ein Bulldozer im Sand, ein Kran oder ein Lastwagen
+auf einem simulierten Bauplatz, wie auf
+einigen Verpackungen von fischertechnik.
+
+Hintergrund
+
+Das fordert einen schon ein wenig. Wenn
+man den Aufwand treiben will, sollte man
+dafür sorgen, dass die Illusion nicht gestört
+wird, zum Beispiel durch etwas Irrelevantes
+im Bild (Abb. 3).
+
+ich immer einen Hocker oder eine Klappleiter zur Hand.
+Große Modelle
+Große Modelle könnten eine Herausforderung sein. Nicht jeder hat zu Hause ein
+Hintergrund-Gestell mit einer breiten Rolle
+weißen Papiers. Also macht man, was man
+kann. Meine Kräne habe ich zum Beispiel
+im Wohnzimmer fotografiert, vor einer
+weißen Wand. Ich habe sogar eines meiner
+Studio-Blitzgeräte dorthin mitgenommen.
+Natürlich kommt dann auch der Fußboden
+ins Bild – der ist bei uns glücklicherweise
+ziemlich neutral.
+Wenn möglich sollte etwas Raum zwischen
+Modell und Hintergrund liegen – einige
+Meter sind super. Bei uns gibt es den Raum
+im Wohnzimmer leider nicht, daher sieht
+man den Schatten des Krans auf der Wand
+(Abb. 5).
+
+Platzierung
+Es ist bequemer, wenn das Modell nicht auf
+dem Boden steht, sondern z. B. auf einem
+Tisch. So kann man einfacher Bilder erstellen, die direkt von vorn oder sogar ein
+wenig von unten aufgenommen sind. Damit
+kann man gewisse Details besser zeigen
+oder spannende Perspektiven erfinden.
+
+
+Manchmal sehen insbesondere isolierte
+Bauteile von oben besser aus. Daher habe
+
+
+Auch im Garten geht es. Dafür sollte man
+versuchen, einen mehr oder weniger ebenen
+Hintergrund zu finden, zum Beispiel etwas
+
+
+Tipps & Tricks
+
+ganz grünes wie eine Hecke oder einen hell
+gestrichenen Zaun. Wenn das nicht geht
+sollte man versuchen, den Hintergrund
+möglichst unscharf zu bekommen. Dafür
+benötigt man vor allem wieder viel Abstand
+zwischen Modell und Hintergrund.
+
+
+bzw. Wiese als einheitlicher Hintergrund
+
+Die schönsten Ergebnisse erhält man bei
+bedecktem Himmel oder im Schatten. Weil
+man das Gesamtbild eines großen Modells
+immer aus einem größeren Abstand erstellen muss, ist die Schärfentiefe des Modells
+selbst meistens kein Problem (später mehr
+zu den technischen Details).
+
+Kamera, Objektiv, Brennweite
+und Zoom
+Tele und Makro
+In der Regel sehen Modelle bei einer Brennweite ab etwa 70 mm im 35-MillimeterÄquivalent, dem Maßstab von Film- und
+Full-Frame-Digitalkameras, ganz natürlich
+aus. Ein Weitwinkel-Objektiv benötigt man
+nur, wenn man spezielle Effekte erzielen
+will.
+
+Mit meiner Digital Single Lens Reflex
+(DSLR) Kamera verwende ich meistens
+eine Brennweite von etwa 135 mm im 35Millimeter-Äquivalent, das entspricht in
+meinem Fall, einer Nikon DX mit kleinerem Sensor, 85 mm. Für Detailaufnahmen
+muss man näher an das Modell herangehen;
+dafür verwende ich ein fantastisches 105mm-Makro-Objektiv oder auch ein 24-85mm-Zoom-Objektiv, das das kann. Und
+weil ich beim Fotografieren des ganzen
+Modells in meinem Zimmer nicht immer
+weit genug entfernt stehen kann, um das
+Modell bei einer festen Brennweite von
+105 mm ganz ins Bild zu bekommen,
+verwende ich normalerweise das ZoomObjektiv. Damit zoome ich dann immer
+maximal heran, so nahe an 85 mm wie
+möglich.
+Die Lichtstärke ist nicht besonders relevant.
+Man sollte mit möglichst kleiner Blende
+(also einer großen Blendenzahl) arbeiten,
+damit die Schärfentiefe ausreicht (siehe
+unten).
+Kompaktkamera
+Mit einer Kompaktkamera sollte man lieber
+ein wenig heranzoomen. Wenn man näher
+an das Objekt heran muss, verwendet man
+die Makro-Option. Dabei muss man aufpassen, dass man nicht so nah an das Modell
+heran geht, dass die Kamera nicht mehr
+fokussieren kann.
+
+
+
+
+Muss man nicht nahe an das Modell heran,
+dann liefert die automatische Einstellung
+ohne Blitz meistens gute Ergebnisse. Falls
+die Bilder zu hell oder zu dunkel ausfallen,
+kann man eine Belichtungskompensation
+vornehmen. Meistens hat die Kamera dafür
+eine +/--Taste, oder die Einstellung erfolgt
+im Menu.
+Macht man eine ganze Fotoserie mit gleich
+bleibenden Lichtverhältnissen, dann kann
+man auch die manuelle Einstellung wählen,
+ausprobieren, und wenn das Ergebnis gut
+ist, muss man danach nichts mehr ändern.
+Eine gute Idee, die auch Thomas Püttmann
+in seinem Beitrag vorgeschlagen hat [1].
+
+Licht
+In der Kunstfotografie werden manchmal
+Bilder mit hellem Licht und dunklen Schatten erstellt. Das gibt Kontrast, und damit
+Drama. Bei der Fotografie von fischertechnik-Modellen will man hingegen vor allem
+Deutlichkeit. Deutliche Bilder, freundlich
+für die Augen, mit wenig Schatten. Das
+heißt eigentlich immer, dass gefiltertes oder
+indirektes Licht verwendet werden sollte.
+
+
+Außen
+Aber indirektes Sonnenlicht ist ausgezeichnet. Dafür gibt es die folgenden Möglichkeiten:
+∂ Wenn die Sonne scheint, sollte man im
+Schatten fotografieren und dabei darauf
+achten, aus welcher Richtung das reflektierte Licht vor allem kommt – und das
+Modell günstig platzieren (Abb. 9).
+
+Das braucht nicht kompliziert zu sein. Fast
+jede Lampe im Haus hat schon die eine oder
+andere Art von Reflektor um sich herum;
+nackte Birnen gibt es kaum.
+Tageslicht
+Wie Thomas schon schrieb: Die Sonne ist
+eine gute Lichtquelle. Aber direktes Sonnenlicht ist es meistens nicht, weil es harte,
+dunkle Schatten verursacht. Insbesondere,
+wenn man schwarze Bausteine verwendet
+hat, aber nicht nur dann, sieht man in den
+dunklen Bereichen nicht, was man sehen
+soll. Auch wird durch den Schatten der
+Kontrastbereich der Bilder zu stark erhöht.
+Man muss mit geringer Belichtung arbeiten,
+damit die helleren Bereiche nicht überbelichtet werden; aber tut man das, dann
+werden die dunklen Bereiche schnell zu
+dunkel (Abb. 8).
+
+
+
+∂ Fotografieren bei bedecktem Himmel ist
+sogar noch besser: Man erhält sanftes,
+gefiltertes Licht mit nur wenigen,
+schwachen Schatten in einer Richtung.
+Das ist perfekt, ideal, sieht fast immer sehr
+gut aus (übrigens auch bei Porträts). Leider
+hat man das Wetter nicht selbst in der Hand.
+∂ Das Sonnenlicht selbst mit einem halbdurchlässigen Schirm filtern (wie bei der
+Model-Fotografie).
+Vielleicht hast du eine Terrasse mit einem
+Dach aus Milchglas oder etwas Ähnlichem?
+
+Das kann helfen. Wenn nicht, kann das aber
+schnell zu kompliziert werden.
+∂ „Einblitzen“, das heißt, den Blitz verwenden, um dunkle Schatten zu kompensieren (Abb. 10).
+
+Tipps & Tricks
+
+Obwohl diese Option sehr bequem ist, ist
+manchmal innen nicht genug Licht vorhanden, um Bilder mit ausreichender Schärfentiefe zu erhalten. Aber es gibt einfache
+Lösungen dafür. Behandeln wir das erstmal,
+bevor wir zum Kunstlicht übergehen.
+Schärfentiefe mit kleiner Blende
+
+
+Das hilft schon, ist aber (noch) nicht ideal.
+Innen
+Vielleicht am zuverlässigsten ist es, innen
+zu fotografieren, an einer Stelle, an der viel
+indirektes Sonnenlicht einfällt, z. B. nahe
+einem großen Fenster, durch das die Sonne
+gerade nicht direkt hereinscheint (Abb. 11).
+
+Man wünscht sich, dass das Bild eines
+Modells von vorne bis hinten scharf ist. Wie
+Thomas [1] schon erklärt hat, haben Kompaktkameras und Smartphones einen kleinen Sensor. Das Gute daran ist, dass die
+Schärfentiefe immer groß ist. Das heißt,
+dass das Bild eines Modells gewöhnlich
+über die gesamte Tiefe des Objekts scharf
+abgebildet wird.
+Je teurer die Kamera, desto größer der Sensor – und desto geringer die Schärfentiefe.
+Das mag merkwürdig erscheinen, aber das
+ist es nicht. Wenn man von einem mit einem
+großen Sensor geschossenen Bild nur ein
+kleines Mittelteil (das einem kleineren Sensor entspricht) ausschneiden würde, erhielte
+man auch ein Bild mit großer Schärfentiefe.
+Ich selbst verwende für fischertechnik meistens meine DX-DSLR mit einer SensorOberfläche von etwa 45% des Full Frame.
+Die Schärfentiefe wird auch in dem Maße
+reduziert, in dem man
+∂ eine größere Brennweite verwendet oder
+∂ das Objekt aus der Nähe fotografiert.
+
+Papierbogen als Reflektionsschirm
+
+Das ist auch der Grund, warum ein Fotostudio immer große Fenster an der Nordseite haben sollte, wenn nicht geblitzt wird.
+Falls Boden und Hintergrund um das
+Modell auch noch weiß sind, bekommt man
+zusätzliche Reflektionen, die mehr Licht
+liefern und die Schatten, die noch da sind,
+zusätzlich aufhellen.
+
+Wie schon gesagt sieht ein mit ein bisschen
+Tele-Brennweite fotografiertes Modell
+meistens besser aus. Für Detailaufnahmen
+müssen wir nahe an das Modell heran.
+Dabei kommt die Schärfentiefe doppelt ins
+Gedränge – und es kann leicht zu eng
+werden (Abb. 12).
+
+
+
+In diesen Fall muss man beachten, dass die
+Bilder unscharf werden können, wenn die
+Kamera während der Belichtung bewegt
+wird. Daher sollte man ein Stativ verwenden. Damit arbeitet man langsamer, weil es
+mehr Zeit kostet, für jedes Bild die Perspektive zu ändern.
+∂ die Lichtsensitivität (ISO) des Sensors
+erhöhen
+Obwohl ein geringer ISO-Wert zu bevorzugen ist, liefern moderne Kameras sogar bei
+ISO-Werten von 1600 bis 3200 noch gut
+verwendbare Bilder, obwohl sie schon
+etwas Rauschen zeigen (Abb. 13).
+
+
+Bildausschnitt (Mitte) und Blende F13 (unten)
+
+Um die Schärfentiefe zu erweitern, verwendet man im Objektiv eine kleinere
+Blende, also einen größeren F-Wert (Blendenzahl). Das Licht kann dann aus weniger
+Richtungen auf den Sensor fallen und das
+Bild wird über einen größeren Bereich
+scharf. Aber mit einer kleineren Blende
+gelangt weniger Licht bis zum Sensor. Also
+müssen wir auf irgendeine Weise mehr
+Licht auf den Sensor fallen lassen. Das
+können wir auf drei Arten erreichen:
+∂ eine zusätzliche Lichtquelle einsetzen
+Man verwendet dafür Lampen oder einen
+Blitz (dazu später mehr).
+∂ die Verschlusszeit verlängern
+
+Je kleiner der Sensor, desto größer das
+Bildrauschen. Aber ein ISO-Wert von 1600
+bis 3200 sollte schon ausreichen.
+Das wichtigste Ergebnis aber ist, dass jeder
+bei Tageslicht zu Hause ohne viel Aufwand
+gute Bilder erstellen kann. Nur bei wenig
+Licht benötigt man ein Stativ oder eine
+Kamera, die bei hohen ISO-Werten noch
+gute Bilder macht (und das können heutzutage fast alle Kameras).
+Auf meiner DSLR wähle ich meist eine
+Blendenzahl von F13 oder in der Nähe
+davon, um eine ausreichende Schärfentiefe
+zu erhalten. Bei Digitalkameras muss man
+mit kleineren Blenden wie F22 aufpassen:
+Zwar wird die Schärfentiefe dann noch
+größer, aber die Schärfe selbst geht ziemlich drastisch zurück (wegen eines optischen Phänomens, das Diffraktion oder
+Beugung genannt wird).
+
+
+Tipps & Tricks
+
+Kunstlicht
+Ein Nachteil der Fotografie bei Tageslicht
+ist natürlich, das man am Tag arbeiten muss.
+Auch hat man keine vollständige Kontrolle
+über die Lichtmenge. Das ist meist kein
+großes Problem, da die Kamera sich im
+Auto- oder P-Modus automatisch darauf
+einstellt. Will man die totale Kontrolle,
+dann muss man Kunstlicht als Haupt- oder
+Hilfslicht verwenden. Das muss man auch,
+wenn einfach nicht genug Licht vorhanden
+ist.
+Für Kunstlicht gilt dasselbe wie für Sonnenlicht: Eine nackte Lampe hat den Effekt von
+Punktlicht und erzeugt daher harte, dunkle
+Schatten. Das Licht muss gefiltert oder
+reflektiert werden, um schöne Bilder zu
+erhalten. Wie schon gesagt haben viele
+Lampen bereits einen Reflektor. Filtern und
+Reflektieren sind übrigens im Wesentlichen
+dasselbe: Das Licht wird in verschiedene
+Richtungen abgelenkt, sodass es von verschiedenen Seiten auf das Objekt fällt und
+keine harten Schatten entstehen. Die Richtung des Lichts bestimmt, wohin die Schatten fallen, daher sollte man auch darauf
+achten.
+
+
+∂ eingebauter Blitz in einer größeren
+Kamera
+Schon besser, aber es gelten dieselben Einschränkungen.
+∂ aufgesetztes Blitzgerät
+Wieder etwas besser, und sogar ausgezeichnet, wenn man es als Hilfslicht verwendet
+und dazu indirekt blitzt. Man kann z. B. den
+Blitzkopf um etwa 45° nach oben neigen
+und das Blitzlicht von der Decke reflektieren lassen. Mit einer Kappe (einem so genannten Omni-Bounce Diffuser) wird es
+noch besser (Abb. 15).
+
+Blitz: ja, aber …
+Das Einfachste wird wohl Blitzlicht sein. Es
+ist so stark, dass eine kürzere Verschlusszeit
+verwendet werden kann, sodass man die
+Kamera frei in der Hand halten kann, ohne
+wegen der Kamerabewegung während der
+Belichtung unscharfe Bilder zu bekommen.
+Man braucht dafür also kein Stativ. Es gibt
+verschiedene Formen von Blitzen:
+∂ den Blitz einer Kompaktkamera
+Wenn man den Blitz als Hauptlichtquelle
+verwendet, muss man aufpassen: Er ist so
+nah an der Linse, dass das Licht immer nur
+direkt von vorne kommt und oft nicht das
+ganze Bildfeld abdeckt, vor allem, wenn
+man aus der Nähe blitzt. Aber als zusätzliches Licht kann es hilfreich sein, wenn
+nicht ausreichend natürliches Licht vorhanden ist (Abb. 14).
+
+
+Als Hauptlicht geht es auch, dann muss man
+aber unbedingt indirekt Blitzen. Um die
+Einfallsrichtungen des Lichts besser in der
+Hand zu haben, kann man den Blitz eventuell unabhängig von der Kamera platzieren. Manche Kamera-Blitz-Kombinationen
+können das sogar kabellos. Auch kann man
+
+
+
+Hilfsmittel verwenden, die das Licht sanfter
+machen, indem sie die Lichtquellenoberfläche vergrößern: einen Reflektor, einen
+Schirm (eine Art „Regenschirm“) oder eine
+Softbox, so wie das auch ein Studio-Blitzgerät macht.
+Zwei Blitzgeräte in der Aufstellung, die
+Thomas schon vorgestellt hat, sind ganz
+ausgezeichnet: beide in einem Winkel von
+ungefähr 45° zum Objekt (und damit im
+90°-Winkel zueinander) und etwas von
+oben auf das Modell gerichtet. Man braucht
+dann kein anderes Licht mehr.
+∂ Studio-Blitzgeräte
+Die zuletzt genannte ist auch die Aufstellung, die ich selber mit meinen StudioBlitzgeräten verwende. So füllt der eine
+Blitz den Schatten des anderen und umgekehrt (Abb. 16).
+
+mit Softbox und Diffuser
+
+Ich verwende zwei 400 Watt/SekundeBlitzgeräte mit Softboxen von 50 x 50 cm
+(Abb. 17). Die stehen ein paar Meter vom
+Objekt entfernt. Es dürfen sicherlich auch
+Blitzgeräte mit geringerer Leistung und
+kleinere Softboxen oder Schirme sein, aber
+diese habe ich nun einmal.
+Im Blitzgerät eingebaute Modellierlampen
+zeigen mir, wie das Resultat sein wird. Ein
+kabelloser Blitz-Trigger ist mit der Kamera
+verbunden. Er funktioniert manuell mit ISO
+100, Verschlusszeit 1/125 Sekunde (kürzere
+Zeiten sind mit dem Trigger nicht möglich)
+und Blendenzahl F13.
+
+
+Ich kann nahezu uneingeschränkt frei
+herumlaufen und Fotos schießen, nachdem
+die Blitz-Stärke einmal passend eingestellt
+ist (Abb. 18).
+
+
+Höchstens muss ich einmal kurzzeitig den
+ISO-Wert um 2/3 oder einen Schritt erhöhen, wenn ich selber beim Fotografieren
+teilweise im Lichtstrahl von einem der
+Blitzgeräte stehe.
+Kunstlicht
+Mit Lampen kann man dasselbe machen
+wie mit Blitz-Geräten. Der wichtigste
+Unterschied ist, dass sie weniger Licht ausstrahlen. Um genug Licht auf den Sensor zu
+bekommen, kann man, wie schon erwähnt,
+zwei Dinge tun:
+∂ eine längere Verschlusszeit wählen (und
+dazu, wenn nötig, ein Stativ verwenden)
+∂ eine höhere Lichtempfindlichkeit des
+Sensors (ISO) einstellen
+Bei Birnen und Halogenlampen muss man
+aufpassen, weil sie (sehr) heiß werden.
+LED-Leuchten haben das Problem nicht.
+Auch muss man den Weißabgleich beachten, aber dazu später mehr.
+
+Tipps & Tricks
+
+Ein Mix aus natürlichem Licht und Blitz
+geht aber schon: Man wählt eine längere
+Verschlusszeit und lässt den Blitz an dessen
+Ende einmal „feuern“ (Abb. 19). Aber einfach natürliches Licht oder Kunstlicht zu
+verwenden ist eine bessere Idee, wenn man
+nicht gerade diesen Spezialeffekt bewirken
+will.
+
+Belichtung
+Über die Schärfentiefe haben wir schon
+gesprochen. Betrachten wir nun zunächst
+die Belichtung.
+Gesättigte Farben
+Die roten, gelben und grünen Bauteile von
+fischertechnik haben sehr gesättigte Farben.
+Wenn ich fischertechnik fotografiere, erhöhe ich daher nie die Farbsättigung über das
+Kamera-Menu, weil diese Farben sonst sehr
+schnell übersättigt werden. Dann ergibt sich
+auf dem Bild ein flacher Farbfleck ohne
+Nuancen (Abb. 20).
+
+Blitz und Bewegung
+In meinem ersten Beitrag [2] habe ich
+geschrieben, dass mit einer längeren Verschlusszeit Bewegung gezeigt werden kann.
+Das gilt nicht bei Verwendung eines BlitzGeräts als Hauptlicht. Denn der Blitz dauert
+nur etwa 1/1000 Sekunde, die Szene wird
+also „eingefroren“.
+Belichtung und Nachbearbeitung (rechts)
+
+Manche Kameras können diese Überbelichtung auf einem LCD anzeigen, meistens mit
+einem Blinken der überbelichteten Bereiche. So ein ausgeblichenes Bildteil ist zwar
+nicht das Ende der Welt, aber unerwünscht,
+wenn es gut aussehen soll. Jedoch ist das
+schwierig zu verhindern. Man sollte dafür
+etwa 2/3 bis eine Einstellung weniger
+belichten.
+
+
+Ich prüfe bei fast jedem Bild, ob es
+irgendwo überbelichtet ist und mache das
+Foto, wenn nötig, erneut mit einer etwa 2/3
+geringeren Belichtung.
+
+
+Das hat allerdings den Nachteil, dass dunkle
+Partien (schwarze Bausteine, U-Träger und
+Bauplatten) zu dunkel werden können und
+dass das Weiß vom Hintergrund-Papier
+etwas grau aussieht. Es gibt eigentlich kaum
+eine Methode, das vollständig zu verhindern. Man muss da ein Optimum finden.
+Ich beseitige das Problem meist in der
+Nachbearbeitung: Man kann beim Fotografieren 2/3 oder eine Einstellung weniger
+belichten und in der „digitalen Dunkelkammer“ die dunklen Partien aufhellen,
+ohne dass helle Flächen und satte Farben
+ausbleichen. Um den Kontrastverlust durch
+das Aufhellen zu beseitigen, erhöht man
+danach, wenn nötig, den Kontrast ein
+wenig.
+Das Umgekehrte ist nicht möglich: Ist eine
+Farbe beim Fotografieren ausgeblichen,
+dann können die Nuancen der Farbe nicht
+zurückgewonnen werden, da die Information dazu fehlt – es sei denn, das Bild wurde
+im RAW-Format gespeichert.
+
+Weißabgleich
+Seit wir Digitalkameras haben, können wir
+die Farbtemperatur der Bilder an der Kamera auf die Lichtverhältnisse einstellen, so
+dass das Bild farbmäßig aussieht wie in der
+Realität. Das nennt man Weißabgleich
+(englisch: white balance, WB). Früher
+konnte man das nur mit einem gefärbten
+Filter vor dem Objektiv oder nachher in der
+Dunkelkammer bewirken.
+Farbtemperatur
+Beim Fotografieren von fischertechnikModellen ist es wichtig, die Farbtemperatur
+nicht zu warm zu wählen. Wenn die Farbtemperatur von roten oder gelben fischertechnik-Bauteilen erhöht wird, ergibt sich
+schnell die schon erwähnte Übersättigung,
+weil eine höhere Farbtemperatur eben zu
+mehr Amber oder Orange führt.
+Der Weißabgleich hängt also von den Lichtverhältnissen ab. Meist liefert der automatische Weißabgleich gute Ereignisse, aber
+
+wenn man eine Bilderserie macht, möchte
+man, dass die Farbtöne immer gleich sind.
+Wenn man ganz sicher sein will, kann man
+das Licht mit der Kamera messen und eine
+gemessene Voreinstellung wählen. Die
+meisten besseren Kameras können das
+bereits. Man braucht dazu ein neutrales
+Objekt, etwas Graues oder Weißes.
+Aber aufgepasst: Weißes Papier, und insbesondere Hintergrund-Papier für die Fotografie, enthält oft ein wenig Blau, damit die
+resultierenden Fotos etwas wärmer herauskommen. Das ist bei Portraits erwünscht, es
+ist aber gerade das, was wir bei fischertechnik-Modellen nicht möchten. Man kann
+∂ den Weißabgleich in der Kamera kompensieren,
+∂ als Papier eine professionelle GrauKarte für das Messen der Farbtöne verwenden oder
+∂ den Weißabgleich in der Nachbearbeitung justieren.
+Betrachten wir kurz die wichtigsten Lichtverhältnisse:
+∂ natürliches Licht: Meistens geht es gut
+mit der Auto-Einstellung oder der den
+Lichtverhältnissen entsprechenden Einstellung.
+∂ Blitz: Meistens liefert die Blitz-Einstellung gute Ergebnisse, aber wenn der
+Blitz von einer nicht neutralen (weißen)
+Decke oder Wand reflektiert wird, kann
+es schiefgehen.
+∂ Lampen: Wenn es mit der Auto-Einstellung nicht funktioniert und man die Farbtemperatur der Lampe kennt, stellt man
+sie an der Kamera ein. Wenn nicht, lässt
+man die Kamera eine WB-Voreinstellung vornehmen. Oder man verfolgt die
+Versuch-und-Irrtum-Methode mit verschiedenen WB-Einstellungen oder sogar Kelvin-Temperaturwerten, wenn die
+
+Kamera das erlaubt. Mit einer Digitalkamera kosten Testfotos schließlich kein
+Geld.
+∂ gemischtes Licht: Wenn natürliches
+Licht und Blitzlicht gemischt werden,
+liefert die Blitz-Einstellung meistens
+gute Ergebnisse, obwohl die Bilder oft
+ein wenig wärmer herauskommen. Das
+muss dann kompensiert werden.
+∂ verschiedene Arten von Lampen oder
+Mischung von Kunst- und Tageslicht:
+Das ist eine schwierige Situation
+(Abb. 21). Man muss sich darüber keine
+großen Sorgen machen, wenn man das
+nicht will, aber man könnte das Licht von
+der Kamera messen lassen, vielleicht
+sogar öfter, weil jede kleine Änderung
+der Position des Objekts oder der Kamera einen anderen Lichtfall und damit eine
+andere Farb-Nuance verursachen kann.
+
+Tipps & Tricks
+
+muss ich die Namen entsprechend anpassen. Auch wähle ich Dateinamen, die etwas
+aussagen, also nicht DSC-1635.jpg, sondern zum Beispiel LKW-01.jpg u. s. w.
+Globale Anpassungen
+Einfache Verbesserungen kann man mit
+jedem Bildbearbeitungsprogramm machen,
+auch mit der Upload-Software SF ft Community Publisher der ft:community. Darunter fallen unter anderem Beschneiden, HellDunkel- und Kontrast-Einstellung. Beim
+Beschneiden muss man sich überlegen, was
+man zeigen will, und alles andere abschneiden. Wenn nötig kann man auch den Weißabgleich korrigieren, wie oben erklärt.
+Voreinstellung
+Mit fischertechnik-Fotos mache ich immer
+ungefähr dieselben Bearbeitungen:
+∂ Schatten und Mitteltöne aufhellen, weil
+ich mit 2/3 oder einer Einstellung unterbelichtet habe, wie oben erläutert
+∂ die Farben korrigieren (Gelb und Rot
+werden bei meiner Kamera leicht orange,
+das Blau gerät ein wenig zu grün)
+∂ den Kontrast ein wenig erhöhen
+∂ die Belichtung der hellen Stellen etwas
+zurücknehmen
+∂ das gesamte Bild schärfen
+
+Kunstlicht links und kälteres Tageslicht rechts
+
+Nachbearbeitung
+
+Ich habe dafür in meinem Bildbearbeitungsprogramm eine Voreinstellung vorgenommen. Wenn ich die verwende, brauche ich
+das Bild danach nur noch zu beschneiden,
+einige Unschönheiten „wegzuputzen“ und
+vielleicht zwei oder drei Schieber zu justieren; das geht alles ganz schnell (Abb. 22).
+
+Namen und Nummern
+Das erste, was ich mit einer Bilderserie
+eines Modells mache, sind Namensgebung
+und Nummerierung. Weil ich die Bilder
+einer Modellbeschreibung meist in umgekehrter Reihenfolge präsentieren muss, wie
+ich im vorigen Beitrag erklärt habe [2],
+
+
+
+
+Krönung der Arbeit
+
+Referenzen
+
+Ich hoffe du findest unter den zahlreichen
+Anregungen und Vorschlägen einige, die
+dir helfen, noch bessere Bilder deiner
+Modelle anzufertigen. Mir macht das Fotografieren sehr viel Spaß. Es ist für mich die
+Krönung der Arbeit, wenn mir ein gutes
+Modell gelungen ist. Außerdem kann ich es
+dann mit anderen fischertechnik-Enthusiasten teilen. Ich hoffe, dass es mir gelungen
+ist, etwas von diesem Spaß zu vermitteln.
+
+[1]
+
+Thomas Püttmann: Modellfotografie.
+ft:pedia 1/2016, S. 21-23.
+
+[2]
+
+Paul Bataille: Fotografieren von
+Modellen: Klar denken und klar
+bauen machen es leichter. 2/2017, S. 5-12.
+
+
+
+

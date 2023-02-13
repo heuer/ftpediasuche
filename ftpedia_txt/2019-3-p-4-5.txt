@@ -1,0 +1,132 @@
+
+
+Modell
+
+Mini-Modelle (Teil 22): Dumper
+Rüdiger Riedel
+Was sind Dumper? Es sind grundsätzlich Muldenkipper zum Transport von Schüttgütern wie
+Schotter, Kies und Gestein.
+
+Mini-Dumper
+Wir betrachten hier kleine, z. B. im Gartenbau eingesetzte Lastwagen mit vorn liegender Kippmulde. Früher hatten sie gerne eine
+Hinterradlenkung, heute bevorzugt Knicklenkungen. Ein Beispiel eines solchen
+Klein-LKW zeigt Abb. 1:
+
+
+(Quelle: Vorderkipper. Gemeinfreies Bild,
+Wikipedia 2012)
+
+
+Das Modell
+Für die Mulde unseres Mini-Dumpers
+benutzen wir einen Förderbecher, der sonst
+für Eimerkettenbagger gebraucht wird.
+Die Knicklenkung funktioniert einwandfrei!
+Auch wenn es anders aussieht, der MiniDumper hat ausreichend Bodenfreiheit.
+
+
+Modell
+
+[9]
+
+Teileliste
+37468 Baustein 7,5
+
+
+37237 Baustein 5
+
+
+38423 Winkelstein 10
+
+
+38459 Hubgelenkstein 15
+
+
+37209 Förderbecher 15·15·24 1
+31982 Federnocken rot
+
+
+35408 V-Achse 28 gelb
+
+
+36573 V-Rad 14
+
+
+Bisher erschienene Mini-Modelle:
+[1]
+
+René Trapp: Mini-Modelle (Teil 1):
+Gabelstapler. ft:pedia 4/2013, S. 4-5.
+
+[2]
+
+Johann Fox: Mini-Modelle (Teil 2):
+Panzer. ft:pedia 2/2014, S. 18-19.
+
+[3]
+
+René Trapp: Mini-Modelle (Teil 3):
+Scheinwerfer. ft:pedia 3/2014, S. 11.
+
+[4]
+
+Johann Fox: Mini-Modelle (Teil 4):
+Hubschrauber. ft:pedia 3/2014, S.
+12-13.
+
+[5]
+
+René Trapp: Mini-Modelle (Teil 5):
+Traktor. ft:pedia 4/2014, S. 7.
+
+Norbert Doetsch: Mini-Modelle (Teil
+9): Motorrad. ft:pedia 1/2016, S. 6.
+
+[10] René Trapp: Mini-Modelle (Teil 10):
+Jojo. ft:pedia 1/2016, S. 4.
+[11] René Trapp: Mini-Modelle (Teil 11):
+Flugzeug. ft:pedia 1/2016, S. 14.
+[12] Stefan Falk: Mini-Modelle (Teil 12):
+Mondrakete. ft:pedia 2/2016, S. 5.
+[13] Martin Westphal, René Trapp: MiniModelle (Teil 13): Visitenkartenhalter. ft:pedia 2/2016, S. 13.
+[14] René Trapp: Mini-Modelle (Teil 14):
+Brieföffner. ft:pedia 2/2016, S. 17.
+[15] René Trapp: Mini-Modelle (Teil 15):
+Nudelholz. ft:pedia 3/2016, S. 4.
+[16] Ralf Geerken: Mini-Modelle (Teil
+16): Radarschirm. ft:pedia 1/2017, S.
+8-9.
+[17] Rüdiger Riedel: Mini-Modelle (Teil
+17): Der Biegemann oder Schwanenhals. ft:pedia 3/2017, S. 4.
+[18] Rüdiger Riedel: Mini-Modelle (Teil
+18): Nurflügler im Formationsflug.
+ft:pedia 4/2017, S. 4.
+
+[6]
+
+Johann Fox: Mini-Modelle (Teil 6):
+Bagger. ft:pedia 4/2014, S. 8-9.
+
+[19] Rüdiger Riedel: Mini-Modelle (Teil
+19): fischertechnik tanzt in den Mai.
+ft:pedia 1/2018, S. 5-6.
+
+[7]
+
+Johann Fox: Mini-Modelle (Teil 7):
+Hovercraft. ft:pedia 1/2015, S. 4-5.
+
+[20] Rüdiger Riedel: Mini-Modelle (20):
+Knopfkreisel. ft:pedia 3/2018, S. 7-8.
+
+[8]
+
+René Trapp: Mini-Modelle (Teil 8):
+Flugsaurier. ft:pedia 4/2015, S. 4.
+
+[21] Rüdiger Riedel: Mini-Modelle (21):
+Kleine Radlader mit Knicklenkung.
+ft:pedia 4/2018, S. 5-9.
+
+
+

@@ -1,0 +1,889 @@
+
+
+Optik
+
+Optische Datenübertragung mit fischertechnik
+Florian Bauer
+Am Anfang stand die Idee, einen rotierenden Entfernungsmesser optisch auszulesen, um ohne
+Schleifringe auszukommen. Ein erster Schritt dafür wird in diesem Beitrag vorgestellt: Eine
+bidirektionale optische Datenübertragung für I²C-Signale mit fischertechnik. Wie sich zeigt, ist
+fischertechnik dazu geeignet, prototypische optische Aufbauten zu realisieren. Durch die Wahl
+von mehrfarbigen LEDs wird auch visuell etwas geboten.
+Ende des 19. Jahrhunderts erfanden Alexander Graham Bell (1847-1922) und Charles
+Sumner Tainter (1854-1940) ein drahtloses
+Lichttelefon zur Fernübertragung von
+Schall: das Photophon [6], bei dem Sonnenlicht über einen durch Schallschwingungen
+zur Vibration angeregten Spiegel zu einem
+entfernten Empfänger übertragen wird, wo
+das optisch modulierte Signal von einem
+großen Parabolspiegel konzentriert und mit
+Hilfe einer Selenzelle und einem Lautsprecher wieder in akustische Schwingungen umgewandelt wird. Bell, der als
+Erfinder des Telefons gilt, war davon überzeugt, dass das Photophon seine bedeutendste Erfindung gewesen war. Bemerkenswert
+ist, dass Bell als Lichtquelle die Sonne verwendet hat. Zumindest der Sender war
+damals schon „klimafreundlich“.
+Von dem Prinzip, Signale und Daten mit
+Licht zu übertragen, geht eine gewisse
+Faszination aus. Man denke an den berüchtigten „Lichtspruch“ aus der ScienceFiction-Serie „Raumpatroullie“ („Orion“).
+Auch beim Militär wurden bisweilen
+gerichtete Lichtstrahlen zur abhörsicheren
+Kommunikation oder auch zur Unterwasser-Kommunikation mit U-Booten [8]
+verwendet. Ein weiteres Beispiel ist das
+Lichtsprechgerät 80 der Deutschen Wehrmacht [9].
+
+
+Aber erfreulicherweise gibt es auch Einsätze im zivilen Bereich: Neben der
+inzwischen zum Standard gewordenen
+Datenübertragung über Glasfaser z. B. das
+Open-Source-Projekt Ronja [7], bei dem
+Enthusiasten eine Möglichkeit für optische
+Netzwerkverbindungen geschaffen haben.
+Heute, viele Jahre nach Bells Erfindung, ist
+die Signalübertragung mit Licht wieder
+aktuell. So wird derzeit (endlich) bundesweit das Glasfasernetz ausgebaut, mit dem
+Ziel, größere Übertragungsbandbreiten als
+über Kupfer zu realisieren.
+Auch fischertechnik hat Experimente zur
+Signalübertragungen mit Licht vorgesehen.
+Die dafür notwendigen Teile sind Linsen,
+Lichtleitstäbe und Fotowiderstände.
+Neben dem Interesse an dieser Technik an
+sich gibt es auch praktische Gründe, die für
+einen Einsatz optischer Datenverbindungen
+sprechen – zum Beispiel, wenn man eine
+galvanische Trennung der Kommunikationspartner benötigt, starke elektromagnetische Störungen vorhanden sind oder man
+Daten kontaktfrei zu einem rotierenden
+System übertragen möchte.
+In diesem Beitrag soll gezeigt werden, wie
+man mit fischertechnik eine digitale bidirektionale Datenübertragung bis 100 kHz
+über einen einzigen Lichtwellenleiter
+(LWL) realisieren kann. Der Aufbau erlaubt
+
+
+Optik
+
+Transmitter und Fototransistoren als Empfänger. Als Strahlteiler wurden Objektträger aus der
+Mikroskopie eingesetzt, als Linsen Kunststofflinsen mit Brennweite f = 25 mm. Zur Sichtbarmachung
+der Empfänger-Reflexe stecken zwischen den Fototransistoren und den Farbfilterfolien Papierstreifen.
+
+eine optische Isolation einer I²C-Verbindung und wird im weiteren Verlauf
+beschrieben.
+Der Lichtleiter wird dabei in beide Richtungen verwendet. Wesentlich einfacher – und
+in der Praxis weiter verbreitet – ist es,
+getrennte Lichtleiter für Hin- und Rückkanal zu verwenden. Es gibt aber Anwendungsfälle, wo man mit nur einem Lichtwellenleiter auskommen muss, wie die
+erwähnte Übertragung in ein rotierendes
+System.
+Ausgangspunkt für diesen Beitrag war ein
+schnell zusammengesteckter fischertechnik-Aufbau für eine Übertragung in zwei
+Richtungen (Abb. 1). Für Datenübertragungen mit Frequenzen im Audiobereich wäre
+dieser Aufbau mit Fototransistoren ausreichend; für Datenraten bis 100 kHz
+werden schnellere optische Empfänger
+benötigt, von denen hier berichtet wird.
+
+Mit den im weiteren Verlauf vorgestellten
+Elementen ist sowohl eine asynchrone
+Übertragung von RS232 oder eine
+synchrone Übertragung von I²C-Signalen
+möglich. Natürlich sind auch andere Protokolle denkbar.
+Das fischertechnik-Baukastensystem hat
+sich für das Prototyping des optischen Aufbaus als sehr nützlich erwiesen. Die im
+Beitrag vorgestellte Elektronik wurde auf
+Proto-Boards zusammengesteckt.
+Einfacher als die Übertragung mittels Lichtleiter ist die Übertragung im freien Raum
+(mehrere Meter), da hier leichter größere
+Signalpegel erreicht werden. Ich empfehle
+sogar, beim Nachbau erst einmal die LEDs
+direkt auf die Fotodioden scheinen zu
+lassen, um die Elektronik unabhängig von
+der durchaus anspruchsvollen optischen
+Justage zum Laufen zu bringen.
+
+
+
+
+Transmitter und SendeLichtquellen
+Als Lichtquellen kommen lichtstarke farbige LEDs (mit Lichtstärken > 4000 mcd)
+zum Einsatz, deren Licht auf ein Ende des
+Lichtleiters fokussiert und am Ausgang
+wieder kollimiert [1] wird (Tab. 1).
+Um das Übersprechen von Sende- und
+Empfangskanal zu verhindern, werden die
+verschiedenen Kanäle mit LEDs unterschiedlicher Emissions-Wellenlängen (Farben) realisiert. Wichtig für die Auswahl der
+LEDs ist neben der Lichtstärke ein möglichst ähnlicher Emissions-Winkel.
+Wenn die LEDs über längere Leitungen
+angesteuert werden, sollten diese abgeschirmt werden. Hi-Fi-Kabel mit CinchAnschlüssen bieten eine brauchbare
+Lösung. Lange, nicht abgeschirmte Leitungen können zu elektrischen Störsignalen
+führen, die die Detektion erheblich beeinträchtigen.
+
+Strahl-Kombination verschiedener Lichtquellen (Kanäle)
+Falls es mehr als einen Sende-Kanal gibt
+(wie für synchrone Datenübertragung notwendig), müssen die Strahlen der SendeLEDs zusammengeführt werden, sodass sie
+von den Fokussierungslinsen gleich gut auf
+den Lichtwellenleiter konzentriert werden.
+Der zunächst naheliegende Einsatz von
+Mehrfarb-LEDs ist optisch ungünstig, da
+die Einzel-LEDs auf dem LED-Chip auf
+LED
+
+Typ
+
+Hersteller
+
+Rot
+
+L-7113SEC-J3
+
+Knightbright
+
+Blau
+Grün
+
+leicht unterschiedlichen Positionen sitzen,
+so dass immer nur eine LED optimal auf
+den Eingang des LWL abgebildet werden
+kann.
+Für die Strahlkombination werden Strahlteiler benötigt. Als billige Variante kann
+man 1 mm starke Glasplatten (Objektträger
+für die Mikroskopie) wie im Modell aus
+jedoch müssen wegen der geringen Reflexion (ca. 10% – 20%) sehr starke LEDs eingesetzt werden.
+
+Kollimation und Fokussierung
+des Sende-Signals
+Da das Licht der Sende-LEDs divergent ist,
+muss es zunächst mit einer Sammellinse
+kollimiert werden. Das parallelisierte Lichtbündel kann dann mit einer weiteren Linse
+kleiner Brennweite zum Einkoppeln auf das
+Ende des Lichtwellenleiters fokussiert
+werden. Es ist auch möglich, das Licht der
+LEDs durch eine einzige Linse zu fokussieren wie im Aufbau in Abb. 1. Wegen des
+Platzes, den die Strahlteiler erfordern, muss
+man die LEDs weiter weg von der Linse
+platzieren.
+Es gilt zu beachten, dass durch seine endliche Größe jedes optische Element im
+Strahlengang das Lichtbündel beschneiden
+kann und den einzukoppelnden Lichtstrom
+zusätzlich durch Reflexionsverluste reduziert. Daher sollte man in diesem Fall auf
+LEDs mit kleinem Emissionswinkel
+
+Lichtstärke
+
+Emissionswinkel
+
+PeakWellenlänge
+
+11,0 cd
+
+20°
+
+640 nm
+
+LL-504BC2E-B4- Luckylight
+2GC
+
+8,5 cd
+
+20°
+
+462 nm
+
+SLOAN
+L5-G81N-GU
+
+43,3 cd
+
+15°
+
+525 nm
+
+Sloan
+
+Tab. 1: Verwendete LEDs
+
+zurückgreifen. In meinem Aufbau verwende ich klare 5-mm-LEDs mit einem
+Emissionswinkel von ca. 20°. Eventuell
+sind 3-mm-LEDs besser, da sie wegen ihrer
+kleineren Emitterfläche stärker fokussiert
+werden können. Weil die kleineren LEDs
+im Allgemeinen eine geringere Leistung
+haben, müsste man ausprobieren, ob ihr
+Einsatz eine Verbesserung bringt.
+
+Lichtwellenleiter
+Als Lichtwellenleiter können die fischertechnik-Lichtleitstäbe verwendet werden,
+sofern sie blasenfrei sind, oder die im Hi-FiBereich üblichen TOS-Link-Kabel, welche
+einen Kerndurchmesser des Lichtleiters von
+ca. 1 mm haben. Der Lichtwellenleiter
+arbeitet nach dem Prinzip der Total-Reflexion: Wenn Licht aus einem optisch dichteren Medium (Glas oder Kunststoff) in ein
+optisch dünneres (z. B. Luft) tritt, wird es ab
+einem bestimmten Grenzwinkel vollkommen (total) reflektiert. In einem Lichtwellenleiter macht man sich diesen Effekt
+zu Nutze. Das Licht wird beinahe verlustfrei durch den transparenten Kern übertragen. Daher hat jeder Lichtwellenleiter
+einen Akzeptanz-Kegel für das eingestrahlte Licht. Nur Lichtstrahlen, deren Einfallswinkel innerhalb des AkzeptanzKegels liegt und für die Totalreflexion auftritt, werden übertragen (Details dazu in
+[10]). Der Rest geht verloren.
+
+Kollimation und Fokussierung
+des Empfangs-Signals
+Beim Austritt des Lichts aus dem Wellenleiter ist das Licht stark divergent. Aus
+diesem Grund sollte eine Linse mit kleiner
+Brennweite und großem Durchmesser nahe
+am Ausgang platziert werden. Es ist zu
+beachten, dass diese Linse auch zur Fokussierung bei der bidirektionalen Übertragung
+verwendet wird.
+
+Optik
+
+Trennung und Filterung des
+optischen Signals
+Wenn Licht mehrerer Farben aus dem
+Lichtleiter kommt, muss es getrennt und auf
+die jeweiligen Detektoren geleitet werden.
+Glasplatten als Strahlteiler und nachgeschaltete Filter eignen sich hierfür nur
+bedingt, da das aus dem LWL tretende
+schwache Licht noch weiter abgeschwächt
+wird. Besser ist ein dichroitischer [2, 3]
+Strahlteiler aus einem Beamer. Solche
+keineswegs mehr exotischen Teile haben
+Wellenlängen-selektive
+Beschichtungen
+und trennen das Licht in drei Farben auf
+(siehe Abb. 2). Da es sich inzwischen um
+Standard-Teile handelt, kann man sie für
+wenige Euro über den Online-Versandhandel (oft aus China) beziehen.
+
+von einer weißen LED-Taschenlampe (unten)
+durchstrahlt wird
+
+Eine weitere Filterung des optischen
+Signals kann durch Farbfolien geschehen,
+die aus transparenten, gefärbten Konsumprodukten (z. B. transparenten DuschgelBehältern) oder Farbtransparent-Einbandfolien aus Kopiershops gewonnen werden
+können. Auch die Folien einer billigen RotGrün-Brille sind eine gute Quelle für Farbfilter.
+
+
+
+
+Der Transmitter
+Die LEDs können über eine zweistufige
+Transistor-Schaltung oder einen OpenCollector-Treiberbaustein wie dem TTL-IC
+7407 angesteuert werden. Abb. 3 zeigt eine
+Schaltung. Da manche I²C-Sender den
+TTL-Eingang nicht direkt treiben können,
+ist ein CMOS-Buffer davor geschaltet. Für
+jeden Sendekanal wird eine solche
+Schaltung benötigt.
+
+Der Empfänger
+Als Detektoren kommen schnelle Fotodioden zum Einsatz, da handelsübliche
+Fototransistoren für die angestrebte Übertragungsrate (100 kHz für I²C) zu langsam
+sind.
+Wenn die Fotodiode weiter weg von der
+Schaltung platziert wird, muss sie mit einer
+abgeschirmten Leitung angeschlossen
+werden, da die Leitungen gerne elektromagnetische Störsignale einfangen. Auch
+die Kapselung der Fotodioden in abgeschirmten Gehäusen hat sich als sehr
+vorteilhaft herausgestellt, da ansonsten
+wegen der eingesetzten schnellen Operationsverstärker auch schon mal ein unerwünschter „Radioempfänger“ entsteht.
+
+Einfache Gehäuse für die Fotodioden
+können aus Kupfer-Lötfittings und Messingscheiben mit 15 mm Durchmesser aus
+dem Baumarkt zusammengelötet werden.
+Ins innere Loch der Messingscheibe wurde
+eine Schraubenfeder als Kabelknickschutz
+für das abgeschirmte Kabel gedreht und
+angelötet. Die Fotodiode ist auf eine
+zurechtgefeilte Platine gelötet.
+Die schwachen Signale der Fotodioden
+müssen verstärkt werden. Dies geschieht
+mit einem zweistufigen Verstärker aus
+schnellen Operationsverstärkern und einem
+nachfolgenden Komparator, der das Signal
+auf Digitalpegel bringt. Die Schaltung wird
+im Folgenden detailliert beschrieben.
+
+Empfangsschaltung
+Die Kathode einer schnellen Fotodiode D1
+(z. B. BPW 34 oder SFH 203) ist am invertierenden Eingang des ersten Operationsverstärkers angeschlossen. Ihre Anode liegt
+auf negativem Bezugspotential, in diesem
+Fall GND. Um Ladung der Diode schneller
+abzuführen und die Schwingungsneigung
+der ersten Stufe zu verringern, wird die
+Kathode über den Widerstand R1 zusätzlich
+auf Masse gezogen.
+
+
+
+Optik
+
+
+Mit dem Feedback-Widerstand R2 entsteht
+ein invertierender Verstärker. Er ist über
+den Kondensator C4 an eine zweite invertierende Verstärkerstufe angeschlossen. Die
+kapazitive Kopplung verbessert die Unempfindlichkeit gegenüber Fremdlicht erheblich. Wegen der kapazitiven Einkopplung
+und des großen Eingangswiderstandes des
+Operationsverstärkers muss das Ruhepotential des Eingangs der zweiten Stufe
+mit Widerstand R3 nach Masse festgelegt
+werden.
+Als Operationsverstärker ist ein Modell mit
+einem großen Verstärkungs-BandbreitenProdukt (oder auch Gain Bandwidth
+Product, GBP) zu verwenden, um scharfe
+Signale zu erhalten. Gute Ergebnisse habe
+ich mit LF357 erzielt, der ein GBP von
+20 MHz hat. Da dieser aber erst mit symmetrischer Spannungsversorgung mit ±5 V
+richtig läuft, bin ich auf SGM 80582 mit
+GBP von 220 MHz umgestiegen, der mit
+einer Gesamtspannung von 5 V funktioniert, was die Stromversorgung über einen
+Arduino ermöglicht. Darüber hinaus vereint
+der IC zwei Operationsverstärker in einem
+Gehäuse.
+
+Allerdings steigt mit dem hohen Verstärkungs-Bandbreiten-Produkt
+auch
+die
+Schwingungs-Neigung der invertierenden
+Verstärker. Um sie zu verringern werden
+kleine Kondensatoren C2 und C3 (4 pF)
+parallel zu den Rückkopplungswiderständen platziert.
+
+einer virtuellen Masse für den Receiver. Hier
+reicht ein einfacher Standard-Operationsverstärker (uA 741) aus.
+
+
+
+Ab 200 mV Signal-Pegel nach der zweiten
+Stufe ist man „im Geschäft“ mit der Datenübertragung. Wenn das Signal frei von
+Störungen ist, kann auch schon ein geringerer Spannungspegel von ca. 50 mV ausreichen. Allerdings ist die Schaltung störempfindlicher und die Einstellung erheblich
+schwieriger. Insbesondere können Spikes
+dazu führen, dass sich die I²C-Übertragung
+„aufhängt“ und dann ein Reset des Mikrocontrollers notwendig ist.
+Der nachfolgende Komparator, ein LM311,
+wandelt die analogen Spannungs-Impulse
+der zweiten Verstärkerstufe in saubere,
+kräftige Digital-Signale um. Der Schaltpegel wird mit dem Potentiometer RV8
+eingestellt. Da die Komparator-Schaltung
+bei verrauschten Signalen zu Spiking [4]
+und Ringing [5] neigt, führt ein großer
+Feedback-Widerstand R7 einen Teil des
+Signals auf den positiven Eingang des
+Komparators zurück. Es entsteht eine kleine
+Hysterese und der Komparator arbeitet
+
+dann als Schmitt-Trigger. Dadurch werden
+die Signale sauberer und Fehlsignale verringert. Dieses aufbereitete Signal kann
+dann im Digitalteil der Schaltung weiter
+verarbeitet werden.
+
+Aufbau für I²C-Übertragung
+In Abb. 6 ist der optische Aufbau für eine
+bidirektionale optische Übertragung für
+I²C-Signale schematisch skizziert.
+Für die I²C-Übertragung werden drei
+Kanäle benötigt:
+ Ein Kanal für das Clock-Signal (SCK),
+das vom Master, einem Microcontroller
+(Arduino), an den Slave geschickt wird.
+ Ein Kanal für das Daten-Signal (SDA)
+vom Master zum Slave.
+ Ein Rück-Kanal für das Daten-Signal
+(SDA) vom Slave zum Master.
+Der Master-Transceiver hat zwei Sender
+und einen Empfänger. Er sendet das ClockSignal mit der blauen LED und das SDA-
+
+mit Master-Transceiver (oben) und Slave-Transceiver (unten)
+
+
+Optik
+
+
+Signal mit der roten und empfängt das
+zurückgesendete grüne SDA-Signals des
+Slaves.
+Der Slave-Transceiver hat zwei Empfänger
+und einen Sender. Er empfängt das blaue
+Clock-Signal des Masters und das rote
+SDA-Signal vom Master. Wenn der Slave
+antwortet, sendet er mit der grünen LED.
+Bei galvanischer Ankopplung von Master
+und Slave würde die SDA-Leitung in
+beiden Richtungen verwendet. Die SDA-
+
+Leitung wird über Pull-Up-Widerstände
+nach High gezogen und vom Master oder
+Slave nach Masse gezogen. Bei der optischen Übertragung müssen Hin- und RückKanal aufgetrennt werden. Dafür gibt es
+den I²C-Transceiver-Baustein P82B96
+(siehe Abb. 7, [24]).
+Wer diesen IC nicht zur Verfügung hat oder
+wegen seines SO8-Formfaktors nicht
+verwenden will, kann die Trennung auch
+mit der kleinen Logik-Schaltung mit einem
+
+zum Auftrennen in Transmit- und Receive-Kanal
+
+
+Standard-CMOS-IC, die in Abb. 8 dargestellt ist, realisieren. Die Schaltung hat
+einen SDA-Anschluss, der wechselseitig
+von der SDA-Leitung des lokalen oder des
+entfernten I²C-Partners (RX) auf Low gezogen werden kann.
+Über die Diode D2 wird das vom entfernten
+Partner empfangene SDA-Signal ohne
+Kurzschlussgefahr auf die SDA-Leitung
+des lokalen Partners geführt. Um zu verhindern, dass der lokale Partner sendet,
+wenn ein Signal vom entfernten Partner
+anliegt, wird das Senden über TX (SDA)
+unterdrückt, wenn ein Low-Signal an RX
+(SDA) vom entfernten I²C-Partner anliegt.
+Denn durch das zweite NAND-Gatter wird
+der SDA-Low-Impuls vom sendenden Partner nur dann auf TX (SDA) weitergegeben,
+wenn RX (SDA) High ist.
+
+Master (gelb) und Slave (cyan) mit ClockSignal SCL (magenta). Sowohl beim Master
+als auch beim Slave wird das Empfangssignal
+der Gegenstelle über eine Diode an die SDALeitung geführt. Deshalb geht das Signal beim
+Empfang nur bis auf ca. 0,6 V herunter. Beim
+Senden zieht der Partner die Leitung vollständig auf Low.
+
+SDA-Signale von Master und Slave auf
+dem I²C-Bus. Man erkennt sehr schön, wie
+der Slave, ein ADS1115, nach Übertragung
+der Bitfolge für die I²C-Addresse die SDALeitung auf Low zieht, um ein Acknowledge zu signalisieren. Auf der Master-Seite
+wird dieses Acknowledge-Signal registriert
+und die dortige SDA-Leitung wird über die
+Diode D2 bis auf die Diodenspannung von
+
+0,6 V gegen GND gezogen. Dass das SDASignal vom Master vor diesem Acknowledge-Signal noch kurz auf High ist, wird
+durch Laufzeitverzögerung des Signals in
+der Schaltung verursacht. Mit der verwenden Schaltung beträgt diese etwas unter
+1 μs, was offenbar noch tolerabel ist.
+
+Aufbau mit fischertechnik
+
+Empfänger-Diode mit Grünfilter davor für den
+Empfang des SDA-Signals vom Slave
+
+In Abb. 10 ist der fischertechnik-Aufbau
+des Master-Transceiver gezeigt. Man erkennt (von oben nach unten) die SendeLED für SDA (rot), den Strahlteiler und
+senkrecht dazu die Sende-LED für SCL
+(blau). Danach folgt der von Sammellinsen
+umgebene Signaltrennungs-Block mit dem
+Strahlteiler.
+Am Eingang befindet sich eine große Kollimationslinse, am Ausgang die Sammellinse
+für die Einkopplung der Master-Signale (rot
+und blau) in den Wellenleiter und Kollimation des austretenden Rück-Signals des
+
+Slaves (grün). Um den Strahldurchmesser
+auf die Größe der Detektorfläche der
+Empfangsdiode zu bringen, ist eine weitere
+Sammellinse platziert. Der Detektor für das
+SDA-Signal des Slaves befindet sich in dem
+abgeschirmten DIY-Kupfer-Gehäuse hinter
+einer grünen Filterfolie. Diese ist wichtig,
+da sonst ungewollte Reflexionen des blauen
+SCL-Signals an den Linsen und am Strahlteiler durchschlagen. Der Detektor muss
+auch in drei Achsen justierbar sein. Wenn
+das rote SDA-Signal optimal eingestellt ist,
+kann das SCL-Signal durch Höhenverstellung der blauen LED und Verdrehung des
+ersten Strahlteilers auf das Ende des Lichtleiters justiert werden.
+Unten ist der Justierblock für das Lichtwellenleiterkabel zu sehen, dessen Aufbau
+zur Verdeutlichung separat in Abb. 12
+gezeigt ist. Mit dem Justierblock kann der
+
+Optik
+
+Lichtwellenleiter auf der Bauplatte in drei
+Achsen verschoben werden, um optimale
+Einkopplung zu erreichen.
+
+Justierblock für Lichtwellenleiter
+(TOS-Link-Leitung)
+
+Der Aufbau des Slave-Transceivers ist in
+LED für das SDA-Signal des Slaves, der
+
+und SDA-Transmitter (grüne LED)
+
+
+
+durch eine große Kollimations-Linse in den
+vorher beschriebenen dichroitischen Strahlteilerwürfel einstrahlt. Der Würfel trennt
+die beiden Signale vom Master in das rote
+SDA-Signal nach links und das blaue SCLSignal nach rechts. Vor den in drei Achsen
+verschiebbaren Empfangsdioden sind
+wieder Linsen und Farbfilterfolien platziert.
+Linse
+
+f
+
+Durchmesser
+
+L1
+
+50 mm
+
+30mm
+
+L2
+
+25 mm
+
+18mm
+
+L3
+
+20 mm
+
+18mm
+
+L4
+
+50 mm
+
+30mm
+
+L5
+
+25 mm
+
+18mm
+
+L6 (ft)
+
+35 mm
+
+23mm
+
+L7 (ft)
+
+2 × 70 mm
+~ 35 mm
+
+23mm
+
+Anwendungsbeispiel:
+Auslesen eines ADS1115 mit
+dem Arduino
+Als Anwendungsfall wurde der ADWandler ADS1115 an einen Arduino UNO
+angeschlossen. Das Programm initialisiert
+den AD-Wandler, liest die Spannungen
+kontinuierlich aus und gibt sie über die
+serielle Schnittstelle aus.
+
+Tabelle 2: Brennweiten f der verwendeten
+Linsen; Bezeichnungen gemäß Abb. 6
+
+Wie in den Abbildungen zu erkennen ist,
+wurden neben den optischen Teilen ein paar
+Halterungen für Linsen und LEDs mit dem
+3D-Drucker gedruckt. Die Parade dieser
+Teile ist in Abb. 13 zu sehen. Das parametrische Design wurde mit FreeCAD erstellt
+und die Quellen und STL-Dateien werden
+im fischertechnik-Forum zum Download
+zur Verfügung gestellt.
+
+Für die Receiver wird noch jeweils eine
+virtuelle Masse (siehe Abb. 5) benötigt, die
+wegen der Übersichtlichkeit in der Abbildung
+weggelassen wurde.
+
+Justage
+aus dem 3D-Drucker
+
+
+Im Folgenden wird die Einstellung des Aufbaus beschrieben. Je nach verwendeten
+Linsen und Emissionswinkeln der LEDs
+können sich andere Abstände des Aufbaus
+ergeben, die man durch Ausprobieren
+ermitteln muss. Die Justage besteht aus
+
+einer rein optischen Vorjustierung ohne
+Messgerät, gefolgt von einer Optimierung
+der elektrischen Signale. Hier ist ein Oszilloskop sehr hilfreich. Wenn man die LEDs
+mit einem Arduino im PWM-Betrieb
+ansteuert, kann man die Signale am Ausgang der Verstärkerstufen auch mit einem
+AC-Voltmeter messen.
+Optische Vorjustierung
+1.
+2.
+
+3.
+
+4.
+
+5.
+
+6.
+
+7.
+
+LEDs im Dauerbetrieb leuchten lassen
+Am Master wird mit dem Justierblock
+auf maximale Einkopplung von „Rot“
+justiert. Man beobachtet dabei das
+Licht, das aus der anderen Seite des
+Lichtleiters herauskommt.
+Danach erfolgt die Justage der maximalen Einkopplung von „Blau“. Hierbei dürfen nur der Strahlteiler und die
+Höhe der LED verändert werden.
+Am Slave wird mit dem Justierblock,
+der Position der LED und der Linse auf
+maximale Einkopplung von „Grün“
+justiert.
+Am Slave bringt man den Spot des
+blauen Signals auf Receiver-Fotodiode
+durch Drehen des Strahlteilers; Verschieben der Höhe der Linse und der
+Detektorposition.
+Der Spot des roten Signals wird auf die
+Receiver-Fotodiode gebracht. Verstellt
+werden dürfen dabei nur Linse und
+Detektorposition.
+Zurück zum Master: Der Spot des
+grünen Signals wird auf Receiver-Fotodiode für „Grün“ gebracht: Nur durch
+Drehung des Strahlteilers, Verschiebung der Linse und der Detektorposition.
+
+Feinabstimmung mit Elektronik
+8.
+
+9.
+
+Das Programm zum Auslesen des ADWandlers (Continuous.ino in examples/
+Continuous [19]) wird in den Arduino
+geladen.
+Der grüne Kanal wird unterbrochen
+und das Trimmpotentiometer für den
+
+Optik
+
+grünen Kanal so eingestellt, dass die
+rote und blaue LED blinken.
+10. Durch feinere optische Justage: Signale
+für rot und blau an den Ausgängen der
+Verstärkerstufen optimieren, sodass ein
+Signalpegel von mind. 200 mV erreicht
+wird (Auf Spikes achten!).
+11. Trimmpotentiometer der Komparatoren so einstellen, dass die gesendeten
+Signale repliziert werden. Wenn „Rot“
+und „Blau“ richtig eingestellt sind,
+sollte die grüne „LED“ im Slave hell
+blinken.
+12. Der Strahlengang für „Grün“ wird freigegeben und das Potentiometer für den
+Empfänger im Master vorsichtig eingestellt, bis die Schaltung „zündet“ und
+alle LEDs stroboskopisch zu flackern
+beginnen. Wenn dann in der ArduinoKonsole noch richtige Werte angezeigt
+werden, kann man sich freuen und das
+Glücksgefühl genießen, dass es läuft.
+Dreht man das Potentiometer zu weit
+oder liegen Störungen vor, hängt sich
+die Schaltung auf. Sollten sich die
+Betriebsbedingung nicht erreichen
+lassen, kann dies auf Spikes, TimingProbleme, auf zu schwache oder zu
+starke Signale zurückzuführen sein.
+13. Alternativ kann man auch die SDASignale an Slave und Master mit einem
+Oszilloskop, sofern zur Hand, beobachten und so wie in Abb. 9 gezeigt einstellen.
+
+Fazit
+Dieser Beitrag zeigt, wie man eine bidirektionale optische Übertragungsstrecke mit
+fischertechnik realisieren kann. Das fischertechnik-Baukastensystem hat sich für das
+schnelle Ausprobieren von Prototypen als
+sehr flexibel und nützlich erwiesen. Eine
+asynchrone Zwei-Kanal-Übertragung lässt
+sich mit wenig Aufwand realisieren. Hier
+reichen Mikroskop-Objektträger als Strahlteiler aus.
+Die synchrone Übertragung von I²C-Signalen bis 100 kHz erfordert drei Kanäle und
+
+
+
+eine schnellere Elektronik und ist deshalb
+anspruchsvoller. Die notwendigen Konzepte, Schaltungen und Aufbauten wurden
+beschrieben. Die Signal-Verzögerung liegt
+bei unter einer Mikrosekunde.
+Meine „Lessons Learnt“ bei diesem Projekt
+habe ich in Tab. 3 zusammengestellt.
+
+Ausblick
+Wünschenswert wäre ein fischertechnikTransceiver-Baustein (Silberling), der einen
+Empfänger und einen Sender enthält,
+Probleme
+
+vorzugsweise mit Spannungs-Kompatibilität mit dem fischertechnik-System und dem
+Arduino. Dafür bräuchte man ein entsprechendes kompaktes Platinen-Layout für
+die zahlreichen elektronischen Komponenten in SMD-Ausführung.
+Als Justierhilfe könnte ich mir ein ArduinoProgramm vorstellen, mit dem man ohne
+Messgerät auskommt. Der Arduino müsste
+die LEDs pulsen und die empfangenen
+Signale auswerten. Das Programm könnte
+die Signalstärke und die Verzögerung
+
+Maßnahmen
+
+Optik
+optische Verluste durch
+Vignettierung
+
+größere Kollimatorlinsen nahe der LEDs
+LEDs mit kleinem Emissionskegel (20°)
+
+Reflexionsverluste an Linsen und
+Strahlteilern
+
+(Dichroitische) Strahlteiler
+LEDs mit großer Lichtstärke
+
+Einkopplungsverluste
+
+Linsen mit kleiner Brennweite nahe Lichtleiter
+
+Übersprechen der Signale
+
+Unterschiedliche LED-Farben und Farbfilter
+
+Elektronik
+Delay des übertragenen Signals
+
+Einsatz schneller Operationsverstärker
+Vermeiden von Übersteuerung
+
+Entstehung von Störsignalen
+
+Abschirmung der Leitungen für die LEDs
+
+Einstreuung von Störsignalen
+
+Abschirmung der Detektoren und der Zuleitungen
+Trennung Digital- und Analogteil
+Sauberer elektrischer Aufbau (keine fliegenden Leitungen)
+
+Ringing und Spiking
+
+Hysterese beim Komparator durch Feedback-Widerstand
+zum nicht-invertierenden Eingang
+Block-Kondensatoren für Spannungsquellen
+
+Fremdlicht-Empfindlichkeit
+
+Kapazitive Kopplung der Verstärkerstufen, Farbfilter, Blenden
+und Einhausung
+
+Schwingungen der Verstärker
+
+Kondensatoren parallel zu den Feedback-Widerständen
+Widerstand am Eingang nach Masse
+
+Stabilität der Schaltung
+
+Justage auf große Signalpegel von mind. 200 mV
+
+Mechanik
+schlechte Fixierung der LEDs und
+Linsen
+
+Konstruktion spezieller 3D-Druckteile
+
+Justierbarkeit des Aufbaus
+
+Justierblock für LWL
+
+Stabilität des Aufbaus
+
+Verstärkung mit Riegeln
+
+Tabelle 3: Probleme und Maßnahmen zur Lösung
+
+messen und auch, ob das Signal korrekt
+repliziert wird oder ob Drop-Outs oder
+Spikes vorhanden sind.
+Für den Einsatz als Datenübertragung in ein
+rotierendes System ist der Aufbau mit
+Lichtwellenleiter noch zu unhandlich.
+Eventuell ließe sich, wie im Forum vorgeschlagen, mit recycelten Bauteilen aus
+einem CD-RW-Laufwerk eine kompaktere
+Lösung entwickeln.
+Meines Erachtens wäre es aussichtsreich,
+wenn man statt des Lichtwellenleiters eine
+Freifeld-Übertragung wählen und die LED
+und Empfangsdioden mit vorgeschalteten
+Filtern nahe der Achse platzieren würde.
+Dann könnte man sich Strahlteiler und
+Linsen sparen, hätte nicht Verluste durch
+die Einkopplung und die Justage wäre
+unproblematischer. Die optoelektronischen
+Bauelemente könnten auch direkt auf eine
+kleine Platine gesetzt werden, was auch
+schaltungstechnisch von Vorteil wäre.
+Es würde mich freuen, wenn dieser Beitrag
+etwas von meiner Begeisterung für die optischen Experimente mit fischertechnik vermitteln konnte und er Anregung für weitere
+Projekte in diesem Bereich ist.
+
+Quellen
+[1]
+
+Wikipedia: Kollimation.
+
+[2]
+
+Wikipedia: Dichroismus.
+
+[3]
+
+Wikipedia: Interferenzfilter.
+
+[4]
+
+Wikipedia: Spiking.
+
+[5]
+
+Wikipedia: Überschwingen.
+
+[6]
+
+Wikipedia: Photophon.
+
+[7]
+
+Karel Kulhavy: Ronja. Projekt zur
+optischen Datenübertragung.
+
+[8]
+
+Tsai-Chen Wu, Yu-Chieh Chi, HuaiYung Wang, Cheng-Ting Tsai &
+Gong-Ru Lin: Blue Laser Diode
+Enables Underwater Communication
+at 12.4 Gbps. Auf nature.com.
+
+[9]
+
+Wikipedia: Optischer Richtfunk.
+
+Optik
+
+[10] RP Photonics Encyclopedia:
+Acceptance Angle in Fiber Optics.
+[11] Robert Keim: Design Tips for Photodiode Amplifiers. Auf All About
+Curcuits, 2021.
+[12] Christof Ermer: Photo DIODEN
+Strom-Spannungswandler = Transimpedanz Verstärker. Uni
+Regensburg, 2022.
+[13] Bonnie Baker: Design Transimpedance Amplifiers for Precision OptoSensing. Digi-Key Electronics, 2017.
+[14] Miro Samek: Opto-electrical Isolation of the I2C-Bus. embedded.com.
+[15] SG Micro Corp: SGM80581/
+SGM80582/SGM80584 220MHz,
+Rail-to-Rail I/O, CMOS Operational
+Amplifiers. Datenblatt, 2019.
+[16] Texas Instruments: LFx5x JFET
+Input Operational Amplifiers.
+Datenblatt, 2015.
+[17] Vishay: BPW34, BPW34S Silicon
+PIN Photodiode. Datenblatt, 2011.
+[18] Wolfgang Ewald: ADS1115 – A/DWandler mit Verstärker. Auf Wolles
+Elektronikkiste, 2020.
+[19] Wolfgang Ewald: ADS1115_WE.
+Arduino-Library zum Auslesen eines
+ADS1115 über I²C, GitHub, 2022.
+[20] Kingbright: T-1 3/4 (5mm) SOLID
+STATE LAMP. Datenblatt zu verwendeter LED, bei Reichelt, 2013.
+[22] Luckylight: 5mm Round With Flange
+Type Blue LED Technical Data
+Sheet. Datenblatt zu verwendeter
+LED, Reichelt, 2009.
+[23] Sloan AG: Series L5 / Ø 5mm, T1 ¾, Colour: green. Datenblatt zu
+verwendeter LED, Reichelt, 2011.
+[24] NXP Semiconductors: P82B96 Dual
+bidirectional bus buffer. Datenblatt,
+2021.
+
+
+

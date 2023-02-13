@@ -1,0 +1,61 @@
+
+
+Editorial
+
+Die Communities kommen
+Dirk Fox, Stefan Falk
+fischertechnik zählte Anfang der 80er Jahre
+des vergangenen Jahrtausends zu den Vorreitern dessen, was wir heute als „Digitalisierung“ bezeichnen: Für fast jeden der
+damals gängigen Home-Computer und
+später auch für die ersten PCs gab es ein
+Interface, mit dem fischertechnik-Modelle
+angesteuert werden konnten.
+Über die Jahr(zehnt)e wurden daraus immer
+leistungsfähigere Controller, die mit dem
+Vorläufer von ROBO Pro, einer auch von
+Kindern leicht erlernbaren grafischen Programmiersprache, oder auch direkt in einer
+Hochsprache programmiert werden konnten. Technisch waren diese Controller den
+Mitbewerberlösungen meist deutlich überlegen – und sind das auch heute noch.
+Im Wettlauf um den leistungsfähigsten
+Controller, der im Internet oder Spielwarenladen oft stumpf über einen Vergleich der
+technischen Daten entschieden wird, entglitten dabei ein wenig die Kosten – sowohl
+die, die ein Kunde heute für einen TXT
+Controller auf den Tisch legen als auch die,
+die fischertechnik für die Weiterentwicklung und Pflege des Betriebssystems und
+der Programmiersprache ROBO Pro aufwänden muss.
+Derweil wächst die Bedeutung von OpenSource-Kleinstcontrollern und -Programmierumgebungen, an deren Weiterentwicklung oft zigtausend Freiwillige aus der FanGemeinschaft mitwirken. Zu den wichtigsten Controllern zählen der Arduino (2005),
+der Raspberry Pi (2012), der BBC micro:bit
+(2015) und der darauf aufbauende Calliope
+mini (2017). Als Programmierumgebung
+haben Scratch (2007) und die Arduino-IDE
+
+inzwischen eine große Verbreitung erreicht.
+Und trotz diverser praktischer Nachteile –
+so sind die Anschlüsse des Arduino nicht
+kurzschlussfest, und schützende Gehäuse
+muss man für alle Open-Source-Controller
+separat erwerben (oder selbst entwickeln) –
+halten diese Controller und Programmierumgebungen Einzug in immer mehr Haushalte – und vor allem auch in Schulen.
+Zugleich geriet das Controller-“Flagschiff“
+von fischertechnik, der TXT, in die Fänge
+der fischertechnik-Fangemeinde – und hat
+nicht nur ein Betriebssystem-Upgrade
+verpasst bekommen, sondern kann dank
+entsprechender Treiberentwicklungen unter
+anderem mit Python und Blockly programmiert werden. Und nun schleicht sich
+sogar mit dem ftduino ein kurzschlussfester,
+fischertechnik-kompatibler Open-SourceEinsteigercontroller in den Markt…
+Das ist eine Entwicklung, die fischertechnik
+erfreuen und tatkräftig unterstützen sollte.
+Denn auf mittlere Sicht wird fischertechnik
+nur dann Terrain in Schulen und Kinderzimmern zurückerobern können, wenn die
+Controller moderate Preise haben, viele
+Programmiersprachen unterstützen und es
+passende Treiber und interessante Programme in großer Vielfalt gibt. Wie man als
+Hersteller eine solche Entwicklung befördert, kann man sich bei anderen OpenSource-Projekten abgucken – mal sehen, ob
+fischertechnik das gelingt.
+Beste Grüße, Euer ft:pedia-Team
+P.S.: Am einfachsten erreicht ihr uns unter
+ftpedia@ftcommunity.de oder über die Rubrik ft:pedia im Forum der ft-Community.
+
+

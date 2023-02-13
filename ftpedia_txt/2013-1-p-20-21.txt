@@ -1,0 +1,76 @@
+
+
+Tipps & Tricks
+
+ft-Spezialteile made by TST (Teil 3)
+Andreas Tacke
+In einer lockeren Reihe stellt TST einige von ihm entwickelte Spezialteile vor, die so manche
+Lücke beim Bauen mit fischertechnik schließen. Nach seinen Antriebswellen mit MotorAdaptern (ft:pedia 2/2012) und seiner Lösung für die stabile Montage von Power-Motoren
+(ft:pedia 3/2012) folgt ein Spezialteil, das die Herzen von Roboter-Fans höher schlagen
+lassen dürfte.
+In meinem heutigen Beitrag geht es um
+eine Alternative zum Greifzangengetriebe
+32342. In den 80er Jahren gab es den
+Trainingsroboter-Baukasten (30572, Abb.
+1).
+
+Die Spindel besitzt auf der einen Seite ein
+Rechts- und auf der anderen ein Linksgewinde. Somit werden die Muttern
+zusammen oder auseinander gefahren. Der
+Baustein 15 mit Bohrung dient zur
+Führung und zur Verdrehsicherung.
+Ich habe einen Minigetriebehalter hergenommen und für diesen eine Spindel mit
+Rechts- und Linksgewinde M4 angefertigt.
+
+
+In diesem Baukasten gab es ein spezielles
+Getriebe zum Bau der Greifzange (Abb. 2).
+Dieses Getriebe gab es nur in diesem Baukasten, daher ist es heute sehr selten. Wer
+eines besitzt, gibt es auch nicht wieder her.
+
+
+Weiter stellte sich das Problem, dass die
+Bausteine mit den Gewindeeinsätzen
+schwer zu bekommen waren – also selber
+machen. Dazu nahm ich den Baustein
+32321 und versah diesen mit Gewindeeinsätzen, einmal Rechts- und einmal
+Linksgewinde. Die mit Linksgewinde
+kennzeichnete ich durch einen blauen
+Punkt auf einem Zapfen.
+
+
+Mit dem so modifiziertem Getriebehalter
+lässt sich nun ähnlich wie mit dem
+Greifzangengetriebe 32342 eine Greifzange aufbauen.
+
+Tipps & Tricks
+
+Eine weitere sehr interessante Anbauvariante hat Jan Werner aufgezeigt. Er hat
+an seinem 5-Achs-Roboter auch meinen
+Getriebehalter für seine Greifzange
+benutzt. Diese Variante ist sehr kompakt
+und für diese Anwendung, finde ich, die
+perfekte Lösung (Abb. 7).
+
+am Mini Motor
+
+Durch den Anbau einer weiteren Führungsstange lassen sich auch wirklich große
+Greifzangen realisieren, in Abb. 6 z. B. mit
+zwei V-Grundplatten 45 x 45 x 5,5 zu
+sehen.
+
+von J. Werner
+
+Ansonsten kann man dieses Getriebe für
+verschiedene Anwendungen nutzen: immer
+da wo Teile linear auf und zu bewegt
+werden sollen, wie z. B. bei Schiebetüren.
+Da sieht man mal wieder, wenn es etwas
+nicht mehr gibt, findet sich meistens eine
+Möglichkeit, diese Lücke durch einen
+Nachbau zu schließen…
+
+V-Grundplatten 45x45x5,5.
+
+
+

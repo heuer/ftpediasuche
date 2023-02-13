@@ -1,0 +1,186 @@
+
+Mechanisches Rechnen
+
+Mechanisches Rechnen
+
+Die Ewigkeitsmaschine
+Dirk Fox
+Viele wichtige mathematische Zusammenhänge werden in der Schule nur in der Theorie vermittelt. Da sie sich damit der unmittelbaren Anschauung entziehen, wird ihre Bedeutung oft
+nicht verstanden. Einige dieser Zusammenhänge könnte man mit einem mechanischen fischertechnik-Modell sehr anschaulich darstellen – wie zum Beispiel exponentielles Wachstum.
+
+Hintergrund
+Exponentielles Wachstum können sich
+Menschen nachweislich nur sehr schwer
+vorstellen [1]. Dabei war und ist das Verständnis exponentiellen Wachstums entscheidend für eine angemessene Reaktion
+auf sehr viele – nicht zuletzt (geo-) politische – Herausforderungen, wie beispielsweise die Entwicklung des Bevölkerungswachstums in Entwicklungsländern bei
+einer Verbesserung der medizinischen Versorgung oder die Ausbreitung von ansteckenden Krankheiten.
+
+Grafik wirklich etwas Konkretes vorstellen?
+Dabei haben wir es im täglichen Leben
+immer wieder mit Fragen zu tun, die man
+nur richtig beantworten kann, wenn man
+sich klarmacht, dass exponentielles Wachstum hinter dem Phänomen steckt – und dann
+genauer nachrechnet. Dazu zählt z. B. die
+Frage, wie viel Geld ein um 0,25 % geringerer Kreditzins beim Wohnungskauf über
+die Laufzeit spart oder welcher Kaufkraftverlust eintritt, wenn das Gehalt fünf Jahre
+lang nicht steigt.
+Richtig – man lernt in der Schule auch, wie
+man das ausrechnet: Mit der Zinsformel, die
+das aktuelle Kapital K bei festem Zinssatz Z
+aus einem Anfangskapital KA bestimmt:
+=
+
+∙ (1 + )
+
+Dabei steht n für die Zahl der Sparjahre.
+Wenn allerdings n und KA sehr klein sind,
+ist die Wirkung des Zinseszinseffekts nicht
+sichtbar. Anschaulicher wird das erst bei
+einem etwas „größeren“ Beispiel.
+So verkauften die Indianer im Jahr 1627 die
+Insel Manhattan angeblich für 24 $ an den
+Niederländer Pieter Minnewit [2].
+
+Natürlich lernt man im Schulunterricht, wie
+eine Exponentialfunktion verläuft (Abb. 1).
+Aber kann man sich unter einer solchen
+
+Hätten sie den Betrag damals mit 4 % Zinsen über die seither vergangenen 388 Jahre
+angelegt und nicht angetastet, wäre daraus
+ein Vermögen geworden, nämlich:
+= 24 ∙ 1,04
+
+= 97.531.946 $
+
+
+
+Das könnte heute glatt für ein kleineres
+Grundstück reichen.
+So anschaulich das Beispiel ist – zu Lebzeiten hätten die Indianer davon nichts gehabt.
+Ein zweites Beispiel mit einem vielleicht
+noch überraschenderen Ergebnis: Angenommen, wir besäßen ein riesiges Stück
+90g-Papier mit einer Materialstärke von
+0,09 mm. Wie oft müssen wir dieses Papier
+falten, um den Abstand zwischen Erde und
+Mond (384.400 km) zu überbrücken?
+Na, was schätzt ihr?
+Und jetzt überprüft eure Schätzung bitte
+anhand der folgenden einfachen Rechnung:
+0,09 mm ∙ 2 = 384.400 km
+384,4 ∙ 10
+log(42,71 ∙ 10 )
+=
+log 2
+
+
+Anfang des Jahrtausends installierte der
+US-amerikanische „Maschinen-Künstler“
+Arthur Ganson (*1955) [4] eine „Machine
+with Concrete“ (Abb. 3), die demselben
+Prinzip folgt. Er schaltete 12 Untersetzungen 1:50 hintereinander, montierte für das
+erste Zahnrad einen Antrieb mit 200 U/min
+– und verschraubte das letzte Zahnrad mit
+einem Granitblock.
+
+2 =
+
+Und? Wie oft müsst ihr falten?
+
+Das Ergebnis wird euch (die Informatiker
+ausgenommen [3]) sicherlich überraschen.
+Es ist ein sehr schönes Beispiel dafür, wie
+schwer es dem menschlichen Gehirn fällt,
+exponentielles Wachstum nachzuvollziehen [1]. Aber auch für dieses Beispiel gilt:
+Es hat keinen Realitätsbezug. Wie sollte
+man denn beispielsweise die letzte Faltung
+vornehmen?
+
+Übersetzungen
+Tatsächlich gibt es eine sehr viel anschaulichere Möglichkeit, um exponentielles
+Wachstum ganz real „sichtbar“ zu machen.
+Die Idee geht zurück auf eine Skizze Leonardo da Vincis (1452-1519) aus dem lange
+verschollenen und erst 1953 wiederentdeckten Codex Madrid (Abb. 2). Sie zeigt, wie
+durch eine wiederholte Untersetzung das
+Drehmoment an einem Seilzug verstärkt
+wird.
+
+Ganson (Foto: Shervinafshar, CC BY-SA 3.0)
+
+Warum letzteres kein Problem darstellt,
+kann man leicht nachrechnen: Mit jeder Untersetzung reduziert sich die Geschwindigkeit G um den Faktor 50. Bei 12 Untersetzungen gilt also für das letzte Zahnrad:
+U
+min
+Oder, anschaulicher dargestellt: Die Zeit T,
+die erforderlich ist, damit das letzte Zahnrad
+sich um einen Zahn weiterdreht (sich also
+das elfte Zahnrad einmal komplett gedreht
+hat), liegt etwa bei:
+= 200 ∙ 50
+
+=
+
+min = 46.449.890.601 Jahren.
+
+46,45 Milliarden Jahre – das dürfte der
+kleine Motor schwerlich überleben.
+
+Eine solche Ewigkeitsmaschine lässt sich
+natürlich auch mit fischertechnik konstruieren. Martin Romann hat das getan – und am
+28.10.2012 ein Video seiner Maschine auf
+YouTube publiziert (Abb. 4).
+
+Mechanisches Rechnen
+
+Montiert man das letzte Z40 fest und
+schließt vorne einen guten alten grauen
+fischertechnik-Motor an (8.000 U/min bei
+9V Betriebsspannung), dann berechnet sich
+die Zeit T, die vergeht, bis das letzte
+(zehnte) Z40 um einen Zahn weitergedreht
+wurde, wie folgt:
+min = 62.343,98 Jahre
+8000
+Unwahrscheinlich, dass der graue Motor
+(mit bereits 40 Jahren „Berufserfahrung“)
+das noch erlebt.
+=
+
+
+Dabei hat er die maximale mit einem
+fischertechnik-Getriebe realisierbare Untersetzung von 1:40 (Schnecke auf Z40) verwendet.
+Eine Ewigkeitsmaschine mit zehn Z40 lässt
+sich sogar noch etwas kompakter auf einem
+Experimentierboard unterbringen (Abb. 5).
+
+Aber mit diesem Modell lässt sich exponentielles Wachstum „zum Anfassen“ konstruieren: ideal für eine anschauliche Mathematikstunde.
+Eine fischertechnik-Designer-Datei
+Modells gibt es hier zum Download.
+
+des
+
+Quellen
+[1]
+
+Dietrich Dörner: Die Logik des Misslingens. Strategisches Denken in
+komplexen Situationen. rororo, 1992.
+
+[2]
+
+Rulf Neigenfind: Wie erklären Sie
+jemand, der Sie fragt, wie ein Computer funktioniert, wie ein Computer
+funktioniert? IBM Deutschland,
+1980.
+
+[3]
+
+Douglas Adams: The Hitchhiker’s
+Guide to the Galaxy. Del Rey, 1978.
+
+[4]
+
+Arthur Ganson: Machines.
+
+Experimentierplatte
+
+
+

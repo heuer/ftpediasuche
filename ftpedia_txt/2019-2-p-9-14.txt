@@ -1,0 +1,264 @@
+
+Grundlagen
+
+Grundlagen
+
+Rundbögen
+Rüdiger Riedel
+Bautechnik fundamental, oder Stein auf Stein.
+Im ft:c-Bilderpool findet sich der Untertitel
+„Bauwerke“. Die meisten Modelle darunter
+sind Skelettbauten, nur einige wenige entsprechen dem, was man sich unter einem
+Haus oder Gebäude vorstellt, z. B. das
+„kleine Haus mit Angeber-Flitzer“ [1] oder
+die „Tower Bridge“ [2]. Auf den Conventions gab es auch eine großartige Ritterburg
+zu sehen. Wir werden nun die fischertechnik-Bausteine wie einfache Holzbauklötze
+behandeln und sehen, was sich damit
+erreichen lässt und welche Erkenntnisse wir
+daraus gewinnen können.
+
+Der Kragbogen
+Für den Anfang weichen wir vom Titel ab:
+Wir bauen einen „falschen Bogen“, die
+technische Bezeichnung dafür ist Kragbogen [3]. Wenn wir aus der lose aufgeschichteten Bausteinmauer (vorsichtig) drei
+Bausteine hinausschieben, fallen drei weitere herunter und es entsteht ein Tor, ein
+falscher Bogen (Abb. 2).
+
+
+Seine Tragfähigkeit ist gering, stabilisiert
+wird er durch das Gewicht der übrigen
+Mauersteine.
+Diese Art Bogen war in der mittel- und südamerikanischen Architektur verbreitet, der
+echte Bogen war dort nicht bekannt.
+
+Echte Bögen
+Erfunden wurde der echte Bogen wahrscheinlich im Zweistromland 700 v. Chr.;
+zur Blüte gelangte er bei den Römern, die
+damit Tor- und Fensterbögen, Brückenbögen und die berühmten Aquädukte
+bauten.
+So ein Bogen besteht aus einer gewissen
+Anzahl von Keilsteinen. Die Basis des
+Bogens wird rechts und links von je einem
+Kämpfer genannten Stein gebildet. Darauf
+folgen die Keilsteine und symmetrisch am
+Scheitel wird der Schlussstein eingesetzt.
+
+
+Die Umsetzung mit fischertechnik-Steinen
+erwies sich als ziemlich diffizil. Den ersten
+Erfolg erreichte ich mit Keilsteinen,
+
+
+
+bestehend aus dem Verbund von je einem
+BS30, einem Winkelstein 15° und einer
+Bauplatte 15·30 2Z (Abb. 4).
+
+
+Fritzlar, eig. Aufnahme
+
+Der Schlussstein besteht ebenfalls aus
+einem BS30, dazu zwei Winkelsteinen 15°
+und zwei Bauplatten 15·30 2Z. In Abb. 4
+fügt er sich noch nicht richtig in den Bogen
+ein, die Basis muss also verbreitert werden.
+Nur die Gewichts- und Keilkräfte halten
+den Bogen zusammen.
+
+
+Der Bogen in Abb. 6 besteht aus den Keilsteinen BS15 plus WS 15° und dem
+Schlussstein BS15 plus zwei WS 15°.
+Aufgebaut wird er liegend auf einer glatten
+Unterlage, z. B. einer Statikplatte 180 · 90
+für kleine Bögen oder einer Grundplatte
+500. Die Unterlage wird dann zusammen
+
+
+
+Grundlagen
+
+mit dem Fundament vorsichtig (!) in die
+Senkrechte gebracht und die Unterlage
+vorsichtig nach hinten weggezogen.
+
+Für mich überraschend ist ein Aufbau mit
+fischertechnik recht einfach und gelingt oft
+schon auf Anhieb – siehe Abb. 8.
+
+Segmentbögen
+
+Die zweimal fünf Keilsteine bestehen aus je
+einem BS15 und einem Winkelstein 7,5°,
+der Schlussstein aus einem BS15 und zwei
+Winkelsteinen 7,5°. Die Auflager müssen
+hier einen Winkel von 45° gegen die
+Waagerechte aufweisen, dargestellt durch
+je einen WS 30° und einen WS 15°.
+
+Einen schönen Segmentbogen habe ich auf
+der Felsburg in Felsberg (Nahe Fritzlar)
+gefunden:
+
+Diesen Bogen habe ich wieder liegend auf
+einer Grundplatte 500 zusammengefügt. In
+der Praxis kann so natürlich nicht verfahren
+werden, hier werden Lehrgerüste verwendet.
+
+
+Er besteht nicht mehr aus einem Halbkreis,
+sondern nur aus einem Kreissegment.
+Dadurch lassen sich größere Spannweiten
+bei verringerter Scheitelhöhe erzielen. Die
+flache Bauweise ist besonders vorteilhaft
+für weit gespannte Brücken. Der größere
+Seitenschub gegenüber Rundbögen kann
+hier im Allgemeinen in das Erdreich an
+Anfang und Ende eingeleitet werden.
+
+Bausteine, unten der Bogen im Rohbau
+
+
+
+
+Im Modell verwende ich einen Bogen 60°
+(zwei Bogenstücke 60 Nr. 36308 und ein
+Flachträger Nr. 36305) mit je zwei WS 7,5°
+und einem BS7,5 an den Enden, er liegt lose
+auf den unteren Widerlagern. Darauf
+werden die Keilsteine (je ein WS 7,5° und
+ein BS7,5) und der Schlussstein aus einem
+BS7,5 und zwei WS 7,5° aufgelegt.
+
+
+ist entfernt
+
+Auf Lanzarote hatte ich einen Tordurchgang gesehen, dessen Bogen nur am
+Schlussstein und an den Auflagern keilförmig bearbeitet war, vier weitere Steine
+waren quaderförmig.
+
+Der Bogen 60° wird vorsichtig zur Seite
+herausgezogen (das Lehrgerüst wird entfernt) und die Brücke ist fertig.
+
+Scheitrechter Bogen
+Manchem Baumeister hat es wohl nicht
+gefallen, den Fenster- oder Türsturz bogenförmig auszuführen. Es wurde somit ein
+Bogen mit waagerechtem Aussehen erfunden, der Scheitrechte Bogen oder Horizontalbogen.
+
+
+Das lässt sich tatsächlich nachbauen und
+ähnelt
+einem Scheitrechten Bogen
+(Abb. 13).
+Ein ganz bekannter Bogen fehlt uns noch,
+der
+
+Spitzbogen oder Gotische
+Bogen
+Vor allem im Kirchenbau fand der Spitzbogen große Verbreitung.
+Scheitrechten Bogen
+
+Konstruktiv ist es ein Segmentbogen, dessen Keilsteine so bearbeitet werden, dass
+sich eine waagerechte Unter- und evtl.
+Oberkante ergibt.
+
+
+Er besteht rechts und links aus zwei Kreissegmenten, die sich in einer Spitze treffen.
+
+
+Grundlagen
+
+Formen (parabelähnlichen und normalen
+Spitzbögen) stehen statisch ungünstige wie
+Rundbögen mit ihrem starkem Seitenschub
+[5].
+
+
+Auf die günstigste Form des unbelasteten,
+nur sein Eigengewicht tragenden Bogens
+kommt man durch einen Vergleich mit einer
+hängenden Kette. In dieser treten nur Zugkräfte auf, dreht man sie in Gedanken um
+180°, dann erhalten wir einen Bogen, in
+dem durch sein Eigengewicht nur Druckkräfte auftreten [4].
+
+
+Der breite Spitzbogen hat Keilsteine,
+bestehend aus dem Verbund von je einem
+BS30, einem Winkelstein 7,5° und einer
+Bauplatte 15·30 2Z. An der Spitze wird er
+von einem Verbund aus zwei BS30
+abgeschlossen.
+
+
+Eine gute Annäherung an diese Katenoide
+(Kettenlinie, Kettenkurve, Seilkurve) bildet
+der Parabelbogen.
+
+Statik
+Geschichtetes Mauerwerk besitzt überhaupt
+keine Zugfestigkeit. Auch Mörtel ändert
+daran wenig. Seine Aufgabe ist es, die
+Auflage der Steine zu verbessern, nicht
+aber, die Steine zu verkleben. Die Druckfestigkeit von Natursteinen ist in [7]
+gelistet, die Biegezugfestigkeit erreicht oft
+nicht mal 10% davon. Also sollten Bögen so
+gestaltet werden, dass sie hauptsächlich auf
+Druck beansprucht werden.
+Die einzelnen Bogenformen sind statisch
+verschieden günstig. Neben günstigen
+
+
+
+
+
+Abschluss
+
+Quellen
+
+Zum Schluss habe ich noch einen breiten
+Rundbogen aufgebaut.
+
+[1]
+
+Stefan Falk: Kleines Haus mit
+Angeber-Flitzer im Bilderpool der ftCommunity.
+
+[2]
+
+Frederik Vormann: Tower Bridge im
+Bilderpool der ft-Community.
+
+[3]
+
+Wikipedia: Kragbogen.
+
+[4]
+
+Wikipedia: Bogen (Architektur).
+
+[5]
+
+Georg Hoeltje, Fritz Viktor Arens:
+Bogen (in der Architektur). In: Reallexikon zur Deutschen Kunstgeschichte, Bd. II (1942), Sp. 976–994.
+
+[6]
+
+Stefan M. Holzer: Statische Beurteilung historischer Tragwerke, Band 1,
+Mauerwerkskonstruktionen.
+
+[7]
+
+Ulrich Huster: Tragverhalten von
+einschaligem Natursteinmauerwerk
+unter zentrischer Druckbeanspruchung, S. 5.
+
+
+Er hält zwar, aber schön ist er nicht. Eine
+verbesserte Ausführung folgt in Abb. 19.
+Die 10 Keilsteine sind aus je zwei BS30 und
+einem WS15° zusammengesetzt, der
+Schlussstein aus einem BS30 und zwei
+WS15°.
+
+
+
+

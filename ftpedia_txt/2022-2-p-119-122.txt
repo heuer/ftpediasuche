@@ -1,0 +1,174 @@
+
+Computing
+
+Computing
+
+Einführung in ftScratch (2): Der Münzautomat
+Dirk Fox
+Scratch ist eine für Einsteiger und Schulen besonders geeignete Programmiersprache. Die
+Entwicklungsumgebung ftScratch3 unterstützt mit entsprechenden Erweiterungen die fischertechnik-Controller TXT und BT Smart [1]. In dieser Serie führen wir in die Programmierung
+mit ftScratch ein – mit kleinen Modellen und Aufgaben.
+
+Der Münzautomat
+In sehr unterschiedlichen Anwendungen
+benötigen wir eine Mechanik, die einzelne
+Objekte ausgibt und dabei zählt. So einen
+Mechanismus finden wir beispielsweise in
+Automaten mit Münzausgabe.
+Ein Münzausgabeautomat lässt sich mit
+fischertechnik sehr elegant mechanisch
+konstruieren: Wir haben Exzenterscheiben,
+
+Röhren, in denen wir einen Münzvorrat vorhalten können, und mit wenigen Bauplatten
+gelingt ein hübscher Auswurfschacht. Ein
+Modell eines solchen Automaten findet sich
+z. B. in den Experimentierbüchern Profi
+Computing [2] und Profi Sensoric [3].
+Unser Modell in Abb. 1 arbeitet nach demselben Prinzip und verwendet auch den
+flachen Schieber (35970) für den Auswurf
+der Münzen (Abb. 2).
+
+
+
+
+
+Aufgaben
+Aufgabe 1
+
+
+Für den Automaten eignen sich Ein-Euround 50-Cent-Münzen aufgrund ihrer Höhe
+besonders gut.
+Die Lichtschranke muss ziemlich genau
+justiert werden, damit sie nicht schon beim
+Herausschieben einer Münze schließt: Erst,
+wenn keine Münze mehr im Schacht und
+der Schieber zurückgezogen ist, darf sie
+geschlossen sein.
+Die Ansteuerung des Münzausgabe-Mechanismus werden wir nun mit ftScratch vornehmen.
+
+Sensoren und Aktoren
+Die folgenden Aufgaben können sowohl
+mit dem TXT als auch mit dem BT Smart
+Controller gelöst werden.
+
+Schreibe ein kleines Scratch-Skript, das den
+Exzenter einmal dreht und dabei eine
+Münze in die Ausgaberutsche schiebt.
+Aufgabe 2
+Erweitere das Skript so, dass es eine vorgegebene Anzahl Münzen (bspw. fünf) nacheinander auswirft. Nach jedem Auswurf soll
+der Motor eine Sekunde stoppen.
+Hinweis: Beim erneuten Starten des Motors
+ist der Taster möglicherweise noch gedrückt…
+Aufgabe 3
+ftScratch kann auch sprechen – integriere
+dazu die Erweiterung „Text zu Sprache“
+(Abb. 3). Bringe nun deinem Münzautomat
+bei, nach jeder Ausgabe die Anzahl der
+bereits ausgegebenen Münzen anzusagen.
+
+Integriere in ftScratch die für deinen Controller benötigte Erweiterung („Robotics
+TXT Controller“ oder „BTSmart“). Starte
+das zugehörige Gateway und stelle eine
+Verbindung von ftScratch zu deinem Controller her [1].
+Für die Aufgaben benötigen wir
+ einen Taster
+ eine Lichtschranke (Fotodiode mit Linsen-LED) und
+ einen XS-Motor mit Getriebe.
+Die Sensoren und Aktoren werden wie folgt
+angeschlossen (bei den Dioden Polarität
+beachten):
+ I1: Taster
+
+
+ I2: Fotodiode (Lichtschranke)
+
+Aufgabe 4
+
+ M1: Motor
+
+Mache den Münzautomaten zu einem Geldzähler, der alle Münzen im Magazin zählt
+und das Ergebnis ansagt.
+
+ 9V/GND: Linsen-LED (Lichtschranke)
+
+
+Lösungsbeispiele
+Die folgenden Lösungsbeispiele wurden für
+den BT Smart Controller programmiert. Die
+Anpassung an den TXT (Ersetzung der entsprechenden Blöcke in ftScratch) gelingt
+leicht.
+Aufgabe 1
+Die Geschwindigkeit des Motors darf nicht
+zu hoch sein, sonst wird der Tastendruck
+„übersehen“: Die Abfrage der Eingänge via
+Bluetooth kostet etwas Zeit.
+
+Computing
+
+Beim erneuten Starten des Motors nach
+einem Münzauswurf wird einen kleinen
+Moment (0,1 Sekunden) gewartet, bevor
+der Taster ausgewertet wird.
+In der Variablen „Zähler“ werden die
+bereits ausgeworfenen Münzen gezählt.
+Den Wert der Variablen kannst du dir auf
+dem Ausgabefenster (rechts oben) anzeigen
+lassen, indem du neben der Variablen im
+Menu (links, unter „Variablen“) ein Häkchen setzt.
+Aufgabe 3
+Zu Programmbeginn können die Sprache
+und die Stimmlage eingestellt werden.
+
+
+Aufgabe 2
+
+
+Aufgabe 4
+Die Lichtschranke muss möglicherweise
+etwas justiert werden, damit sie nicht zu
+früh ein leeres Magazin meldet.
+
+
+
+
+
+Weiterentwicklung des Modells
+Der Münzautomat nutzt lediglich zwei Eingänge und einen Motorausgang. Damit
+kann sogar am BT Smart Controller ein
+zweites Magazin mit Münzausgabe angeschlossen werden. Wenn man den Auswurfmechanismus seitlich verschiebbar gestaltet, können sogar vier unterschiedliche
+Münzen aus vier Magazinen ausgeworfen
+werden. Damit lässt sich der Münzautomat
+zu einem Geldwechsler erweitern.
+Alternativ kann man die Zahl der auszuwerfenden Münzen über einen weiteren Taster
+oder über die Zifferntasten der Tastatur eingeben lassen.
+Das Modell kann auch für das Zählen
+anderer Objekte umgebaut werden. Beispielsweise können Grundbausteine auf
+einer „Rutsche“ angeliefert und von einem
+
+
+etwas dickeren Schieber ausgeworfen werden. Wer wollte nicht schon immer mal
+wissen, wie viele Grundbausteine es in der
+Bauteilsammlung gibt?
+Eine fischertechnik-Designer-Datei des
+Münzautomaten findet sich im DownloadBereich der ft:pedia zu dieser Ausgabe.
+
+Referenzen
+[1]
+
+Dirk Fox: Scratch mit fischertechnik
+– Update 2022. ft:pedia 1/2022,
+S. 86–92.
+
+[2]
+
+fischerwerke: Experimentierbuch
+Profi Computing (36480). Pflaum
+Verlag, München 1991.
+
+[3]
+
+fischerwerke: Experimentierbuch
+Profi Sensoric (30491). 2. Auflage,
+Pflaum Verlag, München 1992.
+
+

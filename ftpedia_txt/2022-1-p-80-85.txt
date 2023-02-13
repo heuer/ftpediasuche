@@ -1,0 +1,305 @@
+
+
+Modell
+
+Farbsortierer mit dem TCS3472
+Arnoud van Delden
+Mit dem seriellen I²C-Bus-Anschluss auf der Rückseite des Moduls sind die Möglichkeiten des
+neuen Zauberlings stark gewachsen [1]. An den Bus können unter anderem zahlreiche externe
+Sensoren angeschlossen werden. Für mein erstes Experiment habe ich den Farbsensor
+TCS3472 gewählt. Die fischertechnik-Farbsortieranlage eignet sich dafür als Modell.
+
+Trainings- und Simulationsmodelle
+
+mit denen die Drehrichtung von Motoren
+überprüft werden kann.
+
+fischertechnik bietet seit vielen Jahren vorgefertigte Trainings- und Simulationsmodelle an. Diese Trainingsmodelle können im
+technischen Unterricht und in der Ausbildung im MINT-Bereich (Mathematik,
+Informatik, Naturwissenschaften und Technik) verwendet werden. Mit diesen, meist
+mit einem Förderband oder einem Greifarm
+ausgestatteten Modellen lassen sich verschiedene industrielle Automatisierungsprozesse simulieren.
+
+Die Schulungsmodelle sind nur auf Bestellung erhältlich und werden fertig aufgebaut geliefert. Die technische Entwicklung kann jedoch schnell gehen: Die Werbefotos verschiedener Generationen der
+Sorting Line with Color Detection (536633)
+scheinen sogar fotobearbeitet worden zu
+sein, um zu zeigen, dass das Modell mit der
+24-Volt-SPS-Platine ausgestattet ist (an der
+seltsamerweise die Relais für den Motor zu
+fehlen scheinen) oder mit dem 9-Volt-TXTController gesteuert werden kann (Abb. 1).
+
+Die Modelle sind meist in zwei verschiedenen Ausführungen erhältlich: Als 9-VoltVersion zur Ansteuerung mit den fischertechnik-eigenen Controllern oder als 24Volt-Modell, bei dem eine Adapterplatine
+das Experimentieren mit einer externen SPS
+(Speicherprogrammierbare Steuerung) ermöglicht. Die Adapterplatine bietet dann
+unter anderem Schraubklemmen zum Anschluss der Pneumatikventile und Relais,
+
+Während die Grundfunktionen dieser Modelle über die Jahre weitgehend gleich geblieben sind (Fabriksimulation, Farb- oder
+„Produkt“-Sortierung), werden die Simulationsmodelle laufend auf den Stand der
+Technik gebracht und mit den aktuellen
+Komponenten der fischertechnik-Produktpalette ausgestattet.
+
+
+Wo in früheren Modellen zur Farberkennung beispielsweise eine Kombination aus
+Kugellampe (37869) und Fototransistor
+(36134) als Reflexionslichtsensor verwendet wurde, kommt heute der Farbsensor
+(128599) zum Einsatz (Abb. 2), so wie die
+TX- und später die TXT-Controller die
+Rolle der früheren Schnittstellenmodule
+übernahmen.
+
+Modell
+
+(wahrscheinliche) Farbe des passierenden
+Objekts bestimmen.
+Danach muss sich das Förderband nur noch
+um die entsprechende Strecke drehen, dann
+kann der pneumatische Auswerfer das Objekt von Förderband in das richtige Magazin
+schieben. Die Anzahl der Impulse des Impulsgebers ist ein Maß für die erforderliche
+Wegstrecke, die das Förderband zurücklegen muss. Drei zusätzliche Lichtschranken erkennen, dass ein Farbbehälter voll ist.
+Das ursprüngliche Modell verwendet daher
+insgesamt fünf Lichtschranken.
+
+Farbsensor und
+Lasererkennung
+
+Im Folgenden wird eine deutlich verbesserte Farbsortieranlage vorgestellt – mit drei
+Zauberlingen [1] als Steuereinheit.
+
+Die Originalfarbsortierlinie
+Die Original-Sortierlinie simuliert die automatisierte Erkennung und Trennung von
+kleinen weißen, roten und blauen Scheiben
+mittels des fischertechnik-Farbsensors [2].
+
+Das Farberkennungsverfahren des fischertechnik-Farbsensors ist nicht optimal: Es
+wird nur ein Reflexionslichtwert gemessen.
+Heutzutage gibt es Farbsensoren für überraschend wenig Geld (etwa 1,50 € statt über
+25 € für den fischertechnik-Sensor), die vier
+Reflexionskomponenten auslesen und auch
+über den I2C-Bus verbunden werden können. Ein gutes Beispiel ist der TCS3472
+(Abb. 3) [3].
+
+Sobald eine Scheibe auf dem Förderband
+die erste Lichtschranke passiert hat, beginnt
+eine Reihe von Reflexionslichtmessungen.
+Während sich das Objekt unter dem Sensor
+bewegt, beleuchtet der fischertechnik-Farbsensor das Objekt mit LED-Licht und misst
+die Menge des reflektierten Lichts. Sobald
+die Scheibe das zweite Detektionstor erreicht, enden diese Messungen und der niedrigste Reflexionslichtwert der passierten
+Scheibe ist ermittelt.
+Jede der drei Farben ergibt einen anderen
+Mindestwert. Der Ausgangswert des Sensors ist eine analoge Spannung zwischen 0
+und 2 Volt, die vom Umgebungslicht, der
+Messentfernung und der Farbe des Objekts
+abhängt. Mit diesem Wert kann man durch
+Vergleiche mit festen Schwellenwerten die
+
+
+
+
+Dieser Sensor verfügt außerdem über einen
+Infrarotfilter, um den störenden Einfluss
+von Umgebungslicht weiter einzuschränken. Dieser günstige, sehr genaue Sensor
+wurde bereits ausführlich in der beschrieben [4].
+
+direkt vom Zauberling mit Strom versorgt
+werden. Als Sensor habe ich statt des mitgelieferten Laser Receiver Module ISO203
+ein paar einfache LDRs verwendet, die ich
+in fischertechnik Leuchtsteine (38216)
+gelötet habe.
+
+Da die Objekte in geräumige rote fischertechnik-Kassetten (130961) sortiert werden
+sollen (Abb. 4), habe ich die Erkennungssensoren in den Lagerplätzen weggelassen.
+Durch die kontinuierliche Farberkennung
+kann auch die Lichtschranke am Anfang
+entfallen. Um den Detektionsstrahl möglichst schmal zu machen, habe ich als Lichtquelle für die vier Lichtschranken entlang
+der Strecke Halbleiterlaser gewählt. Als
+Sensor reichen Fotowiderstände (LDRs)
+aus (Abb. 4).
+
+Auf Leuchtkappen zum Schutz vor Umgebungslicht habe ich verzichtet. In der Praxis
+waren sie nicht erforderlich, da die Eingangsempfindlichkeit des Zauberlings bei
+Beleuchtung mit einem so starken Laserlichtstrahl sehr niedrig eingestellt werden
+kann.
+
+Eine andere Art, Farben zu
+sortieren
+
+Da die Detektionsschwelle bei Verwendung
+von Lasern sehr klein sein kann, hat das
+Umgebungslicht einen relativ geringen Einfluss und es müssen keine (empfindlicheren) Fototransistoren verwendet werden.
+Halbleiterlaser sind nicht mehr teuer. Für
+wenige Euro kann man bereits ein 50-mWExemplar kaufen, mit dem man locker
+hunderte Meter weit strahlen kann. Für ein
+Projekt wie dieses, in dem der Abstand nur
+10 cm beträgt, reicht ein kleinerer 5-mWLaser aus. Ich habe das Modul KY-008 mit
+roter (650 nm) Laserdiode verwendet, das
+oft zusammen mit einem empfangenden
+Sensormodul verkauft wird (Abb. 5). Diese
+Module arbeiten mit 5 Volt und können
+
+Der Farbsensor ist über den I2C-Bus mit
+einem Zauberling-Modul verbunden, dessen einzige Aufgabe es ist, die Farbe zu
+dekodieren. Jeder der vier Ausgänge stellt
+eine erkannte Farbe dar und wird aktiv,
+wenn diese Farbe erkannt wurde. Die Ausgangssignale werden auch verwendet, um
+die Farbindikator-LEDs in der Nähe der
+Kassetten zum Leuchten zu bringen, sodass
+sofort nach dem Verlassen der Sensorschleuse erkennbar ist, in welche Kassette
+der Stein geschoben werden muss.
+Jedes Ausgangssignal dient zugleich als
+Eingang eines AND-Gatters. Den anderen
+Eingang des AND-Gatters bildet immer das
+Signal einer Lichtschranke entlang des
+Förderbands.
+
+Darüber wird das Pneumatikventil der entsprechenden Rutsche aktiviert, um das
+Objekt in den richtigen Behälter zu schieben. Der Erfassungszeitpunkt kurz vor
+einem Rutschen und die tatsächliche
+Rutschbewegung hängen leicht von der Geschwindigkeit des Förderbandes ab. Dazu
+ist eine einstellbare Verzögerung vorgesehen. Im (N)AND-Gatter des Zauberlings
+(Programmauswahl 2) ist dafür das rechte
+Potentiometer (SET 2) reserviert. Die Zeit,
+die der Ausgang des AND-Gatters den
+Eingängen nacheilt, kann zwischen 0 und
+500 Millisekunden eingestellt werden.
+Aufgrund der Programmierbarkeit des
+Zauberlings war die Steuerung relativ einfach. Ein Zauberling ist für die Farberkennung über den am I2C-Bus angeschlossenen
+Farbsensor zuständig. Diese Funktionalität
+kann durch Auskommentieren von #define
+FUNC13_COLORSENSOR in der StandardZauberling-Software unter DIP-Schalterstellung 13 programmiert werden. Eingang
+1 des Zauberlings kann ohne zusätzliche
+externe Beschaltung auf HIGH gesetzt
+werden, indem die Eingangskennlinie auf 
+(DIP-Schalter nach oben) gestellt wird. Das
+Modul behält dann die zuletzt erkannte
+Farbe bei. Andernfalls erscheint die aktuell
+erkannte Farbe nur kurzzeitig am Ausgang.
+Jeder Ausgang repräsentiert eine andere
+Farbe: Q1 wird aktiv für Rot, Q2 für Grün,
+Q3 für Blau und Q4 für Gelb.
+
+
+Modell
+
+Außerdem sind vier AND-Gatter mit zwei
+Eingängen erforderlich. Dazu werden zwei
+zusätzliche Zauberlinge verwendet, die auf
+Programm 2 eingestellt sind. Dafür könnten
+auch die normalen Silberlinge verwendet
+werden. Wie erwähnt ist diese Gate-Funktion aber beim Zauberling bereits mit einer
+einstellbaren ‚Verzögerung‘ des Ausgangs
+ausgestattet. Dadurch entfällt die Notwendigkeit eines zusätzlichen Monoflops, um
+die Schieberbewegung zu verlangsamen,
+wenn sich das Band nicht schnell genug
+bewegt. Eventuell lässt sich das Timing
+auch mechanisch dadurch lösen, dass man
+die Laser noch näher an den Slidern
+platziert oder schräg über das Band strahlt.
+
+RGB-Farberkennung
+Mit Infrarotfilter und echter RGB-Messung
+sind die Farbmessungen des TCS3472 viel
+zuverlässiger als die des Original-Farbsensors von fischertechnik. Die Messung ist
+viel unempfindlicher gegenüber Umgebungslicht und nicht auf die traditionellen
+weißen, roten und blauen Farbscheiben beschränkt. Mit dem originalen Reflexlichtsensor wäre es wahrscheinlich schwierig
+gewesen, die Farbe Grün zuverlässig zu erkennen, während der TCS3472 sogar zwischen Gelb und Weiß gut unterscheiden
+kann.
+Jede Messung erzeugt vier Werte, die man
+sich als RGB-Vektor einer bestimmten
+Länge (die „Clear Light“-Messung) vorstellen kann. Es ist leicht einzusehen, dass dies
+eine zuverlässigere Farbbestimmung ermöglicht, als anhand von Schwellenwerten
+eines einzelnen Reflexionslichtmesswerts.
+Mit dem TCS3472 ist es möglich, mehr als
+die traditionellen drei (oder wie beim verbesserten Modell vier) Farben zu unterscheiden. Beispielsweise könnten wir einfach Objekte in einer fünften Farbe (z. B.
+Weiß oder Silber) in einem Behälter am
+Ende des Bandes ablegen.
+
+
+
+
+
+gelöst werden. Voraussetzung wäre dafür
+eine genauere Messung des vom Förderband zurückgelegten Weges. Das originale
+fischertechik-Modell nutzt bereits einen
+Impulsgeber, um den Abstand zum richtigen Auswurfschieber zu ermitteln; dies
+allein lässt jedoch keine Gleichzeitigkeit am
+Band zu. Es ist sicherlich eine spannende
+Herausforderung, diesen Prozess weiter zu
+optimieren, beispielsweise durch den Einsatz eines Encoders oder Schrittmotors.
+Wer weiß, vielleicht wird dieses Projekt in
+Zukunft noch fortgesetzt...
+
+In meinem Fall hätte dies eine Nachbearbeitung der von mir verwendeten Dominosteine erforderlich gemacht; diese haben
+nur vier verschiedene Farben. Um das Prinzip zu demonstrieren schienen mir vier
+Farben ausreichend.
+
+Das aktuelle Modell ist in einem Film auf
+YouTube in Aktion zu sehen; dort findet ihr
+auch einen Film von der originalen fischertechnik-Sortieranlage.
+
+Kontinuierliche Messung
+
+Achtung: Im Modell werden rote 5-mWLaser verwendet. Dies sind die Laserdioden, die z. B. in Laserpointern verwendet
+werden. Diese Laser sind relativ schwach
+und die rote Wellenlänge (650 nm) ist am
+ungefährlichsten, aber auch diese Laser
+können Augenschäden verursachen. Schauen Sie daher niemals direkt oder durch eine
+Optik in einen solchen Laser.
+
+Ein weiterer großer Vorteil der Farbmessung mit dem TCS3472 ist, dass kein Ende
+des Messzyklus festgelegt werden muss.
+Allerdings wird dieser Vorteil im aktuellen
+Modell nicht optimal genutzt. Wie beim
+originalen fischertechik-Modell geht die
+Information verloren, wenn mehrere Objekte dicht hintereinander auf das Förderband gelegt werden. Daher kann das Förderband immer nur ein farbiges Objekt auf
+einmal sortieren.
+Die Geschwindigkeit des Systems könnte
+stark erhöht werden, indem die Farbe des
+nächsten Objekts bestimmt wird, bevor das
+letzte sein gewünschtes Farbsortierfach
+erreicht hat. Im aktuellen Aufbau ist das
+nicht möglich, da die Auswurfschieber auf
+die zuletzt erkannte Farbe reagieren und
+diese so lange unverändert bleiben muss,
+bis der entsprechende Laserdetektor entlang
+der Spur signalisiert, dass das Objekt von
+Förderband geschoben werden kann.
+Dies könnte mit einem „Pufferspeicher“ für
+die Reihenfolge und den Abstand zwischen
+den Farbobjekten auf dem Förderband
+
+
+Warnung
+
+Aufgrund der Position im Modell ist ein
+direkter Blick in einen Laser unter normalen
+Umständen nicht möglich.
+
+Referenzen
+[1]
+
+Arnoud van Delden: Der Zauberling
+(Teil 4): Die Weiterentwicklung. In
+dieser Ausgabe der ft:pedia.
+
+[2]
+
+fischertechnik: Farbsensor. FT-TKN, Datenblatt, 02.08.2017.
+
+[3]
+
+ams: TCS3472 – Color Light-toDigital Converter with IR Filter.
+Datasheet, v1.04, 10.04.2020.
+
+[4]
+
+Dirk Fox: I²C mit dem TX(T) – Teil
+13: Farbsensor. ft:pedia 1/2016,
+S. 79–89.
+
+
+Computing
+
+
+
+

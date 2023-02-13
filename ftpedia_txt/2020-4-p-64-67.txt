@@ -1,0 +1,217 @@
+
+
+Computing
+
+Bluetooth-Modul für den ftDuino
+Till Harbaum
+Bluetooth hat inzwischen überall in unserem Leben Einzug gehalten – PCs, Tablets und
+Smartphones verbinden wir darüber mit Kopfhörern, Druckern und Musikanlagen. In der
+fischertechnik-Welt führt Bluetooth hingegen noch ein Randdasein. Sehr zu Unrecht: Denn in
+Verbindung mit einer Smartphone-App lassen sich elegante, flexible und komfortable Fernsteuerungen realisieren. Der ftDuino macht es vor.
+
+Hintergrund
+Dass Bluetooth ein „heißes“ Thema auch
+für den ftDuino ist, hat die Community in
+einem entsprechenden Thread im Forum
+deutlich gemacht [1]. Daraus hat sich
+schnell ein weiterer Thread ergeben, in dem
+ein paar mögliche Lösungen diskutiert und
+auch umgesetzt wurden. Diese Lösungen
+erfüllten ihren Zweck, zogen aber aufgrund
+ihres etwas unkonventionellen Aufbaus
+schnell Spott auf sich (Abb. 1) [2].
+
+Arduino“ zusätzliches Interesse an einer
+Bluetooth-Lösung im fischertechnik- und
+Arduino-Umfeld [3, 4]. Und schließlich war
+Bluetooth in dieser Form auch bereits
+Thema eines Artikels in der vorherigen
+Ausgabe der ft:pedia [5].
+Damit war das Ziel gesteckt: Eine Bluetooth-Lösung für den ftDuino musste her.
+Mit vollem Funktionsumfang, handlich
+klein, robust, preisgünstig und als Fertiggerät erhältlich, damit auch Anfänger es
+sofort nutzen können.
+
+SC16IS750-I2C-UART-Bridge
+
+belächelter fliegender Aufbau
+
+Eines bewiesen diese Lösungen aber auf
+jeden Fall: Es gab und gibt Interesse an
+einer Bluetooth-Lösung für den ftDuino
+und technisch stellt die Anbindung kein
+Problem dar. Parallel weckte der Thread
+zum Buch „fischertechnik-Roboter mit
+
+In den Forums-Threads hatte sich bereits
+herauskristallisiert, dass eine I2C-Lösung
+eigentlich am elegantesten wäre, da sie sich
+nahtlos in das Konzept des ftDuino integriert. Die nötigen Bauteile waren aber
+zusammen recht unhandlich und auch nicht
+ganz billig. Im Wesentlichen bestand die
+bereits im Thread veröffentlichte Lösung
+aus einem handelsüblichen HM-10-Bluetooth-Modul und einem I2C-UARTBrückenbaustein SC16IS750 (Abb. 2).
+
+Der Brückenbaustein übersetzt zwischen
+dem I2C-Anschluss des ftDuino und dem
+mit der klassischen seriellen PC-Schnittstelle nah verwandtem UART-Anschluss
+des HM-10. Eine dritte Funktion erledigen
+ein paar Bauteile auf dem HM-10 und der
+SC16IS750 eher nebenbei: Die Umsetzung
+diverser Signale zwischen den 5 Volt des
+ftDuino und den 3,3 Volt, die das HM-10Bluetooth-Modul erwartet.
+
+Computing
+
+Einen Spannungsregler für die 3,3 Volt
+hätten wir uns gern gespart; die ersten Versionen der Nachfolgemodule HM-17 und
+HM-19 wurden in älteren Datenblättern
+auch noch als 5 Volt-verträglich gelistet. In
+der Praxis stellte sich das als falsch heraus;
+in aktuellen Datenblättern des HM-17 und
+HM-19 ist das korrigiert. An einem Spannungsregler führte also kein Weg vorbei.
+
+Eine elegante Lösung der drei Aufgaben
+„Bluetooth-Modul“, „I2C-Anbindung“ und
+„Spannungsumsetzung“ war also das Ziel.
+Die erste Aufgabe „Bluetooth-Modul“ war
+schon nicht ganz unproblematisch. Was
+man unter der Bezeichnung HM-10 kauft ist
+nämlich in der Regel mitnichten ein HM-10
+von Huamao [6]. Stattdessen gibt es eine
+Unzahl kompatibler und inkompatiler
+Plagiate, Nachbauten und Nachfolgermodelle in unterschiedlichen Bauformen und
+mit unterschiedlichen elektrischen und
+funktionalen Eigenschaften (Abb. 3). Letztlich fiel die Wahl auch nach Rücksprache
+mit dem Originalhersteller auf das HM-11,
+die mechanisch kleinere Variante des
+verbreiteten HM-10. Das HM-11 eignet
+sich wie das HM-10 vor allem zur Verbindung mit Smartdevices, allen voran auf
+Apple-IOS- und Android-Basis. Zur Verbindung mit dem (Windows-)PC eignet sich
+das HM-11 durch seine Bluetooth-LEImplementierung eher weniger.
+
+Bluetooth-Module
+
+eigenem Adapter
+
+Schließlich stellt die I2C-Anbindung die
+letzte Hürde dar. Der SC16IS750 ist leider
+recht groß und teuer, so dass sich die Frage
+stellte, ob man hier nicht mit einem kleinen
+passend programmierten Mikrocontroller
+platzsparender und günstiger zum Ziel
+kommt. Auch das gestaltete sich etwas
+schwieriger als gedacht, da die wenigsten
+Controller in dieser Größenordnung zuverlässig alle benötigten UART-Datenraten
+zwischen 1200 und 230400 bit/s erzeugen
+können und dabei gleichzeitig eine I2CSchnittstelle bedienen. Aber auch hier
+wurden wir schließlich fündig, so dass alle
+Komponenten für einen kleinen und
+günstigen Adapter beisammen waren.
+Außerdem erlaubt der Einsatz eines eigens
+programmierten Controllers als Brückenbaustein auch kleine Hilfsfunktionen. Wer
+etwas Erfahrung mit dem HM-10 hat, vermisst beim ftDuino-Adapter ggf. den kleinen Drucktaster, mit dem ein völlig fehlkonfiguriertes Modul wieder in den Ausgangszustand versetzt werden kann. Diese
+Funktion übernimmt im ftDuino-BluetoothAdapter ebenfalls der Mikrocontroller,
+sodass der mitgelieferte Sketch („blue-
+
+
+
+
+tooth_config“) jedes noch so sperrig verstellte Modul ganz automatisch wieder zum
+Leben erweckt.
+
+Federnocken auf ftDuino befestigt
+
+
+Das Ergebnis ist eine kleine Platine, die sich
+auf einem 30x45-Fußabdruck entweder auf
+eine fischertechnik-Bauplatte kleben oder
+gleich mit einem passenden Gehäuse versehen lässt.
+
+ftDuinoBlue wurde eigens für den ftDuinoBluetooth-Adapter entwickelt und versucht
+sich an einer etwas anderen Variante der
+App-Steuerung. Hier gibt nicht die App die
+Steuerelemente vor, sondern der ArduinoSketch [9]. Auf diese Weise lassen sich
+komfortable App-Bedienoberflächen für
+fischertechnik-Modelle ganz ohne AppProgrammierung erzeugen. Natürlich ist
+ftDuinoBlue nicht auf den ftDuino und
+seinen Adapter beschränkt. Es lässt sich
+auch mit jedem Arduino verwenden und ist
+im Android-App-Store zu finden.
+
+
+Die aktuelle Version der ftDuino-Integration in die Arduino-IDE bringt bereits einige passende Beispiele mit. Mit dabei ist
+auch ein ArduinoBlue-Beispiel, das dem
+ftDuino die in der letzten ft:pedia beschriebene App zugänglich macht [5, 7]. Weiterhin sind Beispielsketches für 1Sheeld [8]
+und ftDuinoBlue [9] dabei.
+
+
+
+Natürlich haben wir auch vom ftDuinoBluetooth-Adapter wieder eine Kleinserie
+aufgelegt. Der fertig aufgebaute Adapter ist
+daher beim Erscheinen dieser ft:pediaAusgabe exklusiv bei MINTronics erhältlich [10]. Wer sich genauerer über den
+ftDuino-Bluetooth-Adapter
+informieren
+will, findet die Anleitung zu unserem
+kleinen Gerät unter [11].
+
+
+Computing
+
+Referenzen
+[1]
+
+Thread „HC-05 an ftduino“,
+ftcommunity Forum
+
+[2]
+
+Thread „Bluetooth am ftDuino“,
+ftcommunity-Forum
+
+[3]
+
+Dirk Fox, Thomas Püttmann: fischertechnik-Roboter mit Arduino.
+dpunkt-Verlag, 2020.
+
+[4]
+
+Thread „Modelle aus Baukasten und
+Buch Fischertechnik-Roboter mit
+Arduino“, ftcommunity-Forum
+
+[5]
+
+Dirk Fox: fischertechnik-Roboter mit
+Arduino (Teil 1): SmartphoneSteuerung über BLE, ft:pedia 3/2020,
+S. 93-100.
+
+[6]
+
+Jinan Huamao Technology Co.: BLE
+Modules.
+
+[7]
+
+Anurag Purwar, Jaehyeon An:
+ArduinoBlue. Stony Brook
+University.
+
+[8]
+
+Google Play Store: 1Sheeld.
+
+[9]
+
+Till Harbaum: ftDuinoBlue – Control
+Your Arduino from Android.
+
+[10] Peter Habermehl: MINTronics.
+
+
+[11] Till Harbaum: Anleitung zum
+ftDuino-Bluetooth-Adapter,
+16.12.2020.
+
+
+

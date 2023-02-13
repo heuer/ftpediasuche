@@ -1,0 +1,189 @@
+
+Modell
+
+Modell
+
+Staubsauger
+Andreas Gail
+Ein Gerät, was wohl in jedem Haushalt zu finden ist. Alltäglich und trivial? Oder vielleicht
+doch nicht? Nachfolgend soll eine Variante gezeigt werden, die häufig auch als Industriestaubsauger bezeichnet wird. Und tatsächlich sind trotz eines solch relativ einfachen Aufbaus
+überraschende Geheimnisse zu entdecken.
+
+Was macht ein Staubsauger?
+Natürlich saugen! Man darf aber durchaus
+überrascht sein was dabei alles Spannendes
+passiert. Dazu sollen zunächst vier DetailHintergründe näher erläutert werden.
+Detail 1: Aufbau einer Druckdifferenz und dessen Bemühungen
+zum Ausgleich
+Beim Saugen muss Energie (in diesem Fall
+elektrischer Strom) aufgewendet werden,
+um Luft aus dem Staubsaugerinnenraum
+heraus zu fördern. Dieses erfolgt mithilfe
+eines Ventilators. Im Ergebnis kommt es zu
+einem geringeren Druck im Staubsauger im
+Vergleich zum umgebenden Luftdruck des
+Raums. Dieser Druckunterschied wird fortlaufend teilweise ausgeglichen, indem
+umgebende Luft in den Staubsaugerinnenraum einströmt.
+Detail 2: Kontinuität – wo was rein
+will, muss was raus
+Der oben beschriebene Ventilator kann mit
+seinem relativ großen Durchmesser beim
+Aufbau des Staubsaugers nur einen recht
+kleinen Luftstrom aus dem Sauger heraus
+erzeugen. Diese vergleichsweise geringe
+Strömungsgeschwindigkeit wäre deutlich
+zu gering, um die gewünschte Saugwirkung
+auf Schmutzteilchen auszuüben. Da aber
+der Saugschlauch einen sehr viel geringeren
+Durchmesser als der Ventilator hat, muss
+
+die Luft durch den Saugschlauch deutlich
+schneller strömen, um dieselbe Luftmenge
+passieren zu lassen. Ersetzt man den Durchmesser durch die äquivalente Strömungsquerschnittsfläche,
+erhält
+man
+die
+Kontinuitätsgleichung. Diese gilt bei Luft
+(allgemein Gasen) im vorliegenden Fall
+jedoch nur für die Außenkanten des Einund Austritts:
+̇ =
+
+∙
+
+̇ ist der Volumenstrom (in m³/s)
+ist die Strömungs-Querschnittsfläche
+(in m²)
+·
+ist die Strömungsgeschwindigkeit (in
+m/s)
+·
+·
+
+Hieraus kann man die Strömungsgeschwindigkeit für Eingang und Ausgang
+umrechnen, weil der Volumenstrom an
+beiden Stellen stets gleich ist. Es gilt:
+∙
+
+̇
+
+= ̇
+
+=
+
+∙
+
+Detail 3: Randgängige Ventilatoren
+erhöhen den Wirkungsgrad
+Dieses Detail ist einfacher konstruktiver
+Art. Je enger die Außenkanten der
+Ventilatorflügel am zylindrischen Abluftrohr entlangstreichen desto weniger Luft
+kann von der Abströmseite als „Kurzschluss“ wieder zur Anströmseite gelangen.
+
+
+
+
+Detail 4: Wirkungsweise eines
+Zyklonabscheiders
+Hierbei handelt es sich um eine häufig
+eingesetzte Technik.
+
+nachzubauen. Aus diesem Grund wurde
+einfache Pappe, ein flexibles ElektrikerLeerrohr, etwas Klebeband, durchsichtiger
+Tesafilm, selbstklebende Profildichtung
+(eigentlich zur Fensterabdichtung), breites
+Klebeband, Pattex als schnelltrocknender
+Klebstoff, ein dünner Damenstrumpf zur
+Luftfiltration und ein paar Gummibänder
+hinzugenommen. Abb. 2 zeigt die Gesamtansicht. Einzelne Styroporkügelchen oder
+Staubflusen konnten damit eingesaugt
+werden.
+Ventilator
+
+Saugschlauch
+
+rote Linie = Gasstrom mit Partikelfracht,
+blaue Linie = abgereicherter Gasstrom
+
+Der mit Staub angereicherte Luftstrom wird
+oben in den zylindrischen Teil des Staubsaugerbehälters tangential eingeleitet und
+so zwangsweise der gekrümmten Wandung
+folgend in eine Drehbewegung versetzt.
+Dabei werden die Staubpartikel wie in einer
+Zentrifuge nach außen geschleudert und
+konzentrieren sich an der Innenwandung
+des Staubsaugerbehälters. Die gleichzeitig
+auf sie einwirkende Schwerkraft bewirkt,
+dass sich die Staubpartikel nach unten
+bewegen. Somit ist die Luft zunehmend von
+Staubpartikeln abgereichert, je weiter man
+ein Volumenelement in der oberen Mitte
+des Staubsaugerbehälters betrachtet. Genau
+dort ist dann der Filter positioniert, durch
+den der Ventilator die Luft aus dem Staubsaugerbehälter fördert.
+
+Löcher mit
+Tesafilm
+abgedichtet
+
+tangentialer Lufteintritt
+
+
+Die Montage der vielen fischertechnikRiegel braucht etwas Geduld. Damit das
+gelingt, darf die Pappe nicht zu dick, muss
+aber trotzdem ausreichend formstabil sein.
+Weiterhin wurden zunächst alle erforderlichen Löcher für die S-Riegel angezeichnet
+und anschließend mit einer Lochzange
+ausgeschnitten. Die verwendete Lochzange
+ist in Abb. 3 dargestellt.
+
+Modellaufbau mit
+fischertechnik
+Mit fischertechnik alleine erschien es nicht
+möglich, einen runden Industriestaubsauger
+
+Schraubenlöcher
+
+
+Modell
+
+Der Innenaufbau des Staubsaugerbehälters
+wird in Abb. 4 gezeigt. Der tangentiale
+Lufteintritt ist mit dem grünen Pfeil
+markiert (vgl. Detail 4: Wirkungsweise
+eines Zyklonabscheiders).
+
+Luftkanal
+
+Minimotor
+
+tangentialer Lufteintritt
+
+möglichst randgängiger Ventilator
+
+
+Als letztes konstruktives Detail wird in
+
+selbstklebende
+Profildichtung
+
+
+In Abb. 5 ist der Staubsauger von oben
+gezeigt. Hier ist bildlich dargestellt, wie die
+Randgängigkeit der Lüfterflügel im Modell
+umgesetzt wurden (vgl. Detail 3).
+Weiterhin erkennbar ist der Luftkanal, der
+die Luft aus dem Staubsaugerbehälter dem
+Ventilator zuführt. Der verwendete graue
+Minimotor ist dabei mittig im Luftstrom
+positioniert. Das hat gleichzeitig den
+Vorteil, dass die Abwärme des Motors
+optimal abgeführt werden kann. Das gelingt
+ausgerechnet an dieser Stelle gut, weil hier
+eine vergleichsweise schnelle gerichtete
+Luftströmung vorliegt. Motoren in kommerziellen Staubsaugern werden ebenso
+luftgekühlt.
+
+unten mit Filter
+
+
+

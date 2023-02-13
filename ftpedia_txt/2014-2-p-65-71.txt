@@ -1,0 +1,641 @@
+
+Computing
+
+Computing
+
+TX Bridge
+Ad van der Weiden
+The TX is not backward compatible with the Robo-Interface so the extension modules cannot
+be used as slaves of the TX. To expand the number of inputs or outputs on a TX you need to
+buy a full TX while you may still have a few extension modules which will provide you with 4
+motor outputs, 8 digital inputs and an analog input. Looking for a solution is a logical step,
+but fischertechnik has not revealed a lot of information about the interfaces. Luckily, Thomas
+Kaiser (thkais) has done a lot of hard work on this.
+
+Fig. 1: System Concept
+
+The idea
+As fig. 1 shows, my solution is a bridging
+unit which translates between the Robo TX
+interface and the Robo I/O extension
+modules. Fig. 2 shows the finished setup:
+
+Fig. 2: Test setup showing the concept
+
+Background
+On his website, thkais has both analysed
+the Robo Interface extension protocol [1]
+
+as well as provided a circuit to emulate the
+slave end of the connection. The hardware
+on the master end was already analysed by
+Werner Hobelbrecht (hobelbrecht, see
+fig. 3).
+This shows that all extension outputs are
+open collector and that the inputs are
+connected via resistors to the processor.
+The next problem is of course the TX Controller, here fischertechnik has provided
+the pin out of the connectors and the basics
+of the X1 protocol a zip package on their
+computing web page [2]. Again, thkais has
+made an in-depth analysis of the protocol
+in an unpublished document concerning
+the actual content of the messages.
+
+Hardware
+The hardware of the bridge is extremely
+simple and as minimal as possible. For the
+processor I selected the Atmel ATMega88
+[3] which is cheap, easily to obtain,
+available in DIP and has a free IDE
+
+
+
+Fig. 3: Drawing by Werner Hobelbrecht
+
+(AtmelStudio). There is also an easy
+upgrade to the ’168 and ’328 which is now
+popular as Arduino chip. The clock
+frequency must be 14,745,600Hz because
+the USART requires 16x the baud rate of
+921,600 Baud. The main problem is in fact
+the selection of the supply voltage. On the
+TX side 5V is preferable while on the Ext.
+side 3.3V is preferable. 3.3V is however
+too low (according to the specification) for
+the required clock. I have however built
+both versions and both work. In this article
+I will concentrate on the 3.3V version.
+
+state when not driven. When comparing
+the datasheets of the driver/receiver and
+the microcontroller, you can see that the
+voltages are compatible and I had no problems in my prototype. To be on the safe
+side, you could add a pull-up on the TxD
+line and a series resistor or diode in the
+RxD line.
+On the Ext. side of the bridge no special
+interfacing is necessary, I only added an
+extra pull-up on the Acknowledge line.
+
+Fig. 4: Block diagram of the bridge module
+
+The 3.3V is derived directly from the 5V
+as is available on the right hand extension
+connector of the TX. The 5V is further
+used to power the RS485 [4] line
+driver/receiver. As line driver/receiver I
+selected the cheap SN75176 [5] or equivalent. The receiver requires a bias network
+[6] because when the TX enters receive
+mode, the bus is temporarily in an undefined state which causes receive errors.
+The bias resistors force the bus to a high
+
+
+Fig. 5: Prototype
+
+Optional hardware
+Another feature missing from the TX that
+was available on the Robo Interface is a
+Control Set decoder. The Robo Interface
+could decode RC5 of the old Control Set.
+The new Control Set uses a different
+coding scheme that was published once on
+the old forum but removed by ft L. Now is
+
+
+Computing
+
+a good time to add this feature at the cost
+of only an IR detector [7].
+
+slave now replies with the same session
+ID.
+
+Other features we could add are an I 2C
+interface (now not so important anymore),
+outputs for servo motors (more difficult
+than it looks) or analogue inputs (e.g. for
+Sharp distance sensors [8]).
+
+request reply meaning payload
+
+The schematic shown in this article has
+only support for the Control Set and I2C
+(with level shifting to 5V [9]).
+
+X1 Protocol
+As already stated above, the X1 protocol is
+specified on the ft download site. Not
+defined are the commands, payloads and
+message sequences of the protocol. The
+mystery fields in the messages are the
+command codes and the payloads. The X1
+protocol is essentially the same for USB
+communication, Bluetooth PC-TX communication and RS485 communication.
+The protocol is a request-reply protocol
+(with the exception of some Bluetooth
+messages (not on RS485)). Requests have
+low integer command codes, so far I have
+seen codes 1, 2 and 5-20. Not all commands are used in TX-TX communication
+though. The replies always have a command code of 100 + the request code.
+The commands used on the RS485 connection are shown in table 1.
+After power-up the master sends a get_info
+command to the first slave, the slave
+answers with a TA_INFO structure which
+contains a.o. the name of the slave, the
+slave replies with a new odd session ID.
+The master then sends a configuration
+command with a TA_CONFIG structure
+which describes the configuration of the
+inputs and outputs of the slave and a
+session ID of zero. These payload structures are declared in ROBO_TX_FW
+1_24.h which can be downloaded from the
+ft site [2]. The slave replies with a new
+session ID. The master repeats the configuration command with new session ID, the
+
+
+102 output
+
+TA_OUTPUT
+
+
+105 config
+
+TA_CONFIG
+
+
+106 get_info none
+
+
+108 display
+
+DISPLAY_MSG
+
+
+109 name
+
+C string
+
+102 input
+
+TA_INPUT
+
+105 ack
+
+none
+
+106 info
+
+TA_INFO
+
+108 ack
+
+none
+
+109 ack
+
+none
+
+Table 1: Commands on RS485 connections
+
+From this point on the master starts continuously polling all slaves it has found by
+sending output commands and receiving
+input replies. At regular intervals the
+master sends get_info commands to see if
+new slaves have appeared on the bus. The
+two other commands allow changing the
+name of the slave and displaying a
+message on the display of a slave TX. As
+the bridge does not have a display, we can
+use this command to set some parameters.
+The name command is implemented but
+the name is stored in the bridge only, not in
+the actual extension.
+Command mapping
+It is important to understand that the bridge
+replies on behalf of the extension units and
+emulates a TX slave for each extension
+unit. Besides this, the slave can also
+answer on its own behalf which is useful
+for advanced functions like IR receiver or
+servo motors. Depending on how many
+extension units are actually connected, the
+bridge will answer to “get_info” with
+“ROBO I/O Ext 1”, 2, 3 etc. The bridge
+will present itself as “ROBO-TX Bridge”.
+When e.g. 3 extension units are connected,
+
+
+
+the master will show: Ext.1, 2, 3, 8 where
+‘8’ represents the bridge.
+
+digital.For the bridge itself a different
+mapping was chosen:
+input voltage distance resistance
+
+Fig. 6: Two I/O Extension modules (1, 2) and
+the bridge itself (8)
+
+When the bridge receives a configuration
+command for a particular extension unit, it
+stores this data in a data structure so it will
+know what data to return later. For the
+extension units it makes no difference
+whether they are used as 8 half-bridges or
+4 full-bridges, so the motor configuration
+is ignored.
+
+
+IR 1
+
+IR 1
+
+I2C 1
+
+
+IR 2
+
+IR 2
+
+I2C 2
+
+
+IR 3
+
+IR 3
+
+I2C 3
+
+
+IR 4
+
+IR 4
+
+I2C 4
+
+
+IR On
+
+Dist 1
+
+I2C 5
+
+
+IR Off
+
+Dist 2
+
+I2C 6
+
+
+IR freq Dist 3
+
+I2C 7
+
+
+IR rec
+
+I2C 8
+
+Dist 4
+
+Table 3: Input mapping as used in the bridge
+
+The I2C data is now obsolete because the
+TX I2C interface became useable in the
+meantime.
+
+Input Digital Analog
+
+I1
+
+AX
+
+
+I2
+
+AZ
+
+
+I3
+
+AV
+
+
+I4
+
+I4
+
+
+I5
+
+I5
+
+
+I6
+
+I6
+
+
+I7
+
+I7
+
+
+I8
+
+I8
+
+Table 2: Input mapping
+
+The inputs are more problematic because a
+TX has 8 universal inputs whereas an
+extension has 8 digital inputs and 3 analogue inputs (AX, AZ and AV). When
+input 1 is configured as analogue it will
+return AX, otherwise I1, when input 2 is
+configured as analogue it will return AZ,
+otherwise I2, and similarly input 3 will
+return AV. Inputs I4-I8 are always
+
+Fig. 7: The Slave is named ROBO I/O Ext 1
+
+The Software
+The software is written completely in “C”
+and has more or less the following architecture:
+
+
+Computing
+
+The main program loop is responsible for
+parsing the X1 messages and sending
+replies.
+Program structure
+Like most embedded programs, the TX
+bridge program has the following well
+known structure:
+//#includes
+//#defines
+//declarations and definitions
+
+Fig. 8: Dataflow Diagram [10]
+
+The system makes extensive use of interrupts [11] to keep up with all events. The
+most important interrupt is the USART RX
+interrupt because of the extremely high
+baud rate.
+The interrupts are:
+IRQ
+
+Use
+
+USART_RX
+
+RS485 receive
+
+USART_UDRE
+
+RS485 transmit
+
+TIMER2_COMPA 100us system timer
+TWI
+
+I2C
+
+ADC
+
+Distance sensors
+
+EE_READY
+
+Writing to EEPROM
+
+TIMER0_COMPA Servo pulse
+INT0
+
+Ext.Mod Ack
+
+SPI
+
+Ext.Mod Data
+
+TIMER1_CAPT
+
+ControlSet pulse
+
+TIMER1_OVF
+
+ControlSet overflow
+
+Table 3: Interrupts
+
+void main()
+{ init_RS485();
+//other initialisations
+sei(); //enable interrupts
+for(;;) //do forever...
+{ if (tx_dest < nrofext ||
+tx_dest == thisbridge)
+{ switch (msg.hdr.cmd)
+{ case 2: copy_to_ext(idx);
+send_102(idx);
+break;
+case 5: store_config(idx);
+send_105(idx);
+break;
+case 6: send_106(idx);
+break;
+}//switch
+}//if
+}
+}
+
+Listing 1: General program structure
+
+The init_RS485 function initialises the
+USART and puts the transceiver in receive
+mode. When an X1 message is received,
+tx_dest gets the index value of the extension the message is addressed to. If the
+message is for one of the extensions that
+we emulate, we parse the message header
+to identify the command. In the above
+snippet we check for commands 2, 5 and 6
+as shown in table 1 and send the appropriate response. The receiver interrupt routine populates the X1 message buffer.
+ISR(USART_RX_vect)
+{ data = UDR0;
+switch (state)
+{ case 0: //idle
+if (data == 0x02)
+state = 1;
+break;
+
+
+
+
+}
+
+}
+
+case 1: //stx
+if (data == 0x55)
+state = 2;
+else
+state = 0;
+break;
+case 2://length H
+msg.hdr.bytesL = data;
+state = 3;
+break;
+case 3://length L, low byte
+msg.hdr.bytesH = data;
+wp = message_begin;
+if (msg.hdr.bytes >
+sizeof(msg)-7)
+state = 0;
+else
+state = 4;
+break;
+case 4://store
+*wp++ = data;
+if (wp >= message_end)
+{ tx_message =
+msg.hdr.rec - 3;
+state = 0;
+}
+break;
+
+Listing 2: Interrupt service routine
+
+The receiver interrupt service routine is
+implemented as a state machine with 5
+states. In the idle state (0) it waits for the
+STX character (0x02) to arrive, in states 2
+and 3 it determines the size of the message
+which is required in state 4 to determine
+the end of the message (in reality
+‘message_end’ is computed based on
+mg.hdr.bytes).
+The program is too large to go into every
+detail, if you are interested please have a
+look at the source code as posted on the ftc
+website [12].
+
+Boot loader
+As it may happen that the firmware needs
+to be updated and not all users have a suitable programmer, an attempt was made to
+integrate a boot loader. Often the serial
+port is used for this purpose, but in our
+case the UART is connected to RS485. Not
+everybody has an RS485 adapter and the
+
+TX cannot easily be used as such because
+of software limitations1. Another option
+would be a software USB interface like VUSB, but this was not foreseen on the
+PCB. Therefore, the I2C interface was
+selected as physical interface (connects to
+TX via same ribbon cable). The boot
+loader software itself is based on Atmel
+application notes AVR109 and AVR311
+(for the TWI slave function). On the host
+side, a RoboPro program takes care of
+sending the data to the I2C interface. The
+data is sent from a list which is loaded
+from a CSV file. An external program is
+needed to convert Intel HEX files to CSV
+files, but of course the firmware can also
+be distributed as CSV files.
+
+Conclusions
+With enough effort and co-operation it is
+possible to interface to the proprietary ft
+controllers. Besides the prototype in the
+picture I have built two other versions. One
+operates at 5V, is built on a single sided
+PCB and is primarily intended to control
+stepper motors via I2C. Another version
+operates at 3.3V, is built on a double sided
+PCB, and has mounting holes, level
+shifters for 5V I2C but no direct connection
+for servos or distance sensors. The servo
+feature is problematic anyway, caused by
+the resolution of the 8 bit counter and by
+the interrupt latency. This results in quite a
+bit of jitter in the ft servo. Because I
+consider the servos as a useful feature (ft
+components that can otherwise only be
+used with the Control Set), we can look
+into another solution that uses the PWM
+outputs directly. If more people want to
+build a bridge it may also be worthwhile to
+provide a kind of self-programming feature
+for updates.
+
+
+In principle, the TX display command allows
+sending data to the bridge over RS485. There is
+however no back channel to verify the data and
+the boot loader would need an X1 parser.
+
+
+Computing
+
+References
+
+[6]
+
+Wikipedia, RS485 Bias Termination.
+
+[1]
+
+Thomas Kaiser,
+Übertragungsprotokoll
+RoboInterface -> Extension-Modul.
+
+[7]
+
+Vishay Semiconductors, IR Receiver
+Modules for Remote Control
+Systems. 2/5/2014
+
+[2]
+
+MSC Vertriebs GmbH, Programming the ROBO TX Controller, Part
+1: PC programming. In: PC
+Programming Robo TX Controller
+Version 1.5, Aachen, 11/24/2012
+
+[8]
+
+SHARP Corporation, GP2Y0A21YK
+Optoelectronic Device. Osaka, 2005.
+
+[9]
+
+NXP, Level shifting techniques in
+I2C-bus design. 6/18/2007.
+
+[3]
+
+Atmel Corporation, 8-bit Atmel
+Microcontroller with 4/8/16K Bytes
+In-System Programmable Flash. San
+Jose, 2011
+
+[4]
+
+Wikipedia, RS-485.
+
+[5]
+
+Texas Instruments, SN75176A
+Differential Bus Transceiver. Dallas,
+May 1995
+
+[10] Wikipedia, Data flow diagram.
+[11] Wikipedia, Interrupt.
+[12] Ad van der Weiden, TX Bridge
+firmware source code and Eagle
+files. 3/7/2014.
+
+
+

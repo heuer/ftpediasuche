@@ -1,0 +1,165 @@
+
+
+Computing
+
+startIDE (3): TXT im freien Fall
+Rolf Meingast
+Ein Fallexperiment mit Datengewinnung via startIDE und Auswertung: Zur Untersuchung der
+Fallbewegung lasse ich einen TXT mit Ultraschallsensor auf eine sehr weiche Unterlage fallen.
+Gemessen wird dabei die Entfernung zur Decke.
+
+Aufbau
+Am TXT wird oben der Ultraschall-Sensor
+befestigt, außerdem zwei T-Füße zur
+besseren Positionierung an der Zimmerdecke (Abb. 1, 2).
+
+
+Durchführung
+
+Unten am TXT befinden sich ein oder
+mehrere Akkus.
+Eine dicke und weiche Polsterung auf dem
+Boden oder Bett verhindert Beschädigungen beim Aufprall.
+
+
+Das Messprogramm wird gestartet, die
+gesamte Einrichtung gegen die Zimmerdecke gehalten und nach einigen Sekunden
+Beruhigungszeit losgelassen. Die Achse
+Ultraschall-Sensor-Akku darf sich beim
+Fall nicht neigen.
+
+
+Computing
+
+Das Programm
+
+Timer
+
+h
+
+Sekunden Meter
+
+# new
+Delay 5000 // Zeit zum
+Positionieren
+Print los!!!!!!!
+Log 1 // Datenloggen einschalten
+Log silent // Datenloggen ohne
+Bildschirmausgabe
+TimerClear
+Tag A // Sprungmarke
+TimerQuery // Ausgabe des
+timerwertes in msec
+QueryIn TXT 1 D h: // Ausgabe der
+gemessenen Entfernung
+LoopTo A 500
+
+4982
+
+
+0,000
+
+0,00
+
+4998
+
+
+0,016
+
+0,00
+
+5014
+
+
+0,032
+
+0,00
+
+Listing 1
+
+Tabelle 1
+
+Das Diagramm mit Hilfe der Spalten 3 und
+4 zeigt, dass die Auslesung der Daten
+häufiger als die Bereitstellung der Messwerte erfolgt (Abb. 3). Für das Diagramm
+in Abb. 4 wurden immer nur die ersten
+Datenpaare berücksichtigt, wenn die
+gleiche Entfernung angezeigt wird.
+
+Zusammenfassung
+
+Auswertung der Daten
+Die so gewonnenen Datenpaare (timer, h)
+werden auf dem PC (z. B. unter
+http://192.168.2.101/) im startIDE-.CSVFormat ausgegeben. Im folgenden Beispiel
+sind das die ersten beiden Spalten:
+
+Unter startIDE kann mit dem TXT der
+Bewegungsablauf beim freien Fall auf einfache Weise erfasst werden. Ein spannendes
+Experiment für jedes fischertechnikZimmer!
+
+Fallweg in cm
+
+h in cm
+
+
+y = 0,0005x2 - 0,0182x + 0,6764
+R² = 0,9942
+
+
+Fallweg cm
+
+
+Poly. (Fallweg cm)
+
+
+
+
+
+
+
+600 t in msec
+
+
+
+
+
+Fallweg h in Abhängigkeit von der Fallzeit t
+1,6
+y = 4,8065x2 - 0,0152x + 0,0025
+R² = 0,9993
+
+1,4
+
+1,2
+
+Fallweg m
+
+0,8
+
+Poly. (Fallweg m)
+
+0,6
+
+0,4
+
+0,2
+
+
+0,1
+
+0,2
+
+0,3
+
+0,4
+
+0,5
+
+0,6
+
+t in sec
+
+
+
+

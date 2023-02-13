@@ -1,0 +1,492 @@
+
+
+Elektronik
+
+Die Kunst der H-Brücke: Let’s Rock
+Thomas Magin
+Alles begann mit der Idee, einen Portalkran zu bauen – no Limits. Es mal so richtig krachen zu
+lassen, losgelöst von allen (finanziellen) Restriktionen der Kindheit und Jugend. Und der muss
+sich natürlich auch bewegen. Und Automatisierung muss auch sein! Doch will man im Kosmos
+der fischertechnik-Motore bleiben, kommt man schnell an den Punkt, wo diese sich nur müde
+bewegen, wenn ein TXT das Kommando hat. Da muss Verstärkung her…
+
+
+Let me entertain you
+Wer gerne mit Controllern Aktoren ansteuert, allen voran dem TXT, stößt meistens
+früher als später an die Grenzen der limitierten elektrischen Leistung. Liegt schon bei
+einer Last von 100 Ω die Ausgangsspannung bei gerade mal gut 7 V (anstatt der
+9 V, die das Netzteil liefert), schränkt die
+erlaubte Stromstärke von 250 mA je Kanal
+noch weiter ein.
+
+Bei zwei Power-Motoren parallel oder einer
+Handvoll Lampenbausteinen geht dem im
+TXT verbauten MC33879 schnell die Puste
+aus. Auch dieser wird als H-Brücke
+verwendet – nur nicht mit sonderlich viel
+Leistung, was der kompakten Bauform
+geschuldet ist. Was also tun?
+Vorab: Ich bin ein Fan der möglichst
+„reinen“ fischertechnik-Lehre. 3D-Druck,
+Aluprofile, Kugellager etc. sind nicht meine
+
+Welt. Damit möchte ich keinesfalls etwas
+gegen all die innovativen Modder, Konstrukteure und Erfinder gesagt haben, die
+einen wahrhaft faszinierenden Kosmos an
+Erweiterungen mit Ideen und Lösungen
+versorgen. Ich folge nur einem anderen Stil.
+Keinem besseren, eben einem anderen.
+Der Markt hält eine Vielzahl industrieerprobter Möglichkeiten bereit, die sich
+problemlos an einen TXT adaptieren lassen.
+Auspacken, einschalten, geht. Aber es ist
+eben nicht fischertechnik. Also muss ein
+anderer Weg gefunden werden – und da half
+mir der Zufall auf die Sprünge. Beim
+Stöbern in den Gebrauchtteilebörsen
+stolperte ich über die betagten TransistorLeistungsstufen. Dereinst mit zwei NPNDarlington-Transistoren bestückt, sind sie
+der erste Schritt zu einer fischertechnik-HBrücke.
+
+Elektronik
+
+Building Bridges
+Bevor wir nun beginnen, ein Hinweis zur
+Sicherheit: Wir begeben uns in die Jagdgründe der Leistungselektronik. Dieser
+Begriff ist in der Literatur nur schwammig
+umrissen und jeder versteht etwas anderes
+darunter. Aber ich wage mal eine an die
+fischertechnik-Welt angepasste Definition:
+Leistungselektronik ist’s, wenn sich die
+Schaltung im Fehlerfall selbständig mechanisch zerlegen kann, es Bauteile förmlich
+zerreißt und u. U. gefährliche Brände
+entstehen. Denn die von uns eingesetzten
+Komponenten sind durchaus potent,
+schalten bis zu 20 A und sollten respektvoll
+behandelt werden. Daher empfehle ich:
+
+und ihr Schaltbild (rechts)
+
+
+
+TXT-Ausgänge
+
+S1
+
+S2
+
+S3
+
+S4
+
+Zustand
+
+M1: GND; M2: GND
+
+leitet
+
+leitet
+
+sperrt
+
+sperrt
+
+Bremse
+
+M1: aktiv; M2: GND
+
+PWM
+
+leitet
+
+PWM
+
+sperrt
+
+Motorantrieb
+
+M1: GND; M2: aktiv
+
+leitet
+
+PWM
+
+sperrt
+
+PWM
+
+Motorantrieb
+
+M1: aktiv; M2: aktiv
+
+(sperrt) (sperrt) (leitet)
+(leitet)
+Tab. 1: Zustände der H-Brücke
+
+Nicht möglich
+
+ Benutzt nur geregelte Netzteile, bei
+denen ihr den Strom einstellen könnt.
+Damit wird die Energie (und der potenzielle Schaden) begrenzt. Benutzt keine
+Batterien oder Akkus!
+ Benutzt saubere und korrosionsfreie
+Steckkontakte.
+ Wenn doch Batterien/Akkus verwendet
+werden müssen: Sichert eure Schaltungen ab – mit Sicherungen!
+ Vorsicht bei der Nutzung von fliegenden
+Aufbauten und Krokodilklemmen. Da
+schließt sich leicht etwas kurz!
+
+ … ist das nicht übertrieben, woher weiß
+der das alles? Fragt nicht…
+Nun aber ein kleinwenig Theorie. Eine HBrücke, auch als Vierquadrantensteller
+bezeichnet, ist im Wesentlichen eine
+Anordnung aus vier Schaltern, die folgende
+Betriebszustände ermöglicht:
+ Vorwärts beschleunigen (Motorbetrieb)
+ Rückwärts beschleunigen (Motorbetrieb)
+ Vorwärts bremsen (Generatorbetrieb)
+ Rückwärts bremsen (Generatorbetrieb)
+
+
+
+Elektronik
+
+Wen weiterführende Details dazu interessieren, wird auf den einschlägigen Wissensportalen im Internet fündig.
+Für uns sind die beiden ersten Zustände
+wichtig, denn hier sind die Motore in
+Betrieb. Da die Ausgänge des TXT ebenfalls durch eine H-Brücke pulsmoduliert
+gespeist werden, bilden sie den idealen
+Treiber für eine Leistungsstufe, denn sie
+werden die vorgestellte Lösung „zerstörungssicher“ ansteuern. Damit ist gemeint,
+dass nie die Gefahr bestehen wird, eine der
+beiden Halbbrücken vollständig durchzuschalten (was zu einem veritablen Kurzschluss führen würde).
+S1/S3 und S2/S4 werden als jeweils
+komplementäre
+Halbleiter
+ausgelegt.
+Zusammen mit der TXT-Ansteuerung ist
+sichergestellt, dass diese niemals gleichzeitig schalten. Wenigstens fast, doch dazu
+später.
+
+
+Start me up
+Im Grunde könnte man direkt mit der
+fischertechnik-Leistungsstufe
+beginnen,
+eine Halbbrücke, also eine Seite der HBrücke, zu bauen. Das bringt aber zwei
+Nachteile mit sich:
+
+
+
+
+ Da wir hier nur NPN-Elemente zur
+Verfügung haben, benötigen wir für den
+Highside-Transistor (der gegen die Versorgungsspannung schaltet) eine aufwändigere Ansteuerung.
+ Darlington-Transistoren
+haben
+im
+durchgeschalteten Zustand einen signifikanten Spannungsabfall UCEsat über ihrer
+Kollektor-Emitterstrecke.
+Dem ersten Punkt könnten wir dadurch
+entgegenwirken, dass wir den Transistor,
+dessen Emitter nicht fest mit GND verbunden ist, gegen sein PNP-Pendant austauschen, z. B. den TIP115. Allerdings
+käme dann aufgrund der UCEsat immer noch
+nicht die volle Versorgungsspannung an der
+zu schaltenden Last an. Laut Datenblatt sind
+dies bis zu 2,5 V bei 2 A. Auch wenn wir
+diesen gepulsten Betriebspunkt mit fischertechnik-Elementen nie erreichen werden:
+Mit 0,5 V bis 1 V Verlust je Transistor
+müssen wir schon rechnen.
+Durch die Brückenschaltung haben wir also
+den Spannungsabfall an zwei Transistoren,
+
+werden somit kaum über die 7,5 V hinauskommen, die der MC33879 im TXT liefert.
+Dazu kommt, dass solch ein Spannungsabfall, multipliziert mit dem zu schaltenden
+Strom Ic, eine signifikante Verlustleistung
+ergibt – und damit den Zwang zu Kühlkörpern.
+Die moderne Alternative zum DarlingtonTransistor ist der MOSFET. Auch dazu
+findet sich im Netz Lektüre für mehrere
+Monate Kurzweil, sodass ich an dieser
+Stelle nicht auf die Funktionsweise des
+Bauelements eingehen werde. Die wesentlichen, für uns relevanten Eigenschaften
+sind:
+ MOSFETs haben praktisch keine
+Spannungs- und Leistungsverluste.
+ Mit dem TIP110 sind dimensions- und
+anschlussgleiche Typen vorhanden.
+ Die Ansteuerung ist einfach.
+Die Auswahl an Bauteilen am Markt ist fast
+unendlich und unsere Anforderungen aus
+der fischertechnik-Welt sind minimal. Wir
+wollen keine hohen Spannungen schalten,
+bei den Strömen bleiben wir im einstelligen
+
+
+
+Elektronik
+
+Ampere-Bereich und die PWM ist langsam
+– alles gemessen an den Möglichkeiten
+moderner Transistoren. Also kommt ein
+IRFZ34/IRF9Z34-Pärchen zum Einsatz, ein
+N-Kanal- und ein P-Kanal-Typ.
+
+MOSFETs. Man beachte die Analogie zu
+
+
+
+
+
+
+M1 wird mit einem Motorausgang des TXT
+verbunden, M2 mit dem korrespondierenden Anschluss. Wie in der vorherigen
+Tabelle gezeigt, gibt es nur drei gültige
+Schaltzustände:
+ M1 und M2 werden vom TXT nach
+Masse gezogen: Damit leiten Q1 und Q2,
+an der Last liegen auf beiden Seiten
+VCC, die Spannungsdifferenz ist 0 V.
+ M1 ist aktiv, entweder ein PWM-Signal
+oder VCC; M2 liegt auf GND: Nun
+bilden Q1 und Q3 das an M1 liegende
+Signal invertiert an Rlast ab. Da aber die
+Last auf der anderen Seite VCC sieht (da
+M2 auf GND liegt) haben wir eine
+doppelte Invertierung und alles ist
+wieder gut.
+ M2 ist aktiv, entweder ein PWM-Signal
+oder VCC; M1 liegt auf GND: Die
+Umkehrung des vorherigen Falls und
+damit die Änderung der Polarität an Rlast.
+Ich werde des Öfteren die Begriffe „Lowside“ und „Highside“ verwenden. Unter
+„Highside“ versteht man die positive Versorgungsspannung, unter „Lowside“ die
+
+Masse (im Falle einer einfachen Stromversorgung). Ein Highside-Transistor schaltet
+somit gegen VCC, der Lowside-Transistor
+gegen GND. Daher muss der HighsideTransistor ein Komplementärtyp des Lowside-Transistors sein. Da P-Kanal-Typen
+nicht die Leistung von N-Kanal-Typen
+bringen, werden in Hochlastanwendungen
+(mehrere zig Ampere und darüber) Brücken
+nur aus N-Kanal-MOSFETs aufgebaut.
+Dies erfordert dann zusätzliche Elektronik
+zur Ansteuerung. Doch bei unseren bescheidenen Verhältnissen mit einigen Ampere
+können wir uns den Aufwand sparen.
+aussieht. Die Last besteht hier aus 25 Ω.
+Macht runde 350 mA bei 9 V, was die
+Transistoren schon fast hörbar zum Gähnen
+bringt, einen TXT aber überlasten würde.
+Hier einmal das Schaltverhalten im Detail:
+Die in Abb. 10 oberen, klein dargestellten
+Signale entsprechen dem Schaltverhalten
+aus Abb. 7. Darunter, in Zeitlupe, die steigende Flanke am M1-Ausgang des TXT
+(gelb) und die Antwort des MOSFET
+(blau).
+
+
+Elektronik
+
+
+Während sich der TXT gemächliche 20 µs
+Zeit lässt, den Zustand zu wechseln, schaltet
+der MOSFET in einem 20stel der Zeit, ist
+erst einmal der Schwellenwert von 4 V UGS
+erreicht (Abb. 10).
+
+Shoot to thrill
+Nun ist da aber noch ein kleines Detail, über
+das viele gerne großzügig hinweggehen: die
+Schaltzeiten der Transistoren. In der idealen
+Welt schalten die oberen Transistoren
+
+
+
+
+Q1/Q2 der Halbbrücken schneller ab als die
+unteren Q3/Q4 ein, bzw. umgekehrt. In der
+realen Welt weiß man das aber nicht so
+genau. Und dieses Problem führt zu „Shoot
+through“ oder „Cross conduction“.
+
+Hierbei kommt es zu einem kurzfristigen
+Durchschalten beider Transistoren der
+Halbbrücke und damit zu einem Kurzschlussstrom, meist für einige Mikrosekunden. Das hört sich nicht dramatisch an
+
+
+
+
+Elektronik
+
+
+und wird die Schaltung auch kaum zerstören, verursacht aber unangenehme Störungen in der Versorgung. Die Brute-ForceLösung: einen dicken Elko an die HBrücken-Versorgung hängen, der die Lastspitzen wegfiltert.
+Aber wir hätten es gerne etwas eleganter,
+indem wir die Schaltflanken an den Transistor-Gates so verzögern, dass der Shoot
+through ausgeschlossen wird. Und das geht
+so (Abb. 11):
+Die Ansteuerung der Gates wurde mit einer
+kleinen Schaltung erweitert. Nehmen wir
+uns zuerst einmal alles rund um den Q1 vor,
+der highside, und gehen Schritt für Schritt
+einen Schaltvorgang durch:
+ M1 liegt auf GND: damit liegt das Gate
+an GND, der P-Kanal-Transistor ist
+durchgeschaltet, C1 ist auf VCC aufgeladen.
+ M1 schaltet auf VCC: da die Kathode
+von D1 (noch) auf GND liegt, an der
+Anode nun aber VCC, leitet die Diode
+und C1 wird schlagartig entladen. Das
+Gate-Potenzial wird VCC, UGS also 0 V,
+
+der Transistor sperrt nahezu verzögerungsfrei.
+Was passiert zur gleichen Zeit an Q3?
+ Wenn M1 auf GND liegt, sperrt der
+Transistor; C3 ist entladen.
+ M1 schaltet auf VCC: Nun lädt sich C3
+über R3 auf VCC auf, da die parallel
+liegende Diode sperrt. Übersteigt UGS
+die Schwellenspannung des Transistors
+bei ca. 4 V, schaltet dieser durch.
+Und genau diese Aufladezeit von C3 bewirkt eine Verzögerung im Einschalten von
+Q3 gegenüber dem Ausschalten von Q1.
+Dazu die Bilder aus der Praxis (Abb. 12 und
+13). Zuerst die Signale am reinen RCNetzwerk, ohne Transistoren. Schön sieht
+man den verzögerten Anstieg/Abfall gegenüber der jeweils anderen Hälfte der Halbbrücke.
+In Abb. 14 sieht man, dass wir gut 15 µs
+„Luft“ gewonnen haben (das „TXT_out“Signal bitte ignorieren, das passt nicht
+dazu).
+
+
+
+Take me higher
+Wenn man sich den Schaltplan in Abb. 5
+ansieht, stellt sich die Frage, ob es denn
+nicht möglich wäre, VCC beliebig zu
+wählen, um auch stärkere Motore, z. B. mit
+12 V oder 24 V anzusteuern. Damit würden
+sich neue Leistungsbereiche erschließen
+und/oder Ströme reduzieren. Gerade Letzteres ist immer eine gute Idee. Doch Vorsicht
+– werfen wir noch einmal einen Blick auf
+die Halbbrücke in Abb. 15.
+
+Ansteuerspannung den VCC-Pegel erreicht.
+Damit ist sichergestellt, dass der HighsideTransistor ein UGS von 0 V sieht und sauber
+abschaltet.
+Kleiner Exkurs zum TXT: damit die Motorausgänge ausreichend schnell von aktiv auf
+inaktiv schalten, also auf 0 V ziehen,
+müssen diese mit einem Widerstand belastet werden. Daher haben R10 und R11 nur
+220 Ω. Als Konsequenz stellen sich dann
+aber auch nur 7,5 V ein – wer bei den Oszillogrammen in Abb. 13 aufgepasst hat, dem
+dürfte das aufgefallen sein. D. h. das Schaltungsdesign kann am Highside-Transistor
+bestenfalls eine Abschaltspannung von UGS
+= -1,5 V (statt der gewünschten 0 V) liefern.
+Das ist deutlich unter der Schwellenspannung von Q1/Q2 und damit auf der
+sicheren Seite, aber schön ist anders.
+
+Smoke on the water!
+
+Sagen wir VCC sei 24 V. Die Ansteuerung
+an M1 erfolgt weiterhin mit 9 V bzw. mit
+nur 7,5 V, da der TXT mehr nicht bringt
+(siehe auch „TXT_out“ in Abb. 13). Stellen
+wir uns vor, M1 sei aktiv mit 7,5 V. Das
+lässt Q3 sauber durchschalten. Und Q1? Da
+läge nun das Gate auf 7,5 V, VCC und
+damit US auf 24 V. Macht eine UGS
+von -16,5 V. Q3 leitet und wir haben einen
+veritablen Kurzschluss, der, eine potente
+Stromversorgung vorausgesetzt, die Schaltung mit einem lauten Knall zerlegt. Es ist
+also keine gute Idee, VCC nach Belieben zu
+erhöhen.
+Aber könnte man denn nicht…? Ja, man
+kann! Man muss nur dafür sorgen, dass die
+
+
+Diese Unschönheit lösen wir mit einem
+„Pegelwandler“ oder „Level Shifter“, der
+dafür sorgt, dass das Ansteuersignal der
+Leistungstransistoren VCC erreicht. Doch
+auch hier gleich die nächste Vorsichtsmeldung: Den Ansteuerpegel sollte man
+nicht nach Belieben erhöhen, denn UGS hat
+seine Grenzen. Die liegen bei den verwendeten Bauteilen bei 20 V, womit dann auch
+eine VCC größer 20 V nicht infrage kommt.
+
+
+Elektronik
+
+
+Oder man sucht sich andere MOSFETs,
+aber wir wollen’s mal nicht übertreiben.
+Kommen wir zur Schaltung, einer Transistoranwendung in ihrer einfachsten Form.
+An M1 liegt der TXT, der nur dafür zur
+sorgen hat, dass Q1 sauber ein- und ausschaltet. Mit einer Schwellenspannung UGS
+
+von rund 2 V schafft der TXT das auch ganz
+locker. Dabei ist die Wahl des Q1 unkritisch. Fast jeder N-Kanal-Typ aus der
+Bastelkiste taugt hierfür.
+Am Ausgang M2 wird nun aber VCC oder
+GND weitergegeben und hier könnte VCC
+so hoch sein, wie es der Transistor mit
+
+
+
+
+einem UDS von maximal 60 V verkraftet.
+Doch Vorsicht: Die Ausgangsspannung von
+Q1 ist die Eingangsspannung der H-Brücke.
+Und deren Transistoren erlauben ein UGS
+von nicht mehr als 20 V – siehe oben. Und
+somit ist unser VCC, und damit die Spannung der Last, auf 20 V limitiert.
+Das ist für unsere fischertechnik-Welt mit
+ihren 9 V mehr als genug. Möchte man aber
+24 V-Verbraucher ansteuern, muss man
+hier um-designen.
+So einen Level Shifter kann man natürlich
+auch mit einem bipolaren Transistor aufbauen. Dann benötigt man zusätzlich einen
+Basiswiderstand. Wie und warum, dazu gab
+es bereits in ft:pedia einen ausführlichen
+Artikel [1]. Den finalen Schaltungsentwurf
+in Abb. 17 habe ich mit einem klassischen
+NPN-Transistor gezeichnet. Aufgebaut
+habe ich beide Ansätze, die sich in ihrem
+elektrischen Verhalten in nichts unterscheiden.
+
+All together now
+Und nun führen wir alle Details in einer
+Schaltung zusammen. Der gesamte Schaltplan (Abb. 17) sieht komplizierter aus, als
+
+
+er ist. Tatsächlich sind linke und rechte
+Hälfte der Brücke gespiegelte Schaltungen.
+Die Halb-Brücken als solche wurden in den
+vorherigen Abschnitten schon im Detail
+beschrieben.
+Und wie sich das gehört, werden die Gates
+von Q1…Q4 jetzt auch mit sauberen 9 V
+angesteuert. Als Last dienen zwei PowerMotoren.
+
+The real thing
+Nachdem wir uns so tapfer durch die
+Theorie gekämpft haben, wird es Zeit für
+die Praxis. Wie bereits angedeutet, soll
+diese weitestgehend auf fischertechnikStandardbauteilen beruhen. Dies wird in
+einem zweiten Teil beschrieben. Bis dahin,
+als Teaser, ein paar Bilder zur Entstehungsgeschichte.
+Wer sich vor solchen Aufbauten nicht
+scheut und weiß, auf welcher Seite man
+einen Lötkolben anfasst, für den geht es
+demnächst weiter.
+
+Referenzen
+[1]
+
+Frank Bruder: Der Transistor.
+ft:pedia 3/2020, S. 41–58.
+
+
+Elektronik
+
+
+
+
+
+
+
+

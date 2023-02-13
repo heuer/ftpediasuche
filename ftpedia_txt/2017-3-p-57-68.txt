@@ -1,0 +1,950 @@
+
+Computing
+
+Computing
+
+V. I. P. – Ein I²C-nach-Computing-InterfaceUmsetzer (Teil 2)
+René Trapp
+Interface-Technik: Die Stromversorgung, die Motorendstufen und deren Geheimnisse.
+Nachdem im ersten Teil der Serie die
+Geschichte der Interfaces umrissen und eine
+erste Übersicht über die Anschlüsse an die
+zugehörigen Computer gegeben wurde,
+stehen diesmal die Leistungsträger, also
+Stromversorgung und Motorendstufen, im
+Rampenlicht.
+Zur jeweiligen Schaltungsbeschreibung
+dienen die vom Autor selbst erstellten
+Schaltpläne der Interfaces [16], 17, 18, 19,
+20, 21, 22, 23, 24, 25]. Dabei gibt es eine
+Besonderheit: Die Interfaces 30561 bis
+30564 basieren auf einer gemeinsamen
+Platine. Die trägt einen Bestückungsdruck
+mit Bauteilnamen, zum Beispiel T17 für
+einen bestimmten Transistor. In allen
+zugehörigen Schaltplänen sind exakt diese
+Bauteilnamen zugeordnet. Dabei fällt auf,
+dass es beim Original keine Bauteilnamen
+gibt, die auf ‚0‘ oder ‚5‘ enden, mit einer
+Ausnahme: R30.
+Alle anderen Interfaces verwenden im
+Bestückungsdruck auf der Platine anstelle
+eines Namens nur den Wert des Bauteils;
+zum Beispiel 4,7n für einen bestimmten
+Kondensator. Daher sind in deren Schaltplänen die Bauteilnamen frei erfunden.
+Damit allerdings eine durchgängige Schaltungsbeschreibung zu Stande kommen
+kann, sind identisch verwendete Bauteile in
+allen Schaltplänen auch identisch benannt.
+In den Interfaces 30566 und später sind
+einige Bauteile entfallen und dafür neue
+hinzugekommen. Diese neuen Bauteile
+
+tragen dann neue Namen. Auch hier sind die
+Endungen ‚0‘ und ‚5‘ ausgespart. So erklärt
+sich das seltsam anmutende BauteilNamensschema in den einzelnen Schaltplänen.
+Aber nun zu den einzelnen Baugruppen.
+Den Anfang macht dann gleich:
+
+Die Stromversorgung
+Die Stromversorgung der Interfaces erfolgt
+aus bis zu zwei fischertechnik-Netzgeräten
+32680 mit den Nennangaben 6,8 V / 1,5 A.
+Das Netzgerät liefert eine pulsierende
+Gleichspannung. Durch entsprechende
+Glättung kann daraus eine Gleichspannung
+bis etwa 9 V entstehen.
+Jeweils eine Anschlussbuchse je Netzteil
+(+NG1, +NG2) dient der Versorgung. Die
+Rückleitung wird dann an die entsprechenden Massebuchsen (0V_1, 0V_2) angeschlossen. Zusätzlich ist eine dritte Massebuchse (0V_3) vorhanden.
+Die Schaltung aus Abb. 17 gilt für die Interfaces 30561, 30562, 30563, 30564, 30565
+und 30567. Die Schaltung aus Abb. 18 gilt
+für 30566, 39319 (= 67319), 30520 und
+66843. Die einzigen Unterschiede sind der
+Kondensator C2, der bei den neueren Interfaces aus zwei einzelnen Kondensatoren
+ungefähr halben Wertes besteht, und die
+versorgten ICs. IC1 und IC3 wurden durch
+IC9 und IC11 ersetzt. Die Funktion der
+Stromversorgung ist in beiden Fällen
+
+
+
+identisch. Die Problemzonen sind es daher
+auch.
+
+glättet die ankommende Spannung. C1 wird
+auch als Siebkondensator bezeichnet.
+Bedingt durch den Spannungsabfall an D24
+beziehungsweise D26 beträgt die Spannung
+am Knoten V+ unbelastet etwa 8,5 V.
+Die geglättete Spannung V+ wird ebenso zu
+den Motorendstufen geleitet. IC8, ein
+integrierter Festspannungsregler vom Typ
+7805, stabilisiert die von dem (den) Netzteil(en) gelieferte Spannung V+ auf +5 V.
+Ein weiterer Elektrolyt-Kondensator, C2,
+puffert Stromspitzen auf der 5 V-Versorgung. Kondensator C9 sorgt für eine
+Entkopplung der Stromspitzen aus den versorgten ICs IC1/IC11, IC2, IC3/IC9 und
+IC4. Das Suffix ‚P‘ steht im verwendeten
+Leiterplatten-CAD für den jeweiligen Versorgungsteil ‚Power‘.
+
+
+
+Die Dioden D24 und D26 vom Typ 1N4001
+entkoppeln die beiden Netzteile voneinander und bewirken gleichzeitig den Verpolschutz. Der Elektrolyt-Kondensator C1
+
+
+Ein einzelnes Netzteil ist in der Lage, 1,5 A
+abzugeben. Dieser Strom fließt durch die
+betroffene Diode D24 oder D26. Der maximal erlaubte Strom IF der 1N4001 ist im
+Datenblatt [39] mit 1 A angegeben
+(Limiting Values). Angesichts des Netzteilstromes von 1,5 A ist die Nutzung der
+1N4001, na sagen wir mal, sportlich. Bei
+Überlast wird die Diode ihre Eigenschaft,
+den Strom nur in einer Richtung durchzulassen, verlieren. Das Interface wird
+weiterhin funktionieren, allerdings ist im
+Bedarfsfalle der Verpolschutz unwirksam.
+Das wird nicht schon passieren, wenn der
+Durchlassstrom lediglich nur einen Hauch
+über 1 A liegt, aber das 1,5-fache des
+Grenzwertes ist dann doch schon heftig.
+Zu den Elektrolyt-Kondensatoren (vulgo:
+„Elkos“) sei noch angemerkt, dass diese im
+Laufe der Jahrzehnte austrocknen und sich
+so ihre elektrischen Eigenschaften Kapazität und Innenwiderstand verschlechtern. Bei
+Gleichspannungsbetrieb ist das untergeordnet, kann aber beim Schalten der
+Verbraucher zu Aussetzern führen. Im
+Zweifelsfalle kann solch ein vertrockneter
+Elko durch einen frischen gleichen Nennwerts ersetzt werden.
+
+Der Festspannungsregler IC8 ist ein 1 ATyp [40]. Für die 4 ICs scheint er kräftig
+überdimensioniert. Ein 100 mA-Typ 78L05
+hätte es sicher auch getan. Die minimale
+Eingangsspannung sollte nach Datenblatt
+mindestens 2,5 V über der Ausgangsspannung liegen.
+In jedem Falle kann der Spannungsregler
+beschädigt werden, wenn die Ausgangsspannung über die Eingangsspannung angehoben wird. Schlimmstenfalls steigt die
+Ausgangsspannung dann über die 5 V
+hinaus bis zur anliegenden Eingangsspannung V+ an. Die verwendeten ICs im
+Interface sind für eine Versorgung von 3 V
+bis 15 V geeignet und das Interface selbst
+wird hier keinen Folgeschaden nehmen.
+Aber alle Ausgänge vom Interface zum
+Computer werden ebenfalls mit dieser
+hohen Spannung getrieben und der
+Computer wird dadurch beschädigt. Bei der
+üblichen Beschaltung des Interfaces wird
+das jedoch nicht passieren.
+
+Die Motorendstufen
+Die Motorendstufen gibt es in zwei
+Versionen.
+Diskret
+Wie bereits in Teil 1 beschrieben, sind die
+Interfaces 30561, 30562, 30563, 30564,
+30565 und 30567 mit diskreten Motorendstufen ausgestattet [41]. Als diskret
+bezeichnet man Schaltungen, die aus einzelnen Grundelementen mit jeweils eigenem
+Gehäuse (Widerstände, Kondensatoren,
+Dioden, Transistoren, Induktivitäten usw.)
+zusammengesetzt werden. Abb. 19 zeigt
+eine der 4 baugleichen diskreten Motorendstufen. Diese Art der Motoransteuerung
+wird allgemein als Brückenschaltung
+bezeichnet.
+Die Leitungen D0 und D1 führen zu
+Ausgängen eines Schieberegisters 4094.
+Welche Ausgänge das genau sind, hängt
+vom jeweiligen Motor ab. D0 ist in jedem
+Falle das niederwertigere Bit, D1 ist das
+
+Computing
+
+unmittelbar benachbarte höherwertige Bit.
+An ST2 ist dann der Motor angeschlossen.
+Motor M1 liegt an ST2-13 und ST2-14, die
+anderen Motoren entsprechend an anderen
+Steckanschlüssen.
+Die Funktion der Endstufe ist recht einfach
+zu durchschauen.
+
+
+Liegt der Steuereingang D0 auf logisch ‚0‘,
+das heißt der Ausgang des vorgeschalteten
+4094 gibt 0 V ab, so fließt kein Basisstrom
+in den Treibertransistor T2. Es fließt auch
+keinerlei Strom von dessen Kollektor zum
+Emitter, T2 ist gesperrt. Die Leistungstransistoren T14 und T24 erhalten so auch
+keinen Basisstrom und sind ebenfalls
+gesperrt. Wegen der Verschaltung überkreuz ist nun der Motoranschluss an ST2-14
+nicht mit V+ verbunden, der Motoranschluss an ST2-13 ist nicht mit GND
+verbunden.
+Liegt dagegen der Steuereingang D0 auf
+logisch ‚1‘, das heißt der Ausgang des 4094
+gibt 5 V ab, so fließt nun ein Basisstrom in
+den Treibertransistor T2 und steuert diesen
+auf. Es fließt ein durch R24 begrenzter
+Strom vom Kollektor zum Emitter. Dadurch
+erhalten die Leistungstransistoren T13 und
+T24 ihren nötigen Basisstrom und werden
+voll durchgesteuert. T24 verbindet ST2-14
+mit V+, T14 verbindet ST2-13 mit GND.
+Ein angeschlossener Motor wird nun in
+
+
+
+
+einer Drehrichtung loslaufen. Nach Handbuch ist dieser Ausgangszustand als
+‚Rechtslauf‘ definiert [32].
+Dies gilt sinngemäß auch für die andere
+Brückenhälfte, die über Steuereingang D1
+angesteuert wird und aus T1, T14, T23 und
+R23 bestehend auf ST2-13 und ST2-14
+arbeitet.
+Liegt der Steuereingang D1 auf ‚0‘, so ist
+ST2-14 nicht mit GND verbunden, ST2-13
+ist nicht mit V+ verbunden. Liegt Steuereingang D1 auf ‚1‘, so ist ST2-14 mit GND
+verbunden und ST2-13 liegt an V+. Das
+wäre dann der ‚Linkslauf‘.
+Solange nur ein Steuereingang, entweder
+D0 oder D1, auf ‚1‘ liegt ist alles okay,
+ebenso wenn beide Steuereingänge auf ‚0‘
+liegen. Sobald aber beide Steuersignale
+gleichzeitig auf ‚1‘ liegen, wird V+ über die
+gleichzeitig leitenden T13, T14, T23 und
+T24 nach GND kurzgeschlossen.
+Ein solcher Kurzschluss wird die betroffene
+Endstufe nach kurzer Zeit zerstören. Insbesondere wenn, wie für größere Modelle
+empfohlen, 2 Netzteile angeschlossen sind.
+Es gibt zwar eine Sicherung gegen dieses
+Malheur, aber es ist besser, diese Situation
+bei der Programmierung des Interface
+grundsätzlich zu vermeiden [6].
+Für die Motorendstufen ergibt sich eine
+kleine Logik-Tabelle, Tab. 1. ‚Hi-Z‘
+bedeutet hier, dass der jeweilige Anschluss
+hochohmig geschaltet ist. Es fließt kein
+Strom.
+D1 D0 ST2-13 ST2-14
+
+
+Hi-Z
+
+Hi-Z
+
+
+
+GND
+
+V+
+
+
+
+V+
+
+GND
+
+
+
+Tab. 1: Logik diskrete Motorendstufe
+
+
+Liegen beide Steuereingänge auf ‚0‘, dreht
+der Motor frei und kommt langsam zum
+Stillstand. Er wird lediglich durch die
+mechanische Last gebremst.
+Für die Belastbarkeit der Ausgänge ist in
+den Handbüchern – stellvertretend sei hier
+wieder die Anleitung zum 67319 [32]
+genannt – ein Dauerstrom von 1 A angegeben. Die Anlaufströme der Motoren, und
+auch die Einschaltströme der fischertechnik-Lämpchen, können bis zu 1,5 A
+betragen. Na, das passt ja so einigermaßen
+zu den eingesetzten Leistungstransistoren
+vom Typ BD135 und BD136. Deren Datenblattangabe besagt 1,5 A Dauerstrom und
+bis 2 A Spitzenstrom ([42], [43]), allerdings
+nur bei genügend Basisstrom und entsprechender Kühlung. Kühlkörper sind
+jedoch nicht vorgesehen.
+Mit ansteigenden Kollektorströmen (in
+diesem Fall der Strom durch den angeschlossenen Motor) sinkt die Stromverstärkung der BD135 und BD136 hFE
+drastisch ab, und bei Werten um 1 A liegt
+sie unterhalb 10. Um also 1 A Kollektorstrom fließen zu lassen, muss der
+Basisstrom über 100 mA betragen. Die
+Treibertransistoren T1 oder T2 führen
+diesen Basisstrom der Leistungstransistoren
+als ihren Kollektor- bzw. Emitterstrom.
+Die Treibertransistoren T1 und T2 sind vom
+Typ BC547B. Deren maximal zulässiger
+Kollektorgleichstrom beträgt 100 mA, die
+Stromverstärkung ist dabei auf Werte um
+120 abgesunken [44]. Also rund und grob:
+bei 100 mA am Kollektor geht 1 mA in die
+Basis rein. Dieses 1 mA ist damit der Ausgangsstrom des 4094.
+Zusammen mit dem jeweiligen Ausgang
+des 4094, der stabilisierten Betriebsspannung von 5 V sowie R23 und R24
+bilden die Transistoren T1 und T2 jeweils
+eine
+schaltbare
+Konstantstromquelle.
+Welcher konstante Strom sich genau einstellt, hängt vom Schieberegister IC 4094
+
+
+Computing
+
+ab. Es kann nur einen bestimmten Ausgangsstrom bereitstellen, gleichzeitig sinkt
+seine Ausgangsspannung bei ‚1‘ unter Last
+ab (bedingt durch seinen Innenwiderstand).
+Ein Ausgang des 4094 muss nun also den
+Basisstrom eines BC547B bereitstellen. Der
+genaue Wert ist abhängig von der Stromverstärkung des BC547B und der Spannung
+an seiner Basis gegen GND, also der Ausgangsspannung des 4094. Diese Spannung
+wird um etwa 1,3 V niedriger an R23 oder
+R24 anliegen. Je nach Hersteller unterscheiden sich die Charakteristika der Ausgangstreiber des 4094. Als Anhaltspunkt sei
+eine Ausgangsspannung von 4 V unter der
+entsprechenden Last von etwa 1 mA angenommen. 4 V minus 1,3 V macht dann noch
+2,7 V, was gemäß Herrn Ohm dann an 27 ς
+zu einem Strom von 100 mA führt. Der ist
+wie gesagt recht konstant und die Motorendstufe gibt maximal etwa 1 A her. Wird
+mehr abgefordert, kommen die Leistungstransistoren T13, T14, T23 beziehungsweise T24 aus der Sättigung in den linearen
+Bereich. An jedem von ihnen erhöht sich
+die Spannung zwischen Kollektor und
+Emitter von wenigen hundert Millivolt auf
+mehrere Volt. Das bedeutet eine deutliche
+Zunahme der Verlustleistung und eine entsprechende Hitzeentwicklung, die die ungekühlten Leistungstransistoren irgendwann
+zerstört.
+
+ist bei der Verdrahtung des Modelles trotzdem angeraten, Kurzschlüsse der Motorleitungen untereinander, nach GND oder
++NGx (vom Netzteil) zu vermeiden.
+
+Auch R23 und R24 werden recht warm. Mit
+den eben abgeschätzten Werten, ergibt sich
+für diese Widerstände eine Verlustleistung
+von 270 mW. Die Widerstandsbauform entspricht der gängigen Größe eines ¼ WWiderstandes. Die 270 mW sind also
+definitiv an der Grenze des Erlaubten.
+
+Zunächst einmal ist die ganze Schaltung
+einer Motorendstufe in IC12 verborgen. Die
+Steuersignale D0 und D1 kommen wiederum vom 4094. R38 und R39, je 10 kς,
+ziehen hochohmige Leitungen auf einen
+definierten ‚0‘-Pegel.
+
+Insgesamt erscheint nach dieser Analyse die
+Angabe des Handbuchs (1 A Dauerstrom,
+1,5 A Spitze) ein wenig arg sportlich und
+sollte nicht wirklich voll ausgeschöpft
+werden.
+Für die damals erhältlichen Motoren sind
+die diskreten Motortreiber ausreichend. Es
+
+Wird eine diskrete Endstufe mit einer
+erheblich höheren als der vorgesehenen
+Betriebsspannung V+ = 8,5 V betrieben, so
+besteht die Gefahr einer Überlast im
+Basisstromkreis. T1 beziehungsweise T2
+erhalten eine zu hohe Kollektor-EmitterSpannung, erwärmen sich durch die entstehende größere Verlustleistung zu stark
+und werden zerstört. Der Basisstromkreis
+der Leistungstransistoren kann dann nicht
+mehr unterbrochen werden. Eine programmierte Drehrichtungsumkehr des Motors
+führt in dieser Situation zur Zerstörung der
+restlichen Endstufe.
+Integriert
+Möglicherweise aus genau diesen Gründen
+wurden bei den Interfaces ab 1989 die
+diskreten Motorendstufen durch integrierte
+Brückentreiber ersetzt. Diese haben für die
+Motoren allerdings auch andere Eigenschaften, aber der Reihe nach.
+Die Interfaces 30566, 39319, 30520 und
+66843 sind mit integrierten Motorendstufen, sogenannten H-Brücken oder auch
+Vollbrücken, bestückt. Abb. 20 zeigt den
+Leistungsteil für Motor 1.
+
+Bei den sogenannten Schulinterfaces
+(CVK-Versionen) 39319 und 66843 sind
+zusätzlich noch Duo-LEDs mit Vorwiderständen verbaut. Diese Duo-LEDs
+kombinieren zwei LEDs in einem Gehäuse.
+Ein gemeinsamer Anschluss für die
+Kathoden führt auf GND und die getrennten
+Anoden gestatten die unabhängige
+Bestromung der LEDs. Je nachdem, welche
+Anode über den Vorwiderstand an hohe
+
+
+
+Spannung gelegt wird, leuchtet die LED rot,
+grün oder gelb; letzteres durch additive
+Farbmischung, wenn beide LEDs bestromt
+werden. Das muss nicht einmal gleichzeitig
+erfolgen, wenn das Wechselspiel mindestens 25-mal pro Sekunde erfolgt, entsteht
+im menschlichen Gehirn der Farbeindruck
+gelb. Warum das so ist, ist allerdings eine
+ganz andere Geschichte.
+
+tion der Schaltschwelle natürlich unerwünscht. Daher ist Anschluss 7 der
+TLE4201 nicht beschaltet.
+Und wie schalten nun die Motorausgänge
+dieser Variante? Am übersichtlichsten ist
+wieder eine kleine Logik-Tabelle:
+D1 D0
+
+ST2-13 ST2-14
+M+
+M-
+
+
+
+GND
+
+GND
+
+
+
+GND
+
+V+
+
+
+
+V+
+
+GND
+
+
+
+V+
+
+V+
+
+Tab. 2: Logik integrierte Motorendstufe
+
+Diesmal entsteht kein Kurzschluss
+zwischen V+ und GND, wenn beide Steuersignale D0 und D1 gleichzeitig auf ‚1‘
+liegen.
+
+
+Der Rest der Verschaltung ist jedenfalls im
+Gehäuse des TLE4201 verborgen, und nur
+ein Blick ins Datenblatt gibt Auskunft über
+die Zusammenhänge [45].
+R36 und R37 stellen eine Hilfsspannung
+bereit. Diese Hilfsspannung wird aus
+diesem Spannungsteiler auch den anderen
+drei Motortreibern zugeleitet. Mit dieser
+Hilfsspannung wird die Schaltschwelle festgelegt, die zwischen logisch ‚0‘ und ‚1‘
+unterscheidet. Der im IC integrierte Referenzteiler ist mit V+ und GND verbunden.
+Würde die Schaltschwelle mit diesem
+Teiler abgeleitet, so würde sie mit V+
+schwanken. Da die Ansteuerung aus stabilisierten +5 V erfolgt, ist eine solche Varia-
+
+
+Im Unterschied zu den diskreten Endstufen
+gibt es allerdings keinen hochohmigen
+Zustand an den Ausgängen. Liegen beide
+Steuereingänge auf dem gleichen Logikpegel, so wird der angeschlossene Motor
+mehr oder weniger kurzgeschlossen und
+dadurch aktiv abgebremst. Dies ist ein
+erheblicher Unterschied zur älteren Variante und wirkt sich bei PWM-Ansteuerung
+des Motors sehr nachteilig aus. Warum das
+so ist, ist allerdings auch eine ganz andere
+Geschichte [46]. Für die PWM-Steuerung
+von Dirk Uffmann eignen sich die Interfaces mit den diskreten Motorendstufen
+jedenfalls besser als die Versionen mit den
+TLE4201 [47].
+Die Nenndaten des TLE4201 gestatten
+einen Betriebsspannungsbereich zwischen
+3,5 V und 17 V. Der Ausgangsstrom darf
+bis zu 2,5 A betragen. Im IC ist eine Übertemperaturabschaltung
+enthalten;
+die
+Motorausgänge sind gegen Kurzschlüsse
+gegeneinander und gegen GND geschützt.
+
+Aufpassen muss man also mit einem Kurzschluss gegen +NGx, sonst geht der
+TLE4201 ganz schnell kaputt.
+Der Ausgangsstrom wird nicht dauerhaft
+bei 2,5 A liegen können. Die ICs werden
+ohne Kühlkörper betrieben und geben je
+1 A Ausgangsstrom etwa 2,6 W thermische
+Leistung ab. Mit einem thermischen Widerstand von 65 K/W zwischen Chip im
+Gehäuse und der Umgebung steigt die
+Chiptemperatur bei 1 A um 170°C gegen
+die Umgebungstemperatur an. Das ist
+bereits ein Fall für die Übertemperaturabschaltung. Die ist zwar nirgends spezifiziert, aber mit einer maximal zulässigen
+Junction Temperature (also der Temperatur
+des Chips selbst) von 150°C dürfte die
+Übertemperaturabschaltung die Ausgänge
+so in dieser Größenordnung auch tatsächlich sperren.
+Gemeinsam
+Und dann sind da in beiden Varianten noch
+die Freilaufdioden D1, D2, D3 und D4. Da
+ein Motor eine Wicklung enthält, ist er eine
+induktive Last. Insbesondere beim Abschalten einer induktiven Last möchte sich die im
+Magnetfeld gespeicherte Energie entladen.
+Das zusammenbrechende Magnetfeld induziert eine Spannungsspitze, die umso höher
+ausfällt, je schneller der ursprünglich
+fließende Strom absinkt. Diese Spannungsspitze ist umgekehrt zur ursprünglichen
+Betriebsspannung gepolt und erreicht
+Werte, die Halbleiterbauteile zuverlässig
+zerstört [48]. Über die Freilaufdioden wird
+dem Strom ein Ersatzweg zur Verfügung
+gestellt, das Magnetfeld kann sich langsam
+genug abbauen, um eine nur ungefährliche
+Spannung zu erzeugen [49]. In jedem Fall
+muss die Freilaufdiode den zunächst vollen
+Verbraucherstrom führen, bis er auf 0 A
+abgeklungen ist. Die Diode 1N4148 darf bis
+maximal 500 mA im Impulsbetrieb belastet
+werden [50]. Es gibt zwar zusätzlich die
+Angabe 2 A, aber die ist auf eine Zeitdauer
+von 1 µs beschränkt. Der Motorstrom wird
+keinesfalls so schnell abklingen. Somit
+
+Computing
+
+stellen sich die Freilaufdioden als großes
+Problem dar.
+Power-Motoren sollte man dem Interface
+nicht zumuten und auch die modernen XMund Encoder-Motoren sind keine gute
+Wahl.
+Berichte von Nutzern, die Ihre Interfaces
+mit bis zu 12 V betreiben, sind ebenfalls
+nicht pauschal als Freibrief für problemlosen Betrieb an zu hoher Spannung zu
+verstehen. Ist es ein Interface mit integrierten TLE4201-Motorendstufen, dann sind
+die 12 V tatsächlich unbedenklich. Die
+älteren Interfaces mit den diskreten Motorendstufen werden jedoch ab etwa 10 V in
+den Treiberstufen überlastet und können so
+beschädigt werden. Das passiert selbst
+dann, wenn gar keine Last am Motorausgang angeschlossen ist.
+Alle Interfaces können dagegen an einem
+fischertechnik-Akku betrieben werden.
+Aufgrund der hohen Stromaufnahme der
+Motortreiber ist diese Freude jedoch von
+nicht allzu langer Dauer, aber die 7,2 V
+Nennspannung des Akkus sind unschädlich.
+Es kann auch ein Netzteil mit bis zu 9 V
+Ausgangsspannung verwendet werden, um
+die modernen 9 V-Motoren zu betreiben.
+Diese Ausgangsspannung muss gut geglättet sein, was auf moderne Schaltnetzteile
+zutrifft.
+Damit wäre der Leistungsteil abgehakt. Der
+Rest ist jetzt hauptsächlich logisch.
+
+Die Notabschaltung der
+diskreten Motorendstufen
+Wie schon in Tab. 1 dargestellt, besteht bei
+den Interfaces 30561, 30562, 30563, 30564,
+30565 und 30567, also bei allen Interfaces
+mit den diskreten Motorendstufen, eine
+massive Kurzschlussgefahr durch eine
+falsche Programmierung.
+Dem Schaltungsentwickler war dies sehr
+wohl bewusst, und so gibt es eine Schutzschaltung, Abb. 21.
+
+
+
+In IC1, einem IC vom Typ 4011, sind 4
+NAND-Gatter enthalten [51]. Jedes dieser
+NAND-Gatter ist mit seinen zwei Eingängen an zwei benachbarte Ausgänge des
+4094 angeschlossen. Sobald beide Eingänge eines NAND-Gatters auf ‚1‘ gelegt
+werden, und auch nur dann, liegt seinem
+Gatterausgang eine ‚0‘. Ansonsten liegt an
+seinem Gatterausgang eine ‚1‘ an. Auf diese
+Art wird der ‚verbotene‘ Zustand an D0 und
+D1 erkannt und mittels ‚0‘ weitergereicht.
+Ist alles in Ordnung, liegt der Gatterausgang
+auf ‚1‘. Man nennt dies invertierte Logik.
+Um alle 8 Ausgänge des 4094 zu überwachen, werden alle 4 NAND-Gatter des
+4011 benötigt.
+
+
+Diese Schaltung kann zwar nicht den fehlerhaften Zustand verhindern, aber immerhin
+kann sie ihn erkennen und unverzüglich
+eine Abschaltung der Endstufen vornehmen. Es kommt zwar zu einem kurzzeitigen Kurzschluss in der Motorendstufe,
+aber die Abschaltung reagiert so schnell,
+dass es nicht sofort zu einer Zerstörung
+kommt. Trotzdem sollte diese Ansteuerung
+vermieden werden. In den originalen
+Programmen wird jeder Motor nur mit
+„Links“, „Rechts“, oder „Stopp“ angesprochen, so wird schon auf recht pfiffige
+Art genau dieses Problem vermieden. Allerdings ist immer mal mit fehlerhaft arbeitenden Programmen zu rechnen. Außerdem
+sollten die alten Interfaces auch zu eigenen
+Experimenten mit dem Computer anregen,
+da ist eine eigene Programmierung natürlich nicht ausgeschlossen. Und diese kann
+ebenfalls fehlerhaft sein.
+IC4, das Schieberegister vom Typ 4094,
+gehört nicht zur eigentlichen Schutzschaltung. Es ist zum besseren Verständnis
+mit dargestellt.
+
+Die Ausgänge der 4 NAND-Gatter werden
+über ein Netzwerk aus drei AND-Gattern
+(IC3, ein 4081 [52]) weiterverarbeitet.
+Solange alle Eingänge der Gatter IC3C und
+IC3D auf ‚1‘ liegen, kommt auch am Ausgang des Gatters IC3B eine ‚1‘ an. Wenn
+nur ein Eingang von IC3C oder IC3D auf
+‚0‘ liegt, ist am Ausgang von AND-Gatter
+IC3D ebenfalls eine ‚0‘ vorhanden. Diese
+‚0‘ schaltet den Watchdog ab (disable WD).
+Die Verschaltung der drei AND-Gatter
+IC3B, IC3C und IC3D ergibt insgesamt ein
+AND-Gatter mit 4 Eingängen. Und wegen
+der invertierten Logik wirkt diese Anordnung für eine ‚0‘ wie ein OR-Gatter. In
+natürlicher Sprache liest sich das so: Wenn
+am Ausgang des NAND-Gatters IC1A eine
+‚0‘ anliegt oder wenn am Ausgang des
+NAND-Gatters IC1B eine ‚0‘ anliegt oder
+wenn am Ausgang des NAND-Gatters
+IC1C eine ‚0‘ anliegt oder wenn am Ausgang des NAND-Gatters IC1D eine ‚0‘
+anliegt dann liegt am Ausgang von IC3B
+eine ‚0‘ an. Oder noch etwas abstrakter: Ist
+für M1 oder M2 oder M3 oder M4 oder
+mehrere oder alle gleichzeitig der verbotene
+Zustand eingestellt, werden sofort alle
+Motoren abgeschaltet.
+Die Eingänge solcher Logik-Gatter werden
+üblicherweise
+durch Großbuchstaben
+beginnend mit A dargestellt, der Ausgang
+
+
+Computing
+
+immer mit Y. Die entsprechende Logiktabelle eines NAND-Gatters zeigt Tab. 3,
+die Logiktabelle eines AND-Gatters zeigt
+Tab. 4.
+A
+
+B
+
+Y
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tab. 3: NAND-Kombinatorik
+
+A
+
+B
+
+Y
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tab. 4: AND-Kombinatorik
+
+Das Schieberegister für die Motoren
+Bei der Beschreibung der Motorendstufen
+und der Schutzschaltung wurde das
+Schieberegister eben schon kurz erwähnt:
+IC4 vom Typ 4094.
+
+Motorausgänge
+
+Dieses IC empfängt die seriell übertragenen
+Daten und gibt sie als gemeinsames 8-BitWort (ein Byte, D0…D7) an seinen Ausgängen ab [53]. In Teil 1 haben wir schon
+
+gesehen, dass für diese Übertragung lediglich die 3 Leitungen CLOCK, DATA-OUT
+und LOAD-OUT benötigt werden. Die
+Schaltung zeigt Abb. 22.
+Im Handbuch zum 67319 [32] (und in den
+anderen Handbüchern auch) ist der serielle
+Ablauf wie folgt angegeben:
+
+Motorausgänge [32]
+
+Im Ruhezustand liegt die Taktleitung
+CLOCK auf ‚1‘. Ebenso ist im Ruhezustand
+die Steuerleitung LOAD-OUT auf ‚1‘.
+DATA-OUT ist im Ruhezustand mit ‚0‘
+angegeben.
+Die Übertragung beginnt mit einer fallenden Flanke, also einem Übergang von ‚1‘
+nach ‚0‘ auf CLOCK. Zeitgleich wird
+LOAD-OUT auf ‚0‘ geschaltet. Als nächstes wird das erste Datenbit an DATA-OUT
+ausgegeben. Mit der nächsten steigenden
+Flanke, diesmal der Übergang von ‚0‘ auf
+‚1‘, an CLOCK wird dieses Bit ins Schieberegister des 4094 übernommen. Das eingeschobene Bit steht nun an der Position
+Q1, erscheint aber nicht am betreffenden
+Ausgang. Die 8 Ausgänge sind durch den
+‚0‘-Pegel an LOAD-OUT auf ihre vorherigen Pegel verriegelt. Die anderen Bits
+sind ebenfalls intern alle eine Stelle nach
+rechts gewandert, aber noch nicht an den
+Ausgängen sichtbar. Am Ausgang Q S
+wandern sie der Reihe nach hinaus. Man
+spricht hier von einem Linksschieben, weil
+die Bits an der niederwertigsten Position
+(Q1 = D0) eingeschoben werden und zur
+höchstwertigsten
+Position
+(Q8 = D7)
+weiterwandern. Toll dargestellt und erklärt
+wurde das von Jens Lemkamp in der
+ft:pedia 1/2014 [3].
+Der Zyklus aus fallender Flanke auf
+CLOCK, anlegen des nächsten Bits auf
+DATA-OUT und steigender Flanke auf
+
+
+
+
+CLOCK wiederholt sich für jedes weitere
+Bit.
+DATA-OUT* wird mit DATA-OUT des
+nächsten Interface verbunden, sofern eine
+Slave-Kette angeschlossen ist. Je Slave
+werden vom Computer weitere 8 Bit auf die
+Reise geschickt. Das zuallererst eingeschobene Bit wandert dann bis zum allerletzten Q8 in der Kette durch.
+Ist das letzte Bit eingeschoben, wird
+LOAD-OUT von ‚0‘ auf ‚1‘ geschaltet, und
+dadurch wird das neue Bitmuster gleichzeitig auf allen Ausgängen sichtbar.
+Genau hier liegt das Problem. Gemäß der
+Original-Beschreibung bleibt LOAD-OUT
+nach dem Einschieben des letzten Bits auf
+‚1‘, und solange LOAD-OUT auf ‚1‘
+gehalten wird, werden die Ausgänge direkt
+mit den Daten aus dem Schieberegister verbunden. Die Speicherwirkung der Ausgänge ist nur mit LOAD-OUT auf ‚0‘
+gegeben. Die Taktleitung CLOCK wird
+aber gemeinsam mit dem Schieberegister
+zur Dateneingabe benutzt. Laufen beide
+Vorgänge tatsächlich getrennt ab, so wie es
+das Handbuch impliziert, würden die Bits
+im Schieberegister des 4094 mit jeder
+Flanke eine Position weiterwandern und
+ebenso die Ausgänge zu den Motoren mit
+jeder Taktflanke einen neuen Pegel
+annehmen. Ein kontrollierter Motorbetrieb
+wäre so jedenfalls nicht möglich.
+Entweder wird für das Lesen der Eingänge
+LOAD-OUT auch auf ‚0‘ gelegt [4], die
+Ausgabe zu den Motoren und das Lesen der
+Eingänge finden zeitgleich statt [5], oder
+aber LOAD-OUT wird generell auf ‚0‘
+gehalten und nur nach der Übertragung des
+letzten Motorbits kurz auf ‚1‘ und zurück
+auf ‚0‘ gepulst. Die letzte Variante gefällt
+dem Autor am besten. Sie erspart das
+Speichern des (der) Motorbytes für eine
+erneute Übertragung.
+
+
+Motorausgänge
+
+Im Ruhezustand liegen CLOCK auf ‚1‘,
+LOAD-OUT auf ‚0‘, und der Pegel an
+DATA-OUT ist im Ruhezustand sowieso
+unerheblich.
+Die Übertragung beginnt mit einer fallenden Flanke auf CLOCK. Als nächstes wird
+das erste Datenbit nach DATA-OUT ausgegeben. Mit der nächsten steigenden
+Flanke an CLOCK wird dieses Bit ins
+Schieberegister des 4094 übernommen.
+Der Zyklus aus fallender Flanke auf
+CLOCK, anlegen des nächsten Bits auf
+DATA-OUT und steigender Flanke auf
+CLOCK wiederholt sich wie schon gesagt
+für jedes weitere Bit.
+Ist das letzte Bit eingeschoben, wird
+LOAD-OUT von ‚0‘ auf ‚1‘ geschaltet, und
+dadurch wird das neue Bitmuster gleichzeitig auf allen Ausgängen Q1…Q8 sichtbar. Unmittelbar danach wird LOAD-OUT
+wieder auf ‚0‘ geschaltet und die Ausgänge
+zu den Motoren speichern das eben eingeschobene Bitmuster unabhängig von den
+weiteren Vorgängen an DATA-OUT und
+CLOCK.
+LOAD-OUT wird zeitgleich an alle Slaves
+verteilt. Daher schalten alle Motorausgänge
+der Slave-Kette auch gleichzeitig.
+Das in das Register eingeschobene Bitmuster zur Kontrolle der Motorausgänge
+kann allerdings nur wirken, wenn die
+Steuerleitung enable Motors auf ‚1‘ liegt.
+Dann sind die Ausgangstreiber des 4094
+eingeschaltet und treiben die Pegel niederohmig auf die Stufenausgänge Q1…Q8. Ist
+dagegen enable Motors auf ‚0‘, so sind die
+Ausgangstreiber hochohmig geschaltet. In
+diesem Zustand können keine Basisströme
+zu den Treibertransistoren der diskreten
+
+
+Computing
+
+Motorendstufen fließen; die Motorausgänge bleiben so auch hochohmig. Im Falle
+der integrierten Motorendstufen ziehen die
+10 kς-Widerstände, die pull-downs, die
+Steuereingänge der TLE4201 auf ‚0‘ und
+schalten die Motorausgänge auf diese Art
+ab. enable Motors wird vom Watchdog
+gesteuert.
+
+[10] Forumsdiskussion: TXT und clockstretching.
+
+Und so geht es weiter
+
+[14] Klaus Merkert: Umbau Apple IIInterface auf PC.
+
+Im nächsten Teil der Reihe werden die zahlreichen digitalen und analogen Eingänge
+näher beleuchtet. Ebenso richtet sich der
+Blick auf den Watchdog.
+Quellen
+[1]
+
+Dirk Fox: I²C mit TX und Robo Pro –
+Teil 1: Grundlagen. ft:pedia 3/2012,
+S. 32-37.
+
+[2]
+
+Dirk Fox: I²C mit dem TX(T) – Teil
+12: Temperatursensor. 4/2015, S. 44-48.
+
+[3]
+
+Jens Lemkamp: Parallel-Interface
+durch Arduino gesteuert (1). 1/2014, S. 24-30.
+
+[4]
+
+Dirk Uffmann: Nutzung des Universal-Interfaces 30520 als Port-Erweiterung an einem Mikrocontroller.
+ft:pedia 2/2014, S. 30-35.
+
+[11] J. P. M. Steeman: Robotik mit dem
+Homecomputer. Aachen: Elektor,
+1987.
+[12] Klaus Merkert: Zwei Schaltpläne.
+[13] Holger Howey: Kombi-Schaltplan.
+
+[15] Ulrich Müller: Übersicht der
+Interfaces.
+[16] fischertechnik-Datenbank: 30561
+(Interface CBM).
+[17] fischertechnik-Datenbank: 30562
+(Interface Commodore).
+[18] fischertechnik-Datenbank: 30563
+(Interface Apple).
+[19] fischertechnik-Datenbank: 30564
+(Interface Acorn).
+[20] fischertechnik-Datenbank: 30565
+(Interface Schneider).
+[21] fischertechnik-Datenbank: 30567
+(Interface IBM).
+[22] fischertechnik-Datenbank: 30566
+(Interface Centronics).
+
+Dirk Uffmann: Altes FT UniversalInterface (Parallelschnittstelle)
+gesteuert durch AVR Mikrocontroller
+im Bilderpool der ft Community.
+
+[23] fischertechnik-Datenbank: 39319
+(Centronics Schul-Interface CVK).
+
+[6]
+
+Thomas Kaiser: C-64 Interface an
+RoboPro.
+
+[25] fischertechnik-Datenbank: 30520
+(Interface Universal).
+
+[7]
+
+Forumsdiskussion: I²C clock
+stretching am TXT.
+
+[8]
+
+Forumsanfrage an fischertechnik:
+Unterstützung von i2c clock
+stretching beim TXT controller?
+
+[26] Fischertechnikclub Nederland: Twee
+robotarmen om je fantasie te
+prikkelen. Clubblad 2/1992, S. 6.
+
+[5]
+
+[9]
+
+Erneute Forumsanfrage an fischertechnik: Unterstützung von i2c clock
+stretching beim TXT controller?
+
+[24] fischertechnik-Datenbank: 66843
+(Universal Schul-Interface CVK).
+
+[27] Gerhard Bader: Fischer-Technik und
+Computer: Programme für Atari ST,
+Commodore 64/128, Schneider CPC,
+IBM PC u. Kompatible. CHIPSPECIAL 1987, Vogel Verlag,
+Würzburg, 1987.
+
+
+
+
+[28] CPC Wiki: Foto eines 30562.
+[29] CPC Wiki: Foto eines 30567.
+[30] C. Hehr: Platine eines 30566.
+fischertechnik community.
+
+[41] René Trapp: V. I. P. – Ein I²C-nachComputing-Interface-Umsetzer
+(Teil 1). ft:pedia 2/2017, S. 63-73.
+[42] NXP: Data Sheet BD135. 12.04.1999
+
+[31] Fischertechnikclub Nederland:
+Computing Dozen.
+
+[43] NXP: Data Sheet BD136. 12.04.1999
+
+[32] fischertechnik: CVK-fischertechnik
+Schul-Interface (67319).
+
+[45] Siemens: DC Motor Driver
+TLE4201. 9/1992
+
+[33] C64 Wiki: C64 Userport.
+
+[46] Stefan Falk: Motorsteuerungen
+(Teil 1). ft:pedia 1/2011, S. 4-8.
+
+[34] A2wiki: Apple II Game-IO.
+[35] Chris Whytehead: Acorn Pinouts.
+[36] Larry Davis: PC Parallel Port PinOut.
+[37] CPC Wiki: CPC Printerport.
+[38] fischertechnik-Datenbank: 32680
+(Stecker-Netzgerät 220V:6,8V 1,5A
+Computing Experimental).
+
+[44] NXP: Data Sheet BC547. 25.11.2004
+
+[47] Dirk Uffmann: PWM-Motorsteuerung am fischertechnik-UniversalInterface. ft:pedia 4/2015, S. 49-54.
+[48] Wikipedia: Induktion.
+[49] Wikipedia: Freilaufdiode.
+[50] Vishay: Silicon Epitaxial Planar
+Diodes 1N4148. Rev. 2, 01.04.1999
+
+[39] NXP: Data Sheet 1N4001.
+24.05.1996
+
+[51] NXP: Data Sheet HEF4011B.
+January 1995
+
+[40] Texas Instruments Incorporated:
+Data Sheet LM7805. Revised Sept.
+2016
+
+[52] NXP: Data Sheet HEF4081B.
+January 1995
+[53] NXP: DataSheet HEF4094B MSI.
+January 1995
+
+– der Besuchermagnet auf der Maker Faire Bensheim 2017
+
+
+

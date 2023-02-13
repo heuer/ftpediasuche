@@ -1,0 +1,86 @@
+
+Elektronik
+
+Elektronik
+
+Controller-Erweiterung
+Hans-Christian Funke
+Über eins sind wir uns alle sicherlich einig: Die Anzahl der Steuereingänge und Steuerausgänge am Controller sind häufig nicht ausreichend.
+Welche Anforderung eine Erweiterung für
+die fischertechnik Robotics Controller erfüllen muss, stellt sich für jeden anders dar.
+Der eine benötigt mehr Eingänge, der andere wiederum mehr Ausgänge, ein Dritter
+benötigt keine analogen Eingänge, sondern
+nur die reine logische Information, ob sich
+
+ein Schalter in Position ‚ein‘ oder ‚aus‘ befindet. Je nach Anforderung muss entweder
+das vom Hersteller angebotene System verwendet werden, oder man kann auf andere
+Lösungen ausweichen.
+
+
+
+
+Auf die Herstellerlösung muss meistens zurückgegriffen werden, wenn es um die analogen Ausgänge zur Ansteuerung von Motoren mit unterschiedlicher Drehzahl und
+Belastung geht. Soll hingegen nur etwas
+ein- oder ausgeschaltet werden (digitaler
+Ausgang) vereinfachen sich die Anforderungen und es stehen eine Vielzahl von Alternativen zu Verfügung.
+In diesem Beitrag zeige ich eine Möglichkeit, wie ein Controller um eine große Zahl
+von digitalen Eingängen bzw. digitalen
+Ausgängen erweitert werden kann. Als Basis verwende ich aus der Reihe der Elektronikmodule das Meldemodul 70017 für weitere Eingänge und das Steuermodul 70016
+für weitere Ausgänge. Die grundsätzliche
+Ansteuerung dieser beiden Elektronikmodule findet ihr in der Ausgabe 4/2020 ausführlich beschrieben, und es gibt
+Programmbeispiele zum Herunterladen [1].
+
+Erweiterung mit digitalen Steuereingängen
+Jedes Meldemodul stellt acht digitale, mit
+Speichern hinterlegte Eingänge zur Verfügung. Die Speicher sind alle bei Inbetriebnahme zurückgesetzt. Die Speicher registrieren jeden noch so kurzen Impuls auf der
+Eingangsleitung. Die Abfrage der Speicherzustände erfolgt über einen Demultiplexer,
+der über drei Adresseingänge (A0-A2) per
+Binärcodierung angesteuert wird. Ebenso
+erfolgt die gezielte Rücksetzung jedes einzelnen Speichers.
+In Abb. 1 ist ein Schaltungsbeispiel für eine
+Erweiterung mit 24 Eingängen zu sehen und
+in Abb. 2 ein Beispiel für 64 Eingänge; bei
+mehr als drei Meldemodulen müssen separate Demultiplexer (70024) eingesetzt werden – einer für die Datenauswahl und einer
+für die Rücksetzung der Speicher.
+
+
+
+Elektronik
+
+In der Schaltung (Abb. 2) werden über die
+Steuerleitungen O1, O3 und O5 die Meldemodule adressiert. Über die Steuerleitungen
+O2, O4 und O6 erfolgt die Auswahl, von
+welchem Modul der Eingang an I8 bereitgestellt wird bzw. welcher Speicher über die
+Steuerleitung O8 zurückgesetzt werden
+kann. Mit Hilfe des Unterprogramms ‚Binärcodierung‘ wird eine Dezimalzahl in einen Binärcode umgewandelt, um so recht
+einfach die Ansteuerung der Demultiplexer
+vorzunehmen.
+
+Erweiterung mit digitalen Steuerausgängen
+Beim Steuermodul wurde eine andere Technik zur Übermittlung der Daten angewendet: Die Daten werden seriell übergeben
+und über ein Schieberegister an die richtige
+Position befördert.
+Diese Variante hat den Nachteil, dass mit
+steigender Anzahl an Ausgängen auch der
+zeitliche Aufwand für die Datenübertragung ansteigt. Vorteil ist, dass eine beliebige Anzahl Schieberegister aneinander gereiht werden kann, und zwar mit minimalem Aufwand an Steuerausgängen.
+
+In Abb. 3 ist die Anschaltung der Steuermodule an den Controller zu sehen, wobei immer nur drei der analogen Ausgänge benötigt werden, um beliebig viele digitale Ausgänge zu generieren. Die Ausgänge besitzen nur eine kleine Endstufe, die je nach
+Versorgungsspannung bis zu 7 mA je Ausgang zu Verfügung stellen und somit Steuereingänge anderer Einheiten, Elektronikmodule, Relais mit Verstärker oder LEDs
+mit 1-2 mA (71031-38) Strombedarf betreiben können. Größere Verbraucher müssen
+über ein Relaismodul (70018) oder schnelle
+Leistungsschalter (70009, 70019) angeschlossen werden.
+
+Fazit
+Es gibt keine pauschale Antwort, welche
+Erweiterungsmöglichkeit die beste Variante
+ist (analoge oder digitale Erweiterung). Entscheidend sind die Anforderungen des Modells, wonach die Entscheidung gefällt werden muss, welche Erweiterung sich am besten eignet.
+
+Quellen
+[1]
+
+Hans-Christian Funke: ElektronikModule (Teil 5). ft:pedia 4/2020,
+S. 80–94.
+
+
+
+

@@ -1,0 +1,297 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Verkabelung (Teil 3)
+Tilo Rust
+Dieser Artikel entstand, nachdem ich einige Beiträge gelesen hatte, bei denen es um Tipps und
+Tricks zur Verkabelung von Modellen geht [2, 3]. Da ich als gelernter Mess- und Regelmechaniker (in den 1990ern) noch das Bündeln von Kabelbäumen gelernt habe und in meinen
+Modellen viele Kabel benutze (in meiner Schrägseilbrücke befinden sich über 200 m Leitung)
+möchte ich hier meine Tipps weitergeben.
+
+Technik und Ästhetik
+Ich sehe auf Ausstellungen viele wunderbare Modelle. Technik vom Feinsten, bei
+dem ich selbst mit offenem Mund staunend
+dastehe. Doch dann: lose Kabel. Nicht
+selten sind Situationen, bei denen der Aussteller mit dem Finger ein Kabel zur Seite
+
+drückt, damit das Modell laufen kann. Liebe
+Modellbauer: Bitte nicht auf 90 % der
+Strecke aufhören! Eine saubere Verkabelung gehört zur Technik dazu wie Programmierung und Statik. Manchmal genügt ein
+eingeschobener Riegel, um das Kabel zur
+Seite zu halten. Manchmal ist es sinnvoll,
+ein Kabel noch einmal zu verlegen.
+
+Zum Bauwerk: Freie Spannweite 3,40 m, Turmhöhe 1,40 m, Gesamtbreite 5,50 m, alle Teile
+Privatbesitz. Hängebahn in 2-Seil-Technik angetrieben, Steuerung rein elektromechanisch.
+
+
+
+Prioritäten setzen
+
+Kleine Befestigungen
+
+Bei Verkabelungen von Modellen geht es
+um folgende Aspekte, deren Priorität jeder
+für sich setzen muss:
+
+Diese Übersicht trägt einige kleine Lösungen zusammen, mit denen Kabel leicht an
+Modellen geführt werden können. Es müssen nicht immer Reedkontakthalter sein.
+
+ Bei Ausstellungsstücken alle Kabel
+ansehnlich (im rechten Winkel) führen;
+unauffällig/versteckt oder, wo es passt,
+deutlich sichtbar. Beispiel: Kabel zur
+Versorgung von Beleuchtung werden
+auch bei den Vorbildern unauffällig
+versteckt. Kabelbäume von Maschinen
+sind sauber zusammengefasst.
+ Kabel sicher und bewegungsfrei führen;
+sie dürfen keinesfalls (z. B. beim Transport) verrutschen und in Getriebe oder
+bewegliche Teile gelangen.
+ Keine „Luftverdrahtung“; nicht herunterhängen, quer durch die Luft gespannt
+oder herumliegen. Kabel zu beweglichen
+Teilen (z. B. bei einem Plotter) in Kabelkanälen, Schläuchen oder Ketten führen.
+ Keinesfalls dürfen Kabel und Stecker
+mechanischen Belastungen ausgesetzt
+sein. Siehe Abb. 5, 6, 7: Fahrbahnbeleuchtung, über 3,60 m gespannt. Die
+Last hängt an einem Seil. Die Kabel sind
+nur drum herum geflochten und vollkommen ohne Zuglast.
+
+1. Meine Lieblinge sind Verbinder 15 und
+Bauplatten 15 · 15. Sie können nur
+wenige Adern befestigen, sind aber gut
+verfügbar und optisch ansprechend.
+2. Für größere Kabelbäume nutze ich die
+Riegel mit Gummiringen. („Loopies“;
+siehe (2) in Abb. 2).
+3. An Statik (Masten): Kabelbinder, so dass
+die Kabel unsichtbar innen geführt
+werden. Bei schwarzen Bauteilen und
+schwarzen Kabelbindern mit schwarzen
+Litzen sieht das keiner. Nachteil: bei
+Austausch oder Hinzufügen eines
+Kabels müssen alle Kabelbinder erneuert
+werden. Aber für Modelle, die lange
+bestehen bleiben sollen und Ausstellungsstücke, bei denen nichts mehr
+schief gehen darf, ist das perfekt.
+4. Tipp: immer darauf achten, dass weder
+die Kabel in sich verdreht sind (siehe in
+Statikträger), noch untereinander. Das
+sieht nicht nur besser aus, sondern
+
+
+
+Tipps & Tricks
+
+verhindert Verwechslungen bei der
+Fehlersuche.
+5. Tipp: Kabelbinder immer in der gleichen
+Richtung und an der gleichen Stelle
+befestigen. Im Beispiel habe ich absichtlich grüne Kabelbinder verwendet, damit
+man das besser sieht. Im fertigen Modell
+wären sie weiß.
+6. Flachkabel, wenn mehrere Kabel in eine
+Richtung führen und quer durch das
+ganze Modell gehen. Sie sind leicht zu
+befestigen und lassen sich rechtwinklig
+knicken.
+7. Tipp: Ich benutze Flachkabel im Sinne
+einer „Verlängerung“. Sie haben an
+beiden Enden Buchsen in unterschiedlichen Farben. Die eigentliche Verteilung zu den Verbrauchern etc. realisiere
+ich dann mit kurzen Kabeln.
+
+Kabelstau
+Zu viele Kabel? Zu lange Kabel? Kein
+Problem!
+ Kleine „Schleifen“: Sauber gelegt und
+gut befestigt macht optisch was her, vor
+allem, wenn sie an passender Stelle eingesetzt werden.
+ Große Schleife: Mehrere Kabel sauber
+aufgefangen, mit Hilfe von Kabelbindern sauber gelegt und passend zum
+Modell angebracht.
+ Chaos erlaubt: wo es keiner sieht können
+Kabel in Hohlräume gestopft werden.
+Die Stellen, an denen die Kabel herauskommen, sollten sauber definiert sein.
+Vorsicht: Knoten vermeiden, das hilft
+bei der Fehlersuche.
+ Flachkabel: Gehen mehrere Kabel in die
+gleiche Richtung (vor allem bei größeren
+Modellen) ist ein Flachkabel die Lösung.
+Es lässt sich wunderbar parallel zu der
+Anlage rechtwinklig verlegen und leicht
+befestigen. Tipp: Flachkabel sind eher
+als „Verlängerung“ zu betrachten, so
+dass die Enden in Buchsen ausgeführt
+sind und kurze Kabel vor Ort die Verteilung übernehmen (Abb. 11).
+
+passender Stelle (auch mitten drin) gleichmäßig in einen Ring legen, diesen mit Kabelbindern oder Blumendraht zusammenhalten
+und am Modell befestigen. Das ist etwas
+„Fummelarbeit“, aber damit sind die Kabel
+ein für alle Male gut aufgeräumt, werden
+Stecker geschützt und die Optik passt.
+
+Hängepartie
+Auch an Streben, Seilen, Achsen kann man
+Lampen und Kabel befestigen.
+ Kabelbinder zum direkten Fixieren sind
+unauffällig. (Wieder der Hinweis: Kabel
+nicht verdrehen.)
+ An Seilen können Kabel geflochten
+werden. Das Seil nimmt den mechanischen Zug auf, damit die Stecker nicht
+belastet werden.
+ Kabel kann man auch verknoten (siehe
+machen sie nicht oft mit, aber für ein
+Ausstellungsmodell ist das OK.
+
+
+
+
+Kabel zusammengefasst. Hier im „Schaltraum“ der Schrägseilbrücke musste Platz für die
+einklappbare Beleuchtung (siehe Pfeil rechts) sein.
+
+keinerlei mechanischem Zug ausgesetzt sein.
+Alle Kräfte werden von den Streben oder
+Seilen aufgenommen; die Kabel hängen locker
+daran. Am Ende der Flechtung ist ein Knoten
+in die Kabel geknüpft – das geht, da sich die
+Kabel nicht mehr bewegen werden.
+
+Fehlersuche
+Eine Herausforderung ist es, wenn man auf
+eine Convention geht, das Modell zusammensetzt – und nichts mehr funktioniert.
+Dann ist Fehlersuche angesagt. Einige
+Tipps dazu:
+
+
+
+ Unterschiedliche Farben von Litzen
+benutzen. Rot für Plus, Grün für Minus.
+Oder Gelb für Lampen, Schwarz für
+Motoren. Hier kommen wir schnell an
+die Grenzen der Logik. Daher markiere
+ich meine Kabel mit Hilfe von farbigem
+Isolierband, auf das ich Bezeichnungen
+schreibe. Gelb ist für Beleuchtung, Grau
+
+für Motoren, Rot für die Stromversorgung. Darauf steht „M – Antrieb“ oder
+„M – Lenkung“ und „L – Blaulicht“
+oder „L – Rücklicht“. Wenn also der
+Blinker nicht geht, brauche ich nur die
+gelben Kabel prüfen (Abb. 4).
+ Modelle, die lange bestehen bleiben,
+verdienen abgelängte Kabel. Nach dem
+Auseinanderbauen wiederverwenden.
+Beispiel: In einem Kran eine Doppellitze
+von der Kabine zum Licht an der Spitze
+sauber ziehen, gut verstecken und auf
+Länge kürzen.
+ Für komplexe Modelle zeichne ich einen
+Schaltplan, in dem ich einigen Kabeln
+Nummern gebe. So war es mir möglich,
+bei laufendem Ausstellungsbetrieb in
+nur fünf Minuten einen unsichtbaren
+Aderbruch zu finden!
+
+Tipps & Tricks
+
+Wann ist der richtige Zeitpunkt, um Kabel sauber zu
+verlegen?
+Solange sich ein Modell noch als „Prototyp“ bezeichnen lässt und noch nicht alles
+am richtigen Platz ist, dürfen Kabel natürlich auch lose und fliegend sein, zu lang
+oder kreuz und quer. Aber vielleicht entdecken wir dabei den einen oder anderen
+Platz, an dem sie später untergebracht oder
+besser verlegt werden können, an dem
+Verteiler und Befestigungen nicht so auffällig erscheinen?
+Spätestens, wenn das Modell „fertig“ ist
+und wir es unseren Freunden zeigen wollen,
+sollten wir aufräumen, uns um Details und
+Deko kümmern – und um die Kabel.
+
+eine Pappe mit Aufdruck diese Beschriften die Schalter und Lampen und verdecken den Kabelbereich.
+
+
+
+das serielle Kabel, das die Bergstation versorgt. Kabel dürfen auch offen sichtbar sein: Der Gleichrichter und Relaisblock links zeigen “Technik-Feeling”. Dennoch sind die Kabel genau gekürzt, sauber verlegt und unsichtbar befestigt. Unten am Rand eine “Steckdose” für die Handlampe von Artur.
+
+Für Ausstellungen halte ich das für unbedingt nötig. Nichts darf auf dem Transport
+hängenbleiben, herausfallen, sich verlegen.
+Während der Ausstellung darf keine
+Chance bestehen, dass jemand hängenbleibt, ein Kabel durch Bewegung bricht
+oder in ein Getriebe kommt. Und so wie wir
+Verzierungen (Abdeckplatten oder bunte
+Lichter) anbringen, damit das Modell Eindruck macht, sollten wir auch die Kabelführung sauber und ordentlich gestalten. Und
+genau das ist der Zeitpunkt, an dem wir
+hierfür Eifer aufbringen sollten: das Modell
+ist fertig und muss „ausstellungstauglich“
+werden.
+
+Verbindungen
+Natürlich muss ein (großes) Modell auch an
+verschiedenen Stellen auseinandergenommen werden um es zu transportieren. Die
+Schrägseilbrücke besteht aus vier Teilen:
+Den zwei Türmen, der Fahrbahn (mit
+
+
+Gondel) und der Fernbedienung. Das
+Besondere: Die ganze Anlage hat nur einen
+Trafo (in der Talstation). Von dort aus
+werden die Bergstation und die Kabelfernbedienung (!) versorgt.
+
+Kabel zur Bergstation gut versteckt, nur
+befestigt mit kleinen Drahtschlaufen. So
+verbindet man weite Wegstrecken zwischen
+Modellbereichen.
+
+ Strecke zur Bergstation: Ein altes serielles Kabel, unter der Fahrbahn unsichtbar.
+Die Stecker sind am/unter dem Turm
+
+
+Tipps & Tricks
+
+angebracht, schnell getrennt und unauffällig. (In der Talstation zeige ich die
+Stecker absichtlich, um die „Technik“ in
+Szene zu setzen. Befestigt ist das Kabel
+auf der unsichtbaren Rückseite des
+Modells mit den Loopies) Über dieses
+Kabel werden Beleuchtung und die
+Endlagentaster versorgt.
+ Die Fernbedienung benötigt viel mehr
+Kontakte. Daher habe ich ein altes
+Centronics-Druckerkabel modifiziert. In
+der Fernbedienung selbst hat dies eine
+Kabelpeitsche und kann nach dem
+Auseinanderbauen
+wiederverwendet
+werden.
+Meine Anregung also: Normverbindungen
+haben sich bewährt, die Stecker lassen sich
+in Flachbausteine integrieren. Die Kabel
+gibt es in allen Längen und das System ist
+wiederverwendbar. Sie eignen sich vor
+allem, um zwei Anlagenteile (auch über
+weite Entfernung) zu verbinden und für den
+Transport sauber und schnell zu trennen.
+
+unten. Links kommt das Telefonkabel an und
+endet in einer Kabelpeitsche mit Buchsen.
+
+Referenzen
+[1]
+
+Rust, Tilo: Schrägseilbrücke
+(340 cm). ft Community Bilderpool,
+2016.
+
+[2]
+
+Fox, Dirk: Verkabelung. 2/2013, S. 13-17.
+
+[3]
+
+Stefan Fuss, Christian Bergschneider: Verkabelung (Teil 2).
+ft:pedia 4/2019, S. 19-21.
+
+
+

@@ -1,0 +1,444 @@
+
+
+fischertechnik-Basiswissen
+
+Perlentauchen (Teil 3)
+Stefan Falk
+Nach Standardbauteilen und Elektromotoren setzen wir unsere fischertechnik-Zeitreise mit
+einem Querschnitt durch die vielfältigen Teile aus dem Bereich Elektromechanik fort.
+Schon 1968 gab es die ersten Elektromechanik-Kästen von fischertechnik, und
+sie enthielten eine ganze Reihe spezieller
+Bauteile:
+
+von 1981 mit einem Fahrzeug, das automatisch umkehrt, sobald es an eine Wand
+stößt:
+
+Schalter und Taster
+Der als Einzelteil vorliegende Schalter war
+der 31331 Polwendeschalter in grau (später
+gab es ihn auch in schwarz), der in
+jüngerer Zeit durch einen in ganz anderer
+Bauart (36708) abgelöst wurde:
+
+Eine andere Anwendung ist ein ständig
+hin- und her drehendes Rührwerk aus dem
+Begleitbuch hobby 3 Band 2:
+
+
+Der neuere (im ersten Motor+GetriebeKasten auch in grau) hat drei Schalterstellungen und dient der manuellen
+Steuerung eines Motors (aus/links/rechts).
+Der ältere hat nur zwei Schalterstellungen
+(links/rechts). Aber er hat drei besonders
+nützliche Eigenschaften:
+Erstens kann er leichtgängig von einer
+Maschine umgeschaltet werden. Ein
+Beispiel gibt der Elektromechanik-Kasten
+
+
+
+Am sich drehenden Rührwerk sitzt der
+Polwendeschalter, und immer wenn er aus
+einer Richtung an die senkrecht hoch-
+
+
+fischertechnik-Basiswissen
+
+stehende Lasche anstößt, wechselt der
+Motor des Rührwerks die Richtung.
+Zweitens kann man durch das kleine Loch
+im Schalthebel (siehe den Pfeil in Abb. 1)
+ein dünnes Seil ziehen. Mit geschickt
+platzierten Knoten kann man so auch durch
+Seilzüge ein Umpolen bewirken. Das
+wurde z. B. bei einem Garagentor aus dem
+Elektronik-Kasten ec von 1972 ausgenutzt:
+
+eckigem Stößel
+
+Aber auch die Ur-Fassung kann man für
+etwas Besonderes ausnutzen, wie das
+Clubheft 1972-1 mit einem Überrollschalter zeigt. Zieht man den Stab von
+rechts nach links durch die Mechanik, wird
+der Taster betätigt (Abb. 6).
+
+Knoten im Seilzug
+
+Und einen dritten praktischen Vorteil hat
+er gegenüber seinem Nachfolger: Die
+Stecker blockieren nur die untere Hälfte,
+daher kann man den Schalter z. B. neben
+einem BS30 in Längsrichtung verbauen.
+Die Taster – die sich im Gegensatz zu
+Schaltern nach jeder Betätigung in den
+Grundzustand zurückstellen – haben eine
+interessante Entwicklung hinter sich. Der
+Ur-Taster war der 31332 von 1968. Etwas
+später wurde der ansonsten gleiche Taster
+mit einem dreieckigen Stößel hergestellt.
+Das hatte den Vorteil, dass er durch
+Maschinen von der Seite her in beide
+Richtungen leicht betätigt werden kann.
+
+links wird der Taster betätigt
+
+Zieht man ihn dagegen von links nach
+rechts durch, wird der an einem Federgelenkstein (siehe Perlentauchen Teil 2 in
+ft:pedia 4/2012) angebrachte Taster nur
+
+
+
+
+nach oben gedrückt, ohne betätigt zu
+werden (Abb. 7).
+
+rechts wird der Taster nur angehoben
+
+Schließlich kam der heute bekannte 37780
+Minitaster heraus, zuerst mit Federn für
+Nuten, später mit Zapfen an den schmalen
+Seiten.
+
+Ein ganz besonders flexibel einsetzbarer
+Schalter ist der Stufenschalter, der in
+Zusatzpackungen und im hobby 3 enthalten war (Abb. 10).
+
+
+Die Minitaster sind zwar nicht mehr so
+leichtgängig wie die großen Taster, dafür
+aber viel kleiner. Zudem kann man
+mehrere davon übereinander setzen und
+alle gleichzeitig betätigen. Wir zitieren
+eine Abbildung aus ft:pedia 4/2012:
+
+
+Er trägt in seinem Unterteil acht Kontakte,
+auf die in seinem drehbaren Oberteil
+entsprechend acht Federkontakte drücken
+(die Federkontakte besprechen wir später
+noch). So konnte dieser Schalter beliebig
+verdreht werden, um eine von acht Stufen
+anzusteuern. Durch die Verkabelung der
+oberen und unteren Kontakte lassen sich
+eine Vielzahl von Steuerschaltungen aufbauen. Oftmals hat man auf dem Oberteil
+sogar nur kurze Kabelbrücken ohne
+Verbindung nach „außen“, sodass der
+Schalter beliebig oft gedreht werden kann.
+
+Eine mögliche Schaltung kann einen Motor
+ausschalten, oder für Links- und Rechtsdrehung einschalten (hier werden also nur
+drei Stellungen benötigt), und gleichzeitig
+noch mit zwei Lampen die Drehrichtung
+anzeigen – alles mit einem einzigen
+Schalter:
+
+Stufenschalter
+
+Leuchtsteine
+Die ersten Lampenbausteine hatten Glühbirnen für 6,8 V zum Einschrauben. Es gab
+bereits normale Birnen und Linsenlampen,
+in deren Glaskolben eine Linse integriert
+war.
+
+fischertechnik-Basiswissen
+
+Ergänzung war das kleine Abdeckplättchen, mit dem man die unbenutzten
+Kontakte der Leuchtsteine abdecken
+konnte.
+In neuerer Zeit wurden die Glühbirnen
+gegen solche in einem Einsteckteil ersetzt.
+Diese Lampen sind für die mittlerweile bei
+fischertechnik üblichen 9 V Betriebsspannung ausgelegt. Die Leuchtkappen
+bestehen jetzt aus härterem Plastik und
+sind eher transparent als matt:
+
+
+Verteilerplatten
+Für
+die
+Verlängerung
+elektrischer
+Leitungen kann man Leuchtsteine ohne
+Glühlampe verwenden, man kann aber
+auch die speziellen ein- oder dreipoligen
+Verteilerplatten benutzen:
+
+Glühbirnen
+
+Damit kann man den Lichtkegel konzentrieren und so z. B. Lichtschranken für
+größere Distanzen aufbauen. Für die
+Linsenlampen gab es extra eine Leuchtkappe rot mit Bohrung, damit das Licht
+auch ausgenutzt werden konnte und die
+Leuchtkappe nicht überhitzte (die für Fotozellen gedachten schwarzen Leuchtkappen
+sollte man aus eben diesem Grunde nicht
+für Linsenlampen verwenden). Eine kleine
+
+
+Sie werden mit den Stegen auf ihrer
+Rückseite in der Nut eines Bausteins
+befestigt; die spätere Version hat Clipfedern zum Aufschieben oder einfachen
+
+
+
+Aufdrücken. An einer Ecke der UrVersionen ragt ein Metallstift heraus, der
+in die entsprechenden Löcher auf der
+anderen Seite passt. So kann man einen
+einfachen Schiebeschalter bauen oder
+mehrere Verteilerplatten ohne zusätzliche
+Leitung verbinden.
+
+Magnete und
+Rückschlussplatten
+
+Mehrere Generationen führten schließlich
+zum heute aktuellen 108278 Magnetbaustein 15. Eine Suche nach „Magnet“ in
+der ft-Datenbank liefert einen noch
+größeren Überblick.
+Mit den Elektromagneten – erst für 6,8 V
+mit Bügel, später für 9 V mit Zapfen und
+Federn an den Seiten – sind auch elektrisch
+steuerbare Magnetfelder verfügbar.
+
+Schon gleich zu Anfang der fischertechnikElektromechanik gab es die Dauermagnete
+mit roter und grüner Bodenplatte, die sich
+durch die magnetische Polung der aufgeklebten Magnete unterschieden. Mit
+Dauermagneten kann man eine Vielzahl an
+Experimenten und Modellen aufbauen – da
+lohnt sich ein Blick in die alten Elektromechanik-Anleitungen.
+
+Die lassen sich für unzählige Zwecke
+nutzen, und damit man neben Metallachsen
+auch etwas zum magnetisch Anziehen hat,
+gab es die Rückschlussplatten – rund und
+eckig.
+
+
+Ein Anwendungsbild davon sehen wir
+noch im Verlauf dieses Artikels.
+
+Federfüße
+
+Magnetbausteinen
+
+
+Ein wichtiges und oft verwendetes Bauteil
+war der 31307 Federfuß. Er ist ca. 30 mm
+lang und kann federnd verbogen werden.
+Das kann für federnde Teile in der
+Mechanik, Sperren, Rasten, das Andrücken
+von Kontakten und vieles mehr verwendet
+werden.
+
+
+fischertechnik-Basiswissen
+
+
+Federfüßen gehalten Rückschlussplatte an
+
+Anwendungsbilder sehen wir gleich noch.
+
+Steckachsen
+
+Ein Beispiel für die Anwendung sind
+schleifende Kontakte. Abb. 22 zeigt eine
+verschiebbare Bausteinreihe mit Stromführungsachsen, deren eines Ende direkt in
+einem Leuchtstein steckt. Auf einer Seite
+wird der Strom mit einem per Federgelenkbaustein angedrückten Kontaktstück
+zugeführt, auf der anderen Seite von einem
+Federkontakt:
+
+In den frühen Elektromechanik-Kästen
+waren auch lange Metallachsen enthalten.
+Die können zur Verlängerung sogar
+aneinander gesteckt werden und sind vor
+allem als lange Stromführungen gedacht.
+
+
+Kontakte
+Eine ganze Reihe verschiedener Kontaktstifte gab es in den verschiedenen
+Elektromechanik-Kästen und dem Kasten
+hobby 3.
+Die wichtigsten waren der 31338 Klemmkontakt für die damaligen 4,5 V-Flachbatterien und für Achsen, das 31305
+Kontaktstück 20 und der 31306 Federkontakt (rechts unten in Abb. 21). Der
+enthält im Inneren eine Feder, die den auf
+der Abbildung nach links herausragenden
+Stößel sanft herausdrückt.
+
+
+Schleifringe und Schaltscheiben
+Sehr auffällig waren die Schleifringe, die
+zwei umlaufende Metallbahnen besitzen,
+die wiederum mit je einem Kontakt
+verbunden sind. Sie liegen in zwei Ausführungen vor: Mit Buchsen und mit
+Stiften (Abb. 23).
+
+
+
+
+Stiften
+
+Die Kontakte passen in eine angesteckte
+Drehscheibe, von der ab man weiterbauen
+kann. Das dient zum einen der Stromübertragung auf drehende Teile eines
+Modells:
+
+Kupplung aus der e-m1-Anleitung
+
+Die Variante mit Stiften kann direkt neben
+anderen Schleifringen auf einer Achse
+montiert werden. Dadurch kann man
+mehrere Schleifringe elektrisch verbinden.
+Mit einer kurzen Kabelbrücke am letzten
+Schleifring hat man so sämtliche Metallbahn-Paare miteinander verbunden.
+Wozu dienen mehrere Schleifringe, bei
+denen alle Bahnen miteinander verbunden
+sind? Das wird klar, wenn wir die zu den
+Schleifringen gehörenden Einfach- und
+Doppel-Unterbrecherstücke in Abb. 25
+betrachten.
+
+
+Sie können an beliebiger Position auf
+Schleifringe aufgesetzt und durch Aufsetzen und Verdrehen des Zapfens eines
+Bausteins verriegelt werden. Die Schleifringe besitzen dazu sogar eine Skala mit
+Grad-Einteilung auf der Seite. Und das
+ermöglicht den Bau programmgesteuerter
+Maschinen! Mit den schon in der letzten
+Ausgabe der ft:pedia gezeigten Federgelenksteinen oder mit den oben
+beschriebenen Kontakten und Federfüßen
+kann man einer Bahn Strom zuführen – auf
+dieser Bahn bringt man also keine
+Unterbrecher an. Die anderen Bahnen
+liefern dann Strom an die angedrückten
+Kontakte, wenn gerade kein Unterbrecherstück „im Weg“ ist.
+
+bestückter Schleifring
+
+
+fischertechnik-Basiswissen
+
+Ein Bild dazu findet sich auch im Artikel
+Programmsteuerungen in dieser Ausgabe.
+Da die Unterbrecherstücke eine sanfte
+Erhöhung besitzen, lassen sich auch Taster
+davon in beiden Drehrichtungen wunderbar betätigen.
+Wenngleich man mit den später erschienenen Schaltscheiben keinen Strom auf
+drehende Teile übertragen kann, so dienen
+sie doch wenigstens der Betätigung von
+Tastern oder ähnlichem. Sie werden immer
+paarweise auf eine ft-Nabe gesetzt, und
+durch verdrehtes Anbringen kann man festlegen, wie groß die „Öffnung“ sein soll, in
+deren Winkelbereich der Taster nicht
+betätigt werden soll:
+
+Umschaltkontakt aus Schwingfeder,
+Elektromagnet und Kontaktstücken aus der
+Anleitung zum Kasten em1
+
+Elektromagnet und Schwingfeder
+
+
+Schwingfedern
+Die 31329 Schwingfeder kann vielseitig
+eingesetzt werden: Zum Selbstbau eines
+Relais oder auch einfach als federndes
+Element, wie die folgenden Bilder zeigen.
+
+
+
+
+
+Ein bemerkenswertes Modell mit der
+Schwingfeder und einem Elektromagneten
+war die „Elektrisiermaschine“ aus dem
+Clubheft 1972-3:
+Aus der geringen Betriebsspannung
+entstehen durch Ausnutzung der Eigenschaften des Elektromagneten bis zu
+1000 V Spannung an den beiden Achsen!
+Aber keine Sorge: Da die verfügbare
+Stromstärke dabei winzig wird, bleibt die
+Sache völlig ungefährlich.
+
+Bimetallstreifen
+Nicht zu verwechseln mit der Schwingfeder ist der Bimetallstreifen. Er besteht,
+wie sein Name schon sagt, aus zwei
+verschiedenen Metallstreifen, die fest
+aneinander geklebt sind. Da die beiden
+Metallarten sich bei Erwärmung unterschiedlich stark ausdehnen, kann man
+damit – rein elektromechanisch – z. B. eine
+Sicherung gegen Überhitzung bauen:
+
+Relais
+Neben den mit Elektromagneten und
+anderen Einzelteilen zu bauenden Relais
+gab es auch schon früh fertige Relais mit
+zwei Umschaltkontakten von fischertechnik. Die erste Version ist nur
+30 • 30 • 45 mm groß, der spätere RB II
+steckt dagegen in einem „Silberling“Gehäuse wie die 1970er Elektronikbausteine (die wir in einer späteren Folge
+dieser Artikelserie noch ausführlich
+besprechen werden).
+
+
+
+Eine Heizung – mehrere ft-Lampen oder
+eine unter Strom gesetzte ft-Antriebsfeder
+etwa – erwärmen das Bimetall. Der
+elektrische Kontakt wird je nach Modellbauweise als Öffner oder Schließer
+zwischen dem Bimetall (in das ein ftStecker eingesteckt werden kann) und
+einem der Kontaktstücke hergestellt.
+
+
+
+Elektrisch verhalten sich die beiden RelaisVarianten völlig gleich. Die ähnlich
+aussehenden Relaisbausteine aus dem
+Elektronik-Programm haben zusätzlich
+noch einen Verstärker eingebaut – auch
+das besprechen wir in einer späteren Folge.
+
+Zählwerk
+Mit dem Zusatzkasten 30242 Zählwerk
+bekommt man ein elektromagnetisch bis
+20 Impulse zählendes und anzeigendes
+Element.
+
+fischertechnik-Basiswissen
+
+Kommt der Reedkontakt in die Nähe eines
+Magnetfeldes, schließt er elektrisch wie ein
+Taster. Damit lassen sich natürlich
+unzählige Maschinen bauen, bei denen
+eine Dreh- oder Schiebeposition ohne
+direkte Berührung festgestellt werden
+kann.
+
+Summer
+Eines der jüngsten elektromechanischen
+Bauteile ist schließlich der Summer aus
+dem Jahre 1991. Er ist zwar leider überhaupt nicht ans fischertechnik-Raster
+angepasst, aber er lässt sich doch recht
+einfach verbauen.
+
+
+Natürlich lassen sich Zählwerke auch in
+unzähligen Bauweisen aus Elektromechanik-Bauteilen selber herstellen –
+siehe etwa die Artikel Vom Zählen und
+Abzählen aus ft:pedia 1/2012 und 2/2012.
+
+Reed-Kontakt
+Magnetisch schalten kann man mit ReedKontakten. Es gibt sie in verschiedenen
+Ausführungen (Abb. 35).
+
+Kontaktstücken und Summer
+
+Wie geht’s weiter?
+
+
+In der nächsten Folge von „Perlentauchen“
+gehen wir die fischertechnik-Elektronik an.
+Mehrere Elektronik-Generationen über
+mehr als drei Jahrzehnte zeigen nicht nur
+die Entwicklung der fischertechnik-Elektronik, sondern auch die des technischen
+Fortschritts auf diesem Gebiet.
+
+
+
+

@@ -1,0 +1,122 @@
+
+Modell
+
+Modell
+
+Das animierte Adventsfenster
+Gerhard Birkenstock
+Kennt ihr den „lebendigen Adventskalender“? Man trifft sich an einigen Abenden im Advent,
+jedes Mal vor einem anderen Fenster und wartet, bis es von innen beleuchtet wird. Dann erfreut
+man sich an der Schönheit. Nur: Das sind Stillleben. Klar, dass dies ein fischertechniker so
+nicht auf sich beruhen lassen kann... Ein animiertes Adventsfenster muss her!
+
+Idee
+
+Realisierung
+
+Die Weihnachtszeit kommt näher. Auch wir
+haben den Terminplan mit den Treffpunkten bekommen. Zum Glück sind wir die
+Letzten vor Weihnachten. Das verschafft
+Zeit zum Überlegen und Bauen. Ich dachte
+an einen Leuchtturm, an dem sich das Licht
+dreht. Der Vorschlag wurde aber vom
+Familienrat abgelehnt: Wir wohnen schließlich nicht an der Küste.
+
+Zunächst zur Mechanik (Abb. 1): Über das
+Schneckengetriebe des Motors wird das
+erste Zahnrad angetrieben. Diese herab gesetzte Drehbewegung wird über einen
+Pleuel in eine oszillierende Bewegung umgewandelt. Auf der Schubstange ist die
+große fischertechnik-Zahnstange aufgesteckt. Das dort im Eingriff befindliche
+Zahnrad treibt die Haspel für den zu bewegenden Faden an (siehe oben links im Bild).
+
+Zwei Tage später war das Thema gefunden.
+Eine Dampflokomotive sollte es sein. Mein
+Sohn hatte sich mit seinen leuchtenden
+Augen durchgesetzt. Ich überlegte, was
+man da machen könnte. Es sollte sich etwas
+bewegen, und irgendetwas mit Licht dazu.
+Entstanden ist dann das hier vorgestellte
+„lebendige Adventsfenster“.
+
+Ihr sagt nun sicher: „Das geht doch gleich
+an der ersten Achse.“ Das ist richtig. Nur
+wusste ich beim Bauen der Mechanik noch
+nicht, wieviel Hub ich für die Animation
+benötige. Genau das kann man mit der
+Auswahl des Zahnrades bestimmen, das in
+die Zahnstange eingreift: Ein kleines Zahnrad bewirkt einen großen Hub, ein großes
+dementsprechend einen kleinen.
+Die gesamte Konstruktion wurde mittels
+einer Schraubzwinge an der Fensterbank
+befestigt. Dank der vielen Rippen auf der
+Unterseite der Bauplatte kommt es dabei zu
+keiner Verspannung.
+
+
+Ich entschied mich, zwei Wolken über dem
+Schornstein der Lokomotive zu bewegen.
+Mittels Klebestreifen werden diese an dem
+weißen Faden befestigt. Dank des dahinter
+hängenden weißen Vorhangs wird der
+Faden unsichtbar.
+
+
+
+Den Faden habe ich mittels einer Umlenkrolle und einem Gegengewicht gespannt.
+Das Gegengewicht befindet sich in der
+unteren Ruhelage kurz über der Fensterbank. Der Hub ist so gering, dass das
+Gewicht nicht in den Sichtbereich des
+Fensters kommt.
+
+Dank des Außendurchmessers der Rundstange von 4 mm sind wir damit wieder in
+der Welt der fischertechnik. Das Befestigen
+einer fischertechnik-Seilrolle geht jetzt
+leicht von der Hand – und die Wolken
+bewegen sich nun.
+Etwas Licht wäre noch toll. Vielleicht so,
+dass sich eine vorgetäuschte Bewegung
+einstellt. Dies lässt sich mit einem kleinen
+Programm für das ROBO-Interface (oder
+einen der jüngeren fischertechnik-Controller) realisieren (Abb. 4).
+
+Umlenkrolle hinter einem Herz versteckt
+
+Zur Befestigung der Umlenkrolle besorgte
+ich im Versandhandel einen Saugnapf mit
+M4-Gewinde (Abb. 2).
+Leider war die herausschauende Gewindestange recht kurz. Besser eignet sich daher
+ein Saugnapf mit M3-Gewinde. Dazu bohrt
+man in eine Rundstange aus Messing mit
+4 mm Durchmesser ein Loch mit 2,5 mm
+Durchmesser. In dieses Loch wird das M3Gewinde eingeschnitten. Die Achse kann
+nun auf den Saugnapf mit dem M3 Gewinde
+aufgedreht werden (Abb. 3).
+
+
+Lok und Tender in unserem Fensterbild
+haben zusammen sechs Achsen: Nach dem
+Einschalten leuchten alle Räder auf; dann
+werden in einer Zeitschleife immer zwei
+Räder dunkel geschaltet. Diese „DunkelTastung“ bewegt sich dabei schrittweise
+von vorne nach hinten.
+Am Abend nach unserm AdventskalenderTag ist mir noch die zweifarbige LED eingefallen. Da im ROBO-Interface noch ausreichend Kanäle frei waren, habe ich die
+LED an die Stelle des großen Rades der Lok
+gesetzt. Mittels zweier Kanäle leuchtete das
+Rad dann in rot und grün im Wechsel.
+
+Messingachse
+
+
+Die Wolken wurden in den Weihnachtstagen nur hin und wieder eingeschaltet. Die
+LEDs haben aber stetig geleuchtet. Fast
+jeder Fußgänger ist stehen geblieben und
+hat sich für einen kurzen Moment unser
+„lebendiges Adventsfenster“ angesehen.
+
+
+Modell
+
+(ganz oben ist das Herz mit der Umlenkrolle zu sehen)
+
+
+

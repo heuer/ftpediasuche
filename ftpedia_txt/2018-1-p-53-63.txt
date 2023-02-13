@@ -1,0 +1,761 @@
+
+Elektronik
+
+Elektronik
+
+Neopixel für alle
+Christian Bergschneider, Stefan Fuss
+Nach der weihnachtlichen Lektüre des Artikels über programmierbare
+fischertechnik-LEDs in der ft:pedia 4/2017 musste der fischertechniker
+sofort das coolste und am besten beleuchtete Modell aller
+Zeiten beginnen. Aber: Muss man jetzt auch noch das
+Programmieren von Arduinos erlernen? Wie bekommt
+man das Modell nun vom TX(T) aus angesteuert?
+Der NeopixelController löst beide Probleme: Die
+Firmware beherrscht im stand-alone-Betrieb
+u. a. Lauflicht-, NightRider- und RainbowEffekte. Im I²C-Modus können die LEDs vom
+TX(T) mit Robo Pro gesteuert werden. Es werden
+nur wenige elektronische Bauteile benötigt, so
+dass der Nachbau für jeden geeignet ist.
+Der NeopixelController ist die Weiterentwicklung der Idee aus [1] und besteht im
+Wesentlichen aus einem Arduino Nano.
+Dieser wird auf eine Prototypen-Platine
+gelötet und um wenige einfache Bauteile
+ergänzt. Die fertige Firmware wird auf dem
+Arduino Nano eingespielt – und schon kann
+es losgehen.
+
+in ein fischertechnik-Projekt eingebaut zu
+werden.
+Aus Fernost gibt es Nachbauten der
+NeoPixel-Platinen von Adafruit. Beide
+Varianten benutzen die gleichen LEDTypen und können deshalb am Controller
+eingesetzt werden.
+
+Wer Zugriff auf einen 3D-Drucker hat,
+kann sich noch ein schickes Gehäuse
+herunterladen und drucken (Abb. 1). Die
+Schaltung funktioniert aber genauso gut mit
+etwas Heißkleber auf einer Bauplatte
+30·90 6Z (Artikelnummer 38251).
+
+NeoPixel
+Die WS2812B-LEDs erfreuen nicht nur des
+fischertechnikers Herz – in den Raspberryund Arduino-Communities werden viele
+Modelle mit diesen LEDs gepimpt. Neben
+der in [1] vorgestellten Bauform findet man
+unter dem Namen NeoPixel viele fertige
+Platinen mit LEDs in Kreis-, Stick- oder
+Matrixform, die nur darauf warten, endlich
+
+3D-Drucker
+
+
+
+
+Die LEDs gibt es als RGB- und RGBWBautypen. Die RGB-Baureihe arbeitet mit
+drei LEDs, die RGBW-Baureihen haben
+zusätzlich eine weiße LED. Leider sind die
+Steuerprotokolle der beiden Typen nicht
+kompatibel, so dass sich an einem Controller gleichzeitig entweder nur RGB- oder nur
+RGBW-LEDs ansteuern lassen und man sie
+in einem Modell nicht mixen kann. Bei
+Adafruit sind die RGBW-Typen an der
+Bezeichnung zu erkennen: natural white,
+warm white und cool white sind RGBWTypen, alle anderen sind RGB-Typen.
+
+Vierpoliger Anschluss
+Wie in [1] im Detail beschrieben, werden
+die LEDs über einen seriellen Bus
+angeschlossen. Mehrere Platinen bzw.
+LEDs können einfach hintereinander kaskadiert werden. Grundsätzlich reicht ein dreipoliges Kabel, bestehend aus GND, +5 V
+und Datensignal, um die Neopixel-Platinen
+miteinander zu verbinden.
+Die eingesetzten einreihigen Stift- und
+Buchsenleisten sind platzsparend und preiswert. Es fehlt jedoch ein Schutz gegen
+Verpolung. Wird ein dreipoliges Kabel um
+180° verdreht aufgesteckt, so kommt es bei
+dreipoligen Steckern zum Kurzschluss. Wir
+haben den vierpoligen Anschluss des
+Neopixel Sticks übernommen. Werden hier
+die Kabel falsch zusammengesteckt, so
+funktioniert nur die Ansteuerung der LEDs
+nicht; Controller und LEDs nehmen keinen
+Schaden.
+
+Am USB-Anschluss des PCs dürfen
+maximal 500 mA abgenommen werden.
+Der Spannungsregler auf dem Arduino
+Nano kann aus dem 9 V-fischertechnikAnschluss bis zu 800 mA zur Verfügung
+stellen. Die Maximalleistung von USBNetzteilen ist auf dem Gehäuse ablesbar
+und liegt im Bereich von 300 mA bis ca.
+3 A.
+Es gibt USB-Netzteile mit mehr als 3 A
+Leistung. Diese sollten nicht eingesetzt
+werden, da die Leiterbahnen auf den NanoPlatinen dafür nicht ausreichend dimensioniert sind.
+
+Maximale LED-Anzahl
+Eine RGB-LED hat bei voller Leuchtkraft
+eine Stromaufnahme von 60 mA. RGBWLEDs benötigen bis zu 80 mA. Für die
+Schaltung selbst müssen 30 mA veranschlagt werden. Die maximale Anzahl
+der betreibbaren RGB-LEDs lässt sich
+somit mit der folgenden Formel bestimmen:
+− 30 mA
+
+=
+
+60 mA
+Für die Berechnung von RGBW-LEDs
+müssen die 60 mA auf 80 mA erhöht
+werden.
+RGB-LEDs
+Netzteil 100% 50%
+
+RGBW-LEDs
+100%
+
+50%
+
+ft 9 V
+
+
+
+
+
+1,5 A
+
+
+
+
+
+Stromversorgung
+
+2A
+
+
+
+
+
+Der NeopixelController und die LEDs
+benötigen eine Versorgungsspannung von
+5 V. Diese kann auf zwei Arten bereitgestellt werden: Ein altes USB- oder
+Handy-Netzteil kann am USB-Anschluss
+des Nano angeschlossen werden und die
+ganze Schaltung versorgen. Alternativ
+verfügt der Nano auch über einen kleinen
+Spannungsregler, der die fischertechnikStandardspannung von 9 V auf die benötigten 5 V herunterregelt.
+
+2,5 A
+
+
+
+
+
+3A
+
+
+
+
+
+
+Tab. 1: Berechnung der max. LED-Anzahl
+
+Bei der Stromversorgung mit Standardfischertechnik lassen sich somit 13 RGBLEDs bei maximaler Helligkeit betreiben.
+Die LEDs sind jedoch sehr leuchtstark, so
+dass im realen Modell die maximale
+Leistung nicht benötigt wird. Dies kann in
+der Leistungskalkulation berücksichtigt
+
+
+Elektronik
+
+werden. In der Firmware des Controllers
+haben wir die maximale Helligkeit sowohl
+im Stand Alone als auch im I²C-Modus auf
+12,5% beschränkt.
+
+Schaltplan
+Die Schaltung besteht nur aus wenigen
+Bauteilen (Abb. 2). Der Kern der Schaltung, ein Arduino Nano, ist eine Open
+Source Computing Platform. Die Platine
+darf lizenzfrei nachgebaut werden, so dass
+viele verschiedene Hersteller den Nano
+anbieten. Auch wenn die Preise stark
+schwanken, die Hardware – und damit die
+Funktion – ist bei allen Nanos gleich.
+Der 10-polige DIP-Schalter SW1 dient der
+Auswahl des Betriebsmodus und ist an die
+digitalen Eingänge D3-D12 des Arduino
+Nano angeschlossen. Durch die internen
+Pull-Up-Widerstände im Nano ist keine
+weitere Beschaltung notwendig.
+Die Buchse JP1 stellt die Stromversorgung
+und das Steuersignal für die LEDs von Pin
+D2 des Arduino zur Verfügung. Hier
+
+werden die Neopixel-Platinen über Kabel
+angeschlossen.
+Auf JP2 wird über einen 10-poligen Stecker
+der I²C-Bus für den TXT bereitgestellt. Da
+der TXT mit 3,3 V arbeitet und der Arduino
+ein 5 V-Modell ist, wird die Logikspannung
+über die beiden Level Shifter (R1 – R4, Q1,
+Q2) angepasst.
+
+
+Beim Betrieb am TX (Abb. 3) entfallen die
+Level Shifter, da der TX mit 5 V Logikspannung arbeitet. Die Anschlüsse A4 und
+A5 des TX können dann direkt mit einem 6poligen Stecker verbunden werden.
+
+
+
+
+Die fischertechnik-Bordspannung wird an
+JP3 eingespeist. Die Diode D1 (1N4001)
+dient als Verpolungsschutz.
+
+Nachbau des Controllers
+
+
+Der NeopixelController ist sehr einfach
+aufgebaut, so dass ihn auch Lötanfänger
+nachbauen können. Wer keine Lötkenntnisse hat, kann sich diese über den
+kleinen Lötkurs [2] leicht aneignen.
+Zunächst muss die Platine ausgeschnitten
+werden. Wir haben eine Streifenrasterplatine aus Hartpapier verwendet, bei der
+jeweils drei Lötpunkte miteinander verbunden sind. Hartpapier lässt sich sehr gut
+bearbeiten, die verbundenen Lötpunkte
+sparen später beim Löten viele Verbindungen.
+Q1, Q2
+
+R1-R4
+
+TXT: 2 · MOS-FET 2N7000
+TX: keine MOS-FETs
+TXT: 4 · Kohleschichtwiderstände
+10 kΩ, 1/4W
+TX: keine Widerstände
+
+Die Platine muss 13 · 25 Rastereinheiten
+bzw. Bohrlöcher groß werden. Am
+einfachsten markiert man zunächst die 14.
+Lochreihe auf der Kupferseite. Mit einem
+Cutter-Messer wird nun die Kupferauflage
+in der Mitte der 14. Lochreihe durchtrennt.
+Anschließend wird die Platine auf Höhe der
+eingeschnittenen Lochreihe an der Tischkante angelegt und gebrochen. Das entstandene Werkstück wird nun im gleichen
+Verfahren an der 26. Lochreihe gebrochen.
+Mit Hilfe von feinem Schmirgelpapier wird
+der Rest der angebrochenen Lochreihen
+entfernt, so dass die Platine nun 68,5 · 32
+mm groß ist (Abb. 4).
+Soll die Platine später auf die Bauplatte
+geklebt werden, so muss die Platine drei
+Streifen breiter ausfallen, um Platz für die
+Buchsen für die fischertechnik-Bordspannung zu haben. In diesem Fall muss die
+Platine nicht an der 26., sondern an der 29.
+Lochreihe aufgetrennt werden. Die Platine
+wird dann auf 76,2 mm Breite angepasst.
+Die vier Widerstände werden nun für den
+senkrechten Einbau vorbereitet. Dazu wird
+ein Drahtende nahe am Bauteil um 180°
+gebogen.
+JP1
+
+1· 4-polige Buchsenleiste, einreihig
+
+JP2
+
+TXT: 1· 10-poliger Wannenstecker
+TX: 1· 6-poliger Wannenstecker
+
+JP3
+
+2· Bundhülse 11 mm
+oder
+2· Lötstift
+2· Zwergbananenbuchse 4 mm
+
+D1
+
+1 · Diode 1N4001
+
+SW1
+
+1 · 10-poliger DIP-Schalter
+
+Platine
+
+1· Streifenrasterplatine aus Hartpapier,
+mindestens 76,2 · 32 mm
+
+Arduino
+
+1· Arduino Nano
+
+LEDKabel
+
+1· 4-polige Buchsenleiste, einreihig
+1· 4-polige Stiftleiste, einreihig
+4-poliges Flachbandkabel
+ggf. Schrumpfschlauch
+
+I2C
+Kabel
+
+TXT: 2· 10-polige Pfostenbuchse
+TX: 2· 6-polige Pfostenbuchse
+10-poliges Flachbandkabel
+
+NeoPixel
+
+Gewünschte NeoPixel-Platine(n).
+Je Platine:
+1· 4-polige Buchsenleiste, einreihig,
+evtl. 5 mm-Bauform
+1· 4-polige Stiftleiste, einreihig
+
+Tabelle 2: Bauteilliste
+
+Die Diode wird wie die Widerstände für den
+senkrechten Einbau vorbereitet. Im Gegensatz zu den Widerständen muss bei der
+Diode auf die richtige Polung geachtet
+werden. Dafür muss die Seite ohne Strichmarkierung um 180° umgebogen werden.
+
+Elektronik
+
+die Position der Bauteile auf den Lötstreifen
+dem Bestückungsplan entspricht. Der Nano
+wird anschließend wieder entfernt, alle
+anderen Bauteile werden jetzt verlötet.
+
+
+Die Pins der MOS-FETs für die Level
+Shifter müssen etwas aufgebogen werden,
+so dass sie in drei nebeneinanderliegende
+Lötpunkte der Platine passen. Beim späteren Einbau muss drauf geachtet werden,
+dass die abgeflachte Seite entsprechend
+dem Bestückungsplan eingebaut wird. Bei
+manchen Lieferanten sind am Nano bereits
+die Stiftleisten montiert. Liegen die Stiftleisten dem Nano lose bei, so müssen nun
+die beiden langen Stiftleisten eingelötet
+werden. Dabei wird das kurze Ende der Pins
+von unten in die Nano-Platine gesteckt und
+von oben verlötet. Um später Platz im Gehäuse zu sparen, wird die beiliegende 2 · 3polige Stiftleiste nicht am Nano eingelötet;
+sie wird nicht benötigt. Handelt es sich um
+einen komplett vormontierten Nano, so
+werden die sechs Pins der Stiftleiste mit
+einem Seitenschneider knapp über dem
+Plastik abgeschnitten.
+Auf der Papierseite werden nun die Bauteile
+zur Probe auf die Platine aufgesteckt. Auf
+der Lötseite muss kontrolliert werden, dass
+
+Entsprechend
+dem
+Bestückungsplan
+werden jetzt die Bauteile untereinander
+verbunden. Dazu müssen einerseits reine
+Lötbrücken auf der Rückseite hergestellt
+werden und andererseits auf der Vorderseite
+kurze Kabelbrücken eingelötet werden.
+Beim Ablängen und Verlegen der Kabel
+muss der Platz für den Arduino freigehalten
+werden.
+Die Kabel zum Anschluss an die fischertechnik-Stromversorgung werden zunächst
+nur auf der Platine angelötet. Das andere
+Ende wird erst beim Einbau in das Gehäuse
+angeschlossen. Anschließend wird der
+Arduino selbst direkt auf die Platine gelötet.
+Das reduziert die Bauhöhe der Platine. Bei
+den geringen Kosten für einen Arduino
+machen Buchsenleisten zum Stecken auch
+keinen Sinn.
+Zum Abschluss der Lötarbeiten bitte nochmals genau den Bestückungsplan mit der
+Platine auf Fehler vergleichen und auf
+ungewollte Kurzschlüsse und Brücken
+achten.
+
+
+
+
+Firmware flashen
+Die Schaltung wird nun über ein USBKabel am PC angeschlossen. Der Arduino
+Nano bootet, die PWR-LED muss konstant
+leuchten.
+Zum Flashen der Firmware wird die
+Arduino-IDE benötigt. Dazu zunächst die
+IDE bei [6] downloaden, auf dem PC
+installieren und starten.
+In der IDE müssen als erstes der ArduinoBoard-Typ und der Port eingestellt werden.
+Dazu muss im Menü Werkzeuge, Board die
+Option Arduino Nano ausgewählt werden:
+
+
+Für die Kommunikation des PCs mit dem
+Nano wird am PC eine COM-Schnittstelle
+emuliert. Die COM-Schnittstelle wird in der
+IDE im Menü unter Werkzeuge, Port
+ausgewählt. Die Nummer der emulierten
+Schnittstelle hängt vom verwendeten USBPort ab. In der Regel ist es die höchste
+gelistete Nummer.
+
+Menüsystem über Sketch, Bibliothek einbinden, Bibliotheken verwalten aufgerufen:
+
+
+Es erscheint der Bibliotheksverwalter. Über
+die Suche nach Neopixel findet man die
+richtige Library und kann sie automatisch
+installieren lassen:
+
+
+Die Firmware für den Controller kann bei
+[4] oder [5] heruntergeladen und in
+Dokumente\Arduino als Unterverzeichnis
+NEO_I2C ausgepackt werden. In der
+Arduino-IDE öffnet man über das Menü mit
+Datei, Öffnen im Verzeichnis NEO_I2C die
+Datei NEO_I2C.ino.
+Zum Schluss erfolgt das eigentliche Flashen
+der Firmware. Im Menü geschieht das über
+Sketch, Hochladen:
+
+
+Über den Menüpunkt Werkzeuge, Boardinformation holen kann getestet werden, ob
+die Kommunikation mit dem Nano
+einwandfrei funktioniert.
+Die Firmware benutzt die AdafruitNeopixel-Bibliothek zur Ansteuerung der
+LEDs. Die Installation der Bibliothek
+erfolgt im Bibliotheksverwalter. Er wird im
+
+Der Prozess dauert einige Minuten, da
+zunächst die IDE den Sketch (Quelltext)
+compiliert und dann erst an den Nano überträgt.
+
+Neopixel-Stick
+Der Neopixel-Stick (Abb. 12) ist am
+einfachsten zu verbauen. Er hat auf der
+Rückseite links und rechts jeweils vier
+
+
+Elektronik
+
+Lötpads. Die Reihenfolge entspricht der Belegung des Buskabels am Controller.
+
+lassen sich bei GND und +5 V
+jeweils zwei Kabel in einem
+Lötpad zusammenfassen.
+
+Die 4-polige Buchsenleiste wird
+an der rechten Seite angelötet.
+Hier ist das Datensignal mit DIN
+beschriftet. An der linken Seite
+(DOUT) wird die Stiftleiste
+angebracht.
+
+Neopixel-Ring
+Bei den Lötarbeiten zum Neopixel-Ring aus dem Motorrad
+auf dem Titelbild muss das
+Gehäuse von einer dritten Hand
+stabil gehalten werden.
+
+Die Buchsenleisten gibt es in
+zwei Bauformen. Die Standardleiste hat 8,5 mm Höhe; die
+5 mm-Bauform spart etwas
+Platz.
+
+Es werden zunächst die 4-polige
+Buchsenleiste und die 4-polige
+Stiftleiste in das gedruckte Gehäuse gesteckt, so dass die Pins
+im Gehäuse mit dem Lötkolben
+gut erreicht werden können.
+
+Der Stick wird einfach in den
+3D-gedruckten fischertechnikAdapter geklippt und ggf. mit
+Heißkleber
+verklebt.
+Der
+Neopixel-Stick kann ohne 3DDruck alternativ mit mehreren
+Federnocken 31982 im Modell
+festgemacht werden.
+
+Die Anschlüsse für +5 V und die
+beiden für GND werden vom
+Stecker zur Buchse mit kurzen
+Kabelstücken verbunden. AnAbb. 12: Neopixel-Stick
+schließend schließt man mit
+weiteren Kabeln die 5 V- und GND-Pins
+der Platinen an, verbindet DATA auf der
+Neopixel-Jewel
+Buchsenleiste mit dem Pin Data Input der
+Platine sowie DATA auf der Steckerleiste
+Der Zusammenbau des Neopixel-Jewels
+mit Data Output.
+(Abb. 13) benötigt einiges an Fingerspitzengefühl, da mehrere Kabel in einem
+Lötpad zusammen eingelötet werden müssen.
+Außerhalb des Gehäuses
+werden an Stecker und
+Buchse ca. 4 cm lange,
+möglichst dünne Kabel
+angelötet. Danach werden
+Buchse und Stecker von
+außen in die passenden
+Öffnungen am Gehäuse
+geschoben; die Kabel
+werden in der Mitte
+herausgeführt. Mit Heißkleber werden nun Buchse
+und Stecker inkl. Kabel
+am Gehäuseboden fixiert.
+Die Kabelenden werden
+jetzt am Jewel angelötet.
+Durch die dünnen Kabel,
+
+Schließlich richtet man Buchse und Stecker
+im Gehäuse korrekt aus und
+fixiert sie mit Heißkleber.
+Der Ring selbst wird nun ins
+Gehäuse geklippt.
+
+
+Profi-Lights
+Die Profi-Lights aus [1]
+lassen sich ebenfalls an den
+Controller anschließen. Es
+wird nur ein Adapterkabel
+benötigt, um vom 4-poligen
+Bus auf den 3-poligen Anschluss der Profi-Lights zu
+reduzieren.
+
+I²C-Kabel
+Das I²C-Kabel verbindet den
+TX(T) und den NeopixelController. Beim TXT ist es
+ein 10-poliges Kabel, beim
+
+
+
+10-8
+
+Betriebsmodus
+
+
+LED-Typ
+
+I²C-Modus*
+
+6-4
+
+Farbe
+
+3-1
+
+Anzahl LEDs
+
+Grün
+
+
+Rot
+
+
+Blau
+
+
+Fill
+
+Pink
+
+
+Blink
+
+Lila
+
+
+Gelb
+
+
+Hellblau
+
+
+Weiß
+
+
+Night Rider
+Running Light
+
+Fader
+
+RGB
+
+RGBW
+
+SideStep
+Rainbow3 *
+
+* Bei den Betriebsmodi I²C und Rainbow haben die Schalter 1-7 eine andere Bedeutung. Bitte Text beachten!
+
+Tab. 3: Einstellung der DIP-Schalter im stand-alone-Modus
+
+TX ein Sechspoliges. Es kann am einfachsten mit Hilfe einer Wasserpumpenzange hergestellt werden: Das 10-polige
+Kabel auf die gewünschte Länge zuschneiden, das rot markierte Kabel an der
+Markierung in die Klemmvorrichtung einlegen und mit der Wasserpumpenzange
+vorsichtig zusammenpressen. Das Ganze
+wird am anderen Kabelende wiederholt.
+
+Ende eine Sequenz statt, so dass es einige
+Sekunden dauern kann, bis das neue
+Programm startet. In Tab. 3 sind die
+einzelnen Funktionen des DIP-Schalters
+dargestellt.
+
+Verbindungskabel
+
+Programmierung in Robo Pro
+
+Aus dem Rest des 10-poligen Flachbandkabel werden nun 4-polige Kabel geschnitten. Die Länge kann je nach Modell variiert
+werden. An die Kabel werden auf einer
+Seite 4-polige Stecker und auf der anderen
+Seite 4-polige Buchsenleisten angelötet.
+Wer mag, kann die Löststellen mit
+Schrumpfschlauch schützen.
+
+Die Programmierung in Robo Pro ist sehr
+einfach, da nur wenige Kommandos
+benötigt werden. Die Robo Pro-Bibliothek
+neopixel_controller.rpp arbeitet mit der
+I²C-Busadresse 0x11.
+
+Beim Rainbow-Modus kann keine Farbe
+ausgewählt werden, die Schalter 6 – 4
+stellen die Geschwindigkeit des Farbwechselns ein.
+
+Stand-Alone-Betrieb
+Hierfür werden die Neopixel-LEDs angeschlossen, die DIP-Schalter auf das
+gewünschte Programm eingestellt und zum
+Schluss die Versorgungsspannung eingeschaltet.
+Die Betriebsmodi und deren Parameter
+können im laufenden Betrieb gewechselt
+werden. Der Wechsel findet immer am
+
+
+Der Controller wird über das I²C-Buskabel
+an den TX(T) angeschlossen. Am DIPSchalter wird der Betriebsmodus I²C und
+die Busadresse 0x11 ausgewählt (Abb. 14).
+Nachdem der Controller über USB oder
+
+fischertechnik-Bordspannung mit Strom
+versorgt ist, kann es losgehen. Die bereitgestellten Robo Pro-Programme lauten
+∂ neopixel_controller:
+Bibliothek zur Ansteuerung des
+NeopixelControllers
+∂ npc_const_3color:
+Bibliothek Konstanten für RGB-LEDs
+∂ npc_const_4color:
+Bibliothek Konstanten für RGBW-LEDs
+∂ neopixel_sample:
+Beispielprogramm
+Im Programm neopixel_sample.rpp müssen
+vor der Benutzung ggf. die Parameter der
+Funktion NPC_8_init korrigiert werden.
+Der Parameter LE benötigt die korrekte
+LED-Anzahl.
+
+Beispielprogramm
+
+Elektronik
+
+Bei RG muss der LED-Typ angegeben
+werden. Der Parameter kann gefahrlos ausprobiert werden, in Abb. 15 ist es eine 3Farb-LED mit der Farbreihenfolge GRB.
+Das Beispielprogramm zeigt die Verwendung der Basisfunktionen. Eine
+komplette Funktionsübersicht ist auf den
+nächsten Seiten in Tab. 4 dargestellt.
+
+Referenzen
+[1]
+
+Harbaum, Till: Profi-Lights:
+WS2812B-Vollfarb-Leuchtdioden im
+fischertechnik-Design. 4/2017, S. 15-18.
+
+[2]
+
+Bergschneider, Christian: Löten
+leicht gemacht. ft:pedia 1/2018.
+
+[3]
+
+Fuss, Stefan: Arduino Sensoren am
+TXT. ft:pedia 1/2018.
+
+[4]
+
+Christian Bergschneider, Stefan
+Fuss: ftcommunity-neopixel. GitRepo auf GitHub, 2018.
+
+[5]
+
+Christian Bergschneider, Stefan
+Fuss: NeopixelController. Firmware
+und Robo Pro-Bibliothek im ftcDownloadbereich, 2018.
+
+[6]
+
+Arduino: Download the Arduino
+IDE.
+
+
+
+
+Funktionsreferenz der Robo Pro-Unterprogramme
+Initialisiert den NeopixelController. Es werden die Anzahl der
+LEDs LE und der RGB-Typ RG angegeben.
+Die Funktion setBrightness stellt die Helligkeit der LEDs ein.
+Alle LEDs bekommen die gleiche Einstellung. Gültige Werte für
+Brightness sind 0 bis 32. Die Werte 32 bis 255 können zwar
+übertragen werden, auf dem Controller greift dann aber die
+Helligkeitsbegrenzung in der Firmware.
+Der NeopixelController arbeitet intern mit einem Pixel-Buffer.
+Um mehrere Kommandos schnell auszuführen, finden zunächst
+alle Schreibkommandos im Buffer statt. Danach wird über die
+Funktion show der Buffer an die Pixel übertragen.
+Mit setPixelColor wird die Farbe einer LED eingestellt. Der
+Parameter LED ist die Nummer der LED. Die erste LED am
+NeopixelController hat die Nummer 0. Die drei anderen
+Parameter (Red, Green, Blue) sind die RGB-Werte für die LED.
+
+Die Funktion setPixelColorRGBW setzt die Pixelfarbe einer
+RGBW-LED. Der Parameter LED ist die Nummer der LED. Die
+erste LED am NeopixelController hat die Nummer 0. Die vier
+anderen Parameter (Red, Green, Blue, White) sind die RGWBWerte für die LED.
+
+setPixelColorAll setzt die Farbe aller angeschlossenen LEDs auf
+den übergebenen RGB-Wert.
+
+Regenbogeneffekt. Parameter In (Inkrement) gibt an, wie stark
+der Farbwechsel in einem Schritt ist; De die Dauer in ms.
+
+
+
+Elektronik
+
+Lauflicht im Night-Rider-Design. Re, Gr und Bl sind die RGBWerte, De die Dauer in ms, bis der Leuchtpunkt auf die nächste
+LED wechselt.
+
+Normales Lauflicht. Re, Gr und Bl sind die RGB-Werte, De die
+Dauer in ms, bis der Leuchtpunkt auf die nächste LED wechselt.
+
+Lässt nacheinander von links nach rechts neue Leuchtpunkte
+einlaufen, bis alle LEDs an sind. Re, Gr und Bl sind die RGBWerte, De die Dauer in ms, bis der Leuchtpunkt auf die nächste
+LED wechselt.
+
+Alle LEDs blinken an/aus. Re, Gr und Bl sind die RGB-Werte, De
+die Dauer in ms.
+
+Alle LEDs gehen langsam an und aus. Re, Gr und Bl sind die
+RGB-Werte, De die Dauer in ms.
+
+Zwei nebeneinanderliegende Leuchtpunkte laufen von links nach
+rechts. Re, Gr und Bl sind die RGB-Werte, De die Dauer in ms.
+
+Tab. 4: Funktionsreferenz der ROBO Pro-Unterprogramme
+
+
+

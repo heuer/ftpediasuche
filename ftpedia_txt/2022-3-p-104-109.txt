@@ -1,0 +1,473 @@
+
+
+Computing
+
+TX-Light: Arduino (Uno/Mega) und ftDuino aus
+ROBO Pro ansteuern
+Holger Howey
+Die von fischertechnik mit der Einführung des TXT 4.0 abgekündigte Programmiersprache
+ROBO Pro ist nach wie vor eine leistungsfähige Einsteigerprogrammiersprache. Leider unterstützt sie keine „Fremdinterfaces“ wie z. B. den in Schulen verbreiteten Arduino. Doch auch
+für diese Herausforderung hat die Community eine Lösung…
+
+Hintergrund
+Ausgangspunkt für die Suche nach einer
+Möglichkeit, Arduinos mit ROBO Pro zu
+programmieren, war, dass in unserer Schule
+zwar älteres fischertechnik vorhanden war,
+aber die Interfaces nicht an aktuelle Rechner angeschlossen werden konnten. Arduino Unos waren aber vorhanden.
+Dabei bin ich im Forum der fischertechnikCommunity auf das Projekt „fx1-arduinoparser“ (= Syntax-Analysierer) von mrkubikus gestoßen [1]. Er hat über die Auswertung der USB-Signale und die im Netz
+auffindbaren Schnittstellen-Dokumentationen ein Programm entwickelt, mit dem man
+aus ROBO Pro den Arduino Uno im
+Online-Modus ansteuern kann.
+Leider war keine weitere Beschreibung
+über die Nutzung verfügbar, und diejenigen, die den Parser eingesetzt haben, sind
+an ein paar Kleinigkeiten hängen geblieben.
+Außerdem ist es nicht möglich, an den
+Arduino direkt Motoren oder Lampen anzuschließen; dazu benötigt man so genannte
+H-Brücken [2]. Für Menschen, die sich
+nicht damit auskennen, ist spätestens hier
+Schluss, da man die Treiberbausteine hinzukaufen muss.
+Auch ist kein „Timeout“ vorhanden. Ein
+solcher „Watchdog“ (= Wachhund) sorgt
+
+dafür, dass die Motoren bei Programmende,
+bei Störung der USB-Übertragung oder
+wenn das USB-Kabel abgezogen wird,
+abgeschaltet werden.
+Ich habe beschlossen, dieses Programm als
+Grundlage zu nehmen und den Kommunikationsteil daraus zu verwenden. Das Schalten und das Einlesen der I/O-Pins des
+Arduino waren bereits enthalten.
+Mit weiteren Funktionen gab es jedoch
+viele Schwierigkeiten. Das lag u. a. daran,
+dass zum Zeitpunkt der Programmierung
+des Parsers ROBO Pro weiterentwickelt
+wurde. Übertragene Variablen standen an
+anderen Stellen, es kamen ganz neue hinzu
+oder die Datenlänge veränderte sich etc. pp.
+Die Beschreibungen zur Programmierung
+der fischertechnik-Interfaces (wie z. B. des
+TX Controllers) in C oder C++ gehen davon
+aus, dass ein Programm das Interface vom
+PC aus steuert, und nicht auf der Empfängerseite die Daten des PC auswertet.
+Ich musste sehr vieles ausprobieren, den
+Datenstrom analysieren und dann das Programm anpassen. Das war nicht einfach. Im
+Prinzip schreibt der Parser in einen
+Speicherbereich, über den eine Tabelle mit
+Variablen gelegt wird. Das muss man erst
+einmal verstehen – und wenn Fehler auftreten, diese auch finden.
+
+TX-Light
+Aus dem „fx1-arduino-parser“ entstand so
+„TX-Light“: ein Arduino-Sketch, der via
+USB-Kabel Kommandos von ROBO Pro
+empfängt, auswertet und die entsprechenden Anschlüsse (Pins) des Arduino ausliest
+(Input) oder die gewünschte Spannung
+anlegt (Output).
+Dazu musste ich zunächst ein Kommunikationsprotokoll festlegen, denn ROBO Pro
+unterstützt die Kommunikation mit unterschiedlichen fischertechnik-Interfaces, die
+jeweils abweichende Protokolle verwenden.
+Ich habe die Schnittstelle zum TX gewählt,
+weil die seit vielen Jahren stabil ist und nach
+Einführung des TXT nicht mehr weiterentwickelt wurde. Das Protokoll (und damit
+mein Programm „TX-Light“) bleibt daher
+auch in neueren Versionen von ROBO Pro
+dasselbe.
+Motorausgänge M1 bis M4
+Man kann fischertechnik-Motoren mit dem
+Arduino nicht direkt ansteuern, da die Ports
+nur 5 V liefern und eine maximale Last von
+40 mA verkraften. Daher muss man entweder Motortreiber (H-Brücken) verwenden, die dann jeweils einen Pin belegen,
+oder aber ein aufsteckbares „Motor Shield“
+(eine Platine) mit Motortreibern erwerben.
+Bewährt hat sich das Motor Shield v2.3 von
+Adafruit, da es keinen der Pins des Arduino
+belegt, sondern die Steuerung der (insgesamt vier) Motorausgänge über das I2CProtokoll vornimmt. Es kann mit bis zu
+12 V versorgt werden und verträgt eine Last
+von bis zu 1,2 A je Motorausgang – ausreichend für unsere fischertechnik-Motoren. Es können sogar mehrere Adafruit
+Motor Shields auf einen Arduino aufgesteckt („kaskadiert“) werden, und über den
+Arduino-Treiber lassen sich auch Schrittmotoren und Servos ansteuern.
+Im TX-Light habe ich die in der folgenden
+Tabelle gezeigte intuitive Zuordnung der
+Motorausgänge vorgenommen.
+
+Computing
+
+ROBO Arduino
+Pro
+
+Motor
+Shield
+
+Funktion
+
+M1
+
+./.
+
+M1
+
+Motorausgang
+
+M2
+
+./.
+
+M2
+
+Motorausgang
+
+M3
+
+./.
+
+M3
+
+Motorausgang
+
+M4
+
+./.
+
+M4
+
+Motorausgang
+Tab. 1: Motorausgänge M1 bis M4
+
+Damit lassen sich auch die Geschwindigkeiten, die ROBO Pro überträgt, im Programm auswerten und an den Motortreiber
+weitergeben.
+Ausgänge O1 bis O8
+Die acht O-Ausgänge hatte mr-kubikus bereits auf die Pins 6-13 gelegt. Nicht an
+jedem Ausgang kann die Spannung über ein
+pulsweitenmoduliertes Signal (PWM) reguliert werden; an den digitalen Ausgängen ist
+nur die Einstellung von „Ein“ (5V) und
+„Aus“ (0V) möglich.
+Achtung: Diese Ausgänge dürfen maximal
+mit je 40 mA und insgesamt nicht mehr als
+200 mA belastet werden!
+Tabelle 2 zeigt die Zuordnung in einer
+Übersicht.
+ROBO Arduino Motor
+Pro
+Shield
+
+Funktion
+
+O1
+
+Pin 6
+
+./.
+
+PWMAusgang
+
+O2
+
+Pin 7
+
+./.
+
+digitaler
+Ausgang
+
+O3
+
+Pin 8
+
+./.
+
+digitaler
+Ausgang
+
+O4
+
+Pin 9
+
+./.
+
+PWMAusgang
+
+O5
+
+Pin10
+
+./.
+
+PWMAusgang
+
+O6
+
+Pin 11
+
+./.
+
+PWMAusgang
+
+
+
+
+ROBO Arduino Motor
+Pro
+Shield
+
+Funktion
+
+ROBO
+Pro
+
+Arduino
+Uno
+
+Funktion
+
+O7
+
+Pin 12
+
+./.
+
+digitaler
+Ausgang
+
+I6
+
+Pin A1
+
+digitaler /
+analoger Eingang
+
+O8
+
+Pin 13
+
+./:
+
+digitaler
+Ausgang
+Tab. 2: O-Ausgänge O1-O8
+
+I7
+
+Pin A2
+
+digitaler /
+analoger Eingang
+
+I8
+
+Pin A3
+
+Mit der SoftPWM-Bibliothek könnte man
+alle Output-Pins zu PWM-Ausgängen
+machen, allerdings kommt da der Uno an
+seine Grenzen.
+
+digitaler /
+analoger Eingang
+Tab. 3: Eingänge I1 bis I8
+
+Pins des Adafruit Motor Shield.
+
+Eingänge I1 bis I8
+Einige Pins des Arduino sind – anders als
+beim fischertechnik ROBO TX Controller
+und ähnlich den früheren fischertechnik
+Interfaces – nur als digitaler Eingang (Pin 0
+bis 13) nutzbar. Direkte EX- und EY-Eingänge wie beim parallelen fischertechnikInterface sind nicht vorhanden. Stattdessen
+kann man die analogen Eingänge A0 bis A5
+verwenden.
+Doch einige der Pins sind bereits belegt:
+Über Pin 0 und Pin 1 erfolgt die serielle
+Übertragung zum PC (ROBO Pro), und die
+Pins A4 und A5 benötigt der I2C-Bus (Ansteuerung des Adafruit Motor Shield). Die
+Pins 6 bis 13 sind bereits für die O-Ausgänge belegt.
+Somit kann man nur vier der digitalen (Pin
+2 bis Pin 5) und fünf der analogen Pins (A0
+bis A4) als Eingang nutzen. Der Sketch
+„TX-Light“ nimmt die in Tabelle 3 gelistete
+Zuordnung vor.
+ROBO
+Pro
+
+Arduino
+Uno
+
+Funktion
+
+I1
+
+Pin 2
+
+digitaler Eingang
+
+I2
+
+Pin 3
+
+digitaler Eingang
+
+I3
+
+Pin 4
+
+digitaler Eingang
+
+I4
+
+Pin 5
+
+digitaler Eingang
+
+I5
+
+Pin A0
+
+digitaler /
+analoger Eingang
+
+
+(Adafruit Motor Shield)
+
+Auch die Eingänge hab ich unempfindlicher
+gegen Störstrahlung (z. B. vom Monitor)
+gemacht und eine Buchse auf das Motor
+Shield aufgelötet. Die Belegung entspricht
+dem alten parallelen fischertechnik-Interface: Man kann also die alten Modelle
+direkt über das Flachbandkabel verbinden
+und mit ROBO Pro ansteuern. Wie das
+geht, hat Peter Gabriel vor zwei Jahren in
+der ft:pedia vorgestellt [3]. Außerdem gibt
+es eine ausführliche bebilderte Anleitung
+zum Download, nach der man den Anschluss selber ergänzen kann.
+
+Abb. 2 zeigt einen Arduino Uno mit Motor
+Shield nach dem „Umbau“, der einen originalen fischertechnik-Roboter-Bausatz aus
+dem Baukasten Computing Experimental
+von 1987 (30573) steuert.
+
+Computing
+
+Daher habe ich den Arduino-Sketch „TXLight“ für den ftDuino umgeschrieben.
+Damit kann der ftDuino nun auch als „TX“
+aus ROBO Pro gesteuert werden. Dabei
+gibt es ein paar Besonderheiten:
+ beim ftDuino sind alle Ausgänge mit
+PWM ansteuerbar
+ der ftDuino hat vier schnelle Zählereingänge, an die (wie beim TX) die Geber
+der fischertechnik-Encodermotoren angeschlossen werden können.
+
+Shield und Turtle aus Computing Experimental
+
+Sehr schön ist auch, dass der Interface-Test
+von ROBO Pro die an den Eingangs-Pins
+anliegenden Werte anzeigt – das kann die
+Arduino-IDE nicht.
+
+TX-Light für den ftDuino
+Der nächste Schritt war dann die Unterstützung des ftDuino [4]. Am ftDuino ist
+kein Motor Shield erforderlich: Der ftDuino
+basiert auf einem Arduino Leonardo und
+verfügt bereits über Motortreiber. Er ist
+dafür gedacht, fischertechnik-Modelle mit
+einem kurzschlussfesten, mit fischertechnik-Anschlüssen und -Sensoren kompatiblen Arduino anzusteuern. In der Anleitung
+findet man viele Beispiele dafür, wie man
+über die Arduino IDE Eingänge einlesen
+und Ausgänge steuern kann [5]. Dazu bietet
+der ftDuino eine Erweiterung der Arduino
+IDE an, die man nutzen kann, um z. B. die
+Geschwindigkeit eines Motors einzustellen.
+Es kommt vor, dass Käufer den ftDuino als
+billigen Ersatz für einen TX, TXT oder
+TXT 4.0 missverstehen und erwarten, dass
+er mit ROBO Pro oder ROBO Pro Light
+angesteuert werden kann. Wird er dort nicht
+erkannt, wird reklamiert...
+
+
+Installation
+Die Installation für Arduino und ftDuino ist
+einfach: Es muss nur die entsprechende
+INO-Datei auf den Arduino bzw. ftDuino
+übertragen werden, dann kann man mit
+ROBO Pro loslegen.
+Das Groove/Seeed-System
+Es ist auch möglich mit dem Groove/SeeedSystem zu arbeiten und dessen Anschlüsse
+aus ROBO Pro zu nutzen. Das Baseboard
+wird dazu „huckepack“ auf den Arduino
+aufgesteckt.
+Ausgänge des Grove/Seeed Baseboard.
+
+
+
+
+
+Wie einfach die Nutzung ist, zeigt das
+Beispiel in Abb. 5. Dort ist eine LED an den
+Ausgang O1 eines Seeed Baseboards angeschlossen.
+
+
+Weitere Aussichten
+Wer programmieren kann, kann statt der
+normalen fischertechnik-Motoren auch vier
+Schrittmotoren
+an
+M1-M4
+zweier
+„gestapelter“ Motor Shields ansteuern.
+Dafür muss das untere Motor Shield mit
+Stacking Headers ausgestattet werden.
+Es ist auch möglich alte fischertechnikInterfaces als Treiber zu nutzen: Entweder
+direkt, indem man das IC auf dem Interface
+entfernt und den Pin vom Arduino mit der
+H-Brücke verbindet, oder indem man selbst
+das ganze Interface ansteuert. Das ist bisher
+im „TX-Light“-Sketch nicht vorgesehen.
+
+Fazit
+
+Grove/Seeed Baseboards
+
+Das ROBO Pro-Programm, das die so
+angeschlossene LED blinken lässt, zeigt
+
+
+ROBO Pro ist eine hervorragende Programmierumgebung. Man kann sie, mit kleinen
+Einschränkungen, mit einem Arduino Uno
+oder einem ftDuino nutzen. Dazu muss man
+lediglich das Programm „TX-Light“ (INODatei) aufspielen. Wer möchte, kann sich
+selber ein preiswertes Interface bauen, um
+damit alte fischertechnik-Modelle wieder
+zum Leben zu erwecken oder Neues auszuprobieren.
+Die Dateien können im Downloadbereich
+dieser Ausgabe der ft:pedia heruntergeladen
+werden.
+
+Referenzen
+[1]
+
+mr-kubikus: fx1-arduino-parser.
+V0.3, 11.08.2016. Github.com.
+
+[2]
+
+Tomas Magin: Die Kunst der HBrücke: Let's Rock. ft:pedia 2/2022,
+in dieser Ausgabe.
+
+Computing
+
+[3]
+
+Peter Gabriel: Adapter für fischertechnik-Computing-Modelle. 1/2020, S. 75–78.
+
+[4]
+
+Till Harbaum: ftDuino – OpenSource trifft Konstruktionsbaukasten.
+ft:pedia 1/2018, S. 85–91.
+
+[5]
+
+Till Harbaum: ftDuino – ein
+fischertechnik kompatibler Arduino.
+Bedienungsanleitung. 12.01.2021.
+
+
+

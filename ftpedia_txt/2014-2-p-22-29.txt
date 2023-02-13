@@ -1,0 +1,424 @@
+
+
+Natürlich kommt es dabei auf die inneren
+Werte an, auf die Technik dahinter. Das
+Modell funktioniert so:
+1. Der an einem drehbar gelagerten Arm
+aufgehängte Wimpel wird hochgehoben
+– und zwar zackig!
+2. Einige Sekunden
+vergehen.
+
+Wartezeit
+
+sollen
+
+3. Der Wimpel wird herunter gelassen.
+4. Wiederum verstreicht etwas Zeit.
+5. Dieses Spiel wiederholt sich endlos.
+All das funktioniert rein pneumatisch
+gesteuert. Das einzige elektrische Bauteil
+der Maschine ist der Kompressor.
+
+· Am oberen Bildrand sieht man zwei
+hintereinander
+angebrachte
+Pneumatikzylinder 60. Der linke verfährt den
+rechten, und der rechte verschiebt über
+einen BS15 mit Bohrung eine Kette, an
+der letztlich der Hebel für den Wimpel
+hängt. Durch die beiden so miteinander
+verbundenen Zylinder bekommen wir
+mehr nützlichen zurückgelegten Weg
+für die Kette. Zur Führung genügen vier
+direkt auf die Bauplatte 500 aufgesetzte
+Verkleidungsplatten 15 ∙ 75 (achtet
+darauf, etwas Spiel zu lassen, damit die
+Verschiebung leichtgängig funktioniert).
+
+
+
+Überblick
+Bauplatte 500 montierten Technik:
+
+
+· Diese beiden Zylinder sind parallel an
+einem 4/2-Wege-Ventil angeschlossen.
+Das ist mit einer einfachen Kipphebelkonstruktion realisiert. Es funktioniert
+wieder durch abwechselndes Abknicken
+bzw. Offenlassen von Schläuchen [1].
+· Das Ventil wird nun aber – anders als in
+steuernden Pneumatikzylinder betätigt.
+Einen Steuerzylinder gibt es zwar
+(unten im Bild), aber der verdreht nur
+einen Hebel. Auf diesem Hebel sitzt
+
+eine Federmechanik, und erst die
+bewegt Kipphebel des Ventils. Die
+Mechanik ist so gestaltet, dass sie den
+Kipphebel des Ventils immer vom
+Zylinder-Hebel weg drückt.
+· Für jede Seite des Steuerzylinders existiert je eine Kombination aus Drossel
+und parallel geschaltetem Rückschlagventil. Die bewirken unabhängig voneinander einstellbare Wartezeiten vor
+dem Hochziehen bzw. Ablassen des
+Wimpels, indem sie die Abluft der
+gerade nicht mit Druckluft beaufschlagten Zylinderseite nur gedrosselt heraus
+lassen (das ist in [1] ausführlich
+beschrieben). Bei Teilemangel funktioniert das Modell auch nur mit einer oder
+sogar ganz ohne Drosseln, nur gibt es
+dann eben nicht die einstellbaren
+Wartezeiten.
+· Der Steuerzylinder hängt – nur eben
+über die Drosselstrecken – ebenfalls
+parallel zu den Ketten-Zylindern
+geschaltet am 4/2-Wege-Ventil. Und
+zwar so, dass er das Ventil immer in die
+
+Pneumatik
+
+Stellung schieben will, die es gerade
+nicht hat. Daraus ergibt sich ein endloser Wechsel der Ventil- und Zylinderstellungen – der Wimpel wechselt ständig zwischen der oberen und unteren
+Position. Wir haben einen pneumatischen „Oszillator“ vor uns [4].
+anderen Ventil- und Zylinderstellung.
+Das Schaltbild in Abb. 7 zeigt die
+Wirkungsweise der Pneumatik-Schaltung.
+Dargestellt ist die Stellung mit eingefahrenen Zylindern, also angehobenem
+Wimpel. Die Druckluft des Kompressors
+geht durch das 4/2-Wege-Ventil zu allen
+drei Zylindern. Die beiden Ketten-Zylinder
+werden eingefahren, und der Steuerzylinder will ausfahren. Das parallel zur
+rechten Drossel geschaltete Rückschlagventil lässt die Luft ungehindert in den
+Steuerzylinder einströmen. Die Abluft der
+linken Zylinderseite muss jedoch durch die
+linke Drossel, weil das dortige Rückschlagventil in Abluftrichtung blockiert.
+Mit der linken Drossel kann man also ein-
+
+
+
+
+
+stellen, wie schnell der Steuerzylinder ausfährt und somit, wie lange die Maschine
+wartet, bevor sie den Wimpel absenkt.
+Sobald das Wegeventil umgeschaltet ist
+(durch die Federmechanik geschieht das
+schlagartig bei einer bestimmten Zylinderstellung), werden die beiden KettenZylinder ausfahren, Kette nachlassen und
+so den Wimpel absenken. Gleichzeitig
+strömt Druckluft in die linke Seite des
+Steuerzylinders; die in der rechten noch
+befindliche kann aber nur gedämpft durch
+die rechte Drossel entweichen (deren
+Rückschlagventil blockiert ebenfalls in
+Abluftrichtung). Mit der rechten Drossel
+lässt sich also einstellen, wie lange der
+Wimpel unten bleibt, bevor er wieder angehoben wird.
+
+
+
+Zum Bau des Modells
+Fangen wir mit den einfachen Dingen an:
+Die Kette läuft unten einfach um ein
+Umlenk-Zahnrad:
+
+
+Der waagerechte Balken ist oben einfach
+durch eine simple Achse drehbar gelagert:
+
+Pneumatik
+
+Für den Nachbau der Maschine sollten die
+folgenden Hinweise nützlich sein:
+Das 4/2-Wege-Ventil
+Halterung des Ventils: Der zentrale BS15
+wird beiderseits von zwei BS15 im
+Abstand von 22,5 mm von der Grundplatte
+(BS15 plus BS7,5) stramm gehalten. Der
+restliche Aufbau ist auch auf der Unterseite
+des mittleren BS15 genauso wie hier auf
+der Oberseite sichtbar: Mittels eines
+Federnockens sitzen oben und unten je ein
+BS7,5, in deren Nuten die Zu- und Abluftschläuche gehalten werden. Diese BS7,5
+sind 5 mm nach vorne versetzt. Das ergibt
+sich übrigens einfach, wenn der Federnocken mit seiner langen Feder in den
+BS7,5 eingesetzt und sein Nocken bis zum
+Anschlag am Gelenkstein – siehe Abb.
+13/14 – vorgeschoben wird.
+
+Befestigung der Kette
+
+komplizierteren Teile der Steuerung:
+
+
+
+
+
+Auf der Gelenkseite sitzen, wiederum per
+Federnocken angebracht, links und rechts
+je ein Baustein 5 ∙ 15 ∙ 30. Die sorgen
+dafür, dass die Schläuche nicht etwa seitlich aus den BS7,5 heraus können.
+
+waagerechten BS7,5 an die beiden seitlichen Anschlüsse des T-Stücks, während
+die mittleren Anschlüsse über je ein Pneumatik-Winkelstück nach vorne herausgeführt werden.
+
+In Abb. 13 und 14 sieht man auch den auf
+dem zentralen BS5 aufgesetzten Gelenkstein.
+
+
+Die insgesamt sechs Anschlüsse des
+Ventils werden wie folgt beschaltet:
+
+· Wie Abb. 12 zeigt, werden der – von
+vorne gesehen – obere linke und untere
+rechte Schlauch der waagerechten
+BS7,5 mit dem Kompressor verbunden.
+· Der obere rechte und untere linke
+Anschluss ist jeweils ein Abluftausgang. Diese Schläuche führen
+einfach ins Freie.
+
+
+Auch auf diesem sitzt ein BS7,5, der oben
+und unten je ein Pneumatik-T-Stück trägt.
+Wie man in Abb. 15 sieht, gehen oben wie
+unten die beiden Schläuche der jeweiligen
+
+· Die zentralen Anschlüsse der beiden TStücke werden an die Ketten-Zylinder
+angeschlossen, und zwar der des
+unteren T-Stücks an die Seite zum Ausfahren der Zylinder, die des oberen TStücks an die Seite zum Einfahren.
+Beide Ketten-Zylinder teilen sich also
+dieselben Ausgänge. Außerdem gehen
+diese Anschlüsse auch an die beiden
+Drosseln.
+Durch Kippen des Gelenksteins nach links
+bzw. rechts werden nun diejenigen
+Schlauchstückchen abgeknickt und damit
+
+
+Pneumatik
+
+verschlossen, auf deren Seite der Gelenkstein gekippt wurde. Auf der anderen Seite
+können sich die Schläuche „frei entfalten“
+und lassen dadurch genügend Druckluft
+durchströmen. Für Details der Wirkungsweise dieser Schlauchtechnik sei auf [1]
+verwiesen.
+
+Andere Druckfedern mit gut 4 mm Innendurchmesser werden auch funktionieren,
+wie man sie z. B. in manchen Kugelschreibern findet. Je nach Federstärke
+müsst ihr etwas mit der verfügbaren Länge
+der Achsen experimentieren, um einen
+sauberen Umschaltvorgang zu erzielen.
+
+Anstatt also, wie es das Schaltzeichen
+eines 4/2-Wege-Ventils (Abb. 7) darstellt,
+einen beweglichen Teil zwischen festen
+Anschlüssen hin und her zu bewegen,
+steuern wir das Verbinden der zentralen
+Anschlüsse der beiden T-Stücke wahlweise
+mit Druckluft oder mit Abluft durch
+Zuklemmen der gerade nicht gewünschten
+Verbindung. Durch die Zufuhr der Druckluft auf zwei verschiedenen Seiten des
+Ventils erreichen wir es also, immer genau
+einen der beiden Zentralausgänge mit
+Druckluft und den jeweils anderen mit
+Abluft zu verbinden. Soweit funktioniert
+diese Ventilbauart genauso wie die in [1]
+vorgestellte und in Abb. 1 nochmal gezeigte.
+
+
+Schwellwertschalter mit
+Springkontakt
+Wir haben aber noch die Aufgabe, unser
+Ventil schlagartig umzuschalten, damit wir
+immer einen definierten Zustand und
+keinen
+ungewollten
+Druckluftverlust
+haben. Wie in Abb. 13 bis 15 gut sichtbar,
+sitzen auf dem Kipphebel über eine SKupplung 15 2 zwei Rastadapter, in denen
+je eine Rastachse feststeckt. Auf diesen
+sind Druckfedern aufgeschoben.
+Im Modellbeispiel sind die originalen
+fischertechnik-Druckfedern verwendet, wie
+sie im älteren hobby-2-Baukasten enthalten
+waren und sich wieder in jüngeren Kästen
+finden. Davon benötigt man, um genügend
+Federspannung zu bekommen, vier Stück;
+je zwei pro Rastachse, hintereinander
+gesteckt und mit einem kleinen Abstandsring davor geschützt, sich ineinander zu
+verhaken.
+
+
+Er ist stabil mit der Bauplatte verbunden
+und endet in einem BS15 mit Bohrung. In
+diesem steckt eine Metallachse 30 mit
+einem mittig angebrachten Klemmring.
+Die beiden Rastachsen laufen durch einen
+BS7,5, der auf einem um 90 ° verdrehten
+zweiten BS7,5 per Federnocken verbunden
+ist. Letzterer sitzt auf der senkrecht hochragenden Metallachse. Ein quer angesetzter
+Federnocken sichert den BS7,5 mit den
+Rastachsen dagegen, durch die Federkraft
+herausgedrückt zu werden.
+Beim Bau stellte es sich als praktisch
+heraus, den Steuerzylinder auf der Bauplattenseite zu lösen, alle Federn und
+Abstandsringe auf die Rastachsen zu
+stecken und den Steuerhebel mitsamt den
+aufgesetzten BS7,5 fertig zusammengebaut
+auf der Bauplatte zu befestigen. Auf diese
+Weise kann man den Hebel z. B. ganz nach
+rechts kippen und komfortabel auf die
+Rastachsen schieben, bevor der Steuerzylinder wieder befestigt wird.
+Die Funktionsweise ist nun so: Wird der
+Hebel auf eine der beiden Seiten gedreht,
+
+
+
+erreichen die Rastachsen mit den Federn
+einen Punkt, ab dem Sie die Kippmechanik
+des eigentlichen Ventils von sich weg
+drücken. Das geschieht schlagartig, und
+erst wenn man den Hebel wieder fast ganz
+in die andere Richtung dreht, wird das
+Ventil – wiederum schlagartig – in seine
+vorherige Stellung zurück geschaltet.
+Wichtig sind noch die beiden seitlichen
+Begrenzungen, gebildet aus je einem
+erhöht angebrachten BS30 mit einem
+darauf sitzenden BS7,5. Ohne die würde
+der Kipphebel des Ventils zu weit weg
+gedrückt werden können. Das hätte zur
+Folge, dass der Schaltpunkt fürs Zurückschalten des Ventils im nächsten Arbeitsgang nicht mehr erreicht werden könnte.
+Steuerzylinder, Drosseln und Rückschlagventile
+Der Steuerzylinder, der am Hebel schiebt
+und zieht, ist einfach über einen weiteren
+Winkelstein verbunden (siehe Abb. 6 und
+11) und sitzt mit seinem anderen Ende
+ganz einfach mittels eines letzten Winkelsteins und eines BS15 auf der Bauplatte.
+Seine beiden Druckluftleitungen gehen
+durch je eine Parallelschaltung aus einer
+selbstgebauten Drossel und eines Rückschlagventils (siehe [1]):
+
+Das Rückschlagventil ist nichts anderes als
+das beim ft-Selbstbaukompressor (siehe
+[2]) mitgelieferte. Es lässt Druckluft nur
+„in Pfeilrichtung“ (man betrachte die Form
+dieses Bauteils in Abb. 17) durch. In diese
+Richtung kann die Luft also recht ungestört
+strömen. Nur in Sperrrichtung der Drossel
+muss sie sich durch den durch die Einstellschraube verengten Schlauchquerschnitt
+quälen und kann so nur langsam abströmen. Das Schaltzeichen des Rückschlagventils (Abb. 7) deutet an, wie es
+tatsächlich realisiert ist: Eine Kugel wird
+durch eine im Schaltzeichen nicht enthaltene, aber in Abb. 17 gut sichtbare Druckfeder gegen einen Ausgang gepresst. Nur
+von dort kommende Druckluft kann die
+Kugel gegen die Federkraft wegdrücken
+uns durch das Ventil strömen; in der anderen Richtung ist der Durchfluss blockiert.
+Zum Dämpfen eines Zylinders blockiert
+man die Abluft, nicht die Zuluft [1].
+Zur Not kann man, wie schon gesagt, auch
+auf die Rückschlagventile oder sogar die
+ganzen Drosseln verzichten. Man verliert
+dadurch die
+einstellbare
+Wartezeit
+zwischen dem Auf und Ab des Wimpels,
+aber abgesehen davon wird das Modell
+auch so funktionieren.
+Der Anschluss des Steuerzylinders ist
+ansonsten ganz einfach: Er muss, wenn die
+Verschlauchung genau wie beschrieben
+und nicht „vertauscht“ erfolgte, zusammen
+mit den Ketten-Zylindern aus- und einfahren, wird also bis auf die zusätzlichen
+Drosseleinheiten einfach parallel zu den
+beiden anderen Zylindern geschaltet.
+Justage
+Ein schrittweiser Aufbau und Test des
+Modells sei wärmstens empfohlen, um
+alles zuverlässig zur Funktion zu bringen:
+
+und Rückschlagventil
+
+
+1. Nachdem die Ketten-Zylinder und der
+ganze Turm fertig gebaut sind, prüft, ob
+die Verschiebung der Kette leichtgängig
+geht. Weitet ggf. die seitlichen Führungen etwas, indem die äußeren flachen
+
+
+Pneumatik
+
+Platten eine Spur zum Rand der Bauplatte gezogen werden. Achtet darauf,
+dass sich weder der bewegliche
+Zylinder noch der BS15, in dem die
+Kette hängt, irgendwo verhaken.
+
+Im Youtube-Video des laufenden Modells
+könnt ihr nachschauen, wenn etwas unklar
+geblieben sein sollte.
+
+2. Baut das 4/2-Wege-Ventil und schließt
+es so an, dass ihr durch manuelles Umlegen seines Kipphebels die KettenZylinder zuverlässig ein- und ausfahren
+lassen könnt. Alleine das macht schon
+Spaß! Schließt bis dahin die Drosseln
+und den Steuerzylinder noch nicht an.
+Zieht die seitlichen Schläuche des
+Ventils nach vorne heraus und lasst sie
+durch Kippen des Hebels wieder einziehen. Das ergibt genau die richtige
+Länge, um das Zuklemmen bzw. Öffnen
+sauber zu realisieren.
+
+Wer einen oder zwei der fischertechnik
+Drucklufttanks besitzt, kann diese mit
+einem weiteren T-Stück zwischen die
+Drosseln und den Steuerzylinder zuschalten (alle anderen Anschlüsse sind
+natürlich mit einem P-Stopfen zu verschließen). Auf diese Weise können noch
+viel längere Wartezeiten (bis in den Minutenbereich!) eingestellt werden.
+
+3. Erst wenn das Ventil gut funktioniert,
+schließt den Steuerzylinder an. Lasst die
+Drosseln noch ganz geöffnet (Stellschraube ganz herausdrehen). Die
+Maschine muss jetzt bei eingeschalteter
+Druckluftversorgung alle Zylinder
+parallel hin und her und damit den
+Wimpel ständig auf und ab bewegen.
+4. Dreht die Drosselventile nach Wunsch
+zu, um die jeweilige Wartezeit einzustellen. Man kann mehrere Sekunden
+erreichen, wenn man die Drosseln fast
+ganz schließt. In diesem Zustand unterscheidet ein Hauch einer kleinen
+Drehung zwischen „Stillstand“ und
+„noch zu schnell“. Hier ist also Fingerspitzengefühl gefragt. Wer kitzelt die
+längste zuverlässig funktionierende
+Wartezeit heraus?
+
+Wie geht’s weiter?
+
+Im nächsten Beitrag dieser Serie widmen
+wir uns einem anderen Nachteil des bisherigen Ventils: „Es ist schwergängiger als
+die Kombination Betätiger/Festo-Ventil.“
+Wir werden eine überraschende, frappierend einfache Anordnung vorstellen, die
+mit ganz wenigen aktuellen Bauteilen ein
+Druckluftsignal mit ganz wenig Kraft und
+wenig Schaltweg zu steuern vermag. Bleibt
+uns also treu!
+
+Quellen
+[1]
+
+Falk, Stefan: Druckluftsteuerungen
+(Teil 1), ft:pedia 1/2014, S. 58-72.
+
+[2]
+
+Falk, Stefan: Perlentauchen (Teil 5)
+(Pneumatik). ft:pedia 4/2013,
+S. 6-15.
+
+[3]
+
+Falk, Stefan: Perlentauchen (Teil 3)
+(Elektromechanik), ft:pedia 1/2013,
+S. 22-31.
+
+[4]
+
+Wikipedia: Oszillator.
+
+
+

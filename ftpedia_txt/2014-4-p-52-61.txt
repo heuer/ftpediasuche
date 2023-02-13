@@ -1,0 +1,653 @@
+
+
+Computing
+
+Ziffernerkennung über eine CMOS-Kamera
+am AVR-Controller
+Dirk Uffmann
+Kameras und Bildverarbeitung in Modellsteuerungen werden immer beliebter. Von
+fischertechnik gibt es mittlerweile auch eine Kamera für den TXT-Controller. Im vorausgegangenen Beitrag wurde vorgestellt, wie sich eine Pixy CMUcam5 über das I²C-Interface
+am TX nutzen lässt – und in diesem Beitrag stelle ich euch eine weitere, kostengünstigere
+Möglichkeit vor: mit einem Arduino-Mega2560-Board und einem Kameramodul lassen sich
+sogar Ziffern identifizieren, die von einer Vorlage abgelesen werden.
+
+Hintergrund
+Ich habe schon lange davon geträumt, in
+meine Modellsteuerungen eine Kamera zu
+integrieren und ein bisschen mit Bildverarbeitung zu experimentieren. Bei Internetrecherchen findet man mittlerweile recht
+häufig Anwendungen zum Nachverfolgen
+von Farbklecksen (Color Blob Tracking).
+Meistens werden dafür 32-bit-Controller
+auf ARM-Basis verwendet, was schon
+einiges an Programmier- und Hardwarekenntnissen erfordert. Es sei denn, man
+kauft einfach ein fertiges Kameramodul mit
+bereits programmiertem Controller. Das
+letztere wollte ich nicht und so habe ich
+nach einem einfacheren Weg mit AVRControllern gesucht, da ich diese bereits
+kenne. Die Performance ist selbst für
+einfache Bildverarbeitung knapp bemessen,
+daher muss man geschickt mit deren
+Ressourcen umgehen.
+
+Komponenten
+Ich begann mit der Suche nach günstigen
+Komponenten und bin u. a. bei Aliexpress
+aus China fündig geworden: Ein ArdinoMega-2560R3-Board für ca. 11 €, ein passendes LCD-2408(V1.1)-Farbdisplay mit
+Display-Controller ILI9325D in der Größe
+
+
+2,4 Zoll für ca. 7 €, ein TFT-Shield Lseeduino V1.1 mit Level-Shiftern von 5V auf
+3,3V für ca. 7 € und ein Alientek Kameramodul V2.2 mit einer Omnivision OV7670
+CMOS-VGA-Kamera inkl. Averlogic FIFO
+AL422B (Abb. 1) zur Zwischenspeicherung
+der Bilder für ca. 6 € (bei Abnahme von fünf
+Stück).
+
+
+Zum Debuggen nutzte ich noch ein TextLCD für ca. 5 € am I²C-Bus. Die Beschaffung war versandkostenfrei, die Lieferzeit
+betrug ca. 3-6 Wochen (zollfrei bis 22 € je
+Bestellung). Gesamtkosten: ca. 36 €.
+
+
+Computing
+
+TFT-Shield mit angelöteten Kameraleitungen und Display
+
+
+
+
+Hardware-Konzept
+Elektrische Anschlüsse und PinZuordnung
+Für eine direkte Darstellung von KameraBildern auf dem Display sollten Kamera
+und LCD im RGB565-Mode betrieben
+werden und mit den acht Datenleitungen gemeinsam an einen Bus (Port A) des
+ATMEGA-2560 angeschlossen werden [1].
+Dadurch kann das Kamerabild direkt und
+schnell auf das LCD-Display gebracht
+werden, ohne es in den Mikrocontroller
+einlesen zu müssen. Dieses Bild ist dann als
+Referenz für die weiteren, mit Bildverarbeitung errechneten Bilder sichtbar.
+
+Clock und TFT Write Strobe zur direkten
+Übertragung des RGB565-Bildes ans Display
+
+Der LCD-Controller ILI9325D des FarbTFT-Displays wird im 8-bit MPU-Modus
+betrieben (zwei Bytes pro Pixel für
+RGB565). Die dafür benutzen Datenleitungen sind [D17:D10], die auf [DB15:DB08]
+am TFT-Shield gelegt sind. Die Datenleitungen [DB15:DB08] des TFT-Shields sind
+über Level-Shifter (Übergang von 5 V auf
+3,3 V) an die Arduino-Pins [D29:D22] am
+Port A angeschlossen. Hier müssen dann
+parallel auch die Signale [D7:D0] der
+Kamera angeschlossen werden (angelötet
+an den Pins am 36-poligen Verbindungssteckers des TFT-Shields). Dann kann das
+Kamerabild über die Steuersignale direkt
+ins Grafik-RAM des LCD-Controllers übertragen werden (Abb. 4).
+Über das Signal OE (active low) wird der
+Datenausgang des FIFO auf den Bus
+
+geschaltet. Mit OE=high ist der FIFODatenausgang hochohmig. Das LCD treibt
+nie auf die Datenleitungen, da dessen Signal
+RD im Shield auf high geklemmt ist. Die
+Spannungsversorgung der Kamera wird an
+den Ausgang des 3,3 V-Reglers auf dem
+TFT-Shield und GND des Arduino-Boards
+angeschlossen (angelötet am GND-Pin des
+sechspoligen Versorgungssteckers J24 des
+TFT-Shields).
+Der SCCB-Bus der Kamera wird über einen
+Software-I²C-Bus mit 3,3 V betrieben (der
+TWI mit den 10k Pull-up-Widerständen an
+5 V ist dafür ungeeignet, da damit die
+Kamera beschädigt würde, die nur 3,3 V an
+ihren Pins verträgt). Mit der Library von
+Peter Fleury, die auf direkten Bit-Zugriffen
+in den I/O-Registern mit CBI- und SBIBefehlen basiert, kann nur der IO-Space bis
+0x1F adressiert werden. Daher stehen dafür
+nur die Ports bis einschließlich Port G zur
+Verfügung. Genutzt werden die AnalogPins A1 (für SDA) und A0 (für SCL) des
+Arduino-Boards, entsprechend Port F Pin 1
+und 0 des ATMEGA2560. Beide Pins
+benötigen noch einen Pull-Up-Widerstand
+von 5 kOhm auf 3,3 V. Dazu wird eine
+einreihige, achtpolige Steckerleiste ins
+TFT-Shield eingelötet (J22) und an den Pins
+A0 und A1 an die SCCB-Kamera-Leitungen und die Pull-up-Widerstände angelötet
+(4fach Widerstandsnetzwerk mit 4 x 10
+kOhm, je zwei parallel geschaltet).
+Damit der FIFO zum Schreiben der Bilddaten immer am Bildanfang zurückgesetzt
+wird, wird das Signal Write Reset (WRST,
+active low) immer zeitgleich mit einem
+VSYNC-Puls ausgelöst. VSYNC kann über
+ein Register so konfiguriert werden (invertiert), dass es von high auf low auf high
+wechselt (active low). Dann kann VSYNC
+direkt über eine Verbindungsleitung den
+Write Reset WRST des FIFO ansteuern.
+Die Verbindung der beiden FIFO-Pins wird
+am Arduino-Pin 19 hergestellt. VSYNC
+wird außerdem im ATMEGA2560 benötigt,
+um andere Signale wie das FIFO Write
+
+
+Computing
+
+Enable (WE) per Software zu steuern. Dies
+soll über Interrupts erfolgen. Hierfür wird
+
+der Interrupt INT2 auf Arduino Pin 19 =
+Port D Pin 2 am ATMEGA 2560 gewählt.
+
+Alientek OV7670
+
+Arduino
+
+01: GND
+02: VCC3.3V
+03: OV_SCL
+04: FIFO_WRST
+18: OV_VSYNC
+05: OV_SDA
+06: FIFO_RRST
+07: FIFO_D0
+08: FIFO_OE
+09: FIFO_D2
+10: FIFO_D1
+11: FIFO_D4
+12: FIFO_D3
+13: FIFO_D6
+14: FIFO_D5
+15: FIFO_RCLK
+
+GND
+n.c
+A0
+19: RX1
+
+ATMEGA25
+GND
+n.c.
+Port F0
+Port D2
+
+A1
+A2
+A3
+
+Port F1
+Port F2
+Pin A0
+Port F3
+Pin A2
+Pin A1
+Pin A4
+Pin A3
+Pin A6
+Pin A5
+Port F4
+
+16: FIFO_D7
+17: FIFO_WEN
+TFT 2.4“
+
+18: TX1
+Arduino
+
+Pin A7
+Port D3
+ATMEGA25
+Port D7
+Port G2
+Port G1
+Port G0
+
+WS: Write Strobe
+
+
+Bemerkungen
+3,3 V Regler auf dem TFT-Shield
+5k Pullup an 3V3 (Regler auf TFT-Shield)
+Beide Kabel auf denselben Pin am Arduino-Board löten, VSYNC in der Konfiguration
+invertieren
+5k Pullup an 3V3 (Regler auf TFT-Shield)
+FIFO Read Reset
+FIFO Output Enable (active low)
+
+die FIFO Read Clock treibt mit positiver Flanke neue Daten aus dem FIFO auf den
+Datenbus raus, diese werden dann mit der positiven Flanke des TFT Write Strobe zwei
+Takte später übernommen.
+FIFO Write Enable (active low)
+Bemerkungen
+
+Tab. 1: Elektrische Anschlüsse bzw. Pin-Zuordnung zwischen den Modulen
+
+Durch Modifikation einer Status-Variablen
+„image_state“ im Hauptprogramm und im
+Interrupt wird gesteuert, welcher Code
+jeweils ausgeführt wird, also z. B. ob ein
+Bild aufgezeichnet werden soll (0), ob
+
+gerade ein Bild aufgezeichnet wird (1) oder
+ob ein vollständiges Bild zur weiteren
+Verarbeitung im FIFO steht (2), siehe auch
+[3].
+
+
+
+
+ISR (INT2_vect) {
+if (image_state == 0) {
+// start to store image to FIFO, write enable
+PORTD |= _BV(PD3);
+// at next VSync stop image saving
+image_state++; }
+else if (image_state == 1) {
+// stop to store image, write disable
+PORTD &= ~(_BV(PD3));
+// image is ready for reading from FIFO
+image_state++; }
+}
+
+Tab. 2: Interrupt-Service-Routine, über die die
+Bildaufnahme von der Kamera gesteuert wird
+
+Taktschema
+Die Read Clock RCK des FIFO muss im
+AVR generiert werden. Hierfür wird Port FPin 4 = PF4 (Arduino Pin A4) verwendet.
+Das LCD-Display wird am Arduino-Pin 39
+= Port G Pin 2 mit seiner Write Clock
+versorgt (TFT-Shield). Wichtig ist, dass
+beide Takte synchron laufen und dass das
+TFT Write Strobe mit seiner positiven
+Clock-Flanke mindestens 10 ns der positiven FIFO Read-Clock-Flanke hinterherläuft (Setup-Zeit) und die high-Phase des
+FIFO Read Clocks dann noch mindestens
+15 ns anhält (Hold-Zeit).
+Die Bilddaten werden also mit zwei synchronen Clock-Signalen aus dem FIFO der
+Kamera ausgelesen und ins LCD geschrieben. Damit ergibt sich die in Abb. 5 und
+Tab. 1 dargestellte Pin-Zuordnung. Um die
+nötigen Kabel aufzulöten werden zwei
+einreihige, achtpolige Steckerleisten ins
+TFT-Shield eingelötet (J21 für Pins 14-21
+und J22 für Pins A0-A7).
+Bilddaten und Timing
+Der 12 MHz-Schwingquarz im Kameramodul wird über die PLL auf 48 MHz
+vervierfacht und dann über den Clock
+Prescaler wieder auf 24 MHz halbiert. Die
+Pixelclock am Bildsensor läuft dann mit 24
+MHz. Damit ergeben sich folgende Werte
+für das Frame-Timing:
+· tP = 2 ∙ tPCLK (RGB-Format mit 2 Bytes
+/ Pixel) = 83 ns (Zeit für ein Pixel = 2
+Bytes)
+
+
+· tLINE = 784 ∙ tP = 65 µs (Zeit für die
+Übertragung einer Bildzeile)
+· tFRAME = 510 ∙ tLINE = 33 ms
+→ 30 Frames / Seunde
+Das gewählte Bildformat ist QQVGA mit
+160 x 120 Pixeln (also Teilung des VGABildes in beiden Dimensionen durch vier).
+Ein Bild ist also 2 x 160 x 120 Bytes =
+38.400 Bytes groß. Dafür reicht der Speicherplatz im internen RAM des AVR bei
+weitem nicht aus. Da der FIFO außerdem
+mit einem Takt von mindestens 1 MHz
+ausgelesen werden muss, muss die erste
+Erfassung und Auswertung bzw. Verdichtung der Bilddaten ins RAM des AVR
+möglichst rasch pixelweise erfolgen.
+Je Byte werden für das Einlesen der Daten
+ins RAM des AVR mindestens vier Takte à
+16 MHz benötigt (Einlesen eines Ports in
+ein Register = ein Takt, Speichern des
+Registers im RAM = zwei Takte, Schleifensprung = ein Takt). In diesem Fall kann das
+Auslesen der Daten aus dem FIFO also mit
+maximal 4 MHz erfolgen. Für weitere Auswertungen oder Umrechnungen des Bytes
+stehen maximal 12 weitere Takte zur
+Verfügung, um die Leserate aus dem FIFO
+nicht unter 1 MHz sinken zu lassen.
+Beleuchtung
+Für die Bildverarbeitung ist eine möglichst
+gleichmäßige Ausleuchtung des Objektes
+und dessen „Hintergrunds“ wichtig. In
+meinem Modell habe ich mit einer einfachen LED gearbeitet, brauchte zur Erkennung der Ziffern dann aber einen Laserausdruck der Ziffern auf mattem Papier
+anstelle der auf den hoch reflektierenden
+Kreditkarten geprägten silbern glänzenden
+Ziffern. Besser wäre eine ringförmige LEDBeleuchtung, die das Blickfeld der Kamera
+unter flachem Winkel ausleuchtet.
+
+Software-Konzept
+Die Software wurde mit Atmel-Studio in C
+geschrieben und mit XLoader auf den AVR
+geladen (damit umgehe ich die Arduino-
+
+Tools). Einstellungen für die Initialisierung
+der Kamera und des TFT-Displays habe ich
+mir im Internet zusammengesucht [2].
+Bildformat
+Für eine Ziffern-Erkennung kann mit der
+Helligkeit gearbeitet werden. Dafür bietet
+sich das YUV-Bildformat an (4:2:2), bei
+dem das erste der beiden Bytes/Pixel
+jeweils die Helligkeit repräsentiert. Nachdem das Referenzbild im RGB-Format
+aufgenommen und direkt auf dem Display
+dargestellt wurde, wurden die Kamera-Einstellungen auf das YUV (4:2:2)-Format
+geändert und ein weiteres Bild in den FIFO
+eingelesen, welches dann pixelweise vom
+AVR verarbeitet wird (Abb. 6).
+Schwellwertfilter
+Der Helligkeitswert des Pixels wird mit
+einem ermittelten Schwellwert verglichen
+und bei Unterschreitung werden die Pixel
+mit ihren Pixelkoordinaten in einer Liste
+gespeichert, die aus den Feldern x[i], y[i]
+und region[i] besteht. Zunächst werden nur
+die x und y-Koordinaten jedes herausgefilterten Pixels gespeichert und der Index
+hochgezählt. Die so gesammelten Pixel
+werden sodann in einer reinen SchwarzWeiß-Darstellung (keine Grauwerte) auf
+dem Display dargestellt (Abb. 8).
+
+Zyklus‘ mit Aufnahme und Darstellung von
+zwei QQVGA-Bildern auf dem Display und
+der Berechnungen zur Identifikation von
+zwei Ziffern. Damit werden ca. vier Zyklen
+pro Sekunde erreicht.
+
+Computing
+
+Einfaches Kantenfilter
+Eine Bildzeile wird dabei im RAM des
+AVR gespeichert und laufend nach Auswertung des aktuellen, zwischengespeicherten Pixels mit diesem überschrieben.
+Pixel der neuen Bildzeile Pixel der älteren Bildzeile
+2. Differenz 3. Differenz
+horizontal vertikal
+1. Einlesen
+
+4. Speichern
+aktuelles Pixel
+
+beim einfachen Kantenfilter
+
+Dies ermöglicht ein simples Kantenfilter in
+beiden Bilddimensionen. Über einen Vergleich des temporär in eine Variable eingelesenen Pixels mit dem direkt zuvor eingelesenen Pixel wird die Änderung der Helligkeit in horizontaler Richtung ermittelt,
+ebenso durch einen Vergleich mit dem
+positionsgleichen Pixel der vorherigen
+Bildzeile die Änderung der Helligkeit in
+vertikaler Richtung.
+Übersteigt einer dieser beiden Änderungswerte eine definierte Schwelle, wird dieses
+Pixel in einer Liste gespeichert, die aus den
+Feldern x[i], y[i] und region[i] besteht.
+Zunächst werden nur die x- und yKoordinaten jedes herausgefilterten Pixels
+gespeichert und der Index hochgezählt. Die
+so gesammelten Pixel werden sodann in
+einer reinen Schwarz-Weiß-Darstellung
+(keine Grauwerte) auf dem Display
+dargestellt (Abb. 9).
+Für die weitere Erkennung von Ziffern habe
+ich mich jedoch für das Schwellwertfilter
+anstelle des Kantenfilters entschieden, da es
+ein weniger komplexes Bild der Ziffer liefert. Der Schwellwertfilter reagiert allerdings anfälliger auf eine ungleichmäßige
+Ausleuchtung des Objektes.
+
+
+
+
+Segmentierung
+Die herausgefilterten Pixel müssen nun den
+Ziffern zugeordnet werden. Dazu wird die
+Pixel-Liste bearbeitet. Ich habe mich für
+folgende Methode entschieden: In einem
+ersten Durchlauf werden zusammenhängende Pixel in horizontaler Richtung mit
+einem übereinstimmenden region-Wert
+gekennzeichnet und dieser danach jeweils
+hochgezählt. Im zweiten Durchlauf werden
+beginnend mit der ersten Zeile alle Pixel in
+der nächst höheren Zeile, die in benachbarten oder nahen x-Bereichen zur vorherigen Zeile liegen, dem entsprechenden
+region-Wert der vorherigen Zeile zugeordnet.
+i = 2;
+label = 1;
+region [1] = label;
+
+des Bildes nach dem Schwellwertfilter (unten)
+
+// 1. Durchlauf zur Segmentierung
+do {
+label++;
+if (x[i] == x[i-1] + 1) {
+if (y[i] == y[i-1]) {
+label--; }
+}
+region[i] = label;
+i++;
+} while (i <= filtered_pixel_counter);
+// 2. Durchlauf zur Segmentierung
+i = 1;
+do {
+j=i+1;
+do {
+if ((x[j]>x[i]-5)&&(x[j]< x[i]+5)) {
+region[j] = region[i]; }
+j++;
+} while (j<=filtered_pixel_counter);
+i++;
+} while (i<filtered_pixel_counter);
+
+Tab. 3: Code-Beispiel zum Segmentieren
+in zwei Durchläufen
+
+So werden zusammenhängende Bereiche
+gefunden, die eine übereinstimmende Lage
+in vertikaler Richtung haben. Diese werden
+dann demselben region-Wert zugeordnet.
+Das Ergebnis ist eine Liste, in der alle Pixel,
+die derselben region zugeordnet sind, genau
+eine der Ziffern im Bild repräsentieren
+(Abb. 10).
+des Bildes nach dem Kantenfilter (unten)
+
+
+
+
+
+Computing
+
+
+
+
+
+
+
+i
+
+x[i]
+
+y[i]
+
+
+Nach Durchlauf
+1.
+2.
+region[i]
+region[i]
+
+an zwei Ziffern
+
+für jede Ziffer ermittelt, wie viele Übergänge von schwarz nach weiß in allen
+Bildzeilen und wie viele solcher Übergänge
+in allen Bildspalten vorhanden sind [4, 5].
+Damit sind die Ziffern voneinander unterscheidbar und können zugeordnet werden.
+In dem simplen Beispiel in Abb. 10 hat die
+4 in horizontaler Richtung in Summe zehn
+Übergänge von schwarz nach weiß und in
+vertikaler Richtung vier, die 1 hingegen sieben in horizontaler und einen in vertikaler
+Richtung.
+Mit der reinen Summenbildung dieser
+Übergänge stößt man bei Unterscheidung
+der Ziffern 6 und 9 allerdings auf ein
+Problem. Hier wird wegen der Symmetrie
+der beiden Ziffern zusätzlich eine räumliche
+Information benötigt. Ich habe daher die
+Summenbildung aufgeteilt: für die Zeilensummen nach oberer und unterer Hälfte und
+für die Spaltensummen nach linker und
+rechter Hälfte der Ziffer.
+i=filtered_pixel_counter;
+do {
+j = region [i];
+if (x[i] < center_x[j]) {
+transition_counter_x_left[j]++;
+if (x[i]==x[i-1]+1) {
+if (y[i]==y[i-1]) {
+transition_counter_x_left[j]--;}
+}
+}
+else
+{
+transition_counter_x_right[j]++;
+if (x[i]==x[i-1]+1) {
+if (y[i]==y[i-1]) {
+transition_counter_x_right[j]--;}
+}
+}
+i--;
+} while (i);
+
+Ziffern-Erkennung
+
+Tab. 4: Code-Beispiel zum Zählen der Übergänge in Zeilenrichtung mit Unterscheidung
+nach oberer und unterer Hälfte
+
+Um nun die Ziffern zu unterscheiden
+ermittelt man charakteristische Merkmale
+wie Pixelanzahl oder Schwerpunkt etc. Die
+Pixelzahl ist allerdings abhängig von der
+Beleuchtung und der geometrische Schwerpunkt der Zahlen unterscheidet sich nicht so
+stark. Ich fand folgendes Charakteristikum
+interessant und habe es angewandt: es wird
+
+So ergibt sich ein gut unterscheidbarer
+„Fingerabdruck“ für jede Ziffer. Diese
+„Fingerabdrücke“ oder Datensätze werden
+einmal ermittelt, im Controller gespeichert
+und dann mit den jeweils beobachteten
+Objekten verglichen. Dazu lasse ich je eine
+Fehlerfunktion für den Vergleich der ermittelten Objektdaten mit den für alle Ziffern
+
+
+
+gespeicherten Datensätze (jeweils vier
+Bytes, siehe Tab. 5) berechnen, indem ich
+den absoluten Betrag der Differenzen für
+jedes der vier Bytes aufsummiere.
+Der Vergleich, der den geringsten Fehler
+aufweist, ergibt die Identifikation der Ziffer. Mit den von mir verwendeten Zeichen
+und justierter Beleuchtung hat das funktioniert.
+const uint8_t cypher[10][4] PROGMEM = {
+// left, right, top, bottom
+{0x17, 0x14, 0x0B, 0x09},//cypher 0
+{0x03, 0x16, 0x06, 0x01},//cypher 1
+{0x0d, 0x0e, 0x0e, 0x07},//cypher 2
+{0x0c, 0x12, 0x0f, 0x0d},//cypher 3
+{0x0a, 0x14, 0x06, 0x0e},//cypher 4
+{0x14, 0x0b, 0x13, 0x0c},//cypher 5
+{0x17, 0x0e, 0x13, 0x0e},//cypher 6
+{0x0a, 0x0d, 0x11, 0x04},//cypher 7
+{0x16, 0x13, 0x10, 0x10},//cypher 8
+{0x15, 0x12, 0x0b, 0x16} //cypher 9
+};
+
+Tab. 6: Code-Beispiel zum Sortieren der
+erkannten Ziffern. Die x-Position jeder Ziffer
+wird mit allen höher indizierten verglichen.
+Wird eine Ziffer mit niedrigerem x gefunden,
+so werden die beiden Ziffern vertauscht
+
+Der erstellte Code steht zum Download zur
+Verfügung. Derzeit werden nicht mehr als
+zwei Ziffern erkannt. Grund dafür ist die
+Begrenzung auf 255 Pixel (Felder x[i], y[i]),
+da andernfalls mit einem 16-bit-Index die
+Schleife für das Lesen aus dem FIFO zu
+langsam wird.
+
+Tab. 5: Ermittelte Datensätze („Fingerprints“)
+für die zehn Ziffern 0 bis 9.
+
+Wenn man den Zeichensatz ändert, muss
+man die Vergleichsdatensätze möglicherweise neu ermitteln. Wenn die Größe der
+Ziffern variabel ist, muss man noch eine
+Funktion zum Skalieren der erkannten
+Objekte auf eine einheitliche Größe
+implementieren.
+Zuletzt werden die erkannten Ziffern noch
+anhand ihrer x-Koordinaten in die passende
+Reihenfolge von links nach rechts sortiert,
+so wie sie abgelesen wurden [6].
+i = 1;
+do {
+j = i + 1;
+do {
+if (min_x[i] > min_x[j]) {
+fig = identified_fig [i];
+identified_fig[i]=identified_fig[j];
+identified_fig [j] = fig;
+label = min_x [i];
+min_x [i] = min_x [j];
+min_x [j] = label;
+}
+j++;
+} while (j <= region_max);
+i++;
+} while (i < region_max);
+
+
+das System korrekt erkannten Ziffernfolge 41.
+Das Text-LCD zeigt auch die für beide Ziffern
+ermittelten Übergänge an, links für die 1,
+rechts für die 4
+
+Fazit
+Auch mit vergleichsweise einfachen Mitteln ist es möglich, mit Kameras und Bildverarbeitung zu spielen und diese in fischertechnik-Modellsteuerungen zu verwenden.
+In [7] ist eine weitere Idee zu finden: ein
+mobiler Roboter, der Türschilder lesen
+kann.
+
+Quellen
+[1]
+
+Jenssen, Arndt: OV7670 + FIFO
+Camera Control with an AVR
+ATMEGA-1284P, GitHub.
+
+[2]
+
+ComputerNerd: Arduino Mega 2560
+Code which uses either an ov7670 or
+an MT9D111 to display an image on
+a tft screen, GitHub.
+
+[3]
+
+C, Joe: Einstieg: Mikrocontroller
+STM32F103/Kameraboard.
+
+Computing
+
+[4]
+
+Zimmermann, Lipfert: Applet zur
+Zahlen-Erkennung auf der Basis
+einer Kohonen-Feature-Map. Fachhochschule Regensburg.
+
+[5]
+
+Schedl, Christian; Zachmayer, Andreas: Postleitzahlenerkennung mit
+einer Kohonen Feature Map. Fachhochschule Regensburg.
+
+[6]
+
+Meinelt: Sortieralgorithmen.
+
+[7]
+
+Nast-Kolb, Jens: Angewandte Texterkennung für mobilen Roboter.
+Studienarbeit TU München.
+
+
+

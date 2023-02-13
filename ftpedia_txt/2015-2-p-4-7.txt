@@ -1,0 +1,182 @@
+
+
+Erfahrungsbericht
+
+RoboCup Junior German Open
+Andreas Kempf
+Seit 1997 wird jährlich der weltweite Robotik-Wettbewerb „RoboCup“ ausgetragen. Er soll
+die Weiterentwicklung von Robotern inspirieren – mit dem Ziel, im Jahr 2050 mit einem
+Roboter-Team den dann amtierenden Fußballweltmeister zu schlagen. Seit dem Jahr 2000 gibt
+es auch eine „Junior League“ – an der Schüler mit fischertechnik-Robotern immer wieder
+Preise einsammeln. In diesem Jahr gelang das einem Team aus Lahr in der Disziplin Soccer.
+Im Herbst 2014 beschloss die seit Herbst
+2013 bestehende Roboter AG am Scheffelgymnasium in Lahr, beim Robocup Junior
+2015 mit zwei Teams und fischertechnikRobotern in der Disziplin Soccer anzutreten.
+
+Der Wettbewerb
+In dieser Disziplin wird in verschiedenen
+Altersklassen (der Schüler) und Gewichtsklassen (der Roboter) mit einem Ball von
+8 cm Durchmesser, der ein gepulstes Infrarotsignal aussendet, auf einem ca. 1,8 x 1,25
+m großen Spielfeld Fußball gespielt. Die
+Roboter müssen sich völlig autonom auf
+dem Spielfeld bewegen; eine Fernsteuerung
+oder ein anderer Eingriff von außen ist nicht
+erlaubt.
+
+
+Um den Ball „sehen“ zu können, haben wir
+einen IR-Sensor von einer Firma in
+Australien beschafft. Zusätzlich haben wir
+einen Kompass-Sensor eingebaut, damit die
+Roboter auf das richtige Tor schießen.
+
+Wir haben uns für den Soccer Leight
+Weight-Wettbewerb für Teilnehmer bis
+einschließlich 14 Jahre entschieden. Hier
+treten zwei eigene Roboter gegen zwei
+gegnerische an. Die Roboter dürfen je nur
+1100 g wiegen und maximal 22 cm im
+Durchmesser und in der Höhe messen.
+
+Unser Soccer-Roboter
+Wir haben zunächst mit dem fischertechnik
+Kasten Robotics Competition Lab ein erstes
+Modell entworfen. Dann haben wir uns den
+offiziellen Spielball zugelegt.
+
+Weiter wurden die IR-Liniensensoren von
+fischertechnik eingesetzt, um die Begrenzung des Spielfeldes (weiße Linie) zu
+erkennen, und eine Lichtschranke zur Feststellung des „Ballbesitzes“.
+Um den Ball zu „führen“ haben wir eine
+Rolle mit Führung konstruiert – der Ball
+darf bei Ballbesitz bis zu 3 cm „in den
+Roboter hineinragen“.
+
+Erfahrungsbericht
+
+Regeln ansehen – sie werden Jahr für Jahr
+ein wenig herausfordernder.
+Zwar waren wir in der Disziplin Soccer die
+Einzigen mit einem fischertechnik-Roboter
+– zum Glück aber gab es einige (wenige)
+Teams mit fischertechnik-Robotern beim
+Rescue-Wettbewerb. Daher konnten wir
+uns von einem Team aus Schorndorf deren
+Ersatz-Liniensensor borgen – und hatten
+beim dritten Spiel den Liniensensor eingebaut und das Programm überarbeitet. Damit
+erreichten wir ein respektables „unentschieden“.
+Nach einem erneuten Feintuning des
+Programms gewannen wir die Spiele vier
+und fünf – und errangen mit unseren
+fischertechnik-Robotern auf Anhieb einen
+2. und einen 5. Platz. Damit hatten wir uns
+für die German Open im Robocup Junior in
+Magdeburg qualifiziert.
+
+
+Lego bietet zwar fertige IR- und KompassSensoren an, und diese ließen sich sogar per
+I²C-Schnittstelle an den fischertechnikControler anschließen. Allerdings hat der
+IR-Sensor von Lego nur eine Reichweite
+von maximal etwa 80 cm; unser IR-Sensor
+deckt dagegen ca. 2 m ab.
+
+Die Turniere
+Nach nur vier Monaten Vorbereitung starteten unsere Roboter bei der Süddeutschen
+Meisterschaft im Robocup Junior in
+Vöhringen (bei Ulm).
+Dort wurden wir von einer Regeländerung
+überrascht: 2014 durfte noch jeder Roboter
+während des Spiels ins Aus fahren; 2015
+wurde jeder Roboter, der ins Aus fuhr, für
+eine Minute vom Platz gestellt. In den
+ersten beiden Spielen waren unsere beiden
+Roboter daher öfter außerhalb des Spielfelds, und der Gegner hatte „freie Bahn“ –
+beide Spiele haben wir deshalb verloren.
+Merke: Vor dem Wettbewerb sollte man
+sich unbedingt nochmal die aktuellen
+
+
+
+
+Eventuell dürfen wir aber noch über einen
+„Nachrückerplatz“ fischertechnik beim
+RoboCup in China vertreten.
+
+
+Auch in Magdeburg waren wir das einzige
+Team, das in der Disziplin Soccer fischertechnik einsetzte – und wir waren auch das
+einzige Team aus Baden, das sich qualifiziert hat.
+Wir erreichten den dritten Platz – und
+verpassten damit ganz knapp die Qualifikation für den diesjährigen World-Cup in
+Hefei (China), denn in diesem Jahr qualifizierten sich nur die ersten beiden Sieger.
+
+
+Einen Ausschnitt aus einem unserer Wettkampf-Spiele kann man sich in einem
+Youtube-Video ansehen.
+
+
+
+Lessons Learned
+Ein großer Vorteil von fischertechnik ist,
+dass man schnell vor Ort noch etwas
+verändern oder umbauen kann. Auch die
+graphische Programmierung mit ROBO Pro
+gelingt schnell und übersichtlich.
+Wir konnten teilweise sogar in den Pausen
+zwischen zwei Halbzeiten noch kleine
+Änderungen an unserem Programm vornehmen.
+Eine Herausforderung ist die mechanische
+Stabilität des Roboters. In der Disziplin
+Soccer treten nicht zu vernachlässigende
+große Kräfte auf: zum einen durch die
+ständige Beschleunigung, zum anderen
+durch Kontakte mit dem Gegner oder der
+Bande.
+Bei uns wurde dadurch öfter das Fahrgestell
+etwas verschoben, wodurch die Zahnräder
+der Motorübersetzung nicht mehr 100%ig
+griffen. Auch sollten die Räder geschützt
+werden.
+Die Motoren sollten genügend Kraft haben.
+Wir haben in Vöhringen mit den Encodermotoren gespielt und wollten für Magdeburg auf die Powermotoren umsteigen.
+Allerdings lassen sich diese sehr schwer
+stabil befestigen. Wir haben daher vor Ort
+unsere Roboter zunächst wieder auf die
+Encoder zurückgebaut. Derzeit testen wir
+den XM-Motor; eventuell ist der eine
+Alternative.
+
+Erfahrungsbericht
+
+In jedem unserer Roboter ist ein Materialwert von ca. 800 € verbaut – bei vier Robotern ist das nicht wenig. Dabei wurden wir
+mit Sachspenden in Höhe von ca. 2.000 €
+von der Firma fischertechnik unterstützt.
+Beim Fanclubtag Ende Juli in Waldachtal
+werden wir unsere Roboter vorstellen,
+ebenso beim Schul-Robotik-Cup Mitte Juni
+in Karlsruhe und bei den Science-Days im
+Europapark im Oktober.
+
+Ausblick
+Insgesamt haben etwa 1.300 Schülerinnen
+und Schüler aus 89 Schulen mit 419 Teams
+an den RoboCup German Open 2015 teilgenommen. Leider gingen davon (meines
+Wissens) bundesweit nur acht Teams mit
+fischertechnik an den Start.
+Im Jahr 2016 findet die RoboCup-WM nach
+zehn Jahren wieder in Deutschland statt – in
+Leipzig. Wir hoffen, dass dann mehr
+fischertechnik-Teams dabei sein werden.
+Als Einsteigerwettbewerb ist der ‚1gegen1
+open‘ gut geeignet: Da benötigt man nur
+einen Roboter und man spielt mit „Bande“
+wie im Hallenfußball.
+Wir werden jedenfalls wieder antreten.
+Gerne stehe ich – für eine kleine Spende an
+unsere AG – auch für ein Coaching neuer
+Teams zur Verfügung (Kontakt: Roboter
+AG am Scheffelgymnasium in 77933 Lahr,
+kdu@gmx.de).
+
+
+

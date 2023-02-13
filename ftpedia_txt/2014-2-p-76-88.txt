@@ -1,0 +1,628 @@
+
+
+Analogcomputer
+
+Der Seilcomputer Kelvin
+Thomas Püttmann
+Mit wenigen Bauteilen und auf einer Grundplatte entsteht ein ﬁschertechnik-Seilcomputer,
+der lineare Gleichungssysteme löst und die Optik und Haptik klassischer analoger
+Messgeräte besitzt. Er eignet sich hervorragend als Lernspielzeug, weil er das zentrale
+mathematische Konzept der linearen Gleichungssysteme anschaulich und begreifbar macht.
+
+Vorgeschichte
+Lineare Gleichungssysteme sind von zentraler Bedeutung in der Mathematik wie in
+den Natur- und Ingenieurwissenschaften.
+Egal, ob es um die Konstruktion großer
+Brücken, um komplexe Schaltkreise oder
+um Computertomographie geht: Bei der
+mathematischen Modellierung von Objekten und Prozessen müssen häuﬁg lineare
+Gleichungssysteme gelöst werden. Solche
+Systeme von Hand zu lösen ist aufwendig
+und zeitraubend – vor allem, wenn sie
+viele Gleichungen und Unbekannte
+beinhalten.
+So ist es nicht verwunderlich, dass viele
+Wegbereiter
+des
+Computerzeitalters
+Maschinen zur Lösung linearer Gleichungssysteme entwickeln wollten [1].
+Schon im Jahr 1878 schlug William
+Thomson, der spätere Lord Kelvin, eine
+Apparatur aus Wippen und Seilzügen zur
+Lösung linearer Gleichungssysteme vor
+[2]. Erst in den 30er Jahren des 20. Jahrhunderts wurde Thomsons Konzept – mit
+Veränderungen – in größerem Maßstab
+(Systeme mit neun Gleichungen für neun
+Unbekannte) am renommierten Massachusetts Institute of Technology (MIT) in
+Vannevar Bushs Arbeitsgruppe von John
+Wilbur realisiert [3]. Unterstützt wurde der
+Bau von der Nähmaschinenﬁrma Singer.
+Der Simultaneous Calculator wog nahezu
+
+eine Tonne, enthielt fast 1.000 kugelgelagerte Seilrollen und fast 200 m Stahlband.
+Seine Fertigstellung wurde in der Presse
+mit Schlagzeilen wie ‚Robot Mathematician Solves Nine Simultaneous Equations‘ bekannt gegeben.
+Durch den Siegeszug programmgesteuerter
+elektronischer Rechner fanden der Simultaneous Calculator wie Kelvins Entwurf
+überhaupt allerdings keine weitere Verbreitung. Der Simultaneous Calculator
+verschwand sogar auf unbekannte Weise,
+eventuell war er zuletzt in den 80er Jahren
+im damaligen IBM Gebäude (590 Madison
+Avenue) in New York ausgestellt. Erhalten
+ist jedoch ein japanischer Nachbau aus
+dem Jahr 1944, der im National Museum
+of Nature and Science in Tokyo zu sehen
+ist.
+
+Lineare Gleichungssysteme
+Um den Aufbau und die Bedienung des
+Seilcomputers Kelvin zu erklären, ist es
+sinnvoll, zuerst ein einfaches Beispiel für
+ein lineares Gleichungssystem anzugeben:
+4 x + (−2) y = 0
+−4 x + 4 y = 2
+Die roten Zahlen nennt man Koeﬃzienten,
+die blauen Inhomogenitäten. Sie sind vorgegeben. Gesucht sind die schwarz gesetzten Unbekannten x und y – allerdings nicht
+unabhängig von einander, sondern auf
+
+einmal. Deshalb ist es wichtig, hier genauer zu formulieren: Eine Lösung des
+Systems ist ein Punkt (x, y), so dass beide
+Gleichungen erfüllt sind, wenn man die
+Koordinaten einsetzt. In unserem Beispiel
+ist der Punkt (x, y) = (½, 1) eine Lösung,
+denn
+4 ½ + (−2) = 0
+−4 ½ + 4 = 2
+Gesucht sind alle möglichen Lösungen,
+also die sogenannte Lösungsmenge. Wie
+man die Lösungsmenge rechnerisch bestimmt, lernt man in der Schule. Für das
+Verständnis wichtiger ist die zeichnerische
+Methode. Jede Gleichung stellt eine Bedingung dar, die einen eigentlich in der
+Ebene vollkommen freien Punkt auf eine
+Gerade einsperrt. Die Lösungsmenge des
+Systems ist die Schnittmenge der beiden
+Geraden. In unserem Beispiel schneiden
+sich die beiden Geraden genau in dem
+Punkt (x, y) = (½, 1), siehe Abb. 1. Es gibt
+also nur diese Lösung.
+
+der einzelnen Gleichungen
+
+Der Seilcomputer Kelvin
+Kelvin kann in verschiedenen Größen gebaut werden. Die einfachste Variante für
+Gleichungssysteme mit zwei Gleichungen
+und zwei Unbekannten passt auf eine
+Grundplatte. Sehr gut gefällt mir auch die
+Variante für vier Gleichungen und vier
+Unbekannte, die auf zwei Grundplatten
+passt. Kelvins Aufbau versteht man am
+
+Analogcomputer
+
+besten anhand des gerade angegebenen
+Beispiels und Abb. 2. Zu jeder Gleichung
+gehört ein Seil: Das hintere Seil zur ersten
+Gleichung, das vordere Seil zur zweiten
+Gleichung. Die Koeffizienten werden eingestellt, indem die Radhalter in den Nuten
+der Wippen entsprechend verschoben werden: Links hinten auf +4, rechts hinten auf
+−2, links vorne auf −4 und rechts vorne auf
++4.
+Lösungskomponenten
+
+Inhomogenitäten
+
+Koeffizienten
+
+4 x−2 y = 0, −4 x + 4 y = 2
+
+Die Inhomogenitäten werden über die
+Seilwinden eingestellt: Die linke Seilwinde
+gehört zum hinteren Seil, damit zur ersten
+Gleichung und bleibt auf 0 stehen, die
+rechte Seilwinde gehört zum vorderen Seil,
+damit zur zweiten Gleichung und wird auf
++2 gedreht. Die Unbekannte x entspricht
+der Neigung der linken Wippe, die Unbekannte y entspricht der Neigung der rechten Wippe. Abgelesen werden können die
+Lösungskomponenten auf den mit Skalen
+versehenen gelben Bauplatten 6×1.
+Bedienung
+Kelvin hat eine lange Entwicklungsgeschichte hinter sich und unterscheidet sich
+sowohl von Thomsons ursprünglichem
+Konzept als auch von Wilburs modiﬁzierter Umsetzung in mehreren Details und in
+einem entscheidenden Punkt: Er löst das
+eingestellte Gleichungssystem nicht permanent, sondern der Benutzer führt den
+Lösungsvorgang aktiv durch. Dazu drückt
+der Benutzer mit den Fingerkuppen so auf
+die Ablagefächer an den Wippen, dass bei77
+
+
+de Seile stramm sind. Das Verfahren erfordert etwas Fingerspitzengefühl, mit etwas
+Übung kann man damit aber sehr genaue
+Ergebnisse erzielen. Der Vorteil des aktiven Lösens ist zum einen, dass ein Verklemmen vermieden wird. Dies wird aus
+der Theorie weiter unten verständlich. Zum
+anderen bekommt das Lösen eines Gleichungssystems so ein spielerisches Element und Kelvin wird zu einem hochwertigen Lernspielzeug. Der verkoppelte Einbezug der Sinne Sehen, Fühlen und Hören
+(Sperrklinke an den Seilwinden) beim
+Lösen ermöglicht ein intensives, schnelles
+und nachhaltiges Lernerlebnis.
+
+sind, aber auch nicht so weit durchhängen, dass sie von den Rollen rutschen. Die Schlitten über den Koeffizientenseilrollen werden so mitbewegt,
+dass die Seile vertikal verlaufen.
+· Der Benutzer löst das System, indem er
+auf genau die gleiche Art und Weise auf
+die Ablageﬂächen drückt wie beim
+Nullabgleich (Abb. 4).
+
+Der genaue Lösungsvorgang ist wie folgt:
+· Die beiden Inhomogenitäten werden auf
+0 gedreht.
+· Die Koeﬃzienten werden eingestellt.
+Dabei werden die Schlitten auf den
+Achsen so mitbewegt, dass die Seilabschnitte zwischen den Koeﬃzientenseilrollen und den Schlitten vertikal verlaufen. Zum Teil erfolgt das automatisch.
+· Es wird ein Nullabgleich durchgeführt
+(Abb. 3). Dazu wird mit den Fingerkuppen so auf die Ablagefächer an den
+Wippen gedrückt, dass beide Zeiger genau 0 anzeigen. Der Benutzer merkt
+sich, wie fest er dazu auf welche Ablageﬂächen drücken musste.
+
+
+· Die Inhomogenitäten werden auf ihre
+eigentlichen Werte gedreht. Dabei sind
+die Wippen grob von Hand so nachzuführen, dass die Seile nicht ganz stramm
+
+eingestellten Inhomogenitäten
+
+Wenn man bei gleichen oder leicht veränderten Koeﬃzienten das Gleichungssystem
+noch einmal mit anderen Inhomogenitäten
+lösen möchte, können die ersten drei
+Schritte natürlich entfallen. Wird im zweiten Schritt zu Koeﬃzienten mit anderen
+Vorzeichen übergegangen, so ist es sinnvoll, die Inhomogenitäten zunächst nicht
+auf 0, sondern auf −0,1 zurück zu drehen.
+Dadurch hängt das Seil ein wenig durch,
+wenn der Radhalter die Nullposition passiert, und das Verstellen wird deutlich einfacher. Erst nach der Einstellung der
+Koeﬃzienten werden die Inhomogenitäten
+auf 0 gedreht.
+Das Verfahren über den Nullabgleich ist
+einfach und liefert mit etwas Übung sehr
+gute Ergebnisse. Das eigentliche Ziel im
+fünften Schritt ist es, so zu drücken, dass
+beide Seile gleichzeitig gespannt sind.
+Wenn man die Wippen und Zeiger durch
+Drücken bewegt, so ist im Normalfall ein
+Seil gespannt und eines hängt durch. Man
+kann versuchen, den genauen Punkt, an
+dem beide Seile gespannt sind, optisch und
+durch Anlegen eines Fingers an die Seile
+
+
+Analogcomputer
+
+zu bestimmen. Meistens ist diese Methode
+jedoch aufwendiger und nicht genauer als
+das vorgeschlagene Verfahren über den
+Nullabgleich. Bei schwierig zu lösenden
+Systemen können beide Methoden kombiniert werden.
+Die einzelnen Koeﬃzienten können in
+einem Bereich von −4 bis +4 eingestellt
+werden, die Inhomogenitäten je nach Koeffizientenwerten maximal in einem Bereich
+von −8 bis 8. Natürlich liegen die Koeffizienten und Inhomogenitäten praktisch
+auftretender linearer Gleichungssysteme in
+der Regel nicht in diesen Intervallen. Dann
+multipliziert man die einzelnen Gleichungen jeweils so mit einer Konstanten, dass
+der betragsmäßig größte Koeﬃzient ±4
+wird. Dabei ändert sich die Lösungsmenge
+nicht. Die Inhomogenitäten kann man nach
+einem ersten Lösungsversuch noch anpassen. Z. B. kann man alle Inhomogenitäten
+gleichzeitig mit dem Faktor 10 multiplizieren, wenn die Zeiger nur sehr wenig ausgeschlagen haben. Man erhält dann in einem
+neuen Versuch Lösungen für 10 x und
+10 y, d. h. man muss die jetzt angezeigten
+Lösungskomponenten durch 10 dividieren,
+um die tatsächlichen Lösungskomponenten
+zu erhalten.
+Durch Mehrfachanwendung kann man mit
+Kelvin theoretisch jedes eindeutig lösbare
+Gleichungssystem mit beliebiger Genauigkeit lösen. Wenn man das Ergebnis des
+ersten Lösungsversuchs in die linken Seiten der Gleichungen einsetzt und mit den
+vorgegebenen Inhomogenitäten vergleicht,
+erhält man den Fehler. Diesen Fehler kann
+man nun als neue Inhomogenitäten einstellen und erhält so im zweiten Schritt
+eine Korrektur für das erste Ergebnis. Für
+das korrigierte Ergebnis kann man dann
+wieder durch Einsetzen einen neuen Fehler
+berechnen, der wieder eine neue Korrektur
+liefert. Diese Selbstverbesserung kann man
+so oft wiederholen, bis die Genauigkeit den
+eigenen Anforderungen entspricht.
+
+
+
+Funktionsweise
+Um zu verstehen, wie Kelvin funktioniert,
+beginnen wir bei den Inhomogenitätsskalen. Diese zeigen die Länge des aufgekurbelten Seils an. Mit jedem Klick der
+Sperrklinke beim Drehen gegen den Uhrzeigersinn wird die Anzeige um 0,1 erhöht
+und eine konstante Länge Seil aufgekurbelt. Wir betrachten nun die lineare Gleichung
+
+halter auf der rechten Wippe auf −2 ausgelenkt werden, zeigt Kelvin Lösungen der
+Gleichung 4 x – 2 y = b an, denn die Summe der halben Höhen der Seilrollen über
+der horizontalen Ebene durch die Drehachsen der Wippen ist gleich der Länge des
+aufgekurbelten Seils, wenn das Seil
+stramm ist.
+
+4x=b
+Wir geben diese in Kelvin ein, indem wir
+den hinteren Radhalter auf der linken Wippe auf +4, alle anderen Radhalter auf 0
+verschieben. Die rechte Wippe kann nun
+frei bewegt werden (die Unbekannte y
+kann beliebige Werte annehmen) und ist
+im Folgenden nicht von Bedeutung. Wir
+betrachten daher nur Kelvins rechte Hälfte.
+Die Ergebnisskala ist nun so angelegt, dass
+die Lösung x = b/4 der Gleichung 4x = b
+angezeigt wird, wenn die Inhomogenität b
+eingestellt ist und mit dem Finger auf die
+rechte Ablageﬂäche der linken Wippe gedrückt wird, siehe Abb. 5.
+Was passiert nun, wenn man den Koeﬃzienten z. B. von +4 auf +2 ändert? Nehmen wir an, wir ändern die Inhomogenität
+gleichzeitig von b auf b/2, dann ändert sich
+die Position der Wippe nicht. Die Höhe der
+Seilrolle über der horizontalen Ebene
+durch die Drehachse der Wippe ist nämlich
+immer gleich der Hälfte der Länge des
+aufgekurbelten Seils, siehe Abb. 6. Bei der
+Gleichung 2x = b/2 ist nur halb so viel Seil
+aufgekurbelt, das wird aber dadurch kompensiert, dass die Koeffizientenseilrolle nur
+halb so weit von der Drehachse entfernt ist.
+Somit wird auch bei der Gleichung 2x =
+b/2 die korrekte Lösung x = b/4 angezeigt.
+Das gleiche Argument kann man für alle
+anderen Koeffizienten analog durchführen.
+Damit ist klar, dass Kelvin alle Gleichungen der Form ax = b korrekt löst.
+Wenn nun der hintere Radhalter auf der
+linken Wippe auf +4 und der hintere Rad80
+
+ändert sich die Position der Wippe nicht
+
+Stellt man auf dem vorderen Teil der Wippen eine zweite Gleichung ein, so wird das
+System aus beiden Gleichungen durch
+Kelvin gelöst, wenn beide Seile gleichzeitig stramm sind.
+Kelvin löst übrigens immer ein Ungleichungssystem, ob die Seile gespannt sind
+oder durchhängen. Im Anfangsbeispiel löst
+er das System
+4 x −2 y ≥ 0
+−4 x + 4 y ≥ 2
+
+
+Der Lösungssektor des Ungleichungssystems ist die Schnittmenge der beiden farbigen Halbebenen (Abb. 7). Von seiner Gestalt und Lage hängt ab, auf welche der
+Auﬂagefelder zur Lösung des Gleichungssystems gedrückt werden muss. In unserem
+Beispiel haben wir die Möglichkeit, die
+Variable x zu verkleinern, d. h. auf die
+rechte Auﬂageﬂäche der linken Wippe zu
+drücken, die Variable y wird sich dann
+automatisch verkleinern, sobald wir den
+linken Rand des Lösungssektors erreicht
+haben.
+Die zweite Möglichkeit ist, die Variable y
+zu verkleinern, d. h. wie in Abb. 3 gezeigt
+auf die rechte Auﬂagefelder der rechten
+Wippe zu drücken. Dann verkleinert sich
+die Variable x automatisch, sobald wir den
+unteren Rand des Lösungssektors erreicht
+haben. Schließlich kann man mit etwas
+Gefühl gleichzeitig auf die rechten Auﬂagenfelder beider Wippen drücken. Dadurch
+kann man vermeiden, auf den Rändern der
+Lösungssektoren entlang zu wandern, wo
+immer ein Seil stramm und damit die Reibung groß ist.
+In William Thomsons ursprünglichem
+Konzept wurden permanent stramme Seile
+durch das Auflegen konstanter Gewichte
+auf die Auﬂagefelder erzwungen, bei
+Wilburs Simultaneous Calculator durch
+eine nach unten hin verdoppelte Seilführung. Beide Methoden erhöhen den
+Anspruch an die Reibungsfreiheit der Seilrollen, an die Qualität der Lager und an die
+Starrheit des Rahmens unnötig und eignen
+sich für ein Baukastensystem wie ﬁschertechnik nicht. Ein früher Prototyp meines
+Seilcomputers arbeitete mit Gewichten und
+bestätigte diese Aussage. Bei Systemen mit
+kleinem Öﬀnungswinkel des Lösungssektors verklemmte der Mechanismus regelmäßig.
+
+Bauanleitung
+In der folgenden Anleitung machen wir
+von den üblichen Bezeichnungen der
+
+Analogcomputer
+
+ﬁschertechnik-Bauteile Gebrauch, wie sie
+z. B. in der Einzelteilübersicht der Firma
+Knobloch zu ﬁnden sind. Die für Kelvin
+benötigten Teile sind in der Datei Teile.txt
+aufgelistet.
+Skalen und Markierungen
+Zur Herstellung der Skalen druckt man die
+Datei Kelvin.pdf auf eine transparente
+Klebefolie (z. B. Sattleford). Alternativ
+kann man die Skalen natürlich auch preisgünstiger auf Papier oder auf Overheadfolie drucken und mit doppelseitigem Klebeband befestigen. Beim Druckprozess
+darauf achten, dass keine unbeabsichtigte
+Verkleinerung oder Vergrößerung stattﬁndet (Größe 100%).
+Die beiden Ergebnisskalen werden ausgeschnitten und jeweils zentriert auf eine
+gelbe Bauplatte 6×1 geklebt (Abb. 8).
+
+
+Die vier Koeﬃzientenskalen werden ausgeschnitten und jeweils auf drei in Längsrichtung zusammengefügte gelbe Bausteine 30 geklebt (Abb. 9).
+Die Zentrierung kann man daran erkennen,
+dass die ±1, 5-Teilstriche exakt über der
+kleinen Nut zwischen den Bausteinen 30
+liegen. Damit die Radhalter in der Längsnut noch frei verschoben werden können,
+sollte man die Koeffizientenskalen nicht zu
+dicht an diese Nut kleben.
+
+
+Die zwei Inhomogenitätsskalen werden mit
+einer runden Schere ausgeschnitten. Falls
+Klebefolie verwendet wird, werden sie
+zuvor auf gelben Karton geklebt (Abb. 10).
+
+
+
+
+
+Die vier Radhalter haben eine klar erkennbare Mittellinie. Diese wird mit einem feinen schwarzen Stift im unterem Sockelbereich möglichst gerade nachgezeichnet,
+siehe Abb. 11. Die Markierung wird zum
+Einstellen der Koeﬃzienten benötigt.
+
+Zeiger- und Lagerblock
+
+Zeigerblock und hinterer Lagerblock sollten sorgfältig zentriert werden. Die Zentrierung des Zeigerblocks erkennt man
+daran, dass die Verbindungsstellen der
+gelben Bausteine mit den Kanten der Bausteine 7,5 übereinstimmen (Abb. 14).
+
+Wippen
+Der Zusammenbau der Wippen ergibt sich
+aus Abb. 12 und 13.
+
+
+
+
+Beim hinteren Lagerblock kann man einen
+losen Baustein 7,5 zur Hilfe nehmen, um
+die Zentrierung zu überprüfen. Wichtig ist
+außerdem die korrekte Höhe der Bausteine
+15 mit Bohrung. Deren Bohrungen müssen
+in einer Ebene mit den Achsen der Radhalter liegen. Um das zu erreichen, wird
+der Koeﬃzientenblock auf eine ebenen
+Tischplatte gelegt und fest aufgedrückt, so
+dass die Unterkante der Zapfen der unteren
+Bausteine 15 plan mit den Bausteinen 30
+und der Tischplatte abschließen (Abb. 15).
+
+
+Analogcomputer
+
+
+Montieren der Wippen
+Die vier Wipphalter werden gemäß Abb.
+16 zusammengebaut. Die Lagerhülse wird
+in eine Richtung etwa 1 mm aus der Gelenkwürfelklaue herausgeschoben, um
+einen großﬂächigen Kontakt zwischen
+Wippe und Wipphaltern vollständig auszuschließen.
+
+
+Anschließend werden die Wipphalter an
+den Positionen E4, M4, E9 und M9 in die
+Grundplatte eingeschoben, allerdings nicht
+bis zum Anschlag, sondern nur so weit,
+dass sie fest sitzen (die Einschubtiefe wird
+im Verlauf der Konstruktion angepasst).
+Die beiden Wippen werden zwischen je
+zwei Wipphalter montiert, indem man die
+Achsen 50 lose durch die Lagerhülsen in
+Bohrungen der Bausteine 15 mit Bohrung
+einschiebt.
+
+
+Die Wippen (Abb. 17) müssen ohne nennenswerte Reibung und mit nur wenig
+Spiel möglichst gut pendeln können (Abb.
+18).
+
+
+Oberteil
+Zunächst werden die beiden Skalenträger
+zusammengebaut und die Ergebnisskala
+eingeschoben und zentriert (Abb. 19).
+
+
+Dabei kann ein Baustein 7,5 als Hilfsmittel
+benutzt werden. Als zweites werden die
+Achsenträger zusammengebaut (Abb. 20).
+
+
+
+
+Die genaue Position der Bausteine 15 mit
+Bohrung wird später eingestellt. Die Skalenträger werden nun zunächst 7,5 mm in
+die Achsenträger eingeschoben (Abb. 21).
+Die Einschubtiefe muss eventuell später
+noch einmal leicht korrigiert werden, um
+ein optimales, reibungsloses Vorbeistreichen der Zeiger an der Skala zu gewährleisten.
+
+
+Als nächstes werden die Schlitten gemäß
+Schlitten problemlos aneinander vorbei
+gleiten können, ist es erforderlich, die
+Rastachsen 20 nur bündig in die Rollenböcke einzuschieben. Wenn möglich, sollten die Rastachsen 20 durch die grauen
+Kunststoffachsen 15 ersetzt werden, die
+allerdings nur noch gebraucht erhältlich
+sind (Abb. 23).
+
+
+
+
+
+Die Achsen 125 werden durch die Bausteine 15 mit Bohrung in den Achsenträgern von außen in das Oberteil zunächst
+nur teilweise eingeschoben. Dann werden
+die Schlitten auf die Achsen gesteckt und
+die Achsen weiter eingeschoben, bis sich
+jeweils zwei in den beiden mittleren Bausteinen 15 mit Bohrung treﬀen. Anschließend werden die Achsen mit Klemmringen an der Innenseite der äußeren Bausteine 15 mit Bohrung ﬁxiert.
+Die Winkelträger 120 werden wie abgebildet in die Positionen A4, I4, Q4, A9, I9
+und Q9 der Grundplatte eingeschoben. Das
+Oberteil wird angebracht. Beim Bewegen
+der Wippen sollten die Zeiger direkt vor
+der Skala vorbeigleiten, ohne diese zu
+berühren. Gegebenenfalls müssen die Skalenträger etwas weiter nach hinten gescho-
+
+ben oder nach vorne gezogen werden. Die
+Bausteine 15 mit Bohrung unter den Achsenträgern werden nun so positioniert, dass
+sich die Achsen 125 senkrecht über den
+Koeﬃzientenseilrollen beﬁnden.
+Seile
+
+Analogcomputer
+
+Die Positionierung sollte möglichst exakt
+erfolgen. Beim Drehen der Trommel mit
+aktivierter Sperrklinke sollte die Kurbel in
+den Rastpositionen genau auf die Teilstriche der Skala zeigen. Die beiden Seilwinden werden wie in Abbildung 26
+gezeigt am Oberteil befestigt.
+
+Kelvin funktioniert mit originalen ﬁschertechnik-Seilen, allerdings wird die Bedienung deutlich vereinfacht, wenn handelsüblicher Leinen- oder Ramiezwirn verwendet wird, der einen wesentlich höheren
+Elastizitätsmodul besitzt. Die beiden Seile
+sollten 90 cm lang sein. Jedes Seil wird mit
+Schlingen an einer Seiltrommel befestigt.
+Das lose Ende wird von oben durch die
+mittlere Bohrung, anschließend von unten
+durch die seitliche Bohrung gesteckt und
+möglichst festgezogen (Abb. 24).
+
+
+Die Seiltrommeln werden in die Seilwindengestelle gesteckt. Die Kurbel der linken
+Seilwinde wird bei aktiver Sperrklinke so
+gedreht, dass sie in Richtung der Zapfen
+des Seilwindengestells, die Kurbel der
+rechten Seilwinde dagegen so, dass sie von
+den Zapfen weg zeigt. Die Inhomogenitätsskalen werden mit einem kleinen Stück
+doppelseitigem Klebeband so an den Seilwinden befestigt, dass die Kurbeln sich in
+Nullposition beﬁnden (Abb. 25).
+
+
+von links (oben) und rechts (unten)
+
+
+
+
+
+Seilführung
+
+Justierung
+
+Die vier Radhalter werden in den Nuten
+des Koeﬃzientenblocks alle auf Position 0
+geschoben. Das hintere Seil wird nun
+durch die Nut des Bausteins 7,5 am linken
+Achsenträger über die Rollen der hinteren
+Schlitten und die hinteren Rollen der
+Wippen zur rechten Seite geführt, siehe
+
+Für ein gutes Funktionieren des Computers
+sind korrekte Seilspannungen wesentlich.
+Die Spannung eines Seils kann eingestellt
+werden, indem die beiden Bausteine 5, an
+denen es befestigt ist, gemeinsam gegenüber den Bausteinen 15 mit Bohrung in
+Seilrichtung verschoben werden. Die Einstellung erfordert etwas Fingerspitzengefühl. Wesentlich ist es, spüren zu können, wann ein Seil stramm gezogen ist.
+Das ist der Fall, wenn sich trotz leichter
+Änderung der Zugkraft das Seil, die Wippen und damit die Zeiger nicht bewegen.
+
+Die beiden hinteren Schlitten werden senkrecht über die Radhalter geschoben. Anschließend wird bei stramm, aber nicht zu
+stramm gezogenem Seil die Kurbel der
+linken Winde exakt drei volle Umdrehungen gegen den Uhrzeigersinn gedreht. Die
+Windungen auf der Seiltrommel müssen
+direkt nebeneinander auf der Seiltrommel
+liegen. Dann wird der untere Baustein 5
+am rechten Achsenträger entfernt, das immer noch stramm gehaltene Seil zweimal
+um den Zapfen des festen oberen Bausteins
+5 gewickelt und der untere Baustein 5 seitlich wieder aufgeschoben (siehe Abb. 26).
+Analog wird das vordere Seil von rechts
+nach links geführt und am linken Achsenträger befestigt.
+
+Zur Justierung wird der hintere linke Koeffizient auf -4 gestellt und der entsprechende Schlitten senkrecht über der Seilrolle
+positioniert. Die linke Wippe wird links
+nach unten gedrückt, bis das Seil stramm
+ist. Bei richtig eingestellter Seilspannung
+zeigt der Zeiger den Wert 0, ansonsten
+muss korrigiert werden (siehe Abb. 27).
+Danach wird der hintere linke Koeﬃzient
+auf +4 gestellt.
+Die linke Wippe wird jetzt rechts mit dem
+gleichen Druck wie zuvor auf der anderen
+
+
+Analogcomputer
+
+Seite nach unten gedrückt. Der Zeiger sollte ohne weitere Einstellung wieder den
+Wert 0 anzeigen. Ist das nicht der Fall,
+liegt eine Asymmetrie vor. Zu überprüfen
+ist dann der gesamte Aufbau (z. B. können
+die als Zeiger verwendeten V-Achsen nicht
+ganz gerade sein). Eine Anpassung kann
+notfalls erfolgen, indem die Erebnisskalen
+in den Nuten etwas nach links oder rechts
+verschoben werden.
+
+Für alle diejenigen, die ein schnelles
+Erfolgserlebnis haben möchten, sind hier
+noch drei weitere Beispiele angegeben, bei
+denen Koeffizienten und Inhomogenitäten
+sofort zu Kelvin passen:
+
+Anschließend wird der linke hintere Koeffizient auf 0 zurückgestellt. Das Verfahren
+wird für den rechten hinteren Koeﬃzienten
+wiederholt. Hier sollte die Seilspannung
+eigentlich schon passen. Ist das nicht der
+Fall, muss zwischen links und rechts ein
+Kompromiss gefunden werden. Bei einer
+Diﬀerenz von mehr als einem kleinen Teilstrich (also 0,025) auf der Ergebnisskala
+sollte der gesamte Aufbau nach Fehlerursachen untersucht werden.
+
+−4 x + (−2) y = 1.2
+−1 x + (−4) y = 3.8
+
+−1 x + (−4) y = 0.4
+3 x + 4 y = 1.6
+4 x + (−3) y = 0
+−4 x + (−3) y = 6
+
+Ob man gute Lösungen gefunden hat, kann
+man leicht durch Einsetzen überprüfen.
+
+Quellen
+[1]
+
+Petzold, H., Wilhelm Cauer and his
+mathematical device, in: Exposing
+Electronics, Michigan State
+University Press 2003, S. 45–73.
+
+Abschließend wird für das vordere Seil
+analog vorgegangen. Kelvin ist nun fertig
+zum Einsatz.
+
+[2]
+
+Thomson, W., On a machine for the
+solution of simultaneous linear
+equations, Proc. R. Soc. 28 (1878–
+1879), 111–113.
+
+Aufgaben
+
+[3]
+
+Wilbur, J., The mechanical solution
+of simultaneous equations, J.
+Franklin Inst. 222 (1936), 715–724.
+
+Wer Kelvin nachgebaut hat, möchte vielleicht gleich noch weitere Gleichungssysteme lösen. Am besten ist es natürlich,
+frei zu experimentieren.
+
+
+Abb. 28: 4×4-Kelvin zur Lösung von Gleichungssystemen mit vier Unbekannten
+
+
+
+
+

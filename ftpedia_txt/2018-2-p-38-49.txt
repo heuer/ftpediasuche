@@ -1,0 +1,697 @@
+
+
+Modell
+
+Ein Plotter für Polarkoordinaten
+David Holtz
+fischertechnik und Plotter verbindet eine lange gemeinsame Geschichte: Im Jahr 1985 wurde
+von fischertechnik ein Plotter-Bausatz eingeführt, der zur damaligen Zeit vermutlich so fortschrittlich war, wie es der 3D-Drucker Baukasten heute ist. Seither stoßen die Kurvenschreiber
+auf große Begeisterung bei Fischertechnikern, weshalb man im Bilderpool der fischertechnikCommunity oder auf YouTube unterschiedlichste Weiter- und Eigenentwicklung finden kann.
+Die meisten dieser Maschinen verbindet jedoch eine Gemeinsamkeit: Sie verfügen über zwei
+senkrecht zueinanderstehende Linearachsen; diese Bauform ermöglicht eine Ansteuerung
+durch kartesische Koordinaten. Es ist an der Zeit, daran etwas zu verändern, denn auch das
+Polarkoordinatensystem eignet sich für zweidimensionale CNC-Anwendungen.
+
+Einführung
+Ich habe mir zum Ziel gesetzt, einen Plotter
+zu konstruieren, der bedingt durch seine
+Bauform mit Polarkoordinaten angesteuert
+werden kann. Verglichen mit herkömmlichen Plottern weist der PolarkoordinatenPlotter daher ein grundlegendes Unterscheidungsmerkmal auf: Anstelle einer
+zweiten Linearachse verfügt er über eine
+Rotationsachse, die die runde Zeichenfläche dreht (Abb. 2).
+Trotz dieser Veränderung werden an den
+Polarkoordinaten-Plotter dieselben Anforderungen wie an seine kartesischen Verwandten gestellt: Um eine hohe Wiederholgenauigkeit zu erzielen, bedarf es einer
+präzisen Konstruktion aller mechanischer
+Baugruppen. Damit der Plotter flexibel einsetzbar ist, sollte er außerdem eine verbreitete Maschinensprache (G-Code) beherrschen. Nicht zuletzt wäre es wünschenswert, wenn durch Optimierung der Motorsteuerung die Zeichengeschwindigkeit
+erhöht werden kann.
+Der folgende Beitrag gibt einen Überblick,
+welche technischen Anpassungen auf Hardware- und Softwareseite notwendig sind,
+
+
+bis eine Zeichnung mit Hilfe von Polarkoordinaten angefertigt werden kann.
+
+Mathematische Grundlagen:
+Das Polarkoordinatensystem
+Das Polarkoordinatensystem ist ein zweidimensionales Koordinatensystem. Zur
+Orientierung dient ein festgelegter Punkt,
+der als Pol bezeichnet wird. Von diesem
+Punkt geht strahlenförmig die sogenannte
+Polarachse aus, die als Orientierungsrichtung dient.
+Hierbei entspricht der Pol dem Ursprung
+eines kartesischen Koordinatensystems, die
+Polarachse repräsentiert den positiven
+Bereich der x-Achse [1].
+
+
+
+Modell
+
+
+Polarkoordinaten
+Jeder Punkt einer Ebene ist in der Polarkoordinatendarstellung durch den Winkel φ
+zu der Polarachse und durch den Abstand r
+(Radius) zum Pol definiert [1].
+Prinzipiell ist es unerheblich, ob der Winkel
+im Grad- oder Bogenmaß angegeben wird.
+Tatsächlich verarbeitet die Steuersoftware
+des Plotters Winkelangaben im Bogenmaß.
+Zum besseren Verständnis beschränke ich
+mich in diesem Artikel jedoch auf die im
+Alltag gebräuchlichen Winkelangaben in
+Grad.
+
+r = 5. Der Punkt Q liegt an derselben Stelle
+wie Q', wenn Q' mit
+∂
+∂
+∂
+∂
+
+=
+=
+=
+=
+
++ 1 ∙ 360°
++ 2 ∙ 360°
+− 1 ∙ 360°
++ ∙ 360°, ∈ ℤ
+
+und r beschrieben werden kann. Q ist somit
+nicht doppelpunktfrei.
+
+Mehrdeutigkeit
+Grenzt man die Angabe der Winkelweiten
+nicht auf Werte zwischen 0° und 360° ein,
+so kann derselbe Punkt mit unterschiedlichen Koordinaten beschrieben werden:
+Ein Punkt Q sei definiert mit φ0 = 315° und
+
+
+
+Diese Mehrdeutigkeit nutzt das Steuerprogramm des Plotters, denn sie ermöglicht
+es, kürzere Fahrwege zu wählen. Zur
+Veranschaulichung befinde sich der Stift
+am Punkt P(45°|5) und soll zum Punkt
+Q(315°|5) bewegt werden. Anstatt einer
+Drehung um 270° gegen den Uhrzeigersinn
+wählt das Steuerprogramm die kürzere
+Bewegung um 90° im Uhrzeigersinn zum
+Punkt Q'(-45°|5).
+Umrechnung kartesischer
+Koordinaten in Polarkoordinaten
+Um die Bewegungen des Plotters zu berechnen, müssen kartesische Koordinaten in
+Polarkoordinaten überführt werden. Ein
+allgemeiner Punkt P sei in kartesischen
+Koordinaten mit x- und y-Koordinate definiert. Gesucht sind die Polarkoordinaten φ
+und r, die P im Polarkoordinatensystem
+beschreiben.
+Jeder Punkt P, der nicht im Ursprung liegt,
+bildet mit dem Ursprung des kartesischen
+Koordinatensystems und dessen x-Achse
+ein rechtwinkliges Dreieck. Hierbei reicht
+die Hypotenuse dieses Dreiecks vom
+Ursprung zum Punkt P. Die Länge der
+Hypotenuse entspricht dem gesuchten
+Abstand r zum Pol. Man erhält r, indem
+man den Satz des Pythagoras umformt zu:
+=
+
+²+ ²
+
+man den Winkel φ, indem man Arkustangens aus dem Quotienten der y- und der
+x-Koordinate bildet (tan-1 steht für den
+arctan, nicht für einen Kehrwert):
+= tan
+
+Da P in beliebigen Quadranten des kartesischen Koordinatensystems liegen kann,
+muss φ über eine Fallunterscheidung
+berechnet werden:
+Fall
+
+Berechnung von φ
+
+>
+
+= tan
+
+<
+
+=
+=
+
+∩
+
+=
+
+∩
+
+>
+=
+
+<
+
+= tan ( ) + 180°
+= 90°
+
+= 270°
+
+φ mathematisch nicht
+definiert, P liegt im
+Ursprung bzw. Pol
+
+Das Steuerprogramm sowie der G-CodePostprozessor stützen sich auf diese mathematischen Vorüberlegungen.
+
+Hardware: Die Mechanik
+Im Wesentlichen besteht der Plotter aus drei
+Baugruppen:
+∂ Drehteller als Rotationsachse
+∂ Linearachse
+∂ Stifthebemechanismus
+Alle Baugruppen sind auf Präzision,
+Funktionalität und Robustheit ausgerichtet.
+Dank des minimalistischen, beinahe symmetrischen Designs des Plotters kann die
+Kinematik beim Zeichnen leicht erschlossen werden.
+Drehteller
+
+
+Solange P im ersten Quadranten des kartesischen Koordinatensystems liegt, erhält
+
+Die Baugruppe „Drehteller“ bildet das
+Charakteristikum des Plotters, da eine
+Rotationsachse bei gewöhnlichen Plottern
+üblicherweise nicht vorhanden ist. Zugleich
+macht der Drehteller eine Ansteuerung mit
+
+Polarkoordinaten erst möglich. Um bei der
+Wiederholgenauigkeit mit Linearachsen
+mithalten zu können, erfordert die Konstruktion der Rotationsachse das höchste
+Maß an Präzision.
+
+Modell
+
+Ausgangsstellung erfasst. Ein Endlagenschalter ist nicht notwendig, da die
+Maschine in jeder Stellung des Drehtellers
+mit dem Zeichenvorgang beginnen kann.
+
+Bis auf einige Bauteile zur Befestigung des
+Schrittmotors kommt die Baugruppe „Drehteller“ ohne fischertechnik-Steine aus. Als
+Lager der Rotationsachse dient ein Kugellager, dessen Innenring fest mit der Grundplatte verbunden ist. Da das Kugellager teilweise in die Grundplatte eingelassen ist,
+misst die Höhe des Drehtellers weniger als
+16 mm.
+
+
+Linearachse
+
+
+Das Herzstück des Drehtellers, ein im 3DDruckverfahren hergestelltes Zahnrad mit
+180 Zähnen, wird auf den Außenring des
+Kugellagers gesteckt. Die schwarze Abdeckung des Drehtellers bildet zugleich die
+Zeichenfläche, auf die ein rundes Blatt
+Papier mit bis zu 13 cm Durchmesser geklebt werden kann. Der Drehteller wird von
+einem Schrittmotor angetrieben. Auf der
+Welle des Schrittmotors ist eine Zahnriemenscheibe mit 20 Zähnen befestigt. Über
+einen Zahnriemen wird so die Kraft auf das
+Zahnrad des Drehtellers übertragen. Daraus
+ergibt sich eine Untersetzung von 1:9.
+Die Schrittweite des verwendeten Schrittmotors beträgt 1,8°. Aufgrund der 1:9Untersetzung lässt sich der Drehteller somit
+bis auf 0,2° genau positionieren. Durch
+Abzählen der Schritte werden die Bewegungen des Drehtellers relativ zur
+
+Die Linearachse bewegt einen Schlitten, an
+dem die Stifthalterung befestigt ist. Das
+fischertechnik-System wird hierbei um eine
+präzise Linearführung, bestehend aus zwei
+Messingstangen mit 8 mm Durchmesser
+erweitert. Auf den Messingrohren gleiten
+Linearlager, sodass die Geradführung
+nahezu spielfrei ist.
+Als Linearlager werden Rundbuchsen mit
+Kugelumlauf verwendet, die beispielsweise
+auch bei 3D-Druckern zum Einsatz
+kommen. Ein im 3D-Druckverfahren hergestellter Baustein verbindet die Linearlager mit dem fischertechnik-System.
+Als Antrieb der Linearachse dient ein
+Schrittmotor, an dessen Welle eine
+Gewindeschnecke befestigt ist. Pro Motorumdrehung wird der Schlitten um rund
+5,23 mm bewegt. Da die Schrittweite des
+Motors 1,8° beträgt, ließe sich der Schlitten
+theoretisch bis auf rund 0,026 mm genau
+positionieren. In der Praxis wird jedoch
+eher eine Auflösung von etwa 0,1 mm
+erreicht.
+
+
+
+Der maximale Vorschub des Schlittens
+ergibt sich aus der maximalen Drehzahl des
+Motors:
+U 5,23mm 52,3mm
+∙
+=
+min
+U
+s
+Über einen Endlagenschalter kann die
+Linearachse zudem kalibriert werden. Bei
+gedrücktem Endlagenschalter befindet sich
+der Schlitten am Referenzpunkt. Alle weiteren Punkte werden durch das Abzählen
+von Motorschritten relativ zum Referenzpunkt bestimmt.
+= 600
+
+
+
+Die Schrittmotorhalterung ist aus wärmebeständigem ABS gedruckt und erlaubt,
+dass ein Schrittmotor der Baugröße NEMA
+14 in das fischertechnik-System integriert
+werden kann.
+
+
+
+Modell
+
+der oberen Position, sodass sich die Stiftmine etwa 3 mm oberhalb der Zeichenfläche befindet. Über den Endlagenschalter
+wird erfasst, ob sich die Nockenscheibe in
+der Ausgangsstellung befindet [4].
+Eine Drehung der Nockenscheibe im Uhrzeigersinn um 90° bewirkt, dass die Stifthalterung nach unten gedrückt wird. Hierbei
+setzt der Stift mit konstantem, leichtem
+Druck auf der Zeichenfläche auf.
+Schrittmotorhalterung
+
+Stifthebemechanismus
+Dank des Stifthebemechanismus kann der
+Stift in Bruchteilen einer Sekunde angehoben und präzise abgesetzt werden. In die
+Stifthalterung wird hierfür ein klecksfreier
+Kugelschreiber geklemmt.
+
+Steuerungstechnik
+Das Herzstück der Steuerungstechnik ist ein
+Arduino Mega mit I/O-Shield. Der Mikrocontroller bildet die Schnittstelle zwischen
+der Software und der Hardware, indem er
+die G-Code-Maschinensprache in Steuerbefehle für Motoren übersetzt und diese
+ausführt. Außerdem ist er für die Regelkreise der einzelnen Achsen und das Auslesen der Endlageschalter verantwortlich.
+Schrittmotorsteuerung
+Ein zentrales Element der Steuerungstechnik des Plotters ist die Schrittmotorsteuerung. Schrittmotoren zählen zu den
+Synchronmotoren, da sich deren Rotor
+synchron zu einem schrittweise rotierenden
+Magnetfeld bewegt. Diese Eigenschaft
+ermöglicht, dass sich der Rotor ohne
+Verwendung eines zusätzlichen Sensors
+genau positionieren lässt. Verglichen mit
+Gleichstrommotoren erfordert sie jedoch
+eine kompliziertere Ansteuerung.
+
+
+Ein Elektromotor bildet den Antrieb des
+Stifthebemechanismus, indem er eine
+Nockenscheibe dreht. Befindet sich die
+Nockenscheibe in der Ausgangsstellung,
+hält die Rückstellfeder die Stifthalterung in
+
+
+
+
+
+Zur komfortablen Motorsteuerung werden
+die bipolaren Schrittmotoren über den
+Schrittmotorcontroller betrieben. Dessen
+Platine ist mit zwei Schrittmotortreibern
+vom Typ A4988 bestückt, die die Ansteuerung vereinfachen.
+Bei jeder steigenden Flanke am STEP-Pin
+des Treibers wird der Rotor um einen
+Schritt weiterbewegt. Über den Pegel am
+DIR-Pin (direction) wird die Drehrichtung
+des Motors eingestellt. Ein Schrittmotor
+kann somit in Rotation versetzt werden,
+indem man den Signalzustand am STEPPin zyklisch verändert. Die Anzahl steigender Flanken pro Sekunde entspricht hierbei
+der Anzahl Schritte pro Sekunde.
+Problematisch ist, wenn das Lastmoment
+das Motormoment übersteigt, sodass der
+Rotor dem sich drehenden Magnetfeld nicht
+mehr folgen kann. In der Folge werden einzelne Schritte übersprungen, dabei geht
+auch die Information über die Position des
+Rotors verloren. Ziel der Schrittmotorsteuerung ist es, Schrittverlust zu verhindern, um eine zuverlässige Positionierung
+der Achsen des Plotters zu gewährleisten.
+
+Aus Überlegungen zur gleichmäßig beschleunigten Bewegung ergibt sich folgender Zusammenhang:
+( )=
+=
+
+2∙
+
+∙
+
+Hierbei ist die Beschleunigung a gegeben
+und konstant, s beschreibt im Sachzusammenanhang die Anzahl zurückgelegter
+Schritte, t beschreibt die Zeit, die während
+der beschleunigten Bewegung verstreicht.
+Gesucht ist die Zeit, die zwischen zwei aufeinanderfolgenden Schritten verstreicht.
+Ausgedrückt als rekursive Folge mit diskreten Werten für n (Anzahl zurückgelegter
+Schritte) erhält man:
+∆ =
+
+−
+
+=
+
+2∙
+
+−
+
+Für den ersten Schritt gilt hierbei:
+=
+
+Lineare Beschleunigungsrampen
+Schrittverlust kann vermieden werden,
+indem die Motoren sanft beschleunigt und
+abgebremst werden. Der Ansatz besteht
+darin, dass der Mikrocontroller zur Laufzeit
+lineare Beschleunigungsrampen berechnet.
+
+∙
+
+2∙1
+
+Jede Berechnung erfordert eine Multiplikation, eine Division und anschließendes
+Wurzelziehen mit Gleitkommazahlen.
+Insbesondere dann, wenn mehrere Motoren
+gleichzeitig beschleunigt werden sollen
+oder wenn andere Aufgaben parallel ausgeführt werden, genügt die Rechenleistung
+des Arduino nicht für diese Berechnungen.
+Aus diesem Grund muss die Berechnung
+der Beschleunigungsrampen optimiert
+werden.
+Optimierung
+
+
+
+Basierend auf der Arbeit von David Austin
+[2] wird ein Algorithmus implementiert, der
+die Berechnung von Beschleunigungsrampen in Echtzeit auf rechenschwachen
+Prozessoren erlaubt.
+
+Die exakte Folge (siehe oben) wird mit
+einer Taylorreihenentwicklung approximiert. Bereits das Polynom zweiten Grades
+bildet die ursprüngliche Folge sehr gut ab
+(vgl. Diagramm). Nach einigen Umformungen erhält man als Ergebnis eine vereinfachte rekursive Folge, deren Werte nur
+minimal von der exakten Folge abweichen.
+Dank des Algorithmus entfällt nun die
+Berechnung der Quadratwurzel, sodass der
+Mikrocontroller entlastet wird. Des
+Weiteren können die berechneten Werte als
+Festkommazahlen verarbeitet werden.
+Das Diagramm in Abb. 14 zeigt die Zeit
+zwischen
+zwei
+aufeinanderfolgenden
+Schritten bei einer konstant beschleunigten
+Bewegung in Abhängigkeit des zurückgelegten Wegs. Die Annäherung ist dabei
+nicht mehr von der exakten Folge unterscheidbar.
+
+Software: Von der Pixelgrafik
+zum fertigen Plot
+Es sind einige Schritte notwendig, um aus
+einer Grafik Steuerbefehle für den Plotter
+zu berechnen. Liegt die Grafik als Pixelgrafik vor, sollte sie zunächst vektorisiert
+
+Modell
+
+werden. Beim Vektorisieren wird die Pixelgrafik mit sogenannten grafischen Primitiven (Linien, Polygone, Kreise oder andere
+Kurven) nachgezeichnet. Die Vektorgrafik,
+die ausschließlich aus Primitiven anstelle
+von Pixeln zusammengesetzt ist, dient als
+Ausgangspunkt zur Erzeugung des Maschinencodes.
+Erzeugung des Maschinencodes
+Eine CAM-Anwendung (computer-aided
+manufacturing) erzeugt aus der Vektorgrafik den sogenannten G-Code. Dabei
+handelt es sich um die am weitesten verbreitete Programmiersprache zur rechnergestützten numerischen Steuerung (computerized numerical control, kurz: CNC)
+unterschiedlichster Maschinen [3].
+Namensgebend ist die Eigenschaft, dass
+(fast) jede Zeile G-Code mit einem G
+beginnt, gefolgt von einer zweistelligen
+Zahl. Hierbei bestimmt die Zahl über die
+Bewegungsform der Maschine oder welche
+Einstellung vorgenommen werden soll.
+Dahinter können weitere Parameter, wie
+zum Beispiel Koordinaten oder Informationen zum Vorschub stehen:
+G01: X4.5000 Y5.3600
+
+
+
+
+Das Beispiel beschreibt eine geradlinige
+Bewegung von der aktuellen, in diesem
+Kontext unbekannten Position zum Punkt
+(4,5|5,36). Für den Polarkoordinaten-Plotter
+sind nur vier G-Code Befehle relevant –
+siehe Abb. 15.
+Plotter, die mit kartesischen Koordinaten
+gesteuert werden, können den erzeugten GCode unmittelbar ausführen und die Grafik
+damit zu Papier bringen. Im Fall des Polarkoordinaten-Plotters muss der G-Code
+jedoch zuerst durch einen Postprozessor
+nachbearbeitet werden, damit die Maschine
+damit umgehen kann.
+Nachbearbeitung des G-Codes
+Der Postprozessor ist in C# implementiert.
+Aus Effizienzgründen führt ein Computer
+anstelle des Mikrocontrollers die Nachbearbeitung durch. Dazu wird der ursprüngliche
+G-Code eingelesen und die überarbeitete
+Polarkoordinatenversion als Kopie gespeichert. Die Nachbearbeitung umfasst
+mehrere Schritte:
+∂ Umrechnung der kartesischen Koordinaten in Polarkoordinaten
+∂ Auflösung der interpolierten Bewegungen
+∂ Entfernen irrelevanter Informationen
+Interpolierte Bewegungen (Linear- und
+Kreisinterpolationen) werden aufgelöst,
+
+Bedeutung
+
+indem viele Einzelpunkte berechnet
+werden, die auf der Bahnkurve des Endeffektors (Stifts) liegen. Dank des Bresenham-Algorithmus (vgl. [4]) können linear
+interpolierte Bewegungen effizient gerastert werden. Zur Auflösung von Kreisinterpolationen wird die Kreisvariante des
+Bresenham-Algorithmus verwendet. Auch
+sie vermeidet unter Zuhilfenahme einer
+Fehlervariablen rechenaufwändige trigonometrische Berechnungen [5].
+Umgang mit interpolierten
+Bewegungen
+Bei genauerer Betrachtung widerspricht die
+Auflösung interpolierter Bewegungen
+jedoch dem Grundkonzept eines Plotters:
+Plotter geben Vektorgrafiken unmittelbar
+aus, ohne dass im Vorfeld eine Rastergrafik
+berechnet wird [6]. Die Auflösung ist
+dennoch erforderlich, da bei der Umrechnung kartesischer Koordinaten in Polarkoordinaten Informationen über die Bahnkurve des Endeffektors verloren gehen.
+Im Beispiel soll der Stift geradlinig von
+Punkt A(1|1) zu Punkt B(1|-1) bewegt
+werden (grüne Bahn). Alle Punkte, die
+zwischen A und B liegen, besitzen die
+gleiche x-Koordinate. Ein Plotter, der mit
+kartesischen Koordinaten gesteuert wird,
+muss daher lediglich seine y-Achse entsprechend bewegen. In Polarkoordinaten ist
+dies nicht ohne weiteres möglich: Zwar
+
+Parameter
+
+G00 Rapid positioning: schnelle Bewegung
+zum Zielpunkt ohne Beachtung der
+Bahnkurve des Endeffektors
+
+x-y Koordinaten des Zielpunkts,
+z-Koordinate
+
+G01 Linearinterpolation: geradlinige
+Bewegung zum Zielpunkt
+
+x-y Koordinaten des Zielpunkts
+
+G02 Kreisinterpolation im Uhrzeigersinn:
+Kreis(bogen)
+
+x-y Koordinaten des Zielpunkts,
+Koordinaten des Kreismittelpunkts
+
+G03 Kreisinterpolation gegen den
+Uhrzeigersinn: Kreis(bogen)
+
+x-y Koordinaten des Zielpunkts,
+Koordinaten des Kreismittelpunkts
+
+
+
+Modell
+
+unterscheiden sich die Punkte A(45°|√2)
+und B(-45°|√2) nur in ihrer Winkelkoordinate. Würde der Plotter jedoch ausschließlich seine Rotationsachse bewegen, entspräche die Bahnkurve einem Viertelkreisbogen (rote Bahn).
+
+
+
+Um eine geradlinige Bahnkurve zu erhalten,
+muss der Radius daher kontinuierlich
+verändert werden. Dies gelingt, indem der
+Postprozessor viele Punkte berechnet, die
+zwischen A und B liegen. In der Praxis ist
+das gewählte Raster allerdings derart klein,
+dass aus der Rasterung keine qualitativen
+Nachteile resultieren.
+Mit dem Abschluss der Nachbearbeitung
+könnte eine Zeile des G-Codes wie folgt
+aussehen:
+G00 P0.785 R42.4
+
+P und R werden als Trennzeichen der Polarkoordinaten interpretiert, diese Interpretation weicht von der Norm des G-Codes ab.
+Hinter den Trennzeichen P und R steht der
+Winkel beziehungsweise der Abstand eines
+Punktes zur Kreismitte.
+Windows Forms App (C#)
+Grafisch aufbereitet ist der Postprozessor in
+der Windows-Forms-App „Polarkoordinaten Plotter Controller“ enthalten. Die App
+bildet zugleich die Benutzerschnittstelle,
+denn sie ermöglicht eine unkomplizierte
+Konfiguration des USB Ports sowie das
+Starten und Beenden von Zeichnungen
+(Plots).
+
+Während der linke Teil des Fensters eine
+kurze Übersicht über den aktuell geladenen
+G-Code gibt, zeigt der rechte Teil den
+Status des Plotters an. Die App zeigt den
+Fortschritt beim Zeichnen an und berechnet
+einen Schätzwert für die verbleibende Restdauer des Plots. Ein separater Thread
+gewährleistet im Hintergrund die Datenübertragung zum Plotter.
+Datenübertragung
+Die Größe der überarbeiteten G-Code
+Dateien variiert je nach Komplexität der
+Zeichnung. Gemessen an der Speicherkapazität des Arduino Mega sind die teils
+mehrere hundert Kilobyte große Dateien
+„riesig“, weshalb sie portionsweise in den
+Speicher des Mikrocontrollers geladen
+werden müssen.
+Mithilfe der Windows-Forms-App „Polarkoordinaten Plotter Controller“ wird der GCode zeilenweise auf den Arduino übertragen. Während die Plotter-Firmware die
+aktuelle G-Code Zeile ausführt, wird parallel dazu die nächste Zeile in den Speicher
+geladen, sodass keine Wartezeiten aufgrund
+der Datenübertragung anfallen. Arduino
+und Computer kommunizieren hierbei über
+den seriellen Datenbus (USB), sodass der
+Plotter prinzipiell mit jedem (Windows)
+Computer betrieben werden kann.
+Plotter-Firmware
+Neben der Windows-App stellt die PlotterFirmware den zweiten entscheidenden Teil
+der Softwarelösung dar. Im Wesentlichen
+handelt es sich hierbei um einen G-Code47
+
+
+
+Interpreter, d. h. ein Programm, das
+Maschinensprache einliest, interpretiert und
+in Steuerbefehle umsetzt. Beispiel:
+G00 P0.785 R42.4
+
+Der G-Code-Interpreter entnimmt
+obigen Zeile folgende Informationen:
+
+der
+
+∂ G00: gefordert ist eine schnelle
+Bewegung (rapid positioning)…
+∂ zum Punkt (45°|42,4).
+
+Der G-Code Interpreter eröffnet weitere
+Möglichkeiten, sodass sich auch komplexere Bilder zeichnen lassen. Hierbei kann
+der Polarkoordinaten-Plotter genauso flexibel wie herkömmliche Plotter eingesetzt
+werden. Zur Demonstration hat der Plotter
+das Space Shuttle „Columbia“ gezeichnet.
+Dank optimierter Schrittmotorsteuerung
+beansprucht dies nur 3 Minuten und 57
+Sekunden.
+
+Abhängig von der aktuellen Position des
+Stifts berechnet die Firmware, um wie viele
+Schritte in welche Richtung die jeweiligen
+Achsen hierfür bewegt werden müssen und
+steuert die Motoren entsprechend an. Hierbei berechnet sie in Echtzeit die Beschleunigungsrampen für jede Bewegung.
+Ergebnisse
+In ersten Praxistests zeigte sich, dass die
+Hardware die zu Beginn genannten Anforderungen erfüllt. Besonders schön sind die
+Zeichnungen, die aus einfachen Spiralbögen bestehen. Sie profitieren von der
+Ansteuerung in Polarkoordinaten und
+lassen sich ganz ohne aufwändige G-Code
+Verarbeitung mit wenigen for-Schleifen
+erzeugen. Polarkoordinaten vereinfachen
+außerdem kreisförmige Anordnungen um
+den Pol, da Zeichenschritte nach einer
+kleinen Drehung der Zeichenfläche einfach
+wiederholt werden können.
+
+
+
+
+
+Ein klassischer Anwendungsfall von Plottern ist die Ausgabe technischer Zeichnungen. Über die Exportfunktion im CADProgramm können Zeichnungen bereitgestellt werden. Der PolarkoordinatenPlotter fertigt sowohl zweidimensionale
+
+technische Zeichnungen als auch isometrische Projektionen eines dreidimensionalen
+Körpers an.
+
+
+
+Modell
+
+Ausblick
+Im nächsten Schritt soll der Plotter noch um
+eine Smartphone-App ergänzt werden. Die
+App ermöglicht dem Nutzer, über den
+Touchscreen den Stift des Plotters zu bewegen und damit Zeichnung live anzufertigen.
+Doch auch damit sind die Möglichkeiten
+der Zeichenmaschine noch nicht erschöpft:
+Denkbar wäre, den Plotter in einen 3DDrucker umzufunktionieren. Dazu müsste
+der Stifthebemechanismus durch eine
+weitere Linearachse ersetzt werden, die
+orthogonal zur Zeichenfläche, respektive
+dem Druckbett, steht. Aus dieser Veränderung ergibt sich, dass ein solcher 3DDrucker mit dreidimensionalen Polarkoordinaten, den sogenannten zylindrischen
+Koordinaten angesteuert werden müsste.
+Selbstverständlich müsste die Maschine um
+einen Druckkopf mit Extruder ergänzt
+werden.
+Auch ohne diese Erweiterungen demonstriert das Projekt anschaulich, dass sich das
+Polarkoordinatensystem für zweidimensionale CNC-Anwendungen gut eignet. Allerdings sind einige Anpassungen insbesondere bei der G-Code-Verarbeitung notwendig, bis der Polarkoordinaten-Plotter eine
+flexibel einsetzbare Maschine ist. Hinsichtlich Wiederholgenauigkeit und Zeichengeschwindigkeit kann der Plotter durchaus
+mit seinen kartesischen Verwandten
+mithalten.
+
+Quellen
+
+Nicht zuletzt lassen sich auch Buchstaben,
+Ziffern und Sonderzeichen zeichnen. Im
+Schnitt benötigt der Plotter knapp sieben
+Sekunden für einen Buchstaben. Deutlich
+zeitaufwändiger ist die Option, Buchstaben
+ausmalen zu lassen. Hierfür zeichnet der
+Plotter viele eng aneinander liegende,
+parallele Striche, sodass der Eindruck
+entsteht, die Fläche sei ausgemalt worden.
+
+[1]
+
+Wikipedia: Polarkoordinaten.
+
+[2]
+
+David Austin: Generate steppermotor speed profiles in real time.
+
+[3]
+
+Wikipedia: G-Code.
+
+[4]
+
+Dirk Fox: HP-GL-Plotter (Teil 2).
+ft:pedia 1/2012, S. 4-12.
+
+[5]
+
+Wikipedia: Kreisvariante des
+Bresenham-Algorithmus.
+
+[6]
+
+Wikipedia: Plotter.
+
+
+

@@ -1,0 +1,232 @@
+
+
+Tipps & Tricks
+
+Impulsmessung mit dem TX(T)
+Dirk Fox, Johann Fox
+Wer präzise Steuerungen (Plotter, Roboterarme, Einparkassistenten etc.) mit fischertechnik
+realisieren will, benötigt möglichst exakte Motorbewegungen. Für diesem Zweck hat
+fischertechnik Encodermotoren eingeführt, die je Achsumdrehung 75 Impulse liefern und über
+die Zähleingänge des TX(T) Controllers ausgewertet werden können. Leider sind die Motoren
+etwas schwach auf der Brust – wer neben Präzision auch Power braucht, muss sich daher etwas
+einfallen lassen.
+
+Hintergrund
+Auch schon vor der Einführung der Encodermotoren konnten mit fischertechnik
+Drehimpulse gemessen werden. So finden
+sich schon in den Hobby-Bänden der 70er
+Jahre interessante Ideen für eine berührungslose Impulsmessung (Abb. 1 [1]):
+Eine Drehscheibe 60 unterbricht eine Lichtschranke am Außenrand bis zu sechs Mal je
+Umdrehung.
+
+schwarzen, im gleichmäßigen Abstand
+aufgetragenen Linien beschriftetes Walzenrad geführt. Damit ließen sich je Achsumdrehung 32 Impulse oder 64 (fallende oder
+ansteigende) Impulsflanken zählen.
+
+schranke (32357), 1985
+
+Eine mechanische Lösung nahm fischertechnik 1997 mit den Rast-Impulszahnrädern Z4 ins Programm auf. Damit lassen
+sich (Mini-)Taster je Achsumdrehung viermal auslösen – vier Impulse oder acht Flanken (Abb. 3). Von Andreas Tacke stammen
+einige spezielle Anwendungen des RastImpulszahnrads [2, 3] – die Auflösung ist
+jedoch für viele Präzisionssteuerungen
+nicht fein genug.
+als Segmentscheibe (hobby 4 Band 1) [1]
+
+Eine sehr elegante Lösung war die 5-VGabellichtschranke im fischertechnik-Gehäuse (Abb. 2), die allerdings nur in einem
+der ersten Computing-Kästen – dem Trainings-Roboter von 1985 – enthalten war.
+Durch sie wurde ein mit 32 senkrechten
+
+
+
+
+Tipps & Tricks
+
+Lösungsideen
+
+Optische Impulsmessung
+
+Die fischertechnik-Controller TX und TXT
+verfügen beide über vier schnelle Zählereingänge, die mehrere 100 Hz verarbeiten –
+genug, um auch deutlich schnellere Impulsfrequenzen als die der Encodermotoren verarbeiten zu können.
+
+Ganz ohne Fremdteile kommt man bei der
+optischen Messung nicht aus, sofern man
+nicht eine der seltenen fischertechnikGabellichtschranken sein eigen nennt.
+
+Für die Messung schneller Impulse benötigen wir auch schnelle Sensoren. Mechanische (wie z. B. Taster) scheiden dafür aus,
+da sie einerseits keine sehr hohen Schaltgeschwindigkeiten erreichen und andererseits selbst einen erheblichen Widerstand
+darstellen.
+Eine Alternative bilden die optischen (Fototransistoren) und magnetischen Sensoren
+(Reed-Kontakte).
+Impulsmessung mit Reed-Kontakten
+Mit Reed-Kontakten lassen sich Umdrehungszahlen schnell drehender Achsen sehr
+zuverlässig berührungslos bestimmen. Eine
+solche Lösung habe ich 2013 zur Drehzahlmessung meiner Elektromotoren eingesetzt
+[4]: Am Ende der (Rast-) Achse steckte ich
+einen Baustein 15 mit Magnet (108278) auf
+einen Rastadapter und richtete einen ReedKontakt (36120) darauf (Abb. 4). Die Konstruktion lieferte bei 600 U/min stabil jede
+Umdrehung einen Impuls.
+
+
+Für eine präzise Messung ist ein Impuls je
+Umdrehung jedoch nicht genug; auch ist der
+Baustein 15 zusätzliche Masse, die vom
+Motor bewegt werden muss. Bleiben also
+die optischen Lösungen.
+
+Naheliegend ist zunächst die Verwendung
+einer Standard-Gabellichtschranke wie z. B.
+der CNY 37, die für kleines Geld zu haben
+ist. Herausfordernder ist jedoch der Unterbrecher: Bemalte oder bedruckte Folien
+sind zu lichtdurchlässig, zugeschnittene
+Pappscheiben zu ungenau. Nicht verwunderlich, dass Andreas Tacke auch für dieses
+Problem im Bilderpool der fischertechnikCommunity eine Lösung vorgestellt hat
+(Abb. 5): Fünf Segmentscheiben mit 4, 8,
+19, 31 und 47 gleichmäßigen Schlitzen (die
+„krummen“ Werte ergeben sich aus
+Andreas‘ spezieller Aufgabenstellung).
+
+
+Warum aber eine schlecht verbaubare
+Gabellichtschranke einsetzen, wenn man
+fischertechnik-Fototransistoren
+besitzt?
+Auch damit lassen sich Lichtschranken zur
+Impulsbestimmung konstruieren. Allerdings ist die Eignung der fischertechnikLinsenlampen für diesen Zweck begrenzt:
+Damit weder Streulicht der Lampe noch externes Störlicht das Verhalten des Fototransistors beeinträchtigt und dennoch viele
+schnelle Unterbrechungen gezählt werden
+können, ist viel Justage erforderlich (Abdeckkappen, Abstände, Abschirmung).
+Eine Alternative ist die Verwendung einer
+Laserdiode, wie von Andreas und Joachim
+Gail vorgeschlagen [5]. Ein Laser wirft
+einen so stark gebündelten Lichtstrahl, dass
+man sogar auf die Segmentscheibe ver-
+
+
+
+zichten kann: Die Zähne eines fischertechnik-Zahnrads genügen. Klasse-1-Laser mit
+einer Leistung von weniger als 0,4 mW sind
+nahezu ungefährlich – und für wenig Geld
+in Gehäusegrößen erhältlich, die sich hervorragend in fischertechnik-Bauteile einfügen lassen. Ich verwende einen roten
+Klasse-1-Punktlaser (3-12 V, 5-25 mA, ca.
+10 €) von Picotronic in einem Messinggehäuse von 9 mm Durchmesser und etwa 2,1
+cm Länge (Abb. 6).
+
+Wie präzise das Modul funktioniert, lässt
+sich leicht mit dem folgenden Versuchsaufbau nachweisen (Abb. 9): Unsere „Segmentscheibe“, das Rast-Z20, stecken wir
+auf die Abtriebsachse eines Encodermotors.
+
+
+Der Laser lässt sich exakt in die Öffnung
+einer Schneckenmutter m=1 hineinschieben. Mit der Laser-Schneckenmutter, einem
+Fototransistor und einem Rast-Z20 lässt
+sich ein ziemlich kompaktes, berührungsloses Impulsmessmodul konstruieren:
+
+
+Dann schließen wir den Encoder an C1, den
+Encodermotor an M1 und unser Impulsmessmodul an C2 an.
+
+
+
+(alter Encoder-Motor: 30.000 Impulse)
+
+Wenn wir den Encodermotor nun einen vorgegebenen Abstand, möglichst eine feste
+Anzahl an Umdrehungen, „fahren“ lassen,
+lässt sich leicht prüfen, ob das Laser-Modul
+die richtige Anzahl an Impulsen erfasst hat.
+Dabei liefern die „alten“ Encodermotoren
+(die mit dem TX vertrieben wurden) 75, die
+„neuen“ (erkennbar an einer „Wulst“ auf
+der Rückseite) 63⅓ Impulse je Umdrehung.
+Mit einem kleinen ROBO Pro-Testprogramm stoppen wir den alten Encodermotor
+nach 30.000 Impulsen (≡ 400 Umdrehungen, Abb. 10); für den neuen wählen wir
+19.000 Impulse (≡ 300 Umdrehungen).
+Unser Laser-Modul am Zählereingang C2
+sollte dann 400 x 20 = 8.000 bzw. 300 x 20
+= 6.000 Impulse gezählt haben. Der Interface-Test (Abb. 11) zeigt das Ergebnis.
+
+Tipps & Tricks
+
+Mit unserem Impulsmessmodul wird so aus
+jedem fischertechnik-Motor ein Encodermotor mit 20 Impulsen je Achsumdrehung.
+Zur Ansteuerung in ROBO Pro können wir
+die entsprechenden Motorsteuerungsbefehle verwenden.
+Zwar erreicht die Auflösung des Moduls
+nur knapp ein Drittel der fischertechnikEncoder. Für die meisten Anwendungen
+genügt das jedoch – wie zum Beispiel für
+die Realisierung eines präzisen Einparkassistenten (Abb. 12).
+
+zur Motorsteuerung
+
+Um die Auflösung zu erhöhen kann man vor
+dem Modellantrieb oder dem Messmodul
+noch eine Unter- oder Übersetzung einfügen. Alternativ könnte man auch ein größeres Zahnrad wie z. B. ein Z40 als Segmentscheibe verwenden [5]: Es liefert 40
+Impulse je Umdrehung. Damit wird das
+Laser-Modul jedoch deutlich voluminöser.
+Es geht jedoch noch einfacher: Wir können
+am Zählereingang des TX(T) sowohl steigende als auch fallende Impulsflanken auswerten. Damit lässt sich die Auflösung des
+Moduls verlustfrei auf 40 Impulse je Umdrehung verdoppeln; die Auflösung erreicht
+damit gut die Hälfte der Encodermotoren.
+
+oben) bzw. 6.000 Impulse (neuer EncoderMotor, unten) an C2
+
+Beim Zusammenbau des Laser-Impulsmessmoduls ist darauf zu achten, dass der
+Laserstrahl die Evolventen des Zahnrads
+möglichst genau in der Mitte trifft, damit
+die Intervalle gleich lang sind.
+
+
+
+
+Das für den Encodermotor vorgesehene
+ROBO Pro-Kommando ‚Position erreicht‘
+zählt allerdings leider nur Impulse, daher
+können wir den Motorsteuerungsbefehl
+‚Abstand‘ nicht nutzen. Die Alternative ist
+die Verwendung des Flanken-Zähl-Befehls
+(Abb. 13), dem wir eine feste Impulszahl
+vorgeben können. Dabei stoppt der Motor
+allerdings nicht ganz so präzise wie bei den
+Encodermotor-Befehlen: Je nach Übersetzung und Geschwindigkeit des Motors kann
+es passieren, dass er ein oder zwei Impulse
+nachläuft.
+
+Impulszähler an C1 wertet steigende und
+fallende Flanken des Lasermoduls aus
+
+
+Wenn wir mehr als wenige 100 Impulsflanken pro Sekunde messen möchten,
+kommt der TXT Controller nicht mehr mit.
+Dafür müssten wir das Lasermodul z. B. mit
+einem Arduino auswerten – der mit über
+10 kHz deutlich höhere Impulsfrequenzen
+bewältigen kann. Das aber wäre Stoff für
+einen eigenen Beitrag …
+
+Referenzen
+[1]
+
+Artur Fischer: fischertechnik hobby.
+Experimente + Modelle. Hobby 4
+Band 1, Fischer-Werke, 1978.
+
+[2]
+
+Andras Tacke: ft-Spezialteile made
+by TST (Teil 5): Hubgetriebe mit
+Impulsrad. ft:pedia 3/2013, S. 36-37.
+
+[3]
+
+Andreas Tacke: ft-Spezialteile made
+by TST (Teil 10): Impulsrad. 4/2014, S. 10-11.
+
+[4]
+
+Dirk Fox: Der Elektromotor. 3/2013, S. 3-8.
+
+[5]
+
+Andreas und Joachim Gail: LaserAnwendungen (1): Bewegungsmessung. ft:pedia 1/2015, S. 64-67.
+
+

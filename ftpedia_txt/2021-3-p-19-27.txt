@@ -1,0 +1,359 @@
+
+Grundlagen
+
+Grundlagen
+
+Der Stirling-Motor
+Rüdiger Riedel
+Er ist viel älter als Diesel- und Otto-Motor, wurde im Jahr 1816 von Robert Stirling (17901878) erfunden [3] und war gedacht als Verbesserung gegenüber der Dampfmaschine [1, 2] –
+einer der vielen Typen von Heißgasmotoren.
+
+Etwas Geschichte
+Nachgeschlagen in Meyers Konversationslexikon von 1885-92 [8] findet man unter
+„Stirling“ die engl. Grafschaft Sterling.
+Robert Stirling taucht als Schlagwort nicht
+auf.
+
+Stirlingmaschine
+
+Unter „Heißluftmaschine“ heißt es: Die
+erste Idee einer Heißluftmaschine gab der
+Franzose Carnot; nach ihm kam der
+Engländer Stirling, welcher 1827 eine
+solche Maschine ausgeführt haben soll;
+doch wissen wir Zuverlässiges erst von der
+ersten Maschine Johan Ericssons, die zu
+einer Kraft von 5 Pferden in London gebaut
+und 1853 im „Mechanics Magazine“
+beschrieben ward. Ericssons Maschine …
+hat nur einen vorübergehenden Erfolg
+gehabt. Dagegen fand … die Lehmannsche
+Heißluftmaschine ziemliche Verbreitung.
+
+So ändert sich Geschichte, niemand redet
+heute noch von der „Lehmannschen Heißluftmaschine“! Wir würden sie heute als
+Stirlingmaschine bezeichnen.
+In der Encyclopaedia Britannica von 1910,
+11. Ausgabe, findet man die Heißluftmaschine unter „Air Engine“ (der Link ist
+leider verloren gegangen, aber ich habe eine
+Kopie des Stichwortes). Allerdings war die
+Beurteilung hier vernichtend: Zu schwach
+und zu schwer! Keine Konkurrenzfähigkeit
+gegenüber den Otto- und Dieselmotoren.
+Für die Wirkungsgrade der damaligen
+Maschinen gibt es Anhaltspunkte. So heißt
+es im Meyerschen Lexikon: Der Kohlenverbrauch liegt nach Brauers Versuchen
+zwischen 4 und 5 kg Steinkohlen mittlerer
+Güte pro Stunde und nutzbare Pferdekraft.
+
+Etwas Physik
+Mit einem Brennwert der Steinkohle von
+etwa 30 MJ/kg (= 8,33 kWh/kg) und dem
+Äquivalent 1 PS = 0,735 kW ergibt sich ein
+Wirkungsgrad von etwa
+2% !
+Für einen Motor mit 100 PS = 73,5 kW
+würde das einen Verbrauch von ca. 450 kg
+Steinkohle pro Stunde bedeuten. Allerdings
+hatten die damals verbreiteten Motoren nur
+Leistungen von bis zu 5 PS.
+Zehntausende dieser Maschinen sind in der
+zweiten Hälfte des 19. Jahrhunderts gebaut
+worden.
+
+
+
+Für alle Heißluftmaschinen gilt: Erwärmte
+Luft (allg. Gas) dehnt sich aus, bei Abkühlung zieht sie sich wieder zusammen.
+Die Zustandsgleichung idealer Gase lautet:
+𝑝1 ∙ 𝑉1 𝑝2 ∙ 𝑉2
+=
+𝑇1
+𝑇2
+wobei p = Druck, V = Volumen, T = absolute Temperatur in Kelvin (K) = 273 +
+Temperatur in °C.
+Für Luft gilt annähernd: Sei T1 = 20°C, T2
+= 80°C, dann ist p2 · V2 = 1,2 · (p1 · V1).
+
+Membran verschlossen. Bewegt man jetzt
+den Verdränger auf und ab, passiert gar
+nichts, da die Luft genügend Platz hat, um
+am Kolben vorbeizustreichen. Stellt man
+die Dose mit dem unteren Drittel in heißes
+Wasser und wiederholt das Ganze, dann
+hebt sich die Membran, wenn der
+Verdränger oben und der größte Teil der
+Luft unten im Bereich des heißen Wassers
+ist. Sie senkt sich wieder, wenn der
+Verdränger unten und die meiste Luft oben
+im gekühlten Bereich der Dose ist.
+
+Das heißt, bei einer Temperaturerhöhung
+von 20°C auf 80°C dehnt sich die Luft bei
+konstantem Druck um 20 % aus, oder der
+Druck erhöht sich um 20 % bei konstantem
+Volumen, oder es erfolgt eine Kombination
+von Druck- und Volumenvergrößerung.
+
+Durchmesser als die Dose
+
+
+Zur Veranschaulichung habe ich eine
+Getränkedose oben aufgeschnitten. Ein
+Styroporblock mit einem um einige Millimeter kleineren Durchmesser habe ich mit
+einem Magneten versehen, so dass ich mit
+dem zweiten Magneten den Block
+(Verdränger) von außen auf und ab bewegen kann. Ein Styroporkragen um die Dose
+dient zum Festhalten (Abb. 4), denn das
+Blech ist sehr dünn. Die Dose wird mit einer
+
+
+Nun muss die Membran durch einen geeigneten Arbeitskolben ersetzt und zusammen
+mit dem Verdränger an einem gemeinsamen Schwungrad über passende Kurbeln
+befestigt werden.
+In Abb. 1 befindet sich der Verdrängerkolben im Zylinder vorne links. Der Zylinder wird von der Spiritusflamme erhitzt und
+im hinteren Teil an den Kühlrippen luftgekühlt. Von dort führt ein Luftkanal nach
+vorne rechts zum Arbeitszylinder.
+
+Grundlagen
+
+Eine generelle Übersicht über Kraftmaschinen gibt Abb. 6.
+
+Weiterentwicklung
+Entsprechend dem vernichtenden Urteil in
+der Encyclopaedia Britannica von 1910 war
+Anfang des 20. Jahrhunderts das Ende der
+Heißluftmaschinen gekommen – auch das
+der Dampfmaschinen, aber nicht der
+Dampfturbinen.
+Der Regenerator
+Wie effizient ist im Stirlingmotor die
+Umsetzung von Wärmeenergie in mechanische Energie? Oder: Wie kann man Wärmeverluste herabsetzen?
+
+
+Das eine wäre, die heißen Teile der
+Maschine gegen die Wärmeabstrahlung zu
+isolieren. Das ist sehr wichtig, doch in der
+Maschine selbst, in ihrem Arbeitsprozess,
+steckt auch noch eine Möglichkeit, die
+zugeführte Wärme besser zu nutzen:
+
+
+Immer, wenn die Luft durch die Bewegung
+des Verdrängers vom kalten in den heißen
+Bereich gedrückt wird, muss die Luft
+zunächst einmal wieder aufgeheizt werden,
+bevor sie durch weitere Wärmezufuhr
+Arbeit verrichten kann. Und umgekehrt,
+wenn die Luft vom heißen in den kalten
+Bereich verschoben wird, sollte sie erst
+schon einmal vorgekühlt werden, bevor bei
+weiterer Kühlung die Kompression erfolgen
+kann. Wenn man nun diese Energie, die die
+Luft auf dem einen Weg abgeben und die
+ihr auf dem Rückweg wieder hinzugefügt
+werden muss, zwischenspeichern und im
+richtigen Moment wieder entnehmen würde, dann wäre der Wirkungsgrad des
+Motors besser.
+
+Das Modell einer Heißluftmaschine in
+Typen, ebenso wie das hier besprochene
+Funktionsprinzip. Daneben gibt es Varianten mit zwei Kolben, Maschinen mit Luftaustausch nach außen und Vakuummaschinen, unter Modellbauern auch als Flammenfresser bekannt.
+
+Diese Zwischenspeicherung der Wärmeenergie ist die Aufgabe des Regenerators,
+der Kern der Erfindung von Stirling. Der
+Regenerator kann z. B. aus feiner Kupferwolle bestehen, die die Wärme schnell
+aufnimmt und wieder abgibt.
+Um 1940 herum versuchte sich die Firma
+Philips an einer massiven Verbesserung des
+
+
+
+Wirkungsgrades und einer kompakteren
+Ausführung der Kurbelmechanik [7].
+Das Gas zirkulierte durch großzügig bemessene Regeneratoren. Der Gasdruck wurde
+für ein besseres Leistungsgewicht stark
+erhöht, z. B. auf 40 bar (4000 Kilopascal),
+und zur Verringerung der Reibungsverluste
+wurde Helium als Arbeitsgas eingesetzt.
+
+Diese interessante Konstruktion, vor allem
+durch das ungewöhnliche Rhombengetriebe, wollen wir in einem Modell nachempfinden.
+
+Das Modell
+Zunächst ein paar Ansichten des „hochgewachsenen“ Modells.
+Die LED an der Spitze, eine sogenannte
+Rainbow-LED, soll mit ihrem Flackern und
+Farbwechsel die Wärmequelle andeuten.
+
+
+Durch die Verwendung eines Rhombengetriebes wurden Arbeits- und Verdrängerkolben fluchtend aufgebaut, der Motor
+wurde kompakter.
+
+
+
+Die vier Flügel „Seitenteile / Wing 45“
+(163436 und 163437) stehen für die
+Wärmesenke in Form von Kühlrippen.
+
+
+Grundlagen
+
+Pos. 3: Der Verdränger ist oben, die Luft
+wird im Bereich der Kühlrippen abgekühlt
+und zieht sich zusammen, der Arbeitskolben wird nach oben gezogen.
+Pos. 4: Der Verdränger ist immer noch
+oben, maximaler Luftanteil im Kaltbereich,
+der Arbeitskolben wurde ganz nach oben
+gezogen.
+Auf einer Grundplatte 120 × 60 (35129
+oder 183016) erfolgt der Aufbau nach
+
+
+Die Arbeitsweise des Motors wird in
+Pos. 1: Der Verdränger hat einen Großteil
+der Luft nach oben geschoben, sie erwärmt
+sich, dehnt sich aus und treibt den Arbeitskolben nach unten.
+Pos. 2: Der Verdränger ist ganz unten,
+maximaler Luftanteil im Heißbereich, der
+Arbeitskolben ist ganz nach unten gedrückt.
+
+
+
+
+
+Den weiteren Aufbau
+entnimmt man Abb. 13.
+
+des
+
+Gerüstes
+
+Zwei Rastachsen 60 (35065) werden durch
+die Bausteine 15 Bohrung (32064) gesteckt.
+
++ Zahnrad Z28
+
+
+
+
+Grundlagen
+
+
+Für die Antriebsstange verwenden wir eine
+Achse 200 (35697). Am unteren Ende wird
+ein BS15 Loch mit zwei Klemmbuchsen 5
+(37679) fixiert, der zweite BS 15 mit Loch
+rutscht frei auf der Achse. Je ein S-Statikadapter (35975) in den BS 15 mit Loch hält
+jeweils zwei S-Streben 42,4 (36315).
+Über den oberen BS 15 mit Loch werden
+zwei Abstandsringe 3 (31597) und eine
+
+Lagerhülse 15 (36819) auf die Achse
+geschoben, die den Kolben, eine Seilrolle
+21 × 7 (129700 oder 35795 oder 35797) vor
+sich her schieben.
+Rechts in Abb. 14 sind Teile des Verdrängerzylinders zu sehen und zwei V-Schaufelhalter 30 (38411), die den Zylinder des
+Arbeitskolbens andeuten.
+
+
+
+In Abb. 15 ist links das fertige Bauteil und
+rechts der Zusammenbau des Verdrängerzylinders zu sehen. Die Wände bestehen aus
+5 Bauplatten 15 × 75 2Z (38244). Der Bau
+ist etwas knifflig; nicht vergessen, den
+Verdrängerkolben vor Einfügen der letzten
+Bauplatte einzusetzen.
+
+Das Motorgetriebe wird mit einer Rastkupplung 15 (35073) mit der linken Rastachse verbunden.
+
+Der Verdrängerkolben bewegt sich frei im
+Zylinder und führt gleichzeitig die Antriebsstange. Diese wird von unten durch
+den BS 15 mit Loch gesteckt und hebt den
+Kolben ohne weitere Befestigung an seinem
+Dach.
+
+
+Auf die Rastachsen 60 kommen zwei Zahnräder Z30 (36264) und zwei Rast-Gelenkkurbeln (35088). Die Zahnräder müssen so
+gedreht werden, dass die Kurbelstellungen
+nach unten zeigen. Auf das zweite Ende der
+rechten Rastachse kommt eine um 180°
+gedrehte Rastkurbel zur Aufnahme eines
+Ausgleichsgewichtes.
+Auf die vorderen Rastkurbeln schieben wir
+noch je eine Hülse mit Scheibe (35981).
+Zum Schluss wird die Antriebsstange
+eingefädelt und die S-Streben 42,4 mit
+Klemmbuchsen 5 auf den Kurbeln beweglich fixiert.
+
+
+
+Beim Betrieb merken wir deutlich, wie
+schwer der Motor beim Anheben der Antriebsstange arbeiten muss und wie flott die
+Abwärtsbewegung erfolgt. Zum Massenausgleich brauchen wir an der hinteren
+Kurbel ein Gewicht von etwa 50 g. In
+
+
+Grundlagen
+
+Metallbaukasten zu erkennen; damit erreichen wir einen sehr ruhigen Lauf des
+Motors. Eine reine fischertechnik-Lösung
+seht ihr in Abb. 18 aus drei Speichenfelgen
+(31986), vier Achsen 80 und einer Achse 50
+in der Mitte.
+
+H.A.R.R.Y. gab mir den Tipp, dass der
+Motor wohl durch Spannungsspitzen von
+seinem Kommutator die Logik in der LED
+stört.
+
+In eine der Zuleitungen zur Rainbow-LED
+habe ich einen Elektromagneten geschleift
+(31324, 32363 oder Topfmagnet). Ohne
+diesen E-Magnet, der hier als Drossel
+arbeitet, funktioniert die LED bei parallel
+geschaltetem XS-Motor nicht richtig. Oberhalb von etwa 5 V leuchtet sie praktisch nur
+noch konstant blau.
+
+[1]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt Verlag, 2015.
+
+[2]
+
+Dirk Fox: Die Dampfmaschine.
+ft:pedia 4/2012, S. 38–45.
+
+[3]
+
+Martin Werdich, Kuno Kübler:
+Stirling-Maschinen. Staufen bei
+Freiburg: ökobuch 1999
+
+[4]
+
+Peter Fette: Wie arbeitet der Stirlingmotor?
+
+[5]
+
+Koichi Hirata: Stirling Engine.
+
+[6]
+
+Tim Lohrmann: Stirlingmotor.
+
+[7]
+
+Achmed Khammas: Stirling-Motor.
+
+[8]
+
+Meyers Konversationslexikon 188592 von „Hans“ bis „Irene“:
+Heißluftmaschinen.
+
+Quellen
+
+
+

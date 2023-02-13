@@ -1,0 +1,484 @@
+
+
+Modell
+
+Sortieranlage für fischertechnik-Teile
+Leon Schnieber, Max-Leo Amberg
+Wer räumt schon gerne auf? Diese Frage stellten wir uns auch. Deshalb begannen wir eine
+Anlage zu entwickeln, die diese Arbeit automatisiert. Sie sollte modular und flexibel konstruiert
+sein, sodass sie beliebige und wechselnde Teile sortieren kann. Zur Erkennung der Teile dient
+eine auf neuronalen Netzen basierende KI (künstliche Intelligenz). Nach eineinhalbjähriger
+Entwicklungszeit kann die Anlage nun 18 verschiedene fischertechnik-Teile erkennen und in
+ein Lager einsortieren.
+
+Einleitung
+Bei der fischertechnik-Convention 2017
+hatten wir nach dem Abbau unserer Exponate eine große Menge verschiedener
+Einzelteile. Diese in Sortierwannen einzuräumen ist sehr monoton und zeitaufwändig. Bei der Recherche im Internet
+
+stießen wir vor allem auf Anlagen, die
+speziell für ihren Anwendungszweck angepasst wurden, zum Beispiel auf ganz bestimmte Teile, die sortiert werden können.
+Da wir uns aber nicht nur auf wenige
+spezielle Teile festlegen wollten, beschlossen wir, selbst eine modulare und flexible
+
+(grün) über den Scanner (blau) zum Hochregallager (rot) transportiert
+
+
+Modell
+
+Sortieranlage zu entwickeln. Unsere Ziele
+dafür waren:
+· Modularität und Flexibilität – für wechselnde Teilesorten und zum leichten
+Transport.
+· Hohe Genauigkeit – wenn die Maschine
+auch nur wenige Fehler machen würde,
+müssten die sortierten Teile zeitaufwändig kontrolliert und von Hand nachsortiert werden.
+
+Sortieranlage in verschiedene Module war
+noch einem weiteren Aspekt geschuldet: Da
+wir beide ca. 300 km entfernt voneinander
+wohnen, mussten wir große Teile der
+Anlage getrennt entwickeln. Über ein Chatprogramm stimmten wir uns aber regelmäßig über die mechanischen, elektrischen
+und
+datentechnischen
+Schnittstellen
+zwischen den drei Modulen ab.
+
+· Möglichst hohe Geschwindigkeit.
+· Komfort für den Bediener – einfaches
+Befüllen und Entleeren der Anlage.
+Zentrales Element dabei war die Erkennung
+der Teile. Herkömmliche Erkennungsmethoden von Kanten oder Kontrasten
+waren durch die Vielfalt der Teile zu
+unflexibel und kompliziert, weshalb wir uns
+schnell auf eine Erkennung mit neuronalen
+Netzen festlegten. Die Einteilung unserer
+
+
+Pneumatikzyliner heben die Teile wieder auf die Fallkante an
+
+
+
+Das Startmodul zum
+Vereinzeln der Teile
+Zunächst begannen wir den Bau unserer
+Anlage mit dem Vereinzler. Der Prototyp
+(siehe Abb. 2) bestand lediglich aus einem
+Schieber, der die Teile in einer Rinne nach
+vorne über eine Kante auf ein Förderband
+herabfallen ließ. Eine unter der Rinne montierte Lichtschranke sollte das herabfallende
+Teil erkennen und den Schieber anhalten.
+Es zeigte sich allerdings sehr schnell, dass
+eine einzelne Fallkante die Teile nicht
+zuverlässig vereinzeln kann, vor allem,
+wenn die Bausteine sehr dicht auf dem
+Förderband liegen.
+Bei der finalen Version des Moduls werden
+die Teile vom Bediener auf ein Förderband
+geschüttet. Dieses lässt sie in kleinen Portionen in eine Rinne fallen. Ein Schieber
+bewegt die Teile auf eine Fallkante zu. Zu
+ihrem Ende hin wird die Rinne immer
+
+schmaler. Über- und nebeneinander liegende Teile fallen dann links und rechts hinab.
+An der Spitze befinden sich so alle Teile
+sauber aufgereiht. Sie fallen einzeln, von
+einer Lichtschranke kontrolliert, auf das
+nächste Förderband zum Scanner-Modul.
+Wenn alle Teile auf der Rinne vereinzelt
+worden sind, fährt der Schieber wieder
+zurück. Zwei Pneumatikzylinder heben
+dann die nach links und rechts heruntergefallenen Teile wieder zurück auf die
+Rinne.
+
+Das Scan-Modul
+Als der Vereinzler schließlich zuverlässig
+funktionierte, begannen wir mit dem Bau
+des Scan-Moduls.
+Die Teile vom Vereinzler werden zunächst
+von einer Pufferposition auf ein langes
+Förderband geschoben. Kontrolliert von
+einer Lichtschranke werden die Teile so
+weit vorgefahren, dass sie im Fokus der
+
+Pneumatikzylinder, (4) Kontroll-Lichtschranke, (5) Pufferposition
+
+beiden Kameras liegen. Diese sind an einem
+Dreharm befestigt und können sich so um
+mehr als 180° um das Teil herumdrehen.
+Eine LED-Beleuchtung um die Kameralinsen herum sorgt für eine frontale
+Beleuchtung ohne störende Schatten um das
+Objekt.
+Trotz der Vorarbeiten durch andere
+Forschergruppen war unsere Anpassung des
+bestehenden Netzes an das neue Trainingsset sehr zeitaufwändig: Die Daten durchliefen 50.000 bis 300.000 Trainingsschritte,
+bevor das neuronale Netz für den Praxiseinsatz tauglich war. Durch die beiden
+Blickwinkel der Kameras, flach und steil,
+entstehen mit geringem Mehraufwand mehr
+Daten für unsere Analyse (Abb. 5).
+Für die Auswertung der Kameraaufnahmen
+kamen zwei Erkennungsmethoden in Frage.
+Unseren ersten Ansatz, die Bilderkennung
+mit der Software Open-CV [1] zu realisieren, verwarfen wir schnell. Problematisch
+
+Modell
+
+waren die verschiedenen Ausrichtungen, in
+denen die Teile im Scanmodul fotografiert
+werden (siehe Abb. 6). Obwohl die Bibliothek speziell auf die maschinelle Bildverarbeitung ausgelegt ist und eine gute
+Dokumentation bietet, müssten wir pro
+Teilesorte mindestens vier Referenzbilder
+mit der Originalaufnahme vergleichen.
+Also wären bei 20 Teilesorten mindestens
+80 Bildvergleiche nötig, um das Teil sicher
+bestimmen zu können – ein zeitaufwändiger
+Prozess, der trotzdem keine hohe Genauigkeit garantiert.
+Unsere Wahl fiel auf das Software-Framework Tensorflow [2]. Mit ihm konnten wir
+neuronale Netze erstellen und trainieren.
+Zur Erläuterung: Ein neuronales Netz besteht aus sogenannten „Neuronen“, auch
+Knoten genannt. Sie addieren die eingehenden Signale und geben ihrerseits ein Signal
+an verbundene Neuronen weiter, wenn ein
+gewisser Schwellenwert überschritten ist –
+
+möglichst gleichmäßigen Hintergrund
+
+
+
+analog zum Nervensystem eines Lebewesens. Die Verbindungen („Kanten“) zwischen den Neuronen sind dabei unterschiedlich gewichtet, der Einfluss von Neuron zu
+Neuron variiert daher ebenfalls.
+
+weiter. Dieser Name ergibt sich aus ihrer
+Position in der mathematischen Darstellung
+als Graphen: Die befinden sich im Gegensatz zu Ein- und Ausgangsneuronen in der
+Mitte und sind somit von außen nicht
+„sichtbar“. Der dritte Typ sind die Ausgangsneuronen. Sie geben das Ergebnis der
+Berechnungen aus. Nach dieser Grundstruktur sind zwar alle Kantengewichte
+zufällig festgelegt, aber noch nicht optimiert. Wir mussten sie erst über unzählige
+Entwicklungsschritte
+trainieren,
+will
+heißen: Bei jedem Trainingsschritt verändert die Software an zufälligen Stellen des
+Graphen die Kantengewichte und Schwellenwerte. Über einen Testdatensatz ermittelt sie dann, ob diese neue „Generation“
+bessere Ergebnisse als die vorherige erzielt.
+Falls dies nicht der Fall ist, verändert sie ein
+anderes Kantengewicht [3].
+
+Das Lager-Regal
+Die Entwicklung des Lager-Systems konzentrierte sich auf wenige Punkte: Es sollte
+von Anfang an schnell und gleichmäßig
+arbeiten, sodass nach Beschleunigung der
+restlichen Prozesse kein „Flaschenhals“
+entsteht. Als einfache, platzsparende
+Lösung legten wir uns hier auf ein einfaches
+Hochregallager, bestehend aus einem mittleren Aufzug und seitlich angeordneten
+Fächern fest (Abb. 7).
+
+desselben Bauteils
+
+Ein einfaches neuronales Netzwerk besteht
+grundsätzlich aus drei Neuronentypen.
+Sogenannte Eingangsneuronen empfangen
+eingehende Daten und geben sie an die
+„hidden neurons“, also versteckte Neuronen
+
+Getragen wird der Aufzugwagen von zwei
+Ketten, die am obersten Punkt um je ein
+Zahnrad laufen und auf der anderen Seite
+mit einem Gegengewicht verbunden sind.
+Dieses gleicht das Gewicht des Wagens aus,
+reduziert die vom Motor aufzubringende
+Kraft und erhöht damit die mögliche Geschwindigkeit. Mit den Rückmeldesignalen
+des Encoder-Motors ist eine exakte Positionierung des Wagens möglich. Am unteren
+Ende wird eine Lichtschranke als Endschalter genutzt. Sie dient zur Initialisierung
+beim Programmstart und gleicht zudem
+übersprungene Impulse aus. Damit stellen
+wir sicher, dass der Aufzug auch wirklich
+ganz unten angekommen ist und keine Teile
+
+vom Förderband in den Fahrbereich des
+Aufzugs fallen oder sich verklemmen.
+
+Modell
+
+Die unterste Regalebene dient nicht zum
+Einsortieren von Teilen. Wir verwenden
+eines der Fächer als Ausschussfach – dort
+landen alle Teile, die nicht eindeutig
+erkannt wurden.
+
+Steuerung der Anlage
+Die Modularität des Modells wollten wir
+auch bei der Software beibehalten. Deshalb
+besitzt jedes Modul einen eigenen Controller (zwei TX-C und ein TXT) mit einem
+unabhängigen Steuerungsprogramm. Die
+Kommunikation zwischen den Modulen
+läuft dabei über selbstgebaute Optokoppler
+aus einer Glühlampe und einem Fototransistor. Schnell war aber klar, dass die
+zentrale Koordination der Prozesse vom
+Scanmodul ausgehen würde: Durch die
+zentrale Position in der Anlage müssen nur
+wenige Befehle an die benachbarten
+Module übertragen werden.
+
+
+Der Aufzugwagen selbst besteht aus einem
+Förderband, welches quer zu dem der
+Scanner-Einheit steht (Abb. 8). Steht der
+Aufzug ganz unten, fallen die Teile vom
+Scanner-Förderband auf den Querförderer
+des Aufzuges. Dabei unterbricht das Teil
+eine Lichtschranke.
+Die Zentralsteuerung sendet dem TX-Controller die Adresse des anzusteuernden
+Faches zu. So wird das Teil auf die richtige
+Höhe zum passenden Lagerfach gefahren.
+Ist der Aufzug am Ziel angelangt, wirft der
+Querförderer das Teil nach links oder rechts
+in das entsprechende Fach aus.
+
+Das Programm startet mit der Initialisierungsphase: Das Vereinzler-Modul bewegt
+seinen Schieber in die Startposition, füllt
+den Drucklufttank und stellt das erste Teil
+bereit. Danach schaltet es seine Kommunikations-LED ein. Ein Fototransistor des
+Scanner-Moduls erkennt dieses Signal. Die
+Software weiß nun, dass ein neues Teil
+bereitliegt und startet die Initialisierung des
+Kameraarms. Nachdem alle drei Module
+ihren vordefinierten Startzustand erreicht
+haben, nimmt die Anlage ihren normalen
+Betrieb auf: Sobald die Pufferposition vom
+Scan-Modul geleert wurde, liefert der
+Vereinzler automatisch ein neues Teil. Der
+Kameraarm schwenkt um das Teil im
+Scanner herum, die beiden USB-Kameras
+fertigen aus verschiedenen Positionen je
+sechs Fotos an. Noch während sich der
+Kameraarm um das Teil dreht, verarbeitet
+das neuronale Netzwerk die Fotos und
+speichert die errechneten Ergebnisse in
+einer Tabelle. Das eingescannte Teil wird
+ein Stück weitergeschoben. Ein neues Teil
+wird auf das Scan-Förderband gelegt.
+Während der Positionierung des neuen
+Teils unter den Kamerafokus fällt das alte,
+
+
+
+
+bereits klassifizierte Teil auf den Transportwagen des Lagermoduls.
+Sobald die Verarbeitung der Fotos abgeschlossen ist, werden die einzelnen Messwerte in der Tabelle gemittelt. Es entsteht
+eine Art „Ranking-Liste“. Bei einem geringen Abstand zwischen Erst- und ZweitWahl war sich der Erkennungsalgorithmus
+nicht sicher; das Teil wird dann nicht einsortiert und in den Ausschuss befördert. Ein
+
+großer Abstand zwischen Erst- und Zweitwahl deutet dagegen auf eine große Sicherheit bei der Entscheidung hin (Abb. 9).
+Die Kommunikation mit dem Lager erfolgt
+über einen Umweg: Die Software des Scanmoduls sendet die Lageradresse an einen
+Arduino. Dieser legt den Wert in seinem
+Speicher ab. Der TX-Controller bekommt
+parallel dazu über einen Optokoppler den
+Einlagerungs-Auftrag. Er liest über I²C das
+
+(farbige Punkte) über die Zeit aufgetragen. Je größer der Abstand zwischen dem höchsten farbigen
+Punkt und dem nächsten darunter, desto sicherer die Entscheidung
+
+Speicherregister des Arduinos aus. Die
+Laufkatze setzt sich in Bewegung und lässt
+das Teil in die passende Box fallen. Der
+ursprüngliche Plan, die Lageradresse über
+die Optokoppler zu übertragen, ließ sich
+leider nicht umsetzen: Nach einer guten
+Stunde Betrieb machte das Lagersystem
+immer mehr Übertragungsfehler, die wir
+nicht rekonstruieren konnten.
+Am Anfang der Programmierphase der
+Anlage hatten wir Probleme mit der
+Synchronisierung der Module untereinander: Das Vereinzler-Modul war schneller
+fertig als vom Scanmodul erwartet, zwei
+Teile kollidierten miteinander und verfälschten die Erkennung. Also strukturierten wir die gesamte Software um und erweiterten sie um ein Absicherungs- und Überwachungssystem: Ein Modul durfte so ein
+Teil an das nächste Modul nur noch weitergeben, wenn dieses explizit eine Freimeldung aussendet. Außerdem messen wir
+die Dauer einzelner Vorgänge in der
+Anlage, zum Beispiel die Zeit, bis ein Teil
+vereinzelt oder fotografiert wurde.
+Zusammen mit den Messwerten der künstlichen Intelligenz und einem Vorschaufoto
+leiteten wir diese Daten an eine Datenbank
+weiter [4]. Über einen Webbrowser und die
+Visualisierungssoftware
+Grafana
+[5]
+können wir den korrekten Betrieb der
+Anlage auf einen Blick erfassen. Ein verklemmtes Teil oder eine schlecht fokussierte Kamera erkennt man schnell an ausschlagenden Graphen oder unscharfen
+Fotos (siehe Abb. 9).
+
+Lernprozess der künstlichen
+Intelligenz
+Das Training der künstlichen Intelligenz
+nahm viel Zeit in Anspruch. Anfangs war
+die Trefferquote bei den trainierten neuronalen Netzen sehr schlecht; nur ca. 60% der
+Fotos führen zu einer korrekten Einordnung. Deshalb testeten wir verschiedene
+andere neuronale Netzwerke [6], die bei
+standardisierten Tests bessere Ergebnisse
+
+Modell
+
+erzielten. Allerdings war bei diesen entweder der benötigte Rechenaufwand überproportional größer als der Genauigkeitsgewinn oder umgekehrt: Der Rechenaufwand war deutlich niedriger, dafür aber
+die Ergebnisse ungenau, weshalb wir nach
+einigen Tests wieder zum anfänglichen
+Testmodell Inception-v3 [7] zurückkehrten.
+Die Genauigkeit der Algorithmen bestimmten wir jeweils mit Testreihen auf der
+Anlage. Hierbei erfassten wir nach einem
+Durchlauf von ca. 120 Einzelteilen die
+Teileanzahl in den jeweiligen Fächern des
+Lagers. Falsch oder gar nicht einsortierte
+Teile schlüsselten wir nach ihrem Typ auf.
+So konnten wir schnell erkennen, welche
+Teile mit anderen Teilesorten verwechselt
+wurden (Tab. 1).
+Anhand dieser Messdaten und weiteren
+Testreihen fanden wir auch das Optimum
+zwischen Präzision und Geschwindigkeit:
+Wenn sich die Genauigkeit bei mehreren
+Bildaufnahmen nicht bedeutend bessert,
+lohnt es sich vom Geschwindigkeitsaspekt
+her nicht, noch mehr Fotos zu aufzunehmen.
+Da ein neuronales Netzwerk direkt aus den
+Testdaten „lernt“, hilft es enorm, den
+Datensatz zu vergrößern. Die Webcams
+erstellen pro Betriebsminute ca. 50 bis 80
+Fotos, die in den Testdatensatz sortiert
+werden müssen. Um diesen Prozess zu
+beschleunigten entwickelten wir ein zusätzliches, von der Anlage unabhängiges Sortierprogramm: Über eine Website bekommt
+der Benutzer jeweils die Aufnahmeserie
+eines Teiles im Scanner gezeigt; mit einem
+Klick auf das Bauteil-Piktogramm wird es
+automatisch in den passenden Ordner
+einsortiert. Besonders die Teiletypen
+„Winkelstein 7,5“ und „Baustein 5“ konnte
+die Anlage nicht unterscheiden: Die
+Kameraperspektiven konnten die zur Sortierung nötigen Details nicht erfassen.
+Deshalb ersetzten wir den Winkelstein 7,5
+mit dem Zahnrad Z10. Hier zeigt sich die
+Stärke der Flexibilität der Anlage: Nach
+
+
+
+Tab. 1: Genauigkeitsanalyse anhand einer definierten Bauteilemenge: Grau-rötliche Felder
+visualisieren Fehler des Algorithmus, richtig sortierte Teile liegen auf der grauen Diagonalen
+
+einer Stunde hatte die Anlage genügend
+Fotos vom Neuzugang angefertigt und
+konnte diese nach einem erneuten Training
+des neuronalen Netzes erfolgreich einsortieren.
+
+Threads, eine erhebliche Steigerung gegenüber dem alten Computer mit lediglich vier
+Threads.
+
+Mit der Zeit optimierten wir auch die
+Geschwindigkeit der Anlage. Anfangs fiel
+nur alle 35 bis 40 Sekunden ein Teil in ein
+Lagerfach. Deshalb setzten wir uns ein Ziel
+von mindestens drei Teilen, die pro Minute
+sortiert werden sollten. Eine Aufteilung des
+Programms in mehrere, nebenläufige Teile
+verringerte die Wartezeiten der Module
+aufeinander um insgesamt fünf Sekunden.
+Mit größeren Antriebsmotoren an den Förderbändern konnten wir unsere geplante
+Zykluszeit von 20 Sekunden pro Teil sogar
+übertreffen: Im Durchschnitt fällt alle 12
+Sekunden ein Teil in ein Fach des Hochregallagers.
+
+Im aktuellen Lernzustand des neuronalen
+Netzwerkes erreicht die Anlage eine Sortiergenauigkeit von ungefähr 99,5%, das
+heißt, nur jedes zweihundertste Teil wird in
+ein falsches Fach einsortiert. Deutlich höher
+ist der Anteil der Teile, die in den Ausschuss gegeben werden: Ungefähr 5% der
+Teile müssen den Scanprozess nochmals
+durchlaufen. Leider ist die Geschwindigkeit
+der Anlage im Vergleich zu aktuellen
+Sortiersystemen aus der Industrie immer
+noch sehr niedrig; konventionelle Systeme
+sortieren oft mehrere Tausend Einzelteile in
+der Sekunde, im Gegensatz zu unserer
+Anlage aber oft nur nach Größe oder Farbe
+und in maximal drei Sorten unterteilt.
+
+Die hohe Geschwindigkeit der Anlage
+brachte allerdings auch den ursprünglichen
+Steuerungscomputer an seine Grenzen.
+Genügend Rechenleistung brachte ein ausrangierter Server mit insgesamt 24 Rechen60
+
+Fazit
+
+Obwohl wir es am Anfang des Projektes im
+Herbst 2017 nicht schafften, extrem ähnliche Teile verlässlich zu unterscheiden, da
+diese auf den Kamerabildern zu ähnlich
+
+aussehen, sind wir mit der Leistung der
+Anlage zufrieden. Trotzdem ist das Projekt
+keinesfalls perfekt. Mit einer genaueren
+Positionierung der Teile und einer besseren
+Kamera könnte man z. B. das genannte
+Erkennungsproblem lösen. Der große Vorteil der KI-gestützten Bilderkennung ist
+jedoch, dass neue Teile ohne größeren Aufwand eingelernt werden können. Um ein
+Teil einzupflegen ist lediglich ein Bilddatensatz von einigen tausend Fotoaufnahmen des Teils nötig, die automatisch
+beim Durchlaufen der Anlage entstehen.
+
+Modell
+
+[4]
+
+InfluxData Inc.: InfluxDB. OpenSource Zeit-Serien-Datenbank,
+abgerufen am 20.12.2018.
+
+[5]
+
+Grafana Visualisierungs-Tool auf
+GitHub, abgerufen am 20.12.2018.
+
+[6]
+
+Kaiming He, Xiangyu Zhang,
+Shaoqing Ren, Jian Sun: Deep
+Residual Learning for Image
+Recognition. 2015, abgerufen am
+20.12.2018.
+
+[7]
+
+Christian Szegedy, Vincent
+Vanhoucke, Sergey Ioffe, Jonathon
+Shlens, Zbigniew Wojna: Rethinking
+the Inception Architecture for
+Computer Vision. 2015, abgerufen
+am 20.12.2018.
+
+[8]
+
+Leon Schnieber, Max-Leo Amberg:
+Selbstlernende Sortieranlage für
+fischertechnik-Bauteile auf youtube,
+2019.
+
+Quellen
+[1]
+
+OpenCV Team: Open Computer
+Vision Library, abgerufen am
+20.12.2018.
+
+[2]
+
+Google Brain Team: Image
+Recognition with Python API,
+abgerufen am 20.12.2018.
+
+[3]
+
+Sebastian Otte: Künstliche neuronale
+Netze – Das Perzeptron. 2009,
+abgerufen am 20.12.2018.
+
+
+
+
+KI-gesteuerte Sortieranlage für fischertechnik-Teile
+
+
+

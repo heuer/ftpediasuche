@@ -1,0 +1,267 @@
+
+Computing
+
+Computing
+
+Der Mini-Servo-Adapter
+Till Harbaum
+Servomotoren waren und sind Bestandteil des offiziellen fischertechnik-Programms. Leider
+führen diese eigentlich recht universell einsetzbaren Motoren dort ein Nischendasein und
+werden nur zur Lenkung von Fahrzeugen verwendet. Der Mini-Servo-Adapter verbindet die
+Servos mit dem ftDuino und macht sie so auch in Robotermodellen nutzbar.
+Servos enthalten im Gegensatz zu den üblichen fischertechnik-Motoren immer etwas
+eigene Sensorik und etwas Elektronik. Als
+Sensor kommt normalerweise ein verstellbarer Widerstand, ein sogenanntes Potentiometer zum Einsatz. Dieses Poti ist in der
+Lage den Drehwinkel des Servos zu messen. Zusammen mit der Elektronik ist der
+Servomotor so in der Lage, einen bestimmten Winkel anzufahren und zu halten. Die
+von fischertechnik eingesetzten Servos
+kommen aus dem Modellbaubereich und
+werden hier, wie bei fischertechnik auch,
+vor allem zur Lenkung eingesetzt, indem sie
+Lenkachsen antreiben oder zum Beispiel
+auch Ruder und Klappen an einem Flugmodell (Abb. 1).
+
+
+Damit laufen Servos eigentlich etwas dem
+üblichen fischertechnik-Konzept entgegen,
+das alle elektrischen und mechanischen
+Eigenschaften sichtbar und erlebbar macht.
+
+Servos sind dagegen zu weiten Teilen
+„Black Boxes“, die eben auf Kommando
+einen Winkel ansteuern. Wie sie das tun
+bleibt kaum erkennbar. Nichtsdestotrotz
+sind sie praktisch. Auch mit den Encodermotoren von fischertechnik kann man zu
+einem gewissen Grad Winkel auswerten
+und wiederholbar anfahren. Aber diese
+Motoren sind groß und ihre Ansteuerung
+nicht einfach. Die kleinen Servos sind hier
+oft die einfachere Wahl.
+Die Ansteuerung von Servomotoren aus
+dem Modellbaubereich ist relativ einfach.
+Über zwei Adern ihrer dreiadrigen Verbindung werden sie mit einer Versorgungsspannung von 5-6 Volt versorgt. Die dritte
+Ader führt das Steuersignal, das für eine
+bestimmt Zeit vom 0-Volt-Ruhepegel auf
+den 5V-Pegel wechselt. Die zeitliche Länge
+des sich dadurch ergebenden positiven
+Signal-Pulses bestimmt den Auslenkwinkel
+des Servos. Eine Länge von einer Millisekunde steht dabei für vollen Linksausschlag des Servos. Eine Pulslänge von 1,5
+Millisekunden bedeutet dem Servo die
+Mittelposition anzufahren, und eine Pulslänge von zwei Millisekunden schließlich
+richtet den Servomotor nach rechts aus
+(Abb. 1). Zwischenwerte resultieren in
+Zwischenwinkeln. Dieser Puls sollte ca. alle
+20 ms wiederholt werden, sodass der Servo
+immer weiß welchen Winkel er anzufahren
+hat.
+
+
+
+
+
+So ein Signal ist mit einem der Ausgänge
+z. B. eines Arduino leicht zu erzeugen. Entsprechende Bibliotheken für den Arduino
+finden sich direkt in der Arduino-IDE [1].
+Auch der ftDuino lässt sich mit solch einer
+Bibliothek betreiben. Dazu werden die
+beiden eigentlich für den I²C-Anschluss am
+ftDuino vorhandenen Ausgangspins etwas
+zweckentfremdet, wie in Abschnitt 6.5 der
+ftDuino-Anleitung beschrieben [2]. Neben
+der Erzeugung des Steuersignals hat man im
+fischertechnik-Umfeld eine zweite Aufgabe
+zu lösen, da Servos wie erwähnt für eine
+Versorgung mit 5-6 Volt ausgelegt sind. Sie
+lassen sich daher nicht direkt an den fischertechnik-üblichen 9 Volt betreiben.
+Die ftDuino-Anleitung schlägt den Einsatz
+eines einfachen Spannungsreglers vor.
+Diese Lösung hat gleich ein paar Nachteile:
+Neben der Bastelei bei der Spannungsversorgung verliert man die eigentliche I²CFunktion und kann neben den Servos z. B.
+keine weiteren Sensoren anschließen.
+Zudem benötigt diese Art der Signalerzeugung direkt durch den Arduino/ftDuino
+permanent etwas Rechenleistung, da ja alle
+20 Millisekunden erneut der Steuer-Puls
+gesendet werden muss. Speziell wenn der
+Arduino nebenbei andere Dinge schnell
+oder mit hoher Präzision erledigen soll,
+kann es dabei zu kurzen Signalstörungen
+bei der Pulserzeugung kommen, was sich in
+einem kurzen, unerwünschten Zucken des
+Servos äußert.
+
+
+So ganz glücklich waren wir daher mit
+dieser Lösung nie, und einer der Herausgeber der ft:pedia hat immer wieder seinen
+Wunsch nach einer etwas professionelleren
+Lösung geäußert. Diesem Wunsch zu entsprechen gab den Startschuss für die Entwicklung des Mini-Servo-Adapters.
+Der Mini-Servo-Adapter sollte genau die
+drei genannten Schwachpunkte der bestehenden Lösung vermeiden: Erstens sollte er
+den Servo aus einer fischertechnik-üblichen
+Spannungsquelle versorgen können. Zweitens sollte er dem ftDuino die Pflicht abnehmen, sich permanent um den Servo kümmern zu müssen. Und drittens sollte er dem
+I²C-Anschluss des ftDuino nicht seine
+eigentliche Funktion entziehen. Dazu kam
+das Ziel eine möglichst kompakte und
+kostengünstige Lösung zu schaffen.
+
+an den ftDuino
+
+Zwei Bauteile sind mindestens nötig um
+alle Ziele zu erreichen: Ein Spannungsregler, der aus 9 Volt die Servo-kompatiblen 5 Volt erzeugt, und ein Mikrocontroller,
+der die Aufgabe des „sich Kümmerns“
+übernimmt und mit dem ftDuino auf I²Ckompatiblere Weise kommuniziert. Dazu
+kommen natürlich noch die nötigen Steckverbinder zum Anschluss eines bzw. zweier
+Servos, zum Anschluss an den ftDuino und
+schließlich zur Spannungsversorgung per
+fischertechnik-üblichem
+Zwergstecker
+(Abb. 3).
+Das alles sollte in einem Gehäuse in BS30Größe Platz haben. Um den I²C-Anschluss
+des ftDuino nicht komplett zu blockieren
+sollte der Adapter einen weiteren I²C-Anschluss erhalten, über den das eingehende
+I²C-Signal an weitere Sensoren weitergeleitet werden kann. So lassen sich auch
+mehrere Servo-Adapter in Reihe schalten,
+um die Zahl der ansteuerbaren Servos zu
+erhöhen.
+
+Computing
+
+
+Beachtet man, dass der zusätzliche I²CStecker ganz links nur optional ist und sich
+bei Bedarf einfach absägen lässt, dann wird
+deutlich, dass auf dem Rest der Platine der
+Platz für Spannungsregler und Mikrocontroller nur dann reicht, wenn man wirklich
+die kleinstmöglichen Bauteile verwendet
+(Abb. 6).
+
+
+
+Auf Abb. 4 und 5 ist zu sehen, dass der Platz
+gerade so eben für alle Vorgaben ausreicht.
+
+BS30 und BS30+BS15
+
+Entsprechend gibt es das Gehäuse in zwei
+Varianten: einer 45 Millimeter langen Version mit Platz für zwei I²C-Aschlüsse und
+einer 30 mm-Version, die dann zum Einsatz
+
+
+
+kommt, wenn der zusätzliche Stecker z. B.
+mit einem Dremel vorsichtig abgetrennt
+wurde (Abb. 7). Da der Mikrocontroller die
+
+Signalerzeugung selbst übernimmt, beschränkt sich die Verwendung auf ftDuinoSeite auf wenige Zeilen (Listing 1):
+
+#include <Wire.h>
+void setup() {
+Wire.begin();
+}
+void loop() {
+// Wert 63 in Register 0 schreiben: Servo nach links
+Wire.beginTransmission(17);
+Wire.write(0);
+Wire.write(63);
+Wire.endTransmission();
+delay(1000);
+// Wert 125 in Register 0 schreiben: Servo nach rechts
+Wire.beginTransmission(17);
+Wire.write(0);
+Wire.write(125);
+Wire.endTransmission();
+delay(1000);
+}
+
+Listing: Sketch zur Ansteuerung des Mini-Servo-Adapters
+
+Die Wire-Bibliothek kommt auf dem
+Arduino und damit dem ftDuino immer zum
+Einsatz, wenn über I²C kommuniziert
+werden soll. Die Kommunikation mit dem
+Mini-Servo-Adapter ist dabei so einfach,
+dass keine separate Bibliothek entwickelt
+wurde. Die Kommunikation mit dem ServoAdapter geschieht unter I²C-Adresse 17.
+Will man mehr Adapter in einem System
+betreiben, so kann diese Adresse mit Hilfe
+eines speziellen Sketches leicht geändert
+werden [3].
+Das erste Datenbyte gibt dann an, welcher
+der beiden Servo-Anschlüsse des MiniServo-Adapters gemeint ist. An jeden MiniServo-Adapter lassen sich bis zu zwei
+Servos anschließen; der erste ist unter Nummer 0 erreichbar, der zweite unter Nummer
+1. Das nächste gesendete Byte gibt schließlich die Länge des Pulses und damit die
+Position an, an die der Servomotor gefahren
+werden soll. Der normale Arbeitsbereich
+eines Servos reicht hier von 63 (ganz links)
+
+
+bis 125 (ganz rechts). Werte außerhalb
+dieses Bereiches werden auf diese Grenzen
+beschränkt. Mit weiteren Kommandos an
+den Mini-Servo-Adapter lassen sich diese
+Grenzen aufheben und man kann den Drehbereich ggf. über den Bereich eines handelsüblichen Servos hinaus erweitern.
+Dabei sollte man Vorsicht walten lassen,
+denn einige (billige) Servos reagieren
+darauf mit mechanischen Problemen oder
+nehmen sogar Schaden. Weitere Infos zu
+diesen erweiterten Möglichkeiten des MiniServo-Adapters finden sich im Abschnitt
+6.13.9 des ftDuino-Handbuchs [4].
+Natürlich ist der Mini-Servo-Adapter nicht
+auf Servos von fischertechnik beschränkt.
+Mit dem Mini-Servo-System hat ForumsMitglied „juh“ eine wunderbare Alternative
+zu den fischertechnik-eigenen Servos
+geschaffen (Abb. 8). Dieses System geht
+weit über das hinaus was fischertechnik
+selbst anbietet, und auch die mechanische
+Integration in das fischertechnik-System ist
+
+wesentlich schöner gelöst. Diese Servos
+lassen sich natürlich direkt am Mini-ServoAdapter betreiben; die Namensverwandtschaft ist auch nicht ganz zufällig.
+
+Computing
+
+Mini-Servo-Adapters industriell fertigen
+lassen. Der Adapter kann inklusive 3Dgedrucktem Gehäuse und I²C-Anschlusskabel betriebsbereit für zwölf Euro unter
+info@ftduino.de erworben werden.
+
+Quellen
+
+
+Schließlich ist der Mini-Servo-Adapter
+nicht nur für den Einsatz am ftDuino geeignet. Er lässt sich z. B. auch am TX-Pi betreiben. Sogar am TXT ist – zumindest im Offline-Modus – ein Betrieb möglich. Im Online-Modus sind Mini-Servo-Adapter und
+TXT leider nicht ganz verträglich und die
+Kommunikation bricht nach einigen Sekunden ab. Hier ist ggf. noch etwas Nacharbeit
+an der Firmware des Mini-Servo-Adapters
+nötig (und möglich).
+Servos sind unbestritten praktische kleine
+Helfer. Mit dem Mini-Servo-Adapter ist ihr
+Einsatz am ftDuino besonders einfach geworden. Sämtliche Unterlagen zum Nachbau des Mini-Servo-Adapters finden sich
+im Github. Für die, die den Aufwand
+scheuen, haben wir eine Kleinserie des
+
+[1]
+
+Arduino Servo-Bibliothek. arduino.cc
+
+[2]
+
+Till Harbaum: Servos am ftDuino.
+ftDuino-Handbuch, Abschnitt 6.5.
+github.com
+
+[3]
+
+Änderung der Mini-Servo-Adresse.
+github.com
+
+[4]
+
+Till Harbaum: Mini-Servo-Adapter.
+ftDuino-Handbuch, Abschnitt 6.13.9,
+guthub.com
+
+[5]
+
+juh: Mini-Servo-System. ft:c-Forum
+
+
+
+

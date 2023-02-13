@@ -1,0 +1,280 @@
+
+Kinematik
+
+Kinematik
+
+Kreisel und mehr
+Rüdiger Riedel
+Die Welle der Fidget Spinner oder Fingerkreisel ist über uns hinweggeschwappt; drei sind bei
+mir gelandet. Faszinierend für mich: Man spürt unmittelbar die Kreiselkräfte beim Kippen der
+Kreiselachse.
+
+Kreisel
+Ein Kreisel aus fischertechnik ist schnell
+gebaut aus einer Achse und … siehe die
+folgenden Abbildungen.
+
+und ein Reifenkreisel
+
+Die Kreisel von Abb. 4 und 5 lassen sich nur
+mit Hilfsmitteln anwerfen:
+
+zwei Männlein-Kreisel
+Schwungscheiben
+
+Wenn es am Fuß der Zahnrad-Kreisel grün
+schimmert: Das sind „Hülse + Scheibe“
+(36701). Es wirkt halt fotogener, wenn die
+Kreisel stehen.
+
+Bei aus Bausteinen zusammengesetzten
+Kreiseln ist Vorsicht geboten; bei hohen
+Drehzahlen wird die Zerstörungsenergie
+recht groß. Das Schwungrad hat einmal mit
+den Flügeln der Flachnabe eine Kunststoffschale zerschmettert (!) und ist anschließend meterweit weggesprungen. Die Flachnabe war natürlich falsch herum montiert,
+
+
+die Flügel gehören auf die Innenseite wie in
+
+durchmesser. Das wird so über die Motorschnecke geschoben, dass es noch 1 bis
+2 mm übersteht.
+Der Kreisel wird also mit dem Hilfsstab
+gehalten und der laufende Motor von oben
+mit dem Silikonschlauch auf die Achse
+gedrückt. Der Kreisel wird auf Drehzahl
+gebracht. Dann den Motor abziehen und
+den Hilfsstab nach oben herausführen.
+
+
+Mit dem Hilfsstab von Abb. 6 halte ich den
+Kreisel aufrecht. Ist die freie Achse lang
+genug, benutze ich die Gelenkwürfel-Klaue
+mit Lagerhülse (31436 und 36819) zum
+Halten des Kreisels. Bei kurzen Achsen
+nehme ich beide S-Kupplungen (38260)
+oder auch nur eine davon.
+
+Auf diese Weise lassen sich auch
+schwierige Kreisel wie das gelbe Männlein
+in Abb. 4 andrehen, natürlich mit dem Kopf
+nach unten. Das grüne V-Rad ist so leicht,
+dass es nicht mit einer normalen Achse
+kreiselt, es braucht die Schubstange (37276)
+mit dem dünnen Ende nach unten.
+Die bis hierhin beschriebenen Kreisel kennt
+im Prinzip wohl jeder. Mancher hat vielleicht einen der kegelförmigen Holzkreisel
+besessen und mit einer Peitsche angetrieben.
+
+Die schnelle Drehung
+
+
+Den S-Motor habe ich mit zwei Federnocken (31982) am Batteriekasten befestigt.
+
+Was verleiht einem Kreisel die besonderen
+Eigenschaften? Im Ruhezustand kann er
+z. B. nicht stehen, deshalb die Füßchen in
+Betrachten wir ein Stück (Drucker-) Papier,
+das ist weich und nachgiebig.
+
+
+Jetzt brauchen wir noch ein fischertechnikFremdteil: Ein Stück Silikonschlauch mit
+4 mm Innendurchmesser und 6 mm Außen-
+
+
+ausgeschnittenes Stück Styropor
+
+Bringen wir es auf hohe Drehzahl, dann
+zeigt es Eigenschaften einer Kreissäge!
+
+
+Kinematik
+
+
+Zumindest für Styropor, das sich damit
+mühelos sägen lässt. Die 12 cm messende
+Papierscheibe in Abb. 8 wirkt steif und fest
+(Vorsicht! Nur an der Fläche berühren, die
+Kante ist wirklich messerscharf!). Es sind
+die nach außen wirkenden Fliehkräfte, die
+dem Papier diese Eigenschaften verleihen.
+Sie steigen mit höherer Drehzahl, größerem
+Durchmesser und größerer Masse.
+Jetzt legen wir um das Speichenrad ganz
+locker eine Kette (Abb. 9). Nach Einschalten des Motors wird auch die Kette beschleunigt. Löst sie sich jetzt vom Rad (das
+können wir mit dem Finger unterstützen),
+bewegt sie sich für einen kurzen Moment
+wie ein Reifen davon (Abb. 10).
+
+
+Mit unserer doch etwas geringen Motordrehzahl, ich schätze 5000 U/min, kommt
+sie nicht weit, immerhin etwa 1 m.
+Im Physikunterricht wird oft ein weiterer
+Aspekt der Kreisel-Eigenschaften demonstriert:
+
+
+
+
+Er will nicht kippen
+Hängt man einen schnell drehenden Kreisel
+mit einem Ende seiner Achse auf, dann will
+das freie Achsenende nicht herunter kippen.
+
+Die Apparatur in Abb. 11 trägt den S-Motor
+verschiebbar, so dass sich dessen Achse
+nach Antreiben des Kreisels aus dem Stück
+Silikonschlauch am Motor lösen lässt und
+frei weiterdrehen kann. In Abb. 12 ist das
+erfolgt und tatsächlich bleibt das jetzt freie
+Achsenende waagerecht.
+Das Ende der Achse beschreibt jetzt selbst
+einen Kreis, wobei es immer mehr an Höhe
+verliert. Drei volle Umdrehungen werden
+bei mir erreicht, dann haben die Reibungskräfte die Energie aufgezehrt.
+
+auf Drehzahl gebracht
+
+Kreiselachse von oben gesehen. Ganz links
+ist sie noch mit dem Motor verbunden, wird
+gelöst und beginnt dann ihren Tanz mit etwa
+
+
+
+Kinematik
+
+
+einer Umdrehung pro Sekunde. Dreht sich
+der Kreisel vom Motor aus gesehen rechts
+herum, dann ist die Präzessionsbewegung
+von oben gesehen ebenfalls rechts herum.
+Bei Linksdrehung ist es entsprechend
+umgekehrt.
+
+nimmt auch noch eine Kreisform an. Dieser
+Effekt wird übrigens beim Werfen eines
+Lassos genutzt.
+
+
+Irgendwann ist die Energie aufgebraucht (in
+Wärme umgewandelt) und die Kreiselachse
+hängt traurig herunter.
+
+Der Lasso-Effekt
+Für diesen Versuch brauchen wir einen
+hohen, einigermaßen stabilen Ständer, auf
+dem wir einen S-Motor befestigen. Dieser
+treibt einen Getriebebock mit Schnecke
+(31069), über die wir wieder ein Stück Silikonschlauch mit 4 mm Innendurchmesser
+und 6 mm Außendurchmesser schieben. In
+das andere Ende des Schlauches stecken wir
+eine passende Achse. Wir hängen eine
+geschlossene Kette mit einem Faden an die
+senkrechte, vom Motor angetriebene
+Achse; der Faden klemmt und dreht sich
+sehr gut mit einer Klemmkupplung (31024).
+Dreht sich der Motor, dann richtet sich die
+Kette nicht nur fast waagerecht aus, sondern
+
+
+Der Versuch gelingt am besten mit einem
+regelbaren Netzgerät.
+Die Spannung (Drehrichtung ist egal) wird
+langsam erhöht. Die Kette, die vorher mit
+
+
+
+
+einem kleinen Teil am Boden gelegen hat,
+beginnt sich zu öffnen:
+
+
+kegelförmig herum
+
+Erhöhen wir die Spannung weiter, schlägt
+der Faden aus, das Fadenende und die
+Verbindung zur Kette beschreiben Kreise.
+Erhöhen wir die Spannung zu schnell,
+verdrillt sich nur der Faden und der
+gewünschte Effekt tritt nicht ein.
+Weitere Spannungssteigerung (bei mir
+reichen etwa 6 V) führt schließlich zur ringförmig kreisenden, waagerechten Kette
+(Abb. 18). Der Effekt beruht wie bei der
+Papierscheibe auf den Fliehkräften, die
+jedes einzelne Kettenglied soweit wie
+möglich nach außen treiben.
+
+
+
+
+Kinematik
+
+Das Maxwell-Rad
+Die Verwandtschaft des Maxwell-Rades
+(Abb. 19) mit dem Jo-Jo ist offensichtlich.
+Für die stationäre Arbeitsweise ist es durch
+die zweifädige Aufhängung stabiler in der
+Auf- und Abbewegung. Das Ganze ist
+schnell aufgebaut, den Faden habe ich
+unzerschnitten durch die zweiflügelige
+Nabe geführt. Alles andere ist auf den
+Bildern von Abb. 19 zu erkennen.
+Das Maxwellrad zeigt Aspekte der Energieerhaltung: Die potentielle Energie der
+Ausgangsposition wird umgesetzt in
+Bewegungs-(Rotations-)Energie und diese
+wieder in potentielle Energie (Abb. 19
+rechts). Außerdem zeigt es die stabile
+Raumlage des Kreisels, was beim einfädigen Jo-Jo noch deutlicher und wichtiger ist.
+Wer längere Achsen hat (ich benutze
+500 mm lange Silberstahl-Wellen), kann
+ein magnetisches Maxwell-Rad bauen.
+
+Das Rad besteht aus einer Drehscheibe 60
+(31019), einer Flachnabe 25 (31015) oder
+einer zweiflügligen Nabe 25 (31014), einem
+Neodym-Magneten mit 4 mm Durchmesser
+und 10 mm Länge sowie zwei Achsen 30.
+Der Magnet wird in die Nabe geschoben
+und die Achsen außen angesetzt. Eine der
+Achsen muss durch einen Papierschnipsel
+fixiert werden. Die gesamte Achse des
+Rades ist 7 cm lang.
+Die Stäbe gehen nach unten etwas auseinander, so dass sie in ungefähr 6 cm Höhe einen
+Abstand von 7 cm übersteigen.
+Dazu besteht der Fuß aus 2 Bausteinen 15
+mit Loch, einem BS 30, einem BS 15,
+einem BS 7,5 und zwei BS 5. Die weiteren
+BS 30 dienen der Stabilität und die vier
+BS 5-Füßchen brauchen wir, damit die
+Stäbe unten durch Klemmbuchsen gehalten
+werden können.
+Am oberen Ende werden die Stäbe auf
+Abstand gebracht durch 5 Bausteine 15 mit
+Loch. Ein paar Klemmbuchsen dazu, fertig.
+
+
+
+
+Rades – es wird magnetisch an den Stäben
+festgehalten. Lässt man los, rollt es, magnetisch gehalten, immer schneller nach unten
+(zweites Bild in Abb. 20). Hat es die
+unterste Position erreicht (drittes Bild),
+wechselt es die Seite (die Achse ist jetzt
+hinter den Stäben) und rollt durch das Trägheitsmoment ein Stück nach oben (Abb. 20
+rechts). Das wiederholt sich zwei- bis dreimal.
+
+Der Aufstieg des Rades wäre sauberer mit
+kegelförmigen Achsen. Die Aufstiegshöhe
+ist wegen der Verluste durch die Achsreibung begrenzt.
+
+Quellen
+[1]
+
+H. Joachim Schlichting: Kreiselphänomene.
+
+[2]
+
+Christian Ucke: Ungewöhnliche
+Kreisel.
+
+
+
+

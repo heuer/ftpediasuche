@@ -1,0 +1,290 @@
+
+Modell
+
+Modell
+
+Ferngesteuerter Raupenbagger
+Werner Hasselberg
+Bagger sind des Bastlers liebstes Kind: Sie vereinen viele spannende, technische Raffinessen
+vom Kettenantrieb über Schwenkmechanismus und Baggerarm bis hin zur Schaufel. Alles
+Dinge, die gerade mit fischertechnik viel Spaß bei der Umsetzung machen, weil sie abseits der
+normalen Hydraulik wunderbar flexible Modelle ermöglicht. Flexibel deshalb, weil ein
+Hydraulikzylinder immer auf seine vorgegebene Größe beschränkt ist. fischertechnik dagegen
+ist grenzenlos, da anstelle der Zylinder mechanische Getriebe zum Einsatz kommen, die beliebig an die Modellgröße angepasst werden können. Der hier vorgestellte Bagger ist über 70cm
+lang und damit ein echtes Großmodell wie aus den guten alten Tagen des Schwerlastkrans oder
+der Containerbrücke. Insbesondere ist das Modell mit seinen sechs Motoren voll fernsteuerbar
+– mit nur einem Empfangsmodul. Das funktioniert ganz ohne technische Sonderteile oder
+spezielles Elektronikwissen mit der originalen fischertechnik-Elektronik bzw. Elektromechanik.
+
+
+Das Chassis
+Es muss stabil aufgebaut und kräftig im
+Antrieb sein, weshalb zwei XM-Motoren
+zum Einsatz kommen. Jeder Motor wird
+doppelt durch ein Z20 und ein Z10
+
+untersetzt und am Ende nochmal mittels
+einem Z15 und Z10. Das gibt enorme Kraft,
+ohne dass die Geschwindigkeit vernachlässigt wird. Der Bagger rollt auf diese
+Weise recht flott durch die Gegend.
+
+
+
+
+
+
+Der Antrieb geht direkt an die Hauptachsen
+der großen Zahnräder an Front- und Rückseite, was eine bessere Lösung als ein Antrieb über eines der Seitenräder darstellt,
+weil die Ketten schnell mal über sie
+springen können. Die Frontachsen dürfen
+selbstverständlich nicht durchgehend sein,
+weil der Bagger ja gelenkt werden muss, die
+Ketten also unterschiedlich schnell oder
+entgegengesetzt laufen müssen.
+
+
+Beim Anbringen des jeweiligen Motors
+links und rechts ist zu beachten, dass die
+Statik-Winkelträger 30 unmittelbar hinter
+dem Motor so angebracht werden, dass die
+Seite mit der Nut auf der Seite der Stecker
+liegt (Abb. 3). Denn dies ist die schmalere
+Seite des Winkelträgers 30, und so kann der
+Stecker exakt an ihr entlang zum Motor
+geführt werden.
+Die Kabelanschlüsse werden am Motor
+vorbei unter dem mittleren Aufbau nach
+oben zum Bagger geführt. Er enthält den
+Akku und die Steuerung. Somit kann er
+nicht beliebig oft um seine eigene Achse
+schwenken, weil sich sonst die Kabel zu
+sehr verdrehen. Das ist aber ein zu vernachlässigender Aspekt.
+
+
+Beispielsweise hat man sich das im LegoTechnik-Seilbagger gespart, sodass dieser
+leider nur vor- oder rückwärts fahren kann.
+Ein Bagger sollte aber auch gelenkt werden
+können. Die folgende Abb. 5 zeigt, wie an
+beiden Enden jeweils zwei Achsen zum
+Einsatz kommen.
+
+
+Das rechte Rad ist also nur lose eingeschoben und nicht gegenfixiert, was aber
+nichts ausmacht, da es von der Kette gut
+gehalten wird, sogar bei wilderen Lenkmanövern. Problemtisch ist eher die linke
+Stange, da sie einen Gegenhalt auch auf der
+rechten Seite benötigt, denn die Ketten
+übertragen viel Kraft und Zug auf die
+großen Antriebsräder. Das ist auch der
+
+Grund, weshalb zwei Z15 verwendet werden. Beide sind fest auf einer Stange fixiert
+und treiben so das linke große Zahnrad an.
+
+Modell
+
+Außerdem werden die oberen Z15 an
+Achsen 50 befestigt (Abb. 8).
+
+Dasselbe Konstrukt befindet sich auf der
+Bagger-Rückseite, nur mit dem Unterschied, dass sich das Antriebsrad auf der
+anderen Seite befinden muss – logisch.
+linken Rades und zusätzlich auch das rechte
+Rad fixiert werden.
+Dazu werden an die Achsen die roten BS15
+mit Bohrung geschoben und am BS5
+montiert.
+
+
+Das Chassis ist mit zwei Achsen 200 an der
+Unterseite stabilisiert und kann sich so
+seitlich nicht durchbiegen. An den Enden
+dieser Achsen befinden sich auf jeder Seite
+Z15. Die übrigen Z15 für die Kettenführung
+werden mit Achsen 60 angebracht.
+
+Zur Abdeckung der Seiten werden Doppelknoten- und Eckknotenplatten mit Statikstreben sowie Laschen verbunden und an
+die beiden Achsen 200 mittig sowie an die
+Achsen der großen Zahnräder mit Klemmbuchsen befestigt. Fertig ist das Chassis.
+
+
+Der Bagger
+
+
+Unten führen auf jeder Seite vier Z15 die
+Kette. Oben genügen auf jeder Seite drei.
+Um das Gewicht so gering wie möglich zu
+halten, sind im Chassis viele Statik-Winkelträger anstelle der BS30 und BS15 verbaut.
+
+Das grundsätzliche, aber lösbare Problem
+ist die Mechanik des Baggerarms, besonders wenn man alles frei gestalten will und
+deshalb die Standard-Pneumatik-Zylinder
+nicht verwenden kann, weil deren Größe
+nicht passt. Das ist aber kein Problem, denn
+fischertechnik bietet Alternativen, die mal
+wieder zeigen, wie flexibel es ist.
+Somit werden uns die klemmbaren Schnecken in Kombination mit einem starken
+Getriebe (wie das mot. 2) zeigen, was in
+ihnen steckt.
+
+
+
+
+
+Das mot. 2 dreht in möglichst großer
+Untersetzung über eine Kette und Kegelzahnräder, womit der Querantrieb in einen
+Längsantrieb umgelenkt wird, die Schnecken entlang einer Metallachse. Das sorgt für
+eine unglaubliche Kraftübertragung, wobei
+das Schneckengewinde das Gewicht des
+Armes auffängt und er damit nicht ständig
+an den Zahnrädern zerrt. Das schließt auch
+aus, dass er, wenn er länger mit gehobenen
+Arm steht, langsam infolge seines Gewichtes nachgibt. Die folgende Abb. 11 zeigt die
+Getriebemechanik noch etwas detaillierter.
+
+Beim echten Bau kann der Arm ja beliebig
+manuell auf und ab bewegt und damit an der
+Schneckenmutter befestigt werden.
+Die Metallachse mit den Schnecken muss
+stabil verbaut werden, damit sie das
+ordentliche Gewicht des Armes auch halten
+kann.
+
+
+Die Statik-Streben des Baggerarms sind
+dort noch nicht mit der Schneckenmutter
+verbunden. Das liegt aber nur daran, dass es
+im Designer schwierig ist, den Arm als
+Ganzes zu bewegen, sodass er direkt passt.
+
+
+
+Hinten halten doppelte Statik-Winkelträger,
+mit roten Bauplatten „verschraubt“, das
+Armgewicht ebenso locker und stabil.
+
+
+Modell
+
+diesem Drehkranz für das mini-mot-Getriebe angefertigte rote Schnecke mit Metallstange und dazugehörigem Zahnrad.
+
+
+Weitere Statik-Streben, leicht schräg in die
+Winkelträger geschoben, spannen die Kette.
+Damit kann sie bei Belastung nicht über das
+Zahnrad springen. Das Oberteil sieht dann
+so aus:
+
+Leider ist sie in der derzeitigen DesignerVersion (Stand 2018) nicht als Bauteil
+enthalten, weshalb die dargestellt Lösung
+an deren Stelle tritt. Einfach beim Nachbau
+die rote anstelle der schwarzen einbauen.
+Sie passt exakt in die dafür vorgefertigte
+Umgebung.
+
+
+Die Fernsteuerung
+
+
+Die roten BS7,5 an der Seite halten die
+Seitenplatte. Die Lücken sparen ein paar der
+kostbaren Steine und bieten ausreichend
+Halt. Auf der anderen Seite, die in Abb. 14
+bereits komplett aufgebaut ist, wird genauso
+vorgegangen.
+
+Die Bagger-Drehung
+Die folgende Abb. 15 zeigt die Drehmechanik. Sie wird unten am Baggeroberteil
+angebracht und dreht sich gemeinsam mit
+dem Bagger. Die in der Abbildung gezeigte
+Schnecke entspricht jedoch nicht der tatsächlich im Modell verbauten – dort
+befindet sich stattdessen die ursprünglich zu
+
+Kommen wir schließlich zum wichtigsten
+Teil, der versprochen vollständig fernsteuerbaren Funktionalität des Baggers. Es
+gibt nur eine Winzigkeit, die davon abweicht: Das ist der Polwendeschalter in der
+Kabine. Mit ihm werden alle Lampen
+oberhalb des Führerhauses und im Chassis
+vorne eingeschaltet. Die mechanische Steuerung erfolgt aber komplett über die Fernbedienung.
+Erneut zeigt sich die Vielseitigkeit von
+fischertechnik. Es gibt Taster und eine
+flexibel nutzbare Servolenkung. Was also
+tun? Wir nehmen drei Minitaster und
+montieren sie so, dass die Servolenkung sie
+gleichzeitig ein- und ausschalten kann. An
+den Anschluss in der Mitte des Tasters
+
+
+
+
+kommt jeweils eine Plus-Leitung vom Empfänger der Fernbedienung. Damit sind alle
+drei verfügbaren Motorausgänge schon mal
+vergeben. Jeder Taster verfügt aber noch
+über zwei weitere Steckmöglichkeiten. Jede
+davon erhält die Plusleitung von je einem
+Motor, zusammen also sechs. Somit haben
+wir hier eine Zwei-Motoren-Steuerung pro
+
+Taster. Drei Stück insgesamt, wenn die
+Taster gedrückt, weitere drei, wenn sie
+gelöst sind. Die Minusleitungen gehen
+direkt an die Minusbuchsen des Empfängers. Immer zwei Minusleitungen an einem
+Minusanschluss. Das wiederholen wir für
+alle sechs Stück, wie die folgende Abb. 17
+zeigt.
+
+
+Jetzt müssen die Motoren nur noch so
+angeschlossen werden, dass die Fernbedienung bequem benutzt werden kann. Folgendes bietet sich an.
+∂ Raupenantrieb und Schwenken bei z. B.
+„alle Taster aus“.
+∂ Baggerarm bei „alle Taster ein“.
+
+Die Taster-Schaltung
+Der Servo mit seinem Schwenkhebel wird
+anstelle der beiden schwarzen BS30 angebracht. Leider enthält der Designer auch
+den Servo nicht, weshalb dieser Behelf
+nötig ist. Abb. 19 zeigt aber ein Foto mit
+eingebautem Servo. Der Hebel liegt im
+
+
+Ruhezustand zwischen den beiden Seilrollen. Wird er in die eine Richtung mit
+Maximalausschlag bewegt, schiebt er die
+Stange mit den drei Riegelscheiben am
+Ende über drei Taster, die dann alle gleichzeitig gedrückt werden, und wählt damit die
+Gruppe der Motoren für die Steuerung aus.
+Beim Zurückschwenken des Hebels in die
+Mittelposition (Standard, wenn nicht gelenkt wird) wird die Stange nicht zurückgeschoben, sondern hält die Taster weiterhin
+gedrückt. Erst wenn in die andere Richtung
+maximal „gelenkt“ wird, schiebt der Hebel
+die Stange wieder zurück und löst damit die
+Taster. Analog zu vorher bleiben sie gelöst,
+auch wenn der Servohebel wieder in seine
+Ausgangsstellung zurückgeht.
+
+
+Modell
+
+
+So kann schnell und einfach zwischen je
+drei Motoren gewechselt und damit sechs
+Stück mit nur einer Fernbedienung und
+einem Empfangsteil bequem gesteuert
+werden. Mit einem zweiten Empfangsteil
+wären sogar 12 möglich. Das soll ein
+anderes System fischertechnik erst einmal
+nachmachen… Abb. 19 zeigt die Schaltung
+mit montiertem Servo, Abb. 20 zeigt
+schließlich das fertige Modell in natura und
+mit einer klassischen Baggerschaufel.
+
+
+Aus Platzgründen konnte ich hier nicht alle
+Details ausführen, ich kann bei Interesse
+aber gerne eine ausführliche Bauanleitung
+zusenden. Schreibt dazu eine E-Mail an
+Werner.Hasselberg@web.de. Ansonsten
+bleibt mir nur noch, euch viel Spaß beim
+Nachbauen zu wünschen.
+
+
+

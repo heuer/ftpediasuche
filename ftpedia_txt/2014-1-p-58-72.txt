@@ -1,0 +1,785 @@
+
+
+Pneumatik
+
+Druckluftsteuerungen (Teil 1)
+Stefan Falk
+Wie in ft:pedia 4/2013 versprochen, beginnen wir mit diesem Artikel eine kleine Reihe zu
+pneumatischen Steuerungen. Im Gegensatz zur einfachen manuellen Ansteuerung eines
+Zylinders mit dem aktuellen Handventil werden wir Logikschaltungen und Steuerungen in
+reiner Pneumatik realisieren.
+
+Einführung
+Fangen wir mit einem einfachen Beispiel
+an: Unter Verwendung eines PneumatikHandventils können wir einen Zylinder
+nach Belieben ein- oder ausfahren lassen:
+Handventils
+
+
+Was genau macht das Handventil hier?
+Zunächst mal besitzt es drei deutlich sichtbare Anschlüsse für Schläuche: Am oberen
+wird die Druckluft zugeführt. Diese wird je
+nach Stellung des Drehknopfes auf eine
+der beiden anderen verteilt.
+In der mittleren Stellung wird die Druckluft an keinen der beiden Ausgänge weitergeleitet. In den beiden gedrehten Stellungen hingegen bekommt jeweils einer
+der Ausgänge die Druckluft zugeführt:
+
+Wenn das ein Schalter für elektrischen
+Strom wäre, endete die Beschreibung der
+Funktionsweise hier schon. Bei Druckluft
+müssen wir aber an eine wesentliche
+Ergänzung denken: Was würde passieren,
+wenn wir eine Seite des Zylinders unter
+Druckluft setzen und diesen Anschluss
+beim Umschalten des Ventils einfach nur
+zusperren? Die Druckluft wäre ja immer
+noch im Zylinder, und er würde sich nicht
+so bewegen, wie wir das wollten, weil nun
+einfach nur auf beiden Seiten Druckluft
+anliegt. Die Druckluft muss also unbedingt
+auch wieder aus dem Zylinder heraus!
+die Zylinderhälften hinein, aber nicht, wie
+sie wieder heraus kommt. Tatsächlich hat
+das Handventil nämlich einen vierten
+Anschluss: Eine kleine Öffnung auf der
+Seite der Schlauchanschlüsse. In der
+mittleren Stellung ist diese LuftauslassÖffnung mit keinem der drei anderen
+
+
+Pneumatik
+
+Anschlüsse verbunden. In den gedrehten
+Stellungen aber besteht eine Verbindung
+zwischen dem gerade nicht mit Druckluft
+verbundenen Ausgang und der Entlüftung.
+Auf diese Weise kann die vorher hineingepumpte Luft aus derjenigen Zylinderöffnung ins Freie entweichen, die gerade
+nicht mit Druckluft beaufschlagt wird.
+Damit haben wir mit dem Handventil
+tatsächlich ein Ventil mit vier Anschlüssen
+(„Wegen“) und drei Stellungen, im Pneumatik-Jargon also ein „4/3-Wege-Ventil“
+vorliegen. Das entsprechende Schaltbild
+macht die Sache deutlicher, als wir es in
+einer Skizze wie Abb. 2 darstellen können:
+
+
+
+Das Ventil ist in der mittleren Stellung
+gezeigt: Alle vier Anschlüsse (Druckluftanschluss, die beiden Ausgänge in
+Richtung Zylinder sowie die Abluft ins
+Freie) sind verschlossen, also mit nichts
+anderem verbunden.
+
+Solange wir den Zylinder lediglich einund ausfahren wollen, benötigen wir die
+mittlere Schaltstellung nicht. Für diesen
+Zweck reicht ein 4/2-Wege-Ventil, also
+eines mit immer noch vier Wegen/
+Anschlüssen, aber nur zwei Schaltstellungen, völlig aus:
+
+Der Betätigungshebel links vom Ventil im
+Schaltbild – sinnbildlich für den Drehknopf an unserem Handventil – kann das
+Ventil in eine von drei Stellungen schalten.
+Jedes der drei Quadrate im Ventil-Schaltzeichen steht für eine Schaltstellung.
+in den beiden gedrehten Knopfstellungen.
+Die Pfeile im Schaltbild stellen also
+jeweils dar, von und nach wo Druckluft
+strömen kann:
+
+4/2-Wege-Ventil
+
+
+
+Beim fischertechnik-Handventil entspricht
+das der ausschließlichen Nutzung der
+beiden gedrehten Schalterstellungen; die
+mittlere Stellung wird nicht verwendet.
+
+Automatische Rückstellung
+Im Sinne der Elektromechanik-Sprechweise ist unser Handventil ein Schalter.
+Jede gerade eingenommene Stellung bleibt
+erhalten, bis aktiv eine andere gewählt
+wird. Eine automatische Rückstellung
+findet nicht statt. Die pneumatische
+Entsprechung eines fischertechnik-Tasters,
+der ja nach dem Loslassen automatisch in
+seine Ruhestellung zurückkehrt, ist ein
+Ventil mit automatischer Rückstellung. Die
+in einem Taster verwendete Feder wird im
+entsprechenden Pneumatik-Schaltzeichen
+explizit dargestellt:
+
+durch ein anderes
+
+In den 1981 eingeführten PneumatikKästen von fischertechnik waren tatsächlich öffnende und schließende 3/2-WegeVentile enthalten [1]:
+
+
+Zudem muss die Betätigung durchaus nicht
+manuell geschehen, sondern kann ebenso
+gut per Druckluft erfolgen – auch wenn
+diese enorm nützliche Möglichkeit in den
+aktuellen Pneumatik-Kästen bedauerlicherweise völlig unterschlagen wird.
+Ein Beispiel zeigt Abb. 8. Wir haben hier
+einen „pneumatischen Taster“, also ein
+3/2-Wege-Ventil mit Rückstellung, dessen
+Ausgang per Druckluftleitung das 4/2Wege-Ventil (ebenfalls mit Rückstellfeder)
+umschaltet.
+
+
+
+Mit den aktuellen Pneumatik-Teilen von
+fischertechnik ist das leider nicht ohne
+größeren Aufwand zu realisieren. Als
+schaltendes Element steht uns lediglich das
+Handventil zur Verfügung, und das ist
+einer
+maschinellen Betätigung nur
+schlecht, um nicht zu sagen miserabel,
+zugänglich: Wir können zwar mit etwas
+Ausdauer Konstruktionen finden, die das
+Ventil z. B. per Motorkraft umsteuern, aber
+die Ansteuerung per Druckluft gelingt
+mangels Alternativen nur über einen
+
+
+Pneumatik
+
+Pneumatikzylinder und endet in einem
+klobigen, uneleganten Teilegrab. Die
+Abbildungen 10 bis 13 zeigen immerhin
+eine Möglichkeit:
+
+
+
+
+Die Mechanik muss für die auftretenden
+Kräfte robust genug ausgeführt werden,
+weil das Pneumatik-Ventil recht schwergängig ist. Deshalb wird der schwenkbare
+Teil von zwei Gelenken gehalten. Das
+äußere sitzt auf einem BS15, das innere auf
+einem BS15 mit zwei Zapfen. Der BS30
+darauf trägt zwei Bausteine 15 ∙ 30 ∙ 5 mit
+drei Nuten, per Federnocken mit dem
+BS30 verbunden. Am unteren Ende sitzen
+innen zwei BS5, die den Griff des Ventils
+eng genug umschließen.
+
+Durch den langen Weg, den der Zylinder
+verfahren muss, um das Ventil ganz durch
+zu schalten, sind die Schaltzeiten leider
+auch nicht berauschend (zum Glück ist das
+für Funktionsmodelle meist nicht so
+schlimm). Der größte Nachteil aber ist die
+Kombination aus langem Verfahrweg und
+großer Kraft, die notwendig ist, das recht
+schwergängige Handventil zu schalten.
+Das Ventil besteht ja nur aus zwei
+ineinander gesteckten Plastikteilen, und
+damit es luftdicht ist, müssen diese sehr
+stramm sitzen. Ein ft-Zylinder mit eingebauter Rückstellfeder reicht leider
+keinesfalls aus, um das Ventil zurück zu
+stellen.
+
+
+
+Das aber bedeutet, dass wir für das
+Umschalten eines Handventils beide Eingänge des steuernden Zylinders benötigen.
+Wir kommen also genau nicht mit einer
+einzigen Steuerleitung aus, sondern
+brauchen immer Druckluft auf einem von
+zwei Anschlüssen anstatt nur Druck oder
+keinen Druck an einem einzigen
+Anschluss. Wir müssen uns also etwas
+einfallen lassen, wenn wir pneumatisch
+angesteuerte
+Pneumatik-Ventile
+verwenden möchten.
+
+3/2-Wegeventile im Eigenbau
+Fangen wir wieder klein an: Das Mindeste,
+was wir zum wahlweisen Beaufschlagen
+einer Leitung mit Druckluft und die Entlüftung derselben benötigen, ist ein 3/2Wege-Ventil. In einer Stellung muss der
+Ausgang mit der Abluft verbunden und die
+Druckluftzufuhr dicht abgeschlossen sein,
+in der anderen Stellung muss der Ausgang
+mit der Druckluft und nicht mit der Abluft
+verbunden sein. Wir können also das 3/2Wege-Ventil (vgl. das linke Ventil in
+getrennte 2/2-Wege-Ventile darstellen
+(Abb. 14).
+
+Vergewissert euch, dass die obere Darstellung dasselbe Resultat bringt wie die
+untere. Die gestrichelte Linie zwischen den
+beiden Ventilen steht für eine mechanische
+Kopplung: Wenn der Betätigungshebel das
+linke Ventil umschaltet, soll gleichzeitig
+auch das rechte umschalten, und wenn die
+Rückstellfeder das rechte zurückstellt, soll
+das ebenfalls aufs linke wirken.
+Die beiden 2/2-Wegeventile sind die einfachsten möglichen Ventile überhaupt: Da
+besteht entweder Durchgang zwischen
+zwei Anschlüssen, oder der Durchgang
+wird verschlossen (beide Anschlüsse enden
+damit „dicht“).
+Das Beste ist nun: Ein solches 2/2-Wegeventil existiert auch unter den aktuellen
+Pneumatikteilen! Bevor ihr nun aber
+vergeblich eure Kästen und die Stücklisten
+danach durchsucht: Wir können dafür
+einfach einen simplen Pneumatikschlauch
+verwenden, den wir nach Bedarf zu
+klemmen. Allerdings ist es gar nicht so
+einfach, den aktuellen ft-Schlauch so dicht
+abzuklemmen, dass auch die ca. 1 bar des
+ft-Kompressors nicht mehr durchkommen.
+Anstatt den Schlauch also – mit zwar
+wenig „Schaltweg“, aber viel Kraftaufwand – abzuklemmen, verwenden wir das
+Abknicken des Schlauches – mit wenig
+Kraft auf Kosten eines etwas längeren
+Schaltweges. Einen Bauvorschlag zeigt
+Das Standard-Pneumatik-Ventil steuert den
+schräg stehenden Pneumatikzylinder nur
+„einfach“ an, also über nur einen einzigen
+Schlauch. Von den drei Ventilanschlüssen
+sind nur die Druckluftzuleitung und ein
+Ausgang verwendet. Der zweite Ausgang
+ist mit einem P-Stopfen verschlossen. Wir
+haben es also nur mit einer einzigen
+Steuerleitung zu tun.
+
+zwei 2/2-Wegeventile
+
+Der Zylinder wiederum ist ein „einfach
+wirkender“, also einer mit eingebauter
+Rückstellfeder. Der dreht das Gebilde aus
+drei mittels Verbinder 45 und (auf der
+
+unteren Seite) zwei Federnocken stabilisierten BS7,5. Dieses wiederum ist drehbar
+auf
+einer
+Rastaufnahmeachse 22,5
+(130593) in einem BS30 mit Bohrung
+gelagert. Auf die Rückseite der Achse
+kommt ein Rastkegelzahnrad oder eine
+Rastkupplung zur Fixierung.
+
+Pneumatik
+
+den beiden Endlagen des Steuerungszylinders immer einer abgeknickt und einer
+durchlässig ist. Je nachdem, in welche
+Endlagenstellung diese Mechanik gebracht
+wird, wird also mal der eine, mal der
+andere Schlauch abgeknickt. Der jeweils
+andere ist hinreichend offen, um Druckluft
+durch zu lassen.
+
+
+Jetzt kommt der Trick: Auf der Drehachse
+fluchtend sitzt ein Pneumatik-T-Stück.
+Von ihm gehen seitlich zwei 5 cm lange
+Schlauchstückchen ab, die beide oben in je
+einem BS7,5 gehalten werden. Ein
+Schlauch endet in einem schwarzen Pneumatik-Anschluss (36200) und ist somit frei
+mit der Abluft verbunden. Der andere wird
+von einem weiteren Pneumatik-T-Stück im
+BS7,5 fixiert und bekommt Druckluft vom
+Kompressor. Ein Anschluss dieses TStücks ist wieder mit einem blauen PStopfen verschlossen.
+
+
+Der zentrale Anschluss des drehbar
+gelagerten T-Stücks ist der Ausgang des
+Ventils. Dieser wird also je nach Stellung
+unseres Selbstbau-Ventils entweder mit
+Druckluft verbunden und der Abluftausgang durch seinen geknickten Schlauch
+verschlossen, oder er wird mit der Abluft
+verbunden und die Druckluftzufuhr ist
+verschlossen. Abb. 17 und 18 zeigen die
+beiden Ventilstellungen:
+
+Die beiden kurzen Schlauchstücke sind mit
+5 cm Länge gerade so bemessen, dass in
+
+
+
+
+oberen Anschlüsse beschalten, führt das
+Ventil eine bestimmte logische Operation
+aus:
+
+
+· Beschalten wir die Anschlüsse so wie in
+den Abbildungen gezeigt, führt der
+Ventilausgang genau dann Druckluft,
+wenn der Eingang des Steuerzylinders
+nicht mit Druckluft beaufschlagt wurde.
+Ihr seht das deutlich daran, dass Steuerund Signalzylinder immer andersherum
+stehen: Ist der Steuerzylinder eingefahren, das Ventil also in Ruhestellung, bekommt der Signalzylinder
+Druckluft und fährt aus, und umgekehrt.
+Wir haben es hier also mit einer
+logischen „Negation“, einem „NichtGlied“ zu tun.
+
+Und es funktioniert! Probiert den Aufbau
+aus und gebt dem Steuerzylinder durch das
+ft-Pneumatikventil abwechselnd Druckluft
+und Abluft. Der als Signalanzeige verbaute
+zweite Zylinder (wiederum ein einfach
+wirkender mit Rückstellfeder) fährt damit
+aus, wenn der Ventilausgang Druckluft
+führt. In der anderen Ventilstellung ist er –
+sonst würde der Zylinder nie mehr einfahren können – korrekt mit der Abluft
+verbunden; die im Zylinder enthaltene
+Druckluft kann abströmen und der Signalzylinder fährt wieder ein.
+
+· Vertauschen wir die beiden oberen
+Anschlüsse des
+Selbstbau-Ventils,
+setzen also den schwarzen P-Anschluss
+und das blaue T-Stück auf das jeweils
+andere Schlauchstückchen, drehen sich
+die Verhältnisse um: In der Ruhestellung des Ventils, wenn also am
+Steuerzylinder keine Druckluft anliegt,
+wird auch der Signalzylinder keine
+bekommen. Beide Zylinder fahren
+damit also gleichzeitig aus bzw. ein.
+Diese logische Operation nennt man
+„Identität“, weil das Eingangssignal
+unverändert auch am Ausgang herauskommt. Das ist durchaus nicht unnütz,
+denn wenn der Druck zum Ansteuern
+des Ventil-Zylinders zwar für dessen
+ordnungsgemäße Funktion ausreicht,
+aber kleiner ist als der Druck, der am
+Eingang des damit gesteuerten 3/2Wege-Ventils anliegt, haben wir damit
+eine Möglichkeit, ein Signal – bei
+unserer Pneumatik also einen Druckpegel – zu verstärken.
+
+Identität und Negation
+
+Tipps zum Aufbau
+
+Damit haben wir schon unseren ersten
+pneumatischen Logikbaustein geschaffen.
+Je nachdem nämlich, wie wir die beiden
+
+Bei korrekter Justierung funktioniert unser
+Selbstbau-Ventil tadellos. Allerdings kann
+es nach einigen Stunden oder Tagen Stillstand schon vorkommen, dass die abge-
+
+
+
+knickten Schlauchstücke sich an ihren
+Zustand „gewöhnt“ haben und nicht mehr
+sauber schalten. Immerhin ist das ja nur ein
+aus der Not geborener Behelf, weil die
+originalen mechanisch gut ansteuerbaren
+Ventile von fischertechnik – sehr zum
+Bedauern aller, die sie kennen – nicht mehr
+hergestellt werden und nie ein adäquater
+Ersatz kam. Aber: Auch nach längeren
+Stillstandszeiten kann man die Ventile
+doch immer wieder mit etwas „Einspielen“
+zur korrekten Funktion bewegen. Vor
+allem aber ist das selbstgebaute 3/2-Wegeventil ja erst der Anfang!
+
+Pneumatik
+
+betätigten 4/2-Wegeventils
+
+Das pneumatische Relais
+Unser nächstes Zwischenziel lautet: Wir
+wollen einen Pneumatik-Zylinder dadurch
+ein- und ausfahren lassen können, dass wir
+einen einzigen (!) Anschluss mit Druckluft
+beaufschlagen (der Zylinder soll aktiv ausfahren) oder mit der Abluft verbinden (der
+Zylinder soll aktiv einfahren).
+Dazu verwenden wir zwei der selbstgemachten 3/2-Wegeventile und steuern
+diese durch einen einzigen Pneumatikzylinder mit Rückholfeder an. Unser
+Aufbauvorschlag zeigt eine weitere
+Möglichkeit,
+das
+Abknicken
+von
+Schläuchen geschickt zum Schalten zu
+verwenden:
+
+
+
+betätigten 4/2-Wegeventils
+
+Ein Pneumatik-Zylinder (hier wieder ein
+einfach wirkender) verschiebt einen BS15,
+der längs von zwei Achsen geführt wird.
+Am Anfang und Ende des Verfahrweges
+werden wieder BS7,5 in geeignetem
+Abstand angebracht, in denen die (jetzt
+vier) 5 cm langen Schlauchstücke gehalten
+werden. Auf zwei der BS7,5 stecken links
+und rechts je ein Pneumatik-T-Stück.
+Vergleichen wir diese Konstruktion mit
+dem Schaltbild eines elektromechanischen
+Relais [2]:
+
+
+
+
+Ruheanschlüsse sind die fest gehaltenen
+vier Schlauchenden.
+
+
+Genau wie bei einem elektromechanischen
+Relais besitzt unser pneumatischer Aufbau:
+· eine Steuerleitung: Das ist der einzige
+benutzte Druckluftanschluss des Zylinders. Anstelle des zweiten Anschlusses
+des Elektromagneten in einem Relais
+gibt es in der Pneumatik ja das
+Verbinden dieses Anschlusses mit der
+freien Abluft.
+· zwei getrennte „Umschaltkontakte“:
+Die beiden Zentralkontakte sind die
+beiden auf dem beweglichen Schlitten
+befestigten T-Stücke; die Arbeits- bzw.
+
+Damit gelingt es, mit nur einem Eingangssignal am Zylinder einen weiteren Zylinder
+komplett vor und zurück zu steuern. Wir
+schließen die vier feststehenden Enden der
+abknickbaren kurzen Schlauchstückchen so
+an, dass immer genau einer der zentralen
+Ausgänge der beiden T-Stücke mit der
+Druckluft und der jeweils andere mit
+Abluft verbunden ist. In Abb. 22 wird die
+Druckluft an beide feststehenden T-Stücke
+durch das schräg über das Ventil verlaufende kurze Schlauchstückchen zugeführt. Die anderen, in diesem Bild unten
+liegenden, freien Enden werden wieder mit
+schwarzen Pneumatik-Anschlüssen in den
+BS7,5 festgeklemmt und sind Abluftausgänge. An die beiden zentralen (beweglich
+gelagerten) Ausgänge der T-Stücke am
+verschiebbaren BS15 wird schließlich der
+zu steuernde Zylinder angeschlossen.
+
+
+
+Pneumatik
+
+Eine pneumatisch gesteuerte
+Presse
+Das wollen wir zu einem vollständigen
+Modell ausbauen und dabei gleich noch ein
+paar Pneumatik-Kniffe kennenlernen.
+mit folgenden Eigenschaften, die wir nach
+und nach entwickeln werden:
+1. Ein Pneumatik-Zylinder soll einen
+Press-Kopf zum Pressen eines Teiles
+herunterdrücken und danach wieder
+hochziehen.
+
+eine
+„Zwei-Hand-Steuerung“:
+Die
+Presse darf sich nur dann absenken,
+wenn zwei links und rechts neben der
+Presse angebrachte Druckknöpfe gleichzeitig niedergedrückt werden. Das
+verhindert, dass etwa eine Hand des
+Bedienpersonals in die Presse gelangt.
+3. Der Pressvorgang soll langsam
+ablaufen. Der Press-Zylinder muss also
+den Presskopf nicht nach unten
+schlagen, sondern langsam und sanft
+aufsetzen. Natürlich muss er aber trotzdem mit vollem Druck pressen.
+
+2. Aus Sicherheitsgründen benötigen wir
+
+
+
+
+
+4. Sobald auch nur einer der beiden
+Druckknöpfe vom Personal losgelassen
+wird, soll sich die Presse sofort und
+schnell
+heben.
+Also:
+Langsam
+absenken, aber schnell anheben!
+· die eigentliche Presse,
+· unser selbstgebautes 4/2-Wege-Ventil,
+· zwei selbstgebaute und als Taster realisierte 3/2-Wege-Ventile,
+· eine Drossel/Rückschlagventil-Kombination, auf die wir später noch ausführlich zu sprechen kommen sowie
+· ein Kompressor als Druckluftquelle.
+Am Schaltbild (Abb. 26) gehen wir die
+einzelnen Baugruppen Schritt für Schritt
+durch:
+Zum Bau der Presse
+Der grundsätzliche Aufbau der Presse ist
+auf Abb. 25 gut erkennbar mit folgenden
+Details:
+· Die Statikträger sind oben per Federnocken mit den waagerecht liegenden
+BS30 verbunden. Sie bleiben ein kleines
+
+bisschen nach außen verschoben, damit
+der auf und ab gleitende Presskopf sich
+nicht an ihnen reibt.
+· Die langen Metallachsen, an denen der
+Presskopf gleitet, sind gegen Herausrutschen aus ihrer unteren Führung
+dadurch gesichert, dass in den beiden
+oberen senkrechten BS30 zwischen
+Achse und Statikträger-Abschluss noch
+je ein S-Riegel steckt. Der verhindert,
+dass die Achsen beim Hochziehen des
+Presskopfes so hoch mitgezogen werden
+können, dass sie unten aus den führenden BS15 heraus kommen.
+· Die drei Winkelsteine 60° sind mit
+einem Verbinder 45 mit den Grundbausteinen verbunden.
+Zweihandsteuerung
+Damit wie verlangt jemand mit beiden
+Händen je einen „Taster“ niederdrücken
+muss, bauen wir also zwei gleiche 3/2Wege-Ventile und schalten sie – gerade
+wie elektrische Taster! – in Serie, damit
+Druckluft am letzten Ausgang nur dann
+anliegt, wenn beide Taster gleichzeitig
+niedergedrückt werden. Ist auch nur einer
+der Taster losgelassen, muss der letzte
+Ausgang mit Abluft verbunden sein. Dazu
+
+verwenden wir wieder einen auf Achsen
+verschiebbaren BS15, auf dem ein Pneumatik-T-Stück sitzt. Am BS15 bringen wir
+einen roten Winkel als Betätigungsknopf
+an, und diesen lassen wir von einer ftDruckfeder automatisch nach oben zurückstellen (vgl. Abb. 24).
+
+Pneumatik
+
+T-Stücks mit Druckluft anstatt Abluft
+verbunden wird.
+
+
+Wieder verwenden wir 5 cm lange
+Schlauchstücke
+als
+abklemmbares
+Element, lagern sie in je einem BS7,5 und
+fixieren sie darin mit einem schwarzen
+Anschlussstück in Richtung Abluft bzw.
+mit einem T-Stück (mit Stopfen auf einem
+Anschluss) für die Druckluftzufuhr. Der
+mittlere Anschluss des bewegten T-Stücks
+ist der Ausgang des Ventils. Damit das
+Abklemmen richtig funktioniert, müssen
+die BS7,5 nahe genug am beweglichen
+BS15 angebracht werden.
+Im Ruhezustand des Ventils, also in seiner
+durch die Feder erzwungenen oberen
+Stellung, ist er mit der Abluft verbunden.
+Im betätigten Zustand, also wenn der rote
+Winkelbaustein auf der Vorderseite niedergedrückt wird, kommt der verschiebbare
+BS15 mit seinem T-Stück darauf unten zu
+liegen, wodurch der zentrale Ausgang des
+
+
+Der zentrale Ausgang des T-Stücks des
+ersten Ventils (Abb. 27) führt nun zum
+Eingang des zweiten Taster-Ventils auf der
+anderen Seite der Presse (Abb. 28). Sein
+Druckluftzugang – in Abb. 28 das fix
+angebrachte T-Stück mit Stopfen rechts
+oben – ist also mit dem Ausgang des ersten
+Ventils verbunden. Erst der Ausgang
+dieses zweiten Tasters geht auf den
+Steuerungs-Zylinder unseres selbstgebauten 4/2-Wege-Ventils mit Rückstellung, das in der Mitte der Bauplatte 500
+Platz findet.
+Ansteuerung des Pressenzylinders
+Vom auf diese Weise angesteuerten 4/2Wege-Ventil gehen also die Ausgänge –
+die zentralen Anschlüsse der beiden
+beweglichen T-Stücke – an den Pressenzylinder. Bis hier hin könnt ihr das Modell
+
+
+
+schon aufbauen und testen. Fast alle unsere
+Anforderungen haben wir damit schon
+erfüllt: Nur wenn beide Taster gleichzeitig
+betätigt werden, senkt sich die Presse ab.
+Lässt man einen oder beide Taster los,
+wird die Presse unverzüglich wieder
+angehoben.
+Langsames Verfahren eines
+Zylinders
+Wenn wir den Pressen-Zylinder direkt mit
+den Ausgängen unseres 4/2-Wege-Ventils
+verbinden, fährt die Presse allerdings noch
+sehr schnell auf und ab. Wir wollten aber,
+dass sie sich ganz langsam absenkt und
+sanft aufsetzt, ohne zu „schlagen“.
+Dafür müssen wir die Stärke des Luftstroms drosseln, also weniger Luftmenge
+pro Zeit durch die Schläuche strömen
+lassen. Dafür gibt es ein Pneumatik-Bauteil
+unter dem treffenden Namen Drossel:
+
+
+Ein Baustein 30 mit Bohrung wird mittels
+zweier Verkleidungsplatten und einer
+Schneckenmutter 15x15x15 m1 (35973) so
+mit einer Rastschnecke 57,5 m1 (35977)
+verbunden, dass die Rastschnecke in die
+Bohrung des BS30 hinein geschraubt
+werden kann.
+
+
+von 1981
+
+Diese Bauteile werden allerdings leider,
+wie die Festo-Ventile, nicht mehr hergestellt. Allerdings ist deren Funktion
+wirklich leicht nachzubilden: Wir brauchen
+ja nur ein Stück Schlauch mehr oder
+weniger stark zusammen zu drücken. Das
+gelingt leicht mit einem Aufbau wie in
+
+
+Durch die Längsnut des Bausteins führen
+wir einen Pneumatikschlauch, der dann
+durch Verdrehen der Schnecke im Querschnitt verengt werden kann. Für unser
+Modell trägt der BS30 noch zwei Federnocken zur Befestigung auf der Bauplatte.
+Zunächst könnten wir also eine Schaltung
+wie folgt aufbauen (zum Ausprobieren
+könnt ihr als 4/2-Wege-Ventil auch das
+aktuelle, fertige ft-Pneumatikventil mit
+Handsteuerung verwenden – im Moment
+geht es ja nur um die Drossel):
+
+
+Pneumatik
+
+um ein (manchen vielleicht seltsam vorkommendes) Bauteil aus dem SelbstbauKompressor mit dem S-Motor, das 32061
+Pneumatik-Rückschlagventil:
+
+
+Seine Funktionsweise wird sofort klar,
+wenn wir uns sein Schaltbild anschauen:
+
+Die in Abb. 31 in der Schlauchführung zu
+einem
+Zylinderanschluss
+eingeführte
+Drossel bewirkt also, dass durch diesen
+Schlauch die Luft nicht mehr so schnell
+strömen kann, wie es ohne Drossel der Fall
+war. Damit der Effekt tatsächlich merkbar
+wird, müssen wir die Drosseln übrigens
+fast ganz zu drehen und recht fein
+justieren.
+Verlangsamung in nur einer
+Bewegungsrichtung
+Auf diese Weise haben wir ein weiteres
+Teilziel erreicht: Die Zylinderbewegungen
+gehen nun langsamer. Allerdings wollten
+wir ja, dass nur das Absenken der Presse
+langsam geht, während das Anheben so
+schnell wie möglich geschehen soll. Wir
+müssen also dafür sorgen, dass die in
+wenn der Zylinder gerade ausfährt. Beim
+Einfahren soll die Luft hingegen ungehindert strömen dürfen.
+Das gelingt durch ein pneumatisches Bauteil, das in der Elektronik der Diode [3]
+entspricht: Ein Rückschlagventil lässt Luft
+nur in eine Richtung durch strömen,
+während es den Luftstrom in die andere
+Richtung vollständig verhindert. Ein
+solches Bauelement gibt es noch recht
+aktuell von fischertechnik. Es handelt sich
+
+
+Da sitzt tatsächlich eine Kugel in einer
+Aufnahme. Die wird (das zeigt das Schaltbild nicht) von einer Druckfeder so abdichtend in eine Spitze gedrückt, dass keine
+Luft durchströmen kann. Im fischertechnik-Rückschlagventil ist diese Feder
+deutlich zu sehen.
+In Abb. 34 kann Luft nicht von links nach
+rechts strömen, weil die Kugel den
+Ausgang verschließt. Der anliegende Luftdruck sorgt sogar dafür, dass die Kugel nur
+noch fester gedrückt wird. In die andere
+Richtung wird die Kugel aber durch die
+Druckluft gegen die Federkraft weg von
+der Spitze gedrückt, und die Luft kann
+strömen.
+Dieses Bauelement schalten wir nun
+einfach parallel zur Drossel und erreichen
+damit den gewünschten Effekt. In eine
+Strömungsrichtung sperrt das Rückschlagventil, und die Luft muss durch die enge
+Drossel hindurch. In die andere Richtung
+kann die Luft praktisch frei an der Drossel
+vorbei durch das Rückschlagventil strömen. Das ergibt in der Gesamtschaltung
+des Modells den gewünschten Effekt:
+Beim Pressen senkt sich der Press-Kopf je
+nach Einstellung der Drossel langsam ab,
+während die Aufwärtsbewegung ungehindert schnell abläuft.
+
+
+
+
+und Lastverhältnissen
+ruckelnde Bewegung.
+
+eine
+
+unschön
+
+Die Drosselung der Abluft aber ergibt eine
+wunderbar gleichmäßige, ruhige und je
+nach Drosseleinstellung extrem langsame
+Bewegung. Deshalb ist es wichtig, dass
+
+Rückschlagventil
+
+Richtiges Drosseln – Abluftdrosseln
+Wenn man Zylinder majestätisch langsam
+ein- und ausfahren lassen will, ist es
+wichtig, auf der richtigen Seite zu drosseln:
+Gedrosselt wird die Abluft, nicht die
+Druckluftzufuhr! Dadurch steht der Pneumatikzylinder nämlich immer von beiden
+Seiten unter Druck. Er wird zwischen der
+zuströmenden Druckluft auf der einen, und
+der durch die Drossel nur langsam
+abströmenden Luft auf der anderen Seite
+fest eingespannt. Während der gesamten
+Bewegung wird er also von beiden Seiten
+mit hoher Kraft gehalten und ruckelt
+deshalb nicht.
+Würden wir die Zuluft drosseln und die
+Abluft ungehindert abströmen lassen,
+würde sich der Zylinder (wie immer) erst
+dann bewegen, wenn der Luftdruck hinreichend groß ist, um die Haftreibung des
+Zylinders und der zu bewegenden Teile zu
+überwinden. Dann würde es einen kurzen,
+kleinen Ruck geben, bis der Zylinder so
+weit bewegt wurde, dass der Druck nicht
+mehr ausreicht, die Bewegung aufrecht zu
+erhalten – die Zuluft kann ja nur langsam
+einströmen. Das ergäbe je nach Reibungs-
+
+
+a) die Drossel in diejenige Leitung zum
+Zylinder eingebaut wird, durch die in
+der langsam gewünschten Bewegungsrichtung die Abluft strömt und
+b) dass bei schneller anderer Bewegungsrichtung das Rückschlagventil auch in
+der richtigen Richtung parallel zur
+Drossel geschaltet wird, nämlich so,
+dass nur die Abluft von a) gedrosselt
+wird, die zum schnellen Anheben der
+Presse notwendige Zuluft aber ungehindert durchströmen kann.
+Drosseln und ggf. parallel geschaltete
+Rückschlagventile würden auch den pneumatischen Bagger- und Traktormodellen
+aus den einschlägigen fischertechnikKästen gut zu Gesicht stehen. Deren durch
+Zylinder bewegte Arme agieren nämlich
+unnatürlich schnell und schlagen eher, als
+gleichmäßig zu ziehen. Ein paar Drosseln
+an den richtigen Stellen würde die Sache
+erheblich vorbildgetreuer realisieren und
+wäre viel eleganter anzuschauen.
+
+Quellennachweis
+[1]
+
+Falk, Stefan: Perlentauchen (5),
+ft:pedia 4/2013, S. 6-15.
+
+[2]
+
+Falk, Stefan: Motorsteuerungen (4),
+ft:pedia 4/2011, S. 6-20.
+
+[3]
+
+Falk, Stefan: Motorsteuerungen (3),
+ft:pedia 3/2011, S. 4-13.
+
+

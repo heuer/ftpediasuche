@@ -1,0 +1,354 @@
+
+
+Elektronik
+
+Automatik für weichen Motorstart und -stopp
+Werner Hasselberg
+Getreu dem Grundsatz von fischertechnik, technische Bildung zu vermitteln, will dieser
+Beitrag zeigen, wie man mit den Elektronik-Bausteinen von Fischertechnik aus den 1980iger
+Jahren umgeht und was man mit ihnen machen kann. Der Beitrag beschreibt im Detail, wie
+ein Motor vollelektronisch gesteuert langsam zum Stehen kommt, eine gewisse Zeit gestoppt
+bleibt, um dann ebenso langsam wieder auf Touren zu kommen. Dazu existiert im Begleitheft
+[1] bereits ein Vorbild, der „weiche Start und Stopp“ eines Motors, das hier aber
+beträchtlich erweitert wird, um eine vollautomatische Funktionssteuerung zu erhalten.
+Im Mittelpunkt stehen hier das grundsätzliche Verständnis der Schaltungen und
+deren logischer Aufbau; tiefer gehende
+elektronische Theorie soll dabei keine
+größere Rolle spielen. Der Beitrag
+beschränkt sich auf prinzipielle Abläufe in
+den jeweiligen Bausteinen. Deren Bauteile
+sind immer noch im Handel erhältlich, und
+findige Bastler
+bieten vollständige
+Anleitungen zu deren Nachbau im Internet
+an. Natürlich können deren Möglichkeiten
+heute nicht mehr mit einem Interface
+mithalten. Aber dennoch ist es erstaunlich,
+was alles mit diesen Bausteinen möglich
+ist. Ein schönes Beispiel hierfür ist die
+„weiche Start- und Stopp-Automatik“
+eines Motors. Damit kann beispielsweise
+ein Zug der Bau-Spiel-Bahn (BSB)
+langsam anfahren und stoppen, was bei
+automatischen Steuerungen sehr nützlich
+ist. Aber auch für Transportbandsteuerungen oder das vorsichtige Anheben
+von Lasten kann die Schaltung gute
+Dienste leisten.
+
+Alle drei Aufgaben sollen mit nur einem
+System, also mit einer Leistungsstufe (kurz
+LST) und einem Schwellwertschalter
+(SWS) erledigt werden, um möglichst
+wenig Bausteine zu benötigen. Je weniger
+man braucht, desto mehr kann man mit
+dem vorhandenen Vorrat basteln.
+
+Im Handbuch zum „Elektronik“-Baukasten
+(39190) befindet sich bereits die Basis
+unserer Schaltung, ein allein auf der
+Leistungsstufe aufgebauter weicher Start
+und Stopp eines Motors. Mittels eines
+manuellen Schalters wird ein Motor
+
+Zuerst aber ein Hinweis zum „Dunkelimpuls“: Ein Dunkelimpuls bedeutet, dass
+eine Unterbrechung der Beleuchtung eines
+Fotowiderstandes (FW), also ein Nachlassen der Lichtintensität auf dessen Oberfläche, ihn abdunkelt. Geschieht das nur
+
+
+langsam angefahren und ebenso gestoppt.
+Diese Grundlage entwickeln wir zu einer
+vollautomatischen Anlage weiter, so dass
+ein Zug beim Passieren einer Lichtschranke von selbst langsam anhält, (am
+Bahnhof) eine gewisse Zeit steht und dann
+langsam wieder anfährt.
+Die Schaltung muss deshalb folgende
+Aufgaben erfüllen.
+1. Das weiche Aus- und Anschalten des
+Motors,
+2. die Steuerung einer Lichtschranke für
+einen Dunkelimpuls und
+3. das Miteinbeziehen eines Zeitschalters
+für die Wartezeit am Bahnhof.
+
+einen kurzen Augenblick handelt es sich
+um einen Dunkelimpuls. Der Dunkelimpuls ist im Unterschied zum Lichtimpuls
+auf den FW deshalb von Vorteil, weil
+dafür keine Lampe auf dem fahrenden Zug
+montiert werden muss. Lampe und FW
+befinden sich einfach gegenüber und die
+Zuggleise verlaufen dazwischen. Der
+Abstand zwischen Lampe und FW ist
+deshalb auch nicht besonders groß, so dass
+deren Licht für den FW in jedem Fall
+ausreicht, die Elektronik der Bausteine zu
+schalten. Passiert ein Zug die so erzeugte
+Lichtschranke, löst das den Dunkelimpuls
+aus und die Schaltung für das Anhalten
+kann loslegen.
+
+Elektronik
+
+lässt ihn nur sehr kurz hindurch, dann wird
+dessen Widerstand zu groß und es kann
+kein Strom mehr abfließen. Pulsierender
+Gleichstrom lädt den Kondensator (Elko)
+langsamer auf. Erst gegen Ende des Ladevorgangs fließt keine bzw. kaum noch
+Ladung durch den Elko. Genau diese
+Eigenschaft nutzen wir für den langsamen
+Start und Stopp eines Motors. Die folgende
+Abbildung zeigt den Aufbau der Schaltung
+aus dem Elektronik-Anleitungsbuch:
+
+Jetzt können wir uns ganz dem Aufbau der
+Schaltung widmen. Welche elektronischen
+Bauteile sind nötig?
+Ein komplettes System aus dem
+Elektronik-Baukasten, also Spannungsversorgung (SPV), Schwellwertschalter
+(SWS) und eine Leistungsstufe (LST),
+ein Relais aus dem Baukasten em3 oder
+ein Relais mit gleichen Eigenschaften,
+was die Betriebsspannung und die
+Anzahl der Schalter betrifft (wenn
+keines verfügbar ist, kann man sich
+auch mit einem Eigenbau aus den
+fischertechnik Elektromechanik-Baukästen behelfen),
+ein 22
+
+-Widerstand,
+
+drei Dioden sowie
+zwei Elektrolytkondensatoren (Elkos)
+470 µF.
+
+Der weiche Start und Stopp
+Im Begleitheft des Elektronik-Kastens [1]
+wird dazu nicht viel erklärt; das soll hier
+wenigstens im Ansatz nachgeholt werden.
+Im Kern arbeitet die Schaltung mit pulsierender Gleichspannung, also nicht mit der
+Spannung der SPV, sondern direkt vom
+Netzgerät. Reine Gleichspannung ist ungeeignet. Der Kondensator des Baukastens
+
+Elektronik-Begleitheftes [1]
+
+Das blaue Symbol unter dem 22 Widerstand (das blaue, rechteckige Kästchen) stellt den Ein-/Ausschalter dar. Am
+Ausgang C2 der Leistungsstufe hängen der
+Motor und parallel dazu eine Lampe. Sie
+unterstützt das langsamere An- und
+Auslaufen des Motors, weil sich dadurch
+die Stärke des Stroms verringert, der direkt
+durch den Motor fließt. Falls Start und
+Stopp noch nicht gleichmäßig verlaufen,
+kann eine zweite Lampe parallel geschaltet
+werden. Kern der Schaltung ist der Elko
+470 µF in Verbindung mit dem Transistor
+der Leistungsstufe.
+So wie der Elko in der obigen Abbildung
+geschaltet ist, kann er sich über den Motor
+zwar entladen, allerdings ist dessen
+Leistung viel zu schwach und der Widerstand des Motors zu hoch, um direkten
+Einfluss zu nehmen und ihn zu starten. Das
+geht nur über den Transistoreffekt des
+
+
+
+LST-Bausteins. Dessen Basis B2 wird mit
+der (-) Seite des Elkos verbunden. Parallel
+dazu liegt der Schalter mit einem 22 Widerstand (blaue Leitung).
+Ist der Schalter geöffnet, lädt sich der Elko
+über die (+) Schiene vollständig auf. Sein
+Widerstandswert wird dadurch zunehmend
+größer, so dass immer weniger Strom in
+die Basis fließen kann. Der zunehmend
+geringere Steuerstrom bewirkt einen
+zunehmend geringeren Laststrom in C2,
+und der Motor läuft langsam aus.
+Beim Schließen des Schalters kann sich
+der Elko nur über die blaue Leitung
+entladen, was dessen Widerstand sofort
+verringert. Der pulsierende Gleichstrom
+lädt ihn aber sofort wieder nach. Es erfolgt
+somit ein ständiges Ent- und Aufladen des
+
+Elkos. Es fließt aber auch Strom durch die
+blaue Leitung nach B2. Durch den Widerstand ist diese Last alleine zu gering, um
+B2 anzusteuern. Der Elko entlädt sich aber
+auch über diese Leitung, weshalb das
+Entladen insgesamt schneller erfolgt als
+das Aufladen. Durch den damit nachlassenden Widerstand des Elkos steuert B2
+mit langsam steigernder Leistung C2 an
+und fährt den Motor langsam wieder hoch.
+Dieses Prinzip erweitern wir jetzt um eine
+automatische Steuerung. Das erfordert den
+Einsatz des em3-Relais als Schalthilfe.
+Dabei machen wir uns zunutze, dass der
+Elko sich nur dann entladen kann, wenn
+dessen Strom von der Plusseite nach Minus
+abfließen kann (in Abb. 1 durch die blaue
+Leitung zu B2). Anstelle des Schalters
+
+
+verwenden wir jetzt das Relais und
+schalten es an die LST nach Abbildung 2.
+Allerdings wird es nicht an B2 angeschlossen, sondern an C2, und auf den
+Widerstand wird verzichtet. C2 wird
+negativ, sobald Strom an B2 liegt. Das
+schließt den Kreislauf des Relais und
+schaltet es zu gegebener Zeit ein.
+Es fällt auf, dass keiner der Relaiskontakte
+den blauen Schalter ersetzt, sondern das
+Relais selbst als Schalter dient. Sobald es
+anzieht, kann es auch die Entladung des
+Elkos durch C2 bewirken und damit den
+Motor langsam anlaufen lassen, wie zuvor
+der Widerstand in Verbindung mit dem
+Schalter. Der Elko wird hier an B1 angeschlossen – nicht an B2 wie in Abb. 1 –
+denn dieser Basis-Pin ist für den Zeitschalter reserviert. Der Zug fährt also los,
+wenn das Relais anzieht. Sein Widerstand
+entspricht etwa den 22
+der vorherigen
+Schaltung. Die beiden Brücken unten an
+der LST sind nötig, um diese ebenfalls in
+Betrieb zu nehmen, an deren C2-Pin das
+Relais bereits geschaltet ist.
+Im nächsten Abschnitt entwickeln wir den
+automatischen Schalter für das Starten und
+Stoppen des Zuges, die Lichtschranke.
+
+Die Lichtschranke
+Wenn der Zug die Lichtschranke passiert,
+soll der Stoppvorgang eingeleitet werden.
+
+
+Der Fotowiderstand wird im SWS2 am
+unteren Brücken-Pin und (-) angeschlossen
+(siehe Abb. 4) und ein 22 -Widerstand
+an dem (+5 V) Pin und EB gesteckt. Der
+SWS2 ist ausgeschaltet, solange der FW
+beleuchtet wird. Dessen Widerstandswert
+ist in diesem Zustand geringer als der des
+
+Elektronik
+
+SWS2-Poti (je nach Einstellung). Der
+Strom fließt dadurch direkt von (+) über
+den FW direkt zur (-) Schiene ab, ohne in
+die Steuerstufe (den SWS2) zu gelangen.
+Der SWS2 bleibt aus, die rote LED neben
+dem SWS2 leuchtet nicht.
+Wird der FW dagegen abgedunkelt, erhöht
+sich dessen Widerstand erheblich. Sobald
+er höher wird als der des SWS2-Poti, fließt
+Strom in den SWS2 und schaltet ihn ein
+(rote LED leuchtet). Bekommt der FW
+wieder mehr Licht, sinkt sein Widerstand,
+der Strom fließt wieder direkt über die (-)
+Schiene ab und SWS2 schaltet sich wieder
+aus. Passiert also z. B. ein Zug die Lichtschranke, schaltet das den SWS2 ein. Er
+geht jedoch sofort wieder aus sobald der
+Zug vorbei ist, außer er besteht aus vielen
+Wagen und stoppt vorher.
+Eine andere von der Zuglänge unabhängige
+Lösung ist, einen noch so kurzen Dunkelimpuls solange wie nötig zu speichern,
+indem wir den eingeschalteten SWS2 in
+eine so genannte Selbsthaltung versetzen.
+Einmal eingeschaltet, bleibt er durch diese
+Selbsthaltung einfach an, ganz egal ob der
+FW beleuchtet wird oder nicht. Das
+erreichen wir durch eine Diode, die wir
+zwischen QB und EB anbringen (die
+untere der drei Dioden in Abb. 4). Wichtig
+ist die richtige Polung: Ein positives Signal
+muss von QB nach EB gelangen können.
+Einmal eingeschaltet, kann sich der SWS2
+jetzt nur ausschalten, wenn der in Abb. 4
+rechte Anschluss der Diode direkt mit (-)
+verbunden würde oder gar nicht angeschlossen wäre.
+Jetzt kommt das em3-Relais ins Spiel. Es
+ist eingeschaltet, wenn der Fotowiderstand
+beleuchtet ist, denn: C2 führt immer dann
+„-“, wenn QA
+¯¯¯ oder QB
+¯¯¯ des SWS durch die
+beiden Schutzdioden „+“ liefern. Die
+beiden Schutzdioden bewirken ein
+logisches „Oder“ zwischen QA
+¯¯¯ /QB
+¯¯¯ und
+verhindern Kurzschlüsse zwischen den QAusgängen. Das Beleuchten des Fotowiderstandes führt zu „+“ an QB
+¯¯¯ – also
+
+
+
+führt letztlich das Beleuchten des FW zum
+Anziehen des Relais.
+Durch einen Ruhekontakt des Relais
+verläuft die Selbsthaltediode. Sobald eine
+Unterbrechung der Lichtschranke SWS2
+einschaltet, schaltet sich das Relais ja
+sofort aus und die Selbsthaltung des SWS
+wird aktiv: Er bleibt aktiv, weil das „+“Signal von QB bei abgefallenem Relais
+durch die Selbsthaltediode dem Eingang
+EB zugeführt wird. Gleichzeitig startet
+über einen Arbeitskontakt des Relais der
+Zeitschalter des SWS1, der je nach Potiwert die Stoppzeit des Motors vorgibt und
+am Ende das Relais und damit den Motor
+wieder einschaltet.
+
+Zeitschalter für Stoppdauer
+und Wiederanfahren
+Jetzt folgt der einfachste Teil der Schaltung. Der zweite Elko wird am SWS1
+
+Brücken-Pin mit seiner (+) Seite angebracht und seine (-) Seite mit der (-)
+Schiene verbunden. Er wird über einen
+Relais-Arbeitskontakt ein- und ausgeschaltet. Das geht am besten mit der
+Krokodilklemme aus dem Baukasten. Ist
+das Relais eingeschaltet, wird der Elko voll
+aufgeladen. In diesem Zustand ist der
+SWS1 eingeschaltet – die obere rote LED
+leuchtet.
+Schaltet sich das Relais aus (SWS2 ist wie
+zuvor beschrieben jetzt ein), wird der
+Arbeitskontakt unterbrochen. Es findet
+kein weiteres Aufladen statt, und die Zeitverzögerung beginnt. Der Elko beginnt
+sich je nach Poti-Stellung langsam über
+den Brücken-Pin zu entladen.
+Jetzt sind beide SWS eingeschaltet, und
+weil beide über Q̄ mit der LST2 verbunden
+sind, ist diese in jedem Fall ausgeschaltet –
+QA
+¯¯¯ /QB
+¯¯¯ sind (-). Sobald die Wartezeit des
+
+
+
+Elektronik
+
+Zeitschalters abgelaufen ist, schaltet sich
+SWS1 aus. Sofort wechselt QA
+¯¯¯ die Polung
+auf (+) und die LST2 schaltet sich ein.
+Damit schaltet sich das Relais wieder ein
+und der Zug fährt langsam wieder los.
+
+kann. Wichtig ist nur, dass lediglich der
+SWS über den SpannungsversorgungsBaustein betrieben, die LST aber direkt an
+der pulsierenden Gleichspannung des
+Netzteils angeschlossen wird.
+
+Die komplette Schaltung zeigt Abb. 4
+(ohne Spannungsversorgung und die einzelnen Verbindungen der Bausteine über
+die (+) und (-) Schienen). Die sollte aber
+kein Problem darstellen und wird im
+Elektronik-Begleitheft genau beschrieben
+[1], ebenso die Möglichkeiten, wie der
+Elko als Zeitschalter verwendet werden
+
+Viel Erfolg und Spaß beim Basteln!
+
+Quellen
+[1]
+
+Fischer-Werke: Elektronik Baukasten-Begleitheft, Tumlingen, 1981
+
+
+

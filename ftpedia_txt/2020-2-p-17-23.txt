@@ -1,0 +1,273 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Taster, Schalter und Steuerhebel (Joysticks)
+Dirk Fox
+Ein motorisiertes fischertechnik-Modell, das sich nicht einschalten lässt? Undenkbar. Eine
+manuelle Steuerung ohne Steuerhebel, Endlagentaster oder Polwender? Schwer vorstellbar.
+Ein mit Sensoren und Mikrocontroller gesteuertes Modell ohne Taster? Selten. Taster, Schalter
+und Steuerhebel sind unverzichtbare Elemente des fischertechnik-Systems – und mit ein wenig
+Raffinesse bieten sie sogar mehr, als auf den ersten Blick erkennbar. Eine Ideensammlung.
+
+Taster
+Der fischertechnik-Taster wurde in seiner
+Urform im Jahr 1968 ins fischertechnikSystem eingeführt (31332) [1]. Durch die
+transparente Vorderseite konnte man die
+mechanische Funktionsweise sehr gut erkennen – und sofort verstehen. Auf der
+Rückseite war die Beschaltung dargestellt
+(Abb. 1).
+
+
+Taster waren damals und sind oft heute
+noch ein knappes Gut in der Bauteilsammlung. Die Elektromechanik-Baukästen boten jedoch zahlreiche Möglichkeiten, eigene Taster zu konstruieren. Einige Varianten
+sind in der Anleitung zum Baukasten em1
+(30071) beschrieben (Abb. 3) [2], weitere
+finden sich im Hobby-Band 3-1 [3].
+
+1976 wurde die Ur-Form des Tasters mit
+dem Ergänzungskasten em9 durch ein deutlich kleineres Modell („Mini-Taster“,
+37780) zunächst ergänzt und später ersetzt
+[1]. Es hat leider keine transparente Seite
+mehr, daher bleibt die mechanische Funktionsweise verborgen (Abb. 2).
+Dafür können mehrere Taster übereinander
+montiert und so mechanisch „gekoppelt“
+werden, sodass die Betätigung gleichzeitig
+erfolgt.
+
+
+
+Schalter
+Zusammen mit dem „Ur-Taster“ wurde
+1968 ein vielfältig einsetzbarer Kippschalter (31331) in gleicher Bauart und ebenfalls
+mit transparenter Vorderseite eingeführt
+[1]. Er war nicht nur als Ein-/Ausschalter
+einsetzbar, sondern auch als Wechsel- und
+Polwendeschalter (Abb. 5). Außerdem
+besaß der Schalthebel eine mittige Bohrung,
+durch die ein fischertechnik-Seil geführt
+werden konnte. Machte man einen Knoten
+in das Seil, löste dieser eine Umpolung aus
+(Abb. 4).
+
+
+Man kann auch fischertechnik-Taster zu
+einfachen Schaltern umbauen. Auch dafür
+finden sich schon Vorschläge im Experimentierbuch Elektromechanik (39145) aus
+dem Jahr 1981 (Abb. 7) [4].
+
+
+Auch Schalter ließen sich im fischertechnik-System unter Zuhilfenahme der Kontaktstücke 20 (31305) konstruieren. In der
+Anleitung zum em1-Baukasten findet man
+dafür mehrere Vorschläge (Abb. 5) [2].
+Elektromechanik (S. 38) [4]
+
+Mit einer Metallachse 50 und einem Gelenkstein 45 (31008) lässt sich das auch mit
+einem Hebelmechanismus lösen (Abb. 8).
+
+
+Wechselschalter konnten ebenfalls mit
+Kontaktstücken 20 konstruiert werden;
+auch dafür finden sich in der em1-Anleitung
+Beispiele (Abb. 6).
+
+
+Ganz ähnlich funktioniert das mit den MiniTastern; statt einer Metallachse verwendet
+man hier eine Statik-Strebe oder –Lasche
+(Abb. 9, 10, 11) – Ideen aus dem Bilderpool
+der fischertechnik-Community.
+
+Tipps & Tricks
+
+Die „Luxus-Variante“ von René Trapp lässt
+an den Schalthebel einer Starkstromversorgung denken (Abb. 11). Der Griff besteht
+aus einer Hülse 15 (31983) und zwei Verbindungsstopfen (32316).
+Schon in den Club-Nachrichten 1/1976 findet sich ein Vorschlag für einen Doppelschalter aus zwei Tastern (Abb. 12) [5].
+
+von Thomas004 (28.01.2010)
+
+Club-Nachrichten 1/1976
+
+Und aus zwei mechanisch „gekoppelten“
+Mini-Tastern lässt sich ein Polwendetaster
+konstruieren, wie in den Club-Nachrichten
+3/1978 gezeigt wurde (Abb. 13) [6].
+
+Hebel; Konstruktion von Jeroen (23.11.2014)
+
+René Trapp (10.09.2016)
+
+Auch mit dem Kippschalter sind interessante Konstruktionen möglich. So kann man
+aus zwei Kippschaltern mit wenigen zusätzlichen Bauteilen einen Wechselschalter
+
+
+
+bauen, wie in den Club-Nachrichten 2/1976
+gezeigt wurde (Abb. 14) [7].
+
+Club-Nachrichten 2/1976
+
+Mit einer simplen Kugelschreiberfeder
+gelingt der folgende Kippschalter mit Rückstellung, vorgeschlagen in den Club-Nachrichten 2/1975 (Abb. 15) [8]. Damit wird
+aus dem Kippschalter ein Taster.
+
+Steuerhebel
+Die Konstruktion von Steuerhebeln aus
+fischertechnik-Bauteilen hat eine lange Tradition, denn erst in den 90er Jahren wurden
+mit der ersten Fernsteuerung Steuerhebel
+im fischertechnik-System eingeführt. Modelle mit komplexen Steuerungen aber gab
+es schon lange davor.
+Die Verwendung der fischertechnik-Fernsteuerung ist allerdings nicht immer eine
+sinnvolle Lösung: Das Übertragungsprotokoll verzögert die Wirkung, es kann abhängig vom Übertragungsweg zu Störungen
+kommen (Frequenzüberlagerungen, Sonnenlicht) und das Gehäuse ist klobig.
+Schließlich sind die Einsatzmöglichkeiten
+begrenzt, denn es gibt nur zwei Steuerhebel,
+drei Motoranschlüsse (plus Servo) und
+weder einen Taster noch Schalthebel.
+Für stationäre Modelle wie z. B. Krane, die
+keine kabellose Steuerung erfordern, gibt es
+zahlreiche Möglichkeiten zur Konstruktion
+eleganter und vielseitiger Steuerhebel, mit
+denen sich ganze Steuerpulte aufbauen lassen. Die ältesten mir bekannten Darstellungen solcher Steuerungen habe ich in zwei
+Club-Modellen aus den Jahren 1974 und
+1975 gefunden.
+
+Club-Nachrichten 2/1975
+
+Die Hebel zur Steuerung des kleinen Schaufelladers aus dem Club-Modell 2/1974 sind
+noch sehr einfach gehalten (Abb. 16).
+
+
+
+Tipps & Tricks
+
+Sie müssen genau justiert werden, damit die
+Achse in der Bohrung des BS 30 nicht zu
+viel und nicht zu wenig Spiel hat [9]. Da
+sind die Konstruktionsvorschläge für die
+Steuerung des Autolifts im Club-Modell
+3/1975 deutlich robuster (Abb. 17, 18) [10].
+
+aus den Club-Nachrichten 3/1975
+
+Club-Modell 3/1975
+
+Leider zählen die in den Konstruktionen
+verwendeten Federfüße 30 (31307), das
+Hubgelenk 35 (37282) und die S-Gelenklaschen (31669) wie die großen Taster
+(31332) nicht mehr zum Bauteilsortiment
+von fischertechnik. Der Verlust des Hubgelenks 35 ist besonders schade, denn mit ihm
+ließ sich sogar ein funktionierender Joystick
+konstruieren. Vorgestellt wurde er als
+Steuereinheit für den XY-Schreiber in den
+Club-Nachrichten 4/1977 (Abb. 20) [11].
+
+Club-Modell 3/1975
+
+In den zeitgleich mit dem Club-Modell veröffentlichten Club-Nachrichten 3/1975 findet sich ein weiterer Steuerhebel für das
+Modell eines Porsche 908/03 (Abb. 19)
+[11].
+4/1977 (XY-Schreiber)
+
+
+Der Federfuß lässt sich im aktuellen Bauteilsortiment immerhin durch eine Kunststofffeder 20 ersetzen (Abb. 21).
+
+Aber es gibt auch konstruktive Alternativen
+mit den aktuellen Bauteilen des fischertechnik-Systems.
+Den ältesten mir bekannten Vorschlag mit
+zudem minimaler Bauhöhe veröffentlichte
+Harald Steinhaus im Bilderpool der fischertechnik-Community (Abb. 23). Darin
+ordnet Harald die Minitaster kreisförmig an.
+
+
+Von dem in alle Richtungen drehbaren Fuß
+des Hubgelenks sind die Hubgelenksteinklauen 7,5 (38446) und der Kardan-Getriebewürfel (35115) noch als Einzelteile erhältlich. Daher kann der Steuerhebel durch
+eine zweite Hubgelenksteinklaue, einen
+Rastadapter und eine Rastachse mit Hülse
+15 nachgebildet werden (Abb. 22).
+
+Steinhaus (14.07.2006)
+
+Eine Version mit aufgestellten Mini-Tastern und „umgekehrtem“ Joystick stammt
+von Walter Mario Graf (Abb. 24).
+
+Walter Mario Graf (22.01.2008)
+
+Severin Both schlug eine elegante Weiterentwicklung von Haralds Joystick vor: Statt
+der Statik-Strebe verwendet er als „Gelenk“
+für den Steuerhebel einen Baustein 15 mit
+Neodym-Magnet (108278), auf den eine
+Metallachse aufgesetzt wird (Abb. 25).
+
+
+Tipps & Tricks
+
+Stellt man die Mini-Taster aufrecht, erhält
+man aus Severins Konstruktion einen Joystick mit langem Bedienhebel (Abb. 26).
+Damit sind die Möglichkeiten von fischertechnik ganz bestimmt noch nicht ausgeschöpft. Außerdem wären da noch die
+elektromechanischen Schalter-Varianten
+(Stichwort: Selbsthalteschaltung), die einen
+eigenen Beitrag verdienen...
+
+Quellen
+
+Severin Both (02.09.2010)
+
+[1]
+
+Stefan Falk: Perlentauchen (Teil 3).
+ft:pedia 1/2013, S. 22-31.
+
+[2]
+
+fischertechnik: em1 – Elektromechanik Grundkasten. Fischer-Werke,
+1968.
+
+[3]
+
+fischertechnik: Hobby – Experimente
++ Modelle. hobby 3 Band 1, 1971.
+
+[4]
+
+fischertechnik: Experimentierbuch
+Elektromechanik. Fischer-Werke,
+1981.
+
+[5]
+
+fischertechnik: Club-Nachrichten
+1/1976. Fischer-Werke, 1976.
+
+[6]
+
+fischertechnik: Club-Nachrichten
+3/1978. Fischer-Werke, 1978.
+
+[7]
+
+fischertechnik: Club-Nachrichten
+2/1976. Fischer-Werke, 1976.
+
+[8]
+
+fischertechnik: Club-Nachrichten
+2/1975. Fischer-Werke, 1975.
+
+[9]
+
+fischertechnik: Bauanleitung
+„Schaufellader“. Club-Modell
+2/1974, Fischer-Werke, 1974.
+
+[10] fischertechnik: Bauanleitung
+„Autolift“. Club-Modell 3/1975,
+Fischer-Werke, 1975.
+[11] fischertechnik: Porsche 908/03.
+Club-Nachrichten 3/1975, FischerWerke, 1975.
+[12] fischertechnik: XY-Schreiber. ClubNachrichten 4/1977, Fischer-Werke,
+1977.
+Anordnung der Mini-Taster
+
+

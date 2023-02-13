@@ -1,0 +1,763 @@
+
+
+Computing
+
+I²C mit dem TX – Teil 6: GPS-Sensor
+Dirk Fox
+In unserer I²C-Serie haben wir bereits einige I²C-Komponenten vorgestellt, die sich seit dem
+Firmware-Update vom April 2012 an den TX anschließen und mit RoboPro nutzen lassen. In
+dieser Folge stellen wir einen etwas komplexeren Sensor vor – mit dem man in die faszinierende Welt der Navigation eintauchen kann.
+
+Global Positioning System
+Das Global Positioning System (GPS) ist
+ein weltweites Netzwerk von Navigationssatelliten, mit dessen Aufbau das US-amerikanische Verteidigungsministerium 1973
+begann und das offiziell am 17.07.1995 in
+Betrieb genommen wurde.
+Die mindestens 24 GPS-Satelliten, die in
+einer Höhe von etwa 20.200 km auf sechs
+unterschiedlichen Bahnen zweimal täglich
+die Erde umkreisen, senden dazu alle 30
+Sekunden ihre Position und den Zeitpunkt
+der Positionsbestimmung auf zwei Frequenzen (L1 = 1.575,42 MHz und L2 =
+1.227,60 MHz) in einem festen Format aus
+(Abb. 1). Aus den Laufzeiten der Signale
+kann ein Empfänger seine genaue Position
+bestimmen (siehe nächster Abschnitt).
+Das zivil nutzbare, unverschlüsselte Signal
+hat eine Datenrate von 50 bit/s. Ein
+zweites, nur für die militärische Nutzung
+vorgesehenes verschlüsseltes Signal wird
+mit der 10fachen Bitrate gesendet und
+
+erlaubt eine entsprechend genauere Positionsbestimmung.
+Anfänglich wurden die zivilen Signale
+(Standard Positioning System, SPS) mit
+einem Fehlerwert künstlich verschlechtert,
+sodass die Positionsbestimmung eine Ungenauigkeit von über 100 m besaß. Dieser
+Selective Availability genannte Mechanismus wurde am 02.05.2000 abgeschaltet.
+Seitdem liegt die Ungenauigkeit – abhängig von der Zahl der sichtbaren Satelliten
+und dem verwendeten Lokalisierungsverfahren – zu 95% unter 8 m [1]. Für einen
+etwaigen Krisenfall behalten sich die USA
+jedoch vor, das zivil nutzbare Signal zu
+stören. Auch deshalb haben die Sowjetunion (Glonass, nutzbar seit 2011), China
+(Compass, ab 2020) und die EU (Galileo,
+nicht vor 2020) eigene Satellitennavigationssysteme entwickelt. Galileo wird mit
+GPS kompatibel sein, für zivile Anwendungen eine höhere Bitrate verwenden und
+daher eine präzisere Positionsbestimmung
+(Ungenauigkeit < 4 m) ermöglichen [2].
+
+
+Positionsbestimmung
+Ein GPS-Sensor kann aus empfangenen
+GPS-Signalen nicht nur seine Position
+(geografische Länge und Breite, Höhe)
+bestimmen, sondern auch seine Geschwindigkeit und Bewegungsrichtung und daraus
+den Abstand zu einem vorgegebenen Zielpunkt und dessen Richtung berechnen. Wie
+aber funktioniert das genau?
+Die Position (Längengrad, Breitengrad und
+Höhe) bestimmt ein GPS-Sensor, indem er
+aus der Signallaufzeit den Abstand zur
+Position des sendenden Satelliten bestimmt. Dazu subtrahiert er die im GPSSignal enthaltene Zeitangabe von der
+Signalempfangszeit. Das GPS-Signal eines
+einzelnen Satelliten liefert als möglichen
+Standort also die Punkte auf einer Kugel
+um den Satelliten – wenn die Höhe
+bekannt ist, auf einer Kreislinie, dem
+Schnitt der Kugel mit der Erdoberfläche.
+Empfängt man das Signal eines zweiten
+Satelliten, reduziert sich die Lösungsmenge auf zwei Punkte (die Schnittpunkte
+der Kugeln um die beiden Satelliten), von
+denen nur einer auf der Erdoberfläche
+liegt. Somit genügen grundsätzlich zwei
+GPS-Signale zur Positionsbestimmung,
+sofern die Höhe der eigenen Position bekannt ist.
+So weit die Theorie. In der Praxis ist das
+allerdings nicht ganz so einfach, denn die
+Ausbreitungsgeschwindigkeit des Signals
+erreicht fast Lichtgeschwindigkeit – knapp
+300.000 km/s. Das Signal benötigt für die
+gut 20.000 km lange Strecke vom Satelliten
+bis zur Erde weniger als 0,07 s – ein
+Messfehler von 0,001 s führt so zu einem
+Fehler in der Positionsbestimmung von
+etwa 300 km. Damit die Zeitangabe des
+Satelliten hinreichend genau ist, verfügen
+diese über eine Atomuhr mit einer Abweichung von 1,2 10-14 – das entspricht einem
+Fehler von einer Sekunde alle 2,64 Mio.
+Jahre [4].
+
+Computing
+
+GPS-Sensoren besitzen allerdings in der
+Regel keine ausreichend genaue und mit
+den GPS-Satelliten exakt synchronisierte
+Uhr. Für dieses Problem gibt es jedoch
+eine elegante Lösung: Man betrachtet die
+Empfangszeit als weitere Unbekannte –
+und wertet ein drittes Satellitensignal aus.
+Dann lassen sich Ort (geographische Länge
+und Breite) und Empfangszeitpunkt als
+Gleichungssystem mit drei Unbekannten
+ausdrücken. Als ein Nebenprodukt liefert
+der GPS-Sensor damit sogar die Atomzeit
+– ganz ohne DCF77-Zeitsignal [4].
+Hat der GPS-Sensor drei Satellitensignale
+empfangen und daraus seine geographische
+Position bestimmt, zeigt er das als „2Dfix“ an. Dabei geht der GPS-Sensor von
+der Annahme aus, dass er sich auf Meereshöhe befindet. Will man auch die exakte
+Höhe (als vierte Unbekannte) mit Hilfe des
+GPS-Sensors bestimmen, muss dieser das
+Signal eines vierten Satelliten auswerten –
+und damit ein Gleichungssystem mit vier
+Unbekannten lösen. Eine solche Positionsbestimmung (Länge, Breite, Höhe) wird
+vom Sensor als „3D-fix“ angezeigt. Damit
+eine 3D-Positionsbestimmung möglichst
+überall gelingt, wurden die Umlaufbahnen
+der GPS-Satelliten so gewählt, dass an
+jeder Position der Erde Signale von
+mindestens vier verschiedenen Satelliten
+empfangen werden können.
+In der Praxis wird die Genauigkeit der
+Positionsbestimmung außerdem dadurch
+beeinträchtigt, dass sich die Satelliten
+selbst mit einer großen Eigengeschwindigkeit (fast 14.000 km/h) fortbewegen. Auch
+ist die Ausbreitungsgeschwindigkeit der
+Signale in der Atmosphäre kleiner als im
+Vakuum, erreicht also nicht genau Lichtgeschwindigkeit. Schließlich verfälschen
+oder überlagern Reflektionen z. B. von
+Gebäuden einzelne Signale. Und nicht
+zuletzt hängt die Genauigkeit davon ab,
+wie exakt der Sensor einen Flankenwechsel in der Codefolge identifizieren
+kann.
+
+
+Moderne Empfänger berücksichtigen diese
+Effekte und erreichen bei der Positionsbestimmung eine Genauigkeit von unter 3 m.
+Die Präzision kann – je nach Ort (Tal oder
+Berg) und Empfangsqualität (Stadt oder
+Land) durch die Berücksichtigung zusätzlicher Satellitensignale oder die Verwendung von Differential GPS (DGPS) auf
+unter 1 m verbessert werden. Weitere Optimierungen sind durch die Nutzung anderer
+Sensoren (Höhen- oder Geschwindigkeitsmesser) und einen Abgleich mit terrestrischen Referenzsignalen möglich (bis zu
+1 cm).
+Mit wiederholten Positionsbestimmungen
+kann ein bewegter GPS-Sensor auch seine
+Geschwindigkeit (Ground Speed) und
+-richtung (Ground Course) aus dem
+Abstand der jeweils letzten Positionen
+sowie der dazwischen verstrichenen Zeit
+berechnen.
+
+der I²C GPS Stick von DSS Cirquits,
+der PA6C von DroTec und
+der Navigatron von Flytron.
+Die folgende Darstellung bezieht sich auf
+das Flytron-Board Navigatron v2 (Abb. 2),
+das für knapp 50 € erhältlich ist und die
+folgenden technischen Daten besitzt:
+3,3-5 V Betriebsspannung (und daher
+ohne Level Shifting direkt am I²CAusgang des TX anschließbar),
+Genauigkeit der Positionsbestimmung
+(unter idealen Bedingungen) unter 3 m
+Cold Start (Einschalten) unter 35 s,
+Warm Start (Aktivierung des Sensors)
+unter 34 s und Hot Start unter 1 s
+Unterstützung von DGPS
+Unterstützung des I²C Fast Mode (400
+kB/s) [6]
+
+GPS-Sensoren
+Inzwischen gibt es kostengünstige GPSSensoren, mit denen sich GPS-Signale
+auch im Modellbau nutzen lassen. Ein
+solcher GPS-Sensor ist der GTPA010 von
+GlobalTop Technology Inc., der mit 5 V
+Betriebsspannung arbeitet und eine sehr
+hohe Empfindlichkeit von -165 dBm besitzt. Die Update-Rate liegt bei beachtlichen 10 Hz. Dabei ist der Sensor sparsam
+– er verbraucht 37 mA im Tracking Mode
+(Standortverfolgung) und 48 mA im Acquisition Mode (Standortbestimmung).
+GPS-Sensoren übertragen die Daten in der
+Regel seriell (mit unterschiedlicher Baudrate) nach dem Standard NMEA 0183 [5]
+der National Marine Electronics Association (NMEA). Um einen solchen GPSSensor an unserem TX Controller nutzen
+zu können, ist eine Umsetzung des seriellen Signals in das I²C-Protokoll erforderlich. Derzeit sind mir drei Breakout Boards
+bekannt, die diese Umsetzung vornehmen
+und den GTPA010 um eine I²C-Schnittstelle erweitern:
+
+
+Das 240 Byte große Register kann bis zu
+16 Wegpunkte speichern und merkt sich
+dank eines Kondensators gespeicherte
+Daten auch im ausgeschalteten Zustand
+mindestens eine Woche lang.
+Das Flytron-Board zeigt außerdem den
+Status an: Eine blinkende rote LED signalisiert den Aquisition Mode (unvollständige
+Positionsbestimmung). Leuchtet die rote
+LED, ist die Position bestimmt. Blinkt eine
+blaue LED dabei 2x, liegt ein 2D-fix vor,
+blinkt sie 3x, ist es ein 3D-fix.
+
+Die I²C-Schnittstelle
+Die I²C-Adresse des GPS-Boards ist 0x20
+(= 32). Über diese Adresse können die
+Register des Sensors (Tab. 1) ausgelesen,
+einzelne auch beschrieben (write) werden.
+Register Inhalt
+
+Computing
+
+werden auch im Folgenden nicht erläutert,
+um die Darstellung nicht unnötig kompliziert zu machen – schließlich sind ft-Motoren zu schwach und zu schwer für ein
+Flugmodell.
+Das Status-Register
+Das Status Register 0x00 liefert einen
+Byte-Wert zurück, der in den unteren vier
+Bits vier Zustandswerte enthält (Tab. 2).
+Sie geben an, ob neue Daten empfangen
+wurden, ob eine 2D- (Längen- und Breitengrad, 2D-fix) oder 3D-Positionsbestimmung (Höhe, 3D-fix) gelungen ist und ob
+der im Waypoint Register 0x02 angegebene aktive Wegpunkt erreicht wurde.
+
+0x00
+
+Status Register
+
+0x01
+
+Command Register (write)
+
+0x02
+
+Waypoint Register
+
+0x03
+
+Firmware Version
+
+0x07
+
+Current Position
+
+0x13
+
+Distance to Waypoint [cm]
+
+0x17
+
+Bearing towards WP
+[1/1000 Grad]
+
+Status
+
+Bedeutung
+
+0x19
+
+Crosstrack Corrected
+Bearing towards WP
+[1/1000 Grad]
+
+0x01
+
+Neue Daten empfangen
+
+0x02
+
+2D-fix (Positionsbestimmung mit 3 Satelliten)
+
+0x1B
+
+Bearing from home
+[1/1000 Grad]
+
+0x04
+
+3D-fix (Positionsbestimmung mit min. 4 Satelliten)
+
+0x1D
+
+Distance from home [m]
+
+0x08
+
+Active Waypoint erreicht
+
+0x1F
+
+Ground Speed * 100 [m/s]
+
+0x21
+
+Altitude [m]
+
+0x23
+
+Ground Course [1/10 Grad]
+
+0x27
+
+UTC Time (read)
+
+0x31
+
+Radius of WP [cm] (write)
+
+0x33
+
+Navigation Flags (write)
+
+0x3F
+
+Waypoint 0 (read/write)
+
+0x4A
+
+Waypoint 1 (read/write)
+
+…
+
+…
+
+0xE4
+
+Waypoint 15 (read/write)
+Tab. 1: Register
+
+Da das Board für den Einsatz in Multicoptern entwickelt wurde, sind einige der vom
+Sensor berechneten und über die Register
+auslesbaren Werte sehr spezifisch und nur
+für die Navigation eines Flugmodells von
+Bedeutung. Sie fehlen in der Tabelle und
+
+Tab. 2: Werte des Status Registers
+
+Konnte eine Positionsbestimmung vorgenommen werden, gibt das Register in den
+vier höchstwertigen Bits die Zahl der für
+die Positionsbestimmung genutzten Satelliten an – bei einem 2D-fix müssen es mindestens drei, bei einem 3D-fix mindestens
+vier sein. Die blaue LED blinkt dabei
+entsprechend oft.
+Über das Register 0x31 kann der Radius
+eines ‚Zielkreises’ um den im Waypoint
+Register 0x02 angegebenen aktiven Wegpunkt in cm festgelegt werden, bei dessen
+Erreichen das Erreichen des Wegpunkts in
+Bit 4 des Status Registers (0x08) signalisiert wird.
+Als Default enthält das Register den Wert
+200 – ein angesteuerter Wegpunkt gilt
+damit innerhalb eines Kreises von 4 m
+Durchmesser als erreicht.
+
+
+
+
+Das Befehlsregister
+Mit dem Command Register 0x01 wird die
+Navigation des GPS-Sensors gesteuert. So
+kann die Navigation zu einem angegebenen Wegpunkt gestartet oder angehalten
+werden; bei einem Navigations-Stopp
+werden alle aktuellen Positionsregister auf
+den Wert Null gesetzt. Außerdem kann die
+aktuelle Position als Wegpunkt (Waypoint)
+gespeichert werden.
+Byte
+
+Kommando
+
+0x01
+
+aktuelle Position halten
+
+0x02
+
+Navigation zu aktivem
+Wegpunkt starten
+
+0x03
+
+aktuelle Position in aktivem
+Wegpunkt kopieren
+
+0x06
+
+Navigation anhalten
+(Positionswerte := 0)
+Tab. 3: Relevante Befehle
+des Command Registers
+
+Bei den Kommandos 0x02 und 0x03 wird
+in den oberen vier Bits des KommandoBytes die Wegpunkt-Nummer (0-15) angegeben.
+Das Versionsregister
+Das Versionsregister 0x03 gibt den aktuellen Versionsstand der Firmware des I²CGPS-Boards zurück (derzeit Version 21).
+Die Positionsregister
+Mit dem Register 0x07 beginnen die vom
+GPS-Modul berechneten Angaben zur
+aktuellen Position. Da sind zunächst die
+GPS Location Register, die die geographische Breite und Länge der aktuellen
+Position in je zwei 32 bit langen IntegerWerten angeben. Diese Werte liegen nur
+vor, wenn das Status Register wenigstens
+einen 2D-fix anzeigt. Mit dem Kommando
+Stop Navigation werden sie gelöscht.
+Das Distance to Waypoint Register 0x13
+liefert den Abstand zum aktiven Wegpunkt
+in cm als ganzzahligen 32 bit-Wert; es wird
+
+gefolgt von einer 16 bit-Richtungsangabe
+zum aktiven Wegpunkt in 1/1000 Grad
+(Bearing towards Waypoint, 0x17). Eine
+erforderliche Richtungskorrektur (Crosstrack Corrected Bearing towards WP) wird
+im Register 0x19 in 1/1000 Grad angegeben.
+Die Register Bearing from Home (0x1B)
+und Distance from Home (0x1D) geben die
+Kompass-Richtung in 1/1000 Grad vom
+Startpunkt (Wegpunkt 0) zur aktuellen
+Position und den Abstand (Luftlinie) in m
+jeweils als 16 bit-Wert an.
+Die Register Ground Speed (0x1F) und
+Ground Course (0x23) geben die SensorGeschwindigkeit in cm/s und die KompassRichtung des aktuellen Kurses in 1/10
+Grad ebenfalls als 16 bit-Werte an.
+Liegt ein 3D-fix vor, enthält Register 0x21
+außerdem die Höhe in m (über Normal
+Null) als 16 bit-Wert; anderenfalls hat der
+Registerinhalt den Wert 0.
+Die Satellitenzeit
+Das Register UTC Time (0x27) liefert die
+ermittelte Satelliten-Atomuhrzeit – auf die
+1/1000ste Sekunde genau als 32 bit-Wert.
+Interpretiert als Dezimalzahl geben die
+letzten drei Stellen die Millisekunden an,
+die beiden Stellen davor die Sekunden, die
+nächsten beiden Stellen die Minuten und
+die beiden führenden Stellen die Stunden
+(0-23). Für die Ausgabe auf einem Display
+sind die Werte entsprechend umzurechnen.
+Das Navigationsregister
+In den Navigation Flags (Register 0x33)
+kann durch Setzen von Bit 6 (0x80) ein
+Filter aktiviert werden, der bewirkt, dass
+als Positionskoordinaten immer der Durchschnittswert der letzten fünf Positionsbestimmungen angezeigt wird (default).
+Damit werden Schwankungen bei der Positionsbestimmung abgemildert. Zugleich
+wird so allerdings auch die Aktualisierung
+der Zeitangabe verlangsamt (nur noch alle
+
+ca. 17 Sekunden). Ist Bit 5 (0x40) gesetzt,
+wird zudem bei einer Positionsbestimmung
+im Ruhezustand das „Rauschen“ herausgefiltert (default).
+Die Wegpunkt-Register
+Das Waypoint Register 0x02 enthält einen
+Byte-Wert, dessen untere vier Bits die
+Nummer des aktuellen aktiven Wegpunkts
+enthalten. Die oberen vier Bits geben die
+Nummer des vorangegangenen Wegpunkts
+an.
+Ab Register 0x3F können bis zu 16 Wegpunkte (Waypoints) gespeichert werden.
+Jeder Wegpunkt ist durch die in Tab. 4
+aufgelisteten Angaben definiert: Breitengrad, Längengrad, Höhe und ein FlagByte, das die Festlegungen für das Register
+0x33 (Navigation Flags) enthält. Insgesamt
+erfordert die Speicherung eines Wegpunkts
+damit also 11 Byte.
+Byte
+
+Inhalt
+
+01-04
+
+Breitengrad (int32)
+
+05-08
+
+Längengrad (int32)
+
+09-10
+
+Höhe (uint16)
+
+
+Navigation Flags
+Tab. 4: Parameter eines Wegpunkts
+
+Die Wegpunktregister sind Schreib-/Leseregister. Sie können daher sowohl dafür
+genutzt werden, eine vorgegebene Strecke
+(z. B. für ein autonom steuerndes Fahrzeug) einzulesen und abzufahren, als auch,
+um Markierungspunkte einer abgelaufenen
+oder abgefahrenen Strecke zu speichern
+(bspw. bei einer Wanderung oder Radtour).
+In der Regel wird im Wegpunkt 0 der
+Startpunkt gespeichert. Damit kann ein
+Navigationsprogramm auch wieder zum
+Startpunkt zurückfinden (Return to home);
+der Sensor berechnet zudem ständig den
+Abstand zu diesem Ausgangspunkt.
+
+Computing
+
+Auswertung der GPS-Daten
+Längen- und Breitengrad
+Der GPS-Sender liefert die Positionsdaten
+nach dem globalen Referenzsystem
+WGS84 (World Geodetic System 1984).
+Zur Festlegung der geographischen Koordinaten wird die Erdoberfläche dabei in
+360 Längen- und 180 Breitengrade2 unterteilt, mit Greenwich (der Londoner Sternwarte) und dem Äquator als Nullmeridiane. Das WGS84 berücksichtigt zudem,
+dass die Erde keine Kugel ist, sondern ein
+Ellipsoid.
+Der GPS-Sensor gibt die Geographische
+Länge und Breite als 32-bit-Wert mit einer
+Genauigkeit von 10 -7 Grad zurück. In
+RoboPro müssen dazu die Werte byteweise
+ausgelesen und in eine Fließkommazahl
+(48 bit) umgewandelt werden.
+Üblicherweise erfolgt die Angabe des
+Längen- und Breitengrads als Fließkommazahl in Grad. Diesen Wert erhält
+man, indem man den vom Sensor
+empfangenen Wert durch 107 teilt. Alternativ kann eine Position auch „klassisch“
+in Grad, Minuten und Sekunden ausgedrückt werden. Für die Umrechnung in
+Minuten sind die Nachkommastellen der
+Gradangabe mit 60 zu multiplizieren; die
+Sekunden erhält man, indem man die
+verbleibenden Nachkommastellen mit 60
+multipliziert.
+Überprüfen lässt sich die vom GPS-Sensor
+empfangene Positionsangabe mit dem
+Dienst Google Maps: Navigiert man seinen
+aktuellen Standort an, klickt mit der rechten Maustaste auf den Punkt und selektiert
+„Was gibt es hier?“, wird die Stelle mit
+einem grünen Pfeil markiert. Klickt man
+auf den Pfeil, zeigt Google Maps die
+Position sowohl in Fließkommadarstellung
+als auch in Grad, Minuten und Sekunden
+
+Die geographische Länge wird als „Lat“ (oder
+), die Breite als „Lon“ (oder ) bezeichnet.
+
+
+
+auf zwei Nachkommastellen genau an
+(siehe Abb. 3).
+
+rungsweise aus dem Umfang des zum
+Breitengrad gehörigen Breitenkreises:
+
+l 1,852 cos
+
+km
+
+In Deutschland liegt l zwischen 1,257
+(Oberstdorf) und 1,061 km (Sylt) – und in
+Erbes-Büdesheim bei 1,1965 km (Längensekunde: 19,94 m) [7].
+
+von Erbes-Büdesheim (Google Maps)
+
+Stimmen diese Positionsangaben nicht mit
+den vom GPS-Sensor gelieferten Werten
+überein, kann man aus den Differenzen im
+Breiten- und Längengrad die Abweichung
+bestimmen. Ganz einfach geht das ebenfalls mit Google Maps: Man gibt die Koordinaten des Sensors in Grad, Minuten und
+Sekunden im Suchfeld ein und lässt sich
+den Abstand zum Standort anzeigen.
+Aber es geht auch ohne Internet: Die Abweichung lässt sich berechnen. So entspricht der Abstand b zwischen zwei
+Breitengraden auf der Erdoberfläche je
+Breitenminute (näherungsweise, da die
+Erde keine exakte Kugel ist, sondern ein
+Elipsoid) etwa einer Seemeile3:
+b
+
+2 R
+360 60
+
+1,852 km
+
+Zwei Breitensekunden liegen damit auf der
+Erdoberfläche ca. 30,9 m voneinander entfernt.
+Der Abstand zwischen zwei Längenminuten hängt vom Breitengrad ab: Am Äquator entspricht er ebenfalls etwa einer Seemeile (1,852 km), an den Polen ist er 0.
+Berechnen lässt sich der Abstand l nähe3
+
+
+In der Formel bezeichnet R den Erdradius, der
+im Mittel bei 6.368 km liegt.
+
+Kann der Sensor die Signale von mindestens sechs Satelliten auswerten (selbst in
+der Stadt konnte ich bis zu acht Satellitensignale empfangen), lag der durchschnittliche Fehler bei meinen Tests unter 0,3 s
+im Breiten- und Längengrad, die mittlere
+Abweichung also unter 4 m.
+GPS-Zeit
+Die vom GPS-Board gelieferte Satellitenzeit wird aus (mindestens) drei empfangenen Satellitensignalen berechnet und entspricht der synchronisierten GPS-Satellitenzeit. Die Bestimmung erreicht eine
+Genauigkeit von bis zu 1 sec (= 10-6 sec).
+Diese GPS-Zeit entsprach beim Start 1980
+der koordinierten Weltzeit (Coordinated
+Universal Time) UTC [4, 8]. Seitdem
+weicht sie um einige Sekunden davon ab:
+Die Abweichung entsteht durch Schaltsekunden [9], die vom IERS (International
+Earth Rotation and Reference Systems
+Service) zum Ausgleich von Schwankungen der Erdrotationsgeschwindigkeit festgelegt werden. Derzeit (2013) beträgt die
+Abweichung 16 Sekunden; sie wird jedoch
+mit den Satellitensignalen (Abb. 1) übermittelt und vom GPS-Sensor bei der
+Bestimmung der Zeit berücksichtigt.
+
+RoboPro-Treiber
+Die Programmierung eines I²C-Treibers für
+den GPS-Sensor ist in RoboPro nun keine
+große Sache mehr. Auf eine Erläuterung
+der Implementierung verzichte ich daher
+an dieser Stelle – und lege euch stattdessen
+den Treiber im Download-Bereich der ft:c
+ans Herz.
+
+Der Treiber umfasst ein kleines Programm,
+das den Standort (Länge, Breite, Höhe), die
+Coordinated Universal Time (UTC), die
+Geschwindigkeit und die Zahl der empfangenen Satellitensignale auf dem Display
+des TX anzeigt (Abb. 4).
+
+(hier mit 7 Satellitensignalen)
+
+Der TX als Navi
+Mit dem I²C-Treiber lässt sich der TX nun
+mit wenigen RoboPro-Befehlen in ein Navi
+verwandeln. Die Programmierung überlasse ich euch als kleine ‚Fingerübung’.
+Welche Programmschritte dafür benötigt
+werden, ist klar:
+Das RoboPro-Programm sollte zunächst
+eine Wegpunkte-Datei im csv-Format
+öffnen und die darin enthaltenen Punkte
+in die Waypoint Register 1-15 schreiben.
+Hat es dann eure Position bestimmt
+(3D-fix), sollte es diese Position als
+Startpunkt in Waypoint Register 0
+abspeichern.
+Anschließend sollte es mit dem Befehl
+0x02 die Navigation zum ersten Wegpunkt starten. Den Abstand zum Zielpunkt (in cm, Register 0x13) und die
+erforderliche Richtungskorrektur (in
+1/1000 Grad, Register 0x19) solltet ihr
+euch auf dem TX-Display anzeigen
+lassen.
+Ist der Wegpunkt erreicht, sollte das auf
+dem Display angezeigt werden. Nun
+
+Computing
+
+solltet ihr zur Auswahl stellen, ob der
+nächste Wegpunkt angesteuert werden
+soll oder ihr zum Startpunkt zurückkehren möchtet.
+Mit einem solchen kleinen Programm habt
+ihr ein ausgewachsenes Navi – das sich
+sogar bei Fahrradtouren oder Wanderungen einsetzen lässt.
+Dafür benötigt ihr aber noch ein Verfahren,
+um ausgewählte Tracks in eine csv-Datei
+mit Wegpunkten zu überführen. GPSDaten findet ihr zahlreich im Internet – so
+bietet der ADFC seinen Mitgliedern viele
+Fahrradtouren als GPS-Track an, und
+Regionen wie z. B. die Eifel publizieren
+auf einem eigenen GPS-Portal die GPSDaten zu Wander- und Radtouren.
+Die Tracks enthalten meist deutlich mehr
+als 15 Wegpunkte – das stellt aber kein
+Problem dar, wenn ihr die Wegpunkte
+abschnittsweise in die Waypoint Register
+laden lasst. Allerdings müsst ihr die aus
+dem Internet herunter geladenen GPSInformationen zunächst noch in eine csvDatei konvertieren.
+Leider verwenden GPS-Dateien sehr unterschiedliche Formate. Ein verbreitetes GPSFormat ist GPX (GPS Exchange Format),
+das auf dem XML-Standard basiert [10].
+Es ermöglicht die Angabe von Ortspunkten, Routen (Folge von Ortspunkten),
+die eine geplante Strecke beschreiben, und
+Tracks (Folge von Wegpunkten, die in
+Tracksegmente unterteilt werden können):
+<?xml version="1.0" encoding="UTF-8"
+standalone="no" ?>
+<gpx version="1.1" creator="Ersteller der
+Datei">
+<!-- Wegpunkte -->
+<wpt lat="xx.xxx" lon="yy.yyy">
+<!-- Attribute des Wegpunkts -->
+</wpt>
+<!-- weitere Wegpunkte -->
+<!-- Routenpunkte -->
+<rte>
+<rtept lat="xx.xxx" lon="yy.yyy">
+<!-- Attribute des Routenpunkts -->
+</rtept>
+<!-- weitere Routenpunkte -->
+</rte>
+
+
+
+
+<!-- Tracks -->
+<trk>
+<trkseg>
+<!-- Trackpunkte -->
+<trkpt lat="xx.xxx" lon="yy.yyy">
+<!-- Attribute des Trackpunkts -->
+</trkpt>
+<!-- weitere Trackpunkte -->
+</trkseg>
+<!-- weitere Track-Segmente -->
+</trk>
+</gpx>
+
+
+Aus einer solchen GPX-Datei lassen sich
+die Wegpunkt-Koordinaten mit einem kleinen Script leicht extrahieren (Suche nach
+„lat = …“ und „lon = …“) und in einer
+csv-Datei abspeichern. Liegen die Daten in
+einem anderen Format vor, hilft das kleine,
+kostenlose Konvertierungsprogramm GPSBabel: Es kann eine sehr große Zahl von
+Formaten in GPX „übersetzen“.
+Natürlich geht es auch umgekehrt: Das
+„TX-Navi“ speichert während einer
+Wanderung oder Radtour auf Knopfdruck
+die jeweils aktuellen Positionsangaben;
+später werden sie ausgelesen, in eine GPXDatei konvertiert und z. B. in Google Earth
+importiert. Dafür muss man aber in der
+Regel mehr als 15 Wegpunkte speichern
+können – da führt kein Weg an einem
+größeren Speicher vorbei. Aber auch für
+dieses Problem gibt es eine I²C-Lösung –
+mehr in einem der nächsten I²C-Beiträge.
+
+
+Jetzt aber viel Vergnügen mit eurem
+„Selbstbau-Navi“ – ich bin gespannt auf
+die ersten Touren-Berichte!
+
+Quellen
+[1]
+
+Wikipedia: Global Positioning
+System (GPS) und GPS-Technik.
+
+[2]
+
+Wikipedia: Galileo.
+
+[3]
+
+Anja Köhne, Michael Wössner:
+Bestimmung der Position beim GPSSystem. www.kowoma.de
+
+[4]
+
+Dirk Fox, Dirk Ottensmeyer: Bau
+einer ft-Funkuhr. ft:pedia 3/2012, S.
+4-10.
+
+[5]
+
+Anja Köhne, Michael Wössner:
+NMEA-0183 Daten.
+www.kowoma.de
+
+[6]
+
+Dirk Fox: I²C mit TX und Robo Pro –
+Teil 1: Grundlagen. ft:pedia 3/2012,
+S. 32-37.
+
+[7]
+
+Wikipedia: Geographische
+Koordinaten.
+
+[8]
+
+Wikipedia: GPS-Zeit.
+
+[9]
+
+Wikipedia: Schaltsekunde.
+
+[10] Wikipedia: GPS Exchange Format.
+
+

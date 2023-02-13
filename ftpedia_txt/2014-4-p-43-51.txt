@@ -1,0 +1,523 @@
+
+Computing
+
+Computing
+
+I²C mit dem TX – Teil 11: Pixy-Kamera (1)
+Dirk Wölffel, Dirk Fox
+Seit die I²C-Anbindung beim Robo TX Controller funktioniert sind ganz neue Möglichkeiten für
+fischertechnik-Modelle entstanden. Ein wichtiger Sensor fehlte allerdings noch in der
+Sammlung: eine Kamera. Die CMUcam5 (kurz: Pixy) ist eine I²C-Kamera, die sich an den
+Robo TX Controller anschließen lässt. Sie kann Objekte in bis zu sieben verschiedenen Farben
+erkennen, gibt die Koordinaten des Objekt-Mittelpunkts und sogar dessen Länge und Breite
+aus. Damit lassen sich Modelle nun um intelligente Bildverarbeitung ergänzen und so z. B. ein
+schneller Sortierroboter oder sogar ein Cube Solver in RoboPro realisieren.
+
+Hintergrund
+Seit dem Erscheinen des TX Controllers im
+Jahr 2009 findet sich in der Packungsbeilage der Hinweis auf die bald erscheinende Kamera zum Anschluss an die
+„Camera“-Buchse. Fünf Jahre warteten die
+TX-Käufer vergeblich – bis die Kamera nun
+mit dem Nachfolge-Controller TXT ausgeliefert wird. Am TX lässt sich die neue
+Kamera jedoch nicht betreiben.
+
+wertung in der Hard- und Firmware vornimmt, sodass über die Daten-Verbindung
+mit dem TX nur noch die Ergebnisse der
+Analyse übermittelt werden müssen. Eine
+solche Kamera wurde von Charmed Labs
+entwickelt, einem Spin Off der Carnegie
+Mellon University (CMU): Die kurz „Pixy“
+genannte CMUcam5 (Abb. 1) [1].
+
+Wie sicher einige andere TX-Käufer haben
+wir in den vergangenen Jahren immer
+wieder nach einer Kamera Ausschau gehalten, die sich möglicherweise mit Bordmitteln des TX nutzen lässt. Da der TX über
+keinen schnellen USB-Anschluss verfügt,
+an den sich externe Geräte anschließen
+ließen, sind einer solchen Lösung jedoch
+enge technische Grenzen gesetzt. Denn über
+die einzige verbleibende Daten-Schnittstelle, den I²C-Bus, lassen sich maximal
+400 kBit/s übermitteln – das ist bei weitem
+zu wenig, um selbst im Sekundentakt
+erkennbare Bilder zu übermitteln.
+
+Die Pixy CMUcam5
+Dirk Wölffel hat schließlich die Lösung
+gefunden: eine Kamera, die die Bildaus-
+
+
+Im Herbst 2013 startete Charmed Labs eine
+Kickstarter-Kampagne zur Vorfinanzierung
+der ersten „Charge“. Mit Erfolg: 2.800
+
+
+
+Interessierte unterstützten das Startup mit
+275.000 US$ [2]. Herausgekommen ist eine
+einfach zu bedienende Kamera als OpenSource Projekt.
+
+betrieben werden. Schließlich ist die Pixy
+mit 54 x 44 mm so kompakt, dass sie in eine
+fischertechnik-Kassette (32076) mit Klarsichtdeckel (35360) passt (Abb. 2).
+
+Seit Ende April 2014 ist die Kamera nun
+allgemein käuflich zu erwerben – in
+Deutschland unter anderem bei Watterott
+electronic und noDNA für ca. 65 €.
+
+Anschlüsse
+In Abb. 3 seht ihr die Rückseite der PixyKamera mit den Anschlüssen.
+
+Technische Daten
+· Prozessor: NXP LPC4330, 204 MHz,
+Dual Core
+· Image Sensor: Omnivision OV9715,
+1/4", bis zu 1.280 x 800 Pixel
+· Bildbereich: 75° horizontal, 47° vertikal
+· Stromaufnahme: 140 mA
+· Spannung: USB (5V), Power In (6-10V)
+oder I²C (5V)
+· Speicher: 264 kB RAM, 1 MB Flash
+· I²C-Adresse: 0x54 (frei änderbar)
+
+
+· Button: Knopf für das Anlernen von
+Objekten und zum Aktualisieren der
+Firmware
+· USB: Mini-USB-Anschlussbuchse
+· I/0 Port: zehnpolige Pfostenbuchse für
+die serielle (UART, SPI, I²C) und analoge Daten-Ausgabe; 5V Betriebsspannung
+· RC Servo: Anschluss für zwei Servos
+(Pan/Tilt)
+
+
+Die Objekterkennung der Pixy-Kamera
+identifiziert bis zu 135 Objekte je Frame –
+bei 50 Frames pro Sekunde. Der Prozessor
+NXP LPC4330 beherrscht das I²C-Protokoll im Fast Mode Plus (bis 1 MBit/s). Wie
+es der Zufall will, arbeitet der I²C-Controller auch noch mit fischertechnik kompatiblen 5 V und kann daher direkt am TX
+
+· Power in: Stromversorgung (6-10V,
+optional – für unsere Nutzung nicht erforderlich)
+Verbindungskabel
+Die Pixy-Kamera wird mit einem sechsadrigen Verbindungskabel (SPI) ausgeliefert,
+auf dem auf einer Seite eine sechspolige
+Pfostenbuchse sitzt. Leider ist es nur für den
+Arduino geeignet, da die Belegung der
+Pfostenbuchse nicht zu der des EXT2Anschlusses am Robo TX Controller passt.
+
+Daher müssen wir uns mit einer eigenen
+Adapter-Konstruktion behelfen. Die PinBelegung des Wannensteckers zeigt die
+Pin 9 und GND an Pin 10.
+
+Computing
+
+Doch Vorsicht: die Pixy-Kamera reagiert
+empfindlich auf einen falschen Anschluss
+des VCC-Kabels, daher sollte man das Verbindungskabel vor Benutzung lieber noch
+einmal genau durchmessen.
+Für die Verbindung zwischen dem PC und
+der Pixy-Kamera benötigt ihr außerdem ein
+‚Mini-USB auf USB‘-Kabel (wie das, das
+dem TX beiliegt).
+Installation PixyMon und Update
+
+
+Für die ersten Experimente mit der Pixy
+bietet sich die Verwendung des „Universaladapters“ aus der ft:pedia 4/2013 [a] an
+(Abb. 5). Dessen Female-Jumper lassen
+sich fest auf die Kontaktstifte des zehnpoligen Pixy-Wannensteckers aufstecken.
+
+GND, rot: VCC, schwarz: SDA, gelb: SCL)
+
+Sofern ihr die Kamera nicht am Arduino
+nutzen wollt, könnt ihr auch die zehnpolige
+Pfostenbuchse des mitgelieferten Kabels
+abnehmen und die vier relevanten Kabel in
+der richtigen Reihenfolge an die Buchse
+anschließen (Abb. 6). Etwas fummelig, aber
+ihr müsst weder Kabel noch Buchsen beschaffen.
+
+Nach Erhalt der Kamera muss man zunächst
+die aktuelle Version der Software PixyMon
+(in der zum PC-Betriebssystem passenden
+Version) herunterladen und installieren.
+Unter Windows werden dabei die erforderlichen USB-Treiber automatisch installiert. Anschließend sollte man die Firmware
+der Pixy-Kamera auf die aktuelle Version
+(derzeit v1.0.2beta) updaten. Wie das geht,
+ist Schritt für Schritt und gut verständlich
+im Pixy-Wiki unter Uploading New
+Firmware beschrieben und sei daher hier
+ausgespart. Falls dabei etwas schiefgehen
+sollte, kann man jederzeit auf die alte Firmware (z. Zt. v0.1.44) zurückwechseln.
+Konfiguration PixyMon
+Derzeit erlaubt die Firmware nicht, die
+Kamera-Parameter via I²C-Protokoll einzustellen – dafür muss der USB-Monitor PixyMon gestartet werden.
+Hier die für uns relevanten Einstellungen:
+· I²C-Adresse: 7-bit-I²C-Adresse (Voreinstellung: 0x54).
+· Datenport: Wahl des Übertragungsprotokolls: 0: SPI, 1: I²C, 2: UART, 3: analog/digital X, 4: analog/digital Y (voreingestellt ist Port 0).
+· maximale Block-Anzahl: Zahl der je
+Frame maximal zu identifizierenden
+Objekte (Voreinstellung: 1.000).
+
+
+
+
+· maximale Block-Anzahl je Farbsignatur: Zahl der maximal zu identifizierenden Objekte derselben Farbe (Voreinstellung: 1.000).
+
+Kamera die Objekte sauber erkennt. Hier
+die von uns empfohlenen Einstellungen
+(Abb. 7).
+
+· minimale Objektgröße: Mindestzahl
+der Pixel eines zu erkennenden farbigen
+Objekts (Voreinstellung: 20).
+· Farbmodus: Erkennung ein- und mehrfarbiger Objekte (Voreinstellung: 1)
+· Kamera-Helligkeit: Wert zwischen 0
+und 288 (Voreinstellung: 90).
+Zunächst müsst ihr den Datenport 1 wählen,
+damit die Pixy via I²C erreichbar ist. Die
+voreingestellte I²C-Adresse 0x54 kollidiert
+mit den Adressen des TX-EEPROMS und
+sollte daher auch gleich geändert werden –
+in eine Adresse, die auf dem Bus zu keiner
+Adresskollision mit einem anderen Sensor
+oder Aktor führt. In unseren Beispielprogrammen zu diesem Beitrag und dem PixyTreiber verwenden wir die Adresse 0x14.
+Die Maximalzahl der erkennbaren Objekte
+(Blöcke und Blöcke je Farbsignatur) kann
+man getrost deutlich reduzieren – so wird es
+bei fast allen Anwendungen genügen,
+einige wenige Objekte zu erkennen. Außerdem reicht die Geschwindigkeit des I²CProtokolls ohnehin nur für die Übermittlung
+von maximal 50 Blöcken (näheres weiter
+unten).
+
+
+Nachdem ihr alle Einstellungen vorgenommen habt, startet ihr das Anlernen von
+Objektfarben über den PixyMon – das ist
+einfacher und präziser als über den Knopf
+an der Pixy-Kamera. Dazu müsst ihr in der
+Menüleiste oben auf das Bild des „Kochs“
+klicken und anschließend, wenn das Objekt
+im Fenster erscheint, die Linse an der PixyKamera scharf stellen (Abb. 8).
+
+Mit der minimalen Objektgröße filtert ihr
+kleine Farbflächen heraus, die die Pixy
+erkennt. Soll das Programm nur große
+Objekte erkennen, kann der Wert auch
+deutlich größer gewählt werden.
+Testbetrieb
+Ihr müsst für ausreichend helles Licht
+sorgen, damit die Objekte auch gut erkannt
+werden. Dann sucht ihr ein Objekt, am
+besten in einer kräftigen Farbe, und stellt
+dies vor die Linse. Jetzt startet ihr den
+PixyMon. Mit den Einstellungen müsst ihr
+etwas experimentieren, damit die Pixy46
+
+
+Um eine Objektfarbe anzulernen sind die
+folgenden Schritte erforderlich:
+· Wähle „Action – Set Signature 1“
+· Objekt 1 mit der Maus markieren
+
+Jetzt ist die Objektfarbe erlernt. Im Bild
+wird ein Rahmen um das erkannte Objekt
+mit dem Text s=1 angezeigt (Abb. 9).
+
+Computing
+
+Sobald ihr im Menü auf den „Home“Button klickt, werden die Daten der erkannten Objekte in einer der erlernten Farben
+über den I²C-Anschluss an den Robo TX
+Controller übertragen (Abb. 10).
+Die Pixy zeigt mit einer roten LED unten an
+der Frontseite der Platine an, dass sie ein
+Objekt erkannt hat – je näher am Objektiv
+der Kamera, desto heller leuchtet die LED.
+Serielles Daten-Protokoll
+
+
+Auf dieselbe Weise könnt ihr der Pixy bis
+zu sieben verschiedene Farb-Signaturen
+beibringen. Die Pixy-Kamera speichert alle
+erlernten Farben in ihrem Flash-Speicher;
+sie gehen daher nicht verloren, wenn ihr die
+Kamera ausschaltet. Das Löschen von Farbsignaturen erfolgt über das Menu „Action –
+Clear (all) signature(s)“ in PixyMon.
+
+Das serielle Protokoll an der I²C-Schnittstelle ist sehr einfach: Die Pixy-Kamera
+schickt als Slave die Daten aller bei der
+Bildauswertung identifizierten Objekte
+nacheinander über den I²C-Bus an den
+Master. Dabei werden je Objekt die folgenden Daten (Objekt-Datenblock) wortweise im Little Endian Format (niederwertiges Byte zuerst) übermittelt. Die Positionsangaben erfolgen in Pixel, bezogen auf
+eine Bildgröße von 320 x 200:
+· Checksum (2 Bytes; Summe der Werte
+der folgenden fünf 16-bit-Worte)
+· Signature (2 Bytes; Werte 1-7)
+· X-Position (2 Bytes; Werte 0-319)
+· Y-Position (2 Bytes; Werte 0-199)
+· Width (2 Bytes; Werte 1-320)
+· Height (2 Bytes; Werte 1-200)
+Die Übermittlung der Daten eines Objekts
+wird eingeleitet von zwei Sync-Worten
+(0xaa55). Das ermöglicht eine Byte-Synchronisation beim Empfänger (TX) auf den
+Beginn eines Wortes und auf den Beginn
+des Objekt-Datenblocks.
+
+serielle Schnittstelle übertragen
+
+Die identifizierten Objekte werden nach
+Farbe und Größe geordnet übermittelt
+(erster Farbcode, dann größtes Objekt
+zuerst). Sind alle Datenblöcke der Bildauswertung eines Frames komplett übertragen, werden nur noch 0-Bytes geschickt;
+daran lässt sich der Beginn eines neuen
+Frames erkennen.
+
+
+Reicht die Zeit zwischen zwei Frame-Auswertungen (0,02 Sekunden) nicht für die
+Übermittlung aller Block-Daten der erkannten Objekte, dann beginnt die Pixy mit der
+Übermittlung der neuen Datenblöcke,
+wieder beginnend beim größten Block des
+ersten Farbcodes.
+Eine kleine Überschlagsrechnung zeigt,
+dass es bei sehr vielen Objekten mit der
+Geschwindigkeit des I²C-Busses am TX
+eng werden kann:
+· Bei 400 kbit/s kann der TX etwa 20.000
+16-bit-Worte je Sekunde empfangen, im
+günstigsten Fall also ca. 2.500 Datenblöcke. 1
+· Bei 50 Frames pro Sekunde können also
+je Frame bestenfalls 50 Datenblöcke
+(von 120 möglichen Objekten, die Pixy
+erkennen kann) übermittelt werden.
+Diese Rechnung gilt allerdings nur unter der
+Annahme, dass der TX keine aufwändigen
+zusätzlichen Operationen während des
+Empfangs der Daten vom I²C-Bus durchführt – und auch nur für den Offline-Mode.
+Da die empfangenen Daten ja noch gespeichert werden müssen, liegt die Zahl der vom
+TX je Frame empfangenen Datenblöcke in
+der Praxis deutlich darunter.
+Im Online-Mode verlangsamt sich der I²CEmpfang beträchtlich, da die erhaltenen
+Daten nach jedem Kommando über die
+USB-Schnittstelle an den PC übertragen
+werden müssen, bevor das nächste Kommando folgen kann. In unseren Experimenten konnten wir im Online-Mode selten
+mehr als einen einzigen Block je Frame
+empfangen und auswerten.
+Die Tests zeigten allerdings auch, dass die
+Übermittlung sehr zuverlässig erfolgt,
+
+
+
+Mit Start-, Start/Stopp- und Stopp-Signal benötigt das I²C-Protokoll (bei Fehler freier Übermittlung) etwa 20 Bits pro Datenwort; ein Objekt-
+
+sodass wir zur Beschleunigung der Übermittlung auf eine Auswertung der Checksumme verzichtet haben.
+
+Der Robo Pro-Treiber
+Beim Einlesen der Objekt-Daten der Pixy
+über die I²C-Schnittstelle ist Geschwindigkeit alles. Daher enthält der Robo ProTreiber ein paar Optimierungen:
+· Die I²C-Verbindung wird nicht geschlossen, sondern während des Auslesens
+offen gehalten. Die Synchronisation der
+von der Pixy empfangenen Byte-Werte
+auf Wort-Grenzen (Pixy_ByteSync)
+muss daher nur einmal zu Beginn des
+Programms durchgeführt werden. Anschließend genügt ein Pixy_BlockSync.
+· Die Funktion Pixy_GetNextBlock liefert die Werte des nächsten Datenblocks,
+ohne die Checksumme zu überprüfen.
+Pixy_GetNextBlockChk
+liefert die
+Werte inklusive Checksummen-Prüfung.
+· Das Auslesen vieler Blöcke in Folge (z.
+B. aller Blöcke eines Frames) erledigt
+Pixy_ReadDetectedBlocks: die Funktion schreibt die Daten von bis zu 50
+Blöcken in fünf (globale) Listenvariablen (Signature, X, Y, Width und
+Height).
+Das Hauptprogramm des Treibers zeigt, wie
+die Datenblöcke aller erkannten Objekte
+eines Frames in die Listenelemente eingelesen und anschließend nacheinander auf
+dem TX-Display angezeigt werden können.
+Im Online-Mode lässt sich in der Regel nur
+ein Objekt-Datenblock je Frame einlesen.
+Um die Daten mehrerer erkannter Objekte
+pro Frame auszulesen, muss das Programm
+im Download-Betrieb gestartet werden.
+
+Datenblock besteht (inklusive Sync) aus acht
+Worten.
+
+Um komplexere Funktionen zu unterstützen, haben wir ein paar Unterfunktionen mit
+zusätzlicher „Intelligenz“ hinzugefügt:
+· Die Funktion Pixy_GetColor gibt nur
+den Farbcode des nächsten gefundenen
+Objekts zurück. Damit lässt sich ein
+einzelnes Objekt in einer angelernten
+Farbe besonders schnell erkennen.
+· Die Funktion Pixy_GetPan liefert die
+Richtung, in die die Kamera horizontal
+geschwenkt werden muss, um den
+Mittelpunkt eines Objekts in die Mitte
+des Sichtbereichs der Kamera zu rücken.
+Der Farbcode des gesuchten Objekts und
+die tolerierte Abweichung (in Pixel) werden als Parameter übergeben. Die Ausgabe der Funktion kann entweder direkt
+an einen Motor übergeben oder mit dem
+RoboPro-Kommando „Warten auf Befehl“ ausgewertet werden.
+· Die Funktion Pixy_GetTilt gibt die
+Richtung zurück, in die die Kamera vertikal geneigt werden muss, um den
+Mittelpunkt eines Objekts in die Mitte
+des Sichtbereichs der Kamera zu rücken.
+Der Farbcode des gesuchten Objekts und
+die tolerierte Abweichung (in Pixel) werden als Parameter übergeben. Auch hier
+kann die Ausgabe der Funktion entweder
+direkt an einen Motor übergeben oder
+mit dem RoboPro-Kommando „Warten
+auf Befehl“ ausgewertet werden.
+· Die Funktion Pixy_GetDistance berechnet aus der Größe eines Objekts im
+Bild (Farbcode und echte Größe werden
+als Parameter übergeben) den Abstand
+und gibt diesen als Ergebnis zurück.
+Für die Berechnung des Abstands hilft ein
+wenig Trigonometrie. Abb. 11 zeigt in einer
+Schemazeichnung den Sichtbereich der
+Kamera im Schnitt: Der rote Ball ist das
+erkannte Objekt, dessen Mittelpunktkoordinaten und Maße (Höhe, Breite in Pixeln)
+von der Pixy zurückgeliefert werden.
+
+Computing
+
+½H
+Pixy
+
+½h
+
+d
+
+α
+a
+
+
+Der Öffnungswinkel α ist bekannt (47°).
+Daraus lässt sich d wie folgt berechnen:
+=
+
+∙ cot
+Die Höhe H des Sichtbereichs der Kamera
+können wir aus der echten Höhe des Objekts
+und dem Höhenverhältnis von Objekt und
+Sichtbereich bestimmen:
+=ℎ∙
+
+ℎ
+
+Dabei ist die Höhe des Bildbereichs HPix =
+200 Pixel, und somit berechnet sich unser d
+aus der echten Objekthöhe h wie folgt:
+=
+
+ℎ
+
+ℎ ∙ 100
+∙ tan(23,5°)
+
+Bei der Bestimmung des Abstands a müssen wir berücksichtigen, dass die Ränder
+des Objekts (bspw. bei einer Kugel) weiter
+entfernt sind als der vorderste Punkt. Daher
+könnt ihr an die Funktion noch die Dicke
+des Objekts übergeben – bei einer Kugel ist
+das die Hälfte des Durchmessers:
+ℎ
+Die Abstandsberechnung liefert ein ziemlich genaues Ergebnis, wenn die Ränder des
+Objekts exakt erkannt werden und der Mittelpunkt genau in der Mitte des von der
+Kamera erfassten Bildbereichs liegt. Die
+Funktion gibt die Abweichung vom Mittelpunkt in der Horizontalen und Vertikalen
+(in % des Abstands zum Rand) zurück,
+=
+
+−
+
+
+
+
+damit ihr feststellen könnt, ob die Kamera
+korrekt justiert ist.2
+Den Robo Pro-Treiber der Pixy findet ihr im
+Download-Bereich der ft:community.
+
+Anwendungsbeispiele
+Zum Schluss stellen wir drei Beispielmodelle vor, die ihr mit der Kamera nachbauen könnt.
+
+einem farbigen Ball zu folgen. So lässt sich
+das Basismodell aus dem Baukasten ‚Robo
+TX Training Lab‘ über die beiden EncoderMotoren steuern, indem die Links-RechtsAbweichung aus der X-Koordinate des
+Objekt-Mittelpunkts abgeleitet wird (Abb.
+13). Die Abstandsberechnung ist etwas
+komplizierter (siehe oben).
+
+Pan/Tilt-Modell
+Das Pan/Tilt-Modell ersetzt die Dreh- und
+Neigungs-Plattform, die für die PixyKamera für ca. 35 € angeboten wird und
+über die beiden Servo-Anschlüsse gesteuert
+werden kann. Dabei folgt die Kamera einem
+zuvor angelernten Objekt. Die Steuerung
+übernehmen zwei Motoren, die die Kamera
+auf der Plattform drehen und neigen (Abb.
+12).
+
+
+Auch hier findet ihr das Modell und die
+RoboPro-Software zum Download in der
+ftcommunity, sowie ein Video des Erkundungsroboters auf Youtube.
+Pixy-Farberkennung
+Die Farberkennung der Pixy funktioniert
+auch bei Störlicht sehr zuverlässig – und ist
+damit erheblich besser als der fischertechnik-Farbsensor (128599).
+
+Ein Nachbau ist anhand der Fotos des
+Modells und mit dem Steuerungsprogramm
+in der ft:community leicht möglich, und in
+einem Youtube-Video könnt ihr das Modell
+in Aktion sehen.
+Pixy-Erkundungsroboter
+Einen mit der Pixy-Kamera ausgestatteten
+Erkundungsroboter könnt ihr dazu bringen,
+
+
+Richtig, man kann die Abweichung von der
+Mittelachse in der Abstandsberechnung berücksichtigen. Um die eine Hälfte von euch nicht mit
+
+
+Das dritte kleine Beispielmodell zeigt die
+Farbe des erkannten Objekts mit einem
+noch mehr Mathematik zu schocken, überlassen
+wir das der anderen Hälfte als Fingerübung.
+
+
+Computing
+
+Lämpchen an (Abb. 14). Auch von diesem
+Modell gibt es ein Youtube-Video.
+
+Fortsetzung folgt…
+Eine Funktion der Pixy haben wir Euch
+vorenthalten: die Erkennung von Color
+Codes. Was es damit auf sich hat und
+welche Modelle sich mit Color Codes
+realisieren lassen, stellen wir im zweiten
+Teil dieses Beitrags in der nächsten vor.
+
+Quellen
+[1]
+
+Charmed Labs: CMUcam5 Pixy
+(Wiki).
+
+[2]
+
+Kickstarter: Pixy (CMUcam5): a
+fast, easy-to-use vision sensor.
+
+[3]
+
+Dirk Fox: I²C mit dem TX – Teil 7:
+Real Time Clock (RTC). 4/2013, S. 28-34.
+
+
+
+

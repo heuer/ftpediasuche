@@ -1,0 +1,267 @@
+
+Reportage
+
+Reportage
+
+Besuch bei einem Hochregallager-Hersteller
+Marius Seider
+Schon viele Modelle von Hochregallagern sind aus fischertechnik gebaut worden. In den
+großen Vorbildern steckt allerdings viel mehr als nur das einfache Verfahren einer
+Ein-/Auslagerungs-Mechanik. Dieser Artikel stellt einige der besonderen Anforderungen und
+Lösungen vor, die in echten Hochregallagern umgesetzt werden.
+Auf der Welt existieren immer mehr
+Waren. Damit diese zu einem günstigen
+Preis angeboten werden können, dürfen sie
+nur wenig Lagerfläche und somit Grundfläche beanspruchen. Darum baut man
+Regale immer höher.
+Die so genannten Hochregallager (HRL)
+sparen nicht nur Kosten, weil sie extrem
+wenig Grundfläche verbrauchen. Durch die
+
+Möglichkeit, diese auch noch vollständig
+zu automatisieren, wird der Ein- und
+Auslagerungsvorgang beschleunigt, so
+dass die Waren schneller beim Kunden
+sind.
+Auch mit fischertechnik kann man HRLs
+bauen. Seit dem Kasten „Robo TX Automation Robots“ gibt es einen offiziellen
+Vorschlag dazu. Doch mich hat interes-
+
+
+
+
+siert, wie die Regale in der Realität funktionieren. Darum habe ich die Firma
+Klinkhammer in Nürnberg besucht.
+
+Ein „richtiges“ Hochregallager
+Das Ausstellungs-HRL von Klinkhammer
+ist im Grunde ein kleines Hochregal. Dennoch haben 1.500 Behälter Platz, die man
+nochmal unterschiedlich einteilen kann, so
+dass 2.900 verschiedene Artikel unterkommen. Die Abmessungen der Fachböden im HRL orientieren sich an den
+Maßen der Europalette [1]. Darum ist auch
+das Regal aufgebaut wie ein Quader, denn
+bei einem Zylinder hätte man ja überall
+tote Ecken wie Abb. 2 zeigt:
+
+
+Die Geschwindigkeit ist ein sehr wichtiger
+Aspekt, denn ‚Zeit ist Geld’. Darum ist der
+Wagen, der die Behälter ein- und auslagert,
+im Hochregallager mit 6 m/s (knapp 22
+km/h) unterwegs, was für so kleine
+Strecken sehr schnell ist. Um so hohe
+Geschwindigkeiten zu erreichen, braucht
+man eine hohe Beschleunigung.
+
+Lagerfläche
+Ware
+Verfahrfläche
+
+rechteckiger Bauform
+
+Paternostersysteme, also eine Art Umlaufregal, haben den Nachteil, dass teilweise
+sehr viel Zeit vergeht, bis sie das
+gewünschte Fach an der Zugriffsposition
+haben.
+
+
+
+Dabei werden die Beschleunigungskräfte
+so geregelt, dass der verfahrbare Wagen
+nicht kippt. Des Weiteren wird auf zusätzliche Lasten verzichtet. So erfolgt zum
+Beispiel die Stromversorgung des Fahrwagens mit Hilfe einer Stromschiene, weil
+Energieketten einfach ein zusätzliches
+Gewicht darstellen würden. Dennoch muss
+man den Energieketten zu Gute halten,
+dass sie praktisch keinen Verschleiß haben
+– im Gegensatz zu den Kohlebürsten, die
+durch die Reibung auf der Stromschiene
+doch einen gewissen Abrieb haben. Andere
+Stromübertragungstechnologien wie zum
+Beispiel Induktion (also kontakt- und
+kabellose Stromübertragung durch schnell
+
+wechselnde Magnetfelder) haben den
+Nachteil, dass die Abnehmerspulen teilweise derart groß dimensioniert sind, dass
+man eine lange Strecke bräuchte, die nicht
+genutzt werden kann, weil die Abnehmer
+länger sind als der komplette Fahrwagen.
+Damit sich das Hochregallager bewegen
+kann, wird eine Leistung von ca. 33 kW
+benötigt, die über Frequenzumrichter
+Drehstromservomotoren antreibt. Die
+Frequenzumrichter werden mit unterschiedlichen Parametern für Beschleunigung, Abbremsen usw. angesteuert, die
+in der Speicher programmierbaren Steuerung (SPS) festgelegt sind.
+
+
+Nichts anderes machen wir mit unserem
+fischertechnik-Interface, wenn auch in
+einem wesentlich kleineren Rahmen. Dass
+eine SPS wesentlich komplizierter steuern
+kann, sehen wir schon daran, dass die
+Brems- und Beschleunigungsparameter für
+die X-Achse festgelegt sind, während sie
+bei der Z-Achse, also der Achse, die die
+Waren nach oben hebt, dynamisch berechnet werden.
+
+Reportage
+
+Bei den Wegmesssystemen gibt es zwei
+unterschiedliche Kategorien: die inkrementalen und die absoluten.
+Bei einem inkrementalen Wegmesssystem
+werden nur Impulse gezählt. Wir stehen
+bei Punkt B, wollen zu Punkt C und wir
+wissen, dass wir zwischen den Punkten
+fünf Impulse bekommen. Also laufen wir
+los bis wir fünf Impulse bekommen haben
+und bleiben dann stehen. Weil wir aber
+manchmal etwas schusslig sind, verzählen
+wir uns versehentlich ab und zu. Darum
+haben wir bei Punkt A einen so genannten
+Referenzpunkt. Das ist der einzige Punkt
+auf der gesamten Strecke, an dem wir
+wirklich wissen, wo wir sind.
+Ganz anders das absolute Wegmesssystem:
+Dort wissen wir immer, wo wir sind, weil
+wir keine Impulse bekommen, sondern
+jeder Ort einen einzigartigen Namen hat.
+Das kann man mit einem so genannten
+Barcodeleseband realisieren (jede Position
+hat einen Strichcode), mit einem speziellen
+Glasmaßstab oder bei größeren Anlagen
+mit einem Lochband. Auch hat bereits die
+Laserdistanzmessung den Einzug in den
+HRL-Bau gehalten. Das Ausstellungs-HRL
+bei Klinkhammer arbeitet mit einem Lochband, um seine Position bestimmen zu
+können (Abb. 6).
+
+Wegemesssysteme
+Die Z-Achse ist ein besonderer Fall, weil
+eine Energierückspeisung hier sinnvoller
+wäre als bei der X-Achse. Damit aber die
+gesamten Parameter rechtzeitig greifen und
+der Wagen punktgenau positioniert werden
+kann, wird ein Wegmesssystem benötigt.
+
+
+Pick-by-sound und
+Pick-by-light
+Aber das HRL kann mehr als nur ein- und
+auslagern. Denn bei Artikeln, die zum
+
+
+
+Beispiel ständig gebraucht werden (so genannte Schnelldreher-Artikel), ist es nicht
+gerade sinnvoll, das Hochregallager auf
+den Weg zu schicken. Solche Posten sind
+beim Ausstellungs-HRL in den ersten zwei
+Reihen auf ergonomischer Höhe angeordnet. Man kann auf diese Artikel auch
+zugreifen, ohne dass man den Wagen losschicken muss. Damit aber auch hier
+jeweils die richtige Anzahl entnommen
+wird, gibt es verschiedene Kommissionierungssysteme.
+
+
+Anbindung an andere Systeme
+Ein HRL kann nicht nur Kommissionierungssysteme ansteuern. Es hat auch
+Schnittstellen, um unter anderem mit
+fahrerlosen Transportsystemen (FTS) oder
+auch mit Buchungs- und Warenwirtschaftssystemen wie z. B. SAP zu
+kommunizieren.
+
+Laufende Pflege
+
+Das erste nennt sich „Pick-by-sound“: Der
+Mitarbeiter hat Kopfhörer auf und eine
+Computerstimme sagt ihm: „Gehe zu Kiste
+23 und entnimm 3 Artikel“. Ein anderes
+System nennt sich „Pick-by-light“: Hier
+leuchten kleine Anzeigen mit der Anzahl
+der zu entnehmenden Teile unter den
+Kisten auf. So leuchtet dann in unserem
+Beispiel bei der Kiste 23 ein Licht,
+welches unsere Aufmerksamkeit auf sich
+zieht, und auf dem Siebensegmentdisplay
+wird uns die 3 angezeigt. Damit das
+System weiß, dass wir hier die Artikel entnommen haben, müssen wir noch eine
+Taste zur Bestätigung drücken. Wie man
+am Bild sieht, ist auch das „Pick-by-light“
+System im Ausstellungs-HRL verbaut
+(siehe Abb. 7 und 8). Da man aber nicht
+immer nur etwas in Regale auslagert,
+sondern auch einlagert, gibt es das „Pickby-light“ System auch umgekehrt. Dieses
+nennt sich dann „Put-to-light“.
+
+
+Wo bewegliche Teile sind, kommt man
+leider nicht um eine gewisse Wartung
+herum. So werden die HRL vierteljährlich
+gewartet. Dort werden zum Beispiel die
+Stromabnehmerkohlen kontrolliert und die
+Parameter für Beschleunigung etc. überprüft. Falls aber dennoch mal etwas ausfallen sollte, kann man per Fernwartung
+auf die Lagersteuerung zugreifen, um zu
+sehen, welches Problem die Anlage hat.
+
+Sicherheit
+Da die Anlage sehr stark automatisiert ist,
+aber auch Menschen mit ihr arbeiten, sind
+die Sicherheitsanforderungen an die
+Technik sehr hoch. Um zu erreichen, dass
+kein Mitarbeiter durch die Anlage irgendwie verletzt wird, ist die Anlage gekapselt.
+Das heißt, die Anlage umgibt ein Zaun, der
+jeden daran hindert, unbeabsichtigt in den
+Gefahrenbereich einzudringen.
+
+
+Reportage
+
+man bequem Sachen greifen kann, aber
+dennoch unten problemlos die Kisten
+durchpassen. Wenn man also wirklich in
+den Gefahrenbereich will, in dem man
+eigentlich während des Betriebes nichts zu
+suchen hat, müsste man über das Regal
+klettern. Man sieht, der Weg ist so
+umständlich, dass man da nicht wirklich
+„aus Versehen“ hineingerät.
+
+Falls man aber diesen dennoch betreten
+muss, zum Beispiel für Wartungszwecke,
+betritt man ihn durch Türen, die sofort den
+Not-Aus der Anlage auslösen, wenn man
+sie öffnet. (Ein kleiner Haushaltstipp am
+Rande: Es empfiehlt sich immer, Anlagen,
+die man wartet, vorher in einen stromlosen
+Zustand zu versetzen.) Für den extrem
+unwahrscheinlichen Fall, dass sich
+dennoch etwas in Bewegung setzt, gibt es
+an beiden Enden des Verfahrweges
+Fluchttüren.
+Wie man sieht, bringt die Kapselung sehr
+viel Sicherheit. Trotzdem kann man nicht
+die komplette Anlage einzäunen. Denn wie
+sollte man sonst an die Kisten kommen,
+die man ausgelagert hat, wenn der Zugang
+durch einen Zaun versperrt wird?
+Dieser Arbeitsplatz wird so gebaut, dass
+man nur absichtlich in den Gefahrenbereich kommen kann. Das wird realisiert,
+indem man über den Bereitstellungstisch
+eine Art Regal baut (siehe Foto). Dieses
+Regal befindet sich in einer Höhe, aus der
+
+
+Wer jetzt verständlicherweise auch ein
+HRL bei sich zuhause haben möchte
+(vielleicht für seine fischertechnik-Teile?),
+der kann mit Kosten von ca. 500.000 €
+rechnen. Dafür bekommt er aber ein Regal,
+in das er so ziemlich alles hinein sortieren
+kann und auch bestimmt nichts mehr
+verliert.
+
+Quellennachweis
+[1]
+
+Wikipedia: Europoolpalette.
+
+
+

@@ -1,0 +1,73 @@
+
+Modell
+
+Modell
+
+Scherenhub
+Stefan Falk
+Ausschließlich aus Teilen des in dieser ft:pedia-Ausgabe beschriebenen „Urlaubs-Kastens“
+besteht diese Hebebühne mit Scherenhub-Mechanik.
+
+
+Das Modell ist auf einer Bauplatte 500 so
+aufgebaut: Per Kurbel wird nach zweimaliger Untersetzung eine Schnecke angetrieben. Die schiebt den auf der anderen
+Seite fest mit der Bauplatte verbundenen
+Scherenhub hinreichend kräftig zusammen,
+sodass der „Arbeitsbühne“ gar nichts
+
+anderes übrigbleibt, als sich zu heben.
+Gerade wenn die Bühne sich ganz unten
+befindet, ist dazu eine erhebliche Schubkraft erforderlich, die aber über die beiden
+2:1-Untersetzungen mit Z10, Z20 und
+Ketten leicht erreicht wird.
+
+
+
+
+
+Die Schubstangen kommen an den Gelenksteinen der einen Hälfte der Scherenhubmechanik an:
+
+
+Die beiden Schneckenteile sitzen auf einer
+Metallachse 100, die am drückenden Ende
+in einem BS15 mit Bohrung sitzt, der mit
+einem BS5 etwas erhöht auf der Platte sitzt.
+Wichtig: Die Nut dieses BS5 muss quer zur
+Achse verlaufen, damit der BS15 nicht
+durch die erheblichen auftretenden Kräfte
+aus ihm herausgedrückt wird.
+Auf der anderen Seite sitzt die eine Hälfte
+eines Gelenksteins per Federnocken und
+BS5 auf der Grundplatte. An der
+Schneckenmutter sind die beiden SchiebeArme befestigt. Die bewegen sich also je
+nach Drehung der Schnecke.
+
+
+
+Der Scherenhub besteht einfach aus jeder
+Menge gleicher Segmente aus BS7,5,
+Grundbaustein 30, BS15 mit Bohrung,
+Grundbaustein 30 und wiederum BS7,5.
+Solange Steine und Achsen reichen, kann
+weiter gebaut werden. Aus dem „Urlaubskasten“ werden hierfür neben Kunststoffachsen auch Rastachsen und dort anstatt
+Klemmbuchsen Rast-Winkelzahnräder zur
+Fixierung verwendet.
+
+
+Modell
+
+Hubmechanik
+
+Die äußeren Achsen an den Hubsegmenten
+sind so angebracht, dass in heruntergefahrenem Zustand alle Segmente plan aufeinanderliegen und die ganze Mechanik also so
+niedrig wie möglich baut.
+Ganz oben schließlich kommt die anzuhebende Arbeitsbühne. Sie ist nur an einem
+Ende fest mit der Hubmechanik verbunden.
+Das andere gleitet in einer langen Rastachse, die in einer Kombination aus
+Rastachse mit Winkelzahnrad, BS15 mit
+Bohrung und Rastkupplung steckt.
+
+
+
+
+

@@ -1,0 +1,81 @@
+
+
+Tipps & Tricks
+
+ft-Spezialteile made by TST (Teil 10)
+Andreas Tacke
+In einer lockeren Reihe stellt TST einige von ihm entwickelte Spezialteile vor, die so manche
+Lücke beim Bauen mit fischertechnik schließen. Im heutigen Beitrag geht es um das
+Impulsrad – und eine modifizierte Version.
+Vorneweg erst einmal etwas Grundlegendes. Wofür benötigt man eigentlich ein
+Impulsrad?
+Man benötigt es, wie der Name schon sagt,
+zum Ermitteln von Impulsen. Es wird in der
+Hauptsache in Verbindung mit dem Robo
+Interface oder dem Robo TX Controller
+eingesetzt, um über die Zahl der Umdrehungen einer Achse beispielsweise die Strecke
+zu bestimmen, die ein Reifen zurückgelegt
+hat, die Verschiebung einer Schneckenmutter auf einer Schnecke oder die von
+einem Hubgetriebe bewältigte Distanz [1].
+
+und einen Taster die Achsbewegung abgefragt werden. Diese kann dann im Interface
+resp. im Controller über den Zähleingang
+verarbeitet werden.
+Dabei lassen sich verschiedene Varianten
+einstellen. So kann man über die ermittelten
+Impulse z. B. ein Roboter um eine festgelegte Strecke bewegen. Je nachdem, ob man
+einen Schnecken- oder ein Kettenantrieb
+benutzt, muss man dann noch rechnerisch
+ermitteln, wie viele Impulse für die
+gewünschte Strecke benötigt werden. Abb.
+2 zeigt die Ansteuerung in Robo Pro.
+
+Es gibt zwei verschiedene Ausführungen
+des Impulsrads: eines mit vier Schaltnocken
+(Z4, 37157) und ein älteres mit fünf (Z5,
+35995). Beide sind standardmäßig für das
+Rastachsensystem konzipiert (Abb. 1).
+
+
+Hat man ein Modell gebaut, bei dem z. B.
+mit einem Motor eine Bewegungsachse
+angetrieben wird, kann über das Impulsrad
+
+
+
+Für Abbildung 3 habe ich die typische Verwendung eines Impulsrads mit vier Nocken
+(37157) und einem Mini-Taster (37783)
+nachgestellt.
+
+
+mit Mini-Taster (397783)
+
+Wie oben beschrieben sind die Impulsräder
+für das Rastachsensystem konzipiert. Wie
+aber soll man mit diesen Impulsrädern bei
+der Verwendung von Metallachsen arbeiten?
+Um auch diese Lücke zu schließen, habe ich
+ein Impulsrad Z4 (37157) so modifiziert,
+dass sich dieses mit Metallachsen verwenden lässt.
+
+Tipps & Tricks
+
+Z4 (37157) mit Mini-Taster (37783)
+
+Dazu wurde das Impulsrad aufgebohrt und
+mit einer Messingnabe (mit einer 4 mm
+Bohrung) versehen. Mit der M3-Madenschraube lässt es sich nun auf der Metallachse fixieren.
+So kann man nun auch bei der Verwendung
+von Metallachsen die Standard-Impulszählung der fischertechnik-Controller verwenden.
+Fazit: Was nicht passt, wird eben passend
+gemacht …
+
+Referenzen
+[1]
+
+Andreas Tacke: ft-Spezialteile made
+by TST (Teil 5). Hubgetriebe mit
+Impulsrad. ft:pedia 3/2013, S. 36-37.
+
+
+

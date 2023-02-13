@@ -1,0 +1,157 @@
+
+Optik
+
+Optik
+
+Laser-Anwendungen (2): Nivelliergerät
+Andreas Gail
+In ft:pedia 2/2014 wurde gezeigt, wie Laser ins fischertechnik-System integriert werden können.
+Hier ein weiteres Anwendungsbeispiel: Diesmal ein Modell eines Laser-Nivelliergerätes, ein
+Werkzeug welches breiten Einzug in Handwerk und Bau gehalten hat. Wie einfach ein solches
+Gerät nachgebaut werden kann, wird nachfolgend gezeigt.
+
+Was ist ein LaserNivelliergerät?
+Die Anwendung eines Laser-Nivelliergerätes ist schnell erläutert. Es geht darum,
+möglichst exakt waagrechte oder senkrechte Linien z. B. auf eine Wand zu
+projizieren, um dadurch exaktere Arbeitsergebnisse zu erzielen. Beispielhaft lässt
+sich so die Arbeit von Fliesenlegern unterstützen, wie in Abb. 1 gezeigt.
+
+lage kann das Gerät selbstständig ausgleichen. Das in Abb. 2 gezeigte Gerät dient
+bei den nachfolgenden Versuchen als
+Referenz.
+
+LaserNivelliergerät
+e
+
+zur Erleichterung der exakten Verklebung von
+Wandfliesen, hier in der Variante eines
+Kreuzlinienlasers
+
+Das besondere an einem solchen Gerät ist
+nicht nur, dass es exakte dünne Laserlinien
+erzeugen kann, sondern dass diese auch
+dann noch exakt waagrecht oder senkrecht
+verlaufen, auch wenn das eigentliche Gerät
+etwas schräg aufgestellt ist. Diese Schräg-
+
+Variante eines Kreuzlinienlasers
+
+Auch für fischertechnik eine
+machbare Aufgabenstellung
+Nachfolgend wird der fischertechnikAufbau mit dem Referenzgerät verglichen.
+Die untere Laserlinie gehört dabei zum
+Referenzgerät, die obere Linie zum fischertechnik-Modell. In Abb. 3 und 4 kann
+
+
+
+gezeigt werden, wie genau die Ergebnisse
+beider Geräte übereinstimmen, und zwar
+auch bei schiefer Aufstellung des fischertechnik-Modells. Bei beiden Bildern bleibt
+die Position des Referenzgerätes unverändert.
+
+links Detail von Abb. 2,
+rechts Detail von Abb. 3
+
+Mechanischer Aufbau
+
+fischertechnik-Aufbau, schief aufgestellt
+
+Der mechanische Aufbau ist simpel. Man
+bemüht einfach die Schwerkraft, wie in
+ähnlich eines Senkbleis einfach nur nach
+unten. Als Senkblei wird im fischertechnikAufbau das Akku-Paket verwendet,
+welches von sich aus schon relativ schwer
+ist. Dieses Akku-Paket liefert gleichzeitig
+den erforderlichen Strom für den Betrieb
+des Linienlasers.
+
+Laser
+fischertechnik-Aufbau, gerade aufgestellt
+
+Der Detailunterschied zwischen Abb. 3 und
+4 wird in Abb. 5 noch mal gesondert
+gezeigt. Es funktioniert wirklich!
+
+Masse
+Nivelliergerätes
+
+Zwei Dinge sind trotz der grundsätzlichen
+Einfachheit zu beachten, damit die
+gewünschte Funktionalität sichergestellt
+werden kann. Das ist die leichte Beweglichkeit und somit das möglichst ungehinderte
+Auspendeln des Lasers sowie die Erstkalibrierbarkeit des Gesamtaufbaus.
+
+
+
+Optik
+
+Das Pendelsystem
+Der Aufbau des Pendelsystems ist in Abb. 7
+zu erkennen. es besteht aus zwei unabhängigen Achsen, die eine Pendelbewegung
+in einem Winkel von 90° zueinander
+ermöglichen. Damit keine Verschiebung
+auf der jeweiligen Achse stattfindet, wurden
+Messing-Unterlegscheiben aus dem Baumarkt verwendet.
+Achse 1
+
+Achse 2
+
+Die untere Laserlinie stammt dabei vom
+Referenzgerät. Die Kalibrierung ist dabei
+der Vergleich des fischertechnik-Gerätes
+mit dem Referenzgerät (Messmittel). Die
+Justierung ist die Einstellung auf eine
+akzeptable Funktionsweise (Messgenauigkeit). Die ist dann erreicht, wenn beide
+Laserlinien möglichst genau parallel
+zueinander verlaufen. Das ist in Abb. 8 der
+Fall, ein weiterer Justagebedarf besteht
+nicht. Sollte eine Justierung gewünscht
+werden, würde das eine Änderung der
+oberen Laserlinie gemäß der grünen Pfeile
+in Abb. 8 bedeuten. Um das am fischertechnik-Gerät einzustellen, ist eine
+Verschiebung der violett dargestellten Baugruppe gemäß Abb. 9 (grüne Pfeile)
+erforderlich.
+
+Beweglichkeit von zwei unabhängigen Achsen
+
+Erstkalibrierung
+Die Erstkalibrierung erfolgt mithilfe des
+Referenzgerätes. Dabei müssen zwei Ausrichtungen kalibriert und ggf. auch justiert
+werden. Zunächst soll die rechts-linksNeigung kalibriert werden. Dazu wird der
+Aufbau gemäß Abb. 8 verwendet.
+
+
+
+
+Verschiebung der violett markierten
+Baugruppe gemäß Pfeilrichtung
+
+Für die Kalibrierung der oben-untenNeigung ist ein Messaufbau gemäß Abb. 10
+hilfreich. Auch in diesem Fall ist keine
+weitere Justierung erforderlich.
+
+Verschiebung der violett markierten
+Baugruppe gemäß Pfeilrichtung
+
+Sollte eine Justierung gewünscht werden,
+würde dieses eine Änderung der oberen
+Laserlinie gemäß der blauen Pfeile in
+Verschiebung der violett dargestellten
+Baugruppe gemäß Abb. 11 (blaue Pfeile)
+erforderlich.
+
+Gesamtansicht
+
+Referenzen
+
+
+[1]
+
+Gail, Andreas: Einstieg in Experimente mit Lasern. ft:pedia 2/2014.
+
+
+Optik
+
+
+
+

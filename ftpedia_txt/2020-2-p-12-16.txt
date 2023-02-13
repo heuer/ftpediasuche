@@ -1,0 +1,253 @@
+
+
+Tipps & Tricks
+
+Kaulquappen (Teil 11)
+Harald Steinhaus
+Im Mittelpunkt der vorliegenden Episode stehen gute Bekannte: die Reifen 45 und 60 (31018
+und 37236). Im Forum hob jüngst eine Diskussion darüber an, dass doch die Reifen 45 aus den
+Tagen des Grundkasten 300 „alt“ und den neuen, weichen, breiten Reifen 45 nicht ebenbürtig
+wären. Vom Design her mag da etwas dran sein. Allerdings haben diese Elemente eine Reihe
+von Tricks auf Lager, für die weder mit neueren Reifen noch mit anderen Teilen Ebenbürtiges
+erschienen ist.
+Schon die Patentschrift von 1966 [1] zeigt
+zwei der Möglichkeiten: zwei Reifen 45
+kämmen miteinander, wenn sie
+
+montiert sind. Die Anwendung als Achskupplung zeigt schon die Anleitung zu den
+Grundkästen 100 bis 400 (Abb. 2 [3]).
+
+ leicht versetzt auf parallelen Achsen
+liegen (Abb. 1 [2]),
+ im rechten Winkel aufeinander abrollen
+(ebenfalls Abb. 1).
+
+Weiter geht es mit Seilen und Raupenbändern: die umlaufende Rinne dient als
+Führung für Nylonseil, Gummiringe und
+die Zugfeder (35707 oder 35708, Abb. 3).
+
+
+Reifen 45 angetrieben
+
+45 aus der Anleitung zu den Grundkästen
+100 – 400
+
+Außerdem kämmen sie wie Kronenräder
+ineinander, wenn sie stirnseitig voreinander
+auf zwei in Flucht liegenden Achsen
+
+
+Von einer zylindrischen Rolle würde das
+Raupenband (31057) irgendwann herunterfallen. Der runde Querschnitt des Reifen 45
+wirkt als Bombierung [4]: das Gummiband
+zieht sich von allein immer mittig auf den
+Reifen, weil ein schief aufliegendes Band
+außen auf einem kleineren Radius abläuft,
+somit die Außenseite schneller wird als der
+mittlere Teil und das Band zur Mitte hin
+zieht (Abb. 4).
+
+Tipps & Tricks
+
+und Differenzialkäfig (31411).
+
+Reifen als Zahnräder
+Die Reifen 45 und 60 kämmen nicht nur mit
+ihresgleichen, sie sind mit ihren 48 bzw. 62
+„Zähnen“ kompatibel mit
+ fischertechnik-Kegelzahnrädern,
+und
+zwar mit allen! Das sind: Klemm-Kegelzahnrad (31051), Rastkegel (35061,
+35062), Differenzialkäfig (31411), Differenzial-Kegelzahnrad (31412), Differenzialrad Z14 (137196, 35143, 31414)
+ der schwarzen Schnecke m1 (35977).
+ dem Rast-Z10 Modul 1, das sich an der
+Rastkurbel (35071) befindet.
+Zudem können die Kegelzahnräder achsparallel, über Eck oder schiefwinklig verbunden werden:
+
+
+
+
+Reifen 45 im Gleichlaufgetriebe „Nr. 11“
+[5]. In Abb. 6 sehen wir das Differenzialrad
+Z14 mit Rastanschluss zum Antrieb eines
+Reifen 45. Abb. 7 zeigt zwei Varianten mit
+schiefwinkligen Achsen. Die Reifen sind
+auf fischertechnik-Freilaufnaben (schwarz:
+68535, gelb: 129697) montiert.
+
+fischertechnik behandelt das Modul 1 eher
+stiefmütterlich: Die „normalen“ Zahnräder
+haben Modul 1,5. Im Modul 1 gibt es nur
+die Schnecke (35997) und das Z10 auf Rastkurbel (35071), welches man zur Not von
+der Kurbel befreien kann... Im Modellbauhandel finden sich Zahnräder von Eitech,
+die ebenfalls auf den fischertechnik-Achsen
+mit 4 mm Durchmesser geklemmt werden
+
+
+
+
+(schwarze Teile) oder frei laufen (blaue
+Hülsen) (Abb. 9):
+
+
+Der Reifen 60 ist gleichermaßen vielseitig:
+Klemm-Kegelzahnrad angetrieben wird
+(Portalhubwagen [6]):
+
+Auf Abb. 11 sieht man den Reifen 60 mit
+Antrieb durch das (kleine weiße) Differenzialkegelrad, in der Verwendung als Frontantriebsachse. Diese Anordnung findet sich
+bei etlichen Fahrzeugen wieder, z. B.
+
+
+
+
+
+
+A-Team reloaded [7]
+Citroën DS I und II [8]
+Citroën HY [9]
+Land Rover Defender [10]
+Vierachs-Kipper von Stefan Falk [11]
+
+Die Kegelverzahnung am Differenzialkäfig
+(31411) passt natürlich auch zum Reifen 60
+(Abb. 12):
+
+
+Exkurs: Leistung, Drehmoment
+und rutschende Antriebswellen
+Die Schwachstelle vieler fischertechnikAntriebe ist entweder eine in der fischertechnik-Nabe durchdrehende Stahlachse
+oder ein unter Last zerspringendes Rastkardan (35971 + 35972). Zur Ursachenfindung müssen wir etwas ausholen:
+
+
+Mechanische Leistung wird berechnet als
+Produkt aus Drehmoment und Drehzahl.
+Bei gleicher Leistung kann man Drehmoment und Drehzahl „gegeneinander
+tauschen“, etwa durch Halbieren des einen
+und Verdoppeln des anderen. So können ein
+Traktor und ein PKW mit der gleichen
+Motorleistung angegeben sein, aber man
+erhält diese Leistung einmal in „langsam,
+aber kräftig zum Pflügen“ und einmal in
+„schnell, aber weniger zugstark auf der
+Autobahn“. Innerhalb dieser Grobunterscheidung bewirken die Fahrzeuggetriebe
+
+
+Tipps & Tricks
+
+noch weitere, feinere Zwischenstufen (nur
+die langsam laufenden Schiffsdiesel der
+ganz großen „Pötte“ haben den Propeller
+direkt auf der Kurbelwelle [12], welche
+entsprechend tonnenschwer ausfällt). Üblicherweise wird schon im Antriebsstrang
+der gleiche Tauschhandel gemacht: bei
+gegebener Leistung kann man ein Getriebe
+mittels schnelldrehender Welle kleiner und
+leichter bauen, und geschickter Weise
+tauscht man erst ganz hinten, also z. B. mit
+einem Planetengetriebe in der Radnabe, in
+Richtung großer Momente und kleiner
+Drehzahl (Abb. 13).
+
+bauteile zum Transportieren der Motorleistung mit hoher Drehzahl und wenig
+Drehmoment bis zum Zahnkranz am Reifen
+und übersetze erst dort im Verhältnis X/48
+(Reifen 45) oder X/62 (Reifen 60) auf
+kleine Drehzahl und großes Drehmoment.
+
+Claas Xerion 3300 [13]
+
+Zu guter Letzt sei nur noch darauf verwiesen, dass die 48 Zähne des Reifen 45 ein
+Vielfaches von 12 sind. Es ist sicher nur
+eine Frage der Zeit, bis unsere fleißigen
+fischertechnik-Uhrenbauer daraus etwas
+machen.
+
+Genau hier schlägt die große Stunde der
+Reifen 45 und Reifen 60: Man verwende die
+eher schwachbrüstigen fischertechnik-Rast-
+
+Auch wenn Designer der/dem fischertechnik-Konstrukteur/in nun unbedingt einen
+formschönen fischertechnik-Reifen vorgeschrieben haben, kann man sie heranziehen:
+ Abb. 14 zeigt einen Reifen 45, der einfach im Huckepack neben einem Traktorreifen 80 montiert ist (für Details
+siehe [14]). Der Antriebsstrang ist damit
+entlastet, allerdings können die beiden
+Reifen gegeneinander rutschen.
+ Auf Abb. 15 sitzt ein Reifen 45 huckepack in einem Conrad-Monsterreifen.
+ Abb. 16 zeigt, dass man den Reifen 60
+mittels einer Drehbank (Achtung, Modding!) zum Traktorreifen 80 passend
+machen kann.
+
+
+
+
+
+Traktorreifen 80
+
+Quellen
+
+[6]
+
+Steinhaus, Harald: Portalhubwagen
+auf ftcommunity.de.
+
+[7]
+
+Steinhaus, Harald: A-Team reloaded
+auf ftcommunity.de.
+
+[8]
+
+Steinhaus, Harald: Antrieb der
+Citroën DS reloaded auf
+ftcommunity.de.
+
+[9]
+
+Steinhaus, Harald: Citroën Typ H.
+ft:pedia 3/2019, S. 9-12.
+
+[10] Steinhaus, Harald: Frontantrieb des
+Land Rover Defender auf
+ftcommunity.de.
+
+[1]
+
+Fischer, Artur: Patentschrift über
+den Reifen 45. 1966.
+
+[11] Falk, Stefan: Blick auf die Unterseite
+des 4-Achs-LKW-Kippers auf
+ftcommunity.de.
+
+[2]
+
+Falk, Stefan: Perlentauchen (Teil 1).
+ft:pedia 3/2012, S. 11-18.
+
+[12] Wikipedia: Kurbelwelle eines
+Schiffsdieselmotors.
+
+[3]
+
+fischertechnik: Anleitung „System
+ohne Grenzen“ zu den Grundkästen
+100-400 auf ft-datenbank.de.
+
+[13] Wikipedia: Claas Xerion. Abb.
+gemeinfrei, Harald H. Linz.
+
+[4]
+
+Wikipedia: Bombieren.
+
+[5]
+
+Steinhaus, Harald: Gleichlauf (11)
+auf ftcommunity.de.
+
+
+[14] Steinhaus, Harald: AllradVorderachse mit Reifen 45 auf
+ftcommunity.de.
+
+

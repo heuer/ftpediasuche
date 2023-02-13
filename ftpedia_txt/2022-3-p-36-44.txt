@@ -1,0 +1,479 @@
+
+
+Elektronik
+
+Die Praktika von fischertechnik im Jahr 2022
+Arnoud van Delden
+Mit dem „hobbylabor 1“ (30626 & 30850), dem „Elektronik-Praktikum“ (30629) und dem
+„IC-Digital-Praktikum“ (30630) stellte fischertechnik in den 1970er Jahren mehrere
+Experimentierkästen mit diskreten elektronischen Bauelementen und digitalen ICs vor. Da
+komplette Praktika- und Hobbylabor-Baukästen aufgrund ihres hohen Sammlerwerts heute
+kaum noch zu finden sind und es fast unanständig erscheint, mit diesen Museumsstücken
+tatsächlich zu spielen, habe ich mir eine Lösung einfallen lassen, in der sich alle PraktikaExperimente der Vergangenheit auf modernere Art wiederfinden. Bleibt die Ära der diskreten
+Elektronik und der digitalen ICs nicht das Fundament, auf dem die heutigen Mikrocontroller
+aufgebaut sind?
+
+Verschiedene Konstruktionsmöglichkeiten
+Beim hobbylabor 1, erschienen 1974,
+behandelte das dicke Begleitbuch [1] die
+allgemeine Theorie der Elektronik und des
+Magnetismus. Der Zusatz „1“ deutete an,
+dass fischertechnik zunächst einen Folgebaukasten geplant haben könnte. Er
+erschien jedoch nicht. Drei Jahre später, im
+Jahr 1977, wurden zwei Praktika-Boxen
+gleichzeitig veröffentlicht. Diese machten
+mit einem eher praxisnahen Ansatz, bei
+dem verschiedene Modelle mit der verbauten Elektronik und Digitaltechnik gesteuert
+wurden, ihrem Namen alle Ehre.
+
+Experimentierfeld“ (37140) und das Modul
+„PB Doppelpoti“ (37158) noch formkompatibel zu den Gehäusen der Silberlinge.
+Aber das „Volt-Amperemeter“ (37142)
+hatte seltsamerweise ein Gehäuse mit den
+gleichen Abmessungen, aber zwei Befestigungsfedern (statt einer) an den kurzen
+Seiten. Zum Inhalt gehörten auch einige
+kleine Kunststoffmodule, mit denen Verbindungen hergestellt und Bauteile auf dem
+Experimentierfeld montiert werden konnten
+(Abb. 1).
+
+Auffallend war, dass Kondensatoren,
+Widerstände, Transistoren und digitale ICs
+in ihrer verfügbaren regulären Gestalt verwendet wurden. Die typischen rot-grauen
+Konstruktionselemente fehlten komplett;
+den Praktikumsheften wurde hinten sogar
+eine Stückliste beigefügt, um eventuell
+defekte Teile nachkaufen zu können.
+Alles in allem hatte jede Box ihr eigenes
+„Montagesystem“ um die Schaltungen aus
+Komponenten aufzubauen (Abb. 1). Beim
+Hobbylabor waren das Modul „EF
+
+
+des Elektronik-Praktikum
+
+Die 1977 erschienenen Praktikums-Boxen
+enthielten mit den ICs Teile, die sich aufgrund des Abstands der Anschlussdrähte
+nicht mit Steckern auf dem Experimentierfeld befestigen ließen. Die Funktion des
+„Experimentierfeldes“ des Hobbylabors
+übernahmen beim Elektronik-Praktikum [2]
+zehn kleine Module aus durchsichtigem
+Kunststoff, mit denen die kleinen Schaltungen aufgebaut werden konnten. Auf
+Wunsch ließen sich damit auch Schalter und
+Verbindungen herstellen. Für die Verbindung der beiden Transistoren in der Box
+waren zwei größere Module vorgesehen.
+
+Elektronik
+
+Ein „Steckbrett-Silberling“
+Wie eingangs erwähnt bildet das Gebiet der
+diskreten Elektronik die Grundlage aller
+modernen Mikroprozessorentwicklungen.
+Zwar kannte ich die Konstruktionshefte im
+digitalen PDF-Format, doch in den letzten
+Jahren habe ich auch die Papierausgaben in
+niederländischer Sprache erhalten. Die vielfältigen Experimente in diesen klassischen
+fischertechnik-Boxen regen nach wie vor
+die Fantasie an und so entstand die Idee, die
+Hefte mit den ursprünglich vorgeschlagenen Bauteilen und dazugehörigen Modellen
+systematisch durchzuarbeiten.
+Außerdem suchte ich für meinen „normalen“ Elektronikarbeitsplatz schon länger
+nach einer Möglichkeit, beim Testen einer
+Schaltung Messleitungen und Prüfspitzen
+stabil und übersichtlich anbringen zu
+können (Abb. 3, 4).
+
+
+Das IC-Digital-Praktikum [3] enthielt
+ähnlich große Module wie die Silberlinge,
+jedoch mit einer anderen Höhe (Abb. 2).
+Der „Baustein Schaltstufe“ (38617) enthält
+ein Relais mit Vorverstärker. Die beiliegenden ICs (NAND 7400, NOR 7402, AND
+7408 und Monoflop 74121) konnten im Fuß
+der „Baustein IC-Fassung“ (38616) platziert werden; danach ließen sich die
+Anschlüsse mit Leiterplattenpins verbinden. Eine Abschirmung mit einer schematischen Darstellung des verwendeten ICs
+konnte als Referenz zwischen den Reihen
+von Verbindungsstiften platziert werden.
+An der Ober- und Unterseite der Platine
+dieser Module konnten jeweils die Versorgungsspannung und 0 Volt durchgeschleift
+werden.
+
+und Messausgängen
+
+asymmetrischer Signale
+
+
+Für den Zauberling [4] hatte ich ein eigenes
+Silberling-Gehäuse entworfen, auf dem
+natürlich diverse 3D-gedruckte AnschlussVariationen möglich sind. Ich habe zuvor
+eine Variante für ein universelles Stromversorgungsmodul entworfen, das neben den
+herkömmlichen 9 Volt verschiedene andere
+Spannungen liefern kann [5].
+Als modernes Äquivalent zu den verschiedenen Aufbaumöglichkeiten könnte das
+gängige „Steckbrett“ dienen. Tatsächlich
+lassen sich damit alle Möglichkeiten des
+„Experimentierfeldes“, die Module aus dem
+IC-Digital-Praktikum und die diversen
+anderen vorgeschlagenen klassischen Montagemöglichkeiten abdecken. Neben den
+konventionellen Bauteilen lassen sich auch
+digitale ICs einfach montieren.
+Die Steckbretter sind in verschiedenen
+Größen erhältlich. Vor allem ein kleines
+Modell von 8,5 · 5,5 cm schien mir sehr
+brauchbar und hatte die ideale Größe, um in
+einem „Silberling XL“-Modul mit doppelter Breite untergebracht zu werden.
+
+brachte. Ein Modell mit Messbuchsen auf
+der Rückseite ermöglicht ein einfaches
+Messen. So können BNC-Kabel und, über
+einen Adapterstecker, auch 4-mm-Bananenstecker fest angeschlossen werden
+(Abb. 5).
+Die Buchsen auf der Rückseite werden im
+Inneren des Gehäuses zu Steckerleisten
+geführt, in denen die gleichen Kabel wie auf
+dem Steckbrett verwendet werden können.
+Auch die 9-Volt-Versorgungsspannung
+kann so der Schaltung auf der Platine
+zugeführt werden.
+Manchmal ist es angenehm, auch 5 Volt zur
+Verfügung zu haben. Ich habe mir deshalb
+ein Modul gebastelt, das diese Versorgungsspannung zusätzlich zu den 9 Volt
+erzeugt, die durch die Seiten der Silberlinge
+durchgereicht werden, und auf einer separaten Verteilerleiste zur Verfügung stellt
+(Abb. 6). Dies ist praktisch für die TTL-ICs,
+die im IC-Digital-Praktikum verwendet
+werden, oder für zukünftige Experimente
+mit Mikrocontrollern.
+
+Verteilerleiste für 5 und 9V
+
+Der „Peripherie-Silberling“
+
+Messung an Schaltungen
+
+Mittlerweile verfügt mein Elektroniklabor
+über Messgeräte, von denen ich nur träumen konnte, als fischertechnik die hier
+besprochenen Baukästen auf den Markt
+
+Der „Steckbrett-Silberling“ hatte sich bereits einen Platz in meinem „Labor“ – der
+Elektronikwerkstatt – erobert. Wird mehr
+Platz benötigt als das relativ kleine Steckbrett bietet, lassen sich durch den modularen Aufbau problemlos mehrere „Steckbrett-Silberlinge“ zusammenschieben. In
+der Praxis wird jedoch oft viel wertvoller
+
+Platz auf dem Steckbrett durch Schalter,
+Taster oder ein benötigtes Potentiometer
+verbraucht. Diese zusätzlichen Teile sind in
+der Regel schwierig auf einem Steckbrett zu
+montieren und nehmen unverhältnismäßig
+viel Platz ein. LEDs lassen sich meist einfach stecken; wer damit aber mehrere
+Signale überwachen möchte, braucht
+schnell viel Platz für die diversen Vorwiderstände.
+So wünschte ich mir schon vor einer ganzen
+Weile eine universelle Leiterplatte für diese
+immer wiederkehrende „Peripherie“. Auf
+der Wunschliste standen als Mindestanforderung ein paar Druckknöpfe, Schiebeschalter und einige LEDs, die als universelle Anzeige von Signalen aus der zu
+testenden oder zu entwerfenden Schaltung
+dienen könnten. Allerdings habe ich online
+keine derartigen, geeigneten Produkte
+gefunden.
+
+Elektronik
+
+beim Schaltungsbeispiel von „Ein unermüdlicher Schrägaufzug“ auf Seite 33 des
+Buchs zum IC-Digital-Praktikum [3].
+Schließlich suchte ich nach einer einfachen
+Möglichkeit, „saubere“ Taktimpulse für
+Experimente mit getakteten digitalen ICs
+und (fischertechnik-) Flip-Flops zu machen.
+Wer schon einmal versucht hat, den „FlipFlop FF-Baustein“ (30815) mit einem
+Taster am Eingang „CP“ zu steuern, weiß,
+dass das Prellen im Schaltmoment des
+Tasters als mehrere Taktimpulse interpretiert werden kann. Dieses Signal kann oft
+mittels eines Entstörkondensators (100nF)
+ausreichend entprellt werden, aber diese
+Lösung ist sicher nicht optimal.
+Als Erweiterung des Steckbrett-Silberlings
+habe ich daher ein kleines Modul im
+gleichen „Silberling XL“-Gehäuse konstruiert, das acht LEDs, ein Potentiometer, zwei
+Schiebeschalter, vier Taster, zwei Relais
+und zwei „SR-Latches“ ohne Kontaktgeräusche beherbergt (Abb. 7). Das Modul
+verfügt über einen eigenen Spannungsregler
+für die 5-Volt-Stromversorgung und kann
+mit einem einfachen 9-Volt-GleichstromAdapter, der an der Rückseite eingesteckt
+wird, mit Strom versorgt werden. Auch der
+klassische „GB Gleichrichter Baustein“
+(30811) kann als Stromquelle verwendet
+werden (Abb. 8).
+
+auf einer Leiterplatte
+
+Daneben entstand der Wunsch, mit dem
+Steckbrett-Silberling die klassischen Experimente der Praktikumskästen durchführen
+zu können. Und obwohl der „RB1 Relaisbaustein“ (36392) bei Bedarf natürlich mit
+dem 3D-gedruckten Steckbrett-SilberlingModul verbunden werden kann, wünschte
+ich mir für einige Versuche ein kleines
+Relais. Ein Vorteil eines klassischen Relais
+ist schließlich, dass sich auch die Drehrichtung eines Motors einfach ändern lässt – wie
+
+auch das gängige GB-Gleichrichtermodul als
+Stromversorgung verwendet werden
+
+
+Die LED sind auf der Rückseite der Platine
+mit Vorwiderständen bestückt und können
+mittels Jumper einseitig mit den Plus- oder
+den Masse-Steckerleisten verbunden werden. Dadurch können sie sowohl als
+Indikator auf der „Open-Collector“-Seite
+(z. B. bei der Überwachung von Bussen) als
+auch für Signale mit „high-aktivem“ Potenzialpegel verwendet werden. Wird bei einer
+LED gar kein Jumper gesetzt, kann diese
+bei Bedarf sogar auf einer völlig unabhängigen Potentialebene verwendet werden. Das bietet viel mehr Flexibilität als die
+meisten vorgefertigten Drucktasten- und
+LED-Platinen, die online erhältlich sind.
+Die Auswahl entweder für eine „gemeinsame Anode“ oder eine „gemeinsame
+Kathode“ ist für diese Hilfsleiterplatten
+normalerweise zu restriktiv.
+Die SR-Latches können mit ihren Druckknöpfen „S“ und „R“ abwechselnd gesetzt
+oder zurückgesetzt werden. Der HIGHAusgang (TTL-Pegel, positive Logik) wird
+durch eine leuchtende LED angezeigt.
+Außerdem ist der komplementäre Ausgang
+immer verfügbar.
+Das Original-Hobbylabor-Modul „PB Doppelpoti“ (37158) enthält zwei Potentiometer
+von 1 kΩ bzw. 10 kΩ. Beide Potentiometer
+sind mit einem Vorwiderstand am Schleifkontakt gegen zu hohe Ströme geschützt.
+Das 10 kΩ-Potentiometer hat einen internen
+Schutzwiderstand von 1 kΩ, beim 1 kΩPotentiometer beträgt dieser Wert 150 Ω.
+Ich dachte, der Schutzwiderstand hätte
+wenig Priorität, schließlich könnte er bei
+Bedarf ganz einfach auf dem Steckbrett
+platziert werden. In der Praxis schien mir
+angesichts der Experimente in den Büchern
+eine einzige Position für ein Potentiometer
+ausreichend. Um jedoch den für ein Projekt
+am besten geeigneten Potentiometerwert
+auswählen zu können, habe ich austauschbare Module gedruckt, mit denen ein Potentiometer von 4k5Ω, 10 kΩ, 45 kΩ oder
+500 kΩ auf der Platine platziert werden
+kann.
+
+
+
+Bei den Relais entschied ich mich für zwei
+separate mit je einem Wechsler, da dies
+zusätzliche Flexibilität gegenüber einem
+Relais mit zwei Wechslern bietet: Mit
+einem Jumper kann der verstärkte Signaleingang beider Relais zu einer Relaisfunktion mit doppeltem Wechslerkontakt
+verknüpft werden. Natürlich muss dann nur
+ein Schaltsignal vorgesehen werden.
+Das Board bietet zusätzliche Anschlüsse für
+direkte Verbindungen der Testschaltung auf
+dem Experimentierbrett mit Masse, 5 und 9
+Volt.
+
+Ein universelles Werkzeug
+Die Grundlage zum Studium und Nachbau
+der Experimente und Modelle aus den
+historischen Baukästen schien mir so technisch ausreichend gelegt. Noch bevor sie
+ihre Daseinsberechtigung in Kombination
+mit fischertechnik bewiesen hatten, haben
+sich die vorgestellten Module bereits in verschiedenen Kombinationen bei Tests und
+Messungen in diversen Elektronikexperimenten bewährt (Abb. 9).
+
+
+Elektronik
+
+
+Messleitungen sind nicht mehr im Weg und
+lösen sich nicht mehr. Der „PeripherieSilberling“ und der „Steckbrett-Silberling“
+bieten ausreichend Platz, um Prinzipschaltungen aufzubauen. Durch die austauschbaren Potentiometer ist der am besten
+geeignete Wert schnell ausgewählt. Die SRLatches ermöglichen, „saubere“ Impulspegel ohne Prellen zu erzeugen. Das ist
+praktisch, wenn man mit CMOS-Zählern
+und getakteter Logik wie Flip-Flops experimentiert.
+
+Original-418-Übertrager über das Gleichrichtermodul) nicht das erwartete LOWAusgangssignal. Da ich den Einfluss des
+großen Kondensators im Gleichrichtermodul und der Signallampe untersuchen
+wollte, habe ich die Schaltung auf dem
+Steckbrett aus separaten Bauteilen aufgebaut, um mit Bauteilvarianten einfach
+experimentieren zu können. Damit fand ich
+schließlich eine Lösung, die keine Änderungen innerhalb des ursprünglichen Silberlings erforderte.
+
+Universell einsetzbar
+Bevor ich die Experimente aus den fischertechnik-Baukästen tatsächlich beginnen
+konnte, hatte sich der Steckbrett-Silberling
+bereits bei der Untersuchung des fischertechnik „Flip-Flop FF-Bausteins“ bewährt:
+Nach einer Diskussion im ftCommunityForum [6] suchte ich nach einer einfachen
+Möglichkeit, die ursprüngliche Schaltung
+zu studieren. Mein Original-FischertechnikFlip-Flop erzeugte beim Einschalten (Anlegen der Versorgungsspannung mit dem
+
+Versorgungsspannung schalten und testen
+
+
+
+
+Mehrere Möglichkeiten der
+Steuerung
+
+Beim Elektronik-Praktikum wird mit dem
+Transistor BC238 ein per Knopfdruck
+getriggerter 10-Sekunden-Timer realisiert.
+Nach Ablauf dieser Zeit wird der BD135 als
+Motortreiber geöffnet, woraufhin eine
+Scheibe mit Nocken eine Sechstelumdrehung weiterdreht. Die Scheibe macht also
+pro Minute eine Umdrehung. Durch passende Übersetzungen kann dann beispielsweise eine Lampe etwa einmal pro Stunde
+geschaltet werden. Das Getriebe verlangsamt so sehr, dass die letzte Scheibe vierzig
+Stunden brauchen würde, um sich einmal zu
+drehen. Das erinnert fast an eine Ewigkeitsmaschine [7, 8].
+
+Ein Modell, das sowohl im Buch des
+Elektronik-Praktikums [1, S. 76] als auch
+im IC-Digital-Praktikum [2, S. 86] auftaucht, ist das „Langzeit-Schrittschaltwerk“
+(oder die „Universelle Schaltuhr“). Es ist
+ein interessantes Modell, weil seine
+Steuerung sowohl mit diskreten Komponenten als auch mit digitalen ICs und einem
+Relais gelöst wird.
+
+Ich habe die Schaltung mit einigen Originalbauteilen und den Schaltelementen aus
+dem Original-Elektronik-Praktikum aufgebaut (Abb. 12). Im IC-Digital-Praktikum
+wird das gleiche mechanische Modell verwendet und die gleiche Funktionalität mit
+einem 74121 Monoflop IC als Timer und
+einem Relais zum Schalten des Motors
+umgesetzt.
+
+Weil ein zusätzliches 3D-gedrucktes Gehäuse wenig Aufwand verursacht, habe ich
+auch gleich ein Zwischenmodul gebastelt,
+um die Versorgungsspannung beliebig einoder ausschalten zu können, ohne an den
+roten Verbindungssteckern herumzufummeln. Damit ist es auch möglich, Messungen an der regulären Versorgungsspannung
+durchzuführen oder an dieser Stelle selbst
+Spannungen einzuspeisen. Das macht das
+Messen von Silberlingen unter Laborbedingungen etwas übersichtlicher.
+
+
+
+Es macht Spaß und ist lehrreich, beide
+Lösungen nebeneinander auf einem Steckbrett-Silberling zu sehen. Der Messausgang
+ermöglichte die Untersuchung des Entladezyklus des Kondensators. Um jedoch beide
+Zeitschaltkreise abwechselnd zu testen,
+muss der Impulsscheibenschalter umgepolt
+werden. In Abb. 13 ist der Transistor-Timer
+aus dem Elektronik-Praktikum aktiv.
+
+Elektronik
+
+Der blaue Taster ersetzt hier den Schalter
+auf dem „Minutenrad“ der Lösung aus dem
+IC-Digital-Praktikum. Beide Schaltungen
+können abwechselnd mit dem gleichen
+Ergebnis verwendet werden. Sie machen
+eigentlich genau dasselbe, sind aber jeweils
+anders elektronisch aufgebaut. In diesem
+Video sieht man das Modell in Aktion.
+
+auf dem Steckbrett-Silberling
+
+Fazit
+Das hobbylabor-Handbuch [1] bietet einen
+ziemlich vollständigen elektrotechnischen
+Grundkurs. Alle Experimente aus den
+Büchern der beschriebenen Baukästen
+lassen sich mit gängigen und leicht erhältlichen Bauteilen auf dem vorgestellten
+Steckbrett-Silberling aufbauen. Die Originalteile sind im jeweiligen 
+der Teileliste aufgelistet. Heute ist es
+besser, die LS-Variante der ICs zu wählen.
+Der „E-Magnet 6V“ (36789) und der
+„Kompass“ (36776), die für die Magnetismus-Experimente benötigt wurden, sind
+heute leicht durch Alternativen zu ersetzen.
+Ein Bündel Steckbrettkabel vervollständigt
+das erforderliche Material.
+
+
+
+
+Spannungsmessungen können heute mit
+einem einfachen Multimeter durchgeführt
+werden. Wer ein Oszilloskop besitzt, kann
+sogar die vielen Grafiken im hobbylaborBuch visualisieren. Beste Dienste leistet
+dabei natürlich der „Steckbrett-Silberling“
+mit den Messausgängen auf der Rückseite.
+Seit mir die neuen DIY-Module zur Verfügung stehen, habe ich viel damit herumgespielt. Die jüngsten Experimente betrafen
+Monoflop- und Flipflop-ICs sowohl in
+TTL-Logik als auch in CMOS. Die Bemerkung auf der letzten Seite des Begleitbuchs
+zum IC-digital Praktikum fasst meine
+vergangene Sommerzeit gut zusammen:
+„Allein die Erprobung der Kombination
+Flipflop-Monoflop lässt die ganzen großen
+Ferien über keine Langeweile aufkommen!“ Und tatsächlich erweist sich die
+Überschrift „fischertechnik – und kein
+Ende“ dieses allerletzten Absatzes als wahr:
+Im Jahr 2022 ist diese Materie immer noch
+faszinierend, trotz der vielen Möglichkeiten, die uns Mikroprozessoren und
+Steuerungen heute bieten.
+
+mit einem BD135 oder dem Relais auf dem
+Experimentierboard
+
+
+Epilog
+Eher exotisch sind die kleinen grünen ITTRelais auf dem Peripherie-Silberling. Ich
+hatte einen ganzen Satz davon von der
+„Reststoffabteilung“ von AT&T/Philips in
+Hilversum, wo ich viele Jahre gearbeitet
+habe. Das sind Relais von Telefonzentralen.
+Es sind sehr leise und kompakte Relais, die
+maximal 1 A schalten können. Ich gebe zu,
+ich war von Nostalgie geleitet, als ich mich
+entschied, sie zu verwenden.
+Kontaktiert mich gerne, wenn euch dieses
+Projekt anspricht oder wenn ihr Probleme
+habt, bestimmte Teile zu finden (E-Mail:
+arnoud@whizzbizz.com). Mein Vorrat an
+Platinen und Relais ist begrenzt, aber ich
+helfe gerne – auch beim 3D-Druck von
+„Silberling“-Gehäusen
+oder
+diversen
+anderen Teilen, die im Zusammenspiel mit
+fischertechnik zum Einsatz kommen [9].
+
+Quellen
+[1]
+
+fischertechnik: hobbylabor 1: Elektronik-Grundkasten. 1974.
+
+[2]
+
+fischertechnik: Elektronik-Praktikum. 1977.
+
+[3]
+
+fischertechnik: IC-DigitalPraktikum. 1977.
+
+[4]
+
+Arnoud van Delden: Der Zauberling
+(Teil 4). ft:pedia 1/2022, S. 71–79.
+
+[5]
+
+Arnoud van Delden: Eine
+zukunftssichere Stromversorgung.
+ft:pedia 2/2022, S. 73–86.
+
+[6]
+
+ftCommunity Forum: Silberlinge.
+
+[7]
+
+Dirk Fox: Die Ewigkeitsmaschine.
+ft:pedia 1/2015, S. 41–43.
+
+[8]
+
+Dirk Fox, Thomas Püttmann: Technikgeschichte mit fischertechnik.
+dpunkt-Verlag, 2015 (Nachdruck
+2021).
+
+[9]
+
+whizzbizz: Design and printing of
+3D parts.
+
+

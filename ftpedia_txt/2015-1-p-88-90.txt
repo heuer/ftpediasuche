@@ -1,0 +1,166 @@
+
+
+Tipps & Tricks
+
+fischertechnik mit dem Tablet steuern
+Dirk Wölffel
+Die Idee, Endgeräte über Apps mit einem Smartphone oder Tablet zu steuern, ist nicht neu.
+Alles wird miteinander vernetzt und gesteuert: Bequem von der Couch, wie z. B. der Fernseher
+oder, sogar von außerhalb, die Raumüberwachung für unseren Nachwuchs. Dieser Trend hat
+auch im Modellbaubereich Einzug gehalten. Der Beitrag zeigt eine Möglichkeit auf, wie das
+mit einfachen Mitteln auch für fischertechnik-Modellen gelingt.
+
+Hintergrund
+Für die Modelleisenbahn gibt es bereits ausgereifte Anwendungen, um diese über ein
+Tablet zu steuern. Für die Freunde von
+fischertechnik hingegen gibt es derzeit nicht
+viel: Zwei Android-Apps für fischertechnik
+kann man bei Google downloaden: RoboTXdroid und RoboTXkey. Beide Apps sind
+sehr einfach gehalten. Man kann nur wenig
+damit steuern; eine komfortable Steuerung,
+wie in der Oberfläche von Robo Pro schon
+lange verfügbar, ist mit diesen Apps leider
+nicht möglich.
+Seit September 2014 wird zum Erscheinungstermin des Robo TXT Controllers ein
+Robo Pro-Update angekündigt, welches ein
+Ansteuern der Endgeräte verspricht. Zitat
+fischertechnik: „Verbindung zu Smartphones/Tablet-PC über Bluetooth oder
+WLAN, Endgeräte können als Bedienfeld
+für den Controller verwendet werden. Programmierung über Robo Pro-Software.“
+Leider müssen wir wohl noch etwas auf
+dieses Update warten.
+
+Ein Tablet mit Windows 8.1
+Doch es gibt eine leistungsfähige Alternative zu den Apps aus dem Google Store, die
+ich Euch hier vorstellen möchte: Man kann
+mit einem Windows 8.1-Tablet nicht nur
+den TXT Controller, sondern auch den TX
+Controller über die Robo Pro Oberfläche
+
+steuern. Denn im Grunde ist ein Tablet ein
+Mini-PC mit Touchscreen (Abb. 1). Damit
+lassen sich eure Modelle komfortabel und
+drahtlos über W-LAN oder Bluetooth
+kontrollieren. Ein großer Vorteil hierbei ist
+die Möglichkeit, die Bedienoberfläche von
+Robo Pro zu nutzen.
+
+und Robo Pro 4.1.1.
+
+Anfängliche Bedenken, mit Windows 8.1
+zu arbeiten, haben sich bei mir zerstreut.
+Mittlerweile gefällt mir das Betriebssystem
+sogar besser als Windows 7, da es mehr
+Möglichkeiten bietet.
+
+Die Anforderungen
+Wichtig bei der Anschaffung des Tablet
+sind die Größe, der Speicher und die Anschlüsse. Hier eine Empfehlung für die
+Ausstattung:
+
+
+Tipps & Tricks
+
+Technische Daten
+· Mindestgröße: 10 Zoll (ca. 25,4 cm)
+· Arbeitsspeicher: mind. 2 GB RAM
+· Speicher: mind. 32 GB intern
+· Anschlüsse: USB oder Mini-USB
+· Drahtlos: W-LAN und Bluetooth
+Zubehör
+· USB-Stick oder externes USB DVDLaufwerk
+· USB Kabel
+Optional
+· Mini-SD-Karte für Speichererweiterung
+(mind. 16 GB)
+· USB-Maus
+· USB-Tastatur
+· Flex-Case-Hülle zum Schutz des Tablet
+· 3G-Modul für Sim-Karte
+Software
+· Betriebssystem Windows 8.1 (nicht
+Windows RT)
+· Robo Pro CD
+Die Kosten für ein günstiges Tablet mit
+Windows 8.1 belaufen sich auf ca. 199 €.
+Ich habe mir das Surftab Wintron 10,1" von
+Trekstor gekauft, inklusive Office-365Paket (für ein Jahr) und 1 GB Cloud-Speicher. Es ist kostengünstig und hat eine 10Finger-Touch-Oberfläche (Abb. 2).
+Es erfüllt die oben genannten Anforderungen für die Nutzung von Robo Pro. Was
+man jedoch nicht verschweigen sollte, ist,
+dass das Tablet stark spiegelt und man auch
+jeden Fingerabdruck darauf sieht. Dies gilt
+allerdings auch für andere Produkte.
+
+
+Hinweis
+Wichtig zu erwähnen ist, dass dieses Tablet
+auch mit Android läuft: Ein Parallelbetrieb
+ist möglich. Das heißt, wenn die AndroidSoftware von fischertechnik herauskommt,
+braucht ihr kein neues Tablet zu kaufen.
+Das Betriebssystem Android ist kostenlos.
+
+Die Installation
+Nachdem Windows 8.1 auf dem Tablet eingerichtet ist, könnt ihr mit der Robo ProInstallation starten (Abb. 3). Ich empfehle
+euch dafür eine USB-Maus; damit gelingt
+die Installation etwas komfortabler. Außerdem braucht ihr entweder ein externes USB
+DVD-Laufwerk oder einen USB-Stick mit
+dem Robo Pro-Softwarepaket – für die Ansteuerung des Robo TXT Controllers mindestens die Version 4.1.1, für den Robo TX
+Controller genügt auch eine ältere Version
+(wie 3.2.6).
+Ich habe mein Tablet um eine Mini SD
+Karte mit 32 GB erweitert und die Programme drauf installiert.
+
+
+
+
+Bluetooth:
+Beim Tablet Bluetooth in den WindowsEinstellungen einschalten. Suche den Robo
+TX/TXT Controller. Bluetooth-Schlüssel
+eingeben und verbinden.
+Robo Pro
+
+
+Verbinden mit dem Tablet
+Nachdem ihr Robo Pro installiert habt,
+müsst ihr das W-LAN bzw. Bluetooth beim
+Tablet und im Robo TX/TXT Controller
+einschalten. Beim TXT könnt ihr über WLAN sogar drahtlos ein Bild von der
+Kamera empfangen.
+
+Jetzt ruft ihr Robo Pro im Tablet auf. Dann
+in der Konfiguration von Robo Pro einstellen, mit welchem Protokoll (W-LAN, Bluetooth) ihr verbinden möchtet. Wenn alles
+geklappt hat, dann solltet ihr im Robo ProInterface-Test die Verbindung sehen (Abb.
+4).
+
+Robo TXT
+Den Robo TXT Controller starten. Dann auf
+Einstellungen – Netzwerk – W-LAN bzw.
+Bluetooth einschalten und den Schlüssel
+notieren.
+Robo TX
+Den Robo TX als „Master“ konfigurieren.
+Dieser hat standardmäßig den Bluetooth
+Schlüssel „1234“.
+Nun meldet ihr den Robo TXT/TX Controller mit dem jeweiligen Schlüssel beim
+Tablet an.
+Tablet
+W-LAN (nur TXT):
+Beim Tablet das W-LAN in den WindowsEinstellungen einschalten. Durch einen
+Klick auf das W-LAN Symbol unten rechts
+in der Taskleiste öffnen sich alle erreichbaren W-LAN-Verbindungen. Jetzt sollte der
+TXT in der Liste angezeigt werden. Doppelklick auf den Robo TXT, den W-LAN
+Schlüssel eingeben und verbinden.
+
+
+
+Jetzt könnt ihr, wie beim PC, alles steuern.
+Der Unterschied ist, dass ihr über die Bedienelemente, wie Knöpfe oder Regler, eure
+Modelle komfortabel mit einem Touchscreen steuert.
+Auf YouTube könnt ihr euch zwei Beispielvideos ansehen: Robo TXT mit Tablet steuern und Robo TX mit Tablet steuern. Zum
+Testen habe ich euch ein Beispielprogramm
+(RoboPro TX/TXT Tabletsteuerung) zum
+Download hinterlegt.
+Ich wünsche euch viel Spaß beim Steuern
+eurer Modelle mit dem Tablet.
+
+

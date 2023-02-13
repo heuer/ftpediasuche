@@ -1,0 +1,174 @@
+
+Modell
+
+Modell
+
+Eine Kabelklemme mit beweglichen
+Klemmbacken
+Fabian Haas
+Immer wieder stehen wir vor der Aufgabe, Dinge, die keine fischertechnik-Verzahnung haben,
+in der fischertechnik-Welt zu verwenden und so auszurichten, dass wir sie verwenden können.
+Bei mir war es kürzlich eine Endoskopkamera mit einem recht widerspenstigen Kabel. Ich
+zähmte es durch eine Klemme, die entsprechend dem Sondenkabel recht schwer ausfiel. Damit
+klemmt es – sicher und zuverlässig!
+
+Aluprofile und den Drehkranzoberteilen als Handdrehräder
+
+Nach der Beschaffung einer einfachen
+Endoskop- bzw. Sondenkamera, gedacht
+für die Inspektion von Rohren und Hohlräumen, war schnell klar, dass es vernünftige,
+unverwackelte Aufnahmen nur mit einer
+festen Halterung geben wird. Diese sollte
+dann gleichfalls in die fischertechnik-Welt
+mit Motoren, Profilen und Winkeln vermitteln. Schließlich sollte alles zu meinem
+
+bereits vorgestellten „Fotostudio für
+Makrofotos“ passen, das in vorgestellt wurde [1].
+Eine einfache Lösung aus ein paar Bausteinen 30, einer Schneckenmutter, einer
+klemmbaren Schnecke (m = 1,5) und einem
+Drehschalteroberteil (32117, Z80, mit
+Verzahnung, Abb. 2) war schnell gebaut
+
+
+
+(nicht gezeigt), erwies sich aber als insgesamt zu wackelig. Das Kabel des Endoskops ist recht steif, was für das Vordringen
+in Rohre sinnvoll ist; die Ausrichtung auf
+ein Fotomotiv wird dadurch aber nicht
+einfacher. Daher sollte das Kabel über
+weiter auseinander liegende Klemmbacken
+und in einer insgesamt stabileren Halterung
+gesichert werden.
+
+Verzahnung. In manchen ec-Kästen war ein
+Oberteil ohne Verzahnung beigelegt (was für
+den Drehschalter ja sinnvoll ist), hier wird
+aber eines mit Verzahnung benötigt, damit
+Kraft auf die Nabe übertragen werden kann.
+
+Daher musste eine schwerere, festere
+Lösung gefunden werden (Übersicht in
+210 mm Länge zur Verfügung (wobei die
+Länge nicht entscheidend ist). Auf dem
+einen Aluprofil wurden fünf Bausteine 15
+mit Bohrung platziert, auf dem anderen
+Profil nur drei, aber zusätzlich zwei
+Schneckenmuttern, die die klemmbaren
+Schnecken empfangen. Bei dem abzusehenden Arbeitsweg reicht eine Schnecke aus
+zwei klemmbaren und mit Zangenmuttern
+festgezogen Schnecken – für größere
+Abständen einfach verlängern.
+Verwendet werden fünf Metallachsen 110.
+Dabei dienen die beiden äußeren nur als
+Führung und Stabilisierung beim Einklemmen des Kabels. Die nächsten beiden
+(von außen nach innen gesehen) tragen die
+Schnecken und die mittlere Metallachse
+110 ist wieder eine Führung. Aufgrund des
+gleichen Drehsinns der Schneckengewinde
+
+musste zwischen den beiden Drehschalteroberteilen (Z80) ein drittes Zahnrad
+eingefügt werden. Dadurch erfolgt eine
+zweimalige Umkehr der Drehrichtung und
+die Schnecken laufen wieder synchron.
+Ich wählte – ohne besonderen Grund –
+wieder ein Drehschalteroberteil (Z80).
+Durch diese Wahl ergibt sich ein rasterkonformer Abstand zwischen den Bausteinen 15 mit Bohrung und den Schneckenmuttern, der jeweils mit einem Baustein 15
+und zwei Bausteinen 5 realisiert wird.
+Etwas mehr Gewicht im Modell schadet
+nie, wenn es um eine stabile Halterung geht.
+Bis jetzt liegt nur die Grundkonstruktion
+vor: Zwei Aluprofile, die sich über zwei
+Schnecken gegeneinander verschieben
+lassen (Abb. 1). Allerdings fehlen noch die
+Klemmbacken, in denen das Endoskopkabel tatsächlich eingeklemmt wird. Die
+Klemmbacken sollten selbstausrichtend
+und flexibel einsetzbar sein.
+
+geschlossen
+
+geöffnet
+
+
+Modell
+
+Zapfen und unten mit einer Bauplatte 30×45
+gesichert. Die Bauplatte dient gleichzeitig
+als Auflage auf einem Tisch und ist deshalb
+größer gewählt als eigentlich notwendig.
+Am gegenüberliegenden Aluprofil sorgt die
+Bauplatte 15×45 für die identische Höhe.
+
+Kabel der Endoskopkamera
+
+Nach einigen Versuchen wird folgende
+Konstruktion verwendet, in der insgesamt
+drei Winkelsteine 60° mit drei Nuten verwendet werden (Abb. 3a, und 3b). Zwei
+davon liegen fest, sie wurden nebeneinander mit Federnocken auf einem Baustein
+15×30×5 mit Nut und Zapfen angebracht.
+Da beim Einklemmen signifikante Kräfte
+auf die Backen wirken, wurden sie oben mit
+einem Baustein 15×30×5 mit Nut und
+
+Auf dieser Seite wird die bewegliche
+Klemmbacke verwendet (Abb. 3a, b). Ein
+Winkelstein 60° mit 3 Nuten befindet sich
+auf einem Baustein 7,5, der auf zwei Metallachsen 50 beweglich ist. Die Metallachsen
+50 werden von einem Baustein 7,5 gehalten,
+der an einem Baustein 30 mit Federnocke
+fixiert ist. Die Bausteine sind mit Federnocken oder Verbindungsstücken am Aluprofil und benachbarten Baustein 15 mit
+Bohrung gesichert und stabilisiert.
+Beim Schließen wird also der Winkelstein
+60° über den Baustein 7,5 direkt auf das
+Profil gedrückt und kann nicht ausweichen.
+Die Kräfte werden direkt ins Aluprofil
+
+die dadurch eingesparten Bauteile
+
+
+
+gelenkt, wodurch keine besonders schwere
+Halterung für die Achsen 50 notwendig ist.
+Je eine komplette solche Klemmbacke
+wurde an beiden Enden der Aluprofile
+montiert, auf eine dritte oder vierte wurde
+bisher verzichtet; die Klemmung ist fest
+genug. Sie reicht aus, um das Kabel gegen
+Verdrehung in den Klemmbacken und
+gegen Verwindung zu sichern. Die Kräfte
+können erheblich sein, deshalb ist eine
+Sperrung der beiden Winkelsteine 60° der
+einen Seite gegen eine Verschiebung nach
+oben und unten notwendig ist. Die Gewinde
+der Schnecken erzeugen genug Reibung in
+den Schneckenmuttern, dass sich die
+Gewinde nicht von selbst lockern. Die
+Klemmbacken lassen sich wirklich festdrehen und es bedarf keiner weiteren
+Sicherung gegen die unbeabsichtigte
+Öffnung (Abb. 4).
+Meine Bilder geben Aufschluss über
+weitere Details. Durch längere Schnecken
+lässt sich der Arbeitsbereich anpassen und
+
+
+eine Motorisierung ließe sich über die Drehschalteroberteile, die hier einfach als Z80
+verwendet werden, realisieren. Wer es
+etwas kleiner mag, kann kürzere Aluprofile
+verwenden oder ganz auf diese verzichten.
+An den Schneckenmuttern und den Bausteinen dazwischen ist genug Raum, um
+Klemmbacken zu montieren. Die Klemmbacken und Aluprofile sind im Wesentlichen unabhängig voneinander; ein Widerlager für die Klemmbacken lässt sich ggf.
+auf andere Art und Weise montieren. Und
+wer den Mechanismus auf die Seite legt,
+bekommt einen Teil einer Hebebühne…
+Die Endoskopkamera ist nun auf alle Fälle
+fest fixiert und in das fischertechnik-System
+wackelfrei integriert! Fotos und Filmen aus
+der Miniaturwelt steht also nun nichts mehr
+im Wege.
+
+Referenzen
+[1]
+
+Fabian Haas: Fotostudio für
+Makrofotografie. ft:pedia 2/2021,
+S. 4–6.
+
+

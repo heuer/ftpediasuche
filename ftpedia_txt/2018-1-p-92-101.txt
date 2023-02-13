@@ -1,0 +1,723 @@
+
+
+Computing
+
+Hacker im Kinderzimmer:
+Remote-Angriff auf den TXT
+Till Harbaum
+Wie sicher ist eigentlich der TXT? Eine Frage, der mit der WLAN-Fähigkeit und der Nutzung
+des Controllers als Smart Home Device neue Bedeutung zukommt.
+
+Hintergrund
+Der fischertechnik-TXT-Controller war zu
+seiner Markteinführung 2014 unter den
+Konstruktionsspielzeugcontrollern unangefochtener Spitzenreiter. Auch wenn die
+Hardware inzwischen etwas betagt ist, so
+erlaubt sie nach wie vor kleine und große
+Softwareerweiterungen. Eine dieser Erweiterungen war Mitte 2016 die Aufrüstung der
+WLAN-Fähigkeiten des TXT um die Möglichkeit, sich in das private Heimnetzwerk
+einzuwählen. Bis dahin stellte der TXT
+immer ein eigenes WLAN zur Verfügung,
+in das man sich mit dem Computer einwählen und so insbesondere die Verbindung zum Internet kappen musste, solange
+man mit dem TXT verbunden war.
+Was auf den ersten Blick als lange fällige
+Erweiterung erscheint, hat leider gleichzeitig gravierende negative Konsequenzen.
+Um diese geht es in diesem Beitrag.
+Das ursprüngliche Konzept, dem TXT nur
+zu erlauben, sein eigenes lokal begrenztes
+WLAN zu betreiben, brachte vor allem
+eines: Sicherheit. Weder der TXT noch der
+mit ihm verbundene PC waren mit dem
+Internet verbunden. Bösartige Angreifer
+waren damit ausgeschlossen, und die
+jugendlichen Nutzer konnten auch nicht
+versehentlich Kameradaten vom TXT aus
+dem heimischen Kinderzimmer ins Internet
+übertragen. Die kleine Online-Welt des
+TXT war sicher und verschlossen und
+
+garantiert
+schränkt.
+
+auf das Kinderzimmer be-
+
+Bald bewies aber die Community Firmware, dass man den TXT auch mit dem
+Heim-WLAN und damit auch mit dem
+gesamten Internet verbinden kann. Den
+meisten Beteiligten war schnell klar, dass
+damit auch neue Risiken eingegangen wurden, und die Community Firmware erhielt
+neben aktuellen Software-Komponenten
+auch eine eigene Firewall. Einige besonders
+empfindliche Dienste (wie der ROBO ProZugriff per fischertechnik-GUI) laufen
+inzwischen nicht mehr unbeaufsichtigt im
+Hintergrund, sondern müssen explizit durch
+den Anwender gestartet werden.
+Kurze Zeit später zog fischertechnik nach
+und rüstete 2016 auch in der offiziellen
+Firmware 4.2.4 des TXT die Möglichkeit
+nach, den TXT mit dem Heim-WLAN und
+somit indirekt mit dem Internet zu verbinden. Die übrige Software des TXT und
+auch die Sicherheitsmechanismen blieben
+davon unberührt.
+Einer dieser Sicherheitsmechanismen, dem
+dieser Beitrag besondere Beachtung
+schenkt, ist der Schutz des so genannten
+Root-Passworts. In der Linux-Welt des
+TXT ist das Root-Passwort das Gegenstück
+zum Adminstrator-Passwort unter Windows. Erlangt man Kenntnis dieses Passworts und hat man Netzwerkzugang zum
+TXT, so kann man aus der Ferne die volle
+
+Kontrolle über das Gerät übernehmen. Man
+kann beliebige Software installieren und
+starten und hat freien Zugriff auf alle
+angeschlossene Hardware wie Sensoren
+und Kameras. Das Root-Passwort eines mit
+dem Internet verbundenen Gerätes sollte
+daher auf keinen Fall einem Angreifer aus
+dem Internet zugänglich sein.
+Nun ist es meist nicht direkt möglich, aus
+dem Internet auf heimische Netzwerkgeräte
+zuzugreifen. Normalerweise leitet der DSLRouter daheim keine Zugriffe aus dem
+Internet ins Heimnetz weiter. Softwarefehler und Fehlkonfigurationen sind aber
+hier an der Tagesordnung, daher ist es
+fahrlässig, sich auf die Sicherheit des Heimnetzwerks zu verlassen. Als Betreiber eines
+privaten Netzwerks muss man leider davon
+ausgehen, ungebetene Gäste zu haben –
+insbesondere wenn man videofähige Spielzeuge nutzt ist eine gewisse Vorsicht geboten.
+Tatsächlich war sich fischertechnik der
+Risiken von vornherein bewusst: Im Dokument „ROBOTICS TXT Controller Security Information Firmware Version 4.1.4“
+werden sie recht deutlich beschrieben, auch
+wenn einige kritische Aspekte dort keine
+Erwähnung finden. Allerdings gab es zu
+jener Zeit noch keine Möglichkeit, den TXT
+mit dem Internet zu verbinden. Und wenn
+die neuen Möglichkeiten bisher kaum
+beworben und vor allem von Kindern wohl
+kaum genutzt werden, so ist doch davon
+auszugehen, dass sich das mit dem Erscheinen des Smart Home Kastens ändert,
+da dessen Funktion auf eine bestehende
+Internet-Verbindung des TXT angewiesen
+ist.
+Spätestens im Sommer dieses Jahres werden sich also massenhaft TXTs ins Internet
+verbinden. Wenn es nach fischertechnik
+geht, werden diese Geräte vor allem auch
+unbeaufsichtigt und über einen längeren
+Zeitraum laufen und automatisch Videound Sensordaten sammeln und im Internet
+hinterlegen.
+
+Computing
+
+Wie aber sieht es dabei mit dem Root-Passwort aus? Um zu verstehen, was es mit dem
+Passwort auf sich hat und warum es wo
+hinterlegt ist, muss man verstehen, wie die
+Netzwerkkommunikation des TXT funktioniert.
+Jedes mit einem Netzwerk verbundene
+Gerät verfügt über eine eigene IP-Adresse.
+Diese Adresse identifiziert es eindeutig im
+Netzwerk. Man kann sich die IP-Adresse
+wie eine Telefonnummer vorstellen. Darüber hinaus gibt es sogenannte Ports; ihre
+Funktion kann sich man wie die einer
+Durchwahl-Nummer veranschaulichen.
+Unter Telefonnummer und Durchwahl
+erreicht man dann einen so genannten
+Dienst. Dienste können völlig unterschiedlicher Natur sein. Einige nehmen zum Beispiel Befehle von außen entgegen und
+führen diese aus, andere liefern auf Nachfrage lediglich bestimmte Informationen.
+Ein Web-Service ist z. B. ein solcher
+Dienst. Er hat die „Durchwahl“ (Port) 80,
+und wenn man sich von seinem PC aus mit
+diesem Dienst verbindet, dann kann man
+die Webseiten dieses Dienstes abrufen.
+Genau das machen Internet-Browser. Ein
+TXT besitzt mehrere solcher Ports. Uns
+interessieren zwei davon: Die Ports 22 und
+65.000. Unter der Durchwahl 65.000 ist ein
+spezieller fischertechnik-Dienst zu erreichen. Er wird von ROBO Pro verwendet,
+um Daten im Online-Betrieb mit dem TXT
+auszutauschen oder ROBO Pro-Programme
+auf den TXT zu laden. Unter der Durchwahl
+22 erreicht man den sogenannten SSHDienst, die „Secure Shell“ oder „Sichere
+Eingabeaufforderung“. Hier erwartet der
+TXT beliebige Linux-Kommandos. Damit
+nun nicht einfach jeder Nutzer beliebige
+Kommandos ausführen kann ist der SSHDienst passwortgeschützt. Nur wer sich mit
+einem Namen identifiziert und das dazugehörige Passwort kennt darf Befehle erteilen.
+Eine weitere Unterscheidung findet auf
+Basis des Namens statt, den man bei der
+
+
+
+Anmeldung am SSH-Dienst angeben muss.
+Einige Nutzer haben weniger Rechte, andere mehr. Auf dem TXT sind die Namen
+zweier Nutzer voreingestellt. Der erste
+Nutzer heißt „ROBOPro“ und sein Passwort lautet „ROBOPro“. Das ist von
+fischertechnik offiziell so dokumentiert,
+und dieser Zugang ist von Jedermann über
+das Netzwerk nutzbar. Der Nutzer
+ROBOPro darf nur sehr wenige Befehle auf
+dem TXT ausführen und hat vergleichsweise wenig Möglichkeiten, so dass fischertechnik es als sicher genug erachtet hat,
+diesen Benutzernamen und das Passwort
+öffentlich zu dokumentieren. Dass wir der
+Meinung sind, dass das schon ein viel zu
+großes Risiko darstellt, wird uns später
+noch interessieren. Der zweite voreingestellte Benutzer hört auf den Namen „root“.
+Ein Root-Benutzer existiert üblicherweise
+auf jedem Linux- bzw. Unix-System und
+verfügt über maximale Rechte. Er kann auf
+dem Gerät praktisch tun und lassen was er
+will. Das Passwort des Root-Benutzers darf
+daher niemals in die Hände eines Angreifers
+fallen und z. B. nicht öffentlich dokumentiert sein. Das hat fischertechnik sichergestellt, indem sie für jeden TXT ein eigenes,
+zufälliges Passwort generieren. Dieses
+Passwort lässt sich nur über den Bildschirm
+des TXT ablesen. Da ein Angreifer aus dem
+Netzwerk aber den Bildschirm des TXT
+nicht sehen kann, ist es ihm unmöglich, an
+das Root-Passwort zu kommen.
+Leider musste fischertechnik einen zweiten
+Weg vorsehen, um an das Passwort des
+Root-Benutzers zu kommen. Im normalen
+Betrieb wird der SSH-Zugang des TXT
+zwar nicht benutzt, wohl aber für das
+Update der Controller Firmware. Das passiert alles „magisch“ im Hintergrund. Der
+Benutzer merkt nicht, dass Robo Pro einen
+SSH-Kanal zum TXT öffnet und hier seine
+Magie werkeln lässt. Und da ein komplettes
+Update des TXT ein massiver Eingriff in
+das System darstellt, hat fischertechnik
+festgelegt, dass dafür Root-Rechte erforderlich sein sollen. Das wiederum hat natürlich
+
+zur Folge, dass ROBO Pro für ein Update
+des TXT eine Möglichkeit erhalten muss,
+den Root-Zugang zum TXT zu nutzen.
+Wir schreiben an dieser Stelle bewusst
+nicht, dass ROBO Pro dazu das Root-Passwort benötigt – es gibt technisch andere
+Lösungen, die an dieser Stelle ggf. mehr
+Sicherheit gebracht hätten. Um ROBO Pro
+den Root-Zugang zu ermöglichen, ist das
+Root-Passwort auf dem TXT verschlüsselt
+hinterlegt. Klingt soweit nicht schlecht, hat
+aber leider ein paar fundamentale Lücken.
+Das fischertechnik-Root-Zugangs-Dokument erwähnt selbst bereits, dass man das
+ROBO Pro-Programm analysieren und so
+an den Mechanismus zur Entschlüsselung
+des Root-Passworts gelangen könnte. Das
+ist korrekt. Nun besteht ein Programm wie
+ROBO Pro aus einigen Millionen Befehlen
+und die Analyse dieses Codes mit dem Ziel,
+die Entschlüsselungsbefehle zu extrahieren,
+ist ein relativ aufwändiges Unterfangen.
+Aber diese Arbeit muss man sich noch nicht
+einmal machen.
+Um zu verstehen, wie man relativ einfach
+an das Root-Passwort eines TXTs kommt,
+ohne physischen Zugang zu ihm zu haben,
+müssen wir etwas mehr ins Detail gehen
+und die Abläufe während des UpdateVorgangs etwas genauer beleuchten.
+ROBO Pro verwendet im Normalfall nur
+die Verbindung über Port 65.000. Stellt
+ROBO Pro dabei fest, dass der TXT keine
+aktuelle Firmware verwendet, so startet es
+den Update-Prozess, in dessen Verlauf irgendwann das Root-Passwort Verwendung
+findet. Wollen wir also einen entfernten
+TXT angreifen, dann müsste ROBO Pro nur
+feststellen, dass die Software auf dem entfernten TXT veraltet ist. Daraufhin würde
+ROBO Pro alle nötigen Schritte unternehmen, um sich mit dem Root-Passwort am
+entfernten TXT anzumelden. Wenn wir
+diesen Vorgang beobachten könnten, dann
+müsste uns dabei das Root-Passwort über
+den Weg laufen.
+
+
+Computing
+
+
+Zunächst müssen wir also die Kommunikation zwischen ROBO Pro (auf dem PC)
+und dem TXT beobachten. Dazu gibt es
+Softwarewerkzeuge wie Wireshark. Damit
+kann man auf seinem PC allen ein- und
+ausgehenden Netzwerkverkehr aufzeichnen
+und ihn sich später übersichtlich aufbereitet
+anzeigen lassen. Beobachtet man die Kommunikation mit einem nicht aktuellen TXT
+auf diese Weise, so fällt auf, dass die
+Kommunikation bereits nach wenigen
+Datenpaketen beendet wird.
+Welche Kommunikation genau über diesen
+Port stattfindet ist nicht dokumentiert, und
+wie man im Wireshark-Trace sieht, sieht
+man nicht viel. Die Kommunikation scheint
+in keiner Weise textbasiert oder gar menschenlesbar zu sein. Dokumentiert ist das
+Protokoll im „TXT C-Programming Expert
+Kit“. Praktischerweise hat uns Torsten
+Stuehn mit seiner ftrobopy-Bibliothek diese
+Lektüre und Auswertung bereits abgenommen: ftrobopy macht nichts anderes, als die
+ROBO Pro-Seite der PC-TXT-Kommunikation nachzubilden. ftrobopy kann sich an
+Stelle von ROBO Pro mit dem TXT auf
+Port 65.000 verbinden und ihm Befehle
+erteilen. Und da ftrobopy offene Software
+
+ist, kann man im Code von ftrobopy leicht
+ablesen, wie die Kommunikation mit einem
+TXT ablaufen sollte. Mit Hilfe dieser
+Informationen lässt sich in Erfahrung bringen, was die beobachtete Kommunikation
+bedeutet.
+Leider funktioniert dieser erste Schritt nur,
+wenn der TXT eine veraltete Software
+nutzt. Meldet er die aktuelle Version, dann
+macht ROBO Pro einfach mit seiner
+normalen Kommunikation auf Port 65.000
+weiter und versucht gar nicht erst, das RootPasswort zu verwenden. Da die Kommunikation an dieser Stelle aber so simpel ist,
+bietet sich eine einfache Möglichkeit: Wir
+zweigen an dieser Stelle den Netzwerkkehr
+zum TXT ab, leiten ihn um auf den PC
+zurück und lassen dort ein Programm
+namens txt_dummy.c laufen, das eine
+TXTartige Kommunikation auf Port 65.000
+anbietet, aber im Gegensatz zum TXT
+immer eine veraltete Versionsnummer
+liefert. Der nötige Programmcode ist lediglich 72 Codezeilen lang.
+Betriebssysteme wie Linux bringen auch
+gleich die nötigen Werkzeuge mit, um die
+Kommunikation umzulenken:
+
+
+
+iptables -t nat -A OUTPUT -d
+192.168.0.123 -j DNAT --todestination 127.0.0.1 ^
+
+Dieses kryptische Linux-Kommando leitet
+die Kommunikation, die eigentlich an den
+TXT unter der IP-Adresse 192.168.0.123
+gerichtet ist, zurück auf den eigenen PC
+unter der IP-Adresse 127.0.0.1. Dazu muss
+man auch ROBO Pro auf einem Linux-PC
+laufen lassen, was dank wine, einer Art
+Windows-Umgebung für Linux-PCs, kein
+Problem ist.
+Sobald ROBO Pro nun den TXT ansprechen will, wird die Kommunikation auf den
+PC zurückgeleitet. Dort beantwortet statt
+des TXTs nun unser kleines txt_dummy.cProgramm die Versionsanfrage auf Port
+65.000 mit einer älteren Versionsnummer.
+ROBO Pro schließt darauf die Verbindung
+und möchte den TXT aktualisieren. Die
+erste Hürde auf dem Weg zum Root-Passwort ist damit genommen.
+Im nächsten Schritt sollte ROBO Pro nun
+versuchen, den TXT zu aktualisieren. Hier
+waren wir kurz überrascht, den erwarteten
+SSH-Datenverkehr an unseren TXT unter
+192.168.0.123 nicht finden zu können. Eine
+kurze Analyse des gesamten Netzwerkverkehrs ergab, dass ROBO Pro den TXT per
+SSH immer unter der IP-Adresse
+192.168.7.2 anspricht. Wer mit dem TXT
+im Netzwerk etwas experimentiert hat, wird
+vielleicht wissen, dass das die IP-Adresse
+eines per USB an den PC angeschlossenen
+TXT ist. ROBO Pro scheint den TXT also
+fest als USB-Gerät zu erwarten, um ein
+Update zu machen. Dies ist der Grund,
+warum man den TXT nicht über WLAN
+oder Bluetooth aktualisieren kann. Uns
+kommt (als Angreifer) diese Tatsache entgegen, da wir nun die SSH-Kommunikation
+anhand der IP-Adresse ebenfalls leicht umleiten, aufzeichnen und analysieren können.
+Jetzt behindert uns noch die Kernfunktion
+von SSH: Die Datenpakete sind verschlüsselt. Wir können zwar sehen, dass
+ROBO Pro irgendetwas vom TXT will,
+
+aber wir können den Inhalt der verschlüsselten Kommunikation nicht lesen. Genau
+das ist der Zweck der Verwendung des
+SSH-Protokolls, und deshalb sollte man
+SSH auch nutzen, wenn man z. B. über das
+Internet ein entferntes Gerät steuern möchte. Auch HTTPS-Verbindungen nutzen
+diese Verschlüsselung, um zu verhindern,
+dass Angreifer die Kommunikation z. B.
+beim Online-Banking belauschen oder gar
+PINs und TANs mitlesen können. Die SSHVerschlüsselung ist für uns nicht zu
+knacken – was also tun?
+Einen Teil der Kommunikation müssen wir
+gar nicht unbedingt mitlesen. Der fischertechnik-Dokumentation kann man entnehmen, dass das verschlüsselte Passwort in
+der Datei /etc/rootpwd.enc auf dem TXT
+liegt. ROBO Pro wird nun irgendwie versuchen, diese Datei zu lesen. Lassen wir
+ROBO Pro genau das einfach tun. Viel
+interessanter ist für uns, was danach passiert
+– da müssen wir eingreifen und mitlesen.
+Aber leider ist die Kommunikation ja auch
+verschlüsselt.
+Um zumindest mal den ersten Schritt
+abzukürzen haben wir uns kurzerhand
+manuell per SSH (unter Windows z. B. per
+Putty) auf dem entfernten TXT eingeloggt.
+Das hat auch den Vorteil, dass wir uns nicht
+daran stören müssen, dass ROBO Pro
+darauf besteht, den TXT unter 192.168.7.2
+anzusprechen. Befindet sich der TXT in
+einem WLAN, hat er eine andere Adresse
+und ROBO Pro würde ihn nicht ansprechen
+können.
+Wenn wir uns die Datei mit dem verschlüsselten Root-Passwort aber per SSH oder
+Putty holen wollen geht das auch mit einem
+entfernten TXT, der z. B. in ein WLAN
+eingebucht ist. Folgendes Kommando gibt
+das verschlüsselte Passwort eines entfernten
+TXTs aus:
+ssh ROBORro@<IP-Adresse des
+anzugreifenden TXT> cat
+/etc/rootpwd.enc
+
+Wir werden dann nach einem Passwort
+gefragt, aber das ist ja das wohlbekannte
+und von fischertechnik dokumentierte
+„ROBOPro“:
+$ ssh ROBORro@<TXT> cat
+/etc/rootpwd.enc
+ROBORro@<TXT>'s
+password: ROBOPro
+fJDmTWaoHDadxqnR4J1WnhvaGub6KADtxZ
+7/1eggriY=
+$
+
+Wie man sieht rückt der TXT anstandslos
+das verschlüsselte Passwort raus. Es lautet
+fJDmTWaoHDadxqnR4J1WnhvaGub6KADtxZ
+7/1eggriY=
+
+Wir haben als nächstes versucht, den
+gesamten SSH-Verkehr ebenfalls auf den
+lokalen PC umzuleiten. Dazu haben wir auf
+dem lokalen PC einen SSH-Server installiert, wie er auch auf dem TXT läuft. Wir
+haben einen Benutzer namens ROBO Pro
+auf dem lokalen PC angelegt, die Datei
+/etc/rootpwd.enc hinterlegt und wieder
+ROBO Pro gestartet. Und tatsächlich, in der
+ROBO Pro-Fortschrittsanzeige schreitet der
+Update-Fortschrittsbalken bis zum eigentlichen Update fort, bleibt dort aber stehen.
+Zu diesem Zeitpunkt war in unsere Experimente kein echter TXT mehr involviert:
+Wir kannten das verschlüsselte Root-Passwort und ROBO Pro war mit unserer vorgegaukelten Kommunikation zufrieden genug, um den Updatevorgang starten zu
+wollen. Wir wussten also, dass ROBO Pro
+zu diesem Zeitpunkt versuchte, sich mit
+dem geheimen Root-Passwort anzumelden.
+Nun mussten wir uns das Passwort nur noch
+anzeigen lassen. Das hat sich aber als unerwartet aufwändig herausgestellt. Könnte
+man die Ausgabe des Passworts auf üblichen Linux-Servern mal eben aktivieren,
+dann könnte zumindest ein Administrator,
+der diese Option aktiviert, schnell die
+Passwörter seiner Nutzer in Erfahrung
+bringen. Um das zumindest zu erschweren
+sehen SSH-Server-Programme, wie auch
+der TXT eines enthält, nicht vor, diese
+
+Computing
+
+Daten zu protokollieren oder anderweitig
+preiszugeben.
+Wir sind aber nicht die ersten, die den Inhalt
+von SSH-Verbindungen sehen wollen. Einen ähnlichen Bedarf haben z. B. so genannte „Honeypots“, also Honigtöpfe. So
+nennt man im Internet leicht zu erreichende
+Systeme, die aufgestellt werden, um
+Hackern eine Falle zu stellen. Findet der
+Hacker einen solchen Honeypot und probiert er, diesen anzugreifen, so führt der
+Honeypot die vom Hacker empfangenen
+Befehle nicht aus, sondern protokolliert sie
+für eine spätere Analyse. Auf einige Befehle wird er ggf. mit Antworten reagieren,
+die einem echten SSH-Server entsprechen,
+um den Hacker etwas länger bei Laune zu
+halten und ihn zu verleiten, mehr seiner
+Angriffstechniken auszuprobieren, so dass
+der Betreiber des Honeypots später bei der
+Analyse der Protokolle möglichst viel über
+den Angriffsversuch in Erfahrung bringen
+kann. Und genau das wollen wir auch!
+Eine kurze Suche im Internet brachte
+diverse Honeypots zu Tage. Wir haben uns
+willkürlich für ein System namens Cowrie
+entschieden. Cowrie kann alle möglichen
+Dienste (einschließlich SSH) nachbilden.
+Wir haben also eine Cowrie-Installation so
+angepasst, dass sie einem Benutzer namens
+ROBOPro einen scheinbaren Login sowie
+den Abruf der verschlüsselten Root-Passwort-Datei erlaubt. Außerdem haben wir
+den Root-Login mit beliebigem Passwort
+erlaubt und ROBO Pro's SSH-Verbindungsanfragen auf unser Cowrie-Setup umgeleitet. Wieder kam ROBO Pro bis zu
+Schritt drei des Update-Vorgangs. Im
+Gegensatz zu einem echten SSH-Server
+schreibt Cowrie aber alle Eingaben in eine
+Log-Datei. Ein Teil dieser Log-Datei ist im
+Anhang abgebildet.
+Interessant ist vor allem die Zeile, die mit
+2018-02-16T14:42:29+0100 beginnt. Hier
+hat sich laut Cowrie ein Benutzer namens
+root mit dem Passwort XZ6TXLDBULYV
+eingeloggt.
+
+
+Und das ist es: Das Root-Passwort unseres
+angegriffenen TXT lautet
+XZ6TXLDBULYV
+
+Wir haben den TXT dazu nicht berühren
+müssen; letztlich mussten wir nur per SSH
+oder Putty und mit Hilfe des allgemein
+bekannten
+ROBO Pro-Benutzerzugangs
+und dem ebenfalls bekannten Passwort
+„ROBO Pro“ die verschlüsselte Datei abrufen und von ROBO Pro entschlüsseln
+lassen.
+Damit haben wir volle Kontrolle über den
+entsprechenden TXT. Wir können beliebig
+Hardware steuern, wir können eine ggf.
+angeschlossene Kamera auslesen, und sobald wir das Interesse verloren haben, könnten wir den internen Flash-Speicher des
+TXT löschen und ihn damit so schwer beschädigen, dass er ein Service-Fall für
+fischertechnik würde. Das können wir alles
+ohne den TXT jemals gesehen oder berührt
+zu haben.
+
+Lösungsvorschläge
+Das klingt alles irgendwie böse und gefährlich und man kann fischertechnik nicht
+guten Gewissens das Problem aussitzen
+lassen. Bisher war die Gefahr eher gering,
+da die normale Verwendung des TXT keine
+Online-Verbindung beinhaltete. Die dazu
+nötigen Informationen musste man sich
+separat bei fischertechnik besorgen und die
+allermeisten Nutzer dürften von dieser
+Möglichkeit gar nicht erst erfahren haben.
+Das wird sich grundlegend ändern, wenn
+der Smart-Home-Baukasten auf den Markt
+kommt und der TXT für die dort zu bauenden Modelle mit dem Internet verbunden
+werden muss. Noch ist etwas Zeit, das
+Problem zu adressieren.
+Was kann man aber gegen dieses Problem
+tun? Der erste Gedanke ist natürlich, dass
+man die vorhandenen Dienste irgendwie
+besser absichern muss. So könnte man die
+Root-Passwort-Verschlüsselung
+durch
+einen neuen und besseren Mechanismus
+
+ersetzen. Da diese und generell der Umgang
+mit dem SSH-Zugang den gesamten Vorgang des Firmware-Updates beeinflusst,
+betreffen solche Änderungen den TXT und
+auch ROBO Pro, so dass Updates und
+Modifikationen an vielen Stellen nötig
+werden. Je nach Art der Änderung wird
+auch der Nutzer sich mit einem veränderten
+Update-Mechanismus auseinander setzen
+müssen. Und letztlich werden Up- und
+Downgrades über mehrere Versionssprünge
+hinweg immer irgendwie mit dem
+geänderten Update-Mechanismus umgehen
+müssen.
+Aber es geht auch einfacher. Zunächst lohnt
+es sich, sich ganz prinzipiell vor Augen zu
+führen, auf welche Dinge ein Hacker
+Zugriff erlangen kann und auf welche nicht.
+Zugreifen kann er auf die ROBO Pro-Software und auf die Software eines TXT, und
+hier krankt schon die bisherige Lösung: Die
+Ver- und Entschlüsselung des Passworts
+findet auf dem TXT und in ROBO Pro statt.
+Entsprechend schwierig ist es, das vor
+einem Hacker zu verbergen.
+Auf was hat der Hacker aber garantiert
+keinen Zugriff? Er hat keinen physischen
+Zugang zum angegriffenen TXT. Wenn
+man es also schafft, dass man für den
+Angriff physischen Zugriff auf den TXT
+haben muss, dann hat der Hacker keine
+Chance. Für den physischen Zugriff bieten
+sich die Anschlüsse des TXT und der
+Touchscreen an. Die fischertechnik-Anschlüsse sind eher ungeeignet, aber eine
+USB-Verbindung z. B. kann der Hacker
+nicht herstellen. Und der Touchscreen lässt
+sich natürlich sehr gut für Nachfragen und
+Bestätigungen nutzen.
+Ich sehe vor allem zwei Lösungen. Beide
+nutzen aus, dass der gesamte SSH-Zugang
+nur für das Update sowie ggf. für seltene
+Administrationsaufgaben benötigt wird.
+Das bedeutet, dass wir den gesamten SSHDienst im Normalbetrieb eigentlich komplett abschalten können. Das hat den wunderbaren Effekt, dass fischertechnik sich
+
+über Passwörter oder veraltete SSH-Versionen und ähnliches keinerlei Gedanken mehr
+machen muss. Wenn der SSH-Dienst nur
+für diese seltenen, speziellen Aufgaben
+aktiviert wird, ist der TXT im Normalbetrieb auch nicht über diesen Dienst angreifbar. Das löst praktischerweise auch gleich
+das Problem des gering privilegierten, aber
+dafür mit Name und Passwort öffentlich
+dokumentierten Benutzerkontos ROBOPro.
+Schon dieses Konto gibt z. B. Zugriff auf
+die angeschlossene Kamera, damit ist das
+Abgreifen der Videodaten aus dem Kinderzimmer auch ohne Knacken des Root-Passworts möglich.
+Die Lösung besteht darin, den SSH-Dienst
+bei Systemstart des TXT nicht automatisch
+zu starten. Die dazu nötigen Änderungen
+sind trivial und betreffen nur die Konfiguration des TXT.
+Die nächste Frage ist natürlich, wann denn
+stattdessen der SSH-Dienst gestartet wird.
+Für Updates wird er ja nach wie vor benötigt. Offensichtlich kann man im Touchscreen-Menü des TXT dafür einen Menüpunkt ergänzen. Steht ein Update an, dann
+muss der Benutzer manuell am TXT den
+SSH-Dienst starten. Man könnte den Menüpunkt „Update zulassen“ nennen. Erfahrenere Nutzer wüssten, dass sich hinter dieser
+Option der SSH-Dienst verbirgt und könnten diesen Menüpunkt dann nutzen, um sich
+selbst manuell Zugang z. B. für Konfigurationsänderungen wie das „Freischalten des
+Bootloaders“ verschaffen. Eine solche Änderung würde nur den TXT betreffen und
+alle in diesem Beitrag beschriebenen Unsicherheiten beseitigen.
+Es geht sogar noch einfacher. Wie wir
+während unserer Experimente ja festgestellt
+haben, kann ROBO Pro den SSH-Zugang
+nur dann nutzen, wenn der TXT per USB
+mit dem PC verbunden ist. Also wäre es
+sinnvoll, den SSH-Dienst überhaupt nur
+dann zu starten, wenn eine USB-Verbindung zum PC besteht, was im Falle der zu
+erwartenden IoT-Experimente z. B. nicht
+
+Computing
+
+der Fall ist. Das TXT-Linux bietet spezielle
+Aufhänger (Hooks), um Dinge zu erledigen,
+wenn bestimmte Netzwerkverbindungen
+aktiviert oder deaktiviert werden. Die
+Communinty-Firmware nutzt dies, um z. B.
+für eine WLAN-Verbindung ein paar nötige
+Hilfsprogramme im Hintergrund zu starten
+und zu stoppen. Auf dem TXT lassen sich
+in der Datei /etc/networks/interfaces
+mit den „pre-up“- und „post-down“-Aufhängern beliebige Dienste starten und stoppen. Genau dieser Aufhänger bietet sich an,
+um nur für die USB-Verbindung den SSHDienst zu aktivieren. Das erfordert nur
+wenige Änderungen am TXT und löst das
+Problem unsicherer SSH-Zugänge komplett. Für normale Benutzer ändert sich
+nichts, denn das Update hat ja schon immer
+nur dann funktioniert, wenn der TXT per
+USB mit dem PC verbunden war. Lediglich
+erfahrenere Benutzer würden in Zukunft
+ggf. vermissen, dass sie über WLAN per
+SSH auf ihren TXT zugreifen können.
+Diese Nutzer werden in Zukunft vorher das
+USB-Kabel einstecken müssen – ein geringer Preis für den erzielten Sicherheitsgewinn.
+Ich habe fischertechnik Anfang Februar
+über das Problem informiert – zusammen
+mit einem mir eigentlich unbekannten Passwort – und ihnen diese konkreten und leicht
+umsetzbaren Lösungsvorschläge unterbreitet.
+
+Fazit
+Vor allem bei Systemen wie dem TXT, bei
+denen sich das Nutzungsverhalten über die
+Zeit und mit den diversen Updates und
+Erweiterungen stark ändert, ist es wichtig,
+immer wieder zu prüfen, ob die ursprünglichen Sicherheitsvorkehrungen noch ausreichen. Dabei muss das Ziel nicht immer
+sein, bestehende Sicherheitssysteme zu verstärken; oft ist es viel sinnvoller, über konzeptionelle Lösungen nachzudenken. Ein
+SSH-Dienst, der gar nicht aktiviert ist, muss
+auch nicht abgesichert und kann trotzdem
+nicht angegriffen werden.
+
+
+
+2018-02-16T14:42:29+0100 [SSHChannel session (0) on SSHService 'sshconnection' on HoneyPotSSHTransport,0,127.0.0.1] remote close
+2018-02-16T14:42:29+0100 [HoneyPotSSHTransport,0,127.0.0.1] avatar ROBOPro
+logging out
+2018-02-16T14:42:29+0100 [HoneyPotSSHTransport,0,127.0.0.1] connection lost
+2018-02-16T14:42:29+0100 [HoneyPotSSHTransport,0,127.0.0.1] Connection lost
+after 1 seconds
+2018-02-16T14:42:29+0100 [cowrie.ssh.factory.CowrieSSHFactory] New
+connection: 127.0.0.1:47672 (127.0.0.1:2222) [session: 8c3d6924bb23]
+2018-02-16T14:42:29+0100 [HoneyPotSSHTransport,1,127.0.0.1] Remote SSH
+version: SSH-2.0-PuTTY_Local:_Feb_22_2015_12:23:14
+2018-02-16T14:42:29+0100 [HoneyPotSSHTransport,1,127.0.0.1] kex alg, key
+alg: 'diffie-hellman-group-exchange-sha256' 'ssh-rsa'
+2018-02-16T14:42:29+0100 [HoneyPotSSHTransport,1,127.0.0.1] outgoing:
+'aes256-ctr' 'hmac-sha1' 'none'
+2018-02-16T14:42:29+0100 [HoneyPotSSHTransport,1,127.0.0.1] incoming:
+'aes256-ctr' 'hmac-sha1' 'none'
+2018-02-16T14:42:29+0100 [HoneyPotSSHTransport,1,127.0.0.1] NEW KEYS
+2018-02-16T14:42:29+0100 [HoneyPotSSHTransport,1,127.0.0.1] starting
+service 'ssh-userauth'
+2018-02-16T14:42:29+0100 [SSHService 'ssh-userauth' on
+HoneyPotSSHTransport,1,127.0.0.1] 'root' trying auth 'none'
+2018-02-16T14:42:29+0100 [SSHService 'ssh-userauth' on
+HoneyPotSSHTransport,1,127.0.0.1] 'root' trying auth 'keyboard-interactive'
+2018-02-16T14:42:29+0100 [SSHService 'ssh-userauth' on
+HoneyPotSSHTransport,1,127.0.0.1] login attempt [root/XZ6TXLDBULYV]
+succeeded
+2018-02-16T14:42:29+0100 [SSHService 'ssh-userauth' on
+HoneyPotSSHTransport,1,127.0.0.1] 'root' authenticated with 'keyboardinteractive'
+2018-02-16T14:42:29+0100 [SSHService 'ssh-userauth' on
+HoneyPotSSHTransport,1,127.0.0.1] starting service 'ssh-connection'
+2018-02-16T14:42:29+0100 [SSHService 'ssh-connection' on
+HoneyPotSSHTransport,1,127.0.0.1] got channel 'session' request
+2018-02-16T14:42:29+0100 [SSHChannel session (0) on SSHService 'sshconnection' on HoneyPotSSHTransport,1,127.0.0.1] channel open
+2018-02-16T14:42:29+0100 [SSHChannel session (0) on SSHService 'sshconnection' on HoneyPotSSHTransport,1,127.0.0.1] unhandled request for
+simple@putty.projects.tartarus.org
+2018-02-16T14:42:29+0100 [SSHChannel session (0) on SSHService 'sshconnection' on HoneyPotSSHTransport,1,127.0.0.1] asking for subsystem
+"sftp"
+2018-02-16T14:42:29+0100 [SSHChannel session (0) on SSHService 'sshconnection' on HoneyPotSSHTransport,1,127.0.0.1] {'sftp': <class
+twisted.conch.ssh.filetransfer.FileTransferServer at 0x7f2150bcbef0>}
+2018-02-16T14:42:29+0100 [SSHChannel session (0) on SSHService 'sshconnection' on HoneyPotSSHTransport,1,127.0.0.1] SFTP getAttrs:
+/opt/knobloch/update.sh
+2018-02-16T14:42:29+0100 [SSHChannel session (0) on SSHService 'sshconnection' on HoneyPotSSHTransport,1,127.0.0.1] SFTP openFile:
+/opt/knobloch/update.sh
+2018-02-16T14:42:29+0100 [SSHChannel session (0) on SSHService 'sshconnection' on HoneyPotSSHTransport,1,127.0.0.1] Unhandled Error
+
+Listing 1: Cowrie-Log
+
+
+
+Computing
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <unistd.h>
+#include <ctype.h>
+#define BUFFER_SIZE 1024
+#define on_error(...) { fprintf(stderr, __VA_ARGS__); fflush(stderr);
+exit(1); }
+int main (int argc, char *argv[]) {
+if (argc < 2) on_error("Usage: %s [port]\n", argv[0]);
+int port = atoi(argv[1]);
+int server_fd, client_fd, err;
+struct sockaddr_in server, client;
+char buf[BUFFER_SIZE];
+server_fd = socket(AF_INET, SOCK_STREAM, 0);
+if (server_fd < 0) on_error("Could not create socket\n");
+server.sin_family = AF_INET;
+server.sin_port = htons(port);
+server.sin_addr.s_addr = htonl(INADDR_ANY);
+int opt_val = 1;
+setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, &opt_val, sizeof
+opt_val);
+err = bind(server_fd, (struct sockaddr *) &server, sizeof(server));
+if (err < 0) on_error("Could not bind socket\n");
+err = listen(server_fd, 128);
+if (err < 0) on_error("Could not listen on socket\n");
+printf("Server is listening on %d\n", port);
+while (1) {
+socklen_t client_len = sizeof(client);
+client_fd = accept(server_fd, (struct sockaddr *) &client,
+&client_len);
+printf("Accepted\n");
+if (client_fd < 0) on_error("Could not establish new connection\n");
+while (1) {
+int read = recv(client_fd, buf, BUFFER_SIZE, 0);
+if (!read) break; // done reading
+if (read < 0) on_error("Client read failed\n");
+// build simple reply header
+buf[0] = 0x3e;
+buf[1] = 0x72;
+buf[2] = 0xc9;
+buf[3] = 0xba;
+// Version 4.2.3
+buf[23] = 4;
+buf[22] = 2;
+buf[21] = 3;
+buf[20] = 0;
+// reply with 32 bytes packet
+err = send(client_fd, buf, 32, 0);
+if (err < 0) on_error("Client write failed\n");
+
+}
+
+}
+}
+return 0;
+
+Listing 2: txt_dummy.c - Tool to simulate a TXT with outdated firmware version 4.2.3
+
+
+

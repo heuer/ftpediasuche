@@ -1,0 +1,393 @@
+
+Elektronik
+
+Elektronik
+
+Elektronisch gesteuerte Sortiermaschine
+Stefan Falk
+Nachdem wir in der ft:pedia Motorsteuerungen von einfachen Taster-Schaltungen bis zu
+elektromechanischen Programmsteuerungen dargestellt haben, leiten wir heute zu einer
+Reihe elektronisch gesteuerter Maschinen über. Den Anfang macht wieder ein echter
+Klassiker: Eine Maschine, die längere und kürzere Bauteile erkennt und trennt.
+Sortiermaschinen haben bei fischertechnik
+eine lange Tradition. Bei Kästen aus vielen
+Elektronik-Generationen gab es ein oder
+sogar mehrere Modelle, die sich mit dem
+Aussortieren von zu hohen, zu langen
+und/oder zu kurzen Bauteilen befassten.
+
+tauchen (4) in dieser Ausgabe) wurden mit
+einer raffinierten Schaltung geschickt
+genutzt, um BS15 und BS30 mit einer
+ebenso raffinierten Mechanik vor bzw.
+hinter dem Modell abzulegen:
+Der Umkarton des hobby 4 aus den
+1970ern zeigt auf seiner Vorderseite ein
+Modell, das auf einem zweistufigen
+Förderband BS30 aussortierte, BS15 aber
+durchließ. Auf der Rückseite war auch die
+Schaltung zu sehen.
+
+des hobby-4-Baukastens von 1972
+BS30 aus der l-e1-Anleitung von 1969 [1]
+
+So ging gleich der erste ElektronikBaukasten l-e1 von 1969 [1] auf dieses
+Thema ein. Die Möglichkeiten des
+Elektronik-Schaltstabes (siehe Perlen-
+
+Im Band 5 der hobby-4-Begleitbücher [2]
+wurden sogar nicht nur BS15 von BS30
+getrennt, sondern zu einem 30-mmBaustein zusammengesteckte BS15 mit gar
+keinem, einem oder zwei eingesteckten
+Verbindern 15 sortiert. Nur die mit einem
+Verbinder durchliefen das Förderband,
+während die ohne (zur kurz) und mit zwei
+
+
+
+Verbindern (zu lang) vom Förderband
+heruntergeschoben wurden, in dem die
+beiden Varianten „zu kurz“ und „zu lang“
+mit einigen weiteren Elektronik-Bausteinen unterschieden wurden.1
+
+Funktionsweise
+Die Grundidee all dieser Maschinen ist
+gleich: Wir verwenden zwei Lichtschranken, durch die die zu sortierenden
+Bausteine laufen. Wenn beide Lichtschranken unterbrochen werden, liegt
+gerade ein langer Baustein vor. Das führt
+zum Auswurf dieses Bausteins oder einer
+ähnlichen Aktion. Ein kurzer Baustein
+unterbricht immer nur eine der beiden
+Lichtschranken und löst den Auswurf
+damit nicht aus.
+Selbstverständlich lässt sich so etwas auch
+mit den heute aktuellen Teilen realisieren.
+Unseren Modellvorschlag zeigen Abb. 8
+und die weiteren Gesamtansichten.
+
+und zu langer Bausteine aus dem hobby-4Begleitband 5
+
+Auch mit der dritten Generation Elektronik, wie sie im IC-Digital-Praktikum [3]
+und im Elektronik-Baukasten enthalten
+war, konnte man natürlich Sortiermaschinen bauen. Das Handbuch zum ICDigital-Praktikum beschreibt eine weitere
+mechanische Variante: Eine Weiche leitet
+die Bausteine in eines von zwei Fächern
+(Abb. 4).
+
+Um die Sache interessant zu machen –
+insbesondere für diejenigen, die auch die
+älteren Sortiermaschinen kennen oder
+nachbauen möchten – verwenden wir eine
+weitere Art von Mechanik. Das Modell
+arbeitet so:
+1. Sortiert werden Bausteine 30 mit bzw.
+ohne aufgestecktem BS5. Die mit BS5
+gelten als „lang“, die ohne als „kurz“.
+2. Diese Bausteine werden in ein Magazin
+in Form einer Rutsche eingelegt, und
+zwar mit den Nuten senkrecht stehend,
+damit die Lichtschranken zuverlässig
+unterbrochen werden (Abb. 5).
+
+IC-Digital-Praktikum
+
+
+
+Um 1990 herum hatte ich ein ähnliches Modell
+nur mit einigen weiteren Elektronikbausteinen
+dazu gebracht, die drei Längen in separate
+Fächer zu sortieren.
+
+
+3. Ein Exzenterantrieb bewegt einen
+Schlitten hin und her. Dieser nimmt
+
+
+Elektronik
+
+
+Baustein für Baustein einzeln auf und
+schiebt ihn nach vorne, wo zwei Lichtschranken auf die Bausteine warten.
+
+
+
+4. Die beiden Lichtschranken sind so
+angeordnet, dass beide gleichzeitig
+genau dann unterbrochen werden, wenn
+ein langer Baustein ankommt. Ein
+kurzer Baustein passt zwischen die
+
+
+
+beiden Lichtschranken und unterbricht
+also immer höchstens eine davon, aber
+nie beide gleichzeitig.
+
+
+5. Eine kleine Klappe als Rücklaufsperre
+sorgt dafür, dass die Bausteine beim
+Zurückfahren des Schlittens nicht mit
+zurück genommen werden, sondern
+vorne bleiben. Kommt ein kurzer Baustein an, fällt er somit beim Zurückgleiten des Schlittens über die kleine
+Rutsche an dessen Vorderseite in die
+Ablage für kurze Bausteine.
+6. Kommt aber ein langer Baustein in die
+Lichtschranken und unterbricht diese
+also beide gleichzeitig, wird eine Achse
+mit vier Hebeln daran um eine
+Viertelumdrehung gedreht. Der gerade
+richtig stehende Hebel wirft den langen
+Baustein seitwärts vom Schlitten
+
+
+
+Elektronik
+
+herunter in die Ablage für lange Bausteine.
+
+und der Vorgang wiederholt sich, bis
+alle Bausteine sortiert wurden.
+
+Zum Bau des Modells
+Das ganze Modell kann leicht Baugruppe
+für Baugruppe aufgebaut werden. Anhand
+der Gesamtansichten könnt ihr gut
+abzählen, wohin jede Komponente auf der
+Bauplatte 500 gehört.
+
+
+7. Sobald der Schlitten wieder ganz zurück
+gezogen wurde, kann der nächste Baustein aus dem Magazin nachrutschen,
+
+Zweckmäßigerweise baut ihr zunächst den
+Exzenter (siehe Abb. 6). Der S-Motor wird
+mit vier Federnocken und zwei BS7,5 an
+zwei BS30 angesetzt und so justiert, dass
+seine seitlich abgehende Schnecke gut in
+das Zahnrad Z30 eingreift. Auf dessen
+Achse sitzt eine Drehscheibe mit einer VAufnahmeachse rot (31124), die genau die
+richtige Exzenterauslenkung bewirkt, wenn
+
+
+
+sie ganz in eine Nut der Drehscheibe
+eingeschoben wird.
+Danach baut ihr den Schlitten: Zwei BS30,
+an deren Zapfen eine V-Radachse rot
+(36586) steckt. Die wird später mit einer IStrebe 75 mit dem Exzenter verbunden.
+Die Strebe wird mit zwei Klemmringen
+gegen Abrutschen gesichert. Obenauf
+sitzen hinten ein BS5 und ein Baustein 5
+15 · 30 rot (35049), die mit einer Platte
+15 · 45 abgedeckt werden. Vorne wird eine
+Platte 15 · 30 aufgeschoben. Ganz vorne
+schließlich kommt die kleine Rutsche, auf
+der die „kurzen“ Bausteine später herunterrutschen werden: Ein Winkelstein 15°, ein
+Verbinder 15, ein BS7,5 und eine weitere
+Platte 15 · 30 genügen (Abb. 7 und 13).
+
+30 · 45. Je ein Winkelstein 15° sorgt für
+die richtige Neigung. Die breitere der
+beiden (die linke in Abb. 15) gehört zum
+seitlichen Ausgabefach für die langen Bausteine, die kleinere zum vorderen Fach für
+die kurzen Bausteine.
+
+
+Der Schlitten gleitet auf zwei Metallachsen
+vor und zurück. Dazu trägt er unten zwei
+und auf der Seite eine S-Kupplung 15 rot
+(38253). Direkt auf der Bauplatte 500
+sitzen zwei S-Kupplungen 22,5 rot
+(38260); zwei weitere sitzen auf je einem
+BS15. Dazwischen sind zwei geeignet
+lange Metallachsen mit je zwei Klemmringen eingespannt. Durch diese Bauart
+gleitet der Schlitten wunderbar leichtgängig auf den Metallachsen.
+Danach könnt ihr das Bausteinmagazin
+bauen und anbringen. Es sitzt mit nur
+einem Zapfen in der Bauplatte 500.
+Anschließend baut ihr die beiden Rutschen
+in die Ausgabefächer und steckt sie ein.
+Die Rutschen selbst bestehen aus zwei
+Bauplatten 30 · 60, einer 30 · 30 und einer
+
+
+Schließlich fehlen nur noch die Lichtschranken und die Auswurfmechanik, die
+aus zwei Teil-Baugruppen bestehen. Auf
+die Ausgabeseite des Modells kommt eine
+Konstruktion mit zwei Fototransistoren
+(hier mit zwei Störlichtkappen abgedeckt,
+damit das Umgebungslicht sie nicht
+auslöst). Dort wird auch die Rücklaufsperren-Klappe angebracht: Eine Platte
+15 · 45 auf einem Gelenkbaustein wird von
+
+BS7,5 über Verbinder 45 gehalten, die
+wiederum mit zwei Winkelsteinen 30° und
+einem BS5 mit zwei Zapfen genau in die
+richtige Position gestellt werden.
+
+Elektronik
+
+den Bausteine und verhindert, dass diese
+über den Schlitten hinweg rutschen.
+Auf der Rückseite des Modells kommt die
+Auswurfmechanik, die vorne in den
+Statikträger von Abb. 16 eingreift (Abb. 10
+und 17).
+Das Aufsteckgetriebe des S-Motors führt
+mit seiner Rastachse + Zahnrad Z28 m0,5
+schwarz (31082) in ein Rast-Impulszahnrad Z4 (37157). In seinem anderen Ende
+steckt eine Rastaufnahmeachse 22,5
+schwarz (130593), die einen BS15 trägt.
+Auf diesem schließlich sind vier X-Streben
+42,4 mit je einem S-Riegel angebracht.
+
+
+Beachtet bitte, dass der Taster unter dem
+Impulszahnrad, wie in Abb. 9 bei genauem
+Hinsehen erkennbar, etwas nach vorne
+heraussteht. Der Taster muss so justiert
+werden, dass der Motor später genau dann
+anhält, wenn die Auswurfstreben den
+ankommenden Bausteinen nirgends im
+Wege stehen.
+
+Die Schaltung
+Für die elektrische Schaltung benötigen
+wir außer den beiden Motoren
+zwei Lampen für die Lichtschranken,
+zwei Fototransistoren oder Fotowiderstände,
+einen Minitaster für das Impulszahnrad,
+optional noch eine Signallampe (die
+könnt ihr aber auch weg lassen, wenn
+ihr keine dritte Lampe besitzt) und
+natürlich
+irgendein Elektronik-Element, das die
+Lichtschranken auswerten kann. Hier
+verwenden wir ein E-Tec-Modul.
+Auswurfmechanik
+
+Die zusätzliche Bauplatte 15 · 45, die in
+Anschlag für die vom Magazin kommen-
+
+Es sei ausdrücklich darauf hingewiesen,
+dass dieses Modell mit ausnahmslos jeder
+jemals existierenden Elektronik-Generation von fischertechnik gesteuert werden
+kann. Die Lichtschranken auswerten kann
+man also auch alternativ zum E-Tec-Modul
+
+
+
+
+M
+Auswurf
+
+DC
+
+M
+Exzenter
+
+
+aus den 1990ern mit einer entsprechenden
+Verschaltung
+eines Licht-Elektronik-Schaltstabes von
+1969 oder
+der üblichen Kombination aus den
+„Silberlingen“ Gleichrichter h4GB,
+Grundbaustein h4G und Relaisbaustein
+h4RB als den 1970ern oder
+mit dem IC-Baustein und Relais des ICDigital-Praktikums oder
+mit Stromversorgung, Schwellwertschalter und Leistungsstufe des Elektronik-Kastens aus den 1980ern oder
+mit einem beliebigen fischertechnikComputer-Interface und entsprechender
+Programmierung.
+
+Den Schaltplan unter Verwendung eines ETecs zeigt Abb. 18. Das E-Tec, der Exzentermotor und die beiden Lampen für die
+Lichtschranken hängen einfach permanent
+an der Stromversorgung. Die beiden Fototransistoren sind einfach parallel geschaltet
+(achtet auf die Polung: rot = plus!) und
+steuern den Eingang I1 des E-Tec.
+Gleich zwei Fototransistoren an einen
+einzigen Eingang des E-Tec anzuschließen
+ist genau der wichtige Trick bei dieser Art
+Sortiermaschine. Durch die Parallelschaltung sieht das E-Tec „die“ Lichtschranke als beleuchtet, wenn mindestens
+ein Fototransistor beleuchtet ist. Nur wenn
+alle beide gleichzeitig abgedunkelt werden
+fließt so wenig Strom zwischen den E-TecEingangsbuchsen, dass dieses umschaltet.
+
+
+Elektronik
+
+
+Denkt euch den Taster am Impulsrad
+zunächst mal noch durch eine Leitung
+ersetzt, wie wenn die Fototransistoren nur
+am E-Tec hingen. Sobald alle beide Fototransistoren unbeleuchtet sind, also ein
+hinreichend langer Baustein beide Lichtschranken gleichzeitig durchbricht, schaltet
+das E-Tec-Modul um. Dadurch bekommt
+der Auswurfmotor Strom und dreht die
+Auswurfhebel. Achtet auch hier auf die
+richtige Polung des Motors, damit die
+langen Bausteine in Richtung Ausgabefach
+gestoßen werden. Die gepunktet eingezeichnete Signallampe (auf die ihr auch
+verzichten könnt) wird einfach parallel
+
+zum Motor geschaltet und leuchtet also,
+solange dieser dreht.2
+Wenn eine der Streben des Auswurfs den
+Baustein vom Schlitten gestoßen hat,
+werden allerdings beide Lichtschranken
+wieder freigegeben. Das hätte zur Folge,
+dass der Motor in einer Position stehen
+
+
+In allen Elektronik-Generationen vor dem E-Tec
+lässt sich die Empfindlichkeit der Eingänge
+durch ein Drehpotentiometer genau einstellen.
+Dadurch können auch die älteren Fotowiderstände anstelle der Fototransistoren verwendet werden.
+
+
+
+bleibt, in der die Strebe vielleicht noch
+mitten über dem Schlitten steht. Dort wäre
+sie dem nächsten ankommenden Baustein
+im Weg und das Modell würde nicht
+korrekt funktionieren. Wir müssen also
+noch dafür sorgen, dass auch bei Wiederfreigabe der Lichtschranken der Motor auf
+jeden Fall noch so lange weiterläuft, bis er
+eine Viertelumdrehung gemacht hat.
+Das erledigt auf einfache und elegante
+Weise der Impulstaster. Wir schalten ihn
+einfach mit seinem Arbeitskontakt in Serie
+zu den Fototransistoren. Sobald der Auswurfmotor so weit dreht, dass das Impulszahnrad den Taster freigibt, unterbricht
+dieser die Leitung der Fototransistoren. Für
+das E-Tec sieht das genauso aus, wie wenn
+die Lichtschranken immer noch unterbrochen wären, auch wenn der Baustein
+längst vom Schlitten geschoben wurde und
+ins Ausgabefach fällt. Erst wenn der
+
+
+Auswurf eine Vierteldrehung vollendet hat,
+wird der Taster wieder von einem Impulszahn betätigt, und das E-Tec bekommt mit,
+dass die Lichtschranken wieder beide frei
+beleuchtet sind. Dann erst schaltet es den
+Auswurfmotor ab.
+Der nächste Baustein kann dann kommen
+und wird ebenso erkannt und korrekt in die
+beiden Ausgabefächer einsortiert.
+
+Quellen
+[1]
+
+fischerwerke: l-e1 Band 2.
+Tumlingen, 1969
+
+[2]
+
+fischerwerke, hobby 4 Begleitbücher
+Band 5. Tumlingen, 1975
+
+[3]
+
+fischerwerke, IC-Digital-Praktikum.
+Tumlingen, 1977
+
+

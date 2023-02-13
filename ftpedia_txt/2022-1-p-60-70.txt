@@ -1,0 +1,321 @@
+
+
+Elektronik
+
+Silberlinge: Original oder Nachbau (Teil 6)
+Peter Krijnen
+Wie in Teil 5 angekündigt, werde ich mich in Teil 6 mit dem Mono-Flop (36480) beschäftigen.
+Während das Kapitel zum Flip-Flop im
+Buch „Experimente + Modelle hobby 4
+Band 3“ [1] noch 12 Seiten umfasste,
+musste das Kapitel zum Mono-Flop ab Seite
+75 mit nur fünf Seiten auskommen. Das
+Mono-Flop wird nur verwendet, um die
+Länge der am Eingang SP anliegenden
+Impulse zu ändern. Je nach verwendeter
+Verbindung zwischen den Anschlüssen
+„Zeit“ an „kurz“, „Zeit“ an „lang“ oder
+„Zeit“ an „ext“ können breite Impulse sehr
+schmal oder umgekehrt schmale Impulse
+sehr viel breiter gemacht werden. Der SVEingang kann verwendet werden, um den
+SP-Eingang zu blockieren.
+
+Um das Mono-Flop (Abb. 152) als Pulsformer zu beschreiben, heißt es auf Seite 77
+[1] das Modell 67.1 auf Seite 67 [1] aufzubauen. Es handelt sich um einen langsam
+laufenden alten grauen Motor mit einer
+Drehscheibe (31019) auf der Abtriebswelle.
+In diese Drehscheibe wurde eine Welle eingesetzt, die wiederum den Lichtstrahl von
+der Lampe zum LDR unterbrechen muss.
+Ich habe dieses Modell mit der gezeigten
+Schaltung gebaut. Anstelle von einer habe
+ich jedoch drei Achsen verwendet. Der Aufbau ist auf Abb. 153 zu sehen. Anstelle des
+grauen Motors habe ich jedoch einen Power
+Motor verwendet.
+Das Messergebnis auf meinem OszilloskopBildschirm ist auf Abb. 154 zu sehen. Auf
+Kanal 1 (gelb) sehen wir das Signal vom
+LDR, der an E1 des Grundbausteins angeschlossen ist. Auf Kanal 2 (hellblau) sehen
+wir A2 des Grundbausteins. Q des FlipFlops ist mit Kanal 4 (dunkelblau) verbunden. Da der Motor trotz seiner eingebauten Untersetzung von 1:125 (Conrad
+244031 oder 1711490) bei 9 V immer noch
+zu schnell dreht, ist die Schaltung zu langsam, um die Spannung am Motor umzupolen. Die Spannung wird zwar umgepolt,
+jedoch erst nachdem die Achse den Lichtstrahl bereits durchquert hat, so dass die
+Achse den Lichtstrahl erneut durchquert.
+Der Motor wird wieder umgepolt und die
+Welle durchläuft zum dritten Mal den
+Lichtstrahl, mit der Folge, dass der Motor
+
+
+
+Elektronik
+
+
+umgepolt wird und unterbricht den Lichtstrahl zum vierten Mal. Allerdings ist die
+Zeit zwischen dem vierten und dem darauffolgenden fünften Impuls nun so kurz, dass
+das Flip-Flop nicht mehr folgt und der
+Motor in die gleiche Richtung weiterdreht.
+
+Um dieses Problem zu lösen, wird auf Seite
+77 [1] die Schaltung 77.1 aufgebaut. Dies ist
+die gleiche Schaltung wie die von 67.1,
+jedoch um ein Mono-Flop ergänzt. Auf
+
+
+jetzt auch Q des Mono-Flops. Das Potentiometer des Mono-Flops steht auf Position 1
+und „Zeit“ ist mit „Kurz“ verbunden. Auch
+jetzt sehen wir, dass der Motor nach einigem Zucken immer noch in die gleiche
+Richtung dreht.
+
+
+auf 1, Zeit an kurz
+
+auf 2, Zeit an kurz
+
+Durch Drehen des Potentiometers können
+wir den ersten Impuls so verlängern, dass
+der zweite Impuls (und ggf. mehrere
+Impulse) den CP-Eingang des Flip-Flops
+
+nicht mehr erreichen kann. Dies sehen wir
+deutlich in Abb. 156. Das Potentiometer
+steht jetzt auf Position 2. Da der Motor noch
+zu schnell läuft, sehen wir weiterhin die
+zwei Impulse ab dem Moment, in dem die
+Welle den Lichtstrahl zweimal durchläuft.
+Deutlich zu erkennen ist auch, dass der Puls
+des Mono-Flop jetzt breiter ist als die Pulse
+des Grundbausteins. Drehen wir das Potentiometer weiter, geht es gut bis Position 4.
+Drehen wir noch weiter, sehen wir auf
+breit wird, dass er auch den nächsten Puls
+des LDR unterdrückt. Anstatt nach 1/3
+Umdrehung umzupolen, geschieht dies jetzt
+erst nach 2/3 Umdrehungen. Ab Position
+6.5 erfolgt eine komplette Umdrehung und
+ab Position 9.25 sind es sogar 4/3 Umdrehungen, bevor der Motor umgepolt wird.
+
+auf 4, Zeit an kurz
+
+auf 1, Zeit an lang
+
+
+Elektronik
+
+Verbinde ich nun „Zeit“ mit „lang“ statt
+„Zeit“ mit „kurz“, sehen wir auf Abb. 158,
+dass der Puls des Mono-Flops schon sehr
+breit ist. Und dann steht das Potentiometer
+nur auf Position 1. Auf Position 2 dreht der
+Motor bereits 5/3 Umdrehungen, also
+werden vier Lichtstrahlunterbrechungen
+durch den Mono-Flop unterdrückt.
+Wenn wir uns das Schaltbild in Abb. 159
+anschauen, sehen wir, dass am Anschluss
+„kurz“ ein Kondensator von 2,2 µF und an
+am Anschluss „lang“ ein Kondensator von
+47 µF angeschlossen ist. Wir sehen auch,
+dass der „ext“-Anschluss mit „-“ beider
+Kondensatoren verbunden ist. Daran kann
+ein externer Kondensator angeschlossen
+werden. Die „+“-Seite der Kondensatoren
+muss dann mit „Zeit“ verbunden werden.
+Auf dem Schaltbild sehen wir auch, dass
+eines der Enden des 1-MΩ-Potentiometers
+mit „ext“ und damit auch mit „-“ der
+Kondensatoren verbunden ist. Der Schleifer
+
+des Potentiometers ist mit einem Widerstand von 10 kΩ an „+“ angeschlossen.
+In meinem Beitrag zum Flip-Flop erwähnte
+ich bereits das „RC-Netzwerk“ und dass die
+Kombination aus Kondensator und Widerstand die Frequenz bestimmt.
+Wenn wir eine Frequenz von 1 Hz annehmen, sehen wir in Abb. 160, dass die Länge
+einer Periode zwischen den beiden Markierungen A und B eine Zeit von 1 s ergibt. In
+Frequenz von 2 Hz. Die Zeit zwischen den
+zwei Markern beträgt wieder eine Periode.
+Die Dauer dieser Periode beträgt 500 ms.
+Das ist die halbe Zeit einer Periode der
+Frequenz von 1 Hz. In der Tabelle, in der
+oberen linken Ecke beider Bilder, ist der
+unterste Eintrag „1/|dX|“ wobei dX für BXAX steht, oder die Zeit zwischen Marker A
+und Marker B. Auf Abb. 160 steht „1/|dX|“
+1.000 Hz, Abb. 161 sagt 2.000 Hz.
+
+
+
+
+alle Daten in Grafik 1 (Abb. 163) dargestellt. Obwohl das Potentiometer ein
+linearer Typ ist, spiegelt sich dies nicht
+sofort in der Grafik wider. Diese Linearität
+fehlt an beiden Enden. Diesen Effekt sehe
+ich auch bei anderen Silberlingen, auch bei
+den Nachbau-Versionen. Der Gesamtwiderstand eines 1-MΩ-Potentiometers + 10-kΩWiderstands sollte mindestens 10 kΩ und
+maximal 1,01 MΩ betragen. Die Tabelle
+zeigt deutlich, dass dies bei diesem MonoFlop nicht der Fall ist.
+
+
+Hoffentlich wird der Zusammenhang
+zwischen Frequenz und Periode jetzt etwas
+klarer: Ein Signal mit einer Frequenz von
+1 Hz hat eine Periode von 1 s. Wenn das
+Signal eine Frequenz von 2 Hz hat, beträgt
+die Periode 0,5 s. „1/|dX |” zeigt bereits, wie
+es funktioniert: 1 / Zeit = Frequenz. 1 / 0,5 s
+= 2 Hz. Umgekehrt ist auch möglich:
+1 / Frequenz = Zeit: 1 / 2 Hz = 0,5 s. Die
+beiden Signale auf den Abb. 160 und 161
+kommen von A2 eines Grundbausteins, von
+dem A2 auch an 6 und 7 verbunden ist, und
+4 angeschlossen ist an E1.
+Zurück zum Potentiometer und den
+Kondensatoren. Auf Seite 75 [1] ist angegeben, was die „Kippzeiten“ des MonoFlops sind. Bei „Zeit“ an „kurz“ liegen die
+Zeiten zwischen 0,02 s und 2,5 s und bei
+„Zeit“ an „Lang“ zwischen 0,4 s und 60 s.
+Ich habe das überprüft und festgestellt, dass
+mein Mono-Flop etwas anders ist. Tabelle 1
+(Abb. 162) zeigt die Ergebnisse meiner
+Messungen. Da ich sofort gesehen habe,
+dass etwas nicht stimmen muss, habe ich
+
+gemessen am Mono-Flop
+
+
+Die Zeit ist nicht mehr als die Multiplikation von Widerstand mit Kapazität: R × C.
+Tabelle 2 (Abb. 164) zeigt die theoretisch
+
+berechneten Zeiten. Diese sind für 2,2 µF
+etwas länger und für 47 µF viel kürzer als
+die tatsächlichen Werte.
+
+Elektronik
+
+Grafik 3 (Abb. 167) für den 47-µF-Kondensator zu finden.
+
+
+
+
+Nachbau
+
+Korrektur für Bauteilabweichungen
+
+Wie mittlerweile bekannt sein wird, zerlege
+ich alle Silberlinge. Das habe ich auch mit
+den Mono-Flop gemacht. Wie der MonoFlop von innen aussieht, sehen wir auf den
+Layout. Abb. 172 zeigt die alternative
+Version, die als Ersatz im Originalgehäuse
+verwendet werden kann.
+
+Um den Messwerten etwas nahe zu kommen, musste ich den Wert des kleinen
+Kondensators auf 1,7 µF absenken und den
+großen auf 57 µF erhöhen. Die Ergebnisse
+dazu findet sich in Tabelle 3 (Abb. 165). In
+Grafik 2 (Abb. 166) sind alle drei Messwerte für den 2,2-µF-Kondensator und in
+
+
+
+
+
+
+
+
+
+
+Elektronik
+
+Original-Silberling-Gehäuse
+
+
+45×75-Gehäuse
+
+
+
+
+
+Ganz neu ist die auf Abb. 173 zu sehende
+Version. Im Gegensatz zum Grundbaustein
+und dem Flip-Flop bietet das Mono-Flop
+ebenso wie der Relaisbaustein genügend
+Platz, um drei „+“- und drei „-“-Anschlüsse
+einzubauen. Abb. 174 zeigt, wie die Platine
+in mein 4575 3D-Gehäuse passt und
+Die Platine (Abb. 177) für mein 60×60 3DGehäuse (Abb. 176) passt auch wieder in
+die Kassette 32076. Den Aufbau findet sich
+auf Abb. 178.
+
+Das Batteriegehäuse 32263 kommt auch
+nicht zu kurz. Auf Abb. 179 ist der 3DDeckel mit der auf Fotopapier gedruckten
+Frontplatte zu sehen. Auf Abb. 180 sehen
+wir die Platine im Gehäuse. Auf der linken
+Seite sehen wir gerade noch zwei der vier
+Nocken, die benötigt werden, um die
+Platine auf die richtige Tiefe zu bringen.
+Das Layout gibt es in Abb. 181.
+60×60-Gehäuse
+
+Batteriegehäuse 32263
+
+
+
+Elektronik
+
+Mono-Flop als Shield in SMD-Technik
+
+
+des Shields
+
+Am Ende meines Beitrags möchte ich
+darauf hinweisen, dass es beim Mono-Flop
+keinen Sinn ergibt, die drei 22 nF-Kondensatoren gegen solche mit 10 nF Kapazität zu
+tauschen, wie ich es beim Flip-Flop
+gemacht habe. In meinem Beitrag zum FlipFlop habe ich bereits angedeutet, dass die
+Grenzfrequenz des Mono-Flops bei etwa
+100 Hz liegt. Wenn jedoch eine kleinere
+Kapazität an „ext“ angeschlossen würde,
+sollte es möglich sein, die Grenzfrequenz zu
+erhöhen. Da der Mono-Flop zum Einstellen
+eines einzelnen Pulses gedacht ist, leiden
+wir nicht unter einer niedrigen Grenzfrequenz.
+Batteriegehäuse 32263
+
+Schließlich ist auf Abb. 182 der „Shield“ zu
+sehen. Das Layout (Abb. 183) zeigt, dass
+sich unter dem Potentiometer noch sechs
+Widerstände und zwei Kondensatoren
+befinden. Da die SMDs sehr niedrig sind,
+war dafür viel Platz.
+
+Abschließend noch die Ankündigung, dass
+ich mich im nächsten Beitrag mit dem ORNOR und dem AND-NAND beschäftigen
+werde. Beide sind auf der gleichen Platine
+aufgebaut. Merkwürdig ist aber, dass beide
+die gleiche Wirkung haben. Der Unterschied besteht jedoch darin, dass OR-NOR
+eine negative Wirkung hat und ANDNAND eine positive. Wie das dann? Das
+werden wir im nächsten Beitrag sehen.
+
+
+
+
+[3]
+
+Peter Krijnen: Silberlinge: Original
+oder Nachbau (Teil 1). 1/2021, S. 80–93.
+
+Peter Krijnen: Silberlinge: Original
+oder Nachbau (Teil 3). 2/2021, S. 90–100.
+
+[4]
+
+Peter Krijnen: Silberlinge: Original
+oder Nachbau (Teil 2). 2/2021, S. 80–89.
+
+Peter Krijnen: Silberlinge: Original
+oder Nachbau (Teil 4). 3/2021, S. 38–48.
+
+[5]
+
+Peter Krijnen: Silberlinge: Original
+oder Nachbau (Teil 5). 4/2021, S. 35–44.
+
+Referenzen
+[1]
+
+[2]
+
+
+

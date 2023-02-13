@@ -1,0 +1,190 @@
+
+
+Elektronik
+
+Es blinkt
+Peter Krijnen
+Der Auslöser für diesen Beitrag war die Frage eines Bekannten von mir, ob ich noch ein paar
+Winkelsteinen 30 habe und ob er sie ausleihen könne – für ein blinkendes Modell.
+Ich antwortete ihm, dass ich nur noch 129
+dunkelrote Winkelsteine 30 übrighabe. Die
+anderen 600 sind verbaut in vier Kranmodellen. Nach ein paar Wochen bekam ich
+meine Winkelsteine zurück. Später schickte
+er mir einige Bilder von dem, was er gemacht hatte. Eine Kerze. Jetzt fragt ihr euch
+natürlich, was das mit Blinken zu tun hat.
+Um das Flackern der Flamme zu simulieren, verwendete er eine Blinkelektronik von
+fischertechnik.
+Ich selbst besitze beide Blinker von fischertechnik: die Blinkeinheit 36756 (9 V, 0,6 A,
+rot) und die Blinkelektronik 35604 (9 V,
+0,8 A, schwarz).
+
+
+Mit der 36756 (Abb. 1) ist sofort klar, wie
+sie angeschlossen werden soll: Zwei Leitungen mit Steckern für die Stromversorgung und zwei Positionen für zwei Lampen.
+An beiden Enden können dann weitere
+Lampen angeschlossen werden.
+
+
+Bei der 35604 (Abb. 2) ist dies nicht klar,
+da sie nur zwei Leitungen hat, aber keinen
+Platz und keine Anschlüsse für Lampen.
+
+
+Sieht man sich die Bedienungsanleitung der
+35152 an, wird schnell klar, wie die Blinkelektronik angeschlossen werden soll. Das
+gelbe Kabel des Blinkers muss an „Plus“
+der Stromversorgung angeschlossen werden, das blaue Kabel geht zur Lampe. Die
+Lampe wird dann wieder an „Minus“ der
+Stromversorgung angeschlossen.
+Man wird verstehen, dass ich wirklich wissen wollte, wie das funktioniert. Genau wie
+bei den Silberlingen habe ich auch diese
+beiden Blinker geöffnet und mir angesehen,
+was drin ist.
+
+Blinkelektronik 35604
+(schwarz)
+Eine kleine (27 · 12 mm) doppelseitige Leiterplatte (Abb. 3) enthält einen NE555, drei
+Dioden, einen Elko, einen Kondensator,
+drei Widerstände und einen FET – alles in
+SMD-Technologie. Mit dem Ohmmeter
+habe ich alle Verbindungen zwischen den
+
+Bauteilen gemessen und konnte daher das
+Layout bald auf Papier zeichnen. Auf der
+Grundlage dieses Layouts wurde auch das
+Schaltbild schnell gezeichnet (Abb. 4).
+
+Elektronik
+
+500 mΩ den Stromkreis kurz und die
+Lampe leuchtet auf. Der BSP75 ist eigentlich ein Lowside Power Switch, ein Schalter
+also, und eignet sich auch zum Schalten jeder Form von ohmscher, kapazitiver oder
+induktiver Last. Der BSP75 darf bis zu
+0,7 A belastet werden. Wenn der Strom jedoch 1 A überschreitet, wird der BSP75 sofort durch seinen eingebauten Schutz ausgeschaltet.
+im Schaltbild angegebenen Messpunkten
+K1 bis K4.
+
+
+
+
+Der NE555 wird über die Dioden D1, D2
+und den Widerstand R1 mit Strom versorgt.
+Elko C1 fungiert hier als kleine Batterie und
+stabilisiert somit die Stromversorgung. Die
+Widerstände R2, R3 und der Kondensator
+C2 sind die frequenzbestimmenden Komponenten (2,18 Hz). Der Ausgang Pin 3 des
+NE555 steuert dann FET T1 an. Wenn dieser N-FET vom Typ BSP75 leitet, schließt
+sein niedriger RDS(ON)-Widerstand von
+
+Kanal 3 (violett) ist die Darstellung des
+Ausgangssignals. Es ist auch ersichtlich,
+dass das Puls/Pause-Verhältnis ungefähr
+1:2 beträgt. Da die Stromversorgung für den
+Stromkreis durch Schalten unterbrochen
+wird, muss diese durch C1 stabilisiert werden. Auf Kanal 2 (blaugrün) ist deutlich zu
+sehen, dass dies nicht ganz erfolgreich ist,
+aber es reicht aus, damit die Schaltung funktioniert.
+Laut Bedienungsanleitung kann der Blinker
+auch verkehrt herum angeschlossen werden. Das Licht bleibt dann kontinuierlich
+an. In Abb. 6 sieht man die Pegel an den
+vier Messpunkten. Mir ist jedoch nicht ganz
+klar, was D3 in der Schaltung tun soll. Sie
+ist nicht erforderlich, um Spannungsspitzen
+zu unterdrücken, die durch geschaltete Lasten verursacht werden. Das ist schon im
+BSP75 eingebaut.
+
+
+
+vorherigen Situation schien das „Plus“ der
+Stromversorgung geschaltet zu werden. Im
+Aufbau nach Abb. 7 scheint es, als ob die
+„0“ geschaltet wird.
+
+
+Die Spannungsdifferenz zwischen Kanal 3
+und 4 beträgt in dieser Situation 1,2 V. Dies
+ist der Spannungsabfall an der Diode. Deshalb denke ich, dass D3 dafür in der Schaltung enthalten ist, um sie zu überbrücken.
+D2 macht das Gleiche, um C1 zu überbrücken. Trotzdem hat der GND-Anschluss
+(PIN 1) des NE555 eine um 0,4 V höhere
+Spannung als VCC (PIN 8).
+Bei elektronischen Schaltkreisen gehe ich
+immer davon aus, dass der Schaltkreis an
+den „0“-Anschluss des Netzteils angeschlossen ist (Abb. 4). Das sollte jedoch
+laut Bedienungsanleitung umgekehrt sein.
+
+
+Dies ist deutlich sichtbar. Am Messpunkt
+K3 schaltet die Spannung zwischen „0“ und
+„+“ der Stromversorgung um. Das hat zur
+Folge, dass die Spannung an Pin 8 des
+NE555 jetzt 18 V beträgt.
+Wenn T1 leitet, liegt Messpunkt K3 an der
+Versorgungsspannung. Da K3 auch der
+Nullpunkt der Schaltung ist, befinden sich
+„Minus“ von C1 und Pin 1 des NE555 jetzt
+auch auf „Plus“ der Stromversorgung. Da
+C1 an seinem Minus-Anschluss keine „0“
+mehr hat, addiert sich der Pegel über C1 zur
+Versorgungsspannung an seinem „Minus“Anschluss: 9 V + 9 V = 18 V. Für den
+NE555 spielt es keine große Rolle, ob er
+nun 0 und 9 V an den Pins 1 und 8 hat oder
+ob es 9 und 18 V sind. Es bleibt eine Differenz von 9 V. Meiner Meinung nach ist das
+aber unpraktisch.
+
+
+Deshalb habe ich auch diesen Aufbau gemessen (Abb. 7). Die Ergebnisse dieser
+Messung sind in Abb. 8 zu sehen. In der
+
+Stromversorgung
+
+Was auch sichtbar ist, ist, dass das
+Puls/Pause-Verhältnis jetzt 2:1 beträgt.
+Wenn wir auch in diesem Aufbau die Versorgungsspannung umkehren sehen wir die
+Pegel wie in Abb. 9. Im ersten Aufbau sind
+die Pegel auf K2 und K3 auf „High“, im
+zweiten Aufbau sind diese jetzt „Low“.
+
+Blinkelektronik 36756 (rot)
+
+Elektronik
+
+parallelgeschaltet werden. Die Blinkfrequenz für beide LEDs beträgt etwa 2,8 Hz.
+Aufgrund der Toleranzen aller Komponenten beträgt die Frequenz einer LED 2,78 Hz
+und der anderen 2,85 Hz. Das Puls/PauseVerhältnis liegt bei 1:3. Wie aus dem
+Schaltbild ersichtlich ist es nicht sinnvoll,
+die Versorgungsspannung umzukehren.
+
+Mit Hilfe des weltberühmten NE555 oder
+eines Operationsverstärkers, einiger Widerstände und Kondensatoren kann man einen
+Impulsgenerator bauen. Wir haben gerade
+gesehen, dass das funktioniert.
+
+
+
+Wir werden jetzt sehen, dass dies auch viel
+einfacher gemacht werden kann. Abb. 10
+zeigt, dass man nicht viel braucht: zwei Widerstände, ein Transistor und eine LED. In
+diesem Fall aber keine gewöhnliche LED,
+sondern eine blinkende. Die 36756 enthält
+gleich zwei dieser Schaltkreise auf ihrer
+48 · 10 mm großen Platine. In Abb. 11 sieht
+man, wie es funktioniert.
+Mit Hilfe eines Widerstands und der blinkenden LED wird eine Rechteck-Welle aufgebaut. Diese wird über einen Widerstand
+auf die Basis eines PNP-Transistors vom
+Typ BC876 gelegt. Die Lampen werden
+dann zwischen dem Kollektor und der „0“
+angeschlossen. Der BC876 ist ein Darlington und darf bis 1 A belastet werden. So
+können pro Ausgang mehrere Lämpchen
+
+
+Conrad hat nur eine 3 mm LED im Angebot. Sie hat eine Frequenz von 1,8 Hz und
+das Puls/Pause-Verhältnis lautet 1:2. Es gibt
+sie aber in mehreren Farben. Reichelt hat
+eine rote und eine grüne Blink-LED. Die
+Frequenz dieser 5-mm-LEDs hängt von der
+Versorgungsspannung ab und liegt zwischen 1,5 Hz (14 V) und 3 Hz (3,5 V).
+Dass es also auch einfach geht, ist toll, hat
+aber auch einen Nachteil: Die Blinkfrequenz ist abhängig von der benutzten LED.
+
+
+

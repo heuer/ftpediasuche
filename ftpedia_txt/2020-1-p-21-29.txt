@@ -1,0 +1,517 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Alternative Verbindungslösungen für Stecker
+und Buchsen
+Jan Hanson
+Wie kann man Fremdbauteile elektrisch am besten mit fischertechnik-Modellen verbinden? Auf
+diese Frage haben findige fischertechniker schon viele kreative Antworten gefunden. Zusammen mit einem kleinen Rückblick auf die Geschichte des fischertechnik-Steckers werden sie in
+diesem Beitrag vorgestellt.
+
+Hintergrund
+Das fischertechnik Programm wurde bereits
+1967 elektrifiziert, im zweiten Jahr nach der
+Markteinführung. Anlass war die erste
+Auflage des mot1-Baukastens (30091) mit
+Batteriestab und 6V-Motor. Zur Verbindung von Stromversorgung und Verbraucher fiel die Wahl auf Kabel mit Flachsteckern in grün und rot (31336/7). Der
+„Konkurrent“ Modelleisenbahn spielte
+dabei eine wichtige Rolle, denn größenmäßig kompatible Stecker, hier allerdings
+mit rundem Gehäuse, waren dank Märklin
+und Co. bereits in vielen Kinderzimmern
+anzutreffen (Abb. 1). So wurde die erste
+Generation des mot1 noch mit H0-Steckern
+ausgeliefert.
+
+(Clubheft Nr. 2, 1968, S. 3)
+
+Zwischenzeitlich gab es Versuche mit anderen Verbindungstypen wie der wenig geglückte, auf Lötstiften basierende Ansatz
+des Elektronik-Baukastens (30253) von
+1981 (Abb. 2). Nachdem dieser aber offen-
+
+bar eine Eintagsfliege war, sind Flachstecker bis heute die gängige Art, um
+fischertechnik-Modelle mit Strom zu versorgen und elektrisch zu verbinden.
+
+mit Lötstiften und Steckhülsen (Anleitung zum
+Kasten Elektronik, 1981, S. 5)
+
+Für alle, die am Eigenbau oder der Integration von elektrifizierten Fremdbauteilen
+interessiert sind und sich nicht mit einfachen Adapterkabeln zufrieden geben,
+stellt sich daher früher oder später die
+Frage, wie man die Kompatibilität zum
+fischertechnik-Flachstecker herstellt. In
+diesem Beitrag möchte ich daher einen
+Überblick über die unterschiedlichen, teils
+sehr kreativen Lösungsansätze geben, die
+dabei bisher gefunden wurden.
+
+
+
+
+Der fischertechnik-Stecker und
+seine Alternativen
+Relativ überschaubar ist die Lage soweit es
+die Stecker-Seite betrifft. Wer den typischen „fischertechnik-Look“ will, kommt
+an den Originalsteckern nicht vorbei, die
+bei den bekannten Bezugsquellen (Liste am
+Ende des Beitrags) zu Stückpreisen von ca.
+1 € neu [1] (nur aktuelle schmale Stecker)
+oder ca. 0,40 € gebraucht [2] (auch ältere,
+breite Stecker) erhältlich sind.
+Leider ist die Bauart der Stecker nicht besonders dauerhaft, denn die Klemmwirkung
+wird durch die Spreizung der gekreuzten
+Schlitzung erreicht. Bei einem Ausleiern
+des Kontakts empfehlen die fischertechnikAnleitungen, die Schlitzung mit Hilfe einer
+Klinge aufzuspreizen. Bei zu viel Spreizung
+kann es besonders in Kinderhänden früher
+oder später aber zu einem Ermüdungsbruch
+des spröden Ausgangsmaterials kommen.
+Die meisten fischertechnik-Fans dürften das
+unschöne Bild von Steckern mit fehlenden
+Zinken kennen (Abb. 3).
+
+
+Robotik und Computing brachten zusätzlich
+zum klassischen Rot und Grün viele neue
+Farbvarianten ins Spiel. Etwa zu Beginn der
+2000er wurde das Gehäuse deutlich schmaler und etwas länger, der Stift aber stark
+verkürzt. Das schmalere Gehäuse brachte
+Vorteile beim überstandsfreien Anschluss
+des Mini-Schalters (Abb. 5), der fast schon
+grotesk verkürzte Stift beeinträchtigte aber
+den Halt des Steckers in der Buchse.
+
+erlauben den bündigen Anbau am Mini-Taster
+
+Nebenwirkungen (Anleitung zum em1
+Grundkasten, 1975, S.19)
+
+Auch das Design des Flachsteckers hat den
+Lauf der Zeiten nicht ganz unverändert
+überstanden. Früh gab es eine Variante mit
+rückseitiger statt Querbuchse für die Verbindung mehrerer Stecker; das Kabel wurde
+hier gequetscht, nicht geschraubt (Abb. 4).
+
+Diesen Nachteil nahm man vermutlich aufgrund von Sicherheitsbedenken in Kauf.
+Falls dem so war, wurden die aber schon
+wenige Jahre später entkräftet, als der Stift
+wieder etwas verlängert und das abgeflachte Gehäuse wieder etwas gekürzt wurde
+(Abb. 6): Klassischer Stecker (oben), Redesign der 2000er (Mitte) und aktueller
+Stecker mit schlankerem Gehäuse, kürzerem Kontakt und nur einseitiger Querbuchse (unten). Der aktuelle Stecker ist also
+ein Kompromiss aus Traditionsstecker und
+dem etwas zu radikalen Redesign der
+2000er. Unverändert bei allen neuen Designs blieb übrigens der Durchmesser des
+Kontakts. Er wird bei H0-Steckern oft mit
+2,6 mm angegeben. Eigene Messungen mit
+
+der Schieblehre ergeben beim fischertechnik-Stecker knapp 2,5 mm an der Basis.
+2,6 mm ist also eher der Innendurchmesser
+der zugehörigen Buchse.
+
+Tipps & Tricks
+
+selbst von fischertechnik für Situationen
+verwendet wurden, in denen der Platz für
+einen Stecker nicht reichte: Das abisolierte
+Kabelende wird direkt in die Buchse geschoben und mit einem Abdeckplättchen/
+Leuchtstein-Stopfen (36495) gegen das
+Herausrutschen verklemmt (Abb. 8).
+
+
+Was sind nun die Alternativen zum fischertechnik-Stecker? Bekannter und etwas
+preisgünstigerer Ersatz sind die oben erwähnten Stecker aus dem Modellbau mit
+rundem Gehäuse, die unter der Bezeichnung „H0-Stecker“, „Modellbahn-Stecker“,
+„Zwerg-Stecker“ oder „Miniatur-Stecker“,
+oft mit dem Zusatz „mit Querloch“, nicht
+nur im einschlägigen Modellbahnhandel [4]
+sondern auch bei verschiedenen Elektronikhändlern [5, 6, 7] zu Stückpreisen von ca.
+0,20 € bis 0,30 € erhältlich sind. Wie sich
+ihre Optik in fischertechnik-Modelle einfügt ist eine ästhetische Frage, die jeder für
+sich beantworten muss; auch die Mechanik
+ist nicht in allen Fällen unproblematisch
+(Abb. 7).
+
+problemlos zum fischertechnik-System
+
+Als weitere Alternative sind steckerfreie
+Lösungen zu erwähnen, die eher unter die
+Kategorie „Hack“ fallen, auch wenn sie
+
+Anschluss durch Einklemmen des Litzenkabels
+(Anleitung zum ec3, 1975, S. 32)
+
+Statt des Abdeckplättchens eignen sich
+ganz hervorragend auch die Röhrchen von
+Wattestäbchen aus Plastik. Schiebt man hier
+den abisolierten Draht durch das Röhrchen
+und biegt den frei liegenden Draht nach
+hinten zurück, erhält man einen fast vollwertigen Notstecker. Durch vorheriges Verdrillen der Litzen kann die Klemmwirkung
+noch verstärkt werden.
+Und mit der geeigneten Knotentechnik
+bekommt man mit etwas dickeren Litzen
+(z. B. 24 AWG) auch ganz ohne Stopfen
+eine erstaunlich zuverlässige und rutschfeste Notverbindung hin (Abb. 9).
+
+(von links nach rechts): Abdeckplättchen,
+Wattestäbchen, Knotenschlinge
+
+
+
+Alternativen zur fischertechnik-Buchse
+Deutlich vielfältiger als beim Stecker sind
+die Optionen bei Buchsen. Für alle Lösungen gilt, dass sie zwei Funktionen zuverlässig zu erfüllen haben: Sie müssen einerseits
+einen unterbrechungsfreien und möglichst
+widerstandsfreien Stromfluss gewährleisten
+(elektrische Funktion) und andererseits für
+einen sicheren Halt des Steckers im Modell
+sorgen (mechanische Funktion). Wir blicken zunächst auf die „offiziellen“ Varianten, die fischertechnik selbst verwendet,
+und wenden uns dann dem Bereich der
+Fremdbauteile und Eigenkreationen zu.
+Bohrung zum Einstecken
+Bei den ersten „Buchsen“, z. B. zum Verbinden von Motoren oder Batteriestab, handelt es sich gar nicht um Buchsen im eigentlichen Sinne. Vielmehr wurden massive
+Messingteile geeigneter Größe mit Bohrungen zur Aufnahme der Stecker in das
+Gehäuse integriert. Mehrere Bohrungen
+können sich hierbei rechtwinklig kreuzen,
+wodurch wie z. B. beim Batteriestab der
+variable Anschluss von mehreren Seiten
+möglich wird (Abb. 10, links).
+
+Batteriestab (links); Eigenbau beim N20 Mini
+Power Motor System [9] (rechts)
+
+Mit relativ geringem Aufwand ist dieser
+Ansatz im Eigenbau zu realisieren (Abb. 10,
+rechts). Benötigt werden eine Metallsäge,
+ein Bohrständer für die sichere senkrechte
+Bohrung und ein passendes Metallstück.
+
+Als Bohrer wählen wir HSS-Bohrer mit
+2,4 mm, um bei leicht ungenauen Bohrungen auf der sicheren Seite zu sein, bei
+Bedarf wird mit 2,5 mm oder 2,6 mm nachgebohrt. Messing ist als Rohstoff besonders
+geeignet, da er leicht erhältlich ist und sich
+gut bearbeiten sowie hervorragend löten
+lässt. Während Rundstangen z. B. mit 4 mm
+Durchmesser in vielen Baumärkten erhältlich sind, muss man für die einfacher zu verarbeitenden Stangen mit quadratischem
+4x4 mm Profil ggf. den Online-Handel
+heranziehen [8]. Das zurecht geschnittene
+Werkstück wird mit Hilfe des Bohrständers
+an den passenden Stellen gebohrt, ggf. auch
+über Kreuz. Eine 3D-gedruckte oder selbst
+z. B. aus Holz gefertigte Zentrierhilfe kann
+dabei die exakte Positionierung unterstützen.
+Bohrung zum Durchstecken
+Eine „zweidimensionale“ Variante der vorherigen Lösung ist die Bohrung zum Durchstecken, bei der eine elektrisch leitende
+Oberfläche gelocht wird. fischertechnik
+selbst hat dieses Verfahren z. B. bei diversen Verteilerplatten und Schwingfedern zur
+Anwendung gebracht, teils mit sehr dünnen
+Blechen, teils mit dickeren Metallplatten
+(Abb. 11): sehr enge und passgenaue Bohrung (Schwingfeder 31329, links), mit
+Kragen (Verteilerplatte rot 31328/1977,
+Mitte) oder mit dickerem Trägermaterial
+(Verteilerplatte 1-polig grün 31327/1975,
+rechts).
+
+
+Bei voll eingeschobenem Stecker wird
+dieser dabei nicht vollständig, sondern nur
+an seiner Basis umschlossen, wo die Spreizung in geringerem Maße wirksam ist. Die
+
+Folge ist neben der geringeren Kontaktfläche (elektrische Funktion) vor allem ein
+verminderter Halt (mechanische Funktion),
+wobei beides natürlich von der Dicke des
+Trägermaterials abhängt. Kompensieren
+kann man das mit einer sehr engen Bohrung, bei der aber die Gefahr besteht, dass
+die vier Stecker-„Quadranten“ zu stark zusammengepresst werden, wodurch ein Ermüdungsbruch wahrscheinlicher wird.
+Dünnes Trägermaterial ist nicht besonders
+resistent und verbiegt leicht, vor allem bei
+seitlichem Zug.
+Ein Revival erlebte diese Verbindungstechnik jüngst für die direkte Verbindung mit
+Platinen. Um den für den Schulunterricht
+entwickelten Mikrocontroller micro:bit
+kompatibel mit fischertechnik zu machen,
+wurden Adapter- bzw. Erweiterungsplatinen mit durchkontaktierten Löchern passender Größe versehen, die die Stecker aufnehmen (Abb. 12).
+
+micro:bit-Erweiterungsboard (Karl [10])
+
+Die Methode ‚Bohrung zum Durchstecken‘
+ist ebenfalls für den Eigenbau geeignet und
+das Vorgehen ähnlich. Da der Aufwand
+dem der Bohrung zum Einstecken vergleichbar ist, handelt es sich aufgrund der
+genannten Nachteile in der Regel nicht um
+eine Ideallösung.
+Bundhülse
+Rohrförmige Hülsen kamen spätestens
+beim Trafo 812 (31040) erstmals zum
+Einsatz. Seit den 1970ern sind sie in Form
+der sogenannten Bundhülsen in den heißgeliebten „Silberlingen“ im Einsatz. Der
+namensgebende Bund sorgt bei ihnen für
+
+Tipps & Tricks
+
+den sicheren Halt in der entsprechend vorgebohrten Platine oder im Gehäuse, die
+passgenaue Hülse sorgt für den sicheren
+Halt des Steckers. Auch bei verschiedenen
+späteren Controller-Generationen, Batteriegehäusen, diversen Sensoren und nicht
+zuletzt bei Community-Projekten wie z. B.
+dem ftDuino waren sie aufgrund dieser
+Eigenschaften das Mittel der Wahl (Abb.
+13).
+
+beim Grundbaustein 36391 (rechts) und als
+Stückware (vorne)
+
+Bundhülsen sind als Stückware bei den einschlägigen fischertechnik-Bezugsquellen
+erhältlich [1, 2]. Ihre Lieferbarkeit war in
+der Vergangenheit allerdings nicht immer
+gewährleistet und die Stückpreise von
+0,20 € aufwärts akkumulieren sich bei
+größeren Projekten schnell.
+Alternative Bezugsquellen sind vereinzelt
+zu finden, die Suche wird aber durch abweichende Bezeichnungen erschwert. Verschiedene Lehrmittelversender führen
+„Sickenröhrchen“ oder „Bundnieten“ aus
+Messing zu weit niedrigeren Stückpreisen.
+Sie sind für Modellbaustecker gedacht und
+passen daher auch für fischertechnik.
+Allerdings ist die Bestellung Lehrpersonen
+vorbehalten, wofür aber nicht immer ein
+Nachweis verlangt wird.
+Der Sonderpostenversender Pollin führt
+passende Bundhülsen auch mal unter der
+völlig irreführenden Bezeichnung „Lötstützpunkte“, es lohnt sich also immer, die
+
+
+
+Augen offen zu halten. Sobald ein Außendurchmesser von 3 mm und ein Innendurchmesser von 2,6 mm angegeben sind, sollte
+fischertechnik-Kompatibilität gegeben sein.
+fischertechnik-fremde Verbinder für
+H0-Stecker
+
+Laborbuchse (Abb. 15, Mitte links). Sie
+sind sehr dauerhaft und passgenau, fügen
+sich aber optisch nicht besonders gut in
+fischertechnik-Modelle ein. Aufgrund ihrer
+Größe und Kosten von knapp 1 €/Stück
+kommen sie wohl eher für Anwendungen
+mit wenigen Kontakten in Frage.
+
+Aufgrund seiner Verwandtschaft mit
+Modellbausteckern gibt es verschiedene
+Fremdlösungen aus diesem Bereich, die für
+fischertechnik-Zwecke in Frage kommen.
+Dazu gehören zunächst 2,6 mm-Modellbaubuchsen, das Gegenstück der H0-Stecker,
+die man mit oder ohne Plastikgehäuse ähnlich wie Bundhülsen einsetzen oder z. B.
+mit Hilfe der Klemmschraube an platinenseitig verbauten Stiftleisten montieren kann
+(Abb. 14, links). Da sie aber sehr schlecht
+zu löten sind und die mechanische Schraubbefestigung an Lötnägeln wacklig und
+schwer auszurichten sein kann, sind sie in
+mechanischer Hinsicht keine Ideallösung.
+Zur Stabilisierung kann man z. B. mit
+Kunstharz vergießen (Abb. 14, rechts).
+fischertechnik-Buchse
+
+Modifizierte Fremdbauteile
+
+Stiftleisten (links, ft:pedia 1/2018, S. 12) und
+Relaiskontakte, zur Stabilisierung eingegossen
+in Kunstharz (rechts [11])
+
+Eine weitere Alternative sind Rundsteckhülsen bzw. Steckmuffen (Abb. 15, unten
+links). Während Bundhülsen vertikal zur
+Platine montiert werden, handelt es sich
+hierbei um eine horizontal zu montierende
+Variante, die sich dementsprechend vor
+allem für seitliche Abschlussmöglichkeiten
+eignet. Auch hier schlagen allerdings relativ
+hohe Stückpreise zu Buche [4, 5].
+Zur Oberflächenmontage bei Gehäusen
+oder Bedienpulten gedacht sind Miniatur26
+
+Kommen wir nun zu den Lösungen, bei
+denen Fremdbauteile passender Größe unverändert oder modifiziert zum Einsatz
+kommen, um 2,6 mm-Stecker aufzunehmen.
+Lüsterklemmen lassen sich durch die Fixierschraube manuell exakt auf die richtige
+Klemmstärke anpassen (Abb. 15, links
+oben). Auf der Gegenseite können sie problemlos abisolierte Kabel aufnehmen, die
+elektrische Verbindung zu Platinen erfolgt
+analog zu den H0-Buchsen (s. o.) durch Anschrauben an eine Stiftleiste. Belässt man
+die Lüsterklemmen in ihrer Kunststoffisolierung, können sie leicht in Gehäuse
+geschraubt oder geklebt oder mit fischertechnik-Bauplatten verbunden werden. Der
+Zugang zur Aufnahme der Stecker muss
+
+dann allerdings z. B. mit dem Teppichmesser passend freigeschnitten werden. Da Lüsterklemmen in Leisten mit mehreren einzelnen Klemmen geliefert werden, können
+mit ihnen leicht viele Kontakte auf einmal
+realisiert werden [12].
+Platinenanschlussklemmen sind ähnlich
+wie Lüsterklemmen in Leisten verschiedener Längen, teils auch zum Zusammenstecken, erhältlich. Sie sind natürlich v. a.
+für platinenbefestigte Anschlüsse geeignet.
+Der mechanische Halt des Steckers ist allerdings je nach Modell bzw. Hersteller ein
+wenig Glücksache und anders als bei der
+Lüsterklemmen hilft die Fixierschraube hier
+nicht, da meist nur wenig Spiel vorhanden
+ist. Insgesamt handelt es sich daher eher um
+eine wenig „serienreife“ Notlösung (Abb.
+15, rechts oben).
+
+Tipps & Tricks
+
+Die Hülsen mit 4 mm2 Querschnitt haben
+einen Innendurchmesser von 1,8 mm und
+müssen daher durch Quetschen verengt
+werden. Am passgenauesten geht das, wenn
+man sie auf den Schaft eines 2,4 mm
+Schraubendrehers aufschiebt und dann mit
+einer schmalen Zange knapp hintereinander
+um 90° versetzt auf den Durchmesser des
+Schraubendrehers zusammenquetscht. Mit
+etwas Erfahrung bekommt man einen
+relativ festen Halt, oft aber mit ein wenig
+Spiel. Die unschöne Optik lässt sich beim
+Einbau in ein Gehäuse weitgehend kaschieren.
+Neuschöpfungen mit Fräse und 3DDruck
+Kommen wir zuletzt zu zwei Lösungen, die
+eigene Konstruktionselemente beinhalten.
+
+Aderendhülsen in der Variante ohne Plastikmantel können in den Größen 2,5 mm2
+und 4 mm2 passend gemacht werden. Sie
+sind sehr günstig, gut lötbar und können
+aufgrund ihrer Bauform mit Kragen als
+Notnagel für Bundhülsen dienen (Abb. 15,
+Mitte und unten rechts).
+Die kleineren Hülsen mit 2,5 mm2 Querschnitt haben einen Innendurchmesser von
+1,2 mm und müssen aufgeweitet werden.
+Ein geeignetes Verfahren hat Michael Mlivoncic beschrieben [13]. Der resultierende
+Halt ist sehr streng, was eine entsprechend
+stabile mechanische Befestigung z. B. auf
+der Platine erfordert und die fischertechnikStecker strapazieren kann.
+Alternativ kann man die kleinen Hülsen
+auch mit dem Cutter-Messer längs schlitzen. Man erhält dann bei sorgfältigem Vorgehen eine ähnliche Klemm-Mechanik wie
+die der Rundsteckhülse (Abb. 15, unten
+links). Für einen guten Halt des Steckers
+sollte die Hülse über die gesamte Länge
+inklusive Kragen geschlitzt werden, da sie
+den Stecker sonst nicht gleichmäßig umschließt.
+
+3 mm Führungshülse (David Holtz [14])
+
+Der ft:community-User David Holtz hat für
+verschiedene Controller ein Verfahren erfunden, bei dem der Stecker mittig auf einen
+einzelnen Lötstift aufgeschoben wird [14].
+Die Zentrierung wird durch ein entsprechend gelochte Gehäusedeckplatte mit einer
+
+
+
+
+Hülse von 3 mm Innendurchmesser gewährleistet, die dem Stecker zusätzlich Halt
+gibt (Abb. 16).
+Das Innovative an Davids Lösung ist, dass
+die mechanische Haltefunktion hier zumindest teilweise vom entsprechend gefrästen
+Gehäusedeckel übernommen wird und
+durch die Verwendung einfachster Konstruktionsmittel sehr einfach eine große Anzahl von Anschlüssen realisiert werden
+kann. Ein zusätzlicher Vorteil ist, dass die
+Buchse nicht nur fischertechnik-Stecker
+aufnimmt, die beim Kontakt immer etwas
+aufgespreizt werden, sondern auch mit Experimentiersteckverbindung der sogenannten Dupont-Kabel kompatibel ist.
+Angeregt durch Davids Vorbild entstand
+die Idee zur „Printbuchse“ (die Bezeichnung ist mehrdeutig, soll hier aber auf den
+3D-Druck verweisen). Die mechanische
+Funktion wird bei der Printbuchse komplett
+von der elektrischen Kontaktfunktion unabhängig realisiert, indem eine 3D-gedruckte
+Hülse für den sicheren mechanischen Halt
+des Steckers sorgt. Ein elektrischer Kontakt
+z. B. in Form einer Stiftleiste wird so an
+einer Seite der Hülse platziert, dass ausreichend Druck für einen sicheren elektrischen
+Kontakt resultiert (Abb. 17a, b).
+
+elektrische Kontakt an die Seitenwand [15]
+
+Und es ist sehr vielseitig anwendbar: Ursprünglich für Stiftleisten im Rastermaß
+2,54 mm konzipiert ist es auch mit anderen
+elektrischen Kontakten anwendbar. So können sehr einfache und kompakte Anschlussmöglichkeiten für Fremdbauteile realisiert
+werden, die teils sogar ohne jede weiteren
+Vor- oder Lötarbeiten auskommen.
+
+„Printbuchse“ [16]
+
+Das Prinzip hat sich inzwischen vielfach
+bewährt und wurde bereits von anderen 3DDesignern übernommen [16].
+
+
+Printbuchse: Controller-Anschlüsse (oben),
+Drehwertgeber (links) und Druckschalter
+(rechts). Beim Drehwertgeber wird ein
+Potentiometer ohne jede weitere Modifikation in das Gehäuse eingeschoben; die gedruckte Hülse sorgt für den Rest.
+
+Fazit
+4 mm Durchmesser und 15 mm Länge – das
+sind Standardmaße, bei denen „Modder“
+und „Adaptierer“ von Fremdbauteilen immer hellhörig werden, wenn sie die fischertechnik-Welt nicht als abgeschlossenen
+Kosmos verstehen sondern als System ohne
+Grenzen. Wie dieser Beitrag gezeigt hat,
+gehören auch 2,6 mm zur Liste der fischertechnik-Maße, bei denen findige fischertechniker in der Vergangenheit viel Spürsinn und Kreativität bei der Suche nach
+Alternativlösungen an den Tag gelegt
+haben.
+
+Referenzen und Links
+[1]
+[2]
+
+fischertechnik-Einzelteilebezug,
+santjohanser.de
+fischertechnik-Einzelteilebezug,
+fischerfriendsman.de
+
+[3]
+
+Stecker neuer Bauart, Forumsbeitrag
+ft:community.
+
+[4]
+
+Bananenstecker und Steckmuffen.
+tams Elektronik.
+
+[5]
+
+Steckverbinder, conrad.at
+
+[6]
+
+Zwergstecker, reichelt.de
+
+[7]
+
+Zwergstecker, pollin.de
+
+Tipps & Tricks
+
+[8]
+
+Messing-Vierkantstangen, alumessing-shop.de
+
+[9]
+
+Jan Hanson: fischertechnik N20 Mini
+Power Motor system.
+thingiverse.com.
+
+[10] micro:bit IO F5 board.
+Forumsbeitrag, ft:community.
+[11] Thomas Dragon: fischertechnik Relais selber bauen. instructables.com.
+[12] Michael Mlivoncic: Arduino UNO an
+fischertechnik anpassen. 03.11.2012,
+blogspot.com.
+[13] Michael Mlivoncic: Alternative
+Buchse für ft-Stecker zum Auflöten.
+08.12.2012, blogspot.com.
+[14] Arduino Mega als ft-Controller.
+ft:community.
+[15] Jan Hanson: Printbuchse – alternative connector socket for fischertechnik cables. thingiverse.com.
+[16] Schlagwort „Printbuchse“,
+thingiverse.com.
+Vielen Dank für die Genehmigung zur Nutzung ihrer Fotos an die ft:community-User
+Robin (Abb. 6), Karl (Abb. 12) und David
+Holtz (Abb. 16).
+
+
+

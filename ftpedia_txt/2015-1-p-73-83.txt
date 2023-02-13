@@ -1,0 +1,591 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Neue ft-Teile selbst gemacht – 3D-Druck (3):
+Innenzahnkranz
+Johannes Visser
+Vermutlich hat sich jeder ambitionierte fischertechniker für die Lösung einer Problemstellung
+schon mal ein Spezialteil gewünscht, das im fischertechnik-Sortiment fehlt. Meistens findet man
+eine Lösung, wie man das Problem mit Standard-Teilen lösen kann, aber häufig ist die Lösung
+groß, sperrig und klobig. Ein elegantes Spezialteil wäre schöner. Kein Problem – selber konstruieren und mit einem 3D-Drucker ausdrucken.
+
+Vorweg
+
+Verfahren des 3D-Drucks
+
+Harald Steinhaus hat in der ft:pedia 2/2013
+bereits das Thema 3D-Druck vorgestellt [1].
+Dieser Artikel soll daran anknüpfen und das
+faszinierende Thema weiter beleuchten.
+
+Es gibt inzwischen mehrere Verfahren, 3DObjekte zu drucken. Hier eine kleine Auswahl:
+
+Seit 2013 hat sich im Bereich 3D-Druckern
+eine Menge getan. 3D-Druck ist inzwischen
+bezahlbar geworden. Es gibt mittlerweile
+viele Dienstleister, die z. B. über einen
+Webshop anbieten, Teile auszudrucken.
+Man kann häufig zwischen vielen Arten des
+Drucks wählen, die alle Vor- und Nachteile
+haben. Dazu später mehr.
+Der Hauptpunkt ist aber der Preis. Was
+bringt es, sich Teile auszudrucken, deren
+Preis die Kosten z. B. eines ganzen fischertechnik-Kastens überschreitet?
+Im Rahmen der Recherche für diesen Artikel ergab sich eine erhebliche Preisspanne
+für das gleiche Teil über verschiedene Anbieter. Letztlich hat das Rennen das so genannte „FabLab“ (fabrication laboratory)
+an der RWTH Aachen gemacht, welches
+man als Privatperson zum Selbstkostenpreis
+in Anspruch nehmen kann. Aber auch
+hierzu später mehr.
+Die Stabilität der ausgedruckten Teile ist
+übrigens kein Problem. Die Teile sind erstaunlich belastbar.
+
+· Laser-Sintern
+Metallpulver
+
+mit
+
+Kunststoff-
+
+oder
+
+· Stereolithografie mit Flüssigharz
+· Kunststoff-Extrusion
+· Kombinationen mit anschließendem
+Ausguss mit Gips oder gar Silber
+Laser-Sintern
+Beim Sintern mit Pulver wird feines Kunststoff-Pulver oder Metall-Pulver in dünnen
+Schichten ausgebracht und mit einem Laser
+aufgeschmolzen, so dass sich die Körnchen
+verbinden. In weiteren Schritten werden
+neue Schichten aufgebracht und wieder aufgeschmolzen, dabei verbinden sich die
+Schichten auch mit darunter liegenden
+Schichten.
+
+
+
+
+Ist das Objekt fertig belichtet, kann das
+übrige Pulver herausgeschüttet werden. Das
+Pulver dient während des Druckens als Stabilisierung für Teile, die noch keine Verbindung zu anderen Teilen haben und sonst
+herunterfallen oder umstürzen würden.
+Allerdings kann man keine geschlossenen
+Hohlräume erzeugen, da das Pulver aus
+diesen nicht herausgeschüttet werden kann.
+Ein weiterer Nachteil von Kunststoff-Sintern ist, dass die Stabilität begrenzt ist.
+Nachträgliches Behandeln eines solchen
+Objekts mit Cyanacrylat (Sekundenkleber)
+kann die Stabilität erhöhen. MetallpulverSintern dagegen kann sehr stabil sein.
+
+die Kosten für die Drucker sind relativ niedrig, so dass sich solche Drucker auch privat
+anschaffen lassen.
+Das Verfahren kann man sich vorstellen wie
+eine Heißklebepistole: Ein Kunststofffaden
+wird erhitzt und als „Wurst“ auf einer Trägerplatte abgesetzt. Die Temperatur des
+Strangs wird so hoch gewählt, dass sich der
+Strang mit bereits liegenden Strängen verbinden kann (Abb. 3).
+
+Die Schichtdicke hängt im Wesentlichen
+von der Korngröße des Pulvers ab.
+Flüssigharz-Stereolithografie
+Bei der Flüssigharz-Stereolithografie ist das
+Verfahren ähnlich. Statt des Pulvers wird
+hier flüssiges Harz verwendet. Das Harz
+härtet unter Belichtung aus. Der Laser oder
+die Lichtquelle muss nicht von so hoher
+Leistung sein. Die Schichtdicke hängt von
+der Viskosität der Flüssigkeit und der Oberflächenspannung ab.
+
+
+Die Auflösung der Objekte hängt von der
+Dicke des Kunststofffadens ab und kann bei
+0,1 mm liegen.
+Nachteil: Die Strukturen sind zwar in Richtung der ausgelegten Stränge sehr stabil,
+aber die Verbindung zwischen den Strängen
+ist geringer. Je nach Art des zu druckenden
+Objekts muss daher die Druckrichtung geeignet gewählt werden. Weiterer Nachteil:
+Je nach Auflösung und Größe der Objekte
+dauert der Druck mehrere Stunden.
+Der Vorteil ist der niedrige Preis.
+
+
+Nachteil auch hier: Hohlräume sind nicht
+möglich. Außerdem fehlt die stützende Wirkung der Flüssigkeit: Man muss beim Konstruieren Stützelemente vorsehen, die man
+später wegschneiden muss. Vorteil: Das
+Objekt ist stabiler als Kunststoff-Sintern.
+Kunststoff-Extrusion
+Das in letzter Zeit populär werdende Verfahren des Kunststoff-Extrudierens lässt
+sich mit geringen Kosten realisieren. Auch
+
+
+Auch hier fehlt die stützende Wirkung wie
+beim Laser-Sintern: Man kann nicht „in die
+Luft“ drucken. Doch hier gibt es Abhilfe.
+Mehrfarbig und Hohlräume
+3D-Drucker nach dem Kunststoff-Extrusion-Verfahren können auch mehrfarbig
+drucken. Es gibt Drucker mit mehreren
+Köpfen, in die sich verschiedenfarbiges
+Ausgangsmaterial einspannen lässt.
+Auf diese Weise lässt sich auch das Problem
+mit dem Überbrücken der Hohlräume beheben. Dazu benötigt man mindestens zwei
+Druckköpfe: Einer der Köpfe druckt das
+echte Material, der zweite ein Stützmaterial.
+
+Mit dem Stützmaterial werden während des
+Drucks die Hohlräume ausgefüllt. Das
+Stützmaterial kann später mit Hilfe von
+Lauge aufgelöst und aus dem Objekt herausgeschwemmt werden.
+Dieses Verfahren ist das zu bevorzugende
+Verfahren, da es günstig ist und komplexe
+Strukturen herstellen kann.
+Materialverbrauch und Preis
+Bei der Kunststoff-Extrusion haben die
+Menge des Materials und die Form erheblichen Einfluss auf den Preis. Das Grundmaterial bringt einen Mengenpreis mit sich.
+Außerdem erhöht sich die Dauer des Drucks
+mit der Größe der Objekte. Damit ist es
+günstig, Objekte zu konstruieren, die mit
+wenig Material auskommen. Diese besitzen
+auch den Vorteil geringeren Gewichts.
+
+Tipps & Tricks
+
+Hauptattraktionen ist das Kettenkarussell
+im Kühlturm des ehemaligen Kernkraftwerks („Schneller Brüter“, gekühlt mit flüssigem Natrium – Nuklear-Material ist hier
+nie eingefüllt worden). Ähnliche Karussells
+findet man auf Volksfesten wie z. B. dem
+Oktoberfest (Abb. 4).
+
+Konstruktion in fischertechnik
+Die Konstruktion bietet einige Herausforderungen. Der Gittermast ist relativ einfach
+aus Statik zu konstruieren. Dann braucht es
+aber einen Drehkranz, der die Gondeln um
+den Turm dreht, der am Turm hochfahren
+kann. Ganz originalgetreu ist das nicht: Bei
+den dargestellten Karussells dreht sich der
+ganze Turm. Das ist aber bei dem Gewicht
+in fischertechnik nicht ganz einfach.
+Drehkranz
+
+Den Preis des Drucks kann man sich bei den
+3D-Dienstleistern häufig direkt online bei
+der Bestellung berechnen lassen, wenn man
+die Objekt-Daten hochgeladen hat.
+Weiterhin bieten die Werkzeuge in den
+Web-Shops häufig den Dienst der Reparatur des STL-Files an. STL-Exporte von 3DProgrammen sind häufig fehlerbehaftet
+(Oberflächen nicht geschlossen etc.) [2].
+
+Der Anlass
+Die Notwendigkeit für ein Spezialteil ist
+immer der Wunsch nach einem neuen
+Modell.
+
+
+Für einen Drehkranz, der in der Mitte einen
+Turm aufnehmen muss, bietet sich der Kreis
+aus gebogenen Statik-Trägern an (Abb. 5).
+Hier stößt man aber auf zwei Probleme:
+· wie soll man ihn lagern?
+· wie kann man ihn antreiben?
+Die Lösung mit Standard-Teilen könnte
+aussehen wie in Abb. 5 angedeutet: Mit den
+roten Rädern 36581 und den Radachsen
+36586. Ein Rad stützt vertikal und eines
+führt den Ring horizontal. Von der Aufhängung benötigt man mindestens sechs Stück.
+
+
+Der Autor war Sommer 2013 mit seinen
+Kindern im Wunderland Kalkar. Eine der
+
+Der Antrieb gestaltet sich deutlich schwieriger, da es keine gebogene Zahnstange
+
+
+
+gibt. Das Anbringen von Ketten als ‚Zahnstange‘ ist schwierig, da es nicht genug Stellen gibt, wo man die Kette befestigen kann.
+Die gebogene Zahnstange (Innenzahnkranz)
+Dies war die Geburtsstunde (oder zumindest die Stunde der Planung) eines Spezialteils „gebogene Zahnstange“ (Abb. 6). Für
+die Zahnstange ergeben sich die ersten Fragestellungen bzgl. der Geometrie von
+fischertechnik-Zahnrädern. Dazu sei auf
+den ft:pedia-Artikel von Thomas Püttmann
+[3] hingewiesen, der sich im Detail mit der
+Form der fischertechnik-Zahnräder und der
+Zähne beschäftigt. Aus dem Artikel wird
+übernommen:
+· Modul = 1,48
+· Teilung 4,64 mm
+
+Im Folgenden wird Turbocad V17 von
+IMSI verwendet. Turbocad ist in einer älteren als der aktuellen Version (z. B. V19) zu
+Preisen von ca. 180 € bei Pearl erhältlich
+und für den Preis ausgesprochen leistungsfähig. V17 erhält man sogar schon für 50 €.
+Ein weiteres interessantes Open-SourceProgramm ist Salome Meca, welches primär für Unix/Linux entwickelt worden ist.
+Es gibt aber auch Windows-Versionen.
+Salome Meca ist etwas gewöhnungsbedürftig, da man die Erstellung von Bauteilen
+quasi wie Source Code programmieren
+muss.
+Der Zusatz Code-Aster macht das Programm sogar Finite Elemente fähig – aber
+nur in der Linux-Fassung.
+Turbocad hat den Vorteil, dass es STL-Dateien einlesen und auch ganze Modelle aus
+dem fischertechnik Designer von Michael
+Samek übernehmen kann.
+Ein weiterer Vorteil: Es gibt ein fertiges
+Werkzeug zum Erzeugen von StirnzahnradProfilen. Das Werkzeug nimmt als Parameter die geplante Zähnezahl und das
+Modul (ggf. noch den Eingriffswinkel).
+Wahl der Zähnezahl
+(Durchmesser des Zahnkranzes)
+Die Idee der gebogenen Zahnstange ist ein
+flaches Teil, das mit dem gebogenen 60°
+Winkelträger verschraubt werden kann.
+
+
+3D-Konstruktion
+Zur Konstruktion benötigt man ein 3DKonstruktionsprogramm, das STL-Dateien
+ausgeben kann (STL = Surface Tesselation
+Language). Dieses Format hat sich als Standard bei 3D-Druckern etabliert. Zu Details
+des STL-Formats oder zu frei verfügbaren
+3D-Konstruktionsprogrammen sei auf
+einen früheren Artikel des Autors in der
+ft:pedia [2] hingewiesen.
+
+Der ganze Kranz soll aus sechs Teilen zusammengesetzt werden können. Daher
+muss die geplante Zähnezahl des ganzen
+Kreises durch sechs teilbar sein.
+Die in Abb. 7 dargestellten möglichen
+Zahnkränze haben 120, 126, 134, 142, 150,
+156 Zähne. Aber nur die Kränze mit 120,
+126 und 134 sind klein genug, dass sie in
+den Ring passen.
+
+
+Tipps & Tricks
+
+4 mm
+
+
+Querschnittsfläche eines Zahnrades
+Die Querschnittsfläche eines Zahnrades
+kann man am besten an dem Zahnrad mit 40
+Zähnen erkennen (31022).
+In diesem Zusammenhang erkennt man sehr
+schnell, dass die 3D Daten aus dem FTDesigner nur grob modelliert sind. Ganz
+deutlich sichtbar an dem Zahnrad. Die
+Zähne sind real angespitzt, auch fehlen die
+Zahnkonturen (Evolventen).
+
+5 mm
+
+3,4 mm
+4,4 mm
+
+Um einen rotationssymmetrischen Körper
+zu konstruieren erstellt man sinnvollerweise
+die Querschnittsfläche und erzeugt daraus
+einen Rotationskörper um einen gegebenen
+Mittelpunkt, in diesem Fall um 60° gedreht.
+
+
+Das Zahnrad-Profil-Werkzeug erzeugt die
+Zähneform als 2D-Kurve, die man zu einem
+3D-Objekt umformt und dann eine boolesche Subtraktion mit dem zuvor rotierten
+Körper macht. Alle Überschneidungen der
+beiden Körper werden weggeschnitten.
+
+
+Die Vorgehensweise, Daten aus dem ftDesigner zu übernehmen und als real anzusehen, ist keine vernünftige Methode. Man
+ist gut beraten, den guten alten Messschieber herauszuholen. Auch die Abmessungen
+von den gebogenen Winkelträgern stimmen
+nicht mit der Realität überein.
+
+Zahnradprofils
+
+
+
+
+Befestigung am Ring
+Um den Zahnkranz an dem Statik-Ring zu
+befestigen bietet sich eine Kontur wie die
+Statik-Streben an. Auch hier gilt: Nachmessen ist besser (Abb. 13).
+
+6,4mm
+3mm
+4,0mm
+
+Man erzeugt die Grundform des Lochs als
+2D-Objekt, extrudiert sie zu 3D-Objekten
+(gibt ihnen Höhe), kopiert sie entlang eines
+Kreisbogens alle 7,5° und subtrahiert sie
+vom Grundkörper (Abb. 15).
+
+2,8mm
+
+
+Die Tiefe der Senkung ist 0,8 mm. Die Senkung befindet sich bei den neuen Streben
+(naja, seit den 80er Jahren) auf beiden Seiten. Damit bleibt in der Mitte 1,2 mm
+Material übrig.
+Die einfachste Methode der Befestigung ist
+eine Platte der Dicke 2,8 mm, die außen am
+Zahnkranz angesetzt wird. In diesem Fall ist
+es ein Rechteck, das wieder in eine Rotationsform gedreht wird (Abb. 14).
+
+
+Damit ist unser erstes Problem (‚wie antreiben?‘) gelöst.
+Lagerung
+Die Inspiration für die Lösung des zweiten
+Problems (‚wie lagern?‘) kommt von der
+Laufschiene 36333.
+
+Zahnkranzes am Statik-Ring
+
+
+Jetzt müssen die Löcher für die S-Riegel gesetzt werden.
+
+Versuchen wir nun, solche Laufschienen
+dem Zahnkranz hinzuzufügen.
+
+
+Zahnkranz
+
+Tipps & Tricks
+
+LaufSchiene
+
+
+Ebenso wie die gerade Laufschiene erhält
+die gebogene Schiene zwei Seiten, damit sie
+von beiden Seiten gefasst werden kann.
+
+Zur Kontrolle drucken wir das Objekt als
+2D-Ansicht auf Papier, schneinden es aus
+und legen es über echte ft-Teile, um die
+Maßhaltigkeit zu prüfen. Über die sich
+daraus ergebenenden notwendigen langwierigen Iterationsschritte decken wir hier
+elegant den Mantel des Schweigens.
+
+3D-Druck und Eigenschaften
+Mit diesem Entwurf wurden die ersten Versuche gemacht, Preise für 3D-Druck einzuholen. 3D-Druck-Service-Dienstleister gibt
+es inzwischen relativ viele. Hier ein paar,
+die bei der Suche schnell auftauchen. Insbesondere die diversen FabLabs an vielen
+Hochschul-Standorten haben sich als sehr
+interessant herausgestellt:
+· Trinckle
+· Beta Prototypes (= pcbPool)
+· 3D-Activation
+· Sodo 3D Druck
+· Prontotype
+
+
+Jetzt wird auch klar, warum als ZahnkranzDurchmesser 120 Zähne gewählt wurde,
+wodurch der Kranz relativ weit nach innen
+in den Ring ragt: Der Platz wird für die
+Laufschienen benötigt.
+
+· FabLabs
+Durch die Druckkosten kommt man wieder
+zurück zur Konstruktion: Das bislang konstruierte Teil ist zu massiv – und damit zu
+teuer.
+Weniger Masse
+Im Bereich der S-Riegel-Löcher ist das
+Material massiver als nötig – sparen wir
+also etwas Material ein.
+
+Zahnkranzes mit Laufschiene
+
+Jetzt noch die Zähne dran, die S-RiegelLöcher einsetzen – und fertig ist unser
+Design. Zumindest fast…
+
+Befestigungskranz
+
+Auch im Bereich der Laufschienen ist das
+Teil noch zu massiv.
+
+
+
+Anbieter
+
+Angebot
+
+Preis
+
+Prontotype
+
+Grundgebühr 23 €
++ sechs Stück inkl.
+MwSt.
+
+114 €
+
+Beta
+Prototypes
+
+Sechs Stück brutto
+
+97 €
+
+FabLab
+Aachen
+
+Stückpreis inkl.
+MwSt.
+
+7€
+
+Tab. 1: Preisbeispiele
+
+Laufschiene
+
+Zum Schluss fügen wir noch Zapfen und
+Löcher hinzu (Abb, 23), mit deren Hilfe die
+Laufschienen beim angrenzenten Teil einrasten, damit kein Versatz entsteht.
+
+Das FabLab ist besonders attraktiv, da es
+zum Selbstkostenpreis druckt. Es versteht
+sich als Labor für „jedermann“. In Aachen
+wird das Labor vom Institut für MenschMaschine-Interaktion betrieben und wird an
+vier von fünf Tagen vom Institut oder den
+Studenten benutzt. Jeweils dienstags darf
+jedermann die Maschinen in Anspruch nehmen. Massenproduktionen sind natürlich
+nicht zulässig (das Drucken von sechs
+Teilen war schon grenzwertig).
+Da das Drucken mehrere Stunden dauert, ist
+es nicht möglich, den Druck live zu verfolgen. Man kann das Teil in der Regel in der
+folgenden Woche abholen.
+Weiterhin versteht sich das Labor als
+„Open-Source“, wonach die gedruckten
+Objekte öffentlich gemacht werden müssen
+(Gnu Public License). Als Veröffentlichungsplattform wird das Universum der
+Dinge (Thingiverse) vorgegeben. Der
+Zahnkranz hat dort die Artikelnummer
+551619 und steht zum Download bereit.
+
+
+Geschafft! Fertig zur Bestellung.
+
+Preisbeispiele
+Die Produktion des hier dargestellten komplexen filigranen Teils wurde bei verschiedenen Herstellern angefragt. Die in Tabelle
+1 angeführten Preise sind als Richtwert zu
+verstehen. Doch Vorsicht: Die Vergleichbarkeit ist nicht immer gegeben.
+Anbieter
+
+Angebot
+
+Preis
+
+Trinckle
+
+Ein Stück +
+Versand und MwSt.
+
+18 €
+
+SoDo
+
+Sechs Stück inkl.
+Versand und MwSt.
+
+69 €
+
+3D Activation
+
+Sechs Stück netto
+ohne Versand
+
+112 €
+
+
+Andruck bei Trinckle
+Da man kein Gefühl für die Belastbarkeit
+und die Auflösung durch Betrachten der
+Webshops gewinnen kann, wurde zu Testzwecken ein Teil bei Trinckle bestellt.
+Das Ergebnis ist sehr gut, die Auflösung
+sehr fein. Selbst die kleinen Zapfen sind gut
+ausgeprägt und funktionieren auf Anhieb
+(Abb. 24). Erst bei sehr naher Betrachtung
+erkennt man die Dicke des Ausgangsmaterial-Strangs (Abb. 25). Das Objekt ist
+ausgesprochen stabil und fühlt sich an wie
+ein echtes fischertechnik-Teil.
+
+
+Tipps & Tricks
+
+
+
+Originale fischertechnik-Teile sind durch
+die Verwendung von Polyamid (PA =
+Nylon) allerdings noch deutlich zäher und
+robuster.
+
+Deutlicher ist hier die Granularität zu erkennen (Abb. 27). Die Auflösung ist mit 0,2
+mm etwas grober. Das hat in diesem Fall
+keinerlei Einfluss auf die Funktionsfähigkeit. Die Wahlmöglichkeit bei der Farbe des
+Grundmaterials ist im Fablab Aachen eingeschränkt, daher sind die Teile schwarz.
+Der Preis ist mit 7 € pro Teil unschlagbar.
+
+Das Modell
+Nun zum Praxis-Test am realen Modell.
+
+
+Teile aus dem FabLab Aachen
+Die Teile aus dem FabLab Aachen sind
+etwas grober, da der Drucker die Auflösung
+nicht erreicht, die bei Trinckle möglich ist.
+
+Der Einbau in den Ring funktioniert problemlos (Abb. 28).
+
+Dennoch ist das Teil passgenau und auf Anhieb funktionsfähig. Auch die Zapfen sind
+gut ausgebildet. Lediglich in den Löchern
+auf der Gegenseite befindet sich etwas Grat,
+der aber einfach entfernt werden kann.
+
+Auf den folgenden Fotos erkennt man die
+ersten Segmente des Turms (mit Gegengewicht), den Fahrkorb, (eingehängt am
+Turm), das Antriebsritzel und die Lagerung
+der Laufschiene.
+
+
+
+
+Antrieb mit Mini-Motor
+
+und Rollenböcken (Lagerung)
+
+halten die Laufschienen
+
+
+
+
+Tipps & Tricks
+
+Fazit
+Spezialteile als 3D-Druck sind bezahlbar
+geworden. Natürlich dürfte es noch etwas
+günstiger werden. Und man kann sich sogar
+einen 3D-Drucker nach Hause holen: den
+CubePro (zwei Druckköpfe) für 2.700 €,
+den Makerbot Replicator x2 für 2.930 €.
+Und für das vorgestellte Teil gibt es weitere
+interessante Anwendungsfälle – auf zum
+nächsten Modell:
+
+Onewheel des Italieners M. Goventosa
+
+© 2015 Kerry McLean. Used with permission.
+
+Referenzen
+
+
+[1]
+
+Harald Steinhaus: Neue ft-Teile
+selbst gemacht: 3D-Druck. 2/2013, S. 4-10.
+
+[2]
+
+Johannes Visser: Erstellung von Bauteilen für den ft-Designer. 3/2013, S. 42-53.
+
+[3]
+
+Thomas Püttmann: Zahnräder und
+Übersetzungen (Teil 3). 1/2012, S. 13-21.
+
+

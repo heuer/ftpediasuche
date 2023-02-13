@@ -1,0 +1,512 @@
+
+Uhren
+
+Uhren
+
+Kalenderwerk mit Mondphasenanzeige
+Dirk Fox
+Mit der zunehmenden Genauigkeit von Räderuhren, die im 18. Jhd. mit der Einführung des
+Pendels und der Unruh als Gangregler möglich wurde, erweiterte man Uhrwerke um zusätzliche Funktionen („Komplikationen“). Wie das Schlagwerk, das bereits in frühen Turmuhren
+und später in Standuhren die Stunde akustisch anzeigte, gehörte in Taschenuhren bald ein
+Kalenderwerk mit Mondphasenanzeige zu den frühen Komplikationen. Tatsächlich ist die
+Geschichte der Mondphasenanzeige sogar noch sehr viel älter.
+
+Geschichte
+Viele Jahrhunderte waren Uhren den Kirchund Rathaustürmen vorbehalten. Erst im 16.
+Jhd. verbreiteten sich Zimmeruhren, und
+die Uhrmacherei entwickelte sich zu einem
+Handwerk mit Zunftordnung. Doch konnten sich zunächst nur Adlige und wenige
+betuchte Bürger Uhren leisten. Ihr Nutzen
+war zudem beschränkt, denn die Ganggenauigkeit der ersten Uhren – mit einer
+Balkenwaag als Gangregler – lag bestenfalls bei ±15 bis ±30 Minuten am Tag (ein
+Fehler von 1-2 %). Gestellt wurden sie nach
+Sonnenuhren.
+Mit der Entdeckung Galileo Galileis (15641642) im Jahr 1585, dass die Frequenz eines
+(idealen) Pendels allein von dessen Länge
+abhängt, konstruierte Christiaan Huygens
+(1629-1695) im Jahr 1656 die erste Uhr mit
+einem freien Pendel als Gangregler (Abb. 1)
+[1]. Dank der von George Graham (16731751) ab ca. 1715 als Standard für Pendeluhren eingeführten ruhenden Anker-Hemmung sowie den von John Harrison (16931776) entwickelten, Temperatur kompensierenden Pendeln wurden so Ganggenauigkeiten von ±1 Minute am Tag erreicht [2].
+Damit waren Uhren mit einem Fehler unter
+0,07 % die mit Abstand genauesten Messinstrumente der damaligen Zeit – und sind
+das bis heute geblieben.
+
+Gangregler von Christiaan Huygens, 1656 [1]
+
+
+
+
+Die ebenfalls Huygens zugerechnete Erfindung der Unruh mit Spiralfeder ermöglichte
+im Jahr 1673 die Entwicklung präziser tragbarer Uhren [1]. Deren Perfektionierung
+wurde nicht zuletzt durch das „Längengradproblem“ vorangetrieben, das John Harrison (1693-1776) im Jahr 1759 mit dem
+Schiffschronometer „H4“ löste. Die Abweichung der von ihm entwickelten Uhr lag
+nach einer 147 Tage langen Seereise bei
+gerade einmal einer Minute und 54,5
+Sekunden, weniger als 0,78 Sekunden pro
+Tag: ein Fehler unter 0,0009 % [2].
+Mit zunehmender Genauigkeit und abnehmender Größe der Räderuhren wuchs deren
+praktischer Nutzen. Und so stieg im 19. Jhd.
+die Nachfrage nach Taschenuhren. Deren
+Preise sanken, und sie wurden damit für
+weite Bevölkerungsgruppen erschwinglich
+– bis sie im 20. Jhd. von der Armbanduhr
+und diese jüngst vom Smartphone abgelöst
+wurde.
+
+Komplikationen
+
+
+Seit dem 17.09.2015 gilt die von Vacheron
+Constantin entwickelte „Reference 57260“
+mit 57 Komplikationen als die komplizierteste Uhr der Welt (Abb. 3).
+
+Bis heute haben Uhren dennoch den Status
+eines Prestigeobjekts nicht eingebüßt. Mit
+deren wachsender Verbreitung entstanden
+daher Modelle, die sich entweder durch das
+verwendete Material (Silber, Gold, Titan,
+Edelsteine) oder durch besondere Funktionen – von Uhrmachern als „Komplikationen“ bezeichnet – von handelsüblichen
+Massenprodukten unterschieden.
+Zu diesen Komplikationen zählen z. B. die
+Anzeige der Gangreserve, eine Stoppuhr,
+die „springende Sekunde“, das Schlagwerk
+und das Kalenderwerk mit Anzeige von
+Wochentag, Monat, Mondphase und Jahr.
+Im Jahr 1904 gewann eine Taschenuhr mit
+24 Komplikationen auf der Weltausstellung
+in Saint-Louis den „Grand Prix“ – entwickelt von L. Leroy & Cie. aus Besançon: die
+Leroy 01 (Abb. 2). Sie besteht aus 975
+Teilen und wurde erst 85 Jahre später von
+der Patek Philippe „Calibre 89“ mit 33
+Komplikationen entthront.
+
+
+(Foto: Vacheron Constantin)
+
+Diese Uhr besteht aus mehr als 2.800 Teilen
+(davon sind allein 31 Zeiger), hat einen
+Durchmesser von 10 cm, eine Gangreserve
+von 60 Stunden und bringt knapp 1 kg auf
+die Waage. Mit einer Bauhöhe von etwas
+über 5 cm beult sie eine Anzugtasche
+gewaltig – dafür macht sie viertelstündlich
+mit ihrem Westminster-Schlagwerk auf sich
+aufmerksam, hat einen ewigen Kalender,
+zeigt die Nachtlänge, die Sternenzeit und
+die Abweichung von der Sonnenzeit an und
+kann als Wecker mit Klingelton, Glockenspiel oder Schlagwerk verwendet werden.
+Mit solchen Wunderwerken der Feinmechanik können fischertechnik-Uhren nicht mithalten. Dennoch lässt sich deren Stunden-,
+Minuten- und Sekundenanzeige mit vergleichsweise wenig Aufwand um beachtliche fünf Komplikationen erweitern: durch
+ein Kalenderwerk inklusive einer hübschen
+Mondphasenanzeige.
+
+Kalenderwerk
+Zum Kalenderwerk in Räderuhren zählen
+neben der Anzeige des Datums die Anzeige
+des Wochentags, des Monats und der
+Mondphase. Die Datumsanzeige ist in den
+meisten Uhren auf 31 Tage festgelegt. Nur
+in Uhren mit einem „ewigen Kalender“
+muss die Anzeige nach kürzeren Monaten
+nicht manuell korrigiert werden – sogar
+nicht einmal in Schaltjahren. Erst im Jahr
+2100, wenn nach dem Gregorianischen
+Kalender im Februar der Schalttag entfällt,
+muss man eine solche Uhr am 29.02. um
+einen Tag vorstellen.
+Das Getriebe einer Räderuhr lässt sich prinzipiell recht einfach um ein Kalenderwerk
+erweitern, da sich alle Anzeigen aus dem
+Ablauf eines Tages (24 h, also zwei Umdrehungen des Stundenrads) ableiten. Die
+mechanischen Anforderungen an das Getriebe sind bei einem Kalenderwerk geringer als beim Kern-Uhrwerk, denn die
+Achsen des Kalenderwerks drehen sich sehr
+langsam (maximal 52 Umdrehungen pro
+Jahr). Daher ist die Achsreibung bei weitem
+
+Uhren
+
+nicht so relevant wie beispielsweise beim
+Sekundenzeiger, der sich pro Jahr mehr als
+eine halbe Million Mal im Lager dreht.
+Herausfordernd für einen fischertechniker
+ist allerdings die Getriebekonstruktion.
+Denn die Anzeige des Wochentags benötigt
+eine Übersetzung 14:1 zum Stundenrad, die
+Datumsanzeige eine Übersetzung 62:1. Die
+Monatsanzeige lässt sich hingegen vergleichsweise leicht mit einer Übersetzung
+12:1 aus der Datumsanzeige ableiten.
+Das Getriebe für die Anzeige der Mondphase ist besonders raffiniert. Der Mond
+dreht sich in etwa 27,32166 Tagen – einmal
+um die Erde. Das ist die Dauer des so
+genannten „siderischen Monats“. Da sich in
+dessen Verlauf die Erde auf ihrer Umlaufbahn um die Sonne um etwa 1/12 weiterbewegt, ist die zwischen zwei Neumonden
+vergangene Zeit – der so genannte „synodische Monat“ – etwas länger. Dessen
+Länge schwankt wegen der elliptischen
+Form der Umlaufbahn der Erde um die
+Sonne (und damit der unterschiedlichen Geschwindigkeiten der Erdbewegung) zwischen 29,27 und 29,83 Tagen. Im Mittel
+dauert ein synodischer Monat 29 Tage, 12
+Stunden, 44 Minuten und 3 Sekunden –
+oder 29,53059 Tage.
+Mondphasenanzeigen in Präzisionsuhren
+nähern diesen Wert mit 29,53125 an – mit
+einem Laufzeitfehler von einem Tag in etwa
+122,5 Jahren (Abb. 4).
+
+Genehmigung der Uhrenkosmos GmbH)
+
+
+
+Die Anzeige der Mondphase erfolgt häufig
+mit einer abgedeckten Scheibe mit zwei
+Vollmonden (Abb. 4, 5).
+
+In großen Regulatoren wird die Mondphase
+manchmal auch – wirklichkeitsgetreuer –
+durch eine drehende Kugel angezeigt, deren
+eine Hälfte dunkel gefärbt ist (Abb. 7).
+
+(Foto: Fa. Erwin Sattler GmbH & Co. KG)
+
+Einfache Mondphasengetriebe runden die
+Länge des synodischen Monats auf 29,5
+Tage ab – und verwenden für den Antrieb
+ein Zahnrad mit 59 Zähnen. Die älteste
+bekannte Anzeige dieser Art findet sich in
+einem byzantinischen Sonnenuhr-Kalender
+aus der Zeit zwischen 400 und 600 n. Chr.
+(Abb. 6).
+
+(Foto: Fa. Erwin Sattler GmbH & Co. KG)
+
+Diese Anzeige wurde offenbar schon vor
+unserer Zeitrechnung verwendet: Fragmente und Rekonstruktionen des im Jahr 1900
+von Schwammtauchern entdeckten und auf
+ca. 100 v. Chr. datierten Antikythera-Mechanismus zeigen eine sich um sich selbst
+drehende, zur Hälfte versilberte Kugel im
+Mondzeiger [3] (Abb. 8).
+
+(Science-Museum London)
+
+Bei einer Übersetzung 59:1 muss der Fehler
+von ca. 0,1 % bereits nach rd. 2,65 Jahren
+durch ein Weiterstellen der Anzeige um
+einen Tag korrigiert werden.
+
+
+
+
+Uhren
+
+Eine Mondkugel findet sich auch in frühen
+astronomischen Uhren, so z. B. im Mondzeiger der Astrolabiumsuhr am Prager Rathaus von 1410, der astrolabischen Zytglogge von Bern von 1530 und der astronomischen Ulmer Rathausuhr, entstanden wahrscheinlich um das Jahr 1520 (Abb. 9).
+In unserem Buch „Technikgeschichte mit
+fischertechnik“ [4] hat Thomas Püttmann
+gezeigt, wie sich eine Mondphasenanzeige
+in einen Zeiger integrieren lässt, und eine
+sehr elegante Mondphasenanzeige mit
+Mondkugel und Drehkranz konstruiert, die
+eine Übersetzung 59:1 vornimmt.
+
+Getriebekonstruktion
+Betrachten wir die einzelnen Getriebe des
+Kalenderwerks der Reihe nach.
+Wochentaganzeige
+Die Welle der Wochentaganzeige muss
+vom Stundenrad mit einer Übersetzung
+14:1 angetrieben werden. Wie erreichen wir
+ein solches Übersetzungsverhältnis mit
+fischertechnik-Zahnrädern? Die Zahnzahl
+14 gibt es bei fischertechnik nur beim
+Differential-Kegelzahnrad – das hilft uns
+hier allerdings nicht weiter.
+Wir können jedoch die Untersetzung mit
+einem fischertechnik-Differential konstruieren, ganz ähnlich wie die Übersetzung
+25:1 in [5]. Tatsächlich kann man sogar
+beweisen, dass jedes Übersetzungsverhältnis 1:𝑝 (𝑝 = Primzahl) mit einem fischertechnik-Differential konstruiert werden
+kann – und damit natürlich auch jedes
+andere ganzrationale Übersetzungsverhältnis.
+
+(Jay8085, CC BY 2.0), Zytglogge in Bern, ca.
+1530 und Ulmer Rathausuhr, ca. 1520
+(Joachim Köhler, CC BY-SA 3.0)
+
+Wenn wir die Welle des Stundenrads 2:1
+übersetzen, benötigen wir anschließend
+noch eine Übersetzung 7:1. Mit der in [5]
+verwendeten einfachen Formel aus [6] lässt
+sich das benötigte Übersetzungsverhältnis
+zwischen Differentialkäfig (𝑧) und Abtriebsachse (𝑦) sehr leicht bestimmen:
+𝑥 + 𝑦 = 2𝑧
+
+(1)
+
+
+
+
+Oder, nach 𝑥 freigestellt:
+𝑥 = 2𝑧 − 𝑦
+
+(2)
+
+𝑧- und 𝑦-Achse
+Differentialkäfig (z) am Differential 31043
+
+Um zu erreichen, dass
+𝑥 = 7𝑦
+muss mit (2) gelten:
+
+Eine Lösung mit dem fischertechnik-RastDifferential (75218) mit Z20 am Differentialkäfig (35983) zeigt Abb. 13: Das Getriebe erhält man durch Ersetzung der beiden
+Z15 aus Abb. 12 durch je ein Z20 und der
+beiden Z30 durch zwei Z40.
+
+2𝑧 − 𝑦 = 7𝑦
+bzw. freigestellt nach 𝑧
+𝑧 = 4𝑦
+Wir benötigen also zwischen 𝑦 und 𝑧 eine
+4:1-Übersetzung.
+Dabei darf es nicht zu einer Umkehrung der
+Drehrichtung kommen. Das gelingt mit
+zwei Untersetzungen 2:1, z. B. einem Z20
+auf ein Z40, einem Z15 auf ein Z30 oder
+einem Z10 auf ein Z20. Eine Lösung mit
+dem „historischen“ fischertechnik-Differential (31043), das ein Z15 als Differentialkäfig mitbringt, zeigt Abb. 11.
+mit fischertechnik-Rast-Differential
+
+Datumsanzeige
+
+mit „historischem“ fischertechnik-Differential
+
+In Abb. 12 sieht man eine Skizze der Getriebekonstruktion.
+
+Die Datumswelle muss sich alle 31 Tage
+einmal drehen. Dafür benötigen wir eine
+Übersetzung der Welle des Stundenrads
+62:1 ins Langsame. Zahnräder mit 62 (oder
+31) Zähnen gibt es im fischertechnik-System nicht. Aber auch hier können wir uns
+ein passendes Getriebe unter Verwendung
+eines Differentials konstruieren.
+Diesmal suchen wir eine Übersetzung zwischen Differentialkäfig (𝑧) und Abtriebsachse (𝑦), dass
+𝑥 = 31𝑦
+
+
+Also gilt mit (2):
+2𝑧 − 𝑦 = 31𝑦
+Oder, freigestellt nach 𝑧:
+
+Uhren
+
+Getriebe von Relevanz. Das erkennt man
+gut an der Konstruktionszeichnung des
+Getriebes in Abb. 15.
+
+𝑧 = 16𝑦
+Das können wir mit zwei Übersetzungen
+4:1 (Z10 auf Z40) umsetzen.
+Für beide Differentiale – das „historische“
+und das Rast-Differential mit Z20 – benötigen wir jeweils eine Zwischenachse, da wir
+weder mit einem Z15 noch mit einem Z20
+mit fischertechnik-Zahnrädern eine 4:1Übersetzung in einem Schritt verwirklichen
+können.
+Am flexibelsten ist eine 1:1-Übersetzung
+auf die Zwischenachse (Z15 auf Z15 bzw.
+Z20 auf Z20), von dort eine Untersetzung
+Z10 auf Z40, dann eine zweite Untersetzung Z10 auf Z40 und von dieser Zwischenachse erneut eine 1:1-Übersetzung – mit
+einem Zahnradpaar in passender Größe, abhängig vom Abstand der Zwischen- von der
+Abtriebsachse.
+
+𝑧- und 𝑦-Achse
+
+Mit dem Rast-Differential mit Z20 benötigen wir ebenfalls zwei Zwischenachsen, da
+wir die Übersetzung in drei Teiluntersetzungen zerlegen müssen: zunächst in zwei
+Übersetzungen 2:1 (Z20 auf Z40 und Z10
+auf Z20) und, nach einer Richtungsumkehr
+über ein Z10, in eine Übersetzung 4:1 (Z10
+auf Z40). Die Konstruktionszeichnung des
+Getriebes zeigt Abb. 16.
+
+z- und y-Achse des Rast-Differentials
+
+mit „historischem“ fischertechnik-Differential
+
+„historischen“ Differential. Durch die Zwischenachsen wirkt die Konstruktion kompliziert; tatsächlich sind jedoch nur die beiden Untersetzungen Z10 auf Z40 für unser
+
+mit fischertechnik-Rast-Differential
+
+
+
+
+In Abb. 17 ist das fertige Getriebeelement
+mit Rast-Differential zu sehen. Es ist deutlich kompakter als die vorangegangene
+Konstruktion, allerdings schwergängiger.
+Monatsanzeige
+Wie oben erwähnt erhalten wir die Monatswelle durch eine Übersetzung der Datumswelle im Verhältnis 12:1. Das gelingt mit
+fischertechnik-Zahnrädern direkt, ohne
+Rückgriff auf ein Differential (Z10 auf Z30,
+Z10 auf Z40; siehe Abb. 18).
+
+Dann können wir die Getriebekonstruktion
+der Monatsanzeige übernehmen. Ein wenig
+müssen wir die Anordnung der Zahnräder
+anpassen, damit die Zifferblätter nebeneinander passen – und rückseitig genügend
+Raum für die Mondphasenanzeige bleibt.
+Zifferblätter. Der Antrieb erfolgt über ein
+Z10 am Z30 unten links im Bild.
+Mondphasenanzeige
+Die Mondphasenanzeige soll den synodischen Monat anzeigen. Sie folgt der eleganten Konstruktion von Thomas Püttmann
+[4]: Mit einem Umlaufgetriebe am Drehkranz (Z58) erreichen wir die für eine einfache Mondphasenanzeige benötigte Übersetzung 59:1 (Abb. 20).
+
+
+Jahresanzeige
+Wie stark wir die Jahresanzeige untersetzen
+müssen, hängt davon ab, wie viele Jahre wir
+anzeigen möchten. Der Einfachheit halber
+nehmen wir an, dass unser Zifferblatt zwölf
+Jahre abdecken soll.
+
+
+Wenn wir eine Tageswelle an dieses Getriebe anlegen, dreht sich das Drehkranz-Oberteil einmal in 59 Tagen – perfekt für eine
+Anzeige mit zwei Vollmonden (Abb. 4, 5).
+
+und Jahresanzeige (rechts)
+
+
+Anschaulicher und realistischer ist eine Anzeige mit einer sich drehenden Mondkugel
+(Abb. 7, 9). Dazu müssen wir unsere Tageswelle zuvor 1:2 ins Schnelle übersetzen und
+den Drehkranz horizontal montieren (Abb.
+21). Bei der Antriebsachse müssen wir
+darauf achten, dass sich der Mond in die
+richtige Richtung dreht. Als Mond können
+wir, wie von Thomas Püttmann vorgeschlagen, die fischertechnik-Styropor-Kugel
+D50 (146375) verwenden.
+
+
+Uhren
+
+und halbseitig schwarz gefärbte Styroporkugel
+
+Wir färben sie auf der einen Hälfte schwarz
+und stecken sie anschließend auf eine Rastaufnahmeachse 22,5 (130593). Bei der
+Färbung der Kugel sollte man eine Farbe
+ohne Lösungsmittel verwenden, damit sich
+das Styropor nicht auflöst. Ausreichend
+Deckung erreicht man bereits mit einfacher
+schwarzer Aquarellfarbe.
+Um den Rand der schwarz bemalten Oberfläche einigermaßen gerade hinzubekommen, habe ich zuvor einen Haushaltsgummi
+um die Kugelmitte gespannt.
+
+Zifferblätter
+Für das Kalenderwerk benötigen wir nun
+noch Zifferblätter. Die Zifferblätter für die
+Wochentag-, Datums-, Monats- und Jahresanzeige lassen sich in Microsoft Word
+elegant mit WordArt als kreisförmig angeordnete Beschriftung erzeugen. Im Download-Bereich zu dieser Ausgabe der können alle Zifferblätter aus Abb. 22 in der
+passenden Größe heruntergeladen werden.
+
+Datum, Monat und Jahr
+
+
+
+Während die anderen drei Zifferblätter fest
+montiert werden, ist das Zifferblatt für die
+Datumsanzeige zur Montage auf der Achse
+gedacht: Das aktuelle Datum kann so in
+einem festen Fenster angezeigt werden,
+hinter dem sich das Zifferblatt im Uhrzeigersinn dreht. Dafür musste die Reihenfolge der Daten auf dem Zifferblatt umgekehrt werden.
+Die für die Mondphasenanzeige benötigte
+„Vollmondscheibe“ lässt sich leicht herstellen: Wir schlagen mit einem Zirkel
+einen Kreis mit 8 cm Durchmesser sowie
+zwei weitere Kreise mit je 3 cm Durchmesser, deren Mittelpunkte auf einer Linie
+mit dem Mittelpunkt des großen Kreises
+liegen, sodass deren geringster Abstand zur
+Kreislinie 0,5 cm beträgt Die Fläche außerhalb der beiden Innenkreise malen wir mit
+schwarzer Farbe aus (Abb. 21).
+
+
+Damit immer höchstens ein Vollmond
+sichtbar ist, benötigen wir noch eine passende Blende (Abb. 22). Auch die Blende lässt
+sich mit einem angedeuteten Sternenhimmel etwas ansprechender gestalten. Die
+Blende gibt es ebenfalls als ausdruckbare
+Vorlage im Download-Bereich der ft:pedia.
+Um die Stabilität der Zifferblättert zu verbessern sollten sie auf etwas stärkerem
+Papier ausgedruckt werden; alternativ kann
+man sie mit dünner Pappe hinterlegen.
+
+Uhr
+Das Kalendarium lässt sich mit jeder Stundenachse einer fischertechnik-Uhr antreiben. Für die 50-Hz-Synchronuhr mit Stirnradgetriebe aus [5] habe ich dafür noch ein
+Zifferblatt spendiert (Abb. 23).
+
+Monde: je 3 cm Durchmesser)
+
+Wer keinen Zirkel und keine Wasserfarbe
+zur Hand hat, kann auch einfach die Vorlage aus dem Download-Bereich zu dieser
+Ausgabe der ft:pedia ausdrucken.
+Ein wenig „Charakter“ kann man der
+Vollmondscheibe mitgeben, wenn man die
+weißen Mondflächen mit etwas Deckweiß
+ausmalt und im Nachthimmel ein paar
+Sterne ergänzt.
+
+
+
+Uhren
+
+
+Vollkalendarium
+
+[2]
+
+Eine Kalenderanzeige mit Datum, Wochentag und Monat nennt man auch Vollkalendarium. Unser Kalenderwerk umfasst
+außerdem die Jahres- und die Mondphasenanzeige. In Abb. 24 und 25 sind die fünf
+Komplikationen in der Gesamtansicht zu
+sehen – mit und ohne Zifferblätter.
+
+Jonathan Betts: Harrison. Eine Uhr
+zur Bestimmung des Längengrads.
+Delius Klasing Verlag, Bielefeld
+2009.
+
+[3]
+
+M. T. Wright: The Antikythera
+Mechanism and the Early History of
+the Moon-Phase Display.
+Antiquarian Horology 29, 2006, S.
+319-329
+
+[4]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt-Verlag, 2. aktualisierter
+Nachdruck, Heidelberg 2022.
+
+[5]
+
+Dirk Fox: Synchronuhr mit Stirnradgetriebe. ft:pedia 4/2021, S. 18–21.
+
+[6]
+
+Thomas Püttmann: Das Differentialgetriebe. ft:pedia 4/2014, S. 12–19.
+
+[7]
+
+Richard Mühe, Helmut Kahlert: Die
+Geschichte der Uhr. Deutsches
+Uhrenmuseum Furtwangen, Callway,
+München 1983.
+
+Download
+Neben den Zifferblättern findet ihr im
+Download-Bereich zu dieser ft:pedia-Ausgabe eine fischertechnik-Designer-Datei
+des gesamten Getriebes des Kalenderwerks.
+
+Referenzen
+[1]
+
+Ferdinand Berthoud: Histoire de la
+mesure du temps par les horloges.
+Tome 1, Paris, 1802.
+
+
+
+
+
+

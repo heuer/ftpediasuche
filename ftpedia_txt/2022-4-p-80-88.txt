@@ -1,0 +1,462 @@
+
+
+Computing
+
+Einführung in ftScratch (4): Der Morsetelegraf
+Dirk Fox
+Scratch ist eine für Einsteiger und Schulen besonders geeignete Programmiersprache. Die
+Entwicklungsumgebung ftScratch3 unterstützt mit entsprechenden Erweiterungen die fischertechnik-Controller TXT und BT Smart [1]. In dieser Serie führen wir in die Programmierung
+mit ftScratch ein – mit kleinen Modellen und Aufgaben.
+
+Der Morsetelegraf
+Die Erfindung des Morsetelegrafen ist ein
+Meilenstein der Technikgeschichte [2, 3]:
+Er markiert den Beginn der Echtzeit-Kommunikation über große Distanzen. Zwar
+spielt im Zeitalter des Internet die Nachrichtenübermittlung mit Morsezeichen keine
+nennenswerte Rolle mehr. Dennoch ist das
+Morsen auch ein Meilenstein der Informationstechnik: Der von Alfred Vail (18071859) im Jahr 1838 entwickelte MorseCode ist der erste weltweit standardisierte
+Zeichencode für den Nachrichtenaustausch.
+Er ist zugleich sehr effizient, da die Länge
+des Morsezeichens eines Buchstabens
+davon abhängt, wie häufig dieser in der
+
+englischen Sprache auftritt: Die Morsezeichen für häufige Buchstaben (wie „e“ oder
+„t“) sind sehr kurz, die für seltenere Buchstaben (wie „x“ oder „y“) um ein Vielfaches
+länger, wie man am Code-Baum sehr schön
+erkennen kann (Abb. 1).
+Modelle von Morsetelegrafen finden sich
+schon im Jahr 1975 in fischertechnik-Anleitungen – als Club-Modell und in der Anleitung zum Baukasten Elektromechanik [4,
+5]. Unser Morsetelegraf kommt mit weniger
+Mechanik aus – für ihn benötigen wir neben
+dem BT Smart oder TXT Controller nur
+einen fischertechnik-Taster oder einen einfachen „Zeichengeber“ (Abb. 2, 3), eine
+Linsen-LED und eine Fotodiode.
+
+
+
+Computing
+
+Aufgaben
+
+(aus: Meyers Konversationslexikon, 1909)
+
+
+Mit den folgenden Aufgaben tasten wir uns
+Schritt für Schritt an die Funktionsweise der
+Datenkommunikation heran: Wir beschäftigen uns mit Kodierung, lernen Kommunikationskanäle kennen und berechnen deren
+Bandbreite. Als „Krönung“ programmieren
+wir ein kleines Chat-Programm – auf
+Morse-Basis.
+
+Sensoren und Aktoren
+Die Aufgaben können sowohl mit dem TXT
+als auch mit dem BT Smart Controller
+gelöst werden. Dafür benötigen wir
+
+Für die Übertragung von Informationen
+benötigen wir zweierlei: Erstens einen Code
+zur Darstellung der Informationen, auf den
+sich Sender und Empfänger zuvor einigen
+müssen (in unserem Fall den international
+standardisierten Morsecode), und zweitens
+einen Kommunikationskanal, über den wir
+die kodierten Daten übertragen können.
+Als Kommunikationskanal kommen grundsätzlich verschiedene Möglichkeiten in
+Betracht: Für die Übertragung über große
+Distanzen eignen sich elektromagnetische
+Wellen besonders gut, für kürzere Distanzen Schallwellen (Töne), Licht (bspw.
+Infrarot oder sichtbares Licht) und Spannung (kabelgebundene Übertragung).
+Wir verwenden in unserem Modell eine
+Übertragung mit Licht. Im Modell der
+Knickschranke [6], beim Münzzähler [7]
+und beim Barcodeleser [8] hast du eine
+Linsen-LED und eine Fotodiode als Lichtschranke eingesetzt. Eine solche „LichtStrecke“ werden wir nun zur Übertragung
+von Signalen verwenden.
+Aufgabe 1
+Mit der Linsen-LED soll ein Lichtsignal
+ausgesendet werden. Schließe die LinsenLED dazu zunächst an 9V/GND an und
+schalte den Morse-Geber dazwischen, sodass die LED leuchtet, wenn der Taster
+gedrückt ist. Richte die Linsen-LED auf die
+Fotodiode (Abb. 4).
+
+ eine Fotodiode
+ eine Linsen-LED (oder Linsen-Lampe)
+ eine weitere LED zur Signalanzeige
+Die Sensoren und Aktoren werden wie folgt
+angeschlossen (jeweils Polung beachten):
+ I1: Fotodiode
+ M1: Linsen-LED
+
+
+ M2: Anzeige-LED
+
+
+
+Empfängt die Fotodiode das Lichtsignal,
+soll die Anzeige-LED (an M2) eingeschaltet werden. Die empfangenen Lichtsignale
+sollen zusätzlich gezählt und auf der
+„Bühne“ angezeigt werden. Schreibe ein
+entsprechendes Scratch-Skript und experimentiere mit dem Geber. Was kannst du
+beobachten?
+Aufgabe 2
+Nun wollen wir uns zunächst auf das
+Senden konzentrieren. Verbinde dazu die
+Linsen-LED (ohne zwischengeschalteten
+Geber) direkt mit dem Motorausgang M1.
+Für die Darstellung der zu sendenden Signale verwenden wir einen simplen Binärcode aus kurzen und langen Signalen: Ein
+„.“ steht für ein kurzes Signal („dit“) und ein
+„-“ für ein langes Signal („dah“). Eine
+Signalfolge kodieren wir also als eine
+Zeichenfolge aus Punkten und Strichen.
+Damit der Empfänger kurze und lange Signale unterscheiden kann, benötigen wir
+neben einer Pause zwischen zwei aufeinander folgenden Signalen außerdem einen
+„Takt“. Den geben wir durch die Länge der
+Signale und Pausen vor: Ein „dah“ soll
+dreimal so lang sein wie ein „dit“, die Pause
+zwischen zwei Signalen soll der Dauer
+eines „dit“ entsprechen. Genau dies sind die
+Eigenschaften des Morsecodes.
+Als Basiszeiteinheit, die der Länge eines
+„dit“ entspricht, legen wir 300 Millisekunden (0,3 Sekunden) fest.
+Schreibe nun ein Scratch-Skript, das die
+Signalfolge -..-..---.---..-..- mit der LinsenLED an die Fotodiode übermittelt, und lass‘
+dir das Empfangsergebnis auf der „Bühne“
+anzeigen. (Tipp: Arbeite mit Unterprogrammen und vergiss' die Pausen zwischen den
+Signalen nicht!)
+Aufgabe 3
+Für unseren Morsetelegrafen kodieren wir
+jetzt das gesamte Morsealphabet als PunktStrich-Zeichenfolgen und speichern es in
+
+
+einer Liste. Um euch die Arbeit des Abtippens zu ersparen, könnt ihr dafür die Textdatei „Morsealphabet.txt“ aus dem Download-Bereich zu dieser Ausgabe der in eine Listenvariable laden: Lasst euch die
+Listenvariable „Morsealphabet“ auf der
+„Bühne“ anzeigen und öffnet über die
+rechte Maustaste die txt-Datei zum Import
+der Daten.
+Passe dein Programm aus Aufgabe 2 nun so
+an, dass es nacheinander alle 26 Zeichen des
+Morsealphabets sendet. Das Ende eines
+Morsezeichens wird dabei durch eine Pause
+der Länge von insgesamt drei „dit“ signalisiert.
+Aufgabe 4
+Nun soll dein Skript lernen, eine beliebige
+Buchstabenfolge zu morsen. Dazu benötigst
+du eine zweite Listenvariable mit den Buchstaben des Alphabets. Auch die kannst du
+aus dem Download-Bereich als Textdatei
+herunterladen und sie per Mausklick in die
+Listenvariable „Alphabet“ übernehmen
+(„Alphabet.txt“).
+Erweitere dein Skript aus Aufgabe 4 nun so,
+dass es eine beliebige Buchstabenfolge
+morst und teste es mit dem folgenden Pangram (= einem Satz, der alle Buchstaben des
+Alphabets mindestens einmal enthält):
+„thequickbrownfoxjumpsoverthelazydog“.
+Aufgabe 5
+Jetzt wenden wir uns dem Empfang der
+Morsezeichen zu. Während die LinsenLED sendet, soll die Fotodiode die gesendeten Zeichen erkennen und anzeigen. Das
+Empfangsprogramm kannst du entweder als
+einen parallelen Task programmieren oder,
+wenn dir ein zweiter Rechner zur Verfügung steht, auf einem separaten „Empfangsgerät“.
+Beginne zunächst mit einem EmpfangsThread, der die in der Lösung zu Aufgabe 2
+gesendeten Signale empfängt, jedes empfangene Signal über die LED anzeigt und
+
+die Signale als Punkt-Strich-Zeichenfolge
+auf der „Bühne“ ausgibt.
+Aufgabe 6
+Nun soll der Empfänger-Prozess die 26
+Zeichen des Morse-Alphabets empfangen,
+dekodieren und auf der „Bühne“ ausgeben
+können, die mit deiner Lösung zu Aufgabe
+3 gesendet werden.
+
+Computing
+
+Wenn du die Eingabe besonders komfortabel gestalten willst, ergänze die Texteingabe um die Möglichkeit, eine Fehleingabe
+zu korrigieren.
+Aufgabe 9
+Für Scratch gibt es eine Erweiterung (Extension), die die Übersetzung eines Textes
+in eine andere Sprache vornimmt (Abb. 5).
+
+Aufgabe 7
+Jetzt können wir einzelne (Morse-) Zeichen
+separat empfangen – und es ist nun kein
+großer Schritt mehr zu dem Empfang beliebiger Morse-Nachrichten.
+Erweitere dein Empfangs-Skript aus Aufgabe 6 zu einem solchen MorsezeichenEmpfänger und teste ihn mit dem Pangram,
+das deine Lösung zu Aufgabe 4 aussendet.
+Du wirst bemerken, dass ein zuverlässiger
+Empfang aller gesendeten Zeichen gar nicht
+so einfach zu erreichen ist. Das hat mehrere
+Ursachen:
+ Die Kommunikation mit dem Controller
+zur Abfrage der Inputs und Ansteuerung
+der Outputs kostet Zeit (siehe Aufgabe 1)
+ Scratch schaltet nur in Wartezeiten
+zwischen parallelen Threads hin und her
+ Die Fotodiode kann (abhängig von Störlicht und der Entfernung von der LinsenLED) fehlerhaft „schalten“
+Alle drei Punkte erschweren die Synchronisation von Sender und Empfänger. Dennoch wirst du feststellen, dass sich Sender
+und Empfänger nach einem Übertragungsfehler wieder von selbst synchronisieren,
+sobald der Empfänger eine Pause zwischen
+zwei Zeichen erkennt.
+Aufgabe 8
+
+
+Binde diese Erweiterung ein und erweitere
+dein Skript aus der Lösung zu Aufgabe 8 so,
+dass ein zu übertragender Text in eine
+andere Sprache – bspw. ins Englische –
+übersetzt wird, bevor Scratch ihn morst.
+Aufgabe 10
+Die Geschwindigkeit eines Morsesenders
+wird meist in „Wörtern pro Minute“ (WpM)
+angegeben. Dabei wird das Wort „Paris“
+(inklusive Wortende-Signal) als Maß verwendet. Wie schnell ist dein MorseSender/-Empfänger in WpM?
+
+Bisher hast du den zu übermittelnden Text
+fest vorgegeben. Erweitere deinen SendeThread jetzt noch um eine Texteingabe über
+die Tastatur: Damit wird aus deinem Morsetelegraf ein vollständiger Chat-Client.
+
+
+
+
+Lösungsbeispiele
+Die folgenden Lösungsbeispiele wurden für
+den BT Smart Controller programmiert. Die
+entsprechenden Scratch-Skripte und alle
+Hilfsdateien findet ihr im DownloadBereich zu dieser Ausgabe der ft:pedia. Die
+Anpassung der Skripte an den TXT Controller (Ersetzung der entsprechenden
+Blöcke in ftScratch) ist sehr einfach.
+
+
+Aufgabe 1
+Den Signalzähler kannst du als parallelen
+Thread realisieren: Verwende dafür das
+Schließen der „Lichtschranke“ als Auslöser
+(Trigger).
+
+
+Aufgabe 3
+
+
+Die Sendefunktion aus dem Lösungsbeispiel von Aufgabe 2 kann man in einen
+Block auslagern, der ein einzelnes Morsezeichen sendet (Abb. 9).
+
+Du erkennst, dass die Anzeige-LED etwas
+verzögert reagiert. Diese Verzögerung wird
+vor allem durch die Abfrage der Eingänge
+des Controllers über die USB- oder BLEVerbindung verursacht. Daher dürfen die
+Signale nicht zu kurz sein, da sie sonst von
+der Fotodiode nicht erkannt werden.
+Aufgabe 2
+Die Aussendung der langen und kurzen
+Signale „dit“ und „dah“ können wir in je
+einen eigenen Block auslagen; damit wird
+das Programm übersichtlicher (Abb. 7). Im
+Hauptprogramm wird jetzt nur noch die
+vorgegebene Zeichenfolge nacheinander
+ausgesendet (Abb. 8).
+
+
+Damit beschränkt sich das Hauptprogramm
+auf eine Schleife, die ein Morsezeichen
+nach dem anderen aus dem Morsealphabet
+auswählt und an den Sende-Block übergibt
+(Abb. 10).
+
+Computing
+
+Buchstaben gehörige Morsezeichen aus:
+Wir bestimmen die Position des Buchstabens im Alphabet und nehmen diese als
+Index für die Auswahl des entsprechenden
+Morsezeichens aus dem Morsealphabet
+(Abb. 12).
+
+
+Aufgabe 5
+
+
+Aufgabe 4
+Für die Ausgabe eines ganzen Textes müssen wir nur wenige Anpassungen an dem
+Skript aus Aufgabe 3 vornehmen: Aus dem
+Hauptprogramm wird ein Buchstabe nach
+dem anderen aus dem vorgegebenen Text
+(statt eines Elements aus der Liste des
+Morsealphabets) gesendet (Abb. 11).
+
+Als Trigger für den Empfang eines Signals
+verwenden wir wieder das Schließen der
+Lichtschranke. Anschließend genügt es,
+etwas länger als ein „dit“ zu warten, um
+festzustellen, ob ein „-“ (Länge: drei „dit“)
+oder ein „.“ gesendet wurde (Abb. 13).8
+
+
+Aufgabe 6
+Die Auswertung eines einzelnen Signals
+können wir aus der Lösung zu Aufgabe 5
+übernehmen und als eigenen Block definieren (Abb. 14).
+
+
+Mit einer einzigen raffinierten Programmzeile wählen wir das zu dem jeweiligen
+
+Um mehrere Morsezeichen empfangen zu
+können, darf der Empfangsprozess nicht mit
+einem Trigger gestartet werden – anderenfalls wird bei jedem Signal ein neuer Thread
+gestartet.
+
+Wenn du statt einer Linsen-LED eine LinsenLampe verwendest, musst du die Wartezeit etwas
+länger wählen, da die Lampe „nachglüht“.
+
+
+
+
+Außerdem müssen wir die Zeit zwischen
+zwei Signalen messen, um festzustellen, ob
+eine empfangene Zeichenfolge bereits beendet ist.
+Das machen wir, indem wir prüfen, ob
+direkt auf das Pausenzeichen nach einem
+Signal ein weiteres Signal oder eine längere
+Pause (von insgesamt drei „dit“ Dauer)
+folgt. Dafür „tasten“ wir den Signalverlauf
+etwas verzögert ab. Abb. 15 zeigt
+schematisch den Signalverlauf beim Sender
+und die Abtastung beim Empfänger.
+
+Zeichen (Signalfolgen)
+
+Aufgabe 7
+Wieder kann die Schleife aus dem Hauptprogramm in einen Block verschoben
+werden (Abb. 17). Die Verzögerungszeit
+am Anfang des Blocks muss ggf. etwas
+angepasst werden, damit keine Signale
+verloren gehen oder einem falschen Morsezeichen zugeordnet werden.
+
+als Block
+verzögerte Abtastung durch den Empfänger
+
+Mit der Länge der Verzögerung müsst ihr
+vielleicht ein wenig experimentieren: Da
+auch die anderen Operationen etwas Zeit
+benötigen, darf die Anfangsverzögerung
+nicht zu lang gewählt werden, sonst könnte
+es passieren, dass ein kurzes „.“-Signal
+übersprungen wird.
+
+Im Empfangs-Thread erfolgt dann die Dekodierung des Morsezeichens zu einem
+Buchstaben des empfangenen Textes ähnlich wie im Sende-Thread (Abb. 18).
+
+längeren Textes aus Morsezeichen
+
+
+
+Computing
+
+Aufgabe 8
+Die Texteingabe kannst du in einen Block
+auslagern, der die Tastatur abfragt und den
+Buchstaben der jeweils gedrückten Taste in
+eine Text-Variable schreibt (Abb. 19).
+Zwei Punkte musst du dabei beachten:
+ du musst eine „Abschluss“-Taste festlegen, mit der die Eingabe beendet werden
+kann (im Lösungsbeispiel in Abb. 20 ist
+das die Leertaste), und
+ du musst nach jedem Tastendruck eine
+kurze Pause vorsehen, um die Taste zu
+entprellen.
+
+
+In Scratch kann man das nur durch ein
+Kopieren der einzelnen Zeichen aus dem
+eingegebenen String umsetzen.
+Mit einer geringen Anpassung wird so aus
+dem Sende-Thread aus der Lösung zu Aufgabe 7 ein einfacher Chat-Client (Abb. 20).
+
+…
+
+Aufgabe 9
+
+
+Etwas knifflig ist die Implementierung
+einer „Zurück“-Taste zum Löschen des
+letzten Zeichens (im Lösungsbeispiel in
+
+
+Die Erweiterung der Lösung aus Aufgabe 8
+ist minimal.
+
+
+
+
+Aufgabe 10
+Der Morsecode von „Paris“ besteht aus 50
+„dit“. Somit erreicht unser Morse-Sender
+mit „dit“ = 0,3 s gerade einmal 4 WpM. Das
+entspricht einem Drittel der Morsegeschwindigkeit, die Funkamateure in ihrer
+Prüfung nachweisen müssen. Der MorseRekord liegt bei 88 WpM.
+
+Weiterentwicklung des Modells
+Scratch bietet eine Vielzahl von Möglichkeiten, um deinen Morse-Client zu erweitern. So kannst du die gesendeten oder die
+empfangenen Morse-Zeichen statt über die
+Empfangs-LED auch akustisch anzeigen
+(wie bei einem echten Funkempfänger).
+Wenn du den Empfangs-Thread bei einem
+anderen Modell (wie beispielsweise der
+Schranke aus [6]) ergänzt, kannst du aus der
+Ferne Kommandos an das Modell übertragen – z. B. Wartungseingriffe wie das
+Öffnen oder Schließen der Schranke oder
+Texte, die an der Schranke (ggf. in verschiedenen Sprachen) über Lautsprecher
+ausgegeben werden sollen.
+Mit zwei Controllern, die du optisch oder
+mit Kabeln miteinander verbindest, erhälst
+du eine Vollduplex-Kommunikationsverbindung, bei der auf beiden Seiten gleichzeitig gesendet und empfangen werden
+kann.
+
+
+Oder du schließt einen Taster oder den
+Geber aus Abb. 3 an und baust deinen
+Morsecode-Empfänger zu einem MorseTrainer mit Fehlerstatistiken aus.
+
+Referenzen
+[1]
+
+Dirk Fox: Scratch mit fischertechnik
+– Update 2022. ft:pedia 1/2022,
+S. 86–92.
+
+[2]
+
+Dirk Fox: Morsetelegraf. 1/2014, S. 4–10.
+
+[3]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt-Verlag, 2015.
+
+[4]
+
+Fischerwerke: Bauanleitung Morsegerät. Club-Modell 1975-1, 1975.
+
+[5]
+
+Fischerwerke: Ein Schreibgerät für
+Morsezeichen. In: Anleitungsbuch
+Elektromechanik (em2), Tumlingen
+1975, S. 29–31.
+
+[6]
+
+Dirk Fox: Einführung in ftScratch
+(1): Die Schranke. ft:pedia 1/2022,
+S. 93–97.
+
+[7]
+
+Dirk Fox: Einführung in ftScratch
+(2): Der Münzautomat. 2/2022, S. 119–122.
+
+[8]
+
+Dirk Fox: Einführung in ftScratch
+(3): Der Barcodeleser. 3/2022, S. 85–92.
+
+

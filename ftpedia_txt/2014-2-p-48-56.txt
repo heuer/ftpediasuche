@@ -1,0 +1,647 @@
+
+
+Computing
+
+Schau‘ mir in die Augen, Kleiner!
+Kamera am TX-Controller
+Marco Ahlers
+Wer nicht auf den neuen fischertechnik-Controller warten möchte, der kann auch dem TXController sehen und sprechen beibringen: Dazu braucht ihr wenig mehr als ein ArduinoBoard, einen Raspberry Pi und eine handelsübliche Webcam.
+
+Einführung
+In Ausgabe 1/2014 der ft:pedia habe ich
+vorgestellt, wie ein Arduino an den TXController angeschlossen werden kann, um
+über das I²C-Protokoll Sensorenwerte im
+Arduino zu berechnen und zu filtern [1].
+Heute gehe ich einen Schritt weiter. Mit
+einem an den Arduino angeschlossenen
+Raspberry Pi und einer wiederum dort
+angeschlossenen Standard-Webcam soll
+ein Roboter farbige Bälle suchen und finden, sich dorthin bewegen und seinen Kurs
+in Abständen korrigieren. Außerdem soll
+er Statusmeldungen laut sprechen und so
+über die eigenen Erkenntnisse informieren.
+Dem Roboter möchten wir Befehle über
+Tafeln mit Barcodes erteilen, die wir vor
+die Kamera halten. Durch das Lesen des
+Barcode-Befehls soll der Roboter dann
+wissen, dass er losrollen soll, um nach
+einem roten Ball zu suchen. Mit einem
+Barcode soll auch der Shutdown eingeleitet
+werden.
+
+Materialbedarf
+Für unseren gehorsamen seh- und sprachbegabten Roboter benötigen wir:
+· einen TX-Controller,
+· ein Arduino Uno Breadboard, Steckverbindungen,
+
+· optional mehrere LED-Lichtbausteine
+zur besseren Ausleuchtung bei Dunkelheit,
+· einen Raspberry Pi, im Folgenden kurz
+RPi genannt, inkl. SD Card, Maus,
+Tastatur und Monitoranschluss (HDMIan-DVI-Kabel),
+· eine Webcam (z. B. Logitech C525 HDWebcam, muss mit Raspberry Pi
+Raspbian kompatibel sein [6]),
+· ein Emic 2 Text2Speech-Modul (für die
+Sprachausgabe),
+· einen Mini-Aktiv-Lautsprecher, z. B.
+Boombox (optional) und
+· ein USB Kabel.
+Seit der letzten ft:pedia kann der TX-Controller Befehle an den Arduino über die
+I²C-Schnittstelle weitergegeben, um nach
+Bedarf Sensorwerte vom Arduino zurück
+zu erhalten [1].
+Diesmal erhält wieder zunächst der
+Arduino Befehle und arbeitet dann entweder selbst Aufgaben ab oder gibt seinerseits Befehle an den Raspberry Pi weiter,
+um z. B. ein Bild mit der angeschlossenen
+Webcam zu machen, auszuwerten und
+Positionsdaten an den Arduino zurück zu
+liefern. Der Arduino gibt diese Daten dann
+wiederum aufbereitet an den TX-
+
+Controller weiter. Je nach Kommando des
+TX-Controllers wird vom Arduino der
+Sprachchip des Emic-Moduls aktiviert, um
+bestimmte Sätze oder Zahlenwerte zu
+sprechen.
+Die hier dargestellten Methoden sollen
+euch als Beispiel und Anregung für eure
+eigenen Projekte dienen. Deswegen sind
+auch keine konkreten Bauanleitungen vorhanden, und das ‚Such-finde-und-fahr-damal-hin-RoboPro-Programm‘ ist auch
+nicht optimiert. Denn fischertechnik soll ja
+vor allem die eigene Kreativität fördern.
+
+Computing
+
+geber. Motor und Impulsgeber sind direkt
+unterhalb des Drehkranzes montiert.
+Zusätzlich habe ich einen stärkeren Akku
+benutzt, ein 10 Ah-Smartphone-Akkupack.
+Er kann den TX-Controller über eine
+Buchse mit 9 V versorgen und über den
+USB-Anschluss den Raspberry Pi. Der
+Arduino wird in diesem Fall über die USBSchnittstelle vom Raspberry Pi versorgt.
+
+Bau des Roboters
+Dieser Beitrag soll das Grundwissen dafür
+vermitteln, wie ein Roboter seine Umwelt
+erkennen kann. Der Bau des Roboters
+unterliegt daher ganz allein eurer Phantasie. Letztlich basiert er aber im wesentlichen auf Modellen wie dem ‚Rasenmäher‘ von fischertechnik. Es wird allerdings mehr Platz für die zusätzlichen Bauteile (den Arduino, den Raspberry Pi, die
+Kamera usw.) benötigt. Daher habe ich den
+Roboter auf die beiden Grundplatten
+gebaut, die beim ‚Robo-Flipper‘ benutzt
+werden.
+Die von mir verwendete Kamera ist eine
+Logitec Webcam auf einer selbst gebauten
+Kameradrehmechanik; Abb. 1 zeigt sie aus
+der Nähe.
+
+
+Die Drehmechanik besteht aus einem
+Drehkranz, dem Antriebsmotor mit Getriebe sowie einem Taster mit 4er-Impuls-
+
+
+In Abb. 2 gut zu sehen ist auch der runde
+Aktivlautsprecher (rechts unten). Links
+unten erkennt man den Akkupack, dahinter
+den TX-Controller, der Raspberry Pi und
+in der Mitte (unter den Kabeln) den
+Arduino. Gerade noch zu erhaschen ist auf
+dem Steckbrett der Emic-2-Text2SpeechChip; rechts befindet sich die KameraDrehmechanik aus Abb. 1.
+Verdrahtung
+Die Verbindungen sind recht einfach: Der
+Arduino wird via USB an den Raspberry Pi
+angeschlossen, ebenso die Webcam. Der
+Arduino wird wie in der vorigen Ausgabe
+beschrieben per I²C an den TX-Controller
+angeschlossen. Weitere Sensoren sind
+zunächst nicht nötig.
+Die Stromversorgung könnt ihr frei
+wählen. Ich habe, wie oben beschrieben,
+einen leistungsstarken Power Pack für die
+mobile Aufladung von Smartphones
+benutzt. Dieser hat sowohl USBAnschlüsse als auch Plugs, die ihr mit dem
+9 V Anschlusskabel des fischertechnikTrafos mit dem TX-Controller-Eingang
+
+
+
+
+(9 V) verbinden könnt. Er hält ziemlich
+lange.
+
+Der Emic-2-Sprachchip
+Eine prima Sache mit einer erstaunlichen
+Sprachqualität ist der Emic-2-Sprachchip.
+Er ist im einschlägigen Elektronikfachhandel erhältlich. Zwar ist er nicht unbedingt notwendig, aber er erleichtert das
+Überwachen des Programmablaufes erheblich. Der Roboter hält uns damit via
+Sprachausgabe über erfolgte Programmschritte auf dem Laufenden.
+Bei dem vorliegenden Programmablauf ist
+der Anschluss von Sensoren zunächst nicht
+notwendig, daher kommt der Arduino mit
+ein paar Drahtverbindungen zum Sprachchip aus (Abb. 3).
+
+"Running Startup Procedures now.
+Please wait until I confirm
+complete startup.",
+"Startup is completed
+successfully.",
+"Oooooh! I do not see any space
+ahead. I go backwards.",
+"YEAH! I found a ball. I turn to
+his direction now.",
+"I lost the Ball.",
+"I try to detect a Barcode
+now.",
+"I can't see any Barcode.",
+"Barcode detected."
+"Please help me. I can't move.",
+"I will scan now the front
+horizon for balls. Please wait
+until I confirm full
+scan.","Horizon Scan completed.",
+"I will move now forward until
+pathway is blocked.",
+"Pathway is blocked.",
+"Serial Flushed",
+"Raspberry Pie active.",
+"Raspberry Pie is not
+responding.",
+"Nothing to report"};
+
+Listing 1: Sätze für den Emic-2-Sprachchip
+
+Der Barcodeleser
+
+Bei der I²C-Übergabe der entsprechenden
+‚Sprechbefehle‘ vom TX-Controller wird
+hier übrigens nicht nur das Register
+benutzt, sondern auch der Dateninhalt des
+nachfolgend gesendeten Bytes. In RoboPro
+macht das das Unterprogramm „Speak“: Es
+bekommt die Variable jeweils je nach
+gewünschtem Satz mitgeliefert. Abhängig
+von deren Wert wird der entsprechende
+Satz aus dem Array expressions[]
+herausgesucht. Der erste Satz „Running
+Startup...“ hat den Index 0, der zweite 1
+usw.
+
+Ist auf einem von der Webcam aufgenommenen Bild ein Barcode erkennbar, so soll
+dieser ausgewertet werden. Das Programm
+für den Arduino und den Raspberry Pi enthält den nötigen Programmcode dafür; in
+diesem Beitrag gehe ich nicht weiter
+darauf ein. Ihr könnt den Barcodeleser
+dafür nutzen, dem Roboter Befehle zu erteilen, indem ihr einen Barcode vor die
+Linse haltet. In einem Dropbox-Ordner
+habe ich euch einige Barcodes zum Ausdrucken vorbereitet.
+
+//Definition der vom Emic 2
+Sprachchip zu sprechenden Saetze
+char* expressions[]={
+
+
+Mit derselben Technik könntet ihr an einer
+Wand aufgehängte Barcodes nutzen, um
+dem Roboter die Orientierung zu erleichtern.
+
+Programmierung des
+Raspberry Pi
+Den Raspberry Pi müsst ihr für die
+Programmierung zunächst mit Tastatur,
+Maus und Monitor versehen. Dazu habe
+ich ein HDMI-zu-DVI-Kabel an meinen
+Monitor angesteckt und kann so mittels
+Taste am Monitor zwischen PC und Raspberry Pi hin und her schalten. Fertig programmiert läuft der Raspberry Pi dann aber
+unabhängig von Tastatur und Monitor auf
+dem Roboter.
+Ich habe alle im Folgenden vorgestellten
+Programme in einer Dropbox für euch zum
+Download bereitgestellt.
+Autostart des Raspberry Pi
+Programmes
+Damit nach dem Start des Raspberry Pi das
+gewünschte Programm automatisch startet,
+muss es im Autostartordner abgelegt
+werden. Gebt dazu in das Adressfeld des
+Dateimanagers des Raspberry Pi ein:
+/home/pi/.config
+
+Falls kein Autostart-Ordner vorhanden ist,
+erstellt dort einen. Danach öffnet ihr den
+Idle- oder Leafpad-Editor und erfasst das
+folgende Programm. Es wird dann mit der
+Endung .desktop im Autostart Ordner
+gespeichert:
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=Jimmy Brain Autostart
+Exec=sudo python
+/home/pi/jimmy_brain_rpi_140401.py
+StartupNotify=false
+Terminal=false
+Hidden=false
+
+Listing 2: Autostart-Skript
+
+Unter Exec= steht der Ort und der Name
+des Programms. Beides müsst ihr ändern,
+
+Computing
+
+wenn ihr das Programm nicht im Hauptordner pi gespeichert habt.
+Shutdown des Raspberry Pi
+Es ist wichtig für die Datenintegrität auf
+der Speicherkarte des Raspberry Pi, dass er
+ordentlich heruntergefahren wird. Dies
+habe ich durch die Shutdownsequenz realisiert, vom TX-Controller über einen Befehl
+via Arduino an den Raspberry Pi weitergegeben wird:
+#Shutdown des Rpi, wenn 3 gesendet
+wurde:
+if (input=="3"):
+ser.write("3$")
+command =
+"/usr/bin/sudo/sbin/shutdown
+-h now"
+import subprocess
+process =
+subprocess.Popen(command.
+split(),
+stdout=subprocess.PIPE)
+output =
+process.communicate()[0]
+print output
+
+Listing 3: Shutdown-Sequenz für den Rpi
+
+Kommunikation Raspberry Pi
+und Arduino
+Der Rpi ist mit dem Arduino über den
+USB-Anschluss verbunden. Die Daten
+werden dabei über die serielle Schnittstelle
+Byte für Byte übertragen. Will man also
+z. B. das Wort „TEST“ schicken, so wird
+nicht das Wort in einem Rutsch, sondern
+„T“ dann „E“, dann“S“ und zum Schluss
+„T“ übermittelt.
+Der Datenempfänger möchte aber nun das
+ganze Wort als String weiterverarbeiten.
+Dazu muss das Wort aus den Buchstaben
+wieder zusammengebaut werden. Dafür
+wiederum ist es nötig, dass der Datenempfänger weiß, wann das Wort beendet ist.
+Der Datensender muss daher entweder die
+Wortlänge mitteilen oder ein Schlusszeichen senden. In meinem Programm sende
+ich ein Dollarzeichen („$“) als Schluss51
+
+
+
+signal, da dies in keinem meiner Wörter
+verwendet wird.
+Der Sender sendet also: „T“, „E“, „S“, „T“,
+„$“. Der Empfänger hängt die gesendeten
+Buchstaben in einem String aneinander, bis
+das „$“ Zeichen kommt. Ein String ist ein
+Array aus Zeichen, jedes mit einem Index
+versehen. Dies wird im Arduino Programm
+genutzt, um mit inCount den jeweiligen
+Index zu bestimmen.
+Beispiel: Dem Arduino soll mit dem Code
+„255“ mitgeteilt werden, dass kein Ball
+gefunden wurde:
+#wenn kein Blob gefunden wurde,
+sende 255$ an die serielle
+Schnittstelle
+else:
+ser.write("255$")
+
+Im Arduino startet das aufnehmende Programm mit der Entgegennahme des
+Befehls vom TX-Controller, dass jetzt die
+Ballposition ermittelt werden soll:
+// Hier folgt die Abfrage der
+seriellen Schnittstelle, um die
+Variable POS des Balls zu erhalten
+// POS=255 bedeutet kein Ball
+(Blob) erkannt.
+// Wenn Ballposition gewünscht,
+wird der Befhel 5 vom TxController gesendet
+if(read_register == 0x05){
+int POS=read_ball();
+// hier wird die Funktion für
+die Variable „read ball“
+aufgerufen
+// emicSerial.print('S');
+// emicSerial.print(POS);
+// emicSerial.print('\n');
+Wire.write(POS);
+// respond with message of 10
+bytes
+}
+
+Listing 4: Abfragen der seriellen Schnittstelle
+
+Hier folgt der Teil des Arduino-Programms, das die Daten vom Raspberry Pi
+auswertet:
+// Definition des „Ende-Zeichens“
+($=ASCII 36):
+#define INTERMINATOR 36
+
+
+// Lesen der x-Koordinate eines
+gefundenen Balls vom Raspberry Pi#
+int read_ball()
+// Funktion zur Bestimmung der
+Variable der Ballposition
+{
+inCount=0;
+// Der Indexzähler
+wird auf Null zurückgesetzt
+while (Serial.available()>0){
+inString[inCount]=Serial.read();
+// Schleife, die das jeweils
+nächste an der seriellen Schnittstelle anstehende Zeichen liest
+und dem aktuellen „inCount“ Index
+in den String einfügt.
+if(inString[inCount]==INTERMINATOR
+) break; // falls das gelesene
+zeichen „$“ ist, wird die Schleife
+unterbrochen.
+InCount++; // der Index wird um
+1 hochgezählt
+}
+// aus dem String wird eine ganze
+Zahl gemacht
+inString[inCount]=0;
+int szahl=atoi(inString);
+return(szahl); // der berechnete
+Wert wird an die Variable „read
+Ball“ zurückgegeben
+}
+
+Listing 5: Auswertung der empfangenen Daten
+
+Programmablauf
+Der Roboter – ich habe ihn ‚Jimmy‘
+getauft – soll nach dem Start nicht herumfahren, sondern nur von seinem jeweiligen
+Standort aus den vorderen Horizont, also
+180° durch einen Kameraschwenk in 12
+Schritten nach dem Ball absuchen. Findet
+er keinen Ball, so könnte man ihn um 180°
+drehen (nicht im RoboPro-Programm enthalten) und die Suche wiederholen. Findet
+er den Ball, soll er die Kamera wieder nach
+vorn richten, sich in Richtung des Balles
+drehen, ein Stück vorwärts fahren, die
+Richtung neu justieren und erneut etwas
+nach vorne auf den Ball zu fahren. Die
+Infrarotsensoren und den Ultraschallsensor
+benötigen wir dafür nicht.
+
+Das Programm, das im Roboter abläuft,
+muss dazu die folgenden Schritte ausführen:
+· Nach dem Anschalten des Roboters und
+dem Starten des RoboPro-Programms
+prüft der Roboter, ob sein System vollständig hochgefahren ist.
+· Der Arduino meldet nach seinem eigenen Start „Jimmy is Ready!“ über den
+Lautsprecher.
+· Danach prüft der Roboter, ob der Raspberry Pi hochgefahren ist und das
+Programm Jimmy Brain rpi.py
+bereits läuft. Dies wird durch das
+Senden des Befehls ‚2‘ an den Raspberry Pi erreicht.
+· Läuft das Programm, sendet der Raspberry Pi ‚2$‘ zurück. und der Arduino
+spricht über den Lautsprecher „Raspberry Pi active“.
+· Der Roboter wartet jetzt auf die Barcodes, damit er weiß, was er machen
+soll. Nachdem er den „Start“-Barcode
+vor der Kamera erkannt hat, geht es
+weiter.
+· Das RoboPro-Programm lässt nun die
+Kamera um 90° nach rechts drehen, um
+dann in 12 Schritten um 180° nach links
+zu schwenken. Bei jeder Position wird
+die LED-Lichtleiste angeschaltet, ein
+Foto gemacht, die Lichtleiste wieder
+ausgeschaltet und versucht, einen roten
+Ball im Bild zu entdecken. Dazu sendet
+RoboPro einen Befehl ‚5‘ an den
+Arduino, dieser wiederum sendet den
+Befehl weiter an den Rpi. Dort erfolgt
+dann der Programmablauf zu „Find
+Blob“.
+· Wurde vom Rpi ein roter Ball, also ein
+Blob gefunden, meldet der Rpi an den
+Arduino die x-Position der Mitte des
+Blobs. Der Arduino gibt den Wert an
+den TX-Controller weiter. Gleichzeitig
+meldet der Arduino über den Sprachchip „I found a Ball!“
+
+Computing
+
+· RoboPro berechnet aus den x-Koordinaten des Balls im geschossenen Foto
+die nötige Drehweite und Richtung des
+Roboters und startet die Motoren. Nachdem der Roboter zum Ball hin ausgerichtet wurde, wird erneut der Befehl
+‚5‘ zur Aufnahme eines Bildes über den
+Arduino an den Rpi gesendet und mit
+Hilfe des zurückgelieferten x-Wertes die
+Richtung des Roboters korrigiert.
+· Der Roboter fährt jetzt ein Stück in
+Richtung des Balls, hält an und schießt
+erneut ein Foto, liefert den x-Wert
+zurück, korrigiert die Richtung, rollt
+weiter und hält dann an.
+Das soll dann zunächst mal genügen.
+Wenn ihr den Roboter ausschalten wollt,
+dann haltet den Shutdown-Barcode vor die
+Kamera.
+SimpleCV
+Eins vorweg: Es gehören ein wenig Einarbeitung und viele Stunden des Lernens
+dazu, will man einem Roboter das Sehen
+beibringen. Schnellere Erfolge verspricht
+hier sicherlich das angekündigte Discovery
+Set von fischertechnik. Aber es macht
+Spaß, sich durch die Materie zu wühlen
+und die Erfolgserlebnisse sind großartig,
+wenn die Kamera den Ball erkannt hat und
+der Roboter „I found the Ball!“ meldet.
+Zunächst muss der Raspberry Pi zum
+Laufen gebracht werden. Allen Neueinsteigern empfehle ich dazu das Buch „Raspberry Pi für Einsteiger“ [2]. Der Raspberry
+Pi sollte das Betriebssystem Raspbian
+funktionsfähig installiert haben. Es ist
+wichtig, dass ihr euch zunächst etwas mit
+dem Raspberry Pi beschäftigt und euch ein
+wenig damit auskennt – das setze ich hier
+voraus, denn dieser Beitrag kann das nicht
+leisten (mehr z. B. in [3]).
+Das Sehen selbst wird durch die OpenCVBibliotheken erreicht, unterstützt durch die
+SimpleCV-Erweiterung, die einige Tasks
+aus OpenCV in einfach nutzbaren Befehlen
+
+
+
+zusammenfasst. CV steht für Computer
+Vision [4]. Damit ist die Auswertung und
+Bearbeitung von Bilddateien gemeint.
+Dabei können z. B. Farbkanäle isoliert und
+Bildausschnitte so gewählt werden, wie
+man dies von Bildbearbeitungssoftware her
+kennt.
+
+x-Wert 3 wird an den Roboter gemeldet
+und dieser müsste jetzt ganz leicht nach
+links schwenken, um den Ball in die Mitte
+vor sich zu bekommen.
+
+Darüber hinaus sind aber auch Funktionen
+enthalten, um z. B. zusammenhängende
+Farbflächen zu finden, deren (x, y)-Position
+im Bild zu bestimmen und die Größe zu
+messen. Dies werden wir nutzen, um einen
+Ball anhand seiner Farbe zu finden und
+dabei jeweils nur den größten farbigen
+Fleck im Bild berücksichtigen.
+
+
+Da dies eine Menge Rechenaufwand benötigt und ein richtiger Computer dazu erforderlich ist, kann der Arduino dies nicht
+alleine leisten. Deswegen nutzen wir den
+Raspberry Pi dafür.
+Für die Installieren von SimpleCV auf dem
+Rpi gibt es eine gute Anleitung. Zusätzlich
+benötigt ihr noch eine Barcode-Bibliothek;
+die installiert ihr Euch mit der folgenden
+Befehlsfolge:
+sudo apt-get install zbar-tools
+
+Und nicht zuletzt wird auch ein QR-CodeGenerator benötigt, den ihr euch frei aussuchen könnt – geeignet ist z. B. dieser
+hier.
+
+y\x 1
+
+
+
+
+
+
+
+
+
+In Wirklichkeit haben die Bilder, die wir
+benutzten, eine x-Auflösung von 160
+Pixeln – aus Performancegründen nicht
+mehr, aber das genügt für die Orientierung
+des Roboters vollkommen.
+Die folgenden SimpleCV-Funktionen werden für das Programm benutzt:
+· img=get.image: nimmt ein Bild mit der
+Kamera auf.
+
+Bildauswertung
+Ganz wichtig bei unserem Vorhaben ist
+das Wissen darüber, an welcher Koordinate in einem Bild sich ein bestimmtes
+Objekt befindet.
+Ein Pixel kann sich dabei in einem zweidimensionalen Koordinatensystem auf
+einer bestimmten (x, y)-Position befinden.
+Als Punkt (0, 0) legen wir die linke obere
+Ecke fest. Abb. 5 zeigt ein Beispiel für ein
+8×8-Pixel-Bild. Angenommen, der darin
+erkennbare ‚Kreis‘ sei der gefundene Ball
+auf dem Bild. Die rot gekennzeichnete
+Mitte, genauer gesagt das mittlere Pixel
+des „Blobs“, hat die Koordinate (3, 3). Der
+
+
+· hue.distance(): gibt ein Bild wieder,
+das nur noch Graustufen enthält. Pixel,
+die der gesuchten Farbe am nächsten
+liegen, werden schwarz, die am weitesten entfernten weiß; dazwischen in
+Graustufen dargestellt.
+
+
+
+· Binarize(): Reduziert das Graustufenbild auf schwarz/weiß.
+
+
+· find blob: Ein Blob ist ein Fleck, also
+genau genommen eine zusammenhängende Fläche einer annähernd gleichen
+Farbe. In unserem Beispiel ist der Blob
+die nach Binarize() übrig gebliebene
+weiße Fläche.
+· Sort area: Wenn ein solcher Fleck
+gefunden wurde, soll nur der größte
+berücksichtigt werden. Damit wird störendes „Rauschen“ ausgeblendet, wie
+kleinere Flecken der gleichen Farbe, die
+aber zu klein sind, um ein Ball sein zu
+können.
+· coordinates: Ergibt die Koordinaten
+der Mitte des Flecks, also ob sich der
+Ball rechts, links oder genau auf Kurs
+des Roboters bzw. der gegenwärtigen
+Kameraposition befindet.
+Blobs
+Blobs sind Flecken in einem Bild, die eine
+zusammenhängende Farbe haben. Um sie
+zu finden wird zunächst das Bild um alle
+anderen Farben reduziert und alle Farbtöne
+der gesuchten Farbe innerhalb einer
+bestimmten, einstellbaren Toleranzgrenze
+vom restlichen Bild separiert.
+
+Computing
+
+Dabei ist es wichtig genau zu definieren,
+welche Farbe der Roboter suchen soll. Dies
+geschieht ganz einfach durch die Angabe
+der RGB-Werte. In unserem Beispiel wird
+noch der HUE-Wert berechnet; das macht
+das Ergebnis unempfindlicher gegen
+schlechte Lichtverhältnisse:
+blue_distancepre =
+img.hueDistance((190, 50, 50))
+
+Mit den RGB-Werten müsst ihr ein wenig
+experimentieren, vielleicht nehmt ihr erst
+einmal ein Foto eures Suchobjektes auf
+und bestimmt dann die RGB-Werte mit
+einem Bildbearbeitungsprogramm (Pipettentool).
+Das RoboPro-Programm steht für euch
+ebenfalls in einem Dropbox-File zum
+Download bereit; dort finden sich auch
+zwei Videos des Roboters.
+Und jetzt wünsche ich euch viel Spaß beim
+Tüfteln, Ausprobieren und dem Liebhaben
+eures neuen Freundes.
+
+Referenzen
+[1]
+
+Marco Ahlers: Arduino mit dem TX
+verbinden. ft:pedia 1/2014, S. 31-38.
+
+[2]
+
+Matt Richardson, Shawn Wallace:
+Raspberry Pi für Einsteiger, O'Reilly
+Verlag, 2013
+
+[3]
+
+Michael Weigend: Raspberry Pi
+programmieren mit Python, mitp
+Verlag, 2013
+
+[4]
+
+Kurt Demaagd, Anthony Oliver,
+Nathan Oostendorp, Katherine Scott:
+Practical Computer Vision with
+SimpleCV, O'Reilly Verlag, 2012
+
+[5]
+
+Fabian Kainka: Handbuch, Arduino
+Starterpaket, Franzis-Verlag, 2013.
+
+[6]
+
+Embedded Linux Wiki: RPi compatible USB Webcams.
+
+
+
+
+
+
+

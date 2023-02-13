@@ -1,0 +1,386 @@
+
+Messen
+
+Messen
+
+Kurz gemessen – Experimente im
+Mikrosekundenbereich mit dem ftDuino
+Till Harbaum
+Der ftDuino [1] ist technisch viel einfacher gestrickt, er taktet und rechnet langsamer als der
+TXT und erst recht als jeder PC. Trotzdem gibt es viele Dinge, die nur der ftDuino schnell
+genug erledigt. Warum das so ist und wofür sich das nutzen lässt zeigen wir in diesem Beitrag.
+
+Hintergrund
+Je höher der Mikroprozessor eines Computers getaktet ist, desto schneller reagiert
+der Computer. Das kennt man vom heimischen Windows-PC. Wenn's da ruckelt
+muss ein schnellerer Prozessor her, dann
+läuft es wieder flüssig. Und wenn der PC
+mit seinen Gigahertz zuckelt und ein TXT
+mit 600 MHz gemächlich zu Werke geht,
+was kann man da wohl von einem ftDuino
+mit seinen 16 MHz erwarten?
+Ganz so einfach ist es aber nicht. Auf dem
+TXT (und erst recht auf dem PC) treiben
+diverse Systemprogramme, Treiber und
+Betriebssystemkomponenten im Hintergrund ihr Unwesen. Ständig will irgendeine
+Komponente die Aufmerksamkeit des Prozessors, und der muss seine Hauptaufgabe
+immer wieder unterbrechen und sich für ein
+paar Millisekunden irgendeiner Nebensache widmen, schließlich soll ja z. B. das
+WLAN auch dann funktionieren, wenn der
+TXT gerade einen Roboter steuert.
+All das gibt es auf ftDuinos (und den
+artverwandten Arduinos) nicht. Dort stört
+kein Betriebssystem, und es passiert neben
+dem Sketch des Nutzers kaum etwas. Ein
+paar Routinen erledigen im Hintergrund die
+USB-Kommunikation, und je nach Nutzung
+werden auch die Ein- und Ausgänge des
+ftDuino im Hintergrund bedient. Aber im
+
+Vergleich mit dem PC oder dem TXT sind
+dies kleine Nebensächlichkeiten.
+Der ftDuino ist daher in der Lage, nahezu
+seine gesamte Aufmerksamkeit einer ganz
+bestimmten Aufgabe zu widmen und beispielsweise den Zustand eines Eingangs
+kontinuierlich mit sehr hoher Frequenz abzufragen. Die meisten internen Operationen
+des im ftDuino verwendeten AVR-Prozessors benötigen einen Systemtakt zur Ausführung. Eine einfache Warteschleife ‚verbraucht‘ weniger als zehn Operationen. Der
+Prozessor im ftDuino kann daher mit seinen
+gemächlichen 16 MHz den Zustand eines
+einzelnen Eingangs problemlos eine Million Male pro Sekunde abfragen.
+Zusätzlich verfügt der AVR-Prozessor über
+interne Zähler, die ebenfalls mit Frequenzen
+in diesem Bereich betrieben werden können. Schon der für heutige Verhältnisse sehr
+geringe Takt von 16 MHz erlaubt es dem
+ftDuino daher, auf externe Hardwareereignisse im Mikrosekundenbereich zu reagieren.
+Aber wozu braucht man das? Welche Ereignisse im Mikrosekundenbereich kommen in
+der realen fischertechnik-Welt überhaupt
+vor?
+Nehmen wir als Beispiel eine einfach Lichtschranke aus Fototransistor und Lampe und
+ein Objekt von 1 cm Größe, das durch diese
+Lichtschranke bewegt wird. Bewegt sich
+
+
+
+das Objekt mit einem Meter pro Sekunde
+(also 3,6 km/h), dann dauert die Unterbrechung der Lichtschranke nur 1/100tel
+Sekunde bzw. 10.000 Mikrosekunden. Bei
+kleineren Objekten und höheren Geschwindigkeiten reduziert sich dieser Wert entsprechend.
+Wichtig ist die hohe zeitliche Auflösung
+auch bei langsameren Ereignissen, da sie
+die Messgenauigkeit bestimmt. Beträgt die
+zeitliche Auflösung der Messung beispielsweise 10 Mikrosekunden und die Länge des
+zu messenden Ereignisses eine Millisekunde (= 1000 Mikrosekunden), so beträgt
+die Messgenauigkeit 1%.
+Der Arduino und damit auch der ftDuino
+nutzen einen Prozessor-internen sogenannten Hardware-Timer, um eine Zeitbasis mit
+einer Auflösung von vier Mikrosekunden
+zu erzeugen. Die so gewonnene Zeit kann
+mit Hilfe der Standard-Arduino-Funktion
+micros() jederzeit abgefragt werden kann.
+
+ist es unerheblich, wie weit eine Lichtschranke unterbrochen sein muss, bis sie als
+unterbrochen erkannt wird, da wir davon
+ausgehen können, dass sich beide Lichtschranken gleich verhalten.
+
+Geschwindigkeitsmessung
+
+Geschwindigkeitsmessung
+Als erstes praktisches Beispiel soll eine
+doppelte Lichtschranke aus je zwei Fototransistoren und Leuchtdioden zur Geschwindigkeitsmessung realisiert werden.
+Die Verkabelung ist in Abb. 1 zu sehen, das
+komplette Modell in Abb. 2.
+Die beiden Lichtschranken sind genau
+30 mm voneinander entfernt. In diesem Fall
+
+mit zwei Lichtschranken
+
+Die nötige Software bildet der folgende
+Sketch. Mit Erscheinen dieser ft:pediaAusgabe wird er als Teil der normalen
+ftDuino-Installation in der Arduino-IDE bei
+den Beispielen im Verzeichnis
+Beispiele/FtduinoSimple/Speed
+
+zu finden sein.
+1 //
+2 // Speed.ino
+3 //
+4 // Geschwindigkeit mit Hilfe zweier Lichtschranken messen
+5 //
+6 // (c) 2018 by Till Harbaum <till@harbaum.org>
+7 //
+9 #include <FtduinoSimple.h>
+11 void setup() {
+Serial.begin(115200);
+while(!Serial);
+Serial.println(">> Speed measurement <<");
+if(!ftduino.counter_get_state(Ftduino::C1))
+
+
+
+Messen
+
+Serial.println("Warning: Input C1 not low");
+if(!ftduino.counter_get_state(Ftduino::C2))
+Serial.println("Warning: Input C2 not low");
+21 }
+23 // Abstand der beiden Lichtschranken
+24 #define DIST
+// 30mm
+26 void loop() {
+// beide Lichtschrankem einlesen
+uint8_t c1 = ftduino.counter_get_state(Ftduino::C1);
+uint8_t c2 = ftduino.counter_get_state(Ftduino::C2);
+// Warten auf die Unterbrechnung der ersten Lichtschranke
+static uint32_t start;
+if(!c1 && c2) start = micros();
+else if(!c2) {
+// zweite Lichtschranke unterbrochen -> Ausgabe
+uint32_t t = micros() - start;
+char str[32], n[10];
+Serial.print("Time: ");
+Serial.print(t, DEC);
+Serial.print("µs -> ");
+dtostrf(1000000.0/((float)t*(1000/DIST)), 4, 2, str);
+Serial.print(str);
+Serial.print("m/s -> ");
+dtostrf(3600000.0/((float)t*(1000/DIST)), 4, 2, str);
+Serial.print(str);
+Serial.println("km/h");
+// Warte bis Objekt wieder die Lichtschranken verlassen hat
+while(!ftduino.counter_get_state(Ftduino::C1) ||
+!ftduino.counter_get_state(Ftduino::C2));
+delay(1000);
+}
+55 }
+
+Listing 1: Sketch Speed.ino
+
+Der in Listing 1 abgedruckte Sketch gibt
+seine Messergebnisse per USB an den PC
+aus. Die im Download verfügbare Version
+kann zusätzlich so konfiguriert werden,
+dass die Ausgabe auf dem internen OLEDDisplay eines entsprechenden ausgerüsteten
+ftDuino erfolgt.
+Der Sketch basiert auf der FtduinoSimpleBibliothek. Diese Bibliothek stellt nur die
+absolut minimalen Routinen zum Auslesen
+der Ein- und Ausgänge bereit. In diesem
+Fall hat das den Vorteil, dass es keine
+zusätzlichen Dienste im Hintergrund gibt,
+
+die durch das aufwändige Auswerten analoger Eingänge oder ähnlich die eigentliche
+Messung beeinflussen. Wie oben beschrieben steht damit die volle Aufmerksamkeit
+des ftDuino für die eigentliche Messung zur
+Verfügung.
+Die Messung selbst gestaltet sich sehr
+einfach. Wird in Zeile 33 des Sketches erkannt, dass die erste Lichtschranke unterbrochen wurde, so wird der genaue Zeitpunkt mit einer Genauigkeit von vier
+Mikrosekunden von der micros()-Funktion erfasst. Sobald dann die zweite Lichtschranke unterbrochen wird, wird in
+
+
+Zeile 36 erneut die Zeit erfasst und die
+vorige Zeit davon abgezogen. Die Differenz
+ist genau die Zeit, die zwischen dem Unterbrechen der beiden Lichtschranken vergangen ist. In den Zeilen 42 bzw. 45 wird die
+Zeit dann mit Hilfe des Abstandes DIST der
+beiden Lichtschranken in eine Geschwindigkeit in Meter pro Sekunde (m/s) und
+Kilometer pro Stunde (km/h) umgerechnet.
+Die Funktion dtostrf() wandelt das Ergebnis von der Fließkommadarstellung in
+eine Zeichenkette zur Textausgabe um. Der
+Parameter „4“ gibt dabei an, dass die Ausgabe maximal vier Zeichen lang sein soll
+und der Parameter „2“, dass maximal zwei
+Nachkommastellen angezeigt werden und
+die Anzeige entsprechend gerundet werden
+soll.
+Nun wird es spannend: Ist das Modell
+aufgebaut und der Sketch gestartet kann
+man im seriellen Monitor der Arduino-IDE
+die Ausgaben des ftDuino sehen. Hier sollte
+zunächst nur „>> Speed measurement <<“
+stehen. Der ftDuino wartet auf ein Ereignis.
+Ein beherzter Handkantenschlag zwischen
+die beiden Lichtschranken liefert dieses wie
+in Abb. 3 zu sehen. Mit etwas Schwung
+schafft man es, die Lichtschranken in weniger als 2000 Mikrosekunden zu unterbrechen, was einer Geschwindigkeit von
+über 50 km/h und damit der eines innerorts
+fahrenden Autos entspricht.
+
+
+Besitzer eines OLED-ftDuinos können die
+Ausgabe mit Hilfe des Beispiel-Sketches
+aus der Arduino-IDE auch auf das lokale
+Display umleiten wie Abb. 4 zeigt. Hier
+wurde mit moderaten 22,21 km/h auf die
+Bauplatte gehauen.
+
+
+
+
+Die Geschwindigkeitsmessung ist natürlich
+nicht auf exakt diese Anordnung beschränkt. Es lassen sich auch Lichtschranken zum Durchfahren mit Modellautos
+bauen (wie schnell ist eigentlich der Bluetooth Racer?), und auch der Abstand der
+beiden Lichtschranken lässt sich variieren,
+wenn man die Konstante im Sketch entsprechend anpasst.
+Wer mag, kann auch ganz auf Lichtschranken verzichten und beispielsweise
+zwei Taster oder Reed-Kontakte nacheinander überfahren.
+
+Erdbeschleunigung
+Etwas wissenschaftlicher wird es mit unserem zweiten Versuchsaufbau. Er ist nur unwesentlich komplizierter; sein Schaltplan
+ist in Abb. 5 dargestellt.
+
+Erdbeschleunigung
+
+Diesmal kommt nur eine Lichtschranke
+zum Einsatz, dafür aber zusätzlich ein
+Elektromagnet und ein Taster. Mit diesem
+Aufbau lässt sich die durch Gravitation
+verursachte Erdbeschleunigung messen,
+indem ein metallischer Gegenstand vom
+Elektromagneten gehalten wird [2]. Sobald
+der Nutzer die Taste drückt wird der
+Elektromagnet stromlos und verliert damit
+
+seine magnetische Wirkung; der Gegenstand löst sich und fällt durch die
+Lichtschranke.
+
+Messen
+
+Aus der Zeit, die vom Abschalten des Magneten bis zur Unterbrechung der Lichtschranke vergeht, lässt sich die Erdbeschleunigung bestimmen.
+Wichtigster Parameter ist hier die Strecke,
+die der Gegenstand fallen muss, bevor er die
+Lichtschranke unterbricht. Im abgebildeten
+Modell muss der rote 30er-Stein mit der im
+Bild nur schwer zu erkennenden Rückschlussplatte (31325) 90 mm fallen bevor
+die Lichtschranke unterbrochen wird. Dieser Wert ist auch in Zeile 24 des folgenden
+Sketches hinterlegt.
+
+Erdbeschleunigung
+1 //
+2 // Gravity.ino
+3 //
+4 // (c) 2018 by Till Harbaum <till@harbaum.org>
+5 //
+7 #include <FtduinoSimple.h>
+9 void setup() {
+Serial.begin(115200);
+while(!Serial);
+Serial.println("Gravity");
+if(!ftduino.counter_get_state(Ftduino::C1))
+Serial.println("Warning: Input C1 not low");
+if(ftduino.input_get(Ftduino::I1))
+Serial.println("Warning: Input I1 not high");
+ftduino.motor_set(Ftduino::M1, Ftduino::LEFT);
+21 }
+23 // Fallhöhe in Metern
+24 #define DIST 0.09
+// 9 cm
+26 void loop() {
+static uint32_t start = 0;
+uint8_t c1 = ftduino.counter_get_state(Ftduino::C1);
+uint8_t i1 = ftduino.input_get(Ftduino::I1);
+// warte bis Taste gedrueckt
+if(!start && i1) {
+start = micros();
+ftduino.motor_set(Ftduino::M1, Ftduino::OFF);
+}
+// Taste wurde gedrueckt, warte auf Unterbrechung der Lichtschranke
+if(start && !c1) {
+
+
+
+uint32_t t = micros() - start;
+float ts = (float)t/1000000; // us time in seconds
+char str[32], n[10];
+// g = 2*s/t²
+dtostrf(2*DIST/(ts*ts), 4, 2, n);
+// Ausgabe der Zeit in Mikrosekunden und der daraus errechneten
+// Erdbeschleunigung
+Serial.print(t, DEC);
+Serial.print("µs -> ");
+Serial.print(n);
+Serial.println("m/s²");
+delay(1000);
+ftduino.motor_set(Ftduino::M1, Ftduino::LEFT);
+// Warte bis Baustein wieder entfernt wurde
+while(!ftduino.counter_get_state(Ftduino::C1));
+start = 0;
+}
+58 }
+
+Listing 2: Sketch Gravity.ino
+
+Der Sketch funktioniert wieder sehr einfach. Wird in Zeile 32 erkannt, dass die
+Taste gedrückt ist, wird der Magnet spannungslos gemacht und die aktuelle Zeit in
+Mikrosekunden gespeichert. Sobald dann in
+Zeile 38 erkannt wird, dass die Lichtschranke unterbrochen ist, wird – wie schon
+bei der Geschwindigkeitsmessung – die
+Differenz zur Startzeit gebildet. Mit Hilfe
+der Gleichung
+=2∙
+
+lässt sich in Zeile 44 des Sketches aus der
+Strecke in Metern und der Fallzeit in Sekunden die Erdbeschleunigung in m/s² errechnen. Danach wartet der Sketch eine Sekunde, bevor er den Magneten wieder einschaltet. Die nächste Messung kann starten,
+sobald das Objekt aus der Lichtschranke
+genommen wurde.
+Auch hier gibt es in der Arduino-IDE im
+Verzeichnis
+Beispiele/FtduinoSimple/Gravity
+
+eine erweiterte Version, die einen OLEDftDuino nutzen kann. Ein mögliches Ergebnis ist in Abb. 7 zu sehen. Die Ergebnisse
+dürften zunächst deutlich vom korrekten
+Wert (9.81 m/s²) abweichen.
+
+
+im OLED-Display
+
+Tatsächlich ist es sogar wahrscheinlich,
+dass erstmal gar nichts funktioniert, weil die
+Rückschlussplatte einfach am spannungslosen Magneten kleben bleibt. Das ist ein
+bekanntes Phänomen, das ein Streifen Tesafilm auf der Metallfläche der Rückschlussplatte löst (wie von fischertechnik bereits in
+Hobby-3 Band 2 [3] auf Seite 16 beschrieben).
+Selbst wenn die Last nun abfällt, wird die
+gemessene Zeit immer noch unerwartet
+lang und die errechnete Beschleunigung
+unerwartet gering sein. Das liegt daran, dass
+der Tesafilmstreifen das Problem nicht vollständig löst. Es dauert immer noch einige
+Zeit, bis sich das Magnetfeld soweit abgebaut hat, dass das Objekt schließlich fällt.
+Weitere Tesafilm-Schichten lösen auch
+dieses Problem. Erst wenn der Magnet das
+Objekt noch so gerade eben halten kann,
+
+erhält man Messwerte, die im erwarteten
+Bereich liegen.
+Theoretisch könnte man auch die Tatsache
+nutzen, dass man die Kraft des Magneten
+durch die Analogausgänge des ftDuino
+reduzieren kann. Das erfordert aber den
+Einsatz der „großen“ ftDuino-Bibliothek,
+die unter anderem die Erzeugung der analogen Ausgangswerte mit Hilfe der sogenannten PWM im Hintergrund erledigt.
+Aber genau diese Hintergrundprozesse
+stören, wie eingangs erläutert, unsere Messung, da sie den Prozessor des ftDuino
+regelmäßig „ablenken“. Daher ist die Tesafilm-Schicht die bevorzugte Lösung.
+
+Messen
+
+Fazit
+Gerade im Bereich der so genannten Echtzeitverarbeitung sind kleine und einfache
+Mikrocontrollerlösungen wie die Arduinos
+und der ftDuino jedem komplexeren
+System überlegen. Das schlanke Design
+erlaubt es, das Verhalten des Systems exakt
+vorherzusagen und präzise Messungen auszuführen. Das ermöglicht einfache, aber
+interessante Experimente. Mehr zum
+ftDuino erfährt man unter [1].
+
+Referenzen
+[1]
+
+ftDuino, http://ftduino.de
+
+[2]
+
+Wikipedia: Schwerefeld.
+
+[3]
+
+Fischer Werke: Hobby-3 Band 2.
+
+
+

@@ -1,0 +1,181 @@
+
+
+Optik
+
+Laser-Anwendungen (1): Bewegungsmessung
+Andreas und Joachim Gail
+In der ft:pedia 2/2014 wurde gezeigt, wie Laser ins fischertechnik-System integriert werden
+können. Im folgenden Beitrag zum Thema Bewegungsmessung werden zwei Anwendungen
+vorgestellt: ein optisches Impulsrad und eine Drehzahlmessung.
+
+
+Versuchsaufbau
+In Abb. 1 und 2 wird der Aufbau gezeigt.
+Hierbei treibt ein fischertechnik PowerMotor (8:1) {1} ein Zahnrad (Z40) {2}
+direkt an. Dieses Zahnrad treibt auf einer
+weiteren Welle ein Ritzel (Z10) {3} an. Der
+Laserstrahl der Lasereinheit {4} kann prin-
+
+
+zipiell durch eines der 3 Löcher des Zahnrades {2} hindurchleuchten und dann auf
+den Fototransistor {5} fallen. Ob der Laserstrahl wirklich auf den Fototransistor {5}
+fällt, ist abhängig von der tatsächlichen Positionierung des Zahnrades {2}. So beeinflusst die fortschreitende Drehung des
+Zahnrades {2}, ob der Laserstahl auf den
+Fototransistor fällt oder nicht. Hieraus kann
+
+
+Optik
+
+dann abgeleitet werden, ob es zur Drehung
+gekommen ist, wie weit und wie schnell
+sich das Zahnrad gedreht hat. Der gezeigte
+Aufbau ist für den vollen Drehzahlbereich
+des Power-Motors geeignet (Nenndrehzahl
+725min-1), d. h. demnach 2.900 Umdrehungen pro Minute am Ritzel {3}. Alternativ
+zum Fototransistor {5} kann auch ein klassischer Fotowiderstand verwendet werden,
+dieser ist jedoch wesentlich langsamer.
+
+dem oben gezeigten Power-Motor ein eigener Encoder-Motor aufgebaut werden.
+Ein Kompromiss zwischen Auflösung und
+Betriebssicherheit zeigt die Variante gemäß
+
+
+
+
+mit mittlerer Auflösung
+
+
+
+
+Neben den hier gezeigten Beispielen sind
+natürlich auch alle Arten selbst gelochter
+Pappscheiben denkbar.
+
+Drehzahlmessung
+
+mit hoher Auflösung
+
+Optisches Impulsrad
+Bei genauer Justage und unter Verwendung
+einer Störlichtkappe mit einer kleinen Bohrung ist es gemäß Abb. 3 ebenfalls möglich,
+die Zähne eines Zahnrades zur Bewegungsmessung einzusetzen. Dadurch sinkt zwar
+die maximal messbare Drehzahl, man erreicht jedoch eine entsprechend höhere
+Auflösung. Auf diese Weise könnte mit
+
+Bei der Drehzahlmessung ist es nicht alleine
+entscheidend, wie weit sich ein Zahnrad
+oder eine Welle gedreht hat, sondern es
+kommt noch die Einheit Zeit hinzu. Bei der
+Drehzahlmessung wird letztendlich angegeben, wie viele Umdrehungen in einer Zeiteinheit stattgefunden haben. Da es sich im
+vorliegenden Fall um sehr schnelle Einzelereignisse handelt, soll die Messung
+mithilfe des Robo TX Controllers (RTXC)
+erfolgen. Hierbei wird der Messaufbau
+gemäß Abb. 2 verwendet. Letztendlich soll
+ermittelt werden, wie schnell sich dort das
+Ritzel {3} dreht. Gemessen wird jedoch am
+Zahnrad {2} wegen der geringeren
+Geschwindigkeit an dieser Stelle. Zur
+rechnerischen Korrektur sind folgende
+Punkte wichtig:
+a) Das angetriebene Zahnrad {2} hat 40
+Zähne, das Ritzel {3} hat 10 Zähne.
+Demnach dreht sich das Ritzel {3} viermal so schnell.
+
+
+
+b) Die Messung erfolgt im Zahnrad {2},
+dieses hat 3 Bohrungen, folglich gibt es
+bei einer Umdrehung 3 Impulse.
+
+RoboPro-Software zur Drehzahlmessung
+Die Programmierung wurde in zwei getrennt, aber gleichzeitig laufende Programmschleifen aufgeteilt.
+Programmteil 1: Ereigniszählung
+Unter Verwendung eines schnellen Zähleingangs werden alle Lichtschrankenunterbrechungen gezählt und hierbei der Wert der
+Variablen Zaehler um 1 erhöht.
+
+Auswertung finden, unter Nutzung von 4
+Faktoren, einige Berechnungen statt. Das
+Berechnungsergebnis wird dann gemäß
+Faktoren haben folgende Bedeutung:
+a) Faktor 2: Die Messung, d. h. Zählung erfolgt 2 Sekunden lang, der Wert von
+Zaehler wird somit durch 2 geteilt, um
+die Anzahl der Umdrehungen in 1
+Sekunde zu erhalten.
+b) Faktor 60: Umrechnung des Messergebnisses von der Umdrehungszahl pro 1
+Sekunde auf 1 Minute.
+c) Faktor 4: siehe Kapitel Drehzahlmessung Punkt a)
+
+
+Programmteil 2: Zeitintervallmessung
+Die Angabe der Drehzahl ist die Häufigkeit
+der Umdrehungen einer Welle oder eines
+Zahnrades innerhalb eines bestimmten Zeitintervalls. Im vorliegenden Beispiel wurde
+für die Anzeige des Endergebnisses die
+Zeiteinheit Minuten (min) verwendet. Die
+zugehörige zusammengesetzte Einheit für
+die Drehzahl lautet somit Umdrehungen pro
+Minute (1/min oder min-1).1
+Im Programmteil 2 wird dieselbe Variable
+Zaehler verwendet wie im Programmteil 1.
+Zunächst wird diese auf 0 zurückgesetzt
+und 2 Sekunden lang gewartet. Während
+der Wartezeit wird im Programmteil 1 in
+Abhängigkeit von der Drehzahl weitergezählt. Schließlich wird die Variable Zaehler
+in Programmteil 2 ausgewertet. Bei der
+
+
+Die älteren Einheiten U/min, UpM oder rpm
+sollten nicht mehr verwendet werden, weil eine
+
+Umrechnung und Weiterleitung des
+Ergebnisses auf 2 Anzeigeelemente
+
+Anzahl von Umdrehungen eben nur eine Zahl
+und somit einheitenlos ist.
+
+d) Faktor 3: siehe Kapitel Drehzahlmessung Punkt b)
+
+Optik
+
+b) Laserlichtquelle und Sensor können sehr
+weit voneinander entfernt eingebaut
+werden. Das ist ein Vorteil, wenn am
+Messpunkt selbst nur wenig Platz zur
+Verfügung steht.
+
+Ausblick
+
+
+Warum Laser?
+Als Lichtquelle eine Lampe zu verwenden,
+ist der klassische Ansatz und klappte auch
+schon millionenfach. Trotzdem hat der
+Laser Vorteile:
+a) Punktuelle relativ hohe Lichtintensität
+ist vorteilhaft, um auch kleine Bewegungsänderungen punktgenau zu erkennen, z. B. die Weiterbewegung eines einzelnen Zahns eines Zahnrades. Auch
+schnelle Bewegungen können erkannt
+werden. Letztendlich ist zur Erkennung
+eine bestimmte Lichtmenge mindestens
+notwendig, und die kann mittels Laser
+auf eine kleine Fläche gebracht werden.
+
+Prinzipiell könnte es auch möglich sein, die
+Drehzahl per Laserstrahl an drehenden
+Teilen per Reflexion zu erfassen. Dazu
+könnte ein kleiner Streifen von Aluminiumklebeband auf ein Zahnrad oder eine Nabe
+aufgeklebt werden. Immer wenn der glänzende Klebestreifen im Bereich des Laserstrahls vorbeikommt, wird dieser zurückgeworfen und von einem Fotowiderstand
+erfasst.
+
+Quellen
+[1]
+
+Tacke, Andreas: Spezialteile made by
+TST (Teil 10): Impulsrad. 4/2014, S. 10.
+
+[2]
+
+Gail, Andreas: Einstieg in Experimente mit Lasern. ft:pedia 2/2014,
+S. 14.
+
+
+

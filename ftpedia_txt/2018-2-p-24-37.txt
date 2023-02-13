@@ -1,0 +1,602 @@
+
+
+Modell
+
+Die Zahnstangen-Uhr
+Rüdiger Riedel
+Kinetisches Objekt oder Teil einer Uhr? Eine ungewöhnliche Uhr, ein Weihnachtsgeschenk,
+weckte in mir den Ehrgeiz, etwas Ähnliches mit fischertechnik zu bauen.
+Eine Uhr, bei der sich das Zifferblatt dreht
+und keine Zeiger, dazu mit einem fast
+quadratischen Zahnrad: Die hat mich gleich
+begeistert.
+Die müsste sich doch in fischertechnik
+nachbauen lassen, mit noch eckigerem
+Zahnrad. Und hier ist sie, meine Zahnstangen-Uhr:
+
+
+
+Im Gegensatz zum Vorbild habe ich das
+Zifferblatt entsprechend der üblichen Anordnung gestaltet, es dreht sich also links
+herum.
+
+
+Modell
+
+Die eckigen Zahnräder
+Verwendung finden die Zahnstangen Z13
+(Zahnstange 61 Z13 m1,5 Nr. 31053) und
+Z7 (Zahnstange 32 Z7 m1,5 Nr. 31054).
+Und wenn wir schon mal dabei sind, können
+wir auch andere Zahnstangen-Gebilde ausprobieren.
+
+
+
+Ein und dasselbe Zahnrad kann mit verschiedenen Antriebszahnrädern auch unterschiedliche Zähnezahlen zeigen, wir haben
+also wandelbare
+Chamäleon-Zahnräder
+Antrieb
+
+Übersetzung Resultat
+
+Z10
+
+9:4
+
+Z27
+
+Z15
+
+6:5
+
+Z18
+
+Tab. 1: Dreieck aus 3 x Z13
+
+
+Die Antriebszahnräder können nicht alle
+Zähne bzw. Zahnlücken der Zahnstangen in
+den Ecken des Dreiecks oder des Quadrats
+erfassen. Dreht man das ZahnstangenGebilde mit einer Handkurbel und zählt die
+Antriebs- und die Abtriebs-Drehungen,
+kommt man auf die effektiven Zähnezahlen,
+die hier kleiner als die realen Zähnezahlen
+sind.
+
+Die wirksame (effektive) Zähnezahl des
+eckigen Zahnrades hängt also ab von der
+Größe des antreibenden Zahnrades.
+Antrieb
+
+Übersetzung Resultat
+
+Z10
+
+24:5
+
+Z48
+
+Z15
+
+44:15
+
+Z44
+
+Z20
+
+11:5
+
+Z44
+
+Z30
+
+4:3
+
+Z40
+
+Tab. 2: Quadrat aus 4 x Z13
+
+
+
+
+Statt des Z13 kann auch das Z7 eingesetzt
+werden:
+
+
+Antrieb
+Z10
+
+Übersetzung Resultat
+6:5
+
+Z12
+
+Tab. 3: Dreieck aus 3 x Z7
+
+Übersetzung Resultat
+
+Z10
+
+12:5
+
+Z24
+
+Z15
+
+4:3
+
+Z20
+
+Tab. 4: Viereck aus 4 x Z7
+
+
+Durch Einsetzen je eines Federnockens in
+den Ecken verändert sich die effektive
+Zähnezahl.
+
+
+Antrieb
+
+Übersetzung Resultat
+
+Z10
+
+33:10
+
+Z15
+
+klemmt
+
+Z33
+
+Tab. 5: Dreieck aus 3 x Z13 mit Federnocken
+
+
+Antrieb
+
+Einsatz der Federnocken
+
+
+Dieses Quadrat wird für die Uhr nach
+
+Antrieb
+
+Modell
+
+Übersetzung Resultat
+
+Z10
+
+24:5
+
+Z48
+
+Z15
+
+16:5
+
+Z48
+
+Z20
+
+12:5
+
+Z48
+
+Z30
+
+22:15
+
+Z44
+
+Tab. 6: Quadrat aus 4 x Z13 mit Federnocken
+
+Antrieb
+
+Übersetzung Resultat
+
+Z10
+
+3:2
+
+Z15
+
+Tab. 7: Dreieck aus 3 x Z7 mit Federnocken
+
+Antrieb
+
+Übersetzung Resultat
+
+Z10
+
+12:5
+
+Z24
+
+Z15
+
+8:5
+
+Z24
+
+
+Kombiniert man die Zahnstangen Z13 und
+Z7, erhält man ein sechseckiges Z120.
+
+Tab. 8: Quadrat aus 4 x Z7 mit Federnocken
+
+Die Vielecke
+Beim Aufbau eines regelmäßigen Sechs-,
+Acht- oder Zwölfecks zeigt sich, dass die
+antreibenden Zahnräder jetzt alle Zähne der
+Zahnstangen erreichen können. Die wirksame (effektive) Zähnezahl ist also gleich
+der tatsächlichen. Das Gebilde in Abb. 11
+entspricht somit einem Z42, unabhängig
+vom Antrieb mit Z10, Z15, Z20 oder Z30.
+
+
+
+
+
+Die virtuellen Zähne
+Treffen die Zahnstangen nicht aufeinander,
+sondern bleibt eine Lücke für einen oder
+zwei Zähne, dann erhöht sich die wirksame
+Zähnezahl der Zahnstangen.
+
+
+In Abb. 15 ist der Normalfall dargestellt,
+dass die Zahnstangen „auf Stoß“ angebracht
+sind. In diesen Stoß passt ein Zahn des
+antreibenden Zahnrades, hier das Z20, und
+damit sind die Zahnstangen mit ihrer vollen
+Zähnezahl wirksam.
+
+In Abb. 16 ist der Abstand etwas größer;
+jetzt passen zwei Zähne des Z20 in die
+Lücke. Die wirksame Zähnezahl der Zahnstangen erhöht sich um 1, ebenso wie auf
+und aus einem Z13 ein Z14.
+
+
+
+
+
+
+Modell
+
+Aus einem Z7 wird jetzt ein Z9 und aus
+einem Z13 ein Z15.
+
+
+Aber selbst mit einer Zahnlücke von drei
+Zähnen wie in Abb. 19 bis 21 rollt das Z20
+sauber über die Zahnstangen hinweg. Die
+wirksame Zähnezahl der Zahnstangen
+erhöht sich jeweils um 2.
+
+
+Mit diesen Erkenntnissen können wir nun
+einen Zahnstangen-Ring in der Größe eines
+6teiligen Statik-Ringes bauen. Es ist ein 16Eck, gebaut nach Abb. 18 und ergibt ein
+Z128.
+
+
+Darin bewegt sich leichtgängig und sauber
+der dreiarmige Steg mit den Planeten-Zahnrädern Z30, siehe Abb. 22.
+
+
+
+
+Ein Z96 und ein Z65
+Aus je 12 BS30, WS30 sowie BS5 lässt sich
+das Innenzahnrad mit 12 Z7-Zahnstangen
+zu einem Z96 bauen.
+
+
+Mit der Bausteinkombination
+∂ V-Baustein 15 Eck
+∂ BS30
+∂ BS15
+∂ BS5 2Z
+∂ BS5
+
+
+Um es zu zentrieren, werden vier der BS5
+ausgetauscht gegen V-Radachsen (36586),
+die in die BS5 mit Bohrung des 4armigen
+Ständers eingreifen.
+
+∂ BS7,5
+∂ BS30
+je rechts und links vom BS15 mit Bohrung
+wird der Ring zentriert. Die dazu senkrechte
+Achse habe ich provisorisch aufgebaut ohne
+Verbindung zum Ring. Mit den vier BS5
+außen am Ring lässt sich dieser am sechsteiligen Statik-Ring befestigen. Auf eine
+Darstellung verzichte ich hier; benötigt
+werden vier S-Riegelsteine (32850).
+
+
+Die drei Arme für die Planetenzahnräder
+werden gemäß Abb. 24 aufgebaut. Die
+beiden WS60 sorgen dabei für richtige
+Höhe und Abstand der Zahnräder.
+
+
+Ein Z65 in Form eines Fünfecks lässt sich
+bauen, auch wenn die Winkelsumme der
+Ecken nicht 360° beträgt, sondern 375°.
+
+
+Modell
+
+
+Hinweis
+Von der Zahnstange Z7 gibt es zwei
+Varianten mit unterschiedlicher Länge der
+Feder. In den meisten Fällen können wir nur
+die mit der kürzeren Feder verwenden,
+rechts in Abb. 28.
+
+Vom eckigen Zahnrad zur Uhr
+Die erste Uhr ist in Abb. 3 zu sehen. Das
+rotierende Zifferblatt besteht aus dem
+Quadrat mit Federnocken nach Abb. 6, ein
+passendes Zifferblatt zum Aufkleben zeigt
+Ausgehend von einem beliebigen Uhr-Taktgeber – ich bevorzuge Synchronmotoren –
+und der am Ende erforderlichen Drehzahl
+benötigen wir eine Übersetzung von
+
+
+
+
+=
+
+=
+
+Bedeutung der Symbole:
+
+Antrieb mit Synchronmotor:
+=
+
+∙
+
+12h
+∙
+U
+
+∂ nf = 3000 U/min )Drehzahl bei Netzfrequenz 50 Hz und Polpaarzahl = 1)
+∂ p = Polpaarzahl [2]
+∂ 12h/U = 12 Stunden für eine
+Umdrehung des Zifferblattes
+
+
+∂ ZZiff = Zähnezahl des Zifferblattes
+∂ ZEnde = Zähnezahl des ZifferblattAntriebs
+Wir nehmen das Quadrat von Abb. 10, ein
+Z48, mit dem treibenden Zahnrad KlemmZ15, und erhalten dann:
+=
+
+3000 U 12 ∙ 60 min 15
+∙
+∙
+∙ min
+U
+=
+
+3000 ∙ 60 ∙ 15
+∙4
+
+Verwenden wir einen 10-poligen Synchronmotor (dessen Läufer wird in [6] dargestellt), also p = 5, dann vereinfacht sich
+die Übersetzung zu:
+
+Modell
+
+Links vor dem Läufer ist eine StroboskopLED angebracht, um den Anwurf des
+Synchronmotors zu erleichtern [1]. Es wird
+der ft-Magnet 31324 verwendet (immer
+noch erhältlich bei fi-tec-shop.de und
+fischertechnik-teile.de), der Typ 32363 geht
+ebenfalls und mit Anpassungen auch ein
+Topfmagnet [5].
+Das Z30 ist lose im BS15 gelagert; durch
+die vorgegebene Drehrichtung neigt die
+Schnecke dazu, sich am Z15 hochzuziehen.
+Mit der in die Schnecke eingesteckten
+Achse und dem ft-Mann oben drauf
+(Abb. 31) wird das verhindert und zusätzlich entsteht ein flotter Tanz.
+
+Die große Zahnstangen-Uhr
+
+= 30 ∙ 20 ∙ 15 ∙ 15
+
+Das lässt sich umsetzen durch
+∂ Schnecke auf Z30,
+∂ Schnecke auf Z15,
+∂ Schnecke auf Z20,
+∂ Schnecke auf Z15
+
+und zum Schluss ein Z15 auf das Zahnstangenquadrat.
+
+
+Wir verwenden eine vergrößerte Version
+des Z120 von Abb. 13 mit Winkelbausteinen 30 in den 12 Ecken und den verbundenen Zahnstangen Z7 und Z13. Damit
+erhalten wir ein Z240. Die Verbindung zum
+Zifferblatt erfolgt mit einem Z20-Zahnrad.
+Als Antrieb verwende ich einen 30-poligen
+Synchronmotor (p = 15) [3], die nötige
+Getriebeübersetzung ist also:
+
+
+
+=
+
+3000 U 12 ∙ 60 min 20
+∙
+∙
+∙ min
+U
+3000 ∙ 60
+= 30 ∙ 20 ∙ 20
+=
+
+Das lässt sich umsetzen mit:
+∂ Schnecke auf Z30,
+∂ Schnecke auf Z20,
+∂ Schnecke auf Z20
+
+und am Ende ein Z20, auf welches der
+Zahnstangen-Ring aufgelegt wird. Statt
+Ziffern bedeuten hier die gelben Bausteine
+12 Uhr, die blauen Bauplatten 6 Uhr und
+die grauen Steine 3 bzw. 9 Uhr.
+
+die Stroboskoplampe (LED)
+
+Die Uhren betreibe ich mit der 6,8VWechselspannung des alten Transformators
+814 (ft-Nr. 30173, den gibt es immer noch
+bei fischerfriendsman.de und fi-tecshop.de).
+
+
+Zum Betrieb des Synchronmotors setze ich
+hier zwei Topfmagnete ein (erhältlich z. B.
+bei fischerfriendsman.de mit der Bezeichnung Chinamagnete). Diese müssen antiparallel geschaltet werden, so dass sie sich
+bei Stromfluss gegenseitig anziehen.
+
+
+Die Bewegung des Zahnrades Z240 ist
+ebenso wie die des kleinen Uhrzeigers
+normaler Uhren mit den Augen nicht wahrnehmbar. Mit einer 20-fachen Beschleunigung sieht man sie sehr gut, und das lässt
+sich mit einem einfachen Anbau realisieren.
+Dazu wird auf den grauen BS30 und die
+beiden BS5 (oben links in Abb. 33) ein
+BS15 mit Bohrung aufgesetzt. Die eingeschobene Achse trägt ein Z20, das von
+der Schnecke des Haupantriebs angetrieben
+wird. Das andere Ende der Achse sitzt auf
+einem einfachen Gestell und treibt mit
+einem weiteren Z20 das Zifferblatt gut
+sichtbar an.
+
+
+Modell
+
+∂ BS7,5
+∂ WS15
+∂ BS15 sowie einigen Federnocken.
+
+
+Weitere Möglichkeiten
+Bisher haben wir nur Innenzahnräder mit
+den Zahnstangen konstruiert. Nun will ich
+Außenzahnräder vorstellen, die sich auch
+zentrieren lassen.
+Es ist dabei zu berücksichtigen, dass die
+Zahnstangen Z7 eine Länge von 32 mm
+haben. Deshalb stecken sie beim Z168
+jeweils in einem Baustein 5 15·30 (35049)
+und diese in den BS7,5 des Ringes. Der
+Ring besteht aus acht Baugruppen, jeweils
+zusammengesetzt aus:
+
+
+∂ BS7,5
+∂ WS15
+∂ BS5
+∂ BS7,5
+∂ BS5
+∂ BS7,5
+∂ WS15
+∂ BS15
+
+
+
+
+
+In der Vergrößerung (Abb. 37) sieht man,
+dass die Positionen der Z7 in den Bausteinen 5 15·30 variiert werden müssen,
+damit sie überall aneinanderstoßen.
+Und auch mit dem Zahnstangen-Rand geht
+etwas (Abb. 39 und 40)! Die beiden „Freilauf-Kettenzahnräder Z20“ (31779) in
+(130593) gelagert. Mit einem Z40 in der
+Mitte, bei dem wir dessen Kronrad Z32 nutzen, und einigen Änderungen wird daraus
+ein Planetengetriebe (Abb. 40 und 41).
+
+
+Beim Z192 von Abb. 42 sind die beiden
+Z20 um 15 mm aus der Führungsachse
+verschoben, um einen besseren Rundlauf zu
+erzielen.
+Die Befestigung auf dem Ständer erfolgt
+mit Federnocken in vier der Ring-BS30.
+
+
+Ein Video der Uhren gibt es unter [7].
+
+Ein wehmütiger Abschluss
+
+
+
+
+Seit diesem Winter (beginnend mit der
+zweiten Januar-Woche) wissen wir, dass die
+Netzfrequenz nicht mehr stabil ist. Die
+Synchronuhren gingen monatelang um
+mehrere Minuten nach, am 1. März um 5
+Minuten. Die maximale Abweichung wurde
+am 14. März mit 6 Minuten und 22 Sekunden erreicht. Erst Anfang April war diese
+Abweichung aufgeholt.
+Angestrebt wurde früher und wird auch
+heute noch eine Begrenzung der Frequenzabweichungen dahin, dass Synchronuhren
+höchstens ± 20 Sekunden falsch gehen.
+
+Am 15. und 16. April gingen die Synchronuhren 28 Sekunden vor, seitdem wird die
+angestrebte Bandbreite wieder eingehalten.
+Das war früher anders (nicht alles war
+besser, aber das schon…): Als Student hatte
+ich in den siebziger Jahren nur einen Synchronwecker, der mich nie im Stich gelassen hat. Heute schaue ich auf die Funkuhr.
+Unsere Synchronuhr-Modelle haben also
+keinen praktischen Zweck mehr, sie sind
+wirklich nur noch Modelle.
+
+Quellen
+[1]
+
+Rüdiger Riedel: Funktionsmodelle
+von Gleich- und Wechselstrommotoren. ft:pedia 4/2016, S. 52-58.
+
+Modell
+
+[2]
+
+Matthias Dettmer: Synchronmotoren.
+ft:pedia 2/2016, S. 48-52.
+
+[3]
+
+Rüdiger Riedel: Neue Synchronmotoren. ft:pedia 2/2017, S. 25-31.
+
+[4]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt-Verlag, 2015.
+
+[5]
+
+Rüdiger Riedel: Ersatz für die
+Elektromagnete. ft:pedia 3/2017,
+S. 19-22.
+
+[6]
+
+Rüdiger Riedel, 10-poliger
+Synchronläufer im Bilderpool der
+fischertechnik-Community.
+
+[7]
+
+Rüdiger Riedel, fischertechnikModelle, Zahnstangen Uhren.
+Videos der Uhren auf youtube, 2018.
+
+
+

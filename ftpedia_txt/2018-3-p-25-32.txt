@@ -1,0 +1,250 @@
+
+Modell
+
+Modell
+
+Weinbergbahn
+Stefan Falk
+Im Sommer 2016 waren wir in Urlaub an der Mosel. An den steilen, nur schwer begehbaren
+Hängen seitlich der Moselufer gedeiht Wein. Zufällig stieß ich auf eine mir bis dato unbekannte
+Einschienenbahn, die Arbeiter und Material steil und in engen Kurven den Berg hinauf- und
+wieder herunterbringen kann. Das musste einfach nachgebaut werden.
+
+Die Überraschung
+Als wir am Moselufer entlang radelten,
+fielen mir Metallprofile mit etwa 5 x 5 cm
+Querschnitt auf, die alle paar Meter von
+recht dünnen, aus dem Boden ragenden
+Stützen getragen und fixiert wurden. Als ich
+dann sah, dass sich an der Unterseite des
+Metallprofils eine dem kurvigen und
+gebogenen Verlauf der Schiene folgende
+Zahnstange befand, wurde es interessant.
+Schließlich kam sogar heraus, dass auf
+dieser Schiene ein Wagen mit einem
+Verbrennungsmotor und Platz für zwei
+Personen und jede Menge Material – vom
+Wasserkanister
+bis
+zum
+gefüllten
+Weintraubenkorb – fuhr, kam ich aus dem
+Stauen kaum heraus. Wie kann sich dieser
+Wagen an diesem kleinen Querschnitt von
+Profil so gut festhalten, dass selbst beim
+Herauslehnen einer Person nichts verkantet,
+klemmt, abreißt, zerbricht oder sonst wie
+kaputt geht?
+Im Web finden sich dann genauere
+Hinweise: Diese Bahnen heißen auch
+Monorackbahnen [1], und sie können einen
+echt abenteuerlichen Verlauf durch Berghänge, an steilen Wänden hinauf, um knarzige Büsche herum – kurz: wo immer man
+will – nehmen.
+Das musste ich einfach nachbauen! Wozu
+ist man schließlich fischertechniker?
+
+auf der Bahn
+
+Der Nachbau
+Erste Experimente mit fischertechnikZahnstangen und solchen aus S-RiegelReihen mit entsprechenden selbstgebauten
+Zahnrädern endeten allerdings kläglich.
+Also löste ich mich von einer genauen
+Nachbildung und konzentrierte mich
+darauf, mit fischertechnik-Mitteln einen
+
+
+
+
+
+Wagen einen kreuz und quer kurvigen Weg
+folgen zu lassen. Abb. 2 zeigt die auf der
+Convention 2017 ausgestellte Bahn: Das
+quadratische Schienenprofil besteht ganz
+einfach aus Statik-Flachträgern, jeweils
+
+
+beidseitig bestückt mit Flach- bzw. Bogenstücken. An einigen Stellen sind Bausteine
+15 aufgenommen, auf deren Unterseite aus
+passenden Winkelsteinen und Statikträgern
+die geradezu primitiv aufgebauten Stützen
+
+
+Modell
+
+
+angebracht sind. Damit die Führungsräder
+sauber über die Stützen fahren können, bitte
+als ersten Baustein unter der Schiene
+jeweils einen senkrecht stehenden BS 7,5
+verwenden:
+
+unterhalb der Schiene
+
+Am unteren und oberen Ende sind Endlagentaster befestigt.
+
+Der Wagen
+Auch der Wagen begann mit einer Version,
+die nicht immer befriedigend funktionierte.
+Schließlich führte aber die Konstruktion in
+Ein S-Motor treibt eines der Z30 an. Das
+zweite Z30 wird vom ersten angetrieben,
+dreht sich also gegenläufig. Auf den Achsen
+der Z30 sitzen insgesamt vier Spurkränze
+mitsamt zugehörigem Gummiring. Diese
+beiden Achsen und Spurkränze werden
+durch kräftige Gummis zusammengedrückt
+– um die Schiene nämlich. Im Modell zu
+sehen sind die um die Reifen 45 (31018)
+passenden Gummiringe 45 37x2,5 (36051).
+Einige weitere Räder und leicht drehbare
+Hülsen dienen der vollständigen Führung
+des Wagens. Die folgenden Abbildungen
+
+
+
+zeigen, wie der Antrieb die Schienen
+umschließt:
+
+Ansicht des Wagens von hinten
+
+
+
+Modell
+
+∂ Je zwei BS 7,5 werden nur mit der Platte
+15x30 2Z verbunden. Für einen Verbinder 15 ist da kein Platz, weil die Metallachsen in der äußeren Nut der mittleren
+BS 7,5 gelagert werden.
+∂ Die Riegelscheiben stellen den korrekten
+Abstand der Spurkränze sicher; sie sind
+so gedreht, dass ihre kleinen Zäpfchen
+ineinandergreifen.
+
+
+Zum Aufbau des Wagens
+Der Motorblock
+Wagens ohne den aufgesetzten Motor. Der
+Motorantrieb selbst ist wie folgt aufgebaut:
+
+
+An dem Verbinder 30 in der Mitte von
+zuverlässig in Eingriff mit dem Z30.
+Die Antriebswellen
+Mit den Teilen aus Abb. 10 werden zwei
+Antriebswellen von Abb. 11 spiegelsymmetrisch gebaut:
+∂ Beachtet die 105195 Scheibe 4 15 unterhalb der Flachnaben der Z30.
+
+
+
+
+
+
+Der Mittelteil
+An dieser Baugruppe werden sowohl der
+Motor als auch die beiden Antriebswellen
+befestigt. Hier ein Blick von der Motorseite
+(auf den Federnocken im BS 30 wird der
+Motor aufgeschoben, dessen Federnocken
+wiederum im Winkelstück unten im Bild
+stecken wird):
+
+
+
+In den beiden weiteren BS 7,5 an den Seiten
+sitzen die Achsen mit den Rollen für die
+vordere Wagenführung, die wir in Abb. 8
+schon sahen.
+
+Modell
+
+Die Steuerung
+Letztlich muss man ja nur den Motor abwechselnd auf- und wieder abwärtsfahren
+lassen. Auf der Convention tat das eine
+kleine Steuerung mit einem E-Tec-Modul:
+
+
+
+Mittelteil besteht. Die grünen Linien
+trennen die Teile für die Führungsrollen von
+den anderen.
+Die vordere Stützwelle
+Schließlich besitzt der Wagen an seiner
+Vorderseite noch eine Achse, die auf den
+Schienen aufliegt, und auf denen er rollen
+kann:
+
+
+Auf der Achse sitzen drei Lagerhülsen 15
+(36819), die das Abrollen auf der Schiene
+erleichtern.
+All das fügt sich schließlich zum Wagen
+laut Abb. 4 und 7 zusammen.
+
+Der linke Schalter dient zum Ein-/Ausschalten der Anlage. Der rechte wählt die
+Betriebsart: Eine Schalterstellung führt zu
+Dauerbetrieb, also dem ständigen Auf- und
+Abwärtsfahren des Wagens mit vollautomatischer Umsteuerung an beiden Endlagen
+– das ist der „Convention-Modus“. Die
+andere lässt den Wagen in der unteren
+Basisstation anhalten, bis man den Taster in
+Bildmitte betätigt. Dann beginnt ein neuer
+Auf-Abwärtszyklus, aber eben nur einer.
+Das E-Tec wird im Basisprogramm betrieben (alle DIP-Schalter aus):
+∂ Der Eingang I1 dient zum Starten des
+Motors in Richtung Tal. An ihm ist der
+obere Endlagentaster angeschlossen,
+damit der Wagen beim Erreichen der
+„Bergspitze“ automatisch wieder zurück
+nach unten fährt.
+∂ Der Eingang I2 dient zum Starten des
+Motors für die Bergfahrt. Der „Start“Taster ist dort direkt angeschlossen.
+∂ Der untere Endlagentaster kann nun je
+nach Stellung des Betriebsart-Wählschalters entweder den Eingang I3 ansteuern und den Wagen, sobald er unten
+ankommt, einfach anhalten lassen. Erst
+
+
+
+ein Druck auf „Start“ startet einen neuen
+Zyklus aus Berg- und Talfahrt. Im
+Dauerbetriebs-Modus wirkt der untere
+Endlagentaster hingegen wie der StartTaster: Der Wagen wird, unten angekommen, sofort wieder hochgeschickt.
+∂ Ein Ein-/Ausschalter vervollständigt die
+Schaltung.
+
+damit sich nichts verheddert. Abb. 17 zeigt
+die vollständige Schaltung. In [2] findet
+sich ein Video (mit der älteren Version des
+Wagens).
+
+Quellen
+[1]
+
+Wikipedia: Monorackbahn.
+
+[2]
+
+Falk, Stefan: fischertechnik
+Weinbergbahn. youtube.com
+
+Die Leitung zum Motor muss hinreichend
+lang sein und geeignet geführt werden,
+
+M
+
+DC
+
+Ein/Aus
+
+Einzelfahrt
+
+Endlage oben
+
+Modus
+Dauerfahrt
+
+Start
+
+
+
+Endlage unten
+
+

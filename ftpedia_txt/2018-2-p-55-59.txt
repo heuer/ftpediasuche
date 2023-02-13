@@ -1,0 +1,298 @@
+
+Computing
+
+Computing
+
+Plug & Play am I²C-Bus mit dem ftExtender
+Björn Gundermann, Christian Lauff, Rudenz Schulz,
+Christian Bergschneider, Stefan Fuss
+Der I2C-Bus am TX(T) ist universell: Es lassen sich Sensoren und Aktoren für alle Anwendungsfälle anschließen, sogar der ftDuino kann als preiswertes Erweiterungsboard mit dem TX(T)
+verbunden werden. Theoretisch, denn die immer wiederkehrenden Themen Versorgungsspannung, Logikspannung und der Anschluss mehrerer Devices verhindern den breiten Einsatz.
+Lange vor dem Aufleben der Maker-Szene
+hat fischertechnik den TX- und den TXTController mit dem I²C-Bus ausgestattet.1
+Arduino und Raspberry Pi setzen ebenfalls
+auf dem I²C-Bus, sodass es viele Sensoren
+mit I²C-Businterface fertig zu kaufen gibt.
+In der ft:pedia und im Internet finden sich
+für viele Sensor-Boards ROBOPro-Treiber,
+sodass die jeweilige Platine nur noch elektrisch angeschlossen werden muss.
+
+TXT angeschlossen und über ROBOPro
+programmiert werden [4]. Der Anschluss
+am TX ist einfach, der TXT benötigt eine
+zusätzliche Beschaltung.
+Die Idee für den ftExtender wurde in der
+ft:pedia und der fischertechnik community
+schon mehrfach diskutiert und es wurden
+auch schon verschiedene Lösungen vorgestellt [1, 2, 3]. Allerdings lösen die Schaltungen immer nur einen Teil der Fragestellung, und bei [2, 3] ist der Nachbau einer
+Platine notwendig. Der hier vorgestellte
+ftExtender ist ein durch die fischertechnik
+community entwickeltes Fertiggerät. TX,
+TXT, ftDuino und Sensoren werden einfach
+per Flachbandkabel angeschlossen. Es kann
+über ft-extender@gundermann.org bezogen
+werden.
+Mehrere I²C-Bus Devices
+
+
+Auch der ftDuino kann über den I²C-Bus als
+preiswertes Erweiterungsboard an TX und
+
+Der I²C-Bus selbst ist ein Industriebus und
+stammt aus den 1980er Jahren. Beim Design
+wurde auf einfache Technik und hohe Störsicherheit geachtet, so dass er sich hervorragend für
+Maker-Projekte eignet.
+
+Am I²C-Bus lassen sich bis zu 100 Devices
+gleichzeitig anschließen. 2 Die Verkabelung
+kann als Bus, als Stern oder als Mischung
+von beiden ausgeführt werden. Es gibt eine
+Längenbeschränkung über die Kapazität
+des Kabels; diese liegt für fischertechnikAnwendungen im Bereich von mehreren
+
+
+Durch die Verwendung eines I²C-AdressMultiplexers kann die Zahl der Devices nahezu
+beliebig vergrößert werden [8].
+
+
+
+
+Metern. So große Modelle sind allerdings
+selten.
+Allerdings steht am TX(T) nur ein EXTStecker zur Verfügung, an dem man seine
+Sensoren anschließen kann. Die Lösungen
+in [1, 2] sind einfache Mehrfachstecker, so
+dass man mehrere Sensoren an den TX(T)
+anschließen kann.
+Am ftExtender lassen sich über einfache
+Flachbandkabel bis zu fünf I²C-Devices
+anschließen. Wem das nicht reicht, der kann
+mehrere ftExtender kaskadieren.
+Logikspannung & Stromversorgung
+Beim Anschluss eines I²C-Devices hat man
+immer wieder die gleichen Fragestellungen
+nach Stromversorgung und Logikspannung.
+Die fischertechnik-typischen 9V können als
+Stromversorgung nicht direkt verwendet
+werden. Alle I²C-Devices benötigen entweder 3,3V oder 5V. Diese Spannungen
+lassen sich mit einem Linearregler und zwei
+Elkos einfach herstellen.
+Das gleiche gilt für die Logikspannung:
+Auch hier gibt es I²C-Devices mit 5V und
+mit 3,3V. Ältere Sensoren, der TX und der
+ftDuino arbeiten mit 5V, der TXT sowie
+einige neuere Sensoren arbeiten mit 3,3V.
+Mit so genannten Levelshiftern lassen sich
+Devices mit unterschiedlicher Logikspannung miteinander verbinden. Diese kann
+man mit zwei MOS-FETs und vier Widerständen selber bauen oder fertige kleine
+Platinen kaufen. Mit dem ersten I²C-Device
+macht das noch Spaß: Man sucht die
+passenden Beschaltungen für das Device
+heraus und adaptiert diese an seinen
+Sensor/Aktor. Man bekommt ein Plug &
+Play-Device mit einem 9V-Anschluss und
+wahlweise 6-poligem TX- oder 10-poligem
+TXT-Anschluss. Mit dem nächsten Device
+fängt man wieder von vorne an und baut die
+gleiche Beschaltung an den nächsten Baustein.
+Der ftExtender hat einen Levelshifter und
+zwei Linearregler auf der Platine. Somit
+
+können problemlos 5 V- und 3,3 V-Devices
+ohne Zusatzbeschaltung über ein 6- oder
+10-poliges Kabel angeschlossen werden.
+Als Stromversorgung stehen 250 mA für
+jedes angeschlossene Device zur Verfügung. Dies ist für den Betrieb von Sensoren
+völlig ausreichend. Beim Anschluss von
+Aktoren wie Motoren, Lampen und Servos
+sind 250 mA schnell erreicht, so dass diese
+eine eigene Stromversorgung bekommen
+sollten.
+Anschlüsse
+Der 6-polige Stecker (Abb. 2) ist kompatibel zum EXT-Anschluss des TX und des
+ftDuino, sodass die beiden Geräte direkt
+angeschlossen werden können. Für den
+Anschluss reicht ein 1:1-belegtes 6-poliges
+Kabel (Abb. 2).
+
+
+Entsprechend ist der 10-polige Anschluss
+kompatibel zum TXT (Abb. 3). Hier können direkt der TXT oder vorhandene Sensoren mit 10-poligem Stecker angeschlossen werden. Für den Anschluss reicht ein
+1:1-belegtes 10-poliges Kabel.
+
+
+Die drei 14-poligen Stecker sind für den
+kombinierten Einsatz von 3.3 V- und 5 VSensoren gedacht (Abb. 4). Dabei sind die
+Pins 1-6 in der Belegung mit dem TXT, die
+Pins 9-14 sind mit dem TX/ftDuino kompatibel. An Pin 7 und 8 stehen die Versorgungsspannungen 3,3 V und 5 V zur Verfügung.
+
+
+
+Der letzte Anschluss am ftExtender ist eine
+9 V-Buchse. Hier wird die fischertechnikSpannung angeschlossen, um die Versorgung der Levelshifter und Sensoren zu
+ermöglichen. Es ist nur die Buchse für +9V
+Gleichspannung vorhanden; den Minuspol
+gibt es bereits auf jedem Flachbandkabel.
+Der ftExtender kann auch mit dem fischertechnik-Akkuset betrieben werden. Benötigen die I²C-Devices nur wenige mA, so ist
+das kein Problem. Bei höherem Stromverbrauch kann der eingebaute Spannungsregler jedoch schnell zur Spaßbremse werden.
+Ein Linearregler setzt die Spannungsdifferenz zwischen Eingangs- und Ausgangsspannung in Wärme um. Schließt man an
+den 3,3V Linearregler einen Baustein mit
+50mA Stromaufnahme an, so verbraucht
+das I²C-Device
+
+Computing
+
+An der Buchse ist Pin 1 mit einem Pfeil
+markiert. Für ein 1:1-Kabel wird hier die
+farblich markierte Ader des Flachbandkabels angelegt. Ob das Kabel links oder
+rechts aus der Buchse geführt wird ist völlig
+egal, die Pinbelegung am Kabel bleibt
+gleich. Wichtig ist, dass das Kabel möglichst senkrecht zur Buchse geführt wird,
+damit es zu keinem Kurzschluss kommt.
+Danach wird entweder mit einer Wasserpumpenzange oder mit dem Schraubstock
+der Sicherungsclip auf die Buchse gedrückt.
+Dabei wird das Flachbandkabel automatisch gecrimpt. Bitte nicht mit zu viel Kraft,
+die Sicherungsclips brechen sonst gerne.
+OLED Display am ftExtender
+Als Beispiel haben wir ein OLED-Display
+an den ftExtender angeschlossen. Auf Basis
+des Treiberbausteins SSD1306 gibt es von
+Adafruit, Waveshare und vielen anderen
+Herstellern kleine 0,96“ OLED-Displays
+mit I²C Interface (Abb. 5, 6).
+
+∗ 3,3 = 165
+
+Am Linearregler muss von 8,6V Akkuspannung auf 3,3V heruntergeregelt werden:
+
+∗ (8,6 − 3,3 ) = 265
+
+Der Spannungsregler hat die 1,6fache Leistungsaufnahme des eingesetzten Sensors.
+Wird der ftExtender nur als Mehrfachstecker eingesetzt, so wird die 9 V-Versorgung nicht benötigt. Ist die Bordspannung
+vorhanden, so zeigen zwei LEDs die
+Betriebsbereitschaft an.
+Crimpen von Flachbandkabeln
+Die Buchsen an den Flachbandkabeln lassen sich auch ohne Spezialwerkzeug crimpen.
+
+
+Alle Implementierungen haben einen 4poligen Stecker mit GND, VCC/VDD,
+SDA und SCL. Sie funktionieren in der
+Regel sowohl mit 3,3V als auch mit 5V.
+Wer sich nicht sicher ist, startet erst einmal
+mit 3,3V.
+Achtung, die Steckerbelegung des OLEDDisplays kann je nach Hersteller abweichend sein! Einen ROBOPro-Treiber für
+das Display gibt es in [8] zum Download.
+
+
+
+Auf alle Kontaktstellen, an die später ein
+Bauteil angelötet wird, wird zuerst mit
+einem Lotpastensieb Lotpaste aufgetragen.
+Die Lotpaste wird im letzten Produktionsschritt die eigentlichen Lötverbindungen
+herstellen.
+
+
+Schaltung
+Der ftExtender ist aus wenigen Standardschaltungen aufgebaut (Abb. 7). Der
+Schaltplan zeigt den geringen Aufwand und
+dokumentiert die Verschaltung der verschiedenen Stecker. Für die Anwendung
+des ftExtenders wird kein tiefes Verständnis
+der Funktion der Baugruppen benötigt.
+Zwei Linearregler (IC1, IC2) erzeugen aus
+den eingespeisten 9 V die benötigten 3.3 V
+und 5 V für die Levelshifter und Versorgungsspannung der Sensoren.
+Die beiden LEDs D1 und D2 zeigen die
+Betriebsbereitschaft der beiden Versorgungsspannungen an.
+Die Levelshifter (bestehend aus den
+MOSFET Q1 und Q2) sind identisch mit
+dem Levelshifter aus [2]. Sie arbeiten zuverlässig mit den beiden I²C-Busfrequenzen
+100 und 400kHz.
+Produktion
+Durch den Zugriff auf einen SMD-Bestückungsautomaten mit Reflow-Ofen haben
+wir uns für eine Bestückung in SMD-Technik entschieden. Dazu wurde das Platinenlayout für die Bestückung optimiert und ein
+Nutzen bestehend aus 20 ftExtenderPlatinen erzeugt.
+
+
+Danach kommt der Bestückungsautomat
+PanteraXV von Essemtec [7] zum Einsatz.
+Aus dem Platinenlayout wird eine Pick &
+Place-Liste generiert, über die der Automat
+Bauteil für Bauteil mittels Unterdruck greift
+und an der richtigen Stelle auf den Nutzen
+klebt. Damit das Bauteil durch den Automaten leicht gegriffen werden kann, werden
+diese auf Gurten geliefert.
+Für den eigentlichen Lötvorgang kommt
+der bestückte Nutzen in den Reflow-Ofen.
+Hier wird dieser aufgeheizt, so dass die
+Lötpaste flüssig wird und die Lötstellen sich
+von selbst herstellen.
+Qualitätssicherung
+Als Endtest wird an jedem 14-poligen Stecker ein 3,3V- und ein 5V-I²C-Gerät, an die
+6-polige Buchse ebenfalls ein 5V-I²C-Gerät
+angeschlossen.
+Die 10-polige Buchse wird mit einem TXTController verbunden. Auf diesem läuft ein
+Testprogramm, das prüft, ob von allen
+angeschlossenen Geräten die ID ausgelesen
+werden kann.
+Gehäuse
+Der ftExtender ist fertig in einem 3Dgedruckten Gehäuse montiert (Abb. 8). Als
+Druckverfahren wird das selektive LaserSintern (SLS) genutzt, da dieses Verfahren
+sich sehr gut eignet, um Kleinserien zu
+produzieren. Wer einen 3D-Drucker sein
+eigen nennt kann das Gehäuse aber auch
+selber drucken. Die entsprechenden Dateien
+sind in [6] zu finden.
+
+
+Computing
+
+
+[3]
+
+Till Harbaum: ftDuino Bedienungsanleitung, github.org
+
+[4]
+
+Christian Bergschneider, Stefan
+Fuss: ftDuino_TXT, github.org
+
+[5]
+
+Georg Stiegler: I²C mit dem TX –
+Teil 5: Multiplexer. ft:pedia 2/2013,
+S. 50-52.
+
+[6]
+
+Björn Gundermann, Rudenz Schulz,
+Christian Bergschneider, Stefan
+Fuss: ftExtender Schaltplan, Layout
+und Gehäuse, github.org
+
+Quellen
+
+[7]
+
+Essemtec PanteraXV
+
+[1]
+
+Dirk Fox: I²C mit dem TX – Teil 2:
+LED-Display, ftpedia 4/2012, S. 33.
+
+[8]
+
+[2]
+
+Christian Bergschneider, Stefan
+Fuss: Ein universeller I²C-Adapter
+für den TX(T), ftpedia 4/2016, S. 72
+ff.
+
+Christian Bergschneider, Stefan
+Fuss: OLED Display mit ROBOPro,
+github.org
+
+
+
+

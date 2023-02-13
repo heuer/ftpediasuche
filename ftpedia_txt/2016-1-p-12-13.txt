@@ -1,0 +1,84 @@
+
+
+Tipps & Tricks
+
+Magnetkupplung für die Stromversorgung
+Dirk Wölffel
+Eine externe Stromversorgung der fischertechnik-Modelle mit einem zweiadrigen Kabel kann
+manchmal zu Problemen führen: Will man zum Beispiel die Stromquelle zwischen mehreren
+fertigen Modellen wechseln, muss man dabei auch immer auf die richtige Polung der Stecker
+achten. Bleibt man am Kabel hängen, können die Stecker oder das Kabel herausgerissen
+werden – im schlimmsten Fall wird sogar das Modell umgerissen. Dabei gibt es den Komfort,
+den Besitzer von Apple-Computern genießen, auch für fischertechnik-Modelle...
+
+Die Magnetkupplung
+Abhilfe schafft eine Magnetkupplung für
+die Stromversorgung oder zum Laden eines
+Akkus. Diese lässt sich einfach herstellen:
+Ihr braucht dazu nur wenige (zugegeben:
+teilweise „historische“) fischertechnikBauteile im Wert von ca. 5 €. Fehlende
+Bauteile könnt ihr zum Beispiel bei fischerfriendsman bestellen.
+
+Habt ihr alle Bauteile (Abb. 1) zusammen,
+so ist die Montage recht einfach. Zuerst
+müssen die Magnete montiert werden.
+Dabei ist darauf zu achten, dass sich die
+beiden Magnete anziehen, wenn diese montiert sind. Um sie herumzudrehen, könnt ihr
+die Magnete leicht mit einer 4 mm Metallachse demontieren (Abb. 2).
+
+Hier die Einzelteilliste:
+Stk.
+
+ft-Nr.
+
+Bezeichnung
+
+
+7051
+
+Magnetbaustein + Magnet
+
+
+31306
+
+Metall Federkontakt
+
+
+35329
+
+Federkontaktgegenstück
+
+
+32881
+
+Baustein 15 mit 1 Zapfen
+
+Tab. 1: Erforderliche Bauteile
+(zur Demontage der Magnete)
+
+Wenn ihr die Magnetbausteine fertig habt
+müsst ihr nur noch die restlichen Bauteile
+(Abb. 3) montieren. Die vier Federkontakte
+werden paarweise in die Nuten der Bausteine 15 geschoben. Zum Schluss nur noch
+die Stecker in die Federkontakte stecken.
+Hierbei ist auf die richtige Polung achten.
+
+
+Tipps & Tricks
+
+versorgung. Jetzt könnt ihr den Stromanschluss schnell und komfortabel zwischen
+den Modellen wechseln (Abb. 4).
+
+
+Dann befestigt ihr eine Seite der Magnetkupplung fest an eurem Modell. Die zweite
+Seite wird einfach angedockt und fertig ist
+die flexible Magnetkupplung für die Strom-
+
+
+Man kann die Magnetkupplung auch zum
+Laden eines mobilen Roboters einsetzen,
+wie in Abb. 5 zu sehen ist.
+
+
+
+

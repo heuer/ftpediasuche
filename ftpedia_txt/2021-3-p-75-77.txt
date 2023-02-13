@@ -1,0 +1,204 @@
+
+Computing
+
+Computing
+
+WASD-Pad: Gamepad einmal anders
+Fabian Harbaum, Till Harbaum
+Besonders interessant wird es bei fischertechnik-Konstruktionen eigentlich immer dann, wenn
+man die fischertechnik-Insel verlässt und sich Problemen außerhalb der Blase widmet, die man
+dann mit Baukastenelementen löst. Das hier präsentierte Gamepad ist ein solches Projekt.
+
+Hintergrund
+Begonnen hat alles mit einem Gamepad,
+das unser Sohn auf Basis des fischertechnik-Joystick-Adapters gebaut hat [1].
+Dieser Adapter stammt noch aus VorftDuino-Zeiten, erfreut sich aber daheim
+nach wie vor großer Beliebtheit und wird
+immer wieder zum Bau von Lenkrädern,
+Joysticks und Gamepads verwendet. Mit
+preisgünstigen, so genannten „USB-OTG“Adaptern lassen sich die Modelle dann
+sogar an Smartphones und Tabletts nutzen.
+Allerdings zeigte sich diesmal ein Problem:
+Ein paar Spiele wollten partout nicht mit
+dem selbstgebauten Gamepad spielbar sein.
+Es stellte sich aber schnell heraus, dass das
+nichts mit dem Adapter oder fischertechnik
+zu tun hatte. Stattdessen gibt es einfach PCSpiele, die auf die Benutzung per Tastatur
+ausgerichtet sind. Konkret wollten Minecraft und vor allem Asphalt8 nicht auf die
+Befehle des selbstgebauten Gamepads
+hören. Stattdessen erwarten beide Spiele die
+Nutzung der Tasten „W“, „A“, „S“ und „D“
+für die Richtungssteuerung und der
+Leertaste für „Aktion“.
+Eine erste Lösungsidee der Kinder war
+ausgesprochen „fischertechnisch“ und
+sollte ein fischertechnik-Gamepad per
+Magnetventilen und Pneumatikzylindern
+mit der vorhandenen PC-Tastatur verbinden. Das Gamepad hätte dann die Tasten
+der Tastatur mechanisch per Druckluft betätigt.
+
+Dieses Vorhaben scheiterte aber schon in
+der Planungsphase an einem Magnetventilund Pneumatik-Zylinder-Mangel, denn
+benötigt wurden derer mindestens fünf (für
+vier Richtungstasten und eine Feuertaste).
+Hier konnte nun der ftDuino eine seiner
+Stärken ausspielen [2]. Denn während der
+alte Joystick-Adapter mit seiner fest
+verbauten Firmware auf das Thema „Gamepad“ festgelegt ist, ist der ftDuino frei
+programmierbar: Man kann ihn ebenfalls zu
+einem USB-Gamepad machen (Abb. 1, 2).
+
+
+Die Arduino-IDE bringt dafür zwar keine
+Bibliothek mit, aber das Internet hat
+mehrere Lösungen parat, die sich leicht
+nachinstallieren lassen [3]. Aber damit
+hätten wir das Gamepad-Problem ja nach
+wie vor. Noch viel einfacher ist es, auf
+Arduino-Basis USB-Tastaturen zu bauen.
+
+
+
+Die dafür nötigen Funktionen bringt die
+Arduino-IDE sogar bereits ab Werk mit und
+auch ein einfaches Beispiel wird gleich
+mitgeliefert [4].
+
+um z. B. kräftig zu beschleunigen. Auch
+sollte es möglich sein, mehrere Tasten
+gleichzeitig zu drücken, um beispielsweise
+während des Beschleunigens im Rennspiel
+zu lenken.
+Es gibt dazu zwar kein Beispiel in der
+Arduino-IDE, die zugrundeliegende Bibliothek unterstützt solch detaillierte Steuerung
+aber durchaus. Die Arduino-KeypressFunktion [5] und ihr Key-Release-Pendant
+machen genau das, was wir benötigten: Sie
+senden explizite „Taste-wird-gedrückt“ und
+„Taste-wird-losgelassen“-Nachrichten an
+den angeschlossenen PC.
+
+
+Dieses Beispiel sendet ganze Textnachrichten auf Tastendruck. Das ist leider nicht
+ganz das, was wir suchen. Vor allem sendet
+dieses Beispiel einfache kurze Tastenereignisse. Beim Spielen möchte man aber den
+Finger häufig auf der Taste liegen lassen,
+
+Der Sketch dazu ist recht kurz gehalten und
+kann alle 12 Eingänge des ftDuino (I1 bis I8
+und C1 bis C4) nutzen. Jeder Eingang kann
+auf eine eigene Taste abgebildet werden. In
+der hier präsentierten Variante sind die
+Eingänge I1 bis I5 auf die eingangs erwähnten Tasten W, A, S, D und die Leertaste abgebildet. Das lässt sich im Sketch leicht
+ändern und an eigene Spiele anpassen.
+
+/*
+* WASD_Pad.ino
+*
+* ftDuino als "WASD"-Tastatur/Gamepad, um Spiele wie Aspalt8 oder
+* Minecraft zu steuern
+*/
+#include <FtduinoSimple.h>
+#include <Keyboard.h>
+// Tabelle der Eingänge und der Tasten. Erste Spalte
+// ist 0 für I1-I8 und 1 für C1-C4
+uint16_t keys[][3] = {
+// 0=I/1=C, Eingang, Taste
+{ 0, Ftduino::I1, 'w' },
+{ 0, Ftduino::I2, 'a' },
+{ 0, Ftduino::I3, 's' },
+{ 0, Ftduino::I4, 'd' },
+{ 0, Ftduino::I5, ' ' }
+};
+// Zahl der Eingaenge in keys-Tabelle berechnen
+#define INPUTS
+(sizeof(keys)/(3*sizeof(uint16_t)))
+uint16_t state[INPUTS]; // Speicher, um Zustand zu speichern
+uint32_t lastEvent[INPUTS];
+
+
+
+Computing
+
+void setup() {
+Keyboard.begin();// Tastaturfunktionen starten
+memset(state, 0, sizeof(state)); // Zustände initialisieren
+memset(lastEvent, 0, sizeof(lastEvent));
+}
+void loop() {
+for(char i=0;i<INPUTS;i++) { // Alle Eingänge aus Tabelle abfragen
+// INPUT bzw. COUNTER lesen
+uint16_t buttonState =
+keys[i][0]?ftduino.counter_get_state(keys[i][1]):
+ftduino.input_get(keys[i][1]);
+// Hat sich der Zustand der Taste geändert?
+if(buttonState != state[i]) {
+// ja, Zeit des Wechsels merken
+lastEvent[i] = millis();
+// und den neuen Zustand merken, damit wir weitere
+// Änderungen erkennen können
+state[i] = buttonState;
+}
+// Gibt es ein unbearbeitetes Ereignis und hat sich der Zustand
+// der Taste seitdem für mehr als 10 Millisekunden nicht geändert?
+if(lastEvent[i] && ((millis() - lastEvent[i]) > 10)) {
+lastEvent[i] = 0; // Zeit dieses Ereignisses vergessen
+// Taste wurde gedrückt bzw. losgelassen -> an PC senden
+if(state[i]) Keyboard.press(keys[i][2]);
+else
+Keyboard.release(keys[i][2]);
+}
+
+}
+
+}
+
+Listing 1: WASD_Pad.ino
+
+Etwas Vorsicht ist geboten: Fehler im
+Sketch, die z. B. dazu führen, dass permanent eine Taste als gedrückt gemeldet wird,
+können den Umgang mit dem ftDuino am
+PC sehr störrisch machen. Sobald der
+ftDuino dann am PC steckt fängt er ggf. an,
+wirre Tastendrücke an den PC zu melden,
+und der PC ist kaum mehr sinnvoll zu
+bedienen.
+
+auf den ftDuino vorbereiten und kurz vor
+dem eigentlichen Flashvorgang den ResetTaster loslassen. So wird der störrische
+Sketch ersetzt und kann keine Verwirrung
+mehr stiften.
+[1]
+
+Till Harbaum: fischertechnikJoystick-Adapter, github.com
+
+Es gab sogar bereits einen Reklamationsfall, bei dem ein User genau das gemacht
+hat und den ftDuino verzweifelt zur „Reparatur“ geschickt hat. Die Lösung für dieses
+Problem ist der Reset-Taster am ftDuino.
+Solange er gedrückt ist läuft der Sketch
+nicht und es werden auch keine störenden
+Tastendrücke an den PC gesendet. Man
+kann daher währenddessen in Ruhe den
+Upload eines weniger störrischen Sketches
+
+[2]
+
+Till Harbaum: ftDuino – OpenSource trifft Konstruktions-Baukasten. ft:pedia 1/2018, S. 85–91.
+
+[3]
+
+Matthew H.: Arduino-JoystickLibrary, instructables.com
+
+[4]
+
+Keyboard-Message-Sketch,
+arduino.cc
+
+[5]
+
+Arduino Keypress-Funktion,
+arduino.cc
+
+Referenzen
+
+
+

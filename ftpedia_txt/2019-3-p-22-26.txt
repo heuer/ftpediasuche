@@ -1,0 +1,213 @@
+
+
+Modell
+
+Lego-Sortiermaschine aus fischertechnik
+Markus Lobmaier
+Spielen mit Lego: Ein Traum für die ganze Familie. Einen Wermutstropfen gibt es allerdings:
+Das Sortieren und Aufräumen. Alle wissen, dass nach einem kreativen Tag mit Lego immer eine
+mühsame und langweilige Sortier- und Aufräumaktion gestartet werden muss.
+Aus diesem Grund entwickelten wir eine
+Maschine mit dem Ziel, das Aufräumen der
+Legosteine für uns zu übernehmen. Nach
+mehreren Entwicklungsstufen ist die
+Maschine heute in der Lage, sowohl die
+Größe als auch die Farbe der Legosteine zu
+erkennen und sie dann anschließend anhand
+dieser Kriterien zu sortieren. Die Hauptkonstruktion, die auf einem Holzgerüst
+aufgebaut wurde, besteht aus rund 3.500
+fischertechnik-Einzelbauteilen. Die Steuerzentrale der Sortiermaschine bilden drei
+fischertechnik-Controller. Das Kernstück
+der Farberkennung stellt ein von uns
+entwickelter Farbsensor dar.
+
+Aussortierung von zu großen
+Steinen
+
+Das ganze Projekt startete zu Zeiten, als es
+noch keine Raupenbeläge für die fischertechnik-Ketten gab. Damals haben wir uns
+überlegen müssen, wie wir ein Förderband
+bauen können. Einige Jahre später führte
+damals Lego Technic die Raupenketten ein.
+Daraufhin haben wir einfach fischertechnik
+und Lego Technic vereint. So entstand ein
+ein Meter langes Förderband, von welchem
+wir die Steine herunter sortiert haben.
+
+Danach geht es auf eine Rutsche, die einen
+so großen Spalt hat, dass zu dünne Steine
+den Spalt nicht passieren können, die
+anderen Steine schon. Die zu dünnen Steine
+fallen hinein und werden anschließend über
+eine Rutsche aus der Maschine aussortiert.
+
+Seitdem entwickele ich an einer Legosortiermaschine, die selbständig sortieren
+kann; mein jüngerer Bruder Lukas hat lange
+Zeit die Programme dazu entwickelt.
+In diesem Beitrag beschreibe ich die
+Maschine, die wir letztes Jahr (2018) im
+Sommer gefilmt haben [1].
+
+
+Der erste Schritt der Maschine besteht
+darin, zu große Steine auszusortieren. Dies
+gelingt mit einer Trommel, die sich um sich
+selbst dreht, und dabei mit einer kleinen
+Menge an Steinen befüllt ist.
+Die Trommel ist aufgebaut wie ein drehendes Sieb. Größere Steine bleiben in der
+Trommel hängen, da die Sieblöcher zu klein
+für diese Steine sind. Die anderen Steine
+gelangen nach und nach durch das Sieb,
+womit die Steine zusätzlich noch vereinzelt
+werden.
+
+Dadurch bleiben zum Schluss nur noch drei
+verschiedene Steintypen in der Maschine.
+Wir bezeichnen diese drei Steintypen nach
+ihrer Größe mit den Attributen klein, mittel
+und groß.
+
+Drehung der Steine und
+Vereinzelung
+Im nächsten Schritt müssen die Steine ausgerichtet werden, damit die glatte Seitenfläche der Steine immer nach oben zeigt.
+Dies ist wichtig für die Farberkennung im
+späteren Verlauf des Prozesses. Außerdem
+
+
+Modell
+
+hat dies einen besseren Rutscheffekt der
+Steine zur Folge. Dieser ist sehr wichtig
+sowohl für die Sortierung der Größe nach
+als auch bei der Verwendung von Rutschen
+in der Farberkennung.
+
+Sortierung der Steingrößen
+Im nächsten Abschnitt der Maschine
+werden nun die Steine nach ihrer Größe
+sortiert. Dabei benutzen wir im heutigen
+
+Aufbau eine mechanische Lösung, die auf
+dem Prinzip des Drehpunktes eines Steines
+beruht.
+Zunächst werden die Steine senkrecht auf
+ein gekipptes Förderband gestellt, das durch
+Trennkammern die Steine voneinander
+trennt und mit dem Förderband mitbewegt.
+Die Bande, die sich auf der zugeneigten
+Seite des Förderbands befindet, verhindert,
+
+
+
+
+
+dass die Steine ungewollt vom Förderband
+fallen. Jedoch wird die Schwerkraft gezielt
+genutzt, um die Steine vom Förderband
+auszusortieren. Dies geschieht mit unterschiedlich großen Vertiefungen der
+Banden, deren Höhe etwas tiefer als der
+Mittelpunkt des Steines sein muss. Jedoch
+ist zu beachten, dass am Anfang der größte
+Stein aussortiert werden muss, damit alle
+drei Steintypen bei der gewünschten Stelle
+das Förderband verlassen.
+
+Farberkennung
+Nachdem die Steine der Größe nach sortiert
+worden sind, muss nun die Farbe der Steine
+ermittelt werden, um sie anschließend vollständig sortieren zu können.
+Bei der Farberkennung der großen Steine
+fallen diese auf eine Rutsche, wo sie
+zunächst durch den ersten Druckluftzylinder gestoppt werden. Eine Lichtschranke auf der Rutsche startet dann die
+Farberkennung. Als erstes wird – unter
+rotem Licht – der Wert des Fotowiderstands
+gemessen.
+Sobald die Messung erfolgt ist, fährt der
+erste Zylinder ein, damit der Stein weiterrutschen kann. Der zweite Zylinder stoppt
+den Stein erneut und nun erfolgt die zweite
+Messung, dieses Mal unter grünem Licht.
+Währenddessen fährt der erste Zylinder
+wieder aus, damit gleich der nächste Stein
+gemessen werden kann.
+
+
+
+Nachdem die zweite Messung beendet
+wurde, öffnet der zweite Zylinder und der
+Stein rutscht bis zum ausgefahrenen dritten
+Zylinder. Sobald der Stein wieder gestoppt
+wurde, fährt wieder der zweite Zylinder aus,
+damit der nächste Stein unter grünem Licht
+gemessen werden kann. Unter der dritten
+Lichtfarbe (blau) wird die letzte der drei
+Messungen durchgeführt.
+
+
+Modell
+
+Nachdem alle Farben gemessen worden
+sind, wird daraus die Farbe des Steins
+ermittelt. Abschließend öffnet sich der
+dritte Zylinder und der Stein gelangt auf die
+Sortierstrecke.
+
+Dies geschieht nach dem gleichen Prinzip
+wie bei einem Tischkicker. Somit kann sich
+sowohl links als auch rechts vom Band eine
+Sortierkiste befinden, wodurch das Förderband nur halb so lang sein muss.
+
+Allgemein muss beachtet werden, dass die
+Zylinder erst dann eingefahren werden,
+wenn die Position vor ihnen frei ist.
+Dadurch verhindern wir, dass sich zwei
+(oder mehr) Steine im gleichen Abschnitt
+der Farberkennung befinden.
+
+Funktion unseres Farbsensors
+Nachdem wir uns den Farbsensor von
+fischertechnik gekauft hatten, hatten wir das
+Problem, alle Farben voneinander zu trennen. Der Farbsensor von fischertechnik hat
+nur eine rote Farbdiode. Daraufhin haben
+wir die Steine mit unterschiedlichen Farbdioden bestrahlt und den Farbsensor von
+fischertechnik nachgestellt:
+Mit den Ergebnissen aus Tab. 1 können wir
+die Reflexionswerte vergleichen und der
+jeweiligen Farbe eines Steins zuordnen.
+
+
+Sortierung
+Nach der Farberkennung gelangen die
+großen Steine auf ein Förderband. Im
+folgenden Abschnitt werden die Steine
+anhand der zuvor ermittelten Farbe vom
+Förderband aus- und dann in die richtigen
+Kisten einsortiert.
+
+
+
+
+Der Unterschied zum Tischkicker liegt bei
+unserer Maschine in der Tatsache, dass der
+Kicker über vier statt zwei Anspielflächen
+verfügt. Durch eine Lichtschranke am
+Anfang der Sortierung wird die Position des
+Steines auf dem Förderband ermittelt und
+ausgerechnet, wann der Stein vom Förderband geschoben werden muss.
+
+Derzeitig werden mit diesem Prinzip nur die
+großen Steine sortiert. Da unsere fischertechnik-Materialkapazitäten
+vollständig
+ausgeschöpft sind, können wir keine
+weiteren Sortierstrecken bauen.
+
+Quellen
+[1]
+
+Markus Lobmaier: Lego Sortiermaschine aus Fischertechnik.
+youtube, 2018.
+
+Farbwerte der Sensor-Erkennung
+
+Tab. 1: Erkannte Farbwerte für verschiedene Lego-Steine
+
+

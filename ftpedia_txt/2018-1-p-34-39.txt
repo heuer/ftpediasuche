@@ -1,0 +1,237 @@
+
+
+Modell
+
+Vom elektromechanischen Betätiger zur
+elektrischen „Dampfmaschine“
+Rüdiger Riedel
+Ein Jahr habe ich gebraucht, um aus einem einfachen Funktionsmodell „Dampfmaschine“ [1]
+eine überzeugende elektromechanische Konstruktion zu entwickeln. Entscheidend waren die
+verbesserte Anordnung der Dauermagnete und der Einsatz des BT Smart Controllers für die
+doppeltwirkende Funktion. Die „Kolben“ arbeiten jetzt sowohl ziehend als auch drückend.
+
+Entwicklungsgang
+In Abb. 1 ist mein erster Versuch zu sehen,
+die Funktion einer Dampfmaschine mit den
+fischertechnik-Elektromagneten nachzubilden. Die Maschine lief sauber mit etwa 12
+V Spannung nach dem Prinzip der Gleichstrommaschine in [3].
+
+Dampfmaschine
+
+Sie war einfach wirkend, also nur ziehend
+an der Kurbel oder nur drückend, je nach
+Polung. Zwei Stabmagnete 4 x 25 mm
+wurden für den „Kolben“ verwendet. Die
+Steuerung ist, kaum zu erkennen, auf der
+Rückseite: Eine Gelenkwürfel-Zunge trägt
+einen kleinen Magneten (4 x 10 mm) und
+der regt einen Reedkontakt an, einmal je
+Umdrehung, der wiederum die beiden Elektromagnete ein- und ausschaltet.
+
+
+Nicht vergessen darf man die Schutzbeschaltung! Sonst ist die Freude am Reedkontakt schnell dahin. Ich habe dazu auf der
+Rückseite der Maschine die parallel
+geschalteten E-Magnete mit einem 220Ohm-Widerstand überbrückt [3].
+Eine erste Verbesserung der Maschine
+bringt der Tipp von geometer, statt der Rollenböcke BS7,5 zu verwenden, die wesentlich leichter gleiten.
+Die Neodym-Magnete mit 4 mm Durchmesser und 25 mm Länge passen nicht recht
+zur Geometrie der Elektromagnete. Der
+Polabstand beträgt etwa 16 mm, 15 mm
+lange Magnete sollten besser funktionieren.
+Mein Ziel war aber, die schon eingeführten
+Neodym-Magnete mit 4 mm Durchmesser
+und 10 mm Länge auch hier zu verwenden.
+
+gleiche Abmessungen wie der ältere Typ 31324
+
+
+Modell
+
+Die Lösung zeigt Abb. 3: Die beiden Stabmagnete auf jeder Seite sind mit gleichnamigen Polen gegeneinander gerichtet.
+Den Abstand stellt man mit der dünnen
+Seite eines V-Bausteins 15 Eck (38240)
+oder Winkelsteins 10 x 15 x 15 (38423) ein.
+
+
+Links der Aufbau, rechts oben von vorne,
+rechts unten die Unterseite
+
+Damit lässt sich schon etwas anfangen:
+
+Der elektromagnetische
+Betätiger
+Der Aufbau ergibt sich aus Abb. 4 bis 9. Für
+einen optimalen Abstand zwischen Läufermagneten und den Elektromagneten sorgen
+die beiden Baustein-Kombinationen
+
+
+WS7,5 – WS15 – WS7.5 – BS5 – BS5 2Z
+
+
+Im Betrieb stößt der Verbinder 30 des
+Läufers rechts und links an die Minitaster,
+damit der Läufer nicht über die beiden
+Ruhepositionen hinausschießt. Eine elektrische Funktion haben die Minitaster nicht.
+
+etwas verschiebbar bleiben
+
+
+
+Die doppeltwirkende ZweizylinderDampfmaschine
+
+
+Dieser Läufer hat zwei stabile Positionen
+bei einem Hub von etwa 13 mm.
+
+teilweise entfernt
+
+
+Angesteuert wird der Betätiger über einen
+Umschalter, also von Hand, oder über einen
+Controller, der die wechselnde Polarität der
+Elektromagnete erzeugt. Die Kraftentwicklung folgt einem Bogen: Am Anfang und
+Ende klein, in der Mitte der Bewegung am
+größten.
+Von Vorteil ist die Schnelligkeit: 10 Hz (d.
+h. zehn volle Bewegungszyklen pro Sekunde vor und zurück) sind problemlos möglich. Man kann auf die Begrenzungen verzichten und so einen größeren Weg überstreichen, wenn das z. B. von Kurbeln und
+einem Schwungrad unterstützt wird.
+
+rechts der BT Smart Controller
+
+Für mein Modell einer Dampfmaschine
+setze ich zwei etwas modifizierte Betätiger
+ein. Der Abstand der Elektromagnete wird
+auf jeder Seite von zwei Baustein-Kombinationen eingestellt, s. o. Dadurch können
+die Anschlüsse und die Verbindungsleitung
+
+der beiden E-Magnete verdeckt geführt
+werden (Abb. 14).
+
+Modell
+
+Die Höhe der E-Magnete zu den Magneten
+des Läufers wird durch Bausteine 2,5
+15 x 45 2+2Z (38277) eingestellt.
+
+vor dem Einbau der E-Magnete
+
+Bei diesem Betätiger werden die älteren
+Elektromagnete 31324 verwendet. Die sind
+zwar schwächer als der neuere Typ 32363,
+aber gebraucht noch leichter erhältlich.
+
+Jeweils zwei Rastachsen mit Kardangelenk
+simulieren das Schubkurbelgetriebe.
+Für das Schwungrad habe ich wegen des
+besseren Aussehens zwei Speichenräder
+(36916) genommen, die mit zweimal drei
+BS7,5 zusammengehalten werden.
+
+
+
+und von der Seite
+
+Nun hat der Betätiger einen kleinen aktiven
+Hub von ungefähr 13 mm. Der passt nicht
+gut zur Rastkurbel (35088), deren Hub bei
+23 mm liegt. Deshalb setze ich zwei
+Kurbeln 40 KR11 (38447) ein, um 90°
+gegeneinander versetzt. Die haben einen
+Hub von annähernd 18 mm. Die Kurbeln
+erhalten eine Scheibe (105195), das Kurbelgestänge wird mit je einem BS7,5 ohne
+weitere Befestigung angelenkt.
+Die Positionserkennung übernehmen zwei
+um 90° versetzt angeordnete Reedkontakte
+(36120), siehe Abb. 18.
+
+
+
+
+paar Zwischenstücke werden die Betätiger
+an den U-Trägern befestigt. Zum besseren
+Transport benutze ich eine Bauplatte 1000
+und sichere die Maschine mit den gelben
+und roten Bausteinen an den Ecken.
+Das Steuerprogramm des
+Controllers zeigt Abb. 19.
+
+BT
+
+Smart
+
+Anmerkung
+
+
+Angeregt werden sie von zwei Stabmagneten 4 x 10 mm, die in zwei Klemmbuchsen
+5 stecken. Zusammen passen sie genau in
+den Zwischenraum des V-Rades 23 x 10
+(das habe ich mir abgeschaut von der
+„fischertechnik Classic Linie Mobile
+Dampfmaschine“).
+Die Zylindergehäuse bestehen aus den
+Seitenteilpaaren
+der
+Baggerschaufel
+(37353) und je zweimal vier Baggerschaufel-Mittelteilen (37355). Außerdem
+werden noch zwei Bauplatten 15 x 90 6Z
+(38245) benötigt, um die Mitte abzudecken.
+
+Wenn alles sauber aufgebaut ist, fest sitzt
+und die Steuermagnete und Reedkontakte
+ausgerichtet sind, läuft die Maschine ruhig
+und elegant. Um etwas anzutreiben fehlt ihr
+allerdings die Leistung. Das liegt an der zu
+geringen Spannung, die der BT Smart
+Controller abgibt: Es sind 7,8 V in beiden
+Richtungen bei 9 V Versorgung durch ein
+stabilisiertes Netzgerät. Auch sind die
+älteren E-Magnete (32363) schwächer als
+die neueren (31324), dafür aber immer noch
+gebraucht erhältlich.
+Die E-Magnete sind im Dauerbetrieb mit 12
+V belastbar [2]. Bei dieser Maschine beträgt
+die Einschaltdauer etwa 70 %, somit könnte
+die Versorgungsspannung bis auf 17 V
+angehoben werden.
+Ein Video der elektrischen Dampfmaschine
+habe ich in Youtube hochgeladen.
+
+Referenzen
+
+
+Aufgebaut habe ich das Ganze auf Basis des
+Schwungradgerüstes in Abb. 17. Über ein
+
+
+[1]
+
+Rüdiger Riedel: Elektrische Dampfmaschine. Bilderpool der
+ftcommunity.
+
+[2]
+
+Rüdiger Riedel: Der Elektromagnet:
+Was kann er (vertragen)? 4/2016, S. 46-51.
+
+[3]
+
+Rüdiger Riedel: Funktionsmodelle
+von Gleich- und Wechselstrommotoren. ft:pedia 4/2016, S. 52-58.
+
+[4]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt-Verlag, 2015, S. 159-182.
+
+[5]
+
+Dirk Fox: Die Dampfmaschine.
+ft:pedia 4/2012, S. 38-45.
+
+
+Modell
+
+
+
+

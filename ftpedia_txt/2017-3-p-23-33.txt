@@ -1,0 +1,510 @@
+
+Modell
+
+Modell
+
+Schwenktüren
+Stefan Busch
+Ein Artikel über Türen? Langweilig: Rahmen, Flügel, Angel – fertig ist die Tür. Aber so einfach
+ist es nicht immer...
+
+Einleitung
+Tatsächlich ist der Aufbau einer Tür in ihrer
+einfachsten Form, der Schwenktür, recht
+unkompliziert: Ein Türblatt ist durch Gelenke schwenkbar an einem Rahmen, dem
+sogenannten Portal oder Türstock befestigt,
+um je nach Bedarf eine Öffnung freizugeben oder zu verschließen. Im fischertechnik-Sortiment gab es früher sogar fertige Türen, die aus nur zwei Bauteilen
+bestanden – wahlweise mit schmalem,
+breitem oder sogar durchsichtigem Türblatt
+(Abb. 1).
+
+gegenüber einer Haupt- oder Nebenschließkante befinden, sind Gegenschließkanten
+(oder –flächen, s. Abb. 2) [1].
+
+
+Die Lage des Türblatts bei vollständig
+geöffneter oder geschlossener Tür wird als
+Offen- beziehungsweise Schließendlage bezeichnet.
+
+Grundkomponenten
+
+Hier soll es natürlich um etwas größere
+Modelle gehen. Zunächst sind aber noch
+einige Begriffe zu klären, die für die
+Betrachtungen wichtig sind: Neben dem
+Türblatt kommt dessen Kanten besondere
+Bedeutung zu, beispielsweise als Ansatzort
+für Drehlager aber auch als Gefahrenquelle
+(siehe den Quetschschutz in Abb. 20). Der
+Rand des Türblatts, dessen Abstand von der
+parallelen Gegenkante des Portals die
+Öffnungsweite der Tür bestimmt, wird
+Hauptschließkante genannt, jeder andere
+Rand des Türblatts Neben- schließkante.
+Kanten oder Flächen am Portal, die sich
+
+Die
+Komponenten einer einfachen
+Schwenktür mit Doppelflügel dienen im
+Folgenden als Urform für den Bau komplizierterer Türtypen, müssen also ohne große
+Umbauten in verschiedenen Konstruktionen einsetzbar sein. Die Türblätter sollen
+einerseits möglichst dünn sein, andererseits
+aber viele Ansatzpunkte für Drehlager bieten. Erreicht wird dies durch eine Kombination aus Bauplatten 15 x 90 und 30 x 90, die
+das eigentliche Türblatt darstellen, zwei
+Bauplatten 15 x 60 als Querträger und Baustein 7,5 zur Verbindung von Längs- und
+Querträgern (Abb. 3).
+
+
+
+
+Aus der Breite der Türflügel ergibt sich eine
+Türöffnung von etwa 90 x 150 mm (Höhe x
+Weite). Das Portal wird an seiner Basis nur
+durch zwei Anbauwinkel gegen Verkippen
+abgestützt, um die Beobachtung der Türbewegung nicht zu behindern. Ein Einsatz im
+harten Alltag würde zusätzliche Aussteifungen erfordern. Zur einfachen Anpassung der
+Rahmenweite ist das Portal über sechs
+Bausteine 5 auf der Grundplatte befestigt.
+
+einer Schwenktür: Portal, Türblätter und
+Drehsäulen (grau)
+
+Angetrieben werden Schwenktüren meist
+über vertikale Achsen, sogenannte Drehsäulen (Abb. 3). Im Modell wird eine synchrone Bewegung beider Türblätter mittels
+Schneckengetriebe bewirkt (Abb. 4).
+
+Drehsäulen der Türen in grau. Linke und
+rechte Seite des Getriebes unterschiedlich
+
+Durch Verwendung einer Handkurbel lässt
+sich die Geschwindigkeit der Türbewegung
+gut steuern. Natürlich können die Drehsäulen auch kraftbetätigt gedreht werden.1 Bei
+Verwendung eines pneumatischen Antriebs
+kann im Gegensatz zu motorischen Antrie1
+
+
+Die zum Öffnen oder Schließen der Türflügel
+erforderliche Energie wird vollständig oder
+teilweise von einer Kraftmaschine zugeführt,
+beispielsweise einem Elektromotor.
+
+ben auf eine Endabschaltung verzichtet
+werden, was die Komplexität der Konstruktion deutlich verringert. Allerdings
+muss die lineare Bewegung des Zylinders in
+die Drehbewegung der Drehsäulen übersetzt werden. Dies geschieht bei der in
+Zahnstangengetriebe.
+
+von vorn oben; mittig: rückseitige Ansicht
+
+Zur Führung der Zahnstangen 61 dient eine
+Kombination aus zwei E-Magnetführungsplatten 15 x 20 und einem Baustein 15 sowie einer Führung, bestehend aus zwei
+Bausteinen 7,5 und einer Achse 125. 2 Letztere ist auf einer Seite durch zwei Klemmbuchsen 5 gegen Herausziehen gesichert.
+Zwei Riegelscheiben Z20 verhindern ein
+Verschieben des Winkelsteins. Die Bewegung der Türblätter lässt sich durch Verwendung einer pneumatischen Drossel am
+‚Auspuff‘ des Zylinders dämpfen [2, 3].
+Bei dieser Konstruktion erfolgt die Bewegung der Türblätter allerdings unsynchronisiert: Der Flügel, dessen Schwenkmechanismus die geringere Reibung aufweist,
+
+Die Idee stammt aus dem Internet. Leider kann
+ich den Erfinder nicht benennen.
+
+
+Modell
+
+wird zuerst bewegt. Dieses Verhalten ist
+übrigens auch beim Original zu beobachten.
+Außerdem begrenzt der Maximalhub des
+Zylinders den ohne größeren Aufwand
+erreichbaren Drehwinkel der angetriebenen
+Achsen.
+
+Einfache Schwenktür
+Zum Bau einer einfachen Schwenktür aus
+den beschriebenen Grundelementen werden
+die Türblätter mit je zwei Gelenksteinen
+(Gelenkwürfel-Klaue 7,5 & -Zunge 7,5) am
+Portal angeschlagen. Die Drehsäulen verlaufen in den Schwenkachsen und sind mit
+den Türblättern durch Rastadapter 20 und
+Verbinder 30 formschlüssig verbunden
+(Abb. 6).
+
+
+Zur Festlegung der Schließendlage der Türblätter dienen zwei Anschläge im Portal
+bestehend aus Bauplatten 15 x 15 (Abb. 7).
+
+Anschläge grau
+
+
+
+
+Aufgrund ihres unkomplizierten Aufbaus
+finden solche einfachen Schwenktüren
+breite Anwendung. Sie erweisen sich allerdings als nachteilig oder gar ungeeignet,
+wenn nur begrenzter Raum für den
+Öffnungsvorgang zur Verfügung steht oder
+spezielle Anforderungen an die Offenendlage des Türblatts gestellt werden. So sind
+Türen moderner Möbel mit komplizierten
+Scharnieren ausgestattet, um den Drehpunkt der Tür während des Öffnens zu
+verschieben.
+Interessante Türkonstruktionen finden sich
+auch bei öffentlichen Verkehrsmitteln wie
+Bussen und Bahnen, da Türen hier einerseits große Öffnungen freigeben müssen,
+andererseits aber nicht viel freier Raum für
+den Öffnungsvorgang zur Verfügung steht
+und die Türblätter im geöffneten Zustand
+das Ein- und Aussteigen nicht behindern
+dürfen.
+
+Innenschwenktür
+Eine häufig in Bussen verwendete
+Schwenktür mit verringertem Raumbedarf
+stellt die Innenschwenktür dar. Bei diesem
+Türtyp wird das Türblatt während des
+Schwenkens zusätzlich gegen die Schwenkrichtung gedreht [4].
+Dazu wird das Türblatt von zwei formschlüssig an einer vertikalen Drehsäule
+angebrachten Schwenkarmen gehalten, die
+an Ober- und Unterkante des Türblatts
+angelenkt sind. Diese Anordnung bildet die
+sogenannten Schwenkdrehlager der Tür und
+erlaubt den Flügel zwischen den Tragarmen
+hindurch zu schwenken. Damit sich das
+Türblatt beim Schwenken der Tragarme
+dreht, wird seine Hauptschließkante mit
+Hilfe eines Schwenkschiebelagers geführt.
+Dieses besteht aus einer am Türflügel
+
+
+
+In der Patentsprache liest sich diese Beschreibung übrigens so: „ ... Türflügel, der eine seiner
+Hauptschließkante zugeordnete Schwenkschiebelagerung, die eine am Türflügel angeordnete
+Lagerachse mit einem in eine fahrzeugfeste
+
+angebrachten Rolle, die in einer Längsführung an der Oberseite des Portals verschieblich gelagert ist (Abb. 9).3
+
+unteren Bild ist deutlich sichtbar, dass die
+Rolle des Schwenkschiebelagers nur geführt
+wird und keine Last trägt.
+
+Wird das Türblatt wie hier nur geführt,
+handelt es sich um eine Führungsschiene,
+trägt die Schiene auch (einen Teil) des
+Gewichts des Türflügels, wird sie als
+Tragschiene bezeichnet. Ein Verschwenken
+des Türblatts über das Schwenkdrehlager
+führt zu einem linearen Verschub der
+Führungsrolle und damit zu einer Drehung
+des Türblatts.
+und die erforderlichen Modifikationen der
+Grundkomponenten. Die Querträger der
+Türblätter werden von einer Kombination
+aus drei Bausteinen 7,5 und einem Verbinder 45 gebildet, um Ansatzpunkte für die
+Drehlager der Schwenkarme und die
+Schwenkschiebelager zu schaffen.
+
+Längsführung eingreifenden und darin verschiebbar gelagerten Führungselement enthält,
+und eine seiner Nebenschließkante zugeordnete
+Schwenkdrehlagerung aufweist.“ [3]
+
+
+
+Die leicht über die Hinterkante des Türblatts herausragenden Bauplatten 30 x 15
+(oben) und 60 x 15 (unten) dienen lediglich
+als Anschläge, um die Schließendlage des
+Türblatts festzulegen (Abb. 11).
+
+Schwenkschiebelager sowie Längsführung mit
+Halterung. Rechts: Aufbau des oberen
+Schwenkarms.
+
+Die türseitigen Drehlager der Schwenkarme
+– im Modell Statikstreben 30 – bilden
+Statikadapter; die kraftschlüssige Verbindung mit einer als Drehsäule dienenden
+Achse 150 erfolgt mittels Mitnehmer und
+Klemmbuchsen 5 (Abb. 11, rechts).
+Die Schwenkschiebelager der Türblätter
+konnten in Modellgröße nicht vorbildgetreu
+
+
+Modell
+
+nachgebildet werden. Sie setzen sich im
+Modell aus je einem Achslager, einer
+Aufnahmeachse mit Rastkupplung 15 und
+einem Baustein 7,5 zusammen, der wiederum von einer horizontalen Achse 170
+geführt wird. Die Rastkupplungen an den
+Aufnahmeachsen sind wichtig, da die
+Schwenkschiebelager anders als im Original auch einen Teil des Türblattgewichts
+tragen müssen, um die Tür leichtgängig zu
+halten. Die Führungsschiene übernimmt
+hier also die Funktion einer Tragschiene.
+Das Portal erhält Achslager (GelenkwürfelKlaue 7,5 & Lagerhülse 15) zur Aufnahme
+der Drehsäulen, sowie Halterungen für die
+horizontale Längsführung, pro Seite ein
+Baustein 5 und 7,5. Schließlich wird die
+Höhe des Portals durch Einfügen je eines
+Bausteins 7,5 und 5 pro Stütze vergrößert
+(Abb. 12).
+
+
+Für eine leichtgängige Bewegung der Türblätter ist eine genaue Abstimmung der
+Höhe der Längsführung, des Abstandes der
+Schwenkschiebelager zur Hauptschließkante des Türblatts und des vertikalen
+Abstands der Schwenkarme erforderlich.
+Dies gilt umso mehr, wenn die Tür
+pneumatisch angetrieben werden soll. Hier
+kann etwas Geduld gefragt sein. 4
+
+Alle hier beschriebenen Modelle wurden mehrfach gebaut, um ihre Funktionstüchtigkeit sicherzustellen.
+
+
+
+pneumatischem Antrieb
+
+Außenschwenktür
+
+der Schließendlage in die Offenendlage
+oder zurück bewegen lässt.5
+
+Ein weiterer häufig in Bussen eingesetzter
+Türtyp ist die Außenschwenktür [5]. Wie
+bei der Innenschwenktür wird das Türblatt
+durch Tragarme gehalten, die allerdings an
+der Innenseite des Blatts angelenkt und
+zudem gewinkelt sind, um bei geöffneter
+Tür um die Gegenschließkante (also einer
+Seitenkante des Portals) herumreichen zu
+können (Abb. 14). Diese Tragarme werden
+aufgrund ihrer Funktion auch als Traglenker bezeichnet. Zusätzlich verbindet ein
+Führungslenker Oberkante des Türblatts
+und Portal so, dass sich der Türflügel ungefähr nach Art eines Parallelogramms von
+
+zu erkennen ist, wie der gewinkelte Traglenker
+um die Gegenschließkante herumreicht.
+Ebenfalls sichtbar ist der Führungslenker.
+
+
+
+Die Hauptschließkante ist also dem Führungslenker, die Nebenschließkante dem Traglenker
+zugeordnet.
+
+
+Modell
+
+Die Herausforderung bei der Umsetzung
+dieses Prinzips stellt die Realisierung der
+benötigten Geometrie im FischertechnikRaster dar, da Winkel, Abmessung und
+Position der Lager von Trag- und Führungslenkern nicht frei wählbar sind. Aus diesem
+Grund sind etwas umfangreichere Änderungen an den Standardkomponenten erforderlich als bei den zuvor beschrieben Modellen
+(Abb. 15).
+
+Führungslenker und Drehsäule, die Bauplatte 5 x 45 am unteren Querträger ist nicht
+dargestellt. Rechts: Aufbau des oberen
+Traglenkers und des Führungslenkers
+
+
+Zur Schaffung der türseitigen Drehlager der
+Traglenker werden die Querträger der Türblätter durch Statik-Streben 30 mit Mittelloch gebildet, die wiederum über Strebenadapter und Bausteine 7,5 mit dem Türblatt
+verbunden sind (Abb. 16). Verbindungsstopfen 6 fungieren als Achsen. Die Bauplatten 15 x 45 am unteren Querträger dienen zur Aussteifung des Türblatts.
+Die Traglenker, bestehend aus einer StatikL-Lasche und einer Statik-Strebe 30, sind
+wie bei der Innenschwenktür durch Mitnehmer und Klemmbuchsen 5 kraftschlüssig mit den Drehsäulen verbunden, hier
+Achsen 150.6 Zur besseren Stabilisierung
+der Arme sind die L-Laschen zusätzlich auf
+Riegelscheiben gelagert (Abb. 16, rechts).
+
+
+Für eine bündig mit den obenliegenden Antriebszahnrädern abschließende Drehsäule kann alternativ eine Kombination aus einer Achse 90 und
+
+Je eine Statik-Lasche 21,2 und eine StatikStrebe 15 bilden die Führungslenker und
+sind mit Strebenadaptern an der Oberkante
+der Türblätter angelenkt. Die genaue Position der Strebenadapter in der Nut der Bausteine 7,5 hat entschiedenen Einfluss auf
+die Endlage der Türblätter, muss also später
+entsprechend justiert werden. Die Schließendlage der Türblätter ist durch einen
+justierbaren Anschlag bestehend aus einem
+auf der Grundplatte quer zum Portal eingebauten Baustein 5 und einer Bauplatte
+15 x 15 festgelegt. Um eine durchgehende
+Kante zu erhalten, wird dieser Anschlag
+links und rechts durch auf Bausteinen 5
+angebrachten Bauplatten 15 x 45 fortgeführt (Abb. 15 und 19).
+Da Trag- und Führungslenker teilweise in
+das Profil des Portals hineinreichen, müssen
+hier Aussparungen geschaffen werden,
+indem Winkelträger 15 und 30 Teile der
+Stützen und des Querträgers bilden
+(Abb. 17). Wie bei der Innenschwenktür
+muss die Höhe des Portals angepasst
+
+einer Kunststoffachse 40 gekoppelt durch eine
+Klemmkupplung 20 genutzt werden.
+
+
+
+werden, hier durch je zwei Bausteine 5 pro
+Stütze. Der Querträger ist wegen der geringeren Portalweite kürzer und enthält die
+beiden Achslager für die Führungslenker.
+Die hierzu verwendeten Bausteine mit
+Bohrung sind gegenüber der Portalfront um
+die Breite eines Bausteins 5 nach hinten
+versetzt.
+
+Wie schon bei der Innenschwenktür kann
+zur Abstimmung der Geometrie der verschiedenen Komponenten etwas Geduld erforderlich sein, bis die Türflügel synchron
+und vorbildgerecht in die Endlagen schwenken.
+
+versetzte Lager für den Führungslenker sowie
+die Winkelsteine in Stütze und Querträger des
+Portals (unten allerdings nur schlecht zu
+erkennen).
+
+Die geringere Portalweite erfordert auch
+eine Modifizierung des Schneckengetriebes
+(Abb. 18), das nun – von der Handkurbel
+abgesehen – symmetrisch aufgebaut werden
+kann.
+
+Schneckengetriebes der Außenschwenktür.
+
+
+Schließvorgang im Modell
+
+Falttür
+Falttüren zeichnen sich durch Türblätter
+aus, die an ihren Vertikalkanten gelenkig zu
+Flügelpaaren verbunden sind und beim Öffnungsvorgang quer zur Schließebene aufeinander gefaltet werden [6].
+
+Modell
+
+Häufig sind diese Türen freitragend, das
+heißt, das Gewicht der Türblätter wird über
+die Lager eines ‚festen‘, am Portal angeschlagenen Blatts7 abgetragen. Eine Tragschiene ist dann nicht erforderlich (gut
+erkennbar in Abb. 20).
+Das Öffnen oder Schließen der Tür erfolgt
+durch Schwenken des ‚festen‘ Türflügels
+um eine vertikale Achse am Portal. Die
+Hauptschließkante am mitgeschwenkten
+‚losen‘ Flügel wird wie bei einer Innenschwenktür durch ein obenliegendes
+Schwenkschiebelager geführt. Damit die
+Türblätter in Schließendlage aufeinander
+liegen können, müssen die sie verbindenden
+Gelenke über die Außenfläche der Türblätter hinausragen.
+Falttüren finden sich meist in älteren
+Straßen- oder U-Bahnen.
+Im Modell (Abb. 21) finden wieder modifizierte Standardtürblätter Verwendung, hier
+allerdings weisen die Querträger nach
+außen, um das Aufeinanderfalten der Türblätter zu ermöglichen.
+
+Frontansicht
+werden durch eine Schiene geführt, aber nicht
+getragen, die Flügel sind freitragend. Die
+vertikalen Nebenschließkanten der Türblätter
+sind durch Gummiwülste geschützt
+(Quetschgefahr).
+
+
+In Anlehnung an die Bezeichnung der Rollen
+eines Flaschenzuges werden hier das am Portal
+
+Das die beiden Türblätter verbindende
+Gelenk bilden je Türblatt zwei quer angeordnete Bausteine 7,5 und eine Achse 90,
+die durch eine Klemmbuchse gegen Herausfallen gesichert ist. Das ‚feste‘ Türblatt
+ist schmaler als das ‚lose‘ und über Gelenksteine am Portal angeschlagen (Abb. 22).
+angeschlagene Türblatt als ‚fest‘, alle anderen
+Türblätter als ‚lose‘ bezeichnet.
+
+
+Schwenkschiebelager. Deutlich sichtbar ist der
+Hebel zum Auslenken der Türblätter aus der
+Schließendlage
+
+Durch Drehen des ‚losen‘ Türblatts während des Öffnungsvorgangs wird der Hebelarm immer geringer, so dass das Drehmoment abnimmt bis in der Nähe der Offenendlage nur noch Zugkräfte auf das
+Schwenkschieblager
+wirken.
+Beim
+Schließen der Tür dreht ein entgegengesetztes Moment die Türblätter in die
+Schließendlage. Diese Konstruktion ist
+zwar nicht mehr vorbildgerecht, erzeugt
+aber mit geringem Aufwand eine originalgetreue Türbewegung.
+
+Anders als beim Vorbild kann das Öffnen
+der Tür nicht allein durch Schwenken des
+‚festen‘ Türblatts erfolgen, da nicht genug
+Kraft aufgebracht werden kann, um das
+freie Türblatt in Öffnungs- oder Schließendlage zu bewegen. Eine Betätigung durch
+Verschub des Schwenkschiebelagers scheitert daran, dass die Verbindung der Türflügel wegen der außenliegenden Gelenke
+in Schließendlage in Längsrichtung druckstabil ist.
+Anders als bei den bisher beschriebenen
+Modellen sind zum Öffnen der Falttür also
+zwei aufeinanderfolgende Bewegungen
+nötig: Zunächst das Andrehen des freien
+Blatts (Drehbewegung) zur Auslenkung des
+Zwischengelenks, gefolgt vom Verschieben
+des Schwenkschiebelagers in die Offenendlage (lineare Bewegung).
+Um beide Bewegungen mit nur einem
+Antrieb zu bewirken, wird das Schwenkschiebelager des ‚losen‘ Türblatts um einen
+kraftschlüssig mit dem Türblatt verbundenen Hebel erweitert, der mit einer
+Antriebskette verbunden ist. Zu Beginn des
+Öffnungsvorgangs – die Türflügel befinden
+sich in Schließendlage – erzeugt die von der
+Kette übertragene Kraft einerseits ein Drehmoment am Türblatt, das dadurch ausgelenkt wird, andererseits Zugkräfte, die zum
+Verschub des Lagers in Offenendlage führt.
+
+
+Baustein 15 zur Befestigung der Blende in
+grau. Der Querträger des Portals ist nicht
+dargestellt.
+
+und das Schwenkschiebelager in Portalebene liegen, wird der Querträger bestehend
+aus Statik-Winkelträgern 15 und 120 nach
+hinten versetzt. Die symmetrische Ausführung des Kettenantriebs erlaubt es, den
+Handkurbelantrieb auf beiden Seiten einzusetzen. Die Antriebskette besteht aus 83
+Gliedern.
+
+
+Modell
+
+Referenzen
+
+
+Eine Bauplatte 15 x 90 dient zur Abdeckung der Gelenksteine. Um Gelenken,
+Türblättern und Schwenkschieblager in
+Offenendlage ausreichend Platz zu bieten,
+wird die Blende über einen horizontal in der
+Portalstütze eingebauten Baustein 15 gehalten. Die Fertigstellung dieses Türmodells
+erfordert keine Feinjustierung.
+
+[1]
+
+BG Bau: Begriffsbestimmungen.
+
+[2]
+
+Stefan Falk: Druckluftsteuerungen
+(Teil 1). ft:pedia 1/2014, S. 58-72.
+
+[3]
+
+Andreas Tacke: ft-Spezialteile made
+by TST (Teil 9). ft:pedia 3/2014, S.
+20.
+
+[4]
+
+Gregor Milan, Horst Goldbach:
+Innenschwenktür oder Falttür. DE
+19948852 C1.
+
+[5]
+
+Martin Fink: Einklemmschutz für
+Nebenschließkanten bei Außenschwingtüren. EP 0408537 B1.
+
+[6]
+
+Klaus Fromme, Engelbert Przygoda,
+Walter Sprick: Falttür oder Faltwand aus plattenförmigen Türflügeln. EP 0032218 A1.
+
+[7]
+
+Harald Steinhaus: Luken und Türen.
+Bilderpool der ft:community.
+
+
+

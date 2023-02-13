@@ -1,0 +1,475 @@
+
+Modell
+
+Modell
+
+Großprojekt Seilbahn (Teil 6): Reifenförderer
+Tilo Rust
+Diese Serie begleitet das Großprojekt „Kuppelbare Einseilumlaufbahn (10-MGD)“ im Fördertechnik-Museum Sinsheim von Anfang bis zur Fertigstellung und Ausstellung auf der BUGA
+2023 [1] in Mannheim. In diesem Teil dreht sich alles um das Detail der Reifenförderer, jenem
+zentralen Mechanismus, der die Gondeln innerhalb der Station auf den Schienen fortbewegt.
+Und es dreht sich um ein wunderbares Lehrstück zum Thema Scheitern und Neubauen.
+
+Umlauf
+Wenn bei einer kuppelbaren Einseilumlaufbahn die Gondeln oder Sessel (fachlich
+korrekt als „Fahrzeuge“ bezeichnet) am Seil
+in die Station einfahren, dann haben sie eine
+Geschwindigkeit von etwa 6,5 m/s (bei
+unserem Modell maßstabsgetreu also ca.
+65 cm/s). Das ist natürlich zu schnell, um
+einzusteigen. Aus diesem Grunde werden
+die Fahrzeuge mit Hilfe einer Klemme –
+
+ähnlich einer Wäscheklammer – vom Seil
+getrennt. In der Station fahren sie dann auf
+einer Schiene, werden abgebremst, die Tür
+bzw. der Bügel öffnet sich, man kann ausund einsteigen. Dann, auf der anderen
+Stationsseite, schließen sich diese Sicherheitsvorrichtungen wieder, das Fahrzeug
+wird beschleunigt – exakt bis auf die
+Geschwindigkeit des Seils – und schließlich
+in nur 0,6 s eingehängt und festgeklemmt.
+
+Einbau. Die Stahlkonstruktion, welche diese wie ein Bogen überspannt, nennen wir „C-Stücke“;
+sie wurden mehrfach in unseren Beiträgen erwähnt.
+(Foto: TR, mit Dank und Genehmigung von Doppelmayr/Garaventa)
+
+
+
+Keilriemen, welche jeweils mit einer kleinen Rolle gespannt werden. Man beachte: Die Lagerung ist
+im Original „nur“ mittig – für unser „Problemchen“ im Modell von Relevanz.
+(Foto: TR, mit Dank und Genehmigung von Doppelmayr/Garaventa)
+
+Diesen Weg nennt man Stationsumlauf.
+Über die Klemme und die Gondel sowie die
+Türöffnung werden wir noch detailliert
+berichten.
+Während das Fahrzeug aber auf besagter
+Schiene fährt, muss es auch angetrieben
+werden. Dies geschieht mit einer Reihe von
+Gummireifen, die sich permanent drehen
+und auf die Oberseite eines „Schuhs“
+drücken, einer Lauffläche an der Klemme,
+und diese so vorantreiben.
+Die ganze Konstruktion befindet sich im
+Dachbereich der Seilbahn über den
+Gondeln.
+
+Funktion
+Bei den Reifenförderern laufen die ersten
+Reifen exakt in der Geschwindigkeit des
+Seils, sodass die Gondel stabilisiert werden
+kann und quasi doppelt geführt wird. Der
+
+
+anschließende Auskuppelvorgang geschieht in 0,6 bis 0,9 s. Ab diesem Moment
+treibt das Seil die Gondel nicht mehr an. Die
+aufeinander folgenden Reifen werden nun
+jeweils etwas langsamer, etwa 10 % pro
+Reifen, bis die Gondeln auf ca. 0,3 m/s
+abgebremst sind. In unserem Modell erreichen wir das durch Paarung eines Ritzels 30
+und Ritzels 22 als 3D-Druck (dank an
+Michael Sengstschmid), im Original
+geschieht dies mit Keilriemen auf unterschiedlich großen Riemenscheiben.
+Für einen Stationsumlauf sind in unserem
+Modell pro Station 120 Reifen nötig. Das
+zeigt, wie wichtig deren Ausfallsicherheit
+und modularer Aufbau sind. (Gebaut aus
+120 Achsen, 240 Ritzeln mit Nabe, 240
+BS 15 mit Loch als Lager – pro Station; das
+nennt man Massenproduktion.)
+
+
+Modell
+
+auch um die Kurve anordnen, wie die Gondeln auf der Schiene hängen und wie die C-Stücke die
+Niederhalteschiene tragen. Das wollen wir in unserem Modell natürlich so gut wie möglich
+nachbauen. (Foto mit Dank und Genehmigung von Doppelmayr/Garaventa)
+
+Umsetzung
+Wir haben uns das Original auf der Baustelle der BUGA23 genau anschauen
+können und die Details nachgebaut, soweit
+das machbar war. Mit folgenden wichtigen
+Änderungen: Bei allen Tests haben wir feststellen müssen, dass eine einseitige Lagerung der Achsen in der Mitte zu ungenau
+war und zu viel Reibung verursachte. Da
+unsere Anlage aber mehrere Stunden pro
+Tag ohne Ausfall laufen sollte, erschien es
+uns sicherer, ein zweites Lager auf der
+Innenseite anzubringen. Außerdem verwenden wir Ketten statt Keilriemen.
+Ein weiteres Problem: Die Toleranzen im
+Original sind, gemessen an jenen, die wir
+zustande bringen, minimal. Diese werden
+von den luftgefüllten Reifen ausgeglichen.
+Um ebenfalls flexibel zu sein, entwickelten
+wir einen Reifenförderer, der sich selbst wie
+eine Schlange nach oben und unten bewegen kann und damit an die Klemmen anpassen sollte. Der Andruck sollte über Eigengewicht und zusätzliche Federbeine erfolgen. (Ist der Andruck zu klein, rutschen die
+Reifen. Ist er zu groß, sind Reibung und
+Kräfte zu stark, die Motoren müssen zu viel
+leisten, Ausfälle werden häufiger.)
+
+Die Aufstellung der Prototypen zeigt unsere
+Versuche. Zuerst entwickelten wir ein
+Modell, das recht steif war, aber aus sehr
+vielen Teilen bestand. Hier hatten wir Bedenken, dass wir die Toleranzen nicht ausgleichen können (wie weitreichend dieser
+Irrtum war, dazu gleich mehr). Zudem war
+der Bau aus sehr vielen Bauteilen zeitaufwändig und wuchtig, so dass wir sogar an
+der Klemme Änderungen vornehmen mussten. Die gelben Streben waren nötig, um alle
+Teile zu verriegeln.
+Die vereinfachte und schmalere Version
+basierte immer noch auf den alten Reifen 45
+und einer Lagerung auf beiden Seiten.
+Bemerkenswert sind die Gelenkbausteine
+45 nach jeweils vier Reifen. In der ersten
+Version hatten wir jede Achse einzeln in
+den Bohrungen dieser Gelenksteine gelagert („Schlange“). In der eingebauten Version wurden diese Module mit Ketten abgehängt und zusätzlich mit Flexschienen angedrückt bzw. in Längsrichtung stabilisiert.
+Die Überlegung war, recht steife Reifen zu
+benutzen, diese aber flexibel zu lagern, um
+so die Höhentoleranzen abzufedern. Daher
+wählten wir die alten harten Reifen 45
+(31018), da wir befürchteten, dass die
+
+
+Mäntel der neuen Reifen auf den Felgen
+rutschen könnten. Dies erwies sich später
+als großer Nachteil und Irrtum.
+Wir bauten ca. drei Meter dieser Version in
+die Antriebsstation ein, motorisierten diese
+und versuchten, die Gondeln damit zu
+
+befördern. Das gelang zwar, aber sobald
+eine zweite Gondel in der Strecke oder die
+Klemme nicht genau gefertigt war, bewegte
+sich ein Teil der „Schlange“, welches eine
+Übertragung der Vertikalbewegung in die
+nächsten Module zur Folge hatte – die erste
+
+Einzelaufhängungen zu aufwändig. Die „Schlange“ (zweite Baugruppe) und deren verbaute Version
+(dritte Baugruppe) schienen perfekt. Das Endprodukt (vierte Baugruppe) sieht aber vollkommen
+anders aus. Rechts daneben: ein Entwurf einer Einzelradaufhängung.
+Unten: die erste Konstruktion einer Kurve – leider mit unpassenden Radien.
+
+
+Modell
+
+(31008) flexibel gebaut, um Toleranzen auszugleichen – unser Fehler. Aufgehängt ist er an den kurzen
+Ketten seitlich (rechts, direkt vor den Flexschienen und in der Mitte hinter dem Ritzel 20), gefedert
+und geführt über die Flexschienen. Das Problem: Jede Gondel hebt den Reifenförderer an, bewegt
+damit die komplette zusammenhängende Anlage und bringt den Motor aus dem Gleichgewicht. Ein
+dynamischer Prozess, der nicht zu beherrschen ist.
+
+Gondel ließ sich nicht mehr bewegen.
+Komplex war außerdem, dass die Motoren
+exakt in der Mitte gelagert werden mussten,
+da ihr Gewicht den Reifenförderer nach
+einer Seite kippen ließ.
+Es war aussichtslos, wir verzweifelten an
+den Justage-Versuchen und scheiterten an
+zu vielen Parametern. Nach mehreren
+Wochen des Testens und Optimierens
+waren mehr und mehr Bauteile angebracht,
+nichts war mehr so wie geplant und nichts
+funktionierte.
+Als ich (Tilo) nach einem sehr frustrierenden Bautag nach Hause fuhr und mein Leid,
+unsere Verzweiflung und die Angst des
+Scheiterns einem unserer Projektmitglieder
+schilderte, setzte dieser [SS] sich mitten in
+der Nacht hin und hatte den EurekaMoment! Zwei Fotos später bastelte auch
+ich noch schnell auf dem Weg ins Bett. Und
+keine 24 Stunden später stand in einer Entwickler-Videokonferenz fest: Wir reißen
+alles ab! Die ganzen Reifenförderer zerlegen und alles von vorne. Scheitern tut
+weh.
+
+beweglich waren. Sobald man Druck von
+oben aufbringt, weichen diese seitlich aus.
+Dieses labile Konstrukt kann nicht funktionieren.
+
+Neustart
+Der Reifenförderer musste komplett stabilisiert und seine Position genau definiert
+werden. Die nötige Toleranz und der
+Anpressdruck mussten aus dem Reifen
+kommen.
+So schwer es mir als „Klassik-fischertechniker“ fiel, aber die alten, harten Reifen
+mussten den neuen (Felge 30 und Reifen
+50) weichen. Stahlachsen wurden durch
+Kunststoffachsen ersetzt und die Lagerung
+so gestaltet, dass sich nicht viel bewegt,
+während die Module einfach zu bauen sind
+und sich fest in die C-Stücke einfügen.
+All das geschah innerhalb von 24 Stunden:
+Eine komplette Neukonstruktion, erste Prototypen,
+fischertechnik-Designer-Zeichnungen und Funktionstests – Videokonferenz, Diskussion bis zum Entschluss und
+Bestellung der fehlenden Teile.
+
+Das Problem: Technisch gesehen verhielt
+sich unsere Entwicklung wie zwei aufeinander stehende Kugeln, die in alle Richtungen
+
+
+The Show must go on
+Das war etwa eine Woche vor der ftc-SüdConvention 2022, auf der unser Modell ausgestellt werden und laufen sollte, da uns
+Sponsoren besuchen wollten.
+Deswegen fuhren wir im wahrsten Sinne
+des Wortes zweigleisig. Auf dem einen
+Gleis förderte der alte Reifenförderer
+immer schön eine Gondel von vorne nach
+hinten. Nicht zu häufig, um nicht auszufallen. Auf dem anderen (hinteren,
+versteckten) Gleis hatten wir den neuen
+Prototypen bereits verbaut und getestet –
+erfolgreich! Aber eben nur so klein, dass
+wir ihn nicht zeigen wollten.
+Drei Wochen später: Die neuen Teile sind
+angekommen, die Halbzeuge gefertigt, unzählige Hände helfen beim Umbau. Nur
+Stunden später fuhren die ersten Gondeln
+ohne Probleme und ohne zu großen Justage-
+
+Aufwand über mehrere Meter entlang der
+Schiene – und zwar mehrere Gondeln
+gleichzeitig.
+Anschließend ging es an den Antrieb, der
+nun platziert werden konnte, wo wir wollten. Danach kam die Kurve an die Reihe.
+An dieser hätten wir uns mit dem alten
+Reifenförderer sicher die Zähne ausgebissen. Jetzt aber waren es nur wenige Bautage, bis der Stationsumlauf vollkommen
+funktionierte.
+Zeitgleich wurde eine Blocksteuerung mit
+Hilfe von TXTs entwickelt, die für gleichbleibenden Abstand der Gondeln und Kollisionsvermeidung sorgt, ebenso für die
+Synchronisation von Seilgeschwindigkeit
+und Reifenförderer. Über beide Themen
+werden wir noch ausführlich berichten.
+Die Neuentwicklung weicht in einigen
+Punkten deutlich von der alten Version ab –
+
+gewartet werden. Je nach Bedarf kann er vorne oder hinten angebracht werden und stabilisiert dabei
+gleichzeitig den Reifenförderer.
+
+
+Modell
+
+
+was letztlich auch der Grund für den Erfolg
+ist:
+ Die weichen Reifen geben nach und
+gleichen einige Ungenauigkeiten aus.
+Zudem ist deren Auflagefläche flach, im
+Gegensatz zu den alten Reifen. Damit
+stabilisieren sie die ebenfalls flachen
+Laufflächen der Gondeln.
+ Die Achsen sind aus Kunststoff (nicht
+mehr aus Metall) und geben daher etwas
+nach. Das gibt uns mehrere Millimeter
+Toleranz.
+ Hierzu mussten wir die Reifen einseitig
+lagern, damit die Förderschuhe die
+Reifen leicht anheben, die Kunststoffachsen biegen und damit den Anpressdruck aufbringen können.
+ Das bedeutet, dass die vorderen Lager
+weiter nach hinten kommen, was die
+Stabilität und Montage vereinfacht.
+Außerdem schaffen wir so wieder Platz
+für die (gut gestalteten) Klemmen und
+vermeiden eine weitere Neukonstruktion.
+ Alle Gelenke (alte Gelenksteine 45)
+wurden entfernt. Damit ist der Reifenförderer in alle Richtungen statisch
+
+definiert. Gut abgespannt an den CStücken und zusätzlichem Fachwerkbau
+bewegt er sich nun nur noch minimal –
+genau so viel wie nötig, um die Toleranzen auszugleichen, aber genug Definition zu bieten.
+ Da viele Bauteile (Flexschienen, Winkel, Streben, Gelenke, Ketten) entfallen,
+ist der neue Reifenförderer schneller und
+einfacher zu bauen und zu warten.
+ Da der Reifenförderer nun nicht mehr
+beweglich aufgehängt ist, können die
+Antriebe beliebig angebaut werden.
+links kommen die Gondeln und werden mit
+den „Trichtern“ auf die Gleise geführt,
+wenn die Fahrzeuge etwas schwingen.
+Direkt nach dem ersten Reifen des
+Förderers beginnt die Kuppelstrecke. Hier
+wird in 0,6 – 0,9 s die Klemme geöffnet.
+Dabei drückt die rote Kulisse die Klemme
+über den Totpunkt nach unten und gibt
+damit das Seil frei. So lange bewegt sich die
+Gondel noch mit Seilgeschwindigkeit.
+Danach (markiert mit dem gelben Statikbaustein 15, rechts oben) beginnt die
+Bremsstrecke. Auf der anderen Seite der
+
+
+
+Station befindet sich das Gleiche noch
+einmal, die Gondel wird dort eingekuppelt
+und verlässt die Station nach links aus dem
+Bild. (Die gelbe Gondel im Hintergrund
+hängt nicht auf der Schiene, sondern hängt
+dort, wo sie ist, zu hoch.)
+
+Krumme Dinger
+Gerade zu bauen ist ja kein Problem – eine
+Kurve mit vorgegebenem Radius dagegen
+schon. Vor allem, wenn um diese Kurve in
+genau definierten Abständen Laufschiene,
+Niederhalteschiene, zwei Lagerschienen
+des Reifenförderers, zwei Schienen (aus
+Statik) zur Stabilisierung und eine Schiene
+zum Tragen der Last eingebaut werden
+müssen – und zwar so, dass sich die Reifen
+an genau definierten Stellen befinden, alle
+Lager genau fluchten und alles hängend an
+einer gemeinsamen Senkrechten befestigt
+ist.
+
+
+Es bedurfte mehrerer Versuche und unterschiedlicher Ansätze. Doch jetzt sind wir
+damit fertig und schon die erste Gondel lief
+wie geschmiert.
+Interessant hierbei: Die Ketten lassen sich,
+wie bei einer Kettenschaltung am Fahrrad,
+auch in der Kurve um einen gewissen
+Winkel biegen. Diese Idee stammt aus [3].
+
+
+Laufbahn mit Reifenförderern. Eine Serienproduktion, die funktioniert.
+
+
+
+Modell
+
+werden, können wir das Gewicht nicht mit
+der Konstruktion aus BS 30, BS 15 und
+Winkel 7,5° tragen, ohne dass diese sich
+über die zulässige Toleranz nach unten
+durchbiegt und damit die Reibung am
+Reifenförderer zu gering wird. Daher haben
+wir (so unauffällig wie möglich) eine AluFlachschiene innen in der Kurve angebracht. Diese hält mit Schrauben die BS 30
+Loch auf Position.
+
+Werkzeuge aus fischertechnik: Mit dieser
+Lehre können wir die Löcher in den BS 30
+mit Loch genau fluchtend auf die Rückseite
+der Alu-Schiene übertragen, die für die Versteifung der Kurve eingebaut werden soll.
+Da die Gondeln etwa 1,5 kg wiegen
+
+Die Schwierigkeit ist dabei, die Löcher zu
+markieren, während die Bögen spannungslos aneinander liegen. Die gezeigte Lehre
+wird von innen auf die Alu-Schiene gehängt, gleitet an ihr entlang und wird mit der
+Achse und dem Klemmring 10 im Loch
+eines BS 30 ausgerichtet. Die seitliche
+Kante des inneren BS 30 (ohne Loch)
+fluchtet jetzt genau mit dem Loch.
+
+Winkelbausteinen bewältigten wir aber auch diese. Schön zu sehen ist im Detail von oben, wo die
+Antriebe sitzen und im Detail von unten, dass wir teilweise die Achsen einseitig lagern,
+wie im Original.
+
+
+das Ding zum Laufen zu bringen. Und wenn
+du merkst, dass der Aufwand zu groß wird,
+dann entscheide dich, mit aller Konsequenz
+noch einmal von vorne zu beginnen, mache
+reinen Tisch – aber mache es richtig!
+
+Zahl des Tages: 18.000
+So viele Kettenglieder haben fleißige
+Hände ineinander geklickt, um die Ketten
+für die Reifenförderer zu bauen. Das entspricht ca. 88 Meter Gesamtlänge und benötigte etwa 40 Stunden Arbeit.
+
+
+Kuppelstrecke
+Die nächsten Herausforderungen waren die
+Kuppelstrecke und die Türöffnung (nicht
+abgebildet). Hier muss der Vortrieb der
+Gondeln so stark sein, dass die Kräfte
+aufgebracht werden, um die Klemme in
+0,6 s zu öffnen bzw. zu schließen oder die
+Türen zu betätigen. Mit der alten Version
+wäre das technisch nicht machbar gewesen.
+Mit der neuen Version gelang das schon
+beim ersten Durchlauf und ist bisher hundertfach getestet worden (Danke an Maximilian Schuch und Christian Bergschneider).
+Diese Fehlentwicklung hat uns zwar fast
+sechs Wochen gekostet, aber sehr viel
+gelehrt – und das sei die Botschaft an alle
+Tüftler der Nation: Wenn du merkst, dass
+etwas nicht geht, entwickle weiter und
+betrachte den Aufwand, den es benötigt, um
+
+zweite Station „Luisenpark“ gedacht. Jene für
+„Spinelli“ sind schon verbaut.
+
+Petry und andere fleißige Hände
+
+Außerdem sind bisher ca. 18.000 Bausteine
+(ohne Kettenglieder) für unser Modell
+geliefert worden; davon sind etwa die
+Hälfte in der Talstation „Spinelli“ verbaut.
+Nicht eingerechnet: Die je 1.000 Bauteile
+für die Seilscheiben, vier Rollenbatterien
+und weitere ca. 300 pro Gondel!
+
+Modell
+
+Quellen
+[1]
+
+BUGA23 – Bundesgartenschau 2023
+in Mannheim
+
+[2]
+
+YouTube-Kanal des Projekts
+
+[3]
+
+Florian Bauer: Kettenschaltung mit
+fischertechnik. Auf der ft Community, 2022.
+
+[4]
+
+Tilo Rust: Großprojekt Seilbahn
+(Teil 1): Von der Idee zum Kick-Off.
+ft:pedia 1/2021, S. 56–65.
+
+[5]
+
+Tilo Rust: Großprojekt Seilbahn
+(Teil 2): Erste Elemente. 2/2021, S. 45–53.
+
+[6]
+
+Tilo Rust: Großprojekt Seilbahn
+(Teil 3): Die Stationen. 3/2021, S. 28–37.
+
+[7]
+
+Tilo Rust: Großprojekt Seilbahn
+(Teil 4): Fundamentale Arbeiten.
+ft:pedia 1/2022, S. 37–43.
+
+[8]
+
+Tilo Rust: Großprojekt Seilbahn
+(Teil 5): Bewegung. ft:pedia 3/2022,
+S. 10–18.
+
+
+Kontakt zur Projektgruppe „Seilbahn“ über den
+Projektleiter
+Tilo
+Rust,
+Schifferstadt,
+ft.seilbahn@gmail.com
+
+Erhöhter Zeitdruck
+Jetzt brauchen wir in den nächsten Wochen
+alle Helferinnen und Helfer vor Ort6, um die
+zweite Station (Luisenpark) zu bauen, die
+erste (Spinelli) zu verkabeln und zur Funktion zu bringen. Das ist ein Aufruf an alle
+Leserinnen und Leser – meldet euch bei
+uns, wir brauchen euch, der Einstieg ist
+jederzeit möglich!
+Außerdem haben wir eine „Stellenausschreibung“ (Ehrenamt): Anlagenbediener
+(m/w/d) auf der BUGA23 zwischen April
+und Oktober, stunden- bzw. schichtweise.
+Das Seilbahnmodell der Öffentlichkeit
+zeigen? Bitte bei uns melden7!
+
+
+Fördertechnik-Museum Sinsheim, Untere Au 4,
+74889 Sinsheim (direkt neben dem TechnikMuseum)
+
+
+

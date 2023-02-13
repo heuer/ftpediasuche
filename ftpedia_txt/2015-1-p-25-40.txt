@@ -1,0 +1,850 @@
+
+Mechanisches Rechnen
+
+Mechanisches Rechnen
+
+Die Rechenmaschine
+Thomas Püttmann
+Durch den allzu häufigen Gebrauch von Taschenrechnern verlernt man das Rechnen. Kaum
+jemand weiß, was in ihnen vor sich geht und wie das Angezeigte zu bewerten ist. Bei der hier
+vorgestellten Rechenmaschine ist das anders: Alle Rechenvorgänge sind sichtbar, greifbar,
+hörbar – man lernt spielend durch bloßes Experimentieren. Das Addierwerk unseres Modells
+ist die weltweit erste Umsetzung eines Konzepts von Tschebyscheff aus den 70er Jahren des 19.
+Jahrhunderts mit einem Konstruktionssystem.
+
+Einleitung
+Mit der hier vorgestellten Rechenmaschine
+(siehe Abbildungen 1 und 2) kann man auf
+faszinierende Weise addieren, subtrahieren,
+multiplizieren, dividieren und Wurzeln
+ziehen und dabei alle Rechenvorgänge
+direkt beobachten und kontrollieren. In der
+vorgestellten
+Variante
+arbeitet
+die
+Maschine mit dreistelligen Zahlen, deckt
+also den Bereich von 0 bis 999 ab, das
+Addierwerk kann aber grundsätzlich mit beliebig vielen Stellen aufgebaut werden und
+arbeitet dann genauso problemlos und zuverlässig wie mit drei Stellen. Möglich
+macht dies der besondere Mechanismus, der
+kontinuierliche Zehnerüberträge erzeugt.
+Dem Wort Zehnerübertrag begegnet man
+heutzutage in der Regel zum ersten Mal in
+der Grundschule, wenn man das schriftliche
+Rechnen erlernt:
+
+Die Buchführung der Zehnerüberträge ist
+das zentrale Problem bei der Durchführung
+der Grundrechenarten im Dezimalsystem
+und anderen Stellenwertsystemen.
+
+Die Geschichte der Rechenmaschinen ist
+daher besonders am Anfang zu einem
+großen Teil von der Entwicklung geeigneter
+Übertragsmechanismen bestimmt. Diese
+Geschichte wird im Folgenden soweit dargestellt, dass die zwei Grundkonzepte der
+hier vorgestellten Rechenmaschine eingeordnet werden können: das Addierwerk mit
+kontinuierlichen Zehnerüberträgen und das
+Eingaberegister mit setzbaren Stiften zur
+Multiplikation.
+
+Geschichte
+Grundlage allen Rechnens ist das Zählen
+und die symbolische Darstellung der
+Zahlen. Anfänglich wurde das Zählen mit
+einfachen Hilfsmittel bewerkstelligt. Zum
+Beispiel wurde für jedes gezählte Objekt ein
+Stein in einen Beutel gelegt. Addieren ist
+dann nichts anderes als abgezähltes Hinzufügen von Steinen und Subtrahieren nichts
+anderes als abgezähltes Wegnehmen. Das
+Rechnen ist also bei dieser direkten Form
+der Zahldarstellung von größtmöglicher
+Einfachheit. Mit zunehmender Anzahl an
+Steinen verliert man aber die Übersicht und
+kann nur noch schlecht abschätzen, wie
+viele Steine im Beutel sind. Das Nachzählen dauert lange und ist fehleranfällig.
+
+
+
+
+
+
+
+
+Mechanisches Rechnen
+
+Um die Übersicht bei größeren Anzahlen
+nicht zu verlieren, wird gebündelt oder
+gruppiert, wie das jeder von der Führung
+von Strichlisten her kennt:
+
+Der nächste Schritt ist der Austausch oder
+das Ersetzen von Bündeln gegen bzw. durch
+höherwertige Einheiten. Dies ist typisch für
+Additionsysteme wie das römische Zahlensystem. Fünf I werden durch den Buchstaben V ersetzt, zwei V durch ein X, fünf X
+durch ein L, zwei L durch ein C, fünf C
+durch ein D und zwei D durch ein M. So
+steht zum Beispiel LXVIIII für die Zahl 69
+im Dezimalsystem. (Subtraktive Schreibweisen wie IV statt IIII sind zum Rechnen
+unpraktisch und wurden erst populär, als
+man mit römischen Zahlen nicht mehr rechnete.)
+Der Abakus
+Der römische Abakus in Abbildung 3 ist
+nichts anderes als ein Speicher für römische
+Zahlen. Die Einkerbungen zwischen den
+oberen und unteren Spalten geben an, welchen Wert die Spalten haben. So ist die mit
+I beschriftete dritte Spalte von rechts die
+Einer-/Fünfer-Spalte, die mit X markierte
+Spalte links daneben die Zehner-/FünfzigerSpalte. Ein Knopf wird gezählt, wenn er zur
+Mitte geschoben ist. Das Funktionsmodell
+in Abbildung 4 speichert somit die Zahl
+DCCCXXXXVII = 847.
+
+dem 2./3. Jhd. n. Chr. im Bonner Artihmeum
+
+
+Im römischen Abakus ist auch eine weitere
+Stufe in der Entwicklung der Zahldarstellungen geometrisch umgesetzt, nämlich das
+Dezimalsystem als Beispiel für ein Stellenwertsystem. Jedes Paar aus oberer und
+unterer Spalte bildet eine Stelle in der Dezimaldarstellung einer Zahl – nur enthalten
+die Spalten geometrische Muster statt der
+indisch-arabischen Ziffernsymbole 0 bis 9.
+In Abbildung 4 liefert das Spaltenpaar links
+die Ziffer 8, das Spaltenpaar in der Mitte die
+Ziffer 4 und das Spaltenpaar rechts die Ziffer 7 der Dezimaldarstellung der gespeicherten Zahl 847.
+Auf dem römischen Abakus kann jede Zahl
+auf genau eine Weise gespeichert werden.
+Beim Rechnen hat der Benutzer selbst den
+Austausch gegen höhere oder niedrigere
+Einheiten unmittelbar vorzunehmen. Wenn
+zum Beispiel die Zahl XXIIII zu der in Abb.
+4 angezeigten Zahl DCCCXXXXVII addiert werden soll, stellt man fest, dass keine
+zwei weiteren X-Knöpfe mehr zur Mitte gezogen werden können. Also benutzt man
+XX = L – XXX und zieht den L-Knopf zur
+Mitte und drei X-Knöpfe zum Rand. Vier IKnöpfe können auch nicht mehr zur Mitte
+
+
+
+
+gezogen werden. Daher benutzt man IIII =
+V - I und zieht einen I-Knopf zum Rand. Da
+der V-Knopf schon gesetzt ist, verwendet
+man weiter V = X - V, löscht also den VKnopf und setzt einen weiteren X-Knopf.
+Jetzt ist das Ergebnis DCCCLXI im Abakus
+gespeichert.
+Der römische Abakus war ein hervorragendes Rechenhilfsmittel, mit dem ein geübter
+Benutzer die Grundrechenarten schnell und
+sicher durchführen konnte. Das liegt daran,
+dass geometrische Muster vom menschlichen Gehirn schnell und effektiv gespeichert und verarbeitet werden können. Durch
+die Fünfer-Zwischenstufen entstehen überschaubare Einheiten und es müssen nur
+wenige, musterbasierte Regeln erlernt werden.
+Wer einmal den Computerspielklassiker
+Tetris oder eine seiner Varianten gespielt
+hat, kennt die unglaubliche Geschwindigkeitssteigerung, die man nach ein paar Stunden Training erzielen kann. Die gleichen
+Geschwindigkeitssteigerungen
+erfahren
+Benutzer des japanischen Sorobans, einer
+modernen Abakusvariante, die zwar historisch nicht direkt vom römischen Abakus
+abstammt, aber die gleichen geometrischen
+Muster benutzt.
+Im Internet finden sich viele Texte und
+Videos zum Thema Abakus. Faszinierend
+sind insbesondere Videos von Sorobanwettkämpfen oder Wettkämpfen von Kopfrechenkünstlern, die zum Beispiel acht
+fünfstellige Zahlen in einer halben Sekunde
+addieren und dabei die Abakusmuster im
+Kopf manipulieren.
+Der Abakus ist ein Rechenhilfsmittel – ein
+Speicher, der auf die mentalen Qualitäten
+und Fingerfertigkeiten seines Benutzers
+maßgeschneidert ist. Als Grundlage für eine
+automatische Rechenmaschine eignet er
+sich nicht, nicht einmal als Grundlage für
+ein Zählwerk.
+
+
+
+In der Sprache der heutigen Technik formuliert liegt das daran, dass dem Abakus ein
+Impulseingang fehlt. Wie man um eins weiterzählt, ist stark davon abhängig, welche
+Zahl schon gespeichert ist. Ist zum Beispiel
+die Zahl III im Abakus gespeichert, muss
+nur der vierte Knopf zur Mitte gezogen
+werden. Ist dagegen XVIIII gespeichert,
+muss festgestellt werden, dass kein weiterer
+I-Knopf vorhanden ist und daher vier IKnöpfe zurückgesetzt werden müssen.
+Dann muss festgestellt werden, dass der VKnopf schon gesetzt ist. Anschließend muss
+er zurückgesetzt und ein zweiter X-Knopf
+gesetzt werden. Diese aufeinanderfolgenden Fallunterscheidungen und die dadurch
+auszulösenden Aktionen sind mechanisch
+schwierig zu automatisieren. Es ist also
+nicht verwunderlich, dass wir kein antikes
+Zählwerk kennen, das auf dem Abakus aufbaut.
+Uhren und Zählwerke
+Der Weg vom Abakus zur Rechenmaschine
+ist der Weg von Mustern auf Stangen zu mit
+Ziffern beschrifteten Rädern. Wesentlich
+für diese Entwicklung war sicherlich das
+Aufkommen mechanischer Uhren ab dem
+Ende des 13. Jahrhunderts. Ab etwa 1580
+baute der Uhrmacher, Instrumentenbauer,
+Mathematiker und Astronom Jost Bürgi
+
+(1552-1632) Uhren, deren Gangungenauigkeit etwa eine Minute pro Tag betrug. Das
+war eine enorme Verbesserung gegenüber
+den zuvor gebauten Uhren und ermöglichte
+die präzisiere Datierung astronomischer Beobachtungen. Um die Zeit auch entsprechend genau ablesen zu können, versah
+Bürgi seine Uhren mit Minuten- und später
+auch mit Sekundenzeigern. Mechanische
+Uhren waren damit Schwingungszählwerke
+mit einem doppelten kontinuierlichen Übertragsmechanismus geworden.
+Jeder kennt diese Art des Übertrags von
+unseren heutigen Analoguhren: In der
+Stunde zwischen 2 Uhr und 3 Uhr macht der
+Minutenzeiger eine volle Umdrehung, der
+Stundenzeiger verschiebt sich dabei gleichmäßig von der Ziffer 2 auf die Ziffer 3 und
+legt nur den zwölften Teil einer vollen Umdrehung zurück.
+Verwendet man statt der Übersetzung von
+12:1 die Übersetzung von 10:1, so hat man
+einen Mechanismus für den kontinuierlichen Übertrag zwischen zwei Stellen einer
+Dezimalzahl. In Abbildung 6 ist ein solches
+zweistelliges Zählwerk dargestellt, das die
+Zahl 38 anzeigt. Dreht man den blauen Zeiger weiter im Uhrzeigersinn auf die 0, so
+wird die Drehbewegung vom blauen Rad
+über das grüne Zwischenrad im Verhältnis
+10:1 gleichsinnig auf das rote Rad und den
+roten Zeiger übertragen, der zum Schluss
+genau auf die Ziffer 4 zeigt.
+
+
+Mechanisches Rechnen
+
+Das Problem bei dieser einfachen Getriebeart ist, dass die linke Stelle nicht verstellt
+werden kann, ohne auf die rechte zurückzuwirken. Dezimalzahlen können somit nicht
+stellenweise addiert werden. Obwohl daher
+Bürgis neue Uhrwerke nicht unmittelbar zur
+Erfindung der Rechenmaschine führten, ist
+es sehr plausibel, dass sie trotzdem von entscheidender Bedeutung waren.
+Die Rechenuhr
+Die erste Rechenmaschine erfand der
+Tübinger Astronom, Mathematiker, Geodät
+und Sprachwissenschaftler Wilhelm Schickard (1592-1635) im Jahre 1623. Seine Erfindung ist nur aus zwei Briefen an seinen
+Freund Johannes Kepler (1571-1630) und
+einer Anweisung an seinen Mechaniker
+Johannes Pfister bekannt. Kepler hatte von
+1604 bis 1612 in Prag eng mit Jost Bürgi
+zusammengearbeitet. Schickard wusste also
+sicher von Bürgis Uhrwerken. Nicht grundlos wird er seine Maschine Rechenuhr
+genannt haben.
+
+Jahr 1623 (Quelle: Wikipedia).
+
+
+
+
+Schickards Maschine war zum Multiplizieren zweier mehrstelliger Zahlen entwickelt
+worden. Das Multiplizierwerk befand sich
+im oberen Teil. Der Multiplikand wurde
+über die Drehknöpfe ganz oben eingestellt.
+Jeder dieser Knöpfe drehte eine vertikale
+Walze mit den zehn Napierschen Rechenstäben. Mit den horizontalen Schiebern
+konnten dann Teilprodukte einer Stelle des
+Multiplikators mit dem Multiplikanden
+ermittelt und per Hand in das untere Addierwerk übertragen werden.
+Schickards Addierwerk weist gegenüber
+dem Dezimalzählwerk in Abbildung 6 eine
+entscheidende Änderung auf: Die Überträge
+erfolgen nicht kontinuierlich, sondern ein
+Einzahn (Mitnehmer) schaltet beim Übergang von 9 auf 0 das nächst höherwertige
+Rad schlagartig um 1 weiter. Damit wird die
+stellenweise Addition von Dezimalzahlen
+durch abgezähltes stufenweises Weiterdrehen möglich (Abbildungen 8 und 9).
+
+
+Dieser auf den ersten Blick einfach erscheinende Mitnahme-Mechanismus bringt in
+der Praxis erhebliche Probleme mit sich, die
+man am besten selbst erlebt, indem man das
+Modell aus Abbildung 8 nachbaut oder eine
+eigene Variante entwirft. Im Modell drehen
+sich die beiden Räder entgegengesetzt.
+Schickard
+verwendete
+anscheinend
+Zwischenzahnräder, um den gleichen Drehsinn zu erzielen, obwohl das die Entwicklung eines gut funktionierenden Prototypen
+unnötig erschwert haben dürfte.
+
+
+
+Damit das Modell zuverlässig funktioniert,
+muss der Baustein 15 am rechten Rad auf
+der Platte der Rastachse mit Platte im Zehntelmillimeterbereich genau eingestellt werden, ansonsten kann entweder das linke Rad
+nicht unabhängig verstellt werden, oder es
+wird beim Übertrag gar nicht oder um zwei
+Positionen statt einer weitergeschaltet.
+Bei sorgfältiger Einstellung der Federungen
+kann das Modell um eine weitere Stelle zu
+einem zuverlässig funktionierenden dreistelligen Addierwerk ergänzt werden.
+Das Hauptproblem des Schickardschen
+Übertragsmechanismus‘ ist, dass ein Übertrag über viele Stellen (zum Beispiel von
+9999 auf 10000) das Vielfache des Drehmoments erfordert, das für das einfache
+Weiterschalten eines Rads erforderlich ist.
+Alle Dokumentationen von Nachbauten
+berichten übereinstimmend von der
+Schwierigkeit, einen zuverlässigen sechsstelligen Mechanismus zu konstruieren.
+Inwieweit Schickards Maschinen selbst zuverlässig funktioniert haben, ist unklar.
+Schickard galt aber als ausgezeichneter
+Mechaniker (sein Vater war Schreiner);
+Kepler bezeichnete ihn als „beidhändigen
+Philosophen“.
+Ein zweiter Anfang
+Blaise Pascal (1623-1662) war ein französischer Mathematiker, Physiker, Philosoph
+und Theologe und galt über lange Zeit als
+Erfinder
+der
+Rechenmaschine,
+bis
+Schickards Briefe an Kepler in der Mitte des
+letzten Jahrhunderts wiederentdeckt und
+
+
+Mechanisches Rechnen
+
+funktionsfähige Nachbauten konstruiert
+wurden. Nach eigenen Angaben baute
+Pascal mehr als fünfzig Prototypen, bevor
+er seine Rechenmaschine, die sogenannte
+Pascaline, im Jahr 1645 der Öffentlichkeit
+präsentierte. Da es keine Indizien dafür gibt,
+dass Pascal von Schickards Maschinen
+wusste, können beide als Erfinder der
+Rechenmaschine angesehen werden.
+
+Nachbaus der Pascaline aus dem 19. Jahrhundert im Bonner Arithmeum
+
+Der Pascalsche Übertragsmechanismus ist
+in Abbildung 11 dargestellt. Der Übertrag
+findet vom rechten unteren Rad mit zehn
+Stiften auf das links benachbarte durch eine
+Schaltklinke statt. Schon wenn das rechte
+Rad die Position 4 hat, beginnt das zweistufige Anheben der Schaltklinke über zwei
+Stifte.
+Die so verteilt zugeführte Energie wird
+beim Auslösen der Schaltklinke im Übergang von 9 auf 0 schlagartig freigesetzt, um
+das linke Rad eine Position weiter zu schalten. Sperrklinken sorgen für das Einrasten
+der gestifteten Räder in den zehn gewünschten Positionen.
+Pascals und Schickards Übertragsmechanismen unterscheiden sich in vielen Hinsichten. Während bei Schickards Mechanismus durch Drehen der Räder in unterschiedliche Richtungen gleichermaßen addiert
+und subtrahiert werden konnte, lassen sich
+Pascals Räder wegen der verwendeten Klinken nur in eine Richtung drehen – es handelt
+sich mechanisch um eine reine Addiermaschine. Das Subtrahieren kann man durch
+Komplementrechnen erzielen.
+
+(Quelle: englischsprachige Wikipedia)
+
+Ein Vorteil des Pascalschen Mechanismus‘
+liegt in der Verwendung gespeicherter
+Energie. Die einzelnen Stellen sind beim
+Übertrag mechanisch vollkommen voneinander entkoppelt, so dass man theoretisch
+auf dieser Grundlage Rechenmaschinen mit
+beliebig vielen Stellen bauen kann.
+Der Pascalsche Mechanismus ist nichtsdestotrotz sehr sensibel. Gewicht, Form und
+Auslenkung der Sperr- und Schaltklinken
+müssen sehr genau aufeinander abgestimmt
+sein, ansonsten funktioniert der Übertrag
+nicht oder es kommt zum mehrfachen Weiterschalten. Pascal hat mehrere Exemplare
+seiner Maschine gebaut und laufend Verbesserungen vorgenommen. Neun seiner
+Maschinen haben die Zeit bis heute überdauert. Leider gibt es widersprüchliche Angaben dazu, wie zuverlässig der Übertragsmechanismus bei diesen Maschinen funktioniert. Da beim Rücksetzen der Maschine
+vor jeder neuen Rechnung ein Übertrag
+über alle Stellen erfolgt, muss er zumindest
+relativ sicher funktioniert haben, ansonsten
+wären die Maschinen vollkommen unbrauchbar gewesen.
+Auf YouTube findet man zwei erfolgreiche
+Pascaline-Nachbauten aus LEGO, aber
+keine der Schickardschen Rechenuhr.
+
+
+
+Leibniz
+Gottfried Wilhelm Leibniz (1646-1716) war
+einer der größten Universalgelehrten aller
+Zeiten und wurde von starken Träumen zur
+Verbesserung der Welt angetrieben. Seine
+bahnbrechenden Beiträge zur Mathematik,
+Philosophie, Religion und Technik sind
+zahlreich, sein Nachlass so umfangreich,
+dass er immer noch nicht aufgearbeitet ist,
+obwohl damit zu Beginn des 20. Jahrhunderts begonnen wurde. Nach eigener Aussage hatte er „nach dem Erwachen schon so
+viele Einfälle, dass der Tag nicht ausreichte,
+um sie niederzuschreiben.“ Einer dieser
+Einfälle ist im Folgenden von zentraler Bedeutung.
+Leibniz hatte um 1670 in der Einleitung der
+bis dahin unveröffentlichten Pascalschen
+Pensées von dessen Rechenmaschine gelesen und sich die Maschine vom königlich
+französischen Bibliothekar Carcavius
+schriftlich beschreiben lassen. Als Antwort
+schrieb Leibniz, er wage zu versprechen,
+eine Maschine vorstellen zu können, die
+präzise und schnell auch Multiplizieren und
+Dividieren könne.
+
+Eine erste Form seiner Idee ist in der Originalskizze in Abbildung 12 wiedergegeben.
+Oben sind drei Räder eines Addierwerks
+skizziert. Die drei Räder in der Mitte sind
+durch eine Kette miteinander verbunden.
+An ihnen ist durch gesetzte Stifte der Multiplikand 365 eingestellt. Dieser Multiplikand wird durch eine Umdrehung des rechten unteren Rads viermal in das Addierwerk
+übertragen, danach werden die mittleren
+Räder um eine Stelle nach links versetzt und
+die 365 durch eine Umdrehung des mittleren unteren Rads zweimal in das Addierwerk übertragen. Abschließend werden die
+mittleren Räder noch einmal um eine Stelle
+nach links versetzt und die 365 durch eine
+Umdrehung des linken unteren Rads einmal
+in das Addierwerk übertragen. Insgesamt ist
+so durch drei Umdrehungen die Multiplikation 124 x 365 ausgeführt worden.
+In dieser einen Idee hat Leibniz zwei Prinzipien vorweggenommen, die sich in den
+Arithmetisch-Logischen-Einheiten (ALUs)
+aller heutigen Mikroprozessoren wiederfinden: Register, deren Inhalt unabhängig gesetzt und dann auf einmal in die Recheneinheit übertragen werden kann und Shifts, die
+zu den binären Grundoperationen gehören.
+Obwohl die Idee genial ist, war sie zunächst
+so gar nicht ausführbar, da weder der
+Pascalsche Übertragsmechanismus noch
+der Schickardsche Übertragsmechanismus
+(der Leibniz wohl nicht bekannt war) die
+gleichzeitige Addition in mehreren Stellen
+erlauben.
+
+Multiplikation (Quelle: history-computer.com)
+
+
+Leibniz musste also einen eigenen Übertragsmechanismus erfinden. Das war das
+Hauptproblem bei der Entwicklung seiner
+Rechenmaschinen, die sich über viele Jahrzehnte hinzog. Seine Lösung dafür war zum
+Schluss ein komplexer, zweistufiger
+Mechanismus, der hier nicht wiedergegeben wird und der auf die Geschichte der
+Rechenmaschinen im Weiteren keinen nennenswerten Einfluss hatte.
+
+
+Mechanisches Rechnen
+
+bewegt bei einer Umdrehung das Eingaberegister vorne rechts um eine Stelle nach rechts oder links.
+Durch eine Umdrehung der anderen Kurbel wird der Wert des Eingaberegisters zum Wert des Akkumulators addiert oder von ihm subtrahiert. Der Übertragsmechanismus ist oben hinten zu sehen.
+
+Andere Erfindungen waren für Leibniz viel
+leichter umzusetzen und hatten eine nachhaltigere Wirkung: Für die mittleren Räder
+in Abbildung 12 mit den zu setzenden Stiften fand er gleich zwei Alternativen, die in
+der weiteren Geschichte der Rechenmaschinen fast ausschließlich verwendet wurden:
+Staffelwalze und Sprossenrad.
+
+einer Staffelwalze
+
+Planetengetriebe
+Nach Leibniz wurde das Übertragsproblem
+in verschiedenen Maschinen überzeugender
+gelöst, was unter anderem dem Fortschritt
+der Feinmechanik zu verdanken war. Die
+Lösungen blieben aber lange Zeit Ad-hocLösungen, d. h. sie waren auf eine Maschine
+maßgeschneidert, trickreich und mussten
+meist mehrfach verbessert werden, bis sie
+zuverlässig mit der beabsichtigen Stellenzahl funktionierten.
+Eine systematische Lösung des Übertragsproblems fand der russische Mathematiker
+Pafnuti Lwowitsch Tschebyscheff (18211894) in den 70er Jahren des 19. Jahrhunderts. Er kehrte von schlagartigen Überträgen zurück zu kontinuierlichen Überträgen,
+wie sie im Abschnitt über Uhren und Zählwerke vorgestellt wurden. Kontinuierliche
+Überträge haben den Vorteil, dass sie absolut zuverlässig funktionieren, egal wie viele
+Stellen die Maschine hat, und dass man
+gleichzeitig in allen Stellen addieren kann.
+Der einzige Nachteil, den sie haben, ist die
+schlechtere Ablesbarkeit der Anzeige, die
+schon in Abbildung 6 zu erkennen war. Dies
+ist weniger für den menschlichen Benutzer
+problematisch als für die maschinelle
+Weiterverarbeitung der Ergebnisse:
+
+
+
+
+Ein Druckwerk an das Rechenwerk anzuschließen erfordert eine Digitalisierung.
+Mit einfachen Stirnradgetrieben wie in
+Abbildung 6 kann nicht stellenweise addiert
+werden, da die Räder ohne weitere Freiheitsgrade direkt miteinander verkoppelt
+sind. Tschebyscheff verwendete Planetengetriebe, mit denen man zwei Antriebe auf
+einen Abtrieb gewichtet addieren kann.
+Planetengetriebe waren seit der Antike
+immer wieder erfolgreich benutzt worden;
+das theoretische Verständnis und der gezielte Entwurf solcher Getriebe begannen aber
+erst mit dem Buch Principles of Mechanisms von Robert Willis (1800-1875) aus
+dem Jahr 1841.
+Tschebyscheffs erste Rechenmaschine aus
+dem Jahr 1876 war eine reine Additions/Subtraktionsmaschine. Sie ist ein Einzelstück geblieben, das jetzt im Museum der
+Geschichte St. Petersburg ausgestellt ist.
+Zwei Jahre später baute er eine verbesserte
+Version (Abbildung 15), zu der er im Jahr
+1883 noch eine automatische Multiplikationseinheit ergänzte. Auch sie ist ein Einzelstück, das sich im Musée des Arts et
+Métiers in Paris befindet.
+
+werden soll. Dazu haben sie 27 Einkerbungen. Das Addieren der Zahl 23 zu einem im
+Addierwerk gespeicherten Wert geschieht,
+indem man das Rad r1 in Pfeilrichtung drei
+Einkerbungen weiterdreht und das Rad r2
+zwei Einkerbungen.
+Um die Funktion des Getriebes zu verstehen, benötigt man folgende Informationen:
+Alle Räder laufen frei auf der zentralen
+Achse X. Das Ergebnisrad n1 ist mit den
+Zahnrädern d und f starr verbunden. Die
+Anzahl der Zähne von f, e, g und h sind mit
+12, 48, 24 bzw. 60 so gewählt, dass sich eine
+10:1-Übersetzung von f auf h ergibt, wenn
+das Einstellrad r2 festgehalten wird. Damit
+hat Tschebyscheff einen kontinuierlichen
+Zehnerübertrag zwischen den Ergebnisrädern n1 und n2 hergestellt. Nach der
+Willis-Gleichung gilt nun
+10 ∙
+
+−
+
+−9∙
+
+=0
+
+Diese Gleichung wird weiter unten anschaulich erklärt. Jedenfalls ist eine Konsequenz der Gleichung, dass man mit den Einstellrädern r1 und r2 wie oben beschrieben
+stellenweise durch abgezähltes Weiterdrehen addieren kann.
+
+dem Jahr 1878 (Quelle: V.G. von Bool [2]).
+
+Das Getriebe der Maschine aus dem Jahr
+1878 ist auszugsweise für die unteren beiden Dezimalstellen in Abbildung 16 abgebildet. Die Räder n1 und n2 zeigen den Wert
+an, der momentan in dem Addierwerk gespeichert ist. Dazu sind auf ihrem Umfang
+dreimal hintereinander die Ziffern von 0 bis
+9 aufgedruckt. Die Räder r1 und r2 ermöglichen die Eingabe des Werts, der addiert
+
+
+
+Mechanisches Rechnen
+
+Achse ist im mittleren Baustein 15 mit Bohrung geteilt. Der linke Teil ist mit dem Steg verbunden.
+
+Die Getriebe der beiden Rechenmaschinen
+von Tschebyscheff lassen sich nicht exakt
+mit fischertechnik nachbauen, da eine 10:1Übersetzung mit den fischertechnik-Zahnrädern nicht direkt erzielt werden kann.
+Trotzdem lässt sich der kontinuierliche
+Zehnerübertrag zwischen den Ergebnisrädern n1 und n2 mit einem Planetengetriebe
+realisieren, indem man nicht die Ergebnisräder mit der Übersetzung 10:1 koppelt,
+sondern das Ergebnisrad n1 und das Einstellrad mit der Übersetzung -9:1. Warum
+und wie das funktioniert, wird durch das
+Funktionsmodell in Abbildung 17 anschaulich erklärt.
+Zunächst wird die linke Kurbel wird festgehalten und damit auch der Steg, der dem
+Ergebnisrad n2 entspricht. Dreht man die
+rechte Kurbel neun Mal in eine Richtung, so
+dreht sich das Z30 am Steg wegen der 3:1
+Übersetzung vom Z10 über das Z20 auf das
+Z30 dreimal in die gleiche Richtung. Die
+beiden verbundenen Z30, die dem Einstellrad r2 entsprechen, drehen sich dann einmal
+in die entgegengesetzte Richtung.
+Die beiden Kurbeln und die verbundenen
+Z30 werden synchron eine volle Umdrehung weiter gedreht. Man erkennt daran,
+dass bei festgehaltenen Z30 die linke Kurbel genau eine volle Umdrehung macht,
+wenn die rechte zehn volle Umdrehungen
+
+macht. Dies ist der kontinuierliche Übertragsmechanismus.
+
+
+Wenn man die beiden Kurbeln und die verbundenen Z30 im Kopf synchron zehn volle
+Umdrehungen zurückdreht, erkennt man,
+dass bei festgehaltener rechter Kurbel die
+Übersetzung zwischen den Z30 und der linken Kurbel 10:9 ist. Könnte man die Z30
+also gleichmäßig in neun Positionen rasten,
+könnte man den Steg in 1/10-Umdrehungsschritten schalten. Da das nicht möglich ist,
+wird in unserem Hauptmodell ein mit einem
+Innenzahnrad verbundenes Z40 vorgeschaltet. Das kann passend zur 3:4 Übersetzung
+in zwölf Positionen gerastet werden.
+
+
+
+
+Das Modell
+Das Hauptmodell ist in den Abbildungen 1
+und 2 wiedergegeben und besteht aus dem
+einem Addierwerk mit kontinuierlichen
+Zehnerübertrag und einem abnehmbaren
+und versetzbarem Eingaberegister, das gut
+zu Leibniz’ ursprünglicher Idee in Abbildung 12 passt.
+
+der beiden Z30 wird eine Freilaufnabe geschraubt. Die Nabe sollte nach innen
+zeigen. Ein Klemmring wird so weit auf die
+Metallachse 90 geschoben, dass das rechte
+Z30 mit den Rastzahnrädern Z10 kämmt.
+
+Der Nachbau der Rechenmaschine ist nicht
+schwierig. Die benötigten Teile sind in der
+Einzelteilliste [14] aufgeführt.
+Addierwerk
+Im Zentrum jeder Getriebestufe sitzt ein
+Baustein 15 mit Bohrung, der durch einen
+eingeklemmten Papierstreifen fest mit einer
+Metallachse 90 verbunden ist. Wie dieser
+Verbund hergestellt wird, ist in Abbildung
+20 dargestellt: Zunächst steckt man einen
+Klemmring auf eine Hilfsachse, so dass er
+einen Abstand von 7,5 mm zu einem Ende
+hat. Mit diesem Ende voran wird die Hilfsachse in den Baustein 15 mit Bohrung
+gesteckt. Von der anderen Seite wird ein
+aufgerolltes Papierquadrat mit 12 mm Kantenlänge in die Bohrung gesteckt. In dieses
+wird nun die Metallachse 90 gepresst, bis
+sie auf das Ende der Hilfsachse trifft. Die
+Hilfsachse kann anschließend entfernt werden.
+
+
+
+mit Bohrung mit einer Metallachse 90 (rechts)
+
+Der Steg wird gemäß der Abbildungen 21
+und 22 zusammengebaut. Insbesondere
+werden zwei Zahnräder Z30 durch drei rote
+Seilklemmstifte fest miteinander verbunden. Der Abstand sollte so groß sein, wie
+ein Verbindungsstück 30 hoch ist. In eines
+
+Als nächstes wird ein Ziffernstreifen aus der
+Vorlage [15] ausgeschnitten. Die kleinen
+Quadrate zwischen den Ziffern 0 und 1 bzw.
+5 und 6 werden entfernt. Der Ziffernstreifen
+wird zu einem Ring um den Steg zusammengeklebt. Die Zapfen der beiden äußeren
+Bausteine 15 mit Bohrung werden dabei
+durch die quadratischen Löcher des Ziffernrings gesteckt.
+
+
+Mechanisches Rechnen
+
+Die Getriebeeinheiten werden von links
+nach rechts zusammengebaut. Dabei orientiert man sich an Abbildung 2. Bei der abschließenden Lagerstange rechts ist zu beachten, dass die Ansenkung des Bausteins
+15 mit Ansenkung außen liegt und die Bauplatte 30x15 mit einem Zapfen die eingesteckte Kunststoffachse 50 mit Vierkant
+sichert.
+
+Anschließend werden die Lagerblöcke und
+die Einstellräder gemäß den Abbildungen 23 und 24 zusammengebaut.
+
+Als nächstes werden die Klinkenblöcke für
+die Einstellräder eingesteckt. Durch Verändern der Höhe des Bausteins 30 kann die
+Stärke der Rastung so eingestellt werden,
+dass sie deutlich spürbar und hörbar ist, das
+Einstellrad aber ohne allzu großen Kraftaufwand in beide Richtungen aus der Rastung
+gedreht werden kann. Die Kunststoffachse
+sollte sich hauptsächlich vertikal biegen
+und nicht in Laufrichtung des Rads.
+
+
+Das vollständige Getriebe für eine Dezimalstelle ist in Abbildung 25 dargestellt. Die
+Metallachse 90 ragt 7,5 mm aus dem verschraubten Zahnrad Z10 heraus.
+
+Nun muss eine Nulleinstellung vorgenommen werden. Dazu geht man Stelle für
+Stelle von rechts nach links vor und dreht
+die verschraubten Zahnräder Z10, bis an der
+jeweiligen Stelle im eingerasteten Zustand
+die Stege vertikal sind und die Ziffer 0 zu
+sehen ist (Abbildung 27).
+
+
+Beim Drehen des rechten Z10 springt der
+Vierkant in der Ansenkung, beim Drehen
+der anderen Z10 muss man den Steg der
+rechten benachbarten Stelle festhalten. Entweder dreht sich dann das Z10 auf der
+Metallachse 90 oder die geklemmte Metallachse 90 im Baustein 15 mit Bohrung.
+
+
+
+
+
+
+Jetzt werden die Anzeigerahmen so angebracht und eingestellt, dass die Striche
+zwischen den Feldern der Ziffern 0 und 1
+genau durch die Schlitze in den Griffen der
+Kurbeln zu sehen sind. Dazu müssen die
+Bausteine 30 gegebenenfalls leicht nach
+vorne verschoben werden.
+
+Die drei Räder sind so auf der Metallachse
+260 zu positionieren, dass gesetzte Zahnstochersegmente das Einstellrad sicher mitnehmen und gelöschte Segmente mit etwas
+Abstand am Einstellrad vorbeidrehen. Um
+das zu überprüfen müssen zunächst die
+Anschläge für das Eingaberegister auf der
+Grundplatte angebracht werden.
+
+
+
+Das Addierwerk ist nun fertig und kann
+bereits zum schnellen, akustisch kontrollierten Addieren und Subtrahieren dreistelliger Zahlen benutzt werden.
+
+Die Räder mit den Mitnehmern sollten
+leicht gegeneinander verdreht sein, so dass
+der Hauptkraftaufwand einer Mitnahme
+niemals an zwei Rädern gleichzeitig erfolgt.
+
+Eingaberegister
+
+Nun muss die Feineinstellung erfolgen. Die
+Anschläge für das Eingaberegister und die
+Bausteine 15 mit Bohrung auf den Klinkenblöcken müssen sorgfältig so verschoben
+werden, dass gesetzte Mitnehmer beim Vorwärts- und Rückwärtsdrehen des Zahnrads
+Z40 ruckfrei, aber sicher in die äußeren,
+halboffenen Bohrungen der Einstellräder
+eingreifen und diese um die gewünschten
+Stufen weiterdrehen. Diese Einstellung ist
+von größter Wichtigkeit für zuverlässiges
+Multiplizieren und Dividieren. Anschließend muss die Position der Anzeigerahmen
+gegebenenfalls etwas korrigiert werden.
+
+Der Aufbau des Eingaberegisters ist aus
+Abbildung 2 ersichtlich. Es besteht aus drei
+größeren Rädern auf einer gemeinsamen
+Achse, an deren äußeren Rändern sich
+jeweils neun leicht setz- bzw. löschbare
+Mitnehmer befinden. Diese Mitnehmer sind
+27 mm lange Zahnstochersegmente, die in
+den Löchern der Gelenkwürfelklauen
+38446 geführt werden. Durch das Ablängen
+der Zahnstocher entstehen normalerweise
+schon leicht unregelmäßige Enden, die ein
+unbeabsichtigtes Herausfallen der Zahnstochersegmente verhindern. Ansonsten
+kann man die Enden leicht mit einer Zange
+pressen. Die Bausteine 15 an den Drehscheiben dienen als Gewichte. Sie sorgen
+dafür, dass eine Drehlage stabil ist, in der
+kein Mitnehmer ins Einstellrad des Addierwerks eingreift.
+
+Koppeln mehrerer Maschinen
+Um mit mehr als drei Stellen zu rechnen,
+können mehrere Rechenmaschinen verbunden werden. Dazu entfernt man bei einer
+Maschine die rechte Lagerstange und
+
+schraubt bei der anderen ein zusätzliches
+Zahnrad Z10 auf die herausstehende
+Metallachse 90. Auf diese Art können beliebig viele Addierwerke miteinander verbunden werden.
+
+
+Eine entsprechende Verbindung der Eingaberegister ist nicht sinnvoll, da zwischen
+den Grundplatten ein Längenausgleich
+stattfindet, der nicht exakt im Raster liegt
+und die Eingaberegister für die Multiplikation versetzt werden müssen. Außerdem
+steigt das für die Eingabe benötigte Drehmoment ab einer Zahl von drei Maschinen,
+da die Mitnahme an einigen Rädern dann
+fast gleichzeitig erfolgen muss. Werden
+mehrere Maschinen verkoppelt, so arbeitet
+man also mit separaten Eingaberegistern,
+die einzeln bedient und versetzt werden.
+Bedienung
+Zum schnellen Zurücksetzen der Maschine
+und zum schnellen Addieren und Subtrahieren von Zahlen wird die Maschine normalerweise ohne Eingaberegister durch abgezähltes Vor- oder Zurückdrehen der Einstellräder bedient. Die Eingabe kann blind
+erfolgen, was bei der Addition langer
+Zahlenlisten von Vorteil ist.
+Multiplikation und Division werden auf
+wiederholte Additionen bzw. Subtraktionen
+und Vergleiche zurückgeführt. Dazu ist das
+Eingaberegister natürlich sehr praktisch.
+
+Mechanisches Rechnen
+
+0 zurückgesetzt und der Multiplikand 37
+durch Setzen von drei Stiften am mittleren
+Rad und sieben Stiften am rechten Rad des
+Eingaberegisters eingestellt. Der Umdrehungszähler wird auf 4 gedreht. Anschließend wird viermal gegen den Uhrzeigersinn
+gekurbelt. Der Umdrehungszähler zeigt nun
+0 an und in der Anzeige erscheint das
+Zwischenergebnis 148 der Multiplikation
+4 x 37. Anschließend wird das Eingaberegister um eins nach rechts versetzt und
+zweimal gekurbelt. Es wird nun das
+Gesamtergebnis 888 angezeigt.
+Zur Lösung der Divisionsaufgabe 275:37
+wird der Dividend 275 direkt über die Einstellräder ins Addierwerk gegeben und der
+Divisor 37 in das Eingaberegister. Der Umdrehungszähler wird auf 0 gedreht. Durch
+Drehen des Z40 am Eingaberegister subtrahiert man nun den Divisor 37, solange er
+kleiner ist als der Wert im Addierwerk. In
+diesem Beispiel ist der Wert im Addierwerk
+nach sieben Subtraktionen 16, also ist das
+Ergebnis 275:37 = 7 Rest 16.
+Die Bedienung der Maschine bei den
+Grundrechenarten ist ausführlich in einem
+Video [13] dargestellt. Zum Wurzelziehen
+kann der Toepler-Algorithmus [5] verwendet werden, der allein mit wiederholten
+Subtraktionen und Vergleichen auskommt.
+
+Literatur und Links
+[1]
+
+Aspray, W. (Hrsg.): Computing
+before Computers. Iowa State University Press 1990. Kapitel 1 Early
+Computing enthält insbesondere eine
+sehr gute Liste mit Literatur zur Geschichte der Zahlen und des Abakus.
+
+[2]
+
+von Bool, Vladimir G.: Tschebyscheffs Arithmometer (Russisch).
+1894, verfügbar unter [12]
+
+Soll zum Beispiel das Produkt 24 x 37 berechnet werden, so wird das Addierwerk auf
+
+
+
+[3]
+
+[4]
+
+[5]
+
+[6]
+
+[7]
+
+
+Bölter, Detlev: Wilhelm Schickards
+Rechenuhr. Enthält insbesondere
+Schickards Notizen an den Mechaniker und die relevanten Sätze aus den
+zwei Briefen an Johannes Kepler
+sowie eine ausführliche Diskussion
+der Probleme beim Schickardschen
+Übertragungsmechanismus.
+Falk, Stefan: Vom Zählen und Abzählen (1), ft:pedia 1/2012. Stellt Zählwerke mit fischertechnik vor, deren
+Übertragungsmechanismus allerdings nicht das stellenweise Addieren erlaubt, weil die Einzähne zu
+kurz sind.
+Gärtner, Manfred: Analyse des
+Toepler-Algorithmus zum Berechnen
+von Quadratwurzeln mit mechanischen Vierspezies-Rechenmaschinen.
+Rechnerlexikon.de
+Guyot, Alain: La machine à calculer
+continue de Tchebychev et le
+reporteur différentiel. Enthält als
+Anhang Tschebyscheffs Mitteilung
+Une machine arithmétique à mouvement continu an die Association
+française pour l'avancement des
+sciences, 1882.
+Karcher, H: Konnten die Römer nicht
+rechnen? Mitteilungen der Deutschen Mathematiker Vereinigung
+3/2014.
+
+[8]
+
+King, Henry C.: Geared to the Stars,
+University of Toronto Press, Toronto
+1978. Diesem Standardwerk habe ich
+die Informationen über Jost Bürgi
+entnommen.
+
+[9]
+
+Leibniz, Gottfried W.: Machina
+arithmetica in qua non aditio tantum
+et subtractio sed et multiplicatio
+nullo, divisio vero paene nullo animi
+labore peragantur. 1685, englische
+Übersetzung verfügbar unter historycomputer.com
+
+[10] http://www.rechnerlexikon.de, bietet
+viele Informationen und weiterführende Links, allerdings etwas inhomogen.
+[11] Dalakov, Georgi, History of Computers. Internetseiten mit sehr vielen
+Informationen zu Schickard, Pascal,
+Leibniz und Tschebyscheff und viel
+Originalmaterial.
+[12] Tschebyscheffs Mechanismen. Diese
+Internetseiten bieten sehr nützliche
+Animationen der Mechanismen und
+viele Scans von Originalarbeiten.
+[13] Video der Rechenmaschine,
+YouTube.com
+[14] Einzelteilliste der Rechenmaschine,
+math-meets-machines.de
+[15] Vorlage für die Ziffernbänder, mathmeets-machines.de
+
+

@@ -1,0 +1,98 @@
+
+
+Tipps & Tricks
+
+Wiederbelebung des Batteriestabes
+Rüdiger Riedel
+Der alte Batteriestab konnte mit drei Babyzellen ausgerüstet werden und lieferte damit 4,5 V.
+Das war selbst für die alten Motoren recht wenig. Zum Wegwerfen ist das Gehäuse aber zu
+schade – was kann man da tun?
+
+Hintergrund
+Die „Babyzellen“ des Batteriestabs (Abb. 1)
+heißen als Alkali-Mangan-Zellen Typ C
+bzw. LR14 nach IEC-Norm; drei Stück
+liefern max. 4,5 V. Als Nickel-Metallhydrid-Zellen heißen sie HR14 und liefern
+zusammen nur 3,6 V. Damit können wir so
+gut wie nichts anfangen.
+
+.
+
+
+LED-Taschenlampen gibt es bereits für
+weniger als 3 €. Wir schrauben so eine auf
+und finden darin ein Dreierbündel von
+Mikrozellen. Die heißen oft AAA, aber
+nach IEC-Norm und als Alkali-ManganZellen LR03; sie liefern damit max. 4,5 V.
+Nehmen wir Nickel-Metallhydrid-Zellen,
+dann heißen sie HR03 und liefern zusammen 3,6 V. In den Batteriestab passen aber
+bequem zwei Stück dieser Dreierbündel
+hinein, wir müssen nur den verbleibenden
+Platz überbrücken (Abb. 2).
+
+Dafür können wir einen Korken nehmen,
+schneiden ihn passend zurecht und versehen
+ihn auf beiden Seiten mit Reißzwecken,
+unter die wir die blanken Enden eines
+Kupferdrahtes klemmen (Abb. 3).
+
+
+Jetzt noch den Deckel aufschieben, fertig.
+
+
+
+Tipps & Tricks
+
+für den Einsatz
+
+Wie am Anfang beschrieben können wir ihn
+je nach Einsatzzweck mit Alkali-ManganZellen bestücken oder mit Akkus und erzielen so eine Ausgangsspannung von 9 V, für
+die neuen Motoren, LEDs und Elektronik,
+oder 7,2 V für die alten Motoren.
+
+
+Als Messgerät verwende ich den Typ joy-it
+VAM10010 [1]. Das Kästchen besteht aus
+ acht BS7,5 (37468)
+ drei Bauplatten 30x60 2Z (z. B. 152249)
+
+Meine Anwendung
+
+ zwei Verbindern 30 (31061)
+
+Experimentelle Fahrzeuge tun nicht immer
+das was sie sollen. Da ist es hilfreich zu
+wissen, wieviel Strom sie während der
+Fahrt ziehen.
+
+ fünf Federnocken (31982) und
+
+
+Also nehme ich die Motoranschlüsse von
+der Fernsteuerung ab und schließe sie über
+ein längeres Kabel an den Batteriestab an,
+der mit Strom- und Spannungsmessgerät
+ausgerüstet ist. Damit kann ich hinter dem
+Fahrzeug herlaufen und das Fahrverhalten
+prüfen.
+
+ zwei Leuchtsteinsockeln, am besten
+einem schwarzen und einem roten
+(38216 und 75315).
+Außerdem habe ich vier Kabel einseitig mit
+Steckern versehen, an die Pins des Messgerätes angelötet (für den Anschlussplan
+siehe [1]) und von unten an die Leuchtsteinsockel angeschlossen. Der Batteriestab
+(Polung überprüfen! Wenn ich den Schalter
+in Abb. 5 nach unten schiebe, ist bei
+meinem Batteriestab der Pluspol oben) wird
+an die beiden mittleren Buchsen angeschlossen mit Plus am roten und Minus am
+schwarzen Sockel. An den beiden äußeren
+Buchsen wird der Verbraucher angeschlossen.
+
+Referenzen
+[1]
+
+Messgerät joy-it, VAM10010.
+
+
+

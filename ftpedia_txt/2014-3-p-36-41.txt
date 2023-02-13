@@ -1,0 +1,467 @@
+
+
+Mechanisches Rechnen
+
+Binäraddierer
+Thomas Püttmann
+Binäres Rechnen bildet eine der Grundlagen der heutigen Computertechnologie. In diesem
+Artikel wird gezeigt, wie aus wenigen fischertechnik-Bauteilen ein fehlerfrei funktionierender,
+unterrichtstauglicher 4-Bit-Kugel-Binäraddierer konstruiert werden kann. Mit ihm lässt sich
+die Welt des binären Rechnens spielerisch erforschen.
+
+Geschichte
+Zahlen kann man auf verschiedene Art und
+Weise bezeichnen und benennen. Stellenwertsysteme wie unser heute gebräuchliches Dezimalsystem haben zwei vorteilhafte Eigenschaften: Erstens ist das Hinschreiben und Lesen selbst großer Zahlen
+mit wenigen Symbolen (Ziffern) möglich.
+Dadurch ist der Schreib-/Lesevorgang
+wenig fehleranfällig. Zweitens ergibt sich
+aus dem System heraus eine systematische
+Benennung der Zahlen, die zur effizienten
+mündlichen
+Kommunikation
+benutzt
+werden kann. So kann die Zahl 3421 trotz
+ihrer Größe (man stelle sich z. B. 3421
+Metallachsen vor) im Dezimalsystem mit
+nur vier Ziffern dargestellt werden, und sie
+besitzt den systematischen Namen Dreitausendvierhunderteinundzwanzig.
+Mechanische Rechenmaschinen benutzten
+fast ausschließlich die Darstellung der
+Zahlen im Dezimalsystem. Die ersten
+solchen Maschinen wurden unabhängig
+voneinander von Wilhelm Schickard (15921635) und Blaise Pascal (1623-1662) in der
+ersten Hälfte des 17. Jahrhunderts erfunden
+und funktionierten nur unzuverlässig und
+mit menschlichem Nachhelfen. Einen
+Durchbruch stellte die vom Universalgelehrten Gottfried Wilhelm Leibniz (16461716) im Jahr 1673 erfundene Staffelwalze
+dar.
+
+
+Leibniz war es auch, der als erster die Binärdarstellung von Zahlen entdeckte. Diese
+Darstellung verwendet nur die zwei Symbole 0 und 1 als Ziffern. Die Zahlen werden
+damit systematisch 0, 1, 10, 11, 100, 101,
+usw. benannt. Unter allen Stellenwertsystemen sind die Rechenoperationen im
+Binärsystem am einfachsten durchzuführen.
+Der Preis dafür ist, dass man für eine
+gegebene Zahl im Binärsystem die meisten
+Stellen benötigt. So hat die Binärdarstellung
+110101011101 der Zahl 3421 zwölf Stellen
+statt vier. Man sagt, es handelt sich um eine
+12-Bit-Zahl. Bit steht dabei für binary digit.
+Weniger bekannt als die Tatsache, dass
+Leibniz das Binärsystem entdeckte, ist, dass
+Leibniz auch als erster eine Rechenmaschine skizzierte, die das Binärsystem
+verwendet. In seiner dreiseitigen Aufzeichnung De progressione Dyadica aus
+dem Jahr 1679 beschreibt er einen Binäraddierer und -multiplizierer mit rollenden
+Kugeln, siehe [1, 2]. Nach dieser Skizze
+entwarf Ludolf von Mackensen (*1938) ein
+Modell, das im Jahr 1971 am Deutschen
+Museum gebaut wurde, aber nicht zuverlässig funktionierte. Ein fehlerfrei rechnendes Modell wurde im Jahr 2004 von Erwin
+Stein (*1931) und Gerhard Weber entworfen und gebaut und ist in der Leibniz-Dauerausstellung der Universität Hannover zu
+sehen [2].
+
+
+Mechanisches Rechnen
+
+Leibniz Idee, rollende Kugeln zum binären
+Rechnen zu benutzen, wurde in veränderter
+Form in den 60er Jahren des vorigen Jahrhunderts neu entdeckt: Im Jahr 1965
+meldete John Thomas Godfrey ein Patent
+unter dem Titel Binary Digital Computer an
+[3]. Neben der allgemeinen Beschreibung
+von Kugel-Flip-Flops (Abb. 1) enthielt die
+Patentschrift zwei geniale konkrete
+Lernspielzeuge, die einige Jahre lang unter
+den Namen Digicomp II und Dr. Nim von
+der Firma E.S.R., Inc. verkauft wurden.
+
+
+Patentschrift von J. T. Godfrey [3]
+
+Der Binäraddierer
+Für meine eigenen Lehrtätigkeiten entwickelte ich den hier vorgestellten fischertechnik-Binäraddierer (Abb. 2), der auf
+Godfreys Prinzipien basiert. Das oberste
+Ziel war dabei die Unterrichtstauglichkeit,
+d. h. ein einfacher Aufbau aus wenigen
+Teilen im Raster und eine fehlerfreie Funktion ohne Justierung. Der Nachbau sollte
+jedem Interessierten anhand der Abbildungen und der Teileliste möglich sein. Die
+selteneren Winkelsteine 60° mit drei Nuten
+(31918), die die Spitzen der Wippen bilden,
+kann man problemlos durch normale
+Winkelsteine 60° (31010) ersetzen, bei
+denen man jeweils die zwei Zapfen
+abtrennt.
+
+Zur Meldung eines Überlaufs verwende ich
+in der abgebildeten Version eine Fahrradklingel. Fahrradklingeln lassen sich perfekt
+auf Räder 23 schrauben und können so jede
+fischertechnik-Kugelbahn akustisch bereichern (Abb. 4).
+
+
+Natürlich können Puristen beim Nachbau
+auch auf eine Klingel verzichten und die
+linke Kante unten symmetrisch zur rechten
+Kante mit einer Bauplatte 6 x 1 abschließen.
+
+
+
+Vor mir hat übrigens schon Holger Howey
+einen fischertechnik-Binäraddierer gebaut.
+Er war 2010 auf der Modellausstellung in
+Münster zu sehen.
+Teileliste
+Anz.
+
+ft-Nr.
+
+Bezeichnung
+
+
+31010
+
+Winkelstein 60°
+
+
+31016
+
+Seiltrommel rot
+
+
+31034
+
+Metallachse 30
+
+
+31918
+
+Winkelstein 60°
+(drei Nuten)
+
+
+31981
+
+Winkelstein 15°
+
+
+32064
+
+BS 15 m. Bohrung
+
+
+32879
+
+BS 30 schwarz
+
+
+32881
+
+BS 15 schwarz
+
+
+32985
+
+Grundplatte 500
+
+
+36581
+
+Rad 23 rot
+
+
+37237
+
+BS 5 rot
+
+
+36293
+
+Winkelträger 120
+
+
+38236
+
+Bauplatte 1x1 gelb
+
+
+38240
+
+Eckstein 15
+
+
+38245
+
+Bauplatte 6x1 rot
+
+
+38246
+
+Bauplatte 1x1 rot
+
+
+38414
+
+Kunststoffachse 40
+
+
+38423
+
+Winkelstein 10 rot
+
+
+144262
+
+Kugeln
+
+Eine pdf-Datei mit den Zahlen, die auf die
+Bauplatten 1x1 geklebt werden, habe ich
+zum Download bereitgestellt. Und schließlich benötigt ihr noch eine Fahrradklingel.
+
+Aufbau
+Hauptbestandteil des Addierers sind die
+vier Toggle-Flip-Flops. Jedes dieser FlipFlops besteht aus einer Wippe, die zwei stabile Zustände einnehmen kann. Ist eine
+solche Wippe nach links gekippt, so nennen
+wir den Zustand des Flip-Flops 0. Das FlipFlop befindet sich im Zustand 1, wenn die
+Wippe nach rechts gekippt ist. Die vier FlipFlops zusammen bilden das Addierwerk.
+Der Gesamtzustand des Addierwerks ergibt
+sich aus den Zuständen der einzelnen FlipFlops, indem wir sie von links unten nach
+rechts oben auslesen und die ausgelesenen
+Werte von links nach rechts nebeneinander
+schreiben. Der Gesamtzustand des Addierwerks wird also durch eine 4-Bit-Binärzahl
+beschrieben.
+
+
+Oberhalb der Flip-Flops befinden sich vier
+Bausteine 15 mit roten Platten, die zusammen das Eingaberegister bilden. Ein Bit des
+Eingaberegisters ist 1, wenn auf dem Baustein 15 eine Kugel liegt, ansonsten 0.
+Zählen
+Zunächst führen wir einen Reset aus, d. h.
+wir setzen mit der Hand alle vier Flip-Flops
+des Binäraddierers in den Zustand 0. Der
+Gesamtzustand des Addierwerks ist also
+0000. Lassen wir jetzt Kugeln durch den
+oberen Einlass fallen, so ändert sich der
+
+Zustand des Binäraddierers. Nach der ersten
+Kugel befindet er sich im Zustand 0001
+(Abb. 6), nach der zweiten im Zustand
+0010, danach folgen 0011, 0100, usw. bis
+zur fünfzehnten Kugel, nach der der Zustand 1111 vorliegt.
+Unsere Maschine ordnet somit jeder Zahl
+von Null bis 15 systematisch eine Bezeichnung zu, die sogenannte Binärdarstellung
+dieser Zahl. Sie zählt also, denn Zählen ist
+nichts anderes als das reproduzierbare
+Benennen einer Anzahl von Objekten.
+
+Mechanisches Rechnen
+
+berechnen. Dazu könnten wir zunächst fünf
+Kugeln durch den oberen Einlass fallen
+lassen und danach sechs. Dabei müssen wir
+aber die Kugeln selbst abzählen. Es ist
+bedeutend schneller, die eben beim Zählen
+gewonnenen Binärdarstellungen Fünf =
+0101 und Sechs = 0110 zu verwenden.
+
+
+
+Nach einem Reset wird die 0101 zunächst
+ins Eingaberegister gegeben und dann
+durch vorsichtiges Hinunterstoßen von den
+Sockeln ins Addierwerk transferiert. Anschließend wird 0110 ins Eingaberegister
+gegeben (Abb. 7) und dann durch Hinunterstoßen zur bereits vorhandenen Zahl 0101
+im Addierwerk addiert (Abb. 8).
+
+Addieren
+Wenn man noch keine Erfahrungen mit dem
+Binärsystem gemacht hat, ist es am besten,
+sich für einen Moment gedanklich vom
+Rechnen im Dezimalsystem und der Dezimaldarstellung vollkommen zu befreien.
+Um das zu verdeutlichen, verwenden wir im
+Folgenden zwar die bekannten Namen Null,
+Eins, Zwei, usw. in ihrer ausgeschriebenen
+Form, symbolisch aber nur die Binärziffern
+0 und 1.
+Addition ist letztendlich nichts anderes als
+Weiterzählen. Angenommen, wir wollen
+Fünf + Sechs mit dem Binäraddierer
+
+
+
+
+Man erhält als Ergebnis 1011, d. h. die
+Binärdarstellung der Zahl Elf, die wir beim
+Zählen oben gewonnen haben.
+Funktion
+Um genau zu verstehen, wie und warum die
+Maschine funktioniert, schauen wir uns
+einmal an, wie die Binärdarstellung von
+Zahlen mathematisch definiert ist. Eine
+ganze Zahl N zwischen Null und Fünfzehn
+wird dabei geschrieben als
+N = a • Zwei•Zwei•Zwei +
+b • Zwei•Zwei + c • Zwei + d
+= ((a • Zwei + b) • Zwei + c) • Zwei + d
+wobei die vier Stellen a, b, c und d entweder
+0 oder 1 sind. Die Zahl Zwei selbst erhält
+also die Binärdarstellung 0010, die Zahl
+Vier = Zwei•Zwei die Binärdarstellung
+0100, und so weiter.
+Die erste Frage, die wir beantworten wollen, ist: Warum sind das genau die Darstellungen, die unsere Maschine beim Zählen
+liefert?
+Fällt eine Kugel in ein Flip-Flop, so ändert
+sich dessen Zustand (siehe Abb. 6). Ist der
+Zustand vorher 0, so ist er nachher 1 und die
+Kugel fällt ohne weitere Wirkung nach
+unten ins Ablagefach. Ist der Zustand
+vorher 1, so ist er nachher 0, die Kugel wird
+aber nach links unten ans nächste Flip-Flop
+weitergeleitet.
+Wenn N Kugeln ein anfänglich zurückgesetztes Flip-Flop durchlaufen, wird die
+abgerundete Hälfte der Kugeln ans nächste
+Flip-Flop weitergegeben. Der Zustand des
+ersten Flip-Flops ist zum Schluss 0, wenn N
+gerade ist, und 1, wenn N ungerade ist.
+Benutzen wir die mathematische Binärdarstellung von N von oben, so ist die abgerundete Hälfte von N gerade (a • Zwei + b)
+• Zwei + c und d ist der Zustand des ersten
+Flip-Flops zum Schluss. Das erste Flip-Flop
+hat also das d aus der Binärdarstellung
+extrahiert. Das nächste Flip-Flop extrahiert
+
+
+auf die gleiche Weise das c aus der übergebenen Kugelanzahl (a • Zwei + b) • Zwei
++ c und leitet a • Zwei + b an das folgende
+Flip-Flop weiter. Dieses extrahiert daraus b
+und gibt a Kugeln an das vierte Flip-Flop
+weiter. Insgesamt zeigen also die Flip-Flops
+die Binärdarstellung abcd von N an.
+Ein Beispiel: Werden elf Kugeln durch den
+oberen Einlass in die zurückgesetzte
+Maschine gegeben, so befindet sich das
+oberste Flip-Flop zum Schluss im Zustand
+1, da Elf ungerade ist. Fünf Kugeln werden
+an das zweite Flip-Flop übergegeben.
+Dieses hat zum Schluss den Zustand 1, weil
+Fünf ungerade ist. Zwei Kugeln werden an
+das dritte Flip-Flop weitergeleitet. Das
+befindet sich zum Schluss im Zustand 0,
+weil Zwei gerade ist. Eine Kugel wird an
+das vierte Flip-Flop übergeben, die es in den
+Zustand 1 versetzt. Die Binärdarstellung
+von Elf ist somit 1011.
+Die zweite Frage, die wir beantworten
+wollen, ist: Warum kann man mit der
+Maschine die Binärdarstellungen zweier
+Zahlen addieren?
+Hat man zwei Zahlen und ihre Binärdarstellungen
+N1 = a1 • Zwei•Zwei•Zwei
++ b1 • Zwei•Zwei + c1 • Zwei + d1,
+N2 = a2 • Zwei•Zwei•Zwei
++ b2 • Zwei•Zwei + c2 • Zwei + d2,
+so erhält man deren Summe, indem man die
+entsprechenden Stellen addiert und die
+Überträge berücksichtigt, die entstehen,
+wenn beide Stellen den Wert 1 haben.
+Zwei Beispiele:
+0101
++ 0110
+= 1011
+
+Hier entsteht nur ein Übertrag in der dritten
+Stelle.
+0011
++ 0111
+= 1010
+
+Hier entsteht ein Übertrag in der ersten,
+zweiten und dritten Stelle. An der zweiten
+
+Stelle werden sogar drei Einsen addiert.
+Jedes Flip-Flop stellt nun einen 1-BitAddierer dar:
+0 im Flip-Flop + 1 Kugel von oben
+= 1 im Flip-Flop,
+1 im Flip-Flop + 1 Kugel von oben
+= 0 im Flip-Flop + Übertrag nach links.
+Wenn die Kugeln alle gleichzeitig vom Eingaberegister ins Addierwerk gestoßen
+werden, erfolgt die Addition der entstehenden Überträge zeitversetzt. Daher bereitet
+die Addition der drei Einsen im zweiten
+Beispiel kein Problem. Man muss hier nicht
+wie bei elektronischen Addierern zwischen
+Halb- und Volladdierern unterscheiden.
+Subtrahieren, Multiplizieren und
+Dividieren
+Mit der Maschine lassen sich halbautomatisch auch Subtraktionen, Multiplikationen
+und Divisionen durchführen. Praktisch
+führt man die Subtraktion Elf minus Sechs
+durch, indem man zunächst Elf = 1011 ins
+Addierwerk eingibt. Die Sechs wird dann
+komplementär ins Eingaberegister eingegeben, d. h. man legt die Kugeln genau an
+den Stellen ins Eingaberegister, an denen
+die Binärdarstellung 0110 von Sechs Nullen
+hat, also links unten und rechts oben. Das
+Eingaberegister wird nun durch Hinunterstoßen addiert. Abschließend wird noch
+0001 addiert. Man erhält 0101 + Überlauf.
+Der Überlauf wird ignoriert. Das Ergebnis
+ist also Fünf.
+Dieses auf den ersten Blick etwas seltsam
+anmutende Vorgehen lässt sich mit den
+Begriffen Einerkomplement und Zweierkomplement erklären. Das Zweierkomplement einer Zahl N zwischen Null und
+Fünfzehn ist die Zahl N’, so dass N + N’ =
+Sechzehn ist. Zu Sechs = 0110 ist also zum
+Beispiel das Zweierkomplement Zehn =
+1010. Wenn man nun zu einer Zahl M das
+Zweierkomplement N’ von N addiert,
+addiert man Sechzehn – N und erhält auf
+unserer Maschine dabei M – N + Überlauf.
+Wenn man den Überlauf ignoriert, ist also
+
+Mechanisches Rechnen
+
+Subtraktion das gleiche wie Addition mit
+dem Zweierkomplement.
+Schneller als das Zweierkomplement einer
+Zahl kann man im Kopf das Einerkomplement bilden, bei dem jede Binärstelle
+einzeln komplementiert wird. Die Summe
+einer Zahl und ihres Einerkomplements
+ergibt offensichtlich immer 1111 = Fünfzehn, da an jeder Stelle eine 1 und eine 0
+addiert werden. Das Einerkomplement plus
+1 ist also das Zweierkomplement. Damit ist
+das obige Vorgehen vollständig erklärt.
+Die Multiplikation Fünf = 0101 mal Drei =
+0011 führt man praktisch durch, indem man
+die Drei einmal unverändert eingibt und
+dann um zwei Stellen nach links versetzt
+(1100) dazu addiert. Man erhält 1111 =
+Fünfzehn. Mathematisch liegt das am
+Distributivgesetz: 0101 • 0011 = (0100 +
+0001) • 0011 = 1100 + 0011. Mit dieser
+Überlegung ist klar, dass man bei jedem
+beliebigen Produkt nur verschobene Kopien
+des zweiten Faktors addieren muss.
+Die halbautomatische Division zweier
+Zahlen orientiert sich wie die Multiplikation an der schriftlichen Rechnung und
+nutzt damit ebenfalls das Distributivgesetz.
+Sie wird hier nicht weiter erklärt.
+
+Schlussbemerkungen
+In einer der nächsten Ausgaben werden
+weitere fischertechnik-Kugellogik-Elemente und Anwendungen vorgestellt, insbesondere ein R-S-Flip-Flop. Ein Video des hier
+vorgestellten Binäraddierers findet ihr in
+youtube.
+
+Literatur und Links
+[1]
+
+Georgi Dalakov: Gottfried Leibniz.
+http://history-computer.com/
+
+[2]
+
+Erwin Stein: Die LeibnizDauerausstellung der Gottfried
+Wilhelm Leibniz Universität in
+Hannover. 2008.
+
+[3]
+
+John Thomas Godfrey: Binary Digital Computer, US Patent 3,390,471
+
+

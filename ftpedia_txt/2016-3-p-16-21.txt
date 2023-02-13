@@ -1,0 +1,201 @@
+
+
+Mechanik
+
+Verstellbare Propeller
+Harald Steinhaus
+Windkraftanlagen, Propellerflugzeuge und die meisten Schiffe müssen mit wechselnder Stärke
+der anstehenden Strömung (Luft oder Wasser) zurechtkommen und brauchen daher verstellbare Propeller, d. h. solche, bei denen man den Anstellwinkel der Blätter verändern kann. Ein
+Hubschrauber in der meist verwendeten Bauweise löst das gleiche Problem gleich zweimal:
+der Heckrotor als Ganzes und die kollektive Blattverstellung am Hauptrotor funktionieren als
+verstellbare Propeller. Die zyklische Blattverstellung eines Hubschraubers fügt noch eine
+weitere Komponente hinzu [1]. Aber selbst wenn man im Umkehrschluss annimmt, dass ein
+Verstellpropeller leichter zu bauen ist, steht man immer noch vor einem nicht so trivialen
+Problem. Ja, wenn denn fischertechnik eine Taumelscheibe als fertiges Bauteil hätte... So aber
+muss man auf sperrig bauende Alternativen ausweichen, die sich auch wenig für realistische
+Drehzahlen und die damit verbundenen Fliehkräfte eignen.
+Die hier vorgestellten Propeller fallen in
+zwei Kategorien:
+∂ Zum einen ist da die Bauart, die sich aus
+der Taumelscheibe eines Hubschraubers
+ableitet und nur die kollektive Blattverstellung ermöglicht, also salopp
+gesagt, nur die Scheibe, aber nicht das
+Taumeln verwendet. Das Problem hierbei ist es, ein Teil zu finden, das lose auf
+einer Achse dreht, an mindestens einer
+Seite eine umlaufende Krempe aufweist,
+an der man es längs verschieben kann,
+und das zur anderen Seite hin die
+Befestigung von Blattverstellhebeln
+ermöglicht.
+∂ Die zweite Kategorie kommt ohne
+Taumelscheibe
+aus,
+indem
+der
+Anstellwinkel der Blätter durch die
+Drehbewegung einer zentralen Achse
+relativ zum Propellerkopf eingestellt
+wird. Anders ausgedrückt: die Blattverstellung erfolgt entweder durch
+Längsverschiebung oder durch Verdrehen des Propellerkopfs relativ zur
+antreibenden Achse.
+
+
+Eine dritte, und zwar die in der Technik
+vorherrschende Kategorie muss leider
+unbestückt bleiben: die hydraulische Blattverstellung benötigt hohlgebohrte Wellen
+und Drücke, die mit fischertechnik-Teilen
+nicht zu bewältigen sind.
+Bevor es richtig losgeht, werden zunächst
+die „Kaulquappen“ vorgestellt, auf die
+weiter unten zurückgegriffen wird:
+Der fischertechnik-Spurkranz (36331) kann
+an seinem schmalen Rand mittels dreier
+Verbindungsstopfen (32316) an der Drehscheibe befestigt werden.
+
+Bild 1: Spurkranz und Drehscheibe
+
+Die langen S-Riegel 8 ermöglichen es, auf
+der ft-Drehscheibe vier Teile in 90°
+Abstand anzuordnen.
+
+
+Mechanik
+
+Bild 2: S-Riegel 8 und Drehscheibe
+
+Lässt man von einer Alu-Schiene die
+Zapfen weg, hat man ein fischertechnikTeil mit vier Nuten und durchgehender
+Bohrung.
+
+Bild 3: Alu-Schiene einmal anders
+
+Blattverstellung mittels nicht
+taumelnder Taumelscheibe
+Modell A
+Das Modell in Abb. 4 hat vier Blätter, die
+mittels Rastachse mit Platte (130593),
+einem BS15 und der Achsverschraubung
+(38843) auf der Achse befestigt sind. Die
+Taumelscheibe wird mit vier Führungsplatten (32455) gehalten. Die Blattverstellung erfolgt durch zwei mal zwei
+Schneckengetriebe. Die roten Schnecken
+klemmen auf der Achse, weil da jeweils
+noch ein Stück Angelschnur (fischertechnik-Original, aus der Weihnachtsdeko
+(48667)) hindurch gefädelt ist.
+
+Bild 4: Modell A mit Drehscheiben
+
+
+
+
+Modell B
+
+Modell C
+
+… verwendet das Speichenrad als Taumelscheibe. Die Verstellhebel sind durch die
+gekrümmten Öffnungen der Drehscheibe
+hindurchgeführt. Die Verstellung erfolgt
+durch ein Hubgetriebe, mit dem das
+Speichenrad (auf Freilaufnabe) auf der
+Achse verschoben wird.
+
+Der fischertechnik-Spurkranz (36331) ist
+mittels dreier Verbindungsstopfen (32316)
+an der Drehscheibe befestigt. Die Verstellung
+erfolgt
+mittels
+zweistufigem
+Schneckengetriebe und der Führungsplatte
+(32455).
+
+Bild 6: Modell C mit Spurkranz
+Bild 5: Modell B mit Speichenrad
+
+
+
+Mechanik
+
+Modell D
+Die Felge 30 hat gleich zwei umlaufende
+Ränder, in die man Gleitführungen einhängen kann. Der Antrieb wird durch den
+Gummiring mehr angedeutet als tatsächlich
+bewirkt.
+
+Bild 7: Modell C, Rückseite
+
+Bild 8: Modell D mit Felge 30
+
+
+
+
+Modell E
+Modell E verwendet ebenfalls den Spurkranz als Taumelscheibe. Als zentrales Teil
+im Propellerkopf dient hier ein Stück
+fischertechnik-Alu-Schiene ohne Zapfen,
+auf dem der Spurkranz mit vier Federnocken fixiert ist. Die Drehscheibe dient
+nur als Anlagefläche für den Spurkranz und
+kann noch durch etwas Kompakteres ersetzt
+werden.
+
+Blattverstellung mittels
+Verdrehen der Propellerachse
+Modell F
+Modell F hat drei Blätter auf einem
+Propellerkopf aus Drehscheibe und angekoppeltem Z30. Die Verstellung geschieht
+durch Verdrehen der Achse mit dem
+fischertechnik-Kegelzahnrad
+gegenüber
+dem Propellerkopf, auf dem die Blätter mit
+Differenzial-Antriebsrad (31414) montiert
+sind. Im Betrieb rotieren beide Elemente.
+Die Blattstellung bleibt genau dann
+unverändert, wenn sich die Elemente gleich
+schnell drehen. Abweichungen der Drehzahlen führen zu anderen Blattstellungen.
+Dieser Propeller benötigt also ein Getriebe,
+das für gleiche Drehzahlen sorgt, aber auch
+gezielt Unterschiede erzeugen kann. Dieses
+Getriebe kennen wir als „Gleichlaufgetriebe“, und davon gibt es im Bilderpool
+eine wohlbestückte Kategorie [2].
+
+Bild 9: Modell E mit Spurkranz und Alu
+Bild 10: Modell F mit Kegelrädern
+
+
+Modell G
+
+Mechanik
+
+die Antriebsachse gegenüber dem Propellerkopf (mit den beiden Drehscheiben)
+verdreht.
+Beim Gleichlaufgetriebe wird der Eingang
+für gleichsinnigen Antrieb mit einem
+Power-Motor bestückt; der gegensinnige
+Antrieb geschieht über ein Schneckengetriebe.
+
+Bild 11: Modell G mit Differenzial und
+Gleichlaufgetriebe
+
+Modell G zeigt das Gleichlaufgetriebe mit
+einem weiteren Propellerkopf, der etwas
+komplexer aufgebaut ist: die Blattverstellung geschieht durch Differenzial-Antriebsräder (31414) und den Kranz des Differenzialgehäuses. Das Differenzial selbst ist am
+vorderen Ende blockiert, steckt mit seinem
+Gehäuse „einfach so“ zwischen den beiden
+Drehscheiben und sitzt mit dem anderen
+Ende auf der Antriebsachse. Dadurch ergibt
+sich eine Untersetzung von 1:2, wenn man
+
+Bild 12: Modell G, Rückseite mit
+gegensinnigem Antrieb
+
+Quellen
+[1]
+
+Dirk Fox, Johann Fox:
+Hubschrauberrotoren. 3/2011, S. 29-35.
+
+[2]
+
+ft-Community-Bilderpool:
+Gleichlaufgetriebe.
+
+
+

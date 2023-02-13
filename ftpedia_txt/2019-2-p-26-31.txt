@@ -1,0 +1,164 @@
+
+
+Modell
+
+Gabelstapler
+Dirk Wölffel
+Im Jahr 2009 erschien der fischertechnik-Baukasten Robo TX Training Lab als Bausatz
+(Abb. 1). Das Highlight des Baukastens ist ein Gabelstapler, ausgestattet mit einem TX Controller, der zwei Encoder-Motoren ansteuert. Eine 2 cm breite Fahrspur wird mit Hilfe eines
+IR-Spursensors abgetastet. Zehn Jahre später ist, wie überall, die Technik weiter
+fortgeschritten. Es hat sich einiges in der fischertechnik-Welt getan: Es gibt 3D-Drucker, den
+TXT-Controller, eine Kamera etc. Ansporn genug, einen neuen Gabelstapler zu konstruieren,
+um zu zeigen, was möglich ist – und wie der 3D-Druck helfen kann, beim „Feinschliff“ eines
+Modells Lösungen zu finden.
+Hier meine Anforderungen an das Modell:
+· kompakte Bauform
+· Kamera für die Fahrspurerkennung und
+der Erkennung von Paletten
+· Akkuladeanzeige auf dem TXT
+· Fahrbeleuchtung vorn und hinten
+· Signalleuchte oben
+· Sound für den Motor
+· kipp- und verstellbare Gabel
+Training Lab (505286p)
+
+· gute Erreichbarkeit der TXT-Anschlüsse
+
+Die Planung
+Beim Konstruieren des Gabelstaplers bin
+ich folgendermaßen vorgegangen. Mein
+Ziel war, in erster Linie originale fischertechnik-Bauteile zu verbauen. 3D-DruckBauteile sollten dabei als Hilfsbauteile eingesetzt werden. Zum Einsatz kam der
+Baukasten Robotics TXT Discovery Set
+(524328), da hier ein Großteil der Bauteile
+und die dazu passendende Software bereits
+enthalten waren.
+
+
+
+
+Modell
+
+Die Konstruktion
+Bei der Konstruktion habe ich mich dafür
+entschieden, den TXT Controller schräg zu
+verbauen (Abb. 3). Dadurch konnte der
+Akku besser integriert werden (Abb. 4).
+
+
+
+Die Gabel ist seitlich verschiebbar (Abb. 6)
+und wird mit Hilfe eines Mini-Motors mit
+Getriebe über eine Schneckenmutter auf
+und ab bewegt. Darüber ist die Lagerung
+zum Neigen der Gabel sichtbar (Abb. 7).
+
+
+
+Da der Gabelstapler möglichst originalgetreu aussehen sollte, habe ich verschiedene 3D-Bauteile konstruiert. Dazu zählen
+die Seitenverkleidung, die Gabel und die
+Kotflügel (Abb. 5).
+
+
+Bei der Inbetriebnahme stellte sich heraus,
+dass die Palette beim Abbremsen öfter von
+der Gabel rutschte. Daher wurde noch
+zusätzlich eine Lösung für die Neigung der
+Gabel verbaut (Abb. 8).
+
+
+
+
+Der Antrieb
+Der Antrieb besteht aus zwei Encodermotoren. Da ein kurzer Radstand mit Standardbauteilen schwierig umzusetzen war, habe
+ich Sonderbauteile von Andreas Tacke
+(TST) eingesetzt: zwei Zahnräder Z10 mit
+Messingnabe und zwei Naben mit Madenschraube (Abb. 9) [1].
+
+
+Priorität bei der Bauform war ebenfalls,
+dass die Anschlüsse des TXT Controllers
+gut erreichbar sind (Abb. 11). Der Akku
+muss zum Laden nicht ausgebaut werden,
+sondern kann über einen Leuchtstein als
+Ladeanschluss geladen werden (Abb. 12).
+
+
+Die Elektronik
+Für die Fahrspurerkennung mit farbigen
+5 mm-Linien kommt die fischertechnikKamera zum Einsatz. Darunter befindet
+sich einer von drei Endschaltern (Abb. 10).
+Die Kamera erkennt verschiedenfarbige
+Linien, die Palette und farbige Werkstücke.
+Dadurch ist sie in der Lage Paletten richtig
+zuzuordnen.
+
+Natürlich durfte eine Signalleuchte mit
+akustischem Signal nicht fehlen. Diese wird
+über die Blinkelektronik (35604) angesteuert, da die Motorausgänge des TXT Controller bereits alle vergeben waren
+(Abb. 13).
+
+Modell
+
+visuell als Balken anzeige (Abb. 15). Dazu
+wird die maximale Kapazität des Akkus in
+das Verhältnis zum aktuell gemessenen
+Wert gesetzt. Wird ein Schwellenwert
+erreicht, so gibt der TXT den Text „Akku
+schwach“ aus und ein akustisches Signal
+ertönt. Wird jetzt ein Ladegerät angeschlossen, so steigt der Strom an und es
+wird die Anzeige „Lade Akku“ ausgegeben.
+Ist der der Schwellenwert überschritten, so
+wird „Akku ausreichend“ ausgegeben.
+
+
+Die Software
+Bei der Software habe ich mich beim
+Robotics TXT Discovery Set bedient. Das
+ROBO Pro-Programm „Erkundungsroboter.rpp“ wurde dabei als Grundlage verwendet und weiterentwickelt (Abb. 14).
+
+
+Die Bilderkennung
+
+
+Ich habe noch ein zusätzliches Unterprogramm erstellt, mit dem ich den aktuellen
+Ladezustand des Akkus im TXT-Display
+
+Wie schon weiter oben beschrieben werden
+über die Kamera verschiedene farbige
+Linien erkannt. Hierfür wird farbiges GaffaKlebeband (5 mm, matt) verwendet. Beim
+Versuchsaufbau (Abb. 16) wird eine Palette
+mit zwei farbigen Werkstücken über die
+Kamera identifiziert. Der Gabelstapler
+erkennt die richtige farbige Linie und ordnet
+die Palette dem Regal zu. Dabei erkennt er
+auch, ob ein Regal bereits gefüllt ist oder
+nicht.
+
+
+
+
+
+Fazit
+Der Beitrag soll euch motivieren, Lösungen
+beim Bauen und Konstruieren zu finden.
+Mit Hilfe des 3D-Drucks sind heute vielfältige technische Lösungen machbar. Wichtig
+sollte dabei immer sein, sich schon in der
+Planungsphase Gedanken zum Modell zu
+machen und darüber, was wichtig ist.
+
+
+Ein Video zum Gabelstapler findet ihr auf
+meinem YouTube-Kanal.
+
+Quellen
+[1]
+
+Andreas Tacke: ft-Spetialteile made
+by TST. ft:pedia 2/2015, S. 24-25.
+
+
+Modell
+
+
+
+

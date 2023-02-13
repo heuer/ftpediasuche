@@ -1,0 +1,187 @@
+
+Modell
+
+Modell
+
+Das chaotische Pendel
+Stefan Falk
+Mit wenigen Magneten und einem magnetischen Pendel lässt sich ein einfaches Modell bauen,
+dessen Bewegungen faszinierend chaotisch anmuten und immer wieder neu ausfallen.
+Manchmal gibt es Modelle, die muss man
+einfach bauen. Dies hier ist so eines, und ich
+kann nur sagen: Das müsst ihr einfach nachbauen! Die kaum vorauszusagenden Bewegungen und Ausschläge seines Pendels sind
+einfach faszinierend. Für im Büro Arbeitende besteht eine erhebliche Gefahr, dass
+das Modell am Arbeitsplatz landet und
+einen ständig ablenkt – so stark ist die
+Versuchung, das Pendel immer neu einzustellen und anzustoßen.
+
+nicht ganz festgezogenen Flachnabe befestigt. Das erlaubt es, das Pendel durch Verschieben leicht etwas höher oder niedriger
+zu justieren.
+
+Aber der Reihe nach. Zunächst benötigen
+wir für das Modell sieben Magnete. Zur Not
+ergeben auch schon vier Magnete interessante Bewegungen, wenn man die äußeren
+drei weglässt. Hier werden stabförmige
+Neodym-Magnete mit 4 mm Durchmesser
+und 10 mm Länge verwendet, wie man sie
+z. B. von [1] beziehen kann. Deshalb ist eine
+deutliche Warnung geboten:
+ACHTUNG!
+Neodym-Magnete
+sind
+extrem stark und gehören nicht in die Hände
+von kleinen Kindern! Das Verschlucken
+von zwei Magneten kann den Darm zusammenschnüren und lebensgefährlich werden.
+
+Das Basis-Modell
+Der Aufbau besteht aus wenigen Standardteilen:
+Von oben hängt eine Metallachse 110
+herunter, an deren Ende sich einer der Magnete festhält. Die Achse ist kardanisch aufgehängt, sodass sie frei pendeln kann. Das
+Kardangelenk (31044) wird oben an einer
+
+
+In der Bodengruppe stecken drei Magnete
+in einer fischertechnik-Drehscheibe. Wietere drei befinden sich weiter außen in
+Klemmhülsen 7,5 (35980). Natürlich können auch weniger oder noch mehr Magnete
+zu weiteren interessanten Varianten führen.
+
+
+
+
+interessant, einschließlich der Kombinationen wie „abstoßend“ für die drei
+inneren und „anziehend“ für die drei
+äußeren Magnete. Auch „wilde“ Kombinationen von anziehend und abstoßend
+sind reizvoll.
+ Ganz schnell lässt sich alles umpolen,
+indem man einfach den Magneten des
+Pendels herumdreht.
+ Die Magnete in der Drehscheibe lassen
+sich in vielfältigen Kombinationen in die
+sechs Bohrungen einstecken.
+ Die äußeren Magnete lassen sich tangential zur Drehscheibe durch Verschieben
+der Klemmhülsen 7,5 in den BS 7,5
+verstellen.
+
+einer locker angezogenen Flachnabe
+
+Die Bewegungen sind immer neu. Bei mir
+zu Besuch kommende Leute konnten auch
+schon kaum die Finger und die Augen vom
+Modell lassen. Einige einfache Bewegungsbeispiele zeigt das Video unter [2].
+
+
+Experimente
+Und schon geht’s los. Das Modell ist vielfältig einstellbar und bietet Raum für schier
+endlose Versuche:
+ Spielt mit der Polung der Magnete: Für
+den Anfang empfiehlt es sich, dass alle
+Magnete so angeordnet sind, dass sie den
+vom Pendel herunterhängenden abstoßen. Aber auch die andere Richtung ist
+
+Das Luxus-Modell
+Das Basismodell genügt völlig für viele
+faszinierende Versuche. Wer etwas mehr
+Teile verbauen möchte, kann auch eine
+Luxusfassung herstellen. Gegenüber dem
+Basismodell bietet diese Variante noch
+mehr Möglichkeiten:
+ Die Höhe des Pendels lässt sich per Stellschraube noch eleganter einstellen
+ Die Drehscheibe mit den inneren Magneten ist manuell verdrehbar.
+
+
+Modell
+
+ Die Drehscheibe kann mit einfachem
+Handgriff abgenommen und andersherum aufgesetzt werden, um alle
+inneren Magnete auf einmal umzupolen.
+ Die äußeren Magnete sind radial nach
+außen und innen, in der Höhe und in der
+tangentialen Lage zur Drehscheibe zu
+verschieben.
+
+
+Die Bodengruppe beginnt ähnlich wie im
+Basismodell:
+
+Auch in diesem Modell ist die Flachnabe
+leicht anzuziehen, damit sich die Schraubverstellung nicht von allein verstellt.
+
+Anstatt je eines einzelnen Verbinders 30
+stecken in der Drehscheibe nun Verbinder
+15, außen gefolgt von Verbindern 45. Das
+erlaubt das Verschieben der äußeren Magnete auf den unteren BS 5 in weiten
+Bereichen.
+
+
+
+
+Der drehbare Aufbau beginnt mit einer
+zweiten Drehscheibe (Abb. 9). In ihrer
+Mitte sitzt eine Flachnabe; die Radmutter
+zeigt nach unten. Von oben wird eine VAchse 34 Clipachse (32870) eingesteckt
+und in der Nabe festgeschraubt, wobei die
+Nabe nur so fest angezogen werden darf,
+dass man die Drehscheibe darin noch
+drehen kann.
+
+
+
+
+In den Bohrungen der Drehscheibe stecken
+drei Kombinationen aus den folgenden
+Teilen: V-Achse 20 Rastachse (31690, von
+unten in die Drehscheibe gesteckt), obenauf
+
+
+stecken je zwei (!) Scheiben 4 15 (105195)
+und schließlich eine Klemmbuchse 5
+(37679). Auf diese Baugruppe wird später
+die dritte Drehscheibe mit den drei Magneten gesteckt.
+
+Modell
+
+angezogene Nabe der mittleren Drehscheibe erreicht.
+
+Dieses Drehgestellt wird aber nicht einfach
+in die feststehende Nabe der untersten
+Drehscheibe eingesteckt, denn dann würden
+die roten V-Achsen auf Dauer nach unten
+rutschen. Deshalb dient ein Z30, das einfach
+„eingelegt“ wird, als Abstandshalter und
+Stütze:
+Bodengruppe verankert
+
+Unterseite der zweiten Drehscheibe
+
+Auf dieses Gestell kann nun die oberste,
+dritte Drehscheibe mit den drei Magneten
+einfach aufgesteckt und wieder abgenommen werden. So können die drei inneren
+Magnete sowohl verdreht als auch durch
+Umdrehen der obersten Drehscheibe umgepolt werden.
+
+(das Bild zeigt die Unterseite)
+
+Das Z30 dreht sich also später mit, weil es
+etwas in der Radnabe der Flachnabe steckt.
+Das Drehgestellt wird dann von oben in die
+feststehende Nabe der untersten Drehscheibe gesteckt. Diese unterste Nabe wird
+fest angezogen, damit das Drehgestell nicht
+nach oben herausrutschen kann. Die Drehbarkeit wird ja durch die nicht ganz fest
+
+drei Drehscheiben
+
+Endlose und immer neue Versuche warten!
+
+Quellen
+[1]
+
+https://fischerfriendsman.de/ (man
+suche nach Neodym).
+
+[2]
+
+Falk, Stefan: Das chaotische Pendel.
+Youtube-Video, 2020.
+
+
+

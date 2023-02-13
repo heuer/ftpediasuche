@@ -1,0 +1,459 @@
+
+
+Tipps & Tricks
+
+Neue ft-Teile selbst gemacht: 3D-Druck
+Harald Steinhaus
+Auch der versierteste ft-Konstrukteur stößt gelegentlich an Grenzen – nicht jedes Modell lässt
+sich ohne Kompromisse mit fischertechnik realisieren. Wer nicht mit Kompromissen leben
+mag, dem bietet sich neben Modding [1], Plaast-Guss [2] und TSTs Spezialteilen [3] eine
+vierte Möglichkeit: die eigene Produktion in Kleinstauflage – ganz professionell mit CADEntwurf und 3D-Druck.
+
+In aller Kürze
+Wer ft-Teile selbst konzipieren
+produzieren möchte, braucht
+
+und
+
+eine Definition des gewünschten Teils
+im STL-Dateiformat (Surface Tesselation Language),
+die Software, um STL-Dateien zu
+erzeugen,
+eine Möglichkeit, Fehler in der TeileDefinition zu finden, bevor „Müll“
+produziert wurde und
+jemanden, der einen 3D-Drucker hat. In
+den meisten Fällen wird das ein
+kommerzieller Service sein.
+
+ermöglichen vom hauseigenen Dateiformat
+ausgehend einen Export ins STL-Format.
+Die erste Hürde für den Starter ist das
+Finden eines CAD-Programms, das einen
+nicht mit seiner Mächtigkeit erschlägt und
+preislich zum Anwendungszweck passt.
+Hier scheiden für den Hobby-Zweck „mal
+eben ein ft-Teil selber drucken“ die meisten Programme aufgrund drei- bis vierstelliger Preise aus. Für den Anfang reichen
+kostenlos verfügbare Programme allemal
+aus. So kann man sich mit den Grundzügen
+vertraut machen und einen Forderungskatalog für später aufstellen.
+Als Vorab-Test leistet Viscam View gute
+Dienste (kostenlos; siehe Abb. 1):
+
+Im Einzelnen
+Das STL-Format beschreibt die Oberfläche
+eines Teils als ein Netz von Dreiecken im
+Raum. Jedes Dreieck hat zudem einen
+Richtungsvektor, der angibt, wo vom
+Dreieck aus „außen“ ist. Alle Dreiecke
+zusammen müssen die Oberfläche lückenlos beschreiben, d. h. das Teil muss
+„wasserdicht“ sein. Ist das nicht der Fall,
+wird der Druck entweder in der Vorprüfung abgelehnt oder er führt zu undefinierten Ergebnissen.
+Die STL-Datei kann man mit StandardCAD-Programmen erzeugen. Die meisten
+
+
+Die Prüfung der STL-Datei übernimmt,
+soweit im Rahmen der Recherche für
+diesen Artikel ersichtlich, der 3D-Druckservice. Dort richtet man einen Account
+ein und lädt im Rahmen des Druckauftrags
+die STL-Datei auf den Server hoch. Dort
+prüft ein Programm die Datei auf Richtigkeit und ermittelt Material- und Zeitbedarf
+fürs Drucken. Je nach Vertragsmodell
+ergibt sich daraus auch der Preis für den
+Auftrag.
+
+CAD-Programme für Einsteiger
+Die erste Hürde für CAD-Einsteiger ist das
+eigene räumliche Vorstellungsvermögen,
+nebst Anwendung desselben auf die
+Ansicht des Teils im CAD-Programm.
+Wer von Google Earth das Drehen, Kippen
+und Verschieben der Ansicht der Erdoberfläche kennt, wird sich im CAD-Programm
+deutlich leichter tun. Ein Wermutstropfen
+ist die nur „im Prinzip“ gleiche Belegung
+der Maus/Tastatur-Elemente: je nach Programm wird mit der einen oder anderen
+Taste, in Verbindung mit Shift- oder AltTaste, die Ansicht gedreht oder verschoben. Zoomen geht immer mit dem Mausrad, nur variiert hier die Zoomrichtung
+(einwärts oder auswärts) von Programm zu
+Programm.
+Google/Trimble Sketchup
+(kostenlos, Registrierung erforderlich) ist
+aus der Betrachtung heraus geflogen. Da
+müssen Anwender über 18 sein (da fällt
+sicher ein Großteil der Leserschaft aus).
+Und bei einer Frechheit von Lizenzbedingung der Art: „you agree to the terms of
+the Trimble Privacy Policy, which may be
+updated from time to time and without
+notice“ („Sie stimmen den Trimble-Datenschutzrichtlinien zu, die wir ohne Benachrichtigung ändern können“, Stand 08.06.
+2013) ist für den Autor dieses Artikels
+augenblicklich das Ende erreicht – beim
+Newsletter-Versand schaffen sie es ja
+auch, eine Mailing-Liste zu pflegen.
+
+Tipps & Tricks
+
+TinkerCAD
+TinkerCAD (kostenlos, Registrierung
+erforderlich) arbeitet rein web-basiert. Man
+braucht dazu einen Browser mit WebGLUnterstützung (mit Opera funktioniert es
+trotzdem nicht). TinkerCAD
+speichert die 3D-Ursprungsdatei nur auf
+dem Server,
+erlaubt das Herunterladen der Druckdateien,
+ist sehr einfach zu bedienen (Rotationspfeile oder Maßpunkte an den Ecken
+eines Körpers ziehen, fertig),
+ermöglicht maßgenaues Arbeiten nur
+mit der Maus, ohne Zahleneingabe, was
+auf Dauer mühsam wird,
+bietet keine logischen Gruppen. Gruppieren vereint zwei Teile; Gruppieren
+von Löchern und Material bedeutet
+Material entfernen,
+bietet kein Ein-/Ausblenden von Teilen
+oder Gruppen.
+Weitere Kandidaten findet man z. B. in
+Wikipedia oder dem Software-Verzeichnis
+des Heise-Verlags.
+Einen günstigen Zugang zu CAD bieten
+Schüler-/Studentenversionen oder zeitlich
+begrenzte Trial-Versionen. Von „PTC
+Creo Elements“ gibt es eine zeitlich unbegrenzte kostenlose Version (Creo Elements
+Direct Modeling Express 4.0, ehem.
+CoCreate), die eine Limitierung auf 60
+Teile aufweist. Nun, als ft-Bastler arbeitet
+man höchstens mit einer handvoll Teilen
+gleichzeitig (etwa deren drei für ein
+Kardangelenk, zuzüglich ein paar „selbstgefertigten“ Vorlagen wie ft-Zapfen und
+Nuten-Stanzvorlagen), da sind 60 Teile
+mehr als ausreichend.
+
+Erste Schritte
+Egal wohin die Wahl der CAD-Software
+gefallen ist, zur Einarbeitung in die
+
+
+
+
+Thematik und zum Erlernen der ersten
+Schritte ist das Tutorial von TinkerCAD
+wärmstens zu empfehlen. Es zeigt die
+grundsätzlichen Arbeitsvorgänge bei der
+3D-Konstruktion:
+
+ren, Schnittmenge) zwischen zwei Teilen
+und definiert, welches Ausgangsteil dabei
+das Werkzeug darstellt und ob es anschließend im Ergebnis aufgeht oder als Kopie
+bestehen bleibt.
+
+1. Man beginnt mit einer Vorlage. Bei
+TinkerCAD wählt man hierzu ein Basisteil
+(Quader, Torus, Kegel, ...) aus einer Liste,
+bei Creo erstellt man einen 2D-Grundriss
+und extrudiert ihn in die dritte Dimension,
+was entweder linear oder auf einer Bahn
+im Raum geschehen kann.
+
+Oberhalb dieser Grundmenge an Operationen zeigen sich die Unterschiede
+zwischen den Programmen deutlich.
+Einfache Programme sind eher fürs Erzeugen von Miniaturbüsten oder Schachfiguren geeignet als von maß- und passgenauen Bauteilen.
+
+2. Man ändert Position oder Abmessungen
+der Vorlage. Hierzu wird ein einmal
+markiertes Teil mit Kontrollpunkten
+umgeben, an denen man per Mauszeiger
+„greifen“ und ziehen oder drehen kann. So
+wird aus einen Würfel durch Ziehen an
+einem Flächenkontrollpunkt ein Quader
+oder durch Ziehen an einer Kante eine Art
+Pultdach.
+
+Weitere Funktionen sind
+logische Gruppierung (Teile können als
+Gruppe gemeinsam bewegt oder skaliert
+werden, bleiben aber einzelne Teile)
+Ein-/Ausblenden von Teilen und
+Gruppen (damit behält man die
+Übersicht; außerdem können ausgeblendete Teile nicht aus Versehen von
+anderen Operationen betroffen werden)
+periodisches Fortsetzen einer Struktur,
+oder mehrfaches Kopieren eines Teils,
+entlang einer Linie oder auf einem
+Kreisbogen
+
+(TinkerCAD). Jeder ist mit einer Fläche
+oder Kante verknüpft.
+
+3. Man definiert oder verwendet für jeden
+Schritt eine Arbeitsebene im Raum, die als
+„Maß aller Dinge“ dient.
+
+maßgenaues Arbeiten mittels Tastatureingabe: nach Auswahl einer Kante
+kann man ihre gewünschte Länge
+eintippen, statt mit der Maus mehr oder
+weniger treffsicher das Wunschmaß zu
+treffen
+
+4. Man verschmilzt zwei oder mehr Teile
+zu einem neuen Teil, etwa einen
+Gewindebolzen und einen Sechskantblock
+zu einer Maschinenschraube
+5. Man verwendet bestehende Teile als
+Werkzeuge, um damit andere Teile zu
+beschneiden oder Material aus ihnen
+heraus zu stanzen. Bei TinkerCAD
+definiert man hierzu ein Teil zum „Loch“
+(hole) um; bei Creo wählt man eine
+boolesche Operation (Vereinen, Subtrahie6
+
+Ziehen in allen Raumrichtungen und Bögen
+zum Drehen in allen Achsen. Grüner und roter
+Pfeil definieren hier das Maß der horizontalen
+Verschiebung und können irgendwo hin
+„geklebt“ werden. Im Zahlenfeld kann man
+direkt einen Wert eingeben.
+
+Teile können transparent eingefärbt
+oder als Drahtgitter dargestellt werden
+bewegliche Bezugspunkte (damit kann
+man den Abstand zweier Teile bemessen z. B. zwischen Vorder- oder Hinterkanten des einen und Vorder- oder
+Hinterkante des anderen, oder einem
+Bohrungsmittelpunkt
+oder
+einem
+beliebigen anderen Merkmal)
+in Creo kann man eine 2D-Kontur auf
+eine Fläche eines Teils zeichnen und
+diese Kontur in die dritte Dimension
+extrudieren, und so z. B. bei rundem
+Querschnitt Sacklöcher oder Stehbolzen
+erzeugen.
+
+Erfahrungen
+Solchermaßen eingearbeitet kann man sich
+an die erste Aufgabe heranmachen. Der
+Entwicklungszyklus über Entwurf –
+Bestellung – Lieferung – Überarbeiten
+wäre allerdings zeitraubend und kostspielig. Da hilft die Vorschaufunktion der
+3D-Services, oder die Möglichkeit, den
+3D-Druckertreiber auf dem eigenen
+Rechner zu installieren und das Ergebnis
+eines Trockenlaufs Druckschicht für
+Druckschicht zu inspizieren.
+
+alle Ebenen hinweg. In Weiß ist das Stützmaterial dargestellt. Unterm Teil wird immer
+ein Sockel daraus gedruckt.
+
+Aus solchen Testläufen und einigen echten
+Ergebnissen sind ein paar Tipps zum
+Vermeiden von Fehlern erwachsen:
+
+Tipps & Tricks
+
+Immer einen Quader und einen
+Zylinder mit 4 mm Durchmesser (ftAchse) als Bauvorlagen bereit halten
+und beim Verbau als Kopie anlegen
+lassen (in TinkerCAD dank Vorlagenliste nicht nötig). Ein ft-Zapfen als
+Vorlage ist immer sinnvoll.
+Kanten mit Fasen versehen (chamfer)
+– sollte man nur als allerletzten Schritt
+tun. Nachdem eine Entwicklung aber
+niemals fertig ist, kann dieser Schritt
+niemals richtig sein... Zwei Gründe
+stehen dagegen: Erstens werden im ftMaßstab Konturen unterhalb ca. 2 mm
+sowieso vom Drucker verschliffen und
+verrundet; da bringt eine zusätzlich
+angegebene Fase nichts mehr. Zweitens
+kann man von einer „vollen“ Kante aus
+bequem zu anderen Elementen hin
+messen. Bei einer Fase hat man eine
+richtige und eine falsche Kante zur
+Auswahl.
+Kanten abrunden – sollte man überhaupt nicht tun. Wenn verrundete
+Kanten bei Schnitt, Vereinigung oder
+Durchdringung von Teilen aufeinander
+treffen, entsteht eine komplexe räumliche Kurve als Schnittgrenze. Diese
+kostet in der Darstellung erhöhten
+Rechenaufwand und lässt sich nach
+zwei oder drei weiteren Änderungen am
+Teil nicht wieder rückgängig machen.
+Stabilität ist richtungsabhängig – der
+3D-Druck erfolgt schichtweise. Das
+Material wird auch nicht vollflächig
+aufgetragen (selbst wenn man eine
+derartige Option beim Druckauftrag
+angibt), sondern wie ein Spinnfaden aus
+einer Düse ausgestoßen und in einer
+vorberechneten Spur auf die nächstuntere Druckebene aufgetragen. Selbst
+als „Vollmaterial“ kann der Faden nicht
+immer exakt an den vorher gespritzten
+Nachbarfaden angrenzend ausgebracht
+werden. Fazit: die Stabilität ist von
+Schicht zu Schicht geringer als entlang
+des Druckfadens, und bei sehr schmalen
+
+
+
+Strukturen werden nur die Außenwände
+erzeugt, mit Hohlräumen dazwischen.
+
+Blau = Stützmaterial, Grün = Material des
+Teils. Man sieht die Verfahrwege und die
+ungewollten Hohlräume als schwarze Bereiche
+im grünen Material (Ausnahme: das runde
+schwarze Loch rechts ist eine Achsaufnahme).
+
+Sonderfall ft-Zapfen – „natürlich“ baut
+man einen ft-Stein von unten nach oben
+und definiert „unten“ und „oben“ so,
+dass der Zapfen eben dort ist. Beides ist
+von Nachteil, weil der Zapfen dann
+immer schichtweise entlang der Hauptzugrichtung aufgebaut wird und somit
+leichter abreißt. Fazit: ft-Zapfen gehören „seitlich“ definiert. Definiert man
+eine Federleiste anstelle eines Zapfens,
+dann gehört die Federleiste „vertikal“
+definiert (damit kann man außerdem
+Stützmaterial einsparen).
+Stützmaterial ist auch Material (1) –
+im Gegensatz zum modernen Brückenbau kann ein 3D-Drucker nicht im
+„freien Vorbau“ arbeiten: das Material
+muss immer von unten her aufgebaut
+werden. Wo immer ein Hohlraum
+verbleiben oder ein Überstand erzeugt
+werden soll, muss ein anderes Material
+vorläufig das Volumen ausfüllen, bis
+die Druckschicht darüber hinreichend
+fest geworden ist. Dieses Stützmaterial
+wird „luftig“ aufgebaut und ist sehr
+spröde, so dass man es später zerbröseln
+und entfernen kann (das kann man
+selbst übernehmen oder vom Druckservice als weiteren Teil des Auftrags
+machen lassen).
+
+
+Fazit: Höhlungen und Wölbungen gehören
+„oben offen“ ausgerichtet (oder das Teil
+zum Drucken so gedreht). Eine Straßenbrücke sollte man in der Lage „kopfüber
+stehend“ oder „seitlich liegend“, aber nicht
+„aufrecht stehend“ drucken lassen.
+Stützmaterial ist auch Material (2) –
+unter Berücksichtigung der minimalen
+Abmessungen kann man durchaus horizontale Bohrungen von 1 mm definieren, und bekommt auch solche Bohrungen gespritzt (zu vertikalen Bohrungen
+siehe weiter unten). Die Bohrung wird
+natürlich mit Stützmaterial ausgefüllt.
+Nun ist dieses Stützmaterial sehr spröde
+(sprich: hart) und dadurch wird es nicht
+leicht, die Bohrung wirklich frei gängig
+zu bekommen. Versucht man es mit
+einer Mini-Bohrmaschine, riskiert man
+schnell den Bohrer oder erhält einen
+seitlich aufgeweiteten Krater anstelle
+der Bohrung.
+Oberflächenrauigkeit – bei genauer
+Betrachtung ist keine einzige Fläche
+eines 3D-gedruckten Teils richtig glatt.
+Die Unterseite ist es nicht, weil (gültig
+für den Service fabberhouse – sicher
+auch für die anderen) jedes Teil auf
+einem Sockel von vier bis fünf Lagen
+Stützmaterial gedruckt wird und das
+Stützmaterial nach oben eine Rauigkeit
+zeigt. Die Seitenflächen lassen die
+Schichtung beim Drucken erkennen,
+
+
+Tipps & Tricks
+
+und die oberste horizontale Begrenzung
+zeigt die Verfahrspuren des Druckkopfs
+beim Erzeugen der abschließenden
+Ebene.
+Ein Millimeter ist kein Maß – vertikal
+definierte Bohrungen (Schächte) von 1
+mm Durchmesser haben irgend einen
+Durchmesser, nur nicht 1 mm. Wenn
+z. B. eine Seitenwand des Teils zu nahe
+am Schacht liegt, wird die Seitenwand
+gespritzt und der Schacht so weit mit
+Material gefüllt, wie es die Seitenwand
+benötigt.
+Höhenstufen – in den Ausdehnungen
+der Druckfläche kann ein 3D-Drucker
+sehr feinstufig positionieren. In vertikaler Richtung kann er eine Schicht
+(oder Stützmaterial) auftragen oder
+nicht auftragen. Halbe Schichten gibt es
+nicht. Dieser Punkt klingt trivial, aber
+zusammen mit dem Punkt „Oberflächenrauigkeit“ bedeutet er das Ende
+der Träume vom 3D-gedruckten ftPneumatikzylinder oder P-Ventil Marke
+Eigenbau. Richtig dicht und trotzdem
+leichtgängig werden 3D-Teile im ftMaßstab kaum sein können.
+
+ganz ordentlich aus. Die Bögen bestanden
+aber nur aus den Wänden und waren
+ansonsten hohl.
+
+Toleranzen – wenn 3D-gedruckte Teile
+ineinander gesteckt und beweglich bleiben sollen (etwa wie beim ft-Gelenkstein), muss man die Oberflächenrauigkeit und ggf. auch die Höhenstufung
+berücksichtigen und etwa 0,2 mm ‚Luft’
+in der 3D-Modellierung vorsehen.
+
+und Dran, mitsamt Strukturbaum (Creo
+Elements). In solche Feinheitsgrade
+kommt der Drucker aber nicht mit.
+
+des Stützmaterials überstanden.
+
+Elastizität – das Material, das für ftZwecke in Frage kommt, ist ABS
+(Acrylnitril-Butadien-Styrol) oder eine
+Abwandlung davon. ABS (bekannt von
+LEGO-Teilen) ist spröde. Daher kann
+man Rast- oder Klickverbindungen
+gleich „vergessen“.
+
+Feinste Auflösung – im CADProgramm kann man beliebig in eine
+Konstruktion hinein zoomen und mit
+höchster Präzision Details ausarbeiten.
+So hatte der Autor dieses Artikels völlig
+problemlos ein Zahnrad mit 36 Zähnen
+auf einem Kranz von 4 mm Durchmesser definiert. Der 3D-Drucker tat
+sein Möglichstes und produzierte ... ein
+Rundteil mit immerhin erkennbar
+gewellter Umrandung.
+
+
+
+
+Höhenschichten der oberen/unteren
+Wände schadlos aus dem Stützmaterial
+zu befreien. An dieser Problematik ist
+ein (ansonsten recht weit gediehener)
+Entwurf für einen zu den ft-Leuchtkappen abwärtskompatiblen LEDTrägerbaustein gescheitert.
+in verschiedenen Versuchsstadien, wie der 3DDrucker ihn ausgibt. Nicht ganz das Wahre –
+das ist einfach zu filigran definiert.
+
+Minimale Wandstärke – bei heutigen
+3D-Druckern ist eine Wandstärke unter
+1 mm nicht möglich. Damit scheidet ein
+Nachbau z. B. des ft-Leuchtsteins erst
+einmal aus, es sei denn, man dreht ihn
+auf die Seite (so dass auch der Zapfen
+seitlich zu liegen kommt, siehe oben)
+und hofft darauf, die eine oder zwei
+
+Quellen
+[1]
+
+Harald Steinhaus: Neue ft-Teile
+selbst gemacht – Teile-Modding.
+ft:pedia 3/2011, S. 20-24.
+
+[2]
+
+Frederik Vormann: Neue ft-Teile
+selbst gemacht – Polycaprolacton.
+ft:pedia 3/2011, S. 14-19.
+
+[3]
+
+Andreas Tacke: ft-Spezialteile made
+by TST (Teil 1-4), ft:pedia 2+3/2012,
+1+2/2013.
+
+
+

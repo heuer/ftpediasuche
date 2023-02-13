@@ -1,0 +1,86 @@
+
+Elektrotechnik
+
+Computing
+
+Tuning für fischertechnik-Fußballroboter
+Andreas Kempf
+Die autonomen fischertechnik-Fußballroboter, mit denen wir beim Wettbewerb „Robocup
+Soccer Junior“ angetreten sind [1], müssen Anforderungen genügen, die an der einen oder
+anderen Stelle den Einsatz von Fremdteilen erfordern.
+Für die autonomen Fußballroboter, die wir
+beim „Robocup Soccer Junior“ einsetzen
+[1], müssen wir zum einen auf hohe
+Leistung, zum anderen aber auch auf
+niedriges Gewicht achten. Denn unsere
+Roboter dürfen in der sogenannten
+Leichtgewicht-Klasse nur je 1100g wiegen.
+Die Motoren von fischertechnik sind jedoch
+entweder sehr groß oder haben nicht die
+benötigte Leistung. Für den Antrieb haben
+wir daher drei Pololu-Motoren verwendet.
+Diese sind nur 25 x 14 x 14 mm groß und
+wiegen nur 10 g inklusive Getriebe.
+Die Pololu-Motoren haben 290 U/min und
+19 Ncm Drehmoment, die Stromaufnahme
+liegt bei lediglich 0,7 A. Zum Vergleich:
+Der XM Motor von fischertechnik hat
+338 U/min und 8,5 Ncm Drehmoment bei
+einer Stromaufnahme von 0,95 A; das
+Gewicht liegt bei ca. 70 g.
+
+Die Pololu-Motoren lassen sich auf einem
+30er Baustein (32879) festschrauben (Abb.
+1). Sie sind für 6 V ausgeschrieben, laufen
+aber mit 1 A am Motorausgang des fischertechnik-Controllers.
+Auch für den Ball Caster haben wir eine
+Alternative gefunden. Bisher hatten wir das
+mit dem Rollenbock (32085), dem Mitnehmer (31712), der Aufnahmeachse
+(31124) und der Seilrolle (338258) gelöst.
+Aber der Mitnehmer löste sich öfters bei
+schnellen Beschleunigungen oder sperrte
+sich auch mal, wenn er sich „quer stellte“.
+Wir haben ihn durch einen Ball Caster von
+Pololu ersetzt, den wir an einen Baustein 5
+(37237) geklebt haben. So lässt er sich gut
+mit fischertechnik kombinieren.
+
+
+
+Der Akku von fischertechnik wiegt ca.
+200g. Auch dafür gibt es Alternativen, z. B.
+den HMF LiPo Akku (1500 mAh, 7,4 V)
+mit einem Gewicht von nur 84 g, oder ein
+Li-Ionen-Akku (2900 mAh, 7,4 V) mit
+
+
+
+100 g. Die Baugröße der Akkus liegt bei
+etwa 38 x 18 x 70 mm, die Kosten bei ca.
+25 € (zzgl. Ladegerät, ca. 30 €).
+Die 7,4 V reichen aus, um den Controller zu
+betreiben. Sollten dennoch die 9 V benötigt
+werden, so kann ein Step Up-Spannungsregler von Pololu verwendet werden (7,4 V
+auf 9 V, bis zu 3 A).
+Um sowohl 5 V- als auch 3,3 V-StandardI²C-Sensoren am I²C-Bus des TX Controllers zu betreiben kann auch ein Step
+Down-Spannungsregler von Pololu zum
+Einsatz kommen.
+
+
+Hierzu müssen am I²C-Anschlusskabel vom
+fischertechnik ROBO TX Controller die
+Spannungsversorgungsadern aufgetrennt
+und mit dem Step Down-Spannungsregler
+verbunden werden.
+Wir sind als Aussteller auf der diesjährigen
+Convention in Dreieich – dort können gerne
+Fragen an uns gestellt werden.
+
+Referenzen
+[1]
+
+Andreas Kempf: RoboCup Junior
+German Open. Erfahrungsbericht.
+ft:pedia 2/2015, S. 4-7.
+
+

@@ -1,0 +1,129 @@
+
+
+Computing
+
+Frische Apps für den TXT-Controller
+Till Harbaum
+Die Community-Firmware an sich mag zwar nett anzusehen sein und ein moderneres
+Fundament haben als das Original. Das an sich stellt aber zunächst nur einen geringen
+Mehrwert dar. Wesentlich interessanter für den Endanwender sind die Möglichkeiten, die sich
+durch die Community-Firmware für die Steuerung von Modellen ergeben. Die Stärke der
+Firmware liegt dabei in dem schier unerschöpflichen Pool von fertigen Bibliotheken und
+Frameworks aus der Linux-Welt.
+
+Rubiks-Cube-Solver
+Mein ganz persönlicher Wunsch war es
+beispielsweise, einen autonomen Zauberwürfelbzw.
+Rubiks-Cube-LösungsRoboter zu bauen. Der TXT bietet mit
+seiner Kamera die perfekte Basis, den
+Zustand des Würfels automatisch und
+
+schnell zu erkennen. Für die nötige Bilderkennung gibt es unter Linux etablierte
+Bibliotheken wie die des OpenCV-Projektes [1]. Diese Bibliothek bringt bereits
+eine Python-Anbindung mit und eignet sich
+daher ausgezeichnet für die in der
+Community-Firmware bevorzugt genutzte
+Python-Programmierung.
+
+
+
+
+Computing
+
+
+Auch für den mathematisch sehr anspruchsvollen Teil der Lösungsberechnung finden
+sich im Internet Code-Beispiele. Zunächst
+haben wir auch hier eine Python-Bibliothek
+nehmen wollen, die allerdings mit mehrminütigen Rechenzeiten keine Begeisterung auslösen konnte. Ein in der sehr viel
+maschinennäheren Sprache C geschriebenes Programm ließ sich aber dank
+kompletter Entwicklungsumgebung der
+Community-Firmware problemlos für den
+TXT übersetzen und von der Python-Oberfläche aus starten, so dass der TXT
+schließlich in ca. 2 Sekunden eine nahezu
+optimale Lösungsstrategie berechnet.
+Der Bilderkennung und Lösungsberechnung zur Seite stehen die eigentliche
+Ansteuerung des Modells sowie eine
+ansprechende Benutzeroberfläche. Letztere
+(Abb. 3) zeigt während der gesamten
+Laufzeit die aktuelle interne Sicht auf den
+Zauberwürfel an und der Benutzer kann
+verfolgen, wie der TXT selbst – ohne den
+Würfel selbst ständig neu einzulesen – seine
+interne Darstellung aktualisiert und in
+Einklang mit dem tatsächlichen Würfel hält.
+
+Während der Entwicklung stellte sich
+schnell heraus, dass eine der größten
+Hürden die TXT-Kamera ist. Die Kamera
+führt eigene Farbkorrekturen und einen
+automatischen Weißabgleich aus, weshalb
+die erkannten Farben nicht sehr stabil sind.
+Daher wurde eine Möglichkeit nachgerüstet, im Programm eine Anpassung der
+Farberkennung vorzunehmen:
+
+
+
+
+
+Das Farbdisplay des TXT erlaubt dabei eine
+direkte Vorschau am Modell und anwenderfreundliche Korrekturen direkt über den
+Touchscreen.
+
+3D-Drucker
+Der 3D-Drucker ist ein anderes Beispiel,
+wo die Community-Firmware ihre Stärken
+zeigen kann. Dank der USB-Host-Schnittstelle ist der TXT nämlich nicht nur in der
+Lage, die mitgelieferte Kamera anzusprechen. Es ist vielmehr möglich, fast
+jedes USB-Gerät vom TXT aus anzusprechen. Der 3D-Print-Controller des
+fischertechnik-3D-Druckers ist genau so ein
+USB-Gerät.
+
+
+
+Softwareseitig kam wieder die bekannte
+QT-basierte Oberfläche und als Programmiersprache wieder Python zum Einsatz.
+Wenige Kilobyte Code reichen aus, um alle
+wesentlichen Aspekte der Druckeransteuerung in einer kleinen App zusammen zu
+fassen. In erster Linie erlaubt es dem
+Benutzer der TXT auf diese Weise in
+sogenannten GCode-Dateien vorliegende
+Druckobjekte mit zwei einfachen Klicks
+ausdrucken zu lassen. Auch das 3D-Druckprogramm nutzt die Möglichkeiten des
+Farbbildschirms und erlaubt eine einfache
+Vorschau der zu druckenden Objekte.
+
+
+
+
+Computing
+
+Benutzerschnittstelle
+findet
+ebenfalls
+komplett auf dem kleinen Bildschirm des
+TXT Platz.
+Der Entwicklungsaufwand selbst für so
+komplexe Projekte ist überschaubar, da für
+viele Funktionen auf fertige Bibliotheken
+zurückgegriffen werden kann. CodeBeispiele zur Bildverarbeitung finden sich
+ebenso im Internet wie Funktionen zum
+Auslesen und Verarbeiten von 3D-Druckdaten. Ich bin mir sicher, dass diese beiden
+Beispiele erst der Anfang sind und dass die
+Community-Firmware das Potenzial für
+einige weitere Überraschungen hat.
+
+
+Auch eine manuelle Steuerung des Druckers zur Kalibrierung oder zum Filamentwechsel ist möglich. Die dazu nötige
+
+Der TXT ist technisch unter den intelligenten Spielzeug-Controllern nach wie vor
+nahezu konkurrenzlos. Aber erst mit der
+passenden Software kann er zeigen, was
+wirklich in ihm steckt.
+
+Quellen
+[1]
+
+OpenCV-Projekt: http://opencv.org/
+
+
+

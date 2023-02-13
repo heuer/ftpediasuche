@@ -1,0 +1,63 @@
+
+
+Editorial
+
+Vielfalt statt Einfalt
+Dirk Fox, Stefan Falk
+Calliope mini heißt die neue Geheimwaffe
+der Bundesregierung gegen den Fachkräftemangel – ein kleiner Controller, basierend
+auf dem BBC micro:bit, der 2016 in Großbritannien an Siebtklässler verteilt wurde.
+Entwickelt und eingeführt wurde er mit
+Unterstützung von Geesche Jost, DesignForscherin und Internetbotschafterin der
+Bundesregierung, im Herbst 2016 und ist
+inzwischen beim Cornelsen-Verlag für rund
+35 € für Grundschulen erhältlich. Kern ist
+ein 32-bit ARM Cortex M0-Prozessor mit
+16 kB RAM und 256 kB Flash-Speicher –
+immerhin das Achtfache eines Arduino. Er
+verfügt über Motortreiber, eine SPI- und
+eine I²C-Schnittstelle und kann via USB
+über verschiedene Web-IDEs programmiert
+werden, unter anderem mit dem Open
+Roberta Lab in der an Scratch angelehnten
+Sprache NEPO.
+Auf der Spielwarenmesse hat fischertechnik
+einen Calliope-Kasten für Schulen vorgestellt, der drei einfache Modelle (Fußgängerampel, Händetrockner und Schranke)
+und eine schöne Einsteigeranleitung enthält. Leider nutzen die Modelle im Kasten
+nur den Solarmotor – dabei sind für Einsteiger und Grundschüler starke Motoren
+wichtiger als der Gyro- und Beschleunigungssensor, über den der Calliope verfügt.
+Ein Calliope ist im Kasten nicht enthalten –
+sicherlich nicht allein wegen des Preises,
+sondern weil er ohne Gehäuse und CEZeichen daherkommt.
+
+
+Die Steuerung von Modellen über eine integrierte Entwicklungsumgebung (IDE) mit
+Web-Schnittstelle ist seit Ende 2016 allerdings auch mit den fischertechnik-Controllern möglich: Für den LT und den TXT hat
+fischertechnik ScratchX um entsprechende
+Befehle erweitert; auch der BT Controller
+soll in Kürze unterstützt werden. Diese
+Controller haben einem Calliope mini
+voraus, dass sie kurzschlussfest in einem
+geschlossenen, fischertechnik-kompatiblen
+Gehäuse verbaut sind. Zudem ist Scratch in
+Schulen deutlich verbreiteter als NEPO.
+Wer seinen TXT mit der Community Firmware ausstattet, kann ihn außerdem nicht
+nur mit dem Scratch-ähnlichen Brickly via
+WebIDE programmieren, sondern auch mit
+der StartIDE App ganz ohne Computer –
+direkt auf dem Touchscreen des TXT.
+Und wem die fischertechnik-Controller
+nicht preiswert genug sind: Jetzt hat die
+Community auch noch einen fischertechnik-kompatiblen kurzschlussfesten Arduino
+im Gehäuse hervorgebracht – den ftDuino,
+mit 9V-Motortreibern und I²C-Schnittstelle.
+Mehr zu diesen Möglichkeiten in dieser
+ft:pedia… Oder frei nach Goethe: „Warum
+in die Ferne schweifen? Sieh, das Gute liegt
+so nah.“
+Beste Grüße,
+Euer ft:pedia-Team
+P.S.: Am einfachsten erreicht ihr uns unter
+ftpedia@ftcommunity.de oder über die Rubrik ft:pedia im Forum der ft-Community.
+
+

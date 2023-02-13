@@ -1,0 +1,411 @@
+
+
+Modell
+
+Schiebetüren
+Stefan Busch
+Wie spannend das Thema „Türen“ ist, hat Stefan Busch in ft:pedia 3/2017 mit der Vorstellung
+von Schwenktüren gezeigt. Damit ist das Thema natürlich noch lange nicht erschöpfend
+behandelt – daher folgt nun eine Fortsetzung über Schiebetüren …
+
+Einleitung
+Das typbestimmende Merkmal von Schiebetüren besteht im horizontalen Verschub
+des Türblatts.1 Der damit einhergehende
+minimale Raumbedarf in Durchlassrichtung
+stellt einen großen Vorteil gegenüber
+Schwenktüren dar und macht diesen Türtyp
+besonders für Verkehrsmittel interessant. 1
+
+Einfache Schiebetüren
+
+Die einfachste Ausführung einer Schiebetür
+besteht aus einer Tragschiene, dem daran
+verschieblich gelagerten Türblatt sowie
+meistens einer oder mehrerer Führungsschienen. Trag- und Führungsschiene sowie
+das Türblatt liegen hier vor der Fahrzeugwand (Abb. 1a/b).
+Bei dem in Abbildung 2 und 3 gezeigten
+Modell erfolgt die Verschiebung des Türblatts anders als im Original mittels Spindelantrieb, der das Blatt gleichzeitig stabilisiert, sodass auf eine Führungsschiene
+verzichtet werden kann.
+
+Pfosten des Portals verbindet (siehe Abb. 3),
+ist hier weggelassen, um die Verbindung von
+Türblatt und Spindelmutter zeigen zu können.
+
+
+
+Die Definitionen der zur Beschreibung von
+Türen wichtigen Begriffe finden sich im vorangegangenen Artikel über Schwenktüren [1].
+
+
+Modell
+
+automatisch aus der Wandebene herausgelenkt wird. Charakteristisch für diese
+Konstruktion ist eine etwa mittig in der
+Außenwand liegende Schiene zur Führung
+der Nebenschließkante des Türblatts. Anwendung finden solche Türen besonders bei
+Lieferwagen (Abb. 4).
+
+
+Dem Vorteil einer unkomplizierten Konstruktion steht gegenüber, dass das Türblatt
+in Schließendlage nicht in der Wandebene
+liegt (gut zu sehen in Abb. 1b). Dies ist
+unter anderem bei Fahrzeugen wegen des
+Windwiderstands und aus ästhetischen
+Gründen häufig unerwünscht.
+
+Schwenkschiebetüren
+Ein in Schließendlage bündig mit der
+Außenwand abschließendes Türblatt muss
+beim Öffnungsvorgang zunächst nach
+außen bewegt werden, bevor es verschoben
+werden kann. Hierzu existiert eine Vielzahl
+technischer Lösungen, von denen hier nur
+einige beschrieben werden können.
+Die gebogene Tragschiene
+Die einfachste Möglichkeit besteht darin,
+Trag- und Führungsschienen nicht linear
+auszuführen, sondern so zu formen, dass
+das Türblatt beim Verschub entlang des
+durch die Schienen vorgegebenen Wegs
+
+Schiebetür
+
+Schiebetüren mit gebogenen Trag- und
+Führungsschienen stellen gewissermaßen
+den Übergang zwischen den einfachen
+Schiebetüren und den im Folgenden beschriebenen Schwenkschiebetüren dar, bei
+denen das Türblatt durch eine separate
+Schwenkbewegung ausgestellt wird. Verschub und Schwenken des Türblatts werden
+dabei durch einen einzigen Antrieb bewirkt,
+um die richtige Abfolge der Bewegungen zu
+gewährleisten. Die Realisierung eines mög-
+
+Bei Außenschiebetüren liegt das Türblatt vor der
+Wandebene, bei sogenannten Taschenschiebetüren dahinter. Hier gleitet das Türblatt bei der
+Öffnung in ein Tasche.
+
+
+lichst einfachen Synchronisierungsgetriebes im gewählten Maßstab stellt die Hauptschwierigkeit beim Bau der Schwenkschiebetüren dar.
+Ausschwenken des Türblatts
+Schwenkschiebetüren finden beispielsweise als Straßenbahntüren Verwendung
+(Abb. 5). Beim hier gezeigten Typ wird das
+Türblatt von einem Schwenkarm getragen,
+der sich entlang einer mit dem Portal verbundenen Tragschiene verschieben lässt. So
+kann das Türblatt zu Beginn des Öffnungsvorgangs ausgelenkt und anschließend
+parallel zur Außenwand in die Offenendlage verschoben werden. Angetrieben wird
+dabei lediglich der Verschub des Gleitlagers, die Steuerung des damit verbundenen
+Schwenkarms erfolgt über eine sogenannte
+Kulissenführung: Ein am Schwenkarm
+befindlicher Kulissenstein (im gezeigten
+Beispiel eine Rolle) wird beim Verschub in
+einer Bahn, der Kulisse (hier ein U-Profil),
+entlang eines durch die Form dieser Bahn
+vorgegebenen Weges geführt und steuert
+dadurch die Bewegung des Schwenkarms.3
+
+
+In Abb. 5 ist das Türblatt mit seinem Tragarm (ganz links) zu erkennen, daran anschließend der Schwenkarm mit einer durch
+die Kulisse geführten Rolle und schließlich
+
+
+Kulissenführungen fanden sich vor allem bei
+Steuerungen von Dampfmaschinen, speziell bei
+Dampfloks [3].
+
+
+das Gleitlager mit der Tragschiene. Der
+Antrieb ist nicht zu sehen.
+Zur Führung des Türblatts befinden sich an
+dessen Innenseite zwei Schienen, in die
+Rollenlager eingreifen, welche wiederum
+über Schwenkarme an einer vertikalen
+Drehsäule im Portal gelagert sind (Abb. 6).
+Diese Anordnung erlaubt eine glatte, nicht
+durchbrochene Außenwand am Fahrzeug.
+
+vertikalen Drehsäule mit Rollenlager sowie die
+zugehörige Führungsschiene im Türblatt; der
+obere Teil der Säule mit dem Betätigungshebel
+ist in Abb. 5 hinter dem Schwenkarm zu sehen.
+
+sich die Führungsschienen am Türblatt
+(Metallachsen 60), werden hier aber von
+Gleitlagern (Bausteinen 7,5) gehalten. Um
+deren Bewegung nicht zu behindern, dürfen
+die Bauplatten, die das Türblatt bilden, im
+Bereich der Führungsschienen keine Zapfen
+aufweisen. Leider fiel dieser Bedingung der
+‚Einbau‘ eines Fensters im Türblatt zum
+Opfer.
+
+Die Schwenkarme sind durch Mitnehmer
+und Klemmbuchsen kraftschlüssig mit einer
+Achse 150 verbunden.
+
+Modell
+
+Streben 15 gebildet; eine L-Lasche dient als
+Antriebshebel (Abb. 8).
+
+der L-Lasche und der V-Achse (dunkelgrau)
+am freien Arm der Lasche
+
+Tragarm des Türblatts ist dunkelgrau dargestellt. Aufbau der Schwenkarme (links).
+
+Bei der Konstruktion des Schwenkarms, der
+den Tragarm des Türblatts mit der Tragschiene verbindet, ist sicherzustellen, dass
+das Türblatt ausschließlich um die Hochachse geschwenkt werden kann, da es anderenfalls verkantet und die Führungsschienen nicht mehr leicht durch die Lager
+gleiten.
+
+Die Steuerung des Schwenkarms erfolgt
+durch eine am freien Arm des Antriebshebels mittels Riegelscheibe Z20 fixierten
+V-Achse 17, dem Kulissenstein. Zu beachten ist, dass die Stege der L-Lasche nach
+oben weisen und die V-Achse nur minimal
+unterhalb der Lasche hervorsteht, damit in
+eingeschwenkter Position ein ausreichender
+Abstand zwischen Hebel und Antriebsspindel bleibt.
+Tragschiene und Spindelgetriebe sind durch
+zwei Träger am Portal befestigt, die vertikale Drehsäule reicht durch den Querträger
+des Portals hindurch und wird durch zwei
+weitere Achslager an der Portalstütze gehalten (Abb. 9).
+
+Schwenkarm und Tragarm des Türblatts
+
+Um die nötige Bauhöhe für ein verwindungssteifes Gelenk zu erhalten, wird der
+Schwenkarm daher aus zwei ober- und
+unterhalb des Tragarms angeschlagenen
+
+
+
+
+Abbildung 9b: Ansicht der rückwärtigen
+Träger von Tragschiene und Antriebsspindel
+
+Am Modell wird deutlich, dass die Tragarm
+und Türblatt verbindende Achse nicht mit
+der Drehachse der Gleitlager zusammenfallen darf, da dann die Lage des Türblatts
+unbestimmt ist, was dessen freie Drehung
+um diese gemeinsame Achse erlaubt. Im
+Original wird diese Instabilität durch eine
+spezielle Ausführung der Rollenlager vermieden.
+Zur Führung des Kulissensteins (V-Achse,
+am Querträger des Portals befestigte Kulissenführung (Abb. 10). In der Führung ist
+die
+als
+Kulissenstein
+fungierende
+V-Achse 17 zu erkennen.
+
+
+
+Das Ausschwenken der Gleitlager der Führungsschienen im Türblatt erfolgt durch ein
+federbelastetes Hebelgetriebe (Abb. 11):
+Beim Öffnen der Tür gibt ein Mitnehmer
+am Spindelgetriebe einen Hebel frei, der
+durch eine Feder (Gummiband) in seine Offenendlage bewegt wird. Das angeschlossene Hebelwerk stellt über die vertikale
+Schwenksäule die Schwenkarme der Führungslager aus. Beim Zusammenbau des
+Hebelwerks ist zu beachten, dass dessen
+Konstruktion nicht sauber gelungen ist: Das
+Gelenk an der Drehsäule darf nicht zu
+stramm sitzen, da es auch eine geringe
+vertikale Drehung ausgleichen muss, die
+durch die Bewegung des vertikalen Hebels
+zustande kommt. Hier wäre ein Kugelgelenk im fischertechnik-Sortiment hilfreich.
+
+
+vertikalen Schwenkachse
+
+Am Modell ist das Gummiband zwischen
+Hebel und Widerlager sowie die Wicklungen am Widerlager zu erkennen. Ein zufriedenstellendes Funktionieren dieses Modells
+erfordert eine optimale Anordnung verschiedener Komponenten:
+∂ Die Positionierung der Kulissenführung
+am Querträger des Portals entscheidet
+darüber, wann der Schwenkarm des Türblatts einschwenkt und somit auch über
+die Schließendlage der Hauptschließkante des Türblatts. Entsprechend bestimmt die Position des antriebsseitigen
+Hebels des Hebelgetriebes und die Stellung des Hebels der vertikalen Drehsäule
+die Schließendlage der Nebenschließkante.
+
+Modell
+
+Widerlager (Achse 30 am Portal) gut
+einstellen lässt (Abb. 11b).
+Achtung: Das Auffinden der optimalen Abstimmung erfordert hier mehr Geduld als
+bei den anderen vorgestellten Türmodellen.
+Die in den Abbildungen gezeigten Anordnungen sollten aber einen guten Ausgangspunkt für die Feinjustierung zeigen.
+Eine interessante Variation dieses Türtyps
+zeigt Abb. 13. Hier wird der Tragarm der
+Tür um eine horizontale Achse geschwenkt.
+Deutlich erkennbar ist der rote, kulissengeführte Tragarm des Türblatts sowie die um
+eine horizontale Achse drehende Schwinge,
+die Tragarm und Tragschiene verbindet.
+Unter der Tragschiene ist die Antriebsspindel sichtbar.
+
+eines Doppelstockwagens von Bombardier
+
+Ausschwenken der Tragschiene
+
+Abbildung 12: Vorderansicht des Modells
+
+∂ Die Zugspannung der Feder muss einerseits ausreichen, um die Führung zu
+Beginn des Öffnungsvorgangs vollständig auszuschwenken, darf andererseits
+aber nicht zu hoch sein, um den Schließvorgang nicht zu behindern. Am besten
+lässt sich dies mit einem Gummiband
+realisieren, da sich hier die Spannung
+durch die Anzahl der Wicklungen am
+
+Der beim Modell des vorstehend beschriebenen Schwenkschiebetürtyps erforderliche
+aufwendige Antrieb der vertikalen Drehachse und die Schwierigkeiten mit der
+stabilen Positionierung des Türblatts in
+Offenendlage lassen sich vermeiden, indem
+das Türblatt gemeinsam mit der gesamten
+Tragschiene ausgeschwenkt wird.
+Das Patent EP0920591A3 [4] beschreibt
+hierzu die Verwendung eines ebenen viergliedrigen Koppelgetriebes, gebildet aus
+Portal (Gestell), zwei gegenläufigen
+Schwenkarmen (Schwingen) und der Tragschiene mit ihren Halterungen (Koppel).
+
+
+
+Wichtig für das hier beschriebene Prinzip
+ist die Anordnung der Schwingen zueinander. Das Gestell des Koppelgetriebes ist in
+
+Auslenkung einer Tragschiene
+
+Durch die zueinander rechtwinklige Anordnung der Schwingen werden Tragschiene
+und Türblatt zu Beginn des Öffnungsvorgangs schräg ausgestellt, befinden sich
+nach Abschluss des Schwenkvorgangs aber
+wieder parallel zur Außenwand. Dabei kann
+sich die Tragschiene je nach Ausführung
+noch innerhalb des Fahrzeugs befinden oder
+über die Seitenwand hinausgeschwenkt
+sein. Wie schon im vorgenannten Beispiel
+wird die Schwenkbewegung durch eine
+Kulissenführung bewirkt, direkt angetrieben wird wieder nur der Verschub des Gleitlagers auf der Tragschiene. Auch hier
+werden zusätzlich Rollenlager ausgeschwenkt, die in Führungsschienen im Türblatt eingreifen.
+Zwar war beim Vorbild kein Beispiel dieses
+Türtyps zu finden, das eine ungehinderte
+Ansicht aller Komponenten erlaubte, die
+Anordnung der einsehbaren Teile der Tür
+eines ICEs (Abb. 15) und die Bewegung
+ihres Türflügels weisen aber darauf hin,
+dass diese Tür nach dem hier beschriebenen
+Prinzip arbeitet.
+
+
+ICE-Wagens der Baureihe 403 (ICE 3): Tragschiene mit dem der Hauptschließkante zugeordneten Schwenklager und dem gebogenen
+Teil der Kulisse (oben), Gleitlager und
+Tragarm des Türblatts sowie gerader Teil der
+Kulisse (unten)
+
+Die Beschreibung des Modells beginnt
+wieder beim Türblatt (Abb. 16). Abweichend zum Original kann hier auf die obere
+Führungsschiene verzichtet werden, was
+wieder den ‚Einbau‘ eines Fensters ins Türblatt ermöglicht.
+
+grau dargestellt
+
+
+Modell
+
+Übersichtlichkeit wegen nicht dargestellt.
+Zur richtigen Ausrichtung des Türblatts
+müssen die der Nebenschließkante zugeordnete Schwinge und der Schwenkarm des
+Führungslagers jederzeit in die gleiche
+Richtung weisen. Zur Synchonisation der
+Schwenkbewegungen dient im Modell ein
+Getriebe aus zwei S-Riegelscheiben und
+einem Klemmring Z36. Trotz seines vergleichsweise geringen Raumbedarfs ließ
+sich das Getriebe nicht wie beim Vorbild
+oberhalb der Türöffnung unterbringen. Das
+Getriebe kann bei diesen Türtyp deutlich
+einfacher ausgeführt werden als beim vorherigen Modell, da alle Schwenkachsen
+ortsfest sind, also nicht verschoben werden
+müssen.
+
+gerechte – Aussparung für den Schwenkarm des Führungslagers auf. Am Querträger
+des Portals dient ein Baustein 5 als Anschlag zur Begrenzung des Schwenkbereichs der der Hauptschließkante zugeordneten Schwinge des Koppelgetriebes
+(Abb. 18 oben und 19). Bei genauer Betrachtung findet sich ein solcher Anschlag
+auch im Original (Abb. 15).
+
+bestehend aus Koppelgetriebe (oben) und
+schwenkbarem Gleitlager (unten) sowie dem
+Getriebe zur Synchronisierung der
+Schwenkbewegungen
+
+Detail der Aussparung für den Schwenkarm
+von vorn (links) und von hinten (rechts);
+das Gleitlager ist nicht abgebildet
+
+Die beweglichen Komponenten werden
+über drei Achsen im Portal gelagert
+(Abb. 18). Im Schwenkbereich des Koppelgetriebes bestehen die Portalstützen aus je
+einem Statikwinkelstein 30, um Platz für
+die Schwingen zu schaffen. Die der Nebenschließkante zugeordnete Portalstütze weist
+unten zusätzlich eine – nicht Vorbild
+
+Die Steuerung der Schwenkbewegung erfolgt vorbildgerecht durch eine Kulissenführung (Abb. 19). Bei richtiger Einstellung
+wird die Koppel beim Öffnen der Tür
+maximal ausgelenkt (Positionierung des
+rückwärtigen Teils der Kulisse) und die als
+Kulissenstein fungierenden Stange leichtgängig, aber spielfrei durch den parallel
+zum Portal verlaufenden Anschlag sowie
+die um 30° angewinkelte Nut geführt.
+
+
+
+Portals ist nur teilweise abgebildet; sichtbar
+ist der als Anschlag der Schwinge dienende
+Baustein 5 (dunkelgrau)
+
+Vorder- und rückwärtiger Teil bilden eine
+Bahn mit einer um 30° angewinkelten Nut.
+Eine am Gleitlager des Türblatts befestigte
+Achse 40 bildet den Kulissenstein.
+Die Bewegung des Türblatts wird durch
+einen umlaufenden Seilzug bewirkt, der
+beidseitig auf das Gleitlager des Türblatts
+wirkt. Der Antrieb erfolgt über eine Seiltrommel. Mehrere Wicklungen des Seils
+stellen eine kraftschlüssige Verbindung
+sicher, die Seilspannung lässt sich durch
+vertikales Verschieben der Seilwindengestells justieren. Das Seil wird über Rollen
+am Portal entlang geführt, sein der Nebenschließkante zugeordnetes Ende läuft durch
+das entsprechende Schwenklager der Tragschiene, also im freien Raum zwischen
+Baustein 7,5 und Strebenadapter (Abb. 20).
+
+
+und der Nebenschließkante (links)
+
+Bei optimaler Einstellung aller Komponenten (Länge der Koppel, Winkel der Schwingen, Position der Kulisse und Spannung des
+Seilzugs) lässt sich die Tür durch Drehen
+der Kurbel vorbildgerecht öffnen und
+schließen, ohne gegenüber der Türöffnung
+zu verkanten (Abb. 21 und 22).
+
+Referenzen
+[1]
+
+Stefan Busch: Schwenktüren. 3/2017, S. 23-33.
+
+[2]
+
+Wikipedia: Schiebetür.
+
+[3]
+
+Wikipedia: Kulissensteuerung.
+
+[4]
+
+Dietmar Dilcher: Schwenkschiebetür
+für Fahrzeuge. EP0920591A3.
+
+
+Modell
+
+sichtbar ist die Kulissenführung
+
+beachtenswert ist das durch das
+Schwenkgelenk geführte Seil
+
+
+

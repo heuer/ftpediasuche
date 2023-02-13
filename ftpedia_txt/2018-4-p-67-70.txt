@@ -1,0 +1,260 @@
+
+Computing
+
+Computing
+
+Der ftPwrDrive-Controller für Schrittmotoren
+und Servos – Teil 1
+Dirk Wölffel, Björn Gundermann, Christian Lauff,
+Christian Bergschneider, Stefan Fuss
+Das fischertechnik-Universum basiert auf normalen Elektromotoren; Schrittmotoren gibt es
+nur beim 3D-Drucker und Servos lassen sich ausschließlich „analog“ mit dem ControlSet
+benutzen. Höchste Zeit, beide Typen in das fischertechnik-System zu integrieren.
+Aus ein paar chinesischen Platinen und der
+Frage „Bekommt Ihr das unter ROBO Pro
+ans Laufen?“ entstand auf der diesjährigen
+Südconvention die Idee zu einem fischertechnik-Schrittmotorcontroller. Nach wenigen Stunden brummte bereits der erste
+Schrittmotor am Protoboard. Es zeigte sich
+jedoch sehr schnell, dass die Tücke wie
+immer im Detail liegt und die Integration
+ins fischertechnik-System aus weit mehr als
+ein paar fernöstlichen Platinen besteht.
+Bei der Vorstellung des Projektes in der
+ftCommunity wurden zusätzlich PWMbzw. Servo-Ausgänge gewünscht. Der Vorteil ist, dass bei einer Servo-Ansteuerung
+keine Endschalter benötigt werden. Über
+die PWM-Ausgänge lassen sich jedoch
+nicht nur Servos ansteuern: Mit einer
+externen Leistungsendstufe2 kann auch die
+Drehzahl einer Fräse eingestellt oder die
+Temperatur des Extruders bei einem 3DDrucker geregelt werden.
+Der ftPwrDrive-Controller
+Der ftPwrDrive-Controller ist ein Community-Projekt, mit dem wir jedem fischertechniker eine Plug & Play-Lösung für
+
+
+Das PWM-Signal ist ein Logikpegel, mit dem die
+Servomotoren direkt geregelt werden können.
+Um damit einen leistungsfähigen Motor oder
+
+Schrittmotoren und Servos an den gängigen
+Controllern – TX, TXT und ftDuino – zur
+Verfügung stellen wollen. Der ROBOTICS
+BT Smart Controller kann leider nicht
+unterstützt werden, da er keine Möglichkeit
+zum Anschluss externer Hardware bietet.
+Den Controller wird es als fertiges Gerät
+geben, so dass man seine Motoren direkt
+anschließen und loslegen kann.
+
+
+Fertige ftPwrDrive-Controller und passendes Zubehör können jetzt schon über Björns
+WebShop vorbestellt werden. Das Gehäuse
+(Abb. 1) wird wie der ftDuino [5] und die
+fischertechnik-Controller die Grundfläche
+
+eine Heizung zu steuern muss eine Endstufe die
+notwendige Leistung bereitstellen.
+
+
+
+90x90 mm haben; die Höhe wird etwas über
+der des ftDuino liegen.
+Am ftPwrDrive-Controller können bis zu
+vier Schrittmotoren angeschlossen werden.
+Hier bietet sich der Typ NEMA3 14 an
+(Abb. 2), der u. a. auch beim fischertechnik3D-Drucker zum Einsatz kommt. Durch
+eine Stromjustierung kann der Controller
+bei Bedarf auch auf andere Schrittmotoren
+eingestellt werden. Der Anschluss der Motoren erfolgt über die gewohnten ft-Bundhülsen.
+
+reproduzierbare Referenzposition im Modell, auf der alle anderen Fahrkommandos
+aufsetzen können.
+An die vier Servo-Ausgänge können
+fischertechnik-Servos aus dem Control-Set
+oder kompatible Servos direkt angeschlossen werden.
+Schrittmotoren sind sehr hungrig und
+kommen mit der fischertechnik-9V-Versorgung nicht in Gang. Sie benötigen 18-24V
+Betriebsspannung mit für fischertechnik
+hohen Leistungsdaten. Da ein NEMA-14Motor pro Spule bis zu 0,8A Strom zieht,
+werden Netzteile mit hoher Leistung
+benötigt. Als Stromversorgung eignen sich
+Notebooknetzteile mit 18-24V ab 100W
+Leistung.
+Der Anschluss an den Controller erfolgt
+über den I²C-Bus. TX und ftDuino können
+direkt über den 6-poligen EXT-Stecker
+verbunden werden; der TXT benötigt
+zusätzlich einen Levelshifter wie zum
+Beispiel den ft-Extender (Abb.3) [1].
+
+
+Der Controller besitzt für die vier Schrittmotor-Ausgänge jeweils einen Tastereingang. Diese werden von der Firmware sowohl als Endschalter als auch als Referenzpunkt genutzt.
+Wird ein Endschalter ausgelöst, so stoppt
+die Firmware den Motor. Durch die höheren
+Leistungsdaten könnten sonst die fischertechnik-Bausteine im Modell Schaden nehmen. Gleichzeitig kann die Firmware den
+Endschalter als Referenz- oder Nullpunkt
+nutzen. Die Firmware fährt den Motor so
+lange, so dass er gerade nicht den Endschalter auslöst. Man erhält so eine gut
+
+
+
+NEMA ist eine standardisierte Baureihe von
+Schrittmotoren, die von verschiedenen Herstellern angeboten werden. Der Typ NEMA-14
+
+
+Die Programmierung des ftPwrDrive kann
+in verschiedenen Umgebungen erfolgen.
+Eine ROBO Pro-Bibliothek gibt es bereits.
+Für die Community Firmware und python
+wird es eine Integration in ftrobopy geben;
+der ftDuino erhält eine Arduino-Bibliothek.
+
+passt aufgrund seiner Leistungsdaten und Größe
+gut zu fischertechnik.
+
+
+Computing
+
+Schrittmotoren
+
+Servos
+
+Beim Schrittmotor liegen die Spulen im
+Gehäuse. Permanentmagnete sind auf der
+Welle des Motors angebracht. Fließt nacheinander durch die Spulen Strom, so dreht
+sich der Motor je Signal von Spule zu Spule.
+Der Motor führt je Steuersignal einen
+Schritt aus. Die Schrittweite eines NEMA14-Motors beträgt 1,8° und erlaubt somit
+eine für fischertechnik sehr präzise Positionssteuerung. Eine gute Beschreibung der
+Funktionsweise, Kennlinien und unterschiedlichen Typen ist in [4] zu finden.
+
+Servomotoren (Abb. 4) bestehen aus kleinen Elektromotoren mit einer integrierten
+Positionsregelung. Der Servo erhält über
+ein Steuersignal eine Winkelvorgabe, die
+Positionsregelung fährt diesen Winkel an
+und hält anschließend die Winkelposition
+ein. Im Modellbau wird als Steuersignal in
+der Regel ein PWM-Signal eingesetzt [3].
+
+Durch ihre Bauweise sind Schrittmotoren
+schwerer als fischertechnik-Elektromotoren
+und echte Stromfresser. Für batteriebetriebene Erkundungsroboter sind sie definitiv
+die falsche Wahl. Für stationäre Modelle
+haben Schrittmotoren aber viele Vorteile:
+∂ Der Schrittmotor benötigt keinen Dekoder, er hat ihn im Antrieb integriert. Er
+fährt die angegebene Schrittzahl und
+bleibt dann ohne Nachlauf stehen. Ideal
+für Plotter, 3D-Drucker, Fräsen und
+Roboterarme.
+∂ Schrittmotoren können sich extrem
+langsam bewegen. Getriebe werden in
+der Regel nicht benötigt. Ohne Getriebe
+entfällt das Umkehrspiel bei Plottern und
+Druckern. Uhren können einfach gebaut
+werden.
+∂ Die NEMA-14-Baureihe ist stärker als
+XM- oder Encodermotoren. Im Stillstand und bei geringen Drehzahlen bringen sie sogar ihr größtes Drehmoment.
+Der Roboterarm bleibt somit im
+Stillstand stehen und sinkt nicht ab.
+∂ Synchrones Verfahren von mehreren
+Achsen ist eine für Schrittmotor-Steuerungen relativ einfache Übung. Mit
+einem x/y-Antrieb und Encodermotoren
+echte Kreise in ROBO Pro zu zeichnen
+ist dagegen fast unmöglich.
+
+
+Sie können sich so nur um weniger als 100
+Grad bewegen, eignen sich aber für alle
+Stellmotoranwendungen, da sie wie der
+Schrittmotor die Endposition halten. Servos
+sind verhältnismäßig klein und leicht. Als
+Stromversorgung benötigen sie eine Spannung zwischen 5V und 6,8V.
+Die klassische fischertechnik-Anwendung
+ist der Einsatz als Lenkung in Verbindung
+mit dem Control Set. Es lassen sich damit
+aber auch elektrisch angetriebene Kugelbahnweichen bauen oder Finger einer
+mechanischen Hand steuern.
+In der ft:pedia wurden bereits Servo-Ansteuerungen auf Basis von Adafruit-Platinen vorgestellt [2, 3].
+Das Zubehör
+Ein Controller allein ist kein fertiges
+Modell, deshalb wird es zahlreiches, auf die
+NEMA-Serie und den Controller abgestimmtes Zubehör (Abb. 5) geben. Einiges
+davon könnt ihr bequem über Björns Shop
+bestellen. NEMA-14-Motoren wird es mit
+passenden Schrauben und fischertechnikHalter geben.
+
+
+
+
+1)
+2)
+3)
+4)
+
+Original Motorhalter für den Nema 14 Schrittmotor
+Schrittmotor (160528) Original ft-Antriebritzel Nema 14
+(159577)
+Original ft-Antriebshülse Nema 14 (160549)
+Schnecke für Powermotor (TST)
+
+5)
+6)
+7)
+8)
+9)
+
+Zahnrad Z 10 (TST)
+Flexible Wellenkupplung Aluminium von 4 auf 5 mm
+Flexible Wellenkupplung Gummi von 4 auf 5 mm
+Starre Wellenkupplung Stahl von 4 auf 5 mm
+Original Mini-Taster (37783)
+
+
+Bei den Servos wird es kleine und große
+Servos geben. Idealerweise finden wir einen
+baugleichen zur fischertechnik-Fernsteuerung. Ein erster Prototyp für ein ServoGehäuse ist in Abb. 6 zu sehen. Gebrauchte
+fischertechnik-Stecker und -Taster für die
+Endlage werden ebenfalls angeboten werden. Wer kein altes Notebooknetzteil mehr
+hat, kann es sich im Shop mitbestellen.
+
+Im zweiten Teil des Beitrags werden wir
+Euch den fertigen Controller und seine
+Programmierung in den unterschiedlichen
+Sprachen vorstellen.
+
+Quellen
+[1]
+
+Stefan Fuss, Christian Bergschneider, Björn Gundermann,
+Christian Lauff, Rudenz Schulz:
+Plug & Play am I²C-Bus mit dem
+ftExtender. ft:pedia 2/2018, S. 55-59.
+
+[2]
+
+Dirk Fox: I²C mit dem TX(T) – Teil
+16: Servo-Driver. ft:pedia 2/2017, S.
+41-47.
+
+[3]
+
+Christian Bergschneider, Stefan
+Fuss: Alternative Controller (3): Der
+ftPi – ein Motor Shield für den
+TX(T). ft:pedia 2/2016, S. 68-72.
+
+
+[4]
+
+Schrittmotoren. rn-wissen.de
+
+Fehlt euch noch weiteres Zubehör? Dann
+meldet euch bei uns im Forum oder über
+Björns Shop und dessen Kontaktdaten.
+
+[5]
+
+Till Harbaum: ftDuino – OpenSource trifft Konstruktionsbaukasten.
+ft:pedia 1/2018, S. 85-91.
+
+
+

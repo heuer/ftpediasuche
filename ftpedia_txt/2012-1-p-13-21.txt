@@ -1,0 +1,651 @@
+
+Getriebe
+
+Getriebe
+
+Zahnräder und Übersetzungen (Teil 3)
+Thomas Püttmann
+In diesem Teil unserer Serie geht es um die genaue Form von Zahnrädern. Die meisten
+Zahnräder besitzen eine Evolventenverzahnung. Es wird mit Versuchen und Modellen erklärt,
+was eine Kreisevolvente ist und warum sie zur Verzahnung geeignet ist. Abschließend wird
+ein kurzes Postscript-Programm vorgestellt, mit dem fischertechnik-kompatible Zahnräder
+mit beliebigen Zahnzahlen gezeichnet und aus Karton angefertigt werden können.
+
+
+Hast du dir schon einmal die Zähne der
+fischertechnik-Zahnräder genauer angesehen? Ihre Flanken sind nicht gerade, aber
+auch keine Kreisbögen. Warum haben die
+Zähne genau diese Gestalt? Diese Frage
+wird dir in diesem Beitrag mit Versuchen
+und Modellen beantwortet. Außerdem wird
+dir erklärt, was sich hinter Begriffen wie
+Modul, Teilung und Eingriffswinkel verbirgt und welche Werte diese Größen bei
+den fischertechnik-Zahnrädern haben. Das
+ist besonders nützlich, wenn du das
+Programm benutzen willst, mit dem du
+eigene fischertechnik-Zahnräder entwerfen
+kannst. Die Daten der fischertechnik-Zahnräder genauer kennenzulernen kann dir
+bisweilen auch bei der Konstruktion von
+Modellen hilfreich sein.
+
+Formen der Triebstockverzahnung, wie
+man sie von Mühlen her kennt. Es gab aber
+auch schon richtige Stirnräder, zum Beispiel beim Mechanismus von Antikythera
+(ca. 100 v. Chr.). Bekannt war natürlich
+schon, dass die Zähne zweier Stirnrädern
+gleich groß sein müssen und im gleichen
+Abstand auf den Rädern folgen müssen,
+damit die Übertragung funktioniert. Allerdings wusste man wenig darüber, wie man
+den Zahnflanken eine möglichst gute Form
+geben konnte. Beim Mechanismus von
+Antikythera sahen die Zähne so ähnlich
+aus wie in Abbildung 1. Die Zähne in
+unserem Modell haben einen sehr großen
+Abstand und daher gibt es viel Zahnspiel
+(in der Antike hätte man das sicher besser
+gemacht), aber wenn man die Räder nur in
+eine Richtung dreht, spielt das keine Rolle.
+
+Antike Zahnräder
+Zahnräder gab es schon in der Antike.
+Hauptsächlich verwendet wurden damals
+
+
+
+
+
+Falls du dieses Modell nachbaust, merkst
+du, dass es sehr gut funktioniert, solange
+beide Naben lose auf den Achsen sitzen
+und sich beide Räder ohne Widerstand
+drehen können. Aber zieh einmal die Nabe
+des rechten Zahnrads etwas fester auf eine
+unbewegliche Achse, so dass es sich nur
+mit etwas Widerstand bewegen lässt.
+Wenn du jetzt das linke Rad drehst, spürst
+du deutliche Stöße bei jedem Zahnkontakt.
+Außerdem knattert und rattert es. Drehst du
+das linke Rad langsam mit konstanter
+Geschwindigkeit, so kannst du beobachten,
+wie das rechte während jedes Zahnkontakts
+ganz kurz schneller und wieder langsamer
+wird. Das nennt man nichtkonstante Übersetzung.
+Wenn du genau hinschaust, kannst du die
+Ursache dafür erkennen: Die Spitze des
+geschobenen Zahns gleitet zuerst an der
+Flanke des schiebenden Zahns entlang,
+dann sind beide Zahnflanken für einen
+kurzen Moment parallel, und schließlich
+gleitet die Spitze des schiebenden Zahns an
+der Flanke des geschobenen Zahns entlang.
+Dadurch entsteht nicht nur nichtkonstante
+Übersetzung, sondern auch Abrieb an den
+Zähnen.
+
+Reibräder
+
+
+Um zu verstehen, was konstante Übersetzung genau bedeutet, müssen wir uns kurz
+von den Zahnrädern entfernen. Schau dir
+zwei Räder ohne Zähne an, die aneinander
+abrollen (Abb. 3). Die Stelle, an der sie
+sich berühren, nennt man den Wälzpunkt.
+Wenn man das Rad mit Radius r1 um den
+
+Winkel 1 dreht, dreht sich das andere um
+den Winkel
+2 =
+1•r1/r2 in die andere
+Richtung. Das liegt daran, dass zu dem
+Winkel
+1 ein Kreisbogen mit der Länge
+r1•( 1/360°) auf dem Rand des ersten
+Rads gehört (denn 2 r1 ist der Umfang des
+gesamten Rades und
+1/360° gibt den
+Bruchteil des vollen Kreises an, den der
+Winkel
+1 ausschneidet). Dieser Kreisbogen bewegt sich bei der Drehung durch
+den Wälzpunkt hindurch. Dabei wälzt er
+einen gleich langen Kreisbogen auf dem
+Rand des zweiten Rads in die entgegengesetzte Richtung. Das zweite Rad dreht sich
+dabei um den Winkel 2 weiter. Es gilt
+r1•(
+
+/360°) = 2 r2•(
+
+
+
+/360°),
+
+weil beide Kreisbögen gleich lang sind.
+Umstellen dieser Gleichung liefert
+
+=
+
+•r1/r2.
+
+
+Wenn man von konstanter Übersetzung
+spricht, meint man, dass genau diese
+Gleichung
+2 =
+1•r1/r2 gilt. Ist das erste
+Rad größer als das zweite, so dreht sich das
+zweite um einen größeren Winkel weiter
+als das erste. Wenn sich das erste mit konstanter Winkelgeschwindigkeit (häufig
+Drehzahl genannt) dreht, dann dreht sich
+das zweite mit der r1/r2-fachen Winkelgeschwindigkeit in die andere Richtung.
+Leider gibt es bei Reibrädern einen großen
+Nachteil, den Schlupf: Man muss die Räder
+ein bisschen aneinander pressen, damit sie
+aneinander abrollen. Aus diesem Grund
+bezeichnet man das Abrollen als kraftschlüssige Übertragung. Wenn nun das
+angetriebene Rad nur mit Widerstand zu
+bewegen ist, kann es sein, dass die
+Anpresskraft zwischen den Rädern nicht
+ausreicht und das eine Rad auf dem
+anderen durchrutscht. Dann sind die beiden
+oben angesprochenen Kreisbögen nicht
+genau gleich lang. Bei Zahnrädern ist die
+Übertragung dagegen formschlüssig: Weil
+Zahn auf Zahn ineinander greifen, kann es
+keinen Schlupf geben.
+
+
+Getriebe
+
+Evolventenverzahnung
+Die antiken Zahnräder lieferten - wie oben
+erwähnt - keine konstante Übersetzung.
+Wenn ein Rad mit konstanter Geschwindigkeit angetrieben wurde, lief das andere
+mit nicht-konstanter Geschwindigkeit. Erst
+im 17. Jahrhundert erkannte Ole Rømer,
+dass man Zähne so formen kann, dass die
+Übersetzung konstant wird. Er erfand die
+Zykloidenverzahnung, die auch heute noch
+- vor allem in der Feinmechanik - eine
+Rolle spielt. Im 18. Jahrhundert schlug
+dann der berühmte schweizer Mathematiker Leonard Euler die Evolventenverzahnung vor, heute die bei weitem verbreiteste
+Verzahnungsform im Maschinenbau. Bei
+der Evolventenverzahnung ist die Übersetzung ebenfalls konstant.
+Auch die Zähne der fischertechnik-Zahnräder haben Evolventenform. Dafür gibt es
+mehrere Gründe. Zum Beispiel funktioniert
+dadurch die Übertragung zwischen zwei
+Zahnrädern auch dann noch gut, wenn du
+den Achsabstand nicht auf ein Zehntel
+Millimeter genau einstellst. Außerdem gibt
+es viele Möglichkeiten, fischertechnikZahnräder untereinander zu kombinieren.
+Das funktioniert mit der Evolventenverzahnung fast ohne Probleme. Bei der
+Zykloidenverzahnung ist ein Zahnrad auf
+genau ein Gegenstück ausgelegt.
+
+Kreisevolvente
+Die Flanken eines Zahnrads sind Teile von
+so genannten Kreisevolventen. Im Folgenden wird erklärt, was eine Kreisevolvente
+ist und warum die Übersetzung bei der
+Evolventenverzahnung konstant ist. Am
+besten ist es natürlich, wenn du die folgenden Experimente selbst mit fischertechnik
+nachvollziehst. Es reicht aber auch aus,
+wenn du mitdenkst. An den wichtigsten
+Stellen werden dir einfache Fragen oder
+Aufgaben gestellt. Versuche sie nach Möglichkeit, selbst zu beantworten bzw. zu
+lösen. Zur Kontrolle findest du die Lösungen am Ende dieses Beitrags.
+
+
+In Abbildung 4 siehst du, wie du eine
+Kreisevolvente zeichnen kannst: Du
+steckst die Achse durch einen Bogen
+Papier in eine Bauplatte und hältst das
+Innenzahnrad Z30 fest. Es darf sich nicht
+drehen. Das blaue Seil ist am roten SRiegel befestigt und liegt zu Beginn ganz
+am äußeren Rand des Innenzahnrads Z30
+an. Am Ende des Seils ist eine kleine
+Schlinge, in der ein Bleistift steckt. Der
+Punkt, an dem der Bleistift am Anfang ist,
+ist mit A bezeichnet. Wenn du nun bei
+gestrafftem Seil den Bleistift vom Innenzahnrad weg bewegst, zeichnet der Bleistift die Kreisevolvente. Evolvente ist
+übrigens lateinisch und heißt übersetzt Abgewickelte oder Ausgerollte. Ein ziemlich
+anschaulicher Begriff, findest du nicht?
+Der äußere Rand des Innenzahnrads heißt
+ab jetzt Grundkreis.
+Lass' den Stift an einem Punkt S der Evolvente stehen. Das straffe Seil mündet an
+einem Punkt B in den Grundkreis. Der
+Seilabschnitt zwischen S und B ist Teil
+einer Geraden, die den Grundkreis in nur
+einem Punkt - nämlich B - berührt. Eine
+solche Gerade nennt man Tangente.
+Frage 1: Wie verhalten sich die Länge der
+Strecke zwischen S und B und die Länge
+des Kreisbogens zwischen A und B zueinander?
+Wo wir gerade bei Tangenten sind, schau
+dir einmal Abbildung 5 an: Die Gerade
+durch S und B ist - wie gesagt - eine Tan15
+
+
+gente an den Grundkreis. Sie verläuft senkrecht zum Radius MB. Daran erinnerst du
+dich vielleicht noch aus der Schule. Auch
+die Evolvente selbst hat in jedem Punkt
+eine Tangente. Wie du in Abbildung 5
+erkennen kannst, verläuft die Tangente
+durch S senkrecht zur Geraden durch B und
+S und damit parallel zum Radius MB. Das
+wird gleich noch wichtig werden.
+
+Damit die Evolvente aber etwas genauer
+wird, stelle ich dir hier eine Vorlage mit
+Bohrungen bereit, die exakt auf das Innenzahnrad passt (Abb. 6). Dieser Zahn
+schiebt nun einen weiteren übergroßen
+Zahn auf einem zweiten Grundkreis.
+
+
+Schau dir jetzt einmal an, wie sich die
+Zahnflanken im Punkt S berühren. Sie
+haben in S eine gemeinsame Tangente.
+
+
+Zwei übergroße Zähne
+Was hat das Ganze mit Zahnrädern zu tun?
+Nun, stell dir einen übergroßen Zahn auf
+dem Grundkreis vor, dessen eine Flanke
+genau durch die Evolvente gegeben ist.
+
+Zahnflanken im Berührpunkt
+
+Denk dir kurz die beiden Seilabschnitte
+von S zu den Grundkreisen wieder hinzu.
+Frage 2: Warum müssen die beiden Seilabschnitte in S ohne Knick ineinander
+übergehen?
+
+(Abbildung verkleinert)
+
+Du kannst solch einen großen Zahn für das
+Innenzahnrad Z30 herstellen, indem du ihn
+- wie in Abbildung 4 gezeigt - zeichnest,
+die Zeichnung auf Karton klebst und dann
+den Zahn mit der Schere ausschneidest.
+
+
+Da die beiden Seilabschnitte ohne Knick
+ineinander übergehen, liegen sie auf einer
+gemeinsamen Geraden. Diese Gerade ist
+eine Tangente an beide Grundkreise (Abb.
+5). Sie ist sehr wichtig und hat daher auch
+einen eigenen Namen. Man nennt sie die
+
+Eingriffsgerade (Abb. 6). Der Berührpunkt
+zweier Zähne verläuft also während einer
+Drehung entlang dieser Eingriffsgeraden.
+Das kannst du im Modell wunderbar nachvollziehen.
+Jetzt kommen wir zum eigentlichen Punkt,
+der Evolventen für die Verzahnung so
+interessant macht.
+Konstante Übersetzung
+Schau dir noch einmal Abbildung 9 an und
+stell dir vor, dass du das linke Zahnrad
+etwas weiter im Uhrzeigersinn drehst, oder
+probiere es am Modell aus: Der Berührpunkt zwischen den Zahnflanken wandert
+bei der Drehung entlang der Eingriffsgeraden. Du kannst die Situation zu zwei
+verschiedenen Zeitpunkten sehr gut mit
+Fischertechnik zeichnen, siehe Abbildung
+10. Die Zahnflanken zum ersten Zeitpunkt
+sind grün gezeichnet, die Zahnflanken zum
+zweiten Zeitpunkt rot.
+
+Getriebe
+
+dene Radien r1 und r2 besitzen. Probiere es
+aus oder schau dir Abbildung 11 an!
+Genau wie bei den Wälzrädern am Anfang
+folgt nun aus der Gleichheit der Kreisbogenlänge, dass die Übersetzung konstant
+ist.
+Die Evolventenform der Zahnflanken bewirkt eine konstante Übersetzung:
+2/
+1 = r1/r2.
+
+Wälzkreis
+Auf dem Grundkreis eines Zahnrads beginnen die Evolventen. Darum ist der Grundkreis für die Berechnung von Zahnrädern
+sehr wichtig. Am Ende wird aber nur ein
+sehr kleiner Abschnitt der Evolvente als
+Zahnflanke genutzt und dieser Abschnitt
+beginnt meist nicht am Grundkreis. Bei
+den meisten Zahnrädern kannst du daher
+den Grundkreis gar nicht direkt sehen!
+
+
+Frage 3: Wie lang ist der Grundkreisbogen
+zwischen A1 und A2 im Vergleich zu dem
+Grundkreisbogen zwischen C1 und C2?
+
+bei verschiedene Radien
+
+Diese Übertragung der Kreisbogenlänge
+von einem Zahnrad zum anderen funktioniert auch, wenn die Grundkreise verschie-
+
+Ein weiterer, sehr wichtiger Kreis, den du
+in der Regel auch nicht direkt sehen
+kannst, ist der Wälzkreis. Um zu verstehen,
+was der Wälzkreis bei Zahnrädern ist,
+benötigst du zuerst den Wälzpunkt. Das ist
+der Schnittpunkt der Strecke zwischen den
+Achsmittelpunkten mit der Eingriffsgeraden. Die Wälzkreise der Zahnräder sind
+jetzt die Kreise um die Achsmittelpunkte,
+die durch den Wälzpunkte gehen. Zahnräder mit Evolventenverzahnung haben die
+gleiche konstante Übersetzung wie Reibräder, die so groß sind wie die Wälzkreise.
+Die Reibräder berühren sich, anders als die
+Zahnräder, immer nur im Wälzpunkt und
+die Reibung ist reine Rollreibung. Bei
+Zahnrädern mit Evolventenverzahnung ist
+das leider nicht ganz so gut: Wenn sie sich
+
+
+gerade genau im Wälzpunkt berühren, gibt
+es auch nur Rollreibung. Je weiter der
+Berührpunkt auf der Eingriffsgeraden vom
+Wälzpunkt entfernt ist, desto größer wird
+die Reibung, denn es tritt anteilig immer
+mehr Gleitreibung auf.
+
+Abbildung 13: Grundkreise (rot) und
+Wälzkreise (blau) am Z20 und Z40
+
+Den Unterschied zwischen Gleiten und
+Rollen kannst du in dem Modell sehr gut
+beobachten:
+Um
+die
+Gleitreibung
+möglichst klein zu halten, kannst du die
+Zahnflanken mit einem weichen Bleistift
+anmalen. Das Graphit wirkt als Schmiermittel.
+
+Eingriffswinkel
+Wie hängen nun Grundkreis und Wälzkreis
+an einem Zahnrad zusammen? Mit anderen
+Worten: Wie kann man den Grundkreisradius berechnen, wenn man den Wälzkreisradius vorgeben möchte? Um diese
+Frage zu beantworten, benötigst du eine
+weitere charakteristische Größe, nämlich
+den Eingriffswinkel (Abb. 14).
+
+genauso groß wie der Winkel zwischen W
+und B von M aus gesehen. Weil das Dreieck mit den Eckpunkten M, B und W
+rechtwinklig ist, bedeutet das:
+Grundkreisradius =
+Wälzkreisradius • cos .
+Die gleichmäßige Übertragungseigenschaften der Evolventenverzahnung erhält man
+nur, wenn man Zahnräder mit gleichem
+Eingriffswinkel miteinander kombiniert.
+Denn nur dann erhält man eine knickfreie
+Eingriffsgerade, längs der sich die Zahnflanken berühren. Alle fischertechnikZahnräder haben daher den gleichen Eingriffswinkel. Wie kannst du herausfinden,
+wie groß dieser ist? An einem Z40 zum
+Beispiel ist das sehr schwer zu bestimmen.
+Es geht anders viel besser: Stell dir dazu ftZahnrädern mit mehr und mehr Zähnen vor
+und bedenke, dass immer nur ein etwa
+gleich langer Abschnitt der Evolvente als
+Zahnflanke benutzt wird.
+Frage 4: Was passiert mit gleich langen
+Evolventenabschnitten, wenn die Zahnzahlen größer und größer werden?
+Ein Kreis mit unendlichem Radius ist eine
+Gerade. Gibt es ein Zahnrad mit unendlich
+vielen Zähnen und damit unendlichem
+Radius im fischertechnik-Programm?
+Natürlich nicht, aber einen Teil davon!
+Und dieser Teil hat gerade Zahnflanken.
+Aufgabe 5: Finde dieses fischertechnikElement und bestimme den Eingriffswinkel mit einem Geometriedreieck.
+
+
+Im Wälzpunkt W bildet die Tangente an
+die Zahnflanken einen Winkel mit der
+Geraden durch die Mittelpunkte der Zahnräder. Dieser Winkel heißt Eingriffswinkel.
+Wegen der zwei eingezeichneten rechten
+Winkel findet man den Eingriffswinkel
+noch an anderer Stelle wieder, was für die
+Berechnung wichtig ist. Er ist nämlich
+
+Jetzt kannst du also aus dem Wälzkreisradius eines ft-Zahnrads mit der obigen
+Formel dessen Grundkreisradius nach der
+folgenden Formel berechnen:
+Grundkreisradius =
+Wälzkreisradius • cos
+Aufgabe 6: Ein Z40 hat einen Wälzkreisradius von 29,6 mm. Wie groß ist der
+Radius des Grundkreises?
+
+Teilung und Modul
+Wenn du zwei Zahnräder kombinieren
+möchtest, müssen nicht nur ihre Eingriffswinkel übereinstimmen, sondern auch ihre
+Moduln bzw. Teilungen. Modul und Teilung eines Zahnrads sind bis auf den
+Faktor gleich. Genau definiert sind sie
+durch
+p = Wälzkreisumfang / Zahnzahl,
+m = Wälzkreisdurchmesser / Zahnzahl
+= p/ .
+Die Teilung gibt also an, in welchem Abstand gleichgerichtete Zahnflanken auf
+dem Wälzkreis aufeinander folgen.
+Für die fischertechnik Zahnräder findet
+man z. B. in Einzelteillisten den Wert m =
+1,5 mm für die Zahnräder mit den großen
+Zähnen und m = 0,5 mm für die Zahnräder
+mit den kleinen Zähnen. Stimmen diese
+Werte überhaupt? Wie kannst du sie überprüfen?
+Zunächst einmal spricht alles dafür, dass
+diese Werte richtig sind. In der DIN 780
+(DIN steht für Deutsche Industrienorm) ist
+eine Vorzugsreihe von Moduln angegeben,
+in der beide Werte enthalten sind. Der
+Wert 1,5 mm steht in dieser Reihe zwischen 1,25 mm und 2 mm, der Wert 0,5
+mm steht zwischen 0,4 mm und 0,6 mm.
+Wenn die ft-Zahnräder der DIN 780 entsprächen, müssten also 1,5 mm und 0,5
+mm die korrekten Werte sein. Die DIN 780
+gibt es aber andererseits hauptsächlich,
+damit man metallische Zahnräder mit standardisierten Werkzeugen herstellen kann.
+Da die fischertechnik-Zahnräder aus
+Kunststoff sind, ist es daher doch angebracht, den Modul einmal selbst zu überprüfen.
+Da man an den Zahnrädern den Wälzkreis
+nicht direkt sehen kann, ist es schwierig, an
+ihnen selbst die Teilung und den Modul zu
+bestimmen. Es gibt jedoch Bauteile, die
+dafür sehr viel geeigneter sind, und das
+sind abermals die Zahnstangen!
+
+Getriebe
+
+Schon mit bloßem Auge kannst du erkennen, dass eine Zahnstange mit großen
+Zähnen länger ist als zwei BS 30 und eine
+Zahnstange mit kleinen Zähnen ein ganz
+kleines bisschen kürzer als zwei BS 30.
+Zum genauen Messen der Längen legst du
+am besten mehrere Bauteile hintereinander.
+Du wirst feststellen, dass 20 BS 30 nicht
+genau 600 mm lang sind, sondern nur
+ziemlich genau 597 mm. Damit sind zwei
+also 59,7 mm lang. Auf die gleiche Weise
+kannst du feststellen, dass die Zahnstange
+mit den großen Zähnen ziemlich genau
+60,3 mm lang ist und die Zahnstange mit
+den kleinen Zähnen 59,5 mm.
+Aufgabe 7: Zähle, wie viele Zähne sich an
+den Kanten der Zahnstangen befinden und
+bestimme die Teilung und den Modul.
+Bei einem Modul von genau 1,5 mm wäre
+die Zahnstange mit den großen Zähnen
+noch etwa 1 mm länger als sie tatsächlich
+ist und damit 1,6 mm länger als zwei BS
+30. Schon bei einer Kombination von drei
+Zahnstangen hätte das zu einer unschönen
+Längendiskrepanz von 5 mm geführt.
+Mit Hilfe des genaueren Moduls kann man
+berechnen, dass der Wälzkreisradius eines
+Z40 ziemlich genau 29,6 mm beträgt.
+Diese Länge ist nur etwas kleiner als die
+Länge eines BS 30. Dadurch ist garantiert,
+dass die Zahnräder bei Lagerung im Raster
+fast optimal laufen, aber mit Sicherheit
+nicht klemmen.
+
+Kopfkreis und Fußkreis
+Der Modul bestimmt auch die Größe der
+Zähne, das heißt, welcher Abschnitt der
+Evolventen tatsächlich als Zahnflanke genutzt wird: In der Regel beträgt die Kopfhöhe 1 m, d. h. der volle Radius des Zahnrads – der so genannte Kopfkreisradius –
+ist gleich Wälzkreisradius plus Modul. Die
+Fußhöhe beträgt normalerweise zwischen
+1,0 m und 1,3 m. Der Fußkreisradius entspricht Wälzkreisradius minus Fußhöhe.
+
+
+
+
+Für die fischertechnik-Zahnräder Z20,
+Z30, Z40 und den Drehkranz lässt sich die
+Kopfhöhe von 1 m gut bestätigen. Beim
+Z10 ist die Kopfhöhe kleiner als 1 m –
+dazu gleich mehr. Die Fußhöhe ist etwas
+schwieriger zu messen, passt aber in den
+oben angegebenen Bereich.
+Im fischertechnik-knappe Erklärung der Maße an Zahnrädern
+(ohne Erklärung der Flankenform). Dort
+werden die Werte 1 m und 1,2 m für die
+Kopf- und Fußhöhe angegeben.
+Kombiniert man zwei Zahnräder so, dass
+der Abstand zwischen den Mittelpunkten
+der Achsen genau gleich der Summe der
+Wälzkreisradien ist, so gibt es etwas Kopfspiel, d. h. eine kleine Lücke zwischen
+dem Kopfkreis des einen und dem Fußkreis des anderen Zahnrads. Trotzdem sind
+die Übertragungseigenschaften in diesem
+Fall optimal.
+
+Unterschnitt
+Bei einem Eingriffswinkel von 20° ergibt
+sich bei Zahnrädern mit 17 oder weniger
+Zähnen Unterschnitt. Was das bedeutet,
+kannst du verstehen, wenn du ein Z10 mit
+etwas Druck auf der Kante der Zahnstange
+wälzt: Die Zahnspitzen der Zahnstange
+stoßen beim Wälzen merklich an die Zahnflanken des Z10 und versuchen, die Zähne
+des Z10 zu unterschneiden. Um dies zu
+vermeiden, verwendet man im Maschinenbau bei fest vorgegebenen Zahnradpaaren oft so genannte Profilverschiebungen, die hier nicht näher erklärt werden.
+Bei den Z10 kannst du leicht eine reduzierte Kopfhöhe und eine vergrößerte Fußhöhe nachmessen. Für die Praxis bedeutet
+das: Wenn du eine Zahnstange oder ein
+anderes Zahnrad mit einem Z10 bewegen
+willst, solltest du jedenfalls den Abstand
+nicht so klein wie möglich machen.
+
+
+Profilüberdeckung
+Damit eine Verzahnung gut funktioniert,
+sollte am besten nicht nur ein Zahn einen
+anderen schieben, sondern mehrere gleichzeitig schieben. Die Profilüberdeckung ist
+ein Begriff, der das quantitativ macht. Wie
+die Profilüberdeckung genau definiert ist,
+lassen wir hier aus. Du solltest aber einmal
+beobachten, dass bei der Kombination
+zweier Z10 zu jedem Zeitpunkt nur eine
+Zahnflanke schiebt, während bei Kombination zweier Z40 oft zwei gleichzeitig
+schieben. Je höher die Profilüberdeckung
+ist, desto ruhiger ist der Lauf der Räder.
+
+Zeichenprogramm
+Ich habe ein einfaches Postscript-Programm geschrieben, das Zahnräder mit
+Evolventenverzahnung zeichnet. Du kannst
+damit ein bisschen experimentieren, die
+Profile der fischertechnik-Zahnräder überprüfen, deine Getriebe dokumentieren oder
+zum Beispiel ein ft-kompatibles Innenzahnrad mit 60 Zähnen entwerfen.
+Die Datei Zahnrad.eps habe ich auf dem
+ft-community-Server abgelegt. Sie lässt
+sich mit jedem Texteditor öffnen. Besonders gut eignen sich Editoren, die gleich
+eine
+Syntax-Einfärbung
+vornehmen.
+Postscript ist eine ausgereifte, exzellent
+dokumentierte Grafikprogrammiersprache,
+die du aber nicht verstehen musst, um das
+Programm benutzen zu können. Am Ende
+der Datei findest du die Befehle, die die
+Zahnräder zeichnen. Aus den Kommentaren kannst du erkennen, wie du sie nach
+deinen Wünschen ändern kannst.
+Was du benötigst, um Postscript-Dateien
+anzuzeigen, hängt von deinem Betriebssystem ab. Unter Mac OS X und Linux
+stehen dir mehrere Programme zum
+Anzeigen zur Verfügung. Unter Windows
+kann es gut sein, dass du bereits Software
+zum Anzeigen installiert hast. Mehrere
+Anzeigeprogramme (IrfanView, GSView)
+installieren den kostenlosen Postscript-
+
+Interpreter Ghostscript selbstständig. Du
+kannst ihn natürlich auch selbst installieren. Dann steht dir insbesondere der Befehl
+ps2pdf zur Verfügung, der die Datei in
+eine pdf-Datei übersetzt. Mit Ghostscript
+bekommst du auch Fehlermeldungen, falls
+du beim Ändern Syntaxfehler erzeugst.
+Ich habe mit Hilfe des Programms ein Z50
+Außenzahnrad aus 2 mm starkem Karton
+angefertigt (Abb. 15). Mit Schere und Bastelmesser kann man natürlich den Flanken
+keine exakte Evolventenform geben, aber
+ein gut funktionierendes Zahnrad kann
+man trotzdem selbst basteln. Wichtig ist,
+dass man an den Wälzpunkten den Eingriffswinkel von 20° gut trifft und die
+Abstände zwischen den Flanken einhält.
+
+
+Für Zahnräder mit kleineren Zahnzahlen ist
+das Programm nicht optimal. Wenn der
+Fußkreis nämlich innerhalb des Grundkreises liegt, wird der dazwischen liegende
+Teil der Zahnflanke einfach durch eine
+Strecke modelliert. Für die praktische
+Anfertigung von Zahnrädern aus Karton
+spielt das aber keine große Rolle.
+
+Antworten und Lösungen
+Antwort 1: Der Seilabschnitt zwischen S
+und B lag vorher straff am Innenzahnrad
+von B bis A, also ist die Strecke zwischen S
+und B genauso lang wie der Kreisbogen
+zwischen A und B.
+Antwort 2: Hätten die beiden Seilabschnitte von S zu den Grundkreisen in S
+einen Knick, so wären nach Abb. 5 die
+
+Getriebe
+
+Tangenten an die Evolventen in S verschieden und die Evolventen würden sich daher
+durchdringen und nicht berühren.
+Antwort 3: Beide Grundkreisbögen sind
+gleich lang. Das erkennt man gut an Abbildung 5. Der Seilabschnitt, der zunächst
+entlang des Kreisbogens zwischen A1 und
+A2 liegt, wird durch Abwicklung auf die
+gemeinsame Tangente der beiden Grundkreise transportiert. Ein entsprechender
+Seilabschnitt des zweiten Grundkreises,
+der dort liegt, wird durch Aufwicklung auf
+den Kreisbogen zwischen C1 und C2 transportiert.
+Antwort 4: Mit steigenden Zahnzahlen
+werden auch die Grundkreise und ihre
+Evolventen immer größer. Wenn du nun
+einen immer gleich langen Abschnitt der
+Evolvente betrachtest, ist das genauso, als
+würdest du ein Mikroskop auf eine feste
+Evolvente anwenden. Bei genügend hoher
+Vergrößerung siehst du die Krümmung
+kaum noch und der Evolventenabschnitt
+sieht aus wie eine gerade Linie.
+Lösung 5: An der Zahnstange kannst du
+recht einfach bestimmen, dass der Eingriffswinkel
+ungefähr 20° beträgt. Da
+20° ein Normwert ist, liegt es nahe, dass
+auch fischertechnik Eingriffswinkel von
+20° verwendet.
+Lösung 6: Der Grundkreisradius des Z40
+beträgt 29,6 mm • cos 20° 27,8 mm.
+Lösung 7: An der Kante der Zahnstange
+mit den großen Zähnen befinden sich 13
+Zähne. Die Teilung beträgt damit p = 60,3
+mm / 13 = 4,64 mm und der Modul m = p /
+= 1,48 mm. An der Kante der Zahnstange
+mit den kleinen Zähnen befinden sich 38
+Zähne. Die Teilung beträgt damit p = 59,5
+mm / 38 = 1,57 mm und der Modul m = p /
+= 0,50 mm.
+
+Literatur
+[1]
+
+fischer Elemente der Technik, Werke, 1981
+
+

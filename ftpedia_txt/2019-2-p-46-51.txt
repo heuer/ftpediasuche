@@ -1,0 +1,545 @@
+
+
+Computing
+
+I²C mit dem TX(T) – Teil 18: Keypads und GPIOPort-Erweiterung
+Dirk Fox
+Der TX(T) ist ein „embedded system“ – ein programmierbarer Steuerungs-Mikrocontroller
+(fast) ohne Ein- und Ausgabe-Peripherie. Allerdings gibt es Erweiterungsmöglichkeiten: Wie
+man dem TX(T) über die I²C-Schnittstelle ein größeres LCD-Display spendiert, haben wir in
+einer früheren Folge gezeigt [1]. In diesem Beitrag stellen wir vor, wie man den TX(T) um ein
+einfaches Tastenfeld erweitert – und lernen dabei zugleich, wie sich eine große Zahl von GPIOPorts spielend ergänzen lässt.
+
+Hintergrund
+Ein Nachteil des TX Controllers ist das
+Fehlen einer leistungsfähigen BenutzerEingabeschnittstelle: Nur über die beiden
+roten Knöpfe lassen sich – mit einigen
+„Klimmzügen“ und wenig benutzerfreundlich – Menu-Eingaben realisieren. Beim
+TXT erlaubt das Touch-Display etwas
+größere Flexibilität, allerdings ist auch dort
+die manuelle Eingabe von Zahlenwerten
+oder Buchstabenfolgen mühsam. Dabei gibt
+es zahlreiche Anwendungen, die eine Eingabe von Zahlen, Ziffern oder auch alphabetischen Zeichen erfordern, wie z. B. die
+Codeeingabe für ein Tresorschloss.
+
+Keypads
+In Elektronik-Shops werden eine Vielzahl
+solcher 3×4- und 4×4-Zifferntastaturen in
+unterschiedlicher Materialqualität angeboten: von der Folien- über eine Kunststofftastatur bis zum Metall-Drucktastenfeld
+(Abb. 1, 8). Die Keypads kosten zwischen
+2 € (Folientastatur) und rund 40 € (Metalltasten), jeweils ohne Mikrocontroller für die
+Auswertung der Tastendrücke.
+
+Zum Glück gibt es das I²C-Protokoll –
+sowie Peripheriegeräte, mit denen sich eine
+solche Zeicheneingabe einfach und kostengünstig realisieren lässt. Einen Typ dieser
+Eingabegeräte, nämlich Matrix-Keypads
+(Zifferntastenfelder), wie man sie von
+Handys oder TAN-Generatoren kennt,
+stellen wir im Folgenden vor.
+Sie lassen sich über den I²C-Bus an den TX
+und den TXT anschließen und unter Verwendung der hier vorgestellten und auf
+meiner ROBO Pro-I²C-Webseite zum
+Download bereitgestellten Treiber mit
+ROBO Pro auslesen und einsetzen.
+
+
+
+Die Funktionsweise dieser Tastenfelder ist
+sehr einfach: Hinter jeder Taste des Keypads verbirgt sich ein Mikro-Taster. Beim
+
+3×4-Keypad sind sieben der (durchkontaktierten) Pin-Anschlüsse jeweils mit dem
+Eingang respektive Ausgang der MikroTaster einer Zeile bzw. Spalte der TastenMatrix verbunden. Wird nun eine Taste gedrückt, schließt sie einen Zeilen- mit einem
+Spalten-Anschluss. Die Zuordnung der PinAnschlüsse zu den Spalten bzw. Zeilen des
+Tastenfelds entspricht meist dem in Abb. 2
+gezeigten Schema, das beispielsweise den
+Sparkfun-Keypads zu Grunde liegt.
+
+Computing
+
+einem Arduino zur Verfügung stehen. Dem
+TX(T) Controller können wir solche GPIOPorts spendieren, indem wir ein GPIO-Expansion-Board an den I²C-Bus anschließen.
+Solche Boards sind mit 8, 16, 32 und mehr
+GPIO-Ports erhältlich. Für unsere Zwecke
+genügt ein Erweiterungsboard mit sieben
+digitalen GPIO-Ports.
+Der PCF8574 von NXP ist ein solcher,
+schon etwas älterer, aber seit 1989 immer
+weiter entwickelter 8-bit-I/O-Microchip mit
+integrierter I²C-Schnittstelle. Fertige I²CGPIO-Expander-Boards mit dem PCF8574
+gibt es von verschiedenen Herstellern; sie
+sind für 5 bis 12 € erhältlich (Abb. 3).
+
+(Board: WaveShare)
+
+Der PCF8574 besitzt die folgenden technischen Daten:
+
+Die Bestimmung der jeweils gedrückten
+Taste kann nun entweder über digitale
+General Purpose Input Output (GPIO)
+Ports mit Pull-Up-Widerständen erfolgen
+oder einem darauf spezialisierten Mikrocontroller überlassen werden. Im Folgenden
+stellen wir beide Lösungswege vor.
+
+Der GPIO-Expander PCF8574
+Digitale GPIO-Ports bieten eine sehr elegante Möglichkeit, das Tastenfeld auszulesen. Dafür benötigen wir mindestens
+sieben solcher sowohl als Input als auch als
+Output nutzbaren Ports, möglichst mit internen Pull-Up-Widerständen, wie sie z. B. an
+
+· I²C: Fast Mode (400 kHz) und acht über
+Jumper einstellbare I²C-Adressen (0x20
+bis 0x27; default: 0x20)
+· 5 V, geringe Stromaufnahme (< 0,1 mA)
+· Acht I/O-Anschlüsse, ein Interrupt-Pin
+Der Interrupt-Pin signalisiert jede Veränderung an den Eingängen des Boards. Darüber
+kann, z. B. an einem Arduino, das Auslesen
+der an den Pins anliegenden Potentiale über
+eine Interrupt-Service-Routine angestoßen
+werden.
+Mehrere der in Abb. 3 gezeigten Boards
+können in Reihe miteinander verbundenen
+und mit unterschiedlichen I²C-Adressen
+konfiguriert werden. So lässt sich ein
+
+
+
+Mikrocontroller über den I²C-Bus um bis zu
+64 GPIO-Ports erweitern. Mit einem I²CMultiplexer kann die Zahl der zusätzlichen
+GPIO-Ports auf 128 verdoppelt werden [3].
+Für unsere Zwecke genügt jedoch ein einzelnes Board.
+Anschluss des Keypads
+
+Wird nun eine Taste gedrückt, können wir
+jetzt in zwei Schritten feststellen, welche es
+ist: Sobald ein Tastendruck den Kontakt
+zwischen einer Zeilen- und einer Spaltenverbindung herstellt, wird das an der
+entsprechenden Zeile anliegende Signal auf
+Low gezogen (Abb. 5).
+
+Zunächst verbinden wir die sieben Pins des
+Keypads gemäß Tab. 2 über Jumper mit den
+Pins des GPIO-Expanders.
+PCF8574
+
+Keypad
+
+P0
+
+Pin 2 – C2
+
+P1
+
+Pin 3 – R1
+
+P2
+
+Pin 4 – C1
+
+P3
+
+Pin 5 – R4
+
+P4
+
+Pin 6 – C3
+
+P5
+
+Pin 7 – R3
+
+P6
+
+Pin 8 – R2
+
+Tab. 1: Anschluss des Keypads an
+die Pins des PCF8574-Board
+
+Dann legen wir zunächst die Zeilen-Kontakte (P1, P3, P5, P6) auf (Input) High und
+die Spalten-Kontakte (P0, P2, P4) auf Low
+(Abb. 4).
+
+
+
+wird auf Low gezogen
+
+Erste Spalte wird auf Low gezogen
+
+
+Computing
+
+Nun kann die Spalte der gedrückten Taste
+bestimmt werden, indem alle Zeilen auf Low
+und alle Spalten auf High gelegt werden.
+Diesmal wird die Spaltenverbindung der
+gedrückten Taste auf Low gezogen (Abb. 6).
+
+Input-Ports immer auf High
+Output-Ports auf High oder Low.
+
+gesetzt,
+
+Das Auslesen der an den Ports anliegenden
+Potentiale erfolgt durch einen I²C-ByteLesebefehl. Der zurückgelieferte Byte-Wert
+repräsentiert bitweise die Potentiale an den
+Pins P0 bis P6. Über das Auslesen der
+Potentiale können Änderungen der InputPorts festgestellt werden.
+
+Schreiben und Lesen der Ports
+Das Schreiben und Lesen der GPIO-Ports
+des PCF8574 ist einfach: Wird ein ByteWert via I²C-Protokoll an den GPIO-Expander geschickt, werden die Ports P0 bis
+P7 mit Low belegt, wenn das korrespondierende Bit den Wert 0, und mit High,
+wenn es den Wert 1 besitzt. Dabei werden
+
+Tabelle 2 zeigt, welche Byte-Werte zur
+Auswertung des Keypad an den PCF8574
+geschrieben werden (W) bzw. wie die anschließend ausgelesenen Werte (R) zu interpretieren sind.
+
+Keypad
+
+R2
+
+R3
+
+C3
+
+R4
+
+C1
+
+R1
+
+C2
+
+PCF8574
+
+P6
+
+P5
+
+P4
+
+P3
+
+P2
+
+P1
+
+P0
+
+W: Zeilenabfrage
+
+
+
+
+
+
+
+
+0x6A
+
+R: Taste in Zeile 1 gedrückt
+
+
+
+
+
+
+
+
+0x68
+
+R: Taste in Zeile 2 gedrückt
+
+
+
+
+
+
+
+
+0x2A
+
+R: Taste in Zeile 3 gedrückt
+
+
+
+
+
+
+
+
+0x4A
+
+R: Taste in Zeile 4 gedrückt
+
+
+
+
+
+
+
+
+0x62
+
+W: Spaltenabfrage
+
+
+
+
+
+
+
+
+0x15
+
+R: Taste in Spalte 1 gedrückt
+
+
+
+
+
+
+
+
+0x17
+
+R: Taste in Spalte 2 gedrückt
+
+
+
+
+
+
+
+
+0x14
+
+R: Taste in Spalte 3 gedrückt
+
+
+
+
+
+
+
+
+0x05
+
+Tab. 2: Bestimmung der Zeile und Spalte einer am Kepad gedrückten Taste
+
+ROBO Pro-Treiber
+Der ROBO Pro-Treiber für den PCF8574
+findet sich in meiner I²C-Treibersammlung.
+Er umfasst die folgenden Befehle:
+· PCF8574_SetPorts: Das I²C-SchreibKommando stellt die Potentiale der acht
+I/O-Ports durch das Schreiben eines
+Byte-Werts ein.
+· PCF8574_GetPorts: Das I²C-LeseKommando liest die Potentiale der acht
+I/O-Ports aus und liefert sie in einem
+Byte-Wert zurück.
+
+· PCF8574_GetKey: Das Kommando liefert den Zifferwert der an einem angeschlossenen 3×4-Keypad gedrückten
+Taste (0-9). Für ‚*‘ wird die Zahl 11, für
+‚#‘ die Zahl 12 zurückgegeben und die
+Funktion wird über den Ausgang „Star“
+respektive „Hash“ verlassen. Dabei wird
+das Tastenfeld entprellt: Das Unterprogramm kehr erst zurück, wenn die Taste
+losgelassen wurde. Ist keine Taste gedrückt, wird das Unterprogramm über
+den Ausgang „NoKey“ verlassen und der
+Wert 99 zurückgeliefert.
+
+
+
+
+Taste innerhalb eines kurzen Zeitraums
+auch Buchstaben eingegeben werden – eine
+mögliche Erweiterung des Treibers, die ich
+euch als kleine „Fingerübung“ überlasse.
+
+Das LCD05
+Alternativ zur Verwendung von sieben
+GPIO-Ports kann auch ein Mikrocontroller
+verwendet werden, der selbst eine Auswertung des Tastenfelds vornimmt. Das gilt
+zum Beispiel für das in einem früheren
+Beitrag vorgestellte Liquid Cristal Display
+LCD05, das auf dem rückseitig montierten
+PIC18F23K22 sieben Pins zum Anschluss
+eines 3×4-Tastenfeld besitzt (Abb. 9) [1, 2].
+
+P0
+
+P6
+
+Zeile (0-3), in der eine Taste gedrückt ist
+
+Die Kommandos des Treibers verwenden
+die I²C-Default-Adresse 0x20. Ändert man
+über die Jumper die Adresse des PCF8574Boards, müssen die Befehle entsprechend
+angepasst werden.
+
+
+Anschluss des Keypads
+Die sieben Pins des Keypads werden direkt
+mit den sieben rückseitigen Pins des LCDisplay LCD05 verbunden (Tab. 3).
+LCD05
+
+Keypad
+
+P0
+
+Pin 2 – C2
+
+P1
+
+Pin 3 – R1
+
+P2
+
+Pin 4 – C1
+
+P3
+
+Pin 5 – R4
+
+P4
+
+Pin 6 – C3
+
+P5
+
+Pin 7 – R3
+
+P6
+
+Pin 8 – R2
+
+Tab. 3: Anschluss des Keypads an den LCD05
+
+Falls die Tastatur über ein alphanumerisches Tastenfeld verfügt (Abb. 8), so können über das wiederholte Drücken einer
+
+Über das LCD05 können dann die auf der
+Tastatur gedrückten Tasten via I²C-Protokoll abgefragt werden. Die Standard-I²CAdresse des LCD05 ist 0x63 (7-bit); sie
+
+
+Computing
+
+kann auf die Adressen 0x64-0x67 umgestellt werden [1]. Der I²C-Controller des
+Boards beherrscht ebenfalls den Fast Mode
+(400 kHz).
+Der Controller legt zwei Byte-Werte in den
+Datenregistern 0x01 und 0x02 ab, die ein
+Bitmuster der gedrückten Tasten enthalten
+(Tab. 4) und via I²C vom Master – sprich:
+dem TX Controller – im direkten Zugriff
+ausgelesen werden können.
+Wert
+
+Taste
+
+Wert
+
+Taste
+
+0x01
+
+
+0x01
+
+9 wxyz
+
+0x02
+
+2 abc
+
+0x02
+
+*
+
+0x04
+
+3 def
+
+0x04
+
+
+0x08
+
+4 ghi
+
+0x08
+
+#
+
+0x10
+
+5 jkl
+
+0x10
+
+-
+
+0x20
+
+6 mno
+
+0x20
+
+-
+
+0x40
+
+7 pqrs
+
+0x40
+
+-
+
+0x80
+
+8 tuv
+
+0x80
+
+-
+
+Auch hier ist eine Erweiterung für alphanumerische Tasten möglich, allerdings erfolgt die Auswertung der Tasten des LCD05
+im Vergleich mit dem PDF8574 deutlich
+verzögert, was die eindeutige Erkennung
+wiederholter Tastendrücke erschwert.
+
+Tab. 4: Register 0x01 (links) und 0x02
+(rechts): Hex- und Tastenwert
+
+ROBO Pro-Treiber
+Eine Erweiterung des ROBO Pro-I²C-Treibers für den LCD05 um die Ansteuerung
+eines 3×4-Keypads zeigt Abb. 10. Er findet
+sich auch zum Download auf der I²CTreiber-Webseite und enthält die folgende
+Funktion:
+· LCD05_GetKey: Das Kommando liefert
+den Zifferwert der an einem angeschlossenen 3×4-Keypad gedrückten Taste (09). Werden die Tasten ‚*‘ oder ‚#‘ gedrückt, wird die Funktion über den Ausgang „Star“ respektive „Hash“ verlassen.
+Dabei wird das Tastenfeld entprellt: Das
+Unterprogramm kehr erst zurück, wenn
+die Taste losgelassen wurde. Ist keine
+Taste gedrückt, wird die Funktion über
+den Ausgang „NoKey“ verlassen.
+
+
+Quellen
+[1]
+
+Dirk Fox: I²C mit dem TX – Teil 9:
+LC-Displays. ft:pedia 1/2014, S. 4757.
+
+[2]
+
+Devantech: LCD05 – I2C/Serial
+LCD, Technical Documentation.
+
+[3]
+
+Georg Stiegler: I²C mit dem TX(T) –
+Teil 5: Multiplexer. ft:pedia 2/2013,
+S. 50-52.
+
+
+

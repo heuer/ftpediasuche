@@ -1,0 +1,164 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Tips on using the fischertechnik TXT Controller
+Peter King
+Did you know that you can use non-fischertechnik webcams with the TXT controller? Or that
+you can use the fischertechnik camera directly with Android devices? Read on to learn some
+details about the TXT controller that you might not have been aware of.
+1. The most important requirement of the
+fischertechnik TXT controller (part no.
+522429 or 153513) is the power supply!
+Always ensure that you have a charged
+battery or, preferably, use a mains adapter
+especially during important operations such
+as firmware upgrades. A supply
+voltage of 8~10 Volts is required.
+Important: ensure that a
+minimum of 8 V is
+maintained even
+when outputs are
+turned on!
+2. Should the
+ROBO Pro
+software suggest that
+a TXT firmware update
+is required, always use the
+USB cable connection
+before proceeding with the
+upgrade. Don’t forget to switch
+the TXT controller off and on again
+after downloading the new firmware!
+3. After turning the WiFi or Bluetooth on
+for the first time, always switch the TXT
+controller off and on again to ensure that
+any wireless operation is initialized. Also it
+is a good idea to key the “Pairing Code” and
+the “Network security key” into a TXT or
+DOC file on your computer to facilitate
+cutting and pasting when initializing the
+WiFi or Bluetooth connection. Please note,
+should your WiFi connection say “limited
+connectivity”, simply switch the TXT
+
+controller off and on again. If the WiFi
+connection is working correctly, the status
+will show “Activity” that is both sending
+and receiving data!
+4. When using Bluetooth on the
+computer, plug in your Bluetooth
+device or switch it on and ensure
+that the Bluetooth icon is visible
+in the notification area.
+Right-click on the icon
+and then select “Join a
+Personal Area Network”. If it’s the
+first
+time
+connecting
+the TXT to the
+computer, you will
+need to “pair” the
+device. Click “Add…”
+and select the “TXT xxxx”
+device, click “Next” and enter
+the “Pairing Code”. Finally, once
+the device appears as an “access point”
+in the “Personal Area Network” window,
+click “connect”. Please note that you should
+now be able to check the “Network and
+Sharing Center” and find that there is a
+“Bluetooth Network Connection” and the
+“Status” of this connection can be checked.
+5. The backup battery compartment (pictured below) is underneath the TXT. Remove
+the Phillips-head screw and, using a flat
+screwdriver for assistance, press the latch
+and remove the cover. The 3 V lithium coin
+
+
+
+battery CR2032 is used to back up the RealTime Clock (RTC), maintaining the date
+and time when the TXT is disconnected
+from an external power source. Our tests
+suggest that the battery should only last 1 to
+2 years. Therefore, it might be best to
+remove the battery if the TXT controller is
+not being used for a long period of time.
+When removing the battery, it is important
+not to short-circuit the contacts. Please use
+the procedure below and place the battery in
+a safe location out of reach of young children as it represents a serious health hazard if
+swallowed. You can measure the battery’s
+voltage by connecting a cable to one of the
+I inputs (set to Analog 10V in) and touching
+the plugs to the battery’s terminals whilst
+using the “Interface Test” in ROBO Pro.
+The battery should be replaced if the voltage
+is below 2.5 V (< 2500).
+
+The TXT controller’s battery compartment.
+Insert a strip of paper at the denoted location.
+
+Insert a small strip of paper in the gap to act
+as an insulator (see picture), use a small
+screwdriver to lever the battery out of the
+battery holder. Never attempt to lever the
+battery out using the plastic case of the TXT
+controller as damage can occur!
+6. To set the “Date & Time” on the TXT
+controller, press “Settings” and scroll down
+by pressing the “∠” symbol (top RH corner)
+
+
+and then press “Date & Time”. Note the
+time is set as a 24-hour clock 00:00 to
+23:59. The seconds are automatically reset
+to zero when the green tick is pressed.
+7. The TXT Discovery Set (part no. 524328)
+includes a USB camera module which may
+also be purchased separately (part no.
+152522). This camera with microphone
+may be used as a webcam on your PC or it
+may be plugged directly into the TXT
+controller’s USB A socket. The big advantage of the fischertechnik camera is that it
+has adjustable focus (the picture above was
+taken with this camera). In fact, any USB
+camera which uses the Sonix SN9C259
+image controller chip (e.g. ODROID USBCAM 720P) can be used with the TXT
+controller.
+The fischertechnik camera can be used with
+Windows, Mac OSX and Linux. The
+camera can also be plugged directly into
+Android phones and tablets using a micro
+USB-OTG adapter. For a suitable app, see
+“UsbWebCamera” [1].
+8. When the camera on the TXT controller
+is being used (e.g. a program is running or
+video is being viewed) it is important that
+the camera should NOT be removed from
+the USB socket. The TXT may freeze and
+disconnecting the external power supply
+and reconnecting again is the only way to
+recover. Finally, do not attempt to preview
+the camera on the TXT controller whilst
+connected by Bluetooth. Bluetooth does not
+have the necessary data transfer rate
+required for camera viewing.
+9. A number of TX and TXT Controller
+apps are available for Android devices [2].
+
+References
+[1]
+
+„Serenegiant“: UsbWeb. Android app
+for USB cameras in Google Play,
+2016.
+
+[2]
+
+Search for TX fischertechnik in
+Google Play.
+
+

@@ -1,0 +1,269 @@
+
+
+Modell
+
+Tropfen-Fotografie
+Andreas Gail
+Man glaubt es kaum, aber auch beim Fotografieren von Wassertropfen kann fischertechnik eine
+wichtige Rolle spielen. Im vorliegenden Beitrag werden einzelne Baugruppen aus vorangegangenen ft:pedia Beiträgen kombiniert.
+
+Was wird benötigt?
+Eine Reihe von Baugruppen aus vorangegangenen ft:pedia-Beiträgen werden in
+diesem Anwendungsfall miteinander kombiniert. Neben diversen fischertechnikTeilen werden folgende Hauptkomponenten benötigt:
+∂ Eine Schlauchquetschpumpe [1] zur
+Erzeugung von aufeinander folgenden
+Wassertropfen,
+
+
+∂ ein Punktlaser [2] für eine Lichtschranke
+zur Wassertropfenerkennung,
+∂ ein Modul [3] zur Kamera-Ansteuerung
+über IR,
+∂ eine Kamera mit einem Objektiv zur
+Aufnahme kleiner Objekte,
+∂ ein Blitzgerät, zur Kamera passend,
+∂ eine Glasschüssel mit Wasser und
+∂ ein Bildbearbeitungsprogramm.
+
+
+Modell
+
+Gesamtaufbau
+Aufnahme von Wassertropfen verwendet
+wurde. Die Durchführung selbst erfolgte
+jedoch bei deutlich reduzierter Umgebungshelligkeit. Sowohl die Kamera als auch der
+Blitz können bei der späteren Aufnahme
+notfalls auch in der Hand gehalten werden.
+Mindestens ein Blitz wird benötigt, wobei
+ein Kamera integrierter Blitz auch ausreichend ist.
+Die Wasserschalte befindet sich unten im
+Turm. Auf dem etwa 70 cm hohen oberen
+Aufbau befinden sich gemäß Abb. 2 die
+Schlauchquetschpumpe und die LaserLichtschranke.
+Wasser (ohne Zusätze) wird dabei durch
+den Wasserschlauch (Silikon, Außendurchmesser 4 mm) gepumpt. Etwa alle acht
+Sekunden bildet sich ein Tropfen, der sich
+ablöst und herunterfällt. Dieser Wassertropfen wird von der Laserlichtschranke
+detektiert (siehe Abb. 3).
+
+Tropfen, die in eine mit Wasser gefüllte Schale
+fallen
+
+Das Signal der Fotodiode wird von einem
+Robo TXT-Controller (TXT) ausgewertet
+und akustisch signalisiert. Wenn eine
+Aufnahme erfolgen soll, leitet der TXT
+einen Impuls an das Modul zur KameraAnsteuerung (Abb. 4).
+
+Schlauchquetschpumpe
+
+Fotodiode
+
+Laserlichtquelle
+
+Wasserschlauch
+
+
+
+
+
+Wasserschlauch
+Ausgang
+Laserlichtquelle
+Fotodiode
+zur Erkennung der erzeugten Wassertropfen
+
+Aufzeichnung der Zeitabstände zwischen
+einzelnen Tropfen
+
+Geschwindigkeitsproblem
+Die Zeitspanne, in der ein Wassertropfen
+70 cm tief vom oberen Aufbau in die darunter befindliche wassergefüllte Schale fällt,
+ist bei der verwendeten Kamera deutlich zu
+kurz, um eine Aufnahme vorzubereiten und
+durchzuführen. Deshalb muss zunächst das
+Zeitintervall zwischen den einzelnen
+Tropfen gemessen werden. Dann ist nach
+einem erkannten Tropfen genügend Zeit,
+die Aufnahme zu starten, weil nun bekannt
+ist, wann der nachfolgende Tropfen
+kommen wird. Zur Zeitmessung der
+Tropfenabstände wurde das folgendes
+Robo Pro-Programm verwendet:
+
+
+M1 im Programm steht für die Schlauchquetschpumpe und O3 für den Laser. Am
+Eingang I1 ist die Fotodiode angeschlossen,
+wobei dieser Eingang als „A 5k“, d. h.
+analoge Widerstandsmessung eingestellt
+wurde. Die zeitlichen Messergebnisse
+werden in die Liste Messung eingetragen
+und nach Programmende in eine externe
+Datei im CSV-Format exportiert. Aus
+mindestens 20 Messungen sollte eine
+mittlere Zeitspanne errechnet werden. Die
+dabei
+auftretenden
+Ungenauigkeiten
+kommen einerseits durch die Gleichlaufschwankungen der Schlauchquetschpumpe
+und andererseits durch das Laufzeitverhalten des TXT zustande. Diese Ungenauigkeiten haben jedoch Vorteile bei der
+späteren Aufnahmeserie, weil so automatisch verschiedene zeitliche Abschnitte
+beim Eintropfen fotografiert werden.
+
+Einstellung der Kamera
+Verwendet wurde eine Vollformat-Kamera
+(Sensorgröße 24 mm ∙ 36 mm) mit einem
+105 mm-Makro-Objektiv (Lichtstärke 2,8).
+Folgende Einstellungen wurden vorgenommen:
+∂ M (manuelle Belichtungseinstellung,
+Autofokus aus)
+∂ Verschlusszeit 1/200 s
+∂ Blende 36 (minimale Einstellung)
+∂ Empfindlichkeit ISO 6400
+∂ interner Blitz abgeschaltet, externer Blitz
+manuell (1/128)
+Obwohl wie bereits oben erwähnt ein Stativ
+für die Kamera nicht unbedingt erforderlich
+ist, so ist es doch empfehlenswert. Zunächst
+muss nämlich eine manuelle Scharfeinstellung vorgenommen werden. Das geht
+einfach, indem ein beschriebenes Papierstück kurzzeitig auf die Wasseroberfläche
+in der Wasserschale aufgelegt und dann auf
+seine Beschriftung scharfgestellt wird. Das
+sollte an der Stelle sein, an der der Tropfen
+ins Wasser eintaucht. Danach wird das
+Papierstück wieder entfernt. Bevor mit den
+Aufnahmen begonnen wird, sollte sichergestellt sein, dass das Wasser in der Schale
+sauber ist, also keine Trübstoffe oder Fasern
+enthält. Nun kann mit den ersten
+Testaufnahmen begonnen werden. Dabei
+sind die Vorlaufzeit zur Aufnahmeauslösung auszuprobieren und die Belichtung
+zu überprüfen. Zur Korrektur sind ggf. die
+ISO-Empfindlichkeit, Blende oder Blitzleistung anzupassen.
+Einfluss der ISO-Empfindlichkeit
+Grundsätzlich bewirkt die Einstellung eines
+kleineren ISO-Wertes eine bessere Bildqualität hinsichtlich des Bildrauschens.
+Einfluss der Blendenzahl
+Die maximale Blendenzahl ist gleichbedeutend mit einer minimalen Blenden-
+
+Modell
+
+öffnung. Das hat den Vorteil, dass das aufgenommene Bild eine große Tiefenschärfe
+hat. Somit ist der aufgenommene Tropfen
+nicht nur an der Stelle scharf abgebildet, an
+dem zuvor manuell die Fokussierung vorgenommen wurde, sondern auch in näher oder
+weiter entfernt liegenden Bereichen. So
+können auch kreisförmige Wellenbewegungen um die Eintauchstelle des Tropfens
+scharf abgebildet werden.
+Einfluss der Verschlusszeit
+Dieser Einstellwert ist vergleichsweise
+unbedeutend. Wichtig ist nur, dass die
+Kamera die Verschlussöffnung und die
+Blitzauslösung synchronisieren kann.
+Einfluss der Blitzleistung
+Dieser Einstellung kommt eine besondere
+Bedeutung zu. Die Bewegung des Wassertropfens verläuft sehr schnell; trotzdem soll
+möglichst alles scharf abgebildet werden.
+Deshalb wird die Blitzleistung möglichst
+klein eingestellt. Eine kleine Blitzleistung
+ist dabei gleichbedeutend mit einem sehr
+kurzen Blitz. Die oben genannte Einstellung
+(1/128 der Leistung) hat somit zur Folge,
+dass bei dem verwendeten Blitz die
+Blitzdauer nur 1/38500 s dauert. Länger als
+1/20000 s sollte der Blitz für scharfe
+Abbildungen möglichst nicht dauern.
+
+Aufnahmen
+Wenn alles eingestellt ist, kann mit der
+mehr oder weniger automatischen Aufnahmeserie begonnen werden. Die Position
+des Blitzgerätes sollte dabei immer wieder
+mal verändert werden. Einstellungen in
+Richtung der Kamera, gegen die Kamera,
+von oben, von unten, seitlich, in die Schale
+hinein usw. ergeben unterschiedliche
+Effekte. Dabei kann das Blitzgerät durchaus
+in der Hand gehalten werden. Auch die
+Kameraposition sollte immer wieder mal
+verändert werden. Nach 200 bis 300
+Aufnahmen sollte man alles, was es
+prinzipiell zu sehen gibt, im Kasten haben.
+
+
+
+
+Bildoptimierung
+Wenn man sich die aufgenommenen Bilder
+betrachtet, sehen diese mitunter recht öde
+aus. Jetzt kommt ein passendes Bildbearbeitungsprogramm zum Zuge. Aus meiner
+Sicht sehr empfehlenswert ist das frei
+zugängliche
+Bildbearbeitungsprogramm
+GIMP [4]. Die nachfolgenden Beispiele
+wurden mit der Version 2.8.14 bearbeitet.
+
+Durch Zoomen auf einen Bildausschnitt der
+Gesamtaufnahme kommt man zu Abb. 9.
+Hierzu verwendet man die Funktion Bild |
+Leinwandgröße...
+
+Bildbearbeitungsprogramms GIMP 2.8.14
+
+Ein unbearbeitetes Bild zeigt Abb. 7:
+
+und Ausschnittsvergrößerung
+
+Um die Sache noch interessanter aussehen
+zu lassen, kann man alles noch etwas
+einfärben.
+
+Nachdem die Darstellung so verändert
+wurde, so dass der volle zur Verfügung
+stehende Farbraum ausgenutzt wird, hat das
+Bild bereits deutlich klarere Strukturen, wie
+in Abb. 8 deutlich wird. Im Bildbearbeitungsprogramm ist dazu die Funktion
+Farben | Werte... | Automatisch | OK
+verwendet worden. Wenn ein Farbstich
+entfernt werden soll, so ist dieses über Bild
+| Modus | Graustufen und anschließend mit
+Bild | Modus | RGB möglich.
+
+
+Ausschnittsvergrößerung und Einfärbung
+
+
+Modell
+
+Hier sind alle erdenklichen Farben, Helligkeiten und Kontraste möglich. Dazu stehen
+die Funktionen Farben | Einfärben oder
+auch Farben | Helligkeit/Kontrast bereit.
+Weitere Beispiele zeigen Abb. 11 und 12:
+
+
+Referenzen
+[1]
+
+Gail, Andreas: Schlauchquetschpumpe. ft:pedia 1/2016, S. 40-41.
+
+[2]
+
+Gail, Andreas: Einstieg in Experimente mit Lasern. ft:pedia 2/2014,
+S. 14-17.
+
+[3]
+
+Gail, Andreas: Nikon-KameraAnsteuerung über IR. 4/2015, S. 40-43.
+
+[4]
+
+Bildbearbeitungsprogramm GIMP.
+https://www.gimp.org
+
+[5]
+
+Gail, Andreas: fischertechnik:
+Wassertropfen Fotographie mit
+Nikon. youtube-Video, 2016.
+
+
+
+

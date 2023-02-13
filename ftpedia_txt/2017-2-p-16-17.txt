@@ -1,0 +1,73 @@
+
+
+Baukasten
+
+Die Staubschutz-Stückliste für den
+Urlaubskasten
+Stefan Falk
+Im Wohnzimmer-Dienstreisen-Urlaubs-Notfallkasten aus der ft:pedia 1/2016 [1] wird eine
+Bauplatte 500 als Deckel benutzt. Durch deren Nuten fällt bei längerem Herumstehen gerne
+Staub ins Innere des Kastens. Im Download-Bereich der ft:community gibt es deshalb ein
+Staubschutz-Einlegeblatt, das gleichzeitig einen Sortierplan mit Stückliste darstellt und einige
+Modellanregungen zeigt.
+Der Download [2] enthält eine zweiseitige
+PDF-Datei zum beidseitigen Ausdrucken
+auf ein einziges Blatt. Für eigene Veränderungen ist auch das originale Microsoft
+Word-Dokument im Download enthalten.
+Auf der Rückseite der Stückliste sind neben
+
+Beispiel-Modellen auch zwei vielleicht
+nützliche 25-cm-Lineale angebracht. Deshalb enthält eine ebenfalls im Download
+enthaltene Fassung des Word-Dokuments
+das VBA-Makro, mit dem diese Lineale
+erzeugt wurden – für Interessierte.
+
+
+
+Baukasten
+
+
+Für die Benutzung am Bildschirm wimmelt
+es nur so von Hyperlinks: Sämtliche Teilebezeichnungen führen direkt in die fischertechnik-Datenbank [3]; die Modellbilder
+auf der Rückseite verlinken in die ft:pediaAusgaben, in denen das jeweilige Modell
+enthalten ist.
+Ein Ausdruck in schwarz/weiß auf einem
+DIN-A4-Blatt und Beschneiden entlang der
+gepunkteten Linie der Rückseite genügt
+schon. Achtet beim Druck je nach PDFReader darauf, dass der gepunktete Rahmen
+25,5 cm ∙ 18,1 cm groß ist. Tests mit Microsoft Edge, Microsoft Reader und Google
+Chrome als PDF-Reader verliefen leider
+enttäuschend: All diese Programme passen
+die ganze A4-Seite, also einschließlich des
+weißen Randes darum, in den Druckbereich
+ein und ergeben also einen zu klein skalierten Ausdruck. Der Ausdruck des WordDokumentes funktioniert gut. Beim Adobe
+Reader muss die Option zur Verkleinerung
+
+„übergroßer Seiten“ deaktiviert sein; dann
+kommt auch hier die korrekte Größe zu
+Papier.
+Eine edle und langlebigere Hochglanzfassung erhält man unter Verwendung von
+hochwertigem Papier und anschließendem
+Laminieren [4].
+
+Quellen
+[1]
+
+Stefan Falk: Der WohnzimmerDienstreisen-Urlaubs-Notfallkasten.
+ft:pedia 1/2016, S. 31-36.
+
+[2]
+
+Stefan Falk: Staubschutz-Stückliste
+für den Urlaubskasten im ftcDownloadbereich.
+
+[3]
+
+ft Community: fischertechnikDatenbank.
+
+[4]
+
+Wikipedia: Lamination.
+
+
+

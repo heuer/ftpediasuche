@@ -1,0 +1,248 @@
+
+
+Pneumatik
+
+Endlagendämpfung
+Stefan Falk
+Wenn in einer Maschine schwere Maschinenteile oder Werkstücke bewegt werden müssen,
+können in den Endlagen durch den dortigen Ruck so erhebliche Kräfte auftreten, dass das
+Werkstück oder die Maschine beschädigt werden. In der Pneumatik gibt es dafür eine elegante
+Lösung, die in diesem Beitrag dargestellt wird.
+
+Einführung
+Stellen wir uns einmal eine Maschine vor,
+in der ein schweres Werkstück oder
+Maschinenteil von einem Pneumatik- oder
+Hydraulik-Zylinder zwischen zwei Endlagen bewegt werden muss. Damit die
+Maschine schnell arbeitet, soll die Bewegungsgeschwindigkeit möglichst hoch sein.
+Damit ergibt sich aber ein Problem: Die
+Maschine knallt jeweils an den Anschlag,
+und irgendein Bauteil muss enorme Stoßkräfte aushalten. Das kann der Zylinder
+selbst sein, aber auch das zu bewegende
+Teil. Lässt man die Bewegung hinreichend
+langsam laufen, um nichts zu beschädigen,
+genügt die Anlage aber nicht den Anforderungen an die Arbeitsgeschwindigkeit.
+
+Endlagen-gedämpfte Zylinder
+Um dieses Dilemma zu lösen und also beide
+Ziele – hohe Arbeitsgeschwindigkeit und
+sanftes Ankommen an den Endlagen – zu
+vereinen, gibt es spezielle Zylinder mit eingebauter Endlagendämpfung. Ihr Schaltbild
+sieht so aus:
+
+Pneumatikzylinders und eines mit eingebauter
+Endlagendämpfung
+
+Diese Zylinder haben die Eigenschaft, die
+Abluft kurz vor Erreichen ihrer Endlagen
+selbständig (und im Schaltbild sogar mit
+einstellbarer Stärke) zu dämpfen.
+Solche Elemente gibt es in unzähligen Bauvarianten, aber sie teilen sich ein einfaches
+Prinzip:
+
+integrierter Endlagendämpfung
+
+Auf die eine oder andere Bauart verfügen
+diese Zylinder auf den zu dämpfenden
+Seiten (eine oder beide) über mehr als einen
+Anschluss. Abb. 2 zeigt einen in beiden
+Richtungen dämpfbaren Zylinder. Die darin
+etwas breiter blau eingezeichneten
+Anschlüsse stellen die der normalen,
+hinlänglich bekannten Zylinder dar.
+Wie man in der Zeichnung sieht, werden
+diese Anschlüsse aber kurz vor Erreichen
+der Endlage vom Kolben (in anderen Bauformen auch von der Kolbenstange)
+abgedeckt und somit verschlossen. Die
+Abluft kann also nur noch durch den
+
+
+Der Hauptteil der Bewegung geschieht also
+mit voller Geschwindigkeit. Kurz vor
+Erreichen der Endlage wird die Bewegung
+automatisch gedämpft und deshalb
+verlangsamt.
+Für Anwendungsfälle, in denen man die
+Dämpfung noch feiner steuern muss,
+können auch mehr als zwei Anschlüsse pro
+Seite verwendet werden, die dann nacheinander vom Kolben verschlossen werden,
+bis nur noch einer übrig bleibt. Auf diese
+Weise kann man die Geschwindigkeit in
+mehreren Stufen sanft verringern.
+
+Profilgesteuerte Dämpfung
+Diesen Gedanken kann man durchaus noch
+weiter spinnen: Was machen wir, wenn die
+Bewegung über ihre gesamte Strecke
+hinweg je nach Position mit unterschiedlicher Geschwindigkeit ausgeführt werden
+soll? Etwa wie in Abb. 3, die schematisch
+
+eine gewünschte Geschwindigkeit
+Abhängigkeit des Ortes zeigt?
+Geschwindigkeit
+
+zweiten, in Abb. 2 schmal rot eingezeichneten Anschluss entweichen. Dieser
+wiederum kann leicht je nach Bedarf um
+eine feste oder einstellbare Drosselwirkung
+ergänzt werden.
+
+Pneumatik
+
+in
+
+100%
+75%
+50%
+25%
+0%
+0%
+
+20%
+
+40%
+
+60%
+
+80% 100%
+
+Position
+
+
+Um das zu realisieren, kann man folgenden
+Aufbau verwenden:
+1. Der Zylinder verfährt nicht nur das
+Werkstück, sondern auch ein Steuerelement, das wie der gewünschte
+Geschwindigkeitsverlauf geformt ist.
+2. Von diesem Element wird eine variabel
+starke Drossel betätigt, die die Abluft des
+Zylinders je nach Stärke der Auslenkung
+unterschiedlich stark drosselt und so die
+gewünschte Geschwindigkeit realisiert.
+
+
+
+
+
+Umsetzung mit fischertechnik
+Der Werkstückträger (die schwarze Bauplatte 60x120 mit den angedeuteten
+Halterungen für das zu bewegende Werkstück) kann von einem Pneumatikzylinder
+auf einem Schlitten verfahren werden. Der
+Zylinder wird zunächst ganz klassisch über
+ein fischertechnik-Handventil mit Druckluft versorgt (wer das z. B. zeitgesteuert
+automatisieren möchte, findet eine Möglichkeit dazu in [1]). Der Schaltplan unserer
+Maschine ist recht übersichtlich (Abb. 6).
+Das fischertechnik-Ventil ist ein 4/3-Wegeventil: Es hat vier Anschlüsse (der Abluftausgang wird mitgezählt) und drei Schaltstellungen: Links, rechts, und eine Mittelstellung, in der alle Anschlüsse einfach
+verschlossen sind.
+
+
+
+Der Knackpunkt in diesem Modell ist die
+variabel wirkende Drossel. Zunächst muss
+ja die aus dem Handventil strömende Abluft
+gedrosselt werden, damit wir eine gleichmäßige, langsame Bewegung erreichen.
+Dazu verwenden wir den Kniff aus [2] und
+führen die Abluft über ein einseitig verschlossenes Pneumatik-T-Stück in einen
+Schlauch:
+
+
+Pneumatik
+
+
+Die im Schaltbild eingezeichnete Rückstellfeder ist auch schon eingebaut: Das kurze
+Schlauchstückchen selbst genügt und übernimmt also auch die Funktion, den Schlitten
+wieder heraus zu drücken.
+
+Dieser Schlauch endet nun nicht einfach im
+Freien, sondern wird erst über eine variable
+Drossel geführt. Die ist laut [3] aufgebaut,
+aber mit einem Ende auf einem Schlitten
+montiert:
+
+Über das am Schlitten zwecks reibungsarmem Lauf angebrachte Rad können wir
+nun leicht den Verlauf des „Profils“
+abtasten. Damit können wir die Drosselwirkung also in Abhängigkeit von der
+Position des Zylinders automatisch steuern.
+Die variable Betätigung der Drossel wird
+durch verschiedene auf den WerkstückSchlitten aufgesteckte Bauteile erreicht.
+Endlage mit stark eingedrückter Drossel
+(und deshalb geringer Bewegungsgeschwindigkeit) und die Mittellage mit
+weit geöffneter Drossel (und deshalb großer
+Geschwindigkeit):
+
+
+Je weiter der in Abb. 8 links sitzende Teil
+nach rechts gedrückt wird, desto mehr wird
+das kurze Schlauchstückchen abgeknickt
+und versperrt der durch den ankommenden
+Schlauch strömenden Abluft des Zylinders
+den Weg ins Freie. Erst nachdem die Abluft
+durch diese Drossel hindurch geströmt ist,
+kann sie also über das letzte T-Stück
+tatsächlich entweichen.
+
+Endlage
+
+
+
+
+
+
+Der Zylinder wird also den Wagen langsam
+(je nach Justierung der Drossel) starten und
+dann schnell verfahren, bis er kurz vor
+Erreichen der Endposition wieder langsam
+wird und sanft anschlägt. Durch Aufstecken
+verschiedener fischertechnik-Teile (z. B.
+gar keines, Federnocken, Verbinder 15 mit
+der flachen oder der runden Seite nach
+außen oder die hier in den Endlagen
+verwendeten Kufen 31602) können wir den
+Geschwindigkeitsverlauf also unseren
+Wünschen anpassen.
+
+Zum Bau des Modells
+unten: Er gleitet in diesem Modellvorschlag
+mittels 38253 S-Kupplungen 15 auf zwei
+Metallachsen und trägt außerdem unser
+Drossel-Profil (Abb. 12 und 13).
+
+
+Die Drossel muss durch Verschieben in
+Richtung Werkstückschlitten bzw. von ihm
+weg justiert werden, damit die Drosselwirkung den richtigen Wertebereich von
+„volle
+Geschwindigkeit“
+bis
+„wie
+gewünscht langsam“ abdeckt (siehe Abb. 8
+und 9). Das muss mit etwas Gefühl gemacht
+werden.
+Danach sollte das Modell einwandfrei
+funktionieren. Experimenten mit verschiedenen aufgesteckten Drosselprofilen und
+natürlich mit beliebigen Modellerweiterungen stehen dann Tür und Tor offen.
+
+Quellen
+[1]
+
+Falk, Stefan: Druckluftsteuerungen
+(Teil 2). ft:pedia 2/2014, S. 20
+
+[2]
+
+Falk, Stefan: Abluftdrosselung mit
+dem Pneumatik-Handventil. 2/2014, S. 11.
+
+[3]
+
+Falk, Stefan: Druckluftsteuerungen
+(Teil 3). ft:pedia 3/2014, S. 25.
+
+
+Der Pneumatikzylinder sitzt auf einigen
+einfachen Bauteilen in genau der richtigen
+Höhe, damit sein Kolben direkt in die
+schwarze Bauplatte eingreifen kann
+(Abb. 14).
+
+
+

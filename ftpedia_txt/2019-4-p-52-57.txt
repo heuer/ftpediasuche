@@ -1,0 +1,378 @@
+
+
+Computing
+
+Von Schrittmotoren und Servos – Teil 2
+Dirk Wölffel, Björn Gundermann, Christian Lauff,
+Christian Bergschneider, Stefan Fuss
+Vor einem Jahr haben wir die Idee für den ftPwrDrive an dieser Stelle vorgestellt [1]. Aus dem
+Entwicklungsprojekt von damals ist in der Zwischenzeit eine fertige Hardware geworden; die
+ersten Komplettgeräte wurden zur Convention ausgeliefert. Im zweiten Teil des Beitrags
+beschrieben wir, wie sich der Controller in Modelle integrieren und programmieren lässt.
+Der fertige ftPwrDrive (Abb. 1) unterscheidet sich nur kaum von dem vor 12 Monaten
+vorgestellten Erlkönig. Die wesentlichen
+technischen Daten – eigenständiger Controller für bis zu vier Schrittmotoren und
+vier Servos – sind gleich geblieben. Nur das
+Gehäuse hat ein Facelift bekommen, und
+bei der Stromversorgung konnten wir die
+Betriebsspannung auf 12 V reduzieren.6
+
+Der Einbau im Modell
+Die Schrittmotoren im Shop haben 5 mm
+Antriebswellen. Um die Kraftübertragung
+auf normale 4 mm-fischtechnik-Achsen zu
+realisieren, werden deshalb spezielle Ritzel
+und Antriebshülse benötigt (Abb. 2).
+
+
+Häufig wird beim Schrittmotor kein Getriebe benötigt, so dass die Antriebshülse
+oft die bessere Wahl ist. Die Hülse hat kein
+Getriebespiel und die spätere Programmierung wird einfacher.
+
+
+Den fertigen ftPwrDrive-Controller und das
+notwendiges Zubehör könnt ihr über Björns
+Webseite ordern [2]. Auch alle Zubehörteile
+des fischertechnik-3D-Druckers lassen sich
+mit den Schrittmotoren kombinieren.
+
+
+Die genauen technischen Daten und die
+Inbetriebnahme des Controllers können aus dem
+Handbuch auf GitHub [3] entnommen werden.
+
+Im ausgeschalteten Zustand werden noch
+die Motorkabel an den Controller angeschlossen und der ftPwrDrive über den I²CStecker mit TX, TXT oder ftDuino verbunden.7 Im Folgenden wird die Programmierung mit dem ftDuino [5] im Detail beschrieben.
+Den ftPwrDrive initialisieren
+Um den ftPwrDrive im ftDuino-Programm
+anzusteuern, muss zunächst die Library
+
+
+Der TXT benötigt für den Anschluss am I²C-Bus
+zusätzlich einen Pegelwandler wie den ftExtender [4].
+
+ftPwrDrive importiert und anschließend
+instanziiert werden (Abb. 3).
+// include the ftPwrDrive header files
+#include <ftPwrDrive.h>
+// create an instance of ftPwrDrive
+// and set I2C address
+ftPwrDrive Drive = ftPwrDrive(32);
+
+
+Damit ist der Controller komplett initialisiert und kann verwendet werden.8 Als
+abgesetzter Controller erhält der ftPwrDrive
+nur kurze Befehle über den I²C-Bus vom
+ftDuino. Dash ftDuino-Programm wartet
+nur die Übertragung des Befehls ab.
+Während der Controller den Befehl ausführt, wird das Programm auf den ftDuino
+weiter ausgeführt.
+Einen Motor steuern
+Mit dem folgenden Code-Snippet wird dem
+Controller mit setRelDistance das Ziel
+1000 Schritte gesetzt (Abb. 4).
+Drive.setRelDistance(FTPWRDRIVE_M1,
+1000);
+Drive.startMoving(FTPWRDRIVE_M1);
+while (Drive.isMoving(FTPWRDRIVE_M1))
+{
+delay(100);
+}
+
+Computing
+
+Mehrere Motoren steuern
+Das Ansteuern von mehreren Motoren ist
+ebenfalls sehr einfach (Abb. 5).
+Drive.setRelDistance(FTPWRDRIVE_M1,
+1000);
+Drive.setRelDistance(FTPWRDRIVE_M2,
+2000);
+Drive.startMovingAll(FTPWRDRIVE_M1 |
+FTPWRDRIVE_M2);
+while (Drive.isMoving(FTPWRDRIVE_M1))
+{
+delay(100);
+}
+
+
+In diesem Code-Snippet werden für die
+Motoren M1 und M2 die Fahrziele 1000
+bzw. 2000 Schritte
+gesetzt. Bei
+startMovingAll müssen auch beide Motoren angegeben werden.
+Die while-Schleife prüft mit isMovingAll,
+ob noch mindestens ein Motor am Laufen
+ist. Um nicht immer die while-Schleife
+schreiben zu müssen, kann über das
+Kommando wait (Abb. 6) auch auf das
+Ende der Bewegung gewartet werden.
+Drive.startMovingAll(FTPWRDRIVE_M1 |
+FTPWRDRIVE_M2);
+Drive.wait();
+
+
+lästige while-Schleife
+
+Erst mit dem startMoving-Kommando startet der Motor. Es können so zunächst verschiedene Parameter für die Motoren gesetzt und diese dann gemeinsam gestartet
+werden.
+
+Die meisten Kommandos gibt es sowohl als
+einfache Implementierung um einen Motor
+zu steuern, als auch in der *-All-Fassung,
+um mehrere Motoren gleichzeitig anzusprechen.
+
+Mit der while-Schleife wird auf das Ende
+der Bewegung aktiv gewartet. In der
+Schleife sollte ein delay benutzt werden,
+um den Controller nicht mit der Verarbeitung von isMoving-Kommandos zu fluten.
+
+Ungewohnt ist, dass die Motoren nur über
+Konstanten und nicht mit den Werten 1..4
+angegeben werden können. Der Grund ist
+sehr einfach – die Motornummern sind über
+Bits codiert und können bei den *-AllKommandos einfach mit einem binären OR
+verbunden werden.
+
+
+Die I²C-Adresse des Controllers kann in der
+Firmware eingestellt werden. So lassen sich auch
+mehrere ftPwrDrive in einem Modell nutzen.
+
+
+
+Die Endstufen ein- und ausschalten
+Ein Vorteil von Schrittmotoren ist, dass sie
+im Stillstand ihre Position aktiv halten
+können. Dazu werden die Spulen des
+Motors auch im Stillstand mit Strom
+versorgt.
+Der Haltestrom führt allerdings zu zwei
+Nebeneffekten: Da weiterhin ein Strom
+fließt, werden im Stillstand die Motoren
+warm. Microstepping führt zusätzlich zu
+einem leisen, hochfrequentem Summen der
+Motoren.
+Das aktive Halten der Position wird nicht in
+allen Modellen benötigt. Der ftPwrDrive
+kann den Haltestrom deshalb je Motor im
+Stillstand an- und abschalten.
+Beim startMoving-Kommando kann über
+einen zweiten Parameter das Abschaltverhalten mit angegeben werden (Abb. 7).
+Drive.startMoving(FTPWRDRIVE_M1,
+false);
+
+die Endstufe nach der Verfahrbewegung nicht
+ausgeschaltet wird
+
+Im Beispiel bleibt die Endstufe nach dem
+Ende der Verfahrbewegung eingeschaltet.
+Ohne Angabe wird die Endstufe nach dem
+Anhalten der Motoren ausgeschaltet.
+Endschalter und Referenzpunkt
+Für jeden Motor kann ein Endschalter mit
+dem ftPwrDrive verbunden werden. An den
+Eingang werden Schalter als Schließer
+angeschlossen.
+Ist der Kontakt geschlossen, so unterbricht
+der ftPwrDrive sofort die Fahrbewegung
+des zugehörigen Motors.9 Über zwei parallel geschaltete Schalter lassen sich auch
+zwei Endlageschalter für eine Achse aufbauen (Abb. 8).
+
+
+
+Im Maschinenbau wird in der Regel hierfür ein
+Öffner eingesetzt. Dieser stoppt den Motor auch
+dann, wenn ein Fehler am Schalter vorliegt. Für
+
+if Drive.endStopActive(FTPWRDRIVE_M1))
+{
+...
+}
+
+
+Der Endschalter lässt sich gleichzeitig über
+das homing-Kommando auch als Referenzpunkt verwenden (Abb. 9).
+Drive.homing(FTPWRDRIVE_M1, 10000);
+while (Drive.isHoming(FTPWRDRIVE_M1))
+{
+delay(100);
+}
+
+
+Über den zweiten Parameter beim homingKommando werden die Richtung und die
+maximale Schrittanzahl angegeben. Wird
+im Beispiel der Endschalter nach 10.000
+Schritten nicht erreicht, so stoppt die Referenzfahrt.
+Relative und absolute Koordinaten
+Die bisherigen Beispiele arbeiteten immer
+mit relativen Kommandos, d. h. die Anzahl
+der zu fahrenden Schritte bezog sich auf die
+aktuelle Motorposition.
+Der ftPwrDrive kann auch mit absoluten
+Koordinaten arbeiten. Dazu muss zunächst
+an einer passenden der Nullpunkt gesetzt
+werden. Anschließend kann mit absoluten
+Koordinaten gearbeitet werden (Abb. 10).
+Drive.setPositionAll(0, 0, 0, 0);
+Drive.setAbsDistance(FTPWRDRIVE_M1,
+-100);
+Drive.startMoving(FTPWRDRIVE_M1);
+Drive.wait();
+Drive.setAbsDistance(FTPWRDRIVE_M1,
+500);
+Drive.startMoving(FTPWRDRIVE_M1);
+Drive.wait();
+
+dann 600 Schritte auf die Position +500
+
+fischertechnik-Modelle fanden wir es aber praktischer, wenn für ungenutzte Endschalter keine
+Brücken gesetzt werden müssen.
+
+
+Computing
+
+Absolute Koordinaten
+
+ROBO Pro
+
+In den bisherigen Beispielen wurden immer
+Schritte für die Distanzangaben verwendet.
+Bei der Ansteuerung eines Plotters ist es
+jedoch viel praktischer, die Strecken in
+Millimetern anstatt in Schritten anzugeben.
+Dieses Problem lösen die beiden Kommandos setGearFactor und setRelDistanceR.
+
+Der ftPwrDrive kann auch mit ROBOPro
+für den TX/TXT programmiert werden. Die
+Befehle in ROBO Pro sind weitgehend
+identisch mit dem hier beschriebenen Interface für den ftDuino. Unterschiede gibt es
+bei den Namen der Konstanten. Das CodeSnippet in Abb. 13 verfährt M1 um 2000
+Schritte bei einer Geschwindigkeit von
+1000.
+
+Mit setGearFactor wird der Umrechnungsfaktor von realen Koordinaten – z. B. Millimeter – in die dafür notwendigen Schritte
+angegeben. Für die normalen fischertechnik-Bauteile gibt es Konstanten, im
+Beispiel für den Schneckenantrieb. Bei
+setRelDistanceR wird nun die zu fahrende
+Strecke in Millimeter angegeben (Abb. 11).
+Drive.setGearFactor(FTPWRDRIVE_M1,
+FTPWRDRIVE_WORMSCREW);
+Drive.setRelDistanceR(FTPWRDRIVE_M1,
+20);
+Drive.startMoving(FTPWRDRIVE_M1);
+Drive.wait();
+
+
+Python
+
+20 mm weit fahren
+
+Über
+
+einen
+
+dritten Parameter kann
+setGearFactor ein Getriebe darstellen. Das
+Beispiel ist ein Getriebe aus einem Z40 und
+einem Z30 Zahnrad (Abb. 12).
+Drive.setGearFactor(FTPWRDRIVE_M1,
+FTPWRDRIVE_Z40,
+FTPWRDRIVE_Z30);
+
+
+Anschließende Verfahrbewegungen werden dann in Umdrehungen angegeben.
+
+In Python kann der ftPwrDrive sowohl mit
+der Community-Firmware als auch mit der
+fischertechnik-Firmware genutzt werden.
+Die Implementierung basiert auf der neuesten Version von ftrobopy, die die I²C-Übertragung von mehreren Bytes in Folge ermöglicht [6, 7].
+Im Code-Snippet in Abb. 14 werden zunächst die Module ftPwrDrive und ftrobopy
+geladen. Anschließend werden der TXT
+und der ftPwrDrive initiiert.
+Die Kommandos für Geschwindigkeit,
+Setzen der Distanz und Start des Motors
+sind wieder identisch mit den ArduinoKommandos. Wie bei ROBO Pro sind die
+
+
+
+
+Konstanten – wie die für Motoren – dieses
+Mal im Python-Stil gelöst.
+import ftPwrDrive
+import ftrobopy
+# initialize TXT and ftPwrDrive
+txt
+= ftrobopy.ftrobopy('auto')
+drive = ftPwrDrive.ftPwrDrive(0x20,
+txt)
+
+Im dritten und letzten Teil des Artikels wird
+es um Beschleunigungsrampen und das
+synchrone Verfahren von mehreren Achsen
+gehen.
+
+Quellen
+[1]
+
+Dirk Wölffel, Christian Bergschneider, Stefan Fuss, Björn Gundermann,
+Christian Lauff: Der ftPwrDriveController für Schrittmotoren und
+Servos – Teil 1. ft:pedia 4/2018, S.
+67-70.
+
+[2]
+
+Webshop für den ftPwrDrive.
+
+[3]
+
+ftPwrDrive-Projekt auf GitHub.
+
+[4]
+
+Stefan Fuss, Christian Bergschneider, Björn Gundermann, Christian
+Lauff, Rudenz Schulz: Plug & Play
+am I²C-Bus mit dem ftExtender.
+ft:pedia 2/2018, S. 55-59.
+
+[5]
+
+Till Harbaum: ftDuino – Open
+Source trifft Konstruktionsbaukasten.
+ft:pedia 1/2018, S. 85-91.
+
+[6]
+
+Torsten Stuehn: Programmierung
+des TXT mit Python. ft:pedia 2/2017,
+S. 58-62.
+
+[7]
+
+ftrobopy auf GitHub.
+
+# run M1 2000 steps with speed 1000
+drive.setMaxSpeed(drive.M1, 1000)
+drive.setRelDistance(drive.M1, 2000)
+drive.startMovingAll(drive.M1)
+
+
+Arduino UNO & Co.
+Die ftDuino-Bibliothek kann auch auf jedem beliebigen Arduino-Clone eingesetzt
+werden, da sie keine speziellen Eigenschaften des ftDuino nutzt. I²C-Bus anschließen
+und schon geht es los.
+Und da war doch noch…
+… der schon viel zitierte Fünf-SekundenBug. Dieser ist immer noch vorhanden und
+muss bei der Programmierung mit dem
+TXT in ROBO Pro und Python beachtet
+werden: Spätestens alle vier Sekunden muss
+man ein I²C-Kommando schicken, damit
+der Bus im TXT nicht hängenbleibt.
+
+
+
+Computing
+
+
+
+

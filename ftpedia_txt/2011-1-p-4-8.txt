@@ -1,0 +1,306 @@
+
+
+Schaltungstechnik
+
+Motorsteuerungen (Teil 1)
+Nicht immer muss es gleich ein Interface sein – viele Steuerungen lassen sich viel effektiver
+mit einfachen Grundschaltungen aus Tastern herstellen. Dies ist der erste einer Reihe von
+Artikeln, in der einfache und raffinierte Schaltungen gezeigt werden, die in vielen Modellen
+verwendet werden können.
+In der heutigen, etwas computerlastigen
+Zeit mag man versucht sein, für jede kleine
+Aufgabenstellung gleich ein Programm für
+das Robo Interface oder den TX Controller
+zu schreiben. Viele Aufgabenstellungen
+benötigen diesen Aufwand aber gar nicht.
+Auf den folgenden Seiten wollen wir
+einige äußerst nützliche Grundschaltungen
+darstellen, die lediglich mit Tastern als
+Steuerelemente auskommen.
+Die „alten Hasen“ unter Euch kennen
+solche Schaltungen sicher schon. Für viele
+junge fischertechnik-Freunde sind einige
+der hier dargestellten Schaltungskniffe
+aber möglicherweise neu – deshalb wollen
+wir sie in dieser Artikelserie einmal
+zusammenstellen und bis zu vollständigen
+Steuerungen ausbauen.
+
+Schaltung 1: Ein- und Ausschalten
+
+Genauso einfach ist Schaltung 2, die den
+Motor laufen lässt, solange der Taster
+losgelassen (und nicht gedrückt) ist. Hier
+nennt man den Taster einen Öffner, weil er
+die Verbindung öffnet (trennt), solange er
+betätigt wird.
+
+Motor ein-/ausschalten
+Das ist eine der einfachsten Übungen, aber
+wir stellen sie doch der Vollständigkeit
+halber dar. Wenn ein Motor (Schaltzeichen: M in einem Kreis) nur dann laufen
+soll, wenn und solange ein Taster gedrückt
+ist, erledigt das Schaltung 1 – einfacher
+geht’s nicht.
+So verwendet, nennt man den Taster einen
+Schließer – er schließt den Kontakt zwischen der (Gleich-)Stromquelle (Schaltzeichen: DC) und dem Motor, wenn er
+gedrückt wird.
+
+
+Schaltung 2: Verwendung eines Öffners
+
+Wenn’s schnell gehen muss
+Schaltung 1 schaltet den Motor zwar
+stromlos, wenn der Taster losgelassen
+wird, aber bei vielen Maschinen läuft der
+Motor durch seine Schwungmasse noch
+etwas nach. Manchmal muss man das aber
+vermeiden oder wünscht sich, der Motor
+möge schlagartig anhalten, ohne nachzulaufen.
+
+
+Schaltungstechnik
+
+Auch das geht mit einem einfachen
+Schaltungstrick: Wir verwenden alle drei
+Buchsen des Tasters und verschalten ihn
+so, dass der Motor nach dem Loslassen des
+Tasters kurzgeschlossen wird:
+
+Arbeitskontakt
+Zentralkontakt
+Ruhekontakt
+
+DC
+
+M
+Schaltung 3: Kurzschlussbremse
+
+Der Taster ist hier in der Stellung dargestellt, in der der Motor ausgeschaltet ist
+(das kann je nach den gesteckten Verbindungen der gedrückte oder auch der losgelassene Zustand sein!).
+Damit wir diese und die folgenden Schaltungen einfacher beschreiben können, wollen wir die folgenden üblichen Bezeichnungen verwenden:
+Den mittleren Kontakt des fischertechnik-Tasters (der in Schaltung 3
+rechts liegt) nennen wir Zentralkontakt.
+Der Anschluss, der mit dem Zentralkontakt verbunden ist, solange der
+Taster losgelassen (in Ruhe) ist, nennen
+wir Ruhekontakt.
+Den Anschluss, der mit dem Zentralkontakt verbunden wird, wenn wir den
+Schalter drücken, nennt man Arbeitskontakt.
+Beim aktuellen fischertechnik-Taster sind
+das die in Abbildung 1 gezeigten
+Anschlüsse.
+
+37780 (grau) bzw. 37783 (schwarz)
+
+In den 1970ern gab es einen etwas größeren Vorläufer dieses Tasters, der aber
+dieselbe Funktion erfüllt. Er fiel etwas
+größer aus, dafür war er etwas leichtgängiger:
+
+Ruhekontakt
+Arbeitskontakt
+
+Zentralkontakt
+
+Was passiert nun in Schaltung 3 genau?
+Wenn wir den Schalter betätigen, wird wie
+in Schaltung 1 der Motor an beiden Polen
+mit der Stromquelle verbunden – er läuft.
+Wenn wir ihn ausschalten, also den Taster
+in die Lage bringen, wie ihn Schaltung 3
+zeigt, wird aber nicht nur die Verbindung
+des Motors zur Stromquelle unterbrochen,
+sondern die beiden Anschlüsse des Motors
+werden miteinander verbunden – das nennt
+man kurzgeschlossen. Der Ruhekontakt des
+Tasters ist nämlich mit demselben Pol der
+Stromquelle verbunden, der auch immer
+am hier unteren Anschluss des Motors
+anliegt.
+Obwohl ein Kurzschluss normalerweise
+etwas Unerwünschtes ist, ist er hier also
+beabsichtigt und sogar nützlich! Im Motor
+
+
+steckt nämlich nach dem Ausschalten noch
+Bewegungsenergie, weil er noch Schwung
+hat. Schließen wir ihn kurz, arbeitet er wie
+ein Generator: Er liefert eine elektrische
+Spannung an seinen Anschlüssen, bis
+sämtliche Bewegungsenergie abgebaut ist.
+Der Kurzschluss lässt nun den Strom ungehindert fließen, und das bewirkt tatsächlich
+ein praktisch schlagartiges Anhalten des
+Motors.
+Führt einmal das Experiment durch und
+vergleicht die Wirkung der Schaltungen 1
+und 3 miteinander. Ihr werdet feststellen,
+dass der Motor in den Schaltungen 1 und 2
+etwas nachläuft, während er in Schaltung 3
+augenblicklich zum Stehen kommt.
+
+Steuerung der Drehrichtung
+Aber fischertechnik bietet ja nicht nur
+Taster, um Stromkreise zu schließen oder
+zu trennen. Sicher kennt Ihr den schwarzen
+fischertechnik-Polwendeschalter:
+
+36708
+
+Dieser Schalter hat drei Stellungen, die
+man bei einem Motor für links/rechts/aus
+verwenden kann:
+
+Schaltung 4: Polwendeschalter
+
+Auf der Rückseite des Schalters sind die
+Anschlüsse beschriftet. Wenn Ihr den
+Schalter richtig anschließt, könnt Ihr einen
+
+
+Motor damit ausschalten, links- oder
+rechtsherum drehen lassen.
+Mit dem älteren fischertechnik-Polwendeschalter könnt Ihr den Motor nur
+umschalten zwischen Links- und Rechtsdrehung, oder Ihr könnt ihn ein- und ausschalten:
+
+31331 (grau) bzw. 31334 (schwarz)
+
+Da dieser Schalter aber nur zwei
+Stellungen hat, kann man mit ihm alleine
+nicht links/rechts/aus realisieren. Wer ihn
+besitzt, kann an den beiden (nahe beieinander liegenden) Kontakten auf der
+einen Seite die Stromquelle und an den
+anderen beiden den Verbraucher (Motor)
+anschließen.
+Obwohl der ältere Polwendeschalter also
+nicht so viele Stellungen kennt wie der
+neuere, hat er einen Vorteil: Er lässt sich
+sehr einfach maschinell, z. B. durch sich
+bewegende Bauteile im Modell, betätigen.
+Zudem kann man durch die kleine
+Bohrung in seinem Schalthebel eine
+Schnur führen, mit der man durch Knoten
+ebenfalls den Schalter betätigen kann,
+wenn sie bewegt wird. Dadurch ermöglicht
+dieser Schalter weitere interessante Schaltungen für Steuerungen – vielleicht Thema
+eines zukünftigen Artikels.
+Nur was steckt denn in diesen Schaltern?
+Kann man denselben Effekt auch mit
+Tastern erreichen? Wie wäre es, wenn wir
+zwei Taster hätten, einen für das Linksdrehen, einen für das Rechtsdrehen des
+Motors? Und wenn wir keinen drücken,
+bleibt der Motor aus?
+
+Drehrichtungssteuerung mit
+Tastern
+
+Schaltungstechnik
+
+Drücken wir den unteren Taster in
+Schaltung 5, ergibt das folgenden Verlauf:
+
+Eine für viele Modelle nützliche Schaltung, die diese Anforderungen erfüllt, zeigt
+Schaltung 5. Wir benötigen dazu zwei
+fischertechnik-Taster und kombinieren
+diese wie folgt:
+
+Schaltung 5b: Der untere Taster ist gedrückt
+
+Schaltung 5: Getrennte links/rechts-Taster
+
+Diese wichtige Schaltung wollen wir uns
+näher betrachten. Schaltung 5 zeigt den
+Zustand, wenn kein Taster gedrückt ist.
+Damit wir die Schaltung leichter verstehen,
+sind in den folgenden Schaltbildern diejenigen Leitungen, durch die gar kein Strom
+fließen kann, weil kein geschlossener
+Stromkreis besteht, gepunktet darstellen.
+Nur die durchgezogenen Linien haben in
+diesem Zustand nämlich eine Bedeutung:
+
+Wenn Ihr den Stromlaufplan verfolgt, seht
+Ihr, dass der hier obere Anschluss des
+Motors mit dem Pluspol der Stromquelle
+verbunden ist, und der untere Anschluss
+mit dem Minuspol. Der Motor dreht sich in
+eine bestimmte Richtung.
+Wenn wir stattdessen den oberen Taster
+drücken, passiert etwas Interessantes, wie
+Schaltung 5c zeigt:
+
+Schaltung 5c: Der obere Taster ist gedrückt
+
+Jetzt liegt am oberen Anschluss des Motors
+der Minuspol der Stromquelle, und am
+unteren Anschluss der Pluspol. Der Motor
+dreht sich wieder, aber in die entgegengesetzte Richtung!
+Schaltung 5a: Der Motor ist ausgeschaltet
+
+Wie Ihr seht, ist der Motor tatsächlich nur
+kurzgeschlossen. Beide Ruhekontakte sind
+nämlich miteinander verbunden. Der Strom
+aus der Stromquelle kann nirgendwo fließen, denn beide Motoranschlüsse sind mit
+demselben Pol der Stromquelle verbunden
+(hier: dem Pluspol). Wir haben also die
+Kurzschlussbremse von Schaltung 4
+wieder vor uns!
+
+Mit dieser Schaltung könnt Ihr also einen
+Motor so steuern, dass Ihr einen getrennten
+Taster für Links- und Rechtslauf habt.
+Lasst Ihr beide Taster los, bleibt der Motor
+stehen – und zwar schlagartig, weil in die
+Schaltung auch gleich die Euch nun schon
+bekannte Kurzschlussbremse eingebaut ist.
+Beim Experimentieren werdet Ihr bestimmt einmal ausprobieren, was passiert,
+wenn Ihr beide Taster gleichzeitig drückt.
+
+
+
+Dieser Zustand ist in Schaltung 5d dargestellt:
+
+Schaltung 5d: Beide Taster sind gedrückt
+
+Wiederum ist der Motor einfach kurzgeschlossen und bleibt also stehen.
+Diese Schaltung ist dermaßen nützlich und
+oft einsetzbar, dass Ihr sie Euch vielleicht
+einprägen wollt, damit Ihr die Verdrahtung
+nach etwas Übung auswendig durchführen
+könnt. Vielleicht helfen Euch diese beiden
+Merksätze dabei:
+Die zentralen Kontakte der Taster
+kommen an den Motor, nicht an die
+Stromquelle.
+Die beiden Ruhekontakte der Taster
+müssen mit demselben Pol der Stromquelle verbunden werden, beide
+Arbeitskontakte mit dem anderen Pol
+der Stromquelle.
+Wichtig bei solchen Schaltungen ist, dass
+man – bei allen Tricks und Raffinessen –
+
+
+niemals die Stromquelle kurzschließt! Es
+darf niemals eine Schalterstellung geben,
+in der es eine direkte Verbindung zwischen
+den beiden Ausgängen der Stromquelle
+gibt!
+Die fischertechnik-Netzgeräte und Akkus
+haben zwar einen eingebauten Überlastschutz, aber eine Batterie würde dadurch
+nicht nur schnell entladen, sondern sie
+könnte sogar heiß werden. Auch ein Akku
+wird bei den großen Strömen, die bei einer
+kurzgeschlossenen Stromquelle fließen,
+sehr schnell sehr heiß – das kann gefährlich werden!
+Wir Ihr seht, ist das Kurzschließen eines
+Verbrauchers, insbesondere eines Motors,
+aber eine nützliche Sache, die in vielen
+Modellen eingesetzt werden kann.
+Im nächsten Teil dieser Serie wollen wir
+weitere Schaltungskniffe darstellen: Dann
+geht es zum Beispiel darum, dass ein
+Motor an einer Endposition automatisch
+anhält, selbst wenn wir den Steuerungstaster noch betätigen. Auch einen Überlastschutz, etwa für das Tragseil eines Kranes,
+wollen wir einbauen. All das geht ganz
+einfach nur mit Tastern und der richtigen
+Schaltung – Ihr werdet sehen!
+Stefan Falk
+
+

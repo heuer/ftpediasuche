@@ -1,0 +1,96 @@
+
+
+Modell
+
+fischertechnik-Roboter mit Arduino (Teil 5):
+Elegante Leuchtsteine und gepimpte LKW
+Lutz Mänche
+Die Roboter aus dem Buch „fischertechnik-Roboter mit Arduino“ [1] haben zahlreiche Leser
+zu weiteren Modellvarianten angeregt. In loser Folge werden in dieser Serie einige dieser
+Modelle vorgestellt. Diesmal wird der Flitzer gepimpt – und die Steuerung in LKW eingebaut...
+Wer das Buch von Dirk Fox und Thomas
+Püttmann [1] gelesen und den Flitzer nachgebaut hat, der bekommt neue Ideen. So
+zum Beispiel die, fischertechnik-LKW-Modelle mit dem Arduino zu steuern. Nur die
+Leuchtsteine mit Stecker passen irgendwie
+nicht ins Bild: Die aus den schwarzen
+Leuchtsteinen herausragenden roten und
+grünen Stecker wirken klobig. Das wollte
+ich ansprechender gestalten. Bei fischerfriedsman fand ich leere Leuchtsteine in rot
+(132226) – die waren 2008 beim Feuerwehrauto (500884) für die Blaulichter verbaut. Das ist es, dachte ich: Leuchtsteine
+selbst löten, ohne Stecker1.
+Ab in den Keller also, Pucksäge und Feile
+ausgepackt und losgelegt. Die Lochrasterplatinen gesägt und mit der Feile auf Maß
+gebracht (Abb. 1, 2). Wie vor 43 Jahren: UStahl feilen – in meiner Ausbildung als
+Energieanlagenelektroniker (was für ein
+Wort!).
+
+
+Die Oberfläche mit einem edding 8750
+weiß grundiert und nach dem Trocknen mit
+einem roten Marker bemalt (Abb. 3).
+
+
+
+Thema neue Stecker: Die sind noch nicht ausgereift; dazu hatte ich bereits einen E-Mail-Austausch mit fischertechnik.
+
+
+Modell
+
+Beim Super Trucks Hängerzug 2002
+(77790) wird der Arduino unter der Plane
+versteckt – und bald verdrahtet (Abb. 8).
+
+
+Von einem Magnet-Reedkontakt mit 6 m
+Leitung habe ich die Leitung gekürzt, sodass man den Kontakt mit 20 cm Leitungslänge noch verbauen kann. Die Leuchtdioden und Widerstände eingelötet (Abb. 4)
+– dann kam der Hammer: Leitungen mal zu
+kurz, mal zu lang, dann genau 15 mm,
+fischertechnik-Maß (Abb. 5). Den Flitzer
+habe ich zuerst umgebaut: Der sieht gut aus
+ohne Stecker, vorn und hinten (Abb. 6).
+Im LKW aus Advanced Trucks 2017
+(540582) habe ich den Arduino im Führerhaus verbaut; mir war wichtig, das Originalmodell so wenig wie möglich in seiner
+Form zu verändern (Abb. 7).
+
+
+
+
+
+
+
+
+
+Modell
+
+Die Modelle können mit dem Handy [2]
+oder einem Joystick [3] gesteuert werden.
+Alle Anschlussbilder und Programme sind
+im Buch von Dirk Fox und Thomas Püttmann zu finden [1].
+
+Referenzen
+[1]
+
+Dirk Fox, Thomas Püttmann:
+fischertechnik-Roboter mit Arduino.
+dpunkt-Verlag, Heidelberg, 2020.
+
+Zu meiner Person: Ich bin Baujahr 1962,
+(alter Sack) fischertechnik-Fan und baue
+gerne. Mein größtes Modell ist der Nachbau
+der Lernfabrik 4.0 (9V). Lese ft:pedia und
+bin in Forum lesend unterwegs.
+
+[2]
+
+Dirk Fox: fischertechnik-Roboter mit
+Arduino (Teil 1): Smartphone-Steuerung über BLE. ft:pedia 3/2020,
+S. 93–100.
+
+[3]
+
+Arnoud van Delden: fischertechnikRoboter mit Arduino (Teil 3): Steuerung mit dem Joystick Shield.
+ft:pedia 1/2021, S. 119–127.
+
+
+
+

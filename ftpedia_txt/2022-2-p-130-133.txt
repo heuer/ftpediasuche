@@ -1,0 +1,258 @@
+
+
+Computing
+
+Die fischertechnik-Lichterkette
+Stefan Fuss
+Bislang mussten Tim & Tom an Grillabenden [1] mit überholter Beleuchtungstechnik in den
+Sommerabend feiern. Während die „echten“ Gärten mit Lichttechnologie vom Feinsten hochgerüstet werden, setzten die beiden bislang auf Raumschiff-Orion-Ambiente mit Leuchtstein &
+Kappe. Doch die viel beschworene Zeitenwende klopft an die Tür des Leuchtsteins 31313.
+
+Hintergrund
+Der Leuchtstein (31313) gehört zu den ältesten Bauteilen aus der grauen fischertechnik-Urzeit. Schon 1968 erblickt er das
+Licht der Welt – mit fünf verschieden farbigen Leuchtkappen und Glühlämpchen. Mit
+der Einführung der farbigen fischertechnik
+Anfang der 1990er Jahre bekam auch er
+einen Face-Lift und durchsichtige Kappen.
+
+fischertechnik stand mit RGB-LEDs bislang auf Kriegsfuß.2 Das empfindliche
+SMD-Bauteil lässt sich nicht ohne Hilfsplatine in den Leuchtstein bekommen, am
+TX/TXT fehlt der passende Steuerausgang
+und die 5V-Versorgungsspannung benötigt
+ein zusätzliches Netzteil. Falsch gepolte
+Anschlüsse oder 9V befördern die RGBLED sofort in den Siliziumhimmel.
+
+Lichtschranke, Ampel und Bremslicht – die
+Anwendung des Leuchtsteins ist jedoch auf
+die reine Funktion ausgerichtet. Eine smarte
+Beleuchtung oder Lichtspiele am Kirmesmodell sind damit leider nicht möglich. 1
+
+Die RGB-LED
+Im „Real Life“ „ambienten“ wir uns mit
+LED-Strips und smarten Lampen das Leben
+schön. Über Bluetooth-Fernsteuerung oder
+Smartphone-App lassen sich Farbe, Helligkeit und Blinkmuster einstellen.
+
+Toms Lichterkette
+
+Technisch bestehen diese Farbwunder aus
+RGB-LEDs. In einem Bauteil sind drei
+LEDs in den Grundfarben Rot, Gelb und
+Blau zusammengeschaltet. Die Steuerelektronik mischt draus alle möglichen Farben.
+
+Mit dem ftSwarm [5, 6] gibt es den ersten
+Controller mit zwei eingebauten RGBLEDs. Über einen Erweiterungsstecker lassen sich zusätzlich bis zu 16 bunte RGBLEDs anschließen. Dazu gibt es nun
+
+
+Die Rainbow-LED versucht tapfer etwas Abwechslung ins Ingenieurkinderzimmer zu bringen. Wollen aber angehende Ingenieure die
+Farbe ansteuern, landet die Rainbow-LED
+wieder im Kasten.
+
+
+aus ftPixeln
+
+
+Es gibt bereits eine Reihe DIY-Projekte, um
+RGB-LEDs mit fischertechnik zu nutzen [3, 4].
+Da zur Umsetzung Lötkolben und 3D-Drucker
+benötigt werden, sind die beiden Ansätze nicht
+für jeden geeignet.
+
+
+Computing
+
+passend die ftPixel als fertiges Bauteil
+(Abb. 1), zu 100 Prozent alltagstauglich
+und ganz ohne Lötkolben in Björns Shop zu
+bekommen [2]. Tim und Tom freuen sich;
+das bisschen Licht hält die beiden nicht
+lange auf. ftDuino-Besitzer auch, denn die
+bunten LEDs lassen sich nämlich an den
+ftDuino anschließen.
+
+Drei verschiedene Typen (Abb. 4) lassen
+unterschiedliche Anwendungen zu. Die
+beiden geschlossenen Bauformen sind gut
+geeignet für Farbspiele im Kirmesmodell
+oder für Wechselfunktionen wie einen
+kombinierten Blinker mit Rücklicht. Mit
+der offenen Scheinwerfervariante kann das
+Ambiente eingestellt werden.
+
+in allen Farben
+
+Scheinwerfervariante. Rechts außen
+ohne Abdeckung
+
+Die ftPixel (Abb. 2) sind in einen 3Dgedruckten Leuchtstein eingebaut. Die
+transparente Leuchtkappe ist fest auf den
+Leuchtstein verklebt; die Farbe erzeugt die
+steuerbare LED.
+Auch von der elektrischen Seite zeigt sich
+der ftPixel zu fischertechnik kompatibel:
+Normale 9V-Versorgungsspannung, alle
+Anschlüsse gegen Überspannung und Verpolung geschützt.
+Verkabelt werden die ftPixel mit normalen
+fischertechnik-Steckern3 und -Kabeln. Für
+den Anschluss an ftSwarm und ftDuino gibt
+es fertige Adapter (Abb. 3).
+
+
+Einfach nur anschließen
+Wie beim Leuchtstein befinden sich auf
+zwei Seiten des ftPixels Buchsen. Nur sind
+es nicht zwei, sondern jeweils drei. Die
+beiden äußeren Buchsen dienen wie erwartet der Stromversorgung. Hier wird die normale fischertechnik-9V-Versorgung angeschlossen.
+
+beim Anschließen der ftPixel
+
+
+Die mittleren Buchsen dienen den Steuerleitungen. Die Eingangsseite lässt sich
+leicht erkennen; auf dieser Seite sind die
+Versorgungsleitungen mit +/- Markierungen versehen (Abb. 5). Die mittlere Buchse
+ist auf dieser Seite der Eingang und wird an
+
+Die Buchsen sind in einem Abstand vom 5 mm
+nebeneinander angeordnet. Deshalb passt nur der
+
+originale fischertechnik-Flachstecker; die runden
+„Märklin“-Varianten sind zu dick.
+
+
+
+den ftSwarm oder den ftDuino über die
+passenden Adapter (Abb. 3) angeschlossen.
+
+Pin 18 angeschlossen und haben die Farbreihenfolge GRB.
+
+Auf der gegenüberliegenden Seite ist das
+Ausgangssignal. Die nächste LED kann
+somit leicht kaskadiert werden – einfach
+alle drei Anschlüsse mit dem nächsten
+ftPixel verbinden (Abb. 6).
+
+
+Programmierung am ftSwarm
+Die Programmierung am ftSwarm ist sehr
+einfach. Die notwendigen Routinen zur
+Steuerung von Farbe und Helligkeit sind in
+der Firmware bereits implementiert [5, 6].
+
+Listing 2: ftPixel am ftDuino
+
+Der ftDuino-Beispielsketch (Listing 2) ist
+mit der FastLED-Bibliothek umgesetzt.
+Hier wird in den Zeilen 9 und 10 die Library
+für den Port 18 und den LED-Typ WS2812
+initialisiert. In den Zeilen 14 und 15 werden
+wieder die Farbe Blau und eine Intensität
+von ¼ gesetzt. Zeile 18 sendet die Änderungen aus dem RAM-Puffer an die LEDs.
+Lange Leitung?
+
+Listing 1: ftPixel am ftSwarm
+
+In Zeile 9 (Listing 1) wird die Variable led
+an die dritte RGB-LED am lokalen Controller gebunden. Die beiden Kommandos
+setColor (Zeile 13) und setBrightness
+(Zeile 14) schalten die LED auf Blau mit
+reduzierter Intensität.
+Programmierung am ftDuino
+Für die Programmierung am ftDuino stehen
+verschiedene RGB-LED-Libraries aus der
+Arduino-Community
+zur
+Verfügung.
+Empfehlenswert sind die Adafruit Neopixel
+Library [7] oder FastLED von Daniel
+Garcia [8]. Zur Programmierung mit den
+Comunity-Libraries werden zwei Zusatzinformationen benötigt: Die LEDs sind an
+
+
+In der Theorie können Leitungen mit bis zu
+1024 RGB-LEDs erreicht werden; zwischen zwei Pixeln dürfen laut Datenblatt bis
+zu 5 m Kabellänge verbaut werden [9].
+In der Praxis ist die Obergrenze deutlich
+niedriger. Denn ein ftPixel braucht bis zu
+60 mA Strom, d. h. 16 LEDs benötigen so
+bis zu 1A. Da die LEDs kaskadiert werden,
+fließt der komplette Strom durch die
+Anschlussleitungen und die erste LED. Die
+fischertechnik-Litze mit einem Querschnitt
+von 0,14 mm² verkraftet maximal 3A und
+kann daher höchstens 48 ftPixel versorgen.
+Natürlich benötigen die ftPixel je nach Helligkeit und gewählter Farbe deutlich
+weniger Strom. Da Fehler in der Programmierung aber durchaus alle LEDs
+gleichzeitig auf Weiß mit maximaler
+Helligkeit einschalten könnten, sollte man
+trotzdem konservativ kalkulieren.
+
+Der RAM- und CPU-Verbrauch der Libraries4 muss ebenfalls beachtet werden. Da
+das Programm nicht nur die LEDs steuern
+soll, kann nur ein Teil der Ressourcen für
+die LEDs verplant werden.
+In der Firmware des ftSwarm ist die Obergrenze erstmal auf 16 ftPixel5 festgelegt.
+Ein Swarm kann mit 20 Controllern theoretisch 320 ftPixel verwalten – benötigt
+dafür aber ein Schaltnetzteil mit einem
+Ausgangsstrom von 19,2 A!
+
+Computing
+
+[4]
+
+Till Harbaum: Profi-Lights:
+WS2812B-Vollfarb-Leuchtdioden im
+fischertechnik-Design. 4/2017, S. 15–18.
+
+[5]
+
+Christian Bergschneider, Stefan
+Fuss: ftSwarm – Das Prinzip
+Heinzelmännchen. ft:pedia 2/2021,
+S. 107–111.
+
+[6]
+
+Christian Bergschneider, Stefan
+Fuss: ftSwarm (2) – Codierst du noch
+oder schwärmst du schon?, in dieser
+Ausgabe der ft:pedia.
+
+Quellen
+[1]
+
+Stefan Fuss, Christian Bergschneider: Summer in The City. 2/2020, S. 24–29.
+
+[7]
+
+Philip Burgess: Adafruit NeoPixel
+Überguide, Adafruit.com,
+17.01.2022
+
+[2]
+
+Björn Gundermann,
+http://www.gundermann.org
+
+[8]
+
+[3]
+
+Stefan Fuss, Christian Bergschneider: Neopixel für alle. 1/2018, S. 53–63.
+
+Daniel Garcia, Mark Kriegsman:
+FastLED Animation Library,
+fastled.io
+
+[9]
+
+Worldsemi: WS2812, Data Sheet,
+V5.0, 23.03.2019
+
+
+Der ftDuino hat nur 2.5 kB RAM für das komplette Programm.
+
+
+Es ist geplant in einer der nächsten FirmwareVersionen die ansteuerbare LED-Menge beim
+ftSwarm je Controller zu erhöhen.
+
+

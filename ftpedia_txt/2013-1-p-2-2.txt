@@ -1,0 +1,65 @@
+
+
+Editorial
+
+Konkurrenz belebt das Geschäft. Hoffentlich.
+Dirk Fox, Stefan Falk
+Wer einmal mit beiden Bausätzen Roboter
+konstruiert hat, weiß: Der 2008 erschienene Robo TX Controller ist dem LegoMindstorms-Pendant NXT von 2006 nicht
+nur ebenbürtig: flacher, besser verbaubar,
+kein proprietäres Steckersystem, acht statt
+vier Sensoreingänge und vier statt drei
+Motorausgänge. Das nötige Kleingeld
+vorausgesetzt lassen sich zudem bis zu
+neun TXe koppeln – und so 36 Motoren
+steuern und 72 Sensoren auswerten. Auch
+technisch hat der TX dem Lego-Controller
+manches voraus: Mit acht MByte RAM
+verfügt er über den 128-fachen Speicherplatz (NXT: 64 kByte), der Flash-Speicher
+ist mit zwei MByte achtmal so groß (NXT:
+256 kByte) und der ARM9 des TX ist mit
+200 MHz viermal schneller getaktet als der
+ARM7 des NXT (48 MHz).
+Beste Startbedingungen für einen Markterfolg. Dennoch hat der TX geschwächelt.
+Denn zu einem erfolgreichen RobotikBaukasten gehören nicht nur Hardware und
+Mechanik. So unterstützt die Firmware erst
+seit April 2012 das I²C-Protokoll – mit der
+Folge, dass bis dahin nur ausgewählte
+fischertechnik-Sensoren (Spursensor, Fotowiderstand/-transistor, NTC, Farbsensor,
+Reed-Kontakt und seit 2010 ein Ultraschall-Abstandssensor)
+angeschlossen
+werden konnten. Und der CAMERAAnschluss ist bis heute nicht nutzbar.
+Damit waren fischertechnik-Robotern zahlreiche Möglichkeiten wie die Nutzung von
+Kompass-, Gyro- oder Beschleunigungssensoren verwehrt. Der NXT punktete
+derweil mit Sensoren der Firma HiTechnic,
+die nach und nach ins Lego-Programm
+
+aufgenommen wurden. Vor allem aber bei
+der Integration in verbreitete Entwicklungsumgebungen wie .NET, Microsoft
+Robotics, LabView oder ROS und der
+Unterstützung verschiedenster Programmiersprachen hat der NXT die Nase vorn.
+Denn ungeachtet der uneingeschränkt
+empfehlenswerten Robo Pro-Umgebung
+ziehen nicht nur Lehrer meist StandardProgrammiersprachen einer proprietären
+Umgebung vor. Die Folge: Trotz der Überlegenheit von fischertechnik bei der Hardware werden Roboter-Wettbewerbe von
+Lego-Modellen dominiert.
+Am 04.01.2013 hat Lego den Nachfolger
+des NXT angekündigt: Der EV3 genannte
+„Brick“ wird mit einem ARM9 und 64
+MByte RAM (plus 16 MByte FlashSpeicher) ausgestattet, kann via WLAN
+angesteuert werden und erhält einen SDReader. Die Zahl der Motorausgänge steigt
+auf vier, die der Sensoreingänge ebenfalls.
+Dank I²C und der (von Fans entwickelten)
+Microsoft Robotics Treiber könnte der TX
+dennoch Boden gut machen – gäbe es mehr
+(I²C-)Sensoren, eine Treiber-Unterstützung
+von Java, ROS, LabView und .NET, oder
+wäre die Plattform wenigstens offen, so
+dass die Community bestehende Entwicklungsumgebungen daran anpassen könnte.
+Jetzt ist fischertechnik am Zug.
+Beste Grüße,
+Euer ft:pedia-Team
+P.S.: Am einfachsten erreicht ihr uns unter
+ftpedia@ftcommunity.de oder über die Rubrik ft:pedia im Forum der ft-Community.
+
+

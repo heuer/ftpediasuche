@@ -1,0 +1,310 @@
+
+Modell
+
+Modell
+
+Großprojekt Seilbahn (Teil 4): Fundamentale
+Arbeiten
+Tilo Rust
+Diese Serie begleitet das Großprojekt „Kuppelbare Einseilumlaufbahn/Doppelmayr (10MGD)“ im Fördertechnik-Museum Sinsheim von Anfang bis zur Fertigstellung und Ausstellung
+auf der BUGA 2023 in Mannheim.
+Bei unserem Großprojekt werden wir in
+vielen Anlagenteilen große Kräfte auffangen müssen. Um gleichzeitig für ausdauernde Stabilität zu sorgen, müssen wir
+vor unserer Modellbauerarbeit mit fischertechnik ein Fundament und Traggerüst
+bauen. Die Planung und Details sollen hier
+beschrieben werden.
+
+Kraftmeierei
+Wie schon in den bisherigen Beiträgen
+dieser Reihe beschrieben werden wir eine
+Modellanlage bauen, die 30 m überspannt.
+Die Stationen werden mit über 3 m Länge
+nicht nur Aufgrund der Größe imposant
+werden. Die Stützen in der Strecke auf bis
+zu 4,60 m Höhe tragen nicht nur das
+Gewicht von Seil und Gondeln, sondern
+müssen stabil und schwingungsarm stehen.
+Zur Spannung des Seils ist eine Zugkraft
+von 500 N (entspricht ca. 50 kg) vorgesehen. Wie schon in Teil 3 [1] und in unseren
+Videos auf YouTube [3] beschrieben, wird
+diese mit Hilfe eines Gewichtes im Unterbau der Talstation „Spinelli“ aufgebracht.
+Da hier wenig Platz zur Verfügung steht,
+werden wir mit einem Flaschenzug 100 kg
+als Spanngewicht einbauen müssen. Damit
+wäre aber auch schon eine Abschätzung
+möglich: 100 kg Spanngewicht, geschätzte
+100 kg Modellgewicht und eine horizontale
+Komponente von 50 kg (das Seil zieht an
+
+der Station) verlangen, dass wir das Modell
+auf ein stabiles Fundament stellen.
+Gleichzeitig muss das Gestell durch
+Doppelschwingtüren passen. Wir haben
+daher die Modulgröße auf max. 180 cm
+Höhe und 140 cm Breite festgelegt. Bei
+einer Modullänge von max. 250 cm
+(= maximale Verladebreite auf LKW)
+müssen beide Stationen in je zwei Module
+aufgeteilt werden.
+Klar ist auch, dass diese Module mit Hubfahrzeugen („Ameise“ und Stapler) kompatibel sein müssen, jedoch auch ohne diese
+auf Rollen durch einen Raum geschoben
+werden – was wiederum der Standsicherheit
+widerspricht.
+Dazu kommt zum Transport eine nötige
+Verschalung, die schnell, einfach, aber
+sicher angebracht beim Unterbau von vornherein berücksichtigt werden muss.
+Auch die Stützen müssen auf einem sicheren Fundament stehen und darüber hinaus
+für den Betrieb gekippt werden! Der Grund:
+Sie müssen exakt in der Winkelhalbierenden des Seils stehen, da sie sonst abknicken
+würden (auch im Original stehen die
+Stützen so). Das bedeutet, dass die Stützen
+ein schweres Fundament benötigen sowie
+einen verlässlichen Kippmechanismus, der
+zudem auf unterschiedliche Winkel
+einstellbar ist (um unterschiedlichen
+
+
+räumlichen Gegebenheiten bei Ausstellungen zu genügen). Alles muss zusammen
+kompakt und sicher verfrachtet werden.
+
+Flurförderfahrzeugen kompatibel ist, Stauraum bietet und das Modell auf eine angenehme Betrachtungshöhe anhebt.
+
+Knochengerüst
+Dass wir die auftretenden Kräfte der Stationen nicht mit fischertechnik abfangen
+können (oder korrekt gesagt: wir könnten es
+sicher schon, aber zu einem enormen
+Material- und Kostenaufwand), war uns von
+vornherein klar.
+Glücklicherweise ist einer unserer Hauptsponsoren das Fördertechnikmuseum in
+Sinsheim [4], welches wiederum beste
+Kontakte zum Hersteller der AxmannIndustrieprofile pflegt. So fiel die Entscheidung leicht, diese als tragenden Bau der
+Stationen zu verwenden. (siehe auch das
+Video auf unserem YouTube-Kanal [3]).
+Gleichzeitig wollen wir unter das Modell
+eine Kastenkonstruktion bauen, die mit
+
+
+Nach langer Planung und viel Tüfteln, auch
+am 3D-Modell, haben wir am Bautag im
+März 2022 endlich die Gestelle für die Talstation „Spinelli“ komplettiert. Die Konstruktion des Untergestells eines Moduls
+der Talstation erfordert viel Planung, denn
+
+
+die Materialien sind ein erheblicher Kostenfaktor im Projekt. In den Kasten werden
+später Holzplatten als Wände eingezogen,
+sodass ein Stauraum entsteht. In einem
+Modul hängt zusätzlich das Gestell für das
+Spanngewicht mit Seilführung. Kompatibilität zu Transportfahrzeugen, manuelle
+Positionierung des Modells und Einhalten
+der Maximalgröße sind zu beachten. Dazu
+soll alles optisch sauber aussehen und viele
+Jahre haltbar sein. Abb. 2 zeigt das 3DPlanungsmodell des vorderen Moduls von
+Spinelli. Es folgen das hintere Modul sowie
+zwei noch deutlich größere und komplexere
+für die Bergstation „Luisenpark“. Auf den
+weißen Profilen wird die Stützkonstruktion
+aufgesetzt.
+Rot angedeutet (die Strecke verläuft also
+rechts aus dem Bild heraus) und die Seilscheibe ungefähr dort, wo sich die grüne
+Ellipse befindet. Blau eingezeichnet ist das
+Bodenniveau des Modells, darunter der
+Kasten des Untergestells (in der obigen 3D
+Zeichnung sind das die weißen Profile). Das
+hintere Modul schließt sich dann links im
+Bild an.
+In diesen Unterbau kommen nun Seitenwände, Schiebetüren und natürlich ein
+Boden, sowie die Aufhängung des Spanngewichts.
+
+Gewichtheben
+Die Station muss zum Betrieb horizontal
+ausgerichtet sein und soll ohne zu wackeln
+sicher stehen. Das ist bei den Böden in
+unterschiedlichen
+Ausstellungsräumen
+nicht immer einfach. Deswegen haben wir
+für die Module passende Niederschraubfüße konstruiert, die bereits von unserem
+Sponsor Doppelmayr/Garaventa gefertigt
+werden (Abb. 3). Um die Niederschraubfüße sicher innerhalb der Transportmaße
+unterzubringen, sie dennoch gut zugänglich
+anzuordnen und die auftretenden Kräfte
+
+Modell
+
+sauber aufzunehmen, müssen diese präzise
+konstruiert werden.
+
+
+Passgenau
+Ebenso bereits in Fertigung befindlich sind
+sogenannte Zentrierzapfen.
+Da die Stationen in zwei Module aufgeteilt
+sind, müssen diese zum Betrieb genau
+zusammengesetzt werden. Hierbei reicht es
+nicht aus, dass die Module eng beieinander
+stehen. Sie müssen auf wenige zehntel
+Millimeter ausgerichtet und kraftschlüssig
+miteinander verbunden werden. Die ungefähre Ausrichtung kann mit den Niederschraubfüßen eingestellt werden. Eine
+Verbindung ist aber nur mit Hilfe von
+Passstücken möglich. Diese Zapfen werden
+zum Transport entfernt, um nicht über die
+Transportsicherung herauszuragen, dann
+aber vor Ort in eine Halterung eingesetzt.
+Sobald die Module mit Hilfe einer Gewindestange zueinander gezogen werden,
+
+
+
+sorgen die konischen Zapfen (Durchmesser
+60 mm) für die Passgenauigkeit (Abb. 4).
+
+
+Je vier solcher Zentrierzapfen werden pro
+Station für die Ausrichtung der Untergestelle sorgen. Die Zentrierung der Fahrbahnen erfolgt zusätzlich über weitere
+kleinere Zapfen.
+
+fahren. Ebenso werden an den C-Stücken
+die Reifenförderer angebracht. Das sind
+technisch aufwändige Radaufhängungen,
+welche die Gondeln von oben antreiben,
+indem die Reifen auf einer Lauffläche der
+Klemme abrollen. Bei 30 Sektoren pro
+Station werden insgesamt 180 Reifen mit
+Ketten vollkommen synchron zum
+Antriebsseil laufen.
+Daher sind diese C-Stücke ebenfalls stabil
+und in Serie zu produzieren. Um vielleicht
+einmal ein Gefühl für unser Projekt zu
+bekommen: Alleine für die Talstation
+beträgt der Materialwert der 30 C-Stücke
+über 1.200,00 € – und das bei guten Konditionen direkt ab fischertechnik-Werk.
+
+Aufhänger
+
+
+
+An die Stützgestelle aus Axmann-Profilen
+werden Halterungen (Fachbegriff „CStücke“) für die Schienen befestigt, auf
+denen die Gondeln durch die Stationen
+
+Die Konstruktionszeichnung aus dem
+fischertechnik-Designer in Abb. 5 zeigt die
+Planung des C-Stücks. An den schwarzen
+Klammern wird dies an den Axmann-
+
+
+Profilen angebracht. Die Fahrbahn der
+Gondeln wird unter den grün markierten
+Flexschienen mit Hilfe eines langen AluProfils montiert. Gelb markiert ist die
+Niederhalteschiene, welche die Gondel
+gegen Kippen stabilisiert.
+Fertiggestellt sehen die C-Stücke so aus wie
+in Abb. 6. Je Station werden 30 Stück
+benötigt. Die vielen Kleinteile sind dazu da,
+die C-Stücke so zu verschränken und verriegeln, dass sie trotz starker Vibrationen und
+Erschütterungen im Dauerbetrieb über viele
+Stunden pro Tag nicht auseinanderfallen
+können.
+Zur Gesamtansicht der Talstation „Spinelli“
+in Abb. 7: Die Position der Seilscheibe auf
+dem Spannwagen ist sichtbar. Dieser wird
+mit 500 N nach hinten gezogen, um das Seil
+zu spannen, und mit einem Motor angetrieben (ca. 0,25 Umdrehungen pro Sekunde).
+Auch die C-Stücke sind zu erkennen. Die
+massiven farbigen Elemente repräsentieren
+die Axmannn-Profile, welche später optisch
+verkleidet werden und die Kräfte aufnehmen. Die untere Ebene (dunkelblau)
+symbolisiert das Bodenniveau und wird auf
+den Unterbau (Abb. 2) aufgesetzt. Im Foto
+des fertigen Gestells sind diese Profile
+dunkelblau markiert.
+
+Modell
+
+Unter-Stützung
+Am Bautag im März 2022 konnten wir im
+Museum auch die Fundamente der Stützen
+fertigen. Die vier Stützen, welche das Seil
+über die 30 m Distanz auf bis zu 4,60 m
+Höhe tragen müssen, sind baugleich. Sie
+bestehen aus einer Europalette, welche die
+Transportmaße vorgibt und die Kompatibilität zu Hubfahrzeugen herstellt. Darauf
+sind Grundplatten verschraubt und schließlich mit einem Kippmechanismus ein
+Kasten, der ein Betonfundament enthält.
+Das Fundament ist sowohl Gegengewicht
+(ca. 80 kg) der gekippten Stützen als auch
+Montagepunkt der eingegossenen Kunststoffrohre (Durchmesser 110 mm). Im
+Innern verlaufen Stahlseile, welche die
+Rohre auf Zugspannung halten, um eine
+Kraftübertragung der Kopflast (ca.10 kg)
+sicherzustellen.
+Auch bei dieser Konstruktion berücksichtigten wir Haltbarkeit und sauberes Aussehen sowie praktische Bedienung und
+absolute Sicherheit dieses kritischen
+Elements.
+auf einer Europalette steht ein Holzkasten,
+der mit Beton vergossen ist. Dieser kann
+gekippt und verriegelt werden. Zum
+
+
+
+
+Transport wird die Stütze auseinandergenommen und in der Box verstaut. Der
+restliche Platz kann zum Transport von
+Gondeln u. a. genutzt werden. Die Rohre
+sind azentrisch angeordnet, um den Schwerpunkt besser innerhalb der Palette zu halten
+und zusätzlichen Stauraum zu schaffen.
+
+teurinnen und Konstrukteure sowie helfende Hände beim Aufbau im Museum und
+später im Betrieb auf der BUGA23. Wer
+also mit dabei sein möchte bei diesem
+gigantischen Projekt, darf sich direkt
+melden [5].
+
+Fundamenten
+
+
+In Abb. 8 sieht man zwei Fundamente der
+Stützen auf den Europaletten. In die Holzkästen wurde Beton vergossen und dieser
+vierfach verspannt. Die Abwasserrohre stellen die unteren Abschnitte der Stützen dar
+und enthalten die Ösen für die Stahlseile
+zum Verspannen der Traversen am Kopf
+der Stütze.
+
+Unterstützen?
+Auch wir brauchen Unterstützung und Mithelferinnen und –helfer in unserem Projekt:
+Tüftlerinnen und Tüftler, Konstruk-
+
+
+Quellen
+[1]
+
+Tilo Rust: Großprojekt Seilbahn
+(Teil 3): Die Stationen. 3/2021, S. 28–37.
+
+[2]
+
+Doppelmayr/Garaventa
+
+[3]
+
+YouTube-Kanal des Projekts
+
+[4]
+
+Fördertechnik-Museum Sinsheim
+
+[5]
+
+Kontakt zur Projektgruppe „Seilbahn“: Projektleiter Tilo Rust,
+Schifferstadt. E-Mail:
+ft.seilbahn@gmail.com
+
+
+Modell
+
+Talstation. Rechts hinter der Absperrung ist die Stützkonstruktion bereits fertig.
+
+Stützenfundamente. Am Bautag im Fördertechnikmuseum sind viele Arbeiten gleichzeitig zu erledigen.
+Alle Teams legen ein unglaubliches Arbeitstempo vor, sodass die Seilbahn jetzt sichtbare Formen
+annimmt. Am Abend sind alle fertig – die Fundamente und auch die Helfer.
+
+
+

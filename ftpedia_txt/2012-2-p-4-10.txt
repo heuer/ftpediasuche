@@ -1,0 +1,315 @@
+
+
+Flugzeugtechnik
+
+Flugzeugfahrwerke
+Harald Steinhaus
+Fischertechnik kann nicht fliegen – aber fahren. Was wäre aber auch ein Flugzeug ohne
+Fahrwerk? Eine besondere Faszination geht von diesen technischen Meisterwerken aus –
+denn sie sollen einerseits ein Flugzeug tragen und andererseits bei Bedarf elegant im Rumpf
+verschwinden. Genau die richtige Herausforderung für ein mechanisches ft-Funktionsmodell.
+Ein Flugzeugfahrwerk muss das Gewicht
+des Fliegers nebst den bei Start und
+Landung auftretenden Kräften ertragen und
+übertragen können. Bei schnellen Maschinen muss es außerdem bei Nichtgebrauch
+aus der Luftströmung verschwinden.
+Ein Fahrwerk kann natürlich auf allem
+beruhen, was die Physik in Hydraulik,
+Pneumatik und Mechanik zu bieten hat.
+Aus verschiedenen Gründen dominiert die
+Mechanik, und darin wiederum liegt der
+Schwerpunkt bei den Hebelgesetzen und
+den Koppel- oder Viergelenkgetrieben. Die
+Bandbreite wird ein wenig angedeutet
+durch die Fahrwerksmodelle im Bilderpool
+der ftcommunity.
+
+Ausbaustufe 2
+In Stufe 2 soll das Fahrwerk im Flug eingezogen und zum Landen ausgefahren
+werden. Das kommt der Aerodynamik
+zugute; außerdem ist das Fahrwerk besser
+gegen Vereisung geschützt, wenn es im
+Rumpfinneren transportiert wird. In ausgefahrenem Zustand muss es gegen unbeabsichtigtes Einklappen unter Last verriegelt
+werden. Da kann man z. B. Riegel und
+Bolzen einsetzen, die aber wieder
+eigenständige Antriebe brauchen und
+selber auch verriegelt werden müssen. Der
+einfachste Weg ist hier das überstreckte
+Kniegelenk (Abb. 1).
+
+Fahrwerke können simpel und einfach
+aufgebaut sein oder recht komplex werden.
+Unabhängig vom mechanischen Funktionsprinzip möchte ich im Folgenden sieben
+Ausbaustufen auf dem Weg zum „ultimativen“ Flugzeugfahrwerk unterscheiden.
+
+Ausbaustufe 1
+Stufe 1 kennt man aus der Flugschule, der
+Serengeti oder dem Australischen Outback: Das Fahrwerk trägt das Gewicht des
+Fliegers, plus die Kräfte bei Start und
+Landung. Punkt. Da stehen also die
+Fahrwerksbeine samt Rädern starr aus der
+Zelle heraus, und fertig.
+
+
+
+Vorbild ist das menschliche Knie, das im
+gestreckten Zustand ein längeres Stehen
+ermöglicht, ohne dass der Streckmuskel im
+Oberschenkel dazu gespannt sein muss. Im
+
+vermeintlich einfachsten Fall baut man so
+ein Knie direkt nach. Nur ist dieser Aufbau
+durchaus nicht einfach, denn es gibt auch
+Nachteile: zum Einfahren müssen beide
+Teile, Ober- und Unterschenkel, angetrieben werden, und beide Teile müssen die
+volle Last tragen können.
+
+Ausbaustufe 3
+In Stufe 3 besteht das Fahrwerk aus einem
+in sich starren Stab (dem Fahrwerksbein),
+der an einem Ende drehbar gelagert ist und
+am anderen Ende die Räder hat. Nur dieses
+Bein muss auf volle Last ausgelegt sein.
+Ein zweiteiliges Kniegelenk verriegelt es
+im ausgefahrenen Zustand. Die Geometrie
+besteht aus vier Teilen: Oberschenkel,
+Unterschenkel, Fahrwerksbein (der Teil
+zwischen der Verbindung zum Rumpf und
+dem Anschluss des Unterschenkels) und
+schließlich dem starren Rumpf zwischen
+Fahrwerksbein und Oberschenkel (Abb. 2).
+
+Verriegelung des eigentlichen Fahrwerkbeins
+
+Flugzeugtechnik
+
+Diese Anordnung ist als Koppel- oder
+Viergelenkgetriebe bekannt. Im Maschinenbau muss ein „Getriebe“ keine Zahnräder enthalten: im technischen Sinne
+besteht ein Getriebe aus irgendwelchen
+antreibenden und irgendwelchen angetriebenen Bauteilen von beliebigem Aussehen.
+Das Viergelenkgetriebe kennt eine Vielzahl von Unterscheidungen, denn je nach
+Zusammensetzung der Längen der Glieder
+können einige davon komplette Drehungen
+um einen Endpunkt ausführen oder das
+ganze Gebilde bewegt sich überhaupt
+nicht. Hier sei auf die vertiefte Betrachtung
+in der fischertechnik-hobby-Reihe verwiesen [1].
+
+
+
+
+Gegensatz zu all den ebenen Vertretern,
+die hier erwähnt werden.
+Wir kommen zurück zum einfachen,
+ebenen Kniegelenk: in Stufe 3 ist der Oberschenkel das einzige angetriebene Element.
+Der Antrieb kann über alle denkbaren
+Arten, also etwa Seilzug, P-Zylinder oder
+Zahnstange erfolgen. An dieser Stelle
+kommen aber zwei weitere Aspekte hinzu.
+
+
+
+Weitere Fundstellen und Orte der Inspiration sind z. B. die Digitale Mechanismenund Getriebebibliothek und die Webseite
+„How round is our circle?“ von John Brant
+und Chris Sangwin.
+
+wer die größten Kräfte aushalten muss
+(Quelle: Wikipedia, Fotograf: Tangopaso).
+
+Der (echte) Airbus A350 verwendet im
+Hauptfahrwerk ebenfalls das Kniegelenk
+als Grundprinzip – allerdings mit den zusätzlichen Verfeinerungen, dass man hier
+(a) ein „Knie im Knie“ vorfindet, und (b)
+das Ganze gleich zweifach, in räumlich um
+90° verdrehter Anordnung (Abb. 6). Damit
+ist das ein räumliches Koppelgetriebe, im
+
+
+So findet man erstens in einem Flugzeug
+immer beengte Platzverhältnisse vor. Das
+Fahrwerk soll unterhalb des Rumpfbodens
+verschwinden (da soll aber auch Frachtraum oder Elektronik hin) oder in den
+Flügel passen (der aber nicht sehr dick
+werden darf) oder in eigene (auch nicht zu
+große) Gondeln einfahren.
+Zweitens sind Zahnstangen (ft-Hubgetriebe) und P-Zylinder sperrig und brauchen außerdem noch Raum zum Schwenken. Ein ft-P-Zylinder braucht einen geraden Einbauraum von mindestens 105 mm
+Länge, bei gerade einmal 30 mm Hubweg.
+Seilzüge sind vom Platzbedarf her sehr
+verlockend. Allerdings braucht man immer
+zwei davon, und man muss irgendwie
+verhindern, dass sie schlaff durchhängen
+und ihre Führungsbahn verlassen. Das geht
+am einfachsten, wenn man Seilzüge über
+runde Scheiben führt.
+Ist man schon so weit gekommen, kann
+man die Seilscheiben auch gleich als
+Zahnräder ausführen, und landet schließlich bei Dreh-Antrieben als den am ehesten
+Platz sparenden Varianten.
+In Zusammenfassung ergibt sich für ft-Modelle als zweckmäßigster Aufbau ein Viergelenkgetriebe, dessen einziges angetriebenes Glied entweder aus einem Zahnrad
+besteht (vgl. Abb. 7) oder mittels einer ftKurbel mit einem Drehantrieb verbunden
+ist. Wohlgemerkt – diese Aussage gilt für
+den ft-Modellmaßstab. Die echte Flugwelt
+wird klar von Hydraulikzylindern beherrscht, da sie im hoch skalierten Verhältnis deutlich kompakter da stehen und enor-
+
+me Kräfte aufbringen können. Ein maßstabsgetreu hoch skaliertes ft-Z30 wäre im
+echten Flugzeugbau zu schwer, zu sperrig
+und hätte mit jedem seiner Zähne eine
+mögliche Ausfallursache, insbesondere bei
+Vereisungsgefahr.
+
+Flugzeugtechnik
+
+natürlich viele weitere Möglichkeiten.
+Angesichts der dünnen Angelschnüre aus
+der ft-Packung 48667 (Weihnachtsdekoration) ist das letzte Wort bezüglich der
+Seilzüge auch noch nicht gesprochen. Passt
+doch so eine Angelschnur ganz locker in
+eine ft-Vollnut, selbst wenn schon Bausteine mit Zapfen darin stecken.
+
+über Drehachse (Z30), eingefahren …
+
+Knie-Verriegelung und Zahnradantrieb
+
+Auf diesem Prinzip beruht das Modell
+FWH12, das als Ausgangspunkt für viele
+weitere meiner Muster gedient hat. Die
+etwas zu groß geratene und dann eingestellte A380 enthielt diesen Standard-Aufbau in allen dreien ihrer Fahrwerke, wenn
+auch in sehr unterschiedlichen Realisierungen.
+Die Abbildungen 8, 9, 10, 11 zeigen den
+„Standard“-Aufbau einmal mit Z30 und
+einmal in Mini-Ausführung mit der Kurbel
+38235, jeweils in aus- und eingefahrenem
+Zustand.
+Vom Standard-Aufbau ausgehend, oder auf
+ganz anderen Wegen wandernd, gibt es
+
+
+Weiterhin kann man da, wo ein Zahnrad
+ist, auch mal ein zweites einsetzen. Dieser
+Gedanke führte auf zwei kämmende Z30,
+die mit hinreichend vielen Verstrebungen
+
+
+
+zu einem Klapperatismus verbunden wurden, der sich bei näherer Betrachtung als ...
+ein Fünfgelenk-Getriebe mit zwei gekoppelten Elementen herausstellt. Dazu später
+mehr.
+
+über Drehachse (Kurbel), eingefahren …
+
+zu sorgen, dass bei Erreichen der Endlage
+entweder der Motor abgeschaltet wird oder
+der Antrieb „leer“ weiter läuft und keinen
+Schaden anrichtet. Der Leerlauf kann über
+eine Rutschkupplung erfolgen oder etwa
+dadurch, dass eine Zahnstange vom
+Antriebsrad herunter fährt und damit ausgekuppelt ist. Auch bei Leerlauf sollte
+natürlich irgendwann der Motor abgeschaltet werden. Es müssten also Endschalter
+für beide Endlagen eingebaut werden.
+
+Ausbaustufe 5
+Mit Stufe 4 hat ein Fahrwerk alles, was es
+zu seiner Funktion braucht. Alles Weitere
+ist „Sahnehäubchen“. In Stufe 5 ist das ein
+Landescheinwerfer, der mit dem Fahrwerk
+ausfährt und dabei eingeschaltet wird. Ein
+Beispiel hierfür ist das Fahrwerk der A340,
+bei der das Bugfahrwerk den Schalter betätigt, während sich die Scheinwerfer an
+den Hauptfahrwerksbeinen befinden.
+
+Ausbaustufe 6
+Stufe 6 enthält Fahrwerksluken oder –verkleidungen, die vom Fahrwerk selbst betätigt werden. Dahin kommt das Hauptfahrwerk FWH13 der Antonov AN-124.
+
+Ausbaustufe 7
+
+
+Ausbaustufe 4
+In den wenigsten Fällen wird man an
+einem Viergelenk Freude haben, das ein
+zum vollen Umlauf fähiges Fahrwerksbein
+aufweist. Es müsste die „ausgefahrene“
+Lage ja trotzdem gezielt anfahren und dort
+verriegeln können. Also baut man besser
+ein Getriebe mit zwei Endlagen und treibt
+es mit einem Motor an. Stufe 4 hat dafür
+
+Schließlich und ganz oben steht Stufe 7, in
+der Bug- und Hauptfahrwerk vom gleichen
+Motor angetrieben werden und mit Landescheinwerfer und Fahrwerksluken ausgestattet sind. Das war bei der A340 dank
+gemeinsamem Antrieb mit Rutschkupplung knapp erfüllt, bis auf die nicht vorhandenen Fahrwerksluken – aber immerhin
+wurden Teile der Verkleidung mitgeschwenkt. Der Transporter hatte ein Hauptfahrwerk mit voll integrierter Verkleidung
+(dessen Antrieb nie richtig funktioniert
+hat), sowie ein separat angetriebenes Bugfahrwerk.
+Mein neuester Anlauf in dieser Richtung
+ist bislang noch etwas „dünn“: eine Fahr-
+
+
+Flugzeugtechnik
+
+werksluke, die komplett auf Leichtbau
+getrimmt ist. Das verwendete Material
+stammt (leider, leider) nicht von fischertechnik, ist aber gleichwohl gut erhältlich:
+es ist Moosgummi von 2 mm Stärke.
+Moosgummi gibt es in den ft-Farben, es
+lässt sich sehr einfach zuschneiden, und
+wenn man Löcher von 3 mm Durchmesser
+hinein stanzt (etwa per Lochzange), kann
+man es mit S-Riegeln befestigen.
+(der gelbe Balken verfährt ohne nennenswertes
+Kippen auf einer gekrümmten Bahn)
+
+sinnvolle Funktion zugeordnet werden
+
+mit Moosgummi beplankt
+
+Dafür erwies sich einer der gefundenen
+„Prinzen“ sogar als „zwei Fahrwerke“: es
+kann in zwei um 90° verdrehten Lagen und
+nach passender Einstellung der Z30 zueinander als Fahrwerksbein eingesetzt werden
+(siehe die Abbildungen 16 bis 19).
+
+Fünfgelenkgetriebe
+Mangels einer tief schürfenden theoretischen Ableitung liegen beim FünfgelenkGetriebe derzeit bei meinen Experimenten
+die „Prinzen“ (Erfolge) und die „Kröten“
+(nicht verwertbare Entwürfe) dicht beieinander. Wenn man nicht starr auf Flugzeugbeine fixiert ist, findet man bei Variation
+der Geometrie auch interessante Dinge wie
+Parallelverschiebe-Mechanismen, Greifer
+und etliches mehr (siehe z. B. Abb. 14).
+Ein Beispiel für eine „Kröte“ zeigt Abb.
+15.
+
+mit zwei Z30 übereinander, eingefahren …
+
+
+
+
+dung all der gewölbten Außenflächen war,
+könnte man angesichts der Möglichkeiten,
+die so ein Stück Moosgummi bietet, beinahe auf dumme Gedanken kommen. Noch
+obsiegt die Vernunft...
+
+mit zwei Z30 nebeneinander, eingefahren …
+
+
+So gewappnet kann man sich jetzt die
+Fahrwerke der A380 zu Gemüte führen. Da
+ist von nicht-ebenen (räumlichen) Kniegelenken über Knie-im-Knie bis hin zu
+Mehrfach-Koppelgetrieben alles vertreten
+(Abb. 20). Und weiter als bis zum ftBilderpool muss man nicht suchen, um die
+Details zu finden, denn es gibt ft-Freaks,
+die sich auch an den originalgetreuen
+Nachbau eines derartigen technischen
+Sahnestücks heran wagen. Schließlich,
+nachdem einer der Gründe für den
+Abbruch des Projekts „A380“ die Verklei-
+
+
+Quellen
+[1]
+
+Viergelenkgetriebe, fischertechnik
+hobby 2, Band 5, Fischer-Werke,
+Tumlingen 1973, S. 4-17.
+
+
+

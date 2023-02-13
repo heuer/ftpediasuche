@@ -1,0 +1,314 @@
+
+Computing
+
+Computing
+
+Logik-Analysator
+Andreas Gail
+Ein Logik-Analysator ist ein Gerät, mit dem schnelle digitale Schaltvorgänge aufgezeichnet
+und betrachtet werden können. Kommerzielle Geräte sind im Markt verfügbar, aber auch hier
+ermöglicht fischertechnik einen funktionsfähigen Aufbau. Benötigt wird im vorliegenden Fall
+ein ROBO TX Controller sowie ein PC mit Microsoft Visual Basic Express 2010 oder höher.
+
+mit eingestellter Abfragetaktung von einer Sekunde (1 s)
+
+Was macht ein LogikAnalysator?
+Insbesondere beim Aufbau von komplexen
+Modellen mit vielen Tastern, ReedKontakten und Motoren kann es vorkommen, dass es zu Fehlern im Ablauf
+kommt und man aufgrund der schnellen
+Abfolge irgendwie nicht auf die Fehlerursache kommt. Besonders schwierig kann
+es dann werden, wenn mehrere fischertechnik Controller über Funk kommunizieren, intern jedoch ihr Eigenleben haben.
+Das Laufzeitverhalten der Funkverbindung
+kann dabei zu unvorhersehbaren Effekten
+
+führen. Bei all diesen Fragen kann der
+Logik-Analysator helfen. Weiteres kann
+unter Wikipedia [1] nachgelesen werden.
+
+Was wird gebraucht?
+Die Anforderungen sind überschaubar.
+Benötigt wird ein ROBO TX Controller
+(RTXC), ein PC und die frei zugängliche
+Programmierumgebung
+Visual
+Basic
+Express 2010 oder höher von Microsoft.
+Die gesamte Projektierung erfolgte mit
+Windows XP (SP3) und der ROBO ProVersion 3.2.6. In dieser Kombination
+erfolgte
+der
+Funktionstest;
+andere
+
+
+
+
+Versionen sind sicher möglich. Im Grunde
+wurde die Software-Basis eines früheren
+Projektes [2] verwendet, und es wurden nur
+die speziellen Anpassungen für den LogikAnalysator vorgenommen. Die vollständigen Projektdateien liegen zum Download
+bereit [4]. Ein vollständiges Installationspaket ist allerdings nicht dabei, weil hier die
+Programmbibliotheken von fischertechnik
+enthalten sein müssten.
+
+6.
+
+Durch Anklicken der Befehlsschaltfläche „connect“ wird eine permanente
+Verbindung zum Datenaustausch
+zwischen RTXC und PC eingerichtet;
+dieser Zustand kann zu einem späteren
+Zeitpunkt durch dieselbe Befehlsschaltfläche, die nun die Aufschrift
+„disconnect“ trägt, wieder rückgängig
+gemacht werden.
+
+7.
+
+Mit der Aktivierung des Kontrollkästchens „show operation log“ können
+alle Zustandsänderungen des Verbindungsaufbaus betrachtet werden,
+auch eventuelle Fehler. Diese Funktion
+ist besonders bei Problemen empfehlenswert.
+
+8.
+
+Die aktuell rote Befehlsschalfläche
+„process stopped“ ermöglicht die
+Haupt-Aktivierung des Programms und
+damit die Bereitschaft der Analyse.
+Dieser Zustand kann zu einem späteren
+Zeitpunkt durch dieselbe Befehlsschaltfläche, die nun die Aufschrift
+„process running“ trägt und grün
+blinkt, wieder rückgängig gemacht
+werden.
+
+9.
+
+Über das Auswahlfeld „interval“ kann
+die Abfragerate der Eingänge festgelegt werden.
+
+Der RTXC sollte mit einem USB-Kabel an
+den PC angeschlossen sein, weil das eine
+direktere Kommunikation ohne zusätzliche
+Laufzeitfehler ergibt – anders als es unter
+einer Funkverbindung (Bluetooth) beobachtet wurde.
+Zum Zeitpunkt der Erstellung dieses
+Projekts (04/2015) war der neue fischertechnik TXT Controller übrigens nicht
+geeignet, da es noch keine bekannte Veröffentlichung zur Kommunikation zwischen
+Visual Basic und dem TXT Controller gab.
+Es bleibt zu hoffen, dass sich das ändert.
+
+Logik-Analysator-Software
+Es wurde versucht, die Bedienung so einfach wie möglich zu halten. Das wird
+dadurch unterstützt, dass nur die zum
+jeweiligen Zeitpunkt relevanten Befehlsschaltflächen (Buttons oder auch soft keys
+genannt) angeklickt werden können,
+andernfalls sind diese deaktiviert.
+Nachfolgend die Bedienung in einzelnen
+Schritten:
+1.
+
+RTXC an
+schließen.
+
+2.
+
+PC starten.
+
+3.
+
+Verbindung von RTXC und PC über
+USB-Kabel herstellen.
+
+4.
+
+Logic Analyser starten.
+
+5.
+
+Über das Auswahlfeld „ROBO TX
+Controller connection channel selection“ den gewünschten RTXC auswählen. Hierdurch wird die Befehlsschaltfläche „connect“ aktiviert.
+
+
+Stromversorgung
+
+an-
+
+10. Wenn nun an die Eingänge I1 bis I8
+Taster usw. angeschlossen sind, kann
+mit der Analyse begonnen werden. Die
+Befehlsschaltfläche „start“ ermöglicht
+den Beginn der Anzeige der Eingänge
+im zeitlichen Verlauf sowie deren Aufzeichnung.
+11. Die Befehlsschaltfläche „stop“ unterbricht den Anzeige- und den Aufzeichnungsvorgang.
+Dieser
+kann
+jedoch auf Wunsch unter Verwendung
+der Befehlsschaltfläche „continue“
+fortgesetzt werden.
+12. Mit der Befehlsschaltfläche „clear“
+wird der Pufferspeicher gelöscht.
+
+13. Mit der Befehlsschaltfläche „save ...“
+können die aufgezeichneten Daten
+exportiert werden.
+
+Datenexport
+Die aufgezeichneten Daten können im
+CSV-Format (comma-separated values) als
+Datei gespeichert werden. Microsoft Excel
+z. B. ermöglicht, diese Datei in ein übliches
+Tabellenblatt zu konvertieren. Dabei ist die
+Datenstruktur als Textdatei einfach lesbar,
+Spalten sind durch Semikolons getrennt.
+
+Betrachtung der
+Messgenauigkeit
+Mit Aufbau gemäß Abb. 2 soll die Messgenauigkeit, d. h. das zeitliche Darstellungsvermögen abgeschätzt werden.
+Dieses Vorgehen ist bewusst einfach
+
+Computing
+
+gehalten, damit es ohne viel Aufwand nachvollzogen werden kann.
+Der Grundgedanke bei der Abschätzung ist,
+dass einfach vorausgesetzt wird, dass der
+verwendete Motor mit seiner Nenndrehzahl
+von 725 min-1 läuft (fischertechnik PowerMotor 8:1). Alternativ könnte auch eine
+zusätzliche Drehzahlmessung gemäß einer
+früheren Veröffentlichung [3] ergänzt
+werden. Hierzu müsste jedoch ein weiterer
+RTXC unabhängig zur Verfügung stehen.
+Wenn man sich Abb. 2 genauer ansieht,
+erkennt man den Motor der über zwei 1:4Untersetzungen (bestehend aus je einem
+Z10 und einem Z40) eine Schaltscheibe
+37727/37728 antreibt. Diese Schaltscheibe
+betätigt einen Taster, dessen Tastverhalten
+letztendlich visualisiert werden soll. Durch
+die Kombinationen von kleinen und großen
+
+Schaltscheibe
+und Taster
+
+
+
+Zahnrädern kommt es zu einer Untersetzung von 16:1. Das bedeutet, die Schaltscheibe hat nur 1/16 der Drehzahl des
+Motors, also 45,3 min-1. Umgerechnet
+dauert eine volle Umdrehung der Schaltscheibe 1324 ms.
+
+Es lässt sich feststellen, dass die Größenordnung stimmt.
+180°
+
+Abfragerate und Interpretation der
+angezeigten Messergebnisse
+Wenn die Abfragerate der Eingänge auf
+100 ms eingestellt ist, bedeutet das, dass die
+Eingänge alle 100 ms für eine minimal
+kurze Dauer abgefragt werden. Bei eingestellter Abfragerate der Eingänge von 1 s
+gemäß Abb. 6 zeigt sich, dass das Signal
+zum Zeitpunkt 8,0 s kommt und zum
+Zeitpunkt 9,0 s abfällt. Ob das Signal nun
+genau zum Zeitpunkt 8,0 s gekommen ist,
+kann nur vermutet werden. Möglich ist
+jedoch der Zeitraum 7,1 s bis 8,0 s. Am
+hinteren Bereich lag das Signal zum
+Zeitpunkt 9,0 s an. Auch hier kann nur
+vermutet werden, dass das Signal auch
+genau zu diesem Zeitpunkt abfiel. Auch
+hier ist wiederum möglich, dass das Signal
+im Zeitbereich 9,1 s bis 9,9 s abfiel.
+Zusammenfassend könnte das Signal in
+Wahrheit im Zeitbereich 7,1 s bis 9,9 s
+angelegen haben. Das würde bedeuten, dass
+statt der angezeigten 1 s das Signal fast 3 s
+angelegen haben könnte. Nehmen wir für
+die beiden Randbereiche die jeweiligen
+Mittelwerte an, muss im Mittel gemäß
+Annahme wird nachfolgend angewendet.
+Messungen mit der Schaltscheibe
+180°
+Zur ersten Messung wird die fischertechnik
+Schaltscheibe wie in Abb. 3 verwendet.
+Wenn diese Schaltscheibe in einer Zeit von
+1324 ms einmal gedreht wird, so beträgt die
+Dauer, in der der Taster gemäß Abb. 3
+unbetätigt ist, ca. 662 ms. Die erhaltene
+Messaufzeichnung ist in Abb. 7 dargestellt.
+Hier zeigt sich, dass die Intervalle mit
+600 ms bis 700 ms aufgezeichnet werden.
+
+
+Messungen mit der Schaltscheibe
+48°
+Für die zweite Messung wird eine Schaltscheibe gemäß Abb. 4 verwendet.
+48°
+
+
+Wenn die Schaltscheibe in einer Zeit von
+1324 ms einmal gedreht wird, so beträgt die
+Dauer, während der der Taster gemäß
+sind die Messaufzeichnungen dargestellt.
+Die Intervalle wurden durchgehend mit
+200 ms aufgezeichnet.
+Zusammenfassung zur Genauigkeit
+Die Software lässt eine Abfragerate der
+Eingänge von 25 ms zu. Das hat sich als
+sehr ungenau erwiesen, wenn die exakten
+Zeitintervalle mit ausgewertet werden
+sollen. Bei der Einstellung 100 ms ist mit
+
+zeitlich recht verlässlichen Ergebnissen zu
+rechnen.
+
+Alternative Lösungsansätze
+Prinzipiell scheint es möglich, auch innerhalb von ROBO Pro das Schaltverhalten
+aufzuzeichnen und in eine Datei zu
+schreiben. Hierzu steht der Baustein „Liste“
+gemäß Abb. 5 bereit. Das wurde jedoch
+nicht getestet.
+Der Nachteil dabei ist, dass ROBO Pro
+laufen muss und diese zusätzliche Funktionalität das eigentlich zu messende Laufzeitverhalten des untersuchten Systems
+ändern kann. Wird für die Messaufgabe ein
+eigener RTXC verwendet, erscheint diese
+Methode möglich.
+
+Computing
+
+Ausblick
+Unter Verwendung der Visual Basic
+Konfigurationsdateien kann der Programmcode ohne größeren Aufwand dahingehend
+modifiziert werden, dass statt der digitalen
+Aufzeichnung der Eingänge auch analoge
+Werte aufgenommen, angezeigt und gespeichert werden können.
+
+Referenzen
+[1]
+
+Wikipedia: Logikanalysator.
+
+[2]
+
+Gail, Andreas: Strichcode-Leser am
+Robo TX Controller (2): Automatisiert mit Microsoft Visual Basic.
+ft:pedia 4/2014, S. 39-42.
+
+[3]
+
+Gail, Andreas: Laser-Anwendungen
+(1): Bewegungsmessung. 1/2015, S. 64-67.
+
+[4]
+
+Gail, Andreas: Robo TX Logic
+Analyser Software. ft-CommunityWebsite, 2015.
+
+alternativen Aufzeichnung des
+Schaltverhaltens
+
+dass das Signal zum Zeitpunkt 8,0 s kommt und zum Zeitpunkt 9,0 s geht.
+
+(Tastdauer 662 ms) und einer Abfragerate der Eingänge von 100 ms.
+Es zeigt sich eine Schaltsequenz von etwa 500 bis 600 ms.
+
+(Tastdauer 177 ms) und einer Abfragerate der Eingänge von 100 ms.
+Es zeigt sich eine Schaltsequenz von etwa 100 ms.
+
+
+

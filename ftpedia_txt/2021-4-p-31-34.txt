@@ -1,0 +1,256 @@
+
+Computing
+
+Computing
+
+Sensoren am TXT: IR-Dioden und -Transistoren
+Kurt Mexner
+Mit verschiedenen Sensoren werden die Möglichkeiten des TXT Discovery Sets erheblich
+erweitert. Mit dieser Reihe möchte ich einige dieser Sensoren vorstellen. Heute beschäftigen
+wir uns mit Infrarotstrahlung.
+
+Infrarot-Strahlung
+Jeder von uns kommt täglich mit unsichtbarem Licht in Berührung, und zwar dann,
+wenn er die Fernseh-Fernbedienung in die
+Hand nimmt. Diese sendet Infrarot-Strahlen
+aus (IR-Strahlung), die das Auge nicht
+erkennt.
+Ihr könnt sie aber sichtbar machen: Nehmt
+einmal eure Digitalkamera oder euer Handy
+zur Hand und richtet die Austrittslinse der
+Fernbedienung auf das Kameraobjektiv.
+Bei eingeschalteter Kamera (Handy) erkennt ihr auf dem Kameramonitor ein bläuliches, pulsierendes Licht an der Austrittslinse eurer Fernbedienung.
+
+ROBO Pro erkennt unsichtbares Licht
+Auch ROBO Pro kann IR-Licht erkennen.
+Benötigt werden hierzu IR-Fototransistoren
+(z. B. PT333-3C). Dabei ist auf die Polung
+zu achten: Der Pluspol hat ein längeres
+Anschlussbein, der Minuspol eine abgeflachte Seite. Beim Anschluss an einen Eingang des TXT kommt der Minuspol an den
+Anschluss, der zum Anzeigebildschirm
+zeigt; der Pluspol kommt an den äußeren
+Anschluss.
+Das Eingangselement wird auf ‚Fototransistor, analog 5 kOhm‘ eingestellt. Es
+werden Werte zwischen 0 und 15.000 angezeigt. Je geringer die IR-Strahlung, desto
+
+höher ist der (Widerstands-)Wert; je stärker,
+desto geringer.
+ROBO Pro verfügt über einen InterfaceTest. Mit ihm lassen sich die Eingänge
+abfragen. Er wird in der oberen Menüreihe
+über „Interface testen“ aufgerufen. Neben
+der Meldung, ob die Interface-Anbindung
+funktioniert, erscheinen auch die acht
+Eingänge mit ihren dort aktuell anliegenden
+Werten.
+Zielt nach dem Anschließen des IR-Transistors mit eurer Fernbedienung auf ihn und
+beobachtet, was am Eingang angezeigt
+wird. Mit hoher Wahrscheinlichkeit (abhängig vom Typ eurer Fernbedienung) wird
+weiterhin 15.000 angezeigt oder ein sehr
+stark schwankender Wert. Warum ist das
+so?
+Die Fernbedienung sendet eine pulsierende,
+kodierte Strahlung aus. ROBO Pro kann sie
+zwar erkennen, aber nicht dekodieren.
+Außerdem senden Glühlampen, LEDLeuchten oder Leuchtstoffröhren impulsweise ebenfalls IR-Strahlung aus. Auch
+diese Störstrahlung wird erfasst und muss
+ggf. herausgefiltert werden.
+
+ROBO Pro sendet unsichtbares Licht
+Da die Strahlung der Fernbedienung nicht
+gut erkennbar ist und sie auch von ROBO
+Pro nicht angesteuert werden kann, müssen
+wir uns einen eigenen Sender bauen. Dies
+
+
+
+ist mit handelsüblichen IR-Sendedioden
+möglich (z. B. Osram SFH 415, Sanken
+SID1050M, Kyosemi KED862M51E).
+Diese haben die gleiche Form und ähnliche
+Daten wie die bekannten LEDs. Sie können
+mit 3 bis 6 Volt angesteuert werden und
+verbrauchen ca. 20 bis 100 mA. Wichtig ist,
+auf die richtige Polung zu achteten und
+einen Vorwiderstand zu verwenden. Da der
+Ausgang des TXT mit 9 Volt arbeitet, sind
+wir mit einem Widerstand von 390 Ohm
+und 0,25 Watt auf der sicheren Seite.
+Im ROBO Pro-Programm ‚IR Sender und
+Empfänger.rpp‘ aktiviert ein Mausklick auf
+den „Knopf“ den Sender. Da der Knopf als
+Schalter eingestellt ist, wird nun kontinuierlich IR-Strahlung gesendet. Ein erneuter
+Mausklick beendet die Aussendung der IRStrahlung. Eine Kontroll-Lampe am Monitor zeigt an, ob das Programm ordnungsgemäß funktioniert. Als einfache Anzeige
+dient nun nochmals der Interface-Test. Dort
+müssten nun Werte unterhalb von 15.000
+angezeigt werden.
+
+ROBO Pro empfängt unsichtbares Licht
+Im TXT Controller ist bereits ein IR-Empfänger eingebaut. Dieser ist jedoch auf die
+Fernbedienung von fischertechnik ausgelegt [2]. Es ist mir bisher nicht gelungen, ihn
+mit anderen Mitteln zum Leben zu
+erwecken.
+Auch der im TXT Discovery Set enthaltene
+Fototransistor reagiert auf IR-Strahlung. Er
+ist jedoch nicht sehr empfindlich.
+Daher lohnt der Rückgriff auf handelsübliche Fototransistoren. Für die Nutzung
+am TXT Controller eignen sich nur Fototransistoren und Fotodioden mit zwei Anschlüssen. Transistoren mit drei Beinen
+benötigen weitere Bauteile zur Ansteuerung.
+
+
+IR-Empfang mit Fototransistoren
+Um die IR-Strahlung deutlicher zu erfassen
+ist ein kleines Programm notwendig. Für
+den Empfänger im ROBO Pro-Programm
+‚IR Sender und Empfänger.rpp‘ ist das Eingangselement auf ‚Fototransistor‘ und
+‚analog 5 kOhm‘ eingestellt. Im analogen
+Verzweigungselement ist ein Schwellenwert eingestellt (<12.000), der je nach
+örtlicher Gegebenheit und der verwendeten
+Bauteile angepasst werden sollte. Die
+empfangenen IR-Werte werden in der
+Textanzeige dargestellt und erleichtern die
+Einstellung des Schwellenwertes.
+Wenn der Schwellenwert überschritten
+wird, leuchtet das Lampen-Element auf
+dem Monitor.
+Ab und zu leuchtet das Lampen-Element
+auf, obwohl der IR-Sender nicht betätigt
+wurde. Dies liegt an der erwähnten Störstrahlung von Glühlampen, Leuchtstoffröhren und LED-Leuchten. Eine Abdeckung oder Beschattung des IRTransistors kann hier Abhilfe schaffen.
+IR-Empfang mit Fotodioden
+Eine andere Möglichkeit, die Störstrahlung
+zu vermeiden (und die Strahlung der Fernseh-Fernbedienung sichtbar zu machen)
+besteht darin, eine Fotodiode zu verwenden
+(z. B. Pollin, Bestellnummer 121752). Bei
+Fotodioden muss das Eingangselement als
+‚Farbsensor, analog 10 V‘ betrieben werden.
+Der Schwellenwert sollte bei ca. 12 liegen.
+Bei zunehmender IR-Strahlung steigen die
+Werte, bei abnehmender IR-Strahlung
+verringern sie sich. Fotodioden reagieren
+schneller auf IR-Strahlung, Fototransistoren
+sind langsamer, dafür aber empfindlicher.
+Mit dem Programm ROBO Pro-Programm
+‚IR Sender und Empfänger.rpp‘ hat man
+nun zwei Möglichkeiten, IR-Strahlung zu
+erkennen und kann im Einzelfall entscheiden, für welche Anwendung sich welcher
+Empfänger besser eignet.
+
+
+Computing
+
+Beim Betreiben müsst ihr auf die
+unterschiedlichen Einstellungen achten:
+Typ
+
+Interface
+-Test
+
+Verzwei
+gungselement
+
+Eingangs
+element
+
+Fototransis
+tor
+
+Analog 5
+kOhm
+(NTC)
+
+Fototransistor, z. B.
+< 12.000
+
+Fototransistor,
+Analog
+5 kOhm
+
+Fotodiode
+
+Analog
+10 V
+(Farbsensor)
+
+Farbsensor,
+z. B.
+> 12
+
+Farbsensor
+
+Tab.1: ROBO Pro-Einstellungen
+(Fototransistor/Fotodiode)
+
+Erhöhung der Empfindlichkeit
+Durch eine Parallelschaltung von Fotodioden und Fototransistoren kann man die
+Empfindlichkeit erheblich erhöhen.
+
+
+fischertechnikteile „integriert“ werden
+können. Bei Abb. 2 konnte auch der Vorwiderstand eingebaut werden.
+
+Fototransistoren und Fotodioden reagieren
+auch auf Tageslicht und Kunstlicht, jedoch
+nicht so stark. Wenn die Gehäuse dunkel
+eingefärbt sind, werden Tageslicht und
+Kunstlicht zusätzlich herausgefiltert und die
+IR-Empfindlichkeit steigt.
+
+Praktische Anwendungen
+Zunächst lässt sich damit wunderbar
+experimentieren. Wie empfindlich ist das
+Gerät? Welche Entfernung kann mit IRStrahlung überbrückt werden? Wie kann
+man die Reichweite erhöhen?
+
+
+Die Schaltung ließe sich erweitern, um mit
+einer handelsüblichen Fernbedienung auch
+ein fischertechnik-Modell ein- und auszuschalten.
+Wenn Sender und Empfänger einander
+gegenüberstehen, ergibt sich eine Lichtschranke. Wenn sie eng nebeneinander
+stehen, wären ein Näherungsschalter oder
+ein Kollisionswarner denkbar.
+
+
+Sender und Empfänger. Abstände bis 30 cm
+können damit überbrückt werden.
+
+Das ROBO Pro-Programm ‚IR Sender und
+Empfänger.rpp‘ (sowohl mit Fotodioden als
+auch mit Fototransistoren) kann von der
+Download-Seite der ft:pedia heruntergeladen werden.
+
+
+
+
+Tipp: Internetseiten für den
+Elektronik-Einstieg
+
+Saarländische fischertechniker
+gesucht
+
+Wer im Umgang mit den elektronischen
+Bauteilen unsicher ist, dem empfehle ich
+folgende Einstiegsseiten:
+
+Am Schluss noch ein persönliches Anliegen. Falls es im Saarland noch mehr fischertechniker gibt, würde ich mich über eine
+Kontaktaufnahme zum Erfahrungsaustausch freuen. Mein Schwerpunkt ist der
+Robotics TXT Controller mit der ROBO
+Pro-Software.
+
+ Der Elektronik-Experimentier-Server
+ Strippenstrolch.de
+ Elektronik-Kompendium
+Auf Google und Youtube finden sich zahlreiche weitere Einstiegsseiten und Einführungen.
+
+
+Referenzen
+[1]
+
+Kurt Mexner: ROBO Pro wird
+sensibel – Lichtempfindliche Widerstände. ft:pedia 3/2021, S. 67–69.
+
+[2]
+
+David Holtz: Alternative Controller
+(2): Infrarot-Empfänger. 2/2016, S. 60–67.
+
+

@@ -1,0 +1,177 @@
+
+
+Elektronik
+
+Vollautomatische Aussichtsplattform
+Werner Hasselberg
+In Ausgabe 4/2013 präsentierte ich eine vollautomatische Kransteuerung mit dem weiteren
+Ausblick, damit auch mal einen 3-achsigen Roboter steuern zu können. Die vollautomatische
+Aussichtsplattform ist dafür nun der nächste Schritt. Sie wird in einem späteren Artikel noch
+ein wenig verfeinert und schließlich zusammen mit der Schaltung aus ft:pedia 4/2013
+(Automatik zur Steuerung eines Kranes) einen Roboter zum Leben erwecken. Doch zunächst
+wollen wir uns mit der neuen Schaltung beschäftigen. Das Schöne daran ist, dass sie alleinstehend betrieben werden kann und deshalb hervorragend geeignet ist, um ein eigenes Modell
+wie beispielsweise eine Hebebühne, einen Aufzug oder eben unsere Aussichtsplattform zu
+steuern. Der große Vorteil: Wir erhalten nicht erst in einer zukünftigen Ausgabe eine
+vollständige und verwendbare Steuerung, sondern bereits jetzt, und die Schaltung ist für sich
+allein genommen sicherlich auch besser verständlich.
+Was ist also gefordert? Zunächst einmal die
+Plattform. Im Prinzip arbeitet sie wie ein
+Lift. Sie fährt nach unten, wartet solange bis
+alle Gäste eingestiegen sind und fährt dann
+wieder nach oben. Dort stoppt sie wieder
+eine gewisse Zeit, so dass auch alle den
+Ausblick schön genießen können, bevor es
+schließlich wieder nach unten geht, und so
+fort.
+Ein schönes Beispiel einer solchen Plattform findet sich in den Hobbyheften, wie
+dass die Plattform über einen einfachen
+Seilzug nach oben gehoben wird.
+Weit interessanter sind dagegen die auf der
+rechten Seite angebrachten Fotowiderstände in gelben Fassungen. Einer davon links
+oben, der andere rechts unten mit den dazugehörigen Lampenfassungen gegenüber.
+Sie bilden das Kernstück der Bühne, denn
+mit Ihrer Hilfe wird gesteuert, wie weit die
+Plattform nach oben und unten fahren soll.
+
+
+Erforderliche Bauteile
+· eine Spannungsversorgung aus dem
+Elektronikbaukasten von 1981
+· ein Schwellwertschalter aus dem Elektronikbaukasten von 1981
+· eine Leistungsstufe aus dem Elektronikbaukasten von 1981
+· zwei Relais aus em3, dem em-5-Ergänzungskasten oder in Selbstbauweise
+· beide Bausteine aus dem ec1 Baukasten
+(Gleichrichter und zugehöriges Relais)
+· Grundbaustein aus dem ec2 Baukasten
+· Widerstände, Dioden, Elko470, Elektromagnet
+
+Dunkelimpuls speichern
+In der ft:pedia 3/2013 wird dieses Prinzip
+im Artikel „Automatik für weichen Motorstart und -stopp“ bereits angewendet und
+erläutert. Hier benötigen wir es ebenso: Die
+beiden Fotowiderstände (kurz FW) werden
+im Schwellwertschalter (SWS) zwischen
+dem Br-Pin und der Minusschiene angebracht. Zusätzlich wird an jedem SWS ein
+22 kΩ-Widerstand an (+) und EA bzw. EB
+eingefügt. Sie bilden mit den SWS-Potentiometern und den FW einen so dimensionierten Spannungsteiler, dass sich der SWS
+vorerst nicht einschaltet. Seine rote LED
+Leuchte bleibt aus. Sobald ein FW, z. B. der
+von SWS1, abgedeckt und damit „unterbrochen“ wird, schaltet sich dessen rote
+LED ein. QA
+¯¯¯ wird deshalb zu (-), und das
+hat zur Folge dass sich der SWS2 ausschaltet, denn der Strom durch den Widerstand von EB fließt jetzt direkt über QA
+¯¯¯ ab.
+Auf diese Weise wird der SWS2 ausgeschaltet, sobald sich der SWS1 einschaltet,
+und umgekehrt.
+
+Arbeitsweise der Plattform
+Betrachten wir als Ausgangspunkt die Plattform am Boden. Sobald der untere FW
+ausreichend beleuchtet wird (sagen wir, er
+
+Elektronik
+
+befindet sich am SWS1), ist SWS1 ausgeschaltet. SWS2 ist demnach jetzt an, und
+weil (wie in Abb. 2 ersichtlich) die Leistungsstufe 2 (kurz LST2) an ¯¯¯
+QB angeschlossen ist, bleibt diese aus. An C2 der
+LST 2 befindet sich das em3-Relais, das uns
+als Polwendeschalter dient. Es ist so gepolt
+dass es im ausgeschalteten Zustand die
+Plattform nach oben fahren lässt. Sobald sie
+(je nach Einstellung des SWS-Potentiometers) hoch genug ist, wird der FW von
+SWS1 zu gering beleuchtet und SWS1
+damit eingeschaltet. Das schaltet wie oben
+erläutert den SWS2 sofort aus und das em3Relais damit ein, was den Motor schließlich
+umpolt. Die Plattform fährt jetzt zurück
+nach unten. Dort angekommen wiederholt
+sich alles wieder von vorne.
+Damit ist fast alles erledigt. Es fehlt aber
+noch ein wichtiger Punkt, denn unsere Plattform fährt im jetzigen Zustand der Schaltung ohne jegliche Unterbrechung rauf und
+runter. Das ist etwas bescheiden. Es fehlen
+noch die Wartezeiten fürs Ein- und Aussteigen. Wir brauchen also nach jedem Polwechsel des Plattformmotors noch eine
+Pause.
+
+Plattform-Wartezeit
+Das ist wieder die große Stunde der guten
+alten Silberlinge. Im ec2-Begleitheft auf
+Seite 53 wird eine sogenannte Ein-/Austastverzögerung vorgestellt, die uns jetzt
+sehr nützlich sein wird. Beim Drücken eines
+Tasters dauert es eine gewisse Zeit, bis sich
+das ec1-Relais einschaltet. Wird der Taster
+losgelassen, dauert es ebenfalls noch eine
+Weile bis es sich auf das ec1-Relais
+auswirkt und es wieder abfällt – genau das,
+was wir brauchen. Diese beiden Zustände
+verbinden wir einfach mit den beiden
+Polzuständen des em3-Relais.
+So wird mit dem Ein- bzw. Ausschalten des
+zweiten em3-Relais (in Schaltbild 1 links
+unten) die jeweilige Verzögerung aktiv. Es
+schaltet sich aus, sobald die LST1 aus geht.
+LST1 aus bedeutet, dass ein Polwechsel
+
+
+
+stattfindet, LST2 schaltet folglich sich
+selbst und damit das em3 Relais 1 ein. Der
+Strom muss dieses Relais durch a1-a3
+passieren, damit der Motor wieder laufen
+kann. Das wird je nach Stellung des ecRelais verhindert, und dieses wiederum
+wird vom ec-Grundbaustein gesteuert.
+Dessen Eingang E1 bekommt durch das emRelais 2 und einen 22-kΩ-Widerstand
+Strom, der durch den 470-µF-Kondensator
+(aus dem Elektronik-Kasten von 1981) zum
+Gleichrichter aber nur langsam Spannung
+aufbauen kann. Je nach PotentiometerEinstellung des Grundbausteins wird das
+ec-Relais also erst verzögert den umgepolten Strom zum Motor durchlassen. Das
+von LST1 gesteuerte em-Relais 2 steuert
+den Grundbaustein also verzögert in die
+jeweils benötigte Richtung. Nach dieser
+
+Zeit kann die Plattform wieder in die jeweils
+andere Richtung los fahren.
+Damit haben wir die nötigen Fahrtunterbrechungen geschaffen. Fertig ist die
+Schaltung, und wir haben ein schönes, voll
+funktionsfähiges Deko-Modell für den FunPark oder die Bauspielbahn oder alles was
+die Fantasie erlaubt. Viel Spaß beim
+Basteln.
+
+Quellen
+[1]
+
+fischertechnik: Elektronik. FischerWerke, Tumlingen, 1981.
+
+[2]
+
+fischertechnik: ec2 (Begleitheft).
+Fischer-Werke, Tumlingen, 1975.
+
+[3]
+
+fischertechnik: hobby 1 Band 5
+„Aussichtsturm mit Aufzug“.
+Fischer-Werke, Tumlingen, 1973
+
+Selbsthaltung
+(Durchfluss nach
+rechts)
+22 kΩ
+
+22 kΩ
+
+em-Relais 1
+
+Selbsthaltung
+(Durchfluss nach
+rechts)
+22 kΩ
+
+em-Relais 2
+
+470 µF
+(Minus am
+Gleichrichter,
+Plus an E1)
+
+Schaltbild 1: Die vollständige Schaltung des Aussichtsturms
+
+

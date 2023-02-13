@@ -1,0 +1,555 @@
+
+Computing
+
+Computing
+
+startIDE (9): Betrieb eines motorisierten xyTischs
+Rolf Meingast
+Vor einiger Zeit konnte ich für wenig Geld einen praktisch unbenutzten motorisierten xyMikroskoptisch erwerben. Dieser Beitrag beschäftigt sich mit dem Aufbau des Tisches, dem
+Anschluss an den ftDuino und mit dem Programm zur Steuerung, das auf dem TX-Pi [1, 2] mit
+der App startIDE [3, 4] läuft.
+
+Der motorisierte xy-Tisch
+
+In x- und y-Richtung lässt sich der Tisch um
+jeweils 150 mm verschieben. Die Spindeln
+besitzen eine Ganghöhe von 1 mm/Umdrehung. Durch vorsichtiges Testen gelang mir
+eine Zuordnung der vielen Steckerkontakte:
+ zwei Kontakte für den 12 V-Gleichstrommotor
+ zwei Kontakte für den Tachogenerator
+(Drehrichtung und Geschwindigkeitsmessung)
+ vier Kontakte für die Endtaster
+ vier Kontakte für den Encoder (500 Hoder L-Impulse pro Umdrehung)
+
+
+Der Tisch (Abb. 1, 2) ist über 30 Jahre alt
+und wurde nur wenige Jahre an einem Leitz
+Metalloplan 6 x 6 oder Ergolux Mikroskop
+zur optischen Prüfung von bis zu 6 Zoll
+großen Wafern in einem Reinstraum
+eingesetzt. Ein programmierbares Steuergerät (SCAN 2000) ermöglichte das automatische Abfahren vorgegebener Bereiche
+des Wafers. Das Programm befindet sich in
+einem EPROM TMS27C512-15 mit dem
+aufgeklebten Prüfdatum 29.12.1987. Leider
+funktioniert dieses auf einem CA80C85B5CP laufende Programm nicht mit meinem
+„neuen“ Tisch.
+
+Schon 2,5 V bis 5 V Spannung reichen zum
+Betrieb eines der beiden Motoren. Man
+erreicht dann eine Verschiebung mit einer
+Geschwindigkeit von bis zu 50 mm/s.
+
+Anschluss an den ftDuino
+Der ftDuino liefert an den Motorausgängen
+keine kontinuierlich einstellbare Gleichspannung, sondern eine „zerhackte Gleichspannung“ (PWM-Signal). Einstellwerte ab
+etwa 70 bewegen den Tisch sehr langsam
+und ruckelig, ab etwa 150 nimmt er schon
+„volle Fahrt“ auf. Leider ist das Auslesen
+der Encodersignale durch das Ruckeln mit
+einem deutlichen Fehler behaftet; bei voller
+Fahrt ist der Counter mit ca. 50.000 Impulsen pro Sekunde natürlich überfordert.
+
+
+
+
+
+Ich habe deshalb zwischen Encoder und
+Counter zwei einstellbare Frequenzteiler
+(SN74LS29x) geschaltet (Abb. 3).
+
+Weiter habe ich ein Robo-Interface an den
+TX-Pi [1, 2] angeschlossen, um den Tisch
+mit der IR-Fernbedienung zu steuern.
+
+
+Die 5 V-Versorgungsspannung wird mit
+einem Spannungswandler aus der Versorgungsspannung des ftDuino erzeugt. Bei
+schneller Bewegung des Tischs wird jeder
+128ste Impuls vom Counter an C1 und C2
+gezählt, das entspricht einer Bewegung um
+etwa 1/8 mm. Bei ganz langsamer Bewegung können an C3 und C4 die Encodersignale direkt gezählt werden.
+Die Endtaster sind mit I1 bis I4 verbunden.
+
+
+
+Das Steuerprogramm
+Zunächst werden alle Variablen initialisiert.
+
+Init menu 1
+Init faktor 2
+Init v_min 90
+Init v_max 180
+Init v 95
+Init delta_v 0
+
+
+Computing
+
+Es folgt eine Kontrolle der Counter. Dazu
+werden die beiden Motoren für 10 msec in
+x- und in y- Richtung eingeschaltet und die
+vorher auf Null gestellten Counter ausgewertet.
+Call Counter-Test 1
+Module Counter-Test
+#
+Tag Counter_Test_x
+#
+CounterClear FTD 3
+Init counter_x 0
+# kurzer Motorimpuls
+Motor FTD 1 l 100
+Delay 10
+Motor FTD 1 s 0
+# Counter 3 am Anschluss vor
+Frequenzteiler
+FromIn FTD 3 C counter_x
+QueryVar counter_x
+IfVar counter_x > 0
+Counter_Test_y
+Message kein Counter_x!'bitte
+pruefen!
+Clear
+Jump Counter_Test_x
+Tag Counter_Test_y
+CounterClear FTD 4
+Init counter_y 0
+# kurzer Motorimpuls
+Motor FTD 2 l 100
+Delay 10
+Motor FTD 2 s 0
+# Counter 4 am Anschluss vor
+Frequenzteiler
+FromIn FTD 4 C counter_y
+QueryVar counter_y
+IfVar counter_y > 0
+Counter_Test_Ende
+Message kein Counter_y!'bitte
+pruefen!
+Clear
+Jump Counter_Test_y
+Tag Counter_Test_Ende
+MEnd
+#
+
+Anschließend fährt der Tisch in x- und yRichtung die Endschalter an, bestimmt den
+Mittelpunkt des Tisches und fährt dorthin
+(403 und 431). Diese Position wird in mm
+angezeigt (407 und 437).
+
+Call endtaster 1
+
+Koordinatensystems
+Module endtaster
+#
+Print finde Endpositonen
+Print Mitte bei:
+# Endschaltertest-x
+# fahre zum Kontakt links
+Tag end-x_links
+Motor FTD 1 l 200
+IfInDig FTD 1 True end-x_links
+Motor FTD 1 s 0
+CounterClear FTD 1
+# fahre zum Kontakt rechts
+Tag end-x_rechts
+Motor FTD 1 r 200
+IfInDig FTD 2 True end-x_rechts
+Motor FTD 1 s 0
+FromIn FTD 1 C counter_x
+# x_max Berechnung
+# Frequenzteiler /128
+Calc x_max counter_x * 128
+# 1000 Wechsel pro Umdrehung
+Calc x_max x_max / 1000
+Init x x_max
+Calc dx x_max / 2
+Calc dx 0 - dx
+# fahre zur x-Mitte
+Call m_dx 1
+Calc x0 x0 + 10
+Calc x_max x_max - 10
+# dies soll ein Ueberfahren der
+Ränder vermeiden
+
+
+QueryVar x
+…
+Init y y_max
+Calc dy y_max / 2
+Calc dy 0 - dy
+# fahre zur y-Mitte
+Call m_dy 1
+Calc y0 y0 + 10
+Calc y_max y_max - 10
+# dies soll ein Ueberfahren der
+Ränder vermeiden
+QueryVar y
+Delay 1000
+MEnd
+
+Es folgt das Hauptmenu:
+
+Tag mainloop
+Init ir 0
+FromButtons menu Startpunkt
+Endpunkt Meander Foto Parameter mySteuerung
+IR-Fernbedienung STOP
+IfVar menu == 1 Startpunkt
+IfVar menu == 2 Endpunkt
+IfVar menu == 3 MEANDER
+IfVar menu == 4 ein_Foto
+IfVar menu == 5 Parameter
+IfVar menu == 6 my-Steuerung
+IfVar menu == 7 IR-Steuerung
+Stop
+#
+Tag Startpunkt
+
+#
+Init x_neu meander_x0
+Init y_neu meander_y0
+#
+# Startposition des Meanders
+#
+FromDial x_neu x0 x_max x_start
+FromDial y_neu y0 y_max y-start
+# fahre zum Startpunkt
+Call fahre-xy_neu 1
+Init meander_x0 x_neu
+Init meander_y0 y_neu
+Jump mainloop
+#
+Tag Endpunkt
+#
+Init x_neu meander_xe
+Init y_neu meander_ye
+# Endpunkt des Meanders
+FromDial x_neu x0 x_max
+x_Endpunkt
+FromDial y_neu y0 y_max yEndpunkt
+# fahre zum Endpunkt
+Call fahre-xy_neu 1
+Init meander_xe x_neu
+Init meander_ye y_neu
+Jump mainloop
+#
+Tag MEANDER
+#
+Call Meander 1
+Jump mainloop
+#
+Tag ein_Foto
+#
+Call foto 1
+Jump mainloop
+#
+Tag Parameter
+#
+FromKeypad meander_dx -150 150
+IfVar meander_dx == 0 Parameter
+FromKeypad meander_dy -150 150
+IfVar meander_dy == 0 Parameter
+FromKeypad ausschwingen 100
+10000
+Jump mainloop
+#
+Tag my-Steuerung
+# Noch in Arbeit!
+Jump mainloop
+#
+Tag IR-Steuerung
+#
+Call AIR 1
+Jump mainloop
+
+141
+
+Computing
+
+#
+Tag ENDE
+#
+Stop
+
+Immer wieder soll der Tisch um eine
+bestimmte Strecke dx oder dy bewegt
+werden.
+Das Modul für die x-Achse (Motor 1) sieht
+so aus:
+
+Module m_dx
+
+Zunächst erfolgt ein Test auf Bereichsüberschreitung: Es wird die neue Position
+berechnet. Falls sie außerhalb des freien Bereichs liegt erfolgt ein vorzeitiger Abbruch
+des Moduls.
+
+# in x-Richtung
+Calc k_x x + dx
+IfVar k_x < x_max
+Return
+Tag Go1_x
+IfVar k_x > x0
+Return
+Tag Go2_x
+
+Go1_x
+
+Go2_x
+
+Anhand des Vorzeichens von dx wird die
+Richtung bestimmt und der Betrag von dx
+in die Variable dxm übertragen.
+
+Init x k_x
+Init dxm dx
+# dx bleibt erhalten
+Init richtung_x 1
+IfVar dxm >= 0 positiv_x
+Init richtung_x -1
+Calc dxm dxm * -1
+Tag positiv_x
+
+Die für die Strecke dx erwarteten Impulse
+werden berechnet und in dxm gespeichert.
+# 1000 Impulse pro Umdrehung
+Calc dxm dxm * 1000
+# Frequenzteiler 128
+Calc dxm dxm / 128
+Calc dxm dxm + 1
+#
+# Bestimmung der Drehrichtung
+von Motor 1
+IfVar richtung_x == -1
+motor_l_x
+#
+Tag motor_r_x
+CounterClear FTD 1
+
+wird die Entfernung zum Ziel (276)
+berechnet und daraus die erforderliche
+Geschwindigkeit (278). Ist diese kleiner als
+die maximale Geschwindigkeit, wird sie
+übernommen, anderenfalls wird der Tisch
+mit maximaler Geschwindigkeit (280)
+bewegt.
+
+Tag ar_x
+FromIn FTD 1 C c
+Calc delta_c dxm - c
+Calc delta_v delta_c * faktor
+Calc v v_min + delta_v
+IfVar v < v_max br_x
+Init v v_max
+Tag br_x
+Motor FTD 1 r v
+IfIn FTD 1 C < dxm ar_x
+Motor FTD 1 s 0
+Jump mot_x_ende
+
+Entsprechend wird bei anderer Drehrichtung und für die y-Richtung (Motor 2) vorgegangen. Diese Module verwenden die
+Verschiebung um dx oder dy:
+
+Module fahre_dx_und_dy
+#
+Call m_dx 1
+Call m_dy 1
+MEnd
+#
+#
+# fahre zum Punkt xy
+
+
+Module fahre-xy_neu
+#
+Calc dx x_neu - x
+Calc dy y_neu - y
+Call m_dx 1
+Call m_dy 1
+MEnd
+
+Im Module MEANDER wird aus den
+Koordinaten von Anfangs- und Endpunkt
+und gegebenen Schrittweiten die Anzahl
+der einzelnen Schritte berechnet, um einen
+Bereich schrittweise lückenlos für ein Panoramabild (Abb. 7) abzufahren. Dazu habe
+ich den Tisch auf einen Leuchtkasten
+gestellt.
+
+Kurz vor Erreichen des Ziels wird die
+Motorgeschwindigkeit v verringert. Dazu
+
+
+
+9 cm x 12 cm-Negativ
+
+
+#
+#
+Module Meander
+#
+# evtl. Sprung nach hilf3
+#
+Init zeile 1
+Init spz 1
+Calc h meander_ye - meander_y0
+IfVar h > 0 h_pos
+Calc h h * -1
+Tag h_pos
+Calc b meander_xe - meander_x0
+IfVar b > 0 b_pos
+Calc b b * -1
+Tag b_pos
+#
+# Berechnung der Spalten
+Init hilf meander_dx
+IfVar hilf > 0 hilf1
+Calc hilf hilf * -1
+Tag hilf1
+Calc Spalten b / hilf
+Calc Spalten Spalten + 1
+# Berechnung der Zeilen
+Init hilf meander_dy
+IfVar hilf > 0 hilf2
+
+
+Calc hilf hilf * -1
+Tag hilf2
+Calc Zeilen h / hilf
+Calc Zeilen Zeilen + 1
+#
+Tag hilf3
+# fahre zum Startpunkt
+Init x_neu meander_x0
+Init y_neu meander_y0
+Call fahre-xy_neu 1
+Calc spz Spalten - 1
+#
+Init dx meander_dx
+Init dy meander_dy
+# 1. Zeile nach rechts
+Call foto 1
+#
+Tag z11
+#
+IfInDig FTD 6 True meander_ende
+Call m_dx 1
+Call foto 1
+LoopTo z11 spz
+Calc zeile zeile + 1
+IfVar zeile > Zeilen mainloop
+Calc dx 0 - dx
+# 2. Zeile nach links
+# naechste Zeile
+Call m_dy 1
+Call foto 1
+Jump z11
+Tag meander_ende
+Call fahre-xy_neu 1
+MEnd
+#
+
+Über ein Relais wird die Kamera ausgelöst:
+
+Module foto
+#
+# Pause zum Ausschwingen
+Delay ausschwingen
+# Relais-Ansteuerung
+# zum Auslösen der Kamera
+Motor RIF 3 l 7
+Delay 100
+Motor RIF 3 s 0
+# Zeit zum Belichten
+Delay 1000
+MEnd
+
+Eine angenehme Bedienung des motorisierten Tischs erfolgt mit der Fernbedienung
+des ROBO Controllers:
+
+
+
+# IR Fernbedienung ROBO
+Module AIR
+
+Clear
+Print M3r (1): Foto
+Print M3l (1):IR-Ende
+Print M3r
+(2):Startpunkt_des_Meanders
+Print M3l
+(2):Endpunkt_des_Meanders
+Print (1) Schrittweite 1 mm
+Print (2) Schrittweite: 16
+mikrometer
+Delay 300
+Tag AIR1
+Init ir 0
+FromRIIR ir
+IfVar ir == 8 Joyy+
+IfVar ir == 7 Joyy495
+IfVar ir == 10 Joyx+
+IfVar ir == 9 Joyx497
+IfVar ir == 1 Foto
+IfVar ir == 17
+Startpunkt_des_Meanders
+IfVar ir == 2 IR-Ende
+
+Computing
+
+IfVar ir == 18
+Endpunkt_des_Meanders
+IfVar ir == 24 Joyy++
+IfVar ir == 23 Joyy-503
+IfVar ir == 25 Joyx-504
+IfVar ir == 26 Joyx++
+IfVar ir == 22 Jmy0
+IfVar ir == 19 wert11
+IfVar ir == 20 wert22
+IfVar ir == 21 wert00
+IfVar ir == 3 wert1
+IfVar ir == 4 wert2
+IfVar ir == 5 wert0
+Jump AIR1
+Tag Joyy+
+Init dy ir-wert1
+Call m_dy 1
+QueryVar y
+Jump AIR1
+…
+Tag Joyx+
+Init dx ir-wert1
+Call m_dx 1
+Delay 250
+QueryVar x
+Jump AIR1
+….
+Tag IR-Ende
+Jump mainloop
+MEnd
+…
+
+Referenzen
+[1]
+
+Till Harbaum: TX-Pi – A Raspberry
+Pi setup for fischertechnik.
+Github.com
+
+[2]
+
+Peter Habermehl: Der (schnelle) Weg
+zum TX-Pi. ft:pedia 1/2019, S. 79-82.
+
+[3]
+
+Peter Habermehl: startIDE
+Referenzhandbuch. V1.7.5 vom
+29.10.2019, Github.com.
+
+[4]
+
+Peter Habermehl: startIDE für die
+Community Firmware – Programmieren direkt auf dem TXT oder TXPi. ft:pedia 1/2018, S. 102-107.
+
+
+

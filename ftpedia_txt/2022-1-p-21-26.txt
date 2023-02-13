@@ -1,0 +1,250 @@
+
+Modell
+
+Modell
+
+Chassis für 8x4-Truck
+Fabian Haas
+8×4-Trucks üben aufgrund ihrer schieren Länge und Leistung eine ganz besondere Faszination
+aus. Hier ein Modellvorschlag, der wesentliche Teile der Originale in ein fischertechnik-Modell
+umsetzt: die Doppellenkung und frei bewegliche Hinterachsen. In einer weiteren Ausbaustufe
+kommen zwei Motoren und eine von den Aluprofilen getrennte Lenkung hinzu.
+Lange Trucks, die vier Achsen in einem
+Rahmen vereinigen, üben eine ganz besondere Faszination aus. Hohe Nutzlast bei
+hoher Motorleistung und Geländegängigkeit vereinen sich hier. Besonders militärische LKW nutzen diese Bauform, aber auch
+zivile Transporter oder Kipper. Dabei sind
+besonders bei militärisch genutzten LKW
+alle Räder angetrieben und man spricht
+daher, gemäß der gültigen Antriebsformel,
+von einem 8×8-Lkw (Antriebsformel: Zahl
+der Räder × Zahl der angetriebenen Räder).
+Im zivilen Bereich sind es meistens 8×4Trucks; nur die nicht gelenkten Achsen
+werden angetrieben. Das verringert zwar
+die Geländegängigkeit, spart aber Gewicht
+und Mechanik, was wiederum der Nutzlast
+zugutekommt. Von passablen Straßen ist im
+Zivilleben ja auszugehen.
+Mich packte die Begeisterung für diese
+langen Trucks irgendwann und ich musste
+einfach die Konstruktion in fischertechnik
+umsetzen. 8×8 erschien mir illusorisch, 8×4
+allerdings gut machbar.
+
+Zuerst der Rahmen
+Es standen zwei Aluprofile mit 210 mm
+Länge zur Verfügung. Als Bereifung entschied ich mich für die Gummireifen 50
+(weich) und Felge 30 in Weiß und Gelb. Die
+Lenkung sollte über die Zahnspurstangen
+und Lenkhebel realisiert werden; damit war
+der Abstand zwischen den Aluprofilen auf
+30 mm festgelegt. Die beiden notwendigen
+
+Ritzel Z10 mit Spannzangen wurden mit je
+einem Baustein 30 mit Bohrung zwischen
+den Aluprofilen in die richtige, mittlere
+Position gebracht.
+Wie üblich wollte ich die Radachsen über
+Bausteine 15 mit rotem rundem Zapfen
+beweglich mit dem Aluprofil verbinden.
+Allerdings war der Baustein 15 nur noch
+sehr schwer drehbar, darüber hinaus sind
+die linke und rechte Seite der Lenkung dann
+nur schwer exakt auf gleiche Höhe zu
+bringen. Die Bauplatte 15×30×5 mit drei
+Nuten schaffte Abhilfe. Je zwei Federnocken verbinden die Bauplatte mit dem
+Aluprofil, die einzelnstehende Nut ist nach
+innen offen und in dieser kann der Baustein
+15 mit rundem Zapfen verankert werden.
+An den drehbaren Baustein 15 wurden ein
+Baustein 15 nach außen abstehend angefügt, um Spurweite und Schwenkbereich zu
+erhöhen. Die Metallachse 60 wird innen mit
+einer Klemmbuchse 10 gesichert, außen
+schließt die Felge 30 mit der Nabenmutter
+ab.
+Damit ist die Lenkung fast fertig. Die Zahnspurstangen und Lenkhebel wurden aus
+Platzgründen nach vorne und hinten gelegt,
+damit sich Zahnspurstangen und Räder
+beim maximalen Lenkeinschlag nicht
+blockieren. Allerdings schlagen bei den
+Vorbildern die Räder nicht um denselben
+Winkel ein: Da sich die Räder auf unterschiedlichen
+Kurvenradien
+bewegen,
+
+
+
+müssen sie auch unterschiedlich stark eingelenkt werden – die erste Achse stärker als
+die zweite. Wie konnte das in dem Model
+realisiert werden?
+
+Die Vorstudie
+
+Dazu gab es eine Vorstudie mit Grundplatte
+120×60, auf der drei Achsen mit sechs
+Rädern 23 montiert wurden (Abb. 1 und 2).
+Für eine vierte Achse war kein Platz und sie
+war für das untersuchte Problem auch nicht
+relevant. Zudem wurde ein derartiges Fahrzeug 6×6 mit zwei gelenkten Achsen z. B.
+als Transportpanzer Fuchs realisiert. Es
+wurden zwei Zahnspurstangen montiert, auf
+der Unterseite Ritzel Z10 und auf der Oberseite standen die Achsen heraus. Sehr oft
+werden die Zahnspurstangen durch eine
+Schubstange/Querlenker verbunden, wie
+ich im Nachhinein herausfand. Ich nutze
+jedoch die beiden Achsen, um auf der Oberseite der Grundplatte zwei Zahnräder anzubringen. Da die Zahnstangen unterschiedlich einschlagen sollten, mussten die beiden
+oberen Zahnräder unterschiedlich sein,
+allerdings nicht zu unterschiedlich – die
+Winkel der Räder sind ja ähnlich.
+
+Das Fahrwerk
+
+
+Die Wahl im endgültigen Modell fiel auf
+eine Kombination von Z20 und Z30, die
+Verbindung mit Kette erschien mir am
+einfachsten. Ausgiebige Fahrtests auf dem
+Wohnzimmerboden ergaben, dass ich das
+richtige, ein 2:3-Verhältnis, getroffen hatte
+– alle Räder bewegen sich zwanglos in ihrer
+Spur und werden nicht über den Boden
+geschoben.
+Diese Konstruktion wurde nun am großen
+Model realisiert. Sie bietet mit den Gummireifen einen guten, spurtreuen Lauf und
+schafft zudem eine Möglichkeit zum
+Anschluss eines Steuermotors. An den
+vorderen Stirnzapfen der Aluprofile wurden
+zwei Bausteine 30 angebracht, da die Zahnspurstangen nach vorne überstehen. Außerdem lassen sich die Aluprofile bei der Justierung sicher z. B. gegen eine Tischplatte
+drücken und die Bestandteile und Lenkgruppen ausrichten.
+
+
+Damit war die Doppellenkung geschafft,
+allerdings fehlten die beiden hinteren
+Achsen, die im LKW zum Antrieb genutzt
+
+
+Modell
+
+
+werden. Sie sollten im Modell zu gegebener
+Zeit den Antrieb aufnehmen.
+Die Achsen sollten einen eigenen, beweglichen Rahmen haben und natürlich sollten
+die einzelnen Räder bei der Kurvenfahrt
+geschmeidig mitrollen. Daher wurden –
+auch ohne Antrieb – die Differentialgetriebe Z15 und Achsen 110/120 als
+Achsen gewählt. Diese werden durch
+
+Bausteine 15 mit Bohrung geführt und über
+eine Kombination von Bausteinen 5, Winkelsteinen 15 und einem zentralen Baustein
+15 zusammengeführt.
+Mit dieser schwanenhalsartigen Konstruktion konnten die Aluprofile horizontal ausgerichtet werden. Stimmte diese Höhe
+nicht, würden die Profile nach oben oder
+unten zeigen.
+
+
+
+Der Rahmen für die Hinterräder wurde am
+zentralen Baustein 15 über zwei Gelenksteine 15 mit den Aluprofilen verbunden.
+Obwohl die Differentialgetriebe Z15 den
+Abstand stabilisieren, wurden noch zwei
+Bausteine 15 mit Verbindungsstücken 15
+links und rechts von den zentralen Bausteinen 15 eingefügt.
+
+
+Damit war das Model fertig! Acht Räder,
+vier davon lenkbar, mit unterschiedlichem
+Einschlag und die Hinterräder an einem
+beweglichen Rahmen aufgehängt: Damit ist
+bei Bodenwellen und Stufen ein kontinuierlicher Bodenkontakt gewährleistet!
+
+scheiterte die Motorisierung am zu geringen
+Abstand der beiden Profile. Die Motoren
+mussten mit dem Hinterradrahmen verbunden werden, um die Beweglichkeit bei
+gleichzeitigem Antrieb sicher zu stellen.
+Alle untersuchten Lösungen brauchen mehr
+Abstand zwischen den Aluprofilen.
+
+eingebaut
+
+
+
+Die Motorisierung
+Die Motorisierung erwies sich allerdings als
+schwieriger als gedacht, obwohl schon
+Differentiale eingebaut waren. Im Kern
+
+
+Der Rahmen wurde dann um einen Baustein
+15 erweitert, so dass zwei Motoren mit
+Stufengetrieben (wegen der erzeugten
+Kraft, aber auch wegen ihrer kompakten
+Bauform) und Achsen 110 Platz fanden.
+Gehalten werden die Motoren durch eine
+gemeinsame Strebe aus vier Bausteinen 30,
+die zwischen den zentralen Bausteinen 15
+mit zwei Bausteinen 5 mit zwei Zapfen
+angehängt ist. Die notwendige Anpassung
+
+
+Modell
+
+
+der Abstände zwischen dritter und vierter
+Achse wurde mit Bausteinen 5 realisiert.
+Die Verbindung mit den Aluprofilen erfolgt
+nach wie vor mit Gelenksteinen 15. Abb. 7
+gibt darüber genauer Auskunft.
+
+
+Das Model verfügt jetzt also über zwei
+Antriebsmotoren!
+
+Die Lenkung
+Ein Problem gelöst, ein weiteres tat sich
+auf: Der Abstand der Zahnspurstangen ist
+notwendigerweise 30 mm zwischen den
+Bausteinen 15 mit rundem Zapfen. Wie
+konnte das gelöst werden? Eine vom Abstand der Aluprofile unabhängige Lösung
+musste her, aber mit exakt mittiger Ausrichtung! Hier konnte auf die Modellstudie zur
+Lenkung zurückgegriffen werden. Die
+Lenkung und die Grundplatte 120×60
+waren sehr gut vereinbar, so dass ich die
+Bauplatte 15×30×5 mit drei Nuten verwarf
+(ebenso wie die Bausteine 30 mit Bohrung
+zwischen den Aluprofilen) und durch die
+Grundplatte 120×60 ersetzte.
+Diese musste nur noch zentriert werden.
+Der Abstand zwischen den Aluprofilen
+betrug nun 45 mm. 30 mm davon lassen
+sich mit den Bausteinen 15 abdecken.
+Bleiben noch 15 mm, gleichmäßig auf
+beiden Seiten, also 2 × 7,5 mm. Dieser
+
+
+
+Abstand lässt sich mit dem Baustein 7,5
+passgenau abdecken. Mit Federnocken sind
+die Aluprofile, Bausteine 30 und 15 sowie
+Bausteine 7,5 miteinander verbunden, so
+dass die nun von den Aluprofilen unabhängige Lenkeinheit zentriert liegt.
+
+Z20 und Z30 liegen. Damit ist viel Platz für
+eine motorische Ansteuerung der Lenkung.
+
+
+
+Damit steht eine unabhängige Lenkeinheit
+für alle möglichen weiteren Modelle zur
+Verfügung. Eine zweite Grundplatte
+120×60 wurde von oben aufgelegt und
+verbessert die Führung der beiden Achsen,
+auf denen die Ritzel Z10 und die Zahnräder
+
+So, nun viel Spaß bei den Gelände- und
+Zugtests des zweimotorigen 8×4-Chassis!
+Zwei Motoren haben nicht mal die
+Originale. Ich bin sicher, jemand realisiert
+interessante Aufbauten, genug Antriebskraft steht mit den beiden Motoren ja zur
+Verfügung.
+
+
+

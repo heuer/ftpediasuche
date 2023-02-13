@@ -1,0 +1,130 @@
+
+
+Modell
+
+Kugelzähler und Soundeffekt
+Hans-Christian Funke
+Mit dem Multifunktionsmodul [1] kann man mit Hilfe von Sensoren und Fühlern interessante
+Ergänzungen z. B. für Kugelbahnen aufbauen. Kugelbahnen sind immer noch der Trend bei
+den Modellen und aus diesem Grund habe ich meine Kugelbahn hergenommen und mit
+Soundeffekt und einem Kugelzähler ausgestatten.
+
+Einleitung
+In diesem Beitrag stelle ich euch die Schaltungen für einen einfachen elektronischen
+Soundgenerator und einen Kugelzähler vor.
+Für das Kugelbahnmodell selbst gibt es hier
+keine Anleitung zum Nachbauen.
+
+die die Kugel beim Vorbeirollen unterbricht. Eine Störlichtkappe reduziert den
+Lichteinfall auf das Fotoelement. Für das
+eigene Modell muss ausgetestet werden,
+welche Störlichtkappe (Durchmesser des
+Loches) sich am besten eignet. Wie in
+der Störlichtkappe möglichst dicht über der
+Kante der Kugelschiene angebracht sein.
+
+
+Kugelzähler
+Der Kugelzähler in der hier vorgestellten
+Variante basiert auf einer Lichtschranke,
+
+
+
+Über das Multifunktionsmodul (70015)
+wird die Unterbrechung registriert und über
+den internen Verstärker an das Zählermodul
+
+
+Modell
+
+
+(70001 oder 70002) weitergegeben. Das
+Multifunktionsmodul hat den Vorteil, dass
+über den Drehregler (Schwellenwertregler)
+die Sensibilität des Verstärkers eingestellt
+werden kann.
+
+Soundgenerator
+Mit dem Multifunktionsmodul kann man
+durch Einstecken eines 100-nF-Kondensators zwischen „-“ und E1 sofort über den
+internen Lautsprecher einen Ton erzeugen.
+Verändert man den Kondensator- oder den
+Widerstandswert (Schalter 4, Potentiometer
+10 kΩ), verändert sich die Frequenz und
+damit die Tonhöhe.
+Den Drehregler kann man auch ausschalten
+(Schalter 4 „oben“) und einen eigenen
+Widerstand einsetzen, um so einen genau
+definierten Ton zu erzeugen. Dieses Prinzip
+habe ich hier genutzt und drei Töne über
+Widerstände fest eingestellt, die nacheinander abgespielt werden.
+Dabei habe ich mich der Widerstände 1 kΩ
+und 2,2 kΩ aus dem Widerstands- und
+Dioden-Set (71047 – auch Bestandteil des
+Experimentiermoduls) bedient, so wie dem
+100-nF-Kondensator aus dem Kondensator-
+
+
+
+
+
+
+set (71046 – auch Bestandteil des Multifunktionsmoduls). Den Aufbau der Schaltung seht ihr in Abb. 5 (links).
+Um die drei Töne zu erzeugen verwende ich
+den Taktgenerator (70004) und das Relaismodul (70018). Damit werden abwechselnd
+die verschiedenen Widerstände eingeschaltet. Der dritte Ton resultiert aus der Parallelschaltung der Widerstände 1 kΩ und
+2,2 kΩ. Um alles bequem aufbauen zu
+können, habe ich ein Experimentiermodul
+(70021) für die Widerstände verwendet
+(Abb. 6).
+
+
+Der Taktgenerator hält sich selbst an, wenn
+der letzte Ton abgespielt wurde. Er wird
+z. B. durch einen Schalter (Reset des Taktgenerators) gestartet. In meinem Modell
+
+habe ich einen Schalter am Ende der Bahn
+eingebaut. Fällt eine Kugel in den Auffangbehälter, dann wird der Soundgenerator
+aktiviert.
+
+Schlusswort
+Mit dem Multifunktionsmodul lassen sich
+tolle Ergänzungen zu jedem Modell aufbauen:
+ Kugelzähler
+ Anzahl der Kugeln auf der Bahn (aufund abwärts zählen)
+ Laufzeit einer Kugel auf der Kugelbahn
+(oder einem Abschnitt)
+ Einzel- oder Mehrklangtöne erzeugen
+ Sirenen, Klangmuster oder Tonfolgen
+(zusammen mit Taktgenerator 70004
+und Steuermodul 70016)
+ Wärmesteuerung mit NTC- oder PTCFühlern
+ Magnetschalter (Magnet an einem Reedrelais oder Elektromagneten vorbeiziehen)
+ und vieles mehr…
+Zur Demonstration der Effekte gibt es auf
+Youtube ein kleines Kurzvideo mit
+Ansichten von allen Seiten [2].
+
+
+Modell
+
+Letztlich noch ein Hinweis zum Betrieb des
+Modells. Das Modell wollte ich über ein
+fischertechnik-Steckernetzteil (505287) betreiben. Dazu habe ich ein Versorgungsmodul V1 (70003) eingesetzt, an das ich das
+Steckernetzteil bequem anstecken konnte
+(siehe Abb. 7).
+
+Quellen
+[1]
+
+Funke, Hans-Christian: Elektronikmodule (Teil 3). ft:pedia 2/2020
+(diese Ausgabe), S. 68-81.
+
+[2]
+
+Funke, Hans-Christian: Video auf
+Youtube.
+
+
+
+

@@ -1,0 +1,341 @@
+
+
+Modell
+
+Solartracker
+Michael Schulte
+Ein Solartracker optimiert die Energieausbeute einer Solarzelle durch die exakte Ausrichtung
+nach dem Sonnenstand. Viel präziser als mit dem einfachen „Solarzellenachführer“ aus der
+ft:pedia 1/2020 [2] gelingt das mit einem Solartracker, der zu jeder Zeit den exakten Sonnenstand bestimmt.
+
+Warum ein Solartracker?
+Ein zweiachsiger Solartracker ist ein elektromechanisches Gerät, das eine Ebene
+(z. B. Solarpanel, Kamera, Laser etc.) exakt
+im Jahres- und Tagesverlauf zur Sonneneinstrahlung ausrichtet. Dabei werden Elevation (Höhenwinkel, Neigung) und Azimut
+(Horizontalwinkel, Himmelsrichtung) dieser Ebene durch Stellmotoren mittels eines
+Steuerprogramms so verändert, dass die
+Sonnenstrahlen z. B. auf ein PhotovoltaikModul stets senkrecht fallen und so eine
+maximale Strahlungs- und damit Energieausbeute erzielt werden kann.
+
+Ein zweiachsig nachgeführter Solartracker
+empfängt z. B. in Norddeutschland im langjährigen Mittel 26% mehr Einstrahlung als
+eine fest ausgerichtete Anlage (mit 30° Neigung, Südrichtung). In den Morgen- und
+Abendstunden ist die Einstrahlung im
+Jahresmittel bis zu 70% höher.
+Wenn das Solarpanel bei bedecktem Himmel aus der astronomisch berechneten Position in die Horizontalposition gefahren
+wird, steigt die mittlere Jahreseinstrahlung
+um ca. 2% [8].
+
+Das Konzept
+Das hier vorgestellte zweiachsige Solartracker-Modell berücksichtigt alle relevanten Einflussgrößen (Datum, Jahrestag, genaue Uhrzeit, Ortskoordinaten, Azimut,
+Elevation) und richtet ein kleines Solarpanel vollautomatisch so exakt zur Sonne
+aus, dass die Energieausbeute im Tagesund Jahresverlauf jederzeit maximiert ist.
+Nach dem Sonnenuntergang im Westen
+wird das Solarpanel selbsttätig zur Ausgangsposition (Osten) zurückgefahren. Hier
+beginnt morgens bei Sonnenaufgang ein
+neuer Betriebszyklus.
+
+USFWS/Rachel Molenda)
+
+
+Mein Steuerprogramm arbeitet mit Algorithmen, die auch Astronomen zur Berechnung der Sonnenposition im Tages- und
+Jahresverlauf verwenden [1].
+
+Für meinen Standort (lat = 51.222 Grad
+Nord, lon = 7.954 Grad Ost) gilt: Der maximale Höhenwinkel der Sonne über dem
+Horizont (Elevation) bewegt sich von ca.
+15° am 22. Dezember (Tag der Wintersonnenwende) um 12:00 Uhr WOZ (= Wahre
+Ortszeit) bis ca. 62° am 21. Juni um 12:00
+Uhr WOZ (Sommersonnenwende).
+
+Modell
+
+Das Modell
+
+Der entsprechende Horizontalwinkel (Azimut) liegt am 22. Dezember 12:00 Uhr
+WOZ zwischen etwa 128° (bei Sonnenaufgang) und 231° (bei Sonnenuntergang),
+und zwischen 50° (Sonnenaufgang) und
+310° (bei Sonnenuntergang) am 21. Juni.
+Entscheidend für die Berechnungen ist eine
+hochpräzise Uhr (z. B. hier eine DS3231
+Real Time Clock (RTC), siehe auch [3],
+oder ein GPS-Modul [4]), weil genaue Sonnenpositionen hochgradig zeitabhängig
+sind. Weitere wichtige Einflussgrößen für
+die Berechnung der Sonnenposition sind
+neben der genauen Uhrzeit das Datum, die
+Tag-Nr. des laufenden Jahres (1-365), die
+Geographische Breite (Latitude) und die
+Geographische Länge (Longitude) des
+Standortes. Ein GPS-Modul hat den Vorteil,
+dass es den Solartracker ortsunabhängig
+macht, indem es die notwendigen Standortkoordinaten liefert. Außerdem stellt es dem
+Solartracker die geforderte hochpräzise
+Zeitinformation bereit.
+Von allenfalls geringem Einfluss ist die
+atmosphärische Refraktion (Brechung eines
+Lichtstrahls in der untersten Erdatmosphäre), die insbesondere bei Sonnenaufund -untergängen den Einstrahlwinkel um
+maximal 1-2° verändern kann. Bei diesem
+Solartracker-Modell bleibt die Refraktion
+daher unberücksichtigt, weil der Refraktionswert innerhalb der Fehlertoleranz des
+Servos liegt. Das spart außerdem Arbeitsspeicher, der beim Arduino UNO auf 64 kB
+begrenzt ist; der Sketch bewegt sich
+ohnehin am Speicherlimit. Für die nachfolgende Solartracker-Version ist deshalb ein
+Arduino-Mega vorgesehen, der 256 kB
+Arbeitsspeicher zur Verfügung stellt.
+
+mit fischertechnik-Teilen
+
+Unter dem roten ‚Deckel‘ in Abb. 2 (hinten
+links) befindet sich die Steuerzentrale mit
+einem Arduino-Uno-Mikrocontroller [5]
+und einem Motorshield.
+Das C++-Programm wird von einem PC per
+USB auf den Microcontroller geladen und
+danach ohne PC selbständig ausgeführt. Die
+Aktualisierung der Azimut- und ElevationPositionen erfolgt kontinuierlich in 1°Schritten.
+Unter dem waagerecht liegenden Drehkranz
+in Abb. 2 befindet sich ein Hall-Drehwinkel-Sensor (0-360°), dessen Achse sich 1:1
+mit dem Solarpanel bewegt. So kann jederzeit die aktuelle Azimut-Position (AzI, Istwert) des Solarpanels bestimmt und mit
+dem astronomisch berechneten Azimutwert
+(AzS, Sollwert) verglichen werden. Ein
+Schrittmotor (in Abb. 2 verdeckt) sorgt über
+einen Schneckentrieb für die Bewegung des
+Drehkranzes.
+
+
+
+
+Schneckentrieb steuert die Azimut-Verstellung
+
+Falls der berechnete Azimut-Sollwert (AzS,
+s. Abb. 6) größer ist als der vom Hall-Drehwinkelsensor gelieferte Azimut-Istwert
+(AzI), so dreht der Steppermotor in Abb. 5
+32 Schritte vorwärts; ist AzS kleiner als
+AzI, so dreht der Steppermotor 32 Schritte
+rückwärts (32 Schritte entsprechen ca. 1°
+des Drehwinkels). Auf diese Weise ist (mit
+einer Auflösung von ca. 1°) im Idealfall
+immer AzI = AzS, d. h. die Azimutposition
+des Solarpanels (AzI) stimmt mit dem
+berechneten Azimutwert (AzS) überein.
+
+(siehe auch [5]) zeigt die wichtigsten Daten an
+
+
+Der astronomisch berechnete ElevationWert wird 1:1 direkt auf den Servo übertragen (Abb. 4) und bewirkt eine ständig
+aktualisierte, exakte Schrägausrichtung des
+Solarpanels zur Sonne. Die Spannung am
+Solarpanel wird gemessen und auf dem
+Display angezeigt.
+
+
+Auf dem LC-Display (Abb. 6) werden angezeigt: Datum, Uhrzeit (MEZ), AzS =
+Azimut-Sollwert (astronomisch berechneter Wert in Grad), WZ = Wahre Ortszeit
+(um 12:00 Uhr steht die Sonne am Standort
+genau im Süden), AzI = aktueller AzimutSollwert des Solarpanels (durch einen HallDrehwinkel-Sensor gemessener AzimutIst-Wert in Grad), SO = aktuelle Himmelsrichtung (SüdOst), TL = Tageslänge in [h],
+Elv = Elevation (Sonnenhöhe, berechneter
+Wert in Grad), PV = aktuelle Spannung am
+Solarpanel [Volt].
+
+
+Modell
+
+des Hall-Sensors, der RTC-Uhr und des
+LCD-Displays erfolgt über die Anschlüsse
+auf dem Motorshield mit +5 VDC.
+Status-LED:
+
+
+
+
+Ein Zusatzdisplay (Kuman UNO R3 3,5"
+TFT Touchscreen, Abb. 7) zeigt die wichtigsten Zeit- und Sonnenstands-Werte im
+10-Sekunden-Takt an. Das Zusatzdisplay
+wird von einem Arduino-Mega-2560Mikrocontroller angesteuert.
+
+Grüne LED: Drehkranz dreht vorwärts
+im Uhrzeigersinn
+Rote LED: Drehkranz dreht rückwärts
+gegen den Uhrzeigersinn (siehe Tab. 1).
+Blaue LED (in Vorbereitung): Drehkranz bewegt sich nach Sonnenuntergang sehr schnell zurück zur Startposition am Folgetag im Osten.
+
+Der Arduino-Code zur Ansteuerung des
+Modells findet sich auf meiner Webseite
+zum Download [1].
+Berechnung des Getriebes
+Die Zähnezahl des Drehkranzes beträgt 58.
+Die Schnecke dreht den Drehkranz bei jeder
+Umdrehung um einen Zahn. Also liegt das
+Untersetzungsverhältnis bei 58:1.
+
+entsprechend 0-5 Volt)
+
+Der Hall-Drehwinkelsensor (Abb. 8) dient
+zur Bestimmung der aktuellen AzimutPosition des Drehtellers (Ist-Wert) und des
+aufmontierten Solarpanels.
+Die Stromversorgung des Mikrocontrollers
+und des Motorshield erfolgt über die runde
+Steckbuchse vorne auf dem Mikrocontroller-Board. Die Eingangsspannung sollte
+mindestens 7,5 VDC betragen und das
+Maximum von 9,0 VDC nicht überschreiten. Das Motorshield versorgt den Schrittmotor mit 7,5 VDC (~ Nennspannung). Der
+Servo wird über den Pin Vin auf dem
+Motorshield mit seiner Nennspannung von
+7,5 VDC versorgt.
+Achtung: Keinesfalls dürfen Schrittmotor
+und Servo allein über die USB-Leitung (+ 5
+VDC) betrieben werden. Es drohen Defekte
+bei Mikrocontroller und angeschlossenem
+Computer! Die Stromversorgung der LEDs,
+
+Der Steppermotor benötigt für eine Achsumdrehung 200 Schritte. Damit benötigt
+eine Umdrehung des Drehkranzes 200
+Schritte x 58 = 11.600 Schritte.
+Pro Winkelgrad dreht sich der Drehkranz
+um 11.600 Schritte/360°=32.222 Schritte/°.
+Eine Winkelveränderung des Drehkranzes
+um 1° benötigt also mindestens 32 Schritte
+des Steppermotors.
+
+
+
+
+
+
+
+
+
+
+Pinbelegung am Arduino UNO
+Pin
+
+Belegung
+
+D9
+
+(Servo 2, Pin S): ServoSteuerleitung (Elevation)
+
+Vin
+
+Stromversorgung des Servos
+(für Elevation), ca. 7,5 VDC,
+am Motorshield mit 9 V
+beschriftet
+
+D14
+(A0)
+
+grüne LED (Drehteller
+vorwärts)
+
+D15
+(A1)
+
+rote LED (Drehteller
+rückwärts)
+
+A2
+
+Hall-Drehwinkelsensor (für
+Azimut), dreipolig
+
+A3
+
+3-Volt-Solarpanel (+), (GND)
+
+A4
+
+SDA: LCD-Display, DS3231
+RTC (jeweils vierpolig)
+
+A5
+
+SCL: LCD-Display, DS3231
+RTC (jeweils vierpolig)
+
+M3/M4
+
+Motorshield: Anschluss
+Schrittmotor (Azimut),
+vierpolig
+Tab. 1: Pinbelegung
+
+Hardware-Liste
+
+
+
+
+
+
+
+
+Arduino-Uno-Mikrocontroller R3
+Arduino-Mega-2560-Mikrocontroller
+2 x DS3231 RTC-Echtzeituhr (Zeitbasis Solatracker und für Zusatzdisplay)
+Adafruit-Motor-Shield V.1
+Pololu 1207-Stepper-Motor, 7,4 VDC
+Longruner-17kg-Digital High-Torque
+Robot-Servo-Motor, 7,5 Volt DC
+
+
+
+SunFounder I2C 20x4 LC-Display-Modul, 5 VDC
+Hall-Drehwinkelsensor (0-360°/0-5 V
+Output), Versorgungsspannung 5 VDC
+(s. Abb. 7).
+diverse fischertechnik-Bauteile
+Kuman UNO R3 3,5" TFT Touchscreen
+(Zusatzdisplay)
+Solarpanel ETM500-3V (14 x 13 cm,
+3 VDC; Kosmos-Solarbaukasten)
+
+Referenzen
+Eine sehr hilfreiche Website zur Sonnenstandsberechnung mit vielen astronomischen Formeln und Programmierbeispielen
+findet sich unter astronomie.info.
+Sehr hilfreich zum Verständnis der astronomischen Sonnenstandsberechnung ist auch
+das Buch von Volker Quaschning [7].
+[1]
+
+Michael Schulte: Sonnenstandberechnung und Solartracking.
+Arduino-Sketch.
+
+[2]
+
+Dirk Fox: Solarzellennachführer.
+ft:pedia 1/2020, S. 79–84.
+
+[3]
+
+Dirk Fox: I²C mit dem TX – Teil 7:
+Real Time Clock (RTC). 4/2013, S. 28–34.
+
+[4]
+
+Dirk Fox: I²C mit dem TX – Teil 6:
+GPS-Sensor. ft:pedia 3/2013, S. 54–
+62.
+
+[5]
+
+David Holtz: Alternative Controller
+(1): Der Arduino. ft:pedia 2/2016,
+S. 56–59.
+
+[6]
+
+Dirk Fox: I²C mit dem TX – Teil 9:
+LC-Displays. ft:pedia 1/2014, S. 47–
+57.
+
+[7]
+
+Volker Quaschning: Regenerative
+Energiesysteme. Carl Hanser Verlag,
+München, 11. aktualisierte Auflage
+2021.
+
+[8]
+
+Siegfried Kreußler, Manfred Bergmann: Lohnen sich Solartracker?
+Sonnenenergie 1|2016.
+
+

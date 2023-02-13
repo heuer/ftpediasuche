@@ -1,0 +1,704 @@
+
+
+Uhren
+
+Ein einfach zu bauendes Uhrenpendel
+Stefan Falk
+Was hätte ich mich in meiner Kindheit gefreut, wenn ich mit fischertechnik einen gut
+funktionierenden Pendelantrieb mit Pendelhemmung hinbekommen hätte. Allerdings waren
+meine Fertigkeiten damals noch zu gering – und in keiner Anleitung und keinem Club-ein solches Modell beschrieben. Erst in den 1990ern gelang mir eine richtige Stand-Pendeluhr
+– mit einem großen Kieselstein als Gewicht. Deshalb hier eine Anleitung für ein Uhrenpendel,
+bei dem nichts auf Zehntelmillimeter justiert werden muss.
+
+Uhren in der fischertechnikGeschichte
+Anleitungen
+
+Zahnrad Z30 benötigte) und b) wie man
+zwei Zeiger auf einer einzigen Achse antreiben kann. Für 1970 – grandios! Ich musste
+das sofort nachbauen!
+
+Die erste Uhr, die ich von fischertechnik
+sah, war ein Modell eines Uhrengetriebes in
+der Anleitung zum Ur-fischertechnikStatikkasten 300S [1]:
+
+in der Anleitung von 1971
+
+Club-Hefte
+in der Statik-Anleitung von 1970
+
+Das war keine wirklich funktionierende
+Uhr, denn sie lief mit dem Motorantrieb viel
+zu schnell. Aber zwei wesentliche Elemente
+wurden dargestellt: a) Die Untersetzung
+1:12 zwischen Minuten- und Stundenzeiger
+(für die man das im 300S-Kasten enthaltene
+
+
+Eine richtig funktionierende Uhr wurde im
+fischertechnik-Clubheft 1/1973 vorgestellt
+[2]: Ein h4-Grundbaustein (ein „Silberling“) steuerte als Taktgeber geschaltet
+einen Motor alle 30 s um einen Schritt
+weiter (Abb. 3). Auch dieses Modell – zu
+dieser Zeit einfach der Hammer! – musste
+man natürlich unbedingt nachbauen –
+
+sofern man die benötigten Teile sein Eigen
+nannte.
+
+Uhren
+
+Eine ganz ähnlich gebaute Uhr wurde später
+als Clubmodell 2/77 im Clubheft 2/1977
+vorgestellt [3] (Abb. 4).
+hobby-Begleitbücher
+
+aus dem Clubheft 1973-1
+
+Clubmodell 2/77
+
+aus dem hobby-1-Begleitbuch 2
+
+
+
+
+Das Begleitbuch 2 zum Kasten hobby 1 geht
+mechanischen Uhren richtig auf den Grund
+[3]. Dort werden das Schlagwerk einer
+Pendeluhr (Abb. 5), eine Pendeluhr
+(Abb. 6), eine weitere Pendelhemmung
+(Abb. 7) und anderes beschrieben:
+
+der fischertechnik-Community [4] finden
+sich zuhauf funktionierende Uhrenmodelle
+mit ganz unterschiedlichen Zeitquellen,
+Mechaniken und Anzeigeformen.
+Als eines von vielen Beispielen sei hier die
+erste mir bekannte fischertechnik-Zeigeruhr
+mit Stunden-, Minuten- und sogar Sekundenzeiger auf derselben Achse gezeigt – ein
+wunderschönes Modell von Thomas Püttmann [5]:
+
+Thomas Püttmann
+
+aus dem hobby-1-Begleitbuch 2
+
+Uhren in der fischertechnik
+Community
+Mittlerweile sind die Zeiten anders. Bausteinbestände sind heute meist nicht mehr
+so bescheiden wie damals, neue Teile sind
+hinzugekommen, Computer-Interfaces und
+Mikrocontroller sind gang und gäbe – und
+vor allem können wir uns unsere Modelle
+gegenseitig im Internet zeigen und uns
+darüber auch auf fischertechnik-Conventions und -Stammtischen austauschen. Da
+ist die Quelle an Ideen, aus denen geschöpft
+wird, natürlich um ein Vielfaches größer.
+Unter dem Abschnitt Uhren im Bilderpool
+
+von Thomas Püttmann [6, 7]
+
+Eine weitere wunderbare Pendeluhr hat
+Thomas Püttmann im Buch Technikgeschichte mit fischertechnik [6, 7]
+
+beschrieben. Sie hat sogar ein Schlagwerk
+(Abb. 9).
+Eine fantastische und bemerkenswert genau
+gehende Pendeluhr hat Martin „Remadus“
+Romann 2011 vorgestellt [8]:
+
+Uhren
+
+Ein puristischer Pendelantrieb
+So hoch wollen wir heute nicht hinaus. Ich
+stelle einen einfach zu bauenden Pendelantrieb mit folgenden Eigenschaften vor:
+
+
+
+ Er besteht ausschließlich aus unveränderten fischertechnik-Bauteilen (bis
+auf ein Haushaltsgummi).
+ Es werden nur minimal viele Bauteile
+verwendet, und auch nur solche, die weit
+verbreitet sind.
+
+
+
+
+ Der Pendelantrieb kommt ohne große
+Justierarbeiten aus. Einfach im Raster
+bauen, und es sollte funktionieren! Das
+Modell sollte deshalb auch für unsere
+jüngeren fischertechnik-Fans gut nachzubauen sein.
+ Dennoch ist – neben der Pendelhemmung – ein kleiner technischer
+Leckerbissen eingebaut: Ein kompaktes
+Freilauf-Getriebe [9, 10] zum Aufziehen
+der Uhr.
+ Als Gewicht genügen sechs Grundbausteine 30.
+
+Baustufe 2
+Als nächstes wird lediglich ein Baustein 15
+mit der Nut nach außen eingeschoben.
+Obenauf folgt eine 38253 S-Kupplung 15 2:
+
+Wer den fischertechnik-Designer [11] oder
+den kostenlosen Viewer dazu besitzt, kann
+die Designer-Datei des Modells mit allen
+Baustufen und Baugruppen von [12]
+herunterladen. Abb. 11 zeigt das Modell im
+Ganzen.
+Wenn ihr das Modell nachbaut, beachtet
+bitte: Alles muss ganz leichtgängig gebaut
+werden. Alle Achsen müssen sauber fluchten, nichts darf klemmen.
+Aber der Reihe nach.
+Baustufe 1
+Das ist eine wichtige Basis, auch wenn nur
+ein Grundbaustein 30 und zwei Federnocken auf einer Bauplatte 500 benötigt
+werden:
+
+
+Wichtig: Der Baustein 15 muss genau wie
+hier gezeigt ausgerichtet sein – Nut nach
+vorne, Nut senkrecht stehend!
+
+
+Was wir hier sehen, wird später „vorne“.
+
+
+
+Baustufe 3
+Es folgen zwei Statikträger 60 und zwei
+Federnocken (Abb. 14). Achtet darauf, dass
+die Nuten der Statikträger nach vorne, in die
+hier dargestellte Richtung zeigen, und dass
+die Federnocken ebenfalls in dieser
+Richtung angebracht werden:
+
+Uhren
+
+22,5 und darüber wiederum ein Zahnrad
+Z10 (Abb. 17).
+
+Baustufe 4
+Auf die Statikträger kommen zwei Bausteine 30, obendrauf zwei Statikträger 15
+mit je einer 38253 S-Kupplung 15 2.
+
+
+
+Die Nuten der Bausteine 30 sollen waagerecht liegen und nach vorne zeigen. Achtet
+darauf, die Statikträger mit ihren Nuten
+ebenfalls wie hier gezeigt in Längsrichtung
+aufzuschieben – einen ganz vorne, einen
+ganz hinten.
+Baustufe 5
+Es folgt die erste drehbare Baugruppe: Auf
+einer Metallachse 110 sitzt eine Drehscheibe (sie kann mit einer Nabe 25 31014
+oder einer Flachnabe 31015 befestigt sein).
+Auf der wiederum sitzen sechs Winkelsteine 30° – bitte genau so im Kreis ausgerichtet wie in Abb. 16 gezeigt. Das ist das
+„Kronrad“ [13] der Uhr.
+Direkt über der Nabe sitzt eine 36334
+Riegelscheibe (bitte mit ihren Noppen nach
+unten einsetzen, sodass die glatte Fläche
+oben ist), darüber eine 38260 S-Kupplung
+
+
+
+
+Das Ganze muss wie in Abb. 18 eingebaut
+werden: Die Achse soll unten genau auf
+dem Baustein 15 aufsitzen. Oben bilden die
+Nabe und die Riegelscheibe exakt den
+richtigen Abstand. Die Riegelscheibe und
+Nabe sollen direkt unter der waagerechten
+S-Kupplung 22,5 enden – aber nicht klemmen! Die Achse muss ganz leichtgängig
+gedreht werden können!
+
+Auf die Achse kommen – von links nach
+rechts in Abb. 19 gesehen – ein Klemmring,
+zwischen Baustein 15 und dem roten Baustein 15 mit Bohrung ein 31597 Abstandsring 3, und nach dem Baustein 15 mit
+Bohrung wieder ein Klemmring.
+Auch hier bitte unbedingt darauf achten,
+dass die Klemmringe nicht zu stramm
+sitzen. Der rote Baustein 15 mit Bohrung
+muss sich wiederum ganz leichtgängig
+drehen können!
+
+
+Baustufe 7
+Jetzt wird’s interessant: Es folgt die Pendelhemmung mit den „Lappen“ [13], ein
+zentrales Element einer Pendeluhr!
+
+
+
+Die Höhe, in der das Z10 sitzen muss, ergibt
+sich noch in einer späteren Baustufe.
+
+Von links nach rechts folgen also: Winkelstein 30°, Bausteine 7,5, 5, 5 mit zwei
+Zapfen, 7,5, 15 mit Bohrung, 5, 7,5 und
+wieder ein Winkelstein 30°. Alles wird
+einfach sauber zusammengesteckt.
+
+Baustufe 6
+Das ist nun wieder einfach: In die frei
+liegende Nut des Baustein 15 im Fuß des
+Modells kommt eine Metallachse 50 – zur
+Not auch eine längere, aber hier soll es auf
+jeden Fall eine Metallachse sein. Sie wird
+später das Pendel tragen (Abb. 19).
+
+Damit der Pendelantrieb später schön
+gleichmäßig „Tick-Tack“ und nicht „Tick…-Tack-Tick-…-Tack“ macht, könnt ihr
+den linken Baustein 7,5 und den linken
+
+
+Uhren
+
+Winkelstein 30° etwas nach hinten versetzen:
+
+links außen
+
+Es kommt hier aber nicht auf einen Millimeter an. Ein bisschen nach hinten, und es
+wird passen.
+Diese Baugruppe wird nun so auf die vorherige Baustufe aufgesetzt:
+
+
+Baustufe 8
+Es folgt das Getriebe nach dem bereits verbauten Zahnrad Z10. Wir benötigen hier
+einfach eine Metallachse 110, ein Zahnrad
+Z10, einen Klemmring und ein Zahnrad
+Z40 auf einer Flachnabe.
+
+
+Die untere Nut des mittleren Bausteins 7,5
+wird einfach auf den nach oben stehenden
+Zapfen des Bausteins 15 mit Bohrung aufgeschoben, der auf der Achse der vorherigen Baustufe steckt. Für alle Fälle in
+
+Damit ergibt sich auch die notwendige
+Höhe, in der das Z10 sitzen muss: Es soll
+satt und leichtgängig ins Z40 eingreifen.
+Genau bei der Flachnabe des Z40 beginnt
+die Metallachse 110, und das Z40 wird
+durch geeignete Einstellung des Klemmrings so nah ans Z10 gebracht, dass die
+Zähne sauber eingreifen („miteinander
+kämmen“), aber so weit vom Z10 weg, dass
+das Getriebe noch leichtgängig läuft. Ihr
+merkt: Leichtgängigkeit ist bei einer nur
+von einem kleinen Gewicht angetriebenen
+Uhr alles.
+
+
+Das Z10 am anderen Ende der Achse soll so
+angebracht werden, dass noch ca. 7,5 mm
+(sprich: ungefähr die Breite eines Bausteins
+7,5) der Achse herausragen. Dieser Achsstummel muss später nämlich etwa halb in
+einem Baustein stecken.
+
+damit man leichter kurbeln kann). Wer
+keine hat, kann stattdessen auch einfach
+eine 31026 Handkurbel auf einer Nabe
+verwenden.
+
+Baustufe 9
+Jetzt kommt wieder etwas Einfaches: Ein
+kleines Statikgerüst, bestehend aus je einem
+Statikträger 120, 60 und 30, nach vier freien
+Löchern der Bauplatte 500 begonnen
+(Abb. 25 und 26). Verstrebt wird das mit
+einer I-Strebe 30 und zwei X-Streben 42,4:
+
+von der Innenseite gesehen
+
+
+Baustufe 10
+Und weiter geht’s. Letztlich brauchen wir
+das Gebilde aus Abb. 28, der besseren
+Sichtbarkeit halber in die Senkrechte
+gedreht gezeigt. Von oben nach unten
+landen auf der Metallachse 110 folgende
+Teilgruppen:
+ Die Kurbel, bestehend aus einem Zahnrad Z30 mit einer eingeschobenen Achse
+als Griff (genauer: eine Achse 30, zwei
+Klemmringe und eine 31983 Hülse 15,
+
+ Es folgt eine 38253 S-Kupplung 15 2, die
+wir später zur Befestigung brauchen.
+ Ein normaler Klemmring 5.
+ Sodann ein 31020 Klemmring Z36 für
+die 31016 Seiltrommel 15, auf der das
+Seil zum Gewicht aufgewickelt sein
+muss – deshalb ist diese Seiltrommel in
+ Schließlich eine weitere 31016 Seiltrommel 15 und ein 32880 Baustein 30
+mit Bohrung. Steckt den Baustein 30 mit
+Bohrung so auf eine Seiltrommel, dass
+das Loch der Seiltrommel und die
+mittlere Bohrung des Bausteins 30 in
+einer Linie liegen („fluchten“). Steckt
+die Achse so tief ein, dass sie etwa in der
+Mitte des Bausteins 30 mit Bohrung
+endet (Abb. 27).
+
+
+Uhren
+
+im Baustein 30 mit Bohrung stecken
+
+Eingebaut wird das ganze wie in Abb. 29
+gezeigt:
+1. Schaut schon mal kurz auf Baustufe
+12: Dort wird ein Gummiring gebraucht,
+der etwa 50 mm Innendurchmesser hat.
+Das kann auch ein längeres Haushaltsgummi sein, das ihr geeignet zu einem
+Ring zusammenlegt. Legt das Gummi
+schon mal locker um die Achse, bevor
+ihr die Achse ins Modell einbaut.
+Damit wird es leichter, Baustufe 12
+fertigzustellen.
+2. Der Baustein 30 mit Bohrung wird auf
+den Achsstummel der ersten waagerechten Achse 110 (von Baustufe 8)
+gesteckt.
+3. Die S-Kupplung landet auf dem kleineren der beiden Träger aus Baustufe 9.
+Jetzt wird auch klar, warum die Achse 110
+vom Z10, die wir in Baustufe 8 schon eingebaut hatten, etwa einen halben Baustein
+herausragen soll: Die beiden Metallachsen
+110 liegen jetzt zwar in einer Linie (sie
+fluchten) und treffen sich in der Mitte des
+Bausteins 30 mit Bohrung – aber sie sind
+nicht fest miteinander verbunden! Warum –
+dazu kommen wir noch.
+
+dargestellte Seiltrommel muss mit dem Seil
+versehen sein.
+
+Wichtig ist hier wieder, dass alles leichtgängig läuft. Die beiden Metallachsen 110
+sollen „satt“ im Baustein 30 mit Bohrung
+stecken, aber nicht aneinander drücken –
+sonst würde der Klemmring gegen seine
+Lagerung (die 38253 S-Kupplung 15 2)
+drücken und damit reiben. Justiert also den
+Klemmring und die mittig liegende Seilrolle (die mit Seil) so, dass die Achse nicht
+herausrutschen kann, aber nicht reibt und so
+sehr leichtgängig drehbar bleibt.
+
+
+
+
+
+Baustufe 11
+Es folgt eine kleine Vorbereitung auf etwas
+Raffiniertes: Baut bitte sechs Winkelsteine
+60° genau wie in Abb. 30 gezeigt an den
+Baustein 30 mit Bohrung:
+
+Drehrichtung überträgt, in die andere Drehrichtung aber einfach „frei“ läuft (wie beim
+Rücktritt eines Fahrrads). Die bauen wir so:
+
+am Baustein 30 mit Bohrung
+
+Wichtig: Die jeweils mittleren Winkelsteine
+60° müssen ihre Nut nach außen tragen.
+Baustufe 12
+Jetzt kommt ein mechanischer Leckerbissen: Ein Freilaufgetriebe [9, 10]. Das ist
+ein Getriebe, das die Drehung nur in eine
+
+
+
+Wir brauchen dazu:
+
+
+
+
+
+
+Zwei 38415 Kunststoffachsen 40,
+zwei Bausteine 7,5,
+zwei 31506 V-Platten 15×15,
+vier Klemmringe und schließlich
+ein Haushaltsgummi geeigneter Länge
+(in Abb. 31 grün dargestellt). Dieses
+
+Gummi solltet ihr bereits in Baustufe 10
+über die Achse gestülpt haben, sodass es
+jetzt bereitsteht.
+
+Uhren
+
+mit einem feinen Rastgeräusch über die
+feinen Zähne des Z10 hinweg. Wird aber
+andersherum gedreht, verfangen sich die
+Platten 15×15 in den Zähnen des Ritzels
+und treiben es an. Abb. 32 zeigt eine weitere
+Ansicht, Abb. 33 ein Foto des echten
+Modells.
+Probiert es aus! Spielt ein wenig mit dem
+Freilaufgetriebe, indem ihr die Kurbel
+dreht. Auf die Kurbel gesehen (Abb. 34)
+müsst ihr locker nach rechts (im Uhrzeigersinn) drehen können – aber nach links nicht,
+da muss der Freilauf sperren. Das nutzen
+wir später aus, um die Uhr leicht aufziehen
+zu können.
+
+
+
+Das Modell sollte nun so aussehen wie in
+Baustufe 13
+
+Das funktioniert so: Die Bausteine 7,5 mit
+ihren Platten 15×15 darauf werden vom
+Gummiring genau wie in Abb. 31 gezeigt
+von beiden Seiten gegen das feine Ritzel des
+Zahnrads Z10 gedrückt. Wenn sich der
+Baustein 30 mit Bohrung mit all den Teilen
+für die Freilaufkupplung wie in Abb. 31
+gesehen nach links dreht (entgegen dem
+Uhrzeigersinn), dann dreht die Anordnung
+einfach durch. Die Platten gleiten einfach
+
+Jetzt folgen nur noch ein paar einfache
+letzte Dinge. Wir ergänzen mit drei weiteren Statikträgern 120 einen kleinen Turm,
+verstärkt mit einer I-Strebe 30 (Abb. 36).
+Obenauf sitzen – nach außen zeigend – zwei
+35049 Bausteine 5 15×30. Die tragen,
+wiederum außen, je eine 38253 S-Kupplung
+15 2.
+
+
+
+
+
+Baustufe 14
+
+mittig vom Turm getragen
+
+
+
+In den Turm eingehängt wird eine 31019
+Drehscheibe 60 auf einer Nabe oder Flachnabe, gesichert und in die Mitte zwischen
+die beiden Statikträgern gebracht von zwei
+Klemmringen. Als Achse genügt eine
+
+
+Uhren
+
+Kunststoffachse 40; solche aus Metall oder
+längere gehen genauso gut.
+Auch hier gilt: Das Rad muss sich ganz frei
+und leichtgängig drehen können. Positioniert die Klemmringe also nicht zu stramm
+an den Achslagern.
+Baustufe 15
+Nun kommen wir zum Gewicht: Sechs Bausteine 30, drei Federnocken und ein 38428
+Baustein 5 15×30 3N genügen.
+
+
+Zwei der Federnocken verbinden die
+waagerecht liegenden Bausteine 30 mit dem
+Baustein 5 15×30, der dritte dient dazu, das
+Ende des Seils einzuklemmen und so sicher
+zu befestigen. Das Seil muss so verlaufen,
+wie es Abb. 39 zeigt.
+Da an der Kurbel nach rechts (im Uhrzeigersinn) gedreht wird, verlässt das Seil
+seine Seiltrommel auf der äußeren Seite des
+Modells, läuft über die Drehscheibe und
+endet am Gewicht.
+Baustufe 16
+Eine einzige Sache fehlt noch: Das Pendel!
+Das ist nun aber ganz einfach gebaut: Drei
+Statikträger 120 mit den Zapfen nach unten
+und zwei Bausteine 30 quer darunter
+werden wie in Abb. 40 miteinander verbunden.
+
+
+Die oben liegende Nut des oberen Statikträgers wird nun einfach von unten in den
+Zapfen des Bausteins 15 mit Bohrung von
+Baustufe 6 geschoben, wie in Abb. 41 gezeigt.
+Geschafft!
+
+Ausprobieren und
+Experimentieren
+Stellt das Modell so auf eine Tischplatte
+oder Schrankoberfläche, dass das Pendel
+seitlich herunterhängen und frei pendeln
+kann. Das ist wichtig.
+Das Modell ist so gebaut, dass ihr auf einer
+weiteren Seite des Tischs oder Schranks das
+Gewicht am langen Seil bis hinunter auf den
+Boden laufen lassen könnt. Gelingt das aus
+Platzgründen nicht, ist ja aber noch der
+
+
+
+Turm da, der auch etwas Höhe fürs Gewicht
+bietet – immerhin genug für ca. zwei
+Minuten Laufzeit. Bis zum Boden kann das
+Pendelwerk auf einem Tisch stehend etwa
+acht Minuten durchlaufen.
+
+
+
+Wenn alles leichtgängig gebaut wurde,
+dann sollte das so funktionieren:
+1. Zieht die Uhr auf. Das macht ihr durch
+Drehen an der Kurbel im Uhrzeigersinn,
+bis das Gewicht knapp unterhalb der
+Drehscheibe landet.
+2. Stoßt das Pendel an – ganz leicht genügt
+schon. Es sollte nun von alleine weiter
+pendeln.
+Warum schwingt das Pendel von
+alleine weiter?
+Der gesamte Kraft- und Drehmoment-Fluss
+läuft so:
+1. Das Gewicht zieht, wenn auch nicht sehr
+stark, nach unten.
+
+
+2. Damit wird die Seiltrommel mit dem Seil
+zum Drehen „genötigt“.
+3. Über das Freilaufgetriebe – das in dieser
+Drehrichtung ja sperrt – geht die Drehbewegung durch bis ganz nach vorne
+zum Zahnrad Z40.
+4. Das wiederum dreht am senkrecht
+stehenden Z10 und damit am Kronrad
+(der Drehscheibe mit den sechs Winkelsteinen 30° darauf).
+5. Die Winkelsteine stoßen nun abwechselnd an die beiden Winkelsteine der
+Pendelhemmung – und drücken sie dabei
+leicht nach unten!
+6. Das wiederum bewirkt, dass das Pendel
+in die entsprechende Richtung zum Ausschlagen gebracht wird.
+7. Kurz darauf stehen sich die beiden
+gerade noch in Kontakt gewesenen Winkelsteine nicht mehr im Weg. Das Kronrad kann sich also schnell drehen – aber
+nur, bis es auf der anderen Seite wieder
+
+mit dem anderen Winkelstein der Pendelhemmung kollidiert, denn das Pendel
+schwingt im selben Moment zurück und
+blockiert dann auf der anderen Seite des
+Kronrads.
+8. Von dort geht das Spiel in die andere
+Richtung von vorne los.
+Während das Pendel schwingt, könnt ihr
+beobachten, wie das Gewicht sich – Stückchen für Stückchen – senkt. Das funktioniert, bis es auf der Tischoberfläche oder
+eben am Boden angekommen (oder bis das
+Seil ganz abgewickelt) ist.
+Was tun, wenn das Pendel nicht
+schwingen will?
+Kurz gesagt: Bitte alles nochmal auf Leichtgängigkeit prüfen. Jede einzelne Achse
+muss sich leicht drehen können:
+ Die Achse im Pendelträger.
+ Die senkrecht stehende Achse 110 mit
+dem Kronrad.
+ Die beiden waagerecht liegenden
+Achsen 110.
+ Die Achse mit der Drehscheibe 60 am
+oberen Ende des Turms.
+Wenn die Mechanik nicht leichtgängig
+genug läuft, könnt ihr folgendes tun:
+ Prüft nochmal, ob alle Achsen sauber
+„fluchten“ und sich nicht in ihren Lagern
+verkanten. Es wurden extra überall nur
+die S-Kupplungen als Achslager verwendet, weil die die Achsen am leichtgängigsten führen. Ebenso wurden die
+Nuten aller Bausteine, in denen die
+Achslager für die beiden waagerecht
+liegenden Achsen stecken, parallel zu
+den Achsen ausgerichtet, damit die SKupplungen gar nicht anders als genau
+richtig positioniert werden können.
+ Ihr könnt das Gewicht vergrößern, z. B.
+durch mehr Bausteine oder eingesteckte
+Metallachsen.
+ Falls ihr beim Kronrad in Baustufe 5 die
+Nabenmutter oben angebracht habt,
+könnte das Kronrad eine Spur zu hoch
+
+Uhren
+
+sitzen. Versucht, es ein kleines bisschen
+(!) nach unten zu schieben. Das Modell
+hat ziemlich genau die perfekte Geometrie, wenn man eine „normale“ Nabe 25
+31014 so einbaut, dass die Nabenmutter
+von unten aufgeschraubt wird.
+Schaut euch dazu vielleicht auch das ergänzende Video zum Modell an [13].
+Was macht das Freilaufgetriebe?
+Es sorgt dafür, dass ihr die Uhr während des
+Laufs aufziehen könnt! Die Achse mit der
+Seiltrommel mit dem Seil kann in „AufziehRichtung“ frei gedreht werden. Nur in der
+„Ablauf-Richtung“ wird sie vom Freilauf
+gehemmt, der so die Drehung auf den
+Pendelantrieb vorne im Modell bringt.
+Kann das Pendel auch schneller
+oder langsamer laufen?
+Aber ja! Ihr könnt das ganz einfach dadurch
+steuern, dass ihr das Pendel länger oder
+kürzer macht. Baut also weniger Statikträger ins Pendel ein oder mehr. Je länger
+das Pendel, desto langsamer läuft die „Uhr“.
+Ich habe es mit bis zu fünf Statikträgern 120
+zum Laufen gebracht. Wenn das Pendel zu
+lang wird, genügt die Kraft des kleinen
+Gewichts nicht mehr, um es zuverlässig am
+Schwingen zu halten.
+Und wenn es weitere Fragen oder
+Probleme geben sollte?
+Postet bitte einfach im fischertechnikForum im ft:pedia-Bereich! Wir freuen uns
+über jede Rückmeldung und antworten
+gerne.
+Wenn alles genau und leichtgängig nachgebaut wurde, sollte es klappen. Also: Viel
+Spaß damit und beim Weitertüfteln!
+
+
+
+
+Quellen
+[1]
+
+fischertechnik: Statik. Bauanleitung
+aus der ft-Datenbank, S. 40.
+
+[2]
+
+fischertechnik: Club-der ft-Datenbank, S. 9-13.
+
+[3]
+
+fischertechnik: Experimente +
+Modelle hobby 1 Band 2. In der ftDatenbank (Info, PDF), 1973.
+
+[4]
+
+fischertechnik-Community: Uhren.
+
+[5]
+
+Thomas Püttmann: 50 Hz-Uhr mit
+Stunden-, Minuten- und Sekundenzeiger. Im Bilderpool der fischertechnik-Community, 2011.
+
+[6]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt-Verlag, ISBN 978-3-86490296-3, 2015 (Nachdruck 2022).
+
+[7]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+Website zum Buch.
+
+
+[8]
+
+Martin Romann: Pendeluhr. Im
+Bilderpool der fischertechnikCommunity, 2011.
+
+[9]
+
+fischertechnik-Community:
+Freilaufgetriebe.
+
+[10] Wikipedia: Freilauf (Mechanik).
+[11] Michael Samek: fischertechnik
+Designer.
+[12] Stefan Falk: Ein einfach zu bauendes
+Uhrenpendel. fischertechnikDesigner-Datei zum Modell, auf der
+ft:pedia-Seite der fischertechnikCommunity, 2022.
+[13] Wikipedia: Hemmung (Uhr).
+[14] Stefan Falk: fischertechnik: Einfach
+zu bauendes Uhrenpendel aus
+ft:pedia 2/2022. Auf YouTube, 2022.
+[15] fischertechnik-Community: ft:pedia.
+Im fischertechnik-Forum.
+
+

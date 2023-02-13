@@ -1,0 +1,260 @@
+
+Elektronik
+
+Elektronik
+
+Die Kunst der H-Brücke: ... and roll!
+Thomas Magin
+Wie schon im ersten Teil [1] angekündigt, soll der Aufbau einer Brückenschaltung so nah wie
+möglich an fischertechnik-Standards geschehen. Der Ausganspunkt ist die Leistungsstufe.
+Die Leistungsstufe werden wir ein wenig
+„pimpen“, indem wir die beiden NPN-Darlington-Transistoren durch je einen NKanal-MOSFET vom Typ IRFZ34N und
+einen P-Kanal-MOSFET vom Typ
+IRF9Z34N ersetzen. Man beachte den
+subtilen und keineswegs eingängigen
+Unterschied in der Typenbezeichnung.
+
+
+The Heat is On
+
+
+Zeit, das Werkzeug zu holen und den Lötkolben anzuheizen. Glücklicherweise hat
+uns fischertechnik das Leben hier einfach
+gemacht. Die Platinen sind nur einseitig
+beschichtet, haben insbesondere keine
+Durchkontaktierungen, trotzdem Lötstopplack. Da ist das Arbeiten ein Kinderspiel
+und absolut anfängergeeignet. Dazu
+kommt, dass beim unteren Transistor der
+
+
+
+
+Emitter nicht direkt, sondern über eine
+Steckbrücke mit GND verbunden ist – sehr
+praktisch, denn beim P-Kanal-MOSFET
+(der High-Side) soll Source (die Analogie
+zum Emitter beim Bipolar-Transistor) ja an
+die positive Versorgungsspannung und
+nicht an GND. Was ist zu tun? Wir müssen
+• Die beiden Transistoren und Widerstände entfernen,
+• (die Platine modifizieren,)
+• durch neue Typen ersetzen,
+• zusätzlich zwei Dioden und zwei Kondensatoren einbauen
+• und das Ganze in Betrieb nehmen
+„Die Platine modifizieren“? Wie denn, wo
+denn, was denn? Ja, es gibt die Leistungsstufe (leider) auch in einer seltenen Version,
+bei der beide Emitter fest auf GND verdrahtet sind. Der Unterschied zeigt sich in
+Die zweite Variante scheint recht selten zu
+sein. Unter zehn Modulen in meinem
+Bestand zeigt gerade mal eine dieses
+Layout.
+
+Fädeldraht, fertig
+
+Nichtsdestotrotz: Hier muss Hand angelegt
+werden!
+
+
+Elektronik
+
+
+Die GND-Verbindung auf der Lötseite ist
+aufzutrennen und der Emitter-Anschluss
+mittels Fädeldraht auf VCC zu legen, also
+auf die „+5-10V“-Schiene des Moduls.
+So oder so, jetzt kommen die Bauteile raus,
+und zwar die beiden Widerstände und beide
+Transistoren. Mit einer Lötabsaugpumpe,
+Entlötlitze oder rabiat mit dem Seitenschneider rücken wir unseren Veteranen zu
+Leibe und freuen uns über das Ergebnis in
+schnell die Anschlüsse der beiden Potis
+nach. Warum das? Sollten die Module Jahre
+und Jahrzehnte gestapelt gelagert worden
+sein, brechen die Lötstellen der höchsten
+Bauteile. Zwei solcher Platinen haben mich
+schlaflose Nächte gekostet, da sie mal funktionierten und mal nicht – bis ich herausfand, dass besagte Lötstellen gerissen
+waren. Ein paar Sekunden habe ich nachgelötet und alles war wieder in bester
+Ordnung.
+Die beiden Potis bitte ganz nach rechts
+drehen. Damit liegt der Schleifer direkt und
+ohne Abschwächung an den Eingangspins –
+ganz wichtig!
+
+Know Your Place
+Die Bestückung ist schnell erledigt. Zur
+Erinnerung zeigt Abb. 6 noch einmal den
+Schaltplan, der auf zwei fischertechnikModulen umgesetzt wird (je Modul eine
+Halbbrücke).
+Zuerst zu den Transistoren. Der N-KanalMOSFET IRFZ34 wird oben auf dem
+Modul bestückt, da bei diesem der SourceAnschluss immer fest mit GND verbunden
+ist. Im Schaltbild findet sich der Transistor
+unten, wo er als echter „Low-Side“ auch
+hingehört. Der P-Kanal-Typ IRF9Z34
+kommt auf der Platine dagegen auf den
+unteren Bestückungsplatz. In diesem
+Arbeitsgang werden dann gleich noch die
+47-kΩ-Gate-Widerstände mit eingelötet.
+Nun müssen wir die Platine umdrehen und
+auf der Lötseite die Kondensatoren und
+Dioden bestücken. Bei den Dioden bitte auf
+korrekte Polung achten! Bei den Kondensatoren ist man in der Typenwahl recht frei –
+irgendetwas Keramisches funktioniert.
+Müssen das wie in Abb. 7 3-kV-Typen
+
+
+
+
+
+sein? Natürlich nicht. Aber zum einen passten die wegen des Rastermaßes so schön,
+zum anderen hatte ich sie in der Bastelkiste
+liegen. Und so sind wir dann auch schon
+beim finalen Ergebnis.
+
+Another Brick for Your Wall
+Jetzt stellt sich die Frage, wie man die
+modifizierten Leistungsstufen schick in
+fischertechnik integrieren kann. Mein Plan
+war eine Art Einschubsystem, in welches
+ich verschiedenste Module integrieren
+kann. Also begann ich damit, eine
+
+
+
+Elektronik
+
+Leistungsstufe (später noch eine Relaisstufe) auf einer Grundplatte 31001 aufzubauen, wo auch die Levelshifter ihren Platz
+fanden. Um letztere zusammenzustecken,
+wählte ich Stecksockel (38230 + 38229 +
+37918) – ein recht wackeliger Aufbau, wie
+ich zugeben muss. Da sind Versuche mit der
+
+Transistoranschlussplatte (152218) vielversprechender. Die Verdrahtung erfolgt mit
+passenden Leitungen, soweit möglich aus
+fischertechnik-Beständen. Hin und wieder
+muss man dann aber auch selbst zu Litze,
+Lötfahne und Lötkolben greifen.
+
+
+
+
+
+Something Got Me Started
+Jetzt folgt der spannendste Teil, die Inbetriebnahme! Kleiner Tipp: Niemals abends
+kurz vorm Schlafengehen – nie! Denn wenn
+etwas schiefgeht, und potenzielle Müdigkeit tut ihr Übriges, bringt es einen um den
+Rest der Nacht. Ich weiß, hard to resist…
+Also ist eine 9 V-Stromversorgung anzuschließen. Wie im vorherigen Teil angeraten, am besten eine geregelte und abgesicherte. Und wenigstens 1 A sollte die
+schon liefern können. Als Last ist ein
+Leistungswiderstand von 20 Ω erstmal ein
+guter Anfang. Als Eingangssignal dient ein
+Funktionsgenerator, der an einen der beiden
+Eingänge gehängt wird: Ein positiver
+Rechteckimpuls variabler Breite, 200 Hz,
+9 V. Dank Levelshifter sind wir bei der
+Spannung aber flexibel.
+
+Dann wird ein Oszilloskop an den korrespondierenden Ausgang angeschlossen. Je
+nach persönlicher Neugierde kann man
+weitere Kanäle an die beiden Gates der
+Transistoren anschließen, um den gesamten
+Signalverlauf im Blick zu behalten. Und
+wenn man anständig gearbeitet hat, stellt
+sich in etwa so ein Bild auf dem Oszilloskop
+ein wie in Abb. 11.
+
+Poor Man’s Blues
+Und wenn ich keinen Funktionsgenerator
+habe? Und schon gar kein Oszilloskop?
+Dann nehmen wir einen TX(T), ein wenig
+ROBO Pro-Code [7] und ein Multimeter.
+Letzteres ist heutzutage ja gar nicht mehr
+ohne True-RMS [2, 3] zu bekommen, was
+jetzt eine große Hilfe ist.
+Gnädiger Weise lässt sich der Effektivwert
+einer gepulsten Spannung ganz ohne
+Studium und Bronstein [4] errechnen. Wir
+
+
+
+Elektronik
+
+
+erinnern uns (nicht): Der Effektivwert einer
+Spannung entspricht jener konstanten
+Gleichspannung, die die gleiche Energie
+wie die Wechselspannung liefert. Was in
+unserem Falle der Duty cycle [5, 6] multipliziert mit der Spitzenspannung ist. Der
+Duty cycle in Prozent ergibt sich aus dem
+Quotienten TON / T und wird durch den
+TX(T) vorgegeben. Wenn man für den
+Motor die 8-Schritt-Auflösung wählt,
+liegen die Duty cycle bei 13 %, 17 %, 21 %,
+26 %, 33 %, 42 %, 61 % und 100 %. Mal
+Eingangsspannung – that’s it for Ueff. Das
+Ganze ist in ROBO Pro für 9 V hinterlegt.
+
+TX(T)-Ausgabe dar. Und das vergleichen
+wir jetzt einfach mit der Anzeige unseres
+Multimeters. Bitte die RMS-Einstellung
+nicht vergessen.
+
+
+Mit den Prozent-Tasten stellt man den
+gewünschten Duty cycle ein. Der angezeigte Spannungswert stellt das Soll der
+
+In der Realität passt das recht gut. Der
+„<->“-Taster wechselt die Laufrichtung,
+was in unserer Anwendung bedeutet, dass
+O1 oder O2 aktiv sind.
+
+
+
+Wrap it up
+
+
+Quellen
+[1]
+
+Thomas Magin: Die Kunst der HBrücke: Let's Rock. ft:pedia 2/2022,
+S. 104–118.
+
+[2]
+
+Wikipedia: Effektivwert.
+
+[3]
+
+Fluke Corporation: What is trueRMAS?
+
+[4]
+
+Wikipedia: Taschenbuch der
+Mathematik.
+
+[5]
+
+Wikipedia: Duty cycle.
+
+[6]
+
+Wikipedia: Tastgrad.
+
+[7]
+
+Thomas Magin: PulseGenerator.rpp.
+ROBO Pro-Programm im Downloadbereich zu dieser Ausgabe der
+ft:pedia.
+
+
+Jetzt wollen wir der H-Brücke noch eine
+schöne Verpackung geben. Da sind der
+Fantasie natürlich keine Grenzen gesetzt. In
+meinem Fall habe ich dem Modul mit einer
+zweiten Grundplatte einen Deckel aufgesetzt (und den Tag verflucht, an dem sich
+fischertechnik mal wieder nicht ans Rastermaß gehalten hat). Drei Grundplatten übereinander sind nicht so hoch wie ein 15erBaustein. Dies und seine Konsequenzen bei
+der Integration in ein Einschubsystem
+(dafür auch der angeflanschte Arm an der
+Seite) sind aber eine andere Geschichte.
+
+
+

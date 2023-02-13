@@ -1,0 +1,375 @@
+
+
+Computing
+
+ftSwarm (2) – Codierst du noch oder
+schwärmst du schon?
+Christian Bergschneider, Stefan Fuss
+Die Modelle in den 70er- und 80er-Jahren kamen ganz ohne Mikrocontroller aus. Es wurden
+coole mechanische Modelle gebaut, die mit Motoren, Kabeln und ein paar Tastern zum Leben
+erweckt wurden. Im Modell von heute befindet sich zusätzlich ein Controller. Die wenigen
+Zeilen Code, um einen Motor zu steuern, werden spätestens bei parallel ablaufenden Prozessen
+kompliziert. Aber muss es denn immer so knifflig sein? Kann ein Controller auch mit sehr
+einfacher Programmierung oder ganz ohne Programmierung z. B. als Fernsteuerung betrieben
+werden?
+
+Hintergrund
+Die Idee hinter der ftSwarm-Familie sind
+kleine, untereinander kommunizierende
+Controller mit einer möglichst einfachen
+Programmierung [1]. In diesem Beitrag
+wollen wir zwei Konzepte des ftSwarm
+vorstellen, die die Programmierung sehr
+einfach bzw. unnötig machen.
+
+Unser Kran soll drei Funktionen haben:
+„Drehen“, „Laufkatze verfahren“ und
+„Kranhaken bewegen“. Dazu benötigen wir
+drei Motoren. Die Bedienung soll mit dem
+ftSwarmControl (Abb. 1) umgesetzt werden.
+
+Im Mittelteil des Beitrags geht es nerdig um
+die Programmierung paralleler Prozesse.
+Wer nur wissen will, wie ein Controller
+auch ohne Programmierung funktionieren
+kann, der kann diesen Teil ruhig überspringen und bei der eventgesteuerten Programmierung weiterlesen.
+
+Das virtuelle Modell
+Für unseren Beitrag benötigen wir ein
+Modell, an dem die beiden Konzepte erklärt
+werden können. Da jeder fischertechniker
+früher oder später einen Turmdrehkran
+baut, haben wir uns den Kran als Beispiel
+ausgesucht.
+
+
+Jeder ftSwarm hat zwei Motorausgänge. Für drei
+Motoren werden also zwei Controller benötigt.
+
+
+
+Die beiden Joysticks übernehmen die Funktionen für „Drehen“ und „Laufkatze verfahren“. Das Bewegen des Kranhakens wird
+mit zwei Tastern (Buttons) am ftSwarmControl implementiert: einer für „hochfahren“ und der zweite für „herunterlassen“.
+Im Modell steuern zwei ftSwarms1 die
+Motoren. Kabel gibt es nur zwischen
+
+ftSwarm und Motor; die Kommunikation
+zwischen den Controllern erfolgt über
+WLAN. Die Fernsteuerung ist komplett.
+
+Konfiguration
+Unsere drei Controller benötigen jetzt noch
+ein wenig Konfigurationsarbeit. Diese
+findet über ein USB-Kabel am PC statt.2
+Der Schwarm wird gebildet und die verwendeten Anschlüsse bekommen einen
+Namen zugewiesen. Über diesen Namen
+können sie später im Programm angesprochen werden.
+Auf der Weboberfläche des Swarms können
+die Motoren manuell gesteuert werden. Die
+reale und die virtuelle Verkabelung können
+so getestet werden (Abb. 2).
+
+Computing
+
+Programm aus den zwei vorgegebenen
+Routinen setup() und loop().
+
+#include <ftSwarm.h>
+FtSwarmJoystick *drehenJS, *laufkatzeJS;
+FtSwarmButton
+*hoch, *runter;
+FtSwarmMotor
+*drehen, *laufkatze, *haken;
+void setup() {
+ftSwarm.begin();
+// Bedienelemente
+drehenJS
+= new FtSwarmJoystick( "DrehenJS" );
+laufkatzeJS = new FtSwarmJoystick( "LaufkatzeJS" );
+hoch
+= new FtSwarmButton( "hakenHoch" );
+runter
+= new FtSwarmButton( "hakenRunter" );
+// Motoren
+drehen
+laufkatze
+haken
+
+= new FtSwarmMotor( "Drehen" );
+= new FtSwarmMotor( "Laufkatze" );
+= new FtSwarmMotor( "haken" );
+
+}
+void loop() {
+// Joystick Bewegungen
+drehen->setSpeed( drehenJS->getLR() );
+laufkatze->setSpeed( laufkatzeJS->getFB() );
+// Buttons
+if
+( hoch->isPressed() )
+haken->setSpeed( 100 );
+else if ( runter->isPressed() ) haken->setSpeed( -100 );
+else
+haken->setSpeed(
+0 );
+}
+
+Listing 1: Einfaches Kranprogramm
+
+Die Prozedur setup() wird nach dem Programmstart einmal ausgeführt und dient
+dazu globale Objekte zu initialisieren. In
+unserem Beispiel werden dort die Bedienelemente (Zeile 11 bis 15) und die Motoren
+(Zeile 17 bis 20) erzeugt.3
+Die eigentliche Funktion der Steuerung
+liegt in der Funktion loop(). Sie wird als
+Endlosschleife immer und immer wieder
+ausgeführt. In Zeile 27 und 28 werden die
+Joystick Bewegungen ausgelesen und direkt
+zur Steuerung der Geschwindigkeit der
+Motoren verwendet. Die Steuerung des
+Kranhakens über die zwei Taster erfolgt in
+Zeile 30 bis 33.
+
+Eine erste Kransteuerung
+Die Programmierung des Krans mit den drei
+Controllern ist überschaubar (Listing 1).
+Wie bei allen Arduino-Clones besteht das
+
+
+Eine komplette Beschreibung der Konfiguration
+der Firmware und deren Programmierung kann
+in [2] nachgelesen werden.
+
+
+Bei der Konfiguration des Swarms wurden den
+Motorausgängen sinnvolle Namen zugewiesen.
+Beim Zugriff auf die Motoren im Quelltext kann
+
+Das „böse“ While-Statement
+Über das Antippen eines weiteren Buttons
+soll der Kranhaken automatisch bis an den
+Ausleger gefahren werden. Ein Endschalter
+erkennt, dass der Haken seine obere Position erreicht hat.
+der Motor über seinen Namen angesprochen
+werden. Daher ist es bei der Programmierung
+egal, an welchem Controller welche Hardware
+angeschlossen ist. Der Swarm regelt die Zuordnung selbst.
+
+
+
+
+
+void loop() {
+// Joystick Bewegungen
+drehen->setSpeed( drehenJS->getLR() );
+laufkatze->setSpeed( laufkatzeJS->getFB() );
+// Buttons
+if
+( hoch->isPressed() )
+haken->setSpeed( 100 );
+else if ( runter->isPressed() ) haken->setSpeed( -100 );
+else
+haken->setSpeed(
+0 );
+// Automatikmodus
+if ( startAutomodus->isPressed() ) {
+haken->setSpeed(100);
+while ( !endtaster->isPressed() );
+haken->setSpeed(0);
+}
+}
+
+Listing 2: Die einfache loop()-Funktion mit
+automatischem Kranhaken hat Schwächen
+
+Auf den ersten Blick ist diese Funktion
+ebenfalls gar nicht so schwer zu implementieren (Listing 2). Beim Testen fällt allerdings auf, dass während des automatischen
+Einfahrens des Kranhakens Taster und Joysticks nicht funktionieren. Ursache ist, dass
+die While-Schleife in Zeile 15 die sonstige
+Verarbeitung blockiert. Deshalb sind
+While-Schleifen in der loop()-Funktion
+eines Arduino-Programms „böse“.
+Parallele Prozesse
+Die konsequente Lösung ist, die Automatikfunktion in einen eigenen Thread auszulagern. Eine eigene Task-Routine (Listing
+3) übernimmt die komplette Steuerung von
+der Erkennung des Drucks auf den Button
+bis zur Bewegung des Hakens.
+
+void taskHakenAutomatik( void *parameter ) {
+while (1) {
+// Taste gedrückt?
+if ( startAutomodus->isPressed() ) {
+// Motor starten, auf Taste warten, Motor stoppen
+haken->setSpeed( 100 );
+while ( !endTaster->isPressed() ) delay( 50 );
+haken->setSpeed( 0 );
+}
+}
+
+delay( 50 );
+
+}
+
+Listing 3: Task zum Einfahren des Hakens
+
+In der setup()-Funktion muss der Task nur
+noch aktiviert werden (Listing 4).
+
+xTaskCreate( taskHakenAutomatik, // Task Routine
+"AutoHaken",
+// Name
+10000,
+// Stackgröße
+NULL,
+// keine Parameter
+1,
+// Pro 1
+NULL );
+// Task Handle unnötig
+
+Listing 4: Der Task wird in
+der setup()-Funktion gestartet
+
+Aus einer zu Beginn recht einfachen Steuerungsaufgabe wird durch die Thread-Programmierung schnell eine Aufgabe für fortgeschrittene C-Programmierer.
+
+Eventgesteuerte Programmierung
+Mit eventgesteuerter Programmierung kann
+der Kran jedoch viel einfacher implementiert werden.
+Jeder Eingang im Swarm wird von der
+Firmware kontinuierlich ausgelesen. Ein
+Wechsel des Eingangssignals kann so erkannt und durch die Firmware eine Aktion
+ausgelöst werden (Listing 5).
+
+hoch->onTrigger( FTSWARM_TRIGGERUP,
+haken,
+FTSWARM_MSGSETSPEED, 100 );
+hoch->onTrigger( FTSWARM_TRIGGERDOWN,
+haken,
+FTSWARM_MSGSETSPEED, 0 );
+
+Listing 5: Eventsteuerung des Hakens
+
+Mit dem ersten Statement wird für den
+Button „hoch“ das Event TRIGGERUP
+definiert. Wird der Button gedrückt, so wird
+für den Motor „haken“ die Geschwindigkeit
+100 gesetzt. Das zweite Kommando schaltet
+beim Loslassen des Buttons den Motor
+wieder aus.
+Digitale Eingänge können die Flankenwechsel ihres Eingangssignals von 0 nach 1
+und von 1 nach 0 als Trigger verarbeiten.
+Analoge Eingänge reagieren auf die
+Veränderung der Signalstärke.
+Mit dem Trigger kann die Geschwindigkeit
+von Motoren, die Position des Servos und
+die Farbe der RGB-LEDs verändert werden.
+Die Kransteuerung lässt sich komplett über
+Events lösen. Sogar die Automatikfunktion
+lässt sich mit nur zwei Zeilen Code
+realisieren (Listing 6).
+
+void setup() {
+ftSwarm.begin();
+// Bedienelemente
+drehenJS
+= new FtSwarmJoystick( "DrehenJS" );
+laufkatzeJS
+= new FtSwarmJoystick( "LaufkatzeJS" );
+hoch
+= new FtSwarmButton( "hakenHoch" );
+runter
+= new FtSwarmButton( "hakenRunter" );
+startAutomodus = new FtSwarmButton( "StartAutomodus" );
+endTaster
+= new FtSwarmButton( "Endtaster" );
+// Motoren
+drehen
+= new FtSwarmMotor( "Drehen" );
+laufkatze = new FtSwarmMotor( "Laufkatze" );
+haken
+= new FtSwarmMotor( "haken" );
+// Events für Drehen & Laufkatze
+drehenJS->onTriggerLR(
+FTSWARM_TRIGGERVALUE,
+drehen, FTSWARM_MSGSETSPEED );
+laufkatzeJS->onTriggerFB( FTSWARM_TRIGGERVALUE,
+laufkatze, FTSWARM_MSGSETSPEED );
+// Events für das manuelle Steuern des Kranhakens
+hoch->onTrigger(
+FTSWARM_TRIGGERUP,
+haken, FTSWARM_MSGSETSPEED, 100 );
+hoch->onTrigger(
+FTSWARM_TRIGGERDOWN,
+haken, FTSWARM_MSGSETSPEED, 0 );
+runter->onTrigger( FTSWARM_TRIGGERUP,
+haken, FTSWARM_MSGSETSPEED, -100 );
+runter->onTrigger( FTSWARM_TRIGGERDOWN,
+
+32
+
+Computing
+
+haken, FTSWARM_MSGSETSPEED, 0 );
+// Events für den Automatikmodus
+startAutomodus->onTrigger( FTSWARM_TRIGGERUP,
+haken, FTSWARM_MSGSETSPEED, 100 );
+endtaster->onTrigger(
+FTSWARM_TRIGGERDOWN,
+haken, FTSWARM_MSGSETSPEED, 0 );
+}
+void loop() { }
+
+Listing 6: Die komplette Kransteuerung
+lässt sich mit Events lösen
+
+Die Events werden einmalig in der
+setup()-Routine definiert. Die loop()Funktion ist im Beispiel leer; die komplette
+Logik übernimmt die ftSwarm-Firmware.
+Ganz ohne Programmierung
+Von der Eventprogrammierung ist der
+Schritt zur Programmierung ganz ohne Programm nicht weit. Die Steuerungsaufgaben
+im Kranmodell sind recht einfach – ein
+Taster (Button) oder Joystick steuert einen
+Motor. Viele Modelle lassen sich auf diese
+Aufgabe reduzieren.
+Die Anzahl der Triggerevents ist überschaubar. Maximal müssen bei einem
+Button das TRIGGERUP- und das
+TRIGGERDOWN-Event definiert werden.
+Je Aktortyp – Motor, Servo oder LED – gibt
+es je Event nur eine Aktion: Das Setzen der
+Geschwindigkeit, der Servoposition oder
+der LED-Farbe.
+Über den USB-Anschluss wird der Swarm
+interaktiv konfiguriert. Für den ftSwarmControl gibt es einen zusätzlichen Menüpunkt „Remote Control“. In diesem kann
+man für jeden Eingang die Events und
+zugehörigen Aktionen auswählen (Abb. 3).
+
+
+Die „Programmierung“ entfällt. Diese wird
+im Hintergrund von der Firmware erledigt.
+
+Das letzte aller Programme?
+Die Lösung ist nicht das Ende der Programmierung. In vielen Modellen reicht der
+Taster-schaltet-Motor-Ansatz sicher aus.
+Komplexe Modelle mit Regelkreisen oder
+Standardabläufen müssen aber weiterhin
+programmiert werden. Hier hilft die Eventsteuerung, lästige Standardaufgaben an die
+Firmware zu geben und sich mit der Implementierung des Regelkreises auseinander
+zu setzen.
+
+Referenzen
+[1]
+
+Christian Bergschneider, Stefan
+Fuss: ftSwarm – Das Prinzip
+Heinzelmännchen. ft:pedia 2/2021,
+S. 107–111.
+
+[2]
+
+Christian Bergschneider, Stefan
+Fuss: The ftSwarm Project.
+Github.io.
+
+
+

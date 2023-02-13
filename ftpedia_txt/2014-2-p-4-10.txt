@@ -1,0 +1,359 @@
+
+
+Mechanik
+
+Flaschenzug
+Dirk Fox
+Das Problem kennt ihr zweifellos auch: Ein Motor soll eine Last hochziehen – aber nichts tut
+sich, weil er zu „schwach auf der Brust“ ist. Was tun? Da lohnt ein Blick in die Technikgeschichte – denn für dieses Problem hatten schon unsere Vorfahren vor über 2.500 Jahren
+eine wirksame mechanische Lösung.
+Die Entwicklung einer Mechanik, mit der
+es gelang, die Kraftwirkung zu vergrößern,
+war eine der wichtigsten Entdeckungen in
+einer Zeit, in der als Kraftquelle nur die
+Muskelkraft von Tieren oder Menschen zur
+Verfügung stand. Neben dem Hebelgesetz,
+das bereits in der Antike von dem griechischen Mathematiker und Physiker
+Archimedes von Syrakus (287-212 v. Chr.)
+aufgestellt wurde und die Grundlage der
+Mechanik bildet, war es vor allem die
+Erfindung des Flaschenzugs, die insbesondere die Bautechnik revolutionierte. Mit
+dessen Hilfe gelangen vor allem in der
+Renaissance architektonische Meisterleistungen, die noch heute beeindrucken.
+
+arbeit aufzuwickelnden Zugseils. Damit ist
+weniger Kraft für die Hubarbeit erforderlich. Der Preis, den man für diese „Kraftverstärkung“ zahlt: man muss länger
+ziehen oder kurbeln.
+
+Faktorenflaschenzug
+Wenn wir heute von einem Flaschenzug
+sprechen, meinen wir in der Regel einen
+Faktorenflaschenzug, der die Seillänge
+durch „Schlingen“ künstlich verlängert.
+
+Die Funktion eines Flaschenzugs – dessen
+Bezeichnung übrigens nichts mit Gefäßen
+für Flüssigkeiten zu tun hat, sondern von
+den Rollenhalterungen stammt, die dieselbe Bezeichnung trugen – ist schnell
+erklärt.
+Die für eine bestimmte Hubarbeit – das
+Anheben eines bestimmten Gewichts um
+eine definierte Höhe – erforderliche Kraft
+lässt sich über die Länge des zu überwindenden „Hubweges“ steuern, da die
+Hubarbeit sich als Produkt aus Kraft und
+Weg bestimmt: Mit einem längeren Hubweg benötigt man weniger Kraft für dieselbe Hubarbeit. Ein Flaschenzug verlängert nun künstlich den Hubweg, genauer:
+die Länge des für die Leistung der Hub4
+
+Konversations-Lexikon, 5. Aufl., Bd. 1, S. 587)
+
+Schon ein einfacher Flaschenzug mit einer
+Schlinge verdoppelt die Länge des Zugseils und halbiert damit die benötigte
+Kraft: Ein Mensch, der maximal 50 kg
+
+bewegen kann, kann mit einem solchen
+Flaschenzug bis zu 100 kg Last anheben.
+In der Antike wurden Flaschenzüge von
+Griechen und Römern in einfachen Kränen
+eingesetzt. Der römische Ingenieur Marcus
+Vitruvius Pollo (ca. 80-15 v. Chr.) beschrieb den zu seiner Zeit verbreiteten
+Trispastos, einen einfachen Kran mit DreiRollen-Flaschenzug, der die Kraft des
+Bedieners mit einem zusätzlichen Hebel
+insgesamt etwa verzwölffachte (Abb. 2).
+
+Mechanik
+
+Die beeindruckende Wirkung eines solchen „Kraftverstärkers“ lässt sich durch
+einen Nachbau des Trispastos in fischertechnik demonstrieren. Abb. 3 zeigt ein
+Modell, das etwa denselben Verstärkungsfaktor besitzt. Problemlos kann diese
+einfache Konstruktion eine mit kurzen
+Gewindestangen gefüllte Kiste hochziehen.
+Die Krafteinsparung lässt sich mit weiteren
+‚Schlingen’ verstärken: Die für die Hubarbeit benötigte Kraft FZ sinkt bei n Seilwegen auf ein n-tel der Gewichtskraft der
+Last FL:
+FZ =
+
+FL
+n
+
+(1)
+
+Daher liegt es nahe, die von einem Kran
+oder einer Seilwinde leistbare Hubarbeit zu
+vergrößern, indem man den Flaschenzug
+um weitere Rollen ergänzt.
+
+(Quelle: Eric Gaba, Wikipedia [1])
+Solche Flaschenzüge waren wahrscheinlich
+schon seit etwa 750 v. Chr. bekannt und
+kamen auf Baustellen und im Theater zum
+Einsatz. Dabei sorgte der einfache
+Flaschenzug für eine Verdreifachung der
+Kraftwirkung; der Hebel an der Winde
+bewirkte eine zusätzliche Vervierfachung
+der Kraft des Bedieners.
+
+
+Dafür gibt es im Wesentlichen zwei Ansätze: die Anordnung der Rollen nebenein5
+
+
+ander (horizontal) und die Anordnung
+übereinander (vertikal). Mit letzterer lässt
+sich der Flaschenzug schlanker realisieren;
+dafür reduziert sich konstruktionsbedingt
+die maximale Hubhöhe, da ein Teil für die
+vertikale Anordnung der Rollen benötigt
+wird. Eine kompakte Konstruktion eines
+sowohl horizontalen als auch vertikalen
+Flaschenzugs mit 12 Rollen, bei der die
+Rollen sowohl nebeneinander als auch
+übereinander angeordnet sind, ist von dem
+Universalgenie der Renaissance, Leonardo
+Da Vinci (1452-1519) überliefert (Abb. 4).
+
+Konstruktion (linke Variante in Abb. 6) –
+zu finden z. B. in der Anleitung zum Aufbau-Statikkasten 50S/3 aus dem Jahr 1975.
+Auch die Kreuzknotenplatten (36322) aus
+den frühen Statikkästen von 1970 erlauben
+eine ansprechende Konstruktion wie die
+zweite Variante von rechts in Abb. 6, zu
+finden z. B. in [3] (S. 18, 20, 49).
+
+Flaschenzüge aus fischertechnik finden
+sich schon in der Anleitung zum Grundkasten (S. 20) aus dem Jahr 1966 (Abb. 5).
+
+fischertechnik-Flaschenzüge
+
+Das Rollenlager (37636) aus dem Modellkasten Starlifters von 1990 eignet sich
+ebenfalls zur Konstruktion eines Flaschenzugs, siehe die rechte Variante in Abb. 6.
+Dasselbe gilt für die Kupplungsstücke
+(38253) aus dem Universal-Baukasten von
+1997, verwendet in der zweiten Variante
+von links in Abb. 6; siehe auch die Bauanleitung des Universal-Baukastens (Abb. 7).
+
+(aus: Bauanleitung Grundkasten)
+
+Im hobby1 Band 1 wurde dem Flaschenzug 1972 ein eigenes Kapitel gewidmet
+[2]. Wirken die ersten Flaschenzüge noch
+etwas plump und eher wie grobe Funktionsmodelle, gelingt unter Verwendung
+von Statik-Komponenten wie z. B. den SLaschen (36327) eine deutlich elegantere
+
+(aus: Bauanleitung Universal-Baukasten)
+
+Bei allen Varianten wird das Seilende
+jeweils mit einer der Klemmbuchsen an
+der oberen Achse befestigt, über die untere
+Rolle geführt und von dort über die obere
+Umlenkrolle zu einer Seilwinde.
+
+Will man mehr als eine Verdoppelung der
+Kraftwirkung erreichen, benötigt man
+einen Flaschenzug mit weiteren Führungsrollen. Auch mit fischertechnik lassen sich
+die zusätzlichen Rollen sowohl vertikal als
+auch horizontal anordnen. Abb. 8 zeigt vier
+Realisierungsalternativen
+für
+n-fache
+Flaschenzüge.
+
+Mechanik
+
+verbinden [3]. Die rechte Variante in
+Kraftwirkung; sie kann zudem leicht um
+weitere Führungsrollen erweitert werden.
+Sie findet sich z. B. im Abenteuer-BauBuch (S. 50 ff.) aus dem Jahr 1985 [4]
+(Abb. 9).
+
+Potenzflaschenzug
+Eine andere Flaschenzugkonstruktion ist
+der Potenzflaschenzug (Abb. 10). Dabei
+wird mit jeder zusätzlichen Rolle ein
+weiteres Zugseil eingeführt und damit die
+erforderliche Kraft halbiert.
+
+für n-fache Flaschenzüge
+
+Die drei linken Varianten sind auf jeweils
+vier Rollen beschränkt; damit lässt sich die
+Kraftwirkung vervierfachen. In der Anleitung zum Teleskop-Mobilkran von 1983
+(S. 45) findet sich eine vertikale Konstruktion.
+
+(Quelle: Wikipedia [1])
+
+Die für die Hubarbeit erforderliche Zugkraft liegt bei n ‚losen’ Rollen also bei
+einem 2n-tel der Gewichtskraft der Last:
+FZ =
+(aus: Abenteuer-Bau-Buch [4])
+
+Ein Flaschenzug mit horizontal angeordneten Rollen wird im hobby2 Band 4 (S.
+10) vorgestellt. Er verwendet Statikstreben,
+um Haken und Rollenachse miteinander zu
+
+FL
+2n
+
+(2)
+
+Die Wirkung ist größer als bei einem Faktorenflaschenzug: mit fünf losen Rollen
+erreicht man eine Verstärkung von 32.
+Dennoch findet man diesen FlaschenzugTyp eher selten.
+
+
+
+
+Differenzialflaschenzug
+Ein dritter Flaschenzug-Typ ist der Differenzialflaschenzug. Er besteht aus zwei auf
+einer Achse fest miteinander verbundenen
+Rollen mit unterschiedlichem Radius und
+einer dritten, losen Rolle. Die Seilführung
+erfolgt wie bei einem Faktorenflaschenzug,
+allerdings werden die Seilenden miteinander verbunden (Abb. 11).
+
+Ist der Radius R wie in Abb. 11 doppelt so
+groß wie r, genügt ein Viertel der Kraft für
+die nötige Hubarbeit. Da der Seilzug auf
+den Rollen nicht durchrutschen darf, werden meist eine Kette statt des Seils und
+statt der Rollen Zahnräder verwendet. Ein
+fischertechnik-Modell eines Differenzialflaschenzugs mit Kette findet sich in
+hobby2 Band 4 auf S. 19 [3] (Abb. 12).
+
+(Quelle: Wikipedia [1])
+
+Die Kraftverstärkung berechnet sich hier
+aus der Differenz der Radien der beiden
+Rollen. Denn während über die kleinere
+Rolle mit Radius r je Umdrehung eine
+Seillänge von 2p × r abrollt, verkürzt sich
+die Seilschlinge zugleich um die an der
+großen Rolle mit Radius R aufgerollte Seillänge 2p × R . Die erforderliche Zugkraft
+berechnet sich daher aus der Last mit:
+FZ =
+
+
+FL × ( R - r )
+2× R
+
+(3)
+
+(aus: hobby2 Band 4 [3])
+
+Nach demselben Prinzip arbeitet die Differenzialwinde. Sie kommt allerdings ohne
+Rollen (bzw. Zahnräder) aus. Stattdessen
+verwendet sie zwei Winden mit unterschiedlichem Durchmesser, auf denen die
+beiden Enden des Zugseils in einander
+entgegen gesetzter Richtung aufgewickelt
+
+sind. Beim Drehen wird das eine Ende des
+Zugseils auf einer der Winden ab- und das
+andere auf der anderen Winde aufgewickelt – wegen des unterschiedlichen Durchmessers mit unterschiedlichen Seillängen
+(Abb. 13).
+
+Mechanik
+
+Das Verhältnis der Zugkraft zur Gewichtskraft der Last berechnet sich wie in Formel
+(3) für den Differenzialflaschenzug. Ein
+Konstruktionsbeispiel für eine solche Differenzialwinde findet sich z. B. im hobby2
+Band 4, S. 18 (Abb. 14).
+Das Prinzip der Differenzialwinde wird
+auch für eine ebenfalls bereits in antiken
+Kränen verwendeten, heute als Wellrad
+bezeichneten Konstruktion genutzt. Dabei
+werden zwei Räder mit unterschiedlichem
+Durchmesser auf derselben Achse montiert. Um das größere Rad wird ein langes
+Zugseil gewickelt, um das kleinere das die
+Last haltende Seil bspw. eines Krans. Die
+Verstärkung der Zugkraft berechnet sich
+hier unmittelbar aus dem Verhältnis der
+beiden Winden-Radien zueinander:
+FZ =
+
+FL × r
+R
+
+(4)
+
+Solche Wellräder wurden bereits in der
+Antike in Kränen mit Flaschenzügen kombiniert (Abb. 15).
+
+(aus: hobby2 Band 4 [3])
+
+Ersetzt man im Modell des Trispastos die
+Winde durch ein Speichenrad, wird das
+Funktionsprinzip anschaulich (Abb. 16).
+In römischen (und später mittelalterlichen)
+Kränen wurde statt eines Speichenrads ein
+Tretrad verwendet, in dem Sklaven oder
+Arbeiter die Hubarbeit nicht mehr nur mit
+Armkraft, sondern durch Einsatz ihres
+gesamten Körpergewichts verrichteten.
+(aus: hobby2 Band 4 [3])
+
+
+
+Fazit
+Flaschenzüge, Differentialwinden und
+Wellräder sind einfache mechanische Maschinen, mit denen eine Zugkraft verstärkt
+oder auch abgeschwächt werden kann. Bei
+Motorantrieben sind sie eine Alternative zu
+Über- oder Untersetzungen durch Getriebe.
+
+
+Von Kränen mit Tretrad gibt es zahlreiche
+Nachbauten, z. B. im Limesmuseum bei
+Aalen (Abb. 17) oder im Technoseum in
+Mannheim.
+
+Flaschenzüge haben zudem einen positiven
+Nebeneffekt: Sie stabilisieren das Zugseil,
+indem sie Verdrillungen erschweren: Ein
+Objekt lässt sich damit gerade nach oben
+ziehen. Je mehr Seilstränge, desto widerstandsfähiger ist ein Flaschenzug gegen
+Torsion.
+Beliebig große Gewichte lassen sich mit
+einem Flaschenzug allerdings nicht heben
+– die Hubarbeit geht irgendwann nicht
+mehr spurlos am Material vorüber. Spätestens, wenn am Antrieb (Schnecke, Zahnrad) Abrieb entsteht, sollte man das
+Gewicht reduzieren.
+
+(Limesmuseum bei Aalen)
+
+Ein Modell mit Tretrad findet sich auch im
+hobby2 Band 4, S. 10 [3] (Abb. 18).
+
+Das Zugseil hingegen wird entlastet, da auf
+den einzelnen Seilstrang nur ein Bruchteil
+der Gewichtskraft des zu hebenden Gegenstands wirkt. So kann man mit einem
+Flaschenzug auch sehr schwere Gegenstände mit einem dünnen Seil anheben.
+
+Quellen
+
+(aus: hobby2 Band 4 [3])
+
+[1]
+
+Wikipedia: Flaschenzug.
+
+[2]
+
+Artur Fischer: Der Flaschenzug. In:
+fischertechnik hobby, Experimente
+und Modelle, hobby1 Band 1,
+Fischer-Werke, 1972, S. 40-43.
+
+[3]
+
+Artur Fischer: Krane. fischertechnik
+hobby, Experimente und Modelle,
+hobby2 Band 4, Fischer-Werke,
+1975.
+
+[4]
+
+Artur Fischer: Das Abenteuer-BauBuch. Fischer-Werke, 1985.
+
+[5]
+
+Heribert Keh: Der Flaschenzug.
+Unterrichtshilfe Technik (u-t).
+Fischer-Werke, 1980.
+
+

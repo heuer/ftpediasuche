@@ -1,0 +1,244 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Profi-Lights: WS2812B-Vollfarb-Leuchtdioden
+im fischertechnik-Design
+Till Harbaum
+Dass bunte Lampen ein fischertechnik-Modell ganz ungemein aufwerten ist keine neue
+Erkenntnis und fischertechnik bot schon sehr früh Lampenfassungen für kleine Glühlampen an,
+auf die man bunte Plastikkappen stecken konnte. Dieses System wurde viele Jahre erfolgreich
+beibehalten und hat sicher so manches Kinderzimmer abends in ein effektvolles Licht getaucht.
+Seit kurzem hat fischertechnik auch
+sogenannte RGB-LEDs im Programm.
+Einmal mit Spannung versorgt, blinken und
+flackern diese LEDs selbsttätig in allen
+Farben des Regenbogens. Für viele Modelle
+ist das sicher ausreichend, aber der Leuchtdioden-Markt bietet noch wesentlich
+interessantere Leuchtmittel, die sich mit
+wenig Aufwand auch stilecht in fischertechnik integrieren lassen. Das Zauberwort,
+das einem auch den Einkauf auf den
+üblichen Online-Plattformen erleichtert,
+lautet WS2812B.
+WS2812B-basierte Leuchtdioden sind unter
+vielen Aspekten sehr interessant für Bastelprojekte. Sie sind mit ca. 10 ct pro Leuchtdiode äußerst preisgünstig, sie sind mechanisch sehr einfach zu montieren und auch
+die elektrische Ansteuerung ist äußerst
+simpel. Für den etwas schwierigeren Part
+der korrekten Programmierung gibt es zum
+
+Glück unzählige
+Beispiele im Netz.
+
+Bibliotheken
+
+und
+
+Elektrischer Anschluss
+Im Gegensatz zu den fischertechnik-RGBLEDs benötigen die WS2812B einen
+zusätzlichen Controller, der ihnen mitteilt,
+was sie gerade zu tun haben und in welcher
+Farbe sie wie hell leuchten sollen. Von sich
+aus leuchten die WS2812B nicht. Erst wenn
+sie von außen mit entsprechenden Kommandos angesteuert werden, beginnen sie
+ihre Arbeit. Durch unterschiedliche Kommandos ist so die Farbe und Helligkeit jeder
+einzelnen Leuchtdiode einstellbar.
+Dass der elektrische Anschluss wirklich
+trivial ist, zeigt Abb. 1. Es reicht neben der
+5-Volt-Versorgungsgspannung ein einziger
+Datenanschluss an z. B. einem Arduino, um
+die WS2812B-Leuchtdioden anzusteuern.
+Die Leuchtdioden lassen sich dabei kaskadieren, so dass auch mehrere hundert von
+
+
+
+ihnen lediglich einen Anschluss am Arduino belegen. Ganze Videowände lassen sich
+so mit einem einzigen einfachen Arduino
+ansteuern.
+Die WS2812B-Leuchtdioden erreichen eine
+beeindruckende Helligkeit, und schon
+einige zig LEDs reichen, um einen Raum zu
+beleuchten. Die Stromaufnahme pro LED
+liegt dabei bei maximal 60 mA, was bei 5 V
+einer Leistung von 300 mW entspricht.
+Nutzt man den Arduino auch zur Stromversorgung der LEDs, sind so maximal ca.
+acht LEDs an einem mit maximal 500 mA
+belastbaren USB-Port zu betreiben. Will
+man mehr LEDs betreiben, empfiehlt sich
+die Verwendung eines separaten 5 V-Netzteils. Die maximale Leistung wird nur bei
+maximal hellem weißen Licht erreicht.
+Stellt man durch entsprechende Programmierung des Arduino sicher, dass die maximale Helligkeit begrenzt wird oder nie alle
+LEDs weißes Licht abstrahlen, so kann man
+ggf. auch mehr LEDs am USB betreiben.
+
+aber erst bei größeren Mengen als den hier
+zu erwartenden.
+
+
+Mechanischer Anschluss
+Die häufigste Darreichungsform von
+WS2812B-basierten Leuchtdioden sind
+lange Klebestreifen, die auf Rollen verkauft
+werden (siehe Abb. 2). Der eigentliche
+Klebestreifen besteht dabei aus Platinenmaterial, auf dem die LEDs bereits montiert
+und fertig verschaltet sind. Man muss also
+lediglich an einer Seite das passende Signal
+in den Streifen einspeisen, um sämtliche
+LEDs unabhängig ansteuern zu können.
+Es gibt die Streifen mit unterschiedlich
+dichter LED-Besetzung. Gängig sind 30, 60
+oder 144 LEDs pro Meter, was auf einen
+Abstand von 3,33 cm, 1,67 cm oder 0,7 cm
+hinausläuft. Keiner dieser Werte passt exakt
+genug zum fischertechnik-üblichen 15 mmRaster, so dass sich kein fischertechnikkompatibler Abstand ergibt, wenn man die
+Klebestreifen z. B. einfach der Länge nach
+auf fischertechnik-Platten klebt. Die Hersteller bieten oft auch an, Streifen nach
+Kundenmaß zu erzeugen; das lohnt sich
+
+
+Etwas seltener, aber durchaus gängig, ist
+der Vertrieb der Leuchtdioden auf einer
+steifen Platinenmatrix wie in Abb. 3 dargestellt. In dieser Form sind die LEDs nicht
+durchverbunden, sondern jede LED besitzt
+auf der Unterseite sechs Kontaktpunkte: je
+drei für den Signaleingang und drei für den
+Signalausgang zur nächsten LED. Die
+Platinen sind zwischen den LEDs eingeritzt,
+so dass sie sich leicht auseinanderbrechen
+lassen. Von der Rückseite lassen sie sich
+dann leicht mit passenden Steckern und
+Buchsen versehen. Abb. 4 zeigt in der
+Seitenansicht, wie Stecker und Buchsen
+dann ineinandergreifen. Als Stecker und
+Buchse eignen sich zum Beispiel „SL
+1X40W SMD2,54“ und „BL 1X20W 2,54“
+von Reichelt, die man allerdings jeweils auf
+die Länge von drei Anschlüssen kürzen
+muss.
+
+
+Tipps & Tricks
+
+
+Mit etwas Geschick lässt sich auf diese
+Weise ein Abstand von genau 15 mm erreichen, so dass sich die Leuchtdioden exakt
+im fischertechnik-Raster zusammenstecken
+lassen. Das 15 mm-Raster ist aber nur die
+halbe Miete. Es fehlt noch eine mechanische Verbindung zum fischertechnikSystem. Auf den ersten Blick scheinen die
+gängigen ft-Lampensockel geeignet zu sein.
+Allerdings müsste man diese stark nachbearbeiten, um Platz für die Leuchtdioden
+mit ihren insgesamt sechs Anschlüssen zu
+schaffen.
+
+
+Das Resultat ist eine WS2812B-LED im
+fischertechnik-kompatiblem Gehäuse. Ich
+habe dem in diesem Beispiel verwendeten
+Arduino-Nano auch gleich ein fischertechnik-kompatibles Gehäuse verpasst. Auch
+das findet sich unter [2], so dass sich am
+Ende eine optisch sehr „fischertechnisch“
+anmutende Lösung ergibt.
+
+
+Ich habe deshalb ein 3D-Modell einer
+kompatiblen Fassung entworfen. Unter [2]
+findet sich ein sehr einfacher LED-Sockel
+(siehe Abb. 5), in den sich die WS2812B
+inklusive der Steckverbinder leicht einkleben lassen. Da sich die fischertechnikZapfen nicht für den 3D-Druck eignen, hat
+diese Variante eine Nut an der Unterseite.
+Durch Einstecken eines Federnockens lässt
+sich der Zapfen aber leicht nachrüsten. Auf
+den Sockel passen die aktuellen RastLeucht-Kappen. Für die farbigen LEDs
+bieten sich die glasklaren Kappen an.
+
+
+Stromversorgung
+Als Spannungsquelle eignet sich bei wenigen LEDs auch der USB-Anschluss des
+TXT. Sollen mehr LEDs betrieben werden
+oder steht kein TXT zur Verfügung, ist die
+einfachste Energiequelle eine billige so
+genannte USB-Powerbank, wie sie gerne
+als Notstromversorgung für Smartphones
+verwendet wird.
+
+
+
+
+Programmierung
+Sind Mechanik und Elektrik geklärt, geht es
+an die Programmierung. Da wir uns hier in
+der Arduino-Welt bewegen, können wir auf
+einen schier unerschöpflichen Fundus
+fertiger Lösungen zurückgreifen. Besonders
+effektreich ist die WS2812FX-Bibliothek,
+die unter [3] zu finden ist. Der unter dem
+Namen auto_mode_cycle enthaltene Beispiel-Sketch bietet einen schnellen Start.
+Für unser Beispiel müssen dort in den Kopfzeilen lediglich die Konstanten LED_PIN
+und LED_COUNT abgepasst werden. Für
+das oben abgebildete Verdrahtungsschema
+ist LED_PIN auf zwei zu setzen und
+LED_COUNT auf drei, wobei es nicht
+schadet, wenn man mehr LEDs angibt als
+tatsächlich angeschlossen sind.
+Sämtliche LEDs sind vollkommen unabhängig steuerbar. Wenn man zwischen die
+LEDs einfache Verlängerungskabel setzt,
+kann man sie z. B. auch an den Ecken eines
+Fahrzeugs montieren und sie einzeln weiß
+und rot leuchten sowie gelb und blau
+blinken lassen. Mit wenig Aufwand ist so
+ein Feuerwehrauto adäquat mit Leuchten
+bestückt.
+Für die Ansteuerung sendet der Arduino
+einen Bitstrom über die einzelne Datenleitung an die erste LED des Strangs. Jedes
+Bit in diesem Datenstrom besteht aus einem
+1,25 µs langen An-/Aus-Signal, wie in
+lediglich durch das Verhältnis der An- und
+Ausphasen unterscheiden. Jeweils 24 Bits
+pro LED werden übertragen, für jede
+Grundfarbe acht. Damit kann jede LED
+
+unabhängig das gesamte Farbspektrum darstellen.
+Jede LED empfängt die ersten 24 Bits des
+Datenstroms. Hat sie selbst alle 24 Bits
+empfangen, so sendet sie selbst alle verbleibenden Bits an die nächste LED weiter.
+Dieses Spiel wiederholt sich über alle LEDs
+der Kette. Auf diese Weise können mehrere
+hundert LEDs mit einem einzigen Signal
+bedient werden. Die Signallänge pro LED
+beträgt dabei 30 µs. Um z. B. 100 LEDs mit
+frischen Daten zu versorgen, ist das
+Gesamtsignal 100 · 30 µs = 3 ms lang und
+die maximale Aktualisierungsfrequenz liegt
+bei 1000 / 3 ms = 330 Hz.
+
+Fazit
+WS2812B-LEDs sind ein billiges und
+unterhaltsames Spielzeug, das sich sehr
+schön in fischertechnik integrieren lässt.
+Der geringe Preis lässt Fehlversuche und
+Defekte leicht verschmerzen. Die brillant
+leuchtenden LEDs entschädigen für jeden
+beim Löten angekokelten Finger, und mit
+der Leistungsfähigkeit des Arduinos bieten
+sich unzählige Möglichkeiten zum Einsatz
+der „Profi Lights“.
+
+Quellen
+[1]
+
+Seeed Studio: WS2812B Data Sheet.
+
+[2]
+
+Harbaum, Till: fischertechnik
+compatible „Profi Lights“ auf
+Thingiverse.
+
+[3]
+
+Almdick, Harm: WS2812 FX Library
+for Arduino and ESP8266 auf
+GitHub.
+
+
+

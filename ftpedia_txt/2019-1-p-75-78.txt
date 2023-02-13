@@ -1,0 +1,219 @@
+
+Computing
+
+Computing
+
+ftDuino spielt Minecraft
+Till Harbaum
+fischertechnik trifft virtuelle Bausteinwelt!
+Über Programmierumgebungen für fischertechnik-Controller und den ftDuino wurde
+in der ft:pedia schon Einiges geschrieben
+[1]. Häufig dreht es sich dabei um die Frage,
+wie so eine Umgebung aussehen muss,
+damit sie auch von Einsteigern und speziell
+Kindern leicht zu erlernen und mit Begeisterung zu verwenden ist. Dass die Antwort
+auf diese Frage unter Umständen an unerwarteter Stelle liegt, soll dieser Beitrag
+etwas erleuchten.
+Dass man Kindern den Einstieg in die
+Programmierung so einfach wie möglich
+machen muss, damit sie schnelle Erfolgserlebnisse haben und motiviert bleiben,
+scheint eine Binsenweisheit zu sein. Wer
+aber jemals seinen Kindern beim Computerspielen zugeschaut hat, wurde dabei
+schnell eines Besseren belehrt. Ob es unzählige Pokemon-Monster sind, deren individuelle Eigenschaften der Nachwuchs im
+Schlaf runterrasselt oder ob es die speziellen Tricks beim Aufbau einer Zombiefalle
+in Minecraft [2] sind, die die Eltern
+ahnungslos stehen lassen, ist dabei egal. Es
+überrascht die Tatsache, dass Kinder in
+Computerspielen auch komplexeste Zusammenhänge spielend verstehen und umsetzen
+und Einfachheit wohl nicht unbedingt der
+Schlüssel zur Begeisterung zu sein scheint.
+Es ist wohl etwas anderes, was dafür sorgt,
+dass Kinder begeistert bei der Sache bleiben. Warum also nicht statt in langweiligen
+immer gleichen Programmierumgebungen
+à la Scratch und RoboPro mal in einem
+Computerspiel programmieren? Was wäre,
+
+wenn man virtuelle und physikalische Welt
+verbinden könnte?
+Ein Spiel, das geradezu prädestiniert dafür
+ist, ist Minecraft. Minecraft ist ein sogenanntes Aufbauspiel. Die gesamte dreidimensionale Minecraft-Spielwelt besteht
+aus Würfeln unterschiedlichen Materials,
+die der Spieler nahezu frei anordnen kann.
+Auch wenn es inzwischen alle möglichen
+Spielmodi gibt, so war das beherrschende
+Spielelement schon 2009 die Möglichkeit,
+die Welt frei durch das Versetzen von
+Blöcken zu verändern. Dabei gleicht Minecraft speziell im sogenannten „KreativSpielmodus“ einem unendlich großen virtuellen fischertechnik-Kasten. Es gibt kaum
+Spielregeln, es gibt kein Ziel, es geht einzig
+und allein um das Bauen an sich.
+Interessanterweise stellt Minecraft im Spiel
+eine elektrische Schaltungssimulation namens Redstone zur Verfügung sowie Sensoren und Aktoren in Form von Schaltern,
+Tastern, Lampen, Druckzylindern etc., die
+mit Redstone interagieren können. Auch
+einige Logik-Elemente sind im Spiel vorhanden. Findige (und sehr geduldige) Minecraft-Spieler bauen aus unzähligen dieser
+einfachen Elemente ganze Rechenwerke
+[3]. Eine Integration echter Elektronik
+drängt sich hier förmlich auf.
+
+Spielmodifikationen – Mods
+Die Kopplung zwischen realer Welt und
+einem Spiel wie Minecraft steht und fällt
+mit der Möglichkeit, eigene Objekte in die
+Spielwelt integrieren zu können. Minecraft
+
+
+
+ist in der Programmiersprache Java geschrieben und bot schon immer die Möglichkeit, entsprechende Erweiterungen, sogenannte Mods, zu schreiben. Der Hersteller Mojang hat die dafür nötige API ins
+Spiel integriert. Die Benutzung dieser API
+ist jedoch nicht einfach und so haben findige Programmierer eine Art Zwischenschicht entwickelt, die auf der einen Seite
+auf der Original-API aufbaut, auf der
+anderen Seite aber mächtige und leichter zu
+benutzende Möglichkeiten zur Mod-Entwicklung bereitstellt.
+Eine populäre Zwischenschicht dieser Art
+ist Forge [4]. Wer selbst einmal in die ModEntwicklung für Minecraft reinschnuppern
+möchte, findet unter MinecraftByExample
+[5] ein paar komplette Beispiele für den
+Einsatz von Forge. Auch die ftDuino-Mod
+ist auf Basis von Forge und den Beispielen
+von MinecraftByExample entstanden.
+Die Installation von Minecraft und den
+Mods kann man üblicherweise getrost
+beliebigen Jungs ab acht Jahren überlassen,
+entsprechendes Know-How ist hier zum
+Erstaunen der meisten Eltern in der Regel
+ausreichend vorhanden. Fehlt der jugendliche Fachmann, dann zeigt ein VideoTutorial [6] die nötigen Schritte ebenfalls
+im Detail.
+
+Die ftDuino-Mod
+Die ftDuino-Mod unterscheidet sich technisch kaum von beliebigen anderen Mods,
+die neue Spielelemente einfügen. Der einzig
+fundamentale Unterschied besteht darin,
+dass das Spiel Zugriff auf den USB-Anschluss des PCs zur Ansteuerung des
+ftDuino benötigt. Da die Mod wie das Spiel
+selbst in Java geschrieben ist, muss der
+Zugriff auf die Hardware aus Java erfolgen.
+Eine passende sogenannte Bibliothek dafür
+ist JSSC [7], die z. B. auch in der ebenfalls
+in Java geschriebenen Arduino-IDE zum
+Ansprechen der Arduinos verwendet wird.
+Um den ftDuino ansprechen zu können, ist
+auf dem ftDuino ein entsprechender Sketch
+
+nötig. Hier kommt der auch an anderer
+Stelle verwendete IoServer-Sketch [8] zum
+Einsatz. Er erlaubt es, über USB die Ausgänge des ftDuino zu steuern sowie den Zustand der Eingänge vom USB-Anschluss
+aus abzufragen.
+Für den Anwender sind also vier Schritte
+zur ftDuino-Nutzung in Minecraft nötig:
+1. IoServer-Sketch auf dem ftDuino installieren
+2. Minecraft installieren
+3. Minecraft-Forge installieren
+4. ftDuino-Mod installieren
+
+Minecraft-Blöcke
+
+Die ftDuino-Mod stellt im Spiel ein paar
+zusätzliche Spielelemente zur Verfügung
+(Abb. 1). Die Verwendung ist einfach: Es
+gibt Ein- und Ausgangsblöcke. Durch
+virtuelle fischertechnik-Steckerchen wählt
+man in Minecraft den jeweiligen Anschluss
+am ftDuino aus. Ein elektrisches Signal am
+ftDuino-Eingang wird durch den InputBlock in Minecraft in ein virtuelles Redstone-Signal innerhalb der Minecraft-Welt
+umgesetzt. Es kann dort wie jedes andere
+Redstone-Signal verarbeitet und kann z. B.
+genutzt werden, um Aktionen im Spiel auszulösen. Umgekehrt können Redstone-Signale per Output-Block auf einen ftDuinoAusgang geleitet, dort wieder in elektrische
+Signale umgewandelt werden – und so
+fischertechnik-Lampen und -Motoren betätigen!
+
+Anwendungen
+Die Minecraft-Welt mit fischertechnik zu
+verbinden erlaubt ein paar interessante
+Spielvariationen. So kann nicht nur der
+Spieler selbst Signale auslösen, es können
+auch NPCs (nicht vom Spieler gesteuerte
+
+
+Computing
+
+
+Figuren) wie z. B. feindliche Monster ein
+Ereignis auslösen. So kann eine Gefahr im
+Spiel z. B. eine Lampe in der realen Welt
+aktivieren.
+Viele Minecraft-Objekte reagieren auf
+Redstone-Signale. Nicht zuletzt lässt sich
+Spiel-interner TNT-Sprengstoff auf diese
+Weise zünden. Die unbegrenzten (Sprengstoff-)Ressourcen im Spiel erlauben es, mit
+einem Druck auf einen fischertechnikTaster ganze Berge in Minecraft zu sprengen.
+
+mit dem Thema auseinander zu setzen?
+Definitiv! Die offene Spielwelt fördert
+dabei das um-die-Ecke-Denken, und warum
+soll man eine fischertechnik-Ampelanlage
+nicht einmal durch Eisenbahnwaggons steuern, die in einer virtuellen Welt über virtuelle Schalter rollen? Es mag sicher einfachere Lösungen geben, aber cooler ist die
+Eisenbahn-Lösung allemal.
+
+Fazit
+Grafische Programmierumgebungen müssen einfach sein? Fragt man MinecraftSpieler, ist das nicht so. Programmierung
+mit 3D-Objekten in einer virtuellen Spielwelt kann erstaunlich flexibel sein. Statt
+didaktisch wertvoller Schaltelemente in
+kindgerechten Farben warten hier Monster
+und Berge aus Sprengstoff darauf, verkabelt
+zu werden und mit der fischertechnik-Welt
+zu interagieren.
+
+ftDuino reagieren auf Minecraft
+
+Ist das pädagogisch sinnvoll? Das mag man
+in Frage stellen. Motiviert es Kinder, sich
+
+
+
+Quellen
+
+Lampe in Minecraft
+
+[1]
+
+Till Harbaum: ftDuino - Arduino für
+fischertechnik.
+
+[2]
+
+Minecraft.
+
+[3]
+
+Minecraft: Advanced redstone
+circuits.
+
+[4]
+
+Minecraft: Minecraft Forge.
+
+[5]
+
+TheGreyGhost: MinecraftByExample
+auf Github.
+
+[6]
+
+Kalimero2: fischertechnik steuert
+Minecraft ftDuino auf youtube.
+
+[7]
+
+scream3r: Java Simple Serial
+Connector auf Github.
+
+[8]
+
+Till Harbaum: IoServer-Sketch auf
+Github.
+
+Minecraft zwischen ftDuino-Eingang I1
+und -Ausgang O1
+
+
+

@@ -1,0 +1,283 @@
+
+Elektrotechnik
+
+Elektrotechnik
+
+Messbereichserweiterung für Multimeter
+René Trapp
+Wie kann man Ströme bis 2 A kostengünstig messen?
+Im Beitrag über den optimalen Betrieb der
+fischertechnik-Motoren [1] wird darauf
+eingegangen, wie man aus dem Motorstrom
+den Arbeitspunkt des Motors beurteilt. Was
+aber meist fehlt ist ein geeignetes Messgerät, um den Motorstrom zu messen.
+
+Erweiterung des Messbereichs
+
+Wer nicht bereits über ein Messgerät
+verfügt, wird sich möglicherweise eines
+zulegen wollen. Aber auch ein vorhandenes
+Messgerät eignet sich möglicherweise nur
+bedingt für den benötigten Messbereich.
+
+Im Prinzip läuft es auf eine Anwendung des
+Ohmschen Gesetzes [3] hinaus: Man leitet
+einen unbekannten Strom I durch einen
+bekannten Widerstand R und misst die
+dabei auftretende Spannung U (Abb. 1).
+
+Wer misst, misst Mist – oder
+welches Gerät brauche ich?
+Für die in den zurückliegenden 50 Jahren
+von fischertechnik angebotenen Motoren
+eignet sich am besten ein Gerät mit einem
+Strommessbereich bis 2 A. Günstige Digitalmultimeter sind schon ab 9,95 € im
+einschlägigen Handel zu kaufen, z. B. bei
+reichelt [2]. Es gibt dort im Angebot hauptsächlich Geräte mit Messbereichen bis
+200 mA und dann erst wieder mit 10 A oder
+20 A. Ein Bereich bis 2 A fehlt meist. Aber
+auch wesentlich teurere Geräte bieten
+keinen Messbereich für 2 A an.
+Selbstverständlich sind mehrere Messbereiche für Spannung und häufig auch noch
+für Widerstände vorhanden. Ein solches
+Gerät sollte bevorzugt werden, wenn man
+eines kaufen möchte, da sich dadurch
+weitere Anwendungen eröffnen. Natürlich
+kann ein vorhandener 10 A-Messbereich
+verwendet werden, allerdings ist in diesem
+Fall mit einem erheblichen Messfehler zu
+rechnen.
+
+Bevor man nun mehrere hundert Euro für
+ein Gerät ausgibt, das den entsprechenden
+Messbereich anbietet, kann man sich auch
+mit einer kostengünstigen Lösung im
+Selbstbau behelfen.
+
+I
++
+U
+–
+
+R
+
+
+Den fließenden Strom I ermittelt man
+gemäß
+I=
+
+U
+R
+
+Selbst die kostengünstigsten Messgeräte
+bieten einen Spannungsmessbereich bis
+200 mV an. Die Genauigkeit der
+Spannungsmessung dieser Geräte ist für
+den Zweck mehr als ausreichend. Ebenfalls
+ist der Innenwiderstand des Gerätes bei
+Spannungsmessungen ausreichend hoch,
+um ihn bei den folgenden Betrachtungen
+völlig zu ignorieren. Ansonsten müsste man
+noch den Fehlerstrom berücksichtigen, der
+am Widerstand vorbei durch das Messgerät
+fließt und das Ergebnis verfälscht.
+
+
+
+
+Um mit 2 A den Messbereich von 200 mV
+voll auszunutzen, muss der Widerstand
+exakt
+
+aufweisen.
+
+200 mV
+= 0,1 W
+2A
+
+Immer wenn Strom durch einen Widerstand
+fließt, wird auch thermische Energie
+erzeugt, die elektrische Leistung [4]. Meist
+ist sie unerwünscht und heißt dann
+Verlustleistung. Diese Leistung errechnet
+sich zu
+P = I ×U
+
+oder auch
+
+P = I2 ×R
+Bei 2 A wird im Widerstand eine Leistung
+von
+2A
+
+∙ 0,1 Ω = 0,4 W
+
+umgesetzt. Die Eckdaten des Widerstands
+sind nun bekannt. Für eine möglichst hohe
+Messgenauigkeit wird man einen möglichst
+eng tolerierten Widerstand nehmen wollen.
+Für den genannten Zweck der Motorstrommessung ist eine Toleranz von ±1 % durchaus akzeptabel. Der Leser möge sich bitte
+klarmachen, dass 1 % von 0,1 W lediglich
+0,001 W darstellen. Leiterwiderstände
+liegen bereits in dieser Größenordnung,
+sodass der Einsatz noch enger tolerierter
+Widerstände mit 0,2 % oder 0,1 % nicht
+gerechtfertigt ist.
+Einen entsprechenden Widerstand mit
+0,1 W / 1 % und 0,4 W kann man möglicherweise im Elektronikfachhandel auftreiben.
+Ein Widerstand mit mehr Nennleistung ist
+erheblich besser geeignet, eventuell auch
+besser erhältlich, geht aber ins Geld oder hat
+große Toleranzen.
+Noch kostengünstiger geht es allerdings so:
+Durch die Parallelschaltung von Widerständen liegt der Gesamtwiderstand RGes
+bekanntlich unterhalb des niedrigsten
+
+Einzelwiderstandes R. Insbesondere gilt für
+n gleiche Einzelwiderstände [5]:
+RGes =
+
+R
+n
+
+Setzt man den Messwiderstand aus zehn
+parallelgeschalteten Einzelwiderständen zu
+je 1 W zusammen, ergibt sich insgesamt
+0,1 W als Gesamtwiderstand.
+Jeder einzelne Widerstand trägt dabei einen
+Anteil von 1/10 der Gesamtleistung und
+wird bei 2 A mit 40 mW belastet [5]. Die
+Gesamtanordnung darf sogar bis zur maximalen Leistung jedes Einzelwiderstandes
+ausgereizt werden, das sind bei 0,25 W pro
+Widerstand
+10 ∙ 0,25 W = 2,5 W
+
+Die Widerstände werden in dem Fall jedoch
+extrem heiß.
+Insgesamt hat diese Anordnung aus zehn
+gleichen Widerständen sogar eine Gesamttoleranz unterhalb der Toleranz der Einzelwiderstände. Theoretisch ist laut [6] mit
+rund 0,32 % für den Gesamtwiderstand zu
+rechnen; sofern die statische Verteilung der
+Toleranzen entsprechend ist. Geht man vereinfachend von 1 % aus, liegt man auf der
+sicheren Seite.
+Entsprechende Widerstände finden sich im
+einschlägigen Elektronikversandhandel [7].
+Aufbau der
+Messbereichserweiterung
+Je nach den vorhandenen Werkzeugen kann
+man die Widerstände zusammen mit
+Anschlussbuchsen auf eine Platine auflöten
+und verdrahten. Varianten mit zusätzlichen
+Messbereichen sind natürlich möglich
+(Abb. 2).
+Extra für dieses Projekt noch eine Lötstation und weitere Werkzeuge anzuschaffen, ist nun aber nicht nötig. Zwei große
+Lüsterklemmen, z. B. [8], erlauben es, alle
+zehn
+Widerstände
+zusammen
+mit
+Anschlusskabeln an jedem der beiden
+
+
+Elektrotechnik
+
+Anschlüsse zu verschrauben. Auf diese Art
+erhält man auch einen preisgünstigen und
+mechanisch ausreichend stabilen Aufbau.
+
+erhält 1127 mV. Dann ersetzt man mV
+durch mA und erhält 1127 mA; 1127 mA
+sind 1,127 A. Berücksichtigt man nun noch
+die Toleranz der Widerstände, dann ist die
+letzte Stelle nicht mehr sinnvoll und es darf
+gerundet werden. Aus den 1,127 A werden
+so 1,13 A (und das ist für den Zweck genau
+genug).
+Bei der Anzeige 27,4 mV ergeben sich so
+274 mA= 0,274 A. Diesmal ist Runden eher
+unnötig.
+Zusammenfassung
+
+
+Andere Varianten sind ebenfalls denkbar
+und richten sich in der Ausführung nach
+dem Gutdünken des Benutzers.
+Beim Betrieb sollte man eine hitzefeste und
+elektrisch isolierende Unterlage, zum
+Beispiel eine Keramikfliese oder einen
+alten Keramikteller benutzen.
+Umgang mit dem Messmittel
+Wie bereits beschrieben wird der Messstrom hier nicht durch das Messgerät selbst
+geleitet, sondern durch den Messwiderstand. Die Spannung am Messwiderstand
+wird mittels Spannungsmessung bestimmt
+(Abb. 1). Gemäß dem Ohmschen Gesetz
+gilt für die gewählte Dimensionierung
+
+oder
+
+0,1 V
+0,1 W =
+1A
+1A=
+
+0,1 V
+0,1 W
+
+Für die Ablesung ist das sehr hilfreich, denn
+die Umrechnung kann man ganz einfach im
+Kopf machen. Hier ein Beispiel:
+Im Display seien 112,7 mV angezeigt. Den
+Wert nimmt man mal zehn – beziehungsweise lässt das Komma einfach weg – und
+
+Eine einfache Messhilfe erweitert den
+Strommessbereich eines vorhandenen oder
+neuen Gerätes. Sofern noch kein Messgerät
+vorhanden ist, sollte die Anschaffung
+erwogen werden. Die zusätzlichen Teile für
+die Messbereichserweiterung kann man
+dann gleich miterwerben.
+Manche Fehlersuche in Modellen wird
+durch ein Messgerät erheblich vereinfacht,
+sodass ein zusätzlicher Nutzen aus der
+Anschaffung gezogen werden kann.
+
+Quellen
+[1]
+
+René Trapp: fischertechnik-Motoren
+richtig betreiben. ft:pedia 3/2015, S.
+34-38.
+
+[2]
+
+reichelt elektronik: Auswahl an
+digitalen Multimetern.
+
+[3]
+
+Wikipedia: Ohmsches Gesetz.
+
+[4]
+
+Wikipedia: Elektrische Leistung.
+
+[5]
+
+Wikipedia: Parallelschaltung.
+
+[6]
+
+techniker-forum: Widerstandsabweichung aus Teiltoleranzen
+errechnen.
+
+[7]
+
+reichelt elektronik: MetalloxydWiderstand 1W ±1%, 1/4W.
+
+[8]
+
+reichelt elektronik: Lüsterklemme
+6mm².
+
+
+

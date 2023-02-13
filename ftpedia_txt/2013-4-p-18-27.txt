@@ -1,0 +1,582 @@
+
+
+Elektronik
+
+Automatik zur Steuerung eines Krans
+Werner Hasselberg
+fischertechnik und der Kranbau sind seit der Erfindung der Statik-Elemente untrennbar
+miteinander verbunden. Eigentlich kein Wunder: Mit keinem anderen Spielsystem lassen sich
+bessere und vielseitigere Kräne bauen. Und weil sie so schön zu bauen sind, beschäftigt sich
+dieser Beitrag mit der Frage, wie sie vollautomatisch – und ohne PC-Hilfe – gesteuert
+werden können. Die hier gezeigte Steuerung ist aber noch vielseitiger. Sie kann, etwas
+erweitert, sogar einen dreiachsigen Roboter steuern, ohne dass dazu ein Computer
+erforderlich wäre.
+Selbstverständlich kann man einen Roboter
+mit PC-Steuerung sehr vielseitig programmieren und auch fast unbegrenzt viele
+Arbeitsschritte exakt ausführen. Will man
+das mit reiner Elektronik realisieren, stößt
+man irgendwann an logistische und technische Grenzen. Trotzdem macht gerade
+das Ausprobieren verschiedener Schaltungsvarianten, das Kombinieren der unterschiedlichen Funktionsweisen und der
+ganze Entstehungsprozess, bis am Ende die
+Modellsteuerung steht, sehr viel Spaß, weil
+man näher an die Technik rückt als beim
+Programmieren eines Interfaces.
+Am Anfang war der Kran. Zu seiner vollen
+Funktionsfähigkeit gehören mindestens die
+folgenden Funktionen:
+
+6.
+
+Magnethaken mit Last wieder senken
+und Stopp am Ende.
+
+7.
+
+Elektromagnet geht aus und löst die
+„Verriegelung“.
+
+8.
+
+Haken geht wieder nach oben und
+Stopp am Ende.
+
+9.
+
+Kran dreht sich wieder zurück in die
+Ausgangsposition.
+
+10. Fertig.
+Wer die ‚Automatik für weichen Motorstart und –stopp’ aus der ft:pedia 3/2013
+[1] nachgebaut hat und über eine Eisenbahn verfügt, kann den Kran automatisch
+starten und so z. B. einen Container verladen.
+
+1.
+
+Start des Kranmotors für das Herablassen des Hakens (unser Kran verfügt
+über einen Elektromagnet als Haken)
+und Stopp am Ende.
+
+Die vielen Schritte zeigen aber, dass es
+durchaus eine kleine Herausforderung für
+unsere ft-Elektronik ist, sie alle mit möglichst wenig Aufwand zu bewerkstelligen.
+
+2.
+
+Einschalten des Elektromagneten und
+Last aufnehmen.
+
+Folgende Elemente werden verwendet:
+
+3.
+
+Erneuter Start des Kranmotors (die
+Last wird gehoben) und Stopp am
+Ende.
+
+4.
+
+Start der Krandrehung nach rechts.
+
+5.
+
+Stopp der Krandrehung.
+
+
+· Vier em3-Relais (nicht die aus dem ec1
+Baukasten, da jene nur mit Gleichrichter
+arbeiten) und ein Eigenbaurelais (spart
+Bausteine)
+· Ein Grundbaustein aus ec2 (für den
+Kranschwenk)
+
+· Aus dem Elektronik-Ergänzungskasten:
+· Zwei Schwellwertschalter (SWS)
+· Zwei Leistungsstufen (LST)
+· Zweimal Spannungsversorgung
+(SPV, notfalls genügt auch eine)
+· Vier Minitaster
+· Fünf Elkos 470 µF
+· Zwei 10 kΩ Widerstände
+· Fünf Dioden
+· Falls möglich: Zwei Trafos als
+Stromquelle
+
+Zeitschalter
+In praktisch jedem der neun Arbeitsschritte
+muss ein Motor oder der Elektromagnet
+ein- und nach festgelegter Laufzeit
+ausgeschaltet werden.
+Ein einfacher Zeitschalter oder Monoflop
+(MF), wie im Begleitbuch des Ergänzungskastens auf Seite 46 beschrieben [2], startet
+durch kurze Betätigung eines Tasters. Der
+Taster vollzieht also zwei Arbeitsschritte:
+Drücken und Loslassen.
+
+Elektronik
+
+entlädt sich, wenn der Taster gelöst (d. h.
+die Verbindung zu (+) unterbrochen) ist.
+Besser wäre ein Monoflop, das nur einen
+Arbeitsschritt (z. B. „Taster drücken“)
+benötigt, um sich einzuschalten, und nach
+einiger Zeit trotz gedrückten Tasters ausgeht. Damit könnte ein Motor im Prinzip
+über eine gewisse Zeit ein- und wieder
+ausgeschaltet werden, was bereits die halbe
+Miete ist. Zwar ist es möglich, ein nicht
+nachtriggerbares Monoflop mit der ftElektronik zu bauen (wie z. B. das Glücksrad auf Seite 52 [2]), es benötigt aber
+gleich zwei SWS und ist daher sehr
+kostspielig. Also müssen wir einen anderen
+Weg finden.
+Das in der Abb. 1 beschriebene ‚einfache’
+Monoflop ist schon ein guter Anfang, denn
+auf diese Art können zwei Zeitschalter in
+einem Baustein verwirklicht werden. Die
+gesamte Anlage wird am Ende mit vier
+Bauteilen (zwei SWS-Bausteine, zwei
+LST-Bausteine und SPV) alle Arbeitsschritte bis auf die Krandrehung bewerkstelligen können.
+Gottlob gibt es noch die guten alten em3Relais, deren Hilfe wir jetzt unbedingt
+brauchen. Schade, dass Fischertechnik kein
+so umfangreiches Programm an Elektromechanik- und Elektronikteilen wie früher
+im Sortiment hält. Deren Kombination
+erlaubte viele tolle Modellsteuerungen.
+
+Schritt 1: Seilmotor ein- und
+ausschalten
+
+Elektronik-Begleitbuchs [2]
+
+Zuerst bauen wir ein MF nach Abb. 1. Der
+Anschluss des SWS an die SPV und LST
+wurde in der Abb. 2 nicht dargestellt; das
+ist relativ einfach und sehr leicht im
+Begleitbuch des Ergänzungskastens nachzulesen [2].
+
+Es handelt sich hier um ein nachtriggerbares Monoflop. Wie lange es eingeschaltet, also SWS1 „an“ ist, bestimmt die
+Entladung des Elkos. Dazu wird er durch
+den kurzen Impuls des Tasters geladen und
+
+Der Elko 470 µF wird zwischen zwei
+Lampenfassungen platziert und kann so
+außerhalb des SWS liegen. Damit ist der
+SWS1 zugänglicher und nicht so vollgepackt. Der 10 kΩ-Widerstand von der (+)
+
+
+
+
+
+Seite des Elkos wird mit EA verbunden.
+Das verzögert die Entladezeit.
+Mit dem Poti wird die benötigte Dauer fein
+justiert. Eine noch längere Verzögerung
+würde der Anschluss des Elko mit (+)
+direkt an am Poti Br des SWS1 bewirken.
+Allerdings reagiert der SWS dann noch
+sensibler auf Poti-Änderungen, und das
+erschwert es, die richtige Einstellung zu
+finden. Besser ist deshalb der Anschluss
+wie in Abb. 2.
+Das zweite em3-Relais wird R3 genannt,
+demzufolge muss es auch ein R2 geben,
+das aber erst später in die Schaltung integriert wird. Wir beginnen mit dem R3, weil
+dessen Funktion etwas einfacher zu
+beschreiben ist.
+R1 ist ausgeschaltet, solange der Starttaster
+T1 nicht gedrückt wird. Bei Druck auf T1
+zieht es an und trennt damit die (+) Verbindung des Elko. Augenblicklich beginnt
+seine Entladezeit; der Zeitschalter beginnt
+zu arbeiten. Gleichzeitig, und das ist der
+Trick, wird über den blauen Anschluss von
+R1 auch R3 eingeschaltet. Der SWS1 wird
+
+
+bereits eingeschaltet, sobald die Anlage
+ans Netz geht. R3 schaltet sich aber erst
+jetzt ein. Die Zeit läuft, und ist sie zu Ende,
+schaltet sich der SWS1 aus. Damit schaltet
+sich die LST1 aus. R3 an Minus (C1) wird
+geblockt und geht ebenso wieder aus.
+Mit nur einem Klick werden somit zwei
+Arbeitsschritte erledigt. Würde anstelle
+von R3 ein Motor verwendet so wäre das
+Resultat bereits eine bestimmte Laufzeit.
+Das genügt uns aber noch nicht, denn er
+muss auch seine Laufrichtung ändern
+können, und dazu ist ein Polwendeschalter
+erforderlich. Außerdem sollte er am Ende
+der Laufzeit schnell gebremst werden, um
+eine möglichst exakte Magnethaken-Positionierung zu erreichen. Beide Aufgaben
+übernimmt das R3 zusammen mit dem
+noch folgenden R2.
+
+Schritt 2: Seil-Motor an R3
+anschließen
+R3 ein muss also den Motor für das Herablassen des Hakens einschalten. Die Motorsteuerung wird am besten mit einer
+
+eigenen Stromversorgung betrieben, da
+alles zusammen für einen Trafo etwas zu
+viel ist und Motorschwankungen verursachen kann, die eine genaue Steuerung
+des Magnethakens sehr schwer machen.
+Das ist sehr wichtig, denn nur wenn er bei
+jedem Durchlauf so exakt wie möglich
+dieselbe Strecke zurücklegt, kann er einen
+Container sicher aufnehmen.
+Da R3 vor dem Klick auf T1 aus ist,
+verläuft die Schnellbremsung über die
+Ruhekontakte. Die eingezeichnete Diode
+ist unbedingt erforderlich und muss polrichtig wie im Schaltbild eingebaut werden
+– sie spielt für das Polwenden eine
+wichtige Rolle. Sobald sich R3 einschaltet,
+startet der Seilmotor. Der Magnethaken
+geht nach unten und bleibt am Ende erst
+einmal stehen. Die Polung des Motors
+muss dafür entsprechend gewählt werden
+und ist abhängig davon, wie der Seilzug
+und die Rolle gebaut sind.
+
+Elektronik
+
+Lösen des Magnethakens verschafft (dazu
+später mehr).
+Die Pause erfordert den SWS2 wiederum
+als Zeitschalter, der sich einschaltet, sobald
+der SWS1 abschaltet (der Haken befindet
+sich dann unten). Der SWS1 ist an, bis der
+Elko sich nach Ablauf der Zeit entladen
+hat. Dieses Prinzip behalten wir auch für
+den SWS2 bei, nur dass dieser über SWS1
+anstatt (wie SWS1 selbst) über ein Relais
+angesteuert wird. Solange er an ist, liefert
+sein Ausgang QA (+). Diese Spannung
+kann dazu verwendet werden, den Elko 2
+des SWS2 aufzuladen. Er kann direkt an
+den SWS2 (EB) angebracht werden. Die
+Verbindung von QA (+) braucht aber noch
+eine Diode, damit dessen Ladung nicht
+über QA (-) abfließen kann, sobald SWS1
+aus geht und sich der Elko 2 entlädt.
+
+
+Schritt 3: Nach Motorstopp
+Containeraufnahme
+Ist der Magnethaken am Container angekommen, schadet eine kurze Wartezeit
+nicht. So kann er sich besser auspendeln
+und den Container leichter aufnehmen. Da
+wir zwei SWS Bausteine brauchen, können
+wir uns diesen Luxus leisten. Der
+wichtigste Vorteil der Pause ist aber, dass
+SWS2 das Polwenden des Seil Motors
+vornimmt und uns die nötige Pause für das
+
+
+Sobald SWS1 abschaltet bricht die Versorgung des Elko ab, seine Entladung über EB
+beginnt. Mit dem Poti wird die Entladezeit
+eingestellt. Sie muss nicht besonders lang
+sein, weshalb im Gegensatz zu SWS1 kein
+Widerstand am Elko notwendig ist. Nach
+der Pause schaltet sich auch SWS2 aus.
+SWS1 und SWS2 sind damit beide
+abgeschaltet.
+
+
+
+
+Schritt 4: SWS2 führt
+Polwende-Schaltung aus
+Jetzt kommt Relais R2 ins Spiel. Solange
+SWS2 ein ist, ist R2 ein. In diesem
+Zustand (siehe Abb. 5) kann R2 den SeilMotor nicht versorgen. Das tat bis jetzt R3.
+Dessen Part ist aber, sobald der Haken
+unten ist, fürs erste vorüber. Der Motor
+steht, die Pause beginnt und SWS2 ist noch
+an. Die Zeit läuft, sobald sich SWS1
+ausschaltet (siehe Schritt 3).
+Ist SWS2 aus, schaltet das R2 aus und
+damit den Seilmotor wieder ein. R2 ist so
+geschaltet, dass der Motor gleichzeitig
+umgepolt wird – der Haken geht nach
+oben. R2 wird ebenfalls mit einer Diode
+zur Schnellbremsung ausgestattet. Abweichend von R3 liegt sie hier an a3-b3 (in R2
+dagegen an a2-b2). Die Abbildung zeigt
+uns, weshalb für das Schnellbremsen (oder
+Kurzschlussbremsen) des Motors unbedingt Dioden gebraucht werden. Betrachten wir folgende Situation: R3 ist aus (nach
+Haken unten) und R2 ist aus (Haken geht
+wieder nach oben). Die grüne Linie in
+
+von R2 (der Baustein ist spiegelverkehrt
+dargestellt) geht die Ladung über die
+Leitung nach R3 (b1), verläuft ohne Diode
+weiter nach R3 (a1) und somit in einen
+Kurzschluss. Die beiden Dioden an R2 und
+R3 verhindern dies und sorgen gleichzeitig
+für das Schnellbremsen (R3 bei Haken
+unten, R2 bei Haken oben).
+Am Ende muss der Motor noch gestoppt
+werden. Der Haken ist dann oben angekommen. Dazu brauchen wir den SWS3
+wiederum als Zeitschalter.
+
+Schritt 5: Magnethaken rauf
+und am Ende stoppen
+Warum eigentlich zwei Zeitschalter für
+‚Haken ab’ und ‚Haken hoch’? Grund
+dafür ist, dass der Elektromotor je nach
+Richtung unterschiedlich schnell laufen
+könnte. Deshalb ist es mit nur einem
+Zeitschalter kaum möglich, den Haken
+wieder auf dieselbe Höhe zu bekommen
+wie vor dem Herablassen. Mit zwei
+Schaltern kann die unterschiedliche Laufleistung des Motors berücksichtig werden.
+Leider berücksichtigt das noch nicht das
+
+
+
+Elektronik
+
+Gewicht der Last. Deshalb darf die auch
+nicht zu schwer sein. Mit Hilfe eines
+Flaschenzugs kann aber auch dieser Effekt
+minimiert werden.
+Der Zeitschalter für den Magnethaken nach
+oben befindet sich am SWS3 und wird
+vom SWS2 gestartet, genau wie der SWS1
+den SWS2 startet. Der Unterschied ist,
+dass für den SWS3 zwei Elkos verwendet
+werden, weil die Spannung von QA(+)
+nicht so hoch ist wie von der (+)-Schiene
+selbst, was nur dem SWS1 zu Gute kam.
+Alle anderen werden über die Q-Ausgänge
+
+angesteuert. Der 10 kΩ-Entladewiderstand
+bremst zusätzlich das Entladen, und so
+kommen wir auf eine vernünftige Entladezeit. Der Anschluss über den Br-Pin ist
+auch hier nicht ratsam, weil es das genaue
+Einstellen der Ladezeit über das Poti
+erschwert.
+SWS2 „aus“ schaltet wie festgestellt R2
+aus. Der Haken geht solange nach oben,
+bis R2 wieder eingeschaltet wird, und das
+erledigt nach Ablauf der Einschaltzeit der
+SWS3. Von LST3 kann die Leitung direkt
+zur LST2 verlaufen, an der R2 bereits liegt.
+
+
+
+
+
+Da LST2 zu dem Zeitpunkt bereits aus ist,
+kann (-) von LST3 direkt R2 einschalten
+das sich ja immer an (+) befindet.
+
+Schritt 6: Magnet Ein/Aus
+Der Seilmotor hat alle seine Arbeitsschritte
+zur Aufnahme einer Last abgeschlossen.
+Was noch fehlt ist, dass der Magnet auch
+Strom erhält, um sie an sich zu heften und
+beim Abstellen auch wieder lösen zu
+können. Hier kommt uns die Motorpause
+von Schritt 3 zugute.
+Der Ablauf sieht also wie folgt aus:
+1. Haken ab
+2. Motorstopp und Wartezeit
+3. Einschalten des Elektromagneten zur
+Containerannahme
+4. Haken rauf
+5. Kran dreht
+
+
+6. Haken wieder ab
+7. Motorstopp und Wartezeit, Elektromagnet ausschalten, Container wird
+abgestellt
+8. Haken wieder hoch
+Ein kompletter Durchlauf des bisherigen
+Systems endet mit Punkt 4. Die nachfolgende Krandrehung startet durch automatisches Betätigen von T1 bei der
+Drehung. Das heißt aber auch, dass T1
+beim Schwenk in die andere Richtung
+wieder gelöst und das System so wie geplant in den Ausgangszustand versetzt
+wird. Der Elektromagnet muss über diesen
+Zustand hinaus eingeschaltet bleiben, bis
+der Container abzustellen ist.
+Wieder verwenden wir einen Zeitschalter,
+diesmal auf SWS4. Das Anbringen mit (+)
+direkt an dem Br-Pin sorgt für eine lange
+Einschaltzeit, die wir jetzt brauchen. Der
+Elko wird vom SWS1 (QA) aufgeladen.
+
+Die Entladung beginnt deshalb, sobald
+SWS1 ausgeht, was just in dem Augenblick geschieht, wenn der Haken unten ist.
+Einfacher wäre es natürlich, wenn der
+Elektromagnet die ganze Zeit eingeschaltet
+ist und nur ausgeht, sobald ein Container
+abgestellt wird. Dabei würde ein Klick auf
+einen Taster genügen, der sich z. B. unter
+der Plattform befindet, auf der er abgestellt
+wird. Aber die rein elektronische Steuerung erspart diese zusätzliche Konstruktion
+und ist eleganter.
+SWS1 „aus“ startet also das Entladen des
+Elkos, des Zeitschalters von SWS4 durch
+Mithilfe eines weiteren em3-Relais R4.
+SWS1 „aus“ schaltet R4 aus. Das trennt
+zeitgleich die (+) Versorgung des Elkos
+über die Arbeitskontakte a1-a3 und schaltet
+den Elektromagneten ein. SWS1 schaltet
+sich jedoch nach dem Lösen von T1 durch
+den Kranschwenk wieder ein – was an
+dieser Stelle nicht sein darf, da sich ja der
+Container am Magneten befindet. Deshalb
+verläuft die (-) Leitung von LST1 nach R4
+durch seine Arbeitskontakte b1-b3. Einmal
+ausgeschaltet, kann die LST1 es nicht mehr
+einschalten.
+Erst mit Ablauf des Zeitschalters SWS4
+schaltet LST4 R4 wieder ein und damit den
+Magneten aus. Das muss exakt in der
+Motorpause erfolgen, nach dem Kranschwenk und erneutem Herablassen des
+Hakens (Schritt 3). Es ist also etwas
+Geduld nötig, um SWS4 über seinen Poti
+richtig einzustellen; das hängt davon ab,
+wie lange die Schritte „Haken ab, auf,
+Krandrehung, Haken wieder ab“ dauern.
+Leider sind alle Arbeitskontakte von R4
+damit belegt. Infolge des Aufbaus des
+gesamten Systems kann sich R4 bei
+SWS1/LST1 „aus“ nicht einschalten,
+sondern geht aus. Das ist leider nicht zu
+ändern, denn LST1 muss am Ende ausgehen, um R3 für den Motorstopp nach
+dem Ablassen des Hakens auszuschalten.
+
+Elektronik
+
+Es wäre allerdings praktisch, denn so
+könnte der Elektromagnet einfach parallel
+an R4 angeschlossen werden. Es würde
+sich dann ganz einfach mit ihm ein und
+ausschalten. Da das nicht so ist, benötigen
+wir einen weiteren Schalter: das EigenbauRelais, das parallel an R4 geschaltet wird.
+Bei R4 „aus“ schaltet es sich ebenso aus
+und den Magneten damit ein. Abb. 7 zeigt
+die Schaltung.
+Unbedingt zu beachten ist die Diode
+zwischen LST1 und Arbeitskontakt b1 von
+R4. Ohne sie würde nach dem Einschalten
+von LST4 das Relais R4 mit LST1 verbunden sein und darüber R3 und somit den
+Seilmotor ungewollt einschalten.
+
+Schritt 7: Die ganze Anlage
+starten und den Kran drehen
+Jetzt kommen wir endlich zum letzten
+Schritt der Kransteuerung: das Drehen des
+Krans und das Starten der bisherigen
+Anlage überhaupt, sobald ein Container
+anrollt.
+Beginnen wir mit dem Schwenken des
+Krans. Nach dem Abstellen des letzten
+Containers befindet sich der Haken wieder
+oben. Bei der Ankunft eines neuen Containers (angeliefert z. B. durch die BauSpiel-Bahn) muss der Kran als erstes zum
+neuen Container gedreht werden. Dazu
+verwenden wir die – wie dafür gemachte –
+Polwendeschaltung auf Seite 54 des em3Handbuchs ([3], Abb. 8).
+Die Taster werden so am Kran angebracht,
+dass er sie selbst beim Drehen betätigt –
+am besten gegenüberliegend, dann ist ein
+180°-Schwenk möglich.
+In dieser Form würde der Kran jedoch
+ewig hin- und herschwenken. Deshalb sind
+noch ein paar Modifikationen nötig. Die
+wichtigste ist ein Reedkontakt. Das Einschalten des Reeds übernimmt ein Magnet
+am Container, sobald dieser anrollt. Dieser
+Magnet muss so am Container angebracht
+
+
+
+
+werden, dass er nahe am Reed stehenbleibt.
+
+des ec2-Handbuchs [4]
+
+Durch den Schwenk muss er aber von zwei
+Tastern gestartet werden, wie Abb. 10
+zeigt.
+
+Je nach Polung (der Anschluss von R4
+sollte am gleichen Trafo wie der Seilmotor
+erfolgen) ist er entweder am b2- oder b3Kontakt anzubringen, sodass er den
+Kontakt zum Schwenk-Motor unterbricht,
+sobald der Container abgesetzt wird, und
+durch den Schwenk zuvor die Polwendung
+erfolgt.
+Zwar wird der Reed schon ausgeschaltet,
+sobald der Container hochgezogen wird,
+das ist aber kein Problem, denn der
+Schwenk hin zum Container erfolgte
+vorher und wird jetzt erst geblockt. Beim
+Absetzen und Umpolen, damit der
+Schwenk zurück zum nächsten anrollenden
+Container erfolgen kann, wirkt das Blockieren, bis der nächste Container eingetroffen ist und der Schaltmagnet dort die
+Blockierung aufhebt. Nach Absetzen der
+Last und Hochziehen des Magnethakens
+verbleibt der Kran in dieser Position.
+Beim Schwenk zurück wird ein weiterer
+Taster am Ende gleichzeitig mit dem Polwende-Taster gedrückt, der die Anlage
+startet (der Haken beginnt sich zu senken).
+Der Kran darf sich aber erst nach der Aufnahme drehen. Wir brauchen deshalb einen
+Impulsverkürzer wie auf Seite 56 im ec2Handbuch ([4], Abb. 9):
+
+
+von zwei Tastern aus starten
+
+Anstatt die Anlage direkt über einen Taster
+am Kran zu starten, verwenden wir die
+beiden Impulstaster zum Starten vom
+Impulsverkürzer und der Anlage.
+Das Relais verwenden wir als Schalthilfe.
+T1 von Abb. 2 ersetzen wird durch eine der
+beiden Relais-Schaltungen. Die andere
+verwenden wir, um den Schwenkmotor für
+die Dauer seiner Einschaltzeit zu unterbrechen. Dazu muss nur ein Kabel des
+Schwenkmotors z. B. durch die Kontakte
+a1-a2 verlaufen. Sobald sich das ec-Relais
+einschaltet, wird der Drehmotor des Krans
+für diese Dauer unterbrochen. Weil der
+Impulsverkürzer (IP) das Einschalten der
+Anlage übernimmt, brauchen wir also
+zusammen vier Taster: zwei für den
+Polwender (Abb. 7) und zwei für den IP.
+
+
+Elektronik
+
+So wie in der Abbildung grob dargestellt
+müssen auf beiden Seiten die Taster angebracht werden (Taster auf der gegenüberliegenden Seite im Bild nicht sichtbar). Ein
+Nocken oder Baustein direkt am Kran
+drückt dann die Taster am Ende jeder
+Drehung zu einer der Seiten.
+
+Quellen
+[1]
+
+Werner Hasselberg: Automatik für
+weichen Motorstart und –stopp,
+ft:pedia 3/2013, S. 30-35.
+
+[2]
+
+Fischer-Werke: Anleitung zum Elektronik-Ergänzungskasten,
+Tumlingen, 1981.
+
+[3]
+
+Fischer-Werke: Anleitung zum em3
+Elektromechanik-Grundkasten, Tumlingen, 1975.
+
+[4]
+
+Fischer-Werke: Anleitung zum ec2
+Elektronik-Grundkasten, Tumlingen,
+1975.
+
+
+sich am Kran befinden sollten. Auf jeder
+Seite sollten je ein Taster aus Abb. 7 und
+sodass sie gleichzeitig gedrückt werden.
+
+
+

@@ -1,0 +1,211 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Kaulquappen (Teil 12)
+Harald Steinhaus
+Es wird Frühling, und im Frühling werden die Tage länger. Außerdem regen sich die Triebe.
+Das bestätigt sich auch beim Blick in den hiesigen fischertechnik-Froschteich. Im Detail geht
+es um Schneckentriebe, Seiltriebe, Linearantriebe und diverse andere Antriebe.
+
+P-Motoren befestigen
+Das Befestigen von Power-Motoren gestaltet sich schon mal schwierig, weil es nur an
+der Stirnseite möglich ist und da auch noch
+die Antriebsachse herauskommt. Mit der
+Grundplatte der BSB-Lok (31557) sieht das
+ganz anders aus. Der Motor wird mit vier
+Federnocken montiert, die Zahnräder sind
+seitlich im Raster und nur in Längsrichtung
+muss am Abstand justiert werden.
+
+P-Motoren und Rastdifferenziale
+Links: Das Rastdifferenzial könnte seinen
+Namen auch davon haben, dass es nicht im
+fischertechnik-Raster arbeitet. Links außen
+sieht man die Differenz gegenüber den gelben Statikteilen. Das zweite Differenzial
+passt aber bis auf einen kleinen Spalt. Der
+
+
+
+
+
+Grund dafür sind seine Innereien: es hat beiderseits Rastkegelachsen von innen nach
+außen montiert, die mit einem Abstandsring
+versehen sind. Muster sind von oben auf die
+Grundplatte aufgesteckt.
+Rechte Seite: die Schnecke m1 kann nur auf
+Druck arbeiten und zieht sich bei Zug aus
+ihrem Lager. Als Abhilfe verbaut man sie
+doppelt. Das funktioniert mit den Rastkegeln schon seit der „Ente“ (Citroën 2CV
+[1]), aber natürlich auch mit dem Kegel am
+Differenzial.
+
+Z04 und Rastdifferenzial
+mit einem Rastkegelzahnrad bestückt, allerdings nur auf der unteren Seite und ohne
+Abstandsring. Dadurch wird es zur Kupplung: Bei gezogenem Hebel ist der Strang
+unterbrochen. Wenn der schwarze Hebel
+eingedrückt wird, kommt das Kegelzahnrad
+im Gehäuse in Eingriff mit den beiden anderen und der Antriebsstrang vom KlemmZ10 zum Differenzialgehäuse ist geschlossen.
+
+
+
+Tipps & Tricks
+
+
+Links: das Differenzial-Antriebsrad Z14
+(31414) hat hinter dem Zahnkranz vier
+Stege. Mit etwas gutem Willen und nicht
+ganz rundem Lauf liefert das Übersetzungen 1:5, 2:15, 1:10, die für geringe Lasten
+und Drehzahlen brauchbar sind.
+Rechts: P-Schläuche sind elastisch, aber
+drucksteif. Darauf beruht dieser Freilauf.
+Das gelbe ist eine fischertechnik-Freilaufnabe. Die schwarzen „Schlauchanschluss
+D4 abgewinkelt“ (163203) helfen dabei, die
+BS7,5 am Abrutschen nach außen zu hindern.
+
+Linearvorschübe
+Die Angelschnur (124875) ist seit dem Tütchen „Weihnachtsdeko“ offizielles fischertechnik-Bauteil. Hier dient sie zum Verschieben von Streben und Achsen in einer
+Längsführung. Die Seilwickel müssen genügend Material für den gesamten Verfahrweg enthalten.
+Oben und unten in Abb. 4: Das Seil ist zwei
+Mal über die Länge geführt und mit gleichem Wickelsinn um die Achse gewickelt.
+Die Achse mit dem Z20 klemmt das Seil auf
+beiden Seiten, womit der Antrieb nicht
+
+durchrutschen kann. Für einen majestätisch
+langsamen Vorschub sorgt oben eine Untersetzung Z10:Z20, unten eine Untersetzung
+Z5:Z20. Das „Z5“ ist ein Rast-Impulszahnrad Z5 (35995).
+Links und rechts: das Seil ist nur an den Enden geklemmt und mehrfach um die Antriebsachse geschlungen. Bei zu geringer
+Seilspannung rutschen diese Antriebe
+durch.
+
+Linearvorschübe mit Rastschnecke
+Rastschnecke (35072).
+Mehrere „Hülse mit Scheibe“ (35981) auf
+einer Achse aneinander gereiht ergeben
+eine runde Zahnstange mit fast den richtigen Abständen. Die Abweichung wirkt sich
+aber nur auf größeren Längen aus und hilft
+dabei, das Spiel zu begrenzen.
+Links außen sind nur zwei Schnecken verbaut. Je nachdem, wie die Z10/Schnecken
+zueinander stehen, ergeben sich mehr oder
+weniger schwergängige und spielfreie Vorschübe.
+
+
+
+
+Rechts außen: die drei Schnecken (35072)
+werden von Z10 angetrieben, die ihrerseits
+mit Z15 verbunden sind.
+
+Mitte rechts wird ein fischertechnik-Schneckenteil (37926) als Vorschubelement verwendet (hier verdeckt; es ist auf die Achse
+aufgeklemmt, indem ein Stück Angelschnur
+dazu gesteckt wurde), Mitte links wird eine
+Zahnstange m1,5 verwendet.
+
+
+
+Tipps & Tricks
+
+Mit den Führungsplatten (32455) kann vom
+letzten Zahn aus angekuppelt werden. Dieser Antrieb ist flacher und hat mehr Hubweg
+als derjenige der „Hubvorrichtungen“ [2].
+
+Ketten und Hubzahnstangen
+Die Rastschnecken greifen direkt in die vorstehenden Noppen der schwarzen Kette.
+Gegenüber den Kettentrieben aus Kaulquappen Teil 8 [3] laufen die Ketten hier
+reibungsärmer auf Zahnrädern Z15. Sie
+werden außerdem mit BSB-Kesselhaltern
+(31592) am Abspringen gehindert.
+Oben: der Kesselhalter ist verdeckt. Er ist
+am BS15 „gegenüber“ befestigt. Die Achse
+des Z15 ist im BS7,5 zu erkennen.
+Unten: hier kann die Führungsplatte
+(32455) einmal mehr glänzen: der Antrieb
+dieser Zahnstange geht über zwei mini-motGetriebe langsam und präzise einstellbar
+vor sich.
+Rechts: hier wird die Zahnstange m0,5 ganz
+„ordnungsgemäß“ in einem Hubgetriebe
+
+geführt. Das Zahnrad Z80 m0,5 (Details im
+nächsten Bild) rastet in der vertikalen kurzen Zahnstange ein und hat über die Zahnräder im Getriebe sozusagen einen sehr langen Hebel, um ein ungewolltes Verschieben
+zu verhindern. Zur Grobverstellung drückt
+man das Z80 nach unten und verfährt die
+Zahnstange. Zur Feinverstellung zieht man
+das Z80 nach rechts und dreht es um seine
+Achse. Auf die schwarze Freilaufnabe kann
+man verzichten, wenn man auf der Gegenseite eine Nabenmutter ohne Flügel einsetzt.
+
+Zahnrad Z80 m0,5
+Offiziell ist dieses Zahnrad das „Drehschalter-Oberteil“ (31311). Es setzt die Aufzählung der „Getriebe mit feiner Verzahnung“
+[4] von Stefan Falk fort.
+Die Z80 m0,5 haben (mit Ausnahme des im
+Bild unten angeschnittenen Exoten) keine
+Mitnehmer im Nabensitz. Sie drehen deshalb auf einer fischertechnik-Nabe frei
+durch. Will man eine Achse mittels des Z80
+antreiben, muss man für Reibung sorgen,
+
+
+
+
+etwa durch Einklemmen von Papier, Bindfaden oder Angelschnur.
+
+richtigen Abstand zwischen Z80 und der
+Schnecke sorgen.
+
+werden kann, um mit den gezeigten Nachbar-Zahnrädern (neun Stück, allesamt auf
+K-Achsen) zu kämmen.
+Linke Seite: durch Einstecken von Achsen
+in die rundum verteilten acht Löcher des
+Z80 kann man ein Z20 festhalten, z. B. um
+eine längenveränderliche und begrenzt
+knickbare Kraftübertragung zu erhalten
+(links außen) oder das Rastdifferenzial über
+Zahnräder m0,5 anzutreiben (links oben).
+
+Zahnrad Z80 m0,5
+Der Motor-Drehschieber (31070) ist hier
+zweifach verbaut und sorgt für den richtigen
+Abstand des Z80 zum Schneckengetriebe.
+Dieses Bild stammt aus den Kaulquappen
+Teil 3 [5].
+
+
+Monitor mit Z80 m0,5
+(Vorderseite)
+Der zweite Endtaster wird über einen BS5
+in der Nut des Motors platziert und wird von
+der roten Achse betätigt.
+
+
+Monitor mit Z80 m0,5
+(Rückseite)
+„Monitor“ ist der Fachbegriff für ein Strahlrohr, das wie ein Geschütz bedienbar auf einem Feuerwehrfahrzeug oder -boot montiert ist. Der P-Schlauch wird also mit Wasser befüllt, das dann aus den P-Düsen gespritzt wird. Der Motor regelt die Strahlweite durch Verstellen des Neigungswinkels der Düsen.
+Der Endtaster sitzt auf zwei Motor-Drehschiebern (31070), die auch hier für den
+
+
+Quellen
+[1]
+
+Harald Steinhaus: Döschwo (2CV,
+Ente). Im Bilderpool der ft-Community.
+
+[2]
+
+Harald Steinhaus: Hubvorrichtungen.
+Im Bilderpool der ft-Community.
+
+[3]
+
+Harald Steinhaus: Kaulquappen (Teil
+8). ft:pedia 2/2016, S. 6-7.
+
+[4]
+
+Stefan Falk: Getriebe mit feiner Verzahnung. ft:pedia 3/2019, S. 18-21.
+
+[5]
+
+Harald Steinhaus: Kaulquappen
+(Teil 3). ft:pedia 3/2012, S. 24–26.
+
+

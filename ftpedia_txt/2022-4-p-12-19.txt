@@ -1,0 +1,443 @@
+
+
+Getriebe
+
+Zyklisch ungleichförmig übersetzende Getriebe
+Stefan Falk
+Im Jahr 2004 überraschte der deutsche Ingenieur Wilhelm Klopmeier die Welt mit einer
+neuartigen Mechanik für ein einfach zu konstruierendes Getriebe, das zyklisch ungleichförmig
+übersetzt. 2011 ehrte er die fischertechnik-Convention mit einem Besuch, auf dem er einige
+Varianten davon zeigte – er hatte sie nämlich mit fischertechnik erfunden. Dieser Beitrag zeigt
+ein äußerst einfach zu bauendes Getriebe mit ähnlichen Eigenschaften.
+
+Einführung
+Die Arbeiten von Herrn Klopmeier [1, 2]
+sorgten weithin und natürlich auch bei
+fischertechnikern für Furore. In den Quellen
+finden sich Links zu diesen Varianten.
+
+vom Z10 links im Bild angetrieben und ist
+in einem schwenkbaren Hebel – einer Reihe
+von BS 7,5 – gelagert. Die Achse des Z30
+endet auf der anderen Seite des Hebels in
+einem weiteren Z10 (im Bild vom Hebel
+verdeckt), das über eine Kette mit dem Z10
+rechts – dem Abtrieb – verbunden ist. Die
+Achsen der beiden Z10 treffen sich also
+fluchtend in der Mitte des BS 7,5-Hebels,
+sind aber getrennte Achsen.
+Was macht nun dieses Getriebe?
+
+Zyklisch ungleichförmige
+Übersetzung
+Im Video [10] sieht man es sehr gut: Diese
+raffinierte Kinematik führt dazu, dass bei
+gleichförmiger (d. h. mit konstanter Drehgeschwindigkeit erfolgender) Drehung der
+Antriebsachse (in Abb. 1 die Achse mit dem
+linken Z10) die Abtriebsachse in zwei
+Punkten eine Besonderheit in ihrer Drehung
+zeigt:
+
+
+In Abb. 1 sieht man eine gelbe Statikstrebe
+als Hebel, die (unten im Bild in der Achse)
+schwenkbar, aber ansonsten fix gelagert ist.
+Sie endet drehbar in einer der Bohrungen
+eines Zahnrads Z30 gelagert. Das Z30 wird
+
+a) Die Drehung ist ungleichförmig: Die
+Abtriebsachse dreht sich nicht immer
+gleich schnell. Je nach der Geometrie des
+Getriebes kann sie langsamer und
+schneller drehen, aber auch bis zum
+Stillstand oder sogar zum Rückwärtsdrehen gebracht werden.
+b) Die Drehung ist aber trotzdem zyklisch:
+Das heißt, die Übersetzung erfolgt periodisch wiederkehrend. Nach einer
+
+bestimmten Anzahl von Umdrehungen
+der Antriebsachse ist die Abtriebsachse
+wieder in der Ausgangsposition, und der
+Verlauf ihrer Drehgeschwindigkeit
+wiederholt sich exakt.
+
+Getriebe
+
+schnell an der Kurbel drehen, so mag sich
+das Abtriebs-Rad je nach den Zähnezahlen
+schneller oder langsamer drehen, aber es
+dreht sich auch immer gleich schnell.
+
+Das hat viele Anwendungsmöglichkeiten,
+wie etwa:
+ Ölförderpumpen: Man hat ein Interesse
+daran, dass die Pumpbewegung (aufwärts) möglichst die ganze Zeit mit der
+maximal möglichen Förderleistung
+erfolgt. Zu schnelle Aufwärtsbewegungen könnten nämlich zum Ansaugen von
+Luft anstatt von Öl führen. Die Abwärtsbewegung hingegen soll möglichst
+schnell erfolgen, weil sie ja unproduktiv
+ist. Ein normales Exzentergetriebe leistet
+das nicht, wohl aber ein KlopmeierGetriebe.
+ Exzenter-Pressen: Dabei möchte man
+vielleicht, dass die Presse lange oben
+bleibt, um Zeit zum Werkstückwechsel
+zu haben, und auch lange unten, damit
+das Werkstück länger gepresst wird. Die
+Auf- und Ab-Bewegungen sollen aber
+wieder, da unproduktiv, schnell erfolgen.
+Herr Klopmeier fand noch viele andere Einsatzmöglichkeiten, sogar für Fahrradantriebe.
+
+Eine besonders einfache
+Bauart
+
+
+Jetzt kommen zwei Tricks:
+1. Wir fügen ein drittes Zahnrad zwischen
+die beiden ein, das aber nicht fest gelagert ist. Vielmehr stellen wir – z. B.
+durch Streben – nur sicher, dass die
+Abstände zwischen je zwei Zahnrädern
+gleich bleiben und so alle Zahnräder
+immer sauber miteinander kämmen.
+2. Das erste Zahnrad lassen wir dadurch um
+die Kurbelachse kreisen, dass wir es
+selbst wieder auf eine Kurbel setzen, und
+zwar auf den exzentrischen Teil – also
+auf den „Griff“ der Kurbel.
+Das sieht dann so aus:
+
+Für einen Workshop – erst im MINTFerien-Camp des CyberForum Karlsruhe
+[12], dann in einem für Lehrkräfte/AGLeitungen – habe ich eine Bauart entwickelt, die mit fischertechnik fast schon
+trivial einfach herzustellen ist. Sie kommt
+mit wenigen Teilen auf kleinem Raum aus,
+sodass sie auch für Workshops und Schulstunden geeignet ist.
+Ein einfaches Zahnradgetriebe mit zwei
+Zahnrädern kennen wir zur Genüge
+(Abb. 2): Das Übersetzungsverhältnis wird
+durch die Zähnezahlen bestimmt, vor allem
+aber ist es konstant. Wenn wir immer gleich
+
+dass das rechte Z20 auf dem Griff einer Kurbel
+festgeschraubt ist
+
+
+
+
+diesem ersten Modell ist das dritte Zahnrad
+ein Z40, deshalb braucht es für den
+korrekten Abstand zwischen dem KettenZ20 und dem Z40 eine I-Strebe 45.
+
+
+Im fertigen Modell stellt sich das so dar (zu
+allen hier dargestellten Modellen findet sich
+die ausführliche Bauanleitung in [13]):
+
+
+Wohlgemerkt also: Sowohl das Z20 auf der
+Kurbel als auch das Z40 am Ende des
+Getriebes werden jeweils festgeschraubt.
+Nur das Zwischenzahnrad sitzt einfach auf
+seiner kleinen Achse (eine Achse 30 genügt
+dafür).
+
+Ausprobieren!
+
+
+Beim Aufbau muss also auf den Griff der
+zweiten Kurbel zuerst die I-Strebe 30
+gesteckt und erst danach das Zahnrad Z20
+mit der Flachnabe auf dem Griff festgeschraubt werden. Die I-Strebe 30 realisiert dann genau die 30 mm Abstand
+zwischen den beiden Z20, die zum sauberen
+Kämmen notwendig sind.
+Das Zwischen-Z20 ist in diesem Bauvorschlag ein Freilauf-Kettenzahnrad Z20
+m1,5 (schwarz, 31779). Das wird also nicht
+festgeschraubt, ist aber angenehm schmal,
+sodass wir auf seiner anderen Seite mit der
+zweiten Strebe weitermachen können. In
+
+Jetzt können wir an der Antriebskurbel
+drehen und beobachten, wie sich das
+Getriebe verhält. Das Zwischenzahnrad
+wird je nach Kurbelstellung angehoben
+oder abgesenkt, greift aber immer in beide
+äußeren Zahnräder ein. Außerdem dreht
+sich das erste Z20 zusätzlich um seine
+eigene Drehachse. Es dreht also das
+Zwischenzahnrad. Das überlagert sich mit
+der Auf- und Ab-Bewegung des Zwischenzahnrads.
+Deshalb dreht sich das Z40 insgesamt mal
+schneller, mal langsamer. Damit haben wir
+die ungleichförmige Übersetzung. Insgesamt, also über eine komplette Kurbelumdrehung gesehen, ist das Übersetzungsverhältnis immer noch 20:40 = 1:2, aber das
+Z40 dreht sich eben nicht immer gleich
+schnell, wenn die Kurbel mit konstanter
+Geschwindigkeit gedreht wird.
+
+
+Getriebe
+
+Nach einer (genau genommen wegen der
+1:2-Untersetzung zwei) Umdrehung(en) der
+Antriebskurbel ist aber der Anfangszustand
+exakt wieder erreicht. Damit haben wir also
+ein zyklisch variabel übersetzendes Getriebe hergestellt.
+
+Was machen wir nun damit?
+Als einige von unzähligen Anwendungsbeispielen mögen drei Modelle dienen, die
+mit solchen Getrieben hergestellt werden
+können:
+Ein sanftes Schrittschaltwerk
+Wenn wir das erste Modell um ein Z30 mit
+aufgesetzter Drehscheibe ergänzen und auf
+der Drehscheibe eine Markierung anbringen, erhalten wir ein Getriebe, das mit jeder
+Umdrehung der Kurbel die Drehscheibe um
+1/6 Drehung bewegt, und zwar sanft
+beschleunigend und bremsend, mit einer
+Drehpause im Anschluss (Abb. 7).
+
+Schrittschaltwerk
+
+Außerdem ist nicht zu vernachlässigen, dass
+die Beschleunigung und das Bremsen sanft
+geschehen. Es gibt keinen Ruck in der
+Mechanik, es verrutscht also kein Werkstück, das lose auf der Drehscheibe liegt,
+und auch bei schweren Bauteilen wird die
+Mechanik niemals ruckartig schwer
+belastet. Ganz anders, als wenn man einen
+Motor immer hart ein- und ausschalten
+würde!
+Ein sanfter Linear-Schrittvorschub
+So etwas können wir mit einer Zahnstange
+kombinieren und erhalten einen sanft
+schrittweise arbeitenden Linearvorschub:
+
+Drehscheibe
+
+Die nächste Maschine, die – man stelle sich
+die Drehscheibe liegend angebracht vor – in
+einem Industriemodell Werkstücke bearbeitet, die auf je einem Segment der Drehscheibe liegen, bewirkt also ganz ohne
+komplizierte Steuerung mit Elektromechanik, Elektronik oder Computerei eine
+schrittweise Drehung der Drehscheibe – bei
+einem ganz simpel stetig laufenden Motor.
+
+noch ohne eingelegte Zahnstange
+
+
+In diesem Modell wurde anstatt des Z40 ein
+drittes Z20 eingesetzt. Die richtigen
+Abstände zwischen den beiden Z20 auf
+Flachnaben – so, dass sie sich beim Kurbeln
+nicht berühren – werden durch Lagerung
+der Achsen in Winkelsteinen 30° und unterschiedlicher Höhe der Achslager erreicht:
+Beim Antrieb ein Baustein 30 plus Baustein
+15, beim dritten Z20 ein Baustein 30 plus
+Baustein 5. Die Achse des Z30 sitzt in
+einem Baustein 15 mit Bohrung, der mittels
+zweier Winkelsteine 60° auf der Grundplatte befestigt ist.
+Nur damit man die ungleichförmige Drehbewegung gut beobachten kann, steckt auf
+der Achse des dritten Z20 ein Rastadapter
+und ein Verbinder 30 als „Zeiger“.
+
+Eine besondere Presse
+Im nächsten Modell kommt wieder ein Z40
+als drittes Zahnrad zum Einsatz. Es handelt
+sich um eine klassische Exzenter-Presse
+(wie sie z. B. zum Tabletten-Pressen eingesetzt wird). Nur hat unser Modell trotz des
+recht einfachen Aufbaus zwei Besonderheiten zu bieten: Der Presskopf bleibt
+sowohl oben als auch ganz unten (in den
+sogenannten Totpunkten des Exzenters)
+sehr lange stehen. Oben, damit möglichst
+viel Zeit zum Werkstückwechsel zur Verfügung steht, und unten, damit das Werkstück
+möglichst lange und intensiv gepresst wird.
+Die unproduktiven Auf- und Ab-Bewegungen hingegen werden mit hoher Geschwindigkeit abgewickelt (Abb. 11-13).
+
+In das letzte Z10 lassen wir nun eine Zahnstange eingreifen:
+
+schrittweise verschoben
+
+Exzenterantrieb, unten der Presskopf. Das zu
+pressende Werkstück wird auf den Fuß
+aufgelegt und von oben gepresst.
+
+
+
+Getriebe
+
+Geht das auch mit anderen
+Zahnradkombinationen?
+Aber ja! Ich kann nur ermuntern, mit dieser
+Art Getriebe ausführlich zu spielen und zu
+experimentieren.
+Im 15-mm-Raster (und so mit I-Streben
+realisierbar) liegen die Abstände von mindestens folgenden fischertechnik-Zahnradkombinationen:
+Z10/Z30,
+Z20/Z20,
+Z20/Z40 und Z30/Z30.
+Immerhin im 7,5-mm-Raster liegen die
+Kombinationen Z10/Z20, Z10/Z40 und
+Z20/Z30. Dafür muss man anstatt Streben
+Gestänge aus Grundbausteinen verwenden
+und mit einem Baustein 7,5 den richtigen
+Abstand herstellen. Das Modell wird
+dadurch etwas breiter, aber die Funktion ist
+dieselbe.
+von den Zahnrädern verdeckt und also nicht
+sichtbar hängt die I-Strebe 45 zwischen dem
+Zwischen-Z20 und dem Z40.
+
+Das Verhältnis zwischen dem ersten und
+dem dritten Zahnrad legt das generelle
+Übersetzungsverhältnis fest. Die Zähnezahl
+des Zwischenzahnrads ist dabei – genau wie
+bei einem „klassischen“ Getriebe – unerheblich. Aber: Die Zähnezahlen der ersten
+beiden Zahnräder sowie der Abstand
+zwischen dem ersten und dritten Zahnrad
+bewirken auch eine Änderung der „Weichheit“ der Bewegung, also der Stärke und
+dem zeitlichen Verlauf der Beschleunigung.
+Insbesondere das erste Zahnrad ist von
+Bedeutung:
+
+
+ Unser Z20 hat ungefähr denselben
+Radius wie die Rastkurbel. Deshalb geht
+die Abtriebs-Bewegung von Stillstand
+bis Maximalgeschwindigkeit.
+ Schrauben wir ein größeres Zahnrad auf
+die Kurbel (also etwa ein Z30 oder Z40),
+so ist die Bewegung zwar immer noch
+ungleichmäßig schnell, geht aber nie bis
+zum Stillstand zurück.
+ Der verblüffendste Effekt wird sichtbar,
+wenn wir ein Zahnrad auf die Kurbel
+setzen, dessen Radius kleiner als der der
+Kurbel ist – etwa ein Z10. Dann gibt es
+einen Bereich der Kurbelstellung, in der
+
+
+der Abtrieb sich sogar rückwärts
+bewegt!
+ Statt der Rastkurbeln kann man auch
+solche mit anderen Radien verwenden.
+Auch ein Z30 z. B. hat ja Bohrungen, in
+die man eine Achse einigermaßen fest
+einstecken und darauf wieder ein Zahnrad befestigen kann. Das schreit ebenfalls danach, ausprobiert zu werden.
+Ihr merkt schon: Ihr müsst an Eure fischertechnik-Kästen und das alles ausgiebig
+testen. Bestimmt fallen euch noch viel mehr
+Anwendungsmöglichkeiten ein.
+
+Kaskaden von solchen
+Getrieben
+Zum Abschluss wollen wir uns noch weiter
+wagen: Wer genügend Bauteile besitzt,
+kann mehrere solcher Getriebe hintereinander schalten. Das Modell in Abb. 14 verwendet drei Stufen von Getrieben, die
+jeweils aus drei Z20 bestehen. Die Verbinder-30-Fähnchen dienen wieder dazu, das
+Verhalten gut sichtbar zu machen.
+Damit sich die Z20 nicht ins Gehege
+kommen, sind die Achsen – in Abb. 14 von
+rechts nach links gesehen – in folgenden
+
+Bauteilen gelagert, die jeweils auf den Bausteinen 30 sitzen:
+1. Winkelstein 30°, nach „außen“ geneigt,
+2. Baustein 15 mit Bohrung,
+3. Winkelstein 30°, nach „außen“ geneigt
+und schließlich
+4. Winkelstein 60° mit dem Achslager nach
+„außen“ zeigend.
+Wenn wir an der Kurbel drehen, kommt nun
+etwas ganz Verrücktes heraus:
+ Die Kurbel dreht sich gleichmäßig.
+ Die erste Fahne (Verbinder 30) vollführt
+ihre Umdrehung – wie in den vorherigen
+Modellen – in etwa nur einer Hälfte der
+Kurbelumdrehung; sie bleibt etwa die
+Hälfte der Zeit stehen.
+ Die zweite Fahne vollführt ihre Umdrehung in etwa nur in einem Viertel der
+Kurbelumdrehung; sie bleibt 3/4 der Zeit
+stehen.
+ Die dritte Fahne vollführt ihre Umdrehung in etwa nur in einem Achtel der
+Kurbelumdrehung; sie bleibt 7/8 der Zeit
+stehen.
+Damit können wir also noch längere
+„Standzeiten“ beim Abtrieb erhalten, der
+
+
+
+Getriebe
+
+
+sich dafür „kurz vor Torschluss“ sehr
+schnell bewegt, damit er rechtzeitig zur
+vollendeten Umdrehung der Antriebskurbel
+ebenfalls „seine“ Umdrehung vollführt hat.
+Immer noch haben wir durch lauter Z20
+insgesamt ein Übersetzungsverhältnis von
+1:1 zwischen der Antriebskurbel und dem
+letzten Fähnchen – nur eben nicht gleichförmig!
+
+Quellen
+[1]
+
+[2]
+
+[3]
+
+Deutsches Patent- und Markenamt:
+Offenlegungsschrift: Getriebe mit
+zyklisch variablem Übersetzungsverhältnis. Patentanmeldung von
+Herrn Klopmeier, auf Google, 2007.
+Klopmeier Ingenieurdienstleistungen: Zyklisch variables Getriebe zum
+Antrieb von Tiefenpumpen. Auf der ft
+Community.
+Werner Dohmen: Erfinder baut mit
+Fischertechnik. In: Westdeutsche
+Zeitung vom 14.11.2006, auf der ft
+Communty.
+
+[4]
+
+Werner Dohmen: Erfindung:
+Willicher baut für Scheichs.
+Westdeutsche Zeitung, 2007.
+
+[5]
+
+Dirk Fox: Wie man mit fischertechnik zum Patent kommt (2). der
+fischertechnik-blog, 2015.
+
+[6]
+
+Wilhelm Klopmeier: Zyklisch
+variable Getriebe. Bilder von der
+fischertechnik-Convention 2011 in
+Erbes-Büdesheim auf der ft
+Community, 2011.
+
+[7]
+
+Peter Damen: Zyklisch variables
+Getriebe. Auf der ft Community,
+2007.
+
+[8]
+
+Stefan Falk: Klopmeier-Getriebe.
+Auf der ft Community, 2008.
+
+[9]
+
+Stefan Falk: Drei zyklisch variable
+Getriebe nach Klopmeier. Auf der ft
+Community, 2017.
+
+[10] Stefan Falk: Drei zyklisch variable
+Getriebe nach Klopmeier. Auf
+YouTube, 2017.
+[11] Stefan Falk: Einfach zu bauende
+zyklisch variable Getriebe. Auf
+YouTube, 2022.
+[12] CyberForum e.V.: Mint-Workshops.
+Auf mint-feriencamp.de, 2022.
+[13] Stefan Falk: Zyklisch ungleichförmig
+übersetzende Getriebe. WorkshopPräsentation mit Bauanleitung und
+fischertechnik-Designer-Dateien zu
+den Modellen dieses Beitrags, 2022.
+
+
+

@@ -1,0 +1,438 @@
+
+
+Computing
+
+Hochregallager mit Kamera-Strichcodeleser,
+Microsoft Visual Basic 2010 und RoboRISC
+Andreas Gail
+fischertechnik-Modelle von Hochregal-Lagern gibt es viele im Internet. So wurde z. B. auch
+gezeigt, wie unterschiedlich gefärbte Teile automatisch erkannt und eingelagert werden.
+Inzwischen bietet fischertechnik eine Kamera (für die Nutzung mit einem Robotics TXT
+Controller) an, mit der es möglich ist, Strichcodes (bar codes) zu lesen. Das zeigt der folgende
+Beitrag, in dem Microsoft Visual Basic 2010 und RoboRISC (siehe den vorausgehenden Beitrag
+in dieser Ausgabe der ft:pedia) eingesetzt werden.
+
+Das Modell muss Folgendes leisten:
+
+∂ Die Vergabe der Lagerplätze soll so vorgenommen werden, dass die benötigten
+Zeiten für den Einlagerprozess so klein
+wie möglich sind.
+
+∂ Auf einem Förderband abgestellte Ware
+soll erkannt und automatisch eingelagert
+werden.
+
+∂ Die Warenbestandsliste soll nach verschiedenen Kriterien sortiert werden
+können.
+
+∂ Ein- und Auslagerung sollen vollautomatisch verlaufen.
+
+∂ Zur Auslagerung soll ein Doppelklick
+auf einen Eintrag in der Warenbestandsliste ausreichen.
+
+Anforderungen an ein vollautomatisches Hochregal-Lager
+
+∂ Um welche Ware es sich bei der Einlagerung handelt, soll mithilfe der fischertechnik-Kamera automatisch erfasst und
+in einer Warenbestandsliste eingetragen
+werden. Um das zu ermöglichen, ist die
+Ware mit einem Strichcode versehen. In
+der Warenbestandsliste sollen die Klartextbezeichnung der Ware und der Einlagerungszeitpunkt eingetragen werden.
+∂ Einlagerungen sollen nur vorgenommen
+werden, wenn auch noch ein freier
+Lagerplatz vorhanden ist.
+
+
+∂ Die ausgelagerte Ware soll aus der
+Warenbestandsliste gelöscht werden.
+
+Einschränkungen der
+Strichcode-Erkennung
+Folgende Randbedingungen müssen eingehalten werden, damit der Strichcode
+erfolgreich erkannt werden kann:
+∂ Nur Verwendung von Codes vom Typ
+Code 39.
+
+
+Computing
+
+∂ Nur vierstellige Codes (4 Ziffern).
+∂ Rechts und links vom Code muss das
+erfasste Kamerabild weiß sein.
+∂ Diagonale Codeerfassung ist nicht möglich.
+∂ Die Kamera muss den Code scharf
+erfassen können (Objektiveinstellung)
+und möglichst bildfüllend.
+∂ Ausreichende, möglichst gleichverteilte
+(diffuse) Beleuchtung, hierzu eignen
+sich weiße LEDs.
+
+
+Wenn obige Einschränkungen berücksichtigt werden, ist eine horizontale oder
+vertikale Code-Erfassung möglich, auch
+kopfstehend.
+
+Kamera Strichcode-Leser
+Die Besonderheit dieses fischertechnikModells ist sicherlich, dass ein Strichcode
+mit einer Kamera erfasst werden kann und
+eine Auswertung des Bildes in Visual Basic
+stattfindet. Dabei werden nachfolgende
+Schritte automatisch ausgeführt:
+a) Anzeige des übertragenen Kamerabildes
+in einem Anzeigefeld (PictureBox).
+Hierbei wird eine Konvertierung aus
+dem komprimierten Bildformat (.jpg)
+nach Bitmap (.bmp) vorgenommen.
+b) Die horizontale und vertikale Anzahl der
+Bildpunkte des bereitgestellten Kamerabildes wird analysiert.
+c) Bei einem Stichcode ist ein Streifen
+entweder schwarz oder weiß. Farben
+oder Graustufen im aufgenommenen
+Bild stören bei der späteren Auswertung.
+Ausgegangen wird von einem Bild
+gemäß Abb. 1.
+Wenn man sich das Bild stark (achtfach)
+vergrößert ansieht (Abb. 2), sieht man, dass
+die Streifen des Strichcodes in Wirklichkeit
+gar nicht so scharf abgebildet wurden, wie
+man vielleicht zuerst vermutet hatte.
+
+vergrößert auf 800%
+
+Aufgrund der vorhandenen Unschärfe wird
+das Bild aus Abb. 1 in ein reines SchwarzWeiß-Bild umgerechnet, bei dem es keine
+Farben und Graustufen mehr gibt. Hierzu
+muss man wissen, dass ein Farbbild mit
+24 Bit Farbtiefe aus den drei Einzelfarben
+rot, grün und blau zusammengemischt wird.
+Für jede dieser Farben stehen 8 Bit zur
+Verfügung, die 256 verschiedene Intensitätsstufen ermöglichen. Je kleiner der
+individuelle Farbwert ist, desto dunkler ist
+dieser. Bezüglich rot z. B. bedeutet 0 gar
+kein rot (d. h. keine rote Helligkeit) und 255
+maximal helles Rot. 127 steht demnach für
+rot mit mittlerer Helligkeit. Dasselbe gilt
+entsprechend auch für grün und blau.
+Wenn man also die Helligkeit eines Bildpunktes wissen möchte, so muss man für
+alle drei Farben den Helligkeitswert bestimmen und dann den Mittelwert bilden. Dieser
+
+
+Mittelwert entscheidet dann zusammen mit
+der Einstellung gemäß Abb. 3, ob ein
+Bildpunkt schwarz oder weiß interpretiert
+werden soll.
+
+bei einer wirklichen Auswertung würde
+das stören.
+
+
+Die Einstellung, ab welcher Helligkeit ein
+Bildpunkt schwarz oder weiß werden soll,
+wird auch als Schwellenwert bezeichnet.
+Wird das Bild in Abb. 1 nach dem obigen
+Verfahren umgerechnet, so ergibt sich
+folgendes Bild:
+
+schwarz-weiß umgerechnet
+
+d) Nun werden Streifenmuster aus dem
+Schwarz-Weiß-Bild ausgelesen. Das
+erfolgt entlang der roten und grünen
+Linien, wie in Abb. 5 gezeigt. Der
+Betrachter erkennt sofort, dass hierbei
+nur bei vier roten Linien die Aussicht auf
+Erfolg besteht, den Strichcode richtig
+auszulesen. Der Computer weiß das jedoch nicht und nimmt zunächst stur alle
+20 Streifenmuster auf (rote und grüne).
+Damit die Linien sinnvoll über das Bild
+verteilt sind und bekannt ist, wie viele
+Punkte ausgelesen werden müssen,
+wurde zuvor gemäß b) die horizontale
+und vertikale Anzahl der Bildpunkte
+analysiert. Die roten und grünen Linien
+sind hier nur zur Erklärung dargestellt,
+
+der roten und grünen Linien
+
+e) Das Auslesen entlang einer roten oder
+grünen Linie erfolgt Punkt für Punkt
+nacheinander. In einem Datenfeld
+(array) wird dieses Leseergebnis in komprimierter Form gespeichert. Würden
+z. B. zu Beginn fünf weiße Punkte
+hintereinander gefunden und der sechste
+Punkt wäre schwarz, dann würde in dem
+ersten Datenfeldeintrag eine 5 gespeichert werden. Wären dann der sechste
+bis achte Punkt weiß, wäre der nächste
+Datenfeldeintrag eine 3, usw. Sind alle
+roten und grünen Streifen gemäß Abb. 5
+ausgelesen, hat man schließlich 20 derartige Zahlenfolgen.
+f) Wie eingangs festgelegt, dürfen sich vor
+und nach der Strichcodeabbildung nur
+weiße Bildpunkte befinden. Das wird bei
+der Auswertung der Zahlenfolge im
+Datenfeld berücksichtigt. Aus den verbleibenden Datenfeldeinträgen wird die
+Summe gebildet und man erhält die
+Anzahl an Bildpunkten, die zum Strichcode gehören (könnten). Um die Datenfelder richtig auswerten zu können, sind
+die Grundlagen der Streifencodes gemäß
+einer früheren Ausgabe der ft:pedia von
+Bedeutung [3]. Für einen Strichcode mit
+vier Ziffern ergibt sich Folgendes:
+∂ Ein dicker Streifen ist so breit wie
+zwei dünne.
+
+
+Computing
+
+∂ Eine Ziffer hat immer drei dicke und
+sechs dünne Streifen.
+∂ Eine Ziffer hat eine Gesamtbreite von
+zwölf dünnen Streifen.
+∂ Zwischen je zwei Ziffern liegt immer
+ein dünner Streifen.
+∂ Wenn vier Ziffern nebeneinanderstehen, sind diese durch insgesamt drei
+dünne Streifen voneinander getrennt.
+∂ Alle obigen Aussagen zusammen
+ergeben für vier Ziffern eine Gesamtbreite von 51 dünnen Streifen.
+Die oben gebildete Anzahl an Bildpunkten,
+die zum Strichcode gehören, wird nun
+durch 51 geteilt. Damit erhält man die
+Anzahl an Bildpunkten, die einen dünnen
+Streifen darstellen. Die doppelte Bildpunktanzahl entspricht dann einem dicken
+Streifen.
+g) Zusammen mit dem Wissen, wieviel
+Bildpunkte ein dicker bzw. ein dünner
+
+Streifen hat, können nun die Zahlenfolgen der Datenfelder gemäß e) analysiert werden. Daraus ergibt sich für eine
+Ziffer eine neue Zahlenfolge, bestehend
+aus „1“ (dünner Streifen) und „2“ (dicker
+Streifen). Es ergibt sich somit z. B. für
+die Ziffer 7 Folgendes:
+∂ „111211212“ = 7, vorwärts gelesen
+∂ „212112111“ = 7, rückwärts gelesen
+Diese Zahlenfolgen, bestehend aus „1“
+und „2“, werden nun durch Mustervergleich in einzelne Ziffern umgerechnet. Schließlich ergeben sich Zahlen
+mit jeweils vier Ziffern.
+h) Die Vorgänge e) bis g) werden schließlich auf alle 20 Streifenmuster (rote und
+grüne) gemäß d) angewendet.
+i) Die Ergebnisse aus h) werden schließlich
+betrachtet. Werden zwei oder mehr Streifenmuster als gültige Strichcodes interpretiert, so dürfen sich diese nicht
+
+Fotowiderstand 2
+
+Fotowiderstand 1
+
+
+
+voneinander unterscheiden. Falls doch,
+wird die Fehlermeldung „bar code with
+errors detected“ als Ergebnis ausgegeben. Wird kein Streifenmuster als
+gültiger Strichcode erkannt, lautet die
+Fehlermeldung „no bar code detected“.
+Nur eindeutige Leseergebnisse werden
+als Zahlenwert ausgegeben.
+Beim nachfolgend beschriebenen Modell ist
+es trotz hunderten von Durchgängen kein
+einziges Mal dazu gekommen, dass ein
+Strichcode als solcher erkannt, jedoch eine
+falsch gelesene Zahl ausgegeben wurde.
+Das beschriebene Verfahren wird somit als
+recht zuverlässig angesehen.
+
+Das Modell
+Das Modell selbst ist vergleichsweise einfach aufgebaut. Soll ein Gebinde eingelagert werden, muss es zunächst auf das
+Förderband aufgebracht werden. Die Einlagerung wird nur begonnen, wenn noch
+mindestens ein Lagerplatz frei ist. Im Bereich des Förderbandes sind gemäß Abb. 6
+zwei Fotowiderstände eingebaut, mit denen
+die Lagergebinde auf dem Förderband
+erkannt werden können.
+Wird also zwischen Fotowiderstand 1 und
+der darüber befindlichen weißen LED ein
+Lagergebinde eingebracht, so wird es
+erkannt. Das Lagergebinde wird darauf hin
+auf dem Förderband so weit transportiert,
+bis es sich über Fotowiderstand 2 befindet.
+Um das Lagergebinde sicher zu erkennen,
+muss eine passende Störlichtkappe über
+dem Fotowiderstand verwendet werden. An
+der Position des Fotowiderstandes 2 wird
+nun ein Kamerabild vom Gebindeetikett
+aufgenommen und ausgewertet. Im Modell
+sind weiße LEDs verbaut, weil lange
+Betriebszeiten erwartet sowie eine örtlich
+und zeitlich konstante Beleuchtung benötigt
+wurden. Wie bereits oben beschrieben, wird
+die erkannte Ware in der Warenbestandsliste eingetragen. Um eine Klartextbeschreibung in dieser Liste ergänzen zu
+
+
+können ist die Datei StockList.txt erforderlich, in der der Strichcode und die gesuchte
+Klartextbeschreibung vorhanden sind:
+∂
+∂
+∂
+∂
+∂
+∂
+
+1234-Frankfurter Kranz
+5678-Gruene Sosse
+9059-Handkaes mit Musik
+9088-Frankfurter Wuerstchen
+1244-Bethmaennchen
+7983-Rindswuerste
+
+Die Liste kann natürlich beliebig ergänzt
+werden.
+In der Warenbestandsliste sind auch alle
+bislang verwendeten Lagerpositionen vermerkt. Soll die nächstgelegene freie Lagerposition ermittelt werden, wird in einer
+weiteren (fest im Programm hinterlegten)
+Aufzählung nachgesehen. Die Lagerbelegung erfolgt gemäß folgendem Schema:
+A
+
+B
+
+C
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Die möglichen Lagerpositionen sind grau
+hinterlegt. Die Reihenfolge der Belegung ist
+mit den roten Zahlen gekennzeichnet. Somit
+wird die Lagerposition A1 zuerst belegt,
+dann folgt A2, B1, A3, usw. Wenn die
+nächste freie Lagerposition bestimmt
+wurde, beginnt der Transport des Lagergebindes dorthin. Der Laderoboter übernimmt dabei das Lagergebinde vom Förderband. Er kann das Lagergebinde gemäß
+transportieren und schließlich am festgelegten Lagerort einbringen. Aufgrund der
+minimalistischen Konstruktion des Laderoboters kann dieser nur dann in x-Richtung
+verfahren werden, wenn die Bewegungseinheit der y-Richtung an der tiefsten Stelle
+positioniert ist. Die Bildschirmdarstellung
+eines gefüllten Lagers ist in Abb. 13
+
+gezeigt. Zur Auslagerung genügt ein
+Doppelklick auf einen Eintrag in der
+Warenbestandsliste. Vor Beginn der Auslagerung muss diese wie in Abb. 7 gezeigt
+bestätigt werden:
+
+Lagergebindes
+
+Etikettierung der Lagergebinde
+
+Computing
+
+∂ Rechts und links vom Strichcode soll
+kein Aufdruck vorhanden sein, weil das
+eine wichtige Voraussetzung für ein
+fehlerfreies Auslesen ist.
+∂ Die Verklebung soll reversibel sein, d. h.
+zu einem späteren Zeitpunkt soll sie
+rückstandsfrei wieder entfernt werden
+können.
+Ein paar Beispiele zur Etikettierung sind in
+Vor dem Ausdruck ist zu beachten, dass die
+Abbildung derart vergrößert werden muss,
+dass ein Etikett die Größe von 5,5 cm ∙
+10,8 cm hat.
+Als Klebstoff eignet sich ein wasserlöslicher Klebestift, z. B. ein Pritt-Stift
+(Abb. 9). Der Klebstoff sollte zunächst
+großzügig, aber gleichmäßig auf die Rückseite des Etiketts aufgetragen und danach
+das Etikett umgehend auf das Kunststoffkästchen faltenfrei aufgebracht werden.
+
+
+An die Etikettierung der Lagergebinde
+werden auch einige Anforderungen gestellt.
+∂ Der Strichcode sollte gut lesbar und so
+groß wie möglich sein, zumindest hinsichtlich der Breite. So können schmale
+und breite Streifen mit maximaler Zuverlässigkeit unterschieden werden.
+∂ Eine Klartextkennzeichnung ist stets
+sinnvoll für Kontrollzwecke durch
+Menschen.
+∂ Die Kästchen sollen durch die Verklebung sicher verschlossen gehalten
+werden.
+
+Klebestift zur reversiblen Gebindeetikettierung
+
+Enthält ein Klebstoff organische Lösemittel, so besteht die Gefahr, dass bei der
+Verklebung der Kunststoff angelöst wird.
+Derartige Klebstoffe sind ungeeignet.
+
+Ausblick
+Das Dekodieren von Strichcodes ist im
+Grunde nicht besonders kompliziert, wenn
+das Grundprinzip einmal richtig verstanden
+wurde. Deshalb erscheint es mir vergleichsweise einfach machbar, wenn in die fischertechnik Programmierumgebung ROBO Pro
+zukünftig ein Sensorfeld eingebaut würde,
+mit dem Strichcodes gelesen werden
+könnten.
+
+
+Quellen
+[1]
+
+fischertechnik: ROBOTICS TXT
+Controller C-Programming Kit
+Firmware Version 4.1.6.
+Fischerwerke, 2015.
+
+[2]
+
+Gail, Andreas: RoboTXTC full
+automatic warehouse VisualBasic
+2010, Beispielprogramm.
+
+[3]
+
+Gail, Andreas: Stichcode-Leser am
+Robo TX Controller (1):
+Automatisiert mit ROBO Pro.
+ft:pedia 3/2014, S. 66-71.
+
+[4]
+
+Gail, Andreas: fischertechnik:
+Hochregallager mit camera barcode
+scanner und Lagerdatenbank.
+Youtube-Video.
+
+[5]
+
+Gail, Andreas: RoboRISC: Visual
+Basic für den Robotics TXT. In dieser
+ft:pedia.
+
+
+
+
+Computing
+
+
+
+
+
+bewegte Teile in x-Richtung (blau), y-Richtung (gelb) und z-Richtung (grün)
+
+
+
+Computing
+
+Warenbestandsliste
+
+
+
+
+
+
+
+

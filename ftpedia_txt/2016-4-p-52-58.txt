@@ -1,0 +1,465 @@
+
+
+Elektromechanik
+
+Funktionsmodelle von Gleich- und Wechselstrommotoren
+Rüdiger Riedel
+Wegen der Eleganz und Einfachheit wollte ich einen Elektromotor mit einem Reedschalter
+steuern. Die ersten Versuche waren schnell beendet, weil die Kontakte miteinander verschweißten – der Schalter schaltete nicht mehr. Üblicherweise wird dieser Schaltertyp nur als
+Sensor und nicht als „Lastschalter“ verwendet [4]. Doch mit ein paar Überlegungen und einer
+einfachen Maßnahme ist der Weg frei für einen einfachen Gleichstrommotor – als Anlaufhilfe
+für einen Synchronmotor.
+Das „Anwerfen“ eines Synchronmotors ist
+etwas trickreich: Man muss manuell die
+Laufgeschwindigkeit einigermaßen treffen,
+damit er weiterläuft. Wie praktisch wäre da
+doch ein Gleichstrommotor als Anlaufhilfe…
+Beginnen wir zunächst mit einem Bild des
+Funktionsmodells:
+
+Der Reedkontakt
+Ich verwende Miniatur-Reedkontakte mit
+den folgenden Eigenschaften:
+Schaltleistung
+
+10 VA/50 V
+
+Schaltstrom
+
+max. 0,5 A
+
+Maße (L x Ø)
+
+15 x 2,2 mm
+
+Tab. 1: Werte des Reedkontakts
+
+Das sieht eigentlich gut aus, reicht aber
+nicht, wie meine fehlgeschlagenen Versuche gezeigt haben. Also muss die Physik
+her.
+
+
+Links im Bild erkennt man den Einschalter,
+daneben folgen der Reedkontakt und dann
+der Rotor mit Zahnrad Z30 einschließlich
+Markierung (darauf komme ich später
+zurück). Dahinter erkennt man oben den
+Antriebsmagnet, ausgerüstet mit einem
+Widerstand. Die Verdrahtung ist noch
+unvollständig und es fehlt der Synchron(Wechselstrom-) Anteil.
+
+Was passiert, wenn ein stromdurchflossener
+Elektromagnet abgeschaltet wird? Die
+Lenzsche Regel besagt, dass der Strom
+einer Induktivität (und das ist unser Magnetchen auch) nicht plötzlich geändert werden kann. Werden also die Schalterkontakte
+geöffnet, dann sucht sich der Strom einen
+Weg durch die Luft, er bildet einen (hier
+sehr kleinen) Funken. Um diesen Strom
+durch die Luft zu treiben, muss die Spannung stark ansteigen.
+Die Spannungsspitze über dem Schalter
+erreicht sehr hohe Werte, wie man mit einer
+Glimmlampe aus einem so genannten
+Spannungsprüfer nachweisen kann (meine
+hat eine Ansprechspannung von ca. 70 V).
+
+
+Elektromechanik
+
+Oder man greift die entstehende Spannung
+an der Spule mit den Händen ab, siehe die
+„Elektrisiermaschine“ in [5].
+
+Fall 1: Ohne äußere Beschaltung erreicht
+die Abschaltspannung
+mehrere 100 V,
+klingt aber sehr schnell ab.
+
+Solche Spannungsspitzen von mehreren
+100 V machen den üblichen Schaltern, Tastern und Relais nichts aus; sie sind ausreichend robust und die Kontakte öffnen
+weit genug. Der Reedkontakt öffnet nur
+einige Zehntel mm, ist also viel empfindlicher. Was ist zu tun? Der Funke muss weg.
+
+Fall 2: Die Diode
+ist in Bezug zur
+Versorgungspannung
+in Sperrrichtung
+geschaltet. Beim Abschalten übernimmt sie
+den induktiven Strom. Dieser klingt relativ
+langsam ab mit der Zeitkonstanten .
+
+Funkenlöschung
+Der dahinter stehende Gedanke: Der von
+der Induktivität getriebene Strom muss
+beim Abschalten weiter fließen können, bis
+er durch die Dämpfung des Innenwiderstands abgeklungen ist.
+
+Fall 3: Der Induktionstrom fließt in den
+Kondensator , worauf sich zusammen mit
+der Induktivität eine gedämpfte Schwingung ergibt. Der Widerstand bewirkt eine
+zusätzliche Dämpfung. muss etwa 15 µF
+groß sein (dies bitte nicht verwechseln mit
+einer Beschaltung zur Hochfrequenzdämpfung, da ist der Kondensator viel kleiner).
+Fall 4: Der Widerstand beträgt etwa das
+zwei- bis sechsfache von , dadurch wird
+die Abschaltspannung über dem Schalter
+auf weniger als
+mal
+reduziert.
+Die Diode gefiel mir am besten.
+
+
+Der Motor läuft damit einwandfrei, der
+Reedkontakt zeigt keine Schwächen. Die
+Leerlaufdrehzahl habe ich mit 26 V und
+0,12 A auf 1.000 U/min gebracht. Der
+Nachteil: Bei falscher Polung der Diode
+gibt es einen Kurzschluss!
+und ohne Beschaltung
+
+Abbildung 2 zeigt links den Elektromagneten ohne und mit Beschaltung und rechts
+den zugehörigen Verlauf der Spannung
+nach Abschaltung der Versorgungsspannung . Der Elektromagnet ist mit seiner
+Induktivität
+und seinem Widerstand
+dargestellt.
+
+Deswegen habe ich auch den Fall 4 mit
+einem 220 ς-Widerstand ausprobiert. Und
+siehe da, der Motor läuft noch besser, mit
+12,8 V und 0,085 A habe ich ebenfalls
+1.000 U/min erreicht und mit 23 V und
+0,13 A sogar 1.500 U/min. Die geringen
+Verluste durch den Widerstand, nämlich ca.
+20 % des Gesamtstroms, kann man hinnehmen.
+
+
+
+Statt die volle Netzschwingung auszunützen, wird mit den einseitig polarisierten
+Rotormagneten nur eine Halbwelle genutzt.
+Frequenz und Drehzahl bleiben gleich, das
+Drehmoment und damit die Ausnutzung
+werden etwa halbiert (Abb. 5).
+Löschwiderstand
+
+In dieser Konfiguration ist der Gleichstrommotor schon mehr als fünf Stunden gelaufen
+und der Reedkontakt hat wohl eine halbe
+Million Schaltspiele hinter sich.
+Sollte im Übereifer mal zu große Spannung
+auf den Reedkontakt gekommen sein und
+die Kontakte sind verschweißt, kann man
+diese meistens wieder trennen, indem ein
+Magnet darüber gestrichen wird: Sind beide
+Zungen vom gleichen Pol magnetisiert,
+stoßen sie sich ab. Bei mir hat es geklappt.
+
+Der Rotor, auch Läufer
+genannt
+Der Rotor soll mit Wechselstrom auch synchron laufen – warum hat er dann sechs
+(und nicht wie sonst üblich 12 [6]) Magnete?
+Der „Stromwender“ oder „Kommutator“
+besteht aus den Magneten des Rotors und
+dem Reedkontakt. Der schaltet aber nur ein
+und aus, eine „Stromwende“, also Umpolung findet nicht statt. Somit kann der antreibende Elektromagnet auch nur eine Polarität annehmen. Der zweite Grund ist die
+hohe Ansprechempfindlichkeit des Reedkontakts: Bei 12 Rotormagneten gelingt es
+kaum, ein sauberes Ein- und Ausschalten zu
+erzielen.
+In [3] hat Matthias Dettmer sehr schön
+dargelegt, wie und mit welchen Drehzahlen
+ein Synchronmotor läuft. Bei 12 Rotormagneten mit abwechselnder Polarität (die Polpaarzahl ist dann sechs) und 50 Hz Netzfrequenz wird eine Drehzahl von 500 U/min
+erzielt.
+
+
+darunter die positive Halbwelle
+
+Somit kann ich in Tabelle 1 von Matthias
+Dettmer die Spalte „Polpaare“ ersetzen
+durch „einseitig ausgerichtete Magnete“.
+Drehzahl
+Natürlich möchte man auch die Drehzahl
+des Motors wissen, wenn möglich mit
+wenig Aufwand und mit „Bordmitteln“. Die
+Messung der Impulse vom Reedkontakt
+brachte sprunghafte Änderungen der Anzeige, hat also nicht funktioniert.
+Zur Verfügung hatte ich ein billiges DigitalMultimeter mit Frequenzmessbereich, eine
+kleine Spule aus einer (mechanisch) defekten Zeitschaltuhr und einen „diametral“
+magnetisierten Stabmagneten mit 4 mm
+Durchmesser und 10 mm Länge.
+Den Stabmagnet habe ich mit einer Klemmbuchse 10 am hinteren Wellenende befestigt (Abb. 6). Dann habe ich die Spule auf
+einen Sockel gesetzt – und die Anzeige fing
+an zu spinnen: Viel zu hohe Frequenzen von
+über 170 Hz.
+Ursache waren die Vibrationen der Maschine, die sich auf die Spule übertrugen, wodurch das Magnetfeld moduliert wurde.
+
+
+Elektromechanik
+
+Muster. Hat man die Anzahl der Magnete
+gezählt, dann ergibt sich die Drehzahl zu
+Drehzahl = (3.000 U/min) /
+Die Farbunterschiede in Abb. 8 sind durch
+zwei verschiedene LEDs entstanden; eine
+andere Beleuchtung war nicht vorhanden.
+Belichtungszeit lag bei ca. ½ s.
+
+Stabmagnet
+
+Abhilfe schaffte eine weiche, gedämpfte
+Befestigung der Spule wie in Abb. 7.
+
+
+Das Messgerät zeigt nun sauber die Drehzahl in Hz an. Mit 60 multipliziert ergibt das
+die Drehzahl in U/min.
+Die Umrechnung kann man sich zwar mit
+einer Tabelle erleichtern, aber irgendwie ist
+das nicht wirklich „elegant“. Wie wäre es
+daher mit einem …
+
+Stroboskop
+Die Herstellung ist ganz einfach: Eine LED
+an Wechselstrom anschließen – fertig. Eine
+LED ist ja eine Diode und lässt den Strom
+nur in einer Richtung durch, so dass das
+Licht der Halbwelle in Abb. 5 folgt. Ein
+Licht-„Blitz“ ist 10 ms lang, gefolgt von
+einer 10 ms langen Pause. Mit einem Fotoblitz kann man das zwar nicht vergleichen,
+der leuchtet kürzer als 1 ms, aber für unsere
+Zwecke reicht das aus. Beleuchtet man mit
+dieser LED das Zahnrad Z30 mit der weißen
+Markierung aus Abb. 1 und erhöht langsam
+die Versorgungsspannung, dann erscheinen
+bei bestimmten Drehzahlen feststehende
+
+167, 250, 500, 750, 1.000 und 1.500 U/min
+
+Die Sperrspannung einer LED ist nicht besonders hoch, deshalb habe ich zum Schutz
+noch eine Standarddiode (z. B. 1N4001) in
+Flussrichtung vorgeschaltet.
+
+Wechselstrombetrieb
+Die Erweiterung um den Synchronantrieb
+leistet der „Powerblock“ rechts in Abb. 9.
+Der obere Magnet treibt den Gleichstrommotor, der unter den Wechselstrommotor
+(dass es verschiedene Typen sind, hat keine
+Bedeutung – die waren einfach gerade
+verfügbar).
+Mit dem linken Schalter in Abb. 10 wird der
+Gleichstrommotor eingeschaltet, mit dem
+rechten der Wechselstrom- (Synchron-)
+motor. Die Stromkreise sind vollständig
+getrennt.
+
+
+
+
+Bei kleinen Drehzahlen kann man das
+Klicken des Reedkontaktes hören. Der Synchronmotor läuft dagegen eher ruppig.
+
+Varianten
+Mit unserer „Kombimaschine“ lassen sich
+nun auch Synchronmotorvarianten mit
+unterschiedlicher Zahl an Permanentmagneten realisieren.
+Läufer mit drei Magneten
+
+Die Hälfte der Magnete führt zur Synchrondrehzahl von 1.000 U/min. Diese habe ich
+mit dem Gleichstromteil mit 10,3 V und
+0,07 A erreicht, die Synchronisierung erfolgte mit 6 V Wechselstrom.
+Läufer mit zwei Magneten
+Jetzt braucht der Motor schon ordentlich
+hohe Spannungen. Mit 22,4 V habe ich
+1.500 U/min erreicht bei einem Strom von
+0,06 A. Die Synchronisierung erfolgte mit
+einer Wechselspannung von 14 V, der Synchronmotor lief einwandfrei.
+
+
+Der Betrieb der „Kombimaschine“ beginnt
+mit der Zuschaltung des Gleichstroms und
+leichtem Anstoßen des Rotors. Zum Anlaufen reicht eine Spannung von 5 V aus. Mit
+der Stroboskop-LED wird das Zahnrad Z30
+mit der weißen Markierung beleuchtet.
+Dann erhöht man langsam die Versorgungsspannung, bis der sechsarmige Stern in
+6 V). Der Stern sollte still stehen oder
+langsam im Sinn der Rotordrehung rotieren.
+Dann wird der Wechselstrom (bei mir
+ebenfalls 6 V) zugeschaltet. Wenn der Stern
+nur leicht vor und zurück pendelt, kann der
+Gleichstrom abgestellt werden, und der
+Motor läuft synchron weiter.
+Der „runde“ Lauf des Gleichstrommotors
+begeistert mich immer wieder. Dieser wird
+begünstigt durch das relativ große
+Schwungmoment und die leichtgängige
+Lagerung im Lagerbock 38252.
+
+
+
+Läufer mit vier Magneten
+Mit zwei Drehschalter-Unterteilen 31311
+lässt sich die „virtuelle“ Polpaarzahl vier
+erreichen. Zur Fixierung befindet sich in der
+Mitte ein Klemmzahnrad 15, je eine Flachnabe vorn und hinten drücken das Ganze
+zusammen, siehe Abb. 12. Sollte der Läufer
+klappern, kann man ein Stück PneumatikSchlauch um das Zahnrad legen.
+Die Synchrondrehzahl von 750 U/min wurde bei 9,7 V Gleichstrom und 0,1 A erreicht, der Synchronmotor lief anschließend
+mit 6 V Wechselstrom.
+
+
+Elektromechanik
+
+schön dargelegt. Nun stelle man sich vor,
+der Läufer aus Abb. 10 drehe sich mit halber Drehzahl, also 250 U/min. Dann erscheint nur bei jeder zweiten Halbwelle der
+Netzspannung ein Läufermagnet vor dem
+Elektromagneten. Der würde aber wie
+bisher antreiben und wenn das Drehmoment
+ausreicht, sollte der Motor mit dieser
+Drehzahl synchron laufen.
+in den beiden Drehschalter-Unterteilen
+
+Läufer mit fünf Magneten
+Meine Kreation eines Läufers mit fünf
+Magneten wirkt etwas gezwungen. Die
+Stabmagnete sind hier 25 mm lang. Zwei
+Gelenklaschen 36330 halten drei Magnete
+in den Langlöchern der Drehscheibe 60 auf
+Abstand. Zwei Gummis vom Spurkranz,
+einer vorne und einer hinten, halten die
+beiden anderen Magnete zusammen.
+
+Mit dem Läufer mit nur zwei Magneten
+funktioniert das sehr gut. Ich habe die
+Spannung langsam erhöht und dabei
+folgende Drehzahlen mit anschließendem
+Synchronbetrieb erreicht:
+Spannung
+
+Drehzahl
+
+7,0 V
+
+300 U/min
+
+8,6 V
+
+375 U/min
+
+9,2 V
+
+750 U/min
+
+22,4 V
+
+1.500 U/min
+
+Tab. 2: Drehzahlen
+
+
+Das ist nicht ganz symmetrisch, aber es
+läuft recht ordentlich. Um 600 U/min zu
+erreichen brauchte ich 11,8 V und 0,09 A
+Gleichstrom. Der Synchronlauf funktioniert
+gut mit 6 V.
+
+
+Drehzahl?
+Bisher sind wir davon ausgegangen, dass es
+einen eindeutigen Zusammenhang zwischen der Anzahl der Läufermagnete und
+der synchronen Drehzahl gibt. Das ist in [3]
+
+Wie oben beschrieben sind 1.500 U/min die
+primäre Synchrondrehzahl. Weiter habe ich
+folgende Synchrondrehzahlen unterhalb der
+primären Synchrondrehzahl erreicht: 167,
+250, 333 U/min. Weiß jemand, mit welchen
+Läufern das möglich ist?
+Man könnte diese Betriebsart „Lückenbetrieb“ nennen.
+Nochmal: Die Löschdiode
+Nach all den o. g. Versuchen habe ich die
+Löschdiode nochmal am DC-Motor mit
+zwei Magneten im Drehschalter ausprobiert. Diesmal zeigte sich kein Unterschied
+zum Löschwiderstand.
+Am empfindlichsten reagiert der Motor auf
+die Position des Reedkontaktes; sorgfältiges
+Einstellen kann die Eigenschaften erheblich
+verbessern. Ich habe den Motor mit der
+Löschdiode hochgejubelt bis 52 Hz, das
+entspricht einer Drehzahl von mehr als
+3.100 U/min – allerdings mit 31,8 V und
+0,13 A. Das hat dem Reedkontakt auch
+nach vielen Minuten Betrieb nichts ausgemacht. Um unliebsamen Überraschungen
+
+
+
+vorzubeugen, sollte man zusätzlich zur
+Löschdiode jedoch eine Schutzdiode
+nach Abb. 15 vorsehen.
+
+Die Motoreigenschaften sind aber ziemlich
+schlecht, ein sauberer Rundlauf ist kaum zu
+erreichen. Drehzahlen von 750 und 1.000
+U/min habe ich so mit anschließendem
+Synchronlauf erreicht. Die primäre Synchrondrehzahl von 3.000 U/min ist damit
+aber wohl nicht erreichbar.
+
+Schaltbild, darunter ein Realisierungsvorschlag
+
+In Abb. 16 ist der Motorlauf mit 3.000
+U/min mit der Stroboskop-LED festgehalten.
+
+
+Die drei Stifte im Läufer links von Abb. 17
+dienen dem Massenausgleich; im Baustein
+30 vorne befindet sich der Kommutierungsmagnet und eine Achse 30.
+Ein Dankeschön
+
+
+Wäre die Spannung an der LED rechteckförmig mit 10 ms Dauer, dann müsste die
+Markierung auf Bild 16 über den halben
+Umfang verschmiert sein. Die Drehzahl von
+3.000 U/min entspricht ja 50 U/s, also
+dauert eine Umdrehung 20 ms. Wegen des
+Sinusverlaufs der Spannung kann man aber
+Anfang und Ende nicht erkennen, deshalb
+erscheint der helle Sektor nur über etwa
+einem Drittel des Umfangs.
+„Forschungsbedarf“
+Wie bekommt man den kombinierten
+Gleichstrom- und Wechselstrommotor auf
+3.000 U/min mit anschließendem Synchronlauf?
+Der Betrieb des Drehschalter-Läufers mit
+nur einem Magnet ist möglich, indem der
+Kommutierungsmagnet separat mitläuft.
+
+Mein ausdrücklicher Dank gilt Stefan Roth
+(ffm) und Andreas Schallmaier (fitec), ohne
+die ich nicht das Material hätte, meinem ftHobby zu frönen.
+
+Referenzen
+[1]
+
+Thomas Habig: LEDs mit Vorwiderstand. ft:pedia 2/2011, S. 14-18.
+
+[2]
+
+Dirk Fox: Der Elektromotor. 3/2013, S. 4-8.
+
+[3]
+
+Matthias Dettmer: Synchronmotoren.
+ft:pedia 2/2016, S. 48-52.
+
+[4]
+
+Stefan Falk: Perlentauchen (Teil 3).
+ft:pedia 1/2013, S. 22-31.
+
+[5]
+
+fischertechnik: Clubnachrichten 13.
+März 1972, S. 22-23.
+
+[6]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt.verlag, Heidelberg, 2015.
+
+

@@ -1,0 +1,361 @@
+
+Optik
+
+Optik
+
+Ein Michelson-Interferometer mit fischertechnik
+Florian Bauer
+Mit der Verfügbarkeit von Halbleiterlasern ist es inzwischen möglich, interessante Experimente
+zu optischen Messungen und Interferenz zu Hause mit geringem Kostenaufwand aufzubauen.
+
+Michelson-Interferometer
+Aus dem Physikunterricht in der Schule
+kennt man beispielsweise das MichelsonInterferometer, eines der Schlüsselexperimente der modernen Physik im Bereich Interferenz [1]. Damit kann die Wellennatur
+des Lichtes gut demonstriert werden.
+Der schematische Aufbau dieses Experiments ist in Abb. 1 dargestellt.
+
+Interferenz-Experiments
+
+Der Lichtstrahl eines Lasers wird in einem
+Strahlteiler (ST) in zwei Teilstrahlen mit ca.
+50% Intensität aufgeteilt und durchläuft das
+Experiment in zwei unterschiedlichen Wegen, den sogenannten Interferometerarmen.
+Der Strahlteiler kann ein Strahlteilerwürfel
+
+sein oder eine Glasplatte mit einer dielektrischen Beschichtung. Im Falle einer Glasplatte wird oft eine Kompensationsplatte
+mit gleicher Dicke wie die Strahlteilerplatte
+verwendet, um unterschiedliche Wege im
+Glas zu kompensieren.
+Ein Strahl wird um 90 Grad abgelenkt und
+trifft auf Spiegel M2, von wo er durch den
+Strahlteiler zurückgeworfen wird, um auf
+dem Beobachtungsschirm B aufzutreffen.
+Der zweite Strahl geht geradewegs zu Spiegel M1, wird von dort ebenfalls zurückgeworfen und wird beim Rücklauf am Strahlteiler um 90 Grad auf den Beobachtungsschirm B abgelenkt.
+Wenn sich beide Teilstrahlen auf dem Beobachtungsschirm treffen, kann unter bestimmten Bedingungen Interferenz auftreten. Dies ist der Fall, wenn die Lichtstrahlen
+exakt gleiche optische Weglängen oder ein
+Vielfaches der Wellenlänge des Lichtes
+durchlaufen. Dann können die Lichtwellen
+der beiden Teilstrahlen konstruktiv miteinander interferieren. Die Amplituden
+(„Wellenberge“) der elektromagnetischen
+Lichtwelle addieren sich dann – es kommt
+dann zu einem Intensitätsmaximum. Wenn
+einer der Lichtstrahlen einen um die halbe
+Wellenlänge (plus ganzzahlig Vielfaches
+der Wellenlänge) des Lichtes kürzeren oder
+längeren Weg zurücklegt, treffen Wellenberg und Wellental der elektromagnetischen Lichtwelle aufeinander und die Über-
+
+
+
+
+lagerung führt zu einem Intensitätsminimum. Man spricht dann von destruktiver Interferenz.
+Im praktischen Experiment kann man vor
+dem Strahlteiler eine Sammellinse L installieren, die den Strahl aufweitet und dann auf
+dem Beobachtungsschirm ein Ringmuster
+entstehen lässt. Dieses Muster entsteht aus
+Interferenzen gleicher Neigung und wird
+Haidingersches Ringsystem genannt.
+Es hat sich als sinnvoll erwiesen, die Richtungsüberlagerung der beiden Teilstrahlen
+nur über M2 fein einzustellen und die Änderung des optischen Weges nur über Verschiebung von M1.
+Im Prinzip also ein einfaches Experiment,
+wenn es da nicht ein paar Herausforderungen geben würde.
+
+Vibrationen
+Rotes Licht hat eine Wellenlänge von
+600 nm. Wenn sich der Unterschied des optischen Weges der beiden Teilstrahlen –
+z. B. Aufgrund von Vibrationen des Versuchsaufbaus – nur um 300 µm verändert,
+ist das Interferenzmuster nicht mehr stabil.
+Aus diesem Grund werden Interferenz-Experimente zweckmäßigerweise auf schweren optischen Tischen aufgebaut, die gedämpft gelagert sind. Je schwerer die Halterungen sind, desto unempfindlicher ist der
+Aufbau gegenüber Schwingungen. Bei dem
+hier vorgestellten Aufbau mit fischertertechnik wurden Lichtquelle und Interferometer auf zwei Sortierboxen aufgebaut. Ein
+Herumschrauben an der Lichtquelle hat
+dann keine Auswirkungen auf die Einstellungen des Interferometers. Darüber hinaus
+kann man die Boxen mit Sand füllen und
+auf Schaumstoffmatten lagern um die
+Schwingungseinflüsse weiter zu verringern.
+Zudem eignen sich die Nachtstunden für
+Experimente am besten, da dann die „Vibrationen aus dem Haushalt“ am geringsten
+sind.
+
+
+Feinverstellung der Spiegel
+Damit die Strahlen überlagern können,
+müssen sie sehr genau auf wenige mGrad
+auf einander ausgerichtet werden. Der Spiegelhalter sollte sehr feinfühlig in zwei Richtungen verstellbar sein. Die Kopplung der
+beiden Richtungen sollte minimiert werden.
+Dafür empfiehlt sich eine kardanische oder
+kinematische Lagerung, bei der die Drehachsen des Verstellmechanismus‘ in der
+Spiegelebene liegen oder zumindest nahe
+daran. Denn sonst verändert man bei Verkippung auch die optische Wegdifferenz.
+Die Kohärenzlänge
+Licht ist nur interferenzfähig innerhalb der
+sogenannten Kohärenzlänge. Wenn der
+Wegunterschied der beiden Teilstrahlen
+größer ist als diese Länge können die Lichtstrahlen nicht mehr miteinander interferieren. Natürliches weißes Licht hat eine Kohärenzlänge von ein paar Mikrometern.
+Will man mit so einem Licht Interferenzen
+erzeugen, muss man die beiden Interferometerarme in diesem Bereich abgleichen
+können, was normalerweise teure optische
+Verstelleinrichtungen erfordert.
+In diesem Beitrag werde ich darlegen, wie
+man so etwas näherungsweise mit fischertechnik erreichen kann.
+Laser sind interessante Lichtquellen, unter
+anderem weil ihre Kohärenzlängen im Allgemeinen viel größer sind. Mit Frequenzstabilisierung sind durchaus ein paar km
+möglich. Solche Laser kommen z. B. bei interferometrischen Gravitationswellen-Detektoren zum Einsatz. Herkömmliche Laserdioden aus Laserpointern haben eine Kohärenzlänge von wenigen cm. Eine Abstimmung in diesem Bereich kann man mit sehr
+einfachen Mitteln erreichen. Mit zwei Taschenspiegeln und einer CD-Hülle als
+Strahlteiler lässt sich schnell ein MichelsonInterferometer aufbauen.
+
+Steve Schuler hat 2016 ein Interferometer
+mit Lego gebaut [2], und es gibt sogar ein
+Buch (von Ricardo Linke) darüber, wie man
+ein Michelson-Interferometer mit Lego aufbauen kann [3]. Was man mit Lego hinbekommt, sollte man mit fischertechnik prinzipiell auch konstruieren können.
+Feinverstellung des optischen
+Weges
+Um den Spiegel M1 zu verschieben braucht
+man eine sehr feinfühlig einstellbare Linearführung, die bei Verstellung eine sehr geringe Winkelabweichung erzeugt. Dies ist
+insbesondere für Weißlicht-Interferometrie
+wichtig, bei der man Lichtquellen mit kleiner Kohärenzlänge einsetzt. LEDs haben
+z. B. Kohärenzlängen von etwa 18 Mikrometern.
+Folgende
+Nicht-fischertechnik-Bauteile
+werden benötigt:
+ Laser (Laserpointer oder Alignment-Laser aus dem Baumarkt)
+ Lochblende (zum Justieren, aus Karton)
+
+Optik
+
+ Beobachtungsschirm (Blatt Papier)
+ Linse (z. B. aus alter Kamera mit
+f = 35 mm)
+ Strahlteilerwürfel oder Strahlteilerplatte
+[4]
+ superhelle LED mit Vorwiderstand und
+Batterie
+Der Aufbau hat folgende Komponenten:
+1. Lichtquelle auf Sortierbox mit optischer
+Bank mit Halterungen für Laser, Linse,
+Blende und LED (Abb. 2). Die schwarze
+Lochblende kann in die Halterung vor dem
+Laser gesteckt werden.
+2. Interferometer auf Sortierbox mit
+ Halterung für Strahlteilerwürfel mit
+Drehkranz
+ Lineare Verstelleinrichtung für M1
+ Verstelleinrichtung für M2 für die
+Strahlorientierung
+Der Aufbau des fischertechnik-Interferometers ist in Abb. 3 dargestellt.
+
+rechts die LED vor der Halterung mit der Sammellinse (f = 35 mm)
+
+
+
+rechts: Flexure-Verstellmechanismus für M1
+
+Halterung für Strahlteilerwürfel mit
+Drehkranz
+Der Drehtisch für den Strahlteiler ist sehr
+einfach aus einem Drehkranz und Grundbausteinen aufgebaut. Der obere Teil des
+Tisches mit dem Drehkranz ist mit dem unteren über Verbinder 30 befestigt. Eine Verstellung erfolgt durch Verschiebung des
+oberen Teils des Strahlteilertisches entlang
+der Verbinder. Damit kann man sowohl die
+Höhe als auch die Neigung des Tisches in
+alle Richtungen einstellen. Mit dem Drehkranz kann der Strahlteilerwürfel um die
+Vertikalachse gedreht werden.
+Lineare Verstelleinrichtung für M1
+Um es gleich vorweg zu sagen: eine winkeltreue Verstellung über mehrere cm habe ich
+mit fischertechnik noch nicht hinbekommen. Gleitlagerführungen in Stahlachsen
+mit Schneckentrieb oder Kette führten bei
+
+mir bei Verstellung zu minimalen Verkippungen, die ein Nachregeln der Strahlausrichtung erforderten. Einen größeren Verstellbereich bräuchte man, wenn man das
+Interferenzmuster automatisiert auslesen
+will. Für qualitative Experimente mit Handjustage ist aber ein kleinerer Verstellbereich
+ausreichend.
+Die hier vorgestellte Konstruktion ist eine
+lineare Flexure-Konstruktion, die über einen zweistufigen Hebel und eine Schnecke
+angetrieben wird. Die Flexure-Konstruktion
+besteht aus vier flexiblen Platten, die bei
+Verschiebung theoretisch keine Winkelabweichung erzeugt. Da bei fischertechnik alles irgendwie flexibel ist stimmt das nicht
+ganz. Aber das Ergebnis ist brauchbar.
+Als Lager für den Hebelmechanismus kommen jeweils zwei übereinander montierte
+Statik-Kipplager zum Einsatz. Man beachte, dass die Ankopplung des Hebels an
+
+die Flexure-Konstruktion nur über eine
+Gleitfläche erfolgt. Es kommt hier kein
+Verbinder zur Anwendung, denn bei der
+Verstellung des Hebels kommt es zu einer
+zwar kleinen, aber bemerkbaren Verschiebung des Koppel-Lagers, was bei einer starren Verbindung ein Drehmoment auf die
+Flexure-Konstruktion erzeugen würde.
+
+Optik
+
+sätzliche Übersetzung). Die Grobjustage erfolgt durch Verschieben des Statik-KippLagers auf der gelben Bauplatte. Die Grobeinstellung macht man durch Verschiebung
+der Statik-Kipp-Lager in der 3er-Reihe
+Grundbausteine auf der rechten Seite, die
+Feinjustage gelingt mit den Schnecken.
+
+Mit dieser Konstruktion lassen sich sehr
+feinfühlige winkeltreue Verschiebungen
+über eine Länge von ca. 2 mm realisieren.
+Die Spiegelhalterung von M1 ist unkritisch,
+da die Feinverstellung der Ausrichtung mit
+M2 erfolgt.
+Die Konstruktion hat den Vorteil, dass man
+sie über „Autokollimation“ eines Lasers in
+gewissem Rahmen auf Winkeltreue „tunen“
+kann. Hierzu beobachtet man, wie der durch
+eine Lochblende geleitete reflektierte Strahl
+bei Verschiebung „wandert“ und justiert die
+Positionen der Übertragungslager durch
+Verschiebung so, dass der Strahl nicht mehr
+ausweicht.
+Dies sollte man auf jeden Fall machen, bevor man die Konstruktion im Interferometer
+verwendet.
+Die eingesetzte Hebelübersetzung beträgt
+112:7800 (Schnecke: 4:60, Hebel 1: 4:13,
+Hebel 2: 7:10). Eine ganze Umdrehung der
+Schnecke erzeugt eine Verschiebung von
+ca. 70 µm. Für die Grobeinstellung ist die
+Konstruktion auf zwei mit Metallachsen
+verstärkten Leisten aus normalen fischertechnik-Grundbausteinen verschiebbar.
+
+Man erkennt zwei Verstellebenen: die untere
+für die horizontale Ausrichtung, die obere für
+die vertikale
+
+Das untere Hebel-Set erzeugt die horizontale Verkippung, das obere Hebel-Set die
+vertikale. Grundsätzlich hat die Konstruktion leider etwas Spiel (Backlash) und die
+Entkopplung der beiden Achsen ist nicht
+optimal. Eine horizontale Verstellung erfordert meist eine kleine Nachjustage der vertikalen Richtung.
+
+Verstelleinrichtung für M2 für die
+Strahlorientierung
+Die Verstelleinrichtung für Winkel von M2
+wurde analog zur linearen Verstellung mit
+jeweils einer Schecke, einem 40er Zahnrand
+und zwei Hebeln realisiert (Übersetzungsverhältnis 24:14280; Schnecke: 1:15, Hebel
+1: 3:14, Hebel 2: 2:17).
+
+
+Der obere Hebel drückt auf die Achse, um
+den Spiegel nach vorne zu kippen (eine zu-
+
+
+
+Justage des Interferometers
+Schritt 0: Ausrichtung des Lasers
+Der Laser wird parallel zur optischen Bank
+ausgerichtet. Die Höhe des Laserstrahls
+muss nun so eingestellt werden, dass dieser
+den Spiegel M1 in der Höhe mittig trifft.
+Schritt 1: Ausrichtung der optischen Achse
+des Lasers
+Die Orientierung des Interferometers relativ
+zum Laser wird so eingestellt, dass dieser
+durch die Mitte der Drehachse des Drehkranzes geht und den Spiegel M1 mittig
+trifft.
+Schritt 2: Ausrichtung von Spiegel M1
+Vor den Laser wird eine Lochblende gestellt. Spiegel M1 muss so eingestellt werden, dass der reflektierte Strahl wieder
+durch die Lochblende zurückgeworfen
+wird.
+Schritt 3: Ausrichtung Strahlteiler
+Der Strahlteiler wird mittig auf den Drehkranz gelegt und so gedreht und gekippt,
+dass der Reflex von der Frontseite des Würfels wieder auf die Lochblende zurückgeworfen wird.
+Schritt 4: Ausrichtung von Spiegel M2
+M2 wird so eingestellt, dass der Strahl wieder zur Blende zurückgeworfen wird. Der
+Strahlteilerwürfel muss ggf. in der anderen
+Richtung noch verkippt werden, bis die Satellitenreflexe (Hinweis auf falsche Verkippung) aller Flächen zusammen fallen.
+Auf dem Beobachtungsschirm stellt man
+M2 nun so ein, dass die beiden Teilstrahlen
+überlagern. Die grobe Einstellung erfolgt
+über Verschiebung der Statik-Kipp-Lager,
+die Feineinstellung über die Schnecken.
+Nun wird die Linse im Strahlengang platziert und es sollte das Ringsystem oder zumindest ein Teil davon auf dem Beobachtungsschirm zu sehen sein. Mit den Verstell-Schnecken wird das Ringsystem so
+eingestellt, dass es mittig ist.
+
+Schritt 5: Ausrichtung von Spiegel M1 auf
+Weißlichtposition
+Die Linearverstellung von M1 kann grob
+auf der Unterkonstruktion verschoben werden. Man sollte diese mit einem Lineal so
+einstellen, dass beide Spiegel den gleichen
+Abstand vom Strahlteiler haben. Man kann
+nun an der Verstellschraube der Linearverstellung vorsichtig drehen und sehen, wie
+die Ringe entweder nach innen oder nach
+außen laufen.
+Je nach Vorjustage der Linearverstellung
+bleibt das Zentrum des Ringsystems bei
+Verstellung entweder fest oder verschiebt
+sich. In diesem Fall muss M2 (nicht M1)
+vorsichtig nachjustiert werden.
+Sollte man mal das Interferenzmuster verloren haben entfernt man die Linse und bringt
+die Spots der beiden Teilstrahlen auf dem
+Schirm wieder zur Deckung.
+Bei der Weißlichtposition ist der zentrale
+Fleck am größten. Man kann sie auch finden, indem man beobachtet, in welcher
+Richtung die Ringe bei vorsichtiger Verstellung von M1 wandern. Bei der Weißlichtposition, bei der beide Interferometerarme exakt abgeglichen sind, findet ein
+Richtungswechsel der Ringbewegungen
+statt. Wenn sie vor der Position nach außen
+gelaufen sind werden sie danach nach innen
+laufen. An dieser Stelle kann man den Laserstrahl durch eine LED ersetzen und in
+beide Richtungen +/- 15 vorsichtige Justierbewegungen (1-2 Grad) vornehmen, bis
+man das Interferenzmuster der LED sieht.
+Die LED wird ca. 2 cm vor der Linse L eingebracht und Höhe und seitliche Position
+werden so eingestellt, dass sie in etwa mit
+der des Lasers übereinstimmen.
+Nach jeder Verstellung: Hände weg und 12s warten! Nicht verzagen, wenn es nicht
+gleich funktioniert. Evtl. muss man in einem größeren Bereich suchen. Nach größeren Verstellungen ist Kontrolle und ggf.
+Nachjustage des Interferenzmusters mit
+dem Laser ratsam.
+
+Die Orientierung der LED ist unkritisch, allerdings sind nicht alle LEDs geeignet. Am
+besten hat es bei mir mit einer roten, klaren
+5 mm, superhellen LED geklappt (Abb. 6).
+
+Optik
+
+Ausblick
+Es wäre schön, wenn man ein Interferogramm aufzeichnen könnte. Dazu müsste
+man aber einen winkeltreuen Verschiebemechanismus haben, den man über mehrere
+cm verstellen kann.
+Eine elektrische Spiegelverstellung mit einem auf einem auf einem Lautsprecher aufgeklebten Spiegel hat bereits funktioniert.
+Die Verstellung umfasst aber nur ein paar
+Mikrometer.
+
+
+Man sollte mehrere ausprobieren. Trübe
+LEDs eignen sich nicht, da sie aufgrund der
+geringeren räumlichen Kohärenz nur ein
+kontrastarmes Interferenzbild erzeugen.
+Dagegen konnte ich mit einer LEDTaschenlampe auf Anhieb farbige Interferenzringe erzeugen (Abb. 7).
+
+
+Referenzen
+[1]
+
+Hochschule für Angewandte Wissenschaften München: Michelson Interferometer (MIF). Physikalisches
+Praktikum II, 2013/2014.
+
+[2]
+
+Steve Schuler: Lego Optics Lab: Laser Interferometer. Hackaday.io,
+25.04.2016.
+
+[3]
+
+Ricardo Linke: Ein Michelson-Interferometer aus LEGO®-Bausteinen.
+Untersuchung technischer und affektiver Aspekte. Springer Spektrum,
+2017.
+
+[4]
+
+Optikbaukasten.de: Strahlteilerwüfel.
+
+[5]
+
+Professionelle kinematische Spiegelhalterung.
+
+[6]
+
+Andreas Gail: Einstieg in Experimente mit Lasern. ft:pedia 2/2014, S.
+14-17.
+
+aus einem alten Scanner
+
+

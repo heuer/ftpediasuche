@@ -1,0 +1,98 @@
+
+
+Tipps & Tricks
+
+Die fischertechnik-Werkzeugkiste
+Robin Nikolas Woszidlo
+fischertechnik ist ein Baukastensystem, bei dem eigentlich alles enthalten ist, was man braucht.
+Normalerweise benötigt man kein Werkzeug, und wenn doch, wird es wie der kleine gelbe
+Schraubendreher immer mitgeliefert. Über die Jahre stellt man aber als Hardcore-Bauer fest,
+dass man doch manchmal Werkzeug braucht. Weil es nervig ist, wenn man dafür an die richtige
+Werkzeugkiste muss, habe ich mittlerweile eine Box 500 mit allem Werkzeug, das ich spezifisch
+für fischertechnik benötige. Das ist auch deshalb sehr praktisch, weil ich für Conventions an
+nichts denken muss, wenn die Box dabei ist.
+Zum Festdrehen der Schrauben nutze ich einen
+Wera
+118005
+mit
+Klinge
+0,4 mm · 2 mm. Der ersetzt den gelben fischertechnik-Schraubendreher. In der
+Handhabung ist das Modell von Wera aber
+deutlich angenehmer, weil es länger ist und
+am Griff einen Drehteller hat.
+
+
+Es ist alles enthalten, was ich zur Verkabelung, Montage, Nachbearbeitung von Teilen sowie die Programmierung von Controllern brauche.
+
+Verkabelung
+Bei der Montage von Steckern nutze ich
+eine Abisolierzange Weicon Nr. 5; diese
+bietet einen guten Kompromiss aus Preis
+und Leistung. Spezifiziert ist sie für Kabelquerschnitte ab 0,2 mm²; für die fischertechnik-Doppellitze mit zweimal 0,14 mm²
+funktioniert sie nach meiner Erfahrung aber
+auch sehr gut. Dabei spielt es keine Rolle,
+ob man beide Adern auf einmal oder einzeln
+abisolieren möchte.
+
+
+
+Montage
+Das Problem der wunden Finger kennen wir
+alle, und manchmal reicht es trotzdem nicht
+und eine Nabe oder Spannzange rutscht auf
+der Achse durch.
+
+Insbesondere für Spannzangen und Zangenmuttern hat sich bei mir ein Mikrofasertuch
+bewährt. Mit diesem kann ich alle Zangenmuttern (und die Schnecken, auf denen ich
+sie montieren will) festhalten und problemlos bis zum Anschlag festdrehen. Das Mikrofasertuch hält dabei sehr gut, weil es sich
+auch auf der Schnecke an der Mikro-Rauigkeit festhält; gleichzeitig werden die Finger
+geschont.
+
+Tipps & Tricks
+
+ist in meiner normalen Werkzeugkiste, bei
+schwierigeren Arbeiten nehme ich lieber
+das große.
+Dazu ergänze ich noch eine Kneifzange,
+eine filigrane Elektronikzange Knipex Super-Knips 78 61 125, selbstöffnend mit Feder, ohne Facette. Insbesondere zum Durchtrennen von Achsen und abtrennen von
+Zapfen eignet sie sich sehr gut.
+
+Für Flachnaben nehme ich ggf. noch den
+Nabenschlüssel von LPE. Diesen brauche
+ich aber dank des Tuchs fast nie, und dann
+nur an schwer erreichbaren Stellen.
+Für die Montage von Madenschrauben bei
+diversen Fremdteil-Achsverbindern (z. B.
+einen Spezialverbinder für 5 mm Powermotor auf 4 mm fischertechnik-Metallachse)
+habe ich außerdem den passenden Innensechskantschlüssel in der Kiste.
+
+
+Programmierung
+
+und Mikrofasertuch
+
+Nachbearbeitung
+Hier scheiden sich die Geister: Darf ein fischertechnik-Teil bearbeitet werden oder
+nicht? Ich beantworte diese Frage mit „Ja“
+und habe deshalb natürlich immer ein Messer griffbereit. Aus einem einfachen Set von
+Rossmann habe ich ein kleines Messer, das
+sehr gut in die Kiste passt. Das große davon
+
+Zur Programmierung von Controllern habe
+ich die beiden gängigen Anschlusskabel in
+der Kiste – nur für den Notfall, damit ich sie
+auf Conventions dabeihabe. Zu Hause habe
+ich noch weitere Kabel auf dem Tisch liegen. Es handelt sich hierbei um ein Kabel
+USB auf USB A, wie es früher bei Druckern
+üblich war und für ältere Controller gebraucht wird, und ein Kabel USB auf miniUSB, wie man es für den TXT und den
+ftDuino benötigt.
+Ich hoffe, mit diesem Beispiel Anregungen
+zu liefern, sodass jeder zu seiner persönlichen fischertechnik-Werkzeugkiste findet.
+
+Referenzen
+[1]
+
+Gerhard Birkenstock: Die fischertechnik-Werkzeug-Wanne. 4/2015, S. 12–14.
+
+
+

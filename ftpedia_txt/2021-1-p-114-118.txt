@@ -1,0 +1,332 @@
+
+
+Computing
+
+TX Controller und ftDuino im Vergleich
+Helmut Jawtusch
+Grundlage eines Vergleichs zwischen dem TX Controller und dem ftDuino bildeten vier mit den
+Encodermotoren angetriebene fahrbare Roboter: ein „Pixy-Folger“, ein ferngesteuerter Roboter und ein Hinderniserkenner. Die Robotersteuerungen wurden in der Programmiersprache
+C (TX) bzw. C++ (ftDuino) entwickelt.
+
+Hintergrund
+In der ft:pedia 2017-1 habe ich auf die Möglichkeit hingewiesen, den TX Controller mit
+C zu programmieren [1]. Dabei werden die
+kompilierten C-Programme per USB-Verbindung auf den TX übertragen. Dadurch ist
+der Programmablauf schnell und auch bei
+Verwendung der Pixy – CMUcam5 [2]
+(kurz: Pixy) folgt ein fahrbarerer Roboter
+einer Kugel zügig. Man kann mehrere Programme in das RAM oder den Flash-Speicher des TX laden und über das Menü „Datei“ am Controller auswählen.
+
+nächsten Wiederholung der folgende Zustand gewählt. So ist SYNC_1 der Zustand,
+in dem die Werte der Pixy erneut eingelesen
+werden.
+
+Die Programmierung des ftDuino erfolgt in
+der Arduino IDE in C++ [3]. Im Flash-Speicher des ftDuino kann nur ein Programm
+abgelegt werden kann. Er muss also mit
+dem PC verbunden werden, wenn man zu
+einem anderen Programm wechseln will.
+
+Pixy-Folger
+Der Pixy-Folger ist ein dreirädriger FahrRoboter, der ein farbiges Objekt erkennen
+und diesem folgen kann.
+Wir beginnen mit der Modellvariante für
+den TX Controller (Abb. 1) und vergleichen
+den Teil des C-Programms (pixymove), der
+in einer schnellen Schleife aufgerufen wird.
+Typisch für das C-Programm ist das Springen zu den Zuständen (stage), die durch ihre
+Bezeichnung verraten, wie sich der Roboter
+bewegen soll. Durch stage++ wird bei der
+
+
+Wenn die pixy das Objekt mit der Nummer
+po = 2 erfasst hat, dann regelt der folgende
+Programmabschnitt die Bewegung des Roboters.
+Die Bedeutungen der Variablen sind:
+ po: Nummer des Objects
+ px / py: Position des Objektes
+ pb Breite des Objektes.
+
+case Objekt:
+if (po == 2) { stage++; }
+else { stage = sonstige; }
+return rc;
+case li:
+if ((px < 110) && (pb > 15)) {
+links (speed * 4);
+stage = SYNC_1;
+}
+else { stage++; }
+return rc;
+case re:
+if ((px > 210) && (pb > 15)) {
+rechts (speed * 4);
+stage = SYNC_1;
+}
+else { stage++; }
+return rc;
+case vw:
+if ((pb < 35) && (pb > 15)) {
+vorwaerts(speed * 0.9);
+stage = SYNC_1;
+}
+else { stage++; }
+return rc;
+case rw:
+if (pb > 60) {
+zurueck(speed);
+stage = SYNC_1;
+}
+else { stage++; }
+return rc;
+case aus:
+stopp();
+stage = SYNC_1;
+return rc;
+case sonstige:
+stage = SYNC_1;
+return rc;
+
+Listing 1: pixymove für TX Controller
+(Steuerung des Roboters mit der Pixy)
+
+Wie sieht nun zum Vergleich dieser Programmabschnitt für den ftDuino in C++
+aus? Abb. 2 zeigt das Modell des Pixy-Folgers mit dem ftDuino.
+C++ ist objektorientiert und entsprechend
+wird ein Objekt pixy von der Klasse
+PixyI2C abgeleitet:
+PixyI2C pixy(0x14);
+
+Computing
+
+
+Der folgende Teil läuft dann in einer
+Schleife:
+if (pixy.blocks[j].signature == 3)
+{
+px = pixy.blocks[j].x;
+py = pixy.blocks[j].y;
+pb = pixy.blocks[j].width;
+ph = pixy.blocks[j].height;
+if ((px < 110) && (pb > 15)) {
+links (speed );
+}
+else {
+if ((px > 210) && (pb > 15)) {
+rechts (speed );
+}
+else {
+if ((pb < 35)&&(pb > 15)) {
+vorwaerts (speed);
+}
+else {
+if (pb > 60) {
+zurueck (speed);
+}
+else { stopp(); }
+}
+}
+}
+delay(15);
+}
+
+Listing 2: Programm-Äquivalent zu
+pixymove für den ftDuino
+
+
+
+Vor allem der Abschnitt, in dem die Daten
+der Pixy eingelesen werden, ist übersichtlich.
+In dem C-Programm ist dieser Teil deutlich
+länger, und ich habe ihn deshalb oben auch
+weggelassen. Wer zu dem moderneren, objektorientierten Stil neigt, kann sich beim
+ftDuino austoben. Man muss aber auch immer wissen, welche zusätzlichen Bibliotheken eingebunden werden müssen. Bei dem
+TX ist es eben reines C.
+
+Fernsteuerung via Smartphone
+Nun hat Till Harbaum für den ftDuino einen
+Bluetooth-Adapter entwickelt, der es ermöglicht, den Roboter über ein Smartphone
+zu steuern [4]. Besonders gelungen finde
+ich, dass die graphische Bedienoberfläche
+(GUI) in dem C++ Programm definiert wird
+(und nicht auf dem Arduino-Gerät).
+
+"<slider id='5' width='parent'
+max='255' place='hcenter;below:4'/>"
+"<label id='6' size='20'
+place='left;below:5'>blau</label>"
+"<slider id='7' width='parent'
+max='255' place='hcenter;below:6'/>"
+"<space id='8' width='20'
+height='30' place='hcenter;below:7'/>"
+"<label id='9' size='20'
+place='hcenter;below:8'></label>"
+"<space id='10' width='20'
+height='30' place='hcenter;below:9'/>"
+"<joystick id='11' bgcolor = 'red'
+width='280' height='280'
+place='hcenter;below:10'/>"
+"</layout>";
+
+Listing 3: Konfiguration der Smartphone-GUI
+
+Man sieht hier, wie die einzelnen Elemente
+der GUI in ihrer Größe und Lage definiert
+werden. Die Kodierung ist ähnlich zu
+HTML oder XML.
+Ich habe in meinem Beispielprogramm eigentlich zwei Anwendungen untergebracht.
+Mit den oberen drei Schiebern (slider) kann
+man mit einer RGB-LED die einzelnen
+Farbanteile zu neuen Farben mischen. Mit
+passenden Vorwiderständen kann man eine
+solche LED an den Ausgängen O1..O8 anschließen. Das Setzen eines Ausgangs sieht
+dann so aus:
+
+
+Für die Anwendung rechts sieht das z. B. so
+aus:
+const char layout[] PROGMEM =
+"<layout orientation='portrait'
+name='Joystick + RGB-Diode'>"
+"<switch id='1' size='20'
+width='parent' place='hcenter;top'>LED on/off</switch>"
+"<label id='2' size='20'
+place='left;below:1'>rot</label>"
+"<slider id='3' width='parent'
+max='255' place='hcenter;below:2'/>"
+"<label id='4' size='20'
+place='left;below:3'>grün</label>"
+
+
+if (r->id == 7) {
+blueBrightness = r->slider;
+ftduino.output_set(Ftduino::O1,
+Ftduino::HI, blueBrightness/4);
+}
+
+Zum Abschluss noch der Code zum Steuern
+der beiden Motoren:
+void motoren (bool vor, int m2,
+int m3) {
+if (vor) {
+ftduino.motor_set
+(Ftduino::M2,
+Ftduino::RIGHT,m2);
+ftduino.motor_set
+(Ftduino::M3,
+Ftduino::RIGHT,m3);
+}
+else {
+ftduino.motor_set
+
+(Ftduino::M2,
+Ftduino::LEFT,m2);
+ftduino.motor_set
+(Ftduino::M3,
+Ftduino::LEFT,m3);
+}
+
+}
+
+Listing 4: Motorsteuerung (ftDuino)
+
+Wenn es nicht schnell gehen muss, dann
+gibt es auch für den TX die Möglichkeit der
+Verbindung über Bluetooth. Die elegante
+Steuerung mit Smartphone ist allerdings nur
+mit dem ftDuino möglich.
+
+Hinderniserkennung
+Bei dem Projekt „Hinderniserkenner“ habe
+ich festgestellt, dass in der aktuellen Fassung von ftduino.cpp Abstandswerte des
+Ultraschall-Abstandssensors in Intervallen
+von mehr als 250 ms geliefert werden. Mit
+einiger Tüftelei konnte ich erreichen, dass
+auch der ftduino, wenn auch mit geringer
+Geschwindigkeit, um Hindernisse fährt.
+
+Computing
+
+Diese Anwendung läuft mit dem TXController deutlich flotter.
+Dafür gibt es den ftDuino auch mit einem
+integrierten Display. Dann sind einige Ausgaben wie beim TX direkt auf diesem Display möglich. Ich habe z. B eine Anwendung geschrieben, mit der dort Werte des
+Ultraschall-Abstandssensors und eines Potentiometers angezeigt werden. Damit das
+funktioniert, müssen mehrere Arduino- und
+ftDuino-Bibliotheken eingebunden werden:
+#include <Adafruit_GFX.h>
+#include
+<Adafruit_SPITFT_Macros.h>
+#include <FtduinoDisplay.h>
+#include <Ftduino.h>
+
+Das benötigt aber einige Ressourcen und
+eignet sich daher nicht für laufende Kontrollausgaben bei schnellen Vorgängen wie
+z. B. dem Folgen einer Spur.
+Daher verwende ich beim ftDuino dafür
+mehrere Lampen, die bei Abweichungen
+des Roboters von der Spur entsprechend
+aufleuchten.
+
+Fazit
+Mir hat die Erkundung der Möglichkeiten
+den ftDuino Spaß gemacht. Man kann damit
+für kleines Geld in die Programmierung von
+Robotern einsteigen. Dabei sind die Sprachen C oder C++ noch immer Grundlagen
+vieler anderer Sprachen wie C#, PHP oder
+Java.
+
+
+Dazu muss der Abstandssensor vorne rechts
+im 45° Winkel angebracht werden. Um die
+Geschwindigkeit zu optimieren, habe ich
+ein Potentiometer verwendet, dessen Werte
+laufend abgefragt werden (Abb. 4).
+
+Möchte man aber Mikrocontroller-gesteuerte Roboter z. B. mit C#, Java oder Terrapin Logo programmieren, dann ist der gute,
+alte TX Controller die richtige Wahl. Man
+hat dann Sprachen zur Verfügung, die einfacher zu erlernen sind als C oder C++. Ein
+Download der Programme und damit eine
+schnellere Ausführung sind darüber allerdings nicht möglich.
+Ich habe meine Beispielprogramme für den
+ftDuino in einem Paket zusammengestellt,
+das mit diesem Beitrag zum Download zur
+Verfügung gestellt wird.
+
+
+
+
+Alle erforderlichen Programme und Treiber
+für den TX Controller habe ich in einem
+weiteren Packet txMscC zusammengestellt.
+Das Packet enthält den USB-Treiber, den
+PSPad-Editor, den C-Compiler und meine
+C-Beispielprogramme. Es läuft problemlos
+auch unter Windows 10.
+Beide Pakete können als Anlage zu diesem
+Beitrag auf ftpedia.de heruntergeladen werden.
+
+
+Referenzen
+[1]
+
+Helmut Jawtusch: Programmierung
+des TX in Java, C, C++, C# und
+Logo. ft:pedia 2/2017, S. 51-57.
+
+[2]
+
+Dirk Wölffel, Dirk Fox: I²C mit dem
+TX – Teil 11: Pixy-Kamera (1). ft:pedia 4/2014, S. 43-51.
+
+[3]
+
+Till Harbaum: ftDuino – Open
+Source trifft Konstruktionsbaukasten.
+ft:pedia 1/2018, S. 85-91.
+
+[4]
+
+Till Harbaum: Bluetooth-Modul für
+den ftDuino. ft:pedia 4/2020, S. 6467.
+
+

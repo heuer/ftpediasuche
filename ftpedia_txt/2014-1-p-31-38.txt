@@ -1,0 +1,395 @@
+
+Computing
+
+Computing
+
+Arduino mit dem TX verbinden
+Marco Ahlers
+Wer die Grenzen des Robo TX Controllers sprengen möchte, kann auf den Nachfolger TXT
+warten, zu Lego Mindstorms wechseln, sich grämen, ein eigenes Mikrocontroller-Board
+bestücken [1] – oder einen Arduino zu Hilfe nehmen.
+
+Hintergrund
+Der Robo TX-Controller bietet eine leistungsfähige Plattform für fischertechnik
+Computing- und Robotics-Projekte. Die
+Möglichkeit jedoch, den Arduino für
+ausgelagerte Kalkulationen zu verwenden,
+hat mich fasziniert. So könnte man bereits
+im Arduino Kompasswerte mittels Kalmanfilter von Spitzen befreien oder Sensorwerte zu weiteren Berechnungen nutzen
+und dem TX-Controller nur noch die
+entscheidenden Ergebnisse mitteilen.
+
+Sensorenwerte vom Arduino
+abfragen
+Konkret war mein Ziel, an den Arduino
+angeschlossene Sensoren auszuwerten und
+dann jeweils die Variablen nur bestimmter
+Sensoren im TX-Controller auszulesen.
+Der I²C-Anschluss des TX Controllers
+bietet dabei eine gute und einfache Möglichkeit, den Arduino anzubinden. Dabei
+sind einige Dinge zu beachten, die ich im
+Folgenden beschreibe.
+
+Des Weiteren bietet die Arduino-Programmiersprache eine an C angelehnte freiere
+Programmierung, als dies mit Robo Pro
+möglich ist. Außerdem sind interessante
+Erweiterungen möglich, wie z. B.:
+
+Die Verbindung
+
+· SD-Karten: Da man am Arduino SDKarten betreiben kann, lassen sich auch
+offline Daten, wie z. B. Messwerte, die
+ein mobiler Roboter unterwegs aufgezeichnet hat, dauerhaft speichern und
+weiterverarbeiten.
+
+· dem Masseanschluss (Erde),
+
+· Kamera: Am Arduino lassen sich auch
+Kameras anschließen um Bilder aufzunehmen oder mit einem zusätzlichen
+Raspberry PI auch Bilder auszuwerten
+und zu verarbeiten.
+· Text to Speech (TTS): Mit TTS-Modulen kann man seinen fischertechnikRoboter zum Sprechen bringen.
+
+Eine serielle I²C-Verbindung besteht aus
+vier Anschlüssen:
+· der 5 V-Versorgung,
+· einer Taktleitung (SCL) und
+· dem Datenbus (SDA).
+Jetzt kann man sich näher mit I²C beschäftigen, muss man aber nicht. Entscheidend
+ist, dass man über das I²C-Protokoll mehrere Geräte miteinander verbinden kann
+und diese jeweils von einem Hauptcontroller (dem Master, z.B. einem TX-Controller) direkt anspricht und Signale bzw.
+Werte sendet und empfängt.
+Sind mehrere Personen in einem Raum,
+kann man, kennt man die Namen, jeden
+direkt rufen, ansprechen und Aufgaben
+
+
+
+verteilen. So in etwa funktioniert dies auch
+bei I²C. Dazu besitzt jedes angeschlossene
+Gerät eine eigene 7-bit-Adresse. In der
+ft:pedia wurde der I²C-Anschluss bereits
+näher beleuchtet, daher gehe ich hier nicht
+weiter darauf ein [2].
+
+am TX-Controller
+
+Der Arduino hat eine eigene Energieversorgung, was ja auch gut ist, spart man so
+Energie beim TX-Controller. Wie stellt
+man aber nun die Verbindung ganz praktisch her? Die beiden 5 V-Anschlüsse des
+TX-Controllers und des mit eigenem Strom
+versorgten Arduino miteinander zu verbin-
+
+den ist keine gute Idee. Der Masseanschluss jedoch kann (und muss sogar)
+gemeinsam benutzt werden. Den 5 V-Ausgang würde man nur benötigen, wenn man
+z. B. einen per I²C an den TX-Controller
+direkt angeschlossenen Sensor oder den
+Arduino selbst so mit Strom versorgen
+möchte.
+Man verbindet also die mit SCL, SDA und
+GND belegten Pins des EXT2-Anschlusses
+am TX-Controller mit denen des Arduino:
+Fertig, Anschluss erledigt. Ich habe dazu
+eine I²C-Buchse genutzt, dort das Extension-Kabel des TX-Controllers eingesteckt
+und an die Buchsenkontakte die nötigen
+Drähte angelötet. Der GND-Draht wird
+dann mit dem GND des Arduino verbunden, ebenso SDA und SCL (siehe Abb. 2).
+Dies macht man am besten mit einem
+Breadboard. Auf der folgenden Seite
+(Abb. 3) seht ihr die komplette Schaltung
+inklusive dreier Infrarotdistanzsensoren.
+
+
+
+Computing
+
+
+Diese drei Sensoren werden wir dann
+einzeln vom TX Controller aus abfragen
+können. Sie liefern analoge Werte, also
+gehören sie an die Analog-IN-Pins.
+Die drei Sensoren werden jeweils in einen
+der analogen Arduino Eingänge gesteckt.
+Das ist ganz wichtig, man weiß also ganz
+genau: A0 ist der linke Sensor (vorne links
+am späteren Fahrzeug), A1 der mittlere
+und A2 der an der rechten Vorderseite des
+Fahrzeugs.
+Auf der folgenden Seite seht ihr in Abb. 4
+den ganzen mobilen Roboter. Auf die
+vorne sichtbaren Infrarotsensoren habe ich
+noch zwischen GND und 5 V 100 µFKondensatoren gesteckt, die gleichen ein
+wenig das Zittern der Messwerte aus. Die
+
+Sensoren habe ich mit Heißkleber auf
+Grundbausteine geklebt. Der Turm ist
+drehbar und so kann man längere Abstände
+mit Ultraschallsensoren messen. Ich habe
+nur zwei, daher dreht der Turm nach links
+und rechts, um seine Umgebung zu
+scannen. Die Ultraschallsensoren werden
+in diesem Beispiel aber nicht genutzt.
+Hier die Verdrahtung aus der Nähe (stimmt
+nicht ganz mit der Grafik oben überein, aus
+Drahtlängengründen habe ich einige
+Drähte direkt in den Arduino gesteckt statt
+alles über das Breadbord zu führen) Die
+sichtbare 9 V-Batterie ist die Stromversorgung des Arduino. Man könnte ihn auch
+vom TX Controller aus mit 5 V versorgen:
+
+
+
+
+
+
+
+Computing
+
+
+Die Software des Masters
+Die Aufgabe des Masters (des TX Controllers) ist es, die vom Arduino aufbereiteten
+Messwerte abzufragen und dann die
+Motorsteuerung zu regeln. Mehr nicht.
+Auf die Motorsteuerung gehe ich nicht
+weiter ein und werde mich auf die Sensorabfragen konzentrieren. Wichtig ist, die
+korrekten Sensoren abzufragen und z. B.
+genau zu wissen, ob ein Hindernis beim
+linken Sensor erkannt wurde. Dazu wird an
+den Arduino ein Request gesendet mit dem
+Hinweis, dass man den linken Sensor
+abfragen möchte. Dies geschieht durch
+Senden einer Unteradresse.
+In Robo Pro gibt es eine I²C-Bibliothek
+I/O-Port PCF8574, die ich hier verwende.
+In dieser Bibliothek befinden sich zwei
+Unterprogramme: ‚I2C Port-Set’ (Senden
+von Befehlen an den I²C-Slave) und ‚I2C
+Port-Get’ (Request der eigentlichen Daten
+vom I²C-Slave). Der Slave ist dabei der
+Arduino – man kommuniziert also nicht
+direkt mit den Sensoren.
+Die beiden Unterprogramme habe ich
+etwas angepasst, z. B. die Adresse des
+Arduinos (0x20) angegeben und die Subadressen in drei Kopien verteilt (0x01,
+0x02, 0x03). Abb. 6 zeigt das Hauptpro-
+
+gramm zur Abfrage der Sensoren über I²C
+vom Arduino.
+‚I2C Infra links’ ist das ehemalige
+Unterprogramm ‚I2C Port-Set’; es sendet
+an 0x20 (den Arduino) eine Unteradresse
+(0x01). Danach erfolgt mit ‚I2CPort-Get’
+die Abfrage der Variablen vom Arduino.
+Da man 0x01 gesendet hat, weiß der
+Arduino, dass man den Wert des linken
+Sensors haben möchte und sendet diesen
+zurück.
+Hier der Inhalt der Anfrage (‚I2C Port-Set’
+bzw. ‚I2C Infra rechts’) für den rechten
+Sensor, Unteradresse 0x03 (Abb. 7):
+
+in Robo Pro
+
+Und auf der folgenden Seite in Abb. 8 der
+zugehörige Request (‚I2C Port-Get’), um
+die eigentlichen Daten zu empfangen.
+
+
+
+
+in Robo Pro
+
+Also: Zunächst teilt man mit ‚I2C Port-Set’
+dem Arduino (I²C-Adresse 0x20) die
+Unteradresse des Sensors (z. B. 0x03) mit.
+Damit weiß der Arduino, welche Daten
+man erwartet. Diese werden dann schon
+mal vom Arduino vorbereitet und bereitgestellt. Mit dem Request ‚I2C Port-Get’ ruft
+man die Daten dann ab.
+Dazwischen habe ich eine kleine Pause
+von 0,01 Sekunden gesetzt, um dem
+Arduino etwas Zeit zu geben, die Daten
+vorzubereiten.
+Das war es. Was dann mit den Sensorwerten in Robo Pro anzufangen ist, kommt
+auf euer Projekt an.
+
+Die Software des Slave
+Arduino stellt eine eigene Programmieroberfläche zur Verfügung. Diese ist nicht
+grafisch, so wie Robo Pro, sondern sie ist
+eine klassische Programmierung wie Basic
+oder C. Sie wurde aus der Programmierumgebung Processing abgeleitet. Die
+Software kann man sich kostenlos auf
+www.arduino.cc herunterladen.
+Ich gehe hier nicht näher darauf ein. Wer
+sich einen Arduino anschafft, sollte sich
+zunächst mit den Grundlagen beschäftigen.
+Ich habe mir dafür ein Lernpaket von
+„Franzis“ gekauft: Es ist gut gemacht, hat
+ein ordentliches und leicht verständliches
+Handbuch und erklärt Schritt für Schritt
+die Programmierung und Handhabung des
+Arduino.
+
+
+Im Internet gibt es unzählige Beispielprogramme (Sketches) für den Arduino. Auf
+der Suche nach der Lösung meines hier
+beschriebenen Zieles bin ich auf einen
+Vorschlag zur Verbindung eines Lego
+NXT an den Arduino gestoßen. Dieses
+Programm habe ich als Grundlage
+genommen und erweitert – ihr findet es auf
+der folgenden Seite.
+Die ‚Serial.print’-Befehle senden Werte
+seriell (USB) an ein Terminalprogramm.
+Die werden nicht unbedingt benötigt, man
+kann so aber das Geschehen auch aus Sicht
+des Arduino verfolgen. Ihr könnt diesen
+Text kopieren und direkt in die ArduinoProgrammierumgebung einfügen:
+Nach dem Upload des Programms auf den
+Arduino wird dies automatisch gestartet.
+Danach könnt ihr das Robo Pro-Programm
+starten. Und jetzt reden die beiden
+miteinander und ihr könnt die Werte in
+Robo Pro ablesen.
+Viel Spaß und viel Erfolg bei euren
+Projekten!
+
+Quellen
+[1]
+
+Dirk Uffmann: ft-Modellsteuerung
+mit selbst entwickeltem Mikrocontroller-Board, in dieser Ausgabe der
+ft:pedia 1/2014.
+
+[2]
+
+Dirk Fox: I²C mit TX und Robo Pro
+– Teil 1: Grundlagen. 3/2012, S. 32-37.
+
+[3]
+
+Dexter Industries: Interfacing the
+Arduino and Lego Mindstorms,
+26.02.2013
+
+
+Computing
+
+Arduino Sketch zum Senden und Empfangen vom Master
+// I2C Slave Send / Receive
+// Demonstrates how to connect a TX Controller to an Arduino and Send commands, receive data.
+// Mit dieser abgewandelten Form eines Programms für den Lego NXT werden drei Infrarotsensoren
+// abgefragt. Dazu habe ich
+// noch die Berechnung der Distanz in cm aus den Spannungswerten der Sharp Infrarotdistanzsenoren
+// eingefügt.
+// Dem Arduino habe ich die Adresse 0x20 gegeben, zur Abfrage werden die Adressen 0x01 linker Sensor,
+//0x02 Mitte, 0x03 rechts genutzt.
+#include <Wire.h>; // Nutzung der Wire Bibliothek für I2C
+byte read_register = 0x00;
+void setup() // Vorbereitende Definitionen
+{
+Wire.begin(0x20);
+// join i2c bus with address 0x20
+Wire.onRequest(requestEvent); // Sending information back to the TX Controller!
+Wire.onReceive(receiveI2C);
+// Receiving information from TX Controller!
+pinMode(A2, INPUT); // Vorbereiten der analogen Pins als Eingang
+pinMode(A0, INPUT);
+pinMode(A1, INPUT);
+}
+void loop()
+{
+delay(100);
+}
+// Hier folgen die Funktionen zur Berechnung der cm aus den rohen Sensorwerten
+int read_inflinks() // Variable, die spaeter für den linken Sensor an TX übergeben wird.
+{ int val = analogRead(A0);// Abfrage Analog Pin 0
+if (val < 3) return -1; // invalid value
+float ret = (6787.0 /((float)val - 3.0)) - 4.0;
+if(ret > 80.0)// 80 cm ist der maximal messbare Abstand
+return(80.0);
+else
+if(ret < 11) return(0.0);// minimal können 10 cm gemessen werden,
+//der TX interessiert sich aber für alles kleiner 11 cm!
+else return(ret);
+}
+int read_infmitte() // Variable, die spaeter für den mittleren Sensor an TX übergeben wird.
+{ int val = analogRead(A1);//Abfrage Analog Pin 1
+if (val < 3) return -1; // invalid value
+float ret = (6787.0 /((float)val - 3.0)) - 4.0;
+if(ret > 80.0) // 80 cm ist der maximal messbare Abstand
+return(80.0);
+else
+if(ret < 11) return(0.0); // minimal können 10 cm gemessen werden,
+//der TX interessiert sich aber für alles kleiner 11 cm!
+else return(ret);
+}
+int read_infrechts() // Variable, die spaeter für den rechten Sensor an TX übergeben wird.
+{ int val = analogRead(A2);//Abfrage Analog Pin 3
+if (val < 3) return -1; // invalid value
+float ret = (6787.0 /((float)val - 3.0)) - 4.0;
+if(ret > 80.0)// 80 cm ist der maximal messbare Abstand
+return(80.0);
+else
+if(ret < 11) return(0.0);// minimal können 10 cm gemessen werden,
+//der TX interessiert sich aber für alles kleiner 11 cm!
+else return(ret);
+}
+// When data is received from TX, this function is called.
+void receiveI2C(int bytesIn)
+{
+read_register = bytesIn;
+while(1 < Wire.available())
+// loop through all but the last
+{
+read_register = Wire.read();
+// The incoming byte tells use the register we will use.
+Serial.print(read_register);
+// Print the incoming byte as a character on the Serial line.
+}
+int x = Wire.read();
+// Read the incoming byte
+Serial.println(x);
+// Print the incoming byte
+}
+// Abhängig vom read_register value werden die jeweiligen Abstände des linken, mittleren
+// oder rechten Sensors gesendet.
+// This can be expanded to have 256 different registers that can be updated and accesed
+// when the master calls for them.
+void requestEvent()
+
+
+
+
+{
+// We're going to send a fixed response. However,
+// you can use a switch case here and send different responses
+// based on a register system. Dies habe ich geändert.
+if(read_register == 0x01){
+Wire.write(read_inflinks());
+// Antwortet mit Variable "read_inflinks" Kalkuliert für linken IFD
+}
+else if(read_register == 0x02){
+Wire.write(read_infmitte());
+}
+else if(read_register == 0x03){
+
+}
+
+// Antwortet mit Variable "read_infmitte" Kalkuliert für mittigen IFD
+
+Wire.write(read_infrechts());
+// Antwortet mit Variable "read_infrechts" Kalkuliert für rechten IFD
+// as expected by master
+
+else if(read_register == 0x05){
+
+}
+}
+
+
+Wire.write(read_infrechts());
+// Antwortet mit Variable "read_infrechts" Kalkuliert für rechten IFD
+// as expected by master
+
+

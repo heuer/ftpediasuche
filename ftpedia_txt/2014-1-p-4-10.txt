@@ -1,0 +1,334 @@
+
+
+Nachrichtentechnik
+
+Morsetelegraf
+Dirk Fox
+Tatsächlich gab es einmal eine Zeit ohne Telefon, Funk, Film, Fernsehen und Internet. Und
+das ist gar nicht so lange her… Bis eine der entscheidenden Erfindungen der Nachrichtentechnik, der Morsetelegraf, die Welt veränderte.
+
+Geschichte
+In einer von Handys, Internet, Fernsehen
+und SMS durchdrungenen Welt ist es
+kaum vorstellbar, dass noch vor 200 Jahren
+Boten die einzige Möglichkeit waren, um
+Nachrichten zu übermitteln – abgesehen
+von Buschtrommeln und Rauchsignalen.
+1792, drei Jahre nach der französischen
+Revolution, beschloss die französische
+Nationalversammlung den Aufbau der
+ersten Telegrafenlinie unter Verwendung
+des von Claude Chappe (1763-1805) entwickelten
+„Flügeltelegrafen“:
+Damit
+konnten einzelne Zeichen optisch zwischen
+durchschnittlich 11 km voneinander entfernten Türmen übermittelt werden. Der
+Flügeltelegraf bestand aus einem beweglich montierten Querbalken mit zwei weiteren, an dessen Enden befestigten kürzeren Balken, die über Seilzüge in verschiedene Stellungen gebracht werden konnten.
+Damit gelang es, ein einzelnes Zeichen
+innerhalb von zwei Minuten zwischen
+Paris und Lille, also etwa 270 km weit zu
+übertragen [1]. Abb. 1 zeigt das von
+Chappe verwendete ‚Winkeralphabet’.
+Tatsächlich konnten mit dem Flügeltelegraphen insgesamt 196 verschiedene Zeichen dargestellt werden. Durch die Verwendung von Codebüchern wurden die
+Nachrichten vor unberechtigtem Mitlesen
+geschützt. Immerhin drei Zeichen konnten
+so pro Minute übermittelt werden [2].
+
+(Quelle: Wikipedia)
+
+Ein ähnliches System wurde 1832 in Preußen eingeführt. Die preußischen Telegrafen
+hatten sechs Flügel (Abb. 2), die jeweils
+vier verschiedene Positionen einnehmen
+konnten. Damit ließen sich 4.096 unterschiedliche Zeichen darstellen, neben
+Buchstaben also auch „Wortzeichen“.
+
+
+Nachrichtentechnik
+
+Ein fischertechnik-Modell des preußischen
+Winktelegrafen findet ihr im Anhang des
+lesenswerten (leider nur noch antiquarisch
+erhältlichen) fischertechnik-Buchs „Das Ei
+des Kolumbus“ [3].
+Die wesentlichen Nachteile der optischen
+Telegrafen waren die relativ geringe Bandbreite (Anzahl der übermittelten Zeichen
+pro Zeiteinheit) und die Beschränkung auf
+Tageslicht und gute Sicht. Zudem war der
+Betrieb personalintensiv, denn in jeder Station musste eine Person die nächste Station
+beobachten und eine zweite den Telegrafen
+bedienen.
+Daher arbeiteten viele Forscher an der Entwicklung alternativer Techniken zur Nachrichtenübermittlung. Besonders viel versprechend erschien der elektrische Strom,
+der seit der Entwicklung der Volta’schen
+Säule durch Alessandro Graf von Volta
+(1745-1827) um das Jahr 1800 zuverlässig
+erzeugt werden konnte.
+So konstruierte der deutsche Physiker
+Thomas von Soemmering (1755-1830) im
+Jahr 1809 einen „elektrolytischen Telegrafen“, der mit 35 Leitungen arbeitete – für
+jedes Zeichen des Alphabets und für jede
+Ziffer eine (Abb. 4).
+
+(Quelle: Wikipedia)
+
+
+(Quelle: Wikipedia)
+
+Legte der Sender eine Spannung an zwei
+Leitungen, stiegen auf der Empfängerseite,
+an der die Leitungen in einer Salzlösung
+endeten, von dem mit dem Minuspol ver5
+
+
+bundenen Kontakt deutlich sichtbar Bläschen auf. Ein quer liegender ‚Löffel’, der
+von den aufsteigenden Bläschen angehoben wurde, schlug eine Glocke an und
+verkündete so den Eingang einer neuen
+Nachricht (Abb. 5).
+
+
+Der erste Telegraf, der den Elektromagnetismus nutzte, wurde von Carl Friedrich
+Gauß (1777-1855) und Wilhelm Eduard
+Weber (1804-1891) im Jahr 1833 zwischen
+der Sternwarte und dem physikalischen
+Laboratorium in Göttingen errichtet: unterschiedlich starke Ströme lenkten beim
+Empfänger eine Magnetnadel aus; aufzeichnen konnte man die Zeichen jedoch
+nicht.
+
+Mitte der 1830er Jahre wurden weitere
+Nadeltelegrafen entwickelt, unter anderem
+von Paul Ludwig Schilling von Cannstatt
+(1786-1837), dem Physiker Carl August
+von Steinheil (1801-1870) sowie dem
+Physiker Charles Wheatstone (1802-1875)
+gemeinsam mit William Fothergill Cooke
+(1806-1879), deren Fünf-Nadel-Telegraf
+(Abb. 6) erstmals 1838 entlang einer
+21 km langen britischen Bahnlinie erfolgreich eingesetzt wurde.
+Die entscheidende Erfindung und die Einführung der Telegraphie blieben jedoch
+einem Außenseiter vorbehalten: dem
+amerikanischen Kunstmaler Samuel Finley
+Breese Morse (1791-1872). 1825 hatte er
+die National Academy of Design mitbegründet und wurde anschließend ihr
+Präsident. 1835 erhielt er einen Ruf als
+Professor für Zeichenkunst an die Universität New York.
+
+(1791-1872)
+
+und William Forthergate Cooke (1837)
+
+Nach der Rückkehr von einer Europareise
+im Jahr 1832 begann er, mit einem elektrischen Telegrafen zu experimentieren.
+Unter Verwendung einer alten Staffelei,
+eines Elektromagneten und des Federantriebs einer alten Uhr entwickelten Morse
+und sein Assistent Alfred Levis Vail ein
+
+
+Nachrichtentechnik
+
+Gerät, das Zeichen (als eine Folge von
+kurzzeitigen Stromimpulsen) übermitteln
+und empfangen konnte. Dieser am 04.09.
+1837 erstmals erfolgreich getestete Morseapparat übermittelte – als Ziffernfolge kodierte – Nachrichten, indem auf eine
+Schiene gesteckte schmale und breite Kupferplättchen über einen Kurbelantrieb
+gleichmäßig an einem Hebel entlang geführt wurden. Das Kippen des Hebels
+schloss oder unterbrach einen Stromkreis
+zum Empfänger (Abb. 8, 9).
+
+
+Morses ursprünglichen simplen „Zackencode“, der die Ziffern 0-9 durch in kurzem
+Abstand hintereinander gesteckte herausragende Kupferplättchen codierte, ersetzte
+Vail durch einen Zeichencode, der auch
+Buchstaben umfasste und heute als American Morse Code bekannt ist – den Vorläufer des 1865 standardisierten Internationalen Morsecodes.
+
+
+Wurde der Stromkreis geschlossen, lenkte
+beim Empfänger ein angeschlossener Elektromagnet ein ‚Schreibpendel’ mit daran
+befestigtem Stift aus, der auf einem darunter entlang gezogenen Papierstreifen einen
+V-förmigen ‚Zacken’ malte. Anschließend
+wurde er von einer Feder wieder in Ruhestellung gezogen [5].
+
+Die Kodierung der Buchstaben erfolgt in
+„Punkten“ und „Strichen“ – ein binärer
+Code. Der Aufbau des Zeichencodes orientierte sich an der Häufigkeit eines Buchstabens in der englischen Sprache. Abb. 10
+zeigt den Aufbau des Codes: Jeder
+„Zweig“ des „Codebaums“ steht für einen
+Punkt (.) oder einen Strich (–): So wird der
+Buchstabe „e“ durch einen einzelnen Punkt
+kodiert; der Code für den Buchstaben „f“
+lautet: Punkt-Punkt-Strich-Punkt.
+Nachdem Morse am 28.09.1837 für das
+verbesserte Modell des Telegrafen, das
+statt einer Zackenlinie die heute bekannten
+Punkte und Striche zeichnete, einen Patentantrag gestellt hatte, führte er den Morsetelegrafen zusammen mit Vail am 06.01.
+1838 erstmals öffentlich vor.
+
+
+
+Gott geschaffen?) sandte Morse am 24.05.
+1844 über eine vom amerikanischen Kongress finanzierte, 41 Meilen (ca. 60 km)
+lange Leitung vom Capitol in Washington
+zur Bahnstation in Baltimore – und löste
+damit eine Erfolgsgeschichte aus [8].
+Innerhalb von wenigen Jahren wurden
+zahllose Städte mit Telegraphenleitungen
+verbunden, und am 17.08.1858 überquerte
+die erste Morse-Nachricht in einem Seekabel den Atlantik. Am 04.08.1866 wurden
+Amerika und Europa mit einem stabileren,
+4.200 km langen und 5.000 Tonnen schweren Kabel verbunden, das die „Great
+Eastern“, der damals größte Dampfer der
+Welt, verlegt hatte. Zwischengeschaltete
+Verstärker reduzierten die Dämpfung.
+
+Experimentierbuch Elektromechanik [6])
+
+Am 20.06.1840 wurde Morse für seinen
+Telegraphen das US-Patent Nr. 1647 erteilt
+[7]. Abb. 11 und 12 zeigen den patentierten
+Zeichengeber und das Schreibgerät beim
+Empfänger.
+
+
+
+Die erste telegraphische Nachricht mit dem
+Text „What hath God wrought“ (Was hat
+
+
+Derweil entwickelte Morse seinen Telegrafen weiter; so ersetzte er die Zeichengeber-Schiene schon bald durch eine
+Morse-Taste (Abb. 13). Und auf der Empfängerseite wurden die Schreiber (Abb. 14)
+zunehmend von Lautsprechern (oder Kopfhörern) verdrängt, die das simultane Decodieren der Morsezeichen ermöglichten.
+Geschulte Telegrafisten konnten auf diese
+Weise bis zu 80 Zeichen pro Minute übermitteln – fast das 30fache von Chappes
+Flügeltelegrafen.
+Mit der Entdeckung der elektromagnetischen Wellen durch Heinrich Hertz
+(1886) und der Nachrichenübertragung per
+Funk durch Ferdinand Braun (1898) und
+Guglielmo Marconi (1899) erreichte die
+Verbreitung von Morses Erfindung
+
+schließlich Anfang des 20. Jahrhunderts
+ihren Höhepunkt: nun konnten Telegrafen
+auch in der Schifffahrt genutzt werden.
+Das erlebte Morse allerdings nicht mehr.
+
+Nachrichtentechnik
+
+Zudem ist das Modell äußerst simpel
+(Morse-Taster mit Lämpchen). Ausgefeilter und dem ursprünglichen Morsetelegrafen aus Abb. 14 ähnlicher war das Modell
+aus dem Kasten „em2“ (39151) von 1975:
+Die empfangenen Morsezeichen wurden
+dabei auf einen Papierstreifen geschrieben
+(Abb. 15) [9].
+Im selben Jahr erschien die Bauanleitung
+eines um eine akustische Zeichengabe erweiterten Morsegeräts als Club-Modell
+1975-1, elektronisch gesteuert von „Silberlingen“: Gleichrichter, zwei Relais, Grundbaustein und zwei Lautsprecher (Abb. 16).
+
+
+ft-Modellklassiker
+Modelle von Morse-Geräten finden sich in
+mehreren Anleitungen von fischertechnikKästen. Das jüngste Modell enthält der
+Kasten „Technical Revolutions“ (508776)
+von 2010. Die Beschreibung im Begleitheft füllt allerdings nicht einmal eine Seite.
+
+
+Ein ähnliches Telegrafenmodell wie in der
+em2-Anleitung findet sich im Experimentierbuch Elektromechanik [11] des Kastens
+„Elektromechanik“ von 1981 (39145), abgebildet sogar auf der Titelseite.
+
+Neue Modellideen
+Die Dekodierung der Morsezeichen ist
+allerdings bei allen diesen Modellen für
+den untrainierten Empfänger eine mühsame Angelegenheit – wohl deshalb haben
+sich die Modelle selbst bei hart gesottenen
+fischertechnik-Fans nicht gegen SMS und
+E-Mail durchsetzen können.
+
+
+Da wir dem Zeitalter der elektromechanischen Nachrichtenübermittlung inzwischen
+lange entwachsen sind, spricht wohl wenig
+dagegen, sich bei der Dekodierung der
+empfangenen Morsezeichen der Hilfe eines
+TX Controllers zu versichern.
+
+
+
+
+Wie wäre es daher mit einem automatischen Morsezeichen-Empfänger, der
+empfangene Morsezeichen automatisch
+erkennt, dekodiert und auf dem Display
+anzeigt? In einem „Lernmodus“ könnte er
+sich sogar automatisch auf den Tastrhythmus des Senders einstellen, um die Länge
+der Pausen zwischen den Signalen und
+einzelnen Zeichen zu erlernen.
+Und natürlich könnte der TX auch als
+Trainer fungieren und eine vorgegebene
+oder zufällige Zeichenfolge anzeigen, die
+dann in Morsezeichen über eine MorseTaste eingegeben werden muss – und
+etwaige Fehler und Fehlerhäufigkeiten
+bestimmen und anzeigen.
+Sicher kommen euch auch noch ein paar
+Ideen – und vielleicht wird ja ein Modell
+für die ft:c oder die nächste Convention
+daraus?
+
+Quellen
+[1]
+
+Wikipedia: Optische Telegrafie.
+
+[2]
+
+Wolfgang Back, Erich H. Heimann:
+Das Ei des Kolumbus. EngelbertVerlag, Tumlingen, 1977.
+
+[3]
+
+
+Erich H. Heimann: Das Ei des
+Kolumbus. Anhang mit fischertechnik-Modellen. Fischer-Werke,
+Tumlingen, 1977.
+
+[4]
+
+Volker Aschoff: Telgraphie vor 150
+Jahren. In: Kultur & Technik,
+4/1987, S. 260-264.
+
+[5]
+
+Susanne Päch und Herbert W.
+Franke: Samuel Morse und die Telegraphie. Film, 15 min., aus der
+Sendereihe ‚Meilensteine der Naturwissenschaft und Technik’ des
+Schulfernsehens der ARD, 1991.
+
+[6]
+
+fischertechnik: Die Morse-Schrift. In:
+Experimentierbuch Elektromechanik,
+Fischer-Werke, Tumlingen 1981, S.
+86.
+
+[7]
+
+Samuel F. B. Morse: Telegraph
+Signs. US Patent Nr. 1647,
+20.06.1840.
+
+[8]
+
+Dennis Karwatka: Samuel Finley
+Breese Morse. In: Technology’s Past,
+Prakken Pub., Ann Arbor 1996, S.
+25-27.
+
+[9]
+
+fischertechnik: Ein Schreibgerät für
+Morsezeichen. In: Anleitungsbuch
+Elektromechanik (em2), FischerWerke, Tumlingen 1975, S. 29-31.
+
+[10] fischertechnik: Bauanleitung Morsegerät. Club-Modell 1975-1, 1975.
+[11] fischertechnik: Morsetelegraf. In:
+Experimentierbuch Elektromechanik,
+Fischer-Werke, Tumlingen 1981, S.
+74-77.
+
+

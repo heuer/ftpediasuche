@@ -1,0 +1,148 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Pneumatische Drehdurchführung
+René Trapp
+Via Schleifring kann man drehende Motoren und Lampen mit Strom versorgen – wie aber
+bekommt man Luftdruck auf ein rotierendes Bauteil? Der Beitrag zeigt, wie sich eine voll
+funktionsfähige pneumatische Drehdurchführung mit Hausmitteln aus Zylindereinzelteilen und
+einem Messingrohr konstruieren lässt.
+Zur Übertragung elektrischer Energie auf
+rotierende Teile gibt es bekanntlich die
+Schleifringe. Die sind zwar nur noch
+gebraucht zu bekommen, aber immerhin
+hatte sich fischertechnik des Problems
+einmal angenommen. Für die Pneumatik
+fehlt solch ein Teil jedoch und es ist auch
+keine Lösung aus dem Schwarzwald in
+Sicht. Hier ein Vorschlag, wie ihr euch im
+Eigenbau eine voll funktionsfähige pneumatische Drehdurchführung aus ft-Zylindereinzelteilen und einem Messingrohr
+konstruieren könnt.
+
+Die Idee
+Die Idee entstand beim Umgang mit Pneumatik-Zylindern. Die Kolbenstange lässt
+sich bekanntlich drehen – damit ist klar,
+dass die Dichtungen sich prinzipiell auch
+für eine Drehdurchführung eignen müssen.
+
+einen dicken herzlichen Dank an ihn. Wer
+in seiner Sammlung einen oder gar mehrere
+defekte Zylinder hat, kann natürlich diese
+als ‚Teilespender‘ verwenden.
+Das Messingrohr ist Standardware aus dem
+einschlägigen Fachhandel (Modellbaushop,
+Baumarkt, …). Der Außendurchmesser
+muss 4 mm betragen, für den Innendurchmesser empfehle ich 3 mm.
+
+Die Fertigung
+In dem gelieferten Zylinderschrott fanden
+sich alle benötigten Teile: Zylinderköpfe,
+Zylinderfüße, Zylinderrohre, Kolbenstangen und Dichtungspakete. Von einem
+blauen Pneumatikzylinder war der Fuß mit
+angeklebtem Rohr vorhanden. Es entsprach
+damit dem neuen Ballonadapter (122647).
+
+Die Kolbenstange muss dabei durch ein
+Rohr ersetzt werden, das es (nicht nur) im
+Baumarkt gibt. Als einziges ‚echtes
+Problem‘ blieb, die Zylindereinzelteile zu
+bekommen.
+
+Die Beschaffung
+Eine Anfrage bei den Fischer-Werken ergab
+leider eine Absage. Dafür war unser
+fischerfriendsman hingegen sicher froh,
+seinen sonst unverkäuflichen Zylinderschrott loszuwerden – zumindest die
+besseren Teile davon. An dieser Stelle mal
+
+
+Am oberen (offenen) Ende war das
+Zylinderrohr allerdings gesplittert. Da eine
+Drehdurchführung keinen Hub machen
+
+
+
+muss, sägte ich den zersplitterten Teil
+einfach ab. Dabei achtete ich darauf, das
+Rohr auf 14 mm zu kürzen, sodass die
+fertige Durchführung im ft-Raster verbaut
+werden kann.
+Einen einzelnen blauen Zylinderkopf säuberte ich mit einer Schlüsselfeile vorsichtig
+am Klebekragen, da die Reste eines Zylinderrohres und des werksseitigen Klebers
+sehr hart sind. Der Kragen an den Zylinderköpfen und –füßen selbst ist hingegen
+recht dünn und weich.
+Nachdem der Zylinder so vorbereitet war,
+zog ich ein Dichtungspaket von einer Kolbenstange. Das Dichtungspaket, bestehend
+aus zwei Gummilippendichtungen und
+einem roten Stabilisatorring aus Kunststoff,
+wurde dann auf ein Stück Messingrohr
+(Außendurchmesser 4 mm, Innendurchmesser 3 mm) aufgeschoben.
+Durch die Klemmwirkung ist bereits ein
+guter Sitz gewährleistet. Abb. 2 zeigt die
+vorbereiteten Hälften. Die Klemmbuchse 5
+(37679) verhindert Hubbewegungen, kann
+aber auch weggelassen werden.
+
+
+Solange der Zylinderkopf nicht mit dem
+kurzen Zylinderrohr verklebt ist, kann die
+Durchführung jederzeit z. B. für Wartungszwecke zerlegt werden.
+Nun wird noch eine geeignete Montage der
+Drehdurchführung benötigt. Besonders elegant ist die Unterbringung in einem Schleifring, damit man gleichzeitig elektrische
+Energie oder Signale übertragen kann; Abb.
+4 zeigt ein Beispiel.
+
+
+Das Dichtungspaket wurde vorsichtig in das
+kurze Rohrende eingefädelt, der Zylinderkopf aufgesetzt, jedoch nicht verklebt.
+Damit erhält man einen Zylinder 30, der
+zwar nur bestenfalls (ohne die Klemmbuchse) 5 mm Hub macht, aber als
+pneumatische Drehdurchführung sehr gute
+Dienste leistet (Abb. 3).
+
+Ist der Schlauchstutzen am Zylinderkopf
+(Abb. 5) bei der Montage im Weg, darf er
+problemlos gekürzt oder auch ganz abgeschnitten werden.
+
+Mögliche Modifikationen
+Natürlich darf die Drehdurchführung auch
+länger sein (z. B. unter Verwendung eines
+alten Zylinders 60). So wird es möglich, die
+Durchführung auch als Längenausgleichselement zu nutzen.
+
+
+
+Ein simpler gebogener Schlauch ist dafür
+allerdings kostengünstiger, sofern keine
+Rotation benötigt wird.
+Baut man am anderen Ende des Messingrohres einen zweiten Zylinder in gleicher
+Weise an, entsteht ein Zylinder mit
+doppelter Hublänge (aber auch doppelter
+Baulänge). Die jeweils andere Zylinderkammer wird dann durch das Messingrohr
+mit Druckluft beaufschlagt und benötigt
+keinen eigenen Schlauchanschluss.
+
+Tipps & Tricks
+
+Bekanntlich haben die neuen Pneumatikzylinder eine Dichtung im schwarzen
+Zylinderkopf, um die Kolbenstangendurchführung abzudichten. Auch diese Zylinder
+lassen sich in eine Drehdurchführung verwandeln. Dazu werden nicht einmal die
+Dichtungspakete benötigt. Lediglich das
+Messingrohr wird durch den Zylinderkopf
+in den Druckraum geführt. Allerdings ist
+bei dieser Variante das Zylinderrohr am
+Zylinderfuß und am Zylinderkopf dicht zu
+verkleben. Eine Wartung ist hierbei nur
+bedingt möglich. Diese Variante habe ich
+allerdings nicht getestet.
+
+Quellen
+[1]
+
+www.ft-Datenbank.de:
+Ballonadapter 122647.
+
+
+

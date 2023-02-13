@@ -1,0 +1,449 @@
+
+
+fischertechnik-Basiswissen
+
+Perlentauchen (Teil 5)
+Stefan Falk
+In diesem Teil der Reihe tauchen wir ab in die faszinierende Welt der fischertechnik-Pneumatik, stellen dar, was es schon alles gab, wie sich die Dinge weiterentwickelt haben – und
+was davon heute noch erhältlich ist.
+
+Wo kommt die Druckluft her?
+Die fischertechnik-Pneumatik, also das
+Bauen von mit Druckluft betriebenen und
+auch damit gesteuerten Maschinen, begann
+schon 1981 mit den gleichnamigen Ergänzungs-Baukästen:
+
+Allerdings war keine Druckluftquelle
+Bestandteil des Baukastens, sondern es
+standen separat zwei Varianten von mit
+220 V betriebenen fischertechnik-Kompressoren zur Auswahl:
+
+
+
+Diese Kästen enthielen neben PneumatikZylindern auch verschiedene Ventile, auf
+die wir gleich noch zu sprechen kommen.
+
+
+Es gab sogar eine 30865 Handpumpe, mit
+der man ebenfalls ganz ordentlich Druckluft für die Modelle erzeugen konnte (Abb.
+3). Diese großen Druckluftquellen gaben
+ihre Druckluft in Schläuche mit ca. 1 cm
+Durchmesser.
+
+
+fischertechnik-Basiswissen
+
+
+
+Die passten auf den Druckluftverteiler
+(Abb. 4), an dem man dann bis zu acht
+fischertechnik-Pneumatikschläuche direkt
+anschließen konnte. Die unbenutzten
+Anschlüsse verschloss man mit den später
+noch aufzuführenden Stopfen.
+
+
+Um auch mit geringeren Kosten, weniger
+groß und weniger laut zumindest ein
+bisschen Druckluft bereitstellen zu können,
+gab es zwei verschiedene Kurbel-Anbauteile für den damals noch aktuellen Urfischertechnik-Motor (Abb. 5).
+Diese Teile wurden auch in den
+Ergänzungskästen für aus fischertechnik
+gebauten Kompressoren verwendet (Abb.
+6).
+
+
+Erst später kam der „Pneumatik+“ heraus,
+der neben den Bauteilen des „Pneumatik“Kastens ebenfalls die Teile für einen solchen Selbstbau-Kompressor enthielt (Abb.
+7).
+
+
+
+
+
+In der späteren Generation der Pneumatik
+(mit schwarzen anstatt blauen Pneumatikzylindern – siehe weiter unten) gab es
+neben dem Kompressorzylinder drei neue
+Teile zum Selbstbau eines kleinen Kompressors (Abb. 8):
+
+
+Viel Freude hat fischertechnik den Fans
+mit der Einführung des heute aktuellen
+Kompressors gemacht: Es gab sogar eine
+Umfrage im fischertechnik-Forum, in dem
+jede(r) sagen konnte, welche Kriterien
+wichtig sind. Heraus kam ein toller kleiner
+Kompressor, wunderbar an mehreren
+Seiten anbaubar, im ft-Raster liegend, nicht
+zu laut, aber sehr kräftig. Bis zu 1 bar
+Druck und ein für viele Modelle sehr
+brauchbarer Durchsatz stehen damit zur
+Verfügung (Abb. 10).
+
+
+Damit konnte man einen ‚Standardkompressor’ bauen, der ab dem ersten „Profi
+Pneumatic“-Baukasten viele Jahre verwendet wurde (Abb. 9).
+
+
+
+Ungezählte Fans haben auch immer wieder
+selbst neue Druckluftquellen gebastelt und
+Dritthersteller-Kompressoren an fischertechnik adaptiert – im Bilderpool der ftCommunity findet sich mehr dazu.
+
+Was macht man mit Druckluft?
+Nachdem wir also geklärt haben, wo wir
+Druckluft herbekommen, stellt sich die
+Frage: Was fangen wir damit an? Und
+schon landen wir beim wichtigsten
+Pneumatik-Bauelement: Dem PneumatikZylinder. Abb. 11 zeigt in der oberen Reihe
+in Hellblau die ersten Zylinder mit MetallKolbenstange in Längen von 60 mm,
+45 mm sowie 45 mm mit Rückstellfeder
+(dessen Kolben also auch ohne Druckluft
+von alleine wieder eingezogen wird). In
+der unteren Reihe sieht man die 60- und
+45-mm-Pendants der heutigen Zeit mit
+blauer Kunststoff-Kolbenstange. Diese
+sind eine Spur weniger leichtgängig als die
+mit Metall, dafür aber vermutlich günstiger
+zu produzieren und absolut Rostfrei.
+
+
+Der dritte Zylinder der unteren Reihe ist
+der 45 mm lange Kompressor-Zylinder.
+Optisch unterscheidet er sich vom normalen 45-mm-Zylinder durch die schwarze
+Kolbenstange. Technisch sind zwei wichtige Details anders: Erstens ist er am
+oberen Anschluss undicht (!) und zweitens,
+weil so die Kolbenstange weniger eng
+geführt werden muss, deutlich leichtgängiger als der normale Zylinder.
+
+fischertechnik-Basiswissen
+
+Für seinen Einsatzzweck im S-MotorKompressor ist das aber genau richtig:
+Dort wird ohnehin nur der untere Anschluss verwendet, und die Leichtgängigkeit ist bei der hohen Drehzahl des Kompressors besonders wichtig und nützlich.
+Rechts unten in Abb. 11 findet sich der
+jüngere 60-mm-Zylinder mit Rückholfeder, und rechts oben schließlich ein
+„halber Zylinder“ als Spezialteil zum
+Überstülpen eines Luftballons – den kann
+man dann aufblasen lassen.
+
+Zubehörteile
+Neben den Pneumatikschläuchen gab und
+gibt es bis heute die verschiedenen
+Anschluss-Stücke sowie den Achsadapter
+für die Zylinder in im Wesentlichen unveränderter Form (Abb. 12).
+
+gerade und gewinkelt (schwarz), Achsadapter
+für Zylinder, T-Stücke
+
+Die blauen Teile links oben sind reine
+Stopfen, die einen Anschluss, z. B. vom
+Luft-Tank, dicht abschließen. Nicht zu
+verwechseln damit sind die schwarzen
+Teile rechts daneben, mit denen man auf
+einen Anschluss gerade oder um 90 °
+abgewinkelt einen Schlauch stecken kann
+(man beachte das Loch im schwarzen Teil
+
+
+
+
+in der Mitte, welches im blauen fehlt).
+Wenn man eine Druckluftleitung mit mehr
+als einem Ziel verbinden muss, verwendet
+man die blauen Verteilerstücke (unten in
+Für den Bau von Kompressoren, aber auch
+für pneumatische Logikschaltungen unverzichtbar, sind die Rückschlagventile:
+
+Ventile – Schalter für Druckluft
+Festo-Ventile
+Beim Anblick von Abb. 14 wird es
+Kennern der ersten Pneumatik-Generation
+von fischertechnik warm ums Herz: Sämtliche dieser Bauteile werden nicht mehr
+hergestellt und hinterlassen eine schmerzliche, weil praktisch unausgefüllte Lücke.
+
+
+Die erste Fassung war blau, die aktuelle ist
+schwarz, aber die Funktion ist dieselbe
+geblieben: Druckluft (beispielsweise, aber
+nicht zwingend, vom Kompressorzylinder
+eines Selbstbau-Kompressor) kommt am in
+und kann am oberen Ende ausströmen. Nur
+zurück geht es nicht, denn eine Feder
+drückt ein Bauelement im Inneren auf den
+unteren Anschluss. Druck von unten kann
+gegen die Feder arbeiten und so eine
+Öffnung herstellen, Druck von oben
+schließt das Ventil aber nur umso fester.
+Das ist also das pneumatische Gegenstück
+zur elektronischen Diode. Wir werden in
+einem separaten Beitrag noch ausführlich
+vorstellen, was für raffinierte DruckluftSchaltungen man mit Rückschlagventilen
+herstellen kann.
+
+
+
+Im Einzelnen sieht man auf diesem Bild:
+· Rechts oben eine einfache Drossel, die
+den Luftstrom durch sie hindurch per
+Stellschraube mehr oder weniger stark
+hemmt. Das ist wichtig, wenn ein Pneumatikzylinder nicht schlagartig, sondern
+schön langsam ein- und ausfahren soll.
+Ebenso können mit Drosseln einstellbare Zeitglieder gebaut werden, was wir
+ebenfalls in einem späteren Beitrag
+ausführlich behandeln werden.
+· Links daneben finden sich zwei FestoVentile. Die heißen so, weil sie von der
+in Pneumatik-Kreisen weltbekannten
+Firma Festo für fischertechnik entwickelt wurden (Abb. 15).
+
+
+fischertechnik-Basiswissen
+
+geschaffenen Betätigern, die Abb. 14 in
+den unteren beiden Reihen zeigt. Auch
+diese Bauteile haben etwa die Größe
+eines Bausteins 15 und passen im ftRaster direkt neben ein Festo-Ventil.
+Die Betätiger haben nur einen Druckluftanschluss, der einen Gummibalg aufbläst,
+sobald Druckluft anliegt. Der Balg hebt
+sich dann einige wenige Millimeter aus
+dem Gehäuse – gerade genug, um den
+Stößel eines Festo-Ventils oder einen ftTaster zu betätigen. Auf diese Weise
+können wir per Druckluft ein DruckluftVentil betätigen. Das erst eröffnet den Weg
+zu rein pneumatisch betriebenen Schaltungen, die mit Druckluft ebenso funktionieren wie die vielen verschiedenen Schaltungen aus der ‚Motorsteuerungen’Artikelserie in der ft:pedia [3].
+
+
+Es gibt – Verzeihung, gab – sie mit blauem
+und rotem Stößel, der jeweils ca. 1 mm aus
+dem Gehäuse in der Größe eines Bausteins
+15 heraus ragt. An einem Anschluss legt
+man Druckluft an. Die kommt am anderen
+Anschluss aber nur dann an, wenn der
+Stößel gedrückt (blaues Ventil, „Öffner“)
+bzw. gerade nicht gedrückt (rotes Ventil,
+„Schließer“) ist. Diese Bauteile erfüllen
+also für Druckluft genau denselben Zweck,
+wie es der Arbeits- (blaues Ventil) bzw.
+der Ruhekontakt (rotes Ventil) eines normalen fischertechnik-Tasters für den elektrischen Strom tun: Es handelt sich um
+mechanisch betätigte Schalter für das
+Durchlassen der Druckluft mit automatischer Rückstellung durch Federkraft,
+sobald der Stößel nicht mehr gedrückt
+wird.
+· Diese Ventile lassen sich nicht nur mit
+einfachen mechanischen Mitteln betätigen, sondern mit den eben dazu
+
+Ebenso gelingt es mit Taster und Betätiger
+leicht, per Druckluft ein elektrisches Signal
+abzugeben: Der mit Druckluft „beaufschlagte“ Betätiger drückt den Taster, der
+in geeignetem Abstand zum Gummibalg
+montiert werden muss. Ein wichtiges
+Anwendungsgebiet dafür ist die Abschaltung eines Kompressors, sobald genügend
+Druck anliegt.
+Die Betätiger gab es in zwei Bauformen:
+Beim Einfach-Betätiger geht der Gummibalg nur in eine Richtung aus dem Gehäuse, beim Doppel-Betätiger auf zwei
+Seiten des Bauteils. Mit letzterem kann
+man mit einem einzigen Druckluftsignal
+gleich zwei Festo-Ventile steuern. Wenn
+das je ein (blauer) Öffner und ein (roter)
+Schließer ist und man deren Ausgänge an
+einen Zylinder anschließt, kann man durch
+Anlegen oder Abschalten von Druckluft
+mit einer einzigen Steuerleitung kontrollieren, ob der Zylinder aus- oder eingefahren werden soll.
+Logik-Schaltung: Links steuert ein
+(schmaler) Doppelbetätiger zwei FestoVentile an, weiter rechts wird ein beweg-
+
+
+
+licher Hebel von zwei (etwas breiteren)
+Einfach-Betätigern durch kurzen Druckluftimpuls nach links oder rechts bewegt.
+
+teilen oder von Hand zu betätigen, die viel
+größere Wege zurücklegen. Durch die
+Federwirkung wird das Festo-Ventil dennoch nicht beschädigt. Zudem kann man
+durch das 4-mm-Loch am Ende des Hebels
+ft-Achsen stecken und auf diese Weise
+auch mehrere Rollenhebel miteinander
+koppeln – alle werden dann gleichzeitig
+gedrückt bzw. losgelassen und steuern
+mehrere Ventile mit derselben Bewegung.
+Zum allergrößten Bedauern des Autors und
+vieler ft-Pneumatik-Fans werden aber die
+Festo-Ventile, Betätiger und Rollenhebel
+allesamt schon lange nicht mehr hergestellt. Man kann sie allerdings noch auf
+dem Gebrauchtmarkt finden.
+
+zur Ansteuerung von Festo-Ventilen
+
+Er bleibt in der jeweiligen Stellung stehen
+und drückt bzw. drückt nicht auf das FestoVentil oben im Bild – fertig ist ein pneumatisches Flip-Flop, ein 1-Bit-Speicher.
+
+
+Wenngleich sie traurigerweise unersetzt
+sind, werden wir in weiteren PneumatikArtikeln dennoch sehen, wie man mit den
+aktuellen Ventilen zumindest einige der
+Verwendungsmöglichkeiten realisiert.
+Das heutige Pneumatik-Ventil
+
+und Elektro-Taster an
+
+Genau passend zu den Festo-Ventilen gab
+es die Rollenhebel (Abb. 18). Diese leichtgängig federnden Bauteile kann man
+verwenden, um die Festo-Ventile (mit nur
+ca. 1 mm Schaltweg) auch von Maschinen12
+
+Heute gibt es das in Abb. 19 gezeigte
+Pneumatik-Handventil. Durch den blauen
+Drehschieber kann man am mittleren Eingang anliegende Druckluft stoppen oder
+auf einen der beiden anderen Anschlüsse
+verteilen. So kann man einen Pneumatikzylinder steuern, und natürlich kann man
+diese Ventile mit ein paar Verrenkungen
+auch z. B. per Motorkraft automatisiert
+betätigen.
+
+
+fischertechnik-Basiswissen
+
+elektromagnetisch zu betätigen. Abb. 20
+zeigt einen gut funktionierenden Aufbau
+von Seite 69 der Anleitung zum ersten
+Pneumatik-Kasten [2], Abb. 21 einen
+Modellausschnitt.
+
+
+Ebenfalls auf dieser Abbildung sieht man
+den noch relativ jungen Saugnapf, mit dem
+man leichte Bauteile mit Unterdruck
+anheben kann.
+Magnetventile
+In der ersten Pneumatik-Generation von
+fischertechnik gab es noch keine eigens
+hergestellten Elektro-Ventile.
+
+im Modell
+
+1986 folgte das erste spezielle ElektroVentil, welches aber immer noch einen
+normalen ft-Elektromagneten und ein
+Festo-Ventil verwendete. Einige Spezialteile machten die Sache aber kompakter:
+
+
+Elektro-Ventil
+
+Stattdessen bediente man sich der klassischen Kombination aus Elektromagnet und
+Rückschlussplatte, um ein Festo-Ventil
+
+
+
+
+
+Ab 2002 schließlich gab es das heute noch
+lieferbare fertige Elektro-Ventil (Abb. 23).
+Ein unabhängig von fischertechnik produziertes Ventil wird hier lediglich mit den
+weißen Adaptern auf ft-Schlauchmaß
+gebracht und mit simplem Klebeband am
+Modell befestigt – nicht gerade ‚fischertechnik-like’, aber es funktioniert sehr gut
+und ist relativ kompakt.
+
+Sensoren
+Die erste Pneumatik-Generation begnügte
+sich nicht damit, Pneumatik-Zylinder mehr
+oder weniger manuell zu steuern. Vielmehr
+wurde ein tatsächlicher Einsatzzweck, die
+Steuerung
+pneumatisch
+betriebener
+Maschinen, auch wirklich wie in der
+Industrie mit pneumatischen Sensoren
+nachgebildet. Zwei besondere Sensoren
+gab es – beide verlangen allerdings eine
+ordentlich leistungsfähige Luftquelle (die
+Selbstbaukompressoren mit ft-Motoren
+scheiden dafür leider aus).
+Luftschranke
+Zum einen kann man, genau wie mit
+Lampe und Fotozelle Lichtschranken hergestellt werden, mit zwei langen Düsen
+eine Luftschranke bauen:
+
+Pneumatikzylinder zu betreiben. Aber für
+einen der schon aufgeführten Betätiger
+genügt der Druck: Solange die Luftschranke nicht unterbrochen wird, schlägt
+der Betätiger aus und kann ein FestoVentil ansteuern. Dieses wiederum kann
+dann tatsächlich einen Pneumatikzylinder
+versorgen.
+Unterbricht man den Luftstrom z. B. durch
+Einbringen einer dünnen Bauplatte
+zwischen den beiden Düsen, fällt der
+Betätiger drucklos ab und lässt das FestoVentil frei. So kann man ‚berührungsfrei’
+(bis auf die strömende Luft) feststellen, ob
+sich etwas in der Luftschranke befindet
+oder nicht – gerade wie es eine Lichtschranke auch tut.
+Staudüsen
+Ähnlich funktioniert die Staudüse. Am in
+Öffnung) ins Freie strömt. Sobald die Öffnung aber abgedeckt wird, staut sich die
+Druckluft im Inneren des Bausteins, und
+am oberen Anschluss kommt die Druckluft
+heraus. Die kann man wie bei der Luftdüse
+mit einer Betätiger/Festo-Ventil-Kombination verstärken und so in einer Steuerung
+nutzbar machen.
+
+
+Das funktioniert so: Eine der Düsen wird
+mit Druckluft beaufschlagt. Durch ihre
+Länge (30 mm) wird der Luftstrom darin
+„laminar“, das heißt wirbelfrei. Die Luft
+strömt also an der Spitze (an der sich eine
+kleine Öffnung befindet) einfach direkt ins
+Freie, und zwar als ein recht gerader Luftstrahl. In nicht allzu weiter Entfernung (mit
+den ft-Düsen sind nur ein paar Millimeter
+realisierbar) sitzt nun genau fluchtend eine
+zweite Düse, die diesen Luftstrahl wieder
+auffängt. Natürlich geht auf dem Weg
+dahin Druckluft verloren, sodass hier nicht
+mehr genug Druck ankommt, um einen
+
+
+Ein Anwendungsbeispiel zeigt Abb. 26:
+Eine ft-Schwingfeder aus dem älteren
+Elektromechanik-Programm – eine leicht
+biegbare 15 mm bereite Metall-Lasche –
+kann die Öffnung der Staudüse abdecken.
+
+Diese wird zur Vermeidung von übermäßigem Luftverbrauch über eine Drossel
+mit Druckluft versorgt. Der Ausgang ist
+mit einem (Doppel-) Betätiger verbunden,
+der über zwei Festo-Ventile das schwache
+Signal der Staudüse auf ein brauchbares
+Maß verstärkt.
+
+fischertechnik-Basiswissen
+
+Ausblick
+In nachfolgenden Beiträgen werden wir
+uns den Möglichkeiten all dieser Bauteile
+im Modell ausführlich zuwenden. Dabei
+werden Modelle vorgestellt, die nicht nur
+mit Druckluft betrieben, sondern auch mit
+Druckluft gesteuert werden – sowohl mit
+den Festo-Ventilen als auch, soweit
+möglich, nur mit den heute noch produzierten Handventilen. Auf dem Gebiet
+pneumatischer Steuerungen gibt es genau
+so viel zu sagen und genau so viele reizvolle Modelle zu bauen wie mit Elektrik
+und Elektronik. Versprochen.
+
+Quellen
+[1]
+
+Fischer-Werke: Profi Pneumatik,
+Tumlingen, 1995.
+
+[2]
+
+Fischer-Werte: Pneumatik Anleitung.
+Tumlingen, 1981.
+
+[3]
+
+Stefan Falk: Motorsteuerungen.
+ft:pedia 1-4/2011.
+
+mit nachgeschalteter Signalverstärkung
+
+
+

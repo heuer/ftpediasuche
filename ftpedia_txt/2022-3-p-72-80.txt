@@ -1,0 +1,457 @@
+
+
+Elektronik
+
+Silberlinge: Flip-Flop in Hardware oder
+Software?
+Peter Krijnen
+Im Forum gibt es einen Thread, in dem die Funktionsweise des Flip-Flops diskutiert wird [1],
+insbesondere wenn die Lampe durch eine LED ersetzt wird. Eine Person hat sich die Mühe
+gemacht, einige Silberlinge zu simulieren. Dazu nutzte er das Programm LTspice [2]. Dieses
+Programm kann kostenlos heruntergeladen und verwendet werden.
+Ich selbst habe in der Vergangenheit schon
+mit LTspice gearbeitet, daher ist mir dieses
+Programm bekannt. Dass es in diesem
+Thread um das Flip-Flop geht, war für mich
+der Anlass, das Flip-Flop selbst in LTspice
+zu simulieren. Es hat einige Zeit gedauert,
+bis ich das hinbekommen habe, aber am
+Ende ist es mir gelungen.
+
+
+
+
+
+
+
+einem Standard-Flip-Flop (h4FF),
+einem Potentiometerbaustein (PB),
+einem kleinen Breadboard,
+einer LED und
+einem Schalter zum Kurzschließen des
+GB.
+
+Aber wie sieht es in der Realität aus? Dazu
+müssen wir uns zunächst die Spannungsversorgung anschauen. Ich rate daher
+jedem, Teil 2 [3] noch einmal zu lesen.
+Anhand mehrerer Abbildungen möchte ich
+zu erklären versuchen, was im Gleichrichtermodul und im Flip-Flop passiert,
+wenn die Stromversorgung angeschlossen
+wird.
+Um die Messungen richtig durchführen zu
+können, habe ich einen Messaufbau aufgebaut, der aus folgenden Teilen besteht
+(Abb. 1):
+ einem Transformator 814 für die Wechselspannung (AC),
+ einem ELV Switch-Power-Supply SPS
+7330 für die Gleichspannung (DC),
+ einem Standard-Gleichrichterbaustein
+(h4GB),
+ einem mit einem 7809-Stabilisator
+modifizierten
+Gleichrichterbaustein
+(h4GB + 7809),
+
+
+
+Das FF wird nicht direkt aus dem GB
+gespeist, sondern über den PB. Dies kann
+aber auch ein Relais-Baustein oder ein Verstärker-Baustein sein. Allerdings haben RB
+und VB eingebaute Bauteile, die die Versorgungsspannung
+belasten. Optional
+können zwei Drähte direkt an den Kontaktfedern an der Seite des FF-Gehäuses angeklemmt werden.
+
+Untersuchungen
+Vorbereitung
+Wechselspannung vom Trafo 814 an den
+
+
+Elektronik
+
+Eingang des GB angelegt wird: Durch die
+gleichgerichtete Wechselspannung wird der
+Kondensator alle 10 ms aufgeladen. Erst
+nach etwa 100 ms ist der Kondensator so
+weit aufgeladen, dass sich ein einigermaßen
+stabiler Pegel von 11,4 V einstellt. Eine
+kleine Welle bleibt jedoch.
+
+dann ein 10-µF-Kondensator hinzugefügt.
+Dies soll die Stabilität des 7809 verbessern.
+
+
+
+Wir sehen wieder alle 10 ms einen „Wellentop“, der den Kondensator auflädt. Nach
+dem dritten „top“, innerhalb von 30 ms,
+liegt der Ausgang sofort stabil bei 9 V.
+
+Für Abb. 3 habe ich den Trafo 814 durch
+das SPS 7330 ersetzt. Bei 12,3 V DC am
+Eingang des GB werden nun auch 11,4 V
+ausgegeben. Wir sehen nun, dass, da die
+angeschlossene Gleichspannung nicht mehr
+gleichgerichtet werden muss, die Spannung
+bereits nach ca. 8 ms das Maximum
+erreicht. Erst dann wird der Kondensator
+wieder auf ein stabiles Niveau von 11,4 V
+aufgeladen.
+
+12,3 V DC von der SPS. Die Spannung ist
+jetzt nach ca. 5 ms stabil.
+
+
+In Abb. 4 sehen wir das gleiche wie auf
+aber ich habe den GB jetzt mit einem 7809Stabilisator ausgestattet. Da der Platz für
+den 2200 µF Kondensator nicht mehr ausreichte, habe ich ihn durch einen kleineren
+mit 1000 µF ersetzt. Dem Ausgang wird
+
+Aus den oben genannten Bildern können
+wir schließen, dass, wenn bereits eine
+stabile Gleichspannung am Eingang des GB
+anliegt, die Einschalteffekte reduziert
+werden. Wird der GB zusätzlich noch mit
+einem Stabilisierungs-IC ausgestattet, sind
+die Auswirkungen schon minimal.
+Jetzt, da wir das wissen, stellt sich die
+Frage: Was passiert im Flip-Flop?
+
+
+
+
+Schalten am Eingang des GB,
+Trafo 814 (AC)
+Zeitskala 20 ms/div
+Für die nächsten Bilder habe ich wieder den
+Trafo 814 und den Standard-GB verwendet.
+Um zu verstehen, was wir sehen:
+
+
+
+
+
+Kanal 1 = Kollektor T1 (gelb)
+Kanal 2 = Basis T1 (cyan)
+Kanal 3 = Kollektor T2 (violett)
+Kanal 4 = Basis T2 (blau).
+
+
+Ich habe die Zeitbasis auf 20 ms eingestellt.
+
+
+die Spannung an den GB anschließen. Der
+FF ist mit einer Lampe ausgestattet. Wir
+sehen hier dasselbe wie in Abb. 3. Wir
+sehen, dass es wieder etwa 100 ms dauert,
+bis der Pegel am Kollektor von T2 stabil ist.
+Innerhalb von etwa 5 ms wird die Basis von
+T1 „high“, was bedeutet, dass der Kollektor
+von T1 auf „0“ gezogen wird. Die Basis von
+T2 ist „low“, sie sperrt und der Pegel am
+Kollektor von T2 ist daher „high“ und die
+Lampe brennt nicht.
+Innerhalb von etwa 10 ms wird die Basis
+von T2 „high“, was bedeutet, dass der
+Kollektor von T2 auf „0“ gezogen wird. Die
+Basis von T1 ist „low“, sie ist gesperrt und
+der Pegel am Kollektor von T1 ist daher
+„high“.
+
+
+Wie in Abb. 7, jetzt mit einer LED verbunden. Innerhalb von etwa 5 ms wird die Basis
+von T2 „hoch“, was bedeutet, dass der
+Kollektor von T2 auf „0“ gezogen wird. Die
+Basis von T1 ist „low“, sie ist gesperrt und
+der Pegel am Kollektor von T1 ist daher
+„high“. Die LED leuchtet.
+Schalten am Ausgang des GB
+Trafo 814 (AC)
+Zeitskala 20 ms/div
+Bei den oben beschriebenen Messungen
+habe ich jeweils den Eingang des GB abgeklemmt und den Kondensator durch Kurzschließen des Ausgangs entladen. Bei den
+folgenden Messungen habe ich immer den
+Ausgang des GB verbunden. Dazu darf
+keine direkte elektrische Verbindung zum
+FF bestehen. Deshalb habe ich den GB vom
+FF getrennt und über den PB die Verbindung zum FF hergestellt.
+
+
+Elektronik
+
+zwischen 35 und 50 Ω. Zweitens hat die
+LED am Anfang einen viel höheren Widerstand, viel höher als die 560 Ω von R7.
+Drittens ist die Ladezeit des Kondensators
+im GB viel zu lang. Da die Ladezeit des
+Kondensators wegfällt, steht die Spannung
+nun sofort zur Verfügung, wodurch die
+Transistoren wesentlich früher schalten
+können. Die LED leuchtet nicht.
+
+In Abb. 9 ist das gleiche zu sehen wie in
+Und die Lampe brennt nicht.
+
+Schalten am Eingang des GB
+SPS 7330 (DC)
+Zeitskala 20 µs/div
+Die Änderungen für die folgenden Messungen sind der SPS 7330 für die Gleichspannung und der modifizierte GB mit 9 VStabilisator. Ich habe die Zeitbasis auf
+200 µs eingestellt, und ich schalte die
+Stromversorgung am Eingang des GB ein.
+
+
+Wie zu erwarten, ist Abb. 10 gleich Abb. 7.
+Aber auch jetzt ist die Versorgungsspannung schon nach wenigen µs voll vorhanden.
+
+
+am Kollektor von T2 stabilisiert hat. Der
+eigentliche Schaltmoment ist bereits nach
+ca. 10 µs. Die Lampe brennt nicht.
+
+
+Jetzt wird man vielleicht denken, dass
+aber nicht so. Dafür gibt es drei Gründe:
+Zum einen liegt der Widerstand der Lampe
+
+
+
+
+
+
+
+Zeit zu lang ist und daher T2 statt T1
+geschaltet wird. Die LED leuchtet daher
+auf.
+Schalten am Ausgang des GB
+SPS 7330 (DC)
+Zeitskala 10 µs/div
+Bei den letzten drei Bildern schalte ich den
+Ausgang des GB wieder um. Die Zeitbasis
+ist jetzt auf 10 µs eingestellt.
+
+
+Kollektor von T2 (violette Linie). Nach
+etwa 50 µs ist die Spannung stabil. Der
+eigentliche Schaltmoment liegt bei ca. 3 µs,
+und die Lampe brennt nicht.
+etwa 65 µs, bis der Pegel am Kollektor von
+T1 (gelbe Linie) stabil ist. Der eigentliche
+Schaltmoment liegt bei ca. 6 µs.
+
+
+
+der mit Lampe gleicht. Der eigentliche
+Schaltmoment liegt wieder bei ca. 3 µs und
+die LED leuchtet nicht. Der Unterschied
+besteht jedoch darin, dass dieser Schaltmoment weniger deutlich ist (gelbe Linie).
+Es dauert auch viel länger, etwa 85 µs, bis
+die Spannung am Kollektor von T2 stabil
+ist. Da die LED auch einen viel größeren
+Widerstand hat als die Lampe, ist auch die
+Spannung am Kollektor von T2 geringer:
+8,8 V bei Lampe und 8 V bei der LED.
+Je nachdem, welche LED verwendet wird,
+muss der Vorwiderstand angepasst werden,
+damit der Strom durch die LED begrenzt
+wird. Ansonsten würde ein Strom von
+28 mA durch die LED fließen. Dies hängt,
+wie erwähnt, von der verwendeten LED ab.
+Ein Wert von 1000 Ω für R19 erscheint mir
+ausreichend. Da die von mir verwendeten
+LEDs viel Licht erzeugen, habe ich den
+Wert von R19 auf 2700 Ω erhöht.
+
+
+Elektronik
+
+
+Da es nicht praktikabel ist, immer zuerst
+den GB an die Spannungsversorgung anzuschließen und erst dann den Ausgang mit
+den anderen Silberlingen zu verbinden, ist
+es besser, R16 zu verkleinern. Um den
+normalen Betrieb wiederherzustellen, habe
+ich für meine FFs für R16 einen Wert von
+560 Ω gewählt.
+
+LTspice
+Wie sieht es aus, wenn wir das Flip-Flop in
+LTspice [2] simulieren? Das Problem ist
+jedoch, dass in der Datenbank keine Lampe
+verfügbar ist. Es gibt eine NEON-Lampe,
+aber die funktioniert anders als die fischertechnik-Lampe. Es ist auch nicht möglich,
+die Eingänge während der Simulation zu
+ändern. Es ist auch kein Schalter oder Taster
+in der Datenbank vorhanden. Deshalb habe
+ich selbst eine Lampe gezeichnet.
+Nachdem ich das Schaltbild (Abb. 18) in
+LTspice gezeichnet hatte, konnte ich die
+
+Simulation starten. Zuerst musste ich die
+„Traces“ auswählen:
+
+
+
+
+
+Kanal 1: V(t1c) (gelb)
+Kanal 2: V(t1b) (cyan)
+Kanal 3: V(t2c) (violett)
+Kanal 4: V(t2b) (blau)
+
+Siehe auch die Beschriftungen am oberen
+Rand von Abb. 19. Da die „RUNTIME“
+standardmäßig auf 1 Sekunde eingestellt ist,
+war es notwendig, die „Transient“-Einstellungen auf „.tran 120 μs startup“ zu setzen,
+damit die Anzeige mit der des Oszilloskops
+übereinstimmt. Leider musste ich die vertikale Skalierung immer manuell einstellen,
+da sich das „Auto-Scaling“ nicht abschalten
+lässt.
+Um das Flip-Flop in LTspice zu simulieren,
+habe ich anstelle einer Lampe einfach einen
+50 Ω-Widerstand verwendet. Um den
+Betrieb mit einer LED zu bekommen, habe
+ich R19 auf 1000 Ω erhöht und verschiedene LEDs aus der Datenbank ausprobiert.
+
+
+
+Indem R16 dann gleich R7 = 560 Ω
+gemacht wird, sind die Verhältnisse wieder
+normal (Abb. 23).
+
+stabil bei ca. 8,5 V liegt. Dadurch steigt
+auch die Spannung an der Basis von T2
+(blau). Nach etwa 16 µs schaltet er durch.
+Dies ist deutlich an der Höhe der Spannung
+am Kollektor von T2 (violett) zu erkennen:
+Sie wird jetzt auf „0“ gezogen.
+
+
+entsprechen, oder? Dass dem nicht so ist,
+liegt einfach daran, dass in der simulierten
+Welt alles ideal und ohne Abweichungen
+ist.
+Wir sehen deutlich, dass die Spannung am
+Kollektor von T2 (violett) schnell ansteigt
+und nach ca. 40 µs stabil bei ca. 8,8 V liegt.
+Dadurch steigt auch die Spannung an der
+Basis von T1 (cyan). Nach ca. 12 µs schaltet es durch. Dies ist deutlich an der Höhe
+der Spannung am Kollektor von T1 (gelb)
+zu erkennen: Er wird auf „0“ gezogen.
+Die imaginäre Lampe konnte also nicht
+brennen.
+
+
+LED, Typ NSPW500BS der Marke Nichia,
+ersetzt. Ich selbst hatte ein ähnliches Bild
+erwartet, wie es in Abb. 17 zu sehen ist.
+Wenn ihr eine andere LED aus der Datenbank auswählt, wird dieses Bild aber immer
+anders sein. Es kommt also auf die
+Eigenschaften der gewählten LED an. Der
+Widerstand der LED ist am Anfang um ein
+Vielfaches höher als der einer Lampe.
+Wir sehen, dass die Spannung am Kollektor
+von T1 etwas schneller ansteigt als die an
+T2. Der Kipppunkt liegt bei etwa 17 µs:
+Dann sind beide Spannungen kurzzeitig
+gleich, die Spannung an T2 steigt dann aber
+schnell auf 8,3 V an. Allerdings dauert es
+jetzt 90 µs, bis dies der Fall ist. Unsere virtuelle LED wird nicht aufleuchten können.
+Auffällig ist, dass die Spannungshöhe des
+Kipppunktes knapp 3 V beträgt. Mit Lampe
+sind es 1,7 V und ohne Lampe 1,8 V.
+
+
+Lampe weglassen. Wir sehen nun, dass die
+Spannung am Kollektor von T1 (gelb)
+schnell ansteigt, aber erst nach ca. 70 µs
+
+R19 = 1000 Ω. Dieses Bild ist fast identisch
+mit Abb. 20. Der Kipppunkt liegt immer
+noch bei 16 µs, aber er ist etwas höher:
+2,1 V. In diesem Fall leuchtet die virtuelle
+LED auf.
+
+
+Elektronik
+
+beiden stabilen Lagen übergeht. Jedes Mal,
+wenn die Simulation startet, bekomme ich
+dieses Bild. Dies gilt natürlich nur in einer
+idealen Welt, in der die verwendeten Bauteile keine Toleranzen aufweisen. In der
+realen Welt, in der wir alle leben, sind wir
+aber abhängig von den Abweichungen, die
+die Bauteile nun mal haben.
+
+
+
+
+Die Darstellung in Abb. 23 hätten wir schon
+in Abb. 21 sehen sollen. Das Bild zeigt,
+dass R16 auf 560 Ω abgesenkt wurde.
+
+
+Der Kipppunkt liegt immer noch bei 16 µs,
+aber jetzt bei etwa 2,5 V. Ergebnis: keine
+leuchtende LED.
+Aber was würde passieren, wenn R16 = R7
+= 560 Ω gemacht würde? Und ohne Lampe
+oder LED. Das sehen wir in Abb. 24.
+Nach 22 µS beginnt eine Art „stabile“ instabile Phase, die erst nach 30 µS in eine der
+
+In Abb. 25 sehen wir, was passiert, wenn
+R16 nur 1 Ω niedriger ist als R7. Wir sehen,
+dass der Transistor T1 geöffnet ist und die
+Spannung am Kollektor von T1 (gelb) auf
+„0“ zieht. Der Transistor T2 sperrt, wodurch
+die Spannung am Kollektor von T2 (violett)
+hoch wird.
+
+
+nur 1 Ω höher als R7. Wir sehen jetzt, dass
+der Transistor T2 geöffnet ist und die Spannung am Kollektor von T2 (violett) auf „0“
+zieht. Der Transistor T1 sperrt, wodurch die
+Spannung am Kollektor von T1 (gelb) hoch
+wird.
+
+
+
+
+Fazit
+Aufgrund eines EU-Gesetzes ist es nicht
+mehr erlaubt, Glühbirnen herzustellen und
+zu verkaufen. Wenn die Lampen ausfallen,
+müssen wir auf LEDs umsteigen. Allerdings unterscheiden sich die Eigenschaften
+einer LED wesentlich von denen einer
+Lampe. Bei unserem Flip-Flop können wir
+die Lampe also nicht einfach durch eine
+LED ersetzen.
+Wollen wir weiterhin den Standard-Gleichrichterbaustein verwenden, müssen Anpassungen vorgenommen werden. Je nach
+verwendeter LED muss der Strom durch
+Erhöhen von R19 begrenzt werden. Der
+Wert von R16 muss jedoch verringert
+werden, um den viel höheren Widerstand
+der LED im Vergleich zur Lampe auszugleichen.
+
+
+Werden die beschriebenen Änderungen
+vorgenommen, spielt es keine Rolle mehr,
+welche Spannungsversorgung ihr verwenden möchtet. Ich empfehle aber die
+Verwendung eines stabilisierten und einstellbaren Geräts.
+Ich hoffe, dass ich mit diesem Beitrag mehr
+Klarheit darüber geschaffen habe, wie ein
+Flip-Flop funktioniert – mit Lampe oder mit
+LED.
+
+Quellen
+[1]
+
+ftc-Forum: Silberlinge. Im Forum der
+fischertechnik Community, 2021.
+
+[2]
+
+Analog Devices: LTspice.
+https://www.analog.com/en/designcenter/design-tools-andcalculators/ltspice-simulator.html
+
+[3]
+
+Peter Krijnen: Silberlinge: Original
+oder Nachbau (Teil 2). 2/2021, S. 80–89.
+
+

@@ -1,0 +1,431 @@
+
+Computing
+
+Computing
+
+Economatics BBC-Buggy mit moderner
+Elektronik im Linien-Labyrinth
+Dirk Uffmann, Roland Enzenhofer
+Die englische Firma Economatics brachte 1983 den BBC-Buggy heraus, der damals von einem
+Heimcomputer gesteuert wurde. Hier zeigen wir eine bezüglich der Elektronik modernisierte
+Variante im Linien-Labyrinth mit einer Aufgabenstellung, die auch damals schon bearbeitet
+und in einem Fernsehbeitrag von BBC vorgestellt wurde.
+
+Einleitung
+
+Aufbau des Modells
+
+Nachdem Dirk Fox unseren vorhergehenden Beitrag in dieser Ausgabe der zum fischertechnik PIC-Buggy von Economatics aus dem Jahr 2002 gelesen hatte,
+teilte er uns seine Anregung mit, diesen
+Fahrroboter doch als interessante Aufgabe
+ein Linien-Labyrinth lösen zu lassen. Wir
+sinnierten zunächst darüber, den kleinen
+Buggy um die nötigen Funktionen zu erweitern, also Rad-Encoder und einen Liniensensor hinzuzufügen. Doch dann kam uns
+die Idee, den BBC-Buggy von 1983 nachzubauen und mit moderner Elektronik und
+einem Display auszustatten, denn der BBCBuggy von 1983 hat das von ihm erkundete
+Linien-Labyrinth auch auf dem Display des
+Heimcomputers angezeigt. Das kann man in
+dem BBC-Fernsehbeitrag „Making the
+Most of the Micro (8): Everything Under
+Control“ sehen.
+
+Roland hat sich sogleich begeistert an den
+Aufbau des Modells gemacht und es nach
+München gesendet (Abb. 1). Seine umfangreiche Fischertechnik-Sammlung hatte fast
+alle benötigten Teile vorrätig, sogar die
+benötigten Schrittmotoren (Abb. 2). Das
+einzig fehlende Spezialteil, das Lager für
+die Rollkugel hinten, hat Roland auf seinem
+3D-Drucker angefertigt (Abb. 3 und 4).
+Später hat er zusätzlich noch einen kompletten BBC-Buggy im Originalzustand
+erworben.
+
+Es gibt interessante Seiten zum BBCBuggy im Netz. Besonders gefallen mir die
+Seiten von Neil Fazakerley, wo man sogar
+eine komplette Bauanleitung des BBCBuggies findet, und der Blog von Dirk Fox
+zum Thema „Wie weit fischertechnik vor
+32 Jahren seiner Zeit voraus war“.
+
+
+
+laufenden Schrittmotoren und dem Display
+fast 2 A Strom. Würde zum Schalten dieses
+Stromes direkt der Motorschalter eingesetzt, würde dessen Spannungsabfall mit bis
+zu 0,3 V von der Akkuspannung abgehen.
+Mit dem Power-MOSFET muss er nur noch
+den Steuerstrom von < 100 µA schalten.
+
+
+Power-MOSFET
+
+mit Glasmurmel (wird noch ersetzt durch eine
+Stahlkugel mit 16 mm Durchmesser)
+
+
+Steuerelektronik
+Über einen Power-MOSFET (Metall-OxidHalbleiter-Feldeffekttransistor) wird der
+gesamte Versorgungsstrom des Systems
+ein- und ausgeschaltet. Abb. 5 zeigt die
+Platine für die Stromverteilung zu den
+einzelnen Modulen. Der Buggy zieht mit
+
+Motortreiberplatinen L298, die auf dem
+Zuschnitt einer CD-Hülle montiert sind.
+
+Für die Steuerung wird ein Arduino MegaBoard mit dem ATMEGA 2560 und einem
+240 x 400 Pixel Farb-Display mit einem
+ILI9327 als Controller eingesetzt. Über den
+PORT K des ATMEGA 2560 werden
+mittels zweier Motortreiberplatinen L298
+
+(Abb. 6) die beiden Schrittmotoren des Antriebs gesteuert.
+Die Schrittmotoren sind zweiphasige, bipolare Typen mit 7,5° Schrittwinkel von
+Crouzet (Bestell-Nr. 82920001). Wir
+steuern diese mit Halbschritten an. Es ergibt
+sich für jeden Motor an den vier Anschlüssen folgendes periodische Muster (4-Bit
+Nibble als hexadezimale Zahl) mit acht
+Halbschritten je Periode:
+
+Computing
+
+= 56 Halbschritte.
+Über PIN F des ATMEGA2560 werden alle
+Sensoren eingelesen, das sind:
+∂ zwei fischertechnik-Kollisionstaster
+∂ ein fischertechnik-Fotowiderstand
+∂ ein eigens konstruierter Linien-Sensor
+mit vier Sensor-Elementen ITR8307.
+
+0xE, 0xA, 0xB, 0x9, 0xD, 0x5, 0x7, 0x6.
+
+Tab. 1 zeigt die C-Funktion zur Ansteuerung der Schrittmotoren.
+
+
+Mit der Geometrie des Modells (Abb. 7)
+ergeben sich dann folgende Daten für die
+Bewegungssteuerung:
+∂ Raddurchmesser (inkl. Gummiringe,
+2 mm): 62 mm
+∂ Radabstand: 160 mm
+∂ Getriebeuntersetzung: 1:3
+∂ Vollständige Radumdrehung: 96 Halbschritte
+∂ Drehung um 90 Grad:
+3•96•(160/4)/62 = 186 Halbschritte
+∂ Weg je Halbschritt:
+π•62 mm/96/3 = 0,676 mm
+∂ Weg 10 mm: 15 Halbschritte (1,5%
+Fehler)
+∂ Mittlerer Abstand zwischen Linien-Sensor-Elementen und dem Buggy-Rotationspunkt zwischen den Rädern: 38 mm
+
+die zugehörige Schaltung. Die Sensor-Elemente sind so platziert, dass die beiden
+mittleren mit einem Abstand von 8 mm
+vollständig über der schwarzen Linie
+(Breite 15 mm) zu liegen kommen können.
+Die Spurregelung nutzt die Messwerte dieser beiden Sensoren, um auf der Linie zu
+bleiben. Die äußeren Sensorelemente liegen
+10 mm dahinter mit einem Abstand von
+30 mm zueinander und sollen die Abzweigungen erkennen. Sie liegen deshalb nach
+hinten versetzt, weil sich so einfacher
+ermitteln lässt, ob bei einer Abzweigung
+auch noch eine Linie geradeaus weiterführt.
+Die Schaltung und das Messprinzip sind
+angelehnt an den Polulu-Sensor QTR-8RC.
+Die Messung an den Sensorelementen
+funktioniert so:
+∂ An einem digitalen Ausgangs-Pin am
+Mikrocontroller wird der 10 nF-Kondensator am Fototransistor zunächst auf ca.
+5 V aufgeladen, Ladezeit > 50 µs.
+∂ Dann wird der Pin auf Eingang umgeschaltet (ohne Pull-up Widerstand) und
+die Zeitmessung für die Entladung gestartet. Dazu wird in einer Schleife für
+
+
+
+maximal eine Millisekunde abgefragt, ob
+der Pin von high auf low gewechselt hat;
+wenn ja, wird der zugehörige Zeitpunkt
+(Timerwert) abgespeichert und als Messergebnis genutzt.
+
+Der Timer läuft in Schritten von 4 µs. Dann
+erhält man mit einem 8-bit-Timer Werte
+zwischen ca. 60 auf weißem Papier und 250
+(Limit bei 1 ms) auf schwarzem Papier.
+Tab. 2 zeigt den für die Messroutine verwendeten C-Code. Abb. 10 zeigt den Ausschnitt des Displays mit den Messwerten.
+
+Labyrinth
+
+
+Der Widerstand R8 ist optional und kann
+weggelassen werden. Man braucht ihn nur,
+wenn die Infrarot-LEDs ständig leuchten
+sollen (z. B. weil man einen digitalen Pin
+zum Einschalten der LEDs einsparen
+möchte). Der bipolare Transistor ist vom
+Typ BCX54-16 (Stromverstärkung 250
+typisch). Die LEDs werden mit 50 mA
+betrieben und alle 5 ms für 1 ms eingeschaltet (Tastverhältnis 20%). In diesem
+Pulsbetrieb könnte man die LEDs auch mit
+bis zu 250 mA betreiben; dazu müsste man
+den Widerstand R1 von 35 Ω auf 7 Ω und
+den Widerstand R7 von 22 kΩ auf 4,7 kΩ
+reduzieren (den optionalen Widerstand R8
+darf man dann nicht einbauen).
+
+Messwerten. Unten die Messwerte des LinienSensors, die auch als Grauwerte dargestellt
+sind. Hier ist der Sensor mittig über einer
+schwarzen Linie platziert.
+
+
+Wie das Original von 1983 erkundet der
+Buggy ein Linien-Labyrinth bis zum Zielpunkt und berechnet danach den kürzesten
+Pfad zwischen Start und Ziel. Diesen Pfad
+fährt er dann vom Zielpunkt zurück bis zum
+Startpunkt (d. h. statt links wird rechts
+abgebogen und umgekehrt). Das Labyrinth
+wurde mit der Freeware inkscape erstellt, in
+Größe A3 ausgedruckt und mit Tesafilm auf
+dem Boden festgeklebt (Abb. 11).
+
+Zielpunkt ist durch das große schwarze
+Rechteck markiert (Linienbreite: 15 mm,
+Raster für die Abzweigungspunkte: 75 mm)
+
+Am Anfang des Labyrinths sollte der Buggy
+mit dem Liniensensor in etwa mittig auf
+einer schwarzen Linie stehen und mindestens einer der Sensoren vollständig schwarz
+und ein anderer vollständig weiß sehen. Zu
+Beginn wird nämlich eine Kalibrierung
+durchgeführt. Dazu wird der Schwellenwert, der für die Mustererkennung zwischen
+schwarz und weiß unterscheidet, genau
+mittig zwischen den maximalen und den
+minimalen Messwert gelegt.
+Für die Erkundung des Labyrinths auf dem
+Hinweg vom Startpunkt zum Zielpunkt
+
+
+Computing
+
+gelten an den Abzweigungen folgende Prioritäten:
+1.
+2.
+3.
+4.
+
+Links abbiegen (L = Left = 1)
+Geradeaus fahren (S = Straight = 2)
+Rechts abbiegen (R = Right = 3)
+Zurück fahren (B = Back = 4)
+
+Die an den Abzweigungspunkten gewählten
+Wege für die Weiterfahrt werden in einem
+Feld track [intersection] gespeichert und
+stehen später für die Berechnung des
+kürzesten Pfades track_reduced [intersection] zur Verfügung.
+
+RBL → B
+SBL → R
+SBS → B
+LBL → S
+
+341 → 4
+241 → 3
+242 → 4
+141 → 2
+
+Dafür wird der in Tab. 3 dargestellte CCode genutzt. Abb. 12 zeigt den Ausschnitt
+des Displays mit der Darstellung des erkundeten Labyrinths in weiß und dem kürzesten
+Pfad in rot. Oben sind auch die Pfade track
+[] und track_reduced [] als Buchstabenfolgen dargestellt.
+
+Nachdem eine Abzweigung erkannt wurde,
+fährt der Buggy noch so weit geradeaus vor,
+bis das Zentrum seiner Drehbewegung über
+dem Abzweigungspunkt zu liegen kommt.
+Erst dann führt er die Drehung aus.
+Sobald der Buggy den Zielpunkt erreicht
+hat, berechnet er aus dem gespeicherten
+Hinweg den kürzesten Pfad vom Startpunkt
+zum Zielpunkt. Dafür werden schrittweise
+ein Element des Hinweges track [] in den
+reduzierten Pfad track_reduced [] kopiert
+und dann die jeweils letzten drei Elemente
+des reduzierten Pfades track_reduced []
+überprüft und ggf. nach folgendem Schema
+ersetzt:
+LBR → B
+LBS → R
+
+143 → 4
+142 → 3
+
+Labyrinth (weiß) und dem kürzesten Pfad (rot)
+
+Video
+In diesem Video kann die Fahrt des BBCBuggies im Labyrinth bewundert werden.
+
+//************************************************************************************
+// Function to move the buggy with halfsteps of the stepper motors
+// turns the step motors of the robot by a number of steps in the specified directions
+// dir = 1 forward, dir = 0 stop, dir = -1: backward
+//************************************************************************************
+void move (uint8_t steps, int8_t dir_left, int8_t dir_right) {
+const uint8_t phase_right[8] = {0xEF, 0xAF, 0xBF, 0x9F, 0xDF, 0x5F, 0x7F, 0x6F};
+const uint8_t phase_left[8] = {0xFE, 0xFA, 0xFB, 0xF9, 0xFD, 0xF5, 0xF7, 0xF6};
+uint8_t phase_index_left = 0;
+uint8_t phase_index_right = 0;
+while (steps) {
+while (collision_sensor_left || collision_sensor_right) sleep_mode(); //stop
+steps_left += dir_left;
+steps_right+= dir_right;
+phase_index_left = (uint8_t) steps_left & 0x0007;
+phase_index_right = (uint8_t) steps_right & 0x0007;
+PORTK = phase_left[phase_index_left] & phase_right[phase_index_right] ;
+wait_ms(10);
+steps--;
+}
+}
+
+Tab. 1: C-Funktion zur Ansteuerung der Schrittmotoren
+
+
+
+
+//****************************************************
+// Measures the track sensors
+// Function execution within ca. 1 ms
+//****************************************************
+uint8_t measure_track_sensor (void) {
+uint8_t status_input = 0;
+uint8_t timestamp = 0;
+uint8_t i = 0;
+uint8_t flag_to_measure = 0x2F; //mark inputs for measurement
+uint8_t pattern = 0;
+light_sensor = 250;
+while (i<4) {
+track_sensor [i] = 250; //init with max value for time-out
+i++; }
+//switch on pullups on the tracking sensors and the light sensor input lines to charge the sensor lines
+PORTF |= 0x2F;
+// switch sensor lines to output to charge sensor lines to high (tau = 220 Ohm * 47 nF = 10 µs)
+DDRF |= 0x2F;
+TCNT0 = 0;
+while (TCNT0 < 40); //wait for 160µs
+TCNT0 = 0; // 4 µs per timer step, i.e. 64 system clocks, max value 250 i.e. 1 ms
+DDRF &= 0xD0;
+//switch off pullups on the sensor input lines to discharge the sensor lines via Phototransistor
+PORTF &= 0xD0;
+PORTF |= _BV(PF4); //pulse IR LEDs
+do {
+status_input = PINF; //read sensor lines
+timestamp = TCNT0;
+if (flag_to_measure & 0x01) {
+if (!(status_input & 0x01)) {
+track_sensor[3] = timestamp;
+flag_to_measure &= ~(0x01); } }
+if (flag_to_measure & 0x02) {
+if (!(status_input & 0x02)) {
+track_sensor[2] = timestamp;
+flag_to_measure &= ~(0x02); } }
+if (flag_to_measure & 0x04) {
+if (!(status_input & 0x04)) {
+track_sensor[1] = timestamp;
+flag_to_measure &= ~(0x04); } }
+if (flag_to_measure & 0x08) {
+if (!(status_input & 0x08)) {
+track_sensor[0] = timestamp;
+flag_to_measure &= ~(0x08); } }
+if (flag_to_measure & 0x20) {
+if (!(status_input & 0x20)) {
+light_sensor = timestamp;
+flag_to_measure &= ~(0x20); } }
+} while (timestamp < 250);
+PORTF &= ~(_BV(PF4)); //switch off IR LEDs
+//
+
+}
+
+
+detect pattern
+pattern = 0;
+i=4;
+while (i)
+{
+i--;
+if (track_sensor [i] > threshold) pattern |= 1 << i; }
+return pattern;
+
+Tab. 2: C-Code der Messroutine für den Linien-Sensor
+
+//
+
+//
+//
+
+//
+
+Computing
+
+copy first two items from original track
+track_reduced[1] = track[1];
+track_reduced[2] = track[2];
+i = 3;
+j = 3;
+while (track[i]) {
+copy one further item from original track
+track_reduced[j] = track[i];
+check the last three items for reduction
+if (track_reduced[j-1] == 4) {
+if (track_reduced[j-2] == 1) {
+switch (track_reduced[j]) {
+case 1:
+track_reduced[j-2] = 2;
+j--;
+break;
+case 2:
+track_reduced[j-2] = 3;
+j--;
+break;
+case 3:
+track_reduced[j-2] = 4;
+j--;
+break;
+default: //no reduction possible
+j++;
+}
+}
+else if (track_reduced[j-2] == 2) {
+switch (track_reduced[j]) {
+case 1:
+track_reduced[j-2] = 3;
+j--;
+break;
+case 2:
+track_reduced[j-2] = 4;
+j--;
+break;
+default: //no reduction possible
+j++;
+}
+}
+else if (track_reduced[j-2] == 3) {
+switch (track_reduced[j]) {
+case 1:
+track_reduced[j-2] = 4;
+j--;
+break;
+default: //no reduction possible
+j++;
+}
+}
+else j++;
+}
+else j++;
+i++;
+}
+delete reduced items (max two may occur)
+track_reduced[j] = 0;
+track_reduced[j+1] = 0;
+
+Tab. 3: C-Code zur Ermittlung des kürzesten Pfades
+
+
+

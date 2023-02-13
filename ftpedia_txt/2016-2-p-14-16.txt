@@ -1,0 +1,104 @@
+
+
+Modell
+
+Urlaubskasten-Modell 2: Schrittförderer
+Stefan Falk
+Ausschließlich aus Bauteilen des in der ft:pedia-Ausgabe 1/2016 [1] zusammen gestellten
+Urlaubs-Baukastens besteht das hier vorgestellte einfache Schrittförderwerk.
+
+
+Die Maschine besteht aus zwei Rahmenteilen, auf denen das zu befördernde Stückgut aufliegt. Von unten wird es über eine in
+der Mitte verlaufende lange Platte immer
+wieder angehoben, ein Stück weiter versetzt
+und wieder abgelegt. Diesen Ablauf zeigt
+die Bilderserie in Abb. 3. Tests mit
+Besuchern ergaben, dass die Leute nur
+schwer aufhören können, das Stückgut
+durch Kurbeln hin und her zu befördern.
+
+Zum Bau des Modells
+Die beiden Rahmenstränge sind gleich
+aufgebaut; Abb. 2 zeigt die Details. In
+einem sind lediglich zwei Baustein 15 mit
+zwei Zapfen durch solche mit Bohrung
+ersetzt (siehe Abb. 5). Die quadratischen
+Bauplatten 30 ∙ 30 sind durch Winkelsteine
+15° am Rahmen angebracht. Gebaut wie
+gezeigt können die Rahmen die zu
+
+
+befördernde Kombination aus Drehscheibe
+und Zahnrad Z40 zuverlässig auffangen.
+
+Modell
+
+Die Bausteine 15 mit Bohrung stecken in je
+einer Rastkurbel. Die Kurbeln sind, wie die
+Rahmenteil; das andere hat für den beweglichen Mittelteil keine Bedeutung.
+
+
+
+Beide Kurbeln sind durch Zahnräder Z20
+und Kette so miteinander verbunden, dass
+sie sich immer gleich bewegen. Da die
+Förderplatte an beiden Kurbeln eingehängt
+ist, bewegt sie sich also letztlich kreisförmig. In der oberen Hälfte ihrer Bewegung nimmt sie das Stückgut mit, in der
+unteren Hälfte der Bewegung liegt das
+Stückgut auf dem Rahmen auf, während die
+Förderplatte an die Ausgangsposition
+zurückkehrt.
+
+
+Parallelkurbel-Getriebe
+Der bewegliche Mittelteil besteht einfach
+aus zwei Platten 30 ∙ 90, die mit einem
+Baustein 5 15 ∙ 30 3N (38428) verbunden
+sind. An den Enden stecken je ein Baustein
+15 und ein Baustein 15 mit Bohrung.
+
+
+Diese Art von Mechanik, bei der zwei (oder
+mehr) Kurbeln synchron laufen, nennt man
+Parallelkurbelgetriebe (vgl. auch [2], und
+
+
+
+wer’s ganz genau wissen will, findet in [3]
+viele Informationen und Modelle dazu).
+
+ist das des Parallelkurbeltriebs. Von unten
+sieht das dann so aus:
+
+Antrieb
+Eine der Kurbeln wird von Hand angetrieben – wer einen Motor besitzt, wird ihn
+nach dem Ausprobieren von Hand sicherlich anbringen und die Förderanlage auch
+elektrisch betreiben. Abb. 7 und 8 zeigen
+eine Konstruktionsmöglichkeit:
+
+
+Quellen
+[1]
+
+Falk, Stefan: Der WohnzimmerDienstreisen-Urlaubs-Notfallkasten.
+ft:pedia 1/2016, S. 31-36.
+
+[2]
+
+Geerken, Ralf: Die Geradführung
+einer Viergelenkkette im Einsatz bei
+einer kleinen Laufmaschine. 4/2012, S. 4-10.
+
+[3]
+
+Fischer-Werke: Parallelkurbelgetriebe, in: hobby 2 Begleitbuch
+Band 5, 1973, S. 18-29.
+
+Untersetzungsgetriebe
+
+Die Achse im Z30 (zum leichteren Kurbeln
+mit zwei Hülsen versehen) wird zweimal
+per Z10 auf Z20 untersetzt. Das letzte Z20
+
+
+

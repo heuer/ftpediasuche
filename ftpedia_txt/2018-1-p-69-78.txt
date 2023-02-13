@@ -1,0 +1,396 @@
+
+Computing
+
+Computing
+
+Scratch mit fischertechnik
+Dirk Fox
+Die am Massachusetts Institute of Technology (MIT) entwickelte Einsteigerprogrammiersprache Scratch wird inzwischen in zahlreichen Schulen eingesetzt. Mit den von fischertechnik
+im Github zum Download bereitgestellten Programmen „FTScratchTXT“ und „FTScratchLT“
+lassen sich seit Ende 2016 auch der Robotics TXT Controller und der LT Controller mit einer
+entsprechenden Befehlserweiterung direkt aus Scratch(X) ansteuern. Nach Auskunft von
+fischertechnik soll bald auch der BT Smart Controller mit Scratch genutzt werden können.
+
+Hintergrund
+
+Scratch
+
+Scratch wurde unter der Leitung von Professor Mitchel Resnick am MIT Media Lab
+entwickelt und erstmals im Jahr 2007 veröffentlicht. Scratch soll vor allem Kinder
+ansprechen und spielerisch mit dem Programmieren vertraut machen. Die Programmentwicklungsumgebung (IDE) verfügt über ein Ausgabefenster, „Bühne“ genannt, auf der gezeichnet, aber auch Objekte (wie der Scratch-Kater) bewegt werden
+können (Abb 1, links). Die 360 x 480 Positionen des Fensters können über ein Koordinatensystem (Mittelpunkt = (0, 0)) angesprochen werden.
+
+Die Scratch-Entwicklungsumgebung (IDE,
+eine Internet-Verbindung. Es gibt auch
+einen „Offline Editor“ in der Version 2.0
+zum Download, der allerdings nicht mit den
+fischertechnik-Erweiterungen genutzt werden kann.
+
+Die Programmierung erfolgt mit grafischen
+Befehlselementen („Skripte“), die in einem
+Programmfenster
+zusammengeschoben
+(„gestapelt“) werden. Ein Programm-Block
+wird entweder durch ein externes Ereignis
+(z. B. eine Mausbewegung) oder einen
+Klick auf eine grüne Fahne über der
+„Bühne“ gestartet und kann mit einem
+Klick auf einen roten Stopp-Knopf angehalten werden. Die Umgebung unterstützt –
+ebenso wie ROBO Pro – parallele Prozesse:
+Im Programmfenster können mehrere Programmblöcke platziert und von unterschiedlichen Ereignissen gestartet werden.
+Das ermöglicht sehr kurze und elegante
+Programmsteuerungen.
+
+
+Scratch bietet alle üblichen Programmstrukturen wie Wiederholungen, Wartezeiten
+und Verzweigungen („Steuerung“). Daneben unterstützt es logische und mathematische Operationen („Operatoren“), Ereignisse zum Auslösen einer Operation („Ereignisse“) sowie die Auswertung von Eingaben („Fühlen“) wie der Mausposition,
+den Maustasten oder Timern.
+
+
+Die Objekte – selbst gezeichnet oder aus
+einer Bibliothek ausgewählt – die auf der
+Bühne erscheinen, können mit entsprechenden Skripten bewegt („Bewegung“) oder
+mit andern Kostümen ausgestattet werden
+(„Aussehen“). Sie können sich sogar Nachrichten zusenden, die auf der Bühne in einer
+Sprechblase angezeigt werden. Schließlich
+können Töne erzeugt oder eingespielt
+(„Klang“) und mit einem virtuellen Stift
+Zeichnungen angefertigt werden („Malstift“).
+Eine tiefer gehende Einführung in Scratch
+spare ich mir hier, da es im Internet zahlreiche hervorragende Einsteiger-Tutorials
+und Referenzhandbücher gibt, siehe z. B.
+[1, 2]. Außerdem enthält Scratch Schrittfür-Schritt- und Kurzanleitungen, die direkt
+aus der IDE aufgerufen werden können.
+Die erzeugten Scratch-Programme („Projekte“) können lokal oder in der „ScratchCloud“ gespeichert und umgekehrt in die
+IDE hochgeladen werden.
+
+FTScratch
+In der Entwicklerversion ScratchX wurden
+fischertechnik-Funktionen als Erweiterung
+(„Weitere Blöcke“) ergänzt. Als „Verbindungsglied“ zwischen ScratchX und dem
+TXT bzw. LT Controller dienen zwei ausführbare Programme – FTScratchTXT bzw.
+FTScratchLT –, die vor dem Aufruf von
+ScarchX im Browser gestartet werden
+müssen und die Koppelung mit dem jeweiligen Controller übernehmen. Sie sind für
+die Betriebssysteme Windows und Linux/
+Mac verfügbar – damit können die fischertechnik-Controller ohne „Klimmzüge“ auch
+aus anderen Betriebssystemen als Windows
+genutzt werden. Als Browser werden Firefox und Chrome empfohlen.
+Unter Windows benötigen FTScratchLT
+und FTScratchTXT das .NET Framework 4
+– es muss bei etwas älteren Betriebssystemversionen möglicherweise nachinstalliert
+werden.
+
+
+Eine Offline-Version von ScratchX gibt es
+leider nicht, und die entwickelten Programme können auch nicht in Scratch 2.0 genutzt
+werden. Einzige Lösung für die Nutzung
+ohne Internet-Zugang: Die Installation von
+ScratchX auf einem lokalen Webserver –
+das ist aber eine für einen Einsteiger kaum
+geeignete Option, daher gehe ich hier auch
+nicht näher auf diesen Lösungsweg ein.
+Für die Nutzung von FTScratchTXT/LT
+müssen zuvor lediglich die USB-Treiber für
+die beiden Controller installiert werden
+(sofern das nicht bereits geschehen ist). Die
+Github-Seiten zu FTScratchLT und FTScratchTXT [3, 4] enthalten sehr klare (und
+mehrsprachige) Installationsanleitungen.
+Die erweiterte ScratchX-IDE erlaubt allerdings keinen Download von kompilierten
+Projekten auf den Controller, sondern nur
+einen Online-Betrieb. In der Praxis ist das
+allerdings nur eine begrenzte Einschränkung: Der LT Controller unterstützt ohnehin keinen Programm-Download, und wenn
+man die Verbindung zum TXT via Bluetooth oder WLAN herstellt, ist auch so ein
+kabelloser Betrieb möglich.
+Startet man FTScratchTXT (derzeit v1.23),
+werden die unterschiedlichen Verbindungsoptionen angezeigt (Abb. 2).
+
+FTScratchTXT (Windows-Version)
+
+Ist der TXT angeschlossen und die Verbindung aufgebaut, werden in einem KontrollFenster (Abb. 3) die an den acht Eingängen
+anliegenden Werte bzw. Signale sowie die
+
+Zählerstände der vier schnellen Zählereingänge angezeigt. In der oberen Zeile wird
+die Version der auf dem TXT installierten
+Firmware (aktuell: 4.2.4.0) angegeben.
+
+Computing
+
+Die Auswertung eines Zählerwerts C1-C4
+und die der analogen Sensoren (Farbsensor,
+Abstandssensor, NTC-Widerstand und
+Fotowiderstand) an I1 bis I8 (Abb. 5).
+
+
+Operatoren
+Scratch-Operatoren umfassen einfache und
+komplexe arithmetische Operationen, Vergleiche, logische Verknüpfungen, die Erzeugung von Zufallszahlen sowie die Verarbeitung von Zeichenfolgen (Text).
+(Windows-Version)
+
+Das Kontrollfenster von FTScratchLT zeigt
+ebenfalls die an den Ein- und Ausgängen
+des LT Controllers anliegenden Werte an
+(Abb. 4).
+
+(Windows-Version)
+
+FTScratch für den LT ergänzt die Operatoren um die booleschen Operatoren „Schalter geschlossen?“ und „Lichtschranke geschlossen?“ an I1-I3. Außerdem kann der
+aktuelle Ausgabewert der beiden Motorausgänge abgefragt werden. FTScratch für den
+TXT kann über den booleschen Operator
+außerdem einen Reed-Kontakt abfragen,
+den Wert der Zählereingänge C1-C4 sowie
+den eines analogen Sensors (Farbsensor,
+Abstandssensor, NTC-Widerstand und Fotowiderstand) an I1 bis I8 auslesen (Abb. 6).
+
+
+Ereignisse
+
+Klang
+
+FTScratch für den LT Controller erweitert
+Scratch um ein neues (Start-) Ereignis: Die
+Auswertung eines digitalen Inputs – Schalter, Reed-Kontakt oder Fotodiode an I1 bis
+I3 (beim TXT: I1 bis I8). FTScratch für den
+TXT kennt zwei weitere Startereignisse:
+
+FTScratch für den TXT bringt auch zusätzliche Klang-Befehle mit: Damit lassen sich
+bis zu 29 auf dem TXT installierte Sounddateien abspielen (Abb. 7). Beim zweiten
+Befehl wird das Programm erst fortgesetzt,
+wenn der Klang fertig abgespielt wurde.
+
+
+
+
+
+Ausgangssteuerung
+FTScratch erweitert die Befehls-Skripte
+von Scratch vor allem um die Möglichkeit,
+die PWM-Ausgänge (Pulsweitenmodulation) – beim LT: M1 und M2, beim TXT:
+M1-M4 bzw. O1-O8 – für die Motor- bzw.
+Lampensteuerung mit einem Wert von 0 bis
+8 zu belegen (Abb. 8). Die feinere Steuerung über 512 Schritte wird von FTScratch
+nicht unterstützt.
+
+
+FTScratch bietet für den TXT zusätzlich
+erweiterte Motorbefehle, mit denen eine
+Ansteuerung der Encoder-Motoren möglich
+ist (Abb. 10).
+Schließlich können beim TXT noch die
+Eingänge auf „digital“ (Voreinstellung:
+„analog“) und die Zähler C1 bis C4 zurückgesetzt werden. Mit einem einzigen Befehl
+kann der gesamte TXT auf die Anfangseinstellung (Eingänge: analog, Ausgänge:
+0) gesetzt werden (Abb. 11).
+
+
+Bei den (einfachen) Motorbefehlen kann
+zusätzlich die Bewegungsrichtung (vorwärts/rückwärts) gewählt werden (Abb. 9).
+Zählereingänge und des gesamten TXT
+
+
+
+
+Computing
+
+Beispielprogramme
+Ampelsteuerung
+Versuchen wir nun, eine erste einfache Programmieraufgabe mit FTScratch zu lösen:
+Die Steuerung einer Fahrzeug-Lichtzeichenanlage mit Fußgänger-Bedarfsampel.
+Wir brauchen insgesamt fünf Ausgänge, um
+die Lichtzeichenanlage der Fahrzeuge (rot,
+gelb, grün) und die Fußgängerampel (rot,
+grün) anzusteuern – dafür benötigen wir
+einen TXT. Wer einen LT verwenden
+möchte, muss die Steuerung auf die Fußgängerampel (zwei Ausgänge) beschränken.
+Die Fußgänger-Bedarfsampel soll drei Sekunden nach dem Drücken des Bedarfsschalters auf Grün wechseln und nach
+weiteren fünf Sekunden wieder auf Rot. Die
+Verzögerungszeiten zwischen den Wechseln der Phasen der Lichtzeichenanlage
+(Abb. 12) soll dabei eine Sekunde betragen.
+
+
+solchen Lichtzeichenanlage (vulgo Ampel).
+Die (grünen) GND-Anschlüsse sind, um
+Kabel zu sparen, über eine Verteilerplatte
+verbunden; nur die 9V-Anschlüsse haben
+eine direkte Verbindung zu den Lampenausgängen des TXT.
+Der Anschluss der Lämpchen an den TXT
+ist einfach: Für die in Abb. 14 gezeigte
+Steuerung wurde die Lichtzeichenanlage
+für die Fahrzeuge an die Ausgänge O1 (rot),
+O2 (gelb) und O3 (grün) angeschlossen, die
+Fußgängerampel an O4 (rot) und O5 (grün).
+
+
+
+Parkhausschranke
+Mit der zweiten Programmieraufgabe wollen wir eine einfache Schranke z. B. an
+einer Parkhauseinfahrt steuern: Kommt ein
+Fahrzeug vorgefahren und drückt der
+Fahrer eine Taste, soll sich die Schranke
+öffnen. Sie soll so lange geöffnet bleiben,
+bis der Fahrer eine Lichtschranke (alternativ einen Reed-Kontakt in der Fahrbahn)
+durchfahren hat, dann soll sie schließen.
+Damit die Steuerung auch mit einem LTController gelingt, können wir das Anhalten
+der Schranke in der jeweiligen Endlage
+durch eine einfache Motorsteuerung lösen
+(wie das geht, lässt sich in [5] nachlesen).
+Dafür genügen uns ein Motorausgang und
+zwei Eingänge (Taster, Lichtschranke).
+
+
+
+Wer über ausreichend viele Lämpchen
+verfügt, kann auch gleich das Gegenstück
+für die andere Straßenseite hinzubauen und
+die Lämpchen parallel schalten; weitere
+Ausgänge werden dafür nicht benötigt.
+
+
+
+
+Computing
+
+
+Lichtschranke. Wem der Nachbau nicht
+anhand der Fotos gelingt, kann sich eine
+Designer-Datei des Modells herunterladen.
+In unserem Modell fragen wir die Endlagentaster am TXT ab. Dafür benötigen
+wir vier digitale Eingänge. In Abb. 15 sind
+die beiden an I1 und I2 angeschlossenen
+Endlagentaster gut zu erkennen, die in
+geöffneter bzw. geschlossener Stellung
+schalten; der Taster zur Aktivierung der
+Schranke wird an I3, die Fotodiode (Lichtschranke) an I4 angeschlossen.
+sich leicht umsetzen: Der Anschluss und die
+Auswertung der beiden Endlagentaster
+entfallen; der Taster und die Fotodiode
+können dann an den Eingängen I1 resp. I2
+ausgewertet werden.
+
+FTScratch
+
+
+
+Buggy
+Als dritte Aufgabe wollen wir einen einfachen kleinen Buggy mit Scratch steuern.
+Unser Buggy-Modell (Abb. 19) geht zurück
+auf den fischertechnik-Buggy der BBC aus
+dem Jahr 1983, der um 2003 von Economatics zum PIC-Buggy weiterentwickelt
+wurde. Der Buggy hat auch für den Kasten
+Mini Bots aus dem Jahr 2015 Pate gestanden.
+
+Mit der Steuerung wollen wir erreichen,
+dass der Buggy geradeaus fährt, bis er auf
+ein Hindernis trifft. Ist es links, setzt er ein
+kurzes Stück zurück, dreht sich nach rechts
+und fährt geradeaus weiter; ist das Hindernis rechts, macht er dasselbe in umgekehrter
+Richtung. Sind beide Taster gedrückt, soll
+er sich zufällig nach rechts oder links derhen, bevor er seine Fahrt fortsetzt. Abb. 21
+zeigt ein entsprechendes FTScratch-Programm.
+
+Der TXT Controller kann über die Federnocken in den Nuten der beiden Mini-Motoren befestigt werden; die beiden Bausteine
+15 x 30 x 5 mit Nut und Zapfen in Abb. 19
+dienen der Aufnahme eines fischertechnikAkkus. Die beiden Mini-Motoren treiben
+das linke bzw. rechte Rad an; vorne sind
+zwei Mini-Taster hinter beweglichen Bauplatten befestigt, über die Hindernisse erkannt werden (Abb. 20). Das dritte Rad ist
+über eine Aufnahmeachse in einem Baustein 15 mit Ansenkung drehbar und über
+einen Winkelstein 7,5° leicht schräg gelagert.
+In die „Felgen“ der Drehscheiben 60 sind
+Dichtungsringe („O-Ringe“) eingelegt; es
+passen die Größen 54 x 3 und 60 x 5. Alternativ kann der Buggy auch fischertechnikReifen erhalten. Um den Nachbau zu
+erleichtern gibt es eine Designer-Datei des
+Modells zum Download.
+
+
+
+Alternativ kann man statt der Taster auch
+eine berührungslose Hinderniserkennung
+mit dem Ultraschallsensor realisieren. Auch
+den können wir mit der FTScratch-Extension abfragen (Abb. 22).
+
+Computing
+
+Kurz zusammengefasst sehe ich die folgenden Vorteile und Grenzen:
+Vorteile von (FT)Scratch
+∂ Scratch-Programme sind sehr kompakt.
+∂ Das Zusammenfügen der Befehlsblöcke
+ist zumindest für Einsteiger deutlich einfacher als das Einfügen der Verbindungslinien bei ROBO Pro.
+∂ Die „Bühne“ erlaubt die Anzeige umfangreicher Kommentare und Schaltelemente und ist flexibler als die Anzeigen
+in ROBO Pro.
+∂ Die Bearbeitung von Texten und deren
+Ausgabe ist eleganter und leistungsfähiger als in ROBO Pro.
+∂ Zur Steuerung von Modellen können
+Maus und Tastatur verwendet werden.
+Grenzen von (FT)Scratch
+
+mit FTScratch
+
+Fazit
+Scratch ist eine ansprechende EinsteigerProgrammiersprache, die zu Recht an immer mehr Schulen Einzug hält. Damit erlernen Kinder spielerisch Programmstrukturen
+und logische Bedingungen. Allerdings sind
+die Ergebnisse rein virtuell – gesteuert
+werden Objekte oder Figuren auf der
+„Bühne“. Und gerade bei der grafischen
+Darstellung bleiben natürlich auch viele
+Programmdetails in den Skripten verborgen.
+Mit FTScratch lässt sich Scratch mit der
+„wirklichen Welt“ verbinden und ist nicht
+länger Simulation, sondern die Ergebnisse
+sind „be-greifbar“. Für Kinder, die bereits
+in einer fischertechnik-AG Modelle konstruiert haben, ist das eine faszinierende
+Erweiterung ihrer Möglichkeiten. Damit ist
+FTScratch eine ernsthafte Alternative zum
+Einstieg mit ROBO Pro.
+
+∂ Scratch-Programme können nur
+Online-Betrieb genutzt werden.
+
+im
+
+∂ Variablen und Datenflüsse, Unterprogramme und Operatoren erlauben in
+ROBO Pro deutlich komplexere Algorithmen.
+∂ Die Erweiterung FTScratch umfasst –
+zumindest beim TXT – nur einen Teil
+der ROBO Pro-Kommandos. So fehlen
+z. B. alle I²C-Befehle, die BluetoothKommunikation oder die Kamera-Ansteuerung; bei komplexen Roboter-Anwendungen stößt man mit FTScratch
+daher schnell an Grenzen.
+Die Begrenzungen von FTScratch schränken Einsteiger jedoch kaum in ihrer Kreativität und ihren Möglichkeiten ein. Wer
+alle Möglichkeiten des TXT nutzen will,
+wird auf die Dauer auch mit ROBO Pro
+nicht vollends glücklich werden – und muss
+daher ohnehin auf eine „ausgewachsene“
+Programmiersprache wie C# oder Python
+umsteigen.
+
+
+
+
+Referenzen
+
+[3]
+
+FTScratchLT, Installation und
+Blockbeschreibung, Github.io.
+
+[1]
+
+Thomas Buesser: Scratch 2.0
+Tutorial.
+
+[4]
+
+[2]
+
+Alex Olinger (Übersetzung): Scratch
+Referenzhandbuch.
+
+FTScratchTXT, Installation und
+Blockbeschreibung, Github.io.
+
+[5]
+
+Stefan Falk: Motorsteuerungen (Teil
+2). ft:pedia 2/2011, S. 19-25.
+
+
+

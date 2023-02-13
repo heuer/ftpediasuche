@@ -1,0 +1,179 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Neue ft-Teile selbst gemacht:
+Kleines Kardangelenk für Rastachsen
+Martin Wanke
+fischertechnik-Kardan-Gelenke gibt es seit 1967. Das erste Kardan-Gelenk für die Metallachsen war jedoch voluminös und knapp zwei Grundbausteine lang (6 cm). Für die Rastachsen
+erschien 1991 ein schmaleres, Baulänge 3 cm. Aber auch das kann gelegentlich zu groß sein.
+Wer sich schon mal für sein fischertechnikModell ein kleines Kardangelenk gewünscht hat, etwa an schmalen Stellen oder
+bei kurzen Baulängen, der hat wahrscheinlich Modellbau-Webseiten oder -Kataloge
+zu Rate gezogen und dort eventuell auch
+eine mehr oder weniger gute Lösung
+gefunden. Wem diese dann aber immer
+noch nicht passend und klein genug war,
+dem ist vielleicht auch der Gedanke eines
+Eigenbaus gekommen – so in meinem Fall.
+
+noch eine kleine Fein-Bohrschleifmaschine
+(von Dremel, Proxxon o.ä.).
+Profil herstellen
+Das Ausgangsmaterial ist ein MessingQuadratprofil 3x3 mm und ein Messing-IProfil 4x3 mm. Ein I-Profil ähnelt einem HProfil, hat nur im Unterschied zum H-Profil
+keinen quadratischen, sondern einen rechteckigen Querschnitt. Beides gibt es im
+Modellbau.
+
+Mein Resultat ist ein Bauteil, welches sich
+sowohl gut mit dem Rastachsen- als auch
+mit dem Klemmsystem kombinieren lässt,
+mit einer Baulänge von 15 mm und einen
+Durchmesser von 4 mm (Abb. 1).
+
+
+Als Werkzeug für die Herstellung benötigt
+man eine kleine Metallsäge, einen Satz
+Schlüsselfeilen (das sind sehr kleine Metallfeilen), ein Schraubstock und eine Bohrmaschine mit fein abgestuften Bohrern (5 mm,
+4,5 mm, 4,2 mm, 4,1 mm, 4,0 mm, 3,9 mm,
+1,0 mm) und eine Nadel. Sehr hilfreich ist
+
+Zunächst muss man das rechteckige I-Profil
+abrunden, oder genauer gesagt, rund ‚drücken‘. In dem Eisenstück in Abb. 2 sind
+Löcher, die von der einen Seite mit einem
+kleinen Bohrer ganz durchgebohrt und von
+der anderen Seite mit einem etwas größeren
+Bohrer nur halb durchgebohrt sind. So
+verjüngen sich die Löcher zu einer Seite
+hin.
+
+
+
+Mit der größeren Öffnung muss man jetzt
+das Eisenstück über das eingespannte Profil
+schieben und dann weiter pressen, sodass
+das Profil hinten etwas runder rauskommt.
+Weil das recht schwer geht, kann man das
+Eisenstück auch mit einem Hammer und
+einem Rohr treiben (im Bild habe ich als
+Rohr die silberne Zündkerzen-Nuss im
+Hintergrund verwendet).
+
+Zwischenstufe: Mini-Steckverbinder
+für Rastachsen
+Als Zwischenstufe auf dem Weg zum
+Kardangelenk kann man sich jetzt MiniSteckverbinder basteln, als Erweiterung des
+Steckachsensystems sozusagen.
+
+
+
+Die Prozedur muss man in mehreren Schritten mit immer kleineren Löchern wiederholen, zuletzt von 4,0 auf 3,9 mm (in Abb. 3
+ist das Loch 4,0-3,9 mm unbeschriftet).
+Man darf bei 4,0 mm noch nicht aufhören,
+da dann das Profil immer noch in einigen ftLöchern und Nuten klemmt. Das fertige
+Profil sollte sich aber leicht in allen ftLöchern drehen können.
+
+Dazu kann man zunächst in ein Ende des
+Profils eine Aussparung und eine kleine Nut
+sägen und feilen (Abb. 5), dann ein Stück
+von 12 mm Länge absägen und vom abgesägten Stück die zweite Seite genauso bearbeiten (Abb. 6).
+
+
+
+In der Industrie wird so übrigens z. B. aus
+einem Metallblock Draht hergestellt, allerdings wird dabei das Zieheisen nicht über
+das Material gedrückt, sondern das Material
+durch das Zieheisen hindurch gezogen.
+
+
+Mit diesem Mini-Steckverbinder kann man
+Rastachsen platzsparend verbinden, indem
+man ihn in die Enden der Rastachsen steckt.
+Zusätzlichen Halt geben die Überstände
+oben und unten. Weiterhin kann man ihn in
+die rechteckigen Öffnungen von RastTeilen stecken und so z. B. Rastzahnräder
+direkt miteinander verbinden, oder auch die
+Achsen in kleinen Schritten verlängern.
+Dabei dienen die kleinen Kerben links und
+rechts dazu, dass man die Mini-Steckverbinder verschränkt aneinander stecken kann
+(siehe Abb. 7, 8 mit verschiedenen Anwendungsbeispielen).
+
+
+Tipps & Tricks
+
+Es ist nicht notwendig, für das Loch einen
+0,5 mm-Bohrer zu kaufen. Eine einfache
+Stecknadel reicht völlig, wenn man deren
+Kopf entfernt (brechen oder mit der FeinBohrschleifmaschine abschleifen) und dann
+die Spitze schräg anschleift.
+
+
+Klauen für das Kardangelenk
+Aber nun zurück zum Kardangelenk. Dazu
+stellt man aus dem Profil zwei Klauen mit
+den gezeigten Abmessungen her. Dabei
+empfehle ich, mit der Seite zu beginnen, an
+der die Bohrung benötigt wird (Abb. 9),
+weil letztere etwas Sorgfalt verlangt.
+
+
+Nadeln sind aus zähem und relativ hartem
+Stahl gefertigt, so dass sie das Messing
+mühelos durchdringen. Der Nachteil ist,
+dass man sie nicht mit einer Säge oder Feile
+bearbeiten kann, da das Werkzeug davon
+stumpf wird.
+
+
+Denn der Bohrer rutscht leicht ab und das
+Loch sollte möglichst genau mittig sein.
+Unabgesägt kann man das Profil, wie beim
+Steckverbinder auch, noch gut festhalten
+oder einspannen.
+
+die Löcher passen
+
+Schließlich sollte eine Nadel durch die
+Löcher passen (Abb. 12). Die Nadel wird
+später als Stift verwendet, aber vorher
+müssen noch eine zweite Klaue und ein
+Würfel angefertigt werden.
+Der Würfel hat eine Kantenlänge von 2 mm.
+Auch hier ist es ratsam, das Profil erst
+möglichst spät abzusägen, um es leichter
+bearbeiten zu können. Besser als in den
+Bildern gezeigt wäre ein fertiges 2x2 mmProfil, dann müsste man weniger feilen.
+
+
+Die Bohrungen gehen kreuz und quer durch
+den Würfel und sind mit 1mm so bemessen,
+
+
+
+dass man zwei Nadeln mit etwas Kraft in
+der Mitte aneinander vorbeipressen kann.
+
+Anregungen zur Anwendung
+Es gibt sicher viele Anwendungsmöglichkeiten; hier einige Beispiele für einen
+Vorderradantrieb mit Einzelradlenkung.
+
+
+Die Ecken sollten etwas abgerundet
+werden, damit sich der Würfel in den
+Klauen gut drehen kann und nirgendwo
+„aneckt“.
+Weil der Würfel ziemlich klein ist und
+womöglich herunterfällt und verloren geht,
+kann man schon mal die eine Hälfte des
+Kardangelenks zusammenbauen und mit
+einer Rastachse sichern, bevor man ihn
+ganz absägt.
+
+
+Nur noch Nadeln durchdrücken und
+abflexen - und fertig.
+
+
+
+Kardangelenks
+
+

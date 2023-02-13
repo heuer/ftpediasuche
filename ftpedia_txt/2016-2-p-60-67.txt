@@ -1,0 +1,529 @@
+
+
+Computing
+
+Alternative Controller (2): Infrarot-Empfänger
+David Holtz
+Dieser Beitrag der Reihe „Alternative Controller“ stellt eine Selbstbaulösung für einen alternativen Infrarot-Empfänger für fischertechnik vor und erklärt, wie die Kommunikation
+zwischen dem Handsender und dem Empfänger zustande kommt.
+
+Zielsetzung
+Mein jüngstes Projekt, ein dreiachsiger
+Mobilkran, dessen Achsen sich unabhängig
+voneinander lenken lassen sollen, hat eine
+Steuerung erfordert, die man mit dem
+Empfänger aus dem Control Set nicht
+umsetzen konnte. Eine Selbstbaulösung für
+einen alternativen Infrarotempfänger sollte
+Abhilfe schaffen. Folgende Anforderungen
+wurden daran gestellt:
+
+menschliche Auge nicht sichtbaren, infraroten Teil des Spektrums, typischerweise
+mit einer Wellenlänge von 870 bis 950 nm.
+Einige Digitalkameras ohne Infrarotlichtfilter stellen dieses Licht in Falschfarben
+dar, wie die folgende Abbildung zeigt:
+
+∂ Komfortable Möglichkeit zur Fernsteuerung des Modells
+∂ Mehrere unabhängige Servoausgänge
+∂ Einfacher Anschluss von Aktoren (z. B.
+für Motoren oder Beleuchtung)
+∂ Flexible Nutzung des Empfängers auch
+für andere Modelle
+Ich habe mich entschlossen, die oben
+formulierten Anforderungen mit einem
+Arduino UNO als Mikrocontroller umzusetzen. Die in [12] geschilderten Hürden
+hinsichtlich der Kompatibilität von fischertechnik und der Arduino-Plattform sollten
+durch ein eigens dafür entwickeltes Shield
+überwunden werden.
+
+Funktionsprinzip einer
+Infrarotfernsteuerung
+Das Signal einer Infrarotfernbedienung
+besteht aus Lichtimpulsen aus dem für das
+
+
+
+Durch zeitlich versetztes Senden der
+Impulse können Daten übertragen werden.
+Im Handsender wird dazu, meistens über
+einen integrierten Schaltkreis (IC), die
+Position der Joysticks bzw. ein Tastendruck
+in einen Binärcode umgewandelt. Ähnlich
+wie beim Morsen wird dieser Binärcode
+durch ein- und ausschalten einer InfrarotLED übertragen (vgl. den Abschnitt Dekodierung weiter unten in diesem Beitrag).
+
+Modulation
+Zusätzlich zum zeitlich versetzten Senden
+werden die Impulse einer Signalfolge, die
+eine logische 1 darstellen, moduliert.
+Modulation bedeutet, dass die Infrarot-LED
+mit einer Frequenz von 30 bis 56 kHz anund ausgeschaltet wird, um ein Signal mit
+
+
+Computing
+
+der logischen 1 zu erzeugen. Die Frequenz
+wird über einen passenden Oszillator
+generiert [1].
+
+
+
+Signalfolge 1-0 (Quelle: Wikipedia [1])
+
+Die Modulation bewirkt, dass das Infrarotsignal weniger anfällig auf Störungen durch
+Umweltfaktoren wie Sonnenlicht oder
+anderer Wärmestrahlung reagiert, da sich
+die kurzen Impulse stärker von der Umgebungsstrahlung abheben. Eine häufige
+Störquelle sind 50 Hertz Netzschwingungen, die beispielsweise von Energiesparlampen erzeugt werden. Ein Hochpassfilter im Empfänger verringert die Störwirkung niedriger Frequenzen und lässt nur
+die hohen Frequenzen des modulierten
+Signals passieren.
+Die Länge eines Signals variiert je nach
+verwendetem Sender und Protokoll, bewegt
+sich aber in einer Größenordnung von
+maximal 2500 µs. Die Länge der Signalfolge hängt von der übertragenen Datenmenge und der Länge eines Signals ab.
+Nach jeder Signalfolge folgt eine einige
+Millisekunden lange Pause, sodass auch
+andere Fernbedienungen senden können.
+Typischerweise können komplette Signalfolgen etwa zehnmal pro Sekunde übertragen werden.
+
+IR-Signale empfangen
+Damit ein Infrarotsignal empfangen werden
+kann, muss Sichtkontakt zwischen Sender
+und Empfänger bestehen. Es muss aber
+nicht unbedingt direkter Sichtkontakt sein,
+da die emittierte Infrarotstrahlung von
+unterschiedlichen Oberflächen reflektiert
+
+wird. Besonders gut funktioniert das an
+metallischen Oberflächen.
+Hardware
+Das Empfangen eines Signals gelingt am
+einfachsten, wenn man ein spezielles
+Empfängerbauteil verwendet. Dessen Fotodiode reagiert weniger empfindlich auf
+Störungen durch Umwelteinflüsse, da
+sichtbares Licht durch einen Sperrfilter
+herausgefiltert wird. Zusätzlich übernimmt
+eine integrierte Schaltung die Demodulation der Trägerfrequenz und liefert ein
+digitales Ausgangssignal, das direkt von
+einem Mikrocontroller verarbeitet werden
+kann.
+In diesem Beitrag wird das „IR Receiver
+Module TSOP4838“ [7] für 38 kHz-Signale
+verwendet. Grundsätzlich lässt sich der
+Empfänger direkt an einen 5 V-Mikrocontroller anschließen, allerdings empfiehlt
+das Datenblatt [8] einen optionalen 100 ΩWiderstand und einen 0,1 μF-Kondensator
+zur besseren Abschirmung gegen Überlastungen.
+OUTPUT
+
+μC
+GND
+
+TSOP4838
+
+C
+R
+
+5V
+
+R = 100 Ω, C = 0,1 μF
+
+Um das Infrarotsignal auswerten zu können,
+sollte der Mikrocontroller einen präzisen
+Timer mit einer Auflösung im μs-Bereich
+besitzen. Der Arduino UNO erfüllt diese
+Voraussetzung; grundsätzlich eignen sich
+alle Arduino Boards und vergleichbare
+Mikrocontroller.
+Ein erstes Programm
+Mittels eines einfachen Arduino-Programms (Sketch) soll gezeigt werden, wie
+
+
+
+
+man eine Infrarotsignalfolge
+machen kann.
+
+sichtbar
+
+Dazu programmiert man eine Unterbrechungsroutine (engl. interrupt service
+routine, kurz ISR). Diese wird immer dann
+aufgerufen, wenn sich der Zustand an dem
+Pin ändert, an dem der TSOP4838
+angeschlossen ist (Modus „change“, d. h.
+bei fallender oder steigender Flanke).
+Die
+Arduino-Entwicklungsumgebung
+bietet darüber hinaus eine benutzerfreundliche Funktion, um die Zeit zu
+messen:
+
+
+uint_32t zeit = micros();
+
+Dekodierung
+
+Die Funktion micros() weist der Variable
+zeit diejenige Zeit in Mikrosekunden zu,
+die seit dem Starten des Arduinos vergangen ist.
+
+Zur Dekodierung des empfangenen Signals
+ist das dazugehörige Protokoll erforderlich.
+Bis heute sind die für Fernbedienungen
+verwendeten Protokolle offiziell nicht
+standardisiert worden, allerdings hat das
+NEC-Protokoll bei den heutigen TVGeräten den größten Marktanteil. Im
+Folgenden werden drei gängige bzw. für
+fischertechnik relevante Protokolle vorgestellt.
+
+Die ISR könnte so programmiert werden,
+dass bei jedem Aufruf die Differenz aus der
+neuen und der alten Zeit berechnet und
+gespeichert wird, also die Zeit, die zwischen
+einer fallenden und einer steigenden Flanke
+(bzw. umgekehrt) vergeht. Die gespeicherten Zeiten kann man sich am seriellen
+Monitor ausgeben lassen und zur Veranschaulichung in ein x/y-Diagramm übertragen (vgl. Abb. 5).
+
+RC-5-Protokoll
+Das RC-5-Protokoll wurde Ende der 1980er
+Jahre von der Firma Philips zur Steuerung
+von Alltagselektronik wie TV- oder Audiogeräten entwickelt und war lange Zeit in
+Europa sowie in den USA das am
+häufigsten zum Einsatz kommende
+Protokoll. Anfangs bot es 64 Befehle, durch
+ein Field-Bit wurde der Umfang auf
+
+Signalfolge
+
+
+2000
+
+4000
+
+6000
+
+8000
+
+10000
+
+Zeit
+
+
+12000
+
+14000
+
+
+Computing
+
+zweimal 64 Befehle erweitert. Mit dem
+Nachfolger RC-6 umfasst das Protokoll 256
+Befehle. Beim Senden werden keine
+Informationen zum angesprochenen Gerät
+übertragen (nur RC-5), sodass eine beliebige RC-5-Fernbedienung ein beliebiges
+RC-5-Gerät steuern kann [2].
+Manchester-Code
+Das RC-5-Protokoll nutzt den ManchesterCode zur Datenübertragung, der an der
+University of Manchester entwickelt wurde.
+Die Besonderheit des Manchester-Codes
+liegt darin, dass er selbst getaktet ist, was es
+wiederum ermöglicht, eine Nachricht drahtlos oder über eine galvanische Trennung
+(induktiv) zu übertragen. Die eigentliche
+Bitfolge, die die Nachricht darstellt (Data),
+wird mit der getakteten Verbindung (Clock)
+über eine „exklusive Oder“ Verknüpfung
+(XOR) zum Manchester-Code kodiert (vgl.
+Um den Manchester-Code zu dekodieren,
+analysiert man die Flankenwechsel zur
+Mitte der Periode (in der Abbildung
+zwischen den grauen vertikalen Markierungen). Eine steigende Flanke bedeutet
+
+eine logische 1, eine fallende Flanke stellt
+die logische 0 dar. Da der Manchester-Code
+die Taktrate enthält, ist er selbstsynchronisierend. Das Taktsignal kann umgekehrt
+wieder aus dem Code abgeleitet werden [3].
+Das RC-5-Protokoll ist aufgrund des
+Manchester-Codes daran erkennbar, dass
+eine Pulslänge und eine genauso lange
+Pausenlänge sowie jeweils die doppelten
+Puls- und Pausenlängen auftreten können.
+Möchte man einen Empfänger für verschiedene Protokolle programmieren, so kann
+über diese Eigenschaft das RC-5-Protokoll
+erkannt werden.
+NEC-Protokoll
+Heutzutage ist das NEC-Protokoll das am
+häufigsten eingesetzte Infrarotprotokoll. Im
+Gegensatz zum RC-5-Protokoll übermittelt
+der Handsender einen 8-Bit-Adresscode,
+damit der Empfänger prüfen kann, ob das
+Signal für ihn bestimmt war. Dies sorgt
+dafür, dass nicht versehentlich ein anderes
+Gerät gesteuert wird (und verhindert, dass
+man in Elektronikmärkten alle Geräte über
+eine einzige Fernbedienung ausschalten
+kann).
+
+
+
+
+Die acht Bit lange Nachricht kann 256
+verschiedene Befehle übertragen, zusätzlich
+existiert ein „extended mode“, der die
+Länge der Nachricht verdoppelt und
+dadurch rund 65000 verschiedene Befehle
+bietet.
+Ein weiterer Unterschied zum RC-5Protokoll besteht in der Kodierung: Das
+NEC-Protokoll nutzt Pulsdistanzkodierung,
+um eine logische 0 beziehungsweise eine
+logische 1 zu übertragen. Eine „Distanz“
+von 1,125 ms zwischen zwei aufsteigenden
+Flanken stellt die logische 0 dar, liegen
+zwischen zwei aufsteigenden Flanken
+2.25 ms auseinander, handelt es sich um
+eine logische 1. Da ein Puls mit 560 μs stets
+dieselbe Länge hat, bestimmt die Pausenlänge zwischen den Pulsen die Pulsdistanz
+[4].
+
+Pulsdistanzmodulation
+logische 0
+
+logische 1
+
+Protokoll
+
+In [9] findet man eine Arduino-Library zur
+Dekodierung des NEC-Protokolls.
+RC-MM Protokoll
+Das RC-MM-Protokoll der Firma Philips ist
+im Gegensatz zu den beiden erstgenannten
+Protokollen eher unbekannt. Es ist an dieser
+Stelle aber aus dem Grund erwähnenswert,
+da der Handsender aus dem fischertechnik
+Control Set ein vom Prinzip her ähnliches
+Protokoll nutzt.
+Wie beim NEC-Protokoll wird die
+Nachricht über Pulsdistanzkodierung übertragen. Dieses Verfahren wird jedoch so
+erweitert, dass jede Distanz zwischen zwei
+aufsteigenden Flanken eine zweistellige
+Bitfolge (00, 01, 10 oder 10) darstellt.
+
+Hierfür gibt es eine jeweils konstante Pulslänge und vier verschiedene Pausenlängen,
+sodass insgesamt vier unterscheidbare
+Abstände zwischen zwei aufsteigenden
+Flanken auftreten können [5].
+Praktischerweise wurde das im fischertechnik Control Set eingesetzte Protokoll
+bereits über „reverse engineering“ analysiert. Der genaue Aufbau der Nachricht
+kann unter [10] nachgelesen werden.
+
+IR Protokolle: Fazit
+Je nachdem, welches Protokoll man
+implementiert hat, kann man verschiedene
+Fernbedienungen zum Steuern der Modelle
+verwenden. Man sollte sich bei der Wahl
+der Fernbedienung nach den Anforderungen an die Steuerung richten: TV-Fernbedienungen bieten mit ihrem Nummernfeld und den zahlreichen Funktionstasten
+die Möglichkeit, viele unterschiedliche
+Befehle zu übermitteln. Der Handsender
+aus dem Control Set eignet sich dank seiner
+Joysticks besonders für die Steuerung von
+Fahrzeugen. Dank der drei Infrarot-LEDs
+ist er außerdem deutlich lichtstärker und
+besser für den Außeneinsatz geeignet, als es
+TV-Fernbedienungen sind. Zudem sollte
+man beachten, dass die RC-5- und NECProtokolle jeder Taste einen Binärcode
+zuordnen, anstatt ein Bit für jede Taste zu
+reservieren. Dies bedeutet, dass es nicht
+möglich ist, mehrere gleichzeitig gedrückte
+Tasten zu erfassen.
+
+Shield-Bau
+Wie in [12] beschrieben, lassen sich
+fischertechnik-Aktoren häufig nicht direkt
+mit dem Arduino verbinden. Die dafür
+benötigte Schaltung kann man auf einer
+Experimentierplatine aufbauen. Das ist bei
+komplexeren Schaltung jedoch schwierig
+und unübersichtlich.
+Für die Umsetzung des IR-Empfängers
+wurden alle notwendigen elektrischen Bauteile auf einer für den Arduino UNO
+abgestimmten Platine [11] untergebracht,
+
+
+Computing
+
+die sich einfach auf das Board stecken lässt.
+In der Fachsprache bezeichnet man diese
+Platinen als Shields.
+Verschaltung
+Um die Kompatibilität zu fischertechnik
+herzustellen, muss an den Ausgängen des
+Shields eine Spannung von 9 V anliegen.
+An den Pins des Arduino UNO liegen aber
+nur 5 V an.
+Da der Arduino einen integrierten Festspannungsregler besitzt, kann man ihn
+direkt mit der fischertechnik-Spannung von
+9 V betreiben. Dazu verbindet man die
+Plus-Leitung mit dem VIN-Pin und die
+Minus-Leitung mit einem der Masse-Pins.
+
+Herstellung
+
+Für die Motoren benötigt man eine half
+bridge; im Selbstbauempfänger ist hierfür
+der L293B verbaut. Es werden drei Pins je
+Motor benötigt, um die Richtung des
+Motors und die Geschwindigkeit (über
+Pulsweitenmodulation, PWM) zu steuern.
+
+Für die Herstellung des Shields habe ich
+eine CNC-Maschine verwendet, die in eine
+Hartpapierplatte mit 0,35 μm Kupferbeschichtung Isolierbahnen in die Kupferbeschichtung um die eigentlichen Leiterbahnen herum fräst und im Anschluss die
+Löcher für die Bauteile bohrt.
+
+Grundsätzlich ist für die Ansteuerung von
+fischertechnik-Servomotoren am Arduino
+keine zusätzliche Hardware erforderlich.
+Man verbindet die Masseleitung mit der
+Masse des Arduinos und die Signalleitung
+mit einem I/O-Pin des Boards. Das
+Empfänger-Shield nutzt sicherheitshalber
+statt der 5 V Board-Spannung des Arduinos
+die über einen externen Festspannungsregler auf 5 V herabregulierte Versorgungsspannung (9 V von ft). Dadurch soll vermieden werden, dass der Festspannungsregler auf dem Arduino-Board durch eine
+hohe Stromaufnahme beim Betrieb
+mehrerer Servos überlastet und möglicherweise beschädigt wird.
+
+
+Über Platinen-Design-Software kann man
+die Platine am Computer entwerfen.
+
+(ältere Aufnahme)
+
+Alternativ bietet es sich an, Platinen zu
+ätzen. Wer das nicht selbst bewerkstelligen
+kann, kann einen Dienstleister im Internet
+mit der Herstellung beauftragen und erhält
+für rund 12 € eine fertige Platine inklusive
+Bohrungen.
+Eine Lochrasterplatine wäre die schnellste
+und günstigste Lösung. In diesem Fall
+müssen jedoch alle Verbindungen einzeln
+hergestellt werden [6].
+
+
+
+
+Abschließend wurde für das fertig bestückte
+Shield und den Arduino ein Kunststoffgehäuse in fischertechnik-Abmessungen
+(90 ∙ 60 mm) angefertigt [11].
+
+Empfänger im Einsatz
+Die Anschlüsse für Stromversorgung,
+Motoren und Servos sind auf die jeweiligen
+fischertechnik-Stecker abgestimmt. Die
+Abbildungen 10 und 11 zeigen den Infrarotempfänger, an den die Servomotoren für die
+einzelnen Achsen und der Antriebsmotor
+des Krans angeschlossen sind.
+
+
+Jede der drei Achsen ist über ein Servo
+lenkbar. Über den im Empfänger integrierten DIP-Schalter kann man einen der
+vier verfügbaren Lenkmodi (Straßenlenkung, Gleichlauflenkung, Hundeganglenkung und verzögernde Hundeganglenkung) wählen. Das Arduino-Programm
+regelt jedes Servo entsprechend des vorgegebenen Lenkwinkels und des gewählten
+Modus, sodass ein proportionales Lenkverhalten entsteht.
+Dazu wird die X-Position des rechten
+Joysticks in den Lenkwinkel umgerechnet.
+Im Anschluss wird jedes Servo einzeln mit
+einem Wert, der sich aus dem Lenkwinkel
+und dem Lenkindex zusammensetzt,
+gesteuert. Die Variable Lenkindex gibt für
+jede Achse (je nach gewähltem Modus) die
+Richtung (± Vorzeichen) und die Intensität
+(in %) des Lenkeinschlags an.
+
+
+Hundegang. In diesem Fall ist der Lenkindex für alle Achsen gleich und beträgt
++100 %, da jede Achse proportional zum
+vorgegebenen Winkel in dieselbe Richtung
+einschlagen soll.
+
+Ausblick
+
+
+Für den Einsatz im Mobilkran-Modell läuft
+auf dem Arduino ein passendes Programm,
+das die Infrarotsignale des Handsenders aus
+dem fischertechnik Control Set empfängt
+und die Aktoren entsprechend steuert.
+
+
+Ob spezielle Lenkprogramme für ein mehrachsiges Fahrzeug, Tempomat, oder integrierte Blinksteuerung: Ein SelbstbauEmpfänger für fischertechnik-Modelle lässt
+sich flexibel einsetzen. Praktisch ist, dass
+der Arduino über die USB-Schnittstelle
+einfach umprogrammiert werden kann, um
+das Programm an das aktuelle Modell
+anzupassen.
+Nutzt man nicht alle Servoausgänge des
+Selbstbauempfängers, kann man die unbelegten Pins auch für Sensoren nutzen.
+
+
+Computing
+
+Damit könnte man Modelle beispielsweise
+um Fahrerassistenzsysteme wie eine Einparkhilfe mittels Ultraschallabstandssensor erweitern.
+
+[7]
+
+reichelt elektronik GmbH & Co. KG:
+IR Receiver Module TSOP4838.
+
+[8]
+
+Vishay Intertechnology, Inc.: IR
+Receiver Modules for Remote
+Control Systems. Datenblatt, 2012.
+Targett, Chris: Arduino-IR-remote.
+Library auf GitHub, 2011.
+
+Quellen
+[1]
+
+Wikipedia: Fernbedienung,
+Abschnitt IR-Modulation.
+
+[9]
+
+[2]
+
+Wikipedia: RC-5
+(Netzwerkprotokoll).
+
+[3]
+
+Wikipedia: Manchester-Code.
+
+[10] Van der Weiden, Ad: IR on RI (or IR
+Control Set and the Robo Interface).
+fischertechnik Community-Wiki,
+2009.
+
+[4]
+
+ELV Elektronik AG: Die wichtigsten
+Infrarot-Codeverfahren.
+
+[11] Holtz, David: Alternativer IREmpfänger. ft-Community-Website.
+
+[5]
+
+SB-Projects: Philips RC-MM
+Protocol.
+
+[6]
+
+Bartmann, Erik: Arduino Projekt.
+Kapitel 44 – Der Shieldbau.
+
+[12] Holtz, David: Alternative Controller
+(1): Der Arduino. ft:pedia 2/2016, in
+dieser Ausgabe.
+
+
+
+

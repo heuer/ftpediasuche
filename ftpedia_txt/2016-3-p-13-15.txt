@@ -1,0 +1,189 @@
+
+Optik
+
+Optik
+
+Das Hyper-Pseudoskop
+Thomas Püttmann
+Dinosaurierköpfe ragen bedrohlich weit aus der Leinwand heraus, ein Blick aus dem Hochhaus
+nach unten löst Höhenangst aus – solche 3D-Effekte kennt man aus dem Kino. Mit nur 18
+fischertechnik-Bauteilen lässt sich aber auch der Alltagswelt eine ungewohnte räumliche Tiefe
+verleihen oder, noch effektvoller, die räumliche Tiefenstaffelung in bestimmten Bereichen des
+Gesichtsfelds umkehren.
+
+Räumliches Sehen
+Das räumliche Sehen ist ein komplexer
+Prozess und basiert auf mehreren Effekten.
+Auch wenn man nur mit einem Auge
+schaut, erhält man schon Entfernungsinformationen. Ähnlich wie bei einer Kamera
+wird das betrachtete Objekt durch Veränderung der Brechkraft der Linse vom
+Gehirn aktiv scharf gestellt. Durch diese
+sogenannte Akkomodation kennt das Gehirn
+grob die Entfernung des Objekts – im
+Nahbereich deutlich genauer als im Fernbereich.
+Weitere
+Informationen
+liefert
+der
+Bildinhalt. So werden die relative Größe der
+Objekte, Perspektivlinien, Verdeckungen,
+Schatten und ähnliches analysiert, um eine
+Tiefenstaffelung des Bildinhaltes zu
+erhalten.
+Bewegt sich der Beobachter seitlich zur
+Blickrichtung, so bewegen sich die Objekte
+im Gesichtsfeld je nach räumlicher Tiefe
+unterschiedlich schnell. Jeder kennt das
+vom Blick aus einem fahrenden Bus oder
+Zug. Weit entfernte Objekte verharren an
+ihrer Position, während nahe Objekte
+vergleichsweise schnell vor ihnen her durch
+das Gesichtsfeld ziehen. Diesen Effekt
+nennt man Bewegungsparallaxe.
+Das eigentliche räumliche Sehen erfordert
+den Einsatz zweier Augen. Dabei werden
+
+im Wesentlichen zwei Effekte ausgewertet,
+die Konvergenz und die Querdisparation.
+Konvergenz
+Richtet man seine Aufmerksamkeit auf ein
+entferntes Objekt, so sind die Blickrichtungen beider Augen parallel. Bei Entfernungen unterhalb von ca. 3 m werden die
+Augen nach innen gedreht, und das Gehirn
+kann aus der Größe dieser Auslenkung grob
+auf den Abstand des Objekts zurückschließen. Die Bilder auf den beiden
+Netzhäuten müssen vom Gehirn miteinander verschmolzen werden. Diesen
+Vorgang nennt man Fusion.
+Querdisparation
+In unserem Gesichtsfeld befinden sich in
+der Regel mehrere Objekte in unterschiedlichen Abständen. Unser Gehirn kann nicht
+bei all diesen Objekten gleichzeitig die von
+den beiden Augen gelieferten Bilder
+verschmelzen. Dazu ein einfacher Versuch:
+Betrachte einen Gegenstand G. Bringe nun
+einen deiner Zeigefinger Z aufrecht
+zwischen dein linkes Auge und den
+Gegenstand. Die Situation ist in Abbildung
+1 dargestellt. Der Gegenstand G und der
+Zeigefinger Z werden im linken Auge auf
+dieselbe Stelle der Netzhaut projiziert. Im
+rechten Auge dagegen liegt der Bildpunkt
+des Zeigefingers weiter rechts auf Netzhaut.
+
+
+
+
+Fokussierst du nun den Gegenstand G, so
+werden die Punkte GL und GR vom Gehirn
+miteinander verschmolzen. Den Zeigefinger Z dagegen siehst du doppelt. Beide
+Kopien sind transparent, eine erscheint
+direkt vorm Gegenstand, die andere links
+davon, da der Bildpunkt ZR auf der Netzhaut
+weiter rechts liegt als der Bildpunkt GR.
+Beachte, dass durch die Projektion im Auge
+links und rechts auf der Netzhaut ebenso
+vertauscht werden wie oben und unten. Man
+nennt das Doppeltsehen des Zeigefingers
+gekreuzte Querdisparation.
+
+sind als bei Menschen mit kleinerem
+Augenabstand. Schon Charles Wheatstone
+(1802-1875) und David Brewster (17811868) erfanden Apparate, mit denen man
+ausprobieren kann, wie die Welt aussieht,
+wenn man einen mehr als doppelt so großen
+Augenabstand hat. Unter dem Namen
+Hyperskop wurde ein solcher von Terry
+Pope konstruierter Apparat 1986 in der
+Kolumne The Amateur Scientist in der Zeitschrift Scientific American beschrieben [1].
+Die Grundidee ist selten einfach: Mittels
+eines parallelen Spiegelpaars wird ein Auge
+nach außen verlagert, siehe Abbildung 2.
+Bei geeigneten Szenerien ist der Effekt
+ungemein beeindruckend – vor allem, wenn
+der Bildinhalt dem Gehirn keinen starken
+Aufschluss über die räumliche Tiefenstaffelung liefert, z. B. bei Bäumen oder Büschen
+mit Ästen, die auf einen zu ragen. Beim
+Ausprobieren kann man sehr viel darüber
+lernen, wann welche Tiefenwahrnehmungseffekte dominant sind.
+
+eines Zeigefingers Z mit beiden Augen.
+
+Fokussierst du nun den Zeigefinger Z, so
+werden vom Gehirn die Punkte ZL und ZR
+miteinander verschmolzen und der Gegenstand G erscheint doppelt. Eine Kopie liegt
+direkt hinter dem Zeigefinger, die andere
+weiter rechts. Dieses Doppeltsehen des
+Gegenstands nennt man ungekreuzte Querdisparation. Durch die gekreuzte oder
+ungekreuzte Querdisparation erhält das
+Gehirn eine sehr gewichtige Information
+darüber, welches Objekt vor welchem liegt
+und wie weit.
+
+Das Hyperskop
+Menschen mit einem größeren Augenabstand haben tendenziell eine stärkere Raumwahrnehmung, da in gleichen Situationen
+Konvergenz und Querdisparation größer
+
+zwischen dem linken Auge L und dem rechten
+Auge R künstlich vergrößert.
+
+Das Pseudoskop
+Wenn man den gleichen Apparat anders
+nutzt, kann man die Sehstrahlen beider
+Augen vertauschen. Dabei wird aus
+gekreuzter Querdisparation ungekreuzte
+und umgekehrt. Auch die Konvergenz ist
+entgegengesetzt der des normalen Blicks.
+Wenn Konvergenz und Querdisparation die
+dominanten Effekte sind, kehrt sich damit
+die Tiefenwahrnehmung um. Besonders
+
+geeignet sind dazu Ansichten ohne viele
+Fluchtpunktlinien. Wenn man einzelne
+Büsche oder Bäume vor einem Wald
+betrachtet, scheint der Wald wie ein
+schleieriger Vorhang vor den Büschen oder
+Bäumen zu schweben. Eine runde Küchenuhr an der Wand scheint bei gerader Draufsicht in die Wand eingelassen zu sein.
+Beeindruckend sind auch Objekte wie die
+Armillarsphäre aus [2], bei denen sich die
+wenigen Hinterschneidungen komplett ins
+Gegenteil verkehren. Es dauert eine gewisse
+Zeit, bis diese Effekte eintreten. Hilfreich
+ist dabei, wenn man sich nicht zu konzentrieren versucht, sondern möglichst weit
+abschaltet.
+
+Optik
+
+anderer Perspektive.
+
+Literatur und Links
+[1]
+
+Jearl Walker: The Amateur Scientist:
+The hyperscope and the pseudoscope
+aid experiments on three-dimensional vision, Scietific American, November 1986, online abrufbar unter
+[3]. Deutsche Übersetzung: Spektrum der Wissenschaft, Januar 1987.
+
+[2]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik,
+dpunkt.verlag, Heidelberg, 2015.
+
+[3]
+
+Terry Pope: Phantascope,
+http://www.phantascope.co.uk.
+
+werden die Sehstrahlen der beiden Augen
+vertauscht.
+
+Weitere interessante Experimente mit dem
+Pseudoskop findet man in [1] und [3]. Am
+meisten Spaß macht es natürlich, selbst auf
+Entdeckungstour in einer fremden Wahrnehmungswelt zu gehen. Aber Vorsicht:
+Das visuelle System hat gut zu tun, die sich
+zum Teil widersprechenden Effekte zu
+interpretieren. Durch langen Gebrauch des
+Hyper-Pseudoskops wird man daher ziemlich müde.
+
+
+

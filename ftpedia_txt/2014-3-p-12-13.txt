@@ -1,0 +1,136 @@
+
+
+Modell
+
+Mini-Modelle (Teil 4): Hubschrauber
+Johann Fox
+Und gleich noch ein Modell im GiveAway-Format für die Minimodell-Sammlung: ein MiniHubschrauber aus lediglich 17 Teilen.
+Immer wieder wurde sich an fischertechnikHubschraubern aller Art versucht, doch nie
+ist einer abgehoben. Das gelingt meinem
+Mini-Hubschrauber leider auch nicht, dafür
+besteht er nur aus 17 Bauteilen. Abbildung
+1 zeigt ihn in der Gesamtansicht.
+
+Den Hauptrotor bildet eine schwarze IStrebe 60 mit Loch (36952), den Heckrotor
+ein Rad 14 (36573), das mit einem Zylinder-Anschlussstück (31719) und einem
+Verbindungsstopfen (32316) am zentralen
+Rollenlager festgemacht wird.
+
+
+
+Die Kufen bestehen aus je einer Rastachse
+30 (35063) und je zwei Rastkupplungen
+(35073). Befestigt an einem Baustein 7,5
+(37468) bilden sie den Unterbau des Hubschraubers.
+
+Das Kernstück des Hubschraubers ist ein
+Rollenlager (37636), das den Heckrotor,
+den Hauptrotor, das Cockpit und die Kufen
+zusammenhält.
+
+
+des Hubschraubers
+
+
+Das Cockpit ist ein Winkelstein 30 Grad
+rechtwinklig (31012).
+
+
+Modell
+
+
+Insgesamt besteht der Hubschrauber aus
+den in Abb. 6 gezeigten 17 Einzelteilen.
+
+Stück ft-Nr.
+
+Bezeichnung
+
+
+32316
+
+Verbindungsstopfen
+
+
+37679
+
+Klemmbuchse 5
+
+
+31982
+
+Federnocken
+
+
+35063
+
+Rastachse 30
+
+
+35073
+
+Rastkupplung
+
+Bisher erschienen:
+[1]
+
+René Trapp: Minimodelle (Teil 1):
+Gabelstapler. ft:pedia 4/2013, S. 4-5.
+
+[2]
+
+Johann Fox: Minimodelle (Teil 2):
+Panzer. ft:pedia 2/2014, S. 18-19.
+
+[3]
+
+René Trapp: Minimodelle (Teil 3):
+Scheinwerfer. ft:pedia 3/2014, S. 8.
+
+
+Die folgende Tabelle enthält die Einzelteilliste für alle, die den Hubschrauber gerne
+nachbauen möchten.
+Stück ft-Nr.
+
+Bezeichnung
+
+
+37468
+
+Baustein 7,5
+
+
+37636
+
+Rollenlager
+
+
+31124
+
+Aufnahmeachse
+
+
+31012
+
+Winkelstein 30
+Grad rechtwinklig
+
+
+31719
+
+Zylinder
+Anschlussstück
+
+
+36952
+
+I-Strebe 60 mit
+Loch schwarz
+
+
+36573
+
+Rad 14 schwarz
+
+
+

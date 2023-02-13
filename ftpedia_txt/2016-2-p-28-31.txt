@@ -1,0 +1,155 @@
+
+
+Modell
+
+fischertechnik-Kegelbahn
+Dirk Wölffel
+Seit einiger Zeit feiern Spielgeräte wie der fischertechnik-Flipper ihr Comeback. Auf Modellbauausstellungen sind diese Modelle immer ein Publikumsmagnet. Vater gegen Sohn, wer hat
+die meisten Punkte. Daher lag der Gedanke nahe, etwas zu konstruieren, womit man die
+Besucher fesseln kann, um sie für fischertechnik zu begeistern. Auf der Suche nach einem
+geeigneten Modell kam mir die Idee, eine Kegelbahn zu bauen. Die Herausforderungen lagen
+darin, dem Original möglichst nahe zu kommen und Mechanik und Elektronik zu verbinden.
+
+Die Kegelbahn
+Beim Durchsuchen der fischertechnikDatenbank nach einer Bauvorlage bin ich
+fündig geworden: auf Seite 5 der 1979-3 –
+Club-Nachrichten (Abb. 1). Auf dem Foto
+war leider nicht viel zu erkennen, daher war
+Kreativität gefragt. So galt es zunächst
+einige Probleme zu lösen.
+
+
+Ich habe die Kegelbahn erhöht gebaut, um
+die Kegelerkennung von unten zu lösen.
+Die Maße betragen 78 cm (Länge) x 27 cm
+(Breite) x 33 cm (Höhe), siehe Abb. 3.
+
+
+Der Aufbau
+Das Modell aus den Club-Nachrichten war
+die Grundlage für den Bau der Kegelbahn.
+Als Kugelrinnen kamen die Flexschienen
+wie gerufen, sie passen sehr gut dazu.
+
+
+In Abb. 4 sieht man rechts die klappbare
+Kegelanzeige mit der Elektronik. Diese
+wurde nachträglich eingebaut, um sie beim
+Transport nicht zu beschädigen. Darunter
+liegt der Spannungswandler für die 5 VElektronik und links erkennt man die
+Förderkette für die Murmeln.
+
+Modell
+
+Rechts sind zwei Mini-Taster angeordnet
+zum Starten und zur Eingabe über das
+Display (Abb. 5).
+Die Murmeln werden über den Mitnehmer
+der Kette hochgeführt. Anschließend wird
+über den gelben Fototransistor gezählt
+(Abb. 6). Pro Wurf bekommt ein Spieler
+drei Murmeln.
+
+Murmeln
+
+Die Mechanik
+
+Die Kegel werden mit einem Motor XS mit
+Hubgetriebe hochgezogen. Aufgestellt
+werden die Kegel über Seilrollen mit Hilfe
+eines Seils (Abb. 7).
+
+Die Murmeln (14 mm Durchmesser) laufen
+über den Kugelrücklauf in den Kugelsammelkasten. Mittig ist eine bewegliche
+Abschussrampe befestigt. Damit lassen sich
+die Murmeln zielgenauer steuern und
+verlassen nicht so schnell die Kegelbahn.
+
+
+Die Kegel
+
+
+Nach langer Suche hatte ich endlich die
+passenden Kegel gefunden. Die Kegel
+stammen aus einem Miniatur-BowlingSpiel für Kinder (Abb. 8). Die Variante mit
+„Mensch-ärger-Dich-nicht“-Spielfiguren
+aus den Club-Nachrichten hatte nicht
+
+
+
+funktioniert, da die Auflagefläche der
+Spielfiguren zu breit ist und diese daher
+nicht umfallen.
+
+
+Die Kegelerkennung
+In einer ersten Variante verwendete ich eine
+Pixy-Camera (rechts im Bild) zur Erkennung der Kegel [1]. Die Kegel standen dazu
+auf einer Acrylglasscheibe und hatten auf
+der Unterseite einen farbigen Punkt. Leider
+musste ich diese Version verwerfen, da
+immer Störlicht von oben einfiel und
+dadurch die Bilderkennung fehlerhaft war
+(Abb. 9).
+
+Die Anzeige
+Als Anzeige dienen neun Leuchtsteine mit
+alten weißen Leuchtkappen und ein
+LCD1602 16x2 Display, das über das I²CProtokoll angesteuert wird (Abb. 12).
+
+
+In der zweiten Variante habe ich dann neun
+Reedkontakte verwendet (Abb. 10). In die
+Kegel wurde ein 1 mm-Loch für das Seil
+gebohrt und von unten ein runder Ferritmagnet eingesetzt (Abb. 11). Diese Lösung
+erwies sich als sehr zuverlässig bei der
+Kegelerkennung.
+
+
+Es kann mit einem oder zwei Spielern
+gekegelt werden. Jeder hat drei Würfe. Der
+Name wird über die beiden Taster vorne
+
+
+Modell
+
+eingegeben. Die Anzeige gibt die Anzahl
+der Würfe, die Punktzahl des Wurfs und die
+Summe der Würfe aus (Abb. 13).
+
+
+Die Elektronik
+Über den gelben Fototransistor (Abb. 14)
+wird erkannt, wann ein Wurf durchgeführt
+worden ist.
+
+
+Der Einsatz
+Die fischertechnik-Kegelbahn kam zum
+ersten Mal auf der Modellbaumesse Neumünster vom 05.-06.03.2016 zum Einsatz.
+
+
+Die Kegelerkennung funktioniert über ein
+8-Kanal-Relais und zwei I/O-PortPCF8574 (Abb.15). Nach jedem Wurf werden die Reed-Kontakte ausgelesen und
+aufsummiert. Angesteuert wird dies über
+den I2C-Anschluss des Robo TX Controllers.
+
+Im Dauereinsatz zeigte sich die eine oder
+andere Schwäche der ursprünglichen Konstruktion, die in der hier vorgestellten
+Variante verbessert wurden – z. B. sind
+Glasmurmeln geeigneter als die fischertechnik-Metallkugeln, da die Ferrit-Magnete
+der Kegel nicht an ihnen hängenbleiben.
+Auch die Anzeige der Ergebnisse zweier
+Spieler erhöht den Spielspaß.
+Ein Video der Kegelbahn findet ihr auf
+YouTube.
+
+Referenzen
+[1]
+
+Dirk Wölffel, Dirk Fox: I²C mit dem
+TX – Teil 11: Die Pixy-Kamera.
+ft:pedia 4/2014, S. 43-51.
+
+
+

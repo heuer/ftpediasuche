@@ -1,0 +1,223 @@
+
+Elektronik
+
+Elektronik
+
+Silberlinge: Original oder Nachbau (Teil 8)
+Peter Krijnen
+1971 stellten die Fischerwerke die erste Version des Schulkastens u-t4 30609 (Abb. 230) vor.
+Diese war speziell zum Steuern und Regeln gedacht. Die notwendige Elektronik wurde in einem
+„Batteriehalter“ untergebracht. Ab 1974 war der Kasten jedoch mit vier Silberlingen
+(Abb. 231) versehen. Die Elektronik, die im ersten Kasten in einem Gehäuse untergebracht war,
+war fortan auf drei Silberlinge verteilt: Verstärkerbaustein 36733, Transistor-PotentiometerBaustein 36735 und ein Relaisbaustein 36734. Ein Gleichrichterbaustein 36393 war ebenfalls
+dabei.
+
+Verstärkerbaustein VB 36733
+Wenn wir auf die Frontplatte des Moduls
+schauen, sehen wir insgesamt 6 Anschlussbuchsen, einen Schalter, die Skala eines
+Potentiometers und das Symbol eines Verstärkers. Oben steht: „Eingang“ und unten:
+„Ausgang“. Links neben dem Schalter steht
+„B“ und rechts „+/-“. Links neben dem Verstärkersymbol steht „C“ und rechts „+“.
+u-t4 aus 1971
+
+u-t4 aus 1974
+
+
+„B“ (Basis) und „C“ (Kollektor) zeigen an,
+dass ein Transistor eingebaut ist. Ihr fragt
+euch vielleicht, wo sich der Anschluss „E“
+(Emitter) befindet? Und auf der linken Seite
+
+
+des Moduls gibt es auch noch einen „+“ und
+einen „-“-Anschluss.
+Wenn wir uns nun das Schaltbild
+(Abb. 236) ansehen, sehen wir, dass das
+„B“ und das „C“ tatsächlich zu einem Transistor gehören. Wir sehen jetzt auch, dass
+das „E“ des Transistors mit „-“ des Moduls
+verbunden ist. Und dass der Schalter, wie
+der Polwendeschalter 31331, zwei Wechslerkontakte hat.
+
+BC108 verträgt nur 200 mA. Da ich selbst
+mehrfach nicht aufgepasst hatte, musste ich
+mehrfach den Transistor tauschen. Da die
+Verfügbarkeit des BC108 nicht mehr so gut
+ist, habe ich ihn durch einen BC517 ersetzt.
+Dies ist ein 400 mA-Darlington in einem
+Kunststoffgehäuse. Der BC108 hat ein
+rundes Metallgehäuse und ist mit einem
+Kühlstern ausgestattet.
+
+Einer der Kontakte wird über die
+Anschlussbuchse „+/-“ herausgeführt. Der
+andere Kontakt ist über den 330-Ω-Widerstand R1 mit dem Schleifer des Potentiometers verbunden. Allerdings ist der Effekt
+umgekehrt, „-/+“ also. Dies wird auf Seite 8
+der Anleitung [1], die mit u-t4 geliefert
+wird, besser beschrieben.
+Einer der Anschlüsse des 25K-Potentiometers ist mit der Anschlussbuchse „B“ und
+zusätzlich über den 1K-Widerstand R2 mit
+der Basis des Transistors verbunden. Da der
+Emitter an „-“ angeschlossen ist, muss die
+Last (Lampe, Motor, Relais) zwischen
+Kollektor und „+“ angeschlossen werden.
+
+
+Es muss sichergestellt sein, dass sich der
+Motor frei drehen kann, da sonst der Strom
+zu stark ansteigen kann. Dadurch wird der
+Transistor irreparabel beschädigt. Der
+
+
+
+Ich möchte kurz auf den Widerstand R1
+zurückkommen. Mir ist aufgefallen, dass
+dieser Widerstand ursprünglich nicht vorgesehen war. Wenn wir uns Abb. 234
+ansehen, sehen wir, dass eine Leiterbahn in
+
+der Mitte der Platine durchbohrt wurde. Wir
+sehen auch keine Lötinseln für den Widerstand. Die Drähte des Widerstands werden
+direkt auf die Leiterbahn gelötet.
+
+Elektronik
+
+Anschlüsse, sowohl die des Transistors als
+auch die des Potentiometers, mit einer
+Anschlussbuchse nach außen geführt sind.
+Der BC108 könnte durch den BC517 ersetzt
+werden.
+
+
+
+Transistor-PotentiometerBaustein TP 36735
+Der TP ist eigentlich ein VB ohne Schalter.
+Auf dem Schaltbild (Abb. 242) sehen wir,
+dass der Transistor ebenfalls vom Typ
+BC108 und ebenfalls mit einem Kühlstern
+ausgestattet ist. Das 25K-Potentiometer ist
+auch das gleiche. Anders ist, dass nun alle
+
+
+Seite 15 von [1] zeigt, wie es möglich ist,
+die Transistoren des VB und des TP in
+Reihe zu schalten. Dies ergibt einen
+400 mA-Darlington.
+
+
+
+
+
+
+
+
+Elektronik
+
+Relaisbaustein RB 36734
+Äußerlich ähnelt der Relaisbaustein 36734
+dem Relaisbaustein RBII 37683. Es gibt
+jedoch Unterschiede. Da nun vier Dioden
+(Abb. 245) verbaut sind, ist auch das
+Layout (Abb. 249) der Platine anders. Die
+Dioden sind als Gleichrichter geschaltet
+(Abb. 248). Das bedeutet, dass dieses
+Relais mit Wechselstrom geschaltet werden
+kann. Der Nutzen davon entgeht mir jedoch,
+zumal wir innerhalb des fischertechnikProgramms ausschließlich mit Gleichstrom/Gleichspannung arbeiten.
+
+
+
+
+
+
+
+Vergleicht man die Abb. 251 und 260 bzw.
+254 und 263, sieht man, dass der Schalter
+der einzige Unterschied ist. Da das 9VBatteriegehäuse etwas zu klein ist, musste
+ich für diese Versionen zwei Platinen anfertigen. Diese findet man auf den Abb. 257
+und 266.
+Einen Nachbau für den Relaisbaustein habe
+ich nicht geplant. Ich denke, die Version mit
+dem eingebauten Verstärker ist besser zu
+verwenden.
+
+
+Nachbau
+Wie ich in der Erklärung des DynamischenUND erwähnt habe [2], habe ich eine universelle Platine für die u-t4- und Hobbylabor-Module entworfen. Da diese Module
+nur aus wenigen Komponenten bestehen,
+wäre es mir (finanziell) unmöglich gewesen, für jedes Modul eine separate Platine
+anfertigen zu lassen. Mehr dazu in einem
+zukünftigen Beitrag.
+Aufgrund des universellen Charakters der
+Platine habe ich den Emitter des VB über
+eine eigene Anschlussbuchse nach außen
+geführt (Abb. 250, 253). Auch habe ich die
+Anschlussbuchsen an eine für mich
+logischere Stelle verschoben.
+
+
+In diesem Beitrag gibt es also nicht viel
+Text, aber auf 38 Bildern trotzdem einiges
+zu sehen. Und ein Bild sagt schließlich
+mehr als 1000 Worte.
+Im nächsten Beitrag wird auf das Hobbylabor eingegangen, ergänzt um den Mikrofon-Lautsprecher-Baustein.
+
+Quellen
+[1]
+
+Fischer-Werke: fischertechnik u-t4
+Beschreibung und Anwendung der
+Bauelemente des Elektronikbaukastens. Auf
+docs.fischertechnikclub.nl.
+
+[2]
+
+Peter Krijnen: Silberlinge: Original
+oder Nachbau (Teil 7). 2/2022, S. 87–100.
+
+
+Elektronik
+
+das 45×75-Gehäuse
+
+das 60×60-Gehäuse
+
+45×75-Gehäuse
+
+60×60-Gehäuse
+
+45×75-Gehäuse
+
+60er-Kassette (32076)
+
+
+
+
+das Batteriegehäuse 32263
+
+das 45×75-Gehäuse
+
+30×60-Gehäuse
+
+45×75-Gehäuse
+
+Batteriegehäuse 32263
+
+45×75-Gehäuse
+
+
+
+Elektronik
+
+das 60×60-Gehäuse
+
+das Batteriegehäuse 32263
+
+60×60-Gehäuse
+
+30×60-Gehäuse
+
+60er-Kassette (32076)
+
+Batteriegehäuse 32263
+
+
+

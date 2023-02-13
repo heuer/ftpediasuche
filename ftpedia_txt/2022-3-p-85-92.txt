@@ -1,0 +1,626 @@
+
+Computing
+
+Computing
+
+Einführung in ftScratch (3): Der Barcodeleser
+Dirk Fox
+Scratch ist eine für Einsteiger und Schulen besonders geeignete Programmiersprache. Die
+Entwicklungsumgebung ftScratch3 unterstützt mit entsprechenden Erweiterungen die fischertechnik-Controller TXT und BT Smart [1]. In dieser Serie führen wir in die Programmierung
+mit ftScratch ein – mit kleinen Modellen und Aufgaben.
+
+Barcodes
+
+Der „Code 39“
+
+Ein Barcode ist ein Balken- oder Strichcode, der sich aus schwarzen und weißen,
+unterschiedlich breiten Balken zusammensetzt. Barcodes zählen zu den eindimensionalen Binärcodes, da die Information allein
+in der Breite der Balken enthalten ist und
+nur die Werte „0“ und „1“ kodiert werden
+(bspw. schmaler Balken = „0“, breiter Balken = „1“). Die Farbe der Balken (schwarz,
+weiß) dient zur optischen Unterscheidung
+benachbarter Balken.
+
+Ein verbreiteter Barcode ist der Code 39
+(Abb. 1, siehe auch [3]). Er wurde 1973 bei
+der Fa. Intermec entwickelt und seitdem
+von diversen Normungs-Organisationen
+(darunter ANSI und ISO) standardisiert,
+u. a. 1999 als ISO/IEC 16388 [4].
+
+Barcodes sind optische Codes: Sie können
+von einem Sensor, der „hell“ und „dunkel“
+unterscheiden kann, oder von einer Kamera
+mit Bildauswertung gelesen und dekodiert
+werden. Barcodes werden überwiegend zur
+Kennzeichnung von Objekten verwendet;
+man findet sie z. B. auf Büchern und Zeitschriften (ISBN/ISSN), auf Waren-Etiketten oder Aufklebern für die Paketpost.
+Es gibt sehr viele unterschiedliche Barcodes, die sich durch ihre Informationsdichte und durch die verwendeten Prüfziffern unterscheiden [2]. Barcodes haben
+den Vorteil, dass sie sehr robust sind, also
+auch verschmutzt oder beschädigt meist
+noch lesbar sind. Sie lassen sich sehr leicht
+einlesen, und die Lesegeräte sind vergleichsweise günstig und weit verbreitet –
+in Kassensystemen sind sie heute ein
+Standard.
+
+Ein Code-39-Zeichen besteht aus neun Balken: fünf schwarzen und vier weißen (den
+Zwischenräumen) in zwei verschiedenen
+Breiten. Vor und hinter jedem Zeichen folgt
+ein (schmaler) weißer Zwischenraum, damit man die einzelnen Zeichen unterscheiden kann. Der Code-39-Standard definiert
+insgesamt 44 Zeichen: die 26 Buchstaben
+des Alphabets, die zehn Ziffern „0“ bis „9“
+(Abb. 1) und acht Sonderzeichen – Leerzeichen, „-“, „+“, „.“, „/“, „%“, „$“ und „*“
+(Start-/Stoppzeichen). In Tabelle 1 am Ende
+des Beitrags findest du alle Zeichen des
+Code-39 in einer Übersicht.
+Code-39-Barcodes sind immer gleich breit,
+denn die Anzahl der breiten Balken je
+Zeichen ist auf genau drei festgelegt. Bei
+Buchstaben und Ziffern sind es immer zwei
+schwarze und ein weißer.
+Ein Code-39-Zeichen besteht also immer
+aus sechs schmalen und drei breiten Balken.
+Wenn wir einen breiten Balken als „1“ und
+einen schmalen als „0“ interpretieren, repräsentiert ein Code-39-Zeichen eine neunstellige Binärzahl.
+
+
+
+
+Der Code-39 entspricht damit einem binären „3-aus-9“-Code. Damit bezeichnet man
+einen neunstelligen Binärcode, dessen
+Codeworte jeweils genau drei Einsen enthalten. Mit einem 3-aus-9-Code können
+9!
+9 ∙ 8 ∙ 7 ∙ 6!
+=
+= 84
+=
+3 ∙ 2 ∙ 6!
+3! ∙ (9 − 3)!
+unterschiedliche Zeichen kodiert werden.
+Tatsächlich umfasst der Code-39 lediglich
+44 Zeichen; nur etwa jedes zweite Zeichen
+des 3-aus-9-Codes ist ein gültiges Code-39Zeichen. Damit liegt der Informationsgehalt
+des Code-39 bei sechs Bit (26 = 64).
+Mit neun Bit sind 29 = 512 verschiedene
+Zahlen darstellbar. Damit entspricht nur
+etwa jede zwölfte neunstellige Binärzahl
+einem gültigen Code-39-Zeichen. Der
+Code-39 hat also eine sehr hohe Redundanz:
+Er ist nicht sehr effizient (sechs Bit würden
+für die Kodierung von 44 Zeichen ausreichen); dafür werden Lesefehler mit einer
+
+
+sehr hohen Wahrscheinlichkeit erkannt. Da
+je zwei Zeichen des Code-39 sich an mindestens zwei Stellen unterscheiden (Hamming-Abstand 2), sind sogar Fehlerkorrekturen möglich. Aber Achtung: Der Code ist
+nicht gegen „Umkehrung“ geschützt: wird
+der Code falsch herum eingelesen, liefert
+die Dekodierung ein anderes Zeichen
+(bspw. „1“ statt „A“, „2“ statt „H“ usw.).
+
+Der Barcodeleser
+Nun möchten wir Code-39-Barcodes mit
+Scratch und unserem fischertechnik-Controller einlesen und dekodieren. Das
+machen wir mit einem kleinen mechanischen Modell, das den Code „abtastet“:
+Wir lassen eine an einer Laufschiene angebrachte, von einem Motor angetriebene
+Leseeinheit aus einer Linsenstecklampe
+(37875) oder einer Lichtschranken-LED
+(162135) und einem Fototransistor über den
+Code „hinwegfahren“ (Abb. 2).
+
+
+Computing
+
+
+Das geht nicht so schnell wie mit einem
+CCD-Sensor oder einer Kamera; dafür lernt
+man dabei, wie das Erkennungsverfahren
+im Detail funktioniert.
+Baue zunächst den Barcodeleser aus Abb. 2
+auf. Die Designer-Datei des Modells findest
+du im Downloadbereich dieser Ausgabe der
+ft:pedia.
+
+ Justiere die Fotodiode und die Linsenlampe am Lesekopf so, dass in der Anzeige im Gateway deines Controllers bei
+weißem Untergrund der Wert „1“ und
+bei dunklem „0“ an I1 angezeigt wird.
+
+Ein paar Hinweise zum Aufbau des Modells:
+ Das fischertechnik-Seil musst du mindestens einmal um die kleine Führungsrolle wickeln, damit es greift.
+ Die Endlagenerkennung erfolgt mit
+einem kleinen zylindrischen NeodymMagneten in der unteren Nut des BS15
+auf dem Lesekopf. Zu kaufen gibt es
+solche Stabmagnete mit 4 mm Durchmesser z. B. bei Supermagnete.de. Alternativ kannst du einen flachen NeodymMagneten, wie er sich häufig in „Edelverpackungen“ findet, auf eine Bauplatte
+15·15 kleben und diese in der unteren
+Nut des BS15 befestigen.
+
+
+ Die Position der Reed-Kontakte musst
+du ebenfalls ein wenig justieren: Der
+Reed-Kontakt muss „anschlagen“, bevor
+
+
+
+
+Diode und Lampe unterhalb des Schlittens die BS15 berühren, die die Laufschiene tragen.
+
+Sensoren und Aktoren
+Die Aufgaben können sowohl mit dem TXT
+als auch mit dem BT Smart Controller
+gelöst werden. Für die Aufgaben benötigst
+du
+ eine Fotodiode,
+ eine Linsenstecklampe oder eine Lichtschranken-LED,
+ einen XS-Motor,
+ einen Taster und
+ zwei Reed-Kontakte.
+Die Sensoren und Aktoren werden wie folgt
+angeschlossen:
+ I1: Fotodiode
+ I2: Reed-Kontakt an der Endlage
+„Startposition“
+ I3: Reed-Kontakt an der Endlage
+„Endposition“
+ I4: Start-Taster
+ M1: XS-Motor
+ M2: Linsenstecklampe/LichtschrankenLED
+
+Aufgaben
+Für die folgenden Aufgaben kannst du die
+Barcodes aus dem Code-39-Alphabet im
+Downloadbereich dieser Ausgabe der
+ft:pedia verwenden. Drucke die gewünschten Zeichen aus und schneide auf beiden
+Seiten einen etwa 1,5 cm breiten Streifen
+ab, damit der Code unter den Lesekopf
+passt. Wir beginnen zunächst mit der
+Steuerung des Lese-Kopfes, dann „messen“
+wir unseren Barcode aus und schließlich
+vervollständigen wir den Leser um die
+Dekodierung des eingelesenen Codes.
+Aufgabe 1
+Der Lese-Kopf des Barcode-Lesers soll zu
+Beginn in die Startposition fahren. Wird der
+Start-Taster (I4) betätigt, soll sich der LeseKopf (mit moderater Geschwindigkeit) in
+Bewegung setzen, bis er die Endlage erreicht hat und dort stoppen. Wird der StartTaster erneut gedrückt, soll der Lesekopf
+zurück in die Startposition fahren.
+Aufgabe 2
+Jetzt legen wir den Testbogen mit dem
+Barcode in unseren Barcodeleser ein. Während der Lese-Kopf sich in Richtung Endlage bewegt, wollen wir die Breite der von
+der Fotodiode erkannten Balken des Barcodes messen, indem wir die Zeit stoppen,
+die bis zum Beginn des nächsten Balkens
+verstreicht.
+Die Messwerte sollen in eine Liste eingetragen werden, damit wir daraus einen
+Schwellenwert bestimmen können, anhand
+dessen sich eine „0“ (schmaler Balken) von
+einer „1“ (breiter Balken) unterscheiden
+lässt.
+Miss‘ die Balkenbreiten deines Barcodes
+bei verschiedenen Motorgeschwindigkeiten. Du siehst, dass die Unterscheidung bei
+niedrigen Geschwindigkeiten einfacher ist.
+Lege einen geeigneten Schwellenwert für
+eine passende Geschwindigkeit des Motors
+fest.
+Tipp: Arbeite mit Threads.
+
+
+
+Computing
+
+Aufgabe 3
+
+Lösungsbeispiele
+
+Nun können wir den ersten Barcode dekodieren. Lege den Code-39 des Buchstabens
+„A“ oder „B“ unter deinen Barcodeleser.
+Werte die Balken nun als Binärzahl aus: Ein
+schmaler Balken entspricht einer „0“ an der
+entsprechenden Binärstelle, ein breiter einer
+„1“. Erweitere dein Programm aus Aufgabe
+2 um die Bestimmung des Binärwertes des
+Codes und zeige das Ergebnis im Fenster
+der Bühne an.
+
+Die folgenden Lösungsbeispiele wurden für
+den BT Smart Controller programmiert. Die
+entsprechenden Scratch-Skripte und alle
+Hilfsdateien findet ihr im Downloadbereich
+dieser Ausgabe der ft:pedia. Die Anpassung
+der Skripte an den TXT Controller (Ersetzung der entsprechenden Blöcke in
+ftScratch) ist sehr einfach.
+
+Hinweis: Aus der Tabelle am Ende des
+Beitrags kannst du entnehmen, dass der
+Code für „A“ den Wert 265, der für „B“ den
+Wert 73 liefern muss.
+
+Die Bewegung in die Startposition wurde in
+einen eigenen Block ausgelagert, damit das
+Programm übersichtlicher wird.
+
+Aufgabe 1
+
+Aufgabe 4
+Jetzt fehlt noch die Dekodierung des Binärwerts: Der Barcodeleser soll nicht den
+Binärcode, sondern das kodierte alphanumerische Zeichen anzeigen. Dazu benötigst
+du zwei Listenvariablen: Eine, die alle gültigen Binärwerte des Code-39 enthält, und
+eine mit allen zugehörigen alphanumerischen Zeichen (Tabelle 1). Um dir das
+Abtippen zu ersparen gibt es beide Listen
+im Downloadbereich dieser Ausgabe der
+ft:pedia. Importiere die Daten in je eine
+Listenvariable und erweitere dein Programm aus Aufgabe 4 so, dass statt des
+Binärcodes das kodierte alphanumerische
+Zeichen auf der Bühne angezeigt wird.
+Aufgabe 5
+Erweitere dein Programm aus Aufgabe 4 so,
+dass nacheinander mehrere Barcodes eingelesen werden können und die Dekodierung
+als Zeichenfolge angezeigt wird.
+Aufgabe 6
+Ergänze dein Scratch-Skript nun noch um
+eine Sprachausgabe, die die eingelesene
+Buchstabenfolge vorliest.
+
+
+
+
+Aufgabe 2
+Die Messung gelingt einfach, wenn wir in
+zwei parallelen Threads bei jedem Signalwechsel der Fotodiode („Schließen“ oder
+„Öffnen“) den Wert der Stoppuhr speichern
+und die Stoppuhr zurücksetzen (Abb. 5).
+
+Der erste Eintrag in der Liste ist die Zeit bis
+zum Beginn des ersten Balkens, daher
+werden insgesamt zehn Messungen vorgenommen. Im Testmodell konnten die
+Balken auch bei Maximalgeschwindigkeit
+(8) noch gut unterschieden werden: schmale
+Balken wurden vom Lesekopf in weniger
+als 150 ms, breite Balken in über 350 ms
+überfahren. Als Schwellenwert werden
+daher 250 ms festgelegt.
+Aufgabe 3
+Die Bestimmung des Binärwerts des Codes
+gelingt durch eine einfache Erweiterung der
+beiden Threads, die auf das Schließen bzw.
+Öffnen der Fotodiode reagieren (Abb. 6).
+Dabei wird der Balkencode am einfachsten
+von links (höchstwertiges Bit) nach rechts
+ausgewertet:
+ Setze die Ergebnisvariable auf 0
+ Multipliziere die Ergebnisvariable bei
+jedem Wechsel des Input-Signals mit
+zwei.
+ Wenn die gemessene Zeit seit dem letzten Wechsel größer als der Schwellenwert ist, addiere zur Ergebnisvariable 1.
+
+
+
+
+Da das höchstwertige Bit der eingelesenen
+Zahl durch den Freiraum vor dem ersten
+Balken zustande kommt, musst du es zum
+Schluss löschen. Das geht am einfachsten,
+indem du den Rest des Werts der Ergebnisvariable modulo 29 = 512 bestimmst.
+
+
+Computing
+
+Aufgabe 4
+
+Weiterentwicklung des Modells
+
+Mit den beiden Listenvariablen ist die
+abschließende Dekodierung des Code-39Zeichens geradezu trivial: Es genügt eine
+einzige Programmzeile, um aus dem Binärwert das kodierte Zeichen zu erhalten
+(Abb. 7).
+
+Die Geschwindigkeit des Barcodelesers
+kannst du verdoppeln, wenn bei jeder
+Bewegung des Lesekopfes eine Auswertung des eingelegten Barcodes erfolgt.
+Entweder legst du dazu jeden zweiten
+Barcode auf dem Kopf stehend ein, oder du
+liest den Code abwechselnd beginnend
+beim höchst- resp. niederstwertigen Bit ein.
+Letzteres macht den Lesevorgang etwas
+komplexer.
+
+dekodierte alphanumerische Zeichen
+
+Die kurze Wartezeit stellt sicher, dass die
+Modulo-Berechnung erst nach der Auswertung des letzten Signal-Wechsels an I1
+erfolgt. Den Wert der Variable „character“
+kann man sich auf der Bühne anzeigen
+lassen.
+Aufgabe 5
+Statt „character“ verwenden wir die Variable „message“ und hängen jedes neu dekodierte Zeichen einfach an (Abb. 8).
+
+
+Aufgabe 6
+Die Sprachausgabe ist leicht ergänzt: Zu
+Beginn des Skripts werden Sprache und
+Stimmfarbe gewählt, dann erfolgt zum
+Schluss die Sprachausgabe (Abb. 9).
+
+
+Mit dem zweiten Motorausgang kannst du
+auch einen Transportmotor ansteuern. Damit kannst du von einem Stapel gedruckter
+Code-39-Zeichen eines nach dem anderen
+in Folge einlesen, ohne dass du die Zeichen
+manuell einlegen musst. Den Start-Taster
+kannst du in dieser Modellvariante durch
+eine Lichtschranke ersetzen, die den Motor
+stoppt, wenn das nächste Zeichen in der
+richtigen Position liegt.
+Du kannst das Modell auch so umbauen,
+dass nicht mehr einzelne Code-Zeichen,
+sondern ein langer Streifen mit einem aufgedruckten Code-39-Barcode gelesen werden kann. Der Lesekopf kann dann fest
+montiert werden, und der Barcode wird mit
+einem Motor in gleichmäßiger Geschwindigkeit darunter vorbeigeschoben.
+Um einen zusammenhängenden Barcode zu
+erzeugen, kannst du dir entweder eine
+Code-39-Schriftart für dein Textverarbeitungsprogramm installieren (z. B. Code-39Logitogo) oder dir die Zeichen über einen
+kostenlosen Online-Dienst generieren lassen (z. B. von tec-it). Dabei musst du beachten, dass ein vollständiger Barcode
+immer vor dem ersten und hinter dem
+letzten Zeichen den Start-Stopp-Code (*)
+enthält. Daran kannst du leicht den Anfang
+und das Ende eines Barcode-Textes erkennen.
+
+
+
+
+Code-39 (binär)
+
+dezimal Zeichen
+
+Code-39 (binär)
+
+dezimal Zeichen
+
+000110100
+
+
+„0“
+
+001000110
+
+
+„S“
+
+100100001
+
+
+„1“
+
+000010110
+
+
+„T“
+
+001100001
+
+
+„2“
+
+110000001
+
+
+„U“
+
+101100000
+
+
+„3“
+
+011000001
+
+
+„V“
+
+000110001
+
+
+„4“
+
+111000000
+
+
+„W“
+
+100110000
+
+
+„5“
+
+010010001
+
+
+„X“
+
+001110000
+
+
+„6“
+
+110010000
+
+
+„Y“
+
+000100101
+
+
+„7“
+
+011010000
+
+
+„Z“
+
+100100100
+
+
+„8“
+
+010000101
+
+
+„–“
+
+001100100
+
+
+„9“
+
+110000100
+
+
+„.“
+
+100001001
+
+
+„A“
+
+011000100
+
+
+„ “
+
+001001001
+
+
+„B“
+
+010101000
+
+
+„$“
+
+101001000
+
+
+„C“
+
+010100010
+
+
+„/“
+
+000011001
+
+
+„D“
+
+010001010
+
+
+„+“
+
+100011000
+
+
+„E“
+
+000101010
+
+
+„%“
+
+001011000
+
+
+„F“
+
+010010100
+
+
+„*“
+
+000001101
+
+
+„G“
+
+100001100
+
+
+„H“
+
+Referenzen
+
+001001100
+
+
+„I“
+
+[1]
+
+000011100
+
+
+„J“
+
+Dirk Fox: Scratch mit fischertechnik
+– Update 2022. ft:pedia 1/2022,
+S. 86–92.
+
+100000011
+
+
+„K“
+
+[2]
+
+Wikipedia: Strichcode.
+
+001000011
+
+
+„L“
+
+[3]
+
+101000010
+
+
+„M“
+
+000010011
+
+
+„N“
+
+Andreas Gail: Strichcode-Leser am
+Robo TX Controller (1): Automatisiert mit RoboPro. ft:pedia 3/2014,
+S. 66–71.
+
+100010010
+
+
+„O“
+
+[4]
+
+001010010
+
+
+„P“
+
+000000111
+
+
+„Q“
+
+100000110
+
+
+„R“
+
+International Organization for Standardization (ISO): ISO/IEC
+16388:2007. Information technology
+— Automatic identification and data
+capture techniques — Code 39 bar
+code symbology specification,
+15.05.2007, confirmed 2014.
+
+
+Tab. 1: Code-39
+
+

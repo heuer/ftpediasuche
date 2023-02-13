@@ -1,0 +1,94 @@
+
+
+Computing
+
+startIDE (2): Seilwinde
+Rolf Meingast
+In dem Experimentierhandbuch COMPUTING EXPERIMENTAL [1] wird als einführendes
+Experiment eine einfache Seilwinde behandelt. Hier zeige ich eine Übertragung auf die
+Programmierumgebung startIDE.
+Eine Seilwinde soll über zwei Taster
+gesteuert werden, die die Drehrichtung vorgeben. Im Hinblick auf die Anwendung bei
+einem Aufzug werden mit einem dritten
+Taster die halben Umdrehungen der Seilwinde gezählt.
+
+
+Ein TX-Pi steuert mit der App startIDE ein
+über USB angeschlossenes ROBO-Interface mit folgendem Programm:
+1. # new
+2. Interrupt Every 100 interrupt
+3. Init counter 0
+4. Init richtung 0
+5. Tag Start
+6. Call COUNTER 1
+7. QueryVar counter
+8. Delay 50
+9. IfVar counter >= 50 Ende
+10. Clear
+11. QueryVar richtung
+
+12. IfVar richtung == 1 rechts
+13. IfVar richtung == 2 links
+14. Motor RIF 1 s 0
+15. Jump Start
+16. Tag rechts
+17. Motor RIF 1 r 4
+18. Jump Start
+19. Tag links
+20. Motor RIF 1 l 4
+21. Jump Start
+22. Tag Ende
+23. Stop
+24. Module COUNTER
+25. IfInDig RIF 1 True ohne
+26. IfVar richtung == 0 ohne
+27. Calc counter counter + 1
+28. Delay 250
+29. Tag ohne
+30. MEnd
+31. Module interrupt
+32. IfInDig RIF 2 True A
+33. IfInDig RIF 3 True B
+34. Jump D
+35. Tag A
+36. Calc richtung 1 + 0
+37. IfInDig RIF 3 True C
+38. Jump D
+39. Tag B
+40. Calc richtung 1 + 1
+41. Jump D
+42. Tag C
+43. Calc richtung 1 - 1
+44. Tag D
+45. MEnd
+
+Listing 1
+
+Zeile 2 bewirkt, dass das Modul Interrupt
+(ab Zeile 31) alle 100 ms aufgerufen wird,
+mit dem die Drehrichtung (0/1/2) durch
+Abfrage der Tasten 2 und 3 festgelegt wird.
+
+
+Computing
+
+
+Die Auswertung der Variablen richtung
+erfolgt in den Zeilen 12 bis 14.
+
+Tasters). Zeile 26 soll ein Zählen bei Stillstand und gedrückter Taste verhindern.
+
+Nach Start erfolgt immer der Aufruf des
+Moduls COUNTER (Zeile 24). Wenn Taster
+1 durch die Nocken der Seiltrommel
+betätigt wird, wird der Zähler um 1 erhöht
+und 250 ms gewartet (zum Entprellen des
+
+Referenzen
+[1]
+
+fischertechnik: Computing
+Experimental (für C64).
+
+
+

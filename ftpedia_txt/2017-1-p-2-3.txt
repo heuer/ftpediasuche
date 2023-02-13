@@ -1,0 +1,112 @@
+
+
+Editorial
+
+We can Englisch!
+Harald Steinhaus
+Hallo. Ich bin der Harald. Ich arbeite in
+einer Firma für Netzwerkausrüstung. Die
+Firma ist sehr groß und hat Mitarbeiter in
+fast allen Ländern dieser Welt. In Deutschland werden das immer weniger und anderswo mehr, aber das ist eine andere Geschichte. Wenn ich im Büro bin und nur drei oder
+vier Türen weiter gehe, finde ich viele
+Deutsche und dazu zwei Italiener, einen
+Griechen und einen Ungarn. Wenn ich zwei
+Treppen rauf gehe, treffe ich Albanerinnen,
+Finnen, Chinesinnen, Spanier und so weiter.
+Vom Büro aus, oder wenn ich meinen PC
+mit heim nehme und mal einen Tag vom
+Wohnzimmer aus arbeite, machen wir Telekonferenzen übers Internet: einer sendet
+ständig seinen Bildschirminhalt an alle, und
+alle können miteinander sprechen. Da sind
+dann noch mehr Nationalitäten beteiligt:
+Amerikaner, Philippinen, Polen, Südafrikaner, Franzosen und noch mehr Chinesen.
+Meine Arbeit ist es, festzulegen, wie eine
+bestimmte neue Funktion in einer computer-gesteuerten
+Maschine
+ausgeführt
+werden und wie oft sie das gleichzeitig und
+pro Stunde hinkriegen soll.
+Dazu werden alle gebraucht: Mit den einen
+muss ich prüfen, ob meine Vorstellungen
+überhaupt machbar sind. Die anderen
+schauen, ob dafür noch genug Rechenleistung übrig bleibt. Die nächste legt fest,
+was denn der Betreiber alles einstellen kann
+und wann die Funktion überhaupt sinnvoll
+zugeschaltet werden kann oder darf. Wieder
+andere programmieren die Funktion; ein
+Team legt fest, was denn alles geprüft werden muss, und das nächste Team lädt alles
+in eine Testanlage und prüft. Außerdem
+
+
+werden Schulungsunterlagen erstellt, Prospekte geschrieben und die Betriebsanleitung wird ergänzt, damit der Betreiber (also
+unser Kunde) nachher auch damit arbeiten
+kann. Da sind ganz schnell 200 bis 300
+Leute beteiligt, die irgend etwas mit der
+neuen Funktion zu tun haben. So, und damit
+all diese Leute sich überhaupt verständigen
+können, hat die Firma Deutschkurse für alle
+ihre Mitarbeiter auf der Welt veranlasst und
+lässt regelmäßig Prüfungen ablegen. Äääh,
+nein, Quatsch. Hat sie nicht. (Späßle gemacht :-)
+Als Weltfirma hat meine Firma Englisch als
+Standard festgelegt, und deshalb werden
+alle Unterlagen und Konferenzen auf
+Englisch geschrieben und gehalten. Geprüft
+wird auch nicht, und deshalb muss man sich
+sehr konzentrieren, wenn z. B. Japaner oder
+Franzosen mit ihren Akzenten sprechen.
+Die Chinesen machen den Satzbau nicht
+richtig, die Polen und Russen haben ein
+Problem mit bestimmten und unbestimmten
+Artikeln (door? a door? an door? the door?
+this door?), die Amerikaner kriegen ihre
+Kiefer nicht auseinander, und die Deutschen können kein Tih-Eitsch - Yes, we are
+sinking about sis! Die größte Weltsprache
+ist eben nicht Englisch, sondern falsches
+Englisch, und jeder macht das auf seine Art
+falsch.
+Es gibt aber etliches, was die Sache einfacher macht: wir brauchen keinen Konjunktiv und nur ganz wenig Vergangenheit.
+Wir beschreiben Funktionen, ermitteln Bedingungen oder schreiben Anforderungen
+und Anweisungen. Die Vergangenheit interessiert nur soweit, wie wir Änderungen
+
+
+Editorial
+
+gegenüber früheren Versionen betrachten.
+Schachtelsätze über -zig Ebenen hinweg
+würden bestimmt nicht richtig verstanden,
+aber die muss auch erstmal jemand schreiben können. Sobald es grammatisch kompliziert zu werden droht, macht man am
+besten eine Aufzählungsliste und fertig ist
+die Laube. Die Funktionsbeschreibung
+(„Spezifikation“), die am Ende herauskommt, kann schon mal 500 Seiten dick
+werden. Aber sie beschreibt nur eine mehr
+oder weniger komplexe Funktion aus verschiedenen Richtungen, und deshalb reicht
+ein Wortschatz von höchstens 500 Wörtern
+allemal aus, um sie zu verstehen. Dazu
+kommen noch etwa 200 Wörter für Diskussionen und Besprechungen (einladen,
+begrüßen, Tagesordnung festlegen, Wort
+erteilen, Sachstand erfragen, Zustimmung
+und Ablehnung begründen, offen gebliebene Punkte festhalten, verabschieden).
+
+Wer die nicht schon kennt, lernt sie sehr
+schnell in den ersten Besprechungen.
+Worauf ich hinaus will ist nun schnell
+gesagt (Achtung, Aufzählungsliste :-):
+∂ Deutschland ist ein deutlich exportorientiertes Land.
+∂ Man bekommt es mit anderen Sprachen
+zu tun, sobald die Firma größer ist als ein
+Klempnerbetrieb.
+∂ Nur mit deutschen Sprachkenntnissen
+kommt man nicht weit.
+∂ Weltweit arbeitende Firmen nehmen
+Englisch, vielleicht auch Französisch
+oder Chinesisch – kluge Schüler auch;
+andere Schüler würden in so einer Firma
+sicher nicht am Englisch scheitern.
+So long, best wishes, have a nice evening,
+Harald
+
+Geek-and-Poke.com (Oliver Widder)
+
+
+

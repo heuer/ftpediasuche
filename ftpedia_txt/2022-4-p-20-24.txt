@@ -1,0 +1,266 @@
+
+
+Hydraulik
+
+Schlauchpumpe
+Konrad Fox, Dirk Fox
+Wasser spielt im fischertechnik-Universum eine Nebenrolle – vielleicht, weil ein Spielzeughersteller nicht gern für geflutete Kinderzimmer verantwortlich sein möchte. Immerhin: Schlauchpumpen zählen seit 1973 zur Modellsammlung [1]. Dank neuer Bauteile sind heute zuverlässigere und leistungsfähigere Varianten möglich als vor bald 50 Jahren.
+
+Geschichte
+Eine der großen technischen Herausforderungen an die Infrastruktur wachsender
+menschlicher Siedlungen war die Bereitstellung von Trinkwasser – für uns heute
+eine Selbstverständlichkeit. Staudämme,
+Kanäle und Aquädukte zählen daher zu den
+frühen großen Ingenieurleistungen des
+Menschen [2].
+
+230 v. Chr. Von den Römern wurden sie in
+Städten zur Versorgung der öffentlichen
+Bäder eingesetzt, solange diese noch nicht
+via Aquädukt an die römische Wasserversorgung angebunden waren. In Pompeii beispielsweise erhielten die Forums- und die
+Stabianer Thermen so Grundwasser aus
+25 m Tiefe [3].
+
+Doch die Kanalisierung des Wasserflusses
+hilft nicht in jedem Fall: Wo kein Fluss ist,
+muss Wasser entweder über lange Gefällstrecken transportiert oder auf Grundwasser
+zurückgegriffen werden. Dafür sind in der
+Regel Wasserhebetechniken erforderlich.
+Kleine Wassermengen wurden mit Eimern
+aus Brunnen geschöpft, aber für die Versorgung von Siedlungen benötigte man Techniken mit größerem Durchsatz. Für kleinere
+Hübe wurde die um 250 v. Chr. von Archimedes von Syrakus (287-212 v. Chr.) beschriebene und nach ihm benannte Schraube verwendet, von Marcus Vitruvius Pollio
+(kurz ‚Vitruv‘, ca. 80-15 v. Chr.) in seinen
+10 Büchern über Architektur auch „Wasserschnecke“ genannt. Sie wurde noch fast
+2.000 Jahre später in Fluttermühlen zum
+Entwässern niederländischer Polder eingesetzt (Abb. 1).
+Größere Hubstrecken ließen sich mit
+Eimerketten bewältigen. Philon von Byzanz
+(3.-2. Jhd. v. Chr.) beschrieb sie bereits um
+
+in Nordenham-Moorsee (Foto: Wilfried
+Wittkowsky, 2003, CC-BY-SA 3.0)
+
+Eine alternative Technik, um größere Hübe
+zu bewältigen, wurde ebenfalls von Vitruv
+beschrieben: Schöpfräder – meist von Flüssen angetriebene große Speichenräder mit
+bis zu 5 m Durchmesser –, an denen seitlich
+angebrachte Gefäße das geschöpfte Wasser
+etwa auf der Höhe von ¾ des Raddurchmessers in eine Rinne gossen. Sie waren im
+Mittelalter vor allem in der arabischen Welt
+verbreitet und wurden „Noria“ genannt
+(Abb. 2).
+
+
+Hydraulik
+
+(Foto: Herbert Frank, CC-BY-2.0)
+
+Auch Druckkolbenpumpen waren Vitruv
+und Heron von Alexandria (zw. 300 v. Chr.
+und 200 n. Chr.) bereits bekannt; sie wurden aus Bronze gefertigt. Scheibenventile
+verhinderten den Rückfluss.
+
+Schlauchpumpe
+Die Schlauch- oder Rollerpumpe wurde
+hingegen erst 1924 von dem amerikanischen Herzchirurgen Claude Schaeffer Beck
+(1894-1971) für den Einsatz in Herz-Lungen-Maschinen entwickelt. Eine Schlauchpumpe hat die besondere Eigenschaft, dass
+die Durchflussgeschwindigkeit konstant ist
+und leicht reguliert werden kann. Sie ist
+zudem ein geschlossenes System, benötigt
+keine Ventile und ist wartungsarm.
+
+
+In der fischertechnik-Welt tauchte eine
+Schlauchpumpe erstmals im Jahr 1973 auf
+– im Clubheft 2/1973 wurde eine solche
+Konstruktion mit sechs V-Rädern 23x10
+(36581) ausführlich beschrieben (Abb. 5)
+[1].
+
+fischertechnik-Clubheft 2/1973 [1].
+Schlauch- oder Rollerpumpe [3]
+
+Das Funktionsprinzip zeigt Abb. 3: Mehrere
+Rollen oder Gleitschuhe drücken auf einen
+kreisförmig angeordneten Schlauch und
+erzeugen so einen Unterdruck, der die
+Flüssigkeit ansaugt und „portionsweise“ am
+anderen Ende wieder abgibt.
+
+Wenig später wurde das Modell im letzten
+Band 4-5 der hobby-Reihe als Beispiel für
+eine Regelungsaufgabe aufgegriffen (Abb.
+6) [4]. Die Konstruktion war – bis auf eine
+abweichende Befestigung der Schlauchenden – identisch mit der aus dem Clubheft
+2/1973 in Abb. 5 [1].
+
+
+
+der fischertechnik-hobby-Reihe [4], S. 45
+
+Für seine Tropfen-Fotografie konstruierte
+Andreas Gail 2016 eine Variante dieser
+Pumpe, in der er die V-Räder durch
+Klemmringe Z36 (31020) ersetzte. Er beschrieb seine Pumpe ausführlich in Ausgabe 1/2016 der ft:pedia [5] sowie in seinem
+2018 erschienenen Buch [6]. Dazu veröffentlichte er ein Video der Pumpe im Betrieb [7].
+
+überwinden müssen – damit steigen mit abnehmender Wandstärke des Schlauchs die
+Umdrehungsgeschwindigkeit der Achse
+und die Pumpleistung. Auch die Zahl der
+gleichzeitigen Quetschungen (und damit die
+Anzahl der Rollen) hat Einfluss auf die
+Geschwindigkeit: je weniger Quetschungen, desto kleiner ist der zu überwindende
+Widerstand. Also sollten so wenige Quetschungen wie möglich erfolgen. Damit kein
+Wasser zurücklaufen kann, benötigt man
+mindestens zwei gleichzeitige Quetschungen [1] (Abb. 7).
+
+Verbesserungen
+Schlauch
+Im fischertechnik-Modell aus hobby 4 Band
+5 wird ein Silikonschlauch mit 5 mm
+Durchmesser und einer Wandstärke von 0,5
+mm empfohlen [4]. Inzwischen gibt es
+einen transparenten, weichen Silikonschlauch im fischertechnik-Teileuniversum
+(131051), der 2008 mit dem Baukasten
+„Basic Fire Commander“ (500877) als
+Feuerwehrschlauch auf den Markt kam. Ein
+(bis auf die Länge) identischer Schlauch
+(156043) findet sich seit 2015 im Baukasten
+„Profi Dynamic M“; dort dient er als Aufhängung für die Klangrohre (155957,
+155958, 155959). Dieser Schlauch eignet
+sich ausgezeichnet für eine fischertechnikSchlauchpumpe, denn er kann direkt auf die
+Pneumatik-T-Stücke (31642) aufgesteckt
+werden.
+Quetschungen
+Der Durchsatz der Pumpe hängt ab vom
+Querschnitt des verwendeten Schlauchs,
+der Quetsch-Wirkung und der Geschwindigkeit der Rollen. Je leichter sich der
+Schlauch quetschen lässt, desto kleiner der
+Widerstand, den die Rollen (und der Motor)
+
+
+Werden die Rollen kreisförmig angeordnet,
+sind mindestens drei Rollen erforderlich,
+damit der Schlauch zu jeder Zeit an zwei
+Stellen gequetscht ist (siehe Abb. 4).
+Mit kürzeren Schlauchabschnitten zwischen zwei Quetschungen ist die Pumpleistung gleichmäßiger. Führt man nun den
+Schlauch – anders als in den oben zitierten
+Konstruktionen – nicht in einer Schleife um
+alle, sondern nur über zwei von sechs Rollen (also ein Kreissegment), sind wenige
+kurze Quetschungen möglich. Damit nähert
+sich die Konstruktion der Beschreibung des
+Funktionsprinzips in Abb. 7.
+Konstruktiv habe ich das erreicht, indem ich
+den Flachträger durch eine gebogene StatikStrebe ersetzt habe (Abb. 8). Den nötigen
+flexiblen Andruck erzeugen zwei FederGelenksteine 45 (31308).
+Die neuen Statik-Streben haben auf beiden
+Seiten einen hochstehenden Rand. Dadurch
+ist die Quetsch-Wirkung zu gering und die
+Pumpe arbeitet nur sehr eingeschränkt.
+
+Deswegen habe ich eine alte graue 90er
+Strebe verbaut, die auf der Rückseite keine
+Vertiefung hat und so für eine optimale
+Quetsch-Wirkung sorgt.
+
+Hydraulik
+
+und damit auch das Drehmoment. Außerdem halbiert sich die Länge der Schlauchabschnitte zwischen zwei Quetschungen.
+Dabei ist zu beachten, dass die Drehscheiben 60 mit ausreichend Abstand auf der
+Achse befestigt werden, damit die V-Räder
+14 frei drehen können und so über den
+Schlauch rollen (nicht gleiten). Das senkt
+den Verschleiß am Schlauch und den
+Widerstand.
+
+
+Allerdings haben die grauen Streben auch
+nur auf einer Seite eine Einkerbung für die
+S-Riegel, daher passt kein S-Riegel 4
+(36323) durch die Strebe und die S-Adapterlasche (31575). Um dieses Problem zu
+lösen habe ich eine 15er Strebe ergänzt und
+alle drei Bauteile mit einem S-Riegel 6
+(36324) fixiert.
+Rollen
+Je weiter die Rollen von der Antriebsachse
+entfernt sind, desto größer ist das für die
+Quetschung des Schlauchs erforderliche
+Drehmoment. Daher steigt der PumpenDurchsatz, wenn die Rollen näher an der
+Achse sitzen als in den Modellen in Abb. 5
+und 6.
+Für die Rollen-Achsen bieten sich die sechs
+Bohrungen der Drehscheibe 60 (31019) an
+(Abb. 8). Allerdings sind die V-Räder
+23x10 dafür zu groß; sie sind auch zu breit
+für die Statik-Strebe. Deshalb habe ich sie
+durch sechs Paare von V-Rädern 14 (36573)
+ersetzt. Zwar sind zwei V-Räder 14 immer
+noch etwas breiter als eine Statik-Strebe,
+die Wölbung der Räder verhindert aber ein
+seitliches „Ausweichen“ des Schlauchs
+(Abb. 9).
+Bei dieser Konstruktion halbieren sich der
+Abstand der Antriebsachse zum Schlauch,
+
+
+Wenn die Pumpe läuft, kann man die Position des Schlauches mit Hilfe der verschiebbaren T-Stücke optimieren.
+Antrieb
+Zur Optimierung des Pumpendurchsatzes
+habe ich auch mit Getrieben experimentiert.
+Meine Tests mit verschiedenen Antrieben
+
+
+
+haben ergeben, dass ein Direktantrieb mit
+einem starken Motor das beste Pumpergebnis erzielt.
+
+[2]
+
+Walter Kaiser, Wolfgang König
+(Hrsg.): Geschichte des Ingenieurs.
+Carl Hanser Verlag, München, 2006.
+
+Fazit
+
+[3]
+
+Brigitte Cech: Technik in der Antike.
+Theiss Verlag, 2. Auflage 2011.
+
+[4]
+
+fischertechnik: Niveauregelung bei
+bewegten Flüssigkeiten. hobby 4
+Band 5, Fischer Werke, 1975, S. 4245.
+
+[5]
+
+Andreas Gail: Schlauchquetschpumpe. ft:pedia 1/2016, S. 40–41.
+
+[6]
+
+Andreas Gail: fischertechnik-Modelle
+für Maker. dpunkt-Verlag, 2018.
+
+[7]
+
+Andreas Gail: Schlauchquetschpumpe (youtubeVideo).
+
+Bei meinen Messungen erreichte die Pumpe
+eine Fördergeschwindigkeit von knapp 90
+ml/min. Zum Füllen einer Badewanne ist
+sie also weniger geeignet – dafür benötigt
+sie über 30 Stunden… Befestigt man jedoch
+eine Pneumatik-Düse (31632) am Ende des
+Schlauchs, sorgt sie für einen ordentlichen
+Strahl – perfekt für kleine Wasserabenteuer
+ohne Überdruckpumpen.
+
+Quellen
+[1]
+
+fischertechnik: Neues vom fischertechnik-Club. Clubheft 1973-2, S. 913. Fischer-Werke, 1973.
+
+
+
+

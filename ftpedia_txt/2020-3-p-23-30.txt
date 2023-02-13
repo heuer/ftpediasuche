@@ -1,0 +1,328 @@
+
+Modell
+
+Modell
+
+Scorpio, Balliste und Onager
+Rüdiger Riedel
+Der Bogen als Jagd- und Kriegswaffe wurde bereits in der Steinzeit verwendet und war aus
+Holz gefertigt. Die Griechen erfanden Torsionskatapulte, die verdrillte Seilbündel aus Sehnen
+und Haaren zur Energiespeicherung verwendeten.
+
+Geschichte
+Ein einfacher (Holz-) Bogen besteht aus
+dem Griff und den anschließenden elastischen Wurfarmen, an denen die Sehne
+befestigt ist. Weil ein Pfeil nicht wie ein
+Geschoss durch explosive Treibmittel
+beschleunigt wird, sondern durch die
+Wurfarme, „schießt“ ein Bogen nicht – ein
+Bogen „wirft“ [2]. So genau will ich hier
+nicht sein, ich verwende die beiden Worte
+synonym.
+
+erheblich größere Balliste nach schräg oben
+gerichtet, sodass der Stein einen hohen
+Bogen beschrieb.
+
+Der Scorpio
+Kernstück des Scorpio in Abb. 2 sind die in
+Torsionsgehäusen untergebrachten Bündel
+aus Sehnen und Haaren.
+
+
+
+Der römische Ingenieur und Architekt
+Vitruv (81 bis 15 v. Chr.) beschreibt zwei
+Arten von Standardkatapulten: Den Scorpio
+zum Verschießen von Pfeilen bzw. Bolzen
+und die Balliste für Steingeschosse. Die
+Bauart war ähnlich, aber während der
+Scorpio im flachen Bogen schoss, war die
+
+Wir benutzen Pneumatik-Silikonschläuche
+(122363) als Energiespeicher: Je Torsionsgehäuse werden zwei Stück von etwa 9,8
+cm Länge oben und unten an Pneumatik-TStücken (31642 oder 156042) befestigt; der
+dritte Anschluss an den T-Stücken erhält ein
+etwa 0,7 cm langes Stück Schlauch. Dieser
+
+
+
+wird in das mittlere Loch einer S-Strebe 30
+L (36912, 38538 oder 143235) gesteckt.
+
+die Wurfarme möglichst weit nach hinten
+gezogen werden können.
+
+
+Je vier S-Winkelträger 60 (z. B. 36921)
+werden mit acht Bausteinen 7,5, vier Bausteinen 5 2Z (37238) und vier Bausteinen
+2,5 15 x 45 2+2Z (38277) zu einem Torsionsgehäuse zusammengesetzt und das
+Schlauchgebilde entsprechend Abb. 4 eingesetzt.
+
+Vier S-Winkelträger 120 (z. B. 36293)
+werden paarweise mit Bausteinen 5 2Z und
+S-Riegelsteinen 15x15 (32850) zur Schussbahn zusammengefügt. Ebenfalls über Bausteine 5 2Z und S-Riegelsteine 15x15 werden die Torsionsgehäuse daran befestigt.
+
+
+Die vier Bausteine 5 2Z stehen senkrecht
+und verbinden jeweils zwei BS 7,5 miteinander (Abb. 3).
+
+Zwischen die Schläuche werden V-Achsen
+98 (35414) gesteckt, die mit einem Seil
+(35039) von etwa 32 cm Länge verbunden
+werden. An jedem Ende versehen wir das
+Seil mit einem Knoten; die Seilenden werden in die Schlitze der V-Achsen gezogen.
+Die Vorspannung erreichen wir durch zunächst drei halbe Umdrehungen der SStreben 30 oben und unten. Damit sind die
+Torsionsgehäuse für erste Versuche einsatzbereit.
+
+
+Wir brauchen zwei spiegelsymmetrische
+Torsionsgehäuse, da je einer der S-Winkelträger um 90° gedreht eingebaut wird, damit
+
+
+
+Modell
+
+
+
+Eine Rastachse 75 (35087), eine Seiltrommel 15 (31016) mit zwei Klemmringen Z36
+m0,5 (31020) und zwei Rast-Gelenkkurbeln
+KR12 (35088) werden in zwei Bausteinen
+15 mit Bohrung (32064) gelagert. Statt
+einer Sperrklinke wird hier eine Bremse
+eingesetzt, bestehend aus einem Baustein 5
+15x30 (35049), einem BS 7,5, einer Federnocke (31982) und einer Kufe (31602)
+(Abb. 8). Der Haken an der Sehne besteht
+aus einem Schlauchanschluss D4 abgewinkelt (163203), einem BS 7,5 und einer
+Federnocke.
+
+Als Pfeile oder Bolzen verwende ich z. B.
+eine Kunststoffachse 30 (38413) mit zwei
+Klemmbuchsen 10 (31023) oder eine Rastachse 30 (35063) mit zwei Rastkupplungen
+15 (35073). Letztere habe ich noch mit einer
+Lagerhülse 15 (36819) verschönert.
+
+Verbesserter Scorpio
+Wie wir in Abb. 7 sehen, gehen die Wurfarme im Ruhezustand zu weit nach hinten.
+Außerdem müssen sie immer wieder in die
+horizontale Lage (Abb. 8) ausgerichtet werden.
+
+
+
+Mit einer Gelenkwürfel-Zunge (31426) und
+einer Gelenkwürfel-Klaue 7,5 (31436) setzen wir die Schussbahn auf ein Dreibein mit
+Stütze zur Höhenverstellung.
+
+Zwei wesentliche Verbesserungen sind die
+Führung der Wurfarme durch zwei Bauplatten 30x45 3Z (38248) und die Begrenzung der Bewegung durch zwei BS 5, eine
+Bauplatte 15x30x3,75 1N (32330) sowie
+Federnocken. Hierfür ersetzen wir einen S25
+
+
+Winkelträger 60 durch zwei BS 30 (in Abb.
+4 und 7 der vordere Linke). Alles weitere
+erfolgt wie oben beschrieben.
+
+Die Führungsschiene besteht aus neun
+BS 30 und einem nach unten gerichteten
+BS 15, damit vorne und hinten an der
+Schiene Nuten sind. Dieser befindet sich
+zwischen den beiden letzten BS 30 rechts.
+In die obere Nut der Bausteine schieben wir
+sechs Verbinder 30 (31061), zwei Verbinder 45 (31330), jeweils mit der runden Seite
+nach oben, sowie einen Verbinder 15 am
+rechten Ende mit der flachen Seite nach
+oben. Das ergibt eine bessere Führung des
+Zugseiles. Die Reihung ist von links nach
+rechts: ein Verbinder 45, sechs Verbinder
+30 und der Verbinder 5. Auf diese Weise
+werden seitliche Verschiebungen der
+Bausteine verhindert.
+
+
+In Abb. 2 habe ich das Gerät mit einem
+Seilzug gespannt, wie man es auf Abb. 1
+erahnen kann. Schauen wir aber genauer hin
+und berücksichtigen die Beschreibungen in
+[3], dann sehen wir: Gespannt wurde die
+Sehne oft mit der kompletten Schussbahn.
+Dies und die verbesserten Torsionsgehäuse
+führen zu Scorpio Nr. 2.
+
+in gespanntem Zustand
+
+
+und Schieber oben
+
+Rechts und links sind jeweils drei Winkelsteine 10x15x15 (38423) zur Unterstützung
+des Schiebers. Unten, etwa 45 mm vom
+linken Ende entfernt, befindet sich die
+Kombination aus zwei BS 15 und dazwischen einem Baustein mit zwei Zapfen.
+Weiter sitzen unten zwei Gelenkwürfel
+(31426 + 31436) zur Verbindung mit dem
+Ständer.
+
+
+
+Modell
+
+Zur Spannung des Katapults wird der
+Schieber mit dem Seilzug nach Abb. 15 und
+16 zurückgezogen. An einem Verbinder 30
+sitzen zwei Bausteine 5 15x30 (35049),
+daran je ein BS 5 und daran wiederum je ein
+Baustein 15 mit Bohrung (32064). Aus
+einer Rastachse 75 (35087), zwei RastGelenkkurbeln KR12 (35088) und einer
+Seiltrommel 15 (31016) mit zwei Klemmringen Z36 m0,5 (31020) wird der Mechanismus zusammengebaut.
+
+Den Schieber bauen wir aus vier S-Winkelträgern 120 zusammen mit je zwei Streben
+120 und 45 oder 60 dazwischen sowie vier
+S-Riegeln 8 (36457).
+
+
+
+Die Bremse der Seiltrommel besteht aus
+zwei Bausteinen 5 15x30, einer Gelenkwürfel-Klaue (31436), darin zwei Abstandsringe 3 (31597) und eine Kunststoffachse 15 (Seilklemmstift, 107356).
+
+Der Auslöser für die Sehne bzw. den Bolzen
+sitzt an zwei Lenkhebeln 15 (38473) und
+einer V-Achse 34 Clipachse (32870) mit
+zwei Klemmbuchsen 5 (37679).
+
+
+
+Weiterhin brauchen wir drei BS 7,5, einen
+Winkelstein 10x15x15, zwei Schlauchanschlüsse D4 abgewinkelt (163203), eine
+Klemmkupplung 20 (31024) als Handgriff
+und zwei Federnocken. Links in Abb. 18
+und 19 erkennt man eine V-Achse 20
+Rastachse (31690); sie wird auf der anderen
+Seite von einer Klemmbuchse gesichert. In
+diese Achse wird die Schlinge vom Zugseil
+eingehängt (Abb. 15).
+
+
+
+
+Die Balliste
+Die Balliste ist ähnlich konstruiert wie der
+Scorpio aber meistens deutlich größer. Das
+Gestell des Scorpio ist etwa 1,2 m hoch,
+dagegen kann eine Balliste mehr als dreimal
+so hoch sein.
+
+
+Sie ist auf große Reichweite ausgelegt,
+deshalb schießt sie in steilerem Winkel, und
+sie verschießt schwere Speere oder bis etwa
+40 kg schwere Steinkugeln (die haben einen
+Durchmesser von etwa 30 cm).
+In den Abb. 20 und 21 sehen wir ein
+waagerechtes Kästchen am Gestell, darin
+können die Bolzen aufbewahrt werden.
+
+Sperrklinken arretieren die Winde, so dass
+sie nicht zurückschnellt.
+3. Ist die gewünschte Spannkraft erreicht,
+wird die Kugel bzw. der Bolzen auf den
+Lauf des Schlittens gelegt.
+4. Der Richtschütze löst die Sperre aus und
+gibt die Sehne frei. Die Kugel oder der Bolzen werden über den Schlitten fortgeschleudert.
+
+
+Der Onager
+Für Belagerungen hatten die Römer ein
+einarmiges Katapult, das über Entfernungen
+von 300 bis 400 m Steine und mit „Teufelszeug“ gefüllt Tongefäße in hohem Bogen
+verschoss.
+
+Der Schussvorgang eines Scorpio oder einer Balliste umfasst die folgenden Schritte:
+1. Der Schlitten oder Schieber wird nach
+oben bzw. nach vorne zur Sehne geschoben
+und diese wird eingehakt.
+2. Der Schlitten und mit ihm die eingehakte
+Sehne werden mit einer Winde am Ende der
+Führungsschiene zurückgezogen; die Sehne
+zieht dabei die Wurfarme zurück, welche
+wiederum die Sehnenstränge weiter verdrehen und so die Energie speichern.
+
+
+
+
+Modell
+
+In Abb. 23 seht ihr ein einfaches Modell
+eines Onagers ohne Spannsystem, in Abb.
+24 nach dem Abschuss.
+
+
+Der Grundrahmen besteht aus drei U-Trägern 150 (32854) und vorne aus vier BS 30
+und zwei V-Bausteinen 15 Eck (38240).
+Die BS 30-Zeile wird ebenso wie oben der
+Prellbock mit einer Metallachse verstärkt.
+Zum Abbremsen des Wurfarmes dienen
+zwei Kunststoff-Federn.
+
+
+Das Schloss für den Wurfarm besteht aus
+einem S-Scharnier (36329), einem Baustein
+5 15x30 (35049) und einem Verbinder 30
+(31061). Der Baustein 5 15x30 wird rechts
+herunter gedrückt, der Wurfarm unter den
+etwas herausstehenden Verbinder geklemmt und als Sperre ein Seilhaken 30
+(31025) untergeschoben. Zum Abschießen
+wird dieser einfach herausgezogen.
+
+
+Der Pneumatik-Silikonschlauch ist 62,5 cm
+lang (wir verwenden hier nur einen) und
+wird doppelt genommen. Auf einer Seite
+wird er von einer Metallachse 50 gehalten,
+auf der anderen Seite analog zum Scorpio
+von einem Pneumatik-T-Stück in einer SStrebe 30 L.
+Als Sperre gegen das Zurückschnurren
+dienen vier Federnocken. Auf der linken
+Seite sind sie verschiebbar, so dass sich die
+S-Strebe leichter umdrehen lässt.
+
+
+Der Silikonschlauch ist in Abb. 23 auf
+beiden Seiten mit sieben halben Umdrehungen gespannt. Als Löffel habe ich ein Anschlussplatten-Gehäuse (152059) verwendet. Im Original (Abb. 22) wurde gern eine
+Schlinge benutzt, um die Reichweite zu
+erhöhen.
+
+
+
+
+Quellen
+[1] Meyers Konversationslexikon:
+Katapult. 9. Band: Irideen – Königsgrün. Verlag des Bibliographischen
+Instituts, Leipzig und Wien, Vierte
+Auflage, 1885-1892.
+[2]
+
+
+[3]
+
+Alan Wilkins: Roman Artillery at the
+Roman Army Museum. Blog-Beitrag
+vom 17.04.2020. Vindolanda
+Charitable Trust.
+
+[4]
+
+Forum „Rund um die Römer“: Die
+römische Artillerie. die-roemeronline.de.
+
+[5]
+
+Brigitte Cech: Technik der Antike.
+Theiss Verlag 2012, S. 204 ff.
+
+[6]
+
+Wikipedia: Onager.
+
+Wikipedia: Bogen (Waffe).
+
+

@@ -1,0 +1,259 @@
+
+Modell
+
+Modell
+
+Useless Machine – zwecklose Maschine
+Dirk Fox
+Wer ein fischertechnik-Modell konstruiert, möchte damit eine bestimmte Funktion realisieren.
+In der Regel dient diese Funktion auch einem (meist nützlichen) Zweck – wie der Fortbewegung, dem Transport oder dem Vergnügen. Aber natürlich ist oft die raffinierte Realisierung
+der Funktion selbst das Faszinierende – manchmal sogar dann, wenn sie ihren eigentlichen
+Zweck nur eingeschränkt erfüllt. Was liegt da näher, als die Idee einer Funktion um ihrer selbst
+willen zu realisieren – „zweckbefreit“, gewissermaßen. Nicht neu, aber bestechend.
+
+Geschichte
+Die Geschichte der „Useless Machines“
+(nutz- oder sinnlosen Maschinen), also von
+Maschinen, die eine Funktion, aber keinen
+Zweck haben, geht bis in die 1930er Jahre
+zurück. Der Künstler Bruno Munari (19071998), später ein einflussreicher Industriedesigner, konstruierte wohl als erster solche
+zweckbefreiten Mechanismen und verstand
+sie als Kritik an der zunehmenden Beherrschung unserer Welt durch Maschinen.
+
+einzige Funktion besaß: sich selbst auszuschalten (Abb. 1 [1, 2]). Für einen theoretischen Informatiker ein faszinierendes
+mechanisches Gegenkonzept zum „Halteproblem“ – der Schwierigkeit algorithmisch
+nachzuweisen, dass ein Programm auch tatsächlich terminiert (endet).
+Solche Useless Machines wurden von der
+fischertechnik-Community in zahlreichen
+Varianten konstruiert. Eine einfache, aber
+sehr kompakte Version der sich selbst ausschaltenden Maschine stelle ich hier vor –
+zugleich als Anregung, daraus eigene, komplexere Varianten abzuleiten.
+Wer zunächst einen Eindruck von der Funktionsweise dieser sich selbst abschaltenden
+Maschine gewinnen möchte, der werfe
+einen Blick in das zugehörige kurze Video.
+Für den Nachbau habe ich eine fischertechnik-Designer-Datei erstellt; sie kann zusammen mit einer Einzelteilliste von den Seiten
+der fischertechnik-AG heruntergeladen
+werden.
+
+Konstruktion
+Marvin Minsky (1952)
+
+Bekannter wurde die Useless Machine des
+MIT-Professors Marvin Minsky (19272016), einem der Urväter der Künstlichen
+Intelligenz, aus dem Jahr 1952, die nur eine
+
+Grundsätzlich gibt es (mindestens) zwei
+einfache mechanische Basis-Konstruktionen, mit denen der „Finger“ zum Ausschalten der Maschine mechanisch aus der
+„Kiste“ herausbewegt und wieder hinein-
+
+
+
+
+„gezogen“ werden kann: ein Schubkurbelgetriebe oder eine Drehscheibe. Das Schubkurbelgetriebe benötigt zur Überbrückung
+des Endlagentasters (wie auch in der Konstruktion von Kieseleck aus dem Jahr 2011)
+lediglich einen Kippschalter; die Drehscheibe erfordert hingegen einen Polwendeschalter.
+Die im Folgenden vorgestellte Maschine
+verwendet eine Drehscheibe, da sie damit
+besonders kompakt konstruiert werden
+kann: Sie passt – inklusive fischertechnikAkku – in einen 90 x 90 x 90 mm³ großen
+Würfel, der sich mit Grund- und StatikPlatten verkleiden lässt. Die kompakte
+Mechanik aus Drehscheibe, Motor und
+Getriebe benötigt allerdings eine etwas raffiniertere Schaltung als die Schubkurbel.
+
+Ausschalt-Mechanik
+Den „Ausschalt-Finger“ befestigen wir nun
+an einer Drehscheibe 60. Er ragt über die
+Drehscheibe hinaus, damit er später den vor
+dem U-Getriebe liegenden Polwendeschalter betätigen kann. In der Ruhestellung
+muss der „Finger“ den hängend montierten
+Endlagentaster betätigen und dabei komplett in der späteren Box verschwinden.
+
+Antrieb
+Den Antrieb der Drehscheibe 60 übernimmt
+ein Mini-Motor mit U-Getriebe, der auf
+einer Grundplatte 90 x 90 montiert wird. An
+den Grundbausteinen, die das U-Getriebe
+halten, befestigen wir seitlich (über zwei
+BS 5 und einen BS 7,5) „hängend“ einen
+Mini-Taster (siehe Abb. 2, rechts unten)
+und direkt darüber einen Polwendeschalter.
+Das U-Getriebe erhält eine U-Achse 40 (mit
+Z28), auf die wir später die Drehscheibe
+setzen.
+
+Polwende- und Endlagenschalter
+
+
+in Ruheposition
+
+auf der Drehscheibe 60, die wir so am
+äußersten Ende der U-Achse aufsetzen, dass
+der „Finger“ den Mini-Motor gerade nicht
+berührt.
+
+Useless Machine
+
+Die Nabenmutter müssen wir sehr fest anziehen, damit die Drehscheibe stabil auf der
+
+Achse sitzt und beim Drehen den Widerstand des Polwendeschalters überwindet
+ohne durchzurutschen. In Abb. 4 sieht man
+die komplette mechanische Konstruktion.
+Schaltung
+Der Anschluss des Polwendeschalters ist
+einfach: Er wird zwischen unsere Energiequelle (einen fischertechnik-Akku) und den
+S-Motor geschaltet und kehrt bei jeder
+Betätigung die Bewegungsrichtung des
+Motors (und damit der Drehscheibe) um.
+Wo aber kommt der Endlagentaster hin? Er
+muss bei der „Rückdrehung“ des „Fingers“
+(wenn dieser nach Betätigung des Polwendeschalters wieder in der Box verschwindet) den Stromkreis unterbrechen. Sobald
+aber die Stromrichtung durch manuelle Betätigung des Polwendeschalters umgekehrt
+wird, muss er überbrückt werden.
+
+Modell
+
+Die Schaltung hat einen wichtigen Nebeneffekt: Dreht sich der Motor zurück und
+betätigt der „Finger“ den Endlagentaster, so
+wird der Motor kurzgeschlossen – und
+blockiert sofort [3].
+Stromversorgung
+Als Stromversorgung für unsere Useless
+Machine können wir natürlich ein fischertechnik-Netzteil verwenden – aber ein aus
+der Box heraushängendes Kabel lässt sie
+weit weniger „autark“ wirken. Also montieren wir einen fischertechnik-Akku – der
+verbleibende Platz in unserer Box eignet
+sich exakt dafür, als hätten wir das genau so
+geplant (Abb. 6)…
+
+(erstellt mit Fritzing)
+
+Das gelingt, indem wir den Endlagentaster
+zwischen den einen Ausgang des Polwendeschalters und einen Motoreingang schalten, und zwar so, dass der Motoreingang bei
+Betätigung des Endlagentasters mit Masse
+verbunden wird (Abb. 5). Steht der Polwendeschalter nun so, dass der zweite Motoreingang mit +9V verbunden ist, läuft der
+Motor trotz betätigtem Endlagentaster. Ist
+der zweite Motoreingang über den Polwendeschalter hingegen mit Masse verbunden, stoppt der Motor bei betätigtem
+Endlagentaster. Solange der Endlagentaster
+nicht betätigt ist, dreht sich der Motor je
+nach Stellung des Polwendeschalters entweder in die eine oder in die andere
+Richtung.
+
+
+Aufgesockelt mit zwei BS 15 und zwei über
+Kreuz montierten Bausteinen 15 x 30 x 5
+mit Nut und Zapfen ragen die Akku-Anschlüsse, die wir mit dem Polwendeschalter
+verbinden müssen, gerade eben über die
+Drehscheibe 60 hinaus – und der „Finger“
+der Maschine stoppt beim Drehen wenige
+Millimeter vor den beiden Steckern.
+Wer keinen fischertechnik-Akku besitzt
+kann die Useless Machine alternativ mit
+einem Batteriehalter oder einem Batteriegehäuse mit 9V-Blockbatterie ausstatten.
+
+
+
+Angeschlossen an die Stromquelle (und bei
+richtiger Polung des Mini-Motors) funktioniert unsere Useless Machine bereits jetzt.
+Verkleidung
+Aber ohne eine geeignete „Verkleidung“
+fehlt ihr der entscheidende „Pfiff“: Was wir
+eigentlich haben möchten ist eine geschlossene, 90 x 90 x 90 mm³ große „Black Box“,
+aus der nur unser Polwendeschalter herausschaut – und die sich nach dem Einschalten
+auf „magische Weise“ selbsttätig deaktiviert.
+Das gelingt, indem wir in den Ecken der
+Grundplatte je zwei Statik-Winkelträger 60
+und 30 montieren und daran an vier Seiten
+Statik-Platten 90 x 90 befestigen. Wer
+keine Statik-Platten besitzt kann sich auch
+mit V-Bauplatten oder Grundbausteinen
+und Bauplatten behelfen. In der Ecke, in die
+der Mini-Motor hereinreicht, dürfen wir nur
+zwei Statik-Winkelträger 30 zur Verbindung der Statik-Platten verwenden und
+müssen die Mitte aussparen (Abb. 7).
+
+Statik-Scharnier (36329), das je eine Ecke
+des Deckels halten wird.
+Den Deckel wiederum setzen wir aus zwei
+Bauplatten 30 x 15 und zwei Bauplatten
+15 x 60 zusammen, die wir über vier Bauplatten 15 x 30 x 3,75 mit Nut stabil miteinander verbinden (Abb. 8).
+
+
+Mit zwei Bauplatten 30 x 45, die wir mit je
+einem Zapfen in die Nuten der Enden der
+beiden vorderen Statik-Winkelträger schieben, schließen wir die Box von oben
+(Abb. 9).
+
+Aussparung für den Mini-Motor (rechts)
+
+Deckel
+Für den Deckel, der vom „Finger“ angehoben werden soll, ersetzen wir links und
+rechts neben dem „Finger“ den StatikWinkelträger 30 durch einen Winkelträger
+15 mit zwei BS 5 (Abb. 7, hinten links und
+rechts). Darauf setzen wir auf jeder Seite ein
+
+
+
+Als kleinen Nutzerhinweis können wir nun
+noch den Polwendeschalter mit einer Einschalt-Aufforderung beschriften:
+
+
+Modell
+
+EIN►
+
+Hinweise zur Konstruktion
+Der Platz in unserer kleinen Box ist ziemlich knapp bemessen, und die Konstruktion
+reagiert empfindlich auf Reibung (vor allem
+der Drehscheibe 60 am Akku oder der
+Verkleidung und der des „Fingers“ am
+Mini-Mot). Daher sollte man beim Aufbau
+der Box immer wieder kleine Tests vornehmen, ob der „Finger“ sich schnell und
+mit ausreichendem Drehmoment dreht.
+Der Akku lässt sich ohne Ausbau laden: Es
+genügt, den Deckel abzunehmen, um das
+Ladekabel einzustecken. Bei der Verlegung
+der Kabel muss man allerdings darauf achten, dass sie sich nicht in den Nuten der
+Drehscheibe 60 verhaken können.
+Falls sich die „Useless Machine“ starker
+Beanspruchung erfreut, sollte man den hängenden Endlagentaster mit einem quer
+montierten Baustein 15 x 30 x 5 mit Nut
+und Zapfen gegen Verrutschen sichern, da
+der „Finger“ trotz Kurzschließen der Stromversorgung mit großer Geschwindigkeit
+daran anschlägt (Abb. 11).
+
+gegen Verrutschen
+
+Weiterentwicklung
+Das vorgestellte Modell ist eine sehr simple
+Useless Machine. Insbesondere von fredy,
+aber auch von anderen Fans in der fischertechnik-Community wie Hans Wijnsouw
+gibt es raffinierte Weiterentwicklungen, die
+mehrere verschiedene Taster ausschalten
+können, mit einem Controller gesteuert
+werden und schnelle Pneumatik-Kolben als
+„Ausschalt-Finger“ verwenden. Der Fantasie sind bei der Umsetzung – wie so oft mit
+fischertechnik – fast keine Grenzen gesetzt.
+Anregungen für die unterschiedlichsten
+Erweiterungen findet man auch mit einer
+Suche in Youtube.
+
+Quellen
+[1]
+
+Abigail Pesta: Looking for Something
+Useful to Do With Your Time? Don't
+Try This. The Wall Street Journal,
+12.03.2013.
+
+[2]
+
+Video-Interview mit Marvin Minsky:
+Making the most useless machine.
+
+[3]
+
+Stefan Falk: Motorsteuerungen
+(Teil 1). ftpedia 1/2011, S. 4-8.
+
+
+

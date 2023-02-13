@@ -1,0 +1,153 @@
+
+
+Tipps & Tricks
+
+Kaulquappen (Teil 6)
+Harald Steinhaus
+Wie aus den voran gegangenen Teilen dieses Artikels bereits bekannt ist, entstehen fischertechnik-Modellbauprinzen in einem langwierigen und zuweilen schmerzhaften Prozess, nach
+Heranreifen einer Kaulquappe zu einem entwicklungstechnischen Frosch und einem
+mutationsauslösenden Kuss durch eine Muse. Auf der 50-Jahr-Feier in Tumlingen durfte man
+die Spritzgussbögen für einen Zug der BSB Spur N mitnehmen – frisch und noch warm aus der
+Maschine. Es lag natürlich nahe, die Einzelteile auf andere Verwendungsmöglichkeiten zu
+untersuchen. Jedoch, die Muse zeigte sich bei den allermeisten BSB-N-Teilen zugeknöpft bis
+unnahbar. Bei der Grundplatte 36073 ist sie in Stimmung gekommen, und bei nur zwei der
+anderen Teile hat es für ganz zart dahin gehauchte Küsschen gereicht.
+Die einzelnen Teile der BSB Spur N sind
+mit Mühe und Not zu sich selbst kompatibel. Die Schwellen liegen 8 mm auseinander; da passen keine Zahnräder hinein.
+Die Rastnoppen an den Chassis-Teilen sind
+zu kurz, um irgendwo richtig einzurasten
+(nicht mal in der Grundplatte tun sie es). Die
+Verbindungszapfen an den Seitenteilen und
+der Runge sind zu kurz, um irgendwo
+vernünftig zu halten.
+
+Landeklappe, die erste
+Die Zahnspurstange 38472 mit ihren sieben
+Zähnen eignet sich für Antriebe mit
+begrenztem Drehbereich. Zum Beispiel
+könnte das hier der Antrieb für die Landeklappen eines Fliegers sein – man stelle sich
+den grauen BS15 als Teil des Flügels vor;
+die Klappe schwenkt dann mit der Grundplatte 36093 und wird mit Übersetzung 1:3
+vom Z10 eingestellt (Abb. 2).
+
+Spur N
+
+Die Achse muss natürlich Spurweite N
+haben und kann deswegen nichts dafür, dass
+sie nirgendwo sonst hin passt. Eine Achse
+ist hier aufgetrennt und die Räder sind
+umgekehrt in eine Gelenkklaue eingesetzt
+(Abb. 1). Das passt aber auch zu nichts
+anderem.
+
+
+
+Landeklappe, die zweite
+Dieselbe Funktion nochmal, aber weniger
+kompakt (Abb. 3). Das einzige, wozu die
+Runge 36101 kompatibel ist, ist der
+Abstand der Löcher in den fischertechnikWinkelträgern und u. a. auch in der
+
+
+Tipps & Tricks
+
+Zahnspurstange (die fischertechnik-Streben
+haben kürzere Löcher).
+
+Unterschied ist, dass die Pufferplatte noch
+einen Taster betätigen kann.
+
+Getriebehalter
+Die zwei Differenziale 31043 kämmen
+miteinander und werden durch ein BS15Loch und ein BS7,5 auf richtigem Abstand
+gehalten. Die Grundplatte für die BSB-Loks
+31557 passt da noch drum herum und eignet
+sich für weitere Anbauten (Abb. 5).
+
+
+Schneckentrieb
+Die Pufferplatte 36106 der BSB Spur N (in
+4,5 mm Breite so ziemlich das richtige Maß
+für die fischertechnik-Zahnräder. Die Kufe
+31602 (unten links und rechts) ist etwas
+schmaler, eignet sich aber genauso gut als
+Mitnehmer für den Schneckentrieb. Der
+
+
+Dreieck
+Drei von den dreieckigen Bauplatten für die
+Giebel 31520 ergeben wieder ein Dreieck
+(Abb. 6).
+
+
+
+
+Schiebetüren der Schwebebahn (ft-Convention Dreieich 2015, Abb. 7).
+
+Zahnstangengetriebe
+Das ist ein noch etwas wackeliger Antrieb
+für die Zahnstange. Mit einer zweiten
+Führung am Ende der Zahnstange ist er
+sogar ziemlich stabil (Abb. 8).
+
+
+De Prinz kütt: Schiebetür
+Es hat geklappt: aus Musenkuss und Kaulquappe ward ein Prinz geboren: Die „alten“
+Bauplatten mit Clipverbindung (z. B:
+31503) haben genau die richtigen Maße für
+die Grundplatte 36093. Zusammen mit zwei
+durchsichtigen Exoten ergibt das hier die
+
+
+Alternative Zahnstange
+Eine Zahnstange, einmal etwas anders
+aufgebaut. Die roten Ketten halten die
+schwarze Kette an ihrem Platz (Abb. 9).
+
+
+
+Tipps & Tricks
+
+stammt von Ralf (ThanksForTheFish) und
+fand sich auch schon in Ludgers MonsterLKW.
+
+Teleskopschub
+
+
+Umlenkung für Kette
+Zum Umlenken einer Kette schlingt man sie
+über eine Achse oder über eine Klemmbuchse (links; die Klemmbuchse steckt in
+einem Lenkwürfel 35998). Soll die Kette
+ganz flach geführt werden, geht das mit der
+Konstruktion rechts mit insgesamt vier
+„Hülse mit Scheibe“ 35981 (Abb. 10).
+
+Ein Teleskop-Auszug mit Führungsplatten
+32455, die die Zahnstangen festhalten. In
+den Lenkwürfeln 35998 steckt je eine
+„Hülse mit Scheibe 15 mm“ 35981 und ein
+Klemmring 31020 aus der „alten“ Seiltrommel. Hält man die Zahnstange einer
+Seite fest und verfährt den Schlitten, dann
+bewegt sich die andere Zahnstange mit
+doppelter Geschwindigkeit (Abb. 12).
+
+
+Noch ene Prinz kütt:
+Freilaufgetriebe
+
+
+Guest Star: Z58
+
+Vier Stück Rastkurbel 35071, ein Gummiring und eine fischertechnik-Freilaufnabe
+(129697 gelb oder 68535 schwarz) ergeben
+einen Freilauf: die Kupplung zwischen
+Achse und Z30 wirkt nur in einer Drehrichtung (Abb. 13).
+
+
+Ein Musenkuss kann auch andere fischertechnik-Bastler ereilen: Der fischertechnikSpurkranz 36331 macht aus dem Drehkranz-Unterteil ein Zahnrad Z58 (Abb. 11).
+Hier ist er nur lose und schief eingelegt. Er
+passt aber richtig. Diese Kaulquappe
+
+
+
+

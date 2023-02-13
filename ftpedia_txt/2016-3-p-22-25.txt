@@ -1,0 +1,210 @@
+
+
+Elektromechanik
+
+Der etwas andere Motor
+Rüdiger Riedel
+Die Konstruktion von Elektromotoren mit fischertechnik hat schon immer fasziniert. Seit der
+Verfügbarkeit starker Neodym-Magneten eröffnen sich dafür ganz neue Möglichkeiten [1, 2,
+4]. Die Funktionsweise des in diesem Beitrag vorgestellten Motortyps ist besonders überraschend – auch wenn der Motor selbst fast kein Drehmoment erzeugt…
+
+Hintergrund
+Der im Folgenden vorgestellte Motor ist ein
+Motortyp ohne jede praktische Bedeutung,
+für einen Hobby-Techniker jedoch umso
+interessanter.
+Als Kind habe ich Ende der fünfziger,
+Anfang der sechziger Jahre alles Mögliche
+gebastelt und ausprobiert. Die Modellflugzeuge von Faller im Maßstab 1:100 waren
+preislich in meiner Taschengeld-„Liga“ und
+nahmen auch wenig Platz ein in meinem
+Kinderzimmer. Da ich mich immer für alles
+Elektrische begeisterte, erstand ich auch
+den „Faller Elektro-Einbaumotor FM
+1001“. An Wechselstrom angeschlossen
+machte dieser Geräusche wie ein winziger
+Kolbenmotor; ein aufgesteckter Propeller
+drehte sich sehr schön, entwickelte aber
+kein nennenswertes Drehmoment.
+Meiner Erinnerung nach lag die Drehzahl
+des Propellers bei 5-10 Umdrehungen pro
+Sekunde oder 300-600 Umdrehungen pro
+Minute. Den Propeller konnte ich festhalten
+ohne eine besondere Kraftwirkung zu
+spüren; nach der Beschreibung war das für
+den Motor auch unschädlich. Die Dimensionen kenne ich nicht mehr, schätzungsweise lagen sie bei 2,5 bis 3 cm Länge und
+0,6 cm Durchmesser.
+Als „kleiner Forscher“ musste ich diesen
+Motor natürlich eines Tages auseinander
+nehmen, um seiner Funktionsweise auf die
+
+Spur zu kommen. Wie ein herkömmlicher
+Gleichstrommotor funktionierte wusste ich
+bereits, was aber hier zum Vorschein kam
+blieb mir damals ein Rätsel:
+∂ Der „Rotor“, auf den der Propeller gesteckt wurde, bestand lediglich aus einer
+Stahlwelle.
+∂ Dieser Rotor bewegte sich in einem
+Kunststoffröhrchen, das von einer langen Spule umgeben war.
+∂ Am anderen Ende befand sich ein Ferritmagnet mit zwei „Polschuhen“, nämlich
+zwei Blechen, die über das Wellenende
+reichten.
+Das war alles.
+Nach meinen damaligen Kenntnissen
+konnte die durch den Dauermagneten magnetisierte Welle innerhalb der Spule nur hin
+und her vibrieren, sich aber nicht drehen.
+Was sie aber sehr wohl tat.
+
+Erklärung
+Wenn die Welle am Boden des Röhrchens
+aufliegt und seitlich schwingt, erhält sie
+eine hin und her gehende Drehbewegung.
+Ist die Reibung im Röhrchen an einer Stelle
+etwas erhöht, kann die Welle dort aufsteigen und bei der Schwingung in die andere
+Richtung wieder abwärts wandern. Damit
+ist eine volle Drehung ausgeführt. Durch
+
+die weiteren Schwingungen und die Reibung kann die Drehung dauerhaft fortgeführt werden.
+Die Drehzahl hängt dann ab vom Wellendurchmesser, dem Durchmesser des Röhrchens und der „Wackelfrequenz“.
+Mit einem kleinen Modell kann man sich
+die Funktionsweise klar machen. Das von
+der Spule umgebene Röhrchen sei ein
+Innenzahnrad 30, die Welle ein Z20 (Abb.
+1, 2).
+
+Elektromechanik
+
+halber Kurbeldrehzahl (Netzfrequenz) in
+entgegengesetzter Richtung.
+Der im Modell feste Zusammenhang der
+Drehrichtungen Kunststoffkurbel und Z20
+ist bei dem Motor nicht gegeben. Vielmehr
+kann er sowohl rechts- als auch linksherum
+drehen, abhängig von kleinen Unsymmetrien im Aufbau oder Zufälligkeiten beim
+Einschalten.
+In unserem Motor liegt der „Rohrdurchmesser“ bei 6 mm, der Wellendurchmesser
+bei 4 mm. Somit ist eine Drehzahl von
+6−4
+= 1500
+zu erwarten. Nach Augenschein dreht der
+Motor langsamer; gemessen habe ich es
+noch nicht.
+3000
+
+
+∙
+
+Mit einer Spule aus einem Tür-Gong habe
+ich einen weiteren Versuch unternommen.
+Der Rohrdurchmesser ist ca. 5 mm, die
+Welle wieder 4 mm, somit komme ich auf
+eine Drehzahl von
+5−4
+= 750
+Diese errechneten Drehzahlen nennt man
+auch Synchrondrehzahlen. Die tatsächliche
+Drehzahl ist kleiner oder höchsten gleich
+diesem Wert. Den Wert
+3000
+
+∙
+
+ℎ
+
+ℎ ℎ −
+ℎ
+ℎ
+
+nennt man Schlupf.
+
+Antriebsseite
+
+Die Vibration der Welle (Wackelbewegung) ist in diesem Modell durch den
+Kontakt der Welle mit dem Rohr schon
+übergegangen in eine kreisförmige Bewegung. Die Drehung der Kunststoffkurbel 40
+(38445) simuliert die 50 Hz Netzfrequenz.
+Das Innenzahnrad 30 wird festgehalten,
+dann dreht sich das Z20 (die Welle) mit
+
+.
+ℎ
+
+ℎ
+
+ℎ
+
+In der Praxis sind weder Röhrchen noch
+Welle mit Zähnen besetzt, sondern die
+Kraftübertragung erfolgt durch Reibung.
+Dadurch ist die tatsächliche Drehzahl zum
+Teil deutlich geringer als die Synchrondrehzahl und kann sich im Betrieb auch ändern.
+Der Bewegungsablauf erinnert an die HuiMaschine. Bei dieser wird mit einem Stöckchen über einen geriffelten Stab gestrichen,
+an dessen Ende ein Propeller lose mit einem
+Nagel befestigt ist. Die Schwingungen im
+Stab bringen den Propeller deshalb zum
+
+
+
+Drehen, weil durch seitliche Krafteinwirkung (Finger) aus den ebenen Schwingungen kreis- bzw. ellipsenförmige geworden
+sind. Eine ausführliche Beschreibung der
+Funktion der Hui-Maschine findet man im
+Internet [2].
+
+
+Motoraufbau
+Ich benutze einen Neodym-Magneten von
+10 mm Länge und 4 mm Durchmesser, so
+einer wie in Kapitel 10 („Der Elektromotor“) von [1] beschrieben. Der Magnet haftet an einer Achse 30 als Verlängerung ohne
+weitere Maßnahmen.
+
+
+Synchronmotor
+In der ft:pedia 2/2016 schrieb Matthias
+Dettmer, dass Synchronmotoren mit voller
+Drehzahl (3000 U/min, Polpaarzahl zwei)
+modellmäßig mit einem Baukasten kaum zu
+realisieren sind. Das ist richtig. Eine Ausnahme habe ich aber gefunden: Durch die
+Verwendung eines „diametral“ magnetisierten Stabmagneten mit 4 mm Durchmesser und 10 mm Länge (Abb. 6).
+
+
+Setzt man diesen Magneten anstatt des
+bisherigen ein, dann wird die Welle durch
+die Wackelbewegungen in die Synchrondrehzahl von 3000 U/min geschleudert.
+
+
+Als Röhrchen dienen zwei GelenkwürfelZungen 7,5 (31426). Der Elektromagnet
+wird an 6 V Wechselspannung angeschlossen. Den besten Abstand zum NeodymMagneten probiert man aus.
+
+
+
+Elektromechanik
+
+Das geringe Trägheitsmoment ist dabei entscheidend. Die Funktion wird zuverlässiger,
+wenn der Elektromagnet seitlich angebracht
+ist wie auf Abb. 7 und 8 zu sehen.
+
+
+Referenzen
+[1]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt.verlag, Heidelberg, 2015.
+
+[2]
+
+H. Joachim Schlichting, Udo
+Backhaus: Zur Physik der HuiMaschine. Physik und Didaktik 16/3,
+238 (1988).
+
+[3]
+
+Matthias Dettmer: Synchronmotoren.
+ft:pedia 2/2016, S. 48-52.
+
+[4]
+
+Dirk Fox: Der Elektromotor. 3/2013, S. 4-8.
+
+
+

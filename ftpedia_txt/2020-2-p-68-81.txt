@@ -1,0 +1,865 @@
+
+
+Elektronik
+
+Elektronikmodule (Teil 3)
+Hans-Christian Funke
+Dieser dritte Beitrag beschäftigt sich mit den Elektronikmodulen, die eine besondere Funktion
+haben. Unter Anderem sind dabei die ersten Elektronikmodule, mit denen alles begonnen hat.
+Diese Module waren die Antriebsfeder für mich, die gesamte Serie an Elektronikmodulen aus
+der Taufe zu heben.
+
+Definitionen
+Die Elektronikmodule arbeiten mit einer
+positiven Logik. In den folgenden Texten
+und Beschreibungen werden folgende
+Bezeichnungen verwendet:
+ logisch „0“
+= low
+= minus (-)
+= Masse oder GND
+ logisch „1“
+= high
+= plus (+)
+= Betriebsspannung oder Vdd
+
+Der Antrieb
+Mit meinen Ambitionen, als Jugendlicher –
+das war Ende der 1970er Jahre – einen
+Pinball oder Flipper zu bauen, hat alles
+begonnen. Ziel bei diesem Spiel ist es, mit
+einer Kugel auf einem Spieltisch bestimmte
+Ziele zu treffen und somit Punkte zu
+sammeln.
+Super, von der Firma fischertechnik gab es
+zu dieser Zeit das mechanische Zählwerk
+(Abb. 1)! Das konnte immerhin schon bis
+19 zählen und war aus ein bis zwei Meter
+Entfernung noch mäßig gut erkennbar. Bei
+den Flipper-Geräten, die ich in dieser Zeit
+kennengelernt habe, konnte man leicht
+einige tausend Punkte erreichen. Mit dem
+em-6 war ich deshalb nicht wirklich
+
+
+glücklich, aber es gab auch keine Alternative am Markt.
+Somit waren mit meinem Start in die Ära
+der Elektronikmodule (2015) meine Gedanken – anknüpfend an die Idee, einen Pinball
+zu bauen – auf einen digitalen Zähler ausgerichtet. Auf Grund meiner Entscheidung,
+eine Bodenplatte 90 · 30 mm als Grundlage
+für alle Module zu verwenden, erhielt der
+Zähler eine zweistellige Anzeige; damit
+konnte dieser von 0 – 99 zählen. Allerdings
+gingen gleich von Beginn an meine Überlegungen dahin, auch größere Zahlen anzeigen zu können.
+
+Aufbau des Zählermoduls V1
+(70001)
+Nach einigen Überlegungen und DesignÄnderungen an der ersten Version (Abb. 4)
+des Zählermoduls konnte ich durch
+Verschieben die Anschlüsse (Bundhülsen)
+so positionieren, dass mehrere Zählermodule nebeneinander eine Ergänzung in
+der Anzeige bildeten (Abb. 5).
+Jetzt konnten die Zähler durch kleine Drahtbrücken direkt miteinander verbunden
+werden. Der Übertrag wird nach „99“ an
+das nächste Modul weitergegeben. Damit
+konnten nun – durch Aneinanderreihung
+mehrerer Zählermodule – Zahlen größer als
+„99“ angezeigt werden.
+
+
+em-6
+mechanisches
+Zählwerk
+
+Elektronik
+
+70001
+digitaler
+Aufwärtszähler
+
+70002
+digitaler
+Auf-/Abwärtszähler
+
+Zählerversion von
+2015
+
+Damit gab es endlich einen Zähler, der sehr
+gut sichtbar war und beliebig weit zählen
+konnte – perfekt!
+
+beiden Fällen geht der Ausgang Res out
+ebenfalls auf high, solange der Taster
+gedrückt ist oder an Res in high anliegt.
+
+Die normalen 7-Segment-Anzeigen sind bei
+einer Betriebsspannung von 5-15 Volt sehr
+gut sichtbar. Die Zählermodule mit hell
+leuchtenden LED-Anzeigen können mit
+einer Betriebsspannung im Bereich 3-6 Volt
+arbeiten und sind dann immer noch hervorragend zu sehen.
+
+Verbindet man die Ausgänge mit den Eingängen eines weiteren Zählermoduls
+(Abb. 5), erhält man eine Zähler-Kaskade
+und erweitert somit den Zählbereich um
+zwei weitere Stellen.
+
+Funktion des Zählermoduls V1
+(70001)
+Zum Zählen werden die Eingänge Ck I in
+(Eingang Clock römisch eins = Takt für die
+Einerstelle) und Ck X in (Eingang Clock
+römisch zehn = Takt Zehnerstelle) verwendet. Geht einer der Eingänge auf high, wird
+der Zähler um +1 bzw. +10 weitergezählt.
+Wird die „99“ erreicht, geht die Anzeige auf
+„00“ über und am Ausgang Ck I out wird
+ein low-high-low-Impuls ausgegeben.
+Ein high am Eingang Res in setzt den Zähler
+auf „00“ zurück; alternativ kann auch durch
+Drücken des kleinen Tasters (über der
+Anzeige) auf „00“ zurückgesetzt werden. In
+
+In der Regel werden Taster für die Erzeugung der Zählimpulse verwendet. Aus diesem Grund enthält der Zähler bereits eine
+interne Entprellung. Die Prellimpulse werden für jeden Eingang (Ck I in und Ck X in)
+separat über ein Mono-Flop abgefangen
+(Zeitglied ≈ 300 ms). Dafür muss der
+Jumper auf Position „A“ (analog) stecken.
+Auf der Position „D“ (digital) wird das
+Mono-Flop überbrückt und es können
+direkt die Signale von anderen Modulen
+oder
+Computer-Interfaces
+verarbeitet
+werden.
+Hinweis: Im Gegensatz zu anderen Elektronikmodulen werden die Ausgangssignale
+von Resout und Ck Iout nicht weiter verstärkt.
+Die Ausgangssignale sind gerade ausreichend zur Ansteuerung eines weiteren
+
+
+Zählermodules und können nicht direkt zur
+Ansteuerung jedes anderen Elektronikmoduls eingesetzt werden. Zur Ansteuerung aller anderen Elektronikmodule kann
+das Signal über die Gatter-Module (70010 –
+70014, 70019) aufbereitet und verstärkt
+werden, oder über das Mono-Flop (70005),
+das gleichzeitig auch den kurzen Impuls
+von Ck Iout verlängern kann.
+Für die Elektroniker unter euch gehe ich in
+den nächsten Absätzen auf technische
+Details ein. Wer sich nicht so sehr für die
+Elektronik und den Aufbau der Module
+interessiert, springt einfach zu dem
+Abschnitt Entwicklung des auf- und
+abwärts Zählers (70002) zum Weiterlesen.
+Schaltungsdetails
+Um nicht noch ein weiteren Halbleiter-IC
+einsetzen zu müssen, habe ich die benötigten ODER-Gatter durch zwei Dioden und
+
+einen Widerstand ersetzt (D4, D5, R1x-6
+und D3, D6, R1x-1).
+Die beiden Mono-Flops (MF) – je ein MF
+für die Zählimpulse der Einer-Stelle und
+eins für die Zehner-Stelle – dienen zur Entprellung von Taster-Signalen. Beim Testaufbau kam ich mit einem Tiefpass (wie
+beim 70006/7) nicht zum Ziel. Es kamen
+immer Prellimpulse durch oder die Wartezeit zwischen den Zählimpulsen wurde zu
+lang. Ein RS-FF konnte nicht eingesetzt
+werden, weil die zweite Leitung zum
+Zurücksetzen fehlte. Erst mit Einsatz eines
+MFs erhielt ich eine saubere Lösung für das
+Problem. Mit dem MF können ca. drei Zählimpulse in der Sekunde verarbeitet werden.
+Für den digitalen Betrieb (Ansteuerung
+durch ein Computer-Interface oder ein
+anderes Elektronikmodul) können über den
+Jumper das MF überbrückt und somit mehr
+
+Zählermodul ganz rechts hat noch eine alte grüne 20-mA-LED.
+
+
+Elektronik
+
+
+als 20 Zählimpulse pro Sekunde verarbeitet
+werden.
+Platinen-Layout
+Mit vier Halbleiter-ICs und den beiden 7Segment-Anzeigen war die kleine Platine
+schon reichlich voll. Es gab auch Schwierigkeiten, die Verdrahtung herzustellen. Ihr
+kennt sicher die Rätselhefte, in denen es
+Labyrinthe gibt, in denen man mit dem Stift
+den Weg hindurch finden muss. Die Erstellung eines Platinen-Layouts ist gut damit zu
+vergleichen.
+Nachdem alle Bauteile auf der Platine
+platziert waren, galt es, alle nach dem
+Schaltplan miteinander zu verbinden. Man
+sieht hier schon mit einem Blick (Abb. 7),
+dass es unmöglich ist, mehr als vier Halbleiter-ICs auf dem Modul unterzubringen.
+Jedes Segment der Anzeige benötigt einen
+Vorwiderstand – das sind gleich mal 14
+Stück. Da die Anzeige-Segmente auf einen
+Sockel gesteckt werden und damit aus dem
+Gehäuse herausgucken bzw. mit diesem
+abschließen, stand der Raum darunter für
+die Platzierung der Widerstände frei zu
+Verfügung.
+
+
+Ohne diese Variante hätte ich niemals alle
+Bauteile unterbekommen. Das Nadelöhr
+war aber die zweistellige Anzeige mit den
+vielen Widerständen dazwischen – hier war
+
+
+
+
+jeder Durchgang doppelt belegt (Ober- und
+Unterseite der Platine). Zum Schluss war
+aber noch eine einzige Verbindung übrig,
+für die es einfach kein Durchkommen mehr
+gab, und somit war ich kurz vor der Kapitulation.
+Mit Verschieben sämtlicher anderen schon
+verlegten Verbindungen gelange es dann
+doch noch, diese eine letzte Verbindung zu
+realisieren – jetzt ging wirklich nichts mehr.
+Das wichtigste war aber, dass alles auf die
+Platine passte!
+
+Entwicklung des Zählermoduls
+V2 (70002)
+Nachdem der Aufbau des Aufwärts-Zählers
+geschafft war, kamen bei mir Überlegungen
+auf, dass es auch gut wäre, einen Zähler zu
+haben, der beides kann – aufwärts und
+abwärts zählen (70002). Und damit begannen die Probleme, denn – wie ich euch zum
+Aufwärts-Zähler berichtet habe – finden auf
+der Platine schon keine weiteren Bauteile
+mehr Platz. Aber für einen Zähler, der
+
+aufwärts und abwärts zählen sollte, werden
+ganze acht Halbleiter benötigt!
+Bei dem neuen Zähler konnte ich das im
+Aufwärts-Zähler eingesetzte Halbleiter IC
+4026, das zwei Halbleiter in sich vereint,
+nicht mehr einsetzen, weil dieser eben nur
+aufwärts zählen kann. Also musste ein
+anderer Halbleiter her, und so wurden aus
+zwei Halbleitern vier (je Anzeige zwei) und
+es werden zwölf Gatter und ein MF-Halbleiter benötigt.
+Den getesteten Entwurf für das Aufwärts/Abwärts-Zählermodul hatte ich in
+Form eines Schaltplanes vorliegen, aber
+eine Lösung zur Umsetzung war nicht in
+Sicht. Eigentlich gab es auch nur eine
+Möglichkeit, um hier noch weiter zu
+kommen: Es mussten kleinere Bauteile her
+– SMD-Teile.
+Die Einsatz von SMD-Teilen „von Hand“
+erfordert sehr feines Arbeiten und somit
+einen enormen Zeitaufwand, aber es gab
+keine Alternative. Also habe ich eine
+Platine mit SMD-Teilen entworfen. Nur
+
+
+
+70002
+Layout der
+Unterseite
+
+Elektronik
+
+70002
+Layout der
+Oberseite
+
+durch Bestückung dieser mit Bauteilen auf
+beiden Seiten konnte ich alle acht Halbleiter
+unterbringen.
+Der Aufwärts/Abwärts-Zähler ist das Elektronikmodul mit den meisten eigensetzten
+IC-Halbleitern in der gesamten Serie von
+Elektronikmodulen. In Abb. 9a und 9b seht
+ihr, wie so ein Layout mit SMD-Teilen aussieht und in Abb. 10a und 10b, wie die
+Platinen fertig bestückt aussehen (diese
+Platinen wurden maschinell bestückt).
+
+70002
+Bestückung
+Oberseite
+
+70002
+Bestückung
+Unterseite
+
+Der 70001 wird mit einer gelben und der
+70002 mit einer roten 7-Segment-Anzeige
+ausgeliefert wird. Wer gerne eine andere
+Farbe haben möchte, muss nach seiner
+Bestellung unter Bezug auf seine Bestellnummer und unter Angabe der gewünschten
+Farbe
+eine
+E-Mail
+an
+franz@santjohanser.de senden. Folgende
+Farben stehen zur Auswahl:
+ Gelb (Y – yellow):
+
+Funktion des Zählermodul V2
+(70002)
+Die Funktion des Zählers 70002 ist identisch mit der Funktion vom 70001 bis auf
+den zusätzlichen Eingang U/D, mit dem die
+Zählrichtung festgelegt wird. Von Hause
+aus zählt der 70002 abwärts; zum AufwärtsZählen muss der Eingang U/D auf high
+gelegt werden.
+
+ Rot (R – red):
+
+
+
+ Grün (G – green):
+
+für eigene Zwecke einsetzen könnte. So
+können auch mit diesem Elektronikmodul
+Kaskaden aufgebaut und mehrere Zähler
+aneinandergereiht werden.
+
+ Leuchtend rot (RB – bright red):
+
+ Leuchtend blau (BB – bright blue):
+
+ Leuchtend gelb-grün (BYG – bright
+yellow-green): Die Lieferung ist für Juni
+2020 angekündigt, daher steht noch kein
+Foto zu Verfügung.
+Achtung! Die hell leuchtenden 7-SegmentAnzeigen sind wirklich sehr hell. Im oberen
+Spannungsbereich und bei einem geringen
+Abstand zur Anzeige ist die Helligkeit
+kaum für das Auge erträglich.
+
+Taktgeneratormodul 70004
+Mit den Zählermodulen kam auch die Idee
+auf, einen automatischen Taktgeber zu
+Verfügung zu haben, etwa für Taktungen,
+Zählimpulse, Lauf- und Blinklichter oder,
+oder, oder…
+Durch die Kombination eines Taktgebers
+mit einem achtstufigen Binärzähler liefert
+der Taktgenerator sogar acht verschieden
+schnelle Takte. Dennoch habe ich zusätzlich einen Drehregler (Potentiometer) in das
+Modul integriert, um die Taktung auch noch
+zusätzlich in der Taktlänge verändern zu
+können. Damit war das Taktgeneratormodul geboren.
+In Laufe der ersten Monate kristallisierte
+sich heraus, dass der Taktgenerator einen
+weiteren Vorteil bieten würde, wenn man
+den eigentlichen Taktgeber vom Binärzähler entkoppeln und so den Binärzähler
+
+
+Funktion des Taktgenerators
+Die aktuelle Version der Taktgeneratoren
+verfügt über zwei Jumper. Einer dient zum
+Umschalten zwischen internem und externem Takt. Der interne Takt ist durch den
+Drehregler veränderbar. Bei einem externen
+Takt zählt der Zähler bei einem high an
+Eingang Stopp/Takt um eine Binärstelle
+weiter.
+Der andere Jumper kann bei Verwendung
+eines Tasters auf die Position A (analog, wie
+beim Zählermodul) gesteckt werden, um so
+Prellimpulse zu unterdrücken. Auf der
+Position D (digital) werden die externen
+Impulse direkt an den Zähler weitergegeben. Bei Verwendung des internen
+Taktgebers kann mit einem high am
+Stopp/Takt-Eingang der Taktgeber angehalten werden. High am Eingang Res setzt
+
+
+Elektronik
+
+
+den Binärzähler in beiden Betriebsmodi
+wieder auf Null zurück.
+Liegt an einem der acht Binärzähler-Ausgänge high an, dann wird dieser Zustand
+durch eine blaue LED neben der jeweiligen
+Bundhülse (Ausgänge Ck1 – Ck8)
+angezeigt:
+
+Modell
+Der Taktgenerator kann ideal mit dem
+Zählermodul kombiniert werden, um dem
+Zählermodul mit einem Tasterdruck z. B.
+fünf Zählimpulse zu senden. Dies kann sehr
+nützlich sein, wenn in einem Modell Taster
+mit verschiedenen Wertigkeiten versehen
+
+
+
+
+sind – wird ein Taster gedrückt, zählt das
+Zählermodul entsprechend der Wertigkeit
+des Tasters höher.
+Hierzu habe ich einmal eine Schaltung
+aufgebaut.
+Stückliste
+Anzahl/Bauteil
+
+ElektronikModul
+
+4 fischertechnikTaster
+4 AND-NANDGatter
+
+70011
+
+1 OR-NOR-Gatter
+
+70012
+
+4 RS-Flip-Flop
+
+70008
+
+1 Taktgenerator
+
+70004
+
+1 Zählermodul
+
+70001 oder
+70002
+Tab. 1: Stückliste der Beispielschaltung
+
+Funktionsbeschreibung
+Durch die Betätigung eines Tasters wird das
+dahinter liegende FF gesetzt (Q = high).
+Liefert eines der vier RS-FF am Q-Ausgang
+high, wird der Taktgenerator aktiviert und
+der Binärzähler zählt hoch. Für das bessere
+Verständnis der nachfolgenden Ausführungen betrachte man die folgende Tabelle:
+Ck2
+
+Ck3
+
+Ck4
+
+Zahl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tab. 2: Wahrheitstabelle
+
+
+Um die „1“ abzufragen, braucht nur geprüft
+zu werden, ob Ck2 high ist. Für die „2“
+muss entsprechend nur geprüft werden, ob
+Ck3 high ist. Für „3“ müssen Ck2 und Ck3
+beide high sein – dies lässt sich durch ein
+AND-Gatter (d in Abb. 13) realisieren. Für
+„5“ müssen Ck2 und Ck4 beide high sein –
+
+
+auch diese Überprüfung übernimmt ein
+AND-Gatter (c in Abb. 13).
+Die Zählstufen 3 und 5 sind durch die
+Auswertung über das AND-Gatter eindeutig identifiziert. Sobald das AND-Gatter
+high am Ausgang liefert, wurde der Zählzustand erreicht und das entsprechende RSFF (A bei 5, B bei 3) wird zurückgesetzt.
+Bei den Zählerstufen 1 und 2 ist dies nicht
+ganz so einfach, weil Ck2 sowohl bei 1 als
+auch bei 3 als auch bei 5 high ist. Aus
+diesem Grund wird mit einem zusätzlichen
+AND-Gatter (b) geprüft, ob Ck2 high und
+der Speicher (D) für die Zählstufe 1 gesetzt
+sind; nur dann wird das RS-FF zurückgesetzt.
+Genauso wird bei der Zählstufe 2 verfahren,
+weil auch hier sowohl bei 2 als auch bei 3
+der Ausgang Ck3 high liefert. Mit einem
+AND-Gatter (a) wird geprüft, ob Ck3 high
+ist und der Speicher (C) für die Zählstufe 2
+gesetzt wurde; nur dann wird das RS-FF
+zurückgesetzt.
+
+Experimentiermodul 70021
+Das Experimentiermodul ist scheinbar unspektakulär, aber es hat mehr Potenzial, als
+man auf den ersten Blick annehmen mag.
+Zunächst einmal erhält man mit dem Experimentiermodul auch ein Widerstandsund Dioden-Set (71047). Die enthaltenen
+Kohleschicht-Widerstände haben eine
+Toleranz von 5 % und vertragen eine Leistung von ¼ W. Folgende Widerstände sind
+im Set enthalten:
+Anzahl Element
+2 Diode
+
+Typ
+1N400x
+
+1 Widerstand
+
+100 Ω
+
+1 Widerstand
+
+220 Ω
+
+1 Widerstand
+
+470 Ω
+
+1 Widerstand
+
+1kΩ
+
+1 Widerstand
+
+2,2 k Ω
+
+1 Widerstand
+
+4,7 k Ω
+
+
+Elektronik
+
+Anzahl Element
+
+Typ
+
+1 Widerstand
+
+10 k Ω
+
+1 Widerstand
+
+22 k Ω
+
+1 Widerstand
+
+47 k Ω
+
+2 Stecker
+Tab. 3: Stückliste des Sets 71047
+
+Die Rechnung mit konkreten Werten
+Ue = 9 V, R1 = 100 Ω und R2 = 220 Ω ergibt
+I ≈ 0,028 A = 28 mA und Ua ≈ 6,2 V.
+
+
+Schaltungsbeispiele
+Mit dem Experimentiermodul lassen sich
+individuelle Schaltungen aufbauen, um
+spezielle Funktionen in einem Modell zu
+realisieren. Auch können Erweiterung aufgebaut werden, die sonst mit keinem anderen Elektronikmodul realisierbar wären.
+Aus den mitgelieferten Bauteilen habe ich
+hier zwei ganz einfache, aber nützliche
+Schaltungen für euch zusammengestellt:
+Beispiel 1: Spannungsteiler
+Hier gelten folgende Formeln:
+𝐼=
+
+𝑈
+𝑈𝑒
+=
+𝑅 𝑅1 + 𝑅2
+
+𝑈𝑎 = 𝐼 ∙ 𝑅2 = 𝑈𝑒 ∙
+
+𝑅2
+𝑅1 + 𝑅2
+
+
+Mit dem Spannungsteiler lässt sich jede
+beliebige Spannung einstellen, die ihr
+braucht. Sollten die benötigten Werte für
+die Widerstände einmal nicht verfügbar
+sein, dann könnt ihr die auch durch Reihenoder Parallelschaltung der Widerstände
+erzielen.
+
+
+
+
+In Reihenschaltung addieren sich die
+Widerstände:
+𝑅𝑔𝑒𝑠𝑎𝑚𝑡 = 𝑅1 + 𝑅2 + 𝑅3 + ⋯
+In Parallelschaltung addieren sich die Kehrwerte (die Leitfähigkeiten):
+𝑅𝑔𝑒𝑠𝑎𝑚𝑡 =
+
+𝑅1 + 𝑅2 + 𝑅3 + ⋯
+
+Beispiel 2: ODER-Gatter
+
+Multifunktionsmodul 70015
+Ein multifunktionales Modul oder auch das
+Chamäleon unter den Elektronikmodulen,
+denn es kann folgende Funktionen annehmen bzw. übernehmen:
+
+
+
+
+
+
+
+
+RS-Flip-Flop (RS-FF)
+Takt-Generator
+Signal-Verstärkung
+Mono-Flop (MF)
+Tongenerator
+Kleinsignal-Auswertung
+
+Das sind eine ganze Menge Funktionen in
+einem Modul und es ist obendrein noch ein
+Minilautsprecher mit eingebaut. Abb. 20
+zeigt die vereinfachte Schaltung.
+Funktionsbeschreibung
+A1
+
+B1
+
+Y
+
+low
+
+low
+
+low
+
+high
+
+low
+
+high
+
+low
+
+high
+
+high
+
+high
+high
+high
+Tab. 4: Wahrheitstabelle des ODER-Gatters
+
+Ihr könnt aber auch andere Bauelemente
+oder Schaltungen auf dem Experimentiermodul aufbauen, z. B. eine Transistorschaltung:
+
+
+Auf Grund der Vielfältigkeit des Multifunktionsmoduls werde ich hier nur auf die
+wichtigsten Funktionen eingehen. Für die
+Aktivierung der unterschiedlichen Funktion
+müssen die Schalter (1 – 8) entsprechend
+eingestellt werden (siehe Tab. 5). Über den
+Drehregler erfolgt die Einstellung des
+Schwellenwertes.
+Funktionsbeispiele
+ RS-Flip-Flop:
+Keinen Schalter einschalten. Low an E2
+setzt das FF (A = high). Low an E1 löscht
+das FF (A = low).
+
+
+Elektronik
+
+Schalter (aktiv = nach
+unten) und Funktion
+
+Bemerkungen
+
+
+Mono-Flop
+
+Kondensator (10 – 470 μF) zwischen minus und Eingang E1.
+
+
+Verstärker
+
+Fühler/Sensor zwischen minus und Eingang E1.
+
+
+Kleinstsignalverstärker
+
+Induktivität (Lautsprecher, Mikrofon, Elektromagnet, usw.)
+zwischen E1 und E2
+
+
+Taktgenerator
+
+Kondensator (1 – 100 µF) zwischen minus und Eingang E1.
+
+Tongenerator
+
+Kondensator (100 nF) zwischen minus und Eingang E1.
+
+
+Rückkopplung
+
+Widerstand 100 kΩ
+
+
+Rückkopplung
+
+Widerstand 10 kΩ
+
+
+Rückkopplung
+
+Widerstand 1 kΩ
+
+
+Minilautsprecher
+Verbindung mit Ausgang A.
+Tab. 5: Funktionen der DIP-Schalter im Multifunktionsmodul
+
+ Mono-Flop:
+Schalter 1 einschalten. Einen Kondensator mit z. B. 47 µF zwischen minus und
+E1 einsetzen. Low an E2 aktiviert das
+MF (A = high). Änderung der Haltezeit
+über den Drehregler (Potentiometer).
+ Taktgenerator:
+Schalter 4 und wahlweise Schalter 5, 6
+oder 7 einschalten. Einen Kondensator
+mit z. B. 10 µF zwischen minus und E1
+einsetzen. Änderung der Taktgeschwindigkeit durch Wechseln zwischen den
+Schaltern 5/6/7 und zusätzlich über den
+Drehregler (Potentiometer). Andere
+Werte für den Kondensator beeinflussen
+ebenfalls die Taktlänge.
+
+ Tongenerator:
+Schalter 4, 7 und 8 einschalten. Einen
+Kondensator mit einem Wert von 100 nF
+zwischen minus und E1 einsetzen.
+Änderung der Tonfrequenz über den
+Drehregler (Potentiometer).
+ Signal-Verstärkung:
+Schalter 2 einschalten. Ein beliebigen
+Messfühler oder Sensor zwischen minus
+und E1 einsetzen. Über den Drehregler
+kann die Sensibilität (der Schwellwert)
+des Fühlers oder Sensors eingestellt
+werden.
+ Kleinsignal-Auswertung:
+Schalter 3 einschalten. Zwischen E1 und
+E2 können nun kleinste Spannungs-
+
+
+
+
+schwankungen von Induktivitäten (Magnete, Lautsprecher) oder Membranen
+(Mikrofone) erfasst werden. Über den
+Drehregler erfolgt die Justierung.
+Des Multifunktionsmodul enthält ein Kondensator-Set (71046) mit folgendem Inhalt:
+100 nF / 2,2 µF / 10 µF / 22 µF / 47 µF /
+100 µF und zwei Stecker.
+
+Schaltungsdetails
+In diesem Abschnitt gehe ich wieder auf ein
+paar spezielle technische Hinweise zum
+Multifunktionsmodul ein. Wen dies nicht
+interessiert, der kann gleich zum Schlusswort springen.
+Das Multifunktionsmodul ist eines der
+wenigen Elektronikmodule, das ein fast
+reines analoges Innenleben beherbergt
+(Abb. 21).
+
+Ursprünglich hatte der Differenzverstärker
+für seine Ausgänge 𝐴 und 𝐴 die gleiche
+Endstufe, wie bei den Gattern und Speichern. Aber die damit möglichen 3 mA
+Ausgangsstrom reichen nicht aus, um den
+Minilautsprecher mit ausreichend Strom zu
+versorgen. Deshalb wurde die Endstufe
+noch mit einem Gegentakt-Verstärker
+ergänzt, um so die erforderliche Leistung
+für den Minilautsprecher zu Verfügung zu
+stellen.
+Darüber hinaus wurden gleich noch Freilaufdioden mit integriert, um Schäden durch
+Gegenspannungen aus Induktivitäten vorzubeugen.
+
+Schlusswort
+Ursprünglich wollte ich in diesem Beitragsteil noch auf die elektronischen Schalter
+zum Ansteuern von Verbrauchern wie
+Motoren, Magneten, Pumpen usw.
+
+Abb.
+22:21:
+Korrekte
+Schaltung
+RS-Flip-Flop-Moduls
+70008
+Abb.
+Teilschaltung
+desdes
+Multifunktionsmoduls
+70015
+
+eingehen, aber diesen Teil verschiebe ich
+auf die nächste Fortsetzung.
+Neben den drei Elektronikmodulen zum
+Schalten von Verbrauchern (70009, 70018
+und 70019) werde ich im nächsten Teil der
+Reihe auch auf die Versorgungsmodule
+70003 und 70020 eingehen und diese
+vorstellen.
+Im abschließenden Teil meiner Reihe
+widme ich mich den programmierbaren
+Computer-Interfaces und wie sich deren
+Funktionalität mit Hilfe von Elektronikmodulen erweitern bzw. ergänzen lassen.
+Zu den heute vorgestellten Modulen habe
+ich wieder passend ein Modell zum Nachbauen für euch – einen Kugelzähler für eure
+Kugelbahnen [3].
+Und wer sich einen Gesamtüberblick über
+die Elektronikmodule verschaffen möchte,
+kann entweder über das Smartphone auf
+Instagram
+unter
+„Elektronikmodule“
+schauen oder am PC unter [1], alternativ
+auch bei eurem fischertechnik-Einzelteilhändler Franz Santjohanser [2] (Suchbegriff
+„700“).
+Fortsetzung folgt!
+
+Elektronik
+
+Korrektur
+Im zweiten Teil meiner Beitragsreihe [5]
+habe ich unter anderem vom RS-FF (70008)
+berichtet, aber leider war der Schaltplan
+(Abb. 18) fehlerhaft. Abb. 22 zeigt hier die
+korrigierte Version.
+Hinweis: Im Gegensatz zu D-FF (70006)
+und JK-FF (70007) verfügt das RS-FFModul über keine Auto-Reset-Funktion.
+Nach dem Einschalten oder Anlegen der
+Betriebsspannung ist der Ausgangszustand
+der einzelnen FFs unbestimmt.
+
+Quellen
+[1]
+
+Funke, Hans-Christian: elektronikmodule. Auf Instragram.com.
+
+[2]
+
+Santjohanser, Franz: fischertechnikEinzelteilversand.
+
+[3]
+
+Funke, Hans-Christian: Kugelzähler
+und Soundeffekt. ft:pedia 2/2020
+(diese Ausgabe), S. 82-85.
+
+[4]
+
+Funke, Hans-Christian: Elektronikmodule (Teil 1): Einleitung. 4/2019, S. 40-46.
+
+[5]
+
+Funke, Hans-Christian: Elektronikmodule (Teil 2). ft:pedia 1/2020, S.
+52-61.
+
+
+

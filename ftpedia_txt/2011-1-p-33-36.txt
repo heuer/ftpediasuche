@@ -1,0 +1,217 @@
+
+Computing
+
+Computing
+
+Der Robo TX Controller als Messgerät
+Wer seine fischertechnik-Modelle mit dem Robo TX Controller steuert, nutzt dabei meist die
+graphische Programmiersprache Robo Pro. Robo Pro besitzt zwar – im Vergleich mit einer
+Steuerung des Controllers über andere Programmierschnittstellen – eine Reihe von Einschränkungen, beschert aber besonders Einsteigern sehr schnell Erfolgserlebnisse. Wir
+möchten in dieser Rubrik in loser Folge Tipps und Tricks für den Einsatz und die
+Programmierung des TX Controllers vorstellen – nicht nur, aber insbesondere für die viel
+genutzte Robo Pro-Umgebung.
+Für den Robo TX Controller gibt es zahlreiche fischertechnik-Sensoren, deren (analoge) Werte über die vier Eingänge I1 bis
+I4 erfasst werden können. Auch „Fremdsensoren“ lassen sich mit dem TX Controller nutzen – davon soll in diesem Beitrag
+aber nicht die Rede sein. Zu den analogen
+fischertechnik-Sensoren zählen insbesondere der Abstandssensor, der Farbsensor,
+der Fotowiderstand und der Temperatursensor (Heißleiter bzw. NTC-Widerstand,
+Negative Temperature Coefficient Thermistors).
+Meist werden diese Sensoren für die Schaltungs- oder Fahrzeugsteuerung eingesetzt.
+Darüber hinaus erlauben sie es, den TX
+Controller als Messgerät einzusetzen.
+Unterstützt wird diese Funktion in Robo
+Pro durch viele Programmelemente, die in
+diesem Beitrag am Beispiel der Programmierung eines Temperatur-Messgeräts vorgestellt werden.
+
+Temperatur-Schalter
+Anleitungen zur Konstruktion von Temperatur gesteuerten Schaltern finden sich
+schon in ganz frühen Elektronik-Baukästen
+von fischertechnik (ec1, ec2), in den
+Hobby-Bänden (4-1, 4-3), dem Kasten
+„Profi Sensorik“ sowie den ComputingBaukästen. Alle dort vorgestellten Schaltungsbeispiele (Feueralarm, Frostmelder,
+
+Kühl-Ventilator etc.) verwenden den Temperatursensor als Regler: Überschreitet die
+gemessene Temperatur einen Schwellwert,
+erfolgt die An- oder Abschaltung eines
+Motors, Summers oder Lichtsignals.
+
+
+Eine solche Schaltung ist mit Robo Pro im
+Handumdrehen programmiert (Abb. 1):
+Der NTC-Widerstand am Universaleingang (Eingangsart A 5k) liefert einen ganzzahligen Widerstandswert zwischen 0 und
+5 kOhm – je höher die Temperatur, desto
+kleiner der Widerstandswert. Den muss
+man lediglich mit einem vorher festgelegten konstanten Schwellwert vergleichen,
+um abhängig vom Ergebnis eine Aktion
+
+
+auszulösen (im Beispiel: eine Warnlampe
+einzuschalten).
+
+Thermometer
+
+verbunden; dort wählt man über die rechte
+Maustaste anhand der ID das Anzeigeelement („Messgerät“) aus (Abb. 3).
+
+Der TX Controller kann jedoch deutlich
+mehr als „Schalter spielen“, denn für einen
+Schalter würde ein binärer Wert (0/1) genügen. Der Sensor liefert aber einen Wert
+zwischen 0 und 5000 – und damit lässt sich
+die Temperatur messen.
+Zur Veranschaulichung der gemessenen
+Werte bietet Robo Pro für das Bedienfeld
+eine „Messgerät-Anzeige“, die man unter
+dem Menüpunkt „Bedienelemente“/“Anzeigen“ findet. Damit kann ein ganzzahliger Wert wie bei einem analogen Messgerät durch einen Zeiger in der Skala des
+Messbereichs angezeigt werden.
+
+
+Startet man nun das Programm, zeigt das
+Messgerät im Bedienfeld den Wert des
+NTC-Widerstands an.
+Da der Widerstandswert eines Heißleiters –
+wie der Name schon vermuten lässt – mit
+zunehmender Wärme sinkt, invertieren wir
+den Messwert (genauer: ziehen ihn vor der
+Anzeige vom Maximalwert ab), damit der
+Zeiger des Messgeräts bei höherer Temperatur – wie man das erwarten würde – nach
+rechts ausschlägt (Abb. 4).
+
+Messgerät-Anzeige im Bedienfeld
+
+Das Messgerät-Symbol wird dazu einfach
+mit der Maus in das Bedienfeld gezogen.
+Der Wertebereich der Skala wird festgelegt, indem man das Messgerät-Symbol
+mit der rechten Maustaste anklickt und
+dann den Namen des Messwerts (ID, z. B.
+„Messgerät“), den kleinsten (0) und größten (5000) Wert der Skala und die Schrittweite der Teilstriche (z. B. 100, 1000)
+festlegt (Abb. 2).
+Im Robo Pro-Programm wird der Ausgang
+des Sensors (Universaleingang) mit dem
+Programmelement „Bedienfeld Eingang“
+
+
+So ganz entspricht das Ergebnis allerdings
+noch nicht unseren Vorstellungen – denn
+was hilft eine Temperatur-Anzeige ohne
+Einheiten? Schließlich interessiert uns die
+
+Temperaturangabe in Grad Celsius – und
+nicht der Widerstandswert des NTC.
+Dazu genügt es jedoch nicht, den Ausgabewert zu „kalibrieren“, indem man den
+Widerstandswert z. B. bei 0ºC bestimmt
+und diesen konstant von den Ausgabewerten des Sensors abzieht, denn die Änderung des Widerstandswertes verläuft nicht
+linear zur Temperaturänderung.
+Daher gibt es im Wesentlichen nur zwei
+Wege, um den Widerstandswert in eine
+Temperaturangabe umzurechnen: Entweder erstellt man eine Vergleichswerttabelle,
+in der z. B. in Schritten von einem Zehntel
+Grad Celsius jedem Temperaturwert ein
+Intervall von Widerstandswerten zugeordnet wird – zu einem vorgegebenen Widerstandswert kann man dann die Temperatur
+aus der Tabelle auslesen. Oder aber man
+leitet eine Berechnungsformel her, die die
+Funktionskurve aus Widerstandswert und
+Temperaturwert annähert.
+Die erste Methode ist mühsam, die zweite
+benötigt zur Ableitung der Formel ebenfalls eine Wertetabelle – und ist zudem
+nicht ganz einfach. Zum Glück gibt es für
+die Temperaturmessung auch einen ganz
+einfachen Weg: Denn mit der Robo Pro
+Software wird eine kleine Bibliothek von
+Hilfsprogrammen ausgeliefert – darunter
+das Unterprogramm „NTC -> T“ (Menüpunkt
+„Bibliothek“/„TX-Controller“/
+„NTC“), das den Widerstandswert in einen
+Celsius-Wert umrechnet (Abb. 5).
+
+(aus der Robo Pro-Bibliothek)
+
+Das Unterprogramm liefert die Temperatur
+als 48 bit-Fließkommawert zurück. Vor der
+
+Computing
+
+Anzeige in unserem Messgerät müssen die
+Werte mit dem Operator „PF48/Int16“ in
+einen ganzzahligen Wert umgewandelt
+werden (Abb. 6).
+
+
+Die Variablen „R“ und „T“ dienen der
+Kontrolle: sie zeigen den aktuellen NTCWiderstandswert und die daraus berechnete Temperatur (als Fließkommazahl) an.
+Die Anzeige im Bedienfeld, mit korrigiertem Skala-Wertebereich von 0-30 Grad
+und ergänzt um eine digitale Temperaturanzeige, zeigt Abb. 7.
+
+
+So weit, so gut. Das Messgerät kann die
+gemessene Temperatur allerdings nur anzeigen, wenn es an den PC angeschlossen
+ist. Das ist unpraktisch, lässt sich aber korrigieren: Dazu müsst Ihr das Programm
+lediglich um eine Anzeige auf dem TXDisplay erweitern – das sollte jetzt keine
+große Sache mehr sein.
+Falls Ihr über einen zweiten NTC-Widerstand verfügt, könnt Ihr der Mess-Station
+noch einen Außentemperaturfühler spendieren – und die Anzeigefelder entsprechend ergänzen. Der Wertebereich der
+Messgerät-Skala für die Außentemperaturmessung muss auch größer sein, z. B. von
+- 10 bis +40 °C. Den NTC-Widerstand,
+
+
+den Ihr als Außentemperatur-Sensor einsetzen wollt, solltet Ihr an einem vor direkter Sonneeinstrahlung geschützten Ort platzieren – und ihn zum Schutz vor Nässe
+vorher z. B. in einen transparenten Druckverschluss- oder ZIP-Beutel unterbringen.
+
+gesamt muss die Liste dann pro Tag der
+Messung 288 Werte speichern (Abb. 8).
+
+Temperaturverlauf
+Mit einem solchen „digitalen Thermometer“ lässt sich aber noch mehr machen –
+schließlich kommt der TX Controller mit
+einem Arbeitsspeicher (RAM) von 8 MB
+daher. Man kann die Messwerte nämlich
+nicht nur anzeigen, sondern auch speichern.
+In Robo Pro gelingt das mit dem Programmelement „Liste“, gewissermaßen
+einer einspaltigen Tabelle (unter „Variable,
+Timer“). Hat man die Größe der Liste, also
+die maximale Anzahl der Einträge, über
+die rechte Maustaste festgelegt, kann man
+nun die Messwerte mit dem Befehl „Wert
+Anhängen“ über den Eingang S in die Liste
+einfügen. In den Eigenschaften des Befehls
+(erreichbar über die rechte Maustaste)
+muss man dafür die Option „Dateneingang
+für Befehlswert“ auswählen. Der Index der
+Liste wird mit jedem Eintrag automatisch
+weitergezählt, sodass alle Einträge korrekt
+hintereinander in die Liste eingetragen
+werden. Ist die Liste voll, wird kein
+weiterer Wert mehr eingetragen.
+Will man nun zum Beispiel den Temperaturverlauf eines Tages messen und anschließend darstellen, überlegt man sich
+zunächst eine geeignete Auflösung, die
+Fehler z. B. durch kurzfristige Temperaturschwankungen (Sonne bricht durch die
+Wolken, kalte Windböe etc.) ausgleicht –
+beispielsweise eine Messung alle fünf Minuten. Dieses Messintervall erreichen wir,
+indem wir das Programm nach jeder
+Messung fünf Minuten warten lassen. Ins-
+
+
+mit 5-Minuten-Messintervall
+
+Da das „Liste“-Element maximal 32.767
+Einträge erlaubt, lässt sich der Temperaturverlauf über fast vier Monate messen und
+speichern. Die in der Liste gespeicherten
+Messwerte kann man sich im OnlineModus während des Programmlaufs durch
+einen Klick mit der rechten Maustaste auf
+die „Liste“ anzeigen lassen.
+Nach Abschluss der Messung können die
+Werte in einer CSV-Datei („Comma Separated Values“) gespeichert werden (Menü
+„Datei“/„CSV-Speicher für Listen speichern“), wenn bei den Eigenschaften der
+Liste (rechte Maustaste) die Option „In
+CSV Speicher schreiben“ gewählt wurde.
+Der Datenspalte kann man außerdem einen
+Titel geben (Eintrag in rechtem Feld über
+der CSV-Speicher-Option).
+Die CSV-Datei kann von einem Tabellenkalkulationsprogramm eingelesen und dort
+weiter verarbeitet werden. Das Beispielprogramm in Abb. 8 speichert die Messwerte als ganze Zahlen, da eine Auswertung von Fließkommazahlen in der CSVDatei nicht ohne weiteres möglich ist:
+Robo Pro (v2.1.4.2) notiert die Werte
+leider in amerikanischer Schreibweise –
+mit einem Punkt als Dezimaltrennzeichen
+– und mit einem nachfolgenden „E“.
+Dirk Fox
+
+

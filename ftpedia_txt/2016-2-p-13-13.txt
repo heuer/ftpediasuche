@@ -1,0 +1,53 @@
+
+Modell
+
+Modell
+
+Mini-Modelle (Teil 13): Visitenkartenhalter
+Martin Westphal, René Trapp
+Ein Visitenkartenhalter für fischertechniker.
+Mittlerweile hat es sich sicher herumgesprochen, dass ein Stand unserer ft:c die
+Maker Faire in Hannover bereicherte.
+Natürlich sollten kleine Visitenkärtchen mit
+unserer Werbung unters Volk gebracht
+werden. Einfach einen Stapel davon auf den
+Tisch zu legen geht bei solch einer großen
+Veranstaltung allerdings nicht, der Stapel
+wäre in Windeseile zerfleddert worden.
+Also haben die Autoren am Vorabend noch
+schnell den hier vorgestellten Visitenkartenhalter entworfen (Abb. 1).
+
+
+Diese Teile werden für den vorgestellten
+Visitenkartenhalter insgesamt benötigt:
+
+
+St.
+
+ft-Nr.
+
+Bezeichnung
+
+
+35129
+
+Grundplatte 120 x
+60 x 7,5
+
+
+38240
+
+V-Baustein 15
+Eck
+
+
+32879
+
+Grundbaustein 30
+
+Und damit er ergonomisch schräg steht, gibt
+es noch die raffiniert einfache Konstruktion
+auf der Rückseite (Abb. 2).
+
+
+

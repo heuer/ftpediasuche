@@ -1,0 +1,202 @@
+
+
+Tipps & Tricks
+
+Neue ft-Teile selbst gemacht – 3D-Druck (5):
+Qualitätsverbesserung des ft-Druckers
+Dirk Wölffel
+Seit Sommer 2016 ist der fischertechnik-3D-Drucker verfügbar. Ein innovatives Produkt, mit
+dem fischertechnik den Markt überrascht hat. Mit einem Straßenpreis von unter 500 € zielt der
+Drucker vor allem auf Schulen und die technische Weiterbildung ab. In Betrieb und Aufbau ist
+das Modell anspruchsvoll. Dank des Baukastensystems fischertechnik lässt sich die Qualität
+des Drucks mit ein paar kleinen Tricks noch deutlich steigern.
+
+Die Ansteuerung
+Seit Erscheinen des fischertechnik-3DDruckers konnte ich einige Erfahrung mit
+dem Druck zahlreicher Objekte sammeln.
+Zu Beginn war ich mit der Qualität der
+Druckerzeugnisse gelegentlich unzufrieden
+– und habe daher mit verschiedenen mechanischen Modifikationen des Druckers experimentiert.
+
+Schneckenmuttern m =1,5 (37925) ersetzt,
+die ich jeweils mit einem Kugellager für die
+4-mm-Achsen (12x4 mm) versehen habe.
+Dazu wird das Kugellager mit Hilfe eines
+kleinen Schraubstocks und Alu-Schutzbacken in die Schneckenmutter eingepresst.
+
+Um möglichst autark zu sein steuere ich den
+3D-Drucker mit einem Windows 8.1 Tablet
+von Trekstor (Abb. 1).
+
+Kugellager
+
+Die Abtriebshülse
+
+
+Die Lagerung der Achsen
+Nach Bauanleitung werden die X-, Y- und
+Z-Achse jeweils mit Bausteinen 15 mit
+Bohrung gelagert. Um die Reibung zu
+verringern habe ich diese durch acht
+
+Im Dauerbetrieb hat sich bei mir nach
+gewisser Zeit die Abtriebshülse (160549)
+für den Schrittmotor als Schwachstelle
+herausgestellt, da diese sehr hohe Kräfte
+übertragen muss. Daher habe ich nach geeigneten Wellenadaptern für Achsdurchmesser von 4 mm auf 5 mm gesucht. Abb. 3
+zeigt einige Beispiele für solche Wellenadapter.
+
+
+Tipps & Tricks
+
+Daher habe ich einen 12 V-Lüfter (40 x 40)
+beschafft, die *.stl Druckdateien für den
+Kühler und den Halter von Thomas Dragon
+bei thingiverse.com heruntergeladen und
+mit dem fischertechnik-Drucker ausgedruckt (Abb. 5).
+
+Die Stabilität (und Langlebigkeit) dieser
+Metalladapter liegt natürlich deutlich über
+der der fischertechnik-Kunststoff-Hülse.
+
+Der Endschalter
+
+Angesteuert wird der Lüfter über das regelbare fischertechnik Power Set (505283,
+erste Schicht nicht gekühlt werden darf, da
+das Filament sonst nicht haftet.
+
+Auch der Endschalter der Z-Achse stellt im
+Betrieb einen Schwachpunkt dar, da er sich
+ständig verstellt. Abhilfe habe ich mit einer
+Linsenschraube M4 x 30 mm mit zwei
+gekonterten Muttern geschaffen. Damit ist
+er außerdem genauer einzustellen (Abb. 4).
+
+
+Eine alternative automatische Lüftersteuerung findet sich im Beitrag von Matthias
+Dettmer [1].
+
+Das Druckbett
+
+Die Kühlung
+Die Kühlung des Filaments ist ein wichtiges
+Thema beim 3D-Druck. Der fischertechnik
+3D-Drucker wird ohne Kühlkomponente
+geliefert; das verursacht häufig bei kleineren zu druckenden Bauteilen Probleme.
+
+Für die Haftung des Filaments verwende ich
+das Blue Tape von 3M (Abb. 7). Ich habe
+gute Erfahrungen damit gemacht: Man kann
+es mehrmals benutzen und das Filament
+lässt sich leichter lösen.
+
+
+
+
+
+Die Filament-Zuführung
+Bei der Filament-Zuführung des fischertechnik-Druckers tritt manchmal das Problem auf, dass das PLA sich verheddert, da
+es sehr instabil aufgehängt ist. Daher habe
+ich die Filament-Zuführung komplett geändert, indem ich die Filament-Rolle auf vier
+Spurkränze mit Gummi (35765) gesetzt
+habe (Abb. 8).
+
+Die Kabelführung
+Für die Kabelführung habe ich Spiralband
+von Reichelt verwendet. Damit lassen sich
+die Kabel besser in den Reedkontakt-Halter
+befestigen; außerdem rutschen sie bei
+Bewegung nicht aus der Führung (Abb. 11).
+
+
+Dadurch kann ich die Filament-Rolle
+schnell wechseln, der Draht wird sauber
+zugeführt und ich habe eine Bauplatte 500
+eingespart (Abb. 9).
+
+
+Die Skalierung ändern
+Beim Drucken von Bauteilen fällt auf, dass
+die Z-Achse oftmals Schritte verliert. Das
+kann man verbessern, indem man die Auflösung der Z-Achse mit einem Zahnrad Z30
+erhöht (Abb. 12). Dazu muss man auch die
+Kette etwas verlängern.
+
+
+Der Controller
+Abweichend von der Originalkonstruktion
+habe ich die 3D-Steuerung Platz sparend
+direkt hinter dem Druckbett platziert (Abb.
+10).
+
+
+
+Unten habe ich die Zahnräder aufgeführt,
+welche für den Umbau benötigt werden. Ich
+habe Bauteile von Andreas Tacke (TST)
+
+verwendet [2], da diese sich besser fixieren
+lassen und nicht auf den Achsen durchrutschen (Abb. 13).
+
+Tipps & Tricks
+
+∂
+
+Extr.1 Z-offset (Abb. 16)
+
+Wert von 0 auf 204 ändern.
+
+
+Dazu sind weitere Anpassungen in der
+Firmware von 3D Print Control nötig. Das
+geht am einfachsten über das Menü „Konfiguration – Firmware EEPROM Konfiguration“ (Abb. 14).
+
+Ergebnisse
+
+Folgende Parameter werden geändert und
+mit „Ok“ bestätigt:
+
+Um euch zu zeigen, wie sich die Qualität
+verbessert hat, habe ich ein paar ausgewählte 3D-Objekte vor und nach den Modifikationen des Druckers fotografiert (Abb. 17).
+
+∂ Z-axis Steps per mm (Abb. 15)
+Wert von 1358.1190 auf 2037.1784 ändern
+(siehe den Hinweis von Michael Sögtrop im
+Forum):
+
+den vorgestellten Modifikationen
+
+Wie man sieht, sind die mit der Originalversion des Druckers erzeugten 3D-Objekte
+nicht scharfkantig. Beim V-Stein 15x15x15
+(35297, Mitte) war der Druck z. B. zu heiß.
+Bei der Kappe (31850, rechts im Bild)
+fehlen Schritte oberhalb des Schirms,
+dadurch ist sie stufig.
+
+
+
+
+dem fischertechnik designer von Michael
+Samek. Diese könnt ihr euch mit der Demo
+herunterladen. Ihr findet die *.stl-Druckdateien mit der zugehörigen fischertechnikArtikelnummer im „hires“-Ordner.
+Aus dem 3D-Drucker könnt ihr also mit
+kleinen Modifikationen hinsichtlich Druckqualität und Maßhaltigkeit deutlich mehr
+herausholen.
+
+Referenzen
+[1]
+
+Matthias Dettmer: Neue ft-Teile
+selbst gemacht – 3D-Druck (6): Ein
+Lüfter für den fischertechnikDrucker. ft:pedia 1/2017, in dieser
+Ausgabe.
+
+[2]
+
+Andreas Tacke: ft-Spezialteile made
+by TST (Teil 11). ft:pedia 2/2015, S.
+24-25.
+
+
+
+

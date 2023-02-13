@@ -1,0 +1,325 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Verkabelung
+Dirk Fox
+Anders als die fischertechnik-Bausteine folgt die Verkabelung eines Modells keinem Raster.
+Wer nicht nur funktionstüchtige, sondern auch elegante Modelle mag, muss sich daher etwas
+einfallen lassen, will er verhindern, dass wilde Kabelstränge Abschläge an der Ästhetik-Note
+einbringen. Da sich diese Herausforderung seit der Einführung des ersten fischertechnikMotors im Jahr 1967 stellt, gibt es inzwischen den einen oder anderen Tipp aus der Praxis…
+
+Vorbemerkung
+Kaum ein fischertechnik-Modell, das ohne
+Kabel auskommt: fast immer werkelt ein
+Motor, leuchtet eine Lampe oder ist ein
+Schalter anzuschließen. Die fischertechnikKabel gehorchen jedoch keinem Raster:
+„Konfektion“ und Verlegung sind dem
+Modellbauer überlassen. Wenn man dabei
+keiner „Strategie“ folgt, dann wird eine
+komplexe Schaltung schnell zum „Kabelverhau“, die nicht nur den ästhetischen
+Eindruck des Modells beeinträchtigt,
+sondern die man möglicherweise bald
+selbst nicht mehr durchschaut. Und im
+schlimmsten Fall wird sogar die Funktion
+in Mitleidenschaft gezogen.
+Wer das verhindern will, sollte bei der
+Verkabelung seines Modells mehrere
+Aspekte beachten:
+Besonders wichtig ist natürlich, dass die
+elektrische Verbindung stabil ist.
+Rutscht ein Flachstecker aus einer
+Buchse oder ein Kabel aus dem Flachstecker heraus, „steht“ das Modell
+zumeist – und die Fehlersuche beginnt.
+Noch ärgerlicher ist es, wenn ein Flachstecker unsauber montiert ist, so dass
+der Kontakt nur gelegentlich ausfällt –
+das kann zu frustrierender Ursachenforschung führen.
+
+Auch ein gebrochenes Kabel (selten,
+kann aber bei älteren, viel genutzten
+Kabeln vorkommen) ist in einem fertigen Modell schwer zu finden.
+Schließlich sollten die Kabel so montiert sein, dass keine beweglichen Teile
+daran hängen bleiben.
+Bei komplexen Modellen ist es wichtig,
+dass die Verkabelung übersichtlich ist
+(welcher Anschluss führt wohin?),
+damit man Fehler schneller findet,
+kleine Änderungen schnell umsetzen
+kann und eine z. B. für einen Transport
+erforderliche Teilzerlegung des Modells
+nicht zu einer kompletten „Neuverkabelung“ zwingt.
+Und nicht zuletzt spielt natürlich auch das
+Erscheinungsbild eine Rolle – wer sein
+Modell auf einem Foto verewigen möchte,
+will wilde Kabelbäume vielleicht lieber
+erst in eine „geordnete Verkabelung“ überführen, bevor er auf den Auslöser drückt.
+Für alle diese Aspekte gibt es den einen
+oder anderen Trick und Kniff. Einige der
+unserer Ansicht nach besonders hilfreichen
+Verkabelungstipps haben wir in diesem
+Beitrag zusammengestellt.
+
+
+
+
+Stabile Verbindung
+
+Verlängerung und Verteilung
+
+Die Stabilität einer elektrischen Verbindung entscheidet sich oft schon bei der
+Konfektionierung des Kabels. Wird das
+Kabelende nicht sauber isoliert, kann die
+elektrische Verbindung z. B. durch ein
+Wackeln des Kabels unterbrochen werden.
+
+Manchmal benötigt man Kabelverlängerungen – sei es, weil die verfügbaren
+Kabellängen nicht ausreichen, sei es, weil
+ihr Kabel „verzweigen“ möchtet. Zu den
+beim direkten Aneinanderstecken entstehenden dicken „Steckerknoten“ gibt es
+jedoch Alternativen. Das hat nicht nur
+ästhetische Vorzüge: an allen Steckerknoten ragt unvermeidlich mindestens eine
+Flachsteckerspitze heraus – berührt sie eine
+andere (desselben oder eines zweiten
+Steckerknotens), kann es zum Kurzschluss
+kommen.
+
+fischertechnik empfiehlt im Hobby 3-Kasten schon 1973, dass ca. 1 cm des Kabelendes abisoliert, umgeknickt und in den
+Flachstecker geschoben werden sollte [1].
+Aber auch der Flachstecker selbst kann
+Ärger verursachen, wenn er zu locker in
+einer Buchse sitzt – bewegt man das
+Modell, rutscht er möglicherweise heraus
+oder der Kontakt wird unterbrochen. Dem
+kann sehr einfach mit einer dünnen
+Messerschneide abgeholfen werden, die
+man von oben in die beiden Schlitze der
+Steckerspitze einführt, sodass sie etwas
+aufgebogen wird (Abb. 1).
+
+Einige der besonders eleganten Varianten
+zur Kabelverlängerung sind leider nur mit
+ausgelaufenen „historischen“ fischertechnik-Teilen zu realisieren, wie z. B. den
+Verteilerplatten (siehe ‚Perlentauchen’ in
+ft:pedia 1/2013), die die Verbindung von
+bis zu sechs Kabeln mit einem Zuführungskabel ermöglichen (Abb. 2, [2]).
+
+Aufbiegen der Steckerspitze (aus: [1])
+
+Schließlich sollte man (auch beim Umoder Abbau eines Modells) pfleglich mit
+den Kabeln umgehen und sie weder
+knicken noch am Kabel aus der Buchse
+ziehen – wenn ein Flachstecker klemmt,
+kann er leicht mit dem gelben ft-Schraubendreher herausgezogen werden, wenn
+man jenen zuvor in das kleine Kontaktloch
+des Flachsteckers hinein schiebt.
+Bevor man ein Kabel aufwändig im
+Modell verlegt, sollte man zunächst sicherstellen, dass es funktioniert. Ein „Birnchentest“ (Leuchtstein mit dem Kabel an
+Stromquelle anschließen und einschalten)
+zeigt euch, ob das Kabel in Ordnung ist.
+
+Für eine einfache Verlängerung gab es in
+den frühen Elektromechanik-Kästen kurze
+Steckerbuchsen 21 (35307) und Zwischenstecker 15 (31339), letztere mit 1,5 cm
+Länge genau im ft-Raster, die in die
+runden Nute z. B. eines BS15 oder BS30
+geschoben werden konnten (Abb. 3). An
+beiden Enden konnte ein Flachstecker
+angeschlossen werden.
+
+
+Ähnlich elegant geht das auch mit heutigen
+Bauteilen: in jedem Leuchtstein (38216)
+sind die Anschlüsse durchgeführt; enthält
+
+ein Leuchtstein also kein Birnchen, kann er
+für eine Kabelverlängerung genutzt werden
+(Abb. 4).
+
+
+Leuchtsteine wurden schon 1981 im
+Experimentierbuch Elektromechanik als
+„Steckdose am Modell“ empfohlen [3].
+
+Übersichtlichkeit
+Je komplizierter die Schaltung, desto
+größer die Gefahr, dass man den Überblick
+über die Verkabelung verliert – und das
+kann viel Aufwand erfordern, will man das
+Modell z. B. nach einem Transport in
+teilzerlegtem Zustand wieder funktionsfähig machen.
+Eine besonders elegante Lösung, die allerdings etwas Disziplin erfordert, verwendet
+z. B. Stefan Falk in komplexen Modellen:
+er versieht die Flachstecker jedes Kabels
+mit einer Nummer (Abb. 5). Trägt man
+diese Nummer in den Schaltplan ein, lässt
+sich jedes Kabelende sofort eindeutig
+zuordnen – sogar, wenn die Kabel z. B. in
+einem Spiralschlauch zusammengefasst
+sind (siehe unten).
+
+Tipps & Tricks
+
+Wer den Aufwand der Markierung scheut,
+der kann – zumindest bei weniger komplexen Schaltungen – mit einer einfachen
+Maßnahme schon etwas gewinnen: wählt
+man Flachstecker- und Kabelfarbe jeweils
+passend zur Polung des Anschlusses (rot:
++, grün: -), sinkt zumindest die Gefahr
+eines versehentlichen Kurzschlusses.
+Und wer es bunt mag, der kann auch
+gänzlich verschiedenfarbige Kabel und
+Stecker verwenden: auch die fischertechnik-Flachstecker gibt es (z. B. bei Knobloch) in exotischen Farben; passende Kabel
+kann man im Elektronik-Versandhandel
+erwerben (Abb. 6).
+
+(Bild: Harald Steinhaus, ft:community)
+
+Auch ein farbiges Flachbandkabel kann
+eine gute Wahl sein, wenn mehrere Kabelverbindungen etwa gleicher Länge benötigt
+werden (Abb. 7).
+
+
+Alternativ zur Markierung des Flachsteckers kann man auch einen beschrifteten
+Aufkleber am Kabel(ende) befestigen.
+
+
+
+Kabelverlegung
+Die Verlegung der Kabel am Modell ist oft
+eine besondere Herausforderung. Bei
+vielen Modellen lassen sich die Kabel
+elegant in Bausteinnuten einlegen und
+durch Federnocken (31982) fixieren.
+In einem Clubheft wurde vorgeschlagen,
+Kabel durch in Nuten gesteckte Kettenglieder (36263) zu führen, und mit einem
+kleinen bisschen Modding lassen sich auch
+S-Riegel (36323) zu Kabelhaltern umfunktionieren (Abb. 6, [4]) – die Verlegung ist
+jedoch in beiden Fällen vergleichsweise
+mühsam. Besser geht es mit ReedkontaktHaltern (35969): Sie haben eine große
+„Kapazität“, und einzelne Kabel können
+leicht ergänzt oder wieder herausgenommen werden.
+Wurde das Modell auf einer Bau- oder
+Grundplatte montiert, können die Kabel
+auch unter der Platte verlegt werden. Die
+Kabelenden führt man dazu z. B. durch die
+Löcher der Bauplatte – dafür muss man
+allerdings einen der Flachstecker entfernen. Unterhalb der Platte sieht es dann
+zwar aus wie unter dem Sofa, aber das
+Modell selbst wirkt fast „kabelfrei“, wenn
+ihr die Kabel dort in den Bausteinnuten
+verschwinden lasst.
+
+Kabelkürzung
+Eine sehr schöne Lösung des Problems,
+dass vorkonfektionierte Kabel nie exakt die
+benötigte Länge haben, hat fischertechnik
+1981 in der Anleitung zum Kasten Elektromechanik (39145) vorgeschlagen [3]: Ist
+das Kabel zu lang, wird es fest um eine
+Metall- oder Rastachse gewickelt.
+Zieht man die Achse heraus, hält man ein
+spiralförmig gedrehtes Kabel in der Hand –
+das sich nun wunderbar auf die richtige
+Länge auseinander ziehen lässt und chic
+aussieht (Abb. 8).
+
+
+
+Spiralkabel eignen sich besonders für die
+„offene Verlegung“; als Spirale passen sie
+nicht mehr in Nuten. Dort verlegte Kabel
+lassen sich jedoch auch elegant kürzen, wie
+von fischertechnik schon 1973 vorgeschlagen: Ein Stück des zu langen Kabels wird
+durch eine Verbindungsnute eines BS15
+oder BS30 geschoben und auf der anderen
+Seite z. B. durch eine Bauplatte 15x15
+(38246) fixiert (Abb. 9).
+
+
+Kabelkanäle
+Kabel lassen sich auch elegant verpacken –
+um zu vermeiden, dass sie als dicker, unförmiger „Kabelbaum“ das Modell verunzieren. Vor allem drei Lösungen bieten
+sich dafür an: ein Spiralschlauch, ein
+Trinkhalm
+oder
+eine
+Energiekette
+(Abb. 10-12).
+Mit einem Spiralschlauch (erhältlich für
+kleines Geld z. B. bei Knobloch als Meterware, 75095) lassen sich Kabelbündel von
+bis zu 3 cm Durchmesser „verkleiden“. Bis
+4 mm Kabeldurchmesser passt der Spiralschlauch sogar noch durch einen Reedkontakt-Halter (35969) und lässt sich damit
+am Modell befestigen.
+Der Schlauch kann zudem um die Kabel
+„gewickelt“ werden – eine Demontage der
+Flachstecker ist daher nicht erforderlich.
+Weiterer Vorteil des Spiralschlauchs ist die
+
+
+Tipps & Tricks
+
+Möglichkeit, an jeder Stelle einzelne
+Kabelenden herauszuführen.
+
+
+Für Sparsame gibt es eine besonders preisgünstige Variante: ein umfunktionierter
+Trinkhalm (zu finden z. B. in Modellen
+von Harald Steinhaus und Wilhelm Brickwedde, Abb. 11). Er eignet sich vor allem
+für Geradführungen; knicken lässt sich der
+Halm nur an dafür vorgesehenen Stellen.
+Und in kleine Rohrstücke zerteilt eignet er
+sich auch, um Kabelbäume nur an ausgewählten Stellen zu „bändigen“ – besser
+als Klebeband, das klebrige Rückstände
+auf den Kabeln verursacht.
+
+Alle drei Lösungen sehen sehr professionell aus – und können einem fertigen
+Modell den letzten Schliff geben. Sie
+verhindern zudem, richtig montiert, das
+Verhaken oder Verheddern von Kabeln
+während der Nutzung des Modells.
+Da die Montage mit etwas Aufwand verbunden ist und Spiralschlauch und Energiekette auf die richtige Länge gebracht
+werden müssen, sollten sie erst ganz zum
+Schluss angebracht werden.
+Ist ein Modell für die „Ewigkeit“ gedacht,
+kommt auch noch ein Schrumpfschlauch in
+Betracht – Kabel durch den Schlauch
+ziehen, mit einem Feuerzeug vorsichtig
+erwärmen und fertig ist ein kompakter
+Kabelstrang.
+
+Quellen
+[1]
+
+fischertechnik: Hinweise zur
+Verdrahtung. In: Hobby 3. FischerWerke, Tumlingen, 1973, S. 15.
+
+[2]
+
+fischertechnik: Stromverzweigung.
+In: Hobby 3. Fischer-Werke,
+Tumlingen, 1973, S. 11.
+
+[3]
+
+fischertechnik: Tips für die Verdrahtung. In: Experimentierbuch Elektromechanik. Fischer-Werke, Tumlingen, 1981, S. 20.
+
+[4]
+
+Harald Steinhaus: Neue ft-Teile
+selbst gemacht: Teile Modding.
+ft:pedia 3/2011, S. 20-24.
+
+
+Die Energiekette (Abb. 10, erhältlich z. B.
+bei Knobloch, 75080) besteht aus flexiblen
+Gliedern, die ein sauberes Mitführen eines
+Kabelbaums bei einer wiederholten linearen Bewegung in einer Richtung erlauben,
+wie beispielsweise eine bewegliche Komponente in einem Industriemodell.
+Die Kette ist eine etwas höhere Investition,
+kann dafür aber, anders als ein passgenau
+zugeschnittener Spiralschlauch, bei einem
+neuen Modell in anderer Länge wieder
+verwendet werden.
+
+
+

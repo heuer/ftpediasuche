@@ -1,0 +1,306 @@
+
+
+Einsteigermodell
+
+Bootsbau mit fischertechnik
+Michael Tilli
+Der Sommer ist da, und noch kein außentaugliches Modell ist in Sicht? Mit diesem Artikel
+wird Abhilfe geschaffen: Hier werden die Grundlagen des Schiffbaus mit fischertechnik
+gezeigt und zum Schluss ein kleines Rennboot gebaut.
+
+Schiffsrumpf
+
+Pneumatik und Hydrauliktanks
+
+Fangen wir also gleich an mit den
+verschiedenen Möglichkeiten ein ft-Schiff
+zu bauen. Und was ist das wichtigste bei
+einem Boot? Der Rumpf, logisch ohne ihn
+fährt kein Schiff.
+
+Auch eine Möglichkeit für Schwimmkörper aus fischertechnik: Man nehme
+mehrere Tanks, befestige diese aneinander
+und schließe die Anschlüsse mit Pneumatik-Stopfen, oder man verwendet kurze
+Schlauchstücke, mit denen man immer
+zwei Anschlüsse eines Tanks verbinde. Es
+besteht allerdings das Risiko, dass sich ein
+Stopfen löst und dadurch im Wasser
+verschwindet. Obendrein kann dann
+Wasser in einen Behälter eindringen (hier
+bleibt aber noch Zeit, das Boot an Land zu
+steuern).
+
+fischertechnik EPP-Rumpf
+Der einzige Schiffsrumpf von fischertechnik ist der gut 31 cm lange Rumpf aus
+expandiertem Polypropylen, kurz EPP,
+einem Kunststoff, aus dem zum Beispiel
+auch Mehrwegverpackungen hergestellt
+werden. Dieses Material wird im Modellbau besonders aufgrund seiner Stabilität
+und dem geringen Gewicht geschätzt. Der
+Rumpf war unter der Artikelnummer
+126927 in den Baukästen Basic Boats und
+Advanced Ships + More enthalten. Weder
+in den Kästen noch als Einzelteil ist der
+Rumpf heute noch über Knobloch zu
+beziehen. Die kurze Verkaufsdauer von
+2007 bis 2009 ist wohl vor allem auf die
+geringe Nachfrage aufgrund des Fehlens
+einer Motorisierung der Schiffe zurückzuführen [3, 4].
+Sortierkasten 1000
+Auch als Sofort-fertig-Rumpf lässt sich der
+Grundkasten 1000 verwenden, allerdings
+sind die daraus entstehenden Boote sehr
+groß und langsam. Er eignet sich eher für
+eine Bohrplattform oder ein Baggerschiff.
+
+Fischer Dübelboxen
+Auf der ft:community wird von Harald
+Steinhaus vorgeschlagen, diese Boxen zum
+Bau von Bootsrümpfen einzusetzen. Eventuell muss der Deckel festgeklebt werden,
+damit kein Wasser durchkommt. Der
+Vorteil dieser Boxen ist, dass sie an beiden
+Seiten zu fischertechnik kompatible Nuten
+besitzen, allerdings sind sie 5 mm zu kurz
+um exakt ins ft-Raster zu passen.
+Mir ist kein fischertechnik-Modell
+bekannt, in dem diese Boxen eingesetzt
+werden.
+Plastikflaschen
+Die Plastikflaschen sind leicht, billig,
+relativ stabil und wasserfest. Deshalb
+bilden sie gute Schwimmkörper. Gerade
+
+
+Einsteigermodell
+
+für schnell aufzubauende Boote sind sie
+ideal, allerdings muss man sie mit einem
+Gummi am Bootsaufbau befestigen und sie
+sehen nicht besonders schön aus.
+Folien und Tüten
+Hier wird zuerst das Skelett des Schiffrumpfes aus fischertechnik-Teilen gebaut.
+Dann wird entweder eine Einkaufstüte oder
+ein Müllsack aufgeschnitten und am Schiff
+entweder mit Statikriegeln oder mit Klebeband befestigt. Selbstverständlich dürfen
+keine Löcher in der Tüte vorhanden sein.
+Danach wird Klebeband von außen auf den
+Rumpf geklebt. Es verhindert ein Aufschlitzen des Rumpfes und macht ihn
+stabiler. Diese Bauweise ähnelt stark der
+Skelett- oder Spantenbauweise, die zum
+Bau von hölzernen Schiffen seit dem 8.
+Jahrhundert angewendet wird. Im fischertechnik-System sind die Vorteile dieser
+Bauweise eine hohe Flexibilität bei der
+Formgebung des Rumpfes, die Nachteile
+sind ein verhältnismäßig hohes Gewicht
+und die Gefahr, dass Wasser durch eine
+undichte Tüte eindringt.
+Styropor
+Styropor besitzt ähnliche Eigenschaften
+wie der ft-Rumpf: Es ist leicht, stabil und
+einfach zu verarbeiten. Wer eine Stichsäge
+verwenden kann, hat die Möglichkeit, aus
+Styroporplatten passgenaue und leichte
+Schwimmkörper herzustellen. Für einfache
+Modelle genügt oft auch schon ein Bastelmesser, um das Material zu schneiden.
+Vorsicht bei der Befestigung von Schrauben im Styropor, sie können herausbrechen. Deshalb empfehle ich, die Aufbauten mit Kleber oder Gummibändern zu
+befestigen. Ein weiteres Problem ist
+besonders bei grobem Styropor, dass sich
+Kügelchen ablösen und die Wohnung
+verdrecken.
+
+
+Das Schiffsmodell
+Das oben gezeigte Bild ist eine mit Google
+SketchUp erstellte Grafik des Rumpfes.
+Hinten ist der „Kiel“ etwas breiter, vorne
+wird er schmaler. Zwischen dem breiten
+Heck und dem schmalen Kiel befindet sich
+eine Trennung, die zur Stabilisierung des
+Schiffes dient und gleichzeitig den Akku
+hält. Vorne läuft der Bug spitz zu und
+bildet in etwa die übliche Schiffsform
+nach. Wenn das Boot fertig ist wird der
+Rumpf dann mit einer Plastiktüte bespannt.
+
+Antrieb
+ft-Luftschrauben 36337 und 36559
+Die Luftschrauben von fischertechnik
+können sowohl als Propeller wie bei einem
+Airboat oder auch als Schiffschraubenersatz eingesetzt werden. Ich ziehe in der
+Regel den vierflügeligen, kleineren Propeller vor, da er weniger Platz benötigt.
+Beide Propeller sind ungefähr gleich
+schnell.
+Schiffsschraube
+Für möglichst realistische Schiffsantriebe
+empfehle ich die Schraubenlösung von
+Harald, welche schon in der vorgestellt wurde [2].
+
+
+
+
+Schaufelradantrieb
+
+„Raupenlenkung“
+
+Wer ein eher langsames und dafür großes
+Schiff bauen möchte, ist mit Schaufelrädern bestens bedient. Man kann sie direkt
+an einen Power- oder XM-Motor anschließen. Für noch schönere Schaufelräder kann
+man auch das Malteser-Schaltrad verwenden.
+
+Wer schon einmal einen Bagger gesehen
+hat, weiß, dass dieser auf Ketten fährt, die
+einzeln angetrieben werden. Der Bagger
+lenkt, indem eine Kette vorwärts läuft und
+die andere rückwärts. Für ein Schiff bedeutet das, dass man zwei Motoren verwendet,
+die je eine Schraube, ein Schaufelrad, oder
+einen Propeller antreiben. Praktischerweise
+kann man beim IR Control Set direkt eine
+Raupenfunktion auswählen: Drückt man
+„M1 “, drehen sich beide Motoren in die
+gleiche Richtung und das Schiff fährt
+vorwärts. Bei „M1 “ fährt das Schiff
+rückwärts. Beim Lenken mit „M2 “ und
+„M2 “ dreht jeweils ein Motor vorwärts,
+der andere rückwärts. Es dreht immer der
+Motor in Lenkrichtung rückwärts.
+
+
+Lenkung
+Gut, wir haben jetzt einen Rumpf, und wir
+haben die verschiedenen Antriebe kennen
+gelernt. Aber wie lenkt man das Schiff? Es
+bietet sich an, entweder ein großes Ruder
+zu verwenden, oder man kombiniert
+Lenkung und Antrieb.
+
+
+
+
+Einsteigermodell
+
+Antrieb drehen
+
+Kleine Extras
+
+Eine Möglichkeit, mit nur einem Antriebsmotor zu lenken ist die Schraube oder den
+Propeller zu drehen.
+
+Für fischertechnik-Fans mit mehr Bauteilen oder dem Wunsch, dem Boot noch
+mehr „Leben“ einzuhauchen, habe ich mir
+einige kleine Zusatzfunktionen und Verschönerungen überlegt.
+Sound and Lights-Modul
+
+
+Mit dem Sound and Lights-Modul kannst
+du dafür sorgen, dass das Boot Geräusche
+macht. Besonders interessant ist für uns die
+Möglichkeit, dass beim nach rechts Fahren
+der Ruf „Hart Steuerbord“ und beim nach
+links drehen „Hart Backbord“ ertönt. Wie
+man diese Funktion erreicht musst du
+schon selber herausfinden, ich sage dir nur,
+dass du höchstwahrscheinlich eine eigene
+Schaltung benötigst. Zusätzlich kann man
+auch den Betrieb mindestens eines
+Antriebsmotors mit einem lauten Brummen verbinden.
+Positionslichter
+
+
+Der fertige Motorblock wird in den Rumpf
+geschoben. Anschließend wird der Propellermotor mit der Drehscheibe aufgesteckt.
+
+Positionslichter zeigen anderen Schiffen
+an, wo das eigene Schiff liegt. Dazu besitzt
+das Boot ein weiße Rundum-Leuchte,
+rechts eine grüne Lampe und links eine
+rote. Die Positionslichter müssen von
+Sonnenuntergang
+bis
+Sonnenaufgang
+eingeschaltet sein [1].
+Schiffssirene
+Mit einem Summer, der an den ungenutzten Motorausgang M3 angeschlossen wird,
+erhält man ein lautes Schiffshorn.
+
+Schaltpläne
+
+
+In den folgenden Schaltbildern werden die
+schwarzen Bauteile zwingend gebraucht;
+die grauen zeigen die Möglichkeiten zum
+weiteren Ausbau des Schiffes. Die roten
+und grünen Linien symbolisieren natürlich
+die Kabel, wobei beim IR-Empfänger und
+dem Summer auf die Polung zu achten ist.
+
+
+
+
+Bei der Schiffsversion mit zwei Motoren
+wird beim IR Control Set die eingebaute
+Raupenfunktion genutzt. Beim neueren
+Control Set steuert man mit beiden Steuerknüppeln.
+
+Hinweise
+
+Schaltung 1: Modell mit Drehlenkung
+
+Beim Modell mit drehbarer Lenkung empfehle ich, den Servotaster zu verwenden,
+um einen besseren Geradeauslauf zu
+gewährleisten. Damit das Steuer beim alten
+IR Control Set nicht herumschlägt, muss
+man in der Regel den Geschwindigkeitsknopf für M2 drücken. Verwendet man das
+neue Control-Set, ist es leider nicht mehr
+möglich, auf diese Art einen Servo zu
+bauen. Deshalb sollte man hier einfach den
+Lenkhebel nur vorsichtig betätigen.
+
+Schaltung 2: Raupensteuerung
+
+
+Das hier gebaute Boot solltest du nur in der
+Badewanne oder in strömungsfreien
+Gewässern fahren lassen, und nach
+Möglichkeit auch so, dass du das Boot
+jederzeit wieder herausholen kannst, falls
+Batterie oder Fernbedienung ausfallen oder
+Wasser durch die Plane kommt. Wenn die
+Tüte, die den Rumpf bildet, beschädigt
+wird, musst du eine neue verwenden, da
+man Löcher darin nur sehr schlecht wieder
+schließen kann.
+
+Literatur und Ideen
+[1]
+
+Weitere Informationen zu den
+Positionslichtern:
+http://www.segelnwissen.de/segelwissen/seezeichen/po
+sitionslichter.html
+
+[2]
+
+Vorschlag zum Nachbauen, der
+Speedantrieb von Harald:
+http://www.ftcommunity.de/categori
+es.php?cat_id=2253
+
+[3]
+
+Designtechnisch sehr gelungenes
+Schaufelradboot von schnaggels:
+http://www.ftcommunity.de/details.p
+hp?image_id=11165
+
+[4]
+
+Ein Feuerlöschboot, ebenfalls von
+Schnaggels:
+http://www.ftcommunity.de/details.p
+hp?image_id=33007
+
+
+Einsteigermodell
+
+
+

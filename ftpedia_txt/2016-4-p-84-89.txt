@@ -1,0 +1,518 @@
+
+
+Computing
+
+I²C mit dem TX(T) – Teil 14: LED-Display (2)
+Dirk Fox
+In einem der ersten Beiträge der I²C-Serie habe ich Ende 2012 die Ansteuerung des I²C-LEDDisplays SAA1064 von Philips vorgestellt. Inzwischen gibt es zahlreiche attraktive Alternativen
+zu diesem LED-Modul – schneller (Fast Mode), günstiger, in verschiedenen Farben und weit
+einfacher anzusteuern. Eines dieser Module und den passenden ROBO Pro-Treiber stelle ich
+hier vor.
+
+Das Sparkfun-Display
+Von Sparkfun gibt es seit 2011 ein vierstelliges LED-Display, das in der aktuellen
+Version auch über eine I²C-Schnittstelle
+verfügt (Abb. 1). Es ist in fünf verschiedenen Farben (blau, gelb, rot, weiß und grün)
+für die Hälfte des Preises des in 4/2012 [1] vorgestellten Philips-Displays
+SAA1064 z. B. bei EXP für 14,25 € erhältlich.
+
+Boards vermieden und zahlreiche Displays für unterschiedliche Anzeigen
+gleichzeitig angesteuert werden können,
+∂ es unterstützt den I²C Fast Mode (400
+kHz),
+∂ es verfügt über zusätzliche Dezimalpunkte und Trennzeichen und über eine
+deutlich einfachere Ansteuerung.
+Schließlich beherrscht es auch das SPIProtokoll und die direkte Ansteuerung über
+ein serielles RX/TX-Protokoll.
+
+Die Hardware
+
+
+Das Display ist mit etwa 1,5 x 4 cm etwas
+kleiner als das von Conrad angebotene
+Philips-Display. Allerdings besitzt es eine
+Reihe praktischer Vorzüge:
+∂ es kann sowohl am TX als auch am TXT
+betrieben werden,
+∂ es hat einen signifikant geringeren
+Stromverbrauch,
+∂ es können via Software 126 verschiedene I2C-Adressen eingestellt werden,
+sodass Kollisionen mit anderen I²C84
+
+Das Sparkfun-Display ist eine vierstellige
+7-Segment-Anzeige, die mit 2,4-5,5 V
+betrieben werden kann. Der Stromverbrauch liegt bei einer Betriebsspannung von
+5 V mit maximal 14,1 mA bei einem
+Dreißigstel des Verbrauchs des PhilipsModuls; bei einer Betriebsspannung von
+3,3 V liegt er maximal bei 7,9 mA.
+Vorkonfiguriert ist die I²C-Adresse 0x71;
+per I²C-Kommando können 126 verschiedene Adressen eingestellt und damit ebenso
+viele Devices ohne Multiplexer auf
+demselben I²C-Bus unabhängig von einander genutzt werden.
+Der ATMega328 (Abb. 2) bietet einen umfangreichen Befehlssatz, mit dem das Display auch befehlskompatibel zum Philips
+
+SAA1064 angesteuert werden kann. Effizienter ist es allerdings, die optimierten
+Befehle des Sparkfun-Displays zu verwenden.
+
+Computing
+
+später nicht alle Adressen durchprobieren,
+muss man sie notieren.
+
+Befehle
+Die Ansteuerung des Moduls ist sehr
+einfach. Will man vier Zeichen ausgeben,
+werden einfach diese vier Zeichen via I²CBefehl an das Modul geschickt.
+
+
+Die I²C-Anschlüsse des Moduls sind
+gedoppelt und so angeordnet, dass sich
+mehrere Module sehr elegant in Reihe
+schalten lassen – einfach die rechten
+Anschlüsse des einen Moduls (+/- bzw.
+SDA/SCL) mit den linken des nächsten via
+Jumper verbinden. Für den Anschluss an
+den TX empfiehlt sich die Verwendung des
+in ft:pedia 4/2013 vorgestellten „UniversalAdapters“ [2].
+Über vier Bohrungen lassen sich die
+Module gut befestigen. Die wunderbare
+Alternative mit selbst „gecutteten“ fischertechnik-kompatiblen Plexiglas-Fenstern in
+
+
+Die Farbe des Moduls kann man im
+ausgeschalteten Zustand an einem farbigen
+Punkt an der Seite der Segmentanzeige
+erkennen. Aufpassen muss man allerdings,
+wenn man die I²C-Adresse ändert: Will man
+
+Zu den darstellbaren Zeichen gehören neben den Ziffern 0-9 zunächst die sechs
+Buchstaben, die für die Wiedergabe von
+Hexadezimalzahlen (A-F) benötigt werden.
+Aber auch einige Groß- und Kleinbuchstaben lassen sich mit dem Display
+darstellen.
+Dabei können wahlweise die Werte (Ziffern), ASCII-Codes oder „ähnliche“ Buchstaben (wie „O“ = „0“ oder „I“ = „1“) an das
+Modul übermittelt werden. Tabelle 1 gibt
+eine Übersicht der unterstützten Zeichen
+und der zugehörigen Befehlsbytes.
+Zeichen
+
+Befehlsbyte
+
+0=O
+
+0x00, 0x30 („0“), 0x4F („O“)
+
+1=I=l
+
+0x01, 0x31 („1“), 0x49 („I“),
+0x6C („l“)
+
+
+0x02, 0x32 („2“)
+
+
+0x03, 0x33 („3“)
+
+
+0x04, 0x34 („4“)
+
+5=S
+
+0x05, 0x35 („5“), 0x53 („S“),
+0x73 („s“)
+
+
+0x06, 0x36 („6“)
+
+
+0x07, 0x37 („7“)
+
+
+0x08, 0x38 („8“)
+
+
+0x09, 0x39 („9“)
+
+A
+
+0x10, 0x41 („A“), 0x61 („a“)
+
+B
+
+0x11, 0x42 („B“), 0x62 („b“)
+
+C
+
+0x12, 0x28 („(“), 0x43 („C“),
+0x5B („[“)
+
+c
+
+0x63 („c“)
+
+D
+
+0x13, 0x44 („D“), 0x46 („d“)
+
+E
+
+0x14, 0x45 („E“)
+
+e
+
+0x65 („e“)
+
+
+
+
+Zeichen
+
+Befehlsbyte
+
+Wert
+
+Kommando
+
+Parameter
+
+F
+
+0x15, 0x46 („F“), 0x66 („f“)
+
+0x7C
+
+Single Char 2
+
+0x00-0x7F
+
+G
+
+0x47 („G“), 0x67 („g“)
+
+0x7D
+
+Single Char 3
+
+0x00-0x7F
+
+H
+
+0x48 („H“)
+
+0x7E
+
+Single Char 4
+
+0x00-0x7F
+
+h
+
+0x68 („h“)
+
+0x7F
+
+Baud Rate
+
+0x00-0x0B
+
+J
+
+0x4A („J“), 0x6A („j“)
+
+0x80
+
+Set I²C Address
+
+0x01-0x7E
+
+L
+
+0x4C („L“)
+
+0x81
+
+Factory Reset
+
+-
+
+n
+
+0x4E („N“), 0x6E („n“)
+
+o
+
+0x6F („o“)
+
+Clear Display
+
+P
+
+0x50 („P“), 0x70 („p“)
+
+q
+
+0x51 („Q“), 0x71 („q“)
+
+r
+
+0x52 („R“), 0x72 („r“)
+
+Der Befehl 0x76 löscht das Display und
+setzt den Positions-Zähler auf 0 (Zeichen
+ganz links).
+
+t
+
+0x54 („T“), 0x74 („t“)
+
+U
+
+0x55 („U“), 0x75 („u“)
+
+Y
+
+0x59 („Y“)
+
+-
+
+0x2D („-“)
+
+“
+
+0x22 („““)
+
+’
+
+0x27 („’“)
+
+_
+
+0x5F („_“)
+
+Tab. 2: Sonderbefehle
+
+Decimal Points
+Anders als bei Philips’ SAA1064 werden
+die Dezimalpunkte unabhängig von den
+ausgegebenen Zeichen gesetzt. Daher sind
+mehr als vier Dezimalpunkte möglich: So
+bietet das Display auch einen Doppelpunkt
+nach den ersten beiden Ziffern und ein
+Apostroph hinter der dritten Ziffer.
+
+0x78
+
+Tab. 1: Darstellbare Zeichen
+
+Das Kommando 0x78 (letzte Zeile in Tab.
+1) gibt ein Leerzeichen aus.
+Diese Zeichenkommandos werden immer
+in Vier-Byte-Paketen an das Display geschickt und werden von links nach rechts
+auf den vier Sieben-Segment-Anzeigen
+dargestellt.
+
+(Quelle: Sparkfun @ Github [3])
+
+Wert
+
+Kommando
+
+Parameter
+
+Angesteuert werden die fünf Punkte durch
+ein einfaches Bitmuster: Die Dezimalpunkte werden in den Bits 0 bis 3 (links
+nach rechts) gesetzt, der Doppelpunkt in Bit
+4 und das Apostroph in Bit 5 (Abb. 4). Zum
+Setzen bzw. Löschen der Punkte wird das
+Kommando 0x77 gefolgt vom BitmusterByte an das Modul gesendet.
+
+0x76
+
+Clear Display
+
+-
+
+Move Cursor
+
+0x77
+
+Decimal Points
+
+0x00-0x3F
+
+0x79
+
+Move Cursor
+
+{0, 1, 2, 3}
+
+0x7A
+
+Brightness
+
+{0, …, 255}
+
+Der Befehl 0x79 gefolgt von einem Bytewert aus {0, 1, 2, 3} setzt den Positionszähler auf eines der vier Sieben-SegmentAnzeigen 0 bis 3.
+
+0x7B
+
+Single Char 1
+
+0x00-0x7F
+
+Neben diesen Zeichenkommandos gibt es
+11 Sonderbefehle, die aus einem Ein-ByteKommando bestehen, meist gefolgt von
+einem Ein-Byte-Parameter. Eine Übersicht
+dieser Sonderbefehle zeigt Tabelle 2.
+
+
+Brightness
+Die Helligkeit des Displays wird mit dem
+Kommando 0x7A eingestellt, gefolgt von
+einem Byte-Wert von 0 (dunkel) bis 255
+(maximale Helligkeit). Der aktuelle Helligkeitswert wird im nichtflüchtigen Speicher
+des Displays abgelegt und bleibt daher auch
+nach dem Ausschalten der Stromversorgung erhalten.
+Bei den Helligkeitswerten 117 und 118
+(0x76 und 0x77) gibt es offenbar einen
+Firmware-Bug: das Display wird ganz oder
+teilweise ausgeschaltet, da das Datenbyte
+offenbar als Befehlsbyte interpretiert wird.
+Diese beiden Helligkeitswerte sollte der
+Treiber daher nicht an das Display weitergeben.
+Single Char
+Mit den Kommandos 0x7B, 0x7C, 0x7D
+und 0x7E können die LED-Segmente einer
+Anzeige – wie bei Philips’ SAA1064 –
+einzeln gesetzt werden.
+Dazu wird ein 7-Bit-Wert, der die sieben
+Segmente der Anzeige einzeln ein- bzw.
+ausschaltet, an das erste, zweite, dritte bzw.
+vierte LED-Anzeigemodul gesendet. Die
+Nummerierung der Segmente (Abb. 5)
+entspricht der des SAA1064. Alle vier
+Kommandos haben keine Auswirkung auf
+den Positionszähler.
+
+Computing
+
+Anzeige betroffen – und es kommt beim
+nächsten Befehl nicht zu einem ‚Versatz’
+der Anzeige um eine oder mehrere Stellen
+(der
+sich
+allerdings
+durch
+die
+Positionierung mit dem Move CursorKommando begrenzen lässt).
+Set I²C Address
+Die I²C-Adresse des Moduls kann man mit
+dem Befehl 0x80, gefolgt von der neuen 7Bit-Adresse (0x01 bis 0x7E) ändern.
+Achtung: Die neue Adresse unbedingt
+notieren, da es sonst nur die Möglichkeit
+gibt, an den gesamten Adressraum einen
+Factory Reset-Befehl (siehe folgender Absatz) zu senden und damit die Adresse auf
+0x71 zurück zu setzen.
+Factory Reset
+Der Befehl 0x81 setzt das Modul auf die
+Fabrikeinstellungen wie die ursprüngliche
+I²C-Adresse 0x71 und die maximale Display-Helligkeit zurück. Dabei erfolgt keine
+Löschung des Displays oder eine Zurücksetzung des Positionszählers.
+
+RoboPro-Treiber
+Von Georg Stiegler gibt es eine Sammlung
+von Robo Pro-Treibern für das SparkfunLED-Display im Downloadbereich der ft:c.
+Darunter ist auch ein kleines Programm, das
+eine neue I²C-Adresse setzt – sowie eines,
+das bei der Suche nach einer vergessenen
+Adresse hilft, sprich: alle zulässigen
+Adressen (bis auf die des TX-EEPROMs)
+ausprobiert.
+Der folgende, ebenfalls im Downloadbereich der ft-Community-Webseite zu findende ROBO Pro-Treiber LED-S7SD enthält einige Zusatzfunktionen, die die Nutzung des Displays für unterschiedliche Anwendungszwecke erleichtern:
+
+(Quelle: Sparkfun @ Github [3])
+
+Vorteil dieser Ansteuerung: Kommt es zu
+einem Übertragungsfehler, ist lediglich eine
+
+∂ Die Funktion S7SD_Init löscht das
+Display und setzt den Positionszähler
+zurück (auf die linke Ziffer).
+∂ S7SD_MoveCurser setzt den DisplayZeiger (Position 0-3).
+
+
+
+∂ Die Display-Helligkeit setzt man mit der
+Funktion S7SD_SetBrightness (0-255).
+∂ Die vier 7-Segment-Anzeigen lassen
+sich mit den Kommandos S7SD_SetChar1 bis S7SD_SetChar1 einzeln setzen. Dabei muss die korrekte Segmentkodierung übergeben werden. Für
+Zahlenwerte von 0-9 übernimmt das das
+Makro BCD2LED.
+∂ Die Dezimalpunkte, der Apostroph und
+der Doppelpunkt werden mit dem
+Kommando S7SD_SetDots aktiviert.
+∂ Die Funktion S7SD_DisplayChar gibt
+ein einzelnes Zeichen an einer ausgewählten Position aus. Übergeben wird
+eine Ziffer oder ein (gültiger) ASCIICode.
+
+∂ Die Funktion S7SD_DisplayDate gibt
+eine BCD-kodierte Datumsangabe (Tag,
+Monat) mit Punkten auf dem Display
+aus.
+∂ Die Funktion S7SD_DisplayYear gibt
+eine BCD-kodierte Jahreszahl (nur die
+beiden letzten Ziffern) auf dem Display
+aus.
+Das Anzeigeprogramm wird damit sehr
+elegant und kurz (Abb. 6). In den Unterprogrammen sind lediglich die I²C-Adressen der drei Module anzupassen, da die I²CAdresse in ROBO Pro leider nicht als Parameter übergeben werden kann.
+
+∂ Die Funktion S7SD_DisplayHex gibt
+einen Integer-Wert als vierstellige
+Hexadezimalzahl auf dem Display aus.
+∂ Die Funktion S7SD_DisplayDezimal
+gibt eine Dezimalzahl zwischen -1.000
+und 10.000 mit bis zu drei Nachkommastellen aus.
+∂ Die I²C-Adresse kann man mit dem
+Befehl S7SD_SetI2CAddress auf eine
+Adresse von 0x70 bis 0x77 ändern – acht
+Adressen sollten in der Praxis genügen,
+und die Beschränkung erleichtert dem
+Reset-Befehl die Arbeit (s. u.).
+∂ Mit S7SD_Reset wird das Display zurückgesetzt; damit werden alle angeschlossenen Displays mit den Adressen
+0x70 bis 0x77 auf die initiale I²C-Adresse 0x71 konfiguriert.
+Die drei folgenden Funktionen erleichtern
+die Ausgabe einer BCD-kodierten Datumsund Zeitangabe, bspw. von einer Echtzeituhr [2], auf dem Display:
+∂ Die Funktion S7SD_DisplayTime gibt
+eine BCD-kodierte Zeitangabe (Minuten, Sekunden) mit Doppelpunkt auf
+dem Display aus.
+
+
+von Datum und Uhrzeit
+
+Referenzen
+[1]
+
+Dirk Fox: I²C mit dem TX – Teil 2:
+LED-Display. ft:pedia 4/2012, S. 3237.
+
+[2]
+
+Dirk Fox: I²C mit dem TX – Teil 7:
+Real Time Clock (RTC). 4/2013, S. 28-34.
+
+[3]
+
+Sparkfun: Serial 7 Segment Display
+Datasheet. Github.
+
+[4]
+
+Sparkfun: Serial 7 Segment Display
+Datasheet. 17.05.2010.
+
+Abb. 7: Zeit- und Datumsanzeige mit drei 7-Segment-Displays (Sparkfun; Fenster von Georg Stiegler)
+
+Computing
+
+
+

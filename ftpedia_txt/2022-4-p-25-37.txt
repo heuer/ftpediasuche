@@ -1,0 +1,596 @@
+
+Mechanik
+
+Mechanik
+
+Logikgatter – elektronisch und mechanisch
+Arnoud van Delden
+Die logischen UND- und ODER-Gatter sind wahre „Pioniere“ der digitalen Logik: Schließlich
+bildet die „Hardware-Programmierung“ mit Kabeln und Verbindungen immer noch die
+Grundlage aller Steuerungen, die heute zunehmend in Software verwirklicht werden können.
+Der Beitrag erläutert die logischen Funktionen und elektronischen Grundlagen der beiden
+fischertechnik-„Silberlinge“ mit logischen Gattern. Ihre Funktionalität ist mathematisch
+austauschbar, was mit mechanischen Äquivalenten der Gatter demonstriert wird.
+
+Hintergrund
+Logikgatter sind die Grundlage der digitalen Elektronik. Sie haben einen oder mehrere Eingänge und einen Ausgang, dessen
+logischer Signalpegel durch die Funktion
+des Gatters bestimmt wird. Die logischen
+Funktionen AND (UND), OR (ODER) und
+die Negations- bzw. NOT (NICHT) Funktion (das logische Gegenteil des Steuersignals) bilden die Grundfunktionen der sogenannten Booleschen Algebra. Jede erdenkliche komplexere Logikfunktion lässt
+sich aus einer Kombination mehrerer dieser
+drei Grundfunktionen zunächst einmal
+mechanisch, dann auch elektromechanisch
+und schließlich elektronisch (und vielleicht
+in naher Zukunft noch schneller, nämlich
+auf optischem Weg) realisieren.
+Um diese Logikfunktionen mit Elektronik
+zu implementieren, wurden zunächst Relais
+und später Vakuumröhren verwendet. Als
+die Massenproduktion von Halbleitern
+möglich wurde, übernahmen Dioden die
+Funktion der Vakuumröhren und die Logik
+konnte mit der sogenannten „Diodenlogik“
+(DL) elektronisch realisiert werden. In den
+frühen 1960er Jahren wurde diese Methodik
+zur „Diode-Transistor-Logik“ (DTL) verfeinert, bei der die Diodeneingänge durch
+eine Transistorschaltung elektronisch ge-
+
+puffert wurden [1]. Das reduzierte die Störanfälligkeit, verstärkte das Ausgangssignal
+und machte es einfacher, das oft sehr nützliche invertierte Funktionsergebnis (die
+Negation oder ‚NOT‘-Funktion) am Ausgang zur Verfügung zu stellen.
+
+Silberlinge mit negativer Logik
+Die fischertechnik-Silberlinge wurden mit
+diskreten elektronischen Bauteilen in Diode-Transistor-Logik aufgebaut. Im Schaltplan fallen sofort die Dioden an den Eingängen auf (Abb. 2).
+
+h4AN-Silberling (30817)
+
+Einfache Widerstände, Dioden und Transistoren wurden verwendet, um die logische
+
+
+
+Ausgangsfunktion elektronisch aufzubauen. Für die Silberlinge wurde die sogenannte ‚negative Logik’ gewählt, bei der ein
+logisches ‚1‘- (oder ‚aktives‘) Signal einem
+Signalpegel von 0 Volt entspricht und die
+Versorgungsspannung von 10 Volt einem
+logischen ‚0‘- (bzw. ‚inaktiv‘) Signal. Das
+Ausgangssignal eines Silberlings ist also
+‚0‘, wenn am Ausgang (etwa) die Versorgungsspannung anliegt, und ‚1‘ (bzw.
+‚aktiv‘), wenn diese Spannung sich 0 Volt
+nähert.
+Die Wahl zwischen positiver oder negativer
+Logik ist im Prinzip beliebig [2]. Zwar wird
+heute hauptsächlich positive Logik verwendet, bei der die Signalpegel genau umgekehrt sind. Beim Anschließen von Sensoren
+an einen Mikrocontroller wird jedoch
+manchmal noch negative Logik verwendet,
+denn dies ermöglicht, nach dem Einschalten
+der Steuerung einen möglichen Drahtbruch
+in Sensorleitungen zu erkennen. Da dies
+aber bei den Silberlingen nicht von Bedeutung ist, konnte ich auf die Frage eines
+Clubmitglieds, warum sich fischertechnik
+damals bei den Silberlingen für negative
+Logik entschieden hat, nicht gleich antworten.
+Als ich etwas später darüber nachdachte,
+vermutete ich zunächst, dass die möglicherweise reduzierte Störempfindlichkeit ein
+Grund gewesen sein könnte. Damit sind
+Signale weniger empfindlich gegenüber
+Funkenrauschen von beispielsweise einem
+Motor, der an dieselbe Stromquelle angeschlossen ist.
+Aber nachdem ich für diesen Beitrag recherchiert habe, glaube ich, den wahren
+Grund für die Wahl gefunden zu haben: Bei
+den Experimenten in den Hobby-Bänden ist
+die OR-Funktion oft sinnvoller als die
+AND-Funktion und kann bei Verwendung
+negativer Logik einfach durch direkte
+
+
+
+Siehe Erklärung „Verdrahtetes ODER“ auf Seite
+25 von hobby4, Band 4 [3].
+
+Verdrahtung der Ausgänge erreicht werden,
+ohne dass zusätzliche Gatter-Silberlinge
+gekauft werden müssen. Die Ausgänge der
+Silberlinge verfügen zu diesem Zweck über
+einen sogenannten ‚Open Collector‘-Ausgang, der es ermöglicht, Ausgänge miteinander zu verbinden. 3
+
+Logikfunktion OR (ODER)
+Betrachtet man den Originalschaltplan des
+h4ON-Elektronik-Bausteins (30818), so
+sieht man, dass die eigentliche Logikfunktion direkt am Eingang mit nur wenigen
+Bauteilen als verdrahtete Logikverbindung
+realisiert wird. Elektronisch ist dieses Prinzip als „Dioden-Logik“ bekannt. So wurde
+eine sogenannte „verdrahtete Logikverbindung“ geschaffen [4]. Wenn wir die nachträgliche Verstärkung mit Transistor(en)
+des Signals aus dem Diagramm weglassen,
+erhalten wir das Prinzipschaltbild in Abb. 2.
+
+
+Der originale h4ON-Elektronik-Baustein
+hat vier Eingänge: A, B, C und D. Diese
+müssen nicht alle gleichzeitig angeschlossen und verwendet werden. Es ist sogar
+möglich, das Modul als Puffer oder Inverter
+(Ausgang 𝑍𝑁𝑂𝑅 ) mit nur einem angeschlossenen Eingang zu verwenden. Die Anzahl
+der Eingänge wird im Wesentlichen durch
+die Anzahl der Dioden bestimmt, die am
+Knoten zusammenlaufen.
+
+In Hobby4, Band 4, Seite 33 wird erklärt,
+wie auf Wunsch noch mehr Eingänge nach
+diesem Prinzip erstellt werden können. Um
+die logischen Funktionen zu studieren,
+genügt es in diesem Beitrag, sich auf nur
+zwei Eingänge A und B zu beschränken [3].
+In Formeln der digitalen Elektronik verwendet die OR-Funktion häufig das Symbol
++, aber in der Booleschen Algebra ist das
+Symbol für diese Funktion ∨, auch als
+„Disjunktion“ bekannt. Dies ist auch das
+Symbol, das wir in den Hobby4-Bänden
+finden. Die Funktion der Schaltung kann als
+Formel geschrieben werden:
+𝑍𝑂𝑅 = 𝐴 ⋁ 𝐵
+Ein Beispiel für die logische Disjunktion
+oder OR-Funktion im Alltag könnte sein:
+𝐴 = Ich habe ein Fahrrad
+𝐵 = Ich habe ein Auto
+𝑍𝑂𝑅 = Ich kann zur Arbeit fahren
+Die OR-Funktion beschreibt in diesem Fall
+„Ich kann zur Arbeit fahren, wenn ich ein
+Auto oder ein Fahrrad habe“. In Tabelle 1
+sind alle Möglichkeiten und Ergebnisse in
+einer sogenannten Wahrheitstabelle zusammengefasst. Das entgegengesetzte oder
+komplementäre Ausgangssignal von „kann
+fahren“ könnten wir „nur laufen“ nennen.
+Die Tabelle mit den Ein- und Ausgabemöglichkeiten ist in Tab. 1 dargestellt.
+
+Tab. 1: Wahrheitstabelle
+
+Wenn wir diese Fallstudie auf die logischen
+Werte ‚1‘ (aktiv oder wahr) und ‚0‘ (inaktiv
+oder falsch) abstrahieren und sofort Spalten
+für alle komplementären Werte (mit einem
+Streifen darüber markiert) einschließen,
+ergibt Tab. 2 die Wahrheitstabelle dieser
+OR-Funktion.
+
+Mechanik
+
+Tab. 2: Wahrheitstabelle der OR-Funktion
+
+Diese nützliche Funktion lässt sich also
+elektrisch mit nur wenigen Dioden und
+einem Widerstand realisieren. Mal sehen,
+was genau elektronisch passiert.
+Im Ruhezustand ist der Ausgang 𝑍𝑂𝑅 dieser
+Silberling-Schaltung fast die Versorgungsspannung, also nach dem Prinzip der
+negativen Logik ein ‚0‘ (inaktives) Signal.
+Das Signallämpchen im Modul ist aus.
+Wenn einer der Eingänge nach dem Prinzip
+der negativen Logik eine ‚1‘ (aktiv) führt,
+bedeutet dies, dass dieser Eingang auf den
+Minuspol geschaltet ist. Dadurch kann
+durch die betreffende Diode ein Strom fließen, wodurch der Spannungspegel am Ausgang 𝑍𝑂𝑅 sinkt. Dies zählt als logisch ‚1‘
+(aktiv) und das Signallämpchen leuchtet
+auf. Auf diese Weise lässt sich mit wenigen
+Dioden und einem sogenannten Pull-upWiderstand eine logische OR-Funktion
+realisieren.
+Die ODER-Funktion – mechanisch
+Lange bevor dies elektronisch möglich wurde, wurden bereits mechanische Konstruktionen hergestellt, um bestimmte logische
+Funktionen auszuführen. Wie wir den
+Zusammenhang zwischen den Ein- und
+Ausgängen technisch realisieren, ist wie bei
+allen Logikfunktionen prinzipiell unabhängig von der letztendlich realisierten Logikfunktion. Das Innenleben ist trivial, solange
+alle möglichen Kombinationen der Eingangssignale gemäß der „programmierten“
+Logikfunktion ein eindeutiges Ausgangssignal ergeben.
+Eine rein mechanische OR-Funktionsverknüpfung lässt sich mit fischertechnik einfach konstruieren. Abb. 3 zeigt ein kompaktes Modell, das auf einer kleinen Bauplatte
+
+
+
+
+aufgebaut ist. Bei einer solchen mechanischen Variante sind natürlich keine elektrischen Spannungspegel für die logischen
+‚1‘- und ‚0‘-Werte definiert.
+
+graue Statik verwendet (Abb. 4). Aus den
+Schritten in Abb. 4 des größeren Modells ist
+ersichtlich, dass die Ausgabe (𝑍𝑂𝑅 ) für Eingabewerte ‚0‘ oder ‚1‘ der Eingangssignale
+(𝐴 und 𝐵) die Wahrheitstabelle 2 der ORFunktion genau befolgt.
+
+Logikfunktion AND (UND)
+
+
+Die „Positionen“ der Schieber auf der Eingangsseite (links) bestimmen die Position
+des Zeigers auf der Ausgangsseite (rechts)
+des Mechanismus.
+Zur Verdeutlichung habe ich das Modell
+vergrößert und für die verschiebbaren Teile
+
+Kommen wir nach diesem „mechanischen
+Ausflug“ zurück zur Elektronik im Silberling. Mit der für das OR-Gatter eingangs
+beschriebenen ‚Diodenlogik‘ lässt sich die
+logische Funktion der Schaltung relativ einfach verändern. Abb. 5 zeigt das Prinzipschaltbild.
+Im Elektronik-Baustein h4AN (30817) wurde die Richtung der Dioden und die Funktion des Widerstands am Eingang von ‚pullup‘ auf ‚pull-down‘ umgestellt. Dadurch
+wurde aus der oben beschriebenen ORFunktion eine AND-Funktion, auch „Konjunktion“ genannt.
+
+
+
+Elektronik
+
+Elektronik-Bausteins. Dieses Phänomen
+verschwindet von selbst, sobald mindestens
+ein Eingang mit dem Ausgang eines anderen Moduls verbunden wird. Wer nur
+Schalter für den Eingang bzw. die Eingänge
+verwendet, muss darauf achten, dass mindestens einer dieser Schalter, wenn nicht
+logisch ‚1‘, tatsächlich auf logisch ‚0‘ (10
+Volt) verdrahtet ist.
+
+(Negative Logik)
+
+Formeln für digitale Elektronik verwenden
+oft einen (dicken) Punkt für die AND-Funktion, aber in der Booleschen Algebra ist ∧
+das Symbol für die AND-Funktion. Die
+Funktion der Schaltung lässt sich damit als
+Formel schreiben:
+𝑍𝐴𝑁𝐷 = 𝐴 ⋀ 𝐵
+Mit der von fischertechnik in den Silberlingen verwendeten negativen Logik können wir die AND-Funktion logisch so
+beschreiben: Der Ausgang darf nur dann ‚1‘
+sein (einen Spannungspegel von 0 Volt
+haben), wenn mindestens einer der Eingänge nicht explizit ‚0‘ (10 Volt) ist. Da der
+Ausgang intern durch den Pull-DownWiderstand auf ein niedriges Potential, also
+logisch ‚1‘ gezogen wird, werden nicht
+angeschlossene Eingänge bereits als ‚1‘
+gesehen: Sie ziehen das Ausgangspotential
+nicht aktiv auf 10 Volt (die ‚0‘). Das ist
+schön, denn dann funktioniert die ANDFunktion auch mit ungenutzten ‚offenen‘
+Eingängen korrekt (also auch, wenn wir nur
+zwei oder drei Eingänge brauchen). Es ist
+daher sogar möglich, nur einen Eingang zu
+verwenden und das Modul als Inverter am
+Ausgang 𝑍𝑁𝐴𝑁𝐷 (𝑍𝐴𝑁𝐷 ) einzusetzen, genau
+so, wie es beim OR-Silberling möglich ist.
+Eine mit Diodenlogik erstellte AND-Funktion gibt am Ausgang eine logische „1“ aus,
+wenn keiner der Eingänge verbunden ist.
+Ohne angeschlossenen Eingang leuchtet
+daher bereits das Signallämpchen des h4AN
+
+OR/AND-Silberling
+
+Wie bereits in der ft:pedia beschrieben [5],
+ermöglichten diese geringfügigen physikalischen Änderungen, den h4ON- und den
+h4AN-Elektronik-Baustein auf denselben
+Leiterplatten aufzubauen. Der Widerstand
+am Eingang wurde einfach eingelötet, entweder als Pull-up-Widerstand zur Versorgungsspannung oder als Pull-down-Widerstand zum Minuspol bzw. „Masse“. Aufgrund dieser geringfügigen Unterschiede ist
+eine schaltbare Variante, wie sie in Abb. 6
+dargestellt ist, beim Eigenbau dieser
+Module daher fast schon naheliegend [6].
+Ein Beispiel für die AND-Funktion im Alltag könnte sein:
+
+
+𝐴 = Ich habe ein Fahrrad
+𝐵 = Ich habe ein Auto
+𝑍𝐴𝑁𝐷 = Ich kann wählen, wie ich
+fahren möchte
+Die AND-Funktion beschreibt in diesem
+Fall „Ich kann mir aussuchen, was ich fahre,
+weil ich ein Auto und ein Fahrrad habe“. Es
+ist möglich, alle Möglichkeiten und Ergebnisse in eine Wahrheitstabelle einzutragen.
+Das entgegengesetzte oder komplementäre
+Ausgangssignal von „kann wählen“ könnten wir „keine Wahl“ nennen. Tab. 3 zeigt
+die Wahrheitstabelle mit den Möglichkeiten
+für die Ein- und Ausgangssignale.
+
+kleiner ist als der Bewegungshub der einzelnen Eingangssignale.
+Aufbau einer mechanischen AND-Funktion. Wer sich eingehender damit beschäftigt, dem fallen sicher noch andere Lösungen ein.
+
+
+Tab. 3: Wahrheitstabelle
+
+Wenn wir die Fälle auf die logischen Werte
+‚1‘ (aktiv oder wahr) und ‚0‘ (inaktiv oder
+falsch) abstrahieren und Spalten für alle
+Komplementärwerte einschließen, sieht die
+Wahrheitstabelle der AND-Funktion so aus
+wie in Tab. 4.
+
+Tab. 4: Wahrheitstabelle der AND-Funktion
+
+Die UND-Funktion – mechanisch
+Die AND-Funktion ist mechanisch etwas
+kniffliger als die OR-Funktion. Schließlich
+muss der Schieber am Ausgang intern die
+Bewegung eines aktivierten Eingangssignals „aufheben“ und sich erst dann in
+Bewegung setzen, wenn beide Schieber am
+Eingang auf ‚1‘ geschoben sind. Dies ist bei
+einer linearen Bewegung wie hier möglich,
+indem die Eingangssignale ein schwenkbares Joch bewegen. Eine Folge davon ist,
+dass die Bewegung des Ausgangssignals
+
+
+Zur Verdeutlichung siehe Abb. 8, wo die
+AND-Funktion auf einer größeren Bauplatte aufgebaut ist. Die Bewegung des Zeigers des Ausgangssignals wird mechanisch
+mit einem Hebel „verstärkt“.
+Elektronisch könnte dies mit der TransistorVerstärkungsstufe in der „Dioden-Transistor“-Logik der Silberlinge verglichen werden. Eine zweite Transistorstufe in den Silberlingen invertiert das Ausgangssignal
+(zurück), sodass beide Varianten zur Verfügung stehen. Später in diesem Artikel
+werden wir die mechanische Variante
+davon sehen. Schließlich kann ein Hebel
+auch mechanisch genutzt werden, um eine
+Bewegung (Signal) umzukehren.
+
+Die De Morganschen Gesetzte
+Neben den OR- und AND-Funktionen
+spielt die Negation bzw. NOT-Funktion als
+logische Basisfunktion eine wichtige Rolle.
+Es stellt sich heraus, dass durch die Verwendung dieser NOT-Funktion die ORund AND-Funktionen austauschbar werden. Das praktische Ergebnis dieser logischen Gesetzmäßigkeit wird auch in den
+fischertechnik-Hobby-Bänden erwähnt [3,
+7].
+
+
+Elektronik
+
+
+Derjenige, der diese Gesetze bekannt
+machte, war der britische Mathematiker
+Augustus De Morgan (1806-1871) [8]. Die
+nach ihm „De Morgansche Gesetze“ genannten Regeln besagen, dass jede Konjunktion (AND-Funktion) durch eine Disjunktion (OR-Funktion) ausgedrückt werden kann (und umgekehrt). Sie werden
+häufig in mathematischen Beweisen und
+Software verwendet. Zusammen mit
+George Boole (1815-1864) gilt De Morgan
+als Begründer der formalen Logik.
+Seine Gesetze lauten:
+𝐴⋁𝐵 =𝐴⋀𝐵
+𝐴⋀𝐵 =𝐴⋁𝐵
+Die Formeln beschreiben, dass durch Anwendung der NOT-Funktion auf das einzelne Eingangssignal und das abschließende logisch verknüpfte Ausgangssignal die
+Basisfunktionen OR (⋁) und AND (⋀)
+ineinander übergehen. Mit anderen Worten:
+Die OR-Funktion zweier zuvor invertierter
+
+Eingangssignale entspricht dem invertierten
+Ausgangssignal einer AND-Funktion dieser
+Eingangssignale. Und umgekehrt: Werden
+die Eingangssignale der AND-Funktion
+vorher jeweils mit der NICHT-Funktion
+invertiert, verhält sich das invertierte Ausgangssignal nach außen wie eine OR-Funktion.
+Die Gesetze von De Morgan lassen sich
+auch auf das obige praktische Beispiel mit
+Fahrrad und Auto anwenden. Mit der
+Funktion 𝑋 = 𝐴 ⋁ 𝐵 lässt sich 𝑋 im Klartext im Prinzip so erklären: „Ich kann zur
+Arbeit fahren, wenn ich ein Auto ODER ein
+Fahrrad habe“. Genau dasselbe kann ausgedrückt werden als: „Ich kann nicht zur
+Arbeit fahren, wenn ich kein Auto UND
+kein Fahrrad habe“, wobei die resultierende
+Formel 𝑋 = 𝐴 ⋀ 𝐵 das ODER umschreibt
+als eine UND-Verknüpfung der negativen
+Bedingungen. Beides bedeutet dasselbe und
+stellt die gleiche Beziehung zwischen den
+„Eingangssignalen“ und der Schlussfolge-
+
+
+
+
+rung, dem „Ausgangssignal“ her. Es werden nur zwei verschiedene Grundfunktionen verwendet.
+Wenn ihr zurückblättert werdet ihr sehen,
+dass in Tab. 2 (der OR-Funktion) die Spalte
+𝑍𝑂𝑅 ganz rechts für die Eingangssignale 𝐴
+und 𝐵 die UND-Funktion beschreibt. Die
+Umkehrung ist auch in Tab. 4 (der ANDFunktion) sichtbar. Dort zeigt die ganz
+rechte Spalte 𝑍𝐴𝑁𝐷 für die Eingangssignale
+𝐴 und 𝐵 eine logische OR-Funktion.
+In der „Silberling“-Reihe, die fischertechnik in der zweiten Hälfte des letzten
+Jahrhunderts auf den Markt brachte, gibt es
+kein Modul, das ausschließlich die Aufgabe
+hatte, Eingangssignale zu invertieren.
+Bei den in den Hobby4-Büchern besprochenen Modellen ist das kein Problem, denn
+das invertierte Signal jedes Ausgangssignals steht jederzeit für das nächste
+Logikgatter oder die Steuerung eines Relais
+zur Verfügung. Der Elektronik-Baustein G
+(36391) hat ebenfalls einen invertierten
+Ausgang (A2). Dadurch ist auch bei Sensoren mit „invertiertem“ Signalpegelverhalten (am Eingang E1) kein Inverter notwendig.
+NOT-Funktion – mechanisch
+Die NICHT-Funktion erweist sich als
+mechanisch relativ einfach zu realisieren.
+Es geht lediglich darum, die Bewegung des
+Ausgangssignals der Bewegung des Eingangssignals entgegengesetzt zu machen.
+Der mechanische Betrieb ist auf den statischen Fotos möglicherweise schwer zu
+erkennen. Weitere Details und ein Video
+zur Funktionsweise der verschiedenen Gatter findet ihr auf meiner Projektseite, die ich
+während der Arbeit an den mechanischen
+Logik-Gattern erstellt habe [9, 10].
+
+
+mechanischen NOT-Funktion
+
+Austauschbarkeit von
+OR und AND
+Die Gesetze von De Morgan können auch
+mit einem mechanischen Modell visualisiert werden. Die Grundfunktion des Modells von Abb. 10 ist die mechanische ORFunktion, die wir in Abb. 8 aufgebaut gesehen haben. Mit einfachen Hebeln an den
+Ein- und Ausgängen werden jedoch sowohl
+die Eingangssignale als auch der Ausgang
+invertiert. Und obwohl in der Mitte noch die
+OR-Funktion erkennbar ist, verhält sich
+dieses mechanische Gatter nach außen wie
+eine AND-Funktion.
+Der Aufbau von Abb. 10 entspricht dem
+Diagramm 35.1 auf Seite 35 von hobby 4,
+Band 4 [3] mit dem Unterschied, dass wir
+jetzt einen Schritt weiter gehen und nicht
+𝑍𝑂𝑅 , sondern 𝑍𝑂𝑅 (auch 𝑍𝑁𝑂𝑅 genannt) als
+Ausgang verwenden. Dadurch ändert sich
+die Logikausgangsfunktion von OR zu
+AND.
+
+
+Elektronik
+
+
+Wenn man die Ausgabefunktion von
+Spalte 𝑍𝑂𝑅 aus Tab. 2 entspricht, unter
+Verwendung der invertierten Eingangssignale 𝐴 und 𝐵, und damit auch vollständig
+dem Verhalten des AND-Gatters, dargestellt in Tab. 4.
+Das logische OR kann sich also wie ein
+logisches AND verhalten und umgekehrt.
+Sobald wir sowohl die einzelnen Eingangssignale als auch das resultierende Ausgangssignal invertieren, gelten die De Morganschen Gesetze, auch dann, wenn wir
+statt negativer Logik (wie in den Silberlingen) positive Logik oder den invertierten
+Ausgang der bisherigen Silberlinge als
+Eingangssignal verwenden und den invertierten Ausgang als Ausgangssignal.
+
+Faktisch ist das nichts anderes als das
+Vertauschen der vereinbarten Signalpegel
+‚0‘ und ‚1‘.
+Dies wird in Abb. 13 verdeutlicht. Wenn
+wir, wie in der obersten Zeile angedeutet,
+die Eingangssignale und das Ausgangssignal logisch invertieren, ändert sich die
+logische Funktion. Dies ist funktional genau
+dasselbe wie die Verwendung der invertierten Logik für die Eingangssignale und die
+Verwendung des komplementären Ausgangs 𝑍𝑁𝐴𝑁𝐷 (= 𝑍𝐴𝑁𝐷 ) oder 𝑍𝑁𝑂𝑅 (=𝑍𝑂𝑅 )
+des jeweiligen Logikbausteins als Ausgangssignal. Wer die klassischen Silberlinge mit Signalen in positiver Logik (wie
+den Ausgängen der TX- und TXT-Controller oder modernen DIY-Varianten der
+Silberlinge in CMOS-Technik) verwenden
+möchte, muss berücksichtigen, dass alle
+Signalpegel bereits invertiert sind.
+
+
+
+
+
+
+
+Elektronik
+
+
+
+
+
+Damit kann ein Elektronik-Baustein h4AN
+direkt als OR- und ein Elektronik-Baustein
+h4ON als AND-Gatter verwendet werden
+(Abb. 14).
+Zur besseren Nachvollziehbarkeit der aufgebauten Logikschaltung erscheint es ratsam, die verwendeten Silberlinge mit einem
+kleinen Hinweis zu versehen; das wird euch
+sicherlich helfen, mögliche Schaltprobleme
+zu lösen.
+
+Fazit
+Die mechanischen Modelle der Logikgatter
+geben Einblick in die Gesetze von De
+Morgan. Wenn ihr im Internet sucht, werdet
+ihr schnell auf Modelle von Lego und Knex
+stoßen. Seltsamerweise war fischertechnik
+in diesem Bereich noch nicht oder kaum
+vertreten. Und das, obwohl sich unser
+beliebtestes Konstruktionsmaterial perfekt
+zum Experimentieren eignet, weil für jede
+logische Funktion viele verschiedene
+mechanische Lösungen möglich sind.
+Beispielsweise können die Funktionen mit
+Zahnrädern, mit Kugeln oder auch mit
+Seilen und Gewichten konstruiert werden.
+Thomas Püttmann hat sich in der Vergangenheit bereits mit mechanischen Gattern
+beschäftigt, die mit radialer Bewegung und
+Getrieben funktionieren. In meinen mechanischen Experimenten habe ich hauptsächlich lineare Bewegungen untersucht, vielleicht wegen der visuellen Analogie zur
+elektronischen Funktionsweise der „Transistor-Transistor-Logik“, die ich von den
+späteren ICs kannte. Je mehr man über die
+Materie nachdenkt, desto mehr Parallelen
+entdeckt man zwischen der Elektronik und
+den mechanischen Modellen.
+Die lineare, gleitende oder schwenkende
+Bewegung lässt sich mit fischertechnik
+
+
+
+3D-Daten des Bausteins zum Download unter:
+https://www.printables.com/model/317251slider-gatebridge-stone-for-fischertechnik
+
+natürlich vielfältig realisieren. Als Drehpunkt kann nicht nur eine Achse durch ein
+Loch (z. B. in einem Baustein) dienen.
+Drehpunkte können auch mit einem Kardan
+oder den verschiedenen Scharniersteinen
+realisiert werden.
+Eine Öffnung, durch die eine Statik-Strebe
+gleiten kann, ist leicht herzustellen. Es war
+aber etwas schwierig, eine Lösung zu finden, die im 15x15 mm-Raster bleibt und bei
+der die Strebe sauber, ohne zu viel vertikales Spiel durch die Öffnung gleitet. Zu diesem Zweck habe ich zwei Steine entworfen
+(Abb. 15, 16): Der kleine entspricht der
+Größe eines Baustein 5 (37237), der breitere der einer Bauplatte 5x15x30 (35049).
+
+
+3D-gedrucktem Baustein4
+
+
+Elektronik
+
+Wenn ihr denkt, dass sie nützlich sind,
+könnt ihr sie selbst in 3D drucken (gerne bin
+ich dabei behilflich).5
+
+Quellen
+[1]
+
+Wikipedia: Diode-Transistor-Logik.
+
+Die Bewegung des Ausgangs in diesen
+mechanischen Modellen wird vollständig
+durch die Bewegungen der Eingangssignale
+gebildet. Um jedoch komplexere Funktionen wie ein XOR-Gatter oder ein FlipFlop aufzubauen, müssen mehrere grundlegende mechanische Funktionen miteinander verkettet werden. Aufgrund von Spiel
+und Reibung in den mechanischen Zapfen
+lassen sich die hier gezeigten Gatter jedoch
+nicht so einfach hintereinander schalten; die
+Kraft an den Ausgängen nimmt schnell ab.
+
+[2]
+
+Wikipedia: Positive und negative
+Logik.
+
+[3]
+
+fischertechnik: NICHT ODER oder
+ODER NICHT? hobby 4 Band 4,
+Fischer Werke, 1975, S. 34-35.
+
+[4]
+
+Wikipedia: Wired Logic Connection.
+
+[5]
+
+Peter Krijnen: Silberlinge: Original
+oder Nachbau (Teil 7). 2/2022, S. 87–100.
+
+[6]
+
+Donaupeter: AND-NAND / OR-NOR
+Baustein.
+
+Analog zu den hierfür verwendeten Lösungen in den elektronischen Varianten dieser
+Logikgatter könnte in einem nächsten
+Schritt nach Möglichkeiten gesucht werden,
+die Kräfte am Ausgang zu „verstärken“
+oder mechanisch zu „entkoppeln“. Für's
+Erste hoffe ich, dass die besprochenen
+Grundfunktionen euer Interesse geweckt
+haben. Experimentiert damit, und wer weiß,
+vielleicht werden wir bald mehr mechanische Gatter und komplexere mechanische
+Logikfunktionen in der ft:pedia finden.
+
+[7]
+
+fischertechnik: IC-Digital-Praktikum
+(6396304), fischer-werke, 1977
+(Seite 57).
+
+[8]
+
+Wikipedia: Gesetze von De Morgan.
+
+[9]
+
+Arnoud van Delden: Mechanical
+Logic Gates.YouTube, 2022.
+
+
+[10] Arnoud van Delden: Mechanical
+Logic. Whizzbizz.com, 2022.
+
+Die fischertechnik-bezogenen 3D-Objekte, die
+ich drucken kann, findet ihr auf meiner Webseite.
+
+

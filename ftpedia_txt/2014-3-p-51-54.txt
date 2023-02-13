@@ -1,0 +1,211 @@
+
+Modell
+
+Modell
+
+Detail Engineering R2D3 (3) –
+IR-Fernbedienung am Robo TX Controller
+Andreas Gail
+Im Rahmen des Baus des Robotermodells R2D3 wurde eine Reihe von ganz unterschiedlichen
+Detaillösungen erarbeitet, die durchaus Lösungsansätze bei diversen anderen Bauprojekten
+sein könnten. Teil 3 der Beitragsserie stellt vor, wie die IR-Fernbedienung als Eingabegröße
+am Robo TX Controller betrieben werden kann.
+
+Aufgabenstellung
+
+Lösung
+
+Das Robotermodell R2D3 (Abb. 1) sollte
+neben der Bedienung über PC gleichzeitig
+auch über die IR-Fernbedienung von
+fischertechnik steuerbar sein.
+
+Beispielhaft genutzt wird der linke Bedienhebel der Fernbedienung.
+
+Bei Anwendung des neuen angekündigten
+Controllers von fischertechnik ist nachfolgendes Vorgehen hinsichtlich der IRFernbedienung nicht mehr erforderlich,
+wohl aber kann es durchaus weiterhin
+ähnlich gelagerte grundsätzliche Problemstellungen geben.
+
+(violett dargestellt)
+
+
+Betrachtet man den Fernbedienhebel
+genauer, sieht man, dass mit diesem einen
+Hebel acht verschiedene Grundstellungen
+möglich sind, die individuell als Eingangsgröße für den Robo TX Controller („TX“)
+genutzt werden können. Zwischenstellungen sind dabei nicht relevant, es wird
+jeweils nur die prinzipielle Position ausgewertet.
+
+der IR-Fernbedienung
+
+
+
+
+Entsprechend der Einstellung am linken
+Bedienhebel werden zugehörige Signale
+zum IR-Empfängermodul gesendet und
+über die Anschlusspaare M1 und M2 ausgegeben.
+
+
+Bei der Betrachtung des IR-Empfängermoduls fällt auf, dass es für den rechten
+Bedienhebel nur noch das Anschlusspaar
+M3 gibt und einen Steckanschluss für einen
+Servo. Somit ist der rechte Bedienhebel nur
+sehr begrenzt in der hier gezeigten Weise
+nutzbar. Die Umwandlung des ServoSignals in ein Signal analog M1-M3 ist nur
+mit hohem Aufwand möglich und wird
+daher hier nicht weiterverfolgt.
+
+Verschaltung
+Mit diesen Bausteinen ist es möglich, bis zu
+sechs digitale Eingänge des TX kommend
+von der IR-Fernbedienung anzusteuern. Im
+nachfolgenden Fall werden vier Eingänge
+genutzt. Am IR-Empfänger können dabei
+jeweils beide Ausgänge von M1 und M2
+genutzt werden.
+Zur Ansteuerung werden zusätzlich Widerstände mit 330 Ω (1/4 W) benötigt. Diese
+Widerstände haben den Farbcode orangeorange-braun. Zur Verschaltung werden die
+Eingänge I1-I4 des TX über die Widerstände mit Masse verbunden; dadurch
+werden die Eingänge permanent gesetzt.
+Die vier Eingänge I1-I4 werden gleichzeitig
+mit dem IR-Empfänger M1a, M1b, M2a
+und M2b verbunden. Im Fall der Ansteuerung eines Ausgangs am IR-Empfänger
+wird dieser mit +9 V belegt, was zur Rücksetzung des zugehörigen Eingangs am TX
+führt.
+
+
+
+Modell
+
+Signale an M1 und M2
+Entsprechend der Hebelstellung an der IRFernbedienung ergeben sich am IREmpfängermodul folgende Signale (invers
+dargestellt):
+M1b M2a M2b M1a
+An2 An3 An4 An1 Beschreibung
+In1 In2 In3 In4
+
+
+
+
+Pos = 0
+Hebel Grundstellung
+mittig
+
+
+
+
+
+Pos = 1
+Hebel oben
+
+
+
+
+
+Pos = 8
+Hebel oben-links
+
+
+
+
+
+Pos = 2
+Hebel oben-rechts
+
+
+
+
+
+Pos = 7
+Hebel links
+
+
+
+
+
+Pos = 3
+Hebel rechts
+
+
+
+
+
+Pos = 5
+Hebel unten
+
+
+
+
+
+Pos = 6
+Hebel unten-links
+
+
+
+
+
+Pos = 4
+Hebel unten-rechts
+
+Tab. 1: IR-Empfängermodul-Signale in
+Abhängigkeit der Hebelstellung
+der IR-Fernbedienung
+
+Software
+Da die vom IR-Empfänger abgegebenen
+Signale ungenau sind und teilweise flackern
+(auch wenn diese gar nicht angesteuert
+werden) ist eine Kompensation mithilfe der
+vorliegenden Software erforderlich. Hierbei
+werden bei 3.000 Durchläufen die Eingänge
+des TX ausgelesen.
+
+Nur wenn bei diesen 3.000 Durchgängen
+55% (bzw. 60%) der Durchgänge eine
+Ansteuerung angezeigt haben, wird davon
+ausgegangen, dass tatsächlich eine gewollte
+Bedienung vorliegt.
+Der Eingang I1 (M1a-An1-In2) zeigte ein
+etwas abweichendes Verhalten von den
+anderen Eingängen, so dass in diesem Fall
+60% der Ansteuerungen vorgelegen haben
+müssen, um diese als ‚gewollt‘ zu werten.
+Im vorliegenden Fall läuft die Software auf
+einem PC und wurde nicht in den TX
+geladen. Die 3.000 Durchläufe führen dabei
+zu einer Ansprechverzögerung von etwa
+0,5 s.
+Zu Beginn der Schrittkette wird zunächst
+die Variable Zaehler = 0 gesetzt sowie
+anschließend An1-An4 = 0. Nachfolgend
+wird geprüft, ob im Hauptprogramm der
+Schalter IR aktiviert wurde; wenn nein
+werden die globalen Variablen In1-In4 = 0
+gesetzt und das Unterprogramm wird
+verlassen. Dann ist die Bedienung über die
+IR-Fernbedienung abgeschaltet.
+Wenn der Schalter IR aktiviert wurde,
+beginnt ein 3.000-facher Schleifendurchlauf; Schleifenzähler ist die Variable
+Zaehler. Bei jedem Schleifendurchlauf wird
+geprüft, wie die Einstellung der Eingänge
+I1-I4 beschaltet sind, entsprechend wird die
+Variable An1-An4 bei jedem Durchlauf um
+eins erhöht bzw. nicht erhöht. Nach 3.000
+Schleifendurchläufen beginnt die Auswertung und Anpassung der globalen Variablen
+In1-In4. Wenn z. B. bei mehr als 1.650 von
+3.000 (55%) Schleifendurchläufen eine
+Signalaufschaltung erkannt wurde, so wird
+die zugehörige globale Variable In1-In4 = 1
+gesetzt. Wenn die Einstellung In1-In4 geändert wurde, wird dies im Bedienfeld des
+Hauptprogramms visualisiert. Die Auswertung von In1-In4 erfolgt in anderen
+Programmteilen.
+
+
+
+
+mit individualisierter Signalaufbereitung
+
+
+

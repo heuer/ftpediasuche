@@ -1,0 +1,340 @@
+
+
+Modell
+
+Die unendliche Lemniskate
+Arnoud van Delden
+Vor einiger Zeit dachte ich zusammen mit einem Clubmitglied über ein Modell nach, bei dem
+eine Acht-Form ausgeführt werden sollte. Die Herausforderung bestand darin, dass ein Element wie ein Karren oder eine Kugel einen Weg gemäß einer „Bogenform“ oder einer „Lemniskaten“-Kurve beschreibt. Dadurch entsteht eine Bewegung, die sich im Zentrum schneidet.
+Wenn das keine Herausforderung ist ...
+
+Hintergrund
+Der Begriff „Lemniskate“ leitet sich vom
+griechischen Wort für „hängende Schnur“
+oder Girlande ab. Als geometrische Figur
+hat diese Form eine lange Geschichte und
+hat nicht nur mathematische, sondern auch
+symbolische Bedeutung erlangt. Die Form
+ist beispielsweise ein Vorbild für das Symbol für Unendlichkeit (∞) in der Mathematik und wird als Symbol für das ewige Leben und das Zusammenspiel gegensätzlicher Kräfte verwendet.
+
+Ein Symbol mit unendlichen Möglichkeiten
+und Anwendungen. Vielleicht hatte das italienische Designteam von Arduino das im
+Hinterkopf, als es nach einem geeigneten
+Logo für seine mittlerweile beliebte Familie
+von
+Single-Board-Mikrocontrollern
+suchte?
+
+Beim Tarot-Kartenspiel balanciert eine Figur zwei Pentagramm-Münzen oder Talismane in einer Lemniskate, um Unendlichkeit und Ewigkeit darzustellen (Abb. 2). Indirekt kommt die Lemniskate auch in der
+Natur vor: Wer einen Stock in den Boden
+steckt und die Spitze des Schattens markiert, den die Sonne ein Jahr lang täglich auf
+den Boden wirft, wird irgendwann auch
+diese Acht erscheinen sehen.
+
+
+
+
+Ursprung
+Die mathematische Relevanz von Achterkurven scheint zuerst von Proclus erkannt
+worden zu sein, einem griechischen, neuplatonischen Philosophen und Mathematiker, der im 5. Jahrhundert n. Chr. lebte. Proclus betrachtete die Querschnitte eines
+Torus durch eine Ebene parallel zur Torusachse. Wie er bemerkte, besteht der Querschnitt der meisten dieser Abschnitte aus einem oder zwei Ovalen. Wenn die Ebene jedoch tangential zur Innenfläche des Torus
+verläuft, nimmt der Querschnitt die Form
+einer Acht an (Abb. 3).
+
+Modell
+
+Wenn ihr diese Form selbst weiter recherchieren, werdet ihr schnell feststellen, dass
+es verschiedene Varianten gibt. Zum Beispiel Bernoullis Lemniskate (griech.
+λημνίσκος, Band), die Jakob Bernoulli
+1694 in einem Artikel in seiner Acta Eruditorum vorgeschlagen hat. Oder die Lemniskate von Gerono, eine seitlich abgeflachte
+Variante des französischen Mathematikers
+Camille-Christophe Gerono (1799-1891)
+[2].
+
+Mathematische Beschreibung
+Eine Booth-Hippopede ist sowohl bezüglich der x-Achse als auch der y-Achse symmetrisch und kann mathematisch beschrieben werden als
+(𝑥 2 + 𝑦 2 )2 = (𝑎𝑥 2 − 𝑏𝑦 2 )
+mit Faktoren 𝑎 > 0 und 𝑏 > 0 (Abb. 4) [3].
+
+
+(Quelle: Ag2gaeh, Wikimedia, CC BY-SA 4.0)
+
+Diese Form erinnerte ihn an die Fesseln, mit
+denen zwei Pferdefüße beim Transport zusammengehalten werden können. Proclus
+nannte die Form daher „Pferdemanschetten“ oder „Hippopede“ (griech. ἱπποπέδη).
+Der Name Booths Lemniskate für diese
+Kurve geht auf die Arbeiten des Mathematikers James Booth (1810-1878) aus dem
+19. Jahrhundert zurück [1].
+
+Wenn die Faktoren weiter auseinanderliegend gewählt werden, wird die Lemniskate
+aus immer reineren Kreisen anstelle von gestreckten Ellipsen bestehen. Das lässt sich
+im praktischen Online-Visualisierungstool
+GeoGebra schön veranschaulichen (Abb.
+4).1
+Für die rote Kurve wurden die gleichen Faktoren gewählt und wie ein globaler Skalierungsfaktor verwendet; die Formel lautet
+(𝑥 2 + 𝑦 2 )2 = (10𝑥 2 − 10𝑦 2 )
+
+Ein umfangreiches Werkzeug zur Visualisierung
+mathematischer Formeln ist GeoGebra.
+
+
+
+Für die grüne Kurve wurden die Faktoren
+umgekehrt proportional gewählt:
+(𝑥 2 + 𝑦 2 )2 = 10𝑥 2 − (
+
+1 2
+)𝑦
+
+Die Bewegung
+Ein logischer erster Schritt schien zu sein,
+mit einem fischertechnik-Modell eine möglichst reine Lemniskatenform mechanisch
+zu beschreiben. Inspiriert von dem Artikel
+über Jansens „Strandbeester“ in der letzten
+ft:pedia [4] suchte ich nach einer Variante
+der „Beinmechanik“, mit der die Acht mittels Gestänge und Getriebe erzeugt werden
+könnte. Einige Konstruktionsexperimente
+und eine Online-Suche führten schließlich
+zu einer interessanten Geschichte über einen Erfinder2, der in den 1990er Jahren herausfand, dass seine Idee bereits 1957 von einem Clayton L. Vagneur patentiert wurde
+(Abb. 5).
+
+
+Das vollständige Patent einschließlich der
+vollständigen Beschreibung dieser Mechanik ist online über Google verfügbar [5].
+Vagneurs Ausgangspunkt war aber nicht,
+die Lemniskatenkurve mechanisch zu reproduzieren. Er wollte ein Getriebe, das
+möglichst wenig seitlichen Druck auf einen
+Kolben ausübt. Mit seinem Patent meldete
+er ein allgemeines Verfahren zur Umwandlung einer Rotation in eine hin- und hergehende (Gleit-) Bewegung für den Einsatz in
+Verbrennungsmotoren und Pumpen an. In
+seiner Originalskizze fällt jedoch sofort die
+Lemniskatenform (Kurve Nr. 33) ins Auge.
+
+
+Sansoy über seinen ‚Figure Eight Motion Drive‘.
+
+
+
+Modell
+
+Die Basis dieses Mechanismus bilden zwei
+Pleuel, die in einem Drehpunkt am Rand
+von zwei miteinander synchronisierten Rädern verbunden sind. Die Räder haben eine
+entgegengesetzte Drehrichtung und sind um
+eine Vierteldrehung (90°) Phasen verschoben. In Abb. 6 sind einige Stufen einer vollständigen Umdrehung dieser Antriebsräder
+dargestellt.
+
+
+Der Drehpunkt der Pleuel durchläuft damit
+eine Hippopede-Kurve.
+
+Diese ist am größten, wenn die Drehpunkte
+möglichst an den Außenkanten der fischertechnik-Drehkränze (31390, 31391) platziert werden (Abb. 7, 8).
+Auf diese Weise ist es auf jeden Fall möglich, eine Lemniskatenform aus dem alten
+amerikanischen Patent von Vagneur zu
+zeichnen.
+Der Weg dieser Bewegung verläuft jedoch
+noch nicht entlang der Kurve. Als Grundlage für ein Modell, bei dem sich ein montiertes Element (z. B. eine fischertechnikFigur) entlang der Bahn bewegen muss, erscheint diese Lösung noch nicht optimal.
+Da sich die gewünschte Bahn selbst schneidet, scheint eine Konstruktion mit einem
+fest montierten Element im Kurvenschnitt
+ein mechanisches Problem darzustellen.
+Eine mögliche Alternative besteht natürlich
+darin, das Element gar nicht zu montieren,
+sondern ihm nur die gewünschte Bewegung
+zu geben.
+
+
+
+
+Zum Beispiel muss es möglich sein, einen
+Wagen oder eine Kugel in einer sich bewegenden Bahn herumrollen zu lassen. Dies
+eröffnet auch die Möglichkeit, ggf. für den
+Vortrieb, das bewegte Element an der Kreuzung „aufzugeben“ und so den Kreuzungsknoten mechanisch komplett zu vermeiden.
+
+den Flachmagneten passieren zu lassen
+mussten sogar einige Führungsrollen platziert werden (Abb. 9). Durch ein Kippen
+der Achsen der beiden Drehkränze gegeneinander um 15° konnte die Kette entlang der
+Kurve geführt werden (Abb. 10).
+
+Für den Bau einer solchen Fahrbahn scheinen die flexiblen fischertechnik-Kugelbahnen mehr Möglichkeiten zu bieten als die
+gebogenen Statik-Kurven mit festem Radius.
+
+Folge der Kurve
+Bevor ich mich an eine Art mechanisches
+„Transfer“-System des sich drehenden Elements in der Mitte wagte, versuchte ich zuerst, Booths Hippopede (die rote Kurve in
+der obigen Grafik) mit einem Kettenmechanismus anzunähern. Ein Magnet, mit einer
+Heißklebepistole an der Kette befestigt, beschreibt die Acht. Der kritische Punkt bei
+dieser Lösung bleibt der Schnittpunkt der
+Figur und in diesem Fall der Ketten. Um
+
+
+Ein seitlich auf ein Kettenglied aufgeklebter
+Neodym-Magnet kann den anderen Magneten im Sockel in einer nahezu perfekten
+Lemniskatenbewegung auf der Plexiglasplatte bewegen.
+
+
+
+
+Modell
+
+
+Lorentz Lemniskate
+In den bisherigen Modellen wird ein ziemlich genaues Booth-Hippopede mit gleichen
+Faktoren 𝑎 und 𝑏 nach der oben genannten
+Formel (rote Kurve) beschrieben. Auch
+beim zweiten Modell ist die Reibung der
+Bewegung in die Kurve erheblich. Eine genauere Spurbeschreibung könnte mit einem
+zweiten Magneten an der Kette erzwungen
+werden, aber auch dann ist das Gewicht des
+Umlaufelementes durch den Einsatz von
+Permanentmagneten sehr begrenzt. Selbst
+die kräftigen Neodym-Magnete überbrücken die maximale Distanz im Schnittpunkt
+der Ketten nur mühsam.
+Deshalb suchte ich nach einer Konstruktion
+mit zwei gegeneinander rotierenden Rädern, die jeweils das bewegliche Element in
+der Mitte voneinander übernahmen. Auf
+diese Weise näherte ich mich Booths grün
+gezeichnetem Hippopede, bei dem die Faktoren 𝑎 und 𝑏 umgekehrt proportional sind.
+Nach einigen Experimenten mit einer mechanischen Lösung (die es sicher geben
+
+sollte) bin ich zum Prinzip des Magnetismus zurückgekehrt. Nur in diesem Fall und
+auch, weil sie steuerbar sein müssen, mit
+Elektromagneten. 3
+
+
+Dies führte zu der folgenden Konstruktion,
+die es unserem Testfahrer Lorentz Lemniskate (Abb. 12) ermöglicht, seine Kreise ins
+Unendliche zu spinnen. Stuntman Lorentz,
+
+Magnet fischertechnik (142504) oder ein chinesisches Äquivalent (ZYE1-P20/15).
+
+
+
+dessen Name in diesem Zusammenhang natürlich eine Anspielung auf die Kraft ist, auf
+die er angewiesen ist, hängt immer an einem
+der Elektromagneten der Transporträder.
+Zurück in der Mitte wird er automatisch
+vom anderen Rad übernommen. Ein Impulsschalter an einem Flip-Flop sorgt für
+die Umschaltung.
+
+den verwendeten 12-Volt-Motor6 noch eine
+Motorsteuerung gebaut. Dafür reichte ein
+einfacher Schaltplan mit PWM-Steuerung.7
+Beide Module wurden in grauen fischertechnik-Kassetten (35359) untergebracht
+und über ein 12-Volt-Netzteil gespeist
+(Abb. 14). Die Frontplatten wurden mit einem Laserdrucker auf Normalpapier gedruckt und anschließend laminiert und geschnitten.
+
+
+Da ich anfangs viel mit der Drehzahl und
+der Stellung des Impulsschalters für das
+Flip-Flop experimentieren musste, wurde
+Lorentz‘ Wunsch nach einem Sturzhelm
+frühzeitig entsprochen. Und ich versichere
+euch, dass bei der Erstellung dieses Modells
+keine fischertechnik-Figuren zu Schaden
+kamen.
+Dieses Verfahren erforderte ein Flip-Flop,
+dessen beide Ausgänge direkt abwechselnd
+einen Elektromagneten ansteuern konnten.
+Aus diesem Anlass habe ich mir dafür ein
+Flipflop gebaut4, das ich mit Treiberausgängen versehen habe5, damit keine zusätzlichen Relais (mit zusätzlichem Verschleiß,
+Rauschen und Verzögerung) benötigt wurden. Um das Experimentieren mit der Geschwindigkeit zu erleichtern, habe ich für
+
+Flip-Flop von Donaupeter.
+
+
+Flipflop driver: IRF520 Power MOSFET.
+
+
+
+Da ich die Befestigung (und die Festigkeit
+der Stecker) der Steckverbindungen lieber
+direkt auf dem Deckel hatte, war diese Bas-
+
+
+JGA25-370, 400 rpm, 12-Volt-Motor im selbst
+entworfenen und 3D gedruckten Motorhalter.
+
+
+Geschwindigkeitsregelung
+TIP120.
+
+mit
+
+NE555
+
+und
+
+
+Modell
+
+telei auch eine Untersuchung von Alternativen zu den bekannten Bundhülsen8, die normalerweise direkt auf die Leiterplatte gelötet werden. Neben Kupfer-M3-Abstandshaltern9 erweisen sich hierfür auch Hohlnieten10 als sehr geeignet. Letztere lassen sich
+nach dem Erhitzen ganz einfach in ein etwas
+zu klein gebohrtes Loch in der Plexiglas-
+
+Front oder dem PLA-Kunststoff eines 3Dgedruckten Deckels schieben.
+Nach dem Abkühlen sind die Rohre fest
+verankert. Bei Bedarf können die Rohre
+vorne mit einem 2,5-mm-Bohrer nachgebohrt werden, damit die fischertechnik-Stecker perfekt passen.
+
+
+
+Bezug Bundhülsen.
+
+
+Alternative zum Anschließen der Stecker: Suche
+nach ‚Hex Nut Spacing Screw Brass‘.
+
+
+Kupfer-Verbindungsrohre, Suche nach ‚Copper
+Hollow Tubular Rivets 3mm‘.
+
+
+
+
+Fazit
+
+Quellen
+
+Vielleicht können die Leser der ft:pedia mit
+den fischertechnik-Kugelbahnen der reinen
+mathematischen Lemniskate noch näher
+kommen oder durch Bewegung eine Kugel
+hindurchsteuern? Oder ist es vielleicht mit
+einer zusätzlichen Stangenkonstruktion in
+der ersten Lösung möglich, das bewegliche
+Element dem Kurvenverlauf folgen zu lassen?
+
+[1]
+
+Wikipedia: Lemniskate von Booth.
+
+[2]
+
+Wikipedia: Lemniskate of Gerono.
+
+[3]
+
+Robert Ferréol: Booth’s Curve, Oval,
+Lemniscate. 2017.
+
+[4]
+
+Benjamin Klingebiel: Strandbeester.
+ft:pedia 1/2021, S. 33–40.
+
+[5]
+
+Clayton L. Vagneur: Mechanical
+Movement for Reciprocating Mechanisms. US-Patent No. 2.775.899,
+01.01.1957.
+
+Aber auch wenn ihr beim nächsten Anblick
+dieser wundersamen Gestalt (siehe z. B. das
+Video mit Lorentz Lemniskate in der Hauptrolle) nur lächelt, hat Lorentz Lemniskate
+sein Ziel bereits erreicht. Oder ihr testet einmal das auf diesem Mechanismus aufbauende „Demolition Derby“-Fahrgeschäft in
+einem Freizeitpark. Die Lemniskatenform
+wird die Menschen wohl noch bis ∞ faszinieren ...
+
+
+

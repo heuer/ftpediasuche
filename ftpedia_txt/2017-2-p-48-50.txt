@@ -1,0 +1,202 @@
+
+
+Computing
+
+Codes der fischertechnik-InfrarotFernsteuerungen (2)
+Dirk Uffmann
+Da ich noch wesentliche, neue Erkenntnisse zu den beiden fischertechnik-Infrarotsendern
+gewinnen konnte, möchte ich diese hier als Nachtrag zu meinem Artikel in ft:pedia 3/2016 [1]
+darstellen. Mit der Kenntnis dieser Codes können die fischertechnik-Fernbedienungs-Sender
+zur Steuerung von Mikro-Controllern bzw. selbst gebauten Fernbedienungs-Empfängern
+genutzt werden. Gleiches gilt für den Bau eigener Fernbedienungssender zur Steuerung der
+fischertechnik-Fernbedienungs-Empfänger.
+
+Teil 1: fischertechnik 30344 IR
+Control Set
+Nachdem ich nun auch in den Besitz eines
+Senders aus dem fischertechnik 30344 IR
+Control Set gekommen bin, habe ich die
+noch fehlenden Codes für den blauen Zusatzempfänger ermittelt. Das Ergebnis ist in
+Tabelle 1 dargestellt. Der schwarze
+Empfänger aus fischertechnik 30344 wird
+mit folgender Systemadresse angesprochen:
+0x1B (hex) bzw. 27 (dec)
+Der blaue Zusatz-Empfänger fischertechnik
+30183 wird dagegen mit folgender Systemadresse angesprochen:
+0x1E (hex) bzw. 30 (dec)
+
+fischertechnik 30344 IR Control Set
+
+Die Umschaltung zwischen den beiden Systemadressen erfolgt über die Tasten 1 und 2.
+In Tabelle 1 sind die Command-Codes der
+Tasten dargestellt. Diese sind genau entsprechend der Nummerierung der Tasten in
+der Bedienungsanleitung codiert. „M1
+Leistung“ bedeutet, bei Motor 1 die Leistungsstufe umzuschalten, d. h. zwischen
+langsam und schnell hin und her zu schalten. Mit diesen Codes kann man den
+Empfänger nun z. B. mit einem Arduino-
+
+Board oder
+steuern.
+
+Computing
+
+anderen
+
+Taste
+M1 rückwärts
+M1 vorwärts
+M1 Leistung
+M2 links
+M2 rechts
+M2 Leistung
+M3 Linkslauf
+M3 Rechtslauf
+M3 Leistung
+1 (Umschalten auf
+schwarzen Emfänger)
+2 (Umschalten auf
+blauen Emfänger)
+
+Mikrocontrollern
+
+Systemadresse
+(schwarzer / blauer
+Empfänger)
+Code [hex]
+0x1B / 0x1E
+0x07
+0x1B / 0x1E
+0x08
+0x1B / 0x1E
+0x03
+0x1B / 0x1E
+0x09
+0x1B / 0x1E
+0x0A
+0x1B / 0x1E
+0x04
+0x1B / 0x1E
+0x01
+0x1B / 0x1E
+0x02
+0x1B / 0x1E
+0x05
+0x1B
+
+0x0B
+
+0x1E
+
+0x06
+
+Tab. 1: RC5 Fernbedienungscodes für den
+schwarzen Empfänger aus 30344 und den
+blauen Zusatz-Empfänger 30183
+
+Teil 2: fischertechnik 500881
+Control Set
+Bei meinen Versuchen hatte sich herausgestellt, dass es immer wieder zu Fehlern
+beim Empfang der Daten kommt. Ich habe
+dann mit verschiedenen IR-Empfänger-ICs
+gearbeitet und hatte folgende Fehlerraten:
+∂ SFH5110-38 (Osram): ca. 5-7% ParityFehler
+∂ TSSP4P38: ca. 20% Parity-Fehler sowie
+unerkannte Doppelfehler, die ein korrektes Parity-Bit haben.
+Dieses letztere IC ist aber eigentlich für Entfernungsmessungen gedacht und nicht als
+Empfänger für Fernbedienungen, da es
+einen speziellen logarithmischen AGC
+(Automatic Gain Control) hat.
+Ähnlich schlecht lief es auch mit einem
+SFH5110-36 (36 kHz-Empfänger, der ist ja
+auch nicht wirklich geeignet für 38 kHzModulation).
+Ich nehme an, dass am Robo-Interface
+ebenfalls ein 36 kHz-Empfänger verbaut
+ist, da der ja für die alte Fernbedienung aus
+30344 mit RC5-Code gedacht war. Deshalb
+
+wundern mich die niedrigen Fehlerraten
+von Ad [6].
+Meine Recherchen haben ergeben, dass die
+von mir verwendete Empfänger-ICs nicht
+gut geeignet waren für das von fischertechnik beim 500881 Control Set verwendete
+Modulationsverfahren mit kurzen InfrarotBursts. Die Ursache für die Fehler liegt in
+dem für das Timing der gesendeten Pulse
+unpassenden Automatic Gain Control
+(AGC) dieser Infrarotempfänger.
+fischertechnik verwendet Bursts mit 16
+Perioden der 38-KHz-Infrarot-Pulse, also
+420µs für einen Burst. Das ist um einiges
+kürzer als die Bursts, die typischerweise in
+TV-Fernbedienungen verwendet werden,
+z. B. 550µs beim NEC-Protokoll.
+Zudem sind bei fischertechnik die Unterschiede in den Pausenlängen zwischen den
+Bursts zum Unterscheiden der Bits mit
+jeweils 100µs extrem knapp ('00' = 380µs
+Pausenlänge, '01' = 480µs, '10' = 580µs,
+'11' = 680µs). Wenn da der Empfänger
+nicht optimal passt, sind Fehler zu erwarten.
+Für kurze Bursts werden Infrarot-Empfänger-IC mit anderer Zeitkonstante für den
+AGC empfohlen, z. B. TSOP34338 mit
+AGC3, die allerdings schwerer zu beschaffen sind als TSOP4838, TSOP4438 und
+TSOP34438 mit AGC4, die für StandardTV-Fernbedienungen geeignet sind. Die
+TSOP34338 bekommt man leider nur bei
+den Distributoren, also Digi-Key, Farnell,
+Rutronik etc.
+Es ist mir gelungen, fünf Samples vom
+TSOP34538 mit AGC5 zu beschaffen, der
+dem TSOP34338 mit AGC3 ähnelt, nur mit
+stärkerer Störunterdrückung für Energiesparlampen. Die Fehlerhäufigkeit liegt
+damit unter 1%.
+Alternativ könnte man noch einen
+TSOP4138 mit AGC1 nehmen (gleiche
+Zeitkonstante wie bei AGC3), die besitzen
+allerdings keine Unterdrückung von Störsignalen durch Fluoreszenzlampen. Von
+mir empfohlene Empfänger-ICs für den
+
+
+
+Infrarotsender aus fischertechnik 500881
+sind solche mit AGC1, AGC3 oder AGC5,
+die jeweils die gleiche Zeitkonstante haben
+und sich nur in der Störunterdrückung von
+Fremdlichtquellen unterscheiden, also z. B.
+
+∂ TSOP 34338 (AGC3)
+∂ TSOP 34538 (AGC5)
+∂ TSOP 4138 (AGC1)
+∂ TSOP 4338 (AGC3)
+
+
+Quellennachweis
+[1]
+
+Uffmann, Dirk: Codes der fischertechnik-Infrarot-Fernsteuerungen.
+ft:pedia 3/2016, S. 35-42.
+
+[2]
+
+fischertechnik: 30344 IR Control Set,
+ft-Datenbank.
+
+[3]
+
+opendcc: RC5 IR-Codes
+
+[4]
+
+sprut: IR-Fernbedienung – der RC-5
+Code.
+
+
+[5]
+
+Holtz, David: Alternative Controller
+(2): Infrarot-Empfänger. 2/2016, S. 60-67.
+
+[6]
+
+Van der Weiden, Ad: IR on RI (or IR
+Control Set and the Robo Interface).
+ft:community-Wiki, 2009.
+
+

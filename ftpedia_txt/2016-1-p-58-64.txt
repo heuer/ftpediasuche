@@ -1,0 +1,306 @@
+
+
+Optik
+
+Laser-Anwendungen (3): Analoger CD-Spieler
+Andreas Gail
+Verbaut in CD-Spielern kamen Laser in den 1980er Jahren massenhaft in die Haushalte.
+Derartiges mit fischertechnik nachzubauen ist sicherlich eine besondere Herausforderung,
+wenn echte CDs abgespielt werden sollen. Hierzu bedarf es einer ausgeklügelten Feinwerktechnik und Elektronik bzw. Software. Ein Modell jedoch ist durchaus möglich, wie nachfolgender Beitrag zeigt. Hierbei ist die Bezeichnung „Analoger CD-Spieler“ ein Wortspiel:
+Einerseits wird ein Modell gezeigt, welches prinzipiell ähnlich zu einem kommerziellen Gerät
+arbeitet, andererseits handelt es sich bei der Tonaufzeichnung im Grunde um ein analoges
+Signal, welches wiedergegeben wird.
+
+Die Idee ist nicht neu
+Im Jahr 1991 wurde bereits ein CD Spieler
+mit fischertechnik nachgebaut [1], um das
+Prinzip zu zeigen. Vermutlich gab es eine
+Reihe weiterer Modellvorschläge.
+
+kann. Im zweiten Teil wird das
+fischertechnik-Modell gezeigt, welches
+diese PDD wieder auslesen kann. Zum
+Aufbau werden zwei Sonderbaugruppen
+benötigt, die in früheren Ausgaben der
+ft:pedia veröffentlicht wurden: ein Punktlaser [2] und ein PWM-Tongenerator [3].
+Um die Erwartungen gleich zu Beginn nicht
+zu hoch zu schrauben: bei dem hier Gezeigten handelt es sich um ein Modell, die
+Tonqualität ist durchaus noch verbesserungsfähig. Dazu am Ende mehr.
+
+PDD-Datenträger erstellen
+
+Experimentierbuch Profi Computing [1]
+
+In der hier vorliegenden Beschreibung
+werden jedoch nicht einfach schwarze und
+weiße Kästchen ausgefüllt und später
+ausgelesen. Deshalb ist die Modellbeschreibung zweigeteilt. Zunächst wird
+eine PC-Software (PDD Creator, PaperDataDisc Creator) [4] beschrieben, die aus
+einem einfachen einstimmigen Musikstück
+einen runden Datenträger erzeugt (PDD,
+Paper Data Disc), der einfach ausgedruckt
+und mit einer Schere ausgeschnitten werden
+
+
+Zunächst muss die Software PDD-Creator
+[4] aus dem Internet beschafft werden. Sie
+wurde mit Microsoft Visual Basic Express
+2010 in einer Windows XP SP3-Umgebung
+entwickelt. Zusätzlich getestet wurde diese
+Software unter Windows 7.
+Nach dem erfolgreichen Programmstart
+erhält man ein Fenster gemäß Abb. 15.
+Allerdings muss zunächst ein passendes
+Musikstück eingegeben bzw. geladen
+werden. Mithilfe der Befehlsschaltflächen
+Play All oder Play Partial kann das
+Musikstück über den Systemlautsprecher
+des PCs überprüft werden. Unter Nutzung
+der Befehlsschaltfläche Create lässt sich
+
+
+Optik
+
+entsprechend der Parameter Number of
+circles (Abbildungsbreite der Datenspur)
+und Single sound length (Tondauer) die
+PDD auf der rechten Fensterhälfte erstellen.
+Die Befehlsschaltflächen Print... bzw. Print
+Now ermöglichen den Ausdruck über einen
+angeschlossenen Drucker. Wird der
+erhaltene kreisrunde Ausdruck ausgeschnitten ist die PDD fertig. Abb. 13
+zeigt ein vollständiges Beispiel.
+
+
+Es sei angemerkt, dass beim späteren
+Abspielen die Drehgeschwindigkeit des
+Plattentellers konstant sein soll. Folglich
+müssen die einzelnen Töne bei gleicher
+Tonlänge am Außenrand der PDD eine
+längere Tonspurlänge haben als am
+Innenrand.
+
+mit aufgelegter PDD
+
+Der PDD Spieler
+Die erstellte PDD wird auf den Plattenteller
+des PDD Spielers aufgelegt und die Leseeinheit darüber geklappt. Das wird in Abb.
+3 bis 5 gezeigt.
+Der Start-Taster beginnt den Abspielvorgang, der Stop-Taster unterbricht ihn.
+Auch durch Öffnen der Leseeinheit werden
+alle Vorgänge abgebrochen, d. h. die
+Motoren sowie der Laser werden abgestellt.
+
+abspielbereit
+
+
+
+
+Detailvorgänge im PDD-Spieler
+Radiale Positionierung
+Mit radialer Positionierung ist die
+Bewegung der Leseeinheit gemeint. Die
+beiden Endpunkte der Positionierung
+werden dabei durch zwei Taster begrenzt,
+wie in Abb. 6 violett dargestellt. Die Tasterbetätigung erfolgt durch den ebenfalls
+violett dargestellten Stift. Ist ein Endpunkt
+gefunden, wird die Positionseinstellung
+mithilfe des Encodermotors durchgeführt,
+d. h. es werden einfach die zuvor einmal
+bestimmten Schritte gezählt, um eine
+gewünschte Position anzufahren.
+
+dem nachfolgenden Abspielen einer PDD
+sollte sich die Raumhelligkeit nicht ändern.
+
+Positionierung des Plattentellers
+
+Startpunkt-Suche
+
+der Leseeinheit
+
+Schwarz-weiß-Kalibrierung
+Der Vorgang der schwarz-weiß-Kalibrierung wird in Abb. 7 gezeigt. Während sich
+der Plattenteller dreht, wird die PDD
+punktuell per Laser beleuchtet. Fällt dieses
+Licht auf eine schwarze Fläche (links), ist
+die Reflexion auf den Fotowiderstand
+geringer als bei der Reflexion von einer
+weißen Stelle (rechts). Um die unterschiedliche Helligkeit im RTXC auswerten zu
+können, muss der zugehörige Eingang auf
+die Betriebsart A5k (analog 5kΩ) eingestellt sein.
+Die Kalibrierungsdauer wurde auf 10 s
+festgelegt. Während dieser Zeit wird der
+insgesamt hellste und auch der dunkelste
+Messwert festgehalten und in je einer
+Variablen für die spätere Verwendung
+gespeichert. Während der Kalibrierung und
+
+
+Die Suche des Startpunktes schließt sich
+direkt an die schwarz-weiß-Kalibrierung
+an. Die PDD wird dabei in Richtung des
+grünen Pfeils gemäß Abb. 8 gedreht; die
+Leseeinheit ist weiterhin auf das schwarzweiß-Kalibrierfeld eingestellt. Mit den
+zuvor ermittelten Werten für schwarz und
+weiß wird nun während der Drehung des
+Plattentellers der Übergang von schwarz
+nach weiß gesucht. Wenn dieser gefunden
+wurde, wird der Plattenteller angehalten
+und wieder etwas zurückgedreht. Die Leseeinheit wird auf den Startpunkt gefahren.
+Nachfolgend kann mit dem Abspielen
+begonnen werden.
+schwarz-weißKalibrierfeld
+Startpunkt
+
+schwarz-weiß-Kalibrierfeld
+
+
+Optik
+
+Elektronisches Getriebe
+
+Modellaufbau
+
+Bei einem Getriebe wird (z. B.) eine Drehbewegung von einem Zahnrad auf ein
+anderes übertragen. Sind die Zahnräder
+unterschiedlich groß, ändert sich die
+Drehgeschwindigkeit. Im vorliegenden Fall
+haben sowohl der Plattenteller als auch die
+Leseeinheit einen eigenen Encoder-Motor.
+Trotzdem soll eine aufeinander abgestimmte Bewegung beider Einheiten
+möglich sein. Insbesondere beim Abspielen
+soll die Leseeinheit möglichst kontinuierlich von rechts nach links verfahren werden,
+während sich der Plattenteller kontinuierlich dreht. So soll sichergestellt werden,
+dass die Leseeinheit den immer enger
+werdenden Tonspuren folgt. Um das zu
+erreichen, wird der Antrieb des Plattentellers eingeschaltet und der zugehörige
+Zählerstand des Encoder Motors beobachtet. Nach 20 Schritten wird die Leseeinheit um 11 Schritte nach links bewegt.
+Ideal wäre es, wenn die Leseeinheit nach
+z. B. zwei Schritten des Plattentellers um
+einen Schritt weiterlaufen würde. Dann
+würde sich ein deutlich kontinuierlicheres
+Laufverhalten ergeben. Hierbei traten bei
+der Verwendung des RTXC jedoch
+Schrittfehler auf.
+
+Nachfolgend einige Bilder zum Modellaufbau:
+
+
+
+Leseeinheit, M2 = Antrieb Plattenteller
+
+
+
+
+Verbesserungspotential
+Dass das hier gezeigte Modell keine
+perfekte CD-Qualität liefern würde, war
+von Beginn an klar. Nachfolgend ein paar
+Anregungen, für ambitionierte fischertechniker. Erfindungen wurden und werden
+schrittweise verfeinert, wie z. B. das Auto
+oder der Computer. So ist es auch hier.
+Plattentellerantrieb
+Der Antrieb des Plattentellers über Zahnräder läuft etwas holprig. Über Gummiräder
+wäre vielleicht eine ruhigere Bewegung
+möglich. Auch die weit verbreitete Riemenlösung wäre denkbar. Allerdings darf es
+dabei keinen Schlupf geben, sonst läuft das
+elektronische Getriebe des Plattentellers
+zum Lesekopf nicht mehr synchron und der
+Lesekopf verlässt die vorgegebene Spur.
+Spurbreiten auf der PDD
+Die verwendeten Spurbreiten könnten mit
+der bereitgestellten Software PDD Creator
+deutlich schmaler erstellt werden, und auch
+der Lesekopf könnte feinere Konturen
+auslesen. Allerdings müsste das elektronische Getriebe dann deutlich feiner
+arbeiten und ein Nachführen des Lesekopfes müsste mit Einzelschritten erfolgen.
+Hierzu ist der verwendete RTXC unter
+Nutzung von RoboPro zu langsam; die
+Nachführung ist nur in Zehnersprüngen
+möglich.
+Tonverfremdung an
+Übergangsstellen
+Wird ein tiefer Ton bei einem schwarzen
+Feld ausgelesen und es folgt eine weiße
+Tonpause, so wird an der Grenze der beiden
+Zustände ein Mischton ausgelesen, d. h. die
+Tonhöhe erhöht sich. Dieses Problem
+könnte verbessert werden, indem der Laser
+stärker senkrecht die PDD beleuchtete und
+dadurch ein kleinerer Lesefleck entstünde.
+Dadurch wäre auch der unerwünschte
+Zwischenzustand kürzer. Weiterhin könnte
+eine höhere Drehgeschwindigkeit des
+Plattentellers das Phänomen vermindern.
+
+Ein anderer Ansatz wäre, die ausgelesenen
+Töne zeitverzögert abzuspielen und den
+unerwünschten Effekt per Software im
+RTXC zu vermeiden.
+Tonverfremdung durch Störlicht
+Die Leseeinheit ist relativ offen; Umgebungslicht kann somit den Lesevorgang
+beeinflussen. Um diesen Effekt zu vermindern, wird zu Beginn des Abspielens eine
+schwarz-weiß-Kalibrierung vorgenommen
+(siehe oben). Zur Verbesserung der
+Situation erscheint es sinnvoll, aus dünner
+schwarzer Pappe eine Störlichtabschottung
+zu ergänzen.
+Tonfrequenz
+Aus Gründen der Rechenkapazität des
+RTXC wurde darauf verzichtet, eine von
+der PDD ausgelesene Helligkeit korrekt in
+eine Note oder Tonfrequenz umzurechnen.
+Wie zuvor gezeigt [3] wäre dazu eine
+Gleitkomma-Funktion höherer Ordnung zu
+berechnen, und das mit maximaler
+Geschwindigkeit.
+Tonerzeugung
+Wenn für den Robo TXT Controller
+zukünftig die Möglichkeit bestünde, eigene
+Töne abzuspielen, könnte die Tonerzeugung insgesamt deutlich vereinfacht
+werden.
+Höhere Rechengeschwindigkeit
+mit C
+Grundsätzlich lässt sich der RTXC in C
+programmieren. Dieses könnte ein Weg
+sein, einige der oben genannten Probleme
+per Software zu lindern.
+
+Referenzen
+[1]
+
+Experimentierbuch Profi Computing.
+Richard Pflaum Verlag GmbH & Co.
+KG München, 1991, ISBN 3-79050625-7. Download vom
+fischertechnik-museum.ch.
+
+[2]
+
+[3]
+
+Gail, Andreas: Einstieg in
+Experimente mit Lasern. 2014-2
+Gail, Andreas: PWM-Tongenerator
+für Robo TX(T) Controller. 2015-4
+
+Optik
+
+[4]
+
+Gail, Andreas: PaperDataDisc
+Creator. ft Community-Download
+
+[5]
+
+Gail, Andreas: Analog CD Spieler.
+youtube-Video
+
+
+
+
+
+
+
+
+

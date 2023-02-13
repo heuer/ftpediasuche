@@ -1,0 +1,332 @@
+
+
+Elektronik
+
+Silberlinge: Original oder Nachbau (Teil 3)
+Peter Krijnen
+Ist der Grundbaustein der Eckstein der Silberlinge? Der Mittelpunkt? Ich glaube schon. Außer
+als Verstärker (mit einem Eingang) kann er auch als Differenzverstärker (mit zwei Eingängen)
+verwendet werden, ebenso als Takt- oder Tongenerator. Er ist einstellbar und bietet einen normalen und einem invertierten Ausgang [1].
+Es würde zu weit führen, hier eine vollständige Funktionsbeschreibung aufzunehmen.
+Hierzu verweise ich auf die Hobbybücher
+aus der Reihe „Experimente + Modelle“ [2].
+Darin werden alle Möglichkeiten des
+Grundbausteins anhand von Versuchen und
+Modellen beschrieben.
+
+In Version 1 (Abb. 65) sehen wir die großen
+dicken braun-roten Widerstände der Typen
+309/12 und 411/15.
+In Version 2 (Abb. 67) sehen wir auch die
+gelblich gefärbten 207/12.
+
+
+Ich selbst besitze zwei Versionen des
+Grundbausteins.
+
+
+Hat das offene Potentiometer (Abb. 64) in
+Version 1 noch einen Wert von 50 kΩ, sind
+es in Version 2 nur noch 25 kΩ. Schaut man
+sich Version 1 (Abb. 66) und Version 2
+(Abb. 68) unten an, gibt es Unterschiede.
+
+
+Elektronik
+
+der ersten Version
+
+der zweiten Version
+
+der ersten Version
+
+der zweiten Version
+
+
+
+
+Auffällig bei beiden Versionen ist jedoch,
+dass noch vier Löcher übrig sind. Die beiden Löcher zwischen den Widerständen R6
+(100 kΩ) und R8 (10 kΩ) sind für die Anschlussdrähte des Potentiometers. Dies ist
+im Layout auf Abb. 69 besser zu sehen. Wir
+sehen hier auch neben Widerstand R14
+(82 Ω) die anderen beiden Löcher.
+Ich weiß nicht, was an dieser Stelle geplant
+war, aber da der Abstand zwischen den Löchern 2,5 mm beträgt, bin ich davon ausgegangen, dass auch hier ein kleiner Kondensator vorgesehen war. Es ist mir nicht klar,
+warum dieser später weggelassen wurde.
+Um etwas Klarheit zu schaffen, habe ich an
+dieser Stelle einen 1nF-Kondensator platziert. Zuerst hatte ich gehofft, dass dieser
+Kondensator die Form des Ausgangssignals
+verbessern würde. Das war nicht der Fall.
+Das Einzige, was mir aufgefallen ist, war,
+in der ersten Version
+
+
+dass sich nach dem Einlöten des 1-nF-Kondensators die eingestellte Frequenz halbierte.
+Das gesamte Schaltbild ist in Bild 70 zu sehen.
+
+Die Basis
+Wenn wir uns jedoch zuerst das zweite
+Schaltbild in Abb. 71 ansehen, sehen wir,
+dass fast alle Anschlüsse und die dazugehörigen Komponenten verschwunden sind.
+Dies ist das eigentliche Schaltbild, die Basis
+des Grundbausteins. Es werden nur die Eingänge E1 und E2 und die Ausgänge A1 und
+A2 benötigt (und natürlich die Stromanschlüsse 3 und 9).
+Die Feedback-Widerstände an den Anschlüssen 5 und 6 sind intern auf der Platine
+mit E2 verbunden. Äußerlich muss man 5
+oder 6 mit einem Draht mit A2 verbinden.
+Warum? Kann der Widerstand auch direkt
+
+Elektronik
+
+zwischen E2 und A2 angeschlossen werden? Gleiches gilt auch für das Potentiometer an Anschluss 7. Dieser ist intern mit E1
+verbunden und muss extern mit A2 oder 9
+verbunden werden. Warum nicht ein separates Potentiometer zwischen E1 und A2 oder 9 anschließen? Und den Kondensator an
+Anschluss 4? Wird ein Kondensator mit einem anderen Wert benötigt, muss dieser auf
+jeden Fall extern zwischen 3 und E1 angeschlossen werden. Warum einen Kondensator (47 µF) mit eigenem Anschluss auf die
+Platine setzen?
+Alle genannten Anschlüsse sind entscheidend für die Funktion des Grundbausteins.
+Die beiden Anschlüsse 1 und 2 sorgen jedoch dafür, dass der Grundbaustein nicht
+mehr funktioniert. Beide Anschlüsse dienen
+zum Sperren des Grundbausteins. Verbindet dazu „1“ mit „9“ oder „2“ mit „3“.
+
+
+
+
+Schließlich gibt es noch den Anschluss „8“.
+Der liegt fast in der Mitte eines Spannungsteilers, der mit zwei Widerständen von
+10 kΩ mit einem Widerstand von 330 Ω dazwischen aufgebaut ist. Anschluss „8“ soll
+anstelle von Anschluss „9“ mit dem Potentiometer auf Anschluss „7“ verbunden werden.
+Auf die obigen Fragen werde ich nie eine
+Antwort bekommen. Fest steht jedoch: Mit
+diesen zusätzlichen Anschlüssen ist der
+Grundbaustein zu einem universellen Baustein geworden. Wer mehr wissen möchte,
+den verweise ich auf die Buchreihe „Experimente + Modelle“ der Fischer-Werke [2].
+
+Frontplatte
+Die Frontplatte des Grundbausteins unterscheidet sich von der der anderen Silberlinge.
+Vermutlich dachte man, dass dies eher den
+universellen Einsatz des Grundbausteins
+widerspiegeln würde. Betrachtet man FlipFlop, Mono-Flop, And-Nand, Or-Nor und
+Dyn.-And, so haben sie alle ein DINSymbol auf ihrer Frontplatte, das die Funktionsweise des Moduls anzeigt.
+Allerdings lässt sich der Grundbaustein
+durchaus mit DIN-Symbolen darstellen.
+Auf Seite 67 des Buches „hobby 4 Band 1“
+aus der Reihe „Experimente + Modelle“
+zeigt Bild 67.2, wie das aussieht.
+Bei meinem ersten Versuch, den Grundbaustein nachzubauen, wollte ich das Potentiometer in der gleichen Position wie beim
+Mono-Flop haben. Allerdings war es dann
+nicht mehr möglich, die Widerstände auf
+der Frontplatte anzuzeigen. Da ich mich daran erinnerte, dass irgendwo in einem Buch
+ein Ersatzschaltbild des Grundbausteins
+stand, fing ich an, die hobby-Bücher durchzusehen. Dann habe ich eine Frontplatte mit
+den auf Seite 67 dargestellten Symbolen gezeichnet. Das Ergebnis ist in Abb. 72 zu sehen.
+
+
+Mit DIN-Symbolen
+
+Am Ende bin ich mit diesem Aufbau nicht
+zufrieden. Warum nicht? Die Verbindungsdrähte zwischen den Anschlüssen 5 oder 6
+und A2 sowie A2 oder 9 und 7 sind ziemlich
+im Weg, um an den Drehknopf des Potentiometers zu gelangen. Die Idee, Anschlussbuchse „3“ wegzulassen, stellte sich im
+Nachhinein als nicht die richtige Idee heraus. Auch die Platzierung von sechs Widerständen unter dem Potentiometer, das ich
+bei den Modulen aus dem „Elektronik“Kasten 30253 gesehen hatte, erwies sich als
+keine so gute Idee: Die Steckachse des Potentiometers wird durch die Widerstände
+behindert. Um das zu beheben, musste ich
+das Potentiometer etwas höher einlöten als
+vorgesehen.
+Also bleibe ich wieder beim ursprünglichen
+Aufbau.
+
+
+Elektronik
+
+
+Nachbau
+Auf Abb. 73 sehen wir alle zehn Versionen,
+die ich von 1983 bis heute hergestellt habe.
+Davon haben nur vier überlebt.
+Nachbau 1 (Abb. 74)
+Beim Auslöten der Platinen und späteren
+Einlöten stellte sich heraus, dass sich eine
+einzelne Lötinsel von der Platine gelöst
+hatte. Deshalb habe ich sofort eine neue Pla-
+
+tine entworfen. Diese hat die gleichen Umrisse wie das Original und die Löcher haben
+einen Durchmesser von 2,2 mm. Bei diesem
+Design habe ich das Potentiometer ersetzt
+und das Lämpchen durch eine gelbe 5-mmLED ersetzt. Wer jedoch das alte Potentiometer weiterverwenden will oder muss,
+braucht nur die Anschlussdrähte zu verlängern. Für die Transistoren habe ich die
+Kombination BC238 + BC308 oder BC547
++ BC557 verwendet.
+
+
+
+„+“ und „-“ zwischen den Modulen zu vereinfachen.
+
+für das Original-Silberling-Gehäuse
+
+Nachbau 2 (Abb. 75)
+Da ich selbst neue 45 · 75 · 30 mm-Gehäuse
+entworfen und gedruckt hatte, konnte ich
+die Komponenten freier platzieren. Ich habe
+das 12 · 8 mm-Raster verwendet, in dem
+sich die Anschlussbuchsen im Original befinden. Auch die Position des Potentiometers und der gelben 5-mm-LED standen
+fest. Da ich für mein 4575-Gehäuse keine
+Zapfen verwende, sondern nur Nuten
+(Abb. 76) für die Verbindungen zu anderen
+Modulen, war weniger Platz auf der Platine,
+um die anderen Komponenten zu platzieren.
+Diese mussten nun alle in den Kreis der Anschlussbuchsen kommen. Das hat jedoch
+nicht ganz geklappt. Die Abmessungen der
+Platine betragen 40 · 70 mm.
+Im Vergleich zum Original habe ich den
+„+“-Anschluss „9“ in die rechte obere Ecke
+verschoben. Dadurch mussten beide A1Anschlüsse um eine Position nach unten
+verschoben werden. An der alten Stelle von
+„9“ habe ich jetzt einen zweiten Anschluss
+„0“ vorgesehen, um die Verbindung von
+
+für das 4575-Gehäuse
+
+
+
+Elektronik
+
+130961 scheint „svr“ zu sein. Deshalb habe
+ich ein weiteres 60 · 60 mm-Gehäuse entworfen (Abb. 79), das ungefähr so aussieht
+wie das 4575. Allen gemeinsam ist, dass sie
+28 mm hoch sind und der Deckel 2 mm
+hoch ist. Die Abmessungen der Platine betragen 56 · 56 mm und die Bundhülsen sind
+im ¼-Zoll-Raster: 6,35 · 6,35 mm. Alle
+Komponenten befinden sich nun innerhalb
+des Kreises der Anschlüsse.
+
+4575-Gehäuse
+
+Nachbau 3 (Abb. 78)
+
+
+
+Nachbau 3 war ursprünglich für die graue
+60er-Kassette 35359 gedacht. Natürlich
+kann man auch die gelbe Version 32076 oder die rote Version 130961 verwenden.
+Leider sind 35359 und 32076 „nml“ und
+
+60er-Kassette (32076)
+
+Bei Nachbau 1 befinden sich noch 15 Hülsen auf der Platine. In Nachbau 2 sind es
+wegen der zweiten „0“ 16. In Nachbau 3
+
+
+
+sind es 22. In dieser Version habe ich jetzt
+vier „+“-Anschlüsse und auch vier „0“-Anschlüsse (tatsächlich fünf, denn Anschluss
+„3“ ist natürlich auch eine „0“).
+Für die LED habe ich jetzt eine gelbe 3mm-Version verwendet. Auch eine 5-mmVersion ist möglich. Man muss dann nur
+das Loch im Deckel auf 5 mm aufbohren.
+Nachbau 4 (Abb. 81)
+Eine noch kleinere Version des Silberlings
+sollte in das Batteriefach 32263 eingebaut
+werden. Das E-Tech- oder Elektronik-Modul diente als Vorbild. Dies bedeutete eine
+Halbierung der Platine-Oberfläche. Die
+Bundhülsen befinden sich am Rand der Platine (Abb. 82). Dadurch war es nicht mehr
+möglich, Bauteile und Leiterbahnen außerhalb des Kreises aus Anschlüssen zu platzieren. Die 16 Bundhülsen liegen in einem
+0,4 · 0,28 Inch-Raster: 10,16 · 7,112 mm.
+
+im Batteriegehäuse 32263: Die Leiterbahnen
+haben eine Goldbeschichtung.
+
+Batteriegehäuse 32263
+
+für das Batteriegehäuse 32263
+
+
+Ich habe es geschafft, alle Komponenten
+auf der Platine zu platzieren. Für Nachbau
+1, 2 und 3 konnte ich noch eine Kupferschicht verwenden, aber für Version 4 war
+es notwendig, auch Leiterbahnen auf die
+Oberseite der Platine zu verlegen (Abb. 83).
+Wie ich in Teil 1 [3] erwähnt habe, gibt es
+
+
+Elektronik
+
+in Version 4 kleine Widerstände vom Typ
+204, deren Anschlussdrähte im Raster
+0,2 Zoll (5,08 mm) gebogen sind. Leider
+konnte ich keine 204-Version für den
+2.7 MΩ finden. Deshalb musste ich dafür
+einen 207/10 nehmen.
+Nachbau 5 (Abb. 84)
+
+
+Darf es kleiner sein?
+Ja, und das ist auch möglich. Von der Verwendung der Bundhülsen muss man sich jedoch verabschieden. Dies gilt auch für die
+verdrahteten Komponenten. Alles muss
+jetzt in SMD-Technik gebaut werden.
+Es ist aber eine Kunst, mit SMD-Bauteilen
+zu arbeiten, besonders wenn sie sehr klein
+sind. In kommerziellen Produkten findet
+man hauptsächlich die kleinsten Versionen.
+Widerstände vom Typ 0603 sind nur 1,6 ·
+0,8 mm groß. Heute gibt es sogar noch viel
+kleinere. Der etwas größere Typ 0805 ist 2,0
+· 1,25 mm groß. Um auch weniger Geübten
+den Nachbau einigermaßen zu ermöglichen,
+habe ich mich für den etwas größeren Typ
+1206 entschieden. Mit Abmessungen von
+3,2 · 1,6 mm sind diese noch überschaubar.
+
+Grundbaustein als Shield in SMD Technik
+
+des Shields
+
+Da ich im fischertechnik-Sortiment kein
+passendes Gehäuse finden konnte, habe ich
+mich entschieden, auf Gehäuse zu verzichten. Für die Verbindungen habe ich angefangen, „Male Header“ zu verwenden.
+Die Widerstände und der 1-nF-Kondensator
+sind vom Typ 1206. Als Transistoren eignen sich BC848 und BC858, beide im
+SOT23-Gehäuse. Für die LED habe ich allerdings noch eine 3-mm-Version verwendet. Da die SMD-Widerstände niedrig sind,
+konnten sechs Widerstände unter dem Potentiometer platziert werden.
+Wie bei der Platine von Nachbau 4 war auch
+für Nachbau 5 eine doppelseitig durchmetallisierte Platine erforderlich (Abb. 87).
+Letztlich ist ein 20 · 55 mm-Steckmodul
+entstanden, das direkt auf ein Steckbrett gesteckt werden kann.
+Darf es noch kleiner sein? Zweifellos. Allerdings darf man sich fragen, ob das noch
+sinnvoll ist. Das Ergebnis muss überschaubar, benutzerfreundlich und praktikabel
+sein.
+
+
+Auf meiner Thingiverse-Seite [4] gibt es
+noch viele weitere Bilder zu sehen.
+
+
+
+
+Das war‘s für Teil 3. In Teil 4 geht es um
+alle Relais.
+
+Referenzen
+[1]
+
+
+Fischer-Werke: fischertechnik h4 G
+Grundbaustein. Auf docs.fischertechnikclub.nl.
+
+[2]
+
+Fischer-Werke: fischertechnik
+hobby 4 Band 1. Begleitbuch auf
+docs.fischertechnikclub.nl.
+
+[3]
+
+Peter Krijnen: Silberlinge: Original
+oder Nachbau (Teil 1). 1/2021, S. 80–93.
+
+[4]
+
+Peter Krijnen auf Thingiverse.
+
+

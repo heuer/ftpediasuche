@@ -1,0 +1,566 @@
+
+
+Projekt
+
+HP-GL-Plotter (Teil 2)
+Dirk Fox
+Im ersten Teil des Beitrags wurde die Konstruktion der „Hardware“ des HP-GL-Plotters vorgestellt [1]. In diesem zweiten Teil folgt eine Erläuterung des Steuerprogramms – der
+„Plotter-Software“ – in Robo Pro. Sie erlaubt das Einlesen und Plotten von (leicht modifizierten) HP-GL-Dateien.
+Um diese Zielsetzung zu erfüllen, musste
+die Implementierung in Robo Pro erfolgen,
+auch wenn damit bestimmte Einschränkungen und Geschwindigkeitseinbußen verbunden waren.
+
+
+Bei der Entwicklung des Steuerungs-Programms für den HP-GL-Plotter (Abb. 1)
+verfolgte ich dieselben Zielsetzungen wie
+bei der Plotter-Hardware [1]: Das Programm sollte
+
+Als Format für die einlesbaren Grafikdateien wählte ich die Plotter-Kommandosprache HP-GL/2 (Hewlett-Packard Graphics Language) [2], eine sehr intuitive
+und übersichtlich strukturierte Sprache für
+Stiftplotter, die sich Anfang der 90er Jahre
+als Standard-Format für Plot-Dateien von
+Vektorgrafiken durchsetzen konnte.
+
+keine Spezialinstallationen oder besondere Programmierkenntnisse voraussetzen;
+möglichst klein, einfach und verständlich sein, also mit wenigen, gut strukturierten Funktionen auskommen;
+leicht an Varianten oder auch ganz andere Plotter-Hardware angepasst werden können;
+ein möglichst standardisiertes Vektorgrafik-Dateiformat einlesen und verarbeiten können und
+insbesondere hinsichtlich der Plot-Geschwindigkeit optimiert sein.
+
+
+Noch heute können nicht nur viele GrafikProgramme Vektorgrafiken als HP-GL-Dateien exportieren, sondern es finden sich
+auch zahlreiche Tools im Internet, die
+
+andere Vektorgrafik-Formate, wie beispielsweise das Drawing Format (.dwg),
+das Drawing Interchange Format (.dxf)
+oder das Design Web Format (.dwf) in
+eine .hpgl- bzw. .plt-Datei konvertieren.
+
+HP-GL
+Geschichte
+HP-GL wurde von Hewlett-Packard als
+Sprache zur einheitlichen Ansteuerung der
+zahlreichen Plotter-Modelle entwickelt.
+Die älteste mir bekannte Referenz ist das
+„HP-GL Programmer’s Reference Manual“
+aus dem Jahr 1984 [3], aber die Ursprünge
+von HP-GL reichen in die frühen 70er
+Jahre zurück. Die erste Version von HPGL stammt von Norm Johnson und Dale
+Shapper; sie diente zur Ansteuerung der
+Flachbett-Plotter-Modellfamilie HP 9872,
+den ersten Mehrfarb-Plottern (Abb. 3).
+
+(Quelle: www.hpmuseum.net)
+
+Der Befehlsumfang von HP-GL, der ersten
+„High-Level“-Plotter-Sprache überhaupt,
+wurde in den folgenden Jahren parallel zur
+technischen Entwicklung der Hardware
+erweitert, was allerdings zu Inkompatibilitäten mit älteren Plottern führte. Als die
+16-bit-Adressierung der Firmware, die
+Koordinaten mit einem Maximalwert von
+32.767 unterstützte, an ihre Grenzen stieß,
+implementierte HP 1990 eine neue 32-bitFirmware und spezifizierte dazu – als Teil
+von Version 5 der Printer Command Lan-
+
+Projekt
+
+guage (PCL) zur Ansteuerung des LaserJet
+III – eine vereinheitlichte Sprachversion:
+HP-GL/2. Diese Spezifikation setzte sich
+in den 90er Jahren als Industriestandard
+durch und wurde zu einem StandardAustauschformat für Vektorgrafiken.
+Struktur
+Die Spezifikation von HP-GL/2 umfasst
+insgesamt 63 Befehle [4]. Sie lassen sich
+fünf funktionalen Gruppen zuordnen: Konfigurationsbefehle,
+Vektorgrafik-Kommandos, Vieleck-Befehle, SchriftzeichenKommandos und Linien- bzw. FüllattributBefehle.
+Alle Befehle haben denselben Aufbau: Sie
+beginnen mit einem aus zwei Großbuchstaben bestehenden Befehls-Kürzel, gefolgt von durch Kommata getrennten Parametern (z. B. den Koordinaten eines
+Punkts oder dem Radius eines Kreises).
+Abgeschlossen wird jedes Kommando
+üblicherweise durch ein Semikolon.
+Alle Plotter-Befehle orientieren sich an
+einem XY-Koordinatensystem, dessen
+Nullpunkt (0, 0) bei der Initialisierung des
+Plotters auf die äußerste linke untere Ecke
+der Zeichenfläche gesetzt wird; dort wird
+auch der Stift positioniert. Das Koordinatensystem kann durch HP-GL-Kommandos
+auf der Zeichenfläche verschoben, an den
+Koordinatenachsen gespiegelt und um den
+Nullpunkt gedreht werden.
+Der Ausgangspunkt für den jeweils nächsten Plot-Befehl wird als Current Active
+Position (CAP) mitgeführt. Der Status des
+Stifts – „oben“ oder „unten“ – wird ebenfalls global gehalten (Pen Status), von ihm
+leitet sich ab, ob ein Punkt oder eine Linie
+geplottet oder lediglich der Stift bewegt
+wird. Die Schrittweite (Plotter Unit) von
+HP-GL-Plottern liegt bei einem 40stel
+Millimeter (0,025 mm).
+Auf eine DIN A4-Seite passen damit
+Grafiken mit einer Ausdehnung von etwa
+16.000 x 11.000 Punkten. Durch Skalie5
+
+
+
+rungskommandos kann die Schrittweite für
+jede der Achsen in einem festen Verhältnis
+vergrößert und so die Auflösung der Grafik
+verändert werden. Solcherart angepasste
+Schrittweiten werden User Unit genannt.
+
+GL-konvertierte Vektorgrafiken, die meist
+auf eine DIN A4-Fläche zugeschnitten
+sind, angepasst werden.
+
+Minimaler Funktionsumfang
+
+Unser Hauptprogramm besteht im Wesentlichen aus einem Parser für die fünf HPGL-Kommandos aus Tabelle 1 und ihre
+jeweiligen Parameter. Die Realisierung
+eines solchen Parsers in Robo Pro ist allerdings aus mehreren Gründen nicht ganz
+einfach:
+
+Einige HP-GL-Befehle haben bei unserem
+einfachen Stiftplotter keine Funktion und
+sind daher verzichtbar, wie beispielsweise
+Select Pen (SP), Pen Width (PW) oder
+Velocity Select (VS). Viele weitere Kommandos benötigen wir für das Zeichnen
+einfacher Vektorgrafiken nicht, wie z. B.
+die Kommandos für geometrische Formen
+(Vielecke, Kreise, Kreissegmente etc.),
+Ausfüllkommandos, die Auswahl von
+Linientypen oder das Plotten von Schriftzeichen – mehr dazu in der nächsten Folge
+des Beitrags.
+
+Funktion
+
+Param.
+
+Kürzel
+
+Nr.
+
+Verzichten wir auch auf die Möglichkeit,
+eine Grafik zu skalieren oder zu spiegeln,
+genügen fünf HP-GL-Kommandos, um die
+meisten (insbesondere aus anderen Dateiformaten in HP-GL konvertierten) Vektorgrafiken zu plotten (Tabelle 1).
+
+
+IN
+
+Initialize
+
+
+
+PU
+
+Pen Up
+
+
+
+PD
+
+Pen Down
+
+
+
+PA
+
+Plot Absolute
+
+
+
+PR
+
+Plot Relative
+
+
+Tab. 1: Die fünf wichtigsten HP-GL-Befehle
+
+Die Auflösung des HP-GL-Plotters mit
+Encodermotoren ist mit einer Plotter Unit
+von 0,0208 mm etwas höher als die des
+HP-GL-Standards [1]. Konstruktionsbedingt bleibt beim Plotten auf DIN A5
+jedoch ein Rand, sodass die maximale
+Größe einer Vektorgrafik bei 7.900 x 5.500
+Punkten liegt. An diese Größe müssen HP-
+
+
+HP-GL-Parser
+
+Robo Pro kann Daten nur im csv-Format (Comma-Separated Values) in ein
+(einspaltiges) Listenelement einlesen. In
+HP-GL-Dateien stehen Kommandos
+und Parameter (Radius, X- oder Y-Koordinate) jedoch meist ohne Trennzeichen nebeneinander. Um in Listenelemente importiert werden zu können,
+müssen die Werte durch Kommata getrennt und mit Titelzeile zeilenweise
+untereinander stehen.
+Robo Pro kann in einem Listenelement
+nur Gleitkomma- oder ganze Zahlen
+verarbeiten. Die HP-GL-Befehlskürzel
+(Tabelle 1) können daher nicht eingelesen werden.
+Die Spezifikation von HP-GL lässt
+Notationsvarianten zu. So können die
+Befehle durch Semikolon oder Zeilenumbruch voneinander getrennt werden,
+manchmal wird gar kein Trennzeichen
+verwendet. Die Parameter können mit
+oder ohne trennendes Komma angegeben werden; man findet auch Dateien,
+in denen bei wiederholten PA- oder PRKommandos die Koordinatenangaben
+ohne Befehlskürzel aufeinander folgen.
+Daher muss eine HP-GL-Datei zunächst
+per Hand so „normiert“ und umformatiert
+werden, dass sie von dem Robo Pro-Parser
+eingelesen und interpretiert werden kann:
+Schritt 1: Einfügen von Leerzeichen
+(oder eines anderen Trennzeichens)
+
+zwischen Befehlskürzel und Koordinaten, Ergänzung fehlender Befehlskürzel,
+Löschung nicht unterstützter HP-GLKommandos, Zeilenumbruch vor jedem
+HP-GL-Befehl.
+
+Projekt
+
+Listenelement „Befehl“ Wert für Wert
+ausgelesen und das entsprechende HP-GLKommando als Unterprogramm, ggf. mit
+den Listenelementen „X“ und „Y“ als
+Parameter, aufgerufen wird (Abb. 4).
+
+Schritt 2: Einlesen der Datei in Excel,
+mit Leerzeichen, Komma und Semikolon als zulässigen Trennzeichen (drei
+Spalten).
+Schritt 3: Hinzufügen einer Titelzeile
+(„Befehle“, „X“, „Y“) und Ersetzen der
+Befehlskürzel durch Ziffern: IN
+0,
+PU
+1, PD 2, PA 3, PD
+4.
+Schritt 4: Normierung der Koordinaten,
+sodass „0“ der kleinste Wert ist und
+Einfügen des Parameters „0“ in leere
+Zellen. Falls die größten Werte für X
+oder Y über die Zeichenfläche hinaus
+ragen, müssen die Koordinaten skaliert
+(durch einen geeigneten Faktor dividiert
+und gerundet) werden.1
+Schritt 5: Speicherung der Tabelle als
+csv-Datei ‚HPGL.csv’ mit Kommata als
+Trennzeichen zwischen den Werten der
+Spalten (andere Trennzeichen müssen
+ggf. mit einem Editor ersetzt werden).
+Die Normierung und Umformatierung lässt
+sich auch durch ein Konvertierungsprogramm auf dem PC erledigen, das eine
+gegebene HP-GL-Datei einliest, die Koordinaten normiert und schließlich Befehle
+und Parameter im csv-Format abspeichert.
+Wegen der uneinheitlichen Syntax der HPGL-Befehle ist das allerdings etwas knifflig – und sei dem geübten Leser als kleine
+Programmierübung überlassen.
+Der HP-GL-Parser, unser Hauptprogramm,
+ist lediglich eine Schleife, in der das
+
+
+Hier ist Spielraum für Verbesserungen: Die
+Normierung der Koordinaten lässt sich natürlich
+auch in Robo Pro implementieren, indem man
+aus Maximum und Minimum der Koordinaten
+den Skalierungsfaktor bestimmt und damit die
+Koordinatenangaben multipliziert.
+
+
+In den Eigenschaften der Listenelemente
+muss dazu das Verzeichnis eingestellt
+werden, in dem Robo Pro die einzulesende
+csv-Datei findet (Abb. 5).
+Gegebenenfalls muss auch die zulässige
+Maximalgröße angepasst werden, falls die
+csv-Datei mehr als die voreingestellten
+6.000 Zeilen enthält, ebenso wie der
+Schleifenzähler MaxIndex.
+
+
+
+
+werden. Beide Werte können auch kleiner
+Null sein. Zur Vereinfachung des Programms arbeiten alle Befehle immer nur
+mit den Absolutwerten DeltaXabs und
+DeltaYabs. In welche Richtung eine Bewegung dann tatsächlich erfolgt, legen die
+beiden Vorzeichenvariablen RichtungX
+und RichtungY fest (1 = positiv, 0 = negativ). Von diesen Variablen hängt ab, in
+welche Richtung sich die Motoren drehen.
+Bei meinen Tests musste ich feststellen,
+dass die Impulszählung der Encodermotoren im Online-Modus reproduzierbar
+und abhängig vom verwendeten Motor
+fehlerhaft ist. Die Zahl der Fehler verringerte sich, wenn ich die Motoren langsamer laufen ließ. Daher führte ich zwei
+weitere Variablen ein, TempoX und
+TempoY, über die die Geschwindigkeit der
+Encodermotoren gesteuert werden kann.
+
+Variablen und Konventionen
+Für die Ansteuerung des Plotters sind zwei
+Variablen und ein Status-Wert (Flag) von
+zentraler Bedeutung: die X- und Y-Koordinate (X, Y) der aktuellen Position (CAP)
+des Schreibkopfes und der Stiftstatus
+PenUp (1 = richtig, 0 = falsch, also „Stift
+unten“). Sie werden als globale Variablen
+mitgeführt und beim Start initialisiert:
+(X, Y) = (0, 0) und PenUp = 1.
+Gemäß dem HP-GL-Standard ist die linke
+untere Ecke der Zeichenfläche des Plotters
+der Punkt (0, 0), an den der Zeichenstift
+bei der Initialisierung bewegt wird. Der
+maximale X- und der maximale Y-Wert
+werden als konstanter Punkt (XMax,
+YMax) im Programm festgelegt. Bei Verwendung der Encodermotoren liegt die
+rechte obere Ecke der Zeichenfläche des
+HP-GL-Plotters im Punkt (7.900, 5.500).
+Ausgehend von der jeweils aktuellen Position des Schreibkopfes (X, Y) können beliebige Punkte im Abstand DeltaX und
+DeltaY (relative Koordinaten) angesteuert
+
+HP-GL-Kommandos
+Version 1 der Plotter-Software2 beschränkt
+sich auf fünf Kommandos: IN, PU, PD, PA
+und PR, als Unterprogramme realisiert,
+sowie drei Hilfsfunktionen.
+Die Implementierung der Befehle IN, PU
+und PD kann direkt gemäß der HP-GLSpezifikation erfolgen. Für das Plotten
+einer Linie (PA, PR) benötigt man wegen
+der hohen Auflösung des Plotters hingegen
+einen cleveren Algorithmus, damit der
+Plotter auch komplexere Grafiken in vertretbarer Zeit erzeugen kann.
+IN – Initialize
+Der Befehl Initialize (IN) bewegt den
+Schreibkopf mit angehobenem Stift an den
+Ausgangspunkt (0, 0) und setzt die Variablen X und Y (CAP) auf den Wert 0. Hier
+
+
+Die Plotter-Software inklusive zahlreicher Beispiel-HP-GL-Dateien findet sich im DownloadBereich der ft-Community:
+http://www.ftcommunity.de/data/downloads/rob
+opro/steuerprogramm_hpglplotter_v1.1.zip
+
+kommen die Endlagentaster zum Einsatz:
+Wenn die Taster gedrückt sind, werden die
+zugehörigen Encodermotoren gestoppt.
+PU, PD – Pen Up, Pen Down
+Die Befehle PenUp (PU) und PenDown
+(PD) heben bzw. senken den Schreibstift
+auf das Blatt. Die Stiftposition wird in der
+Variablen PenUp vermerkt.
+PA, PR – Plot Absolute, Plot
+Relative
+Die beiden HP-GL-Befehle Plot Absolute
+(PA) und Plot Relative (PR) bewegen den
+Plotterstift mit angehobenem oder gesenktem Stift zum Zielpunkt (ZielX, ZielY). An
+das Kommando PA werden die absoluten
+Koordinaten, an PR der X- und Y-Abstand
+von der Position des Schreibkopfs (DeltaY,
+DeltaY) übergeben. Es gilt also: ZielX =
+X + DeltaX und ZielY = Y + DeltaY.
+Das Unterprogramm PA berechnet den Xund Y-Abstand (DeltaX, DeltaY) des Zielpunkts von der aktuellen Position und ruft
+mit diesen Parametern PR auf. Die Ansteuerung des Zielpunkts übernimmt also
+immer das Unterprogramm PR.
+Das effiziente Zeichnen von schräg verlaufenden Verbindungslinien ist allerdings
+keineswegs so einfach, wie man auf den
+ersten Blick meinen könnte. Denn der
+intuitive Ansatz, zu jedem X-Wert den
+zugehörigen Y-Wert über den Steigungsfaktor der Verbindungslinie zu berechnen,
+erfordert für jeden Punkt eine Fließkomma-Multiplikation. Bei unserem Plotter
+summiert sich der Aufwand wegen der
+hohen Auflösung auf fast 500 Multiplikationen pro Zentimeter – ein nicht unerheblicher Rechenaufwand.
+Zunächst können die Einzelpunktberechnungen in drei Sonderfällen entfallen:
+Soll der Schreibkopf mit angehobenem
+Stift (Pen Up = 1) zum Zielpunkt bewegt werden, kann man beide Encoder-
+
+Projekt
+
+motoren gleichzeitig starten. Das übernimmt die Hilfsfunktion Directly.
+Ist einer der beiden Abstände DeltaX
+oder DeltaY gleich Null, muss nur ein
+Encodermotor gestartet werden. Das ist
+Aufgabe der Hilfsfunktionen Upward
+bzw. Rightward.
+Ist DeltaX = DeltaY, muss der Schreibkopf auf einer diagonalen Linie bewegt
+werden. Dazu werden die beiden Encodermotoren von der Hilfsfunktion
+Diagonal synchron mit der Impulszahl
+DeltaX gestartet.
+Auch in allen anderen Fällen lässt sich die
+Fließkommamultiplikation mit einem cleveren Algorithmus vermeiden: Bereits
+1962 entwickelte der IBM-Programmierer
+Jack E. Bresenham für die Darstellung von
+Grafiken auf einem Computer-Bildschirm
+ein heute als Bresenham-Algorithmus
+bekanntes Verfahren [5, 6].
+
+Bresenham-Algorithmus
+Die Idee von Bresenham war, die Multiplikation durch schnelle Additionen und Subtraktionen zu ersetzen, indem man den
+Schreibkopf immer einen Schritt in Richtung der „längeren“ Koordinate bewegt
+und dabei die Abweichung von der exakten
+Schräglinie in einem Fehlerwert mitführt.
+Wird dieser Fehler zu groß, erfolgt ein
+Schritt in die orthogonale Richtung.
+Etwas „algorithmischer“ ausgedrückt: Soll
+eine Linie zu einem Punkt mit den relativen Koordinaten (DeltaX, DeltaY) gezeichnet werden, und sei |DeltaX| > |DeltaY|,
+wird zunächst der Fehlerwert Fehler :=
+|DeltaX| gesetzt.
+Dann wird der Schreibkopf DeltaX Schritte
+in X-Richtung bewegt, und nach jedem
+Schritt der Fehler korrigiert: Fehler :=
+Fehler – |DeltaY|. Ist Fehler < 0, erfolgt
+ein Schritt in Y-Richtung und zum Fehlerwert wird |DeltaX| hinzu addiert: Fehler :=
+Fehler + |DeltaX|.
+
+
+
+
+Für jeden Punkt fallen statt einer Fließkommamultiplikation nur ein bis zwei
+Ganzzahladditionen bzw. -subtraktionen
+und Vergleiche an. Hier der Pseudo-Code:
+Fehler := DeltaX/2;
+Zähler := DeltaX;
+Solange Zähler > 0
+{
+Zähler := Zähler – 1;
+
+}
+
+X := X + 1;
+Fehler := Fehler – DeltaY;
+Wenn Fehler < 0
+{
+Y := Y + 1;
+Fehler := Fehler + DeltaX;
+}
+
+Abbildung 5 zeigt meine Robo Pro-Implementierung des Bresenham-Algorithmus’.
+
+
+
+Projekt
+
+Beispiel-Plots
+Schließen möchte ich mit ein paar Kostproben. Die zugehörigen HP-GL- und csvDateien finden sich zusammen mit dem
+Robo Pro-Programm im Download-Bereich der ft-Community.
+
+
+
+Der zweite Plot zeigt das Große Landeswappen des Landes Baden-Württemberg.
+Die Plot-Datei enthält 2.200 Plot-Befehle,
+die ca. 137.000 Impulse in X- und 116.000
+Impulse in Y-Richtung an die Encodermotoren schicken. Als Stift verwendete ich
+eine (klecksfreie) Kugelschreibermine.
+
+Zunächst ein Klassiker: Die „Columbia“.
+Diese Grafik war in den 80er Jahren das
+Standard-Testbild der HP-Plotter und –PCs
+(Abb. 6). Inzwischen gibt es die Grafik
+auch als freie HP-GL-Datei:
+
+
+
+Die Datei umfasst 2.260 Plot-Befehle. Die
+Encodermotoren meines HP-GL-Plotters
+mussten insgesamt ca. 145.000 Impulse in
+X- und 115.000 Impulse in Y-Richtung
+abarbeiten; der gesamte Plot dauerte ca. 3
+Stunden. Bei diesem Plot habe ich eine
+Ball-Pen-Mine mit einer sehr feinen Spitze
+verwendet. Leider kleckst sie wegen der
+niedrigen Zeichengeschwindigkeit etwas.
+
+Weitere HP-GL-Dateien finden sich zusammen mit dem Steuerprogramm zum
+Download in der ft:c oder lassen sich aus
+frei verfügbaren dxf- und dwg-Dateien
+erzeugen. Sehr einfach geht das mit dem
+freien Tool BOcnc von Werner Stratmann,
+das einen HP-GL-Export (.plt) anbietet.
+
+
+
+
+
+Grenzen von RoboPro
+Tatsächlich bringt die Entscheidung für
+Robo Pro als Programmierumgebung einige Einschränkungen mit sich.
+Auf die Beschränkung des csv-Imports auf
+ganze Zahlen und Gleitkommazahlen (mit
+Kommata als Trennzeichen) habe ich
+bereits hingewiesen. Auch die Listengröße
+ist limitiert: Aufgrund der 16 bit-Arithmetik stehen für den Index in Robo Pro
+(wie bei den ersten HP-Plottern) nur 15 Bit
+zur Verfügung, die Liste kann daher
+maximal 32.768 (215) Werte enthalten.
+Damit ist die Komplexität einer Zeichnung
+auf 32.768 Schreibkopf-Bewegungen
+begrenzt. Aus demselben Grund können X
+und Y auch nie größer als 32.767 werden –
+die Zeichenfläche darf damit maximal
+32.767 x 32.767 Impulse (Motorschritte)
+groß sein.
+Eine weitere Restriktion – wahrscheinlich
+verursacht durch einen Bug im Compiler –
+ist eine Fehlermeldung beim Übersetzen
+des Programms für den Download zum
+TX-Controller (der Fehler wird derzeit von
+fischertechnik analysiert). Daher funktioniert das Programm bei mir nur im OnlnieModus.
+Schließlich „verschluckten“ sich meine
+Encodermotoren im Online-Modus: Keiner
+meiner insgesamt fünf Encodermotoren
+arbeitete 100% zuverlässig; jeder erzeugt
+bei größeren Plots einen reproduzierbaren
+Versatz, der weder durch eine fehlerhafte
+Datenübergabe an den TX noch durch
+mechanisches Spiel im Plottermodell zu
+erklären ist. Bei der Zuverlässigkeit der
+Encodermotoren gibt es also offenbar
+Mängel, von denen auch im Zusammenhang mit anderen Modellen berichtet
+wurde.
+Es könnte allerdings sein, dass das Problem im Download-Modus nicht auftritt –
+das konnte ich jedoch aus den genannten
+Gründen nicht testen. Immerhin konnte ich
+– wie schon erwähnt – den Umfang der
+
+Impulsfehler senken, indem ich die
+Geschwindigkeit der Motoren verringerte –
+ein weiteres Indiz, dass die Encodermotoren den Versatz verursachen.
+Trotz dieser Einschränkungen ist das Ergebnis dennoch beachtlich: Mit weniger als
+170 (unveränderten) fischertechnik-Bausteinen plus einem TX Controller lässt sich
+ein äußerst präziser HP-GL-Plotter konstruieren und über Robo Pro ansteuern.
+Wer den HP-GL-Plotter nachbauen möchte, findet außer den Modellfotos in der ftCommunity inzwischen auch eine mit dem
+fischertechnik Designer erstellte Konstruktionsdatei, unterteilt in sieben Bauphasen,
+einschließlich einer Bauteilliste.
+Aber noch ist nicht Schluss: In Teil 3 des
+Beitrags wird die HP-GL-Steuersoftware
+unter anderem um leistungsfähige Vektorgrafik-Befehle erweitert.
+
+Quellen
+[1]
+
+Fox, Dirk: HP-GL-Plotter (Teil 1),
+ft:pedia 4/2011, S. 26-34.
+
+[2]
+
+Hewlett-Packard: The HP-GL/2 and
+HP RTL Reference Guide. A Handbook for Programm Developers.
+Hewlett Packard, Second Edition,
+September 1996.
+
+[3]
+
+Hewlett-Packard: HP-GL Programmer’s Reference Manual, 1984 .
+
+[4]
+
+PCL 5 Printer Language Technical
+Reference Manual, Part II: An Introduction to HP-GL/2 Vector
+Graphics. Hewlett Packard, 1999.
+
+[5]
+
+Bresenham, Jack E.: Algorithm for
+computer control of a digital plotter.
+IBM Systems Journal 4, 1 (1965), S.
+25-30.
+
+[6]
+
+Wikipedia: Bresenham-Algorithmus.
+
+

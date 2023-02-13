@@ -1,0 +1,440 @@
+
+
+Modell
+
+Flipper mit Elektronik-Modul-Steuerung
+Claus Ludwig
+Die Idee einen Flipper zu bauen gab es schon seit mehreren Jahren bei mir. Sie reifte mit den
+verschiedenen Modellen, die in der ftcommunity.de gezeigt wurden. Bei allem gab es aber für
+mich ein persönliches Problem: Alle meine Versuche mit der ROBO-PRO Software zu arbeiten,
+waren bisher erfolglos. Daher hatte ich mich schon 2019 mit einem fischertechnik-Kollegen
+abgestimmt, der mich bei der Programmierung als Coach unterstützt. Gleichzeitig gab es
+immer wieder den Gedanken, dass alle Funktionen mit den Electronics-Modulen zu steuern
+wären…
+Einziges, aber nicht unwesentliches,
+Problem: wie realisiert man das Zählen der
+Punkte? Doch es kam die Süd-Convention
+2019 und Hans-Christian Funke mit seinen
+neuen Elektronik-Modulen [1]. Und da gab
+es auch Zählermodule, die wie geschaffen
+für den Bau eines Flippers waren. Nach
+einem weiteren Besuch bei Hans-Christian
+in Berlin war klar: Der Flipper kann mit den
+ft-Electronics-Modulen und den Modulen
+von Hans-Christian gebaut werden.
+
+Dummy
+Eine weitere Idee gleich zu Anfang war,
+nicht gleich mit dem Bau des OriginalModells zu beginnen, sondern erst mit einer
+Art „Dummy“ oder „Prototypen“ zu starten,
+an dem möglichst viele Funktionen schon
+getestet werden konnte, bevor das Original
+gebaut wird.
+
+Größe
+Als erstes ging es nun darum, die Größe des
+Flippers festzulegen. Die bekannten Flipper
+variieren hier zwischen 3 und 8 Bauplatten
+500. Einen entscheidenden Ausschlag gab
+die schmale Tür meines kleinen fischertechnik-Zimmers (knapp 4 m² in einem 200
+Jahre alten Fachwerkhaus). Hier passten nur
+zwei Bauplatten längs nebeneinander
+durch, und damit war die Größe klar: Zwei
+Bauplatten 500 längs neben einander breit
+und das ganze dreimal hintereinander. Das
+ergibt eine Grundfläche von ca. 40 cm ·
+80 cm. Die Höhe des fertigen Modells wird
+vorne bei 70 cm und hinten bei 115 cm
+liegen.
+
+
+
+Der Dummy bestand aus einer Sperrholzplatte, auf der die sechs Bauplatten aufgeschraubt waren. Die Rückwand sollte
+harmonisch zur Grundfläche wirken. Ich
+entschied mich für eine Höhe von ca. 35 cm,
+bestehend aus einer ganzen Bauplatte und
+einer zweiten, etwa 8 cm hohen gekürzten
+Platte. Die Befestigung der Rückwand
+erfolgte beim Dummy nur über
+Anbauwinkel.
+ Wie verhält sich die Kugel im oberen
+Bereich des Spielfeldes bei dieser Länge
+des Flippers?
+ Wie viele „Spielelemente“ verträgt die
+Grundfläche? Und wie müssen diese
+gestaltet sein?
+ Reicht für den geplanten Schacht ein
+Pneumatik-Zylinder, um die Kugel
+wieder heraus zu feuern, oder werden
+zwei benötigt?
+ Können die Flexprofile für die kleine
+Kugelbahn an der Rückwand waagerecht
+verlegt werden, oder brauchen sie eine
+leichte Neigung, um die Grundschräge
+des Flippers auszugleichen?
+
+Modell
+
+Rückseite bebaubar sein musste, wurde hier
+die Idee von Dirk Wölffel [2] verwendet,
+jeweils zwei Bauplatten mit Klemmstiften
+zu verbinden. Der untere Teil besteht, wie
+beim Dummy, aus einer Sperrholzplatte und
+aufgeschraubten Bauplatten.
+Eine große Frage betraf das Gestell.
+Ursprünglich wollte ich auch hier die von
+Dirk verwenden Marker Beam XL-Profile
+mit seinen selbstgedruckten Fußplatten
+verwenden. Aber irgendwie hatte ich
+Zweifel, dass das bei der Größe meines
+Modells nicht so gut wirkte wie bei seinem
+Modell. Als ich mit meiner Frau darüber
+sprach, kam sie auf die Idee, doch mal im
+Internet bei Keyboard-Ständern zu suchen.
+Eine „Weltidee“. Ich suchte längere Zeit
+und fand dann genau das, was ich brauchte.
+Einen Ständer, der faltbar war, bei dem die
+Beine einzeln in der Länge verstellbar
+waren, der genau die richtige Breite hatte
+und der in der Länge verstellbar war. Damit
+ergab sich der Grundaufbau wie er in Abb. 2
+dargestellt ist.
+
+All das waren Fragen, die ich mit dem
+Dummy testen und klären wollte.
+Nicht testen ließ sich der Spielbetrieb, weshalb auch nicht alle „Spielelemente“, die
+auf dem Bild zu sehen sind, auf das Original
+übertragen wurden.
+Und dann war es soweit: Der Bau des Originals konnte beginnen.
+
+Grundaufbau
+Klar war von Anfang an, dass sich die
+Kugel auf den Original ft-Bauplatten bewegen sollte. Und klar war auch, dass es einen
+doppelten Boden gibt, der zum einen mit
+den blauen transparenten Bauplatten
+verkleidet und beleuchtet wird und der auf
+der anderen Seite einen Großteil der
+Technik aufnimmt. Mit den blauen Bauplatten war auch die Höhe des doppelten
+Bodens festgelegt: 6 cm. Da der obere
+Boden sowohl von oben als auch von der
+
+
+Zur Montagefreundlichkeit: Hier sind,
+ähnlich wie bei Dirk, alle Seitenplatten
+abnehmbar. Darüber hinaus sind die mittleren beiden Bauplatten – nach Demontage
+einiger Teile – aufklappbar.
+Der Aufbau der Rückwand wird später
+beschrieben, da er sich erst im Laufe des
+Baus des Flippers entwickelte.
+
+
+
+
+Pneumatik
+Der Aufbau der Pneumatik wurde bereits
+am Dummy getestet und einsprechend
+Doppeleinheit aus jeweils einem Kompressor und einem Luftspeicher vorgesehen.
+Darauf habe ich aber verzichtet, da immer
+nur maximal zwei Zylinder im Einsatz sind
+und ein Kompressor dafür völlig ausreichend ist. Nur beim Einschalten des Flippers braucht es etwas Zeit, bis genug Druck
+aufgebaut ist.
+
+jeder Zylinder zeitgleich über ein eigenes
+Magnetventil mit Luft versorgt.
+Die Magnetventile für die Steuerung der
+„Flipperfinger“ und des Kugeleinschusses
+werden direkt über die Taster an der Seite
+bzw. vorne links gesteuert. Die Steuerung
+der Magnetventile für den Schacht erfolgt
+über ein Electronics-Modul. Damit es keine
+Fehlfunktionen bei den Zählmodulen gibt,
+ist zu jedem Magnetventil eine Diode parallelgeschaltet.
+
+Funktions-/Spielelemente
+Als Funktions- und Spielelemente gibt es
+den schon genannten Schacht, den Drehflügel, einen Rotor, die Schaukel, einen
+Bumper, einen Bypass mit Klangrohr und
+einen Aufzug mit Mini-Kugelbahn an der
+Rückwand.
+Schacht
+
+
+Seite
+
+Insgesamt gibt es fünf Zylinder und fünf
+Magnetventile. Jeweils einen für die
+„Flipper-Finger“, einen für den Kugeleinschuss in die Abschussvorrichtung (Sförmige Flexschiene) und einen Doppelzylinder für den Schacht. Tests hatten
+gezeigt, dass ein Zylinder aufgrund der
+Spielflächenlänge hierfür nicht ausreicht.
+Damit hier genug „Schub“ entsteht, wird
+
+
+Die Kugel rollt in den Schacht, durchläuft
+dabei die Lichtschranke und wird wieder
+herausgeschossen. Das klingt eigentlich
+ganz einfach. Nur habe ich kein Programm
+auf den Electronics-Modulen gefunden,
+
+dass diese Funktion realisieren kann. Nach
+vielen Versuchen gab es dann aber doch
+eine sehr einfache Lösung: Wenn die Zylinder voll ausgefahren sind, wird ein Taster
+betätigt, der die Stromversorgung des
+Moduls unterbricht. Beim Zurückfahren der
+Zylinder wird die Stromversorgung wiederhergestellt. Die Zeit, die das Modul zum
+Hochfahren braucht, reicht aus, damit die
+Zylinder wieder störungsfrei vollständig
+zurückfahren.
+Drehflügel
+Damit der Drehflügel besonders leicht läuft,
+ist er kugelgelagert. Die Impulse fürs Zählen der Punkte kommen über einen Magnetsensor und einen kleinen Permanentmagneten an einem der hinteren Flügel des
+Flugzeugs.
+
+Modell
+
+wie die Kugel auftrifft. Die Antriebswelle
+für den Rotor ist zusätzlich durch den
+Rumpf des darüber befindlichen Hubschraubers hindurchgeführt und treibt dessen Rotor mit an.
+Bumper
+Trifft die Kugel auf die vordere rote Bauplatte auf, wird mittels Taster gezählt. Bei
+den Tests erwiesen sich dafür die alten
+großen Taster mit den runden Nocken am
+besten.
+Schaukel
+Hier erfolgt das Zählen mittels Lichtschranke. Mit dem kleinen Flugzeug auf der
+Schaukel kann diese gut ausbalanciert
+werden.
+
+Rotor
+
+
+Klangrohr
+
+Damit die Kugel im oberen Spielfeldbereich nochmal etwas zusätzliche „Action“
+erfährt, gibt es den Rotor. Er beschleunigt
+die Kugel, bremst sie ab oder schleudert sie
+in irgendeine Richtung weg – je nachdem,
+
+Der Flipper verfügt bisher über keine akustischen Effekte. Aktuell reichen mir die
+Betriebsgeräusche und die Spielgeräusche
+völlig aus. Aber ein bisschen Klang muss
+sein, und Punkte über die nachgeschaltete
+Lichtschranke gibt es auch.
+
+
+
+Aufzug und Rückwand
+Wie bei einigen anderen Flippermodellen
+auch, sollte der Flipper einen Aufzug bekommen. Hier bot sich die Rückwand an, da
+dort außer den Zählern nichts weiter vorgesehen war. Da genügend Platz zur Verfügung stand, wurde der Aufzug mit einer
+kleinen Kugelbahn kombiniert.
+
+Für das Baustellenlauflicht wird ein Electronics-Modul verwendet, bei dem die
+Lichteffektfunktion genutzt wird.
+
+Rückwand/Flugzeuge
+Die Flugzeuge sollten nicht einfach nur an
+der Rückwand hängen, sondern auch zum
+optischen Spiel und Spaß beitragen. Da
+boten sich drehende Propeller an. Der erste
+Versuch war, die Propeller mittels Druckluft zu bewegen. Das funktioniert ganz gut,
+wenn man zwei Kompressoren pro Propeller einsetzt (viel Aufwand), hat aber einen
+entscheidenden Nachteil: Sie laufen nicht
+von selbst an, da sie nie so stehen bleiben,
+wie es zum Anlaufen erforderlich wäre.
+
+doppelten Boden
+
+Zu den Funktionen und Effekten: Die Kugel
+läuft in den oberen rechten Bereich der
+Spielfläche. Dort wird sie vom einem der
+beiden Aufzugsmagneten erfasst und auf
+das obere Flexprofil transportiert (auf dem
+Bild ist die Kette mit den Aufzugsmagneten
+noch nicht zu sehen). Während der
+Aufzugsfahrt werden zwei Lichtschranken
+durchlaufen. Die erste zählt Punkte, die
+zweite schaltet den Auslauf ein, aktiviert
+das Baustellenlauflicht entlang der Kugelbahnstrecke (blaue Leuchtsteine) und
+schaltet die Propeller der beiden Flugzeuge
+ein. Die Laufzeit ist am Electronics-Modul
+auf ca. 10 Sekunden eingestellt, damit die
+Kugel sicher wieder ins Spielfeld kommt.
+
+Kugelbahn
+
+Also waren „ein wenig Baumarkt“ und
+Minimotoren erforderlich. Der Rumpf der
+Flugzeuge besteht jetzt aus einem 4 mmMessingrohr und einer darin liegenden
+3 mm-Gewindestange. Vorne an der Gewindestange wird der Propeller (I-Strebe
+mit Loch 30) mittels Muttern befestigt. Am
+hinteren Ende kommt ein Stück Luftschlauch zum Einsatz. Dieser verbindet als
+
+„biegsame Welle“ die Gewindestange mit
+einem Minimotor in der Rückwand.
+
+Modell
+
+Die restlichen fischertechnik-Teile werden
+mittels Kabelbinder am Rumpf befestigt.
+Dafür waren noch einige Fräs- und Bohrarbeiten erforderlich. Wenn man diesen
+Artikel nicht liest, wird man es nicht
+sehen…
+
+Die Umschaltung zwischen den Zählern
+erfolgt über zwei der Taster im vorderen
+Flipperbereich und ein Relaismodul – ebenfalls von Hans-Christian. Beim Test haben
+andere Relais zu Störungen geführt.
+Welcher der Zähler gerade aktiv ist, wird
+durch eine Leuchte links bzw. rechts vom
+Zähler angezeigt.
+
+Give-aways
+
+Der Zähler unten links dient zum Zählen der
+Kugeln.
+
+Das ist eine Geschichte für sich. Es fing
+damit an, dass ich für den „Drehflügel“ eine
+andere Idee suchte, um den Zählimpuls zu
+erzeugen. Bisher hatte ich hier Lichtschranken in Kombination mit Bauplatten
+gesehen. Beim Graben in einer meiner
+Kisten, fiel mir ein kleiner Bausatz „30
+Jahre fischertechnikclub Nederland“ in die
+Hände. Das gefiel mir sehr gut, und nachdem ich es gebaut und montiert hatte, sahen
+im Vergleich dazu die anderen Funktionsund Spielelemente ein wenig „blass“ aus.
+Somit begann ich zu suchen, was es noch an
+Give-aways von fischertechnik gab und was
+noch im Bilderpool zu finden war. Das
+Ergebnis kann jetzt jeder sehen, aber es
+muss nicht jedem gefallen…
+
+Die Rückstellung der Zähler auf null erfolgt
+über drei der im vorderen Spielfeld befindlichen Taster.
+
+Ein- und Auslauf
+Am Anfang liefen der Rotor und der
+Aufzug, sobald der Hauptschalter für die
+Spielfunktionen eingeschaltet wurde. Das
+fand ich auf Dauer ein wenig nervig. Daher
+änderte ich die Schaltung so, dass die
+beiden Funktionen nur dann laufen, wenn
+auch eine Kugel im Spielfeld ist. Über eine
+Lichtschranke beim Einschießen der Kugel
+in die Abschussbahn werden der Rotor und
+der Aufzug eingeschaltet und über die
+Lichtschranke am Auslauf wieder ausgeschaltet.
+
+Zählen
+Wie schon gesagt, erfolgt das Zählen über
+die neuen Module von Hans-Christian
+Funke. Im oberen Bereich der Rückwand
+befinden sich jeweils links und rechts zwei
+miteinander verbundene Zähler. Damit
+können zwei Personen oder Gruppen bis
+jeweils 9.999 Punkte spielen. Die Zähler
+haben einen Eingang, der Einer und einen,
+der Zehner zählt. Alle für das Zählen
+genutzte Lichtschranken sind am ZehnerEingang angeschlossen, Taster und Magnetsensor am Einer-Eingang. Eine Art
+„Joker“ beim Zählen stellt der Schacht dar.
+Da die Kugel und auch die Zylinder mehrfach sehr schnell an der Lichtschranke
+vorbeilaufen, führt das beim Zählen zu unterschiedlichen Ergebnissen – die schwanken zwischen 20 und 50 Punkten.
+
+die Zähler und den Kugeleinschuss
+
+Über die Lichtschranke am Auslauf wird
+auch das kleine Dreikanal-Lauflicht im
+oberen Bereich der Rückwand (Platine mit
+LEDs) für einige Sekunden aktiviert. Eine
+
+
+
+
+kleine Lötübung, die ich von der fischertechnik-Ausstellung in Münster im Januar
+2020 mitnehmen durfte.
+
+Steuerung
+Der Flipper wird komplett über neun
+Elektronik-Module gesteuert. Ein weiteres
+Modul dient, wie bereits beschrieben, der
+Steuerung des Baustellenlauflichtes an der
+Rückwand.
+
+beiden Minimotoren für den Propellerantrieb der Flugzeuge nur Kabel und
+Verteilerplatten untergebracht. Neben den
+Anbauwinkeln auf der Spielfläche dienen
+als weitere Befestigung zwei Aluprofile, die
+mit Anbauwinken an den unteren Bauplatten befestigt sind. Zusätzlich sind die
+Bauplatten
+mit
+den
+Aluprofilen
+verschraubt. Dabei sind die hinteren Bauplatten mit Rändelmuttern verschraubt und
+damit jederzeit entfernbar.
+
+
+
+Die Module sind häufig als Monoflop
+geschaltet, aber auch das Grundprogramm
+kommt zum Einsatz. Als sehr vorteilhaft bei
+den verschiedenen Steuerungen hat sich das
+Potentiometer erwiesen, mit dem die Zeit
+der Modulausgänge eingestellt werden
+kann.
+
+Aufbau der Rückwand
+Wie der Flipperboden ist auch die Rückwand als Doppelwand aufgebaut, mit einem
+Abstand von 15 mm zwischen den Bauplatten. In diesem Hohlraum sind außer den
+
+
+
+Beleuchtung
+Der doppelte Boden wird mit 10 LEDs
+beleuchtet. Mit den blauen transparenten
+Platten ergibt das ein blaues Lichtband an
+drei Seiten.
+Die Spielfläche und die Rückwand haben
+durch die zahlreichen Lichtschranken und
+die Zähler schon eine Grundbeleuchtung.
+
+Zusätzlich gibt es LED-Spots mit orangefarbenen Rastleuchtkappen, die sowohl die
+Spielfläche als auch die Rückwand anstrahlen. Bei den LEDs verwende ich gern die
+Hausmarke von Stefan Roth [3].
+
+Modell
+
+Zum Schluss noch ein paar Zahlen:
+ Neun Elektronik-Module zum Steuern
+der einzelnen Funktionen und ein weiteres für das Baustellenlauflicht an der
+Rückwand
+ Fünf Zählermodule, ein Relaismodul
+und ein Gleichrichter für die Zählfunktion
+ Ein Kompressor mit Luftspeicher und
+fünf Magnetventilen für die Pneumatikfunktionen
+ Neun Taster, neun Lichtschranken, ein
+Magnetsensor, vier Minimotoren, ein
+Powermotor und zahllose LEDs
+ Zwei Netzteile mit vier Stromkreisen
+ Ungefähr 600 Stecker mit vielen Metern
+Kabel.
+
+Referenzen
+
+
+[1]
+
+Hans Christian Funke: Elektronikmodule (Teil 1): Einleitung.
+ft:pedia 4/2019, S. 40-46.
+
+[2]
+
+Dirk Wölffel: fischertechnik-Flipper.
+ft:pedia 2/2017, S. 74-81.
+
+[3]
+
+Stefan Roth:
+https://www.fischerfriendsman.de
+
+
+
+

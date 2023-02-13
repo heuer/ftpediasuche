@@ -1,0 +1,709 @@
+
+
+Elektronik
+
+Der Zauberling (Teil 1): Der Zauberstab
+Arnoud van Delden
+Der „Silberling“ war für viele vor langer Zeit der Einstieg in die schwer fassbare magische
+Welt der Elektronik. Diese Zauberei wurde seitdem um zeitgemäße Alchemisten wie Mikrocontroller und Computer erweitert. Doch ein moderner Zauberlehrling denkt über die Zugehörigkeit zu den Magiern von einst nach. Könnte eine magische Brücke zwischen den beiden
+Universen gebaut werden? In diesem ersten Teil tauchen wir in das Wurmloch ein und schauen
+uns die mögliche Hardware für einen solchen Zauberlehrling an. Denn wie kann ein Magier
+ohne die richtigen Attribute staunen und verzaubern? Der Zauberstab muss stimmen!
+
+Der magische Silberling
+Obwohl die Silberlinge nun etwa fünfzig
+Jahre alt sind, bleiben sie magische Kästchen. Viele ließen sich einst von ihrer
+Magie verzaubern, und auch heute ist es
+verlockend, mit der klassischen Funktionalität diskreter Elektronik zu experimentieren. Schon allein um die Experimente aus
+der Hobby-4-Reihe tatsächlich zu bauen. So
+ist das Silber der Silberlinge zwar manchmal vergilbt, aber noch nicht ganz in Vergessenheit geraten. Andererseits: Dass auch
+die Rekonstruktion des antiken Silberlings
+die Fantasie anregt, zeigen die vielen Beiträge im fischertechnik-Forum und aktuelle
+Beiträge in der ft:pedia.
+Viele von uns verwenden heute modernere
+Techniken in unseren Experimenten. Und
+auch fischertechnik hat sich weiterentwickelt. Nach dem Elektronik-Praktikum, dem
+Hobbylabor und dem IC-Digital-Praktikum
+folgten Schnittstellen für Mikrocomputer
+und schließlich eine programmierbare
+Steuerung, die derzeit ihre jüngste „Inkarnation“ erfährt. Darüber hinaus wächst das
+Angebot an Arduino-basierten Mikrocontrollern, mit denen nahezu alle diskreten
+Funktionen und Automatisierungsprobleme
+in Software programmierbar gelöst werden
+
+
+können – ganz ohne das Einstecken von
+Steckern.
+Trotzdem lockt es nach wie vor, Hardware
+mit Drahtverbindungen und einem modularen System wie den bewährten Silberlingen
+programmieren zu können. Mit den von der
+Knobloch GmbH entwickelten E-Tec-,
+Elektronik- und Robotics-Modulen verzichtet fischertechnik jedoch auf die direkte
+Kompatibilität mit diesem Erbe. Obwohl
+die verschiedenen logischen Funktionen in
+diesen Modulen wieder auftauchen, fühlen
+sie sich für den echten Entwickler dennoch
+zu eingeschränkt an, da sie nicht mit einer
+eigenen, angepassten oder zusätzlicher
+Software genutzt werden können.
+Alt und Neu verbinden
+So entstand die Idee zu untersuchen, ob sich
+die traditionelle Domäne der Silberlinge mit
+der Leistung von Mikrocontrollern erweitern lässt. Mit etwas moderner Alchemie
+sollte es möglich sein, ein verbindendes
+Modul zu bauen, sowohl im wörtlichen als
+auch im übertragenen Sinne. Ein neuer
+Silberling, der in Formfaktor, digitaler
+Logik und analogen Spannungspegeln
+abwärtskompatibel ist. Ein Modul, das es
+ermöglicht, neben dem klassischen Druckschalter, Fotowiderstand und moderneren
+Fototransistoren auch aktuelle Sensoren wie
+
+
+Elektronik
+
+IR-Objekt-Detektoren oder Hall-EffektSensoren zu verwenden. Im Idealfall würde
+es die Schwellenwerte von Sensoren selbst
+herausfinden und TTL-Pegel mit der 9 V„negativ-Logik“-Welt des klassischen
+Silberlings kombinieren. Wenn ein solches
+Modul auch größere Verbraucher direkt
+ohne Relais ansteuern und vielleicht sogar
+gleichzeitig Servos bewegen kann, wird es
+richtig magisch!
+
+So ein Zauberer sollte nahtlos mit den klassischen Silberlingen zusammenarbeiten
+können. Durch die Programmierbarkeit
+sollten diesem Zauberlehrling immer
+wieder neue Tricks beigebracht werden
+können, die die Funktionalität der fischertechnik-Module anpassen und verbessern.
+Ein echter Zauberlehrling, ein echter
+‚Zauberling‘...
+
+Der Zauberling
+
+Die Anordnung von Mr. Lemniskate [1]
+hatte ich zuerst mit den klassischen Silberlingen gebaut, aber es fühlte sich immer
+noch wie ein Umweg an, die Spule eines
+Relaismagneten bestromen zu müssen, um
+dann einen anderen Elektromagneten zum
+Laufen zu bringen. Abgesehen vom unnötigem Geräusch und Verschleiß an den Kontakten musste zum Beispiel das Schaltmoment um einige Grad gedreht werden, um
+die „doppelte Verzögerung“ durch das
+nacheinander erfolgende Bestromen der
+beiden Magnetspulen zu kompensieren.
+
+Inspiriert von den Experimenten anderer
+baute ich auch einige Flip-Flops und schaltbare UND/ODER-Logikglieder in Gestalt
+von Silberlingen. Aber als ich mich in der
+Welt der Mikrocontroller immer mehr zu
+Hause fühlte, wurde der Wunsch, direkt mit
+den Silberlingen zusammenzuarbeiten,
+immer stärker. Entstanden ist ein flexibler
+und programmierbarer Silberling für spezifische eigene Anwendungen (Abb. 1).
+
+Power-Silberling
+
+Außerdem stellte sich heraus, dass die 9 VStromversorgung
+des
+fischertechnikGleichrichtermoduls für die im Modell verwendeten starken Elektromagnete nicht
+ausreichte. Dies führte zu einem selbstgebauten Drehzahlregler und Flip-FlopModul in fischertechnik-Kassetten (35359).
+Das Flip-Flop-Modul erhielt Treiberausgänge, die einen Elektromagneten oder
+Motor ohne zusätzliches Relaismodul direkt
+steuern konnten. Seine externe Stromversorgung kann mit Steckern durchgeschleift
+werden. Dadurch bleibt die Front frei von
+den notwendigen Durchschleif- und Anschlusskabeln. Das gleiche Prinzip habe ich
+auf eine allgemein verwendbare ‚Schalttafel‘ mit Drehzahlregelung angewendet,
+die ich ebenfalls in fischertechnik-Kassetten untergebracht habe (Abb. 2).
+
+Pro Mini Atmega328P
+
+
+
+
+mit den zweipoligen Anschlusssteckern
+
+in fischertechnik-Kassetten
+
+Silberling-Kompatibilität
+Beim Bauen inspirierten mich die Produkte
+von Hans-Christian Funke und die Beiträge
+von Peter Krijnen in den jüngsten ft:pediaAusgaben [2]. Und bei den lebhaften Diskussionen im fischertechnik-Forum sowie
+den älteren Plänen und Ideen von beispielsweise Peter Storck, Thomas Habig und
+anderen zeigte sich, dass die Silberlinge
+noch immer die Fantasie anregen.
+Die in der fischertechnik-Kassette oder dem
+9 V-Batteriehalter (32263) verbauten Module lassen sich jedoch nicht immer optimal
+mit dem traditionellen Silberlingen kombinieren. Das Verbinden und Durchschleifen
+der Stromversorgung benötigt aufgrund der
+relativ großen fischertechnik-Anschlussstecker oft unverhältnismäßig viel Platz.
+Ein elegantes technisches Merkmal der
+Silberlinge ist gerade, dass die Stromversorgung nicht zwischen den Anschlüssen und
+Bedienelementen an der Front vorgenommen werden muss: Sie erfolgt seitlich mit
+zweipoligen Anschlussklemmen (Abb. 3).
+
+
+
+Siehe die 3D-Dateien von Peter Krijnen auf
+thingiverse.com.
+
+Für anspruchsvollere Stromverbraucher wie
+Elektromagnete und Motoren muss jedoch
+ein externes Netzteil angeschlossen werden,
+damit diese über die Leistungsausgänge
+kontinuierlich angesteuert werden können,
+ohne das reguläre Netzteil unnötig zu belasten.
+In der Zwischenzeit hatte ich Peter Krijnens
+exzellentes 3D-Silberling-Design1 leicht
+modifiziert, sodass der letzte meiner oben
+genannten Wünsche bereits realisiert
+werden konnte.2 Ich habe damit ein schaltbares UND/ODER-Glied gebaut, das kein
+externes Netzteil benötigte und somit direkt
+aus dem Gleichrichtermodul h4 GB mit
+Strom versorgt werden konnte. Damit war
+mir die Kompatibilität mit den Silberlingen
+bereits gelungen (Abb. 4).
+
+zum Anschluss an Gleichrichtermodul h4 GB
+
+Die 3D-Dateien finden sich ebenfalls auf
+thingiverse.com.
+
+Das Ergebnis ähnelt schon ein wenig den
+Silberlingen. Doch die Suche nach dem
+idealen Material für die Herstellung der
+Frontplatten ist noch nicht beendet. Das
+Originalmaterial ist eloxiertes Aluminiumblech, in das die Beschriftung fotografisch
+geätzt wurde. Allerdings habe ich noch
+keine Adresse gefunden, wo es möglich ist,
+eine kleine Stückzahl günstig produzieren
+zu lassen. Für den Prototypen habe ich mich
+daher für ein 2,6 mm dickes schwarzes
+Plastikmaterial entschieden, bei dem die
+hauchdünne silberfarbene Folie gelasert
+werden kann. Allerdings ist die Oberfläche
+dieses Materials beim Finishen, Sägen und
+Bohren sehr empfindlich und glänzt auch
+mehr als bei den originalen Silberlingen.
+Kurzum, das Ergebnis ist schon sehr schön,
+allerdings bin ich an diesem Punkt noch
+nicht fertig mit dem Experimentieren.
+
+Handarbeit ist heikle Arbeit
+
+Die Wunschliste
+Die Möglichkeiten der gängigen Mikrocontroller und die traditionell von fischertechnik zum Beispiel im E-Tec-Modul
+gebotenen Funktionalitäten haben mich auf
+Trab gehalten. Also ließ ich meiner Fantasie
+freien Lauf, träumte von meinem idealen
+magischen Silberling und hatte schon bald
+eine Wunschliste:
+ In Form, Größe und Material möglichst
+nah an den traditionellen Silberlingen,
+damit sie gemeinsam in einer Schaltung
+verwendet werden können.
+
+Elektronik
+
+ Verwendung der zweipoligen Anschlussstecker an den Seiten des
+Silberlings für die Grundversorgung.
+ Größere Stromverbraucher wie Motoren,
+Magnete oder Magnetventile sollen von
+einer externen Spannungsversorgung
+von 5 bis 24 V versorgt werden können.
+ Mindestens drei Eingänge, die sowohl
+mit positiver als auch mit negativer
+Logik arbeiten können. An der Front
+sind Buchsen für die traditionellen
+fischertechnik-Stecker, aber auch eine
+dreipolige Kopfleiste mit Pins für die
+Stromversorgung von Sensoren, die eine
+eigene Stromversorgung benötigen
+(meist 5 V).
+ Eine automatische Einstellung für die
+Schwellenwerte der Sensoren an den
+Eingängen. Die Empfindlichkeit und
+Hysterese (erforderlich bei einem passiven Sensor mit schwacher Ausgangskurve wie z. B. einem NTC-Widerstand)
+müssen einstellbar sein.
+ Es müssen sowohl passive Sensoren (wie
+ein Fotowiderstand oder NTC-Widerstand usw.) als auch die verschiedenen
+heute im Handel erhältlichen Module
+verwendet werden können, die ein 5 VAusgangssignal liefern (Hall-Effekt, IRSensor, PIR-Bewegungssensor usw.).
+ Visuelle Rückmeldung durch LEDs für
+alle Eingänge, damit sofort sichtbar ist,
+was an den Eingängen passiert und ob
+Schwellenwerte der Sensoren erreicht
+wurden.
+ Einstellungen für bestimmte Funktionen
+(z. B. Pulszeit eines Monoflops oder Frequenz eines Blinklichts) müssen frontseitig mit einem kleinen Potentiometer
+möglich sein.
+ Es kann sinnvoll sein, dass auch Servos
+daran angeschlossen werden können. Im
+Idealfall verfügen sie dann über eine
+eigene 6 V-Stromversorgung, direkt an
+ihrem dreipoligen „Header-Connector“.
+ Mindestens zwei analoge Motorausgänge, vollständig steuerbar in Drehzahl
+und Drehrichtung, die auch als einzelne
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+analoge Ausgänge verwendet werden
+können.
+Sichtbares Feedback durch eine mehrfarbige LED, die einen Eindruck von Drehrichtung und Geschwindigkeit (Polarität
+und Pegel) vermittelt.
+Die (zumindest digitalen) Ausgänge
+müssen auch als Eingangssignal für die
+Silberlinge genutzt werden können.
+Das eventuelle Durchschleifen einer externen Versorgungsspannung darf frontseitig die Bedienung und die Anschlüsse
+nicht behindern und sollte vorzugsweise
+seitlich oder rückseitig erfolgen.
+Neben dem ‚Basisprogramm‘ müssen
+alle allgemeinen Funktionen des E-TecModuls und des späteren Elektronikmoduls vorhanden sein. Das Modul
+muss daher auch als Flip-Flop oder einfaches UND- oder ODER-Logikglied
+funktionieren.
+Die Auswahl der gewünschten Funktionalität bzw. des gespeicherten Programms sollte mit DIP-Schiebeschaltern
+an der Frontseite des Moduls leicht
+einzustellen sein.
+Ich wollte eine Variante des E-Tec‚Basisprogramms‘ haben, die die gesteuerten Motoren nicht abrupt schaltet,
+sondern dies schrittweise tut, damit
+Belastung und Verschleiß der Motoren
+minimiert werden (Näheres dazu in Teil
+3).
+Die Herausforderung, die den magischen
+Silberling zu einem echten „Zauberling“
+macht: Die Möglichkeit, zukünftige Erweiterungen oder spezifische Programme selbst zu ergänzen.
+
+Begrenzter Innenraum
+Der Innenraum eines Silberling-Gehäuses
+misst nur 38 x 68 mm. Als Einbauraum für
+einen Mikrocontroller, der auch noch mit
+einem Motortreiber und einigen anderen
+Teilen ergänzt werden muss, ist das nicht
+sehr geräumig.
+
+
+Zum Beispiel ist der normale Arduino Uno
+mit seinen 53,4 x 68,6 mm schon zu breit.
+Ganz zu schweigen von den noch größeren
+Varianten wie dem Mega und dem Due
+(53,4 x 101,52 mm). Ein Raspberry Pico,
+ESP32 oder Arduino Nano passt, aber der
+Arduino Compatible Pro Mini Atmega328P
+lieferte das beste Verhältnis zwischen der
+Anzahl der verfügbaren Eingangs-/Ausgangspins und den Abmessungen (Abb. 6).
+Dies ist ein extrem kleiner Arduino, der wie
+der Arduino Uno mit 5 V bei 16 Mhz läuft
+und auf dem Computer mit der den meisten
+Entwicklern vertrauten Arduino-IDE programmiert werden kann.
+Diese sehr kleine Platine von nur 34 x 18
+mm bietet 20 Ein- und Ausgänge, darunter
+sechs analoge Ein- und sechs Ausgänge mit
+Pulsweitenmodulation (PWM).
+
+18 mm groß, das passt problemlos!
+
+Programmierung
+Der Pro Mini Atmega328P hat nur das
+Nötigste auf der Platine. Er hat eine ResetTaste, deren Anschluss seltsamerweise
+doppelt an den Kantenkontakten anliegt,
+während nutzbare Ein- und Ausgänge wie
+A4 und A5 aus Platzgründen in der Mitte
+der Platine platziert sind. Dem Board fehlt
+eine USB-Schnittstelle; daher kann es nicht
+wie die meisten Arduino-Boards direkt an
+
+den USB-Anschluss eines Computers angeschlossen werden. Das Hochladen der
+Software erfolgt auf TTL-Niveau und daher
+ist für die Programmierung ein USB-aufTTL-Seriell-Adapter erforderlich.
+Glücklicherweise gibt es dafür verschiedene Schnittstellenoptionen. Manchmal
+sind diese Schnittstellen als Kabel mit losen
+Messleitungen konfiguriert, die an den Pro
+Mini Atmega328P angeschlossen werden
+können. Es gibt aber auch Schnittstellen,
+und bei denen ein Stecker direkt auf den
+Stiftstecker des Pro Mini aufgeschoben
+werden kann. Sie sind oft zwischen 3,3 und
+5 V umschaltbar, sodass auch der Pro Mini
+mit 8 MHz, der mit einer Versorgungsspannung von 3,3 V arbeitet, programmiert
+werden kann.
+Am einfachsten zu bedienen sind die
+Typen, die auch eine DTR-Verbindung
+(Data Terminal Ready) bieten, damit der
+Computer den Upload selbst initiieren kann.
+Wenn die Schnittstelle darüber nicht verfügt, muss der Upload von der Arduino IDE
+jedes Mal manuell erzwungen werden,
+indem der Atmega328P zum richtigen Zeitpunkt zurückgesetzt wird. Dies kann mit
+dem Reset-Knopf auf der Platine erfolgen,
+der jedoch in vielen Fällen nach der Installation nicht mehr zugänglich ist.
+Wer mit Apple-Geräten arbeitet, entscheidet sich am besten für eine Schnittstelle mit
+dem CH340G-Chip. Die Schnittstelle mit
+FT232RL-Chip wurde auf meinem iMac
+unter macOS nicht erkannt. Windows ist
+verzeihlicher und erkennt beide Chips
+problemlos. Letztendlich habe ich mich für
+eine noch elegantere Lösung entschieden,
+indem ich den ATmega328-Chip aus dem
+Sockel eines Uno herausnahm und so den
+angenehmen Mega16u2-USB-Chip zum
+Programmieren nutzen konnte [3].
+
+Elektronik
+
+Die
+Programmierschnittstelle
+des
+Atmega328P bleibt durch eine Öffnung im
+Boden des Zauberlings erhalten. Sicherheitshalber habe ich auch den Reset-Pin auf
+diesen Anschluss geroutet, falls das Hochladen ohne DTR-Steuerung in Zukunft
+unerwartet einen manuellen Reset erfordern
+sollte.
+
+Upload-Lösung über ein Arduino Uno
+entschieden
+
+Vielleicht beispielhaft waren die UploadProbleme, auf die ich bei einem der Pro
+Minis gestoßen bin. Das Programm konnte
+mit keiner der TTL-Schnittstellen hochgeladen werden – der Upload-Vorgang startete
+einfach nicht, trotz eines manuellen Resets
+zum richtigen Zeitpunkt, während der
+Mikrocontroller selbst einwandfrei zu funktionieren schien und er seinen Blink-Sketch
+weiterführte. Der Lötkolben war vor der
+Demontage bereits warm, als ich zum
+Glück noch rechtzeitig herausfand, dass es
+funktionierte, wenn ich ihn als Atmega168
+(5 V, 16 MHz) statt Atmega328P (5 V,
+16 MHz) in der IDE einstellte. Der einzige
+Unterschied scheint zu sein, dass die
+Upload-Geschwindigkeit der Arduino-IDE
+von 57.600 auf 19.200 reduziert wird; damit
+konnte der Sketch erfolgreich geladen
+werden. Denkt also daran, wenn ihr auf
+einen widerspenstigen Atmega328P stoßt!
+
+
+
+
+
+Die Eingänge zum Zauberling
+Wie im Schaltplan des Zauberlings (Abb. 8)
+zu sehen ist, werden alle Ein-/Ausgänge des
+Atmega328P für den Zauberling verwendet.
+Bei den Eingängen wurde die Schaltanalogie des ftDuino- und fischertechnikeigenen TXT-Controllers befolgt, wobei die
+Sensoren an den Eingängen auf Null
+(Masse/GND) geschaltet werden. Das ist
+praktischer als beim E-Tec-Modul, wo die
+Sensoren an +9 V angeschlossen werden,
+sodass aktive Sensoren mit eigener Ausgangsspannung (meist 5 V) an den Eingängen mangels gemeinsamer Masse nicht
+verwendet werden können.
+
+
+Die Eingänge sind mit einem Spannungsteiler ausgestattet, der bis zu Eingangsspannungen bis 10 V schützt und es ermöglicht
+
+
+(bei einer externen Eingangsspannung von
+9 V), die Ausgänge als digitales oder
+analoges Signal an den Eingängen zu
+nutzen. Dadurch ist eine Kombination mit
+den historischen Silberlingen möglich.
+Mittels DIP-Schiebeschaltern kann für
+passive Sensoren wie Taster, Reedschalter,
+Fotowiderstände oder Transistoren, NTCWiderstände etc. (Abb. 9) pro Eingang eine
+Vorspannung angelegt werden. Diese Sensoren senken dann die Spannung am
+jeweiligen Eingang, da ihr Widerstand bei
+Änderungen der Umgebung abnimmt. Der
+Zauberling wird daher sowohl mit „positiver Logik“ als auch mit „negativer Logik“
+umgehen können.
+Die Interpretation und Verarbeitung der
+gemessenen Eingangsspannungen kann in
+Software gelöst werden. Dadurch konnten
+die Anschlüsse hardwaremäßig relativ
+einfach gehalten werden. Die maximale
+Eingangsspannung des (optionalen) externen Netzteils habe ich vorerst auf 9 V
+eingestellt. Sollte sich in Zukunft herausstellen, dass eine externe Spannung von 12
+V (oder sogar mehr) sinnvoll ist, kann es
+sinnvoll sein, in einer späteren Version die
+Eingänge des Mikrocontrollers mit einer
+5,1 V Zener zu schützen.
+
+Einige historische Silberlinge verfügen über
+eine Signalleuchte, an der der Status des
+Ausgangs abgelesen werden kann. Allerdings ist nicht sofort erkennbar, was digital
+an den Eingängen genau passiert. Der
+Zauberling liefert pro Eingang mittels einer
+LED Feedback; dadurch besteht jederzeit
+Klarheit über den aktuellen Status der drei
+Eingänge.
+Für den Anschluss aktiver Sensoren (wie
+Hall-Effekt, IR-Hindernis, PIR-Detektor,
+etc., Abb. 10), die oft als kleine Module ausgeführt sind, wird die notwendige 5 VSpannungsversorgung auf einem dreipoligen Stecker geführt. Außerdem können für
+die Anschlüsse an den Eingängen auch die
+bekannten fischertechnik-Stecker am Prototypen verwendet werden.
+Wie die Erkennungsschwellen von Sensoren an den Eingängen des Zauberlings
+‚selbstlernend‘ sein können, warum für
+Schaltgeräusche an den Eingängen keine
+Störunterdrückung erforderlich ist oder
+welche Programme ausgeführt werden, ist
+komplett softwaregesteuert. (Mehr dazu in
+Teil 2 dieses Beitrags.)
+
+
+Die Ausgänge des Zauberlings
+Als Ausgänge werden die Dual-Ausgänge
+eines TB6612FNG-Motortreibers mit
+PWM-Steuerung verwendet. Jeder Ausgang
+dieses kleinen Moduls kann bis zu 2 A
+
+Elektronik
+
+liefern. Diese Treibermodule habe ich
+bereits in verschiedenen Projekten eingesetzt; in der Praxis benötigen sie keinen
+eigenen Kühlkörper.
+Dieses Modul beansprucht mit sieben Pins
+(von denen zwei PWM-fähig sein müssen)
+einen relativ großen Teil der 20 Ein- und
+Ausgänge des Atmega328P. Wenn die
+Motorleistung auf O3-O4 immer invertiert
+der Motorleistung O1-O2 folgt, könnten wir
+hier Datenleitungen einsparen. Dennoch
+behalten wir in der Software weiterhin die
+volle Kontrolle über zwei unabhängige
+Motorausgänge. Dies ist derzeit zwar nicht
+notwendig (z. B. im ‚Basisprogramm‘),
+bietet aber die Möglichkeit, die beiden
+Motorausgänge zukünftig als vier separate
+Ausgänge zu nutzen.
+Wie in dem mit Fritzing gezeichneten
+Schaltplan zu sehen ist (Abb. 8), sind auch
+Anschlüsse für zwei Servos vorgesehen.
+Die Anschlüsse haben dafür eine eigene
+Versorgungsspannung von 6V.
+Programmauswahl mit DIPSchiebeschaltern
+Zur Programmauswahl werden DIP-Schiebeschalter ausgelesen, wie z. B. auch beim
+E-Tec-Modul. Das serielle Lesen einer (im
+Prinzip unbegrenzten) Anzahl paralleler
+Wahlschalter erfordert mindestens vier
+Datenleitungen und ein oder mehrere
+74HC165 8-Bit-Schieberegister.
+Zur Programmwahl verfügt der Zauberling
+über einen DIP-Schiebeschalter mit vier
+Schiebeschaltern, mit denen 16 verschiedene Programme ausgewählt werden können. Zum Auslesen dieser Einstellungen
+wurden daher einfach vier parallele Datenleitungen verwendet, da sich das serielle
+Auslesen solcher Schiebeschalter erst bei
+deutlich mehr DIP-Schiebeschaltern (und
+Optionen) lohnt. Sollte in Zukunft an
+Eingängen gespart werden müssen, gibt es
+noch einen weiteren cleveren Trick, die vier
+DIP-Schalter mit nur einem Analogeingang
+einzulesen [4].
+
+
+Versorgungsspannung und
+Kompatibilität
+Der Gleichrichter-Baustein h4 GB (36393)
+konnte laut Originalspezifikationen einen
+maximalen Strom von 800 mA liefern. Abgesehen davon, dass dieser Maximalstrom
+durch die verwendete Brückenzelle bestimmt wird, wird er insbesondere durch
+den verwendeten fischertechnik-Transformator begrenzt. Die originalen fischertechnik-Transformatoren 812 und 814
+liefern 5 VA bzw. 7 VA (Watt). Bei der
+angegebenen AC-Spannung von 6,8 V
+würde das einen maximalen Strom von
+(5/220=) 735 mA bzw. (7/220=) ~1 A
+bedeuten, obwohl fischertechnik – wohl
+sicherheitshalber – nur 0,5 A am AC-Ausgang angibt.
+In der Praxis sollten mit dem Gleichrichtermodul h4 GB mehrere rein digital
+genutzte (< 800 mA) Zauberlinge aus dem
+originalen fischertechnik-Netzteil versorgt
+werden können. Der Transformator liefert
+nach Angaben von fischertechnik eine
+Wechselspannung von 6,8 V, was zu einer
+gleichgerichteten Spannung von ~9 V führt.
+Die fischertechnik-Transformatoren stammen jedoch aus dem Anfang der zweiten
+Hälfte des 20. Jahrhunderts, als die Netzspannung noch 220 V betrug. Diese liegt
+heute bei 230 V, wobei sich in der Praxis (in
+verschiedenen Stichproben) der tatsächliche Wert oft zwischen diesen beiden
+Grenzwerten befindet. Das kann regional
+oder national unterschiedlich sein.
+Aufgrund von Erfahrungen und (neueren)
+Veröffentlichungen von fischertechnikKollegen habe ich mich entschieden, mir
+die Ausgangsspannung am Oszilloskop
+anzuschauen. Es wurde bestätigt, dass die
+Trafoausgänge der von mir getesteten
+Trafos 812 und 814 (ohne Last) eine
+Wechselspannung mit Spitzen von bis zu
+12,8 V aufwiesen. Glücklicherweise lag der
+RMS-Wert (Energieinhalt) mit etwa 8,7 V
+näher am angegebenen Wert von 6,8 V. Die
+h4 GB-Gleichrichtermodule erzeugen hier
+
+(ohne Last) einen durchschnittlichen
+Gleichstrom von ca. 11 V, der unter Last (z.
+B. mit einem kleinen fischertechik-Motor)
+auf ca. 10 V absinkt.
+
+
+Es ist klar, dass die Möglichkeit, ein externes 9 V-Netzteil anzuschließen, sehr schön
+ist. Vor allem, wenn mehrere Motoren oder
+andere Verbraucher, wie Magnetventile bei
+einem pneumatischen Modell, angesteuert
+werden müssen. Idealerweise verfügt das
+Modul daher über eine eigene 5 V-Spannungsregelung für den Mikrocontroller und
+die Versorgung aktiver Sensoren und der
+Servos. Wie viel Wärme dabei entstehen
+würde und ob beispielsweise die Servos (die
+unter Last bis zu 650 mA ziehen können)
+beispielsweise eine eigene 6 V-Versorgung
+benötigen, war schwer abzuschätzen.
+Deshalb habe ich die Schaltung zunächst
+experimentell aufgebaut.
+
+
+Die Versuche zeigten, dass die Grundschaltung des Zauberlings im Ruhezustand nur
+66 mA zieht. Beim Testen der Motorleistungen wurden Spitzen von 400 mA gemessen. Ein einzelner Spannungsregler 8705
+kann maximal 1 A liefern und wurde sofort
+ziemlich heiß. Ich habe es durch einen
+7805CV ersetzt, der maximal 1,5 A liefern
+kann.
+Beim Testen mit den beiden Servos nahm
+die Wärmeentwicklung weiter zu. Ein sich
+bewegender und leicht belasteter MG90S
+Mini-Servo zog im Testaufbau bis zu
+425 mA. Hier darf die Last laut Spezifikationen problemlos bis zu 650 mA betragen.
+Das bedeutet, dass zwar kurzzeitig auch der
+Einsatz von zwei Servos gleichzeitig möglich ist, es aber klüger ist, den Servos einen
+eigenen Spannungsregler 87S06 für 6 V zu
+spendieren und einen noch belastbareren
+87S05 (maximal 2 A) für die 5 V-Versorgung zu verwenden – nicht so sehr wegen
+der Stromstärke, sondern weil etwas Überdimensionierung nie schaden kann.
+
+Elektronik
+
+eines Stücks Aluminiumplatte zu verpassen. Dies ist für den Prototyp, Version 0.1,
+in Ordnung. Die nächste Version sollte eine
+separate Netzteilplatine an der Unterseite
+des Gehäuses erhalten, die auch direkt die
+Anschlüsse für die externe Stromversorgung beherbergt. Dies würde die Installation erleichtern. Außerdem können die
+Stecker für das eventuelle Durchschleifen
+der Versorgungsspannung dann auch direkt
+einen Platz finden, sodass lose Kabel mit
+manchmal ungenutzten Steckern vermieden
+werden.
+
+Außerdem hat sich bei diesem Test gezeigt,
+dass es sinnvoll ist, sicherheitshalber beide
+Spannungsregler auf einem Kühlkörper zu
+montieren.
+und Kühlung auf der Rückseite
+
+Der Prototyp
+
+Spannungsregler erscheint sinnvoll
+
+Letztendlich habe ich mich entschieden, die
+Stromversorgung der Module über die
+Kontaktschienen durchzuschleifen und den
+Spannungsreglern ein kleines Kühlelement
+auf der Rückseite des Silberlings in Form
+
+Das Zusammenbauen und Testen des Prototyps (Abb. 15) erforderte präzise Arbeit,
+aber es gab keine nennenswerten Rückschläge. Aus den Drahtspaghetti des Versuchsaufbaus war ein Zauberling geworden.
+Beim Zusammenschrauben hatte ich das
+Gefühl, als würde ich den Geist in der
+Lampe einsperren...
+Der Zauberling funktionierte fast sofort,
+wie bereits auf dem Steckbrett getestet. Das
+kleine Kühlelement auf der Rückseite
+eignet sich hervorragend; selbst unter
+Volllast wird es nicht mehr als lauwarm.
+
+
+
+
+freien Platz auf der Vorderseite des Zauberlings viel effizienter. Und außerdem: Die
+bewährten fischertechnik-Stecker müssen
+im Prinzip nur auf der Seite der kontrollierten fischertechnik-Komponenten im
+Modell verwendet werden.
+
+
+Fazit
+Es könnte eine Überlegung wert sein, den
+Zauberling in Zukunft mehr in SMD-Technik zu bauen. Denn sowohl der Mikroprozessor als auch der Motortreiber sind bereits
+in SMD-Technik realisiert. Dies ist für den
+TB6612FNG sicherlich eine Überlegung
+wert; das von mir verwendete Komplettmodul hat kaum zusätzliche Komponenten.
+Andererseits: Die einzelnen Chips sind in
+der Praxis wohl genauso teuer wie die kompletten Module. Diese haben den Vorteil,
+dass sie „huckepack“ auf der Hauptplatine
+montiert werden können, was das Design
+vereinfacht und den (vertikalen) Platz
+besser nutzt.
+Bisher habe ich die Servoausgänge nicht
+benötigt. Sie erscheinen zwar sinnvoll, aber
+vielleicht kommt dafür in Zukunft ein
+separater Servo-Silberling mit mehr manuellen Einstellmöglichkeiten pro Servo in
+Frage. Eine weitere Überlegung ist, ob die
+nächste Version noch Buchsen für die
+fischertechnik-Stecker haben soll. Die
+moderneren Stiftleisten erleichtern nicht
+nur das Mitführen der Stromversorgung für
+aktive Sensoren, sondern nutzen auch den
+
+
+Was in Zukunft sicherlich einen Platz auf
+der Front bekommen wird ist ein ResetKnopf. In der Praxis habe ich schon gemerkt, dass das sehr hilfreich sein kann,
+zum Beispiel nach Programmänderungen
+mit den DIP-Schiebeschaltern. Fürs Erste
+habe ich das gelöst, indem ich einen Mikroschalter in die Verkabelung des Uno eingebaut habe, den ich zum Programmieren
+verwende. Es ist auch möglich, den Vext/
+Vint-Schieberegler kurz in die neutrale
+Mittelstellung zu bewegen und so ein Reset
+zu erzwingen.
+Der Zauberling hat jetzt seinen (ersten)
+Zauberstab. Aber was ist ein Magier ohne
+seine Zaubersprüche? In Teil 2 dieser Serie
+schauen wir uns daher die (erste) Software
+für diesen selbstgebauten Silberling an; in
+Teil 3 folgt eine erste Anwendung des
+Zauberlings.
+
+Quellen
+Eine Beschreibung, weitere Informationen
+und einen Link zu einem Video zu diesem
+Projekt findet ihr auf meiner Webseite.
+[1]
+
+Arnoud van Delden: Die unendliche
+Lemniskate. ft:pedia 2/2021, S. 36–
+44.
+
+[2]
+
+Peter Krijnen: Silberlinge: Original
+oder Nachbau (Teil 1). 1/2021, S. 80–93; Silberlinge:
+Original oder Nachbau (Teil 2).
+ft:pedia 2/2021, S. 80–89;
+Silberlinge: Original oder Nachbau
+(Teil 3). ft:pedia 2/2021, S. 90–100.
+
+[3]
+
+Harsh Dethe: How to Program
+Arduino Pro Mini Using Arduino
+UNO. Instructables.com
+
+[4]
+
+Allan Schwartz: Creative solutions to
+your ID circuit. Whatimade.today
+
+

@@ -1,0 +1,866 @@
+
+
+Elektronik
+
+Elektronik-Module (Teil 5)
+Hans-Christian Funke
+Die Elektronikmodule können auch hervorragend zusammen mit einem programmgesteuerten
+Controller (ROBO, TX/TXT, Arduino) eingesetzt werden. In diesem Teil zu den Elektronikmodulen stelle ich einige Einsatzmöglichkeiten und Modelle mit einem vollständigen
+Programm vor.
+Die Elektronikmodule arbeiten mit positiver Logik. In den Ausführungen und
+Beschreibungen werden folgende Bezeichnungen verwendet:
+ logisch „0“ = low = minus (-) = Masse =
+GND
+ logisch „1“ = high = plus (+) = Betriebsspannung = Vdd
+ FlipFlop = FF
+ MonoFlop = MF
+
+Erweiterung
+Aktuell gibt es drei Elektronikmodule, die
+mit dem Ziel konstruiert wurden, als
+Erweiterung oder Ergänzung für Controller
+
+Steuermodul
+
+Meldemodul
+
+eingesetzt zu werden. Grundidee war es, mit
+einfachen Mitteln eine Erweiterung der
+Anzahl von Ein- und Ausgängen für die
+programmgesteuerten Controller zu schaffen.
+Mit Hilfe des Meldemoduls (Abb. 2)
+werden acht zusätzliche mit Speichern
+hinterlegte digitale Eingänge zur Verfügung
+gestellt, und mit jedem Steuermodul
+(Abb. 1) stehen acht zusätzliche mit Speichern hinterlegte digitale Ausgänge bereit.
+Das Multiplexmodul (Abb. 3) kann als 1:8Multiplexer oder 8:1-Demultiplexer eingesetzt werden und somit wahlweise acht
+verschiedene Ereignisse oder Situationen
+über nur einen Eingang vom
+Controller abfragen oder über
+nur einen Ausgang vom Controller bis zu acht verschiedene
+Verbraucher ein- bzw. ausschalten. Das Multiplexmodul
+kann auch als Relais mit einem
+1:8-Umschalter eingesetzt werden, weil das Multiplexmodul
+sogar analoge Signale durchleiten kann, jedoch nur mit
+einem maximalen Stromfluss
+von 25 mA.
+
+Multiplexmodul
+
+
+Elektronik
+
+Das Steuermodul (70016)
+
+Funktionsbeschreibung
+
+Herzstück des Steuermoduls ist ein 8-bit
+Schieberegister (Abb. 4). Das Schieberegister verfügt über acht Daten-Ausgänge
+(D1-D8), die entweder den Zustand „1“
+oder „0“ annehmen können (Magnet,
+Lampe, Kompressor „ein“ oder „aus“). Die
+Ausgänge können keine Stufeneinstellungen für Motoren übertragen.
+
+Für die weitere Beschreibung empfehle ich,
+das Taktdiagramm (Abb. 5) zur Hand zu
+nehmen, um meinen Ausführungen besser
+folgen zu können.
+
+Schieberegisters
+
+Um den Zustand an den Ausgängen zu
+ändern, müssen die D‘-FFs (linke Spalte)
+mit den Daten für die Ausgänge (D1-D8)
+versorgt werden. Dafür wird der
+gewünschte Zustand für den Ausgang D1
+zuerst an den DIN-Eingang gelegt (low oder
+high). Durch einen Zustandswechsel von
+low auf high am Clock-Eingang übernimmt
+das erste D‘-FF die Daten vom DINEingang; alle weiteren D‘-FFs übernehmen
+vom vorherigen D‘-FF die Daten, so dass
+die Daten wandern bzw. geschoben werden
+(Schieberegister). Durch Wiederholung des
+Vorganges und nacheinander anlegen der
+weiteren Daten (D2-D8) an den DINEingang, gefolgt von einem low-high
+Wechsel am Clock-Eingang, werden alle
+Daten in das Schieberegister geschoben.
+Sind alle Daten eingeschoben, erscheinen
+diese noch nicht an den Ausgängen,
+sondern erst mit high am Transfer-Eingang
+werden die Daten von den D‘-FFs (linke
+Spalte) gelesen und an die D‘‘-FFs (rechte
+
+
+
+
+Spalte) übergeben und gespeichert. Durch
+die separate Speicherung in den D‘‘-FFs
+können so weitere Daten in das Schieberegister geschoben werden, ohne dass sich
+die Daten an den Ausgängen ändern.
+Die orangefarbenen LEDs signalisieren,
+wenn ein Ausgang auf high liegt. Nach dem
+Einschalten nehmen die FFs einen undefinierten Zustand ein. Damit müssen nach
+dem Einschalten über den Eingang DIN erst
+einmal 8 Bit eingeschoben werden, um
+einen definierten Start-Zustand zu erhalten.
+Soll der Clock-Eingang über einen mechanischen Taster angesteuert werden, dann
+empfiehlt es sich, den Jumper am Modul auf
+„A“ für analog zu stecken. Ein integrierter
+Tiefpass sorgt dann dafür, dass auftretende
+Prellimpulse abgefangen werden. Für alle
+anderen Fälle sollte der Jumper auf „D“ für
+digital stecken, in diesem Fall wird der Tiefpass überbrückt.
+
+Wer mehr Ausgänge benötigt, kann den
+Ausgang DOUT mit einem DIN-Eingang
+eines weiteren Steuermoduls verbinden,
+sowie die Eingänge Clock und Transfer
+beider Steuermodule miteinander koppeln
+und erhält somit insgesamt 16 digitale
+Ausgänge.
+
+Das Meldemodul (70017)
+Bei der Erweiterung der Eingänge schien
+mir die Lösung mit dem Schieberegister
+nicht sehr sinnvoll, denn es sollte möglich
+sein, die Eingangswerte schnell abfragen zu
+können. Aus diesem Grund habe ich mich
+entschieden, beim Meldemodul einen
+Multiplexer einzusetzen. So können die
+Eingänge zwar gezielt abgefragt werden,
+aber nicht gleichzeitig, und ankommende
+Signale können verloren gehen. Um dies zu
+vermeiden, brauchten die Eingänge einen
+Speicher, der selbst ein sehr kurzen Signal
+auffangen und registrieren kann. Die
+Speicher müssen auch wieder zurückgesetzt
+
+
+
+Elektronik
+
+werden können, idealerweise jeder gezielt
+und separat für sich.
+Um all diesen Anforderungen Rechnung zu
+tragen, hat das Meldemodul für jeden
+Eingang ein RS-FF bekommen, einen
+Multiplexer zum Abruf des Status eines
+jeden FFs und einen Multiplexer, um jedes
+FF separat zurücksetzen zu können – das
+Ergebnis war eine relativ komplexe
+Schaltung (Abb. 7).
+Funktionsbeschreibung
+Um die gesamte Ansteuerung des Meldemodules zu vereinfachen, wurden gleiche
+Funktionen zusammengelegt und damit die
+Anzahl der notwendigen Steuereingänge
+minimiert. Die Ansteuerung der acht Multiplexer-Eingänge erfolgt über drei Steuerleitungen A0-A2 mit Hilfe einer Binärcodierung (Tab. 1).
+
+Eingänge
+
+Ausgang
+
+A0
+
+A1
+
+A2
+
+Res
+
+Dout
+
+
+
+
+
+D1
+
+
+
+
+
+D2
+
+
+
+
+
+D3
+
+
+
+
+
+D4
+
+
+
+
+
+D5
+
+
+
+
+
+D6
+
+
+
+
+
+D7
+
+
+Tab. 1: Binärcodierung
+
+D8
+
+Beide Multiplexer – auslesen und zurücksetzen der FFs – werden über die gleichen
+Steuerleitungen A0-A2 angesprochen oder,
+wie man auch sagt, adressiert.
+
+
+
+
+Werden Daten über den
+Multiplexer (U3) ausgelesen,
+kann der Zustand eines FFs
+über den Ausgang DOUT abgefragt werden; am Eingang Res
+muss währenddessen low
+anliegen.
+Möchte man ein FF zurücksetzen, erfolgt dies über den
+Multiplexer (U2) und der
+Eingang Res muss auf high
+liegen. Je nach Adressierung
+der Steuerleitung wird das
+entsprechende FF zurückgesetzt.
+Die FFs verfügen über einen
+Einschalt-Reset, so dass alle
+FFs nach dem Einschalten
+zurückgesetzt sind. Sobald
+high an einer der Eingänge
+erscheint, wird damit die SetzFunktion des dahinterliegenden FFs ausgelöst und durch
+eine rote LED signalisiert.
+
+Das Multiplexmodul
+(70024)
+Das Innenleben des MultiAbb. 8: Teilschaltplan des Multiplexmoduls
+plexmoduls basiert auf einen
+bidirektionalen
+1:8-Multider mit dem Einzelkontakt Dx verbunden
+plexer, so dass dieser gleichzeitig auch als
+wird.
+8:1-Demultiplexer eingesetzt werden kann.
+Man kann sich den Multiplexer verBei einem Relais ist immer einer der ausgleichsweise auch als ein Relais mit acht
+gewählten Kontakte mit dem Einzelkontakt
+Umschaltkontakten vorstellen, wobei die
+verbunden; beim Multiplexmodul kann
+Richtung des Stromflusses keine Rolle
+durch Anlegen von high an Eingang Xoff der
+spielt und die Spannung einen analogen
+Einzelkontakt von allen anderen Kontakten
+Wert bis zur Betriebsspannung annehmen
+getrennt werden.
+darf.
+Einzige Einschränkung gegenüber dem
+Funktionsbeschreibung
+Relais ist, dass nur Spannungen zwischen
+0 V und der Betriebsspannung Vdd (max.
+Ebenso wie das Meldemodul verfügt das
+15 V) geschaltet und max. 25 mA StromMultiplexmodul über drei Steuer- bzw.
+fluss geschaltet werden können.
+Adresseingänge (A0-A2), die mittels Binärcodierung (siehe Tab. 1) die Auswahl des
+jeweiligen Kontaktes bestimmen (D1-D8),
+
+
+
+Elektronik
+
+
+Achtung
+Es ist unbedingt darauf zu achten, dass
+die Elektronikmodule immer zuerst mit
+Betriebsspannung versorgt werden,
+bevor die einzelnen Kontakte mit
+Spannung beschaltet werden. Dies gilt
+insbesondere für das Multiplexmodul.
+
+Ansteuerung ohne Controller
+Aus den Funktionsbeschreibungen von
+Steuermodul, Meldemodul und Multiplexmodul ist ersichtlich, dass ohne ein programmgesteuertes Interface oder Controller
+diese kaum sinnvoll eingesetzt werden
+können.
+Allerdings können die drei Elektronikmodule z. B. in Verbindung mit dem Taktgenerator (70004) zum Leben erweckt
+werden – ganz ohne einen Controller.
+Beispielsteuerung für das
+Steuermodul
+Das Steuermodul wird hier in Kombination
+mit dem Taktgenerator eingesetzt, um ein
+
+Lauflicht zu generieren (Abb. 9). Die
+Geschwindigkeit des Lauflichtes kann über
+den Drehregler am Taktgenerator eingestellt werden.
+Beispielsteuerung für das
+Meldemodul
+Für das Meldemodul habe ich für die manuelle Anwendung kein Schaltungsbeispiel
+parat. Dieses Elektronikmodul kann z. B. in
+einem Pinball oder einer Fahrstraße eingesetzt werden. Die Signale nimmt das
+Meldemodul auf und können vom Controller abgerufen und weiterverarbeitet werden.
+Beispielsteuerung für das
+Multiplexmodul
+Beim Multiplexmodul kann die Auswahl
+gut über Schalter realisiert werden, wobei
+mit einem Schalter zwei Schaltzustände
+(D1 oder D2), mit zwei Schaltern vier
+Schaltzustände (D1-D4) und mit drei
+Schaltern acht Schaltzustände (D1-D8) eingestellt werden können. Die eine Seite vom
+Schalter muss an Plus angeschlossen
+
+
+
+werden und die andere Seite je an einen
+Eingang A0-A2.
+Möchte man eine Automatik einbauen,
+kann auch hier der Taktgenerator helfen,
+indem man drei Ausgänge des Taktgenerators mit den Eingängen A0-A2 vom
+Multiplexmodul verbindet.
+Als praktisches Beispiel habe ich einen
+Morsezeichensender entworfen. Hier sieht
+man auch gleich, dass bei entsprechender
+
+Kombination der 1:8-Schalter auch auf 1:16
+erweitert werden kann (Abb. 10). Das
+ODER-Gatter wird hier nur als Inverter
+eingesetzt – es kann auch ein UND-Gatter,
+EXODER-Gatter oder Inverter verwendet
+werden.
+Mit dem „Start“-Taster werden die
+eingestellten Morsezeichen von der LED
+angezeigt. Folgende Einstellung ist zu
+beachten:
+
+
+ Lang: Zwei aufeinander folgende
+Schalter auf ‚ein‘
+ Kurz: Ein Schalter auf ‚ein‘
+ Pause: Nach jedem ‚Lang‘ oder ‚Kurz‘
+muss ein Schalter auf ‚aus‘ stehen
+Hier zwei Beispiele:
+Buchstabe J · – – – kurz lang lang lang
+Schalter ‚ein‘ 1, 3+4, 6+7, 9+10
+Buchstabe Y – · – – lang kurz lang lang
+Schalter ‚ein‘ 1+2, 4, 6+7, 9+10
+
+Weitere Morsezeichen sind in Tab. 2
+aufgelistet.
+
+Programmierung und
+Ansteuerung der
+Elektronikmodule
+In diesem Teil werde ich den Einsatz der
+Elektronikmodule unter Verwendung eines
+Controllers demonstrieren. Dafür habe ich
+drei Modelle, für die ich euch die Schaltung
+bzw. das Anschlussschema und auch ein
+dazugehöriges Programmbeispiel mit
+Erklärungen liefere. Für die Steuerung der
+Modelle kommt ein TXT-Controller zum
+
+Elektronik
+
+Einsatz; für das Modell „Demo“ verwende
+ich das ROBO-Interface.
+Die Programmierung ist nicht mein Fachgebiet, daher sind die hier vorgestellten
+Programme zwar alle in der Praxis geprüft
+und funktionieren, möglicherweise können
+einige Stellen aber noch eleganter oder effizienter gelöst werden. Mein Hauptanliegen
+ist es, für die Ansteuerung der Elektronikmodule eine mögliche Programmversion
+vorzustellen, um damit eine Grundlage für
+die Umsetzung weiterer Ideen und Experimente zu liefern.
+Bei den Modellen handelt es sich um das
+„Pianophone“ und die „Digitale Uhr“, die
+ich beide in der letzten Ausgabe vorgestellt
+habe. Als drittes zeige ich ein DemoModell, das ich auf den Conventions einsetze, um die Funktion von Steuer- und
+Meldemodul zu zeigen. Hier die Elektronikmodule, die durch das Programm angesteuert werden:
+ Digitale Uhr: Ansteuerung von 70001
+Zählermodulen.
+ Jukebox (Pianophone): Ansteuerung
+eines 70024 Multiplexmodules.
+ Demo: Demonstration der Funktionsweise von 70016 und 70017.
+Modell „Digitale Uhr“ mit
+Steuerung über einen Controller
+Eine ausführliche Aufbauanleitung für
+das Modell ist in der ft:pedia-Ausgabe
+03/2020 abgedruckt. Abb. 11 zeigt im
+Schaltplan, wie der Controller mit dem
+Modell zu verbinden ist, damit das
+vorgestellte Programm zusammen mit
+dem Modell funktioniert. Es sind nur
+minimale Änderungen in der Schaltung
+erforderlich, und die Verbindungen zum
+Controller herzustellen.
+Das gesamte Programm (Hauptprogramm mit Unterprogrammen) findet
+ihr als PDF-Darstellung und als fertiges
+Programm (.RPP-Datei) auf der
+www.ftcommunity.de im Abschnitt
+
+Tab. 2: Morse-Alphabet [1]
+
+
+
+ft:pedia unter der Rubrik „Ergänzende
+Downloads“.
+Das Hauptprogramm besteht aus zwei
+Prozessen: Einer zur Taktung und einer zur
+Steuerung der Uhr. Die Steuerung, die das
+eigentliche Programm darstellt, hat einen
+einleitenden Teil, der die Zähler auf null
+zurücksetzt (Unterprogramm Reset) und
+eine Startzeit für die Anzeige festlegt
+(Unterprogramm Setzwert). Anschließend
+läuft das Programm in eine Endlosschleife,
+die ständig aus dem Prozess Taktung, der
+den sekundengenauen Takt liefert, die
+Variable Sek.Zähler abfragt.
+Die aktuelle Uhrzeit auf der Anzeige läuft
+synchron mit den Variablen Stunde, Minute
+und Sekunde. Ist die Variable Sek.Zähler
+einen Takt weiter, dann wird die Uhrzeit auf
+allen Anzeigen/Variablen geprüft und nach
+Bedarf angepasst.
+
+Der Ausgang O1 liefert eine Sekundentaktung, die für das Modell nicht benötigt
+wird. Der Zeitwert von 0,485 Sekunden vor
+dem Einschalten des Ausgang O1 ist ein
+empirisch ermittelter Wert, um eine genaue
+Taktung von 1 Sekunde zu erhalten. Dieser
+Wert kann bei den unterschiedlichen
+Controller-Typen variieren.
+Der Durchlauf durch die Programmschleife
+verbraucht auch Zeit und muss berücksichtigt werden; für diesen Controller beträgt
+der benötigte Zeitaufwand 0,015 Sekunden
+oder 15 ms.
+Das Unterprogramm Reset dient zum
+zurücksetzen der Zählermodule. Die
+Programmierung ist so universell gestaltet,
+dass sowohl die Zähler einzeln als auch in
+jeder beliebigen Kombination zurückgesetzt werden können: Die Zahle 0 bis 7
+als Übergabewerte setzen bitweise kombinierbar zurück:
+
+
+ 1 = Sekunden-Zähler
+ 2 = Minuten-Zähler
+ 4 = Stunden-Zähler
+Durch Addition der Werte können auch
+mehrere Zähler mit einem Programmaufruf
+zurückgesetzt werden:
+
+
+
+
+
+3 = Sekunden- und Minutenzähler
+5 = Sekunden- und Stundenzähler
+6 = Minuten- und Stundenzähler
+7 = alle Zähler
+
+Das Unterprogramm wird ohne Prüfung auf
+unzulässige Werte (kleiner als 0 oder größer
+als 7) wird ausgeführt.
+Im Unterprogramm Setzwert wird eine
+vorgegebene Zeit auf der Uhr eingestellt.
+Die Zähler werden entsprechend den
+Werten der Variablen Sekunde, Minute und
+Stunde hochgezählt.
+Bei Stunden und Minuten ist entsprechend
+der Bauanleitung der Jumper auf den
+Zählermodulen auf der Position „A“
+(analog) einzustellen. In diesem Fall
+
+Elektronik
+
+werden die Zählimpulse über ein internes
+MF geleitet, dass eine Haltezeit von 300 ms
+hat (zum Abfangen von Prellimpulsen). Aus
+diesem Grund ist ein Zeitglied mit einer
+relativ langen Wartezeit von 0,3 Sekunden
+eingestellt, bevor das Programm weiterlaufen kann.
+Nur beim Sekundenzähler steckt der
+Jumper auf „D“ und hier kann die minimale
+Verzögerung eingestellt werden. Wichtig
+ist auch die Zeitverzögerung nach dem
+Ausschalten des Signals, damit die Elektronik der Endstufe vom Controller genug Zeit
+hat, die Umschaltung auszuführen.
+Die globalen Variablen Stunde, Minute,
+Sekunde werden auch ohne Prüfung auf
+unzulässige Werte (kleiner als 0 oder großer
+als 59 bzw. 23) verwendet.
+Modell „Jukebox“ mit Steuerung
+über einen Controller
+Grundlage für die Jukebox bildet das Pianophone. Dessen Schaltung muss mit einem
+
+Multiplexmoduls 70024 und eines Inverters (Ersatz durch ein ODER-Gatter 70013).
+
+
+
+Multiplexmodul 70024 (Abb. 12) erweitert
+werden, damit die Steuerung über einen
+Controller möglich wird. Dies ist auch ein
+sehr schönes Anwendungsbeispiel für den
+Einsatz eines Multiplexmodules.
+
+in der Unterschleife an. Ist der Wert z. B. 3,
+beträgt die Tondauer 30 ms. Im Zeitbaustein der Unterschleife kann auch eine
+anderer Zeitparameter für die 10 ms
+eingesetzt werden.
+
+Das gesamte Programm findet Ihr als PDFDarstellung und als fertiges Programm
+(.RPP-Datei) auf der www.ftcommunity.de
+im Abschnitt ft:pedia unter der Rubrik
+„Ergänzende Downloads“.
+
+Für die zu spielende Melodie wird dann eine
+Liste mit Tonhöhen- und Tondauer-Werten
+erstellt:
+
+Mir persönlich fehlt der Bezug zur Musiklehre bzw. dem Spielen von Noten, so dass
+ich kein fertiges Musikbeispiel präsentieren
+kann. Zur Demonstration der Jukebox
+werde ich mich daher auf das Abspielen der
+Tonleiter beschränken müssen.
+Für das Spielen einer Note sind die Tonhöhe
+und die Tondauer maßgebend. Auf einem
+Instrument können mehrere Töne gleichzeitig angestimmt werden, aber in der
+vorliegenden Modellversion von der
+Jukebox ist dies nicht möglich. Dazu
+müssten mehrere Tongeneratoren aufgebaut
+werden.
+Als Vorbereitung für den Programmlauf
+muss eine Liste erstellt werden. Diese
+Listenvariable muss die Reihenfolge der
+abzuspielenden Noten enthalten (Tonhöhe,
+Tondauer).
+
+Tab. 4: Listenvariable als CSV-Datei
+
+Die Listenvariable kann mit Hilfe eines
+Tabellen-Kalkulationsprogramms erstellt
+und anschließend als Datei im CSV-Format
+gespeichert werden. Oder man erstellt eine
+Werteliste im Editor und legt die Datei mit
+der Endung .CSV an (Abb. 13).
+
+Zahlenwert Ton
+
+c
+
+
+d
+
+
+e
+
+
+f
+
+
+g
+
+
+a
+
+
+h
+
+c‘
+Tab. 3: Tonhöhen je nach Zahlenwert
+
+Ein Ton dauert mindestens 10 ms (definiert
+durch den Zeitbaustein im Programm). Der
+Zahlenwert gibt die Anzahl der Durchläufe
+
+
+Bei einem Editor muss nur darauf geachtet
+werden, dass die Werte mit einem
+Trennzeichen (Komma oder Semikolon)
+separiert werden. In meinem Beispiel habe
+
+ich die Wertetabelle für die Listenvariable
+Melodie.CSV benannt.
+
+Elektronik
+
+Das Programm besteht aus einer Hauptschleife und einer untergeordneten Schleife.
+Die Hauptschleife ist ein Zähler, der
+solange aufwärts zählt, bis ein negativer
+Wert aus der Liste Tonhöhe entnommen
+wird, womit das Ende eines Liedes signalisiert wird. Die Unterschleife wird solange
+durchlaufen, wie der Ton gehalten werden
+soll bzw. durch die Variable Tondauer
+vorgegeben wird. Zum Abschluss der
+Unterschleife wird die Ton-Wiedergabe
+abgeschaltet.
+Für das Spielen des entsprechenden Tons
+muss der Schalter vom Multiplexmodul in
+die richtige Position gebracht werden. Die
+Dezimalzahl aus der Liste Tonhöhe wird
+dazu über das Unterprogramm Binärcodierung in eine Binärzahl umgewandelt, die
+den Multiplexschalter in die richtige
+Position stellt.
+
+„Tondauer“
+
+Im Programm muss unter den Eigenschaften der Listenvariable die CSV-Datei
+hinterlegt werden (Rechtsklick auf die Liste
+– Abb. 14). Unter Aus .CSV Datei laden:
+wird die Datei für das abzuspielende Lied
+hinterlegt. Ebenso ist bei den anderen
+Listenvariablen die Datei zu hinterlegen;
+lediglich die Spalte ist bei allen Listenvariablen unterschiedlich auszuwählen:
+Tonhöhe aus Spalte 1, Tondauer aus
+Spalte 2.
+Programmablauf
+Durch den Inverter am Ausgang O7 ist die
+Ton-Wiedergabe nach dem Einschalten des
+Controllers erst einmal deaktiviert. Zu
+Beginn des Programmes wird nach einer
+Zeitverzögerung von 2 Sekunden der
+Anfang des Lieds eingeleitet (das Zeitglied
+kann auch entfallen).
+
+Damit es bei der Einstellung der Binärzahl
+des nächsten Tones nicht zu falschen
+Zwischentönen kommt, ist es wichtig, die
+Ton-Wiedergabe nach dem Abspielen des
+gerade gespielten Tones kurz zu unterbrechen.
+Der an das Unterprogramm Binärcodierung
+übergebene Zahlenwert wird in eine Binärzahl umgewandelt. Dieses Programm kann
+nur 3 Bit große Zahlen (Dezimal 0-7) in
+eine Binärzahl umwandeln, aber das
+Programm kann leicht auf jede beliebige
+Anzahl von Bits erweitert werden. Eine
+Überprüfung des Zahlenwertes auf Gültigkeit wird hier nicht vorgenommen.
+Die Ausgabe der Bit-Zahl erfolgt über die
+drei Ausgänge O1, O3 und O5, wobei O1
+den niedrigsten Bit-Wert (A0) darstellt und
+O5 den höchsten Bit-Wert (A2).
+Anmerkung
+Beim Multiplexmodul handelt es sich im
+Gegensatz zu einem mechanischen Relais
+um einen Halbleiterschalter. Das heißt, die
+Trennung der Kontakte wird nicht durch
+eine physikalische Trennung realisiert,
+sondern die Verbindung wird hochohmig
+
+
+(im MΩ-Bereich). Beim Aufbau der
+Jukebox ist daher ein geringfügiger Unterschied in der Tonlage festzustellen, wenn
+die Verbindung über das Multiplexmodul
+erfolgt, weil auch der leitende Weg durch
+den Halbleiterschalter einige wenige Ohm
+aufweist und somit zur Änderung der Tonlage führt.
+Modell „Demo“ mit Steuerung über
+einen Controller
+Dieses Modell verwende ich für Vorführzwecke
+auf
+Ausstellungen
+und
+Conventions. Es zeigt die Anwendungsmöglichkeiten für die Steuer- und Meldemodule. Darüber hinaus wird auch die
+Verwendungsmöglichkeit des InverterPlus-Modules demonstriert. Das entsprechende Schaltbild zu dem Modell findet Ihr
+in Abb. 15.
+Das gesamte Programm (Hauptprogramm
+mit Unterprogramme) findet Ihr als PDFDarstellung und als fertiges Programm
+(.RPP-Datei) auf der www.ftcommunity.de
+im Abschnitt ft:pedia unter der Rubrik
+„Ergänzende Downloads“.
+
+Das Hauptprogramm unterteilt sich in zwei
+Prozesse, wobei der eine lediglich als
+Nebenprozess angelegt wurde, um dem
+Betrachter zu signalisieren, in welchem
+Abschnitt sich das Programm gerade
+befindet. Der Hauptprozess besteht aus drei
+Teilen:
+1. Auslesen der Informationen vom Meldemodul 70017 und speichern in einer
+Listenvariable.
+2. Die Informationen aus der Liste in das
+Steuermodul 70016 schieben/ausgeben.
+3. Nach der Übertragung die einzelnen
+Speicher des Meldemoduls 70017
+gezielt löschen.
+Wird einer der drei Abschnitte im
+Programm erreicht, werden die Variablen
+Lesen, Schieben und Reset gesetzt und beim
+Verlassen des Abschnittes zurückgesetzt.
+Der Nebenprozess wertet diese Variablen
+aus und signalisiert dem Beobachter über
+zwei Lampen (gesteuert über die Ausgänge
+O2 und O4), welcher Abschnitt gerade
+bearbeitet wird.
+
+
+Datenerfassung
+und
+Vorbereitung
+(Demonstriert die Funktionsweise des
+Meldemoduls): Vor Beginn des Programmlaufes wird über verschiedene Sensoren, die
+direkt an die Eingänge des Meldemoduls
+angeschlossen sind, ein zufälliges Datenmuster im Meldemodul erzeugt.
+Programmlauf: Über eine Zählschleife
+wird der Eingang I8 insgesamt achtmal
+abgefragt und der Wert in die Liste
+Schalterdaten eingetragen.
+Die Auswahl der verschiedenen Speicher
+des Meldemoduls erfolgt durch einen
+Binärwert, der über die Ausgänge O1, O3
+und O5 bereitgestellt wird. Hier wurde der
+Zählwert des Schleifenzählers mit Hilfe des
+Unterprogramms Binärcodierung in einen
+Binärcode umgewandelt und an die
+Ausgänge O1, O3 und O5 übergeben. Sehr
+wichtig ist die Wartezeit nach dem
+Einstellen des Binärcodes! Die Endstufen
+von den Ausgängen des Controllers müssen
+genug Zeit bekommen, die neuen
+Einstellungen zu übernehmen. Die digitale
+Technik (CPU des Controllers und die
+Elektronikmodule) sind sehr schnell und
+somit muss das Programm immer wieder
+ausgebremst werden, damit alle Signale
+korrekt an den Ausgängen des Controllers
+zur Verfügung stehen.
+Zum Schluss dieses Abschnittes wird der
+Binäre-Ausgang (O1, O3, O5) auf null
+gesetzt und das Steuermodul für den
+nächsten Schritt vorbereitet, indem über das
+Unterprogramm Löschen alle internen
+Speicher des Steuermoduls gelöscht
+werden.
+Daten schieben (Demonstriert die Funktion
+des Steuermoduls): Die durch das Meldemodul aufgenommenen Daten, die in der
+Liste Schalterdaten abgelegt wurden,
+werden in diesem Abschnitt des Programmes wieder der Liste entnommen und über
+das Steuermodul ausgegeben.
+
+Elektronik
+
+Schalterdaten ausgelesen und dem Steuermodul am Eingang DIN (O7) zur Verfügung
+gestellt. Danach werden die Daten über das
+Unterprogramm
+Übergabe
+in
+das
+Schieberegister geschoben. Das kleine
+Unterprogramm Übergabe wurde nur
+deshalb angelegt, weil dieser Teil auch zum
+Zurücksetzen des Steuermoduls benötigt
+wird und somit die Redundanz vermindert
+und die Programmübersicht verbessert
+wird.
+Damit der Zuschauer mehr Transparenz
+über die Abläufe im Programm erhält, habe
+ich mich entschieden, nach jedem Bit, das
+in das Schieberegister geschoben wird, dies
+gleich für die Zuschauer sichtbar zu
+machen. Allerdings gab es keinen freien
+Steuerausgang mehr, so dass ich mich für
+eine Doppelbelegung des Steuerausgangs
+O1 entschieden habe, der in diesem Teil des
+Programmabschnitts nicht verwendet wird.
+Sobald der Ausgang O1, der mit dem
+Transfer-Eingang
+des
+Steuermoduls
+verbunden ist, auf high geht, werden die
+Daten im Schieberegister an die AusgangFlip-Flops weitergereicht und über die
+LEDs und Lampen – die über ein InverterPlus-Modul 70019 angeschlossen sind –
+sichtbar gemacht.
+Sowohl in diesem als auch im nächsten
+Abschnitt sind wieder Wartezeiten in den
+Programmablauf eingefügt worden. Es hat
+sich in der Praxis bewährt, eine Wartezeit
+von mindestes 10 ms zu verwenden, damit
+die Endstufe des Controllers sicher die
+eingestellten Werte übernommen hat.
+Daten
+löschen
+(Demonstriert
+die
+Funktionsweise des Meldemoduls): Nachdem sämtliche Daten ausgelesen und für
+den Zuschauer sichtbar gemacht wurden,
+wird eine Pause von 10 Sekunden eingelegt.
+Diese Pause soll dem Zuschauer die
+Möglichkeit einräumen, die Daten vom
+Meldemodul mit den Daten am Steuermodul zu vergleichen.
+
+Über eine Zählschleife – diesmal Rückwärts – werden die Daten aus der Liste
+
+
+
+Im letzten Abschnitt wird noch der Beweis
+angetreten, dass sämtliche Speicher vom
+Meldemodul einzeln und gezielt gelöscht
+werden können. Dafür wurde eine weitere
+Listenvariable Resetverlauf angelegt. Die
+Listenvariable kann mit Dezimalzahlen 1-8
+in beliebiger Reihenfolge bestückt werden.
+Die Zahlen werden über eine Schleife
+nacheinander ausgelesen und in Binärcode
+umgewandelt, womit der zu löschende
+Speicher auswählt wird. Nach der Auswahl
+wird der Eingang RIN (O8) am Meldemodul
+gesetzt (high) und der entsprechende
+Speicher bzw. das Flip-Flop zurückgesetzt.
+Der an das Unterprogramm Binärcodierung
+übergebene Zahlenwert wird in eine Binärzahl umgewandelt. Dieses Programm kann
+nur 3 Bit große Zahlen (Dezimal 0-7) in
+eine Binärzahl umwandeln, aber das
+Programm kann leicht auf jede beliebige
+Anzahl von Bits erweitert werden. Eine
+Überprüfung des Zahlenwertes auf Sinnhaftigkeit wird hier nicht vorgenommen.
+Die Ausgabe der Bit-Zahl erfolgt über die
+drei Ausgänge O1, O3 und O5, wobei O1
+den niedrigsten Bit-Wert (A0) darstellt und
+O5 den höchsten Bit-Wert (A2).
+Mit dem Unterprogramm Löschen wird das
+Schieberegister vom Steuermodul initialisiert, in dem alle Speicher auf null gesetzt
+bzw. gelöscht werden. Um das zu erreichen,
+müssen acht Takte an den Clock- oder TaktEingang (O6) des Schieberegisters gesendet
+und der Dateneingang DIN (O7) auf low
+gesetzt werden.
+
+Aufgabe des Programmteils Übergabe ist
+es, die am Eingang DIN (O7) befindliche
+Information ins Schieberegister zu transportieren (1 Bit schieben). Der Ausgang O6
+steuert den Clock- bzw. Takt-Eingang am
+Steuermodul.
+Auf youtube habe ich ein kleines Video
+hinterlegt. Dort könnt Ihr das Modell und
+die Funktionsweise sehen.
+
+Schlusswort
+Mit diesem Teil sind alle bisher erschienenen Elektronikmodule einmal beschrieben
+worden, teilweise sogar mit praktischen
+Beispielen oder Modellen hinterlegt.
+In dem von mir in Vorbereitung befindlichen Dokument „Grundlagen der Elektronikmodule“ (70099), in dem auch Schaltungsbeispiele enthalten sind, trage ich noch
+einmal alle technischen Daten über die
+Elektronikmodule zusammen. Das Dokument kann allerdings im Moment nur direkt
+bei mir per E-Mail angefordert werden und
+befindet sich noch in der Entstehungsphase.
+Im nächsten Jahr wird es eine Fortsetzung
+geben mit der Vorstellung von wenigsten
+zwei neuen Elektronikmodulen, die bis
+dahin fertiggestellt werden sollen.
+Für Fragen, weiteren Ausführungen oder
+Anregungen aller Art stehe ich gern zur
+Verfügung (elektronik@funke4you.de).
+Fortsetzung folgt.
+
+Quellen
+[1]
+
+
+Wikipedia: Morsecode.
+
+

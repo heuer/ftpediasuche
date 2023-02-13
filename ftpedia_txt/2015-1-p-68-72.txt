@@ -1,0 +1,223 @@
+
+
+Tipps & Tricks
+
+Neue ft-Teile selbst gemacht – 3D-Druck (2):
+Schleifringe
+Harald Steinhaus
+Das Fehlen von Schleifringen im aktuellen Angebot von fischertechnik wird immer wieder bemängelt. Die Schleifringe aus hobby 3 (und em-1/em-2) sind klobig und nur noch gebraucht
+erhältlich. Der Modellbau bietet wenig und Profi-Schleifringe sind teuer. Selbst mit dem Aufkommen der 3D-Drucker hat sich daran noch nicht viel geändert, denn Schleifringe müssen
+aus zweierlei Material zusammengesetzt werden, wovon eins elektrisch leitfähig sein muss. Immerhin können derzeitige 3D-Drucker den Kunststoff-Anteil an derlei Konstruktionen beisteuern, daher…
+… wird hier ein Schleifring vorgestellt, der
+·
+·
+·
+·
+·
+·
+·
+
+sehr kompakt ist
+zum ft-Drehkranz passt
+mehrere Bahnen aufweist (4, 8, 12)
+ohne Lötkolben auskommt
+freien Innendurchgang hat
+trotzdem Taschengeld tauglich bleibt
+für letzteres aber etliches an Eigenarbeit
+mitbringt.
+
+Der Innendurchgang hat Platz für eine
+„zweiadrige“ Druckluft-Drehdurchführung.
+Der Schleifring besteht aus einem Innenkörper mit vier Bahnen, einem zweiteiligen
+Außenkörper (linke und rechte Hälfte) und
+zwei Adapterstücken für den ft-Drehkranz.
+Der Innenkörper hat einen Kranz von
+„Zinnen“, mit denen er nach unten mit dem
+Adapter und nach oben mit einem weiteren
+Innenkörper verbunden wird. Durch Aufstecken mehrerer Grundkörper (1 Innen,
+2 Außen) kann der Schleifring auf acht oder
+12 Bahnen erweitert werden.
+Bei 16 Bahnen wird die Konstruktion etwas
+fragil, aber mit etwas Klebstoff in den
+Innenkörpern ginge auch das.
+
+
+Achtfach-Schleifring
+
+Aufstocken: in der zweiten „Etage“ (mit
+den Bahnen 5 bis 8) werden die Außenkörper genauso verbunden wie für die erste
+Etage, aber gegenüber der ersten Etage um
+180° gedreht. Die Stecker der ersten Etage
+zeigen nach oben (vom Drehkranz weg),
+diejenigen der zweiten Etage nach unten. In
+den Innenkörpern zeigen alle Stecker nach
+unten, der Innenkörper in Etage 2 ist um 45°
+gegen den ersten gedreht.
+Der Haken an der Sache macht den Rest
+dieses Artikels aus: Ein Element mit acht
+Bahnen braucht gut ein Wochenende an
+Arbeit, und dazu etwas mehr Geschick als
+bei Möbeln eines bestimmten Herstellers.
+
+Werkzeug/Material
+· Alu-Blech
+Ist aus einer Lebensmittel-/Kosmetik-Tube
+gewonnen am stabilsten, muss aber mühsam aufbereitet werden. Selbstklebendes
+Alu-Band (Baumarkt) hat den Nachteil der
+Klebeschicht, die das Einfädeln ziemlich erschwert. Als Notlösung tut es das Blech, mit
+dem bei besseren Weinen der Korken
+umgeben ist. Letzteres ist aber deutlich
+empfindlicher.
+· Schleifpapier, um das Alu-Blech blank
+zu bekommen
+· Schere/Messer und Lineal, um das Blech
+in Streifen zu schneiden
+· Moosgummi, alternativ: weicher Silikonschlauch (P-Schlauch ist zu hart).
+· Pinzette, Nadel: Die Nadel dient zum
+Aufweiten der beiden Alu-Streifen, um
+einen ft-Stecker einstecken zu können.
+· Plastikröhrchen 2,5 mm (aus Wattestäbchen zu gewinnen): Sie verbinden die
+Augen der Außenkörper zu Scharnieren
+und verbinden die Pakete, wenn man
+acht oder 12 Bahnen aufbaut.
+· Bohrer 2,5 mm: Damit werden die
+Löcher in den Scharnieren auf Maß gebracht.
+· Bohrfutter, entweder „losgelöst“ oder
+mit Bohrmaschine dran: Damit wird der
+2,5 mm-Bohrer bei der Arbeit festgehalten. Die Maschine bitte nicht einschalten, sondern nur von Hand drehen.
+
+
+Tipps & Tricks
+
+· Alte, „ausgeleierte“ ft-Stecker: Neue
+Stecker sitzen sehr stramm und haben
+eine scharfe Kante, an der man die zarte
+Alu-Bahn leicht zerdrückt und verknittert, statt den Stecker hindurch zu fädeln.
+
+Arbeitsschritte
+Schritt 1: Blech für Schleifbahnen
+Im gewöhnlichen Haushalt finden sich zwei
+Quellen: Weinflaschen und Tomatenmarktuben. Bessere Weine sind mit Kappen aus
+lackiertem Blech versehen. Obwohl es anders aussieht, ist dieses Blech auf der Innenseite lackiert und die Lackschicht muss entfernt werden.
+Besser geeignet ist das Blech von Tomatenmarktuben. Die Tube sollte man nicht leer
+quetschen, sondern den Bodenfalz abschneiden und dann von unten her mit
+einem Löffel oder Gummischaber leeren,
+dann den Gewindestutzen am anderen Ende
+abtrennen. Man könnte die Tube auch komplett aufwickeln, stößt dann aber auf einen
+schleimigen Kleber, der einer Verwendung
+des herausgeförderten Tomatenmarks entgegensteht. Das Alu-Blech ist beidseitig
+ziemlich dick lackiert. Die Außenseite kann
+man blank bekommen, indem man die leere
+Tube auf eine stramm zusammengerollte
+Zeitung aufschiebt (Anzahl der Schichten
+ausprobieren), zum Schluss ein angespitztes
+Rundholz (Bleistift oder größeres) hinein
+steckt, damit sich ein strammes Paket
+ergibt, und dann mit Sandpapier den Lack
+herunter schleift.
+Am einfachsten ist es, das Portemonnaie
+etwas mehr zu belasten und selbstklebendes
+Alu-Band im Baumarkt zu beschaffen. Das
+Band von Tesa hat die größte Schichtdicke
+unter den bisher gefundenen Produkten. Die
+Klebeschicht stört und wird entschärft,
+indem man sie gleich nach dem Abziehen
+von der Rolle reichlich mit Spülmittel
+einstreicht. Wenn das Band beim Abziehen
+Riffel bekommt, streicht man es auf einer
+Glasplatte (z. B. Ceranfeld) mit einem
+Stück Holz (Kochlöffel) wieder glatt.
+
+
+dann ist es besser, von der Gegenseite aus
+zu schieben als am Kabel zu ziehen.
+
+unbeachtet gelassen, da hat man nicht lange
+Freude dran.
+
+Blech in Streifen von 2,5 mm Breite schneiden. Falten, Falze, und doppelt liegende
+Stellen des Blechs nicht verwenden.
+
+aufweiten, dann umbiegen
+
+Schritt 3: Bahnen am Außenkörper
+
+
+Schritt 2: Bahnen am Innenkörper
+Einen Blechstreifen mit der blanken Seite
+nach außen um den Innenkörper schlingen
+und die Enden durch den Schlitz nach innen
+fädeln. Sie müssen auf der Innenseite frei
+heraus stehen. Nun mit einer Nadel durch
+das Loch hindurch die beiden Blechstreifen
+auseinander biegen und damit Platz für den
+ft-Stecker (mit Kabel, ohne Hülle) schaffen.
+Wenn der Stecker sitzt, können die überstehenden Enden des Blechstreifens umgebogen werden. Alle Kabel sollten mindestens
+12 cm lang sein, damit man den fertig montierten Schleifring zerlegen kann, ohne die
+Stecker wieder aufschrauben zu müssen.
+Wenn die Stecker einmal drin sind, sollte
+man sie besser nicht wieder herausnehmen,
+insbesondere wenn man dünnes, empfindliches Blech verwendet. Und wenn schon,
+
+Die Außenhüllenhälften enthalten je eine
+Tasche für die „Andruckfeder“ – ein Element, das die beiden Blechstreifen der
+Außen- und der Innenseite zusammendrückt. Das kann durch Moosgummi (je ein
+Streifen von 2 x 2 x 9 mm) oder ein Stück
+Silikonschlauch geschehen. Jede Außenhälfte erhält zwei kurze Blechstreifen, entweder auf den Bahnen mit geraden oder den
+ungeraden Nummern.
+Diese Streifen laufen nicht komplett um den
+Innenkörper herum, sondern immer nur
+vom Steckeranschluss über die Andruckfeder bis zu einem Schlitz im Außenkörper.
+Am Steckeranschluss wird der Alustreifen
+nach außen und gleich wieder zurück nach
+innen gefädelt, dann mittels Nadel Platz für
+den Stecker geschaffen, dieser eingesteckt
+und dann die überstehende Schlaufe an der
+Außenseite platt angedrückt.
+
+
+Tipps & Tricks
+
+Oben drauf kommt noch ein Deckel, auf den
+z. B. eine Codescheibe zur Winkelmessung
+aufgeklebt werden kann.
+
+
+Schritt 4: Endmontage
+
+
+Nach Montage der Leiterbahnen können die
+Außenhälften über den Innenkörper gelegt
+und mittels zweier Plastikröhrchen zusammengefügt werden. Der Adapter passt von
+der schwarzen Seite her kommend auf die
+Stege im roten Teil des ft-Drehkranzes. Der
+Schleifring sitzt lose auf dem Drehkranz auf
+und muss noch gegen Auseinander-Wackeln, die Außenkörper gegen Verdrehen gegenüber dem schwarzen Teil gesichert werden. Hierzu hat die eine Außenhälfte einen
+ft-Zapfen.
+
+Die STL-Datei mit Drucker-Definitionen
+für einen Schleifring mit acht Bahnen kann
+auf der ft:c heruntergeladen werden. Der
+Schleifring mit vier Bahnen hat ca. 11 cm3
+an Material (davon 5,8 cm3 Stützmaterial);
+derjenige mit acht Bahnen hat ca. 20 cm3
+Material (davon 10,7 cm3 Stützmaterial).
+Bei fabberhouse ergibt das (ohne Versand
+und Entstützen) Preise von ca. 5,50 € und
+10 €.
+Der eine oder andere mag sich nun doch
+überlegen, ob der Sechs-Bahn-Schleifring
+ohne Innendurchgang für 17 € aus dem Modellbauhandel (auch bei fischerfriendsman
+erhältlich als ‚5138sr‘) nicht eher in Frage
+kommt. Andererseits: Wer diesen achter
+oder 12er Schleifring hinbekommt und mit
+dem Lötkolben umgehen kann, für den ist
+der demnächst kommende achter Schleifring ein Kinderspiel.
+
+
+
+
+
+
+
+

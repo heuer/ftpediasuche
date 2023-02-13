@@ -1,0 +1,411 @@
+
+
+Computing
+
+Objekterkennung und Entfernungsmessung mit
+einer Kamera anhand von Markierungen
+Dirk Uffmann
+Kameras und Bildverarbeitung in Modellsteuerungen werden immer beliebter. In diesem
+Beitrag geht es um einen mobilen Roboter mit Kamera, der ein mit einem roten Streifen
+markiertes Objekt findet, die verbleibende Entfernung zum Objekt aus dem Kamerabild
+ermittelt und dann darauf zufährt, um es mit seinem Pneumatik-Greifer aufzuheben.
+
+Hintergrund
+Nachdem ich mich bereits dem Thema
+Ziffernerkennung mit einer CMOS-Kamera
+gewidmet hatte (ft:pedia 4/2014 [1]), wollte
+ich mich nun auch mit dem beliebten Color
+Blob Tracking beschäftigen, welches in
+vielen Roboter-Kameras implementiert ist.
+Die Ziffernerkennung hatte ich inzwischen
+in einem weiteren Modell eingesetzt, bei
+dem ein Industrieroboter mit Ziffern markierte Tonnen geordnet in ein Hochregallager einsortiert (youtube, ftcommunity).
+Meine Idee war nun, dem Industrieroboter
+die Tonnen von einem mobilen Roboter
+zuliefern zu lassen. Der mobile Roboter soll
+also in einem größeren Feld die Tonnen
+suchen und diese dann in ein markiertes,
+kleineres Feld im Aktionsradius des Industrieroboters bringen, aus dem der Industrieroboter diese dann aufnehmen kann (Abb.
+1). Dazu habe ich die Tonnen rundum mit
+einem roten Streifen am unteren Rand
+markiert.
+
+Komponenten
+Die elektronische Modellsteuerung mit der
+Kamera und dem Display ist sehr ähnlich
+aufgebaut, wie bereits in ft:pedia 4/2014 im
+Detail beschrieben [1]. Die Unterschiede
+sind:
+
+
+· Ein anderes Controllerboard mit einem
+Atmel AT90USB1287-Mikrocontroller
+(Eigenbau mit dediziertem Anschluss für
+das Kamera-Modul und das Display).
+· Ein anderes Farbdisplay mit dem Display-Controller ILI9341, welches über
+die SPI-Schnittstelle angesprochen wird,
+sowie selbst gebauten Pegelwandlern
+von 5V auf 3,3V dazu.
+Die Steuerelektronik ist in Abb. 2 dargestellt.
+
+Farbmodelle
+Für die Farberkennung ist es von Vorteil,
+möglichst unabhängig von der Helligkeit zu
+sein. Daher wird für das Color Blob
+Tracking häufig mit dem HSV-Farbmodell
+gearbeitet (Hue = Farbwinkel / Saturation =
+Farbsättigung / Value = Helligkeit). Zur
+Identifizierung einer Farbe reicht dann der
+Farbwinkel aus, 0° entspricht Rot. Da die
+Kamera aber leider nicht direkt einen
+Farbwinkel ausgibt, müsste dieser aus den
+verfügbaren Formaten RGB oder YCbCr
+(manchmal fälschlicherweise auch als YUV
+bezeichnet) abgeleitet werden. Ich habe
+mich hier jedoch auf eine grobe Abschätzung des roten Farbbereiches beschränkt.
+
+
+Computing
+
+die Tonnen ein und bringt sie zum Industrieroboter, der sie dann sortiert ins Regal einräumt.
+
+
+
+
+
+Segmentes im roten Farbbereich für den Farbfilter (Quelle: Simon A. Eugster, wikipedia)
+
+V entspricht Cr (Quelle: http://www.fourcc.org/yuv.php)
+
+
+
+Computing
+
+line = 0;
+do
+{
+byte = 0;
+do
+{
+FIFO_RCLK_low; // first luminance byte is ignored
+FIFO_RCLK_high; // drive out new pixel byte
+FIFO_RCLK_low; // second pixel byte is driven out (Chroma Cb)
+C_blue = PINA; //store second pixel byte (Chroma blue)
+if (C_blue < 128) C_blue = 128 - C_blue;
+else {
+C_blue -= 128;
+C_blue *= 2;
+} // adjust proportion to C_red for compare
+FIFO_RCLK_high; // third pixel byte is driven out (Luminance Y1, second of two pixels)
+FIFO_RCLK_low; // second luminance byte is ignored
+FIFO_RCLK_high; // drive out new pixel byte
+FIFO_RCLK_low; // fourth pixel byte is driven out (Chroma red)
+C_red = PINA; // store fourth pixel byte (Chroma red)
+if (C_red > threshold_absolute)
+{ // store filtered pixels in labeled list
+C_red -=128;
+//
+hue is estimated from red to blue color ratio of higher than 2 (after offset detraction)
+if (C_red > C_blue) //check whether hue is between 333° and 27° (red color)
+{
+if (filtered_pixel_counter < 250)
+{
+if ((y[filtered_pixel_counter] == line) && (x2[filtered_pixel_counter] == (byte - 2)))
+{
+x2[filtered_pixel_counter] = byte;
+}
+else
+{
+filtered_pixel_counter ++;
+x1[filtered_pixel_counter] = byte;
+x2[filtered_pixel_counter] = byte;
+y[filtered_pixel_counter] = line;
+}
+}
+}
+}
+byte += 2;
+FIFO_RCLK_high; //FIFO Read Clock high, drive out new pixel byte
+} while (byte < 160); // 1 Y-byte per pixel, line of 160 pixel
+line++; //increment line counter
+} while (line < 120);
+
+Tab. 1: Code-Beispiel für die pixelweise Bildauswertung beim roten Farbfilter
+
+
+
+
+Bildformat
+Eine brauchbare Abschätzung des roten
+Farbbereiches, der dem Farbwinkel
+Hue = 0° (rot) nahe liegt, lässt sich aus dem
+YCbCr-Format gewinnen, welches die
+Kamera als Datenstrom liefert. In diesem
+Format werden die Helligkeit Y und zwei
+Farbkomponenten Cb = Chroma blau und
+Cr = Chroma rot ausgegeben. Abb. 3 zeigt
+ein Farbdiagramm mit auf 1 normierten
+Werten für Cb und Cr bei einem Y = 0,5.
+Mithilfe der zwei Farbkomponenten Cb und
+Cr kann nun der gewünschte Farbbereich
+gefiltert werden. Die Kamera liefert die
+Daten in einem seriellen Datenstrom byteweise und mit einer Farb-Unterabtastung
+4:2:2, d. h. die Farbinformation wird in
+horizontaler Richtung nur mit halber Auflösung wie die Helligkeit übertragen (Abb.
+5). Für zwei Helligkeitswerte oder Pixel
+wird also nur einmal die Farbinformation
+Cb und Cr übertragen. Die Reihenfolge der
+Bytes ist in der Kamera konfigurierbar; ich
+habe hier mit dem in Abb. 4 dargestellten
+Format YUY2 gearbeitet. Die Auflösung
+des Bildes ist QQVGA, also 160x120 Pixel.
+
+Farbfilter
+Die Makro-Pixel des Kameradatenstroms
+werden sequentiell bearbeitet und gefiltert.
+Die für Cb und Cr übertragenen Bytes sind
+unsigned 8-bit-Integer und enthalten einen
+Offset von 128, der zunächst abgezogen
+wird. Der Farbfilter arbeitet mit einem
+Schwellwert für Cr, der der Funktion als
+Übergabeparameter
+threshold_absolute
+übergeben wird. Dies entspricht der kurzen
+weißen horizontalen Grenzlinie in Abb. 3.
+Für den Farbwinkel
+Hue = 0° (rot) gilt: G-B = 0
+und damit aus der Umrechnung von YCbCr
+→ RGB (wikipedia) für die Offset bereinigten Werte:
+Cr ~ -3⋅Cb (für Cr > 0, Cb < 0)
+Dieser Zusammenhang ist in Abb. 3 als
+dunkelrote Linie markiert. Damit habe ich
+
+ein Winkelsegment gleichmäßig um diese
+Gerade herum für den Filter definiert. Um
+das dargestellte Farbsegment in Abb. 3
+heraus zu filtern muss dann gelten:
+Cr > threshold_absolute (positiv) und
+für Cb > 0: Cr > 2⋅Cb bzw.
+für Cb < 0: Cr > -Cb.
+Erfüllt ein Makropixel diese Bedingungen
+so wird es in eine Liste aufgenommen. Da
+die Kameradaten zeilenweise ausgelesen
+werden und die Pixel von Farbflecken
+großenteils zusammenhängen sollten, bietet
+es sich an, diese als horizontale Linien zu
+speichern mit einem Startpunkt x1 und
+einem Endpunkt x2 sowie einem y (Tab. 3).
+Damit können deutlich mehr Pixel in
+Feldern je 256 Bytes gespeichert werden,
+als beim Speichern jedes Pixels einzeln mit
+(x, y)-Koordinaten. Tab. 1 zeigt den implementierten C-Code für den Rotfilter.
+
+Segmentierung
+Die herausgefilterten Linien müssen nun
+den zusammenhängenden Farbklecksen zugeordnet werden. Dazu wird die Liste der
+Linien bearbeitet. Ich habe mich für folgende Methode entschieden:
+· Um Farbrauschen zu unterdrücken, entferne ich zunächst alle Linien aus der
+Liste, deren Endpunkt mit dem Anfangspunkt zusammenfällt (x2 = x1, d. h.
+einzelne Pixel).
+· Dann werden in vertikaler y-Richtung
+zusammenhängende Linien mit einem
+übereinstimmenden region-Wert gekennzeichnet (Code in Tab. 2). Das
+Ergebnis ist eine Liste, in der alle Linien,
+die derselben region zugeordnet sind,
+genau einen Farbklecks im Bild repräsentieren (Tab. 3 zu Abb. 6).
+· Für die Farbkleckse werden sodann deren Ausdehnung in x- und y-Richtung
+sowie deren Mittelpunkt (Rückgabewerte der Funktion) ermittelt.
+
+
+Computing
+
+// we check for neighboring regions in ydimension and connect them (re-label them)
+i = 1;
+region_max = 1;
+while (i<filtered_pixel_counter)
+{
+j=i+1;
+while (j<=filtered_pixel_counter)
+{ //check if in next line of image
+if (y[j] == y[i] + 1)
+{
+if (((x1[j] >= x1[i])
+&& (x1[j] <= x2[i]))
+|| ((x1[i] >= x1[j])
+&& (x1[i] <= x2[j])))
+{
+if (region[j] > region[i])
+region[j] = region[i];
+else region[i] = region[j];
+}
+}
+j++;
+}
+i++;
+if (region [i] > region_max)
+{ //remove space between region labels
+region_max++;
+region[i] = region_max;
+}
+}
+
+Das Ergebnis wird im Display dargestellt
+wie in Abb. 7 zu sehen.
+
+Tab. 2: Code-Beispiel zum Segmentieren
+
+y/x
+
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+
+
+gefiltertem Bild (unten) sowie gelber Umrahmung der gefundenen roten Markierung (oben)
+und Bildkoordinaten des Markierungsmittelpunktes (unten)
+
+Beleuchtung
+
+
+index x1
+x2
+y
+
+region
+
+Tab. 3: Liste der gefilterten Pixel-Bereiche aus
+dem Beispiel in Abb. 6 (nach Segmentierung)
+
+Für die Bildverarbeitung ist eine möglichst
+gleichmäßige Beleuchtung des Objektes
+wichtig. Zunächst habe ich in meinem
+Modell mit zwei einfachen weißen LEDs im
+Dauerbetrieb gearbeitet. Mit Tageslicht war
+das ausreichend, sofern kein Gegenlicht
+vom Fenster auftrat. Mit Gegenlicht und
+wenn es dunkel wurde, war die Erkennung
+roter Objekte stark eingeschränkt. Daher
+habe ich die Anzahl der LEDs verdoppelt
+und bin auf Blitzbetrieb umgestiegen mit
+Erhöhung des LED-Stromes auf etwa 40
+mA. Dazu sollte man während der Blitzbelichtung zwei automatische Funktionen
+der Kamera einfrieren, um diese nicht durch
+das Blitzlicht zu stören:
+
+
+
+· AGC = Automatic Gain Control
+· AEC= Automatic Exposure Control
+Dies ist einfach über ein Konfigurationsbit
+möglich. Um Überbelichtungen zu vermeiden habe ich außerdem den maximalen
+Gain in der Konfiguration auf den Faktor 4
+beschränkt (Gain Ceiling).
+Das Licht weißer LEDs ist in der Regel
+nicht optimal für Farberkennung, da es ein
+Farbspektrum mit einer Abschwächung im
+grünen und roten Bereich aufweist. Das
+ursprünglich blaue Licht aus dem Halbleiter
+wird über eine phosphoreszierende Schicht
+teilweise in gelbes Licht umgewandelt, was
+dem menschlichen Auge dann in Summe
+weiß erscheint. Tatsächlich ergibt sich das
+in Abb. 8 dargestellte Farbspektrum.
+Interessanterweise rüsten die Hersteller von
+Smartphones aus diesem Grund zum Teil
+nun auf Dual-LEDs auf. Zu der weißen
+LED kommt eine bernsteinfarbene hinzu.
+Ich habe versucht, die Schwäche im roten
+Bereich durch Verwendung der roten
+Leuchtkappen mit Bohrung auf den LEDLeuchtsteinen auszugleichen. Noch besser
+würden sich sicher RGB-Farb-LEDs
+eignen. Abb. 9 zeigt die Front des mobilen
+Roboters mit der Beleuchtungsanordnung.
+Mit unterschiedlichem Abwinkeln der vier
+Leuchtsteine habe ich eine möglichst
+gleichmäßige Ausleuchtung des Sichtfeldes
+der Kamera angestrebt.
+
+(Quelle: Degreen / Cepheiden,
+wikipedia, CC-BY-SA 1.0)
+
+Blitzlicht-LEDs zur Beleuchtung des gesuchten
+Objektes
+
+Entfernungsmessung
+Die von mir implementierte Funktion zur
+Erkennung der roten Markierung liefert als
+Ergebnis die Bildkoordinaten x und y des
+Markierungsmittelpunktes. Diese Koordinaten werden auch im Display am Bild des
+Objektes angezeigt (siehe auch Abb. 7).
+Wenn die Geometrie der Anordnung von
+der Kamera zum Boden (Höhe h und
+Neigungswinkel α) und Objektmarkierung
+zum Boden (Höhe) bekannt sind bzw.
+ermittelt werden können, kann mittels
+trigonometrischer Berechnung die Entfernung des Objektes rechnerisch ermittelt
+werden. Dies ist in Abb. 10 dargestellt. Ich
+bin dazu so vorgegangen, dass ich zunächst
+für mehrere Messpunkte den Zusammenhang zwischen der y-Koordinate und der
+Entfernung der Markierung experimentell
+ermittelt habe und daraus die noch
+unbekannten Größen der Geometrie mittels
+bester Fit-Kurve (Abb. 11) bestimmt habe
+(Neigungswinkel der Kamera α und Fokusweite f). Die Fit-Kurve habe ich dann im
+Programm als Look Up Table eingefügt, um
+dem Mikrocontroller die Berechnung von
+
+Tangens und Arcus-Tangens zu ersparen.
+Dieses Verfahren der Entfernungsberechnung hat in meinen Versuchen zu präziseren
+Greifvorgängen geführt, als entsprechende
+Entfernungsmessungen mit einem Ultraschallsensor (Auflösung 20 mm). Die
+Genauigkeit dieses Bildverfahrens ist an der
+unteren Bildkante am größten (Auflösung
+1,4 mm bei y = 120), zur oberen Bildkante
+hin nimmt sie ab (Auflösung 12 mm bei y =
+0).
+
+Computing
+
+dem Kamerabild zu ermitteln, wenn geometrische Verhältnisse (Kameraneigung,
+Kamerahöhe, Kamera-Fokus und Markierungshöhe) bekannt sind oder aus Referenzmessungen ermittelt werden können.
+
+Referenzen
+[1]
+
+Uffmann, Dirk: Einfache
+Ziffernerkennung mit einer CMOSKamera am AVR-Controller am
+Beispiel eines ft-KreditkartenleserModells. ft:pedia 4/2014, S: 52-61.
+
+[2]
+
+Jenssen, Arndt: OV7670 + FIFO
+Camera Control with an AVR
+ATMEGA-1284P. GitHub
+
+[3]
+
+ComputerNerd: Arduino Mega 2560
+Code which uses either an ov7670 or
+an MT9D111 to display an image on
+a tft screen. GitHub
+
+[4]
+
+C, Joe: Einstieg: Mikrocontroller
+STM32F103/Kameraboard. Internet
+
+Fazit
+Ein kurzes Video des mobilen Roboters, in
+dem er eine Tonne sucht, erkennt und
+ergreift, findet ihr auf youtube. Auch mit
+vergleichsweise einfachen Mitteln ist es
+möglich, mit Kameras und Bildverarbeitung zu spielen und diese in fischertechnikModellsteuerungen zu verwenden. Auch
+ohne Verwendung einer Stereo-Kamera ist
+es möglich, Entfernungen von Objekten aus
+
+des Kamerabildes. In meinem Beispiel gilt: h=132mm, α =66,6°, f = 278 Pixel.
+
+
+
+f = 278 Pixel. Die Fit-Kurve wurde mit den Parametern α und f an die Messwerte angepasst.
+
+
+

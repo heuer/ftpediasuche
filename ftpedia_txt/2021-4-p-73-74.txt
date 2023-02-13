@@ -1,0 +1,148 @@
+
+Computing
+
+Computing
+
+fischertechnik-Roboter mit Arduino (Teil 4):
+Buggy-Steuerung mit dem ftDuino
+Helmut Jawtusch
+Die Roboter aus dem Buch „fischertechnik-Roboter mit Arduino“ [1] haben zahlreiche Leser
+zu weiteren Modellvarianten angeregt. In loser Folge werden in dieser Serie einige dieser
+Modelle vorgestellt. Diesmal wird das Herz des „Buggy“ durch einen ftDuino ersetzt.
+
+Hintergrund
+Im Buch „fischertechik-Roboter mit Arduino“ [1] beschreibt Dirk Fox den Bau eines
+Buggys mit zwei S-Motoren und der Steuerung über den Arduino Uno. Zum Buch gibt
+es die Webseite: fischertechnik-robotermit-arduino.de, auf der sich Sketche und
+ergänzendes Material zum Download befinden.
+Mich haben vor allem die Anwendungen
+interessiert, bei denen alternativ der ftDuino
+verwendet werden kann.
+
+IR-Fernsteuerung
+
+
+Ich habe mir für ca. 5 € die Infrarot IR
+Drahtlose Fernbedienung mit Sensor
+VS1838B für Arduino 100 gekauft. Beim
+Arduino wird die Datenleitung der IRDiode am Pin D7 angeschlossen. Der
+
+Anschluss des IR-Sensors am ftDuino
+erfolgt über den I2C-Port: GND an 1, Vcc
+(+5V) an 2 und die Daten an 5 (SDA). Zur
+Decodierung der Signale der Fernsteuerung
+wird (wie am Arduino auch) das Skript
+IRremote.h eingebunden. Das folgende
+Skript zeigt den ersten Teil des Sketches
+(~.ino) mit den Anpassungen an den
+ftDuino:
+#include <adc_table.h>
+#include <Ftduino.h>
+#include <IRremote.h>
+//#define DEBUG
+#ifdef DEBUG
+#define Baudrate 115200
+#endif
+//Tastencodes der Fernsteuerung
+#define IRreceive 2
+#define Arduino
+0xFF
+#define Vorwaerts
+0x18E7
+#define Rueckwaerts 0x4AB5
+#define Rechts
+0x5AA5
+#define Links
+0x10EF
+#define Schneller
+0xB04F
+#define Langsamer
+0x6897
+#define Stopp
+0x38C7
+#define MaxSpeed 64 //
+Maximalgeschwindigkeit der Motoren
+#define Step 4 // Schrittweite der
+Geschwindigkeitsaenderung
+IRrecv irrecv(IRreceive);
+unsigned int mode = 1;
+decode_results results;
+byte motorspeed = 32;
+
+
+
+
+void rechts(uint16_t speed)
+{ mode = 1;
+ftduino.motor_set(Ftduino::M2,
+Ftduino::LEFT, speed );
+ftduino.motor_set(Ftduino::M3,
+Ftduino::RIGHT, speed );
+}
+…
+void set (uint16_t m) {
+switch(m) {
+case 1: rechts(motorspeed);
+break; ...
+
+sensors ist für das Umfahren eines Hindernisses zu langsam (zwei Messungen pro
+Sekunde). Für diesen Zweck eignet sich
+hervorragend der IR-Abstandssensor Sharp
+OA41SK mit einem Messbereich von 4 cm
+bis 30 cm (Abb. 2).
+
+Listing 1: Sketch-Anpassungen der IRFernsteuerung des Buggy für den ftDuino
+
+Die Datenabfrage erfolgt hier über den Pin
+2 (IRreceive) des im ftDuino ‚verbauten‘
+Arduino Leonardo, der direkt mit dem
+SDA-Pin des I2C-Ports verbunden ist.
+Achtung: Beim Hochladen des Skriptes
+über die USB-Verbindung erscheint merkwürdigerweise eine Fehlermeldung, wonach die IDE am COM-Port keinen ftDuino
+finden kann. Wenn man beim Hochladen
+aber kurz eine Taste der IR-Fernsteuerung
+drückt, wird der ftDuino ohne Fehler
+gefunden und das Skript wird hochgeladen.
+Die angegebenen Tasten-Codes passen zu
+der kleinen Fernbedienung, die in Abb. 1 zu
+sehen ist. Bei Verwendung anderer IRFernbedienungen kann man deren TastenCodes mit dem Seriellen Monitor der
+Arduino-IDE ermitteln. Mit der FlagVariablen mode und der Prozedur set(…)
+wirkt sich eine Veränderung der Geschwindigkeit unmittelbar auf die aktuelle Bewegung aus.
+
+Pixy-Folger, Hinderniserkenner
+und Smartphone-Steuerung
+Alle Anwendungen aus meinem Artikel in
+der ft:pedia 1/2021 [2] lassen sich auf den
+Buggy übertragen, da ich dort die Counterfunktion der Encodermotoren nicht verwende. Ich möchte hier nur auf den Hinderniserkenner eingehen. Die Abfrage der Entfernungen mit dem Ultraschall-Abstands-
+
+
+
+Die Stromversorgung erfolgt wieder über
+Pin 1 und 2 am I2C-Port. Die Datenleitung
+kann an einen der I-Eingänge angeschlossen werden. Der Sensor liefert je nach Entfernung ohne Verzögerung Spannungswerte. Daher wird der Eingang auf
+VOLTAGE gestellt:
+ftduino.input_set_mode(Ftduino::I4
+, Ftduino::VOLTAGE)
+
+Um die Geschwindigkeit bei Betrieb leicht
+an die Verhältnisse anpassen zu können
+habe ich noch ein 5 kOhm-Potentiometer
+angeschlossen.
+Die ftDuino-Sketche zur IR-Fernsteuerung
+und zum Hinderniserkenner sowie der
+Treiber IRremote können als Anlage zu
+diesem Beitrag auf ftpedia.de heruntergeladen werden.
+
+Quellen
+[1]
+
+Dirk Fox, Thomas Püttmann:
+fischertechnik-Roboter mit Arduino.
+dpunkt-Verlag, 2020.
+
+[2]
+
+Helmut Jawtusch: TX Controller und
+ftDuino im Vergleich. 1/2021, S. 114–118.
+
+

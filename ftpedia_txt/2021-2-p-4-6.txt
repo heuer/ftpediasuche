@@ -1,0 +1,122 @@
+
+
+Modell
+
+Fotostudio für Makrofotografie
+Fabian Haas
+Die Makrofotografie wird immer beliebter. Dabei sind nicht nur Insekten in freier Wildbahn im
+Focus, sondern oft auch H0-Modelleisenbahnfiguren (Maßstab 1:87) und Szenen. Egal ob drinnen oder draußen, das Licht ist wichtig! In diesem Beitrag beschreibe ich ein simples und flexibles Fotostudio für diesen Zweck.
+
+Licht
+Die Makrofotografie verlangt nach viel
+Licht, schließlich braucht man eine kleine
+Blende (f8-16) und kurze Belichtungszeiten
+(1/100 oder kürzer), sollen die Aufnahmen
+nicht verwackeln. Dabei spielt es keine
+Rolle, ob man draußen ist und Insekten und
+Blumen nachjagt, oder drinnen, und Szenen
+von H0-Modeleisenbahnfiguren arrangiert
+hat und fotografieren will. Letzteres wird
+immer beliebter; z. B. widmete erst kürzlich
+die c’t-Fotografie ein ganzes Thema [1]. Instagram tut ein Übriges.
+
+regulieren kann (Abb. 1). Entsprechend den
+natürlichen Lichtverhältnissen wollte ich
+ein Licht von oben, das die Sonne oder
+Himmel simuliert, und kaum bewegt werden sollte. Ergänzt durch ein zweites, freies
+LED-Licht, mit dem ich die Figuren praktisch aus Augenhöhe anleuchten kann. Das
+ist mobil auf einem kleinen Fotostativ befestigt, oder steht ganz direkt auf dem Tisch.
+fischertechnik bot sich als exzellente Lösung an, weil man hier alle Maße, Längen,
+und Gewichte im Griff hat und im Handumdrehen modifizieren kann. Aufgrund meiner 40-jährigen fischertechnik-Erfahrung,
+wählte ich die Grundplatte 1000 mit Boden
+und baute einen Galgen aus Statikteilen
+(Abb. 2).
+
+
+Zum Glück haben sich LED-Flächenlichter
+in den letzten Jahren sehr weiterentwickelt,
+sodass man kein Blitzlicht mehr braucht,
+was v. a. den Vorteil hat, dass man die
+Lichtwirkung sofort sieht und entsprechend
+
+nicht, und die LED-Leuchte
+lässt sich frei darüber bewegen
+
+Es zeigt sich, dass die Höhe von zwei Winkelträgern 120 ausreicht; da es aber Hebelwirkungen durch den Ausleger, auf dem die
+LED-Leuchte liegt, geben wird, verbaute
+und verstrebte ich auf einer Seite jeweils
+drei mal zwei Winkelträger. Der Abstand
+zwischen diesen Pylonen hängt einfach von
+der breite der LED-Leuchte ab. In meinem
+Fall sind es 9 cm lichte Breite.
+Der Ausleger ist drei Winkelträger 120
+lang, zur Stabilisierung zweireihig und wird
+über lange Metallachsen 170 mit den Pylonen verbunden. Damit die LED-Leuchte
+nicht zwischen rechtem und linkem Ausleger hindurch fällt, wurden Metallachsen
+120 eingesteckt und gesichert (Abb. 3). Darauf lässt sich das Licht vor und zurück
+schieben.
+
+Modell
+
+An den Pylonen wird das Blatt mit einer Gelenklasche fixiert, die, in entsprechender
+Höhe mit einem S-Riegel fixiert, festgeklemmt wird. An der Grundplatte dienen
+Bausteine 15 x 30 x 5 oder Winkelsteine als
+Widerlager. Über die Entfernung des Widerlagers auf der Grundplatte und der Höhe
+der Gelenklaschen lässt sich die Biegung im
+Papier (dort, wo es von der Grundplatte auf
+Pylonen übergeht) sehr gut regulieren und
+man erhält eine perfekte „Kuhle“, einen geschmeidigen Übergang, wie man das in der
+Fotografie liebt (Abb. 4).
+
+
+Ausleger mit zwei langen Achsen
+
+Aluprofile wären sicher noch etwas stabiler
+und fester, allerdings stört das verbleibende
+Spiel bzw. die Verformbarkeit im System
+nicht. Eine ganz präzise Ausrichtung der
+LED-Leuchte ist nicht notwendig; außerdem wird die Ausrichtung meistens nur einmal pro Fotosession geändert und dann
+nicht mehr angefasst.
+
+Hintergrund
+Ein Bild ist nur so gut wie sein Hintergrund!
+Insgesamt passt der Aufbau von den Dimensionen her sehr gut zu einem A3 Blatt,
+das es im Schreibwarenhandel in allen möglichen Farben gibt.
+
+Reicht ein Papier nicht als Hintergrund aus,
+weil man z. B. ein Foto, eine Szenerie zeigen will, kann man schlicht ein ausgedrucktes Foto oder ein Tablet unter den Gelenklaschen platzieren.
+Letzteres hat den Vorteil, dass es selber regulierbar leuchtet, also hat man nochmal
+eine Extralichtquelle. Über die Helligkeit
+des Displays lässt sich die Deutlichkeit des
+Hintergrundbildes festlegen. Ich konstruierte zwei einfache Halter aus jeweils vier
+Bausteinen 30 kombiniert mit Bauplatte
+30 x 90 (Abb. 1). Damit ließ sich das Tablet
+erhöhen, über die Grundplatte stellen, was
+evtl. für den Bildaufbau wichtig ist, und
+über die Bauplatten wurde das Tablet etwas
+besser vor Umkippen geschützt als durch
+einfache Bausteine.
+
+
+
+
+Die von mir mit meinem Makro-Fotostudio
+gemachten Bilder findet ihr auf Instagram
+(fabian_pos), und natürlich wird der Aufbau
+immer wieder modifiziert und verbessert.
+So bekam ich erst kürzlich einige Aluprofile, die sich zur Stabilisierung, Rahmung
+und auch Formgebung für das Papier einsetzen lassen. Es gibt immer etwas zu tun. Insgesamt hat sich der Aufbau aber sehr gut bewährt.
+
+Referenzen
+[1]
+
+Peter Nonhoff-Arps: c't Fotografie
+3/2021: Makrofotografie jenseits des
+Abbilungsmaßstabs 1:1. Heise-News,
+03.05.2021.
+
+Oben liegt die LED-Leuchte, die vor- und zurück geschoben werden kann.
+Beide LED-Leuchten lassen sich unabhängig steuern.
+
+
+

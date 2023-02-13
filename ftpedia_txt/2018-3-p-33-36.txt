@@ -1,0 +1,165 @@
+
+Modell
+
+Modell
+
+Borstenroboter – Bristlebot
+Rüdiger Riedel
+Durch Vibrationen gerichtete Bewegung zu erzeugen ist wohl ein alter Traum der Techniker,
+seitdem es Wechselstrom gibt. Einfache Rasierer arbeiten damit, indem ein Anker 100-mal (in
+60-Hz-Ländern 120-mal) um die Ruhelage vibriert und damit die Schermesser hin und her
+bewegt.
+
+Kein Vorbild in der Natur
+Man kann den hier vorgestellten Bürstenbot
+als Ergänzung zum fischertechnik-Baukasten „I’m walking“ sehen. Soweit ich
+weiß hat seine Fortbewegungsart aber kein
+Vorbild in der Natur.
+Bei einem Bürstenbot wird der ganze
+Körper in Schwingung versetzt. Die nach
+unten gerichteten Borsten heben kurzzeitig
+vom Boden ab und prallen dann wieder auf.
+Eine noch so geringe Schrägstellung führt
+zu einer Kraftkomponente parallel zum
+Boden und dadurch zur Fortbewegung des
+Körpers. Bei den meist verwendeten Bürsten ist dies eine unkontrollierte Kreiselbewegung. Durch einheitliche Ausrichtung
+der Borsten kann eine gerichtete Fortbewegung erzielt werden. Über glatte Flächen
+scheint der Roboter hinweg zu gleiten.
+Auf jeden Fall ist dies wohl die einfachste
+Art, Fortbewegung zu erzeugen.
+
+Der fischertechnik-Bürstenbot
+Basis des Bürstenbot ist der Batteriekasten
+9V (135719). Gemäß Abb. 2 erhält er vier
+V-Bausteine 15 Eck (38240) und zwei
+BS 2,5 15x45 2+2Z (38277). An die V-Bausteine wird je ein BS 15 angesetzt, an die
+beiden BS 2,5 je ein BS 5 15x30 (35049)
+und an diese wiederum je ein BS 7,5. Jetzt
+fügen wir noch sechs Winkelsteine 15
+hinzu.
+
+
+
+Die Halterung des Motors besteht aus zwei
+BS 5 15x30 3N (38428) und zwei BS 5
+15x30 (35049), siehe Abb. 3. Der Motor
+wird mit passendem Kabel an den Batteriekasten angeschlossen. Zur Kabelführung
+setze ich einen Reedkontakt-Halter 7,5
+(35969) ein.
+Zur Unwucht führt die Kunststoffachse 30
+(38413). Gelagert wird sie in einem BS 15
+mit Bohrung (32064), der auf einem BS 7,5
+sitzt.
+
+
+
+Bevor wir einschalten, sollten wir die
+Motorachse von Hand drehen und darauf
+achten, dass alles genau fluchtet, leichtgängig ist und nirgends anstößt bzw.
+schleift.
+Wir suchen uns einen glatten, ebenen
+Boden, möglichst ohne Hindernisse und
+starten das brummende Getüm.
+
+
+Auf die Achse wird eine Klemmbuchse 10
+(31023) geschoben. In diese klemmen wir
+stramm sitzend ein V-Rad 23x10 (36581)
+ein (Abb. 4).
+
+Hat es sich ausgetobt, dann möchte es seine
+Beine entlasten. Dafür konstruieren wir
+einen Ständer aus drei BS 30, zwei BS 5
+15x30 3N und zwei Verbinder 45 (31330)
+(Abb. 5).
+
+
+Jetzt die Verbinder in die mittleren VBausteine 15 Eck schieben und der Bot
+kann in die Vitrine gestellt werden (Abb. 6).
+
+Bleibt noch die Verbindung zum Motor. Da
+müssen wir leider ein fischertechnikFremdteil verwenden. Ich nehme ein Stück
+Silikonschlauch aus dem Internet mit 4 mm
+Innen- und 6 mm Außendurchmesser.
+Wo sind die Bot-Beine? Dafür wählen wir
+sechs Pneumatik-T-Stücke (31642), eingesetzt in die Winkelsteine, und schneiden
+sechs Stücke mit 17 mm Länge vom Silikon-Pneumatik-Schlauch 2x3,6 ab, die wir
+auf die T-Stücke schieben.
+Eine 9-V-Batterie oder einen Akku einlegen, und fertig ist der Bürstenbot!
+
+
+
+Modell
+
+Bürstenrotor
+Bevor wir ihn wegstellen, können wir noch
+einen kleinen Versuch machen.
+Zunächst etwas Geschichte: Die Firma
+Faller entwickelte vor 60 Jahren kleine
+Modellhäuschen und Modellflugzeuge im
+Maßstab 1:87 und 1:100. Um diesen Modellen Leben einzuhauchen wurden dazu
+passende kleine Elektromotoren konstruiert
+[1]. So wie heute kleine Gleichstrommotoren mit Getriebe zu verwenden war nicht
+möglich, die waren damals extrem teuer.
+Für kleine Windmühlen und Wasserräder
+wurde daher ein langsam laufender Motor
+nach dem Bürstenprinzip gebaut [2], den
+wir nachempfinden können.
+
+
+
+Dafür befestigen wir auf dem Bürstenbot
+eine Drehscheibe 60x5,5 (31019) mit drei
+Winkelsteinen 15° und drei Beinchen vom
+Bot (Abb. 7). In die Drehscheibe stecken
+wir eine Achse 60.
+Den Rotor bauen wir entsprechend Abb. 8
+und 9 zusammen. Wichtig ist dabei, aus den
+Bauplatten eine glatte Fläche zu bilden, die
+sich stoßfrei über die Silikonbeinchen
+bewegen kann.
+
+
+Der Faller-Bürstenmotor 630 arbeitete mit
+Wechselstrom. Auch das können wir nachbauen.
+
+Wird das Gebilde in Abb. 7 eingeschaltet,
+dann dreht sich der Rotor etwa alle zwei
+Sekunden einmal. Den Fuß müssen wir
+dabei festhalten.
+
+
+
+
+Die Drehscheibe von Abb. 7 und 8 erhält
+statt der Flachnabe eine Rückschlussplatte
+25 rund (31326) und wird mit zwei Bauplatten 15x45 2Z (38242) etwa 1 mm über
+dem Elektromagneten (31324 oder 32363)
+befestigt. An Wechselstrom (!) anschließen,
+z. B. die 6,8-V-Wechselspannung des alten
+Transformators 814 (30173), die Grundplatte festhalten und der Rotor dreht sich
+sehr schön langsam und gleichmäßig.
+
+drücken, funktioniert der Motor ebenfalls.
+Den günstigsten Anpressdruck muss man
+ausprobieren.
+
+
+Na bitte, das Prinzip des Faller’schen Windmühlenantriebs – realisiert mit fischertechnik.
+[1]
+
+Rüdiger Riedel: Der etwas andere
+Motor. ft:pedia 2/2016, S. 22-25.
+
+[2]
+
+Clemens: Bastelmotor von Faller.
+19.10.2015.
+
+
+Wenn wir das Gestell um 90° drehen und
+den Rotor mit einer Feder (z. B. aus einem
+Kugelschreiber) gegen die Silikonbeinchen
+
+
+

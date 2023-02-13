@@ -1,0 +1,63 @@
+
+
+Tipps & Tricks
+
+ft-Spezialteile made by TST (Teil 1)
+Andreas Tacke
+In einer lockeren Reihe wird TST einige von ihm entwickelte Spezialteile vorstellen, die so
+manche Lücke beim Bauen mit fischertechnik schließen.
+In meinem ersten Beitrag geht es um Teile,
+die die Verwendung des Differentials
+31500 aus den 80er Jahren mit den aktuellen Motoren möglich machen.
+Vor ca. sieben Jahren begann ich mit dem
+Bau eines Trucks (siehe Bild unten). Für
+die Antriebsachsen wollte ich die Differentiale 31500 verwenden. Leider sind die
+Antriebseinheiten so selten, dass ich mir
+etwas Anderes einfallen lassen musste.
+Für den Antrieb wollte ich die Powermotoren nutzen. Nur: Mit den Standardteilen
+war dies nicht möglich. Da die Differentiale einen speziellen Anschluss haben,
+blieb mir nichts anderes übrig, als selbst
+
+
+etwas zu entwickeln.
+Als erstes baute ich die Antriebswellen
+31416, 31417 und 31418 aus Messing
+nach, da die originalen Teile nicht mehr
+erhältlich waren (Abb. 1).
+
+31417 und 31418 aus Messing
+
+Als nächstes musste ich eine Möglichkeit
+
+
+Tipps & Tricks
+
+finden, diese Antriebswellen mit den
+Powermotoren zu verbinden. Nach etlichen
+Versuchen habe ich dann eine Lösung gefunden: Ich fertigte mir Messingadapter,
+womit das Problem gelöst war (Abb. 2, 3).
+
+Wie in dem Versuchsaufbau in Abb. 5 und
+ins Raster und lassen sich mit den
+Originalteilen spielfrei verbinden.
+
+
+
+der Antriebswellen
+
+Mit diesen Teilen ließ sich dann ein
+stabiler Antrieb herstellen, und ich konnte
+die aktuellen Motoren verwenden (Abb. 4).
+
+
+Da sieht man mal wieder: Geht nicht gibt
+es nicht – mit handwerklichem Geschick
+und dem richtigen Werkzeug lässt sich so
+manches Problem im ft-Modellbau lösen.
+Und wem eines von beidem (oder auch
+beides) abgeht, dem fertige ich die Teile
+gerne.
+
+
+
+

@@ -1,0 +1,278 @@
+
+Computing
+
+Computing
+
+Einführung in ftScratch (1): Die Schranke
+Dirk Fox
+Scratch ist eine für Einsteiger und Schulen besonders geeignete Programmiersprache. Die
+Entwicklungsumgebung ftScratch3 unterstützt mit entsprechenden Erweiterungen die fischertechnik-Controller TXT und BT Smart [1]. In dieser Serie führen wir in die Programmierung
+mit ftScratch ein – mit kleinen Modellen und Aufgaben.
+
+Die Knickschranke
+Türen, Tore und Schranken finden sich in
+sehr vielen fischertechnik-Anleitungen bis
+zurück in die 70er Jahre. Sie eignen sich
+besonders gut für eine einführende Programmieraufgabe, denn
+ sie gehören zu unserem Alltag,
+ sie nehmen nur wenige definierte Zustände ein (offen, geschlossen),
+
+ sie können mit verschiedenen Sensoren
+ausgestattet werden (Taster, Fotodiode,
+Kamera, Reed-Kontakt),
+ sie können als ein Teilelement einer
+komplexeren Aufgabenstellung (z. B.
+einer Parkraumverwaltung) verstanden
+werden.
+Für die folgenden Aufgaben eignet sich
+z. B. die in Abb. 1 gezeigte Knickschranke.
+Eine fischertechnik-Designer-Datei der
+Schranke findet sich im Download-Bereich
+der ft:pedia zu dieser Ausgabe.
+
+
+
+
+
+Sensoren und Aktoren
+Die folgenden Aufgaben können sowohl
+mit dem TXT als auch mit dem BT Smart
+Controller gelöst werden.
+Für die Aufgaben benötigen wir
+ drei Taster
+ eine Lichtschranke (Fototransistor mit
+Linsen-LED)
+ ein Blinklicht und
+ eine USB-Kamera.
+Die Sensoren und Aktoren werden wie folgt
+angeschlossen (bei den Dioden Polarität
+beachten):
+
+eine Sekunde nach dem Drücken des
+Tasters erfolgen.
+Aufgabe 3
+Damit die Schranke beim Schließen ein
+durchfahrendes Fahrzeug nicht beschädigt,
+soll sie erst schließen, wenn ein Fahrzeug
+(oder ein Fußgänger) die Schranke passiert
+hat und mindestens eine weitere Sekunde
+verstrichen ist.
+Das Passieren der Schranke kannst du mit
+Hilfe der Lichtschranke feststellen.
+Aufgabe 4
+
+ I2: Endlagentaster (Schranke) unten
+
+Falls Schwierigkeiten mit dem Bedarfstaster auftreten oder die Lichtschranke nicht
+reagiert, soll ein Wartungseingriff von
+außen möglich sein. Ergänze dein Skript um
+die Möglichkeit, die Schranke über die
+Taste „a“ zu öffnen und mit der Taste „s“ zu
+schließen.
+
+ I3: Bedarfstaster
+
+Aufgabe 5
+
+ I4: Fotodiode (Lichtschranke)
+
+Um Passanten vor der Bewegung der
+Schranke zu warnen, soll das Blinklicht
+blinken, solange sich die Schranke nicht im
+geschlossenen Zustand befindet.
+
+ I1: Endlagentaster (Schranke) oben; ist
+der Taster gedrückt, soll der Stromkreis
+unterbrochen sein
+
+ M1: Schrankenmotor
+ M2: Blinklicht
+ 9V/GND: Linsen-LED (Lichtschranke)
+Die Anschlüsse des Motors an M1 sollten
+so gepolt sein, dass die Schranke öffnet,
+wenn sich der Motor „rückwärts“ dreht.
+
+Aufgaben
+Aufgabe 1
+Schreibe zunächst ein einfaches ftScratchSkript, das die Schranke öffnet, zwei
+Sekunden offen hält und dann wieder
+schließt.
+Wähle eine geeignete Geschwindigkeit für
+den Motor.
+Aufgabe 2
+Nun soll die Schranke jedes Mal öffnen,
+wenn der Bedarfstaster rechts vor der
+Schranke gedrückt wurde. Das Öffnen soll
+
+
+Tipp: Realisiere das Blinklicht als parallelen Thread.
+Aufgabe 6
+Erweitere die Schranke nun um gesprochene Hinweise: Vor dem Öffnen soll der
+Hinweis „Achtung, Schranke öffnet“ gegeben, nach dem Öffnen soll „Bitte durchfahren“ durchgesagt werden, und kurz
+bevor sie schließt der Warnhinweis
+„Achtung, Schranke schließt“ folgen.
+Aufgabe 7
+Zusätzlich zum Bedarfstaster kann auch die
+Kamera erkennen, dass ein Fahrzeug vorfährt. Ergänze den Bedarfstaster durch die
+Bewegungserkennung der Kamera.
+
+
+Computing
+
+Lösungsbeispiele
+
+Aufgabe 2
+
+Die folgenden Lösungsbeispiele wurden für
+den BT Smart Controller programmiert. Die
+Skripte finden sich im Download-Bereich
+zu dieser Ausgabe der ft:pedia. Die Anpassung an den TXT (Ersetzung der entsprechenden Blöcke in ftScratch) ist sehr
+einfach.
+
+Die Lösung der zweiten Aufgabe erfordert
+zunächst die Ergänzung einer Dauerschleife, damit die Schranke jedes Mal öffnet,
+wenn der Bedarfstaster gedrückt wird.
+
+Aufgabe 1
+Die Geschwindigkeit des Motors solltest du
+beim Schließen der Schranke etwas kleiner
+wählen als beim Öffnen. Zwar ist der
+Schneckenantrieb ein selbstsperrendes Getriebe, aber dennoch wirkt sich das Gewicht
+der Schranke auf das Drehmoment aus.
+
+Außerdem muss zu Beginn der Bedarfstaster abgefragt werden. Das kannst du
+entweder durch einen „Warte“-Befehl oder
+durch eine Bedingung (wie im Lösungsbeispiel in Abb. 3) verwirklichen.
+
+Beachte außerdem, dass das Impulsrad den
+Endlagentaster erst nach etwa einer Achtelumdrehung der Achse drückt. Daher musst
+du beim Öffnen und beim Schließen der
+Schranke zunächst einen Moment warten,
+bevor du den Status des Tasters auswertest.
+
+
+Aufgabe 3
+
+
+Um sicher zu sein, dass sich niemand mehr
+unter der Schranke befindet, musst du die
+Lichtschranke zweimal abfragen: Sie wird
+zunächst unterbrochen, dann musst du
+warten, bis sie wieder geschlossen ist. Eine
+Sekunde später kannst du die Schranke
+schließen.
+
+
+
+
+Zur Abfrage, ob die Lichtschranke unterbrochen ist, benötigen wir den Negationsoperator „nicht“ (Abb. 4).
+
+
+
+Aufgabe 4
+
+Aufgabe 6
+
+Soll die Schranke alternativ zum Bedarfstaster auch beim Drücken der Taste „a“
+(„auf“) geöffnet werden, muss die zweite
+Bedingung mit einem logischen „ODER“Glied verknüpft werden.
+
+Sprache und Stimmlage können zu Beginn
+des Skripts eingestellt werden. Danach
+genügt es, den gewünschten Text an die
+Sprachausgabe zu übergeben.
+
+Dasselbe gilt für das Schließen der
+Schranke über die Taste „s“. Hier musst du
+die Tastatur zugleich mit der Lichtschranke
+zweimal abfragen.
+
+
+Aufgabe 7
+
+Aufgabe 5
+Ein paralleler Prozess, auch als „Thread“
+bezeichnet, kann in Scratch an unterschiedliche Auslöser („Trigger“) geknüpft werden.
+In unserer Aufgabe ist der Trigger schnell
+gefunden: Wir prüfen, ob der Endlagetaster
+für das Schließen der Schranke geöffnet
+wurde. Jedes Mal, wenn dieses Ereignis
+eintritt, soll das Blinklicht gestartet werden.
+Es darf erst erlöschen, wenn der Endlagentaster wieder geschlossen wird. Abb. 6 zeigt
+den Thread.
+
+
+Die Bewegungserkennung ist einfach zu
+aktivieren: Kamera anschließen (und freigeben), Video anschalten (erscheint als
+Hintergrund zur Bühne) und die Bewegungserkennung als weitere Bedingung
+neben dem Bedarfsschalter aufnehmen
+(Abb. 8). Dabei wird jede Bewegung vor
+der Kamera (also auf dem Bühnenhintergrund) erkannt.
+
+
+Der Schwellenwert für die Bewegungserkennung kann zwischen 0 (keine Bewegung) und 100 (sehr starke Bewegung)
+eingestellt werden.
+
+Weiterentwicklung des Modells
+Mit einem TXT verfügt ihr nicht nur über
+vier, sondern über acht Eingänge – ihr könnt
+damit also zwei Schranken zugleich
+steuern. Damit lässt sich ein ganzes Parkhaus verwalten, indem ihr die freien Parkplätze zählt, den Wert bei jeder Ein- und
+Ausfahrt eines Fahrzeugs anpasst und
+anzeigt. Das Display des TXT könnt ihr zur
+Anzeige der gerade freien Parkplätze
+nutzen.
+Auch eine Statistik über die Parkhausauslastung könnt ihr erstellen, indem ihr die
+Belegung bspw. alle 10 Minuten in eine
+Liste eintragt.
+Wenn ihr euch die Liste auf der Bühne
+anzeigen lasst, könnt ihr die Ergebnisse
+jederzeit mit einem Klick auf die rechte
+Maustaste in eine csv-Datei exportieren und
+die Daten anschließend bspw. mit Excel
+auswerten.
+Oder aber ihr verwendet statt der Knickschranke eine andere Schrankenkonstruktion, ein Klapp- oder Schiebetor [2, 3] oder
+
+Computing
+
+eine Zugbrücke, wie z. B. das Tor aus dem
+Baukasten Profi Electronics (524326), die
+Brücke aus dem Baukasten Advanced
+Universal 4 (548885) oder das Garagentor
+aus dem Clubmodell 11 [4].
+In hobby 1 Band 3 finden sich großartige
+Klapp-, Hub- und Drehbrücken [5]. Bei
+diesen Modellen lassen sich sowohl eine
+Schranke auf jeder Seite als auch der
+Klapp-, Hub- oder Drehmechanismus der
+Brücke selbst steuern…
+
+Referenzen
+[1]
+
+Dirk Fox: Scratch mit fischertechnik
+– Update 2022. In dieser Ausgabe
+der ft:pedia.
+
+[2]
+
+Stefan Busch: Schwenktüren. 3/2017, S. 23–33.
+
+[3]
+
+Stefan Busch: Schiebetüren. 1/2018, S. 24–33.
+
+[4]
+
+fischerwerke: Clubmodell 11:
+Garagentor mit Solarantrieb. In:
+Fan-Club News 2/1997.
+
+[5]
+
+fischerwerke: Hub-, Dreh- und
+Klappbrücken. In: hobby 1 Band 3,
+S. 56-79.
+
+
+

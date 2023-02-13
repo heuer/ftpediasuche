@@ -1,0 +1,383 @@
+
+
+Modell
+
+Parallele Roboter – Tripteron und Agile Eye
+Florian Bauer
+In diesem Beitrag möchte ich ein paar Modelle von parallelen Robotern aus fischertechnik
+vorstellen. Unter einem Roboter soll hier – wie in der einschlägigen Fachliteratur üblich – ein
+mechanisches System verstanden werden, das über eine kinematische Kette, also einer Gruppe
+von Armen und Gelenken, einen End-Effektor (z. B. einen Greifer) in der Ebene oder im Raum
+bewegen kann.
+Um zu erklären, was ein paralleler Roboter
+ist, möchte ich zuerst seinen Verwandten,
+den seriellen Roboter vorstellen, der oft in
+der industriellen Fertigung anzutreffen ist.
+
+Serieller Roboter
+Bei einem seriellen Roboter ist der EndEffektor über eine sequenzielle Kette von
+Armen und Gelenken mit der Basis, dem
+festen Bezugssystem, verbunden. Die
+Aktuatoren sitzen jeweils an den Gelenken
+und bestimmen die Orientierung der Arme
+zueinander. Jeder Aktuator bewegt auch
+alle nachfolgenden Aktuatoren bis zum
+End-Effektor. Über die Geometrie ergeben
+sich dadurch Position und Orientierung des
+End-Effektors. Zur Modellierung und
+Visualisierung von virtuellen Robotermodellen kann ich die Robotics Library [1]
+empfehlen.
+Der serielle Aufbau erfordert eine hohe
+Steifigkeit der Arme und Spielfreiheit in
+den Gelenken, da sich ansonsten Ungenauigkeiten entlang der kinematischen Kette
+verstärken können.
+Um diesen Effekten entgegenzuwirken, hat
+man parallele Roboter entworfen, die eine
+hohe Steifheit mit geringeren Massen der
+Arme vereinen und bei denen schnellere
+Bewegungen mit hoher Präzision ausgeführt werden können.
+
+
+Paralleler Roboter
+Bei einem parallelen Roboter ist der EndEffektor gleichzeitig mit mehreren Armen
+über Gelenke mit Aktuatoren verbunden,
+die sich an der Basis befinden. Dadurch
+können kräftige schwere Aktuatoren eingesetzt werden.
+Dies ist meines Ermessens ein entscheidender Vorteil gegenüber seriellen Robotern,
+bei denen die Aktuatoren auf den bewegten
+Armen montiert werden müssen und
+dadurch große Drehmomente auf die
+vorhergehenden Gelenke ausüben.
+Die Aktuatoren bestimmen die Orientierung
+der sogenannten proximalen Arme, welche
+jeweils über ein weiteres Gelenk (distaler
+Arm) mit dem End-Effektor verbunden
+sind. Der End-Effektor wird von mehreren
+der distalen Links gehalten. Im Allgemeinen führt eine Verstellung nur eines Aktuators zur gleichzeitigen Veränderung mehrerer distaler Links und der Position des EndEffektors.
+Parallele Roboter können sogenannte
+Singularitäten aufweisen, bei denen die
+Position des End-Effektors nicht mehr
+eindeutig bestimmt ist. Solche Singularitäten gilt es beim Betrieb über die SteuerungsSoftware unbedingt zu vermeiden, da dort
+die Stabilität des End-Effektors nicht mehr
+sichergestellt ist.
+
+
+Modell
+
+
+Der Arbeitsbereich eines parallelen Roboters kann durch solche Singularitäten
+eingeschränkt sein.
+Ein Beispiel für ein System mit hohen
+Steifigkeiten ist der Hexapod, ein paralleler
+Roboter mit sechs Freiheitsgraden. Die
+Verstellung muss präzise synchron über
+mehrere Aktoren erfolgen, da sonst Spannungen oder Verklemmungen auftreten
+können.
+Ein einfacher, schneller, planarer, paralleler
+Roboter für Pick-und-Place-Aufgaben ist
+der sogenannte SCARA, bei dem zwei
+Rotations-Aktoren einen End-Effektor
+innerhalb einer Ebene bewegen (siehe
+
+Die üblichen Aktuatoren in einem Roboter
+sind Dreh-Aktuatoren (rotational joints: R)
+oder Linear-Aktuatoren (prismatic joints:
+P).
+
+Tripteron
+Wenden wir uns nun der ersten Konstruktion eines parallelen Roboters mit drei
+translatorischen Freiheitsgraden zu, der mit
+drei Linear-Aktuatoren betrieben wird: dem
+Tripteron (3 DOF-3PPP Manipulator, [3]).
+Beim Tripteron werden drei Linear-Aktuatoren (Prismatic Joints, daher PPP) verwendet, die jeweils zwei mit einem Gelenk
+verbundene Arme verschieben. Die Drehachsen aller Gelenke eines jeden Armes
+liegen parallel zur jeweiligen AktuatorAchse. Am anderen Ende des DoppelGelenks ist der End-Effektor über ein
+weiteres Scharnier verbunden.
+
+
+
+
+Die Kinematik dieses kartesischen Mechanismus‘ ist einfach und selbsterklärend:
+Eine Verschiebung in jeder Richtung (X, Y
+oder Z) wird 1:1 auf den End-Effektor übertragen. Das erste Modell eines Tripterons
+mit fischertechnik ist in Abb. 2 zu sehen.
+Als Linearantrieb habe ich Mini-Motoren
+mit Zahnstangengetriebe gewählt, die
+entlang einer Metallachse geführt werden.
+Die Ansteuerung der Motoren erfolgt
+mittels einer einfachen UmpolschalterTaster-Kombination.
+
+Für die Steuerung mit einem Mikrocontroller bräuchte man neben Motortreibern noch eine Positionsmessung. Hier
+könnte ich mir eine miniaturisierte ReflexLichtschranke vorstellen, die die feinen
+Zähne der Zahnstangen zählt. Oder besser
+noch recycelte Decoder-Streifen („Glasmaßstab des armen Mannes“) und Lichtschranken aus alten Officejet-Druckern.
+End-Schalter für die Referenz-Fahrt wären
+dann auch nötig. Alternativ könnte man den
+Abstand absolut über einen ReflexAbstandssensor messen.
+
+
+
+Modell
+
+Bei der mechanischen Konstruktion gibt es
+zwei wesentliche Herausforderungen mit
+fischertechnik:
+1. Stabilität und Verwindungssteifigkeit der
+Arme und der Vertikal-Achse: Hier habe
+ich für den proximalen Arm eine Dreiecks-Konstruktion eingesetzt. Die Vertikal-Achse wurde mit fischertechnikStatik-Elementen aufgebaut und verstrebt.
+2. Spielfreiheit der Lager: Als Lager zwischen proximalen und distalen Armen
+mussten Gelenksteine herhalten, die ein
+geringes laterales Spiel aufweisen. Für
+das Scharnier am End-Effektor sind
+mehrere Lagersteine eingesetzt.
+
+Das zweite Modell (Abb. 3) ist eine leichtgewichtigere Variante des ersten. Als Arme
+habe ich hier kleine Bauplatten verwendet,
+die eine gute Steifigkeit aufweisen.
+Es gibt eine Vielzahl von kartesischen
+parallelen Robotern, von denen einige im
+Wikipedia-Artikel [3] beschrieben sind.
+Ein nicht-kartesischer „Bruder“ des Tripterons ist der Delta-Robot, bei dem die
+Linear-Aktuatoren alle parallel sind, was
+die Kinematik etwas verkompliziert. Ein
+schönes fischertechnik-Modell findet sich
+in der fischertechnik-Datenbank [4] und in
+[5].
+
+
+
+
+Agile Eye
+
+sind zwar steifer, aber dafür auch
+schwerer.
+
+Das Agile Eye ist ein paralleler Roboter mit
+drei Winkel-Freiheitsgraden (3 DOF-3RRR
+Manipulator), der 2002 am Robotik-Labor
+der Laval-Universität entwickelt wurde, um
+eine Kamera sehr schnell ausrichten zu
+können [6, 7]. Die Ansteuerung erfolgt über
+drei basisfeste Winkel-Aktuatoren.
+Folgende Herausforderungen gilt es zu
+meistern:
+1. Gewicht, Stabilität und Verwindungssteifigkeit der Arme: Hier müssen gebogene Arme gebaut werden. Durch die
+große Zahl von fischertechnik-Bauteilen
+ist dies schwer zu erreichen und die
+Arme sind nicht besonders verwindungssteif. Arme in doppelreihiger Bauweise
+
+2. Antrieb: Durch das hohe Gewicht der
+Arme, die ein großes Drehmoment auf
+die Antriebsachsen ausüben, muss eine
+große Übersetzung mit Schneckenantrieb verwendet werden, was dann im
+Betrieb zu geringen Geschwindigkeiten
+führt.
+3. Komplizierte Kinematik: Will man den
+End-Effektor in eine bestimmte Richtung steuern, muss man über die sogenannte inverse Kinematik die Stellwinkel
+der Aktuatoren berechnen, um die
+gewünschte Ausrichtung anzufahren.
+Die Kinematik für das Agile Eye ist nicht
+trivial und in [8] beschreiben. Die dort
+
+
+aufgeführten Berechnungen sind für die
+vorliegende
+fischertechnik-Modell
+leider nicht geeignet, da sie davon ausgehen, dass benachbarte Achsen senkrecht zueinander stehen und sich alle
+Achsen in einem Punkt treffen, was bei
+diesem Modell nicht der Fall ist. (Streng
+genommen handelt es sich beim vorliegenden Modell um einen Spherical
+Parallel Manipulator (SPM). Für die
+verallgemeinerte SPM-Geometrie mit
+nicht senkrechten Achsen finden sich in
+[9] Lösungen).
+4. Stabile Unterkonstruktion: Es ist wichtig, dass die gesamte Unterkonstruktion
+stabil ist, damit sich die AktuatorAchsen zueinander nicht verstellen
+können.
+Zudem muss man bei der Ansteuerung die
+singulären Bereiche meiden, die man im
+fischertechnik-Modell wunderbar „erfühlen“ kann: In den singulären Stellungen
+
+Modell
+
+wird die Konstruktion plötzlich „weich“
+und der End-Effektor kippt dann plötzlich
+ab.
+
+Vereinfachtes Agile Eye
+Wenn man auf einen Freiheitsgrad verzichten kann, kann man die Konstruktion sehr
+stark vereinfachen und kommt zu einem
+kompakten Aufbau wie in Abb. 5, der als
+Spiegel-Halter gedacht war. Hier kann man
+mit zwei ortsfesten Aktuatoren zwei Winkel
+des End-Effektors (hier: des Spiegels) einstellen. Dadurch, dass die beiden Aktuatoren mit der stabilen Basis verbunden sind,
+ist der Mechanismus besser entkoppelt als
+bei einem seriellen Aufbau, bei dem der
+zweite Aktuator im bewegten Bezugssystem ist. In diesem Fall übt man beim
+Verstellen unweigerlich ein Drehmoment
+auf die andere Achse aus.
+Der Spiegel dreht sich bei Verstellung um
+die eigene Normale, was bei Abbildung von
+Laserstrahlen kein Problem darstellt, bei
+
+ist der Zusammenhang mit dem „normalen“ Agile Eye nicht zu erkennen.
+
+
+
+Typ
+
+Arme
+
+Aktuatoren
+
+2D/3D
+
+Freiheitsgrade
+
+Gelenke
+
+SCARA
+
+
+3 × rot.
+
+2D
+
+3 × Position
+
+
+TRIPTERON
+
+
+3 × linear
+
+3D
+
+3 × Position
+
+
+HEXAPOD
+
+
+6 × linear
+
+3D
+
+3 × Position +
+3 × Orientierung
+
+
+AGILE EYE / SPM
+
+
+3 × rot.
+
+3D
+
+3 × Orientierung
+
+
+2 × rot.
+3D
+2 × Orientierung
+Tab. 1: Überblick über parallele Mechanismen
+
+
+Simplified AGILE EYE
+
+Bildern allerdings schon. Diese Konstruktion ist für eine Kamera-Führung wegen der
+damit verbundenen Bild-Kippung nicht
+geeignet.
+Die Kinematik ist selbsterklärend und
+trivial: Die Winkel der Aktuatoren übertragen sich 1:1 auf die Neigungswinkel des
+Spiegels.
+
+Die Schwierigkeiten liegen wie so oft in
+Gewicht und Stabilität des Aufbaus.
+Geringe Verwindungssteifigkeit und Lagerspiel summieren sich entlang der kinematischen Ketten. Für das Agile Eye kann man
+wie in Abb. 8 gezeigt speziell gebogene
+fischertechnik-kompatible Arme entwerfen
+und mit dem 3D-Drucker herstellen, die
+leichter und verwindungssteifer sind und
+mit denen die Geometrie besser abgebildet
+werden kann. Verbesserungen sind sicher
+möglich und ich würde mich über diesbezügliche Vorschläge freuen.
+Eine Computer-Ansteuerung lässt sich mit
+PID-positionsgeregelten
+fischertechnikMotoren und absoluten Magnet-Gebern
+realisieren (Abb. 6, 7). Für das Agile Eye
+wären noch eine geeignete Inverse Kinematik herzuleiten und die Berechnungen im
+Mikrocontroller zu implementieren.
+
+Quellen
+[1]
+
+Robotics Library:
+https://www.roboticslibrary.org/
+
+[2]
+
+Dirk Uffmann: Schachroboter mit
+Scara-Arm und Zugerkennung durch
+Bildverarbeitung. Im Bilderpool der
+fischertechnik-Community, 2018.
+
+mit Würfelmagnet
+
+[3]
+
+Wikipedia: Cartesian Parallel
+Manipulators.
+
+Ausblick
+
+[4]
+
+Thomas Püttmann: Delta-Roboter.
+Im Bilderpool der fischertechnikCommunity, 2017.
+
+Die in diesem Artikel erwähnten parallelen
+Mechanismen sind in Tab. 1 kurz zusammengestellt.
+
+
+Modell
+
+
+[5]
+
+Dirk Fox, Thomas Püttmann: fischertechnik-Roboter mit Arduino.
+dpunkt.Verlag, 2020.
+
+[6]
+
+Laboratoire de robotique: The Agile
+Eye. Auf der Website der Université
+Laval, 2002-2015.
+
+[7]
+
+Laboratoire de robotique de l’université Laval: 2-DOF Agile eye (simplified version). Auf Youtube, 2015.
+
+[8]
+
+Ilian A. Bonev, Damien Chablat and
+Philippe Wenger: Working and
+Assembly Modes of the Agile Eye. In:
+Proceedings IEEE International Conference on Robotics and Automation,
+Juni 2006.
+
+[9]
+
+Aibek Niyetkaliyev, Almas Shintemirov: An Approach for Obtaining
+Unique Kinematic Solutions of a
+Spherical Parallel Manipulator.
+2014 IEEE/ASME International
+Conference on Advanced Intelligent
+Mechatronics (AIM), Besançon,
+Fankreich, 8.-11.07.2014.
+
+
+
+
+
+

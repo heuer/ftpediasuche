@@ -1,0 +1,161 @@
+
+Modell
+
+Modell
+
+Kran mit Derrickausleger
+Daniel Canonica
+Die größten und stärksten Kräne der Welt arbeiten mit sogenannten Derrickauslegern, welche
+das Ganze im Gleichgewicht halten und selbst hunderte Tonnen Ballast tragen. Meistens sind
+sie als Raupenkrane ausgeführt, es gibt aber auch derartige Pneukräne.
+
+Wortherkunft: Derrickausleger
+Wenn Thomas Derrick geahnt hätte, dass
+riesige Kranteile nach 400 Jahren noch nach
+ihm benannt werden, hätte er vielleicht
+einen anderen Beruf gewählt.
+Nach einiger Zeit auf See wurde er nämlich
+Henker und dachte in der Freizeit über
+robuste Galgenkonstruktionen nach.
+Später wurden fest installierte und abgespannte Kräne, welche zum Beispiel in
+Steinbrüchen verwendet werden, nach ihm
+benannt, sowie die Ausleger, welche zur
+Gewichtsverteilung bei sehr großen Kränen
+dienen.
+
+Krane mit Auslegern
+Die Kräne mit Derrickauslegern sind üblicherweise als Raupenkräne ausgeführt, es
+gibt aber auch entsprechende Pneukräne.
+Die Last selbst wird durch einen Gittermast,
+selten auch durch einen Teleskopmast
+getragen. Der Derrickausleger dient dazu,
+die Kräfte im Kran zu verteilen und die
+ganze Konstruktion mit sehr schweren Ballastgewichten abzustützen.
+Die größten derartigen Kräne können mehr
+als 1000 Tonnen heben und haben eine
+Höhe von mehr als 200 Metern. Der Ballast
+wiegt mehrere 100 Tonnen.
+eines solchen Krans.
+
+
+Ein Teil des Ballasts ist auf dem Fahrzeug
+selbst (Oberwagen), doch dieser dient vor
+allem zum Aufrichten des Gittermasts,
+welcher auf dem Boden stückweise zusammengefügt wird. Sobald der Kran schwere
+Lasten heben soll, wird der Hauptballast am
+Ausleger angehängt. Der Ballast wird
+entweder schwebend gehalten oder auf ein
+Fahrgestell geladen.
+
+
+
+
+Die Ballastgewichte müssen beim Aufheben oder Absetzen von schweren Lasten
+entsprechend angepasst werden.
+Gleichgewicht der Kräfte
+Der Kran ist – einfach gesagt – ein auf dem
+Spitz stehendes Dreieck, welches durch das
+Gewicht von Last und Ballast im
+Gleichgewicht gehalten wird.
+Abspannung
+(verstellbar)
+
+Last
+Gittermast
+
+Ausleger
+
+Ballast
+
+
+Je grösser die Neigung des Hauptmastes zur
+Vertikalen ist, desto mehr Ballast braucht
+man, um ein genügend großes Gegengewicht zur Last zu bilden.
+Andererseits kann auch die Waage gehalten
+werden, wenn der Ballast mechanisch oder
+hydraulisch nach hinten geschoben wird. Es
+gilt das Hebelgesetz.
+
+Das Modell
+Mein Modell berücksichtigt die wesentlichen Elemente eines solchen Krans (siehe
+Abbildung 3). Mangels großen Raupenketten fährt er auf insgesamt 20 Rädern, wovon
+16 angetrieben sind.
+Am Gittermast hängt die Last (aktuell
+1,5 kg), am Derrickausleger der Ballast.
+Das Fahrgestell mit den vier Hauptachsen
+(längs) und der Träger für den Kran (quer)
+sind mit Aluprofilen robust aufgebaut.
+
+
+
+Um Querschwingungen der Last abzustützen, sind auf beiden Seiten des Trägers
+schwenkbare Stützen angebracht.
+Der Träger des Lastarms und des Auslegers
+ist aus Alu und fest mit dem Fahrgestell
+verbunden:
+
+Modell
+
+Der Gittermast ist in der aktuellen Konfiguration etwa 90 cm hoch, der Ausleger 60
+cm. Sowohl die Abspannung zwischen
+Gittermast und Ausleger als auch die Aufhängung des Ballasts am Ausleger kann
+problemlos mit kleinen Motoren gemacht
+werden dank der vielfachen Flaschenzüge
+(vgl. Abb. 6 und 7). Mast und Ausleger
+können zueinander einen Winkel von etwa
+20 bis 90 Grad bilden.
+
+
+Vorne ist er noch zusätzlich abgestützt:
+
+
+
+
+
+Hier sieht man nun den Ballastwagen von
+oben (Abb. 8). In der Wirklichkeit schwebt
+der Ballast entweder knapp über dem Boden
+oder ist fahrbar auf Rädern angebracht.
+
+Abgesehen von der Vertikalen ist der Ballastwagen aber frei beweglich.
+des Lastarms und die Flasche.
+
+
+Der Ballastwagen wird durch ein zusätzliches Aluprofil gehindert, aus der Schwebe
+in einen unkontrollierten Steigflug überzugehen (was bei früheren Modellen ab und zu
+passiert ist):
+
+
+
+
+Abb. 12 zeigt den Hubmotor, den IREmpfänger und die Stromverteilung (die
+Lampen und der Antrieb werden mit
+Schaltern auf dem Fahrzeug bedient).
+
+Modell
+
+Ich denke, die Struktur würde problemlos 45 kg tragen, doch dafür bräuchte man einen
+stärkeren Motor und sehr viel mehr Ballast.
+
+
+Aktuell trägt der Kran etwa 1.5 kg.
+
+
+In Abbildung 14 ist der Antrieb zu sehen:
+Die vier Festachsen mit je vier Rädern
+werden alle über eine Kette angetrieben.
+Auf jeder Achse sitzt ein Zahnrad Z20.
+Damit die Kette nicht durchhängt, dient in
+der Mitte unten ein kleines Zahnrad als
+Kettenspanner. Das Zahnrad, welches die
+Kette bewegt, wird über ein zweifaches
+Schneckengetriebe mit starker Untersetzung angetrieben.
+
+Quellen
+
+[1]
+
+Wikipedia: Derrickausleger. Abbildung von Benutzer Biezl.
+
+
+

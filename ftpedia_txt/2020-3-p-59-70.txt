@@ -1,0 +1,756 @@
+
+Elektronik
+
+Elektronik
+
+Elektronik-Module (Teil 4)
+Hans-Christian Funke
+Die meisten Modelle bewegen etwas oder bewegen sich selbst. Aber um dies tun zu können,
+werden entsprechende elektrische Hilfsmittel wie Motoren, Kompressor oder Magnete benötigt.
+Einige dieser Hilfsmittel brauchen sogar eine ganze Menge Strom. Damit muss einerseits
+bedarfsgerecht Strom zur Verfügung gestellt werden; andererseits werden Schalter benötigt,
+die zum Schalten dieser Ströme geeignet und auch schnell genug sind.
+
+Definition
+
+Elektronische Schalter
+
+Die Elektronikmodule arbeiten mit positiver Logik. In den folgenden Texten und
+Beschreibungen werden folgende Bezeichnungen verwendet:
+
+Zum Schalten von Verbrauchern gibt es
+unter den Elektronikmodulen einmal das
+Relaismodul 70018 (Abb. 1) und die auf
+Transistoren basierenden Module 70009
+(Leistungsmodul – Abb. 2) und 70019
+(Inverter-Plus-Modul – Abb. 3).
+
+ logisch „0“ = low = minus (-) = Masse
+oder GND
+ logisch „1“ = high = plus (+) =
+Betriebsspannung oder Vdd
+
+
+
+
+
+
+
+70018
+Relaismodul
+
+70009
+70019
+Leistungsmodul Inverter-PlusModul
+
+70024
+Multiplexmodul
+
+Schaltzeit
+
+träge, > 5 ms
+
+flink, > 40 µs**
+
+flink, > 40 µs**
+
+flink, > 40 µs**
+
+Max.
+Schaltleistung
+
+90 W
+
+70,5 W
+
+3,75 W
+
+0,375 W
+
+Max.
+Schaltspannung
+
+60 V / 25 VAC* 30 V
+
+15 V
+
+15 V
+
+Max.
+Schaltstrom
+
+3A
+
+2,35 A
+
+250 mA
+
+25 mA
+
+Anzahl der
+Schalter
+
+2 × 2 UM
+
+2 × INV
+
+4 × INV+
+
+1 × 8 UM
+
+Geeignet für
+
+Lampe,
+Lautsprecher,
+Magnet, Motor, Lampe, Magnet,
+Kompressor
+Motor,
+Kompressor
+
+Lautsprecher,
+Lampe,
+Magnet,
+Kompressor,
+(Motor)
+
+Kleine Ströme
+von Widerständen und
+Kondensatoren,
+ft-Summer,
+ft-LED
+
+* Mit den eingesetzten Relais können auch höhere Spannungen geschaltet werden, aber für den vorgesehenen
+Einsatzbereich der Elektronikmodule sollten die angegebenen Werte nicht überschritten werden. Spannungen
+bis zu diesem Wert gelten als ungefährlich (auch für Kinder).
+** Der Hauptanwendungsbereich der Elektronikmodule liegt im Frequenzbereich bis 25 kHz (T = 40 µs).
+Allerdings können – in Abhängigkeit von der Betriebsspannung – auch höhere Frequenzen verarbeitet werden.
+UM
+
+Umschalter; Durchleitung von angelegter Spannung zu einem Pol von zwei alternativen Polen.
+
+INV
+
+Inverter oder Treiber (umschaltbar); schaltet die Betriebsspannung 3…15 V oder eine externe
+Spannung von 3…30 V mit bis zu 2,35 A je Ausgang.
+
+INV+
+
+Inverter oder Treiber (umschaltbar); schaltet die Betriebsspannung 3…15 V mit bis zu 250 mA je
+Ausgang (nur bei high am Ausgang); ein GND-Anschluss zusätzlich pro Ausgang.
+
+1 × 8 UM Umschalter; Durchleitung einer analogen Spannung zu einem von acht alternativen Polen; Auswahl der
+Schalterstellung über Binärcodierung (3 bit).
+
+Tab. 1: Verfügbare Schaltmodule
+
+Der Vollständigkeit halber sei hier auch das
+Multiplexmodul (70024 – Abb. 4) aufgelistet. Das Multiplexmodul ist ein achtpoliger Schalter: Ein Eingang kann auf acht
+Ausgänge verteilt werden.
+Das Multiplexmodul kann nur sehr kleine
+Verbraucher ansteuern wie den ft-Summer
+oder eine ft-LED und kommt im Wesentlichen zum Schalten von elektrischen Verbindungen zum Einsatz. Ein Beispiel für
+den Einsatz des Multiplexmodules wird es
+– passend zum nächsten Thema – in einer
+kommenden ft:pedia geben.
+
+Tab. 1 zeigt eine Zusammenfassung der
+einzelnen Schalter hinsichtlich ihrer technischen Daten und Eignungszwecke.
+
+Funktion des Relaismodules
+(70018)
+Jedes Relaismodul enthält zwei voneinander unabhängige Relais, die auch separat
+angesteuert werden können. Die Ansteuerung erfolgt über zwei getrennte VerstärkerEingänge, die durch ein ODER-Gatter
+verknüpft sind. Über den Eingang IN wird
+das Relais mit „-“ aktiviert, über den
+
+Eingang IN über „+“ aktiviert. Jedes der
+Relais verfügt über zwei Umschalter, womit
+auf einem Relaismodul insgesamt vier
+Umschalter zu Verfügung stehen (Schaltplan siehe Abb. 5).
+In der Historie sind bisher drei Versionen
+des Relaismoduls 70018 gefertigt worden:
+ V1: Relais mit einer Schaltleistung von
+30 W (30 V, 1 A)
+ V2: Relais mit einer Schaltleistung von
+60 W (30 V, 2 A)
+ V3: Relais mit einer Schaltleistung von
+90 W (30 V, 3 A)
+
+Schaltungsdetails
+Bei Betrachtung der Schaltung in Abb. 5
+wird dem aufmerksamen Beobachter nicht
+entgangen sein, dass zwei parallel geschaltete Widerstände (R5 und R6) in Reihe zu
+der Spule des Relais liegen. Der Grund
+dafür ist, dass ein genauer Wert von 50 Ω
+benötigt wird, der durch die Parallelschaltung von zwei 100 Ω-Widerständen erreicht
+wird.
+Bei einer Betriebsspannung von 4 V liegt
+die Schaltspannung damit am unteren und
+bei der maximalen Betriebsspannung von
+15 V am oberen Ende des Toleranzbereichs
+der erlaubten Schaltspannung. Wird mit
+
+Elektronik
+
+einer Betriebsspannung von 15 V gearbeitet, wird auch die Leistungsgrenze von
+0,25 W der Widerstände nicht überschritten, weil durch die Parallelschaltung
+insgesamt eine Leistung von 0,5 W zu
+Verfügung steht, die sich auf beide Widerstände gleichmäßig aufteilt.
+Diesen Trick habe ich auch bei anderen
+Modulen angewendet, um einen bestimmten Widerstandswert zu erzielen und gleichzeitig kleine Widerstände einsetzen zu
+können (0,25 W). Widerstände mit großer
+Leistung brauchen mehr Platz auf der
+Platine, aber bei fast allen Modulen ist
+gerade der nicht gegeben. Anschaulicher
+wird es bei meinen Ausführungen zum
+Modul 70009.
+
+Inverter-Plus-Modul (70019)
+Das Inverter-Plus-Modul hat in der Grundfunktion vier Inverter. Ein Inverter kehrt ein
+logisches Signal um. Aus einem logisch „0“
+am Eingang wird am Ausgang ein logisch
+„1“ und umgekehrt. Das „Plus“ an diesem
+Elektronikmodul ist eine Leistungsstufe an
+jedem Inverter-Ausgang. Damit können
+kleine Verbraucher angesteuert werden,
+wenn der Ausgang auf high liegt. Damit ist
+das Inverter-Plus-Modul eine gute Alternative zum Relaismodul.
+
+
+
+
+Mit dem Inverter-Plus-Modul können somit
+Lampen, Magnete, Kompressoren und
+gering belastete Motoren mit einem Strombedarf unter 250 mA versorgt werden. Auf
+der Ausgangsseite ist neben dem InverterAusgang auch ein GND-Ausgang verfügbar, so dass Verbraucher direkt mit einer
+Doppellitze angeschlossen werden können.
+Bei jedem Inverter kann über einem DIPSchalter die Invertierung abgeschaltet
+werden, so dass es nur noch ein Treiber ist;
+low am Eingang bringt dann auch low am
+Ausgang und entsprechend high am
+Eingang high am Ausgang.
+Verbraucher am Inverter-Plus-Modul
+(70019)
+Einen Überblick über die Verbraucher, die
+mit dem Inverter-Plus-Modul angesteuert
+werden können, findet ihr in Tab. 2. Die
+Stromwerte sind Messwerte von vorliegenden Verbrauchern und können als Richtlinie
+betrachtet werden. Es ist jedoch nur eine
+kleine Auswahl von Verbrauchern, die
+
+getestet wurden, und somit keine vollständige Liste.
+Darüber hinaus können alle ft-Elektronikbausteine und ft-LEDs vom Inverter-PlusModul angesteuert werden. Auch Motoren
+(Minimotor,
+alter
+Motor
+mot. 8,
+XS/S/M/XM, Power-Motoren) können am
+Inverter-Plus-Modul betrieben werden,
+sofern der Motor nur gering belastet wird
+(z. B. mit einer Luftschraube oder einem
+freilaufenden Gestänge).
+LEDs mit einem Strombedarf von weniger
+als 2 mA können auch direkt an die Ausgänge aller Elektronikmodule angeschlossen werden. Eine Ausnahme bilden nur die
+Ausgänge an den Zählermodulen 70001
+und 70002, die ausschließlich zur Ansteuerung weiterer Zählermodule dienen.
+Gegenüber dem Relaismodul schaltet das
+Inverter-Plus-Modul wesentlich schneller
+und kann somit auch für die akustische
+Signalverstärkung eingesetzt werden.
+
+Verbraucher
+
+Artikelnummer
+
+Strom /
+Spannung
+
+Kompressor
+
+121470
+
+110 mA / 6 V
+
+Bemerkungen
+
+150 mA / 9 V
+Elektromagnet 142504
+
+130 mA / 6 V BS15 + Spule
+130 mA / 6 V BS30 Glaskörper mit zwei Spulen
+
+Lampe
+
+31314
+
+90 mA / 6 V Glaskörper rund; geschraubt
+
+Lampe
+
+31315
+
+180 mA / 6 V Glaskörper Linse; geschraubt
+
+Lampe
+
+37869
+
+70 mA / 6 V Glaskörper rund; gesteckt
+100 mA / 9 V
+
+Lampe
+
+37875
+
+120 mA / 6 V Glaskörper Linse; gesteckt
+150 mA / 9 V
+
+Summer
+
+36119
+
+10 mA / 6 V
+
+Relais
+
+30075
+
+50 mA / 6 V em 5
+
+Zählwerk
+
+30242
+
+50 mA / 6 V em 6
+
+Relais
+30246
+30 mA / 6 V em 10
+Tab. 2: Beispiele für Verbraucher, die vom Inverter-Plus-Modul 70019 angesteuert werden können
+
+
+Elektronik
+
+
+Liegt logisch „0“ am Ausgang des Inverters, stehen 2…7 mA (abhängig von der
+Betriebsspannung) zu Verfügung, die zum
+Ansteuern weiterer Elektronikmodule vollkommen ausreichend sind.
+
+wirken, sind bereits in der Ausgangsendstufe sogenannte Freilaufdioden vorgesehen.
+
+Besonderheiten
+
+Das mächtigste Elektronikmodul ist der
+Leistungstreiber, der Stromstärken bis zu
+2,35 A bei einer Frequenz von über 25 kHz
+verarbeiten kann. Auf Grund der großen
+Kühlkörper, die bei diesem Elektronikmodul außen angebracht werden mussten,
+haben nur zwei Inverter/Treiber Platz
+gefunden. Auch die Anordnung der Bauteile war äußerst schwierig, denn sowohl
+die Anschlüsse als auch der DIP-Schalter
+und der Doppel-Jumper für die interne /
+externe Spannungsversorgung der Endstufe
+sollten alle gut erreichbar sein.
+
+Im Elektronikmodul sind Leistungstransistoren enthalten, die mit einem kleinen Kühlkörper versehen sind und sich innerhalb des
+Gehäuses befinden. Bei gleichzeitiger Volllast aller vier Inverter kann es zu einer
+Erwärmung des Elektronikmoduls kommen. Aus diesem Grund wurden oben und
+an der Seite des Gehäuses Luftschlitze angebracht, damit bei Erwärmung eine gute
+Luftzirkulation entstehen kann und die
+Transistoren gekühlt werden. Bei der Montage des Elektronikmodules in einem
+Modell sollte daher beachtet werden, dass
+die Lüftungsschlitze möglichst nicht verdeckt werden.
+Endstufen aus Transistoren können durch
+Gegenspannung zerstört werden, die in den
+Spulen von Motoren oder Elektromagneten
+entstehen. Um der Zerstörung entgegen zu
+
+Leistungstreiber (70009)
+
+Funktion des Leistungsmodul
+Das Leistungsmodul ist im Aufbau ähnlich
+zum Inverter-Plus-Modul; von der Funktionsbeschreibung ist das Leistungsmodul
+identisch. Das Leistungsmodul verfügt
+jedoch über einen Gegentaktverstärker, der
+dafür sorgt, dass sowohl bei logisch „0“
+(low), als auch bei logisch „1“ (high) am
+
+
+
+Ausgang bis zu 2,35 A entnommen werden
+können (Schaltplan siehe Abb. 7).
+Eine Besonderheit ist, dass die Ausgänge
+Spannungen bis zu 30 V schalten können.
+Für die Einspeisung der höheren Spannung
+stehen ein separater Niedervoltanschluss
+und eine Schraubklemme am Modul zur
+Verfügung (externe Spannung). Über einen
+Doppel-Jumper kann dann entweder die
+interne Betriebsspannung über die Endstufe
+oder die externe Spannung geschaltet
+werden. Auf der Platine sind die Massen der
+internen und externen Schaltspannung
+bereits miteinander verbunden.
+Schaltungsdetails
+In der Testphase kam es zu Schäden an der
+Schaltung, wenn eine Spannung an den Eingängen anlag und die Betriebsspannung
+vorzeitig abgeschaltet oder erst im Nachhinein angelegt wurde. Mit den Dioden vor
+dem eigentlichen Eingang wird dieses
+Problem vermieden.
+Die Diode (D3) in Richtung Vdd versorgt
+das Elektronikmodul mit einem Notstrom
+für den Fall, dass die Betriebsspannung
+fehlt. Allerdings fallen bei der Diode 0,7 V
+
+ab. Damit die Eingangsspannung nicht
+größer als die Betriebsspannung wird, ist im
+Eingangsweg ebenfalls eine Diode (D4)
+geschaltet.
+Anders als beim Inverter-Plus-Modul versorgt der Transistor T2 hier die LEDs eines
+Opto-Kopplers, der für eine galvanische
+Trennung zwischen der internen und
+externen Schaltspannung sorgt (erforderlich
+bei Verwendung von externen Spannungen
+> 15 V). Die Endstufe ist so konstruiert,
+dass im Fall, dass die LEDs des OptoKopplers leuchten, die Fototransistoren auf
+der Gegenseite des Opto-Kopplers einen
+Leistungstransistor durchschalten (T4) und
+den anderen (T6) blockieren. Verlöschen
+die LEDs des Opto-Kopplers, wird T4
+blockiert und T6 leitend.
+Die Transistoren T3 und T5 dienen der
+Strombegrenzung, womit die Leistungsstufe kurzschlussfest wird. Für die Widerstände wurde der schon erwähnte Trick
+beim Relaismodul angewandt. Die sogenannten Shunt-Widerstände mit 0,25 Ω
+müssten 2 W Leistung verdauen können.
+Damit würden diese eine ordentliche Größe
+haben und entsprechend viel Platz auf der
+
+
+Platine benötigen. Daher habe ich hier
+4 × 1 Ω parallelgeschaltet (= 0,25 Ω),
+womit insgesamt 16 Widerstände zum
+Einsatz kommen!
+Damit die Widerstände alle Platz haben,
+sind SMD-Widerstände mit je 0,6 W zum
+Einsatz gekommen (sie sind sehr klein und
+passen gut auf die Rückseite der Platine)
+womit das Problem elegant gelöst ist – auch
+hinsichtlich der hohen Leistung, da sich die
+Leistungen durch die Parallelschaltung
+addieren und damit 2,4 W (4 × 0,6 W) von
+den vier Widerständen verarbeitet werden
+können.
+Auch hier würden die Leistungstransistoren
+der Endstufe ohne Freilaufdiode Schaden
+durch auftretende Gegenspannungen von
+induktive Lasten nehmen. Die eingesetzten
+Leistungstransistoren verfügen aber bereits
+über eine interne Freilaufdiode (innerhalb
+des Gehäuses des Transistors)!
+
+Funktion des Multiplexmoduls
+(70024)
+Eine ausführliche Beschreibung des Multiplexmoduls werde ich erst in einer nächsten
+Ausgabe der ft:pedia veröffentlichen, weil
+das Modul thematisch dort besser passt.
+Eine Besonderheit möchte ich schon an
+dieser Stelle ansprechen. Der Schalter 1 auf
+8 bzw. 8 auf 1 des Multiplexmodules ist ein
+bidirektionaler analoger Schalter und ist
+damit funktionell einem Relais gleichzusetzen. Es spielt somit keine Rolle, auf
+welcher Seite Plus oder Minus angeschlossen wird. Ebenso spielt die Spannung keine
+Rolle – es kann jede Spannung zwischen
+0 V und der Betriebsspannung (max. 15 V)
+geschaltet werden. In diesem Sinne gibt es
+dort kein high oder low. Nur der durchzuleitende Strom ist bei diesem Schalter auf
+maximal 25 mA begrenzt.
+
+Elektronik
+
+Versorgungsmodule (70003
+und 70020)
+Die Finalstücke der Elektronikmodule sind
+die Versorgungsmodule. Diese wurden als
+letztes in der Serie fertiggestellt. Es gab
+mehrere Varianten und Lösungen, aber
+jeder dieser Entwürfe hatte irgendeinen
+Nachteil. Entweder wirkte die Strombegrenzung nicht oder die Spannung blieb
+unter Last nicht konstant oder es traten zu
+große Stromwerte auf (Version mit Boostund Buck-Regler).
+Das Versorgungsmodul sollte die folgenden
+Grundanforderungen erfüllen:
+• Einspeisung
+von
+Gleichspannung
+(0…30 V).
+• Einspeisung von Wechselspannung und
+Umwandlung
+in
+Gleichspannung
+(0…30 V).
+• Einspeisung von pulsierender Gleichspannung (0…30 V).
+• Begrenzung des Stromflusses auf 2,5 A.
+• Begrenzung der Ausgangsspannung auf
+maximal 15 V.
+• Direkter Anschluss von Steckernetzteilen wie z. B. 505287 über eine Niedervoltbuchse.
+Darüber hinaus gab es Anforderungen, die
+optional waren:
+• Niedrigspannungsanzeige bei Einsatz
+von Akkus (Warnung vor Tiefentladung).
+• Parallelschaltung von Versorgungsmodulen für einen Strombedarf > 2,5 A
+muss möglich sein.
+• Die Einspeisung soll über BananenStecker (ft-Stecker) oder Kabel ohne
+Stecker möglich sein.
+• Mehrere Entnahmestellen für Vdd (+)
+und GND (-).
+Die Anforderungen aus dieser Aufstellung
+konnten schließlich fast alle umgesetzt
+werden, jedoch musste dazu eine Aufteilung vorgenommen werden.
+
+
+
+
+Für Speisespannungen von 14…24 V DC
+(DC = Gleichspannung) / 15…26 V AC
+(AC = Wechselspannung) kommt das
+Versorgungsmodul V2 (70020) zur Anwendung und für Speisespannungen von
+3…15 V DC und 5…14 V AC das Versorgungsmodul V1 (70003).
+
+Aus diesem Grund wurde hier auf eine
+Strombegrenzung verzichtet. Akkus, Trafos
+oder Steckernetzeile liefern in der Regel
+nicht mehr als 3 A und dafür ist dieses
+Versorgungsmodul ausgelegt (Imax = 3 A).
+Das Modul ist somit nur so kurzschlussfest,
+wie es die Quelle zur Einspeisung ist.
+
+Funktionsbeschreibung des
+Versorgungsmoduls V1
+
+Ebenso wurde auf eine Spannungsbegrenzung verzichtet, weil unter Berücksichtigung der erlaubten Speisespannungen keine
+Spannungswerte über 15 V auf der Ausgangsseite auftreten können.
+
+Durch die Aufteilung der Spannungsbereiche wurde vieles beim Entwurf der
+Schaltungen einfacher. Für den unteren
+Spannungsbereich 3…8 V wäre es allerdings sehr nachteilig gewesen, wenn durch
+Schutzmaßnahmen 1 bis 2 V der eingespeisten Spannung verloren gingen, gerade
+beim Einsatz von Akkus.
+
+Die Gleichspannung und die gleichgerichtete Wechselspannung werden mit Siebkondensatoren (insgesamt 2220 µF) geglättet. Dadurch kann man auch z. B. einen
+alten ft-Trafo (mot. 4) mit Wechselspannung oder pulsierender Gleichspannung auf
+der Eingangsseite anschließen und erhält
+eine sauber geglättete Gleichspannung auf
+der Ausgangsseite. Auch eventuell auftretende Spannungsspitzen werden durch die
+Siebkondensatoren und einer SuppressorDiode am Ausgang abgefangen. Nach dem
+Abschalten der Speisespannung leuchtet die
+LED für die Anzeige der Betriebsspannung
+noch nach, bis die Siebkondensatoren
+vollständig entladen sind (Schaltplan siehe
+
+
+
+Elektronik
+
+Damit die Parallelschaltung mehrerer
+Versorgungsmodule problemlos möglich
+ist, wurde auf der Ausgangsseite eine
+Schottky-Schutzdiode eingebaut. Der Spannungsabfall an der Schutzdiode liegt bei
+maximal 0,4 V und muss somit berücksichtigt werden. Folgende Berechnungsformeln
+ergeben sich daraus für die Ausgangsspannung:
+Wechselspannung oder pulsierende Gleichspannung:
+𝑈𝑎 = (𝑈𝑒 ∙ 0,707) − 0,4V
+Gleichspannung (z. B. von einem Akku):
+𝑈𝑎 = 𝑈𝑒 − 0,4V
+Bei Verwendung von Wechselspannungsquellen muss bei der Berechnung allerdings
+beachtet werden, dass von den meisten
+Quellen (außer Labornetzteilen) eine
+höhere Leerlaufspannung geliefert wird, als
+auf dem Gerät (Steckernetzteil) angegeben
+ist.
+
+Die Nennspannung wird nur bei der
+maximal zulässigen Stromlast erreicht. So
+kann ein Netzteil mit 12 V AC durchaus
+auch eine Leerlaufspannung von 16 V AC
+aufweisen. Aus diesem Grund ist bei
+Verwendung von Wechselspannungen über
+10 V AC Vorsicht geboten.
+Vor dem Anstecken weiterer Elektronikmodule an den oberen mit „+“ und „–“
+gekennzeichneten Bundhülsen sollte die
+Ausgangsspannung des Versorgungsmoduls gemessen werden – diese darf nicht
+über 15 V DC liegen. Die eingebaute
+Niedrigspannungsanzeige kann – wenn
+keine Akkus zum Einsatz kommen – bei
+Verwendung von Wechselspannungen auf
+einen Maximalwert (≤ 15 V) eingestellt
+werden. In diesem Fall muss die rote LED
+leuchten und signalisiert damit, dass die
+Ausgangsspannung unter 15 V liegt.
+Wird die Niedrigspannungsanzeige für den
+Akku-Betrieb genutzt, signalisiert die rote
+LED, wenn ein bestimmter Schwellenwert
+unterschritten wurde und kann damit auf
+einen entladenen Akku hinweisen. Für die
+Einstellung des Schwellenwertes ist ein
+Spannungsmessgerät erforderlich.
+
+
+
+
+Versorgungsmodul V1
+
+
+Der Schwellenwert kann mit Hilfe eines
+Spindeltrimmer auf Werte zwischen 3,2 und
+12,8 V eingestellt und somit genau auf den
+verwendeten Akku abgestimmt werden.
+Der Schwellenwert ist voreingestellt auf
+7,5 V – das entspricht einem zehnprozentigen Spannungsabfall von einem Akku mit
+einer Nennspannung von 8,4 V (AkkuPack). Der Schwellenwertbereich kann
+variieren und hängt von der Toleranz der
+eingesetzten Bauteile ab.
+Bei Betrieb des Versorgungsmoduls mit
+einem Trafo mit einer Spannung von 6,8 V
+würde die rote LED ständig leuchten. Um
+das zu vermeiden, kann der Schwellenwert
+über das Spindelpotentiometer soweit
+herunter gedreht werden, bis die rote LED
+verlischt.
+
+Versorgungsmodul V2
+
+Funktionsbeschreibung des
+Versorgungsmodul V2
+Durch die höhere Speisespannung (Ue >
+14 V) ergeben sich ganz andere Voraussetzungen und Ansprüche an das Versorgungsmodul V2 (Schaltplan siehe Abb. 9).
+Für den Betrieb der Elektronikmodule muss
+eine Spannung kleiner 15 V garantiert sein,
+damit diese keinen Schaden nehmen.
+Dementsprechend wurde eine Spannungsregelung integriert, der die Speisespannung
+auf einem festen Wert von 9,0 bis 9,5 V
+stabil hält. Wie beim Versorgungsmodul V1
+wurde hier ebenfalls zum Schutz der
+Schaltung bei Parallelbetrieb mehrerer
+Versorgungsmodule eine Schottky-Schutzdiode integriert, aber der Spannungsabfall
+von 0,4 V ist bereits berücksichtigt. Mit
+dieser Regelschaltung hat das Modul gleich
+eine Strombegrenzung auf 2,5 A erhalten
+und ist damit kurzschlussfest.
+Nachteilig wirkt sich der übergroße Kühlkörper aus. Dieser ist allerdings notwendig,
+
+
+
+Elektronik
+
+um auch im Fall einer maximalen Belastung
+bei einer Speisespannungen von 24 V die
+erforderliche Kühlleistung von 60 W für
+den Regeltransistor bereit zu stellen; der
+Kühlkörper wird dann schon sehr heiß.
+Vorsichtshalber sollte das Versorgungsmodul V2 nur an gut belüfteten Stellen
+eingesetzt und die Kabel so verlegt werden,
+dass diese nicht dem Kühlkörper in Kontakt
+kommen.
+Wie bereits erwähnt, wird die Ausgangsspannung nicht immer genau 9,0 V
+betragen. Dies liegt einmal am Spannungsabfall an der Schottky-Diode, der einen
+Wert von 0,4 V erreicht, wenn der maximal
+zulässige Strom durch die Diode fließt.
+Somit wird sich in der Praxis nach dem
+Anschließen der Speisespannung an das
+Versorgungsmodul V2 ein Wert von ca.
+9,2 V einstellen.
+Aber auch andere Bauteile, die nicht im
+Regelkreis liegen (wie z. B. die SchottkyDiode), nehmen Einfluss auf die Ausgangsspannung und können bei sehr starker
+Erwärmung die Ausgangsspannung dahin
+
+gehend beeinflussen, dass diese bis auf
+9,5 V ansteigen kann.
+Aus diesem Grund ist bei voller Belastung
+unbedingt darauf zu achten, dass der Kühlkörper ausreichend mit frischer Luft
+versorgt wird, also eine gute Luftzirkulation
+am Kühlkörper entstehen kann und die
+Umgebungstemperatur nicht über der
+Zimmertemperatur liegt.
+
+Allgemeines
+Die Elektronikmodule arbeiten mit
+digitalen Schaltkreisen (ICs), die sehr
+empfindlich gegenüber kleinsten Schwankungen oder Unterbrechungen reagieren.
+Bei Steckverbindungen kann es immer mal
+wieder vorkommen, dass ein Stecker nicht
+richtig hält und es so zu Unterbrechungen
+kommt. Um dem vorzubeugen, empfiehlt es
+sich, die Versorgung der Elektronikmodule
+mit einer Ringverkabelung zu versehen.
+Dazu muss einfach das freie Ende der
+aneinandergereihten
+Elektronikmodulen
+wieder mit dem Versorgungsmodul verbunden werden. Auf diesem Weg werden
+die Elektronikmodule von zwei Seiten
+
+
+
+
+versorgt und eine Unterbrechung ist so gut
+wie ausgeschlossen (Abb. 13).
+Ist die Herstellung einer Ringverkabelung
+mal nicht möglich, kann auch der in beiden
+Versorgungsmodulen mitgelieferte Elektrolyt-Kondensator (2200 µF) in die letzten
+beiden freien Anschlüsse gesteckt werden.
+Er wirkt für wenige Millisekunden wie eine
+Batterie und kann so kurze Unterbrechungen abfangen. Beim Anstecken des Elektrolyt-Kondensators muss lediglich die Polung
+beachte werden – der Minuspol ist auf dem
+Elektrolyt-Kondensator gekennzeichnet.
+
+Schlusswort
+In dieser ft:pedia-Ausgabe findet ihr diesmal zwei Modelle: ein „Pianophone“ [4]
+und eine „Digitale Uhr“ [5]. Dort kommen
+neben anderen Elektronikmodulen das
+Versorgungsmodul 70003 und das
+Leistungsmodul 70009 zum Einsatz, die ich
+euch in diesem Artikel vorgestellt habe.
+Diese beiden Modelle werden euch auch in
+der nächsten Ausgabe wieder begegnen,
+weil ich mich im folgenden Teil meiner
+Reihe den programmierbaren ComputerInterfacen und Controllern in Kombination
+mit den Elektronikmodulen zuwenden
+werde.
+
+
+Darüber hinaus werde ich euch drei weitere
+Elektronikmodule vorstellen, die sich
+besonders in Verbindung mit Controllern
+eignen und als Ergänzung bzw. Erweiterung
+gedacht sind: Das Meldemodule 70017, das
+Steuermodul 70016 und das Multiplexmodul 70024.
+Für Fragen, weiteren Ausführungen oder
+Anregungen aller Art stehe ich gern zu
+Verfügung (elektronik@funke4you.de).
+Fortsetzung folgt.
+
+Referenzen
+[1]
+
+Funke, Hans-Christian: Elektronikmodule (Teil 1): Einleitung. 4/2019, S. 40-46.
+
+[2]
+
+Funke, Hans-Christian: Elektronikmodule (Teil 2). ft:pedia 1/2020, S.
+52-61.
+
+[3]
+
+Funke, Hans-Christian: Elektronikmodule (Teil 3). ft:pedia 2/2020, S.
+68-81.
+
+[4]
+
+Funke, Hans-Christian: Pianophone.
+In dieser Ausgabe der ft:pedia.
+
+[5]
+
+Funke, Hans-Christian: Digitale Uhr.
+In dieser Ausgabe der ft:pedia.
+
+

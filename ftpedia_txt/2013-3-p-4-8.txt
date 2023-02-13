@@ -1,0 +1,276 @@
+
+
+Antriebstechnik
+
+Der Elektromotor
+Dirk Fox
+Aus fischertechnik-Baukästen sind Elektromotoren nicht wegzudenken – schon in der „grauen
+Frühzeit“ ließen der mot.1 (1967) und der mini-mot.1 (1969) Kinderherzen höher schlagen.
+Aber weiß auch jeder, wie ein solcher Motor funktioniert? Dabei lässt sich ein Elektromotor
+sogar mit fischertechnik konstruieren.
+
+Geschichte
+Vor nicht einmal 200 Jahren, im Jahr 1819,
+beobachtet der dänische Physiker und
+Chemiker Hans Christian Ørsted (17771851), dass fließender Strom in einem
+Leiter eine Kompassnadel ablenkt. Diese
+Entdeckung „elektrisiert“ die europäischen
+Naturwissenschaftler; viele stellen das
+Experiment nach. Auch der französische
+Forscher André-Marie Ampère (17751836) hört von Ørsteds Versuchen und
+kann mit einer von ihm konstruierten
+‚Stromwaage’ zeigen, dass sich elektrische
+Leiter, die in derselben Richtung von
+Strom durchflossen werden, anziehen. Er
+weist nach, dass fließender Strom in einem
+Leiter ein kreisförmiges Magnetfeld
+erzeugt, dessen Ausrichtung sich mit der
+‚Rechte-Hand-Regel’ bestimmen lässt:
+Hält man den rechten Daumen in Richtung
+des Stromflusses (vom Plus- zum Minuspol), dann zeigen die gekrümmten anderen
+Finger der rechten Hand die Richtung des
+kreisförmigen Magnetfelds (vom Nordzum Südpol) an [1].
+Das Magnetfeld lässt sich erheblich verstärken, indem man den isolierten elektrischen Leiter um einen Eisenkern
+wickelt. Der Eisenkern bildet dann einen
+Stabmagneten mit einem Nordpol am einen
+und einem Südpol am anderen Ende –
+dessen magnetische Ausrichtung man
+
+„umpolen“ kann, indem man die Stromflussrichtung wechselt. Diese Konstruktion
+nennt Ampère Elektromagnet [1].
+Im darauf folgenden Jahr gelingt es dem
+Engländer Michael Faraday (1791-1867),
+einen von Strom durchflossenen Leiter um
+einen Dauermagneten kreisen zu lassen –
+das Prinzip des Elektromotors ist entdeckt
+[2]. 1822 gelingt es dem britischen
+Physiker Peter Barlow (1776-1862) ein
+Rad anzutreiben, das er innerhalb eines
+Magnetfelds radial (vom Mittelpunkt zum
+äußeren Rand) von Strom durchfließen
+lässt, indem er den Rand in eine leitende
+Flüssigkeit taucht – das nach ihm benannte
+‚Barlow-Rad’ (Abb. 1).
+
+(Aus: Manual of Magnetism, 1842)
+
+Im Jahr 1824 entwickelt William Sturgeon
+(1783-1850) den ersten Elektromagneten,
+
+eine Spule mit Eisenkern zur Verstärkung
+des magnetischen Felds. Damit gelingt
+wenig später, im Jahr 1827, dem ungarischen Physiker Ányos István Jedlik (18001895) die Konstruktion eines ‚elektromagnetischen Rotors’ (Abb. 2), der sich zwar
+noch nicht als Antrieb eignete, aber bereits
+alle Elemente eines (Gleichstrom-) Elektromotors enthielt: einen Stator, einen
+Rotor und einen Polwender (Commutator).
+
+Antriebstechnik
+
+durch die Spule fließt, stößt sie der
+Dauermagnet ab. Da an den seitlichen
+Drahtenden der Spule die Isolation nur auf
+der Unterseite des Drahts weggekratzt ist,
+wird die Stromzufuhr nach einer halben
+Drehung unterbrochen. Die Spule (ein
+einfacher Elektromagnet) dreht sich weiter,
+bis die Stromzufuhr erneut einsetzt und der
+Dauermagnet sie wieder abstößt (Abb. 3).
+
+Technical Revolutions
+(Quelle: Wikipedia [3])
+
+Funktionsweise
+Jedliks Rotor kommt der Funktionsweise
+heutiger Elektromotoren schon sehr nahe.
+Im Kern beruht ein Elektromotor auf der
+Anziehung und Abstoßung wechselnder
+(elektro-) magnetischer Felder, die an
+einem Stator und einem drehbaren Rotor
+erzeugt werden. Durch eine Änderung der
+Stromflussrichtung in den verwendeten
+Elektromagneten wird die Polung des
+Magnetfelds vertauscht – wenn das jeweils
+im richtigen Moment geschieht, veranlasst
+dies den Rotor zu einer gleichmäßigen
+Drehbewegung.
+In dem Baukasten Technical Revolutions
+(2010) findet sich ein einfaches Experiment, das die Funktionsweise des Elektromotors veranschaulicht. Dazu wird eine
+Spule, genauer: eine Wicklung aus lackiertem Draht (Leiterdraht, 139250), an den
+Eingängen zweier Lampenfassungen lose
+‚eingehängt’ und unter der Spule ein
+starker (Neodym-) Dauermagnet montiert.
+Sobald Strom (in der richtigen Richtung)
+
+Das ganze ist eine etwas wackelige Angelegenheit, und das Drehmoment ist äußerst
+gering; daher kann die Spule (wie auch der
+elektromagnetische Rotor von Jedlik) nicht
+als Antrieb genutzt werden.
+Aber das Prinzip des Elektromotors wird
+daran sehr schön deutlich, und die Spule
+erreichte in unserem Nachbau des Experiments immerhin 200-250 U/min (gemessen
+mit einem Fototransistor am Zählereingang
+des TX).
+
+Jakobi-Motor
+Der erste für die Verrichtung mechanischer
+Arbeit gedachte Elektromotor wurde 1834
+von dem gebürtigen deutschen Ingenieur
+Moritz Hermann von Jakobi (1801-1874)
+in Petersburg konstruiert (Abb. 4) [4]. Vier
+Jahre später, im Jahr 1838, gelang Jakobi
+damit der Antrieb eines Passagierbootes
+auf der Neva; der von ihm konstruierte
+Motor erreichte ca. 200-300 W Leistung
+und das Boot eine Geschwindigkeit von
+2,5 km/h.
+Die Konstruktion litt allerdings unter den
+schweren, teuren, schwachen und unzuverlässigen Zink-Batterien – im Vergleich mit
+
+
+
+den verbreiteten Dampfmaschinen war der
+Elektromotor daher zum damaligen Zeitpunkt unwirtschaftlich.
+
+im Deutschen Museum in München
+
+(Aus: Julius Dub, Die Anwendung des
+Elektromagnetismus, 1873)
+
+Funktionsfähige Modelle des JakobiMotors aus Abb. 4 können am Karlsruher
+Institut für Technologie (KIT, Abb. 5) und
+im Deutschen Museum in München
+bewundert werden (Abb. 6).
+
+In den Folgejahren wurden zahlreiche Prototypen von Elektromotoren konstruiert.
+Das erste Patent für einen Elektromotor
+(US Patent No. 132) erhielt am 25.02.1837
+der Amerikaner Thomas Davenport (18021854), ein Hufschmied – nach vier Jahren
+intensiver Experimente (Abb. 7). Der
+Motor erreichte bis zu 600 U/min.
+
+Davenport (US Patent No. 132)
+
+Jakobi-Motors am KIT: 160 U/min., 15 W [5]
+
+
+Auch Davenport hatte wegen der hohen
+Batteriekosten mit seinem Motor keinen
+wirtschaftlichen Erfolg. Durchsetzen konnten sich Elektromotoren erst nach der
+Entdeckung des ‚dynamoelektrischen Prinzips’ durch Werner von Siemens (18161892) im Jahr 1867 [6]: Erst mit seiner
+‚Dynamomaschine’ ließen sich kostengünstig starke Ströme erzeugen und damit
+leistungsstarke Elektromotoren betreiben.
+
+Funktionsmodelle
+Repulsionsmotor
+Um einen maximalen Wirkungsgrad zu
+erzielen, wird der Elektromagnet in einem
+Elektromotor nicht nur ein- und ausgeschaltet, sondern – wie beim Jakobi-Motor
+– umgepolt. Dazu wird der Stator aus den
+Polschuhen von Permanentmagneten gebildet und der Rotor aus Elektromagneten, die
+über Bürsten mit Strom versorgt werden.
+Durch die Drehbewegung wechselt die
+Stromrichtung an den Bürsten. Es kommt
+daher zwischen Rotor und Stator zu einem
+ständigen Anziehen und Abstoßen der
+Magnetfelder. Drehmoment und Umdrehungsgeschwindigkeit des Elektromotors
+lassen sich über ein Verdrehen der Bürsten
+– und damit die Veränderung des Umschaltzeitpunkts – beeinflussen. Ein
+solcher Motor wird auch Repulsionsmotor
+genannt.
+Im Clubheft 1/1973 [7] erschien unter der
+Rubrik „Aktuelles zum Nachbauen“ die
+erste Anleitung für einen fischertechnikRepulsionsmotor. Dabei wurden die Elektromagneten am Stator und die Permanentmagneten am Rotor befestigt – daher kann
+man auf die „Bürsten“ verzichten (der
+Rotor muss nicht mit Strom versorgt werden) und stattdessen mit einem Taster und
+einem Relais das Magnetfeld der Elektromagneten umpolen. Das Modell benötigt
+vier Dauermagnete, zwei Elektromagnete,
+einen Taster und ein Relais (Abb. 8).
+
+
+Antriebstechnik
+
+Die Dauermagnete mit jeweils gleicher
+magnetischer Ausrichtung sorgen für acht
+wechselnde Magnetfelder rund um den
+Rotor. Die Unterbrecher müssen daher
+achtmal je Umdrehung die Stromflussrichtung ändern.
+Ein Repulsionsmotor mit einer Leerlaufdrehzahl von ca. 600 U/min lässt sich mit
+den stärkeren und leichteren Permanentmagneten (Neodym-Magnet, 139251, aus
+dem fischertechnik-Baukasten Technical
+Revolutions) konstruieren (Abb. 9).
+
+
+Wechselstrommotor
+Anstatt die Stromrichtung durch „Bürsten“
+(im fischertechnik-Modell: Schleifring mit
+Unterbrecherkontakten) umzukehren, kann
+man den Motor auch gleich mit Wechselstrom betreiben: Schließt man die Elektromotoren an den Wechselstrom-Anschluss
+des guten alten grauen 6 V-fischertechnikNetzteils, erhält man eine stabile 50-HzFrequenz aus dem Stromnetz.
+Die Geschwindigkeit des Motors ist dabei
+durch die Netzfrequenz festgelegt. Er muss
+daher mit ein wenig Fingerspitzengefühl so
+angeworfen werden, dass die Richtungswechsel des Stromflusses im richtigen
+Moment erfolgen. Die Verwendung einer
+
+
+
+festen Umschaltfrequenz ist insbesondere
+dann hilfreich, wenn man eine feste
+Geschwindigkeit möglichst exakt einhalten
+möchte – z. B. für den Antrieb einer
+elektrischen Uhr. Ausgehend von der Netzfrequenz kann die Rotationsgeschwindigkeit über die Zahl der verwendeten (Permanent-) Magneten, eine elektronische
+Frequenzanpassung oder eine nachgelagerte Übersetzung eingestellt werden.
+
+Von Stefan Falk stammt ein 12,5-HzMotor, bei dem die Wechselstromfrequenz
+von Silberlingen und E-Tecs erzeugt wird
+(Abb. 12). Alle drei Motoren dienten einer
+mechanischen Uhr als elektrischer Antrieb.
+
+In der ft:Community wurden mehrere 50Hz-Motoren vorgestellt, unter anderem von
+Peter Damen und Thomas Püttmann (Abb.
+10, 11).
+
+für den Uhrenantrieb justiert auf 25 U/min
+
+Quellen
+[1]
+
+Jörg Richter: André-Marie Ampère
+und der Elektromagnetismus. Sendereihe ‚Meilensteine der Naturwissenschaft und Technik’, ARD, 2006.
+
+[2]
+
+Werner Kiefer: Michael Faraday:
+Strom aus Magneten. Sendereihe
+‚Meilensteine der Naturwissenschaft
+und Technik’, ARD, 2004.
+
+[3]
+
+Wikipedia: Electric Motor.
+
+[4]
+
+Martin Doppelbauer: Die Erfindung
+des Elektromotors (1800-1854).
+Elektrotechnisches Institut am Karlsruher Institute of Technology (KIT).
+
+[5]
+
+Der Jakobi-Motor. Elektrotechnisches Institut am KIT, 2012 (Video).
+
+[6]
+
+Susanne Päch, Herbert W. Franke:
+Die dynamo-elektrische Maschine
+von Werner von Siemens. Sendereihe
+‚Meilensteine der Naturwissenschaft
+und Technik’, ARD, 1990.
+
+[7]
+
+Aktuelles zum Nachbauen, fischertechnik Club-
+
+mit 38 Neodym-Magneten und 2,5 U/min
+
+

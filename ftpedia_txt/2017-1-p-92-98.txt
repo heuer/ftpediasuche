@@ -1,0 +1,421 @@
+
+
+Computing
+
+Brickly auf dem TXT: Grafische
+Programmierung à la Google-Blockly
+Till Harbaum
+Die grafische Programmierung mit ROBO Pro ist und war eine der Stärken der fischertechnikRobotik. Wie in [1] bereits beschrieben ist auch die Community-Firmware weitgehend
+kompatibel zu ROBO Pro. Mit „Brickly“ bringt die Community-Firmware nun auch eine erste
+eigene grafische Programmiermöglichkeit mit – und macht dabei natürlich Einiges anders. 1
+
+Historisches
+
+Neuland Internet
+
+Die ersten fischertechnik-Computing-Interfaces wurden – wie Mitte der 1980er Jahre
+üblich – per BASIC-Text-Kommando
+direkt am jeweiligen Heimcomputer programmiert und bedient. Auf das Aufkommen der ersten grafischen Benutzeroberflächen für DOS-PCs, Atari-ST sowie
+Commodore-Amiga Anfang der 90er
+reagierte fischertechnik mit der Veröffentlichung von Lucky-Logic (später LLWin).
+Die einfache mausbasierte Programmierung
+erlaubte erstmals auch Laien per intuitiver
+Benutzeroberfläche eine einfache RoboterProgrammierung. Lego folgte dem Trend
+erst drei Jahre später mit LEGOsheets.
+
+Im Zentrum steht bei ROBO Pro nach wie
+vor der Windows-PC. Auf ihm ist
+ROBO Pro installiert und dort findet auch
+die gesamte Programmentwicklung statt.
+Ein fischertechnik-Controller wie der TXT
+wird erst dann benötigt, wenn man die
+selbst entwickelten Programme auf der
+Zielhardware laufen lassen möchte.
+
+Über 30 Jahre später hat sich an der
+prinzipiellen Bedienung nichts Fundamentales geändert. Das heutige ROBO Pro kann
+seine Verwandtschaft zu Lucky-Logic
+kaum verhehlen. Auch wenn sich die Zahl
+der zur Verfügung stehenden grafischen
+Programmierelemente stark vergrößert hat
+und diese inzwischen sogar Video- und
+Bilderkennung erlauben, blieb ROBO Pro
+dem ursprünglichen Programmiermodell
+treu, das sich stark an den in der Informatik
+verbreiteten Programmablaufplänen und
+den Symbolen der DIN 66001 orientiert.
+
+Allerdings werden PCs inzwischen von
+Smartphones und Tablets verdrängt. Gerade
+in den Kinderzimmern der fischertechnikZielgruppe findet sich immer seltener ein
+klassischer PC. Die Voraussetzungen für
+die ROBO Pro-Nutzung sind damit nicht
+mehr allgemein gegeben. Stattdessen verlagert sich die Intelligenz immer mehr ins
+Internet: Viele Aufgaben, die bisher durch
+eine dedizierte Anwendung abgedeckt
+wurden, lassen sich nun viel unkomplizierter durch Web-Browser-basierte Dienste
+online erledigen. Die grafische Programmierung stellt hier keine Ausnahme dar und
+diverse Projekte wie Scratch [2] und dessen
+Nachfolger Snap! [3] erlauben das
+
+1 Keine Lust, den Text zu lesen? Hier geht es direkt zu den Online-Spielen: https://blockly-games.appspot.com/
+
+
+Programmieren direkt via Browser von PC,
+Tablet oder Smartphone aus. 2
+Der Vorteil, dass die gesamte Umgebung
+im Browser läuft, wird schnell zum Nachteil, da aus dem Webbrowser aus Sicherheitsgründen keine einfache Interaktion mit
+anderen Geräten wie dem TXT möglich ist.
+Für Scratch gibt es daher die Scratch-X
+genannte „Experimental Extensions“-Erweiterung [6], über die eine Schnittstelle zu
+externen Systemen hergestellt werden kann.
+Für fischertechnik gibt es darauf basierend
+unter [7] jeweils eine Version für den
+ROBO LT [8] sowie den TXT [9]. Dazu
+wird auf dem PC das zusätzliche Programm
+ftScratch.exe installiert, das zwischen
+dem Browser-basierten Scratch und den
+herstellerspezifischen Kommunikationsprotokollen des LT bzw. TXT übersetzt.
+Die eigentliche Programmausführung erfolgt im Web-Browser auf dem PC; der
+TXT bzw. der LT-Controller fungiert als
+passives Ein- und Ausgabegerät.
+Solch eine Snap!- oder Scratch-X-basierte
+Lösung wurde Anfang 2016 auch für die
+Community-Firmware diskutiert, und
+Richard Kunze nahm eine Anpassung von
+Snap! an den TXT vor [10]. Auch hier kam
+ein kleines Hilfsprogramm zum Einsatz, das
+zwischen Snap! und TXT übersetzt. Optional kann dieses Programm auch direkt auf
+dem TXT laufen, so dass auf dem PC keine
+Installation mehr nötig ist.
+Das größte Manko all dieser Snap!- oder
+Scratch-Varianten blieb aber die Tatsache,
+dass die eigentliche Programmausführung
+immer im Browser stattfindet. Ein OfflineBetrieb der erstellten Programme direkt auf
+dem TXT war damit nicht möglich und ein
+sauberer Programmablauf war immer von
+einer stabilen (Funk-)Verbindung zwischen
+PC-Browser und TXT abhängig.
+
+Computing
+
+Blockly: Weniger ist mehr
+Mit Blockly stellt Google einen Browserbasierten grafischen Programmeditor als
+freies Projekt zur Verfügung [11]. Im
+Gegensatz zu Scratch und Snap! handelt es
+sich aber nur um einen reinen Editor und
+nicht um eine komplette Ablaufumgebung.
+Während sich Scratch und Snap! also auch
+um die Ausführung des Programmes kümmern und passende grafische Ausgaben im
+Browser erzeugen, beschränkt sich Blockly
+darauf, aus dem per Maus-Klick zusammengebauten Programm (Abb. 1) ein Textbasiertes Computerprogramm zu erzeugen:
+
+und Ergebnisanzeige
+
+Hier wurde ein kurzes Python-Programm
+erzeugt, das den Text „Hallo ft:pedia!“ auf
+dem Bildschirm ausgibt. Blockly kennt
+diverse so genannte Generatoren und kann
+neben Python unter anderem auch PHP,
+Javascript oder Lua-Code erzeugen [12].
+Die Optik und Bedienung von Blockly lehnt
+sich bewusst an Sratch und Snap! an. Im
+Gegensatz zu diesen ist Blockly an sich aber
+
+Dank der Browser- und Internetnutzung kann
+man beide Systeme einfach live unter [4] und [5]
+ausprobieren.
+
+
+
+kein für einen Endanwender einsetzbares
+Produkt. Erst wenn eine Komponente hinzukommt, die den erzeugten Code auch
+ausführt, entsteht ein in sich geschlossenes
+Projekt. Wird auf den Javascript-CodeGenerator zurückgegriffen, dann kann der
+erzeugte Code direkt im Browser ausgeführt werden. Beispiele dafür sind z. B.
+die komplett via Web-Browser spielbaren
+Blockly-Games [13], bei denen der Spieler
+Aufgaben und Rätsel via Blockly-Programmierung lösen muss und so schrittweise an
+die Blockly-Programmierung herangeführt
+wird.
+Mit der Möglichkeit, Python-Code zu erzeugen, öffnet sich eine sehr elegante Tür
+zum TXT, basieren doch bereits sämtliche
+Apps der Community-Firmware auf
+Python-Code [1]. Es bleibt also nur die
+Frage, wie der im Browser erzeugte
+Programmcode seinen Weg auf den TXT
+findet. Eine elegante Methode dazu bieten
+die sogenannten Websockets, die direkte
+Netzwerkverbindungen zwischen Browser
+und einer kleinen Anwendung auf dem
+Zielsystem ermöglichen.
+ROBO Pro zunächst eine ganz normale
+HTTP-Kommunikation zum Download
+üblicher HTML-, Javascript- und CSSDateien vom TXT nutzt, um die BricklyOberfläche darzustellen. Bis hierhin unterscheidet sich das Starten von Brickly in
+keiner Weise von anderen Web-Diensten
+wie Ebay oder Amazon. Das Abrufen der
+Brickly-Oberfläche stößt auf dem TXT
+zusätzlich den Start der Brickly-App an.
+Sobald Brickly im Browser läuft und die
+App gestartet ist wird eine Websocket-Verbindung aufgebaut. Hier bleiben Browser
+und TXT verbunden und es werden Programmdaten von und zum TXT übertragen,
+Programme gestartet und ggf. Ausgaben des
+Programmes vom TXT zurück zum Browser gesendet.
+
+
+bei ROBO Pro und Brickly
+
+Die eigentliche Programmausführung
+findet aber auf dem TXT statt und einmal in
+Brickly erstellte Programme werden immer
+sofort auf dem TXT gespeichert und können
+später auch direkt vom Touchscreen des
+TXT gestartet werden. Die Browser-Verbindung ist später nicht mehr zwingend.
+
+Kinderzimmertauglichkeit
+Brickly war von vorherein für die Benutzung durch Kinder ausgelegt. Die BricklyOberfläche (Abb. 3) bietet dazu oben Links
+die Erfahrungslevel 1 bis 5, wobei 1 speziell
+für Anfänger konzipiert ist.
+
+
+Bricklys Hauptbildschirm teilt sich in drei
+Bereiche, die „Werkzeugkiste“ im linken
+Drittel, den Arbeitsbereich in der Mitte und
+
+
+Computing
+
+die TXT-Ausgabe ganz rechts. Programmiert wird in der Mitte, indem aus der
+Werkzeugkiste Blöcke in den Arbeitsbereich gezogen und unten an den immer im
+Arbeitsbereich vorhandenen „Brickly“Block gehängt werden. Das Programm auf
+den TXT zu übertragen und dort laufen zu
+lassen erfordert nun lediglich einen einzigen Klick auf den „Los“-Button.
+Textausgaben erfolgen gleichzeitig sowohl
+direkt auf dem TXT als auch im BrowserFenster. Alle Programmdaten werden dabei
+auf dem TXT gespeichert. Im Gegensatz zu
+ROBO Pro steht hier der TXT im Mittelpunkt: Ganz gleich, von welchem Gerät
+man sich mit dem TXT verbindet, hat man
+sofort Zugriff auf alle Daten und kann z. B.
+eine am heimischen PC begonnene Arbeit
+via Smartphone in der Schule fortsetzen.
+
+
+Ein Klick auf das „Brickly“-Icon führt zur
+Brickly-Detailseite wie in Abb. 5 gezeigt.
+Dort führt der Link „Open local application
+pages“ schließlich zur Brickly-Oberfläche.
+
+Installation und erster Start
+Voraussetzung für den Betrieb von Brickly
+ist die Community-Firmware [1]. Sie muss
+auf einer SD-Karte im TXT installiert sein.
+Außerdem sollte eine Internetverbindung
+bestehen – vorzugsweise über das heimische WLAN.
+Brickly ist als Paket im App-Store der
+Community-Firmware verfügbar und kann
+mit einem einzigen Klick heruntergeladen
+und installiert werden.
+Unter der Community-Firmware ist der
+TXT im lokalen WLAN per Browser
+erreichbar. Die IP-Adresse, unter der der
+TXT im WLAN angesprochen wird, lässt
+sich z. B. mit der vorinstallierten NetzwerkApp im Systemverzeichnis anzeigen. Steht
+dort z. B. „192.168.0.47“, dann ist der TXT
+von jedem Browser im gleichen Netzwerk
+unter http://192.168.0.47 ansprechbar.
+Unter dieser URL ist die Startseite des TXT
+eingebunden. Auf ihr sind u. a. alle installierten Programme aufgelistet wie in Abb. 4
+dargestellt.
+
+
+Hier sollte ggf. zunächst die Sprache oben
+rechts auf Deutsch umgestellt und für die
+häufige Benutzung ein Browser-Lesezeichen gesetzt werden.
+Brickly ist nun bereit. Zieht man z. B. den
+„gib aus“-Block aus der linken Werkzeugkiste in die Mitte unter den „Bickly“-Block
+und drückt auf den „Los“-Knopf, dann
+erscheint der Text „Text“ sowohl auf dem
+
+
+
+TXT als auch im rechten Textfenster im
+Browser. Die Blöcke im Arbeitsbereich
+leuchten dabei kurz auf, wenn sie
+ausgeführt werden. So ist bei komplexeren
+Programmen ein direktes Verfolgen des
+Programmablaufs im Browser möglich.
+
+Mit weiter steigenden Erfahrungsgraden
+kommen immer mehr Blöcke dazu, so dass
+in Expertengrad 5 (Abb. 6) auch eigene
+Unterprogramme angelegt und Variablen
+sowie Listen verwendet werden können.
+
+Steigende Erfahrungslevel
+
+Brickly ist ein offenes System. Sämtlicher
+Quellcode ist frei verfügbar [14]. Da
+Brickly auf Blockly und damit wiederum
+ausschließlich auf gängigen Internet-Technologien wie Javascript, HTML und CSS
+basiert, ist kein besonderes Spezialwissen
+für die Erweiterung nötig. Für den Entwurf
+eigener Blöcke ist ein auf Blockly selbst
+basierendes Tool online verfügbar [15].
+
+Der Erfahrungsgrad 1 (Anfänger) enthält
+nur sehr wenige der Blocks genannten
+Bausteine. Einfache Modelle wie Ampeln
+lassen sich damit steuern, und auch der
+Mobilroboter des Discovery-Sets lässt sich
+mit wenigen Klicks auf die Reise schicken.
+
+Erweiterungen
+
+Brickly beherrscht schon einige kleine
+Spezialitäten. So kann man z. B. einen angeschlossenen USB-Joystick abfragen und
+zur Modellsteuerung verwenden. Es ist
+unter anderem geplant, auch die neue Bluetooth-Fernbedienung und den BT-SmartController zeitnah einzubinden.
+Expertengrad 5
+
+Für kompliziertere Abläufe reichen die
+Blöcke des Anfängergrad aber nicht. Mit
+Erfahrungsgrad 2 (Junior) verschwindet die
+offene Werkzeugkiste. An ihre Stelle tritt
+ein kleines Menü mit sieben Kategorien,
+hinter denen sich insgesamt 22 Blöcke
+verbergen. Mit denen ist auch bedingte
+Programmierung („wenn dies dann das“)
+möglich. Zusätzlich bringt Erfahrungsgrad
+2 am rechten unteren Bildrand einen Schieberegler mit. Hier kann die Ausführungsgeschwindigkeit des Programms gesteuert
+werden.
+Erfahrungsgrad 3 führt im rechten Bereich
+ein Menü ein, über das neue Programme angelegt werden können. So können mehrere
+Programme für unterschiedliche Modelle
+gespeichert und verwendet werden. Die
+Programmauswahl ist ohne Browser auch
+direkt am TXT möglich.
+
+
+BrickMCP
+Für den komfortablen Programm-Imund -Export gibt es inzwischen ein Tool
+namens BrickMCP (Abb. 7). Entwickelt
+wurde es von Community-Mitglied Peter
+Habermehl.
+
+
+
+Computing
+
+Die Bedienung von BrickMCP wurde
+bewusst vom eigentlichen Brickly getrennt,
+sodass Schüler und Kinder damit zunächst
+nicht in Kontakt kommen. Stattdessen ist
+dieses Werkzeug eher für Lehrer gedacht,
+die die Daten der Schüler zur Sicherung auf
+einen PC übertragen wollen. Auch lassen
+sich durch BrickMCP Teile eines BricklyProgrammes starr vorgeben, sodass mit
+Lückentexten vergleichbare ProgrammierAufgaben gestellt werden können.
+
+Hintergrund, sodass auch Kindergartenkinder nach wenigen Minuten eigene Programme „schreiben“ können.
+
+RoboBlocks
+
+Wo es danach hingeht, hängt auch vom
+Feedback der Community ab. Wenn es für
+bestimmte Funktionen einen konkreten
+Bedarf gibt, wird sich sicherlich auch
+jemand in der Community finden, der sich
+des Themas annimmt.
+
+Brickly selbst war eigentlich nur als
+Vorarbeit und Test für ein anderes Projekt
+namens RoboBlocks gedacht und ist eher
+„versehentlich“ zu einem benutzbaren System angewachsen. RoboBlocks soll auf
+lange Sicht Brickly beerben und mit einer
+kompletten Projektverwaltung und mehrsträngiger Programmausführung auch für
+professionelle Projekte geeignet sein. Da
+auch RoboBlocks auf Blockly basieren soll
+wird es aber kaum fundamentale Unterschiede geben.
+
+Einen echten Plan für die Zukunft gibt es
+nicht. Brickly hat die meisten seiner Ziele
+erreicht. Speziell die Einbindung anderer
+fischertechnik-Hardware, allen voran die
+neuen Bluetooth-Geräte, werden aber mit
+sehr großer Wahrscheinlichkeit recht bald
+als nächster Entwicklungsschritt in Brickly
+umgesetzt.
+
+Quellen
+[1]
+
+Till Harbaum: Auf zu neuen Ufern:
+Die Geschichte der „CommunityFirmware“ für den TXT. 4/2016, S. 59-67.
+
+[2]
+
+Scratch
+
+Dokumentation
+
+[3]
+
+Snap!
+
+Als echtes Gemeinschaftsprojekt hat sich
+auch die Dokumentation von Brickly erwiesen. Esther Mietzsch hat sich die Arbeit
+gemacht, jeden einzelnen Block zu testen
+und zu dokumentieren.
+
+[4]
+
+Scratch-Demo
+
+[5]
+
+Snap!-Demo
+
+[6]
+
+Scratch-X: Experimental Extensions
+
+[7]
+
+Github: Scratch für fischertechnik
+
+Zusammen mit ebenfalls von der Community erstellten Tutorials wird Brickly
+damit langsam reif für den Praxiseinsatz in
+Schulen.
+
+[8]
+
+Github: Scratch für ROBO LT
+
+[9]
+
+Github: Scratch für den TXT
+
+Die Zukunft
+
+[11] Google: Blockly
+
+Brickly war von vornherein als einfaches
+System gedacht. Gerade der Anfängergrad
+zeigt das noch deutlich, beschränkt sich die
+Bedienung doch einzig auf das zusammenschieben der Blöcke und einen Klick
+auf den „Los“-Knopf. Sämtliche Datenspeicherung geschieht automatisiert im
+
+[12] Google: Blockly-Code-Generatoren
+
+[10] Github: FT-Robo-Snap
+
+[13] Blockly-Games
+[14] Brickly-Code
+[15] Blockly-Developer-Tools
+
+
+
+
+
+
+

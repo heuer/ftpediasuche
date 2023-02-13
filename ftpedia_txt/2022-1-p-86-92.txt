@@ -1,0 +1,475 @@
+
+
+Computing
+
+Scratch mit fischertechnik – Update 2022
+Dirk Fox
+Seit der Vorstellung der Scratch-Unterstützung durch fischertechnik in der ft:pedia 1/2018 [1]
+hat sich einiges in der „Scratch-Welt“ verändert und funktioniert heute anders als damals von
+mir beschrieben. Daher ist ein Update überfällig – denn Scratch ist nach wie vor eine
+verbreitete und für Einsteiger und Schulen sehr attraktive Entwicklungsumgebung.
+
+Hintergrund
+Visuelle oder grafische Programmiersprachen wie Scratch (MIT), NEPO (Fraunhofer), Blockly (Google) oder Ardublock
+(Arduino) erfreuen sich ungebrochener Beliebtheit. Daher entwickelte auch fischertechnik für die Programmierung des TXT
+4.0 Controller mit ROBO Pro Coding eine
+(auf Blockly basierende) grafische Programmiersprache.
+Grafische Programmierumgebungen erzeugen in der Regel Programmcode für eine andere Programmiersprache, wie beispielsweise Javascript oder Python, der dann von
+einem Interpreter bzw. dem Browser selbst
+ausgeführt wird.
+Vorteil: Die Anpassung der grafischen Programmierumgebung an ein bestimmtes Betriebssystem oder einen Mikrocontroller
+verursacht (verglichen mit der Entwicklung
+einer kompletten IDE) relativ wenig Aufwand.
+Nachteil: Mit grafischen Programmiersprachen lassen sich in der Regel keine zeitkritischen Anwendungen programmieren.
+Dafür ist die Lernkurve bei Programmiereinsteigern, vor allem bei Kindern, sehr steil
+– schon nach einer kurzen Einführung gelingen erste funktionierende Anwendungen.
+Der Wechsel zu einer anderen Program-
+
+
+miersprache mit Echtzeitfähigkeit und ausgefeilter Entwicklungsumgebung ist später
+nur noch ein kleiner Schritt.
+
+Scratch
+Warum aber gerade Scratch – und nicht eine
+der anderen grafischen Programmiersprachen?
+Scratch wurde von einer Gruppe von Forschern (der ‚Lifelong Kindergarten Group‘)
+um Seymour Papert (1928-2016) unter der
+Leitung von Mitchel Resnick am Media Lab
+des MIT entwickelt. Seymour Papert wird
+älteren fischertechnikern als Entwickler der
+Programmiersprache LOGO (aus dem Jahr
+1968!) und durch sein Buch „Mindstorms“
+(1980) bekannt sein. Hinter LOGO steckt
+das von Papert entwickelte didaktische
+Konzept des „Konstruktionismus“: In der
+Tradition des Kognitionswissenschaftlers
+Jean Piaget (1896-1980), mit dem er in den
+50er Jahren in Genf zusammengearbeitet
+hatte, verstand er Lernen als „Rekonstruktion“ und nicht als Transfer von Wissen.
+“From constructivist theories of psychology we take a view of learning as a
+reconstructtion rather than as a
+transmission of knowledge.”
+Daraus leitete er ab, dass Lernen am besten
+mit Lernmaterialien gelingt, die dieses Rekonstruieren unterstützen:
+
+
+Computing
+
+“Then we extend the idea of manipulative
+materials to the idea that learning is most
+effective when part of an activity the
+learner experiences as constructing a
+meaningful product.”
+Dieses Konzept steckte bereits in LOGO.
+Die Programmierung der „Turtle“ erfolgte
+wie eine Bewegungsbeschreibung für einen
+Menschen und zielte auf die Veranschaulichung geometrischer Zusammenhänge.
+LOGO steckt auch hinter den Bewegungsbefehlen für Objekte auf der ‚Bühne‘ in
+Scratch. Auch alle anderen Programmelemente wurden so gestaltet, dass sie möglichst intuitiv verstanden werden [2]: Zusammengehörige Befehle sind in Gruppen
+strukturiert, die an der Farbe erkannt werden können. Da sich nur zueinander passende Blöcke und Elemente kombinieren
+lassen, sind Syntaxfehler praktisch ausgeschlossen. Auch um Datentypen muss man
+sich nicht kümmern: Variablen werden erst
+zur Laufzeit dynamisch typisiert. Scratch ist
+zudem „always on“: Programme („Skripte“
+genannt) können während der Laufzeit
+geändert werden; klickt man auf einen
+einzelnen Block (außerhalb eines Skripts),
+Scratch
+
+Blockly
+
+wird dieser sofort ausgeführt. Daher erhält
+man ein unmittelbares Feedback: kein
+Compilerlauf oder Startprozess verzögert
+die Rückmeldung.
+Skripte werden nach einem ausgeklügelten
+Multithreading-Konzept ausgeführt und
+ausnahmslos ereignisorientiert gestartet,
+was auch die Programmierung paralleler
+Abläufe äußerst intuitiv macht. Statt Unterprogrammen definiert man sich eigene
+Blöcke.
+Daher ist Scratch vor allem als EinsteigerProgrammiersprache geeignet – und wurde
+seit der Veröffentlichung von Version 1.0
+im Jahr 2007 viele Millionen Mal von der
+Webseite des MIT heruntergeladen. Inzwischen wird Scratch weltweit in vielen Schulen eingesetzt, wie Abb. 1 zeigt: Die Erfolgskurve von Scratch in Google Trends
+hat seit 2014 regelmäßig „Einbrüche“ im
+Juli/August – während der Sommerferien.
+Andere grafische Programmierumgebungen (wie Blockly, NEPO oder Snap!) fristen
+im Vergleich mit Scratch ein nicht erwähnenswertes Nischendasein.
+
+NEPO
+
+Snap!
+
+2004-01
+2004-07
+2005-01
+2005-07
+2006-01
+2006-07
+2007-01
+2007-07
+2008-01
+2008-07
+2009-01
+2009-07
+2010-01
+2010-07
+2011-01
+2011-07
+2012-01
+2012-07
+2013-01
+2013-07
+2014-01
+2014-07
+2015-01
+2015-07
+2016-01
+2016-07
+2017-01
+2017-07
+2018-01
+2018-07
+2019-01
+2019-07
+2020-01
+2020-07
+2021-01
+2021-07
+2022-01
+
+
+
+
+
+Scratch kann sowohl online im Browser
+genutzt als auch als App heruntergeladen
+werden und stellt keine besonderen Anforderungen an die verwendete Hardware. Mit
+der am 2. Januar 2019 eingeführten ScratchVersion 3.0 (aktuell: v3.29) wurde Flash
+durch HTML 5 ersetzt: Die Programmelemente werden nun direkt in Javascript-Code
+umgewandelt, den der Browser ausführt.
+
+Unter Linux und iOS läuft das Gateway
+unter Mono [5].
+Im Ausgabefenster werden nach einem
+Connect mit einem TXT die Firmware-Version und die an den (acht) Eingängen anliegenden Spannungen bzw. Widerstandswerte angezeigt. Außerdem kann man den
+Stand der schnellen Zählereingänge C1 bis
+C4 ablesen (Abb. 2).
+
+Scratch mit fischertechnik
+fischertechnik unterstützt Scratch bereits
+seit Ende 2016 – zunächst für den TXT und
+den LT Controller [1, 3]. Wer heute für den
+TXT oder den BT Smart Controller einen
+Programmiereinstieg mit einer grafischen
+Programmierumgebung sucht, für den führt
+ohnehin kein Weg an Scratch vorbei – andere grafische Programmierumgebungen
+werden nur unter der Community-Firmware
+unterstützt (Blockly/Brickly) [3, 4]. Die
+Nutzung des LT Controllers ist allerdings
+mit der aktuellen fischertechnik-ScratchVersion 3 nicht mehr möglich.
+Die Ansprache des TXT und des BT Smart
+Controllers aus Scratch erfolgt jeweils über
+ein kleines „Gateway“-Programm, das die
+Auswahl der Schnittstelle zum Controller
+(USB, Bluetooth, WLAN) ermöglicht und
+(ähnlich dem Interface-Test in ROBO Pro)
+die an den Ein- und Ausgängen anliegenden
+Werte anzeigt. Die Gateways wurden, wie
+auch einige der fischertechnik-Apps, von
+der Informatik-Fakultät der Hochschule für
+angewandte Wissenschaften WürzburgSchweinfurt (FHWS) entwickelt.
+TXT Controller
+Das Gateway für den Robotics TXT Controller (153513), FTScratchTXT, erhielt ein
+Update – von Version v1.23, die ich 2018
+vorgestellt habe, auf v1.25 (Abb. 2). Es
+unterstützt vier verschiedene Verbindungsprotokolle: USB, Bluetooth und WLAN mit
+dem TXT als Client oder als Access Point.
+Zuvor müssen unter Windows die fischertechnik-USB-Treiber installiert werden.
+
+
+zum TXT Controller (v1.25)
+
+Für mobile Modelle ist die Verwendung
+einer WLAN-Verbindung zu empfehlen.
+Sie ist (insbesondere, wenn mehrere Controller in unmittelbarer Nähe betrieben werden) stabiler als ein Bluetooth-Connect,
+benötigt allerdings auch deutlich mehr
+Leistung, wodurch beim Akkubetrieb die
+Laufzeit spürbar sinkt.
+BT Smart Controller
+Neben dem Robotics TXT Controller kann
+auch der 2017 eingeführte BT Smart Controller (161944) mit Scratch programmiert
+werden. Das Gateway FTScratchBTSmart
+wurde im April 2018, kurz nach der Veröffentlichung meines ft:pedia-Beitrags zu
+Scratch [1], auf github.io veröffentlicht
+(Abb. 3).
+
+
+Computing
+
+3), erkennt man bereits, dass die Eingänge
+am BT Smart Controller keineswegs nur
+digital (wie in ROBO Pro Smart oder
+ROBO Pro Light), sondern auch analog
+ausgewertet werden können – mehr dazu
+weiter unten.
+Auch hier müssen die Windows-fischertechnik-USB-Treiber zuvor installiert sein.
+Unter Linux wird das Gateway ebenfalls
+unter Mono betrieben [6].
+ftDuino
+
+zum BT Smart Controller (v0.37)
+
+Es stellt unter Windows oder Linux die
+Verbindung zwischen Scratch und dem BT
+Smart Controller her, wahlweise über eine
+USB- oder eine Bluetooth-Verbindung. An
+der Monitor-Funktion, die – ähnlich dem
+Interface-Test in ROBO Pro – die an den
+Ein- und Ausgängen anliegenden Spannungen resp. Widerstandswerte anzeigt (Abb.
+
+Der ftDuino [7] lässt sich auch mit Scratch
+programmieren. Dafür ist kein Gateway
+erforderlich – es genügen die USB-Treiber
+des Arduino. Eine Bluetooth- oder WLANVerbindung bietet der ftDuino nicht.
+
+ftScratch3
+Für Scratch 2 wurden die Scratch-Erweiterungen für die fischertechnik-Controller
+in der Entwicklerversion ScratchX zur Verfügung gestellt [1]. Der ftDuino ließ sich
+mit S4A (Scratch for Arduino) nutzen;
+dafür musste lediglich ein spezieller Arduino-Sketch auf dem ftDuino installiert werden [8].
+
+
+
+
+Kurz bevor ScratchX aufgrund der Abkündigung des Adobe Flashplayers nicht mehr
+einsetzbar war, ließ fischertechnik einen
+„Fork“ von Scratch 3 zu „ftScratch3“ weiterentwickeln, der die erforderlichen Erweiterungen für den TXT und den BT Smart
+Controller enthält. Der LT Controller wird
+in ftScratch3 nicht mehr unterstützt.
+ftScratch3 ist seit Anfang 2019 unter der
+Adresse ftscratch3.com online verfügbar.
+Zwar sind einige Buttons auf der Startseite
+ausgegraut und zeigen seit der Veröffentlichung beim Mouseover Kommentare wie
+„Kommt bald“ oder „Wir arbeiten dran“,
+aber alle wesentlichen Funktionen werden
+von der IDE unterstützt.
+
+ftScratch3-Erweiterungen
+ftScratch3 enthält die Befehlsblöcke für den
+TXT und den BT Smart Controller als Erweiterung (Abb. 4).
+TXT Controller
+Die Blöcke der Extension für den TXT Controller bieten zur Auswertung der SensorEingänge dieselben Möglichkeiten wie
+ROBO Pro: der Abstandssensor und alle
+digitalen und analogen (Widerstand und
+Spannung) fischertechnik-Sensoren werden
+darin unterstützt.
+
+vorgestellt habe. Die Befehlsblöcke für die
+Ausgänge (Aktoren) kennen nicht nur
+Motoren und Lampen, E-Magnet und EVentil, sondern auch Distanz-Kommandos
+für die Encoder-Motoren. Außerdem können auf dem TXT gespeicherte Sounds
+abgespielt werden.
+Sogar die schnellen Zählereingänge C1 bis
+C4 können mit ftScratch ausgelesen werden
+– das funktioniert mit ROBO Pro nicht. Was
+fehlt ist eine Möglichkeit zur Nutzung
+angeschlossener I2C-Sensoren, und auch
+die sehr leistungsfähige Bildauswertung
+von ROBO Pro vermisst man schmerzlich.
+BT Smart Controller
+Der BT Smart Controller bietet deutlich
+weniger Möglichkeiten als der TXT. Allerdings lassen sich mit ftScratch auch da sowohl analoge als auch digitale fischertechnik-Sensoren anschließen und auswerten
+(Abb. 6) – unter ROBO Pro Light/Smart
+sind die Eingänge nur digital nutzbar.
+Damit eröffnet sich eine deutlich größere
+Vielfalt an Programmiermöglichkeiten.
+
+Controller
+
+
+Die Befehlsblöcke (Abb. 5) entsprechen bis
+auf die geänderte Farbe und Form denen der
+ScratchX-Erweiterung, die ich 2018 in [1]
+
+Besonders der BT Smart Controller profitiert von den Standard-Erweiterungen in
+Scratch 3 (siehe nächster Abschnitt), die die
+Programmiermöglichkeiten z. B. durch die
+Nutzung einer am PC angeschlossenen
+(fischertechnik-) Kamera mit Mikrofon
+erheblich erweitern und weit über die
+Möglichkeiten von ROBO Pro Light/Smart
+hinausgehen.
+
+
+Computing
+
+ftDuino
+
+Scratch-Erweiterungen
+
+Für die Nutzung des ftDuino mit Scratch 3
+hat Till Harbaum einen eigenen „Fork“
+erzeugt. Er ist erreichbar über Github. Darin
+gibt es eine ftDuino-Erweiterung (Abb. 7).
+
+Scratch 3 bringt zahlreiche eigene Funktionen und fünf Erweiterungen mit, die auch in
+ftScratch zur Verfügung stehen und mit
+denen sich Scatch-Skripte (und damit die
+zugehörigen fischertechnik-Modelle) gänzlich unabhängig von den Möglichkeiten des
+verwendeten Controllers erheblich aufwerten lassen.
+Klang
+
+
+Die neunen Scratch-Blöcke können die acht
+Eingänge auswerten, Motoren ansteuern
+und ebenfalls die schnellen Zähler auslesen
+(oder zurücksetzen), siehe Abb. 9.
+
+Natürlich kann Scratch Sounds ausgeben –
+und ist mit einer umfangreichen SoundBibliothek ausgestattet, die die des TXT
+weit übertrifft. Die Klang-Befehle von
+Scratch finden sich direkt im ScratchBefehlsmenu. Sie erlauben nicht nur das
+Abspielen bereits existierender Sounddateien, sondern bieten außerdem eine sehr
+einfache, bedienungsfreundliche Möglichkeit, Sprache oder Geräusche über das
+Mikrofon aufzuzeichnen und später abzuspielen. Das geht deutlich über die Möglichkeiten von ROBO Pro hinaus.
+Musik
+
+
+Damit der ftDuino aus dem Browser angesprochen warden kann, muss auf dem
+ftDuino der IoServer-Sketch (erreichbar aus
+der Arduino-IDE über „Datei > Beispiele >
+WebUSB > IoServer“) gestartet werden.
+Der ftDuino kann dann via USB-Kabel mit
+einem PC oder einem Smartphone verbunden werden. Den Verbindungsstatus zeigt
+Scratch mit einem Icon oben rechts in der
+Statuszeile an [8].
+Scratch 3 kann mit dem ftDuino auch offline genutzt werden. Dafür hat Till Harbaum in Github ein Zip-File bereitgestellt,
+mit dem Scratch und ein lokaler Webbroser
+unter Windows gestartet werden kann. Im
+Browser ist Scratch 3 dann über localhost
+erreichbar.
+
+Scratch kann nicht nur Sound-Dateien
+abspielen, sondern erlaubt auch das „Komponieren“ von Musikstücken. So können
+Töne nach einem vorgegebenen Takt
+erzeugt und mit einem von 22 Instrumenten
+ausgegeben werden – oder von einem von
+18 verschiedenen Schlaginstrumenten, von
+der Kuhglocke bis zur Triangel.
+Sprachausgabe
+Mit der Erweiterung „Text zu Sprache“
+lernt Scratch außerdem sprechen – in 23
+verschiedenen Sprachen und vier unterschiedlichen Stimmlagen. Es genügt, dem
+Block einen Text zu übergeben und Scratch
+die Nutzung der Lautsprecher zu erlauben.
+Übersetzen
+Bindet man außerdem die Erweiterung
+„Übersetzen“ ein, kann ein gegebener Text
+zuvor in eine vorgegebene Sprache übersetzt werden.
+
+
+
+Geräuschsteuerung
+
+Wünsche
+
+Ist der Zugriff auf das Mikrofon gestattet,
+kann die Lautstärke (in db) gemessen werden – auch mit einer am PC angeschlossenen (fischertechnik-) Kamera. Auf Wunsch
+zeigt Scratch die gemessene Lautstärke in
+einem kleinen Fenster auf der Bühne an.
+
+Ein paar Dinge fehlen ftScratch3 noch, um
+Scratch zu einer perfekten IDE für die beiden fischertechnik-Controller zu machen.
+So können derzeit nur zwei Motoren synchron betrieben werden – für ein Fahrzeug
+mit Mecanum-Wheels benötigt man aber
+eine Synchronisation aller vier Motoren.
+Auch der Zugriff auf am TXT via I2C-Bus
+angeschlossene Aktoren und Sensoren würde die Möglichkeiten von ftScratch noch
+einmal erheblich erweitern.
+
+Zeit und Datum
+Datums- und Zeitangaben können ebenfalls
+ausgelesen, genutzt und in einem Fenster
+auf der Bühne angezeigt werden. Damit
+kann auch eine Stoppuhr (oder ein Timer)
+gestartet werden, die die seit Programmbeginn oder einem Ereignis verflossene Zeit
+in Millisekunden misst.
+Maus und Tastatur
+Schließlich stehen alle Tasten der Tastatur
+und die Bewegungen der Maus als Eingabeeinheit zur Verfügung und können in
+Scratch ausgewertet werden. Damit ist im
+Handumdrehen eine Fernsteuerung programmiert – mit den Pfeiltasten oder der
+Maus als Steuerkonsole für den via Bluetooth angebundenen BT Smart oder via
+WLAN gekoppelten TXT Controller.
+
+Derzeit ist Torsten Stuehn dabei, mit dem
+ftrobopy_server eine Anbindung des TXT
+4.0 an ftScratch3 zu ermöglichen – noch im
+Alpha-Stadium, aber bereits lauffähig.
+
+Referenzen
+[1]
+
+Dirk Fox: Scratch mit fischertechnik.
+ft:pedia 1/2018, S. 69–78.
+
+[2]
+
+John Maloney, Mitchel Resnick,
+Natalie Rusk, Brian Silverman,
+Evelyn Eastmond: The Scratch
+Programming Language and
+Environment. ACM Transactions on
+Computing Education, Vol. 10, No.
+4, November 2010.
+
+[3]
+
+Till Harbaum: Von Lucky Logic zu
+RoboPro Coding. ft:pedia 1/2021,
+S. 103–109.
+
+[4]
+
+Till Harbaum: Brickly auf dem TXT:
+Grafische Programmierung à la
+Google-Blockly. ft:pedia 1/2017,
+S. 92–98.
+
+[5]
+
+fischertechnik: FTScratchTXT.
+
+[6]
+
+fischertechnik: FTScratchBT.
+
+[7]
+
+Till Harbaum: ftDuino – Open
+Source trifft Konstruktionsbaukasten.
+ft:pedia 1/2018, S. 85–91.
+
+[8]
+
+Till Harbaum: ftDuino – ein
+fischertechnik-kompatibler Arduino.
+Bedienungsanleitung. 12.01.2021.
+
+Kamera
+Zwar wird eine an den TXT angeschlossene
+Kamera von Scratch nicht unterstützt, dafür
+bringt Scratch 3 eine eigene Kamera-Erweiterung mit. Wird sie eingebunden und gibt
+man den Zugriff auf die Kamera im Browser (oder in der App) frei, dann kann man
+das Kamerabild mit einstellbarer Transparenz als Bühnenhintergrund einblenden.
+Die in Scratch integrierten Kamerafunktionen können Bewegungen erkennen und
+deren Richtung bestimmen. Damit lässt sich
+beispielsweise ein Bewegungsmelder oder
+auch eine Gestensteuerung programmieren
+– sowohl für den TXT als auch für den BT
+Smart Controller.
+
+
+

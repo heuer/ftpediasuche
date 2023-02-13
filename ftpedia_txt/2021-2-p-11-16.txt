@@ -1,0 +1,211 @@
+
+Modell
+
+Modell
+
+Stacking-Schlitten für Stapelbilder
+Fabian Haas
+Die Makrofotografie wird immer beliebter! Ein Trend, der durch die gestiegene Rechenpower
+in den Kameras und Computern möglich wurde, ist das so genannte Image Stacking bzw. Stapelbilder. Dabei werden viele Aufnahmen gemacht, die nur einen schmalen, aber jeweils anderen Bereich des Motivs scharf abbilden, und dann zu einem einzigen durchgehend scharfen Bild
+zusammengesetzt. Hier möchte ich meinen Schlitten für Stapelbilder vorstellen, der den exakten
+Vortrieb zwischen den Bildern von nur wenigen 1/100 mm ermöglicht.
+Die Methode des Stackings bzw. Stapelns,
+also das Zusammensetzen von Bildern, in
+denen jeweils nur ein schmaler Bereich
+scharf ist, zu einem durchgehend scharfen
+Bild, hat sich mittlerweile fest etabliert und
+
+ist so beliebt geworden, dass sie in Kameras
+(z. B. Olympus und Panasonic) integriert
+wurde. Allerdings wird da nur eine recht geringe Anzahl von Bildern zusammengerechnet, etwa 10 bis 15 Stück. Weiterhin
+
+
+
+wird ein geeignetes Objektiv mit Autofokus
+benötigt, da die Verstellung der Schärfenebene über die Autofokusmechanik von der
+Kamera gesteuert wird. Der Vorzug ist, dass
+man diese Funktion immer dabei hat und die
+Aufnahmen in sehr schneller Reihenfolge
+gemacht werden. Daher sind selbst lebende
+Insekten, die nur ein paar Sekunden stillsitzen, durchaus ein mögliches Motiv. Die Autofokus-gesteuerten Objektive haben typischerweise einen Abbildungsmaßstab von
+maximal 1:1.
+Wer diese Grenzen sprengen will, muss ins
+Studio! Man benötigt ein anderes Objektiv,
+wie z. B. das Laowa 2,5-5x Ultramacro, das
+bis fünffach abbildet, aber keinen Autofokus besitzt. Und man benötigt mehr Aufnahmen, da der scharfe Bereich im Bild mit
+steigendem Abbildungsmaßstab immer
+kleiner wird. Um ein Objekt ganz abzudecken, benötigt man also mehr als die zehn
+bis 15 Bilder, die die Kamera anbietet. Die
+
+Kamera kommt kurzerhand auf einen
+Schlitten, der eine schrittweise, exakte Verschiebung ermöglicht. So werden bis zu 100
+Bilder möglich, die mit Helicon oder Zerene [3, 4] zu einem Bild zusammengerechnet werden. Kommerziell ist einiges verfügbar (siehe z. B [2]). Ich dachte jedoch, das
+sollte mit fischertechnik möglich sein, obwohl letzteres nicht unbedingt für allerhöchste Präzision – und die braucht es hier
+– bekannt ist.
+Ich kam zu folgender Lösung: Als Basis
+dient die Grundplatte 180 · 90. Da der Arbeitsbereich fürs Makro-Stacking recht
+klein ist, reicht diese Grundplatte vollkommen aus. Als Gleitschienen wurden links
+und rechts zwei Metallachsen 180 mit je
+zwei Grundbausteinen 30 mit Bohrung angebracht und mit je einer Seiltrommel am
+Ende gesichert. In der Mitte, ebenfalls in
+Grundbausteinen 30 mit Bohrung gelagert,
+befindet sich eine Metallachse 200 mit einer
+
+entstanden, mit Laowa Ultramakro und Helicon. Im 16 cm breiten Bild ergibt das Maßstab ≈ 80:1.
+
+durchgehenden Schnecke, die am oberen
+Ende ein Zahnrad Z40 mit Flachnabe trägt.
+Das Z40 liegt am Halteblock direkt auf, und
+je nachdem, wie eng alles festgezogen
+wurde, lässt sich die Reibung bzw. Schwergängigkeit einstellen. Da wir nur geringe
+Bewegung brauchen, die dafür mit hoher
+Präzision, sollten die Teile eher fest und
+schwer drehbar sein.
+
+Modell
+
+Der Reifen 60 wurde gewählt, weil er dank
+seines Profils die meisten Rastungen in der
+fischertechnik-Welt bereitstellt. Es sind 62
+Lamellen, die das Profil erzeugt. Der Drehkranz hat nur 58 Zähne und das Z40 noch
+weniger, einzig das Drehschalteroberteil hat
+mit 80 mehr, ist aber Mikromechanik und
+dreht frei, da Noppen für die Naben fehlen.
+Der Reifen 60 geht auf eine Z10:Z20 Untersetzung, dann auf eine Z10:Z40 Untersetzung, insgesamt also 1:8. Man benötigt daher acht Umdrehungen des Reifens 60, um
+eine Umdrehung des Z40 zu erzeugen. Oder: 8 · 62 Rastungen, also 496 Rastungen.
+Das sind sehr viele, erklärt aber nicht, welcher Vortrieb für den Schlitten erzeugt
+wird. Der Vortrieb ergibt sich aus der Höhe
+der Schnecke: eine Umdrehung der Schnecke treibt die Schneckenmutter um 5 mm
+voran.
+
+Federfuß) und das Getriebe für die minimal
+kleinen Schritte
+
+Über ein Getriebe steht das Z40 mit einem
+Reifen 60 in Verbindung, wobei das Getriebe dessen Drehung untersetzt. Am Reifen 60 ist per Winkelstein 60° und Federfuß
+eine Rastung realisiert, die es erlaubt, den
+Schlitten genau um eine bestimmte Zahl
+von Rastungen voranzutreiben. Also genau
+das, was wir brauchen: Eine exakt definierte
+Schrittweite!
+
+
+Es ergibt sich für eine Rastung ein Vortrieb
+von
+5 𝑚𝑚
+𝑚𝑚
+≈ 0,010
+496 𝑅𝑎𝑠𝑡𝑢𝑛𝑔𝑒𝑛
+𝑅𝑎𝑠𝑡𝑢𝑛𝑔
+
+
+Eine Rastung ergibt also ziemlich genau
+1/100 mm Vortrieb. Das ist genau der Bereich, den wir für hohe Vergrößerungen
+brauchen! In der Praxis nimmt man oft drei
+bis fünf Rastungen zwischen den Bildern.
+Die Bewegung der Schärfeneben lässt sich
+direkt am Kameramonitor (Live View) beurteilen und die Zahl der Rastungen anpas-
+
+
+
+sen. Die Schärfenebenen müssen sich überlappen und der Vortrieb gleichmäßig sein.
+Bei geringeren Maßstäben braucht man
+mehr Vortrieb und ggf. kann eine Untersetzung entfernt werden.
+
+Schneckenmuttern
+
+Der Schlitten besteht aus einer Grundplatte
+120 · 60, wobei sie mit zwei Schneckenmuttern in der Mitte und über Bausteine 30 in
+die seitlichen Führungsachsen eingreift.
+Das Gewicht von Kamera und Objektiv ist
+gering genug, dass die drei Metallachsen
+nicht gebogen werden. Die Führungen für
+die Metallachsen und die Schneckenmuttern sind mit Bausteinen 15, Baustein 7,5
+und Verbindern zu einem Block verbunden.
+Schließlich sollen Verwindungen und Spiel,
+soweit es irgend geht, vermieden werden.
+Der Schlitten sollte „übermassiv“ gedacht
+werden.
+Auf dem Schlitten ruht der Kameraadapter:
+wieder eine Grundplatte 120 · 60, die mit
+vier Achsen 30 und mehreren Bausteinen
+7,5 mit dem Schlitten verbunden ist. Darauf
+
+und Tuch festgeklemmt wurde.
+
+wird die Halterung der Kamera mit dem Objektiv montiert. Der Kameraadapter muss je
+nach Kameramodel, Objektiv und Zubehörteilen individuell entworfen werden. Wichtig ist die feste und spielfreie Verbindung
+der Teile. Auch hier schadet mehr Material
+nicht. Über die zweite Grundplatte wird
+also auch ein Adaptersystem geschaffen
+und man kann ohne weiteres verschiede
+Ausrüstungen auf mehreren Grundplatten
+bereithalten.
+In der Praxis zeigte sich, dass die Rastung
+mit Federfuß und selbst das Drücken des
+Auslösers Vibrationen und kleine, aber
+merkliche Verschiebungen im Bild erzeugen können. Um verwackelte Aufnahmen
+zu verhindern, wurde der Vortrieb (3-5 Rastungen) mit dem Reifen 60 bewirkt und
+dann, ohne den Schlitten zu berühren, die
+
+Modell
+
+Kamera ferngesteuert ausgelöst. Da alle Kamerahersteller heute Smartphone-Apps anbieten, die über Bluetooth oder WLAN auf
+die Kamera zugreifen, ist diese Fernsteuerung kein Problem mehr. Das Live-Bild auf
+dem Handy gibt‘s ja gleich dazu.
+Wichtig ist noch, dass ein Objekt immer in
+einer Richtung abgefahren wird. Das liegt
+am Spiel in der Schnecke; eine Änderung
+der Drehrichtung führt erstmal zu keiner
+Verschiebung des Schlittens. Das ist übrigens direkt auf dem Kameramonitor beobachtbar. Die Schärfenebene bewegt sich
+erstmal nicht, sondern erst, wenn das Spiel
+überwunden ist. So wird der gesamte Bereich des Objektes abgefahren, der scharf
+abgebildet werden soll.
+
+Laowa Ultramakro und Helicon
+
+
+
+ten. Selbst kleine Verschiebungen und Veränderungen zerstören den Bildstapel und erfordern einen neuen Versuch.
+Viel Spaß in der Makrowelt!
+
+Quellen
+
+
+Der gesamte Makroschlitten sollte mit dem
+Objekthalter/-tisch in irgendeiner Weise
+fest verbunden sein. Ich verbinde die
+Grundplatte 1000 mit Winkelsteinen oder
+V-Bausteinen 15 oder anderen Methoden.
+Auch hier gilt es, die hohe notwendige Präzision und Konstanz des Aufbaus zu beach-
+
+
+[1]
+
+Kontakt zum Autor: fabian@fabianhaas.de, auf Instagram fabian_pos
+und fabians_celbodies.
+
+[2]
+
+Professionelles Makro- und Mikrofotozubehör z. B. bei MJKZZ Europe
+
+[3]
+
+Stacking Software: HeliconSoft
+
+[4]
+
+Zerene Stacker
+
+[5]
+
+Meisterliches Niveau bei Schichtbildern z. B. bei Sagaoptics, Six FEET
+Art und auch viel bei Instagram
+
+[6]
+
+Rolf Meingast: startIDE (4): Focus
+Stacking. ft:pedia 1/2018, S. 115–
+121.
+
+

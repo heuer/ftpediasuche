@@ -1,0 +1,772 @@
+
+
+Schaltungstechnik
+
+Motorsteuerungen (Teil 4)
+Stefan Falk
+In ft:pedia Ausgabe 3/2011 gab es ja recht viel Theorie. Zur Weihnachtsausgabe wollen wir
+euch dafür mit mehreren Modellen beschäftigen. Aber natürlich werden wir auch etwas
+Neues erforschen: Wir werden Aufgabenstellungen meistern, die allein mit Tastern nicht zu
+realisieren sind, und dafür eine höchst interessante elektromechanische Baugruppe kennen
+lernen.
+Dieses Mal gibt's also nicht nur was zum
+Lernen, sondern vor allem zum Bauen!
+Schließlich wollen die Weihnachtstage ja
+spannend gehalten werden. Fangen wir
+also gleich an:
+
+Modell 1: Es werde Licht!
+Zum warm werden wollen wir eine Lampe
+von mehreren weit voneinander entfernten
+Schaltern aus beliebig ein- oder ausschalten. Was für Schaltungen könnten wir
+dafür verwenden? Bereits kennen gelernt
+haben wir die Parallelschaltung zweier
+Taster oder Schalter:
+
+Schaltung 2: Serienschaltung
+
+So funktioniert‘s auch nicht: Beide Schalter könnten das Licht nun ausschalten, aber
+man muss beide einschalten, damit es hell
+wird. Wir brauchen also eine Schaltung,
+bei der man mit jedem Schalter das Licht
+umschalten kann, ganz egal wie der oder
+die anderen Schalter gerade stehen.
+Diese Aufgabe können wir mit normalen
+Wechselschaltern lösen, indem wir sowohl
+die Ruhe- als auch die Arbeitskontakte der
+Schalter verwenden:
+
+Schaltung 1: Parallelschaltung
+
+Mit dieser Schaltung könnten wir die
+Lampe von zwei Stellen aus einschalten –
+aber leider können wir sie nur ausschalten,
+wenn wir beide Schalter öffnen. Dazu
+müssten wir aber zum anderen Schalter
+laufen. Vielleicht klappt's mit der Serienschaltung?
+
+
+Schaltung 3: Wechselschaltung
+
+Baut diese Schaltung einmal auf und
+probiert sie aus! Egal, wie einer der
+Schalter gerade steht: Durch Umschalten
+des jeweils anderen kann man es immer
+schaffen, dass die Lampe ein- oder ausgeschaltet wird. Immer gibt es eine
+Schalterstellung an demjenigen Schalter,
+an dem wir gerade stehen (die Schalter
+
+sollen ja weit voneinander entfernt sein),
+die den Stromkreis je nach Wunsch
+schließt oder öffnet.
+
+Schaltungstechnik
+
+oberen (prüft es nach!). Was ändert sich
+nun, wenn wir den Schalthebel umlegen?
+
+Mit den fischertechnik-Polwendeschaltern
+(Abb. 1) kann man sogar beliebig viele
+weitere Schalter einfügen, und immer noch
+kann jeder einzelne das Licht nach
+Belieben ein- oder ausschalten.
+Schaltung 5: Stellung in Kreuzverbindung
+
+31331/31334 und 36708
+
+Vom neueren fischertechnik-Schalter
+36708 wollen wir die Mittelstellung für
+unsere Beleuchtungsschaltung außer Acht
+lassen und annehmen, wir könnten ihn nur
+ganz in die Endlagen schalten. Dann wirkt
+dieser Schalter genau wie der ältere, in
+31331 bzw. 31334. Der hat sogar eine
+transparente Frontfläche, damit man genau
+sehen kann, wie er innen aufgebaut ist.
+Wer einen solchen Schalter besitzt, möge
+versuchen, die Drähte und Kontakte im
+Inneren genau zu verfolgen. Dabei können
+wir sehen, dass die Polwendeschalter tatsächlich aus zwei geschickt verschalteten
+Wechselschaltern bestehen, die gleichzeitig betätigt werden. Die Schaltung im
+inneren sieht nämlich so aus:
+
+Wie wir sehen, sind die Kontakte jetzt
+„diagonal“ miteinander verbunden, also
+der untere Kontakt links mit dem oberen
+rechts und der obere links mit dem unteren
+rechts. Es ist, als ob wir überkreuzte
+Leitungen gelegt hätten. Schaltung 6 stellt
+den Effekt beider Schalterstellungen
+gegenüber:
+
+Schaltung 6: Die beiden Stellungen des Polwendeschalters
+
+Mit solchen Schaltern können wir unsere
+Beleuchtung nun von mehr als nur zwei
+Stellen aus schalten. Tatsächlich geht das
+sogar mit beliebig vielen Schaltern, und
+immer noch erfüllt die Schaltung den
+Zweck, dass man das Licht ein- oder ausschalten kann, egal bei welchem Schalter
+man steht und egal wie die anderen
+Schalter gerade stehen:
+
+Schaltung 7: Schalten von beliebig vielen
+Stellen aus
+Schaltung 4: Polwendeschalter
+
+Die beiden Umschaltkontakte werden
+immer gleichzeitig vom Schalthebel
+betätigt. In der in Schaltung 4 gezeigten
+Stellung sind die beiden unteren Kontakte
+miteinander verbunden, und die beiden
+
+Die grauen Kästchen sind die Polwendeschalter (egal welches Modell ihr gerade
+habt). Auch für die Schalter ganz links und
+rechts könnt ihr Polwendeschalter verwenden – lasst einfach einen Kontakt
+unbeschaltet.
+
+
+Wer gar keinen Polwendeschalter besitzt,
+aber zwei der fischertechnik-Minitaster,
+kann sich auch leicht einen Polwendeschalter selbst bauen. Die Minitaster haben
+nämlich nicht umsonst auf ihrer Unterseite
+eine Aussparung: Dadurch kann man
+mehrere Taster übereinander bauen, und
+die werden dann (bis auf die Toleranzen)
+gleichzeitig umgeschaltet. Abb. 2 zeigt
+einen Bauvorschlag:
+
+
+Verkabelt die Taster gemäß Schaltung 4.
+Wichtig: Achtet dabei bitte darauf,
+wirklich schnell zu schalten. Wenn
+nämlich einer der beiden Taster ein wenig
+früher als der andere umschaltet, verursacht ihr damit für einen kleinen Augenblick einen Kurzschluss zwischen den
+Zentralkontakten! Überzeugt euch anhand
+des Schaltbilds davon. Deshalb verwendet
+ihr dabei besser ein fischertechnik-Netzgerät (keine Batterie und keinen Akku),
+denn die fischertechnik-Netzgeräte schalten bei Kurzschluss einfach ab, ohne
+Schaden zu nehmen.
+
+1. Ein Mensch legt das zu pressende
+Werkstück in die Maschine ein. Dabei
+darf die Presse auf keinen Fall loslaufen – der Mensch hat ja noch seine
+Hände drin!
+2. Die Maschine darf nur anlaufen, wenn
+der Mensch mit beiden Händen zwei so
+weit entfernte Taster drückt, dass er
+nicht noch versehentlich eine Hand in
+die laufende Maschine bekommen
+kann. Das nennt man eine Zweihandsteuerung, und das ist ein
+wichtiges Element für die Sicherheit!
+3. Sobald der Mensch auch nur einen
+Taster loslässt, soll die Maschine
+automatisch weiterlaufen, bis die
+Presse wieder ganz geöffnet ist. Dort
+soll sie automatisch anhalten und nur
+wie in Punkt 2 beschrieben wieder
+starten können.
+Modell übrigens schon in fischertechnikAnleitungen aus den 1970er Jahren). Wer
+mehr Teile zur Verfügung hat, kann das
+alles natürlich beliebig ausbauen.
+
+Modell 2: Eine sichere Presse
+Unser zweites Modell soll eine kleine,
+„halbautomatisch“ arbeitende Presse sein.
+Das bedeutet, dass diese Maschine einen
+Teil der Arbeit automatisch durchführen
+kann, andere Teile aber nicht.
+Zweihandsteuerung
+Wir wollen folgende Anforderungen an
+unsere Presse stellen:
+
+
+
+
+Schaltungstechnik
+
+Oder ihr verwendet, falls ihr welche
+habt, die aus dem früheren Elektromechanikprogramm von fischertechnik
+stammenden Klemmkontakte 31338
+(bei einem unserer weiteren Modelle
+werdet ihr die noch verbaut sehen):
+
+
+
+Selbstgebaute Taster
+In unserem Modell zeigen wir auch eine
+Möglichkeit für den Fall, dass ihr nicht
+über drei Taster verfügt. Die beiden vom
+Arbeiter zu betätigenden Taster haben wir
+nämlich mit ganz normalen Standardteilen
+gebaut: Zwei Metallachsen stellen den
+Kontakt her, wenn man vorne auf die Bauplatten 15 · 30 drückt, und die federn auch
+etwas.
+
+Und nun überlegt vielleicht erst selbst, wie
+wir die drei Taster und den Motor so verschalten können, dass er a) läuft, bis er in
+der oberen Endlage ankommt und b) nur
+durch gleichzeitiges Drücken der beiden
+äußeren Taster auch in dieser Endlage
+Strom bekommt.
+Bevor ihr weiter lest natürlich!
+Na! Nicht spicken!
+Habt ihr’s? Ausprobiert? Funktioniert?
+Richtig! Wir setzen eine Kombination von
+Parallel- und Serienschaltung ein. Die
+Serienschaltung der beiden äußeren Taster
+bewirkt, dass da nur Strom durchfließen
+kann, wenn beide Taster gleichzeitig
+gedrückt werden. Nur dann darf der obere
+Endlagentaster, der den Motor rechtzeitig
+abschaltet, via Parallelschaltung überbrückt und somit der Motor doch zum
+Laufen gebracht werden:
+
+
+Zum Anschließen der Kabel an diese
+Selbstbautaster seien auch zwei Möglichkeiten genannt:
+Entweder, ihr schraubt einen Stecker je
+Leitung ab und klemmt die nun offene
+Litze einfach unter einen Klemmring.
+
+Schaltung 8: Die Pressensteuerung
+
+
+
+
+Die gepunktete Linie soll andeuten, dass es
+der Motor ist, der den Endlagentaster letztlich betätigt. Man muss also beide äußeren
+Taster gleichzeitig betätigen, um den
+Endlagentaster zu überbrücken – der Motor
+läuft an. Die Presse führt ihren so genannten „Hub“ aus und sollte so schnell durch
+ihre untere Endlage kommen, dass der
+Mensch seine Hände nicht mehr hinein
+bringen kann. Nach dem Loslassen auch
+nur eines der beiden Taster läuft die Presse
+nur noch bis zur oberen Endlage und bleibt
+dort stehen.
+
+Modell 3: Alarmanlage
+Unser nächstes Modell ist zwar mechanisch sehr einfach, aber elektromechanisch
+sehr interessant:
+In manchen Krimis kommen „Stolperdrähte“ vor: Sobald man hindurch läuft,
+zerreißt man unbemerkt einen feinen
+Draht. Damit fließt kein Strom mehr durch
+ihn hindurch, und am Arbeitsplatz eines
+Wächters leuchtet eine rote Lampe auf.
+Wie war das? Die Lampe leuchtet, wenn
+kein Strom mehr fließt? Bislang hatten wir
+immer Schaltungen gebaut, bei denen das
+Schließen eines Kontaktes auch direkt eine
+Lampe oder einen Motor einschaltet. Hier
+brauchen wir es aber genau andersherum:
+Sobald die Stromleitung unterbrochen
+wird, muss eine Warnlampe aufleuchten.
+
+
+Das Relais
+Überlegen wir: Wenn die Achsen Kontakt
+haben, fließt Strom. Damit könnten wir
+einen Verbraucher ansteuern. Und der
+muss nun eben dafür sorgen, dass ein
+anderer Verbraucher ausgeschaltet wird.
+Man kann sich sicher viele Lösungen für
+dieses Problem ausdenken, aber eine ist
+besonders einfach und klar: Das so
+genannte Relais (dieses englischsprachige
+Wort wird ausgesprochen wie Relee oder
+Reläi). Es handelt sich einfach um einen
+Elektromagneten, der mit seiner magnetischen Kraft Kontakte ein-, aus- oder
+umschaltet, sobald er Strom bekommt.
+Relais haben bei fischertechnik schon eine
+lange Geschichte. Mit den ersten Elektromechanik-Baukästen von 1969 konnte man
+bereits selber welche bauen, und schon seit
+den frühen 1970er Jahren gab es auch
+fertige Relais zu kaufen.
+
+Umkehrung eines Signals
+Anstatt eines Drahtes, der zerrissen wird,
+wollen wir einfach eine lange fischertechnik-Achse auf zwei andere Achsen
+auflegen und so den Kontakt herstellen.
+Das geht noch ganz einfach: Sobald man
+die lange Achse irgendwie abhebt, wird
+dadurch der Kontakt zwischen den beiden
+Anschlüssen unterbrochen.
+Wie bekommen wir aber unsere Warnleuchte genau dann eingeschaltet, wenn die
+beiden kurzen Achsen nicht verbunden
+sind?
+
+em-10 bzw. RB II von 1974 (30246, 37683)
+
+
+Schaltungstechnik
+
+rein
+elektromechanisch
+funktionierenden Relais, die es von
+fischertechnik gab (es gab noch weitere,
+die etwas Elektronik eingebaut hatten –
+dazu kommen wir in einer anderen Ausgabe der ft:pedia).
+
+(Quelle: Wikipedia)
+
+Ein Relais – selbst gebaut!
+
+
+Leider gibt es im aktuellen Programm von
+fischertechnik keine Relais mehr (man
+kann sie aber noch gebraucht kaufen). Das
+hält uns als fischertechniker aber natürlich
+nicht auf – bauen wir eben selber eines! Es
+genügen ein kräftiger Elektromagnet, ein
+paar Metallachsen und einige Standardteile. Hier ist eine Möglichkeit:
+
+Beide leisten genau dasselbe: Ein Elektromagnet
+betätigt
+gleichzeitig
+zwei
+Umschaltkontakte. Das auf dem RB II aufgedruckte Schaltbild zeigt es deutlich (aufgezeichnet ist immer der Ruhezustand, also
+bei ausgeschaltetem Elektromagneten).
+Damit kann man richtig viel anfangen:
+Verbraucher einschalten, ausschalten, oder
+sogar (denkt an unsere Schaltung 4!) einen
+Motor umpolen. Und wir werden nachher
+noch sehen, dass Relais noch viel mehr
+können als das.
+Relais sind tatsächlich vielseitig genug,
+dass man mit hinreichend vielen davon
+sogar richtige frei programmierbare
+Computer bauen kann. Solche gab es tatsächlich, zum Beispiel den von Konrad
+Zuse erbauten Zuse Z3 von 1941, in dem
+viele hundert Relais verbaut waren:
+
+
+Diese Variante ist eine mit dem etwas
+neueren, recht starken Elektromagneten,
+der unten einen Zapfen hat und damit
+leicht zu befestigen ist. Zwei Metallachsen
+sind gelenkig gelagert und fallen links im
+Bild auf zwei kurze Metallachsen unten.
+Damit sind schon zwei Kontakte hergestellt. Bekommt der Magnet Strom, zieht
+er die längeren Metallstangen an. Dadurch
+werden diese links im Bild nach oben
+bewegt, trennen sich also von den unteren
+Kontaktstangen und liegen dann an den
+oberen an.
+
+
+Damit haben wir ein Relais mit zwei
+Umschaltkontakten gebaut – und können
+all das damit anfangen, was man auch mit
+den fertigen Relaisbausteinen tun kann!
+
+technik nicht besitzt, verwendet stattdessen einfach wie im ersten Modell
+Klemmringe, nimmt von den Leitungen
+je einen Stecker ab und klemmt die
+Litze unter die Klemmringe.
+Falls ihr die Kontaktfedern einsetzt, ist
+es nützlich, die Bausteine 15 so einzubauen dass ihr Zapfen zwischen den
+Kontaktfedern zu liegen kommt.
+Dadurch können sich die Kontakte mit
+Steckern darin nicht so weit verdrehen,
+dass sie einander berühren und wiederum einen Kurzschluss verursachen.
+
+
+Zum Bau des Relais noch einige Hinweise:
+Ganz wichtig: Über den Elektromagneten müsst ihr einen Streifen
+Tesafilm kleben. Der Magnet besteht
+nämlich aus einem durchgehenden
+Metallbügel, um den Draht gewickelt
+ist. Ohne eine Isolation würden die
+beiden langen Achsen beim Anziehen
+des Magneten durch diesen Metallbügel kurzgeschlossen, also elektrisch
+verbunden. Das können wir in unseren
+Schaltungen aber nicht gebrauchen; da
+benötigen
+wir
+zwei
+getrennte
+Umschaltkontakte.
+Zur Justage: Die Achsen müssen leichtgängig kippen können. Die kurzen
+Kontaktachsen müsst ihr in der Höhe
+so justieren, dass die langen Achsen bei
+ausgeschaltetem
+Magneten
+guten
+Kontakt mit den unteren Kontaktachsen haben, und dass bei eingeschaltetem Magneten guter Kontakt
+mit den oberen kurzen Achsen hergestellt wird. Dabei ist es hilfreich,
+dass die Gelenkbausteine etwas Spiel
+haben. Erst wenn alles zuverlässig
+funktioniert, werden auch die damit
+gebauten Modelle gut funktionieren.
+Wer die in den Bildern sichtbaren
+Kontaktfedern aus dem älteren Elektromechanik-Programm von fischer12
+
+
+Falls ihr den älteren Elektromagneten habt,
+der unten den Metallbügel herausstehen hat
+und für 6,8 V Spannung gedacht ist, müsst
+ihr diesen etwas anders befestigen; auch
+dafür haben wir einen Vorschlag (der für
+beide Magnet-Typen geeignet ist):
+
+
+Schaltungstechnik
+
+schaltet eine Lampe aus, solange er
+anzieht. Das ergibt folgendes Schaltbild:
+
+Schaltung 9: Alarmanlage
+
+Die Lampe wird also über einen Ruhekontakt des Relais angesteuert und erhält
+somit Strom, wenn das Relais nicht angezogen hat. Das passiert, sobald die Achse
+unserer „Stolperfalle“ entfernt wird und
+der Elektromagnet des Relais also keinen
+Strom mehr bekommt.
+Voilà! Damit leuchtet die Warnlampe auf,
+wenn der Stromkreis des Elektromagneten
+unterbrochen wurde! Wer einen besitzt,
+kann natürlich auch einen Summer oder
+ersatzweise einen Motor verwenden, um
+auch akustisch Alarm zu schlagen.
+
+
+Die Schaltung der Alarmanlage
+Nun wollen wir unser Relais für unsere
+Alarmanlage verwenden (natürlich könnt
+ihr auch eines der fischertechnik-Relais
+verwenden, wenn ihr eines besitzt). Der
+Magnet des Relais wird nun also über
+unseren Stolperdraht-Ersatz versorgt und
+
+
+
+
+
+Modell 4: Geheimfach
+Diese einfache Anwendung eines Relais
+wollen wir noch etwas erweitern. Stellt
+euch vor, der Wächter schaut gerade mal
+kurz nicht auf die Warnlampe, ein Einbrecher nimmt unsere Achse weg (die
+Lampe leuchtet auf, aber der Wächter sieht
+es nicht), geht hindurch – und legt die
+Achse einfach wieder auf. Dadurch erlischt
+die Warnlampe wieder, weil der Elektromagnet jetzt wieder anzieht. Damit bleibt
+der Einbruch unbemerkt, wenn der
+Wächter mal kurz nicht aufpasst.
+Wünschenswert wäre es also, dass die
+Warnlampe weiterhin leuchtet, auch wenn
+der Einbrecher die Achse wieder auflegt.
+Sobald also die Achse ein Mal – und sei es
+nur ganz kurz – entfernt wurde, soll die
+Lampe aufleuchten und leuchten bleiben.
+
+
+Die Schublade hat vorne einen Griff (den
+Baustein 15 rechts) und hinten einen
+Verbinder 30, der den Taster betätigen,
+aber auch dafür sorgen wird, dass man die
+Schublade nicht zu weit herausziehen
+kann.
+
+Das wollen wir an unserem nächsten
+Modell erforschen, einem kleinen Geheimfach. Eine Warnleuchte soll leuchten, wenn
+jemand das Fach geöffnet hatte, während
+ihr gerade nicht da wart. Insbesondere soll
+sie auch weiter leuchten, wenn die geheime
+Schublade wieder geschlossen wurde!
+Einen Modellvorschlag für das Geheimfach seht ihr in den folgenden Bildern.
+
+
+Schließlich kommt noch die Abdeckung
+von oben über die Schublade – fertig.
+In geschlossenem Zustand sieht man nicht
+ins Innere der Geheimschublade, und der
+Taster wird gedrückt. Wenn man das Fach
+herauszieht, wird dieser Taster losgelassen.
+
+Dies ist die Grundlage: Vier Pfeiler, die
+unsere Schublade führen, und ein Taster,
+der gedrückt werden wird, wenn die
+Schublade geschlossen ist.
+
+
+
+
+Schaltungstechnik
+
+abfällt (der Magnet also stromlos wird).
+Nehmen wir an, das Fach sei geschlossen,
+der zugehörige Taster also gedrückt. Nun
+muss das Relais anziehen, damit die
+Warnleuchte erlischt. Nur – das Relais
+kann nicht anziehen, denn es versorgt sich
+selbst, also seinen Magneten, über einen
+seiner eigenen Arbeitskontakte. Deshalb
+benötigen wir noch einen Taster, der den
+zunächst ja unterbrochenen Kontakt überbrückt. Der ist in orange im Schaltbild eingezeichnet und dient also dazu, die Alarmanlage zurück zu setzen.
+Nach dem Einschalten des Stroms wird
+also die Warnlampe leuchten – der Magnet
+bekam ja noch nie Strom – bis wir einmal
+kurz den Aus-Taster betätigen (während
+das Fach geschlossen ist). Dann wird das
+Relais die ganze Zeit angezogen sein – die
+Warnlampe bleibt aus.
+
+
+Selbstsperrung eines Relais
+Nun brauchen wir noch die Elektrik wie
+bei unserer ersten Alarmanlage, nur dass
+die Lampe auch dann weiter leuchten soll,
+wenn die einmal geöffnete Schublade
+wieder geschlossen wurde. Schauen wir
+uns dazu die folgende Schaltung an:
+
+Schaltung 10: Geheimfach-Schaltung
+
+Wie in unserer ersten Alarmanlage wird
+die Lampe leuchten, sobald das Relais
+
+Sobald jemand die Schublade öffnet, wird
+der Taster losgelassen. Dadurch kann kein
+Strom mehr durch den Magneten fließen
+und das Relais fällt ab. Die Warnlampe
+leuchtet also auf, und außerdem nimmt
+sich das Relais selbst die Möglichkeit,
+wieder anzuziehen! Es unterbricht ja seine
+eigene Stromzufuhr, selbst wenn das Fach
+wieder geschlossen wird.
+Diesen Schaltungstrick nennt man die
+Selbstsperrung des Relais. Wenn es also
+einmal abgefallen ist, kann es nicht mehr
+ohne weiteres wieder anziehen. Es „merkt“
+sich sozusagen selbst, dass es einmal abgefallen war. Also leuchtet die Warnlampe
+weiterhin, wenn wir wieder ins Zimmer
+kommen. So können wir feststellen, ob
+jemand unser Geheimfach in unserer
+Abwesenheit öffnete. Der Aus-Taster muss
+natürlich irgendwo versteckt angebracht
+werden.
+Überlegt und probiert bitte noch aus, was
+passiert, wenn der Strom ausfällt, während
+ihr abwesend seid. Was geschieht, wenn
+der Strom wieder kommt?
+
+
+
+
+Modell 5: Ein komfortables Tor
+Die Fähigkeit eines Relais, sich bei
+richtiger Verschaltung einen nur kurzzeitig
+bestehenden Zustand zu merken, wollen
+wir noch etwas ausbauen. Dazu wollen wir
+ein komfortabel zu bedienendes automatisches Tor mit folgenden Eigenschaften
+bauen:
+Es soll je einen Taster für „auf“ und
+„zu“ geben.
+Es soll genügen, den „auf“-Taster kurz
+zu drücken, damit das Tor sich ganz
+öffnet (auch wenn dieser Vorgang
+länger dauert als wir den Taster
+gedrückt halten).
+
+Ebenso soll es genügen, den „zu“Taster kurz zu drücken, damit sich das
+Tor wieder schließt.
+Wenn das Tor bereits auf bzw. zu ist,
+soll sich nichts ändern, wenn wir den
+auf- bzw. zu-Taster weiterhin oder
+nochmal betätigen.
+Unser Modellvorschlag passt auf eine
+Bauplatte 500, mitsamt dem Tor, dem
+Antrieb, den Tastern und einem Relais.
+Das Tor könnt ihr natürlich nach Belieben
+größer und aufwändiger bauen.
+Rechts vorne seht ihr die beiden Taster für
+„auf“ und „zu“. Das Tor selbst besteht
+einfach aus zwei Verkleidungsplatten
+30 · 60, die auf einen Baustein 30 aufgeschoben werden. Dieser Baustein gleitet an
+
+
+
+Schaltungstechnik
+
+
+zwei Achsen 110 entlang, die links und
+rechts mit Klemmringen fixiert sind.
+Obenauf sitzt ein Motor, der ein Z40 dreht,
+welches als Exzenter wirkt: Eine
+Statikstrebe, in einem der Löcher des Z40
+fixiert und am anderen Ende mit einem
+Strebenadapter 31848 am hin und her
+gleitenden Baustein 30 befestigt, bewirkt,
+dass beim endlosen Drehen des Z40 das
+Tor ständig auf und zu geht.
+
+
+
+Strom, bis dieser gedrückt wird. Die Endlagentaster werden als Öffner, also über
+Zentral- und Ruhekontakt, angeschlossen.
+Selbsthaltung eines Relais
+
+
+An beiden Endlagen des Tores sind Taster
+angebracht, die also gedrückt werden,
+wenn das Tor ganz geöffnet bzw. ganz
+geschlossen ist. Würden wir den Motor
+einfach endlos laufen lassen, würde er
+durch den Exzenter das Tor ständig öffnen
+und wieder schließen.
+
+Jetzt müssen wir noch unsere BedienungsTaster anschließen und alles so verschalten, dass sich das Relais beide Tastendrücke „merkt“. Drücken wir den „auf“Taster kurz, muss das Relais anziehen und
+angezogen bleiben, auch wenn wir den
+„auf“-Taster wieder loslassen. Dadurch
+wird der Motor das Tor zuverlässig ganz
+öffnen, also laufen bis der „auf“-Endlagentaster seine Stromzufuhr unterbricht.
+
+Signalspeicherung
+
+Ebenso muss danach das Relais beim
+Drücken des „zu“-Tasters abfallen und
+abgefallen bleiben, auch wenn wir den
+„zu“-Taster wieder loslassen. Dadurch
+wird der Motor also so lange laufen, bis
+das Tor ganz geschlossen ist.
+
+Unser Relais soll nun mit seinem abgefallenen bzw. angezogenen Zustand
+bewirken, dass das Tor geschlossen bzw.
+geöffnet wird. Das heißt, bei abgefallenem
+Relais muss der Motor so lange Strom
+bekommen, bis der „geschlossen“-Endlagentaster gedrückt wird, und bei angezogenem Relais muss der Motor so lange
+laufen, bis der „geöffnet“-Endlagentaster
+gedrückt wird. Das leistet die folgende
+Schaltung:
+
+Ähnlich wie die Selbstsperrung in unserer
+ersten Alarmanlagen-Schaltung gibt es
+auch eine Selbsthaltung, also das
+„Merken“, dass das Relais einmal angezogen war. Für unsere Torschaltung
+benötigen wir beides, denn das Relais muss
+den jeweils letzten Tastendruck – „auf“
+oder „zu“ – speichern, damit das Tor auch
+wirklich ganz auf oder zu geht. Das gelingt
+mit dieser orangefarben eingezeichneten
+Ergänzung zu Schaltung 11:
+
+Schaltung 11: Schaltungsentwurf 1 für das Tor
+
+Je nach Zustand des Relais – abgefallen
+oder angezogen – bekommt der Motor über
+den jeweils zuständigen Endlagentaster
+
+Schaltung 12: Die fertige Torschaltung
+
+
+Schaltungstechnik
+
+Wie funktioniert diese Schaltung? Nach
+dem Einschalten der Stromversorgung ist
+das Relais zunächst abgefallen. Falls das
+Tor nicht bereits geschlossen ist, wird der
+Motor es also schließen, bis der „zu“-Endlagentaster betätigt ist.
+
+Vorrang
+
+Nun drücken wir den „auf“-Taster, denn
+wir wollen das Tor öffnen. Dieser Taster
+versorgt dann den Relaismagneten mit
+Strom. Das Relais zieht also an; der Motor
+beginnt, das Tor zu öffnen. Das Relais gibt
+nun aber auch Strom auf den „zu“-Taster,
+der ja im Moment nicht gedrückt ist, also
+leitet! Deshalb bekommt das Relais auch
+weiterhin Strom, selbst wenn wir den
+„auf“-Taster wieder loslassen. Es genügt
+also ein kurzer Druck auf den „auf“-Taster,
+und das Relais wird anziehen und durch
+die Selbsthaltung angezogen bleiben,
+sodass das Tor Zeit hat, sich ganz zu
+öffnen.
+
+Schaltung 12 ist so angelegt, dass „auf“
+Vorrang hat. Das Tor wird sich bei gleichzeitigem Betätigen beider Taster also
+öffnen, weil der „auf“-Taster nicht nur den
+Relaiskontakt, sondern auch den „zu“Taster einfach überbrückt. Durch ändern
+einer einzigen Verbindung können wir auf
+Wunsch aber auch erreichen, dass „zu“
+Vorrang hat, das Tor sich also bei beiden
+gedrückten Tastern schließen wird:
+
+Die Selbsthaltung des Relais wird aufgehoben, wenn wir den „zu“-Taster
+drücken. Der unterbricht dann die Stromzufuhr des Magneten, denn den „auf“Taster haben wir ja längst losgelassen. Das
+Relais fällt also ab; das Tor schließt sich.
+Vor allem bleibt das Relais abgefallen,
+denn es hat sich gerade selbst die eigene
+Stromzufuhr gekappt – auch wenn wir den
+„zu“-Taster wieder loslassen.
+Wir haben hier also die Selbsthaltung und
+die Selbstsperrung eines Relais in ein und
+derselben Schaltung vor uns. Experimentiert ausgiebig mit dem Tor und beobachtet, was passiert, wenn man etwa einen der
+Bedienungstaster einfach gedrückt hält,
+oder wenn man beim sich öffnenden Tor
+einen der beiden Taster nochmal drückt,
+usw. Das Tor sollte sich immer
+„ordentlich“ nach unseren Anforderungen
+verhalten. Falls nicht, prüft nochmal eure
+Verdrahtung. Vielleicht müsst ihr auch die
+Kontakte des Relais etwas nachjustieren.
+
+Eine Frage bleibt noch: Was passiert denn,
+wenn wir beide Taster, also „auf“ und
+„zu“, gleichzeitig drücken? Überlegt
+anhand des Schaltbilds, und probiert es
+aus!
+
+Schaltung 13: Die rote Leitung gibt Taster
+„zu“ Vorrang
+
+Jetzt kann der „auf“-Taster nur noch den
+Relaiskontakt überbrücken, das Relais also
+einschalten, wenn es abgefallen war. Aber
+nur, wenn „zu“ gerade unbetätigt ist! Der
+Strom für den Magneten des Relais muss
+jetzt immer durch den „zu“-Taster, und
+wenn der gedrückt wird, bekommt der
+Magnet niemals Strom. Das Tor wird sich
+also im Zweifelsfall schließen. Je nach
+Anforderung könnte ja beides erwünscht
+sein, und ihr seht, dass all dies durch einige
+geschickt verlegte Leitungen – und mit
+dem Relais – erreicht werden kann.
+
+
+
+
+Wenn ihr die ersten vier Folgen dieser
+Reihe in der ft:pedia durchgearbeitet und
+verstanden habt, will ich euch dafür mal
+ein dickes „Danke!“ sagen. Ich hoffe, es
+hat euch ebenso viel Freude und Neues
+gebracht, wie mir das Schreiben Spaß
+machte.
+
+gleichzeitig einsetzen, programmgesteuerte
+Maschinen (ohne Computer!) bauen und
+eine ganze Reihe furchtbar interessanter
+Schaltungen und Tricks mit einfacher
+Elektronik kennenlernen. Wie bisher
+werden wir natürlich mit einem Minimum
+an Bauteilen auskommen, damit möglichst
+viele von euch alles nachbauen und
+studieren können.
+
+Und selbstverständlich geht es weiter! Im
+nächsten Jahr werden wir weitere Schaltungen kennenlernen, mehrere Relais
+
+Euch ein schönes Weihnachtsfest, und über
+die Weihnachtsfeiertage viele spannende
+Stunden mit euren Relais-Modellen.
+
+Wie geht’s weiter?
+
+
+

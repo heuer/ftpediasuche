@@ -1,0 +1,539 @@
+
+Pneumatik
+
+Pneumatik
+
+Druckluftsteuerungen (Teil 3)
+Stefan Falk
+Nach Schwellwertschalter und Zeitglied im letzten Beitrag dieser Serie geht es in dieser
+Ausgabe darum, besonders empfindliche pneumatische Sensoren zu bauen – nur mit aktuellen
+fischertechnik-Teilen. Wir werden in zwei Modellen zum Nachbauen eine neue Bauart von
+Drossel, einen neuen, empfindlichen pneumatischen Taster, eine enorm empfindliche pneumatische Staudüse und als Krönung einen Druck-Verstärker kennenlernen.
+
+Modell 1: Ein pneumatisches
+Digital-Zählwerk
+Ein mechanisches Zählwerk (siehe auch
+Vom Zählen und Abzählen (1) in 1/2012 [1]) kann natürlich auch durch einen
+Pneumatikzylinder angesteuert werden.
+Einen Modellvorschlag dafür zeigen
+· Ein Kompressor liefert die Druckluft.
+
+· Die Druckluft muss zunächst durch eine
+Drossel. Deren neue Bauart und warum
+sie notwendig ist, werden wir gleich
+noch ausführlich besprechen.
+· Die so gedrosselte Druckluft geht
+gleichermaßen zu einem einfachwirkenden Pneumatikzylinder (also
+einem mit Rückstellfeder, von dem nur
+ein Anschluss verwendet wird) sowie
+· zu einer ebenfalls neuen Bauart von
+pneumatischem Taster.
+
+
+
+
+
+· Der Pneumatikzylinder betätigt ein
+Schrittschaltwerk,
+· welches schließlich ein zweistelliges
+digitales Zählwerk ansteuert.
+
+auch bei vollem Druck das Z10 nicht um
+mehr als einen Zahn weiter schaltet.
+
+Pneumatisches Schrittschaltwerk
+Auch ohne Drossel und Taster könnt ihr das
+Zählwerk selbst schon aufbauen und testen.
+Jedes Mal, wenn der Zylinder mit Druckluft
+beaufschlagt wird, fährt er aus und schaltet
+ein Rast-Z10 um genau einen Zahn weiter.
+Eine Sperre verhindert, dass beim Zurückfahren des Zylinders das Z10 mit zurück
+genommen wird. Abb. 3 zeigt die Mechanik
+im Detail.
+Die Anordnung kommt mit wenigen Bauteilen aus: Die Achse des zählenden Z10
+sitzt in einem Gelenkbaustein (siehe auch
+Raffiniertes mit Achsen in ft:pedia 3/2013
+[2]). Am beweglichen BS5 sitzt oben eine
+Verkleidungsplatte 30x15. Die greift mit
+ihrer Unterkante in die Zähne des Z10 ein,
+sodass beim Bewegen des BS5 durch den
+Pneumatikzylinder das Zahnrad gedreht
+wird. Links in Abb. 3 ist ein stabil gebauter
+Anschlag in Form einiger Grundbausteine
+zu sehen. Der sorgt dafür, dass der Zylinder
+
+
+
+An der Unterseite des Zahnrads befindet
+sich, einfach von zwei Winkelsteinen 60°
+getragen, eine weitere Platte 30x15. Die ist
+so angeordnet, dass sie ein Zurückdrehen
+des Z10 beim Wiedereinfahren des
+Zylinders zuverlässig verhindert, denn auch
+sie greift in die Zähne des Z10 ein.
+Am besten probiert ihr die Mechanik
+zunächst durch Verdrehen des Zählhebels
+von Hand aus, und dann mit einfacher
+Ansteuerung des Zylinders.
+
+Das Zählwerk
+Die Mechanik zum digitalen Zählen ist
+ähnlich wie in [1] aufgebaut (Abb. 4). Auf
+der gegenüberliegenden Seite der Rastachse
+des zählenden Z10 steckt eine Rastkurbel,
+und zwar eine solche, in der man wiederum
+eine Rastachse so einführen kann, dass
+diese mitgedreht wird. Letztere Achse führt
+direkt zu der Flachnabe für die Einer-Stelle
+der Zählung. Da zum Zählen ein Z10 um
+genau einen Zahn pro Schritt weitergedreht
+wird, können wir die Flachnaben einfach
+mit den Ziffern 0–9 beschriften. Eine
+Vorlage zum Ausschneiden zeigt Abb. 5.
+
+Pneumatik
+
+Kurbel stehen. Deshalb sitzen die Z10 der
+Zehnerstelle auf einer per Federnocken
+querverschiebbaren Anordnung aus BS7,5,
+BS5 mit zwei Zapfen und Rollenbock
+32085 (Abb. 6).
+
+
+Die Ansteuerung des Zählwerks
+
+
+Besitzer der älteren fischertechnik/FestoPneumatikteile würden zum Ansteuern des
+Pneumatikzylinders mit einem Taster nicht
+lange grübeln müssen. Ein Ventil mit
+blauem Stößel (ein Öffner) 36082 und vielleicht noch ein Rollenhebel 31641 [3], und
+fertig ist die Laube!
+
+
+Der Übertrag von der Einer- zur Zehnerstelle geschieht dadurch, dass die Rastkurbel ein Mal pro Umdrehung ein weiteres
+Z10 wiederum um genau einen Zahn
+weiterdreht. Damit die Flachnaben der
+Einer- und Zehnerstelle sich in dieselbe
+Richtung drehen und also identisch
+beschriftet werden können, ist noch ein
+Zwischen-Z10 zur Drehrichtungsumkehr
+eingefügt.
+Damit das sauber funktioniert, muss das
+von der Kurbel angesteuerte Z10 hinreichend genau im richtigen Abstand zur
+
+Betätigungshebel der ft-Ur-Pneumatik
+
+Es könnte also alles ganz einfach sein –
+wenn diese Teile noch produziert würden
+und nicht bloß selten und zu horrenden
+Preisen auf dem Gebrauchtmarkt zu bekommen wären. (fischertechnik, hört ihr?)
+
+
+
+
+Ein neuer Pneumatik-Taster
+Nun haben wir ja bereits pneumatische
+Taster mit Schlauch-Logik in der mit aktuellen Teilen selbst konstruiert [4].
+In dieser Ausgabe stellen wir eine weitere
+Variante vor: Unser neuer Taster verliert
+zwar ein wenig Druckluft, aber dafür
+· kommt er mit geradezu banal wenig Bauteilen aus,
+· hat einen ganz geringen Betätigungsweg,
+· benötigt nur wenig Kraft zur Betätigung
+und
+· dürfte in seiner Konstruktion auch
+unerwartet und überraschend sein:
+
+
+
+
+
+Um die Wirkungsweise zu verstehen,
+schauen wir uns aber zunächst das
+komplette Schaltbild des Zählwerks an:
+
+
+Das funktioniert so:
+· In Ruhestellung des Tasters ist die
+anliegende Druckluft direkt mit der
+Abluft verbunden und strömt einfach
+heraus. Das ist in Abb. 9 durch das kleine
+Bisschen vom Ausgang des Schlauchs
+realisiert, welches im Freien endet.
+Dadurch, dass das in der Nut „übrig
+bleibende“ Loch klein ist, geht die Luft
+sogar nur etwas gedrosselt ab. In Ruhestellung strömt also die Druckluft so
+stark ins Freie, dass der Pneumatikzylinder
+nicht
+genügend
+Druck
+bekommt, um gegen seine Rückstellfeder auszufahren.
+· Drücken wir aber den Taster, wird das in
+der Nut befindliche Schlauchende aber
+
+durch einen Pneumatik-Achsadapter
+31422 dergestalt zugequetscht, dass sein
+kleiner Abluftausgang praktisch vollständig verschlossen wird. Dadurch kann
+die durch die Drossel strömende Druckluft, wenn auch nicht schlagartig, den
+Pneumatikzylinder füllen und zum Ausfahren bringen.
+· Lassen wir den Taster los, wird deutlich,
+warum die Drossel notwendig ist: Es darf
+nur weniger Luft vom Kompressor nachströmen, als durch das Rest-Loch des
+Schlauchs im Taster abströmen kann.
+Ohne die Drossel wäre das nicht der Fall,
+und der Zylinder bliebe ständig ausgefahren. Bitte ausprobieren!
+richtigen Abstände unterhalb des 38423
+Winkelstein 10x15x15 einfach eine untergeschobene Bauplatte 15x15 genügt. Die
+sorgt dafür, dass sich der Winkel auch nach
+häufiger Betätigung nicht in der Nut des
+BS15 absenken kann.
+Eine neue Drossel
+Unsere bisherigen Selbstbau-Drosseln [4]
+funktionierten dadurch, dass wir eine
+Schraube oder ft-Schnecke mehr oder
+weniger stark auf einen Schlauch drücken
+ließen. Ein Nachteil dieser Bauart ist aber,
+dass der Schlauch nicht nur zugedrückt,
+sondern auch durch das auf ihm sich
+drehende Stellglied bei jedem Drehen etwas
+beansprucht wird. Das führt nach vielen
+Einstell-Drehungen mitunter zu Materialermüdung des Schlauches, weil schlicht ein
+Loch hineingebohrt wurde.
+Diesen Nachteil vermeiden wir, indem wir
+uns auf die ja schon in Ventilen [4] erfolgreich verwendete Methode des Abknickens
+eines Schlauches besinnen:
+Die in Abb. 12 vorgestellte neue DrosselVariante knickt ein kurzes Stückchen
+Schlauch per Schneckenantrieb mehr oder
+weniger stark ab und bewirkt so die einstellbare Drosselwirkung.
+
+Pneumatik
+
+
+Nur der rechte BS15 mit Bohrung im Bild
+ist mit dem darunterliegenden BS15
+verbunden. Der untere linke soll nur verhindern, dass sich der Schneckenbaustein auf
+der Schnecke verdreht. Durch das EinstellZ10 kann also der Abstand des Schneckenbausteins (links) vom Führungsbaustein
+(rechts) eingestellt werden.
+An zwei BS7,5 ist wieder je ein PneumatikT-Stück befestigt, von denen je ein Ausgang per P-Stopfen verschlossen ist. Die
+ankommende Luft muss also durch das
+kurze, variabel stark abgeknickte Schlauchstückchen gedrosselt durch, um zum Ausgang auf der anderen Seite zu gelangen.
+Das ergibt
+· eine sehr fein einstellbare Drosselwirkung,
+· eine sehr leichtgängige Einstellung
+sowie
+· die Schonung des Schlauchmaterials,
+weil nichts an ihm reibt.
+Die Drossel muss nun so stark geschlossen
+werden, dass im Pneumatikzylinder befindliche Druckluft bei unbetätigtem Taster ins
+Freie abströmen kann. Durch die gedrosselte Zufuhr und (über den winzigen Ausgang
+des Tasters) Abfuhr der Druckluft geht ein
+Zählschritt zwar nicht besonders schnell,
+aber zuverlässig.
+Damit ist das Zählwerk vollendet. Jeder
+Druck auf den Taster zählt einen Schritt
+weiter, von 00 bis 99 immer wiederholend.
+
+
+Modell 2: Pneumatischer
+Bausteinauswurf
+Im nächsten Modell wollen wir eine
+Anordnung konstruieren, die auf eine ganz
+sachte, leichte Betätigung hin einen Pneumatikzylinder mit vollem Druck ausfährt.
+Wir brauchen also einen besonders
+empfindlichen pneumatischen Sensor und
+eine Verstärkung des von diesem Sensor
+stammenden Druckluftsignals.
+
+Die herzustellende Maschine soll Bausteine, die sich in einem Magazin befinden,
+einzeln auswerfen, bis das Magazin leer ist.
+Immer wenn sich ein Baustein direkt vor
+dem auswerfenden Pneumatikzylinder
+befindet, soll dieser ausfahren, um den Baustein auszustoßen – und dann natürlich
+wieder einfahren, um Platz für den nächsten
+Baustein zu schaffen. Die Maschine ist in
+
+
+Die Maschine steht schräg, sodass die (im
+Bild grauen) Bausteine 30 im Teilemagazin
+herunterrutschen. Um Bausteine leicht
+zuführen zu können, ist das Magazin oben
+eine Spur breiter ausgeführt also unten (man
+beachte, dass links oben ein BS5, links
+unten aber ein BS7,5 verwendet wurde).
+Die Sensor-Konstruktion unten ist extrem
+leichtgängig, und ihr (schwaches) Druckluftsignal wird über den Druckverstärker
+rechts oben dem Pneumatikzylinder
+zugeführt, der schließlich den untersten
+Baustein im Magazin nach links auswirft.
+Unten werden die Bausteine gesammelt. All
+dies besprechen wir nun der Reihe nach:
+Staudüsen
+Wenn man mit Pneumatik etwas abtasten
+möchte, was keinen starken Druck (etwa
+auf ein Ventil) ausüben kann, ist eine der
+Möglichkeiten der Einsatz einer Staudüse.
+fischertechnik hatte ein solches Bauteil
+unter der Bezeichnung Pneumatik-Düsenbaustein 31631
+im Ur-PneumatikProgramm:
+
+Pneumatik
+
+am zweiten Anschluss Druck. Dieser kann
+mit den ursprünglichen Ventilen und
+Betätigern verstärkt und weiterverarbeitet
+werden.
+Aber auch mit aktuellen Teilen findet sich
+eine Lösung, das zu realisieren. Ganz
+ähnlich zu unserem neuen Taster (Abb. 8/9)
+verwenden wir wieder nur einen einfachen
+Schlauch, dem wir – gedrosselt mit unserer
+neuen Drossel – Druckluft zuführen. Wenn
+wir den Schlauch an seinem freiliegenden
+Ende zuhalten, baut sich im inneren des
+Schlauchs also je nach Einstellung der
+Drossel mehr oder weniger schnell Druck
+auf.
+Ein BS30 auf einer Schräge bringt nun nicht
+viel Gewichts- und damit Betätigungskraft
+auf. Damit der Schlauch auch mit dieser
+geringen Kraft sauber abgedichtet wird,
+verwenden wir eine frappierend einfache
+Konstruktion, die uns aber dennoch eine
+riesige Hebelwirkung beschert 8Abb. 15).
+
+
+Für
+eine
+Beschreibung
+und
+ein
+Anwendungsbeispiel siehe [3]. Kurz gesagt,
+strömt in einen der beiden Anschlüsse
+Druckluft, die durch ein kleines Loch (in
+ungehindert passiert, muss die Zuluft
+gedrosselt werden. Wird nun das Loch
+abgedichtet (von Hand oder durch ein zu
+registrierendes geeignetes Bauteil), entsteht
+
+
+Wir lassen tatsächlich einen – sorgfältig
+gerade abgeschnittenen – Schlauch im
+Winkel von 45° genau so enden, dass die
+kleine flache Seite eines Gelenkbausteins
+genau auf ihm endet. Zusammen mit der
+Bauplatte 15x60 ergibt das eine gigantische
+Hebelwirkung: Ohne vom Magazin
+
+
+
+
+kommende BS30 genügt die Elastizität des
+Schlauches selbst, den Gelenkstein gerade
+so weit hoch zu drücken, dass sein plan
+abgeschnittenes Ende nicht plan vom
+Gelenkstein abgedeckt wird. Dadurch kann
+Druckluft entweichen.
+Sobald aber nur ein Hauch von Belastung
+auf das entfernte Ende der Bauplatte 15x60
+kommt, wird das Schlauchende zuverlässig
+verschlossen. Das winzige Stückchen
+Schlauch, was aus dem Baustein 5 15x30
+(35049), der ihn führt, auf dem Weg zum
+Gelenkstein herausragt, genügt als federndes Element völlig. Etwas Justierung ist
+wohl nötig, aber weniger als befürchtet - die
+Anordnung funktioniert überraschend
+perfekt.
+
+Die Schaltung der Anlage
+Um die weitere Besprechung zu vereinfachen, führen wir uns zunächst das
+gesamte Schaltbild der Maschine zu
+Gemüte. Die Schaltung funktioniert ganz
+ähnlich wie die unserer Zählmaschine
+(siehe Abb. 11), nur dass hier vor dem
+Pneumatikzylinder
+ein
+noch
+zu
+besprechender
+Druckverstärker
+(im
+Schaltbild ein Dreieck) eingefügt ist.
+Die Versorgungsluft kommt nur gedrosselt
+an. Deshalb kann evtl. im Zylinder befindliche Druckluft durch unsere in unbetätigtem Zustand ja etwas geöffnete Staudüse
+entweichen und der Zylinder durch seine
+Rückstellfeder einfahren.
+
+
+
+Pneumatik
+
+
+Wird nun die Staudüse (im Schaltbild der
+Taster unten) verschlossen, baut sich etwas
+Druck auf. Allerdings nicht sehr viel, denn
+ein zu großer Druck würde nur dazu führen,
+dass die Druckluft doch aus dem weichen
+Schlauchende unserer Staudüse entweicht.
+Der Druck muss also verstärkt werden, um
+für die Betätigung des Pneumatikzylinders
+auszureichen.
+Ein aktiver ProportionalDruckverstärker
+
+
+Wie bekommen wir eine Druckverstärkung
+mit aktuellen fischertechnik-Teilen hin?
+Überlegen wir:
+
+
+
+Wir müssen dem Zylinder sowohl Druckluft zuführen als auch diese wieder ins Freie
+abströmen lassen können. Der von der Staudüse bewirkte schwache Eingangsdruck
+muss dabei in einen hohen Druck übersetzt
+werden – stark genug für den Zylinder.
+Anders gesagt: Eine nur kleine Druckänderung am Eingang muss eine große
+Druckänderung am Ausgang zur Folge
+haben.
+Wenn wir mal in die vielleicht gewohntere
+Mechanik schweifen: Eine kleine Kraft
+übersetzt man dort in eine große mittels
+eines geeigneten Hebels. Was liegt also
+näher, als einen langen, leichtgängigen
+Hebel mit einem (weiteren) Pneumatikzylinder um ein relativ langes Maß zu
+bewegen, um damit einen kurzen Hebel mit
+viel Kraft um eine kurze Strecke zu
+bewegen. Dazu würde es ja genügen,
+einfach einen langen Hebel von einem
+Zylinder bewegen zu lassen, und an einer
+dem Hebeldrehpunkt näherliegenden Stelle
+die benötigte kräftige Bewegung (wenn
+auch nur über eine kurze Distanz) zu
+verwerten.
+Bleibt also noch die Aufgabe, mit einer
+kurzen, aber kräftigen Bewegung ein selbstgebautes
+Pneumatikventil
+zwischen
+„Druckluft durchlassen, Abluft verschließen“ und „Druckluft absperren, Abluft ins
+Freie strömen lassen“ umzusteuern. Das
+wiederum gelingt mit der in Abb. 18 gezeigten Konstruktion.
+
+eine Detailaufnahme. Hier ist eine der
+äußeren Begrenzungen abgenommen.
+Dabei ist bitte zu beachten: Damit auch die
+S-Riegel 8 genug Platz haben und die
+„Absperrflosse“ beweglich bleibt, sitzt
+letztere nicht etwa mittig auf dem Gelenkstein, sondern versetzt. Der Gelenkstein
+muss also mit seiner Nut in der richtigen
+Richtung verbaut werden. Aus demselben
+Grund sitzen die Rollenböcke, die die
+Schläuche aufnehmen, nicht ganz nach
+innen geschoben, sondern mit etwas
+Abstand.
+
+zugeklemmt
+
+Der Trick ist, je einen Pneumatikschlauch
+für Zu- und Abluft immer fast vollständig
+zugeklemmt zu halten. Damit ist nur noch
+ein geringes Stückchen Hebelweg notwendig, um den einen oder eben den
+anderen Schlauch vollständig zu verschließen und sein jeweiliges Gegenstück
+zumindest soweit zu öffnen, dass es für die
+Ansteuerung des Auswurfzylinders genügt.
+
+Der steuernde Pneumatikzylinder sitzt weit
+oben an einem langen Hebel. Für ihn genügt
+also wenig Druck (der der Staudüse
+nämlich), um über den langen Hebel aus
+zwei gelochten Statikstreben 45 eine
+gelenkig aufgehängte 38260 S-Kupplung
+22,5 zwar nur ein wenig, aber dafür sehr
+kräftig, zu verdrehen. Deren schmale
+Kanten sind prima geeignet, scharf in die
+Schläuche hinein zu drücken und sie
+zuverlässig abzuklemmen. Dadurch, dass
+dieses Bauteil so dünn ist, braucht es die
+Schläuche ja nur an einer kleinen Stelle
+einzudrücken; deshalb genügt hier die
+erreichbare Kraft.
+
+Da hier ganz ordentliche Kräfte zusammenkommen, muss diese Anordnung hinreichend stabil gebaut sein. Abb. 20 zeigt
+
+Links und rechts sind beide Schläuche sehr
+stramm zwischen der beweglichen Absperrflosse und den drum herum angebrachten
+
+
+Bauteilen eingeklemmt. Je ein BS5, BS7,5
+und eine Bauplatte 15x15 bringen die
+richtigen Abstände.
+
+Pneumatik
+
+verstärkt und sogar proportional zur Betätigung der Auswurfzylinder ausfährt. Eine
+Spur weniger stark drücken, und der
+Zylinder fährt wieder ein. Da braucht es
+nicht mal das Gewicht eines BS30 –
+Experimente zeigten, dass sogar ein roter
+BS15 mit Bohrung, der ja wirklich leicht ist,
+mit seinem Gewicht genügt und zuverlässig
+ausgeworfen wird.
+
+Auswurf
+
+Verstärkung
+
+
+Durch den in Abb. 19 rechten Schlauch liegt
+ungedrosselte Druckluft direkt vom
+Kompressor an – also mit vollem Druck!
+Sofern diese durchgelassen wird, landet sie
+am Anschluss des Auswurfzylinders.
+Andernfalls kann die Druckluft im Zylinder
+durch den linken Schlauch als Abluft
+entweichen – der endet nämlich einfach im
+Freien.
+Ein winziger Verschiebeweg (ein oder zwei
+Millimeter genügen!) am oberen Hebelende
+reichen nun aus, um mit großer Verstärkungswirkung Druckluft in den Auswurfzylinder zu pumpen bzw. sie wieder
+abzulassen.
+Damit ergibt sich die tatsächliche Gesamtschaltung mitsamt den Details des Druckverstärkers wie in Abb. 21 dargestellt.
+Auch bei dieser Maschine muss die Drossel
+wieder hinreichend stark geschlossen sein,
+sodass die Abluft auch entweichen kann,
+ohne dass durch zu viel Druckluftzufuhr
+permanent Druck am Verstärkereingang
+anliegt.
+Wenn alles richtig justiert ist, funktioniert
+die Anlage aber geradezu ungeheuerlich
+gut. Versucht einmal, mit einem Finger nur
+ganz sacht am Ende der Bauplatte 15x60 zu
+drücken und beobachtet, wie sauber
+
+Bausteinauswerfers
+
+Wer weitere Teile und Ideen hat, mag die
+Maschine natürlich beliebig ausbauen.
+Vielleicht wollt ihr die ausgeworfenen Bauteile mit einem Zählwerk wie im ersten
+Modell zählen lassen? Nur zu!
+
+Quellen
+[1]
+
+Falk, Stefan: Vom Zählen und
+Abzählen. ft:pedia 1/2012, Seite 22.
+
+[2]
+
+Falk, Stefan: Raffiniertes mit Achsen.
+ft:pedia 3/2013, Seite 38.
+
+[3]
+
+Falk, Stefan: Perlentauchen (Teil 5).
+ft:pedia 4/2013, Seite 6.
+
+[4]
+
+Falk, Stefan: Druckluftsteuerungen
+(Teil 1). ft:pedia 1/2014, Seite 69.
+
+
+

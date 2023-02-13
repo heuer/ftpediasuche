@@ -1,0 +1,238 @@
+
+
+Computing
+
+startIDE (6): Sonar
+Rolf Meingast
+Ein drehbarer Ultraschallsensor (Sonar) soll seine Umgebung erkunden und die Ergebnisse
+auf dem Bildschirm anzeigen [1]. Dieser Beitrag beschäftigt sich mit dem Aufbau und dem
+Programm zur Steuerung, das auf dem TXT mit der App startIDE läuft [2].
+
+Aufbau des Sonars
+Der Ultraschallsensor ist mit dem TXT
+verbunden und direkt auf der Achse eines
+Mini-Servos befestigt [3].
+
+Der Servo ist am servoDuino [4] angeschlossen, der über USB mit dem TXT
+verbunden ist (Abb. 1, 2).
+
+Anmerkungen zum Programm
+Der maximale Drehwinkel des Servos
+beträgt 180°. In den Arrays d_alpha.arr
+und Servo-n.arr sind Winkel (in 1/10°)
+und Steuerwerte für den Servo gespeichert:
+0;70;130;195;245;290;…
+130;140;150;160;170;180;…
+
+Diese Werte wurden mit der App zum
+Einmessen ermittelt [5].
+Zu Beginn des Programms werden diese
+Arrays initialisiert und geladen.
+
+
+Nach dem Start muss man entscheiden, ob
+ein Testlauf oder ein Dauerlauf erfolgen
+soll. Dann erfolgt die Eingabe des gewünschten Drehwinkels, der Schrittweite
+und der Pausendauer zum Betrachten des
+Ergebnisses auf dem Display des TXT.
+für einen Drehwinkel von 160°. Die freien
+Bereiche sind grün gekennzeichnet.
+Die Achsen, Kreise und Beschriftungen
+werden im Modul Sonarschirm erzeugt, das
+die Sonargrafik zeichnet.
+
+servoDuino [4]
+
+
+
+Computing
+
+Programm
+
+
+Referenzen
+[1]
+
+Dirk Fox: Radar und Sonar. 2/2011, S. 4-8.
+
+[2]
+
+Peter Habermehl: startIDE für die
+Community Firmware – Programmieren direkt auf dem TXT oder TXPi. ft:pedia 1/2018, S. 102-107.
+
+[3]
+
+Jan: fischertechnik SG90 mini servo
+system. Thingiverse, 15.09.2018, und
+zugehöriger Thread im ftc-Forum.
+
+[4]
+
+Peter Habermehl: servoDuino: An
+Arduino sketch to serve as an USBI2C-bridge for PCA9685 servo
+shields. GitHub.
+
+[5]
+
+LeadCalibrator: startIDE mit Servos.
+YouTube, 21.12.2018.
+
+# SonarTXTS31
+# Januar 2019
+Log Clear
+ArrayInit d_alpha
+ArrayLoad d_alpha byName
+ArrayInit Servo-n
+ArrayLoad Servo-n byName
+Init z 300
+Init Vorzeichen -1
+Init msecPause 8000
+Init Winkel 180
+Init Startwinkel 0
+Init Endwinkel 180
+Init Schrittweite 1
+Init dSchrittweite 10
+Init Schritte 180
+Init menu 0
+Init dauerlauf 0
+Init alpha 0
+Init x 0
+Init y 0
+Init j 0
+Init k 0
+Init r 100
+#
+# Hauptmenue
+#
+Tag mainloop
+FromButtons menu Testlauf
+Dauerlauf STOP
+IfVar menu == 1 test
+IfVar menu == 2 Dauerlauf
+Stop
+#
+Tag Dauerlauf
+Init dauerlauf 1
+#
+Tag test
+#
+FromDial Winkel 1 180 Drehwinkel
+FromDial Schrittweite 1 10
+Schrittweite
+FromDial msecPause 0 20000 msec
+Calc Startwinkel 180 - Winkel
+Calc Startwinkel Startwinkel / 2
+Calc Endwinkel 180 - Startwinkel
+Calc Schritte Winkel /
+Schrittweite
+Calc dSchrittweite Schrittweite *
+#
+Tag dauernd
+#
+Log Clear
+Log 1
+#
+# Start Position
+
+
+#
+Tag start
+Init dalpha Startwinkel
+Calc dalpha dalpha * 10
+LookUpTable z d_alpha linear
+Servo-n dalpha
+Servo SRD S00 z
+#
+Canvas show
+Canvas clear
+Call Sonarschirm 1
+# Sonarmitte
+Pen plot 120 120
+Pen areaAdd 120 120
+Call zeichnen
+#
+#
+Tag neuePosition
+Calc dalpha dalpha + dSchrittweite
+LookUpTable z d_alpha linear
+Servo-n dalpha
+Servo SRD S00 z
+Call zeichnen
+LoopTo neuePosition Schritte
+#
+#
+Pen areaDraw k j
+Call Sonarschirm 1
+Canvas log
+Call Pause
+IfVar dauerlauf == 1 dauernd
+Jump mainloop
+#
+Module zeichnen
+Calc alpha dalpha / 10
+# Entfernung messen
+FromIn TXT 1 D r
+Delay 10
+Calc r r * 10
+Calc x r cos alpha
+Calc x x / 10
+Calc k x + 120
+Calc y r sin alpha
+Calc y y / 10
+Calc j 120 - y
+Color pen 0 255 0
+Pen lineTo k j
+Pen areaAdd k j
+Canvas update
+
+
+MEnd
+#
+Module Pause
+TimerClear
+Tag Zeit
+IfTimer < msecPause Zeit
+MEnd
+#
+# Sonarschirm
+#
+Module Sonarschirm
+Color pen 255 255 255
+Color paper 33 0 0
+Text Helvetica 12 SONAR
+Pen text 24 14
+Canvas update
+# Koordinatensystem
+Color pen 255 0 255
+Pen move 0 0
+Pen lineTo 240 240
+Pen move 120 0
+Pen lineTo 120 240
+Pen move 240 0
+Pen lineTo 0 240
+Pen move 0 120
+Pen lineTo 240 120
+Color pen 255 255 255
+Color paper 33 0 0
+Color pen 0 0 255
+Pen move 95 95
+Pen circleTo 145 145
+Pen move 70 70
+Pen circleTo 170 170
+Pen move 45 45
+Pen circleTo 195 195
+Pen move 20 20
+Pen circleTo 220 220
+Pen move -5 -5
+Pen circleTo 245 245
+Pen move -30 -30
+Pen circleTo 270 270
+Color pen 255 255 0
+Text Helvetica 12 0,5
+Pen text 110 175
+Text Helvetica 12 1 m
+Pen text 110 225
+Canvas update
+MEnd
+
+

@@ -1,0 +1,798 @@
+
+
+Modell
+
+„Dirty Dishes“ Pinball machine
+Rubem Pechansky
+2021 marked my 50-year anniversary with fischertechnik. It was about time I did my own
+pinball machine. It eventually turned out to be my most challenging hobby project ever.
+
+Fig. 1: Front view of the “Dirty Dishes” pinball table. The solenoids that activate the flippers are
+below the pink and blue covers.
+
+Introduction
+This venture started as a shameless attempt
+to recreate the pinball table from the
+critically acclaimed fischertechnik TX
+ElectroPneumatic kit [1] to the best of my
+knowledge using spare parts, since I don’t
+own the original kit. One of the main
+problems was that I didn’t have the original
+pneumatic cylinders with springs (133027).
+Initially I retrofitted some old cylinders
+with springs taken from various sources, but
+the results were not great. The hacked
+cylinders were not strong enough for the
+flippers to propel the ball all the way up, and
+the result felt quite different from a real
+
+pinball machine. Classic real world pinball
+tables do not even have an air compressor,
+and, albeit fascinating, pneumatics would
+imply several important limitations
+regarding design, mechanics and even
+gameplay. So, I decided to give up on pneumatics altogether [2] and the project
+evolved in a very different direction. After
+many months designing, building and
+coding, plus dozens of failed attempts, lots
+of tests, meters and meters of wire, solder
+and double-sided tape — plus a couple of
+smoked modules — I can say my pinball
+machine is finished. The end result doesn’t
+
+
+Modell
+
+Fig. 2: Overall view of the finished table.
+
+look much like the one from the fischertechnik kit anymore, as can be seen in
+Fig. 2.
+This was a very complex undertaking so
+there is quite a lot to talk about. There is also
+some extra information in the respective
+forum thread [3]. Please feel free to ask any
+questions there, and don’t forget to share
+your own pinball project if you ever want to
+create one.
+
+Construction
+Framework
+The playfield is mounted on two baseplates
+500. In order to accommodate all the electronics and for a sturdier assembly, however, I had to install a third baseplate 500 to
+the underside using screws and nuts with
+plastic washers as shown in Fig. 3.
+
+Fig. 3: M3 screws, nuts and washers are used
+to secure the bottom baseplate.
+
+In the process I confirmed my suspicions
+that, at 258 × 186 mm, the most popular
+fischertechnik baseplate is simply not in the
+grid. This is usually not a problem for most
+models, but in this particular case I had to
+make precise size measurements and
+numerous adjustments because I didn’t
+want any gaps between the two plates. In
+addition, there is no provision to attach
+anything on their underside, so the third
+board was essential (Fig. 3). There is also
+no standard way to attach parts to the sides
+
+
+
+
+of the baseplates, so I had to figure outz
+ways to secure the two U-girders, several
+BS 30 blocks, statics rails and more.
+I also used many extra blocks and three
+aluminum profiles 210 below the play area
+for reinforcement. The model is moderately
+heavy at approximately 2.6 kg (without
+power supply), but this is actually a good
+thing because it contributes to the overall
+stability of the construction. I also used soft
+silicone feet to ensure the pinball table does
+not move during gameplay.
+
+Fig. 4: Silicone feet are used to ensure the
+table is kept steady during the game.
+
+Flippers
+Right from the start it became obvious that
+I needed a powerful replacement for the
+pneumatic actuators. The flipper action is
+solenoid-based as opposed to pneumatics.
+This approach is similar to a real pinball
+table, and the resulting movements are
+quick and precise. I first tried to put the
+solenoids under the table using spindles to
+transmit the rotation to the flippers, but the
+whole thing was wobbly and cumbersome.
+So I gave up on it and decided to put the
+solenoids right above the flippers (Fig. 5).
+This paid off quite nicely: The resulting
+assembly is very sturdy and still much more
+compact than with pneumatics. The
+solenoids were easily concealed below
+inkjet-printed covers (see Fig. 1).
+The flippers themselves were made smaller
+than in the ElectroPneumatic kit, and not
+shaped like a rectangle. For each flipper I
+used two S-couplings 38260 with a hard
+rubber pad sandwiched between them and
+
+
+shaped in such a way that the tip of the
+flipper becomes curved. This design gives
+much better control over the ball direction.
+Also, maximum and minimum flipper
+angles are kept similar to the real ones.
+
+Fig. 5: A solenoid as a flipper driver.
+
+Despite an audible PWM buzz when the
+flippers are held up, the machine is much
+quieter overall — there is no compressor.
+Plunger
+In the fischertechnik model, the plunger is
+located above the playfield and the balls fall
+in the upper baseplate. This is not ideal, so
+I used two U-girders 32854 to extend the
+playfield area to the right. This arrangement
+allows the ball to be launched on the same
+plane as the playfield, which gives much
+smoother action and is similar to the real
+thing. I was lucky to find good springs in
+my hardware stock and used plastic
+shoulder washers as diameter adapters.
+
+Fig. 6: Detail of plunger spring with washer.
+
+
+Modell
+
+Ball return
+For the ball return mechanism, I first tried
+an approach similar to Dirk Wölffel’s
+“Pirates of the Caribbean” table [4], which
+is a brilliant solution. Its main drawback in
+my case is that the added width to the right
+would conflict with the U-girders used to
+accommodate the plunger, so in the end I
+built a ramp with two flex rails 180 and
+mounted it underneath the table so it goes
+all the way from the ball drain to the rear
+(see Fig. 14), plus a chain elevator with a
+small magnet that brings the ball back to the
+playfield (Fig. 7).
+
+Fig. 8: The project as it appears in Figma.
+
+For the mechanical project I used a vector
+library of fischertechnik parts that I’ve been
+working on for a while (Fig. 9).
+Playfield
+In one of the most noticeable changes from
+the fischertechnik ElectroPneumatic pinball
+table, there are outlanes beside each flipper,
+so a player can lose the ball to the sides in
+addition to the center as in a real pinball
+table.
+Fig. 7: The chain elevator used to return the
+ball to the playfield.
+
+The principle is simple enough, but making
+it work reliably was tricky and took me
+several attempts.
+
+Design
+Tools
+Such a special project needs powerful tools.
+Figma [6] is a great application I am very
+familiar with, so I used it as my main design
+tool for most of the project (Fig. 8).
+The original file consists of many vector
+layers that can be turned on and off at will.
+
+Fig. 9: A page from my parts library.
+
+
+
+There are now four upper lane “rollovers”:
+the rightmost one is the skill shot lane. (The
+quotes are intentional: the sensors are
+actually located above the upper lanes, not
+below them. See Fig. 17.)
+
+Some graphics are printed separately as
+shown in Fig. 11.
+
+A target at the upper right includes a gray
+fischertechnik electromagnet 31324 which
+is used to hold the ball for a few seconds in
+certain conditions during gameplay.
+There is a spinner target below the hold
+magnet. It consists of a red plate that
+revolves around a U-shaped steel wire. The
+spinner assembly is positioned diagonally
+on the playfield thanks to two old-style
+blocks 15 with a red peg.
+A servo-driven door opens when there is a
+ball to be launched and closes as soon as the
+ball is past it. The closed door prevents the
+ball to go back to the plunger and also helps
+to direct it to the skill shot lane.
+The upper left “orbit” sensor is kept is very
+similar to the one in the original fischertechnik table.
+Graphics
+I’ve designed and illustrated a novel theme
+called “Dirty Dishes”. The analogy here is
+that the player is supposed to use the two
+faucet handles (also known as flippers...) to
+“wash” a pile of dishes on a kitchen sink
+(i.e., get points). I used some free images [8]
+and vector illustrations [9] as a reference,
+but ultimately everything was completely
+redrawn and/or heavily modified to go
+along with the overall look and color
+scheme (see Fig. 10).
+The graphics feature several kitchen
+utensils, a greasy pizza slice on the upper
+left target, a kitchen roll (the spinner), a
+glass pitcher that can be “broken” when the
+spinner makes enough turns — I know, it
+doesn’t make sense, but the sound effect is
+cool —, a rack where the player can put
+some plates to “dry” (i.e. the electromagnet
+holds the ball for a few seconds), and so on.
+
+
+Fig. 10: The playfield illustration.
+
+Apart from allowing the creation of a colorful and amusing theme, the printed playfield
+surface also has the very important function
+of smoothing out the table surface.
+Baseplates are inherently quite bumpy
+because of their many slots. This makes the
+ball slow down, change direction unexpectedly, and even halt to a stop, all of which
+can be quite annoying in the original
+fischertechnik model. A simple solution
+that worked quite well in the initial tests was
+to cut out just the slots needed to attach
+blocks and wiring from a plastic folder
+intended for office use. The measure is just
+right, 240 × 350 mm. For the final model I
+printed the graphics in the back of two A4
+transparent overhead projector sheets. This
+guarantees very bright colors, but it needs
+an opaque white layer below it. I used matte
+coated paper, which is very bright but got
+some wrinkles, most likely because of
+
+humidity and temperature variations. I
+believe the ideal solution would be to have
+the graphics rendered on high quality white
+plastic film at an express print shop, but I
+decided to leave it as is. Fortunately, the
+wrinkles are almost completely gone.
+The six top covers were also printed in the
+same way (Fig. 11). The bigger ones were
+glued to cardboard using double-sided tape
+and then cut together. The smaller ones —
+where light is supposed to shine through —
+were composed of several sheets of translucent paper. The covers were then fastened
+to fischertechnik cladding panels with
+double-sided tape. This arrangement allows
+easy insertion and removal.
+
+Modell
+
+The most important gameplay features that
+were implemented are highlighted in the
+following paragraphs.
+Game start. To begin, the player just
+presses one of the flipper buttons. Like in
+most pinball machines, a game consists of
+three balls and there is no time limit for each
+ball, so you may play as long as you like.
+Free replay. If a ball is drained within 3
+seconds or less, there is a free replay. Any
+points awarded are lost and the outlane
+LEDs are lit. The player then gets the ball
+back and tries again. This can happen up to
+two times per ball.
+Skill shot. The red Skill Shot LED on the
+rightmost upper lane (the one with a corkscrew) flashes as each ball is launched.
+1,500 points are awarded if the ball passes
+through it within two seconds after it
+crosses the launch lane door.
+Multiplier. If the three leftmost upper lanes
+(“rollovers”) are triggered, the multiplier
+gets incremented, so scores are multiplied
+by 2, 3, etc. up to 8. The multiplier values
+are retained between balls. (My family
+asked me to do this. They are right — the
+game should be fun first and foremost.)
+
+Fig. 11: Top cover graphics.
+
+Figma was also used for all graphics, which
+were subsequently exported to Affinity
+Designer [7] for printing.
+
+Gameplay
+My main project goals were to achieve good
+playability and to simulate some classic
+pinball table features.
+Several rules were copied from actual
+pinball machine tables, while others were
+adapted or created to somewhat overcome
+the limitations of a small table like this.
+
+Rotating upper lanes. The upper lanes that
+are currently lit are rotated with each full
+revolution of the spinner — the resulting
+effect with the LEDs is nice to look at and
+allows a skilled player to increment the
+multiplier quickly.
+Spinner. Points are scored every time the
+spinner rotates. Higher points are awarded
+when the plate is hit with sufficient force so
+that it spins a minimum number of times in
+a row.
+Hold target. Another way to get high
+scores is to hit the Hold target. This makes
+the respective LED start flashing. Hitting it
+two more times lights the LED and activates
+the electromagnet for five seconds, which
+may (or not) hold the ball in position. In this
+
+
+
+
+case, big points are awarded before the ball
+is released.
+“Greasy stuff” mode. If the player gets
+5,000 points or more during each ball, the
+“pizza” LED starts flashing, and the end-ofball bonus is increased each time ball passes
+on the left “orbit” target — this is signaled
+to the player via a special sound.
+As for the Extra Ball feature, it was not
+implemented despite it being conspicuously
+printed between the flippers in the playfield.
+
+Neither was the Ball Save function,
+although the “Ball Save when lit” graphic
+now refers to the Free Replay.
+Playability
+It is possible to use several tricks akin to the
+ones used in real pinball machines [10]. The
+many hours spent on tweaking and testing
+the playfield really paid off here.
+For example, as in a real pinball table, the
+player can actually pass the ball from one
+flipper to the other
+by pressing and
+releasing the flipper
+button very quickly.
+Some difficult targets at the top, like
+the hold area and the
+skill shot lane, can
+be hit by letting the
+ball slowly roll
+down on a flipper,
+then shooting them
+when it is at the
+rounded tip. Precise
+timing is required to
+achieve this.
+Because I placed
+soft rubber pads in
+some strategic spots,
+the
+resulting
+rebound action can
+be quite fast. A
+player has to be
+careful not to let the
+ball drain.
+
+Software
+
+Fig. 12: All game parameters are freely adjustable.
+
+At the outset I
+decided not to use
+the TXT because it
+does
+not
+have
+enough inputs. I’m
+also much more at
+home with Arduinos
+and C++, so that was
+an obvious choice.
+
+
+Modell
+
+The software bit was quite challenging. It
+started to grow until the point I had to refactor everything. It now consists of many
+separate code files. Analyzing it is way
+beyond the scope of this article, but the
+source code is published in my public
+GitHub area under a MIT license and is
+freely available for those who want it [11].
+One interesting point to note is that all game
+constants can be easily changed in the
+program if required, so some more tweaks
+in gameplay are never completely out of
+question (Fig. 12).
+
+Electronics
+The fischertechnik controllers have limited
+I/O capabilities and were not considered for
+this project. Instead, the main logic is
+processed by two Arduino Nano clones.
+The main one is wired to the two buttons
+and the several sensors. It also controls the
+solenoids and the electromagnet. Since it
+did not have enough ports, I
+extended it using a “child” Nano
+connected to the main one via
+I²C. This second Arduino deals
+with LEDs, outputs and the MP3
+module and does not take part in
+the game logic (Fig. 13).
+
+A button below the table is wired to the reset
+pins of the two Nanos via a pair of diodes.
+Power circuit
+The power supply is taken from an old
+laptop computer and is rated at 19 V,
+3.16 A. This relatively high voltage is
+necessary for the 6 V solenoids to have
+enough force to propel the ball.
+The solenoid driver is a L298N module,
+which is admittedly outdated in terms of
+efficiency but very reliable and short-circuit
+protected. The solenoids get the full voltage
+— minus the drop in the L298N — for
+50 ms and then the program drops the PWM
+duty cycle to about 15% (40 of 255) which
+is sufficient to hold the flipper up while the
+button is being pressed.
+An adjustable step-down regulator provides
+9 V for the motor and the fischertechnik
+electromagnet via a DRV8833. This voltage
+
+It was clear from start that using
+fischertechnik plugs would be
+prohibitive for a compact
+design, so almost all connections
+are made using “tinned” wires or
+jumper cables attached directly
+to the three breadboards and the
+other electronic modules (Fig.
+11). Using breadboards to mount
+electronic components mimics
+the
+modular
+nature
+of
+fischertechnik parts, so they are
+a natural match for each other
+(despite the adhesives on their
+backs having an irritating
+tendency to wear off).
+Fig. 13: Pinout map for the main Arduino. A similar one exists
+for the “child”.
+
+
+
+Fig. 14: Electronics are attached to an extra baseplate on the underside.
+
+is also used by the fischertechnik LEDs and
+the luminosity sensor. Another step-down
+provides 5 V to the Arduinos, servo,
+display, the LEDs and the L298N module
+logic.
+Display and LEDs
+
+Fig. 15: “Mult 3” is hopefully still readable.
+
+There is a 6-digit display module located
+above the playfield. I built it using an
+Arduino Pro Mini clone and two 3-digit
+seven-segment displays. The Pro Mini
+stores the character designs and provide
+basic functions like flashing and scrolling.
+These designs were adapted from various
+sources [12]. This module is controlled
+from the main Arduino via I²C. Since the
+displays are seven-segments only, I had to
+choose the wording carefully to avoid difficult letters like M, W and X although in
+some cases this was simply not possible,
+some legibility is kept nonetheless (see
+Fig. 15).
+
+Of course, I could have used a ready-made
+pixel-based display so any wording would
+do, but that would be too easy... and the 7segment displays have a retro look which is
+really cool.
+
+
+There are also four LEDs positioned above
+the upper lanes, two LEDs installed near the
+outlanes, another one near the upper left
+sensor and another one near the hold
+electromagnet. Initially I wanted to use
+NeoPixels because they seemed to be the
+optimal solution: they are bright, colorful,
+programmable, and require only one
+Arduino pin. However, I found out that they
+are not reliable as control LEDs. They often
+
+
+Modell
+
+display the wrong color, light up when not
+asked to, or turn off at wrong times. (A
+problem with the specific clones I used is
+not ruled out.) I made several tests but could
+not figure out a reliable solution, so I ended
+up replacing them with regular LEDs: I was
+lucky to still have a few free ports in the
+child Nano. All LEDs on the playfield are
+miniature units taken from LED strips;
+fischertechnik lamp holders are simply too
+big.
+
+even narrowing it with a rubber post, as
+shown in Fig. 18, was not enough to detect
+the ball passing under it with 100%
+reliability.
+
+Sensors
+
+Fig. 17: Upper lane sensors. LEDs can be seen
+below (changed later to brighter ones).
+
+My first approach was to use small reflective sensors placed in the peg holes below
+the baseplates. This idea was soon
+discarded because these sensors were very
+tricky to install and required holes in the
+playfield sheets, so the sensors are all
+placed above the baseplates. They perform
+several functions. Six of them are QRE1113
+reflective sensors which are very small and
+can be fully embedded in the width of a
+PCB if a square hole is cut in the middle on
+the board, which is exactly what I did in the
+outlanes (Fig. 16). Similar sensors are also
+used on the upper lanes (Fig. 17).
+The rotating wire attached to the spinner
+plate is bent in such a way that it interrupts
+the IR beam of a small fork sensor, so points
+are awarded with each complete revolution.
+
+Fig. 16: QRE1113 sensors mounted on small
+PCBs act as outlane sensors.
+
+A very important sensor detects when the
+ball has been launched. This particular
+sensor gave me headaches. The exit from
+the launch lane is almost 35 mm wide, and
+
+Fig. 18: A cylindrical rubber post is used to
+narrow the exit from the launcher.
+
+The solution was twofold. Now, in the case
+that this sensor does not fulfill its role, if any
+other sensor in the playfield is activated, the
+software concludes the ball has been
+launched anyway and changes state. Then I
+tested several arrangements (including a
+test with the fischertechnik IR tracking
+sensor — it didn’t improve much) and even
+tried to place a small laser beam
+horizontally, but this would not be possible
+without making big changes to the design.
+In the end I simply moved it to be as close
+as possible to the launch door, and
+consequently the detection is satisfactory.
+Sometimes the most obvious solutions are
+the most effective.
+There are also other types of sensors. A
+small magnet attached to a chain driven by
+a XS motor is used to place the ball back
+into the playing field (Fig. 7) and a reed
+switch tells the program to stop the motor at
+a “home” position. This arrangement works
+quite well.
+
+
+A fork sensor speed module was retrofitted
+with a reflective sensor and placed near the
+end of the ball return ramp, below the playfield, to detect the moment the ball gets near
+its destination. This should then activate the
+motor. One problem with this type of
+sensor, however, is that it is too susceptible
+to variations in ambient light. Its vertical
+position proved to be very critical as well.
+Again, the solution was in software: if the
+sensor does not detect the ball, a simple time
+counter activates the motor. The sensor can
+actually be removed.
+A lightness sensor 128599 (sorry, fischertechnik, that’s not a color sensor) is
+triggered when the ball is near the electromagnet to activate the hold feature.
+A fischertechnik phototransistor is used on
+the upper left target (the same as in the
+fischertechnik table), and another one is
+placed below the drain to detect when the
+ball is lost. These are fairly conventional
+arrangements for fischertechnik hobbyists.
+Incidentally, I found out that wiring a
+fischertechnik phototransistor directly to an
+Arduino (with the input pullup enabled)
+allows it to operate easily with an LED,
+while fischertechnik controllers usually
+need old-style incandescent light bulbs to
+perform the same function.
+Sounds
+An inexpensive MP3 module with an
+embedded micro-SD card and loudspeaker
+is used to generate several high-quality
+sounds which unfortunately is something
+that is not possible with the fischertechnik
+sound module. The module is wired to the
+“child” Arduino via two digital pins that act
+as Rx and Tx ports.
+Sound effects were edited with Audacity
+[14] from originals downloaded from
+Freesound [13]. They are credited in the
+source code.
+
+
+Third-party materials
+This pinball table uses a lot of third-party
+parts. Here are the most relevant:
+• 19 V DC, 3.16 A power supply
+• Adjustable LM2596 DC-DC stepdown
+voltage regulator module
+• 5 V DC-DC step-down voltage regulator
+• 2 × JF-0530B 6 V solenoids
+• 2 × Arduino Nano clones
+• DIY 6-digit 7-segment display module
+(Arduino Pro Mini + 2 × 3-digit LCD
+display)
+• DRV8833 motor driver module
+• L298N motor driver module
+• 8 × QRE1113 IR reflective sensors
+• Fork sensor speed module (retrofitted
+with reflective sensor)
+• DFR0299 DFPlayer Mini MP3 Player
+module with micro-SD card
+• 8 × miniature white and red LEDs
+• Small rectangular neodymium magnet (5
+× 7 × 2 mm)
+There were used also 4 breadboards, several
+resistors, 2 diodes for the reset function, a
+mini toggle switch, a power jack, solid and
+flexible wire, double-sided tape, adhesive
+tape, electrical tape, steel wire for the
+spinner, two steel springs for the plunger,
+screws, nuts, nylon and cardboard washers,
+spiral cable wrap, rubber foam, rubber
+sheets, plastic sheets, overhead sheets for
+inkjet printer, white paper, cardboard, cable
+clips, etc.
+Some old fischertechnik parts were
+important too. Two BS15 with round peg
+31059 were essential to place the spinner
+diagonally. I also used several cladding
+plates and some old-style BS7.5 building
+blocks (with flat sides).
+Surprisingly, just a few part mods were
+necessary. The front part of a servo holder
+(132290) was partially cut to allow full 180°
+rotation; an old wheel axle 36586 had its pin
+cut off and screwed to a servo arm; and a
+cladding plate 90 (31512) was cut to 75 mm
+to match the width of the display module.
+
+
+Modell
+
+Conclusions
+
+References
+
+This project was multidisciplinary: I had to
+design, illustrate, code, build and test it. Its
+most important characteristic was its
+complexity — the most I ever had in a
+hobby project —, and at various points I
+must admit I was daunted by it. The software required to make the pinball logic was
+especially intricate because it involved
+multiple timers and taking care of many
+asynchronous events, but carefully refactoring the code in smaller modules allowed me
+to solve most issues adequately. I know
+there is always room for improvement —
+not only in the software area, but also in the
+mechanics and electronics —, but this
+project already took a lot of time and work
+and in the end, I became very much pleased
+with the results.
+
+[1]
+
+fischertechnik: TXT
+ElectroPneumatic kit.
+ftdatenbank.de.
+
+[2]
+
+ft community: Questions and
+experiments with pneumatics.
+ftcommunity.de forum, 2021.
+
+[3]
+
+ft community: New Pinball “Dirty
+Dishes”. ftcommunity.de forum,
+2021.
+
+[4]
+
+Wölffel, Dirk: fischertechnik Pinball.
+ftcommunity.de picture pool, 2017.
+
+[5]
+
+Wölffel, Dirk: fischertechnikFlipper. ft:pedia 2/2017, P. 74–81.
+
+[6]
+
+Figma, Inc.: Figma. figma.com.
+
+[7]
+
+Serif Europe: Affinity Designer.
+affinity.serif.com.
+
+[8]
+
+Getty Images: iStock.
+istockphoto.com.
+
+[9]
+
+EQT: Freepik. freepik.com.
+
+I will dismantle the whole thing at some
+point in the future to reuse the parts for new
+projects. I ever want to build it again, the
+best way to start would be using a large
+baseplate 1000 (35602) so to avoid the offgrid issues that are inevitable with adjoining
+baseplates 500. A more ambitious installment would include a coin insert slot, kickback solenoids, stored high scores, and
+more.
+Finally, I want to express my deep appreciation for the warm welcome I had from the
+ft community, the incredibly creative
+models and their photographs in the picture
+pool, and thank the members for their
+invaluable help.
+
+[10] Internet Pinball Database. Skills for
+the Pinball Player. ipdb.org.
+[11] Pechansky, Rubem: Public
+repositories. github.com, 2022.
+[12] Google images. 7 segment display
+alphabet.
+[13] FreeSound team: Freesound.
+freesound.org.
+[14] The Audacity Team: Audacity.
+audacityteam.org.
+
+
+

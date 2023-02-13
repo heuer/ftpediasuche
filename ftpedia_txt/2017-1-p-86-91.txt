@@ -1,0 +1,921 @@
+
+
+Computing
+
+I²C mit dem TX(T) – Teil 15: LED-Display (3)
+Dirk Fox
+Neben dem bereits etwas in die Jahre gekommenen (und extrem stromhungrigen) I²C-LEDDisplay SAA1064 von Philips (ft:pedia 4/2012 [1]) und dem eleganten, verbrauchsarmen LED7-Segment-Display von Sparkfun (ft:pedia 4/2016 [2]) gibt es von Adafruit eine kleine
+„Familie“ von LED-Displays, günstiger als das Sparkfun-Display und mit zusätzlichen
+interessanten Eigenschaften – jetzt auch mit einem passenden ROBO Pro-Treiber.
+
+Die Adafruit-Displays
+
+Das 7-Segment-Display
+
+Von Adafruit stammt eine ganze Familie
+von I²C-Breadboards mit LED-Aktoren, die
+von einem Holtek-IC HT16K33 gesteuert
+werden. Eines dieser Breadboards, eine
+8x8-LED-Matrix, haben kürzlich Christian
+Bergschneider und Stefan Fuss in der
+ft:pedia vorgestellt [3].
+
+Das vierstellige Adafruit-LED-Display
+(Abb. 1) ist größer und mit 10-12 € sogar
+günstiger als das Sparkfun-Display. Bis auf
+das Apostroph, welches das SparkfunDisplay hinter der dritten Stelle der Anzeige
+anbietet, sind die Darstellungsmöglichkeiten identisch: Hinter jeder der vier 7-Segment-Ziffern kann je ein Dezimalpunkt
+stehen, und in der Mitte des Displays kann
+ein Doppelpunkt (z. B. für Zeitanzeigen)
+aktiviert werden.
+
+Zwei weitere ‚Familienmitglieder‘ gehören
+der Spezies der vierstelligen Segment-Displays an. Sie sind z. B. bei Watterott oder
+EXP in verschiedenen Farben (blau, gelb,
+rot, weiß und grün) erhältlich. Beide sind
+daher interessante Alternativen nicht nur zu
+dem inzwischen stark in die Jahre
+gekommenen Philips- sondern auch zu dem
+in ft:pedia 4/2016 vorgestellten SparkfunDisplay [1, 2] – so sind sie mit ca.
+18 x 50 mm deutlich größer.
+
+Auch dieses Display hat einige besondere
+Eigenschaften:
+∂ die LED-Anzeige ist nicht nur groß,
+sondern auch beeindruckend hell,
+∂ es können acht verschiedene I²C-Adressen (0x70-0x77) eingestellt werden und
+∂ es unterstützt den I²C Fast Mode (400
+kHz).
+Im direkten Vergleich mit dem SparkfunDisplay hat es jedoch auch ein paar praktische Nachteile:
+
+7-Segment Display
+
+
+∂ der LED-Treiber-IC HT16K33 benötigt
+eine 5 V-Betriebsspannung und verwendet 5 V-Logik; für die Nutzung des Displays am TXT benötigt man daher einen
+Level-Shifter oder den Universal-Adapter aus [4],
+
+
+Computing
+
+∂ die Einstellung der Adressen erfolgt über
+Lötpunkte und ist daher nur mit
+Aufwand reversibel und
+∂ die Ansteuerung mehrerer Displays
+erfordert einen I²C-Bus-Verteiler wie
+den ftExpander aus [4] oder, im Falle des
+TX, das sechspolige Verteilermodul von
+Conrad (192659).
+Befehle und Register
+Der HT16K33 wird über sieben Byte-Befehle gesteuert. Jeder dieser Befehle setzen
+sich aus einem vier Bit langen Befehlsteil
+und einem 4-Bit-Parameter zusammen [5]:
+Befehl
+
+Cmd.
+
+Param.
+
+Def.
+
+Display Data
+Address Pointer
+
+0x0
+
+0x0-F
+
+0x00
+
+System Setup
+
+0x2
+
+0x0-1
+
+0x20
+
+Key Data Addr. Pt.
+
+0x4
+
+0x0-5
+
+0x40
+
+INT Flag Addr. Pt.
+
+0x6
+
+0x0
+
+0x60
+
+Display Setup
+
+0x8
+
+0x0-7
+
+0x80
+
+ROW/INT Set
+
+0xA
+
+0x0-3
+
+0xA0
+
+Dimming Set
+
+0xE
+
+0x0-F
+
+0xEF
+
+Die Helligkeit des (gesamten) Displays
+wird über ein PWM-Signal geregelt: via
+Dimming Set wird sie mit 0xEn (n aus
+[0..15]) auf (n+1)/16 des Maximalwerts
+eingestellt.
+Der HT16K33 verfügt über ein 16 Byte
+großes RAM, in dem die auf dem Display
+angezeigten Zeichen gespeichert werden
+(0x00-0x0F). Das vierstellige 7-SegmentDisplay verwendet nur einen Teil davon:
+Byte 0x00 und 0x02 repräsentieren die
+beiden linken, Byte 0x06 und 0x08 die
+beiden rechten Ziffern. Der Doppelpunkt
+wird in Byte 0x04 mit dem Wert 0x02
+kodiert.
+Im RAM werden nicht die Werte der Ziffern, sondern deren LED-Kodierungen abgelegt. Die erfolgt – wie beim SparkfunDisplay – nach dem in Abb. 2 wiedergegebenen Schema: Segment 1 wird durch Bit 0
+gesetzt, Segment 2 durch Bit 1 usw.
+
+Tab. 1: Befehle, Parameter und Default-Werte
+
+Nach dem Einschalten der Stromzufuhr benötigt der HT16K33 ca. 1 ms, um die Default-Einstellungen vorzunehmen (Tab. 1):
+Oszillator und Display sind deaktiviert, die
+Helligkeit steht auf dem Maximalwert und
+das Blinken des Displays ist abgeschaltet.
+Zur Initialisierung des Displays muss man
+zunächst den Oszillator einschalten. Das
+geschieht mit der Übermittlung des System
+Setup-Kommandos (0x21):
+∂ Bit 0: 0 = Standby Mode (Oszillator
+aus), 1 = Normal Operation Mode
+Über das Display Setup-Kommando (0x8?)
+werden die Blink-Frequenz eingestellt und
+das Display an- oder ausgeschaltet:
+∂ Bit 0: Display ein/aus
+∂ Bits 1-2: Einstellung der Blinkfrequenz:
+0 = Off, 1 = 2 Hz, 2 = 1 Hz, 3 = 0,5 Hz.
+
+7-Segmentanzeige
+
+Die Ziffern 0-F werden also wie folgt kodiert (Tab. 2, hexadezimale Darstellung):
+
+
+
+
+
+
+
+
+3F
+
+
+5B
+
+4F
+
+
+6D
+
+7D
+
+
+
+
+A
+
+B
+
+C
+
+D
+
+E
+
+F
+
+7F
+
+6F
+
+
+7C
+
+
+5E
+
+
+
+Tab. 2: Kodierung der Ziffern 0-F
+
+Diese Kodierung übernimmt unser Makro
+BCD2LED, das wir schon im ROBO ProTreiber sowohl des Philips- als auch des
+
+
+
+Sparkfun-Displays verwendet haben [1, 2].
+Um den Dezimalpunkt hinter einer Ziffer zu
+setzen, muss in der Kodierung der Ziffer
+zusätzlich Bit 7 gesetzt werden.
+Der Display Data Address Pointer zeigt auf
+eine Adresse im RAM. Wird eine gültige
+RAM-Adresse
+an
+den
+HT16K33
+übergeben, können anschließend mehrere
+(kodierte) Ziffern zur Darstellung an das
+Display übermittelt werden.
+
+∂ A7SD_DisplayHex: Ausgabe einer bis zu
+vierstelligen Hexadezimalzahl
+∂ A7SD_DisplayInt: Ausgabe eines
+Vorzeichen behafteten Integer-Wertes
+von -999 bis 9999
+∂ A7SD_DisplayDec:
+Anzeige
+eines
+Dezimalwerts mit Vorzeichen und Dezimalpunkt (von -99.9 bis 9999.0)
+
+Abschließend wird das Display mit dem
+Display Setup-Kommando (0x81) aktiviert,
+ggf. mit einer zusätzlichen Blink-Frequenz.
+ROBO Pro-Treiber
+Im Downloadbereich der fischertechnikCommunity gibt es einen ROBO ProTreiber zum Download, der die folgenden
+Funktionen umfasst:
+∂ Die Funktion A7SD_Init sorgt für die
+Initialisierung des Displays (Normalbetrieb, Display aus, maximale Helligkeit).
+∂ Die Helligkeit des Displays wird mit der
+Funktion A7SD_SetBrightness auf
+einen Wert von 0 bis 15 eingestellt.
+∂ Mit A7SD_SetBlinkrate wird die
+Blink-Rate des Displays gewählt: 0,5
+Hz, 1 Hz, 2 Hz oder auf 0 (Off). Die
+gewählte Option wird zugleich in einer
+globalen Variablen gespeichert.
+
+Alphanumeric Display
+
+Das 14-Segment-Display
+Das zweite LED-Display der AdafruitFamilie ist besonders interessant: Es erlaubt
+die Darstellung von vier alphanumerischen
+Zeichen, die jeweils aus einem 14-SegmentLED-Baustein (zuzüglich Dezimalpunkt)
+bestehen (Abb. 3).
+
+∂ Die Funktion A7SD_Clear löscht die
+Display-Anzeige.
+Für die Ausgabe numerischer Werte gibt es
+separate Funktionen, die die Ausgabe von
+Zeit, Datum, Hex- und Dezimalzahlen
+vereinfachen:
+∂ A7SD_DisplayTime: Zeitanzeige
+Format Stunden:Minuten
+
+im
+
+∂ A7SD_DisplayDate:
+Anzeige
+Datums im Format Monat.Tag.
+
+des
+
+∂ A7SD_DisplayYear: Ausgabe des Jahres
+im Format 20xx
+
+14-Segmente-Displays
+
+
+Computing
+
+Die Kodierung erfolgt über eine 15-bitDarstellung nach dem in Abb. 4 dargestellten Kodierungsschema: Ist das jeweilige Bit
+gesetzt, leuchtet das entsprechende LEDSegment. Der Dezimalpunkt wird durch Bit
+14 gesetzt.
+
+C binär
+
+Hex
+
+Dez
+
+R 0b0010000011110011
+
+0x20f3
+
+8435
+
+S 0b0000000011101101
+
+0x00ed
+
+
+T 0b0001001000000001
+
+0x1201
+
+4609
+
+U 0b0000000000111110
+
+0x003e
+
+
+In der folgenden Tabelle (Tab. 3) sind die
+Ziffern 0-9 und die Buchstaben A-Z (in
+Groß- und Kleinschrift) beispielhaft kodiert. Im ROBO Pro-Treiber erfolgt die
+Kodierung über eine (vordefinierte) Liste.
+
+V 0b0000110000110000
+
+0x0c30
+
+3120
+
+W 0b0010100000110110
+
+0x2836
+
+10294
+
+X 0b0010110100000000
+
+0x2d00
+
+11520
+
+Y 0b0001010100000000
+
+0x1500
+
+5376
+
+C binär
+
+Hex
+
+Dez
+
+Z 0b0000110000001001
+
+0x0c09
+
+3081
+
+0 0b0000110000111111
+
+0x0c3f
+
+3135
+
+a 0b0001000001011000
+
+0x1058
+
+4184
+
+1 0b0000010000000110
+
+0x0406
+
+1030
+
+b 0b0010000001111000
+
+0x2078
+
+8312
+
+2 0b0000100010001011
+
+0x088b
+
+2187
+
+c
+
+0b0000000011011000
+
+0x00d8
+
+
+3 0b0000000010001111
+
+0x008f
+
+
+d 0b0000100010001110
+
+0x088e
+
+2190
+
+4 0b0001001011100000
+
+0x12e0
+
+4832
+
+e 0b0000100001011000
+
+0x0858
+
+2136
+
+5 0b0010000001101001
+
+0x2069
+
+8297
+
+f
+
+0b0000000001110001
+
+0x0071
+
+
+6 0b0010000001111001
+
+0x2079
+
+8313
+
+g 0b0000010010001110
+
+0x048e
+
+1166
+
+7 0b0001010011000001
+
+0x14c1
+
+5313
+
+h 0b0001000001110000
+
+0x1070
+
+4208
+
+8 0b0000000011111111
+
+0x00ff
+
+
+i
+
+0b0001000000000000
+
+0x1000
+
+4096
+
+9 0b0000000110001111
+
+0x018f
+
+
+j
+
+0b0000000000001110
+
+0x000e
+
+
+A 0b0000000011110111
+
+0x00f7
+
+
+k
+
+0b0011011000000000
+
+0x3600
+
+13824
+
+B 0b0001001010001111
+
+0x128f
+
+4751
+
+l
+
+0b0000000000110000
+
+0x0030
+
+
+C 0b0000000000111001
+
+0x0039
+
+
+m 0b0001000011010100
+
+0x10d4
+
+4308
+
+D 0b0001001000001111
+
+0x120f
+
+4623
+
+n 0b0001000001010000
+
+0x1050
+
+4176
+
+E 0b0000000001111001
+
+0x0079
+
+
+o 0b0000000011011100
+
+0x00dc
+
+
+F 0b0000000001110001
+
+0x0071
+
+
+p 0b0000000101110000
+
+0x0170
+
+
+G 0b0000000010111101
+
+0x00bd
+
+
+q 0b0000010010000110
+
+0x0486
+
+1158
+
+H 0b0000000011110110
+
+0x00f6
+
+
+r
+
+0b0000000001010000
+
+0x0050
+
+
+I
+
+0b0001001000000000
+
+0x1200
+
+4608
+
+s
+
+0b0010000010001000
+
+0x2088
+
+8328
+
+J
+
+0b0000000000011110
+
+0x001e
+
+
+t
+
+0b0000000001111000
+
+0x0078
+
+
+K 0b0010010001110000
+
+0x2470
+
+9328
+
+u 0b0000000000011100
+
+0x001c
+
+
+L 0b0000000000111000
+
+0x0038
+
+
+v
+
+0b0010000000000100
+
+0x2004
+
+8196
+
+M 0b0000010100110110
+
+0x0536
+
+1334
+
+w 0b0010100000010100
+
+0x2814
+
+10260
+
+N 0b0010000100110110
+
+0x2136
+
+8502
+
+x
+
+0b0010100011000000
+
+0x28c0
+
+10432
+
+O 0b0000000000111111
+
+0x003f
+
+
+y
+
+0b0010000000001100
+
+0x200c
+
+8204
+
+P 0b0000000011110011
+
+0x00f3
+
+
+z
+
+0b0000100001001000
+
+0x0848
+
+2120
+
+Q 0b0010000000111111
+
+0x203f
+
+8255
+
+Tab. 3: Kodierung von Ziffern und Buchstaben
+
+
+
+
+Bei der Kodierung der Zeichen habe ich vor
+allem auf Lesbarkeit und geringe Verwechslungsgefahr geachtet – allerdings
+ermöglichen die 14 Segmente bei den
+meisten Ziffern und Buchstaben auch ganz
+andere Kodierungen. Auch ein paar Sonderzeichen lassen sich mit dem Displays
+erkennbar darstellen (Tab. 4).
+C Binär
+
+Hex
+
+“
+
+0b0000001000100000
+
+0x0220
+
+
+‘
+
+0b0000010000000000
+
+0x0400
+
+1024
+
+*
+
+0b0011111111000000
+
+0x3fc0
+
+16320
+
++ 0b0001001011000000
+
+0x12c0
+
+4800
+
+,
+
+0b0000100000000000
+
+0x0800
+
+2048
+
+-
+
+0b0000000011000000
+
+0x00c0
+
+
+/
+
+0b0000110000000000
+
+0x0c00
+
+3072
+
+< 0b0010010000000000
+
+0x2400
+
+9216
+
+> 0b0000100100000000
+
+0x0900
+
+2304
+
+@ 0b0000001010111011
+
+0x02bb
+
+
+\
+
+0b0010000100000000
+
+0x2100
+
+8448
+
+_ 0b0000000000001000
+
+0x0008
+
+
+|
+
+0x1200
+
+4608
+
+0b0001001000000000
+
+Dez
+
+Tab. 4: Kodierung ausgewählter
+Sonderzeichen
+
+ROBO Pro-Treiber
+Die meisten Funktionen, die wir für den
+ROBO Pro-Treiber des alphanumerischen
+LED-Displays benötigen, sind mit denen
+des numerischen Displays identisch und
+unterscheiden sich leidglich im Präfix des
+Funktionsnamens:
+∂ A14SD_Init
+∂ A14SD_SetBrightness
+
+∂ A14SD_SetBlinkrate und
+∂ A14SD_Clear
+Die Funktionen zur Zeichenausgabe sind
+hingegen Display-spezifisch, da die Darstellung der Zeichen auf dem Display
+jeweils 16 Bit (gegenüber acht beim rein
+numerischen Display) belegt.
+
+
+Da das Display über keinen Doppelpunkt
+verfügt, wurde keine spezielle Funktion zur
+Zeit-Ausgabe
+implementiert.
+Hinzu
+gekommen ist jedoch eine Funktion, die
+einen vier Zeichen langen Text ausgibt:
+∂ A14SD_DisplayDate: Anzeige
+Datums im Format Monat.Tag.
+
+des
+
+∂ A14SD_DisplayYear: Ausgabe
+Jahres im Format 20xx
+
+des
+
+∂ A14SD_DisplayHex: Ausgabe einer bis
+zu vierstelligen Hexadezimalzahl
+∂ A14SD_DisplayInt: Ausgabe eines
+Vorzeichen behafteten Integer-Wertes
+von -999 bis 9999
+∂ A14SD_DisplayDec: Anzeige eines
+Dezimalwerts mit Vorzeichen und Dezimalpunkt (von -99.9 bis 9999.0)
+∂ A14SD_DisplayChar: Ausgabe eines
+einzelnen ASCII-Zeichens an einer
+gewünschten Position (0-3)
+∂ A14SD_DisplayText: Ausgabe von vier
+ASCII-Zeichen auf dem Display (0-128)
+Das Textprogramm im Treiber umfasst ein
+Beispielprogramm, bei dem ein Lauftext
+mit einstellbarer Geschwindigkeit in einem
+parallelen Prozess auf dem Display angezeigt wird.
+Der ROBO Pro-Treiber steht im Downloadbereich der fischertechnik-Community bereit.
+
+Anwendungsbeispiele
+Beide LED-Displays eignen sich zur hellen
+und großformatigen Anzeige von Zahlenwerten, dem Datum oder der Uhrzeit.
+Interessant ist die Möglichkeit, auf dem 14Segment-Display einen Lauftext auszugeben. Dazu benötigt man lediglich eine Liste
+mit den Zeichencodes und zwei verschachtelte Schleifen, in denen jeweils vier aufeinanderfolgende Zeichen auf dem Display
+ausgegeben werden (Abb. 5).
+
+
+Computing
+
+Besitzt man mehrere 14-Segment-Displays,
+kann man auch jeweils acht, 12 oder mehr
+aufeinanderfolgende Zeichen des Lauftexts
+gleichzeitig ausgeben. Da die Displays
+seitlich unmittelbar aneinander anschließend montiert werden können, lassen sich
+so auch längere Texte gut erkennbar darstellen.
+
+
+Für die von mir in ROBO Pro entwickelten
+I²C-Treiber habe ich eine Übersichtsseite
+mit Links auf die entsprechenden ft:pediaBeiträge zusammengestellt.
+
+Referenzen
+[1]
+
+Dirk Fox: I²C mit dem TX – Teil 2:
+LED-Display. ft:pedia 4/2012, S. 3237.
+
+[2]
+
+Dirk Fox: I²C mit dem TX(T) – Teil
+14: LED-Display (2). 4/2016, S. 84-89.
+
+[3]
+
+Christian Bergschneider, Stefan
+Fuss: LED-Backpack im Retrodesign.
+ft:pedia 4/2016, S. 80-83.
+
+[4]
+
+Christian Bergschneider, Stefan
+Fuss: Ein universeller I²C-Adapter
+für den TX(T). ft:pedia 4/2016, S. 7279.
+
+[5]
+
+Holtek: RAM Mapping 16x8 LED
+Controller Driver with keyscan –
+HT16K33. Datasheet, Revision 1.10,
+16.05.2011.
+
+
+
+

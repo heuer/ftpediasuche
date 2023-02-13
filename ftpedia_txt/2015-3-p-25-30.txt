@@ -1,0 +1,397 @@
+
+Mechanisches Rechnen
+
+Mechanisches Rechnen
+
+Das Planimeter
+Dirk Fox
+Vor der Erfindung des Taschenrechners gab es zahlreiche mechanische Geräte, mit denen
+mathematische Rechnungen durchgeführt werden konnten. Ein besonders faszinierendes Gerät
+ist das Planimeter – es bestimmt den Inhalt einer umfahrenen Fläche.
+Der römische Abakus ist vielleicht die
+bekannteste, aber nicht die erste mechanische Rechenhilfe [9]. Die Geschichte der
+mechanischen Rechenmaschinen belegt das
+Jahrhunderte alte Interesse der Menschen
+an Hilfsmitteln, mit denen Rechenoperationen erheblich beschleunigt werden konnten.
+Anfang des 19. Jahrhunderts wurde intensiv
+nach Möglichkeiten gesucht, um den Flächeninhalt unregelmäßig geformter Objekte
+zu bestimmen – z. B. zur genauen Berechnung der Größe eines Grundstücks (und
+damit der zu zahlenden Grundsteuer) oder
+der Gesamtleistung einer Kraftmaschine
+aus einer Leistungskurve. Mathematisch ist
+das eine Integration – die aber schwierig zu
+berechnen ist, wenn sich der Verlauf des
+Flächenrands nicht mit einer Funktionsgleichung ausdrücken lässt.
+Bis dahin konnte man solche Flächeninhalte
+nur annähern, z. B. indem man transparentes Millimeterpapier auf die zu bestimmende Fläche legte, dann die komplett
+„gefüllten“ Kästchen zählte und die Hälfte
+aller nur teilweise gefüllten hinzuaddierte,
+oder mit anderen, meist ziemlich ungenauen
+Hilfsmitteln [4].
+
+Das Kegel-Reibrad-Planimeter
+Das erste mechanische Gerät zur Bestimmung eines Flächeninhalts – Planimeter
+genannt – entwickelte der bayerische Trigonometer Johann Martin Hermann (1785-
+
+1841) im Jahr 1814 während seiner Tätigkeit für die Königlich Unmittelbare Steuerkataster-Kommission (Abb. 1) [3]. Es
+bestand aus einem an einem beweglichen
+Arm befestigten Stift (links), mit dem die
+Fläche „abgefahren“ wurde. Die Integration
+übernahm ein Messrad, das auf einem
+Kegel (Mitte) saß, der von der Bewegung
+des Arms in x-Richtung angetrieben wurde.
+Die Position des Messrads auf dem Kegel
+wurde von der y-Bewegung des Arms
+bestimmt: Ein schräges Brett (blau, rechts
+oberhalb des Kegels) sorgte dafür, dass der
+Kegelumfang, den das Rad abfuhr, wuchs,
+je weiter das Messgerät verschoben wurde.
+
+von Johann Martin Hermann (1814)
+
+Eine sehr anschauliche Simulation der
+Funktionsweise des Hermann-Planimeters
+zeigt ein Video von Barbara Haeberlin [6].
+Um das Jahr 1817 wurde mindestens ein
+Prototyp dieses Planimeters gebaut, der
+
+
+
+aber nicht erhalten ist. Die Messergebnisse
+erreichten eine Genauigkeit von 1:400.
+Aber die Einführung des Planimeters stieß
+in der Steuerkataster-Kommission auf
+Widerstand. Hermanns Erfindung geriet
+daher zunächst in Vergessenheit.
+
+
+Ernst erhielt für seinen Nachbau dieses
+Planimeters 1837 von der Académie des
+Sciences den Prix Montyon und zwei Jahre
+darauf eine weitere Auszeichnung. Den
+Ursprung der Erfindung durch Oppikofer
+verschleierte er dabei offenbar.
+Johannes Oppikofer (1826)
+
+Planimeter desselben Typs (Kegel-ReibradPlanimeter) wurden 1825 von dem italienischen Professor Tito Gonnella (1794-1867)
+aus Florenz und, unabhängig von diesem,
+1826/27 von dem Schweizer Geometer
+Johannes Oppikofer (1782-1864) erneut
+erfunden.
+Im Unterschied zu Hermanns Planimeter
+war bei diesen die Funktion der x- und yBewegung vertauscht (Abb. 2): Das Ausziehen des Arms (a) mit dem Stift (A)
+bestimmte die Position des Messrads (R)
+auf dem Kegel (K); die x-Bewegung drehte
+den Kegel.
+Erstmals konstruiert wurde das Planimeter
+um das Jahr 1828 von Heinrich Rudolf
+Ernst (1803-1863) und im Folgejahr von
+Oppikofer der Berner Naturforschenden
+Gesellschaft vorgestellt.
+1834 baute Ernst in Paris eine leicht verbesserte Version von Oppikofers Planimeter. Abb. 3 zeigt den Kegel des Planimeters
+von Ernst. Die Position des Messrads (R)
+auf dem Kegel (K) bestimmte der Arm (D);
+das Verschieben des Planimeters versetzte
+den über das Rad (T) den Kegel in Umdrehung.
+
+
+Auch ohne einen mathematisch korrekten
+Beweis sieht man leicht, dass das KegelReibrad-Planimeter funktioniert. Denn nach
+dem zweiten Strahlensatz gilt (Abb. 3):
+:
+
+′=
+
+: ′ ′,
+
+d. h. der Radius
+der Deckfläche des
+Kegelstumpfs an der Position des Messrads
+R vergrößert sich im gleichen Verhältnis, in
+dem der Arm D nach links ausgezogen
+wird. Da die Strecke, die das Messrad bei
+einer Umdrehung des Kegels abrollt, dem
+Umfang U der Deckfläche des Kegelstumpfs entspricht, hängt diese ebenfalls
+linear von
+ab mit
+= 2∙
+
+∙
+
+und es gilt weiter:
+:
+
+und ′ = 2 ∙
+′= : ′
+
+∙ ′ ′,
+
+Damit ist die vom Reibrad R des Planimeters abgefahrene Strecke proportional zu
+der mit dem Stift umfahrenen Fläche.
+Befestigt man an der Achse von R einen
+Zeiger mit Skala, kann man die so gemessene Fläche ablesen (Abb. 4).
+
+
+Mechanisches Rechnen
+
+Version des Astronomen Peter Andreas
+Hansen (1795-1874) kann im deutschen
+Museum bewundert werden (Abb. 5).
+
+
+Das Scheiben-Planimeter
+Bereits 1825 hatte Gonella festgestellt, dass
+statt des aufwändig herzustellenden Kegels
+auch eine Scheibe verwendet werden kann.
+Der Nachweis ist einfach: Auch hier ist die
+zurückgelegte Strecke U des Messrads R
+proportional zum Radius:
+=2⋅
+
+⋅
+
+wobei r die Länge ist, um die der Arm a
+ausgezogen wurde. Um das Jahr 1850
+konstruierte der Schweizer Ingenieur
+Kaspar Wetli (1822-1889) ein solches
+Scheiben-Planimeter. Eine verbesserte
+
+(Foto: Deutsches Museum)
+
+Das Polar-Planimeter
+Im Jahr 1854 gelang Jacob Amsler (18231912) die Entwicklung eines Polarplanimeters (Abb. 6) [1, 2]. Es erreichte eine Genauigkeit von 1:1000.
+Das Polarplanimeter kam ohne Kegelrad
+und Scheibe aus und ließ sich daher wesentlich günstiger produzieren. Amsler gründete 1854 eine feinmechanische Werkstätte
+in Schaffhausen und vertrieb sein Planimeter weltweit.
+
+
+
+
+
+Er wurde auf der Weltausstellung in Wien
+(1873) ausgezeichnet, erhielt 1885 den Prix
+de Méchanique und 1889 den Prix Montyon
+der Académie des Sciences und wurde 1892
+zum korrespondierenden Mitglied der
+Pariser Académie gewählt. 1894 wurde ihm
+für seine Verdienste die Ehrendoktorwürde
+der Universität Königsberg verliehen. Bis
+zu seinem Tod im Jahr 1912 wurden mehr
+als 50.000 Exemplare seines Polarplanimeters verkauft, das sich wegen seiner
+Genauigkeit und seines günstigen Preises
+am Markt durchsetzte.
+
+gleitet oder dreht sich – und zeigt das
+umfahrene Volumen an. Der angezeigte
+Wert muss schließlich noch mit einem
+Kalibrierungsfaktor multipliziert werden,
+um das gesuchte Ergebnis in cm² zu erhalten.
+
+
+
+Mit der Nadel rechts unten wird das zu
+messende Objekt umfahren; das Gewicht
+rechts oben hält den Ausgangspunkt des
+Gelenkarms fest. Das Messrad links unten
+
+Ein solches Polarplanimeter lässt sich sehr
+schön mit fischertechnik konstruieren
+(Abb. 8). Die beiden Arme lassen sich mit
+Bausteinen 30 oder Aluprofilen bilden, als
+Gelenk dient ein Gelenkwürfel. Als
+Messrad verwenden wir einen Spurkranz
+mit Flachnabe auf einer Rastachse mit
+Schnecke. Die Lagerung der Rastachse
+erfolgt in zwei Rollenlagern. Der Spurkranz
+(Umfang 9 cm) erhält eine 10er-Skala mit
+Teilstrichen. Den 10er-Übertrag realisieren
+wir mit einem Rast-Z10; die 10er-Skala
+kleben wir auf eine auf der Rastachse
+befestigte Flachnabe (Abb. 9).
+
+
+
+
+Mechanisches Rechnen
+
+Das originale Polarplanimeter verwendet
+einen Nonius für eine genauere Ablesung –
+darauf verzichten wir in unserem Modell,
+da das Spiel der Bauteile der Messgenauigkeit ohnehin Grenzen setzt.
+
+den senkrechten Teil des Weges gleitet es.
+Damit berechnet sich die vom Messrad
+abgerollte Strecke R wie folgt:
+
+Die passenden Skalen gibt es im DownloadBereich der ft:Community. Den Faktor, mit
+dem man das Messergebnis multiplizieren
+muss, kann man leicht auf Millimeterpapier
+experimentell ermitteln.
+
+Mit
+
+=
+
+ℎ
+
+cos =
+
+gilt weiter:
+
+=
+
+Mathematischer Hintergrund
+Dass sich mit einem Polarplanimeter ein
+Flächeninhalt bestimmen lässt, ist nicht auf
+den ersten Blick einleuchtend. Wir können
+uns den mathematischen Zusammenhang
+allerdings leicht an einem etwas einfacheren Planimeter, dem Linearplanimeter,
+plausibel machen. Ein Linearplanimeter
+besitzt nur einen Arm, der auf einer festen
+Schiene gleitet (Abb. 10). Die Messvorrichtung entspricht der des Polarplanimeters.
+
+∙ cos
+
+∙
+
+Es gilt also für die Fläche
++
+
+=
+
+ℎ
+
+∙ℎ=
+
++ :
+∙
+
+Die vom Messrad zurückgelegte Strecke
+ist also proportional zur Fläche + .
+
+Die Bewegungen des Messrads beim Abfahren der Strecken ( ) und ( ) heben
+sich gegenseitig auf, da das Abfahren einer
+Hin- und Zurückbewegung entspricht.
+Das Abfahren der Strecke ( ) hingegen
+führt zu einer (gegenüber der gleichlangen
+Strecke ( )) umgekehrten Bewegung des
+Messrads. Die Länge der zurückgelegten
+Strecke berechnet sich zu:
+
+
+Betrachten wir zunächst eine rechteckige
+Fläche F, die wir mit unserem Planimeter
+abfahren möchten (Abb. 11).
+
+=
+
+∙ cos
+
+=
+
+∙
+
+Damit folgt für die insgesamt abgerollte
+Strecke am Messrad:
+∙( − ) =
+
+=
+
+∙ℎ −
+∙
+∙ (ℎ − ) =
+
+Wie man sieht, ist die vom Messrad
+zurückgelegte Strecke proportional zur
+Fläche .
+
+Linearplanimeter
+
+Wir beginnen mit der Strecke ( ). Unser
+Messrad rollt dabei nur den zum Messrad
+parallelen Teil der abgefahrenen Strecke ab;
+
+Nähern wir nun eine beliebige Fläche durch
+Rechtecke an (Abb. 12), sehen wir leicht,
+dass unser Linearplanimeter durch Umfahren der äußeren Ränder der Rechtecke
+die Gesamtfläche bestimmt. Denken wir
+uns nun die Rechtecke unendlich schmal,
+dann müssen wir nur noch den Rand der
+Fläche mit dem Linearplanimeter umfahren, um den Flächeninhalt zu bestimmen.
+
+
+
+[2]
+
+Jacob Amsler: Über das PolarPlanimeter. Polytechnisches Journal,
+Band 140, Nr. LXXIII., 1856, S.
+321-327.
+
+[3]
+
+Carl Maximilian von Bauernfeind:
+Zur Geschichte der Planimeter.
+Polytechnisches Journal, Band 137,
+Nr. XXII., 1855, S. 81-87.
+
+[4]
+
+Stefan Drechsler, Barbara Haeberlin:
+Prinzipien und Konstrukteure nichtintegrierender Planimeter, ein historischer Überblick. 15. Int. Treffen
+der Rechenschiebersammler und 4.
+Symposium zur Entwicklung der
+Rechentechnik, 2009.
+
+[5]
+
+Stefan Drechsler, Barbara Haeberlin:
+Cones, Disks, Wheels and Spheres
+for Area and Integration from
+Bavaria to Boston and beyond.
+Cambridge, 2011.
+
+[6]
+
+Barbara Haeberlin: Planimeter of
+Johann Martin Hermann.
+YouTube.com
+
+[7]
+
+Barbara Haeberlin: Ernst-Planimeter
+(1834). YouTube.com
+
+[8]
+
+Franz Kamber: Mathematik des
+Planimeters. In: Vermessung,
+Photogrammetrie, Kulturtechnik
+10/1998, S. 524-526.
+
+[9]
+
+Thomas Püttmann: Die Rechenmaschine. ft:pedia 1/2015, S. 25-39.
+
+Fläche durch Rechtecke
+
+Für das Polarplanimeter gelingt der Nachweis ganz ähnlich, wenn auch nicht ganz so
+anschaulich, wenn wir unsere Überlegungen von Rechtecken auf Kreissegmente
+übertragen.
+Heute gibt es dank des Computers effizientere Möglichkeiten, um Flächeninhalte zu
+bestimmen. Doch wurden bis in die zweite
+Hälfte des 20. Jahrhunderts zahlreiche
+weitere feinmechanische Messgeräte zur
+Bestimmung von Flächeninhalten (Integratoren) entwickelt, viele davon auf der
+Grundlage von Amslers Polarplanimeter.
+Sie sind teilweise noch heute im Einsatz.
+
+Literatur
+[1]
+
+
+Jakob Amsler: Über die mechanische
+Bestimmung des Flächeninhalts, der
+statischen Momente und der Trägheitsmomente ebener Figuren, insbesondere über einen neuen Planimeter. Vierteljahresschrift der naturforschenden Gesellschaft Zürich,
+1856.
+
+

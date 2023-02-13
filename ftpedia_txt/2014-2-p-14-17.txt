@@ -1,0 +1,168 @@
+
+
+Optik
+
+Einstieg in Experimente mit Lasern
+Andreas Gail
+Laser gewinnen im Bereich der Technik, aber auch in der Medizin, immer weiter an
+Bedeutung. Längst sind sie nicht mehr Science-Fiction, sondern im täglichen Leben angekommen. Angefangen bei der Scanner-Kasse im Supermarkt, dem CD Spieler zu Hause oder auch
+als Entfernungsmesser für den Heimwerker. Höchste Zeit also, diese noch immer etwas
+futuristisch anmutende Technik etwas näher zu betrachten. Beginnen wollen wir mit dem
+Selbstbau einer Lasereinheit; anschließend folgen zwei Anwendungsbeispiele.
+
+Sicherheit
+Die verfügbaren Laser werden in Gefährlichkeitsklassen von 1 bis 4 eingeteilt,
+dabei sind die Laser der Laserklasse 4 die
+gefährlichsten. Daher werden Experimente
+nur mit Lasern der Klasse 1 empfohlen.
+Trotzdem sollte niemals in das Laserlicht
+direkt oder über Spiegel hineingeblickt
+werden. Das gilt besonders bei Verwendung von Linsen. Sicherheitshinweise der
+Hersteller sind zu beachten.
+
+Punkt und Linie
+Für die später folgenden Experimente
+werden zwei verschiedene Laser eingesetzt. Dieses sind einmal Laser mit einer
+punktförmigen
+Lichtaussendung
+und
+einmal mit einer linienförmigen. Hierbei
+werden Laser für einen Gleichspannungsbereich von 3 bis 12 V mit einer Leistung
+von 2 bis 5 mW verwendet (Conrad
+#816296 und #816304). Hinsichtlich der
+spezifizierten Betriebsspannung erscheint
+alles bestens geeignet, um direkt in die
+Experimente einzusteigen.
+Doch zwei Dinge sollten unbedingt bei der
+Verwendung berücksichtigt werden, um
+die Laser nicht gleich zu zerstören. Zum
+einen muss unbedingt auf die richtige
+
+Polung geachtet werden. Weiterhin sind
+die Laser empfindlich hinsichtlich elektrostatischer Aufladung.
+
+vor elektrostatischer Aufladung
+
+Gehäuse und Schutzschaltung
+Die beiden oben genannten Probleme soll
+die folgende Schutzschaltung möglichst
+weitgehend lösen (Abb. 2).
+
+
+Die ggf. falsche Polung wird hierbei über
+einen Brückengleichrichter kompensiert.
+Den Schutz vor der elektrostatischen
+Aufladung übernehmen ein Kondensator
+und ein Widerstand. Kondensatoren haben
+
+
+Optik
+
+dabei die Eigenschaft, kurzzeitig auftretende Spannungsdifferenzen auszugleichen. Betrachtet man den fertigen
+Aufbau, ergibt sich folgendes:
+
+unterschiedlicher Brennweite (siehe auch [1])
+
+
+
+eingebaut in ein ft-Batteriekasten mit Brückengleichrichter (1), Kondensator 0,1 µF (2),
+Widerstand 10 kΩ (3) und Laser (4)
+
+Zur Messung der Brennweite mithilfe des
+zuvor aufgebauten Linienlasers und des
+nachfolgend gezeigten Versuchsaufbaus
+kann die Messung beginnen.
+
+Der vollständige Aufbau wurde mit dem
+Gefahrenhinweis des Laserherstellers versehen (Abb. 4).
+
+
+
+
+Linienlaser
+Fischertechnik hat uns in der Vergangenheit in den Optik-Kästen einige Linsen
+bereitgestellt, wie nachfolgend gezeigt.
+Diese sind allerdings nicht beschriftet, und
+so läßt sich nicht erkennen, welche Brennweite sie haben. Mit der im Folgenden
+beschriebenen Methode können die Brennweiten experimentell bestimmt werden.
+
+Spannungsquelle und zu vermessender Linse
+
+
+
+linien durch einen Punkt verlaufen: den
+Brennpunkt der Linse. Der Abstand von
+der Linse zum Brennpunkt wird Brennweite genannt.
+
+
+Wird die Lasereinheit parallel zur Linsenfläche verschoben ergeben sich für drei
+aufeinander folgende Einstellungen die
+Bilder in Abb. 10. Da bei dem Versuchsaufbau mit einem vertikal ausgerichteten
+Linienlaser gearbeitet wird, wird auf der
+ebenen Bauplatte ein sichtbarer linienförmiger Laserverlauf möglich. Es bietet
+sich an, auf der ebenen Bauplattenseite ein
+Blatt Papier mit Klebestreifen zu
+befestigen. Hierbei sollte das Papier
+möglichst frei von Wellen aufgeklebt
+werden, um später eine durchgängige Linie
+zu erhalten.
+
+Es drängt sich zum Schluss die Frage auf,
+was man mit der gewonnen Erkenntnis
+anfangen kann. Eine Antwort könnte sein,
+auf diese Weise einen Fotowiderstand zielgerichteter einsetzen zu können, indem vor
+den Fotowiderstand eine oben gezeigte
+Linse im richtigen Abstand vorgeschaltet
+wird.
+
+Punktlaser
+Eine einfache klassische Anwendung für
+einen Punktlaser stellt eine Lichtschranke
+dar. Bei einem Laser lassen sich jedoch
+deutlich weitere Strecken überbrücken. Mit
+dem gezeigten Prinzipaufbau konnten
+mühelos mehrere Meter überbrückt
+werden.
+
+(gezeigt sind nur wenige Zentimeter; mehrere
+Meter sind jedoch mühelos erreichbar, gegebenenfalls unter Nutzung einer Störlichtkappe)
+
+Weitere Anwendungen
+
+
+Wird bei jeder dieser drei Einstellungen
+mit einem Bleistift die jeweilige Laserlinie
+nachgezogen zeigt sich, dass alle Bleistift16
+
+Mit einem solchen einfachen Laser lassen
+sich zahlreiche weitere Anwendungen
+realisieren. Prinzipiell vorstellbar ist der
+Aufbau einer groben Entfernungsabschätzung; über ein Feld von Sensoren ließe
+sich der Geradeauslauf eines ansonsten frei
+beweglichen Fahrzeugs regeln. Man darf
+gespannt sein, was sich die Leserschaft
+alles einfallen lassen wird …
+
+
+Optik
+
+Hinweis zur Gehäusefertigung
+Das oben gezeigte Batteriegehäuse zeigt
+sich sehr widerspenstig bei der Bearbeitung. Das Hineinbohren von Löchern ist
+nur schwer und unschön möglich. Eine
+einfache und schnelle Methode ist die
+Verwendung eines Locheisens (Abb. 12).
+Einen Holzklotz auf der Innenseite des
+Gehäuses plan unterlegen, ein gezielter
+kräftiger Schlag – und das Loch ist ausgestanzt.
+
+Löchern in ein Batteriegehäuse
+
+Referenzen
+[1]
+
+Stefan Falk: Perlentauchen (Teil 4).
+ft:pedia 2/2013, S. 18-30.
+
+
+

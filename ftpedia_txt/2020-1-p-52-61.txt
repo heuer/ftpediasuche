@@ -1,0 +1,750 @@
+
+
+Elektronik
+
+Elektronikmodule (Teil 2)
+Hans-Christian Funke
+Elektronik kann die Modellbauwelt beleben und um ein Vielfaches interessanter werden lassen.
+Viele Modelle werden heute auch mit kleinen Computer-Interfaces ausgestattet und können
+somit völlig unabhängig und eigenständig Modelle steuern. Aber jeder noch so kleine Computer
+basiert auf den Grundlagen der digitalen Elektronik, den Gattern und Speichern. Die Elektronikmodule helfen dieses Grundlagenwissen aufzubauen, zu erlernen und zu verstehen.
+
+Digitale Grundbausteine
+Bei der Überlegung, welche Elektronikmodule sinnvoll für den Modellbau sind,
+bin ich zu dem Schluss gekommen, dass die
+Grundfunktionen in der digitalen Elektronik
+immer gebraucht werden. Ein Vorteil ist,
+dass mit den Grundfunktionen auch alle
+
+70010
+AND-NANDModul mit
+2 Gattern mit
+4 Eingängen
+
+70011
+AND-NANDModul mit
+4 Gattern mit
+2 Eingängen
+
+anderen Funktionen erstellt werden können.
+So können aus den einfachen Logik-Gattern
+und Speichern (Flip-Flop) Binärzähler,
+Schieberegister, Multiplexer, Halb- und
+Volladdierer und vieles mehr aufgebaut
+werden.
+
+70012
+OR-NORModul mit
+2 Gattern mit
+4 Eingängen
+
+70013
+OR-NORModul mit
+4 Gattern mit
+2 Eingängen
+
+70014
+EXOR-EXNORModul mit
+4 Gattern mit
+2 Eingängen
+
+
+70019*
+Inverter-PlusModul mit
+4 Invertern
+
+Elektronik
+
+70008
+RS-Flip-FlopModul mit
+4 Speichern
+
+70006
+D-Flip-FlopModul mit
+2 Speichern
+
+70007
+JK-Flip-FlopModul mit
+2 Speichern
+
+70005
+Mono-FlopModul mit
+2 Speichern
+
+* Das Gehäuse-Design wurde noch einmal überarbeitet; leider stand bei Redaktionsschluss noch kein
+aktuelles Foto zu Verfügung.
+
+Aus diesem Grund sind ein großer Teil der
+Elektronikmodule Logik-Gatter (ANDNAND, OR-NOR, EXOR-EXNOR, Inverter – Abb. 1-6) und Speicherbausteine (RSFF, D-FF, JK-FF, Mono-Flop – Abb. 7-10).
+Bestehend aus diesen Grundbausteinen
+wird es auch ein „Labor für digitale Grundlagen“ (75000) geben, das für Lern- und
+Schulungszwecke eingesetzt werden kann.
+
+Mehrfachfunktionen
+Einige Elektronikmodule bieten neben der
+einfachen Grundfunktion auch eine Kombination von Funktionen an. Durch die Mehrfachfunktionen werden Elektronikmodule
+interessanter, vielfältiger einsetzbar und
+können effizienter benutzt werden.
+
+Definition
+
+70004 Taktgenerator
+Taktgeber (low-high-low-…) und
+ein 8-bit Binärzähler
+
+Die Elektronikmodule arbeiten mit positiver Logik. Im weiteren Text werden folgende Bezeichnungen verwendet:
+
+70010 AND-NAND-Modul
+RS-FF, AND-NAND mit 7/6/5/4/3/2
+Eingängen und bis zu zwei Inverter
+
+ logisch „0“ = low = minus (-) = Masse
+oder GND
+ logisch „1“ = high = plus (+) = Betriebsspannung = Vdd
+
+70011 AND-NAND-Modul
+1-2 RS-FF, mehrfach AND-NANDs
+mit 5/4/3/2 Eingängen oder bis zu
+vier Inverter
+
+
+
+
+70012 OR-NOR-Modul
+RS-FF, OR-NOR mit 7/6/5/4/3/2
+Eingängen o. bis zu zwei Inverter
+70013 OR-NOR-Modul
+1-2 RS-FF, mehrfach OR-NORs
+mit 5/4/3/2 Eingängen oder bis zu
+vier Inverter
+70015 Multifunktionsmodul
+Differenzverstärker mit Minilautsprecher
+70019 Inverter-Plus-Modul
+Inverter und Verstärker (logisch 1)
+70021 Experimentiermodul
+Hat keine eigene und doch sehr
+viele Funktionen
+Tab. 1: Mehrfachfunktionen der Module
+
+Technik-Spezial
+Soweit der allgemeine Überblick über die
+Grundbausteine der Elektronikmodule. Im
+Anschluss gehe ich noch einmal, für die
+technisch Interessierten, auf die Funktion
+der einzelnen Elektronikmodule mit Details
+zum Aufbau ein.
+
+Wer lieber etwas aus der Praxis haben
+möchte, kann sich das Modell „Modulix“
+[1] einmal ansehen und von hier gleich zum
+Schlusswort am Ende des Beitrags springen.
+70019 Inverter-Plus-Modul
+Der Inverter gehört zu den digitalen Grundbausteinen, allerdings bieten die meisten
+Elektronikmodule bereits auch ein invertiertes Ausgangssignal an, so dass in der
+Regel kein Inverter benötigt wird. Dennoch
+gibt es immer wieder Situationen, in denen
+ein Inverter erforderlich ist. Ein Inverter
+kann – sofern ein Gatter zu Verfügung steht
+bzw. frei ist – auch ersatzweise mit einem
+NOR- oder NAND-Gatter simuliert werden, in dem man alle Eingänge miteinander
+verbindet.
+Das „Plus“ an diesem Elektronikmodul ist,
+dass neben der einfachen Inverter-Funktion
+eine Verstärkung für das logische Signal
+„1“ integriert wurde. Durch diese Verstärkung können kleine Verbraucher (Lampen,
+Magnete, o. ä.) direkt angesteuert werden.
+Neben dem Ausgang befindet sich ein
+
+
+
+Elektronik
+
+Masseanschluss, so dass die Verbraucher
+einfach an den Inverter-Ausgang (+) und
+Masse (-) angeschlossen werden können.
+Eingang Ausgänge
+A
+
+Y
+
+Y
+
+
+
+
+Tab. 2: Logik-Tabelle für das 70019
+Inverter-Gatter
+
+Sollte das Eingangssignal einmal den falschen logischen Wert liefern, damit der
+Verbraucher eingeschaltet wird, dann kann
+über einen DIP-Schalter die Invertierung
+abgeschaltet werden.
+Beim Inverter-Plus-Modul stehen an jedem
+Ausgang bis zu 250 mA für den Verbraucher zu Verfügung. Die Ausgänge
+verfügen über eine Strombegrenzung und
+sind damit kurzschlussfest (Abb. 11).
+70010/70011 AND-NAND-Modul
+Das Elektronikmodul 70010 enthält zwei
+unabhängige AND- und NAND-Gatter mit
+je vier Eingängen und beim 70011 sogar
+vier unabhängige Gatter mit je zwei Eingängen, wobei die NAND-Funktion einfach
+durch Bereitstellung eines invertierten Ausgangssignales des AND-Gatters simuliert
+wird.
+
+Art von FF nennt man RS-FF, wobei das ‚S‘
+für setzen und das ‚R‘ für rücksetzen steht –
+die einfachste Form eines FFs. Logische
+„0“ an „S“ bzw. „R“ bewirkt das Setzen
+bzw. Rücksetzen des FF.
+Eingänge
+
+Ausgänge
+
+A
+
+B
+
+C
+
+D
+
+Y
+
+Y
+
+
+X
+
+X
+
+X
+
+
+
+X
+
+
+X
+
+X
+
+
+
+X
+
+X
+
+
+X
+
+
+
+X
+
+X
+
+X
+
+
+
+
+Tab. 3: Logik-Tabelle für das 70010 ANDNAND-Gatter mit vier Eingängen (X =
+Zustand hat keinen Einfluss)
+Eingänge Ausgänge
+A
+
+B
+
+Y
+
+Y
+
+
+X
+
+
+
+X
+
+
+
+
+Tab. 4: Logik-Tabelle für das 70011 ANDNAND-Gatter mit zwei Eingängen (X =
+Zustand hat keinen Einfluss)
+
+70012/70013 OR-NOR-Modul
+Das Elektronikmodul 70012 enthält zwei
+unabhängige OR- und NOR-Gatter mit je
+vier Eingängen; beim 70013 sind es vier
+unabhängige Gatter mit je zwei Eingängen.
+Die NOR-Funktion wird durch Bereitstellung eines invertierten Ausgangssignals
+des OR-Gatters realisiert.
+Eingänge Ausgänge
+
+
+Das NAND-Gatter ist eines der wichtigsten
+Grundfunktionen in der digitalen Elektronik, weil damit z. B. ein Flip-Flop (FF)
+aufgebaut werden kann (Abb. 12). Diese
+
+A
+
+B
+
+Y
+
+Y
+
+
+
+
+
+
+X
+
+
+
+X
+Tab. 5: Logik-Tabelle für das 70013 OR-NORGatter mit zwei Eingängen (X = Zustand hat
+keinen Einfluss)
+
+
+
+
+Die Ausgangsstufe ist bei allen Gatter- und FF-Modulen identisch.
+Eingänge
+
+Ausgänge
+
+A
+
+B
+
+C
+
+D
+
+Y
+
+Y
+
+
+
+
+
+
+
+
+X
+
+X
+
+X
+
+
+
+X
+
+
+X
+
+X
+
+
+
+X
+
+X
+
+
+X
+
+
+
+70014 EXOR-EXNOR-Modul
+Das EX-ODER-Modul gibt es nur mit vier
+Gattern zu je zwei Eingängen. Es vergleicht
+die logischen Zustände an den beiden Eingängen. Über den invertierenden Ausgang
+wird die EXNOR-Funktion realisiert.
+Eingänge Ausgänge
+
+X
+X
+X
+Tab. 6: Logik-Tabelle für das 70012 OR-NORGatter mit vier Eingängen (X = Zustand hat
+keinen Einfluss)
+
+A
+
+B
+
+Y
+
+Y
+
+
+
+
+
+
+
+
+
+Auch aus zwei NOR-Gattern lässt sich ein
+RS-FF aufbauen, bei dem die logische „1“
+an „S“ bzw. „R“ das Setzen bzw. Rücksetzen zur Folge hat.
+
+
+
+
+
+Tab. 7: Logik-Tabelle für das 70014 EXOREXNOR-Gatter mit zwei Eingängen
+
+In Tab. 7 findet ihr die Logik-Tabellen zu
+den verschiedenen Gatter-Funktionen und
+könnt so die unterschiedlichen Funktionsweisen leicht erkennen.
+
+
+
+Bei allen Gatter- und FF-Modulen ist eine
+einheitliche Ausgangsstufe integriert, die es
+ermöglicht, mehrere Elektronikmodule oder
+auch andere Bausteine oder ComputerInterfaces anzuschließen, die z. B. auf TTLBasis funktionieren und einen höheren
+Strombedarf haben. Die Ausgangsstufe
+liefert bis zu 3 mA pro Ausgang.
+
+
+Elektronik
+
+
+Alle Eingänge sind bei den Gattern mit Pulldown-Widerständen versehen, sodass im
+unbeschalteten Zustand an den Eingängen
+ein low (logische „0“) anliegt.
+70005 Mono-Flop-Modul
+Ein Mono-Flop (MF) ist ein zeitlich begrenzter Speicher. Das Mono-Flop-Modul
+beherbergt gleich zwei MFs mit unterschiedlichen Haltezeiten. Durch ein high
+am Eingang „Ck“ wird das MF gesetzt und
+nach der Haltezeit wird das MF automatisch
+wieder zurückgesetzt. Die Haltezeiten
+werden durch einen Kondensator und einen
+Widerstand bestimmt, die für die beiden
+MFs von Hause aus unterschiedlich sind
+(Abb. 15).
+Die Haltezeit lässt sich über den Drehregler
+(Potentiometer P1) verändern. Lässt man
+beide DIP-Schalter offen, kann man einen
+Kondensator zwischen die Anschlüsse
+„C+“ und „C-“ stecken (bei einem Elko die
+Polung beachten!) und so seine eigene
+
+Haltezeit (T) generieren. Die Haltezeit T
+lässt sich so berechnen:
+𝑇 = 𝑅𝐺 ∙ 𝐶
+𝑅𝐺 = 𝑃1 + 𝑅2
+Beispiel für die Berechnung der Haltezeit
+bei Verwendung eines Elko (ElektrolytKondensator) mit 470 µF zwischen C+ und
+C- beim MF1:
+Drehregler auf null:
+𝑇 = 47kΩ ∙ 470μF
+= 47.000Ω ∙ 0,000470F
+= 22,09s
+Drehregler auf Maximum:
+𝑇 = 547kΩ ∙ 470μF
+= 547.000Ω ∙ 0,000470F
+= 257,09s
+Damit können also Haltezeiten von 22
+Sekunden bis 4 Minuten 28 Sekunden
+erreicht werden. Bitte beachtet, dass die
+Berechnung immer etwas von der Realität
+
+
+
+
+abweichen wird, weil jedes Bauteil gewisse
+Toleranzen in seiner Wertigkeit hat (Abwiechungen vom Nennwert) – Kondensatoren in der Regel 10-20% und Widerstände
+1-5%.
+70008 RS-Flip-Flop-Modul
+Dieses Elektronikmodul stellt vier unabhängige RS-FFs zu Verfügung, jeweils mit
+einem Q und einem Q-Ausgang. Das FF
+wird gesetzt mit einem high am „S“Eingang und wieder zurückgesetzt mit
+einem high am „R“-Eingang (Tab. 8).
+Eingänge
+
+Ausgänge
+
+S
+
+R
+
+Q
+
+
+
+
+X
+
+Q
+
+unverändert
+
+In der Praxis hat sich gezeigt, dass der Betrieb eines Motors im gleichen Stromkreis
+zu unerwünschten Störungen führen kann.
+Die Kondensatoren an den Eingängen verhindern ungewolltes Umschalten des FF,
+was z. B. durch Abrissfunken von den
+Motoren verursacht würde. Noch besser
+wäre es, Motoren über eine eigene Stromversorgung anzusteuern.
+
+
+
+X
+Tab. 8: Logik-Tabelle für das 70008 RS-FF
+(X = Zustand hat keinen Einfluss)
+
+ High an S setzt das FF (Q = high).
+ High an R setzt es zurück (Q =low).
+Häufig werden RS-FF benötigt, um Taster
+zu entprellen. Wird ein Taster gedrückt entstehen immer mehrere Impulse (Abb. 16).
+Die sicherste Methode, Prellimpulse zu
+vermeiden ist, den Taster an ein RS-FF
+anzuschließen (Abb. 17).
+
+
+Damit die FFs sich beim Einschalten der
+Betriebsspannung in einem definierten Zustand befinden, wurde der Kondensator am
+„R“-Eingang an Vdd gelegt. Durch dieses
+Konstrukt wird beim Einschalten der Betriebsspannung ein high-Impuls erzeugt, der
+das FF zurücksetzt.
+
+
+
+Elektronik
+
+70007 JK-Flip-Flop-Modul
+Beim JK-FF gibt es die meisten Varianten,
+ein FF zu schalten. Im Elektronikmodul
+70007 sind zwei unabhängige JK-FFs
+untergebracht; es ist baugleich mit dem DFlip-Flop-Modul. Beim JK-FF wurden drei
+Arten vereint – es besteht aus dem JK-FF,
+einem RS-FF und einem T-FF. Alle Arten
+schalten den gleichen Speicher.
+Eingänge
+
+Ausgänge
+
+S
+
+R
+
+J
+
+K
+
+Ck
+
+Q
+
+Q
+
+
+X
+
+X
+
+X
+
+X
+
+
+
+X
+
+
+X
+
+X
+
+X
+
+
+
+
+
+
+
+0-1
+
+
+
+
+
+
+
+0-1
+
+
+
+0-1
+Tausch
+Tab. 9: Logik-Tabelle für das 70007 JK-FF
+(X = Zustand hat keinen Einfluss)
+
+Das JK-FF hat zur Steuerung drei Eingänge
+„J“, „K“ und „Ck“. Die eigentliche Schaltfunktion erfolgt über den „Ck“-Eingang
+(Clock) in Abhängigkeit von den logischen
+Zuständen an den Eingängen „J“ und „K“:
+
+Die Eingänge „S“ und „R“ wirken als RSFF:
+ High an S setzt das FF (Q = high).
+ High an R setzt es zurück (Q =low).
+Bei S = R = low steht die Variante JK-FF
+zur Verfügung:
+ Ein low-high-Impuls an Ck bei high an J
+setzt das FF (Q = high).
+ Ein low-high-Impuls an Ck bei high an
+K setzt das FF zurück (Q = low).
+ Ein low-high-Impuls an Ck bei low an J
+und K bewirkt keine Änderung.
+Bei S = R = low und J = K = high haben wir
+ein T-Flip-Flop:
+ Ein low-high-Impuls an Ck bei high an J
+und K bewirkt, dass Q seinen Zustand
+wechselt (ist Q low, wird Q high; ist Q
+high, wird Q low).
+Die Ausgänge wechseln also mit jedem
+Impuls an Ck ihren logischen Status. „T“
+steht für Englisch „toggle“ (hin und her
+schalten).
+
+
+
+
+Anzahl der Eingänge – bei einem D-FF
+entfallen die Eingänge „J“ und „K“, dafür
+gibt es den Eingang „D“.
+
+Die Eingänge „S“ und „R“ wirken als RSFF:
+
+Der Widerstand R3 bildet mit dem Kondensator C01 einen Tiefpass. Der wirkt durch
+die relativ große Kapazität von C01 auch
+entprellend bei Verwendung von Tastern
+am Eingang „Ck“ (in der Zeichnung „Clk“
+beschriftet), damit nicht durch Störungen
+im Stromkreis, z. B. durch Motoren, ständig
+ein Impuls an „Ck“ generiert wird.
+
+ Ein low-high-Impuls an Ck bei high an
+D setzt das FF (Q = high).
+ Ein low-high-Impuls an Ck bei low an D
+setzt das FF zurück (Q = low).
+
+Der Schaltungsteil aus Diode D6, Kondensator C09 und Widerstand R8 bildet eine
+Reset-Schaltung, die beim Einschalten der
+Betriebsspannung ein Signal an den ResetEingang sendet, das die FFs in einen definierten Zustand bringt.
+70006 D-Flip-Flop-Modul
+Das D-FF ist der typische Datenspeicher in
+der Computertechnik. Letztlich ist es aber
+nur eine Vereinfachung des JK-FF bzw.
+eine Zusammenfassung der Eingänge „J“
+und „K“ zu einem Eingang „D“. Je nachdem, welcher logische Wert an „D“ anliegt,
+wird das FF geschaltet. Zusätzlich verfügt
+das D-FF auch über Eingänge „R“ und „S“,
+über die das FF direkt gesteuert werden
+kann.
+Eingänge
+
+Ausgänge
+
+S
+
+R
+
+D
+
+Ck
+
+Q
+
+Q
+
+
+X
+
+X
+
+X
+
+
+
+X
+
+
+X
+
+X
+
+
+
+
+
+
+0-1
+
+
+
+0-1
+Tab. 10: Logik-Tabelle für das 70006 D-FF
+(X = Zustand hat keinen Einfluss)
+
+
+ High an S setzt das FF (Q = high).
+ High an R setzt es zurück (Q =low).
+Bei R = S = low bekommen wir ein D-FF:
+
+Durch eine Steckverbindung von Ausgang
+Q zum Eingang D wird das D-FF zum T-FF:
+ Mit jedem low-high-Impuls an Ck
+wechseln die Ausgänge ihren Status,
+weil der Ausgang Q immer den logischen
+Zustand liefert, der beim nächsten
+Impuls das D-FF in den entgegengesetzten Zustand umschaltet.
+Wie beim JK-FF gibt es hier eine ResetSchaltung und die Eingangssignale am
+Eingang „Ck“ werden durch einen Tiefpass
+von Spannungsspitzen und Prellimpulsen
+bereinigt.
+Die Schaltung ist identisch mit der des
+Moduls 70007 (Abb. 19); für den Halbleiter
+4027 ist bei 70006 ein 4013 eingesetzt und
+der Eingang „J“ entfällt, während der
+Eingang „K“ durch den Eingang „D“ ersetzt
+wird.
+
+Schlusswort
+Das war es erst einmal zu den Grundbausteinen der digitalen Elektronik – den Gattern und Speichern.
+In der nächsten Folge werde ich auf die
+Elektronikmodule mit speziellen Funktionen eingehen, z. B. auf die Zählermodule
+70001 und 70002, die es seit neuestem auch
+mit verschiedenen LED-Farben gibt (grün,
+gelb, rot, leuchtend blau, leuchtend rot und
+leuchtend gelb-grün), den Taktgenerator
+70004, das Experimentierfeld 70021 und
+die Schaltmodule zur Ansteuerung von
+Motoren, Magneten, Pumpen, etc.
+
+Wer jetzt noch nicht genug hat, kann sich
+das Modell „Modulix“ ansehen, dass ich
+aus nur zwei Elektronikmodulen gebaut
+habe (dafür wären mindestens sechs hobby4-„Silberlinge“ erforderlich). Das Modell
+kann wie ein durch ein Computer-Interface
+
+Elektronik
+
+gesteuertes Modell einem schwarzen
+Streifen folgen. Forstsetzung folgt.
+
+Quellen
+[1]
+
+Funke, Hans-Christian: Modulix.
+ft:pedia 1/2010 (in dieser Ausgabe).
+
+
+

@@ -1,0 +1,504 @@
+
+Computing
+
+Computing
+
+Programmierung des TX in Java, C, C++, C#
+und Logo
+Helmut Jawtusch
+Zweifellos ist ROBO Pro eine leistungsfähige Programmiersprache nicht nur für Einsteiger –
+und geradezu prädestiniert für die Programmierung endlicher Automaten. Sie hat aber auch
+ihre Grenzen: Bei komplexen Programmen ist das Debugging mühsam, Fehlercodes sind nicht
+dokumentiert, die Sensorabfrage ist äußerst langsam und bei großen Programmen kommt es
+auch mal zu Abstürzen der IDE. Da wünscht man sich manchmal eine „vernünftige“
+Programmiersprache herbei – beim TX ist das keine große Sache.
+In diesem Beitrag stelle ich vor, wie man
+den TX-Controller – ohne Verwendung von
+ROBO Pro – auf einer Windows-Plattform
+mit den Sprachen C++, C#, Java, Terrapin
+Logo und C programmieren kann.
+
+Einleitung
+Bis Januar 2012 hat sich Ulrich Müller um
+die Programmierung der fischertechnikInterface gekümmert und auf seiner Webseite ftcomputing.de zahlreiche umfishTreiber veröffentlicht. Inzwischen ist der
+letzte Stand seiner Webseite über das
+Archiv der fischertechnik-Community erreichbar. Ulrich Müllers letzter Treiber war
+umFish50.dll für den TX Controller (Firmware V1.18) mit der zugehörigen Dokumentation umFish50.pdf.
+Am 13.11.2012 veröffentlichte fischertechnik die bis heute aktuelle Windows Library
+„ftMscLib.dll“ im Download Programming
+ROBO TX Controller v1.5 inklusive Dokumentation (Windows_Library_ftMscLib).
+Diese Library unterstützt die Firmware
+V1.30 des TX-Controllers und damit auch
+den I2C-Port (EXT2).
+Ich habe umfish50.dll an die aktuelle Library ftMscLib.dll angepasst und um Befehle
+für das GPS-Modul Navigatron [1] sowie
+
+die Pixy-Kamera CMUcam5 [2] erweitert.
+Die neuste Treiberversion habe ich am
+23.02.2017 über die Download-Seite der
+fischertechnik-Community zur Verfügung
+gestellt. Kopiere alle Treiber unter Windows 7 (32 bit) nach
+..\windows\system32
+
+und unter Windows 7 (64 bit) nach
+..\windows\syswow64.
+
+Im Folgenden behandele ich zuerst Programmbeispiele in den Sprachen C++, C#,
+Java und Terrapin Logo. Am Schluss gebe
+ich Hinweise, wie man mit dem C-Compiler
+Programmierpaket der MSC GmbH auf
+fischertechnik.de C-Programme schreiben
+und in den Speicher des TX laden kann.
+Alle Programme habe ich unter Windows 7
+(32 bit) und Visual Studio 2010 bzw. mit
+BlueJ 3.1.7 getestet und in dem Packet TXBeispiel-Programme auf der Webseite der
+fischertechnik-Community zum Download
+bereitgestellt.
+Der USB/Bluetooth-Treiber
+Für alle Sprachen muss zuerst aus dem
+Packet KeLib_V1_78a → Driver mit
+setup.exe der Port-Treiber installiert
+werden. Bisweilen blockieren andere USB-
+
+
+
+
+Treiber den TX-Treiber; dann muss KeLib
+deinstalliert und nach einem Neustart neu
+installiert werden.
+Die COM-Nummer
+Die emulierte COM-Nummer kann man bei
+USB über den Gerätemanager in der
+Systemsteuerung und bei Bluetooth über
+die Eigenschaften oder den Status des Bluetooth-Geräts ermitteln.
+ROBO Pro überträgt die aktuelle Firmware
+V1.30 auf den TX-Controller, wenn man
+den Interface-Test aufruft.
+
+Ein C++-Programm
+Vorbereitung: Datei → Neu → Projekt →
+CLR-Konsolenanwendung
+
+Füge nun dem Projekt das Element tx.h
+hinzu und oben im Quellkode #include
+"tx.h". Unter Projekt → …Eigenschaften
+→ Linker → Eingabe muss bei Zusätzliche
+Abhängigkeiten noch tx.lib eingetragen
+werden. tx.h und tx.lib befinden sich im
+Paket TX-Beispiel-Programme und sollten
+in den Projektordner kopiert werden. Die
+aktuelle COM-Nummer muss bei
+txOpenController(..)
+
+eingetragen werden.
+In tx.h findest du alle tx-Befehle mit den
+jeweils möglichen Parametern. Achtung:
+Die Nummerierung der Ein- und Ausgänge
+beginnt intern bei 0 und ist daher gegenüber der Beschriftung auf dem TX jeweils
+um eins keiner.
+
+#include "stdafx.h"
+#include <Windows.h>
+#include "tx.h"
+#include <conio.h>
+using namespace System;
+void main() {
+int res = txOpenController(95); // com_Nr
+if (res == 0)
+Console::WriteLine("TX-Controller an COM95 verbunden -\n");
+else {
+Console::WriteLine(L"OpenError");
+return;
+}
+Console::WriteLine("---Zum Blinken:Taster I3 drücken ---");
+while(txGetInput(0, 2) == 0)
+Sleep(12); // Warten auf I3
+Console::WriteLine("--- Bei der Arbeit ---");
+txSetLamp(0, 4, 512);
+Sleep(200);
+// Summer an O5
+txSetLamp(0, 4, 0);
+for (int i=0; i<10; i++) {
+// Lampen an O7 und O8
+txSetLamp(0, 6, 512);
+txSetLamp(0, 7, 0);
+Sleep(200);
+txSetLamp(0, 6, 0);
+txSetLamp(0, 7, 512);
+Sleep(200);
+}
+txSetLamp(0, 7, 0);
+Console::WriteLine("Das war's");
+txCloseController();
+getch();
+}
+
+Listing 1: C++-Beispielprogramm
+
+
+
+Computing
+
+Ein C#-Programm
+Vorbereitung: Datei → Neues Projekt →
+Konsolenanwendung
+Alle benötigten TX-Befehle können mit
+DllImport("TX.dll") importiert werden.
+tx.h und tx.lib werden nicht benötigt,
+aber in tx.h findet man alle verfügbaren
+TX-Befehle.
+
+Bei laufendem Programm kann man mit
+ESC bequem alle Lampen und Motoren abschalten. Dies ist nützlich, wenn laufende
+Motoren blockiert werden.
+Statt
+System.Threading.Thread.Sleep(..);
+
+kann txSleep(..) verwendet werden.
+
+using System;
+using System.Runtime.InteropServices;
+namespace ConsoleApplication1 {
+class Program {
+[DllImport("TX.dll")]
+private static extern int txOpenController(int comnr);
+[DllImport("TX.dll")]
+private static extern int txGetInput(int ctrl, int io);
+[DllImport("TX.dll")]
+private static extern int txSetLamp(int ctrl, int io, int power);
+[DllImport("TX.dll")]
+private static extern int txCloseController();
+[DllImport("TX.dll")]
+private static extern int txSleep(int ms);
+[DllImport("TX.dll")]
+private static extern int txEsc();
+static void Main(string[] args) {
+int res = txOpenController(95);
+if (res == 0)
+Console.WriteLine("TX-Controller an COM95 verbunden \n");
+else {
+Console.WriteLine("OpenError");
+return;
+}
+Console.WriteLine("--- Zum Blinken: Taster I3 drücken ---");
+while(txGetInput(0, 2) == 0)
+txSleep(12);
+//Warten auf I3
+Console.WriteLine("--- Bei der Arbeit ---");
+txSetLamp(0, 4, 512);
+txSleep(200);
+//Summer
+txSetLamp(0, 4, 0);
+while (0 == txEsc()){
+// Blinken bis ESC
+txSetLamp(0, 6, 512);
+txSetLamp(0, 7, 0);
+txSleep(200);
+txSetLamp(0, 6, 0);
+txSetLamp(0, 7, 512);
+txSleep(200);
+}
+txSetLamp(0, 7, 0);
+Console.WriteLine("Das war's");
+txSleep(1000);
+txCloseController();
+}
+}
+}
+
+Listing 2: C#-Beispielprogramm
+
+
+
+
+Ein Java-Programm
+Die Java-Entwicklungsumgebung BlueJ erleichtert die Einführung in die Objektorientierte Programmierung. Auch deshalb
+wird Java im Informatik-Unterricht der
+gymnasialen Oberstufe immer häufiger
+eingesetzt. Das java-Packet ftcomputing.roboTX.jar basiert auf den Treibern
+ftMscLib.dll, javafish50.dll, TX.dll
+und beinhaltet die Klasse FishFaceTX.
+Vorbereitung: Unter Werkzeuge
+Einstellungen… → Bibliotheken muss
+import ftcomputing.roboTX.*;
+
+→
+
+C:\Windows\System32\ftcomputing.ro
+boTX.jar
+
+hinzugefügt werden (oder mit aktuellem
+Pfad). Die Klasse FishFaceTX wird durch
+import ftcomputing.roboTX.* mit den
+Methoden openController, getInput,
+setLamp, finish() usw. eingebunden.
+Eine vollständige Auflistung aller Methoden befindet sich in FishFaceTX.doc.
+finish() wird mit der ESC-Taste auf true
+
+gesetzt. Die Klasse FishFaceTX wird im
+Tutorial Eclipse34FishTX.pdf ausführlich erläutert; dort finden sich viele nützlich
+Hinweise für die Programmierung mit Java.
+
+/* Lampen an O8, O7 und O6 blinken. */
+
+public class TXBasis {
+public FishFaceTX tx = new FishFaceTX();
+public static void main() {
+TXBasis tx = new TXBasis();
+try { tx.Action(); }
+catch(FishFaceException eft) {System.out.println(eft);}
+finally {System.exit(0);}
+}
+private void Action() {
+tx.openController("com95"); //usb oder bluetooth
+System.out.println("Action gestartet - Ende mit ESC");
+hupen(150);
+hupen(600);
+System.out.println("Drücke I3");
+while (!tx.getInput(Unv.I3)) {tx.pause(20);}
+do {
+tx.setLamp(Out.O8,500);
+tx.setLamp(Out.O7,0);
+tx.setLamp(Out.O6,0);
+tx.pause(200);
+tx.setLamp(Out.O8,0);
+tx.setLamp(Out.O7,500);
+tx.setLamp(Out.O6,500);
+tx.pause(200);
+}
+while (!tx.finish()); // Abbruch mit ESC
+tx.setLamp(Out.O8,0);
+tx.closeController();
+System.out.println("--- FINITO ---");
+}
+private void hupen(int ms) {
+tx.setLamp(Out.O5,500);
+tx.pause(ms);
+tx.setLamp(Out.O5,0);
+tx.pause(150);
+}
+}
+
+Listing 3: Java-Beispielprogramm
+
+
+
+Computing
+
+Ein Terrapin-Logo-Programm
+In der Datei TX_Erweiterung.lgo werden
+alle TX-Befehle aus TX.dll importiert.
+Beispiel txlamp:
+TO txlamp :Nr :Speed
+IGNORE (.WINDOWS [|TX.dll|
+|txSetLamp|] :ftiMain :NR - 1
+:Speed)
+END
+
+Die Datei init.lgo enthält Spracherweiterungen, die automatisch beim Starten von
+logo.exe geladen werden. Füge deshalb
+den Inhalt der Datei TX_Erweiterung.lgo
+
+in die Datei init.lgo hinzu und speichere
+sie im Logo-Stammverzeichnis.
+Terrapin Logo (V3.0a vom 03.11.2008) ist
+eine schöne Sprache, die sich schon ab
+Klasse 6 im Unterricht einsetzen lässt. Der
+Entwickler ist Terrapin Software (Cambridge, USA).
+Durch die TX_Erweiterung können Schüler
+auf einfache Art Programme für TXModelle entwickeln. Besonders geeignet ist
+die Programmierung des Gabelstaplers aus
+dem Baukasten ROBO TX Training Lab,
+der gelegentlich bei ebay angeboten wird.
+
+TO start
+ct ts
+txopen 95 ; Verbindung über USB
+pr "|TX über USB (com95) verbunden| pr()
+pr "|Drücke Taster 3 ...|
+while [not txinput 3] [] ; Warte auf Taster 3
+pr "|--- Blinken ---> Ende mit ESC|
+txlamp 5 500 wait 100 txlamp 5 0
+while [not txesc] [
+txlamp 7 512
+txlamp 8 0 wait 200
+txlamp 7 0
+txlamp 8 512 wait 200
+]
+txclose
+pr "|...Verbindung wurde unterbrochen|
+pr "|Ende|
+END
+
+Listing 4: Logo-Beispielprogramm
+
+Programmierung mit C
+Die Datenübertragung per Bluetooth zwischen dem TX und dem PC ist recht langsam. Um z. B. ein Datenpacket eines von
+der Pixycam [2] gesichteten Objektes zu
+übertragen benötigt man ca. 350 ms. Per
+USB dauert es ca. 80 ms. Verwendet man
+ein auf den TX geladenes C-Programm,
+dann entfallen diese Übertragungszeiten.
+Für zeitkritische Vorgänge empfiehlt sich
+die Programmierung in C.
+In ftMscCDemo_V1.3 fehlt noch der CCompiler aus dem C-Compiler Programmierpaket FIRMWARE 1.30 aus dem
+Download-Bereich von fischertechnik.de.
+Dieses Paket enthält den GNU ARM C-
+
+Compiler und einige Batch-Programme
+zum Starten des Compilers sowie zum
+Kopieren des Binär-Kodes auf den TX.
+Vorbereitung: Kopiere ftMscCDemo_V1.3
+in das Stammverzeichnis von c:\ und dann
+alle Dateien aus dem Ordner GNU des
+fischertechnik-Pakets in den leeren Unterordner
+c:\ftMscCDemo_V1.3\Demo_C\Bin\GNU.
+
+Entpacke pspad461en.zip und verbinde
+alle *.ppr-Dateien mit dem Programmiereditor PSPad.exe.
+Verbinde den TX mit einem USB-Port.
+Bearbeite die Datei set_port.bat im
+Ordner Demo_C\Bin und ändere in
+
+
+
+set COM_PORT=COM95
+
+die 95 in die aktuelle COM-Nummer.
+Starte nun mit PSPad TX_Basis.ppr im
+Ordner
+C:\ftMscCDemo_V1.3\Demo_C\Demo\TX_
+Basis
+
+Unter Projekt → Projekt einstellen findest
+du unter Externe Programme sowie
+Kompiler Angaben zur Belegung der Tasten
+zum Starten externer Programme sowie des
+Kompilers. Ich habe die Kompilertaste
+[1010] so belegt, dass nach der Kompilierung sofort load_flash.bat ausgeführt
+wird, das den Binär-Kode in den Flash-
+
+Speicher des TX überträgt (Alternative:
+load_ramdisk.bat).
+Danach kann das USB-Kabel abgezogen
+und das übertragene Programm mit der
+linken roten Taste am TX gestartet werden.
+Um die C-Programme zu vereinfachen habe
+ich in ROBO_TX_PRG.h die folgenden TXBefehle implementiert:
+txlamp, txmotor, txstartmotorsync,
+txare-motorsready, txstartmotor,
+txmotorready, txclearcounter,
+txgetcounter, txtrack, txinput,
+txanalog, txvoltage, txdistance,
+i2cread, i2cwrite.
+
+// Demo program "TX_Basis"
+//
+// Can be run under control of the ROBO TX Controller
+// firmware in download (local) mode.
+// Switches lamps connected to the outputs O7 and O8.
+// A buzzer is connected to O5 and a Switch to I3.
+// Disclaimer - Exclusion of Liability
+#include "ROBO_TX_PRG.h"
+static unsigned long cur_time;
+static unsigned long prev_time;
+static enum {
+buzzer, pause_buzzer, taster, on, pause_on, off, pause_off
+} stage;
+static int wait;
+/* Function Name: PrgInit
+* PrgInit is called once. */
+void PrgInit (TA * p_ta_array, // pointer to the array of transfer areas
+int ta_count) {
+// number of transfer areas in array
+p_ta = &p_ta_array[TA_LOCAL];
+prev_time = 0;
+stage = buzzer;
+wait = 200;
+}
+/ * Function Name
+: PrgTic
+* PrgTic is called every tic (1 ms) realtime. */
+int PrgTic (TA * p_ta_array,
+int ta_count) {
+
+// pointer to the array of transfer areas
+// number of transfer areas in array
+// return code influences firmware
+int rc = 0x7FFF; // 0x7FFF - program will further called;
+// 0
+- program should be normally stopped;
+// any other value is an error, program is stopped
+cur_time = gettime(); // get the value of the system time
+switch (stage) {
+
+
+
+Computing
+
+case buzzer:
+txlamp(4,500);
+prev_time = cur_time;
+stage++;
+return rc;
+case pause_buzzer:
+if (cur_time - prev_time >= wait) {
+txlamp(4,0);
+stage++;
+}
+return rc;
+case taster:
+if (txinput(2)) { stage++; }
+return rc;
+case on:
+txlamp(6,0);
+txlamp(7,500);
+prev_time = cur_time;
+stage++;
+return rc;
+case pause_on:
+if (cur_time - prev_time >= wait) {
+prev_time = cur_time;
+stage++;
+}
+return rc;
+case off:
+txlamp(6,500);
+txlamp(7,0);
+prev_time = cur_time;
+stage++;
+return rc;
+case pause_off:
+if (cur_time - prev_time >= wait) {stage=on;}
+return rc;
+default: return rc;
+
+}
+
+}
+return rc;
+
+Listing 5: C-Demoprogramm
+
+Der Ordner Demo enthält noch vier weitere
+Demoprogramme. Für eigene Programme
+kann man weitere Ordner anlegen, alle
+Dateien aus TX_Basis dorthin kopieren und
+dann TX_Basis.c nach eigenen Vorstellungen verändern.
+Achtung: Wenn der Programm-Name geändert wird, dann muss dieser neue Name in
+…/param.mk eingetragen werden.
+
+Referenzen
+[1]
+
+Dirk Fox: I²C mit dem TX – Teil 6:
+GPS-Sensor. ft:pedia 3/2013, S. 5462.
+
+[2]
+
+Dirk Wölffel, Dirk Fox: I²C mit dem
+TX – Teil 11: Pixy-Kamera (1).
+ft:pedia 4/2014, S. 43-51.
+
+
+

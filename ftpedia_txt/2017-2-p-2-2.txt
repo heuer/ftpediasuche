@@ -1,0 +1,70 @@
+
+
+Editorial
+
+Learning by Doing
+Dirk Fox, Stefan Falk
+Seit Jahren wird in Deutschland diskutiert,
+ob Informatik Pflichtfach werden soll. Die
+Gesellschaft für Informatik e. V., in dieser
+Frage naturgemäß nicht gänzlich unvoreingenommen, hat bereits 2008 Grundsätze
+und Standards für den Informatikunterricht
+in der Sekundarstufe I und 2016 Standards
+für die Sekundarstufe II definiert.
+Ohne Frage: Informatik wird immer wichtiger und ist aus vielen Berufen nicht mehr
+wegzudenken: Biologen programmieren
+Analysegeräte, Maschinenbauer entwickeln
+Systemsteuerungen und Designer codieren
+Webseiten. Damit gehören die Grundlagen
+der noch jungen Informatik sicherlich inzwischen zu dem, was wir gerne als „Allgemeinbildung“ bezeichnen.
+Aber geht der Vorstoß in die richtige Richtung? In Sekundarstufe I sollen Algorithmen, Datentypen und formale Sprachen
+vermittelt werden; später sollen die Schüler
+sich mit Verschlüsselung, HTML-Seiten
+und E-Mail-Protokollen beschäftigen. Und
+in den Ministerien wird von App-Programmierung und Simulationen geschwärmt.
+Hm. Ob das wohl die Themen sind, mit
+denen sich pubertierende Jugendliche für
+Informationstechnik begeistern lassen?
+Keine Frage, die Vermittlung von Grundlagen ist wichtig – wie in Mathe und Physik.
+Motivierend ist sie allerdings in der Regel
+nicht. In der Physik sollte das Experiment
+zur Formel führen, und erst wenn eine Berechnung eine interessante Frage löst, vermag dies für Mathematik zu begeistern. Die
+Informatik benötigt daher die Anwendung,
+denn wie Mathematik und Physik ist sie für
+die meisten Menschen – von Forschern
+
+einmal abgesehen – in erster Linie ein
+Werkzeug. Ein Werkzeug aber erlernt man
+am besten durch Benutzung: Den Hammer
+versteht man nicht über die Erläuterung
+seiner Komponenten, sondern indem man
+damit Nägel einschlägt. Daher überlässt
+man die Erklärung des Hammers auch
+besser nicht Werkzeugexperten, sondern
+zieht lieber einen Zimmermann hinzu.
+Wer für Informatik begeistern will, sollte
+Schülerinnen und Schüler so früh wie möglich – also bereits zu Grundschulzeiten –
+befähigen, ihre fischertechnik-Modelle anzusteuern, seien es nun Kugelbahnen oder
+später Roboterarme, autonome Fahrzeuge,
+Drohnen oder 3D-Drucker. Sind die ersten
+Schritte mit ROBO Pro getan, dann ist es zu
+einer höheren Programmiersprache nicht
+mehr weit: Der Hunger danach kommt von
+selbst. Und die Grundlagen der Informatik
+sind dann später kein theoretisches Übel
+mehr, sondern ergänzen das bereits erworbene Praxiswissen.
+Daher könnte neben einem Brickly-TXT
+auch der neue Bluetooth-Controller von
+fischertechnik zur Einstiegsdroge werden.
+Wer einmal beobachtet hat, wie leichtfüßig
+und hartnäckig Kinder – einmal infiziert –
+das für die Lösung ihrer selbst gewählten
+Problemstellung benötigte Wissen geradezu
+aufsaugen, wird sich keine Sorgen mehr um
+deren (und unser aller) Zukunft machen.
+Beste Grüße,
+Euer ft:pedia-Team
+P.S.: Am einfachsten erreicht ihr uns unter
+ftpedia@ftcommunity.de oder über die Rubrik ft:pedia im Forum der ft-Community.
+
+

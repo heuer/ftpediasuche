@@ -1,0 +1,319 @@
+
+Mechanik
+
+Mechanik
+
+Schwingförderer
+Stefan Reinmüller
+Eine sehr elegante Methode, um Schüttgut zu fördern, ist der Einsatz von Schwing- oder
+Vibrationsförderern. Was es mit dieser Fördertechnik auf sich hat und wie man einen
+Schwingförderer mit fischertechnik konstruiert, zeigt der folgende Beitrag.
+
+Hintergrund
+Schwingförderer, die auch oft als Vibrationsförderer bezeichnet werden, gehören
+zur Gruppe der Stetigförderer. Das bedeutet
+sie liefern einen kontinuierlichen, stetigen
+Materialfluss. Diese Fördermethode hat
+einige Vorteile gegenüber dem allbekannten „herkömmlichen“ Förderband:
+· Sie kann Fördergut in der Größe von
+kleinsten Sandkörnern bis hin zu großen
+Bauteilen bewegt werden.
+· Durch die robuste Bauweise können
+problemlos schwere Lasten aufgenommen werden, die bei Förderbändern
+hohen Verschleiß verursachen würden.
+· Verstopfungen sind kaum möglich, und
+wenn dies doch einmal der Fall sein
+sollte, lösen sich diese im Normalfall
+von selbst wieder auf und es kommt zu
+keinen Problemen.
+Vibrationsförderer werden hauptsächlich in
+zwei Bauformen ausgeführt: als Linearförderer und als Wendelförderer. Dieser
+Beitrag beschäftigt sich vorwiegend mit
+dem Aufbau von Linearförderern im
+Allgemeinen und der Realisierung eines
+fischertechnik-Vibrations-Linearförderers
+im Besonderen.
+Bei Vibrations-Wendelförderern wird das
+Fördergut von einem Topf über eine Wendel nach oben gefördert. Diese Methode
+
+wird oft zum Vereinzeln von Kleinteilen
+verwendet.
+Bei Vibrations-Linearförderern wird das
+Fördergut linear, also entlang einer geraden
+Bahn bewegt. Diese Bahn kann horizontal
+verlaufen oder leicht nach oben beziehungsweise unten geneigt sein.
+
+Aufbau und Funktionsweise
+von Vibrations-Linearförderern
+Solche Anlagen bestehen aus einer Förderrinne, welche sehr robust und steif sein
+muss, um die Schwingungen zu übertragen,
+und einer Baugruppe, die diese Rinne in
+Schwingungen versetzt. Eine wichtige
+Rolle spielt hier natürlich auch die
+Aufhängung der Rinne, welche schwingfähig (meist mit Federn) oder pendelfähig
+gebaut wird.
+Bei der schwingfähigen Aufhängung wird
+die Rinne vorwiegend durch Unwuchtmotoren oder Elektromagneten in die gewünschte Schwingung versetzt.
+
+
+
+
+Bei der pendelfähigen Aufhängung (Abb. 1)
+wird die Förderrinne bevorzugt durch einen
+Schubkurbelantrieb nach vorne und hinten
+bewegt und somit die Rinne in Schwingungen versetzt. Hier ist darauf zu achten,
+dass der Winkel zwischen Hebel und Boden
+kleiner als 90° ist – sonst funktioniert das
+Ganze nicht, weil das Fördergut dann nach
+vorne und hinten geworfen wird.
+
+fischertechnik-Modell
+Bei der hier vorgestellten Lösung (weitere
+Bilder, Video) handelt es sich um eine
+pendelnd gelagerte Förderrinne, die durch
+eine Kurbel (Schubkurbelantrieb) in
+Schwingung versetzt wird.
+Der Antrieb der Förderrinne kommt mit
+wenigen Bauteilen aus. Ein Encoder-Motor
+wird 1:4 übersetzt (Drehzahl wird um den
+Faktor vier vergrößert), um auf die nötige
+Schwingungsfrequenz zu kommen – ab ca.
+der halben Maximaldrehzahl beginnt das
+Fördergut, sich fortzubewegen. Nach dem
+Getriebe wird eine Rast-Gelenkkurbel
+angetrieben. Da die Auslenkung der Kurbel
+hier noch um Einiges zu hoch ist und so das
+Fördergut auf der Rinne wild umher
+springen würde, wird die Auslenkung durch
+einen Hebel (Strebe 120) auf ein Achtel
+verkleinert (Abb. 3).
+
+hobby 2 Band 1, 1972, S. 76)
+
+Egal wie der Antrieb erfolgt, das Funktionsprinzip ist immer dasselbe. Die Förderrinne
+bewegt sich im ersten Schritt nach vorne (in
+Förderrichtung) und gleichzeitig nach oben,
+hier wird das Fördergut nach vorne geworfen. Es gibt auch Bauarten, bei denen das
+Fördergut nicht abhebt, sondern auf der
+Rinne gleitet.
+Während das Fördergut in der Luft ist,
+bewegt sich die Förderrinne wieder in die
+Ausgangsstellung zurück. Das Fördergut
+fällt wieder auf die Rinne (ein Stück vor
+dem Abwurfpunkt) und das Ganze beginnt
+von vorne. Dies funktioniert natürlich nur,
+wenn durch die Schwingung der Rinne eine
+ausreichend hohe Beschleunigung auf das
+Fördergut wirkt und dieses von der Rinne
+abheben oder zu mindestens gleiten lässt.
+
+
+
+Mechanik
+
+(trotzdem noch hochkomplexer) Berechnungsmodelle und dem Einsatz moderner
+Rechenprogramme am Computer. Es wird
+der zeitliche Verlauf der x- und y-Koordinaten des Förderguts bzw. der Förderrinne
+als Funktion dargestellt. Dabei handelt es
+sich im allgemeinen Fall um periodisch
+verlaufende Kurven.
+
+
+Von hier geht die nächste Strebe direkt zur
+Förderrinne. Die Rinne selbst (Abb. 4)
+sollte verwindungssteif (die pendelnde
+Aufhängung stabilisiert zusätzlich ziemlich
+gut), aber trotzdem leicht gebaut werden,
+um den Antrieb nicht unnötig zu belasten.
+
+Aus diesem Verlauf kann dann die durchschnittliche Geschwindigkeit des Förderguts in einer Periode errechnet werden. Dies
+ist dann die mittlere Fördergeschwindigkeit.
+Hört sich doch alles ganz leicht an oder?
+Deshalb habe ich versucht, eine eigene
+Berechnung mit den mir zur Verfügung
+stehenden Hilfsmitteln zu erstellen (jedoch
+ohne Miteinbeziehen von Luftwiederstand,
+Gleitzustand des Fördergutes oder sonstigen Einflussfaktoren).
+Der erste Schritt war, wie oben beschrieben
+den zeitlichen Verlauf der x- und y-Koordinaten der Förderrinne jeweils als Funktion aufzustellen, abhängig von der Zeit
+bzw. der Drehzahl des Antriebsmotors. Das
+dauert bei den paar Hebeln dann doch
+erstaunlich lange, bis über Trigonometrie
+etc. die Endgleichungen erstellt sind.
+
+
+Bei der Aufhängung der Rinne (Abb. 5) ist
+wichtig, dass so wenig Spiel wie möglich
+vorhanden ist, um die Schwingung auf die
+ganze Rinne zu übertragen. Es ist auch
+darauf zu achten, dass genügend Aufhängepunkte existieren, damit die Förderrinne
+nicht durchhängt.
+
+Fördergeschwindigkeit
+Eines der wichtigsten Merkmale von Förderanlagen ist wohl die Fördergeschwindigkeit. Diese will man jetzt natürlich von
+seinem Schwingförderer auch wissen…
+Die Berechnung der mittleren Fördergeschwindigkeit erfolgt mittels vereinfachter
+
+Diese Gleichungen werden dann am Computer graphisch dargestellt und abgeleitet,
+und man bekommt die x- und y-Geschwindigkeit der Förderrinne zu jedem Zeitpunkt t.
+Meine Annahme und gleichzeitig die
+Grundlage für die weitere Berechnung der
+Fördergeschwindigkeit: Bei der höchsten yGeschwindigkeit der Förderrinne hebt das
+Fördergut ab, ist dann für die Zeit tLuft im
+Vorwärtsflug (die Förderrinne bewegt sich
+in dieser Zeit wieder in die Ausgangsstellung zurück) und landet dann ziemlich
+exakt zum Anfang der nächsten Schwingperiode der Förderrinne wieder auf der
+Rinne.
+
+
+
+
+Aus diesem Verlauf errechnet man nun die
+mittlere Geschwindigkeit einer Förderperiode:
+
+Für den in der Luft zurückgelegten Weg
+benötigt man die Flugzeit tFlug, die sich aus
+der momentanen y-Geschwindigkeit zum
+Flugbeginn errechnet:
+
+=
+
+= 2∙
+
+Die Gesamtstrecke sges erhält man, indem
+man den zurückgelegten Weg auf der
+Förderrinne s1 und den zurückgelegten Weg
+während des Fluges sFlug zusammenzählt.
+Die Gesamtzeit tges ergibt sich aus der Zeit
+auf der Förderrinne plus der Flugzeit.
+
+Somit ergibt sich dann:
+=
+
+∙ ′(
+
+tup
+
+
+=
+
+⋅
+
+=
+
+∫
+
+( )
+2⋅
+
+′
+
++2
+
+
+′(
+
+)
+
++t
+
+−
+
+
+⋅ ′
+
+⋅
+
+
+
+)
+
+Mit der so errechneten mittleren Geschwindigkeit kommt man ganz gut an die
+tatsächliche Geschwindigkeit des Fördergutes heran. Um eine genauere reelle
+Geschwindigkeit zu erhalten wird dies nun
+mit dem Ausgleichsfaktor k multipliziert
+(liegt bei meinem Modell laut meinen
+Messungen zwischen 0,5 und 1,2). Der
+Ausgleichsfaktor k muss für eine andere
+Übersetzung oder anders aufgebaute
+Modelle angepasst werden, der Rest der
+Berechnung kann übernommen werden.
+
+( )
+t0
+
+
+)
+
+Dabei bezeichnet x‘(tup) die Geschwindigkeit des Fördergutes beim Abheben von der
+Rinne (entspricht der Fluggeschwindigkeit).
+
+Der in x-Richtung auf der Förderrinne
+zurückgelegte Weg entspricht dem Integral
+von Zeitpunkt t0 (y-Geschwindigkeit = 0;
+der Beschleunigungsvorgang beginnt und
+somit auch die Periodendauer) bis zum
+Zeitpunkt tup (hier hebt das Fördergut von
+der Förderrinne ab) der x-Geschwindigkeits-Kurve der Förderrinne. Beide Werte
+(t0 und tup) kann man aus dem Diagramm
+des y-Geschwindigkeitsverlaufes der Förderrinne ablesen und im x-Geschwindigkeitsdiagramm eintragen (Abb. 6).
+=
+
+′(
+
+
+Mechanik
+
+nM [U/min]
+
+150-160
+
+170-180
+
+190-200
+
+210-220
+
+k
+
+0,5
+
+0,75
+
+
+1,2
+
+vreell [cm/s]
+
+2-4
+
+4-5,5
+
+4-7
+
+7-9
+
+Tab. 1: k-Wert und (gemessene) Geschwindigkeiten
+für verschiedene Drehzahlbereiche meines Modelles
+
+Der Ausgleichsfaktor k und die Fördergeschwindigkeit vreell können stark von den
+Werten in Tabelle 1 abweichen; sie hängen
+stark von der Feinjustierung des Schwingförderers ab.
+
+Quellen
+[1]
+
+Technische Universität Chemnitz,
+Institut für Fördertechnik und Kunststoffe: Vibrationsfördertechnik.
+
+Damit sind alle Grundsteine zur Konstruktion eines Schwingförderers gelegt und ich
+wünsche beim Nachbauen sowie austüfteln
+neuer Bauweisen viel Spaß und Erfolg.
+
+[2]
+
+Lexikon: Vibrationsförderer.
+Xpertgate.de
+
+
+

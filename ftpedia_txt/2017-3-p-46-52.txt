@@ -1,0 +1,419 @@
+
+
+Elektrotechnik
+
+Von Faraday zum Boost-Converter
+Stefan Krause
+Strom erweckt viele fischertechnik-Modelle erst so recht zum Leben. Dafür muss die Netzspannung von gefährlichen 230 V auf ungefährliche 9 Volt reduziert werden. Wie geht das, was
+hat sich da im Laufe der fischertechnik-Geschichte getan? Nach einem Blick auf die Funktionsweise der fischertechnik-Netzgeräte gibt es zum Schluss einen Basteltipp, der noch mehr
+Spannung herausholt.
+
+Warnung!
+230 V sind lebensgefährlich! Von Experimenten mit Netzspannung oder dem Öffnen
+von Netzgeräten wird dringend abgeraten.
+Die Abbildungen von geöffneten Netzgeräten im Beitrag sollen das verborgene
+Innenleben zeigen und nicht zum Nachmachen anregen.
+
+Trafos
+Da steht es nun, das neue fischertechnikModell. Nur der Motor dreht sich noch
+nicht, es fehlen die Kabel. Ohne diese Kabel
+wird es nicht gehen. Klar, Strom kann
+schließlich nicht fliegen. Oder doch?
+Manchmal scheint Strom doch fliegen zu
+können. In unserem Beispiel wird sich zwar
+der Motor ohne Kabel zum Netzgerät nie in
+Bewegung setzen, aber wenn wir aus Draht
+eine Spule wickeln und dann eine zweite
+danebenhalten, kann so eine elektrische
+Spannung übertragen werden. Am besten
+funktioniert das, wenn beide Spulen auf
+einem gemeinsamen Eisenkern stecken. Bei
+Faraday sah dieser Versuch 1831 wie in
+Jedes Mal, wenn Faraday die Spule auf der
+einen Seite mit der Batterie verband, gab es
+einen ganz kurzen Spannungsstoß in der
+anderen Spule. Beim Entfernen der Batterie
+
+
+gab es wieder einen Spannungsstoß, diesmal in die andere Richtung.
+
+Experimentalaufbau [1]
+
+Faraday wusste, dass jeder stromdurchflossene Leiter von einem elektromagnetischen Feld umgeben ist. Bleibt die
+Batterie an die Spule angeschlossen, fließt
+weiter Strom und gibt es auch ein elektromagnetisches Feld. Nur am Messgerät der
+zweiten Spule ist davon nichts zu sehen.
+
+
+Ein elektromagnetisches Feld reicht also
+offensichtlich nicht in jedem Fall. Faraday
+erkannte, dass erst die Änderung eines
+magnetischen Feldes eine elektrische
+Spannung erzeugt. Dieser Effekt wird
+elektromagnetische Induktion genannt.
+Wie sieht es nun in einem Trafo aus?
+Nehmen wir einen von fischertechnik. Den
+Trafo 814 werden die Älteren unter uns
+fischertechnikern noch kennen. Typisch für
+ältere Netzgeräte steckt im Inneren ein
+gewickelter Transformator. Die Netzspannung liegt direkt an einer Wicklung, der
+Primärwicklung, an. An einer zweiten
+Wicklung, der Sekundärwicklung, wird die
+Niederspannung abgenommen. Berührungslos wird hier mittels eines elektromagnetischen Feldes Spannung von der
+einen auf die andere Wicklung übertragen.
+
+Elektrotechnik
+
+100-mal pro Sekunde ein Magnetfeld auf
+und wieder abgebaut. Diese ständige
+Änderung des Magnetfeldes induziert in der
+Sekundärwicklung
+wiederum
+eine
+Wechselspannung mit 50 Hz.
+
+Primär- (rot) und Sekundärspule (blau) [3]
+
+Beide Wicklungen zusammen stecken zur
+Bündelung des magnetischen Feldes auf
+einem gemeinsamen Spulenkern. Die
+Ausgangsspannung der Sekundärwicklung
+wird bestimmt durch das Verhältnis an
+Windungen von Primär- und Sekundärseite:
+=
+
+
+Wie gezeigt muss sich dafür das elektromagnetische Feld ständig ändern. Da unsere
+Spannung aus der Steckdose schon eine
+Wechselspannung ist, funktioniert das automatisch. Praktisch! Die Netzspannung ist
+eine sinusförmige Wechselspannung mit
+einer Effektivspannung von 230 V und
+50 Hz. Die Spannung ändert sich also
+100mal pro Sekunde und erreicht dabei
+einen Scheitelwert von √2 ∙ 230V = 325V.
+Der Spannungsänderung folgt die Stromänderung und der Stromänderung folgt das
+magnetische Feld. Da die Primärwicklung
+direkt an der Netzspannung hängt, wird also
+
+Zwischen Primär- und Sekundärwicklung
+gibt es keine elektrisch leitende Verbindung. Diese vollständige elektrische Isolierung von Ein- und Ausgang wird auch als
+galvanische Trennung bezeichnet und ist
+eine wichtige Maßnahme zur Vermeidung
+von Stromunfällen.
+Für den alten fischertechnik-Trafo mit
+220 V Eingangs- und 6,8 V Ausgangsspannung gilt also:
+220 V
+6,8 V
+
+= 32,4
+
+Die Primärseite hat also rund 32mal so viele
+Windungen wie die Sekundärseite.
+Die Netzspannungen waren früher in
+Europa durchaus unterschiedlich. Im Zuge
+einer Harmonisierung wurde 1987 in
+Deutschland von 220 V auf 230 V umgestellt. Die auf dem Trafo angegebenen
+6,8 V stimmen also nicht mehr so ganz.
+
+
+
+Stellen wir die Formel ein wenig um und
+rechnen mal nach:
+230 V
+= 7,1 V
+32,4
+
+So groß ist die Abweichung zu früher also
+nicht. Alles in allem ist der klassische Trafo
+eine zuverlässige, aber auch relativ große
+und schwere Sache.
+
+Schaltnetzteile
+Werfen wir einen Blick auf ein modernes
+Netzteil. In der Regel wird dieses heutzutage ein so genanntes Schaltnetzteil sein.
+Auf dem Netzteil ist dieses durch ein
+Symbol angegeben.
+
+Stopp, das stimmt nicht ganz. Der Trafo ist
+immer noch da, er ist jedoch so klein geworden, dass er kaum noch auffällt. Wie funktioniert das – warum ist der Trafo gegenüber
+älteren Transformatoren so sehr viel kleiner
+geworden? Oder allgemeiner gefragt: Wovon hängt denn die Größe eines Transformators überhaupt ab?
+Nun, zum einen natürlich von der benötigten Leistung. Je mehr Leistung benötigt
+wird, umso größer muss auch der Trafo
+werden. Rechnen wir mal nach: Die elektrische Leistung ergibt sich aus dem Produkt
+der Spannung U und der Stromstärke I:
+=
+
+∙
+
+Aus U · I ergibt sich als Einheit für die
+elektrische Leistung Volt-Ampère (VA),
+eher bekannt als Watt (W). Im Falle des
+alten fischertechnik-Trafos 814 mit einem
+Maximalstrom von 1,0 A ergibt sich also:
+
+Auch auf dem Steckernetzteil des fischertechnik-Power-Controller finden wir dieses
+Symbol wieder.
+
+= 6,8 V ∙ 1,0 A = 6,8 W
+
+Das Steckernetzteil vom aktuellen fischertechnik Power-Set liefert 9 V und 2,5 A
+Maximalstrom:
+= 9 V ∙ 2,5 A = 22,5 W
+
+
+Auf den ersten Blick fallen direkt das geringe Gewicht und die kleine Bauform auf. Ein
+Blick ins Innere zeigt verschiedene Elektronikbausteine, aber ein Trafo fehlt.
+
+
+Power Controller
+
+Obwohl das Stecker-Netzteil kleiner und
+leichter geworden ist, hat die Leistung
+gegenüber dem alten Trafo sogar zugenommen. Es muss also einen anderen Grund
+geben. Die Baugröße hängt außer von der
+zu übertragenden Leistung auch von der
+
+
+Elektrotechnik
+
+Betriebsfrequenz ab. Je höher die Frequenz,
+desto kleiner die Baugröße.
+
+hochfrequente Wechselspannung ist, erfolgt
+noch eine Gleichrichtung.
+
+Und das ist das Geheimnis. Der Trafo in
+einem Schaltnetzteil wird nicht direkt mit
+der Netzspannung von 50 Hz, sondern mit
+Frequenzen zwischen 20 und 100 kHz
+betrieben. Die Elektronik wird zur Erzeugung der hohen Frequenz benötigt. Diesem
+Mehraufwand stehen ein deutlich besserer
+Wirkungsgrad – der Trafo wird nicht mehr
+so warm – und eine deutlich geringere Baugröße gegenüber.
+
+Eine Regelelektronik misst pausenlos die
+Ausgangsspannung und steuert die hochfrequente Wechselstromerzeugung am Eingang so, dass genau die benötigte Spannung
+am Ausgang anliegt. Im Ergebnis wird so
+die Ausgangsspannung auch bei wechselnden Lasten konstant gehalten. Im Regelkreis erfolgt die Signalübertragung durch
+einen Optokoppler (also durch Licht). Es
+gibt also auch hier eine galvanische Trennung zwischen der Netzspannung auf der
+einen und der niedrigen Ausgangsspannung
+auf der anderen Seite.
+
+In einem Schaltnetzteil (siehe Abb. 8) wird
+zunächst aus der Netzspannung eine
+Gleichspannung erzeugt, damit diese
+anschließend in die benötigte hochfrequente
+Wechselspannung „zerhackt“ werden kann.
+Die Wechselspannung wird auf einen kleinen Trafo gegeben, so dass auf der Sekundärseite eine Spannung induziert wird. Da
+natürlich auch diese Spannung eine
+
+Wenn wir auf die galvanische Trennung im
+Trafo verzichten können, geht es noch einfacher. Dann reicht sogar eine Spule. Die
+Spule erzeugt das Magnetfeld und induziert
+auch direkt die Spannung in der gleichen
+Spule. Primär- und Sekundärseite sind
+
+
+
+
+damit in einer einzigen Spule vereint. Das
+hört sich schräg an, geht aber!
+
+Kondensator
+
+Spule
+Integrierter
+Schaltkreis
+(XL6009)
+
+Trimmpotentiometer
+Kondensator
+
+Diode
+
+
+
+Gerade, wenn sich Eingangs- und Ausgangsspannung nur wenig unterscheiden,
+bringt dieser Aufbau Vorteile durch besseren Wirkungsgrad und geringeres Gewicht.
+
+Selbstbau
+Zum Schluss soll es in unserem Bastelprojekt darum gehen, wie wir aus einer Gleichspannung eine andere machen können. Oder
+genauer: Wie können wir aus dem alten
+4,5 V-Batteriestab 9 V herausholen?
+
+Zum Bauen brauchen wir zudem noch einen
+Lötkolben (bitte nicht zu stark), Elektroniklot, zwei Dioden, ein wenig Kabel und ein
+bisschen Freude am Basteln. Das eigentliche Basteln ist nicht schwer: An Ein- und
+Ausgang werden rund 20 cm Zwillingslitze
+gelötet und am Ende mit Steckern versehen.
+Da eine Verwechslung von Plus- und
+Minus-Leitung zum Zerstören der Platine
+führen würde, löten wir an Ein- und Ausgang zusätzlich noch jeweils eine Diode in
+die Plus-Leitung dazwischen. Dabei auf die
+richtige Polung achten: Der weiße Ring auf
+der Diode muss in Flussrichtung zeigen.
+Am Ausgang (nach der Diode) wird noch
+das Voltmeter angelötet – fertig. Nachdem
+der Deckel noch ein Loch für das Voltmeter
+bekommen hat, kann das Ganze mit Klebeband fixiert werden (Spiegelband geht am
+besten).
+Menge Bauteil
+
+
+Um eine Spannung zu erhöhen, brauchen
+wir einem sogenannten Aufwärtswandler
+oder auch englisch Boost- oder Step-UpConverter. Eine geeignete, fertig bestücke
+Platine gibt es für unter 3 € im Internet. Die
+Platine ist so klein, dass sie problemlos
+zusammen mit einem elektronischen Voltmeter in eine fischertechnik-Box für 9 VBlockbatterien passt.
+
+
+1 St.
+
+XL6009 DC-DC Step Up
+Converter
+
+1 St.
+
+Mini LED Voltage Meter
+
+2 St.
+
+1N4007 (Diode bis 1 A,
+reicht fast immer) oder DO201AD, 100 V (Diode bis
+4 A, für die volle Leistung)
+
+50 cm
+
+Zwillingslitze
+
+4 St.
+
+Stecker oder Kupplungen
+
+1 St.
+
+9 V ft-Batteriebox
+Tab. 1: Einkaufsliste
+
+Alle Elektronik-Bauteile gibt es bei ebay
+schon für unter 5 €; die Batteriebox bei
+Fischerfriendsman.
+
+Elektrotechnik
+
+und ausschaltet (wer es per Hand versuchen
+möchte: 400 kHz sollten es schon sein).
+ƒ
+
+•
+‚
+
+„
+
+„
+
+…
+
+XL6009 [6]
+
+von innen
+
+Bleibt noch die Frage, wie es funktioniert.
+Ihr ahnt es schon, auch das hat wieder etwas
+mit Spule, Hochfrequenz und Magnetismus
+zu tun. Schauen wir uns die Platine mal
+etwas genauer an. Als zentrale Elemente
+gibt es dort eine Spule, eine Diode und
+einen integrierten Schaltkreis vom Typ
+XL6009, zudem noch zwei Kondensatoren
+zum Glätten der Eingangs- bzw. Ausgangsspannung.
+Eine Suche nach XL6009 im Internet bringt
+uns direkt zum Datenblatt des Herstellers
+XLSEMI. Dem Datenblatt können wir entnehmen, dass der Schaltkreis eine Eingangsspannung von 5 bis 32 V und bis zu
+5 A verträgt. Zudem hat der XL6009 eine
+feste Schaltfrequenz von 400 kHz. Im
+Weiteren finden wir auch eine Abbildung
+mit einer typischen Applikation (Abb. 13).
+Das sieht auf den ersten Blick ein wenig
+verwirrend aus. Reduzieren wir mal den
+Schaltplan auf das Wesentliche. Der Schaltkreis XL6009 ist nun nichts anderes mehr
+als ein ziemlich intelligenter Schalter. Wir
+können den XL6009 also auf einen Schalter
+reduzieren, der schnell, sehr schnell ein-
+
+• Spule
+‚ Integrierter Schaltkreis
+ƒ Diode
+„ Spannungsteiler
+… Kondensator
+
+
+Bei geschlossenem Schalter fließt der
+Strom direkt über Spule und Schalter. Dabei
+baut sich in der Spule ein Magnetfeld auf.
+Beim Öffnen des Schalters bricht das
+Magnetfeld zusammen und induziert in der
+Spule eine Spannung, die sich zur Eingangsspannung addiert. Diese Spannungsspitze gelangt über die Diode zum Kondensator und wird dort geglättet. Beim nächsten
+Schließen und Öffnen des Schalters beginnt
+das Ganze wieder von vorne. Die Diode
+verhindert, dass dabei die Spannung vom
+Kondensator über den geschlossenen
+Schalter wieder zurückfließt.
+Unser Schaltkreis macht das Ganze nun mit
+einer Frequenz von 400 kHz. Da er außerdem noch ständig die Ausgangsspannung
+
+
+
+
+misst, werden die Schaltvorgänge so angepasst, dass die Ausgangsspannung immer
+auf dem eingestellten Wert bleibt. Der
+Sollwert wird über einen Spannungsteiler
+vorgegeben; ist dieser, wie bei unserer
+Platine, ein Trimmpotentiometer (also verstellbar), dann können wir die Ausgangsspannung frei wählen.
+
+Quellen
+
+Viel Spaß beim Nachbauen! Es macht Spaß,
+mit dem kleinen Teil dem einen oder
+anderen fischertechnik-Modell etwas mehr
+„Dampf“ einzuhauchen. Aber Vorsicht:
+Das Gerät kann in jedem Fall mehr, als
+fischertechnik verträgt (nämlich bis zu 35 V
+und 4 A!).
+
+
+[1]
+
+Wikipedia: Faraday emf experiment.
+
+[2]
+
+Wikipedia: Michael Faraday.
+
+[3]
+
+Wikipedia: Transformer3d.
+
+[4]
+
+Wikipedia: Schaltnetzteil.
+
+[5]
+
+Wikipedia: Autotrafo.
+
+[6]
+
+XLSEMI: 400KHz 60V 4A Switching
+Current Boost / Buck-Boost /
+Inverting DC/DC Converter.
+Datenblatt XL6009, Rev. 1.1.
+
+[7]
+
+Wikipedia: Boost converter.
+
+

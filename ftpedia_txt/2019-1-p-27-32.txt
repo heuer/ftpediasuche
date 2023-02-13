@@ -1,0 +1,243 @@
+
+Modell
+
+Modell
+
+Kugel-Rotationsbeschleuniger
+Rüdiger Riedel
+Alle rollen abwärts, wir rollen aufwärts: Durch Rotation eilt die Kugel bergauf.
+Man könnte auch sagen: Überall geht es
+bergab, aber bei uns geht es auch bergauf!
+Die Anregung zu diesem Artikel erhielt ich
+durch „Jürgens Kugelbahn-Seiten“ im
+Internet, wo er seinen „Dreher“ vorstellte
+[1]. Die Idee ist, eine Kugel in schnelle
+Rotation zu versetzen und mit der gespeicherten kinetischen Energie vorwärts und
+aufwärts zu rollen. Die Motordrehzahl des
+S-Motors liegt bei ca. 9.500 U/min, und da
+der Durchmesser des antreibenden Rades
+fast dreimal so groß ist wie der der Kugel,
+wird diese sich deutlich schneller drehen.
+
+auf Abb. 2 im Uhrzeigersinn, rechts herum.
+Die Kugel wird dadurch in Linksdrehung
+versetzt, sie bleibt an Ort und Stelle. Wird
+sie freigegeben, z. B. durch Absenken der
+Antriebsachse, setzt sie ihre Drehung in
+eine schnelle Fortbewegung nach links um.
+
+Der Beschleuniger wird gebaut
+Das V-Rad 23·10 (36581 rot, 154452 grün)
+mit dem Gummireifen 32,5·8 (34995) wird
+vom S-Motor in schnelle Drehung versetzt,
+
+
+Die Schienen am Start werden von zwei
+Achsen 80 gebildet. Die Auflager rechts
+und links sind unterschiedlich. Das linke
+besteht aus zwei Winkelsteinen 60° und
+
+
+
+
+zwei Winkelsteinen 7,5°, das rechte wieder
+aus zwei Winkelsteinen 60° und darunter
+zwei Winkelsteinen 15°! Die Anordnung ist
+nicht symmetrisch, die Kugel hängt links
+etwas tiefer und das Antriebsrad hat mehr
+Platz.
+
+
+Die Antriebsachse wird beweglich gelagert,
+siehe Abb. 5 und 6.
+
+
+Die Achsen werden zum Ausgang des Beschleunigers geschoben, zum Übergang auf
+die Flexschienen; sie klemmen ausreichend
+fest (Abb. 4).
+
+
+
+Auf einem Baustein 5 15·30 (35049) sitzt
+mit einem Federnocken (31982) das Gelenk
+aus Gelenkwürfel-Zunge und Gelenkwürfel-Klaue 7,5 (31426 und 31436). Der
+Haltearm wird gebildet aus (von rechts nach
+links in Abb. 6):
+
+Die Seilrolle 12·5,5 (38258) im V-Radhalter 10 (35668) hält die Kugel an ihrem
+Platz, die richtige Neigung erhält sie durch
+den Winkelstein 15°. Den Antrieb bewirkt
+ein S-Motor (32293).
+
+1. zwei S-Kupplungen 15 2 (38253),
+2. einem Baustein 5,
+3. einem horizontal verbauten Baustein 7,5,
+4. einem Baustein 30 und
+5. zwei Bausteinen 5 15·30.
+
+Jetzt brauchen wir noch ein fischertechnikFremdteil: Ein etwa 45 mm langes Stück
+Silikonschlauch mit 4 mm Innendurchmesser und 6 mm Außendurchmesser. Das eine
+Ende wird über die Motorschnecke geschoben, das andere über eine Kunststoffachse
+60.
+
+Der letzte Baustein links wird so eingestellt,
+dass die Antriebsachse waagerecht ausgerichtet ist und das Antriebsrad sich leicht
+nach unten drücken lässt.
+
+
+Nun können wir einen Probestart durchführen. Den Motor schließen wir am besten
+an ein regelbares Netzgerät an und drehen
+
+
+Modell
+
+es auf etwa 6 V auf. Die vollen 9 V sind zu
+viel; das Rad dreht sich so schnell, dass der
+Gummireifen durch die Fliehkräfte aufgeweitet wird und herunterrutschen kann.
+An das Ende der Schienen sollten wir einen
+Kartondeckel legen, der die Kugel auffängt.
+Jetzt legen wir die Kugel auf wie in Abb. 6
+lassen sie etwa drei Sekunden andrehen und
+senken dann das Antriebsrad ab.
+
+Beim Loslassen wird der Motor kurzgeschlossen und stoppt sofort. Die Umfangsgeschwindigkeit des Antriebsrades wird
+kleiner als die der Kugel, somit rollt sie über
+das Rad hinweg und „düst ab“.
+
+Und wenn du nicht aufpasst ist – kladderadatsch – die Kugel futsch.
+wusch! zoing! zong! wisch! klonk! weg!
+
+
+Der elektrische Start
+
+Das Relais
+
+Als nächstes fragen wir uns, ob der Start der
+Kugel automatisiert werden kann.
+
+Wir können einen weiteren Schritt zur Vollautomatisierung vornehmen und ersetzen
+den Taster durch zwei Stromschienen. Rollt
+eine Kugel darüber, schließt sie den Stromkreis eines Relais, welches dann den Motor
+kurzschließt und dadurch den Start einer
+zweiten Kugel auslöst.
+
+Schalten wir beim Kugelandrehen den
+Motor aus, rollt die Kugel manchmal davon.
+Wenn wir den Motor ausschalten und kurzschließen, rollt die Kugel immer davon!
+Das lässt sich einfach mit einem Taster und
+der Schaltung nach Abb. 7 verwirklichen.
+Die Kugel wird entsprechend Abb. 6
+platziert. Dann wird der Taster kurz
+gedrückt und die Kugel angedreht.
+
+Der Halter für die Stromschienen hat als
+Basis zwei Bausteine 2,5 15·45 2+2Z
+(38277) und zwei Bausteine 5 15·30 3N
+(38428) sowie zwei Bausteine 30 und vorne
+in Abb. 8 einen Baustein 15 sowie einen auf
+der Rückseite als Träger. Oben sitzen auf
+zwei Bausteinen 5 15·30 (35049) zwei
+Winkelsteine 7,5° und zwei Winkelsteine
+60°, in welche die beiden Achsen 30
+eingelegt werden.
+
+
+
+
+Der Übergang von der letzten KugelbahnKurve wird durch einen Baustein 5 15·30
+und eine Bauplatte 15·15 1Z hergestellt.
+Der gesamte Halter wird zwischen zwei SRiegelsteine 15·15 (32850) geschoben.
+Der elektrische Anschluss an die Achsen
+erfolgt durch Unterklemmen der blanken
+Drahtenden.
+
+Die schaltende Kugel wird meistens nicht
+gleichmäßig über die Stromschienen hinwegrollen, sondern ein wenig hüpfen. Deswegen wird das Relais nicht sauber ansprechen. Das können wir verbessern: Wir
+überbrücken die Anschlüsse des Relais mit
+einem Elektrolytkondensator. Die elektrische Schaltung geht aus Abb. 10 hervor.
+
+
+Q = das Relais, z. B. ft-Nr. 37683
+b = die beiden Achsen 30 als Stromschienen
+M = der Motor
+d = die Kugel, die das Relais auslöst
+
+C = Elektrolytkondensator
+(auf richtige Polung achten!)
+
+
+
+Modell
+
+Der nächste Schritt ist eine kleine Kugelbahn, mit der die Möglichkeiten ausprobiert
+werden.
+
+Die Kugelbahn
+Die Kugelbahn ist im Prinzip eine Treppe
+mit 5 mm hohen Stufen, aufgebaut aus 9
+Kugelbahn-Kurven 180° (158962) auf zwei
+waagerechten U-Trägern 150 (32854). Der
+Anstieg vom Start zur ersten Kurve besteht
+aus einem Kugelbahn-Flexprofil 90
+(155901), der Kugelbahn-Wechselweiche
+(151716) ohne den Weichensteller, einem
+Kugelbahn-Flexprofil 180 hoch (159783)
+und einem weiteren Flexprofil 90. Die
+Weiche wird in zwei Richtungen mit je
+einem Winkelstein 7,5° schräg gestellt:
+Schräg nach oben und schräg nach vorne.
+Die losrollende Kugel wird somit sicher auf
+den linken Ausgang der Weiche geführt.
+Der Aufstieg der Kugeln erfolgt nicht
+immer mit der gleichen Geschwindigkeit,
+sondern zufallsbedingt mal schneller, mal
+langsamer. Haben wir die Motordrehzahl so
+eingestellt, dass die Kugeln zuverlässig
+oben ankommen, dann neigen einige dazu,
+über die erste Kurve hinaus zu springen.
+Das soll der Kugelfang über den ersten
+beiden Kugelbahn-Kurven verhindern. Er
+besteht aus zwei verkehrt herum angebrachten Kugelbahn-Kurven entsprechend
+über zwei Flexprofile 180 (143234) in die
+breite Seite der Weiche zurück zum Start.
+
+Wir starten
+Der Automatikbetrieb kann beginnen. Eine
+Kugel legen wir in den Beschleuniger
+(Abb. 6) und schalten die Stromversorgung
+ein. Eine zweite Kugel lassen wir irgendwo
+auf der serpentinenförmigen Treppe hinunterrollen und hüpfen. Sobald sie die Stromschienen erreicht, zieht das Relais an und
+die erste Kugel startet. Anschließend fällt
+das Relais wieder ab, die zweite Kugel rollt
+in die Startposition und wartet auf die Auslösung, und so weiter…
+Zur Vervollständigung der Anlage können
+wir noch einen Ein-Schalter hinzufügen. In
+Bilderpool bekannte Variante bestehend aus
+einem Minitaster (37780 oder 37783),
+einem Baustein 7,5, einem S-Strebenadapter (31848) und einer S-Strebe 15 I (36914).
+Eine weitere Verbesserung bringt eine Diode am Eingang, so dass der Motor immer
+richtig herum dreht und vor allem der
+Elektrolytkondensator nicht falsch gepolt
+werden kann. Will man mit kleinerer Spannung als 6 V arbeiten, muss das Relais an
+einem eigenen Stromkreis mit 6 bis 9 V
+betrieben werden, weil es sonst nicht zuverlässig anspricht.
+Nun ein fröhliches wrrrr! wusch! zoing!
+dongdongdong! klonk!
+Und hoffentlich nicht „weg!“
+
+Quellen
+[1]
+
+Jürgens Kugelbahn-Seiten: Dreher.
+Jürgen Kintscher, 2000-2003.
+
+[2]
+
+Rüdiger Riedel: Video des KugelRotationsbeschleunigers. Yotube,
+2019.
+
+
+
+
+
+

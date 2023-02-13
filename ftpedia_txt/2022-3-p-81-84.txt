@@ -1,0 +1,170 @@
+
+Computing
+
+Computing
+
+Sensoren am TXT: Farberkennung mit
+der Kamera
+Kurt Mexner
+Mit verschiedenen Sensoren werden die Möglichkeiten des TXT Discovery Sets erheblich
+erweitert. Mit dieser Reihe möchte ich einige dieser Sensoren vorstellen. In diesem Beitrag
+beschäftigen wir uns mit der Farberkennung vermittels der bereits mitgelieferten Kamera.
+
+Die Kamera
+In meinem letzten Beitrag [1] habe ich mit
+der Bewegungserkennung eine der Nutzungsmöglichkeiten der fischertechnikUSB-Kamera mit ROBO Pro vorgestellt. In
+diesem Beitrag geht es nun um die Erkennung von Farben.
+
+Das Sensorfeld Farbe
+Sobald man in ROBO Pro ein Programm
+öffnet oder neu erstellt, kann man den
+Reiter „Kamera“ anklicken. Ist eine USBKamera an den TXT (oder den PC) angeschlossen, wird das von der Kamera erfasste
+
+Bild angezeigt. Hierfür muss im linken
+oberen Bereich das Häkchen „Kamera einschalten“ gesetzt sein (Abb. 1).
+Im Menu ganz links oben findet sich unter
+„Elementgruppen“ die Eintragung „Sensorfelder“. Klickt man sie an, werden die
+verschiedenen Sensorfelder angezeigt. Wir
+klicken nun das Feld Farbe an und gehen
+mit der Maus auf den Kamerabildschirm.
+Der Mauszeiger verwandelt sich in einen
+Bleistift, mit dem wir jetzt ein Viereck
+beliebiger Größe in dem Kamerabild platzieren können. Mit einem Doppelklick wird
+es fertiggestellt.
+
+
+
+Auch ohne Programm kann man nun testen,
+ob die Kamera eine Farbe erkennt. Dazu
+wird der grüne Start-Knopf gedrückt.
+Rechts im Kamera-Fenster werden nun in
+einer Tabelle für jedes Sensorfeld die Sensorwerte für „rot“ (R), „grün“ (G), „blau“
+(B) und „S/W“ (schwarz/weiß) angezeigt.
+Alle anderen Farben muss man aus der
+Kombination dieser RGB-Werte ermittelt.
+Wenn man nun z. B. rote Legosteine im
+Sensorbereich platziert, ändern sich die
+Sensorwerte und man erkennt, dass bei
+„rot“ der höchste Wert angegeben ist. Es ist
+möglich, mehrere Sensorfelder anzulegen.
+Jedem Feld muss dann ein anderer Name
+zugeteilt werden.
+
+Das Programm
+Im Programm in Abb. 2 werden vier UnterProgramme aufgerufen. Jedes Programm ist
+für eine Farbe zuständig.
+
+Betrachten wir nun das Unterprogramm,
+das für Rot zuständig ist (Abb. 3). Der Wert
+für „rot“ wird mit dem Wert für „grün“
+verglichen. Ist „rot“ größer, wird eine 1
+ausgegeben, ansonsten 0. Im nächsten
+Schritt wird „rot“ mit „blau“ verglichen.
+Auch hier gibt es eine 1, wenn „rot“ größer
+ist.
+Vor allem bei Kunstlicht werden manchmal
+falsche Ergebnisse geliefert. Deshalb ist als
+zusätzliche Abfrage ein Vergleich mit dem
+Sensorwert b/w (black/white) notwendig.
+Zu diesem Wert wird 6 dazu addiert. Wenn
+dieser neue Wert kleiner ist als „rot“, wird
+ebenfalls eine 1 ausgegeben.
+Anschließend vergleicht der Operator „=“
+(„ist gleich“) alle drei Werte, ob sie mit 1
+übereinstimmen. Wenn dies zutrifft erhält
+das Warten-auf-Element eine 1 und die
+Anzeigelampe auf dem Monitor leuchtet rot
+auf.
+Anlog laufen die Unterprogramme „blau“
+und „grün“ ab.
+Alle anderen Farben werden aus der
+Kombination der RGB-Werte ermittelt. Das
+kann aufwändig sein: Die Farbe Gelb z. B.
+hat mich mehrere Tage Arbeit gekostet. Die
+Bedingungen für Gelb lauten:
+ die Differenz von „rot“ und „grün“ ist
+maximal 17
+ der Wert für „blau“ liegt zwischen -2 und
+Bei starker Sonneneinstrahlung liegen alle
+vier Werte des Sensorelementes sehr nahe
+beieinander. Eine Differenzierung ist dann
+oft ausgeschlossen. In diesem Extremfall
+sollte das Sensorfeld abgeschattet werden.
+Ich testete das Programm mit normalem
+Tageslicht, Glühlampenlicht und mit einer
+LED-Taschenlampe. Alle vier Farben
+wurden korrekt erkannt.
+
+Farberkennung mit der USB-Kamera am TXT
+
+
+Computing
+
+
+Es ist auch möglich die Kamera mit normalen farbigen LED anzustrahlen (oder auch
+einer RGB-LED). Dies funktioniert aber
+nur mit roten, grünen und blauen LED. Eine
+gelbe LED funktioniert nicht. Auch eine IRLED wird von der Kamera nicht erkannt.
+
+Einstellungen
+Alle Werte, die im ROBO Pro-Programm
+mit einem Pfeil markiert sind, dienen zur
+Anpassung an bestehende Lichtverhältnisse, Farbintensitäten oder Farbnuancen.
+Ich habe die Werte an die LEGO-Farben
+angepasst, da ich davon ausgehe, dass diese
+Farben bei jedem verfügbar sind.
+Tageslicht, Kunstlicht oder LED-Licht
+liefern je nach Situation unterschiedliche
+Ergebnisse, die solche Anpassungen notwendig machen können.
+
+Bedienung
+Ich richte die Kamera auf ein weißes Blatt
+Papier und schiebe in das Sensorfeld die zu
+erkennende Farbe (Legostein, farbiges
+Papier, sonstiges Objekt). Die Kamera ist
+auf einem fischertechnik-„Stativ“ befestigt
+und zeigt nach unten (Abb. 4).
+
+
+Im ROBO Pro-Programm werden im oberen Bereich in den grau unterlegten Feldern
+die Sensorwerte der Kamera für „B/W“,
+„rot“, „grün“ und „blau“ angezeigt. Daneben leuchtet ein Lampenelement auf, wenn
+eine Farbe erkannt wird (Abb. 5).
+
+
+
+
+ Fernsteuerung über farbige LED
+Die Farb-Erkennung funktioniert auch über
+weite Entfernungen
+
+Nachtrag
+
+
+Anwendungen
+Die folgenden Anwendungen der Farberkennung in einem Modell sind vorstellbar:
+ auf einem Fließband werden die farbigen
+Steine erkannt und sortiert.
+ ein Greifarm sortiert die Steine
+ Programmsteuerung über farbige Karten
+
+
+Aktuell gibt es den Baukasten Robotics
+Smartech sehr günstig zu kaufen (für ca.
+180 €). Er enthält den Robotics TXT
+Controller, die Software ROBO Pro, vier
+Minimotoren mit Getriebe, einen Gestensensor, einen Spursensor, vier Mecanum
+Omniwheels (faszinierende Räder, die sich
+seitwärts bewegen können) und ein Hubgetriebe. Zu diesem Preis ist dies ein Schnäppchen, mit dem man preisgünstig in die
+Computerprogrammierung einsteigen kann.
+Nicht vergessen, ein Netzteil oder einen
+Akku mitzubestellen.
+
+Referenzen
+[1]
+
+Kurt Mexner: Sensoren am TXT: Die
+Kamera. ft:pedia 1/2022, S. 112–
+116.
+
+

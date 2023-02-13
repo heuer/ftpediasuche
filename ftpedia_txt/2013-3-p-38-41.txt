@@ -1,0 +1,155 @@
+
+
+Tipps und Tricks
+
+Raffiniertes mit Achsen
+Stefan Falk
+Kurz und knapp stellen wir zwei pfiffige Detaillösungen mit Achsen in der Hauptrolle vor.
+
+Trick 1: Mehrfachausnutzung
+derselben Achse
+Sowohl der Ur-fischertechnik-Gelenkbaustein als auch dessen jüngste Generation
+erlauben es, genau durch den Drehpunkt
+des Gelenks auch noch eine Achse
+hindurchzuführen:
+
+Beispiel 1: Zahnradkupplung
+einem grünen Pfeil markierte Z40 sitzt auf
+einer Achse, die durch zwei der UrGelenksteine verläuft. Es wird vom Motor
+über das Differenzial von oben angetrieben, dreht sich also um seine Achse.
+
+
+
+
+Das kann man wunderbar verwenden, um
+von einem fest angebrachten Antrieb Drehmoment auf eine Baugruppe zu übertragen,
+die mit eben diesen Gelenken schwenkbar
+aufgehängt ist. Zwei Beispiele:
+
+
+An den Gelenksteinen aber sitzt ein (mit
+dem gelben Pfeil markiertes) Z20 im
+richtigen Abstand, um vom Z40 angetrieben zu werden. Das Z20 dreht sich also
+um seine eigene Achse, gleichzeitig kann
+es aber völlig problemlos um die Zentralachse geschwenkt werden, die durch das
+Z40 und die Gelenksteine verläuft. Das
+geht deshalb, weil sein Abstand vom Z40
+immer gleich bleibt – es wird ja genau um
+das Z40 herum geschwenkt.
+
+In einem Free-Fall-Tower-Modell wurde
+das wie folgt ausgenutzt: Unterhalb des
+Z20 saß wiederum ein Abtriebszahnrad (in
+diesem Fall wieder ein Differenzial, aber
+das tut nichts zur Sache). Wenn nun das
+Z20 nach unten auf das Abtriebszahnrad
+abgesenkt wurde, kuppelte es ein und die
+Antriebskraft wurde weitergeleitet. Im
+Modell wurden tatsächlich Federgelenksteine (31308) verwendet, um das Z20
+nach unten zu drücken. Schwenkte man
+das Z20 aber mit einem geeigneten Antrieb
+nach oben, wurde elegant ausgekuppelt –
+die Drehung des Z20 gelangte nicht auf
+weitere Zahnräder.
+Diese Art der Kupplung hat noch weitere
+Vorteile gegenüber solchen, bei denen ein
+Zahnrad quer verschoben in ein anderes
+eingreifen muss: a) ersetzt man einen
+komplizierten Schiebemechanismus durch
+eine einfache, elegante Anordnung, und b)
+kuppelt diese Form viel leichter ein, ohne
+dass sich zwei Zahnräder verklemmen oder
+verhaken können.
+Beispiel 2: Schwenkbarer Antrieb
+mit stationär angebrachtem Motor
+Kranarm eines Teleskop-Mobilkrans: Der
+Power-Motor treibt das Zentralrad an
+(grüner Pfeil), welches wieder auf einer
+Achse sitzt, die mitten durch Gelenke
+führt. Das Abtriebsrad (gelber Pfeil) ist
+wieder ein Z20, und so kann Drehmoment
+vom fest angebrachten Motor elegant auf
+die schwenkbare Mechanik gebracht
+werden.
+
+Tipps & Tricks
+
+Autokrans
+
+Hier sieht man noch einen kleinen
+Konstruktions-Kniff: In diesem Modell
+muss auf die langen Schneckenachsen sehr
+viel Kraft gebracht werden. Um möglichst
+leicht bauen zu können, wird die erst spät
+aufgebaut: Ein 50:1-Power-Motor mit
+schwarzer Kappe dreht relativ schnell, also
+drehen sich auch das zentrale Z30 und das
+Abtriebs-Z20 sehr schnell. Über einen
+zweistufigen Schneckentrieb wird erst sehr
+spät innerhalb der Gesamtmechanik hohe
+Drehzahl gegen hohes Drehmoment
+„eingetauscht“. So gelingt es, mit nur
+wenigen Bauteilen eine enorm kräftige
+Schiebemechanik herzustellen.
+
+Drehzahl gegen hohes Drehmoment und hohe
+Schiebekraft
+
+
+
+
+Trick 2: Kräftiger Seilantrieb
+auf kleinstem Raum
+Wenn man die Aufgabe hat, ein Seil sehr
+kräftig per Motor anzuziehen, aber kein
+Platz für Untersetzungsgetriebe zur Verfügung steht, kann man das Seil auch per
+Klemmring einfach direkt auf einer Achse
+anbringen. Es wird dann nur auf der
+4-mm-Achse, also mit nur 2 mm Radius,
+angetrieben. Das ergibt eine enorme Zugkraft ohne jegliches Zwischengetriebe und
+mit minimalem Platzbedarf. Auch hier
+zwei Beispiele:
+Beispiel 1: Seilzug für einen
+Teleskop-Arm
+In Abb. 6 werden zwei Achsen langsam,
+aber kräftig angetrieben:
+
+und Teleskoparm
+schon erwähnten Mobilkrans
+
+Die direkt auf diesen Achsen angebrachten
+Seile bringen eine hinreichend große Kraft
+auf, um einen Dreifach-Teleskoparm
+auszufahren:
+
+
+Beispiel 2: Seilzug zum Heben eines
+Greifarms
+Eine ähnliche Anwendung ist der folgende
+Seilzug, der zwei Greifarm-Segmente
+anheben kann. Dazu ist ebenfalls eine
+erhebliche Kraft erforderlich, die auf
+einfachste Art gebildet wird, indem die
+Seile direkt auf die Rast-Achs-Stummel
+der
+Mini-Aufsteckgetriebe
+geknotet
+werden. Der kleine Schlitz in den
+Rastachs-Enden bietet eine willkommene
+
+
+Tipps & Tricks
+
+Aufnahme für den Faden – so benötigen
+wir nicht einmal Klemmringe dazu:
+
+Aufwand
+
+Durch diese Bauart können die beiden
+kleinen Motoren völlig ohne weitere
+Getriebe mit großer Kraft Hebelarme
+betätigen:
+
+
+
+

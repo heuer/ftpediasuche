@@ -1,0 +1,158 @@
+
+Modellbahn
+
+Modellbahn
+
+Die Bau-Spiel-Bahn auf Märklin-Gleisen
+Sven Engelke
+Dieser Artikel stellt eine Möglichkeit vor, die fischertechnik Bau-Spiel-Bahn mit MärklinGleisen zu kombinieren. Auch die Ansteuerung von Märklin-Weichen mit einem
+fischertechnik-Computer-Interface wird beschrieben.
+Normalerweise werden bei der Bau-SpielBahn (BSB) fleischmann-Gleise verwendet, da der Fahrstrom über die linke
+und rechte Schiene abgegriffen wird.
+In letzter Zeit überlegte ich immer wieder,
+ob ich nicht irgendwie meine alten
+Märklin-Gleise für die gute alte Bauspielbahn nutzen kann. Bei den MärklinGleisen sind die rechten und linken
+Schienen miteinander verbunden. Der
+zweite Stromleiter befindet sich in der
+Mitte und wird über einen so genannten
+Mittelschleifer abgegriffen, der den Strom
+zum Motor der Lok leitet (Abb. 1).
+
+und Märklin (hinten)
+
+Der Umbau
+Für den Umbau benötigen wir eine BSBLok, einen Baustein 5, ein Stück einadrige
+Litze und einen Märklin-Schleifer, den
+man auch einzeln zu einem Preis von ca. 3
+Euro pro Stück kaufen kann.
+
+
+Abbildung 2 zeigt der Vergleich der beiden
+Gleissysteme. Vorne im Bild sieht man das
+Fleischmann-Gleis, welches fischertechnik
+auch mit der BSB lieferte, im Hintergrund
+die Märklin-Schiene. Im Folgenden
+werden wir eine BSB-Lok so umbauen,
+dass sie von den Märklin-Gleisen Strom
+beziehen und darauf fahren kann.
+
+
+
+
+Als erstes löten wir das Stück Litze wie in
+Nun kleben wir den Baustein 5 an das BSB
+Lok Chassis an. Ich habe Heißkleber
+hierfür verwendet (Abb. 4).
+
+
+Anschließend wird der Schleifer auf den
+Baustein 5 geklebt. Auch hier habe ich
+wieder zur Heißklebepistole gegriffen. Der
+Vorteil von Heißkleber ist, dass man alles
+wieder rückstandslos entfernen kann.
+Schleifer.
+
+Das fahrbereite Lok-Chassis sieht damit so
+aus:
+
+
+Weichen automatisch steuern
+Als nächstes soll die Bau-Spiel-Bahn
+computergesteuert fahren. Dazu gehört
+auch das Stellen von Elektro-Weichen. Die
+Lok selbst mittels RoboPro zu steuern ist
+kein Problem: Einfach die Stromschiene an
+M1
+des
+fischertechnik
+Interface
+anschließen, und schon kann man mit
+einem RoboPro-Programm oder einfach
+mit der Interface-Diagnose fahren.
+Schließt man allerdings Märklin-Weichen
+direkt an, so schalten diese leider nicht.
+Das liegt daran, dass die 9 V Betriebsspannung nicht ausreichen, da Märklin mit
+einer höheren Spannung arbeitet. Davon
+lassen wir uns aber natürlich nicht
+entmutigen!
+
+
+Wer sich nicht scheut, den Baustein 5 zu
+„opfern“, kann den Schleifer auch wie im
+Original bei Märklin mittels einer kleinen
+Schraube in den Baustein 5 schrauben.
+Anstelle eines Bausteins 5 könnte auch ein
+anderes Stückchen Kunststoff verwendet
+werden.
+
+
+Wir können uns hier mit einem Relais
+behelfen, etwa einem der älteren fischertechnik-Relais (ohne Verstärker), einem
+ft:pedia-Selbstbaurelais (siehe 4/2011) oder auch einem Relais von
+Fremdherstellern. Allerdings brauchen wir
+pro Weiche zwei Stück. Ich habe mir eine
+Relaisplatine mit zehn nicht von
+fischertechnik
+stammenden
+Relais
+gebastelt. Damit kann ich fünf Weichen
+schalten. Einen Schaltungsvorschlag zeigt
+
+
+Modellbahn
+
+gibt es einen Kurzschluss, denn der
+Anschluss der Weiche ist über die Lampe
+aufs Gleis geschaltet.
+
+MärklinTrafo
+
+Wer die automatisch gesteuerten Weichen
+mit der BSB auf Märklin-Schienen
+kombinieren möchte, wird allerdings feststellen, dass der Zug mit dem angeklebten
+Schleifer nicht richtig über die Weichen
+fährt. Da ist also noch etwas Tüftelarbeit
+zur Verbesserung gefragt.
+
+Interface
+Masse
+
+M1
+
+Noch ein wichtiger Hinweis: Die BSB darf
+nur mit 9V Gleichstrom betrieben werden.
+Bitte nicht den Märklin-Trafo benutzen –
+das würde den fischertechnik-Motor
+zerstören!
+
+M2
+
+Spule 1 Spule 2
+
+Masse
+
+Weiche
+
+Die Stromversorgungen des Interface und
+der Weiche sind also strikt getrennt. Die
+Relais werden vom Interface angesteuert
+und schalten dann den Strom zu den beiden
+Spulen in der Weiche durch. Je nachdem,
+ob man einen Impuls auf M1 bzw. M2 des
+Interface gibt, wird die Weiche also in die
+eine oder die andere Richtung eingestellt.
+
+Bezugsquellen für MärklinSchleifer
+Ich hatte den Schleifer bei Amazon
+bestellt; er wurde dort von einem Händler
+namens BWBahn verkauft. BWBahn hat
+aber auch einen eigenen Shop. Eine
+weitere Bezugsquelle für die Schleifer ist
+Retail International, und es gibt noch eine
+Anzahl weiterer.
+
+Ganz wichtig: Die Lampe aus der Weiche
+muss unbedingt entfernt werden! Sonst
+
+
+

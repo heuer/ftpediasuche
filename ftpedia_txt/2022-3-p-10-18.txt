@@ -1,0 +1,452 @@
+
+
+Modell
+
+Großprojekt Seilbahn (Teil 5): Bewegung
+Tilo Rust
+Diese Serie begleitet das Großprojekt „Kuppelbare Einseilumlaufbahn (10-MGD)“ im Fördertechnik-Museum Sinsheim von Anfang bis zur Fertigstellung und Ausstellung auf der BUGA
+2023 in Mannheim. In diesem Teil zeigen wir den aktuellen Stand des Modells und was sich
+jetzt schon bewegt.
+
+Transportbewegung
+Dass sich eine Seilbahn bewegen muss, ist
+klar. Dass aber eine Seilbahn bewegt wird,
+das geht nur im Modell. Denn das Modell
+soll an unterschiedlichen Orten aufgestellt
+werden. Zu diesem Zweck sind die Stationen, welche 5,00 m lang sind, in je zwei
+Module zerlegbar. Daraus ergeben sich
+letztlich Packmaße von 2,50 m × 1,40 m mit
+einer Höhe von 1,80 m. Diese Maße wurden
+gewählt, um noch durch eine Doppelflügeltür zu kommen und die Module quer auf
+einen LKW verladen zu können. Außerdem
+wurde der Unterbau für den Transport mit
+Hubfahrzeugen (Gabelstapler, Ameise etc.)
+vorgesehen und verfügt über Zurrmöglichkeiten für die Ladungssicherung. Über die
+Transportverschalung und -sicherung, an
+der wir gerade arbeiten, werden wir hier
+noch gesondert berichten. Das Gewicht der
+Module ist aber jetzt schon enorm und wird
+durch die weiteren Aufbauten, den Motor
+und das Spanngewicht noch erheblich
+anwachsen.
+Jede Bewegung der Module soll aber im
+Betrieb ausgeschlossen sein. Daher verfügen die Module über Niederschraubfüße,
+welche auf Anti-Rutschmatten aufsetzen
+und zudem das Modell nivellieren. Schließlich werden beide Module einer Station mit
+von Doppelmayr/Garaventa extra angefertigten Zentrierzapfen (Abb. 1) verbunden
+und zueinander gezogen.
+
+
+Schwere und hochpräzise Zentrierzapfen
+von Doppelmayr/Garaventa werden verwendet, um die Module form-, kraftschlüssig und genau aneinander zu binden, so dass
+sie auch unter Erschütterungen keine Bewegung zulassen. Sie sind so gestaltet, dass der
+Zapfen zum Transport entnommen werden
+kann, da keine Teile über die Verschalung
+herausstehen dürfen.
+Die zweite Ebene der Verbindung beider
+Module geschieht mit den Zentrierstücken
+aus Abb. 2, die in die Axmann-Industrieprofile greifen. Verspannt werden beide
+Module mit Gewinde-Zugstangen. So wird
+der verschiebbare Teil des jeweils hinteren
+Moduls
+ebenfalls
+bewegungsunfähig
+gemacht. Über die Planung dieser Teile und
+der Niederschraubfüße haben wir bereits in
+[5, …, 8] berichtet.
+Was aber für den Transport notwendig ist,
+nämlich der ausreichende Abstand aller
+Bauteile zur Transportverschalung, macht
+
+
+Modell
+
+nun ein Problem: Der Abstand zwischen
+den Stationen muss wieder geschlossen
+werden. Hierzu ist das jeweils hintere
+Modul mit einem Schlitten ausgestattet, der
+nach vorne geschoben werden kann. Dabei
+greifen von uns entwickelte Zentrierstücke
+in das vordere Modul und verbinden so den
+tragenden Bau (Abb. 2).
+
+förderer mit wenigen Handgriffen mechanisch stabil und präzise zusammengefügt.
+Hier kommt der alte fischertechnik-Trick
+zum Zuge, mit Stangen zwei Bausteine
+ohne Zapfenverbindung genau aneinander
+zu fügen.
+Wie genau die elektrische Verbindung hergestellt wird, das müssen wir noch klären.
+Ziel ist es jedenfalls, dass die Platzierung
+und Montage der Stationen sowie die Verbindung der Module in kürzester Zeit (wir
+sprechen von 30 Minuten pro Station) erfolgen kann, da Aufstellen, Auspacken, Ausrichten, Inbetriebnahme etc. noch genug
+Zeit in Anspruch nehmen und wir z. B. auf
+einer Ausstellung nicht viel Zeit dafür
+haben. Genau das aber ist der Grund, warum
+wir uns hier so viele Gedanken machen.
+
+Umlaufbewegung
+
+
+Anschließend werden die Laufschienen der
+Gondel, Niederhalteschiene und Reifen-
+
+Wie im Original werden einlaufende Gondeln aus dem Seil ausgekuppelt und fahren
+dann auf einer Schiene langsam um die
+Station herum, bis sie auf der anderen Seite
+
+
+
+
+wieder in das Seil eingekuppelt werden und
+auf die Strecke fahren.
+Den Kuppelmechanismus und die Klemme
+haben wir bereits in vorangegangenen Beiträgen vorgestellt. Jetzt müssen wir von den
+Prototypen auf das fertige Modell umrüsten.
+Über eine insgesamt über 5 m lange Strecke
+transportieren über 150 Reifen die Gondel
+langsam an einem Laufschuh oberhalb der
+Klemme. Das muss absolut zuverlässig
+geschehen und darf sich nicht auseinanderschieben. Schließlich soll das Modell ein
+halbes Jahr auf der BUGA23 täglich viele
+Stunden mehr oder minder nonstop fahren.
+Alle Bauteile müssen nicht nur genau
+platziert werden, sondern auch miteinander
+verschränkt und verriegelt sein.
+Zum Reifenförderer (Abb. 3): Nun wird es
+ziemlich komplex. Die Gondeln, die später
+auf der Flexschiene (unterer Bildrand)
+
+laufen, werden von oben hängend mit den
+Reifen angetrieben und so durch den
+Stationsumlauf befördert. Diese Reifenförderer gliedern sich in Module und
+müssen in der Geschwindigkeit aufeinander
+abgestimmt sein. Der Antrieb ist dabei
+möglichst zuverlässig zu bauen, sodass er
+die Dauerbelastung aushält. Gleichzeitig
+sind die C-Stücke (etwas rechts von der
+Bildmitte mit der Knotenplatte am unteren
+Ende) so zu gestalten, dass sie die Last
+stabil tragen und sich nicht dynamisch verziehen. Dank vieler Versuche läuft nun
+alles.
+Im Original-Reifenförderer (Abb. 4) sind
+die C-Stücke und die Trägerkonstruktionen,
+die auch wir im Modell nachgebildet haben,
+gut zu sehen. Alle Reifen sind hier mit Keilriemen verbunden; wir setzen das mit unserer fischertechnik-Kette um.
+
+
+
+Modell
+
+Im Gegensatz zum Original haben wir
+zudem den Nachteil, dass unsere Reifen
+nicht wirklich nachgeben. Im Original ist
+die Eindrücktiefe 3 cm – das wären bei uns
+3 mm. Um das zu erreichen, wäre ein großer
+Anpressdruck nötig. Da wir diesen nicht
+aufbringen können und wollen, ist unsere
+Toleranz viel kleiner. Oder anders formuliert: Über 5 m müssen 150 Reifen bis auf
+einen Millimeter genau justiert werden und
+dürfen sich dann nicht mehr bewegen. Und
+das, obwohl die Laufschiene darunter sich
+leicht verbiegt (auch wenn es ein fischertechnik-Alu-Profil ist) und sich der ganze
+Aufbau durch wechselnde Lasten immer
+wieder etwas verzieht.
+Nach stundenlangem Tüfteln direkt am
+Modell ist es nun gelungen, alles so weit zu
+stabilisieren und zu verstreben, dass die
+erste Gondel sauber durch die Station läuft.
+Dabei wird ausgekuppelt, abgebremst und
+um die Kurve gefahren, beschleunigt und
+wieder eingekuppelt.
+Der Stationsumlauf besteht aus Modulen
+des Reifenförderers wie in Abb. 5 gezeigt.
+Der Antrieb ist so platziert, dass sein
+Gewicht für den Anpressdruck sorgt, aber
+er mittig im Modul ausgerichtet ist. Dieses
+kann sich vertikal durch die alten Gelenkbausteine 45 bewegen und wird durch die
+gebogenen Flexschienen 90 gehalten. Die
+lose Kette neben der Flexschiene begrenzt
+den Durchhang. Längs kann es (fast) frei
+
+schwingen, um Stöße abzufangen. Das hier
+gezeigte Modul hat eine Übersetzung von
+1:40 und treibt acht Reifen an – für den
+Umlauf sind über 150 nötig…
+Knifflig ist hierbei die Übersetzung. Bei
+Einfahrt in die Station läuft das Seil (und
+damit auch die Gondel) mit einer Geschwindigkeit von 60 – 65 cm/s. Nach dem
+Auskuppeln wird diese dann in zwölf
+Stufen auf nur 3 – 4 cm/s abgebremst.
+Hierzu müssen die Reifenförderer über
+selbstgedruckte Z24-Ritzel verfügen, die
+das Verzögern stufenweise vornehmen.
+Doch diese müssen mit XM-Motoren angetrieben werden. Nach Ermittlung der Drehzahlen haben wir eine passende Übersetzung (1:1 direkt ab Welle) für das erste
+(schnelle) Modul gefunden. Für die langsameren Module und den Weitertransport in
+der Station benötigen wir mehrere Getriebe,
+die schließlich auf 1:40 untersetzen. Damit
+können wir auch gut die Reibungsverluste
+in den Griff bekommen, die über die lange
+Strecke auftreten. Wir tüfteln noch, aber so
+wie es aussieht, müssen mindestens 10 XMMotoren in der Geschwindigkeit aufeinander abgestimmt werden. Über die elektronische Seite werden wir ebenfalls noch
+ausgiebig berichten.
+Aktueller Stand Ende August 2022: Die
+Reifenförderer wurden mit Antrieb einem
+eintägigen Dauertest unterzogen – keinerlei
+Fehler oder Ausfälle.
+
+
+
+Spannbewegung
+Eine Bewegung in der Seilbahn ist fast
+unsichtbar und auch in den Originalen sehr
+versteckt:
+Um das Seil ständig gespannt zu halten,
+gleichzeitig aber Lastschwankungen auszugleichen, ist mindestens eine der großen
+Seilscheiben auf einem Wagen montiert,
+der in der Station entlang der Längsachse
+verschoben werden kann und damit das Seil
+strafft. In unserem Modell besitzen wir (wie
+auch im Original der Doppelmayr-/Garaventa-Bahn für die BUGA23) zwei Spannwagen, je einen pro Station. Wir können
+damit einen Spannweg von 70 cm (im
+Original 7 m) zurücklegen. Wie im Original
+ist die Umkehrstation, Bergstation „Luisenpark“, für die Grundspannung des Seils zuständig und die Antriebsstation, Talstation
+„Spinelli“, für die dynamischen Lasten.
+Das bedeutet, dass das Seil zuerst mit Hilfe
+der Luisenparkstation auf Spannung gebracht und diese Einstellung im laufenden
+Betrieb nicht mehr verändert wird. Das
+bewerkstelligen wir mit Hilfe eines Seilzuges, der mit einer Winde und Verriegelung den Spannwagen nach hinten zieht.
+Wenn nun die Gondeln auf das Seil gehängt
+werden (bzw. später wie im Original automatisch aus der Garage fahren), dann erhöht
+sich der Zug am Seil. Es hängt stärker
+durch, und der Spannwagen in Spinelli wird
+nach vorne gezogen. Hier bekommt das
+Spanngewicht Bedeutung. Es muss so austariert werden, dass einerseits der Durchhang nicht zu groß wird (und der Wagen an
+den vorderen Anschlag fährt), andererseits
+die Zugkraft nicht zu groß wird, so dass die
+Anlage zerstört würde. Ein Riss des Seils ist
+ausgeschlossen; es kann über 21 kN aushalten, während wir gerade mal mit 0,5 kN
+spannen. Dazu müssen wir das Spanngewicht in gewissen Stufen erhöhen. Hierzu
+legen wir Gehwegplatten als Gewichte auf
+einen Aufzug, der sich in einem Schacht
+unter der Anlage versteckt. Da wir aber nur
+
+
+30 cm Hubweg zum Ausgleich der dynamischen Bewegungen zur Verfügung haben,
+können wir mit Hilfe eines zweiten Seilzuges nachjustieren, der genau verriegelt
+und in beide Richtungen gebremst werden
+kann. Schließlich kommt es nur darauf an,
+dass die richtige Kraft im Fahrbetrieb den
+Spannwagen und den Aufzug jeweils in der
+Mitte der Schienen hält.
+
+Gruppenbewegung
+Wer kräftig arbeitet, darf auch kräftig
+feiern. Deswegen hat unser Team eine Einladung, zu unserem Hauptsponsor Doppelmayr/Garaventa nach Wolfurt in das Hauptwerk zu kommen, gerne angenommen. Eine
+große Delegation durfte einleitenden Worten von Herrn Schütte aus dem Marketing
+folgen und bekam so die aufregende Firmengeschichte und neuesten Projekte des
+Seilbahnherstellers aus Österreich zu sehen.
+Anschließend hatten wir Zugang zu den
+Produktionshallen. Die Augen wurden
+immer größer, als wir Schweißroboter und
+Fertigungsstraßen sehen konnten, die
+unsere kühnsten Vorstellungen übertrafen.
+Es vergingen nur wenige Minuten im
+Materiallager, bis der Spruch „alles unter
+120 mm Dicke nennen wir hier ‚Blech‘“
+zum Kult wurde.
+
+
+Eine originale Doppelmayr-Totpunktklemme (Abb. 6) so nah zu sehen und alle
+technischen Fragen beantwortet zu bekommen, ist für Modellbauer ein Hochgefühl.
+
+Die Klemme wiegt zwar mehr als ein
+ganzes Modul unserer Anlage, kann aber
+auch Gondeln mit einer Tonne Gewicht plus
+zehn Fahrgäste halten. Täglich, bei Wind
+und Wetter, Sturm und Vibration, zuverlässig, absolut sicher. Das müssen wir mit
+fischertechnik erstmal hinbekommen.
+Herr Eck, der Museumsleiter des Fördertechnik-Museums Sinsheim, konnte nun
+seinen Part an unserem gemeinsamen
+Projekt vorstellen und erläutern, dass
+Fördertechnik mit fischertechnik gut zusammenpasst und deswegen die Workshops
+so gut besucht sind. Dass eine Seilbahn,
+zumal vom Weltmarktführer, in die Ausstellung gut hineinpassen würde, ließe sich
+mit unserem Modell zumindest ein wenig
+realisieren.
+Leider konnten Vertreter der fischertechnik-Werke nicht an unserer Reise teilnehmen; ein Input auch von diesem Sponsor
+wäre schön gewesen. Das lässt sich aber
+sicher beim nächsten Besuch nachholen.
+Schließlich waren wir an der Reihe und
+konnten nicht nur unser Projekt im Detail
+vorstellen, sondern auch einen Ausblick auf
+unsere kommende Arbeit geben. „Wenn
+unser Team bis heute diese Leistung in nur
+600 Stunden erbracht hat, was können wir
+dann erreichen, wenn wir zwei- oder drei-
+
+Modell
+
+tausend erbracht haben?“ Das stimmt nachdenklich, hatten die Zuhörer doch einen viel
+höheren Arbeitsaufwand geschätzt, als der
+bis jetzt erbrachte (Stand Mai 2022).
+Die mitgebrachten fischertechnik-Modelle
+(Gondeln, Reifenförderer, Klemme und
+Rollenbatterie, sowie Mini-Modell) wurden
+fachlich diskutiert und Ideen und Tipps ausgetauscht.
+Ein Highlight war die Vorführung einer
+Animation, welche unsere Unterkonstruktion und die Montage der Module zeigt,
+sowie die Premiere unseres eigenen Musikstücks, das wir nun bei jedem Video verwenden können, komponiert von unserem
+Projektmitglied Alexander Salameh. „Up
+and Around“ genießt man am besten mit der
+Animation „Talstation“ auf unserem
+YouTube-Kanal [2].
+Abschluss fand die Reise bei einer Einladung zu einem gemeinsamen Abendessen, für welche wir uns hier noch einmal
+herzlich bedanken möchten. Dieser Besuch
+stärkt unser Team bis heute und zeigt die
+Wertschätzung unserer Arbeit.
+
+Anfangsbewegung
+Unser Modell in der Öffentlichkeit zu
+zeigen ist natürlich ein wichtiger Punkt. Auf
+dem Maimarkt in Mannheim konnten wir
+das schon einmal tun. Das Fördertechnik-
+
+Wolfurt. Die Skulptur aus einem alten Seil zeigt gut, mit welchen Dimensionen hier gearbeitet wird.
+Eine spannende Zeit im wahrsten Sinne des Wortes.
+
+
+
+Museum hatte hier einen Stand in Halle 3.
+Doch auch das Rhein-Neckar-Fernsehen
+(RNF) hatte Sendezeit für uns und der Stand
+der BUGA23 gab Gelegenheit, das Original- und 1:10-Modell nebeneinander zu
+sehen.
+Die Abb. 8 bis 11 geben einen Eindruck
+davon. Leider haben wir keine Aufnahme
+der Sendung des RNF. Aber sicher wird das
+nicht das letzte Interview gewesen sein.
+
+
+Großbewegung
+
+
+
+
+Auch in Mannheim bewegt sich etwas bei
+der großen Seilbahn der BUGA23 [1]. Dank
+der Projektleiterin Frau Haas durften wir die
+Baustelle besuchen und den Aufbau der
+Anlage aus nächster Nähe sehen. Das
+Einheben des Spannwagens dort dauerte
+nicht lange – war aber umso spannender und
+faszinierend. Stand September 2022 stehen
+bereits neun der zehn Stützen, und die
+Station „Spinelli“ ist fast fertig. Ein Video
+dazu haben wir auf unserem YouTubeKanal [2] veröffentlicht.
+Aufregend, beim Bau des Originals dabei
+sein zu dürfen! In Abb. 12 wird in der
+Spinelli-Station der Spannwagen in die
+Station gehoben. Gut zu sehen ist, wie die
+Schienen zwischen dem Steher 1 (links) und
+2 (rechter Bildrand) schräg abfallen. Das
+haben wir im Modell ebenfalls getreu umgesetzt; es ist nötig, damit das Seil unter der
+Klemme abtauchen kann. Die Seilscheibe
+wird an die rote Nabe geflanscht und der
+Antrieb sitzt oben auf. Siehe hierzu auch
+unser Video „BUGA vs. Modell“ auf
+unserem YouTube-Kanal [2].
+
+
+Modell
+
+aber bis dahin wollen wir noch einiges
+gebaut haben.
+
+Weiterbewegen
+Wir sind sehr in Zeitverzug und arbeiten
+jedes Wochenende im Museum [3] am
+Modell. Helfende Hände, vor allem jetzt im
+Herbst, werden benötigt – bitte melden [4]!
+
+
+Der nächste Besuch wird uns dann auf unser
+eigenes Ausstellungsgelände im Luisenpark, unweit der dortigen Seilbahnstation
+führen. Den Baufortschritt und den Transport unseres Modells im März 2023 werden
+wir natürlich auch dokumentieren.
+Aber auch auf der ftc-Süd-Convention 2022
+werden wir ausstellen. Zwar müssen wir die
+Anlage dafür nur wenige Meter bewegen,
+
+Die Aufgaben? Die zweite Station (Luisenpark, mit über 5000 Teilen) in Angriff nehmen, dazu den Unterbau aus Industrieprofilen zusammenschrauben, die nächsten 25
+Gondeln (je 250 Teile) bauen, weitere drei
+Rollenbatterien (mit je 900 Teilen) erstellen
+oder den Steuerstand (mit ft-Pi und ftDuino)
+zum Laufen bringen, die Transportverkleidung schreinern, die Anlage verkabeln, die
+Seilführung optimieren, alles testen und
+debuggen – und schließlich zur BUGA23
+bringen und sechs Monate täglich betreuen
+(hier suchen wir dringend noch Helferinnen
+und Helfer für alle Termine).
+
+zukünftige Arbeit. Weitere Heferlein sind gesucht – bitte melden!
+
+
+
+Kenntnisse in fischertechnik sind sinnvoll,
+aber nicht unbedingt nötig, Das Alter spielt
+keine Rolle, Nähe zu Sinsheim oder Mannheim hilft. Bautage sind immer samstags
+von 11-17 Uhr im Fördertechnik-Museum
+[3].
+Außerdem suchen wir noch Spender, die
+3D-Druckteile für uns erstellen. Dateien
+liefern wir, da wir für alle 50 Gondeln
+Spezialteile benötigen.
+Danke an die (neuen) Helferinnen und
+Helfer – gemeinsam bewegen wir etwas.
+
+Quellen
+[1]
+
+BUGA23 - Bundesgartenschau in
+Mannheim: https://www.buga23.de/
+
+[2]
+
+YouTube-Kanal des Projekts
+
+
+[3]
+
+Fördertechnik Museum Sinsheim,
+Untere Au 4, 74889 Sinsheim
+(direkt neben dem Technik-Museum)
+
+[4]
+
+Kontakt zur Projektgruppe
+„Seilbahn“, Projektleiter Tilo Rust,
+Schifferstadt: ft.seilbahn@gmail.com
+
+[5]
+
+Tilo Rust: Großprojekt Seilbahn
+(Teil 1): Von der Idee zum Kick-Off.
+ft:pedia 1/2021, S. 56–65.
+
+[6]
+
+Tilo Rust: Großprojekt Seilbahn
+(Teil 2): Erste Elemente. 2/2021, S. 45–53.
+
+[7]
+
+Tilo Rust: Großprojekt Seilbahn
+(Teil 3): Die Stationen. 3/2021, S. 28–37.
+
+[8]
+
+Tilo Rust: Großprojekt Seilbahn
+(Teil 4): Fundamentale Arbeiten.
+ft:pedia 1/2022, S. 37–43.
+
+

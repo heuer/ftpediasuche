@@ -1,0 +1,195 @@
+
+Modell
+
+Modell
+
+Anwendungen für Magneten (4): Lautsprecher
+Andreas Gail
+Von der hier gezeigten Anwendung für Magneten hat sicher jeder schon mal gehört. Es geht
+um den Lautsprecher, der im klassischen Kofferradio oder den Boxen der Stereo-Anlage
+verbaut ist. Das Grundprinzip kann mit fischertechnik anschaulich nachgebaut werden.
+
+Was wird gebraucht?
+
+Klebelasche
+
+Neben fischertechnik-Teilen werden ein
+paar Dinge benötigt, die nicht zum
+Standard-Baukastensystem gehören:
+a) Zwei Neodym-Magneten 1,5 x 1,5 cm
+[1],
+b) PWM-Tongenerator für Robo(tics)
+TX(T) Controller [2] und 3,5 mm mono
+Klinkenstecker, oder ein einfaches
+Radio mit Kopfhöreranschluss und passendem Stecker,
+c) leichte Bastler-Pappe (max. 300 g/m²)
+im Format DIN A3.
+
+Schritt 1: Ausschneiden und
+Knickstellen einritzen
+
+Die Lautsprechermembran
+Zunächst wird die konusförmige Lautsprechermembran aus der Bastler-Pappe
+hergestellt. Abb. 14 bildet eine geeignete
+Vorlage dafür. Es ist wichtig, dass ein
+Ausdruck dieser Zeichnung so erfolgt, dass
+die Linien unten links jeweils 20 cm lang
+sind. Dann geht es ans Ausschneiden. Das
+Ergebnis sollte dann etwa aussehen wie in
+sollten mit einem stumpfen Messer
+eingeritzt werden. Nicht eingeritzt werden
+darf die Klebelasche zum Zusammenkleben
+der Membran. Im nächsten Schritt gemäß
+zusammengeklebt. Die zuvor eingeritzten
+Laschen werden wie gezeigt umgeknickt.
+Die Löcher in den 12 Sicken werden einfach
+mit einem normalen Locher hergestellt.
+
+Sicken
+
+Schritt 2: Kleben und Lochen
+
+
+
+Die Lautsprechermembran gemäß Abb. 2
+wird nun in die 60°-Bogenteile eingebaut,
+wie in Abb. 3 und 4 gezeigt:
+
+Schritt 3: Einbau in fischertechnik-60°Bogenteile, Rückansicht
+
+Lautsprechermembran fertiggestellt und der
+handwerklich schwierigste Teil ist
+geschafft.
+
+Schritt 4: Vorbereitung Magnetplatte,
+Rückansicht
+
+Schritt 4: Vorbereitung Magnetplatte,
+Vorderansicht
+Schritt 3: Einbau in fischertechnik-60°Bogenteile, Vorderansicht
+
+Der letzte Schritt zur Herstellung der Lautsprechermembran ist das Einkleben der
+Magnetplatte. Hierzu wird zunächst das
+zweite Teilstück laut Abb. 14 ausgeschnitten und die Löcher mit einem Locheisen
+ausgeschlagen (vgl. Beitrag in 2/2014 [4]). Anschließend werden die
+fischertechnik-Teile eingebaut, was in
+wird nun von der Rückseite (Abb. 3) an den
+Klebelaschen aufgeklebt. Damit ist die
+
+Gesamtaufbau des
+Lautsprechers
+Der Gesamtaufbau ist in Abb. 15 gezeigt.
+Entscheidend dabei ist, dass der Korb zur
+Halterung der Lautsprechermembran möglichst stabil und verwindungssteif aufgebaut
+ist. Die rückseitige Konstruktion zeigen die
+(Elektromagnet) gezeigt, die sich im
+Magnetfeld der Dauermagneten befindet.
+Das ist der sogenannte Antrieb des Lautsprechers.
+
+
+Modell
+
+Anschluss des Lautsprechers
+
+Korb und Antrieb
+
+Was nützt ein Lautsprecher, wenn er nicht
+mit dem passenden Eingangssignal versorgt
+wird. Der hier gezeigte Lautsprecher wird
+beispielhaft alternativ an zwei Signalquellen angeschlossen. Einmal wird der
+PWM-Tongenerator verwendet (siehe
+ft:pedia Ausgabe 4/2015 [2] sowie
+sind die Anschlussspezifikationen des
+Radios zu beachten. Im vorliegenden Fall
+sind für den Ohrhöreranschluss 3 bis 8 Ω
+angegeben. Das ist der Gleichstrom-Widerstand des anzuschließenden Lautsprechers.
+Das bedeutet, dass der Widerstand von 3 Ω
+nicht unterschritten werden darf. Größere
+Widerstandswerte sind für das Radio
+ungefährlich.
+
+des Lautsprechers
+
+
+
+
+Der fischertechnik-Magnet aus Abb. 9 zeigt
+einen Widerstandsmesswert von 46 Ω und
+kann also problemlos angeschlossen
+werden.
+
+möglich wäre ein paralleles Einritzen der
+Sicken zur Knickkante.
+2. Auch der Antrieb als Kombination von
+Dauermagnet und Elektromagnet könnte
+bestimmt effektiver aufgebaut werden,
+insbesondere, wenn weniger Masse
+bewegt werden muss, um die Lautsprechermembran zum Schwingen zu
+bringen.
+Ein Video des fischertechnik-Lautsprechers
+mitsamt Hörproben gibt es unter [5]. Viel
+Spaß beim Experimentieren!
+Sicken
+
+PWM-Tongenerator
+
+konusförmigen Lautsprechermembran
+
+Referenzen
+[1]
+
+Gail, Andreas: Magnetkupplungen
+und Magnetrührer. ft:pedia 4/2016
+(in dieser Ausgabe).
+
+Verbesserungsmöglichkeiten
+
+[2]
+
+Der hier vorgestellte Lautsprecher ermöglicht z. B. in der Konfiguration gemäß
+Radiosendungen. Trotzdem kann auch
+dieser Aufbau weiter verbessert werden.
+
+Gail Andreas: PWM-Tongenerator
+für Robo TX(T) Controller. 4/2015, S. 31-39.
+
+[3]
+
+Wikipedia: Lautsprecher.
+
+[4]
+
+Gail, Andreas: Einstieg in
+Experimente mit Lasern. 2/2014, S. 17.
+
+[5]
+
+Gail, Andreas: fischertechnik:
+Lautsprecher. YouTube-Video zum
+Modell.
+
+einfachen handelsüblichen Radio
+
+1. Die Verwendung leichter beweglicher
+Sicken würde die Lautsprechermembran
+leichter schwingen lassen. Gemäß
+anderes Material benutzt werden. Auch
+
+
+
+Modell
+
+
+
+
+
+Der Ausdruck dieser Abbildung sollte so erfolgen, dass die waagerechte und die senkrechte
+Linie unten links jeweils 20 cm lang ist (ggf. beim Ausdrucken den Zoom-Faktor anpassen).
+
+
+
+Modell
+
+
+
+

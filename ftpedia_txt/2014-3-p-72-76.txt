@@ -1,0 +1,383 @@
+
+
+Robotik
+
+Navigation
+Dirk Fox
+Mit einem GPS- [1] und einem Kompass-Sensor [2] haben wir alles, was wir für die automatische Steuerung eines autonomen fischertechnik-Roboters im Freien benötigen. In diesem
+Beitrag zeigen wir, wie sich aus den Sensor-Daten die für die Steuerung des Roboters erforderlichen Richtungsinformationen berechnen lassen.
+
+Hintergrund
+Autonome Roboter, die sich selbstständig
+im Gelände bewegen, gewinnen ständig an
+Bedeutung. Die Anwendungen reichen von
+Fahrerassistenzsystemen bis zu autonomen
+Robotern in der Landwirtschaft – sehr eindrucksvoll beim jährlichen „Field Robot
+Event“ zu bewundern. Eine zentrale Rolle
+spielt dabei die möglichst exakte Positionsbestimmung – und die war dank des Global
+Positioning Systems (GPS) noch nie so
+genau und einfach möglich wie heute [1].
+
+Die Buchstaben „N“ (für nördliche Breite)
+und „O“ (für östliche Länge, auch „E“ für
+„East“) werden benötigt, da der Breitengrad
+ausgehend vom Äquator (0°) nach Norden
+und Süden, der Längengrad ab dem so
+genannten „Nullmeridian“ (dem Längenkreis durch die Londoner Sternwarte Greenwich) nach Westen und Osten gemessen
+wird. In der Dezimaldarstellung werden
+stattdessen Vorzeichen verwendet (Süd und
+West = -). Die Übereinstimmung beider
+Darstellungen könnt ihr mit dem Taschenrechner leicht überprüfen.
+
+GPS-Positionsdaten
+Die von einem GPS-Empfänger ermittelten
+Positionsdaten bestehen aus dem Breitenund dem Längengrad. Beide werden in der
+Regel – auch von unserem GPS-Sensor [1]
+– als Dezimalzahlen angegeben. Die früher
+übliche Darstellung in Grad, Minuten und
+Sekunden (sexagesimal) lässt sich leicht aus
+dem Dezimalwert gewinnen: Eine Minute
+entspricht einem 60stel Grad, eine Sekunde
+einer 60stel Minute.
+In Google Maps können wir uns die Koordinaten z. B. des Eiffelturms in Paris in
+beiden Darstellungen anzeigen lassen
+(Breitengrad; Längengrad):
+· Dezimal: 48,858562°; 2,294481°
+· Sexagesimal: 48°51'30,8" N;
+2°17'40,1" O
+
+
+P
+Nullmeridian
+
+M
+λ
+S1
+S2
+Längengrad
+
+
+Der Längengrad gibt die Größe des Mittelpunktswinkels λ des Kreissektors auf dem
+Schnittkreis (grüne Fläche in Abb. 1) durch
+die Erdkugel am Äquator an. Der entsteht
+
+
+Robotik
+
+wie folgt: Man stelle sich eine Kreislinie
+(blaue Linie in Abb. 1) um die Erdkugel
+durch die aktuelle Position P und beide Pole
+vor. Vom Schnittpunkt S1 dieser Kreislinie
+mit dem Äquator ziehe man eine Linie (Lot)
+zum Mittelpunkt M der Erdkugel, dann von
+dort eine zweite Linie zum Schnittpunkt S2
+des Äquators mit dem Null-Meridian. Die
+beiden Linien bilden die Schenkel des Längengrads λ, der einen Wert zwischen -180°
+und 180° (statt der Vorzeichen auch mit
+westlicher bzw. östlicher Länge bezeichnet)
+annimmt. Die Werte -180°, 0° und 180°
+liegen dabei auf dem Nullmeridian.
+r‘
+
+∙
+
+P
+
+β
+r
+
+M
+
+β
+
+Breitengrad
+
+r
+
+Erdradius
+
+(1693-1776) reduzierte sich die Ungenauigkeit von Messungen mit Sextanten immerhin auf wenige Seemeilen (1.852 km) [3].
+Mit der Satellitennavigation lassen sich –
+auch bei schlechten Wetterbedingungen –
+deutlich bessere Ergebnisse erzielen. So
+begrenzten die nicht-militärischen GPSSignale die Ungenauigkeit auf etwa die
+Fläche eines Fußballplatzes. Seit der Abschaltung der künstlichen Verzerrung am
+01.05.2000 liegt die mit GPS-Signalen
+theoretisch erreichbare Genauigkeit unter
+10 m.
+In der Praxis hängt die mit einem GPSEmpfänger tatsächlich erreichbare Genauigkeit der Positionsbestimmung allerdings von einigen Randbedingungen ab:
+· Abschattung (kein direkter Sichtkontakt
+zu Satelliten, daher Dämpfung der
+Signale)
+· Reflexion (an Gebäuden, vor allem in
+„Häuserschluchten“)
+· Zahl der Satelliten (mindestens vier erforderlich, im Freien meist sieben bis 12
+sichtbar)
+
+
+Der Breitengrad β gibt den Winkel an, in
+dem das Lot der aktuellen Position P die
+Äquatorebene in M schneidet (Abb. 2). Der
+Breitengrad nimmt Werte zwischen -90°
+(Südpol) und 90° (Nordpol) an (statt der
+Vorzeichen auch mit südlicher bzw. nördlicher Länge bezeichnet); am Äquator ist
+β = 0°.
+Tatsächlich liegt der Schnittpunkt nicht
+genau im Mittelpunkt M des Äquatorkreises, da die Erde ein Ellipsoid und keine
+Kugel ist – dazu später mehr.
+
+Genauigkeit der GPS-Daten
+Die Positionsbestimmung ist vor allem auf
+hoher See von großer Bedeutung. Seit der
+Entwicklung von genauen Uhren Mitte des
+18. Jahrhunderts durch John Harrison
+
+· Position der Satelliten (Einfallswinkel
+der Signale)
+Außerdem werden die Signale in der Ionosphäre gedämpft und gebeugt; hinzu
+können Störungen durch die Überlagerung
+von Fremdsignalen kommen. Daher filtern
+gängige GPS-Sensoren unplausible Satellitendaten aus und bilden Mittelwerte über
+mehrere Positionsbestimmungen, um Fehler und Störungen abzuschwächen.
+Unter guten Messbedingungen – außerhalb
+geschlossener Ortschaften und bei wolkenlosem Himmel im Freien, damit die Signale
+von möglichst vielen, weit auseinander
+liegenden Satelliten empfangen werden
+können – erreicht ein GPS-Empfänger etwa
+die in Tabelle 1 angegebene Genauigkeit.
+
+
+
+
+Anteil
+
+β/λ
+
+Höhe
+
+99 %
+
++/- 5 m
+
++/- 8 m
+
+95 %
+
++/- 4 m
+
++/- 6 m
+
+50 %
+
++/- 2 m
+
++/- 2 m
+
+Tab. 1: Erreichbare GPS-Genauigkeit
+unter günstigen Empfangsbedingungen [4]
+
+Die Werte decken sich mit meinen Erfahrungen: Auf unserem Balkon (mitten in der
+Stadt) empfängt mein GFS-Sensor bei
+freiem Himmel regelmäßig Signale von 810 Satelliten. Bei zehn „sichtbaren“ Satelliten liegt der Fehler stabil unter 50 cm.
+
+Abstandsbestimmung
+Kennen wir die GPS-Koordinaten zweier
+Punkte P1 und P2 – wie z. B. die aktuelle
+Position und einen Zielpunkt – können wir
+daraus den Luftlinien-Abstand bestimmen.
+Dazu müssen wir zunächst die Differenz der
+Breiten- und Längengrade der beiden
+Punkte in Längen umrechnen. Eigentlich ist
+dafür eine Projektion der gekrümmten
+Erdoberfläche auf unsere „Kartenebene“
+erforderlich – das sparen wir uns jedoch, da
+wir nur relativ kurze Strecken betrachten,
+auf denen wir die Erdkrümmung vernachlässigen können. Denn eigentlich verläuft
+die kürzeste Verbindung zwischen zwei
+Punkten auf einem Breitenkreis natürlich
+nicht entlang dieser gekrümmten Linie.
+Auch mögliche minimale Höhenunterschiede berücksichtigen wir bei der Berechnung nicht.
+Und mit noch einer Ungenauigkeit müssen
+wir leben. Für die Umrechnung der Längenund Breitengrade in eine Entfernung müssen wir den Erdumfang kennen. Denn der
+Breitengrad teilt den Erdumfang U in 360°,
+d. h. der Abstand zweier benachbarter
+Breitenkreise entspricht einem 360stel des
+Erdumfangs. Da im Jahr 1793 die Längeneinheit „Meter“ vom französischen Nationalkonvent als der zehnmillionste Teil der
+Länge des Viertel-Meridians durch Paris
+definiert wurde, entspräche damit der
+
+
+Abstand benachbarter Breitenkreise genau
+111,111 km – 10.000 km geteilt durch 90°.
+Tatsächlich aber ist, wie man inzwischen
+weiß, der Erdumfang nicht überall gleich,
+denn die Erde ist keine Kugel, sondern ein
+(Rotations-) Ellipsoid – daher schwankt der
+Erdradius nach dem World Geodetic System
+von 1984 (WGS84) zwischen 6.378,137 km
+(Äquator) und 6.356,752 km (an den Polen)
+[5, 6]. Aus der Länge eines Meridians (von
+Pol zu Pol) lässt sich ein mittlerer Abstand
+zweier benachbarter Breitenkreise von
+111,133 km bestimmen.
+Der Abstand zweier benachbarter Längenkreise – auch Abweitung genannt – ist hingegen ist nicht fest: Er hängt vom jeweiligen Breitengrad ab, da die Breitenkreise
+sich Richtung Pol verjüngen: Am Äquator
+(Breitengrad 0) beträgt die Abweitung
+111,319 km (Erdradius von 6.378,1 km). Je
+größer der Betrag des Breitengrads, desto
+kleiner die Abweitung – bis sie am (geografischen) Nordpol auf Null sinkt [7].
+Wie aber bestimmt man die Abweitung auf
+einem gegebenen Breitengrad? Da hilft ein
+wenig elementare Mathematik:
+· Der zum Äquator parallele Breitenkreis
+zu einer Position P am Breitengrad β
+(Abb. 2) hat den Umfang U‘ = 2π∙r’.
+Dabei ist r’ = r∙cos β mit Erdradius r
+· Also gilt: Die Abweitung ω β zweier benachbarter Längenkreise im Breitengrad
+β berechnet sich wie folgt:
+ωβ = 2π∙r’/360
+= 2π∙r∙cos β/360
+= U/360∙cos β
+Dabei entspricht U dem Erdumfang am
+Äquator (Breitenkreisabstand von 111,319
+km). Wir vernachlässigen die aus der Erdabplattung resultierende Ellipsoid-Gestalt
+der Erdkugel (so schwankt der Erdradius in
+Mitteleuropa nach dem WGS84 zwischen
+6.365 und 6.368 km, zzgl. der Meereshöhe
+des Punkts) [5]; das wirkt sich bei unseren
+kleinen Distanzen nicht aus.
+
+
+Robotik
+
+Damit gilt:
+
+æD ö
+a = arcsin çç b ÷÷
+è d ø
+
+ωβ = 111,319 km∙cos β
+Damit lässt sich die Abweitung auf dem
+Eiffelturm (Breitengrad β = 48,858562°)
+bestimmen: ωβ = 73,239 km.
+Aus den GPS-Koordinaten unserer Punkte
+P1 = (β1, λ1) und P2 = (β2, λ2) können wir mit
+der Abweitung ωβ1 nun der (Luftlinien-)
+Abstand d unter Vernachlässigung der Erdkrümmung und etwaiger Höhenunterschiede nach dem Satz des Pythagoras
+berechnen:
+
+
+Dl + Db = d 2
+
+Die Abstände auf dem Längen- und Breitengrad erhalten wir dabei wie folgt:
+
+D b = ( b 2 - b1 ) ×111,319 km
+
+Dl = (l2 - l1 ) × cosb1 ×111,319 km
+Damit lässt sich der Abstand d (in km) aus
+den Abständen im Breiten- (Δβ) und Längengrad (Δλ) wie folgt bestimmen (Abb. 3):
+d = 111,319 × ( b 2 - b1 ) 2 + (l 2 - l1 ) 2 × cos 2 b1
+Δλ
+
+P1 (β1, λ1)
+α
+
+∙
+
+Δβ
+
+d
+
+P2 (β2, λ 2)
+
+nach dem Satz des Pythagoras
+
+Richtungsbestimmung
+Wenn wir den Abstand zwischen unserer
+Position P1 und dem Zielpunkt P2 berechnet
+haben, können wir daraus mit ein wenig
+Trigonometrie die Richtung bestimmen, in
+die wir fahren müssen, um den Zielpunkt zu
+erreichen. Denn es gilt:
+sin(a ) =
+
+Db
+d
+
+Der Arkussinus ist im Intervall [-1, 1] definiert. Da |Δβ| ≤ d und d > 0, sofern P1 und
+P2 nicht identisch sind, nimmt Δβ/d nur
+Werte aus dem Definitionsbereich an. Der
+resultierende Winkel α liegt im Intervall
+[-90°, 90°].
+Ist (wie im Beispiel in Abb. 3) Δβ ≥ 0, dann
+ist auch α ≥ 0, denn es gilt:
+
+arcsin(- x) = - arcsin(x)
+Um die Abweichung einer Ausrichtung auf
+den Zielpunkt P2 von einer Nord-Ausrichtung zu erhalten, müssen wir 90° zum resultierenden Winkel α addieren.
+Von der Lage der Punkte P2 und P1 hängt
+ab, in welche Richtung wir uns von Norden
+aus drehen müssen, um auf direktem Weg
+zu unserem Zielpunkt zu gelangen: Ist
+Δλ < 0 (liegt also P2 östlich von P1), dann
+müssen wir uns nach rechts (im Uhrzeigersinn) um δ = 90°+ α drehen, sonst
+nach links um δ = – (90°+ α).
+Anstatt uns aber zuerst nach Norden
+auszurichten, können wir mit Hilfe unseres
+Kompass-Sensors [2] die Drehrichtung
+direkt bezüglich unserer aktuellen Ausrichtung bestimmen: Ist der Winkel zur Zielausrichtung δ kleiner als unsere aktuelle
+Abweichung von Norden, müssen wir nach
+links, sonst nach rechts drehen, bis wir den
+Winkel erreicht haben.
+
+Robo Pro-Programm
+Jetzt ist es nicht mehr weit bis zur kompletten GPS-Steuerung des Roboters in
+Robo Pro. Abb. 4 zeigt das Unterprogramm,
+das die Berechnung des Abstands zum
+Zielpunkt und der Kompass-Richtung vornimmt. Der Rest des Programms ist euch als
+Fingerübung überlassen – mit den Treibern
+aus [1] und [2] ist das keine allzu große
+Herausforderung.
+
+, also:
+
+
+
+
+Quellen
+[1]
+
+Dirk Fox: I²C mit dem TX (Teil 6):
+GPS-Sensor. ft:pedia 3/2013, S. 5462.
+
+[2]
+
+Dirk Fox: I²C mit dem TX (Teil 10):
+Kompass-Sensoren. ft:pedia 2/2014,
+S. 57-64.
+
+[3]
+
+
+Wikipedia: Astronomische
+Navigation.
+
+[4]
+
+OpenStreetMap: Genauigkeit von
+GPS-Daten.
+
+[5]
+
+Wikipedia: World Geodetic System
+1984 (WGS84).
+
+[6]
+
+Wikipedia: Erdradius.
+
+[7]
+
+Wikipedia: Abweitung.
+
+

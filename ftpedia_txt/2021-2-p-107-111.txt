@@ -1,0 +1,289 @@
+
+Computing
+
+Computing
+
+ftSwarm – Das Prinzip Heinzelmännchen
+Christian Bergschneider, Stefan Fuss
+Bei der TX(T)-Controller-Serie von fischertechnik erscheint dieser Tage mit dem „TXT 4.0“
+die nächste Generation. ftDuino [1] und ftPwrDrive [2] ergänzen die klassischen Controller
+mit ihren eigenen Anwendungsfällen. So unterschiedlich die Controller auch sind, ihre Grundflächen sind alle gleich. Der ftSwarm ergänzt das „90 · 90 mm-Axiom“ um das Prinzip Heinzelmännchen und ermöglicht so völlig neue Bauansätze.
+Die Sage der Heinzelmännchen: wer kennt
+sie nicht? Kleine, fleißige Hausgeister, die
+nachts die Arbeit für die Großen erledigen.
+Man findet sie nicht nur in Köln, in England heißen sie Brownies, in Skandinavien
+helfen die Nisse in Haus und Hof. Den
+schwedischen Tomte hat Astrid Lindgren
+[3] über die Landesgrenzen bekannt gemacht.
+
+In größeren Modellen wird der Controller
+an einer zentralen Stelle mit ausreichend
+Platz verbaut; von dort aus wird jeder Sensor und Aktor verkabelt. Das KabelbaumBauen hat sich so zu einer eigenen Disziplin
+entwickelt. Der Flachbandkabeladapter [5]
+erfreut sich deshalb einer großen Beleibtheit und scheint in keinem gut sortierten fischertechnik-Haushalt mehr zu fehlen.
+
+In Terry Pratchetts Scheibenwelt-Märchen
+„Kleine freie Männer“ [4] nennen die Heinzelmännchen sich selbst „Wir-sind-dieGrößten“. Sie sind das kleinste Volk der
+Scheibenwelt – aber mit Abstand das
+stärkste und effektivste. Obwohl nur eine
+Handspanne groß, ist jeder von ihnen ein
+unerschrockener Kämpfer. Zusammen sind
+sie unbesiegbar, jeder für sich und dennoch
+gemeinsam greifen sie ihre Feinde an. Gegen hunderte Gegner hat auch der größte
+Held der Scheibenwelt keine Chance.
+
+Kleine, freie Controller
+
+Das „90 · 90 mm-Axiom“ führt bei fischertechnik-Modellen zu zwei grundlegenden
+Baugesetzen: Mindestgröße und Kabelbaum. Will man autonom fahrende Roboter
+bauen, ist man automatisch auf die Größenordnung des Fahrroboters aus dem Discovery Set festgelegt. Bei coolen Fahrzeugen wird deshalb der Controller schnell
+durch die Elektronik aus dem Control-Set
+ersetzt und wieder manuell gesteuert.
+
+Der ftSwarm (Abb. 1) basiert auf dem Prinzip Heinzelmännchen: Kooperieren mehrere „Kleine“, so sind sie effektiver als ein
+„Großer“.
+
+
+
+
+
+Mit nur der Hälfte an Ein- und Ausgängen
+ausgestattet ist der Controller mit dem Volumen von einem Achtel TXT ein echter
+Winzling.
+Während man für die großen Controller
+noch nach einem geeigneten zentralen Platz
+im Modell sucht, ist der ftSwarm bereits am
+Plätzchen (Abb. 2).
+
+fach mehrere ftSwarm-Controller an unterschiedlichen Stellen verbaut. Jeder Controller arbeitet autonom für sich und übernimmt
+seinen Teil der Steueraufgabe; miteinander
+kooperieren die Controller über Bluetooth.
+Durch die geringe Größe lassen sich nun
+auch sehr kleine autonome Roboter realisieren. Als kooperierender Schwarm wird aus
+einer Gruppe von autonomen fischertechnik-Aufräumrobotern schnell ein aufgeräumtes Kinderzimmer. 1
+
+Die Kelda
+Die „kleinen freien Männer“ in Terry
+Pratchetts Roman sind ein chaotischer Haufen, da jeder für sich agiert. Den Überblick
+in diesem Volk hat das einzige weibliche
+Wesen des Clans, die Kelda. Sie sorgt für
+die Basis der Zusammenarbeit: Was die
+Kelda sagt, ist Gesetz und wird befolgt.
+
+Das Plätzchen ist nahe bei Motoren, Tastern
+und Lichtschranken, sodass nur kurze Kabelwege benötigt werden (Abb. 3). Der Kabelbaum reduziert sich auf die Spannungsversorgung des ftSwarm.
+
+
+Werden an mehreren Stellen im Modell Aktoren und Sensoren benötigt, so werden ein-
+
+
+Der Name ftSwarm kommt von der ursprünglichen Idee, viele preiswerte, kleine Roboter zu
+bauen. Das im Laufe der Entwicklung hinzugekommene Heinzelmann-Prinzip eröffnet sehr
+
+
+Mit dem ftSwarm wird aus dem zentralen
+Controller-Prinzip von fischertechnik ein
+verteiltes System. Wie im Roman ist es sehr
+anspruchsvoll, die ganzen kleinen, freien
+Controller programmiertechnisch unter einen Hut zu bekommen.
+Hierfür hat der ftSwarm mit dem Kelda-Ansatz eine einfache Lösung: Da alle Controller über einen leistungsfähigen ESP32Wrover-Prozessor verfügen, wird ein beliebiger Controller im Modell zur Kelda. Sie
+übernimmt die Leitungsaufgabe und sendet
+an die anderen Controller über BLE Steuerkommandos oder fragt den Status von Sensoren ab.
+Auf der Kelda läuft zusätzlich zur normalen
+Firmware ein klassisches Programm in C oder MicroPython. Über eine API kann jede
+Funktion auf einem beliebigen Controller
+ausgeführt werden.
+
+viel mehr Möglichkeiten, als nur Schwärme zu
+bauen; mit ftMite, ftNano oder ftDwarf konnten
+wir uns aber nicht anfreunden.
+
+Im Beispielprogramm (Abb. 4) werden ein
+Motor- und ein Taster-Element instanziiert.
+Dabei wird die UUID des Controllers angegeben, auf dem der zugehörige Anschluss liegt. Anhand der UUID spricht die
+Firmware nun das richtige Gerät an, sei es
+lokal oder remote auf einem anderen Controller.
+#include "kelda.h"
+Motor Mx( UID_FTSWARM_XYTable, 1 );
+Switch Tx( UID_FTSWARM_Joystick, 1 );
+Tx.waitFor( PRESSED );
+Mx.run(100);
+Tx.waitFor( RELEASED );
+Mx.stop();
+
+Probleme verteilter Systeme
+
+Computing
+
+Zum Anschluss der fischertechnik-Motoren
+und -Taster werden kurze Kabelstücke verwendet, „Pigtails“ genannt. Diese Pigtails
+werden in der Maker-Szene von einigen
+Plattformen genutzt.
+An einem Ende des Pigtails ist bereits eine
+JST-PH-Buchse gecrimpt, an das offene
+Ende werden die normalen fischertechnikStecker angeschlossen.
+Da der Controller in der Nähe von Aktoren
+und Sensoren eingebaut wird, werden nur
+wenige verschiedene Kabellängen benötigt.
+
+ftSwarmControl
+Zusätzlich zum ftSwarm gibt es den ftSwarmControl. Er kann im Modell fest als
+Steuerpult oder als Fernbedienung eingesetzt werden (Abb. 6).
+
+Obwohl der ftSwarm nur 45 · 37,5 · 18 mm
+groß ist, stecken in ihm viele Funktionen:
+
+
+
+
+
+
+
+
+ESP32-Wrover-B Prozessor.
+Bluetooth, BLE & WiFi
+Zwei Aus- und vier Eingänge
+Zwei RGB- bzw. Neopixel-LEDs
+Servoanschluss
+SD-Kartenslot
+Optionaler Gyro
+
+Um diese Größe zu erreichen, sind klassische fischertechnik- bzw. Märklin-Stecker
+viel zu groß. Am ftSwarm sind deshalb JSTPH-Stecker verbaut (Abb. 5).
+
+
+Die Größe des ftSwarmControl ist mit 85 ·
+70 · 37 mm auch deutlich kleiner als das originale Control Set von fischertechnik. Im
+ftSwarmControl steckt jedoch ein fast vollwertiger ftSwarm. Zusätzliche Funktionen
+machen aus ihm ein perfektes Steuerpult:
+
+
+
+
+
+OLED Display
+Zwei Joysticks
+Sechs frei verwendbare Taster
+TX/ftDuino- und TXT-kompatible I²CSchnittstelle
+ Stromversorgung über 9 V Netzteil oder
+9 V Blockbatterie
+durch kleine JST-PH-Stecker
+
+Wie beim ftSwarm lassen sich beliebig
+viele ftSwarmControl im Modell einsetzen.
+
+
+
+
+Er kann als Kelda verwendet werden, seine
+Funktionen lassen sich aber auch von jedem
+anderen Controller im Modell aufrufen.
+
+Teamplayer
+Durch die I²C-Schnittstelle mit beiden Logikpegeln kann der ftSwarmControl mit den
+kabelgebundenen Controllern TX und ftDuino kommunizieren. Über Bluetooth und
+Wi-Fi können beide ftSwarm-Varianten
+darüber hinaus mit TXT, TX-PI und ftDuino32 zusammenarbeiten.
+
+Programmierung in C
+Die Programmierung in C findet wie beim
+ftDuino über die Arduino-IDE2 statt [6]. Für
+die Nutzung der Funktionen des ftSwarm
+steht eine umfangreiche Bibliothek zur Verfügung.
+
+
+Download der Arduino-IDE:
+https://www.arduino.cc/en/software
+
+
+Homepage des MicroPython-Projekts:
+https://www.micropython.org/
+
+
+Python kennt keine Pointer und stellt bereits im
+normalen Sprachumfang komplexe Datentypen
+zur Verfügung. Die in C aus den Pointern häufig
+
+
+Beim Hochladen des Programms am KeldaController wird der Inhalt des Flash-Speichers durch das eigene Programm ersetzt.
+Mit dem Neustart des Controllers startet
+dieses Programm automatisch.
+Die normalen Controller erhalten eine Standardfirmware, sodass immer nur der KeldaController geflashed wird.
+
+Programmierung in
+MicroPython
+MicroPython3 ist in der fischertechnik-Welt
+noch recht neu. Die Sprache ist aber einfach
+zu erlernen und bietet viele Vorteile.4 Die
+langsamere Programmausführung gleicht
+der leistungsfähige ESP32-Prozessor durch
+seine hohe Taktrate wieder aus.
+Programmiert wird am PC am einfachsten
+in der Community-Version von PyCharm. 5
+
+entstehenden Speicherschutzverletzungen können in Python nicht auftreten; die Fehlerhäufigkeit wird geringer und die Fehlersuche erleichtert.
+
+Download von PyCharm:
+https://www.jetbrains.com/de-de/pycharm/.
+
+Der ftSwarm wird mit vorinstalliertem
+MicroPython-Interpreter ausgeliefert und
+startet automatisch die ftSwarm-Firmware.
+
+Computing
+
+Quellen
+[1]
+
+Till Harbaum: ftDuino – OpenSource trifft Konstruktions-Baukasten. ft:pedia 1/2018, S. 85–91.
+
+[2]
+
+Dirk Wölffel, Christian Bergschneider, Stefan Fuss, Björn Gundermann,
+Christian Lauff: Der ftPwrDriveController für Schrittmotoren und
+Servos – Teil 1. ft:pedia 4/2018,
+S. 67–70.
+
+Der ftSwarm kann ebenfalls die KeldaFunktion übernehmen. Da er aber über
+keine Bedienelemente verfügt, wird beim
+Upload der Python-Programme festgelegt,
+welches Programm beim Neustart des Controllers automatisch gestartet wird.
+
+[3]
+
+Astrid Lindgren: Tomte Tummetott.
+Oetinger Verlag, 1960.
+
+[4]
+
+Terry Pratchett: Kleine Freie Männer, Ein Märchen von der Scheibenwelt. Goldmann Verlag, 2003.
+
+Verfügbarkeit
+
+[5]
+
+Stefan Fuss, Christian
+Bergschneider: Verkabelung (Teil 2).
+ft:pedia 4/2019, S. 19–21.
+
+[6]
+
+David Holtz: Alternative Controller
+(1): Der Arduino. ft:pedia 2/2016,
+S. 56–59.
+
+Im Gegensatz zur C-Variante werden auf
+den Kelda-Controller die selbst geschriebenen Python-Programme zusätzlich hochgeladen; die Firmware wird nicht ersetzt.
+Über das Display des ftSwarmControl kann
+nun wie am TXT zwischen verschiedenen
+Programmen umgeschaltet werden.
+
+Im Laufe des Sommers werden die ersten
+Geräte verfügbar sein. Die erste Firmware
+wird die Grundfunktionen des ftSwarm unterstützen, die Kommunikation mit den
+„Großen“ ist für Release 2 geplant. Ab sofort sind beide Typen in Björns Shop6 vorbestellbar.
+
+
+https://www.gundermann.org
+
+

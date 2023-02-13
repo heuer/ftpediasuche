@@ -1,0 +1,427 @@
+
+
+Computing
+
+I²C mit dem TX – Teil 7: Real Time Clock (RTC)
+Dirk Fox
+Seit der Einführung in die Grundlagen des I²C-Protokolls in ft:pedia 3/2012 [3] haben wir in
+unserer I²C-Serie schon einige Sensoren und Aktoren vorgestellt, die sich an den TX anschließen und in Robo Pro-Programmen nutzen lassen. In diesem Beitrag stellen wir einen Aktor
+vor, der z. B. unsere ft-Funkuhr aus ft:pedia 3/2012 [1] perfekt ergänzt: eine Batterie gepufferte Echtzeituhr.
+
+Ein Praxistipp vorweg
+
+gen Minuten ein Universal-I²C-Anschlusskabel in den Händen (Abb. 2).
+
+Nachdem ich inzwischen zahlreiche Varianten ausprobiert habe, um I²C-Sensoren
+möglichst elegant mit dem EXT-2-Anschluss des TX zu verbinden, möchte ich
+euch eingangs eine besonders einfache und
+universell einsetzbare Lösung vorstellen.
+
+
+Für diese Variante benötigt ihr lediglich
+eine 6polige Pfostenbuchse (ca. 0,25 €)
+und vier verschiedenfarbige Female-Jumper (F/F, Abb. 1). Wenn ihr die Jumper in
+der Mitte durchschneidet, könnt ihr die
+zweite Hälfte für ein weiteres Anschlusskabel verwenden.
+
+Vorteil dieser Lösung: Sofern das I²CModul mit angelöteter Siftleiste an den
+Anschlüssen geliefert wird, kommt ihr
+gänzlich ohne Lötkolben aus, das Anschlusskabel kommt mit jeder Anordnung
+der Kontakte am I²C-Modul klar und ist
+zudem konkurrenzlos günstig.
+
+Real Time Clock (RTC)
+
+
+Wählt die Jumper-Kabel möglichst in den
+von fischertechnik gewohnten Farben (rot
+für VCC, grün für GND und schwarz für
+den Datenanschluss SDA, sowie eine
+beliebige vierte Farbe für den Takt SCL),
+damit ihr die Anschlüsse auch ohne
+Beschriftung sofort zuordnen könnt. Dann
+klemmt ihr die abgeschnittenen Kabelenden in der richtigen Reihenfolge in den
+Pfostenstecker, und ihr haltet nach weni28
+
+Für zahlreiche Anwendungen, die mit Zeitangaben arbeiten oder Zeiten messen, ist
+eine exakte Uhr hilfreich. Der Timer von
+Robo Pro ist dafür zu ungenau; zudem
+kennt er weder Datum noch Uhrzeit und
+„vergisst“ die Zeit nach dem Ausschalten.
+Eine Echtzeit-Uhr sollte daher über eine
+unabhängige Stromversorgung verfügen
+und die Möglichkeit bieten, Weckzeiten
+(Alarme) zu speichern. Sie ließe sich zum
+Beispiel mit dem Atom-Zeit-Empfänger
+exakt einstellen, den wir in ft:pedia 3/2012
+vorgestellt haben [1]. Zwei solcher I²CEchtzeituhren werden im Folgenden vorgestellt.
+
+Echtzeit-Uhr DS1307
+Ein sehr häufig anzutreffender Real Time
+Clock (RTC) IC mit I²C-Schnittstelle ist
+der DS1307 von Dallas Semiconductor aus
+dem Jahr 2001. Er speichert Uhrzeit und
+Datum, korrigiert Monate mit weniger als
+31 Tagen, erkennt Schaltjahre bis zum Jahr
+2100 und berechnet den aktuellen Wochentag. Die Uhrzeit kann wahlweise in 24oder in 12-Stunden-Darstellung (mit AM/
+PM-Anzeige) gespeichert werden. Zeitund Datumsangaben werden im BCDFormat dargestellt [4].
+
+(Quelle: watterott.com)
+
+Für etwa 15 € bieten z. B. watterott electronic und EXP unter der Bezeichnung
+BOB-00099 ein Board von Sparkfun mit
+dem RTC-Chip DS1307 an (Abb. 3). Es
+arbeitet mit einer Eingangsspannung von
+5 V, lässt sich also ohne Spannungs- und
+Pegelwandler direkt an den TX anschließen. Die I²C-Kontakte sind auf der Platine
+gekennzeichnet, sodass der Anschluss nach
+Einlöten der Stiftleiste keine Herausforderung darstellt. Der Stromverbrauch des
+DS1307 ist mit 0,5 mA äußerst gering; die
+Lebensdauer der auf der Rückseite der
+Platine befestigten Lithium-Knopfzelle
+CR1225 wird vom Hersteller daher mit 917 Jahren angegeben – für ein ft-Modell
+höchstwahrscheinlich ausreichend.
+Zeit und Datum werden in einem sieben
+Byte großen Register (Adresse 0x00 bis
+0x06) gespeichert: Sekunden, Minuten,
+
+Computing
+
+Stunden, Wochentag, Datum, Monat und
+Jahr, gefolgt von einem (für uns nicht relevanten) Control Byte (Abb. 4). Das Sekunden-Byte enthält als höchstwertiges Bit ein
+Clock Halt (CH) Bit – ist es gesetzt, wird
+der Oszillator angehalten. Bit 6 des Stunden-Bytes enthält die Auswahl des 12/24Stunden-Formats; falls Bit 6 = 1 (12-Std.Format) ist Bit 5 das AM/PM-Bit (0/1).
+Vom Wochentag-Byte werden nur die niederstwertigen drei Bits genutzt. Das Jahresbyte enthält die letzten beiden Dezimalstellen der Jahreszahl (Abb. 4).
+
+
+Alle Zeitangaben sind BCD-kodiert gespeichert. Unter den Adressen 0x08 bis
+0x3F stehen weitere 56 Byte RAM zur
+Verfügung, in denen eine Anwendung z. B.
+Zwischen- oder Alarmzeiten speichern
+kann.
+I²C-Protokoll
+Der RTC-Controller DS1307 unterstützt
+das I²C-Protokoll im Standard Mode (100
+kHz). Der Controller hat die feste SlaveAdresse 0x68 (= 1101 000); an einem I²CBus können daher (ohne Multiplexer) nicht
+mehrere RTC-Module getrennt angesprochen werden.
+Der DS1307 beherrscht lediglich zwei
+Befehle (Modi): einen Schreib- und einen
+Lese-Modus, in denen Uhrzeit und Datum
+eingestellt bzw. ausgelesen werden. In
+beiden Modi wird das gerade geschriebene
+
+
+
+
+bzw. auszulesende Datenbyte gepuffert;
+die Puffer werden beim I²C START-Kommando synchronisiert.
+
+neuen Minute die RTC exakt starten. Oder
+man nutzt das CH-Bit, um die RTC als
+Stoppuhr zu starten (siehe unten).
+
+Auf diese Weise wird ein Überschreiben
+der Daten durch die Uhr während eines
+Schreib- oder Lesevorgangs verhindert.
+Allerdings schließt das die Übertragung
+von mehreren aufeinander folgenden Bytes
+mit dem repeated START-Kommando (in
+Robo Pro aktiviert durch das Kästchen
+„Offen lassen“, siehe ft:pedia 3/2012 [3])
+aus, da der Puffer sonst vom nächsten Eintrag überschrieben wird.
+
+Auslesen der RTC
+
+Stellen der RTC
+Zum Stellen der Uhr wird Byte für Byte
+ein Write-Befehl an die Slave-Adresse
+0x68 geschickt, gefolgt von der RegisterAdresse, in die geschrieben werden soll
+(Subaddress) und dem BCD-kodierten
+zugehörigen Bytewert des Uhrzeit- bzw.
+Datumselements: die Sekunden in Register
+0x00, die Minuten in 0x01, die Stunden in
+0x02, der Wochentag in 0x03 und Datum,
+Monat und Jahr in die Register 0x04 bis
+0x06. Liegen die Zeit- und Datumsangaben
+nicht im BCD-Format vor, müssen sie
+zuvor konvertiert werden.
+Soll die Zeit im 12-Stunden-Format gespeichert werden, ist im Stunden-Byte
+Bit 6, für eine Stundenangabe nach Mittag
+außerdem Bit 5 für ‚PM’ zu setzen. Die
+(sequentielle) Nummerierung der Wochentage von 1 bis 7 ist nicht vorgegeben; nach
+dem Stellen der Uhr wird der Wochentag
+jeweils um Mitternacht erhöht.
+Das Clock Halt-Bit (CH) im SekundenByte schaltet den Oszillator ab. Damit
+kann das RTC-Modul mit eingebauter
+Batterie geliefert werden, ohne dass es
+Strom verbraucht. Das CH-Bit ermöglicht
+es außerdem, die Uhr nach dem Stellen zu
+einem exakten Zeitpunkt zu starten. Diese
+Option ist interessant, wenn man die Uhr
+nach der Normalzeit des DCF77-Signals
+stellen möchte: Damit kann man beim
+Empfang des ersten Sekunden-Signals der
+
+Das Auslesen der Zeit erfolgt mit einem
+Read-Befehl an die Slave-Adresse 0x68, an
+den sich die Angabe der auszulesenden
+Register-Adresse anschließt. So können die
+BCD-Werte Byte für Byte (und Befehl für
+Befehl) ausgelesen werden.
+Liegen die Daten in 12-Stunden-Darstellung vor, wird dies über ein Flag zurückgemeldet und das AM/PM-Flag gesetzt
+(0 = AM, 1 = PM).
+Speicher
+Die Verfügbarkeit von 56 Byte nicht-flüchtigen, direkt adressierbaren Speichers ist
+besonders interessant, da die Adressen
+nicht im Adressbereich des TX-EEPROMs
+(0x50-0x57) liegen und daher ohne
+Adresskollision genutzt werden können.
+Zum Speichern von Zeiten (Stunden, Minuten und Sekunden) genügen drei Byte.
+Will man die RTC beispielsweise zur Messung von Rundenzeiten vier verschiedener
+Rennwagen nutzen, kann man je Fahrzeug
+14 Runden speichern.
+Die Speicherung eines Alarm-Zeitpunkts
+(Zeit und Tag) erfordert sieben Byte; daher
+lassen sich bis zu acht solcher Alarme im
+Speicher ablegen.
+Robo Pro-Treiber
+Ein sehr einfacher Robo Pro-Treiber für
+den DS1307 von Rei Vilo wird mit der
+aktuellen Version von Robo Pro in der
+Bibliothek (Rubrik I²C) ausgeliefert. Der
+Treiber kann die RTC stellen und auslesen;
+die Werte werden automatisch in das bzw.
+aus dem BCD-Format umgewandelt. Der
+Treiber funktioniert allerdings nur bei Zeitangaben im 24-Stunden-Format korrekt.
+Im Downloadbereich der ft:c findet sich
+ein angepasster DS1307-Treiber, der auch
+
+das 12-Stunden-Format beherrscht und die
+Zeitangaben im BCD-Format erhält bzw.
+ausgibt (siehe Abb. 5). Das ist von Vorteil,
+wenn man beispielsweise die Echtzeituhr
+nach dem DCF77-Signal (Normalzeit) stellen oder Uhrzeit und Datum auf einem 7Segment-LED-Display ausgeben möchte,
+da in beiden Fällen BCD-kodierte Werte
+benötigt werden.
+
+Computing
+
+Zeitmessung für die Carrerabahn: ReedSensoren oder Lichtschranken stoppen die
+Rundenzeiten, der TX berechnet die
+Durchschnittswerte und zeigt die schnellste
+Runde im LED-Display an.
+
+
+Als Anwendungsbeispiel liegt dem Robo
+Pro-Treiber ein ft-Funkuhr-Programm bei,
+das auf dem in ft:pedia 3/2012 vorgestellten Programm für einen DCF77-Empfänger aufbaut und auch bei schwachem
+DCF77-Signal weiterläuft: Wie die originalen Junghans-Funkuhren wird die RTC
+zu jeder vollen Stunde mit der von
+Mainflingen bei Frankfurt ausgesandten
+Normalzeit abgeglichen, sofern das
+DCF77-Signal fehlerfrei empfangen werden kann. Die Zeitanzeige erfolgt sowohl
+auf dem Display des TX als auch – sofern
+angeschlossen – auf bis zu drei LEDDisplays (SAA1064) [2], deren Helligkeit
+mit den Steuertasten des TX verstellt
+werden kann.
+Ein weiteres kleines Beispielprogramm,
+das ebenfalls dem Treiber beiliegt, zeigt
+den Nutzen des CH-Bits: Es startet die
+RTC auf Knopfdruck als Stoppuhr
+(Abb. 6). Das Programm lässt sich leicht
+erweitern, z. B. zu einer automatischen
+
+
+Echtzeit-Uhr DS3231
+Ein ‚große Bruder’ des DS1307 ist der
+RTC-Controller DS3231 aus dem Jahre
+2005. Für knapp 17 € bietet EXP das
+Breakout Board CronoDot v2.1 an.
+
+(Quelle: exp-tech)
+
+
+
+
+Auch dieses RTC-Board (Abb. 7) wird mit
+einer Knopfzelle (CR2016) geliefert, deren
+Lebenszeit mit mindestens acht Jahren
+angegeben wird. Der DS3231 verträgt Eingangsspannungen von 2,3 bis 5,5 V und
+kann daher ebenfalls direkt am TX
+betrieben werden. Er schaltet automatisch
+auf Batteriebetrieb, wenn die Betriebsspannung unter den Mindestwert fällt. Der
+Controller gleicht über einen Temperatursensor alle 64 Sekunden Temperatur
+bedingte Schwankungen des Oszillators
+aus und erreicht so eine deutlich höhere
+Genauigkeit. Außerdem verfügt er über
+zwei Alarm-Register.
+Mit 0,84 mA ist sein Ruhestromverbrauch
+etwas höher als der des DS1307. Dank
+eines zusätzlichen Century-Bits können
+sogar Datumswerte bis zum 31.12.2199
+dargestellt werden.1
+I²C-Protokoll
+Der RTC-Controller DS3231 unterstützt
+den I²C Fast Mode (400 kHz). Der Controller hat dieselbe – ebenfalls unveränderliche – I²C-Adresse wie der DS1307 (0x68
+= 1101 000) und kann daher nicht mit
+diesem an demselben Bus betrieben
+werden. Auch der DS3231 kennt nur zwei
+Modi: Schreiben (zum Stellen der Uhr
+bzw. eines Alarms) und Lesen (zum Auslesen der Uhrzeit bzw. des Status-Bytes).
+Nach dem Einschalten soll man dem RTCController vor dem ersten Befehl 256 bis
+300 ms Zeit zur Stabilisierung der Stromversorgung einräumen.
+
+Schreibbefehl des DS1307-Treibers auch
+für die Eintragung der Uhrzeit im DS3231
+verwendet werden. Will man die höhere
+Busgeschwindigkeit ausreizen, müssen die
+I²C-Befehle auf 400 kHz Übertragungsgeschwindigkeit umgestellt werden. Die
+höhere Taktrate kollidiert nicht mit langsameren Sensoren auf demselben Bus, wie
+zum Beispiel den SAA1064-LED-Displays, auf denen die ft:pedia-Funkuhr Zeit
+und Datum ausgibt und die nur den I²C
+Standard Mode beherrschen [2].
+Alarme
+Statt eines frei belegbaren RAM-Bereichs
+verfügt der DS3231 über sieben Register
+zur Speicherung von zwei Alarmen: einem
+sekunden- und einem minutengenauen.
+Alarm-Tag und -Zeitpunkt werden jeweils
+in den Registern 0x07 bis 0x0A (Alarm 1)
+bzw. 0x0B bis 0x0D (Alarm 2) gespeichert. Die Struktur des Registerinhalts
+entspricht bei Alarm 1 (A1) den ersten vier
+(Sekunden, Minuten, Stunden und Tag),
+bei Alarm 2 (A2) dem zweiten, dritten und
+vierten Byte (Minuten, Stunden und Tag)
+des RTC-Registers. Die Angaben werden
+ebenfalls BCD-kodiert gespeichert.
+Statt des Wochentags kann im vierten
+Register von A1 bzw. im dritten Register
+von A2 jeweils auch das Datum gespeichert werden; in diesem Fall wird zusätzlich Bit 6 gesetzt. Außerdem wird der
+Alarm-Typ in vier (A1) bzw. drei (A2)
+Konfigurationsbits – den höchstwertigen
+Bits der Alarm-Register – festgelegt:
+
+Stellen der RTC
+
+· Sind alle vier Bits gesetzt, so erfolgt der
+Alarm jede Sekunde (A1).
+
+Die Kodierung der Uhrzeit in den Registern 0x00 bis 0x06 entspricht – bis auf das
+nicht mehr unterstützte Clock Halt-Bit –
+der des DS1307 (Abb. 8). Daher kann der
+
+· Sind die ersten drei Bits gesetzt, wird
+der Alarm ausgelöst, wenn der Sekundenwert übereinstimmt (A1) bzw. erfolgt der Alarm jede Minute (A2).
+
+
+
+Um den Robo Pro-Treiber nicht zu kompliziert
+zu gestalten, wird darin das Century-Bit allerdings nicht ausgewertet.
+
+· Sind die ersten beiden Bits gesetzt, wird
+der Alarm ausgelöst, wenn Sekundenund Minuten- (A1) bzw. nur die Minu-
+
+
+Computing
+
+
+tenangabe (A2) des Alarmzeitpunkts
+mit der Uhrzeit übereinstimmen.
+· Ist nur ein Bit gesetzt, muss außerdem
+die Stundenangabe übereinstimmen.
+· Ist kein Bit gesetzt, muss auch der
+Wochentag (bzw. das Datum) übereinstimmen.
+Das Erreichen eines Alarm-Zeitpunkts
+wird in Bit 0 (A1) und Bit 1 (A2) des
+Status-Registers 0x0F signalisiert: Hat
+eines dieser beiden Status-Bits den Wert
+eins, so wurde der entsprechende AlarmZeitpunkt erreicht. Ein Wecker muss daher
+regelmäßig (mindestens einmal je Sekunde) das Status-Byte via I²C auslesen.
+Auslesen der RTC
+Empfängt der Controller einen Auslesebefehl, dann werden die sieben Byte des
+Registers in ein „Ausleseregister“ kopiert,
+damit Aktualisierungen der RTC während
+des Auslesevorgangs nicht zu fehlerhaften
+Zeitangaben führen.
+
+Temperatur
+Die vom integrierten Temperatur-Sensor
+gemessene Temperatur, mit der der Ausgleich thermischer Oszillatorschwankungen berechnet wird, kann auch via I²CProtokoll ausgelesen werden. Beim Einschalten der Stromzufuhr enthalten die
+Temperatur-Register den Wert 0°; anschließend wird alle ca. 64 Sekunden eine
+Temperaturmessung durchgeführt. Sie
+kann durch ein Setzen des CONV-Flags –
+Bit 6 im Control-Byte 0x0E – auch
+zwischen den automatischen Berechnungen ausgelöst werden. Der 10-bit-Temperaturwert mit einer Auflösung von 0,25°
+steht in den Registern 0x11 und 0x12: Der
+ganzzahlige Teil in Register 0x11, der
+Nachkommawert in Bit 6 und 7 von
+Register 0x12, kodiert als Zahl der 0,25°Schritte. Die Bestimmung der Temperatur
+und die Umrechnung des Einflusses auf
+den Oszillator benötigen 125-200 ms. Die
+Auswertung des Temperaturwerts in
+Robo Pro zeigt Abb. 9.
+
+
+
+Alarms an der RTC auf einen späteren
+Beitrag – in dem wir ein über das I²CProtokoll ansprechbares Tastenfeld vorstellen werden.
+Jetzt aber erstmal viel Vergnügen mit
+dieser Mechanik freien fischertechnik-Uhr.
+
+
+Die Genauigkeit des Temperatur-Sensors
+ist allerdings nicht umwerfend – nach
+Datenblatt liegt sie bei +/- 3°C [5].
+
+Vielleicht gelingt es ja auch jemandem von
+euch, damit eine mechanische ft-Uhr exakt
+zu stellen?
+
+Quellen
+[1]
+
+Dirk Fox, Dirk Ottersmeyer: Bau
+einer ft-Funkuhr. ft:pedia 3/2012, S.
+4-10.
+
+[2]
+
+Dirk Fox: I²C mit dem TX – Teil 2:
+LED-Display. ft:pedia 4/2012, S. 3237.
+
+[3]
+
+Dirk Fox: I²C mit dem TX – Teil 1:
+Grundlagen. ft:pedia 3/2012, S. 3237.
+
+[4]
+
+Dallas Semiconductors: DS1307 64 x
+8 Serial Real-Time Clock. Datasheet,
+Rev. 5, February 2008.
+
+[5]
+
+Maxim Integrated: DS3231 Extremely Accurate I²C-Integrated
+RTC/TCXO/Crystal. Datasheet, Rev.
+9, January 2013.
+
+Robo Pro-Treiber
+Ein RoboPro-Treiber für den DS3231 ist
+ebenfalls im Downloadbereich der ft:c zu
+finden, zusammen mit einer angepassten
+Erweiterung der fischertechnik-Funkuhr
+(DCF77-Empfänger [1]). Wie bei der
+Variante für den DS1307 wird die RTC
+stündlich mit der Normalzeit abgeglichen;
+außerdem zeigt die Funkuhr für den
+DS3231 die Raumtemperatur an.
+Die Nutzung der Alarm-Funktion ist
+wegen der Beschränkung der ‚Benutzerschnittstelle’ auf die beiden roten Knöpfe
+des TX allerdings sehr umständlich – hier
+wäre ein numerisches Tastenfeld als
+Eingabe-Einheit eine feine Sache. Daher
+verschieben wir die Einstellung eines
+
+
+

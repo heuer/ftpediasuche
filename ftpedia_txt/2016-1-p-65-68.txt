@@ -1,0 +1,232 @@
+
+Computing
+
+Computing
+
+TXT Controller – Tipps und Tricks (1):
+Das Root-Passwort
+Raphael Jacob
+Seit dem Erscheinen des ROBOTICS TXT Controllers (kurz: TXT) kurz vor Weihnachten 2014
+fehlen leider noch immer einige der beworbenen Funktionen. Damit die Computerenthusiasten
+unter uns ihre eigenen Funktionen programmieren und testen können, benötigt man in den
+meisten Fällen einen „Root-Zugang“. Wie ihr diesen einrichten und auch sicher nutzen könnt
+zeige ich in diesem Beitrag.
+
+Hintergrund
+Um bei Linux systemkritische Dateiänderungen durchführen zu können, benötigt
+man wie bei Windows „Administratorrechte“. Diese können entweder über einen
+Rechteeditor wie z. B. visudo verliehen
+werden, oder man loggt sich direkt mit dem
+Admin-Account ein. Bei unserer Vorgehensweise werden wir zunächst Letzteres
+tun, da dies beim TXT einfacher ist und
+Grundvoraussetzung für die Benutzung von
+visudo.
+
+Durchführung
+Der Weg zum Terminal
+Um die Befehle durchzuführen, benötigt
+man Zugriff zum internen Terminal des
+TXT (ähnlich wie die Kommandozeile bei
+Windows). Dafür haben wir zwei
+Möglichkeiten:
+• Man kann eine normale USB-Tastatur
+benutzen und am TXT anschließen.
+(Funksysteme habe ich nicht getestet und
+ich kann somit nicht bestätigen, ob diese
+funktionieren.) Um das Terminal zu
+öffnen drückt man die ALT-Taste (links,
+nicht ALT GR) und die Taste F2
+gleichzeitig. Nun verschwindet die
+Bedienoberfläche und nur die Uhr bleibt.
+
+
+• Man kann sich auch per ssh (Secure
+Shell, also „Remote-Kommandozeile“)
+verbinden.
+Dafür
+benutze
+ich
+beispielweise die Software Putty
+(Download).
+
+
+
+
+
+Putty muss nicht installiert werden und
+braucht nur z. B. auf dem Desktop abgelegt
+zu werden.
+Nun öffnet man das Programm und gibt
+oben die IP-Adresse des TXTs ein. (USB:
+192.168.7.2, W-LAN: 192.168.8.2, BT:
+192.168.9.2) Dabei ist USB zu empfehlen.
+Die Einstellung Port ist auf 22 zu belassen,
+so auch „Connection Type“ auf „SSH“. Bei
+Bedarf kann man diese Einstellungen noch
+abspeichern, indem man bei „Saved
+Sessions“ einen passsenden Namen einträgt
+und auf „Save“ drückt. Diese können durch
+Doppelklick auf den entsprechenden
+Listeneintrag abgerufen werden. Ohne
+Abspeichern fährt man mit einem Klick auf
+„Open“ fort.
+
+es mit einem Rechtsklick in Putty ein. Nun
+startet man den TXT wie gewohnt neu. Das
+Passwort erhält man nun, indem man auf
+„Einstellungen“ und dann „Info“ drückt.
+Dort ist es in der letzten Zeile der ersten
+Seite zu sehen. Falls man am TXT selbst
+arbeitet und nicht über SSH, sollte man sich
+das Passwort aufschreiben (es sind nur
+Großbuchstaben).
+
+Einloggen
+
+
+Bei „login“ schreibt man nun: „ROBOPro“
+(ohne die Anführungszeichen; Groß- und
+Kleinschreibung beachten). Dies bestätigt
+man mit der Eingabetaste. Bei Password
+schreibt man nun auch „ROBOPro“, jedoch
+sollte man sich nicht davon irritieren lassen,
+dass man die Eingabe nicht sieht. Auch das
+Passwort bestätigen wir mit der Eingabetaste. Jetzt wird man eingeloggt und man
+wird von folgendem Bildschirm begrüßt:
+
+
+Login als root
+Um nun das neue Root-Passwort auch
+nutzen zu können muss man sich als Nutzer
+„root“ einloggen. Dies geschieht wie oben
+beschrieben, jedoch mit dem Benutzernamen „root“ und dem Passwort, welches
+man in den Einstellungen des TXTs findet
+(nur Großbuchstaben).
+Setzen eines eigenen Passwortes
+
+
+Auslesen des Zufallspasswortes
+Um das schon ab Werk hinterlegte RootPasswort abzurufen, muss man das folgende
+Kommando ausführen [1]:
+echo "showroot=1" > .TxtAccess.ini
+
+Um das Kommando auszuführen, tippt man
+es entweder ab oder man kopiert es und fügt
+
+Auch wenn der TXT wohl nicht das Ziel
+von Hackern sein wird, sollte das Passwort
+trotzdem aus vielerlei Gründen geändert
+werden. Das geht wie folgt:
+Nach dem Login als „root“ gibt man
+folgendes Kommando ein: „passwd root“
+Dies wird mit „Enter“ bestätigt und man
+wird nach dem neuen „root“-Passwort
+gefragt, welches man auch mit „Enter“
+
+quittiert. Danach wird noch einmal nach
+dem neuen Passwort gefragt, und man
+bestätigt auch dieses. Wenn die letzten
+beiden Eingaben identisch waren, kommt
+die folgende Nachricht:
+
+Computing
+
+macht man mit einem SFTP-Client. Ich
+nutze beispielsweise „Filezilla“ (Abb.
+8).
+
+
+„root“-Passwort
+
+Nun startet man Filezilla. Um einen neuen
+Server hinzuzufügen, drückt man auf den
+Knopf ganz links oben (1, Abb. 9). Jetzt
+öffnet sich ein neues Fenster „Servermanager“. Dort legt man mit Druck auf
+„Neuer Server“ (2) einen neuen Eintrag an.
+Nun erscheint links in der Liste der neue
+Eintrag (3), welchen man dann direkt
+umbenennen kann. Jetzt müssen rechts die
+wichtigen Informationen ausgefüllt werden.
+Bei „Server“ (schwarz 1) wird die IPAdresse des TXT eingetragen (USB:
+192.168.7.2, W-LAN: 192.168.8.2, BT:
+192.168.9.2). Das Feld „Port“ (2) kann
+normalerweise leer bleiben oder man trägt
+„22“ ein. Bei „Verbindungsart“ (3) wählt
+man „SFTP – SSH…“ aus. Für die Authentifizierung (4) wählt man „Normal“ und die
+Felder „Benutzer“ und „Passwort“ (5, 6)
+werden mit den Zugangsdaten für den
+Nutzer „root“ ausgefüllt. Zum Schluss
+drückt man auf „Verbinden“ (rot 5).
+
+Um diesem Problem aus dem Weg zu
+gehen, gibt es zwei Möglichkeiten:
+
+Im linken oberen Kasten navigiert man nun
+zum
+Ordner
+C:\Program
+Files
+
+• Man setzt ein Zufallspasswort: Zunächst
+muss man natürlich als „root“ oder
+„ROBOPro“ eingeloggt sein. Dann gibt
+man folgendes Kommando ein:
+
+(x86)\ROBOPro\ROBO
+Interface
+Firmware\ und wechselt dann in den
+Unterordner TXTController. Dort sieht
+man die Datei update.sh. Rechts navigiert
+man zu /opt/knobloch. Jetzt macht man
+
+
+Firmwareupdates
+Da Firmwareupdates mit Root-Rechten
+installiert werden müssen, liest RoboPro
+vor einer Installation aus einer Datei, die auf
+dem TXT gespeichert ist, das „root“Passwort aus. Wenn man dieses jedoch
+geändert hat, steht in dieser Datei noch das
+alte Zufallspasswort und RoboPro kann sich
+nicht authentifizieren. Dann erscheint die
+folgende Meldung:
+
+sudo /etc/init.d/rndpwd
+
+Dies wird mit einer ähnlichen Meldung wie
+nach dem Setzen des eigenen Passwortes
+quittiert. Dannach kann das Update wie
+gewohnt eingespielt werden.
+• Man kann das Update auch manuell
+installieren: Dazu muss man die Datei
+„update.sh“ auf den TXT kopieren. Das
+
+links einen Doppelklick auf die Datei
+update.sh, um diese zum TXT zu
+übertragen und bestätigt die Meldung mit
+„Enter“. Zum Schluss schließt man Filezilla
+und startet wieder Putty. Dort loggt man
+sich wieder mit dem Account „root“ ein und
+führt folgendes Kommando aus:
+cd /opt/knobloch/ && ./update.sh
+
+
+
+
+Jetzt startet das Firmwareupdate. Wenn
+dieses abgeschlossen ist, fährt der TXT
+herunter. Nun starten wir ihn wieder. Dabei
+ist zu beachten, dass jetzt das „root“Passwort wieder gelöscht ist (Das neue
+Passwort ist in den Einstellungen zu finden)
+und bei Bedarf wie oben beschrieben
+wieder manuell gesetzt werden muss.
+
+Quellen
+[1]
+
+Fischertechnik: ROBOTICS TXT
+Controller Security Information,
+Firmware Version 4.1.4, 2015.
+
+
+
+

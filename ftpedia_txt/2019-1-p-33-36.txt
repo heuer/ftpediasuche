@@ -1,0 +1,195 @@
+
+Modell
+
+Modell
+
+Elektrisch verstellbares Teleskopstativ aus
+fischertechnik
+Leon Schnieber
+In der Schule belegte ich das Wahlfach Astronomie. Da unser Lehrer neben dem gewöhnlichen
+Lehrstoff auch versucht, uns für die Sternenbeobachtung zu begeistern, bauten wir mit ihm
+außerhalb des Unterrichts ein „Baumarkt-Teleskop“ [1]. Schon beim Bau fasste ich den
+Entschluss, die Ausrichtung des Fernrohrs mit Hilfe von fischertechnik-Teilen zu motorisieren.
+
+
+
+
+
+Okularstück. Dieses steckt locker auf dem Objektivtubus, so dass es sich leicht bewegen lässt.
+
+Aufbau
+Die Basis dieses Teleskops ist ein ca. 50 cm
+langes HT-Rohr aus dem Baumarkt. Der
+Anleitung des Bausatzes [1] folgend sägten
+wir am schmalen Ende des Rohres ca. 7 cm
+ab. Die Objektivlinse mit einer Brennweite
+f = 450 mm klebten wir auf die glatte Kante
+des beim Sägen neu entstandenen Reststücks.
+Ein Muffenstopfen dient bei unserem Teleskop als Okular. Hinter das mittig gebohrte
+Loch klebten wir zwei Linsen mit je 15 mm
+Brennweite, so dass ein Plössl-Okular entstand, durch das man dann später den Sternenhimmel sieht. Um die Fokussierung zu
+erleichtern, steckten wir den Stopfen in eine
+Doppelmuffe und verklebten ihn dort. Am
+anderen Ende entfernten wir dagegen die
+Gummilippe, damit sich das Okular zum
+Scharfstellen vor- und zurückschieben lässt
+(Abb. 2). Das Innere des langen Rohrstückes kleideten wir außerdem mit schwarzem Tonpapier aus. Das minimiert später
+die Reflexionen von eindringendem Störlicht in den Objektivtubus.
+
+Funktionsweise
+Eigentlich ist das Baumarkt-Teleskop ein
+Kepler-Teleskop: Die Objektivlinse erzeugt
+vom beobachteten Objekt ein Zwischenbild
+am Brennpunkt des Objektivs. Für ein
+scharfes Bild muss der Betrachter das Okular nun so einstellen, dass das Zwischenbild
+exakt im Okular-Brennpunkt liegt. Das
+Bild, das der Betrachter durch das Okular
+sieht, steht auf dem Kopf.
+
+
+Objektiv und Okular. Links das reflektierte
+Licht vom Objekt, rechts das auf dem Kopf
+stehende „virtuelle“ Bild des Betrachters
+
+Der theoretische Vergrößerungsfaktor V
+eines Teleskops errechnet sich aus dessen
+Brennweite f:
+=
+
+=
+
+450 mm
+= 30
+15 mm
+
+Für die tatsächlich erreichbare Vergrößerung ist allerdings die Objektivöffnung
+entscheidend. Je größer sie ist, desto mehr
+Licht tritt in das Teleskop ein und es werden
+mehr Sterne sichtbar. Auch der Durchmesser des Okulars spielt eine Rolle, im Fall des
+Baumarkt-Teleskopes ist es der der Augenpupille. Für die praktisch nutzbare Normalvergrößerung Vnormal gilt folgende Formel:
+=
+
+=
+
+40 mm
+=8
+5 mm
+
+Mit der bestehenden Linsenkonstellation ist
+also mindestens eine achtfache Vergrößerung möglich. Bei optimalen Luftbedingungen kann sich dieser Wert aber dem theoretischen Vergrößerungsfaktor von 30 annähern.
+
+
+Modell
+
+Aufbau des Stativs
+Die Anforderungen an das Stativ
+waren schnell aufgestellt: Das
+Rohr muss sich in mindestens
+zwei Achsen bewegen, um den
+gesamten Abendhimmel abdecken zu können. Außerdem muss
+die Übersetzung der Motoren so
+klein wie möglich sein, um feine
+Justierungen des Teleskoprohres
+vornehmen zu können. Ist die
+Schrittweite zu groß, kann man
+z. B. eine Sternenkonstellation
+nicht genau im Bild positionieren.
+Anfangs plante ich einen Automatik-Modus für das Teleskop,
+zum Beispiel in Kombination
+mit einer automatischen Kamera
+für große Panoramaaufnahmen
+des Nachthimmels. Diese Idee
+verwarf ich aber recht schnell;
+ein Zusammensetzen der Aufnahmen ist durch fehlende
+Kanten schwierig zu automatisieren und wäre mit unverhältnismäßig viel Nacharbeit am
+Computer verbunden gewesen.
+Die Basis des Teleskopstativs ist
+eine Grundplatte 1000. Auf dieser habe ich mittig, aber etwas
+erhöht einen Drehkranz monAbb. 4: Direkt hinter der Metallachse: Einer der drei Stifte im
+tiert. Dieser ist motorisiert und
+Z40
+sichert durch einen am U-Träger montierten „Baustein 15
+kann den Teleskopaufbau um
+mit Loch“ das Teleskoprohr gegen Schlupf.
+knapp 360° drehen. Auf ihm
+sitzt, ebenfalls etwas erhöht,
+eine weitere Achse. Dieser AufStifte mit dem U-Träger verbunden, sodass
+bau ist um 30° nach oben geneigt, ansonsten
+bei einer Bewegung des Rohraufbaus nichts
+hätte der Kippmechanismus das Teleskopdurchrutschen kann. Seitlich am Zahnrad ist
+rohr nicht senkrecht in den Himmel richten
+eine Schnecke montiert und über ein Gekönnen. Die zweite Achse ist etwas umtriebe mit einem S-Motor verbunden.
+ständlich gelagert, da ich keinen weiteren
+(Abb. 4) Ein Taster mit Impulszahnrad Z4
+Drehkranz besitze. Eine Metallachse führt
+gibt die nötige Rückmeldung an den Condirekt durch den Führungs-U-Träger auf der
+troller.
+unteren Seite des Teleskoprohrs. Auf der
+einen Seite der Metallachse steckt ein Zahnrad Z40. Dieses ist über einen seiner drei
+
+
+
+Betrieb gelegt. Zwei Polwendeschalter stellen die beiden Freiheitsgrade des Stativs
+dar. Ein Taster ermöglicht eine feinere Dosierung der Impulse: Ein simples Programm
+wertet die Zustände der Polwendeschalter
+und des Tasters aus und setzt diese in entsprechende Motorenbewegungen um.
+Teleskoprohr
+
+kann frei verschoben werden
+
+Auf dem U-Träger des Neigemechanismus
+ist über zwei Halteringe aus Winkelsteinen
+das Teleskop befestigt (Abb. 5). Der
+Schwerpunkt liegt ungefähr über der Metallachse. Die Kräfte, die auf die Achse
+wirken, sind dadurch kleiner. Am wichtigsten ist allerdings die Fokussiereinheit: Die
+Muffe am Teleskop kann, je nach Entfernung des zu betrachtenden Objektes, nach
+vorne oder hinten bewegt werden, um das
+Bild scharfzustellen. Eine Gewindestange
+und ein Haltering führen die Rohrmuffe
+linear entlang, ein XS-Motor bewegt diese
+Achse (Abb. 6). Eine Rückmeldung der
+Impulse ist hier nicht nötig, da die Fokussierung entweder manuell vom Bediener
+oder über eine Auswertung des Kamerabildes vorgenommen wird.
+
+Steuerung
+Bei der Sternenbeobachtung verbringt man
+die meiste Zeit mit dem Suchen nach Sternbildern oder anderen interessanten Konstellationen; Panoramen fertigt man dagegen
+eher selten an. Deshalb habe ich den Fokus
+der Steuerkonsole auf den manuellen
+
+Drückt man den Taster kurz, fährt das
+Teleskop so wenig wie möglich in die gewählte Richtung. Hält man ihn für längere
+Zeit gedrückt, bewegt sich das Teleskop für
+eine längere Strecke und bremst es beim
+Loslassen sanft ab.
+Nach den ersten Tests an einem wolkenfreien Abend stellte sich schnell heraus,
+dass das Okular vor allem in dem Zenit
+zugewandten Positionen zu tief liegt, um
+mit dem Auge heranreichen zu können:
+Zwischen dem Rohr-Ende und der Grundplatte sind nur wenige Zentimeter Platz.
+Deshalb klebte ich eine Webcam auf das
+Teleskopende, so dass deren Bild über
+einen Monitor schnell und bequem sichtbar
+wurde. Entfernt man außerdem den Infrarotfilter, kann man weitere interessante Bilder in Bereichen sehen, die das menschliche
+Auge sonst nicht wahrnehmen kann.
+
+Fazit
+Der Aufwand hat sich in meinen Augen auf
+jeden Fall gelohnt. Die Ergebnisse, die mit
+einem so einfachen Linsenaufbau möglich
+sind, finde ich sehr beeindruckend. Der
+Vergrößerungsfaktor dieses Selbstbau-Teleskops ist bei guter Witterung sogar vergleichbar mit den damaligen Instrumenten
+Galileo Galileis [2].
+
+Quellen
+[1]
+
+Hüning, Klaus: Das Baumarkt-Teleskop. ninmax GmbH, Astromedia,
+Landsberg am Lech, 2018.
+
+[2]
+
+Spektrum der Wissenschaft Verlagsgesellschaft mbH: Lexikon der
+Physik: Teleskop. Heidelberg, 1998.
+
+

@@ -1,0 +1,753 @@
+
+
+3D-Modellentwurf
+
+Erstellung von Bauteilen für den ft-Designer
+Johannes Visser
+Der ft-Designer von Michael Samek (Demoversion) erfreut sich großer Beliebtheit bei der
+Dokumentation eigener fischertechnik-Modelle. Der eine oder andere Nutzer ist vermutlich
+schon darüber gestolpert, dass er ein selteneres Bauteil für sein Modell benötigte, das in der
+(sehr umfangreichen) Bauteilbibliothek fehlt. Was tun, wenn auch ein Bauteilupdate nicht
+hilft? Entweder Michael Samek bitten, das Bauteil zu ergänzen – oder: Selber machen!
+In diesem Beitrag wird vorgestellt, wie
+man die Bauteilbibliothek des ft-Designers
+selbst um ein benötigtes, aber in der Bauteilbibliothek nicht enthaltenes Bauteil
+ergänzen kann.
+
+Struktur des ft-Designers
+Der ft-Designer baut auf einer Orderstruktur auf, in der die Bauteile nach ihrer
+Artikelnummer abgelegt sind.
+
+
+
+Schauen wir uns das an der Kupplung
+38260 aus Abb. 1 an. Zuerst einmal befindet sich im Ordner icon ein 64x64-PixelBild des Bauteils im Bitmap-Format. Das
+wird für den Katalog verwendet, aus dem
+man die Teile beim Konstruieren auswählt.
+
+Dazu sind im Wesentlichen zwei Schritte
+erforderlich: Die Entwicklung der 2D- und
+3D-Grafikdateien mit Hilfe einer geeigneten CAD-Konstruktions-Software und die
+Festlegung der Eigenschaften des Bauteils
+für die Nutzung im ft-Designer (Anbaustellen, Ursprungskoordinaten, Rotationseigenschaften und Bauteilfarbe).
+Der „Import“ in den ft-Designer erfolgt
+anschließend durch die Speicherung der
+erzeugten Dateien in der Verzeichnisstruktur des ft-Designers.
+
+
+ermittelt mit Gnu Image Manipulation (GIMP)
+
+In dem Unterordner print ist das Bild
+nochmal in besserer Auflösung (400x400
+Pixel) im JPG-Format abgelegt. Dieses
+Bild wird benötigt, wenn man für eine
+Anleitung eine Teile-Liste erzeugt.
+
+3D-Modellentwurf
+
+Granularität) durch eine Kombination von
+Dreiecken nachbilden kann. Jedes Dreieck
+wird durch seine drei Eckpunkte mit
+dessen Koordinaten im Raum beschrieben.
+Die Reihenfolge der Punkte gibt vor, wo
+Außen und wo Innen ist. Umläuft man
+entlang der Punkte im Uhrzeigersinn,
+befindet man sich innen. Die Elektrotechniker unter uns werden es kennen: die
+Rechte-Hand-Regel.
+
+
+Im Ordner def sind spezielle Definitionsdateien abgelegt, aus denen das Programm
+die Informationen für die Bauteile gewinnt:
+Drehung, Koordinaten, Andockstellen etc.
+Auf die Struktur dieser Datei wird später
+noch im Detail eingegangen.
+3D-Daten im STL-Format
+In den Ordnern LoRes und HiRes befinden
+sich die 3D-Modelle von den Bauteilen
+vornehmlich im STL-Format (Surface
+Tessellation Language) [1], das sich als
+Standard im Bereich Rapid Prototyping
+(Stereolithografie/3D-Druck) etabliert hat.
+Hier werden dreidimensionale Objekte
+durch ihre Oberfläche definiert.
+
+Pfeil zeigt nach außen [2]
+
+Aus historischen Gründen unterscheidet
+der ft-Designer noch zwischen Low- und
+High-Resolution mit zwei Sätzen von 3DDaten in den gleichnamigen Ordnern. Bei
+begrenzter Rechenkapazität kann man auf
+eine niedrige Auflösung der Modelle
+zurückgreifen. Die Erfahrung mit modernen Rechnern zeigt, dass man auf die LowResolution-Variante verzichten kann: Die
+Rechenleistung ist heute in den meisten
+Fällen mehr als ausreichend. Aus diesem
+Grund kann man ein selbst erstelltes 3DModell sowohl in den LoRes- als auch in
+den HiRes-Ordner kopieren.
+
+
+Im HiRes-Ordner befinden sich außerdem
+Daten mit der Endung *.NRM. Dahinter
+verbergen sich die so genannten Normalvektoren (Pfeile), die die Außenseite einer
+Facette definieren. Diese Datei ist nicht
+zwingend nötig – das Programm läuft auch
+ohne sie, wenn die STL-Dateien korrekt
+erzeugt worden sind.
+
+Dabei wird von dem Ansatz ausgegangen,
+dass man alle Flächen (bei definierter
+
+An dieser Stelle sei angemerkt, dass
+manche
+3D-Konstruktionsprogramme
+
+
+
+
+etwas nachlässig mit der STL-Datei-Erzeugung umgehen. Wenn die Facetten nicht
+korrekt erzeugt sind, kann die Darstellung
+nicht erkennen, wo Innen und wo Außen
+ist, und das Objekt wird wie „von Innen
+nach Außen gekrempelt“ dargestellt. Auf
+dieses Problem wird später noch eingegangen.
+
+umfang. Die Einschränkungen im 3DBereich sind aber zu groß, daher empfiehlt
+sich der Kauf der Pro-Fassung.
+
+Terrassenüberdachung des Autors
+
+
+3D-Konstruktion des Bauteils
+Im Folgenden werden wir darauf eingehen,
+wie man 3D-Objekte erstellen kann.
+Programme zur Erstellung solcher Objekte
+gibt es viele, allerdings nur wenige, die
+kostenlos (mit funktionalen Einschränkungen) verfügbar oder preiswert sind.
+Einige Programme hat Harald Steinhaus in
+ft:pedia 2/2013 schon im Zusammenhang
+mit dem 3D-Druck von Bauteilen vorgestellt [3].
+
+TurboCAD bietet in diesem Zusammenhang den Vorteil, STL-Dateien laden zu
+können, so dass man existierende 3DObjekte aus dem Fischertechnik-Designer
+als Vorlage verwenden kann.
+PTC Creo Elements
+Creo Elements / Direct Modelling Express
+gibt es für den Privatanwender kostenfrei,
+man muss allerdings seine Daten preisgeben und einen Account anlegen. Creo
+hat den entscheidenden Nachteil, dass
+keine STL-Objekte importiert werden können. Somit muss man bei der Konstruktion
+from the scratch beginnen.
+
+IMSI TurboCAD
+IMSI TurboCAD ist eine für den Preis sehr
+leistungsfähige 2D-/3D-Konstruktionssoftware. Für die aktuelle Version muss man
+mit Kosten von ca. 750 € rechnen. Aber es
+gibt Anbieter, die ältere Releases anbieten;
+dort erhält man TurboCAD Pro v16 auch
+schon für 100 € oder v17 für 160 €.
+Innerhalb eines Release gibt es auch
+Fassungen mit reduziertem Funktions44
+
+
+In diesem Beispiel wurde etwas gemogelt.
+Das fischertechnik-Bauteil wurde zuerst
+mit TurboCAD von STL geladen, in einen
+
+Volumenkörper konvertiert, als Initial
+Graphics Exchange Specification (IGES)
+abgespeichert und dann mit Creo geladen.
+Grundsätzlich ist das ein komplexer
+Vorgang. STL ist eine Oberflächenbeschreibung; daraus einen eindeutigen
+Volumenkörper
+zu
+berechnen,
+ist
+schwierig, weshalb Creo diesen Import
+nicht bietet. Exportieren nach STL kann
+Creo aber sehr wohl.
+Abgeleitetes Bauteil mit TurboCAD
+Es sei als Beispiel ein neues Bauteil mit
+TurboCAD erstellt, das aus einem bestehenden Bauteil abgeleitet werden kann.
+Als erstes muss man wissen, welche
+Artikelnummer das Bauteil hat, das man
+modellieren möchte. Hierbei hilft die
+Webseite von fischerfriendswoman: Dieser
+Versandhandel hat eine ausgesprochen gut
+sortierte Liste aller fischertechnik-Teile
+mit Angabe der ft-Artikelnummer.
+
+3D-Modellentwurf
+
+Fangen wir mit der Lasche an. Durch
+Nachmessen an der Gondel wird ermittelt,
+dass die Aufhängung 13 mm lang ist. Um
+das aus der Lasche herausschneiden zu
+können, werden das mittlere Loch zugestopft und die beiden Ränder aufgefüllt.
+
+an Lasche (31667)
+
+TurboCAD bietet dazu so genannte Boolesche Operationen an; damit lassen sich
+Teile verschmelzen. So werden für den
+zweiten Schritt passende Quader in die
+Vertiefungen gelegt und mit dem Bauteil
+vereinigt.
+
+
+bei FischerFriendsWoman
+
+Um sich die Arbeit zu vereinfachen, sucht
+man zunächst ein Bauteil, das dem zu
+erstellenden am nächsten kommt. Hier
+bietet sich die Bauplatte mit zwei Zapfen
+30x15 (38241) an. Sie entspricht im unteren Teil der Gondel. Dazu nimmt man die
+Lasche 15 (31667); davon kann man ein
+Stück ‚abschneiden’.
+
+im ft-Designer, als STL und konvertiert zu
+Volumenobjekt mit TurboCAD
+
+Es wird nun ein umhüllender Quader
+definiert, der 13 mm der Lasche von rechts
+her umschließt. Der linke Teil des Quaders
+ist der Rest. Man kann nun eine Boolesche
+Subtraktion um den linken Quader machen
+oder eine Schnittmenge mit dem rechten
+Quader bilden. Übrig bleibt die benötigte
+Befestigungslasche.
+Jetzt kann man die Gondel zusammenbauen. Die verbindende Strebe kann man
+leicht aus Quadern konstruieren. Die
+Lasche wird oben angefügt, die Teile
+werden verschmolzen, rot eingefärbt und
+dann gerendert.
+
+
+
+
+
+Dateien für den ft-Designer
+
+Die DEF-Datei
+
+Aus dem gerenderten Bauteil erzeugt man
+nun ein Icon als Bitmap (64x64 Pixel), am
+besten mit nur 256 Farben, und eine JPEGDatei (400x400 Pixel) [4]. Das Bitmap
+wird mit dem Dateinamen <Art.Nr.>.bmp
+in den Ordner icon kopiert, die JPEG-Datei
+als <Art.Nr.>.jpg in den Ordner icon/print.
+In unserem Beispiel sind das die Dateien
+31713.bmp und 31713.jpg.
+
+Als zentrale Informationsdatei benötigt der
+ft-Designer eine DEF-Datei, in der Informationen abgelegt sind, wie
+
+Pixel JPEG- und 64x64 Pixel BMP-Format
+
+Ursprungskoordinaten
+Andockstellen
+Farbe
+Rotationen
+Michael Samek hat dafür das Tool
+DefMaker entwickelt, mit dem diese DEFDatei erzeugt werden kann. Er hat es der
+ft-Community netterweise zur Verfügung
+gestellt: DefMaker kann im DownloadBereich herunter geladen werden. 1 Das
+Tool muss in den Programmordner des ftDesigners kopiert werden.
+
+Die von dem 3D-Konstruktionsprogramm
+erzeugte Datei wird nach STL konvertiert
+und unter <Art.Nr.>.stl (in unserem
+Beispiel 31713.stl) in die Ordner HiRes
+und LoRes kopiert.
+Fallstrick Artikelnummer
+Der ft-Designer kann nur fünfstellige
+Artikelnummern verwalten; fischertechnik
+verwendet inzwischen aber schon sechsstellige. Will man ein solches neues Bauteil erzeugen, lässt man bei der Anlage des
+Dateinamens einfach die führende Ziffer
+weg – und hofft, dass die Nummer in der
+Bauteilbibliothek noch nicht vergeben ist.
+Tatsächlich kann man sogar einen beliebigen, noch nicht verwendeten Dateinamen
+mit fünf Zeichen Länge wählen. Die echte
+Artikelnummer wird in der DEF-Datei in
+voller Länge angegeben (dazu mehr im
+folgenden Abschnitt).
+Damit ist der erste Konstuktionsschritt
+abgeschlossen. Es fehlt nun noch die DEFDatei; für deren Erstellung ist allerdings
+ein bisschen Fleißarbeit nötig.
+
+
+
+Erster Schritt: Datei/Neu
+Nach dem Start von DefMaker wird man
+als erstes aufgefordert, die zugehörige
+STL-Datei anzugeben.
+An dieser Stelle stolpert man bei Verwendung von TurboCAD häufig über die nachlässige Erzeugung der STL-Datei. In der
+3D-Ansicht sieht es so aus, als ob das
+Objekt ‚umgekrempelt’ wäre: Man kann
+scheinbar durch jede Oberfläche hindurch
+sehen und blickt immer von Innen auf die
+
+Michael Samek weist ausdrücklich darauf hin,
+dass er dieses Tool „so wie es ist“ bereitstellt
+und keinerlei Garantie oder Haftung für eventuelle Schäden übernimmt, die bei der Anwendung entstehen.
+
+dahinter liegende Oberfläche der anderen
+Seite.
+
+3D-Modellentwurf
+
+Mit eingeschränktem Funktionsumfang
+kann man das Programm kostenfrei
+herunterladen.
+
+
+Nach Ansicht des Autors ist dieses auf das
+Fehlen der NRM-Datei (Normal-VektorDatei) zurückzuführen, die beschreibt, wo
+bei den Facetten Innen und wo Außen ist.
+Indem man die STL-Datei regelkonform
+erzeugt, kann man dieses Problem
+umgehen. TurboCAD bietet das allerdings
+nicht. Dazu muss man ein separates Tool
+verwenden.
+
+
+Nachdem die STL-Datei geladen ist, hat
+Netfabb den Fehler direkt erkannt. Über
+das Menü Extras/PartRepair wird das
+Bauteil automatisch repariert:
+
+Zweiter Schritt: Netfabb-Reparatur
+Netfabb-Studio ist als Software für das
+Rapid Prototyping gedacht (3D-Drucken,
+Stereolithographie). Netfabb kann STLDateien korrigieren.
+
+Part/Apply Repair
+Remove old Part
+Diesen Schritt muss man so lange wiederholen, bis alle Fehler beseitigt sind. Das
+können durchaus viele Zyklen sein.
+Anschließend kann die STL-Datei wieder
+exportiert werden. Nach erneutem Laden
+in DefMaker ist auch dieser glücklich.
+
+Part/Export to STL (binary)
+
+
+
+
+Die Datei gliedert sich in folgende
+Sektionen (einfache Bauteile):
+[Color] Farbe des Bauteils
+[Common] Grundlegende Daten zum
+Bauteil
+[Offset] Wo ist im STL-Bild der
+Ursprung?
+[Connections] Zahl der Andockstellen
+
+Dritter Schritt: DEF-Datei
+Werfen wir einen Blick in eine DEF-Datei
+eines einfachen Bauteils am Beispiel der
+Bauplatte 15x30 mit zwei Zapfen (38241):
+[Color]
+Blue=0
+Red=255
+Green=0
+
+[Conn1] Daten zum ersten AndockPunkt; je nach Zahl der Andockstellen
+mehr davon
+Grundsätzlich muss man zwei Arten von
+Bauteilen unterscheiden: Einfache und
+komplexe Bauteile. Einfache Bauteile sind
+aus einem Stück. Komplexere Teile bestehen aus einem ‚Mutter-Bauteil’ gefolgt von
+‚Kindern’.
+
+[Common]
+Name=Bauplatte 15x30, rot
+Eng=Mounting Plate 15x30, red
+Group=4
+Prize=0,35
+OrgNumber=38241
+Printable=1
+[Offset]
+X=-7,50
+Y=-7,50
+Z=0,00
+[Connections]
+Count=4
+[Conn1]
+Name=Zapfen 1 Horizontal
+Eng=Pin 1 horizontal
+Typ=1
+Thick=4,00
+X=0
+Y=0
+Z=4
+PF=90
+RF=90
+TF=0
+PN=90
+RN=0
+TN=-90
+
+
+komplexes Bauteil (mit ‚Kindern’)
+
+Im rechten Beispiel ist das Mutter-Bauteil
+der Stein und der Zapfen das Kind.
+Komplexe Bauteile können auch unterschiedlich gefärbt sein. Im Falle des Bausteins 15 ist die Unterscheidung weniger
+interessant. Bei Bauteilen mit einem
+Gelenk ist das Konzept Mutter/Kind nötig,
+um z. B. den Knickwinkel ändern zu
+können.
+Einfache Teile
+Color
+Blue: Blauer Farbanteil des Bauteils im
+Wertebereich von 0..255
+Red: Roter Farbanteil des Bauteils im
+Wertebereich von 0..255
+
+
+3D-Modellentwurf
+
+Green: Grüner Farbanteil des Bauteils
+im Wertebereich von 0..255
+
+erscheinen. Bei Mutter/Kind Teilen soll
+nur das Mutter-Teil erscheinen.
+
+Texture: Dateiname der Textur des
+Bauteils
+(z. B.
+für
+Aufkleber).
+Dateiformat ist BMP und die Datei
+muss
+sich
+im
+Icon-Verzeichnis
+befinden. Der Dateiname ist dabei
+vollkommen frei zu vergeben.
+
+Hide: Bauteile erscheinen nicht im
+Bauteil-Katalog (bei Kinder-Teilen,
+siehe Komplexe Teile)
+
+TxWidth: Breite der Textur in mm
+TxHeight: Höhe der Textur in mm
+Common
+Name: Name, unter der das Bauteil
+erscheint
+Eng: Englischer Name (Sprachumschaltung)
+Group: Gruppe, in der das Bauteil
+erscheint
+0: Standard
+1: Statik
+2: Räder
+3: Stangen
+4: Platten
+5: CarTech
+6: Pneumatik
+7: Getriebe
+8: Figur
+9…18: entsprechende Gruppen der
+alten Teile
+Prize: Damit kann man eine Stückliste
+mit Preisen erzeugen
+OrgNumber:
+Hier
+wird
+die
+fischertechnik-Artikelnummer
+eingetragen. Das kann die ganze
+Nummer sein – wichtig insbesondere,
+wenn der Dateiname wegen der
+Beschränkung auf fünf Stellen gekürzt
+werden musste.
+Printable: Bauteile können so eingestellt
+werden, dass die Bauteile beim
+Erstellen der Stückliste nicht einzeln
+
+SortOrder: Sortier-Index innerhalb einer
+Gruppe. Die Bauteile innerhalb einer
+Gruppe werden anhand der SortOrder
+sortiert dargestellt. Ist die Eigenschaft
+nicht vorhanden, dann wird die 5stellige Bauteilnummer als SortOrder
+verwendet.
+Kinerot: Vorgabe der Rotation im
+Kinematik-Modus. (0=X-Achse, 1=YAchse, 2=Z-Achse).
+Teeth: Bei Zahnrädern kann hier die
+Anzahl der Zähne angegeben werden.
+Dieser Wert wird bei der Anlage von
+Rotations-Bindungen verwendet.
+Offset
+Offset gibt an, wo in der STL-Datei der
+Nullpunkt ist.
+Connections
+Mit der Anzahl der Connections wird
+angegeben, wie viele Andock-Punkte das
+Bauteil hat. Im Folgenden muss für jeden
+Andock-Punkt eine neue Sektion [Connx]
+angelegt werden.
+Connx
+Beschreibung einer einzelnen AndockStelle:
+Name: Name des Andockpunkts
+Eng: Name in Englisch
+Typ: 0: Loch, 1: Zapfen
+Thick: Stärke (oder Dicke) der Verbundstelle. Hiermit wird sichergestellt,
+dass eine 4 mm Achse auch nur in ein
+4 mm Loch gesetzt werden kann. Es
+können Bauteile nur dann verbunden
+werden, wenn die Stärke identisch ist.
+
+
+
+XYZ: Offset, Koordinate des AndockPunkts in der STL-Datei
+PF, RF, TF, PN, RN, TN: geben an, wie
+ein andockendes Teil gedreht werden
+kann.
+
+DEF-Datei auch manuell editieren. Aber
+die Einstellung der Koordinaten und der
+Rotations-Eigenschaften ist dann sehr
+lästig.
+
+Komplexe Teile
+Mutter/Kind-Bauteile bestehen aus mehreren Teilen, die unterschiedlich gefärbt sein
+können. In der DEF-Datei gibt es Verweise
+auf die Kinder-Teile:
+[Childs]
+Count=3
+
+
+Als erstes gibt man die Grunddaten ein:
+Name, englischer Name (tja, wie übersetzt
+man Gondelhalter?), Gruppe. Das Bauteil
+ordnen wir der Gruppe Statik zu.
+
+[Child1]
+Number=C0041
+[Child2]
+Number=C0042
+[Child3]
+Number=C0043
+
+Childs
+Count: Gibt an, wie viele Kinder es
+gibt. Es dürfen maximal 10 Kinder sein.
+
+
+Number: Hinweis auf den Dateinamen
+des Kind-Bauteils. Hier gilt wieder:
+maximal fünf Zeichen je Dateiname. Da
+das Kind-Bauteil keine eigene Artikelnummer hat, wählt man beliebige
+Namen.
+
+Im nächsten Schritt erfolgt die Einstellung
+diverser Koordinaten. Der DefMaker zeigt
+das Bauteil (wie im Schlauch-Manager des
+ft-Designers) in vier Fenstern: Im ersten
+wird das Bauteil in 3D angezeigt und kann
+gedreht werden. Die anderen Fenster
+zeigen je eine Ansicht (Seite/Oben/Vorne).
+Hier kann das Bauteil in einer Richtung
+verschoben werden.
+
+Zu jedem Kind muss es eine STL-Datei
+und eine DEF-Datei geben. In den DEFDateien der Kinder wird
+
+Die Mode-Optionen bewirken, dass Schiebebewegungen in den Bauteil-Fenstern
+Unterschiedliches bewirken:
+
+Childx
+
+Printable = 0
+
+gesetzt. Zusätzlich gibt es einen Eintrag
+Hide = 1
+
+der dafür sorgt, dass das Teil alleine nicht
+in dem Bauteilkatalog auftaucht, sondern
+nur in Kombination mit der Mutter.
+Einstellung im DefMaker
+Der DefMaker übernimmt die Erzeugung
+der DEF-Datei. Man kann prinzipiell die
+
+Kamera: Man verschiebt das Bauteil so,
+dass man die Stelle sehen kann, die man
+bearbeiten möchte.
+Bauteil: Einstellung des Ursprungs (das
+Fadenkreuz aus den farbigen Linien)
+Mittelpunkt: Man verschiebt die kleine
+gelbe Kugel, die den Mittelpunkt des
+Bauteils markiert. Dieser Punkt wird
+beim Drehen des Bauteils im ftDesigner als Drehpunkt angeboten.
+
+
+3D-Modellentwurf
+
+Verbindungen: Damit verschiebt man
+das kleine Kreuz aus den sechs bunten
+Pfeilen. Dieses markiert den Arbeitspunkt für eine einzufügende AndockStelle.
+Zur Festlegung des Ursprungs wird der
+Modus Bauteil gewählt und das Bauteil
+relativ zum Ursprung verschoben.
+
+Schrittweiten-Einstellung
+
+Der Ursprung wird durch das Kreuz der
+dünnen Linien dargestellt. Im Beispiel
+wird der Ursprung zwischen die beiden
+Zapfen gesetzt. Diese Änderung hat
+Einfluss auf die Rubrik Offset in der DEFDatei:
+[Offset]
+X=-7,5
+Y=-15
+Z=-2
+
+Bleibt die Festlegung der Andock-Stellen.
+Bezüglich der Verbindungen sind zu
+unterscheiden:
+Zapfen (Pins)
+Nuten (Groove) bzw. Löcher
+Bei der Definition einer Andock-Stelle
+muss diese Eigenschaft angegeben werden.
+Für Verbindungen definiert man eine
+Dicke. Objekte passender Dicke können
+zusammengefügt werden, Zapfen in Nuten.
+
+Mit dem Modus Mittelpunkt kann dieser
+verschoben werden. Der Mittelpunkt wird
+als gelbe Kugel dargestellt. Der Mittelpunkt hat keinen Einfluss auf die DEFDatei – er wird aber als Hilfsmittel zur
+Rotation von Verbindungen benötigt. Dies
+ist immer dann hilfreich, wenn Verbindungen kreisförmig angeordnet werden. Eine
+neue Verbindung kann dann um den
+Mittelpunkt rotieren. Gerade bei den
+Statik-Bögen ist ohne dieses Hilfsmittel
+eine manuelle Platzierung von Verbindungen kaum möglich.
+Die kleinen Kontrollfelder (Abb. 26, rechts
+am Bildschirmrand) legen fest, in welchen
+Schritten das Bauteil, der Ursprung bzw.
+der Mittelpunkt mit der Maus verschoben
+wird.
+
+Drehung der Andock-Stellen
+
+Die blaue Kugel in Abb. 27 ist die
+Koordinate der Andock-Stelle. Werden
+zwei Bauteile zusammengefügt, liegen die
+jeweiligen Kugeln übereinander. Im
+Beispiel ist für eine seitliche Nut des
+
+
+
+Standard-Steins gewählt, dass die Koordinaten in der Mitte der Nut liegen. Da
+man in eine solche Nut auch z. B. eine
+Stange stecken kann, ist der Ort sinnvoll
+gewählt. Für den Standard-Stein liegt der
+Punkt also um die halbe Dicke einer
+Stange nach innen (2 mm). Demzufolge ist
+der Fügepunkt eines Zapfens 2 mm vom
+Rand des Steins definiert.
+Die Richtungspfeile eines Fügepunkts
+bestehen aus zwei Gruppen von Pfeilen:
+roten und blauen bzw. pink- und türkisfarbenen. Die roten und blauen Pfeile beziehen sich auf das feste Bauteil, welches
+schon platziert ist; die beiden anderen
+Pfeile beziehen sich auf das neue Bauteil,
+das gerade platziert wird.
+Der ft-Designer legt die Pfeil-Paare beim
+Einfügen übereinander. Wenn man sich
+bereits definierte Teile anguckt, erkennt
+man z. B. bei Nuten, dass der rote Pfeil
+immer in die Nut zeigt. Demzufolge
+müssen bei Zapfen die roten bzw. pinkfarbenen Pfeile in Zapfenrichtung zeigen.
+
+Es muss immer nur die feste Verbindung
+festgelegt werden. Die andere Verbindung
+wird durch Druck auf die Calc-Schaltfläche automatisch berechnet. Wenn das
+darunter liegende Farbfeld grün erscheint,
+ist alles in Ordnung und die DEF-Datei
+kann gespeichert werden.
+Manche Eigenschaften der DEF-Datei
+lassen sich (noch) nicht über den
+DefMaker editieren. Diese Eigenschaften
+müssen mit einem Text-Editor manuell
+nachgetragen werden:
+Prize
+Printable
+Hide
+Childs
+Childx
+
+Ausprobieren
+Nach Anlage eines neuen Bauteils muss
+der ft-Designer – wie nach jedem Bauteilupdate – neu gestartet werden, damit die
+neuen Bauteile zur Verfügung stehen. So
+sollte nun auch der Gondelhalter in der
+Gruppe Statik erscheinen und sich platzieren und drehen lassen. Andere Bauteile
+müssen angedockt werden können, ohne
+dass Überschneidungen auftreten.
+
+
+Für jedes Bauteil müssen die vorhandenen
+Verbindungen editiert werden. Für Zapfen
+erstellt man jeweils eine horizontale und
+eine vertikale. Wie oben dargestellt,
+unterscheiden sich die beiden durch die
+Ausrichtung der blauen bzw. türkisfarbenen Pfeile.
+Beim Loch für den S-Riegel zeigt der rote
+Pfeil in die Richtung, in die der Riegel
+geschoben wird. Eine Unterscheidung
+zwischen vertikaler und horizontaler Verbindung ist hier nicht sinnvoll, da die
+Stelle über dem Kragen das Verdrehen
+verhindert.
+
+
+
+3D-Modellentwurf
+
+Ausblick
+Ein eigenes Bauteil bringt Verantwortung:
+Man muss es allen zur Verfügung stellen,
+die ein mit diesem Bauteil erstelltes
+Modell im ft-Designer öffnen wollen, denn
+die Bauteile werden nicht mit den Modellen zusammen abgespeichert.
+Wird das Bauteil irgendwann von Michael
+Samek für die offizielle Bibliothek bereit
+gestellt, lädt der ft-Designer es beim TeileUpdate allerdings nicht, weil er der Meinung ist, er hätte es schon – man muss
+daher zuvor das selbst konstruierte Bauteil
+manuell löschen.
+Damit die ft-Community bei der Erstellung
+von Bauteilen mitmachen kann, wäre
+Folgendes eine tolle Ergänzung des ftDesigner:
+Ein separater Speicherbereich für
+Custom-Parts, so dass sie sich nicht mit
+den offiziellen Teilen vermischen
+
+Eine Upload-Möglichkeit auf dem ftDesigner-Server (das Bauteil wird dann
+geprüft und ggf. in die offizielle
+Bibliothek übernommen)
+Bleibt noch der Wunsch an die Leser: Viel
+Spaß bei der Entwicklung eigener 3DBauteile für den ft-Designer!
+
+Quellen
+[1]
+
+Wikipedia: STL – Surface
+Tessellation Language.
+
+[2]
+
+Wikipedia: Korkenzieherregel.
+
+[3]
+
+Harald Steinhaus: Neue ft-Teile
+selbst gemacht: 3D-Druck. 2/2013, S. 4-10.
+
+[4]
+
+Joined Expert Picure Group: JPEG
+File Interchange Format (JFIF).
+Verlustbehaftete Grafik-Kompression nach ISO/IEC 10918-1.
+
+Ein Pack-And-Go-Assistent, um alle
+Dateien eines Teils zusammenzupacken
+
+
+

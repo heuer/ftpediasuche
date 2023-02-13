@@ -1,0 +1,378 @@
+
+
+Elektromechanik
+
+Der Elektromagnet: Was kann er (vertragen)?
+Rüdiger Riedel
+Der Elektromagnet von fischertechnik [1] ist zusammen mit den starken Neodym-Magneten im
+Synchronmotor wieder aktuell geworden [2, 3]. Ansonsten führt er ein eher bescheidenes
+Dasein; in der aktuellen Einzelteilliste sind sowohl der ältere Typ Nr. 31324 als auch der
+neuere Typ Nr. 32363 nicht einmal mehr enthalten. Was ich besonders bei meinen experimentellen Motoren [4] vermisse, sind technische Daten wie Anziehungskraft und Belastbarkeit. Das
+will ich hier beleuchten.
+Beim experimentellen Aufbau von historischen Motormodellen und ungewöhnlichen Anordnungen ist es oft hilfreich, eine
+möglichst große Magnetkraft nutzen zu
+können. Ein erster Schritt ist die Nutzung
+des fischertechnik-Elektromagneten neueren Typs: Er ist deutlich stärker als der
+ältere. Außerdem kann man die Spannung
+und damit den Strom durch den Magneten
+vergrößern. Das hilft vielfach – aber was ist
+zulässig, und wie weit kann ich gehen, ohne
+den Magneten zu beschädigen?
+Ein Hinweis vorneweg: Da die Datenlage so
+unklar ist wie im Weiteren beschrieben, bin
+ich wahrscheinlich mit meinen Versuchen
+an die Grenzen des Gerätchens (oder sogar
+darüber hinaus) gegangen. Wer das nachmacht, sollte sich dessen bewusst sein. Und
+bitte keine zu strengen Maßstäbe an diese
+Versuche anlegen: Mir ging es um praktische Erkenntnisse, nicht um exakte Wissenschaft.
+aus der ft-Datenbank. Dazu passend gibt es
+eine rechteckige (31325) und eine runde
+Rückschlussplatte (31326).
+
+
+(32363, links) und älteren Typs (31324, rechts)
+
+Was leistet der Elektromagnet?
+Als Kraftmessapparatur verwende ich eine
+angepasste Balkenwaage aus Hobby 1-1,
+Seite 27 [5] (Abb. 2). Als Gewichte nutze
+ich Münzen, die ich mit einer Küchenwaage
+im Zehnerpack abgewogen habe (Tab. 1).
+Münze
+
+Gewicht
+
+1¢
+
+2,3 g
+
+2¢
+
+3,1 g
+
+5¢
+
+3,9 g
+
+10 ¢
+
+4,1 g
+
+20 ¢
+
+5,7 g
+
+Tab. 1: Münzgewichte
+
+Die Werte stimmen recht gut mit den offiziellen überein [6].
+
+
+Elektromechanik
+
+
+In den Abb. 4 und 5 wird die Haltekraft in
+Abhängigkeit von der Spannung mit dem
+Abstand als Parameter gezeigt.
+
+Ich habe so lange Gewichte aufgelegt, bis
+der Magnet sie gerade noch halten konnte.
+Aus den Gewichten lassen sich die Haltekräfte des Magneten wie folgt errechnen:
+Die Kraft
+entspricht der Masse
+mal
+(Erd-) Beschleunigung (9,81 m/s²):
+=
+
+∙
+
+Beispiel: Ein Gewicht von je einer 5 ¢- und
+10 ¢-Münze ergibt 8 g; das entspricht einer
+Kraft von 0,078 N.
+
+
+Die Anziehungskraft ist stark abhängig vom
+Abstand zwischen Magnet und Rückschlussplatte. Ich habe den Abstand mit
+Hilfe von Platten der Stärken 2 / 3,75 / 4 / 5
+/ 6 und 7,5 mm eingestellt.
+Die Ergebnisse lassen sich sauber und übersichtlich in einer Excel-Tabelle darstellen;
+die Auswertung in Diagrammen zeigen die
+folgenden Abbildungen.
+Elektromagnet älteren Typs (31324)
+
+
+Die Abb. 6-8 zeigen die Anziehungskraft in
+Abhängigkeit vom Abstand mit der Spannung als Parameter.
+
+Die maximale Anziehungskraft wird bei
+direktem Aufliegen der Rückschlussplatte
+erreicht. Um ein „Kleben“ durch den Restmagnetismus (Remanenz) im Eisen des abgeschalteten Elektromagneten zu verhindern, habe ich ein Stück Papier dazwischen
+gelegt (ca. 0,1 mm dick).
+Bei 6 V hält der Magnet bereits 1,5 N; mehr
+kann ich mit meiner Messapparatur nicht
+einstellen (Abb. 3).
+
+
+
+
+
+
+
+liegen sehr dicht beieinander
+
+
+Vermutlich wird bei 20 V (Abb. 8) und
+einem Strom von mehr als 450 mA die
+Eisensättigung erreicht; eine weitere Steigerung der Spannung bringt dann nur noch
+eine geringe Steigerung der Anziehungskraft.
+
+Sogar bei einem Abstand von 10 mm und
+einer Spannung von 18 V oder 20 V wird
+noch eine Kraft von 0,03 N erreicht.
+In den Abb. 11 bis 13 ist die Anziehungskraft in Abhängigkeit vom Abstand mit der
+Spannung als Parameter dargestellt.
+
+Elektromagnet neueren Typs
+(32363)
+Die Anziehungskräfte des Elektromagneten
+neueren Typs sind mehr als doppelt so groß
+wie die des älteren Typs:
+Beim Abstand von 0,1 mm (Papier) wird
+bereits mit 3 V eine Kraft von 1,5 N erreicht; höhere Kräfte kann ich nicht darstellen, deshalb gibt es hierzu kein Diagramm.
+Spannung
+
+Kraft
+
+2V
+
+0,98 N
+
+3V
+
+1,5 N
+
+4V
+
+> 1,5 N
+
+
+
+
+Elektromechanik
+
+Die fischertechnik-Datenbank nennt sowohl für den älteren als auch für den neueren Typ Anschlussdaten von 6 V und 0,2 A;
+danach hätte der Magnet einen Innenwiderstand von 30 ς.
+
+
+Ergebnis
+Es lohnt sich offensichtlich, die Spannung
+auf 18 bis 20 V hochzutreiben: Die Anziehungskraft ist mindestens doppelt so groß
+wie bei 10 V. Allerdings bleibt die Frage:
+Verträgt das der Magnet?
+Was verträgt der Elektromagnet?
+Natürlich geht der Elektromagnet kaputt,
+wenn man dem Gehäuse Gewalt antut.
+Beim älteren Typ kann man den Eisenkern
+abschrauben. Bei meinem waren Gehäuse
+und Spulen nicht festgeklebt, und als eine
+Spule herausrutschte, ist prompt ein Anschlussdrähtchen abgerissen – also Vorsicht!
+
+Das kann ich mit meinen gebraucht gekauften nicht nachvollziehen: Sie haben Innenwiderstände von 43,5 ς (Typ 31324) und
+41,4 ς (Typ 32363) – was eher mit den
+Angaben in Hobby 3 Band 1, Seite 41
+übereinstimmt (50 ς) [7].
+Nun ist der elektrische Widerstand von
+Metallen von der Temperatur abhängig.
+Ausgehend von 20°C erhöht sich der
+Widerstand von Kupferdraht um den Faktor
+0,004 pro Kelvin (K) [8]; umgangssprachlich kann man auch Grad Celsius sagen
+(°C), der Zahlenwert ist der gleiche.2 Umgekehrt gilt: Wenn die Messung des Widerstandes
+einen größeren Wert als z. B.
+43,5 ς ergibt, dann hat sich die Temperatur
+des Magneten erhöht.
+Damit kann ich also durch Messung der
+Versorgungsspannung und des Stromes
+den neuen Widerstand
+berechnen und
+daraus die Temperatur
+ermitteln.
+Temperaturbeiwert von Kupfer [8]:
+
+
+Warum macht man so etwas? Weil es Versuche gibt, bei denen eine eisenlose Spule
+benötigt wird.
+Schließlich kann man das Magnetchen
+durch Überstrom den Hitzetod sterben
+lassen. Damit das nicht passiert, habe ich
+die nachfolgenden Versuche unternommen.
+
+
+In Technik und Wissenschaft wird unterschieden
+zwischen der Temperatur , gemessen z. B. in
+
+Mit
+also
+
+=
+
+=
+
+∙ (1 + ∙ ∆ )
+
+=
+
+beträgt die Temperaturänderung
+
+∆ =
+
+∙
+
+∙
+
+−
+
+
+und die Wicklungstemperatur beträgt dann
+mit
+
+=∆ +
+
+= Raumtemperatur.
+
+Grad Celsius, und der Temperaturänderung ∆ ,
+gemessen in Kelvin.
+
+
+
+Temperaturbeständigkeit
+Die Temperaturbeständigkeit von Kupferlackdraht wird in [11] mit 158°C angegeben. Das Kunststoffmaterial der Bausteine ist Polyamid (= PA, Nylon), genauer
+PA6 [9]. Gemäß Datenblatt „nylatron-6“
+der Fa. Polytron Kunststofftechnik [10] sind
+dies die Dauergebrauchstemperaturen von
+PA6:
+
+Temperaturbelastbarkeit des älteren
+Typs
+
+∂ kurzzeitig (wenige Stunden): bis 160 °C
+∂ dauernd während 5.000 h: bis 85 °C
+
+
+In der intenationalen Normung (IEC 34-1
+bzw. IEC 85) werden die Isolierstoffe in
+Klassen eingeteilt. Für die Wärmeklasse B
+gilt:
+∂ Grenztemperatur
+130°C
+
+des
+
+Isolierstoffes:
+
+Ich gehe davon aus, dass für die Elektromagnete eine Temperaturgrenze von 130°C
+gilt. Unter dieser Annahme habe ich die
+nachfolgenden Versuche durchgeführt.
+In den Diagrammen wird als Starttemperatur immer 20°C angegeben, was ungefähr
+der Raumtemperatur entspricht.
+
+
+Temperaturbelastbarkeit des
+neueren Typs
+
+Auf ein oder zwei Grad darf man mich nicht
+festlegen, das gibt die Genauigkeit der Messungen nicht her. Auch hier gilt wieder: Es
+kam mir nicht auf exakte Einzelwerte an,
+sondern auf Trends, die Vergleichbarkeit
+und die Auslotung der Grenzen, möglichst
+ohne diese zu überschreiten.
+Aus meiner Sicht sind sowohl der ältere als
+auch der neuere Magnet dauerhaft mit 12 V
+belastbar. In beiden Fällen ist die Temperaturänderung nach 25 Minuten zum Stillstand gekommen, ohne die Grenztemperatur von 130 °C zu erreichen. Deshalb gibt es
+keine Diagramme mit kleineren Spannungen.
+
+
+
+
+Ergebnis der
+Temperaturbelastungen
+Das Temperaturverhalten beider Magnete
+ist – im Gegensatz zur Kraftentwicklung –
+sehr ähnlich. Das deutet darauf hin, dass die
+Spulen praktisch gleich sind, aber der
+neuere Typ den besseren Eisenkern besitzt.
+Er hat eine wesentlich höhere Permeabilitätszahl (μ ). Zusammenfassend können
+wir festhalten:
+∂ Beide Magnete sind für Dauerbelastung
+mit 12 V geeignet.
+∂ Bei Kurzzeitbelastung kann die Spannung für zwei oder drei Minuten auf
+18 V erhöht werden, um die größere
+Anziehungskraft nutzen zu können.
+Meine Magnete haben alle genannten und
+noch ein paar zusätzliche Versuche klaglos
+überstanden; optisch ist keinerlei Veränderung feststellbar.
+
+Elektromechanik
+
+Referenzen
+[1]
+
+Stefan Falk: Perlentauchen (Teil 3).
+ft:pedia 1/2013, S. 22-31.
+
+[2]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt.verlag, Heidelberg, 2015.
+
+[3]
+
+Matthias Dettmer: Synchronmotoren.
+ft:pedia 2/2016, S. 48-52.
+
+[4]
+
+Rüdiger Riedel: Der etwas andere
+Motor. ft:pedia 3/2016, S. 22-25.
+
+[5]
+
+Fischer-Werke: Hobby 1 Band 1.
+1972.
+
+[6]
+
+Muenzen.eu: Euro-Umlaufmünzen.
+
+[7]
+
+Fischer-Werke: Hobby 3 Band 1.
+1971.
+
+[8]
+
+BBC: Taschenbuch für
+Schaltanlagen. 7. Auflage, 1979.
+
+[9]
+
+fischertechnik GmbH: Qualität.
+
+[10] Polytron Kunststoftechnik: Polyamid
+6.
+[11] Elektrisola: Kupferlackdraht nach
+IEC-Europa.
+
+Versuchen aus
+
+Hinweis zur Quelle [8]: BBC ist die Abkürzung der Schweizer Firma Brown, Boveri
+und Cie., die es inzwischen nicht mehr gibt.
+Das Buch wurde von der damals großen
+Mannheimer Niederlassung herausgegeben.
+
+Das Gehäuse wird zwar heiß, aber verbrennen kann man sich daran nicht. Ein
+Gefahrhinweis ist also nicht nötig.
+Im Modell ist der Eisenkern nicht zugänglich. Wird er dennoch berührt, passiert
+nichts außer einem „Autsch“. Die Wärmekapazität ist zu gering um Schäden anzurichten.
+
+
+

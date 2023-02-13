@@ -1,0 +1,909 @@
+
+
+Elektronik
+
+Elektronik-Module (Teil 8): Silberlinge =
+Elektronikmodule?!
+Hans-Christian Funke
+Aufgrund vielfältiger Nachfragen, wie die Elektronikmodule eingesetzt oder diese ersatzweise
+für die Silberlinge verwendet oder wie die Elektronikmodule in einem Modell aus den hobbyBüchern integriert werden können, habe ich mich entschlossen, hier einmal einen allgemeinen
+Vergleich zu geben und zu zeigen, wie die einzelnen Silberlinge durch Elektronikmodule ersetzt
+werden können.
+
+Einleitung
+Es gibt zwei große Hürden beim Nachbau
+von Modellen mit Silberlingen aus Bauanleitungen, aus den hobby-Büchern oder
+anderen Quellen: Entweder fehlt einem ein
+Elektronikbaustein und dieser ist auch nicht
+bei eBay oder einem Händler zu bekommen
+oder man fällt schlichtweg in Ohnmacht,
+wenn man die Preise sieht.
+
+
+Hier bieten die Elektronikmodule einen
+idealen Ersatz für die Silberlinge. Sie sind
+verfügbar [1] und bieten zu dem auch preislich eine gute Alternative. Ein Silberling
+h4MF enthält ein Mono-Flop – ein Elektronikmodul 70005 enthält zwei Mono-Flops
+mit dem gleichen Funktionsumfang. Bei
+direktem Vergleich muss man somit den
+Preis bei einem Elektronikmodul halbieren
+und man zahlt rund 20 € für ein Mono-Flop.
+Ähnlich verhält es sich mit den meisten
+
+
+anderen Elektronikmodulen, die überwiegend die jeweilige Funktion mehrfach zur
+Verfügung stellen.
+
+Unterschiede zwischen
+Silberling und Elektronikmodul
+Der erste und sichtbare Unterschied besteht
+im äußeren, also in der Bauform der Elektronikbausteine (Tab. 1).
+Silberling
+
+ElektronikModul
+
+Länge
+
+75 mm
+
+90 mm
+
+Breite
+
+45 mm
+
+30 mm
+
+Höhe
+
+30 mm
+
+16 – 105 mm
+(je nach
+Ausführung)
+Tab. 1: Vergleich der äußeren Maße von
+Silberling und Elektronikmodul
+
+Weiterhin besitzen die Silberlinge am
+Gehäuse Nut und Federschienen und können auf diesem Weg direkt mit den fischertechnik-Bausteinen verbunden werden. Die
+Elektronikmodule sind auf eine Bodenplatte
+30×90 mm von fischertechnik montiert und
+können auf diesem Weg direkt mit der
+fischertechnik-Welt verbunden werden.
+Ein weiterer äußerlicher Unterschied ist das
+Stromversorgungssystem. Das, muss man
+schon sagen, wurde von fischertechnik sehr
+
+
+Elektronik
+
+elegant gelöst: Mit zwei Metallschienen am
+Gehäuse wird über einen Verbinder (wird
+mitgeliefert) zwischen zwei aneinander
+gesteckten Silberlingen die Stromversorgung verpolungssicher hergestellt. Das geht
+nach allen vier Seiten. Die Einspeisung
+erfolgt über den Gleichrichterbaustein
+(h4GB).
+Bei den Elektronikmodulen wird die Stromversorgung über eine Kabelbrücke (71020;
+wird mitgeliefert) zwischen den Elektronikmodulen an der Oberseite hergestellt. Mit
+einer längeren Kabelbrücke (71022;
+105 mm) können Elektronikmodule, die
+übereinander montiert sind, miteinander
+verbunden werden. Auf diese Weise können
+auch die Elektronikmodule in allen Richtungen miteinander verbunden werden. Die
+Stromversorgung kann direkt von einem
+Akku-Pack (35537) oder über ein Versorgungsmodul 70003 (entspricht dem h4GB)
+mit angeschlossenem Trafo, Steckernetzteil
+(505287) oder Power Regler (139778)
+versorgt werden.
+
+
+
+Für die Montage der Elektronikmodule am
+Modell hat man volle Bau- und Ideenfreiheit. Dafür können vielfältige Bauteile
+verwendet werden, z. B. Verbindungsstücke (15, 30, 45), Federnocken, Bauplatten (15×30), allerart Bausteine mit zwei
+Zapfen usw.
+Die weiteren Unterschiede befinden sich im
+Inneren und betreffen die Elektronik in den
+Bausteinen bzw. Modulen. Tab. 2 gibt
+einen Überblick über die grundlegenden
+Unterschiede zwischen den beiden Elektronikkomponenten.
+Technische Daten
+Die Elektronikmodule können alle mit einer
+Betriebsspannung von 5 – 15 V betrieben
+werden. Einige Elektronikmodule können
+sogar bereits mit einer Betriebsspannung ab
+3 V in Betrieb gehen. Höhere Spannungen
+können die Module beschädigen oder zerstören. Aus diesem Grund ist in den Versorgungsmodulen eine Spannungsbegrenzung
+enthalten, die zum Schutz der angeschlossenen Elektronikmodule bei Überschreitung
+der 15 V die Eingangsspannung kurzschließt.
+Natürlich gibt es in den Elektronikmodulen
+auch analoge Elektronik. Diese kommt zum
+Einsatz, wenn es um Leistung auf der Ausgangsseite geht: Versorgungsmodule 70003
+und 70020, Leistungsmodul 70009, Relaismodul 70018 und Inverter-Plus-Modul
+70019. Zwei weitere Elektronikmodule mit
+analoger Elektronik sind das Messmodul
+70022 und das Multifunktionsmodul 70015
+– letzteres ist eigens entworfen worden, um
+
+Silberlinge
+
+Elektronikmodule
+
+Logik
+
+negative Logik
+
+positive Logik
+
+Betriebsspannung
+
+7,2 – 10,8 V=
+
+5 – 15 V= bzw. 3 – 15 V=
+
+Aufbau
+
+analoge Elektronik digitale Elektronik
+
+Eingangsfrequenzen (max.) 2 kHz – 25 kHz
+
+7 kHz – 10 Mhz
+
+Anzeigen/Signalisierung
+Glimmlampe 6 V
+LED-Anzeige
+Tab. 2: Allgemeine technische Daten von Silberlingen und Elektronikmodulen
+
+
+
+analoge Signale aufzunehmen oder auszuwerten und in digitaler Form bereit zu
+stellen – inklusive einem analogen Miniverstärker für die Ausgänge.
+
+vorstellen und Hinweise geben, was zu
+beachten ist oder welche Unterschiede es
+gibt, wenn das vergleichbare Elektronikmodul zum Einsatz kommen soll.
+
+Vergleich der
+Elektronikbausteine
+
+Bei der Bezeichnung der Aus- oder Eingangssignale verwende ich low für „-“ und
+high entsprechend für „+“.
+
+Die Elektronikmodule wurden nicht mit
+dem Ziel entworfen, eine Nachbildung für
+die Silberlinge zu sein. So wurde z. B. positive Logik gewählt, weil jeder Computer
+oder Controller heutzutage mit positiver
+Logik arbeitet. Auf die Frage „Kann ein
+Elektronikmodul 1:1 ersatzweise für einen
+Silberling eingesetzt werden?“ muss mit
+einem klassischen „Jein“ geantwortet
+werden:
+
+Flip-Flop (h4FF) – JK-Flip-Flop
+(70007)
+Der Flip-Flop-Silberling h4FF ist genau
+genommen ein JK-Flip-Flop und aus
+diesem Grund ist das JK-Flip-Flop 70007
+bei den Elektronikmodulen das entsprechende Pendant.
+
+Antwort „Nein“, weil die Silberlinge mit
+negativer Logik arbeiten. Würde man in
+einer Schaltung mit mehreren Silberlingen
+z. B. ein h4MF herausnehmen und dafür ein
+70005 Mono-Flop-Modul einsetzen, würde
+die Schaltung nicht funktionieren.
+Würde man hingegen alle Silberlinge gegen
+Elektronikmodule austauschen, würde es
+funktionieren, weil die Silberlinge unter
+sich wie die Elektronikmodule die gleiche
+Logik verwenden. Berücksichtigt man den
+Unterschied und invertiert die Signale
+zwischen den Silberlingen und Elektronikmodulen, dann würde es ebenfalls funktionieren und somit kann man die Frage auch
+mit „Ja“ beantworten.
+Am einfachsten wäre es, in den Modellen
+mit Silberlingen diese komplett durch
+Elektronikmodule zu ersetzen und bei den
+angeschlossenen Schaltern die Anschlüsse
+mit „+“ oder „-“ an den Schaltkontakten
+durch die entgegengesetzte Polarität zu
+ersetzen („+“ statt „-“ und „-“ statt „+“).
+Sollen einzelne Elektronikmodule mit
+Silberlingen kombiniert werden, müssen
+die Signalleitungen zwischen den beiden
+Bausteintypen invertiert werden.
+Im Folgenden werde ich zu jedem Silberling das passende Elektronikmodul
+
+
+(rechts).
+
+Wie man in Tab. 3 sieht, müssen die Eingänge der beiden Elektronikkomponenten
+genau entgegengesetzt angesteuert werden
+(invertiertes Signal).
+Die Eingänge SP, RP und X setzen bzw.
+rücksetzen das Flip-Flop (FF) über eine
+Flanke, wie beim CP-Eingang. Wird einer
+dieser Eingänge belegt, kann in der Regel
+dafür ersatzweise der Sx/Rx-Eingang am
+Elektronikmodul verwendet werden. Sollte
+es dennoch einmal erforderlich sein, das FF
+über eine Flankensteuerung anzusteuern,
+muss dies über den Ckx Eingang realisiert
+werden. Werden in einer Schaltung beide
+Eingänge SD und SP oder RD und RP
+verwendet, müssen die Signale über ein
+
+
+Elektronik
+
+Funktion
+
+Ein-/Ausgang Aktivierung Ein-/Ausgang Aktivierung
+Silberling
+
+Flip-Flop setzen
+
+Elektronikmodul
+
+SD
+
+low
+
+S1/S2
+
+high
+
+Flip-Flop rücksetzen RD
+
+low
+
+R1/R2
+
+high
+
+Sperreingang J
+
+J
+
+high
+
+J1/J2
+
+high
+
+Sperreingang K
+
+K
+
+high
+
+K1/K2
+
+high
+
+Clock
+
+CP
+high → low Ck1/Ck2
+Tab. 3: Ansteuerung der h4FF- und Flip-Flop-Module
+
+low → high
+
+ODER-Gatter an den Sx- bzw. Rx-Eingang
+eines Flip-Flop-Elektronikmoduls (70006 /
+70007 / 70008) geführt werden.
+Die Elektronikmodule stellen auch andere
+FF-Typen zu Verfügung: Das D-Flip-Flop
+70006 und das RS-Flip-Flop 70008. Werden nur die Eingänge SD und RD des h4FF
+benötigt, könnte man auch dafür das Elektronikmodul 70008 mit vier RS-FF einsetzen und damit bis zu vier h4FF Silberlinge durch ein einziges Elektronikmodul
+ersetzen.
+Mono-Flop (h4MF) – Mono-FlopModul (70005)
+Für den Mono-Flop-Silberling h4MF gibt
+es bei den Elektronikmodulen das MonoFlop-Modul 70005.
+
+(rechts).
+
+Wird die Sv Funktion in einer Schaltung
+benutzt, dann ist dafür ein AND-Gatter mit
+zwei Eingängen (70011) vor den Eingang
+Ck zu schalten. Der eine AND-Eingang
+
+Silberling Elektronikmodul
+Anzahl JK-Flip-Flops
+
+
+
+Anzahl D -Flip-Flops
+
+-
+
+
+Anzahl RS-Flip-Flops
+
+
+
+Max. Ausgangsstrom
+
+20 mA
+
+9 mA (bei Versorgungsspannung 9 V)
+
+Max. Eingangsfrequenz CP bzw. Ck 2 kHz
+
+> 10 Mhz
+
+Silberling SD/RD
+
+2 kHz
+
+-
+
+JK-FF-Modul S1-2/R1-2
+
+-
+
+46 kHz
+
+D -FF-Modul S1-2/R1-2
+
+-
+
+32 kHz
+
+RS-FF-Modul S1-4/R1-4
+50 kHz / 7 kHz
+Tab. 4: Technischen Daten von Flip-Flop-Silberling und Flip-Flop-Modulen im Vergleich
+
+
+
+Funktion
+
+Ein-/Ausgang Aktivierung Ein-/Ausgang Aktivierung
+Silberling
+
+Elektronikmodul
+
+Mono-Flop setzen
+
+SP
+
+high → low
+
+Ck
+
+Mono-Flop sperren
+
+Sv
+
+high
+
+-
+
+Mono-Flop rücksetzen R
+Tab. 5: Ansteuerung von h4MF und Mono-Flop-Modul
+
+wird mit dem Setzimpuls beschaltet und der
+andere AND-Eingang mit low, wenn die
+Funktion blockiert werden soll. Alternativ
+könnte auch der Reset-Eingang (R) auf low
+gelegt werden, um das MF zu sperren.
+Das Mono-Flop 70005 verfügt intern über
+zwei Kondensatoren (2,2 µF und 22 µF),
+die über DIP-Schalter aktiviert werden
+können. Mit den beiden Kondensatoren und
+dem Drehregler (Potentiometer) können
+unterschiedliche Haltezeiten eingestellt
+werden. In den beiden MFs lassen sich
+unterschiedliche Zeitspannen einstellen.
+Mit extern angeschlossenen Kondensatoren
+können noch größere oder kleinere Zeitspannen als in Tab. 6 angeben erzeugt
+werden.
+
+low → high
+
+low
+
+Relais (h4RB) – Relaismodul (70018)
+
+
+Als Schalter für Motoren und Lampen war
+der Relaisbaustein (h4RB) gedacht. Über
+einen Verstärker wird ein Relais mit zwei
+Umschaltern (2 × UM) angesteuert. Das
+Relaismodul 70018 ist ebenso aufgebaut,
+verfügt allerdings über zwei derartige
+Relais.
+
+Silberling
+
+Elektronikmodul
+
+Anzahl der Mono-Flops
+
+
+
+Max. Ausgangsstrom
+
+20 mA
+
+9 mA (bei Versorgungsspannung 9 V)
+
+Max. Eingangsfrequenz
+
+2 kHz
+
+> 10 Mhz
+
+Ausgangsimpulslänge
+
+20 ms – 30 s
+
+200 ms – 67 s
+
+Kleinster
+Kondensatorwert
+
+keine Angaben (1)
+
+22 pF (2)
+
+Größter
+jeder Wert über 22 µF (2)
+jeder Wert über
+Kondensatorwert
+47 µF (1)
+(1) externer Kondensator zwischen Buchsen „Zeit“ und „ext“
+(2) externer Kondensator zwischen Buchsen „C-“ und „C+“
+Tab. 6: Technischen Daten im Vergleich zwischen Mono-Flop Silberling und Mono-Flop-Modul
+
+Funktion
+
+Elektronik
+
+Ein-/Ausgang Aktivierung Ein-/Ausgang Aktivierung
+Silberling
+
+Relais anziehen E
+
+Elektronikmodul
+IN *
+
+low
+
+high
+
+Relais anziehen ---
+
+low
+IN *
+* Die beiden Eingänge sind über ein OR-Gatter verknüpft.
+Tab. 7: Ansteuerung von h4RB und Relaismodul.
+
+Beim Relaismodul 70018 können die Relais
+mit low oder high geschaltet werden. Somit
+kann das Relaismodul direkt den h4RB in
+Schaltungen ersetzen.
+
+und Auswerten von analogen Signalen eingesetzt wird, wie Feuchtigkeitsfühler,
+Temperaturfühler (PTC, NTC) und Helligkeitssensoren (Fotozelle). Das Multifunktionsmodul stellt die gleichen Funktionalitäten zur Verfügung und kann damit
+ebenso direkt für den Grundbaustein eingesetzt werden.
+
+Alternativ kann noch das Inverter-PlusModul 70019 mit vier Einschaltern verwendet werden, wenn es darum geht, kleine
+Verbraucher bis 230 mA zu betreiben. Hierbei handelt es sich um Einschalter, die auf
+einer Seite fest mit high verbunden sind.
+Dafür kann der Einschalter mit einer
+Frequenz über 10 MHz betrieben werden.
+Für größere Schaltleistungen bis 2,3 A steht
+das Leistungsmodul 70009 mit einem
+Umschalter zur Verfügung, wobei die
+Schaltkontakte mit high und low fest verbunden sind. Bei dem Leistungsmodul
+können ebenfalls Schaltvorgänge mit über
+10 Mhz erfolgen.
+Bei beiden Elektronikmodulen können die
+Schalter mit low oder mit high aktiviert
+werden.
+
+(rechts).
+
+Grundbaustein (h4G) –
+Multifunktionsmodul (70015)
+
+Die Ansteuerung ist zwischen Grundbaustein und dem Multifunktions-Modul im
+Wesentlichen identisch. Es gibt die gleichen
+Eingänge (E1, E2) und die gleichen Ausgänge (A1 = A; A2 = A).
+
+Der Grundbaustein ist ein Differenzverstärker, der in erster Linie zum Erfassen
+
+Silberling Elektronikmodul
+Anzahl Relais
+
+
+
+Anzahl der Schalter pro Relais 2 × UM
+
+2 × UM
+
+Minimale Schaltzeit
+
+20 ms
+
+5 ms
+
+Schaltleistung max.
+
+40 W
+
+90 W
+
+Schaltstrom max.
+1 A (40 V) 3 A (30 V)
+Tab. 8: Technischen Daten im Vergleich zwischen Relaisbaustein und Relaismodul.
+
+
+
+Silberling
+Anzahl Differenzverstärker 1
+Max. Eingangsfrequenz
+
+Elektronikmodul
+
+keine Angaben > 10 Mhz
+
+Max. Ausgangsstrom
+20 mA
+87 mA
+Tab. 9: Technischen Daten im Vergleich zwischen Grundbaustein und Multifunktionsmodul.
+Silberling
+
+Elektronikmodul
+
+Buchse 6
+
+DIP-Schalter 5
+
+Buchse 7
+
+---
+
+Buchse 8
+
+DIP-Schalter 1
+
+Buchse 9 (+) DIP-Schalter 2 (+)
+
+Differenzverstärkers.
+
+Das Multifunktionsmodul bietet ein paar
+Vorteile gegenüber dem Grundbaustein. Es
+brauchen keine Kabelbrücken gesteckt zu
+werden, sondern die Brücken werden mit
+kleinen DIP-Schaltern hergestellt. Die Ausgänge verfügen über einen Mini-Verstärker
+und bei Bedarf kann ein Ausgang mit einem
+internen Lautsprecher verbunden werden.
+
+Buchsen A1
+
+Buchse A
+
+Buchsen A2
+
+Buchse A
+
+--DIP-Schalter 3
+Tab. 10: Vergleich der Anschlüsse des h4GB
+mit den DIP-Schaltern des MultifunktionsModuls
+
+AND-NAND (h4AN) – AND-NANDModul (70010, 70011)
+
+Der DIP-Schalter 3 dient Messungen von
+kleinsten Spannungen zwischen den Eingängen E1 und E2 z. B. bei Spulen, in denen
+eine Spannung durch einen Magneten induziert wird oder durch Schallwellen von
+einem Mikrofon. DIP-Schalter 4 ist für
+Rückkopplungen zum Ausgang.
+
+
+Silberling
+
+Elektronikmodul
+
+Buchse 1
+
+Buchse E+
+
+Buchse 2
+
+Buchse E-
+
+Buchse 3
+
+„-“ (GND)
+
+Buchse 4
+
+-
+
+Buchse E1
+
+Buchse E1
+
+Buchse E2
+
+Buchse E2
+
+Buchse 5
+
+DIP-Schalter 7
+
+-
+
+DIP-Schalter 6
+
+
+Der h4AN kann als 2er, 3er oder 4er ANDNAND eingesetzt werden. Bei den Elektronikmodulen gibt es dafür ein AND-NANDModul mit 4 Eingängen (70010) und mit 2
+Eingängen (70011).
+
+Funktion
+
+Elektronik
+
+Ein-/Ausgang Aktivierung
+
+Ein-/Ausgang
+
+Silberling
+AND setzen (Eingänge)
+
+Aktivierung
+
+Elektronikmodul
+
+A&B&C&D
+
+low
+
+Ax & Bx & C x & D x
+
+high
+
+A&B
+
+low
+
+Ax & Bx
+
+high
+
+ZAND
+
+low
+
+AND gesetzt (Ausgang)
+
+YX
+
+high
+
+NAND gesetzt
+ZNAND
+high
+YX
+(Ausgang)
+Tab. 11: Ansteuerung von h4AN und AND-NAND-Modul.
+
+low
+
+OR-NOR (h4ON) – OR-NOR-Modul
+(70012, 70013)
+
+und zwei (rechts) Eingängen
+
+Der h4ON kann als 2er-, 3er- oder 4er-ORNOR eingesetzt werden. Bei den Elektronikmodulen gibt es dafür ein OR-NORModul mit 4 Eingängen (70012) und mit 2
+Eingängen (70013).
+
+Silberling Elektronikmodul Elektronikmodul
+4er AND-NAND
+2er AND-NAND
+Anzahl der Gatter
+
+
+Max. Eingangsfrequenz 15 kHz
+Max. Ausgangsstrom
+
+
+
+> 10 Mhz
+
+> 10 Mhz
+
+20 mA
+9 mA *
+* bei Versorgungsspannung 9 V
+
+9 mA *
+
+Tab. 12: Technische Daten im Vergleich zwischen AND-NAND Silberling und AND-NAND-Modul
+
+
+
+Funktion
+
+Ein-/Ausgang Aktivierung Ein-/Ausgang
+Silberling
+
+OR setzen (Eingänge)
+
+Aktivierung
+
+Elektronikmodul
+
+A^B^C^D
+
+low
+
+Ax ^ Bx ^ Cx ^ Dx high
+
+A^B
+
+low
+
+Ax ^ B x
+
+high
+
+low
+
+YX
+
+high
+
+OR gesetzt (Ausgang) ZOR
+
+OR gesetzt (Ausgang) ZNOR
+high
+YX
+Tab. 13: Ansteuerung von h4ON und OR-NOR-Modul
+
+low
+
+die Anschlüsse E1 und E2 des Multifunktionsmoduls angeschlossen werden.
+Gleichrichterbaustein (h4GB) –
+Versorgungsmodul (70003, 70020)
+Der Gleichrichterbaustein kann Wechselspannungen und pulsierende Gleichspannungen glätten und für die Elektronik
+brauchbar machen. Die gleiche Funktion
+übernimmt das Versorgungsmodul 70003
+und ist damit 1:1 austauschbar mit dem
+h4GB.
+zwei (rechts) Eingängen
+
+Mikrofon-Lautsprecher-Baustein
+(h4ML) – Multifunktionsmodul
+(70015)
+Für den Mikrofon-Lautsprecher-Baustein
+gibt kein eigenes Modul, sondern im Multifunktionsmodul ist ein Mini-Lautsprecher
+mit integriert und somit wird kein separates
+Modul benötigt.
+Soll ein Mikrofon zum Einsatz kommen,
+dann kann ein handelsübliches Mikrofon an
+
+(rechts)
+
+Silberling Elektronikmodul Elektronikmodul
+4er OR-NOR
+2er OR-NOR
+Anzahl der Gatter
+
+
+Max. Eingangsfrequenz 15 kHz
+Max. Ausgangsstrom
+
+
+
+> 10 Mhz
+
+> 10 Mhz
+
+20 mA
+9 mA *
+* bei Versorgungsspannung 9 V
+
+9 mA *
+
+Tab. 14: Technische Daten im Vergleich zwischen OR-NOR Silberling und OR-NOR-Modul
+
+
+Elektronik
+
+Das Versorgungsmodul 70003 verfügt
+zusätzlich über eine Niedrigspannungsanzeige für Akku-Betrieb (variabel einstellbar), eine Anschlussbuchse für das Schaltnetzteil 505287, Schraubklemmen für einen
+Anschluss über Drähte und einen Überspannungsschutz, der bei einer Spannung
+über 15 V die Eingangsseite kurzschließt.
+Das Versorgungsmodul 70020 hat die gleichen Zusätze wie das Versorgungsmodul
+70003, ist jedoch für Speisespannungen von
+über 15 V ausgelegt und wandelt diese in
+eine Gleichspannung von 9,2 - 9,6 V um.
+Dyn.-AND (h4DA)
+Für den Dyn.-AND (h4DA) gibt es kein
+vergleichbares Elektronikmodul. Dieser
+Baustein stellt eine Sperrfunktion für wechselnde Signale zur Verfügung, die über ein
+AND-Gatter realisiert wird. Schaut man
+sich den Spannungsverlauf am Ausgang des
+Dyn.-ANDs an (Abb. 11), dann zeigt dieser
+einen negativen Spannungsausschlag;
+derartige negative Spannungsausschläge
+würden digitale Bausteine zerstören.
+
+Impuls zu sperren, kann auch ein normales
+2er-AND-Gatter verwendet werden, wobei
+ein Eingang mit dem Signal beschaltet wird,
+während der andere Eingang zum Sperren
+verwendet wird.
+Weitere Bausteine
+Die „hobbylabor 1“-hl-Bausteine sind für
+experimentelle Zwecke gedacht, etwa der hl
+1 PB Potentiometerbaustein oder das hl 1
+EF Experimentierfeld. Bei den Elektronikmodulen gibt es das Messmodul, dass ein
+V-A-Meter und ein frei verwendbares
+Potentiometer von 1 kΩ enthält. Für das
+Experimentierfeld gibt es vergleichsweise
+das Experimentiermodul, dass zusätzlich
+ein Set aus neun Widerständen, zwei
+Dioden und zwei Steckern (mit Schrauben)
+enthält, sowie eine Tabelle zur Bestimmung
+von Widerständen.
+Wer weitere spezielle Fragen zu den Elektronikmodulen oder zu Schaltungen mit
+Silberlingen hat, kann diese per E-Mail an
+mich (elektronik@funke4you.de) richten.
+Gerne bin ich behilflich bei der Lösungsfindung eines Problems. Informationen
+bekommt man auch bei Franz Santjohanser
+[1], wo die Elektronikmodule, die Zusatzmodule, Zubehör und Labore erhältlich
+sind.
+
+Quellenangaben
+[1]
+
+santjohanser: Spielen. Lernen.
+Technik. Autorisierter fischertechnikFachhändler.
+
+[2]
+
+Fischerwerke: Leitfaden für die
+fischertechnik-Elektronik-Bausteine.
+In der ft-Datenbank.
+
+dynamischen AND-Baustein erzeugt
+
+Um ein Dyn.-AND Baustein zu ersetzen,
+kann ein Mono-Flop eingesetzt werden,
+wobei das Eingangssignal invertiert werden
+muss, wenn die fallende Flanke der Auslöser sein soll. Geht es nur darum, einen
+h4DA
+Bp
+
+Av
+
+high → low low
+
+Mono-Flop-Modul
+Z
+
+Ck
+
+R
+
+Q
+
+AND-Gatter
+A
+
+B
+
+Y
+
+0-1-0 low → high high 0-1-0 low → high high 0-1
+
+high 0
+low 0
+low 0
+Tab. 15: Ansteuerung von h4DA, eines Mono-Flop-Modul und eines normalen AND-Gatters
+
+

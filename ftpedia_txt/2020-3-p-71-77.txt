@@ -1,0 +1,546 @@
+
+Modell
+
+Modell
+
+Pianophone
+Hans-Christian Funke
+In der Modellbauwelt haben wir eine Vielzahl von Möglichkeiten, etwas zu bewegen, sich
+drehen oder fahren zu lassen, zu transportieren, zu steuern oder gar das Modell mit optischen
+Reizen (Lampen, LEDs) auszustatten. Akustische Signale sind eher selten in einem Modell zu
+finden – daher hier einmal ein voll akustisches Modell.
+
+
+
+
+Aufbauanleitung
+
+Anzahl Art.-Nr.
+
+Das Pianophone hat viel Ähnlichkeit mit
+einem Miniaturklavier und damit wird die
+Funktion des Modelles auch am besten
+beschrieben. Auch bei diesem Modell habe
+ich auf die Umverpackung oder Ausgestaltung verzichtet und somit ein Minimum an
+Material verwendet. Hier erst einmal die
+Teileliste:
+Anzahl Art.-Nr.
+
+Baustein 5
+
+1 70003
+
+Versorgungsmodul
+V1
+
+1 70015
+
+Multifunktionsmodul
+
+1 70021
+
+Experimentiermodul
+
+1 70009
+
+Leitungsmodul
+
+1 71040
+
+Kondensator
+100 nF1
+Lautsprecher 8 Ω
+10 W2
+
+1 32985
+
+Grundplatte
+258 · 186
+
+
+4 35969
+
+Kabelführung
+
+
+6 116251
+
+Baustein 30 (rot)
+
+9 32879
+
+Baustein (sw)
+
+3 32881
+
+Baustein 15 (sw)
+
+3 32882
+
+Baustein 15 (sw) mit
+2 Zapfen
+
+1 31060
+
+Verbinder 15
+
+4 31330
+
+Verbinder 45
+
+12 37468
+
+Baustein 7,5
+
+20 31987
+
+Federnocken
+
+2 38240
+
+Baustein V15 Eck
+
+8 38428
+
+Baustein 15 · 30 · 5
+mit 3 Nuten
+
+8 38244
+
+Bauplatte 75 (rot
+oder weiß)
+
+4 38244
+
+Bauplatte 45 (rot)
+
+4 38413
+
+Achse 30
+
+4 37679
+
+Klemmbuchse 5
+
+4 31023
+
+Klemmbuchse 10
+
+8 37780
+oder
+37783
+
+Minitaster
+
+Ist im Set 70046 des Multifunktionsmoduls
+inklusive Stecker enthalten
+
+
+Gibt es bei Reichelt Elektronik – siehe Abschnitt
+„Elektronikteile“
+
+
+6 37237
+
+Bezeichnung:
+
+
+Bezeichnung:
+
+Set mit acht
+Widerständen3
+Tab. 1: Teileliste
+
+Neben den Teilen aus der Liste werden
+insgesamt 18 Kabel mit Steckern benötigt,
+zwei Kabel mit nur einem Stecker (aus dem
+Set des Experimentiermoduls) für den Lautsprecher und noch weitere 12 Stecker für
+die acht Widerstände (zwei Widerstände
+kommen in einen Stecker – siehe Abb. 2).
+Wer die schwarzen Tasten – nur für die
+Optik – ebenfalls anbringen möchte,
+braucht noch weitere fünf Bauplatten 38428
+– diese habe ich im Modell mit einem
+wasserfesten schwarzen Stift eingefärbt.
+
+in einem Stecker montiert (Testwiderstände)
+
+
+Die Widerstandswerte sind im
+„Justierung der Töne“ aufgelistet.
+
+Abschnitt
+
+
+Modell
+
+
+Mit dem schwierigsten Teil werden wir
+beginnen: der Klaviatur. Zuerst muss der
+Rahmen zusammengesteckt werden, an
+dem die Mini-Taster zu befestigen sind
+(siehe Abb. 3). Die Taster müssen versetzt
+und immer um 180 Grad gedreht zum Nachbarn angebracht werden, damit die Stecker
+zum Anschließen der Taster noch genug
+Platz finden.
+Als nächstes wird die Leiste für die Tasten
+präpariert. Auf die schwarzen Bausteine
+werden acht Federnocken geschoben.
+Wichtig ist, dass der einzelne Zapfen zu
+sehen ist! Als nächstes werden die Tasten
+wie in Abb. 4 zu sehen aufgebaut. Vier
+Tasten bekommen noch ein Mittelstück,
+bestehend aus einem Baustein 5, der auf den
+Noppen der Bauplatte 45 geschoben wird.
+Bei den vier Tasten, bei denen kein Mittelstück vorhanden ist, werden Federnocken in
+die Nut des Bausteins 15 · 30 · 5 geschoben. Die fertigen Tasten sind nun abwechselnd links und rechts bis zur Mitte einzuschieben und aufzufüllen. Dabei ist darauf
+zu achten, dass die Tasten nicht zu eng
+
+aneinander liegen, sondern ein kleiner Spalt
+für die Bewegungsfreiheit der Tasten bleibt.
+
+
+mit den Tastern
+
+
+
+
+Elektronikmodule
+mit
+befestigt werden (Abb. 7).
+
+mit den Tastern
+
+Als Hilfestellung kann man ein dickeres
+Stück Papier zwischen die Tasten legen und
+nach dem Einschieben wieder herausziehen. Die Tasten werden durch die
+Summe der kleinen Spalte rechts und links
+ein wenig überstehen; das ist auf Abb. 1
+auch zu erkennen.
+Bevor ihr die fertige Tastatur einsetzt,
+solltet ihr die Verkabelung an den Tastern
+anbringen. Um die richtige Länge für die
+Kabel bestimmen zu können, müssen die
+
+Erst danach kann die Tastatur eingesetzt
+werden. Die einzelnen Tasten sollten sich
+frei bewegen können und die Bauplatten
+und Federnocken müssen genau über dem
+Tasthebel sitzen (Abb. 5 und 6). Bei korrektem Sitzt der Tasten ist das Klicken eines
+Tasters deutlich zu hören. Ggf. müsst ihr die
+Tastatur etwas in der Höhe nachjustieren.
+Zum Schluss sind zwei AbschlussBausteine 5 auf Bausteine 30 zu schieben.
+Den großen Lautsprecher braucht ihr nicht
+unbedingt, denn das Multifunktionsmodul
+enthält einen Minilautsprecher, der die
+Funktion auch erfüllt. Für diesen Fall
+würden das Leistungsmodul und der Lautsprecher entfallen und beim Multifunktionsmodul müsste DIP-Schalter 8 auf
+ON (Hebel nach unten) gestellt werden.
+
+
+Federnocken
+
+
+Modell
+
+Schaltungsaufbau
+Jetzt fehlt nur noch die Verdrahtung des
+Modells, die ihr leicht mit dem Schaltplan
+in Abb. 12 erstellen könnt. Die Widerstände
+werden ins Experimentiermodul gesteckt.
+In den Steckern der Mittelleiste werden je
+zwei Widerstände befestigt (siehe Abb. 2).
+Am Multifunktionsmodul muss der DIPSchalter 7 auf ON (Hebel nach unten)
+stehen. Für Testzwecke oder falls kein
+großer Lautsprecher verwendet wird, muss
+auch der DIP-Schalter 8 auf ON gestellt
+werden.
+
+Justierung der Töne
+Mit dem Pianophone kann eine Tonleiter
+von Ton c bis c‘ gespielt werden. Die
+einzelnen Töne werden über verschiedene
+Widerstandswerte
+generiert.
+Die
+Bestimmung der Widerstandswerte habe
+ich mit Hilfe eines Oszilloskops vorgenommen. Die Liste der Werte findet ihr in
+Tab. 2.
+In der Praxis ist es aber nicht möglich,
+derartig feine Unterscheidungen mit den
+Widerständen zu erzeugen, weil die Widerstandswerte nur in einem groben Raster
+verfügbar sind. Die gängigen Widerstände
+gibt es in sogenannten Normreihen (E6,
+E12, E24, …), wobei die Zahl hinter dem
+„E“ die Anzahl der Werte in einer Dekade
+(und damit indirekt auch die Toleranzen
+zwischen den Werten) angibt.
+
+Lautsprecher
+
+vier Achsen 30, Baustein 7,5 und
+Klemmbuchsen
+
+In Tab. 2 sind möglichst genaue Werte aus
+den gängigen Widerständen in der Spalte
+Ersatzwert 1 zusammengestellt, wobei sich
+
+
+
+
+hier zwei Widerstände zum Zielwert addieren. In der Praxis heißt dies aber, dass diese
+beiden Widerstände zusammengelötet
+werden müssen (Abb. 11). Wer sich diese
+Arbeit nicht machen möchte und sich mit
+einem etwas gröberen Ergebnis zufriedenstellt, kann mit einem einzelnen Widerstandswert arbeiten, dessen Wert die Spalte
+Ersatzwert 2 benennt.
+
+
+Elektronikteile
+Alle Widerstände und der Lautsprecher sind
+bei dem Elektronikversand Reichelt online
+erhältlich. Die Teile habe ich euch in Tab. 3
+mit den entsprechenden Bestellnummern
+angegeben.
+Ab sofort können also alle angehenden
+Virtuosen ihrer Fantasie freien Lauf lassen
+und eigene Kompositionen kreieren – viel
+Spaß!
+
+Ton Frequenz Dauer
+
+Modell
+
+Widerstand
+
+Ersatzwert 1
+
+Ersatzwert 2
+
+c
+
+131 Hz 7,6 ms
+
+1590 Ω 1,5 kΩ + 100 Ω
+
+1,6 kΩ
+
+d
+
+156 Hz 6,4 ms
+
+1340 Ω 1,0 kΩ + 330 Ω
+
+1,4 kΩ
+
+e
+
+165 Hz 6,0 ms
+
+1260 Ω 1,0 kΩ + 270 Ω
+
+1,3 kΩ
+
+f
+
+174 Hz 5,7 ms
+
+1170 Ω 1,0 kΩ + 180 Ω
+
+1,2 kΩ
+
+g
+
+196 Hz 5,1 ms
+
+1030 Ω
+
+1,0 KΩ + 47 Ω
+
+1,0 kΩ
+
+a
+
+220 Hz 4,5 ms
+
+930 Ω
+
+820 Ω + 100 Ω
+
+910 Ω
+
+h
+
+246 Hz 4,1 ms
+
+820 Ω
+
+820 Ω
+
+820 Ω
+
+c‘
+
+261 Hz 3,8 ms
+
+785 Ω
+
+680 Ω + 100 Ω
+
+750 Ω
+
+Tab. 2: Tonfrequenzen und Widerstandswerte
+Artikel
+Lautsprecher
+
+Wert
+
+Bestellnummer
+
+8 Ω / 10 W
+
+VIS FR 10HM-8
+
+Anzahl Preis ca.
+
+6,00 €
+
+Kohleschicht-Widerstand
+
+47 Ω 1/4W 47
+
+
+0,10 €
+
+Kohleschicht-Widerstand
+
+100 Ω 1/4W 100
+
+
+0,10 €
+
+Kohleschicht-Widerstand
+
+180 Ω 1/4W 180
+
+
+0,10 €
+
+Kohleschicht-Widerstand
+
+270 Ω 1/4W 270
+
+
+0,10 €
+
+Kohleschicht-Widerstand
+
+330 Ω 1/4W 330
+
+
+0,10 €
+
+Kohleschicht-Widerstand
+
+680 Ω 1/4W 680
+
+
+0,10 €
+
+Kohleschicht-Widerstand
+
+820 Ω 1/4W 820
+
+
+0,10 €
+
+Kohleschicht-Widerstand
+
+1,0 kΩ 1/4W 1,0K
+
+
+0,10 €
+
+Kohleschicht-Widerstand
+
+1,5 kΩ 1/4W 1,5K
+
+
+0,10 €
+
+Tab. 3a: Bestellnummern Elektronik-Artikel bei Reichelt Elektronik (Ersatzwerte 1)
+Artikel
+Lautsprecher
+
+Wert
+
+Bestellnummer
+
+8 Ω / 10 W
+
+VIS FR 10HM-8
+
+Anzahl Preis ca.
+
+6,00 €
+
+Metallfilm-Widerstand
+
+750 Ω METALL 750
+
+
+0,10 €
+
+Metallfilm-Widerstand
+
+820 Ω METALL 820
+
+
+0,10 €
+
+Metallfilm-Widerstand
+
+910 Ω METALL 910
+
+
+0,10 €
+
+Metallfilm-Widerstand
+
+1 kΩ METALL 1,00K
+
+
+0,10 €
+
+Kohleschicht-Widerstand
+
+1,2 kΩ 1/4W 1,2K
+
+
+0,10 €
+
+Kohleschicht-Widerstand
+
+1,3 kΩ 1/4W 1,3K
+
+
+0,10 €
+
+Metallfilm-Widerstand
+
+1,4 kΩ ARC MRA0207 1K4
+
+
+0,35 €
+
+Kohleschicht-Widerstand
+
+1,6 kΩ 1/4W 1,6K
+
+
+0,10 €
+
+Tab. 3b: Bestellnummern Elektronik-Artikel bei Reichelt Elektronik (Ersatzwerte 2)
+
+
+

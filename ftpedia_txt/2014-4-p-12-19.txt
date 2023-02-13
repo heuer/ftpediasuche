@@ -1,0 +1,492 @@
+
+
+Getriebe
+
+Das Differentialgetriebe
+Thomas Püttmann
+Differentialgetriebe fanden und finden in vielen Gebieten Anwendung. Wie solche Getriebe
+genau funktionieren, wird mit Hilfe von fischertechnik-Modellen in diesem Beitrag erklärt.
+Dabei kann man insbesondere das Konzept des Bezugssystemwechsels, das in Mathematik,
+Naturwissenschaften und Technik eine große Bedeutung besitzt, anwendungsorientiert
+erlernen.
+
+Geschichte
+Im Jahr 1900 stießen Schwammtaucher vor
+der griechischen Insel Antikythera auf ein
+Schiffswrack aus der Zeit um 100 v. Chr.
+Viele Artefakte wurden in den folgenden
+Monaten aus diesem Schiff geborgen. Eines
+dieser Fundstücke war ein unscheinbarer
+Metallklumpen, dessen große wissenschafts- und technologiegeschichtliche
+Bedeutung der Allgemeinheit erst viele
+Jahrzehnte später bekannt wurde. Es
+handelte sich um einen unvollständigen,
+erstaunlich komplexen Mechanismus mit
+mindestens 27, leider nur bruchstückhaft
+erhaltenen Zahnrädern, der unter anderem
+zur Vorhersage des Sonnen- und Mondlaufs
+sowie von Finsternissen und Mondphasen
+diente.
+Die vorhandenen Fragmente zeigen eindeutig, dass im antiken Griechenland epizyklische Bewegungen – das sind Bewegungen,
+bei denen Kreise auf Kreisen abrollen (siehe
+Modellierung von Himmelskörperbahnen
+benutzt wurden, sondern auch in mechanischen Getrieben. Sie legen nahe, dass Stirnrad-Differentialgetriebe wie in Abbildung 1
+damals bereits bekannt waren.
+
+
+Anzahl der Zähne von Derek de Solla Price als
+Teil des Antikythera-Mechanismus postuliert
+wurde [1]. In den aktuellen Modellen des
+Mechanismus findet es sich nicht mehr in exakt
+dieser Form.
+
+Ein Differentialgetriebe war höchst wahrscheinlich auch zentraler Bestandteil des
+Kompasswagens von Ma Jun (ca. 200-265),
+aber diese Vermutung basiert auf einer
+schriftlichen Überlieferung. Tatsächliche
+Fundstücke aus dem antiken China gibt es
+nicht – vor allem, weil häufig eine Dynastie
+die Errungenschaften der Vorgängerdynastie umfangreich vernichtete.
+
+
+Museum London (Foto: Andy Dingley CC BY
+3.0)
+
+Getriebe
+
+Ein gelernter Uhrmacher war es auch, der
+auf die Idee kam, Differentialgetriebe beim
+Antrieb von Fahrzeugen einzusetzen. Im
+Jahre 1748 präsentierte der unter anderem
+für seine Automaten bekannte Erfinder
+Jacques de Vaucanson (1709-1782) dem
+französischen König Ludwig XV. ein durch
+ein großes Uhrwerk angetriebenes Automobil mit Allradantrieb und Differentialgetriebe. Patentiert wurde das Differentialgetriebe für dampfgetriebene Fahrzeuge im
+Jahr 1827 durch einen weiteren Uhrmacher,
+nämlich Onésiphore Pecqueur (1792–
+1852). Die Verwendung des Differentialgetriebes in Fahrzeugen wird hervorragend in
+dem Video Around the Corner aus dem Jahr
+1937 erklärt. In Fahrzeugen werden Differentialgetriebe zum ersten Mal als Verteilgetriebe benutzt, d. h. nur einer der drei
+An-/Abtriebe wird angetrieben; wie sich die
+Drehbewegung auf die beiden Abtriebe
+verteilt, wird durch die Kurvenfahrt
+bestimmt.
+
+
+Die erste gesicherte Verwendung eines
+Differentialgetriebes erfolgte in einer Uhr.
+Noch im 18. Jahrhundert hatte die wahre
+Sonnenzeit – also die Zeit, die Sonnenuhren
+anzeigen – einen hohen Stellenwert.
+Mechanische Uhren zeigen die mittlere
+Sonnenzeit an, bei der die Stunden immer
+gleich lang dauern. Um die wahre Sonnenzeit daraus zu ermitteln, gab es häufig
+Korrekturtabellen auf Uhren. Der Londoner
+Uhrmacher Joseph Williamson setzte um
+das Jahr 1720 ein Differentialgetriebe ein,
+um die Korrektur mechanisch durchzuführen [2].
+
+Fahrzeugantriebs von Dirk Fox
+
+Im ausgehenden 19. und in der ersten Hälfte
+des 20. Jahrhunderts fanden Differentialgetriebe ausgiebige Anwendung in mechanischen Analogrechnern. Wenn man von
+der militärischen Ausrichtung absieht, ist
+der Ausbildungsfilm Basic Mechanisms in
+Fire Control Computers der US Navy aus
+dem Jahr 1953 sehr lehrreich und sehenswert.
+
+
+
+
+Beispiele
+Zunächst schauen wir uns einige Beispiele
+an. Abbildung 5 zeigt das ursprüngliche
+fischertechnik-Differentialgetriebe aus der
+grau-roten Epoche und das aktuelle Differentialgetriebe. Beide arbeiten mit kleinen
+Kegelzahnrädern und verbergen den eigentlichen Mechanismus in einem geschlossenen Käfig. Sie eignen sich daher nicht gut,
+um zu verstehen, wie ein solches Getriebe
+eigentlich funktioniert.
+
+
+fischertechnik-System
+
+Ein sehr schönes Differentialgetriebe mit
+einem einsehbaren Differentialkäfig hat
+Dirk Fox gebaut (siehe Abb. 4 und 6). Allerdings kommen auch hier kleine Kegelzahnräder zum Einsatz. Das Differentialgetriebe
+in Abbildung 7 habe ich speziell mit dem
+Ziel entwickelt, die Funktion möglichst gut
+erklären zu können. Es eignet sich besonders für den Einsatz in Kompasswagen und
+Analogcomputern, aber weniger für den
+Fahrzeugbau.
+
+Kegelzahnrädern von Dirk Fox
+
+
+Differentialgetriebe, anhand derer ich erklären möchte, welchen einfachen Grundideen
+man zweckmäßigerweise bei der gezielten
+Entwicklung solcher Getriebe mit oder
+ohne fischertechnik folgen sollte. Weitere
+Beispiele von Stirnradgetrieben finden sich
+im Bilderpool der ft-community.
+
+
+auch für den Einsatz in Fahrzeugen eignet
+
+
+Getriebe
+
+Experimente
+Wer in vollem Umfang verstehen möchte,
+wie ein Differentialgetriebe funktioniert,
+sollte das Funktionsmodell aus den Abbildung 7 und 10 nachbauen. Die Drehbewegungen aus oberem Sonnenrad, Steg und
+unterem Sonnenrad sind verkoppelt, d. h. es
+können nicht alle drei An-/Abtriebe unabhängig voneinander bewegt werden. Man
+kann sich zwei aussuchen und in eine
+gewünschte Position drehen, der dritte dreht
+sich dann zwangsweise in eine festgelegte
+Position. Eine solche Verkopplung dreier
+Drehbewegungen um eine gemeinsame
+Achse ist typisch für ein Umlaufrädergetriebe. Um die Verkopplung zu verstehen,
+empfiehlt es sich, am oberen und unteren
+Sonnenrad einen Zahn weiß zu markieren,
+und zwar so, dass die beiden Markierungen
+und der Steg alle mit der Nut des unteren
+roten Bausteins fluchten (Abb. 10).
+
+
+Experiment 2: Wir bringen das Modell
+wieder in seine Ausgangsposition, halten
+nun statt des Stegs das untere Sonnenrad
+fest und drehen das obere Sonnenrad. Der
+Steg dreht sich im gleichen Sinn, aber nur
+um den halben Winkel. Das ist die zweite
+wesentliche Beobachtung. Allerdings ist
+diese Beobachtung nicht so einfach zu
+erklären wie die erste. Darauf werden wir
+später noch eingehen.
+
+
+Experiment 1: Wir halten den Steg fest und
+drehen das untere Sonnenrad. Die Drehung
+wird durch das Rad am Steg auf das obere
+Sonnenrad übertragen. Dieses dreht sich
+von uns aus gesehen genauso weit wie das
+untere, aber in die entgegengesetzte Richtung. Offensichtlich spielt es keine Rolle,
+wie groß das Rad am Steg ist.
+
+
+
+Charakterisierung von
+Differentialgetrieben
+Bei der Entwicklung von Differentialgetrieben ist es extrem nützlich, folgendes Prinzip
+im Kopf zu haben: Ein Umlaufrädergetriebe
+ist genau dann ein Differentialgetriebe,
+wenn es sich beim Festhalten eines frei
+wählbaren An-/Abtriebs wie in einem der
+beiden Experimente oben verhält. Anders
+formuliert: Wir suchen uns einen An-/
+Abtrieb aus und halten ihn fest. Dann
+drehen wir einen zweiten An-/Abtrieb um
+einen bestimmten Winkel. Dreht sich nun
+der dritte im gleichen Drehsinn halb oder
+doppelt so weit oder im entgegengesetzten
+Drehsinn genauso weit, dann ist das
+Getriebe ein Differentialgetriebe. Natürlich
+ist es sinnvoll, den festzuhaltenden Antrieb
+danach auszusuchen, dass man die Verkopplung der beiden anderen An-/Abtriebe
+möglichst einfach erklären kann. Wir
+verdeutlichen dieses Prinzip anhand einiger
+Beispiele.
+Als erstes Beispiel betrachten wir das
+Antikythera-Getriebe in Abb. 1. Halten wir
+das Z41 (Drehscheibe mit Ketten [3]) fest
+und drehen an der Metallachse, so drehen
+sich die beiden Z10 und damit auch das rote
+Z15 mit dem Klemmring synchron mit. Die
+beiden schwarzen Z15 drehen sich somit
+synchron zur Metallachse in die entgegengesetzte Richtung. Daher ist das Getriebe
+ein Differentialgetriebe.
+Als zweites betrachten wir das Getriebe in
+Kunststoffachse fest verbunden. Wir halten
+ihn fest. Wenn wir nun die rechte Metallachse und damit das Z20 um einen bestimmten Winkel drehen, so drehen sich die
+Z10 doppelt so weit im entgegengesetzten
+Sinn, ebenso die über die Wellen damit fest
+verbundenen äußeren Z15. Die beiden
+inneren Z15, die sich auf der schwarzen
+Achse frei drehen, bewegen sich damit
+gleichsinnig zum Z20, aber doppelt so weit.
+Damit ist auch dieses Stirnradgetriebe ein
+Differentialgetriebe.
+
+Ähnlich sieht es bei dem Stirnradgetriebe in
+inneren Z15 bei festgehaltenem Steg gleichsinnig zum Z20, aber nur halb so weit. Auch
+hier liegt also ein Differentialgetriebe vor.
+Der Unterschied zum vorigen Stirnradgetriebe liegt darin, dass jetzt Kunststoffachse
+und Metallachse gegensinnig drehen, wenn
+die inneren Z15 festgehalten werden. Damit
+eignet sich diese Variante grundsätzlich für
+den Fahrzeugbau: Angetrieben wird das
+rote Z15, genügend große Räder können
+direkt auf die beiden – gegebenenfalls
+verlängerten – Achsen montiert werden.
+
+Mathematische Beschreibung
+Wir wollen jetzt die Zustände, die das
+Differentialgetriebe einnehmen kann, durch
+eine mathematische Gleichung beschreiben
+und dabei das Konzept des Bezugssystemwechsels an einem möglichst einfachen und
+anwendungsorientierten Beispiel vermitteln. Der erste Schritt in Richtung auf eine
+mathematische Beschreibung besteht darin,
+die verkoppelten Größen genau zu benennen und möglichst exakt festzulegen, wie
+sie gemessen werden. Wenn man hier zu
+wenig Zeit investiert, resultieren daraus
+häufig nachhaltige Unklarheiten.
+
+
+Die verkoppelten Größen sind die Drehwinkel des Stegs und der beiden Sonnenräder.
+Bei Winkeln muss man darauf achten, dass
+man angibt, wogegen man diese misst und
+
+
+Getriebe
+
+in welchem Drehsinn. Wir messen die
+Winkel gegen die Halbgerade, die von der
+zentralen Achse aus durch die Nut des roten
+Bausteins 30 verläuft, gegen den Uhrzeigersinn positiv, im Uhrzeigersinn negativ,
+wenn man von oben auf das Modell schaut.
+Diese drei Winkel x, y und z sind in Abb. 13
+und 14 dargestellt.
+
+Differentialgetriebes
+
+In unserem ersten Experiment oben haben
+wir den Steg festgehalten. Das wird durch
+die Gleichung z = 0 beschrieben. Wir haben
+herausgefunden und erklärt, dass in diesem
+Fall eine Drehung des oberen Sonnenrads
+eine gleichweite Drehung in entgegengesetztem Sinn bewirkt. Mathematisch
+präziser lässt sich das jetzt durch die
+Gleichung y = -x oder äquivalent
++
+
+=0
+
+formulieren. Diese Gleichung beschreibt
+alle Zustände des Getriebes bei festgehaltenem Steg.
+Im zweiten Experiment haben wir beobachtet, dass sich bei festgehaltenem unterem Sonnenrad, also y = 0, der Steg halb so
+weit dreht wie das obere Sonnenrad. Die
+Gleichung
+=2
+
+beschreibt also alle Zustände des Getriebes
+bei festgehaltenem unterem Sonnenrad.
+Diese Gleichung besitzt keine direkte
+Erklärung. Noch weniger verstehen wir
+bislang den allgemeinen Fall (Abb. 15).
+
+Beobachterwechsel
+Wir denken uns einen Beobachter, der sich
+mit dem Steg dreht und die Winkel immer
+gegen den Steg misst, statt gegen die
+Halbgerade durch den roten Baustein.
+Dieser Beobachter misst die drei Winkel z’
+= 0, x’ und y’. Da auch aus seiner Sicht das
+Rad am Steg die Bewegungen der beiden
+Sonnenräder verkoppelt, gilt x’ = - y’ oder
+äquivalent x’ + y’ = 0.
+Die zentrale Frage ist nun, wie die von uns
+gemessenen Winkel x, y und z mit den
+Winkeln x’ und y’ des mitbewegten Beobachters zusammenhängen. Um das zu einzusehen, drehen wir Sonnenräder und Steg
+gemeinsam um den Winkel -z gegen den
+Uhrzeigersinn, also um den Winkel z im
+Uhrzeigersinn. Der Steg befindet sich somit
+wieder in Ausgangsposition. Wir messen
+nun die Winkel x’ und y’, die der mitbewegte Beobachter vorher gemessen hat. Es
+ergibt sich also x’ = x - z und y’ = y - z.
+Einsetzen dieser beiden Formeln in die
+Gleichung x’ + y’ = 0 liefert [4]
++
+
+−2 =0
+
+
+
+Das ist die Grundgleichung eines Differentialgetriebes. Sie beschreibt alle möglichen
+Zustände. Anschaulich besagt sie, dass sich
+die Drehbewegung des Stegs bzw. Käfigs
+durch Mittelung aus den Drehbewegungen
+der Sonnenräder ergibt. Man kann ihre
+Gültigkeit gut in den Abb. 13, 14 und 15
+überprüfen.
+Mit Hilfe der Grundgleichung können wir
+nun noch einmal zu unserem zweiten Experiment zurückgehen. Dort hielten wir das
+untere Sonnenrad fest, was durch die Gleichung y = 0 beschrieben wird. Dann werden
+alle möglichen Zustände des Getriebes
+durch die Gleichung x = 2z beschrieben.
+Damit haben wir nun eine mathematische
+Erklärung unserer Beobachtung.
+
+Planetengetriebe
+Die obigen Überlegungen verallgemeinern
+sich direkt auf allgemeine Planetengetriebe.
+Wir illustrieren das anhand des StandardPlanetengetriebes mit dem Innenzahnrad
+(Abb. 16).
+
+= −3
+
+beschrieben, da das Zahnverhältnis 10:30
+ist und eine Umkehrung des Drehsinns
+stattfindet. Ein sich mit dem Steg drehender
+Beobachter misst daher immer Winkel x’
+und y’, die der Gleichung x’ = -3y’ genügen.
+Der Zusammenhang zwischen unseren
+Winkeln und den vom mitbewegten Beobachter gemessenen Winkels ist wie oben
+durch x’ = x - z und y’ = y - z gegeben. Durch
+Einsetzen erhält man die Gleichung
++3 −4 =0
+
+Sie beschreibt alle möglichen Zustände des
+Getriebes.
+Für jedes Planetengetriebe lässt sich analog
+eine Gleichung der Form
+∙ +
+
+∙
+
++
+
+∙
+
+=0
+
+herleiten. Sie wird Willis-Gleichung genannt. Da man stets alle drei An-/Abtriebe
+synchron drehen kann, liefern alle x, y, z mit
+x = y = z Lösungen dieser Gleichung.
+Daraus folgt n1 + n2 + n3 = 0.
+
+Ausblick
+
+
+Auch hier haben wir drei Winkel, den
+Winkel x des Sonnenrads, den Winkel y des
+Innenzahnrads und den Winkel z des Stegs,
+alle drei gemessen gegen eine gemeinsame
+Halbachse, auf der sie fluchten können.
+Auch hier können wir das Getriebe am
+einfachsten verstehen, wenn wir den Steg
+festhalten. Die Zustände des Getriebes
+werden dann durch die Gleichung
+
+In der nächsten Ausgabe werden wir uns
+ausführlich dem Thema Kompasswagen
+widmen. Dabei werden die hier vorgestellten Getriebe und Grundideen Anwendung finden. In einem weiteren Aufsatz
+werden wir den Einsatz von Differentialgetrieben in mechanischen Analogrechnern
+behandeln. Die obigen Überlegungen legen
+nahe, dass und wie man lineare Gleichungssysteme durch Getriebe lösen kann. Tatsächlich ist diese Idee mehrfach gefunden
+und auch publiziert, aber nicht überzeugend
+umgesetzt worden. Zum Einstellen der
+Koeffizienten benötigt man nämlich präzise
+einstellbare variable Übersetzungen. Dafür
+gibt es bislang noch kein geeignetes
+Konzept. Zum Addieren und Subtrahieren
+einzelner Größen in komplexen Mechanismen sind Differentialgetriebe allerdings
+vielfach zweckdienlich eingesetzt worden.
+
+
+Getriebe
+
+Zum Nachbau
+Leider laufen nicht alle schwarzen Z15
+(35695) reibungslos auf den Achsen. Hier
+sollte man leichtgängige Kombinationen
+aus seinem Teilevorrat aussuchen, um gut
+funktionierende Getriebe zu erhalten. In den
+Getrieben, die in den Abbildungen 1, 8 und
+9 dargestellt sind, wurden außen jeweils
+Z15 mit Klemmring (37685) eingesetzt.
+Diese finden sich leider nicht mehr im aktuellen fischertechnik-Programm. Man kann
+ein Z15 mit Klemmring allerdings problemlos durch ein freilaufendes Z15 ersetzen, in
+das man erst einen kegelförmig zusammengerollten Papierstreifen und dann die Achse
+einsteckt. Der Papierstreifen sollte dazu
+idealerweise genauso lang sein, wie der
+Umfang einer 4 mm Achse – also etwa 12
+mm. Dadurch wird sichergestellt, dass die
+Achse zentrisch im Z15 sitzt.
+
+Stück
+
+ft-Nr.
+
+Bezeichnung
+
+
+31022
+
+Z40
+
+
+31058
+
+Nabenmutter rot
+
+
+68535
+
+Freilaufnabe schwarz
+
+
+130593
+
+Rastachse mit Platte
+
+
+32064
+
+Baustein 15 m. Bohrung
+
+
+31032
+
+Metallachse 60
+
+
+37679
+
+Klemmring 5
+
+
+35695
+
+Z15 freilaufend
+
+Referenzen
+[1]
+
+Derek de Solla Price: Gears from the
+Greeks. Transactions of the American Philosophical Society, Vol. 64,
+Part 7, 1974.
+
+[2]
+
+Henry C. King: Geared to the Stars.
+The Evolution of Planetariums,
+Orreries, and Astronomical Clocks.
+University of Torronto Press,
+Torronto, Buffalo, 1978.
+
+[3]
+
+fischertechnik: Hobby 2, Motor und
+Getriebe. Fischer-Werke, Tumlingen, 2/1975.
+
+[4]
+
+Thomas Püttmann: Zahnräder und
+Übersetzungen (Teil 2). 3/2011, S. 25-28.
+
+Zum Abschluss geben wir eine Liste der
+Einzelteile für das Differential mit Kronenzahnrädern aus Abbildung 7 an.
+
+
+

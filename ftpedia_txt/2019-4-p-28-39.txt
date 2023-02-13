@@ -1,0 +1,515 @@
+
+
+Elektromechanik
+
+Vom 3-T-Anker zum Brushless
+Rüdiger Riedel
+In diesem Beitrag erzeugen wir Drehstrom – und betreiben damit Synchronmotoren unterschiedlicher Bauweise und mit unterschiedlicher Polpaar- bzw. Drehzahl.
+
+Moderne Elektro-Kleinmotoren
+Nach vielen Versuchen und dem Bau von
+halbwegs brauchbaren Elektromotoren im
+19. Jahrhundert [1] war es Werner von
+Siemens, der die Zeit der modernen Kleinmotoren mit seinem Doppel-T-Anker oder
+2-T-Anker einläutete [2]. Das auch von ihm
+gefundene dynamoelektrische Prinzip
+(Selbsterregung) war eine erhebliche Verbesserung gegenüber den damals üblichen
+Stahl-Dauermagneten, spielt aber heute
+keine Rolle mehr.
+
+(nicht von fischertechnik)
+
+Links in Abb. 2 erkennt man das Gehäuse
+mit Lager und den beiden schalenförmigen
+Ferrit-Magneten. In der Mitte sieht man den
+Läufer mit Achse, 3-T-Anker und Kupferwicklung sowie dem dreiteiligen Kollektor.
+Rechts der Bodendeckel mit Lager und den
+beiden Schleifern sowie den Stromanschlüssen hinten.
+
+
+Benutzt wurde die Anordnung in Abb. 1 als
+Generator. Als Gleichstrommotor mit zweiteiligem Kollektor ist der 2-T-Anker
+schlecht zu gebrauchen, da er nicht immer
+von selbst startet. Das kann man mit der
+Leiterschleife (139250) aus dem Kasten
+Technical Revolutions (508776p) ausprobieren.
+Durchgesetzt für Kleinstmotoren hat sich
+bis heute der 3-T-Anker mit Kollektor
+(Stromwender) und Dauermagneten.
+
+
+
+In Abb. 3 sieht man die Anordnung der
+Dauermagnete, des Kollektors und der
+Stromschleifer (Bürsten) sowie die Wicklung.
+
+
+Elektromechanik
+
+Nachbau mit fischertechnik
+
+Motor mit 3-T-Anker
+
+Motor mit Doppel-T-Anker
+Der zweiteilige Kollektor besteht aus zwei
+Kontaktstücken 20 (31305), als Bürsten
+verwenden wir Schwingfedern (31329).
+
+Für den Anker brauchen wir drei E-Magnete mit seitlichen Federn und einem
+Zapfen auf der Rückseite (32363). Mit
+einem Winkelstein 60° 3N (31918) werden
+sie zusammengehalten und an beiden Enden
+jeweils mit Bausteinen 7,5 versehen.
+
+
+
+Den Anker bilden zwei E-Magnete mit
+Bügel (31324) in einem BS15 mit Loch,
+wobei das Loch hier nicht benötigt wird.
+Die Läuferachse wird gebildet von einem
+BS15 mit „Schlauchanschluss D4 gerade“
+(163204) und einer Rastaufnahmeachse
+22,5 (130593). Im Stator befinden sich oben
+zwei Stabmagnete mit 10 mm Länge und 4
+mm Durchmesser; unten habe ich probeweise zwei Magnetbausteine 15 (108278)
+eingesetzt.
+
+Links in Abb. 5 bilden ein BS 5 15x30
+(35049) mit einer Rastaufnahmeachse 22,5
+(130593) einen Teil der Läuferachse. Die
+Magnete werden elektrisch miteinander
+verbunden (ich habe teilweise „Kabel 60
+blau mit roten/grünen Quetschsteckern“ Nr.
+7075 von Stefan Roth verwendet, s. unten).
+An den äußeren E-Magnet-Anschlüssen
+habe ich abgesägte Steckerinnenteile eingesetzt (nicht von fischertechnik), damit der
+Abstand zu den Feldmagneten nicht zu groß
+wird. Es wird immer ein äußerer Magnetanschluss mit dem inneren Anschluss des
+nächsten Magneten verbunden.
+
+
+Die Widerstände an den E-Magneten dämpfen die Funkenbildung am Kollektor und
+damit den Materialabtrag. Die Wirkungsweise ist in [3] erklärt.
+
+
+
+
+Die inneren Anschlüsse erhalten einen weiteren Kabelanschluss, der zum Kollektor
+führt.
+
+
+Dieser besteht aus einem Winkelstein 60°
+mit einem Federnocken (31982), sechs
+BS 7,5 mit drei Federnocken und sechs
+Steckerbuchsen 21 (35307). Je zwei Steckerbuchsen erhalten eine Kabelverbindung,
+sodass ein dreiteiliger Kollektor entsteht.
+Die mechanische Verbindung zum Anker
+erfolgt durch drei Bausteine 2,5 15x45
+2+2Z (38277). Die Welle besitzt zwei
+Klemmbuchsen 5 (37679), auf denen zwei
+Distanzringe 15 (31731) aufgeschoben
+sind. Dahinter folgen eine Scheibe 4 15
+(105195) und zwei weitere Klemmbuchsen.
+
+
+Jetzt fehlen noch die Feldmagnete. Je Doppelpol habe ich einen BS 30 auf drei BS 5
+15x30 (35049) benutzt. Zwei BS 7,5 sind
+mit einem Verbinder 30 (31061) am BS 30
+befestigt und tragen rechts und links je vier
+Klemmhülsen 7,5 (35980). Darin stecken
+jeweils zwei Stabmagnete mit 10 mm Länge
+und 4 mm Durchmesser [4].
+
+
+Den Läufer lagern wir in einer S-Kupplung
+22,5 (38260) mit BS 5 und einem BS 7,5
+mit BS 15. Für einen besseren Lauf und
+zum Längenausgleich habe ich einen Abstandsring 3 (31597) (der aber 3,5 mm breit
+ist) auf die Rastaufnahmeachse geschoben.
+Für die Bürsten benötigen wir zwei
+Schwingfedern (31329), vier „Schlauchanschluss D4 gerade“ (163204), vier Klemmbuchsen 5 (37679), einen BS 7,5 und einen
+Verbinder 45 (31330).
+
+
+Für eine bessere Anpassung an den Rotor
+werden sie unterschiedlich ausgerichtet,
+siehe Abb. 11.
+
+
+Elektromechanik
+
+Handbetriebener Drehstrom-Wechselrichter für Frequenzen um 1 Hz
+Das Funktionsprinzip zeigen Abb. 13 und
+14, wo ein IGBT-Wechselrichter (Insulated
+Gate Bipolar Transistor) aus der Gleichspannung Ud die dreiphasige Spannung u
+erzeugt.
+
+Haben wir die Stabmagnete richtig gepolt
+(Abb. 12) dann läuft der Motor bei 9 V aus
+dem Stillstand heraus je nach Anschluss
+rechts- oder linksherum. Ein Anschubsen
+wie beim 2-T-Anker ist nicht nötig. Die
+Drehzahl beträgt etwa 100 U/min.
+
+
+Drehstrom
+
+Wir ersetzen die sechs IGBTs durch sechs
+Schalter (Minitaster 37780 oder 37783) und
+verwenden statt einer elektronischen Steuerung Schaltscheiben (37728 oder 37727).
+
+Die wichtigste Stromart ist der Drehstrom,
+der dreiphasige Strom (three phase current). Der haushaltsübliche Wechselstrom
+(Einphasen-Strom) ist ein Teil davon. Drehstrom finden wir im Haus dort, wo höhere
+Leistungen gebraucht werden, z. B. beim
+Herdanschluss oder beim Durchlauferhitzer
+– und in Zukunft vermehrt mit dem Stromanschluss für das Elektroauto.
+Die Umsetzung in mechanische Energie
+erfolgt am einfachsten mit Asynchronmotoren. Die sind sehr einfach aufgebaut (Ständer, Läufer und zwei Wälz- oder Gleitlager)
+und preisgünstig, robust und langlebig. Von
+Nachteil ist die starre Drehzahl, die von der
+Konstruktion abhängt.
+
+
+Mit vorgeschalteten Frequenzumrichtern
+lässt sich aber auch deren Drehzahl verändern.
+
+
+
+Innerhalb einer Periode (360°) wird jeder
+Schalter einmal ein- und einmal ausgeschaltet. Die Schalterbetätigungen sind jeweils
+um 180° versetzt, siehe Abb. 13 unten links.
+Für diesen Zweck sind die Schaltscheiben
+genau richtig. In Abb. 16 sind sie von links
+nach rechts so angeordnet, wie sie auf der
+senkrechten Achse von oben nach unten
+eingesetzt werden.
+
+jeweils um 60° gedreht
+
+
+Die Wechselrichter in Abb. 14 haben die
+unangenehme Eigenschaft, dass bei gleichzeitiger Betätigung von Q1 und Q2 (oder
+Q3 und Q4 oder Q5 und Q6) ein Kurzschluss eintritt.
+Bei Einsatz der Schaltscheiben wie in Abb.
+15 wird das dadurch verhindert, dass die
+Schaltscheiben an den Enden abgerundet
+sind und somit kein gleichzeitiges EIN der
+einander gegenüber stehenden Minitaster
+erfolgt; der Betätigungswinkel ist kleiner
+als 180°.
+Wenn wir uns die Schaltung in Abb. 14
+unten genau anschauen, dann sehen wir,
+dass die Minitaster im Gegensatz zu den
+Transistoren Umschalter sind. Das können
+wir zur Vereinfachung ausnutzen, womit
+
+
+Elektromechanik
+
+wir gleichzeitig die Kurzschlussgefahr vermeiden (Abb. 17).
+
+Sternschaltung
+
+
+In Abb. 17 bezeichnen die Schalter Q1‘ bis
+Q6‘ jetzt Schaltstellungen und nicht mehr
+physische Schalter. Wir brauchen nur noch
+drei Minitaster, die jetzt als Umschalter
+eingesetzt werden.
+
+Die Lämpchen in Dreieckschaltung zeigen
+genau den Spannungs- bzw. Stromverlauf
+nach Abb. 13, oben rechts: Es leuchten
+immer zwei Birnchen in der entsprechenden
+Anordnung.
+Die Sternschaltung ist leider nicht so eindrucksvoll. Durch die starke Nichtlinearität
+des Lampenwiderstandes leuchtet immer
+nur das eine Lämpchen bei der maximalen
+Amplitude nach Abb. 13, unten rechts. Die
+halben Amplituden werden nicht bzw. nur
+sehr schwach angezeigt. Die Verwendung
+von LEDs ist auch möglich, aber wegen der
+Polarität werden zweimal sechs LEDs
+benötigt.4
+Unser Brushless, ein AußenläuferSynchronmotor
+Einen Synchronmotor baut man zweckmäßigerweise so, dass die dreiphasige
+Wicklung fest steht und sich so die einfachste Stromzuführung ergibt. Im Modellbau haben sich zwei Varianten durchgesetzt
+(BLDC = Brushless DC Motor):
+
+
+Stern- und Dreieckschaltung
+Die Betriebsweise nach Abb. 13 können wir
+uns veranschaulichen, indem wir Lämpchen
+sowohl in Dreieck- als auch in Sternschaltung an den Wechselrichter anschließen.
+
+
+Übrigens: Die Lämpchen, den IR-Empfänger
+(s. u.) und vieles mehr habe ich auf der Convention in Sinsheim von fischertechnik bzw. von
+Franz Santjohanser (santjohanser.de) geschenkt
+
+ Die Wicklung befindet sich im stehenden Gehäuse, das auch den magnetischen
+Rückschluss bildet. Der Läufer ist als
+Innenläufer (Inrunner) mit Dauermagneten bestückt.
+ Das Gehäuse ist drehbar gelagert (Außenläufer, Outrunner) und trägt auf der
+Innenseite die Dauermagnete. Im Inneren befindet sich die feststehende Wicklung.
+
+bekommen. Von Stefan Roth (fischerfriendsman.de) gab es einen Einkaufsgutschein – Danke
+vielmals!
+
+
+
+
+Die erste Variante wird für Fahrzeuge
+bevorzugt; die hohe Motordrehzahl wird
+mit einem Getriebe untersetzt. Dazu hier ein
+einfaches Innenläufermodell (Abb. 20).
+
+
+Dazu wird der Läufer des 3-T-Motors festgesetzt und bildet jetzt den Innen-Stator.
+
+Die Wicklung (unsere E-Magnete) befindet
+sich außen, der Läufer (ein DrehschalterOberteil Z80, 32117) mit den Dauermagneten dreht sich im Inneren. Der Läufer ist
+zweipolig, die Polpaarzahl [5] ist eins.
+Jeweils drei der Stabmagnete im Läufer
+sind gleich ausgerichtet.
+
+Die E-Magnete werden wieder in Sternschaltung betrieben: Die inneren Anschlüsse werden miteinander verbunden (rote
+Stecker), die äußeren bilden den Drehstromanschluss in Sternschaltung.
+
+
+Die zweite Variante wird gerne für Flugmodelle einschließlich Quadrokopter verwendet. Die Konstruktion ergibt ein höheres
+Drehmoment, sodass ein Propeller ohne Getriebe angetrieben werden kann. So einen
+Außenläufer-Motor wollen wir bauen.
+
+
+
+Der Außenläufer wird um ein Speichenrad
+90x15 (19317 oder 36916) herum aufgebaut.
+
+
+Auch wenn es anders aussieht: der Läufer
+ist zweipolig. Die Ausrichtung der zwei mal
+sechs Stabmagnete (4 mm Durchmesser, 10
+mm Länge, siehe auch [4]) oben in Abb. 25
+ist immer gleich und die der zweiten Gruppe
+unten entgegengesetzt gleich. Gehalten
+werden sie von Klemmhülsen 7,5 (35980)
+in Schneckenmuttern 15x15x15 m1
+(35973), die mit BS 5 15x30 (35049) und
+BS 7,5 an den grauen BS 15 befestigt sind.
+Die BS 15 werden mit Gelenkwürfel-Zungen und -Klauen (31426 und 31436) in
+Position gehalten.
+In der Mitte von Abb. 25 sieht man eine
+Hülse 15 (31983), in der sich die Läuferachse dreht.
+
+Elektromechanik
+
+Der Läufer wird so weit in Richtung EMagnete verschoben, bis die Hülse 15 auf
+den Winkelstein 60° 3N (31918) in Abb. 24
+stößt. Mit der Hülse lagert der Läufer auf
+den unteren beiden E-Magneten. Das zweite
+Lager bildet ein BS 15 Bohrung (32064).
+Wir verbinden nun den Wechselrichter aus
+Spannung und den Ausgang des Wechselrichters über drei Adern mit unserem Brushless-Motor. Drehung an der Kurbel bewirkt
+Drehung des Außenläufers, rechts herum
+oder links herum. Die Zuordnung der Drehrichtungen lässt sich ändern durch Tausch
+von zwei der drei Leitungen. Die Polung der
+Stromquelle hat dagegen keinen Einfluss
+auf die Drehrichtung des Motors. Wir müssen die Kurbel langsam andrehen und können dann beschleunigen, damit der Läufer
+mitkommt. Drehen wir zu schnell an, dann
+gerät der Synchronmotor „außer Tritt“ und
+bleibt stehen.
+Ein kommerzieller Brushless-Motor
+
+
+Zur Funktionsprobe habe ich die Elektronik
+des Motors aus Abb. 27 an den Servoausgang des IR-Empfängers und die Community-Akkubox angeschlossen (Abb. 28).
+
+
+
+
+
+Typisch für einen sensorlosen BrushlessMotor ist das Ruckeln beim Start. Grundsätzlich muss die Elektronik „wissen“, in
+welcher Position sich der Rotor befindet.
+Ein Blick auf den Spannungsverlauf oben
+rechts in Abb. 13 zeigt spannungslose 60°Pausen nacheinander für jede Wicklung. In
+dieser Zeit misst die Elektronik die durch
+die Drehung erzeugte Induktionsspannung
+und leitet daraus die Position des Rotors ab.
+Hierfür ist eine Mindestdrehzahl erforderlich, die auf andere Weise durch „blindes“
+Takten (deshalb das Ruckeln) erzeugt wird.
+Der Antrieb besteht also immer aus Elektronik und Motor.
+Bei den Modellbauern kursieren die geheimnisvollen Zeichen „Kv“ und „Km“,
+mal groß, mal klein, mal kombiniert geschrieben. Kv ist die Kennzahl für velocity,
+also Geschwindigkeit (besser Drehzahl). Im
+Deutschen steht dafür die Spezifische
+Drehzahl ns. Der Motor in Abb. 27 ist mit
+2200 KV gekennzeichnet. Das bedeutet
+U
+min ∙ V
+also Umdrehungen pro Minute und Volt.
+Bei Betrieb mit 9 V dreht er sich mit 9·2200
+U/min = 19.800 U/min.
+Kv = 2200
+
+Das ist eine Zahlenwertgleichung, die nur
+mit den Einheiten Km in Nm/A und Kv in
+U/(min V) stimmt.
+Ein vierpoliger fischertechnikBrushless-Motor
+Die Achse rechts in Abb. 29 trägt mit der
+Drehscheibe 60 (31019) den im Inneren des
+Motors liegenden Stator mit sechs Elektromagneten. Die Achse wird rechts mit einer
+Seiltrommel 15 (31016) und einem BS 5
+15x30 (35049) an der Drehung gehindert.
+Das linke Ende der Achse schaut in Abb. 30
+zwischen den Magneten hervor. Darauf
+stützt sich der Außenläufer mit einer Hülse
+15 (31983) ab.
+Die Läufermagnete werden vierpolig angeordnet, also vier Magnete in einer Richtung
+gepolt, die nächsten vier in der entgegengesetzten Richtung usw. Die Art der Achsbefestigung über einen Mitnehmer (31712)
+und Klemmhülsen ist in [6] erläutert.
+Jeweils drei aufeinander folgende E-Magnete werden so verschaltet wie beim zweipoligen Synchronmotor. Die zweimal drei
+Anschlussleitungen werden parallel geschaltet.
+
+Die Kennzahl Km taucht seltener auf. Sie
+steht für das spezifische Drehmoment und
+ist leicht aus der Kennzahl Kv zu ermitteln.
+2π Kv
+Daraus ergibt sich unmittelbar das spezifische Drehmoment des o. a. Motors zu
+0,000072 min V = 0,00434 V s, und das ist
+nichts anderes als 0,00434 Nm/A (Newtonmeter pro Ampere). Bei 10 A Stromaufnahme entwickelt der Motor also ein Drehmoment von 0,0434 Nm oder 4,34 Ncm.
+Km =
+
+Manchmal findet man den Zusammenhang
+9,55
+Km =
+Kv
+
+
+
+
+Elektromechanik
+
+
+Der Außenläufer (Abb. 31) ist recht schwer
+geraten. Damit er in Tritt kommt und bleibt,
+müssen wir den Wechselrichter mit Gefühl
+hochdrehen. Zwei Drehungen an der
+Wechselrichter-Kurbel ergeben jetzt eine
+Umdrehung des Synchronmotors.
+
+
+Vom Scheitern …
+Nicht alle Projekte gelingen. Manchmal
+muss man einsehen, dass es mit fischertechnik-Teilen nicht geht. Gelegentlich aber
+braucht man auch mehrere Anläufe bis zum
+Erfolg.
+
+
+Den in Abb. 27 gezeigten Brushless-Motor
+wollte ich mit seinen 12 E-Magnet-Polen im
+inneren Ständer und 14 Dauermagnet-Polen
+im Außenläufer (Polpaarzahl 7) nachempfinden (Abb. 32).
+
+
+
+Erste Hürde: Mein gesamter Bestand an EMagneten ist erforderlich, d. h. alles andere
+muss demontiert werden (in den Bildern
+sind nur zehn E-Magnete eingebaut).
+
+mit zweimal 28 Einzelmagneten
+
+
+Entscheidende Hürde (für mich) war das
+Fehlen von Steckern oder Steckerersatz, um
+an die inneren Anschlüsse der E-Magnete
+zu kommen. In Abb. 33 ist ein äußerer
+Anschluss mit dem Quetschstecker von
+Stefan Roth zu sehen, das geht.
+
+Der grundsätzliche Aufbau des Läufers ist
+in [6] beschrieben; er entspricht dort der
+Vergrößerung des Durchmessers (Hinweis:
+Immer zwei nebeneinander liegende Pole
+sind gleich ausgerichtet).
+
+
+Gehalten werden die E-Magnete von fünf
+Innenzahnrädern Z30 m1,5 69 (35694),
+eingeklemmt zwischen zwei Drehscheiben
+60 (31019). Es können beide Typen von EMagneten verwendet werden (31324 oder
+32363).
+
+
+Zunächst steht der Unvollendete in einer
+Ecke des Arbeitstischs, weil ich andere
+Ideen verfolge, die keine E-Magnete erfordern.
+
+… zum Erfolg
+Es hat sich gelohnt, nicht locker zu lassen!
+Nach zwei Wochen, in denen ich immer
+wieder einen Blick darauf geworfen habe,
+
+
+Elektromechanik
+
+kam die eigentlich simple Idee: Weniger ist
+manchmal mehr: Von den vier Drehstromsystemen des Ständers werden zwei herausgenommen. Somit ist genug Platz für normale fischertechnik-Stecker an den E-Magneten. Wegen der nun halb so großen Zahl
+von Elektromagneten verringert sich auch
+das Drehmoment des Motors. Zum Ausgleich werden die Dauermagnete des Läufers dichter herangebracht, der Luftspalt
+wird verkleinert (Abb. 37).
+
+
+Hinweis
+In den gezeigten Modellen werden fischertechnik-Bauteile verbaut, die sich nicht
+mehr im aktuellen Lieferprogramm befinden. Sie sind aber immer noch (oder zumindest immer wieder) bei Stefan Roth
+(fischerfriendsman.de) erhältlich.
+
+Quellen
+
+Mit einer Versorgung des „Generators“ von
+20 V lässt sich der Motor betreiben und das
+Drehzahlverhältnis ergibt erwartungsgemäß: Sieben Umdrehungen der Generatorkurbel führen zu einer Umdrehung des
+Motors.
+Die hohe Spannung für den „Generator“
+liegt auch an der Sternschaltung des Motors. In einer ruhigen Stunde werde ich ihn
+auf Dreieckschaltung umverdrahten. Wie
+hoch wird die erforderliche Spannung dann
+wohl sein?
+Die „Scheiben mit Hülse“ am Läufer habe
+ich zum Auswuchten angebracht, die grüne
+Scheibe hilft beim Zählen der Umdrehungen.
+
+[1]
+
+Dirk Fox: Der Elektromotor. 3/2013, S. 4-8.
+
+[2]
+
+Arthur Wilke: Die Elektrizität, ihre
+Erzeugung und ihre Anwendung in
+Industrie und Gewerbe. SpringerVerlag Berlin Heidelberg, 1893.
+
+[3]
+
+Rüdiger Riedel: Funktionsmodelle
+von Gleich- und Wechselstrommotoren. ft:pedia 4/2016, S. 52-58.
+
+[4]
+
+Dirk Fox, Thomas Püttmann: Technikgeschichte mit fischertechnik.
+dpunkt.verlag, Heidelberg, 2015, S.
+218.
+
+[5]
+
+Matthias Dettmer: Synchronmotoren.
+ft:pedia 2/2016, S. 48-52.
+
+[6]
+
+Rüdiger Riedel: Neue Synchronmotoren. ft:pedia 2/2017, S. 25-31.
+
+
+

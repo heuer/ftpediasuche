@@ -1,0 +1,106 @@
+
+
+Modell
+
+fischertechnik-Malroboter
+Dirk Wölffel
+Im Herbst 2017 haben wir mit der ftcommunity bei der Maker Faire in Kiel teilgenommen und
+unsere fischertechnik-Modelle ausgestellt. Auf der Suche nach neuen Anregungen und neuen
+Trends habe ich nach dem Aufbau einen kleinen Rundgang über die Ausstellung gemacht.
+Dabei ist mir ein Modell von einem Malroboter an einem Maker-Stand besonders ins Auge
+gefallen: Der WaterColorBot (Abb. 1), ein Malroboter, der mit verschiedenen Wasserfarben
+Bilder malt. Angetrieben wird dieser Bausatz über zwei Schrittmotoren, die über ein Seilsystem
+den Pinsel steuern. Über eine Software wird ein Bild erstellt, die dann die Koordinaten mit den
+Schrittmotoren ansteuert. So etwas sollte doch auch mit fischertechnik möglich sein – es wurde
+also Zeit, einen fischertechnik-Malroboter (Abb. 2) zu bauen.
+
+
+Der Aufbau
+Für den Unterbau habe ich die Komplettbox
+1000 (30383) mit der Bauplatte (35937)
+verwendet. Auf der Bauplatte sitzen die
+beiden Encoder-Motoren, zwei Reinigungsbehälter und sechs verschiedene Wasserfarben (Abb. 3). Die Wasserfarben stammen aus einem handelsüblichen Malkasten.
+Die Führungen der X- und Y-Achsen sind
+aus 4 mm Silberstahlwelle hergestellt. Auf
+den beiden Achsen sitzt der bewegliche
+Malkopf, welcher über ein Seilsystem bewegt wird. Mit Hilfe eines Mini-Motors mit
+
+
+Hubgetriebe wird der Pinsel auf und ab
+bewegt (Abb. 4).
+
+
+
+Modell
+
+Dies erwies sich beim Bau als größere
+Herausforderung.
+
+
+Die Elektronik
+Angesteuert wird der Malroboter über einen
+ROBO TX Controller (Abb. 7). Dieser sitzt
+aus Platzgründen über der Abdeckung.
+
+
+Das Seilsystem
+Unter einer Abdeckung sitzen die beiden
+Encoder-Motoren mit Schnecke (Abb. 5),
+welche das Seilsystem antreiben. Die
+Funktion der Seilführung habe ich mir bei
+dem WaterColorBot abgeschaut.
+
+
+An den jeweiligen X- und Y-Achsen sind
+Endlagentaster verbaut (Abb. 8).
+
+
+Das Seil wird über eine Umlenkung bewegt
+(Abb. 6) und muss immer gespannt sein.
+
+
+
+
+
+Die Bilderstellung
+Der Malroboter funktioniert über EncoderSchritte. Mit Hilfe von Corel Draw wird ein
+Bild in eine Vektorgrafik umgewandelt
+(Abb. 9).
+
+
+Anschließend wird diese Vektorgrafik als
+*.plt-Datei ausgeben (Abb. 10). Diese Datei
+wird dann in ein Excel-Makro eingegeben,
+welches die Größe (Schritte) herunterrechnet, damit die Schritte der X- und Y-Range
+nicht zu groß sind (Abb. 11). Das Ergebnis
+wird dann als *.csv-Datei abgespeichert.
+
+
+Dann wird diese *.csv Datei über das
+ROBO Pro-Programm mit Hilfe der Listenfunktion für die X-, Y- und Z-Werte
+eingelesen (Abb. 12). Am Ende werden die
+Positionen für die Farben und die Reinigungsbehälter manuell hinzugefügt.
+Nun heißt es Papier einspannen, und los
+geht es mit einem Funktionstest. Man muss
+das Programm mehrmals ausführen, um die
+Farbintensität, das Reinigen und Positionen
+des Pinsels genau einzustellen. Dabei zeigt
+sich, dass auch der Pinselstrich hier eine
+große Rolle spielt.
+
+
+
+Modell
+
+Das Fazit
+Manchmal muss man länger auf einem
+Problem herumkauen um es zu lösen. Wie
+gesagt, das Modell lag schon mehr als ein
+Jahr bei mir herum. Die Idee zur Umsetzung
+ist nicht immer sofort sichtbar.
+Ein Video zum Malroboter findet ihr bei
+YouTube.
+
+
+
+

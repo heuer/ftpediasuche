@@ -1,0 +1,371 @@
+
+
+Modell
+
+Teilchenbeschleuniger
+Rüdiger Riedel
+Sie gehören zu den größten Maschinen überhaupt, aber sehen kann man sie kaum: Die großen
+Ringanlagen der Teilchenbeschleuniger. Die weltgrößte dieser Anlagen, CERN, auf französischem und Schweizer Gebiet gelegen, befindet sich mit den wesentlichen Geräten etwa 100 m
+unter der Erde. Da die Internet-Informationen des CERN sehr unübersichtlich sind, beschreibe
+ich kurz die kleinere, teilweise stillgelegte Anlage Fermilab [1]. Ziel ist der Bau einer fischertechnik-Demonstrations-Beschleunigeranlage.
+
+Elektronenvolt
+Wird ein Elektron (allgemein ein geladenes
+Teilchen) durch eine Spannung von 1 V
+beschleunigt, vergrößert sich seine Energie
+um 1 eV (ein Elektronenvolt) und es erhält
+einen Geschwindigkeitszuwachs. Dieser
+berechnet sich aus der kinetischen Energie
+W mit
+
+zu
+
+=
+=
+
+
+=
+
+
+und mit der Energie in Joule
+1 eV = 1,6 ∙ 10
+
+J
+
+= 9,1 ∙ 10
+
+kg
+
+sowie der Masse des Elektrons
+zu
+
+m
+km
+= 600
+s
+s
+(Alle Zahlenwerte sind leicht gerundet.)
+= 0,6 ∙ 10
+
+Mit einer Spannung von 500 V kann ein
+Elektron also von Null auf 13.000 km/s beschleunigt werden, und mit einer Spannung
+von 250.000 V (Größenordnung unserer
+
+Hochspanungs-Leitungen) auf 300.000
+km/s, das wäre Lichtgeschwindigkeit. Tatsächlich lässt sich o. g. Formel bereits bei
+Spannungen ab 1.000 V nicht mehr anwenden; vielmehr ist dann die Einsteinsche
+Relativitätstheorie zu berücksichtigen, wodurch die Teilchen nie Lichtgeschwindigkeit erreichen können. Es steigt vielmehr
+die Teilchenenergie mit der Spannung an
+und damit auch die Masse gemäß
+⟺
+
+=
+
+Diese Energie wächst proportional mit der
+Beschleunigungsspannung und kann auch
+portionsweise ansteigen. Dabei ist es gleich,
+ob ein Teilchen einmal 1 MV (Megavolt =
+1 Million Volt) durchläuft oder 1.000 mal
+1 kV (Kilovolt = tausend Volt). Das wiederum kann in gerader Linie mit 1.000
+Beschleunigungseinheiten oder im Kreis
+erfolgen, dann mit weniger Einheiten, die
+mehrmals durchlaufen werden. Das erste ist
+ein Linearbeschleuniger, das zweite ein
+Ringbeschleuniger.
+In Abb. 1 starten die elektrisch geladenen
+Teilchen bei dem roten Dreieck, dort befindet sich die Ionenquelle Ion Source, z. B.
+für Protonen. Es folgt der Linearbeschleuniger Linac, rund 170 m lang. Der Booster
+
+
+Modell
+
+erhöht die Energie auf 8 GeV (Giga-Elektronenvolt, eine Milliarde eV), was bereits
+für Myon-Experimente ausreicht.
+
+Linearbeschleuniger und anschließend ein
+Synchroton mit etwa 20 m Durchmesser:
+
+Der Recycler formt den Protonenstrahl so
+um, dass er zum Einschuss in den Main
+Injector geeignet ist. Der Main Injector befindet sich unterhalb des Recyclers, er erhöht die Strahlenergie von 8 GeV auf
+120 GeV. Beide Ringe haben einen Durchmesser von etwa 1 km.
+Die von einem Teil des Protonenstrahls
+erzeugten Pionen zerfallen zu Myonen, und
+diese werden im Muon Delivery Ring aufgefangen und zu den Experimenten geleitet.
+Die Ausgänge der Ringanlage bezeichnen
+die Experimentier-Stationen: Fixed Target
+Experiments, Myon Experiments, HighEnergy Neutrino Experiments, Low-Energy
+Neutrino Experiments.
+Mit wesentlich kleineren Dimensionen
+kommt die medizinische Strahlentherapie
+aus. Das Heidelberger Ionenstrahl-Therapiezentrum
+(HIT) besitzt
+einen
+5m
+langen
+
+
+Dort werden die Ionen (Protonen oder
+Kohlenstoff-Ionen) auf etwa 75 % der
+Lichtgeschwindigkeit gebracht. Dabei werden Teilchen-Energien von 48 bis 221 MeV
+bei Protonen und 1,06 bis 5,16 GeV bei
+Kohlenstoff erreicht. Für Experimente und
+klinische Studien werden auch Helium- und
+Sauerstoff-Ionen eingesetzt.
+Die Dimensionen sind auch hier beeindruckend: Die hier nicht dargestellte „Gantry“ zur
+beweglichen Strahlführung am Patienten hat einen
+Durchmesser
+von 13 m, ist
+25 m lang und
+wiegt 670 t.
+
+
+
+Der fischertechnikTeilchenbeschleuniger
+Im Gegensatz zu den Teilchenbeschleunigern in Physik, Technik und Medizin arbeiten wir nicht mit elektrischen oder elektromagnetischen Feldern, sondern mit potentieller Energie, bereitgestellt durch Dauermagnete.
+Als Teilchen verwenden wir die Metallkugel 12 (144262). Die acht Flexprofile 180
+(143234) und die Weiche für die Kreisbahn
+sind an einem Ring aus S-Bogenstücken 30°
+und den zugehörigen Flachträgern mit Hilfe
+von S-Riegelsteinen (32850) befestigt.
+Die „Ionenquelle“, also der
+Start, besteht aus
+einer Flexschiene
+90, die als
+Wippe ausgebildet
+ist.
+
+Nach einmaliger Umkreisung erfolgt die
+Ausschleusung der „Ionen“ an der Weiche
+zum „Experiment“, welches wegen der
+„Atomzertrümmerung“ etwas abseits aufgestellt ist.
+
+Beschleunigermagnete
+Zur Beschleunigung der Stahlkugeln verwende ich die schon bekannten NeodymMagnete mit 4 mm Durchmesser und
+10 mm Länge [3]. Die Magnete erhalten je
+eine Riegelscheibe, damit sie ungefähr
+waagerecht stehen.
+Woher kommt die Energie?
+Dazu betrachten wir Abb. 4 unten: Die
+Kugel links wurde soeben beschleunigt und entfernt
+sich. Die rechte der
+beiden Kugeln am
+Magnet müssen
+wir
+zum
+Aufladen
+von dem
+Magnet
+
+
+entfernen. Die dazu nötige Energie kann
+beim Aufprall einer Kugel wieder frei
+werden.
+
+Modell
+
+Rotationsenergie wird beim Aufprall auf
+den Magnet praktisch vollständig in Wärme
+umgewandelt. Die übertragene Stoßenergie
+auf die abgehende Kugel teilt sich wieder
+auf in Bewegungsenergie parallel zur
+Schiene und Rotationsenergie durch die
+Drehung.
+
+Das Experiment
+Das Ziel der großen Teilchenbeschleuniger
+ist, wie man früher sagte, die Kernzertrümmerung, heute nennt man das weniger aufregend „Experiment“. Auch mit unserem
+Beschleuniger soll im Ziel etwas Auffälliges passieren.
+betriebsbereit, unten entladen
+
+Die entfernte Kugel wird an die Kugel links
+vom Magnet angelehnt (Abb. 4 oben). Die
+Kugel direkt am Magnet dient dazu, die
+zweite, die „Arbeitskugel“, leicht abtrennbar festzuhalten.
+Der elastische Stoß
+Rollt jetzt die ankommende Kugel (Abb. 4,
+oben rechts) mit einer gewissen Geschwindigkeit auf den Magnet zu, wird sie von
+diesem zusätzlich angezogen, beschleunigt
+und trifft auf den Magnet. Es erfolgt ein
+elastischer Stoß, dessen Impuls sich durch
+den Magnet und die erste Kugel auf die
+zweite überträgt. Diese wird nun abgestoßen und rollt bis zur nächsten Beschleunigerstation. Wegen des Impuls-Erhaltungssatzes bekommen auch die beiden
+übrigen Kugeln zusammen mit dem Magnet
+einen „Schubs“ in die entgegen gesetzte
+Richtung. Die Längen der Pfeile in Abb. 4
+sollen die Geschwindigkeitsgrößen veranschaulichen.
+Verlustquellen
+Leider haben wir zusätzlich zur Rollreibung
+eine große Verlustquelle: Die Rotationsenergie der rollenden Kugeln. Die ankommende Kugel besitzt Bewegungsenergie
+parallel zur Schiene und Rotationsenergie
+durch die Drehung beim Rollen. Diese
+
+
+Dazu werden vier Federfüße (31307) paarweise mit Bausteinen 7,5 zu einer größeren
+Feder verbaut. Am Ende wird, wieder mit
+Bausteinen 7,5, eine Rückschlussplatte
+(31325) befestigt und zwei Klemmhülsen
+(35980) zur Aufnahme des Wurf-Gegenstands – in Abb. 6 ist das eine Wattekugel.
+
+
+
+
+Im aktiven Zustand fließt der Strom durch
+den Elektromagnet und den Vorwiderstand
+aus zwei parallel geschalteten 9 V-Glühbirnchen (37869). Rollt die Kugel nun von
+der Flexschiene auf die Achsen, wird der
+Elektromagnet kurzgeschlossen und löst
+aus. Die beiden Lämpchen leuchten kurz
+hell auf. Die Kugel rollt weiter, bis sie von
+dem Stabmagnet am Ende hochgehoben
+und festgehalten wird. Die Batterie bzw. die
+Stromversorgung kann jetzt abgeschaltet
+werden.
+
+
+Wenn der Topfmagnet (142504 oder
+„China-Magnet“) oder der alte Elektromagnet (31324 oder 32363) unter Spannung
+steht, wird das Federpaket nach unten
+gebogen, bis die Rückschlussplatte satt aufliegt und festgehalten wird. Die Stromversorgung übernimmt eine Batterie, ein
+Netzgerät geht natürlich genauso gut.
+
+Erläuterung zu Abb. 8:
+∂ a = der Elektromagnet
+∂ b = die beiden Achsen als Stromschienen
+∂ c = die parallel geschalteten Lämpchen
+∂ d = die kurzschließende Kugel
+Der Stromanschluss an die Achsen erfolgt
+mit Hilfe von Klemmkontakten (31338).
+
+Zwei Achsen 110 in Bausteinen 7,5 bilden
+die Fortsetzung der Flexschiene, sie enden
+wieder in einem Baustein 7,5, auf dem mit
+einer Klemmhülse ein Stabmagnet befestigt
+ist. Rollt nun eine Kugel auf die Achsen,
+erfolgt ein Kurzschluss des Elektromagnets.
+Das Federpaket löst die Rückschlussplatte
+und wirft die Wattekugel fort. Abb. 8
+erläutert die Schaltung.
+
+Die Beschreibung der Anlage habe ich
+bewusst knapp gehalten. Sie soll eher eine
+Anregung darstellen und nicht eine detaillierte Bauanleitung sein. Man kann z. B.
+eine zweite Weiche ohne Zunge umgekehrt
+einbauen und mit einem „Linearbeschleuniger“ das Teilchen in die Kreisbahn einschleusen. Die Startwippe entfällt dann.
+
+
+Modell
+
+
+Das Miniatur-Synchrotron
+Nach dem Ein-Schuss-Teilchenbeschleuniger war die nächste Herausforderung ein
+kontinuierlich arbeitendes Synchrotron
+oder genauer: ein Speicherring. Das ist ein
+Gerät, in dem die Teilchen-Geschwindigkeit und damit auch die Teilchen-Energie
+konstant bleibt und an verschiedenen Stellen Kollisionen herbeigeführt werden. Die
+dabei entstehenden neuen Teilchen werden
+in aufwendigen Experimenten untersucht.
+Das fischertechnik-Synchrotron bewegt ein
+Teilchen mit vier Elektromagneten auf
+einer kreisförmigen Bahn, bestehend aus
+
+vier Flexprofilen 180. Auf Kollisionen und
+Experimente habe ich verzichtet. Da die
+Masse des Teilchens viel geringer ist als die
+der Metallkugel 12, gelingt die Ausschleusung mit der Weiche nicht, es kann die
+Zunge der Weiche nicht betätigen.
+Der Pfeil in Abb. 10 deutet auf das „dahin
+flitzende“ Teilchen, es bewegt sich entgegen dem Uhrzeigersinn. Das Teilchen
+besteht aus zwei der bekannten Stabmagnete und zwei Hülsen mit Scheibe 15
+(35981 bzw. 36701). Wegen der Polung der
+Elektromagnete läuft mein Teilchen nur
+um, wenn sich die rote Hülse außen
+befindet.
+
+
+
+
+
+Das Antriebsprinzip ist das gleiche wie
+beim Gleichstrommotor in [4]: Wenn sich
+das Teilchen (der Stabmagnet) dem Reedkontakt (36783) nähert, schließen dessen
+Kontakte und schalten den Elektromagnet
+ein (31324 oder 32363). Der Stabmagnet
+auf seinen Rädern wird angezogen, kurz vor
+Erreichen des Elektromagnets schaltet der
+Reedkontakt ab und das „Teilchen“ rollt
+weiter bis zum nächsten BeschleunigungsMagnet.
+Der rote Pfeil in Bild 12 zeigt auf den Reedkontakt (36783), der blaue auf den Elektromagnet. Die Anschlussdrähte des Reedkontaktes habe ich umgebogen (Vorsicht, nicht direkt am Glaskörper biegen, da
+dieser
+
+aufbrechen könnte, sondern mit einer
+schmalen Flachzange Biegekräfte vom Glas
+fernhalten) und jeweils zwischen ein Röhrchen und die Außenwand eines Leuchtstein-Sockels (38217) gesteckt. Schiebt
+man das „Teilchen“ langsam über den
+Kontakt, hört man wie er schließt und
+wieder öffnet. Der Kontakt wird entsprechend den Maßnahmen in [4] gegen die
+Überspannungen des Elektromagnets geschützt.
+
+
+
+In der Mitte des „Synchrotrons“ habe ich ein
+Blinklicht (LED
+Flashlight von
+
+
+Modell
+
+Fischerfriendsman) angebracht, das den
+Betrieb anzeigt.
+Die Anlage läuft mit 11 – 12 V Spannung;
+dem Blinklicht macht die leicht überhöhte
+Spannung nichts aus.
+Der Topfmagnet als Beschleuniger
+Um den Topfmagnet verwenden zu können,
+brauchen wir ein anderes „Teilchen“.
+zum Ringmagnet
+
+Die seitliche Ausrichtung des Topfmagnets
+muss man ausprobieren; der Ringmagnet
+sollte ungefähr zwischen Kern und einer
+Außenseite drüber rollen (siehe Abb. 15).
+
+
+Es besteht aus einem Ringmagnet mit
+10 mm Außen- und 4 mm Innendurchmesser sowie einer Stärke von 5 mm.
+Zusammen mit einem Abstandsring
+(31597) wird er auf eine Kunststoffachse
+zwischen die beiden Hülsen gesteckt.
+
+Im Gegensatz zum Elektromagnet in
+Flexschiene haben (siehe Abb. 14). Ist er zu
+dicht oben, dann neigt das Teilchen zum
+„kleben“.
+
+Quellen
+[1]
+
+Fermilab.
+
+[2]
+
+Heidelberger IonenstrahlTherapiezentrum (HIT),
+Bauamtsbroschüre.
+
+[3]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt.verlag, Heidelberg, 2015.
+
+[4]
+
+Rüdiger Riedel: Funktionsmodelle
+von Gleich- und Wechselstrommotoren. ft:pedia 4/2016, S. 52-58.
+
+
+Der Ringmagnet muss sich auf der Innenseite der Bahn befinden, sonst fliegt das
+Teilchen aus der Kurve.
+
+
+

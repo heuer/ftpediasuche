@@ -1,0 +1,130 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Kaulquappen (Teil 4)
+Harald Steinhaus
+Wir rekapitulieren: Kaulquappen sind Entwürfe, die noch etwas heranreifen müssen, bis sie
+zu Fröschen werden. Davon muss man viele küssen (als technische Problemlösung ausprobieren). Das alles in der Hoffnung, dass ein paar davon zu Prinzen werden und nicht gar zu
+viele bitter schmeckende Kröten darunter sind.
+Nach den Teilen eins bis drei der
+Kaulquappen-Serie [1] geht die Reihe jetzt
+dort weiter, wo Teil 3 mit den Worten „An
+der Lenkung wird aber noch gearbeitet“
+endete: mit eben diesen.
+Bekannt ist die Achsschenkellenkung nach
+Ackermann, bei der die Spurstange mit den
+anderen Teilen ein Lenktrapez bildet. Das
+Modell in Abb. 1 und 2 zeigt dazu einen
+Entwurf, der noch seine Probleme hat: das
+Rad gleitet sehr leicht vom Achszapfen.
+
+Radaufstandsfläche zu bekommen. Außerdem wird die Rastachse mit Platte
+(130593) nur dadurch in Position gehalten,
+dass die Felge unten auf dem Gelenkstein
+aufsitzt und beim Fahren daran entlang
+schleift.
+Diese Probleme hat der Entwurf in Abb. 3
+nicht: das Gewicht wird ohne Tricks getragen. Die K-Achse mit Vierkant (78237)
+verhindert zusammen mit der Nabenmutter, dass irgendwelche Teile eigene
+Wege finden. Voilà, wir haben einen
+Prinzen!
+
+
+
+
+Das Rad sitzt besser, wenn man es umdreht, was aber dem Ziel zuwider läuft, den
+Drehpunkt möglichst in die Mitte der
+
+
+
+
+Und wenn wir gerade dabei sind: hier
+kommt der nächste. Ein BS30/Loch passt
+aufrecht in die Felge hinein, die Achse ist
+wieder eine K-Achse mit Vierkant, nur
+diesmal ist sie starr im BS30 eingeklemmt
+und das Rad dreht mittels Freilaufnabe.
+Am Drehpunkt der Achsschenkel geht es
+sehr eng zu, und die Reifen 65 würden
+schleifen. Also kommen Reifen 80 drauf;
+die Achse ist sowieso fürs Grobe geeignet
+(Abb. 5, 6).
+
+
+Mit der angetriebenen Vorderachse des
+Teleskopmobilkrans von Stefan Falk
+wurde die Tür zu einer neuen Bauart von
+Lenkung aufgetan (Abb. 7).
+Er verwendet eine längs im Fahrzeug
+umlaufende Kette, die zur Linken und zur
+Rechten die Hebel mitnimmt, mittels derer
+der Lenkeinschlag der Vorderräder
+bestimmt wird. Die Bauart kommt gänzlich
+ohne Spurstange aus. Von hier aus ging es
+weiter mit dem Gedanken „wenn der
+Stefan mittels Kette die eine Seite vor und
+die andere zurück bewegen kann, dann
+geht das doch auch mit einem Hebel in der
+Mitte“. Und so entstand die Vorderachse
+des Büssing 6x4, deren Rad-Lagerung die
+gleichen Probleme hat wie das Modell in
+die gleiche Lagerung.
+
+
+(Stefan Falk)
+
+
+Der nächste Anlauf räumt damit auf, und
+führt eine um 7,5° geneigte Drehachse ein:
+dadurch kommt der Drehpunkt des Rades
+
+
+Tipps & Tricks
+
+näher an die Mitte der Aufstandfläche
+heran (es fehlt aber schon noch etwas). Der
+Lenkwürfel (31843) musste hierzu etwas
+gemoddet [2] werden (Sacklöcher durch
+eine 4-mm-Bohrung verbinden). Die Geometrie der Hebel ist aber sehr hakelig. Ein
+ft-Servo bringt die nötigen Kräfte nicht
+auf.
+
+Zu guter Letzt gibt es noch einen Prinzen:
+eine Lenkung mit schwenkendem Hebel,
+mit Frontantrieb. Diese Vorderachse wurde
+im Land Rover von 2013 verwendet und ist
+daher für regelmäßige Besucher von ftConvention
+und
+Bilderpool
+keine
+Überraschung.
+
+Referenzen
+
+Also weiter basteln... und siehe da: Die
+Variante in Abb. 11 hat eine saubere
+Geometrie, um 7,5° geneigte Drehachsen,
+mit den alten Reifen 60 und Freilaufnaben
+bleiben auch die Räder da, wo sie hin
+gehören, und eine Federung gibt es
+obendrein. Das Bild zeigt keinen Servo,
+aber das sollte leicht zu machen sein.
+
+[1]
+
+Harald Steinhaus: Kaulquappen (Teil
+1-3). Tipps & Tricks, 1/2011, S. 22-27; ft:pedia 2/2011, S.
+9-13; ft:pedia 3/2012, S. 24-26.
+
+[2]
+
+Harald Steinhaus: Neue ft-Teile
+selbst gemacht: Teile-Modding.
+Tipps & Tricks, ft:pedia 3/2011, S.
+20-24.
+
+
+
+

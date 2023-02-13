@@ -1,0 +1,472 @@
+
+Elektronik
+
+Elektronik
+
+Der Zauberling (Teil 4): Die Weiterentwicklung
+Arnoud van Delden
+Es war eine lehrreiche Herausforderung, den Prototypen des magischen Zauberlings mit einem
+Arduino Pro Mini in den relativ kleinen Innenmaßen des originalen Silberling-Gehäuses (40 x
+70 mm und einer Tiefe von nur 25 mm) unterzubringen. Mit fortschreitender Erfahrung,
+Verbesserungsideen und anderen Zusatzwünschen fing ich bald an, über eine nächste Version
+mit diversen technischen Verbesserungen und einem schlankeren „Produktionsprozess“ für die
+Leiterplatten und Fronten zu phantasieren. Es war an der Zeit, Leiterplatten zu entwerfen und
+3D-Drucker und Lötkolben einzuschalten.
+
+Neue Wünsche tauchen auf
+Die Programmierschnittstelle TTL FTDI
+hatte ich bereits auf der Rückseite des
+Prototyps des Zauberlings zugänglich
+gemacht. Um die Konnektivität weiter zu
+erhöhen und den Einsatz externer Sensoren
+und die Ansteuerung von Modulen mit bestimmten Aufgaben zu ermöglichen, sollte
+auch der serielle I2C-Bus nach außen
+geführt werden.
+Manchmal wäre es auch
+nützlich, den Prozessor
+des Zauberlings einfach
+zurücksetzen zu können,
+zum Beispiel nach Programmänderungen mit
+den DIP-Schaltern. Ein
+großer Mangel des Prototyps war das Fehlen
+eines Druckknopfs, mit dem der interne
+Mikroprozessor Atmega328P zurückgesetzt werden kann.
+Sollte Platz übrig bleiben und die technischen Möglichkeiten dies zulassen, wäre
+auch ein ‚Trigger‘-Knopf auf der Vorderseite des Zauberlings sinnvoll. Seine Funktion könnte sich je nach Anwendung unterscheiden. Mit einem solchen Taster wäre es
+beispielsweise möglich, einen Zähler zurückzusetzen oder die Funktionalität zu
+
+testen, ohne gleich einen externen kabelgebundenen Schalter anschließen zu müssen.
+Für eine bessere Kompatibilität mit den
+Silberlingen wünschte ich mir zusätzlich zu
+den Motortreiberausgängen Logikausgänge
+mit dem traditionellen 9-Volt-Pegel. Für die
+beiden Arten von Ausgängen wäre es außerdem sinnvoll, wenn das Modul selbst automatisch zwischen der Spannungsversorgung über die Leisten
+an den Gehäuseseiten
+und der Versorgungsspannung eines optional rückseitig angeschlossenen externen
+Netzteils
+wählen
+könnte. Auf diese
+Weise könnte der Zauberling mit beiden
+Anschlüssen verwendet werden, ohne dass
+man an das Umschalten der Versorgung
+denken muss.
+Da der Platz auf der Frontseite begrenzt ist
+und ich unbedingt ein kleines Display einbauen wollte, habe ich beschlossen, auf die
+traditionellen
+fischertechnik-Anschlussbuchsen zu verzichten. Ich habe bereits für
+jedes Modell vorgefertigte oder maßgefertigte Experimentierkabel verwendet – bei
+
+
+
+
+Bedarf mit fischertechnik-Steckern ausgestattet, um originale fischertechnik-Teile zu
+verbinden (Abb. 2).
+
+Pins auf dem Prozessor frei wurden, konnten am Zauberling ebenso viele Eingänge
+wie Ausgänge vorgesehen werden. Mit vier
+Ausgängen sind einige Funktionen (wie das
+SR-Flip-Flop) auch logischer verwendbar.
+
+Kleiner Raum optimal genutzt
+Um den begrenzten Platz optimal zu nutzen,
+fiel die Wahl auf einen Aufbau mit zwei
+Leiterplatten, die wie eine Art „Sandwich“
+aufeinander gesetzt werden (Abb. 3).
+
+geöffneter Frontseite
+
+Durch die Verwendung sogenannter „Male
+Header Connectors“ auf dem Zauberling
+wird viel Platz gespart und es bleibt Raum
+z. B. für nützliche zusätzliche Spannungsanschlüsse auf der Frontseite zur Versorgung aktiver Sensoren.
+
+
+
+
+
+
+Male-Steckbrücken
+
+In der Praxis erwiesen sich schließlich die
+Servo-Anschlüsse am Prototypen als überflüssig. Schließlich könnte für spezielle
+Anwendungen, in denen Servos eine Rolle
+spielen, später ein separater Servotreiber
+wie der 16-Kanal-PCA9685 über I2C angeschlossen werden [1, 2]. Da dadurch E/A-
+
+
+Die Platine an der Unterseite des Gehäuses stellt die verschiedenen Anschlüsse auf der Rückseite des Zauberlings, die Versorgungsspannungen und
+deren automatische Umschaltung bereit.
+Die obere Hauptplatine beherbergt den
+Mikroprozessor und das Motortreibermodul. Durch platzsparende SMDTechnik ist diese Platine beidseitig
+verwendbar, sodass die Bedienelemente
+auf der Frontplatte und das Display auf
+der gleichen Seite montiert werden können.
+
+Die Netzteilplatine wurde so universell ausgelegt, dass sie auch später für ganz andere,
+beispielsweise über den I2C-Bus anzusteuernde Module in einem Silberling-Gehäuse eingesetzt werden könnte. Nicht
+benötigte Anschlüsse müssen in einem
+solchen Fall einfach nicht mit Steckern
+versehen werden.
+Zweipolige JST-HX-Anschlüsse schienen
+mir geeignet, um eine optionale externe 12-
+
+Volt-Stromversorgung anzuschließen und
+möglicherweise durchzuschleifen (Abb. 4).
+Diese können nicht falsch herum angeschlossen werden, und die Kabel sind
+relativ einfach selbst herzustellen.
+
+Elektronik
+
+und Breakout-Boards von Seeed kompatibel sind.
+
+Die Hauptplatine
+Die Idee, dass sowohl Bausteine mit
+positiver als auch solche mit negativer
+Logik an den Eingängen angeschlossen
+werden könnten, war eine verlockende Idee.
+Leider erweist es sich als einschränkend für
+Sensoren, deren Ausgangssignal zu Beginn
+des Prozesses variieren kann. Daher wäre
+eine globale Einstellung des Moduls auf
+positive oder negative Logik noch geeigneter.
+
+externe Stromversorgung
+
+Eine Voraussetzung ist, dass sich sowohl
+Eingangs- als auch Ausgangspegel für die
+Verwendung mit den traditionellen Silberlingen (negative Logik) eignen. Daher sind
+neben den analogen Motorausgängen, die
+bis zum Spannungspegel der externen
+Stromquelle
+liefern
+können,
+aus
+Kompatibilitätsgründen auch rein digitale
+Ausgänge auf dem festen „SilberlingenPegel“ (9 Volt) sinnvoll.
+
+Für die Anschlüsse der Programmierschnittstelle und des I2C-Busses habe ich
+mich für SMH200/HY-Stecker entschieden.
+Diese ragen hinten mit ihren Rahmen
+ordentlich durch und haben den kleinen
+Vorteil, dass sie mit den Grove-Sensoren
+
+Da der Zauberling durch die DIP-Schalterstellungen so viele Funktionen annehmen
+kann, wäre ein kleines Display auf der Front
+das i-Tüpfelchen. Das Display könnte die
+aktuelle Funktion des Zauberlings und
+Zähler- oder Analogwerte anzeigen.
+
+
+
+
+
+128X64 OLED-Pixeln auf ~2,5 cm (0,96
+Zoll) Bildschirmdiagonale bietet bereits
+ausreichend Möglichkeiten für sinnvolle
+Anzeigen [3]. Dies ist ein billiges und leicht
+verfügbares Display, das über den I2C-Bus
+angesteuert wird (Abb. 8).
+
+
+
+Vor- und Nachteile eines
+Displays
+Das Experimentieren mit dem SSD1306Display zeigte einige Einschränkungen:
+
+
+Da ein Display auch die an den Ein- und
+Ausgängen anliegenden Werte anzeigen
+könnte, würde dies einige (Kontroll-) LEDs
+auf der Vorderseite und der darunter liegenden Platine einsparen. Weil die Ports A4
+(SDA) und A5 (SCL) bereits vom I2C-Bus
+belegt sind, lag die Wahl für ein I2C-Display nahe. Das Display SSD1306 mit
+
+
+Die Ausgabe auf dem Display ist relativ
+langsam und wirkt sich auf die Geschwindigkeit der Hauptschleife des
+Arduino-Skripts aus, in der die Eingänge abgefragt werden. In der Praxis reichen die 16 MHz des Arduino Pro Mini,
+damit dies kaum bemerkbar ist, allerdings sollte man sich darüber im Klaren
+sein, dass dadurch schnelle Impulse an
+den Eingängen übersehen werden könnten.
+
+
+
+
+
+Elektronik
+
+Die Adresse auf dem I2C-Bus des Displays ist nicht (oder je nach Typ nur eingeschränkt) wählbar. Dies schränkt die
+gleichzeitige (und eindeutige) Verwendung des Displays ein, wenn mehrere
+Zauberlinge über den I2C-Bus verbunden werden.
+Die meisten Softwarebibliotheken für
+die SSD1306, wie z. B. die AdafruitBibliothek, benötigen die Hälfte des
+verfügbaren 2-KB-SRAM-Speichers
+des Arduino Pro Mini um das Display
+anzusteuern. Obwohl ich keine Probleme hatte, in den verbleibenden 1 KB
+alle Basisfunktionalitäten des Zauberlings unterzubringen, lässt dies nicht
+viel Raum für die Verwendung von
+möglicherweise zusätzlich benötigten
+Bibliotheken. Dies beschränkt die Verwendung von I2C-Sensoren mit relativ
+großen Softwarebibliotheken (wie der
+Time-of-Flight-Sensor VL53LXX, den
+ich ausprobiert habe).
+
+Gleichrichter
+
+Der enorme Vorteil einer Anzeige auf dem
+Zauberling wiegt diese Hürden in der Praxis
+jedoch locker auf. Darüber hinaus ist es
+immer möglich, für bestimmte Anwendungen eines Moduls auf die Verwendung des
+Displays zu verzichten. Und vielleicht ist es
+sinnvoll zu prüfen, ob das Display mit einer
+kleineren, einfacheren Bibliothek verwendet werden kann.
+
+
+
+
+Der modifizierte Schaltplan
+Auf die Servo-Anschlüsse des Prototyps
+konnte verzichtet werden. Die vier analogen
+Eingänge können per DIP-Schalter zwischen Widerstands- oder Spannungsmessung umgeschaltet werden. Die Wahl zwischen positiver oder negativer Logik kann
+mit einem Schiebeschalter getroffen werden. Der Funktionsauswahl-DIP-Schalter
+wird während der Initialisierung des
+Zauberlings ausgelesen. Auf der Vorderseite stehen ein Reset-Taster und ein
+‚Trigger‘-Taster zur Verfügung. Außerdem
+gibt es zwei Potentiometer für frei programmierbare funktionsabhängige Einstellungen
+in Echtzeit.
+Die Realisierung des begehrten ‚Trigger‘Tasters stellte noch eine kleine Herausforderung dar, da mittlerweile alle Ein- und
+Ausgänge des Mikroprozessors belegt
+waren. Der DIP-Schalter zur Einstellung
+der Funktionalität wird aber nur einmalig
+während der Initialisierungsphase des Zauberlings ausgelesen. Beim ‚Trigger‘ wird
+über ein logisches ODER (mit vier Dioden)
+kurzzeitig die DIP-Schalterstellung 15 gedrückt, so dass die vier Eingänge während
+des normalen Programmablaufs wiederverwendet werden, um diesen Tastendruck zu
+signalisieren. Die einzige Einschränkung
+besteht natürlich darin, dass der ‚Trigger‘Druckknopf nicht mit der anfänglichen
+Funktionsauswahl 15 des DIP-Schalters
+verwendet werden kann. Da nicht für jede
+Funktion eine solche Extra-Taste benötigt
+wird, ist dies in der Praxis kein Problem.
+Auf der Frontseite findet sich nun ein ResetTaster. Für die Einstellung von Schwellenwerten oder anderen analogen Konfigurationen stehen nun zwei Potentiometer zur
+Verfügung. Die digitalen Ausgänge zur
+Steuerung der Motorausgänge liefern gepuffert 9-Volt-Silberlingen-Pegel. Obwohl
+diese Signale gekoppelt sind und nicht separat angesteuert werden können, kann dies
+bei manchen Experimenten sogar sinnvoll
+
+
+sein, weil sie einen entsprechenden Ausgang mit unterschiedlichem Signalpegel
+und Polarität zur Verfügung stellen.
+Auf dem Display sind die aktuelle Funktion
+des Zauberlings und weitere Konfigurationen (z. B. die Wahl positiver oder negativer
+Logik) sowie der Status der Ein- und Ausgänge ersichtlich. Auch spezifische Informationen pro Funktion (z. B. ein Zähler
+oder die Abstiegszeit eines Monoflops)
+können hier angezeigt werden. Da die Wahl
+für die frontseitigen Anschlüsse auf „Female Header Connectors“ gefallen war, war
+es einfach, auch hier die unterschiedlichen
+Versorgungsspannungen zur Verfügung zu
+stellen. Das erleichtert es, aktive Sensoren
+mit einem Stecker (wie der dreipolige eines
+Servos) mit Spannung zu versorgen.
+
+der Motortreiber
+
+Die Leiterplatte und Montage
+Schnell war klar, dass möglichst SMDBauteile verwendet werden sollten, um die
+beiden Seiten der Platinen optimal nutzen
+zu können. Sowohl der ATmega328 als
+auch der TB6612FNG-Motortreiber sind in
+SMT (Surface Mount Technology) erhältlich, aber für beide Komponenten habe ich
+mich schließlich für ein komplettes Board
+entschieden. Diese waren leichter verfügbar
+und seltsamerweise sogar billiger. Und da
+es sich in diesem Fall um eine kleine Serie
+von Halbprototypen handelte, schien mir
+der Vorteil von noch mehr PCB-Lagen für
+die Kupferbahnen die „Huckepack“-Montage dieser kleinen Platinen auf den ungebohrten SMT-Kupferinseln zu überwiegen.
+Durch das Auflöten von „header strips“ auf
+die SMT-Inseln und das anschließende
+Abschneiden ist die Montage in der Praxis
+sehr einfach. Die Fotos zeigen, wie Komponenten auf beiden Seiten der Leiterplatte
+montiert werden. Die resultierende mehrlagige Hauptplatine wird auf die Stromversorgungs- und Schnittstellenplatine gesteckt, die auf der Unterseite des Gehäuses
+befestigt ist. Das dadurch entstehende
+„Sandwich“ nutzt den begrenzten Platz im
+Gehäuse auch in der Höhe optimal aus.
+Am unteren Rand des Displays des Zauberlings können je nach gewählter Funktion
+entweder die vier digitalen oder die beiden
+Motorausgänge überwacht werden. Bei
+einer Motorfunktion werden Balken angezeigt, deren Position und Länge die Ausgangsspannung und Drehrichtung angeben.
+Für einige Anwendungen kann es sinnvoll
+sein, beide Ausgabearten zu verwenden, um
+beispielsweise ein digitales Signal zur Verfügung zu haben, das die Drehrichtung
+eines Motors anzeigt.
+Für einen schnellen Überblick über die
+Ausgangssignale bietet ein Paar „Ausgangsanzeigen“ mit LEDs (inklusive Vorwiderstand) eine Lösung, die direkt auf die
+Ausgänge gesteckt werden können. Einer
+
+Elektronik
+
+bietet einen guten Überblick über die vier
+digitalen Ausgangssignale, der andere enthält zwei zweifarbige LEDs, die das sofortige Ablesen der Drehzahl und Richtung jedes Motorausgangs ermöglichen (Abb. 12).
+
+
+Die ersten Experimente
+Der Basis-Sketch für den Zauberling kann
+von GitHub heruntergeladen werden und ist
+im Grunde derselbe wie in meinem vorherigen ft:pedia-Beitrag [4]. Mit dem DIPSchalter „Function“ lassen sich die verschiedenen Funktionen im Zauberling einstellen. Nach Änderungen an der Konfiguration genügt ein kurzer Druck auf den
+Reset-Taster auf der Vorderseite, um die
+folgende Funktion nutzen zu können.
+Standardmäßig sind zwölf nützliche Funktionen und eine Motor-Demo-Sequenz mit
+den DIP-Schaltern konfigurierbar. Hinzu
+kommen eine einstellbare Verzögerung des
+Ausgangssignals bei einigen Logikgattern
+und die Möglichkeit, spezielle Anwendungen unter den Programmoptionen 12 und 13
+durch Auskommentieren im Quellcode zu
+aktivieren. Ich habe auch eine Version mit
+dem kleinstmöglichen Speicherbedarf erstellt, um mit Sensoren zu experimentieren,
+die eine größere Softwarebibliothek erfordern. Der Zauberling kann somit schnell auf
+eine bestimmte Aufgabe zugeschnitten werden, auch wenn die relativ große Belegung
+von SRAM durch das Display ein Problem
+darstellt.
+In Abb. 13 ist ein Experiment mit FlipFlops zu sehen, die als 3-Bit-Binärzähler
+arbeiten, und zwei Zauberlingen, die diese
+Binärzahl wieder entschlüsseln. Bei jedem
+Tastendruck leuchtet die nächste LED in
+
+
+
+der Reihenfolge auf. Durch die Verwendung der oben beschriebenen „Ausgangsanzeigen“ direkt an den Ausgängen war keine
+weitere Verkabelung erforderlich. Ein schöner Proof-of-Concept für einige Grundfunktionen, aber rein digital nicht wirklich
+etwas, das den traditionellen Silberlingen
+viel hinzufügt. Tatsächlich werden diese
+mit ihrer blitzschnellen, parallel arbeitenden diskreten Elektronik die Zauberlinge
+deutlich an Geschwindigkeit übertreffen.
+
+Drucktasten oder die Beschleunigungs/Positionsinformationen vom Nunchuk eingehen, könnten sie erneut zur Verarbeitung
+durch andere Zauberlinge oder spezifische
+I2C-Module kommuniziert werden.
+
+
+
+Aber der Zauberling kommt natürlich als
+SPS (Programmable Logic Controller) für
+die Prozessautomatisierung oder zum
+Hinzufügen bestimmter Funktionen zur
+Geltung, die mit den Silberlingen nicht
+möglich sind. Seine Stärke liegt in seiner
+Programmierbarkeit und der I2C-Konnektivität.
+
+Ich habe ein zweites I2C-Sensor-Experiment mit dem Farbsensor TCS34725 durchgeführt. Die Ausgänge 1 bis 4 werden jeweils aktiviert, wenn ein roter, grüner,
+blauer oder gelber Dominostein erkannt
+wird. Dadurch ist es möglich, einen automatischen Farbsortierer zu erstellen (Abb.
+15) [6, 7].
+
+Spielen mit dem I2C-Bus
+Die Hinzufügung des seriellen I2C-Busses
+ermöglicht es, den Zauberling mit allen
+Arten von externen Sensoren zu verwenden.
+Zum Test habe ich einige Anwendungen
+ausprobiert. Es stellte sich als recht einfach
+heraus, zwei Motoren mit einem sogenannten Nunchuk (Handcontroller) zu steuern
+(Abb. 14) [5]. Sowohl der Nunchuk als auch
+die Motoren können direkt an den
+Zauberling angeschlossen werden. Über
+denselben I2C-Bus, über den der Status der
+
+
+Fazit
+Mit der Möglichkeit, über den seriellen I²CBus zu kommunizieren, ist der Zauberling
+bestens für die Zukunft gerüstet. Wenn
+beispielsweise in Zukunft mehr Ein- und
+Ausgänge für die Funktion eines einzelnen
+
+
+Elektronik
+
+Moduls benötigt werden, kann man ein
+externes Modul mit einer Ein-/Ausgangserweiterung (PCF8575 [8] oder MCP23017)
+anschließen, auf das über diesen Bus zugegriffen werden kann. Der I2C-Bus ermöglicht es auch, Schrittmotoren über einen
+externen Controller anzusteuern. Alles in
+allem gibt es viele Möglichkeiten, einige
+traditionelle Baubeispiele aus der Hobby4Buchreihe mit moderner Technik umzusetzen.
+
+nannter „Drop-In“-Ersatz für jeden traditionellen Silberling. Aber dank seiner Programmierbarkeit, der Einstellmöglichkeiten
+und Leistungsausgänge geht er darüber
+hinaus. Da das Modul frei programmierbar
+ist, kann es auch die Funktionen der kleinen
+konfigurierbaren Elektronikmodule wie des
+E-Tec Module (108227), des Electronics
+Module (152063) oder des Robotics MiniBots Module (156499) in einem einzigen
+Modul zur Verfügung stellen.
+
+Mehr über die Entwicklung der universellen
+Leistungs- und Schnittstellenplatine und die
+neue Zauberling-Platine findet ihr auf der
+WhizzBizz-Website. Videos zum Design
+und der Entwicklung beider Leiterplatten
+findet ihr auch auf YouTube [9]. Die mit
+KiCad erstellten Gerber-Dateien sind auf
+GitHub zu finden. Die 3D-Dateien für den
+3D-Druck des fischertechnik-SilberlingGehäuses wurden in Blender erstellt und
+können bei Thingiverse heruntergeladen
+werden. Die Frontplatten, die ich mit dem
+Affinity Designer gezeichnet habe, wurden
+auf einem Laserdrucker gedruckt und dann
+zur Veredelung laminiert.
+
+Quellen
+
+
+Aufgrund seiner Vielseitigkeit und Konfigurierbarkeit ist der Zauberling ein so ge-
+
+[1]
+
+Dirk Fox: I²C mit dem TX(T) – Teil
+16: Servo-Driver. ft:pedia 2/2017,
+S. 41–47.
+
+[2]
+
+Till Harbaum: Der Mini-ServoAdapter. ft:pedia 3/2019, S. 27–31.
+
+[3]
+
+Solomon Systech: SSD1306.
+Datasheet. Rev. 1.1, April 2008.
+
+[4]
+
+Arnoud van Delden: Der Zauberling
+(Teil 2): Das Zauberbuch. 4/2021, S. 45–51.
+
+[5]
+
+Dirk Fox: I²C mit dem TX – Teil 4:
+Nunchuk-Fernsteuerung. 2/2013, S. 41–49.
+
+[6]
+
+Arnoud van Delden: Farben sortieren mit dem TCS3472. In dieser Ausgabe der ft:pedia.
+
+[7]
+
+Dirk Fox: I²C mit dem TX(T) – Teil
+13: Farbsensor. ft:pedia 1/2016,
+S. 79–89.
+
+[8]
+
+Dirk Fox: I²C mit dem TX(T) – Teil
+18: Keypads und GPIOPortErweiterung. ft:pedia 2/2019, S. 46–
+51.
+
+[9]
+
+Arnoud van Delden: A printed circuit
+board providing various voltages
+and programming- and I2C ports und
+An Atmega328P controller: the
+‘Zauberling’. Video, Youtube 2022.
+
+
+

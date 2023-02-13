@@ -1,0 +1,769 @@
+
+Elektronik
+
+Elektronik
+
+Der Zauberling (Teil 2): Das Zauberbuch
+Arnoud van Delden
+Ein erfolgreicher Zauberer muss einen guten Zauberstab, bezaubernde Kleidung und wundervolle magische Gegenstände haben. Die „Hardware“ muss in Ordnung sein. Aber um die
+wahren Wunder zu vollbringen, ist die Neugier an Zaubersprüchen und Beschwörungen
+entscheidend. Der Zauberspruch ist komplett mit der richtigen Zauberformel und genau die
+Kombination aus Zauberstab und Zaubersprüchen enthält die wahre Magie. Höchste Zeit also,
+einen Blick in das große experimentelle Zauberbuch zu werfen: die Software des Zauberlings.
+Das Schöne am Arduino Pro Mini
+Atmega328P ist, dass er einfach aus der
+Arduino IDE heraus programmiert werden
+kann, sobald die Brücke
+zur TTL-Schnittstelle der
+kleinen Platine hergestellt
+ist. Auf diese Weise kann
+die Software grundsätzlich
+immer in Entwicklung
+bleiben und einfach erweitert oder angepasst werden. Nachdem ich einige
+Testprogramme zur Überprüfung der
+Ansteuerung der Motor- und Servoausgänge erstellt hatte, begann ich, die allgemeine Funktionalität der E-Tec- und Elektronik-Module nachzubilden. Da die Software des Zauberlings so einfach einzustellen ist, habe ich das „Grundprogramm“
+gleich in einigen Punkten angepasst. In Teil
+3 dieser Artikelreihe wird dabei eine Anwendung betrieben. In diesem Teil lest ihr,
+welche anderen Tricks der Zauberling
+bereits beherrscht.
+
+Programme und Funktionen
+Auf der Vorderseite des Zauberlings kann
+über DIP-Schiebeschalter eingestellt werden, welches „Programm“ bzw. welche
+Steuerfunktion ausgeführt werden soll.
+Damit ist wie beim E-Tec-Modul ein
+
+schnelles Umschalten zwischen verschiedenen Programmen möglich. Dies ist für ein
+programmierbares Modul wie den Zauberling während der Softwareentwicklung besonders nützlich. Während
+beispielsweise an einer
+verbesserten Version einer
+bestimmten Funktionalität
+gearbeitet wird, kann eine
+frühere stabile Version
+dieser Funktionalität auch
+einfach „unter der Schaltfläche“ gehalten
+werden.
+Der Zauberling ist noch ein erster Prototyp
+und die Software befindet sich daher noch
+in der Entwicklung. Die folgende Tabelle
+zeigt das bereits Erreichte in verschiedenen
+Perfektionsstufen: Das „Basisprogramm“
+ist unter anderem aus dem E-Tec-Modul
+bekannt und benötigt drei Schalter an den
+Eingängen. Wenn Schalter 1 gedrückt wird,
+beginnt der Motor sich im Uhrzeigersinn zu
+drehen. Wenn Schalter 2 gedrückt wird,
+beginnt der Motor gegen den Uhrzeigersinn
+zu drehen. Durch Drücken des Schalters 3
+wird der Motor gestoppt. Eine kleine
+Änderung, die ich vorgenommen habe, ist,
+dass der Motor durch erneutes Drücken des
+Schalters 3 die letzte Drehrichtung nach
+dem Stopp wieder aufnimmt.
+
+
+
+
+Prog
+
+DIP1
+
+DIP2
+
+DIP3
+
+DIP4
+
+I1 Logik
+
+I2 Logik
+
+I2 Logik
+
+Funktion
+
+Potentiometer
+
+
+-
+
+-
+
+-
+
+-
+
+Negativ
+
+Negativ
+
+Negativ
+
+Grundprogramm mit gleichmäßiger Drehrichtungsänderungen
+
+Zeit
+0~2500ms
+
+
+-
+
+-
+
+-
+
+ON
+
+Positiv
+
+Positiv
+
+Positiv
+
+Grundprogramm mit gleichmäßiger Drehrichtungsänderungen
+
+Zeit
+0~2500ms
+
+
+-
+
+-
+
+ON
+
+-
+
+Auto
+
+Auto
+
+Auto
+
+AND/NAND−Logikglied
+
+Schwellwert
+Sensoren
+
+
+-
+
+-
+
+ON
+
+ON
+
+Auto
+
+Auto
+
+Auto
+
+OR/NOR−Logikglied
+
+Schwellwert
+Sensoren
+
+
+-
+
+ON
+
+-
+
+-
+
+Auto
+
+Auto
+
+Auto
+
+XOR/XNOR−Logikglied
+
+Schwellwert
+Sensoren
+
+
+-
+
+ON
+
+-
+
+ON
+
+Auto
+
+Auto
+
+Auto
+
+SR-Flip Flop - SET=IN1,
+CLK=IN2, RESET=IN3 (R ist
+dominant/Ausgangszustand)
+
+Schwellwert
+Sensoren
+
+
+-
+
+ON
+
+ON
+
+-
+
+Auto
+
+Auto
+
+Auto
+
+JK-Flip Flop - J=IN1, CLK=IN2,
+K=IN3
+
+Schwellwert
+Sensoren
+
+
+-
+
+ON
+
+ON
+
+ON
+
+Auto
+
+Auto
+
+Auto
+
+D-Flip Flop mit Reset
+
+Schwellwert
+Sensoren
+
+
+ON
+
+-
+
+-
+
+-
+
+Auto
+
+Auto
+
+Auto
+
+Monoflop mit Reset (Zeit mit
+Potentiometer einstellbar)
+
+Pulszeit
+10~2500ms
+
+
+ON
+
+-
+
+-
+
+ON
+
+Auto
+
+Auto
+
+Auto
+
+Blinklicht (Duty-Cycle 50%,
+Geschwindigkeit mit Potentiometer einstellbar)
+
+Frequenz
+
+
+ON
+
+-
+
+ON
+
+-
+
+Auto
+
+Auto
+
+Auto
+
+Blitzlicht (mehrere kurze Blitze
+hintereinander, Geschwindigkeit
+einstellbar)
+
+Frequenz
+
+
+ON
+
+-
+
+ON
+
+ON
+
+-
+
+-
+
+-
+
+Zukünftige Projekte :-)
+
+-
+
+
+ON
+
+ON
+
+-
+
+-
+
+-
+
+-
+
+-
+
+Zukünftige Projekte :-)
+
+-
+
+
+ON
+
+ON
+
+-
+
+ON
+
+-
+
+-
+
+-
+
+Zukünftige Projekte :-)
+
+-
+
+
+ON
+
+ON
+
+ON
+
+-
+
+-
+
+-
+
+-
+
+Demo: Drehrichtungen der
+Motoren (Und für zukünftige
+Projekte)
+
+-
+
+
+ON
+
+ON
+
+ON
+
+ON
+
+-
+
+-
+
+-
+
+Demo: Servobewegungen (Und
+für zukünftige Projekte)
+
+-
+
+bit3
+
+bit2
+
+bit1
+
+bit0
+
+
+
+
+
+Positive Logik: LOW  HIGH-Übergang ist binär 1 (für aktive Sensoren oder Signale: Eingang DIP-Schalter OFF)
+Negative Logik: HIGH  LOW-Übergang ist binär 1 (für passive Sensoren Eingang DIP-Schalter ON, für aktive Sensoren
+OFF)
+Auto: Zustand beim Einschalten ist Normalzustand, Änderung ist Schaltzustand. Schaltpegel & Hysterese mit Poti
+einstellbar
+
+Tab. 1: Programme und Funktionen des „Zauberlings“
+
+Positive und negative Logik
+In der Regel ist es wichtig zu wissen, ob ein
+Schalter oder Sensor am Eingang in Ruhestellung geöffnet oder geschlossen ist und
+somit das Erfassungsverhalten zu interpretieren. Bei einem Programm wie dem
+„Grundprogramm“ im E-Tec-Modul ist dies
+
+
+beispielsweise sinnvoll, weil beim Einschalten des Moduls möglicherweise schon
+einer der Schalter gedrückt wurde.
+Schließlich muss die Bewegungsrichtung
+dann so gewählt werden, dass dieser
+Schalter losgelassen wird, ohne den Bewegungsbereich zu verlassen.
+
+Andererseits ist es schön, sowohl Spannungsabfälle als auch Spannungsanstiege
+als logische Erkennungspegel an den Eingängen verwenden zu können. Beispiele für
+Sensoren, die einen Spannungsanstieg verursachen, wenn sie melden müssen, sind
+beispielsweise die Fototransistoren aus
+einem Leuchtkasten oder ein Schalter, der
+in Ruhestellung geerdet ist.
+
+Elektronik
+
+Manche Sensoren reagieren jedoch umgekehrt, wie z. B. das Ausgangssignal eines
+aktiven IR-Hindernissensors im Ruhezustand 5 V beträgt und dieses bei Erkennen eines Hindernisses auf 0 V abfällt. Man
+könnte dies „negative Logik“ nennen.
+Aus diesem Grund hatte ich mir die Herausforderung gestellt, die Verarbeitung der
+
+void setup() {
+…
+in1Default = analogRead(IN1);
+in2Default = analogRead(IN2);
+in3Default = analogRead(IN3);
+…
+…
+}
+void loop() {
+…
+…
+potValue = analogRead(POTMETER);
+sensorTreshold = map(potValue, MINREG, MAXREG, 1, TRESHOLD_MAX);
+…
+…
+// Read inputs ,take hysteresis into account
+in1Value = analogRead(IN1);
+if (abs(in1Value-in1Default) > sensorTreshold) {
+in1ValueTrigger = in1Value;
+in1Active = true;
+} else {
+if (abs(in1Value-in1ValueTrigger) > sensorTreshold/2) { // Hysteresis...
+in1Active = false;
+in1TriggerUsed = false;
+}
+}
+in2Value = analogRead(IN2);
+if (abs(in2Value-in2Default) > sensorTreshold) {
+in2ValueTrigger = in2Value;
+in2Active = true;
+} else {
+if (abs(in2Value-in2ValueTrigger) > sensorTreshold/2) { // Hysteresis...
+in2Active = false;
+in2TriggerUsed = false;
+}
+}
+in3Value = analogRead(IN3);
+if (abs(in3Value-in3Default) > sensorTreshold) {
+in3ValueTrigger = in3Value;
+in3Active = true;
+} else {
+if (abs(in3Value-in3ValueTrigger) > sensorTreshold/2) { // Hysteresis...
+in3Active = false;
+in3TriggerUsed = false;
+}
+}
+…
+…
+}
+
+Listing 1: Messung der Grundlinienwerte und Umgang mit Schwellenwert und Hysterese
+
+
+
+Eingangssignale des Zauberlings möglichst
+einheitlich zu halten. Das Modul lässt sich
+flexibler einsetzen, wenn (fast) alle Arten
+von Sensoren und Logik an den Eingängen
+austauschbar verwendet werden können.
+Denn als Schaltimpuls reicht meist nur die
+Signalisierung der abweichenden Ausgangsstellung.
+Es ist möglich, beim Einschalten (oder nach
+einem Reset) des Zauberlings die gemessenen Eingangswerte als Referenzwerte zu
+speichern. Mit dem frontseitigen Potentiometer kann ein Schwellenwert eingestellt
+werden. Ein Eingang wird „aktiv“, sobald
+der entsprechende Referenzwert um mehr
+als den Schwellenwert überschritten wird.
+Dabei spielt es keine Rolle, ob der Wert
+nach oben oder unten vom Referenzwert
+abweicht. Der eingestellte Schwellenwert
+dient auch als Maß für die Hysterese bei
+Sensoren, die nach der Erkennung erst allmählich auf ihren Ausgangswert zurückkehren. Dadurch wird verhindert, dass der
+Eingang „flattert“, wenn sich der Ausgangswert des Sensors in den Bereich um die
+Erkennungsschwelle bewegt. Auf diese
+Weise wird das Erfassungsverhalten eines
+langsam zum Referenzwert zurückkehrenden Sensors verbessert.
+Ich habe die Software, die wie gesagt noch
+eine Weile weiterentwickelt wird, auf
+meiner Webseite veröffentlicht. Der CodeSchnipsel in Listing 1 zeigt (stark vereinfacht) die Messung der Grundlinienwerte
+und wie mit Schwellenwert und Hysterese
+umgegangen wird.
+Dieser Trick macht es möglich, die Eingänge des Zauberlings mit den unterschiedlichsten Sensoren zu nutzen. Auch aktive
+Sensoren wie der IR-Hindernissensor, der
+PIR-Bewegungssensor oder ein HallEffekt-Sensor können verwendet werden.
+Einzige Bedingung ist, dass der Referenzwert zu Beginn mit einem „nicht aktivierten“ Sensor gemessen werden kann. Da die
+
+
+meisten Steuerungen die Sensoren hauptsächlich als Detektoren verwenden, wird
+diese Forderung in der Praxis oft erfüllt.
+Aber natürlich kann es spezielle Ausnahmen geben. Bei einigen Steuerungen (wie
+zum Beispiel dem „Basisprogramm“) ist es
+besser, wenn die Art des Sensors und das
+Verhalten fest gewählt werden können. Die
+Software bietet diese Auswahl auch explizit
+für das „Basisprogramm“ in zwei Varianten
+an, so dass es sowohl mit konventionellen
+Sensoren mit positiver Logik (wie der
+bekannten Lichtschranke mit Fototransistor) als auch mit Sensoren mit negativer
+Logik verwendet werden kann.
+
+Logikprüfung
+Bei beiden Varianten des „Grundprogramms“ wird geprüft, ob die Sensoren
+beim Start ihre Kennlinie erfüllen (also
+z. B. eine Unterspannung am jeweiligen
+Eingang gemessen wird, wenn das „Grundprogramm“ in positiver Logik verwendet
+wird). Es darf nur ein Sensor/Eingang
+abweichen, von dem angenommen wird,
+dass er sich bereits beim Start meldet und
+nicht in der nicht aktivierten Ruheposition
+startet. Sobald sich die Eingangspegel des
+Sensors ändern, wird der Sensor im Laufe
+des Programms neu initialisiert, wobei der
+Referenzwert gemessen und gespeichert
+wird.
+Weichen bei Verwendung des „Grundprogramms“ mehr als ein Sensor beim Start
+ab, erfolgt eine Fehlermeldung durch
+gleichzeitiges Blinken der drei LEDs auf
+der Frontseite. In diesem Fall sollte die
+Verkabelung überprüft werden. In den
+meisten Fällen reicht es aus, den mechanischen Schalter 3 (Start/Stopp) von „Öffner“
+auf „Schließer“ (oder umgekehrt) zu
+stecken, um das Modul zurückzusetzen.
+
+
+Elektronik
+
+Schaltrauschen
+Was in Software erledigt werden kann,
+muss nicht in Hardware erledigt werden.
+Beim Studium des Schaltplans in Teil 1
+wäre dem aufmerksamen Elektroniker
+aufgefallen, dass an den Eingängen keine
+Entstörkondensatoren eingebaut sind. Für
+jeden Eingang wird in der Software ein
+Semaphor inxTriggerUsed zurückgesetzt
+(siehe Codefragment oben), der in der
+Verarbeitungsroutine eingestellt werden
+kann, um zu signalisieren, dass die auslösende Flanke des Signals „bearbeitet“
+wurde. Dies ignoriert alle falschen zusätzlichen Schaltimpulse oder Rauschen um
+den mechanischen Schaltpunkt, beispielsweise eines Schalters, herum.
+
+
+Graduelle
+Geschwindigkeitskurve
+Einer der kleinen Ärgernisse des StandardGrundprogramms war für mich, dass der
+Motor beim Einschalten nicht gleichmäßig
+anspringt oder beim Ausschalten eine sanfte
+Rampe hat. Und gerade an den Stellen, an
+denen sich die Drehrichtung abrupt ändert,
+wäre ein allmählicher Verlauf angenehmer,
+um Verschleiß am Motor und unnötige
+Kräfte am Modell zu vermeiden.
+
+
+Statt einer harten Umpolung wie in Abb. 1
+wäre ein gradueller Verlauf gemäß Abb. 2
+wünschenswert.
+Der Zauberling ist nun dazu in der Lage und
+das „Basisprogramm“ wurde entsprechend
+angepasst. Allerdings erweist sich das
+Drehmoment des Motors bei niedrigen
+Drehzahlen und um den Stillstand in der
+Praxis als so gering, dass die Kurve nicht
+exakt verfolgt werden kann. Daher konnte
+die Kurve problemlos durch eine Gerade
+ersetzt werden. Dies hat die Software offensichtlich noch einfacher gemacht.
+
+
+
+
+
+Im (vereinfachten) Codefragment in
+Listing 2 wird zunächst die Anzahl der
+Schritte bestimmt, in denen die Drehzahl
+und/oder die Drehrichtung erfolgen müssen. Dies erfolgt anhand des Wertes, der mit
+dem Potentiometer auf der Frontseite eingestellt werden kann. Wird dieser ganz nach
+links (auf null) gedreht, verhält sich der
+
+Zauberling wie vom E-Tec Modul bekannt.
+Je weiter das Potentiometer nach rechts
+gedreht wird, desto langsamer werden die
+Geschwindigkeits- und Richtungsänderungen. Die Zeit dafür ist von 0 bis 2,5 Sekunden einstellbar. In dem von mir erstellten
+Video seht ihr, wie butterweich der Motor
+ausgeht und wieder anspringt.
+
+void setMotorSpeed(bool rotateDir, int motorSpeed, bool smooth) {
+// rotateDir = true means O1/O2 CW rotation
+// rotateDir = false is O1/O2 CCW, output O3/O4 is reversed
+// motorSpeed is a value between 0 and 512
+// smooth = potmeter setting is value of gracefully descend and ascend
+int tempSpeed;
+int speedStep;
+if (rotateDir!=currentMotorDir || motorSpeed!=currentMotorSpeed) {
+int smoothDelay = timeDelay/25;
+if (currentMotorDir == rotateDir) { // No directional changes...
+speedStep = (motorSpeed-currentMotorSpeed)/SPEED_STEPS;
+tempSpeed = currentMotorSpeed;
+do {
+tempSpeed += speedStep;
+if (abs(motorSpeed-tempSpeed) <= abs(speedStep)) tempSpeed = motorSpeed; // Last
+// step...
+delay(smoothDelay);
+if (rotateDir) {
+Out1.drive(tempSpeed);
+Out2.drive(-tempSpeed);
+} else {
+Out1.drive(-tempSpeed);
+Out2.drive(tempSpeed);
+}
+} while (abs(motorSpeed-tempSpeed) > abs(speedStep));
+} else { // Towards and through zero...
+for (tempSpeed=currentMotorSpeed; tempSpeed>0;
+tempSpeed-=(currentMotorSpeed/SPEED_STEPS)) {
+// Slow down to zero...
+delay(smoothDelay);
+if (currentMotorDir) {
+Out1.drive(tempSpeed);
+Out2.drive(-tempSpeed);
+} else {
+Out1.drive(-tempSpeed);
+Out2.drive(tempSpeed);
+}
+}
+speedStep = motorSpeed/SPEED_STEPS; // Always positive...
+for (tempSpeed=0; tempSpeed<=motorSpeed; tempSpeed += (motorSpeed/SPEED_STEPS)) {
+// Build up to motorSpeed again...
+if (abs(motorSpeed-tempSpeed) <= speedStep) tempSpeed = motorSpeed; // Last step...
+delay(smoothDelay);
+if (rotateDir) {
+Out1.drive(tempSpeed);
+Out2.drive(-tempSpeed);
+} else {
+Out1.drive(-tempSpeed);
+Out2.drive(tempSpeed);
+}
+}
+}
+currentMotorDir = rotateDir;
+currentMotorSpeed = motorSpeed;
+}
+}
+
+Listing 2: Code für die Umschalt-Rampe
+
+
+Elektronik
+
+Denkt daran, dass diese Motorabschaltung
+nach der Sensorerkennung erfolgt. Die bewegliche Konstruktion muss dies natürlich
+ermöglichen und darf nicht hängen bleiben
+oder kollidieren. In der Praxis kann dies
+jedoch bei der Wahl der Position der
+Sensoren leicht berücksichtigt werden. Ein
+zusätzlicher Vorteil könnte sogar darin
+bestehen, dass diese Eigenschaft genutzt
+werden kann, um die maximale Auslenkung
+eines sich bewegenden Schlittens einzustellen, ohne die Sensoren zu bewegen.
+
+Fazit
+
+Der Zauberling kann noch nicht mit Schrittmotoren umgehen, daher wird die zurückgelegte Strecke momentan nur anhand der
+eingestellten Zeit ermittelt. Das Ergebnis
+wird bei verschiedenen Getrieben und
+Lastzuständen des Motors variieren. Sollte
+eine nächste Inkarnation des Zauberlings
+mehr Inputs erhalten, könnten diese für die
+Rückmeldung
+eines
+Encoder-Motors
+verwendet werden. Aber im Moment hielt
+ich das alles nicht für nötig.
+
+Eine Beschreibung, weitere Informationen
+und einen Link zu einem Video zu diesem
+Projekt findet ihr unter [3].
+
+Die Software für den Zauberling wird wohl
+in naher Zukunft weiter ausgebaut und
+verfeinert. Bitte zögert nicht, mir eine EMail zu senden [1] oder mich im Forum [2]
+zu kontaktieren, wenn ihr Anregungen,
+Kommentare, Fragen oder Ideen für
+zukünftige Funktionen des Zauberlings
+habt. Denn für einen wahren Zauberer wie
+den Zauberling ist das scheinbar Unmögliche die ultimative Herausforderung .
+
+Quellen
+[1]
+
+E-Mail-Adresse des Autors:
+arnoud@whizzbizz.com
+
+[2]
+
+Nickname des Autors auf
+https://forum.ftcommunity.de:
+Arnoud-Whizzbizz
+
+[3]
+
+Zauberling-Website in niederländischer oder englischer Sprache
+
+[4]
+
+Zauberling-Software auf GitHub
+
+[5]
+
+Arnoud van Delden: Der Zauberling
+(Teil 1): Der Zauberstab. 3/2021, S. 56–66.
+
+
+
+

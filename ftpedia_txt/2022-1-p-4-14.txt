@@ -1,0 +1,634 @@
+
+
+Modell
+
+Eierbecher
+Ralf Geerken, Rüdiger Riedel
+Von Anpassungsfähigen über gestürzte Kronen bis hin zu Zweiteilern…
+In vielen Haushalten stellt sich die streitbare
+Frage, ob Frühstücks-Eier vor dem Verzehr
+eher weich oder hart gekocht, ob sie danach
+eher am breiten oder am schmalen Ende
+geöffnet, oder ob sie dort dann eher geköpft
+oder gepellt werden sollen. Da hat sicherlich jeder seine eigene Philosophie.
+
+Als fischertechniker braucht man dann nur
+kurze Zeit, um für dieses Problem eine
+Lösung zu finden.
+Viel Spaß beim Heraussuchen aus der
+Teileliste, beim Nachbauen, beim SelberErfinden und beim Verwenden, wünschen
+euch jedenfalls Ralf und Rudi.
+
+Unstrittig ist aber, dass es sinnvoll ist, nach
+dem Öffnen einen Eierbecher zu
+verwenden. Dieses Problems wurde ich mir
+erst so richtig bewusst, als ich vor ein paar
+Monaten bei einem Freund zum Frühstück
+eingeladen war. Er fragte mich was ich denn
+gerne zum Frühstück hätte. Die Frage
+konnte ich leicht beantworten: Ein weich
+gekochtes Ei.
+Nicht so leicht zu beantworten war aber die
+Frage nach Eierbechern.
+
+(geeignet für alle Eiergrößen)
+
+(hier klappt einfach alles)
+
+
+
+Modell
+
+
+(für wagemutige Vielwinkelbesitzer)
+
+(mit Eierschalenablagebehälter)
+
+(nix für Unix'ler oder Mac'ler,
+sondern nur was für Windows-User)
+
+
+
+
+
+(auf jeden Fall was für Olympioniken)
+
+(oder was für Viereieresser)
+
+
+
+Modell
+
+(nix für über 24-Jährige bzw. Wachteleier)
+
+
+(auf jeden Fall schnell gebaut)
+
+(nix für Halskrausengegner,
+aber anpassbar für alle Größen)
+
+
+
+
+(mit Eierschalenablagebehälter)
+
+(nix für echtgoldene Eier)
+
+Trafoverwendung und alten Birnchen, leider
+auf gar keinen Fall spülmaschinenfest)
+
+
+(beidseitig verwendbar)
+
+
+Modell
+
+für Löffelbaggerer
+
+
+(auf jeden Fall spülmaschinenfest)
+
+(auf jeden Fall was für Jules Verneoder Tim und Struppi-Fans)
+
+
+
+
+(auf jeden Fall was für Erdbebenphobiker,
+der taugt auch für Fabergé-Eier)
+
+West'ler aber was für farbenblinde Ost'ler)
+
+
+
+
+(Eierscheiben sind nur für Hartgesottene oder
+bei fischertechnikern auch gut für den
+Eigenbau von Eierbechern.
+Leider nicht spülmaschinenfest)
+
+Modell
+
+(als Armreif war er dem Enkel zu klein)
+
+(Eichen sollst du Weichen … äh, oder?)
+
+
+
+
+
+(schnell aufzutischen, aber in der
+Spülmaschine sicherlich ein Wasserfänger)
+
+(nix für dünnwandige Weicheier)
+
+
+
+Modell
+
+Bauteile
+Anzahl
+
+Art.-Nr.
+
+Bezeichnung
+
+Anzahl
+
+31891
+
+KunststoffFederboden 5
+(schwarz)
+
+
+31892
+
+Kunststoff-Feder 26
+(blau)
+
+
+31916
+
+Lenkrad2 Inbus
+(schwarz)
+
+
+31918
+
+Winkelstein 60° 3N
+(rot)
+
+
+31981
+
+Winkelstein 15° (rot)
+
+
+Art.-Nr.
+
+Bezeichnung
+
+19317
+
+Speichenrad 90x15
+Classic Line (rot)
+
+
+31003
+
+Baustein 30 (grau)
+
+
+31005
+
+Baustein 15 (grau)
+
+
+31010
+
+Winkelstein 60° (rot)
+
+
+31011
+
+Winkelstein 30° (rot)
+
+
+31018
+
+Reifen 45x12
+(schwarz)
+
+
+31019
+
+Drehscheibe 60x5,5
+(rot)
+
+
+31982
+
+Federnocken 25x
+(rot)
+
+
+31027
+
+Seil 2000x0,5 (blau)
+
+
+32064
+
+
+31036
+
+Achskupplung 40
+Z22 m0,5 komplett
+(rot)
+
+
+Baustein 15
+Bohrung (rot)
+
+32071
+
+Winkelstein 7,5°
+(rot)
+
+
+31038
+
+Nockenscheibe
+KR20 35 (grau)
+
+
+32228
+
+V-Achsschenkel
+R30 (rot)
+
+
+31336
+
+Flachstecker (grün)
+
+
+32330
+
+
+31337
+
+Flachstecker (rot)
+
+
+Bauplatte
+15x30x3,75 1N (rot)
+
+31390
+
+Drehkranz-Oberteil
+Z58 m1,5 (schwarz)
+
+
+32861
+
+Bodenplatte
+30x90x7,5 (gelb)
+
+
+31391
+
+Drehkranz-Unterteil
+(rot)
+
+
+35052
+
+Winkelträger 7,5°
+(gelb)
+
+
+31426
+
+Gelenkwürfel-Zunge
+7,5 (rot)
+
+
+35066
+
+Rastachse 90
+(schwarz)
+
+
+31436
+
+Gelenkwürfel-Klaue
+7,5 (rot)
+
+
+35072
+
+Rastschnecke 20
+m1,5 (schwarz)
+
+
+31556
+
+Flachstein 30x30
+(transparent)
+
+
+35384
+
+V-Rohrhülse 30x28
+(gelb)
+
+
+31577
+
+S-Eckverbinder 15
+(grau)
+
+
+35408
+
+V-Achse 28 (gelb)
+
+
+35694
+
+
+31673
+
+S-Sternlasche (rot)
+
+
+Innenzahnrad Z30
+m1,5 69 (rot)
+
+31674
+
+S-Adapterlasche
+(rot)
+
+
+35695
+
+Zahnrad Z15 m1,5
+Z22 m0,5 anreihbar
+(rot)
+
+
+31766
+
+Figur-Sitz (schwarz)
+
+
+35738
+
+
+31777
+
+Raupenbelag 29,5
+Langnut
+
+
+S-Winkellasche
+(1970) (grau)
+
+35799
+
+S-Riegelschlüssel
+(blau)
+
+
+
+
+
+Art.-Nr.
+
+Bezeichnung
+
+Anzahl
+
+Art.-Nr.
+
+Bezeichnung
+
+35800
+
+S-Riegelschlüssel
+(grau)
+
+
+38428
+
+Baustein 5 15x30
+3N (rot)
+
+
+36299
+
+S-Winkelträger 30
+(gelb)
+
+
+38448
+
+V-Schaufel 45 (gelb)
+
+
+38535
+
+S-Strebe 60 L (grau)
+
+
+36323
+
+S-Riegel 4 50x (rot)
+
+
+38537
+
+S-Strebe 30 L (grau)
+
+
+36324
+
+S-Riegel 6 (rot)
+
+
+38538
+
+S-Strebe 30 L (gelb)
+
+
+36329
+
+S-Scharnier (grau)
+
+
+38579
+
+S-Strebe 30 I (blau)
+
+
+36334
+
+S-Riegelscheibe
+Z20 m0,5 (rot)
+
+
+116251
+
+Baustein 30 (rot)
+
+
+36341
+
+Flachstein 30x30
+(blau)
+
+
+116252
+
+Baustein 15 (rot)
+
+
+130593
+
+
+Flachstein 30x60
+(blau)
+
+
+Rastaufnahmeachse
+22,5 (schwarz)
+
+139646
+
+S-Strebe 60 L (rot)
+
+
+S-Prüfriegel 4
+(transparent)
+
+
+143235
+
+S-Strebe 30 L (grün)
+
+
+146529
+
+S-Strebe 15 I (grün)
+
+
+36593
+
+V-Grundplatte
+45x45x5,5 (rot)
+
+
+156511
+
+Litze 500 (grün-rot)
+
+
+36912
+
+S-Strebe 30 L
+(schwarz)
+
+
+160541
+
+
+36913
+
+S-Strebe 45 L
+(schwarz)
+
+
+S-Strebe 15 I
+(chrom-farben
+(silber))
+
+160545
+
+
+37209
+
+Förderbecher
+15x15x24 (rot)
+
+
+S-Strebe 30 L
+(chrom-farben
+(silber))
+
+163202
+
+Reifen 60 (schwarz)
+
+
+Baustein 15x30
+rund (grün)
+
+
+37236
+37237
+
+Baustein 5 (rot)
+
+
+165792
+
+
+37414
+
+Lenkrad1 sw rt
+komplett
+
+
+KugelbahnWechselweiche
+(blau)
+
+37468
+
+Baustein 7,5 (rot)
+
+
+167368
+
+
+37869
+
+Kugel-Stecklampe
+9V 0,1A (weiß)
+
+
+Dynamics
+Flexschlauch
+Befestigung (grün)
+
+172541
+
+Radachse (schwarz)
+
+
+38216
+
+Leuchtstein-Sockel
+(schwarz)
+
+
+172544
+
+Baustein 15x30
+rund (gelb)
+
+
+38413
+
+Kunststoffachse 30
+(grau)
+
+
+172545
+
+Zahnrad Z15 (gelb)
+
+
+38423
+
+Winkelstein
+10x15x15 (rot)
+
+
+36342
+36458
+
+
+Anzahl
+
+

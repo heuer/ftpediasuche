@@ -1,0 +1,164 @@
+
+
+Getriebe
+
+Planetengetriebe (2)
+Dirk Fox
+Unter den zahlreichen Getriebearten gibt es eine Kategorie mit ganz besonderer „Magie“ –
+die der Planetengetriebe, einer Sonderform der Umlaufgetriebe. Planetengetriebe sind heute
+aus keinem Fahrzeugantrieb mehr wegzudenken und erleben in Fahrrad-Nabenschaltungen
+einen zweiten Frühling. Im fischertechnik-System hielten sie vor 50 Jahren mit der Einführung
+des Innenzahnrads Z30 (35694) Einzug: Ein perfekter Anlass für eine Ergänzung des Beitrags
+von Thomas Püttmann aus der ft:pedia 2/2016 [1].
+
+Hintergrund
+Getriebe sind Maschinenelemente, die zwischen einem Antrieb und einem Abtrieb
+eine Bewegungsänderung vornehmen. Das
+können die Bewegungsart (z. B. Dreh- in
+Schubbewegung), die Bewegungsrichtung
+oder die Bewegungsgeschwindigkeit sein.
+Zahnradgetriebe sind nur eine mögliche
+Getriebeform. Sie werden vor allem zur Änderung der Geschwindigkeit einer Drehbewegung eingesetzt – und damit zugleich zur
+Änderung des auf eine (Abtriebs-) Welle
+wirkenden Drehmoments (auf Kosten der
+Drehzahl). Sie sind damit Kraftverstärker.
+In Fahrzeugen spielen sie eine wichtige
+Rolle: Über ein Schalt- oder Wechselgetriebe bilden sie den (begrenzten) Drehzahlbereich des (Verbrennungs-) Motors, in
+dem dieser einen möglichst guten Wirkungsgrad aufweist, auf den Bereich der
+gewünschten Fahrgeschwindigkeit ab.
+Auch in Elektrofahrzeugen werden Getriebe benötigt, wenn auch nicht als Schaltgetriebe, da der Drehzahlbereich mit hohem
+Wirkungsgrad beim Elektromotor groß genug ist, sondern für eine Übersetzung ins
+Langsame.
+Für Fahrzeuggetriebe wünscht man sich
+mehrere Eigenschaften, die Planetengetriebe gegenüber einfachen Stirnradgetrieben
+
+auszeichnen: kompakte Bauweise, geringes
+Gewicht, koaxiale Lage von An- und Abtriebsachse und einen geräuscharmen Lauf.
+
+Planetengetriebe
+Planetengetriebe sind Umlaufgetriebe, in
+denen sich Zahnräder umeinander drehen.
+Üblicherweise bestehen sie aus einem
+„Sonnenrad“ in der Mitte, um das mehrere
+(meist drei) „Planetenräder“ angeordnet
+sind, die wiederum in ein Innenzahnrad, das
+„Hohlrad“ greifen. Die Wellen (Achsen)
+der Planetenräder sind über einen Steg
+miteinander verbunden (Abb. 1) [3].
+
+(Wikipedia, CC BY SA 3.0)
+
+Dabei können das Sonnenrad, der Steg (also
+die Drehung der Wellen der Planetenräder)
+oder das Hohlrad jeweils die Rolle des Anoder Abtriebs des Getriebes übernehmen.
+
+Mit fischertechnik lassen sich Planetengetriebe seit der Einführung des Innenzahnrads Z30 (35694) in den Baukästen ut-2 und
+hobby2 im Jahr 1971 mit einem Z10 als
+Sonnenrad und zwei weiteren als Planetenräder konstruieren. Abb. 2 zeigt ein fischertechnik-Planetengetriebe mit der Welle des
+Sonnenrads als An- und der des Hohlrads
+als Abtrieb: Die Welle ist nicht durchgehend, sondern hinter dem Sonnenrad geteilt.
+
+Getriebe
+
+Nun können wir abhängig von der Nutzung
+des Planetenrad-Stegs, des Sonnen- oder
+des Hohlrads als An- oder Abtrieb mit
+dieser Grundkonstruktion unterschiedliche
+Übersetzungen realisieren.
+Im Hobby-Band 2-6 von fischertechnik aus
+dem Jahr 1977 findet man eine Übersicht
+der mit fischertechnik konstruierbaren
+Hohlrad-Planetengetriebe mit den zugehörigen Formeln zur Bestimmung des jeweiligen Übersetzungsverhältnisses (Tab. 1) [4].
+
+
+Wie man an der folgenden einfachen Umkonstruktion gut erkennt, ersetzt das Planetengetriebe aus Abb. 2 das Stirnradgetriebe
+in Abb. 3 durch eine kompakte koaxiale
+Übersetzung, bei der An- und Abtriebswelle
+in einer Flucht liegen.
+
+Tab. 1: fischertechnik-Planetengetriebe mit
+Hohlrad (aus hobby 2, Band 6) [4]
+
+
+Beide Getriebe übersetzen im Verhältnis
+1:3 ins Langsame. Durch das Innenzahnrad
+kehrt sich beim Planetengetriebe allerdings
+die Drehrichtung der Abtriebswelle um.
+
+Aus drei Rast-Z10 und einem Innenzahnrad
+Z30 konstruierte fischertechnik-Planetengetriebe sind überraschend leichtgängig.
+1 in Tab. 1) – eine Übersetzung 1:4 ins
+Langsame.
+Wählt man – unter Verzicht auf die koaxiale
+Anordnung der Wellen – statt des Stegs eine
+der Planetenrad-Wellen als Abtrieb, erhält
+man ein exzentrisches Rührgetriebe (Abb.
+5).
+
+
+
+Bei Planetengetriebeschaltungen werden
+mehrere Planetengetriebe gekoppelt und
+beim Schalten die Funktion von Planetenradträger und Hohlrad als An- oder Abtrieb
+gewechselt. In der Regel benötigt man dafür
+ineinander laufende Hohlachsen. Die erste
+Zweigang-Nabenschaltung wurde 1895 von
+Seard Thomas Johnson entwickelt.
+
+
+Schließlich können wir noch das Sonnenrad
+festhalten und den Planetenrad-Träger bzw.
+das Hohlrad als An- bzw. Abtrieb verwenden (Getriebeschema 3 in Tab. 1). Solche
+Planetengetriebe mit festem Sonnenrad
+kommen beispielsweise in Fahrradnabenschaltungen zum Einsatz. Abb. 6 zeigt die
+entsprechende Getriebekonstruktion. Man
+denke sich die Fahrradspeichen in die Nuten
+der rechten Drehscheibe 60 gesteckt.
+
+
+
+Unter Nutzung einer weiteren Variante des
+Planetengetriebes, nämlich einer festen
+Verbindung von An- und Abtriebswelle
+(Übersetzung 1:1), können wir auch mit
+fischertechnik das Funktionsmodell eines
+Zweigang-Schaltgetriebes konstruieren.
+Ein solches Getriebe mit festem Hohlrad
+und einer Übersetzung von 1:1 bzw. 1:4 ins
+Langsame hat Thomas Püttmann 2016 vorgestellt [1]. Abb. 7 zeigt ein weiteres Zweigang-Schaltgetriebe. Es hält (wie bei Fahrradnabenschaltungen üblich) das Sonnenrad fest; das Hohlrad bildet den Abtrieb.
+Geschaltet wird, indem man die Welle so
+verschiebt, dass sich das Hohlrad von den
+Planetenrädern löst und über einen Mitnehmer (Verbindungsstopfen 32316) zusammen mit dem Planetenrad-Steg dreht. Damit
+kann zwischen einer 1:1 und einer 1:1,333
+Übersetzung umgeschaltet werden.
+
+Quellen
+[1]
+
+Thomas Püttmann: Planetengetriebe.
+ft:pedia 2/2016, S. 38-43.
+
+[2]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt-Verlag, 2015.
+
+[3]
+
+Artur Fischer: fischer Elemente der
+Technik. 
+[4]
+
+Artur Fischer: Planetengetriebe. In:
+fischertechnik Hobby, Experimente
+und Modelle, hobby 2, Band 6,
+Fischer-Werke 1977, S. 30-33.
+
+
+Getriebe
+
+
+
+
+

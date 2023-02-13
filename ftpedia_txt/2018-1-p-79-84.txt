@@ -1,0 +1,338 @@
+
+Computing
+
+Computing
+
+fischertechnik meets BASCOM
+Christian Riebeling
+Das fischertechnik-System war in den 80er und frühen 90er Jahren Pionier bei der Nutzung
+von Mikroprozessoren für Steuerungen. Inzwischen gibt es sehr viele preiswerte Mikroprozessor-Boards, mit denen sich fischertechnik-Modelle steuern lassen – auch aus anderen
+Programmierumgebungen heraus. Eine dieser Umgebungen, die sich auch für den Einstieg in
+die Programmierung in Schulen eignet, ist BASCOM.
+
+Hintergrund
+Dass fischertechnik hervorragend für die
+Erstellung eigener Funktionsmodelle geeignet ist, steht sicherlich außer Frage. Auch
+die Verknüpfung der geschaffenen Modelle
+mit elektrischen Komponenten war fast von
+Anfang an fester Bestandteil des Baukastensystems von Arthur Fischer. Immer
+der technischen Entwicklung folgend erschienen mit den „Silberlingen“ schon bald
+elektronische Komponenten, die sich ebenfalls wieder durchdacht kompatibel in das
+bereits bestehende System einfügten.
+Eingebettet in einer umfangreichen Reihe
+von Begleitbüchern waren diese nicht nur
+für ambitionierte Hobbybauer eine wahre
+Fundgrube technischen Wissens, sondern
+mit den UT-Kästen, der Schulvariante der
+Hobbykästen, auch an den allgemeinbildenden Schulen in Deutschland Bestandteil
+des technischen Unterrichts, wie ich ihn
+erleben durfte.
+Es verwundert daher nicht, dass mit dem
+Aufkommen der Homecomputer auch dieses neue, zukunftsweisende Medium recht
+schnell Bestandteil des fischertechnik-Programms wurde und hier sogar eine Vorreiterrolle einnahm. Unzählige Anwender
+aller Altersstufen wagten mit dieser
+Technik die ersten Schritte in die computergesteuerte Automation, und dies wiederum
+
+mit einem so präzise aufeinander abgestimmten Bauteilprogramm, dass sogar
+Industriebetriebe Fischertechnik für die
+Ausbildung oder die Präsentation von Kundenprojekten nutzten. Es erschienen – der
+technischen Entwicklung folgend – mehrere
+Generationen von Controllermodulen, die
+den immer leistungsfähiger werdenden
+Mikrocontrollern gerecht wurden.
+Seit einiger Zeit machen sich Mikrocontrollerboards wie beispielsweise die Arduinos in der technischen Welt breit, weil sie
+vielfältig einsetzbar und inzwischen enorm
+preiswert geworden sind. Mit dem Aufkommen erschwinglicher 3D-Drucker befassen sich mehr und mehr Maker mit dem
+Herstellen fischertechnik-kompatibler Gehäuse. Und auch das Aufkleben mit doppelseitigem Klebeband ist für all jene, die nicht
+3D-Drucken können, eine gängige Praxis
+geworden – erlaubt diese Technik doch bei
+richtiger Auswahl des Klebebandes das
+sichere Befestigen der Platinen, ohne den
+fischertechnik-Bauteilen dauerhaft zu
+schaden.
+So praktisch die Arduinos sind, gibt es auch
+Schattenseiten, denn diese Module lassen
+sich nicht mit der gewohnten Umgebung
+der fischertechnik-Controller programmieren. Für die Programmierung von Arduinos
+ist es notwendig, sich intensiver mit dieser
+Technik zu befassen. Einer der größten
+
+
+
+Vorteile von fischertechnik, die Möglichkeit des intuitiven Umgangs mit der
+Technik, geht dabei etwas verloren.
+
+Programm, das ein geschriebenes Programm in den Code umwandelt, den der
+Mikrocontroller „versteht“.
+
+Basis für die Arduinos sind 8-Bit-Mikrocontroller der Firma ATMEL. Mit diesen
+Controllern führe ich bereits seit einigen
+Jahren Computerkurse in der 7. und 8.
+Klasse einer öffentlichen Schule durch, was
+mich dazu bewog, jetzt hier einen Brückenschlag zwischen fischertechnik und
+ATMEL-Controllern zu wagen.
+
+BASIC steht bei einigen Programmierern in
+einem weniger guten Licht, da es eng mit
+dem Aufkommen der ersten Homecomputer
+in Verbindung steht, wobei die heutigen
+BASIC-Interpreter mit denen der damaligen
+Zeit vom Codeaufbau her nicht mehr viel
+gemeinsam haben, außer vielleicht die
+enorm einfache Erlernbarkeit der Programmiersprache, die – wie erwähnt – eng an die
+englische Sprache angelehnt ist.
+
+Ich verwende im Schulunterricht für die
+Programmierung das Programm BASCOM-AVR, welches ich seit vielen Jahren
+auch für private und berufliche Zwecke mit
+großem Erfolg einsetze. BASCOM leitet
+sich ab aus einer Zusammensetzung von
+BASIC und Compiler. BASIC ist dabei eine
+traditionelle, leicht zu erlernende Programmiersprache, die es ermöglicht, den Controller angelehnt an die englische Sprache
+zu Programmieren. Compiler nennt man ein
+
+Bei den Schülern habe ich die Erfahrung
+gemacht, dass es mit BASCOM eine steile
+Lernkurve gibt, die schnell zu Erfolgen und
+der Umsetzung eigener Ideen führt, was
+wiederum motivierend wirkt, weil es
+schnell vorwärts geht. Der Fokus liegt von
+Anfang an auf der Programmentwicklung
+und nicht auf dem Erlernen undurchsichtiger Programmierroutinen.
+
+
+
+Auch bei mir gab es (allerdings im Bereich
+der Unterrichtsvorbereitung an der Schule)
+eine Lernkurve, welche dazu führte, dass
+ich zu dem Basiskurs eine eigene Experimentierplatine entworfen habe, auf deren
+Basis ich einen BASCOM-Anfängerkurs
+geschrieben habe, der keinerlei Vorkenntnisse erfordert. Zweck dieser Dokumentation war zunächst die Vorbereitung der
+Unterrichtsstunden, schnell wurde daraus
+aber ein Begleitwerk, welches den Schülern
+ein nachträgliches Aufarbeiten der im Unterricht behandelten Themen ermöglichte.
+
+Computing
+
+und erfreut sich regen Interesses, was ich an
+den Nachfragen zum Kurs und zu den
+Platinen erkennen kann.
+In den bereits veröffentlichten Lektionen
+wird das Basiswissen für den Umgang mit
+den ATMEL-Controllern und somit auch
+für die Arduinos vermittelt. Der Kurs wird
+bedarfsorientiert fortgesetzt und widmet
+sich zukünftig auch einer zweiten bereits
+entwickelten Platine, die nicht mehr nur das
+reine Experimentieren zum Ziel hat,
+sondern auch den praktischen Einsatz (Abb.
+3). Dafür verfügt die Platine über ein TextLCD und eine Tastatur. Über den I²C- Port
+lässt sich im Sandwich eine (oder bis zu
+acht) eigens entwickelte Zusatzplatine
+anbauen, welche über acht Eingänge und
+acht Ausgänge verfügt. Es ist somit ein
+Leichtes, fischertechnik-Modelle damit zu
+steuern und über Display und Tastatur zu
+bedienen.
+
+
+Während ich anfangs noch mit Overheadfolien im Unterricht gearbeitet habe,
+konnte ich nach Installation von Multimediatafeln in der Schule im Unterricht auf
+das Internet zurückgreifen. Ich nutze dieses
+„überdimensionale Tablet“ für die Präsentation der Lerninhalte und übertrug den
+BASCOM-Anfängerkurs auf die Dokumentationsseiten (in der Forum-Software als
+„Lexikon“ bezeichnet) des offiziellen deutschen BASCOM-Forums, wo er mir seither
+im Unterricht zur Verfügung steht.
+Durch die Veröffentlichung im Forum (und
+parallel dazu auf meiner Homepage) stand
+er nunmehr auch allen Interessierten außerhalb meines Schullehrgangs zur Verfügung
+
+für den praktischen Einsatz
+
+
+Ebenso wie diese Platinen lassen sich aber
+auch die Arduinos mit BASCOM programmieren. Während man für die von mir
+entwickelten (und viele andere käuflich zu
+erwerbenden) Platinen einen Programmer
+für die ISP-Programmierung (In-SystemProgramming, das heißt, der Controller
+kann beim Beschreiben (Flashen) in der
+Schaltung verbleiben) benötigt, nutzen die
+Arduinos alternativ einen sogenannten
+Bootloader, der es ermöglicht, die Platinen
+einfach mittels USB-Kabel zu programmieren. BASCOM unterstützt dabei die
+Programmierung mittels Bootloader direkt
+aus dem Programm heraus.
+
+Dabei ist Locate 1,1 die Anweisung, in
+die erste Zeile an Position 1 beginnend die
+nachfolgenden Informationen (Text, Variableninhalte, Sonderzeichen oder bis zu acht
+selbst definierbare Zeichen) auszugeben, ist
+somit also nichts weiter als der Positionierungszeiger, welcher auf jede Anzeigestelle
+eines Textdisplays gesetzt werden kann.
+Lcd „Position:“ ; x bedeutet: Schreibe
+
+den Text „Position“ auf das LCD und anschließend den Wert der Variablen x (zum
+Beispiel 546). So sieht dann die Ausgabe
+auf dem LCD aus:
+
+Was macht BASCOM so anders?
+Der eindeutige Vorteil von BASCOM ist,
+dass viele externe Komponenten, die in
+anderen Programmiersprachen mit vielen
+zu erlernenden Einzelbefehlen erst zusammengestellt werden müssen, mit wenigen
+Sonderbefehlen aufgerufen werden. Die
+Arbeit im Hintergrund wird von BASCOM
+beim Compilieren eigenständig erledigt. So
+kann man sich bei der Programmierarbeit
+auf die eigentliche Lösung der Probleme
+konzentrieren, ohne tiefgreifend in die
+Controllerstruktur blicken zu müssen. Dies
+ist sozusagen das „fischertechnik-Prinzip“
+für die Controllerprogrammierung.
+Ein Beispiel…
+Ihr möchtet in Eurem Modell einen Text auf
+dem LCD ausgeben? Das ist normalerweise
+mit einer ganzen Reihe von Befehlszeilen
+verbunden. BASCOM hingegen möchte
+von Euch nur wissen an welcher Stelle der
+Text und natürlich was ausgegeben werden
+soll. Selbstverständlich wird im Programm
+zuvor mit einem Deklarationsbefehl beschrieben, welches Display verwendet wird
+und wie dieses an den Controller angeschlossen ist.
+So sehen die beiden Programmzeilen für
+das LCD in BASCOM aus:
+Locate 1,1
+Lcd „Position:“ ; x
+
+
+Genauso einfach lassen sich in BASCOM
+aber auch Servos, 1wire-Sensoren, I²CKomponenten, Grafikdisplays, Infrarotfernsteuerungen oder auch die in ftpedia
+4/2017 beschriebenen Mehrfarb-LEDs WS
+2812B ansteuern. Sie sind zugleich ein
+gutes Beispiel für die stetige Weiterentwicklung des Programmes. Dieses recht
+junge Bauteil wurde über eine sogenannte
+„LIB“ ergänzt, über die BASCOM-AVR
+einfache Befehle zur unkomplizierten Ansteuerung der LEDs zur Verfügung stellt.
+Auch die „normale“ Ansteuerung von Ausgängen oder die Abfrage von Tastern und
+Sensoren gestalten sich sehr einfach und
+sind mit ein wenig Übung bereits am
+geschriebenen Code nachvollziehbar. Hier
+als weiteres Beispiel der Code für eine
+blinkende LED, für viele Programmiereinsteiger der erste Schritt. In grün die Kommentare, wie sie nach Eingabe durch den
+User in BASCOM dargestellt werden:
+
+Do
+Toggle LED
+Wait 1
+Loop
+
+Computing
+
+‘ Schleifenanfang
+‘ LED wechselweise ein- und
+ausschalten
+‘ 1 Sekunde
+warten
+‘ Schleifenende,
+zurück zu Do
+
+LED ist dabei ein Alias, das bedeutet, wir
+
+haben der LED zuvor einen Ausgang des
+Controllers zugewiesen (Led
+alias
+PortB.0). Beim Programmieren müssen
+wir uns nun aber nicht mehr merken, dass
+die LED an PortB.0 angeschlossen ist,
+sondern müssen nur LED schreiben, wenn
+wir dieser einen Befehl widmen. Das ist bei
+wenigen Aus- und Eingängen sicherlich
+nicht zwingend erforderlich, aber bei
+umfangreichen Programmen eine große
+Hilfe, weil man Sensoren und Aktoren
+immer beim Namen nennen kann. Versieht
+man das Programm dann noch mit entsprechenden Kommentaren, die sich überall
+im Programm platzieren lassen, ist die
+Programmfunktion für andere Nutzer und
+auch für einen selber (auch noch nach
+mehreren Wochen) leicht nachvollziehbar.
+Toggle ist der Befehl für eine binäre Nega-
+
+tion. Heißt hier ganz einfach: wenn die LED
+ausgeschaltet ist, schalte sie ein und schalte
+sie aus, wenn sie eingeschaltet ist.
+
+weist das Programm an, eine
+Sekunde zu warten. Dies wird man als
+Fortgeschrittener in komplexeren Programmen sicher mit einem Timer lösen, aber bei
+einfachen Programmstrukturen ist dieser
+Befehl durchaus legitim.
+Wait 1
+
+Do und Loop sind Anfang und Ende einer
+
+Schleife und umschließen fast immer ein
+sich ständig wiederholendes Hautprogramm.
+Wer neugierig geworden ist, kann einmal
+einen Blick in den Mikrocontrollerkurs
+werfen. Dort gibt es ausreichend „Input“,
+was hier sicherlich zu weit führen würde.
+Dazu muss man noch nicht einmal über
+Hardware verfügen, denn die entwickelten
+Programme sind (soweit möglich) mit
+
+animierten Grafiken zur Verdeutlichung der
+Programmfunktion ergänzt.
+Ein weiterer Vorteil insbesondere für junge
+Nutzer und Schulen ist, dass die Demoversion von BASCOM-AVR ohne Einschränkungen der Befehle wie die Vollversion verwendet werden kann. Die einzige Beschränkung liegt in der Programmgröße bei 4k. Das reicht aber für Controller
+wie den oft verwendeten Attiny 2313 oder
+den ATMEGA 48 aus, um diese vollständig
+zu nutzen. Auch alle anderen Controller wie
+der ATMEGA 328 auf dem Arduino lassen
+sich mit Code bis zu 4k verwenden. Wem
+das nicht mehr reicht, der muss die Vollversion erwerben (ca. 75 €). Zukünftige
+Updates stehen Besitzern einer Vollversionslizenz übrigens kostenlos zur Verfügung.
+
+fischertechnik meets BASCOM
+fischertechnik und BASCOM sind nach
+meiner Erfahrung eine gelungene Kombination für Maker, die Mikrocontroller nutzen
+möchten ohne sich langwidrig mit Controllerstrukturen und Befehlsketten auseinandersetzen zu müssen. Und bei Problemen
+stehen Euch Internetforen zur Verfügung, in
+denen erfahrene User Euch bei der Lösung
+vom Problemen behilflich sind, wie
+beispielsweise das BASCOM-Forum, in
+dessen Lexikon ich auch den Mikrocontrollerkurs veröffentlicht habe.
+Ich wünsche Euch viel Spaß beim Ausprobieren. Individuelle Fragen zu BASCOM,
+dem Mikrocontrollerkurs oder erhältlichen
+Platinen beantworte ich Euch gerne über
+kontakt@ceperiga.de.
+Auch Vorschläge zu wünschenswerten Platinen zur Verknüpfung von fischertechnik
+mit den 8-Bit-Controllern von ATMEL
+oder Zusatzplatinen (beispielsweise über
+I²C) nehme ich gerne entgegen. Vielleicht
+ergibt sich daraus ja ein neues Projekt als
+Ergänzung zum Mikrocontrollerkurs.
+
+
+
+
+Referenzen
+[1]
+
+Christian Riebeling: Der Mikrocontrollerkurs.
+
+[2]
+
+Christian Riebeling: Die Terminalplatine zum Mikrocontroller-Kurs.
+
+
+[3]
+
+Christian Riebeling: Die I²C-EinAusgabeplatine zum Mikrocontroller-Kurs.
+
+[4]
+
+Stefan Hoffmann: Einfacher Einstieg
+in die Elektronik mit AVR-Mikrocontroller und BASCOM. 2010.
+
+

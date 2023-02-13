@@ -1,0 +1,228 @@
+
+
+Grundlagen
+
+Finde die Fehler (1)
+Stefan Falk
+In einer kleinen Beitragsreihe für junge und ältere fischertechnik-Einsteiger werden einige
+grundlegende Konstruktionsdetails beleuchtet, die man geschickt – oder eben weniger
+geschickt – bauen kann. Ziel ist es, seine fischertechnik-Bauteile für besser funktionierende
+Modelle ausnutzen zu können, als das bei etwas zu einfacher Herangehensweise der Fall wäre.
+Das funktioniert wie in einem Rätsel: Wir zeigen ein absichtlich schlecht gebautes Modell – an
+dem wir dann die Schwachstellen und Fehler suchen, finden und beseitigen.
+
+Ein ganz harmloser Antrieb
+Sagen wir mal, wir wollen einen Aufzug mit
+einem recht schweren Korb an einem Seil
+hochziehen. Wir betrachten hier nur, wie
+der Motor und die Seilrolle dafür befestigt
+sein könnten. Vielleicht sieht unser erster
+Entwurf so aus:
+
+
+Der Aufbau ist also ganz einfach: Am
+Powermotor sind zwei Bausteine 30 aufgesteckt. Auf denen sitzt, mit zwei Federnocken verbunden, ein Baustein 15 mit
+Bohrung, der als stabile Lagerung der
+Achse gedacht ist, die die Seiltrommel trägt.
+Das Ganze wird von einem einzigen Strang
+Statikträgern getragen (Abb. 2).
+
+
+Seiltrommel-Antrieb
+
+Was passiert?
+Die schwere Last (der zu tragende Aufzugskorb) ist auf dem Bild durch das Einklemmen des gestrafften Seils auf der
+Bodenplatte simuliert. Wie man sieht, biegt
+sich die Achse durch, und auch den armen
+Zapfen der Statikträger geht es gar nicht
+gut, weil sie fürchterlich verbogen werden,
+wenn am Seil eine Last hängt.
+
+Das hat mehrere unangenehme Folgen:
+∂ Die Achse leidet.
+∂ Die Anordnung ist schwergängig, weil
+der Motor die Achse beim Drehen immer
+wieder anders verbiegen muss.
+∂ Die Achse verkantet sich im Lagerbaustein, was den Antrieb erst recht
+erschwert und ineffizient macht. Der
+Motor muss viel arbeiten, ohne dass es
+einen Nutzen hat. Das hochziehbare
+Gewicht ist nur relativ klein.
+∂ Das Seil rollt sich immer auf der vom
+Motor entfernten Seite und somit völlig
+ungleichmäßig auf.
+∂ Im Extremfall kann das Seil beim Aufwickeln sogar über den Seiltrommelrand
+hinaus laufen.
+∂ Die Zapfen der Statikträger leiern aus
+oder reißen im schlimmsten Fall sogar
+ab.
+
+Grundlagen
+
+sitzt, bewirkt, dass sich der ganze
+Antrieb zur Seiltrommel hin verbiegt,
+aber auch etwas in seitlicher Richtung.
+Irgendwie sieht man auch sofort, dass da
+etwas oberfaul ist.
+
+Wie geht es besser?
+Wir müssen uns wohl etwas mehr Mühe
+machen. Wie wäre es so:
+
+ƒ
+
+•
+‚
+„
+
+∂ Das ganze Modell sieht schief und
+krumm und gar nicht schön aus – und es
+funktioniert ganz schlecht.
+
+Finde die Fehler!
+In diesem kleinen Antrieb haben wir
+mehrere Konstruktionsfehler eingebaut.
+Wenn man mal richtig hinschaut, kann man
+mit dem Zählen kaum aufhören:
+1. Das Seil zieht an der Seiltrommel nach
+unten. Die wird aber nur auf einer Seite
+gehalten. Da diese Seite auch noch mit
+einer leicht biegbaren Kunststoffachse
+ausgeführt ist, verbiegt sie sich.
+2. Der Baustein 15 mit Bohrung, in dem die
+Achse geführt ist, könnte, wenn die Last
+etwas schräg ankommt, in Richtung der
+Federnocken (also quer zur Achse) verrutschen. Dadurch würde die Achse nur
+noch mehr verkanten und schwergängig
+drehen.
+3. Die Lagerung des Antriebs auf nur einem
+Statikträger, der noch dazu nicht mittig
+
+
+Diese Konstruktion hat eine ganze Reihe
+von Verbesserungen:
+1. Ganz wichtig: Die Achse der Seiltrommel ist beidseitig gelagert! Links
+und rechts wird sie sauber getragen und
+verbiegt sich nicht mehr so (• in
+2. Die Konstruktion wird von insgesamt
+vier Statikträgern gehalten anstatt nur
+von einem. Links und rechts sitzen je
+zwei, damit beide Achslager (rechts im
+Powermotor, links im BS15 mit Bohrung) von unten gestützt werden. Auf
+jeder Seite sind es zwei, damit die
+Tragkraft in alle Richtungen gleichmäßig abgeleitet wird und nichts
+verbiegt (‚ in Abb. 3).
+
+
+
+
+3. Damit die Statikträger links und rechts
+auch ganz oben beim Motor den richtigen Abstand einhalten, wird der mit zwei
+I-Streben 75 erzwungen (ƒ in Abb. 3).
+Die I-Streben (das „I“ sieht man auf
+einer Seite der Strebe) haben immer
+genau die richtige Länge (nämlich ein
+ganzzahliges Vielfaches von 15 mm),
+um sie genau längs oder genau quer im
+fischertechnik-Raster anzubringen. Das
+ist wichtiger, als man vielleicht auf den
+ersten Blick denkt: Wäre das nicht der
+Fall und der linke Träger würde z. B.
+nach rechts zum Motor gedrückt werden,
+würde der BS15 mit Bohrung oben ja
+auch etwas schräg stehen. Dadurch
+würde die Achse sich in ihm wieder verkanten; der Motor hätte viel schwerer zu
+arbeiten und könnte doch nicht so viel
+Last anheben.
+4. Das Verbiegen der gesamten Anordnung
+nach links und rechts (z. B. bei sehr
+schwerer Last) verhindern zwei XStreben 106 („ in Abb. 3, eine vorne
+und eine auf der Rückseite des Modells).
+X-Streben (auch das „X“ sieht man auf
+einer ihrer Seiten) haben immer genau
+die richtige Länge, um genau im 45°Winkel diagonal eingebaut zu werden
+(woraus sich ihre vielleicht seltsam
+anmutenden Längen wie 42,4 mm,
+63,6 mm usw. ergeben [1]). Probiert
+einmal, den Aufbau mit und ohne die
+Diagonal-Streben nach links und rechts
+zu drücken. Ihr werdet sofort bemerken,
+wie stabil das Modell durch diese
+Streben wird.
+5. Den Aufbau beim Motor selbst konnten
+wir gegenüber dem ersten Versuch sogar
+vereinfachen: Anstatt BS30 genügen
+BS15, und der Lagerbaustein direkt beim
+Motor konnte ganz entfallen – hier
+genügt der Achsanschluss des PowerMotors vollkommen (Abb. 4).
+
+
+
+†
+…
+
+6. Der BS15 mit Bohrung auf der anderen
+Seite der Achse sitzt ganz genau an der
+richtigen Position: In der Höhe sitzen
+zwischen ihm und den Statikträgern
+genau die 15 mm, die beim Powermotor
+durch die BS15 entstehen: Ein Baustein
+15 ∙ 30 ∙ 5 mit drei Nuten und zwei Bausteine 5 ergeben genau die richtige Höhe
+(… in Abb. 5).
+7. Auch seitlich sitzt der BS15 mit Bohrung
+genau da, wo er hingehört: In der Mitte.
+Das bewirkt der Baustein 15 ∙ 30 ∙ 5 mit
+drei Nuten automatisch – ganz ohne dass
+wir etwas justieren müssten.
+
+8. Der BS15 mit Bohrung kann auch nicht
+seitlich verrutschen, weil die Nuten der
+BS5 sorgfältig parallel zur Achse ausgerichtet sind († in Abb. 5). In Längsrichtung der Achse hat dieser Baustein
+nie Kräfte aufzunehmen, aber in Querrichtung könnte das schon passieren.
+Wenn wir Bausteine so einsetzen, dass
+die Kräfte, die auf sie wirken, quer zu
+ihren Nuten verlaufen, kann der darin
+steckende Zapfen vom nächsten Baustein also nicht verrutschen.
+
+Der Gewinn
+Die Achse ist jetzt von beiden Seiten
+gelagert. Die Lager sitzen genau und stabil
+an der richtigen Stelle, sodass sich die
+Achse nicht in ihnen verkanten kann. Das
+Seil wird gleichmäßig aufgerollt. Der Motor
+kann seine ganze Leistung für das verwenden, wozu er da ist: Das Seil anzutreiben (und nicht Achsen in Lagerbausteinen reiben zu lassen). Das ganze Modell
+ist in jeder Richtung stabiler geworden.
+Wir können uns also ein paar einfache
+Dinge einprägen, damit unsere Modelle gut
+funktionieren:
+
+Grundlagen
+
+∂ Achsen am besten immer an beiden
+Enden lagern.
+∂ Darauf achten, dass die Achse „fluchtet“,
+sie sich also nicht ihn ihren Lagern
+verkantet.
+∂ Im Raster bleiben! Es baut sich viel einfacher, wenn wir Bauteile immer so
+kombinieren, dass man leicht ausrechnen
+oder mitzählen kann, dass Längen genau
+gleich sind.
+∂ Überall da, wo Kräfte auftreten, muss so
+gebaut werden, dass die Kraft nicht zum
+Verbiegen des Modells führt. In
+Richtung der Kraft muss abgestützt oder
+sonst wie festgehalten werden.
+∂ Wo keine Kraft wirkt, könnt ihr Bausteine einsparen! Unnötig verbaute
+Steine fehlen ja vielleicht woanders.
+Wenn ihr Konstruktionsprobleme habt,
+über die wir in dieser Art schreiben und
+Lösungen zeigen sollen, schreibt uns gerne!
+
+Quellen
+[1]
+
+René Trapp: Kleine Statik-Hilfe.
+ft:pedia 1/2016, S. 10-11.
+
+
+

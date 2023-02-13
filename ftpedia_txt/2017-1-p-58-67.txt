@@ -1,0 +1,386 @@
+
+
+Antriebstechnik
+
+Zwei Zahnräder und eine Kurbel
+Rüdiger Riedel
+Was kann man damit anfangen? Richtig, das ist die gesamte Kinematik eines Motors: des
+Wankelmotors. Es ist der einzige Kreiskolben-Motor, der bis vor Kurzem für Serienautos
+hergestellt wurde: von Mazda, unter der Bezeichnung Renesis, Kurzform für: Rotary Engine
+Genesis [1, 2]. Wen es interessiert, der kann die mathematischen Zusammenhänge in einer sehr
+schönen Matura- (Abitur-) Arbeit nachlesen [3]. Auch die technischen Fragen sind in einer
+weiteren Matura-Arbeit dargestellt [4].
+
+Der Wankel-Kreiskolbenmotor
+Die Kinematik des Wankelmotors lässt sich
+sehr schön mit fischertechnik-Bauteilen
+darstellen. Kernelemente sind ein Innenzahnrad 30 und ein Z20 (Kettenrad 31779).
+Als Spezialteil verwende ich außerdem die
+Kunststoff-Kurbel 60 KR8 (38239).
+
+abgefeilter Nase
+
+Es geht auch ohne die Modifikation in
+die Nase liegt die Kurbel sauber auf dem
+Z20 auf. Prinzipiell kann auch die Kunststoff-Kurbel 40 KR11 verwendet werden;
+mit 40 mm Länge ist sie aber etwas kurz.
+Das Z20 wird fest mit dem – im nächsten
+Abschnitt vorgestellten – Gehäuse verbunden. Der Läufer oder Rotor sitzt auf dem
+Innenzahnrad und dieses wird durch die
+Kurbel um das kleine Zahnrad herum geschwenkt (Abb. 2).
+Die tatsächlich gebauten Motoren haben
+allerdings keine Kurbel, sondern einen
+Exzenter auf der Abtriebswelle.
+
+
+
+Die Abmessungen von Gehäuse (Epitrochoide) und Läufer ergeben sich zwangsläufig aus den Maßen der beiden Zahnräder,
+wie man in [3] nachlesen kann.
+Für das Anschauungsmodell wird das Z20
+in den Reedkontakt-Halter 35969 kraftschlüssig eingespannt und dieser zur Hälfte
+in einen BS30 eingedrückt, zusammen mit
+einem Verbinder 15 und einer Gelenkwürfel-Klaue mit Lagerhülse (Abb. 3).
+Dies ergibt bei mir eine bessere Lagerung
+als die Verwendung eines BS15 mit Bohrung.
+
+
+Antriebstechnik
+
+erfolgt mit zwei Achsen 30 oder V-Achsen
+17 (die Seil-Klemmstifte sind etwas zu
+dick). Über oder unter die Schablone
+kommt zur Führung des Läufers eine SStrebe 60 L (Abb. 7).
+
+Einbau von unten
+
+Das Gerüst
+Der Wankelmotor wird durch einen Kartonaufdruck veranschaulicht (siehe Abb. 5).
+Der Aufbau des Gerüstes hierzu ist aus Abb.
+4 ersichtlich.
+
+
+Nach Aufsetzen des Läufers auf die Kurbel
+(Abb. 8) ist das Anschauungsmodell fertig.
+
+
+auf Papier oder dünnem Karton ausgedruckt
+und ausgeschnitten. Mindestens die Löcher
+oben und unten sollten zur Befestigung ausgestanzt oder -geschnitten werden; auch der
+innere Kreis wird ausgeschnitten. Durch die
+Löcher können Verbindungsstopfen gesteckt und damit das Gehäuse auf dem
+Gerüst fixiert werden. In die Mitte kommt
+das Z20, die Kurbel wird hindurch gesteckt.
+
+Der Läufer
+Der Läufer aus Abb. 6 wird auch auf Papier
+oder dünnem Karton ausgedruckt und ausgeschnitten; die drei Löcher ausgestanzt.
+Die Befestigung auf dem Innenzahnrad 30
+
+
+Wichtig für die Funktionsdarstellung ist die
+Ausrichtung von Kurbel und Läufer. Wenn
+die Kurbelstrebe im Verhältnis zur „Gehäuse-8“ oben steht, muss eine Spitze des
+Läufers ebenfalls nach oben zeigen.
+Falls erforderlich muss das Z20 etwas verdreht werden.
+
+
+
+
+
+
+Antriebstechnik
+
+Beginnen wir mit dem Läufer. Am Anfang
+stand die einfache Lösung oben links in
+mich für die unten stehende Variante entschieden. Sie ist ca. 4 mm kleiner als die
+Vorlage.
+
+
+Durch Drehen an der Kurbelachse können
+nun die vier Takte des Motors nachvollzogen werden: Ansaugen, Verdichten, Zünden/Arbeitstakt und Ausstoßen.
+
+Die Lagerung des Läufers mit einem Baustein 15 mit Bohrung habe ich wieder aufgegeben; ich habe keinen „runden“ Lauf der
+Zahnräder erzielen können. Exakt die Mitte
+des Innenzahnrades trifft man mit einer
+Strebe 60.
+
+Das Besondere am Wankelmotor besteht
+darin, dass bei einer Läuferumdrehung drei
+Takte gleichzeitig vollzogen werden. Welche der angedeuteten Öffnungen im Gehäuse dem Ansaugen und welche dem Ausstoßen dient, hängt von der Drehrichtung
+ab. Eine Läuferumdrehung entspricht drei
+Umdrehungen der Kurbelachse.
+
+
+
+Die Darstellung des Läufers und des Gehäuses (der Epitrochoide) aus Karton ist natürlich unbefriedigend – der Nachbau nur mit
+fischertechnik-Bauteilen ist die eigentliche
+Herausforderung.
+
+Das Innenzahnrad erhält in der zweiten
+Lochreihe drei V-Achsen 17 (alternativ
+Achsen 30, am besten aus Kunststoff), zwei
+davon erhalten je 2 Riegelscheiben, die
+dritte eine Scheibe (105195), ebenso das
+gegenüber liegende Loch. Auf die Scheiben
+kommt eine Strebe 60, auf ihrer linken Seite
+(Abb. 11) kommt eine zweite Scheibe,
+rechts ein S-Verbindungsstopfen 6. Der
+Läufer wird mit drei seiner BS7,5 über die
+V-Achsen geschoben.
+
+
+
+Die Mechanik unter dem
+Gehäuseboden
+Der Gehäuseboden wird durch Bauplatten
+gebildet. Was sich darunter befindet sieht
+man auf Abb. 13 bis 15.
+
+
+Die Epitrochoide des Gehäuses lässt sich
+gut mit Winkelsteinen 15°, BS 5 und BS 7,5
+nachbilden (Abb. 12). Nicht verzichten
+möchte ich auf eine Öffnung für die Zündkerze und die Darstellung der Einlassöffnung für das Benzin-Luft-Gemisch und der
+Auslassöffnung für die Abgase. Dafür verwende ich Winkelträger 15 (gelb und
+schwarz).
+Komplettiert wird das Gehäuse durch den
+äußeren Ring aus Winkelsteinen 7,5° und
+BS15. Die Verbindung zur Epitrochoide
+erfolgt an deren äußeren Enden mit Verbindungsstücken.
+
+Kernstück ist der rote BS30, er schaut eine
+Bauplattenstärke oben heraus. In ihn wird
+der Reedkontakt-Halter (entsprechend Abb.
+3) eingedrückt.
+
+
+Die Wände der Epitrochoide müssen gegenüber dem Boden etwas angehoben werden,
+weil das Innenzahnrad 30 einen zu großen
+Außendurchmesser hat und im Bereich der
+Taille unter die Wände tauchen können
+muss.
+
+
+In Abb. 14 wurde eine Bauplatte 3x1 unten
+für die Bauphase entfernt. Eingebaut sind
+von oben nach unten zwei Bauplatten 3,75
+zur Aufnahme des Batteriekastens, zwei
+BS5 und darüber zwei BS7,5 (nur der linke
+ist zu sehen) zur Aufnahme der Achse des
+Z10 und die drei Schaltscheiben (jeweils
+doppelt) zur Betätigung der darunter aufgestellten Taster (der ganz links fehlt im Bild).
+Rechts darunter die beiden Bausteine 5 zur
+Aufnahme von zwei BS7,5, die den XSMotor tragen.
+
+
+Antriebstechnik
+
+beachten, dass der Läufer wegen des großen
+Durchmessers des Innenzahnrades nur bei
+Ausrichtung der Kurbelstrebe parallel zur
+großen Achse der Epitrochoide eingesetzt
+und herausgenommen werden kann.
+
+BS30 wurden nur für das Foto angebracht)
+
+In Abb. 16 ist der komplette Motor mit der
+äußeren Verkleidung zu sehen. Eingeschaltet wird er mit dem Schalter des Batteriekastens. Damit die Drehrichtung immer
+gleich bleibt und nicht versehentlich umgekehrt werden kann, habe ich eine Diode
+eingebaut.
+die ersten Einbauten
+
+Die Stromaufnahme ist recht gering: vom
+Motor selbst etwa 25 mA und zusätzlich die
+geschalteten LEDs.
+
+Die drei LEDs in Abb. 15 sind nur provisorisch angeschlossen; sie werden am äußeren Gehäusering (Abb. 12) befestigt. Von
+unten nach oben betätigen die Taster die
+Darstellung von der Zündung, dem Ausstoß
+und der Ansaugung.
+Um dem Motor ein gesamtes Gehäuse zu
+geben, habe ich einen zweiten Gehäusering
+gebaut wie in Abb. 12. Darauf vier BS30
+plus vier BS15, dann kommt der innere
+Aufbau von Abb. 15 und ganz oben die
+Epitrochoide aus Abb. 12 mit dem äußeren
+Ring. Das Ausrichten und Einsetzen des
+Läufers erfolgt entsprechend Abb. 8. Bitte
+
+
+
+Und nun kommt die schlechte Nachricht:
+Das, was wir bis hier gesehen haben, ist gar
+nicht der von Felix Wankel erfundene
+Motor! Es ist vielmehr die Fortentwicklung
+(als Weiterentwicklung möchte ich es nicht
+bezeichnen) der Firma NSU (Vorläufer der
+AUDI AG) und deren Entwickler Dipl.-Ing.
+Paschke zum Kreiskolbenmotor.
+Sowohl der dreieckige Teil als auch die Epitrochoide führten beim Drehkolbenmotor
+reine Drehbewegungen aus, keinerlei
+Schwenkbewegungen. Dabei diente das
+bisher als Kolben fungierende Dreieck
+(jetzt der Innenläufer) nur als Absperrorgan
+zur Steuerung des Gaswechsels. Das Leistung abgebende Teil war der Außenläufer.
+Der Innenläufer enthielt drei mitrotierende
+Zündkerzen. Das Gasgemisch musste dem
+Außenläufer während der Rotation zugeführt und die Abgase abgeführt werden.
+Die Bestandteile Läufer, jetzt Innenläufer
+nach Abb. 10, und Epitrochoide mit
+Gehäuse, jetzt Außenläufer, bleiben beim
+Nachbau im Wesentlichen gleich. Dagegen
+ist das Getriebe anders aufgebaut.
+
+Am S-Riegelstein sind zwei Winkelträger
+60 befestigt, jeweils verlängert um einen
+Winkelträger 30.
+
+Einschalter, hier mit Taster, Impuls-Zahnrad 4
+und einer Kurbel außen
+
+Das Gerüst des Getriebes ist in Abb. 18 zu
+sehen. An den schwarzen Bausteinen wird
+ein XS-Motor mit Getriebe befestigt, der
+über eine Schnecke das Z10 antreibt.
+
+Die beiden Drehachsen sind parallel und
+genau 7,5 mm auseinander angeordnet. Die
+Drehzahlen Innenläufer zu Außenläufer
+verhalten sich wie 2:3.
+Es ergibt sich eine Aufgabenstellung ähnlich wie beim Planetarium [10]: Drehbare
+Lagerung eines Z40 ohne Nabe sowie
+Durchführung einer anderen Achse, allerdings hier nicht konzentrisch, sondern mit
+einer Exzentrizität von genau 7,5 mm (siehe
+Das Motorgehäuse wird auf einem Kreis
+aus Statik-Flachträgern und Bogenstücken
+60 aufgebaut. Fünf S-Streben 75 L treffen
+sich in der Mitte in einer 6-armigen Sternlasche. Diese wird von einem S-Riegelstein
+15x15 mittig unterstützt. Die sechste Strebe
+muss entfallen um das Motorgetriebe nicht
+zu stören.
+
+
+
+
+Antriebstechnik
+
+An der Unterseite greift das Z20 in ein Z40,
+welches auf seiner Achse den Innenläufer
+trägt. Ausreichenden Halt bekommt die
+Achse durch eine „Hülse + Scheibe 15“.
+Das Zusammenspiel der Zahnräder zeigt
+
+
+Der Innenläufer ist der gleiche wie in Abb.
+10, unten, bekommt jetzt aber ein Rollenlager 15 zur Lagerung. Die Drehung ist
+damit zwar nicht ganz symmetrisch (ca. 1
+mm versetzt), das hat aber hier keine
+mechanischen Auswirkungen; der Abstand
+zum Außenläufer ist groß genug.
+Der Innenläufer wird auf die Achse gesetzt
+und ruht auf der Hülse 35981. Gegen Verdrehen wird er gesichert durch eine Riegelscheibe und einen S-Mitnehmer (31712).
+
+in der Mitte der V-Stein-Verbinder 15 30
+
+Die BS15 in den Kurvenscheitelpunkten
+sind um 5 mm nach unten verschoben zur
+Aufnahme der beiden Kunststoffachsen, die
+die Verbindung mit der Drehscheibe 60
+herstellen. Die Befestigung des Außenläufers auf der oberen Drehscheibe 60 zeigt
+Bild 22.
+
+Verdrehen
+
+Der Außenläufer entspricht der Epitrochoide von Abb. 11, hat hier aber keine Öffnung. Die Verbindung mit dem äußeren
+Ring erfolgt mit zwei V-Stein-Verbindern
+15 30 (107355).
+
+
+Der Motor erhält ein Gehäuse aus insgesamt
+sechs Statikringen. Die Kurbel betätigt über
+ein Rast-Impulszahnrad Z4 einen Taster
+zum Ein- und Ausschalten.
+
+
+
+
+
+Die Stecker zur Stromversorgung haben
+keine Griffteile, dadurch lassen sie sich zur
+Demontage ins Gehäuseinnere schieben.
+
+Drehkolbenmotors, oben die Kolben im
+Stillstand, unten der Motor im Betrieb
+
+Quellen
+[1]
+
+Kurt Heintz: Der-Wankelmotor.de.
+
+[2]
+
+Mazda: Opening a New Frontier
+with the Rotary Engine.
+
+[3]
+
+Simon Schmidlin: Mathematische
+Beschreibung des Wankelmotors.
+Maturaarbeit, Kantonsschule
+Sargans, 2004.
+
+[4]
+
+Desirée Kobler: Der Wankelmotor im
+Vergleich mit dem Hubkolbenmotor.
+Maturaarbeit, Kantonsschule
+Heerbrugg, 2004.
+
+[5]
+
+Heinrich Schmidhuber: Berechnungen am Wankelmotor. HTL Saalfelden, 2005.
+
+[6]
+
+Wikipedia: Wankelmotor.
+
+oben, die Drehrichtung ist im Uhrzeigersinn
+
+Zu guter Letzt bleibt die Frage: Kann ein
+Drehkolbenmotor überhaupt funktionieren?
+Mein Versuchsmodell (Abb. 25) arbeitet
+elektrisch und hat eine „aufgelöste“ Mechanik: Die beiden Drehkolben stehen nebeneinander, verbunden über ein 2:3 Getriebe.
+Die beiden Z10 dienen zur Vergrößerung
+des Abstandes.
+Etwas unwillig zwar, aber mit genügend
+„Saft“ dreht er sich tatsächlich!
+
+
+[7]
+
+Felix Wankel: Einteilung der Rotations-Kolbenmaschinen. Faksimile,
+2011.
+
+[8]
+
+Kurz Möser, Dankwart Eiermann:
+Einteilung der Rotations-Kolbenmaschinen. Kommentarband, 2011.
+
+Antriebstechnik
+
+[9]
+
+Tarmo Kratz, Gernot Wackwitz: Entwicklung, Konstruktion, Fertigung
+und Erprobung des Prototypen eines
+Wankelmotors für den Einsatz im
+Flugmodellbau. Diplomarbeit,
+Beuth-Hochschule für Technik
+Berlin, 1998.
+
+[10] Thomas Püttmann: Planetarium.
+ft:pedia 4/2011, S. 39-51.
+[11] Thilo Bleumer: Wankelmotor.
+Bilderpool der ftcommunity, 2012.
+
+
+

@@ -1,0 +1,192 @@
+
+Modell
+
+Modell
+
+Wuppertaler Schwebebahn
+Seit 1901 bewegt sich die Schwebebahn auf 13 km Länge durch das enge Wuppertal. Die
+einzigartige Konstruktion ist die geniale Lösung für die engen Platzverhältnisse im Tal und
+führt dazu, dass heute nach über 100 Jahren das Verkehrsmittel mehr denn je genutzt wird.
+Seit einem Familienausflug Anfang der
+90er Jahre mit meinen Eltern bin ich von
+der Schwebebahn fasziniert. Irgendwann
+Mitte der 90er Jahre baute ich dann mein
+erstes Modell der Schwebebahn mit einem
+kleinen Teilevorrat in chicem grau/gelb
+(Abb. 1).
+
+
+Im neuen Jahrtausend keimte der Wunsch
+auf, das Modell noch einmal neu aufzulegen. Mein Problem war der geringe Teile-
+
+vorrat, denn eine Neuauflage musste den
+Vorgänger natürlich in allem übertreffen.
+Es wurden also erste Testgerüste aufgebaut
+und der Teilebedarf ermittelt. Nach Durchsicht der Einzelteillisten aktuell im Handel
+erhältlicher Fischertechnikkästen stellte ich
+schnell fest, dass der Baukasten „Hafenkräne“ die benötigen Teile im nahezu
+idealen Verhältnis enthielt. Und genau dieser Kasten lief gerade aus … Also erwarb
+ich vier Kästen „Hafenkräne“ für die
+Gerüstkonstruktion und einen Kasten
+„Funpark“ für die Konstruktion der
+Station. Anschließend ruhte das Projekt
+aufgrund privater und beruflicher Veränderungen aufs Neue… Erst in den letzten
+beiden Jahren nahm das Projekt durch neu
+erwecktes Interesse an Fischertechnik und
+nach weiteren Einkäufen den derzeitigen
+Stand an.
+
+
+
+
+Originalmodell
+Das Modell erhebt keinen Anspruch auf
+maßstabsgetreue Umsetzung, sonst müssten die Züge bei der Breite und Höhe dreimal so lang sein. Es geht vielmehr um die
+Konstruktion und Funktion der Schwebebahn an sich.
+Schienenlänge
+
+7,2 m
+
+Länge Modell
+
+3,9 m
+
+Breite
+
+67 cm
+
+feststellen, dass meine Gerüstkonstruktion
+dem Modell der Schwebebahn aus den
+fischertechnik Fanclub-Ausgaben Nr. 26
+und 27 im Jahre 1976 sehr nahe kommt.
+
+Höhe
+43 cm
+Tabelle 1: Daten zum Modell
+
+Traggerüst
+
+
+Das Traggerüst besteht aus den Stützen
+und dem Fahrweg. Durch die recht einfache Konstruktion des Fahrweges war es
+notwendig, relativ viele Stützen einzusetzen. Mittlerweile wurde die Konstruktion
+des Fahrwegs versteift, wodurch sie dem
+Original sehr nahe kommt.
+
+Stationen
+
+Die Stützenkonstruktion bleibt optisch bei
+der Pfeilerkonstruktion, welche die Schwebebahn auf der Landstrecke hat. Mit diesen
+Stützen können die auftretenden Kräfte
+besser ableitet werden. Die Stützenanzahl
+konnte durch die Versteifung des Fahrweges halbiert werden, der Teilebedarf ist
+allerdings insgesamt höher.
+
+Beim Bau der Stationen habe ich Wert
+darauf gelegt, verschiedene Konstruktionen zu verwenden, unter anderem auch um
+Teile gleichen Typs einzusparen.
+Die Tragkonstruktion der Station muss
+zum einen sehr stabil sein, weil die Züge
+hier anhalten und somit die Belastung
+höher ist als auf der Strecke – dort ist die
+Belastung relativ kurz. Zum anderen ist die
+Tragkonstruktion für die Formgebung der
+Station entscheidend und bestimmt damit
+ihr Aussehen (siehe Abb. 5 und 6).
+
+
+Nachdem der Fahrweg versteift und die
+Stützfeiler den letzten Schliff erhalten
+hatten, musste ich zu meiner Überraschung
+
+Die Treppen der Stationen sind in Stufenhöhe und –tiefe gleich, aber die Unterkonstruktion und Geländer sind unterschiedlich aufgebaut. Wichtig war mir, den Trep-
+
+penunterbau recht schlank zu halten, im
+Gegensatz zu einer Unterkonstruktion z. B.
+nur aus Bausteinen 30.
+
+Modell
+
+(Abbildungen 8, 9).
+Je nach Fahrtrichtung schaltet der Zug seine Beleuchtung in Form von Scheinwerfer
+und Rücklicht entsprechend um. Magnete
+am Traggerüst schalten berührungslos
+Reedkontakte (Magnetschalter) im Zug,
+wodurch er langsam anfährt, beschleunigt,
+abbremst und schließlich stoppt.
+
+
+Steuerung und Antrieb
+Der rote Zug wird mittels des fischertechnik Control-Set gesteuert. Ein XM-Motor
+treibt zwei Seilrollen an, welche durch unterlegen von Papier auf den Rast-Achsen
+festsitzen (Abbildung 7).
+
+Kurvenfahrten
+
+Mittlerweile wurde der rote Zug soweit
+verändert, dass er auch Kurven fahren kann
+(Abbildung 10).
+
+
+
+Der blaue Zug wird mit dem TX-Controller gesteuert. Hier treiben zwei Encodermotoren synchronisiert jeweils zwei Seilrollen an. Ein Encodermotor alleine schafft
+es nicht, den Zug in Bewegung zu setzten
+
+
+
+
+
+Ausblick
+
+Weiterführende Links
+
+Für die ft-Convention im September 2011
+habe ich noch die folgenden Erweiterungen
+in Planung:
+
+[1]
+
+ClubNachrichten 2/1976, S. 14-15:
+http://www.fischertechnikmuseum.ch/doc/FanClub/Club_27_1
+976.pdf
+
+[2]
+
+ClubNachrichten 3/1976, S. 14-15:
+http://www.fischertechnikmuseum.ch/doc/FanClub/Club_28_1
+976.pdf
+
+[3]
+
+Wikipedia:
+http://de.wikipedia.org/wiki/Wuppert
+aler_Schwebebahn
+
+[4]
+
+Webseite der Wuppertaler Schwebebahn (mit zahlreichen Bildern):
+http://www.schwebebahn.de
+
+[5]
+
+Weitere Modellfotos (Ausstellung
+Münster 2010):
+http://www.ftcommunity.de/categori
+es.php?cat_id=2123
+
+Wendeschleifen um einen Umlaufbetrieb zu gewährleisten
+Ein Depot mit Weichen
+Vollautomatische Steuerung mit dem
+TX-Controller
+Signalanlagen mit Blocksicherung
+Ob sich das alles rechtzeitig realisieren
+lässt hängt nicht nur davon ab, wie viel
+Zeit und fischertechnik-Teile ich investieren kann, sondern auch davon, in wieweit
+der Funktionsumfang des TX-Controllers,
+insbesondere in Sachen Bluetooth, bis
+dahin erweitert wird.
+
+Gereon Altenbeck
+
+
+

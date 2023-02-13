@@ -1,0 +1,539 @@
+
+
+Projekt
+
+HP-GL-Plotter (Teil 1)
+Dirk Fox
+Einen minimalistischen Plotter zu entwickeln, der weitgehend ohne Spezialteile auskommt
+und von vielen fischertechnik-Fans nachgebaut werden kann – das war das Ziel eines kleinen
+ft:pedia-Projekts, das ich im Juni 2011 – anlässlich des 50sten Geburtstags des ersten
+Plotters – in Angriff nahm. Gesteuert wird der Plotter von einem Robo Pro-Programm, das
+die Standard-Kommandosprache HP-GL „versteht“. Im ersten Beitragsteil wird die Konstruktion der „Plotter-Hardware“ vorgestellt.
+Plotter liefern präzise Zeichnungen, die die
+Druckqualität moderner Drucker oft übertreffen. CAD-Zeichnungen werden daher
+auch heute noch häufig auf großen Plottern
+ausgedruckt. Der Selbstbau von Plottern ist
+nicht nur deshalb so faszinierend, weil
+Plotter viel Geld kosten. Plotter sind auch
+technisch faszinierend: So kann man die
+bei Entwurf und Aufbau des Modells
+aufgewendete Sorgfalt unmittelbar am
+Ergebnis erkennen – denn auch geringste
+Ungenauigkeiten und Bauteil-Spiele von
+Bruchteilen von Millimetern sind in den
+Zeichnungen als Fehler erkennbar.
+Außerdem haben Plotter eine spannende
+Geschichte: Konrad Zuse, der Entwickler
+des ersten programmierbaren Computers,
+entwickelte mit seiner 1956 gegründeten
+Zuse AG den weltweit ersten Plotter – den
+Graphomat Z64, vorgestellt vor 50 Jahren
+auf der Hannovermesse 1961 (Abb. 1).
+
+Deutsches Technik-Museum, Berlin
+
+
+Die Zeichengenauigkeit des Geräts lag bei
+beachtlichen 0,02 mm, die Plot-Geschwindigkeit bei 22,5 mm/sec. Mit einem Gewicht von 1,4 Tonnen und einem Preis von
+128.000 DM war das Gerät jedoch eher
+ungeeignet für das heimische Arbeits- oder
+Kinderzimmer.
+
+
+Kein Wunder also, dass sich Plotter-Modelle wie ein roter Faden durch die Geschichte von fischertechnik ziehen. Ein erster „XY-Schreiber“ mit Handsteuerung
+findet sich im Clubheft 4/1977 [1]. Und
+gleich mit den ersten Computing-Baukästen gab es Plottermodelle wie den PlotterScanner von 1985 (30571) mit Schrittmotoren und Basic-Programm (Abb. 2, [2, 3]).
+Es folgte der Plotter des Baukastens Profi
+Computing (30490) mit Impulsscheiben
+zur Stiftabsenkung und programmiert in
+Turbo-Pascal, beschrieben im „Experimen-
+
+tierbuch Profi Computing“ aus dem Jahr
+1991 (36069) [4, 5]. Weitere, sehr unterschiedlich realisierte Plotter-Modelle finden sich in der ft-Community. Remadus
+veröffentlichte 2003 in einem kleinen
+Essay einige Überlegungen zum Bau eines
+Präzisionsplotters [6].
+Der im Folgenden vorgestellte Plotter ist
+daher weder eine neue Idee noch eine komplett neuartige Konstruktion – ganz im
+Gegenteil: er greift viele gute Entwurfsideen anderer Modelle auf. Allerdings ist
+er weitestgehend mit Standard-Teilen realisiert – und zugleich besonders präzise in
+der Ansteuerung. Auf die Urheber der
+wesentlichen Konstruktionsideen, die nicht
+von mir stammen, weise ich an den entsprechenden Stellen hin – sollte ich jemanden vergessen haben, bitte ich um Nachricht (und Nachsicht…).
+
+Zielsetzung
+Damit der Plotter von möglichst vielen
+fischertechnik-Fans nachgebaut werden
+kann, stellte ich die folgenden Anforderungen an das Projekt:
+Beschränkung auf ausschließlich originale und unmodifizierte fischertechnikBauteile,
+weitestgehender Verzicht auf Spezialteile (wie bspw. Alu-Profile), die sich
+nur in wenigen fischertechnik-Sammlungen finden und deren Beschaffung
+eine nennenswerte Investition darstellt,
+Verwendung einer möglichst geringen
+Gesamtzahl an Bauteilen („minimalistische“ Realisierung),
+hohe Steifigkeit des Modells und
+hohe Präzision der Ansteuerung.
+Einige dieser Anforderungen lassen sich
+nicht ohne Einschränkung gleichzeitig
+erfüllen – so lässt sich ein Maximum an
+
+Projekt
+
+Steifigkeit z. T. nur mit Spezial-Bauteilen
+wie Alu-Profilen oder einer großen Zahl an
+Bausteinen erreichen. Allerdings gilt auch:
+Jede zusätzliche Komplexität des Aufbaus
+erhöht die Anzahl der Stellen, an denen
+verrutschte Bausteine oder lockere Verbindungen die Genauigkeit des Plotters beeinträchtigen können. Daher ist auch bei der
+Steifigkeit weniger manchmal mehr.
+Auch das Gewicht spielt eine Rolle: Je
+leichter – und damit leichtgängiger – die
+beweglichen Teile, desto geringer die
+Beeinträchtigung der Genauigkeit des
+Antriebs. Daher kann sich eine minimalistische Konstruktion ebenfalls positiv auf
+die Präzision auswirken.
+Zwar habe ich nicht alle denkbaren Konstruktionsvarianten ausprobiert. Dennoch
+war die Zahl der Prototypen nicht klein –
+daher glaube ich behaupten zu können,
+dass das hier vorgestellte Modell einen
+ziemlich guten Kompromiss zwischen den
+genannten Zielsetzungen darstellt.
+Mit Blick auf diese Zielsetzungen habe ich
+außerdem die Steuerung des Plotters vollständig in Robo Pro implementiert. Zwar
+ist mit anderen Programmierumgebungen
+eine in verschiedener Hinsicht flexiblere
+und leistungsfähigere Realisierung möglich. Aber der Nachbau des Plotters soll
+auch Programmiereinsteigern gelingen und
+weder die Installation und Konfiguration
+noch den Erwerb anderer Programmierumgebungen erfordern.
+Die Implementierung erfolgte für einen TX
+Controller mit Encodermotoren, die eine
+sehr genaue Ansteuerung erlauben. Da es
+sich dabei jedoch um nicht ganz billige
+Komponenten handelt, stelle ich eine Alternativkonstruktion mit einem Impulszähler vor, die ohne Schrittmotoren auskommt
+und sich daher auch mit dem Robo Interface oder der Robo Extension steuern lässt.
+
+
+
+
+
+Konstruktion
+Grundplatte
+Als Grundplatte für den Plotter habe ich
+wie im 1991er fischertechnik-Modell [4]
+die Experimentierplatte 500 gewählt, da sie
+in vielen Baukästen enthalten ist. Obwohl
+die Zeichenfläche sich damit auf weniger
+als DIN A5 reduziert, bietet sich diese
+Platte aus einem weiteren Grund an. Denn
+statt der Alu-Profile verwende ich fischertechnik-Achsen für die stabile und spielfreie Führung der Ansteuerungsmechanik,
+wodurch die Größe des Plotter-Modells
+durch die maximale Länge der fischertechnik-Metallachsen begrenzt ist. Sie reichen
+mit 20 cm gerade für den Antrieb an der
+Schmalseite der Experimentierplatte aus.1
+Um nun einen Stift auf der „Schreibfläche“
+des Plotters zu bewegen, benötigt man für
+jede der beiden Dimensionen – die X- und
+die Y-Achse – einen eigenen Antrieb. Ein
+solcher Antrieb lässt sich mit fischertechnik auf sehr unterschiedliche Art und Weise realisieren, z. B. mit Hubgetrieben,
+Zahnstangen, Schneckengetrieben, Kettenantrieb oder Rädern auf Schienen.
+Alle diese Varianten erlauben nur eine begrenzte Genauigkeit bei der Positionierung: So verringern Fertigungstoleranzen
+bei den Bauteilen, die geringe Steifigkeit
+
+1 Natürlich ist es möglich, den Plotter größer zu
+
+konstruieren, z. B. auf einer Grundplatte 1000.
+Dazu benötigt man jedoch längere Metallachsen
+(50 cm) – oder eine andere Antriebskonstruktion,
+die entweder mehr Bau- oder Spezialteile benötigt
+oder aber eine geringere Steifigkeit (und damit Präzision) erreicht.
+
+(die unter Krafteinwirkung zu Verformungen führt) und das Spiel der Antriebe die
+Präzision, die sich z. B. mit Schrittmotoren
+theoretisch erreichen ließe. Von den genannten Antriebsvarianten gelingt vor
+allem mit einem Schneckengetriebe eine
+sehr einfache (und in der Summe vergleichsweise spiel- und reibungsarme) und
+zugleich sehr hoch aufgelöste Positionierung; zudem lässt sich das verbleibende
+Spiel mit wenigen Bauteilen aus der
+Konstruktion verbannen. Daher entschied
+ich mich für diesen Antrieb.
+Schlitten
+Damit der Stift (genauer: der Schreibkopf)
+an jede Position des Zeichenfelds bewegt
+werden kann, benötigt man einen „Schlitten“, auf dem der Schreibkopf in der
+Horizontalen (der X-Achse) bewegt wird.
+Dazu montierte ich ein Schneckengetriebe
+auf drei Metall-Achsen, da ich – um
+Stangen und Schneckengetriebe zu sparen
+– die lange Seite der Experimentierplatte
+als X-Achse verwende, das Zeichenblatt
+also im Querformat nutze. Die Breite des
+Schlittens übersteigt dadurch aber die
+maximale fischertechnik-Achslänge von
+20 cm bei Metall- und 18 cm bei Kunststoffachsen. Die Achsen mit dem Schneckengetriebe werden dazu mit etwas Spannung zwischen die beiden Kupplungsstücke „geklemmt“ (Abb. 3). Die Spannung wird später von zwei seitlichen
+Schneckengetrieben (Y-Achse) gehalten.
+Um den Schreibkopf gerade auf dem
+Schlitten zu führen, verwende ich drei
+Metallachsen 200: zwei parallele (verlängert mit Hilfe von Klemmkupplungen um
+zwei Metallachsen 30) in einem Baustein
+
+
+Projekt
+
+
+7,5 und eine dritte, die an beiden Enden
+mit je einer Klemmkupplung (31024) auf
+den runden Zapfen der Schneckenmutter
+(37925) aufgesetzt wird. Diese Konstruktion ähnelt der des 1985er Modells; dort
+wurden je eine Führungsstange ober- und
+eine unterhalb der Schnecke montiert
+(Abb. 2) [2].
+Schlittenantrieb
+Der gesamte Schlitten muss wiederum in
+der Vertikalen (der Y-Achse) bewegt werden. Dafür verwende ich zwei weitere, an
+den Schmalseiten der Experimentierplatte
+zu montierende Schneckengetriebe (Abb.
+4), die durch eine Kette miteinander verbunden werden. Da fischertechnik-Ketten
+etwas Spiel haben, sollten für die Verbindung der beiden Y-Achsen-Schneckenantriebe möglichst große Zahnräder verwendet werden. So lässt sich der Einfluss des
+Spiels auf die Positionierung bei einem
+Richtungswechsel des Antriebs verringern.
+Für den ft:pedia-Plotter nutze ich zwei
+Z40. Damit die Schnecken trotz der großen
+Zahnräder
+noch
+dicht
+über
+der
+Zeichenfläche positioniert bleiben (um das
+vertikale Spiel des Schreibkopfs zu begrenzen), lasse ich beide Z40 über den Rand
+der Grundplatte ragen. Im Betrieb muss die
+Grundplatte des Plotters daher auf einer
+mindestens 1,5 cm hohen Unterlage oder
+an einer Tischkante aufgestellt werden.
+Das hätte fischertechnik übrigens auch mit
+dem 1985er Plotter tun sollen: Dort wurden Z10er zur Kopplung der seitlichen
+Schneckengetriebe verwendet. Auf den
+Bildern in der Anleitung kann man das
+
+Durchhängen der Kette gut erkennen (Abb.
+2), das bei Richtungswechseln deutliche
+Verschiebungen verursacht haben dürfte
+[2]. Mit einer leichten Kettenspannung
+kann man das Kettenspiel fast vollständig
+ausgleichen. Der Lauf der Kette lässt sich
+schließlich noch ein wenig verbessern,
+indem die Kettenglieder mit der „offenen“
+Seite nach außen montiert werden.
+Bei der Montage der Schneckengetriebe
+sollte man auf gut zueinander „passende“
+Schneckenelemente achten, die an den
+Übergangsstellen keine Kanten im Schneckenantrieb bilden. Wie beim Schreibkopf
+wird der Schlitten auf den beiden seitlichen
+Schneckengetrieben in einem BS 7,5 auf je
+zwei parallelen Metallachsen 170 gelagert
+(Abb. 4, 5), die Krümmungen des Schneckengetriebes ausgleichen und für eine
+exakte und reibungsarme Führung sorgen.
+
+
+Spiel des Schneckenantriebs
+Leider haben die Schneckenmuttern auf
+der Spindel Spiel – sie lassen sich teilweise
+um mehr als einen Millimeter auf der unbewegten Spindel verschieben oder kippen.
+Dieses Spiel lässt sich, wie Remadus schon
+2003 vorschlug [6], durch eine zweite, „be29
+
+
+
+nachbarte“ Scheckenmutter beseitigen. Damit verkürzt man zwar den „Hub“ der
+Spindeln und verkleinert so die ansteuerbare Zeichenfläche, man verhindert aber,
+dass z. B. bei einem Richtungswechsel
+Drehimpulse vom Spiel der Spindel
+„verschluckt“ werden oder Verzerrungen
+durch ein „Kippen“ des Schreibkopfs
+entstehen.
+Für die stabile Montage der zusätzlichen
+Schneckenmuttern am Schlitten benötigt
+man nur je drei weitere Bauteile: einen
+BS 7,5, einen Federnocken und einen Winkelstein 10x15x15 (38423). Bei der Befestigung der zweiten Schneckenmutter muss
+man darauf achten, dass beide zusammen
+nicht zu „stramm“ auf der Spindel sitzen,
+da sonst die Spindel an den Übergangsstellen verkanten kann oder der Antrieb zu
+schwergängig wird.
+Stefan Falk hielt dazu in seinem PlotterModell von 2005 die beiden Schneckenmuttern durch Federn auf Distanz. Es geht
+aber auch ohne: Bei meinen Schnecken
+war eine um 90° gedrehte, benachbarte
+Schneckenmutter optimal.
+
+
+Für die Führung des Stifthalters in der
+Senkrechten (zum Anheben und Absenken
+des Stifts) habe ich ebenfalls Metallachsen
+gewählt, da sie eine sehr stabile Führung
+nahezu ohne Spiel bei zugleich hoher
+Beweglichkeit erlauben. Das Seilwindengestell wird dazu auf zwei Rollenböcken
+(32085) montiert. Zwei weitere, gegenüberliegend und versetzt angeordnete Rollenböcke verbinden die beiden Metallachsen 50 mit dem Lochstein, dem BS 7,5
+und der Schneckenmutter auf dem Schneckengetriebe (Abb. 6).
+
+Schreibkopf
+Eine besondere Herausforderung stellt die
+Konstruktion des Schreibkopfs dar. Denn
+der Stift muss so stabil auf dem Schlitten
+sitzen, dass er beim Zeichnen kein Spiel
+hat, die Halterung sich also während des
+Zeichnens, z. B. bei einem Richtungswechsel, nicht verzieht. Zugleich muss er
+beweglich montiert sein, damit er sehr
+schnell auf dem Blatt abgesetzt und wieder
+abgehoben werden kann.
+
+
+In einigen Plotter-Modellen wird das Seilwindengestell 30 als Stifthalter verwendet,
+in das auch etwas dickere Stifte geklemmt
+werden können. Der von mir verwendete
+15 mm „größere Bruder“ (31997) reduziert
+jedoch das Spiel des Stifts und hat eine
+deutlich größere Materialstärke, wodurch
+Verwindungen der Halterung praktisch
+ausgeschlossen sind.
+
+Durch den relativ großen Abstand der
+Stiftspitze von der Achse des Schlittens
+(knapp 4,5 cm) verstärkt sich allerdings die
+Wirkung des Spiels des Schneckengetriebes; daher muss der Schreibkopf mit
+einem zweiten Lochstein, einer zweiten
+Schneckenmutter und einem weiteren BS
+7,5 mit der Achse so versteift werden, dass
+kein Spiel bleibt (Abb. 7).
+
+
+Statt mit den von mir verwendeten Rollenböcken kann der Stifthalter auch mit Bausteinen 30, 15 oder 7,5, mit GelenkwürfelKlauen (31436 mit Lagerhülse 36819) oder
+mit Rollenlagern (37636) auf den beiden
+Führungsachsen gleiten. Die Rollenböcke
+sorgen durch den größeren Abstand der
+Führungsstangen voneinander jedoch für
+eine größere Stabilität als die genannten
+Alternativen.
+
+Projekt
+
+Getriebehalter mit Schnecke (31075) und
+einer Schneckenmutter (m = 1,5) gelungen
+(Abb. 8).
+
+Heben und Senken des Stifts
+Zum Heben und Senken des Stifts kommen
+drei Antriebe in Frage, für die sich in der
+ft-Community jeweils zahlreiche Konstruktionen finden:
+Magnetismus (Elektromagnet)
+Luftdruck (Pneumatik-Kolben)
+Motor (mit Hubgetriebe, Schnecke oder
+Exzenter/Schaltscheibe)
+Besonders schnell schalten Konstruktionen
+mit Elektromagnet, allerdings findet dieser
+sich nur in wenigen Kästen und ist als
+Einzelteil nicht ganz billig. Die grauen
+Exemplare aus den Elektromechanik-Kästen der späten 60er und frühen 70er Jahre
+des vergangenen Jahrhunderts sind außerdem nicht für 9 V ausgelegt und deutlich
+schwächer in der Leistung. Die Konstruktion ist zudem nicht einfach, da der Hub
+(1-2 mm) vergleichsweise klein ist.
+Pneumatik-Kolben gibt es auch nicht in
+jeder fischertechnik-Sammlung; zudem
+„blähen“ sie Volumen und Komplexität
+des Schreibkopfes erheblich auf. Daher
+entschied ich mich auch gegen diese
+Variante.
+Aber auch ein Motor-Antrieb hat seine
+Tücken. Mit dem Hubgetriebe ist mir keine
+elegante Konstruktion geglückt: Getriebe
+und erforderliche Endlagenschalter machen
+den Schreibkopf klobig.
+Einigermaßen elegant und schnell ist mir
+der Hebemechanismus mit einem S-Motor
+(alternativ Mini- oder XS-Motor), dem
+
+Getriebehalter mit Schnecke und
+Schneckenmutter
+
+Die Idee zu dieser Konstruktion geht auf
+einen Lenkhebel von thomas004 zurück.
+Ein Taster lässt sich in dieser kompakten
+Konstruktion schlecht als Endlagenschalter
+verwenden, da dessen Befestigung unschön
+herausstehen würde. Daher habe ich statt
+dessen zwei Steckerbuchsen 21 (35307)
+aus den alten em-Kästen verwendet, die
+sich in die Nuten zweier BS 7,5 einschieben lassen. Sie schalten bei Berührung (blauer Kreis in Abb. 8). Aber auch
+diese Variante ist aus zwei Gründen nicht
+optimal: Der Andruck des Stifts auf dem
+Papier ist nicht zuverlässig einstellbar
+(Nachlauf des Motors), und die Steckerbuchsen finden sich eher in ft-Sammlungen
+älterer Fans.
+Eine noch elegantere und kompaktere Konstruktion gelang mir schließlich mit den
+Schaltscheiben (37727) (Abb. 9). Die
+Grundidee findet sich schon im ft-Plotter
+von 1991 [4].
+
+
+
+Dabei drücken die Schaltscheiben den Stift
+aufs Papier, und eine Rückstellfeder hebt
+ihn ab, sobald jene ihn freigeben. Ein
+zugleich von den Schaltscheiben betätigter
+Taster dient als Endlagenschalter.
+
+Antrieb
+Angetrieben werden die Schnecken von je
+einem – um Bauteile zu sparen senkrecht
+montierten – Encodermotor (135484) mit
+aufgesetztem Rast-Ritzel Z10 (35945), der
+das Z40 als Kronenrad nutzt (Abb. 10).
+Zwar zählen die Encodermotoren sicherlich nicht zu jenen Standard-Bauteilen, die
+sich in fast jeder fischertechnik-Sammlung
+finden, aber der Plotter erreicht mit ihnen
+eine beachtliche Genauigkeit:
+
+Schaltscheiben und Rückstellfeder
+
+Bei 75 Impulsen je Motor-Umdrehung und
+einer Untersetzung von 32 : 10 (Z40 als
+Kronenrad) benötigt der Plotter sowohl in
+X- als auch in Y-Richtung 240 Impulse für
+eine Umdrehung des Schneckengetriebes,
+also für eine Bewegung des Schlittens bzw.
+Schreibkopfs um 0,5 cm. Damit erreicht
+der Plotter eine theoretische Auflösung von
+0,02083 mm – das ist sogar besser als die
+Default-Auflösung von HP-Plottern mit
+1/1.016" = 0,025 mm und entspricht fast
+dem Wert von Zuses Graphomat Z64.
+
+Angetrieben werden die Schaltscheiben
+von einem S-Motor mit U-Getriebe. Zwar
+schaltet ein Achsgetriebe etwa um den
+Faktor 4,63 schneller, allerdings kann es
+dabei – abhängig von der Stärke der Rückstellfeder – mit der Motorkraft eng werden
+und die Schaltscheibe bleibt hängen. Auch
+ginge es mit einem XS-Motor noch
+kompakter, aber weder bei diesem noch bei
+meinen alten Mini-Motoren reichte das
+Drehmoment, um den Stift gegen die
+Federspannung herunterzudrücken.
+Als Rückstellfeder verwende ich eine
+kurze Kugelschreiberfeder – die ft-Druckfedern 15 x 5 sind zu lang, und zum
+Modding konnte ich mich nicht durchringen. Eingesetzt auf der Metallstange an
+der in Abb. 9 mit dem blauen Kreis markierten Stelle sorgt die Feder für ein
+kraftvolles Abheben des Plotterstifts.
+
+
+und Kronenrad; Endlagentaster
+
+
+Wer keine Encodermotoren besitzt, kann
+sich auch mit S-Motoren, U-Getriebe und
+Impulsrad 4 (37157) behelfen. Über einen
+Mini-Taster lassen sich die Umdrehungen
+zählen. Sehr kompakt geht das mit der von
+Stefan Falk in der ft-Community publizierten Lösung (Abb. 11).
+
+Projekt
+
+Schließlich lassen sich die Impulse auch –
+wie beim ft-Plotter-Modell von 1991 [4] –
+über eine Lichtschranke am Kettenantrieb
+gewinnen; jedes Kettenglied liefert dabei
+zwei Impulse. Die Schrittweite liegt dann
+(bei Verwendung von Z40) immerhin noch
+bei 0,0625 mm je Impuls – ein Drittel der
+mit den Encodermotoren erreichbaren Auflösung.
+Stift
+
+(Bild: Stefan Falk)
+
+Dabei werden die acht Impulse je Getriebeumdrehung 1 : 3 (vom Rast-Ritzel Z10
+auf ein Z30) untersetzt, so dass 24 Impulse
+eine Schneckenumdrehung (0,5 cm) ergeben. Damit liegt die Auflösung des Plotters
+nur noch bei 0,21 mm. Verwendet man
+statt des Z30 ein Z40, so verbessert sich
+die Auflösung auf 0,16 mm Strichlänge je
+Impuls.
+
+Bleibt zum Schluss noch die Wahl eines
+geeigneten Stiftes. Originale Plotter-Stifte
+verwenden Tusche und haben eine Strichstärke von 0,2 bis 0,7 mm – und einen
+beachtlichen Preis, den man vielleicht
+lieber in einen ft-Kasten investiert. Zudem
+sind sie dicker als die 7 mm Durchmesser
+des Seilwindengestells.
+
+
+Nach einigen Experimenten entdeckte ich
+eine Ball Pen-Mine von Parker (Abb. 11):
+
+
+
+der „Schaft“ passt mit 0,7 cm Durchmesser
+perfekt ins Seilwindengestell, die Strichstärke von 0,7 mm ist fast so fein wie ein
+Plotter-Stift – und der Preis von zwei bis
+vier Euro ist im Vergleich konkurrenzlos
+günstig. Die dünne Spitze lässt sich mit
+einer Klemmbuchse 10 fest in der unteren
+Führung des Seilwindengestells befestigen.
+Sie sollte bei angehobenem Stift ca. 23 mm über dem Papier stehen.
+
+Tipps
+Bei der gesamten Konstruktion muss sehr
+exakt gearbeitet werden, denn selbst kleinste Ungenauigkeiten können eine fehlerhafte Ansteuerung verursachen. Vor allem
+die Führungen auf den Stangen, sowohl
+beim Schreibkopf als auch beim Schlitten,
+sollten möglichst leichtgängig sein; sie
+dürfen weder bremsen noch verkanten. Bei
+allen Bausteinen, insbesondere denen, die
+die Lage der Führungsstangen betreffen,
+sollten die Zapfen fest in den Nuten sitzen
+– lockere Verbindungen sollte man lieber
+ersetzen, damit sich der Plotter im Betrieb
+nicht verzieht.
+Vor längeren Plots sollte der gute „Sitz“
+des Schlittens auf den Schnecken noch
+einmal überprüft werden. Denn jedes Spiel
+
+
+der Schneckenmuttern kann sich leicht zu
+deutlich sichtbaren Fehlern im Plot-Ergebnis summieren.
+Jetzt fehlt nur noch die Ansteuerung des
+Plotters über das Robo-Pro-Programm, und
+der Plotter surrt zufrieden vor sich hin.
+Mehr dazu im zweiten Teil des Beitrags,
+der in der nächsten Ausgabe der erscheinen wird.
+
+Quellen
+[1]
+
+XY-Schreiber, Clubheft 4/1977, S. 810.
+
+[2]
+
+Bauanleitung Plotter-Scanner,
+fischertechnik, 1985.
+
+[3]
+
+Ulrich Müller: Der Plotter/Scanner
+30 571 von 1985, ftComputing,
+
+[4]
+
+Plotter, Experimentierbuch Profi
+Computing, fischertechnik, 1991, S.
+127-137.
+
+[5]
+
+Ulrich Müller: Profi Computing von
+1991: Plotter/Scanner, ftComputing,
+
+[6]
+
+Martin Romann, Gedanken zum
+Präzisionsplotter, 05.09.2003.
+
+

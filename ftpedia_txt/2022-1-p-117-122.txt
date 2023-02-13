@@ -1,0 +1,348 @@
+
+Computing
+
+Computing
+
+Tuning der Mecanum-Roboter
+Dirk Fox
+Der neue fischertechnik-Baukasten „Robotics Hightech“ enthält mehrere Modelle mit den
+Mecanum-Wheels, angetrieben von je einem Encoder-Motor. Eine vielversprechende Innovation – allerdings lässt die Konstruktion der Roboter „Luft nach oben“, insbesondere bei der
+Geschwindigkeit.
+
+Hintergrund
+Mit den Mecanum-Rädern hat fischertechnik 2021 eine spannende Neuigkeit auf den
+Markt gebracht [1].
+
+Die Ansteuerung und Programmierung
+erfolgt wie bei fischertechnik über eine
+WLAN-Verbindung. Es gibt eine passende
+Erweiterung für Scratch und ein Software
+Development Kit (SDK) für Python.
+
+„Robotics Hightech“ (Bild: fischertechnik)
+
+Die Mecanum-Roboter (Abb. 1) treten in
+direkten Wettbewerb mit dem chinesischen
+Drohnenhersteller und Weltmarktführer
+DJI (Da-Jiang Innovations Science and
+Technology Co., Ltd), der seit 2019 mit
+seinem „Robomaster“ (Abb. 2) auf den
+Maker- und Bildungsmarkt zielt. Am
+gleichnamigen Robotik-Wettbewerb, den
+DJI 2013 initiierte, nahmen 2020 weltweit
+über 500 Teams teil. Für diesen Wettbewerb entwickelte DJI den Roboter-Bausatz
+(Abb. 2). Die beiden Robomaster-Modelle
+S1 und EP verfügen über eine Kamera, vier
+Abstandssensoren und können mit handelsüblichen (I2C-) Sensoren erweitert werden.
+
+
+Die Videos, die DJI zum Robomaster ins
+Netz gestellt hat, sind beeindruckend – und
+ansprechend. Auch die technischen Daten
+des Roboters lassen staunen – vor allem
+seine Geschwindigkeit von bis zu 3,5 m/s
+bei Vorwärtsfahrt (etwa 12,5 km/h) und
+600°/s beim Drehen um die eigene Achse.
+Der Controller steuert neben den vier 12VAntriebsmotoren auch mehrere Servos – für
+die Bewegung eines Roboterarms mit
+Greifer (Modell EP) oder einer Abschusseinrichtung für Gelkügelchen (Modell S1).
+
+
+
+Allerdings kann DJI seine Herkunft als Produkthersteller nicht verleugnen: Der Roboter ist mit 3,3 kg sehr schwer, und für den
+Zusammenbau benötigt man mehrere
+Stunden – Erfahrung im Modellbau vorausgesetzt. Auch ist der Preis mit rund 550 €
+(S1) bzw. 950 € (EP) durchaus üppig. So ist
+der Roboter denn auch mehr Spiel- als
+Lernobjekt: Konstruktionsvarianten sind
+nur als Anbau vorgesehen, und der Zusammenbau des Chassis selbst ist nicht Teil des
+Lernprozesses.
+Hier kann fischertechnik punkten: Für etwa
+die Hälfte des Preises (Smarttech ca. 190 €,
+Hightech ca. 475 €) erhält man einen Baukasten, der die Konstruktion zahlreicher
+Modelle ermöglicht – ebenfalls erweiterbar
+um bis zu drei Servos und zahlreiche I²Cund fischertechnik-Sensoren. Der Aufbau
+der Modelle geht (Erfahrung mit fischertechnik vorausgesetzt) sehr fix von der
+Hand; Um- und Anbauten sind möglich und
+erwünscht. Auch das Gewicht ist deutlich
+niedriger: Der fischertechnik-Roboter
+bringt inklusive Akku lediglich 1,25 kg auf
+die Waage.
+Die fischertechnik-Mecanum-Räder haben
+allerdings nur acht Rollen (DJI: 12), daher
+„gleitet“ der Roboter nicht ganz so elegant
+wie der Robomaster über den Untergrund.
+Doch vor allem bei der Geschwindigkeit
+bleibt das fischertechnik-Modell weit hinter
+den Robomaster-Modellen zurück: Gefühlt
+„schleicht“ der Roboter im Vergleich mit
+seinen fixen Konkurrenten. Das verringert
+den Spielspaß deutlich und begrenzt auch
+die Möglichkeiten für den Schul- oder
+Wettbewerbseinsatz.
+Aber: Ist die Konstruktion der fischertechnik-Roboter tatsächlich schon das Ende der
+Fahnenstange – oder kann man da noch
+etwas herausholen? Denn anders als bei DJI
+sind die Mecanum-Roboter kein unveränderbares Modell, sondern eine von zahlreichen Konstruktionsvarianten.
+
+
+Ansatzpunkte
+Die Geschwindigkeit des Roboters können
+wir vor allem durch drei Maßnahmen
+erhöhen:
+ Verringerung der Verluste (Reibung)
+ Verringerung des Gewichts
+ Erhöhung der Achsdrehzahl
+Verringerung der Verluste
+Verluste entstehen vor allem an zwei Stellen: in den Achslagern und im Getriebe.
+Reibung im Getriebe lässt sich vermeiden,
+wenn man die Mecanum-Räder (wie bei
+vielen Mecanum-Modellrobotern) direkt an
+der Motorwelle befestigt. Da die Welle aber
+nur mit Rastachsen verlängert werden kann,
+benötigt man ein Außenlager für jede
+Achse, damit die sich nicht durchbiegt. Das
+würde zusätzliche (statt weniger) Reibung
+verursachen. Ideal wäre daher eine „Rastachsen-Nabe“, die auf die Welle gesteckt
+werden könnte – vielleicht ist das ja eine
+Idee für ein neues fischertechnik-Bauteil.
+Bleibt die Reibung der Achslager. Im Originalmodell von fischertechnik drehen die
+Achsen in je zwei Rollenlagern (37636,
+stabil, wenn einem Ästheten auch aufstoßen
+dürfte, dass die Achsen etwa 2 mm oberhalb
+der Motorwelle liegen.
+
+Originalmodell von fischertechnik
+
+Je nach Fertigungstoleranzen kann es hier
+aber zu deutlich messbarer Reibung kommen. Für die Lagerung der Achsen würde
+jeweils ein Rollenlager ausreichen. Immerhin kann man die Reibung reduzieren,
+indem man die Achsen und Rollenlager
+sorgfältig auswählt (die Lager sollten frei
+auf der Achse drehen) und die Achsen so
+montiert, dass sie nur in je drei Führungen
+aufliegen.
+Verringerung des Gewichts
+Etwa 70% des Gewichts des Mecanum-Roboters (878 g) lassen sich nicht beeinflussen: Wir brauchen die vier Mecanum-Räder
+(137 g), die Motoren (4 x 106 g), den Akku
+(209 g) und den Controller (108 g).3 Man
+könnte den Controller durch einen leichten
+Arduino (75 g) oder einen ftDuino (95 g)
+ersetzen, aber die Einsparung wäre mit 1030 g eher mickrig.
+Immerhin können wir auf einige etwas „gewichtigere“ Bauelemente verzichten oder
+sie durch leichtere Bausteine ersetzen. Dazu
+zählen vor allem die massiven Grundbausteine, die man alle weglassen oder
+durch Bausteine 15 Eck bzw. Winkelträger
+15 ersetzen kann. Damit sparen wir etwa
+100 g Gewicht ein. Die Metallachsen durch
+Rastachsen zu ersetzen würde ebenfalls
+helfen, aber den Antrieb labil machen.
+Immerhin kann man mit einer leichten
+Anpassung der Antriebskonstruktion etwas
+kürzere Achsen wählen. Schließlich kann
+man noch auf ein wenig „Schnickschnack“
+in den An- und Aufbauten verzichten; das
+spart weitere 100 g.
+Die insgesamt erreichbare Gewichtsreduktion liegt damit bei etwa 200 g. Das ist ein
+nennenswerter Teil (rund 16 %) des Gesamt- und über die Hälfte des beeinflussbaren Gewichts. Die Auswirkung auf die
+Geschwindigkeit ist jedoch eher marginal,
+
+
+Tatsächlich könnten wir die Motoren reduzieren
+– wie das geht, wäre ein Thema für einen eigenen
+
+solange das Fahrzeug keine Steigung bewältigen muss (und das ist mit MecanumWheels ohnehin schwierig). Die Gewichtsreduktion hilft ein wenig; eine deutliche
+Auswirkung auf die Geschwindigkeit sollte
+man sich von ihr aber nicht versprechen.
+Erhöhung der Achsdrehzahl
+Den entscheidenden Effekt können wir uns
+von einer Erhöhung der maximalen Achsdrehzahl erhoffen. Das können wir auf zwei
+Wegen bewirken:
+ Verbesserung der Effizienz der Motoren
+ Verwendung stärkerer Motoren
+Um festzustellen, ob wir bei den EncoderMotoren Spielraum für Effizienzsteigerung
+haben, müssen wir prüfen, ob die Motoren
+bei der aktuellen Konstruktion bereits im
+optimalen Leistungsbereich arbeiten.
+Wie das geht hat René Trapp 2015 in einem
+sehr schönen Beitrag in der ft:pedia erklärt
+[2]. Mit Motorkennlinien und einer Messung des Stroms unter Last können wir den
+Antrieb so optimieren, dass die Motoren
+möglichst wenig Verlustleistung (sprich:
+Wärme) erzeugen, ohne dabei „unter ihren
+Möglichkeiten“ zu bleiben – der Nennbetrieb. Nun ist die Messung des Stroms bei
+einem fahrenden Roboter nicht so einfach.
+Daher greifen wir auf die von René vorgestellte Faustregel zurück: Der Motor läuft
+im Nennbetrieb, wenn sich die Motorwelle
+mit etwa 75% der Leerlaufdrehzahl dreht.
+Im Leerlauf konnte ich bei den roten Encodern Drehzahlen von 155-180 RPM messen. Damit liegt der optimale Wirkungsgrad
+des Motors bei etwa 116-135 U/min. Wenn
+die Drehzahl der Motoren höher liegt, ist bei
+der Last noch „Luft nach oben“.
+Alternativ könnten wir stärkere Motoren
+verwenden, beispielsweise die Power-Mo-
+
+Beitrag –, aber damit würden wir auch die Kraft
+des Antriebs verringern.
+
+
+toren. Die lassen sich allerdings in Ermangelung eines Gehäuses schlecht verbauen.
+Für das „Competition Set“ hat fischertechnik gerade einen schwarzen Encoder-Motor
+(186175) mit 0,61 Nm und 230 RPM im
+Nennbetrieb herausgebracht; bei Santjohanser ist er bereits für 24 € erhältlich.
+
+Vorarbeiten
+
+Dasselbe funktioniert natürlich auch in
+ROBO Pro Coding für den TXT 4.0 (Listing
+2). Die Zahl der Impulse (IPCM), die der
+Encoder für 1 cm Fahrstrecke benötigt
+(resp. liefert), habe ich experimentell über
+eine Teststrecke von zwei Metern Länge
+bestimmt. Bei der originalen fischertechnik-Konstruktion sind das 0,682 Impulse.
+
+Um verschiedene Modellvarianten testen zu
+können habe ich ein kleines Testprogramm
+in ROBO Pro geschrieben, das die verschiedenen Bewegungsarten des Mecanum-Roboters über eine Fernsteuerung (ROBO ProBedienfeld) im Online-Mode via WLAN
+zugänglich macht (Abb. 4):
+
+Listing 1: Stoppuhr, Drehzahl- und
+Geschwindigkeitsmessung in ROBO Pro
+
+Mecanum-Roboter
+
+Ergänzt habe ich das Programm um eine
+Stoppuhr, die bei Geradeausfahrt des Roboters die verstrichene Zeit misst. Die dabei
+gezählten Impulse des Encoder-Motors M1
+teile ich durch die Anzahl Impulse, die beim
+Mecanum-Roboter bei einer Geradeausfahrt über eine Strecke von 1 cm Länge
+anfällt, und das Ergebnis teile ich wiederum
+durch die Messung der Stoppuhr (in ms).
+Das liefert mir die Durchschnittsgeschwindigkeit der Fahrt. Aus Impulszahl und
+Stoppuhr bestimme ich zugleich die
+Drehzahl der Motorwelle (RPM) (Listing
+1).
+
+
+Listing 2: Drehzahl- und Geschwindigkeitsmessung in ROBO Pro Coding
+
+Modellvarianten
+Alle im Folgenden vorgestellten Modellvarianten habe ich sowohl mit dem Robotics TXT Controller als auch mit dem TXT
+4.0 gesteuert und jeweils Geschwindigkeit
+und Umdrehungszahl gemessen. Mit dem
+TXT sind die Modelle rund 50 g schwerer
+als die Varianten mit dem TXT 4.0; die
+Messergebnisse unterscheiden sich auch
+deshalb ein wenig.
+Um Störeinflüsse durch unterschiedliche
+Ladestände der Akkus auf die Messergebnisse auszuschließen, habe ich die Roboter
+mit einer 9V-Stromversorgung über ein
+langes fischertechnik-Kabel versorgt.
+Originalversion
+
+Aber die Motorwellen drehen mit ca. 144
+RPM oberhalb des optimalen Bereichs –
+und vertragen damit also noch etwas zusätzliche Last.
+Variante 1
+In einer ersten Konstruktionsvariante habe
+ich die 2:1-Untersetzung ins Langsame
+durch einen 1:1-Antrieb (Z20 auf Z20) ersetzt. Dazu musste ich den Abstand zwischen den Motorblöcken auf zwei Baulängen (= 30 mm) vergrößern. Die Achsen
+habe ich dafür in Rollenböcken (32085)
+gelagert. Um die Achsen zusätzlich zu stabilisieren habe ich statt zwei separaten
+Achsen ein altes Differential (31043) eingebaut (Abb. 6). Natürlich funktioniert die
+Konstruktion auch mit getrennten Achsen.
+
+Als Referenz habe ich zunächst die Geschwindigkeit und die Drehzahl (RPM) des
+originalen Baukasten-Antriebs gemessen.
+Zuvor habe ich das Gewicht des Roboters
+bestmöglich reduziert und versucht, beim
+Zusammenbau der Achslagerung die Reibung zu minimieren. Die Z20 habe ich mit
+einem Abstandsring montiert und das RastZ10 nicht bis zum Anschlag aufgesteckt.
+Das Ergebnis ist ernüchternd: Mit 0,18 m/s
+(≈ 0,64 km/h), einem 20stel der Höchstgeschwindigkeit eines vorbeifahrenden Robomaster, sieht das fischertechnik-Modell mit
+TXT bestenfalls dessen Kondensstreifen.
+Die TXT-4.0-Variante ist ein klein wenig
+schneller; sie erreicht 0,22 m/s (≈ 0,8 km/h)
+– immer noch Schneckentempo.
+
+des Mecanum-Antriebs
+
+
+Auf die Motorachse habe ich jeweils ein
+Rast-Z20 aufgesteckt und auf den Achsen je
+ein Z20 mit Nabe montiert. Mit dieser
+Modifikation ist also eine Verdoppelung
+der Geschwindigkeit des Roboters zu erwarten. Abb. 7 zeigt die Gesamtansicht des
+Roboters mit allen vier Motoren.
+Und tatsächlich: Der von einem TXT gesteuerte Roboter (Abb. 7) erreicht bei meinen Messungen eine Geschwindigkeit von
+35 cm/s (≈ 1,26 km/h) mit 120 RPM. Mit
+dem TXT 4.0 konnte ich sogar 52 cm/s
+(≈ 1,88 km/h) messen; die Umdrehungszahl
+der Motorachse stieg dabei auf 167 RPM.
+
+
+
+
+Das ist immer noch nur ein Siebtel der
+Höchstgeschwindigkeit des Robomaster
+S1, aber eine erkennbare Verbesserung.
+
+erreichte das Modell 76 cm/s (≈ 2,75 km/h)
+bei 122 RPM; der Anstieg der Motorlast ist
+erkennbar. Damit arbeitet der Motor aber
+immer noch im Nennbereich. Die Maximalgeschwindigkeit der Modellvariante 2
+(Abb. 9) erreicht also etwa ein Fünftel der
+Höchstgeschwindigkeit des Robomaster.
+
+(Gesamtansicht)
+
+Variante 2
+Die Messergebnisse der ersten Konstruktionsvariante motivierten mich zur Ersetzung der 1:1- durch eine 1:2-Übersetzung
+ins Schnelle. An dem originalen Antriebsmodul von fischertechnik musste ich dafür
+gar nicht viel ändern: Wenn man das RastZ10 auf der Motorwelle durch ein Rast-Z20
+ersetzt und das Z20 mit Nabe durch ein Z10
+(Abb. 8), sollte sich die Geschwindigkeit
+des Fahrzeugs gegenüber dem Original
+etwa vervierfachen.
+
+(Gesamtansicht)
+
+Beim Zusammenbau des Antriebsmoduls
+muss man darauf achten, dass zwischen
+dem Rast-Z20 und dem Motor etwas Platz
+bleibt, damit es nicht am Gehäuse reibt.
+Weitere Optionen
+Motiviert von den Resultaten habe ich auch
+mit einer Übersetzung 1:3 ins Schnelle
+experimentiert. Der Geschwindigkeitsgewinn ist allerdings gering, da die Umdrehungszahl spürbar sinkt und der Motor stark
+in die Überlast geht. Keine gute Idee also.
+Weitere
+Geschwindigkeitssteigerungen
+sind daher nur mit stärkeren Motoren zu
+erreichen.
+
+Referenzen
+Übersetzung 1:2 ins Schnelle
+
+Das erreicht die Modellvariante auch fast:
+Die Geschwindigkeit des vom TXT gesteuerten Roboters stieg auf 0,65 m/s (≈ 2,34
+km/h) bei 106 RPM – schon eine spürbare
+zusätzliche Last. Mit einem TXT 4.0
+
+
+[1]
+
+Dirk Fox: Mecanum-Räder und Omniwheels. ft:pedia 1/2021, S. 66–74.
+
+[2]
+
+René Trapp: fischertechnik-Motoren
+richtig betreiben. ft:pedia 3/2015,
+S. 34–38.
+
+[3]
+
+fischertechnik: Datenblatt Encodermotor 9V, Art.-Nr. 53422. FT-T-KN,
+15.08.2017.
+
+

@@ -1,0 +1,140 @@
+
+
+Computing
+
+Das Universal-Interface am LPT-Port
+Helmut Jawtusch
+Wer noch ein Universal-Interface sein eigen nennt (und über einen PC mit Parallelport
+verfügt), kann ihm ohne große Klimmzüge sogar unter den aktuellen Windows-Betriebssystemen neues Leben einhauchen…
+Viele fischertechnik-Freunde besitzen noch
+PCs mit einem echten LPT-Port (Parallelport). Lässt sich damit noch das alte Universal-Interface (Abb. 1) von fischertechnik
+auch unter Windows 7 oder Windows 10
+nutzen? Kann man dann vielleicht sogar den
+alten fischertechnik-Plotter damit betreiben?
+
+∂ Booten
+
+Universal-Interface
+
+Die Antwort auf beide Fragen lautet: Ja, es
+geht. Man benötigt dazu die folgenden
+Treiber:
+∂ winrt.sys V.3.5.1.2 (6.3.2001) und
+∂ umFish.dll V. 1.3.5.12 (5.6.2001)
+Beide Treiber können im DownloadBereich der ft:Community im Paket
+umfish.zip heruntergeladen werden.
+Die Installation des LPT-Treibers ist
+einfach:
+∂ WinRT.SYS kopieren in das Verzeichnis
+Windows\System32\Driver
+∂ Eintrag in die Registry durch Doppelklick auf WinRTSYS.REG
+
+Um die Sache interessanter zu machen habe
+ich auf der Basis von umFish.dll den
+Treiber umfishcount.dll entwickelt, der
+bereits den Kontrollblock enthält und
+zusätzlich die folgenden Befehle zur
+Verfügung stellt:
+∂ GetCounter(Nr) bei Verwendung der
+Eingänge 1 bis 4 als Countereingänge; je
+nach Drehrichtung wird vor oder zurück
+gezählt;
+∂ xStepperV,
+
+xStepperZ, yStepperV,
+yStepperZ zum Betrieb der großen
+
+Schrittmotoren des Plotters; ein Parameter ermöglicht die Anpassung der
+nötigen Pausen an die Geschwindigkeit
+des PCs, um eine gleichmäßige und
+zügige Bewegung der Schrittmotoren zu
+erreichen.
+
+
+Computing
+
+Die übrigen Basis-Befehle sind:
+∂ OpenInterface(BYTEARRAY
+Portname)
+∂ CloseInterface()
+∂ GetInput(DWORD InputNr)
+∂ GetInputs()
+∂ ClearMotors()
+∂ SetMotors(DWORD MotorStatus)
+∂ SetLamp(DWORD
+OnOff)
+
+LampNr,
+
+DWORD
+
+∂ SetMotor(DWORD
+Direction)
+
+MotorNr,
+
+DWORD
+
+∂ GetAnalog(DWORD AnalogNr)
+
+Da umFish.dll den Master-Slave-Betrieb
+unterstützt, stehen mit einem zweiten
+Parallelinterface weitere vier Motorausgänge und zusätzliche acht Tastereingänge
+zur Verfügung. Dann ist auch die Ansteuerung des Magneten für den Plotter-Stift
+möglich.
+
+habe in einen neueren PC (ohne LPT-Port)
+die Karte Longshine LCS-6320 PCI Express mit Parallel-Port (Preis: 11 €) eingesetzt und auf einer Partition Windows XP
+(32-bit) installiert. Nur die Treibersuche
+war etwas mühsam. Vor dem Aufruf von
+WinRTSYS.reg habe ich in dieser Registrierungsdatei in der Zeile „IoPortAddress“=
+dword:378 die Adresse 378 in die aktuelle
+Portadresse (E050) geändert, die im GeräteManager angezeigt wird.
+Wegen der 5V/3,3V Problematik verweise
+ich auf [2]. Dort wird erklärt, wie man durch
+den Einbau eines 47 kOhm-Widerstandes
+erreicht, dass das Universal-Interface auch
+an neueren Parallelports funktioniert, die
+die 3,3V-Technik verwenden. Ich habe den
+Widerstand unten an der Platine angelötet,
+da dies dort mit einem normalen Lötkolben
+einfacher ist (Abb. 3).
+
+Außerdem habe ich eine Wrapper-Datei
+sowie eine Java-Bibliothek entwickelt, so
+dass auch der Betrieb des Universal
+Interfaces unter Java möglich ist.
+Ich habe kleine Testprogramme in Java und
+mit Terrapin Logo geschrieben und war
+erstaunt, wie flott sich der Plotterstift
+bewegt. Den Treiber umfishcount.dll
+und die Beispielprogramme habe ich ebenfalls im Download-Bereich der ft:Community zur Verfügung gestellt.
+Ich habe die Implementierung unter Windows 7 und Windows 10 (32 bit) getestet.
+Wer ein 64-bit-System hat, muss auf einer
+Partition ein 32-bit-System installieren. Mit
+einem Bootmanager kann man dann eines
+der Betriebssysteme wählen. Den Treiber
+WinRT.SYS gibt es leider nur in einer 32Bit-Version. Bei einigen Windows-Systemen sind für Java-Programme noch die Systemdateien msjava.dll und msvcr110d.dll
+(in system32) erforderlich, die man aber
+kostenlos im Netz herunterladen kann. Ich
+
+
+Zwei Anmerkungen zum Schluss:
+Die Robo Connect Box (USB-zu-InterfaceAdapter) ermöglicht zwar den Anschluss
+eines Universal-Interfaces, aber sie unterstützt nicht den Master-Slave-Betrieb.
+Außerdem ist die Übertragungsgeschwindigkeit für die Steuerung der Schrittmotoren zu gering. Auch der Einsatz eines
+USB-LPT-Adapters ist nicht geeignet, da
+dies die Geschwindigkeit stark reduziert.
+
+Quellen
+[1]
+
+Helmut Jawtusch: Der alte fischertechnik-Plotter mit neuen Treibern.
+ft:pedia 3/2017, S. 53-56.
+
+[2]
+
+Ulrich Keller: fischertechnikComputing-Ecke. NachtHackers
+Homepage.
+
+

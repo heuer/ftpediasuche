@@ -1,0 +1,123 @@
+
+Getriebe
+
+Getriebe
+
+Schmidt-Kupplung
+Florian Bauer
+Im innoffiziellen Lego-Technik-Buch [1] fand ich das Modell einer Schmidt-Kupplung, einer
+witzigen Konstruktion, um variable Achsversätze zu ermöglichen.
+Die Schmidt-Kupplung ist ein Mechanismus, der die Drehbewegung einer Antriebswelle in zwei Dimensionen radial auf eine
+Ausgangswelle versetzen kann [2].
+Sie wurde von Richard Schmidt und Walter
+Haarmann entwickelt [3] und wird unter
+anderem bei Walzenantrieben mit weiten
+Versätzen eingesetzt, um die Variation der
+Dicke der Werkstücke auszugleichen. In
+Wolfenbüttel gibt es sogar eine Firma
+SCHMIDT-KUPPLUNG GmbH, die diese
+Kupplungen anbietet. Auf deren Internetseite sind gute Abbildungen und interessante Informationen zu den Eigenschaften
+dieses Bauelements zu finden [4].
+
+
+In Abb. 1 sind die Achsen a1 und a3 über
+Kurbelgestänge miteinander verbunden.
+Die Achsen a1 und a3 sind mechanisch vorgegeben. Die Achse a2 stellt sich entsprechend des Achsversatzes zwischen a1 und
+a3 automatisch ein.
+Bei der Schmidt-Kupplung handelt sich um
+Parallelkurbelgetriebe bestehend aus drei
+Drehscheiben S1, S2 und S3, die über ein
+Kurbelgestänge miteinander verbunden
+sind. Die erste angetriebene Drehscheibe S1
+
+überträgt das Drehmoment der Antriebsachse a1 über drei Kurbelstangen winkeltreu auf die mittlere Scheibe S2, die ihrerseits über drei Kurbelstangen das Drehmoment weiter an die Ausgangsscheibe S3
+überträgt.
+
+S2 sind durch Kurbeln k1, k2, k3 miteinander
+verbunden, die eine Drehung um Achse a1
+winkeltreu auf Achse a2 übertragen
+
+Wenn man zwei Scheiben mit drei gleich
+langen Kurbeln (Länge r) miteinander verbindet, kann man bei vorgegebenen Achspositionen eine Drehung 1:1 übertragen.
+Durch die Verwendung von drei Kurbeln ist
+sichergestellt, dass es keinen Totpunkt gibt
+und die Bewegung in allen Winkelstellungen gleichmäßig übertragen werden kann.
+Die möglichen Achspositionen der Achse
+a2 der zweiten Scheibe liegen auf einem
+Kreis K(a2) mit Radius r der Kurbellänge
+
+
+
+um die Achsposition der Antriebsscheibe.
+Damit lassen sich also Achsversätze der
+mittleren Scheibe realisieren, bei denen der
+Mittelpunkt dieser Scheibe auf diesem
+Kreis liegt.
+Man kann dieses Übertragungsprinzip ein
+zweites Mal anwenden, um einen weiteren
+analogen Achsversatz der Ausgangsscheibe
+zu erhalten: Der Mittelpunkt der Ausgangsscheibe liegt auf einem Kreis mit Kurbelradius um den Mittelpunkt der Mittelscheibe.
+Die Achsen a1, a2 und a3 können als Drehpunkte eines SCARA-Arms aufgefasst werden. Über die Winkelstellungen der
+„Arme“, an deren Drehachsen sich die
+Drehscheiben befinden, kann ein weiter Be-
+
+reich von transversalen Achsversätzen eingestellt werden. Wichtig ist nur, dass die
+Kurbeln kurz genug sind, um sich ungehindert bewegen zu können.
+Interessant ist der Fall ohne Versatz, bei
+dem die Achsen a1 und a3 zusammenfallen.
+In diesem Fall ist die Achsposition der mittleren Drehscheibe nicht mehr eindeutig bestimmt. Sie kann dann jeden Punkt auf dem
+Kreis K(a2) einnehmen.
+Wikipedia entnehmen wir einen weiteren
+Vorteil: „… bei Versatzänderung unter Last
+und im Betrieb justiert sich das System über
+das Ausgleichselement Mittelscheibe selbst
+ein, ohne eine nach außen hin wirkende Reaktion. Radialschwingungen werden von einer Welle nicht auf die andere übertragen.“
+
+
+
+Getriebe
+
+
+Was mit Lego geht, ist auch mit fischertechnik möglich, wenn auch der Aufbau nicht
+ganz so kompakt ist.
+Bei dem Modell in Abb. 3 lässt sich das
+Prinzip der Schmidt-Kupplung demonstrieren. Wichtig ist eine stabile und parallele
+Achsenlagerung. Am „Ausgang“ befindet
+sich ein Verschiebe-Schlitten, mit dem sich
+die Achse in der Höhe und Seite verschieben lässt.
+
+verbinden, kann man Statikstreben einsetzen
+
+
+
+
+Im Forum hat ein kleiner Wettbewerb um
+den kompaktesten Aufbau stattgefunden.
+Ein sehr elegantes Modell hat Thomas Püttmann (aka geometer) gepostet (Abb. 6).
+
+[2]
+
+Wikipedia: Schmidt-Kupplung.
+
+[3]
+
+Walter Haarmann: Wellenkupplung.
+Patentschrift DE 2933722,
+21.08.1979 (veröffentlicht am
+02.02.1989).
+
+[4]
+
+Fa. SCHMIDT-KUPPLUNG GmbH:
+Homepage.
+
+Quellen
+[1]
+
+Pawel „Sariel“ Kmiec: Das „inoffizielle“ LEGO-Technic-Buch: Kreative
+Bautechniken für realistische Modelle. dpunkt Verlag GmbH, 2013,
+S. 88 ff.
+
+
+
+

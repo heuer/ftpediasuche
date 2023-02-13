@@ -1,0 +1,296 @@
+
+
+Computing
+
+Radar und Sonar
+Dirk Fox
+In der ersten Ausgabe der ft:pedia wurde am Beispiel des Temperatursensors gezeigt, wie der
+Robo TX Controller als Messgerät eingesetzt werden kann. Der Abstandssensor erlaubt
+darüber hinaus nicht nur die Bestimmung von Distanzen – lässt man ihn rotieren, wird er zum
+einfachen Radargerät (technisch eher einem Sonar) mit einer Reichweite von bis zu 4 m.
+Damit kann man sogar einen kleinen Raum vermessen.
+Der Begriff Radar ist ein Akronym aus den
+Anfangsbuchstaben von „Radio (Aircraft)
+Detection and Ranging“, auf Deutsch: der
+Ortung und Abstandsmessung mit Hilfe
+elektromagnetischer Wellen im Radiofrequenzbereich (Very High Frequency, VHF
+30-300 MHz) [1]. Dabei wird die Eigenschaft von Radiowellen genutzt, von festen
+Gegenständen reflektiert zu werden. Aus
+der Laufzeit zwischen Sendung und
+Empfang des reflektierten Radar-Signals
+kann so die Entfernung bis zu einem Gegenstand oder Hindernis bestimmt werden,
+denn elektromagnetische Wellen breiten
+sich konstant mit Lichtgeschwindigkeit (c0
+300.000 km/sec) aus.
+Die Berechnung ist sehr einfach: Kennt
+man die Laufzeit t des (reflektierten) Signals, dann lässt sich daraus die Distanz d
+als die Hälfte der vom reflektierten Signal
+insgesamt zurückgelegten Strecke (zum
+Objekt und wieder zurück) bestimmen:
+d = c0 · t/2
+Heute sind Radargeräte sowohl in der
+Flugüberwachung als auch beim Schiffsverkehr unverzichtbar geworden. Sie verhindern Kollisionen und machen die hohe
+Verkehrsdichte heutiger Großflughäfen
+und den Betrieb bei schlechten Wetterverhältnissen und in der Dunkelheit überhaupt
+möglich. Radartechnik wird heute zu vie4
+
+len weiteren Zwecken und vor allem auch
+in höheren Frequenzbereichen (3 - 300
+GHz) eingesetzt, wie z. B. zur Geschwindigkeitskontrolle von Kraftfahrzeugen.
+
+Geschichte
+Die Erfindung des Radars geht auf den
+deutschen Ingenieur Christian Hülsmeyer
+(1881 - 1957) zurück, der am 30.4.1904
+sein „Telemobiloskop“ genanntes „System
+zur Erkennung von entfernten beweglichen
+Gegenständen“ im Deutschen Reich zum
+Patent anmeldete (Patent-Nr. 165546) [2].
+
+„Telemobiloskops“ vom 30.4.1904
+
+Hülsmeyer nutzte die Erkenntnisse von
+Heinrich Hertz (1857 - 1894), der 1888 die
+Existenz elektromagnetischer Wellen und
+deren Eigenschaft, von metallischen Gegenständen reflektiert zu werden, nachgewiesen hatte. Mit seiner Erfindung wollte
+Hülsmeyer in erster Linie die Sicherheit
+der See- und Binnenschifffahrt bei schlechter Sicht erhöhen, indem er die Ortung
+anderer Seefahrzeuge ermöglichte. Beim
+Technical Nautical Meeting in Rotterdam
+
+gelang ihm 1904, ein Schiff auf eine
+Distanz von 3 km zu detektieren. Dennoch
+blieb seiner Erfindung der wirtschaftliche
+Erfolg versagt [3].
+Einige Jahre später beschäftigte sich auch
+der schottische Physiker Robert WatsonWatt (1892 - 1973) mit der Ortung von Objekten mittels Radiowellen. 1919 ließ er
+sein Verfahren patentieren. Aber erst mit
+dem drohenden zweiten Weltkrieg und der
+Furcht Großbritanniens vor der deutschen
+Luftwaffe erwachte das Interesse an Verfahren zur Früherkennung feindlicher
+Flugzeuge. Am 26.2.1935 gelang WatsonWatt nahe Daventry die Ortung eines anfliegenden Bombers [4, 5] mit einer improvisierten Antenne (Abb. 2).
+
+Computing
+
+mit überlebenswichtigen Gütern versorgten.
+
+
+Echoortung
+
+von Watson-Watts Assistenten Arnold Wilkins
+(Quelle: Wikipedia)
+
+In den folgenden Jahren wurden Radargeräte zügig weiterentwickelt. Die Anzeige
+der Messergebnisse erfolgte dabei zunehmend auf PPI-Sichtgeräten (Plan Position
+Indicator, Abb. 3). Ausgehend vom eigenen Standort werden dabei geortete Objekte auf einem kreisrunden Bildschirm angezeigt und mit der Drehung des Radars aktualisiert.
+Während des zweiten Weltkriegs spielten
+Radargeräte eine entscheidende Rolle – allerdings weniger in der Luftüberwachung,
+sondern vor allem im U-Boot-Krieg: Sie
+erlaubten ab 1943 die Ortung und Bekämpfung deutscher U-Boote bei Überwasserangriffen auf Handelsschiffe, die England
+
+Neben dem Radar setzte sich ein weiteres
+Verfahren zur Ortung und Abstandsbestimmung von Gegenständen durch, das auch
+bei nichtmetallischen Objekten funktioniert: die Echoortung. Dabei kommen statt
+elektromagnetischer Wellen Schallwellen
+zum Einsatz, meist Frequenzen jenseits des
+für menschliche Ohren hörbaren Bereichs
+von ca. 20 kHz (Ultraschall) – eine Technik, die Fledermäuse bereits seit Jahrtausenden erfolgreich zur Orientierung verwenden.
+Am 22.7.1913 patentierte der deutsche
+Physiker Alexander Brehm (1880 - 1952)
+das Echolot (Patent-Nr. 282009), ein Gerät
+zur Messung von Meerestiefen und Entfernungen von Schiffen und Hindernissen
+durch Schallwellen. Motiviert war diese
+Entwicklung vor allem durch den Untergang des damals größten Schiffs der Welt
+am 15.4.1912 nach der Kollision mit einem
+Eisberg – der Titanic.
+Der französische Physiker Paul Langevin
+(1872 - 1946) entwickelte 1915 das Echolot zum Sonar (Sound Navigation and
+Ranging) weiter, mit dem U-Boote unter
+Wasser in 1.500 m Entfernung geortet werden konnten. Weiterentwicklungen des So5
+
+
+
+nars kamen vor allem während des zweiten
+Weltkriegs im Kampf gegen die deutsche
+U-Boot-Flotte zum Einsatz.
+Die Ausbreitungsgeschwindigkeit von
+Schallwellen ist, anders als bei elektromagnetischen Wellen, nicht konstant. Im Wasser hängt sie von der Temperatur, dem
+Salzgehalt und dem Druck ab – und alle
+drei Parameter ändern sich mit der Wassertiefe. Sie liegt zwischen ca. 1.450 m/sec in
+Süßwasser und 1.900 m/sec in tiefem, kalten und stark salzhaltigen Wasser. Das
+macht die genaue Abstandsmessung komplizierter, reduziert aber die Komplexität
+der zur Messung erforderlichen technischen Komponenten.
+Ultraschall lässt sich nicht nur im Wasser
+zur Distanzbestimmung nutzen. In 20°C
+warmer Luft liegt die Ausbreitungsgeschwindigkeit von Schallwellen bei ca.
+343 m/sec – also nur etwa einem 1.000stel
+der Lichtgeschwindigkeit. Sie ermöglicht
+daher auch die Bestimmung geringer Abstände mit moderatem technischen Aufwand. Allerdings ändert sie sich abhängig
+von Luftdruck und Temperatur, daher kann
+ein Ultraschallsensor je nach Umgebung
+leicht abweichende Messwerte liefern.1
+
+Distanzsensor
+Für das Robo Interface gibt es schon lange
+einen Distanzsensor, der mit Ultraschall
+arbeitet. Inzwischen ist auch für den Robo
+TX Controller ein Ultraschallsensor erhältlich (Abb. 4).2 Dessen Messbereich liegt
+bei ca. 3 cm bis 4 m.
+Der Ultraschallsensor wird am TX Controller an die Stromversorgung (rot: +9V;
+grün: Masse) und das schwarze Kabel an
+1 Bei 0°C sinkt die Ausbreitungsgeschwindigkeit
+
+auf 331 m/sec, bei 35°C steigt sie auf 352 m/sec [6]
+– eine Abweichung von bis zu 3,6 %.
+2 Online-Shop der Knobloch GmbH, Einzelteil-Be-
+
+stellung (Best.-Nr. 133009)
+http://www.knobloch-gmbh.de/shop/
+
+einen der Eingänge I1 bis I8 angeschlossen.
+
+
+Zur Abstandsmessung verwendet man in
+Robo Pro den Universaleingang mit der
+Eingangsart „Ultraschall“ und dem Sensortyp „Abstandssenor“. Er liefert den Abstand als ganzzahligen Wert in cm; wird
+kein Objekt in der Reichweite des Sensors
+detektiert, gibt der Sensor den Wert 1.023
+zurück.
+
+Radarfahrzeug
+Wir möchten nun ein Fahrzeug mit einem
+„Ultraschall-Radar“ (genauer einem Sonar)
+ausstatten, mit dem der Abstand zu allen
+umliegenden Hindernissen bestimmt wird.
+Dabei geht es uns zunächst nur um die
+Abstandsbestimmung – unabhängig davon,
+ob die Messwerte anschließend für einen
+Alarm, die Steuerung des Fahrzeugs oder
+andere Zwecke genutzt werden.
+Um den Sensor rotieren zu lassen, muss er
+mittig auf einer von einem Motor angetriebenen Stange montiert werden. Dazu eignet sich besonders gut die Achsenverschraubung (38843, siehe Abb. 6).
+Der Sensorausgang lässt sich leicht mit
+zwei Klemmkontakten (31338) über die
+(Metall-) Stange übertragen. Will man den
+rotierenden Ultraschallsensor jedoch nicht
+mit einer eigenen (mitrotierenden) Stromversorgung versehen, benötigt man außerdem einen Schleifring (31301) und zwei
+
+Kontaktstifte (31305) aus den alten Elektromechanik-Kästen (Abb. 5).
+
+Klemmkontakt, Kontaktstift
+
+Damit die vom Ultraschall-Sonar gemessenen Werte später auch ausgewertet werden
+können, muss die jeweilige Position, also
+der Drehwinkel des Sensors bekannt sein.
+
+Computing
+
+Tests mit unterschiedlichen Drehwinkeln
+je Motorschritt zeigen, dass die Genauigkeit der Messungen ab 120 Messwerten je
+Rotation nicht mehr steigt. Den dafür erforderlichen Drehwinkel von 3° je Messpunkt erreicht man mit der folgenden
+Übersetzung:
+Verwendung eines Z40-Zahnrads, das
+von einer Rastschnecke angetrieben
+wird;
+Aufteilung der für eine komplette 360°Drehung des Encodermotors benötigten
+75 Impulse in drei gleiche Teile (also
+jeweils 25 Impulse).
+Der Encodermotor wird in Robo Pro über
+das Befehlselement „Erweiterte Motorsteuerung“ angesprochen. Dazu muss die
+Stromzufuhr an einen Motorausgang (hier:
+M1), der Impulsausgang (schwarz) an den
+entsprechenden Counter (hier: CD1) und
+die Stromzufuhr des Encodermotors an
+Masse (grün) und +9 V out (rot) angeschlossen werden.
+
+Encodermotor-Steuerung
+mit Schleifring und Klemmkontakten
+
+Das erreicht man am einfachsten, indem
+die Rotation des Sonars durch einen Impulszähler (37157) oder über einen Encodermotor gesteuert wird. Damit lässt sich
+der Sensor Schritt für Schritt um exakt
+denselben Winkel weiterdrehen.
+
+Das folgende kleine Robo Pro-Programm
+(Abb. 8) lässt den Sonar-Sensor einmal um
+360° rotieren und trägt die 120 Messwerte
+in eine Tabelle ein, die nach dem Durchlauf des Programms in einer .csv-Datei
+gespeichert werden kann (siehe 1/2011). Die aktuellen Messwerte werden
+im Online-Betrieb angezeigt.
+
+
+
+
+Robo Pro erlaubt die Berechnung von
+Sinus und Cosinus, lässt aber leider keine
+Ansteuerung einzelner Punkte im Bedienfeld über Koordinatenangaben zu, daher ist
+eine Online-Sonar-Darstellung nur mit anderen Programmierumgebungen möglich.
+
+Steuerung des Radar-Sensors
+
+Die gespeicherten Daten lassen sich anschließend z. B. in Excel so ähnlich wie in
+einem PPI-Bild darstellen (Abb. 9).
+
+Literatur
+[1]
+
+Wikipedia: Radar.
+http://de.wikipedia.org/wiki/Radar
+
+[2]
+
+Wikipedia: Christian Hülsmeyer.
+http://de.wikipedia.org/wiki/Christia
+n_H%C3%BClsmeyer
+
+[3]
+
+Holpp, Wolfgang: Das Jahrhundert
+des Radars. Veröffentlichung anlässlich der 100-Jahr-Feier der Erfindung
+des Radars 2004.
+http://www.100jahreradar.de/vortrae
+ge/Holpp_Das_Jahrhundert_des_Rad
+ars.pdf
+
+[4]
+
+Wikipedia: Robert Watson-Watt.
+http://de.wikipedia.org/wiki/Robert_
+Watson-Watt
+
+[5]
+
+von Schumann, Uwe; Knoll, Jürgen
+A.: Robert Watson-Watt und das
+Radar. Film (15 min.) aus der Sendereihe ‚Meilensteine der Naturwissenschaft und Technik’ des Schulfernsehens der ARD, 1992.
+http://www.youtube.com/watch?v=u
+wP3LcDdU7w
+
+[6]
+
+Wikipedia: Schallgeschwindigkeit.
+http://de.wikipedia.org/wiki/Schallge
+schwindigkeit
+
+Sonar-Messung vom 07.05.2011
+
+
+
+
+
+
+
+
+
+
+
+
+helle Flächen: kein Hindernis
+
+Aus den gemessenen Distanzwerten d zu
+einem Drehwinkel lassen sich aber auch
+leicht die zugehörigen x- und y-Koordinaten für eine Online-Darstellung auf einem
+„Radarschirm“ gewinnen (Abb. 10):
+x = d · sin( ); y = d · cos( )
+
+

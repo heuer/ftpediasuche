@@ -1,0 +1,237 @@
+
+
+Getriebe
+
+Uhrwerk mit Z80 und Z100
+Gerhard Birkenstock
+Vor einigen Monaten stand ich vor dem Problem, eine Untersetzung realisieren zu müssen. Es
+sollten einige Messreihen recht präzise erfasst werden. Dabei war wichtig, keinen Totweg in
+der großen Untersetzung zu bekommen. Kleine Zahnräder mit wenig Zähnen hat fischertechnik
+im Programm – das Problem sind die großen. Aus diesen Überlegungen sind zwei riesige
+Zahnräder mit 80 und 100 Zähnen entstanden – und ein besonderes Uhrwerk.
+
+Die Zahnräder
+
+· Rand 1 = 21,5 mm
+
+Um die großen Zahnräder vernünftig auf die
+Achsen zu bringen, musste ich mir die
+Nabenmuttern und Nabenzangen von
+fischertechnik genauer ansehen. Als vernünftige Maße haben sich dabei die folgenden herausgestellt:
+
+· Rand 2 = 23,0 mm
+· Rand 3 = 24,5 mm
+· Rand 4 = 26,0 mm
+Der Rand 4 ist gleichzeitig die Außenkontur
+für die Nabe.
+
+· Die innere freie Öffnung hat einen
+Durchmesser von 20 mm. Dort sind 24
+Nasen eingebracht.
+· Jede Nase hat einen Radius von 0,75
+mm. Der Mittelpunkt dieser Radien wird
+auf den 20 mm Durchmesser aufgelegt.
+Somit ist alle 15° ein Halbkreis zu
+erstellen.
+Um beim Festziehen der Nabenmuttern eine
+Zentrierung zu bekommen, hat fischertechnik in die Klemmung einen flachen
+Konus eingebracht. Da ich mit der mir
+zugänglichen CNC-Maschine keine perfekten Schrägen in der Z-Achse herstellen
+kann, habe ich mich mit fein abgestuften (h
+= 0,2 mm) Treppenschritten begnügt. Dies
+funktioniert sehr gut.
+In Abb. 1 kann man die eben beschriebenen
+Konturen in der CAD-Ansicht erkennen.
+Die Kreise haben von innen nach außen die
+folgenden Durchmesser:
+· Taschen-Innenaussparung = 16,0 mm
+· Durchbruch mit 24 Nasen = 20,0 mm
+
+
+In der folgenden Abb. 2 ist eine Detaildarstellung eingefügt. Man sieht die Stufenringe sehr schön und einen Teil der 24
+Nasen in der erstellten Kontur.
+
+
+Getriebe
+
+
+Zahnkontur per Evolvente
+Wie in der ft:pedia 1/2012 schon erläutert
+wurde [1], werden Zahnräder mit Evolventen beschrieben. Dies ist hier vereinfacht
+durchgeführt. Einen Zahn habe ich mir mit
+dem Modul 1 erstellt. Dann wurde 80 bzw.
+100 mal kopiert und an der richtigen
+Winkelstelle wieder abgesetzt. Der letzte
+Schritt beim CAD-Zeichnen war dann die
+Verbindung der Zähne im Fußkreis. Die
+Grundinformationen für die CNC-Weitergabe waren damit erstellt.
+Nach der Übersetzung in das CNC-Programm mittels eines 1 mm-Fräsers war
+dann auch klar, wie lange die Maschine für
+ein Zahnrad fräsen wird: Es waren zehn
+Stunden!
+
+Aus Stabilitätsgründen habe ich mir als
+Werkstoff den Kunststoff Polycarbonat
+ausgesucht. Er ist sehr bruchfest und gut zu
+bearbeiten. Die berüchtigte Rissbildung bei
+der Bearbeitung bleibt hier aus.
+
+Das Uhrengetriebe
+Zeiger
+Eine schöne Anwendung der großen Zahnräder sind die „schwebenden Zeiger“ einer
+Uhr. Hierzu wählte ich eine besondere Darstellungsart auf dem Zifferblatt: 12 Uhr mittags sollte weiterhin oben sein, die Datumsgrenze, also Mitternacht, aber unten. Der
+Minutenzeiger sollte sich so verhalten wie
+gewohnt.
+Daraus resultiert jedoch eine Teilung per
+Getriebe von 24 zu 1.
+
+
+
+
+Mechanisches Additionsglied
+Um die Uhr während des Betriebs stellen zu
+können, habe ich ein Differential in den
+Antriebsstrang eingesetzt. Die Schnecke ist
+durch die Steigung selbst hemmend. Muss
+die Uhr gestellt werden, wird nur die
+Schnecke in die entsprechende Richtung
+gedreht – ein mechanisches Additionsglied.
+
+
+Dafür wählte ich die folgende Zerlegung:
+40 ∙ 15 ∙ 32 ∙
+∙ 10 ∙ 10 ∙ 10
+Die beiden gegebenen Zahnräder mit 80
+und 100 Zähnen habe ich grün hinterlegt.
+Alle anderen Zahnradkombinationen sollten von fischertechnik sein. Die Zahnräder
+Z40, Z15 und Z10 sind normale Stirnräder
+aus dem fischertechnik-Programm. 32
+Zähne sind an der Seite eines Z40 (Kronrad)
+zu finden. Wie aus dem Gesamtbild ersichtlich, konnte ich durch den seitlichen Trieb
+und einen weiteren Kegeltrieb um das große
+Zifferblatt herumkommen (Abb. 6).
+24 =
+
+
+Das Ergebnis ist, wie ich finde, eine schöne
+mechanische Lösung. Um daraus eine 12 hVersion der Uhr zu erstellen, genügt es, das
+letzte Zahnrad durch ein Z20 zu ersetzen
+(siehe Abb. 5 unten rechts).
+
+Additionsglied
+
+Den Antrieb habe ich mit einem kleinen
+Schrittmotor realisiert. Der Vorteil dieses
+Schrittmotors ist seine Achse: Sie hat einen
+Durchmesser von genau 4 mm. Damit sind
+wir mitten in der fischertechnik-Welt: Die
+fischertechnik-Zahnräder können direkt
+darauf geklemmt werden.
+
+
+Ein alter Flachstein 30 rot eignet sich
+bestens als Flansch (Abb. 9).
+
+
+Getriebe
+
+Ohm vorgeschaltet. Die an diesem Widerstand abfallende Spannung ist:
+= 3∙
+
+= 33 ∙ 0,012 = 0,396
+
+Mit 0,4 V ist dies im Normalbetrieb vernachlässigbar. Wird jedoch ein eingeschalteter fischertechnik-Transformator angeschlossen, sieht die Berechnung so aus:
+
+
+DCF77-Modul mit Verpolungsschutz
+Um die Uhr mit einem exakten Zeittakt zu
+versehen, verwende ich ein DCF77-Modul.
+Das Thema DCF77 ist in der 3/2013 super gut erklärt [2]. Hier gibt es
+nicht viel hinzuzufügen. Nur eine kleine
+Ergänzung zum Artikel habe ich noch.
+Um den DCF77-Empfängerbaustein vor
+einer Verpolung zu schützen, habe ich im
+Schaltplan die Diode D1 eingefügt. Der Typ
+1N4148 ist der weltweite Standard.
+
+= 0,45 =
+3 33 ℎ
+Das ist etwas weniger als der maximal
+zulässige Stoßstrom von 0,5 A. Die Diode
+ist somit geschützt.
+=
+
+Um die Funktion des Moduls sehen zu
+können, habe ich zwei LEDs eingesetzt. Da
+die beiden Ausgänge des DCF77-Moduls
+im Datenblatt mit 1 mA angegeben sind,
+können keine 20 mA-Typen verwendet
+werden. Es sind zwar BC847-Transistoren
+mit bis zu 100 mA verbaut; diese bekommen jedoch nicht genügend Basisstrom
+vom Prozessor, um komplett durchsteuern
+zu können.
+Die verwendeten 6k8-Ohm Widerstände
+stellen einen Strom von 2 mA ein. Dies ist
+für die low current LEDs genau richtig. Und
+die Transistoren schalten bei diesem Strom
+auch noch zuverlässig gegen GND durch,
+um auch den RoboPro-Eingang sicher
+schalten zu können.
+
+
+
+Zu beachten ist hierbei jedoch, dass durch
+den geringen Innenwiderstand im Kondensator dieser sich im ersten Moment der
+Aufladung wie ein Kurzschluss verhält.
+Zum Schutz der Diode habe ich aus diesem
+Grund noch einen Widerstand R3 mit 33
+
+Unter dem Gehäuse wurde eine alte,
+halbierte fischertechnik-Grundplatte 90x90
+(31002) angeschraubt. Die im Gehäuse
+eingesetzten Buchsen stammen von Conrad
+– man muss sie mit der Umschreibung
+„Miniatur-Laborbuchse“ suchen. Und, lasst
+
+
+
+euch nicht irritieren. Es sind 2,5 mm
+Buchsen, auch wenn dort 2,6 mm steht. Die
+zum Download bereitgestellten Fertigungszeichnungen beweisen es.
+
+Für eine Stunde Laufzeit werden 800
+Impulse benötigt.
+
+RoboPro-Programm
+
+Meine Lösung: Ich gebe zweimal 13
+Impulse und einmal 14 Impulse aus. Damit
+funktioniert es:
+
+Für meine Uhr benötige ich nur ein Minutensignal. Da der Zeitzeichenempfänger
+genau 59 Impulse innerhalb einer Minute
+sendet, habe ich das genutzt: Einfach bis 59
+zählen und die benötigten Schritte für die
+Bewegung um eine Minute auf den Schrittmotor ausgeben.
+Bei meiner Konfiguration ist die Impulszahl
+leider etwas unglücklich:
+
+= 13, 3 Impulse pro Minute
+
+20 ∙ (13 + 13 + 14) = 800
+
+Referenzen
+[1]
+
+Thomas Püttmann: Zahnräder und
+Übersetzungen (Teil 3). 1/2012, S. 13-21.
+
+[2]
+
+Dirk Fox, Dirk Ottensmeyer: Bau
+einer ft-Funkuhr. ft:pedia 1/2012, S.
+4-10.
+
+
+
+

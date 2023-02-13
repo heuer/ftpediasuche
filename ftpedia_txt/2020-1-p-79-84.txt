@@ -1,0 +1,277 @@
+
+Modell
+
+Modell
+
+Solarzellennachführer
+Dirk Fox
+Die Stromausbeute einer Solarzelle hängt nicht nur von der Anzahl der Sonnenstunden und der
+Intensität der Einstrahlung, sondern auch vom Einfallswinkel ab – also der Ausrichtung der
+Solarzelle zur Sonne hin. Wie viel Einfluss aber hat der Einfallswinkel auf den Wirkungsgrad?
+
+Hintergrund
+Solarzellen spielen bei der Energiegewinnung eine immer größere Rolle. Weil
+Photovoltaikanlagen viel Fläche benötigen,
+werden sie vor allem zur dezentralen Stromerzeugung eingesetzt – auf Hausdächern
+oder in Gehäusen von Klein(st)geräten wie
+z. B. Taschenrechnern.
+Dabei ist Deutschland eigentlich kein guter
+Standort für die Nutzung von Sonnenenergie. Denn hier sind nicht nur die Anzahl
+der Sonnenstunden im Jahr und die Intensität der Wärmestrahlung deutlich niedriger
+als in südlicheren Ländern: Auch der Einfallswinkel der Sonne ändert sich sowohl im
+Tages- als auch im Jahresverlauf erheblich.
+Wer also mit seinen Solarzellen eine größere Stromausbeute erzielen möchte, sollte sie
+kontinuierlich so ausrichten, dass die Sonneneinstrahlung maximal ist, also (in der
+Regel) senkrecht einfällt.
+Wie groß aber ist der Einfluss des Einfallswinkels auf den Wirkungsgrad tatsächlich? Lohnt es, den Einfallswinkel im laufenden Betrieb zu optimieren? Das möchten
+wir mit Hilfe eines fischertechnik-Modells
+herausfinden.
+
+Historisches
+Das Modell eines Solarzellennachführers
+fand sich schon im allerersten ComputingKasten von fischertechik – seiner Zeit, wie
+damals oft, erheblich voraus (Abb. 1). Wir
+
+schrieben das Jahr 1984 – ihr erinnert euch
+(oder auch nicht…): das war das Jahr, in
+dem Richard von Weizsäcker zum Bundespräsidenten und der Schauspieler Ronald
+Reagan zum US-Präsidenten gewählt wurden, in dem Liechtenstein das Wahlrecht für
+Frauen einführte, Apple den Macintosh und
+IBM den PC/AT auf den Markt brachten.
+
+fischertechnik Computing (30554), 1984 [1]
+
+Der fischertechnik-Solarzellennachführer
+wurde in Basic programmiert und über das
+(serielle) Interface angesteuert. Das Beispielprogramm im Baukasten stellte die
+Solarzelle abhängig von Datum, Uhrzeit,
+Längen- und Breitengrad senkrecht zum
+Sonnenstand [2].
+Was im Jahr 1984 noch ein wenig wie
+Science Fiction anmutete, ist heute normal.
+Photovoltaik hatte im vergangenen Jahr
+
+
+
+einen Anteil von 7,4% an der Stromerzeugung in Deutschland – im Sommer 2019 lag
+der Anteil an einzelnen Tagen um die Mittagszeit sogar bei über 50%.
+Solarzellen gehören seit Mitte der 90er
+Jahre zum fischertechnik-Bauteilsortiment.
+Zwar sind diese klein und liefern bestenfalls
+genug Leistung, um einen 2V-Solar-Micromotor (156494) anzutreiben – aber ein paar
+interessante Experimente sind mit ihnen
+möglich. Im Folgenden stellen wir einen
+Solarzellennachführer vor, der den Wirkungsgrad der fischertechnik-Solarmodule
+1 V/440 mA (146142) und 2 V/200 mA
+(156121) maximiert (Abb. 2).
+
+des Motors für die vertikale Drehachse werden durch die mittlere Öffnung des Drehkranzes hindurch nach außen geführt (im
+Bild in einem Spiralschlauch zusammengefasst). Auf den Drehkranz setzen wir, befestigt an je zwei BS 30 plus einem BS 15, den
+vertikalen Drehkranz und den zugehörigen
+Schneckenantrieb.
+
+Schneckenantrieb
+
+Konstruktion
+Das Modell unseres Solarzellennachführers
+ist einfach gehalten. Den Kern bilden zwei
+Drehkränze Z58 (31393) mit S- (32293)
+bzw. XS-Motor (137096), U-Getriebe
+(31078) und Schneckenantrieb 20 m=1,5
+(32886), montiert auf einer Grundplatte
+120·60·7,5.
+
+Schneckenantrieb
+
+
+liegend. Die Zapfen der BS 30 (links unten
+im Bild) und des BS 5 unter dem XS-Motor
+werden in die äußeren Nuten der (schwarzen) Oberseite des horizontalen Drehkranzes (siehe Abb. 3) geschoben.
+
+
+Auf der drehbaren (schwarzen) Seite des
+vertikalen Drehkranzes wird das auszurichtende Solarmodul befestigt (Abb. 5). Dazu
+werden die Zapfen der beiden Federnocken
+in die auf dem Drehkranz sitzenden Winkelsteine 10·15·15 (38423) geschoben. Der
+Winkelstein auf der Rückseite des Solarmoduls ist die Halterung für den Sensor
+(siehe unten).
+
+Modell
+
+T9011 (31361) besitzt, kann auch diesen
+verwenden.
+Der Sensor wird an einen der acht Eingänge
+des TXT angeschlossen und als „Analog 5
+kOhm“ ausgewertet. Mit einer StörlichtKappe 8 (in rot oder gelb, 31321/31914)
+arbeitet der Sensor ggf. etwas fokussierter.
+
+Über die beiden Schneckenantriebe kann
+die Solarzelle nun auf jeden möglichen Einfallswinkel der Sonnenstrahlung ausgerichtet werden.
+
+Steuerung
+Die Steuerung des Solarzellennachführers
+realisieren wir mit einem ROBO Pro-Programm für den Robotics TXT Controller.
+Neben der Ausrichtung der Solarzelle nach
+dem (berechneten) Sonnenstand gibt es
+noch eine andere Möglichkeit, die beste
+Position unseres Solarmoduls einzustellen.
+Dazu müssen wir die Nachführung mit
+einem Sensor ausstatten, der die Intensität
+der Sonneneinstrahlung in einer bestimmten
+Position misst. Mit den Messwerten können
+wir dann einen Regler „füttern“, der die
+Position der Solarzelle in regelmäßigen
+Abständen zur Position mit der höchsten
+Lichtausbeute bewegt.
+In der Praxis können wir damit sogar bessere Resultate erzielen: Wird die Solarzelle
+von einer Wolke oder einem Gebäude beschattet, kann eine andere als die dem Sonnenstand zugewandte Position die höchste
+Energieausbeute liefern.
+Sensor
+Als Sensor können wir die Solarzelle selbst
+wählen und die ausgegebene Spannung
+messen. Da wir die von der Solarzelle gelieferte Spannung später noch für einen anderen Zweck auswerten möchten, greifen wir
+auf den Fotowiderstand LDR03 (32698) zurück (Abb. 5) [3]. Wer noch einen der
+grauen
+fischertechnik-Fotowiderstände
+
+(links) und T9011 (rechts), Störlichtkappe 8
+
+Regler
+Um die Position mit dem besten Wirkungsgrad unserer Solarzelle zu finden, benötigen
+wir einen Extremwertregler (Extremum
+Seeking Control): Er muss den Punkt finden, an dem der Wert, den unser Fotowiderstand liefert, minimal ist.
+Im Allgemeinen ist ein Extremwertregler
+sehr aufwändig. Denn wenn es mehrere
+Positionen gibt, an denen der Widerstandswert kleiner ist als an den Punkten in der
+näheren Umgebung (ein „lokales Minimum“ also), dann lässt sich das kleinste
+dieser lokalen Minima, das „globale Minimum“, nur finden, indem man alle möglichen Positionen mit dem Sensor ausmisst
+und dann die Position mit dem niedrigsten
+Sensorwert (also den hellsten Punkt)
+auswählt.
+Dafür benötigt man jedoch nicht nur sehr
+viele Sensorbewegungen; es würde zudem
+so lange dauern, dass bei der Erfassung des
+Messwerts an der letzten Position die Werte
+
+
+
+der ersten gemessenen Positionen bereits
+veraltet wären.
+Unsere Aufgabenstellung ist zum Glück
+deutlich einfacher als diese allgemeine
+Optimierungsaufgabe. Denn bei Sonneneinstrahlung gibt es – zumindest in der Regel –
+nicht mehrere Minima, sondern nur genau
+einen „hellsten Punkt“, den wir finden müssen. Und dieser Punkt ist normalerweise
+nicht scharf abgegrenzt: auf dem „Weg“
+dorthin wird es kontinuierlich heller. Daher
+muss unser Regler den Sensor (und damit
+die Solarzelle) nur so lange in die Richtung
+bewegen, in der es heller wird, bis dieser
+keinen kleineren Widerstandswert mehr
+liefert.
+
+
+Die Regelung nehmen wir sowohl in horizontaler als auch in vertikaler Richtung vor.
+Unser Regler misst dazu den Helligkeitswert (Widerstandswert) in der aktuellen
+Position, bewegt das Solarmodul (und den
+Sensor) zunächst horizontal in eine Richtung, und misst nach einer kurzen Pause
+
+erneut. Ist es dort heller (der Widerstandswert also kleiner), wird die Bewegungsrichtung beibehalten (Abb. 6). Ist es dort dunkler, wird die Bewegungsrichtung umgekehrt, bis auch in dieser Richtung kein
+kleinerer Widerstandswert mehr gemessen
+wird. Anschließend erfolgt dasselbe in der
+Vertikalen.
+Messfrequenz und Genauigkeit
+Für die korrekte Bestimmung des niedrigsten Sensorwertes sind zwei Parameter von
+Bedeutung: die Messfrequenz (also die
+Länge der Pause zwischen zwei Messungen) und die Genauigkeit der Sensorwerte.
+Die Genauigkeit des Sensors können wir
+bestimmen, indem wir messen, in welchem
+Bereich ein Sensorwert „oszilliert“. Das
+kann ein kleines ROBO Pro-Programm
+leisten, das den maximalen und minimalen
+in einem vorgegebenen Zeitraum gemessenen Wert (bei unveränderter Helligkeit)
+bestimmt. Bei unserem Helligkeitssensor
+gelingt das (bei Sonnenschein) auch mit
+Hilfe des Interface-Tests und dem bloßen
+Auge: Man kann erkennen, dass der Sensorwert bei direktem Lichteinfall maximal um
+± 1 variiert.
+Bei Abschattung ist der Wertebereich, in
+dem der Widerstandswert oszilliert, allerdings größer. Dafür ist die zusätzliche Energieausbeute, die wir durch die Nachführung
+bestenfalls gewinnen können, bei bedecktem Himmel oder Dämmerung erheblich
+geringer; eine fehlerhafte Nachführung fällt
+daher nicht besonders ins Gewicht. Die
+Schwankung können wir ein wenig abschwächen, indem wir einen Filter einbauen
+– z. B. indem wir aus mehreren direkt aufeinander folgenden Messungen den Mittelwert bestimmen. Dazu habe ich ein Hilfsprogramm integriert, das den Mittelwert aus
+einer vorgebbaren Anzahl von Messungen
+(Samples) bestimmt und diesen – statt des
+aktuellen Sensorwertes – als Eingabe für
+den Regler verwendet (Abb. 8).
+
+
+Modell
+
+(hier: Unterprogramm TurnLeft)
+
+Den Abstand zweier aufeinander folgender
+Messungen müssen wir so groß wählen,
+dass im Messintervall auch etwas „passieren“ kann, wenn wir das Solarmodul bewegen. Liegt die Änderung im Messintervall
+in der Toleranz, die wir wegen der Ungenauigkeit der Sensorwerte zulassen, wird
+der Regler einen Anstieg oder ein Sinken
+der Messwerte nicht bemerken.
+Umgekehrt darf das Messintervall auch
+nicht zu groß sein, sonst kommt es zu
+„Überschwingen“ des Reglers, d. h. der
+Regler stoppt die Bewegung erst, wenn der
+Sensorwert bereits wieder deutlich über
+dem kleinstmöglichen Wert liegt.
+Bei meinen Experimenten hat sich ein
+Messintervall von 0,1-0,2 s bewährt; bei
+Sonnenschein und ohne Berücksichtigung
+von Messungenauigkeiten (Abb. 9). Bei
+bedecktem Himmel ist die Justierung des
+Reglers schwieriger; hier kommt es schneller zu fehlerhaften Nachführungen, weil der
+Sensorwert stärker schwankt und die Helligkeitsunterschiede geringer ausfallen.
+
+Experimente
+Jetzt können wir mit unseren Experimenten
+beginnen. Wenn wir ein baugleiches zweites Solarmodul mit fest eingestellter Neigung neben unserem Solarzellennachführer
+befestigen, können wir mit dem TXT die
+von den beiden Modulen gelieferte Spannung messen. Wenn wir nun nach jeder
+Korrektur der Position des beweglichen
+Moduls (z. B. alle 10 Minuten) die von den
+Solarmodulen gelieferten Spannungswerte
+summieren, können wir ausrechnen, um
+welchen Anteil wir den Wirkungsgrad
+unseres Solarmoduls bei der Energiegewinnung steigern können.
+Damit kann das Modell sogar vor der Installation einer Solaranlage feststellen, welche
+(prozentuale) zusätzliche Energieausbeute
+durch das Nachführen der Solarzellen möglich wäre.
+Wer die Osterferien für eigene Solarexperimente nutzen möchte, findet auf der
+ft:pedia-Webseite zu dieser Ausgabe eine
+Designer-Datei des Funktionsmodells und
+die ROBO Pro-Programme zum Download.
+
+
+
+
+
+Referenzen und Verweise
+[1]
+
+
+fischertechnik: fischertechnik
+computing. Bauanleitung. Art.-Nr.
+39496, Fischerwerke, 1984.
+
+[2]
+
+fischertechnik: fischertechnik
+Computing. Programmieranleitung.
+Art.-Nr. 39497, Fischerwerke, 1984.
+
+[3]
+
+fischertechnik: Fotowiderstand
+LDR03. Datenblatt. 17.10.2018.
+
+

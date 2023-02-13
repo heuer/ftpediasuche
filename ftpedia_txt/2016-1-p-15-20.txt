@@ -1,0 +1,339 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Neue ft-Teile selbst gemacht – 3D-Druck (4):
+Schleifringe (die Zweite), und überhaupt
+Harald Steinhaus
+Nachdem fischertechnik für diesen Sommer einen 3D-Drucker-Baukasten angekündigt hat,
+wird auch das Thema „Eigenbau von Teilen“ interessanter werden. Klar, man fängt an mit
+Schachfiguren und Nippes wie etwa Pokemon-Figuren, bei denen es auf Maßhaltigkeit und
+Kompatibilität nicht ankommt. Ich will hier nicht darüber diskutieren, ob ft-kompatible Teile
+aus einem ft-Drucker nun „ft-fremd“ sind oder nicht ‒ dieser Beitrag behandelt einige Aspekte,
+auf die man beim 3D-Druck achten sollte.
+
+Materialauswahl
+Drucker im Hobby-Maßstab können mit
+ABS (Acrylnitril-Butadien-Styrol) oder mit
+PLA (Polylactide) arbeiten. ABS benötigt
+höhere Temperaturen und verzieht sich
+gerne, wenn man keine beheizte Grundplatte hat.
+ABS ist spröde, und es scheint auch mit der
+Zeit zu schrumpfen. Das mag in vielen
+Fällen nicht viel ausmachen, aber wenn
+man z. B. ABS-Teile mit Kugellagern versehen hat, wird es ärgerlich. Das gelbe
+Hypozykloid-Getriebe von der Convention
+2015 und die Drehkränze von MisterWho
+haben mittlerweile Risse in den Gehäusen.
+ABS reißt auch, wenn man sehr dünne
+
+Wandstärken verwendet (Eigenbau-P-Betätiger in der Bildmitte).
+Also heißt die Devise: bei ABS lieber einen
+Millimeter mehr Material und lieber 1/10
+mm mehr Toleranz. Bei Kugellagern hilft
+auch eine deutlich zu große Aufnahme, die
+man mit elastischem Futter wieder auffüllt.
+Das geht prima mit Teflonband aus dem
+Sanitärhandel.
+PLA wird bei geringeren Temperaturen verarbeitet und es ist ein wenig elastischer.
+Dafür ist PLA biologisch abbaubar, d. h. ein
+PLA-Bauteil kann unter tropischen Bedingungen innerhalb etlicher Wochen vergammeln.
+
+
+
+
+
+Düsen-Durchmesser
+Drucker mit großer Düse können mehr
+Material pro Zeit durchschleusen und sind
+bei gegebenem Bauvolumen schneller
+fertig. Bei feinen Details erreichen sie aber
+schneller ihre Grenzen. Wände können
+nicht dünner sein als der Düsendurchmesser. Die nächstgrößere Wandstärke
+beträgt zwei Düsendurchmesser. Definiert
+man ein Maß dazwischen, dann hängt es
+von der Slicer-Software ab, was passiert
+(ausprobieren – siehe „Kalibrierung“).
+Wählt man eine Wandstärke zwischen dem
+zweifachen und dem dreifachen Düsendurchmesser, kann man entweder zwei unabhängige Wände erhalten oder eine locker
+mit Material gefüllte Wand in der angegebenen Stärke. Beim Slic3r (c't 07/16) kann
+es passieren, dass Zwischenräume mit
+Material befüllt werden, obwohl dort der
+Platz nicht reicht. Das führt zu überschüssigem Material, das nach oben herausquillt
+und der Druckdüse in der nächsten Höhenlage im Weg ist.
+
+das auch noch in Abhängigkeit vom
+Durchmesser.
+Außerdem verlaufen ganz eng benachbarte
+Bahnen ineinander, sodass aus ganz schmalen Spalten (weit unter 1 mm) schnell Vollmaterial wird. Wenn der Slicer derartige
+Einflüsse nicht oder nicht richtig berücksichtigt, muss man schon im CADProgramm Korrekturwerte für kleine Konturen einarbeiten. Hierbei hilft es, ein
+Musterteil mit gestuft breiten Schlitzen und
+Löchern auszudrucken und daraus die
+Korrekturwerte zu entnehmen. Weil der
+Drucker in der Z-Achse (Höhe) feiner
+auflösen kann als in X und Y, muss das
+Ganze zweimal geschehen. Im Einzelnen
+kann man Maße gebrauchen für:
+• Bohrung für ft-Achsen und Kugellager;
+• Langloch für S-Riegel;
+• Langloch für Rastachse;
+• ft-Nut;
+• Aufnahmeloch für S-Strebe.
+
+Hat man dies alles berücksichtigt, kann es
+immer noch zu Überraschungen kommen,
+wenn Besitzer verschiedener Drucker A
+und B ihre CAD-Daten austauschen und die
+Drucker etwa mit Düsen von A = 0,5 mm
+und B = 0,35 mm bestückt sind, so dass
+ganz unterschiedliche Teile herauskommen.
+
+Kalibrierung
+Der Slicer tut sein Möglichstes, um mit der
+gegebenen Düse das Teil möglichst genau
+zu erzeugen. Bei großen Rechtecken geht
+das auch ohne Weiteres, aber beim 4-mmLoch für eine ft-Achse fängt der „Spaß“
+schon an. Üblicherweise rechnet ein Slicer
+damit, einen Materialstreifen zu erzeugen,
+der halb-und-halb links und rechts von der
+gefahrenen Bahn aufgetragen wird. Bei
+Kurven erhält aber die innere Seite mehr
+Material, da die gleiche Menge davon auf
+einem kürzeren Weg anfällt. In der Folge
+haben kleine Löcher immer Untermaß, und
+
+
+(oben: CAD, Mitte: Slicer)
+
+Nachbearbeitung
+„Überflüssig“ gedrucktes Material fällt aus
+verschiedenen Gründen an:
+• Bett (brim): Das Teil braucht ein Bett,
+d. h. es muss auf der Druckplattform mit
+einer flach aufliegenden Schicht aus
+Material umgeben werden, damit es sich
+beim Erkalten nicht verzieht und von der
+
+Platte ablöst. Das ist schon bei ca. 3 cm
+Kantenlänge der Fall.
+
+Tipps & Tricks
+
+weitere Funktionen
+Verfügung.
+
+im
+
+Modell
+
+zur
+
+Der Slicer CURA hat hier einen Fehler: eine
+Schräge (Fase) an einer Seitenwand wird
+ignoriert, d. h. das Bett beginnt erst dort, wo
+die Projektion der Wand auf die Plattform
+trifft, und ist damit nutzlos (Abhilfe:
+Verzicht auf Fasen an Außenwänden; oder
+das Bett als Teil des Objekts konstruieren).
+• Stützmaterial: Überhänge und Hohlräume werden mit einer waffelartigen,
+leicht zu zerbröselnden Struktur aus
+Material gefüllt, damit oberhalb davon
+nicht ins Leere gedruckt werden muss.
+• Lagersitze: auch wenn man Aufnahmen
+für Kugellager mit reichlich Übermaß
+vorsieht, sollten die Randflächen geglättet werden.
+• Spinnfäden: die Düse kann den Materialfluss nicht abrupt stoppen. Sie spinnt
+bei ihren Leerfahrten ein Muster aus
+dünnen Fäden kreuz und quer über das
+Bauteil. Die Fäden beginnen und enden
+in spürbar großen Fransen an den
+Bauteilen.
+Zum Entfernen überschüssigen Materials
+braucht man die üblichen Geräte: Sandpapier, Feile, Taschenmesser, Bohrer, Reibahle. Bohrer sollten nur von Hand im Loch
+gedreht werden, damit man das Material
+nicht wieder aufschmilzt. Hierbei helfen
+einzeln erhältliche Bohrfutter als Handgriffe. Als Bauprojekt lohnt sich auch, den
+Bohrerschaft quer mit einem Stift zu
+versehen und da drum herum einen Handgriff aus dem 3D-Drucker zu konstruieren.
+Für gehobene Ansprüche empfiehlt sich
+eine Drehbank. Damit diese ihr Können
+ausspielen kann, muss das Teil aber gespannt werden können, was wiederum bei
+einem Dreibackenfutter am besten geht,
+wenn das Teil drei Ecken oder Vielfache
+davon hat. Bei einem Sechseck können drei
+Flächen zum Spannen in der Maschine
+dienen und die anderen drei stehen für
+
+dreieckige Spannfutter
+
+Positiv oder Negativ
+Hier geht es um komplexe Konstruktion mit
+Bohrungen oder Luftkanälen und dergleichen: Es kann einfacher sein, zuerst das
+Negativ zu konstruieren. Also, nicht einen
+Block aus dem Vollen, dem man Material
+wegnimmt, sondern ein Gerüst aus
+„Löchern“, das man im letzten Schritt vom
+Vollmaterial subtrahiert.
+
+
+Verstopfte Düse
+Eine verstopfte Düse kann man sich leicht
+„einfangen“: man definiere ein Modell, das
+entlang des Verfahrwegs sehr oft zwischen
+„drucken“ und „nicht drucken“ abwechselt,
+etwa ein großes Zahnrad mit sehr feiner
+Verzahnung.
+Beim
+Übergang
+von
+„drucken“ auf „nicht drucken“ zieht der
+Extruder den Materialfaden zurück, bei
+„drucken“ schiebt er ihn vor. Beim häufigen
+Wechsel verdunstet ein Bestandteil des
+Materialfadens, der für die elastischen
+Eigenschaften sorgt (so zumindest meine
+
+
+
+
+unfachmännische Erklärung). Jedenfalls ist
+nach wenigen Zyklen dieser Art die Düse
+dicht, um den Drucker herum riecht es
+„chemisch-technisch“, und nichts geht
+mehr, obwohl die Maschine den Druckkopf
+fleißig weiter umherfährt.
+Abhilfe: Um die Düse von dem darin fest
+gebackenen Material zu befreien, braucht
+man einen Stößel, Meißel oder Bohrer mit
+dem passenden Durchmesser von (je nach
+Typ) 0,35 mm oder 0,5 mm. Diese Werkzeuge sind durchaus zu haben, wenn man
+nur weiß, wo: Wenn Biologen eine Stahlnadel brauchen, um ein präpariertes Insekt
+an einer Tafel fest zu machen, ist nicht jede
+Nadel recht. Es gibt, jeweils im 100er Pack,
+Insektennadeln von 0,2 mm bis hinauf zu
+1,2 mm mit Zwischenenwerten bei 0,3 mm,
+0,35 mm, 0,4 mm und anderen. Dazu
+braucht man noch ein Spannfutter, das
+derart kleine Durchmesser auch greifen
+kann – passende Handwerkzeuge gibt es
+dort, wo es die Nadeln gibt. Wenn man neue
+Düsen für 30 Cent bekommen kann, ist
+allerdings die Frage eher, ob man sich das
+Gefummel mit den spitzen Nadeln antun
+mag.
+
+Stelle so spät wie möglich wieder (in der
+nächsten Ebene) besuchen. Cura verwaltet
+eine Timer-Variable und schickt ggf. den
+Kopf „ins Freie“, um ihn erst nach einer
+kurzen Pause wieder an die Arbeit zurückzurufen. So weit, so gut. Cura versucht aber
+auch, die Verfahrwege kurz zu halten und
+fährt deshalb eine Ebene links herum und
+die nächste rechts herum. Genau dabei wird
+aber bei kleinen Teilen die frische Bahn auf
+das noch nicht ausgehärtete Material der
+vorigen Schicht aufgebracht. Die Folge: das
+Teil sackt zusammen und beult sich zur
+Seite aus.
+Abhilfe: Schlanke Teile nie allein drucken,
+sondern mindestens als Paar. Oder, wenn
+man wirklich nur eins davon braucht und
+das Teil insgesamt viel Material benötigt,
+einen schlanken Turm mit hinreichend
+großem Sockel als zusätzliches Teil in den
+Druckjob geben und diesen Turm etwa
+4 cm entfernt vom eigentlichen Teil ausrichten. Die nunmehr erzwungenen Leerwege sorgen fürs Auskühlen der alten
+Schicht, bevor die neue aufgetragen wird.
+
+Bildergalerie
+Kaum macht man etwas richtig (und
+spendiert noch zwei oder drei Probedrucke),
+schon gibt es schöne Teile: Hier sind ein
+paar davon versammelt.
+
+und Nachbearbeitung
+
+Kühltürme
+Die hier besprochenen 3D-Drucker für den
+Heimwerker beruhen auf dem Auftragen
+von schmelzbarem Material. Das Material
+der obersten Schicht muss hinreichend fest
+geworden sein, bevor die nächste Schicht
+darüber gedruckt werden kann. Der Druckkopf sollte seine eigene Bahn nie kreuzen
+und eine eben erst mit Material befüllte
+
+
+Bild 6 zeigt zwei Pneumatik-Betätiger,
+davon einer aus dem 3D-Drucker (in blau
+und auf dem BS30 montiert); der andere
+besteht aus einem ft-Reifen 23, einer ftFelge 23 und einer P-Düse als Luftzufuhr
+mit Schlauchanschluss. Die gelbe Membran
+
+
+Tipps & Tricks
+
+gibt es als Meterware überall, wo man
+Reha-Gerätschaften und Rollatoren kaufen
+kann. Das blaue Gummiband („TheraBand“) gibt es gelegentlich bei Aldi und ist
+um Einiges straffer als das gelbe.
+Bild 7 zeigt zwei Hypozykloidgetriebe. Das
+gelbe ist aus ABS, mit einer Übersetzung
+von 1:18, wurde auf der Convention 2015
+ausgestellt und hat mittlerweile Risse in fast
+allen Teilen. Das blaue stammt aus dem
+eigenen Drucker, ist in PLA ausgeführt und
+hat eine Übersetzung von 1:420 (1/20 *
+1/21). Beide verwenden einen Adapterstein,
+der die Antriebsachse frei drehend durchlässt (optional auch mit Kugellager), rundherum vier ft-Nuten aufweist, im Boden
+eine Ausnehmung für die Mitnahme von SStreben hat und der mit zwei Scheiben auch
+als ft-Nabe (allerdings ohne Klemmwirkung) dienen kann.
+
+Auf Bild 8 ist ein LED-Baustein zu sehen.
+Er sollte für meine vielen bedrahteten LEDs
+geeignet sein und im Gehäuse die Vorwiderstände enthalten. Die Vorwiderstände
+sind als SMD-Teile ausgeführt, und davon
+klemmt je einer zwischen den LED-Anschlussdrähten und einer der Steckerhülsen,
+über die der Stein angeschlossen wird. Ein
+bisschen grüne Knetmasse verhindert, dass
+die Widerstände eigene Wege gehen. Die
+seitlichen Rippen sind nötig, weil die
+dünnen Wände sonst während des Drucks
+zusammen sacken können. Der gelbe Vorsatz dient als Übergang auf Lichtleitfasern,
+die im Handel als „Bilderdraht“ (zum
+Aufhängen von Bildern in Galerien etc.)
+geführt werden.
+
+
+und SMD-Widerstände
+
+
+
+
+Zum Abschluss zeigt Bild 9 den vor langer
+Zeit angekündigten Schleifring mit nunmehr neun Bahnen [2]. Die Kupferscheiben
+mit angelöteten Drähten werden mittels der
+gedruckten Scheiben zu einem Stapel
+verbunden und mittels vier WattestäbchenRöhrchen zusammen gehalten. Als Kontakte dienen die ft-Stecker ohne Hülle, die
+schwenkbar gelagert sind und mittels eines
+Streifens Moosgummi angedrückt werden.
+
+Was bisher erschien…
+[1]
+
+Harald Steinhaus: Neue ft-Teile
+selbst gemacht – 3D-Druck. 2/2013, S. 4-10.
+
+[2]
+
+Harald Steinhaus: Neue ft-Teile
+selbst gemacht – 3D-Druck (2):
+Schleifringe. ft:pedia 1/2015, S. 6872.
+
+[3]
+
+Johannes Visser: Neue ft-Teile selbst
+gemacht – 3D-Druck (3): Innenzahnkranz. ft:pedia 1/2015, S. 73-83.
+
+
+

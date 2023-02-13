@@ -1,0 +1,174 @@
+
+
+Modell
+
+Balkenwaage
+René Trapp
+Mit fischertechnik kann man keine empfindliche Waage bauen? Oh doch, und wie!
+In der Geschichte der fischertechnikModelle gab es schon einige Waagen zu
+sehen. Der Bilderpool ist voll davon und
+hier seien stellvertretend die Tafelwaagen
+von Lurchi genannt [1]. Diese Waagen sind
+toll anzusehen, und um die Masse eines
+Apfels oder Gegenstände ähnlicher
+Gewichtsklasse zu bestimmen, sind sie gut
+zu gebrauchen. Dabei kommt es auch bei
+diesen Waagen schon auf leichtgängige
+Gelenke an.
+
+ Empfindliche Waagen reduzieren die
+Reibung in den Lagern durch Verwendung sogenannter Schneidenlager, die
+den Wälzlagern zugerechnet werden [3].
+Der Rest der Waage ist relativ einfach und
+entspricht in Funktion und Aussehen der
+bekannten Apothekerwaage (Abb. 1).
+
+Für eine empfindliche Wägung noch kleinerer Massen ist allerdings die Reibung in den
+vielen Achslagern der fischertechnik-Tafelwaagen immer noch erheblich zu groß.
+Und so kommt es wie es kommen muss: Es
+wird eine völlig neue Bauart für fischertechnik-Waagen vorgeschlagen. Diese Bauart ist so brandneu nicht, sie greift ein uraltes Funktionsprinzip erfolgreich auf und
+setzt es, erstmals dokumentiert, mit fischertechnik-Bauteilen um.
+
+Graue Theorie
+Normalerweise kommt an dieser Stelle
+zuerst etwas theoretischer Hintergrund.
+Stattdessen sei auf den informativen Eintrag
+zur Balkenwaage bei Wikipedia verwiesen
+[2]. Die beiden wichtigen Punkte sind
+schnell zusammengefasst:
+ Für eine empfindliche Waage liegt der
+Schwerpunkt des Wägebalkens möglichst dicht unter seiner Lagerung (Drehpunkt).
+
+
+
+Die fischertechnik-Umsetzung
+Das Herzstück der Waage ist das Schneidenlager des Wägebalkens. Eine Schwingfeder (31329) ist senkrecht angebracht. Der
+aus Winkelträgern zusammengesetzte Ständer der Waage ergibt sich so fast zwingend
+von alleine. Auf der schmalen, nicht abgewinkelten Kante der Schwingfeder ruht mit
+seiner Kerbe ein Federnocken (31982,
+Einige wenige sanfte Hübe mit einer Dreikant-Schlüsselfeile verbessern die Form der
+Kerbe im Federnocken noch etwas und
+sorgen für einen exakt definierten Sitz der
+
+Kehle auf der Schwingfeder. Abnehmen
+und Wiederauflegen des Wägebalkens haben keinen Einfluss auf die Einstellung des
+Nullpunkts. Die Modifikation des Federnockens kann man durchaus als ‚homöopathisch‘ bezeichnen; der Federnocken
+bleibt gänzlich für die vom Hersteller
+vorgesehenen Verwendungszwecke intakt.
+
+Modell
+
+balkens, zusammen mit dessen eigenwilliger Form, ganz knapp unterhalb des Lagers.
+Durch Drehung an der Schnecke wird der
+Nullpunkt exakt eingestellt. Das Gummiband verhindert ein eigenständiges Verdrehen der Schnecke (Abb. 4).
+
+
+
+Auch die Aufhängung der Waagschalen
+verwendet ein extrem leichtgängiges und
+exakt definiertes Gelenk: Die Seilstränge
+laufen auf jeder Seite über die scharfe Kante
+eines Winkelstein 60° (31010). Man kann
+das mit etwas gutem Willen ebenfalls als
+Schneidenlagerung bezeichnen (Abb. 3).
+
+Am Fuß der Waage ist eine Winkellasche
+der alten Bauform (35738 spitz), angebracht
+und markiert den Nullpunkt. Der dort verwendete S-Winkelverbinder 30 (31576)
+kann ohne funktionale Einbußen durch
+einen Winkelträger 30 (36301) ersetzt werden. Der Zeiger möge für sich selbst
+sprechen (Abb. 5).
+
+
+
+Sowohl der filigrane lange Zeiger als auch
+die unförmige Schnecke mit Stahlachse
+positionieren den Schwerpunkt des Wäge-
+
+Außer dem Gummiband zählen noch die
+Waagschalen als Fremdteile. Deckel von
+Einweg-Pudding- oder Eisbechern sind im
+Einsatz; genau lässt sich deren Herkunft
+nicht mehr bestimmen. Auf dem Umfang
+eines solchen Deckels sind drei kleine
+Löcher angebracht, durch die das Seil geschlungen ist. Als Schablone zum Markieren der Lochpositionen lässt sich prima eine
+
+
+
+Drehscheibe 60 (31019) verwenden. Überhaupt, das Seil: Es ist hier ein durchgehendes Stück von 3 m Länge zu sehen. Ein
+Ende wird am Wägebalken befestigt, durch
+die Löcher einer Waagschale gefädelt, über
+den Wägebalken zur anderen Seite geführt,
+dort durch die Löcher der anderen Waagschale gefädelt und dann am Ende des
+Wägebalkens fixiert (Abb. 6).
+
+
+Die entstandenen Seilschlaufen der Waagschalen werden am Winkelstein eingehängt,
+die Waagschalen dann einfach mit ein bisschen Zupfen waagerecht gestellt.
+
+Einstellen des Nullpunkts
+
+habung. Die Anreise zum MINT-Feriencamp 2018 in Karlsruhe hat die kleine
+Waage problemlos überstanden. Vor Ort
+war kein erneutes Einstellen des Nullpunktes nötig. Leider hat ein Besucher der Ausstellung dann daran gedreht, so dass der
+Rückweg nicht mehr in die Bewertung eingehen konnte.
+Man sollte beachten, dass die Bauteile des
+Schneidenlagers keine allzu großen Kräfte
+vertragen und daher keine Massen größer
+als 50 g auflegen. Als unterschiedliche
+Testobjekte im Bereich weniger zehn Milligramm Gewichtsunterschied bieten sich
+Abstandsring 3 (31597), Federnocken
+(31982) und die verschiedenen Kettenglieder aus der Bauteilsammlung an. Aber
+auch augenscheinlich gleich schwere Bauteile, zum Beispiel graue Winkelträger 30
+(36301), offenbaren ihre doch geringen
+Massenunterschiede. Es muss ja nicht
+gleich „dunkle Materie“, schwarze Magie
+oder ein Aprilscherz im Spiel sein [4]; es
+sind einfach unterschiedliche Produktionskampagnen und Toleranzen im Spritzgusswerkzeug, die diese Bauteilunterschiede
+ausmachen.
+
+Ist die Waage fertig zusammengebaut, neigt
+sich der Wägebalken sicher weit zu einer
+Seite. Der Nullpunkt wird eingestellt, indem die „Einstellschraube“ oben auf dem
+Balken in die entsprechende Richtung, also
+zur leichteren Seite hin, verdreht wird. Der
+Vorgang benötigt ein wenig Übung und
+Geduld da der Balken mit den Waagschalen
+lange nachpendelt. Sobald der Zeiger der
+unbelasteten Waage genau an der Spitze der
+Winkellasche steht, ist die Waage einsatzbereit. Die Nullpunkteinstellung sollte man
+gelegentlich kontrollieren und falls erforderlich korrigieren.
+
+Gewichtsstücke für die Waage schneidet
+man sich aus einem Bogen Papier bekannter
+Quadratmeter-Masse zu: Bei 80 g/m² ergibt
+ein Quadratzentimeter (= 100 mm²) rechnerisch genau 8 mg; 62,5 mm² ergeben dann
+5 mg. Die Präzision dieser „selbstgebauten“
+Gewichte dürfte nicht sehr hoch sein. Man
+sieht damit jedoch recht gut die Empfindlichkeit der Waage.
+
+Quellen
+[1]
+
+Bilderpool der ftc: Modellbaulinien.
+
+[2]
+
+Wikipedia: Balkenwaage.
+
+Betriebserfahrungen
+
+[3]
+
+Wikipedia: Wälzlager.
+
+Die Waage ist erstaunlich empfindlich,
+dabei jedoch durchaus robust in der Hand-
+
+[4]
+
+Bilderpool der ftc: Experimenteller
+Nachweis Dunkler Materie.
+
+
+

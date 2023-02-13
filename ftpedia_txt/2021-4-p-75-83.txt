@@ -1,0 +1,486 @@
+
+Computing
+
+Computing
+
+Experimente mit dem Kombisensor – Teil 2
+Dirk Fox
+Vor drei Jahren brachte fischertechnik den „Kombisensor“ (158402) auf den Markt – einen
+IMU-Sensor (Inertial Measurement Unit), der via I²C-Protokoll an den TXT angeschlossen
+werden kann. Der etwas unglückliche Name verrät allerdings nicht, was der Sensor alles kann.
+Im ersten Teil des Beitrags [3] habe ich den Sensor und einige Einsatzmöglichkeiten vorgestellt.
+Jetzt geht es ein wenig in die Tiefe – und heraus kommt ein verbesserter ROBO Pro-Treiber.
+
+Einführung
+Der im Kombisensor von fischertechnik [1]
+werkelnde Bosch-IMU-Sensor BMX055
+[2] umfasst einen Beschleunigungs-, einen
+Kompass- und einen Gyrosensor. Der
+ROBO Pro-Treiber von fischertechnik reizt
+allerdings die Möglichkeiten des Sensors
+bei weitem nicht aus – und enthält zudem
+einige kleine und ein paar größere Bugs. Im
+ersten Teil des Beitrags habe ich einige
+davon gefixt und gezeigt, wie man den
+Kompass-Sensor kalibriert.
+In diesem Teil gehen wir nun ein wenig
+tiefer auf die Möglichkeiten des Sensors
+ein, korrigieren ein paar weitere Fehler und
+ergänzen den Treiber um neue Funktionen.
+
+ab. Bei maximaler ODR (2000 Samples/s)
+liegt es an allen drei Achsen bei ca. ±0,01 g
+(g = 9,81 m/s², Abb. 1). Reduziert man die
+ODR, sinkt auch das Rauschen: Wenn die
+Anwendung mit 16 Messungen pro Sekunde auskommt, ist kein Rauschen mehr festzustellen (Abb. 2).
+
+[Skala: 0,1s/0,01g]
+
+Beschleunigungssensor
+Rauschen
+Das Rauschen des Beschleunigungssensors
+in der ROBO Pro-Implementierung von
+fischertechnik lässt sich, wie im ersten Teil
+des Beitrags gezeigt [3], unter anderem darauf zurückführen, dass die Rohwerte der
+X-, Y- und Z-Achse nicht arithmetisch um
+vier Bits geshiftet werden. Nur die 12
+höchstwertigen Bits der Rohdaten sind
+signifikant; die niederstwertigen vier können beliebige Daten enthalten.
+Das verbleibende Rauschen hängt vor allem
+von der gewählten Output Data Rate (ODR)
+
+[Skala: 0,1s/0,01g]
+
+Obwohl sich das Rauschen im Bereich von
+±0,01 g bewegt, wirkt sich der Unterschied
+deutlich auf die Winkelberechnungen aus
+(Pitch und Roll, siehe [3]).
+
+
+
+
+2.000 Samples/s, Abb. 4 bei 16 Hz: Das
+Rauschen sinkt auf ein 20stel – von ±1° auf
+±0,05°.
+
+Offset
+Sensoren haben oft einen kleinen konstanten Fehler (Offset). Wenn wir den Sensor
+auf einer mit einer Wasserwaage ausgerichteten Plattform montieren (Abb. 5, 6), können wir diesen Fehler messen (Abb. 7).
+
+Ruhelage bei 2.000 Samples/s [Skala: 1s/1°]
+X- (gelb), Y- (grün) und Z-Richtung (blau)
+[Skala: 0,1s/0,01g]1
+
+Ruhelage bei 16 Samples/s [Skala: 1s/1°]
+
+Wenn die Genauigkeit der Beschleunigungswerte wichtig ist, sollte daher eine
+möglichst niedrige Messfrequenz gewählt
+werden.
+
+Der Sensor bietet mehrere integrierte Verfahren zur Kompensation solcher Fehler
+oder Störungen. Mit der Fast Compensation
+wird über 16 Messungen der mittlere Fehler
+der Messwerte einer Achse zu einem Vorgabewert bestimmt. Als Vorgabe kann in
+Register 0x37 für jede der drei Achsen einer
+der Werte +1g, -1g oder 0 gewählt werden.
+Bei allen weiteren Messungen wird der
+Fehler dann automatisch abgezogen.
+
+
+
+Ein Tipp für die Nutzung des Oszilloskops: Ein
+Druck auf die „alt“-Taste hält die Anzeige an.
+
+Die Funktion BMX055_AccFastComp, um
+die ich den Treiber ergänzt habe, führt die
+Kompensation nacheinander für jede der
+drei Achsen durch. Dazu wird in Register
+0x36 jeweils ein Trigger für die entsprechende Achse gesetzt. Anschließend stehen
+die Offset-Werte in den Registern 0x38 (XOffset), 0x39 (Y-Offset) und 0x3A (ZOffset) und können dort ausgelesen werden.
+Die Bestimmung des Offset muss im Range
+±2g in horizontaler Ruhelage erfolgen. Die
+Wirkung der Korrektur veranschaulicht der
+Graf in Abb. 8.
+
+[Skala: 0,1s/0,01g]
+
+In Ruhelage darf der Sensor nur die Erdbeschleunigung messen. Also muss die
+Wurzel aus der Summe der Quadrate der
+drei vom Sensor bestimmten Beschleunigungswerten genau 1 g entsprechen [3]. Im
+Programm Acc-Oszilloskop.rpp wird die
+Abweichung von diesem Wert in % angezeigt. Ohne Kompensation liegt der Fehler
+bei bis zu ±0,9%; nach der Kompensation
+sinkt der Fehler unter ±0,1% – die Messwerte sind also noch einmal fast um den
+Faktor 10 genauer.
+Die Slow Compensation, ein Hochpassfilter, filtert niedrige Frequenzen aus und
+„zieht“ die Mittelwerte der Beschleunigungswerte kontinuierlich gegen Null. Sie
+kann in Register 0x37 wahlweise auf ein
+oder 10 Hz eingestellt und in Register 0x36
+für jede der drei Achsen einzeln aktiviert
+werden. Das kann z. B. für die X- und YAchse sinnvoll sein, wenn bei einer gleichförmigen Bewegung die relativen Beschleunigungen gemessen werden sollen. Im
+
+Computing
+
+Treiber übernimmt das die Funktion
+BMX055_AccSlowComp.
+Die Einstellungen und berechneten Kompensationswerte bleiben bis zum Ausschalten des Sensors erhalten. Damit sie nicht
+manuell zurückgesetzt werden müssen
+(Offset-Reset in Register 0x36), habe ich in
+der Funktion BMX055_AccInit einen Softreset (über Register 0x14) ergänzt.
+Pufferung
+Für die Nutzung des Sensors in einer Echtzeitanwendung ist eine weitere Korrektur
+im fischertechnik-Treiber erforderlich.
+Der Sensor bietet die Möglichkeit, bis zu 32
+Messwerte in einem FIFO-Puffer (First In,
+First Out) zwischenzuspeichern. Für ausgewählte Anwendungen kann das hilfreich
+sein, wenn der Zugriff auf die Daten temporär langsamer erfolgt als die gewählte
+Output Data Rate (ODR) des Sensors und
+man keine Messwerte verlieren möchte. Ist
+das Auslesen der Messwerte jedoch generell langsamer als die Bandbreite, führt die
+Verwendung des FIFO-Puffers dazu, dass
+man beim Auslesen veraltete Messwerte
+erhält. Schon bei der relativ niedrigen ODR
+von knapp 31 Hz läuft der Puffer z. B. beim
+Acc-Oszilloskop ruck-zuck voll: In Abb. 9
+sieht man die Zahl der im Puffer gespeicherten Messwerte (rote Kurve) in weniger als
+einer Sekunde auf 32 ansteigen.
+
+Anzahl Messwerte im Puffer [Skala: 0,1s/5])
+
+fischertechnik nutzt diesen STREAM-Modus des FIFO-Stack bei der Initialisierung
+des Sensors standardmäßig, weil sich die
+Verfügbarkeit neuer Messdaten über den
+FIFO-Status im Register 0x0E elegant abfragen lässt. Das ist allerdings unnötig:
+
+
+
+Jeder Messwert wird vom Sensor immer
+auch im FIFO abgelegt und seine Verfügbarkeit über 0x0E signalisiert. Der DefaultModus BYPASS macht den FIFO zu einem
+Stack der Tiefe 1 – und schon liest man nur
+noch den jüngsten Wert aus.
+Läuft der FIFO bei einer ODR von 31 Hz
+im STREAM-Modus voll, liest der TXT
+regelmäßig Werte des Beschleunigungssensors aus, die fast eine Sekunde früher gemessen wurden. Das kann man mit bloßem
+Auge erkennen: Wenn man den Sensor bewegt, erfolgt die Anzeige im Oszilloskop
+mit dem fischertechnik-Treiber sichtbar
+verzögert. Für eine Echtzeitanwendung sind
+solche veralteten Sensorwerte vollkommen
+unbrauchbar.
+Die verbesserte Version des ROBO ProTreibers verwendet daher den FIFO-Modus
+BYPASS mit Stack-Tiefe 1. Die Wirkung
+erkennt man unmittelbar an der Reaktionszeit des Acc-Oszilloskops auf Bewegungen
+des Sensors. Zusätzlich habe ich eine Funktion ergänzt, mit der man den FIFO-Modus
+wählen kann. Die Messwerte, die in den
+FIFO eingestellt werden, können dabei auch
+auf einzelne Achsen des Beschleunigungssensors beschränkt werden. Damit verkürzt
+man sowohl die Messung als auch den Auslesevorgang, wenn man nur einen Achsenwert auswerten möchte. Diese Funktion
+BMX055_AccSetFIFOMode zeigt Abb. 10.
+
+BYPASS, 1: FIFO, 2: STREAM), zu berücksichtigende Achsen (0: alle, 1: X, 2:Y, 3: Z)
+
+
+Gyrosensor
+Rauschen
+Auch das Gyroskop rauscht stark (bis zu
+0,01°/s), wenn die Rohdaten nicht gefiltert
+werden (Abb. 11). Da alle 16 Bit der Messwerte signifikant sind, wird es nicht durch
+undefinierte Bits verursacht. Auch wirkt
+sich die Wahl des Messbereichs nicht auf
+das Rauschen aus.
+
+Filterung [Skala: 0,1s/0,001°/s])
+
+Das Rauschen lässt sich durch die Wahl
+eines Filters in Register 0x10 bei der Initialisierung senken: Ein kaskadiertes Integrator-Differentiator-Filter (CIC) verwirft bis
+zu 95% der Rohdaten und gibt die verbleibenden Messwerte an ein nachfolgendes Infinite Impulse Response Filter (IIR) weiter.
+Die ODR sinkt dabei auf 100 Hz – für viele
+Anwendungsfälle immer noch genug.
+Die Wirkung der Filterung ist beeindruckend: Abb. 12 und 13 zeigen die gefilterten
+Daten bei einer Dezimierung auf die Hälfte
+(ODR: 200 Hz) resp. ein 20stel der Rohdaten (ODR: 100 Hz).
+
+Decimation Filter 2 [Skala: 0,1s/0,001°/s])
+
+
+Computing
+
+Die berechneten Offset-Werte werden in
+den Registern 0x36 bis 0x3A abgelegt und
+bei allen folgenden Messungen automatisch
+von den Rohwerten abgezogen.
+
+Decimation Filter 20 [Skala: 0,1s/0,001°/s])
+
+Vergrößert man die Skala des Oszilloskops
+kann man erkennen, dass das Rauschen bei
+ODR = 100 Hz auf etwa ±0,0002°/s sinkt
+(Abb. 14) – sensationell.
+
+maximaler Filterung [Skala: 0,1s/0,0001°/s]
+
+Offset
+Jeder Sensor, auch das Gyroskop, kann
+einen konstanten Fehler (Offset) haben. Bei
+meinem Sensor konnte ich allerdings keinen solchen Fehler messen (siehe oben).
+Der Sensor bietet ähnliche integrierte Verfahren zur Kompensation von Fehlern wie
+der Beschleunigungssensor, die ebenfalls
+per Voreinstellung deaktiviert sind. Für die
+Fast Compensation kann man die Zahl der
+Messungen, deren Mittelwert als Offset bestimmt wird, zwischen 32, 64, 128 und 256
+wählen und die Offsetbestimmung für jede
+der drei Achsen separat aktivieren. Um eine
+möglichst hohe Genauigkeit zu erzielen,
+wird die Einstellung des Messbereichs ±125
+empfohlen.
+Eingestellt, konfiguriert und aktiviert wird
+die Fast Compensation in Register 0x32.
+Das übernimmt im Treiber die neue Funktion BMX055_GyroFastComp (Abb. 15).
+Dabei sollte der Sensor in Ruhelage sein.
+
+Bei der Slow Compensation misst der Sensor kontinuierlich, ob die Werte der selektierten Achsen des Gyroscops über einen
+einstellbaren Zeitraum (40 bis 1280 ms) um
+einen wählbaren Schwellenwert (0,1°/s bis
+1°/s) von 0 abweichen. Tritt dieser Fall ein,
+wird der Offset vom Rohwert abgezogen.
+Die Rohdaten konvergieren anschließend
+gegen 0. Konfiguriert und aktiviert wird die
+Slow Compensation über Register 0x31.
+Das übernimmt die neue Treiber-Funktion
+BMX055_GyroSlowComp.
+Auch beim Gyrosensor bleiben die Einstellungen und berechneten Offsets bis zum
+Ausschalten des Sensors erhalten. Damit sie
+nicht manuell zurückgesetzt werden müssen
+(Offset-Reset in Register 0x21), habe ich
+auch in der Funktion BMX055_GyroInit
+einen Softreset (Register 0x14) ergänzt.
+Pufferung
+Die Messungen des Gyrosensors können
+ebenfalls in einem FIFO-Stack vorgehalten
+werden. Hier passen sogar bis zu 100 Messungen in den Stack. Aber auch dieser Stack
+läuft in rund zwei Sekunden voll (Abb. 16).
+Bei einer Messfrequenz von 100 Samples/s
+führt das zu einer Verzögerung von einer
+Sekunde zwischen Messung und Auslesen
+des Werts.
+
+
+
+
+Magnetometer
+Rauschen
+
+Anzahl Messwerte im Puffer [Skala: 0,1s/5])
+
+Auch bei der Initialisierung des Gyro-Sensors wird im fischertechnik-Treiber der
+FIFO-Stack im STREAM-Mode aktiviert –
+was unweigerlich zu veralteten Messwerten
+führt. Das Problem lässt sich wie beim
+Beschleunigungssensor lösen: Per Default
+ist der FIFO-Mode BYPASS im Register
+0x3E eingestellt, der einen FIFO mit Tiefe
+1 verwendet; im korrigierten Treiber wird
+dieser Modus beibehalten.
+Mit der zusätzlichen neuen Treiber-Funktion BMX055_GyrSetFIFOMode kann jeder andere FIFO-Mode aktiviert werden,
+auch hier bei Bedarf für ausgewählte
+Achsen (Abb. 17).
+
+Wer sich die Magnetometer-Daten ansieht,
+die der ROBO Pro-Treiber liefert, wird sich
+über das starke Rauschen der Werte wundern. Eine Ursache dafür ist, wie in Teil 1
+des Beitrags gezeigt [3], dass der fischertechnik-Treiber wie bei den Werten des
+Beschleunigungssensors keinen arithmetischen Rechts-Shift der X- und Y-Werte um
+die drei niederstwertigen Bits und beim ZWert um das niederstwertige Bit vornimmt,
+denn bei diesem Sensor sind nur die höchstwertigen 13 bzw. 15 Bits der Rohdaten signifikant. Aber auch nach der Korrektur der
+Werte enthalten die ungefilterten Daten ein
+deutliches Rauschen, liegen aber zumindest
+in dem in horizontaler Lage zu erwartenden
+„Range“ von 0-40 µT in X- und Y-Richtung
+und ziemlich genau 50 µT in Z-Richtung
+(Abb. 18). Insbesondere die Rohdaten der
+Z-Achse (blau) rauschen ganz erheblich.
+
+[Skala: 0,5s/1µT bzw. 10µT (Z-Achse)]
+
+1: FIFO, 2: STREAM) und der zu berücksichtigenden Achsen (0: alle, 1: X, 2:Y, 3: Z)
+
+Im ersten Teil des Beitrags habe ich gezeigt,
+wie sich das Rauschen durch eine Bestimmung des arithmetischen Mittelwerts über
+eine vorgegebene Anzahl von Messwerten
+verringern lässt [3]. Diese Lösung ist sehr
+flexibel, da die Anzahl der für die
+Mittelwertbestimmung
+herangezogenen
+Messwerte beliebig gewählt werden kann.
+Wesentlich schneller ist es allerdings, diese
+Aufgabe dem Sensor zu übertragen. Denn
+der BMX055 bringt eine Funktion mit, die
+den Mittelwert aus einer in Register 0x51
+(X-/Y-Achse) und 0x52 (Z-Achse) vorgegebenen Anzahl von Messungen ermittelt.
+
+
+Prinzipiell kann jeder Wert aus {0, …, 255}
+konfiguriert werden; für die X- und YAchse ergibt sich die Zahl der Messungen
+daraus durch Multiplikation mit zwei.
+Dabei sinkt allerdings die ODR. Im Datenblatt werden vier „typische“ Varianten empfohlen (Tab. 1) [2].
+
+Tab. 1: Empfohlene Wiederholraten
+für das Magnetometer
+
+Der fischertechnik-Treiber verwendet in der
+Initialisierungsfunktion die Regular-Einstellung. Das Ergebnis zeigt Abb. 19.
+
+[Skala: 0,5s/1µT bzw. 10µT (Z-Achse)]
+
+Computing
+
+dem Regular Mode von 0,6 auf 0,3 µT
+halbieren. Das deckt sich mit meinen Messergebnissen.
+Wählt man die maximal mögliche Anzahl
+an Messungen für die Mittelwertbildung
+(511 für X und Y, 256 für Z), so verschwindet das Rauschen in X- und Y-Richtung
+vollständig; in Z-Richtung bleibt ein „Restrauschen“ von ±30 µT. Die ODR sinkt auf
+ca. 6 Hz (Abb. 21).
+
+[Skala: 0,5s/1µT bzw. 10µT (Z-Achse)]
+
+Ganz so weit muss man nicht einmal gehen:
+Auch eine Mittelwertbildung über 129 Messungen in X-, Y- und Z-Richtung lässt bei
+einer ODR von 15 Hz das Rauschen praktisch verschwinden. Um den Filtermodus
+wählbar zu machen, habe ich im Treiber die
+Funktion BMX055_MagSetPrecMode ergänzt, die auch einen „Mode 0“ (keine
+Filterung) und einen „Mode 5“ (Ultra High
+Precision) kennt (Abb. 22).
+
+Noch einmal deutlich reduzieren lässt sich
+das Rauschen mit der High-Accuracy-Filterung (Abb. 20).
+BMX055_MagSetPrecMode
+
+Offset
+
+[Skala: 0,5s/1µT bzw. 10µT (Z-Achse)]
+
+Nach Datenblatt lässt sich der Rauschanteil
+(Root Mean Square, RMS) damit gegenüber
+
+Die Kalibrierung des Magnetometers zum
+Ausgleich eines Hard-Iron-Fehlers habe ich
+im ersten Teil des Beitrags beschrieben [3].
+Die Variablen CalX und CalY müssen für
+die jeweilige Anwendungsumgebung gemessen und gesetzt werden.
+
+
+
+
+Temperaturkompensation
+Für die Kompensation der von der Temperatur des Sensors verursachten Störungen
+sind im fischertechnik-ROBO Pro-Treiber
+zwei Funktionen für die X- und die YAchse vorgesehen.
+
+
+Damit auch die Werte der Z-Achse genutzt
+werden können, die z. B. für die Berechnung der Neigungskompensation der Kompasswerte benötigt werden (siehe unten),
+habe ich die Initialisierungsfunktion um das
+Auslesen der erforderlichen Konstanten des
+Sensors erweitert und auf der Grundlage der
+Originaltreiber für den BMM050 von
+Bosch eine entsprechende Funktion für die
+Z-Achse ergänzt (BMX055_MagCompZ)
+[4].
+Heading
+Die im ersten Teil des Beitrags vorgestellte
+Berechnung der Abweichung von der NordAusrichtung (Winkel 𝜓, „Heading“) können wir nun mit dem korrigierten und verbesserten Treiber vornehmen [3].
+mit dem fischertechnik-Treiber. Die
+Schwankungen sind mit bis zu ±20° erheblich – vor allem aber ist der Wert selbst
+fehlerhaft.
+
+
+
+Im High Precision Mode sieht das schon
+ganz anders aus. Zwar „springt“ das Ergebnis auch hier noch um rd. ±4°, aber in Abb.
+25 ist zu erkennen, dass wir das mit einem
+Filter leicht korrigieren können.
+
+Treiber [Skala: 1s/50µT bzw. 1s/5° (Heading)]
+
+Eine Möglichkeit zur Filterung der Ausschläge ist die Bestimmung des arithmetischen Mittels aus mehreren Messwerten
+(wie in Teil 1 des Beitrags beschrieben [3]).
+Das wirkt wie ein Tiefpass-Filter: Kurze
+Ausschläge werden herausgemittelt, beständige Änderungen hingegen (verzögert)
+durchgelassen.
+Effizienter als die Speicherung der 𝑛 letzten
+Messwerte und eine jeweils neue Mittelwertberechung ist es, den neuen HeadingWert anteilig aus dem zuvor bestimmten
+und dem gerade berechneten Winkel 𝜓
+abzuleiten:
+𝐻𝑒𝑎𝑑𝑛𝑒𝑢 = 𝑎 · 𝐻𝑒𝑎𝑑𝑎𝑙𝑡 + (1 − 𝑎) · 𝜓
+mit 𝑎 ∈ [0,1].
+Diese Mittelwertbestimmung (oder Filterung) wird auch als Exponentional Moving
+Average oder Infinite Impulse Response
+(IIR-Filter) bezeichnet, weil sich abrupte
+Änderungen des Winkels erst mit
+„unendlicher“ Verzögerung vollständig auf
+den Heading-Wert auswirken.
+Die Reduktion des Rauschens „erkaufen“
+wir uns dabei also mit einer verlangsamten
+Wirkung einer Winkeländerung über eine
+größere Zahl von Messungen – je nach
+gewählter ODR und der Stärke der Winkeländerung kann die Verzögerung einige
+Sekunden betragen.
+
+Das Ergebnis der IIR-Filterung zeigt Abb.
+26 für 𝑎 = 0,98: Das Rauschen sinkt auf
+unter ±0,5°.
+
+Treiber und Mittelwertbildung
+[Skala: 1s/50µT bzw. 1s/5° (Heading)]
+
+Fazit
+Im Kombisensor von fischertechnik steckt
+ein äußerst präziser IMU-Hochleistungssensor von Bosch, der über zahlreiche
+Funktionen verfügt.
+Der von fischertechnik ausgelieferte Treiber für ROBO Pro enthält jedoch einige die
+Qualität der Messdaten deutlich beeinträchtigende Einstellungen und nutzt einige
+wichtige Sensorfunktionen unvollständig
+oder gar nicht: Die vom Treiber gelieferten
+Daten rauschen stark, sind ungenau und
+veraltet.
+Daher habe ich die entsprechenden Fehler
+korrigiert, alle für anspruchsvolle Anwendungen nach meiner Einschätzung wichtigsten Funktionen im Treiber ergänzt und
+
+Computing
+
+einige wenig sinnvolle Konfigurationen angepasst.
+Die korrigierte und erweiterte Version 2.0
+des Treibers (Kombisensor-BMX055) sowie
+einige Testprogramme, die ich im Beitrag
+verwendet habe, findet ihr im Downloadbereich der ft:pedia.
+Der Sensor kennt außerdem noch Selbsttest-Funktionen und solche, die helfen, den
+vom Sensor verbrauchten Strom zu minimieren. Sie sind wichtig für Smartphones,
+in denen der Sensor ständig im Hintergrund
+arbeitet, aber für die in fischertechnik-Modellen vorstellbaren Einsatzzwecke sicherlich weniger relevant, daher habe ich sie im
+Treiber nicht ergänzt.
+
+Quellen
+[1]
+
+fischertechnik: Kombisensor Art.-Nr.
+158402 3-in-1 Orientierungssensor.
+Kurzanleitung, 09.06.2017.
+
+[2]
+
+Bosch: BMX055. Small, versatile 9axis sensor module. Data Sheet.
+Revision 1.1, 07.11.2014.
+
+[3]
+
+Dirk Fox: Experimente mit dem
+Kombisensor. ft:pedia 3/2021, S. 78–
+91.
+
+[4]
+
+Bosch Sensortec: bmm050.c, v2.0.3,
+12.12.2014, github.com
+
+
+

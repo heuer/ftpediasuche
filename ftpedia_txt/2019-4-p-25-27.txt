@@ -1,0 +1,61 @@
+
+Modell
+
+Modell
+
+Elektromagnetisches Pendel ohne
+Lichtschranke
+Uwe Hinrichs
+Als Jugendlicher fand ich die mittels Lichtschranke gesteuerten elektromagnetischen Pendel
+sehr interessant. Sowohl die einfachen Varianten, wie sie in den Anleitungen zum l-e 1 und ec 1
+beschrieben wurden (die im Prinzip mit einem einzigen Relais auskamen), als auch die
+regelungstechnisch aufwendigere Variante, wie sie in hobby 4, Band 3 [1] beschrieben ist (mit
+vier Silberlingen: Grundbaustein, Flip-Flop und zwei Relais). Dass da eine andauernde Bewegung erzeugt wurde, ohne dass sichtbar Kraft ausgeübt wurde (etwa durch einen Motor), war
+schon faszinierend. Noch eleganter aber wäre es, wenn man „gar nichts“ sehen würde, also
+auch kein Licht.
+
+Neuauflage eines Klassikers
+Dafür habe ich einfach die Lichtschranke
+durch einen Reedkontakt und einen unten
+am Pendel befestigten Magneten ersetzt.
+Schaltungstechnisch verwendete ich zwei
+(alte) E-Tec-Module, wovon das eine als
+„Relais“ und das andere als Flip-Flop fungiert: Solange der Reedkontakt den durchgehenden Magneten erkennt, wird der antreibende Elektromagnet mit Strom versorgt. Das Flip-Flop sorgt dafür, dass die
+Polung sich bei jedem Durchgang ändert.
+Hier ein paar Bilder vom Modell:
+
+
+
+
+
+
+Dauermagnet im Pendelkopf
+
+
+Die Schaltung des Modells zeigt Abb. 7.
+Ähnliche Schaltungen sind natürlich auch
+mit den neueren fischertechnik-ElectronicsModulen herstellbar.
+
+Quellen
+[1]
+
+
+
+fischertechnik: hobby 4 Begleitbuch
+Band 3. Fischer-Werke, Tumlingen,
+1973, S. 74.
+
+
+Modell
+
+Elektromagnet
+
+Reedkontakt
+„Relais“
+
+Flip-Flop
+
+
+
+
+

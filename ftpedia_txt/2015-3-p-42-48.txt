@@ -1,0 +1,341 @@
+
+
+Elektrotechnik
+
+Automatischer Prüfstand für Elektromotoren –
+Teil 1: Eine Belastungseinrichtung
+Matthias Dettmer
+Prüfstände sind Vorrichtungen, mit denen man technische Gegenstände – in diesem Fall die
+kleinen fischertechnik-Elektromotoren – so auf ihre Eigenschaften testen kann, dass die
+gewonnenen Messergebnisse wiederholbar sind. In einer kleinen Artikelserie möchte ich
+beschreiben, wie ich mit möglichst wenig Fremdteilen einen kleinen automatisierten Motorenprüfstand aus fischertechnik für fischertechnik-Kleinmotoren aufbaue. Den Anfang macht eine
+Belastungseinrichtung.
+Wenn man denselben Prüfling mehrfach
+testet, dann soll dieser auch etwa die
+gleichen Werte liefern wie ein gleicher
+Motor. Will man nicht nur etwas über die
+Leerlaufbedingungen und die „Eckdaten“
+eines Motors wie Stromverbrauch, Verlustleistungen und so weiter herausfinden, dann
+führt das zu der Frage, wie denn eigentlich
+eine möglichst gleichbleibende und wiederholbare Last auf den Prüfling aufgebracht
+werden könnte.
+Zum Thema „Testen von fischertechnikMotoren“ hat es in der ft:pedia schon mal
+einen lesenswerten und höchst interessanten
+Artikel zum Testen und Auswerten der
+Leerlaufbedingungen und zur definierten
+Belastung mit einer gleichbleibenden Last
+gegeben [1].
+Eine der auch in der Industrie gebräuchlichen Methoden zum Aufbringen von Last
+ist die der „Bremse“.
+Ja, wenn das Leben denn so einfach wäre…
+Einfach einen anderen Motor und einen
+Regler kaufen, und los geht es! Die „alten
+ft-Hasen“ unter uns sind aber häufig
+bestrebt, mit möglichst wenigen, am
+liebsten ganz ohne „fremde“ Teile zu
+konstruieren.
+
+
+Der erste Ansatz war also, den Prüfling mit
+einem gleichen Motor zu koppeln. Dazu
+wurden die Schnecken der beiden Motoren
+über ein kleines Stück roten Gummischlauches „gekuppelt“. Das ist dauerhaft
+sicher nicht die beste mechanische Lösung,
+aber für Vorversuche reicht es.
+Der andere Motor, unsere Bremse, sollte
+nun als Generator dienen und wurde dazu
+nacheinander mit sechs Lampen „belastet“.
+Jede Lampe wurde durch einen Taster
+jeweils parallel zugeschaltet. Im Leerlauf
+„brachte“ es unser Generator auf etwa 7 V,
+wenn der Prüfling aus einem Akkublock mit
+etwa 9 V betrieben wurde. Mit jeder Lampe
+nahm die Belastung zu, anfänglich um
+30 mA pro Lampe, bis die Stromzunahme
+mit der letzten Lampe dann nur noch 18 mA
+betrug – klar, die Gesamtlast von am Ende
+etwa 140 mA verringerte natürlich auch die
+Spannung am Generator auf dann nur noch
+4 V. Die sechs Lasten spannten also den
+Leistungsbereich in groben Stufen
+zwischen 210 mW bis zu etwa 560 mW auf.
+
+
+Elektrotechnik
+
+mit einem roten Gummischlauch gekuppelt
+
+Nun hatte dieser erste Versuchsaufbau ein
+paar Nachteile (und hat es deshalb nicht mal
+zu einem Foto gebracht):
+· Die Stufen ergaben mit zwischen 30 mA
+und 18 mA Zunahme zu große Abstände,
+
+· wir würden eine recht „eckige“
+Leistungskurve bekommen und
+· die „Anwendung“ mit sechs Fingern
+ging gerade so.
+Also wurde der Versuch wieder abgebaut
+und neu angesetzt. Wie wäre es, wenn wir
+
+
+
+statt Lampen Leuchtdioden verwenden
+würden? Einen vernünftigen Vorwiderstand
+vorausgesetzt
+erlauben
+Leuchtdioden
+Ströme zwischen 3 und 7 mA, mithin viel
+feinere Stufen, und es gibt Arrays mit bis zu
+20 Leuchtdioden. Der überschlägig mit
+einem solchen Array abdeckbare Bereich
+bewegt sich dann zwischen 49 mW und
+980 mW. Wir sollten also etwa die gleiche
+Spanne bekommen wie mit den Lämpchen,
+wenn nicht sogar mehr.
+Für den neuen Ansatz zum Bau einer
+Belastungsvorrichtung gab es also folgende
+Aufgaben zu lösen:
+· Adaption des (fischertechnik-fremden)
+LED-Arrays
+· Entwurf eines Schaltplanes
+· Möglichst gleichförmiges Schalten von
+20 Tastern
+· Ansätze für Automatisierung finden
+
+Die erste Aufgabe war verhältnismäßig
+leicht zu lösen. Eine handelsübliche Steckplatine (neudeutsch Breadboard) erlaubt
+die Aufnahme des Arrays und der benötigten Vorwiderstände sowie den halbwegs
+bequemen Anschluss an die Stecker an den
+Tastern.
+Der Schaltplan (Abb. 2) sollte den ganzen
+Apparat für eventuelle Nachbauten
+hinreichend dokumentieren.
+Als wohl schwierigste Aufgabe entpuppte
+sich dann das möglichst gleichförmige
+Schalten der 20 Taster. Der Ansatz ist noch
+einfach: Über einen Schneckenantrieb
+rechts und links wird ein ordentlich
+geführter Schlitten langsam über die Taster
+gezogen. Dabei soll der Motor durch Tasten
+angesteuert werden und entweder vorwärts
+(mehr Last) oder rückwärts (weniger Last)
+bewegt werden. Mit Endtastern soll
+verhindert werden, dass sich der Schlitten
+weiter als nötig bewegt – ohne dass das
+
+gleichzeitig betätigt – das ist im Schaltplan aber nicht leicht wiederzugeben
+
+Gebilde am Ende rattert, knirscht und sich
+festfrisst.
+
+Elektrotechnik
+
+ein Schütz oder einen Frequenzumformer/Regler) den Motor stillsetzen würde.
+
+Die im Schaltplan wiedergegebene
+Schaltung kennt wohl jeder, der einmal mit
+den alten Elektromechanik-Baukästen (wie
+hobby 3 oder em1 bis em3, das waren noch
+Zeiten…) gebaut und experimentiert hat:
+der Motor wird dadurch an den Endpositionen ordentlich kurzgeschlossen und
+bleibt blitzschnell stehen. Zudem kann der
+Motor nur noch in die jeweils andere
+Richtung in Gang gesetzt werden.
+In der Industrie ginge das so natürlich nicht,
+sonst müsste man ja die hohe Spannung und
+die hohen Ströme über Taster führen: Hier
+wird das dann über Taster an eine SPS
+gemeldet, die dann auf andere Weise (über
+
+Vordergrund der hintere Endepositions-Taster
+
+zwischen den Tastern – und eines Teils des Schaltbrettes, das sich von unten im Bild her über die
+Taster schiebt
+
+
+Natürlich gibt es für die Ansteuerung des
+Schaltbrett-Motors auch noch „kabelsparende“ Methoden – die Artikelserie von
+Stefan Falk zu „Motorsteuerungen“ in den
+ft:pedia-Ausgaben 1/2011-1 bis 4/2011
+bietet sehr gute Ansätze [2]. Die Umsetzung
+hätte dann aber weitere „Fremdteile“ wie
+die Dioden erfordert.
+Damit die vom „Schaltbrett“ abzudeckende
+Strecke weder zu breit noch zu lang wird,
+habe ich dieses Brett nahezu quadratisch
+gestaltet – sozusagen mit dem bestmöglichen Verhältnis von Länge zu Breite.
+Bei der Enge zwischen den Tastern konnte
+ein „ganzer“ Stecker nicht mehr in beiden
+Steckpositionen
+eingesteckt
+werden,
+deshalb habe ich die Stecker für die gemeinsame Verteilung (den Minuspol des Generators) von seiner Plastikhülle befreit. Die
+Zuleitungen zu den Leuchtdioden haben
+aber jeweils „komplette“ Stecker. Im
+Schaltplan habe ich die Taster auch nur als
+„Ein“-Taster dargestellt, eine Darstellung
+dieser 20 Taster mit der jeweils nicht
+benutzten Ruhestellung erschien mir nicht
+zielführend.
+
+Im ersten Ansatz hatte das Schaltbrett etwa
+2 mm Abstand von der Taster-Oberseite,
+und die meisten Taster wurden damit auch
+betätigt. Es gab aber auch Aussetzer. Also
+musste das Schaltbrett irgendwie dichter
+ran. Aber wie? Zu dicht geht nicht, weil
+man die vielen Taster nie so genau ausrichten kann, dass die Schaltplatte nicht
+irgendwo anstößt. Ein bis zwei Zehntelmillimeter reichen hier schon aus.
+Im fischertechnik-Rastermaß gibt es 15 mm
+(Länge und Breite des Grundbausteins,
+Höhe des Tasters und der Winkelsteine),
+7,5 mm und 5 mm (Baustein 7,5 und
+Baustein 5) und – very tricky – die Bauplatten mit 2 mm Höhe. Natürlich kann man
+mittels der Winkelsteine auch Zwischenmaße realisieren, aber das dann in der
+ganzen Breite durchzuhalten und auszurichten? Etwas Einfacheres musste her.
+Hat man zwei Bauplatten mit zusammen
+4 mm Höhe, dann bleibt schließlich ein Maß
+von 1 mm zum nächsten möglichen Rastermaß übrig – et voilà!
+
+kleinen Abstand zwischen Taster-Oberseite und der Schaltplatte
+
+Also sitzt der Taster auf einer Bauplatte, die
+andere Bauplatte sitzt an der Unterseite des
+Schaltbretts, und die Unterkante des Schaltbretts ist in Höhe von einem halben Grundbaustein plus einen Baustein 5 = 20 mm
+über der Grundlage des Tasters gelagert.
+Ein weiterer Vorteil des „Höherlegens“ des
+Tasters: die haltenden Winkelbausteine sind
+definitiv nicht mehr im Wege.
+Nun musste das Schaltbrett nur noch in
+Richtung des Hebelarmes des Tasters, also
+von der richtigen Seite her über die Taster
+gefahren werden – anders herum hätte es
+möglicherweise Verkantung gegeben.
+
+Elektrotechnik
+
+Leistung“ unter großen Pfeilen für die
+Richtung untergebracht.
+Der Prüfling wurde mit einem PolwendeSchalter an eine feste und gleichbleibende
+Spannungsquelle geschaltet (hinten im
+Bild). Schaltet man verkehrt herum ein,
+dann leuchten die Leucht-Dioden eben
+einfach nicht.
+Bei der Erprobung des gesamten Apparates
+kam dann heraus, dass die LEDs als
+„Leistungsstufen“ auch jeweils einzeln zuoder abgeschaltet werden können.
+Der Abstand beträgt von Taster zu Taster
+etwa 1,5 Schneckenwindungen, bei einer
+Untersetzung von 3:1 und einem Encoder
+von drei Pulsen pro (Motor-) Umdrehung
+ergibt das rechnerisch 3 ∙ 1,5 ∙ 3 = 13,5 Pulse
+„zwischen den Tastern“ – mit einer
+größeren Pause (etwa drei Schneckenwindungen) zwischen den Tastern Nummer 10
+und 11. Das stimmt mich doch zuversichtlich, die ganze Geschichte später automatisieren zu können.
+Im tatsächlichen Betrieb zeigen die eigentlich für 10 mA einsetzbaren und für etwa
+5 mA ausgelegten LEDs bis „ganz oben“
+ein schön helles Licht. Der Lastversuch
+zeigt in 20 Stufen zwischen 7 V ∙ 5 mA =
+35 mW bis zu 5 V ∙ 72 mA = 360 mW einen
+durchaus interessanten Bereich.
+Nun bleibt noch ein wenig Manöverkritik
+zu üben.
+
+Bedienungspfeile für die Leistungsanwahl
+
+Als all das zuverlässig und mehrfach hintereinander – reproduzierbar – funktioniert
+hat, konnte die Schaltbrett-Motorsteuerung
+angegangen werden. Der für die Bewegung
+des Schaltbretts ausgewählte Encodermotor
+ermöglicht eine nachträgliche Automatisierung mit dem TX oder TXT – aber das
+soll Gegenstand des nächsten Artikels
+werden. Deswegen wurden die beiden
+Taster für „Mehr Leistung“ und „Weniger
+
+· Wegen
+der
+Bauteiletoleranzen,
+insbesondere bei den Widerständen, und
+wegen der Abnahme der generierten
+Spannung sind die Laststufen nicht
+einheitlich.
+· Die Anzahl der Stufen ist befriedigend,
+es besteht aber noch Luft nach oben,
+etwa durch eine weitere Vorrichtung der
+gleichen Art, die dann „weiter belastet“
+– oder durch ein weiteres LED-Array.
+Hier wäre es auch denkbar, zuerst eines
+der Lämpchen parallel zu schalten, um
+
+
+
+
+den etwas langweiligen Bereich bis ca.
+80 mW zu überbrücken.
+· Die Anzeige von Spannung und Strom
+schwankt stark, hier müsste das Signal
+noch geglättet und damit etwas geformt
+werden. Der TX kann so jedenfalls noch
+wenig damit anfangen.
+· Im zuerst aufgebauten Messemodell
+habe ich versucht, das entstehende (und
+naturgemäß recht schwache) Drehmoment anhand einer sogenannten
+„Drehmomentenwaage“ anschaulich zu
+machen. Es hat sich schnell gezeigt, dass
+die nur liederlich ausgeführte Lagerung
+von Prüfling und Bremse alles Sichtbare
+an Drehmoment auffrisst – außer einer
+leichten Auslenkung zum Ein- oder Ausschalten ist nichts zu sehen.
+· Immerhin hört man die Zunahme der
+Last an der sich verändernden Drehzahl.
+· Zu Demonstrationszwecken hätten auch
+Spannung und Strom des Prüflings
+gemessen werden können. Das hebe ich
+mir auch für den nächsten Artikel auf,
+dann sollte nämlich aus Eingangs- und
+Ausgangsleistung auch der Wirkungsgrad bestimmt werden können.
+· Dass es möglich ist, den Prüfling so zu
+betreiben, dass keine Last gezogen wird,
+ist eher lästig. Hier bietet sich ein Gleichrichter an, auch damit man die Lastkurven in beiden Drehrichtungen
+aufnehmen kann.
+
+
+Wie soll es nun weitergehen? Ein nächster
+Artikel wird beschreiben, wie der TX die
+entstehenden Werte misst – Drehzahl,
+Strom und Spannung von Prüfling und
+Bremse, Berechnung der Leistungen und
+Ausgabe einer Leistungskurve.
+Um eine etwas genauere Übersicht über die
+Leistungsgrenzen der
+Belastungsvorrichtung zu erhalten, möchte ich zuerst die
+Lastkennlinien der LEDs aufzeichnen.
+Wenn es gut geht, werde ich den abrufbaren
+Leistungsbereich erweitern. Der TXT soll
+dann die einzelnen Lastpunkte automatisch
+anfahren, aufnehmen und speichern.
+Ein weiteres ehrgeiziges Ziel und Gegenstand eines weiteren Artikels ist die
+Konstruktion eines Drehmomentsensors
+aus fischertechnik, im Idealfall mit einer
+Messelektronik unter Verwendung der
+Silberlinge (h4GB und so…J) – und am
+Ende steht ein vollautomatischer Prüfstand,
+der alle Gegebenheiten automatisch
+aufnimmt und abgibt. Der funktioniert erst
+dann richtig, wenn drei oder mehr gleiche
+Motoren mit in engen Grenzen ähnlichen
+Ergebnissen gemessen werden.
+
+Quellen
+[1]
+
+René Trapp: Kenndaten der ftMotoren. ft:pedia 3/2013, S. 9-29.
+
+[2]
+
+Stefan Falk: Motorsteuerungen (Teil
+1-4). ft:pedia 1/2011, S. 4-8; 2/2011, S. 19-25; ft:pedia 3/2011, S.
+4-13; ft:pedia 4/2011, S. 6-20.
+
+

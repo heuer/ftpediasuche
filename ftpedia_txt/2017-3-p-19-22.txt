@@ -1,0 +1,173 @@
+
+Elektromechanik
+
+Elektromechanik
+
+Ersatz für die Elektromagnete
+Rüdiger Riedel
+Auch wenn das Experimentieren mit Elektromagneten nicht gerade die Massen begeistert, so
+könnte doch der eine oder andere auf den Geschmack kommen. Um dann festzustellen, dass die
+ft-Elektromagnete seit längerer Zeit nicht mehr hergestellt werden und auch gebraucht kaum
+noch zu erhalten sind. Ein Ersatz muss her!
+In der aktuellen Ersatzteilliste sind sowohl
+der ältere Typ Nr. 31324 als auch der neuere
+und stärkere Typ Nr. 32363 nicht mehr
+vorhanden.
+
+mit U-Kern eignet sich besser für Aufgaben
+mit beweglichem Anker, der Topfmagnet
+ist optimal für Haltekräfte bei satt aufliegendem Anker.
+
+Einen echten Ersatz habe ich bisher nicht
+gefunden und meine Basteleien mit RelaisMagneten haben mich nicht überzeugt
+(immerhin lassen sich z. B. die FinderRelais sehr gut auseinandernehmen).
+
+
+
+Die Alternative
+Der einzige Elektromagnet im ft-Programm
+ist ein anderer Typ, ein sogenannter Topfmagnet:
+
+Leider ist der Preis des fischertechnik-Topfmagnets indiskutabel hoch; für ein Zehntel
+(!) des Preises erhält man bei den bekannten
+Verkaufsstellen im Internet mindestens
+gleichwertige Geräte, bei denen nur die
+zentrale Befestigungsschraube und ein
+Baustein 15 mit Bohrung (32064) oder ein
+Baustein 15 mit Ansenkung (32321) hinzu
+kommen müssen [1].
+Meiner hat folgende technische Daten:
+∂ 12 V, 0,25 A (gemessen 51 Ω),
+∂ Durchmesser 18 mm, Höhe 15 mm,
+∂ Wandstärke ca. 1 mm,
+
+Art.-Nr. 142504
+
+Der Unterschied zwischen diesen Magnettypen ist in Abb. 3 dargestellt. Der Magnet
+
+∂ Kerndurchmesser ca. 8 mm
+∂ Haltekraft bei 10 V mehr als 10 N (entsprechend einem Gewicht von ca. 1 kg).
+
+
+
+
+Das gilt natürlich, wie bei allen Magneten,
+nur bei direktem großflächigen Kontakt
+eines genügend dicken Eisenstückes. Schon
+ein Blatt Papier verringert die Haltekraft.
+Bei einem Abstand von 1 mm ergibt sich:
+∂ 6 V: 0,17 N
+∂ 9 V: 0,36 N
+∂ 12 V: 0,47 N
+
+Läufermagneten
+
+Befestigung hinten
+
+Ebenso wie die ft-Elektromagnete sind auch
+die Topfmagnete für Gleichstrom ausgelegt, sie arbeiten aber auch mit Wechselstrom. Meiner erwärmt sich bei 10 V Wechselstrom im Dauerbetrieb von 20°C auf
+etwa 60°C, was für den Magnet völlig
+unkritisch ist [2].
+
+Der Einsatz
+Beim Einsatz des Topfmagnets ist zu
+beachten, dass das Magnetfeld nicht mehr
+von einem Pol zum anderen verläuft, sondern vom inneren Pol symmetrisch zum
+Topfrand, der den Gegenpol darstellt.
+Die Konsequenz ist bereits in Abb. 4 zu
+erkennen und in Abb. 5 verdeutlicht: Der
+Topfmagnet muss seitlich versetzt angeordnet werden.
+Auf diese Weise funktionieren der Synchronmotor in [3] (Abb. 6) und alle z. B. in
+[4] zitierten Synchronmotoren einwandfrei,
+im Allgemeinen mit 6 V Wechselstrom.
+
+
+
+Als Ausnahme habe ich bisher nur den
+zweipoligen Synchronmotor (Polpaarzahl
+p = 1) in [4] gefunden. Der wollte erst mit
+zwei parallel an 10 V Wechselspannung
+angeschlossenen Topfmagneten laufen
+(Abb. 7).
+
+
+Aufbau, oben in Betrieb mit 3000 U/min
+
+Der Motor mit Polpaarzahl 2 aus [4] funktioniert aber wieder einwandfrei mit dem
+Topfmagnet an 6 V Wechselstrom:
+
+
+Schwieriger wird es bei den Läufern, bei
+denen die Neodym-Magnete mit wechselnder Polung von vorne und von hinten in die
+Löcher der Winkelsteine gesteckt sind und
+sich durch die gegenseitige Anziehung
+halten. Der Topfmagnet muss jetzt sehr weit
+nach außen geschoben werden (Abb. 9).
+Dieser schräge Antrieb bewirkt einen unruhigen Lauf.
+
+Elektromechanik
+
+
+Im Gegensatz dazu ist der Scheibenläufer
+nach Abb. 10 (Zahnrad Z30 und Innenzahnrad Z30 sind mit 3 S-Streben 15 und 6 SVerbindungsstopfen 6 miteinander verbunden) sehr gut geeignet zum Antrieb mit dem
+Topfmagnet. Dieser wird hier symmetrisch
+zum Läufer ausgerichtet.
+
+dem alten E-Magnet oder einem Topfmagnet
+
+Auch der „Etwas andere Motor“ (ich nenne
+ihn auch Hui-Motor) aus [5] lässt sich mit
+dem Topfmagnet betreiben.
+Wichtig ist dabei der seitliche Versatz des
+Topfmagnets gegenüber dem Stabmagnet
+des Läufers (Abb. 12).
+
+
+
+
+Der Läufer ist mit Magneten wechselnder
+Polung ausgestattet, also von Polpaarzahl 4.
+Der Stabmagnet links sorgt für die Vormagnetisierung des Reed-Schalters im Hintergrund (Selbstbau), so dass dieser nur bei
+jedem zweiten Läufermagnet anspricht.
+
+
+versetztem Topfmagnet
+
+Das ist nötig, da der Elektromagnet nur einund ausgeschaltet wird, aber keine Umpolung stattfindet.
+
+Quellen
+[1]
+
+Diskussion im ft:c-Forum.
+
+[2]
+
+Rüdiger Riedel: Der Elektromagnet:
+Was kann er (vertragen)? 4/2016, S. 46-51.
+
+[3]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt.verlag, Heidelberg, 2015.
+
+[4]
+
+Rüdiger Riedel: Neue Synchronmotoren. ft:pedia 2/2017, S. 25-31.
+
+[5]
+
+Rüdiger Riedel: Der etwas andere
+Motor. ft:pedia 3/2016, S. 22-25.
+
+[6]
+
+Rüdiger Riedel: Funktionsmodelle
+von Gleich- und Wechselstrommotoren. ft:pedia 4/2016, S. 52-58.
+
+
+Auch die Gleichstrommotoren [6] laufen
+mit den Topfmagneten. Ein Beispiel zeigt
+
+
+

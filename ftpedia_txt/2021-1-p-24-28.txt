@@ -1,0 +1,211 @@
+
+
+Tipps & Tricks
+
+ft-refurbishment (Teil 2)
+Wilhelm Lichtenberg
+In Teil 1 der Reihe „ft-refurbishment“ (ft:pedia 1/2019 [1]) habe ich eine Methode zum Wiederbeleben der Funktionsfähigkeit z. B. eines BS30 vorgestellt. Jetzt geht es den offensichtlichen Schönheitsfehlern und Verschmutzungen unserer Bauteile an den Kragen – meist verursacht durch Gedankenlosigkeit oder zu intensiven Gebrauch. Mit der richtigen Reinigungsmethode kann man aber so manche Bauteile wieder schön machen.
+
+Die Feststellung
+Der ambitionierte fischertechniker oder
+auch der Einsteiger hat oftmals ein Konvolut aus gebrauchten fischertechnik-Bauteilen oder kompletten Kästen in seinem Bestand. Betrachtet man seine Sammlung
+etwas genauer, stellt man häufig Schönheitsfehler an den Bauteilen oder Sortierkästen fest. Meist stammen diese Ansammlungen von Schönheitsfehlern von einem
+selbst oder man hat sie bereits durch ein Gebrauchtangebot dazu bekommen. Eine einfache Methode zeigt, wie man diese Gebrauchsspuren mit Haushaltsmitteln beseitigen kann.
+
+tert werden. Vieles davon ist meistens sowieso im Haushalt vorhanden und braucht
+nicht extra angeschafft zu werden.
+
+Hilfsmittel
+Nicht jedes Hilfsmittel, das einem in die
+Hände kommt, erfüllt auch seinen Zweck.
+Als kleiner Junge (was schon einige Dekaden her ist) habe ich einmal schnell zu Mamas Nagellackentferner gegriffen, um eine
+mit Edding bemalte rote Platte von den Resultaten dieser Untat zu befreien. Damals
+enthielt diese noch Aceton. Danach wusste
+ich, dass ich lieber die Finger davon gelassen hätte. Daher empfehle ich, nur die folgenden Putz- und Reinigungsmittel zu verwenden. Das Ganze ist nur als Empfehlung
+zu verstehen und kann nach Belieben erwei-
+
+
+
+•
+•
+•
+•
+•
+•
+•
+•
+
+Waschbenzin
+Universalverdünnung
+Ceranfeldschaber
+Messer
+Allzweckreiniger
+Chromputzmittel
+Lappen und Schwämme
+Gummihandschuhe
+
+Sind vorhandene Teile wirklich zerstört, so
+kann man sie aber dennoch für das „modding“ weiterverwenden. Hierzu gibt es einen schönen Artikel von Harald Steinhaus
+
+in der ft:pedia 3/2011 [2]. Ich selbst sammele alle noch so kaputten Teile in einer separaten Aufbewahrungskiste.
+Jetzt kann man sich natürlich fragen, ob es
+überhaupt Sinn ergibt, Bauteile zu reinigen
+oder zu reparieren, denn schließlich sind die
+verschmutzen Teile teilweise von so geringem Wert, dass man sie schnell z. B. bei fischerfriendsman [3] nachbestellen kann.
+Viele von uns fischertechnikern kennen das
+noch aus ihrer eigenen Jugend, wo man jedes Teil gehegt und gepflegt hat, bis auf die
+Eskapaden mit Tesafilm, Edding und Co.
+Mir geht es hier in diesem Beitrag darum,
+mit kleinen Handgriffen vorhandenes Material zu „retten“ und wieder dem Spielbetrieb
+zuzuführen. Sicherlich ist es dem Bauteil
+egal, ob es bemalt oder beklebt ist oder
+nicht. Aber wer schon einmal ein Konvolut
+„geschossen“ hat, der weiß, dass man ungern mit klebrigen Bausteinen spielt. Womöglich sind vielleicht noch die Reste von
+Mamas Schnittchen in den Nuten der Steine
+einmassiert, die sich über Jahrzehnte zu einem undefinierten Brei entwickelt haben.
+
+Erste Schritte
+Hat man die Bauteile und/oder Sortierkästen gesichtet, die eine Dusche benötigen,
+geht es auch schon los. Bei einer Handvoll
+Bauteile mit kleinen Dimensionen kann
+man auch einen Eimer nehmen, damit man
+nicht so viel Wasser verbraucht. Bei den bereits in Teil 1 erwähnen 21 Stück UT-1 Kästen kommt da schon eine Menge an Material
+zusammen, das ich damals in der Badewanne gereinigt habe. Versuche mit dem
+Hochdruckreiniger kann ich nicht empfehlen, da ich natürlich auch das ausprobiert
+habe und mir die Teile aus dem Eimer herausgeschossen sind. Die anschließende Suche im Garten ist etwas aufwändiger.
+Ich bevorzuge die Reinigung mit einer
+Handbürste, Handschuhen und einem Allzweckreiniger. Danach werden alle Bauteile auf ein altes großes Handtuch gehoben
+und es wird nochmals geschaut, ob nicht
+
+Tipps & Tricks
+
+noch Kleinteile unter dem Badeschaum versteckt sind. Die könnten schnell mit dem ablaufenden Wasser auf Nimmerwiedersehen
+verschwinden. Das Trocknen kann mitunter
+etwas länger dauern, bis alle Nuten abgetrocknet sind, oder man bemüht noch einen
+Fön. Somit wären die ersten Spuren beseitigt, einschließlich Mamas Schnittchenresten. Man glaubt gar nicht, was da schon alles herauskommt. Selbstverständlich brauche ich hier nicht zu erwähnen, dass sämtliche Elektro- und Elektronikbauelemente
+nicht in die Badewanne gehören. Ebenfalls
+wäre ich mit Pneumatik- und Hydraulikzylindern vorsichtig.
+
+Vorher – Nachher
+Widmet man sich nun den Bauteilen, die
+mit z. B. einem Edding beschrieben wurden, kann man deren nicht mehr gewünschte Beschriftung mittels Universalverdünnung entfernen. Es ist aber darauf zu
+achten, aus welchem Grundmaterial das
+Bauteil besteht. Bei Naben, Platten und
+Winkelsteinen gibt es keine Probleme.
+Letztendlich sollte man immer eine Werkstoffprobe machen. Hier kann selbstverständlich keine Verantwortung übernommen werden. Aber man sieht am Resultat,
+dass es sich durchaus lohnen kann.
+
+
+Es bleiben weder Rückstände von Edding
+übrig noch Schlieren von der Verdünnung.
+Das Ergebnis kann sich also sehen lassen,
+wie ich finde.
+
+
+
+Die o. a. Verunreinigungen sind sicherlich
+eher selten. Ich habe auch gute Erfahrungen
+mit Waschbenzin an den grauen und blauen
+Sortierkisten inklusive 500er oder 1000er
+Bauplatten gemacht.
+
+
+Bei verklebten Bauteilen, die z. B. mit PrittStift und Pappe beklebt wurden, lassen sich
+die Rückstände meistens mit einem weichen Kunststoffgegenstand und warmem
+Wasser abschaben.
+
+Nun gehen wir weiter zum nächsten Material, den Metallachsen. Die folgenden oberflächlichen Verrostungen der Metallachsen
+kennt sicher jeder von uns. Meist fällt es einem erst auf, wenn z. B. Gleitführungen gut
+und geschmeidig laufen müssen, dass
+stumpfe oder mit leichtem Rost versehende
+Metallachsen ein Problem bei einem Bauvorhaben bereiten. Aber auch hier gibt es
+eine sehr einfache und effektive Abhilfe:
+Chromputzmittel. In den Jahren meiner
+Kindheit waren Fahrräder oft mit Chrombauteilen versehen, die man gerne poliert
+hat. Da wurde schnell zum Chromputzmittel gegriffen, um Metallteile wieder zum
+Glänzen zu bringen, und genau das wende
+ich bei den fischertechnik-Metallachsen an.
+
+
+Zusätzlich kann man mit Verdünnung oder
+Waschbenzin den Glanz eines Bauteils wiederherstellen. Auch hier ist das Resultat sehenswert. Ich hatte in meiner Sammlung
+eine Menge solcher verklebter Winkelsteine, die ewig in einer Kiste ungenutzt
+herumlagen, bis ich sie wieder gereinigt
+hatte.
+
+
+Sind die Rostpartikel schon zu tief ins
+Chrom eingedrungen, kann auch das Putzmittel nicht mehr helfen; diese Achsen müssen dann leider aussortiert werden.
+
+
+
+Bitte nicht ausprobieren
+Wie bereits erwähnt kann man mit den falschen Reinigungsmitteln die fischertechnik-Bauteile für immer verunstalten. Ein
+Beispiel hierfür ist die Behandlung eines
+Klarsichtdeckels aus Polycarbonat mit Universalverdünnung. Das Ergebnis ist eine irreversibel geschädigte Oberfläche.
+
+Tipps & Tricks
+
+mit gelöstem Kaisernatron gelagert. Hier
+konnte ich keine Verbesserung festtellen.
+
+
+So bitte auch nicht
+
+Universalverdünnung blind geworden
+
+Erfolglose Versuche
+
+Was mir immer wieder bei Gebrauchtangeboten auffällt ist, dass die Anleitungen gelocht sind. Das ist sicherlich Geschmackssache, wenn diese dann wenigstens ordentlich aufbewahrt wurden, aber viel
+schlimmer ist es, wenn die Stücklisten mittels Stifts „abgehakt“ wurden. Sicherlich
+erst einmal nicht schlimm, denn schließlich
+will man die Bauteile zum Spielen verwenden. Wer aber einen langersehnten hobby 4
+Baukasten sein Eigen nennen will, der ärgert sich schon ein wenig, wenn ein vermeintlich schöner Kasten solche Mängel
+aufweist.
+
+
+Auch möchte ich nicht vorenthalten, dass
+Versuche mit Kaisernatron zu keiner Verbesserung der Oberflächen geführt haben.
+Als Beispiel wurden verfärbte graue BS30
+Bausteine über mehrere Tage in einem Glas
+
+In der Regel verwahre ich die Anleitungen,
+geschützt separat in einer Kiste auf und
+nutzte meistens die Online-Ausgaben auf
+der niederländischen fischertechnik ClubSeite [4].
+
+
+
+
+um preisgünstig meine Sammlung zu erweitern oder Großprojekte möglichst kostengünstig zu halten. Darüber hinaus erzielt
+man bei einem Wiederverkauf von vollständigen und gereinigten Baukästen oder Bauteil-Zusammenstellungen durchaus auch
+bessere Preise und erhält das fischertechnik-System für die Nachwelt mit einem bescheidenen Ansatz der Nachhaltigkeit.
+
+Quellen
+[1]
+
+Wilhelm Lichtenberg: ft-refurbishment (Teil 1). ft:pedia 1/2019,
+S. 12-14.
+
+[2]
+
+Harald Steinhaus: Neue ft-Teile
+selbstgemacht: Teile-Modding. ft:pedia 3/2011, S. 20-24.
+
+[3]
+
+Stefan Roth: fischerfriendsman.de
+
+[4]
+
+Niederländischer fischertechnik-Club
+
+
+Fazit
+Durch die aufgeführten Reinigungsmethoden und in der ft:pedia Ausgabe 1/2019 in
+Teil 1 erwähnte Methode zur Rettung von
+Bausteinen greife ich heute öfter zu etwas
+augenscheinlich desolateren Konvoluten,
+
+
+

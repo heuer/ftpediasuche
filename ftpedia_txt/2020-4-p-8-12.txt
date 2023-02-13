@@ -1,0 +1,310 @@
+
+
+Modell
+
+Wendefahrzeug Wennichanstoßewendeich
+Rüdiger Riedel
+Vor 60 Jahren waren Batterien teuer, aber manche Kinder hatten Großeltern, die sie ihnen
+kauften. Damit wurden seltsame Autos und schienenlose, große Lokomotiven angetrieben, die
+bei jedem Anstoß an der Wand und an Möbeln die Fahrtrichtung wechselten und weiterfuhren.
+Die Funktion war sehr geheimnisvoll.
+
+Das Wendegeheimnis
+Bei meinem Freund Ronald fuhr eine
+Westernlokomotive durchs Wohnzimmer,
+hin und her, ohne anzuhalten von Wand zu
+Schrank und Stuhlbein. Wie das wohl
+funktionierte? Zu meinem Glück hatte er
+viele Spielsachen und manches war auch
+kaputt in seiner Spielkiste. Und so konnte
+ich das Geheimnis um die Wendefunktion
+lüften.
+
+Es ist prinzipiell ein Dreirad mit Antrieb auf
+das Einzelrad. Die Antriebsachse kommt
+von oben durch das Chassis. Ein Ritzel
+treibt ein Kronrad, das auf der Achse des
+Antriebsrades sitzt. Die Lagerung des
+Rades ist vom Chassis entkoppelt, es kann
+sich in alle Richtungen drehen. Wird das
+Rad blockiert, dreht sich der Drehschemel
+so lange, bis das Rad wieder antreiben kann.
+
+
+
+Modell
+
+Von fischertechnik gibt es das Kronrad auf
+dem Zahnrad Z40-32 (31022), aber das ist
+recht groß und ein Antrieb mit einem Z10
+braucht viel Platz.
+Die „Kaulquappe“ von Harald Steinhaus in
+[1], Abb. 5, zeigt eine bessere Möglichkeit:
+Ein Rastkegelzahnrad (35061) treibt einen
+Reifen 45 · 12 (31018) mit Gummiring 45
+(36051), siehe Abb. 2.
+
+
+Teile in Abb. 3:
+Nr.
+
+
+Der Drehschemel wird nicht mittig gelagert.
+Wir nehmen ein Loch weiter außen, um eine
+gewisse Geradeauslauf-Eigenschaft zu
+erreichen.
+
+Bauanleitung
+Die Bauanleitung des Wendefahrzeugs
+lehnt sich an die Bilderrätsel einer bekannten Möbelfirma an und sollte somit leicht
+nachvollziehbar sein.
+Die Verbindung zwischen Chassis (Grundplatte 90 · 45) und Drehschemel (Grundplatte 45 · 45) wird nur durch die Achse des
+Rast-Kegelzahnrades hergestellt.
+
+Bezeichnung
+
+Anzahl
+
+36576 Grundplatte 90 · 45
+
+
+36593 Grundplatte 45 · 45
+
+
+31982 Federnocken
+
+
+37468 Baustein 7,5
+
+
+37237 Baustein 5
+
+
+38253 S-Kupplung 15 2
+
+
+32085 Rollenbock 15
+
+
+35061 Rast-Kegelzahnrad
+Z10 m1
+
+
+31597 Abstandsring 3
+
+
+35073 Rastkupplung 15
+
+
+38414 Kunststoffachse 40
+
+
+37679 Klemmbuchse 5
+
+
+31018 Reifen 45 · 12
+
+
+36051 Gummiring 45 37 · 2,5
+
+
+31015 Flachnabe 25 komplett
+
+
+
+
+
+Weitere Teile in Abb. 5:
+
+
+Durch Verschieben der Klemmbuchse auf
+der Achse sowie der S-Kupplung und des
+Rollenbocks greift das Kegelzahnrad sauber
+in die Zähne des Reifens ein.
+
+Nr.
+
+Bezeichnung
+
+38246
+
+Bauplatte 15 · 15 1Z
+
+
+38240
+
+V-Baustein 15 Eck
+
+
+31982
+
+Federnocken
+
+
+35049
+
+Baustein 5 15 · 30
+
+
+37468
+
+Baustein 7,5
+
+
+137096 XS-Motor
+
+
+31078
+
+U-Getriebe m0,5 mini
+
+
+31082
+
+Rastachse + Zahnrad
+Z28
+
+
+Für die waagerechte Ausrichtung ruht der
+Motor auf einem V-Baustein 15 Eck mit
+darauf liegender Bauplatte 15 · 15 1Z.
+
+
+
+Anzahl
+
+
+Modell
+
+Die zusätzlichen Teile in Abb. 6:
+Nr.
+
+Bezeichnung
+
+Anzahl
+
+135719 Batteriekasten
+
+
+31982
+
+Federnocken
+
+
+31003
+
+Baustein 30
+
+
+37468
+
+Baustein 7,5
+
+
+31040
+
+Metallachse 90
+
+
+37679
+
+Klemmbuchse 5
+
+
+32064
+
+Baustein 15 Bohrung
+
+
+36581
+
+V-Rad 23 · 10
+
+
+36300
+
+S-Winkelträger 15
+
+
+36304
+
+S-Winkelträger 15 2Z
+
+
+
+Zum Schluss die Teile für den Rahmen:
+Nr.
+
+Bezeichnung
+
+Anzahl
+
+38240 V-Baustein 15 Eck
+
+
+36294 S-Winkelträger 120
+
+
+36297 S-Winkelträger 60
+
+
+36299 S-Winkelträger 30
+
+
+35053 S-Winkelträger 15
+
+
+32850 S-Riegelstein 15 · 15
+
+
+Jetzt noch den Motor mit dem Batteriekasten verbinden, Batterie oder Akku einsetzen und es kann losgehen. Ob der Motor
+rechts- oder linksherum dreht, ist nicht egal;
+es kann unterschiedliche Fahreigenschaften
+ergeben. Probiert es aus!
+
+
+Zusätzliche Teile in Abb. 7:
+
+38423 Winkelstein
+10 · 15 · 15 rot
+
+
+Eine Variante des Rahmens seht ihr in
+Fisch.
+
+38242 Bauplatte 15 · 45 2Z
+
+
+Verblüffend ist die Leichtigkeit, mit der das
+Fahrzeug bei einer Berührung wendet.
+
+37237 Baustein 5
+
+
+Quellen
+
+35049 Baustein 5 15 · 30
+
+
+[1]
+
+Harald Steinhaus: Kaulquappen
+(Teil 11). ft:pedia 2/2020, S. 12-16.
+
+[2]
+
+Bauanleitung mot1 (39118). FischerWerke, 1975.
+
+Nr.
+
+Bezeichnung
+
+Anzahl
+
+
+
+
+
+
+
+

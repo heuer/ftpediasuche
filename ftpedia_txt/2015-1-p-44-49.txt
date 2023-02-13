@@ -1,0 +1,307 @@
+
+
+Pneumatik
+
+Druckminderer
+Stefan Falk
+Wer fischertechnik-Modelle mit viel Pneumatik laufen lassen will, braucht ordentlich viel
+Druckluft im Sinne von Volumen pro Zeit. Dazu gibt es im Handel vielerlei leistungsfähige
+Kompressoren. Allerdings liefern viele davon einen für fischertechnik-Pneumatik viel zu hohen
+Druck. Dieser Beitrag zeigt, wie man mit fischertechnik-Teilen den zu hohen Druck auf die
+erlaubten 0,3-0,5 bar reduzieren kann.
+
+Das Problem
+Ein großer Kompressor mit eingebauter
+Druckregelung ist natürlich ideal – aber
+auch entsprechend teuer. Der Autor besitzt
+einen Kompressor, der 15 L/min Durchsatz
+bei 3,5 bar Druck liefert. Der Durchsatz ist
+toll und genügte sogar für den Nachbau
+einer real existierenden Abfüllanlage, deren
+gesamte Ablaufsteuerung ausschließlich
+mit fischertechnik-Pneumatik wie Zylindern, den älteren Festo-Ventilen und Betätigern realisiert war [1]. Dieses Modell
+braucht sehr viel Druckluft – von den aktuellen blauen fischertechnik-Kompressoren
+benötigte man vier Stück im Dauerbetrieb,
+um das Modell zuverlässig am Laufen zu
+halten.
+
+Da kommt der größere Kompressor natürlich gerade recht. Allerdings würden einem
+die meisten fischertechnik-Pneumatikteile
+einfach nur um die Ohren fliegen und
+augenblicklich zerplatzen, wenn man sie
+mit den 3,5 bar dieses Kompressors betreiben würde. Insbesondere bei den bedauerlicherweise so extrem raren Festo-Ventilen
+und Betätigern ist das natürlich unbedingt
+zu vermeiden.
+
+Gefahrenhinweis
+Hohe Drücke können gefährlich sein. Man
+muss gut überlegen, was man tut und was
+man besser lässt, und wo überall Schwachstellen im Aufbau lauern. Bei einem ins
+Auge gefeuerten P-Stopfen z. B. hört der
+
+
+
+Pneumatik
+
+
+Spaß garantiert sofort auf. Also bitte: Umsicht und Vorsicht bei der Anwendung von
+Anregungen aus diesem Beitrag!
+
+Eine Lösung in drei Teilen
+Es gelingt aber tatsächlich, mit purer ftPneumatik einen selbstregelnden Druckreduzierer zu bauen, bei dem kein empfindliches Teil einen zu hohen Druck aushalten
+muss. Der Reihe nach:
+Baugruppe 1: Druckverteiler
+Dieser Beitrag stellt ein Beispiel, wie man
+größere Kompressoren sicher mit fischertechnik verwenden kann, ausführlich dar. Je
+nach vorhandenem Kompressor können bei
+euch andere Bauweisen des Druckverteilers
+notwendig werden, aber die grundsätzlichen Regeln und Anforderungen bleiben
+gleich.
+Die Kapazität des Kompressors kann durchaus für mehrere Modelle gleichzeitig ausreichen (wie die Convention mehrfach
+gezeigt hat). Die in Abb. 1 und 2 gezeigte
+stabil gebaute Anordnung dient dazu, den
+mächtigen Luftstrom des Kompressors auf
+fischertechnik-Schlauchformat zu bringen.
+Darin sind der von links kommende Original-Schlauch des Kompressors und ein mitgeliefertes Adapterstück zu sehen. Über
+dieses passt glücklicherweise ein 36079
+Pneumatik-Schlauch 10x0,5x50 hinreichend stramm, dass der Übergang dicht
+bleibt. Rechts anschließend folgt ein 31646
+Pneumatik-Verteiler gerade so, wie wenn er
+
+am alten großen 30864 Pneumatik Kleinkompressor angeschlossen wäre. Ganz
+rechts endet das Ganze mit dem BS15 mit
+Bohrung, in dessen Nut der Zapfen des
+Pneumatik-Verteilers steckt.
+Damit der Luftdruck die genannten Teile
+nicht auseinander drückt (und sie zu
+Geschossen werden lässt!), ist der umgebende Rahmen in alle denkbaren Richtungen gegen Auseinanderreißen schützend
+gebaut. Wichtige Punkte sind:
+· Die Anordnung muss in jeder Richtung
+so stabil gebaut sein, dass sie mit den
+auftretenden Kräften zuverlässig dauerhaft umgehen kann.
+· Jede Nut ist ein potenzielles Problem,
+weil Zapfen etc. darin in Nut-Richtung
+bei entsprechender Kraft problemlos
+herausgeschoben werden könnten.
+· Jeder Zapfen, insbesondere von Statikteilen, ist ein potenzielles Problem, weil
+er bei entsprechender Kraft abreißen
+oder abscheren könnte.
+· Man überlege sorgfältig und genau, wo
+Kräfte in welche Richtung wirken könnten, und bringe ggf. entsprechende Verstärkungen und Verriegelungen an.
+· Wenn nicht alle Anschlüsse des Pneumatik-Verteilers benötigt werden, bitte die
+unbenutzten paarweise mit einem kurzen
+Stückchen
+Schlauch
+verschließen.
+Keinesfalls dürfen ungesicherte P-
+
+
+
+
+Stopfen verwendet werden – die könnten zu wirklich gefährlichen Geschossen werden, wenn sie durch den Druck
+abfliegen! Dieser Punkt kann nicht
+genügend betont werden.
+
+(rot), insbesondere wenn es schließen soll.
+Ein fischertechnik-Festo-Ventil würde uns
+einfach, in kleine Teilchen zerfetzt, um die
+Ohren fliegen. So kann das keinesfalls
+funktionieren.
+
+· Verwendet stramm sitzende Schläuche.
+Die erste Generation Schlauch von
+fischertechnik (die dünnwandige hellblaue) rutscht viel leichter von einem
+Anschluss ab als die nachfolgenden. Alle
+Schläuche, die hohen Druck führen,
+müssen fest aufgeschoben werden und
+zuverlässig sitzen.
+· Das Tragen einer Schutzbrille sei dringend empfohlen, bis alles auf sichere
+Funktion geprüft und nochmal geprüft
+wurde.
+
+Durchaus funktioniert aber folgende im
+Dauerbetrieb praktisch und erfolgreich
+erprobte Schaltung:
+
+Damit haben wir aber den großen Luftstrom
+und hohen Druck auf potenziell acht
+Anschlüsse verteilt.
+Baugruppe 2: Druckminderer
+Wie können wir nun aus 3,5 bar nur mit
+fischertechnik-Teilen (die ja für höchstens
+0,5 bar ausgelegt sind) 0,3-0,5 bar machen?
+Stellen wir uns z. B. ein Festo-Ventil als
+normalen Schließer in üblicher Verschaltung vor:
+
+
+Der Trick ist, dass wir das Ventil hier
+andersherum als üblich betreiben: Im Ruhezustand lassen wir wieder die Druckluft von
+links nach rechts durch. Wenn der Druck
+rechts aber zu hoch wird, sperren wir die
+überschüssige Druckluft des Kompressors
+nicht etwa ab (und erreichen damit nichts
+als die Zerstörung des Ventils wegen Überdruck), sondern wir lassen sie ins Freie
+strömen!
+
+
+Der naive Gedanke wäre hier, dass das
+Ventil den Niedrigdruckbereich (blau,
+rechts) entlüftet, wenn zu viel Druck
+ansteht. Das Problem ist aber: Das Ventil
+selbst steht unter dem vollen Hochdruck
+
+kann ins Freie entweichen
+
+
+Pneumatik
+
+Das ist natürlich nicht besonders effizient,
+denn wir verschwenden ja Druckluft. Das
+Wichtige daran ist aber, dass wir unser
+Ventil vor Überdruck schützen, solange es
+nur genügend Durchlass bietet, sodass die
+anstehende Hochdruck-Luft hinreichend
+schnell ins Freie Abströmen kann, ohne
+dass sie im Inneren des Ventils einen zerstörerisch hohen Druck aufbauen kann.
+Außerdem haben wir eine Drossel im Hochdruckteil ergänzt. Die lässt sich, wie wir
+noch sehen werden, hochdruckfest mit
+fischertechnik-Teilen bauen, und sie erfüllt
+zweierlei Zwecke:
+
+1. Die Hochdruck-Luft kommt von links
+über die Selbstbau-Drossel an. Die Drossel ist eine leichte Variation aus [2]. Die
+Besonderheit ist die Sicherung des PStopfens gegen Abspringen durch zu
+hohen Druck mittels eines Federnockens; siehe Abb. 7. Alternativ könnte
+die Druckluft vom Druckverteiler auch
+über zwei Schläuche am T-Stück ankommen, sodass gar kein P-Stopfen benötigt
+wird.
+
+a) Sie trägt dazu bei, das Ventil nicht mit
+wesentlich mehr Druckluft zu beaufschlagen, als am Ausgang vom Modell
+benötigt wird.
+b) Sie hilft, Druckluft zu sparen. Wenn
+nämlich viele Modelle am Druckverteiler hängen, wollen wir die Druckluft ja
+noch woanders nutzen können und nicht
+nur ungenutzt ins Freie verlieren.
+unveränderten fischertechnik-Teilen:
+
+zusätzlichem Federnocken
+
+NiederdruckNutzausgänge
+
+HochdruckZufuhr
+
+
+
+
+2. Die so vorgedrosselte Druckluft wird an
+den Ausgang (!) von roten Festo-Ventilen (Öffnern) angeschlossen. Das ist der
+wichtige Punkt: Das Ventil wird entgegengesetzt zur normalen Verwendung
+benutzt. Man schaue genau hin, wo
+welche Schläuche an den Ventilen angeschlossen sind. Die Druckluft kommt am
+„Ausgang“ herein, der bei Betätigung
+des Ventils ja mit der Abluft verbunden
+ist. Dadurch kann die Druckluft bei zu
+hohem Druck einfach durch das Ventil
+hindurch ins Freie strömen und zerstört
+das Ventil nicht.
+In diesem Aufbau des Druckminderers
+sind sogar zwei Festo-Ventile parallel
+geschaltet. Das bietet einen höheren
+Durchsatz (in L/min), der für die oben
+genannte Abfüllanlage erforderlich war.
+Der Aufbau funktioniert aber grundsätzlich auch mit nur einem Ventil.
+3. Am normalen „Eingang“ der Festo-Ventile mit rotem Stößel befindet sich jetzt
+der Niederdruck-Ausgang des Druckminderers. Im gezeigten Aufbau gibt es
+sogar zwei Nutzausgänge, die z. B.
+parallel zu einem ft-Drucklufttank geführt werden können.
+
+4. Die Niederdruck-Luft wird auch zu
+einem einfachwirkenden 36075 Pneumatik-Betätiger geführt. Der kann – hier gegen die relativ starke Federkraft zweier
+31307 Federfüße aus dem alten Elektromechanik-Programm von fischertechnik
+– die Stößel der Festo-Ventile betätigen.
+Auf diese Weise werden die Ventile bei
+zu hohem Ausgangsdruck in den Zustand geschaltet, der die ankommende
+Hochdruck-Luft einfach ins Freie strömen lässt.
+Voilà! Wir haben – nur mit unveränderter
+fischertechnik – aus 3,5 bar Hochdruck ftkompatiblen Niederdruck gemacht. Zweckmäßig ist es natürlich, den Druck am Ausgang mit einem Manometer zu überwachen,
+wie es sie im Handel gibt.
+Die Bedienungsanleitung unseres Druckreduzier-Aufbaus ist dann wie folgt:
+Zunächst wird die Drossel ganz geschlossen
+und nur langsam so weit geöffnet, bis der
+gewünschte Druck am Ausgang ansteht.
+Sodann wird durch Verschieben des Betätigers und der Federn die Druckregelung so
+eingestellt, dass bei zu hohem Druck auf
+Abluft geschaltet wird. Erst dann darf die
+Eingangsdrossel weiter aufgedreht werden,
+um mehr Durchfluss (Volumen pro Zeit) zu
+erhalten. Der Ausgangsdruck wird dabei
+hinreichend konstant bleiben.
+HochdruckZufuhr
+
+NiederdruckNutzausgänge
+
+Baugruppe 3: Gegen das „Flattern“
+Beim Betrieb der Baugruppe kann ein unerwünschter Effekt auftreten: Der Druckminderer kann ins „Flattern“ geraten, will
+heißen, er schwingt in rasend schneller
+Folge zwischen den Zuständen „zu wenig
+Druck“ und „zu viel Druck“ hin und her.
+Das geht so schnell, dass man es als Brummen hören und als heftige Vibration spüren
+kann.
+Insbesondere kann das auftreten, wenn die
+Druckluftzufuhr stark pulsiert. Das wiederum ist oft der Fall, wenn z. B. ein Kreiskolbenkompressor mit nur einem Zylinder eingesetzt wird, ohne dass ein großer Ausgleichsbehälter die Druckstöße dämpft. Pro
+Hub des Kompressors wird der Druckminderer dann mit besonders viel Druckluft beaufschlagt, und während der nächsten
+halben Umdrehung des Kompressors mit
+fast gar keinem Druck.
+Das lässt sich mit großen Ausgleichsbehältern, wie sie große Kompressoren haben,
+vermeiden. Aber auch mit fischertechnikMitteln gibt es eine Lösung:
+
+ankommende Druckluft
+
+Die Druckluft lässt man durch 36970 Pneumatik-Rückschlagventile strömen. Abb. 9
+zeigt eine Anordnung mit zwei Druckluftzugängen für hohen Durchsatz. Die Eingänge der Rückschlagventile werden mittels Pneumatik-T-Stück und P-Stopfen
+schlauchanschlussfähig gemacht. Hier kann
+die Druckluft ruhig stoßweise ankommen,
+denn während der Phasen ohne Druck sperren die Rückschlagventile einfach das
+Zurückströmen der im Lufttank gesammelten Druckluft. Auf der entfernten Seite des
+
+Pneumatik
+
+Drucktanks steht dann Druckluft mit angenehm gleichmäßigem, kaum pulsierenden
+Druck zu Verfügung.
+Man kann diese Anordnung auf der Niederdruckseite des Druckminderers sicher betreiben. Will man den Druckminderer selbst
+schon vor der pulsierenden, schlagenden
+Druckluft bewahren, könnte das auch im
+Hochdruckbereich funktionieren. Allerdings ist dann zu beachten:
+1. Der Flatterschutz muss hinter der
+Drossel eingebaut werden! Der fischertechnik-Pneumatiktank ist ja auch nicht
+für hohe Drucke ausgelegt. Die Drossel
+darf nur so weit geöffnet werden, dass
+das zu betreibende Modell gerade genug
+Druckluft bekommt. So wird sichergestellt, dass der Tank und die Rückschlagventile nicht überlastet werden und zerplatzten.
+2. Die Zuläufe dürfen dann keine PStopfen verwenden, zumindest keine
+ungesicherten! Gefahr! Besser geht
+man dann mit zwei Schläuchen parallel
+in die T-Stücke. Ansonsten besteht ernsthafte Verletzungsgefahr durch abfliegende P-Stopfen!
+3. Der Autor übernimmt keine Garantie
+oder Haftung jeglicher Art für die
+Rückschlagventile und Lufttanks,
+wenn sie unter Hochdruck verwendet
+werden. Alle diesbezüglichen Experimente unternehmt ihr auf eigene Gefahr
+und also bitte nur wohlüberlegt und mit
+äußerster Vorsicht!
+Sicherer ist es, den Flatterschutz erst im
+Niederdruckbereich zu verwenden.
+
+Quellen
+[1]
+
+Falk, Stefan: Rein pneumatisch gesteuerte Abfüllanlage. ftCommunity-Website, 2012.
+
+[2]
+
+Falk, Stefan: Druckluftsteuerungen
+(Teil 3). ft:pedia 3/2014, S. 25.
+
+
+

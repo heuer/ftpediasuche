@@ -1,0 +1,710 @@
+
+
+Computing
+
+Experimente mit dem Kombisensor
+Dirk Fox
+Im Jahr 2018 brachte fischertechnik einen IMU (Inertial Measurement Unit) auf den Markt,
+der via I²C-Protokoll mit dem TXT verbunden werden kann – den „Kombisensor“ (158402).
+Eine etwas unglückliche Bezeichnung, verrät sie doch nicht, was der Sensor alles kann.
+Zunächst war er nur mit dem Education-Baukasten „Robotics Competition Set“ erhältlich;
+inzwischen gibt es ihn auch als Einzelteil. Tatsächlich ist damit einiges möglich...
+
+Hinter den Kulissen
+Der fischertechnik-Kombisensor [1] enthält
+das Bosch-Sensormodul BMX055, das
+einen Magnetsensor, einen Beschleunigungssensor und einen Gyrosensor umfasst
+[2]. Dank der vielen Milliarden Smartphones erhält man solche – früher koffergroßen, Inertial Measurement Unit (IMU)
+[3] genannten – Sensor-Kombinationen
+heute für einen kleinen zweistelligen EuroBetrag, integriert auf einem wenige
+Quadratmillimeter großen IC.
+Der Kombisensor von fischertechnik ist
+zusätzlich mit einem Step-Down-Wandler
+ausgestattet, der die 9V-Spannung des TXT
+auf die von den Sensoren benötigten 3,3V
+herunterregelt.
+Im Einzelteilvertrieb kostet der Kombisensor 48 bis 58 Euro.
+
+Magnet-, Beschleunigungs- und Gyro-Sensor des BMX055 sind dreidimensional, d. h.
+sie liefern Messwerte für je drei zueinander
+senkrechte x-, y- und z-Achsen.
+Der Beschleunigungssensor ist vermutlich
+ein BMA253 oder Vorläufer (Chip-ID
+0xFA), erreichbar unter der I²C-Adresse
+0x18. Er liefert mit 12 bit Auflösung und
+einer Genauigkeit von 1 m𝑔 die Beschleunigung im Verhältnis zur zwei- bis 16𝑚
+fachen Erdbeschleunigung 𝑔 = 9,81 2.
+𝑠
+
+Der mit dem BMM050 und BMM150 kompatible Magnetometer („Kompasssensor“)
+hört auf die I²C-Adresse 0x10 und liefert die
+x-, y- und z-Komponente der gemessenen
+magnetischen Flussdichte in µT mit einer
+Genauigkeit von 0,3 µT u. 13 bit Auflösung.
+Der Gyrosensor ist unter der I²C-Adresse
+0x68 ansprechbar und misst die Winkelgeschwindigkeit einer Drehung des Sensors
+um die x-, y- und z-Achse in °/s. Die Messwerte haben eine Auflösung von 16 bit.
+
+Anschluss an den TXT
+
+
+
+Am Robotics TXT Controller wird der Sensor mit dem beiliegenden 10-poligen Flachbandkabel an den EXT-Ausgang angeschlossen. Als Stromversorgung dient ein
+einadriges Kabel, über das der 9V-Eingang
+des Sensors mit dem 9V-Ausgang des
+Controllers verbunden wird (Abb. 2).
+
+
+Computing
+
+die 3V-Logik des Sensors mit der 5V-Logik
+des TX zu verbinden. Außerdem muss man
+beachten, dass die Anschlussbelegung des
+TXT 4.0 von der des ebenfalls sechspoligen
+EXT-2-Anschlusses des TX-Controllers
+abweicht: Dort sind Pin 1 (GND) und Pin 2
+(5V) genau umgekehrt belegt. Vorsicht also
+mit alten „vorkonfektionierten“ Kabeln…
+
+Programmierung
+
+
+Der Sensor kann auch am neuen Robotics
+TXT 4.0 Controller genutzt werden. Dort ist
+fischertechnik wieder zu einer sechspoligen
+Wannenbuchse (wie beim TX Controller)
+zurückgekehrt. Die Verbindung zwischen
+einem der beiden EXT-Ausgänge des Controllers und dem Sensor kann man entweder
+mit einem Adapterkabel oder mit drei
+Female-to-Female-Jumper-Kabeln herstellen. Die folgende Grafik zeigt die zu verbindenden Anschlüsse (Abb. 3).
+
+Robotics TXT 4.0 Controller
+
+Die Stromversorgung wird auch hier mit
+einem einadrigen Kabel zwischen dem 9VEingang des Sensors und dem 9V-Ausgang
+des Controllers hergestellt.
+Wer noch einen TX Controller sein eigen
+nennt, der benötigt einen Level-Shifter, um
+
+Für ROBO Pro hat fischertechnik einen I²CTreiber für den Sensor BMX055 – genauer:
+die drei darin enthaltenen Sensoren – entwickelt, der seit Version 4.2.4 mit der
+ROBO Pro-Software ausgeliefert wird. Den
+Treiber findet man in der ROBO ProBibliothek unter ‚I2C‘.
+Daher können wir uns im Folgenden zunächst auf die Nutzung dieser Bibliothek
+beschränken. Tatsächlich musste ich sie
+überarbeiten und erweitern, weil sie einige
+Fehler enthält, die Temperaturkompensation der z-Achse des Magnetometers nicht
+implementiert wurde und eine Kalibrierung
+fehlt (mehr dazu später). Technische Details
+zur Konfiguration und Nutzung der drei
+Sensoren finden sich im 172-seitigen
+Datenblatt von Bosch zum BMX055 [2].
+Für die neue fischertechnik-Programmierumgebung ROBO Pro Coding (vulgo:
+Blockly) stellt fischertechnik ebenfalls spezielle Blockly-Befehle bereit, die die Daten
+des Kombisensors auslesen. Alle folgenden
+Anwendungsbeispiele lassen sich weitgehend auch in ROBO Pro Coding implementieren. Wegen der großartigen OszilloskopFunktion, die es (bisher) in ROBO Pro
+Coding nicht gibt, habe ich mich bei den
+Beispielprogrammen allerdings auf ROBO
+Pro beschränkt.
+Damit die Daten auf dem Oszilloskop im
+Bedienfeld angezeigt werden, müssen die
+Programme im Online-Mode gestartet werden. Im WLAN-Mode (mit dem TXT als
+WLAN-Client) funktioniert das auch kabellos. Und im Klassenraum kann man die
+Messergebnisse via Beamer projizieren.
+
+
+Beschleunigungssensor
+Der Beschleunigungssensor misst in Ruhelage die Erdbeschleunigung 𝑔: Liegt der
+Sensor flach auf einem Tisch, so liegt an der
+nach oben gerichteten z-Achse 1𝑔 an (1.000
+m𝑔), während die x- und y-Komponente
+deutlich kleinere Werte liefern. Das kann
+man sich sehr anschaulich mit der Oszilloskop-Funktion in ROBO Pro anzeigen lassen
+(Abb. 4).
+
+Der fischertechnik-Treiber liefert als Rohdaten 16-bit-Werte, bei denen die niederstwertigen vier Bits undefiniert sind (also
+beliebige Daten enthalten können). Durch
+einen arithmetischen Shift um vier Bits
+korrigieren wir daher die Werte gleich nach
+dem Einlesen (Abb. 6).
+
+[Skala: 1s/0,25𝑔]
+(Programm: Acc-Oszilloskop.rpp)
+
+Dreht man den Sensor nun in verschiedene
+Richtungen um 90°, kann man die Ausrichtung der x- und der y-Achse prüfen: Zeigt
+das Oszilloskop 1𝑔 an, so ist die entsprechende Sensor-Achse gerade nach oben gerichtet. Die Orientierung der Achsen zueinander lässt sich leicht mit der „RechteHand-Regel“ merken [2] (Abb. 5).
+
+Beschleunigungssensors
+
+Um aus den Rohdaten den Wert in m𝑔 zu
+erhalten, müssen wir diese noch nach Tab.
+1 abhängig von dem bei der Initialisierung
+gewählten Messintervall umrechnen [2]:
+
+Tab. 1: Umrechnung der Rohdaten
+
+
+Mit einem Aufkleber könnt ihr die Lage der
+x- und der y-Achse auf dem Sensor kennzeichnen (siehe Abb. 2).
+
+
+Bei einem Messintervall von ±2𝑔 verwendet der Sensor für die Darstellung von 1.000
+m𝑔 1.024 bit – also müssen wir die Rohdaten durch 1,024 dividieren (oder mit
+0,9766 multiplizeren), um die Werte in der
+Einheit m𝑔 zu erhalten. Bei ±4𝑔 müssen
+wir durch 0,512 dividieren, bei ±8𝑔 durch
+0,256 und bei ±16𝑔 durch 0,128 (oder mit
+7,8125 multiplizieren). Dieser Schritt wird
+auch als ‚Skalierung‘ bezeichnet.
+Was kann man nun mit einem solchen Beschleunigungssensor anfangen?
+
+
+Computing
+
+Natürlich kann man mit ihm Beschleunigungen messen. Das macht man z. B. zur
+Bestimmung von kaum wahrnehmbaren Vibrationen (bspw. in Kameras und in Seismografen, siehe Abb. 7) oder von besonders
+großen wie der negativen Beschleunigung
+bei einer Bremsung, einem Crash-Test oder
+in einer Zentrifuge. Auch beim Auslösen
+eines Airbags kommen Beschleunigungssensoren zum Einsatz, ebenso bei der Erkennung des „Antippens“ eines Smartphones (plötzliche sehr kurze Beschleunigung).
+
+„Passanten“ in der Wohnung erzeugten
+Vibrationen [Skala: 1s/0,01𝑔]
+
+Pendelexperiment
+Wir können mit dem Sensor auch physikalische Experimente durchführen. Ein hübsches, einfaches Experiment ist der Nachweis der überraschenden Erkenntnis von
+Galileo Galilei (1564–1642) aus dem Jahr
+1632, dass die Schwingungsperiode 𝑇 eines
+Pendels allein von der Länge 𝑙 des Pendels
+abhängt und unabhängig ist von Gewicht
+und Auslenkung. Es gilt:
+𝑇 =2∙𝜋∙
+
+𝑙
+𝑔
+
+Stellen wir die Gleichung um, können wir
+zu einer gewünschten Periodendauer 𝑇 die
+dafür erforderliche Pendellänge bestimmen:
+𝑇 2
+2∙𝜋
+Ein Pendel, das wie bei einer Standuhr [4]
+einmal pro Sekunde den tiefsten Punkt passiert (Periodenlänge 𝑇 = 2 s), muss eine
+Länge 𝑙 von knapp einem Meter (genauer:
+99,4 cm) haben. Hängen wir nun den TXT
+mit einem Haken und seitlich angebrachtem
+Kombi-Sensor an einen entsprechend langen Faden (gemessen bis zur Mitte des
+Controllers) und lassen ihn pendeln, zeigt
+das Oszilloskop für die nach oben gerichtete
+Achse die Schwingung in Abb. 8 an.
+𝑙=𝑔∙
+
+Den niedrigsten Beschleunigungswert misst
+der Sensor, wenn der TXT nach unten
+schwingt; wenn er senkrecht hängt und in
+den „Wendepunkten“ entspricht der Wert
+der Erdbeschleunigung. Man kann sehr
+schön erkennen, wie die Amplitude der
+Schwingung abnimmt, während die Länge
+der Periode der Sensorwerte konstant bei
+einer Sekunde liegt.
+Nun könnt ihr leicht ausrechnen (und anschließend mit dem TXT-Pendel und dem
+Programm in Abb. 9 experimentell überprüfen), wie lang das Pendel einer Uhr mit
+einer Periode von bspw. 𝑙 = 1 s sein muss.
+(Zugegeben, das Experiment funktioniert
+natürlich auch ohne TXT und Kombisensor
+ganz einfach mit Pendel und Stoppuhr oder
+einer Uhr mit Sekundenzeiger. Dafür wird
+hier die Schwingung mit Amplitude sehr
+anschaulich sichtbar gemacht.)
+
+(Programm: Pendelexperiment.rpp, siehe Abb. 9)
+
+
+
+
+Neigungsmessung
+Eine weitere wichtige Anwendung von Beschleunigungssensoren ist die Lagebestimmung (Neigungswinkel oder „Tilt“).
+Die Neigung des Sensors wird in zahlreichen Anwendungen genutzt: In Flugzeugen, Hubschraubern, Multicoptern und Raketen ist sie ein Kernelement der Navigation. Mit einem Gimbal kann eine Kamera
+an einem bewegten Objekt in konstanter
+Ausrichtung gehalten werden. Und auch bei
+der Höhenmessung in der Geodäsie ist die
+exakte Bestimmung des Neigungswinkels
+zum Erdmagnetfeld wichtig. Schließlich
+können wir die Neigung – wie beim Nunchuk [5] oder der Smartphone-Steuerung
+für den Flitzer [6] – als Fernsteuerung für
+ein Modell nutzen.
+
+Die Neigung wird durch zwei Winkel definiert, die – wie in der Luftfahrt üblich – als
+„Roll“ (Drehung im Uhrzeigersinn um die
+in Flugrichtung zeigende x-Achse) und
+„Pitch“ (Drehung um den rechten Flügel,
+ebenfalls im Uhrzeigersinn) bezeichnet
+werden. Die Winkel werden dabei jeweils
+in Bezug auf eine horizontale Fluglage bestimmt (Abb. 10).
+
+
+
+
+Computing
+
+Auch bei Flugzeugen sind die Beschleunigungsachsen nach der Rechte-Hand-Regel
+(Abb. 5) ausgerichtet, allerdings zeigt hier
+die z-Achse nach unten; das Koordinatensystem ist um 180° um die x-Achse gedreht.
+Die Drehung um die z-Achse wird „Yaw“
+oder „Heading“ genannt. Nur mit dem Beschleunigungssensor können wir jedoch
+keinen Bezugswert für das Heading festlegen (wie die horizontale Lage für Pitch und
+Roll): Um die Abweichung von der Ausrichtung auf den geomagnetischen Nordpol
+zu bestimmen, benötigen wir zusätzlich
+einen Kompasssensor (Magnetometer) [7].
+Nun möchten wir zunächst Pitch und Roll
+aus den Werten unseres Kombisensors berechnen. Die Herleitung der Formel spare
+ich mir – das ist einfache Trigonometrie.
+Eine sehr schöne Darstellung findet sich
+z. B. in [8]. Im Folgenden bezeichnen der
+Winkel 𝜃 Roll, der Winkel 𝜑 Pitch und
+𝐴𝑐𝑐𝑥 , 𝐴𝑐𝑐𝑦 und 𝐴𝑐𝑐𝑧 die vom Sensor
+gemessene x-, y- und z-Komponente der
+Beschleunigung. Damit gilt [8, 9]:
+tan 𝜃 =
+tan 𝜑 =
+
+
+Auf die Berechnung von 𝜃 hat die Drehung
+des Koordinatensystems keinen Einfluss;
+beim Pitch hingegen müssen wir das Vorzeichen des Ergebnisses invertieren (Abb.
+12).
+
+𝐴𝑐𝑐𝑦
+𝐴𝑐𝑐𝑧
+
+−𝐴𝑐𝑐𝑥
+𝐴𝑐𝑐𝑦 ∙ sin 𝜃 + 𝐴𝑐𝑐𝑧 ∙ cos 𝜃
+
+Da der Tangens nur zwischen -90° und 90°
+definiert ist, berechnen wir 𝜃 und 𝜑 nicht
+mit der Arkustangens- sondern der 𝑎𝑡𝑎𝑛2Funktion (Abb. 11), die mit zwei Eingabewerten (𝑥, 𝑦) rechnet und einen Winkel
+zwischen -180° und +180° liefert [10].
+
+
+Sensor auf zwei im 90°-Winkel zueinander
+versetzten Winkelsteinen 7,5 montiert wird.
+
+montiert wird [Skala: 1s/1°] (Programm: Berechnung von Pitch und Roll.rpp, siehe Abb. 14)
+
+
+
+Betrag des Beschleunigungsvektors etwa
+1𝑔 entspricht [11]:
+
+𝐴𝑐𝑐𝑥 2 + 𝐴𝑐𝑐𝑦 2 + 𝐴𝑐𝑐𝑧 2 = 1000 m𝑔
+
+Diese Bedingung können wir auch im Programm prüfen (Variable „Test“ in Abb. 14).
+Mit den Werten von Pitch und Roll können
+wir nun eine Neigungssteuerung implementieren oder mit Servos einen Gimbal steuern. Wie das geht, werde ich in einem
+separaten Beitrag vorstellen.
+
+Magnetometer
+
+(Programm: Berechnung von Pitch und
+Roll.rpp)
+
+Im ROBO Pro-Programm zur Berechnung
+von Pitch und Roll in Abb. 14 sind die drei
+Schritte gut zu erkennen:
+ Auslesen der Rohdaten des Sensors
+ Skalierung auf m𝑔
+ Berechnung der Winkel 𝜃 und 𝜑
+Wenn der Pitch sich 90° nähert, steigt der
+Wert von Roll plötzlich ebenfalls stark an.
+Das könnt ihr mit dem Programm selbst
+ausprobieren, indem ihr den Sensor um die
+x-Achse dreht. Dieser Effekt ist dem
+Berechnungsverfahren geschuldet, bei dem
+im „Randbereich“ das Rauschen des Sensors größere Fehler induziert [9]. Da unsere
+Pitch-Werte eher im Bereich bis ±45° liegen
+betrifft uns das allerdings nicht weiter.
+Für die Korrektheit des Ergebnisses ist es
+wesentlich, dass sich der Sensor in Ruhe
+befindet, also keine andere Beschleunigung
+als die der Erdanziehungskraft auf ihn
+wirkt. Das erkennen wir daran, dass der
+
+Die vom Magnetometer des Kombisensors
+gemessene Magnetflussdichte des Erdmagnetfelds liegt auf der Erdoberfläche zwischen 22 und 67 µT und ist auf den geomagnetischen Nordpol ausgerichtet. Genau
+genommen ist es magnetisch ein Südpol –
+sonst würde die Kompassnadel nicht nach
+Norden zeigen. An den geomagnetischen
+Polen sinkt die Magnetflussdichte auf 0 µT.
+Deklination
+Tatsächlich ist das Erdmagnetfeld ungleichmäßig und stimmen die geomagnetischen
+nicht mit den geografischen Polen überein,
+sodass es zu Abweichungen zwischen der
+Richtung der Kompassnadel und dem geografischen Nordpol kommt. Diese sogenannte Deklination wurde erstmalig von
+dem Chinesen Yi Xing (683-727) im Jahr
+720 gemessen. Sie ist zudem nicht stabil,
+denn das Erdmagnetfeld unterliegt permanenten Änderungen und wird auch – sogar
+im Tagesverlauf – vom Sonnenwind beeinflusst. In Deutschland liegt die Deklination
+derzeit bei etwa 1-4° Ost; das ist sehr wenig
+im Vergleich mit Gegenden in Polarnähe.
+Wir vernachlässigen die Deklination daher
+und konzentrieren uns darauf, die magnetische Nordrichtung zu bestimmen.
+Inklination
+Das Erdmagnetfeld wirkt auch nicht überall
+parallel zur Erdoberfläche. Den Winkel, in
+
+dem die Wirkung (die magnetischen Feldlinien) gegenüber der Horizontalen geneigt
+ist, nennt man Inklination. Sie wurde erstmalig im Jahr 1544 von dem deutschen
+Mathematiker Georg Hartmann (14891564) beschrieben. Am Äquator beträgt sie
+0°, an den geomagnetischen Polen 90°. In
+Deutschland liegt sie immerhin bei 62° bis
+70°. Sie beeinflusst allerdings unsere folgenden Rechnungen nicht, daher werden
+wir auch sie ignorieren.
+Auslesen der Rohdaten
+Beim Auslesen der Sensor-Rohdaten des
+Magnetometers müssen wir berücksichtigen, dass die x- und y-Komponente jeweils
+13 bit, die z-Komponente jedoch 15 bit
+umfasst. Wie beim Beschleunigungssensor
+shiften wir die Rohdaten zunächst, bevor
+wir sie weiter verarbeiten (Abb. 15); das
+wurde im fischertechnik-Treiber vergessen.
+
+Computing
+
+enthält der ROBO Pro-Treiber von fischertechnik dafür bereits eine Funktion – hier
+müssen wir daher zunächst nichts weiter
+berücksichtigen.
+Die z-Komponente benötigen wir bei den
+folgenden Anwendungen nicht. Diese im
+fischertechnik-Treiber fehlende Temperaturkompensation habe ich in meiner Implementierung für spätere Anwendungen ergänzt.
+Rauschen
+Die Rohdaten des Magnetometers schwanken sehr stark. Das lässt sich mit einem einfachen Filter wie dem gleitenden Durchschnitt über mehrere Messwerte verringern
+(Abb. 16).
+
+Magnetometers
+
+Temperaturkompensation
+Bevor wir die Rohdaten des Magnetsensors
+auswerten können müssen wir eine Temperaturkompensation vornehmen, da sich die
+Messwerte bei der Erwärmung des Sensors
+verändern. Für die x- und y-Komponente
+
+Rohwerte der y-Komponente (Magnetsensor)
+
+
+
+Mit einem Kalman-Filter gelingt das wahrscheinlich noch besser; für viele Zwecke
+genügt unser Filter jedoch. Dabei ist
+allerdings zu beachten, dass sich sprunghafte Änderungen des Magnetfelds erst verzögert bemerkbar machen – bei 30 Messungen
+pro Sekunde und einer Mittelwertbildung
+über 20 Messwerte wirkt sich die Änderung
+erst nach rund 0,67 s voll aus.
+Die Mittelwertbildung müssen wir für jede
+der drei Komponenten vornehmen.
+Kalibrierung
+Der Sensor reagiert sehr empfindlich auf
+Störungen des Magnetfelds, die z. B. durch
+ferromagnetisches Material verursacht werden. Solche konstanten Störungen werden
+als „Hard Iron“-Fehler bezeichnet.
+Die fischertechnik-Implementierung des
+BMX055-Treibers berücksichtigt diese
+Störungen nicht. Um die durch sie verursachten Messfehler zu korrigieren führt
+man üblicherweise nach dem Einbau eines
+Sensors in ein Modell eine Kalibrierung
+durch. Dazu genügt es, den Sensor ein paar
+Mal gleichmäßig um sich selbst zu drehen.
+Dabei bestimmt man die maximalen und
+minimalen Magnetfeldstärken für die xund die y-Achse [12] (Abb. 17).
+
+(Programm: Kalibrierung Hard Iron.rpp)
+
+Man erkennt sofort, dass die Maximal- und
+Minimalwerte der x- und der y-Achse nicht
+übereinstimmen – die beiden Kurven sind
+also zueinander und zur jeweiligen 0-Achse
+verschoben. Die Verschiebung muss von
+den (temperaturkompensierten) Rohdaten
+des Magnetometers abgezogen werden,
+
+
+bevor wir weiterrechnen und bspw. die Abweichung von der Nordausrichtung bestimmen. Das macht das Kalibrierungsprogramm, sobald der Taster an I1 gedrückt
+wird.
+Nach korrekter Kalibrierung sollten die xund y-Werte des Magnetometers beim Drehen um die eigene Achse einen einigermaßen runden Kreis um den Nullpunkt
+bilden; in der Oszilloskop-Darstellung müssen die Mittelpunkte der x- und der y-Kurve
+auf der 0-Achse liegen.
+Die Werte der Variablen „CalX“ und
+„CalY“ solltet ihr anschließend notieren:
+Diese beiden Kalibrierungswerte gelten für
+euer Modell.
+Schwieriger herauszurechnen sind „SoftIron“-Fehler, die sich mit der Position des
+Sensors ändern. Sie können bspw. von
+stromdurchflossenen Leitern verursacht
+werden. Wir ignorieren diese Fehler hier
+und sorgen stattdessen dafür, dass wir den
+Sensor möglichst weit von Stromflüssen
+und anderen Magnetfeldern entfernt montieren.
+Ausrichtung des Sensors
+Norden ist üblicherweise die Richtung, in
+der der Wert der x-Komponente des Magnetometers sein Maximum erreicht, und
+Westen die, in der der Wert der y-Komponente maximal wird [13].
+Beim BMX055 sind die Achsen des Magnetometers zwar ebenfalls nach der RechteHand-Regel angeordnet, allerdings ist auch
+hier das Koordinatensystem gedreht: Die xAchse des Magnetometers liegt auf der yAchse des Beschleunigungssensors und die
+y-Achse auf dessen negativer x-Achse
+(Abb. 18).
+
+
+Computing
+
+Auch hier berechnen wir (wie bei der Lagebestimmung) die Umkehrung des Tangens
+mit der Funktion 𝑎𝑡𝑎𝑛2 (Abb. 11).
+
+
+Daher zeigt die x-Achse des Beschleunigungssensors nach Süden, wenn die yKomponente den maximalen Wert annimmt, und die y-Achse des Beschleunigungssensors nach Norden, wenn die xKomponente maximal ist. Das veranschaulicht das ROBO Pro-Programm „MagOszilloskop.rpp“.
+Um die Werte des Magnetometers auf unser
+nach der x-Achse des Beschleunigungssensors ausgerichtetes Koordinatensystem
+abzubilden, definieren wir die folgenden
+Kompass-Koordinaten:
+𝐶𝑜𝑚𝑝𝑥 : = −𝑀𝑎𝑔𝑦
+𝐶𝑜𝑚𝑝𝑦 : = 𝑀𝑎𝑔𝑥
+Liegt ein Kompass-Sensor in der horizontalen Ebene, dann ist die Bestimmung der
+Abweichung 𝜓 von der Nordrichtung, das
+„Heading“ (oder „Yaw“, d. h. die Drehung
+der magnetischen x-Achse um die magnetische z-Achse im Uhrzeigersinn, Abb. 10)
+einfach: Wir können sie direkt aus dem
+Quotienten der y- und der x-Komponente
+des Kompass-Sensors berechnen:
+tan 𝜓 =
+
+𝐶𝑜𝑚𝑝𝑦
+𝐶𝑜𝑚𝑝𝑥
+
+Die Funktion liefert uns einen Winkel
+zwischen -180° und 180°: Damit lässt sich
+die Abweichung von der Nordrichtung im
+Oszilloskop besser darstellen als mit den
+360°-Werten, die die Funktion 𝑀𝑎𝑔𝐺𝑒𝑡𝐴
+des fischertechnik-Treibers zurückgibt. Für
+die Berechnung des Headings habe ich die
+Funktion 𝑀𝑎𝑔𝐺𝑒𝑡𝐴 des fischertechnikTreibers an unsere Sensor-Ausrichtung angepasst und in 𝑀𝑎𝑔𝐺𝑒𝑡𝐻𝑒𝑎𝑑𝑖𝑛𝑔 umbenannt.
+Beim Vergleich der Berechnung mit den
+korrigierten und kalibrierten Rohdaten
+(Funktion
+𝑀𝑎𝑔𝐺𝑒𝑡𝐶𝑜𝑚𝑝𝐶𝑎𝑙𝐻𝑒𝑎𝑑𝑖𝑛𝑔)
+und der Berechnung mit der Funktion
+𝑀𝑎𝑔𝐺𝑒𝑡𝐻𝑒𝑎𝑑𝑖𝑛𝑔 des fischertechnik-Treibers ist in Abb. 20 gut zu erkennen, dass der
+fischertechnik-Treiber (rote Linie) einen
+Winkelfehler von etwa 8° verursacht. Je
+nach Umgebung kann der Wert auch deutlich größer ausfallen. Da der fischertechnikTreiber auch keine Mittelwertbildung vornimmt, ist das Ergebnis des Treibers praktisch unbrauchbar.
+Nach Kalibrierung und Mittelwertbildung
+erreicht der Sensor eine Genauigkeit von
+±0,5° – leicht zu überprüfen, indem wir den
+TXT mit einem Kompass exakt nach Norden ausrichten (Abb. 19).
+
+Beschleunigungssensors nach Norden (AccX)
+
+
+
+
+Kombisensors ohne (rot) und mit (gelb) Kalibrierung sowie als gleitender Durchschnitt über 20
+Messwerte mit Kalibrierung (grün) [Skala: 1s/1°]
+(Programm: Kalibrierte Kompass-Messung mit Mittelwertbildung.rpp)
+
+Gyrosensor
+Das Gyroskop im Kombisensor misst die
+Geschwindigkeit einer Drehung um eine
+oder mehrere der drei Achsen in Winkelgrad pro Sekunde. Diese Winkelgeschwindigkeit kann mit dem BMX055 in fünf verschiedenen Auflösungen gemessen werden:
+
+Tab. 2: Auflösungen des Gyrosensors [2]
+
+Die Auflösung wird bei der Initialisierung
+eingestellt (default: 2000°/s). Die 16-bitRohdaten, die der Sensor liefert, müssen je
+nach gewählter Auflösung mit den in Tabelle 2 angegebenen Werten multipliziert werden, um den Wert der Winkelgeschwindigkeit in Tausendstel °/s zu erhalten, da wie
+beim Beschleunigungssensor der Messbereich auf 215 Werte verteilt wird. Die
+erhaltenen Rohdaten müssen wir exakt
+durch 16,384 (bzw. 32,768/65,536/131,072
+/262,144) dividieren (skalieren).
+
+Die Winkelgeschwindigkeit einer Drehung
+um die x- und y-Achse (Roll und Pitch) ist
+insbesondere in Flugzeug-Autopiloten von
+großer Bedeutung: Mit ihr lässt sich ein
+Übersteuern verhindern. Mit dem Sensor
+kann man aber auch Umdrehungsgeschwindigkeiten von Objekten (bspw. Rädern)
+messen und regeln. Nachteil dieser Messmethode: Der Sensor – wegen der Kabelverbindung damit in der Regel auch der
+Controller – muss sich mitdrehen.
+In der Programmsammlung findet ihr das
+„Gyr-Oszilloskop.rpp“, mit dem ihr euch
+die Werte des Gyrosensors veranschaulichen könnt.
+Messung der Zentripetalkraft
+Ein sehr schönes Physik-Experiment können wir mit dem Gyrosensor durchführen:
+die Bestimmung der Zentripetalbeschleunigung und deren Verhältnis zur Winkelgeschwindigkeit. Dafür versetzen wir den
+TXT mit seitlich montiertem Sensor in eine
+immer schnellere Drehung und messen
+dabei die Winkelgeschwindigkeit und die
+Beschleunigung mit dem Kombisensor.
+
+
+Computing
+
+Damit der TXT die Drehgeschwindigkeit
+selbst steuern und schrittweise erhöhen
+kann, montieren wir unter dem Controller
+einen XS-Motor mit U-Getriebe (31068,
+31078) so, dass die Getriebeachse nach
+unten zeigt (Abb. 21).
+
+Die Achse befestigen wir auf einer Experimentierplatte 500 (32985), den XS-Motor
+schließen wir an den M1-Ausgang des TXT
+an.
+Jetzt müssen wir den (sich drehenden) TXT
+noch mit Strom versorgen. Dafür können
+wir entweder einen Akku ergänzen (zu viel
+Gewicht), einen fischertechnik-Schleifring
+(31301) aus den em-Kästen der 60er Jahre
+verwenden (führt leider gelegentlich zu
+kurzzeitigen Unterbrechungen der Stromversorgung, wodurch der TXT neu bootet)
+oder den Versuchsaufbau um Thomas Püttmanns genialen „Selbstenttwister“ erweitern [14] (macht leider den Aufbau wackelig, was die Messwerte verfälscht). Da wir
+die Messung nur für rund 20 Umdrehungen
+durchführen, können wir stattdessen ein
+langes fischertechnik-Kabel verwenden und
+in Kauf nehmen, dass es sich verdrillt.
+Damit wir die Sensorwerte auf dem ROBO
+Pro-Oszilloskop anzeigen lassen können,
+verbinden wir den TXT via WLAN und
+lassen uns die gewünschten Werte –Winkelgeschwindigkeit der x- und Beschleunigung der y-Achse – kabellos übermitteln.
+
+
+
+
+
+Die Messergebnisse in Abb. 23 zeigen den
+steilen Anstieg der Beschleunigung (gelb)
+auf ca. 0,99𝑔 innerhalb von 12 Sekunden,
+während die Winkelgeschwindigkeit (grün)
+linear auf etwa 670°/s (knapp zwei U/s)
+steigt.
+
+Ungenauigkeit steckt jedoch in unserer
+Rechnung: die Position des Gyrosensors im
+3 cm breiten Sensorgehäuse habe ich
+geraten; von ihr hängt die exakte Größe des
+Radius 𝑟 ab.
+Mit dem Sensor können wir nun eine Zentrifuge für das Astronautentraining unserer
+fischertechnik-Figuren exakt ausmessen –
+konstruiert wurde sie ja schon einmal [15].
+Aber auch ein Segway (oder „inverses Pendel“ [16]) rückt in den Bereich des Möglichen – mehr dazu in einem eigenen Beitrag.
+Alle ROBO Pro-Programme aus diesem
+Beitrag findet ihr auf der Webseite der
+ft:pedia zum Download.
+
+Referenzen
+
+Zentripetalbeschleunigung [Skala:1s/100mg]
+(Winkelgeschwindigkeit, Beschleunigung)
+
+Für das Verhältnis der Winkelgeschwindigkeit 𝜔 zur Zentripetalbeschleunigung 𝑎𝑧
+gilt:
+𝜔2
+𝑎𝑧 =
+𝑟
+Dabei ist 𝑟 der Abstand des Sensors zum
+Mittelpunkt der Drehachse. In unserem
+Modell ist 𝑟 ≈ 7 cm. In unserem Versuch
+wächst 𝜔 auf etwa 670 °/s; das entspricht
+einer Geschwindigkeit von
+670 cm
+cm
+≈ 81,86
+360 s
+s
+Daraus errechnet sich eine Zentripetalbem
+schleunigung von 9,57 2 . Der Wert unserer
+2𝜋 ∙ 𝑟 ∙
+
+s
+
+m
+
+Messung liegt mit 9,7 s2 (genauer: 0,99 ∙
+m
+
+9,81 s2 ) nicht sehr weit entfernt. Eine
+
+[1]
+
+fischertechnik: Kombisensor Art.-Nr.
+158402 3-in-1 Orientierungssensor.
+Kurzanleitung, 09.06.2017.
+
+[2]
+
+Bosch: BMX055. Small, versatile 9axis sensor module. Data Sheet.
+Revision 1.1, 07.11.2014.
+
+[3]
+
+Wikipedia: Inertiale Messeinheit.
+
+[4]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt-Verlag, Heidelberg, 2015.
+
+[5]
+
+Dirk Fox: I²C mit dem TX – Teil 4:
+Nunchuk-Fernsteuerung. 2/2013, S. 41–49.
+
+[6]
+
+Dirk Fox: fischertechnik-Roboter mit
+Arduino (Teil 1): Smartphone-Steuerung über BLE. ft:pedia 3/2020,
+S. 93–100.
+
+[7]
+
+Dirk Fox: I²C mit dem TX – Teil 10:
+Kompass-Sensoren. ft:pedia 2/2014,
+S. 57–64.
+
+[8]
+
+Talat Ozyagcilar: Implementing a
+Tilt-Compensated eCompass using
+Accelerometer and Magnetometer
+Sensors. AN4248, Application Note,
+Freescale Semiconductors, Rev. 4.0,
+11/2015.
+
+[9]
+
+Mark Pedley: Tilt Sensing Using a
+Three-Axis Accelerometer. AN3461,
+Application Note, Freescale
+Seminconductors, Rev. 6, 03/2013.
+
+[10] Wikipedia: arctan2.
+[11] Andrea Vitali: Computing tilt
+measurement and tilt-compensated
+eCompass. Design Tip DT0058,
+STMicroelectronics, v3, 07.01.2021.
+
+Computing
+
+[13] Mark Pedley: Build and Calibrate a
+Tilt-Compensating Electronic
+Compass. In: Circuit Cellar, Issue
+265, 8/2012, S. 1-6.
+[14] Thomas Püttmann: Selbstenttwistung. ft:pedia 3/2015, S. 20–24.
+[15] Dirk van Wijngaarden: G Force
+Machine. Youtube.
+[16] Wikipedia: Inverses Pendel.
+
+[12] Michael J. Caruso: Applications of
+Magnetic Sensors for Low Cost
+Compass Systems. In: IEEE Symposium on Position Location and Navigation (PLANS), 2000, S. 177-184.
+
+
+

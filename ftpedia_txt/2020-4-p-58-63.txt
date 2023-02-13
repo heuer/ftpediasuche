@@ -1,0 +1,257 @@
+
+
+Computing
+
+fischertechnik-Roboter mit Arduino (Teil 2):
+2,4-GHz-Fernbedienung mit dem PS2-Gamepad
+Arnoud van Delden
+In dem Buch „fischertechnik-Roboter mit Arduino“ [1] werden fünf Roboter vorgestellt und
+mit zahlreichen Funktionen und Arduino-Steuerungen ausgestattet. Einige Leser haben in den
+vergangenen Monaten weitere Modellideen beigetragen – in loser Folge stellen sie in dieser
+Serie auch einzelne ihrer Modellvarianten vor. Diesmal geht es um die Fernsteuerung der
+Arduino-Roboter mit einem Wireless Gamepad für die Sony PlayStation 2.
+
+Eine kabellose Steuerkonsole
+Die erste Generation von Spielekonsolen
+wie die Sony PlayStation 2 verfügte noch
+nicht über eine kabellose Steuerung. Heutzutage werden kabellose Spielekonsolen in
+verschiedenen Robotergeschäften und Online-Geschäften verkauft, von denen das
+Empfängermodul an der Vorderseite der
+PlayStation (klassische Version 2) angeschlossen werden kann. Für rund 20 € erhält
+man eine Funk-Fernsteuerung mit zwei Joysticks und fünfzehn zusätzlichen Funktionstasten. Wer ein paar Wochen warten möchte, kann den Controller auch für weniger als
+die Hälfte dieses Preises direkt aus China
+beziehen.
+
+
+Das Gamepad überträgt die Daten im 2,4GHz-HF-Frequenzband, und die gesende-
+
+
+ten Signale können digital vom mitgelieferten Empfängermodul (gemäß Spezifikation) aus einer Entfernung von bis zu 10
+Metern empfangen werden. Dies macht es
+natürlich attraktiv zu untersuchen, ob ein
+solches Gamepad als billige, hochfunktionale Fernbedienung für fischertechnikModelle wie die Arduino-Roboter aus dem
+Buch dienen könnte!
+Das Besondere ist, dass die Schnittstelle
+bidirektional ist. Sowohl die Schnittstelle
+als auch das Gamepad sind daher sowohl
+Sender als auch Empfänger. Es gibt also
+auch einen Datenfluss vom Modell zurück
+zum Gamepad, um zwei kleine Motoren im
+anzutreiben, die durch Vibration eine Rückmeldung geben können. Sehr interessant,
+um beispielsweise die Greif- oder Wendegrenzen von Robotern, mögliche Hindernisse auf dem Weg eines lenkbaren Fahrzeugs oder, wie ich es jetzt für den „Flitzer“
+als Experiment genutzt habe, konkrete
+Rückmeldungen beim Bremsen anzuzeigen.
+Der Gamepad fühlt sich im Vergleich mit
+den eigentlichen Sony PlayStation-Controllern eher wie ein Spielzeug an. Aber das ist
+zu diesem Preis natürlich auch zu erwarten.
+Mein Modell enthielt kein Handbuch, ich
+konnte aber ein (wahrscheinlich aus dem
+Chinesischen übersetztes) Handbuch online
+
+
+Computing
+
+finden. Glücklicherweise wurde bald klar,
+dass schon mehr Leute an einem PS2Gamepad herumgebastelt haben.
+
+Die Hardware
+Die erforderlichen Signale befinden sich am
+Anschluss des Empfängermoduls. Die Versorgungsspannung an Vcc und GND kann
+zwischen 3,3 und 5V liegen. Die Kommunikation wird vom Taktsignal (CLK) gesteuert, wobei das Protokoll über das
+Attention-Signal (Attn) geleitet wird.
+
+
+Die Bestätigung Ack (Acknowledge) zeigt
+nach jeder Reihe von gesendeten und empfangenen Bytes einen kurzen Impuls an
+und war in der Vergangenheit wahrscheinlich nur in der verdrahteten Variante dieser
+Steuerungen nützlich. Am Ausgang Vibr
+(Vibration) lieferte eine Original-PlayStation eine Spannung von 7,6V bis 9V, um die
+Rückkopplungsmotoren im (verdrahteten)
+Controller anzutreiben. Dies ist hier nicht
+mehr erforderlich, da das Wireless Gamepad selbst mit zwei AAA-Batterien betrieben wird.
+Das Kommunikationsprotokoll ist Vollduplex und ähnelt SPI (Abb. 3). Über Data
+werden die Steuerdaten in Bursts von
+mehreren Bytes gelesen. Gleichzeitig fließt
+die Kommunikation über CMD (Command)
+von der Schnittstelle zurück zum Gamepad.
+Dieser Datenstrom wird wahrscheinlich nur
+für die Statusinformationen an den Gamepad und zur Steuerung der Vibrationsmotoren benötigt.
+
+
+
+
+
+
+Verbindung mit dem Arduino
+
+Rückkopplung durch Vibration
+
+Zur Steuerung der fischertechnik-Roboter
+aus dem Buch müssen wir das Empfängermodul mit dem Motor Shield des Arduino
+verbinden. Wir schließen es an die digitalen
+Pins D10 bis D13 an (Abb. 4). Eine Versorgungsspannung von 5V verursacht keine
+Probleme, aber da eine klassische PlayStation 2 nur 3,4V verwendet, bin ich auf
+der sicheren Seite geblieben und habe den
+3,3V-Ausgang des Motor Shield verwendet.
+
+Ich musste mein Gamepad aufschrauben, da
+der Ein-/Ausschalter manchmal nicht richtig funktionierte. Nachdem die Anschlüsse
+um das Batteriefach und den Schalter
+sauber verlötet waren, funktionierte alles
+einwandfrei. Da ich das Gamepad geöffnet
+hatte, konnte ich einen Blick ins Innere
+werfen (Abb. 5).
+
+Für diejenigen, die den „Flitzer“ bereits
+gebaut haben, sind die Verbindungen nichts
+Neues. Das einzige, was ich geändert habe,
+ist, dass ich die roten Rücklichter von einem
+Motorausgang aus steuere, um verschiedene Lichtintensitäten zu erzielen. Dies ermöglicht es, während der Fahrt normale
+Rücklichter zu verwenden, diese jedoch
+beim Bremsen (Verzögerung) heller leuchten zu lassen. Der von mir erstellte ArduinoSketch unterstützt diese Funktion jetzt [6].
+
+
+
+In den Griffen sind die beiden Vibrationsmotoren deutlich zu erkennen. Der kleine
+Motor rechts kann ein- oder ausgeschaltet
+werden; der Motor links mit etwas größerem Gegengewicht ist stufenlos einstellbar.
+Für einen zusätzlichen Effekt können auch
+beide Motoren gestartet werden. Mit einem
+Test-Sketch konnte ich deren Steuerung
+und Funktionsweise untersuchen [5].
+Die Drucktasten können je nach Modus
+digital oder analog ausgelesen werden. Sie
+können einen von der ausgeübten Druckkraft abhängigen analogen Wert zurückgeben, auch wenn der nicht sehr genau ist.
+Die Steuerung verfügt laut Beschreibung
+über zwei Modi: Es ist auch möglich, nur
+Binärwerte auszulesen. Vielleicht ist dies
+ein Überbleibsel aus den ‚frühen Tagen‘ der
+PlayStation 2, als die Spiele weniger fortgeschritten waren. Bei Verwendung der oben
+genannten PS2-Bibliothek ist standardmäßig der A/D-Modus aktiviert, in dem ein
+Wert zwischen 0 und 255 die Lage der
+Joysticks zurückliefert und die zwölf Funktionstasten auf Wunsch druckempfindlich
+sind.
+
+Computing
+
+Sollte dies erforderlich sein, kann man
+jedoch eine Lösung entwickeln, bei der die
+Empfängerschnittstelle (die die erneute
+Verbindung initiiert) von der Software aus
+neu gestartet wird, wenn keine Kommunikation erfolgt. Die aktuelle Arduino-Bibliothek bietet jedoch kein solches Zurücksetzen oder erneutes Verbinden via Software.
+Eine einfache Hardware-Umgehung könnte
+eine Unterbrechung der 3,3V-Versorgungsspannung des Empfängers sein. Zu diesem
+Zweck könnte erwogen werden, den Empfänger über einen der freien Motorausgänge des Motor Shield zu versorgen. Es
+erscheint dann sinnvoll, die Vcc-Eingangsspannung (z. B. mit einer Zener-Diode) auf
+3,3V zu begrenzen. Aber auch weil es für
+mich kein Problem war habe ich nicht
+weiter damit experimentiert.
+Das PS2-Empfängermodul wird mit selbstklebendem Klettverschluss auf den Batteriehalter des „Flitzers“ befestigt (Abb. 6).
+
+Die Verbindung zwischen dem Gamepad
+und dem Empfänger ließ sich schnell und
+zuverlässig herstellen. Es macht keinen
+Unterschied, ob das Gamepad zuerst eingeschaltet wird oder ob man den „Flitzer“
+zuerst startet.
+Nach einiger Zeit der Inaktivität schaltet
+sich das Gamepad selbstständig aus. Nach
+dem gefundenen Handbuch sollte dies nach
+einer Minute geschehen; mein Controller
+wurde jedoch erst nach fünf Minuten ausgeschaltet. Danach funktionierte das automatische Wiederverbinden des Controllers mit
+der Benutzeroberfläche durch Drücken der
+„Start“-Taste auf dem Gamepad nicht.
+Dies scheint mir in der Praxis jedoch kein
+großes Problem zu sein, da diese Zeitüberschreitung beim normalen Betrieb eines
+Modells nicht so bald erreicht wird.
+
+
+Die Software
+Glücklicherweise haben schon einige Leute
+mit einem PS2-Gamepad experimentiert [2,
+3] und es gibt auch bereits eine Bibliothek
+für den Arduino [4]. Sie ist nicht in der
+Bibliotheksverwaltung der Arduino IDE
+enthalten, aber das Hinzufügen ist einfach.
+
+
+
+
+In dem auf der Webseite der herunterladbaren Sketch habe ich die oben
+erwähnte Erweiterung für hellere Bremslichter bereits vorgenommen [6].
+Ich habe auch mit der Steuerung der Vibrationsmotoren experimentiert, um der Konsole eine taktile Rückmeldung an die Fahrzeugsteuerung zu übermitteln, während der
+„Flitzer“ verlangsamt (gebremst wird).
+Dieses Verhalten kann mit der Taste mit
+dem rosa Quadrat ein- und ausgeschaltet
+werden. Die Beleuchtung (vorne und
+hinten) wird mit der Taste mit dem roten
+Kreis eingeschaltet, und die Taste mit dem
+grünen Dreieck schaltet den Warnblinker
+ein. Die Geschwindigkeit und Fahrtrichtung
+des „Flitzers“ wird mit dem linken Joystick
+gesteuert. Beim Verlangsamen (Bremsen)
+
+leuchten die Bremslichter eine Sekunde
+lang. Der rechte Joystick sorgt für die Lenkung mit dem Servo.
+
+
+
+Wie bereits erwähnt kann der PS2-Gamepad mit zwei wieder aufladbaren AAAAkkus betrieben werden. Ich verwende
+einen 9V-Blockakku, um mein Modell mit
+Strom zu versorgen.
+Diese Lösung ist klein und leicht. Da die
+Polarität beim Einschalten wichtig ist, habe
+ich eine kleine Anpassung am Batteriehalter
+(135719) vorgenommen: Die Stromversorgung kann wegen eines kleinen PlexiglasScheibchens nur in einer Richtung eingeschaltet werden (Abb. 7).
+
+Fazit
+Ich habe ein Video von meinem „Flitzer“
+mit diesem kabellosen Gamepad veröffentlicht [6]. Ich kann jedem, der eine zuverlässige und kostengünstige Fernbedienung
+mit vielen Erweiterungsoptionen sucht, ein
+Experiment mit diesem PS2-Gamepad empfehlen. Mit zwei Joysticks und nicht
+weniger als zwölf Funktionstasten für zuweisbare Funktionen bietet es viele Steuerungsmöglichkeiten für jedes ArduinoModell. Das Vibrationsfeedback im Gamepad selbst ist ein schöner Bonus, der für
+einige Modelle tatsächlich funktional genutzt werden kann.
+
+Computing
+
+Quellen
+Sucht einfach im Internet nach „Wireless
+PS2 Controller“, um verschiedene aktuelle
+Angebote für diesen „2.4G Wireless Dual
+Shock PS2 Game Controller“ zu finden.
+Das Gehäuse des Gamepad ist in verschiedenen Farben erhältlich. Es wird wahrscheinlich wenig elektronische Unterschiede geben.
+[1]
+
+Dirk Fox, Thomas Püttmann:
+fischertechnik-Roboter mit Arduino.
+dpunkt-Verlag, 2020.
+
+[2]
+
+Scott Driscoll: Interfacing a PS2
+(PlayStation 2) Controller. Curious
+Inventor.
+
+[3]
+
+Bill Porter: PlayStation 2 Controller
+Arduino Library v1.0. billporter.info,
+05.06.2010.
+
+[4]
+
+Bill Porter: PS2-Controller Library
+für den Arduino. github.com.
+
+[5]
+
+Arnoud van Delden: Arduino-Sketche zum Testen der Vibrationsmotoren und Hauptprogramm für den
+„Flitzer“.
+
+[6]
+
+Arnoud van Delden: Wireless PS2
+Controller with Arduino. YouTube,
+whizzbizz.com
+
+
+

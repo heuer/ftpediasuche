@@ -1,0 +1,398 @@
+
+Computing
+
+Computing
+
+Single Track Gray Encoder mit fischertechnik
+Florian Bauer
+In diesem Beitrag wird ein prototypischer Aufbau eines Single Track Gray Encoders mit
+fischertechnik vorgestellt. Dies ist ein multidisziplinäres Projekt, das aufzeigt, wie man mit
+Hilfe von fischertechnik, etwas Elektronik und einem Mikrocontroller ein mathematisches
+Modell in die Realität umsetzen und begreifbar machen kann.
+
+Drehgeber
+Für die Messung von Positionen und Winkeln werden oft Drehgeber eingesetzt, die
+auf unterschiedlichen physikalischen MessPrinzipien beruhen wie zum Beispiel
+Widerstandsmessung, Zählung mechanischer, optischer oder magnetischer Impulse.
+Man unterscheidet zwei Arten von Drehgebern:
+
+einem Stromausfall die Position ohne Referenzfahrt korrekt ausgegeben wird.
+Im Folgenden wollen wir uns einen 3-SpurAbsolut-Drehgeber ansehen. Die acht Digitalwerte sind als Schwarz-Weiß-Muster auf
+einer Scheibe mit drei Spuren codiert (Abb.
+1).
+
+Inkremental-Drehgeber
+Hier wird die Änderung der Position gemessen. Bei den weit verbreiteten optischen
+Drehgebern wird eine Encoderscheibe mit
+einem äquidistanten Streifenmuster von
+zwei versetzt angeordneten Lichtschranken
+abgetastet. Durch Zählung und Auswertung
+der Phasenlage der Lichtschranken-Impulse
+kann die Position relativ zu einem Ausgangszustand bestimmt werden. Will man
+eine Absolut-Position messen, muss zuerst
+eine Referenzfahrt zu einem Endschalter
+vorgenommen werden.
+Diese Art von Drehgebern ist sehr oft in
+Druckern zu finden. Ausrangierte Drucker
+sind daher eine ideale Quelle für hochauflösende Positions-Geber.
+Absolut-Drehgeber
+Bei diesen Drehgebern liegt die Rotationsposition zu jedem Zeitpunkt als Messwert
+oder Digitalwort vor. Der Vorteil ist, dass
+keine Referenzfahrt nötig ist und auch nach
+
+
+Jede Spur entspricht einer Bit-Position, ein
+schwarzer Bereich kodiert eine 1 und ein
+transparenter Bereich eine 0. Die Spuren
+werden von einem Lichtschranken-Array
+mit radial angeordneten Fotozellen abgetastet. Es lassen sich acht verschiedene Winkelwerte auflösen; die Auflösung beträgt
+damit 45° (= 360/8). Für höhere Winkelauflösungen benötigt man mehr Spuren.
+
+
+
+Um das Muster abzutasten verwendet man
+eine Maske (45°-Segment). Die Öffnungen
+für die weiter innen liegenden Sensoren
+sind kleiner als die für die äußeren, was bei
+Sensoren, die kleiner sind als die Maskenöffnung, zu Ablesefehlern führen kann. So
+müssten bei einem Übergang von 111 auf
+000 alle drei Bitpositionen gleichzeitig
+springen, was aber i. a. nicht möglich ist, da
+die äußeren Sensoren erst verzögert schalten, was zu Pseudopositionen, also falschen
+Winkelwerten führt.
+Abhilfe schaffen hier sogenannte Zyklische
+Gray-Codes, bei denen sich zwischen den
+Worten jeweils nur ein Bit ändert, und das
+auch bei Start- und End-Wort. Dies erreicht
+man beispielsweise durch sogenannte
+Binary Reflected Gray Codes.
+Beispiel:
+C3 = 000, 001, 011, 010, 110, 111, 101, 100
+Eine zugehörige Masken-Scheibe ist in
+
+Letzteres ist im Hobby-Bereich sehr
+schwierig zu realisieren.
+Für 12-bit-Werte ist eine Winkelauflösung
+von 0,0015° nötig (= 360/4096). Würde die
+innerste Spur auf einem Kreis mit Radius 50
+mm liegen, müsste die Maskenöffnung 0,08
+mm klein sein. Für eine Maskenöffnung
+von 1 mm bräuchte man für die innerste
+Spur einen Radius von 667 mm. Um die
+restlichen Spuren unterzubringen braucht
+man noch mehr Platz oder entsprechend
+kleine Masken und Sensoren.
+
+Single Track Gray Codes
+Um das Problem mit den spurabhängigen
+Masken-/Sensorgrößen zu vermeiden ist es
+wünschenswert, die Sensoren entlang einer
+einzigen Spur zu platzieren. Encoder mit
+nur einer Spur werden auch als Single Track
+Encoder bezeichnet.
+Man braucht dazu einen sogenannten zyklischen Single Track Gray Code (STGC). Zu
+gegebener Bitlänge 𝑛 lassen sich solche
+STGC mit Periode 𝑛 · 𝑡 konstruieren (mit
+𝑡 gerade), sodass gilt [3]:
+2 ≤ 𝑡 ≤ 2𝑛−
+
+2(𝑛−3) −1
+
+Für 𝑛 = 5 gibt es beispielsweise einen Code
+für 𝑡 = 6 mit 30 Werten und damit einer
+Winkelauflösung von 12°. Durch die zusätzlich geforderte Eigenschaft kann nicht
+der volle Bereich von 32 Werten (25) ausgeschöpft werden. Dafür hat man aber einen
+30-stelligen zyklischen Single Track Gray
+Code:
+00100, 00101, 01101, 01111, 01110,
+01100, 01000, 01010, 11010, 11110,
+Code Encoder
+
+Damit die Masken- und Sensorgröße kein
+Problem werden, muss man bei höheren
+Auflösungen hinreichend große CodeScheiben verwenden oder entsprechend
+kleine Strukturen und Sensoren einsetzen.
+
+11100, 11000, 10000, 10100, 10101,
+11101, 11001, 10001, 00001, 01001,
+01011, 11011, 10011, 00011, 00010,
+10010, 10110, 10111, 00111, 00110
+Dieser kann durch die folgende 30-BitSequenz mit Sensoren im Abstand von 6
+Bits realisiert werden:
+000000001111111111000110011100
+
+
+
+Computing
+
+
+(Zur Verdeutlichung sind für die ersten vier
+Positionen die Ableseposition im Bitstring
+und das ausgelesene Binärwort farblich
+markiert.)
+Die zugehörige Encoder-Scheibe für fünf
+Sensoren und die Masken-Scheibe sind in
+STGC ist auf der äußeren Spur aufgebracht.
+Die innere Spur ist nur eine Hilfe zur
+leichteren Identifikation der Bit-Position:
+Bei einem Absolut-Winkelencoder ist die
+Masken-Scheibe fest mit dem Rahmen des
+Encoders verbunden und die Code-Scheibe
+dreht sich koaxial über der Masken-Scheibe. An den Aussparungen befinden sich die
+Lichtschranken.
+Generierung von Single Track Gray
+Codes
+Die Suche von STGC-Codes mit höheren
+Bitlängen der Worte wird schnell kombinatorisch komplex. Für die Erzeugung der
+STGC-Sequenzen gibt es verschiedene
+Verfahren. Eines soll im Folgenden kurz
+beschrieben werden, wobei nicht näher auf
+die Mathematik eingegangen wird, die in
+[1] genauer behandelt wird.
+
+Ausgangspunkt ist eine sogenannte SeedCode-Binärwort-Folge mit bestimmten Eigenschaften:
+ Die Wortfolge bildet einen zyklischen
+Gray-Code,
+ alle Worte sind sogenannte LyndonWorte und
+ alle Worte sind sogenannte Necklaces.
+Ein Wort ist ein Lyndon-Wort, wenn es
+(lexikographisch) kleiner ist als jede seiner
+„zyklischen Rotationen“.
+Beispiel: 1010 ist kein Lyndon-Wort, da
+0101 kleiner ist als 1010. 0011 hingegen ist
+ein Lyndon-Wort, da es keine Rotation gibt,
+die ein kleineres Wort erzeugt (0110, 1100
+und 1001 sind alle größer).
+Ein 𝑛-Bit-Wort ist ein Necklace, wenn es
+keine zyklische Rotation (mit 1. . 𝑛 − 1
+Rotationen) gibt, die das Wort auf sich
+selber abbildet.
+Beispiel: 0101 wird durch eine zweistufige
+zyklische Rotation auf sich selbst abgebildet und ist daher kein Necklace. 0011 ist ein
+Necklace, da es durch keine zyklische
+Rotation auf sich selbst abgebildet werden
+kann.
+
+
+
+
+Als Ausgangsbasis für die Suche nach
+Seed-Code-Worten erzeugt man eine Menge von Lyndon/Necklace-Worten. Aus dieser Menge bildet man Graphen, deren Knoten Worte aus dieser Menge sind und deren
+Kanten Verbindungen zwischen Worten,
+die sich nur in einem Bit unterscheiden – die
+eine Hamming-Distanz von 1 haben, also
+„gray“ sind. Jede Seed-Code-Folge ist ein
+geschlossener Pfad in diesem Graphen, bei
+dem jeder Knoten mit genau zwei Nachbarknoten verbunden ist. Ein solcher geschlossener Pfad wird auch als „Coil in the Box“
+bezeichnet (offene Pfade heißen „Snake in
+the Box“ und spielen für STGC keine
+Rolle).
+
+Graphen sind Verbindungen zwischen Worten, die sich um ein Bit unterscheiden.
+
+Die Suche nach einer Seed-Code-Folge
+kann beispielsweise mit Hilfe einer rekursiven Suche (Depth First Search) erfolgen,
+die für 𝑛 >= 12 und lange Pfade 𝑡 = 300
+schon länger dauern kann.
+
+100001, 100101, 100111, 101111,
+101011, 100011, 100010, 100000
+
+Hat man nun eine Seed-Code-Folge, kann
+daraus durch sukzessive Anwendung von
+Bit-Rotationen ein Single Track Gray Code
+aufgebaut werden.
+Für 𝑛 = 6 findet man z. B. folgende achtelementige Seed-Code-Folge:
+000011, 001011, 001111, 011111,
+010111, 000111, 000101, 000001
+Diese Folge kann man zu einem 48-stelligen STGC erweitern:
+000011, 001011, 001111, 011111,
+010111, 000111, 000101, 000001
+
+110000, 110010, 110011, 110111,
+110101, 110001, 010001, 010000
+011000, 011001, 111001, 111011,
+111010, 111000, 101000, 001000
+001100, 101100, 111100, 111101,
+011101, 011100, 010100, 000100
+000110, 010110, 011110, 111110,
+101110, 001110, 001010, 000010
+mit dem Bit-String für die Encoder-Scheibe:
+
+
+In Abb. 4 ist ein Graph mit Seed-CodeWorten und einer zyklischen Seed-CodeFolge für 𝑛 = 6 dargestellt. Die Kanten des
+
+
+0000000000011000000011100111110000
+11111111111111
+Die zugehörige Encoder-Scheibe für sechs
+Sensoren und die Masken-Scheibe sind in
+7.5°.
+
+
+Computing
+
+
+Realisierung eines 6-BitEncoders mit 48 Stufen
+
+ Ein Rad,
+aufnimmt
+
+Nachdem das Prinzip erläutert wurde soll es
+nun in ein fischertechnik-Modell umgesetzt
+werden (Abb. 7). Für den Encoder benötigt
+man:
+
+Auch die Encoder-Scheibe wird mit doppelseitigem Klebeband auf einer Drehscheibe
+60 aufgeklebt. Die Achse der EncoderScheibe wird in die Nabe der Maskenscheibe gesteckt.
+
+ Eine transparente bedruckte Encoderund eine Masken-Scheibe:
+Diese kann man herstellen, indem man das
+Muster mit einem Laser- oder Desk-JetDrucker auf eine Transparentfolie druckt,
+sodass der Durchmesser der Masken 75 mm
+beträgt.
+Wenn die schwarzen Bereiche der Masken
+nicht vollkommen deckend sind, kann man
+sie mit einem schwarzen Edding-Stift oder
+schwarzer Acrylfarbe nachbehandeln, was
+bei Bitlängen <= 9 noch gut funktioniert.
+ Einen Halter für die Masken-Scheibe
+Als Halter wird eine Drehscheibe 60
+verwendet. Die hier nötige sechszählige
+Symmetrie kann mit 60°-fischertechnikWinkelsteinen leicht realisiert werden.
+Die ausgeschnittene und in der Mitte gelochte Masken-Scheibe kann mit doppelseitigem Klebeband befestigt werden.
+
+das
+
+die
+
+Encoder-Maske
+
+ Lichtschranken bestehend aus LEDs und
+LDRs oder Fototransistoren
+Für die Beleuchtung können 3-mm-LED, 5mm-LED oder fischertechnik-Lampen eingesetzt werden. Als Lichtschranken können
+LDRs oder Fototransistoren verwendet
+werden.
+ Halterungen für Lichtschranken
+Die Halterungen hängen davon ab, welche
+Foto-Elemente man verwendet. 3-mm-LED
+und 3-mm-Fototransistoren können z. B.
+mit einer kleinen gedruckten Adapterhülse
+(Innendurchmesser 3 mm, Außendurchmesser 4 mm) in den Lagersteinen eingesetzt werden.
+ Pick-Up-Elektronik für die Lichtschranken
+Fototransistoren werden über 47-kΩWiderstände an +5V angeschlossen. Das
+
+
+
+
+Signal leitet man am Kollektor des Transistors ab und führt es an einen Digital-Pin
+eines Mikrocontrollers. Ein abgedeckter
+Fototransistor sperrt und das Signal beträgt
++5V, ein beleuchteter Fototransistor schaltet durch und zieht das Signal gegen Masse
+auf einen Wert < 1V.
+ Ein Mikrocontroller für die Auswertung
+und eventuelle Anzeige der Positionsbzw. Winkelwerte
+Für den hier vorgestellten Aufbau kommt
+ein Arduino-Uno zum Einsatz. Der Uno
+übernimmt das Auslesen der Lichtschranken und der Winkel-Dekodierung über eine
+Tabelle. Das Programm gibt die Winkelwerte auf der seriellen Schnittstelle aus.
+
+ Optional eine 7-Segment-Anzeige um
+die Winkelwerte darzustellen
+Darüber hinaus steuert der Arduino ein 7Segment-Display an, das die Werte Interrupt-gesteuert anzeigt.
+Eine Schaltung, die auch einen 9-Bit-Encoder unterstützt, zeigt Abb. 6.
+installierten Fototransistoren. Auf der
+sichtbaren Drehscheibe 60 ist die CodeFolie aufgeklebt. Die Achse steckt in einer
+identischen Drehscheibe 60 dahinter, die
+am Rahmen fixiert ist und auf der die
+Masken-Folie aufgeklebt ist.
+
+
+
+
+Computing
+
+
+Realisierung eines 9-Bit STGCEncoders mit 360 Stufen
+In Abb. 8 ist ein 9-Bit-Encoder gezeigt, der
+360 Stufen, also 1°-Schritte auflöst. Zugehörige Encoder – und Maskenscheiben sieht
+man in Abb. 10.
+
+
+Herzlichen Dank an Jan (juh), der mir kurzfristig
+ein parametrisches Winkelstein-Modell in
+FreeCAD zur Verfügung gestellt hat [4]. Hier
+
+Um die neunzählige Symmetrie zu realisieren wurde für diesen Encoder ein 40°Winkelstein in 3D-Druck angefertigt.2
+
+muss ich mal meiner Begeisterung Ausdruck
+verleihen, wie hilfsbereit die Leute im
+fischertechnik-Forum sind.
+
+
+
+
+
+
+
+Computing
+
+
+LED-Emitterseite. Auf der rechten Seite
+sind die Steckboards mit der AuswerteElektronik und der Arduino (oben rechts) zu
+erkennen.
+Da die Hülsen für die Fototransistoren nicht
+ganz fest sitzen, wurden sie zusätzlich mit
+roten Lagersteinen fixiert. Oben rechts in
+gibt den Blick auf eine Hülse mit einem
+Fototransistor frei.
+
+also einer Auflösung von 0,1°, kann berechnet werden. Die Scheibe müsste aber deutlich größer sein als die hier vorgestellten.
+Von der Webseite zu dieser Ausgabe der
+ft:pedia können die Beispielcodescheiben
+und ein Programm für deren Erzeugung
+heruntergeladen werden.
+
+Referenzen
+[1]
+
+Moshe Schwartz, Tuvi Etzion: The
+structure of single-track Gray codes.
+IEEE Transactions on Information
+Theory, 45, 1999, pp. 2383-2396.
+10.1109/18.796379.
+
+[2]
+
+Darko Dimitrov, Tomás Dvorák, Petr
+Gregor, Riste Škrekovski: Linear
+time construction of a compressed
+Gray code. European Journal of
+Combinatorics, 2013.
+10.1016/j.ejc.2012.07.015.
+
+[3]
+
+Georgie Botev: Single-Track Gray
+Codes: An Efficiently Decodable
+Maximal Period General
+Construction. Github.com.
+
+[4]
+
+Jan Hanson (juh): Parametrischer
+Winkelstein.
+
+Ausblick
+Höhere Auflösungen können mit größeren
+Bitlängen erreicht werden. Die Herausforderungen sind einerseits die Berechnung
+von Seed-Code-Sequenzen und andererseits
+die hohen Anforderungen an die kleinen
+Strukturen der Encoder-Scheiben und bzw.
+die sehr hohen Auflösungen der Lichtschranken oder alternativ großen Scheibendurchmesser. Zudem muss auch der mechanische Aufbau stabiler um das Lagerspiel zu
+verringern, das die effektiv erzielbare Auflösung schnell verringert.
+Eine 12-Bit-Decoder-Scheibe mit einer
+Musterlänge von 3600 (300 Binärworten),
+
+
+

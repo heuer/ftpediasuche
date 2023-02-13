@@ -1,0 +1,530 @@
+
+
+Computing
+
+Von Kameras, Himbeeren und schwarzen
+Hundeknochen
+Erik Andresen
+Über fünf Jahre nach der Einführung des TX-Controllers ist es an der Zeit, ft-Modelle mit
+Kameras auszustatten. Für die Umsetzung eignen sich preisgünstige ARM-Boards wie der
+Raspberry Pi oder das Beaglebone Black am Robo-Interface. Als Kamera kann dabei jede mit
+Linux kompatible USB-Webcam verwendet werden. Die hier vorgestellten Bibliotheken
+OpenCV und GStreamer helfen bei der Auswertung und Visualisierung der Kamerabilder.
+Moderne Einplatinencomputer, darunter
+der Raspberry Pi von der gleichnamigen
+britischen Foundation und das Beaglebone
+Black (BBB) von Texas Instruments, sind
+für weniger als 50 € zu haben. Über deren
+USB-Host-Schnittstelle lassen sich diverse
+Peripherie-Geräte per Plug’n’Play anschließen. Wie sich die Boards mit einem
+fischertechnik-Modell verbinden lassen,
+wird in diesem Beitrag erklärt. Als Basismodell eignet sich dafür der Robo Explorer
+(Abb. 1), an dem dafür folgende USBGeräte angeschlossen werden:
+· W-Lan-Stick zur drahtlosen Kommunikation mit dem Modell und einer gegenüber dem ROBO RF Data Link höheren
+Funkreichweite und
+· USB-Webcam als neuer Sensor für den
+Roboter.
+Da mit dem Interface die Anzahl der USBPeripheriegeräte (drei) höher ist als die
+Anzahl der USB-Host-Ports von Raspberry
+Pi und BBB, wird ein passiver USB-Hub
+mit vier Ports zwischengeschaltet.
+Im ersten Abschnitt dieses Beitrags wird
+das Kamerabild über W-Lan übertragen.
+Im zweiten wird dem erweiterten Robo
+Explorer beigebracht, Objekte mit dem
+schnellen Camshift-Algorithmus zu verfol40
+
+gen. Als Programmiersprache wird Python
+verwendet.
+
+
+
+
+
+
+5 V Spannungsregler (1), Beaglebone
+Black (2), WLan-USB-Stick (3),
+USB-Hub (4) und USB-Webcam (5)
+
+Als Kamera kann jede mit Linux kompatible USB-Webcam [6] verwendet werden,
+auf die über die Video4Linux-(V4L-)API
+zugegriffen wird. Hat die USB-Webcam
+zusätzlich ein eingebautes Mikrofon, lässt
+
+sich außerdem eine Sprachsteuerung z. B.
+mit PocketSphinx [5] realisieren.
+Ein funktionierendes Raspbian Wheezy auf
+dem Raspberry Pi bzw. Debian Wheezy
+auf dem Beaglebone Black wird vorausgesetzt. Installationsanleitungen dafür sind
+im Internet genügend zu finden. Generell
+kann auch jeder andere Einplatinencomputer mit USB-Host-Schnittstelle oder
+jede andere Linux-Distribution verwendet
+werden; dabei kann es jedoch im Detail zu
+Abweichungen von den folgenden
+Beschreibungen kommen.
+Da auf den ARM-Boards Linux als
+Betriebssystem zum Einsatz kommt, wird
+die libroboint [1] zur Kommunikation mit
+den Interfaces verwendet; die Installation
+ist in [2] beschrieben. Als Interface
+zwischen Einplatinencomputer und Modell
+können damit das ROBO Interface, die
+Robo I/O Extension sowie das Intelligent
+Interface verwendet werden; der TX
+Controller wird nicht unterstützt. Für die
+Verwendung des Intelligent Interfaces ist
+zusätzlich ein USB-RS232 Adapter (z. B.
+Ftdi) erforderlich.
+Will man die ARM-Boards mit einem
+mobilen Modell verwenden, muss die
+Spannungsversorgung über einen Akku
+erfolgen. Beide Boards benötigen eine 5 V
+Spannungsversorgung, der Raspberry Pi in
+
+Computing
+
+Form eines Micro-USB-Steckers (Abb. 2),
+der BBB als DC-Stecker mit 2,1 mm Stift(+5 V) und 5,5 mm Außendurchmesser
+(Masse). Zur Spannungsversorgung des
+Raspberry Pi eignen sich USB-BatteryPacks, wie sie zum Aufladen von Smartphone-Akkus angeboten werden. Um diese
+mit dem BBB zu verwenden, muss ein
+Adapter beschafft werden, der die Spannung vom USB-Stecker auf den DCStecker führt.
+
+Spannungsversorgung des Raspberry Pi:
+Pin 1 ist +5 V, Pin 5 ist Masse.
+(Bild: Wikimedia Foundation)
+
+Wer die Spannungsversorgung des Interfaces mitverwenden möchte, braucht einen
+Spannungsregler, der die ft-üblichen 9 V
+auf 5 V herunter regelt. Als Spannungsregler eignet sich z. B. der LM2576, der
+mit 3 A mehr Strom liefern kann als der
+beliebte 7805. Der LM2576 benötigt dafür
+jedoch mindestens eine Eingangsspannung
+von 7 V, die der ft-Akku aber mit einer
+Nennspannung von 7,2 V bis auf die
+letzten zehn Minuten liefert. Die dazu
+benötigten Bauteile (Tabelle 1) werden
+dafür wie in Abb. 3 dargestellt verlötet.
+
+An P1 wird eine ca. 9 V große Eingangsspannung eingespeist und durch den LM2576
+Spannungsregler in eine 5 V Spannung umgewandelt, die an P2 ausgegeben wird
+
+
+
+
+Nr.
+
+Anzahl Wert
+
+C1
+
+
+100 µF
+
+C2
+
+
+1000 µF
+
+D1
+
+
+1N5822
+
+IC1 1
+
+LM2576
+
+L1
+
+100 µH (bis 3 A)
+
+
+Tabelle 1: Stückliste für LM2576
+Schaltungsbeispiel
+
+Vorsicht: Ein falscher Zusammenbau kann
+den Einplatinencomputer zerstören!
+
+Streaming von Videos mit dem
+Framework GStreamer
+Für die Visualisierung der Kamerabilder
+auf einem entfernten PC wird das freie
+Multimedia-Framework GStreamer (GST)
+[9] verwendet. GStreamer gründet auf dem
+Konzept einer Video-Pipeline und wird
+unter Linux-PCs und einigen eingebetteten
+Systemen, wie den Smartphones Jolla und
+
+Nokia N900, für die Wiedergabe von
+Multimedia-Inhalten eingesetzt.
+GStreamer ist modular aufgebaut: Jedes
+Element in der Pipeline führt einen
+Arbeitsschritt aus, z. B. das Lesen einer
+Datei, die Dekompression von Daten oder
+die Ausgabe von Daten auf einen Bildschirm. Durch die Verkettung von Elementen zu einer Pipeline (Abb. 4) werden
+komplexe Aufgaben wie die Wiedergabe
+von Multimedia-Inhalten durchgeführt.
+Verbunden werden die Elemente über ihre
+Pads (Kontaktstellen). Ein Pad ist entweder
+Quelle (source, kurz src) oder Senke
+(sink). Über die Quelle werden Daten in
+das Element eingelesen und über die Senke
+ausgegeben. Elemente verfügen über ein
+Pad, mehrere Pads oder kein Pad eines
+Typs. Ein Pad definiert die Daten, mit
+denen es arbeitet, über dessen Capabilities
+(Eigenschaften, kurz: Caps), mit denen
+beim Aufbau einer GStreamer-Pipeline auf
+Fehler, wie die versehentliche Anbindung
+einer Audio-Quelle an eine Videoausgabe,
+
+die mit Ogg (theora und vorbis) komprimiert wurden [9].
+
+
+Computing
+
+$ sudo apt-get update
+$ sudo apt-get install gstreamer-tools gstreamer0.10-plugins-base \
+gstreamer0.10-plugins-good gstreamer0.10-plugins-bad
+
+Listing 1: Installation von GStreamer
+$ gst-launch v4l2src ! "video/x-raw-yuv,width=320,height=240" \
+! jpegenc ! multipartmux ! udpsink host=192.168.1.2 port=4951
+
+Listing 2: Mit dem gst-launch Befehl werden mit der Linux-Shell die Kamerabilder
+als komprimiertes MJPEG an den PC mit der IP 192.168.1.2 gesendet
+und können dort mit dem VLC über die Adresse udp://@:4951 abgespielt werden
+
+geprüft wird. Die Capabilities eines
+MPEG4-Dekodier-Elementes sind z. B. die
+Entgegennahme
+von
+komprimierten
+MPEG4-Videodaten am Quell-Pad und die
+Ausgabe des dekomprimierten Videos an
+der Senke. Das in der Programmiersprache
+C geschriebene GStreamer wird mit den
+Kommandos aus Listing 1 installiert.
+In der hier zum Streaming verwendeten
+Pipeline (Abb. 5) werden die Kamerabilder
+als komprimiertes Motion-JPEG-Video
+(MJPEG) über einen per USB angeschlossenen W-LAN-Adapter an einen PC
+gesendet. Das Komprimieren der Daten in
+MJPEG und Übertragen der Videodaten
+über Netzwerk wird durch die Elemente
+jpegenc, multipartmux und udpsink durchgeführt. Das resultierende Video wird per
+UDP an einen Empfänger-PC auf Port
+4951 (Port 4951 UDP in Firewall öffnen)
+übertragen und mit einem Videoplayer wie
+vlc [8] über die Adresse udp://@:4951
+abgespielt.
+Zur Ausführung der Pipeline wird der
+gst-launch Befehl verwendet (Listing 2),
+mit dem sich GStreamer-Pipelines ohne
+Schreiben von Quelltext ausführen lassen.
+Die einzelnen Elemente der Pipeline
+werden durch ein Ausrufezeichen getrennt.
+Um die CPU nicht unnötig stark zu belasten, wird das Quellelement v4l2src mit
+video/x-raw-yuv, width=320, height=240
+angewiesen, ein nur 320 × 240 Pixel
+großes Bild (YUV-Farbraum) zu senden.
+Eine Liste der verfügbaren Auflösungen
+lässt sich mit dem Befehl v4l2-ctl
+--list-formats-ext (Paket v4l-utils) erfragen.
+
+Fortgeschrittene können auf dem Raspberry Pi mit dem omxh264enc-Element die
+Videobilder mit H.264 in Hardware komprimiert über einen RTSP-Server übertragen lassen. Dafür ist jedoch eine neue
+GStreamer-Version erforderlich [7, 3].
+Um GStreamer und OpenCV mit dem
+Raspberry-Pi-Kamera-Modul anstatt einer
+USB-Webcam zu verwenden, muss das
+Kernel-Modul bcm2835-v4l2 geladen
+werden. Bei Tests (im Mai 2014) funktionierte dieses Modul trotz aktueller Firmware und Kernel mit den Bibliotheken
+jedoch nicht.
+
+Objektverfolgung mit OpenCV
+Im nächsten Schritt soll die Kamera zur
+Objektverfolgung eingesetzt werden. Dazu
+wird der Camshift-Algorithmus aus
+OpenCV [10] verwendet.
+OpenCV ist eine geschwindigkeitsoptimierte Bibliothek für die Bildverarbeitung
+auf Prozessoren. Die ursprünglich von
+Intel entwickelte Bibliothek steht heute
+unter einer Open-Source-Lizenz und wird
+von der Firma Willow Garage gepflegt, die
+für das Robot Operating System (ROS)
+bekannt ist. OpenCV verfügt über Schnittstellen zu mehreren Programmiersprachen,
+darunter C, C++, Python und Java und
+läuft auf mehreren Betriebssystemen wie
+Windows, Linux, Mac OS und Android. In
+OpenCV sind u. a. Algorithmen zur
+Mustererkennung, Gesichtserkennung und
+Objekterkennung in Bildern implementiert.
+
+
+
+Der Camshift-Algorithmus
+Zur Objektverfolgung wird der in OpenCV
+implementierte
+Camshift-Algorithmus
+(Continuously Adaptive Mean Shift), eine
+Erweiterung des Mean-Shift-Algorithmus,
+verwendet [4]. Beim Mean-Shift-Algorithmus wird von dem zu verfolgenden
+Objekt eine Liste mit allen im Bild vorkommenden Farben (Genauer: Histogramm) erstellt. In einem iterativen Verfahren wird dann in einem Suchfenster der
+Schwerpunkt der Verteilung der Farben
+aus dieser Liste berechnet und das Suchfenster in Richtung dieses Schwerpunktes
+verschoben (Abb. 6). Der Algorithmus
+bricht ab, sobald der Schwerpunkt des
+Suchfensters mit dem Schwerpunkt der
+Farbverteilung übereinstimmt.
+
+Das Ergebnis des Algorithmus ist eine
+Ellipse.
+
+Objektverfolgung mit Robo
+Explorer
+Zur Anwendung von Camshift wird zuerst
+OpenCV installiert und das CamshiftBeispielprogramm camshift.py in das
+aktuelle Anwendungsverzeichnis extrahiert
+(Listing 3).
+
+im Bild lokalisiert
+
+Schwerpunktes als C2 verschoben
+(Bild: OpenCV.org)
+
+Nachteil des Mean-Shift-Algorithmus ist
+die statische Größe des Suchfensters, weswegen Größenänderungen, z. B. bei einem
+sich nähernden Objekt, nicht berücksichtigt
+werden können. Beim Camshift-Algorithmus wird zusätzlich die Verteilung der
+Pixel betrachtet und damit die Größe und
+Ausrichtung des Objektes mit einbezogen.
+
+Das Beispielprogramm enthält den für den
+Camshift-Algorithmus
+notwendigen
+Python-Programmcode. Wer mag kann das
+Programm ausführen und etwas mit dem
+Algorithmus herumspielen. Gestartet wird
+Camshift im OpenCV-Fenster durch
+Klicken und Ziehen eines Rechtecks mit
+der Maus um das zu verfolgende Objekt
+herum. Das zu verfolgende Objekt (z. B.
+ein Ball) sollte sich dabei farblich vom
+Hintergrund abheben. Je nach Kamera
+kann eine unterschiedlich lange Latenz des
+Kamerabildes bis zur Darstellung auf dem
+Monitor entstehen. OpenCV wird nun das
+Objekt mit einer Ellipse markieren
+(Abb. 7). Ein einfacher Klick mit der Maus
+beendet den Algorithmus. Die Interaktion
+
+$ sudo apt-get install python-opencv opencv-doc
+$ gzip -d /usr/share/doc/opencv-doc/examples/python/camshift.py.gz -c \
+> camshift.py
+
+Listing 3: Installation vom OpenCV und Extraktion des Camshift-Beispielprogramms.
+
+mit dem Raspberry Pi oder BBB kann
+entweder über einen angeschlossenen
+Monitor mit Tastatur und Maus oder
+mittels SSH X-Forwarding erfolgen.
+Damit der Robo Explorer automatisch
+einem Objekt folgt, wird im nächsten
+Schritt das Beispielprogramm in den
+eigenen Programmcode (Listing 6) eingebunden:
+· Zuerst wird die Bildgröße auf 320 × 240
+Pixel gesetzt, um die von Camshift
+benötigte Rechenzeit der CPU zu reduzieren, und das Camshift-Beispielprogramm in einen eigenen Thread
+gestartet.
+· Das Ergebnis des Camshift-Beispielprogrammes (Ellipse track_window)
+wird periodisch abgefragt und der Funktion follow() übergeben.
+· Die ausbaufähige Funktion follow()
+nimmt als Argumente das Ergebnis des
+Camshift-Algorithmus als Koordinaten
+mit Breite und Höhe der Ellipse entgegen und berechnet damit die Sollgeschwindigkeit für den Antrieb:
+
+
+Computing
+
+· Ist das zu verfolgende Objekt kleiner
+als 60 Pixel, fährt der Roboter mit
+halber Kraft vorwärts.
+· Wandert das Objekt aus der Bildmitte heraus, wird der Roboter entsprechend gedreht.
+· Die [2] entnommene Methode setSpeed() steuert die Geschwindigkeit des
+Robo Explorers.
+Wer keine Möglichkeit für die grafische
+Ausgabe und Benutzereingaben hat, kann
+den Camshift-Algorithmus mit dem Code
+aus Listing 4 starten, der das zu verfolgende Objekt in einem 40 × 40 Pixel
+großen Bereich in der Bildmitte erwartet.
+In der Datei camshift.py sollten dazu
+jedoch zusätzlich die Zeilen mit
+cv.NamedWindow(), cv.ShowImage() und
+cv.SetMouseCallback()
+auskommentiert
+werden.
+Wer Probleme hat, die Bildmitte zu finden,
+kann die GStreamer-Pipeline aus Listing 2
+mit dem rsvgoverlay-Element erweitern
+und damit eine Zielmarkierung mittels
+SVG-Vektorgrafik einzeichnen (Listing 5).
+
+self.camshift_demo.drag_start = (140, 100)
+self.camshift_demo.selection = (140, 100, 40, 40)
+sleep(1) # wait at least one frame
+self.camshift_demo.drag_start = None
+self.camshift_demo.track_window = (140, 100, 40, 40)
+
+Listing 4: Programmcode zum Start des Camshift-Algorithmus ohne Maus
+$ gst-launch v4l2src ! "video/x-raw-yuv,width=320,height=240" \
+! ffmpegcolorspace ! rsvgoverlay \
+data='<svg xmlns="http://www.w3.org/2000/svg" version="1.1">'\
+'<rect x="140" y="100" width="40" height="40" stroke="red"'\
+' stroke-width="3" fill="none"/></svg>' \
+! ffmpegcolorspace ! jpegenc ! multipartmux \
+! udpsink host=192.168.1.2 port=4951
+
+Listing 5: Senden der Kamerabilder mit eingezeichneter Zielmarkierung in der Bildmitte.
+
+
+
+
+Zusammenfassung
+
+Literatur
+
+Ziel dieses Beitrags war es, euch einen
+Einblick in die Möglichkeiten zu vermitteln, die einem die Integration von ARMBoards wie dem Raspberry Pi oder dem
+Beaglebone Black in das eigene Modell
+bietet. Die Spannungsversorgung der
+Boards erfolgt dabei entweder über einen
+USB Battery Pack oder einen Spannungsregler wie den LM2576. Zur Visualisierung der Kamerabilder eignet sich das
+Framework GStreamer, das die Bilder mit
+der hier vorgestellten Pipeline als MJPEG
+über W-Lan an einen entfernten PC überträgt. Als Einstieg in die Bildverarbeitung
+wurde der Camshift-Algorithmus aus der
+OpenCV-Bibliothek vorgestellt, mit dem
+ein Modell wie der Robo Explorer automatisch einem Objekt folgen kann.
+
+[1]
+
+Andresen, Erik: ROBO Interface
+Bibliothek für Unix-artige Systeme.
+
+[2]
+
+Andresen, Erik: The fischertechnik
+Interface for the Rest of us. In:
+ft:pedia 2/2012 (2012), S. 32-38.
+
+[3]
+
+Bock, Matthias: Hardwareaccelerated video playback on the
+Raspberry Pi.
+
+[4]
+
+Bradski, Gary R.: Computer Vision
+Face Tracking For Use in a Perceptual User Interface. Forschungsbericht, Intel Corporation 1998.
+
+[5]
+
+Carnegie Mellon University: Using
+PocketSphinx with GStreamer and
+Python.
+
+[6]
+
+Embedded Linux Wiki: RPi compatible USB Webcams.
+
+[7]
+
+gkiagia: gst-omx now on 1.0 Branch.
+
+[8]
+
+VideoLAN-Team: VLC media
+player.
+
+[9]
+
+Walthinsen, Erik u. a.: MultimediaFramework Gstreamer.
+
+Wer tiefer in das Gebiet einsteigen möchte,
+kann versuchen, beide Verfahren zu kombinieren, also das Resultat des CamshiftAlgorithmus als Bild über W-Lan zu übertragen. Dazu reicht eine per gst-launch
+gestartete GStreamer-Pipeline allerdings
+nicht mehr aus.
+
+[10] Willow Garage: OpenCV: Open
+Source Computer Vision Library.
+
+
+1
+
+Computing
+
+#!/usr/bin/env python
+# -*- coding: iso-8859-15 -*import thread
+import cv2.cv as cv
+from time import sleep
+from camshift import *
+from robointerface import *
+WIDTH = 320
+HEIGHT = 240
+def setSpeed(self, l, r):
+self.speed = (l, r)
+if l > 0:
+self.SetMotor(1, 'l', l)
+elif l < 0:
+# left reverse
+l*=-1
+self.SetMotor(1, 'r', l)
+else:
+self.SetMotor(1, 's', l)
+if r > 0:
+self.SetMotor(2, 'l', r)
+elif r < 0:
+# right reverse
+r*=-1
+self.SetMotor(2, 'r', r)
+else:
+self.SetMotor(2, 's', r)
+RoboInterface.setSpeed = setSpeed
+def follow(ri, target_x, target_y, target_width, target_height):
+left_speed = 0; right_speed = 0
+if target_width < 60:
+left_speed = 3; right_speed = 3
+diff_x = target_x - WIDTH/2
+if diff_x < -20:
+right_speed+=1
+elif diff_x > 20:
+left_speed+=1
+print "x=%d, width=%d, speed=(%d, %d)"\
+% (target_x, target_width, left_speed, right_speed)
+ri.setSpeed(left_speed, right_speed)
+if __name__ == "__main__":
+demo = CamShiftDemo()
+cv.SetCaptureProperty(demo.capture, cv.CV_CAP_PROP_FRAME_WIDTH, WIDTH)
+cv.SetCaptureProperty(demo.capture, cv.CV_CAP_PROP_FRAME_HEIGHT, HEIGHT)
+thread.start_new_thread(demo.run, ())
+# Robo Interface
+ri = RoboInterface()
+# Intelligent Interface
+# ri = RoboInterface(serialDevice=”/dev/ttyUSB0”,
+#
+SerialType=RoboInterface.FT_INTELLIGENT_IF)
+ri.setSpeed(0, 0)
+while True:
+# follow only when all elements of track_window are > 0
+if demo.track_window and all(i > 0 for i in demo.track_window):
+follow(ri, *demo.track_window)
+else:
+ri.setSpeed(0, 0)
+sleep(0.1)
+
+Listing 6: Python Programm für den Robo Explorer zur Objektverfolgung mit OpenCV (siehe Text)
+
+
+

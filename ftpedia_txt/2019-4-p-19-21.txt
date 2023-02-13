@@ -1,0 +1,173 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Verkabelung (Teil 2)
+Christian Bergschneider, Stefan Fuss
+„Spieglein, Spieglein an der Wand, wer hat die beste Kabelführung im fischertechnik-Land?
+Ihr Frau Königin, habt die Beste DynamicsXL, jedoch die fischertechniker auf der Convention
+haben viel mehr Kabel als Ihr!“
+Jedes Mal, wenn ein Modell nicht nur funktional sondern auch richtig schön werden
+soll, stellen uns die fischertechnik-Kabel
+vor echte Herausforderungen.
+Soll ein Controller direkt Teil des Modells
+werden, so stören die starren Kabel und
+Hohlstecker des Netzteils. Beim Verkabeln
+von X-Y-Einheiten wünscht man sich
+schnell echte Energieketten, nur leider gibt
+es diese im fischertechnik-Universum nicht
+mehr.1
+Ist das Convention-Modell mal wieder
+etwas größer als der Kofferraum, so führt
+das Auseinandernehmen des Kabelbaums
+zu einer intensiven Fehlersuche beim Aufbau des Modells. Außerdem führt ein
+Kabelbaum im Großmodell zu Rekordumsätzen für Reedkontakthalter bei fischerfriendsman.
+Aber: Selbst ist der fischertechniker und
+erfindungsreich [2]. Schaut man sich auf
+der Convention um, so gibt es viele Selbstbaulösungen wie der Einsatz von Leuchtsteinen zur Kabelverlängerung oder dem
+selbst gelöteten Adapter für Flachbandkabel. Für uns Grund genug, um selbst
+kleine Platinchen herzustellen.
+
+
+Stromadapter
+In der guten alten Zeit – die älteren Leser
+erinnern sich vielleicht noch an die
+Knobloch GmbH – gab es den Stromadapter
+von Knobloch [3]; auch das eine Fan-Innovation (Idee von Marcel Endlich). Leider ist
+dieser in der Community nur schwer zu
+bekommen, sodass wir eine Variante davon
+neu aufgelegt haben (Abb. 1).
+
+
+Der neue Stromadapter ist in einem Anschlussplattengehäuse [4] untergebracht
+und so deutlich kleiner als sein Vorgänger
+von Knobloch. Er hat neben einem Stecker
+für das TX/TXT-Netzteil vier Bundsteckhülsen für Plus und Minus. Die Leiterbahnen der Adapterplatine sind für Gesamtlasten bis 2,5 A ausgelegt.
+Gut geeignet, um an einer versteckten Stelle
+im Modell das fischertechnik-Netzteil anzuschließen und den Controller schön in das
+Modell zu integrieren. Puristen können
+
+Es gab einmal schwarze fischertechnik-Energieketten (75080) [1]; die wurden jedoch in Gold
+aufgewogen.
+
+
+
+
+damit auch in Retromodellen auf den Controller verzichten und die Motoren und
+Lampen direkt versorgen.
+
+damit das Kurzschlussrisiko – nicht mag,
+der kann sich zum Adapter ein geschlossenes Gehäuse selbst ausdrucken [5].
+
+Flachbandkabeladapter
+
+Jedes Kabel bzw. jede Leiterbahn kann mit
+max. 1 A belastet werden.3 Normale
+fischertechnik-Motoren erreichen dies
+nicht, auch die Schrittmotoren des
+ftPwrDrive [6] lassen sich darüber verlängern. Nur beim Zusammenschalten eines
+gemeinsamen Minuspins sollte man kurz
+nachrechnen. Mehrere Verbraucher zusammen oder ein Controller mit vielen Verbrauchern können die 1A-Belastungsgrenze
+überschreiten. In diesem Fall kann man die
+Last über mehrere, parallel geschaltete Pins
+aufteilen.
+
+Der Flachbandkabeladapter ist eine Platine,
+mit der man normale fischertechnik-Stecker
+mit Flachbandkabel verbinden kann.
+
+
+Acht fischertechnik-Stecker werden auf
+einen achtpoligen Wannenstecker2 für
+Flachbandkabel umgesetzt. Den Adapter
+gibt es als A- und als B-Modell (Abb. 2, 3),
+so kann das Flachbandkabel immer kreuzungsfrei mit den fischertechnik-Kabeln
+verlegt werden.
+
+Nimmt man zwei Adapter, so lassen sich
+problemlos lange Strecken im Modell
+überbrücken (Abb. 4).
+
+
+Um die zueinander passenden Pins für die
+fischertechnik-Stecker besser identifizieren
+zu können, ist jeweils ein Pin gelb markiert.
+Die Adapter sind auf einen Flachstein geschraubt und können so sehr leicht verbaut
+werden. Wer die offene Bauform – und
+
+
+Wir haben mit Absicht einen achtpoligen Stecker
+verwendet. Auch wenn diese Stecker etwas teurerer sind, besteht keine Gefahr die Flachbandkabel mit einem TX/TXT oder ftDuino zu verbinden.
+
+Da das achtpolige Kabel schmaler ist als ein
+fischertechnik-Baustein, lässt es sich problemlos im Modell verstecken.
+Mit kürzeren Kabelstücken kann man eine
+„Sollbruchstelle“ im Modell realisieren
+(Abb. 5). Hier kann das Modell durch Ent-
+
+
+3M gibt für AWG28 Flachbandkabel eine Belastbarkeit von 1,5 A an, die Wannenstecker sind bis
+1A spezifiziert.
+
+fernen des Flachbandkabels für den Transport getrennt werden. Der Zusammenbau ist
+verpolungssicher. Der Aufbau auf der Convention reduziert sich auf mechanische
+Probleme.
+
+Tipps & Tricks
+
+In Abb. 6 ist der Flachbandkabeladapter im
+Einsatz bei einem X-Y-Plotter mit dem
+ftPwrDrive zu sehen. Es werden darüber
+sowohl Schrittmotoren und Taster als auch
+Servomotoren mit Strom versorgt.
+Flachbandkabeladapter,
+Flachbandkabel
+und achtpolige Buchsen sowie den Stromadapter gibt es wie immer in Björns Shop
+[7].
+
+Quellen
+
+kurzen Kabelbrücke leicht zerlegen
+
+Das Flachbandkabel ist in sich sehr stabil
+und benötigt bei X-Y-Antrieben keine
+weitere Kabelführung. Zusätzlich kann ein
+Flachbandkabel auch zwischen zwei Flachsteine geklemmt und so befestigt werden.
+Die Anschaffung einer Energiekette wird
+damit obsolet.
+
+[1]
+
+ft-datenbank: Energiekette.
+
+[2]
+
+Dirk Fox: Verkabelung. 2/2013, S. 13-17.
+
+[3]
+
+ft-datenbank: Stromadapter 9V, 1A.
+
+[4]
+
+ft-datenbank: Anschlussplattengehäuse.
+
+[5]
+
+Schaltpläne und Gehäuse für die beiden Adapter bei GitHub.
+
+[6]
+
+Dirk Wölffel, Christian Bergschneider, Stefan Fuss, Björn Gundermann,
+Christian Lauff: Der ftPwrDriveController für Schrittmotoren und
+Servos – Teil 1. ft:pedia 4/2018, S. 6770.
+
+[7]
+
+Webshop für Flachbandkabeladapter
+und Stromadapter.
+
+
+
+

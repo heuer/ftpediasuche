@@ -1,0 +1,487 @@
+
+
+Fahrzeugtechnik
+
+Pistenbully
+Erik und Jörg Busch
+Wenn begeisterte fischertechnik-Fans zum Skifahren gehen, ist das nächste Bauprojekt schon
+beschlossen: Der Pistenbully. Die großen, aber interessanten Herausforderungen bestanden
+darin, die breiten Ketten, den Antrieb und die Winde mit fischertechnik zu bauen. Im Folgenden
+werden Historie und Technik und der Aufbau zweier ft-Pistenraupen beschrieben.
+Bauprojekte mit meinem Sohn Erik, mittlerweile acht Jahre alt, beginnen immer mit
+dem Sammeln von Informationen. Dabei ist
+der direkte Kontakt mit der Technik am eindrucksvollsten und durch nichts zu ersetzen.
+Als begeisterte Skifahrer haben wir deshalb
+in jedem Skigebiet die Pistenfahrzeuge genau angeschaut. Im Skigebiet Grasgehren,
+auf der Passhöhe des Riedbergpasses
+(höchster Pass Deutschlands), konnten wir
+dann den stärksten Pistenbully genau
+besichtigen (Abb. 1).
+
+
+Historie und Technik
+Die Pistenpräparation Anfang des 20. Jahrhunderts war noch durch „Trampel“-Präparation mit Skiern sehr anstrengend. Einfache Maschinen waren selten und die Pistenpflege war auch damit sehr aufwändig
+(Abb. 3).
+
+
+Als Highlight durfte Erik sogar im Cockpit
+Platz nehmen (Abb. 2). Damit war klar: Der
+Pistenbully 600 Polar SCR ist unser Ziel,
+natürlich mit Winde.
+Wichtige bautechnische Informationen
+haben wir aus den Prospekten der Kässbohrer Geländefahrzeug AG, vielen Internetseiten und YouTube-Filmen erhalten.
+
+
+
+Die Idee des Pistenbullys hatte Karl Kässbohrer 1967 beim Skifahren [2]. 1969
+
+wurde dann der erste Pistenbully PB32.120
+(Abb. 4) auf dem „Ersten Internationalen
+Skipisten Kongress“ in Innsbruck vorgestellt. Die Bezeichnung 32 steht für die
+Fahrzeugbreite von 3,2 m, 120 bedeutet
+120 PS. Das bereits damals verwendete Antriebskonzept mit hydrostatischem Antrieb
+wurde von der Konkurrenz für untauglich
+erklärt. Heute verwenden es alle Hersteller.
+
+Fahrzeugtechnik
+
+Bereits 1972 setzten die Veranstalter der
+Winterspiele in Japan auf das Präparieren
+der Skipisten mit Pistenbullys.
+
+
+
+Die Entstehung und die verschiedenen
+Typen werden im Buch „Typenkompass
+Pistenbully“ des früheren Chefkonstrukteurs Helmut Kanzler sehr detailliert vorgestellt [2]. Die anfangs verwendeten Benzinmotoren wurden bereits 1971 durch Dieselmotoren mit einem wesentlich geringeren
+Verbrauch ersetzt. Dies war erst nach einer
+umfassenden Optimierung des Dieselmotors (Kaltstartverhalten und Höhenanpassung) möglich.
+Der Dieselmotor treibt für jede Seite eine
+hydraulische Pumpe an. Der Öldruck wird
+jeweils an einen hydrostatischen Antriebsmotor übergeben. Dieser treibt über ein Planetengetriebe das Turrasrad, das sternförmige Antriebskettenrad am Fahrzeugheck,
+an. Das Turrasrad greift in die Aluminiumkettenstege der Gummiketten. Die hydrostatischen Antriebsmotoren lassen sich kontinuierlich in beiden Richtungen regeln, sodass auch ein Drehen des Pistenbullys auf
+der Stelle möglich ist.
+Eine weitere Hydraulikpumpe versorgt die
+Hydraulik des Frontschilds und der Heckfräse. Die Heckfräse zerkleinert den Schnee
+hinter dem Pistenbully und ein Glättbrett
+ebnet anschließend den Schnee.
+
+Neben dem Einsatz auf den Skipisten wurde
+der Pistenbully ab 1985 auch als universelles Einsatzfahrzeug in der Antarktis verwendet (Abb. 5). Die Anforderungen sind
+hier extrem, der Einsatz muss bei -40 °C
+möglich sein, beim Parken kann die Temperatur bis zu -50 °C betragen. Für diese Bedingungen mussten Motor, Hydraulik und
+Antrieb wesentlich geändert werden (Zusatzheizungen, Tankbeheizung, verstärkter
+Anlasser, höhere Batteriekapazität, Kettenstege aus hochfestem Stahl).
+1985 wurde auch der Pistenbully
+PB42.200DW mit eingebauter Winde vorgestellt (Abb. 6). Die Präparation „schwarzer Pisten“ war davor mit den Pistenbullys
+nur von oben nach unten, also bergabwärts
+möglich. Durch die Umwege zum Gipfel
+war dies sehr zeitaufwändig. Stationäre
+Winden erlaubten zwar eine Bergauffahrt,
+die Kommunikation und Abstimmung mit
+dem zusätzlichen Bedienpersonal an der
+Winde war jedoch nicht einfach.
+Die Regelung der neuen Winde ermöglichte
+eine konstante Zugkraft am Windenseil und
+dadurch den einfachen Einsatz an Steilhängen. Zusätzlicher Vorteil: Die Schneeverschiebung bergwärts verlängert die Standzeit der Piste, was natürlich alle Skifahrer
+freut. Der Windenbetrieb verbessert auch
+beim Verfrachten großer Schneemengen
+auf der Ebene die Traktion.
+
+
+
+Der Spillantrieb ist von Schiffen bekannt,
+wo der Spillkopf das Einholen von Ankerketten oder Trossen ermöglicht, ohne diese
+dabei aufzuwickeln. Das Grundprinzip
+wurde auch schon in der ft:pedia 1/2011 beschrieben [4].
+
+
+Die ersten Winden waren noch fest auf der
+Arbeitsplattform montiert, nur der Auslegerarm war drehbar. Der Pistenbully konnte
+sich schon damals frei um 360° unter dem
+Windenarm drehen. Dadurch ergab sich
+eine Seilverdrillung, die die Standzeit des
+Seils verkürzte.
+Beim Folgemodell 1989 wurde die gesamte
+Winde drehbar auf der Arbeitsplattform angeordnet. Mit einem verlängerten und nach
+unten geführten Auslegerarm ergab sich ein
+tieferer Angriffspunkt. Das komplette Drehen des Pistenbullys um 360° unter der
+Winde war natürlich weiterhin möglich.
+
+Im Gegensatz zu den Ankerwinden werden
+beim Pistenbully zwei Spillköpfe verwendet, über die das Stahlseil jeweils um 180°
+umgelenkt wird. Durch die mehrmalige
+Umwicklung der beiden Spillköpfe ergibt
+sich durch die große Reibkraft die hohe
+Zugkraft der Winde. Trotzdem wird wegen
+der großen Spillkopfdurchmesser das Seil
+geschont.
+Die Kraftübertragung erfolgt vom hydrostatischen Motor (8) über die Zahnradgetriebe
+(9) und (10) auf beide Spillköpfe. In Abb. 8
+sieht man den Aufbau der Winde des Pistenbullys 600. In der Mitte erkennt man die
+große Seiltrommel, links den Antrieb des
+Spillantriebs mit seinen zwei Spillköpfen.
+
+Von Anfang an wurde das Prinzip „Winde
+mit Treibtrommelsystem“ angewendet. Der
+Aufbau (Abb. 7) ist im Patent von Kässbohrer gut beschrieben [3].
+
+
+Die Seiltrommel (6) dient nur als Seilspeicher. Das Seil wird dort unter konstanter
+Spannung aufgewickelt. Die Zugkraft wird
+über die beiden Spillköpfe (11) und (12)
+aufgebracht.
+
+
+Der von uns nachgebaute Pistenbully PB
+600 W Polar SCR wird seit 2013 gebaut
+(Abb. 9). Er ist der Pistenbully mit der
+höchsten Leistung (Abb. 10). Angetrieben
+wird er von einem 12,8 l-SechszylinderDieselmotor MB OM 460 LA mit 375 kW
+(510 PS) und einem maximalen Drehmoment von 2200 Nm [6]. Die Höchstge-
+
+
+Fahrzeugtechnik
+
+schwindigkeit beträgt 23 km/h. Dieser Pistenbully hat ein zulässiges Gesamtgewicht
+von 13,5 t, eine Zuladung von 2,5 t und ein
+beachtliches Tankvolumen von 275 l.
+
+
+mit 4,5-t-Winde [1]
+
+Die Winde des Pistenbullys 600 W Polar
+(Abb. 9) hat eine maximale Zugkraft von
+4,5 t [6]. Die nutzbare Seillänge beträgt
+1050 m, in einer Sonderversion sogar
+1450 m. Beim Windenbetrieb ist eine maximale Fahrgeschwindigkeit von 17 km/h
+möglich.
+
+
+Pistenbully von Erik
+Die Anforderungen an Eriks Modell waren:
+realitätsnahes Aussehen, gute Bespielbarkeit mit möglichst vielen Funktionen, und
+natürlich von Erik zu bauen.
+Die breiten Ketten des Pistenbullys sind
+eine der großen Herausforderungen mit
+fischertechnik. Die Lösung sieht man in
+
+Die Ketten sollten ungefähr maßstabsgetreu
+zum Original sein. Da das Vorbild versetzte
+Kettenstege hat, werden in diesem Modell
+sechs Ketten verwendet, bei denen die Raupenbeläge versetzt angeordnet sind (Abb.
+13).
+
+
+Beim Drehen des Pistenbullys auf der Stelle
+ergibt sich je nach Bodenbeschaffenheit
+eine hohe Reibung. Je schwerer der Pistenbully wird, desto wichtiger ist die Reibungsminimierung.
+Die Raupenbeläge gibt es in einer weichen
+Gummimischung (für gute Traktion) und in
+einer harten Version (für leichtes Drehen).
+Als guten Kompromiss zwischen Traktion
+und perfektem Drehen hat sich die Verwendung von weichen Raupenbelägen für
+jeweils eine Kette (zweite Kette von außen,
+genau unter den Rädern) und jeweils fünf
+Ketten mit harten Raupenbelägen ergeben.
+
+
+
+Der Bereich zwischen den Ketten ist, wie
+im Original, sehr schmal. Eine Lagerung
+der Zahnräder für die Ketten nur in diesem
+mittleren Bereich ergibt außen keine
+ausreichende Spannung der Ketten.
+
+
+Damit die Ketten auch im harten Spielbetrieb nicht herunterspringen und die Motorleistung der XM-Motoren über die Fernsteuerung ausreicht, wird jede Kettenseite
+genau in der Mitte der breiten Kette gelagert
+(Abb. 14). Dadurch ergeben sich kürzere
+freie Achslängen und die Kräfte sind in der
+Mitte besser ausgeglichen. Die Antriebszahnradblöcke aus jeweils drei Z30 ergeben
+stabile Antriebskörper.
+
+
+Der Antrieb erfolgt über jeweils einen XMMotor (Abb. 15). Nach einer Übersetzung
+ins Langsame von 2:1 und am Ende zum
+„Turrasrad“ noch einer Übersetzung von
+3:1 ergibt sich ausreichend Antriebsmoment. Der Antrieb erfolgt auf beide Zahnrad-Blöcke. Dadurch können sich diese
+auch nicht gegeneinander verdrehen.
+
+Die Reifen 45 (31018) laufen auf der zweitäußersten Kette. Diese sind minimal größer
+als der effektive Durchmesser der Z30.
+Durch die stabile Lagerung der Räder werden die Antriebszahnräder vorne und hinten
+entlastet, was das Drehen des Pistenbullys
+auf der Stelle weiter verbessert.
+Außerdem sind fast alle Lagerstellen mit
+Kugellagern ausgeführt, um auch hier die
+Reibung zu minimieren. Erik hat die von
+Papa konstruierten Ketten mit großem Eifer
+zusammengebaut.
+
+Ganz wichtig ist noch die Freilaufnabe
+(68535) des letzten Rades. Die Achse dreht
+
+
+Fahrzeugtechnik
+
+mit dem Zahnrad Z20 dreimal so schnell
+wie der auf der Achse sitzende Reifen
+(Abb. 15). Durch die Freilaufnabe dreht der
+Reifen frei auf der Achse.
+Dieser Pistenbully ist mit der fischertechnik-Fernsteuerung fahrbar. Die Winde hat
+einen eigenen Empfänger und eine eigene
+Stromversorgung. Als kleine Spielerei
+haben wir eine Kamera auf den Fahrersitz
+gesetzt. Das Bild wird auf einem kleinen
+Monitor an der Fernsteuerung gezeigt.
+
+
+Für die Pneumatikzylinder des Frontschilds
+und des Glättbretts wird ein ft-PneumatikKompressor mit Magnetventil verwendet.
+Über ein Rückschlagventil in der Zuleitung
+zu den Zylindern wird beim Abschalten
+über die parallel liegende Drossel ein sanftes Absenken des Frontschilds und des
+Glättbretts erreicht.
+Die Fernsteuerung spricht nur ein Hubgetriebe mit zwei Endschaltern an. An einem
+Anschlag werden über einen weiteren
+Schalter der Kompressor und das Magnetventil aktiviert. Durch diese Anordnung
+können einerseits der Kompressor und das
+Magnetventil mit einem eigenen Akku betrieben werden und bleibt andererseits der
+Zustand der Pneumatik unbeeinflusst von
+kurzen Ausfällen der Fernsteuerung.
+
+
+Für die Steuerung des Pistenbullys wird ein
+kabelloser Nunchuk verwendet (Abb. 18).
+
+Winde, Aufbau, Frontschild und Glättbrett
+hat Erik fast alleine aufgebaut. Dabei haben
+ihm die maßstäblich auf ft-Maßstab verkleinerten Ansichten des Pistenbullys als Bauvorlage sehr geholfen. In der Regel kann
+man auch relativ junge Kinder mit kleinen
+Tricks zu großen, stolzen Baumeistern
+machen. Wir finden, das Ergebnis kann sich
+sehen lassen.
+
+Pistenbully von Jörg
+Hier vorab zwei schöne Bilder von Jörgs
+Pistenbully beim Einsatz im Schnee (Abb.
+16 und 17).
+
+
+
+Der Aufbau über I2C und das Steuerprogramm wurden entsprechend dem ft:pediaArtikel in 2/2013 von Dirk Fox übernommen [7].
+Da Erik von der Version seiner Ketten die
+Exklusivrechte beanspruchte, musste für
+das zweite Modell eine neue Lösung
+gesucht werden. Die sichere Fahrfunktion
+sollte aber genauso gegeben sein.
+Die Kettenstege (Abb. 19) werden aus zwei
+Platten (15x60 und 15x90) zusammengebaut. Sechs BS7,5 und eine Achse 90 verbinden die Platten. Nur über Reibung hält
+diese Verbindung allerdings im Fahreinsatz
+nicht lange. Die Platten müssen formschlüssig verbunden werden. Natürlich wurde
+eine Möglichkeit mit fischertechnik-Teilen
+gesucht. Zieht man ein fischertechnikNylonseil durch die Nut zwischen den Platten und den 6 BS7,5, windet es an jedem
+Ende unter Spannung um den nächsten Zapfen der Platte und sichert es jeweils mit
+einem BS7,5, so erhält man eine sichere
+Verbindung.
+Eine Federnocke hindert die BS7,5 an der
+Verbindung der beiden Platten noch an der
+Verdrehung. Zwei weitere Federnocken
+halten die vier Förderglieder der Ketten auf
+Abstand. In der Mitte bleibt die „Fahrspur“
+für die Reifen 60 (37236).
+
+
+In Abb. 20 sieht man die Anordnung der
+Reifen und der Zahnräder zu der Kette.
+
+
+Immer links und rechts von der Fahrspur der
+Reifen läuft ein Zahnrad auf der Kette. Zur
+Sicherheit ist innen noch ein weiteres Zahnrad angebracht. Damit laufen die Ketten
+auch im harten Spieleinsatz sehr sicher.
+Nach außen steht die Kette wie im Original
+frei.
+
+
+Vorne werden Zahnräder Z40, passend zu
+der Größe der Reifen 60, verwendet. Die
+Antriebszahnräder sind, wie im Original das
+Turrasrad, kleiner. Deshalb wurden dafür
+Zahnräder Z30 ausgewählt. Die Antriebsachse mit Z30 wurde so angeordnet,
+dass die Kettenlinie oben eben ist und unten
+leicht zum Turrasrad ansteigt (Abb. 16).
+Der Antrieb erfolgt mit zwei XM-Motoren
+(Abb. 21). Wieder ist ein besonders reibungsreduzierter Aufbau wichtig, damit das
+schwere Gefährt ausreichend Kraft hat und
+problemlos auf der Stelle drehen kann. Für
+fast alle Lagerstellen wurden, wie bei Eriks
+Pistenbully, Kugellager verwendet. Die
+Kugellager 4x12x4 passen einseitig oder
+beidseitig in die Schneckenmutter (37925).
+Erhältlich sind sie z. B. bei fischerfriendsman. Nicht alle Metallachsen passen in die
+Lager. Herzlichen Dank an Stefan Roth für
+seinen perfekten Service: Er hat die passenden Achsen extra für uns ausgesucht.
+
+
+Fahrzeugtechnik
+
+Winde, einer für die Seiltrommel und einer
+für die Spillköpfe. Für die Messung von
+Drehpositionen werden Potentiometer verwendet. Die kleinen Trimmer mit 5kW passen entweder direkt auf die Steckachsen
+oder können mit einem kleinen Fräser nachgearbeitet werden. Sie passen perfekt ins ftRaster und lassen sich durch einen Baustein
+neben den Potis gegen Verdrehen sichern.
+
+Das Antriebsmoment wird über eine Kette
+2:1 und dann über das Z10 auf das Z30 noch
+3:1 ins Langsame übersetzt. Die Freilaufnabe im letzten Reifen ist wiederum sehr
+wichtig, da die Achse mit Motordrehzahl
+läuft.
+
+Aufbau der Winde
+Die Winde regelt im Original die Zugspannung des Seils und passt die Seilgeschwindigkeit dadurch immer der Fahrsituation an.
+Der Nachbau sollte dies natürlich ebenfalls
+können. Die Winde hat eine eigene TXSteuerung, einen eigenen Akku und erhält
+von der Pistenbully-Steuerung keine Signale. Der Pistenbully kann beliebig gesteuert werden. Die Winde reagiert auf die
+Seilspannung und regelt Seilspannung und
+Drehposition selbstständig.
+
+Der linke Motor unterstützt die Drehung der
+Winde und ist um die Achse des unten liegenden Zahnrades Z20 drehbar. Das oben
+liegende Potentiometer misst die Verdrehung und über die TX-Steuerung steuert der
+Motor nach. Zwischen den Adapterlaschen
+auf beiden Seiten werden Gummibänder als
+Drehmomentstütze verwendet (in Abb. 22
+nicht dargestellt).
+Die Seiltrommel (Abb. 23) wird mit einem
+Encoder-Motor angetrieben. Sie besteht aus
+vier Rädern 23 (36581), der Rand aus
+jeweils einem Reifen 32,5 (34995).
+
+
+Die Winde (Abb. 22) wird von drei Motoren
+angetrieben: Einer für die Drehung der
+
+
+
+
+
+Damit der Rand noch etwas höher wird,
+sind abwechselnd Kettenglieder (ohne seitliche Rastnasen 36263) und Förderkettenglieder (37192) mit den Nasen nach innen
+montiert. Nach der Umlenkung geht das
+Nylonseil weiter zur Zugspannungsmessung.
+Entsprechend der Seilspannung wird der
+Antriebsmotor der Seiltrommel, sowohl in
+der Geschwindigkeit als auch in der Drehrichtung, gesteuert. Die Seilspannung wird
+über die Wippe (Abb. 24) mit dem Umlenkrädchen gemessen, das sich um die
+Achse mit dem Potentiometer drehen kann.
+Als Gegenkraft dient ein Gummiband (im
+Bild blau im Hintergrund).
+
+Nach den Spillköpfen muss natürlich wieder die Seilspannung gemessen werden. Die
+Wippe ist in Abb. 26 (oben) bzw. Abb. 22
+zu erkennen.
+
+für die Seiltrommel
+
+Anschließend läuft das Windenseil über die
+Spillköpfe (Abb. 25).
+In dem Modell wird das Nylonseil 3-mal
+um die beiden Felgen 30 herumgeführt. An
+6 Stellen sind Achsen so angebracht, dass
+sie leicht auf den beiden Felgen aufliegen.
+Ein Abspringen oder Verrutschen des
+Nylonseils von der Felge kann so sicher vermieden werden.
+
+
+
+Die Regelung der Spillköpfe und der Trommel erfolgen unabhängig voneinander.
+Regelungstechniker könnten sich hier richtig austoben.
+Eine einfache Lösung ist in Abb. 27 dargestellt. Bei zu hoher Seilspannung wird die
+Geschwindigkeit des Motors beim Abwickeln stufenweise erhöht, beim Aufwickeln
+erniedrigt. Ist beim Aufwickeln trotz Reduzierung der Geschwindigkeit bis zum Stillstand die Seilspannung immer noch zu
+hoch, wechselt die Laufrichtung, d. h. es
+wird abgewickelt.
+
+Da das gesamte System Reibung hat (insbesondere die Spillköpfe mit den sechs anliegenden Achsen), wird der Motor immer mit
+einem Offset angesteuert (Abb. 27 unten).
+Damit läuft der Wechsel der Laufrichtung
+auch schnell genug ab.
+
+Fahrzeugtechnik
+
+natürlich im Pistenbully-Outfit, beim Präsentieren auf der ft-Convention.
+
+Mit dieser Steuerung läuft die Winde nach
+Optimierung der Parameter relativ gleichmäßig, sodass beim Fahren mit dem Pistenbully ein Durchhängen des Seils vermieden
+wird.
+
+
+Auch in diesem Winter waren wir beim Skifahren in Grasgehren. Einer der „echten“
+Pistenbullys, ein PB 300 W Kandahar,
+arbeitete in der Nähe des Parkplatzes. In der
+Hoffnung auf gute Fotos hatten wir unsere
+Modelle am Morgen ins Auto gepackt. Wir
+wurden belohnt, wie man in Abb. 29 sehen
+kann. Herzlichen Dank an das PistenbullyTeam vom Skigebiet Grasgehren, die dieses
+Bild möglich gemacht haben!
+
+Seiltrommel
+
+Resümee
+Auf der ft-Convention 2014 haben wir unsere Modelle ausgestellt.
+Wichtig ist für uns nicht nur das Bauen mit
+fischertechnik. Das Ideensammeln, die
+Ausflüge zu den Pistenbullys, die Foto-Session und natürlich auch das Ausstellen
+gehören zu diesem schönen Hobby einfach
+dazu [8].
+
+Verstärkung
+
+Quellen
+[1]
+
+Firmenhistorie der Kässbohrer
+Geländefahrzeug AG
+
+[2]
+
+Helmut Kanzler: Typenkompass Pistenbully. Motorbuchverlag, 2015
+
+
+
+
+[3]
+
+Stephan Mayer: Pistenraupe mit
+einer Seilwindenanordnung. Patent
+DE 102010061982 A1
+
+[6]
+
+Kässbohrer Geländefahrzeug AG:
+Pistenbully 600 Polar SCR. Firmenprospekt.
+
+[4]
+
+Thomas Püttmann: Drehmomentverstärker. ft:pedia 1/2011, S. 9-15.
+
+[7]
+
+[5]
+
+Bildersammlung
+www.pistenraupe.de
+
+Dirk Fox: I2C mit dem TX – Teil 4:
+Nunchuk-Fernsteuerung. 2/2013, S. 41-49.
+
+[8]
+
+Bilderpool der ft:community:
+fischertechnik-Convention 2014.
+
+
+
+

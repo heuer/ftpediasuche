@@ -1,0 +1,450 @@
+
+Computing
+
+Computing
+
+Neues von startIDE: Feldvariable, Servos, I2C
+Peter Habermehl
+Seit der in ft:pedia 4/2018 vorgestellten Version 1.5 von startIDE [1, 2] gab es zahlreiche Erweiterungen der Programmier-App. Aktuell ist sie in Version 1.7 im App-Store der community
+firmware verfügbar. Mit Version 1.6 wurden Feldvariable eingeführt, mit Version 1.6.6 die
+Ansteuerung von Servos, die über ein I2C-Shield an diverse Controller angeschlossen werden
+können, und mit Version 1.7 Funktion zum direkten Schreiben und Lesen auf dem I2C-Bus sowie
+einige mathematische Bitoperatoren. Die neuen Funktionen werden im Folgenden kurz
+vorgestellt.
+
+Feldvariable
+Die Einführung von Index- bzw. Feldvariablen gehörten zu den häufigsten
+Anwenderwünschen. Da die Erweiterung
+der vorhandenen Variablenverwaltung um
+indizierte Variable insbesondere wegen der
+problematischen Einbindung in das grafische Programmiersystem nicht praktikabel war, wurde ein dynamisches Datenregister geschaffen, das mit verschiedenen
+startIDE-Funktionen manipuliert werden
+kann.
+Eine Feldvariable, in startIDE als Array
+bezeichnet, ist letztlich einfach eine Liste
+von Integer-Werten, auf die über ihren
+Positionsindex zugegriffen wird.
+Mit dem Befehl ArrayInit <Arrayname>
+<Initialbedatung> wird ein Array in
+startIDE initialisiert. Die Initialbedatung ist
+optional; wird sie weggelassen, so ist das
+Array leer, enthält also keine Elemente.
+Mit dem Befehl Array <Variable>
+<Operator> <Array> <Index> erfolgt der
+Zugriff auf die im Array abgelegten Daten.
+So kann mit Array <Variable> readFrom
+<Array> <Index> der Inhalt des Arrays an
+Position <Index> in die <Variable>
+übertragen werden.
+
+
+Umgekehrt schreibt Array <Variable>
+writeTo <Array> <Index> den Inhalt der
+<Variable> an Position <Index> in das
+Array.
+Array <Variable> appendTo <Array> 0
+
+hängt den Inhalt der Variable als neuen
+Eintrag an das Ende des Array an, unabhängig von einem eventuell angegebenen
+Index. Dabei wächst das Array um einen
+Eintrag.
+
+
+
+
+Array <Varfiable> insertTo <Array>
+<Index> fügt den Inhalt der Variable an der
+Stelle <Index> in das Array ein, wobei der
+
+vorherige Inhalt und alle darauffolgenden
+Indizes um eine Stelle verschoben werden.
+Der Inhalt wird also nicht überschrieben
+und das Array wächst um einen Eintrag.
+
+Umgekehrt entfernt Array
+
+<Variable>
+removeFrom
+<Array>
+<Index> den
+Eintrag an Position <Index> aus dem
+
+Array,
+
+nachdem der Wert in die
+übernommen wurde. Die
+Größe des Arrays verringert sich dabei um
+einen Eintrag, alle Folgeeinträge werden
+entsprechend verschoben.
+<Variable>
+
+
+Mit der Funktion ArrayStat <Variable>
+<Operator> <Array> lassen sich statistische Informationen über ein Array gewinnen.
+Zunächst liefert ArrayStat <Variable>
+sizeOf <Array> die Anzahl der Elemente
+des Arrays. ArrayStat <Variable> min
+<Array> ermittelt den kleinsten im Array
+enthaltenen Wert. Der Operator minIdx
+würde dazu den Index zurückliefern; analog
+funktionieren max und maxIdx.
+und die mit der ArrayStat-Funktion abrufbaren Informationen.
+
+
+Dabei steht <Variable> für eine startIDEVariable, <Variable=x> für eine Variable
+mit dem aktuellen Wert x.
+Um den Inhalt eines Arrays auf dem
+Display – oder, wenn aktiviert, in die LogDatei – auszugeben, ist der Befehl
+QueryArray <Array> zu benutzen.
+Über LookUpTable (Abb. 3) können Kennlinien durch Arrays definiert werden. Als
+Interpolationsmethoden stehen „nächster
+Nachbar“ und „linear“ zur Verfügung.
+Damit ist z. B. die Umrechnung des Widerstands eines NTCs in eine Temperatur
+möglich. Auch kann z. B. die Positionsvorgabe für einen Servo von Winkelgrad in
+das Ansteuer-Tastverhältnis umgerechnet
+werden. Dies ist in Listing 1 dargestellt.
+
+
+Computing
+
+Interessant bei dem Beispiel in Listing 1 ist
+die Begrenzung des Eingangswerts durch
+die Kennlinie. Der Servo-Ansteuerbereich
+ist von 145 Steps bei -90° bis 575 Steps bei
++90° Drehwinkel definiert (Details dazu
+siehe weiter unten in Abschnitt 2, ServoAnsteuerung).
+Die Eingangskennlinie konvertiert alle SollWinkel von -10.000° bis -90° auf 145 Steps
+und alle Soll-Winkel oberhalb von 90° bis
+10.000° auf 575 Steps. Dazwischen wird
+linear interpoliert. Im Beispiel ist der
+gewünschte Stellwinkel +35°, das Ansteuer-Tastverhältnis wird über das
+LookUpTable berechnet und mit dem
+Servo-Befehl an den Servo ausgegeben.
+# Servo
+Init stellwinkel 35
+Init pwm_out 0
+ArrayInit zielwinkel -10000;-90;90;10000
+ArrayInit pwm_tv_out 145;145;575;575
+#
+LookUpTable pwm_out zielwinkel linear pwm_tv_out stellwinkel
+Servo FTD S00 pwm_out
+Delay 1000
+
+Listing 1: Servo-Ansteuerung über Kennlinie
+
+Ebenfalls auf Anwenderwunsch wurden die
+Befehle ArrayLoad und ArraySave ergänzt. Mit ihnen können Arrays auf der SDKarte abgespeichert und wieder geladen
+werden.
+
+zu ladende bzw. speichernde Datei auswählen kann. Alternativ kann ein Array byName
+geladen werden, d. h. die abgespeicherte
+Datei muss den gleichen Namen haben wie
+das im startIDE-Code definierte Array.
+
+Ein Zugriff auf die gespeicherten Daten ist
+auch über das Webinterface von startIDE
+möglich. So können z. B. Kalibrierwerte
+auf dem PC in eine Textdatei geschrieben
+und diese dann als Array auf den TXT/TXPi übertragen werden. Umgekehrt können
+z. B. Messwerte von startIDE in einem
+Array erfasst und dieses dann zur OfflineAuswertung abgespeichert und auf einen
+PC übertragen werden.
+
+Beim Abspeichern wird das Array, wenn
+nicht userSelect angegeben wurde, unter
+seinem Namen abgespeichert. replace
+bewirkt, dass eine evtl. vorhandene Datei
+gleichen Namens überschrieben wird,
+rename führt zu einer automatischen
+Umbenennung in der Form
+
+Eine Besonderheit dieser Funktionen ist,
+dass mit der Option userSelect während
+der Programmausführung der Benutzer die
+
+<Arrayname>_YYYYMMDD-HHMMSS.arr
+
+mit Datums- und Uhrzeitangabe. Dies ist
+insbesondere für Messdatenserien interessant.
+
+
+
+
+Servo-Ansteuerung
+Mit dem unter [5] vorgestellten und als 3DDruck-Daten verfügbaren Mini-Servo-System (siehe auch [6]) entstand der Wunsch,
+diese Servos auch von startIDE aus ansteuern zu können. Dazu wurde der Funktionsgruppe Ausgänge der Servo-Befehl hinzugefügt.
+
+aufgerundet also bei 205 Schritten, der
+obere bei
+0,125 ∙ (2
+
+− 1) = 511,85
+
+aufgerundet also bei 512 Schritten liegt. Die
+Mittelstellung
+liegt
+dementsprechend
+zwischen den beiden Werten bei ungefähr
+358 Schritten.
+
+Allerdings war es dazu auch erforderlich,
+die Servos hardwaremäßig anzubinden. Die
+Wahl fiel auf das Adafruit PMW Servo
+Shield bzw. einen günstig verfügbaren
+China-Clon dieses Shields [6, 7]. Diese
+Shields werden über das I2C-Protokoll angesprochen.
+Auf dem TXT-Controller ist die direkte
+Ansteuerung des I2C-Busses ab der aktuellen Version 1.88 der ftrobopy-Library
+vom 4.1.2019 möglich [8]. Da diese noch
+nicht in die community firmware integriert
+wurde, wird der I2C-Bus des TXT z. Zt.
+noch nicht unterstützt.
+Bereits implementiert und ansteuerbar sind
+der I2C-Bus des ftDuino sowie der servoDuino [6, 9]; der Anschluss des Servo
+Shields an den I2C-Bus des ftDuino ist
+gemäß des ftDuino-Handbuchs vorzunehmen, als Gehäuse mit integrierter Spannungsversorgung kann das servoShieldDesign verwendet werden [10].
+Der Servo-Befehl (Abb. 4) selbst hat drei
+Parameter, nämlich das Controller-Device,
+an dessen I2C-Bus das Servo Shield angeschlossen ist, z. Zt. also ftDuino FTD oder
+servoDuino SRD, den Port bzw. Kanal (015), an dem das Servo angeschlossen ist,
+und den PWM-Ansteuerwert in 12-bitAuflösung von 0-4095.
+Standard-Servos arbeiten üblicherweise in
+einem Bereich von 5% bis 12,5% Einschaltzeit, das bedeutet, dass der untere Anschlag
+des Servos bei
+0,05 ∙ (2
+
+
+− 1) = 204,75
+
+
+Weil startIDE allerdings den vollen PWMArbeitsbereich von 0-100% Tastverhältnis
+zulässt (entsprechend 0-4095 Schritte), ist
+darauf zu achten, den Servo nicht über seine
+mechanischen Grenzen hinaus anzusteuern,
+um eine Beschädigung zu vermeiden.
+Mit dem dem startIDE-Release v1.7 beigefügten Projekt servoTest (Abb. 5, siehe
+auch das Video [11]) können Servos eingemessen werden, indem man manuell ihre
+Anschläge ansteuert. Der jeweilige Anschlag ist erreicht, wenn ein weiteres Senken bzw. Erhöhen des Ansteuerwertes keine
+weitere Positionsänderung des Servos mehr
+bewirkt.
+
+
+Computing
+
+und die folgenden Register des I2C-Devices
+geschrieben werden sollen.
+
+
+Üblicherweise ist das Erreichen der mechanischen Endlage von einem Brummen bzw.
+Knurren des Servos begleitet. Der Ansteuerwert der unteren Endlage sollte um 510 Schritte vergrößert, der der oberen
+Endlage entsprechend verringert werden,
+damit der Arbeitsbereich des Servos sicher
+zwischen den mechanischen Anschlägen
+liegt. Alternativ kann man auch +/- 90°
+Servo-Position anfahren und die AnsteuerWerte dazu ermitteln.
+Die so ermittelten Ansteuer-Grenzen können in das Array pwm_tv_out aus Listing 1
+übernommen werden.
+
+I2C-Kommunikation
+Nachdem startIDE intern zur Ansteuerung
+der Servos ohnehin um I2C-Funktionalitäten erweitert wurde, lag es nahe, auch dem
+Anwender Zugriff auf den I2C-Bus zu
+ermöglichen.
+Daher gibt es nun in der Funktionsgruppe
+Interaktion den Unterpunkt Communication, der die beiden Befehle I2CWrite
+und I2CRead umfasst. I2CWrite <Device>
+<Array> schreibt den Inhalt des angegebenen <Array> als Nachricht auf den I2C-Bus
+des angegebenen <Device>, also z. Zt.
+ftDuino oder servoDuino. Es findet dabei
+keine Fehlerbehandlung statt.
+Die Nachricht setzt sich dabei aus positiven
+8-bit-Werten zusammen. Üblicherweise
+beginnt eine I2C-Botschaft mit der I2CAdresse des Devices, gefolgt von der
+Adresse des angesprochenen Registers
+sowie evtl. Daten, die in das angegebene
+
+I2CRead <Device> <Array> liest Daten
+aus den Registern eines I2C-Bus-Geräts.
+Dabei wird im <Array> als erster Eintrag
+die Adresse des auszulesenden Devices
+angegeben, als zweiter Eintrag die Anzahl
+der zu lesenden Bytes. Nach erfolgter
+Ausführung des Befehls enthält das
+<Array> die gelesenen Daten, ebenfalls
+byteweise. Über ArrayStat <Variable>
+sizeOf <Array> lässt sich ermitteln, ob die
+gewünschte Anzahl Bytes gelesen wurde.
+01 # Bosch BME280
+02 Init byte 0
+03 ArrayInit message 118;208
+04 I2CWrite FTD message
+05 #
+06 ArrayInit message 118;1
+07 I2CRead FTD message
+08 Array byte readFrom message 0
+09 QueryVar byte
+
+Listing 2: I2C-Kommunikation
+
+Ein Beispiel zur I2C-Kommunikation zeigt
+Listing 2. Dem am ftDuino angeschlossenen BME280-Umweltsensor von Bosch
+[12] mit der I2C-Adresse 76h (= 118dez)
+wird mit I2CWrite der Wert D0h
+(= 208dez) übermittelt, was in diesem Fall
+bedeutet, dass der interne Adresszeiger des
+Sensors auf das Register D0 gesetzt wird, in
+dem die Kennung dieses Sensors steht.
+Weitere Daten werden nicht geschrieben,
+sondern es werden jetzt mit I2CRead ein
+Byte ab Adresse D0h gelesen und die
+gelesenen Daten in das Array message
+übertragen.
+Der erste (und in diesem Beispiel auch
+einzige) Wert des Array wird in Zeile 8 in
+die Variable byte geschrieben und deren
+Inhalt auf dem Display ausgegeben. In
+diesem Beispiel würde die Zahl 96 (= 60h)
+zurückgegeben. Dies ist die interne Kennung des Sensors.
+
+
+
+
+Verknüpfung der beiden Operanden
+zurück.
+· Der bitShift-Operator verschiebt die
+Bits von Operand1 um Operand2 Stellen
+nach links. Ein negativer Operand2 führt
+zu einem Bitshift nach rechts.
+Beispielsweise liefert
+Calc x 255 sign 8
+in der Variablen x den Wert -1 zurück.
+
+Der bitShift-Operator
+Calc x 255 bitShift 8
+
+liefert 65280 zurück:
+
+
+Eine grafische Ausgabe der Sensorwerte
+des BME280 zeigt Abb. 6. Der gesamte
+Rahmen der Balken- und Numerik-Anzeigen wurde als PNG-Grafik geladen (siehe
+Canvas load bei den weiteren Neuerungen
+unten). Lediglich die farbigen Balken und
+die Ziffern werden live mit den startIDEGrafikfunktionen gezeichnet.1
+
+Weitere Neuerungen
+Um die Kommunikation auf dem I2C-Bus
+etwas zu erleichtern, wurde der CalcBefehl um einige Operatoren erweitert:
+· Der sign-Operator wandelt die als
+Operand1 übergebene Zahl anhand ihrer
+Binärdarstellung in eine Operand2-bit
+große, vorzeichenbehaftete Zahl um.
+· Der unsign-Operator arbeitet umgekehrt
+zum sign-Operator und wandelt die als
+Operand1 übergebene Zahl in eine
+Operand2-bit große positive Zahl um.
+· Die Operatoren bitAnd, bitOr und
+bitXOr liefern entsprechend eine bitweise Und-, Oder- bzw. Exclusive-Oder1
+
+
+Der Luftdruckwert ist korrekt, dieser Artikel ist
+auf einer Höhe von ca. 2000 m.ü.M. entstanden.
+
+255dez = 1111 1111b
+1111 1111b << 8dez
+= 1111 1111 0000 0000b
+= 65280dez
+
+Eine kleine, aber recht hilfreiche Neuerung
+betrifft die Grafikfunktionen. Die Leinwand-Befehle wurden um Canvas load
+erweitert. Damit ist es möglich, PNGDateien, die zuvor per Webinterface auf den
+TXT/TX-Pi übertragen wurden, in die
+Grafik-Leinwand zu laden und dann mit den
+startIDE-Grafikfunktionen weiter zu bearbeiten. So können z. B. grafische Benutzerschnittstellen einfach mit einem Grafikprogramm gezeichnet werden (als Beispiel
+dafür siehe das servoTest-Projekt oben).
+Schließlich wurde die Funktion FromSys
+noch um einige Datenquellen erweitert:
+FromSys <Variable> aktXPos liefert die
+aktuelle x-Position des Mauszeigers bzw.
+die Berührungskoordinate auf der Grafikleinwand (Canvas) zurück, als Entsprechung zum bereits vorhandenen Befehl
+touchXPos, der die Koordinate bei Auftreten des Berührungs-/Loslassereignisses
+liefert. FromSys <Variable> aktYPos
+liefert entsprechend die y-Position. Und
+schließlich kann mit FromSys <Variable>
+touch der aktuelle Berührungsstatus (0:
+
+
+Computing
+
+keine Berührung; 1: Berührung) der Canvas
+abgefragt werden.
+
+[4]
+
+Peter Habermehl: startIDE
+Handbuch v1.7. GitHub.
+
+Ein Beispiel zur Verwendung dieser neuen
+Datenquellen bringt startIDE mit dem
+Projekt „microPaint“ mit (Abb. 9).
+
+[5]
+
+Jan: fischertechnik SG90 mini servo
+system. Thingiverse, 15.09.2018, und
+zugehöriger Thread im ftc-Forum.
+
+[6]
+
+Peter Habermehl: Servo-Ansteuerung
+mit servoShield und servoDuino.
+ft:pedia 1/2019, in dieser Ausgabe.
+
+[7]
+
+Dirk Fox: I²C mit dem TX(T) – Teil
+16: Servo-Driver. ft:pedia 2/2017, S.
+41-47.
+
+[8]
+
+Torsten Stuehn: fischertechnik TXT
+Python. GitHub. Siehe auch: Torsten
+Stuehn: Programmierung des TXT
+unter Python. ft:pedia 2/2017, S. 5862.
+
+[9]
+
+Peter Habermehl: servoDuino: An
+Arduino sketch to serve as an USBI2C-bridge for PCA9685 servo
+shields. GitHub.
+
+
+Quellen
+[1]
+
+[2]
+
+[3]
+
+Peter Habermehl: startIDE für die
+Community Firmware – Programmieren direkt auf dem TXT oder TXPi. ft:pedia 1/2018, S. 102-107.
+Peter Habermehl: Grafik auf dem
+TXT mit startIDE. ft:pedia 3/2018, S.
+37-40.
+
+[10] Peter Habermehl: fischertechnik I2C
+servo shield case. Thingiverse,
+27.12.2018.
+[11] LeadCalibrator: startIDE mit Servos.
+YouTube, 21.12.2018.
+[12] Bosch BME280 Manual: https://aebst.resource.bosch.com/media/_tech/
+media/datasheets/BST-BME280DS002.pdf. Version 1.6, 20.09.2018.
+[13] startIDE-Thread im ftc-Forum.
+
+Peter Habermehl: Einbindung des
+TXT- bzw. TX-Pi-Touchscreens in
+startIDE. ft:pedia 4/2018, S. 49-52.
+
+
+

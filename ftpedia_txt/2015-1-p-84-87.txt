@@ -1,0 +1,88 @@
+
+
+3D-Modellentwurf
+
+Kinematik mit dem fischertechnik-Designer
+Joachim Häberlein
+Dieser Beitrag zeigt, wie man mit den Kinematik-Funktionen im fischertechnik-Designer einen
+Pneumatik-Zylinder „zum Leben erwecken“ kann, sodass er tatsächlich aus- und einfährt.
+Im fischertechnik-Designer soll ein Pneumatik-Zylinder, der im Designer aus vier
+Elementen besteht, mit dem KinematikManager virtuell funktionsfähig konstruiert
+werden (Abb. 1).
+
+Zylinderstange selbst als Motor zu definieren, haben zu eigenartigem Verhalten geführt. Deshalb fiel die Entscheidung auf
+einen Abstandsring, den man gut im Anschlussteil verstecken kann (Abb. 2).
+Dieser Abstandsring wird als Motor 1 definiert (Abb. 3 und 5):
+
+
+Um die Zylinderstange bewegen zu können,
+wird ein „Motor“ eingesetzt. Versuche, die
+
+
+
+
+3D-Modellentwurf
+
+Um die „Rotation-/Translation-Bindung“
+zu definieren, ist es einfacher, wenn man die
+beiden Teile mit dem Koordinaten-Manager
+aus dem Zylindergehäuse verschiebt (siehe
+
+Zur Definition der Bindung muss zuerst der
+Ring (Motor 1) ausgewählt werden, dann
+die Kolbenstange. Die beiden ausgewählten
+Teile werden nun als „Rotation-/Translation-Bindung“ eingerichtet. Hier werden
+die Richtung und der Vortrieb festgelegt.
+Diese Werte können jederzeit geändert werden:
+
+und -geschwindigkeit
+
+Mittels einer „Festen Bindung“ kann jetzt
+noch die Kolbenstange mit der Kolbenfläche verbunden werden. Das zeigt Abb. 7.
+
+
+
+
+
+Jetzt kann die Funktionen über den Befehl
+Kinematik Modul starten/beenden getestet
+werden:
+
+da eine für beide Endpunkte verwendet
+werden kann. Diese Kugel wird einfach auf
+der Kolbenstange platziert:
+
+
+Die Zylinder-Innenteile können nun wieder
+über den Koordinaten-Manager ins Innere
+des Zylinders zurück verlegt werden. Damit
+der Kolben sich automatisch immer hin und
+her bewegt, kann man „Kollisionskugeln“
+einsetzen. Das gewünschte Ergebnis lässt
+sich aber auch mit nur einer Kugel erzielen,
+
+
+
+3D-Modellentwurf
+
+Sodann sind beide Elemente – Kolbenstange und Kollisionskugel – zu selektieren. Dann bitte Kinematik, Kollision
+einfügen wählen (Abb. 11).
+Mittels der Abstand-Angabe und der
+Position der Kollisionskugel definiert
+man die Umkehrpositionen (Abb. 10).
+
+Quellen
+[1]
+
+Samek, Michael: fischertechnik
+Designer.
+
+[2]
+
+Häberlein, Joachim: Zylinder
+mit Kinematik.ftm. Downloadbereich der ftCommunity, 2015
+
+
+
+
+

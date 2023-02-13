@@ -1,0 +1,80 @@
+
+
+Tipps & Tricks
+
+Richtungsanzeige mit LEDs
+Rüdiger Riedel
+Eine LED ist auch eine Diode, wie der Name sagt: Light-Emitting Diode. Wird sie falsch herum
+angeschlossen, dann leuchtet sie nicht. Aber hält sie das auch aus?
+Arbeitet man häufig mit den fischertechnikLEDs, lässt sich eine Falschpolung nicht
+vermeiden. Auch durch den separaten
+(36708) Polwendeschalter und den am
+Batteriekasten (135719) befindlichen ist die
+falsche Polung schnell hergestellt. Doch
+zum Glück sind die LEDs robuster als befürchtet, und auch meine Bluetooth-Empfänger haben Umpolungen überstanden.
+Ich verwende LEDs von fischerfriendsman
+[1].
+
+Unsere fischertechnik-Motoren können
+durch Umpolen rechts- oder linksherum
+laufen. Schließen wir eine LED an die
+Motorklemmen an, dann zeigt sie die
+Laufrichtung an: Sie leuchtet bei der einen
+Drehrichtung, bei der anderen ist sie dunkel.
+
+
+Sollte doch mal ein Missgeschick passieren,
+gibt es preisgünstigen Ersatz. Einfach die
+defekte LED samt Widerstand aus dem
+Stecksockel herausziehen und die neue mit
+einer Spitzzange einfügen.
+
+Schalten wir zwei LEDs antiparallel an den
+Motor, leuchtet eine LED bei Rechtsdrehung, die andere bei Linksdrehung. Oder
+bei einem Fahrzeug eine in Vorwärtsrichtung und die andere bei Rückwärtsfahrt.
+
+
+Aber das wird wahrscheinlich nicht passieren; alle meine Versuche mit falsch
+herum an 9 V Gleichstrom angeschlossenen
+LEDs haben dies klaglos überlebt.
+
+
+
+
+Tipps & Tricks
+
+In Abb. 4 habe ich den kleinen HagelfeuerDroiden [2] mit vier LED-Lampen ausgerüstet, zwei vorne und zwei hinten. In Fahrtrichtung leuchtet die weiße und gleichzeitig
+auf der Rückseite die rote LED.
+
+
+
+Der große Hagelfeuer-Droide braucht
+natürlich Doppelbeleuchtung vorne und
+hinten.
+
+Noch ein Hinweis von fischerfriendsman:
+Die LEDs halten auch eine Zeitlang den
+Wechselstrom des alten grauen Trafos aus
+(30173). Aber nach einigen Stunden werden
+sie sichtbar schwächer. Die hohen Spannungsspitzen des Trafos in der negativen
+Welle sind einfach zu viel. Hier empfiehlt
+es sich, zum Schutz noch eine Standarddiode (z. B. 1N4001) in Flussrichtung vorzuschalten.
+
+Quellen
+
+Hinweis
+
+[1]
+
+Webshop von fischerfriendsman.
+
+Alle beschriebenen Versuche habe ich mit
+LEDs von fischerfriendsman [1] vorgenommen; die Übertragbarkeit auf Originalfischertechnik-LEDs habe ich nicht überprüft, dies muss jeder selbst verantworten.
+
+[2]
+
+Rüdiger Riedel: Hagelfeuer-Droide.
+ftc-Bilderpool.
+
+
+

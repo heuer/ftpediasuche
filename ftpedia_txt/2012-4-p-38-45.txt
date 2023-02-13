@@ -1,0 +1,538 @@
+
+
+Antriebstechnik
+
+Die Dampfmaschine
+Dirk Fox
+Die Entwicklung der Dampfmaschine vor genau 300 Jahren hat die Welt stärker verändert
+als jede andere technische Erfindung zuvor. Als Erfinder gilt allgemein James Watt –
+tatsächlich hat er sie lediglich (wenn auch in wichtigen Punkten) weiterentwickelt. Das
+Funktionsprinzip einer Dampfmaschine lässt sich unter Verwendung eines PneumatikKolbens mit fischertechnik sehr anschaulich nachbilden.
+
+Geschichte
+Bis vor genau 300 Jahren waren Nutztiere
+praktisch die einzige bekannte Möglichkeit
+für den Menschen, Leistungen zu vollbringen, die die menschliche Arbeitskraft
+übersteigen. So finden sich unter den Skizzen von Leonardo da Vinci (1452-1519)
+einfache Maschinen, die die Kraft eines
+Pferds oder Rinds z. B. auf eine Eimerkette
+zum Wasserschöpfen oder einen primitiven
+Kran übertragen.
+Lediglich für bestimmte Anwendungen
+wie das Mahlen von Getreide oder das Entwässern von Feldern (mittels Archimedischer Schrauben) wurden Wasser- und
+Windmühlen eingesetzt. Diese Antriebe
+waren aber an Wasserläufe und windreiche
+Gegenden gebunden. Damit war der
+technischen Entwicklung eine natürliche
+Grenze gesetzt: Die Menschheit verfügte
+über keine ortsunabhängig nutzbare
+Antriebskraft, die in der Lage gewesen
+wäre, kontinuierlich, zuverlässig und mit
+großer Kraft eine Maschine anzutreiben.
+Das änderte sich grundlegend mit der Entwicklung der Dampfmaschine. Die erste
+funktionsfähige „Kolben-Wärmekraftmaschine“ baute Thomas Newcomen (16631729) im Jahr 1712 für den Einsatz als
+Wasserpumpe in Bergwerken; damit
+wurden die Stollen frei von Grundwasser
+
+gehalten. Genau genommen war die erste
+Dampfmaschine eine „Unterdruckmaschine“: Ein Zylinder wurde mit Wasserdampf
+gefüllt und dann durch die Zuführung von
+Wasser abgekühlt (Abb. 1, B).
+
+(Quelle: Meyers Konversationslexikon, 1890)
+
+Der durch die Abkühlung des Dampfes
+entstehende Unterdruck zog einen Kolben
+(D) in den Zylinder. Anschließend zog ein
+Gegengewicht (K) den Kolben wieder
+hoch und mit ihm die nächste Dampf-
+
+füllung in den Zylinder [1, 2]. Dieser Vorläufer der Dampfmaschine hatte lediglich
+einen energetischen Wirkungsgrad von
+etwa 0,5 % – wegen der Abkühlung des
+Zylinders musste man fast die 200fache
+Energie der Maschinenleistung für die
+Dampferzeugung aufwenden, eine wenig
+Ressourcen schonende Angelegenheit.
+Der Schotte James Watt (1736-1819), der
+1757 an der Universität von Glasgow eine
+Stelle als Instrumentenmacher angetreten
+hatte [3], erhielt 1764 ein Modell einer
+Dampfmaschine des von Thomas Newcomen entwickelten Typs zur Reparatur.
+Dabei kam ihm der Gedanke, den Kondensationsprozess auszulagern und den
+Kolben nicht durch Unterdruck, sondern
+direkt durch den Dampfdruck anzutreiben.
+Nachdem er in dem Eisenfabrikanten John
+Roebuck (1718-1794) einen Finanzier gefunden hatte, ließ er 1769 seine Dampfmaschine patentieren (Abb. 2) [4].
+
+Antriebstechnik
+
+großes Schwungrad. Um den Wirkungsgrad weiter zu erhöhen, leitete er 1782 den
+Dampf wechselseitig auf jeweils eine Seite
+des Zylinders.
+
+Schwungrad und wechselseitiger Dampfzufuhr
+
+Die Dampfzufuhr regelte er durch eine
+ausgeklügelte Mechanik, das Wattsche
+Parallelogramm (Abb. 3). Damit erreichte
+er einen Wirkungsgrad von 3 % – das
+Sechsfache der „Kolben-Wärmekraftmaschine“ Newcomens.
+Für den maschinellen Antrieb von Fahrzeugen bedurfte es allerdings zahlreicher
+weiterer Verbesserungen, da Watts Dampfmaschinen dafür viel zu schwer waren.
+
+(Quelle: Brockhaus' Konversations-Lexikon,
+14. Auflage, Band 4, 1894)
+
+Später gründete er mit dem Unternehmer
+Matthew Boulton (1728-1809) die Firma
+Boulton & Watt, deren von Watt entwickelten Dampfmaschinen die Industrialisierung der Welt einleiteten. Dieser Erfolg
+war mehreren Weiterentwicklungen Watts
+zu verdanken. 1781 führte er ein Schubkurbelgetriebe ein, mit dem er die Hubbewegung des Kolbens in eine Drehbewegung umwandelte. Damit war
+Newcomens Hebelarm („Balancier“) für
+die Rückführung des Kolbens nicht mehr
+erforderlich; er ersetzte ihn durch ein
+
+The British Railway Locomotive, H.M.S.O.)
+
+Die von Richard Trevithick (1771-1833)
+im Jahr 1802 entwickelten HochdruckDampfmaschinen erhöhten den Wirkungsgrad weiter und verringerten zugleich das
+Gewicht der Maschine erheblich – Watt
+hatte Hochdruck-Dampfmaschinen Zeit
+seines Lebens für viel zu gefährlich
+gehalten. Trevithick gelang damit 1804 die
+
+
+Konstruktion der ersten Lokomotive, die
+ohne Last eine Geschwindigkeit von ca. 25
+km/h erreichte und fünf Tonnen Last über
+eine Strecke von 17,5 km zog (Abb. 4) [5].
+Damit begann das Zeitalter der Eisenbahn
+– aber das ist eine andere Geschichte.
+
+Ein „Druckluftmotor“
+Zwar lässt sich mit fischertechnik keine
+echte Dampfmaschine konstruieren – klar,
+die Kunststoffteile würden eine Erhitzung
+auf mehr als 100°C nicht verzeihen. Trotzdem gibt es eine Möglichkeit, ein dem
+Prinzip der Dampfmaschine entsprechendes Funktionsmodell zu konstruieren: mit
+den Pneumatik-Zylindern 60 und Druckluft. Der Zylinder erlaubt eine beidseitige
+Einleitung von Druckluft; damit ließe sich
+ein der Wattschen Konstruktion ähnelnder
+„Druckluftmotor“ bauen.
+Bereits im Festo-Pneumatik-Kasten von
+1981 finden sich in der Anleitung mehrere
+Druckluftmotor-Modelle, darunter auch ein
+„liegender Luftmotor mit festem, doppelt
+wirkendem Zylinder“, der dem Prinzip
+einer Dampfmaschine sehr nahe kommt
+(Abb. 5).
+
+reiche technische Details, die wir uns
+genauer ansehen wollen.
+Versetzen wir uns dazu einmal 240 Jahre
+zurück in das Labor von James Watt. Was
+benötigen wir genau für eine Dampfmaschine? Im Wesentlichen sind es vier
+Komponenten:
+eine Energiequelle (in unserem Modell
+ist das ein Druckluftgenerator),
+ein Getriebe, das die Auf- und Abbewegung des Kolbens (eine „oszillierende“
+Bewegung) in eine Drehbewegung (eine
+„Rotation“) umwandelt,
+ein Schwungrad (wozu das erforderlich
+ist, werden wir noch sehen), und
+einen Steuermechanismus, der – abhängig von der Position des Kolbens im
+Zylinder – den „Dampf“ (im Modell die
+Druckluft) wechselseitig im richtigen
+Moment auf die richtige Seite des
+Kolbens lenkt.
+Die Konstruktion des Druckluftgenerators
+sparen wir uns hier – dazu findet ihr in
+euren Pneumatik-Kästen gute Anleitungen,
+und die Kästen Robo TX ElectroPneumatik
+und Pneumatic 3 enthalten einen sehr leistungsfähigen fertigen ft-Kompressor. Auch
+die von Pollin Elektronic angebotene
+Luftpumpe, die nach Entfernung des Halteblechs exakt in eine ft-Rohrhülse (36702)
+hineinpasst, eignet sich als fertiger Druckluftgenerator. Spannend ist hingegen die
+Konstruktion der drei anderen Elemente.
+Das Schubkurbelgetriebe
+
+
+Ganz so einfach wollen wir es uns aber
+nicht machen – zumal einige der in diesem
+Modell verwendeten Teile in den aktuellen
+Pneumatik-Kästen nicht mehr enthalten
+sind. Denn die Wattsche Dampfmaschine
+enthält zahlreiche interessante und lehr-
+
+
+Zur Umwandlung der oszillierenden
+(schwingenden) Schubbewegung des Kolbens im Zylinder in eine Drehbewegung
+verwendete James Watt ein Schubkurbelgetriebe (Abb. 6). Dabei wird die Kolbenstange P (auch „Pleuelstange“ genannt)
+mit einer auf der Antriebsachse („Welle“
+genannt) montierten Kurbel K verbunden.
+Dieses Prinzip war zu Lebzeiten Watts
+bereits seit Jahrhunderten bekannt – das
+
+älteste bekannte Schubkurbelgetriebe fand
+man in einer Relief-Zeichnung einer römischen Sägemühle auf einem Sarkophag
+eines Müllers aus Hierapolis. Es datiert aus
+dem 3. Jahrhundert nach Christus – vor
+über 1.700 Jahren.
+
+(Quelle: Meyers Großes KonversationsLexikon, 6. Auflage, 1905-1909)
+
+Mit fischertechnik gelingt eine ziemlich
+„naturgetreue“ Konstruktion eines solchen
+Schubkurbelgetriebes mit der Segmentscheibe (grau: 31037, schwarz: 110349):
+Die Kolbenstange wird dazu über einen
+B15 und ein Rollenlager (37636) mit einer
+Rastachse 20 (31690) an unserer Pleuelstange (aus zwei Statik-Streben X-127,2)
+befestigt. Damit die Kolbenstange sich
+nicht unter Last biegt und verkantet, wird
+der B15 über zwei Gelenkwürfel-Klauen
+(31436) mit Lagerhülse (36819) auf zwei
+parallelen Metallachsen 110 (31031) gerade geführt (Abb. 7). Diese müssen exakt
+ausgerichtet sein, damit die Lagerhülsen
+darauf reibungsfrei gleiten.
+
+Antriebstechnik
+
+alle dieselbe Position (1,5 cm vom Achsmittelpunkt).
+Ein Schubkurbelgetriebe leidet jedoch unter einem prinzipiellen Problem: Die Umwandlung der Schub- in eine Rotationsbewegung erfolgt nicht gleichmäßig. Das
+zeigt uns eine kleine Schema-Zeichnung
+(Abb. 8): Sei x die Pleuelstange (rot), y der
+Radius der Segmentscheibe (blau), m der
+Mittelpunkt der Welle (Abb. 8a), A und B
+die äußersten Positionen des Endes S der
+Pleuelstange, und O deren Mittelpunkt.
+
+S
+
+y
+
+x
+
+A
+
+O
+
+B
+
+a
+
+m
+
+
+die Segmentscheibe um 45° (also 1/8 des
+Kreises) gedreht hat. Tatsächlich hat sich
+der Punkt S dabei nicht um y/2, sondern
+lediglich um ca. 0,29·y bewegt2 – und wird
+sich bei der nächsten Achteldrehung der
+Segmentscheibe um 0,71·y weiterbewegen.
+
+S
+A
+
+b
+
+x
+O
+
+B
+
+a
+
+.
+
+y
+m
+
+
+Die „Pleuelstange“ wird auf der anderen
+Seite auf eine Metallachse 30 (31034)
+geschoben, die in das mittlere Loch der
+Segmentscheibe gesteckt wird. Mit drei
+Klemmbuchsen 5 (37679) werden Pleuel
+und Achse fixiert. Statt der Segmentscheibe kann man auch eine Drehscheibe
+60 (31039), ein Z30 (36264) oder ein Z40
+(31022) verwenden, denn die Löcher für
+die Befestigung der Metallachse 30 haben
+
+Was bedeutet das für unsere Dampfmaschine? Klar: Das Drehmoment eines Kolbenhubs ist bei der ersten und vierten
+Achteldrehung größer als bei der zweiten
+und dritten, Segmentscheibe und Welle
+werden daher mal stärker, mal schwächer
+angetrieben.
+Und noch eine Ungleichmäßigkeit besitzt
+das Schubkurbelgetriebe: Nach einer ¼-
+
+
+Genau sind es (1 1 / 2 ) y .
+
+
+
+
+Umdrehung steht die Segmentscheibe
+senkrecht im Punkt c (Abb. 8c). Nun sollte
+das linke Ende S der Pleuelstange genau
+auf O stehen – tatsächlich aber liegt S
+deutlich rechts davon. Wie kann das sein?
+
+x
+
+y
+
+S
+A
+
+c
+
+Die Herleitung der Formel sei euch als
+kleine Fingerübung überlassen.
+Das Ergebnis zeigt die Kurve in Abb. 9 für
+den Segmentscheibenradius von y = 1,5 cm
+und eine doppelt so lange Pleuelstange:
+Erst nach 63 % des Kolbenhubs hat sich
+die Segmentscheibe um 90° gedreht.
+
+a
+
+B
+
+O
+
+m
+Pleuel = 8,48 x Radius
+
+
+Die Erklärung ist einfach: In dieser Position ist der Abstand zwischen dem einen
+Ende der Pleuelstange S und dem Achsenmittelpunkt m nicht gleich x – sondern
+(nach dem Satz des Pythagoras) gleich der
+Wurzel x 2 y 2 . Ist also y größer als 0,
+dann ist der Abstand zwischen S und m
+kleiner als x. Das Drehmoment eines Kolbenhubs ist daher in der ersten Hälfte
+kleiner als in der zweiten.
+
+Pleuel = 2 x Radius
+
+Drehwinkel
+
+
+
+
+
+0,5
+
+
+1,5
+
+
+2,5
+
+
+Kolbenhub
+
+vom Kolbenhub
+
+Gut zu erkennen ist das, wenn man den
+Drehwinkel , um den sich die Segmentscheibe bereits gedreht hat, in Abhängigkeit vom Kolbenhub h = AS ausdrückt.
+Das ist gar nicht so schwierig und erfordert
+nur ein wenig Trigonometrie [8]:
+
+h
+
+x
+
+y
+
+y cos
+
+x2
+
+y 2 sin 2
+
+Drehwinkel
+
+
+
+
+0,5
+
+
+1,5
+
+Kolbenhub
+
+
+2,5
+
+
+in unserem Modell
+
+Da sich diese Ungleichmäßigkeit nicht vermeiden lässt, bleibt nur, sie durch eine
+geeignete Konstruktion zu verringern. Das
+gelingt, indem x (die Pleuelstange) deutlich
+größer gewählt wird als der Radius der
+Segmentscheibe. In unserem Modell hat
+die Pleuelstange (Statik-Strebe X-127,2)
+eine Länge von x = 12,72 cm, ist also 8,48
+mal so lang wie der Radius der Segmentscheibe. Das Resultat sieht man in
+„geglättet“, und die 90° werden bereits
+nach 53 % des Kolbenhubs erreicht.
+Das Schwungrad
+Ein Schubkurbelgetriebe hat jedoch noch
+einen Schwachpunkt: Beim Wechsel der
+Schubrichtung des Kolbens erreicht dieser
+einen „toten Punkt“, nämlich genau dann,
+wenn die Pleuelstange auf die Achse der
+Kurbelwelle „zeigt“. Bleibt der Kolben in
+exakt dieser Position stehen, kann ihn
+keine noch so starke Schubkraft mehr
+bewegen, da der Schub hier nicht in eine
+
+Drehbewegung umgewandelt werden kann.
+Daher benötigt man einen Mechanismus,
+mit dem man erreicht, dass sich die Antriebswelle bei jeder Umdrehung über die
+beiden toten Punkte hinaus dreht.
+Dazu machte James Watt sich ein Phänomen zu Nutze, das der Mathematiker Leonhard Euler (1707-1783) kurz zuvor, im
+Jahr 1740, erstmals systematisch untersucht hatte: die Massenträgheit. Darunter
+versteht man den Widerstand jedes Gegenstands gegen jede Änderung seines Bewegungszustands.
+
+Antriebstechnik
+
+Auch ohne zu wissen, wie man die Trägheit berechnet, leuchtet ein, dass es bei der
+Konstruktion vor allem auf die Masse am
+äußeren Rand des Schwungrads ankommt
+– denn sie legt bei einer Umdrehung den
+längsten Weg zurück und bewegt sich
+damit am schnellsten. Der Rand des
+Schwungrads hat daher den größten Anteil
+an der Massenträgheit; sie wird im
+Wesentlichen vom Radius und dem
+Gewicht der Bausteine bestimmt.
+
+Das Prinzip kennt ihr alle vom Radfahren:
+Beim Anfahren braucht ihr viel Kraft, bis
+das Fahrrad die gewünschte Geschwindigkeit erreicht hat. Umgekehrt bleibt es aber
+keineswegs stehen, wenn ihr aufhört zu
+treten, sondern rollt weiter – zum Anhalten
+müsst ihr bremsen.
+Watt nutzte die Massenträgheit bei seiner
+Dampfmaschine, indem er auf die Antriebswelle ein Schwungrad montierte:
+Erreicht der Kolben einen Endpunkt, sorgt
+die Trägheit des Schwungrads dafür, dass
+die Welle über den toten Punkt hinwegdreht. Ein Schwungrad ist also gewissermaßen ein kleiner Energiespeicher: Es
+„schluckt“ beim Starten Energie (und
+verlangsamt damit zunächst die Drehbewegung), und gibt diese Energie wieder
+ab, wenn die Kraftzufuhr abnimmt oder
+ausbleibt.
+Das Schwungrad hat noch einen zweiten
+positiven Effekt: es gleicht die Ungleichmäßigkeiten des Schubkurbelgetriebes
+(s. o.) aus. Das ist besonders bei einer
+niedrigen Frequenz des Kolbens wie bei
+unserem Dampfmaschinen-Modell spürbar.
+Das Schwungrad muss so konstruiert sein,
+dass die Kraft eines einzigen Kolbenhubs
+es so stark beschleunigt, dass es den „toten
+Punkt“ des Schubkurbelgetriebes überwindet. Dazu darf es einerseits nicht zu schwer
+sein, muss aber andererseits schwer genug
+sein, damit seine Massenträgheit ausreicht.
+
+
+Die nahe liegende Lösung, das Schwungrad aus sechs Flachträgern 120 mit Bogenstücken 60° zu konstruieren, ist daher
+ungeeignet – das Schwungrad wäre viel zu
+leicht. Der äußere Ring sollte aus Bausteinen 30 und Winkelsteinen bestehen und
+einen ausreichenden Radius aufweisen, wie
+z. B. das aus dem Modell von thomas004.
+Die Druckluftzuführung
+Bei den Druckluftmotoren aus der Pneumatik-Anleitung von 1981 (Abb. 5) und
+dem schönen Dampfmaschinenmodell von
+Fredy wird die Druckluftzuführung mit den
+Festo-Ventilen (36082) und einer auf der
+Welle montierten Schaltscheibe (37727)
+geregelt. Das ist eine elegante Lösung, da
+die Umschaltung der Druckzufuhr verzögerungsfrei erfolgt und das Modell daher
+mit einem deutlich kleineren Schwungrad
+
+
+
+auskommt – aber die Ventile gibt es nicht
+mehr, und für unser „historisches“ Dampfmaschinenmodell wären sie zudem nicht
+zeitgemäß.
+Watt verwendete einen Schieber, der, gesteuert von einem mit der Welle (W) verbundenen Gestänge und einer ExzenterScheibe (E) den Dampf abwechselnd in die
+eine oder die andere Kolbenseite einließ.
+
+(Quelle: Meyers Großes KonversationsLexikon, Band 4, Leipzig 1906)
+
+Diesem Schieber kommt das PneumatikHandventil recht nahe, das in unserem
+Modell von einem Hebel bewegt wird
+(Abb. 13) – eine Variante der Idee aus dem
+Dampfmaschinen-Modell von thomas004.
+
+Sind Kurbelwelle und Segmentscheibe
+sauber justiert, dann legt unsere Dampfmaschine mit ca. 60 U/min los. Der relativ
+lange „Leerlauf“, den das Handventil verursacht und der durch das Schwungrad
+ausgeglichen werden muss, lässt sie ein
+wenig „stoßweise“ arbeiten. Das ließe sich
+durch ein größeres Schwungrad oder einen
+zweiten Kolben ausgleichen – oder doch
+durch die Verwendung verzögerungsfreier
+Umschalter wie den elektromagnetischen
+Ventilen (siehe bspw. das DruckluftmotorModell von ixer).
+Solche Varianten seien eurem Einfallsreichtum überlassen …
+
+Quellen
+
+mit Hebel (Gelenkbaustein 45)
+
+Knifflig ist aber die Steuerung dieses
+Hebels. Er hat einen großen „Schaltweg“ –
+der 1,5-cmRadius einer Segment- oder
+einer Nockenscheibe (31038) reicht dafür
+nicht. Also benötigen wir eine Kurbelwelle, die geeignet (z. B. mit einer StatikStrebe) mit dem Hebel gekoppelt wird –
+ein zweites Schubkurbelgetriebe (Abb. 14).
+
+
+[1]
+
+Wikipedia: Dampfmaschine.
+
+[2]
+
+Wikipedia: Thomas Newcomen.
+
+[3]
+
+Wikipedia: James Watt.
+
+[4]
+
+Steam Engines. Watt’s Specification.
+Patent No. 913, 1769
+
+[5]
+
+Wikipedia: Richard Trevithick.
+
+[6]
+
+Achim Scheunert: Sieg der Feuermaschine. Doku-Drama, 2008.
+
+[7]
+
+Werner Kiefer: James Watt und die
+Dampfmaschine. Film (15 min.) aus
+der Sendereihe ‚Meilensteine der
+Naturwissenschaft und Technik’ des
+Schulfernsehens der ARD, 2005.
+
+[8]
+
+Wikipedia: Schubkurbel.
+
+
+Antriebstechnik
+
+
+

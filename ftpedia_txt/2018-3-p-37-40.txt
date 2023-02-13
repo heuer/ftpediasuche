@@ -1,0 +1,223 @@
+
+Computing
+
+Computing
+
+Grafik auf dem TXT mit startIDE
+Peter Habermehl
+Mit der App startIDE [1, 2] können unter der community firmware auf TXT und TX-Pi Modelle
+gesteuert werden. Seit der Version 1.4 bietet startIDE auch einige Funktionen zum Zeichnen
+von Pixelgrafiken auf dem Display. Diese Grafikfunktionen sollen im Folgenden vorgestellt
+werden.
+
+Das Konzept
+Bis zur Version 1.4 bot startIDE bereits
+einige Möglichkeiten, Text und Variableninhalte auf dem Display auszugeben. Zur
+Darstellung von Pixelgrafiken wird über
+dem Ausgabefenster eine Leinwand
+(canvas) eingeblendet. Sie ist quadratisch,
+hat also in X- und Y-Richtung die gleiche
+Auflösung von z. Zt. 240 Pixeln. Der
+Koordinatenursprung liegt in der oberen,
+linken Display-Ecke. Die X-Achse wird
+nach rechts, die Y-Achse nach unten positiv
+gezählt.
+
+Auf der Leinwand kann man mit einem
+virtuellen Stift (pen) zeichnen. Vom einzelnen Pixel über Linien und Ellipsen bis hin
+zu Recht- und Vielecken, jeweils als Umriss
+oder ausgefüllt, gibt es eine ganze Reihe
+von Zeichenfunktionen. Leinwand- und
+Stiftfarbe können als 24-bit-RGB-Werte
+angegeben werden, so dass durchaus
+farbenfrohe Darstellungen auf dem TXTDisplay realisierbar sind.
+
+Ein einfaches Beispiel
+Als erstes Beispiel soll ein einzelner roter
+Punkt mittig auf das Display gezeichnet
+werden. Der Code zu diesem Beispiel ist in
+
+# roter Punkt
+Color paper 127 127 127
+Canvas clear
+Canvas show
+Color pen 255 0 0
+Pen plot 120 120
+Canvas update
+Delay 1000
+
+
+Zeile 1 ist lediglich eine Kommentarzeile.
+In Zeile 2 wird die Farbe für die Zeichenfläche auf ein mittleres Grau gesetzt und in
+Zeile 3 die Zeichenfläche gelöscht.
+
+
+Zeile 4 blendet die Zeichenfläche ein, und
+mit dem folgenden Befehl in Zeile 5 wird
+die Stiftfarbe auf ein kräftiges Rot gesetzt.
+In Zeile 6 wird nun mit der Pen plot-Anweisung ein Punkt an der Koordinate (120; 120)
+
+
+
+erzeugt. Per Canvas update wird der
+Displayinhalt aktualisiert.
+Abschließend wird in Zeile 8 noch eine
+Wartezeit von einer Sekunde eingefügt, da
+bei Programmende die Leinwand wieder
+geschlossen wird und so ohne die Wartezeit
+die Ausgabe nicht zu sehen wäre.
+
+Rechtecke und Ellipsen
+
+Zeichenbefehl Pen rectTo x2 y2 ein Rechteck bzw. mit dem Befehl Pen boxTo x2 y2
+ein ausgefülltes Rechteck gezeichnet.
+Eine Ellipse bzw. ein Kreis als deren
+Sonderform wird durch die Eckkoordinaten
+des sie umschließenden Rechtecks definiert. Möchte man also einen ausgefüllten
+Kreis (disc) mit einem Radius von 20 Pixeln
+mittig auf das Display zeichnen, so müsste
+man als linke obere Ecke des umschließenden Rechtecks die Koordinaten (100; 100)
+wählen, für die rechte untere Ecke entsprechend (140; 140), also:
+Pen move 100 100
+Pen discTo 140 140
+
+Vielecke
+
+Rechtecke werden durch Angabe der Koordinaten von zwei diagonal gegenüberliegenden Ecken beschrieben.
+
+Exemplarisch soll ein Dreieck mit den EckKoordinaten (119; 100), (100; 139) und
+(139; 139) gezeichnet werden.
+Mit dem Kommando Pen areaAdd xn yn
+wird dem Vieleck jeweils ein weiterer Eckpunkt hinzugefügt. Der letzte Eckpunkt
+wird mit dem Befehl Pen areaDraw x y
+gesetzt. Gleichzeitig schließt areaDraw das
+aktuelle Vieleck. Mit dem nächsten folgenden areaAdd-Befehl würde der erste Eckpunkt eines neuen Vielecks gesetzt.
+In startIDE sähen die entsprechenden
+Programmzeilen (ohne die Funktionen zum
+Anzeigen und Update der Leinwand) so
+aus:
+Pen areaAdd 119 100
+Pen areaAdd 100 139
+Pen areaDraw 139 139
+
+Verschieben von
+Bildschirminhalten
+
+Um ein Rechteck zu zeichnen, muss der
+Zeichenstift zunächst zur ersten Ecke
+bewegt werden. Dies geschieht mit dem
+Befehl Pen move x1 y1. Dann wird mit dem
+
+
+Möchte man den Inhalt des Displays verschieben, um z. B. fortlaufend erfasste
+Messwerte darzustellen, so kann man dies
+mit dem Befehl Canvas origin tun. Dieser
+Befehl bewegt den Leinwandinhalt so, dass
+die aktuelle Stiftposition auf den Koordinatenursprung verschoben wird. Möchte
+man also den Displayinhalt um 10 Pixel
+
+
+Computing
+
+nach rechts verschieben, so wären dazu die
+Anweisungen
+
+Analog dazu liefern CxPos und CyPos die
+aktuellen Stiftkoordinaten zurück.
+
+Pen move -10 0
+Canvas origin
+
+Mit den Schlüsselwörtern CpRed, CpGreen
+und CpBlue lassen sich die drei Farbkomponenten des Pixels an der aktuellen
+Stiftposition auslesen.
+
+auszuführen. Ausdrücklich sei hier auf die
+Verwendung negativer Koordinatenwerte
+hingewiesen; der Stift wird 10 Pixel in den
+negativen x-Bereich, also nach links,
+gesetzt. Der Canvas origin Befehl verschiebt nun den Leinwand-Inhalt und die
+Stiftposition 10 Pixel nach rechts. Dabei ist
+zu beachten, dass der freiwerdende Leinwandbereich nicht automatisch gelöscht
+wird. Dies ist bei Bedarf dadurch erreichbar, dass man den rechteckigen Bereich mit
+Pen move 0 0
+Pen eraseTo 9 239
+
+mit einem Rechteck in Hintergrundfarbe
+überschreibt.
+
+Wie wäre es, das Display als einen zweidimensionalen grafischen Datenspeicher zu
+nutzen, in dem man Daten als Farben
+codiert ablegt? Conways „Game of Life“
+ließe sich sicherlich auch programmieren…
+Um den Displayinhalt zu speichern, ist der
+Canvas log-Befehl implementiert, der den
+aktuellen Bildinhalt als PNG-Datei in das
+Logverzeichnis auf der SD-Karte schreibt.
+Über das Webinterface von startIDE
+können diese PNG-Dateien ebenso wie
+mitgeloggte Textdateien heruntergeladen
+werden.
+
+Text und Variablen
+Mit den Funktionen Text und VarToText
+werden ein angegebener Text respektive der
+Inhalt einer Variablen so formatiert, dass sie
+mit der Pen text x y-Funktion auf die Leinwand gezeichnet werden können. Damit ist
+z. B. die Achsenbeschriftung in Abb. 5
+erstellt.
+
+
+Systemfunktionen
+Mit
+der Abfragefunktion FromSys
+<Variable> <Information> lassen sich
+neben anderen, im startIDE-Handbuch
+beschriebenen Systemvariablen auch einige
+Informationen zur Grafik abfragen.
+So ist mit FromSys <Variable> CxRes bzw.
+FromSys <Variable> CyRes die X- bzw. YAuflösung des Displays abzufragen.
+
+
+
+
+Weitere Beispiele
+startIDE selbst bringt eine Grafikdemo mit,
+der z. B. die Bilder 6 und 7 entstammen.
+
+
+
+Eine Analoguhr lässt sich ebenfalls sehr
+schön darstellen (siehe Abb. 8). In Verbindung mit FromSys, womit z. B. auch das
+aktuelle Datum und die Uhrzeit komponentenweise ermittelt werden können, wären
+z. B. Zeitschaltuhren, Glockenspiele und
+Ähnliches mit einer hübschen Grafikausgabe zu versehen.
+
+Außerdem wäre denkbar, Berührungsereignisse (Antippen bzw. Loslassen) auf dem
+Touchscreen auszuwerten. Damit könnten
+dann sogar interaktive grafische Benutzeroberflächen erstellt werden.
+
+Quellen
+[1]
+
+Habermehl, Peter: startIDE für die
+Community Firmware – Programmieren direkt auf dem TXT oder TXPi. ft:pedia 1/2018, S. 102-107.
+
+[2]
+
+ft:community-Forum: startIDEThread.
+
+[3]
+
+Habermehl, Peter: startIDE
+Referenzhandbuch. Handbuch auf
+GitHub, 2018
+
+Ausblick
+Bereits jetzt ist es möglich, startIDE-Programme mit ansprechenden Grafikausgaben zu erzeugen. Zukünftig wäre es noch
+denkbar, Grafiken auch wieder importieren
+zu können, z. B. als Hintergrund, auf dem
+dann weiter gezeichnet werden kann.
+
+
+

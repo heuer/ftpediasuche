@@ -1,0 +1,556 @@
+
+Computing
+
+Computing
+
+I²C mit dem TX – Teil 8: Ultraschall-Sensor
+Dirk Fox
+Der Abstandssensor des TX misst die Distanz zu einem Objekt via Ultraschall und liefert das
+Ergebnis in cm. Der Sensor lässt sich sehr einfach aus Robo Pro ansprechen und gut im ftRaster verbauen [1]. Allerdings gibt es Ultraschall-Sensoren mit I²C-Schnittstelle, die über
+die eine oder andere Zusatzfunktion verfügen und sich zudem in größerer Zahl an den I²C-Bus
+des TX anschließen und auswerten lassen. Für autonome Roboter sind sie eine Bereicherung.
+
+Hintergrund
+Abstandssensoren sind vor allem für autonome Roboter-Modelle von großer Bedeutung: Sie ermöglichen eine räumliche
+Orientierung im Nahfeld (wenige Zentimeter bis mehrere Meter) und die Erkennung von Hindernissen und Objekten. Der
+Ultraschall-Abstandssensor von fischertechnik muss sich den Anschluss am TX
+jedoch mit anderen Sensoren teilen – und
+ist in seiner Funktionalität auf die Bestimmung des Abstands zum nächsten reflektierenden Objekt in cm-Schritten begrenzt.
+Daher lohnt ein Blick auf andere, im
+Modellbau verbreitete I²C-Ultraschallsensoren, die sich mit dem TX nutzen lassen,
+zumal über den fischertechnik-Abstandssensor – abgesehen vom Messbereich (3
+bis 400 cm) [2] – keine technischen Details
+bekannt sind: weder das Signalisierungsprotokoll2 noch die Dauer des Messvorgangs, die Stromaufnahme oder die Richtcharakteristik des Sensors.
+Von der britischen Firma Devantech Ltd.
+werden unter der Marke Robot Electronics
+
+
+Nach einer Analyse von Ad2 und ft-ninja wird
+das Messergebnis mit 115.200 Baud seriell an
+den TX übertragen. Der Sensor stammt wahrscheinlich von Maxim.
+
+zahlreiche Ultraschall-Sensoren (Sonic
+Range Finder, SRF) angeboten, die unterschiedliche Leistungsmerkmale aufweisen
+und sich preislich zwischen 15 und 100 €
+bewegen. Sie werden in Deutschland von
+verschiedenen Elektronik-Shops vertrieben, darunter Manu Systems, nodna und
+EXP. Über einen I²C-Controller, der den
+Fast Mode (400 kHz) beherrscht, verfügen
+die folgenden vier Devantech-SRF-Sensoren:
+· der kostengünstige SRF02: Messbereich
+16 cm bis 6 m, Preis ca. 15 €;
+· der SRF08 mit Lichtsensor und der
+Möglichkeit, mehrere hintereinander
+angeordnete Objekte zu erkennen:
+Messbereich 3 cm bis 6 m, Preis ca.
+35 €;
+· der weltweit kleinste Dual-Ultraschallsensor SRF103: Messbereich 6 cm bis
+6 m, Preis ca. 35 €; und
+· der Pencil Beam SRF235 mit einem
+Öffnungswinkel von nur 15°: Messbereich 10 cm bis 1,2 m, Preis ca. 100 €.
+Alle vier Sensoren arbeiten mit einer Ultraschallfrequenz von 40 kHz und einer Ver3
+
+Für den SRF10 findet sich im Download-Bereich der ft:c ein von ftDirk entwickelter
+Robo Pro-I²C-Treiber.
+
+
+
+
+sorgungsspannung von 5 V. Sie lassen sich
+ohne einen Level Shifter direkt mit dem
+EXT-2-Anschluss des TX verbinden.
+Für einen Einsatz in einem fischertechnikRoboter sind vor allem der SRF02 – wegen
+des günstigen Preises – und der SRF08
+aufgrund seiner zusätzlichen Funktionen
+interessant. Beide werden im Folgenden
+vorgestellt.
+
+Ultraschallsensor SRF02
+Der SRF02 wird mit der voreingestellten
+7-Bit-I²C-Adresse 0x70 ausgeliefert. Sie
+kann auf einen Wert zwischen 0x70 und
+0x80 geändert werden. Damit lassen sich
+bis zu 16 dieser Sensoren ohne Multiplexer
+auf demselben I²C-Bus einzeln adressieren.
+
+Der Sensor hat wie seine ‚großen Brüder’
+einen Messbereich von bis zu sechs
+Metern. Eine hohe Messgenauigkeit
+erreicht der Sensor bei einem Öffnungswinkel von bis zu 60° (Abb. 2). Für Messungen im Nahbereich unterhalb von etwa
+16 cm ist er allerdings nicht geeignet.
+Dafür liegt seine Stromaufnahme mit 4 mA
+ausgesprochen niedrig.
+Befehls-Register
+Die Entfernungsmessung wird durch einen
+Befehl im Command Register (0x00) ausgelöst. Es ist das einzige beschreibbare
+Register des Sensors. Tabelle 1 enthält eine
+Übersicht der zulässigen Kommandos, die
+über das Command Register an den Sensor
+übermittelt werden können.
+Wert
+
+Kommando
+
+0x50
+
+Ranging Mode: Result in inch
+
+0x51
+
+Ranging Mode: Result in cm
+
+0x52
+
+Ranging Mode: Result in μs
+
+0x56
+
+Sync Mode: Result in inch
+
+0x57
+
+Sync Mode: Result in cm
+
+0x58
+
+Sync Mode: Result in μs
+
+Anschlussbelegung [3]
+
+0x5C
+
+40 kHz Impulse
+
+Die I²C-Anschlussbelegung des Sensors
+zeigt Abb. 1.
+
+0x60
+
+Auto Calibration
+
+0xA0
+
+Change I²C-Address (first)
+
+0xA5
+
+Change I²C-Address (third)
+
+0xAA
+
+Change I²C-Address
+(second)
+
+GND
+SCL
+SDA
+5V
+
+Tab. 1: Kommandos
+
+(Quelle: Devantech Ltd. [3])
+
+Die Befehle 0x50, 0x51 und 0x52 lösen
+eine Entfernungsmessung aus. Die Befehle
+legen jeweils die Maßeinheit des Messergebnisses (inch, cm, μs) fest. Jedes Mal,
+wenn ein Signalton ausgesendet wird,
+leuchtet eine rote LED kurz auf. Eine
+einzelne Messung kann bis zu 0,065 s
+dauern; spätestens nach 70 ms ist der
+Sensor wieder bereit. Damit ermöglicht der
+
+
+Computing
+
+Sensor bis zu 15 Messungen pro Sekunde.
+Diese Mess-Zeitspanne sollte entweder vor
+dem Auslesen der Messwerte abgewartet
+werden [4], oder aber das Ergebnisregister
+wird so lange abgefragt, bis es nicht mehr
+den Wert 0xFF enthält.
+
+Register Inhalt (read)
+
+Die Befehle 0x56, 0x57 und 0x58 lösen
+eine Messung ohne Signalton aus – und
+erlauben so die Messung eines von einem
+anderen Sensor abgegebenen Signaltons,
+auch hier für drei unterschiedliche Maßeinheiten. Der Befehl 0x5C erzeugt den für
+eine solche kollaborative Entfernungsmessung erforderlichen 40-kHz-Signalton.
+Der Befehl 0x60 leitet eine Kalibrierung
+des Sensors ein. Dabei wird die kürzeste
+messbare Entfernung bestimmt und im
+Register Autotune Minimum abgespeichert.
+Der Wert ist stark temperaturabhängig und
+variiert nach Angaben des Herstellers zwischen 11 und 16 cm. Der Kalibrierungsbefehl wird auch automatisch beim Einschalten der Stromzufuhr vom Sensor ausgeführt und benötigt weniger als eine halbe
+Sekunde.
+Mit der Befehlsfolge 0xA0, 0xAA und
+0xA5, gefolgt von einem Wert zwischen
+0x70 und 0x80, wird dem Sensor eine neue
+I²C-Adresse zugeordnet. Bei der Umstellung der Adresse darf nur ein Sensor an
+den Bus angeschlossen sein, anderenfalls
+wird bei allen Sensoren die neue Adresse
+eingestellt. Beim Einschalten der Stromzufuhr (Anstecken des Sensors an den TX)
+wird die letzte Stelle der Adresse durch
+eine entsprechende Anzahl Blink-Signale
+der roten LED angezeigt; man muss sich
+die eingestellte Adresse also nicht unbedingt notieren.
+Daten-Register
+Der Sensor verfügt über sechs (Byte-)
+Datenregister, die die in Tabelle 2 zusammengestellten Werte enthalten:
+
+0x00
+
+Software Version
+
+0x01
+
+0x80 (unused)
+
+0x02-03
+
+Echo (high/low)
+
+0x04-05
+
+Autotune Minimum
+(high/low)
+Tab. 2: Read-Register
+
+Das von mir getestete Exemplar des
+SRF02 liefert beim Auslesen von Register
+0x00 die Software-Version 6 zurück.
+Register 0x01 ist ungenutzt und liefert den
+konstanten Wert 0x80. Der folgende 16Bit-Wert Echo (Register 0x02 und 0x03)
+enthält die zuletzt gemessene Entfernungsangabe; die Einheit ist durch das vorausgegangene Messkommando festgelegt.
+Während das Messergebnis in der Einheit
+cm – genau wie der fischertechnik-Sensor
+– eine Genauigkeit von einem Zentimeter
+liefert, lässt sich aus der Signallaufzeit in
+μs ein wesentlich genaueres Ergebnis
+berechnen. So wissen wir, dass sich der
+Schall bei 20°C und 1 bar Luftdruck in
+Luft mit einer Geschwindigkeit von etwa
+343 m/s ausbreitet. In einer μs legt er also
+eine Strecke von 0,343 mm zurück; das
+entspricht einem Abstand von 0,1715 mm.
+Sofern die Laufzeitangabe eine Genauigkeit von 1 μs aufweist, ließe sich die Entfernung D eines Gegenstands aus der
+Signallaufzeit t auf 0,2 mm genau bestimmen (1):
+D = t ∙ 343 / (2∙105) cm
+
+(1)
+
+Die Register 0x04 und 0x05 enthalten die
+kürzeste vom Sensor bestimmbare Entfernung (Autotune Minimum), die bei der letzten Kalibrierung (nach Einschalten der
+Stromzufuhr oder nach Auslösen des
+Kommandos 0x60, s.o.) ermittelt wurde.
+Die Einheit entspricht der letzten mit
+einem Messkommando gewählten Messeinheit (inch, cm, μs).
+
+
+
+
+Robo Pro-Treiber
+Ein einfacher Robo Pro-Treiber für den
+SRF02 findet sich im Download-Bereich
+der ft:c. Der Treiber misst den Abstand –
+wahlweise in cm oder in μs –, liest den
+Mindestabstand in der zuletzt verwendeten
+Einheit aus und gibt die Versionsnummer
+der Sensor-Firmware zurück.
+Das enthaltene Beispielprogramm erlaubt
+eine Vergleichsmessung von SRF02 und
+fischertechnik-Abstandssensor. In meinen
+Tests zeigte der SRF02 eine leichte Abweichung (1-2 cm), dafür war der Fokus
+besser – bei größeren Abständen streut der
+fischertechnik-Sensor deutlich stärker.
+Die Messung ohne Signalton ist im Treiber
+nicht enthalten – aber schnell implementiert, sollte jemand damit experimentieren
+wollen. Auch die Adressänderung ist nicht
+dabei: Nach jeder Änderung der DeviceAdresse müssen alle I²C-Befehle des
+Treibers angepasst werden, da man die
+Device-Adresse nicht als Parameter an die
+I²C-Kommandos übergeben kann.
+
+Im Unterschied zum SRF02 verfügt der
+Sensor zusätzlich über einen Helligkeitssensor. In einer Fahrzeugsteuerung kann
+dieser beispielsweise dazu genutzt werden,
+bei beginnender Dämmerung oder einer
+Tunnelfahrt automatisch die Fahrzeugbeleuchtung zu aktivieren.
+Zudem speichert der Sensor bis zu 17 Entfernungswerte, die aus unterschiedlichen
+Reflexionen (Echos) des Signaltons
+gewonnen werden.
+Schließlich kann die (maximale) Reichweite des Sensors begrenzt und damit die
+Dauer einer einzelnen Messung verkürzt
+werden. Auch die Empfindlichkeit des
+Sensors lässt sich einstellen, um beispielsweise in geschlossenen Räumen den
+störenden Einfluss von verzögerten Echos
+zu begrenzen.
+Der Stromverbrauch des SRF08 liegt im
+Bereitschaftsmodus (Warten auf ein Kommando) bei 3 mA und steigt während einer
+Messung auf 15 mA. Eine kurze Lastspitze
+von 3 μs mit 275 mA tritt beim Empfang
+des Messkommandos auf.
+
+Ultraschallsensor SRF08
+Der SRF08 wird mit derselben voreingestellten I²C-Adresse 0x70 wie der SRF02
+ausgeliefert. Auch beim SRF08 ist eine
+Adressänderung im Bereich zwischen 0x70
+und 0x80 möglich. Die Anschlussbelegung
+stimmt ebenfalls mit der des SRF02 überein; daher kann dasselbe Anschlusskabel
+verwendet werden (Abb. 3).
+
+(Quelle: Devantech Ltd. [5])
+
+Reichweite
+SCL 5V
+GND SDA
+
+Anschlussbelegung [5]
+
+
+Die (hardwareseitig) maximal mögliche
+Reichweite des SRF08 liegt bei etwa 6 m.
+Die tatsächliche Reichweite wird bestimmt
+durch einen internen Timer, der die
+Empfangszeit von Echos eines Signalton
+begrenzt. Dieser Timer ist beim Einschal-
+
+
+Computing
+
+ten des Sensors auf 65 ms voreingestellt;
+das entspricht einer (theoretischen) Reichweite von 11 m. Reduziert man den Wert
+dieses Timers, so verkürzt sich neben dem
+Messbereich auch die Antwortzeit des
+Sensors – damit erhöht sich die Zahl der
+pro Sekunde möglichen Messungen.
+
+Reichweite und gewünschten Messfrequenz passende Verstärkung gefunden hat.
+
+Der Timer kann über das beschreibbare
+Range Register (0x02, Tab. 3) des Sensors
+eingestellt werden, indem man den
+Default-Wert (0xFF) durch einen niedrigeren Wert t ersetzt. Die Reichweite R
+berechnet sich daraus nach der einfachen
+Formel (2):
+R = t ∙ 4,3 cm + 4,3 cm
+
+(2)
+
+In jedem Fall sollte man den Wert des
+Range Registers an die tatsächliche maximale Reichweite von 6 m anpassen – also
+auf t = 0x88. Die Dauer einer Messung
+reduziert sich damit auf etwa 36 ms, die
+Zahl der möglichen Messungen pro Sekunde steigt auf 28. Doch Vorsicht: Damit
+keine „vagabundierenden“ Echos nachfolgende Messungen verfälschen, muss für
+Messungen die Empfindlichkeit des Sensors angepasst werden.
+Empfindlichkeit
+Die Empfindlichkeit des Sensors wird
+durch eine Analogverstärkung bestimmt,
+die während eines Messvorgangs automatisch etwa alle 70 μs schrittweise erhöht
+wird: Sie beginnt bei 94 und endet bei
+1.025. In der Default-Einstellung erreicht
+der Sensor die höchste Empfindlichkeit bei
+einer Signallaufzeit, die etwa einer Objektentfernung von 39 cm entspricht.
+Die maximale Empfindlichkeit kann im
+Max Gain Register (0x01, Tab. 3) auf
+einen Wert von 0 (≡ 94) bis 31 (≡ 1.025)
+festgelegt werden. Das Verhältnis zwischen dem Register-Wert und dem Verstärkungswert ist nicht linear; für eine
+konkrete Anwendung sollte man mit unterschiedlichen Werten experimentieren, bis
+man eine zur eingestellten maximalen
+
+Register Inhalt (write)
+0x00
+
+Command Register
+
+0x01
+
+Max Gain Register
+
+0x02
+
+Range Register
+Tab. 3: Steuerungs-Register
+
+Die Einstellungen in beiden Registern
+werden jedoch im RAM gespeichert und
+nach einer Unterbrechung der Stromversorgung wieder auf die Default-Werte
+0x25 bzw. 0xFF zurückgesetzt. Die Einstellung der Werte sollte daher in einer
+Initialisierungsroutine erfolgen, die immer
+zu Programmbeginn durchlaufen wird.
+Lichtsensor
+Der SRF08 ist mit einem einfachen Lichtsensor ausgestattet, der automatisch nach
+jeder Entfernungsmessung ausgewertet
+wird. Er liefert einen Wert zwischen 2
+(absolute Dunkelheit) und 248 (0xF8,
+helles Licht) zurück. Dieser Wert lässt sich
+z. B. für einen Dämmerungsschalter verwenden, der die Beleuchtung eines Fahrzeugs aktiviert.
+Befehls-Register
+Auch beim SRF08 erfolgt die Steuerung
+der Abstandsmessvorgänge über das
+Command Register (0x00). Tabelle 4 gibt
+eine Übersicht der unterstützten Kommandos. Die Befehle zum Starten eines Messvorgangs (0x50 bis 0x52) entsprechen
+denen des SRF02; dasselbe gilt für die
+Befehlssequenz zur Umstellung der I²CAdresse.
+Wert
+
+Kommando
+
+0x50
+
+Ranging Mode: Result in inch
+
+0x51
+
+Ranging Mode: Result in cm
+
+0x52
+
+Ranging Mode: Result in μs
+
+0x53
+
+ANN Mode: Result in inch
+
+
+
+
+Wert
+
+Kommando
+
+0x54
+
+ANN Mode: Result in cm
+
+0x55
+
+ANN Mode: Result in μs
+
+0xA0
+
+Change I²C-Address (first)
+
+0xA5
+
+Change I²C-Address (third)
+
+0xAA
+
+Change I²C-Address
+(second)
+Tab. 4: Kommandos
+
+Neu beim SRF08 sind die Befehle 0x53
+bis 0x55: Sie aktivieren die Artificial
+Neural Networks Messung – getrennt für
+die Messeinheiten inch, cm und μs. Dabei
+werden das Ergebnis der ersten Messung
+im 16-Bit-Datenregister 0x02/0x03 abgelegt und alle empfangenen Echos „Kategorien“ von 2048 μs (entsprechend 352 mm)
+den Registern 0x04 bis 0x35 zugeordnet.
+Wurde in einer Entfernungskategorie ein
+Echo empfangen, wird das Register auf
+einen Wert ungleich Null gesetzt: also
+Register 0x04 bei einem Objekt im
+Abstand von 0-352 mm, Register 0x05 bei
+einem Objekt im Abstand von 353-705 mm
+usf.
+
+Register enthalten bis zu 17 vom Sensor
+empfangene Abstandswerte. Abhängig
+vom erteilten Mess-Kommando geben sie
+den Abstand in inch, in cm oder in μs an.
+Enthält ein Registerpaar den Wert 0, so
+folgen keine weiteren Werte.
+Eine Messung benötigt bis zu 65 ms, bei
+Einstellung geringerer Reichweite und
+Empfindlichkeit ggf. weniger. Diese Zeit
+muss vor Auslesen der Register abgewartet
+werden – entweder durch eine Warteschleife oder durch wiederholtes Prüfen,
+ob im Register 0x02 der Wert 0xFF steht –
+so lange ist der Messvorgang nicht
+abgeschlossen.
+Robo Pro-Treiber
+Der Robo Pro-Treiber für den SRF08
+findet sich ebenfalls im Download-Bereich
+der ft:c. Er liest fünf der möglichen 17
+Abstandswerte des Sensors nach einer
+Messung aus und speichert sie in einer
+(globalen) Liste, liefert die Versionsnummer der Firmware und den Wert des
+Helligkeitssensors.
+
+Der SRF08 verfügt über insgesamt 36
+Byte-Register (Tab. 5):
+
+Ein Initialisierungskommando stellt die
+Empfindlichkeit des Sensors ein. Der für
+sehr spezielle Anwendungen gedachte
+ANN-Modus des Sensors wird vom
+Treiber nicht unterstützt.
+
+Register Inhalt (read)
+
+Quellen
+
+0x00
+
+Software Version
+
+[1]
+
+0x01
+
+Light Sensor
+
+Dirk Fox: Radar und Sonar. 2/2011, S. 4-8.
+
+0x02-03
+
+1st Echo (high/low)
+
+[2]
+
+0x04-05
+
+2nd Echo (high/low)
+
+fischertechnik: Begleitheft Robo TX
+Explorer. Fischer-Werke, Waldachtal, 2012.
+
+…
+
+…
+
+[3]
+
+0x22-23
+
+17th Echo (high/low)
+
+Devantech: SRF02 Ultrasonic range
+finder. Technical Specification.
+
+Tab. 5: Daten-Register
+
+[4]
+
+Wie beim SRF02 enthält Register 0x00 die
+Firmware-Version; mein Sensor meldet 10
+zurück. Im Register 0x01 wird der Wert
+des Lichtsensors abgelegt. Die folgenden
+
+Devantech: SRF02 Ultrasonic range
+finder. Technical Specification I2C
+Mode.
+
+[5]
+
+Devantech: SRF08 Ultrasonic range
+finder. Technical Specification.
+
+Daten-Register
+
+
+

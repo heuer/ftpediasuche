@@ -1,0 +1,398 @@
+
+Computing
+
+Computing
+
+fischertechnik-Roboter mit Arduino (Teil 3):
+Steuerung mit dem Joystick Shield
+Arnoud van Delden
+Die fünf Roboter aus dem Buch „fischertechnik-Roboter mit Arduino“ [1] haben zahlreiche
+Leser zu weiteren Modellideen angeregt. In loser Folge stellen sie in dieser Serie einige ihrer
+Modellvarianten vor. Diesmal erhalten „Buggy“ und „Flitzer“ eine robuste und komfortable
+Funk-Fernsteuerung mit Display.
+
+Das Joystick Shield
+Im Buch „fischertechnik®-Roboter mit
+Arduino“ [1] werden verschiedene Möglichkeiten zur Steuerung der beschriebenen
+Modelle und Roboter vorgestellt. Beispielsweise werden der Anschluss eines Joysticks
+an den Arduino des Flitzer sowie eine Fernbedienung durch einen zweiten Arduino mit
+einem 433-MHz-Sendemodul beschrieben.
+
+größeren und zwei kleinen SMD-Drucktasten. Ein siebter Drucktaster befindet sich
+unter dem Joystick. Die gesammelten Signale von den Tasten sind auf einem separaten Anschluss verfügbar. Darüber hinaus
+gibt es Anschlussmöglichkeiten für ein
+LCD-Display, ein HF-Transceiver-Modul,
+eine I²C-Schnittstelle und einen Anschluss
+mit serieller Schnittstelle, an die ein Bluetooth-Modul angeschlossen werden kann.
+
+
+Vor einiger Zeit bin ich in verschiedenen
+Online-Shops auf ein Joystick Shield für
+den Arduino gestoßen (Abb. 1). Das Shield
+kann auf einen Arduino Uno aufgesteckt
+werden. Dadurch entsteht eine Steuereinheit mit einem Zwei-Achsen-Joystick, vier
+
+Shield, Sendemodul und Batteriehalter
+
+
+Hat man das Joystick Shield auf einen
+Arduino Uno aufgesteckt, kann es problemlos um ein einfaches Sendemodul wie das
+im Buch (Seite 170, [1]) beschriebene
+FS100A-Modul erweitert werden. Ein Vorteil des Shields ist, dass sofort mehrere
+Drucktaster verfügbar sind und kein spezielles Gehäuse konstruiert werden muss.
+Joystick und Taster wurden bereits auf einer
+Platine zusammengeführt. Durch die Befestigung eines 9V-Batteriehalters mit Klettverschluss unter dem hervorstehenden Teil
+der Abschirmung ist die Stromversorgung
+ebenfalls relativ einfach zu realisieren
+(Abb. 2).
+
+315-MHz-Sender/ Empfänger
+Mein Sende-Modul arbeitet mit 315 MHz
+(Achtung: kein ISM-Band!), ist jedoch bis
+auf den verwendeten Kristall identisch mit
+der (ISM-) Variante, die im Buch verwendet wird und auf 433 MHz sendet. Das entsprechende Empfängermodul ist das gleiche
+(XY-MK-5V); es ist jedoch auf die entsprechende Empfangsfrequenz eingestellt.
+
+einfachen Oszillator, der um einen Kristall
+herum aufgebaut ist und im Rhythmus der
+zu sendenden Daten ohne Fehlerkorrektur
+oder Überprüfungsprotokoll ein- und ausgeschaltet wird. Diese Modulation wird als
+„Amplitude Shift Keying“ (ASK) bezeichnet. Unterschiedliche Kanaleinstellungen
+sind nicht möglich, so dass in der Sendereichweite jeweils nur ein solcher Sender
+verwendet werden kann. Obwohl der niedrige Kaufpreis viel wettmacht, könnte dies
+natürlich eine Einschränkung sein.
+Das Steuerungssystem ist ebenfalls einfach:
+Es gibt nur eine Kommunikation vom Sender zum Empfänger und keine Rückmeldung vom Modell zur Steuereinheit. Eine
+solche Verbindung wird als „Simplex“-Verbindung bezeichnet. Ich habe ein Video
+über meine Experimente mit diesen einfachen Sende- und Empfangsmodulen zur
+Steuerung des Buggys erstellt; ihr findet es
+in meinem Youtube-Kanal (Abb. 3, [2]).
+Die Anschlussdiagramme und ArduinoSketche stehen auf meiner Webseite zum
+Herunterladen bereit [3, 4].
+
+Halbduplex-Steuerung mit
+Transceiver-Modulen
+Das Joystick Shield bietet bereits eine Anschlussoption für ein Transceiver-Modul
+nRF24L01 (Abb. 3), das abwechselnd als
+Sender oder als Empfänger betrieben werden kann.
+
+
+
+Der elektronische Aufbau dieses Senders ist
+sehr einfach. Der Sender besteht aus einem
+
+Wenn das zu steuernde fischertechnik-Modell mit demselben Modul ausgestattet ist,
+
+
+ist es relativ einfach, eine sogenannte Halbduplex-Datenverbindung über die SPIBusse der Arduinos im Joystick Shield und
+im gesteuerten Modell einzurichten. Informationen können in beide Richtungen ausgetauscht werden.
+Die Reichweite und Technik dieser Transceiver-Module sind der des oben beschriebenen einfachen Senders zweifellos überlegen. Die Transceiver-Module nRF24L01
+arbeiten im 2,4-GHz-ISM-Frequenzband
+und verwenden die GFSK-Modulation für
+die Datenübertragung. Mit einem robusten
+Datenprotokoll und einer Übertragungsrate
+von bis zu 2 Mbit/s, CRC-Prüfungen und
+125 möglichen Kanälen mit automatischem
+Frequenzsprung stehen sich Funkmodelle
+an einem Tag der offenen Tür oder bei einer
+Roboterdemonstration nicht so schnell im
+Weg wie mit den einfacheren 315/433MHz-Modulen.
+
+Computing
+
+mit einem Prototype Shield und LEDs ausgestattet. Wird ein Drucktaster aktiviert,
+kann ein Signal zurückgesendet werden, um
+die LED am Joystick Shield einzuschalten
+und die Halbduplex-Natur der Verbindung
+zu demonstrieren (Abb. 5). Ich habe den
+Buggy auch „in Aktion“ gefilmt und das Video auf meinem Youtube-Kanal bereitgestellt [5].
+Die Sketche und Anschlussdiagramme für
+das Joystick Shield und den Buggy mit den
+Transceiver-Modulen können ebenfalls von
+meiner Webseite heruntergeladen werden;
+dort finden sich auch weitere Informationen
+[6, 7].
+
+Vollduplex-Steuerung mit Bluetooth
+Als nützliche Erweiterung der Steuerungsoptionen wurde die Steuerung mit dem
+Smartphone über BLE in der 3/2020 erörtert [8]. Dafür wurde der Flitzer
+mit einem HM-10 Bluetooth BLE-Modul
+ausgestattet und konnte mit dem „virtuellen
+Joystick“ der App ArduinoBlue via Smartphone gesteuert werden. Die auf GitHub
+veröffentlichte ArduinoBlue-Bibliothek ist
+eine hervorragende Grundlage für die Verwendung im Arduino-Sketch des Modells.
+Bei der Steuerung eines komplexeren Roboters ist es außerdem sinnvoll, nützliche
+Informationen auszutauschen wie beispielsweise Fehlermeldungen oder Warnungen.
+Im Fall des „Flitzers“ aus dem Buch [1] sind
+das z. B. die zurückgelegte Strecke oder die
+Geschwindigkeit. Ein logischer nächster
+Schritt schien mir daher, das Joystick Shield
+um ein Display zur Anzeige dieser Informationen zu erweitern.
+
+
+Um die verschiedenen Drucktaster am Joystick Shield zu testen, habe ich den Buggy
+
+Ich habe dem Joystick Shield daher ein Gehäuse mit LCD-Display spendiert und es
+mit der ArduinoBlue-Bibliothek kompatibel gemacht, so dass im Prinzip die Sketche
+für den Flitzer aus der ft:pedia [8] ohne Modifikationen auch mit dem Joystick Shield
+verwendet werden können. Dies macht
+beide Steuerungsarten austauschbar und
+
+
+man kann wählen, ob man den Flitzer mit
+einem „virtuellen“ oder „physischen“ Joystick steuern möchte. In letzterem Fall verfügt das Joystick Shield zusätzlich zu den
+verschiedenen physischen Tasten über eine
+Anzeige, auf der der Status der Verbindung,
+die Werte des Joysticks und der Tasten sowie die Meldungen des Modells angezeigt
+werden.
+
+über einen Widerstand von 2 kΩ an den
+GND-Pin einer Anschlussbuchse, die einfach in das Modul eingesteckt werden kann.
+Aufgrund des resultierenden Spannungsteilers liegt das Eingangssignal des Moduls
+sauber bei 3,3 Volt und das Modul ist gegen
+ein zu hohes Eingangssignal geschützt.
+
+Zu diesem Zweck muss das Joystick Shield
+ebenfalls mit einem Bluetooth-Modul ausgestattet sein, dem durch Konfiguration die
+Rolle ‚Central‘ (im klassischen Bluetooth
+‚Master‘) zugewiesen und das automatisch
+mit dem Modul im Flitzer verbunden werden muss. Das Modul im Flitzer muss nicht
+konfiguriert werden, da es nach den Werkseinstellungen bereits standardmäßig für die
+Rolle ‚Peripheral‘ (im klassischen Bluetooth ‚Slave‘) konfiguriert ist.
+BLE-Modul konfigurieren und koppeln
+
+Das „Bluetooth-Testprogramm“ aus der
+ft:pedia 3/2020 [8] kann zur Konfiguration
+des zweiten Moduls verwendet werden.
+Wenn das ‚Peripheral‘-Modul nicht aktiv
+ist, ist eine Verknüpfung basierend auf der
+MAC-Adresse dieses Moduls möglich. Es
+ist einfacher, wenn das ‚Peripheral‘-Modul
+vom ‚Central‘-Modul während eines sogenannten ‚Discovery‘-Scans erkannt werden
+kann. Dann kann es einfach anhand des in
+diesen Scanergebnissen gefundenen Index‘
+verknüpft werden.
+
+Da wir jetzt tatsächlich in zwei Richtungen
+kommunizieren ist es sinnvoll, den RxDEingang des Moduls mit einem sogenannten Pegelumsetzer zu versehen. Zwei Widerstände reichen aus, um einen Spannungsteiler herzustellen: Man bindet das
+Signal über einen Widerstand von 1 kΩ an
+und hängt den RX-Eingang des Moduls
+
+Das ‚Central‘-Modul zur Verwendung im
+Joystick Shield kann mit AT-Befehlen konfiguriert werden. Verwendet zuerst den Befehl „AT+IMME1“, um das automatische
+Scannen und Koppeln an versehentlich in
+der Nähe befindliche Module zu unterdrücken. Dann macht man dieses Modul mit
+„AT+ROLE1“ zum Controller.
+Jetzt kann das Modul mit „AT+DISC?“ als
+‚Central‘ scannen oder „entdecken“. Es
+
+folgt eine Liste der gefundenen ‚Peripheral‘-Module, bei denen der Index des gewünschten Moduls wichtig ist. Angenommen, der Index des anhand der MACAdresse erkannten ‚Peripheral‘-Moduls ist
+2, dann kann die Verbindung mit
+„AT+CON2“ hergestellt werden.
+Schließlich muss das ‚Central‘-Modul mit
+„AT+IMME0“ wieder in den automatischen Erkennungs- und Verbindungsmodus
+versetzt werden, damit diese Verknüpfung
+(Pairing) von nun an nach einem Reset oder
+Stromausfall des Moduls oder der Übergabe
+von „AT+START“ an ‚Central‘ automatisch hergestellt wird.
+
+Computing
+
+Es gibt bereits Anschlüsse für den I²C-Bus
+und die Verbindung mit dem BluetoothModul auf dem Joystick Shield. Da es jedoch direkt unter der Leiterplatte angeschlossen wurde, habe ich diese Anschlüsse
+entfernt, damit um die Drucktaster herum
+mehr Platz vorhanden ist. Ich habe mir jedoch nicht die Mühe gemacht, die anderen
+Anschlüsse zu entfernen und eine Abdeckplatte herzustellen. Ohne eine zusätzliche
+mechanische Lösung würde dies auch die
+SMD-Schaltflächen auf der Platine unzugänglich machen.
+
+Weitere Informationen zu den verschiedenen Bluetooth-Modulen und ihrer Konfiguration findet ihr auf meiner Website und in
+einem weiteren Film [9].
+Joystick Shield mit LCD-Display und
+BLE-Modul
+Das Joystick Shield verfügt bereits über einen Anschluss für ein kleines Nokia 5110
+LC-Display. Da ich ohnehin vorhatte, ein
+kleines Plexiglasgehäuse mit Batteriefach
+zu bauen, entschied ich mich für einen Bildschirm mit zwei Zeilen und 16 Zeichen pro
+Zeile, der über den I²C-Bus gesteuert werden kann (Abb. 8, [10]).
+
+
+Das Bluetooth-Modul wurde hinter dem
+Display platziert. Mit einer Klebepistole
+fügte ich gleich einen Piezo-Buzzer hinzu.
+Da ich auch den „State“-Ausgang des Bluetooth-Moduls auslese, kann das Display den
+Status der Verbindung mit einem BT-Symbol anzeigen. Standardmäßig zeigt das Display die Joystickwerte und den Status der
+Drucktasten an.
+Zu der kleinen Befehlssprache, die ich mir
+ausgedacht habe, um die Anzeige zu beschreiben und zum Beispiel den Piezo-Buzzer piepen zu lassen, komme ich weiter unten.
+
+
+Das oben konfigurierte BLE-‚Central‘Modul darf erst nach dem Hochladen des
+Sketches [11] eingesteckt werden. Denn der
+
+
+
+Bluetooth-Anschluss am Joystick Shield
+verwendet dieselben Hardware-Serial-Pins
+(D0 und D1) wie die USB-Verbindung. Da
+zu jeder Zeit nur eine Verbindung verwendet werden kann, muss erst der Sketch geladen werden. Dies ist nur eine kleine Unannehmlichkeit während der Entwicklungsphase, die durch die Tatsache ausgeglichen
+wird, dass das Joystick Shield bereits einen
+ordentlichen Level Shifter für das Signal
+auf der Platine hat und daher das BLEModul ohne Modifikation verwendet werden kann.
+Wenn ihr das Joystick Shield mit dem LCDisplay verwendet, sind die Ausgabefunktionen des Modells auf dem Controller-Display für Funktionsmeldungen oder Warnungen hilfreich. Im Betrieb ist es sinnvoll,
+ständig aktualisierte Benachrichtigungen
+wie die zurückgelegte Strecke und die Geschwindigkeit des Fahrzeugs zu senden.
+Daher schaltet die Anzeige um, nachdem
+eine bestimmte Taste auf dem Joystick
+Shield gedrückt wurde. Die ArduinoBlueApp meldet jede Nachricht in einem separaten Popup-Fenster und ist daher schnell
+überlastet. Im Sketch habe ich dafür auf
+dem Joystick Shield die kleine SMD-Taste
+‚F‘ vorgesehen. Durch erneutes Drücken
+wechselt der Sketch zur Anzeige der Joystick- und Tastenwerte zurück.
+In der Praxis hat es sich auch als nützlich
+erwiesen, die vom Flitzer gemessene zurückgelegte Strecke zurücksetzen zu können. Dies ist mit der Taste ‚C‘ des Joystick
+Shields möglich.
+Um aus dem Sketch des Flitzers auf das LCDisplay der Fernbedienung zu schreiben,
+sind derzeit die folgenden Befehle implementiert. Die Werte in geschweiften Klammern (z. B. {Wert}) sind erforderlich. Ein
+Wert in eckigen Klammern (z. B. [Wert])
+gibt einen optionalen Wert an.
+ LCDPRINT{line},{pos};{text} – druckt
+Text an der angegebenen Position
+
+
+ BLINK[line] – lässt den Text (optional
+nur in der angegebenen Zeile) blinken
+ CLR[line] – löscht den Text (optional
+nur in der angegebenen Zeile)
+ TONE{freq}[,millisec] – lässt einen Ton
+mit Frequenz {freq} für (optional) [millisec] Millisekunden ertönen
+ NOTONE – beendet einen Ton (der ohne
+oder mit langer Dauer gestartet wurde)
+ VALUES – kehrt zur Anzeige der Joystick- und Tastenwerte auf dem Display
+zurück
+Aufgrund der Kompatibilität mit ArduinoBlue kann der Befehl sendMessage()
+im Sketch des Flitzers verwendet werden,
+um Texte auf dem Display anzuzeigen.
+Auch die Funktionen getThrottle(),
+getSteering() und getButton()
+können bei einer Steuerung mit dem Joystick Shield verwendet werden.
+Flitzer mit BLE-Modul
+In dem ft:pedia-Beitrag über BLE [8] wird
+eine intelligente Lösung vorgeschlagen, bei
+der das Bluetooth-Modul direkt in sechs benachbarten Arduino-Pins platziert wird. Darauf basieren auch die zugehörigen Konfigurations-Sketche und der oben beschriebene Level Shifter. Diese Lösung verwendet die SoftwareSerial-Bibliothek, in der
+dem Modul zwei beliebige Arduino-Pins
+wie TxD und RxD zugewiesen werden können und die serielle Hardware-Schnittstelle
+an Pin D0 und D1 des Arduino für den Anschluss an den Computer über USB frei
+bleibt. Darüber hinaus kann die Versorgungsspannung auf elegante Weise geliefert
+werden, indem die Vcc- und GND-Pins des
+Moduls auf HIGH bzw. LOW gesetzt werden.
+Sobald das Bluetooth-Modul jedoch mit
+Vollduplex verwendet wird, erweist sich die
+SoftwareSerial-Bibliothek als unbrauchbar:
+Sie nutzt denselben Hardware-Timer des
+ATmega328P wie die Servo-Bibliothek.
+
+
+Computing
+
+
+Dies führt zu unkontrollierten Bewegungen
+des Flitzer-Lenk-Servos. Aus diesem Grund
+habe ich die serielle Hardware-Schnittstelle
+an Pin D0 und D1 für den Anschluss am
+Motor Shield des Flitzers gewählt (Abb.
+12).
+Die im Joystick Shield und im Flitzer verwendeten Sketche sowie die Anschlussdiagramme können von meiner Website heruntergeladen werden [11]. Weitere Informationen habe ich auf meiner Website bereitgestellt [12]. Natürlich kann auch diese Modellvariante in einem Film in Aktion bewundert werden [13].
+
+
+
+
+
+
+Flexibel steuern
+Mit den Werkseinstellungen kann die ArduinoBlue-App auf dem Smartphone problemlos mit dem Bluetooth-Modul im Flitzer
+verbunden werden; die Sketche verwenden
+die ArduinoBlue-Funktionsbibliothek. Da
+das Joystick Shield damit kompatibel gemacht wurde, kann der Flitzer je nach angeschlossener Steuerung sowohl mit der
+ArduinoBlue-App als auch mit meiner
+„hausgemachten“ Fernbedienung gesteuert
+werden. Natürlich kann immer nur ein Steuerelement gleichzeitig aktiv sein.
+
+
+Computing
+
+Controller von fischertechnik und dem
+ftDuino zu versuchen. Damit endet auch
+dieser Artikel mit einem herausfordernden
+Ausblick.
+
+Quellen und Downloads
+[1]
+
+Dirk Fox, Thomas Püttmann: fischertechnik-Roboter mit Arduino.
+dpunkt-Verlag, 2020.
+
+[2]
+
+Arnoud van Delden: Joystick shield
+with 315MHz transmitter. Video, youtube.com.
+
+[3]
+
+Sketche und Anschlussdiagramme für
+den Buggy mit Joystick Shield,
+433/315-MHz-Sender/Empfänger
+
+[4]
+
+Arnoud van Delden: Joystick Shield
+with 315 MHz remote control. Whizzbizz.com.
+
+[5]
+
+Arnoud van Delden: Joystick shield
+and nRF24L01+ transceiver. Video,
+youtube.com.
+
+[6]
+
+Sketche und Anschlussdiagramme für
+den Buggy mit Joystick Shield und
+Transceiver-Modul nRF24L01
+
+[7]
+
+Arnoud van Delden: Joystick Shield
+with 2.4GHz remote. whizzbizz.com.
+
+[8]
+
+Dirk Fox: Smartphone-Steuerung
+über BLE. ft:pedia 3/2020, S. 93100.
+
+[9]
+
+Arnoud van Delden: Communication
+over Bluetooth. Video, youtube.com.
+
+Fazit
+Während ich an diesem Projekt bastelte
+lernte ich viel über verschiedene HF-Übertragungsmethoden und sowohl über Bluetooth „classic“ als auch über BLE. Mit dem
+LC-Display konnte ich die Ideen im abschließenden Ausblick des ft:pedia-Beitrags über Bluetooth [8] auf dem Joystick
+Shield umsetzen. Es kann die Rolle der
+ArduinoBlue-App in einer komplexen
+„Central-Peripheral“-Architektur mit mehreren Bluetooth-Geräten übernehmen. Für
+eine automatisierte Steuerung und Kommunikation zwischen Prozessen könnte ein
+nützlicher nächster Schritt darin bestehen,
+dies zwischen dem Arduino, dem TXT
+
+[10] Dirk Fox: I²C mit dem TX – Teil 9:
+LC-Displays. ft:pedia 1/2014, S. 4757.
+[11] ArduinoBlue-kompatible Sketche und
+Anschlussdiagramme für den Flitzer
+mit Joystick Shield, LC-Display und
+BLE HM-10-Modulen
+[12] Arnoud van Delden: Bluetooth remote control. whizzbizz.com
+[13] Arnoud van Delden: Building a remote control unit with Bluetooth. Video, youtube.com.
+
+

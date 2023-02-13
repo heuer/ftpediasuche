@@ -1,0 +1,229 @@
+
+
+Computing
+
+Druckmessung mit RoboTX Controller
+Andreas Gail
+Seit der Einführung von Pneumatik-Bauelementen durch Fischertechnik ist die Druckmessung
+des Betriebsdrucks in den Pufferbehältern eine bislang nur bedingt gelöste Aufgabenstellung.
+Mit der Kenntnis des Betriebsdrucks kann beispielsweise das Ein- und Ausschalten des
+Kompressors geregelt werden (Zweipunktregler) oder die Bewegungskraft der Pneumatikzylinder bei konstantem Druck reproduzierbar eingestellt werden. Für alle diese Funktionen ist
+eine einfache und verlässliche Druckmessung die gemeinsame Grundlage.
+
+Druckmesszelle und
+Messumformer
+Die Grundlage der Druckmessung ist eine
+Druckmesszelle, in der der anliegende
+Druck in ein elektrisches Signal umgewandelt wird, welches anschließend weiterverarbeitet werden kann. Der Gesamtaufbau wird als Messumformer bezeichnet.
+Hierzu wird ein fertiges Bauteil (Motorola,
+Senseon, MPX5100) verwendet (z. B.
+Conrad Electronic 183890).
+
+Systemintegration
+Um den o. g. Druckmessumformer einschließlich Spannungsversorgung
+für
+fischertechnik verwendbar zu machen, wird
+gemäß Datenblätter der Hersteller folgende
+Schaltung benötigt [1, 2]:
+
+Druckmessumformers Motorola MPX5100
+
+Motorola MPX5100
+
+Für weitere Detailinformationen zum
+Bauteil empfiehlt es sich, das zugehörige
+Datenblatt von der Internetseite des Herstellers oder Händlers zu beschaffen [2].
+
+
+Der Brückengleichrichter B1 hat die Aufgabe, die versehentliche falsche Polung der
+Versorgungsspannung an die beiden
+Anschlüsse ACDC zu verhindern. IC1
+erzeugt eine geregelte Gleichspannung von
+5V, die für eine genaue Messung erforderlich ist. Die Anschlüsse DS1-DS3 werden
+entsprechend 1-3 an den Druckmessumformer angeschlossen. Die Anschlüsse 4-6
+des Druckmessumformers werden nicht
+beschaltet. Das eigentliche elektrische
+Messsignal wird am Ausgang Mess bereitgestellt. Die Bauteile R1 und C1 sind zur
+Stabilisierung des Messsignals vorgesehen.
+Mit diesen Informationen kann nun der
+Aufbau begonnen werden.
+
+
+Computing
+
+Schaltungsaufbau
+Für den Schaltungsaufbau wird eine fertige
+Lochrasterplatine empfohlen, die nur auf
+die passende Größe zurechtgesägt werden
+muss. Die etwas eigenartige Bestückung
+dieser Platine wurde so vorgenommen, um
+den Gesamtaufbau in den roten fischertechnik-Batteriekästen zu ermöglichen.
+
+Motorola MPX5100 und Steckanschlüssen
+
+Den fertigen Aufbau zeigt Abb. 5.
+
+Druckmessumformers Motorola MPX5100
+Ansicht a) von unten, b) von oben, c) seitlich
+
+Die vorgefertigte Platine wird in folgender
+Art und Weise in das Gehäuse eingebaut, in
+welchem sich bereits der Druckmessumformer befindet (Abb. 4):
+Für den Einbau in das Gehäuse werden die
+beiden Druckluftanschlüsse des Druckmessumformers mit einer Schlüsselfeile so
+verkleinert, dass je eine M5-Mutter aufgeschraubt werden kann.
+
+eingebauter Zusatzschaltung aus Abb. 3
+
+
+
+
+Software
+Zur Verarbeitung des vom Druckmessumformer bereitgestellten Spannungssignals soll der Robo TX Controller (TX)
+verwendet werden, als Programmierumgebung die Robo Pro-Software. Zum
+Anschluss kann ein beliebiger Eingang am
+TX genutzt werden.
+Dieser Eingang muss zur analogen
+Spannungsmessung konfiguriert sein. Der
+eingestellte Sensortyp ist dabei unerheblich;
+diese Einstellung beeinflusst nur die
+bildliche Darstellung (Abb. 6).
+
+Druckmessgröße in kPa / mbar (rot markiert)
+
+Kalibrierung / Justierung
+Laut Datenblatt des Herstellers liefert der
+Druckmessumformer folgende Spannungen
+in Abhängigkeit vom angelegten Druck:
+0...100 kPa entsprechen 200...4700 mV
+Eingangs am Robo TX Controller mithilfe der
+Robo Pro-Programmierumgebung
+
+Die Software zur Messung ist recht einfach
+aufgebaut und zeigt nur den jeweiligen Istwert der Druckmessung an. Zunächst wird
+periodisch das Messsignal des Druckmessumformers erfasst (siehe Abb. 7). Dieses
+Messsignal ist in mV angegeben (1000 mV
+= 1 V) und wird in der Variablen Spannung
+gespeichert. Nachfolgend erfolgt die
+Umrechnung ausgehend vom Messsignal in
+mV in eine Druckeinheit in kPa (100 kPa =
+1000 mbar = 1 bar). Das Rechenergebnis
+wird unter der Variablen Druck_kPa ausgegeben. Schließlich wird der Druckwert in
+mbar umgerechnet und unter der Variablen
+Druck_mbar ausgegeben (rot markiert).
+
+
+Bei der Betrachtung des Druckwertes wird
+im Grunde immer der Differenzdruck der
+beiden Druckeingänge registriert. Da der
+untere Druckeingang stets offen bleibt
+beschreibt die Angabe des Druckwertes
+immer den Überdruck in Bezug auf den
+Umgebungsdruck. Beim vorliegenden
+Druckmessumformer zeigt sich bei 0 kPa
+eine Spannung von 913 mV statt der
+spezifizierten 200 mV. Die Kalibrierung
+(Überprüfung) dieses Druckwertes ergab
+demnach einen erheblichen Messfehler. Zur
+Kalibrierung eines weiteren Messpunktes
+müssten ein höherer Druck angelegt
+(möglichst am oberen Messbereichsende)
+und mit einem geeigneten Messmittel (also
+einem möglichst genauen Druckmessgerät)
+der angelegte Druck und der gemessene
+Spannungswert notiert werden. Da kein
+weiteres Druckmessgerät zur Verfügung
+stand, wurde am oberen Grenzwert die
+Herstellerspezifikation verwendet. Das
+
+
+Computing
+
+führt sicherlich zu einer recht ungenauen
+Messung, für die weiteren Erläuterungen
+sollte es jedoch ausreichend sein.
+Die zuvor bei einer Kalibrierung gewonnene Erkenntnis soll nun zur Verbesserung
+des Messergebnisses eingesetzt werden.
+Dieses wird als Justierung der Messeinrichtung bezeichnet. Stellen wir uns vor,
+wir hätten bei einer Zweipunktkalibrierung
+folgende Messpunkte erhalten:
+P [kPa]
+
+U [mV]
+
+
+
+
+4700
+
+Tab. 1: Zwei Kalibrierwertepaare
+des Druckmessumformers
+
+Jetzt kommt ein Beispiel für alle, die in der
+Schule nie etwas mit Koordinatensystemen
+und Geradengleichungen anfangen konnten: Aus den beiden Punkten gemäß Tab. 1
+kann mithilfe einer Tabellenkalkulation
+einfach die zugehörige Geradengleichung
+berechnet werden. Im klassischen Koordinatensystem wird dabei der Druck P auf der
+y-Achse aufgetragen und die Spannung U
+auf der x-Achse. Dieses ergibt folgendes
+Bild (Abb. 8):
+
+m = 0,0264 und einen y-Achsenabschnitt
+b = -24,109. Diese beiden Werte wurden
+zuvor in die RoboPro-Konfiguration gemäß
+0,0264 die Zahl 26.400m, was technisch
+recht ungebräuchlich ist). Wer mehr über
+nicht-lineare Kalibrierungen wissen will,
+der werfe einen Blick in [3].
+
+Kalibrierung vs. Eichung
+Oft werden oben genannte Tätigkeiten auch
+als Eichung bezeichnet. Fachlich gibt es
+dabei keinen Unterschied. Es ist jedoch zu
+beachten, dass eine offizielle Eichung nur
+vom Eichamt oder einer zugelassenen Einrichtung durchgeführt werden darf.
+
+Wie geht es weiter?
+Mit dem erhaltenen Druckmesswert kann
+nun kräftig experimentiert werden. Neben
+den oben bereits genannten ZweipunktDruckreglern können auch PI- und PIDRegler aufgebaut werden, oder auch nur
+einfache Messwertvisualisierungen im zeitlichen Verlauf. Mit einem geregelten Druck
+wäre auch eine Fahrzeugstabilisierung
+denkbar, die sich an die Untergrundverhältnisse anpassen könnte.
+Viel Spaß bei weiteren Experimenten!
+
+Quellen
+Die Links zu den Datenblättern sind nicht
+angegeben, da sie sich leider häufig ändern.
+
+mithilfe einer Tabellenkalkulation
+
+Werden die beiden rot markierten Punkte
+gemäß Abb. 8 mit einer linearen Trendlinie
+verbunden ergibt sich folgende Geradengleichung: y = 0,0264∙x – 24,109 (allgemeine Geradengleichung: y = m·x + b).
+Das bedeutet eine Steigung der Geraden
+
+[1]
+
+STMicroelectronics, Spannungsregler Datenblatt L78Sxx, (Doc ID
+2148 Rev 7), 2012.
+
+[2]
+
+Motorola, Inc, Druckmessumformer
+Datenblatt MPX5100 series (Doc ID
+MPX5100/D), 1997.
+
+[3]
+
+Dirk Fox: „Einmessen“ eines digitalen Messgeräts. ft:pedia 1/2013, S.
+39-48.
+
+[4]
+
+Georg Stiegler: I²C mit dem TX –
+Teil 3: Luftdruckmessung. 1/2013, S. 32-38.
+
+
+

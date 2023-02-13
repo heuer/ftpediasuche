@@ -1,0 +1,238 @@
+
+
+Modell
+
+Urlaubskasten-Modell 4: Kranwagen
+Stefan Falk
+Zum Bau dieses Kranwagens mit Lenkung, Hinterachsfederung sowie schwenk- und neigbarem
+Kranarm genügen die Bauteile des Wohnzimmer-Dienstreisen-Urlaubs-Notfallkastens aus
+ft:pedia 1/2016 [1].
+
+Überblick
+Der kleine Kranwagen (siehe Abb. 1 und
+15) bietet eine ganze Menge:
+∂
+∂
+∂
+∂
+∂
+∂
+∂
+∂
+
+Achsschenkellenkung
+Mitdrehendes Lenkrad
+Gefederte Hinterachse
+Drehbares Krangestell
+Neigbarer Kranarm
+Sperrklinke für das Kranseil
+Flaschenzug für den Kranhaken
+Kupplungshaken für Anhänger oder zur
+Einhängen des Kranhakens bei der Fahrt
+
+Das Modell ist spielerprobt und hält sicher
+auch härtesten Einsätzen im Kinderzimmer
+und draußen stand. Die folgenden Bilder
+
+und Texte sollten den Nachbau ganz einfach
+machen.
+
+Das Fahrgestell
+und von unten. Der schwenkbare Kranaufsatz wird später einfach in den zentralen
+BS15 mit Bohrung im Heckteil des Fahrzeugs eingesteckt. Fangen wir aber vorne
+an:
+Der Vorderbau
+Der vordere Teil des Fahrwerks ist aus
+Standardbauteilen schnell zusammengesteckt, wie Abb. 4 zeigt. Auf dem Verbinder 45 sitzen zunächst zwei Winkelsteine
+15° und auf diesen zwei BS5.
+
+
+
+Modell
+
+
+
+
+
+
+
+
+Vorderachse und Lenkung
+Die lenkbare Vorderachse ist aufgebaut wie
+in Abb. 5 gezeigt. Der BS7,5 der Zahnradstange 30 ist mit einem Federnocken mit
+der quer verlaufenden Spurstange verbun20
+
+den. Die senkrecht stehenden Kunststoffachsen sind auf beiden Seiten der BS15 mit
+Klemmringen gesichert (die untere Seite
+seht ihr in Abb. 3). Je ein dritter Klemmring
+ist separat abgebildet und kommt später
+aufs obere Ende der Lenkachsen. Wenn die
+
+Vorderachse fertig eingebaut ist, muss das
+so aussehen:
+
+Modell
+
+Die gefederte Hinterachse
+Die Hinterachse ist eine Starrachse [2] unter
+Verwendung einer Metallachse 110. Auf ihr
+sitzen, von innen nach außen:
+∂ ein Abstandsring 3 mm,
+∂ Rastadapter 20,
+∂ auf jeder Seite zwei Lagerhülsen 15 als
+Abstandshalter,
+∂ die Reifen 45 auf Freilaufnaben (damit
+sich Kurveninneres und -äußeres Rad in
+Kurven unterschiedlich schnell drehen
+können) und schließlich
+∂ Klemmringe zur Fixierung der Räder, da
+die ja nur auf Freilaufnaben sitzen.
+
+und Lenkung
+
+Mittelteil und Sitze
+Der mittlere Teil des Fahrzeugrahmens
+besteht ebenfalls nur aus einigen Standardteilen. Beachtet, dass die drei WS60° unterschiedlich ausgerichtet sind. Der Federnocken in der Mitte trägt den Sitz.
+
+In den Rastadaptern stecken lange Rastachsen, auf denen ein BS30 sitzt, der auf der
+einen Seite mit Klemmringen und auf der
+anderen einfach mit zwei Rastkegelzahnrädern gesichert ist. Die langen Rastachsen
+sind das federnde Element und erfüllen
+ihren Zweck recht gut.
+
+
+Der Sitz besteht aus einem Baustein 5 15∙30
+3N (der auf den Federnocken geschoben
+wird), je zwei Bausteinen 5 15∙30, Winkelsteinen 15° und BS15. Die Sitzflächen
+werden aus vier Platten 15∙30 gebildet die
+auf die BS15 als Lehne und BS5 15∙30 als
+Sitzfläche gesteckt werden.
+
+Der BS30 wird über den darauf angebrachten Verbinder 30 einfach auf das Fahrzeugmittelteil aufgeschoben, und zwar von
+unten auf den mittleren BS30 aus Abb. 7.
+Wählt am besten einen fest sitzenden Verbinder 30 dafür aus, damit die Hinterachse
+sich auch bei rauer Fahrt nicht verschieben
+kann.
+
+
+
+
+Das Heck
+
+Der Kranaufsatz
+
+Die Heckpartie ist ganz einfach aufgebaut:
+
+Nun zum drehbaren Kranarm. Abb. 10 und
+12 zeigen ihn von oben und von unten. Wie
+ihr seht steckt unten eine Rastaufnahmeachse 22,5. Die ist es, die in den mittleren
+BS15 mit Bohrung aus Abb. 9 eingesteckt
+wird. Mehr ist zur Befestigung des drehbaren Aufsatzes gar nicht nötig. Im Einzelnen wird der Kranaufsatz so gebaut:
+Drehgestell und Neigungskontrolle
+Aus folgenden Bauteilen ist der drehbare
+Aufsatz hergestellt:
+
+
+Ein paar BS30, BS15 und BS15 mit
+Bohrung bilden den größten Teil. Beachtet
+wieder die Ausrichtung der Winkelsteine
+60°. In den in der Mitte sitzenden BS15 mit
+Bohrung wird später der Kranaufsatz eingesteckt.
+All die einzelnen Baugruppen lassen sich
+leicht zum gesamten Fahrzeugrahmen laut
+
+Armneigung
+
+Die Rastaufnahmeachse, links im Bild,
+kommt auf die Unterseite des Gestells in der
+Mitte des Bildes. Das Gestell selbst besteht
+
+
+
+Modell
+
+
+einfach aus vier BS30, zwei Gelenkbausteinen und zwei Winkelsteinen 15°.
+Rechts im Bild seht ihr die Seiltrommel für
+die Neigung des Kranarms. Die Seilwinde
+wird über eine Rastachse 30 vom Z10 angetrieben. Vergesst nicht den BS5 zwischen
+den BS15 und BS15 mit Bohrung.
+
+Der Antrieb des Kranseils
+Wenige Bauteile genügen für das Kranseil
+selbst:
+
+Damit später eine angenehme Drehrichtung
+entsteht, achtet darauf, dass das Seil von
+oben an der Seiltrommel ankommt (wickelt
+es ggf. andersherum auf).
+Das Z10 wird von der Schnecke angetrieben, deren Achse, mit einem Klemmring
+gesichert, in einem Winkelstein 30° sitzt,
+der an einem BS7,5 angebracht ist. Letzterer wird einfach auf den Verbinder 15 rechts
+im Bild aufgeschoben.
+Da der Schneckenantrieb selbsthemmend
+ist, wird sich der Kranarm auch unter Last
+nicht von alleine absenken – ganz wie
+gewünscht.
+Zu guter Letzt wird der fertige Seilantrieb
+auf die beiden herausstehenden BS30 des
+Drehgestells aufgeschoben (siehe Abb. 10).
+
+
+Wieder steckt in der Seiltrommel 30 eine
+Rastachse, auf die eine Rastkurbel kommt.
+Die Mimik aus WS30°, Gelenkstein,
+WS60° und S-Kupplung 15 2 dient als
+Sperrklinke [3] für die Kurbel: Man kann
+das Kranseil immer hochkurbeln, aber
+durch die Sperrklinke ist es vor unerwünschtem Absenken geschützt, weil die
+Kurbel beim Zurückdrehen an ihr hängen
+bleibt. Will man das Seil tatsächlich herablassen, muss man die Sperrklinke lösen –
+also wegklappen.
+Damit das richtig funktioniert muss das
+Kranseil an der Seiltrommel von unten
+ankommen – ggf. das Seil also bitte andersherum aufwickeln.
+
+
+
+
+Der Kranarm
+Auch recht einfach ist der Kranarm selbst
+aufgebaut:
+
+den Zapfen des Rollenbocks zu schlingen,
+damit es gut hält.
+
+Lasset das Spielen beginnen!
+Fügt die einzelnen Baugruppen also noch
+zusammen, um das Gesamtmodell wie in
+den großen Abbildungen gezeigt fertigzustellen. Und dann krant, was das Zeugs
+hält – viel Spaß!
+
+Quellen
+
+Bemerkenswert hier ist die Befestigung der
+zwei Seile: Das Seil für die Kranneigung
+wird zwischen den beiden BS30 des Arms
+eingeklemmt, die in Abb. 14 extra deswegen aufgetrennt gezeigt sind. Das Kranseil selbst hingegen läuft über die Seilrolle
+am Ende des Kranarms, durch den Kranhakenaufbau und schließlich in Richtung
+Arm-Inneres wieder hoch. Das Ende des
+Kranseils klemmt ihr zwischen dem BS7,5
+und dem Rollenlager 15 am Ende des Arms
+ein. Es empfiehlt sich, das Seil einmal um
+
+[1]
+
+Stefan Falk: Der WohnzimmerDienstreisen-Urlaubs-Notfallkasten.
+ft:pedia 1/2016, S. 31-36.
+
+[2]
+
+Wikipedia: Starrachse.
+
+[3]
+
+Wikipedia: Sperrklinke.
+
+
+

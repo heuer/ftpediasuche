@@ -1,0 +1,208 @@
+
+Computing
+
+Computing
+
+Der (schnelle Weg zum) TX-Pi
+Peter Habermehl
+Der TX-Pi [1] als Teil des fischertechnik-Community-Controller-Universums bietet die Benutzeroberfläche der TXT Community Firmware [2] auf einem 3,2 bzw. 3,5 Zoll Touchscreen.
+
+Einleitung
+Der Raspberry Pi ist ein 2006 entwickelter
+Einplatinencomputer. Die aktuelle Version
+3 verwendet einen ARM Cortex-A-Prozessor (64 bit) mit bis zu vier Kernen und
+einem Prozessortakt von bis zu 1,4 GHz;
+der Arbeitsspeicher kann auf 1 GB ausgebaut werden. Die Betriebsspannung liegt
+bei 5V – nicht sehr weit von den 9V eines
+TXT oder Arduino entfernt – und es gibt 26
+GPIO-Pins, einen I²C-, CSI- und HDMIAusgang. Da kommen die Leistungsdaten
+des TXT nicht mit.
+
+und nutzen. Damit eignet sich das Gerät
+auch hervorragend als Controller für den
+fischertechnik 3D-Drucker, wie die 3DApp der Community Firmware zeigt. Die
+bislang recht umständliche Installationsprozedur wurde nun kürzlich durch die Bereitstellung von SD-Karten-Images durch
+die Community deutlich erleichtert.
+
+
+Hardware-Installation
+
+Das TX-Pi-Projekt der fischertechnik Community ergänzt den Raspberry Pi um einen
+3,2 bzw. 3,5 Zoll großen Touchscreen und
+– optional – ein 3D-gedrucktes, fischertechnik-kompatibles Gehäuse. Als I/O-Hardware können alle fischertechnik-Interfaces
+mit USB-Anschluss oder auch der ftDuino
+[3] verwendet werden. Auf dem TX-Pi lässt
+sich die Community Firmware installieren
+
+Durch die jüngsten Updates und die Umstellung auf das aktuelle Raspbian Stretch
+ist das TX-Pi Setup kompatibel mit allen
+Raspberry-B-Varianten: Pi 1B, Pi 2B,
+Pi 3B und Pi 3B+. Man benötigt also lediglich einen Raspberry Pi, ein passendes
+Netzteil, eine mindestens 8 GB große
+microSD-Karte und einen Touchscreen der
+Typen WaveShare 3.2“ V3, 3.2“ V4 oder
+3.5“ Typ A bzw. Typ B.
+
+
+
+Wer keine Möglichkeit hat, sich das Gehäuse per 3D-Druck zu erstellen, kann auf
+diverse im Handel erhältliche Gehäuse
+zurückgreifen, siehe z. B. Abb. 2. So müssen lediglich die RPi-Platine und das Display in das bzw. die Gehäuse verbaut
+werden, und die Hardware ist bereit.
+
+Mit einem Klick auf den „Flash“-Button
+wird das Beschreiben der SD-Karte gestartet. Es erscheint ein Fenster mit Fortschrittsanzeige – siehe Abb. 4. Nachdem die Karte
+beschrieben wurde, kann man sie direkt in
+den TX-Pi einsetzen und das Gerät starten.
+
+Software-Setup
+Eigentlich neu ist nun die Installation der
+Software. Während bislang zunächst ein
+Standard-Raspbian als Betriebssystem installiert werden musste, um dann darauf
+aufsetzend per Setup-Script die TX-Pispezifischen Installationsanpassungen vorzunehmen, liegen unter [4] nun ImageDateien bereit, die z. B. mit dem sehr
+einfach zu bedienenden Flash-Tool
+„Etcher“ [5], das für Windows, Linux und
+Mac erhältlich ist, auf eine SD-Karte
+geschrieben werden können.
+
+
+Beim Erststart des TX-Pi wird noch die
+Konfiguration vorgenommen, so dass z. B.
+das Dateisystem auf die Größe der Karte
+angepasst wird und SSH-Schlüssel für das
+Gerät erzeugt werden.
+Der TX-Pi kann nun z. B. über Ethernet
+oder WLAN mit dem Internet verbunden
+werden, so dass der App-Store der Community Firmware genutzt werden kann.
+
+
+In Abb. 3 ist das GUI von Etcher dargestellt.
+Mit nur drei Schritten wird die SD-Karte
+beschrieben: Zunächst ist die Image-Datei,
+die von GitHub heruntergeladen wurde,
+auszuwählen. Etcher verarbeitet die Datei
+sowohl gepackt (im .zip Format) als auch
+entpackt (als .img).
+
+Apps, die die I/O-Hardware des TXT ansprechen, können verständlicherweise nicht
+genutzt werden. Allerdings kann z. B. mit
+Brickly [6] ein über USB angeschlossener
+ftDuino gesteuert werden. Damit ist der
+TX-Pi kinderzimmertauglich.
+
+Im zweiten Schritt ist das Laufwerk mit der
+SD-Karte, die beschrieben werden soll,
+auszuwählen.
+Dies ist der einzig kritische Punkt, denn bei
+Auswahl des falschen Laufwerks kann man
+damit selbiges irreparabel überschreiben –
+also Obacht!
+
+
+für den ftDuino auf dem TX-Pi
+
+Mit der App „startIDE“ [7], mit der direkt
+auf dem Gerät programmiert werden kann
+
+
+Computing
+
+(Abb. 6), lassen sich fischertechnik Interfaces der Robo-Interface-Generation (das
+wären Robo IF, Robo I/O Extension, Robo
+LT Controller und mit Einschränkungen
+auch das Intelligent Interface) oder ftDuino
+und servoDuino [8] ansprechen.
+(in der Mitte)
+
+Für Selbstprogrammierer ist abschließend
+noch das TX-Pi I2C Breakout Modul interessant (siehe Abb. 7, [13]). Es ermöglicht
+auf den I2C-Bus des Raspberry zuzugreifen; gleichzeitig sind Buchsen zur Spannungsversorgung des TX-Pi über das 9Vfischertechnik-System vorgesehen. Ambitionierte Bastler können auch weitere
+GPIO-Pins des Raspberry über die integrierten Buchsenleisten nach außen führen.
+Damit stehen der Community Firmware auf
+dem Raspberry Pi ganz neue Welten offen.
+
+Referenzen
+Bild 6: Ampelsteuerung über ein Robo
+Interface mit startIDE
+
+Fortgeschrittene Benutzer können das Gerät
+analog zum TXT unter der Community
+Firmware in Python [9] oder anderen auf
+dem RPi verfügbaren Sprachen programmieren. Die Bibliotheken „touchUI“ für die
+GUI-Gestaltung [10], „ftrobopy“ [11] für
+den Zugriff auf den TXT und „libroboint“
+für den Zugriff auf die Robo Interfaces [12]
+sind bereits installiert.
+Fernzugriff auf das Gerät erhält man per ssh
+mit der Benutzernamen-/Passwortkombination „ftc:ftc“ mit den Rechten als User bzw.
+mit „pi:raspberry“ mit der Möglichkeit,
+auch administrative Vorgänge (als LinuxRoot-User) vorzunehmen.
+
+[1]
+
+Till Harbaum: TX-Pi. GitHub.
+
+[2]
+
+Till Harbaum: Auf zu neuen Ufern:
+Die Geschichte der „CommunityFirmware“ für den TXT. 4/2016, S. 59-67. Siehe auch: Die
+TXT community firmware.
+
+[3]
+
+Till Harbaum: ftDuino – Open
+Source trifft Konstruktionsbaukasten.
+ft:pedia 1/2018, S. 85-91. Siehe
+auch: ftDuino-Webseite.
+
+[4]
+
+fischertechnik-Community Firmware: SD-Karten-Images.
+
+[5]
+
+Etcher.
+
+[6]
+
+Till Harbaum: Brickly auf dem TXT:
+Grafische Programmierung à la
+Google-Blockly. ft:pedia 1/2017, S.
+92-98. Siehe auch: Brickly-Tutorial.
+
+[7]
+
+Peter Habermehl: startIDE für die
+Community Firmware – Programmieren direkt auf dem TXT oder TXPi. ft:pedia 1/2018, S. 102-107.
+Siehe auch: startIDE.
+
+
+
+[8]
+
+[9]
+
+Peter Habermehl: Servo-Ansteuerung
+mit servoShield und servoDuino. In
+dieser Ausgabe. Siehe auch: Peter
+Habermehl: servoDuino: An Arduino
+sketch to serve as an USB-I2Cbridge for PCA9685 servo shields.
+GitHub.
+Community Firmware:
+Programmieren unter Python.
+
+[10] Till Harbaum: touchUI. Github.
+
+
+[11] Torsten Stuehn: Programmierung
+des TXT unter Python. 2/2017, S. 58-62. Siehe auch:
+Torsten Stuehn: fischertechnik TXT
+Python. Github.
+[12] Humpelstilzchen: libroboint:
+fischertechnik ROBO Interface
+Library for Unix like systems.
+Github.
+[13] Peter Habermehl: TX-Pi I2C
+breakout. Thingiverse.com.
+
+

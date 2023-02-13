@@ -1,0 +1,66 @@
+
+
+Editorial
+
+Neue Welten
+Dirk Fox, Stefan Falk
+Mit den Entwicklungen der beiden vergangenen Jahre hat fischertechnik die Tür zu
+einigen neuen Welten aufgestoßen.
+Da ist zunächst der neue Kompressor – ein
+Meilenstein: Ordentlicher Druck und
+sauber verbaubar im fischertechnik-Raster.
+Die zugehörigen Kästen sind ebenfalls
+gelungen: Auch für alte Hasen sind der
+Flipper (aus dem Kasten „Robo TX
+ElectroPneumatic“) und der Traktor mit
+Greifarm (aus dem Kasten „Pneumatic 3“)
+echte Schmankerl. Letzterer ist zudem ein
+wahrer Augenschmaus, der auch äußerlich
+den Vergleich mit dem korrespondierenden
+Lego-Modell nicht scheuen muss.
+Dass die Innovationen auch außerhalb des
+Kreises eingeschworener Fans gut ankommen, zeigt nicht zuletzt die Tatsache, dass
+es in diesem Jahr gleich zwei Kästen –
+„Rolling Action“ und „Pneumatic 3“ –
+unter die 29 Nominierungen für die Auszeichnung „Top 10 Spielzeug 2012“ des
+Bundesverbands des Spielwaren-Einzelhandels geschafft haben – nur wenige
+Hersteller haben das bisher erreicht. Der
+Kasten „Pneumatic 3“ wurde außerdem als
+eines von 50 Spielzeugen für die Auszeichnung „Das goldene Schaukelpferd 2012“
+der Zeitschrift Familie&Co nominiert.
+Auch die Flexschienen, die im vergangenen Jahr mit dem „Dynamic“-Kasten auf
+den Markt kamen, waren eine echte Überraschung. Dass es weit mehr interessante
+Einsatzmöglichkeiten für sie gibt als
+Kugelbahnen beweist das Flipper-Modell.
+Und zweifellos werden wir zukünftig in
+der ft:c oder auf der Convention noch viele
+weitere Verwendungen kennen lernen, die
+
+die Grenzen der bisherigen Bauteile sprengen.
+Schließlich sind da das Robo Pro- (3.1.3)
+und das Firmware-Update (1.30) für den
+TX, die fischertechnik fast schamhaft
+heimlich als Osterei verbreitete: Am Ostersonntag, dem 08.04.2012, stand beides
+plötzlich und ohne Vorankündigung
+online. Seitdem beherrscht der TX das
+verbreitete I²C-Protokoll – und hat damit
+Zugriff auf eine große Zahl IC-gesteuerter
+Aktoren und Sensoren, wie LEDAnzeigen, Kompass-Module, Beschleunigungssensoren, Echtzeituhren oder Drucksensoren. Auch hier lassen sich die Möglichkeiten erst erahnen.
+Dabei ist fischertechnik einem entscheidenden Grundsatz treu geblieben: Jede
+dieser Innovationen gelang mit (maximal)
+einem neuen Bauteil – das sich zudem
+nahtlos ins ft-Raster fügt. Dafür verdient
+das Unternehmen Bewunderung, denn
+offenbar erzielen mit Spezialteilen gespickte „Einmalmodelle“ kurzfristig höhere Umsätze, wie die Erfolgsgeschichte von
+Lego zeigt. Aber während Lego-Spezialteile am Modell oder in Kisten verstauben,
+wird jedes unserer ft-Bauteile in seinem
+(langen) Leben an hunderten Modellen
+verbaut werden. Langfristig wird sich das
+hoffentlich auch für fischertechnik in einer
+wachsenden Fangemeinde auszahlen.
+Beste Grüße,
+Euer ft:pedia-Team
+P.S.: Am einfachsten erreicht ihr uns unter
+ftpedia@ftcommunity.de oder über die Rubrik ft:pedia im Forum der ft-Community.
+
+

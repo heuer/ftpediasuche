@@ -1,0 +1,287 @@
+
+
+Modell
+
+Kirchturmuhr mit Huygensschem Aufzug
+Matthias Dettmer
+Das Modell einer Kirchturmuhr aus dem Buch „Technikgeschichte mit fischertechnik“ [3] ist
+inzwischen wohl bekannt und mittlerweile bestimmt viele Male nachgebaut worden. Lässt man
+das Antriebsgewicht von einem „normalen“ Schreibtisch aus herunterlaufen, dann läuft die
+Uhr nur etwa eine Stunde: 4 · Umfang Drehscheibe 60 (2 · π · 30 = 188,5 mm) ergeben um die
+75,4 cm Seil. Für mein eigenes Modell wollte ich gerne längere Laufzeiten – ein paar Stunden
+vielleicht – umsetzen.
+Gewicht dort hat auch einen knapp 10 m
+hohen Schacht. Damit diese Uhr während
+des Aufziehens nicht stehenbleibt, gibt es
+einen Hebel mit einem Gewicht, der die
+Aufgabe der Seiltrommel für die Dauer des
+Aufziehens für etwa fünf Minuten übernimmt (Abb. 2).
+
+Hebel die sogenannte „Gangreserve“ angehoben, und die betreibt dann die Uhrenmechanik weiter.
+der Hebel darunter hebt das Gewicht (unten in
+der Mitte). Hemmung und Pendel sind
+im Bild hinten zu erkennen.
+
+In meiner Kirchengemeinde war ich mal
+dafür verantwortlich, jeweils am Sonntag
+nach dem Gottesdienst unsere Kirchturmuhr für die nächste Woche aufzuziehen – die
+Uhr läuft dann sieben Tage, aber das
+
+Mein erster Ansatz war es, diese Gangreserve in fischertechnik nachzubilden, um dann
+zusätzlich eine Mechanik für das Aufziehen
+selbst „anzuflanschen“. Nun habe ich recht
+wenig Freizeit, also schob ich dieses
+komplexe Vorhaben immer wieder nach
+hinten. Später.
+
+Eines ruhigen Abends bin ich dann auf die
+hochgenaue Uhr [1] von Martin Roman aka
+„remadus“ gestoßen – zuerst hatte ich von
+dessen „Pendelprüfstand“ und den dort verfolgten Ansätzen gelesen. Es gibt auch ein
+YouTube-Video der hochgenauen Uhr [2].
+Ein spezielles Detail hat mich dann elektrisiert: Die Uhr hatte einen motorisierten
+Aufzug unter Verwendung eines Endlosseils. Weiteres Nachforschen und -lesen
+ergab, dass diese Art des automatischen
+Aufzuges einen Namen hat: das ist ein
+Huygensscher Aufzug.
+
+Modell
+
+Ich glaube schon, dass es vermessen wäre,
+das einfache Kirchturmuhr-Modell mit
+dieser hochgenauen Uhr von remadus vergleichen zu wollen. In seiner Uhr steckt so
+viel Technik und ausgetüftelte Mechanik;
+hier würden Äpfel mit Birnen verglichen.
+Aber ich habe mich schon gefragt, ob man
+diese Technik nicht einfach an das einfache
+Modell adaptieren könnte.
+
+Schwarz: Antrieb Uhrwerk,
+rot: Antrieb des Aufzugs
+
+Eines der dort geschilderten technischen
+Probleme ist die Herstellung eines EndlosSeils, das man für diesen Aufzug braucht.
+Die Verbindung der beiden Seilenden darf
+nicht zu steif sein, sie sollte in etwa die
+gleiche Dicke wie das restliche Seil haben,
+und last, but not least aber so stabil sein,
+dass die Enden nicht dauernd auseinanderreißen. fischertechnik bietet ein höchst
+flexibles Endlosseil an, in der Länge variabel und unter Beachtung aller Vorgaben
+einfach zusammenzubauen: die Kette.
+Huygensschem Aufzug
+
+Der Huygenssche Aufzug kann einfach
+erklärt werden, indem ich einfach „einmal
+herum“ die Kette entlanggehe. Der beste
+
+
+Anfang dafür ist das Antriebsrad der Uhr.
+Die Drehscheibe 60 wird durch ein Zahnrad
+Z40 ersetzt, somit haben wir etwa den
+gleichen Durchmesser.
+
+Untersetzung von 50:1 hält das Aufzugsantriebsrad aber sicher fest.
+
+
+Ein Stückchen weiter unten an der Kette
+hängt das Antriebsgewicht an einer Rolle.
+Hier habe ich einfach eine der uralten Seiltrommeln verwendet, durch die die Kette
+gerade durchrutscht.
+Nach der Antriebsgewicht-Rolle wandert
+die Kette wieder nach oben, bis hin zum
+Antrieb des Aufzugs. Das ist ein Zahnrad
+Z20, das von einem Getriebemotor (einem
+Power-Motor 50:1) festgehalten wird. Ursprünglich war hier ein selbsthaltendes
+Schneckengetriebe geplant. Würde dieses
+Zahnrad nicht festgehalten, dann zöge das
+Gewicht alles, was es an Kette finden kann,
+nach unten. Der Powermotor mit seiner
+
+
+
+Auf der anderen Seite des Aufzugsantriebs
+wandert die Kette nach unten zum Ausgleichsgewicht, dort wieder durch eine
+„Seiltrommel-Rolle“ und nach oben zurück
+zum Uhrenantriebszahnrad. Wozu ist das
+Ausgleichsgewicht gut? Damit der Aufzugsantrieb nicht dauernd laufen muss,
+braucht es so etwas wie eine Seil-, pardon,
+Kettenreserve. Und würde diese Reserve
+einfach so herumhängen, dann würde sich
+
+die Kette irgendwann aufwickeln, verkanten, Stau bilden. Deswegen wird die Kette
+durch das Ausgleichsgewicht in eine definierte Richtung geführt. Wer’s nicht glaubt,
+sollte das einmal nachbauen und das Ausgleichsgewicht weglassen. Das wird nicht
+lange gut gehen; die fischertechnik-Kette
+hat genügend Eigenreibung von Gelenk zu
+Gelenk, sodass es zu Stockungen kommt –
+bei mir ist die Kette auch mal vom Aufzugsantriebszahnrad abgesprungen.
+
+Modell
+
+Anordnung an, dann bewegt sich nichts:
+Das sich aus Gewicht mal Hebelarm ergebende benötigte Drehmoment ⃗ reicht
+nicht für den Antrieb:
+ℎ
+
+=
+∙
+∙
+
+⃗=
+
+∙
+
+ℎ
+
+∙
+m
+⃗ = 0,08 kg ∙ 9,81 ∙ 0,03 m
+s2
+= 0,0235 Nm
+= 2,35 Ncm
+
+Technisch ist das klar: Wo vorher ein Seil
+das ganze Gewicht getragen hat, wird dieses
+Gewicht jetzt von zwei Kettensträngen
+getragen – die wirksame Gewichtskraft
+wird halbiert. In der Formel oben stehen
+dann nicht 0,08 kg, sondern nur 0,04 kg.
+Nächster Schritt also: Das Gewicht verdoppeln, damit die Formel wieder stimmt.
+Und es geht immer noch nicht…
+Natürlich dürfen wir die Hälfte des Ausgleichsgewichtes und die Reibungsverluste
+an und in der Kette nicht vergessen, die
+wollen auch noch „angetrieben“ werden.
+Am Ende ergibt sich ein Gesamt-Antriebsgewicht von ca. 380 g.
+
+
+Wie schwer müssen dann die Gewichte
+sein? Fangen wir diesmal bei dem Ausgleichsgewicht an. Hier wird nicht so viel
+Gewicht benötigt, wenige 10 Gramm
+reichen aus. Nach Annäherung sind das bei
+mir 30 Gramm.
+Für den Antrieb der Uhr wurde bei der Seilrolle ein Gewicht von ca. 80 Gramm
+benötigt. Fängt man damit in der neuen
+
+Nachdem damit das Prinzip erklärt ist,
+bleibt die Frage: Wie kann ich jetzt das
+Ganze automatisieren? Der erste Gedanke
+war, Lichtschranken und den TXT oder
+sogar die uralten Silberling-Relais mit Vorverstärkern zu verwenden. In der Tat kann
+man das aber auch nur mit Tastern und
+„normalen“ Relais umsetzen.
+Dazu habe ich je einen Taster in die Kettenschlaufe des Antriebsgewichtes und des
+Ausgleichsgewichtes hineingebaut. Wenn
+die Uhr ordentlich angetrieben wird, dann
+wandert das Antriebsgewicht ganz langsam
+nach unten (siehe oben, ca. 18,8 cm pro
+Viertelstunde). Gleichzeitig wandert das
+Ausgleichsgewicht mit der gleichen
+Geschwindigkeit nach oben. Der Taster
+
+
+
+über dem Ausgleichsgewicht wird betätigt,
+sobald die Rolle „oben ankommt“.
+
+Ausgleichsgewicht geht’s jetzt abwärts.
+
+
+Der Taster ist ein Ein-Schalter und schaltet
+das Relais über dessen ersten Umschalter in
+eine Selbsthaltung. Der zweite Umschalter
+des Relais schaltet den Aufzugsmotor ein.
+Das geht so einfach, weil der Motor ja
+immer nur in einer Richtung betrieben wird:
+von vorne gesehen im Uhrzeigersinn.
+Der Motor läuft also so lange, bis die Selbsthaltung getrennt wird. Das passiert, sobald
+das Antriebsgewicht oben ankommt. Der
+Taster in dieser Kettenschlaufe ist ein AusSchalter, bei Betätigung trennt er die Selbsthaltung des Relais auf, der Motor bleibt
+stehen. Hier hätte man auch eine Kurzschluss-Bremse umsetzen können, die aber
+keinen zusätzlichen Nutzen bringen würde.
+
+Beim Ausprobieren gibt es eine mögliche
+Fehlerquelle: Ist der Motor falsch herum
+gepolt, dann wird das Ausgleichsgewicht
+noch stärker gegen den Auslösetaster
+gezogen, der Motor wird mit der Zeit überlastet. Deswegen rege ich an, beim ersten
+Versuch den Tasterhebel unter dem Ausgleichsgewicht mit dem Finger zu betätigen, während dieses noch etwas weiter
+unten hängt, und den anderen Finger
+zwecks schnellem Ausschalten am zweiten
+Tasterhebel zu haben. Wandert das Ausgleichsgewicht nach oben, dann muss der
+Motor umgepolt werden. Wandert es aber
+nach unten, dann ist alles in Ordnung. Bei
+meinem Modell läuft die Uhr auch während
+des Aufziehvorganges ohne merkbare
+Stockungen weiter.
+
+
+
+Modell
+
+
+Abschließend noch ein paar Hinweise zu
+weiteren Änderungen mit Bezug auf das
+Original:
+∂ Der Antrieb des Schlagwerkes ist eine
+genaue Kopie des Uhrwerksantriebes,
+und zur Ausgestaltung des richtigen
+benötigten Gewichtes habe ich mir keine
+weiteren Gedanken gemacht. Das
+gleiche Gewicht reicht hier wie dort.
+∂ Im Uhrwerk sind alle Achsen kugelgelagert.
+∂ Weil die Achse des Pendels ein wenig
+weiter über die Tischkante ragen sollte,
+habe ich die Mechanik „umgedreht“.
+Deswegen baut das Uhrengetriebe etwas
+schmaler, und das Antriebsrad mit den
+Stiften dreht anders herum als beim
+Original.
+∂ Auch das Schlagwerk ist nahezu vollständig kugelgelagert.
+
+∂ Das ursprünglich verwendete Differenzial wurde auf Vorschlag von Thomas
+Püttmann durch ein Planetengetriebe
+ersetzt – siehe hierzu auch die Anleitung
+im Internet.
+∂ Es gibt jetzt ein richtiges „Ziffernblatt“.
+∂ Das Schlagwerk besteht aus Klangrohren (aus dem Kugelbahn-Kasten
+„M“)
+Die Entwicklung des Modells hat etwa 80
+Stunden gedauert; insgesamt ist das Ganze
+viermal „von der Grundplatte her“ aufgebaut worden. Aber die Mühe ist belohnt
+worden: Während der Modellausstellung
+auf dem MINT-Feriencamp 2018 in Karlsruhe lief die Uhr über fast sieben Stunden
+mit nur minimalen Unterbrechungen. Die
+Ungenauigkeit war kleiner als zwei
+Minuten.
+
+
+
+
+Und auch auf dem Fan-Club Tag Ende Juni
+bei fischertechnik lief die Uhr sechs Stunden durch. Zwecks Demonstration der Aufzugsfunktion hatte ich die Ketten für eine
+Betriebsdauer zwischen zwei Aufzügen auf
+etwa 35 Minuten abgelängt.
+
+Quellen
+
+1:1 wie der Uhrwerksaufzug gebaut.
+
+
+[1]
+
+Martin Romann: Entwicklung einer
+Pendeluhr von der Hemmung bis zur
+fertigen Maschine auf der ftCommunity, 2010.
+
+[2]
+
+Martin Romann: fischertechnik
+Präzisions-Pendeluhr. YouTubeVideo, 2011.
+
+[3]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt Verlag, 2015.
+
+

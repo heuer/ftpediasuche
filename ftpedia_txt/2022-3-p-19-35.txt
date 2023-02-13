@@ -1,0 +1,883 @@
+
+Elektronik
+
+Elektronik
+
+Club-Modelle Teil 1: 1979/3
+Hans-Christian Funke
+Im letzten nachzubauen und im neuen Gewand zu präsentieren. Die Auswahl der Modelle stelle ich
+chronologisch beginnend ab 1979 rückwärts – also in die Vergangenheit – vor.
+
+Einleitung
+Die Serie beginne ich mit dem Club-Modell
+aus dem Das ist schon der zweite von fischertechnik
+vorgestellte Spielautomat. Im wurde der erste Spielautomat vorgestellt –
+vollkommen anders aufgebaut und mit einer
+anderen Schaltung. Die zweite Version ist –
+finde ich – allerdings schöner, sowohl von
+der Optik als auch von der technischen
+Umsetzung (Mechanik und Elektronik),
+obwohl ähnliche Elemente und Baugruppen
+enthalten sind (Geldausgabe, Drehscheiben).
+Ein Blick auf das Titelbild der Bauanleitung
+zeigte mir schon gleich, dass mich einige
+Herausforderungen erwarten würden.
+Einige Teile wie z. B. das Schneckengetriebe gibt es nicht mehr, auch nichts
+Vergleichbares, um mit einer neueren
+Lösung zu arbeiten, wie z. B. bei Kegelzahnrädern. Für die Elektronikbausteine
+(Silberlinge) können die Elektronikmodule
+eingesetzt werden, die sämtliche erforderlichen Funktionen zur Verfügung stellen.
+
+Vorbereitungsarbeiten
+Zunächst musste ich mir selbst erst einmal
+die aktuellen Teile bei Franz Santjohanser
+[1] bestellen, der dankenswerter Weise die
+Projektreihe mit unterstützt und einen
+großen Teil der Bauteile gesponsert hat – an
+
+dieser Stelle noch einmal vielen Dank
+dafür.
+Die meisten Teile aus dem Modell sind
+identisch mit den aktuellen Teilen, häufig
+nur in anderen Farben. Daher können die
+Modelle in der Regel 1:1 nachgebaut
+werden. Es ist auch nicht mein Ziel die
+Modelle neu zu konstruieren, sondern nur
+mit neuen Teilen nachzubauen. Obwohl es
+mich beim Nachbauen an einigen Stellen in
+den Fingern gejuckt hat, die Umsetzung
+anders zu gestalten, überlasse ich das gerne
+jedem selbst, wenn er das Modell nachbaut.
+Natürlich muss an verschiedenen Stellen
+nach einer anderen Lösung für die Realisierung gesucht werden – hier ist dann der
+Designer und Konstrukteur gefragt. Bei der
+Schaltung konnte ich dann aber nicht mehr
+an mich halten und habe eine kleine Änderung eingeführt, weil die abgedruckte
+Schaltung in Zusammenspiel mit der Konstruktion von Schalter mit Schaltscheiben
+einen kleinen Fehler aufweist, der zwar
+selten auftritt, aber den Spieler um seinen
+Gewinn brächte, wenn dieser Fall eintritt
+(Erläuterung des Fehlers im nächsten
+Abschnitt).
+Damit jeder das Modell nachbauen kann,
+muss man die Originalbauanleitung zur
+Hand nehmen. Diese findet ihr beim
+fischertechnikclub NL [2]. Dort sind der
+Aufbau und die Funktionsweise des Modelles beschrieben.
+
+
+
+
+Umsetzung mit Hindernissen
+In der Originalbauanleitung gibt es ein paar
+Stellen, an denen der Baumeister auf sich
+gestellt ist, weil die Fotodokumentation
+nicht genau genug alle Details wiedergibt,
+um die Konstruktion nachzubauen. Aber
+auch die mangelnde Qualität der abgelegten
+Bauanleitung ließ ab und zu die Identifizierung der Konstruktion oder der Bauteile
+nicht zu. An diesen Stellen musste ich improvisieren und ausprobieren, wie die Konstruktion gedacht war oder welche sich an
+dieser Stelle als zweckmäßig erweist. Die
+zusätzlichen und die nicht nachvollziehbaren Bauabschnitte habe ich hier in diesem
+
+Artikel dokumentiert, sodass man zum Aufbau des Modelles beide Anleitungen heranziehen sollte.
+Bevor ich mit dem Aufbau beginnen
+konnte, musste ich mir im Vorfeld ein paar
+Gedanken zu den alten bzw. neuen Teilen
+machen. Wie ersetze ich die alten Teile und
+durch welche neuen? Ist dafür eine andere
+Konstruktion erforderlich, und welche
+Änderungen zieht dies für die Gesamtkonstruktion nach sich?
+Es gibt vier gravierende Änderungen in
+diesem Modell, die die Gesamtkonstruktion
+beeinflusst haben:
+
+
+1. Die Grundplatten,
+2. die Elektronikmodule,
+3. die alten Schleifringe und
+4. der Antrieb (es gibt keine Schneckengetriebe mehr).
+Die alten roten Grundplatten gibt es schon
+lange nicht mehr und als Alternative stehen
+
+
+
+
+
+die große Grundplatte 390×270,
+die Grundplatte 285×186,
+die kleine Grundplatte 120×60 und
+die kleine Grundplatte 120×90
+
+Elektronik
+
+aber gleichwertige Lösung zu Tage gefördert (siehe Abb. 2).
+Beim Antrieb für die Drehscheiben kam der
+gleichwertige XM-Motor (M1) zum Einsatz, der statt des Schneckengetriebes nur
+eine Achse zur Verfügung stellt. Auf diese
+Achse habe ich ein Zahnrad Z20 mit einer
+Flachnabe montiert. Mit leicht veränderter
+Position des XM-Motors konnte das Z20
+direkt in die Zähne des Z20 vom Modell
+greifen und der Antrieb war hergestellt
+(Abb. 3).
+
+zur Auswahl. Im Prinzip kann jede eingesetzt werden – die kleinen Grundplatten
+sollten vielleicht miteinander verbunden
+werden. Für dieses Modell habe ich mich
+für die Grundplatte 120×90 entschieden, die
+ich jeweils mit zwei Bauplatten 15×30
+verbunden habe.
+Die Elektronikbausteine (Silberlinge)
+wurden mit ihrer Bauform in die Konstruktion integriert und somit musste ich das
+Modell auf eigene Füße stellen. Die vier
+notwendigen Elektronikmodule befinden
+sich ebenfalls unter dem Modell, aber das
+Modell hat jetzt auf der Rückseite zusätzliche Winkelträger bekommen, auf denen
+die Konstruktion ruht.
+
+mit einem XM-Motor
+
+Im Originalmodell werden über ein weiteres Schneckengetriebe zwei Schaltscheiben
+mit Schaltern betrieben. Hierfür habe ich
+eine Lösung mit Kegelzahnrädern vorgesehen und aufgebaut.
+
+Noppen zum Betätigen des Tasters
+
+Die Schleifringe aus den em-Baukästen
+sind ebenfalls schon lange nicht mehr in der
+Teilewelt zu finden, obwohl diese ab und an
+noch in Modellen auftauchen. Wie nun
+einen Ersatz schaffen? Ein Griff in die
+Trickkiste hat eine einfache und simple,
+
+Die Elektronik und Verdrahtung ist der
+vorletzte Teil beim Aufbau des Modells –
+letzter Teil ist die Abstimmung der Elektronik und Mechanik aufeinander. So hatte ich
+mich erst später mit der Schaltung beschäftigt. Nach ihrer Betrachtung und Analyse
+stellte ich fest, dass die Taster an den
+Schaltscheiben nur eine Ersatzkonstruktion
+darstellten. Der Designer der Schaltung
+hätte eigentlich noch ein Mono-Flop benötigt, um die Funktion des Spielautomaten
+optimal nachzubilden. Sowohl aus Platzgründen, denn die Reihe der Silberlinge war
+
+
+
+etwas aufgewertet durch Retuschierung
+
+schon voll, und andererseits aus Kostengründen wurde dieses Mono-Flop (MF)
+durch eine Schaltscheibenkonstruktion
+ersetzt.
+Die Schaltscheiben an Taster T4 überbrücken das Relais für den Motor M1, der
+die Drehscheiben antreibt. Wird das Relais
+für den Motor M1 abgeschaltet, läuft der
+Motor durch die Überbrückung von Taster
+T4 weiter und soll für genügend Zeit
+sorgen, damit die linke Drehscheibe durch
+den Motor M3 gestoppt werden kann.
+Darüber hinaus soll über den Taster T1, der
+durch die zweite Schaltscheibe betätigt
+wird, ein Signal an das Mono-Flop für die
+Geldausgabe gegeben werden, wenn die
+Gewinnbedingung erfüllt ist (zwei gerade
+Zahlen nebeneinander = Taster T2 und T3
+durchgeschaltet).
+Aber genau hier liegt der anfangs erwähnte
+kleine Fehler: Wird das Relais für den
+
+Motor M1 abgeschaltet und die Schaltscheibe, die Taster T4 bedient, befindet sich
+gerade an der Stelle, an der eben keine
+Überbrückung des Relais erfolgt (Lücke bei
+den Schaltscheiben), drehen sich auch die
+Schaltscheiben nicht mehr und der Taster
+T1 kann keinen Gewinn signalisieren, selbst
+wenn die Gewinnbedingung erfüllt ist.
+Besser wäre ein weiteres Zeitintervall eines
+MF, das die Laufzeit der Drehscheiben
+steuert (Relais von Motor M1). Das Zeitintervall müsste dann enden, wenn der
+Motor M2 die linke Drehscheibe sicher
+gestoppt hat und damit das Ergebnis der
+Drehscheiben feststeht.
+Ein großer Vorteil der Elektronikmodule
+ist, dass die meisten Funktionen doppelt
+vorhanden sind. So stehen auf einem MonoFlop-Modul 70005 zwei unabhängige MFs
+zu Verfügung. Es werden laut Schaltplan
+drei MFs benötigt; somit bleibt ein MF frei.
+
+Auf Basis der vorangegangenen Überlegung habe ich die Schaltung dahingehend
+verändert, dass das vierte MF das benötigte
+Zeitintervall für die Ansteuerung des Relais
+für den Motor M1 erzeugt. Durch diese
+Änderung wird der Taster T4 nicht mehr
+benötigt. Der Taster T1 soll mit Hilfe der
+Schaltscheiben einen Impuls an das MF für
+die Geldausgabe senden, sofern die beiden
+Taster T2 und T3 durchgeschaltet sind.
+Und damit sind wir beim nächsten Problem,
+denn die Elektronikmodule bestehen aus
+digitalen Komponenten und reagieren auf
+kleinste Impulse (im Bereich von Nanosekunden). Wenn zum Beispiel die Drehscheibe rechts bereits steht und eine gerade
+Zahl zeigt (Taster T3 geschlossen), dann
+kann es beim weiteren Rotieren der Schaltscheibe und der linken Drehscheibe passie-
+
+Elektronik
+
+ren, dass auch noch Taster T1 und T2 kurzzeitig zugleich geschlossen werden und
+damit ein Impuls an das MF für die Geldausgabe gesendet wird, was eine unberechtigte Geldausgabe zur Folge hätte. Aus
+diesem Grund sollte der Impuls für die
+Geldausgabe von der Schaltung generiert
+werden, wenn die Drehscheiben zum Stillstand gekommen sind. Dies bedeutet wiederum, dass der Taster T1 ebenfalls nicht
+benötigt wird und damit die gesamte
+Konstruktion mit dem Antrieb der Schaltscheiben hinfällig ist.
+In Abbildung 5 ist die neue Schaltung mit
+den beschriebenen Änderungen zu sehen.
+Es fällt sofort auf, dass die Anzahl der
+Elektronikmodule, die für die Realisierung
+der Schaltung erforderlich sind, deutlich
+geringer ist (nur halb so viele wie Silberlinge).
+
+
+
+Aufbau des Spielautomaten
+Jetzt kommen wir zum eigentlichen Aufbau
+des Spielautomaten. Hier kann im Wesentlichen der originalen Bauanleitung gefolgt
+werden und ich gebe hier weitere Hinweise
+und Tipps für den Aufbau.
+Bei diesem Modell werden drei Sonderteile
+benötigt, die nicht zum fischertechnikSortiment gehören. Diese werden für eine
+so genannte Rutschkupplung benötigt sowie
+für die Drehscheiben, die aus Pappe oder
+Sperrholz angefertigt werden können. Die
+Teile erhält man im nächsten Baumarkt:
+1. Zwei Dichtungsringe ½“ (Zoll). Es kann
+auch ein Gummiring mit mindestens
+4 mm Innendurchmesser verwendet
+werden. Er sollte aber flach sein wie in
+4 mm und einem Außendurchmesser von
+15 mm (Abb. 7).
+2. Vier Unterlegscheiben Ø 4 mm (innen).
+Diese gibt es im fischertechnik-Einzelteilesortiment (161261), aber die beiden
+U-Scheiben für die Gummiringe sollten
+gleich passend im Baumarkt besorgt
+werden. Die U-Scheiben brauchen einen
+Innendurchmesser von 4 mm, wie in
+
+
+
+3. Zwei Scheiben mit Ø 100 mm aus Pappe
+oder Sperrholz. Für den Spielautomaten
+
+
+habe ich einfach die Pappe der Rückseite
+eines Schreibblocks verwendet, die
+Pappe mit einem Blatt Papier beklebt
+und auf der Rückseite – also auf die
+Pappe – mit Hilfe eines Zirkels (Topf
+oder Glas geht auch) einen Kreis von
+100 mm gezeichnet und ausgeschnitten
+(Abb. 8). Bei Sperrholz verwendet man
+am besten 4 mm-Sperrholz aus Pappel,
+das man ebenfalls im Baumarkt
+bekommt. Auf das Papier kommen zum
+Schluss noch die Zahlen, entweder die
+Selbstklebenden aus dem fischertechnikEinzelteilsortiment (2 × 143389) oder
+aus der Vorlage bei den Downloads zu
+diesem Beitrag [3].
+
+100 mm aus Pappe von einem Schreibblock
+
+Bei den Scheiben empfehle ich, mit einer
+Metallachse in die Mitte der Pappscheiben
+eine Mulde zu drücken (siehe rechte
+Scheibe in Abb. 8). Bei Verwendung von
+Sperrholz muss mit einem Bohrer 4,0 mm
+genau in der Mitte gebohrt werden (nicht
+durchbohren).
+Beim Aufbau des Spielautomaten lässt man
+die 170-mm-Achse etwa 1 mm aus der
+Flachnabe herausgucken, sodass die
+Bohrung oder die Mulde genau auf der
+überstehenden Achse ihren Platz findet. So
+sind die Scheiben genau in der Mitte
+platziert und eiern nicht beim Drehen.
+
+
+Elektronik
+
+Tipp: Die genaue Mitte des Kreises liegt
+dort, wo das Einstichloch der Zirkelspitze
+ist. Ist das nicht mehr zu sehen, kann man
+zwei Messungen an einer Stelle der Scheiben mit der größten Abmessung durchführen – idealerweise im Winkel von 90°
+Grad zueinander – und die jeweilige Mitte
+markieren. Der Schnittpunkt der beiden
+Markierungen ist der gesuchte Mittelpunkt
+der Scheibe. Wer möchte und es noch aus
+der Schulzeit weiß, kann die Mitte auch
+konstruktiv mit Zirkel und Lineal ermitteln.
+
+Die Unterkonstruktion
+In Abb. 9 ist die Konstruktion mit den
+Grundplatten 120×90 mm und den Halterungen für die Elektronikmodulen zu sehen.
+Das Modell kann mit zwei Schaltnetzteilen
+(505287 mit Anschluss über ein Versorgungsmodul 70003) betrieben werden,
+mit einem Schaltnetzteil mit Power-Regler
+
+
+
+
+
+
+(139778), mit einem alten Trafo mot.4
+zusammen mit einem Elektronikmodul
+70003 oder mit zwei Akku-Packs. Die
+Motorenversorgung sollte von der Versorgung der Elektronik getrennt werden.
+
+Die Verteilerplatten eignen sich gut, um
+einen Übergabepunkt für die Versorgungsspannungen zu haben, besonders bei
+Anschluss über einen Trafo oder PowerRegler. Akku-Packs können gut rechts und
+links der Elektronikmodule platziert
+werden.
+Aufsatz für die Stopper-Motoren
+Bei dieser Baugruppe habe ich nur zwei
+Federnocken als Stopper für die Zahnstangen hinzugefügt. Meine Zahnstangen
+waren so leichtgängig, dass sich diese im
+Betrieb verschoben haben. Die Federnocken verhindern die Verschiebung.
+
+Schaltnetzteile ohne Power-Regler verwendet
+werden.
+
+
+Elektronik
+
+
+(links)
+
+von der Seite
+
+Endtaster für die Stopper-Motoren
+
+Schleifringe
+
+
+
+
+
+Aufsatz für die Drehscheiben
+Dies ist der interessanteste Teil: Hier
+werden die Rutschkupplungen zusammen
+mit den Drehscheiben und der Ersatzkonstruktion für die Schleifringe aufgebaut.
+Der Ersatzschleifring
+In Abb. 17 ist die Ersatzkonstruktion für
+den Schleifring mit Taster zu sehen, in
+Betätigung der Taster
+
+gerade Zahl angezeigt wird
+U-Scheibe vor der Klemmbuchse 5 mm (rechts)
+
+
+
+Elektronik
+
+Scheibe, gefolgt von der Feder. Jetzt folgt
+das Zahnrad Z20 mit Flachnabe, wobei die
+Nabe vom Zahnrad zugedreht wird, bis der
+Widerstand größer wird, sodass die Nabe
+nicht aufgeht, aber die Stange sich in der
+Nabe noch drehen lässt. Jetzt kommen der
+Dichtungsring und eine abschließende
+Flachnabe, die richtig zugedreht wird
+(Abb. 21 und 22). Der richtige Abstand für
+die Feder muss im laufenden Betrieb der
+Drehscheiben ermittelt werden.
+Rutschkupplung
+
+Die Rutschkupplung
+Die Federn aus dem Einzelteilesortiment
+(132875) sind scheinbar heute aus einem
+anderen Material oder haben eine andere
+Federkonstante. Bei meinen ersten Tests
+habe ich gemerkt, dass eine Feder vollkommen ausreichend ist; sie braucht auch
+kaum zusammengedrückt zu werden.
+
+Aufsatz für den Antrieb
+Den Abschluss bildet der Antrieb mit dem
+XM-Motor (M1) für die Drehscheiben.
+Zwischen den Z40 befindet sich eine
+Klemmbuchse 10, die die Zahnräder auf
+den richtigen Abstand bringt.
+Hinweis: Die Bauteile für die Schaltscheibenkonstruktion aus der Original-Bauanleitung werden nicht benötigt und entfallen.
+
+Auf der Rückseite kommt auf die Achse 170
+zuerst eine Klemmbuchse, dann die U-
+
+
+
+
+Ketten von oben
+
+Geldausgabeeinheit (1)
+
+Ketten von unten
+
+Geldausgabeeinheit (2)
+
+Die Geldausgabe
+Dieser Teil hat noch einmal ein paar
+Schwierigkeiten mit sich gebracht, weil die
+Konstruktion an einigen Stellen nicht gut
+dokumentiert bzw. das Bildmaterial von
+unzureichender Qualität war.
+Die alte kleine rote Grundplatte lässt sich
+hervorragend durch die neue Grundplatte
+120×60 (35129) ersetzen. Damit diese beim
+Einbau in den Spielautomaten auf die
+Winkelträger passt bzw. sich auf der gleichen Anbauhöhe befindet, muss noch ein
+Baustein 7,5 mit einer Federnocke auf der
+Unterseite der Grundplatte montiert
+werden.
+
+
+Bauanleitung für das Club-Modell (1)
+
+
+Elektronik
+
+In Abb. 29 sieht man den kleinen Versatz
+ganz deutlich, mit dem der Baustein angebracht werden muss. In Abb. 28 sind die
+Bausteine 5 oben solche mit zwei Zapfen.
+Rutsche für das „Falschgeld“ und wie der
+LED-Baustein für die Lichtschranke vom
+Münzeinwurf montiert wird.
+
+Bauanleitung für das Club-Modell (2)
+
+Leuchtstein für den Geldeinwurf (1)
+
+Leuchtstein für den Geldeinwurf (2)
+
+Die Geldausgabe war damals noch für DM
+und Pfennige entworfen worden. Beim Test
+hat sich gezeigt, dass die Geldaufnahme für
+1 €, 20 Cent, 10 Cent und 5 Cent funktioniert; 2 € und 50 Cent passen nicht,
+während 1 und 2 Cent-Münzen durchfallen
+und über die seitliche Rutsche ausgeworfen
+werden – die Münzprüfung hat also noch
+Verbesserungsbedarf. Am besten geht es
+mit 1 €-Stücken, aber die 20 Cent sind fast
+genauso groß und dick, somit habe ich mich
+für 20 Cent als Zahlungsmittel für ein Spiel
+entschieden. Wer 1 € einwirft, bekommt
+trotzdem nur ein Spiel.
+Problematisch ist das erste Geldstück im
+Sammelbehälter. Liegt erst einmal ein
+Geldstück drin, gibt es keine Probleme
+mehr. Aber 5 von 10 der ersten Geldstücke
+sind nicht liegen geblieben sondern durchgefallen. Auch bei der Ausgabe kam es hin
+
+
+
+
+und wieder dazu, dass sich etwas verklemmt hat, meistens beim Test mit
+10 Cent-Stücken: Die sind einfach zu klein
+für die Konstruktion. In den Sammelbehälter passen 36 20-Cent-Münzen, bevor
+diese in den Auffangbehälter rutschen.
+Justierung
+Gut wäre, jede Baugruppe schon vor der
+Verkabelung separat auf Funktion zu prüfen
+(Stopper-Motoren, Drehscheiben, Geldausgabe) und zu justieren.
+Bei der Justierung der Endstellungen für die
+Stopper-Motoren muss darauf geachtet
+werden, dass die Stange auf der Zahnschiene nicht gegen die Drehscheibe fährt.
+Bei der Justierung der Endstellungen für
+den Motor der Geldausgabe füllt man am
+besten ein paar Geldstücke in den Sammelbehälter ein. Vorne sollte die Spitze der
+Zahnstange zu sehen sein und hinten muss
+deutlich das Nachrutschen des Geldstapels
+zu hören sein, bevor der Motor stoppt.
+
+
+Am schwierigsten war die Justierung der
+Rutschkupplung. Hier muss sich die zweite
+Drehscheibe auch noch drehen können,
+wenn die rechte, erste Drehscheibe gestoppt
+wurde. Nach einigen Versuchen und immer
+kleinen Korrekturen an der Einstellung des
+Federdrucks war die richtige Einstellung
+gefunden.
+Ein kleiner Zusatz
+Als kleinen Zusatz habe ich mir erlaubt,
+einen Rahmen (Abb. 34 und 35) hinzuzufügen, in dem die beiden ausschlaggebenden Gewinnzahlen zu sehen sind.
+
+
+Der Anzeigerahmen wird zwischen den
+Drehscheiben mit einer Federnocke befestigt, die auf den Abb. 18 und 25 zu sehen ist.
+
+
+Elektronik
+
+Elektronikmodule hat hier Abhilfe geschaffen.
+
+
+Sonstige Anmerkungen
+Der Fototransistor reagiert nicht auf LEDLicht; hier muss eine herkömmliche Lampe
+verwendet werden. Bitte darauf achten, dass
+„+“ an der rot markierten Stelle angeschlossen wird.
+In der Praxis hat sich gezeigt, dass ein
+Multifunktionsmodul mit Schwellenwertregler nicht benötigt wird; das kann somit
+entfallen. Bei Verwendung eines Schaltnetzteils mit Power-Regler ist der Einsatz
+eines Versorgungsmoduls nicht erforderlich, nur bei Verwendung des Trafos mot.4
+wird das Versorgungsmodul benötigt. Mit
+diesen Änderungen kann das Modell mit
+nur vier Elektronikmodulen aufgebaut
+werden.
+Der Aufbau auf den Zahnstangen für die
+Geldausgabe hat das gleiche Problem wie
+bei den Stopper-Motoren: Er lässt sich sehr
+leicht verschieben und sitzt dann an der
+falschen Position. Hier habe ich den Baustein 5 durch einen Baustein 5 15×30
+(35049) ersetzt. Das hat dahingehend
+Abhilfe geschaffen, dass der Aufbau nun
+nicht mehr so leicht seine Position verlässt
+(diese Änderung ist nicht in der Teileliste
+enthalten).
+Bei Benutzung nur eines Schaltnetzteils mit
+einem Power-Regler ist es im Betrieb des
+Spielautomaten vorgekommen, dass die
+Mono-Flops geschaltet haben, wenn die
+Stopper-Motoren in Betrieb gegangen sind.
+Motoren erzeugen Abrissfunken und Spannungsspitzen, die die digitale Elektronik
+beeinflussen und auch über den PowerRegler weitergeleitet werden. Ein Kondensator mit 2200 µF z. B. aus dem Versorgungsmodul zwischen „+“ und „-“ nahe der
+
+Der letzte Hinweis gilt den Drehscheiben.
+Diese zentriert zu montieren und zusätzlich
+so, dass die Zahlen genau nebeneinanderstehen, war schon eine äußerst herausfordernde Aufgabe. Hier kann man kleine
+Korrekturen bei der Höhe der Zahlen
+vornehmen z. B. mit Hilfe einer Klemmbuchse 10 (oder Ähnlichem) auf der Achse
+des Stoppers.
+Teileliste
+In diesem Beitrag habe ich verschiedene
+Möglichkeiten und Alternativen vorgestellt.
+Die Teileliste (Tab. 1) enthält diejenigen
+Teile, die für den Aufbau des Spielautomaten in Abb. 36 benötigt werden.
+Bauteil
+
+Stk. Art.-Nr.
+
+Grundplatte 120×90
+
+3 182622
+
+Baustein 5
+
+39 37237
+
+Federnocken
+
+8 31982
+
+Baustein 7,5
+
+42 37468
+
+Baustein 15 sw
+
+25 32881
+
+Baustein 15 mit
+Bohrung sw
+
+4 32321
+
+Winkelstein 10×15×15
+
+20 38423
+
+Winkelstein 30°
+
+14 31011
+
+Achse 60
+
+2 31032
+
+Klemmbuchse 5
+
+6 37679
+
+Nabenmutter
+
+12 31058
+
+Zahnrad Z20 sw
+
+4 36334
+
+Verbindungsstück 15
+
+8 31060
+
+Verbindungsstück 45
+
+2 31330
+
+Radachse
+
+12 36586
+
+Kassette
+
+1 130961
+
+Bauplatte 15×15
+
+4 38246
+
+Bauplatte 15×45
+
+3 38242
+
+Bauplatte 15×90
+
+2 38245
+
+
+
+
+Bauteil
+
+Stk. Art.-Nr.
+
+Bauteil
+
+Stk. Art.-Nr.
+
+Bauplatte 30×90
+
+3 38251
+
+Bauplatte 30×45
+
+2 38248
+
+U-Scheibe 4 mm
+
+2 161261
+
+Zahlen zum Aufkleben
+
+2 143389
+
+Druckfeder 0,3×5×45
+
+2 132875
+
+Flachstein 30
+
+2 31013
+
+Dichtungsring ½“
+
+2 -
+
+2 -
+
+Motor XS
+
+3 137096
+
+U-Scheibe im
+Dichtungsring
+
+Zahnstangengetriebe
+sw
+
+3 37272
+
+Scheiben mit Zahlen
+100 mm
+
+2 -
+
+Zahnstange 30
+
+1 37457
+
+Motor XM
+
+1 135485
+
+Verteilerplatine
+
+4 185518
+
+Mini-Taster
+
+8 37783
+
+Fototransistor
+
+1 36134
+
+Zahnstange 60
+
+3 37351
+
+Leuchtstein sw
+
+1 38216
+
+Gehäuse Verteilerplatte
+
+4 152059
+
+Mono-Flop-Modul
+
+2 70005
+
+Störlichtkappe 6 mm
+
+1 36532
+
+Stecker grün
+
+49 181583
+
+Linsenstecklampe
+
+1 37875
+
+Power Regler
+
+1 139778
+
+Relaismodul
+
+2 70018
+
+Kabelhalter
+
+20 35969
+
+Stecker rot
+
+45 181584
+
+Grundplatte 120×60
+
+1 35129
+
+Baustein 5 mit 2 Zapfen
+
+4 37238
+
+Kufe
+
+6 31602
+
+Baustein 15 mit 2 Zapf.
+sw
+
+11 32882
+
+Die Anzahl der Kabelhalter kann als Richtwert genommen werden, weil jeder die
+Kabel nach seiner Art verlegen wird.
+
+Baustein 30 sw
+
+64 32879
+
+Der Spielautomat ist fertig
+
+Baustein 15 mit
+Bohrung rt
+
+2 32064
+
+Drehscheibe 60
+
+4 31019
+
+Winkelstein 60°
+
+14 31010
+
+Letzter Schritt ist die Feinabstimmung für
+die Zeitintervalle von Stopper rechts (Motor
+M3), Stopper links (Motor M2) und Antrieb
+(Motor M1) aufeinander.
+
+Achse 170
+
+3 35696
+
+Klemmbuchse 10
+
+2 31023
+
+Flachnabenzange
+
+12 35031
+
+Zahnrad Z40 sw
+
+2 31022
+
+Verbindungsstück 30
+
+1 31061
+
+Riegelscheibe
+
+5 36334
+
+Rollenlager
+
+4 37636
+
+Kettenglieder (2 × 67)
+
+144 36248
+
+Bauplatte 15×30
+
+10 38241
+
+Bauplatte 15×60
+
+1 38464
+
+
+Schaltnetzteil
+1 505287
+Tab. 1: Teileliste für den Spielautomaten in
+Abbildung 36
+
+Jetzt bleibt mir nur noch viel Spaß beim
+Bauen und Tüfteln zu wünschen.
+
+Quellen
+[1]
+
+santjohanser: Spielen. Lernen.
+Technik. Autorisierter fischertechnikFachhändler.
+
+[2]
+
+fischertechnik: Club-Modell 3/79
+Bauanleitung »Spielautomat«. Auf
+docs.fischertechnikclub.nl.
+
+
+Elektronik
+
+
+[3]
+
+Hans-Christian Funke: Beschriftung
+Drehscheiben 100mm. Zum
+Herunterladen und Ausdrucken im
+Downloadbereich dieser Ausgabe der
+ft:pedia.
+
+
+

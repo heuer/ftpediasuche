@@ -1,0 +1,216 @@
+
+
+Modell
+
+fischertechnik-3D-Drucker 2.0
+Dirk Wölffel
+Im Frühjahr 2016 erschien der fischertechnik-Bausatz eines 3D-Druckers (536624). Mit
+diesem Selbstbausatz erhält der Käufer einen einfachen Zugang zu der zukunftsweisenden und
+faszinierenden Technologie des 3D-Drucks. Nachdem der Preis sich etwas gesenkt hatte, habe
+ich mir auch einen fischertechnik-3D-Drucker zugelegt und damit meine ersten Erfahrungen
+mit dem Aufbau des Druckers und dem 3D-Druck gesammelt. Nach zwei Jahren intensiven
+Einsatzes wurden verschiedene Schwächen im Aufbau und der Druckqualität sichtbar. Deshalb
+beschloss ich, den 3D-Drucker mit verschiedenen Modifikationen neu zu konstruieren.
+
+Das Original
+
+∂ der 3D Printer lässt sich schwer reinigen
+
+Der fischertechnik 3D Printer (Abb. 1) hat
+einen einfachen Aufbau aus Alu-Profilen
+als Grundgestell. Die Schrittmotoren sind
+ausreichend dimensioniert.
+
+∂ das Einstellen der Z-Achse über die
+Schnecke ist problematisch
+∂ die Abtriebshülse für den Schrittmotor
+(160549) der X-Achse ist nicht langlebig
+∂ Die Achsen haben keine Kugellager
+∂ zum Kühlen beim 3D-Druck fehlt ein
+Lüfter
+∂ das Druckbett ist nicht ausreichend eben
+∂ eine Beleuchtung fehlt
+
+
+Die Neukonstruktion
+Grundlage für die Neukonstruktion (Abb. 2)
+waren, die von mir festgestellten baulichen
+Schwächen des 3D Printers [1]:
+∂ keine kompakte Bauform (mehrteiliger
+Aufbau)
+∂ die Höhe des Druckbetts lässt sich nicht
+einstellen
+∂ die Halterung für die Filamentrolle ist
+nicht geeignet
+
+
+
+Modell
+
+Die Abmaße des neuen 3D-Druckers 2.0
+(Abb. 2) umfassen eine Länge von 30 cm
+und 32 cm Breite bei einer Höhe von 34 cm.
+Er wiegt stattliche 8,2 kg.
+Als Grundlage für den Neubau des 3D
+Printers habe ich die Grundform des
+Ultimaker2Go (Abb. 3) gewählt. Der Aufbau schien mir kompakt genug, um meine
+Pläne umzusetzen.
+
+
+Als nächstes brauchte ich eine passende
+Stromversorgung und eine Temperaturregelung für das beheizte Druckbett. Der
+fischertechnik-3D-Controller besitzt leider
+keine Möglichkeit, ein beheiztes Druckbett
+anzuschließen. Bei der Wahl des Netzteils
+habe ich mich für das geregelte Schaltnetzteil Surom 12V 30A DC 360W (Abb. 5)
+entschieden.
+
+
+
+Die Bauform sollte nicht geschlossen sein,
+damit man die Funktionsweise auch noch
+erkennt. Hinzu kam der Wunsch, ein
+beheiztes Druckbett zu verbauen, damit sich
+das Warping (verziehen der Bauteile) beim
+Druck minimiert.
+
+Für die Temperaturregelung fiel die Wahl
+auf den Inkbird-Temperaturregler mit 40 A
+SSR Relais und Temperatursensor (Abb. 6).
+Der obere Wert (rot) zeigt die IstTemperatur an, der untere Wert (grün) die
+Soll-Temperatur. Somit hatte ich alle
+relevanten Bauteile zusammen, um mit dem
+Aufbau zu beginnen. Ich nahm das
+Druckbett als Vorlage und baute mit AluProfilen den Grundaufbau darum herum.
+Damit standen die äußeren Abmaße des 3DDruckers fest.
+
+Die Elektronik
+Um die Abmaße des Modelles zu finden
+habe ich nach einem beheizten Druckbett
+gesucht. Fündig geworden bin ich beim
+Anycubic-Ultrabase-220x220mm (Abb. 4)
+auf Ebay. Das Druckbett ist beschichtet und
+zeigt eine starke Haftung beim Erwärmen.
+Es lässt sich mit 12 Volt oder 24 Volt
+betreiben.
+
+
+
+
+
+Relais und Temperatursensor
+
+Für das Einschalten des Netzteils habe ich
+seitlich einen 220 Volt Wippschalter und
+eine Kaltgerätebuchse für das Netzkabel
+verbaut (Abb. 9).
+
+Den unteren Bereich des Grundkörpers
+habe ich dann so konstruiert, dass die elektronischen Komponenten dort untergebracht werden konnten (Abb. 7). Hier sieht
+man die Anordnung der verschiedenen
+elektronischen Komponenten. Das SSR
+(Solid State Relais) vorne rechts steuert das
+Netzteil über den Inkbird-Temperaturregler.
+
+Als Beleuchtung sind zwei 12 Volt LEDStreifen links und rechts verbaut (Abb. 10).
+
+
+In der Front des 3D-Druckers habe ich alle
+relevanten Bauteile übersichtlich verbaut.
+Zu sehen ist die PID-Temperaturregung
+(mittig), der Ein-/Aus-Schalter (rechts) für
+das Heizbett und das Licht (Abb. 8).
+
+
+Das Druckbett
+Der Vorteil des beheizten Druckbett ist,
+dass das Verziehen der 3D-Druck-Bauteile
+minimiert werden kann. Außerdem lässt
+sich die Höhe des Druckbetts besser verstellen (Abb. 11).
+
+
+
+Modell
+
+
+Die Höhenverstellung
+Auf der nächsten Abbildung ist die Höhenverstellung der Z-Achse zu erkennen (Abb.
+12). Diese lässt sich sehr leicht und genau
+über ein Zahnrad Z15 verstellen.
+
+
+
+Die Achsen
+Für die Ansteuerung der Z-Achse habe ich
+mich für eine Aufhängung über Schnecken
+an vier Seiten entschieden, weil es sehr
+stabil ist und die Höhe sich besser verstellen
+lässt (Abb. 13).
+Die X-Achse und die Y-Achse werden, wie
+beim Original, über Schnecken angetrieben;
+das ist in der seitlichen Vorder- (Abb. 14)
+und Rückansicht sehr gut zu erkennen
+(Abb. 15).
+
+
+Die Filament Zuführung
+Der Extruder ist auf der Rückseite des 3D Druckers hochkant verbaut (Abb. 16). Der
+Druckkopf wird über die beiden X- und YAchsen geführt. Vorne am Druckkopf ist
+der Endschalter der Y-Achse zu erkennen
+(Abb. 17).
+
+
+
+
+Aufnahme für die Filamentrolle und der
+Antrieb der Z-Achse (Abb. 18).
+Die Software
+Der 3D-Drucker kann über das Programm
+3D Print Control von fischertechnik (Abb.
+19) angesteuert werden. Alternativ gelingt
+das auch über die Community Firmware mit
+der 3D Print App von Till Harbaum
+(Abb. 20) [2].
+
+
+
+
+
+Der Controller
+Die Hardwareansteuerung erfolgt über den
+fischertechnik-3D-Controller. Der 3D-Controller wurde beim 3D-Printer auf der Rückseite verbaut. Gut zu erkennen ist auch die
+
+
+
+Modell
+
+[2]
+
+Fazit
+Durch die Summe der verschiedenen baulichen Veränderungen konnte der 3D-Druck
+erheblich verbessert werden (Abb. 21, siehe
+auch das Video).
+
+Till Harbaum: Frische Apps für den
+TXT Controller. ft:pedia 4/2016, S.
+68-71.
+
+Dazu gehört auch der Komfort in der Bedienbarkeit des 3D-Druckers. Es zeigt sich,
+dass man mehr aus den fischertechnik Originalmodellen herausholen kann, wenn man
+Schwachstellen analysiert und nach alternativen Lösungen und Ansätzen sucht.
+
+Referenzen
+[1]
+
+Dirk Wölffel: Neue ft-Teile selbst
+gemacht – 3D-Druck (5): Qualitätsverbesserung des ft-Druckers.
+ft:pedia 1/2017, S. 72-76.
+
+
+
+
+
+
+
+
+

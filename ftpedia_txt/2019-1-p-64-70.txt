@@ -1,0 +1,497 @@
+
+
+Computing
+
+I²C mit dem TX(T) – Teil 17: Luftdruck- und
+Temperatursensor (2)
+Dirk Fox
+Für den Bosch-Drucksensor BMP085 hat Georg Stiegler in Ausgabe 1/2013 [1] einen Treiber
+für ROBO Pro vorgestellt. Inzwischen hat der Sensor mehrere Nachfolger bekommen – den
+BMP180 und, Ende 2013, den BMP280. Letzterer erreicht eine sehr hohe Genauigkeit und
+liefert außerdem einen äußerst präzisen Temperaturwert.
+
+Der Luftdruck
+Auf der Erdoberfläche lastet das Gewicht
+der Erdatmosphäre. Das sind auf Meereshöhe etwa 105 N/m², pro Quadratmeter also
+beachtliche 10 Tonnen – etwa der Druck
+einer 10 m hohen Wassersäule. Gemessen
+wird der Druck in Hektopascal (hPa); auf
+Meereshöhe liegt er im Mittel (bei angenommenen 15°C) bei 1013,25 hPa. Bewegt
+man sich in höheren Gefilden, sinkt der
+Luftdruck alle acht Höhenmeter um etwa
+1‰ (ca. 1 hPa). Damit lässt sich aus einer
+Messung der Druckdifferenz die Höhe über
+dem Meeresspiegel berechnen. Der
+Druckabfall erfolgt mit zunehmender Höhe
+jedoch nicht linear sondern hat einen
+exponentiellen Verlauf, da die erdnahen
+Luftschichten eine größere Dichte haben
+und daher schwerer sind (Abb. 1).
+
+BY-SA 3.0) [2]
+
+
+Er hängt auch von der Temperatur ab: je
+geringer die Temperatur, desto größer die
+Dichte und desto höher der Luftdruck. Will
+man die Höhe also einigermaßen präzise
+bestimmen, benötigt man neben einem
+Drucksensor eine möglichst genaue Temperaturmessung.
+Die Höhe in m lässt sich dann nach der
+internationalen Höhenformel (Gl. 1) wie
+folgt bestimmen [2]:
+ℎ=
+
+288,15 K
+∙ 1−
+K
+0,0065 m
+
+≈ 44330,77 ∙ 1 −
+
+(ℎ)
+
+(ℎ)
+
+,
+
+,
+
+m
+
+Gl. 1: Internationale Höhenformel
+
+Dabei gibt p(h) den gerade gemessenen
+und, als Bezugswert, p0 den auf Meereshöhe
+„reduzierten“ Luftdruck an: den Druck, der
+am Messpunkt theoretisch herrschte, wenn
+der Punkt auf Meereshöhe läge. Dieser
+Wert hängt jedoch von der Wetterlage ab
+und kann zwischen ca. 950 hPa und deutlich
+über 1040 hPa schwanken. Für eine exakte
+Höhenberechnung muss der aktuelle Wert
+von p0 daher bekannt sein.
+Einige Städte veröffentlichen diesen wetterabhängigen Bezugswert p0 mit ihren meteorologischen Daten im Internet. Alterna-
+
+
+Computing
+
+tiv kann man mit der Höhenformel, aufgelöst nach p0 (siehe Gl. 2), diese „Reduktion“
+für einen Punkt bekannter Höhe berechnen
+und anschließend zur Bestimmung von
+weiteren Höhenangaben in gleicher Wetterlage verwenden.
+=
+
+ℎ
+
+,
+
+hPa
+
+1 − 44330,77
+Gl. 2: Höhenformel, aufgelöst nach p0
+
+Aus der Differenz dieses reduzierten Referenzwertes zum mittleren Luftdruck auf
+Meereshöhe von 1013,25 hPa lassen sich
+Aussagen über die Wetterlage ableiten:
+höherer Luftdruck = schönes, niedrigerer =
+schlechtes Wetter.
+
+Der BMP280
+
+Neben dem I²C- unterstützt der Sensor auch
+das SPI-Protokoll (nutzbar am ftDuino oder
+Arduino). Adafruit bietet seit 2015 ein
+BMP280-Breakout-Board, erhältlich z. B.
+bei Exp-Tech für rund 11 €.
+Technische Daten
+· Spannung: 3-5 V
+· Strom: 2,7 µA bis max. 1,12 mA (Peak)
+· Messbereich: 300-1100 hPa (entspricht
+ca. -500 bis 9.000 m Höhe)
+· Messrate: 23 bis 181 Hz
+· Genauigkeit Druck: ± 1 m (0,12 hPa)
+· Genauigkeit Temperatur: 0,01°C
+· I²C-Bus: bis 3,4 MHz (high speed mode)
+· I²C-Adresse: 0x77 (fest)
+Anschluss an TXT und TX
+Wie das Adafruit-Board mit dem Vorgänger-Sensor BMP180 unterstützt das I²CBoard des BMP280 sowohl 3,3 V- als auch
+5 V-Logik, sodass der Sensor sowohl am
+TX als auch am TXT ohne Level-Shifter
+genutzt werden kann.
+
+
+Mit dem BMP280 hat Bosch Ende 2013
+einen Luftdrucksensor mit einer sehr hohen
+Messgenauigkeit von etwa 0,12 hPa (oder
+Bar; entsprechend etwa einem Höhenmeter)
+herausgebracht. Eine wichtige Rolle spielt
+dabei der integrierte Temperatursensor, der
+einen Temperaturausgleich vornimmt. Er
+hat mit 0,0003°C eine deutlich höhere Auflösung und ist mit +/-0,01°C viel genauer
+als der in ft:pedia 4/2015 vorgestellte Temperatursensor MCP9808 von Microchip [3].
+
+EXT 2-Anschluss des TX Controllers
+
+Beim TX wird der I²C-Sensor mit dem Erweiterungsport EXT 2 verbunden (Abb. 3).
+Die Konfektionierung eines Anschlusskabels mit Pfostenbuchse ist in [4] beschrieben; man kann aber auch einfach vier
+
+
+
+
+Female-Jumper für die Verbindung benutzen. Verbunden werden die Anschlüsse
+VIN-+5V (Spannungsversorgung), GNDGND, SCL-SCK (Takt) und SDA-SDI
+(Daten).
+Beim TXT erfolgt der Anschluss an der
+EXT-Buchse, die mit 3,3 V-Logik arbeitet.
+Der Stromverbrauch des Sensors ist mit
+maximal 1,12 mA so niedrig, dass für die
+Stromversorgung des Sensors (VIN) der
+3V3-PIN des EXT-Ausgangs genutzt
+werden kann (Abb. 4).
+
+EXT-Anschluss des TXT Controllers
+
+Der integrierte Spannungswandler des Adafruit-Boards liefert am Pin ‚3Vo‘ (Abb. 2)
+eine 3,3 V-Ausgangsspannung, über die
+weitere Sensoren mit bis zu 100 mA versorgt werden können. Am TXT muss man
+dafür allerdings eine leistungsstärkere
+3,3 V-Stromversorgung als den 3V3-Pin
+des EXT-Ausgangs nutzen, z. B. über einen
+Step-Down-Wandler [5, 6].
+Mit dem ftDuino lässt sich der Sensor wie
+beim TX ebenfalls über eine 6-polige I²CPfostenbuchse verbinden: Die Pin-Belegung des 5 V-Logik-Anschlusses entspricht
+der des TX.
+Arbeitsweise
+Nach dem Einschalten befindet sich der
+Sensor im Sleep Mode. Wählt man den
+Normal Mode, nimmt der Sensor in regelmäßigen Zeitabständen Messungen vor. Im
+Forced Mode wird eine sofortige Messung
+
+
+
+Für die reine Messung des Luftdrucks genügt
+eine Auflösung des Temperatursensors von
+maximal 17 bit (= zweifache Überabtastung), da
+
+initiiert; anschließend kehrt der Sensor in
+den Sleep Mode zurück (Abb. 5).
+Die Messauflösung kann – für den Temperatur- und den Luftdrucksensor separat –
+zwischen 16 und 20 bit gewählt werden.
+Durch die dadurch mögliche Rauschfilterung steigt die Auflösung des Drucksensors
+dabei von 2,62 Pa (mBar) auf 0,16 Pa, die
+des Temperatursensors von 0,005°C auf
+0,0003°C.3
+
+
+Mit der Erhöhung der Messauflösung steigt
+allerdings der Aufwand für die A/D-Wandlung und damit auch der Stromverbrauch
+des Sensors. Der erreicht jedoch selbst bei
+der höchsten Auflösung maximal 1,12 mA
+– für TX und TXT eine vernachlässigbare
+Größe.
+Die Dauer einer Luftdruckmessung (inklusive A/D-Wandlung) liegt bei maximaler
+Auflösung bei etwa 43 ms. Bei kontinuierlicher Messung (Normal Mode) sind –
+abhängig von der Auflösung – 26 bis 166
+Messungen pro Sekunde möglich.
+Kurzfristige Druckänderungen durch Ereignisse (Öffnen einer Tür o. ä.) können mit
+einem IIR-Filter (infinite impulse response
+filter) durch Mittelwertbildung ausgeblendet werden.
+Register
+Der BMP280 verfügt über 11 Byte-Register, über die der Sensor konfiguriert und
+gesteuert wird (Tabelle 1).
+diese nur indirekt zu einer Verbesserung der
+Druckmessung beiträgt.
+
+Register
+
+Bedeutung
+
+0xD0
+
+ID Register
+
+0xE0
+
+Reset Register
+
+0xF3
+
+Status Register
+
+0xF4
+
+Control Register
+
+0xF5
+
+Config Register
+
+0xF7-F9
+
+Pressure Measurement
+
+0xFA-FC
+
+Temperature
+Measurement
+
+Tab. 1: Register des BMP280
+
+ID Register
+Das ID Register (0xD0) ist mit dem Wert
+0x58 vorbelegt. Darüber lässt sich erkennen, ob der (richtige) Sensor am Bus angeschlossen und unter der (festen) I²C-Adresse 0x77 erreichbar ist.
+Reset Register
+Über das Reset Register (0xE0) kann der
+Sensor durch Schreiben des Reset-Befehls
+0xB6 zurückgesetzt werden. Dabei wird ein
+Power On Reset ausgelöst und der Sensor
+begibt sich in den sleep-Mode.
+
+Computing
+
+· Bit 0, 1: Arbeitsmodus Sleep Mode (00),
+Forced Mode (01 oder 10), Normal
+Mode (11).
+· Bit 2-4: Oversampling Pressure, 0: keine Druckmessung, 1-5: 2i-1-fache Überabtastung.
+· Bit 5-7: Oversampling Temperature, 0:
+keine Temperaturmessung, 1-5: 2i-1fache Überabtastung.
+Die geringste Auflösung der Temperaturund der Druckmessung liegt bei 16 bit. Jede
+weitere Überabtastungsstufe erhöht die
+Auflösung um ein weiteres Bit (bis 20 bit).
+Config Register
+Im Config Register (0xF5) werden der IIRFilter und die Standby-Zeit im Normal
+Mode, also die Wartezeit zwischen zwei
+Messungen konfiguriert:
+· Bit 0: 0: 4-fach SPI-Interface, 1: 3-fach
+SPI-Interface.
+· Bit 2-4: IIR-Filter (0: aus, 1: zwei, 2:
+fünf, 3: 11 und 4: 22 Messungen).
+· Bit 5-7: Standby-Zeit (000: 0,5 ms, 001:
+62,5 ms, 010: 125 ms, …, 111: 4 sec).
+
+Status Register
+
+Pressure Measurement
+
+Aus dem Status Register (0xF3) kann der
+aktuelle Zustand des Sensors ausgelesen
+werden. Dabei werden zwei Stati angezeigt:
+
+Die Rohdaten der Luftdruckmessung stehen
+in den Registern 0xF7-0xF9. Die Bits 4-7
+von Register 0xF9 werden abhängig von der
+gewählten Messauflösung ausgewertet.
+
+· Bit 0: Update – Daten aus dem nichtflüchtigen Speicher werden kopiert
+(beim Power On Reset und vor jeder
+A/D-Wandlung).
+· Bit 3: Messung – Daten werden gerade
+umgewandelt.
+Mit dem Auslesen der Messwerte sollte gewartet werden, bis das Status-Register den
+Wert 0 angenommen hat.
+Control Register
+Das Control Register (0xF4) enthält Einstellungen der Sensoren zur Messung:
+
+Temperature Measurement
+Die Rohdaten der Temperaturmessung stehen in den Registern 0xFA-0xFC. Die Auswertung des letzten Bytes hängt von der im
+Control Register gewählten Messauflösung
+ab.
+Die Rohdaten von Druck- und Temperaturmessung müssen anschließend noch in die
+tatsächlichen Werte in den Einheiten hPa
+und °C umgerechnet werden. Das erfolgt
+nach zwei im Datenblatt vorgegebenen
+Algorithmen [7], die zur Beschleunigung
+
+
+
+der je Messung erforderlichen Umrechnungen mit Zwischenwerten rechnen.
+Daneben gibt es 12 Kalibrierungs-Register,
+die werkseitig eingestellte Kalibrierungswerte für die Temperatur- (3) und die Luftdruckbestimmung (9) enthalten. Diese 12
+Register müssen ausgelesen werden, um aus
+den Rohwerten des Sensors die Temperatur
+(in °C) und den Luftdruck (in hPa) zu
+berechnen. Damit das Auslesen nicht von
+Messungen unterbrochen wird, empfiehlt es
+sich, diese Werte gleich zu Beginn des
+Programms im Sleep-Mode auszulesen und
+in globalen Variablen zu speichern.
+
+ROBO Pro-Treiber
+Der ROBO Pro-Treiber für den BMP280
+findet sich in meiner I²C-Treibersammlung
+(fischertechnik-AG.de) [8]. Er umfasst die
+folgenden Befehle:
+· BMP280_GetDeviceID: Liest über die
+I²C-Adresse 0x77 die Device ID des
+Sensors aus Register 0xD0 aus.
+· BMP280_Reset: Löst einen Power On
+Reset des Sensors aus. Danach befindet
+sich der Sensor im Sleep-Mode.
+· BMP280_GetStatus: Liefert den Status
+des Sensors zurück (> 0: laufende Messung/Konvertierung oder Initialisierung)
+· BMP280_Init: Bei der Initialisierung
+des Sensors wird zunächst ein Reset
+durchgeführt und anschließend über das
+Auslesen der Device ID geprüft, ob der
+Sensor korrekt angeschlossen ist. Zur
+späteren Umrechnung der Roh-Werte
+werden die werkseitig voreingestellten
+Kalibrierungswerte des Sensors ausgelesen und in Variablen gespeichert.
+Schließlich werden der Normal Mode
+mit einer Messfrequenz von 125 ms
+aktiviert, für Temperatur und Druck die
+maximale 20-bit-Auflösung (0,0003°C
+und 0,16 mBar) gewählt und eine Mittelwertbildung über die jeweils fünf letzten
+Messwerte eingestellt.
+
+
+· BMP280_SetTempPrec: Einstellung der
+Auflösung der Temperaturmessung (0:
+deaktiviert, 1-5: 16-20 bit).
+· BMP280_SetPressPrec: Einstellung der
+Auflösung der Luftdruckmessung (0:
+deaktiviert, 1-5: 16-20 bit).
+· BMP280_SetMode: Einstellung der
+Betriebsart (0: Sleep Mode, 1/2: Forced
+Mode, 3: Normal Mode)
+· BMP280_SetDuration: Einstellung der
+Messfrequenz im Normal Mode (Pause
+zwischen zwei Messungen) von 0
+(0,5 ms) bis 7 (4 s).
+· BMP280_SetFilter: Einstellung des
+IIR-Filters (Zahl der Messungen für die
+Mittelwertbildung) von 0 (eine) bis 4 (22
+Messungen).
+· BMP280_GetTemp: Messung der Temperatur (Auslesen des Rohwerts und
+Umrechnung in °C)
+· BMP280_GetPressure: Messung des
+Luftdrucks (Auslesen des Rohwerts und
+Umrechnung in hPa)
+· BMP280_GetAltitude: Berechnung der
+Höhe in m aus dem Luftdruck-Rohwert
+und dem Referenz-Luftdruck auf Meereshöhe.
+· BMP280_GetSeaPressure:
+Bestimmung des Luftdruck-Referenzwerts auf
+Meereshöhe aus der bekannten Höhe des
+Messpunkts.
+Die Umrechnung der Temperatur- und
+Druckluft-Rohdaten in °C und hPa erfordert
+zahlreiche Fließkommaoperationen und ist
+relativ aufwändig. Daher funktionieren die
+Berechnungen beim TX auch nur im
+Online-Mode (offline werden selbst bei
+kleinster Messfrequenz keine Ergebnisse
+angezeigt); der TXT hingegen ist leistungsfähig genug, um die Berechnungen auch
+offline durchzuführen.
+
+
+Computing
+
+Beispielanwendungen
+Wozu aber benötigt man die Höhe? Hilfreich ist sie auf jeden Fall, wenn man überall auf der Welt das perfekte Frühstücksei
+zubereiten möchte: So ändert sich mit der
+Höhe auch die Siedetemperatur des Wassers. Sie sinkt etwa alle 300 Höhenmeter um
+1°C und liegt damit auf der Zugspitze nur
+noch bei ca. 90°C. Das Ei muss also
+entsprechend länger kochen.4
+Außerdem kann der Sensor in einem Aufzug oder Parkhaus das aktuelle Stockwerk
+feststellen. Und aus der Höhenänderung
+kann die Geschwindigkeit einer Seilbahn
+oder eines Fallschirmsprungs berechnet
+werden – bei letzterem lässt sich sogar die
+Auslösung des Notschirms von dem Luftdrucksensor steuern (zugegeben, vielleicht
+nicht die wichtigste Anwendung für einen
+fischertechniker).
+Es gibt aber noch weitere sinnvolle Anwendungen. So lässt sich mit dem Sensor eine
+Wetterstation programmieren: Die Kenntnis des Luftdrucks (bzw. dessen Veränderung) erlaubt Wettervorhersagen. Und der
+Vergleichswert p0 liefert auch Informationen über Windrichtung und Windgeschwindigkeit, da die Luft aus Bereichen
+höheren Drucks zu solchen mit niedrigerem
+Druck strömt.
+Kann man die Höhe seines Aufenthaltsorts
+mit einem Luftdrucksensor zutreffend feststellen, lässt sich auch die Genauigkeit der
+GPS-Positionsbestimmung verbessern: eine
+der drei Koordinaten ist damit gegeben [9].
+Eine weitere mögliche Anwendung für unseren hoch präzisen Sensor ist die Verbesserung der Entfernungsmessung. Wie wir
+wissen, hängt die Geschwindigkeit des
+Schalls von der Temperatur der Luft ab
+([10], Abb. 6).
+
+
+Auf dem Mount Everest würde bei einer Siedetemperatur von etwa 70°C das Eiweiß übrigens
+
+
+Sie kann nach der folgenden Formel aus T
+(in °C) berechnet werden [11]:
+= 331,5 · 1 + ( / 273,15)
+Gl. 3: Berechnung der Schallgeschwindigkeit
+in Luft (in Abhängigkeit von Temperatur T)
+
+So können wir bei der Abstandsberechnung
+nach einer Ultraschall-Messung die der
+Berechnung zu Grunde liegende Schallgeschwindigkeit an die aktuelle Lufttemperatur anpassen.
+
+Referenzen
+[1]
+
+Georg Stiegler: I²C mit dem TX –
+Teil 3: Luftdruckmessung. 1/2013, S. 32-38.
+
+[2]
+
+Wikipedia: Barometrische
+Höhenformel.
+
+[3]
+
+Dirk Fox: I²C mit dem TX(T) – Teil
+12: Temperatursensor. 4/2015, S. 44-48.
+
+[4]
+
+Dirk Fox: I²C mit dem TX – Teil 7:
+Real Time Clock (RTC). 4/2013, S. 28-34.
+
+[5]
+
+Dirk Fox: I²C mit dem TX(T) – Teil
+13: Farbsensor. ft:pedia 1/2016, S.
+79-89.
+
+nicht einmal stocken – da müsste man es schon
+in einem Dampfdrucktopf garen.
+
+
+
+[6]
+
+Dirk Fox: I²C mit dem TX(T) – Teil
+16: Servo-Driver. ft:pedia 2/2017, S.
+41-47.
+
+[9]
+
+[7]
+
+Bosch Sensortec: BMP280 Digital
+Pressure Sensor, Data Sheet, v1.19,
+08.01.2018.
+
+[10] Dirk Fox: I²C mit dem TX – Teil 8:
+Ultraschall-Sensor. ft:pedia 4/2013,
+S. 35-40.
+
+[8]
+
+Dirk Fox: I²C-Treiber für RoboPro.
+fischertechnik-AG.de.
+
+[11] Eberhard Sengpiel: Berechnen der
+Schallgeschwindigkeit in Luft und die
+wirksame Temperatur.
+
+
+Dirk Fox: I²C mit dem TX – Teil 6:
+GPS-Sensor. ft:pedia 3/2013, S. 5462.
+
+

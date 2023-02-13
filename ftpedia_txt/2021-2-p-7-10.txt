@@ -1,0 +1,103 @@
+
+Modell
+
+Modell
+
+Kreuztisch
+Fabian Haas
+Die Makrofotografie wird immer beliebter! Wer kleine Dinge groß herausbringen will, braucht
+ein kleines, aber feines Fotostudio. In der Makrofotografie spielt aber auch die Ausrichtung
+der Objekte eine große Rolle. Wenn die Kamera fest auf einem Stativ steht, muss das Objekt
+möglichst genau in (wenigstens) zwei Achsen bewegt werden. Dazu habe ich einen sogenannten
+Kreuztisch entwickelt, der genau dies erlaubt.
+Die Idee eines Kreuztisches stammt natürlich nicht von mir. Ich kenne ihn aus der
+Mikroskopie, wo ein Objektträger vor dem
+sehr fest und vibrationsfrei installierten Objektiv in zwei Achsen hin und her bewegt
+wird, um genau an die Stelle zu kommen,
+die man betrachten möchte. Werkzeugmaschinen verschieben oft das Werkstück,
+
+wodurch die großen und schweren Werkzeugteile (Bohrer, Fräsen) fest am Rahmen
+befestig werden können. Allerdings: Bei fischertechnik habe ich so einen Kreuztisch
+noch nie gesehen, und ich dachte es wäre sicher schön, so einen zu bauen, um die Objekte punktgenau ins Bild zu bekommen.
+
+Links gleiten die Aluprofile ohne Führung aufeinander.
+
+
+klein. Auf eine motorische Steuerung wollte
+ich verzichten, da ich nicht über Schrittmotoren und andere Hardware verfüge und
+auch nicht über die entsprechenden Programmierkenntnisse.
+
+
+Dabei sollte er möglichst flach sein. Große
+Wege sind im Makrobereich nicht erforderlich, ist der Bildausschnitt doch nur wenige
+Zentimeter groß. Bei 1:1-Abbildung ist das
+Bildfeld gerade mal 24 · 36 mm groß bzw.
+
+
+Stabilisierung durch Baustein 15
+
+
+Modell
+
+
+Heraus kam eine Lösung mit vier Aluprofilen, die hier aufgrund der Stabilität absolut
+notwendig sind. Als Basisteil wurden zwei
+Aluprofile (225 und 175 mm waren verfügbar, wobei die Längen beliebig sind) jeweils
+am Rand der Grundplatte 180 · 90 mit Verbindern befestigt. Da Präzision und Spielfreiheit hier besonders wichtig sind, wurden
+sie mit zusätzlichen Bausteinen 15 gesichert. Ein Aluprofil wurde mit Zahnstangen
+besetzt und am Ende Rollenlager für zwei
+Metallachsen ausreichender Länge montiert. Dabei stehen die Metallstangen mittig
+über den Zahnstangen.
+Die beiden Metallachsen dienen als Führung für die Brücke, die über Zahnräder, die
+in die Zahnstangen greifen, in x-Richtung
+verschoben wird. Ein Zahnrad Z30 dient als
+Griff. Es sitzt mit einem Ritzel Z10 auf einer Achse (geführt in einem Baustein 15 mit
+Bohrung), welche ein Zahnrad Z20 antreibt,
+
+dass seitlich in die Zahnstangen auf dem
+Aluprofil der Basis eingreift. Ich versuchte
+so, noch eine zusätzliche Untersetzung einzubauen, damit der Vortrieb in x-Richtung
+noch etwas feiner reguliert werden kann. So
+wird die Brücke also über die auf der
+Grundplatte fest stehenden Aluprofile bewegt.
+Die Brücke besteht aus zwei senkrecht zur
+Basis liegenden Aluprofilen, die am antriebsfernen Ende frei über das Aluprofil
+gleiten. Geführt wird die Brücke ausschließlich über die beiden Metallachsen
+über der Zahnstange. Zwischen den Aluprofilen der Brücke befindet sich eine Schnecke, auf der sich zwei Schneckenmuttern
+(m1,5) laufen. Im richtigen Abstand justiert,
+eliminieren zwei Schneckenmutter einiges
+an Spiel, das nur eine davon hätte, und erschweren den Vortrieb etwas, was in die-
+
+
+
+
+sem Fall aber gewünscht ist. Auf der Metallachse der Schnecke ist ein Z30 befestigt
+(mit Baustein 15 mit Bohrung in der Brücke), als Griff dient aber wieder ein Ritzel
+Z10. Es liegt mit einem weiteren Ritzel Z10
+auf einer Achse (über Baustein 15 mit Bohrung) und treibt ein Z30 an – eine 1:3-Untersetzung also.
+Ich habe hier eine sehr enge Bauweise gewählt, um die beiden Griffe nahe beieinander zu haben. Andere Lösungen sind natürlich möglich.
+
+Im abgebildeten Fall wurde ein Drehkranz
+Z58 an den Schneckenmuttern angebracht.
+Dadurch lassen sich die Schneckenmuttern
+spielarm justieren. Zusätzliche Bausteine
+15 u. a. verringern das Spiel in der Brücke
+weiter. Der Drehkranz muss direkt ohne
+weitere Untersetzung, Rastung oder Mechanik angefasst werden, was in der Praxis aber
+kein Problem ist. Der Drehkranz wurde gewählt, da er präzise läuft und sich frei drehen lässt (die Zahnung spielt keine Rolle).
+Wer seine Objekte nicht drehen möchte,
+kann eine Grundplatte 120 · 60 montieren.
+Insgesamt wurde der Kreuztisch nur etwas
+höher als ein Baustein 30 – ohne den Drehkranz, der addiert nochmal einige Millimeter. Insgesamt ist der Kreuztisch schön flach
+und kompakt. Kompakter geht sicher noch,
+wenn man kürzere Aluprofile verwendet.
+Dann ist der Tisch aber vielleicht etwas unflexibler im Einsatz und man muss ihn immer neu verschieben. So lässt er sich z. B.
+mit der Grundplatte 1000 kombinieren.
+
+
+
+Viel Spaß!
+(Kontaktadresse des Autors:
+fabian@fabianhaas.de)
+
+

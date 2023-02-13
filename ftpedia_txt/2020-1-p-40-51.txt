@@ -1,0 +1,409 @@
+
+
+Schaltungstechnik
+
+Motorsteuerungen (6): Wechselschaltungen,
+die Zweite
+Stefan Falk
+In den ersten beiden Ausgaben der ft:pedia stellten wir die Drehrichtungssteuerung nur mit
+zwei Tastern und die Ergänzung um eine Endlagenabschaltung mit insgesamt vier Tastern vor.
+Heute schauen wir uns an, wie es – je nach Modell – noch einfacher geht.
+
+Bedienung über zwei Taster
+Rufen wir uns zunächst die folgenden
+beiden Schaltungen in Erinnerung:
+
+DC
+
+M
+
+DC
+
+M
+
+Schaltung 2: Kurzschlussbremse für die
+Endlagentaster
+
+Einknopf-Bedienung
+Nun wollen wir die Anforderungen ein
+wenig verschärfen:
+Schaltung 1: Getrennte links/rechts-Taster [1]
+
+Mit dieser Schaltung können wir einen
+Motor durch Druck auf genau einen der
+Taster nach links oder nach rechts laufen
+lassen, in allen anderen Tasterstellungen
+steht er still.
+Das ergänzt um die (orange eingezeichneten) Endlagenschalter lässt den Motor an
+den Endlagen (bei denen jeweils einer der
+Endlagentaster gedrückt wird) automatisch
+anhalten und nur noch in die andere Richtung fahren (Schaltung 2).
+
+
+1. Nur ein einziger Taster soll manuell
+betätigt werden. Wird er gedrückt, soll
+der Motor in die eine Richtung drehen,
+wird er losgelassen, in die andere.
+2. Nur ein einziger weiterer Taster soll
+beide Endlagen abfangen. Endlage 1 ist
+also „Taster ist gedrückt“ und Endlage 2
+ist „Taster ist losgelassen“.
+Der Verfahrweg des Motors ist also nur so
+kurz wie die Änderung, die am Endlagentaster zwischen dem Umspringen seines
+Kontakts von „gedrückt“ zu „losgelassen“
+bzw. umgekehrt notwendig ist.
+
+
+Schaltungstechnik
+
+
+Bahnsignal
+Ein Beispiel, bei dem ein sehr kurzer Verfahrweg ausreicht, ist ein Fahrt- oder HaltSignal für eine Bahnlinie. Der Taster rechts
+im Abb. 1 wird betätigt, wenn das Signal
+auf „Fahrt“ stehen, also etwas hochklappen
+soll:
+
+Solange der Taster nicht gedrückt ist, soll
+das Signal unten und also auf „Halt“
+bleiben:
+
+
+Der Taster ist so angebracht, dass sein
+Betätigungsweg für die beiden klar unterscheidbaren Zustände ausreicht.
+
+
+
+
+
+M
+
+DC
+
+Schaltung 3: Schaltung 1, anders gezeichnet
+
+Welchen der beiden Taster ihr zur Bedienung und welchen ihr als Endlagentaster
+verwendet, ist egal – die Schaltung ist ja
+völlig symmetrisch.
+Der Ablauf ist also etwa wie folgt:
+1. Beide Taster sind unbetätigt. In dieser
+Position muss das Signal auf „Halt“
+stehen.
+
+2. Wir drücken den Bedientaster. Der
+Motor muss das Signal nach oben drehen
+(andernfalls bitte umpolen).
+3. Der Endlagentaster wird gedrückt. Es
+sind also beide Taster betätigt – die
+Kurzschlussbremse wirkt und der Motor
+geht sofort aus. Das Signal bleibt auf
+„Fahrt“ stehen.
+4. Das gilt so lange, bis wir den Bedientaster loslassen. Nun dreht der Motor in
+die andere Richtung (hier also nach
+unten zum „Halt“-Status).
+
+
+Jetzt kommt die Überraschung: Die Schaltung ist einfach Schaltung 1 vom Anfang
+dieses Artikels! Ein Taster wird von Hand
+betätigt, der andere vom Motor. Das ist alles
+– die komplette Steuerung benötigt nichts
+weiter als zwei Taster. Zur Verdeutlichung
+zeichnen wir Schaltung 1 nur etwas anders
+auf:
+
+
+5. Er dreht so lange, bis der Endlagentaster
+wieder losgelassen wurde. Der Motor
+bleibt wiederum stehen und das Signal
+steht konstant auf „Halt“. Damit haben
+wir wieder Zustand 1 erreicht.
+Diese Schaltung kann also viel Platz – und
+natürlich Taster – sparen, sofern der zu
+fahrende Weg hinreichend kurz ist!
+
+
+Schaltungstechnik
+
+Müllcontainer
+
+Der Aufbau des Containers
+
+Und wenn der Weg doch länger sein muss?
+
+Fangen wir mit der Tonne an. Die ist recht
+einfach aus Standardteilen aufgebaut:
+
+Das folgende Modell soll den Deckel eines
+Müllcontainers ein gehöriges Stück anheben, wenn man (mit dem Fuß) die Trittleiste
+vor dem Container niederdrückt:
+
+
+
+
+
+Es gibt nach wie vor nur zwei Taster: einen
+für die Fußbetätigung und einen für die
+beiden Endlagen. Die Schaltung ist also
+dieselbe wie beim Bahnsignal.
+
+
+
+
+Beachtet bei der Rückseite, dass unten zwei
+Gelenksteine angebracht werden müssen,
+dort also keine Platte sein darf. Deshalb ist
+hinten unten nur eine Platte 15 · 60 an zwei
+Winkeln von innen befestigt.
+Der Fußtaster
+Der Fußschalter sitzt auf der linken Seite
+des Modells, mittels eines Winkelsteins
+10·15·15 (38423) auf der Grundplatte befestigt:
+
+oben
+
+dem Fußschalter
+
+Obenauf ist eine parallel-Streben-Mechanik
+angebracht (Abb. 14), sodass das Modell
+von links gesehen aussieht, wie es Abb. 15
+zeigt.
+
+Links in Abb. 15 sitzt der Leuchtstein zur
+Stromversorgung auf einem senkrecht
+stehenden BS7,5, der mit einem Feder-
+
+
+nocken auf der schwarzen Bauplatte befestigt ist. Über einen Verbinder 15 trägt der
+einen zweiten BS 7,5, und über eine Platte
+15 · 30 mit zwei Zapfen (in Abb. 15 von den
+BS 7,5 verdeckt) trägt dieser einen dritten
+BS 7,5. In dem steckt ein Statikadapter
+(35975) für die parallele Aufhängung der
+beiden I-Streben 30.
+
+Schaltungstechnik
+
+Gelenkstein von Abb. 17 nach unten verfahren (er sitzt ja hinter der gelenkigen Aufhängung des Deckels an der Tonne). Dadurch wird die I-Strebe 45 ein klein wenig
+nach außen gedrückt (Abb. 18/19).
+
+hinten gesehen
+mit dem Fußschalter
+
+Antrieb und Endlagentaster
+Damit nun der geringe Schaltweg des Endlagentaster zwischen „gedrückt“ und „nicht
+gedrückt“ ausreicht, den möglichst großen
+Öffnungswinkel des Deckels zu umfassen,
+greifen wir zu einer mechanischen Untersetzung: Wenn sich der Deckel durch den
+Motor öffnet oder schließt, darf der Taster
+eben nur ganz langsam betätigt werden.
+Dazu schauen wir uns die Rückseite an
+(siehe also nochmals Abb. 12). Unten sitzen
+zwei Gelenksteine, und oben eine Federnocke in einem BS 7,5, der mit dem Deckel
+verbunden ist. Dort wird nun die Mechanik
+laut Abb. 16 und 17 angebaut.
+
+gesehen
+
+Die beiden BS 7,5 am XS-Motor kommen
+in die beiden Gelenksteine des Containers.
+Der obere Gelenkstein der Mechanik wird
+über den Federnocken von Abb. 10 bzw. 12
+am Deckel befestigt.
+Die beiden Streben (senkrecht eine I-Strebe
+45 und waagerecht eine X-Strebe 63,6)
+bilden nun eine recht extreme Untersetzung.
+Wenn sich der Deckel hebt, wird der obere
+
+Endlagentaster gerade eben losgelassen
+
+
+
+
+Das geht mit Schaltung 2, wenn wir zum
+manuellen Betätigen die beiden Steuertaster
+einfach übereinandersetzen und einen
+davon andersherum anschließen.
+
+Endlagentaster gerade eben gedrückt
+
+Der Endlagentaster muss sehr fein so justiert werden, dass der Deckel in der unteren
+Endlage (der Taster ist gerade gedrückt)
+ordentlich schließt und in der oberen Endlage (der Taster ist gerade losgelassen) angenehm weit offensteht.
+
+Die elektrische Kaktusblüte
+Und wenn wir eine Einknopf-Bedienung
+wollen, der zu fahrende Weg aber auch bei
+mechanischen Tricks einfach zu lang für
+einen einzigen Taster ist? Versuchen wir’s!
+Als Funktionsmodell könnten wir nun etwa
+eine Schiebetür oder dergleichen bauen –
+aber das erschien etwas zu langweilig. Um
+es mechanisch etwas reizvoller zu gestalten,
+geht es um eine sich öffnende „Blüte“, die
+beim Öffnen und Schließen eine sehr schön
+anzusehende Bewegung vollführt.
+Unten im Fuß sitzt ein Motor, der über einen
+Seilzug die mittig sichtbare Drehscheibe
+anheben kann. Durch die dreifach gelenkig
+angebrachten bzw. verbundenen Bogenstücke 60° entsteht dadurch die geöffnete
+Blüte in Abb. 21.
+Da der Verfahrweg hier sehr groß ist, benötigen wir doch wieder zwei getrennte Endlagentaster – wie in Schaltung 2. Wir wollen
+aber trotzdem nur einen einzigen Knopf
+drücken müssen, damit sich die Blüte öffnet, und beim Loslassen soll sich die Blüte
+schließen.
+
+
+Normalerweise muss man ja einen der
+beiden manuell zu betätigenden Taster
+drücken, um den Motor in eine bestimmte
+Richtung laufen zu lassen, bis der jeweilige
+Endlagentaster gedrückt ist. Nun bauen wir
+die beiden Bedientaster direkt übereinander. Der Stößel des oberen drückt dann also
+gleichzeitig beide Taster nieder – wie gut,
+dass der fischertechnik-Minitaster so klug
+konstruiert wurde!
+Dann wären aber die Bedientaster immer
+noch entweder beide gedrückt oder beide
+losgelassen – der Motor würde nach Schaltung 2 also nach wie vor stillstehen. Nun
+vertauschen wir aber bei einem der beiden
+Taster (nicht bei beiden!) Arbeits- und
+Ruhekontakt, indem wir die Kabel dort
+einfach vertauscht anschließen:
+
+M
+DC
+
+Schaltung 4: Schaltung 2 mit den Bedientastern verbunden und bei einem davon
+Arbeits- und Ruhekontakt vertauscht
+
+Das ergibt eine kleine Baugruppe mit derselben Wirkungsweise, wie wenn in Schaltung 2 immer genau ein Taster „gedrückt“
+und der jeweils andere „losgelassen“ ist.
+Also dreht sich der Motor – wie in den
+bisherigen Schaltungen dieses Artikels – je
+nach Betätigung oder Loslassen der Taster
+in die eine oder andere Richtung.
+Die Endlagentaster funktionieren wie gewohnt und werden im Modell einfach so
+angebracht, dass der jeweilige Taster in der
+jeweiligen Endposition des Modells gedrückt wird und so den Motor stillsetzt.
+
+
+Schaltungstechnik
+
+
+Zum Bau des Modells
+Fangen wir unten an: Der Fuß besteht aus
+einer ft-Drehscheibe, unterhalb der Statikträger 30 bzw. auf der einen Seite zwei
+BS7,5 (mittels Federnocken) für die Aufnahme der beiden Bedientaster und auf der
+anderen Seite ein BS5 mit zwei Zapfen, ein
+
+38428 Baustein 5 15 · 30 3N für die Befestigung des Motors (und die Kombination
+Federnocken, BS7,5 und BS5 als Stütze)
+stecken – siehe Abb. 22 bis 26. Ins Aufsteckgetriebe des XS-Motors stecken wir
+seine Achse mit einem längeren Stück
+Faden (der muss bis ganz oben im Modell
+und wieder herunter reichen).
+
+
+
+ist mit einem S-Mitnehmer (31712) festgesetzt
+
+
+
+
+
+Schaltungstechnik
+
+
+Der Faden ist einfach in der Hülse mit
+Scheibe (35981) auf die Achse geklemmt.
+Ein Klemmring sichert das Ganze. Der
+Faden wird also direkt auf die Achse
+gewickelt. Das ergibt ohne weitere Getriebe
+hinreichend langsamen und damit ausreichend kräftigen Zug am Faden. Eingebaut
+sieht das nach Anbau eines weiteren Statikträgers 30 so aus:
+
+
+Schwenkarme und Mittelstütze
+Auf der Oberseite der Drehscheibe sitzt
+neben den sechs Bausteinen 15, sechs
+Gelenksteinen und den sechs Statik-Bogenträgern auch die zentrale senkrecht stehende
+Stütze. Sie besteht aus zwei Statik-Flachträgern mit je zwei Flachstücken. Die Stütze
+steckt, mit zwei BS 5, zwei BS 5 mit zwei
+Zapfen und einem BS 7,5 befestigt, mittig
+zwischen zwei der Grundbausteine 15.
+
+
+
+Die Mittelstütze, gebaut aus beidseitig mit
+Flachstücken gefüllten Flachträgern, sorgt
+dafür, dass sich die obere Drehscheibe beim
+Hoch- und Herunterfahren nicht verhakt –
+anders als es bei einfachen Statikträgern
+120 der Fall wäre.
+
+
+
+
+Die Endlagentaster
+Der untere Endlagentaster steckt über einen
+BS5 in einem der sechs Bausteine 15 über
+der Drehscheibe:
+
+
+Dieser Taster wird also von einem der
+herunterklappenden Bogenträger betätigt.
+Durch den BS 5 kann er geeignet in der
+Höhe justiert werden.
+Der obere Endlagentaster sitzt innen über
+einen S-Riegelstein (32850), Winkelstein
+60° und BS 7,5 an der Mittelstütze:
+
+Obere Umlenkung und Aufhängung
+der oberen Drehscheibe
+Das Seil muss vom Motor durch die untere
+Drehscheibe hindurch die ganze Mittelstütze entlang hoch und dann um die obere
+Umlenkrolle geführt werden. Es endet in
+einem schwarzen S-Verbindungsstopfen 6
+(32316), der den Faden in der Drehscheibe
+festklemmt (etwas unterhalb der Bildmitte
+zu sehen):
+
+in der oberen Drehscheibe
+
+
+
+Schaltungstechnik
+
+Funktionsweise
+Nun noch alles korrekt nach Schaltung 4
+verkabeln und auf Fehler prüfen. Ggf. müsst
+ihr Kabel an Arbeits- und Ruhekontakt von
+Tastern oder am Motor vertauschen, wenn
+etwas falsch herum läuft.
+Der Druck auf die Doppeltastereinheit soll
+die obere Drehscheibe bis zum Anschlag
+hochziehen, also bis zur Betätigung des
+oberen Endlagentasters – die Blüte öffnet
+sich. Lässt man die Taster los, sollte sich die
+Blüte für die Nacht so weit schließen, bis
+der untere Endlagentaster von einem der
+Arme gedrückt wird.
+
+Wer einen zweiten Motor besitzt, kann die
+Betätigung des Taster-Duos auch automatisieren, z. B. mit ganz langsam drehenden
+Schaltscheiben (37727 oder 37728).
+Voilà!
+
+Referenzen
+[1]
+
+Falk, Stefan: Motorsteuerungen. In:
+ft:pedia 1/2011, S. 7.
+
+[2]
+
+Falk, Stefan: Motorsteuerungen (2).
+In: ft:pedia 2/2011, S. 23.
+
+
+
+

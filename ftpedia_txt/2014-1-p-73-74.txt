@@ -1,0 +1,63 @@
+
+Modell
+
+Modell
+
+Detail Engineering R2D3 (1) – Gleitring-Lager
+Andreas Gail
+Im Rahmen des Baus des Robotermodells R2D3 wurde eine Reihe von ganz unterschiedlichen
+Detaillösungen erarbeitet, die durchaus Lösungsansätze bei diversen anderen Bauprojekten
+sein könnten. In einer kleinen Serie werden sie vorgestellt. Den Anfang macht ein GleitringLager.
+
+Aufgabenstellung
+
+Bearbeitung
+
+Wie in Abb. 4 (nächste Seite) dargestellt,
+sollte der violett abgebildete Teil des
+Roboters drehbar gelagert werden, gleichzeitig aber auf der darunter befindlichen
+Konstruktion aufliegen. Das sich dabei
+ergebende Problem bestand darin, dass
+durch minimale Kanten auf den Kreisringflächen die Drehbewegung immer
+wieder blockiert wurde. Es sollte ein Weg
+gefunden werden, um eine störungsfreie
+Drehbewegung reproduzierbar zu ermöglichen.
+
+Zur Bearbeitung bietet sich z. B. eine
+Oberfräse mit Zirkelanschlag eines
+beliebigen Herstellers an (siehe Abb. 2).
+Bei der Einstellung des Abstands von der
+Zirkelnadel zum Fräser ist der Durchmesser des Fräsers selbst mit einzubeziehen. Zunächst wird der Außendurchmesser ausgefräst, dann der Innendurchmesser. So geht während der Bearbeitung
+der mittige Bezugspunkt nicht verloren.
+
+Lösung
+Aus Kunststoffplatten (im Baumarkt
+erhältlich) wurde ein Kreisring mit 23,4 cm
+Außendurchmesser und 20,4 cm Innendurchmesser ausgefräst. Dieser Ring wird
+als Gleitring bezeichnet.
+
+Oberfräse mit Zirkelanschlag
+20,4cm
+23,4cm
+
+(Skizze nicht maßstäblich)
+
+Auf ähnliche Weise wie zuvor der Gleitring kann auch eine runde Bodenplatte
+hergestellt werden. Die erforderlichen
+Löcher können je nach Härte des Materials
+ausgebohrt, per Lochzange ausgestanzt
+oder mithilfe eines Locheisens ausgeschlagen werden (Abb. 3).
+
+
+
+
+Ausblick
+In der nächsten Ausgabe der ft:pedia wird
+es darum gehen, wie mithilfe einer
+Ansteuerung von Leistungsmotoren über
+den Robo TX Controller die volle Beweglichkeit des Roboters erreicht wird.
+
+Durchmesser 23,4 cm
+
+
+

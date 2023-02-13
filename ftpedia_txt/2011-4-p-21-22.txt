@@ -1,0 +1,82 @@
+
+Einsteigermodell
+
+Einsteigermodell
+
+Es muss nicht immer das Interface sein
+Marcel Endlich
+Ich hatte eine Modellidee, bei der ich zunächst dachte, ich bräuchte das Robo Interface oder
+den TX Controller, aber nach längerem Nachdenken kam ich auf eine Idee, wie ich mein
+Modell auch ohne Interface in Betrieb nehmen kann.
+In den letzten Ausgaben der ft:pedia hast
+du verschiedene einfache und anspruchsvollere Schaltungen kennengelernt. Nun
+möchte ich dir hier meinen Geldautomaten
+mit Kartenleser vorstellen, den du ganz
+einfach ohne Interface oder TX Controller
+bauen kannst.
+
+
+Bei vielen Radfahrzeugen, Gebäuden oder
+bei Mechanikmodellen brauchen wir kein
+Interface. Aber geht das auch mit einem
+Geldautomaten mit Kartenleser? Ja! Bei
+einem einfachen Geldautomaten kann man
+mit einem Taster, einem Magnetventil,
+zwei Handventilen, mehreren Pneumatikschläuchen, einem Kompressor und natürlich einer Stromversorgung ohne Interface
+oder TX Controller ein ganz einfaches und
+unkompliziertes Modell bauen, das auch
+für den Laien verständlich ist.
+
+
+Der Geldautomat hat zwei verschiedene
+„Steuerkreise“: die elektrische Schaltung
+und die pneumatische Steuerung, die z. B.
+die Pneumatikzylinder beinhaltet. Du hast
+also zwei Kreise, einmal einen Stromkreis
+und einmal einen „Druckluftkreis“.
+
+
+
+
+Am besten wir schauen uns das einmal im
+Schaltplan genauer an:
+
+Der Kompressor erzeugt nun Luftdruck
+und das Magnetventil schaltet den Luftweg
+vom Kompressor zu den Handventilen frei.
+Nun kannst du an einem der Handventile
+drehen und der zugehörige Zylinder fährt
+heraus und schiebt gleichzeitig eine der
+Münzen in das Ausgabefach.
+
+DC
+
+M
+
+
+Die elektrischen Komponenten sind orange
+gezeichnet, die pneumatischen blau. Im
+Schaltplan von Abbildung 3 kannst du die
+verschiedenen Komponenten der elektrischen Schaltung gut erkennen. Wenn du
+den Taster drückst, werden die beiden
+Aktoren, Kompressor-Motor und Magnetventil, mit Strom versorgt.
+
+
+Wenn du nun die Handventile in die Ausgangsposition drehst, gehen die Zylinder
+zurück, da ich die roten Zylinder mit der
+integrierten Feder verwendet habe. Alternativ kannst du den Geldautomaten um
+zwei Schläuche ergänzen und stattdessen
+auch die blauen Zylinder benutzen.
+An meinem Geldautomaten siehst du, wie
+einfach es ist, dass ein Modell auch ohne
+Interface oder TX Controller funktioniert.
+Mein Artikel soll dir Anstoß geben, gezielt
+darauf zu achten, ob du ein Modell auch
+ohne Interface oder TX bauen kannst.
+Bei etwas größeren Modellen, wo du ohne
+Interface oder TX Controller nicht mehr
+auskommst, darfst du gerne zum elektronischen Gerät greifen.
+Und nun wünsche ich dir ein frohes Weihnachtsfest und einen guten Rutsch ins neue
+Jahr!
+
+

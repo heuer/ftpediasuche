@@ -1,0 +1,585 @@
+
+
+fischertechnik-Basiswissen
+
+Perlentauchen (Teil 4)
+Stefan Falk
+In dieser Folge stellen wir die wichtigsten Elemente der fischertechnik-Elektronik aus fünf
+Elektronik-Generationen von 1969 bis heute vor.
+
+Generation 1: Licht-Elektronik
+Tatsächlich stammt der erste ElektronikKasten von fischertechnik aus dem Jahre
+1969 – und war damals der Konkurrenz
+weit voraus: Der l-e 1 und sein kleiner
+Bruder l-e 2 enthielten je einen LichtElektronik-Stab. Der verwendete das
+Gehäuse des damals üblichen Batteriestabs
+(in den drei Babyzellen passten); siehe
+stammt daher, dass in den beiden Kästen
+als Sensoren die ersten Fotozellen enthalten waren. Andere Sensoren (abgesehen
+von den Tastern und ElektromechanikTeilen) gab es damals noch nicht von
+fischertechnik.
+Neben der Stromversorgung besitzt der
+Elektronikstab einen Eingang für die Fotowiderstände, ein Potentiometer zum Einstellen der Empfindlichkeit und mehrere
+Ausgänge, die je nach Zustand der
+Fotozellen (beleuchtet/unbeleuchtet) von
+einem eingebauten Relais geschaltet
+werden:
+1. Ein Ausgangspaar bekommt genau dann
+Strom, wenn der Stab nicht durchschaltet.
+2. Ein Ausgangspaar bekommt genau dann
+Strom, wenn der Stab durchschaltet.
+3. Das dritte schließlich wird je nach
+Zustand umgepolt, um z. B. bei einem
+Motor die Drehrichtung umzukehren,
+sobald die Fotozelle beleuchtet wird.
+
+
+
+fischertechnik-Basiswissen
+
+Der rote Schalter dient nicht nur zum Einund Ausschalten, sondern er bestimmt
+auch eine von zwei Betriebsarten. In
+Stellung „1“ schaltet der Stab einfach
+durch, sobald am Eingang ein hinreichend
+kleiner Widerstand liegt, also z. B. eine
+angeschlossene Fotozelle genügend stark
+beleuchtet wird. Stellung „2“ führt zu einer
+Selbstsperrung des Relais. Man muss dann
+den roten runden Taster drücken und die
+Fotozelle beleuchten, damit der Stab
+durchschaltet. Sobald das Signal am
+Eingang einmal ausbleibt, bleibt der Stab
+im Ruhezustand, auch wenn das Signal
+wieder kommt. Das kann man gut für
+Alarmschaltungen verwenden, bei denen
+eine einmalige kurze Unterbrechung einer
+Lichtschranke „gespeichert“ bleiben soll.
+Weitere Informationen über Selbstsperrung
+und Selbsthaltung finden sich übrigens in
+Motorsteuerungen (4) in ft:pedia 4/2011.
+
+den l-e-Kästen geboten wurden. Unbedingt
+herunterladen! Wer das nicht kennt, dem
+werden die Augen aufgehen – fabelhaft
+raffinierte Modelle in für heutige Verhältnisse außergewöhnlich sparsamer Bauweise. Die Abb. 3 bis 5 können lediglich
+ein paar kleine Appetithappen darstellen.
+Schon im Jahr der ersten Mondlandung
+also konnte man mit fischertechnik in
+Elektronik und Optik hineinschnuppern.
+
+Linsen und Blenden [1]
+
+Es sei wärmstens empfohlen, sich die
+faszinierende Vielfalt der Modelle anzuschauen, die in den Anleitungsheften [1] zu
+
+
+
+Sensoren und optische Teile
+Die 1969 erstmals eingeführte Fotozelle
+(auch Fotowiderstand genannt) hat im
+Laufe der Zeit eine interessante Entwicklung mitgemacht: Abb. 6 zeigt von links
+nach rechts die ursprüngliche Fotozelle,
+die später auf einen Lampenbaustein
+montiert kam, und schließlich den heute
+aktuellen Fototransistor (der eher wie ein
+Schalter auf Licht reagiert und nicht wie
+ein analog veränderlicher Widerstand).
+
+Sportplatz mit einer Aschenbahn gehen. Die
+Ziellinie befindet sich unter der elektromotorisch angetriebenen Stoppuhr…“ [1]
+
+Damit die Fotozellen vor unerwünschtem
+seitlichen Lichteinfall geschützt werden,
+gibt es Störlichtkappen mit verschieden
+großen Bohrungen (1, 2, 4 und 8 mm) und
+einen 30 mm langen Störlichttubus mit
+einer stufenlos einstellbaren Einlassabdeckung. Auf einen Störlichttubus
+passen weitere solche oder auch Störlichtkappen:
+
+benötigt man z. B. zum Zählen von Personen,
+die eine Ausstellung betreten. Diejenigen, die
+in entgegengesetzter Richtung die Lichtschranke passieren, werden nicht
+mitgezählt…“ [1]
+
+einer Fotozelle
+
+
+
+
+
+fischertechnik-Basiswissen
+
+Ebenfalls schon im 1969er l-e 1-Kasten
+gab es das erste Mal optische Linsen von
+fischertechnik, und zwar in verschiedenen
+Brennweiten (erkennbar an der Dicke der
+Linsen). Sie fanden sich später auch in den
+Elektronikkästen hobby 4, ut-4 Steuern +
+Regeln (1971) und ec3 Optik + Akustik
+(1975). Erst in 2013 nahm fischertechnik
+dieses Thema mit dem neuen OpticsBaukasten endlich wieder auf.
+
+
+Sehr interessant sind auch die verschiedenen Spiegel in diesen Kästen. Es gibt sie
+sowohl zum Aufklipsen als 15 · 30 mm
+Planspiegel als auch als 30 · 30 mm Hohlspiegel-Baustein:
+
+70 mm und 35 mm
+
+In Ergänzung dazu gab es, insbesondere
+für Untersuchungen an optischen Bänken
+([2], siehe Abb. 3), Blenden in Kreuz-,
+Schlitz- und Lochform:
+
+Um die Versuchsmöglichkeiten endgültig
+grenzenlos zu machen, existieren auch ein
+biegbares Spiegelband, mit dem man z. B.
+Parabolspiegel
+bauen
+kann,
+sowie
+gebogene und gerade Lichtleitstäbe.
+Letztere kann man sogar bei vorsichtiger
+Erwärmung beliebig biegen und so Licht
+durch geschwungene Wege z. B. zu einer
+Lichtschranke bringen. Anwendungsmöglichkeiten für all diese Teile gibt es
+wie schon gesagt zuhauf in den kostenlos
+herunterladbaren Anleitungen [1].
+
+
+Sogar eine geeignete „Zielscheibe“ für
+Optikversuche stand zur Verfügung:
+
+
+
+Generation 2: „Silberlinge“
+1971/72 kam die zweite Generation
+fischertechnik-Elektronik auf den Markt,
+und zwar in den Baukästen hobby 4 aus der
+hobby-Reihe und des ec aus dem normalen
+Programm. Darin ist immer noch diskrete
+Elektronik verwendet, also einzelne (in
+
+Handarbeit!) auf Platinen gelötete Widerstände, Kondensatoren, Dioden und Transistoren. Anstatt eines einzigen ElektronikSteines gibt es aber hier eine ganze Parade
+von digital arbeitenden Schaltelementen
+(der Minuspol der Stromversorgung gilt als
+logische „1“, der Pluspol als logische „0“).
+
+Stromversorgungsstecker für die Silberlinge
+
+
+fischertechnik-Basiswissen
+
+
+um Maschinen zu bauen, die auf
+Klatschen oder ähnliche Geräusche
+reagieren.
+
+nach rechts unten, folgende Bausteine:
+1.
+
+2.
+
+Den h4GB Gleichrichterbaustein für
+eine Stromversorgung mit geglätteter
+Gleichspannung.
+Den extrem flexiblen h4G Grundbaustein, einen Operationsverstärker,
+der die Ausgänge umschaltet, wenn
+die Differenz der Signale an den zwei
+Eingängen E1 und E2 einen bestimmten Wert überschreitet. Durch entsprechende Verschaltung kann der für
+Signalverarbeitung, Zeitverzögerung,
+Oszillatoren, Tongeneratoren und
+Unzähliges mehr eingesetzt werden.
+
+3.
+
+Den h4RB Relaisbaustein mit Verstärker. Der alleine kann schon mit
+einer Fotozelle verwendet werden
+(anders als die ElektromechanikRelais, die keinen Verstärker haben).
+
+4.
+
+Den h4ML Mikrofon-/Lautsprecherbaustein – ein einfacher Piezo-Lautsprecher. Er kann auch (mit einem
+h4G) als Mikrofon genutzt werden,
+
+5.
+
+Den h4ON OR/NOR-Baustein: Er
+schaltet
+die
+Ausgänge,
+wenn
+mindestens einer der vier Eingänge
+mit „-“ verbunden ist.
+
+6.
+
+Den h4AN AND/NAND-Baustein: Er
+schaltet die Ausgänge, wenn alle
+belegten Eingänge mit „-“ verbunden
+sind.
+
+7.
+
+Den h4FF Flip-Flop-Baustein: Er
+kann ein Signal (ein „Bit“) speichern.
+Seine vielen Eingänge dienen zum
+Umschalten, direkten Setzen/Zurücksetzen oder auch zum Setzen/Rücksetzen bei einer Flanke, also dem
+Wechsel eines Signals von 0 (Plus)
+nach 1 (Minus). Mit mehreren dieser
+Bausteine lassen sich u. a. Zählschaltungen aufbauen.
+
+8.
+
+Den h4MF Mono-Flop-Baustein, der
+bei einer 0-1-Flanke am Eingang die
+
+
+
+
+Ausgänge eine einstellbare Zeit lang
+umschaltet – ein Zeitglied also.
+9.
+
+Den
+h4DA
+Dynamisch-ANDBaustein. Er enthält zwei gleiche
+Schaltungen mit dem Zweck der
+Flankenerkennung. Seine Ausgänge
+geben einen ganz kurzen Impuls ab,
+wenn am Eingang ein Wechsel von 0
+auf 1 stattfindet.
+
+10. Das Ur-Voltmeter von fischertechnik.
+Es misst von null bis zehn Volt
+Gleichspannung und hat noch ein
+Potentiometer eingebaut.
+11. Das Volt-/Amperemeter, welches nicht
+nur eine Spannung (in Volt) sondern
+auch die Stromstärke (in Ampere, bis
+0,1 A) messen kann.
+12. Die roten Zwischenstecker schließlich
+verteilen die Versorgungsspannung an
+alle Silberlinge, wenn man diese
+zusammensteckt und jeweils einen der
+Zwischenstecker einschiebt.
+In Kombination kann man mit Silberlingen
+fast beliebig komplexe Steuerungsschaltungen herstellen.
+
+Steuerung eines Free-Fall-Towers
+
+Es gab noch einige weitere, nicht so
+wichtige Silberlinge mit einzelnen Transistoren oder Potentiometern oder auch
+einfach nur ein paar miteinander verbundenen Kontakten. Die entstammen dem
+Schulprogramm (den ut-Kästen) und einem
+Analog-Elektronik-Kasten
+namens
+hobbylabor.
+Das Begleitbuch zum hobbylabor schlägt
+allerdings alles: Auf ganzen 300 Seiten
+bietet es einen ausführliche Kursus in
+Elektrik, Elektronik und den damit verbundenen Gebieten der Physik. Sämtliche hier
+angesprochenen
+Handbücher
+können
+übrigens in der ft-Datenbank [3] oder bei
+den holländischen fischertechnik-Fans [4]
+heruntergeladen werden.
+
+
+
+fischertechnik-Basiswissen
+
+Erlernen der Elektronik selbst. Es handelt
+sich also um ein Ausbildungs-Hilfsmittel
+außerhalb des fischertechnik-Programms –
+dennoch sei sie der Vollständigkeit halber
+erwähnt.
+
+
+Außer der Reihe: Die
+Elektronik-Box 1000
+1974 brachten die Fischerwerke ein kofferförmiges Elektronik-Labor auf den Markt,
+die Elektronik-Box 1000. Es gab sie in
+leicht unterschiedlicher Bestückung. Ihr
+Einsatzzweck war aber nicht das Steuern
+von fischertechnik-Modellen, sondern das
+
+
+
+
+Ein besonderes Merkmal war die Möglichkeit, eine Vielzahl elektronischer Standardschaltungen ganz ohne Kabel aufbauen zu
+können. Die größte Fläche auf dem
+Kofferunterteil nahmen bereits geschickt
+miteinander verbundene Buchsen ein.
+Diese „vorverdrahtete Schaltung“ brauchte
+dann nur noch an den richtigen Stellen mit
+den einsteckbaren elektronischen Bauelementen wie Widerständen oder Transistoren versehen zu werden. Fast alle Schaltungen des Begleitbuches konnten so ohne
+zusätzliche Kabel aufgebaut werden.
+
+Spezialkasten 2: Das IC-DigitalPraktikum
+Ähnlich wie das Elektronik-Praktikum, nur
+über Digitalelektronik, erschien 1977 das
+IC-Digital-Praktikum:
+
+Spezialkasten 1: Das
+Elektronik-Praktikum
+Ein recht seltener Kasten ist das
+Elektronik-Praktikum von 1977. In diesem
+Kasten geht es ebenfalls um Analogelektronik. Schaltungen werden mit
+einzelnen Widerständen, Kondensatoren
+und Transistoren realisiert, deren Drahtenden in speziell dafür entworfene kleine
+rechteckige Kontaktbausteine gesteckt
+werden.
+
+
+Erstmals wurden in diesem Kasten
+integrierte Schaltungen (ICs) bei fischertechnik verwendet. Auch dieser Kasten
+kam mit einem umfangreichen, 96seitigen
+Begleitbuch. Zudem führte dieser Kasten
+ein neues Verkabelungssystem ein,
+welches wir gleich noch näher betrachten
+wollen.
+Gleichzeitig war dies der letzte fischertechnik-Kasten, in dem ein Relais die
+Ansteuerung von Motoren und anderen
+Verbrauchern erledigte. Bis hier konnte
+oder durfte man Motoren nicht direkt an
+die Elektronik anschließen: Beim Lichtelektronik-Stab konnte man das gar nicht,
+und die Silberlinge durften ausgangsseitig
+nur mit max. 20 mA belastet werden.
+
+
+Das 84 Seiten starke Handbuch bietet nicht
+nur eine Einführung in die Elektronik,
+sondern zeigt auch viele Anwendungen in
+fischertechnik-Modellen.
+
+
+Generation 3: Elektronik mit
+integrierten Schaltungen
+1981 wurde die Technik des IC-DigitalPraktikums in Form des Baukastens
+Elektronik ins normale Spielprogramm
+aufgenommen:
+
+
+fischertechnik-Basiswissen
+
+steine wie Siebensegmentanzeigen und
+dergleichen). In diese Bausteine konnte
+man verschiedene handelsübliche ICs
+stecken, während ein austauschbares Einlegeplättchen die Schaltung des ICs und
+die Anschlüsse zeigten.
+Rechts unten in Abb. 24 findet sich die
+Relais-Endstufe aus dem IC-DigitalPraktikum.
+
+Zu den zwei neuen Elektronik-Bausteinen
+des IC-Digital-Praktikums kamen mit
+diesem Kasten drei weitere hinzu. Abb. 24
+zeigt in der oberen Reihe die drei
+Bausteine des Elektronik-Kastens: Einen
+für die Stromversorgung, einen Schwellwertschalter, der zwei identische Verstärkungs- und Steuerungsschaltungen
+enthält, und schließlich eine Leistungsstufe
+– erstmals wurden Motoren und Lampen
+rein elektronisch ohne Relais angesteuert!
+„Elektronik“
+
+
+
+Die untere Reihe desselben Bildes zeigt
+den IC-Baustein 14 für 14polige ICs (es
+gab auch eine Fassung mit 16 Polen und,
+wenn auch selten, weitere spezielle Bau-
+
+Wie man auf Abb. 25 sieht, wurde mit
+diesen Elektronikbausteine ein neues
+Stecksystem eingeführt – wahrscheinlich
+aus Kostengründen. Natürlich gab es
+Übergänge ins normale fischertechnik27
+
+
+
+
+Steckersystem, um Sensoren und Verbraucher anschließen zu können.
+fischertechniks erster Lautsprecher, der
+h4ML
+Mikrofon/Lautsprecher-Baustein
+des hobby-4, bekam einen würdigen Nachfolger in Form eines richtigen MembranLautsprechers (Abb. 26).
+
+fischertechnik. Zudem wurden die bisher
+verwendeten Fotowiderstände („Fotozellen“), die ihren Widerstand kontinuierlich mit der Beleuchtungsstärke verringerten, durch den neuen Fototransistor
+ersetzt, der ab einer bestimmten Helligkeit
+eher schlagartig durchschaltet.
+
+Generation 4: Profi Sensoric
+und der Flip-Flop-Baustein
+1991, zu Zeiten der „neuen“ fischertechnik
+mit schwarzen Bausteinen und gelber
+Statik, war der Profi Sensoric-Kasten die
+einzige Möglichkeit zum Steuern von
+Maschinen im fischertechnik-Programm.
+Er nahm die Stelle der Elektromechanikund der Elektronik-Kästen ein. Alle Schaltund Regelelemente wurden auf ein
+einziges reduziert: das rote Flip-FlopModul (Abb. 28). Dafür gab es den ersten
+Reed-Kontakt (Magnetfeld-Sensor) bei
+
+aus dem Baukasten Profi Sensoric
+
+Die verschiedenen Sensoren und die Taster
+können an zwei Eingänge angeschlossen
+werden. Löst einer der Sensoren aus,
+schaltet das Flip-Flop einen von zwei Ausgängen ein und den anderen aus – und
+behält diesen Zustand, auch wenn der
+Sensor kein Signal mehr liefert. Der
+Zustand des Flip-Flops richtet sich also
+danach, welcher der beiden Eingänge
+zuletzt ein Signal bekam. Zusätzlich zu den
+Drehpotentiometern zur Einstellung der
+Empfindlichkeit beider Eingänge dient ein
+Schalter über dem ersten Eingang dazu,
+diesen zu invertieren: Der Umschaltvorgang findet dann statt, wenn der Sensor
+gerade nicht auslöst.
+Wenngleich die Anleitung einige interessante Maschinen vorstellte, die mit dem
+Flip-Flop gesteuert wurden, ist aber doch
+ein großer Verlust an Funktionalität mit
+der Einführung des Profi Sensoric zu verzeichnen. Zum einen waren die schier
+unendlichen Möglichkeiten der Silberlinge
+oder der IC-Elektronik mit dem Flip-FlopModul unerreichbar. Zudem wurde das
+Wissen um die Wirkungsweise der Elektronik und um Schaltungstechniken nur
+noch extrem ausgedünnt vermittelt. Das
+Flip-Flop begann somit den Trend zur
+„Black Box“, der sich, was das Verständnis für Elektrik und Elektronik
+angeht, bis zu den aktuellen Computerinterfaces fortsetzt: Man baut zwar durchaus funktionierende Modelle, aber was da
+genau in dem magischen Steuerbauteil vor
+sich geht, bleibt im Wesentlichen verborgen.
+
+Generation 5: Das E-Tec-Modul
+Mit dem heute noch aktuellen E-TecModul aus dem entsprechenden Baukasten
+„E-Tec“ bzw. „E-Tech“ (es gab ihn unter
+beiden Bezeichnungen) schließt sich die
+Geschichte der fischertechnik-Elektronik.
+Gleichzeitig füllt dieses Bauteil durch
+seine Einstellmöglichkeiten die Funktions-
+
+fischertechnik-Basiswissen
+
+lücke, die mit
+gerissen wurde.
+
+dem Flip-Flop-Modul
+
+Tatsächlich enthält dieses kleine Modul
+nicht nur einfache Elektronik in Form von
+integrierten Schaltkreisen. In ihm steckt
+mit einem Mikrocontroller ein vollständiger kleiner Computer! Die vielfältigen Steuerfunktionen können mit den
+kleinen Schaltern („DIP-Switches“) eingestellt werden, und die im E-Tec eingebaute
+Software (!) ist es dann, die die beiden
+Eingangssignale verarbeitet und die drei
+Ausgänge entsprechend steuert. Eine vollständige Zusammenstellung der Schalterkombinationen findet sich in der ftDatenbank [5].
+
+
+Die handelsübliche Version des E-Tec hat
+viele Vorteile gegenüber den vorherigen
+Elektronik-Generationen: Sie ist sehr klein,
+durch die Schaltereinstellungen ein guter
+Ersatz sogar für die vielen altehrwürdigen
+„Silberlinge“, und sie läuft mit den heute
+verwendeten 9 V Versorgungsspannung.
+Mehrere E-Tecs lassen sich wunderbar zu
+komplexeren Schaltungen kombinieren.
+Zwei Nachteile hat das E-Tec allerdings:
+Zum einen hat es, anders als ausnahmslos
+sämtliche fischertechnik-Elektronik vorher,
+keine Möglichkeit mehr, die Empfindlichkeit der Eingänge einzustellen. Man kann
+die Empfindlichkeit bei Bedarf höchstens
+verringern, indem man Widerstände
+zusammen mit den Sensoren verwendet.
+Eine Erhöhung der standardmäßigen
+Empfindlichkeit ist mit dem E-Tec allein
+
+
+
+
+(Minus ist die logische 1 und Plus ist
+die logische 0) als auch in positiver
+Logik (wie sie beim E-Tec verwendet
+wird) [7].
+
+ohne selbst gebastelte Elektronik aber
+leider nicht möglich.
+Der zweite Nachteil besteht in der Verarbeitungsgeschwindigkeit: Während man
+z. B. mit den Silberlingen problemlos
+Signale mit Frequenzen von 20 kHz produzieren und verarbeiten konnte, geht das
+beim E-Tec leider nicht mehr. Das
+eingebaute Programm für den winzigen
+Computer darin wartet nämlich absichtlich
+etwas, bevor es einem an den Eingängen
+anliegenden Signal „glaubt“, damit das
+unvermeidliche „Prellen“ angeschlossener
+Tastern, also das sehr rasche Schließen und
+Öffnen beim Aufeinanderprallen der
+Kontakte, die Steuerung des Modells nicht
+beeinträchtigt.
+Aber sogar dafür gibt es Abhilfe: Auf
+Anfrage kann man bei der Knobloch
+electronic GmbH, dem Entwickler und
+Hersteller des E-Tec-Moduls, eine „Ü18“Version bekommen. Die besitzt eine etwas
+geänderte Software und kann schneller
+wechselnde Eingangssignale verarbeiten.
+Dafür muss man, wenn Taster direkt an die
+Eingänge angeschlossen werden sollen,
+diese geeignet entprellen.
+
+Nachbauten
+Mehrere Fans haben Nachbauten von
+fischertechnik-Elektronik
+entwickelt,
+darunter:
+Thomas Habig hat für praktisch alle
+Silberlinge Nachbauten erstellt, sowohl
+in der ursprünglichen negativen Logik
+
+
+An derselben Stelle [7] findet sich auch
+eine holländische Beschreibung der Silberling-Nachbauten von Peter Krijnen.
+Peter Storck hat unter [8] Nachbauten
+von Elektronikbausteinen vom l-e1Lichtelektronik-Stab über Silberlinge
+bis hin zum E-Tec beschrieben.
+
+Quellen
+[1]
+
+Fischerwerke, l-e 1/2 Anleitungsbücher.
+
+[2]
+
+Wikipedia: Optische Bank.
+
+[3]
+
+Elektronisch gesteuerter Free-FallTower ohne Computing-Elemente,
+ft-Community.
+
+[4]
+
+ft-Datenbank
+
+[5]
+
+Niederländische ft-Fans-Website mit
+vielen ft-Anleitungen
+
+[6]
+
+Fischerwerke, Dokumente zum E-Tec
+Modul.
+
+[7]
+
+Elektronik-Nachbauten mehrerer
+fischertechnik-Fans, ft-Community.
+
+[8]
+
+Elektronik-Nachbauten von Peter
+Storck
+
+

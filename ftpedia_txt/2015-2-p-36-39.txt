@@ -1,0 +1,293 @@
+
+
+Sensoren
+
+Drucksensoren für fischertechnik
+Martin Westphal
+Manchmal möchte man bei pneumatischen Systemen wissen, wie der aktuelle Druck im System
+ist. Grund könnte zum Beispiel sein, dass man die alten Festo-Pneumatikteile verwendet, die
+nur einen bestimmten Maximaldruck vertragen. Oder man möchte den Kompressor nicht
+dauerhaft laufen lassen, aber auch keine mechanische Lösung verwenden. Von fischertechnik
+gibt es dazu keinen passenden Sensor, also hilft nur der Selbstbau einer kleinen Schaltung
+
+Druck messen – wie geht das?
+
+Sensoren für fischertechnik
+
+Druck wird in relativen und in absoluten
+Druck unterschieden. Der absolute Druck
+bezieht sich dabei immer auf das Vakuum,
+sein Nullpunkt ist also wirklich „Null“. Ein
+Beispiel hierzu wäre der Luftdruck.
+
+Natürlich könnte man eines der vielen
+erhältlichen,
+analogen
+Manometer
+verwenden. Diese gibt es für 5 bis 15 € z. B.
+bei Landefeld [2]. Aber wir wollen uns hier
+mit einem elektrischen Drucksensor
+beschäftigen, mit dem die Werte über ein
+Interface verarbeitet werden können.
+
+Ein relativer Druck (oder Differenzdruck)
+bezeichnet eine Beziehung zwischen zwei
+Volumina, bei uns also zwei Anschlüssen.
+Häufig wird dabei der Umgebungsdruck
+(Luftdruck) als Bezugsgröße verwendet.
+Ein Beispiel für einen Relativdruck wäre
+der Fülldruck eines Reifens: Füllt man bei
+einem Luftdruck von 1 bar einen Reifen mit
+einem relativen Druck von 2 bar, herrscht
+im Reifen ein absoluter Druck von 3 bar.
+In unserer Anwendung wollen wir immer
+den Über- oder Unterdruck unseres Systems
+in Bezug auf den Umgebungsdruck messen,
+also einen Relativdruck.
+Die gebräuchlichen Drucksensoren funktionieren alle nach einem ähnlichen Prinzip.
+Dabei wird, sehr vereinfacht dargestellt,
+eine flexible Membran zwischen zwei
+Anschlüssen (oder einem Anschluss und
+einem Loch) hin- und her gedrückt, auf der
+ein Dehnungssensor aufgebracht ist. Je
+nachdem, wie groß die Dehnung ist, verhält
+sich der Druckunterscheid zwischen den
+beiden Seiten der Membran und der Sensor
+liefert ein entsprechendes Signal.
+
+Es gibt verschiedenste Drucksensoren zu
+kaufen, viele sind aber recht teuer. Die
+MPX-Serie von Freescale ist mit 10 bis 15 €
+pro Sensor relativ preiswert und mit wenig
+Aufwand für fischertechnik verwendbar.
+Auf die Schlauchtüllen passen genau die
+weißen Magnetventil-Schlauchanschlüsse
+35328.
+Es gibt viele verschiedene MPXDrucksensoren. Ich empfehle, die Sensoren
+zu verwenden, die hinten mit „DP“ gekennzeichnet sind. Diese haben zwei Anschlüsse
+und können Differenzdruck messen. Sie
+funktionieren genauso wie die einfacheren
+Absolutdruck-Varianten (Kürzel „A“ oder
+„AP“), bei denen einfach der zweite
+Anschluss fehlt.
+Die beiden Anschlüsse sind insofern
+praktisch, als dass je ein Anschluss für
+positiven Druck (Überdruck) und der
+andere für negativen Druck (Vakuum)
+vorgesehen ist. So können wir – natürlich
+nacheinander – beides messen.
+
+Der blaue fischertechnik-Kompressor
+liefert etwa 0,8 bar. Somit sollte ein Sensor
+mindestens diesen Druck messen können,
+um für uns einsetzbar zu sein.
+
+Sensoren
+
+Widerstand und Kondensator verwendet
+werden.
+Folgende Schaltung müssen wir nach der
+Application Note aufbauen:
+
+Deshalb bietet sich vor allem der
+MPX5100DP an, da er im Bereich ±1 bar
+messen kann. Wer häufiger eine fremde
+Pumpe mit mehr Druck verwendet, kann
+natürlich auch einen MPX5500DP
+verwenden und kommt bis 5 bar. Den
+höheren Druckbereich erkauft man sich
+aber natürlich mit einer geringeren
+Empfindlichkeit. Die Sensoren sind in
+ihrem Gehäuse und ihrer Schaltung
+identisch. Ich werde im Beispiel den
+MPX5100DP verwenden.
+
+Platine für den MPX5100DP
+Die MPX5…DP benötigen für den Betrieb
+eine Spannungsversorgung von 5 V,
+fischertechnik arbeitet bekanntermaßen mit
+etwa 9 V. Eine Möglichkeit, an diese 5 V zu
+kommen, ist es, den I2C-Ausgang des TX
+oder TXT Controllers zu verwenden. Da der
+Drucksensor nur maximal 10 mA benötigt,
+schafft der Ausgang das auch ohne
+Probleme. Die Belegung der Stecker findet
+Ihr in [3].
+Ansonsten bietet sich die Verwendung
+eines 7805-Spannungsreglers an. Dessen
+Anschlussbelegung findet man im zugehörigen Datenblatt [4]. Auch für die Drucksensoren gibt es natürlich Datenblätter, in
+denen sich alle Details finden lassen [5].
+Außerdem gibt es eine „Application Note“
+vom Hersteller, die den Einsatz und mögliche Schaltungen noch detaillierter
+beschreibt [6].
+Außer der Spannungsversorgung brauchen
+wir noch jeweils einen Tiefpass am Ein- und
+Ausgang des Sensors. Mit einem Tiefpass
+werden alle Frequenzen, die größer als die
+sogenannte Grenzfrequenz sind, herausgefiltert und somit Rauschen und Ähnliches
+geglättet. Am Eingang des Sensors reicht
+hier laut Datenblatt ein Kondensator aus,
+am Ausgang sollte ein „echter“ Tiefpass aus
+
+
+Ich habe die Schaltung auf einem Stück
+Streifenrasterplatine gelötet. Um nicht am
+Sensor direkt löten zu müssen, kam außerdem eine Buchsenleiste zum Einsatz.
+Wir brauchen also folgende Teile:
+
+
+· 1 Drucksensor MPX5100DP
+· Evtl. 1 Spannungswandler, im Bild ein
+7805SRC
+· Ein Stück Streifenrasterplatine
+· 1 Widerstand 750 Ω
+· 1 Kondensator 0,33 µF
+· 1 Kondensator 1 µF
+· Ein Stück Buchsenleiste, Rastermaß
+2,54 mm, 6-polig
+
+
+
+
+· Kabel, Lötmaterial, ft-Stecker
+Jetzt können wir die Platine löten. Bei den
+Kondensatoren müssen wir darauf achten,
+dass die Minus-Seite Richtung GND, also
+Pin 2 des Sensors zeigt. Am Ende wird
+unsere Schaltung dann ungefähr so
+aussehen:
+
+verläuft laut Sensordatenblatt linear – wir
+können also eine sehr einfache Umrechnung zwischen Spannung und Druck
+erreichen.
+Der Umrechnungsfaktor zwischen der
+angezeigten Spannung und dem Druck ist
+leider bei jedem Sensor ein kleines bisschen
+unterschiedlich. Ich habe deshalb ein
+kalibriertes Druckmessgerät Greisinger
+GDH-200 parallel zum Sensor geschaltet
+und eine Tabelle mit Messwerten
+(Spannung und Anzeige in RoboPro)
+aufgenommen (Tabelle 1).
+Wenn man das Ganze in einem Diagramm
+darstellt, erkennt man sehr leicht, dass es
+sich um einen linearen Zusammenhang
+zwischen Druck und ausgegebener
+Spannung handelt:
+
+
+Anschluss an das Interface
+Die Schaltung wird wie folgt angeschlossen:
+An +5 V kommt die Spannungsversorgung,
+also entweder der 7805 oder der I2C-5VPin des Interfaces. GND und VOut werden
+an einen I-Eingang des Interfaces angeschlossen. Dieser wird in RoboPro auf
+„Analog 10V (Farbsensor)“ eingestellt.
+
+Das Programm
+In RoboPro bekommen wir jetzt das
+Spannungssignal des Sensors angezeigt.
+Wenn gar kein Druck vorhanden ist, sollte
+das in etwa Null sein. Der Bereich zwischen
+Null und dem Wert bei Vollausschlag
+
+Eingangsdruck aufgezeichnet
+
+Jetzt müssen wir noch den sogenannten
+Offset, also den Nullpunktfehler herausrechnen (einfach abziehen, 4. Spalte). Dann
+können wir eine einfache Umrechnung
+zwischen der Anzeige in RoboPro und dem
+Druck in mbar durchführen. Dafür müssen
+wir einen Faktor bestimmen, der sich aus
+=
+
+bestimmt (siehe die letzte Spalte der
+Tabelle). Aus den errechneten Werten wird
+ein Mittelwert gebildet. Das ist zwar nicht
+
+
+Sensoren
+
+hochgenau, für unsere Anwendung aber
+vollkommen ausreichend.
+
+Quellen
+
+Damit können wir jetzt ein RoboProProgramm schreiben, das zum Beispiel so
+aussehen könnte:
+
+[1]
+
+Wikipedia: Druck (Physik).
+
+[2]
+
+Landefeld-Homepage:
+http://www.landefeld.de.
+
+[3]
+
+Fox, Dirk: I²C mit TX und Robo Pro
+– Teil 1: Grundlagen.
+ft:pedia 2012-3, S.36
+
+[4]
+
+Texas Instruments: μA78xx Fixed
+Positive Voltage Regulators. Texas
+Instruments Incorporated, 2015.
+
+[5]
+
+Freescale Semiconductor: Integrated
+Silicon Pressure Sensor. Freescale
+Semiconductor, Inc., 2010.
+
+[6]
+
+Freescale Semiconductor: Noise
+Considerations for Integrated
+Pressure Sensors. Freescale
+Semiconductor, Incl., 2005.
+
+
+Druck/mbar Spannung/V Anzeige RoboPro Anzeige Offset-korrigiert Faktor
+0,186
+0,405
+0,630
+0,837
+1,090
+1022
+0,2288
+1,300
+1,530
+1,760
+1,870
+1816
+1668
+0,2398
+2,190
+2,400
+2,690
+2,880
+2820
+2672
+0,2245
+3,110
+3,320
+3,500
+3,820
+3800
+3652
+0,2190
+4,010
+4,220
+4,400
+1000
+4,750
+4576
+4428
+0,2258
+Mittelwert: 0,2276
+Tabelle 1: Messwerte
+
+

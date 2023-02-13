@@ -1,0 +1,385 @@
+
+
+Elektronik
+
+Arduino-Sensoren am TX(T)
+Stefan Fuss
+Arduinos sind sehr preiswerte Microcontroller, und es gibt für sie jede Menge passender
+Sensoren. Ob Feuchtesensor, Laserdiode oder Mini-Joystick – die ganze Welt der Arduinos
+lässt sich mit wenig Soft- und Hardwareaufwand in fischertechnik-Modelle integrieren.
+Arduinos sind klein, leicht zu verstehen und
+aus der Maker-Szene nicht mehr wegzudenken. Dazu gibt es ganze Kisten mit fertigem
+Zubehör. Nur noch zusammenstecken, Beispielprogramm und Sensor-Bibliothek
+herunterladen und schon geht es los.
+
+werden. Drückt man auf dem Joystick,
+schaltet zusätzlich noch ein Digitaleingang.
+Beide Funktionen eignen sich somit, um das
+Auslesen von Daten am Arduino zu testen.
+
+Den integrierten I²C-Bus des Arduino kann
+man frei programmieren, so dass man den
+Arduino auch als Bindeglied zum TX(T)
+benutzen kann. Coole Erweiterungen wie
+Laserdioden und Joysticks lassen sich so
+ruckzuck aus Robo Pro ansprechen.
+Soweit die Theorie. Die Dokumentation der
+I²C-Kommandos von Robo Pro ist allerdings nicht gerade vorbildlich. Arduino-alsI²C-Master-Tutorials gibt es viele, doch
+gute Slave-Tutorials sind rar. Zum Glück ist
+in [3] sehr gut der Slave-Betrieb des
+Arduino beschrieben und mit den Protokollbeschreibungen aus [1] und [2] werden auch
+plötzlich die Felder der Robo Pro-I²C-BusKommandos klar.
+
+
+Auf einem Steckbrett ist der Testaufbau
+schnell realisiert. Basis ist ein Arduino
+Nano, es eignen sich aber genauso gut alle
+anderen Arduino Typen.
+
+Der Laser aus dem „37-in-1 Sensor Kit“ von
+Elegoo kann über einen PWM-Ausgang des
+Arduinos in der Helligkeit gesteuert werden. In unserem Testaufbau (Abb. 1) werden wir mit dem Laser das Senden von
+Kommandos an den Arduino ausprobieren.
+
+Die meisten Arduinos arbeiten mit 5VLogikpegeln. Für den Anschluss an den
+TXT, der mit 3,3V-Logikpegeln arbeitet,
+werden deshalb Levelshifter benötigt. Im
+Testaufbau wurde der Levelshifter aus [4]
+eingesetzt. Wer es einfach mag, greift auf
+fertige Levelshifter aus dem Internet
+zurück. Für die Nutzung am TX wird kein
+Levelshifter benötigt.
+
+Im gleichen Set gibt es einen kleinen Joystick. Die X- und Y-Position können vom
+Arduino als analoge Werte ausgelesen
+
+Der Joystick wird an die Anschlüsse A0, A1
+und D13 angeschlossen, die Laserdiode
+wird mit D9 verbunden. Mit oder ohne
+
+Alle Mann ans Steckbrett
+
+
+
+Elektronik
+
+Levelshifter werden A4 und A5 mit SDA
+(Pin 5) und SCK (Pin 6) des TX(T) verbunden.
+
+In Robo Pro wird in den I2C-Bus-Kommandos die angesprochene I²C-Busadresse im
+Feld ‚Geräteadresse‘ angegeben.
+
+Wer möchte kann auch das Gehäuse und die
+Basisschaltung aus [5] übernehmen. Der
+DIP-Switch wird weggelassen, so dass hier
+ausreichend Platz entsteht, um Anschlüsse
+für die Sensoren aus dem Kit bereitzustellen.
+
+Verbotene Bereiche
+
+Von Herren und Dienern
+Der I²C-Bus ist hardwareseitig sehr einfach
+ausgelegt. Die Idee stammt aus den 80ern
+und sollte mit preiswerten Mitteln Microcontroller und Sensoren verbinden. Das
+Protokoll für den Datenaustausch ist fast
+vollständig über Software gelöst.
+Alle Geräte am Bus teilen sich eine
+Datenleitung. Um Chaos zu vermeiden darf
+deshalb immer nur ein Teilnehmer am Bus
+Daten senden. Die Vergabe der Senderechte
+ist einfach: ein Gerät am Bus- der Master –
+initiiert jeden Datentransfer. Alle anderen
+sind Slaves und müssen machen, was der
+Master ihnen vorgibt.
+In der Implementierung von fischertechnik
+ist der TX(T) immer der Master. Alle anderen Bausteine müssen deshalb Slaves sein.
+Auf dem TX(T) wird das Steuerprogramm
+des Modells ausgeführt, so dass der TX(T)
+auch jede Kommunikation durch sein
+Programm initiieren will. Ein Interruptverfahren, das den Slaves ermöglicht, spontan Daten zu senden, existiert in der fischertechnik-Welt nicht.
+Um mehrere Slaves an einem Bus betreiben
+zu können, erhält jeder Slave eine 7-BitAdresse. Da der Master jede Kommunikation auslöst, braucht er selbst keine
+eigene Adresse. Die I²C-Adresse ist bei den
+fertigen I²C-Breakoutboards entweder fest
+vorgegeben, oder kann in Maßen per
+Lötjumper eingestellt werden. Bei ganz
+modernen Bausteinen kann man sogar per
+Schreibkommando am I²C-Bus die Adresse
+des Bausteins festlegen. Beim Arduino wird
+die I²C-Adresse durch die Software gesetzt.
+
+Die I²C-Adresse eines Bausteins kann nicht
+frei im 7-Bit-Adressraum gewählt werden.
+Die jeweils kleinsten und höchsten 16
+Adressen (0x00 bis 0x0F sowie 0xF0 bis
+0xFF) sind für Sonderfunktionen reserviert
+und dürfen nicht verwendet werden.
+Daten senden
+Der einfachste Fall der Datenübertragung
+ist das Senden von Daten vom Master an
+den Slave. Der Master beginnt eine Schreibtransmission, indem er zunächst ein StartBit – oder auch Startkondition – gefolgt von
+einem Adressbyte sendet. Darauf folgen ein
+oder mehrere Datenbytes, die Transmission
+wird mit dem Stop-Bit oder auch StopKondition beendet (Abb. 2).
+
+
+Der Slave erkennt den Schreibzugriff daran,
+dass in der Adresse das achte Bit gesetzt ist
+und der Rest der Adresse seine I²C-BusAdresse darstellt. Nach der Adresse und
+jedem Datenbyte bestätigt der Slave den
+Empfang mit Acknowledge, beim letzten
+Byte findet kein Acknowledge statt.
+Die Interpretation der Datenbytes erfolgt
+durch den Slave. Für den Aufbau der Datenbytes gibt es beim I²C-Bus keine Vorgaben.
+Daten empfangen
+Der Lesezugriff funktioniert nach dem
+gleichen Prinzip: Der Master initiiert eine
+Transmission und sendet im einfachsten
+Fall die Adresse des Slaves. Dabei ist das
+siebte Bit der Adresse nicht gesetzt; der
+Slave erkennt daran einen Lesevorgang und
+beginnt nun seine Datenbytes zu senden
+(Abb. 3).
+
+
+
+
+Wie beim Schreiben gibt es beim Lesen
+keinen vorgegebenen Aufbau der Datenpakete.
+Register
+Ein Slave hat am I²C-Bus nur eine Adresse.
+Um komplexe Funktionen bereitzustellen,
+wird ein Slave häufig in mehrere Register
+unterteilt. Für die Registeradressierung
+wird beim Lesezyklus nach dem Adressbyte
+als nächstes Byte das Register gesendet.
+Erst danach sendet der Slave seine
+Datenbytes (Abb. 4).
+
+Ablaufzeit der Timeoutzeit des Masters gilt
+der Lesevorgang als gescheitert und der
+Slave darf seine Antwort nicht mehr
+senden.
+Der Slave kann den Timeout des Masters
+verhindern, indem er die Clock-Leitung auf
+Low zieht und damit jeglichen Datentransport blockiert. Der Master erkennt die
+Situation und wartet ggf. länger als die
+Timeoutzeit auf das Ergebnis.
+Dieser Vorgang wird clock stretching
+genannt. Um den Bus jedoch nicht zu
+blockieren – während des clock stretching
+kann auch kein Busteilnehmer Daten senden – sollten längere Messungen asynchron
+zur Datenübertragung gestaltet werden.
+Ansteuerung des Lasers
+
+an Adresse 0x10
+
+Das Lesen aus dem Register funktioniert
+nach der gleichen Idee. Der Master sendet
+das Adressbyte gefolgt von der Registernummer. Der angesprochene Slave sendet
+anschließend den Registerinhalt.
+
+Am TX(T) soll in ROBO Pro nun zunächst
+der Laser gesteuert werden. Der Arduino
+reagiert auf die Slave-Adresse 0x10. Über
+das Register 0x01 wird die Intensität des
+Lasers als ein Datenbyte geschrieben.
+Das ROBO Pro-Programm
+einfach:
+
+hierfür
+
+ist
+
+In ROBO Pro wird in den I2C-Bus-Kommandos das angesprochene Register im
+Feld ‚Geräteadresse‘ angegeben. Der Arduino kennt für die Registeradressierung keine
+getrennten Prozeduren. Das Register wird
+als normales Datenbyte empfangen und
+muss von der Software verarbeitet werden.
+Clock stretching
+Der angesprochene Slave benötigt bei
+einem Lesekommando u. U. etwas Zeit, um
+die angeforderten Daten zusammenzustellen. Ein Lesekommando an einen Register kann z. B. das Auslesen eines analogen
+Messwertes triggern. Der Messvorgang
+selbst benötigt jedoch Zeit, bevor der Slave
+die Antwort senden kann.
+Nachdem der Master seine Leseanforderung gesendet hat, wartet er einen kurzen
+Moment auf die Antwort des Slaves. Nach
+
+an die Laserdiode.
+
+Für das Beispiel wird nur ein ROBO ProKommando benötigt, das Adresse, Register
+und Datenwert überträgt.
+Zur Verarbeitung der Daten auf dem
+Arduino benötigen wir etwas mehr Code. In
+der Setup-Routine muss zunächst der I²CBus initialisiert werden. Außerdem muss
+der Ausgang D9 für die Laserdiode
+initialisiert werden (Listing 1):
+
+#include <Wire.h>
+#define MyI2CBusAddress 0x10
+#define LaserPin 9
+int Register = 0;
+
+Elektronik
+
+Transmission werden die Werte für den
+Taster, X und Y eingelesen:
+
+void setup() {
+Wire.begin(MyI2CBusAddress);
+Wire.onReceive(receiveEvent);
+PinMode( LaserPin, OUTPUT);
+}
+Listing 1: Initialisierung des I²C-Busses und des
+Ausgangs für die Laserdiode
+
+Der Arduino hört nun auf der I²C-Busadresse 0x10. Werden Daten an den
+Arduino gesendet, d. h. an den Slave mit der
+Adresse 0x10, so wird beim Arduino ein
+Interrupt ausgelöst.
+Die Ausführung von jedwedem Code in der
+loop wird sofort unterbrochen und es wird
+die Funktion receiveEvent aufgerufen.
+Diese Prozedur muss ebenfalls implementiert werden:
+void receiveEvent(int
+bytesReceived){
+Register = Wire.read();
+if (Register = 0x01) {
+analogWrite( LASERPin,
+Wire.read() );
+}
+}
+Listing 2: Setzen der Helligkeit der Laserdiode
+
+Der Arduino liest das Register und das
+Datenbyte aus und setzt die Helligkeit des
+Lasers. Damit der erste Testlauf erfolgen
+kann, wird noch das Hauptprogramm
+benötigt. Für den Test ist es ausreichend,
+den Prozessor einfach nur warten zu lassen:
+void loop() {
+delay(10000);
+}
+Listing 3: Das Hauptprogramm macht nichts
+
+Auslesen des Joysticks
+Der Joystick liefert drei Werte zurück: die
+X- und die Y-Position des Joysticks als
+Analogwert, den Taster als boolean.
+Der ROBO Pro-Beispielcode ist wieder einfach. Der Joystick soll über das Register
+0x02 angesprochen werden. Mit drei getrennten
+Lesekommandos
+in
+einer
+
+drei Byte gelesen
+
+Die drei Bytes Information für den Taster
+und die beiden Positionen sollen in einer
+Transmission ausgelesen werden. Dazu
+muss in ROBO Pro bei den ersten beiden
+Lesekommandos ‚Offen lassen‘ gewählt
+werden.
+Sollen nur ein oder zwei Byte gelesen
+werden, würde wiederum ein Kommando
+ausreichen. Im Feld ‚Länge der Daten‘ kann
+zwischen 8 und 16 Bit gewählt werden.
+Die Setupprozedur setzt wieder die
+Funktion der Pins und I²C-Busadresse,
+registriert aber zusätzlich die Prozedur
+receiveRequest:
+#include <Wire.h>
+#define MyI2CBusAddress 0x10
+#define LaserPin 9
+#define SWPin 13
+#define XPin 0
+#define YPin 1
+byte Register = 0;
+void setup() {
+Wire.begin(MyI2CBusAddress);
+Wire.onReceive(receiveEvent);
+Wire.onRequest(receiveRequest);
+
+
+
+
+PinMode( LaserPin, OUTPUT);
+PinMode(SW_Pin, INPUT);
+}
+Listing 4: In der Setuproutine muss nun zusätzlich
+receiveRequest definiert werden.
+
+diese vom Master kontrolliert wird. Die
+Antwort auf einen Request kann deshalb
+immer nur über ein Wire.write-Kommando ausgeführt werden.
+
+Die drei ROBO Pro-Kommandos lösen nun
+auf der Arduino-Seite zwei Events aus.
+Zunächst wird receiveEvent durch die
+Übertragung des Registers ausgelöst. Anschließend wird receiveRequest aufgerufen und der Arduino muss die Werte des
+Joysticks an den TX(T) zurücksenden.
+
+Im Beispielcode werden dazu die ausgelesenen Daten in einen Array geschrieben.
+Im write-Kommando wird dann das erzeugte Array übertragen.
+
+Bei der Laserdiode berücksichtigt bereits
+die Implementierung von receiveEvent
+die Verarbeitung der beiden Register, so
+dass die Funktion für den Joystick nicht
+angepasst werden muss.
+In der neuen Funktion receiveRequest
+müssen nun die Werte für den Taster und
+die beiden Positionen bestimmt und übertragen werden:
+void receiveRequest(){
+byte Result[2];
+if (Register = 0x02) {
+Result[0] =
+digitalRead(SWPin);
+Result[1] = analogRead(XPin);
+Result[2] = analogRead(YPin);
+Wire.write(result, 3 );
+}
+}
+Listing 5: In requestEvent werden
+die Messwerte übertragen
+
+Als Slave kennt der Arduino keine Kommandos zum Steuern einer Transmission, da
+
+
+Referenzen
+[1]
+
+Maike Thomas: Die Zweidrahtbussysteme I²C-Bus und SPI-Bus: Eigenschaften, Protokolle, Anwendungen
+im Vergleich der beiden Systeme.
+Seminararbeit, 2008.
+
+[2]
+
+rn-wissen: IIC, Inter-IC bzw. Inter
+Integrated Circuit Bus.
+
+[3]
+
+dsscircuits: Step by Step Guide on
+Making an I2C Slave Device with an
+Arduino.
+
+[4]
+
+Christian Bergschneider, Stefan
+Fuss: Ein universeller I²C-Adapter
+für den TX(T). ft:pedia 4/2016, S. 7279.
+
+[5]
+
+Christian Bergschneider, Stefan
+Fuss: Neopixel für alle. 1/2018.
+
+[6]
+
+Dirk Fox: I²C mit TX und Robo Pro –
+Teil 1: Grundlagen. ft:pedia 3/2012,
+S. 32-27.
+
+

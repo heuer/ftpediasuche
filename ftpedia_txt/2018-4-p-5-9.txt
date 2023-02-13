@@ -1,0 +1,138 @@
+
+Modell
+
+Modell
+
+Mini-Modelle (21): Kleine Radlader mit
+Knicklenkung
+Rüdiger Riedel
+Drei Minimodelle, in Englisch heißen sie Wheel Loader, natürlich mit beweglichen Schaufeln!
+
+Mini-Radlader
+Variante 1
+Radlader mit Knicklenkung habe ich in
+zwei Ausführungen gefunden: Fahrerkabine auf dem Vorderwagen wie hier im
+Modell dargestellt (selten), oder Fahrerkabine auf dem Hinterwagen, siehe
+Variante 2.
+
+
+Die Seilklemmstifte (107356) müssen mit
+etwas Kraft in die BS7,5 und die Klemmhülsen (35980) hinein gedrückt werden.
+
+
+
+Dieses Modell folgt dem Vorbild Zettelmeyer ZL 2002 (siehe Abb. 6) [1].
+
+Die Schaufel bleibt in allen Zwischenstellungen stehen. Die V-Achse 20 (31690)
+im Gelenk dient nur der optischen Verschönerung.
+
+
+
+
+
+von Volvo (siehe Abb. 11). Der Umbau ist
+schnell erledigt: Es entfallen ein Seilklemmstift (107356), die V-Achse 20
+(31690), die Klemmbuchse 5 (37679) und
+ein Baustein 5 (37237).
+
+Variante 1 [1]
+
+Variante 2
+
+
+Das Führerhaus rutscht jetzt auf den Hinterwagen und entspricht damit dem Vorbild
+
+
+Hinzu kommt ein Baustein 5 15x30
+(35049), auf dem jetzt das Führerhaus sitzt.
+
+Modell
+
+Mikro-Radlader
+Klein aber mit Gummireifen! Als Vorlage
+habe ich den Wheel Loader Hitachi ZW 75
+genommen (siehe Abb. 17).
+
+
+
+Die Schaufel kann gehoben und gesenkt
+werden.
+
+
+Beim Lenken schaut der Fahrer hier nicht in
+Fahrt- und Schaufelrichtung.
+
+
+
+
+
+
+Der Winkelstein 15° ist erforderlich, damit
+die Schaufel bis auf den Boden kommt.
+
+
+
+
+Radlader mit Knicklenkung
+Es gibt auch Radlader mit Allradlenkung
+und gemischte Varianten, doch die
+betrachten wir hier nicht.
+Ein großer Vorteil der Knicklenkung:
+Vorder- und Hinterräder laufen in der
+gleichen Spur. Das spart gerade bei Baufahrzeugen auf weichem Untergrund erheblich Energie. Die Lenkgeometrie bleibt
+gleich bei Vorwärts- und Rückwärtsfahrt.
+Wird die Knicklenkung im Stand betätigt,
+ergibt sich eine seitliche Verschwenkung
+der Schaufel, das hilft beim exakten
+Beladen.
+
+Modell
+
+abhebt, also welches Gewicht die Schwinge
+maximal anheben kann. Bei knickgelenkten
+Ladern ist der Wert bei eingeknickter
+Lenkung entscheidend, er ist geringer als
+bei gerader Ausrichtung.
+Zur Veranschaulichung habe ich in Abb. 18
+die Aufsetzpunkte der Räder jeder Seite
+miteinander verbunden und die Mittellinie
+dazwischen eingezeichnet. Man sieht das
+seitliche Ausschwenken der Ladeschaufel,
+wodurch deren Schwerpunkt von der
+Mittellinie zur Seite wandert.
+Ein Lenkeinschlag von z. B. 40° kann eine
+um 12 % geringere Kipplast bedeuten.
+Die Nutzlast darf nach EN 474-3 und ISO
+14397-1 in der Ladeschaufel von Radladern
+50 % der Kipplast nicht überschreiten,
+wenn der Radlader maximal eingelenkt ist.
+Beim Antrieb wird der Dieselmotor gerne
+durch ein hydrostatisches Getriebe ergänzt,
+doch dessen Funktion muss einem anderen
+Artikel vorbehalten bleiben.
+
+Quellen
+mit dem Lenkeinschlag
+
+[1]
+
+Mit freundlicher Genehmigung von
+Alexis H.; Zettelmeyer ZL 2002.
+
+Ein wichtiger Kennwert der Radlader ist die
+Kipplast. Dies ist nicht die Nutzlast,
+sondern sie gibt an, bei welcher Last auf der
+Schaufel der Hinterwagen vom Boden
+
+[2]
+
+Wikimedia: Bild eines Wheel
+Loaders.
+
+[3]
+
+Wikimedia: Bild eines Hitachi
+ZW75.
+
+
+

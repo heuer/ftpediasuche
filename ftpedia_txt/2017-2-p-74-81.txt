@@ -1,0 +1,268 @@
+
+
+Modell
+
+fischertechnik-Flipper
+Dirk Wölffel
+Einfache fischertechnik-Flipper finden sich schon in ganz frühen fischertechnik-Anleitungen,
+so zum Beispiel in den Club-Nachrichten 2/1971 oder im Modell-Anhang des Büchleins „Kleine
+Erfinder – große Ideen“ aus dem Jahr 1972. Aber erst mit den Kugelbahnen (Metallkugeln und
+Flexschienen) und den Magnetventilen wurde im Jahr 2012 die Konstruktion von Flippern mit
+echtem „Spielhallen-Flair“ möglich. Dass auch bei fischertechnik-Flippern noch viel Luft nach
+oben ist, zeigt das hier vorgestellte Modell.
+Der fischertechnik-Flipper ist ein Modell
+aus dem Baukasten ROBO TXT ElectroPneumatic (516186, Abb. 1). Auf verschiedenen Ausstellungen habe ich festgestellt,
+dass dieser Flipper immer ein Publikumsmagnet für Kinder und deren Eltern ist.
+
+Mein Anspruch war, den Spaßfaktor beim
+Spielen zu erhöhen. Dabei kam schließlich
+der fischertechnik 3D Printer (536624) zum
+Einsatz, und ich verwendete Treiber aus der
+ft:pedia – aber dazu später mehr.
+Das Ergebnis meiner Tüfteleien ist ein
+einem originalen Flipper nachempfundenes
+Modell: „Pirates of the Carribean“ (Abb. 2).
+
+
+Dennoch hat das Original-Modell ein paar
+Schwächen. Vor ungefähr einem Jahr habe
+ich mir daher überlegt, wie ich den Flipper
+verbessern könnte:
+∂ Optisch und vom Aufbau her sollte der
+fischertechnik-Flipper einem originalen
+ähneln.
+∂ Funktionen wie zum Beispiel Lichteffekte, Sound und ein Mehrspielermodus sollten implementiert werden.
+
+
+
+Modell
+
+Der Aufbau
+Der Flipper hat die Maße 60 cm x 29 cm x
+67 cm. Er besteht aus dem Grundkörper,
+dem Kopfaufbau und dem Gestell (Abb. 2).
+Der Bau der Grundplatte machte am Anfang
+Schwierigkeiten, denn ich benötigte sowohl
+für die Aufbauten als auch auf der Unterseite für die Füße Nuten zum Befestigen.
+Die Lösung war, zwei Grundplatten 500
+(32985) mit einem Klemmstift 15 x 4,1 mm
+(107356) zu verbinden (Abb. 3).
+
+Klemmstift (107356)
+
+Für das Grundgestell und die Beine habe ich
+MakerBeam XL-Profile (15 x 15 mm) verbaut. Statikbauteile erwiesen sich als zu instabil bei Bewegungen (Abb. 4).
+
+Fußhalter mit Bohrungen
+
+
+Als Lauffläche für die Kugeln habe ich eine
+Acrylglasscheibe verwendet. Alle Aufbauten des Flippers sind mit UHU 2-K Epoxidkleber auf der Acrylglasscheibe aufgeklebt
+(Abb. 7).
+
+MakerBeam XL-Profilen
+
+Jetzt trat allerdings ein neues Problem auf:
+Die verstellbaren Gelenkfüße sollten mit
+den Profilen verbunden werden. Meine
+Lösung war, einen Fußhalter zu konstruieren (Abb. 5) und diesen mit dem fischertechnik 3D-Printer auszudrucken (Abb. 6).
+
+
+Die Mechanik
+Da der Aufbau durch die Statikplatten 90 x
+180 mm (36321) erhöht ist, war es eine
+weitere Herausforderung, die Kugel aus der
+
+
+
+Flexschiene (grün) von unten nach oben in
+die Abschussrinne (blau) zu bekommen.
+Gelöst habe ich dieses Problem, indem ich
+die Kugel über einen Magnetkugelhalter
+(119850) mitnehmen lasse (Abb. 8).
+
+Mit Original-Bauteilen und verschiedenen
+3D-Druck-Varianten habe ich mich an die
+Lösung für das Abstreifen der Kugel herangetastet (Abb. 10). Das Zahnrad Z40 bleibt
+unterhalb der grünen Flexschiene stehen,
+gestoppt von einem Reedkontakt.
+
+
+Dieser ist über eine Rastkette auf einem
+Zahnrad Z40 (31022) montiert. Oben wird
+die Kugel über eine Schräge abgestreift
+(Abb. 9).
+
+
+Was sich im nachherein als sehr wartungsfreundlich erwiesen hat, sind die Statikplatten an den Außenseiten. Dadurch kommt
+man leichter an die verbauten Bauteile,
+Stecker und Kabel heran (Abb. 11).
+
+
+
+Modell
+
+Der Kopfaufbau
+
+Die Elektronik
+
+Der Kopfaufbau (Backbox) am Ende des
+Flippers ist 26 cm x 7 cm x 27 cm groß
+(Abb. 12). Vorne zu sehen sind die vier
+Serial 7-Segment Display von Sparkfun für
+die Punkteanzeige. Die Bicolor 8 x 8 LED
+Matrix von Adafruit habe ich für die Animation einer Laufschrift verwendet.
+
+Nun ein Blick in das Innere des Kopfaufbaus (Abb. 13). Zu sehen sind die weißen
+LED-Stripes (12 Volt) für die Hintergrundbeleuchtung der Frontscheibe. Die Helligkeit wird über einen Spannungswandler
+(mittig) geregelt. Die Ansteuerung der Segment- und der Matrixanzeigen erfolgt über
+einen I2C-Verteiler. Links und rechts sieht
+man die beiden Soundmodule (Abb. 14).
+
+
+
+Links und rechts davon sieht man die
+Ziergitter für die dahinter befindlichen
+Soundmodule. Auf dem Kopfteil habe ich
+ein Blaulicht befestigt, bestehend aus vier
+LEDs.
+
+Um die Segment- und Matrixanzeigen alle
+auf die gleiche Bauhöhe zu bringen, habe
+ich mir Halterungen konstruiert und mit
+dem 3D-Printer ausgedruckt (Abb. 15).
+
+
+Das Kopfteil kann schnell montiert bzw.
+demontiert werden, indem man es einfach
+von hinten aufschiebt. Die ElektronikKomponenten sind über einen Wannenstecker (mittig rechts) miteinander verbunden (Abb. 16).
+
+
+
+
+
+Das Spielfeld
+Das Spielfeld unterscheidet sich in der
+Größe nicht wesentlich von dem originalen
+fischertechnik-Flipper. Links und rechts
+sind jeweils zwei Fototransistoren und oben
+ist ein Farbsensor verbaut (Abb. 19).
+
+
+Auf der Rückseite seht ihr die Ansteuerung
+des Flippers über zwei ROBO TX Controller (500995). Die Ausgänge der Controller haben nicht für die komplette Ansteuerung des Flippers ausgereicht, daher
+hatte ich mich für die Verwendung von I 2CKomponenten entschieden (Abb. 17).
+
+
+Mittig seht ihr ein Tor, welches aus einer
+Bauplatte 30 x 30 mm (38259) besteht und
+über zwei Stecknadeln drehend gelagert ist.
+Über einen kleinen Neodym-Magneten an
+der Bauplatte und einen Reedkontakt wird
+die Drehung in Punkte umgerechnet (Abb.
+20).
+
+
+Damit der Flipper möglichst authentisch
+funktioniert, habe ich einen Tilt Reedkontakt mit einem Magnetpendel konstruiert
+(Abb. 18).
+
+
+Um den Flipper mit mehr Lichteffekten auszustatten wurden farbige Leuchtmittel und
+innen ein RGB-LED Stripe (12 Volt)
+
+verbaut (Abb. 21). Damit lassen sich viele
+verschiedene Farben erzeugen.
+
+Modell
+
+4/2016 modifiziert. Damit kann ich nun
+mehrere Displays hintereinander ansteuern
+und auch Laufschriften ausgeben. Dazu
+habe ich mir ein Excel-Programm erstellt,
+mit dem ich ein Schriftzeichen über die BiColor 8x8-Matrixanzeigen wandern lasse
+(Abb. 22). Das Bitmuster speichere ich
+dann in einer *.csv-Datei ab.
+
+Das Finish
+
+Die Software
+Das Ansteuern des Flippers erfolgt über die
+ROBO Pro-Software. Da viele I2C-Komponenten verbaut worden sind, war die Vergabe der Hex-Adressen und deren Ansteuerung eine große Herausforderung. Das
+ROBO Pro-Programm besitzt 92 (!) Unterprogramme – viel mehr als in meinen vorherigen Projekten.
+
+Da der Flipper möglichst authentisch
+werden sollte, habe ich ihn mit ein paar
+Gimmicks versehen. Für die beleuchtete
+Frontscheibe habe ich opakes Acrylglas
+verwendet. Darauf wurde Backlight-Folie
+von www.wir-machen-druck.de geklebt.
+Die Frontscheibe wird von hinten beleuchtet, wie beim Original-Flipper (Abb. 23).
+Den Totenkopf habe ich bei www.thingiverse.com gefunden und ebenfalls mit dem
+3D-Printer ausgedruckt (Abb. 24).
+
+Für das Ansteuern der vier Serial 7-Segmet
+Displays habe ich den LED-S7SD-Treiber
+v1.2 von Dirk Fox aus der ft:pedia 4/2016
+eingesetzt.
+Um dem Original näher zu kommen wurde
+ein Mehrspielermodus programmiert. Somit
+erfolgt das abwechselnde Zählen der
+Kugeln und Abspeichern der Punkte pro
+Spieler über Listenelemente.
+
+
+
+Für die Bi-Color 8 x 8-Matrixanzeige habe
+ich den ftpiled Treiber von Christian Bergschneider & Stefan Fuss aus der 
+
+
+
+
+Um noch mehr „Piratenfeeling“ zu bekommen wurde der Flipper komplett mit verschiedenen Wallpaper-Motiven aus dem
+Internet versehen. Diese habe ich mit CorelDraw X5 ausgeschnitten, vermessen und
+auf selbstklebende Folie aufgedruckt (Abb.
+25).
+
+Fazit
+Der Flipper soll euch zeigen, wie ihr mit
+verschiedenen Ideen an ein Modell herangehen könnt. Hierbei ist es mir wichtig zu
+zeigen, dass ein 3D-Drucker auch eine
+wertvolle Hilfe sein und eure Kreativität
+und euren Einfallsreichtum fördern kann.
+Die Halter zum Nachdrucken mit dem
+fischertechnik 3D Printer findet ihr im
+Downloadbereich der ft:c.
+Ein Video des Flippers findet ihr auf
+YouTube.
+
+Referenzen
+
+
+
+[1]
+
+Christian Bergschneider, Stefan
+Fuss: ftpiLED, LED-Backpack im
+Retrodesign, ft:pedia 4/2016, S.8083.
+
+[2]
+
+Dirk Fox: I²C mit dem TX(T) – Teil
+14: LED-Display (2). 4/2016, S. 84-88.
+
+[3]
+
+Sparkfun: Serial 7 Segment Display
+Datasheet. Github.
+
+[4]
+
+Adafruit: Bi-Color 8x8 Matrix.
+learn.adafruit.com
+
+
+Modell
+
+
+

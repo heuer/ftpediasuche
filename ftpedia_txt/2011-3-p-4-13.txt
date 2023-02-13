@@ -1,0 +1,719 @@
+
+
+Schaltungstechnik
+
+Motorsteuerungen (Teil 3)
+Stefan Falk
+In der ft:pedia-Ausgabe 2/2011 sind wir bis zu einer Schaltung gelangt, mit der wir einen
+Motor bequem per Taster in beide Richtungen laufen lassen können, und die an den Endlagen
+automatisch anhält. Heute wollen wir eine Variante kennen lernen, die mit weniger Leitungen
+auskommt, und wir wollen einen Motor langsam auslaufen lassen, anstatt abrupt zu stoppen.
+Wir erinnern uns: Schaltung 1 bietet uns
+getrennte Steuertaster für Links- und
+Rechtslauf des Motors, Endlagentaster (rot
+eingezeichnet) und eine Kurzschlussbremse:
+
+anders. Endlagentaster und Motor befinden
+sich beim zu steuernden Modell (oberhalb
+der blauen Linie) – während die Steuerung
+sich ja oft woanders befinden soll (hier
+unterhalb der blauen Linie eingezeichnet).
+
+Schaltung 1: Steuerung mit Endlagentastern
+und Kurzschlussbremse
+
+Wir erkennen, dass wir sechs Leitungen
+zwischen Steuerung und Modell benötigen,
+nur um einen Motor komfortabel mit Endlagenabschaltung und Kurzschlussbremse
+steuern können. Wenn wir noch mehr
+Motoren im Modell von außerhalb steuern
+möchten, brauchen wir zwar die beiden
+Stromzufuhrleitungen (in Schaltung 2 die
+linken beiden Leitungen) nicht mehrfach,
+aber immer noch benötigen wir für jeden
+zusätzlich zu steuernden Motor weitere vier
+Leitungen – bei zwei Motoren also schon
+2 · 4 + 2 = 10, bei drei Motoren sogar
+3 · 4 + 2 = 14 Leitungen. Ob das auch mit
+weniger Leitungen geht?
+
+Weniger Leitungen
+Wir wollen diese Schaltung einmal so
+zeichnen, dass wir die räumliche Lage der
+einzelnen Teile besser erkennen können:
+
+Eine Möglichkeit ist, auf die Kurzschlussbremse zu verzichten. Damit könnten wir
+die Arbeitskontakte der Endlagentaster
+unbeschaltet lassen und somit die linke
+Leitung in Schaltung 2 weglassen, was uns
+zu Schaltung 3 führt:
+
+Schaltung 2: Räumliche Lage der Elemente
+
+Überzeugt euch bitte selbst davon, dass die
+Schaltungen 1 und 2 völlig identisch sind –
+lediglich die Anordnung der Elemente ist
+
+
+Schaltungstechnik
+
+bewegen würde. Wenn man nun etwas
+hätte, was Strom nur in eine Richtung
+durchlässt, in die andere aber sperrt…
+
+Willkommen in der Welt der
+Elektronik
+
+Schaltung 3: Verzicht auf die
+Kurzschlussbremse spart eine Leitung
+
+Das spart uns insgesamt eine Leitung, egal
+wie viele Motoren wir ansteuern. Für
+einen, zwei bzw. drei Motoren bräuchten
+wir aber immer noch fünf, neun bzw. 13
+Leitungen. Können wir nicht mehr herausholen?
+
+Zurücktreten bitte!
+Wenn man in einer Überlegung an einem
+Punkt angekommen ist, wie wir hier, ist es
+oftmals überraschend hilfreich, nochmal
+einen Schritt zurück zu gehen und das
+Problem „von weitem“ zu betrachten. Mit
+diesem „Blick aus 10.000 m Höhe“ sieht
+man manchmal Lösungswege, die einem
+bei zu naher Betrachtung verborgen blieben
+– weil man zu sehr die Details sieht, dabei
+aber das „große Ganze“ aus den Augen
+verliert.
+
+Bisher haben wir uns mit einfachen elektrischen Schaltungen beschäftigt. Das war
+Elektrik. Dazu kamen mechanisch betätigte
+Taster – wir sind mitten in der Elektromechanik (zu der wir noch viel Interessantes in der ft:pedia erleben werden). Nun
+gehen wir noch einen Schritt weiter und
+befassen uns etwas mit einfacher
+Elektronik – der Welt des bewegungs- und
+berührungslosen Schaltens!
+Für unsere Zwecke gibt es nämlich ein
+wunderbares kleines elektronisches Bauteil
+namens Diode [1]. Das ist ein winziges
+Teil mit zwei Anschlüssen, wie es Abb. 1
+zeigt:
+
+Also, was genau war noch gleich die
+Aufgabe, die wir mit den Endlagenschaltern lösen wollen? Dazu zitieren wir
+aus ft:pedia 2/2011 die entsprechende
+Forderung an unser damaliges Modell:
+„Am Ende der Schienen soll der Motor
+automatisch stoppen. Eine Bewegung soll
+dann nur noch in die andere Richtung
+möglich sein.“
+Wenn die Bewegung nur noch in „die
+andere“ Richtung möglich sein soll, dann
+heißt das doch, dass der Strom durch den
+Motor nur noch in eine Richtung fließen
+darf, aber nicht mehr in die Richtung, die
+das Modell über die Endlagentaster hinaus
+
+
+Dioden haben eine fantastische Eigenschaft: Sie lassen den elektrischen Strom
+nur in eine Richtung durch und sperren ihn
+in der anderen Richtung – ganz ohne dass
+sich da ein mechanischer Schalter bewegen
+müsste, einfach so! Wie das genau
+funktioniert, können wir im Rahmen dieses
+
+
+Artikels zwar nicht genauer erklären – wer
+mag, suche mal im Internet nach dem
+Begriff Halbleiter, dazu muss man aber
+schon etwas mehr von Physik verstehen.
+Wir können aber überlegen, was wir mit
+einer solchen Diode machen können, und
+wo sie uns in unserer Schaltung helfen
+kann.
+Damit wir Schaltungen mit Dioden zeichnen können, brauchen wir natürlich auch
+ein Schaltzeichen dafür. Das sieht so aus:
+
+Schaltzeichen einer Diode
+
+Früher zeichnete man die „Pfeilspitze“, die
+die Durchlassrichtung anzeigt, ausgefüllt,
+heute leer – auf den in den 1970er Jahren
+hergestellten
+fischertechnik-Elektronikbausteinen (den „Silberlingen“) findet ihr
+noch das ältere, ausgefüllte Schaltzeichen.
+In diesem Artikel verwenden wir natürlich
+das aktuelle Symbol.
+
+Elektronik-Grundbaustein h4G von 1972
+
+Die Sperrlinie des Schaltzeichens ist auch
+auf der echten Diode angedeutet: An einem
+ihrer Enden trägt sie einen weißen Ring –
+in Abb. 1 rechts. Die Diode in Abb. 1 lässt
+den Strom also von Plus nach Minus von
+links nach rechts durch, während sie ihn
+sperrt, wenn rechts Plus und links Minus
+angelegt wird.
+
+Die in Abb. 2 eingezeichneten „+“ und „-“
+stellen dar, in welche Richtung die Diode
+den Strom durchlässt – so soll es ja auch
+der Pfeil im Schaltbild darstellen. In die
+andere Richtung kommt der Strom nicht
+hindurch (deshalb der senkrechte Strich im
+Schaltbild).
+Dioden haben noch etwas Schönes an sich:
+Sie sind spottbillig. Es gibt sie für wenige
+Cent bei den einschlägigen Elektronikversendern – einige Quellen sind am Ende
+dieses Artikels aufgeführt [2, 3]. Wenn ihr
+noch keine Dioden habt, bestellt also am
+besten gleich mehrere davon, denn sonst
+sind die Versandkosten viel höher als die
+Kosten für die Dioden selbst. Für den Preis
+eines fischertechnik-Tasters (der ja
+aufwändig von Hand zusammengesetzt
+werden muss) bekommt man viele Dioden
+(die in billiger Massenproduktion automatisch hergestellt werden können).
+
+Wie man mit Dioden umgeht
+Wenn ihr eure Dioden dann in Händen
+habt, müsst ihr sie erst noch mit fischertechnik-Steckern versehen. Wichtig: Dabei
+müsst ihr sehr vorsichtig sein, damit ihr die
+Diode nicht beschädigt! Es ist kein
+Problem, die fischertechnik-Stecker auf die
+Drahtenden zu schrauben. Es ist auch kein
+Problem, die Drähte mit einer Zange oder
+einer kräftigen Schere vorsichtig zu kürzen.
+Wir werden die Dioden aber meistens so
+verwenden, dass ihre Drähte senkrecht
+abgeknickt werden müssen, und beim
+Abknicken muss man aufpassen.
+Ganz wichtig ist: Niemals die Drähte direkt
+an der Diode selbst abknicken! Das Innere
+der Diode könnte damit beschädigt und die
+Diode unbrauchbar werden. Deshalb
+verwendet zum Abknicken bitte immer
+eine Zange, wie es Abb. 4 zeigt.
+Setzt also die Zange so an, dass zwischen
+Diode und Zange noch etwas Platz ist. Die
+Zange darf nur den Draht selbst festhalten,
+aber nicht an der Diode anliegen. Dann
+haltet die Zange fest und knickt den Draht
+
+an der anderen Seite (da wo die Diode
+nicht ist) ab. So kommt ihr zu sauber abgeknickten Drähten und immer noch intakten
+Dioden.
+
+Schaltungstechnik
+
+viel Spaß mit Dioden haben. Fangen wir
+also gleich damit an!
+
+Erste Experimente mit Dioden
+Um unsere Diode kennen zu lernen, bauen
+wir zunächst Schaltung 4 auf:
+
+Schaltung 4: Stromversorgung
+eines Motors durch eine Diode hindurch
+
+
+Noch eine wichtige Warnung: Die für
+unsere fischertechnik-Modelle geeigneten
+Dioden tragen eine der Typbezeichnungen
+1N4001 bis 1N4007. Sie vertragen problemlos die 9 V Versorgungsspannung und
+mindestens 1 A Stromstärke und genügen
+damit für einen fischertechnik-Motor.
+Die Dioden mit den größeren Nummern in
+der Typbezeichnung verkraften höhere
+Ströme, wären also grundsätzlich zu
+bevorzugen. Ihr dürft aber niemals eine
+solche Diode etwa in eine 230 V-Steckdose
+stecken! Das wäre genauso lebensgefährlich wie wenn ihr eine fischertechnik-Achse oder einen Schraubendreher
+in die Steckdose stecken würdet! Versucht
+es nicht! Der Strom aus der Steckdose ist
+stark genug, einen Menschen zu töten –
+nicht umsonst gibt es für unsere
+fischertechnik-Modelle Netzgeräte, die die
+gefährlichen 230 V aus der Steckdose in
+harmlose 9 V transformieren.
+Verwendet Dioden auch bitte niemals ohne
+Verbraucher (Motor) – sie würden wie ein
+Kurzschluss wirken und sehr heiß werden!
+Innerhalb einer fischertechnik-Schaltung,
+die mit den üblichen 9 V Versorgungsspannung betrieben wird, werden wir aber
+
+Dann beobachtet, was passiert, wenn ihr
+die Diode andersherum einbaut, oder wenn
+ihr die Anschlüsse am Netzteil vertauscht.
+ihr werdet feststellen: So wie in Schaltung 4 gezeigt, läuft der Motor, so wie in
+Schaltung 5 aber bewegt er sich nicht:
+
+Schaltung 5: In Sperrrichtung der Diode
+kann kein Strom fließen
+
+Die Diode kann also – ähnlich wie ein
+Taster – Strom durchlassen oder sperren.
+Außerdem könnt ihr mit dieser Schaltung
+auch feststellen, wo bei eurem Netzgerät
+die Plus- und Minuspole liegen: Einfach
+schauen, ob der Motor läuft (oder eine
+Lampe leuchtet) und wie herum die Diode
+angeschlossen ist.
+Mit diesem kleinen elektronischen Bauelement kann man nicht nur – wie wir
+gleich sehen werden – fischertechnikMotoren steuern, sondern es gab sogar
+schon 1968 einen programmierbaren
+Computer, dessen Rechenfunktionen ausschließlich mit (vielen) Dioden realisiert
+wurden [4, 5].
+Damit wir erkennen, wie uns Dioden bei
+unserem Problem helfen, die Anzahl der
+notwendigen Leitungen zu reduzieren,
+
+
+
+machen wir noch einen kleinen Abstecher
+in das Gebiet der Logikschaltungen:
+
+Mehrere Schalter kombinieren
+Mitunter ist es nützlich, mehrere Schalter
+an derselben Stelle im Schaltbild zu
+kombinieren. Betrachten wir zunächst die
+Serienschaltung – hier werden einfach zwei
+Taster oder Schalter hintereinander
+geschaltet:
+
+(er läuft auch, wenn beide Taster gleichzeitig gedrückt werden).
+Probiert beide Schaltungsarten ruhig
+ausgiebig und überlegt, ob euch noch
+weitere Situationen einfallen, wo man sie
+einsetzen kann!
+
+Taster und Diode kombiniert
+Jetzt können wir den nächsten Schritt auf
+unserem Weg zum Ziel gehen: Wir
+ersetzen einen der Taster in Schaltung 7
+durch eine Diode und betrachten genau,
+was passiert:
+
+Schaltung 6: Serienschaltung
+
+Der Motor läuft nur, wenn beide Taster
+gleichzeitig den Kontakt herstellen. Das
+wird z. B. verwendet, wenn der Motor eine
+Maschine antreibt und nur laufen darf,
+wenn der Mensch, der die Maschine
+betätigt, mit beiden Händen zwei entfernt
+angebrachte Taster drücken muss. Dadurch
+wird verhindert, dass der Mensch etwa mit
+einer Hand in die Maschine gerät und sich
+verletzt – eine wichtige Sache, um Unfälle
+zu verhüten! Solche Anwendungsfälle
+werden wir in einer späteren ft:pediaAusgabe noch ausführlich darstellen.
+Eine andere Kombinationsmöglichkeit ist
+die Parallelschaltung – beide Taster
+werden mit beiden Anschlüssen gekoppelt:
+
+Schaltung 8: Diode in Durchgangsrichtung
+und Taster parallel geschaltet
+
+Wenn ihr die Stromversorgung so anschließt, wird der Strom immer fließen –
+ganz egal ob ihr den Taster drückt oder
+nicht. Denn der Strom kann vom Pluspol
+des Netzgerätes durch die Diode durch –
+auch wenn der Taster losgelassen wurde –
+und zum Motor gelangen.
+Vertauschen wir aber die Anschlüsse am
+Netzgerät, ändern sich die Verhältnisse:
+Der Strom kommt bis zur Diode – und wird
+von ihr gesperrt. Ebenso kann er nicht
+durch den geöffneten Taster fließen. Der
+Motor läuft also nicht.
+
+Schaltung 7: Parallelschaltung
+
+Hier genügt es, nur einen der Taster zu
+betätigen – egal welchen! Der Motor läuft,
+wenn mindestens ein Taster betätigt wurde
+
+Schaltung 9: Diode in Sperrrichtung und
+Taster parallel geschaltet
+
+Drücken wir aber den Taster, wird die
+sperrende Diode einfach umgangen und der
+Motor läuft:
+
+Schaltung 10: Umgehung der Sperrung
+
+Praktische Tipps
+
+Schaltungstechnik
+
+können wir die Diode auch einfach
+zwischen Arbeits- und Ruhekontakt
+schalten und haben damit weniger stark
+abgeknickte Drähte. Schaltung 11 und
+
+Schaltung 11: Diode an Arbeitsund Ruhekontakt
+
+Die Diode kann übrigens ganz einfach
+parallel zum Taster geschaltet werden,
+indem sie direkt am Taster angebracht
+wird. Das geht auf zwei Arten:
+Entweder, wir richten uns strikt nach
+unseren bisherigen Schaltbildern und
+stecken die beiden Stecker der Diode also
+in die von den Kabeln kommenden Stecker
+am Zentral- und Ruhekontakt:
+
+des fischertechnik-Tasters
+
+In der hier gezeigten unbetätigten Tasterstellung lässt die Diode also den Strom
+durch – aber nur in eine Richtung. Bei
+betätigtem Taster stellt dieser den Stromfluss sicher. Der Effekt ist also derselbe
+wie in Schaltung 8, aber die Diodendrähte
+müssen nicht so weit gebogen werden.
+
+Genauso geht es natürlich, wenn der Taster
+beim Loslassen sperren und beim Drücken
+Kontakt herstellen soll, also Zentral- und
+Arbeitskontakt verwendet werden müssen.
+Ihr seht aber, dass die Diodenstecker dann
+sehr nahe beieinander liegen und die
+Drähte der Diode stark abgeknickt werden
+müssen. Aber die Diode brauchen wir ja
+zur Überbrückung des Tasters nur dann,
+wenn der Taster nicht sowieso schon
+geschlossen ist. Bei geschlossenem Taster
+ist die Diode ja überflüssig, nur bei
+geöffnetem soll sie den Strom in die
+richtige Richtung durchlassen. Deshalb
+
+Endspurt!
+Unsere ursprüngliche Forderung lautete ja,
+dass der Motor beim Erreichen des Endlagentasters abgeschaltet werden, aber in
+die andere Richtung weiterlaufen können
+soll. Nun, genau so etwas haben wir ja
+gerade gebaut! Nun wollen wir es
+anwenden. Dazu greifen wir zunächst
+nochmal auf die Steuerungsschaltung ohne
+Endlagentaster zurück, wie wir sie in
+ft:pedia 1/2011 entwickelt hatten:
+
+
+
+Schaltung 13 gehört zur Steuereinheit, alles
+rechts davon – also die Endlagentaster, die
+Dioden und der Motor – befinden sich im
+Modell.
+
+Schaltung 12: Die ursprüngliche Steuerung
+
+Die ergänzen wir nun so, dass eine der
+Leitungen zum Motor hin von den (rot
+eingezeichneten) Endlagentastern einfach
+unterbrochen wird:
+
+Schaltung 13: Steuerung mit Endlagentastern
+
+Die blaue Linie wollen wir für den Augenblick noch nicht beachten, sondern uns auf
+die Schaltung konzentrieren. Wir haben
+zunächst die normale links/rechts-Steuerung vor uns. Beide Endlagentaster sind in
+der Lage, die Stromzufuhr zum Motor zu
+unterbrechen – der Motor soll ja auch
+weiterhin anhalten, wenn einer der
+Endlagentaster gedrückt ist. Aber jeder der
+beiden Endlagentaster wird von einer
+Diode überbrückt, und zwar jeweils in
+einer anderen Stromrichtung! Schaut genau
+hin: die beiden Dioden sind nicht in
+derselben Stromrichtung verbaut.
+Jeder der beiden Endlagentaster kann also
+in die andere Stromrichtung einfach überbrückt werden. Dadurch kann der Motor
+immer noch, wie gefordert, wieder zurück
+in die andere Richtung drehen. Jeder Endlagentaster sperrt also nur genau die
+Stromrichtung, deren korrespondierende
+Motordrehrichtung gesperrt werden muss,
+wird aber in der anderen Strom- und damit
+Drehrichtung von der jeweiligen Diode
+überbrückt.
+Jetzt schauen wir uns wieder an, welche
+Bauelemente wo im Modell verbaut sind.
+Alles links von der blauen Linie in
+
+Zwischen Steuerung und Modell kommen
+wir jetzt mit nur zwei Leitungen aus! Wir
+haben zwar die Kurzschlussbremse nicht
+mehr, dafür sparen wir drei Leitungen
+(siehe Schaltung 3). Und für jeden weiteren
+zu steuernden Motor benötigen wir nur
+jeweils zwei zusätzliche Leitungen!
+Es ist übrigens völlig egal, ob ihr wie in
+Schaltung 13 gezeigt Endschalter 1, Endschalter 2 und den Motor in Serie schaltet,
+oder eine der Taster/Dioden-Kombinationen in die obere Leitung vom Motor in
+Schaltung 13 einsetzt, also Endschalter 1,
+dann erst den Motor, und dann Endschalter
+2 in Serie schaltet:
+
+Schaltung 14: Alternative Anordnungen
+mit derselben Wirkung
+
+Achtet nur darauf, dass dann beide Dioden
+entweder zum Motor hin oder beide vom
+Motor weg zeigen, damit immer eine
+Stromrichtung zugelassen und die andere
+gesperrt wird (überlegt, was passiert, wenn
+ihr eine der Dioden andersherum einbaut).
+Wunderbar! Wir haben – bis auf die
+fehlende Kurzschlussbremse – denselben
+Effekt erreicht wie vorher: Wir können den
+Motor komfortabel steuern, er wird zuverlässig an den Enden stoppen, kann aber
+trotzdem noch in die andere Richtung
+laufen. Und all das mit genau so wenig
+Leitungen (nämlich nur zwei) wie wir
+
+benötigen würden, wenn wir den Motor
+einfach direkt an eine Stromquelle
+anschließen würden – besser geht’s nicht.
+
+Fehlersuche
+Auch wenn wir unser Modell grundsätzlich
+nach Schaltung 13 oder 14 aufbauen,
+könnten uns allerdings leicht einige Fehler
+unterlaufen, die man nicht gleich erkennt,
+etwa:
+Verwechslung der Pole der Stromquelle
+falsch herum angeschlossener Motor
+Verwechslung der Endlagentaster
+Verwechslung von Arbeits- und Ruhekontakt
+eine oder beide Dioden falsch herum
+angeschlossen
+Mögliche Folgen solcher Fehler wären:
+Der Motor läuft nie.
+Der Motor läuft immer in die falsche
+Richtung.
+Der Motor hält an der Endlage nicht an,
+es sei denn, wir betätigen von Hand den
+anderen Endlagentaster.
+Insbesondere der letzte Fehler könnte unser
+Modell oder ein Bauteil gefährden. Bei den
+ersten Versuchen empfiehlt es sich deshalb,
+den Strom schnell abschalten zu können
+oder die Schaltung noch außerhalb des
+Modells zu testen.
+Eine ganz hervorragende Übung ist es,
+wenn ihr die jeweiligen Schaltungsfehler
+einmal als vollständiges Schaltbild zeichnet
+und überlegt – oder ausprobiert – welcher
+Schaltungsfehler
+jeweils
+welches
+Fehlverhalten im Modell zur Folge hätte.
+Dann könnt ihr nämlich auch umgekehrt
+von einer festgestellten Fehlfunktion auf
+den Schaltungsfehler rückschließen! Je
+mehr Übung ihr in solchen Dingen entwickelt, desto schneller entlarvt und
+korrigiert ihr Schaltungsfehler – ein äußerst
+lohnendes Ziel also!
+
+Schaltungstechnik
+
+Langsames Auslaufen eines
+Motors
+Da wir ja nun keine Kurzschlussbremse
+mehr haben, könnten wir auch noch etwas
+weiter gehen: Wenn ein abgeschalteter
+Motor etwas Schweres antreibt, wollen wir
+vielleicht gar nicht, dass er abrupt anhält.
+Lieber wäre es uns dann, er würde sanft
+auslaufen.
+Auch hierfür kann uns Elektronik nützlich
+sein. Ein anderes elektronisches Bauelement, der Kondensator, speichert ähnlich
+wie ein Akku elektrische Ladung und
+Energie. Er hat nicht so viel Kapazität wie
+ein Akku (wir wollen ja unseren Motor
+auch nicht stundenlang auslaufen lassen),
+dafür kann er viel schneller aufgeladen
+werden. Das Schaltzeichen für einen
+Kondensator sieht fast genauso aus, wie er
+tatsächlich aufgebaut ist: Einfach zwei
+Metallplatten, die sich gegenüber stehen:
+
+einfachen Kondensators
+
+Viele Informationen über Kondensatoren
+finden sich unter [5]. Dort sieht man auch,
+dass es verschiedene Arten und Bauweisen
+von Kondensatoren gibt. Für unsere
+Motorsteuerungen brauchen wir Kondensatoren mit genug Kapazität, deshalb
+verwenden wir hier Elektrolyt-Kondensatoren. Der Nachteil ist allerdings, dass
+man sie nur richtig herum gepolt anschließen darf. Das drückt sich auch in
+ihrem Schaltzeichen aus:
+
+Elektrolyt-Kondensators
+
+Wichtig: Der Elektrolytkondensator (oder
+kurz Elko) darf niemals falsch herum
+angeschlossen werden! Er könnte schlagartig zerstört werden, explodieren und sein
+giftiges Elektrolyt könnte austreten. Des11
+
+
+
+halb werden wir in unseren Schaltungen
+immer eine Schutzdiode verwenden.
+
+Vergleicht den Effekt mit und ohne
+angeschlossenem Kondensator!
+
+Kondensatoren bekommt man bei denselben Elektronikversendern wie Dioden
+auch. Wenn ihr bestellt, verwendet welche
+mit Kapazitäten ab 1000 µF. Das Farad F
+ist die Einheit der Kapazität, ein µF ist ein
+Mikrofarad, also ein Millionstel Farad.
+1.000 µF sind also auch 1 mF (Millifarad,
+ein Tausendstel Farad), aber diese Sprechweise ist ungebräuchlich, weil Kondensatoren meist eine relativ kleine Kapazität
+haben. Je größer die Kapazität, desto mehr
+elektrische Ladung und Energie kann der
+Kondensator speichern.
+
+Wer noch einen der alten hobby-4-Gleichrichterbausteine aus den 1970er Jahren hat,
+verfügt übrigens schon über eine raffinierte
+Diodenschaltung
+(einen
+sogenannten
+Graetz-Gleichrichter) und einen 1.000 µFKondensator, wie das Schaltbild auf seiner
+Frontseite zeigt:
+
+Zum Ausprobieren bauen wir folgende
+Schaltung auf:
+
+Schaltung 15: Langsames Auslaufen
+des Motors
+
+Elektronik-Gleichrichterbaustein h4GB
+
+Die Diode dient uns als Schutz vor
+Verpolung des Kondensators: Sie lässt den
+Strom ja nur in die angezeigte Richtung
+hindurch, so dass „+“ auch wirklich bei „+“
+des Kondensators ankommt. Würden wir
+die
+Stromversorgung
+versehentlich
+andersherum anschließen, würde nichts
+passieren, weil die Diode einfach sperrt.
+Wichtig ist aber, dass ihr den Kondensator
+auch wirklich richtig herum anschließt.
+Achtet unbedingt genau auf die Zeichen
+„+“ und „-“ auf dem Gehäuse!
+
+Wenn ihr die Diodenschaltung genau
+durchdenkt, werdet ihr feststellen, dass an
+den Plus- und Minus-Ausgängen wirklich
+immer „+“ bzw. „-“ herauskommt, ganz
+egal, wie die Versorgungsspannung am
+Eingang gepolt ist – sehr praktisch. Der
+Elektrolytkondensator am Ende wird also
+immer richtig herum gepolt sein. Ihr dürft
+nur die Plus- und Minusausgänge nicht
+(falsch herum) mit der Stromquelle
+verbinden. Das Netzgerät soll hier immer
+einfach an die mit dem Wechselspannungssymbol „~“ gekennzeichneten Eingänge
+angeschlossen werden.
+
+Wenn ihr nun den Taster betätigt, läuft
+nicht nur der Motor, sondern der Kondensator wird gleichzeitig aufgeladen. Das
+geht sehr schnell – ein Augenblick genügt.
+Lasst ihr den Taster nun los, gibt der
+Kondensator seine gespeicherte Ladung
+und Energie an den Motor ab – der Motor
+läuft länger nach als ohne Kondensator.
+Das geht natürlich nur so lange, bis der
+Kondensator wieder ganz entladen ist.
+
+
+
+Schaltungstechnik
+
+Wie geht’s weiter?
+
+Gleichrichter
+
+Mittlerweile haben wir schon ein ganz
+hübsches Arsenal an Schaltungstechniken
+entwickelt. In der nächsten Folge wollen
+wir deshalb eine Reihe ganz unterschiedlicher Maschinen bauen, in der wir diese
+und ähnliche Schaltungen zur Steuerung
+verwenden.
+Kondensator
+
+Gleichrichterbausteins
+
+Den Taster könnt ihr unter Verwendung
+dieses Elektronikbausteins einfach vor dem
+Gleichrichter anschließen:
+
+Damit kommen wir fast automatisch zur
+nächsten Stufe: Maschinen, die sich selbst
+steuern! Wir lernen Ablaufsteuerungen
+kennen, die – immer noch ganz ohne
+Computer – mehrere Motoren, Lampen und
+Magnete in der richtigen Reihenfolge
+ansteuern. Es bleibt also weiter spannend!
+
+Literatur
+[1]
+
+Wikipedia-Artikel über Dioden:
+http://de.wikipedia.org/wiki/Diode
+
+[2]
+
+Dioden im Shop der Knobloch
+Electronic GmbH:
+http://www.knoblochgmbh.de/shop/query.php?cp_tpl=550
+4&cp_pid=19917
+
+[3]
+
+Diode 1N4007 bei Conrad
+Electronic:
+http://www.conrad.de/ce/de/suggest/d
+iode%201n4007
+
+[4]
+
+Beschreibung des programmierbaren
+Tischrechners HP 9100 (englisch):
+http://www.hpmuseum.org/hp9100.ht
+m
+
+[5]
+
+Geöffneter HP 9100 mit vielen
+Dioden auf der Bodenplatine:
+http://www.hpmuseum.org/9100/910
+0opnl.jpg
+
+[6]
+
+Wikipedia-Artikel zu Kondensatoren:
+http://de.wikipedia.org/wiki/Kondens
+ator_(Elektrotechnik)
+
+Schaltung 16: Verwendung des
+Gleichrichterbausteins
+
+Auch hier wird der Motor langsam auslaufen, nur dass diese Schaltung durch den
+eingebauten Gleichrichter funktioniert, egal
+wie herum ihr die Stromquelle anschließt.
+Wegen der immer gleichen Polung des
+Motors ist es bei dieser Form des langsamen Auslaufens nur nicht mehr so
+einfach möglich, zwei Endlagentaster
+einzubauen. Bitte versucht auch nicht, eine
+Kurzschlussbremse so zu realisieren, dass
+der Kondensator kurzgeschlossen würde –
+es tut ihm nicht gut, wenn er so schnell
+entladen wird.
+
+
+

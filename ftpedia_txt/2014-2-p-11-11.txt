@@ -1,0 +1,50 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Abluftdrosselung mit dem PneumatikHandventil
+Stefan Falk
+„Richtiges Drosseln ist Abluft-Drosseln“, wurde in der „Druckluftsteuerungen“-Artikelserie
+in der ft:pedia beschrieben. Mit dem aktuellen Pneumatik-Handventil erscheint das leichter
+gesagt als getan. Deshalb gibt es hier einen einfachen Tipp, mit dem die Abluft dieses Drehschieberventils doch noch gedrosselt werden kann.
+In [1] wird beschrieben, wie und warum
+man für ein einstellbar langsames Verfahren eines Pneumatikzylinders dessen
+Abluft und nicht etwa seine Zuluft
+drosselt: Nur so erreicht man eine möglichst ruckelfreie, gleichmäßige Bewegung
+des Zylinders.
+
+same, gleichförmige Bewegung des Zylinders. Man kann zwar für die beiden Bewegungsrichtungen nicht verschieden stark
+drosseln, aber eine Verbesserung stellt das
+allemal dar.
+
+Nun verfügt das aktuelle PneumatikHandventil über
+keinen Schlauchgerechten Anschluss für seinen Abluftausgang. Die typischen Bagger-Modelle
+der aktuellen Pneumatik-Kästen lassen ihre
+Baggerarme deshalb unschön und völlig
+unrealistisch mehr auf und ab schlagen,
+anstatt eine majestätisch langsame Bewegung wie bei einem echten Bagger mit
+Hydraulikzylindern darzustellen. Zudem
+gibt es die kompakten Pneumatik-Drosseln
+aus der fischertechnik Ur-Pneumatik auch
+nicht mehr im aktuellen Programm.
+Wie die Abbildung zeigt, gibt es aber doch
+einen Weg: Ein Pneumatik-T-Stück passt
+nämlich sehr wohl in die Abluftöffnung
+des Handventils. Wenn man es ganz kompakt mag, steckt man darauf einfach direkt
+zwei P-Stopfen. Der Trick ist nun, einen
+der Stopfen nicht ganz fest aufzustecken.
+Die Abluft soll ja immer noch ins Freie
+strömen können, nur eben gedrosselt. Auf
+diese Weise erreicht man mit wenig Platzund Materialbedarf eine wunderbar lang-
+
+Abluftausgang des Handventils
+
+Quelle
+[1]
+
+Falk, Stefan: Druckluftsteuerungen
+(Teil 1), ft:pedia 1/2014, S. 58-72
+
+
+

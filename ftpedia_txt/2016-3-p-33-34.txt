@@ -1,0 +1,75 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Große Modelle mit nur einer fischertechnik-IRFernsteuerung ansteuern
+Dirk Wölffel
+Wie steuert man komplexe mobile fischertechnik-Modelle mit nur einer fischertechnik-IRFernsteuerung? Spätestens bei mehr als vier Motoren oder acht Lämpchen reicht eine IRFernsteuerung scheinbar nicht mehr aus, um das Modell anzusteuern – aber man möchte
+deshalb ja nicht gleich mehrere Fernsteuerungen erwerben. Tatsächlich genügt meist eine
+einzige – sofern man weiß, wie …
+
+Die IR-Fernsteuerung
+Die fischertechnik-IR-Fernsteuerung ist
+eine 4-Kanal-Fernsteuerung. Das bedeutet,
+dass in der Regel vier Motoren oder acht
+Lämpchen angesteuert werden können. Das
+funktioniert mit dem neuen Robotics TXT
+Controller inzwischen sogar ganz ohne das
+IR-Empfängermodul.
+
+Der IR-Eingang liefert je nach Auslenkung
+des Joysticks der IR-Fernsteuerung einen
+Wert von 0 bis 15 zurück. Durch Multiplikation mit 34 können wir so leicht die
+Geschwindigkeit eines Motors (mit einer
+Auflösung von 0 bis 510) in 16 Stufen
+ansteuern.
+Wenn ihr mit der rechten Maustaste auf das
+IR-Symbol in ROBO Pro klickt (Abb. 2),
+dann klappt ein Menü zur Ansteuerung des
+IR-Senders auf (Abb. 3).
+
+
+Mit einem kleinen Trick können wir via
+ROBO Pro sogar mehr als acht Ausgänge
+ansteuern. Dazu schauen wir uns einmal die
+Einbindung des IR-Senders in ROBO Pro
+an [1].
+
+
+
+Hier wird die Ansteuerung für euer Modell
+festgelegt. Wir schauen uns nun die Auswertung der DIP-Schalterstellung des IR-
+
+
+
+
+Senders in ROBO Pro etwas genauer an
+(Abb. 4).
+
+
+Wir haben jetzt vier verschiedene Möglichkeiten, den IR-Sender auszuwerten: 0-0, 10, 0-1 und 1-1. Für jede dieser DIP-Schalterstellungen können wir ein IR-Symbol
+erzeugen. Beispiel: „linker Joystick links“
+(Abb. 5).
+
+Zählt man die Taster „On“ und „Off“ hinzu,
+ergeben sich jetzt 40 Möglichkeiten, ein
+komplexes Modell anzusteuern (Abb. 6).
+Dadurch haben wir die Möglichkeit, mit nur
+einer IR-Fernbedienung mehrere Robotics
+TXT Controller mit jeweils vier bzw. acht
+Ausgängen zu steuern – und zusätzlich das
+IR-Empfangsmodul. Wir müssen dazu
+lediglich die DIP-Schalter auf der IRFernbedienung umstellen.
+
+Quellen
+[1]
+
+fischertechnik: ROBO Pro Online
+Hilfe, 8.7.9 IR-Eingang (TXT
+Controller).
+
+
+
+
+

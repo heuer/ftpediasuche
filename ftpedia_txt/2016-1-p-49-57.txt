@@ -1,0 +1,357 @@
+
+Elektronik
+
+Elektronik
+
+Radar mit Objektfokussierung
+Werner Hasselberg
+Dieser Beitrag stellt ein „Radar-Gerät“ zum Nachbauen vor. Es kommt gänzlich ohne
+Computer aus, verfügt aber trotzdem über eine anspruchsvolle Funktion: Ein erkanntes leuchtendes Objekt wird nicht nur angezeigt, sondern durch elektronisch gesteuertes Einpendeln der
+Radarantenne genau markiert.
+
+Vorwort
+Als es vor gut 30 Jahren erstmals möglich
+war, fischertechnik-Modelle über ein Interface und selbst geschriebene Programme zu
+steuern, war das eine echte Revolution.
+Plötzlich bewegten sich Maschinen wie von
+Geisterhand gesteuert, was vorher nur über
+diverse Schalter und Hebel möglich war.
+Heute nun durchdringen Computer so
+ziemlich alle Lebensbereiche und so gut wie
+alles wird von ihnen gesteuert. Ein Leben
+ohne sie – undenkbar. Gute Gründe also,
+möglichst früh damit anzufangen. Eine
+langjährige Studie in vielen Kindergärten
+der USA, alle vollständig mit Computern
+ausgestattet, ergab nun, dass damit weder
+das logische Denken noch die Kreativität
+noch das
+technisches
+Verständnis,
+geschweige denn die Motorik der Kinder
+gesteigert werden konnten. Das Gegenteil
+war eher der Fall. Die Kosten für die Ausstattung gingen in die Millionen und waren,
+bis auf die satten Gewinne der Hersteller,
+somit völlig nutzlos.
+Bereits Sechsjährige beherrschen es mittlerweile, Roboter zu programmieren. Nicht
+weil die viel klüger geworden sind, sondern
+weil der Computer samt Bildsprache die
+ganze kreative Arbeit übernommen hat. Zeit
+also, über Alternativen nachzudenken, die
+es wieder möglich machen, ganz ohne
+Computer und Bildchen-Wischerei zu
+basteln.
+Freilich
+sind
+komplexe
+
+Steuerungen ohne Computer nicht denkbar.
+Wem aber die reine Freude am Basteln und
+ein gewisses Verständnis, wie Dinge funktionieren, am Herzen liegt, wird mit ftElektromechanik und -Elektronik viel Spaß
+haben. Denn hier gibt es viel zu tüfteln,
+wenn es gilt, Lösungen zu finden, wie z. B.
+das Umpolen eines Motors, ohne dass ein eTec-Modul oder der Computer das für uns
+erledigt. Es gibt so viele Dinge, die ganz
+ohne lösbar sind und dabei noch viele
+Grundlagen vermitteln. Deshalb möchte ich
+anhand eines Modells zeigen, dass es sehr
+interessant sein kann, elektronisch und
+mechanisch zu steuern. fischertechnik ist
+damit bis heute ohne jede Konkurrenz, und
+könnten sich wieder mehr Jugendliche
+dafür begeistern, stünde nichts dagegen, die
+ganze Sparte wieder in altem Glanz erstrahlen zu lassen.
+
+Was soll unser Radar leisten?
+Ein Radar dreht sich normalerweise im
+Kreis und sucht den Himmel ab. Bei
+Kontakt erscheint auf einer Konsole ein
+leuchtender Punkt in der entsprechenden
+Himmelsrichtung. Damit die Elektronik
+aber etwas mehr zu tun bekommt, bauen wir
+diese Grundfunktion noch ein wenig aus.
+Das Radar soll zusätzlich bei Kontakt einige
+Sekunden in einen Pendelmodus wechseln
+und so die Quelle länger fixieren. Dadurch
+wird der Leuchtpunkt auf der Konsole
+mehrfach hintereinander aufblinken. Nach
+
+
+
+der erfolgreichen Entdeckung der Quelle
+dreht sich das Radar normal weiter – bis es
+erneut eine Lichtquelle ausmacht. Dann
+beginnt das Spiel von vorne.
+Fangen wir gleich mit dem Bauen an.
+
+Elektromechanischer
+Zeitschalter
+Ihn brauchen wir, damit das Radar nur eine
+bestimmte Zeit in den Pendelmodus
+umschaltet und sich danach wieder ganz
+normal weiterdrehen kann.
+
+
+
+
+Der Aufbau des Radars
+
+
+Der Taster wird auf eine Bauplatte 15∙30∙5
+mit Nut und Zapfen geschoben und die
+Platte mit der Nut auf den darunterliegenden Baustein 30. So kann sie genau justiert
+werden.
+
+Als kleiner Anreiz vorab schonmal ein Foto
+des fertigen Modells samt Techniker im
+Einsatz. Die Radarantenne, soviel darf
+bereits verraten werden, besteht aus ganz
+gewöhnlicher Alufolie, die sich hervorragend als Reflektor eignet. Eingefangene
+Lichtsignale werden auf diese Art – ganz
+wie in der Wirklichkeit – auf den „Empfänger“ reflektiert (in unserem Fall ein
+Fotowiderstand, der zur Radarantenne hin
+ausgerichtet ist).
+Wer dieses Modell bereits aus den früheren
+Clubheften der 1970er Jahre kennt, dem
+wird auffallen, dass die Elektronik hier
+
+nicht von den guten alten Silberlingen aus
+dieser Zeit vertreten wird, sondern durch
+die IC-Elektronik der Nachfolgegeneration.
+Diese sind tatsächlich leistungsfähiger,
+allein schon deshalb, weil in der bekannten
+Dreierkombination von Grundbausteinen
+im Gegenzug zu den Silberlingen gleich
+zwei völlig eigenständige Schaltungen
+untergebracht sind. Um dieses Modell also
+mit Silberlingen zu steuern, wären zwei
+Grundbausteine erforderlich, insgesamt
+also sechs Stück. Die IC-Elektronik schafft
+das gleiche mit drei – das em3-Relais im
+Hintergrund ausgenommen. Es dient uns als
+Polwendeschalter, dazu aber später mehr.
+Kümmern wir uns zuerst um das Modell.
+
+Elektronik
+
+Konsole durch eine elastische Schnur
+bewerkstelligt. Das ist fast genauso gut wie
+eine Kette, falls nicht genügend Kettenglieder zur Hand sein sollten.
+
+Sockel für den Radarmotor
+
+
+
+Das Fundament
+Die Bodenplatten werden in den weiteren
+Abbildungen noch miteinander verbunden.
+Das oben nur noch kurz sichtbare Kardangelenk verbinden wir nachher mittels einer
+Achse 110 mit dem Radar. Der fehlende
+Zahnkranz in der Nabenmutter ist hier kein
+Fehler, sondern anstelle einer Kette (was
+eigentlich besser wäre) wird der Antrieb der
+
+
+
+
+
+
+Stützen für die Elektronik-Bausteine.
+
+Schnur wird hinter dem Schleifring angebracht
+
+Leider verfügt der Designer aktuell nicht
+über die IC-Elektronik, deshalb sind im
+fertigen Modell an deren Stelle die Silberlinge angebracht. Auch das em3-Relais gibt
+es derzeit nicht im Designer, deshalb ist hier
+das ec1-Relais mit Verstärker dargestellt
+(welches aber nicht so einfach an die ICBausteine angeschlossen werden kann).
+
+
+Die Winkelträger an den Bausteinen 15
+sowie das Verbindungsstück 15, wie im
+Vordergrund auf der Bodenplatte angebracht, dienen nur dazu, später die Kabel ein
+wenig zu justieren, indem sie z. B. zwischen
+der Bodenplatte und dem Verbindungsstück
+15 leicht eingeklemmt oder von den
+Winkelträgern unten gehalten werden.
+Weitere sind je nach Wunsch möglich.
+
+
+Elektronik
+
+Die Antenne
+
+ein Polwendeschalter zum Einschalten der
+Beleuchtung.
+
+
+Wichtig ist hierbei, dass die Bausteine 15
+(direkt an dem markierten Baustein 30)
+einen roten Zapfen zum Drehen haben.
+Falls keine schwarzen verfügbar sind, gibt
+es die in der guten alten grauen Ausführung
+sogar mit roten Nocken beidseitig. Für
+unsere Zwecke ist sie auf nur einer Seite
+völlig ausreichend. Am besten baut man
+alle drei gelben Streben zuerst auf, und dann
+die rote Drehscheibe 60.
+
+Federnocken-Halterung
+
+
+
+
+
+
+Die Achse 110 im Schleifring wird durch
+die Drehscheiben geführt und über zwei
+Kardangelenke mit dem Motor verbunden
+(siehe Abb. 22/23).
+
+Schleifrings
+
+
+
+Elektronik
+
+Wie gesagt sind die drei Silberlinge an der
+Front stellvertretend für die IC-Elektronikbausteine eingefügt. Die Verkabelung und
+den Schaltplan des Modells zeigt Abb. 25.
+Der Schaltplan
+Wie arbeitet die Steuerung? Der in der
+sich am Zeitschalter (u. a. Abb. 4) und ist
+die Basis des Ganzen. Wenn kein Licht auf
+das Radar fällt, ist er durch die Schaltscheiben gedrückt. Die Lücke in den Schaltscheiben hat sich dabei gerade soweit
+gedreht, dass der Klick erfolgt.
+
+hinterer Aufbau des Grundgerüsts
+
+Die parallelen dreibeinigen Stützen der
+Grundkonstruktion können durch weitere
+Streben an der Seite noch stabilisiert
+werden, wie das Originalfoto in Abb. 5
+zeigt.
+
+In diesem Ausgangszustand ist A1 des
+SWS1 (Schwellwertschalters) mit B1 der
+LST1 (Leistungsstufe) verbunden. Am
+SWS1 ist über die (+)-Schiene und EA ganz
+normal ein Fotowiderstand angebracht, der
+sich oben auf der Radarantenne befindet.
+Ohne Lichtkontakt ist A1 negativ und die
+über den Taster mit ihr verbundene LST1
+ausgeschaltet.
+An die LST1 ist über C1 und (+)-Schiene
+die Lampe auf der Steuerkonsole angeschlossen. Bei LST1 „aus“ ist auch sie aus.
+Kommt der Fotowiderstand ins Licht,
+schaltet sich LST1 ein und die Lampe
+signalisiert den Kontakt.
+Soweit die Grundsteuerung des Radars. Wir
+möchten aber zusätzlich, dass es sich auf
+den Lichtkontakt einige Augenblicke lang
+„einpendelt“. Dazu benötigen wir den
+Zeitschalter. Was tut dieser nun genau?
+Sobald sich bei Lichtkontakt LST1
+einschaltet, startet der Zeitschalter-Motor,
+weil er ebenso wie die Lampe an C1 der
+LST1 angeschlossen ist. Die Schaltscheiben
+sind so angeordnet, dass der Taster so lange
+gedrückt bleibt, bis ihn die kleine Lücke in
+den Schaltscheiben nach einer ganzen
+Umdrehung freigibt.
+
+
+Sobald das geschieht, ist B1 nicht mehr mit
+A1 verbunden, sondern mit A1-Nicht. A1Nicht ist, wenn Licht auf den Fotowiderstand fällt, negativ. Damit geht die LST1
+
+
+
+aus und der Motor-Zeitschalter bleibt
+stehen.
+
+sich jetzt wieder normal weiter – weg vom
+Licht.
+
+Jetzt kommt die Pendelbewegung ins Spiel.
+Mit dem Start des Zeitschalters durch LST1
+wird auch eine Blockade von LST2 aufgehoben. LST2 ist mit SWS2 verbunden, der
+als Taktgeber geschaltet ist. Er wird über
+den Widerstand und die Diode, (zwischen
+B2 und B1 – auf richtige Polung der Diode
+achten; (+) in Richtung B2) solange
+blockiert, bis die LST1 sich einschaltet.
+
+Sobald aber der Fotowiderstand den Kontakt verliert wird A1-Nicht wieder positiv
+(+). Dies schaltet für einen Augenblick den
+Zeitschalter wieder ein. Er dreht sich weiter
+bis der Taster wieder gedrückt wird. Damit
+schaltet sich A1 wieder an B1. A1 führt aber
+ohne Licht (-) und die LST1 geht sofort
+wieder aus. Der Zeitschalter bleibt stehen
+und ist wieder „scharf“ gemacht für den
+nächsten Lichtkontakt. Während dieses
+Moments wird zwar auch der Takt wieder
+aktiv; da das aber nur einen Augenblick
+lang der Fall ist, kommt es höchstens zu
+einem kurzen Ruckeln der Antenne. Sie
+bleibt aber außerhalb des Lichtkontaktes,
+weshalb der Prozess in seinem geplanten
+Fortgang nicht weiter gestört wird. Fertig!
+
+Wie geht das? Bei LST1 aus ist A1 (-). Da
+A1 mit B1 verbunden ist, liegt also auch an
+B1 Minus. Damit wird Plus von SWS2 bei
+jedem Takt über A1(-) sofort abgeleitet,
+sodass sich die LST2 gar nicht erst im Takt
+des SWS2 ein- und ausschalten kann. Er ist
+immer aus, wenn LST1 aus ist, obwohl der
+Takt in SWS2 ständig arbeitet.
+Das Ende der Blockade leitet also den Takt
+an die LST2 weiter, die sich folglich im
+Takt des SWS2 ein- und ausschaltet. An C2
+der LST2 ist ein em3-Relais angeschlossen,
+das als Polwendeschalter arbeitet und über
+eine zweite Stromquelle (Trafo) den Radarmotor steuert. Der zweite Trafo ist deshalb
+erforderlich, weil sonst die Elektronikbausteine vom Relais-Takt gestört werden
+können.
+Der Takt schaltet am Ende das Relais ein
+und aus und versetzt somit das Radar für die
+Dauer, bis der Zeitschalter eine Umdrehung
+der Schaltscheiben geschafft hat, in den
+Pendelzustand. Das Radar bleibt in dieser
+Zeit normalerweise im Lichtkontakt und hat
+ihn auch noch, wenn der Zeitschalter auf die
+Schaltscheiben-Lücke stößt, die den Taster
+wie gesagt löst. Jetzt ist A1-Nicht mit B1
+verbunden und A1-Nicht führt (-). Das
+schaltet die Blockade von LST2 durch die
+Diode wieder ein. Sie geht aus und das
+Pendeln hört auf. Der Radarmotor dreht
+
+
+Der Taktgeber und die Schaltung des
+Fotowiderstandes stammen aus dem ICElektronik-Handbuch, welches in der ftDatenbank zum Download bereitsteht [1].
+Zwischen der Lampenfassung und den drei
+Lampen für die Beleuchtung des Modells
+kann noch ein Polwendschalter (wie in den
+Abbildungen sichtbar) eingebaut werden,
+mit dem man die Lampen ein- und ausschalten kann. Die übrige Verkabelung am
+Modell sollte so vorgenommen werden,
+dass die als Kabelführung montieren Elemente auf der Platte genutzt werden. Das
+verhindert ein Verheddern der Leitungen in
+die laufende Mechanik.
+Nun bleibt mir an dieser Stelle nur noch,
+viel Spaß beim Basteln und Spielen zu
+wünschen.
+
+Quellen
+[1]
+
+fischertechnik: Elektronik. FischerWerke, Tumlingen, 1981.
+
+
+Elektronik
+
+
+

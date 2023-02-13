@@ -1,0 +1,408 @@
+
+Modell
+
+Modell
+
+Strandbeester
+Benjamin Klingebiel
+Strandbeester sind vom niederländischen Künstler Theo Jansen entwickelte Laufmaschinen,
+die sich, vom Wind angetrieben, fortbewegen. In diesem Beitrag erkläre ich die zu Grunde
+liegende Beinmechanik und stelle zwei verschiedene Varianten zum Nachbau aus fischertechnik-Teilen vor.
+
+Einleitung
+Seit 1990 lassen sich bevorzugt an niederländischen Stränden teils riesige skelett-artige Gebilde beobachten, die sich angetrieben von Segeln oder Windrädern mittels einer Vielzahl von mechanischen Beinen fortbewegen (Abb. 1). Entwickelt werden diese
+kinetischen Kunstwerke vom niederländischen Künstler Theo Jansen. Er sieht seine
+Arbeit als evolutionären Prozess, bei dem er
+seine Wesen stetig weiterentwickelt, damit
+sie sich irgendwann am Strand unter wechselnden Umgebungsbedingungen (Fluten,
+Stürme und Flauten) eigenständig bewegen
+
+können. Seine neueren Modelle verwenden
+u. a. Druckluftspeicher, um Windenergie zu
+speichern und sich so bei Flauten fortzubewegen und können sich selbst bei Sturm im
+Sand verankern. Über einfache Sensoren
+nehmen sie ihre Umgebung wahr und können z. B. ihre Richtung ändern, sobald sie
+ins Wasser laufen [2]. Zum Bau der Konstruktionen verwendet er fast ausschließlich
+Kunststoffrohre aus PVC, die sonst für
+Elektroinstallationen verwendet werden.
+Diese bringt er unter Zuhilfenahme von
+Heißluftföhn und vielen Kabelbindern in
+Form.
+
+Screenshot aus youtube-Video reproduziert mit freundlicher Genehmigung des Künstlers [1].
+
+
+Inzwischen haben seine Werke große Aufmerksamkeit erregt und sind in zahlreichen
+Medien und Dokumentationen gezeigt worden (bis zu den Simpsons [3]). Genauso hat
+die Faszination für die Strandbeester viele
+Hobbykünstler zu Nachbauten und Miniaturmodellen inspiriert. Bei einem Vortrag
+im Rahmen der TED-Talks hat Theo Jansen
+dies als „Fortpflanzungsmethode“ der
+Strandbeester bezeichnet, die durch unsere
+Nachbauten in immer neuen Varianten geboren werden [4]. Es ist also an der Zeit,
+dass ein Strandbeest auch aus fischertechnik-Teilen entsteht.
+
+Die Beinmechanik
+Das gemeinsame Merkmal vieler Generationen von Strandbeestern ist die einzigartige
+Beinmechanik, die von Theo Jansen entwickelt wurde. Diese dient dazu Bewegungsenergie aus einer rotierenden Welle (angetrieben durch ein Windrad, Druckluft oder
+die Flatterbewegung eines Segels) in eine
+gleichmäßige Vorwärtsbewegung der Füße
+umzuwandeln.
+Die Beinmechanik in den Original-Proportionen ist in Abb. 2a abgebildet. Diese besteht aus einem System von acht beweglich
+miteinander verbundenen Gliedern, welches über zwei weitere Glieder mit einer
+Kurbel verbunden ist. Das Gelenksystem ist
+an zwei Fixpunkten (blau markiert) aufgehängt. Der rechte Teil ist ein System von
+zwei Kurbelschwingen (fett gezeichnet),
+welches sich entlang von Kreisbögen bewegt (K1 und K2 grau gepunktet).
+Durch die Kopplung über zwei zusätzliche
+Gelenke G1 und G2 führt nun eine gleichmäßige Kreisbewegung der Kurbel (oberer
+grüner Punkt) zu einer komplexen abgeflachten Bewegungskurve des „Fußes“ (unterer grüner Punkt).
+
+
+Das Besondere der Konstruktion ist, dass
+sich der Fuß über eine längere Strecke horizontal und mit gleichmäßiger Geschwindigkeit bewegt. Umgekehrt kann dies zur Vorwärtsbewegung der ganzen Konstruktion
+parallel zum Erdboden verwendet werden.
+Entscheidend für die optimale Form der Bewegungskurve ist das Längenverhältnis der
+zehn Glieder zueinander und zur Länge der
+Kurbel, sowie die Positionen der Kurbel
+und des zweiten Fixpunkts (blaue Punkte).
+Die Abhängigkeit der Form der Bewegungskurve von den Längenverhältnissen
+der Glieder ist mathematisch nicht trivial.
+Aus diesem Grund hat Theo Jansen die Längenverhältnisse nicht berechnet, sondern
+durch einen evolutionären Algorithmus optimiert, bei dem ein Simulationsprogramm
+ausgehend von willkürlich gewählten Längenverhältnissen zufällige Änderungen vornahm und dann die Bewegungskurve analysierte. Vorteilhafte Änderungen wurden
+dann in der nächsten Generation weiterverwendet.
+Dieses Optimierungsverfahren resultierte in
+den in Abb. 2a dargestellten Längenverhältnissen, die von Theo Jansen als elf „heilige“
+Zahlen bezeichnet werden. (Die Kurbellänge skaliert dabei das gesamte System
+und die Position der zwei blauen Fixpunkte
+wird nur durch ihre Distanz ausgedrückt.)
+Diese Beinmechanik wird von ihm seitdem
+zum Bau der Strandbeester verwendet. Ein
+wesentlicher Vorteil ist, dass diese Mechanik auf glattem Untergrund zu einer energieeffizienten Fortbewegung verwendet
+werden kann, weil der Körper der Strandbeester beim Gang keine Auf- und Ab-Bewegung durchführt (wie es bei Zweibeinern
+der Fall ist).
+
+a)
+
+Modell
+
+b)
+
+K1
+
+c)
+
+r = 16.5
+
+
+
+r = 11.5
+55.8
+
+42.4
+
+r = 15
+
+41.5
+
+G1
+
+
+
+39.3
+
+
+
+39.4
+
+16.25
+
+
+
+7.8
+
+40.1
+
+
+
+42.4
+
+42.4
+
+61.9
+
+42.4
+
+G2
+36.7
+
+K2
+63.6
+
+65.7
+78°
+
+63.6
+
+
+63.6
+
+
+257°
+
+275°
+339°
+
+14°
+
+153°
+
+134°
+
+357°
+
+130°
+
+Zahnrad Z30. Simulationen mit Geogebra [2].
+
+Nachbau mit fischertechnik
+Für den Nachbau der Beine mit fischertechnik bieten sich Statikstreben aufgrund ihres
+geringen Gewichts an. Zur Bewegung der
+Streben wurden zunächst Rastkurbeln
+(35071 u. 35088) verwendet (Version 1). In
+einem weiteren Nachbau (Version 2) wurden stattdessen Zahnräder Z30 (36264) mit
+daran befestigten Achsen als Kurbeln verwendet. Aufgrund der unterschiedlichen
+Kurbelradien (11,5 mm für die Rastkurbeln,
+bzw. 16,5 mm für die Zahnräder) ergeben
+sich unterschiedliche Dimensionen der
+Beine: Hierzu wurden die Originalproportionen aus Abb. 2a mit den jeweiligen Kurbelradien skaliert und die resultierenden
+krummen Maße der Beinsegmente durch
+die verfügbaren Längen der fischertechnikstreben soweit wie möglich angenähert.
+Da die Proportionen der Beine nun nicht
+mehr der von Theo Jansen optimierten Geometrie entsprechen, ergeben sich abweichende Bewegungskurven, die mit Hilfe
+von Geogebra [2] simuliert wurden und in
+Software wurde nun die Geometrie durch
+
+Variation der Strebenlängen soweit wie
+möglich optimiert, sodass sich eine unten
+möglichst flache Bewegungskurve ergibt.
+Etwas mehr Spielraum als es die Strebenlängen ermöglichen erlaubte die Verschiebung der Achsen (blaue Punkte in Abb. 2)
+durch Einbau unterschiedlicher Bausteine
+an den Lagern von Kurbel und Achse. Hierdurch konnte zumindest die Bewegungskurve soweit rotiert werden, dass sich die
+Füße möglichst parallel zum Boden bewegen.
+Aufgrund des zu erwartenden Gelenkspiels
+der Konstruktion und der unvermeidlichen
+Verbiegung der Streben unter Belastung,
+wurde zudem darauf geachtet, dass die
+Amplitude der Bewegungskurve nicht zu
+gering ist. Dadurch sollte vermieden werden, dass die Füße insbesondere im rechten
+Umkehrpunkt über den Boden schleifen.
+Um dies zu erreichen, wurde bei der Konstruktion in Abb. 2c die Kurbelachse etwas
+mehr angehoben, als es anhand der Bewegungskurve nötig erscheint. Dies zeigt, dass
+Simulationen immer auch durch Experimente ergänzt werden sollten.
+
+
+
+aus Abb. 2 c. Simulation mit Geogebra. [2]
+
+In Abb. 3 ist die Stellung eines Beins aus
+Kurbel in 120° Schritten abgebildet. Aus
+der Position des hellblauen und des pinken
+Punkts ist ersichtlich, dass der Fuß sich bei
+einem Winkelabschnitt der Kurbel < 120°
+im unteren Bereich der Bewegungskurve
+befindet. Damit mindestens immer ein Fuß
+gerade eben noch den Boden berührt, müssen also drei Beine mit einem Winkelversatz von 120° kombiniert werden. Da das
+Gewicht der Konstruktion aber auf möglichst viele Beine verteilt werden sollte, damit diese nicht abknicken, sollte das fischertechnik-Strandbeest möglichst mehr
+als drei Beine auf jeder Seite besitzen und
+der Kurbelversatz sollte geringer gewählt
+werden (z. B. 4 · 90° oder 6 · 60°). Zum
+Vergleich ist bei der Originalgeometrie aus
+Fuß im horizontalen Bereich ist, größer als
+200°. Daher benötigt das Original-Strandbeest weniger Beine, bzw. das Gewicht verteilt sich immer gleichzeitig auf mehr Füße.
+
+
+für die fischertechnik-Strandbeester-Version 1 (a) und 2 (b) basierend auf den optimierten Geometrien aus Abb. 2. Für Version 1 mit den Rastkurbeln wurde eine
+breite Konstruktion mit je einer Kurbelwelle für die Beine auf der linken und rechten Seite verwendet. Dadurch steht in der
+Mitte genügend Platz für den Antrieb zur
+
+
+Verfügung. Version 2 mit den Zahnrädern
+Z30 als Kurbeln verwendet eine gemeinsame Kurbelwelle für alle Beine. Diese
+Konstruktion ist näher an dem Vorbild von
+Theo Jansen. Nachteil ist, dass der Antrieb
+nun über der Kurbelwelle Platz finden
+muss. Dadurch ist der Schwerpunkt höher
+und die ganze Konstruktion etwas wackeliger. Für die Beine aus Statikstreben wurden
+
+S-Riegel 8 (36457) mit Riegelscheiben für
+alle Gelenke an denen drei Streben verbunden sind, verwendet. Für den Verbindungspunkt der vier Streben wurde in Version 1
+ein V-Bolzen (31690) + Klemmbuchse verwendet. Wenn mehr Teile zur Verfügung
+stehen, können die Statikstreben, die sich an
+diesem Punkt treffen, auch doppelt ausgeführt werden, um die Stabilität zu erhöhen.
+Dann muss stattdessen hier eine Achse 30
+mit Klemmbuchsen verwendet werden.
+
+Modell
+
+Dies erfolgte bei Version 2 (Abb. 4b). Es
+empfiehlt sich alle beweglichen Verbindungen zu schmieren (z. B. mit Silikonöl), da
+sich die Reibungsverluste bei vielen angetrieben Beinen addieren. Die Füße sind
+schließlich aus je einem dreifachen Kupplungsstück (38260) und Baustein 7,5 gebaut. Federnocken verhindern, dass die
+Kupplungsstücke aus den Bausteinen rutschen.
+
+angetrieben von drei S-Motoren.
+
+Strandbeests Version 1 mit acht Beinpaaren. Details des Kurbelantriebs sind in Abb.
+6 ersichtlich. Je eine doppelte Kurbel aus
+35071 u. 35088 wird durch eine Rastschnecke mit Zapfen (35977) angetrieben (gelagert in Winkelsteinen 15°). Eine unvermeidliche Schwachstelle sind die sehr kurzen Kurbelachsen, die sich inklusive der
+Gelenkwürfelklaue unter Belastung leicht
+
+verbiegen. Aus diesem Grund ist die Gelenkwürfelklaue durch eine Bauplatte
+15 · 15 (in Abb. 6 darunter erkennbar)
+leicht eingeklemmt. Weitere Bauplatten
+15 · 45 (Abb. 4a in der Mitte) verhindern,
+dass die gesamte Lagerung der Antriebswelle sich verschiebt. Für die lange unbewegliche Achse der Beinlagerung wird in
+dieser Konstruktion eine gestückelte Rastachse als Kompromiss aus Gewicht und
+
+
+Stabilität verwendet. Insbesondere wenn
+stärkere Motoren eingesetzt werden (s. u.)
+kann an dieser Stelle aber auch durch Einsatz einer langen Metallachse die Steifigkeit
+der gesamten Konstruktionen erhöht werden.
+Zum Aufbau ist noch zu erwähnen, dass alle
+Beine exakt identisch und so aufgebaut werden sollten, dass die Streben gerade bezüglich der Laufrichtung stehen, damit das
+Bein auch unter Belastung möglichst senkrecht steht und nicht seitlich wegknickt. Um
+dies zu erreichen wurden unterschiedliche
+Klemmbuchsen und Distanzringe verwendet (Abb. 6).
+
+Dicke einer Bauplatte 15 · 45 nach oben in
+Zahnräder Z20 nicht an den Motorblöcken
+schleifen.) Damit läuft das Strandbeest auf
+glattem Boden sehr gut (Video [6]). Alternativ bietet die Konstruktion aber auch genügend Platz für den Antrieb durch einen
+(schwereren) XM- oder Traktormotor (Video [7]).
+
+Strandbeests aus Abb. 5.
+
+mit acht Beinpaaren (Aufbau Abb. 4 b),
+angetrieben von zwei S-Motoren.
+
+Strandbeests aus Abb. 5.
+
+Zum Antrieb wurden in Version 1 drei über
+Zahnräder synchronisierte S-Motoren verwendet (als Kompromiss zwischen Gewicht
+und Leistung). Details der Motorisierung
+zeigt Abb. 7. Vor Einbau der roten Zahnräder an den Motoren wurde die Kurbel eingestellt. Wie oben erklärt wurde jede Achse
+jeweils um 90° verdreht. (Beim Nachbau
+beachten, dass die Motoraufhängung um die
+
+Version 2 des fischertechnik-Strandbeests
+wurde mit Zahnrädern Z30 als Kurbeln aufgebaut. Abb. 8 zeigt den kompletten Aufbau
+mit acht Beinpaaren aus Abb. 4b. Der offensichtliche Vorteil dieser Konstruktion ist,
+dass der Rahmen leichter ist und viel weniger Teile benötigt werden.
+Auch bei Version 2 tendieren die Kurbelachsen inkl. Lager dazu sich unter Belastung zu verbiegen. Deswegen sollte der Lagerbaustein 15 möglichst stabil umbaut
+werden.
+
+Alternativ kann auch eine Schneckenmutter
+(35973) mit Kugellager zur Verringerung
+der Reibung verwendet werden. Sinnvoll ist
+außerdem die Verwendung einer Metallachse 40, die leider nur im Zubehörhandel erhältlich ist [8].
+
+Modell
+
+Für das Grundgestell werden vier dieser Lager zusammengefügt (Abb. 10). Als eigentliche Kurbeln dienen Metallachsen 30.
+
+
+Strandbeests aus Abb. 8.
+
+Auch bei dieser Konstruktion tragen die fixen Achsen wesentlich zur Gesamtstabilität
+bei. Die Beine werden durch Klemmbuchsen und Distanzhülsen fixiert (Abb. 11).
+Der Winkelversatz wurde bei Version 2 so
+eingestellt, dass jedes Zahnrad um 60° weitergedreht wird. Dadurch ergibt sich ein
+möglichst gleichmäßiger Geradeauslauf.
+
+
+Zum synchronen Antrieb aller acht Zahnräder Z30 wurde eine gestückelte Rastachse
+mit Rastritzeln Z10 verwendet (Abb. 8).
+Der Antrieb erfolgt über zwei S-Motoren
+mit Schneckenantrieb über Z20, die gerade
+ausreichend Kraft liefern. Aufgrund des hohen Schwerpunkts waren Versuche mit einem leistungsstärkeren XM-Motor leider
+nicht erfolgreich. Der Vorteil der kleinen
+
+Standfläche ist allerdings, dass das Strandbeest Version 2 mit den zwei S-Motoren im
+Prinzip lenkbar ist. Dafür werden einfach
+die mittlere Rastachse unter dem Akku in
+IR- oder Bluetooth-Empfänger angesteuert.
+(Da jede Antriebseinheit nur noch aus vier
+Beinpaaren besteht, sollte der Winkelversatz der Z30 dabei auf 90° eingestellt werden.)
+
+
+
+Dann lässt sich das Strandbeest (auf Kosten
+eines gleichmäßigen Geradeauslaufs) über
+die Fernbedienung lenken. Insbesondere die
+Drehung auf der Stelle (bei voller Leistung
+beider Motoren in entgegengesetzter Richtung) funktioniert auf glatter Fläche hervorragend (Video [9]).
+
+Variante von vielen Möglichkeiten, eine
+Fortbewegung nach biomechanischem Vorbild zu erzielen.
+[1]
+
+Screenshot: Strandbeest Plaudens
+Vela, Theo Jansen.
+
+In diesem Beitrag habe ich die Beinmechanik der von Theo Jansen entwickelten Laufmaschinen vorgestellt und gezeigt, wie sich
+die Bewegung mit Hilfe von Geometriesoftware wie Geogebra [5] optimieren lässt.
+Anschließend wurden zwei verschiedene
+motorisierte Strandbeester aus fischertechnik nachgebaut, die auf ebener Fläche laufen und einen Eindruck von der Faszination
+der großen Vorbilder geben.
+
+[2]
+
+Website: Theo Jansens Explains.
+
+[3]
+
+Die Simpsons: S28, E10.
+
+[4]
+
+Teo Jansen: Vortrag TEDx Delft,
+06.11.2011.
+
+[5]
+
+Geogebra Geometrie-Simulator
+
+[6]
+
+Video: Strandbeest Version 1.
+
+[7]
+
+Video: Strandbeest Version 1, mit
+Powermotor.
+
+Wie bei den großen Exemplaren des Künstlers durchlaufen auch die Modelle eine ständige Weiterentwicklung. So ist es möglich,
+dass sich auch unter ausschließlicher Verwendung von fischertechnik-Teilen noch
+bessere Ergebnisse erzielen lassen, z. B.
+durch Ersatz der biegsamen Statikstreben
+durch andere Bauteile. Zuletzt ist die hier
+verwendete Beinmechanik auch nur eine
+
+[8]
+
+Bezugsquelle für Metallachsen und
+Kugellager.
+
+[9]
+
+Video: Strandbeest Version 2.
+
+
+Quellen
+
+[10] Ralf Geerken: Die Geradführung einer Viergelenkkette im Einsatz bei einer kleinen Laufmaschine. 4/2012, S. 4-10.
+
+

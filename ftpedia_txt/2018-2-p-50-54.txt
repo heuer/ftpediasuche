@@ -1,0 +1,286 @@
+
+
+Computing
+
+Schwarze, graue und sonstige Motoren am
+ftDuino
+Till Harbaum
+Motoren und andere Aktoren spielen in den meisten fischertechnik-Modellen eine große Rolle,
+sorgen sie doch für Bewegung und Action. Mit seinen zum TX- und TXT-Controller kompatiblen
+Ausgängen kann der ftDuino die gängigen Motoren problemlos ansteuern. Oft ist es aber nur
+eine Frage der passenden Software, auch exotische Motoren anzusteuern. Hier punktet der
+ftDuino mit seiner Open-Source-Philosophie und der damit einhergehenden völlig freien
+Programmierbarkeit.
+Bei den eigenen Controllern tut fischertechnik gut daran, sich auf die aktuell lieferbaren Motoren zu konzentrieren und dafür
+zu sorgen, dass die aktuellen Baukästen und
+Controller miteinander kombinierbar sind.
+Der ftDuino entstand dagegen unabhängig
+von fischertechnik und ist nicht auf spezielle Baukästen festgelegt. Er wurde entworfen, um möglichst universell einsetzbar
+sein und auch längst aus dem Programm
+genommene Motoren ansteuern zu können.
+
+Die aktuellen Motoren
+Bei den aktuellen schwarzen Motoren gibt
+es bei der Verwendung am ftDuino nichts
+Spezielles zu beachten. Die XS-, S-, M- und
+XM-Motoren, der Encoder-Motor (153422)
+aus dem TXT-Discovery-Set sowie der
+schwarze „Traktormotor“ (1151178) werden allesamt mit 9 Volt betrieben und lassen sich alle direkt an den ftDuino anschließen. Der ftDuino kann dazu wahlweise mit
+dem Akku-Pack, dem 9 Volt-Batteriehalter
+oder dem Netzgerät (505287) betrieben
+werden. Auch der Kompressor sowie die
+Magnetventile aus dem Electro-PneumaticKasten sind ohne Einschränkung kompatibel.
+
+
+
+Nicht mehr ganz aktuell, aber oft noch zu
+kaufen ist der Encoder-Motor aus dem
+„ROBO TX Automation Robots“-Baukasten. Auch dieser lässt sich direkt am
+ftDuino betreiben, man muss lediglich die
+gegenüber dem TXT-Encoder-Motor etwas
+andere Impulszahl beachten. Während der
+aktuelle TXT-Motor 63 1/3 Impulse pro
+Umdrehung liefert sind es beim älteren TXMotor 75 Impulse pro Umdrehung. Der
+namensgebende Encoder dieser Motoren
+wird analog zum TX oder TXT an einen der
+Zähler-Eingänge des ftDuino angeschlossen. Die Verkabelung erfolgt dabei
+exakt wie beim TXT.
+
+Jüngere, aber nicht mehr
+erhältliche Motoren
+Einige Motoren aus der aktuellen 9 VoltZeit sind bereits nicht mehr verfügbar. Die
+Power-Motoren zählen zum Beispiel dazu.
+Sie lassen sich wie jeder andere 9 VoltMotor ebenfalls am ftDuino betreiben.
+Als Encoder wurden in den dazugehörigen
+Baukästen einfache Taster verwendet, die
+natürlich ebenfalls problemlos am ftDuino
+zu nutzen sind.
+
+Computing
+
+auf diese Weise schon vor 35 Jahren die
+damaligen Motoren und Lampen mit Spannungen von 9 Volt und mehr. Motoren, die
+schon damals an dieser Kombination betrieben wurden, sollten also auch mit heutiger
+9 Volt-Versorgung keine Probleme bekommen. Und auch andersrum gilt, dass der
+ftDuino an der Kombination aus Trafo und
+Gleichrichter-Silberling problemlos betrieben werden kann.
+
+Motoren aus grauer Vorzeit
+Wenn es um die noch älteren grauen
+Motoren geht, stellt sich zunächst die Frage
+nach der Betriebsspannung. fischertechnik
+hat über die Zeit die spezifizierte Betriebsspannung seiner Modelle kontinuierlich
+erhöht: von zunächst 4,5 Volt aus dem
+Batteriestab (31041) über 6 Volt aus dem
+Batteriehalter (37261), den grauen 6,8 VoltTrafo (812/814), den 8,4-Volt-Akkupack
+bis zu den heutigen 9 V-Netzteilen.
+
+am ftDuino
+
+Was zunächst unübersichtlich und potenziell schädlich klingt, wird beim genauen
+Hinsehen schnell harmloser. Der bereits vor
+35 Jahren auf den Markt gekommene Trafo
+812 sollte laut Aufdruck 6,8 Volt liefern,
+stellte aber eine Leerlaufspannung von fast
+12 Volt bereit. Selbst bei moderater Belastung liefert er in Kombination mit dem
+Gleichrichter-Silberling (36393) wie in
+
+Auf den Versuch, den ftDuino direkt aus
+dem stirnseitigen Gleichspannungsausgang
+des Trafos zu versorgen sollte man hingegen verzichten. Hier liegt keine geglättete
+Gleichspannung an, sondern stattdessen
+pulsiert diese Gleichspannung 100-mal pro
+Sekunde. Erst der große Kondensator des
+Gleichrichtersilberlings glättet die Spannung so weit, dass der ftDuino stabil genug
+versorgt wird.
+Die alten grauen Mini-Motoren und natürlich die graue Variante dessen, was heute
+M-Motor heißt, lassen sich also mit dem
+aktuellen 9 Volt-Netzteil am ftDuino
+gefahrlos ansteuern oder aber stilecht mit
+Trafo und Gleichrichterbaustein. Der
+ftDuino eignet sich daher ausgezeichnet, die
+üblichen grauen Dachbodenfunde ins
+aktuelle Jahrtausend zu katapultieren.
+Vorsicht ist bei einigen Sensoren aus den
+Computing-Anfängen geboten. So sollte
+
+
+
+zum Beispiel die Gabellichtschranke
+(32357) aus dem „Computing TrainingsRoboter“ (30572) von 1985 nicht mit den
+9 Volt des ftDuino versorgt werden,
+stattdessen können die nötigen 5 Volt z. B.
+vom I²C-Anschluss des ftDuino abgezweigt
+werden. Hier ist etwas Vorsicht angeraten.
+Der I²C-Anschluss des ftDuino wird nicht
+zufällig mit einer Schutzkappe ausgeliefert.
+Die hier anliegenden Signale sind
+empfindlich gegen Kurzschlüsse und
+Spannungen über 5 Volt.
+
+einem passenden 3D-Druck-Gehäuse von
+Thingiverse [1] und einem Wellenadapter
+von 5 mm auf fischertechnik-übliche 4 mm
+ergibt sich auch mit diesem Motor eine
+nahtlose fischertechnik-Integration, wie in
+bereits mitgeliefert und kann als Basis für
+das komplette Modell dienen.
+
+Schrittmotoren
+Die bisher beschriebenen Gleichstrommotoren kommen in fast allen fischertechnik-Modellen zum Einsatz. Eine der
+wenigen Ausnahmen war der Plotter
+(30571), ebenfalls von 1985. In diesem
+Modell kamen zwei sogenannte Schrittmotoren (32311) zum Einsatz.
+Diese sehr interessanten Motoren erlauben
+es, Positionen exakt und wiederholbar anzufahren. Der Nachteil besteht darin, dass pro
+Schrittmotor zwei Motorausgänge am damaligen Intelligent-Interface belegt wurden. Versorgt wurden der Plotter und seine
+Schrittmotoren damals aus dem Computing-Netzgerät (32680). Auch dieses Netzgerät ist mit 6,8 Volt spezifiziert, lieferte
+aber in der Praxis ebenfalls eine deutlich
+höhere Spannung, so dass davon auszugehen ist, dass die Motoren ebenfalls eine
+deutlich höhere Spannung vertrugen.
+Trotzdem ist beim Einsatz der historischen
+Schrittmotoren (32311) größte Vorsicht
+angebracht, um unnötige Schäden zu
+vermeiden. Wenn vorhanden, sollte der
+ftDuino beim Betrieb mit diesen Motoren
+zunächst an einem Labornetzteil bei
+6,8 Volt betrieben werden.
+Uns steht bisher keiner der Originalmotoren
+zur Verfügung, so dass wir die prinzipielle
+Machbarkeit mit einem NEMA17-HS26Motor überprüft haben. Dieser Motor ist für
+12 Volt ausgelegt, lässt sich aber an 9 Volt
+problemlos betreiben. Zusammen mit
+
+
+Die Ansteuerung des Plotters wurde von
+fischertechnik damals trickreich realisiert,
+da eigentlich für jeden Motor zwei der insgesamt vier Motorausgänge des Interfaces
+nötig wären und damit kein Ausgang zum
+Heben und Senken des Plotterstifts mehr
+frei gewesen wäre. Da der ftDuino den
+gleichen Beschränkungen unterworfen ist,
+kann auch hier die gleiche Lösung helfen.
+Damals wurden einfach jeweils eine der
+beiden Spulen der Motoren an den gleichen
+Ausgang gesteckt. Pro Motor gab es daher
+eine unabhängig und frei steuerbare Spule
+und eine, die gemeinsam mit der Spule des
+anderen Motors angesteuert wurde. Das
+Resultat ist, dass bei Steuerung eines
+Motors der andere leicht „zuckt“. Da die
+gesamte Plottermechanik damals etwas
+Spiel hatte, ist dieses Zucken nie bis zum
+Stift vorgedrungen und hat entsprechend
+nicht gestört.
+Angesteuert wurde der Plotter damals mit
+speziellen Programmen auf den zu der Zeit
+üblichen Homecomputern. Diese stehen
+heute in der Regel nicht mehr zur Verfügung. Der ftDuino kann diese Lücke aber
+
+sehr elegant füllen, da er sich einem PC
+gegenüber per USB als nahezu beliebiges
+Gerät ausgeben kann. Mit einer entsprechenden Programmierung wird er so
+kompatibel zu heute noch verfügbaren
+Plottern und kann aus aktueller PCSoftware direkt angesprochen werden. Bei
+der dafür nötigen Programmierung ist der
+ftDuino dem TX- oder TXT-Controller
+deutlich überlegen und seine Quell-offenen
+Treiber erlauben eine leichte Anpassung
+und die speziellen Bedürfnisse des alten
+Plotters.
+
+Servos
+Eine vor allem im Modellbau verbreitete
+Motorsorte sind die sogenannten Servos.
+fischertechnik hatte in den 80er Jahren
+bereits ein Servo unter der Artikelnummer
+31495 im Programm. Auch heute findet
+sich als Teil der Infrarot- oder BluetoothFernsteuersets ein Micro-Servo unter der
+Nummer 132292 im fischertechnik-Portfolio.
+Im Inneren dieser Servos steckt ein einfacher Gleichstrommotor. Allerdings wird
+dieser von einer Elektronik sowie einem
+Winkelgeber begleitet, sodass der Servo
+einem externen Steuersignal folgend einen
+bestimmten Winkel anfahren kann. fischertechnik nutzt Servos daher in erster Linie
+zur Lenkung seiner Modelle. An den TXund TXT-Controllern lassen sich Servos
+nicht betreiben, was sie im fischertechnikUmfeld für den Einsatz in RoboticsModellen disqualifiziert – was schade ist,
+da sie sich vielfältig einsetzen lassen [2].
+Servos sind zum Betrieb an 6 Volt ausgelegt, und dieser Wert ist ausnahmsweise
+ernst zu nehmen. Oft lassen sich Servos
+auch an 5 Volt betreiben, was eine Versorgung aus dem I²C-Anschluss ermöglichen
+würde. Allerdings ist dieser nicht zur
+Motorversorgung ausgelegte Anschluss des
+ftDuino der oft recht üppigen Stromaufnahme der Servos nicht gewachsen. Die
+heute bei fischertechnik üblichen 9 Volt
+
+Computing
+
+sind definitiv zu viel für Servos. Stattdessen
+empfiehlt sich der Einsatz eines billigen
+Spannungsreglers wie im entsprechenden
+Kapitel des ftDuino-Handbuchs beschrieben. Zusammen mit einem passenden
+Adapterkabel und ein paar fischertechnikSteckern erhält man so eine einfache Möglichkeit, Servos am ftDuino zu betreiben
+wie in Abb. 5 dargestellt. Das eigentliche
+Steuersignal wird dabei aus zweckentfremdeten I²C-Signalen gebildet. Der
+ftDuino hat wie jeder Arduino flexibel konfigurierbare Ausgänge. Dadurch ist es unter
+anderem möglich, auf den Anschlüssen des
+I²C-Anschlusses völlig andere Signale zu
+erzeugen. Wir nutzen das, um das vom
+Servo benötigte PWM-Signal zu erzeugen.
+Ein Mischbetrieb von I²C und Servo ist
+allerdings nicht möglich. Die jeweils für
+den anderen Empfänger gedachten Signale
+könnten für Verwirrung sorgen und unerwünschte Reaktionen hervorrufen.
+
+
+Fazit
+Der ftDuino ist ein Kommunikationswunder: Kaum ein Motor aus der langen
+fischertechnik-Historie lässt sich mit seiner
+Hilfe nicht zum Leben erwecken. Die
+Möglichkeit, sehr direkt auf die Hardware
+zuzugreifen, erlaubt es, auch exotische
+Motoren wie Schrittmotoren und Servos
+anzusteuern. Diese Möglichkeiten hätte
+fischertechnik selbst auch, allerdings
+beschränkt sich der offizielle Support der
+TX- und TXT-Controller auf Motoren aus
+dem aktuellen Baukasten-Programm und
+auch hier nur auf diejenigen Motoren, die
+
+
+
+fischertechnik als Teil der Robotics-Linie
+betrachtet. Selbst aktuelle Servos bleiben
+daher außen vor.
+Bisher konnte die Community dem nicht
+viel entgegensetzen. Mit dem ftDuino hat
+sie nun aber die volle Kontrolle über einen
+Controller und kann fischertechnik zeigen,
+was an verborgenen Fähigkeiten in ihrem
+System schlummert.
+Ich freue mich schon auf den ersten Plotter
+von 1985, der 33 Jahre später einem
+aktuellen PC zur Seite steht als wäre es das
+Normalste der Welt. Dass so ein Setup nicht
+ganz billig wäre ist allein der Tatsache
+
+
+zuzuschreiben, dass der Plotter inzwischen
+ein seltenes Sammlerstück ist.
+Mehr Informationen zu Preisen und Verfügbarkeit gibt es per E-Mail an
+info@ftduino.de.
+
+Quellen
+[1]
+
+Thomas Dragon, fischertechnik nema
+17 stepper motor holder auf
+Thingiverse.
+
+[2]
+
+Dirk Fox, Thomas Püttmann:
+fischertechnik-Roboter mit Arduino.
+dpunkt-Verlag, 2018.
+
+

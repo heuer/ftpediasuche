@@ -1,0 +1,133 @@
+
+
+Tipps & Tricks
+
+Gelenksteinketten
+Thomas Püttmann
+Was macht man, wenn man ein großes Fach voller Gelenksteine sieht? – Lange Ketten bauen!
+Diese lassen sich sogar sinnvoll einsetzen.
+Gelenksteinketten wirken im Vergleich zu
+den normalen Rastketten klobig. Das Gute
+an ihnen ist, dass sich Achsen durch die
+Gelenke stecken lassen. Die Achsen greifen
+dann perfekt in jede dritte Lücke eines
+Zahnrads Z40 oder Z30.
+
+Meine erste Anwendung war ein Förderband zum gleichzeitigen Transport vieler
+Kugeln, siehe Abb. 3.
+
+
+
+Ob sich solche Ketten sinnvoll in Raupenfahrzeugen einsetzen lassen, habe ich noch
+nicht ausprobiert. Dazu sind momentan zu
+viele meiner Achsen anders verwendet.
+
+Synchronmotoren
+Statt Achsen kann man natürlich auch die
+10 mm langen Neodym-Magneten durch
+die Gelenke stecken, die durch unser Buch
+[1] populär geworden sind. Auf diese Weise
+lassen sich Synchronmotoren mit jeder
+gewünschten Zahl an Magneten bauen.
+
+
+
+Zum Antrieb vieler Synchronuhren wie der
+Rast-O'Clock [2] sind Motoren mit einer
+Drehzahl von 600 U/min ideal. Das
+Getriebe zur Übersetzung auf die Sekundenwelle lässt sich dann mit fischertechnikZahnrädern leicht realisieren.
+
+
+Tipps & Tricks
+
+Synchronmotoren mit unterschiedlichen
+Magnetzahlen wurden schon öfter in der
+ft:pedia vorgestellt [3, 4, 5, 6]. Oft wurden
+dabei geschickte Kombinationen vieler
+Winkelsteine eingesetzt.
+
+
+Ein solcher Motor ist mit Gelenksteinen
+schnell gebaut, siehe Abb. 4. Auf der Welle
+sitzt ein Rad 23 mit Reifen 32. Darauf passt
+perfekt eine Kette aus zehn Gelenksteinen.
+Zur Erinnerung: Ein solcher Motor benötigt
+eine feste Wechselspannung zwischen 5 V
+und 9 V, wie sie zum Beispiel die alten
+grauen fischertechnik-Netzteile zur Verfügung stellen.
+Sehr elegant sieht auch der Motor mit einem
+Speichenrad aus, auf das ich eine Kette mit
+22 Gelenksteinen gezogen habe, siehe
+
+Der Einsatz der Gelenksteine erlaubt es
+nun, zu nahezu jeder gewünschten geraden
+Anzahl an Magneten schnell und mit
+wenigen Bausteinen den passenden Motor
+zu bauen. Der Trick ist, die Gelenksteinkette gar nicht starr auf einem Träger aufzuziehen. Es genügt, wenn mindestens drei
+Gelenksteine auf den passenden Abstand
+zur Achse gebracht werden. Die anderen
+werden durch die Fliehkraft so nach außen
+gezogen, dass sie annähernd einen Kreis
+bilden.
+Wir zeigen dies am Beispiel eines Motors
+mit zwanzig Magneten. In Abb. 6 sieht man
+seine Bestandteile: Eine Kette aus zwanzig
+Gelenksteinen, in denen die Stabmagnete
+mit wechselnder Polarität eingesteckt
+werden, und zwei Drehscheiben, auf denen
+I-Streben 90 mit Strebenadaptern befestigt
+sind.
+
+zwanzig Magneten.
+
+mit einer Drehzahl von ca. 273 U/min.
+
+Die Drehscheiben werden zueinander um
+90° verdreht auf eine Achse geschraubt. Die
+Gelenksteinkette wird dazwischen eingefügt. Jedes fünfte Gelenk wird mit Hilfe
+eines weiteren Stabmagneten an den vier
+äußeren Enden der Streben fixiert, siehe
+
+
+
+
+
+Quellen
+
+
+Die Motoren funktionieren alle ebenfalls,
+wenn statt der inzwischen schwer erhältlichen originalen fischertechnik-Elektromagneten preisgünstige Topf-Magneten aus
+China eingesetzt werden.
+
+[1]
+
+Dirk Fox und Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt.verlag, Heidelberg 2015.
+
+[2]
+
+Thomas Püttmann: Die RastO'Clock-Uhr. ft:pedia 1/2017,
+S. 42-47.
+
+[3]
+
+Matthias Dettmer: Synchronmotoren.
+ft:pedia 2/2016, S. 48-52.
+
+[4]
+
+Rüdiger Riegel: Funktionsmodelle
+von Gleich- und Wechselstrommotoren. ft:pedia 4/2016, S. 52-58.
+
+[5]
+
+Rüdiger Riegel: Neue Synchronmotoren. ft:pedia 2/2017, S. 25-31.
+
+[6]
+
+Rüdiger Riegel: Ersatz für die
+Elektromagnete. ft:pedia 3/2017,
+S. 19-22.
+
+

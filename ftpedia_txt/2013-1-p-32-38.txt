@@ -1,0 +1,387 @@
+
+
+Computing
+
+I²C mit dem TX – Teil 3: Luftdruckmessung
+Georg Stiegler
+Seit dem Firmware-Update vom April 2012 auf Version 1.30 lassen sich am TX beliebige I²CKomponenten anschließen und mit den Robo Pro Versionen ab 3.1.3 ansteuern. Nach einer
+Einführung in die Grundlagen des I²C-Protokolls [1] und in die Ansteuerung eines LEDDisplays [2] wird in diesem Beitrag der Anschluss und die Nutzung eines I²C-Luftdrucksensors vorgestellt.
+
+Hintergrund
+Wer so wie mein Sohn und ich mit
+Begeisterung die RoboPro-Bibliothek
+„I2C“ durchforstet läuft Gefahr von den
+faszinierenden
+neuen
+Möglichkeiten
+infiziert zu werden – und diese vielleicht
+sogar selbst erweitern zu wollen. Mit ein
+wenig Mut und Ausdauer lassen sich dabei
+neue Welten entdecken oder – nicht ganz
+so hoch gegriffen – zumindest Gesetzmäßigkeiten unseres eigenen Planeten
+anschaulich erkunden. Der letzte Familienurlaub in den Bergen war Auslöser des
+Gedankens, den Zusammenhang zwischen
+Luftdruck und Höhe genauer zu durchleuchten und am besten sogar vor Ort
+Messungen mit dem Reisebegleiter „TX
+Controller“ vorzunehmen. Wieder zu
+Hause machten wir einen Luftdrucksensor
+mit ausführlicher Dokumentation (leider
+wie so oft nur in Englisch verfügbar) der
+Firma Bosch ausfindig:
+
+Der BMP085
+Dieser digitale Sensor [3] dient zur äußerst
+präzisen Messung des Druckes in einem
+Bereich von 300 hPa bis 1.100 hPa (hPa =
+Hektopascal = Millibar). Aus dem Luftdruck lässt sich die Höhe ableiten – dazu
+später mehr – und so gibt der Hersteller
+einen Messbereich von - 500 m bis
+
++ 9.000 m über dem Meeresspiegel (NN =
+Normalnull) an. Das Rauschen der Druckmesswerte soll im besten Fall etwa 0,03
+hPa oder 0,25 m betragen. Dank seiner
+geringen Abmessungen und des geringen
+Stromverbrauchs kommt der Sensor beispielsweise in GPS-Navigationsgeräten,
+Höhenmessern, Wetterstationen oder auch
+PDAs und Handys zum Einsatz.
+
+
+Der Messung des Druckes geht bei diesem
+Sensor immer erst eine Messung der Temperatur (Messbereich - 40°C bis + 85°C)
+voraus – schön für uns, denn dadurch
+benötigen wir z. B. bei Wetterbeobachtungen keinen weiteren Sensor. Zudem ist der
+Sensor bereits ab Werk kalibriert und kann
+somit ohne Umschweife per I2C-Bus mit
+dem TX Controller betrieben werden.
+
+
+Computing
+
+Aber eine Stolperstelle gibt’s dann doch
+noch: die Versorgungsspannung des
+BMP085 liegt zwischen + 1,8 und + 3,6
+Volt. Der I²C-Anschluss EXT 2 am TX
+Controller liefert jedoch + 5 Volt. Eine
+große Anzahl an Sensoren und Aktoren ist
+direkt an die 5 V anschließbar – es gibt
+aber auch viele, die nur für 3,3 Volt
+ausgelegt sind.
+
+(Abb. 3 unten). Bei dem günstigen SensorBoard der Firma Drotek (Abb. 2) kann
+man sogar zwischen beiden Spannungstypen wählen.
+
+Daher empfiehlt es sich, beim Kauf eines
+so genannten „Breakout Boards“ darauf zu
+achten, dass dieses direkt an die +5 V Versorgungsspannung des TX-I2C-Busses
+angeschlossen werden kann (Abb. 3 oben).
+Andernfalls muss man mittels weiterer
+elektronischer Bauteile die Versorgungsspannung sowie die Pegel der Datenleitung
+(SDA) und der Taktleitung (SCL) konvertieren. Solche Bausteine nennt man „Level
+Shifter“ oder „Level Converter“. Damit
+lassen sich dann 5 V- und 3,3 V-Bausteine
+gleichzeitig an einem I2C-Bus betreiben
+
+
+Für den im Folgenden beschriebenen
+RoboPro-Treiber spielt es keine Rolle
+welches Board zum Einsatz kommt.
+
+
+
+
+Funktionsweise
+Der BMP085 umfasst einen piezoresistiven
+Sensor – eine Membran biegt sich infolge
+eines mechanischen Druckunterschieds
+zwischen der einen Seite und der gegenüber liegenden Seite durch, wodurch aufgebrachte elektrische Widerstände verändert werden [4] – einen Analog-DigitalWandler, eine Kontrolleinheit mit einem
+EEPROM [5] und die serielle I2C-Schnittstelle.
+Jeder einzelne BMP085-Sensor enthält ab
+Werk in einem speziellen Speicherbereich
+(EEPROM) 11 Kalibrierungsdaten, die vor
+der eigentlichen Messung einmalig ausgelesen werden müssen (Abb. 4, 1.). Diese
+Daten brauchen wir, um später die
+gemessenen, unkompensierten Werte für
+Temperatur und Druck individuell berechnen zu können.
+Die Messung der Temperatur und des
+Drucks wird jeweils mit einem Startbefehl
+an den Sensor eingeleitet, worauf nach
+einer kurzen Wartezeit die Messwerte
+ausgelesen werden können. Anschließend
+wird die Temperatur in Grad Celsius und
+der absolute (also tatsächliche) Luftdruck
+in hPa berechnet.
+
+
+Da die Daten alle aufeinander folgen (176
+bit lang) bleiben die Lese-Befehle „offen“
+bis der letzte Wert gelesen ist (Abb. 5).
+
+I²C-Kommandos
+Um unserem Sensor die Messwerte für die
+Temperatur und den Druck zu entlocken
+müssen wir sowohl beim Befehl I2C-Lesen
+als auch später beim I2C-Schreiben die
+Geräteadresse kennen – sie lautet 0x77.
+Da der BMP085 eine I²C-Datenübertragungsgeschwindigkeit von bis zu 3,4 MHz
+zulässt, können wir unter Geschwindigkeit
+den „Fast Mode“ mit 400 kHz auswählen.
+Im ersten Schritt wollen wir die 11
+Kalibrierungsdaten aus dem internen
+Speicherbereich mit der Unteradresse
+0xAA lesen. Aus dem Datenblatt geht
+hervor, dass die Länge der Daten jeweils
+16 bit beträgt (MSB zuerst).
+
+
+
+Ein kleines Problem (für mich im ersten
+Moment ein großes) beim Auslesen ergibt
+sich dadurch, dass mehrere Daten als
+„unsigned short“ interpretiert werden
+
+müssen. Da ich bislang leider keiner
+Programmiersprache mächtig bin (im
+Bereich der Mikrokontroller ist „C“ und
+„C++“ sehr weit verbreitet), musste ich
+wohl oder übel erst mal ein wenig
+„Grundlagenforschung“ betreiben.
+Es gibt mehrere Datentypen [6], die man in
+der Weiterverarbeitung – beispielsweise
+mit Bit-Operatoren wie SHR oder SHL –
+kennen und beachten muss (Tab. 1).
+
+Computing
+
+zu sein, ob die auszulesende Zahl negativ
+oder positiv ist (Abb. 6 unten).
+Hat man die Kalibrierungsdaten einmalig
+ausgelesen, wird als nächster Schritt die
+Temperaturmessung eingeleitet: an die
+Unteradresse 0xF4 wird der Datenwert
+0x2E gesendet, gefolgt von einer Wartezeit
+(4,5 ms oder auferundet 0,005 s). An der
+Unteradresse 0xF6 wird dann der 16 bit
+lange „Roh-Wert (UT)“ für die Temperatur
+ausgelesen (unsigned short) (Abb. 7).
+Der „Pseudo-Code“ im Datenblatt lautet:
+write 0x2E into reg 0xF4; wait 4,5ms
+read reg 0xF6 (MSB), 0xF7 (LSB)
+UT = MSB << 8 + LSB
+
+Tab. 1: Datentypen
+
+So hat bei meinem Sensor der vierte
+Kalibrierungswert „AC4“ einen Wert von
+-31.439 (short). Dieser muss dann aber als
+vorzeichenlose Zahl (unsigned short) interpretiert werden [7, 8]: bei einer 16 bit (= 2
+Byte) langen negativen Zahl muss man 216
+= 65.536 dazu addieren (Abb. 6 oben).
+
+
+im Pseudo-Code einer Multiplikation mit
+einer entsprechenden 2er-Potenz gleichzusetzen ist (Achtung: Datentypen beachten):
+„<< 8“ entspricht „* 28“ entspricht „* 256“
+Das Zeichen „>>“ im Pseudo-Code ist
+einer Division mit einer entsprechenden
+2er-Potenz
+gleichzusetzen
+(Achtung:
+Datentypen beachten):
+„>> 4“ entspricht „/ 24“ entspricht „/ 16“
+
+
+Dabei ist zu beachten, dass bei den
+Variablen und Operatoren als Datentyp
+„Gleitkomma 48 bit“ ausgewählt wird.
+Man kann aber die Konstanten des Formats
+„Unsigned Short“ auch byteweise auslesen,
+was den Vorteil bietet unabhängig davon
+
+Das Auslesen des „unkompensierten“
+Druckwertes und die folgenden Berechnungen gestalten sich ein wenig komplizierter, da man hier vier unterschiedliche
+Genauigkeitsstufen einstellen kann (Oversampling setting, „OSS“; siehe Tab. 2).
+
+
+
+
+Tab 2: Oversampling setting (OSS)
+
+Der „Pseudo-Code“ für das Auslesen des
+unkompensierten Drucks UP im Datenblatt lautet:
+write 0x34 + (oss << 6) into reg 0xF4
+; wait
+
+Tab 3: Datenwerte für die Auslesebefehle
+sowie die zugehörigen Wartezeiten
+
+Auch die Wartezeit nach dem Startbefehl
+muss entsprechend OSS eingestellt werden
+(Tab. 3). Daraus resultiert dann beispielsweise für OSS = 2 (Abb. 8):
+
+read reg 0xF6 (MSB), 0xF7 (LSB),
+0xF8 (XLSB)
+UP = (MSB << 16 + LSB << 8 + XLSB) >>
+(8-oss) ; XLSB ist optional für OSS=3
+
+Die Unteradresse für den Startbefehl ist
+hier abhängig vom Oversampling-Modus.
+So heißt 0x34 + (oss << 6) für OSS = 2
+„übersetzt“:
+
+(MSB << 16 + LSB << 8)
+
+>> (8-oss)
+
+0x34 + 2·26 = 52 + 128 = 180 = 0xB4
+
+
+Zur Umrechnung von Hexadezimal-Werten in Dezimalzahlen und umgekehrt gibt
+es eine feine Website von A. Brünner [9].
+
+Für die höchste Auflösung bei OSS = 3
+siehe Abb. 9.
+
+UP = (MSB << 16 + LSB << 8 + XLSB) >> (8-oss)
+
+
+Auswertung der Messwerte
+Die beiden ausgelesenen Werte für
+Temperatur UT und Druck UP müssen nun
+noch in die physikalischen Werte umgerechnet werden (Abb. 10). Dieser Programmteil ist vor allem Fleißarbeit, kann
+aber dank eines Rechenbeispiels im
+Datenblatt sehr gut nachvollzogen werden.
+
+Computing
+
+Der gemessene absolute Luftdruck soll
+eine Genauigkeit von +/-0,5 hPa aufweisen, wobei ein Rauschen des Wertes
+zwischen 0,06 und 0,03 hPa im Datenblatt
+angegeben wird (abhängig von der Oversampling-Einstellung). Mit meinen beiden
+Sensoren schaffe ich es bisher nicht, das
+Rauschen unter +/-0,1 hPa zu bekommen –
+vielleicht wird es da noch Nachbesserungen geben.
+Um den gemessenen absoluten Luftdruck
+zu überprüfen, kann man diesen mit
+meteorologischen Daten im Internet vergleichen. Weiß man, auf welcher Höhe
+man sich gegenüber dem Meeresspiegel
+befindet, kann mittels barometrischer
+Höhenformel [3, 10, 11] der üblicherweise
+auf Wetterkarten ausgewiesene Luftdruck
+über NN berechnet werden. Dabei gilt
+vereinfacht, dass ein Höhenunterschied
+von 10 m einem Druckunterschied von
+1,2 hPa entspricht. Umgekehrt kann man
+mittels Messung des Luftdruckes die
+Änderung der Höhe berechnen: eine
+Druckänderung um 1 hPa entspricht einem
+Höhenunterschied von 8,43 m.
+
+
+Da viele Multiplikationen und Divisionen
+durchführt werden, kommt es leider an
+einigen Stellen zu Rundungsfehlern. Diese
+werden so gut wie möglich ausgeglichen,
+indem die Nachkommastellen bei einigen
+Zwischenergebnissen (Werte zwischen
+- 32.768 und + 32.767) eliminiert werden.
+
+Ohne diese Korrekturen erhält man einen
+um ca. 0,1 hPa höheren Luftdruckwert.
+Die gemessene Temperatur lässt sich nun
+leicht mit Thermometern überprüfen. Sie
+sollte laut Hersteller +/-1 °C genau sein.
+
+und somit der Druck nimmt mit der Höhe ab
+
+Nun bin ich selbst schon ganz gespannt auf
+den Einsatz des Sensors in den Bergen –
+leider dauert es noch bis zum Sommer. Bis
+dahin suchen wir uns das nächstgelegene
+Hochhaus mit Aufzug und werden dort
+erste Messungen vornehmen. Mit Stoppuhrfunktion können wir dann sogar die
+Geschwindigkeit des Fahrstuhls ermitteln
+…
+
+
+
+
+Wer mag, kann vier verschiedene Robo
+Pro-Programme downloaden (Achtung: im
+Dauerbetrieb schaltet der TX gelegentlich
+das Display ab, läuft aber weiter –
+fischertechnik arbeitet an dem Problem…):
+
+[1]
+
+Dirk Fox: I²C mit dem TX – Teil 1:
+Grundlagen. ft:pedia 3/2012, S. 3237.
+
+[2]
+
+Dirk Fox: I²C mit dem TX – Teil 2:
+LED-Display. ft:pedia 4/2012, S. 3237.
+
+[3]
+
+Bosch Sensortec: Digital Pressure
+Sensor BMP085. Data sheet, v1.3,
+22.08.2011.
+
+[4]
+
+Wikipedia: Silizium-Drucksensor.
+
+BMP085-simple_v1-2.rpp:
+Hier wurden alle unnötigen Variablen
+entfernt und das Lesen und Schreiben
+jeweils für Temperatur und Druck in
+einem Unterprogramm zusammengefasst.
+
+[5]
+
+Wikipedia: EEPROM.
+
+[6]
+
+Wikipedia: C++-Programmierung/
+Einführung in C++/ Variablen,
+Konstanten und ihre Datentypen.
+
+[7]
+
+Wikipedia: Zweierkomplement.
+
+BMP085-altitude_v1-2.rpp:
+Hiermit lässt sich eine Höhendifferenz
+messen (Genauigkeit +/-1 m).
+
+[8]
+
+Wikipedia: Bitweiser Operator.
+
+[9]
+
+Mathematik-Seiten von Arndt
+Brünner: Umrechnung von
+Zahlensystemen
+
+BMP085-detailed_v1-2.rpp:
+Hier sind die einzelnen Programmschritte nach dem Rechenweg des
+Datenblatts kommentiert. Auslesen und
+Berechnung sind jeweils eigene Unterprogramme
+(insbesondere
+OSS=3
+wurde berücksichtigt).
+
+BMP085-simulation_data-sheet.rpp:
+Eine Entwicklungsdatei – hier sind die
+Beispielberechnungswerte aus dem
+Datenblatt eingesetzt.
+
+
+Quellen
+
+[10] Wikipedia: Luftdruck.
+[11] meteoblue.com: Luftdruck.
+
+

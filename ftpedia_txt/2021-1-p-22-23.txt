@@ -1,0 +1,93 @@
+
+
+Tipps & Tricks
+
+The fischertechnik Toolbox
+Robin Nikolas Woszidlo
+fischertechnik is a modular construction system which should contain everything out of the box.
+Usually, you would not need any tools, and if you do, they are included, like that little yellow
+screwdriver. Over the years you will notice though, that sometimes a few tools are needed. It is
+annoying to always access my large toolbox for that, so I packed together my personal fischertechnik Box 500, with all the tools I need specifically for ft.
+nik screwdriver, but the Wera one has enhanced usability because it is longer and has
+a rotatable cap on its handle.
+
+
+It includes everything I need for wiring,
+mounting, or reworking of parts, or programming controllers.
+
+Wiring
+For mounting the plugs on wire, I first use a
+Weicon No. 5 wire stripper, which offers a
+good compromise between price and usability. It is specified for cable diameters
+0.2 mm² and larger. According to my experience, it also works well for the fischertechnik 0.14 mm² wire. Stripping both
+wires at once works just as well as stripping
+one after the other.
+To tighten the screws, I use a Wera 118005
+screwdriver with a 0.4 mm · 2mm blade.
+That is the same as the yellow fischertech-
+
+
+
+Mounting
+You probably all know the feeling of sore
+fingers after a long day of building, but even
+that is sometimes not enough, and a hub will
+slip on an axle.
+Especially for collet hubs and hub nuts, I
+found a microfibre rag to be very useful. By
+using it, I can grip all hub nuts (and the
+worms I want to mount them on) very hard
+and seize them to the maximum. The microfibre works so well, because it will grip
+even the worm very well, because of its micro roughness. At the same time, it is soft
+
+for the fingers and prevents soreness and injuries.
+For flat hubs I sometimes use the hub
+wrench from LPE, but thanks to the microfibre rag I rarely must do so. And if I do, it
+is usually only in areas difficult to access by
+hand.
+
+Tipps & Tricks
+
+type Knipex Super-Knips 78 61 125, selfopening by spring, without bevel. It is especially useful for separating axles or cutting
+of cams.
+
+A little hex key is used for small grub
+screws contained in various aftermarket
+axle connectors (e.g., a connector 5 mm
+Power Motor to 4 mm ft-metal-axle).
+
+
+Programming
+
+microfibre rag
+
+Modding
+Some people ask: “Is it okay to modify
+fischertechnik parts, or not?” I would always answer “Yes” and therefore always
+have a small knife at hand. This one comes
+from a set bought in a local drugstore, and
+it fits nicely into the box. The larger one,
+which was also contained in the set, is in my
+normal toolbox. When doing more difficult
+modding work, I prefer to use the large one
+because of its larger handle.
+Additionally, there is a pair of pliers, I use
+filigree electronics end-cutting pliers of the
+
+To program controllers, the box contains
+the two mostly used types of cables. They
+are only in that box for emergencies on exhibitions, at home I have all necessary cables on my desk.
+The two cables are a USB-to-USB-A cable,
+which was widely common for printers, external hard drives and the older controller
+generations, and a USB to mini-USB, as
+needed for TXT and ftDuino.
+I hope to have given some inspiration on
+how to put together your very own fischertechnik toolbox.
+
+References
+[1]
+
+Gerhard Birkenstock: Die fischertechnik-Werkzeug-Wanne. 4/2015, S. 12–14.
+
+
+

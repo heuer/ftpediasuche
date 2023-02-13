@@ -1,0 +1,88 @@
+
+
+Tipps & Tricks
+
+Kaulquappen (Teil 3)
+Harald Steinhaus
+Wie aus den Teilen 1 und 2 dieses Artikels bereits bekannt ist, entstehen ft-Modellbauprinzen
+in einem langwierigen und zuweilen schmerzhaften Prozess, nach Heranreifen einer Kaulquappe zu einem entwicklungstechnischen Frosch und einem mutationsauslösenden Kuss
+durch eine Muse. Die jüngste Brut wird nachfolgend vorgestellt.
+
+
+Großartigen praktischen Nutzen hat die
+Anordnung in Abb. 1 nicht, aber es sieht
+halt ordentlich aufgeräumt aus, wenn man
+den Haken bei Nichtgebrauch wegklappt.
+
+
+Oh, bei Längsverschiebung von Achsen
+klingelt etwas. Also gut, bauen wir noch
+einen V-Stein 15x15x15 (31934) dahinter
+und wir erhalten eine Teleskopachse (Abb.
+3), die nicht von alleine auseinander fällt.
+
+
+Seitdem es die Rastachse mit Platte
+(130593) gibt, ist das Problem eines Übergangs von Rastachse auf einen drehenden
+Hebel eigentlich gelöst. Trotzdem verbleiben noch ein paar Anwendungen, wo es
+anders gehen muss. Hier etwa (Abb. 2), um
+der Achse etwas Verschiebung in Längsrichtung zu ermöglichen. Das Kupplungsteil ist ein Impulszahnrad 4 (37157).
+
+
+
+Eine Gleitführung mit dem Statikadapter
+35975, die auf beliebige Länge gebracht
+werden kann (Abb. 4).
+Eine Tür, die von außen am Griff eines SRiegels ver- und entriegelt wird, zeigt Abb.
+5. Die Mechanik passt komplett in den
+Winkelträger 30 hinein.
+
+
+Tipps & Tricks
+
+
+Das könnte der Zapfen für einen Sattelauflieger mit geringer Bauhöhe sein. Oder ein
+Gelenk, das einen seitlichen Versatz von
+einem halben Rastermaß mitbringt. Die
+Winkelklammer 31538 verhindert, dass die
+Rastachse mit Platte (130593) einfach so
+abgezogen wird (Abb. 6).
+
+
+Der Drehschieber 31070 (Abb. 7) zeigt
+sich sehr störrisch bei der Suche nach
+anderen Verwendungsbereichen. Hier tät’
+er nun passen, in einem Untersetzungsgetriebe mit zwei Schnecken m1.
+
+
+In Teil 2 des ‚Kaulquappen’-Artikels
+wurde eine Tür mit beidseitiger Öffnungsmöglichkeit vorgestellt. Von der Sorte gibt
+es hier noch mal eine weitere (Abb. 8, 9).
+
+
+Ein echter Prinz ist das in Abb. 10 gezeigte
+Freilaufgetriebe. Innen drin befindet sich
+ein Differenzial alter Bauart, das umgeben
+ist von einem Käfig aus zwei Z30 und drei
+Rastachsen. Die Z30 sitzen beide lose,
+über Freilaufnaben, auf den Achsen des
+Differenzials.
+Bei Drehung der rechten Achse „links
+herum“ werden die Z30 von den Gelenkwürfeln mitgenommen, anders herum rattern letztere einfach über den Differenzialkäfig hinweg.
+Ein weiterer Prinz ist aus dem TeleskopKardan entstanden. Mit den Teilen V-Stein
+15x15x15 schwarz (31934) und Impulszahnrad Z4 (37157) bekommt man auch
+stabile Antriebswellen, die für gefederte
+Fahrzeuge (Abb. 11) und sogar für Fahrzeuglenkungen tauglich sind.
+
+
+
+Die V-Steine 15 blau (35298) oder gelb
+(35297) haben keine seitlichen Zapfen und
+eignen sich besser, wenn es eng zugeht.
+
+An der Lenkung wird aber noch gearbeitet.
+
+
+
+
+

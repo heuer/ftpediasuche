@@ -1,0 +1,68 @@
+
+
+Editorial
+
+Die Macher kommen
+Dirk Fox, Stefan Falk
+„DIY“ (Do-it-Yourself) ist ein Megatrend.
+In den USA zeichnete sich das bereits um
+das Jahr 2005 ab, als die „Maker-Communities“ sich zu organisieren begannen
+und die ersten Maker Faires ihre Tore öffneten. Rund vier Jahre später entstand das
+erste deutsche FabLab an der RWTH
+Aachen; heute gibt es bereits mehr als 40
+solcher Mini-Fabriken und Maker-Treffpunkte in Deutschland. Zugleich verbreiteten sich Reparatur-Cafés; über 500 wurden
+Anfang 2016 in Deutschland gezählt. Und
+2012 startete der Heise-Verlag die Zeitschrift „c’t Hacks“ (inzwischen: „Make:“)
+mit zunächst vier und heute sechs Ausgaben
+pro Jahr. Ein Jahr darauf initiierte Heise die
+Maker Faire in Hannover. Gut 4.000 Besucher zog die Macher-Messe im ersten Jahr
+an, 2014 waren es bereits 9.000, 2015 über
+10.000 und im Mai 2016 zählte man schon
+mehr als 16.000 Besucher – eine Vervierfachung in nur drei Jahren, nicht gerechnet
+die Besucher der „Schwestermessen“ in
+Berlin, Köln und am Bodensee.
+Über die Ursache der DIY-Bewegung lässt
+sich trefflich spekulieren. Hat die „Generation Kopf unten“ versehentlich das Haupt
+gehoben und entdeckt, dass das Leben mehr
+zu bieten hat als virtualisierte Welten? Oder
+ist sie die monotone Wischerei leid?
+Vielleicht ist es aber auch eine Antwort auf
+die zunehmende Passivität, die uns eine
+immer künstlichere und intransparentere
+Welt um uns herum aufzwingt. Die Milch
+kommt schon lange aus der Tüte und die
+Pizza aus der Tiefkühltruhe; längst kann
+man den Fön nicht mehr reparieren und
+neuerdings lässt sich nicht einmal mehr der
+
+Akku des Smartphones tauschen – vom
+Schrauben am Auto oder dem Frisieren des
+Mofas (für die Digital Natives: nein, dafür
+braucht man keinen Friseur) ganz zu
+schweigen.
+Für ein Wesen, das sich als „Krone der
+Schöpfung“ versteht, ein gewöhnungsbedürftiger Zustand: Die schöne neue
+Produktwelt beherrscht uns und zwingt uns
+ihren Willen auf. Der Maker-Trend ist ein
+Aufstand der Entmündigten: Kollektiv
+können wir noch mithalten und die Welt mit
+eigenen Kreationen überraschen. Befeuert
+wird dieser Trend von technischen Innovationen wie bezahlbaren 3D-Druckern,
+leistungsfähigen Mini-Computern (wie
+Arduino oder Raspberry Pi) und einem
+Riesenangebot an billigen Sensoren.
+Jetzt hat die Welle auch die fischertechniker
+erreicht. Zwar erobern wir uns schon seit
+vielen Jahren mit Funktionsmodellen das
+Weltwissen zurück – aber dass die Community innerhalb von nur drei Monaten eine
+neue TXT-Firmware bereitstellt, der Arduino sich zum „Einsteiger-Controller“ mausert und nun sogar fischertechnik mit einem
+Selbstbau-3D-Drucker den Maker-Markt
+ins Visier nimmt, ist eine neue Entwicklung. Freuen wir uns also auf viele interessante Überraschungen, die die Symbiose
+aus fischertechnikern und Makern in
+Zukunft noch hervorbringen wird.
+Beste Grüße,
+Euer ft:pedia-Team
+P.S.: Am einfachsten erreicht ihr uns unter
+ftpedia@ftcommunity.de oder über die Rubrik ft:pedia im Forum der ft-Community.
+
+

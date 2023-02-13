@@ -1,0 +1,260 @@
+
+
+Modell
+
+Drei Clowns und ein Krokodil
+Rüdiger Riedel
+Mit dem Electronics-Modul rt-tp (152063) lassen sich auf einfache Weise Figuren in Bewegung
+versetzen.
+
+Zirkusnummer
+
+Der Antrieb
+
+Drei Clowns studieren eine neue Zirkusnummer ein. Als Attraktion haben sie sich
+ein Krokodil dazu geholt. Ob das eine gute
+Idee war?
+
+Wir erzeugen Bewegung mit Stromimpulsen auf Elektromagnete, deren Magnetfeld
+auf kleine Stabmagnete (Neodym-Magnete
+mit 4 mm Durchmesser und 10 mm Länge
+[2, 3] einwirkt.
+
+Das Krokodil schnappt, zwei Clowns wedeln vor Angst mit den Armen und ein dritter Clown schlägt die Trommel im Takt.
+Gedacht ist die Szene als Kinderbelustigung
+auf einer Ausstellung, auf einer Convention. Darauf freue ich mich.
+
+Alle drei Typen von fischertechnik-Elektromagneten in Abb. 2 (links oben (31324),
+links unten (32363), rechts (142504)) sind
+nur auf dem Gebrauchtmarkt erhältlich. Der
+rechte Typ ist ein sogenannter Topfmagnet,
+
+
+
+Modell
+
+dafür gibt es perfekt passende Ersatztypen
+im Internet und insbesondere bei fischerfriendsman [2]. Sie werden an einen Baustein 15 mit Ansenkung (32321) geschraubt.
+
+
+Das Antriebsprinzip des großen Clowns
+zeigt Abb. 3. Es besteht aus einem Topfmagnet und dem Pendel gemäß Abb. 4.
+
+
+
+Dieses wird aus Gelenkwürfel-Klaue
+und -Zunge (31436 und 31426) mit einem
+Baustein 5 (37237) und daran zwei Klemmhülsen (35980) zusammengesetzt In den
+Klemmhülsen werden die beiden Stabmagnete so eingeklemmt, dass sie einander abstoßen.
+Durch die Gelenkwürfelzunge wird ein
+Stück Pneumatik-Schlauch geschoben und
+in dessen Enden werden ein oder zwei TStücke (31642) eingesteckt.
+
+Haben wir E-Magnete vom U-Typ (Abb. 2
+links), dann bauen wir das Pendel nach
+(31426), einem Baustein 5 2Z (37238 oder
+BS5 plus Federnocke) und einer Gelenkwürfel-Zunge (31436) zusammen und stecken in diese den Stabmagnet.
+Zur Impulserzeugung verwenden wir das
+Electronics-Modul rt-tp (152063). In dem
+im Kapitel 1.4.7 die Schaltung für vier unabhängige Blinker beschrieben. Wir übernehmen die DIP-Schalterstellungen.
+Die Taster an den Eingängen brauchen wir
+nicht; E1 bis E3 werden mit dem Minus-Pol
+verbunden. An jeden Ausgang O1 bis O4
+habe ich die Plus-Seite einer LED ange-
+
+
+
+den
+Topfmagnet,
+z. B. von fischerfriendsman [1], aufschrauben (Abb. 9).
+
+Das Maul besteht
+aus zwei Kugelbahn-Wechselweichen (151716), die
+mit einem Stück Silikonschlauch und
+zwei
+PneumatikAnschlusswinkeln
+(36915) verbunden
+werden. Der Kopf
+sitzt auf zwei Bausteinen 7,5 und diese
+auf zwei Bauplatten
+15 · 30 3,75
+1N
+(32330), alles zusammengehalten
+mit
+Federnocken
+(31982). Betätigtwird das Maul von
+schlossen und alle Minus-Seiten an die Bateiner Schwingfeder (31329), die am Ende
+terie. Parallel zu den LEDs können wir jetzt
+von zwei Schlauchanschlüssen D4 gerade
+jeweils ein bis zwei Elektromagnete an(163204) und zwei Klemmbuchsen 5
+schließen; acht E-Magnete schafft das Mo(37679) gehalten wird.
+dul! Die vier Stück für die Clowns-Szene
+betreibt es problemlos.
+Die Polung der E-Magnete ist nicht egal;
+wenn das Pendel nicht richtig ausschlägt:
+umpolen.
+
+Das Krokodil
+Das Krokodil ist bissig! Es macht das Maul
+auf und zu (Abb. 8), angetrieben von einem
+Topfmagnet.
+
+
+
+Den Bau beginnen wir mit der gelben Bodenplatte 30 · 90 · 7,5 (32861), auf die wir
+
+
+Die Abdeckung des Körpers nach oben bilden zwei Bauplatten 15 · 45 2Z (163041),
+verbunden
+durch
+eine
+Bauplatte
+15 · 30 · 3,75 1N. Eine Bauplatte 5 15 · 30
+(35049) und eine Bauplatte 15 · 30
+(156504) ergänzen den Rücken. Dieser wird
+
+
+Modell
+
+
+auf der Schwingfeder von zwei Stabmagneten 4 mm · 10 mm [1, 2] in einem Baustein
+7,5 gehalten.
+
+Ganze stecken wir mit zwei Schlauchanschlüssen D4 gerade an den Körper
+(Abb. 11).
+
+
+Für den Körper und die Füße verwenden wir
+17 Seitenteil-Verlängerungen (163200). Für
+den Körper werden sie zusammengehalten
+von Verbindern 30 (31061) und an der Bodenplatte mit Federnocken befestigt.
+Ein Seitenteil links (163198) und ein Seitenteil rechts (163199) fügen wir als Übergang zum Schwanz, einem KugelbahnFlexprofil 90 (155901), zusammen. Das
+
+Für die Beine gibt es bei fischerfriendsman
+grünen Silikonschlauch. Dieser wird durch
+Bausteine 7,5 gezogen (Abb. 11) und in die
+Seitenteil Verlängerungen gequetscht. Die
+glücklichen Besitzer des alten fischertechnik-Magnetventils (32340) können ein kürzeres Krokodil bauen.
+
+
+
+
+
+
+Das Ventil und die beiden Führungsplatten
+werden entfernt und der Magnet auf die
+Grundplatte geschoben.
+
+Schnapp, schnapp…
+
+Die Clowns
+Zwei der Clowns haben Köpfe aus Winkelsteinen 30° rechtwinklig (31012), die gibt
+es z. B. bei fischerfriendsman. Verbunden
+werden sie mit zwei Bausteinen 15 mit Bohrung (32064), hinten zusammengehalten
+von einer Bauplatte 15 · 30 · 3,75 1N
+(32330) und zwei Federnocken.
+Der große Clown
+
+
+Alles Weitere ergibt sich aus den Abbildungen.
+Das Hinterteil mit den beiden Seitenteilen/Wing 45 (163198 und 163199) ist nur
+eingeklemmt am Baustein 5 15 · 30
+(35049).
+
+Das Unterteil wird um den Baustein 15 mit
+Ansenkung (32321) des Topfmagneten aufgebaut. Die Körperoberfläche besteht aus
+den schon bekannten Teilen; zur Abwechslung auch mit den grauen (silber genannten)
+Seitenteil-Verlängerungen / Wing 15 Mitte
+(163438).
+An der Schulter aus zwei gelben Bausteinen
+15 und zwei gelben Bausteinen 15 · 15 rund
+(172543) hängt das Pendel für die Arme gemäß Abb. 4. Diese sind aus grünem Silikonschlauch von fischerfriendsman [2]; da gibt
+
+
+es auch roten und gelben Silikonschlauch
+für die anderen Clowns.
+Die Hände sind zwei schwarze PneumatikT-Stücke (156042).
+
+Modell
+
+Die großen Füße stecken in Schuhen aus je
+einem roten Baustein 15 und einem roten
+Baustein 15 · 30 rund (163439).
+
+
+Der kleine Clown
+Hier kommt der Elektromagnet Typ 32363
+zum Einsatz. Es geht auch mit dem Typ
+31324, da sind aber Anpassungen nötig,
+siehe Abb. 2.
+
+Vier Bausteine 15 · 15 rund (172543) und
+zwei Bausteine 7,5 werden zu seinem Kopf
+zusammengefügt. Augen aus zwei S-Verbindungsstopfen 6 (32316), die Nase aus einem Pneumatik-Stopfen (31708), der Mund
+aus einem roten Stück Silikonschlauch und
+die Stirn aus einer gelben Bauplatte 15 · 15
+1Z (38236).
+
+
+
+Der Körper ist auf einer V-Grundplatte
+45 · 45 · 5,5 (36593) aufgebaut.
+
+das Pendel nach Abb. 5 schwingt jetzt vor
+und zurück.
+Zum Ausgleich der Armgewichte sind auf
+der Gegenseite zwei Flachstecker (31336 oder 31337) über je ein Stück Silikonschlauch befestigt, siehe Abb. 23.
+
+
+Der Schelm hat Plattfüße. Wir nehmen zwei
+Bausteine 5 15 · 30 (35049), unter einem
+davon ein Federnocken zur Befestigung auf
+der Grundplatte 500.
+Der sitzende Clown
+
+
+Zwei V-Räder 23 · 10, ein Gummireifen
+32,5 · 8 (34995) und eine V-Achse 28 oder
+eine Rastachse 30 werden zum Zylinder.
+Ein Walzenrad 40 · 12 nehmen wir für die
+Trommel. Den Trommelfuß bildet bei mir
+eine Rückschlussplatte 25 rund (31326).
+
+
+
+Fehlt noch der Trommler. Auch hier verwenden wir den Elektromagnet (32363),
+
+Wenn wir alles sauber ausrichten, schlagen
+die beiden Arme mit dem Pneumatik-Stopfen (31708) bzw. dem PneumatikSchlauchanschluss (121640) rhythmisch
+und hörbar auf die Trommel.
+
+
+Modell
+
+Einen kleinen Eindruck der Bewegungen vermittelt Abb. 24.
+Die Geschwindigkeit lässt sich
+mit dem Drehknopf am Electronics-Modul stufenlos einstellen.
+
+Quellen
+[1]
+
+Rüdiger Riedel: Ersatz für
+die Elektromagnete. ft:pedia 3/2017, S. 19-22.
+
+[2]
+
+fischerfriendsman: Stabmagnet 7348fg.
+
+[3]
+
+Dirk Fox, Thomas Püttmann: Technikgeschichte
+mit fischertechnik.
+dpunkt.verlag, Heidelberg, 2015, S. 218.
+
+[4]
+
+Profi Electronics
+
+
+
+

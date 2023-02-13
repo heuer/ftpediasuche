@@ -1,0 +1,224 @@
+
+
+Tipps & Tricks
+
+Kaulquappen (Teil 1)
+Warum „Kaulquappen“? Das fing an mit einem Ausspruch von Remadus: beim Entwickeln
+gilt der Erfahrungsgrundsatz, dass man viele Frösche küssen muss (d. h. viele Wege und
+Entwürfe austesten muss), bis man auf einen Prinzen trifft (ein Entwurf, der es bis zur Praxistauglichkeit bringen kann). Und oft genug sind auch Kröten darunter. So, und wenn man da
+lauter angefangene Sachen hat, die erst noch bis zum Frosch-Stadium heranreifen müssen,
+dann können das ja nur Kaulquappen sein.
+Die folgenden Teile-Kombinationen haben
+sich entweder „einfach so“ oder auf der
+Suche nach Lösungen für andere Probleme
+ergeben; jetzt kann man sie eher als Lösungen für noch nicht bekannte Probleme
+ansehen. Insbesondere sind etliche meiner
+Flugzeug-Fahrwerke und Ruder-Gestänge
+in diesem Tümpel entstanden.
+Der Achshalter rastet sauber in der Aussparung zwischen den Zapfen der Seilrolle
+ein. Das könnte mal in einem Höhen- oder
+Seitenruder nützlich werden (Abb. 1).
+
+aufbohren. Die Lochabstände passen zu
+denen des Lenkwürfels 31843 (Abb. 2).
+
+
+Zwischen zwei der alten Seilrollen passt
+eine dritte quer hindurch (Abb. 3).
+
+
+Die ft-Achshalter gibt es in einfacher und
+in doppelter Ausführung. Letztere hat an
+den Außenpositionen durchgehende Löcher, innen müsste man eine Verjüngung
+2 Positionsnummer von Fischerfriendswoman (ffw).
+
+
+
+Tipps & Tricks
+
+Damit kann man Drehmomente mit sauberer Führung auf engstem Raum übertragen:
+man kann es mit gutem Willen so hinrechnen, dass diese Dreh-Durchführung überhaupt keinen Platz braucht.
+Die Stahlstifte der Zahnstange passen in
+die Bohrungen der Seilkurbel. Es gibt noch
+kein Problem, das hiermit gelöst würde
+(Abb. 4).
+
+Das könnte mal das Kernstück eines
+Kirmesmodells (Fahrgeschäft) werden. Die
+sechs Antriebe führen dann zu sechs Gondeln, von denen drei vorwärts und drei
+rückwärts rotieren (Abb. 7).
+
+
+Mit dem Federfuß 31307 bekommt man
+ein Drehlager mit etwas Beweglichkeit in
+einer Richtung, siehe Abb. 5 ...
+
+Vier Lenkhebel zu einem Rührquirl kombiniert. Das könnte auch irgendetwas Landwirtschaftliches werden (Abb. 8).
+
+
+... aber aufgepasst: die Federfüße sind nicht
+immer gleich lang (Abb. 6).
+
+
+Der V-Stein 15·15·15 mit zwei Zapfen ist
+etwas recht Exotisches. Er hat innen zwei
+etwas hervorstehende Stege, in denen man
+
+
+ein Klemm-Z10 recht stabil einklemmen
+kann (Abb. 9).
+
+genveränderlichen) Achsantrieb zusammen. Außerdem kann man einen Antriebsblock einfach aufstecken und wieder entfernen (Abb. 12).
+
+
+Der V-Stein passt über zwei Taster hinweg. In Mittellage ist keiner betätigt, beim
+Verschieben aber, je nach Richtung, erst
+der eine und dann der andere (Abb. 10).
+
+
+Der Stirnzapfen als Teil einer teleskopierbaren Achse. Allzu viel Drehmoment darf
+man aber den beteiligten Zapfen nicht
+zumuten (Abb. 13).
+
+
+
+Das kann eine Lage-Regelung oder Teil
+einer Servolenkung werden.
+
+Die Stege des Stirnzapfens können auch
+prima einen Minitaster betätigen. In Mittellage sind alle Teile im ft-Raster (Abb. 14).
+
+V-Stein und „Stirnzapfen für Alu-Profil“
+passen als steckbare Verbindung zusammen (Abb. 11).
+
+
+V-Stein und die eckigen Kardangelenke
+fügen sich zu einem teleskopierbaren (län24
+
+Die Seilwindenbremse als Exzenterhebel.
+Hier z. B. um eine Luke zu öffnen und zu
+
+schließen. Auf der Rückseite ist ein
+Klemm-Z15 aufgeschoben (Abb. 15).
+
+
+Tipps & Tricks
+
+Kraftübertragung auf die ft-Nabe sorgen.
+Das ist noch nichts Neues. Wenn man aber
+die Nabe nicht ganz so fest anzieht, kann
+der Mitnehmer noch hin- und herbewegt
+werden. Das reicht für eine Kupplung oder
+als Teil eines Schaltgetriebes (Abb. 17).
+Der Vierkant passt sauber in die Queröffnungen der Rastadapter und des Rast-Kardan. Das hier ist ein Exzenterantrieb, der
+zusätzlich noch nutiert (die gedachte Achse
+durch den Zapfen der Gelenkwürfel-Klaue
+läuft auf einem Kegelmantel um; Abb. 18).
+
+Es gibt ein paar ft-Metallachsen mit Vierkant am Ende: eine Achse 135; eine Achse
+78 mit Z44 und das Differenzial 31500.
+Der Vierkant bietet sich als Übergang von
+Metallachsen auf Rastachsen an (Abb. 16).
+
+Mit einem Rastraupenbelag kann man die
+Spurstangen 32229 anreihen (Abb. 19).
+
+
+Die Führungsplatte hält die S-Streben fest.
+Das sollte einmal ein Führungsmechanismus für eine Rolltreppe werden, hat aber
+nicht überzeugen können (Abb. 20).
+
+
+
+Zum Vierkant passend gibt es KunststoffMitnehmer, die für eine formschlüssige
+
+Zwei gegenüberstehende Führungsplatten
+ergeben soviel Zwischenraum, dass ein Fe-
+
+
+
+
+dernocken darin gleiten kann. Der Federnocken kann auch leicht ein- und ausgeklickt werden, etwa als Türverschluss.
+
+
+
+Die Riegelsteine können sich auf dem UTräger-Adapter nicht mehr verdrehen,
+wenn sie mit einer V-Platte gesichert sind.
+Hinten dienen zwei Federnocken als Mitnehmer für den Klemmring 31020. Der
+BS15 (rechts) kann sich frei drehen (Abb.
+25).
+
+Wenn man die Lenkklaue in den Riegelstein steckt, erhält man eine 45°-Winkelverbindung (Abb. 22).
+
+
+Wenn ein BS15 mit zwei Zapfen kaputt
+geht, bleibt ein Stahlstift mit zwei Zapfen
+übrig. Der wiederum passt in den Riegelstein hinein, etwa als Kardan-Ersatz, aber
+mit ziemlich viel Spiel (Abb. 26).
+
+Mit der V-Platte 15·30 (oder länger) im
+Riegelstein erhält man eine Teleskop-Antriebsachse. Etwas sperrig, aber besser als
+nichts (Abb. 23).
+
+
+
+Die Reifen 23 kann man über den Riegelstein schieben und erhält eine gut klemmende Verbindung (Abb. 24).
+
+
+Die „Getriebeachse mit Ritzel Z14“ 32912
+stammt aus dem schwarzen Stufengetriebe
+neuer Bauart. Sie hat einen Vierkant, der
+zum Innenvierkant der Seiltrommel passt.
+Motor und Seilwinde liegen jetzt genau „in
+Flucht“. Für hohe Last taugt es aber nicht;
+es verwindet sich und rattert (Abb. 27).
+
+
+Tipps & Tricks
+
+Drittens (links): Den 1:1-Übergang von der
+Schnecke eines S-Motors auf eine ft-Achse
+bewerkstelligt hier ein Stückchen Silikonschlauch. Die Schiffsschraube kann man
+„einfach so“ über eine ft-Rastachse drehen
+und damit ein Gewinde herstellen (im Beispiel unten mit einem Differenzial-Antriebsrad).
+
+Hier sehen wir den großen Moment: die
+Mutation einer Kaulquappe bis hin zum
+Prinzen:
+Erstens (Mitte): Das 32912 aus dem „neuen“ Stufengetriebe“. Mit dem „Ritzel Z14
+mit Steckachse“ 32917 aus dem gleichen
+Getriebe funktioniert es genauso gut. Stirnseitig ist da eine Bohrung drin (das ist
+wohl fertigungsbedingt, wegen Materialschrumpfung beim Spritzguss). Jedenfalls
+passt dort die „Schubstange 30“ 37276
+(oder 37283, beide vom Hubgetriebe) hinein, meistens mit guter Klemmwirkung.
+Beim 32912 hat man noch den Vorteil,
+dass der Antrieb wegen der kurzen Achse
+weniger Verluste durch das Planschen im
+Wasser erzeugt (Abb. 28).
+
+Die Prinz-Werdung, Teil 2: Hier kommt
+ein Fremdteil hinzu: eine Schiffsschraube
+aus dem Modellbauladen.
+Die wird mit ihrem Messing-Innengewinde
+einfach über eine ft-Achse drübergewürgt
+... und sitzt (Abb. 29).
+
+
+Und alles zusammen ergibt einen Außenbordmotor, der richtig abgeht.
+
+
+Zweitens (rechts): Dieses Ritzel und eine
+Achse mit Z28 passen in die gegenüber
+liegenden Nuten eines BS15 oder BS7,5.
+
+Ohne die Untersetzung von Z14 auf Z28
+wäre der Motor nicht richtig an die Verhältnisse angepasst und hätte weniger
+Schub.
+Harald Steinhaus
+
+
+
+
+
+
+

@@ -1,0 +1,772 @@
+
+Computing
+
+Computing
+
+V. I. P. – Ein I²C-nach-Computing-InterfaceUmsetzer (Teil 1)
+René Trapp
+Wie man ein altehrwürdiges fischertechnik Computing Interface als Slave an den I²C-Bus
+anschließt.
+fischertechnik hat mit der Nutzung des I²CInterface beim TX- und beim TXTController die wohl universellste Erweiterungsmöglichkeit geschaffen. Reichen die
+vorhandenen Anschlussmöglichkeiten des
+Controllers nicht aus, kann man einfach
+zusätzliche Sensoren per I²C anschließen.
+Natürlich sind nicht nur Sensoren für den
+Anschluss am I²C-Bus geeignet, sondern
+auch entsprechend ausgerüstete Aktoren.
+In der ft:pedia gibt es schon zahlreiche Publikationen zum Thema I²C am TX oder
+TXT. Aus dieser Artikelreihe stechen die
+beiden Beiträge von Dirk Fox mit den
+Steckerbelegungen des TX [1] und TXT [2]
+besonders hervor.
+Computing
+Interfaces
+an
+diversen
+Microcontrollern sind auch schon in der
+ft:pedia oder auf privaten Fanseiten vorgestellt worden ([3], [4], [5] und [6]).
+
+Der Plan
+Warum also nicht die beiden Themen miteinander verbinden und ein Computing
+Interface als IO-Erweiterung am I²C-Bus
+des TX(T) betreiben?
+Das I²C-Protokoll ist bekannt, die Ansteuerung des Computing-Interface ist kein
+Hexenwerk und so könnte solch eine Hardwerkerei zur Umsetzung des I²C-Bus an ein
+Computing Interface an ein paar entspannten Wochenenden angefertigt werden.
+Benötigt wird dazu ein Microcontroller und
+
+ein bisschen Elektronik drum herum. Eine
+Platine veredelt die Schaltung und erlaubt
+es, den Adapter gleich ins Gehäuse des alten
+Interface einzubauen. Abgerundet mit einer
+entsprechenden Software setzt
+der
+Microcontroller als Slave-Device das I²CProtokoll in die nötigen Steuersequenzen
+für das Interface um.
+Für den Autor hätte die Geschichte damit
+eigentlich enden können. Etwas Bastelei,
+ein oder zwei Fotos davon in den Bilderpool
+und gut. Aber über die ganzen Recherchen
+zu den Interfaces stellte sich schnell heraus,
+dass da noch viel mehr Informationen verborgen liegen, die auch für die FanGemeinde zugänglich gemacht werden
+sollen. Und eine anständige Dokumentation
+muss natürlich auch geschrieben werden.
+Für eine universelle Verwendung wird
+zusätzlich eine automatische Pegelanpassung benötigt, da der I²C-Bus des TX
+mit 5 V betrieben wird, beim TXT sind es
+dagegen 3,3 V. Andere, also nicht-fischertechnik-Controller, können davon natürlich
+profitieren.
+Und es gibt noch Hürden, die durch eine
+unvollständige oder fehlerhafte Implementierung einiger I²C-Busmaster aufgestellt
+werden. Das Stichwort heißt hier „clock
+stretching“. Das ist ein Mechanismus, mit
+dem sich ein Slave am Bus eine kurze Auszeit gönnen darf, um seine Aufgabe aus-
+
+
+
+
+zuführen. Im Forum der ftc gibt es widersprüchliche Aussagen hierzu. Einige
+Quellen berichten von Problemen am TX
+und auch am TXT ([7], [8] und [9]). Eine
+ganz frische Quelle belegt allerdings für den
+TXT das Gegenteil [10]. Der TXT kann es
+also doch, das clock stretching!
+Das was in den bisherigen zahlreichen
+Selbstbauprojekten an Know-How zu den
+Interfaces vorgestellt wurde, gilt leider
+nicht so ganz universell. Schließlich gibt es
+nicht „das“ Computing-Interface, sondern
+unsere Datenbank listet ganze 10 Stück
+davon.
+Anhand der Schaltpläne aus dem Buch
+„Robotik mit dem Homecomputer“ [11]
+lassen sich schon marginale Unterschiede
+zwischen den Interfaces erkennen. Diese
+Pläne gelten aber nur für einen Teil der
+Interfaces, so wie auch ein gut versteckter
+Originalplan aus dem Hause fischer [12].
+Zusätzlich findet sich im Downloadbereich
+der ftc eine Art Kombinationsschaltplan für
+die verschiedenen Interfaces [13]. Der ist
+allerdings nicht ganz vollständig.
+Ein richtig universell einsetzbarer Adapter
+kann alle diese alten Interfaces bedienen,
+erlaubt den Betrieb auch an TX oder TXT
+und kommt dabei mit einer gemeinsamen
+Software und einer einzigen Platine aus.
+Alle Bauteile sind für den Hobbyisten
+problemlos erhältlich. Das ist das V. I. P. –
+das VINTAGE INTERFACE PROJECT.
+Bevor nun aber die kleine Hardwerkerei
+vorgestellt wird, ist es zuerst nötig, alle
+alten Interfaces mit ihren Eigenschaften
+näher kennenzulernen. Als „Beifang“
+kommt dabei nicht nur die Historie der
+Interfaces ans Licht; zu jedem Interface gibt
+es ab jetzt auch noch den zugehörigen
+Schaltplan.
+
+Der Untergrund
+Sehr hilfsbereite Freunde aus der ftc stellten
+dem Autor hochauflösende Fotos ihrer
+Interfaces für die Rekonstruktion der
+
+
+Schaltpläne zur Verfügung. An dieser Stelle
+ein dickes Dankeschön an C. Hehr,
+H. Howey und auch an K. Merkert. Von
+letzterem stammt eine Umbauanleitung für
+ein Apple-Interface 30563 zum Anschluss
+an einen PC [14]. Basierend auf dieser
+Umbauanleitung mit den enthaltenen Fotos
+von Bestückungs- und Layoutseite einer
+Platine gelang es, erste Teile der Originalschaltung zu rekonstruieren. Die hochauflösenden Fotos der ftc-Freunde halfen
+dann, die noch offenen Lücken zu
+schließen.
+Bei der Analyse der Platinenfotos ließ sich
+außer detaillierten Schaltplänen nebenbei
+auch noch die Geschichte der Interfaces
+zurückgewinnen.
+
+Der Hintergrund
+Also tauchen wir zunächst etwas in die
+Evolution der Interfaces ab.
+Während diese Zeilen entstehen, gibt unsere
+Datenbank bei der Recherche zu technischen Informationen nicht mehr her als
+die Erscheinungsjahre der einzelnen Interfaces. Gemäß Datenbank und [15] ergibt
+sich immerhin diese Liste in chronologischer Reihenfolge:
+Jahr Nr.
+
+Bezeichnung
+
+1985 30561 Interface Commodore
+Business Machines (CBM)
+4xxx / 8xxx, [16]
+1985 30562 Interface Commodore
+(VC20, C64), [17]
+1985 30563 Interface Apple II, [18]
+1985 30564 Interface Acorn B, [19]
+1985 30565 Interface Schneider CPC,
+[20]
+1986 30567 Interface IBM-PC, [21]
+1987 30566 Interface Centronics Port,
+[22]
+1989 39319 Interface Centronics Port
+(67319) CVK, [23]
+
+Jahr Nr.
+
+Bezeichnung
+
+1989 3639x Interface IBM-PC (66843)
+CVK, [24]
+1991 30520 Interface IBM universal, [25]
+Bei der Historie mutet es etwas seltsam an,
+dass beide Versionen des CVK-Interface
+1989 erschienen sein sollen. Leider ist die
+Informationslage extrem dürftig; es lässt
+sich nicht mit Sicherheit sagen, ob das
+66843 nicht erst doch 1991 auf den Markt
+kam.
+
+Computing
+
+Die Interfaces 30561 (Abb. 2), 30562
+([28]), 30563 und 30564 basieren auf einer
+gemeinsamen Platine mit einseitigem
+Layout. Durch Bestückungsoptionen und
+Lötbrücken wird der exakte Typ des Interface festgelegt. Diskrete (diskret: hier „aus
+einzelnen Transistoren und Widerständen
+bestehende“) Endstufen sind für den
+Anschluss der Motoren vorgesehen.
+
+Zusätzlich ranken sich noch Legenden um
+die Kaskadierung der Interfaces. Das Erste
+Interface ist dabei an den Computer angeschlossen, ein weiteres Interface, der Slave,
+an einen eigens dafür vorhandenen Steckplatz. Auf diese Art konnte schon 1985 die
+Anzahl der Ein- und Ausgänge erhöht
+werden [26], [27].
+
+Der Stand der Technik
+Grundsätzlich verfügen alle vorgenannten
+Interfaces über 5 Buchsen zum Anschluss
+von maximal 2 Netzteilen.
+Eine 20-polige Stiftleiste dient zum
+Anschluss der Modelle. Diese Stiftleiste ist
+bei allen aufgeführten Interfaces einheitlich
+belegt (Abb. 1) und liegt auf der Seite der
+Netzteilbuchsen.
+
+
+Die Ansteuerung der Motoren und das Auslesen der Eingänge erfolgt bei allen Interfaces einheitlich. Auch das Gehäuse der
+Interfaces ist über die Generationen mechanisch unverändert geblieben.
+Die ersten Computing Interfaces stammen
+aus dem Jahr 1985.
+
+
+Das Kabel zum Computer ist an einem von
+drei möglichen Plätzen fest angelötet. Es
+gibt einen 16-poligen Anschluss „DCH“, an
+den ein Interface für den Apple II (30563)
+als Slave angeschlossen werden kann. Ist
+der passende IC-Sockel nicht bestückt, kann
+bei Bedarf ein einfacher IC-Sockel (nicht
+die teuren mit den gedrehten Kontakten!)
+eingelötet werden.
+Layouttechnisch schon weiter fortgeschritten offenbart sich die nächste Generation.
+Die Interfaces 30565 und 30567 ([29])
+basieren ebenfalls auf einer gemeinsamen
+Platine mit einseitigem Layout. Diskrete
+Endstufen sind für den Anschluss der
+Motoren vorgesehen. Hier gibt es keine
+Bestückungsoptionen mehr. Für den
+Computeranschluss wird einheitlich eine
+20-polige Verbindung benutzt. Je nach
+Computer ist das passende Kabel direkt mit
+der Platine verlötet. Es gibt einen 16poligen Anschluss „DCH“, an den ein Interface für Apple II (30563) als Slave angeschlossen werden kann. Diese Platine kann
+als Vorläufer des Centronics-Interface
+
+
+gelten. Sowohl IBM-PC als auch Schneider
+CPC verwenden bereits die CentronicsSchnittstelle als Anschluss für das Computing Interface.
+Einen kleinen Evolutionssprung gibt es
+1987.
+
+poligen Anschluss „DCH“, an den ein Interface für Apple II (30563) als Slave angeschlossen werden kann.
+Die letzte Generation der Interfaces ist mehr
+eine Art Facelift des 30566.
+
+
+Die Interfaces 30566 (Abb. 3) und 39319 (=
+67319) basieren auf einer gemeinsamen
+Platine mit einseitigem Layout.
+
+
+
+Integrierte Endstufen sind hier für den
+Betrieb der Motoren zuständig. LEDs sind
+im Layout vorbereitet, aber nur bei der
+CVK-Version bestückt. Als Stecker zum
+Computer ist einheitlich ein 20-poliges
+Flachkabel verlötet. Je nach Computer wird
+eine Adapterplatine am anderen Kabelende
+aufgesteckt. Auf dieser Adapterplatine ist
+die passende Verschaltung zum Computer
+aufgebracht und das Kabel zum Computer
+wird dort angeschlossen. Dieser 20-polige
+Anschluss ist elektrisch identisch zum
+späteren 30520 belegt. Es gibt einen 1666
+
+Die Interfaces 30520 (Abb. 5) und 66843
+(Abb. 6) basieren auf einer gemeinsamen
+Platine mit doppelseitigem Layout. Die
+integrierten Endstufen sind wieder für den
+Anschluss der Motoren vorgesehen. LEDs
+sind im Layout vorbereitet, aber nur bei der
+CVK-Version bestückt. Die Verbindung
+zum Computer übernimmt auch hier wieder
+das 20-polige Flachkabel; es ist in der
+Platine fest eingelötet. Auf der anderen
+Seite wird das Verbindungskabel zu einer je
+nach Computer angepassten Adapterplatine
+aufgesteckt. Die Vorgehensweise ist identisch zur Vorgängerversion 30566. Es gibt
+eine weitere 20-polige Stiftleiste „ST3“, an
+der ein weiteres 30520 (oder 66843) Interface als Slave angeschlossen werden kann.
+Ein 30566 oder 39319 ist hier als Slave
+ebenso geeignet.
+
+Die Eckpfeiler
+Zu jedem Interface gibt es selbstverständlich auch eine Anleitung. Die meisten dieser
+Dokumente sind bei unseren niederländischen Freunden versammelt [31]. Die
+umfangreichsten Informationen allerdings
+gibt es in einer der dort aufgeführten CVKAnleitungen [32]. Ausführlich sind die
+Funktionen beschrieben, die jeweils benutzten Anschlüsse der Computer zusammengefasst und sogar Hinweise versteckt,
+welche LED bei welcher Motoransteuerung
+aufleuchten wird. Dieses Dokument erwies
+sich als unschätzbare Hilfe bei der Rekonstruktion der Interfaces 30566, 30520 und
+ihrer CVK-Brüder, ohne eine Platine in der
+Hand zu haben.
+Die technischen Daten der Interfaces sind
+über alle Familienmitglieder einheitlich
+angegeben:
+• 4 Motorausgänge M1…M4, je 1 A,
+Spitze 1,5 A
+• Motorausgänge kurzschlusssicher
+• 8 Schaltereingänge E1…E8
+• 2 Widerstandsgeber EX, EY, 0…5 kΩ
+• Watchdog
+• Versorgung aus 6,8 V=
+Für die damals in den Computing-Kästen
+enthaltenen 6 V-Motoren, Mini-Motor
+(31062) sowie S-Motor 6V (32240) ist das
+durchaus ausreichend. Diese entsprechen in
+ihrer Baugröße dem modernen XS-Motor
+(137096) und dem S-Motor 9V (32293).
+
+Das Innenleben
+Ein Interface stellt eine Schnittstelle über
+eine Grenze hinweg dar. Nichts Anderes
+macht ein fischertechnik Computing Interface. Es überbrückt die Grenze zwischen
+einem Computer und Peripherieeinheiten.
+Um die bisherigen Grundlagen abzurunden,
+sei hier also noch kurz auf das Innenleben
+der Interfaces eingegangen (Abb. 7). Die
+nötigen Abläufe zur Kommunikation sind
+
+Computing
+
+in jeder Anleitung enthalten und waren auch
+schon Gegenstand diverser Veröffentlichungen, beispielsweise [3], [4] oder [11].
+
+
+Die vorhandenen Motorausgänge werden
+über lediglich 2 eigene Leitungen (DATAOUT, LOAD-OUT) gesteuert. Eine dritte
+Leitung (CLOCK), wird gemeinsam mit der
+Eingangslogik genutzt.
+Die vorhandenen Schaltereingänge werden
+ebenfalls über 2 eigene Leitungen (DATAIN, LOAD-IN) abgefragt. Die Taktleitung
+CLOCK ist bei dieser Übertragung ebenfalls wieder in Benutzung.
+Für die Analogeingänge sind die Steuerleitungen TRIGGER-X, TRIGGER-Y und
+COUNT-IN zuständig.
+Sind mehrere Interfaces als Kette verschaltet, werden je Interface noch 8 Taktimpulse und 8 Datenbits in die Übertragung
+eingefügt.
+Im referenzierten Artikel von Jens
+Lemkamp [3] und auch bei Dirk Uffmann
+[4] ist der Ablauf wunderschön erklärt.
+Anders als in den alten Anleitungen dargestellt, kann die Ausgabe der Daten an die
+Motorendstufen zeitgleich mit dem Einlesen der Daten von den Schaltereingängen
+erfolgen [5]. Es sei noch angemerkt, dass
+
+
+
+
+diese Art der seriellen Übertragung heutzutage auch als SPI (Serial Peripheral Interface) sehr bekannt ist und von modernen
+Mikrocontrollern per speziell eingebauter
+Hardware unterstützt wird.
+Die Ansteuerung der Motorausgänge und
+die Abfrage der Schaltereingänge erfolgt
+bei allen besprochenen Interfaces identisch.
+Die Unterschiede sind in der Bedienung der
+Widerstandseingänge EX und EY begründet – und einen kleinen aber gemeinen
+Unterschied gibt es auch bei den Motortreibern selbst.
+In den nächsten Teilen der Reihe wird bei
+den jeweiligen Schaltungsteilen noch genau
+auf die jeweilige Übertragung und alle
+weiteren Details eingegangen.
+
+Die Brückenköpfe
+Für den Anschluss des jeweiligen Interfaces
+an das zugehörige Computer-Modell ist ein
+entsprechend passendes Anschlusskabel
+vorgesehen. Bei allen Interfaces im
+Originalzustand ist das Kabel fest angelötet.
+
+diese Impulse also zählen, um das Ergebnis
+zu erhalten.
+
+
+30562 für C64
+Bei diesem Interface für den C64 aus dem
+Hause Commodore ist ein 10-poliges Flachkabel direkt in der Platine verlötet. Die 10
+Lötaugen sind mit „CO“ beschriftet und
+Ader 1 ist markiert. Am C64 wird der Userport benutzt, der sich auf der Rückseite des
+Computers befindet. Die Zuordnung der
+Signale zeigt Abb. 9, rekonstruiert anhand
+[32] und [33].
+
+30561 für CBM4xxx / CBM8xxx /
+VC20
+Bei diesem Interface für die Computer aus
+dem Hause Commodore ist ein 10-poliges
+Flachkabel direkt in der Platine verlötet.
+Die 10 Lötaugen sind mit „CO“ beschriftet
+und Ader 1 ist markiert. Am CommodoreComputer wird der Userport benutzt, der
+sich auf der Rückseite des Computers
+befindet. Die Zuordnung der Signale zeigt
+Die Leitungen LOAD-OUT, LOAD-IN,
+DATA-OUT, DATA-IN und CLOCK
+bedienen die Schieberegister für Motorausund Schaltereingänge. DATA-IN ist nicht
+invertiert. Über die Leitungen TRIGGER-X
+und TRIGGER-Y wird die Abfrage der
+beiden Potentiometer an EX und EY
+gestartet. Als Ergebnis der jeweiligen
+Messung wird eine Anzahl Impulse auf der
+Leitung COUNT-IN vom Interface zurückgeliefert. Das Computerprogramm muss
+
+
+Die Leitungen LOAD-OUT, LOAD-IN,
+DATA-OUT, DATA-IN und CLOCK
+bedienen die Schieberegister für Motorausund Schaltereingänge. DATA-IN ist nicht
+invertiert. Über die Leitungen TRIGGER-X
+und TRIGGER-Y wird die Abfrage der
+beiden Potentiometer an EX und EY
+gestartet. Als Ergebnis der jeweiligen
+Messung wird eine Anzahl Impulse auf der
+Leitung COUNT-IN vom Interface zurückgeliefert. Der Computer muss diese Impulse
+also zählen, um das Ergebnis zu erhalten.
+Dabei gibt es am C64 einen extra Eingang
+für einen Hardware-Zähler, so dass sich das
+Computerprogramm nicht selbst um die
+eigentliche Zählung kümmern muss.
+
+
+Computing
+
+30563 für Apple II
+Diesem Interface für Computer der AppleII-Serie kommt eine Sonderstellung zu.
+In den Apple-II-Computern gibt es eine
+eigene Schaltung, um den Widerstand
+externer Potentiometer zu erfassen. Diese
+wird auch benutzt, so dass auf dem Interface
+die entsprechenden Schaltungsteile nicht
+vorhanden sind. Stattdessen sind die
+Potentiometeranschlüsse direkt mit dem
+Apple II verbunden. Ein 16-poliges Flachkabel ist direkt in einem 20-poligen
+Anschlussfeld verlötet, dieses ist mit „AP“
+beschriftet. Ader 1 sowie die Adern 8, 9 und
+16 sind markiert. Am Apple wird ein interner Steckplatz „Game-IO“ benutzt. Die
+Zuordnung der Signale zeigt Abb. 10,
+rekonstruiert anhand [32] und [34]:
+
+
+Die Leitungen LOAD-OUT, LOAD-IN,
+DATA-OUT, DATA-IN und CLOCK
+bedienen die Schieberegister für Motorausund Schaltereingänge. DATA-IN ist nicht
+invertiert. Über die Leitungen TRIGGER-X
+und TRIGGER-Y wird die Abfrage der
+beiden Potentiometer an EX und EY
+gestartet. Als Ergebnis der jeweiligen
+Messung wird eine Anzahl Impulse auf der
+Leitung COUNT-IN vom Interface zurückgeliefert. Das Computerprogramm muss
+diese Impulse also zählen, um das Ergebnis
+zu erhalten.
+30565 für CPC464 / CPC664 /
+CPC6128
+
+
+Die Leitungen LOAD-OUT, LOAD-IN,
+DATA-OUT, DATA-IN und CLOCK
+bedienen die Schieberegister für Motorausund Schaltereingänge. DATA-IN ist nicht
+invertiert.
+Außer zum Anschluss an einen Apple-IIComputer kann dieses spezielle Interface
+auch übergreifend als Slave zur Erweiterung der Ein- und Ausgänge eingesetzt
+werden.
+30564 für Acorn B
+Das Interface für den Acorn B ist ebenfalls
+mit einem festverlöteten Anschlusskabel
+ausgestattet. Die 5 Diagonalreihen aus je 4
+Lötaugen sind mit „AC“ beschriftet, Ader 1
+ist markiert. Am Acorn wird der Userport
+benutzt, der auf der Computerunterseite
+versteckt ist. Die Zuordnung der Signale
+zeigt Abb. 11, rekonstruiert anhand [35]:
+
+Eigentlich ist es ja schon ein CentronicsInterface, das 30565. Die damals populäre
+parallele Druckerschnittstelle basierte auf
+diesem noch recht jungen Standard. Allerdings wurde nur selten computerseitig der
+normgerechte Stecker verwendet.
+Im Interface ist eine 20-polige Stiftleiste mit
+der Bezeichnung „ST1“ vorgesehen, auf die
+das Flachkabel zum Computer aufgesteckt
+ist. Ader 1 ist markiert. Am anderen Ende
+des Computerkabels ist ein Platinendirektstecker für den Centronics-Port der
+Amstrad/Schneider-Computer angepresst.
+Dabei ist bei einigen CPC-Modellen die
+Anschlusszählung am mechanisch unveränderten und elektrisch identisch belegten
+Stecker geändert. In Abb. 12 ist stellvertretend die Belegung am CPC464 wiedergegeben, basierend auf [37]:
+Die Leitungen LOAD-OUT, LOAD-IN,
+DATA-OUT, DATA-IN und CLOCK
+bedienen die Schieberegister für Motoraus69
+
+
+
+und Schaltereingänge. DATA-IN ist invertiert! Über die Leitungen TRIGGER-X und
+TRIGGER-Y wird die Abfrage der beiden
+Potentiometer an EX und EY gestartet.
+Während der jeweiligen Messung liegt die
+Leitung DATA-IN auf „0“ und ändert ihren
+Zustand zum Ende der Messung auf „1“.
+Das Computerprogramm muss diese Zeitdauer ermitteln, um das Ergebnis zu
+erhalten.
+
+
+Neben dem 20-poligen Stecker für das
+Anschlusskabel zum Computer gibt es auf
+der Platine auch wieder die 10 bekannten
+Lötaugen „CO“ für Commodore-Computer
+und ein 20-poliges Lötaugenfeld „AP“.
+Wegen einer falschen Anschlussbelegung
+kann hier allerding kein Apple II Computer
+angeschlossen werden! Ebenso fehlt für
+Commodore-Computer wegen der geänderten internen Schaltung der Impulsausgang
+COUNT-IN.
+30567 für IBM-PC
+
+
+Das Interface entspricht 1:1 dem vorgenannten 30565. Lediglich am anderen
+Ende des Computerkabels von „ST1“ ist das
+Gegenstück zur sattsam bekannten 25poligen SUB-D-Buchse am PC angebracht.
+
+
+Alle weiteren Details sind identisch mit
+dem 30565 vom Schneider. Insbesondere ist
+auch hier DATA-IN invertiert.
+30566 für Centronics
+Dieses Interface eignet sich für den
+Anschluss an jeden Computer mit der parallelen Centronics-Druckerschnittstelle – so
+impliziert es der Name. Commodore
+Amiga, Atari ST und weitere waren die
+Adressaten dieses Interfaces. Das 20-polige
+Flachkabel zum Computer ist an der Position „ST1“ verlötet, Ader 1 ist markiert. Die
+Belegung des Steckverbinders ist in
+Im Falle der Centronics-Schnittstelle wird
+über die Leitungen TRIGGER-X und
+TRIGGER-Y die Abfrage der beiden
+Potentiometer an EX und EY gestartet. Die
+Leitung POTI-X ist direkt mit RC-X
+verbunden, die Leitung POTI-Y direkt mit
+RC-Y. Während der jeweiligen Messung
+liegt die Leitung CENTRONICS-DATAIN auf „0“ und ändert ihren Zustand zum
+Ende der Messung auf „1“. Das Computerprogramm muss diese Zeitdauer ermitteln,
+um das Ergebnis zu erhalten. Die Daten von
+den Schaltern werden ebenfalls invertiert
+zurückgeliefert.
+
+
+Zusätzlich stehen die Impulse wie bei C64
+und ähnlich an der Leitung COUNT-IN zur
+Zählung zur Verfügung, und es gibt die
+Pulslänge einzeln auch noch auf der Leitung
+PULSE-IN. Die getrennte Datenleitung
+C64-DATA-IN führt ausschließlich die
+
+
+Computing
+
+serielle Information von den Eingängen E1
+bis E8.
+
+siehe Abb. 14 und die Erklärung zum
+30566.
+
+Die Leitungen LOAD-OUT, LOAD-IN,
+DATA-OUT, DATA-IN und CLOCK
+bedienen die Schieberegister für Motorausund Schaltereingänge.
+
+Dieses Interface kann auch als Slave eines
+weiteren 30520 / 66843 genutzt werden.
+
+Soll das Interface an einen Apple II angeschlossen werden, so werden POTI-X und
+POTI-Y direkt zum Apple verbunden, die
+Verbindungen zu RC-X und RC-Y sind
+unterbrochen.
+Es scheint kaum bekannt zu sein, dass diese
+Steckerbelegung mit dem späteren Universal-Interface 30520 völlig identisch ist.
+Auch sind alle nötigen Bauteile bestückt,
+um die volle Funktion des 30520 zu
+erfüllen.
+Daher ist zu vermuten, dass für den
+Anschluss an den Computer eine weitere
+Platine zwischengeschaltet wurde, so wie
+vom 30520 bekannt. Und wegen dieser
+Steckerbelegung eignet sich dieses Interface auch als Slave für ein 30520 / 66843.
+39319 = 67319 Centronics-CVK
+Dieses Interface ist um LEDs zur Anzeige
+der Eingangszustände und der Motorausgänge ergänzt. Die Steckerbelegung ist
+identisch zum 30566, der Anschluss an den
+jeweiligen Computer ist entsprechend vorzunehmen, siehe Abb. 14.
+30520 Universal
+Offenbar hat das neue universelle
+Anschlusskonzept des 30566 überzeugt,
+und so wurde mit der Änderung des SlaveSteckers nicht nur eine neue Teilenummer
+vergeben, sondern auch der Name geändert.
+
+66843 Universal CVK
+Logischerweise gibt es auch hier die Ergänzung um LEDs, um das Interface für Ausbildungszwecke etwas interessanter zu
+machen. Am Stecker (Abb. 14) und dem
+Computeranschluss ist die Technik wiederum identisch zum 30520 und zum 30566
+geblieben.
+Dieses Interface kann ebenfalls als Slave
+eines weiteren 30520 / 66843 genutzt
+werden.
+
+Sklaventreiberei
+In diversen Internetquellen finden sich
+Aussagen, dass es bei einigen Interfaces
+keinen Stecker für einen Slave-Anschluss
+gäbe. Dies stimmt so nicht. Zumindest im
+Layout ist der Anschluss für einen Slave
+immer vorgesehen und das fehlende Bauteil
+kann bei Bedarf eingelötet werden.
+Als Slave sind grundsätzlich nur die Interfaces 30563, 30566 oder 30520 sowie deren
+CVK-Verwandtschaft geeignet.
+Bei den Interfaces 30561, 30562, 30563,
+30564, 30565, 30566, 30567 und 39319
+wird ein Apple-Interface (30563) als Slave
+am 16-poligen Steckplatz „DCH“ angeschlossen. Dessen Anschlussbelegung zeigt
+
+Dieses Interface wurde zusammen mit einer
+individuell passenden zusätzlichen Adapterplatine offiziell für den Anschluss an alle
+damals bekannten Computer vermarktet. Es
+kann die komplette bisherige 3056x-Serie
+der Interfaces ersetzen.
+
+Bestückt ist eine einfache 16-polige ICFassung (DIL 16).
+
+Die Technik selbst ist aber gleichgeblieben
+und entspricht immer noch dem 30566 –
+
+Bei den modernsten Interfaces 30520 und
+66843 wird ein Slave-Interface am Stecker
+
+
+
+
+
+„ST3“ angeschlossen. Dessen Anschlussbelegung zeigt Abb. 16.
+
+[5]
+
+Dirk Uffmann: Altes FT UniversalInterface (Parallelschnittstelle)
+gesteuert durch AVR Mikrocontroller.
+
+[6]
+
+Thomas Kaiser: C-64 Interface an
+RoboPro.
+
+[7]
+
+Forumsdiskussion: I²C clock
+stretching am TXT.
+
+[8]
+
+Forumsanfrage an fischertechnik:
+Unterstützung von i2c clock
+stretching beim TXT controller?.
+
+[9]
+
+Erneute Forumsanfrage an fischertechnik: Unterstützung von i2c clock
+stretching beim TXT controller?.
+
+Bestückt ist hier eine 20-polige Stiftleiste,
+zweireihig mit Rastermaß 2,54 mm.
+Technisch ist es übrigens möglich, mehr als
+2 Interfaces zu kaskadieren. Die maximale
+Anzahl der Interfaces in einer Slave-Kette
+wird durch die Leitungslängen zwischen
+den Interfaces begrenzt. Es gibt keinerlei
+Belege für eine jemals existierende MasterSlave-Kette aus mehr als zwei Interfaces.
+
+[10] Forumsdiskussion: TXT und clockstretching.
+
+Und so geht es weiter
+Im nächsten Teil der Artikelserie rücken die
+Stromversorgung und die verschiedenen
+Motorendstufen in den Fokus. Es gibt Informationen über die Eigenschaften der
+Schaltungen. Ebenso werfen wir einen
+Blick auf mehr oder weniger bekannte
+Probleme.
+
+Quellen
+[1]
+
+Dirk Fox: I²C mit TX und Robo Pro –
+Teil 1: Grundlagen. ft:pedia 3/2012,
+S. 32
+
+[2]
+
+Dirk Fox: I²C mit dem TX(T) – Teil
+12: Temperatursensor. 4/2015, S. 44
+
+[3]
+
+Jens Lemkamp: Parallel-Interface
+durch Arduino gesteuert (1). 1/2014, S. 24
+
+[4]
+
+Dirk Uffmann: Nutzung des
+Universal-Interfaces 30520 als PortErweiterung an einem Mikrocontroller. ft:pedia 2/2014, S. 30
+
+
+[11] J. P. M. Steeman: Robotik mit dem
+Homecomputer. Aachen: Elektor,
+1987
+[12] Klaus Merkert: Zwei Schaltpläne.
+[13] Holger Howey: Kombi-Schaltplan.
+[14] Klaus Merkert: Umbau Apple IIInterface auf PC.
+[15] Ulrich Müller: Übersicht der
+Interfaces.
+[16] fischertechnik-Datenbank: 30561
+(Interface CBM).
+[17] fischertechnik-Datenbank: 30562
+(Interface Commodore).
+[18] fischertechnik-Datenbank: 30563
+(Interface Apple).
+[19] fischertechnik-Datenbank: 30564
+(Interface Acorn).
+[20] fischertechnik-Datenbank: 30565
+(Interface Schneider).
+[21] fischertechnik-Datenbank: 30567
+(Interface IBM).
+[22] fischertechnik-Datenbank: 30566
+(Interface Centronics).
+
+
+Computing
+
+[23] fischertechnik-Datenbank: 39319
+(Centronics Schul-Interface CVK).
+
+[33] C64 Wiki: C64 Userport.
+
+[24] fischertechnik-Datenbank: 66843
+(Universal Schul-Interface CVK).
+
+[35] Chris Whytehead: Acorn Pinouts.
+
+[25] fischertechnik-Datenbank: 30520
+(Interface Universal).
+[26] Fischertechnikclub Nederland: Twee
+robotarmen om je fantasie te
+prikkelen. Clubblad 2/1992, S. 6
+[27] Gerhard Bader: Fischer-Technik und
+Computer: Programme für Atari ST,
+Commodore 64/128, Schneider CPC,
+IBM PC u. Kompatible. CHIPSPECIAL 1987, Vogel Verlag,
+Würzburg, 1987
+
+[34] A2wiki: Apple II Game-IO.
+[36] Larry Davis: PC Parallel Port PinOut.
+[37] CPC Wiki: CPC Printerport.
+
+Bildnachweis
+
+[28] CPC Wiki: Foto eines 30562.
+
+Die Bilder sind mit der freundlichen Genehmigung des jeweiligen Rechteinhabers
+wiedergegeben.
+
+[29] CPC Wiki: Foto eines 30567.
+
+DANKE AN ALLE HELFER:
+
+[30] C. Hehr: Platine eines 30566.
+fischertechnik community.
+
+Christian Hehr, Holger Howey, Ulrich
+Müller und Klaus Merkert, die durch Ihre
+Vorarbeiten und Unterstützung die Rekonstruktion der Schaltpläne von Ihren
+Originalplatinen ermöglichten.
+
+[31] Fischertechnikclub Nederland:
+Computing Dozen.
+[32] fischertechnik: CVK-fischertechnik
+Schul-Interface (67319).
+
+
+

@@ -1,0 +1,160 @@
+
+Elektronik
+
+Elektronik
+
+Tricks mit Sensoren am Robo-Interface
+Lars Blome
+Die digitalen und analogen Eingänge des Robo Interface erbringen in unzähligen Modellen
+zuverlässig ihren Dienst. Dieser Beitrag zeigt Wege auf, die bekannten Sensoren auf
+ungewöhnliche Art und Weise für neue Anwendungsfälle zu verwenden.
+
+Die etwas andere
+Lichtschranke
+
+gramm einbauen. In folgendem Beispiel
+wird eine Lampe eingeschaltet, wenn die
+Lichtschranke unterbrochen wird:
+
+Eine klassische Lichtschranke besteht aus
+einer (meist gebündelten) Lichtquelle
+(Linsenlampe) und einem Fototransistor:
+
+
+Wenn der Lichtstrahl unterbrochen wird,
+gibt der Fototransistor ein Signal ans
+Interface.
+Nun kann es vorkommen, dass man keinen
+I-Eingang mehr frei hat. Dann kann man
+den Fototransistor verpolt (+ und vertauscht) an den AX/AY-Eingang
+anschließen. Das hat mit einer Besonderheit des Robo-Interface zu tun: Bei den
+digitalen Eingängen liegt der Anschluss
+(+) außen am Interface, bei den analogen
+liegt (-) außen. Der Fototransistor muss
+also wegen der unterschiedlichen Belegung
+der Buchsen andersherum angeschlossen
+werden als an Digitaleingängen. Man
+erhält damit einen Analogwert vom Fototransistor. Der Wert verändert sich stark,
+wenn kein Licht auf den Fototransistor
+fällt. Anstatt eines „Warten auf...“-Befehls
+muss man eine vom gemessenen Analogwert abhängige Verzweigung ins Pro-
+
+Programm 1: Fototransistor
+am Analogeingang
+
+Nun kann es aber vorkommen, dass einem
+die Fototransistoren ausgehen und man
+dennoch so etwas wie eine Lichtschranke
+benötigt. Als Ersatzlösungen bieten sich
+die Verwendung eines Ultraschallsensors,
+Farbsensors oder einer Gabellichtschranke
+an.
+Die Gabellichtschranke anzuschließen ist
+etwas schwierig, denn die IR-Diode darin
+braucht 1 V Versorgungsspannung. Die
+beiden anderen Anschlüsse einer solchen
+Lichtschranke werden wie bei einem Fototransistor an einen I-Eingang angeschlossen und können dann z. B. als Impulszähler
+oder der Kommunikation zwischen zwei
+Interfaces dienen.
+
+
+
+
+Ultraschall-Schranke
+Schauen wir uns zunächst das Beispiel mit
+dem Ultraschallsensor an:
+
+Der Wert des Farbsensors ändert sich
+mit dem Umgebungslicht.
+Die gelieferten Werte sind nicht so
+zuverlässig wie beim Ultraschallsensor.
+Die Messgenauigkeit lässt sich verbessern,
+indem man die Umgebung abdunkelt oder
+eine Art Dunkelkammer baut.
+Gabellichtschranken
+
+
+Wenn jetzt ein Objekt in den gestrichelten
+Bereich gelangt, verringert sich der vom
+Ultraschallsensor gelieferte Messwert.
+Dies muss man im Programm auswerten
+(der Sensor ist am Eingang D2 und die
+Signalleuchte an O1 angeschlossen):
+
+Gabellichtschranken können mit den oben
+genannten Lichtschranken nicht ganz mithalten, da man sie wegen der kleinen
+überwachten Strecke meist nur als Impulszähler verwenden kann. Für Lichtschranken, die größere Strecken überbrücken
+sollen, scheiden sie leider aus.
+
+Gabellichtschranken
+
+Programm 2: Ultraschall-Schranke
+
+Farbsensor-Lichtschranke
+Das Programm für die Farbsensor-Lichtschranke funktioniert ähnlich, nur dass
+A1/A2 anstatt D2 abgefragt werden
+müssen. Natürlich liefern A1 bzw. A2
+einen anderen konkreten Wert als der
+Ultraschallsensor, sodass die Vergleichskonstante angepasst werden muss.
+Allerdings hat der Farbsensor bei dieser
+Verwendung auch Nachteile gegenüber
+dem Ultraschallsensor:
+Er reagiert nur auf Reflexion und
+könnte somit ausgetrickst werden.
+
+Messen von Abständen mit
+Farbsensoren
+Nicht nur mit einem Ultraschallsensor
+lassen sich Abstände messen, sondern auch
+mit einem Farbsensor. Wird das zu vermessende Objekt vom Sensor entfernt,
+misst man einen größeren Analogwert,
+nähert es sich dem Sensor, wird der Messwert kleiner:
+
+
+Elektronik
+
+entspricht. Um diesen für bestimmte
+Distanzen zu verwenden, muss der als
+Vergleichskonstante zu verwendende
+Analogwert zunächst per Probemessung
+ermittelt werden, wenn sich das Objekt in
+der bevorzugten Entfernung befindet.
+Anschließend kann dieser Wert für Vergleiche im Programm verwendet werden.
+Ein Beispiel soll die Funktionsweise
+verdeutlichen. Der grundsätzliche Modellaufbau sieht so aus:
+
+Objekt
+
+
+Das (rote) Objekt kann mit einem Motor
+über eine Schiene in Richtung Farbsensor
+oder von ihm weg bewegt werden. An O3
+ist eine Signalleuchte angeschlossen.
+
+
+Bei dieser Lösung können die folgenden
+Probleme auftreten:
+Starke Fremdeinstrahlung durch Sonnenlicht oder Lampen
+Wertegleichheit (etwa ein Messwert
+300 sowohl bei nahem als auch bei entferntem Objekt)
+Der Ultraschallsensor liefert Messwerte
+direkt in cm (D1A = 10 heißt, dass ein
+Objekt 10 cm vom Sensor entfernt ist). Der
+Farbsensor dagegen liefert einen Analogwert, der nicht direkt einem Abstand
+
+
+Das Programm fragt nach, ob sich das
+Objekt nahe genug am Sensor befindet. Ist
+das nicht der Fall, fährt M1 in Richtung
+des Farbsensors, bis das Objekt nahe genug
+dran ist. Das ist eine Alternative zum
+Ultraschallsensor, misst allerdings nicht
+immer so genau und zuverlässig.
+
+
+
+
+Programm 3: Farbsensor-Messaufbau
+
+
+

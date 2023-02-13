@@ -1,0 +1,154 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Bowdenzug
+Ralf Geerken
+Ein Bowdenzug aus fischertechnik – geht das? fischertechnik ist das System der unbegrenzten
+Möglichkeiten, also lautet die Antwort natürlich: „Ja – das geht!“.
+Aber hier erstmal eine Beschreibung, was
+ein Bowdenzug eigentlich ist. Wikipedia
+schreibt dazu [1]:
+Der Bowdenzug (nach DIN 71986 „Seilzug“) ist ein bewegliches Maschinenelement zur Übertragung einer mechanischen
+Bewegung bzw. einer Druck- oder Zugkraft
+mittels einer flexibel verlegbaren Kombination aus einem Drahtseil und einer in
+Verlaufsrichtung stabilen Hülle.
+Benannt ist der Bowdenzug nach seinem
+Erfinder, dem Briten Ernest Monnington
+Bowden (1860-1904). Je nach vorgesehenem Einsatzzweck wird der Bowdenzug
+auch als Bremszug, Schaltzug, Gaszug,
+Kupplungszug etc. bezeichnet. Bowdenzüge
+zur Übertragung von Druckkräften sind
+selten, werden aber immer wieder eingesetzt. Beispiele sind Drahtauslöser für
+Kameras oder das Schaltseil der Shimano
+Positron von Ende der 80er Jahre am
+Fahrrad.
+
+Wie es zu der Idee kam
+Als letztens ein fischertechnik-Bau-Kollege
+bei mir zu Besuch war, gab er mir die Kopie
+eines alten Dokuments eines Fan-ClubModells von 1969. Dieses damalige Clubheft hatte er 1969 selbst erhalten. Das dort
+abgebildete riesige Modell eines Sattelschleppers weckte natürlich sofort meine
+Neugier [2]. Da waren Lösungen dran, für
+die ich (vorerst) gar kein Problem parat
+hatte.
+
+betätigt einen älteren ft-Polwendeschalter
+
+
+
+Mir fiel aber auf, dass dort viele Spiralfedern [3] verbaut waren. Eventuell dienten
+diese als Kabel bzw. Adernführung – das
+war auf der nicht ganz so perfekten Kopie
+nur schlecht zu erkennen. Und wie das
+manchmal bei mir im Baukeller so ist, lag
+eine alte Spiralfeder vor mir, die ausnahmsweise mal nicht ineinander geschraubt war.
+Ich habe natürlich sofort ausprobiert, ob
+man da eine einzelne Ader aus einem ftDraht durchschieben kann.
+
+Polwendeschalters
+
+Klar, das geht – aber wozu die Mühe? Nur
+um eine etwas exotisch verkleidete Ader zu
+bekommen? Mitnichten. Was kann man
+denn sonst noch mit einem spiralfederummantelten Draht machen? Einen Bowdenzug bauen! Das war sicherlich nicht der
+
+
+Sinn und Zweck in dem Modell von 1969,
+aber eine neue Idee war geboren.
+
+Tipps & Tricks
+
+die Feder jetzt in einem Baustein problemlos fixieren konnte. Einen Umschalter um
+eine 450°-Kurve in beiden Richtungen zu
+betätigen ging ohne viel Probieren.
+Weitere Ideen folgten schlagartig:
+
+
+∂ Verknickte Federn konnte ich plötzlich
+wiederverwenden, weil die üblen Knicke
+durch die Ummantelung geradegezogen
+wurden.
+∂ Der hellblaue, etwas festere Schlauch
+erfüllte die Funktion der Spiralfeder
+noch viel besser: Er resultiert in weniger
+Reibung und perfekter Stabilität für den
+verwendeten Draht aus Vollmaterial.
+Aber warum musste es unbedingt ein fester
+Draht in der Ummantelung sein? Ein
+fischertechnik-Seil müsste doch auch gut
+gehen – zumindest in Zugrichtung. Das
+wird bei normalen Anwendungen eines
+Bowdenzugs ja auch gemacht (siehe die
+Handbremse beim Fahrrad). Dort wird der
+Bowdenzug durch eine Feder wieder
+zurückgezogen. Gesagt getan – das funktioniert jedenfalls auch ganz prima.
+
+Polwendeschalters
+
+Ein paar Experimente brachten schon mal
+brauchbare Ergebnisse. Der durchgezogene, plastikummantelte Draht war aber
+sehr reibungsintensiv, was ja bei einem
+Bowdenzug eher kontraproduktiv ist. Also
+musste ein anderes Medium her. Ich
+befreite also einen „Nicht-fischertechnik“Draht aus Vollmaterial von seiner Ummantelung und siehe da: Der Bowdenzug funktionierte schon viel besser – zumindest auf
+Zug. Damit er auch auf Druck funktioniert,
+musste ich die Spiralfeder mit einer Plastikummantelung versehen.
+Ein weicher Pneumatikschlauch musste
+also eine Metamorphose durchleben. Der
+Länge nach aufgeschnitten erfüllte er jetzt
+den Zweck, dass sich die Spiralfeder nicht
+mehr längs dehnen konnte. Die Ummantelung hatte auch noch den Vorteil, dass man
+
+
+Dann kam die Idee, das pure fischertechnikSeil durch eine pure fischertechnik-Spiralfeder zu ziehen (Abb. 7). Die Befestigung
+der Enden der Spiralfeder im 4-mm-System
+ist unproblematisch, wenn man ein kurzes
+Stück Pneumatikschlauch über die Enden
+drückt (Abb. 8). Daraus lässt sich dann ein
+
+
+
+
+Kran bauen, bei dem das Seil nicht mehr
+andauernd von den Seilrollen abrutscht.
+
+einem langen Bowdenzug
+
+Mit ein wenig Geschick lässt sich das Seil
+sogar in einem Pneumatik-T-Stück um die
+Ecke bugsieren. Das Seil lässt sich ganz
+leicht bewegen und klemmt kein bisschen
+(Abb. 10).
+
+durch eine Spiralfeder
+
+ein Pneumatik-T-Stück
+
+Und nun viel Spaß mit euren Ideen, den
+Bowdenzug einzusetzen.
+
+Quellen
+
+um die Ecke (ohne Spiralfeder im Knick)
+
+fischertechnik-Spiralfedern lassen sich
+durch Anreihen beliebig verlängern. Übergänge oder überdehnte Teile lassen sich mit
+weichem Pneumatikschlauch sichern und in
+den 4-mm-Nuten gut befestigen bzw. einpressen (Abb. 9).
+
+[1]
+
+Wikipedia: Bowdenzug.
+
+[2]
+
+ft-Datenbank: Sattelschlepper. ClubNachrichten 3/1969. fischerwerke,
+1969, S. 10-11.
+
+[3]
+
+ft-Datenbank: Antriebsfeder.
+
+

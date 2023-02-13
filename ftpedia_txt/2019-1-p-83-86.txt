@@ -1,0 +1,265 @@
+
+Computing
+
+Computing
+
+Servo-Ansteuerung mit servoShield und
+servoDuino
+Peter Habermehl
+Mit Servomotoren ist weit mehr möglich als der Einsatz als Lenkmotor, wie in den Fahrzeugmodellen von fischertechnik. Dass Servomotoren nicht einmal mit den fischertechnik-Controllern angesteuert werden können, ist daher schon lange ein ärgerlicher begrenzender
+Faktor. Zum Glück gibt es Abhilfe – Dank der Kreativität der Community…
+Servomotoren waren im fischertechnikSystem immer eine Randerscheinung. Zwar
+gehörte schon zur Funkfernsteuerung der
+1980er Jahre ein Lenkservo, und auch das
+Infrarot- und Bluetooth-Fernlenkset brachten jeweils einen (Mini-)Lenkservo mit,
+aber die Ansteuerung erfolgte ausschließlich über die jeweiligen Fernbedienungsempfänger, sodass ein universeller Einsatz
+der Servos als Stellmotor in beliebigen
+Modellen nicht ohne weiteres möglich war.
+Mit den auf Thingiverse verfügbaren Konstruktions- bzw. 3D-Druck-Daten für das
+fischertechnik-kompatible Mini-Servo-System [1] von Jan (Username juh), Abb. 1,
+kam automatisch die Frage nach einer dazu
+passenden Ansteuerelektronik auf, da nun
+mit dem Servo-System unterschiedlichste
+Antriebsaufgaben elegant gelöst werden
+können.
+
+
+Dabei waren zwei Hauptaufgaben zu lösen.
+Erstens arbeiten Modellbau-Servos üblicherweise mit einer Versorgungsspannung
+von 5 bis 6 Volt, während im fischertechnik-System 8 bis 9 Volt verwendet werden.
+Zweitens erfolgt die Ansteuerung des
+Servos über ein pulsweitenmoduliertes
+Rechtecksignal [2], das von den gängigen
+fischertechnik-Controllern
+nicht
+zur
+Verfügung gestellt wird.
+Eine mögliche Lösung wäre die Verwendung eines PWM-Signalgenerators. Solche
+Schaltungen gibt es in vielfältigen Varianten, auch eine externe Steuerung ist möglich, so dass z. B. über eine Spannnungsmodulation ein Stellsignal für einen Servo
+erzeugt werden kann.
+Eine relativ einfache Servo-Ansteuerung
+lässt sich allerdings auch realisieren, wenn
+man über einen Mikrocontroller ein I2CPWM-Shield ansteuert. Da sowohl der
+TXT-Controller als auch der ftDuino über
+einen I2C-Anschluss verfügen und I2CServo-Shields im Maker-Umfeld recht gut
+verfügbar sind, wurde diese Möglichkeit
+hier weiter verfolgt. Derselbe Ansatz steckt
+auch hinter dem ftPi von Christian Bergschneider und Stefan Fuß [3] und dem
+ftPwrDrive-Controller [4].
+Das in Abb. 2 gezeigte I2C-Servo-Shield
+aus dem Arduino-Umfeld (siehe auch [5]),
+
+
+
+ein Clon5 eines Adafruit-Designs, ist je
+nach Bezugsquelle ab ca. 3 € erhältlich. Es
+basiert auf dem PCA9685 [6], einem
+Mikrocontroller, der eigentlich zur Ansteuerung von LEDs entwickelt wurde und
+über 16 PMW-Kanäle mit 12bit Auflösung
+verfügt.
+
+einstellbar ist und der maximal 5A leistet,
+womit auch die parallele Versorgung
+mehrerer Servos kein Problem darstellt.6
+
+
+(nach Adafruit)
+
+Das Shield bietet neben dem I2C-Bus-Anschluss die Möglichkeit zur Einspeisung
+einer separaten Servo-Versorgungsspannung. Weiterhin ist der I2C-Bus durchgeschleift, so dass der Anschluss weiterer
+I2C-Komponenten möglich ist.
+Somit fehlte hardwareseitig nun nur noch
+eine leistungsfähige 5V-Spannungsquelle.
+Die Wahl fiel hierbei auf das in Abb. 3
+gezeigte XL4015-Modul [7], einen StepDown-Spannungswandler, der bei einem
+Eingangsspannungsbereich von 4-38V auf
+eine Ausgangsspannung von 1,8-36V
+
+
+Anmerkung zur Verwendung „günstiger“ ChinaHardware: Ich habe aufgrund eines im Internet
+gefundenen Tutorials dieses Shield bei eBay
+gekauft, ohne zu wissen, dass es eine Kopie des
+Adafruit-Originals ist. Da auch dieses und andere
+China-Module auf der von Adafruit kostenlos
+bereitgestellte Arduino-Library aufbauen, sei an
+dieser Stelle darauf hingewiesen, dass die chinesischen Module unabhängig von anderslautenden
+Beschreibungen der Anbieter Defizite gegenüber
+dem Original aufweisen können. Darüber hinaus
+
+Um diese beiden Bauteile fischertechnikkompatibel zu machen, wurde ein Gehäuse
+zum 3D-Druck entworfen, das die Module
+aufnimmt und mit fischertechnik-Nuten zur
+Befestigung versehen ist. Der elektrische
+Aufbau ist relativ einfach: An die I2C-Lötanschlüsse an der rechten Seite des ServoShields wurden Vcc, Gnd, SCL und SDA
+nach der Belegung des 6-Pin-Anschlusses
+des ftDuino auf einen entsprechenden 6poligen Wannenstecker gelegt. An die Eingänge des Step-Down-Wandlers wurden
+fischertechnik-kompatible 8,4 mm-Bundhülsen gelötet, die durch die Gehäuserückwand nach außen geführt wurden.
+Nachdem der Step-Down-Wandler auf eine
+Ausgangsspannung von 5,2 Volt justiert
+wurde, wurden seine Ausgänge mit dem
+V+-Schraubterminal des I2C-Shields verbunden. Das komplette servoShield ist in
+ftDuino. Um das servoShield am TXT Controller zu betreiben, empfiehlt sich der
+Einsatz des I2C Extender von Björn
+Gundermann [8].
+
+ist es auch aus den anderen genannten Gründen
+eine gute Idee, Adafruit direkt durch den Kauf
+originaler Produkte zu unterstützen. Gleiches gilt
+auch für die Arduino-Produkte.
+
+Eigene Messungen zur Stromaufnahme des
+SG90-Servo liegen nicht vor, das offizielle
+Datenblatt nennt keine Werte und im Internet
+gibt es verschiedene Aussagen. Der Spitzenstrom
+dürfte im Bereich von 250-500 mA liegen.
+
+
+Computing
+
+
+Softwareseitig gibt es verschiedene Lösungen zur Ansteuerung des servoShield. Am
+ftDuino liegt die Verwendung der Adafruit
+PCA9685 Servo Driver Library nahe, die
+sehr gut dokumentiert ist [9].
+Um das servoShield unter Robo PRO mit
+dem TXT zu verwenden, ist auf die
+Robo PRO-I2C-Funktionen zurückzugreifen. Da der PCA9685 aber diesbezüglich
+ebenfalls sehr gut dokumentiert ist, ist auch
+die Ansteuerung über I2C vergleichsweise
+einfach zu bewerkstelligen. Ein fertiger
+Robo PRO-Treiber ist in [5] beschrieben
+und steht in der Robo PRO-I2C-Treibersammlung zum Download zur Verfügung.
+Eine weitere, sehr einfache Möglichkeit zur
+Ansteuerung des servoShield (z. Zt. nur am
+ftDuino) bietet die App „startIDE“ für die
+community firmware des TXT und TX-Pi
+[TX-Pi], wie im Artikel zur aktuellen
+startIDE-Version in dieser Ausgabe der
+ft:pedia nachzulesen ist.
+Nachdem mit dem servoShield erste Erfahrungen mit dem Einsatz von Servos in
+fischertechnik-Modellen gesammelt werden konnten, entstand die Idee, Servos für
+Controller ohne I2C-Bus auch direkt
+verfügbar zu machen. Das Ergebnis dieser
+Bemühungen ist der servoDuino, der die
+Komponenten des servoShield um einen
+Arduino Nano ergänzt (siehe Abb. 5).
+
+
+Obwohl aus elektronischer Sicht nicht
+optimal, weil der Arduino empfindlich auf
+unsaubere Spannungsversorgung reagieren
+kann, wurde der Arduino parallel zum
+V+Terminal des Servo-Shields an den Ausgang des Step-Down-Wandlers angeschlossen. Details finden sich unter dem servoDuino-Link [10]. Im bisherigen Betrieb
+traten keine Stabilitätsprobleme auf.
+Damit ergeben sich zwei Einsatzmöglichkeiten:
+Mit entsprechender Programmierung des
+Arduino mit der Arduino-IDE unter Verwendung der vorgenannten Library kann
+das Gerät eigenständig laufen. Ohne weitere
+Eingänge wären damit zwar zunächst nur
+taktgesteuerte Antriebe möglich, aber das
+kann zum Betrieb z. B. eines Kugelvereinzelers oder eines Hubmechanismus' für eine
+Kugelbahn völlig ausreichen.
+Darüber hinaus können GPIO-Anschlüsse
+des Arduino nach außen gelegt und als
+Eingänge zur Programmsteuerung verwendet oder am gehäuseseitig links durchgeschleiften I2C-Bus des Servo-Shields (hier
+passt eine 6-Pin-DuPont-Steckerleiste im
+2,54 mm-Rastermaß) weitere I2C-I/OKomponenten betrieben werden.
+
+
+
+
+Mit dem im servoDuino-Repository [10]
+verfügbaren Arduino-Sketch lässt sich der
+servoDuino zusätzlich auch noch über USB
+ansteuern.
+
+[2]
+
+Wikipedia: Servo.
+
+[3]
+
+Christian Bergschneider, Stefan
+Fuss: Alternative Controller (3): Der
+ftPi – ein Motor Shield für den
+TX(T). ft:pedia 2/2016, S. 68-72.
+
+[4]
+
+Dirk Wölffel, Christian Bergschneider, Stefan Fuss, Björn Gundermann,
+Christian Lauff: Der ftPwrDriveController für Schrittmotoren und
+Servos – Teil 1. ft:pedia 4/2018, S.
+67-70. Sieh auch den zugehörigen
+Thread im ftc-Forum.
+
+[5]
+
+Dirk Fox: I²C mit dem TX(T) – Teil
+16: Servo-Driver. ft:pedia 2/2017, S.
+41-47.
+
+[6]
+
+NXP: PCA9685: 16-channel, 12-bit
+PWM Fm+ I²C-bus LED controller.
+
+Abschließend lässt sich sagen, dass mit Jans
+Mini-Servo-System fantastische neue Möglichkeiten im fischertechnik-System geschaffen wurden, und dass sich, 3D-DruckMöglichkeiten vorausgesetzt, mit sehr
+wenig Elektronik-Bastelaufwand und geringen Materialkosten von 7-10 € für servoShield bzw. servoDuino auch eine zur
+Mehrheit der üblichen Robotik-Controller
+kompatible Ansteuerlösung schaffen lässt.
+
+[7]
+
+XLSEMI: XL4015: 5A 180KHz 36V
+Buck DC to DC Converter. Datasheet, Rev. 1.5.
+
+[8]
+
+Björn Gundermann: ft-Extender zum
+einfachen Anschluss von I2C-Geräten.
+
+[9]
+
+Adafruit: Adafruit-PWM-ServoDriver-Library. Arduino-Library für
+den PCA9685 Servo Driver, GitHub.
+
+Die für alle Nicht-Bastler vielleicht beste
+Nachricht zum Schluss: Björn Gundermann
+erwägt, auch die Servos in seinem fischertechnik-Shop anzubieten, sobald der z. Zt.
+in Entwicklung befindliche ftPwdDriveController [4], der ebenfalls Servos ansteuern kann, bei ihm erhältlich ist.
+
+[10] Peter Habermehl: servoDuino: An
+Arduino sketch to serve as an USBI2C-bridge for PCA9685 servo
+shields. GitHub.
+
+Quellen und Referenzen
+
+[12] Peter Habermehl: Der (schnelle Weg
+zum) TX-Pi. ft:pedia 1/2019, in
+dieser Ausgabe. Siehe auch: Till
+Harbaum: TX-Pi. GitHub.
+
+Der Arduino dient dann lediglich als USBI2C-Bridge. Somit kann über den seriellen
+Monitor der Aruino-IDE oder jeden beliebigen USB-Host, der serielle Kommunikation über USB zulässt, mit simplen Klartext-Befehlen auf das Servo-Shield und den
+I2C-Bus zugegriffen werden.
+Diese Möglichkeit wurde wiederum in
+startIDE genutzt, sodass der Betrieb des
+servoDuino als Servo-Controller und I2CBridge am TX-Pi (und natürlich TXT) unter
+startIDE möglich ist. Weitere Details hierzu
+finden sich in der startIDE- und servoDuino-Dokumentation.
+
+[1]
+
+Jan: fischertechnik SG90 mini servo
+system. Thingiverse, 15.09.2018, und
+zugehöriger Thread im ftc-Forum.
+
+[11] Peter Habermehl: fischertechnik I2C
+servo shield case. Thingiverse,
+27.12.2018.
+
+[13] Till Harbaum: ftDuino.
+
+
+

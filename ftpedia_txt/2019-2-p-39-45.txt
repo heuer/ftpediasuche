@@ -1,0 +1,383 @@
+
+Elektronik
+
+Elektronik
+
+Wie funktioniert ein I²C-Level-Shifter?
+Till Harbaum
+Der I²C-Bus war schon in vielen Ausgaben der ft:pedia ein Thema. Der TX- und auch der TXTController verfügen über einen entsprechenden Anschluss, über den sich vor allem diverse
+Sensoren leicht anschließen lassen. Allerdings ist I²C nicht gleich I²C. Je nach Umsetzung
+unterscheiden sich die Varianten in der Betriebsspannung, der Datenrate und ähnlichem.
+Dieser Beitrag beschränkt sich auf elektrische Eigenschaften. Für die logischen Eigenschaften
+sei auf frühere ft:pedia-Artikel verwiesen.
+Vor allem die Betriebsspannung ist ein
+immer wieder diskutiertes Thema, da TXund TXT-Controller in diesem Aspekt nicht
+kompatibel sind. Der TX hat seinen I²CAnschluss noch mit 5 Volt betrieben,
+während der TXT sich hier auf 3,3 Volt
+beschränkt. Es kursieren diverse Anleitungen im Netz, wie man diese Unterschiede
+umschiffen kann und auch in der waren entsprechende Baupläne immer mal
+wieder zu sehen. Leider kommt es immer
+wieder zu Widersprüchen und Missverständnissen darum, wie man das Problem
+korrekt löst und welche Hindernisse dabei
+drohen, und die bisher veröffentlichten
+Schaltpläne stellen nicht immer die beste
+Lösung dar.
+
+einer Spannung zwei Verbindungen,
+zwischen denen die Spannung angelegt
+wird. Eine der Verbindungen führt oft den
+sogenannten „Massepegel“, auch 0 V oder
+GND (englisch Ground) genannt. Die
+zweite Verbindung überträgt die Information in Form einer Spannungsdifferenz
+gegenüber der Masseverbindung. Eine I²CVerbindung besteht immer aus drei Einzelverbindungen. Neben der Masseverbindung
+sind das die zwei Datenverbindungen SDA
+und SCL. Diese beiden Signale funktionieren elektrisch auf die gleiche Weise,
+weshalb im Folgenden immer nur eine
+einzelne Datenverbindung betrachtet wird.
+Bei I²C kommt dementsprechend alles
+doppelt vor.
+
+Um das Problem der unterschiedlichen
+Spannungen zu verstehen, muss man zunächst grob verstehen, wie der I²C-Bus
+funktioniert.
+Eine klassische Datenverbindung besteht in
+der Regel aus einer elektrischen Verbindung zwischen einem Sender und einem
+Empfänger. Der Sender legt an die Verbindung eine Spannung an und der Empfänger
+misst diese Spannung. Die Spannung bildet
+dabei den Wert, den der Sender dem
+Empfänger mitteilen will. Eine elektrische
+Spannung besteht immer zwischen zwei
+Leitern (daher hat eine Batterie auch zwei
+Pole) und man benötigt zur Übertragung
+
+
+mit Hilfe einer Batterie als Sender auf eine
+
+
+
+Datenverbindung gelegt wird. Die resultierenden 1,5 Volt kann der Empfänger
+messen und er erhält die Information
+„1,5 Volt“. Will der Sender eine andere
+Information senden, so kann er die Datenverbindung trennen wie in Abb. 2 dargestellt. Der Empfänger misst nun keine
+Spannung mehr. Der Nachteil ist, dass nun
+der Empfänger empfindlich auf Störungen
+wie zum Beispiel Radiosignale reagiert und
+es unklar ist, was der Empfänger für eine
+Spannung misst. Die Datenverbindung
+wäre sehr störanfällig und der offene Eingang würde wie eine Antenne wirken.
+Offene Verbindungen werden daher
+vermieden.
+
+
+Durch Wechsel zwischen 1,5 und 0 Volt in
+einem bestimmten Muster kann der Sender
+eine komplexe Nachricht an den Empfänger
+übertragen.
+So weit so gut. Aber was passiert, wenn der
+Empfänger auf dem gleichen Weg eine
+Antwort an den Sender zurückschicken
+will? Das wäre beim I²C zum Beispiel der
+Fall, wenn der Sender (z. B. der TXT) einen
+Temperaturwert aus einem I²C-Sensor
+auslesen will. Er würde erst selbst dem
+Sensor signalisieren, dass er eine Temperatur erwartet und dann würde der Sensor
+eben jene Temperatur zurückmelden.
+Für eine Rückmeldung muss der Empfänger
+ebenfalls eine Spannung auf die Datenleitung legen. Dabei besteht die Gefahr,
+dass sich Sender und Empfänger uneinig
+sind, welches Signal auf die Datenleitung
+gelegt werden soll. Schaltet der Sender die
+Leitung beispielsweise auf 0 Volt, während
+der Empfänger die Leitung auf 1,5 Volt
+legen will, so entspricht dies einem Kurzschluss wie Abb. 4 dargestellt. Solch ein
+Kurzschluss führt zu einem erhöhten
+Stromverbrauch und kann die beteiligten
+Bauteile beschädigen.
+
+
+Statt die Datenverbindung unbeschaltet zu
+lassen, verbindet man sie zum Übertragen
+des zweiten Zustands oft mit Masse wie in
+auf Masse gelegt. Die Spannungsdifferenz
+zwischen Datenverbindung und Masseverbindung beträgt 0 Volt.
+
+Eine mögliche Lösung besteht darin, dass
+der Sender die Datenleitung wie in Abb. 2
+dargestellt selbst trennt. Der Empfänger
+kann dann seinerseits ein Signal auf die
+Leitung legen. So ein Vorgehen ist prinzipiell möglich und wird auch oft genutzt.
+Zwei Nachteile sind aber, dass nach wie vor
+kurze Zeiten auftreten, in denen das Signal
+offen und damit störempfindlich ist. Außerdem ist eine genaue Kommunikation nötig,
+
+
+Elektronik
+
+damit zu jeder Zeit klar ist, wer (Sender
+oder Empfänger) die Datenleitung mit einer
+Spannung versehen darf, damit es nicht zu
+Kollisionen und Kurzschlüssen kommt.
+
+
+
+Wenn Sender (oder Empfänger) ein Signal
+auf die Datenverbindung legt und dabei die
+Verbindung direkt auf eine Spannungsquelle schaltet, spricht man von einem
+niederohmigen oder niederimpedanten
+Signal. Man kann aber wie in Abb. 5 zu
+sehen einen Widerstand zwischen die
+Spannungsquelle und die Datenverbindung
+schalten. Der Widerstand schwächt das
+Signal vereinfachend gesprochen etwas ab.
+Es wird etwas störempfindlicher, reagiert
+aber weniger empfindlich auf Kurzschlüsse.
+Bei passender Wahl des Widerstands bleibt
+eine ausreichende Störunempfindlichkeit
+erhalten; es ist gleichzeitig problemlos
+möglich, das vom Widerstand vorgegebene
+Signal durch Anlegen eines weiteren
+Signals zu überschreiben. Abb. 6 zeigt, wie
+der Widerstand eigentlich das Signal auf
+1,5 Volt halten soll. Die zusätzliche Masseverbindung zwingt das Signal aber auf
+0 Volt. Durch den Widerstand bildet dies
+aber keinen Kurzschluss wie in Abb. 4.
+Diese zusätzliche Verbindung gegen Masse
+können sowohl Sender als auch Empfänger
+verwenden, ggf. sogar gleichzeitig, ohne
+dass es zu Kurzschlüssen kommt. Aber wie
+funktioniert denn das mit dem Widerstand
+genau?
+
+Die Funktion des Widerstands lässt sich mit
+einem Vergleich veranschaulichen. Nehmen wir an, auf einem Tisch läge ein roter
+Ball. Solange er auf dem Tisch liegt hat er
+die Höhe 0. Das entspricht einer Spannung
+von 0 Volt. Hebt man ihn um 1,5 Zentimeter an, dann entspricht das 1,5 Volt. Man
+kann den Ball nun problemlos in verschiedene Höhen heben. Schwierig wird es aber,
+wenn man zwei Personen gleichzeitig
+widersprüchliche Befehle gibt. Soll eine
+Person den Ball auf dem Tisch halten, eine
+zweite denselben Ball aber gleichzeitig auf
+1,5 cm anheben, dann kommt es zum
+Widerspruch. Das entspricht elektrisch
+einem Kurzschluss.
+Man kann sich den Widerstand nun als eine
+Art Feder vorstellen. Wie in Abb. 7 dargestellt hält der Widerstand das Signal auf
+1,5 Volt bzw. den Ball in 1,5 cm Höhe. Das
+Signal wird vom Widerstand „nach oben
+gezogen“, daher spricht man oft von
+„Pullup-Widerständen“.
+Nun kann man aber mit recht geringem
+Aufwand gegen die Feder bzw. den Widerstand anarbeiten. In Abb. 8 zieht der Sender
+(I²C-Master) am linken am Ball angebrachten Seil und zieht den Ball so auf 0 cm
+Höhe hinunter. Die Feder wird dabei nur
+leicht gedehnt. Ist die Feder zu schwach,
+dann kann ggf. ein Störsignal z. B. in Form
+eines Windstoßes den Ball fälschlicherweise bewegen. Ist sie zu stark, dann muss
+man recht viel Kraft aufwänden, um den
+Ball überhaupt aus der Federposition
+
+
+
+herausbewegen zu können, was einem
+hohen Stromverbrauch entsprechen würde.
+
+(Master) und Empfänger (Client) gleichzeitig das Signal auf 0 Volt senken, ohne
+dass es zu Kurzschlüssen kommt.
+
+
+
+Genau so funktioniert jede der beiden
+Leitungen SDA und SCL des I²C. Widerstände halten das Signal auf einer höheren
+Spannung und alle am Bus angeschlossenen
+Bausteine senken diese Spannung bei
+Bedarf auf 0 Volt.
+Im Falle des TXT, TX oder ftDuino ist die
+spannende Frage, welche Spannung mit
+Hilfe des Widerstands auf die Leitung
+gelegt wird. Der TXT verwendet wie
+eingangs erwähnt 3,3 Volt und der TX bzw.
+der ftDuino verwenden 5 Volt. Auch die
+diversen Sensoren variieren, was die
+Spannung angeht.
+
+
+Genauso kann der Empfänger (I²C-Client)
+wie in Abb. 9 das Signal verändern und es
+ist sogar problemlos möglich, dass Sender
+
+
+Würde man diese Spannungen direkt
+verbinden, wäre auch das wieder ein Kurzschluss. Aber wie wir ja nun wissen, sind da
+Widerstände im Spiel. Alle am I²C-Bus
+beteiligten Geräte legen Spannungen größer
+0 Volt niemals direkt auf die Datenverbindung. Stattdessen geschieht dies ausnahmslos immer über Widerstände. Damit
+sinkt die Gefahr bei Verbindung von
+
+3,3-Volt- und 5-Volt-Geräten erheblich.
+Die Gefahr, tatsächlichen Schaden anzurichten, wenn man 5-Volt- und 3,3-VoltI²C-Geräte mischt, ist vergleichsweise
+gering. Man kann sich das wieder sehr gut
+mit der Feder veranschaulichen. Was
+passiert, wenn man den Ball mit zwei
+Federn verbindet? Eine Feder soll den Ball
+in 3,3 cm Höhe halten, eine zweite Feder
+aber in 5 cm Höhe? Dann wird sich der Ball
+irgendwo in der Mitte zwischen beiden
+Federn in einer Höhe von gut 4 cm
+einpendeln. Wichtiger noch ist aber, dass
+der Ball mit recht wenig Kraft in seiner
+Position gehalten ist. Man könnte am Ball
+wenig bewirken, wenn man nur über die
+Federn an ihm herumzieht.
+Beim I²C-Bus hieße das, dass sich bei
+gemischter Verwendung von 3,3-Volt- und
+5-Volt-Komponenten auf dem Bus Spannungen irgendwo in der Mitte zwischen 3,3
+und 5 Volt einstellen würden. Eine Spannung von knapp über 4 Volt wäre zu erwarten. Auch wenn diese Spannung durch die
+Widerstände sehr „schwach“ ist, liegt sie
+dennoch z. B. außerhalb dessen, was Halbleiterhersteller für einen 3,3-Volt-Chip
+erlauben. Der TXT ist so ein 3,3-V-Gerät
+und sollte eigentlich an seinem I²C-Bus
+nicht mit Spannungen größer 3,3 V konfrontiert werden. Davor warnt das Handbuch des TXT auch explizit.
+Nun enthält der TXT zusätzliche Schutzschaltungen in Form von Widerständen, die
+ihrerseits das Signal weiter abschwächen,
+und Dioden, die die Spannungen fest auf
+den 0- bis 3,3-Volt-Bereich beschränken.
+„Na dann ist doch alles gut“, könnte man
+nun meinen. Diese Schutzschaltungen
+haben aber Grenzen, denn überschüssige
+Spannungen werden in ihnen abgebaut,
+indem die elektrische Energie in Wärme
+umgewandelt wird. Das geht aber nur, wenn
+die Spannung mit geringer „Kraft“ im TXT
+ankommt, wenn also z. B. wie bei I²C
+Widerstände zwischengeschaltet sind.
+Verbindet man den I²C-Anschluss des TXT
+
+Elektronik
+
+dagegen direkt mit einer 5-V-Spannungsquelle oder gar mit den fischertechniküblichen 9 V, dann sind die Schutzschaltungen ggf. nicht in der Lage, die überschüssige Spannung zu verkraften. Sie
+können überhitzen, kaputt gehen und ihre
+Schutzwirkung verlieren. Die Chips im
+TXT wären dann der zu hohen Spannung
+schutzlos ausgeliefert und würden ebenfalls
+beschädigt. Der TXT wäre kaputt. Es ist
+also trotz aller Schutzschaltungen sehr sinnvoll, den TXT gar nicht erst mit Spannungen größer 3,3 Volt zu konfrontieren. Das
+ist Aufgabe der sogenannten Level Shifter
+oder auch Pegelwandler.
+Der Level Shifter trennt die mit 3,3 Volt
+und 5 Volt betriebenen Teile des I²C-Bus
+auf. Wie beschrieben werden die Spannungen über Widerstände angelegt, und die
+beteiligten Busteilnehmer senken die
+Spannung bei Bedarf auf 0 Volt. Genau
+dieses Verhalten überträgt der Level
+Shifter. Die Funktion der Widerstände zum
+Erzeugen der positiven Spannungen auf den
+Datenverbindungen beeinflusst der Level
+Shifter in keiner Weise. Lediglich das
+aktive Senken der Spannung auf 0 Volt
+leitet der Level Shifter von jeweils einer
+Seite auf die andere weiter.
+Als Level Shifter kommen bei I²C die in [1]
+beschriebenen Schaltungen zu Einsatz. Im
+Zentrum dieser in Abb. 10 abgebildeten
+Schaltung steht ein sogenannter MOSFETTransistor. Er übernimmt die Aufgabe des
+„0-Volt-Weiterleitens“. Ihm zur Seite
+stehen die bekannten Widerstände, die das
+Signal auf beiden Seiten auf 5 Volt oder
+3,3 Volt legen, solange kein Kommunikationspartner das Signal auf 0 Volt senken
+möchte.
+
+
+
+
+Wie man an der Schaltung erkennen kann,
+benötigt sie selbst eine Versorgung mit
+3,3 Volt und mit 5 Volt. Die 5 Volt werden
+lediglich für die zwei Pullup-Widerstände
+genutzt. Die 3,3 Volt werden zusätzlich zu
+den 3,3-Volt-seitigen Pullup-Widerständen
+auch vom MOSFET-Transistor benötigt.
+
+lediglich die vier MOSFETs der vier Datenverbindungen mit ihren je zwei PullupWiderständen zu erkennen.
+
+Will man einen 5-Volt-I²C-Sensor am TXT
+betreiben, dann benötigt man für diesen
+sowieso eine 5-Volt-Versorgung, aus der
+man die 5-Volt-Seite des Level Shifters
+direkt mitversorgen kann. Schwieriger wird
+aber die Versorgung der 3,3-Volt-Seite,
+denn diese Spannung steht nicht unmittelbar zur Verfügung.
+Die bisher in der ft:pedia verbreiteten
+Lösungen nutzen den Pin 9 des EXTAnschlusses des TXT als Quelle für die
+3,3 Volt. Dieser Pin stellt allerdings keine
+Versorgungsspannung bereit, sondern
+lediglich ein Datensignal, das in der Regel
+auf 3,3-Volt-Pegel liegt. Die Nutzung
+dieses Signals als Spannungsquelle ist nicht
+prinzipiell falsch und der TXT wird sehr
+wahrscheinlich nicht beeinträchtigt. Allerdings ist diese Lösung nicht garantiert
+funktionsstabil und die Zuverlässigkeit der
+I²C-Kommunikation ist bei dieser Lösung
+nicht gegeben.
+Einige preisgünstige Level Shifter bringen
+einen integrierten 5-Volt-zu-3,3-VoltWandler mit. Abb. 11 zeigt einen typischen
+solchen Level Shifter. Der integrierte Spannungswandler ist das fünfpolige Bauteil,
+direkt daneben befinden sich die zwei
+dreipoligen MOSFETs, die die beiden
+Datenverbindungen (SCL und SDA) des
+Level Shifters bilden. Dieser Spannungswandler benötigt lediglich die 5-VoltVersorgung und kann daher auf die etwas
+unglückliche Versorgung aus Pin 9 des
+TXT verzichten.
+verbreiteteren, aber wegen der fehlenden
+5-Volt-zu-3,3-Volt-Wandlung nicht geeigneten Level Shifter. Auf der Platine sind gut
+
+
+
+
+Wie der Gesamtaufbau aussehen könnte
+zeigt Abb. 13. Dieses Bild ist eine aktualisierte Version des Bildes, das in der und auch außerhalb schon seit geraumer
+Zeit kursiert und das die etwas unglückliche
+Variante darstellte. Die hier vorgestellte
+Version vermeidet die Nachteile der alten
+Version, speziell die wenig elegante
+Lösung, eine der Datenleitungen des TXT
+als Spannungsversorgung zu missbrauchen.
+Die Frage nach der I²C-Spannung stellt sich
+nicht nur am TXT und TX, sondern auch am
+ftDuino, dem TX-Pi und unterschiedlichen
+
+
+Elektronik
+
+Sensoren. Die Anleitung des ftDuino bietet
+in Abschnitt 6.13 [2] einige Beispiele für
+I²C-Spannungswandler. Auch für den
+TX-Pi wurde ein entsprechender Wandler
+gebaut [3] und schließlich ist mit dem ftExtender [4] ein Fertiggerät erhältlich, das
+eine zur beschriebenen Schaltung äquivalente Lösung enthält. Auch für im Löten
+unerfahrene User bieten sich also diverse
+Möglichkeiten, den TXT, TX und diverse
+andere Geräte gefahrlos via I²C zu erweitern.
+
+Quellen
+[1]
+
+NXP: Level shifting techniques in
+I2C-bus design, 2007.
+
+[2]
+
+Dr. Till Harbaum: Nutzung des I²CBus, in: ftDuino Bedienungsanleitung, 2019.
+
+[3]
+
+Peter Habermehl: fischertechnik TXPi I2C breakout and power supply
+auf Thingiverse, 2019.
+
+[4]
+
+Björn Gundermann: ft-Extender.
+
+
+
+

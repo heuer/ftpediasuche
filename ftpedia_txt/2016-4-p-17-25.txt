@@ -1,0 +1,383 @@
+
+Modell
+
+Modell
+
+Tür zu, bitte!
+Stefan Falk
+Wer kennt ihn nicht, diesen Ruf? Der ertönt, wenn jemand durch eine Tür geht, sie aber nicht
+wieder schließt – und es zieht! Für fischertechniker gibt es hier Abhilfe in Form einer Maschine,
+die eine Tür automatisch wieder zu schiebt.
+
+Die Aufgabenstellung
+Unsere Maschine soll folgendes leisten:
+1. Sie soll erkennen, wenn die zu überwachende Tür geöffnet wird.
+2. Wenn die Tür geöffnet wurde, soll sie
+einige Sekunden warten. Schließlich soll
+man ja in Ruhe durch die Tür treten.
+3. Nach Ablauf der Wartezeit soll sie die
+Tür – eine richtige, echte, große und entsprechend schwere Wohnungstür – automatisch zu schieben. Wenn sie vielleicht
+auch nicht stark genug ist, die Tür wirklich ins Schloss zu drücken, so soll sie
+die Tür zumindest anlehnen.
+4. Wenn die Tür angelehnt ist, soll sich die
+Maschine wieder stillsetzen.
+All das soll natürlich nur mit normalen
+fischertechnik-Bauteilen gelingen. Vielleicht wollt ihr euch, bevor ihr weiterlest
+oder die Bilder anschaut, selber überlegen,
+wie ihr das Problem angehen würdet.
+Bestimmt gibt es dafür, wie meistens, eine
+lange Reihe verschiedener Möglichkeiten.
+
+Der Konstruktionsvorschlag
+Die in diesem Beitrag vorgestellte Maschine funktioniert wie folgt: Das blaue Element in der Zeichnung (Abb. 1) steht für die
+zu konstruierende Maschine. Sie muss
+einen hinreichend kräftigen Antrieb bekommen, um die Tür tatsächlich schieben zu
+können. Damit sie nicht aus dem Türbereich
+
+hinaus wandert, wenn jemand die Tür
+schwungvoll aufstößt bzw. wenn die
+Maschine sie wieder zu drückt, bekommt
+sie an beiden Enden Klammern, die etwas
+um die Tür fassen.
+Türrahmen
+Halteklammern
+Tür
+Maschine
+Antrieb
+
+Nun bleiben aber die folgenden Probleme
+zu lösen:
+∂ Wie konstruieren wir einen Antrieb, der
+eine echte Tür schließen kann?
+∂ Wie erkennt die Maschine, dass die Tür
+geöffnet wurde?
+∂ Wie realisieren wir die Wartezeit?
+∂ Woran stellt die Maschine fest, dass die
+Tür nicht weiter zugeschoben werden
+kann?
+∂ Wie sorgen wir dafür, dass der Antrieb
+nicht in Stücke gerissen wird, wenn die
+Tür plötzlich von jemandem aufgestoßen
+wird? Vielleicht sogar, während die
+Maschine sie gerade schließen will?
+
+
+
+
+
+
+
+Die Mechanik der Maschine
+Da haben wir uns ja was vorgenommen.
+Aber es gilt ja „geht nicht – gibt’s nicht!“
+Tür bzw. von der Tür auf den interessanten
+Teil der Maschine. Die elektrische und
+elektronische Steuerung der Maschine
+schauen wir uns später noch genau an.
+Zunächst folgt die Beschreibung der
+Mechanik:
+Der Antrieb
+Ein XM-Motor treibt über ein Differenzial
+und eine später noch zu beschreibende
+
+Kupplung zwei Gummireifen an. Das
+Eigengewicht der Maschine genügt für hinreichende Reibung am recht glatten Laminat-Fußboden und der in Abb. 2 gezeigten
+Zimmertür. Auf Teppichboden schiebt die
+Maschine vermutlich noch etwas kräftiger.
+Die Kupplung
+Ein Mensch öffnet eine Tür ja selten zaghaft, sondern mitunter heftig. Damit der
+Antrieb dabei nicht beschädigt wird, wird er
+nur für die Dauer des Schiebevorgangs eingekuppelt. Außerhalb dieser Zeit ist der
+Motor von den Rädern vollständig isoliert,
+und die Räder mögen so schnell gedreht
+
+
+Modell
+
+
+
+werden, wie der Mensch die Tür aufstößt –
+der Mechanik macht das nichts aus. Das
+Auskuppeln muss nur im Fall des Falles
+schnell genug erfolgen, sodass auch wirklich nichts beschädigt wird.
+Das erledigt die „Kupplung“ (Abb. 5), die
+die Schnecke ins Rast-Z20 eingreifen lässt
+oder rasch aus ihr herauszieht. Beachtet das
+Kardangelenk zwischen XM-Motor und
+Schnecke. Ein XS-Motor dreht am Z40, mit
+dem eine Drehscheibe 60 verbunden ist. Die
+beiden stecken zusammen mit einer 31983
+Hülse 15 als Abstandshalter auf einer
+
+Metallachse, die in zwei Bausteinen 30 mit
+Bohrung gelagert ist. Auf der Unterseite der
+Drehscheibe (Abb. 6) steckt ein 31771
+Lagerstück 1 mit 31772 Lagerstück 2, in
+dem die Schneckenachse geführt wird. Je
+nach Drehung des Z40 greift die Schnecke
+damit ins Rast-Z20 ein oder nicht. Das Z20
+sitzt auf einem 31414 Differenzial-Kegelzahnrad Z14 und ist für den Antrieb des
+Differenzialgetriebes zuständig. Den Einbau des XS-Motors zeigt Abb. 7. Woran das
+Aufstoßen der Tür erkannt wird, besprechen
+wir gleich noch.
+
+
+
+
+
+An den beiden Endlagen – ganz ein- bzw.
+ganz ausgekuppelt – wird von einer Achse
+30, die in der Drehscheibe steckt, je ein
+Endlagentaster betätigt (Abb. 9). Die Taster
+bilden mit einer Diodenschaltung [1] die
+Endlagenabschaltung des XS-Motors.
+Die Kupplung wirkt (insbesondere beim
+Auskuppeln!) so schnell, dass auch beim
+plötzlichen Aufstoßen der Tür während
+eines Zuschiebe-Vorgangs keine Schäden
+am Getriebe zu befürchten sind.
+
+
+Der Antriebsstrang
+Das Differenzial für den Antrieb wird ganz
+konventionell angetrieben (Abb. 10 und
+11). Via Rastachsen geht das Drehmoment
+auf die beiden außen sitzenden Reifen.
+Das Öffnen der Tür feststellen
+Die Tür mag langsam oder schnell geöffnet
+werden: Auf jeden Fall werden dadurch die
+Gummireifen gezwungen, sich in Öffnungsrichtung der Tür zu drehen. In dieser
+und nur in dieser Drehrichtung hätten wir
+
+
+Modell
+
+gerne einen elektrischen Impuls für unsere
+Steuerelektronik. Das leistet die in Abb. 12
+bis 14 gezeigte, sehr feinfühlig reagierende
+Mechanik.
+
+
+Kupplungs-Endlagentaster mit Dioden
+
+Der bewegliche Verbinder 30 über dem
+Reifen vor dem Taster ist so justiert, dass er
+gerade hinreichend auf den Reifen drückt,
+um von ihm mitgenommen zu werden, und
+er ist gerade hinreichend weit entfernt vom
+Reifen angebracht, um nach einem kleinen
+Auslenkungswinkel fast frei zu sein. Wenn
+sich der Reifen in Richtung des Öffnens der
+Tür dreht, wird der Verbinder auf den
+Taster gedrückt, der uns das gewünschte
+Signal liefert. In die andere Richtung, also
+
+
+
+
+beim Schließen der Tür, wird er einfach ins
+Freie gedreht – es passiert weiter nichts. Der
+zweite, waagerecht angebrachte Verbinder
+30 begrenzt diesen Ausschlag in Richtung
+Tür.
+
+abgenommener Türklammer
+
+Feststellen, dass die Tür zu ist
+
+
+Unser Gerät drückt die Tür nicht direkt,
+sondern über Federn. Wenn es die Tür
+zugeschoben hat, wird eine der Federn so
+stark eingedrückt, dass ein von dieser Feder
+„beschützter“ Taster betätigt wird. Das ist
+das Signal zum Ausschalten und Auskuppeln des Antriebs. Es handelt sich um
+den waagerecht liegende Taster in Abb. 13
+
+
+
+Modell
+
+und 14. Die Abb. 15 bis 18 zeigen weitere
+Details der Konstruktion:
+
+Türinneren
+
+
+Zeitverzögerung
+
+
+Die elektronische Steuerung
+Das war sie schon, die ganze Mechanik!
+Jetzt fehlt noch ein bisschen elektronischer
+Zauber, um den korrekten Ablauf zu garantieren:
+
+
+Wer einen PC, ein Notebook, Tablet oder Phone
+mit Windows ab Version 8.1 als Betriebssystem
+benutzt, findet unter [4] eine kostenlose kleine
+
+Wenn das Türöffnen vom zuständigen
+Taster festgestellt wurde, muss eine Zeitschaltung aktiviert („getriggert“) werden.
+Das erledigt man in der Elektronik mit
+einem Mono-Flop [2]. Das ist ein Baustein,
+der auf ein Signal am Eingang für eine
+bestimmte Zeit einen Ausgang ein- und
+nach Ablauf der Zeit automatisch ausschaltet. Dazu dient uns ein E-Tec-Modul,
+welches laut Zusatzanleitung [3] (wie darin
+im Abschnitt 1.4 auf Seite 3 beschrieben)
+eben als ein solches Mono-Flop eingestellt
+wird. Die vier DIP-Schalter müssen auf ausaus-ein-ein eingestellt werden. Auch die
+neueren Electronics- und Minibots-Moduln
+bieten (auf anderen DIP-Stellungen) ein
+Mono-Flop.1
+Die Verschaltung laut Schaltbild (Abb. 19)
+bewirkt eine Zeitverzögerung von etwa
+zehn Sekunden. Das sollte genügen, um
+bequem durch die Tür zu kommen. Während dieser Wartezeit lassen wir eine gelbe
+Warnlampe aufleuchten, die am Mono-Flop
+App, die für die DIP-Switch-Einstellung der ETec-, Electronics- und MiniBots-Moduln eine
+handliche Referenz zum Nachschlagen bietet.
+
+
+
+angeschlossen ist und ankündigt, dass die
+Tür demnächst wieder geschlossen wird.
+Aktivieren des Antriebs
+Sobald dieses Zeitglied wieder abfällt und
+die eingestellte Zeit also vorüber ist, wird
+über den Ausgang
+des Monoflops ein
+zweites E-Tec-Modul angesteuert. Das ist
+(wie ebenfalls in [3] im Abschnitt 1.3 ab
+Seite 2 beschrieben) als Flip-Flop eingestellt, indem die DIP-Switches auf ein-ausein-ein geschaltet werden. Das Flip-Flop
+wird also nach Ablauf der Zeit gesetzt. An
+ihm sind drei Verbraucher angeschlossen:
+1. Der Antriebs-XM-Motor.
+2. Eine parallel dazu geschaltete rote
+Signallampe, die während des Schließens der Tür also aufleuchtet.
+3. Der Kupplungs-XS-Motor, allerdings
+über die Endlagenschaltung mit den
+beiden Tastern und Dioden (nach [1]).
+Sobald der XM-Motor anläuft wird die von
+ihm angetriebene Schnecke vom XS-Motor
+ins Z40 eingekuppelt, und sobald der XMMotor ausgeschaltet wird, wird er auch
+sofort vom Z40 entkoppelt. Damit das auch
+dann passiert, wenn die Tür wieder aufgestoßen wird, während unsere Maschine
+sie gerade zu schiebt, steuert der Taster zur
+
+Öffnungs-Erkennung nicht etwa das MonoFlop-Zeitglied an, sondern setzt das FlipFlop sofort zurück. Auf diese Weise wird
+das Getriebe augenblicklich geschützt,
+sobald die Tür aufgeschoben wird – egal ob
+die Maschine gerade im Leerlauf still wartet
+oder ob sie eben am Schieben war.
+
+Der Funktionsablauf
+Wenn die Maschine richtig funktioniert,
+ergibt sich damit folgender Ablauf:
+1. Die Maschine steht still und wartet
+darauf, dass jemand die Tür öffnet.
+2. Sobald das geschieht, wird der
+Taster „Tür wird geöffnet“ über den
+Reifen und Verbinder 30 betätigt. Dadurch startet das Mono-Flop die ZehnSekunden-Wartezeit und das gelbe
+Warnlämpchen leuchtet auf.
+3. Nach Ablauf der Zeit geht das gelbe
+Lämpchen aus, das rote leuchtet auf, der
+XM-Motor zum Antrieb arbeitet, und er
+wird vom XS-Motor mit seiner Schnecke
+ins Z40 eingekuppelt. Die Tür wird zu
+geschoben.
+4. Sobald es nicht mehr weitergeht (weil
+die Tür zu ist, ein Hindernis im Weg oder
+eine Person in der Tür steht), wird der
+Taster „Tür ist geschlossen“ von der Tür
+
+
+selbst gedrückt und setzt das Flip-Flop
+still. Damit gehen die rote Lampe und
+der XM-Motor aus, und der XS-Motor
+kuppelt das Getriebe schnell aus. Beim
+nächsten Öffnen der Tür ist es also im
+„Leerlauf“ und wird nicht beschädigt,
+weil sich die Reifen, das Differenzial
+und das Rast-Z20 frei drehen können.
+5. Wenn der XM-Motor ausgeschaltet und
+ausgekuppelt ist, kommt es vor, dass die
+Tür etwas zurückschwingt. Eventuell
+genügt das, um die Maschine erneut ab
+Schritt 2 in Gang zu setzen. Unser Gerät
+schiebt also gleich nochmal ein bisschen
+nach. Das macht aber nichts, denn nach
+ein oder zwei Mal wird das Zurückschwingen so gering sein, dass es
+Taster 1 nicht erneut auslöst.
+6. Damit ist die Arbeit der Maschine
+erstmal beendet. Sie geht wieder in den
+Wartezustand von Schritt 1 über.
+
+Modell
+
+Die Endlagentaster der Kupplung
+Diese beiden Taster sind leicht zu justieren:
+Je weiter außen sie sitzen, desto später wird
+der XS-Motor abschalten. Stellt die Taster
+so ein, dass die Schnecke auf der einen Seite
+zuverlässig und satt ins Z40 eingreift und in
+der anderen Endlage sicher außerhalb des
+Z40 positioniert wird.
+Der Taster für die Erkennung der
+geschlossenen Tür
+Dieser Taster kann in der Nut des Bausteins,
+der ihn trägt, fein weiter nach vorne oder
+hinten positioniert werden. Ihr müsst ihn so
+weit nach hinten (weg von der Tür) schieben, dass er während des Zuschiebens der
+Tür nicht schon vorzeitig auslöst, aber auch
+so weit nach vorne (zur Tür hin), dass er in
+der Endlage der Tür zuverlässig betätigt
+wird und die Maschine abschaltet.
+
+Quellen
+
+Zur Feinjustage der Maschine
+
+[1]
+
+Einige Dinge müssen an der Maschine
+justiert werden, damit sie im rauen Alltagsbetrieb wie gewünscht funktioniert:
+
+Falk, Stefan: Motorsteuerungen
+(Teil 3). ft:pedia 3/2011, S. 7-11.
+
+[2]
+
+Wikipedia: Monostabile Kippstufe.
+
+[3]
+
+fischertechnik: E-Tec
+Spezialprogramme für
+Digitaltechnik.
+
+[4]
+
+Falk, Stefan: ft electronics. App für
+Windows 8.1/10, Windows Phone
+8.1, Windows 10 Mobile.
+SF Software-Beratung GmbH,
+Ettlingen, 2016.
+
+[5]
+
+Falk, Stefan: Tür zu, bitte! YouTubeVideo, 2016.
+
+Der Taster für die Öffnungserkennung
+Dieser Taster kann nach oben verschoben
+werden, wenn die Erkennung noch zu empfindlich ist. Das merkt man daran, dass
+selbst ein geringes Zurückschwingen der
+Tür die Maschine wieder in Gang setzt.
+Ebenso kann der Verbinder 30 durch
+Verschieben mehr oder weniger tief in den
+Reifen drücken, um die Erkennung gerade
+zuverlässig zu machen.
+
+
+

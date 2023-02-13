@@ -1,0 +1,248 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Kaulquappenperlentauchen
+René Trapp
+Von „Kaulquappen“ und vom „Perlentauchen“ war in der ft:pedia bereits zu lesen ([1] bis
+[12]). Zieht man anstelle der Taucherausrüstung allerdings die Zwangsjacke an und springt
+ins falsche Gewässer, dann macht man seltsame Fänge.
+Wer Ende Juli 2015 auf dem „50-Jahrefischertechnik-Fanclubtag“ die Zeit fand
+der Glasmurmelbahn des Autors eine Weile
+zuzusehen (Abb. 1), hat möglicherweise
+mitbekommen, dass unter anderem am
+Schlepplift (Abb. 2) ein kleines, aber
+gemeines Problem auftrat.
+
+
+
+Die Statiklaschen 21,2 (31668) hielten nicht
+wirklich fest in den Schleppschlitten, und
+abends lagen einige der Laschen auf den
+Grundplatten unter dem Schlepplift herum.
+Die Konstruktion der Schleppschlitten
+(Abb. 3) ist ja schon abenteuerlich genug: IStreben 45 (36913) verbinden den Mitnehmer an der Kette mit einem U-TrägerAdapter (35979). Innen auf den Streben
+sitzen die besagten Laschen. Sie passen
+zufälligerweise leicht klemmend zwischen
+die Klemmbuchsen (37679) und den UTräger-Adapter.
+
+
+Der Zweck der Laschen ist es, den UTräger-Adapter daran zu hindern, sich zu
+verdrehen. Mit verdrehten U-Träger-Adaptern werden die Murmeln unten am Einlauf
+nicht sauber vereinzelt und abgeholt oder
+oben am Ausstieg danebengeworfen.
+Nun gab es also dieses Problem, dass die
+Klemmwirkung alleine die Laschen nicht
+dauerhaft festhalten konnte. Bedingt durch
+die Stöße beim Umlauf rutschten sie immer
+wieder von den leicht konischen Seiten der
+
+
+
+Klemmbuchsen ab, und damit dann aus den
+Schlitten heraus.
+Der Effekt war schon bei den Testläufen vor
+der Ausstellung aufgetreten, wurde aber als
+„ausreichend unbedeutend“ eingestuft. Die
+nicht gezeigte zickige Hebekunst [13] hatte
+bekanntlich richtig derben Ärger verursacht.
+Langfristig sollte nun allerdings doch eine
+Lösung her – ohne Modding und ohne
+Klebstoffe. Doppelseitiges Klebeband
+zwischen I-Strebe und Lasche ist zwar
+möglich, naheliegend und einfach aber nur
+als äußerste Notlösung akzeptabel, wenn
+wirklich nichts aus reinem fischertechnik zu
+finden sein sollte, um die U-Träger-Adapter
+am Verdrehen zu hindern.
+Wer sich jetzt fragt, warum es unbedingt der
+U-Träger-Adapter sein muss, der da das
+untere Ende des Schleppschlittens bildet:
+Nur dieses eine fischertechnik-Teil hat in
+etwa die benötigte Form und hinreichend
+geringe Dicke, um die Murmeln unten am
+Einstieg zu vereinzeln.
+Also hat der Autor nun in wochenlanger
+Kleinarbeit seinen Teilebestand gesichtet
+und einige Kombinationen ausprobiert, die
+den U-Träger-Adapter dauerhaft gegen
+Verdrehen sichern können. Dabei kommt es
+darauf an, dass ein in ein Statikloch des UTräger-Adapter eingesetztes Teil mit seiner
+Kante exakt an einer Kante des U-TrägerAdapters anliegt. Einige Möglichkeiten
+fanden sich dann auch (Abb. 4), haben aber
+so ihre Nachteile: Innen zu schmal, dezent
+gewölbt (= krumm), zu lang, zu kurz, zu
+klobig, ...
+Und so bleibt schlussendlich doch nur das
+doppelseitige Klebeband. Erfreulicherweise
+gibt es das Klebeband auch in 8 mm Breite,
+passend zur Breite der Statikstreben. Das
+vereinfacht die Verarbeitung.
+
+
+Schleppschlitten
+
+Ein paar Tage später...
+... grübelt der Autor immer noch über dieses
+Problem. Das Klebeband wäre zwar von
+außen kaum zu sehen, aber die Maxime
+lautet bislang „unverklebt“ und müsste nun
+aufgegeben werden. Nein, das geht auf
+keinen Fall. Einer der Kandidaten aus Abb.
+4 könnte eventuell vielleicht doch geeignet
+sein, dafür sind dann aber gleich wieder
+reichlich Teile zur Beschaffung fällig.
+Immerhin sind 19 Schleppschlitten in
+Umlauf. Nein, das ist zu unsicher, denn hier
+liegen die Nuten sogar längs zu den Stößen
+beim Herunterklappen (Abb. 5). Und zu
+klobig ist das obendrein, es sieht nicht
+wirklich gut aus.
+
+
+ist.
+Plötzlich: der Geistesblitz!
+Bislang unbeachtete Details der Bauteile
+treten auf einmal in den Fokus. Unglaublich
+banale und bislang völlig unbeachtete
+Details. Solche Details, dass man sie schon
+
+
+Tipps & Tricks
+
+fast mit der Lupe suchen muss. Solche
+alltäglichen Details, dass man sie geflissentlich ignoriert, weil sie so allgegenwärtig
+sind. Und dann sind es nicht einmal wichtige Details, sondern teilweise nur Nebenprodukte des Produktionsprozesses. Also:
+Licht aus, Spot an.
+Jede der Laschen hat auf einer Stirnseite so
+einen kleinen Pickel – den „Nabel“ vom
+Spritzguss (Abb. 6).
+
+
+Jede Klemmbuchse hat auf einer Seite so
+eine kleine Kerbe. Nein, nicht den großen
+durchgehenden Schlitz, sondern genau
+gegenüber, nur außen und nur ein kleines
+Stück ins Material hinein (Abb. 7).
+Ob es sich einrichten lässt, diesen „Nabel“
+mit der Kerbe zu verhaken? Dafür müssen
+„nur“ an allen Schlitten je zwei Klemmbuchsen umgedreht und alle Laschen einheitlich ausgerichtet werden. Die Erwartungshaltung des Autors bezüglich der
+Haltbarkeit dieser Verbindung war nicht
+besonders hoch.
+Aber in der Not macht man verrückte
+Dinge, also wurde ein Schlitten umgebaut
+(Abb. 8). Natürlich ist es nicht einfach den
+Effekt auszunutzen, denn beide Klemmbuchsen müssen exakt gleich ausgerichtet
+sein, um die Laschen einrasten zu lassen.
+Natürlich kann diese Verbindung keine
+hohen Zugkräfte aushalten. Aber die
+Laschen rasten tatsächlich fühlbar ein!
+
+
+Ein Zufall oder doch etwas anderes? Wir
+werden wohl nie erfahren, warum die
+kleinen Kerben in den Klemmbuchsen sind.
+Die Abmessungen der Kerben unterscheiden sich sogar; es gibt längere und kürzere
+Kerben. Wir werden auch nie erfahren,
+warum die Laschen genau diese Außenmaße haben. Aber für das Problem des
+Autors liegt hier tatsächlich die Lösung. Es
+sind die kleinen „Nabel“ der Laschen, die
+einrasten. Auf geniale Weise findet der
+„Nabel“ dort auch gleich genügend Platz,
+und so ist die andere Seite sehr glatt und
+liegt flächig am U-Träger-Adapter an.
+Am hinteren Ende sorgt die Geometrie mit
+der Klemmwirkung zusammen dafür, dass
+die Laschen nicht abrutschen, vorne sorgt
+die neu gefundene Rastmöglichkeit für
+ausreichend festen Halt. Mit nur einem
+Schlitten im Umlauf kann man nicht viel
+testen, also hat der Autor die anderen 18
+Schlitten auch noch alle umgebaut und auf
+eine sehr lange Rundreise geschickt.
+
+
+
+
+Seit dem Umbau sind mittlerweile mehr als
+50 Betriebsstunden vergangen und zu
+Beginn hat nur eine Lasche ihren Platz
+mehrfach verlassen: Lasche und Klemmbuchse passen anscheinend im letzten
+Detail nicht richtig, sodass hier beide Teile
+auszutauschen waren. Alle anderen 37
+Paare halten fest zusammen. Dass das so
+erstaunlich gut funktioniert ist schier
+unglaublich! Ja es kommt noch besser: die
+gewohnte Optik ist unverändert, es müssen
+keine zusätzlichen Teile beschafft werden,
+und die strenge Vorgabe (nicht verklebt,
+nicht gemoddet) bleibt erfüllt.
+
+Zusammenfassung
+Vergleich. Eine kleine Ursache, die eine
+erstaunlich große Wirkung hat. Und so stellt
+sich die letzte Frage: „Muss man etwas an
+der Murmel haben um auf eine derart
+wahnwitzige Idee zu kommen?“ Der Autor
+meint: Vermutlich nicht. Aber mir hat es
+geholfen.
+
+Referenzen
+[1]
+
+Harald Steinhaus: Kaulquappen (Teil
+1), ft:pedia 1/2011, S. 22-28.
+
+[2]
+
+Harald Steinhaus: Kaulquappen (Teil
+2), ft:pedia 2/2011, S. 9-13.
+
+[3]
+
+Stefan Falk: Perlentauchen (Teil 1),
+ft:pedia 3/2012, S. 11-18.
+
+[4]
+
+Harald Steinhaus: Kaulquappen (Teil
+3), ft:pedia 3/2012, S. 24-26.
+
+[5]
+
+Stefan Falk: Perlentauchen (Teil 2),
+ft:pedia 4/2012, S. 14-21.
+
+[6]
+
+Stefan Falk: Perlentauchen (Teil 3),
+ft:pedia 1/2013, S. 22-31.
+
+[7]
+
+Stefan Falk: Perlentauchen (Teil 4),
+ft:pedia 2/2013, S. 18-30.
+
+[8]
+
+Stefan Falk: Perlentauchen (Teil 5),
+ft:pedia 4/2013, S. 6-15.
+
+[9]
+
+Harald Steinhaus: Kaulquappen (Teil
+4), ft:pedia 1/2014, S. 21-23.
+
+[10] Harald Steinhaus: Kaulquappen (Teil
+5), ft:pedia 3/2014, S. 14-16.
+[11] Harald Steinhaus: Kaulquappen (Teil
+6), ft:pedia 3/2015, S. 4-7.
+[12] Ralf Geerken: Kaulquappen (Teil 7),
+ft:pedia 3/2015, S. 8-9.
+[13] ft-community:
+Die zickige Hebekunst.
+
+
+
+

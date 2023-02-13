@@ -1,0 +1,302 @@
+
+
+Computing
+
+Nutzung des Universal-Interfaces 30520 als
+Port-Erweiterung an einem Mikrocontroller
+Dirk Uffmann
+In der Ausgabe 1/2014 der ft:pedia [1] hat Jens Lemkamp in seinem Beitrag gezeigt, wie man
+an einem Arduino-Board das alte ft-Parallel-Interface betreiben kann. Das funktioniert auch
+an einem beliebigen AVR-Mikrocontroller mit fünf freien I/Os, z. B. mit dem Board, das ich
+euch ebenfalls in der letzten Ausgabe der ft:pedia vorgestellt habe [2]. Oder mit einem in das
+Gehäuse des ft-Interfaces eingebauten Mini-Board von 30x40 mm, das sich leicht auf einer
+Lochrasterplatine aufbauen lässt. In diesem Beitrag verrate ich euch einen Trick, wie man mit
+Übertragungsraten von bis zu 800 kbit/s an dem alten Universal-Interface 30520 zeitlich
+parallel die Eingänge abfragen und die Motoren steuern – und sogar insgesamt zwei Interfaces für 16 Eingänge und acht Motoren betreiben kann.
+
+Hintergrund
+An dieser Stelle vermeide ich Wiederholungen und verweise für eine Einleitung
+in das Thema auf den Beitrag von Jens
+Lemkamp [1]. Das alte Universal-Interface
+30520, das für den Betrieb an der parallelen Druckerschnittstelle LPT am IBM-PC
+gedacht war, hat einige interessante Eigenschaften, die sich noch heute nutzen lassen.
+
+30520 für die parallele PC-Schnittstelle
+
+Funktionalität
+Die Steuerung der Motoren und das Auslesen der Eingänge erfolgt im ft-UniversalInterface über Schieberegister, die mit
+
+mehr als 1 MHz getaktet werden können.
+Damit ist ein schneller Datenaustausch mit
+diesem Interface möglich. Diese Schieberegister sind zudem kaskadierbar und über
+den Erweiterungsport des UniversalInterfaces herausgeschleift, so dass mehrere Interfaces kaskadiert werden können.
+Zur Steuerung werden am Mikrocontroller
+nur fünf digitale I/O-Pins benötigt.
+Die Eingänge E1-E8 am Interface sind mit
+1 kOhm Pull-Down-Widerständen ausgelegt, was sie wenig anfällig für Störungen
+macht. Zudem sind die Motortreiber-ICs
+TLE4201 kräftig dimensioniert und können laut Datenblatt bis zu 2,5 A schalten.
+Also ein rundum recht robustes und zuverlässiges System.
+Folgende Funktionalität des UniversalInterfaces wird durch diesen Beitrag am
+Mikrocontroller unterstützt:
+·
+·
+·
+
+ein oder zwei Interfaces (im Masterund Slave-Betrieb)
+acht (bzw. 16) digitale Eingänge
+vier (bzw. acht) Motoren
+
+Auf die analogen Eingänge Ex, Ey wird
+bewusst verzichtet, da dafür zwei weitere
+Pins am AVR benötigt würden (für die
+Signale TriggerX und TriggerY) und die
+Performance des AD-Wandlers am AVR
+viel mehr bietet als das Universal- Interface.
+Eine Überlegung war noch, die Eingänge
+Ex und Ey direkt, also ohne die Timerschaltung mit dem NE556 an den ADWandler des Mikrocontrollers herauszuführen, um das RC-Tiefpass-Filter mit
+470 Ohm und 470 nF zu nutzen (3 dBGrenzfrequenz von 720 Hz für das Analogsignal). Dies wäre an den Pins 13 und 14
+des 20-poligen, eingelöteten Flachbandsteckers im Interface möglich. Die Idee
+habe ich aber wegen der zu erwartenden
+Störungen durch die parallel verlaufenden
+Leitungen für die Kommunikation mit dem
+Interface verworfen.
+
+Computing
+
+im ft-Interface gut angeschlossen werden
+kann (passende Reihenfolge auf dem
+Flachbandkabel).
+
+ATMEGA1284P und Universal-Interface
+
+Anschluss an das Mikrocontrollerboard
+
+Interfaces
+
+Um die volle Performance des Interfaces
+auszuschöpfen, schließen wir es an seinem
+intern eingelöteten Flachbandkabelstecker
+an. Dazu muss das Interface zunächst
+geöffnet werden. Man muss nur vier kleine
+Schrauben herausdrehen und den Klarsichtdeckel abnehmen. Dann löst man vorsichtig mit einem kleinen Schraubenzieher
+die Verriegelung für das Flachbandkabel
+an dem eingelöteten Stecker (Abb. 1 unten
+links) und nimmt das Oberteil ab.
+
+
+Nun löst man das Flachbandkabel vorsichtig von den kleinen Messerkontakten.
+Neben dem Stecker sieht man auf der
+Platine die Anschlussnummern des
+Steckers von 1-20. Von diesen Pins bzw.
+Messerkontakten müssen wir nur sechs
+Stück anschließen und tun dies mit einem
+eigenen 6-poligen Flachbandkabel.
+zugeordnet, dass der interne Pfostenstecker
+
+Hier nun der Trick für hohe Datenraten:
+Eigentlich liegt DataIn auf Pin 18. Der
+Ausgang des Schieberegisters HCF4014
+für die Eingänge E1-E8 wird auf dem Weg
+zu Pin 18 über ein Oder-Gatter HCF4071
+mit dem Ausgangssignal der Timer NE556
+der beiden Analogeingänge verknüpft und
+dann über einen Treibertransistor BC548
+invertiert.
+Da wir die Timersignale aber gar nicht
+brauchen und diese sogar stören, wenn die
+
+
+
+Triggersignale dafür nicht auf high gelegt
+werden und die analogen Eingänge nicht
+über den Flachbandstecker auf die Timer
+durchgeschleift werden, verwenden wir
+lieber den direkten Ausgang des Schieberegisters an Pin 17. Hier hat das Ausgangssignal auch noch eine geringere Verzögerungszeit zur positiven Clockflanke, und
+daher können wir dann mit einer deutlich
+höheren Übertragungsrate arbeiten.
+
+Ansteuerung des Interfaces:
+Motoren
+Die Ansteuerung des Interfaces erfolgt
+nach einem einfachen Prinzip. Um die
+Motoren zu steuern, werden die Schieberegister HCF4094 mit einem seriellen Eingang und parallelen Ausgängen, die über
+ein Speicherregister die Motortreiber ansteuern, mit Daten beschrieben. Die Daten
+werden vom Mikrocontroller Bit-weise an
+DataOut bereitgestellt und bei der positiven Clockflanke in die erste Registerzelle
+geschrieben bzw. von dort in die folgenden
+Registerzellen weiter geschoben. Zuerst
+werden die zwei Bits für die höchste
+Motornummer übertragen, zuletzt die für
+Motor 1. Am Ende der Übertragung wird
+durch ein high-Signal auf der Leitung
+LoadOut der Inhalt des Schieberegisters in
+das Speicherregister übertragen und wird
+erst damit an den Motortreibern wirksam.
+des Bytes 0b00000010, um bei einem angeschlossenen Interface den Motor 1 (mit
+bestimmter
+Drehrichtung:
+Ausgang
+gelb = V+, Ausgang orange = V-) einzuschalten. Die Übertragung läuft mit einer
+Datenrate von ca. 470 kbit/s, damit werden
+nur etwa 18 µs für ein Byte benötigt. Sind
+zwei Interfaces angeschlossen, werden 16
+Bits übertragen. Abb. 6 zeigt die Signale
+für das Schreiben des Wortes 0b00001010
+00000000 bzw. 0x0A00, um bei zwei angeschlossenen Interfaces die Motoren 5
+(gelb = V+, orange = V-) und 6 (blau =
+V+, grün = V-) einzuschalten.
+
+
+Einschalten von Motor 1
+
+Einschalten der Motoren 5 und 6 mit gleicher
+Drehrichtung (am zweiten Interface)
+
+Ansteuerung des Interfaces:
+Eingänge auslesen
+Um die Eingänge auszulesen, muss LoadOut auf low gesetzt sein, da sonst die
+Motoren durch die im Schieberegister
+HCF4094 bewegten Bits umgeschaltet
+würden. Durch ein high auf LoadIn
+während einer positiven Clockflanke
+werden die Eingangswerte E1-E8 in das
+Schieberegister HCF4014 übernommen
+und das dem Eingang E8 zugeordnete Bit
+im ersten (Master)-Interface steht auf
+DataIn zum Einlesen in den Mikrocontroller bereit. LoadIn muss nun wieder
+auf low gezogen werden, wodurch das
+Schieberegister wieder von den Eingängen
+entkoppelt wird. Mit weiteren Takten
+werden die restlichen Bits eingelesen.
+0b00000100 oder 0x04. Hier war der Eingang E3 auf high.
+Eine Besonderheit ergibt sich bei der Verwendung eines zweiten Interfaces. Die Bits
+für die Eingänge E16 bis E8 werden erst
+
+nach den Bits für die Eingänge E8 bis E1
+übertragen, also zuerst die Eingänge 8, 7,
+… bis 1 und dann die Eingänge 16, 15, ...
+bis 8. Abb. 9 zeigt die Signale beim Einlesen eines Wortes.
+
+Hier war der Eingang E3 auf high.
+
+Computing
+
+den Betrieb mit einem Interface. Hier
+wurden die Eingänge 1 und 4 auf high gesetzt und die Motoren 1 und 2 mit unterschiedlicher Drehrichtung eingeschaltet.
+Innerhalb von 10 µs ist ein Update des
+Eingangs- und Ausgangsstatus erfolgt. Die
+Datenrate liegt bei 800 kbit/s (in beiden
+Datenflussrichtungen).
+
+Bytes 0x09 (E4 & E1 high) und Senden des
+Bytes 0x09 (Motor 1 & 2 mit unterschiedlicher
+Drehrichtung einschalten).
+
+Die Signale für den Betrieb von zwei Interfaces zeigt Abb. 11. Hier werden ca. 28 µs
+für die 16 Bit benötigt. In diesem Fall wird
+etwas mehr Zeit pro Bit benötigt, da 16Bit-Variablen verarbeitet werden müssen.
+Die Datenrate liegt dann bei 570 kbit/s.
+die Bits vom Master-Interface, danach die vom
+Slave. Eingänge E12 und E10 waren auf high.
+
+Parallele Ansteuerung
+Doch das Beste kommt zum Schluss:
+nachdem das Senden und Empfangen
+jeweils für sich so gut und schnell funktionierte, kam ich auf die Idee, das Senden
+und Empfangen zeitlich parallel abzuwickeln, wie beim SPI. Es sind ja zwei
+Datenleitungen vorhanden, warum also
+nicht in einer Taktfolge parallel sowohl
+Senden als auch Empfangen und beide
+Register updaten? Damit kommt man auf
+die Hälfte der Übertragungszeit.
+Eine weitere Steigerung der Taktrate war
+möglich, indem das Auswerten von DataIn
+auf die low-Phase der Clock verlegt wurde
+(Einsparen der Wartezeit während der
+high-Phase). Abb. 10 zeigt die Signale für
+
+Wortes 0x0009 (E9 & E12 high) und Senden
+des Wortes 0x0900 (Motor 5 & 6 anschalten)
+
+Den Code für diese C-Funktion zeigt Abb.
+12. Zusammen mit einem kleinen Programm zum Testen von vier Motoren und
+acht Tastern nimmt diese kleine InterfaceLibrary weniger als 600 Bytes im Flash
+ein. Ich habe den Code mit zwei angeschlossenen Interfaces ausgiebig getestet
+und keine Fehler mehr gefunden. Die
+benötigten Funktionen für den Programmcode des Mikrocontrollers und den Code
+
+
+
+
+zum Testen steht in einem Downloadpaket
+zur Verfügung.
+
+
+Das kleine Board fügt sich gut in den vorhandenen Platz ein. Die Unterseite ist mit
+Pappe isoliert, die mit Tesafilm am Rand
+des Boards festgeklebt wurde (Abb. 14).
+
+FTUI_update() für zeitlich paralleles
+Empfangen und Senden
+
+Zum Schluss noch zwei weitere Ideen:
+· Durch den Einbau eines kleinen Mikrocontroller-Boards mit Infrarot-Empfänger in das Gehäuse des Interfaces ließe
+sich eine offline-fähige Steuereinheit
+oder ein IR-Control-Set für vier
+Motoren daraus machen.
+
+
+Hier nutze ich auch die analogen Eingänge
+Ex und Ey an Pin 13 & 14 des Interfaces,
+um sie direkt den analogen Eingängen PA1
+& 2 des ATTiny26 zuzuführen.
+Der Infrarot-Empfänger liegt im Sichtfenster neben der LED, während der Rest
+des Boards weitgehend hinter dem schwarzen Aufkleber verdeckt ist. Dadurch ist die
+Modifikation kaum zu erkennen (Abb 15).
+
+So entfiele das externe Flachbandkabel
+zum Steuerrechner. Der Einbau ist von
+außen kaum zu erkennen, so dass euch ein
+erstes Erstaunen von ft-Fans sicher sein
+dürfte, wie ihr es geschafft habt, das ftInterface offline-fähig zu machen.
+30x40 mm in das Universal-Interface eingebaut werden kann. Die 5 V-Versorgung
+wird mit dem schwarzen Kabel zugeführt,
+das an einem Draht des blauen Kondensators (47 nF) angelötet ist.
+
+
+
+· Die schnelle Datenrate ließe sich nutzen, um eine PWM-Funktionalität für
+die Motoren zu implementieren. Eine
+einfache Variante wären z. B. drei zusätzliche PWM-Stufen mit 25, 50 und
+75 % Motorleistung. Dafür müssten nur
+viermal in einem zeitlich fest definierten Ablauf periodisch (entspricht der
+PWM-Periode bzw. PWM-Frequenz)
+die Bits in der Variable „motorword“
+umgeschaltet werden. Zu Beginn des
+Ablaufes werden alle Bits entsprechend
+„motorword“ gesetzt, nach einem Viertel der Zeit werden die Motoren mit
+25 % PWM wieder abgeschaltet, nach
+der Hälfte die mit 50 % usw.
+
+Computing
+
+Ich wünsche euch viel Freude damit und
+vor allem mit der Wiederbelebung eurer
+alten Universal-Interfaces, die durchaus
+noch nützlich sein können. Nun sind eure
+weiteren Ideen dazu gefragt.
+
+Quellen
+[1]
+
+Jens Lemkamp: Parallel-Interface
+durch Arduino gesteuert (1). 1/2014, S. 24-30.
+
+[2]
+
+Dirk Uffmann: ft-Modellsteuerung
+mit selbst gebautem MikrocontrollerBoard. ft:pedia 1/2014, S. 39-46.
+
+
+

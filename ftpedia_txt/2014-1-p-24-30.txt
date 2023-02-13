@@ -1,0 +1,354 @@
+
+
+Computing
+
+Parallel-Interface durch Arduino gesteuert (1)
+Jens Lemkamp
+Man schrieb das Jahr 1984, als wir mit dem C64, Schneider CPC, später auch Amigas oder
+Atari STs und IBM-PCs die ersten Computing-Modelle steuern konnten. Eine neue Welt, in
+der wir durch selbst geschriebene Programme in der Programmiersprache BASIC RoboterModelle zum Leben erweckten. „Bit“ und „Byte“ waren damals noch Fremdworte. Dieses
+Projekt zeigt, wie man die alten Interfaces mit moderner kostengünstiger Steuer-Elektronik
+wieder nutzbar machen kann – auch noch „autonom“, also fast wie mit einem TX Conroller.
+
+Worum geht es?
+Wir möchten mit möglichst wenig handwerklicher Arbeit und geringem Hardwareaufwand unsere ft-Modelle kostengünstig
+steuern. Mit einfachen, schnellen Programmen, und das Ganze autonom, das heißt
+dass der PC oder Mac nicht die ganze Zeit
+mitlaufen muss.
+
+oder Linux. Gesteuert wird mit dem recht
+bekannten Arduino, einem kleinen Einplatinen-Computer, der insbesondere für
+Computer-Anfänger und Medienkünstler
+von einem netten italienischem Professor
+(den ich sogar einmal selbst kennen lernen
+durfte) als Studentenprojekt entwickelt
+wurde.
+Die technischen Daten des Interfaces:
+· vier Motorausgänge (Linkslauf, Rechtslauf, Stopp)
+· acht Digitaleingänge für Taster, Relais
+etc.
+· legendäres Notaus-System (bei Programmabsturz oder Abschalten des
+Arduino-Controllers werden alle Ausgänge nach ca. 0,5 s automatisch
+deaktiviert)
+Wir nutzen sechs analoge Eingänge des
+Arduinos zur Abfrage von Potentiometern,
+Fotowiderständen, Heißleitern oder Kaltleitern (sprich NTC und PTC).
+
+
+Programmiert wird in einer vereinfachten
+Version von C unter Windows, MAC-OS
+
+Das System bleibt dabei offen – wir
+können es jederzeit mit I²C-Bus-fähiger
+Hardware erweitern, um theoretisch beliebig viele Ein- und Ausgänge, Speicher,
+Uhrenbausteine, Anzeigeelemente, Gyros/Kompass-Sensoren usw. anzuschließen.
+
+
+Computing
+
+damals) einen so genannten User Port als
+Schnittstelle für die Außenwelt vorgesehen
+– acht Bit standen zur Verfügung, sowie
+einige wenige zusätzliche Steuerleitungen.
+Darüber sollten nun vier Motoren mit
+jeweils zwei Drehrichtungen, acht Taster
+und zwei analoge Eingänge „bedient“
+werden. Wie geht das? Mit einigen Tricks
+war das tatsächlich möglich.
+
+
+In der Grundversion können wir nach
+kurzer Zeit die vier Ausgänge steuern, acht
+Taster und die sechs hochauflösenden
+Analog-Eingänge abfragen.
+Für das Anfertigen der Hardware benötigt
+ein mittelmäßig versierter Bastler nur ca.
+30 bis 60 Minuten, geübte Löter schaffen
+es sehr viel schneller.
+Man nehme:
+· Ein
+fischertechnik-Interface,
+z. B.
+30562 (C64 / VC20 / PC; Abb. 3),
+· ein Arduino-Board, z. B. „Uno” oder
+„Duelimanove” (Abb. 2),
+· ein paar Kleinteile (gibt’s in jedem
+Elektronik-Versand, Stückliste folgt mit
+der Bauanleitung später im Artikel).
+Werkzeug (Minimalausstattung):
+· Elektronik-Lötkolben (keine Angst – es
+ist nichts Wildes damit zu tun),
+
+
+Um einen Motor in zwei Richtungen zu
+steuern, benötigt man zwei Bits, welche
+insgesamt vier verschiedene Zustände
+annehmen können:
+
+· ein kleiner (Elektronik-)Seitenschneider
+
+0 0 – Motor aus
+
+· evtl. eine Spitzzange oder Pinzette und
+
+0 1 – Motor Rechtslauf
+
+· etwas Lötzinn.
+
+1 0 – Motor Linkslauf
+
+Vor rund 30 Jahren (eine irre lange Zeit,
+oder?) hatte man das Problem, dass die
+Computer kaum genormte Schnittstellen
+zur Außenwelt boten – USB war noch
+längst nicht erfunden. Hier sei es exemplarisch anhand des legendären C64 beschrieben: der Hersteller Commodore hatte für
+den Home-Computer (so hießen die Geräte
+
+1 1 – Motor aus
+Der vermeintlich doppelte Zustand „11“ ist
+sinnvoll; später benötigen wir ihn noch für
+eine andere Funktion.
+Für vier Motoren benötigen wir also je
+zwei Bits: 4 x 2 Bit = 8 Bit = 1 Byte. Für
+acht Digitaleingänge benötigen wir auch
+
+
+genau ein Byte. Wie bekommt man nun
+diese ganzen „Leitungen“ aus dem Computer bzw. dort hinein?
+Mit Schieberegistern! Man taktet die einzelnen Bits nacheinander ins Interface und
+holt auch die Daten genauso da heraus.
+
+IN und OUT ist jeweils aus ComputerRichtung gedacht. DATAOUT ist also
+z. B. ein Ausgang des Computers bzw.
+Eingang des Schieberegisters.
+
+So sieht das fischertechnik-Interface aus
+den 1980ern (grob) von innen aus:
+
+
+
+
+Und wie funktioniert nun so ein Schieberegister? Wir geben nacheinander (also
+seriell) Bit für Bit unsere gewünschte
+Ausgabeinformation in das Register. Dazu
+gibt es einen Eingang für die Bits
+(DATAOUT),
+einen
+Takteingang
+(CLOCK) und einen Übernahmeeingang
+(LOADOUT).
+
+
+Zunächst schieben wir also unsere acht Bit
+in das Register. Man beginnt ganz rechts
+mit Motor 1 (M1), dann kommen M2, M3
+und zum Schluss M4. Nach jedem
+angelegten Bit geht CLOCK einmal kurz
+von 0 auf 1 und dann wieder auf 0. Nach
+acht Taktzyklen ist das ganze Byte im
+Schieberegister und wir setzen LOADOUT
+auf 1 – damit wird das Byte an die
+Motorstufe übergeben. Je nach Bitmuster
+drehen ein oder mehrere unserer Motoren
+nun in die (hoffentlich) richtige Richtung.
+
+
+Computing
+
+Die Ausgangssituation ist wie folgt:
+
+Hardware
+
+· CLOCK = 1 (oder auch +5 V)
+
+Der Adapter zur Verbindung des Arduino
+mit dem Pfostenstecker des Interfaces kann
+auf verschiedene Arten nach folgender
+Belegung angefertigt werden:
+
+· LOADOUT = 1
+· DATAOUT = 0 (0 V)
+Und nun geht’s los. Wir wollen jetzt ein
+komplettes Byte ’reinschieben, sagen wir
+„0 0 0 0 0 0 0 1“ (Motor 1 Rechtslauf, alle
+anderen Motoren bleiben aus).
+Dazu setzen wir zunächst LOADOUT auf
+0. Immer wenn CLOCK nun von 0 auf 1
+wechselt, wird „geschoben“ – d. h. wir
+bringen unser Byte nun Bit für Bit ins
+Schieberegister und schalten zum Schluss
+als Übergabekommando noch LOADOUT
+auf 1. Und schon dreht sich unser Motor 1.
+
+InterfaceAnschluss
+
+Pin des Pfostensteckers von oben
+(Steckseite)
+
+CLOCK
+
+X
+
+Arduino
+PIN-Nr.
+
+DATAOUT
+
+X
+
+LOADOUT
+
+X
+X
+
+DATAIN
+
+X
+
+LOADIN
+
+GND
+
+
+X
+
+
+X
+
+GND
+
+Tabelle 1: Anschlussbelegung des Adapters
+
+
+Die Eingänge werden mit einem ähnlichen
+Verfahren eingelesen:
+
+Der Adapter nach Abb. 8 ist schnell
+zusammengelötet und erfordert wenig
+Materialeinsatz, ist aber auch „labil“.
+Schrumpfschlauch und Heißkleber können
+da helfen.
+
+· Impuls auf LOADIN, um die Eingänge
+ins Schieberegister zu „laden“
+· CLOCK setzen wir auf 1, und schon
+steht der Wert 0 oder 1 am DATAIN
+und wir lesen ihn in den Arduino. War
+zum Zeitpunkt des LOADIN der Taster
+am E1 (Eingang 1) des Interfaces gedrückt, bekommen wir eine 1, sonst eine
+0.
+· CLOCK geht auf 0 und dann wieder auf
+1 – und Schwupps, E2 liegt am
+DATAIN.
+· Nach sieben CLOCKs haben wir alle
+Eingänge abgefragt.
+
+
+Für 3 bis 10 € gibt es die so genannten
+„Screw-Shields“, z. B. im großen Auktionshaus im Netz oder bei diversen
+Arduino-Zubehör-Distributoren. Sie erlauben zudem den komfortablen Zugriff auf
+alle weiteren Arduino-Anschlüsse.
+
+
+
+
+
+
+Die Interface-Seite könnte dann wie beim
+Adapter-Typ „einfach“ gelöst werden oder
+evtl. noch mit der Platinen-StiftleistenVariante wie in Abb. 12.
+
+Platine, unten/Mitte) „Protoshield“. Diese
+Platine kann auf das Arduino-Board
+gesteckt werden, und dort ist dann der
+20polige Pfostenverbinder für das Interface
+fest aufgelötet.
+
+
+
+Computing
+
+
+
+
+
+
+Arduino-Board ein- (E1) oder ausschalten
+(E2).
+
+Fortsetzung folgt
+Aufbauend auf diesem Kurzeinstieg sind
+weitere Beiträge in einer kleinen Serie
+geplant. Darin werden die folgenden
+Themen behandelt:
+
+Software
+Ich setze hier voraus, dass ihr euch selbst
+in die Programmierung und die grundsätzliche Vorgehensweise zur Programmierung eines Arduinos einarbeitet (oder
+bereits eingearbeitet habt).
+Hier zwei Beispielprogramme:
+Zunächst werden die Anschluss-Pins mit
+Konstanten benannt, und zwar so wie die
+Funktionen des jeweiligen Pins auch bei
+fischertechnik im Blockschaltbild benannt
+sind.
+Durch die Funktion setup() wird jeder Pin
+entweder als Eingang oder Ausgang
+deklariert und anschließend zunächst der
+Ausgang genullt: Eine 0 wird mittels
+ShiftOut in den Ausgang des Interfaces
+geschoben. Alle Motoren sind damit aus.
+Im Hauptprogramm loop() starten wir
+einen Motor (M1). Der läuft dann, bis das
+Programm beendet wird.
+Das Einlesen der Eingänge habe ich diskret
+programmiert. Die Funktion getinputs()
+überträgt den Status der acht Eingänge in
+ein Variablenarray e[1] bis e[8]. Das
+Element e[0] wird nicht genutzt.
+Versuchsaufbau zum Testen: Zwei Taster
+an E1 und E2 können die LED auf dem
+
+
+· Abfrage analoger Eingangsgrößen wie
+Widerstände, Sensoren, Spannungen
+· Aufbau einer Tastaturmatrix mit ftTastern
+· Beispielprogramme und Bau einiger
+Modelle des Ur-Computing-Kastens
+30554 (1984)
+· Anbindung der 1980er-Jahre-Elektronik
+(Schwellwertschalter und Leistungsstufe mit Lautsprecher)
+
+Quellen
+[1]
+
+Ulrich Müller: ft-Computing-Website
+
+[2]
+
+Arduino Homepage
+
+[3]
+
+Open Source Hardware-Projekt
+
+Bezugsquellen
+Elektronik-Teile:
+[4]
+
+Conrad Electronic SE
+
+[5]
+
+reichelt elektronik GmbH & Co. KG
+
+[6]
+
+Pollin Electronic GmbH
+
+Arduino:
+[7]
+
+Watterott electronic GmbH
+
+

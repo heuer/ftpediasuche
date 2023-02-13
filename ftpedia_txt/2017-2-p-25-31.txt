@@ -1,0 +1,376 @@
+
+Elektromechanik
+
+Elektromechanik
+
+Neue Synchronmotoren
+Rüdiger Riedel
+In den vergangenen Ausgaben der ft:pedia haben sich mehrere Beiträge mit Synchronmotoren
+beschäftigt – eingeleitet von Matthias Dettmers Beitrag in ft:pedia 2/2016 [2]. Diesmal wird
+die Liste der mit fischertechnik konstruierbaren Synchronmaschinen um weitere Varianten mit
+konstanten Drehzahlen von u. a. 429, 333 oder 214 U/min und bis zu 15 Polpaaren erweitert.
+
+Aber immer das Anwerfen!
+Synchronmaschinen laufen nicht von
+alleine los, sie müssen angeworfen werden.
+Doch das müssen auch Automotoren und
+Flugzeugturbinen. Der Unterschied besteht
+darin, dass diese eine Mindestdrehzahl
+benötigen, die man erreichen oder überschreiten muss. Synchronmaschinen wollen
+dagegen recht genau auf ihre konstruktiv
+festgelegte Drehzahl gebracht werden.
+Das Anwerfen gelingt aber sehr einfach mit
+einem Stroboskop als Kontrolle [1]. Damit
+habe ich die gewünschte Drehzahl sofort im
+Blick und kann nach Bedarf schneller oder
+langsamer andrehen.
+Die nach meiner Kenntnis bisher erreichten
+Synchron-Drehzahlen mit fischertechnikSynchronmotoren sind in Tabelle 1 zusammengestellt. Darunter finden sich einige
+neue Varianten, die nachfolgend mit Abbildung vorgestellt werden. Alle von mir konstruierten Synchronmaschinen laufen mit
+den ‚alten‘ fischertechnik-Elektromagneten
+an 6 V Wechselstrom. Bei einigen Maschinen habe ich zwei Elektromagnete verwendet. Das verbessert teilweise die Laufruhe,
+ist für die Funktion aber nicht erforderlich –
+mit einer Ausnahme, wie noch gezeigt wird.
+Zur besseren Ansicht habe ich die für das
+Stroboskop benötigte Flachnabe mit Markierung auf den meisten Fotos weggelassen.
+
+Die Drehzahlen in Tabelle 1 sind teilweise
+gerundet. Die Anzahl der Pole ist gleich
+Polpaarzahl p mal 2.
+p
+
+U/s
+
+U/min
+
+
+50,00
+
+3000
+
+
+25,00
+
+1500
+
+
+16,67
+
+1000
+
+
+12,50
+
+
+
+10,00
+
+
+
+8,33
+
+
+
+7,14
+
+
+
+6,25
+
+
+
+5,56
+
+
+
+5,00
+
+
+
+4,55
+
+
+
+4,17
+
+
+
+3,85
+
+
+
+3,57
+
+
+
+3,33
+
+
+...
+
+...
+
+...
+
+
+2,50
+
+
+Tabelle 1: Polpaare und erreichbare
+Drehzahlen der Synchronmaschinen
+
+
+
+
+Polpaarzahl p = 1
+
+Polpaarzahl p = 2
+
+Der Läufer besteht aus einer Strebe 30, die
+von einem Mitnehmer (31712) und den
+Klemmhülsen an der Achse fixiert wird.
+Statt der Strebe 30 können auch Laschen 15
+oder 21,2 verwendet werden. Die Stabmagnete (d = 4 mm, l = 10 mm) sind entgegengesetzt magnetisiert. Der Motor läuft problemlos mit 6 V Wechselstrom; angeworfen wird die Achse mit Daumen und Zeigefinger. Kräftig drehen!
+
+Die Achsbefestigung in Abb. 3 entspricht
+der von p = 1, ebenso wie nachfolgend alle
+Achsbefestigungen von Statikteilen.
+
+
+Grundsätzlich ist es bei den Polpaarzahlen
+p = 1 und 2 günstig, das Trägheitsmoment
+oder Schwungmoment des Läufers möglichst klein zu halten
+
+Polpaarzahl p = 3
+
+Einzelteile des Läufers
+
+zum Einsatz
+
+Weitere Synchronmaschinen mit p = 3 finden sich in [2, 3].
+
+Polpaarzahl p = 4
+ist wg. der kleinen Kontur kaum zu sehen
+
+Das Stroboskop zeigt ein Segment auf der
+Flachnabe (Erläuterungen findet ihr in [1]).
+
+Der Läufer für die Polpaarzahl 4 in Abb. 5
+besteht aus vier Baugruppen (Winkelsumme 360°) WS60 + BS5 + WS7,5 + WS15 +
+WS7,5 + BS5, verbunden mit der Achse
+über vier Streben 15 und zwei Laschen 15.
+
+
+Elektromechanik
+
+Baustein mit seiner Schmalseite nach außen
+eingefügt wird. Die Streben des Läufers
+werden wieder durch Klemmbuchsen und
+einen Mitnehmer kraftschlüssig mit der
+Achse verbunden.
+Zu weiteren Synchronmaschinen mit p = 5
+siehe [2, 4, 5].
+
+Polpaarzahl p = 6
+
+
+Der Läufer in Abb. 7 besteht aus 12 Baugruppen WS60 - WS30. Für weitere Synchronmaschinen mit p = 6 siehe [6, 7, 8, 9,
+11].
+
+WS steht für ‚Winkelstein‘, WS60 für
+‚Winkelstein 60°‘, BS steht für ‚Baustein‘,
+also BS5 für ‚Baustein 5‘.
+Die Magnete sind mit wechselnder Polung
+von vorne und von hinten in die Löcher der
+WS60 und WS15 gesteckt (es sind also 16
+Magnete) und halten durch die gegenseitige
+Anziehung. Das ist absolut zuverlässig.
+Nicht verschweigen möchte ich, dass alle
+Motoren, bei denen sich die Magnete durch
+die gegenseitige Anziehung in den Löchern
+halten, zum Klappern neigen.
+
+Polpaarzahl p = 5
+
+Polpaarzahl p = 7
+
+Bedeutung
+
+Der Läufer in Abb. 6 besteht aus einem
+„fast-Kreis“ mit zehn Baugruppen WS60 WS7,5 - WS15 (Winkelsumme 375°). Das
+Minuszeichen soll andeuten, dass dieser
+
+
+
+
+Obwohl die Abstände der Magnete ungleichmäßig sind, dreht sich dieser Läufer
+einwandfrei. Er besteht aus 14 WS15 und
+20 WS7,5 (Winkelsumme 360°), eingeklemmt zwischen zwei Sternlaschen mit
+drei Kunststoffachsen und Klemmbuchsen.
+
+Polpaarzahl p = 8
+Der Läufer besteht aus 16 Baugruppen
+WS30 - WS7,5 (Winkelsumme 22,5° x 16 =
+360°), eingeklemmt zwischen zwei Drehscheiben 60.
+
+eingeklemmt zwischen zwei Sternlaschen
+mit Riegelscheiben.
+
+Polpaarzahl p = 10
+Der Läufer besteht aus zehn Baugruppen
+WS60 + BS5 - WS30 + WS7,5 (Winkelsumme 375°, also ein „fast-Kreis“), verbunden mit der Achse über vier Streben 30 und
+zwei Laschen 21,2.
+
+
+Polpaarzahl p = 11
+in den Magnetkreis
+
+Polpaarzahl p = 9
+
+
+Der Läufer besteht aus sechs Baugruppen
+WS15 + WS7,5 + WS15 + BS5 + WS15 +
+WS7,5 (Winkelsumme 270° + 90° = 360°),
+
+Der Läufer besteht aus 22 WS15, 18 BS5
+und 4 WS7,5 (Winkelsumme 330° +30° =
+360°), verbunden mit der Achse über vier
+Streben 30 und zwei Laschen 15.
+
+zur Drehzahlkontrolle mit dem Stroboskop
+
+Polpaarzahl p = 12
+Der Läufer in Abb. 13 besteht aus 24 WS15
+und 24 BS5, verbunden mit der Achse über
+vier Streben 30 und zwei Laschen 21,2.
+
+Elektromechanik
+
+BS5 + WS15 - WS7,5 + WS15 + BS5 +
+WS15 +BS5 + WS15 + BS5 (Winkelsumme 360°), verbunden mit der Achse über
+vier Streben 30 und zwei Sternlaschen.
+
+
+Polpaarzahl p = 13
+Der Läufer besteht aus 26 Baugruppen
+WS30 - WS15 (Winkelsumme 390°, also
+ein „fast-Kreis“), verbunden mit der Achse
+über vier Streben 45 und zwei Laschen 21,2.
+
+
+Polpaarzahl p = 14
+Der Läufer besteht aus vier Baugruppen
+WS15 - WS7,5 + WS15 + BS5 + WS15 +
+
+
+Polpaarzahl p = 15
+
+Drehzahl 200 U/min
+
+Der Läufer besteht aus sechs Baugruppen
+WS15 + BS5 - WS7,5 + WS15 + BS5 +
+BS5 + WS15 + BS5 + BS5 + WS15 +
+BS5 - WS7,5 + WS15 + BS5 + BS5 (Winkelsumme 360°), verbunden mit der Achse
+
+
+
+über sechs Streben 60. Wegen der großen
+Speichenlänge sind noch zwei Kunststoffachsen 30 mit Klemmbuchsen angebracht.
+Weiterhin unerreicht ist die Polpaarzahl 20,
+realisiert von Thomas Püttmann [10, 11].
+
+Die halbe Synchronmaschine
+Bis auf die ersten drei Maschinen haben alle
+einen Schwachpunkt: Sie benötigen durch
+die Konstruktion doppelt so viele Magnete
+wie entsprechend der Polpaarzahl erforderlich wären. Die Maschine in Abb. 17 hat 24
+Magnete bei p = 12, dagegen benötigt die
+Maschine in Abb. 13 ganze 48.
+
+ein Gegengewicht
+
+Rechts im Vordergrund von Abb. 19 ist das
+LED-Stroboskop zu sehen. Der Reflektor
+stammt von einer kleinen Taschenlampe.
+
+
+Aber wenn wir schon beim Magnete-Sparen
+sind, dann unternehmen wir auch den
+nächsten Schritt: Wir halbieren den Läufer.
+
+Zum Schluss eine halbe Synchronmaschine
+mit Polpaarzahl 24 (Abb. 20).
+
+Zum Ausbalancieren habe ich vier MagnetRückschlussplatten verwendet, aber man
+kann auch Metallachsen nehmen. Es übernimmt immer einer der Elektromagnete den
+Antrieb, nach einer halben Umdrehung der
+andere, ohne irgendwelche Umschaltungen.
+Die Elektromagnete sind parallel an 6 V
+Wechselstrom angeschlossen. Der Motor
+dreht einwandfrei mit 250 U/min, entsprechend einer Polpaarzahl 12.
+
+Und auch wenn sie niemand braucht: Zu
+zeigen, dass „es geht“, gibt ein prima
+Gefühl!
+
+Quellen
+[1]
+
+Rüdiger Riedel: Funktionsmodelle
+von Gleich- und Wechselstrommotoren. ft:pedia 4/2016, S. 52-58.
+
+[2]
+
+Matthias Dettmer: Synchronmotoren.
+ft:pedia 2/2016, S. 48-52.
+
+[3]
+
+Stefan Falk: Flüsterleise 50 HzZeigeruhr. Bilderpool der
+ftcommunity, 2016.
+
+[4]
+
+Thomas Püttmann: Synchronmotor
+mit 600 U/min mit Ludger Mäsings
+Rollenblock-10-Eck. Bilderpool der
+ftcommunity, 2017.
+
+Elektromechanik
+
+[5]
+
+Thomas Püttmann: Synchronmotor
+mit 600 U/min aus drei Drehscheiben. Bilderpool der ftcommunity,
+2017.
+
+[6]
+
+Thomas Püttmann: 50 Hz-Motor.
+Bilderpool der ftcommunity, 2011.
+
+[7]
+
+Dirk Fox: Synchronuhr mit
+Schrittschaltwerk. ft:pedia 1/2017, S.
+48-53.
+
+[8]
+
+david-ftc: Synchronmotor mit
+Anlasser. Bilderpool der
+ftcommunity, 2017.
+
+[9]
+
+Helmut Schmücker: 50 Hz-Uhr.
+Bilderpool der ftcommunity, 2013.
+
+[10] Thomas Püttmann: 50 Hz-Uhr.
+Bilderpool der ftcommunity, 2011.
+[11] Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt Verlag, 2015.
+
+
+

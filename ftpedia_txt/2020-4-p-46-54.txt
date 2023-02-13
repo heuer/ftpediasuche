@@ -1,0 +1,569 @@
+
+
+Getriebe
+
+Uhr mit Planetengetriebe
+Harald Steinhaus
+Die Beispiele im Bilderpool und in der ft:pedia zeigen es: Uhrenbau mit fischertechnik ist des
+Schweißes der Edlen wert.
+Nachdem ich mich nun schon recht lange
+mit Planetengetrieben herumschla.... ääh,
+beschäftige, lag der Gedanke nahe, Uhrenbau und Getriebe zu verbinden. So soll nun
+hier eine Uhr mit Planetengetriebe entstehen. Die ausgewählte Bauart verlangt ‚exotische’ Zahnräder in einer Vielfalt, die man
+von einem fischertechnik-Baukasten nicht
+erwarten kann. Aber für so etwas gibt es ja
+3D-Drucker, darunter nicht zuletzt denjenigen von fischertechnik. Das hier zu Grunde
+liegende Paradigma ist anders als sonst üblich: nicht „wie kriege ich das mit den
+vorgegebenen Zahnrädern Z10, Z15, Z20,
+... hin?“, sondern: „so so, da brauche ich ein
+Z57? Na gut, dann mache ich eins!“
+Das Besondere an der Mechanik dieser Uhr
+ist der koaxiale Aufbau: Alle Elemente,
+vom Motor durch alle Stufen und Sätze
+hindurch, rotieren um eine zentrale Achse.
+Von außen gesehen hat die Uhr die Form
+eines Zylinders aus acht Scheiben, die
+abwechselnd drehfest fixiert sind oder mit
+nach vorn abnehmenden Geschwindigkeiten rotieren und diesem Fall die Zeiger
+tragen. Außerhalb des zylindrischen Körpers gibt es nur die Lagerung auf dem
+Sockel und eine Fixierung derjenigen
+Scheiben, die eben fixiert sein müssen.
+
+Es gibt vier Untersetzungsstufen, die aus
+jeweils zwei Planetensätzen bestehen. Zwei
+Stufen werden gebraucht, um von der
+Motordrehzahl auf den Sekundenzeiger zu
+untersetzen. Von dort folgt eine Stufe auf
+den Minutenzeiger, und von da eine vierte
+auf den Stundenzeiger. Mein 3D-Drucker
+mit 0,35 mm Düse schafft auch brauchbare
+Zahnräder im Modul m=1, was Material
+und Bauzeit einsparen würde. Mit Blick auf
+den fischertechnik-3D-Drucker mit 0,4mm-Düse wird hier aber der fischertechnikStandard mit Modul m=1,5 verwendet.
+Planetengetriebe (allgemeiner: Umlaufgetriebe) führen bei fischertechnik eher ein
+Schattendasein, mit begrenzten Möglichkeiten um das Z30-Innenzahnrad und die
+verschiedenen Differenziale herum. Die
+Grundlagen sind aber in im fischertechnikBand hobby 2 [2] und den ft:pedia-Artikeln
+von Thomas Püttmann [3, 4] beschrieben.
+Für große Übersetzungsverhältnisse werden
+einfache Planetengetriebe recht sperrig.
+Wenn aber zwei Planetensätze miteinander
+gekoppelt werden, eröffnen sich viele Möglichkeiten. Eine bestimmte Form der Kopplung macht aus je zwei Planetensätzen eine
+Wolfrom-Stufe.
+
+Aufbau: Stufen und Sätze
+
+Startpunkt: Wolfrom-Planetenstufen
+
+Den Antrieb soll einmal ein 50-Hz-Synchronmotor besorgen, wie er z. B. im Bilderpool gezeigt wird [1]. Die eigentliche
+Uhr kommt komplett aus dem 3D-Drucker.
+
+Die englische Wikipedia zeigt den Verstellmechanismus eines PKW-Außenspiegels
+mit zwei, sagen wir mal, „unvollständigen“
+Planetensätzen übereinander (Abb. 1). Das
+
+
+weiße Sonnenrad wird angetrieben, das
+weiße Hohlrad ist mittels der Noppen am
+Umfang an seinem Platz fixiert. Das
+schwarze Hohlrad gehört zum zweiten
+Planetensatz. Die Planetenräder sind immer
+zu zweit ‚huckepack‘ zu einem einzigen
+Bauteil verbunden und koppeln beide Planetensätze: Die untere Seite rollt auf dem
+weißen Hohlrad ab und nimmt die obere
+Seite mit. Diese treibt das schwarze Hohlrad an. Es bildet den Getriebeausgang, der
+eine Gewindestange umgreift und damit
+den Spiegel in einer Achse verstellt.
+
+Getriebe
+
+weggelassen wurden. Die Planetenpäckchen werden nunmehr nur zwischen den
+Hohlrädern geführt.
+ Es gibt im gezeigten Beispiel auch keine
+Lager. Das liegt aber nur am Anwendungsfall: ein Außenspiegel wird über
+die Lebensdauer des zugehörigen Autos
+keine nennenswerte Zahl von Betriebsstunden erreichen, und sollte er einfrieren und zerbrechen, freut sich der Ersatzteilhändler...
+
+Nomenklatur
+Mangels Normierung (böse Zungen behaupten, das Gute an Standards sei, dass es
+so viele davon gibt) verwende ich die Bezeichnungen, die in meiner Literaturstichprobe am „üblichsten“ sind. Es sind:
+ A, ZA: das Sonnenrad und die Zahl
+seiner Zähne (außen verzahnt)
+
+(Wikipedia, CC BY SA 3.0)
+
+Die Fachliteratur kennt diesen Aufbau als
+Wolfrom-Getriebe, Zweisteggetriebe, oder
+reduziertes Planetengetriebe. Diese Bauart
+ermöglicht große Untersetzungsverhältnisse in kleinem Bauraum. Das ‚reduzierte‘
+daran heißt, dass Teile weggelassen wurden, ganz in Anwendung des Grundsatzes
+„Perfektion ist nicht dann erreicht, wenn
+man nichts mehr hinzufügen, sondern nichts
+mehr weglassen kann“ (Antoine de SaintExupéry), oder mit Artur Fischer: „so
+einfach wie möglich“:
+
+ B, ZB: das Hohlrad und die Zahl seiner
+Zähne (innen verzahnt, in der Literatur
+manchmal als negative Zahl verwendet,
+hier immer positiv)
+ C, ZC: das Planetenrad und die Zahl
+seiner Zähne (außen verzahnt). „C“ kann
+man sich ableiten aus dem englischen
+„Carrier“, das den Planetenträger oder
+Steg bezeichnet.
+Im Weiteren werden die Bauteile bezeichnet mit einer Zeichenfolge aus Nummer des
+Planetensatzes + Art des Zahnrads + Anzahl
+der Zähne.
+
+ Der Ausgang jeder Stufe erfolgt über das
+Hohlrad des zweiten Planetensatzes;
+dieser braucht kein Sonnenrad.
+
+Zum Beispiel:
+
+ Die Planeten beider Sätze sind als gemeinsame Körper (Päckchen) ausgeführt. Sie müssen nicht auf eigenen
+Planetenträgern gelagert werden.
+
+ 3C15 ist ein Planet (C) mit ZC = 15
+Zähnen aus dem Satz 3.
+
+ Die Planetenträger kann man sich als
+zunächst vereint (daher ‚Zweisteggetriebe‘) vorstellen, bis sie dann komplett
+
+ 1A16 ist das Sonnenrad (A) von
+Planetensatz 1, mit ZA = 16 Zähnen.
+
+ 4-2C14 ist ein Planet C14 aus dem Satz
+2, der baugleich im Satz 4 verwendet
+wird.
+Bei Letzterem liegt der tiefere Sinn darin,
+dass baugleiche Teile schon im CAD-
+
+
+
+
+Programm als weitere Instanzen des gleichen Elements (in FreeCAD als ‚Links‘
+bezeichnet) verwaltet werden können. Man
+kann sich selbst hereinlegen, wenn man nur
+solch einen Ableger ändern wollte, aber
+unerkannt und ungewollt die verbundenen
+Teile mit ändert.
+Bei üblichen Zahnrädern stehen die Zähne
+um ‚m‘ mm (bei Modul m=1,5 also 1,5 mm)
+über den Wälzkreis, und der Zahngrund
+liegt um ‚m‘ plus etwas „Luft“ darunter.
+Am Wälzkreis entlang sind Zahn und Zahn
+um eine Bogenlänge von m·π mm voneinander entfernt. Der Wälzkreis ist an einem
+gegebenen, fertigen Exemplar nicht sichtbar und i. d. R. nicht sauber messbar. Es ist
+aber hilfreich, den Wälzkreis beim Entwurf
+und beim Drucken mitzuführen: die Anzahl
+der Zähne ist proportional zum Durchmesser eines Zahnrads, also ist es egal, ob man
+in Zähnen oder in Wälzkreisdurchmessern
+rechnet.
+Bei jeder Zahnpaarung müssen sich die
+Wälzkreise der beteiligten Zahnräder exakt
+berühren. Beim 3D-Drucken mit Haftgrund
+(„Brim“, verhindert das Abheben des Teils
+durch thermischen Verzug) definiert man
+geschickter Weise im CAD-Programm
+einen flachen Ring, der zum Zahnrad gehört, etwas größer ist und von außen bis
+zum Wälzkreis reicht. Den Haftgrund
+braucht man sowieso; er soll nicht in den
+Zahngrund hinein reichen (das nachher zu
+entfernen ist eine üble Popelei), und im
+CAD-Programm sieht man sofort, wenn
+etwas nicht stimmt. Man liegt z. B. um
+einen Faktor 2 daneben, wenn man in
+Durchmessern rechnet und das CAD-Programm mit Radien gefüttert werden will.
+Wie viele Zähnderl hätten’s denn
+gern?
+Für jeden Planetensatz gelten die Bedingungen:
+𝑍𝐴 + 2 ∙ 𝑍𝐶 = 𝑍𝐵
+
+(1)
+
+Lies: die Zahnräder müssen ineinander passen. Anschaulich: ein Schnitt durch den
+
+Planetensatz (B) kann zerlegt werden in den
+Sonnendurchmesser (A) und zweimal den
+Planetendurchmesser (2·C). Das gilt für die
+Zähne in gleicher Weise.
+(𝑍𝐴 + 𝑍𝐵)𝑚𝑜𝑑 𝑁𝐶 = 0
+
+(2)
+
+Das ist die erste sogenannte „Einbaubedingung“: Die Summe von ZA und ZB ist
+ganzzahlig teilbar durch die Anzahl der
+Planeten; die Planeten können rotationssymmetrisch um die Sonne herum montiert
+werden. Regel (2) ist aber belanglos, wenn
+man nur einen Planeten pro Satz verwendet
+und den unrunden Lauf in Kauf nimmt.
+Die zweite Einbaubedingung fordert, dass
+sich die Planeten eines Satzes nicht untereinander in die Quere kommen dürfen.
+
+Planetensatz aus ZA, ZB, ZC mit NC = 4 oder
+NC = 3 möglich ist.
+
+Das Tabellenblatt in Abb. 2 errechnet die
+nach Bedingung 1 möglichen Werte von ZA
+und zeigt für die Kombination aus ZC (blau,
+Spalte A), ZB (orange/helle Balken, vier
+Spalten je Wert) und ZA (unter dem gewählten ZB, gelb/grau), ob die erste Einbaubedingung für ein NC von 3 oder 4
+erfüllt ist. Dann zeigt die Spalte „modulo“
+(md3 oder md4) eine Null auf grünem
+Hintergrund. Die markierte Zelle zeigt, dass
+ein Planetensatz mit ZA = 19, ZB = 53 und
+ZC = 17 die erste Einbaubedingung für vier
+Planeten erfüllt.
+Die zweite Einbaubedingung wurde ‚freihändig‘ überprüft. Die hier verwendeten
+Planetensätze sind alle für NC = 4 ausgelegt.
+
+
+Getriebe
+
+Die Bedingungen (1) und (2) sind grundlegend für alle Planetengetriebe und stehen
+in allen Büchern. Für Wolfrom-Getriebe
+kommt für alle Planetensätze aus den Stufen
+i und j hinzu:
+𝑖𝑁𝐶 = 𝑗𝑁𝐶
+
+(3)
+
+Die Planeten der Sätze einer Stufe werden
+huckepack aufeinander montiert. Bei Wegfall des Steges geht das nur mit gleicher
+Anzahl und Position der Planeten.
+Aus praktischen Erwägungen wurden noch
+weitere Bedingungen gesetzt:
+𝐵 ≤ 65
+
+(4)
+
+für alle Sätze. Bei Modul m=1,5 erreicht der
+Wälzkreis einen Durchmesser von 90 mm,
+dazu kommen noch Zahngrund und etwas
+„Fleisch“ für die Außenhülle. Ursprünglich
+hatte ich mit Modul m=1 die 60 mm Wälzkreisdurchmesser passend zur fischertechnik-Drehscheibe angepeilt.
+𝐴 ≥ 10
+
+(5)
+
+für alle Sätze, die überhaupt ein Sonnenrad
+haben. Mit weniger als 10 Zähnen auf einer
+fischertechnik-Achse mit 4 mm Durchmesser wird man mit PLA-Filament nicht
+glücklich werden.
+Vorgesehen ist ein 50-Hz-Synchronmotor
+mit 12 Magneten. Er braucht 120 ms für
+eine Umdrehung. Bislang habe ich aber
+noch keinen dieser Motoren zuverlässig
+zum Laufen bekommen. Derzeit ist ein
+Power-Motor verbaut, der ohne echten Zeitbezug oder Regelung drauflos dreht. Er
+ließe sich synchronisieren, wenn man noch
+einen Controller oder Arduino und weitere
+Teile spendiert [5, 6].
+Von hier ausgehend, braucht die Uhr:
+ eine Untersetzung 1:500 (120 ms /
+60.000 ms), um den Sekundenzeiger anzutreiben. Der darin steckende Faktor 5
+
+Hier habe ich die Nomenklatur umgedreht und
+die Buchstaben nach vorn gestellt. Damit kann
+man direkt in ein Tabellenkalkulationsblatt
+
+ist bereits Gegenstand vieler Diskussionen und mit fischertechnik-Mitteln
+nicht „einfach mal so“ zu bekommen
+(eine Lösung mit einem Umlaufgetriebe
+findet sich in [3]). Wolfrom-Getriebe mit
+maximal B = 60 erreichen knapp unter
+1:300. Also wird diese Untersetzung
+geteilt in zwei Stufen von 1:25 und 1:20
+(Stufen 1 und 2, Sätze 1+2 und 3+4).
+ darauf folgend eine Untersetzung 1:60
+für den Minutenzeiger. Das erledigt eine
+dritte Wolframstufe mit den Planetensätzen 5 und 6.
+ danach eine Untersetzung 1:12 für den
+Stundenzeiger, aus der Stufe 4 mit den
+Sätzen 7 und 8.
+
+Übersetzungen mit WolfromStufen
+Die Übersetzung einer Wolfrom-Stufe ergibt sich nach Blick in die Literatur und
+wenigen elementaren Umformungen (Entschuldigung – das war seinerzeit der ‚running gag‘ in vielen Vorlesungen) zu:1
+𝐵1
+1 + 𝐴1
+Ü=
+𝐵1 ∙ 𝐶2
+1 − 𝐶1 ∙ 𝐵2
+Diese Formel ist hergeleitet nach [7] und so
+umgeformt, dass nur noch A1, C1, C2 frei
+wählbar sind. Weitere Details bedeuten
+einen Ausflug in die Tiefen des höheren
+Maschinenbaus. Interessierte Leser seien
+dazu auf die Literatur [7, 8, 9] verwiesen.
+Bei der Wahl der Zahnräder müssen natürlich die oben aufgeführten Bedingungen
+allesamt erfüllt werden. Die möglichen
+Übersetzungen haben überwiegend „krumme“ Werte, und unter den ganzzahligen
+Ergebnissen sind die hier gesuchten Werte
+spärlich, manchmal aber auch mehrfach zu
+finden.
+
+gehen und die Zellen A1 bis C2 als Eingabefelder
+verwenden.
+
+
+
+
+7C15 könnte zu 7-5C15 und damit baugleich mit 5C15 gemacht werden, wenn
+man einen Adapter für die Aufnahme des
+viel kleineren Schafts seines Partner-Planeten 8C10 erstellt.
+
+Zusammenbau
+Neben fischertechnik-Standardteilen werden vier Kugellager 4x12x4 benötigt, wie
+sie auch in die fischertechnik-Schneckenmuttern m=1,5 hinein passen. Der Synchronmotor hätte 12 Power-Magnete, wird
+aber hier von einem Power-Motor vertreten.
+
+mit Wolfrom-Sätzen, grüne Farbtöne
+verdeutlichen die Maße der Hohlräder
+
+anderen interessanten Werten. Die höchsten
+Übersetzungsverhältnisse werden erreicht,
+wenn sich C1 und C2 nur um 1 unterscheiden. Bei C1 = C2 blockiert das Getriebe und die Formel läuft auf eine Division
+durch Null. Wenn C2 größer ist als C1, wird
+die Übersetzung negativ (d. h. die Drehrichtung am Ausgang kehrt sich um).
+
+BSB-Grundplatte (31557)
+
+1. Zeiger montieren
+
+Die Wahl fiel auf Planetensätze mit den
+Werten:
+
+Die Zeiger dieser Uhr sind nur als kleine
+Stummel (bei „12 Uhr“) und als Schwalbenschwanz¬aufnahme bei „6 Uhr“ der ‚geraden‘ Hohlräder ausgebildet. Dort kann man
+je nach Geschmack weiter verschönerte
+Gebilde anbringen, etwa bunt eingefärbte
+Zahnstocher. Die Zeiger müssen flach
+genug sein, damit sie zwischen den
+Halteklauen für die ‚ungeraden‘ Hohlräder
+hindurch passen, und kurz genug, damit sie
+nicht in die Rastvorrichtungen geraten.
+
+ Stufe 1: 1A18, 1B54, 1C18; 2B50, 2C14;
+Sätze 1, 2, 3, 4 ergeben Ü = 25·20 = 500
+
+2. Lager in die Taschen der
+Sonnenräder einbauen
+
+ Stufe 2: 3A15, 3B57, 3C21; 4-2B50, 42C14; Ü = 20 → Sekundenzeiger
+
+Kugellager haben deutlich engere Toleranzen als fischertechnik-Stahlachsen, d. h.
+man muss eine geeignete Stahlachse aussuchen. fischerfriendsman.de hat beides im
+Angebot. Die Hohlräder werden über ihre
+runde Mittelöffnung direkt auf den Sonnenrädern gelagert. Die Sonnenräder schließen
+
+ Stufe 3: 5A29, 5B59, 5C15; 6B58, 62C14; Ü = 60 → Minutenzeiger
+ Stufe 4: 7A25, 7B55, 7C15; 8-2B50,
+8C10; Ü = 12 → Stundenzeiger
+
+
+
+Getriebe
+
+in Richtung der Mittelachse bündig aneinander an.
+3. Sonnen- und Hohlräder der
+Wolfromstufen montieren
+Man kann alle Zahnräder „einfach so“
+hineinstecken bzw. -legen. Das liegt an der
+Vereinfachung auf nur einen Planeten pro
+Satz (NC = 1). Der allgemeinere Fall
+(NC > 1) führt zu Komplikationen, auf die
+weiter unten eingegangen wird. Hier aber
+ist es egal, wo man die Planeten platziert;
+den Rest erledigt sowieso der Stellmechanismus.
+Das Sonnenrad 1A18 sitzt ganz vorne und
+wird von der Stahlachse über eine fischertechnik-Klemmbuchse angetrieben. Für die
+anderen Sonnenräder 3A15, 5A29, 7A25
+
+gilt: Das Rad geht mit seinem Schaft zuerst
+durch das runde Loch in ‚seinem‘ Hohlrad
+und wird vom Sechskant im weiter ‚vorn‘
+liegenden Hohlrad angetrieben. Man steckt
+also zuerst 3A15 durch 3B57 hindurch und
+klemmt dann 2B50 darauf. Ebenso geht
+5A29 durch 5B59 hindurch und klemmt in
+4-2B50. Ein drittes Paket entsteht aus 7A25,
+7B55 und 6B58.
+4. Hohlrad 1B54 montieren
+Das Hohlrad 1B54 wird mit einer Klemmbuchse versehen und mit Achsen 30 an der
+fischertechnik-Drehscheibe befestigt.
+5. Planetenpacks zusammenbauen
+1C18 mit 2C14, 3C21 mit 4-2C14, 5C15
+mit 6-2C14, 7C15 mit 8C10.
+
+Hohlräder mit runden Löchern (untere Reihe) und dann von der Rückseite in diejenigen mit eckigen
+Löchern.
+
+
+
+
+bringt das ‚gerade‘ Hohlrad mit dem Zeiger
+auf Wunschposition und lässt die Raste
+wieder eingreifen. Das Hohlrad 1B54 hat
+zwar auch Rastungen, wird aber hier mittels
+zweier Achsen 30 fest mit einer fischertechnik-Drehscheibe verbunden.
+
+die Sonnenräder einen Stapel, mit 1A18 oben.
+Links die Planetenpäckchen, bei denen immer
+das kleinere zum Ausgang hin liegt. 1A18 ist in
+älterer Bauform gezeigt; 8B50 ist mittlerweile
+baugleich mit 2B50 und wurde zu 8-2B50. Die
+‚geraden‘ Sonnenräder wurden nur zur
+Kontrolle konstruiert.
+
+6. Endmontage
+Jedes Päckchen kommt mit dem größeren
+Planeten nach unten in dessen Hohlrad, und
+der somit vervollständigte Planetensatz
+wird auf die Achse aufgeschoben. Zuletzt
+kommt 8-2B50 mit seiner Lagerbuchse.
+Eine fischertechnik-Flachnabe obenauf hält
+den Stapel zusammen.
+
+Stellen der Uhr
+Zum Stellen der Uhr kann jeder Zeiger
+einzeln verdreht werden: man löst die Raste
+(Kardanhülse) am ‚ungeraden‘ Hohlrad,
+
+den P-Motor
+
+Die Uhr kann im laufenden Betrieb gestellt
+werden. Planetengetriebe sind mechanische
+Addierwerke für Drehwinkel und -geschwindigkeiten. Für den Lauf der Uhr ist
+es gleichgültig, ob die Hohlräder stehen
+oder sich drehen.
+Ein stehendes Hohlrad addiert einen
+konstanten Winkel (multipliziert mit dem
+Übersetzungsverhältnis des Planetensatzes
+für den Fall ‚Antrieb über Hohlrad‘) und
+eine Geschwindigkeit von 0°/s.
+
+verteilt, dass die Kardanhälften hinein passen. Dieses Maß ergibt „krumme“ 112 Mulden.
+
+
+Gleichermaßen wird auch die Umstellung
+auf Sommer/Winterzeit durch einen festen
+Versatz am Hohlrad von Satz 8 erledigt.
+Genauso könnte man eine Gangkorrektur
+und Funktionen wie Zeitlupe und Zeitraffer
+durch Antriebe an den ‚ungeraden‘ Hohlrädern hinzufügen.
+
+Disclaimer: Druckgenauigkeit
+Mein 3D-Drucker hat eine Düse von 0,35
+mm. Der fischertechnik-Drucker und die
+meisten übrigen Drucker haben 0,4 mm.
+Wandstärken und andere Maße in den STLDateien sind ‚über den Daumen‘ auf den
+fischertechnik-Drucker angepasst, d. h.
+Wandstärken sind 0,8 oder 1,2 mm entsprechend zwei oder drei Druckbahnen. Bei
+den Radien für die Lagersitze habe ich einen
+Aufschlag von 0,25 mm verwendet, mit
+dem mein Drucker Lagersitze produziert,
+die nach Entgraten mit Sandpapier direkt
+verwendbar sind.
+
+Was ist mit NC > 1?
+Die Uhr wurde ursprünglich für NC = 4
+Planeten pro Satz konzipiert. Daraus ergaben sich weitere Definitionen und Konventionen:
+1. Bei Uhrzeit 0:0:0:0 haben alle Planetensätze einen ihrer Planeten mit Zählindex 0
+(etwa 3C21.0) im „Norden“ („12 Uhr“Position), mit einem Zahn ebendort.
+Gezählt wird im Uhrzeigersinn bei Draufsicht auf die fertige Uhr. Beispiel: Hohlrad
+2C18.3 ist der vierte Planet (Index 3) von
+Satz 2. Im CAD-Programm tut man sich
+leichter, wenn man alle Zahnräder im Koordinaten¬ursprung belässt. Aber beim Drucken und beim Einbau liegen die Sonnenräder und die ‚geraden‘ Hohlräder in der
+Gegenrichtung.
+2. Alle Hohlräder haben eine Zahnlücke im
+Norden (folgt aus 1.).
+
+Getriebe
+
+müssten alle Abweichungen von der Symmetrie in gleicher Weise für beide Sätze
+einer Wolfrom-Stufe eingehalten werden -das muss man nicht haben. Die Planetensätze einer Stufe müssen gleich viele Planeten haben.
+4. Die Sonnenräder stehen so, wie es der
+Planet Cxx.0 des jeweiligen Satzes bestimmt. Ist NC gerade, dann hat der Planet
+mit Index 0 einen Zahn im Süden und die
+Sonne eine Zahnlücke im Norden.
+5. Mit NC = 4 werden weitere Planeten um
+jeweils 90° versetzt eingebaut. Dort können
+Sonne und Hohlrad Zahn oder Lücke zeigen
+oder irgendwo dazwischen stehen.
+6. Die Einbauregeln stellen sicher, dass
+diese weiteren Planeten pro Satz lagerichtig
+eingebaut werden können. Es kann aber für
+jedes Päckchen unterschiedlicher Versatz
+(Drehwinkel) zwischen den beiden Planeten
+nötig sein, d. h. die vier Planetenpäckchen
+einer Stufe sind nicht notwendiger Weise
+baugleich. Sie sind nur für ihren Platz geeignet; sie müssen entweder jedes für sich
+konstruiert und gedruckt werden, oder sie
+werden erst beim Einbau lagerichtig zueinander fixiert (sprich: geklebt) und gekennzeichnet. Das eröffnet reichlich Fehlermöglichkeiten und geht nicht mit den hier verwendeten sechseckigen Kupplungsstücken.
+Mit dieser Betrachtung schließt sich der
+Kreis zum obigen Beispiel aus Wikipedia:
+Bei genauer Untersuchung erkennt man auf
+Löcher sind Markierungen für den lagerichtigen Einbau: sie müssen deckungsgleich liegen (d. h. Licht scheint hindurch),
+dann sind die Planeten nach Drehwinkel
+und nach Position im Hohlrad richtig angeordnet. Das abgebildete Getriebe ist nicht
+richtig montiert.
+
+3. Die Planeten sind rotationssymmetrisch
+um die Sonne herum angeordnet. Bei unsymmetrischer Anordnung der Planeten
+
+
+
+
+Wer die Herausforderung …
+... sucht, untersucht die Machbarkeit einer
+‚complication‘ wie etwa des Modells „UR202“ der Marke ‚Urwerk‘ mit seinen Umlaufgetrieben [10]. Manchmal ist es nur eine
+Frage des Maßstabs, ob ein Gerät ein Uhrwerk oder eher ein Kirmes-Fahrgeschäft ist.
+
+[5]
+
+Falk, Stefan: Mikro-Uhr mit kontinuierlich geregeltem Gleichstrommotor. Bilderpool der ftCommunity.
+
+[6]
+
+Birkenstock, Gerhard: Power-Synchronmotoren. ft:pedia 3/2017, S.
+42-45.
+
+[7]
+
+Looman, Johannes: Zahnradgetriebe.
+Springer Verlag, 2. Auflage 1988.
+
+[8]
+
+Mulzer, Florian: Systematik hochübersetzender Koaxialgetriebe.
+Dissertation, TUM 2010.
+
+[9]
+
+Volmer, Johannes: Umlaufrädergetriebe. VEB Verlag Technik Berlin,
+4. Auflage 2001.
+
+Links und Referenzen
+[1]
+
+Bilderpool der ftCommunity: Uhren.
+
+[2]
+
+fischerwerke: Planetengetriebe. In:
+hobby2 Band 6, S. 30 ff
+
+[3]
+
+Püttmann, Thomas: Planetengetriebe. ft:pedia 2/2016, S. 38-43.
+
+[4]
+
+Püttmann, Thomas: Das Differentialgetriebe. ft:pedia 4/2014, S. 12-19.
+
+[10] Urwerk: UR-202.
+
+
+

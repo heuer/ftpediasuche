@@ -1,0 +1,231 @@
+
+
+Modell
+
+Digitale Uhr
+Hans-Christian Funke
+Mit den neuen LED-Anzeigen der Zählermodule (70001, 70002) vervielfältigen sich die Möglichkeiten für neue oder die Perfektionierung bestehender Modelle. Heute stelle ich euch eine
+weitere Möglichkeit vor und gleichzeitig auch ein Anwendungsbeispiel für den Taktgenerator
+(70004), der hier als Binärzähler eingesetzt wird.
+
+
+Aufbau
+
+Anzahl Art.-Nr.
+
+Bezeichnung
+
+Den Aufbau habe ich hier recht einfach
+gestaltet mit einer offenen Konstruktion,
+damit die erforderliche Elektronik gut sichtbar ist (Abb. 2). Sicherlich lässt sich auch
+noch ein schönes Gehäuse um die Uhr
+bauen, aber dies überlasse ich euren
+Designer-Fähigkeiten.
+
+
+37238
+
+Baustein 5 mit 2
+Zapfen
+
+
+37468
+
+Baustein 7,5
+
+
+31060
+
+Verbindungsstück 15
+
+
+31987
+
+Federnocken
+
+
+70001
+
+Zählermodul
+
+
+70003
+
+Versorgungsmodul
+V1
+
+Hier die Stückliste:
+Anzahl Art.-Nr.
+
+Bezeichnung
+
+
+32985
+
+Grundplatte
+
+
+70004
+
+Taktgenerator
+
+
+35969
+
+Kabelführung
+
+
+70010
+
+AND-NAND-Modul
+
+
+116251 Baustein 30 (rot)
+
+
+70011
+
+AND-NAND-Modul
+
+
+31332
+
+
+70013
+
+OR-NOR-Modul
+
+
+Taster oder
+Minitaster
+
+
+Modell
+
+
+Statt des Zählermoduls 70001 kann auch
+das 70002 verwendet werden, das so beschaltet werden muss, dass das Zählermodul aufwärts zählt.
+Die Elektronikmodule habe ich mit Federnocken befestigt. Für einen sicheren Sitz
+auf der Grundplatte reichen zwei Stück pro
+Elektronikmodul aus (Abb. 3).
+
+
+Unter dem Zählermodul für die Stundenanzeige und für die Minutenanzeiger
+befindet sich ein Taster (siehe Abb. 4), der
+zum Einstellen der Uhr benötigt wird.
+Darüber kommt das Zählermodul, das mit
+der Rückseite auf den Baustein 5 geschoben
+
+
+
+
+
+wird – natürlich kann auch ein Baustein 5
+mit zwei Zapfen verwendet werden. Beim
+Zählermodul ganz rechts fehlt der Schalter,
+der sonst dem Sockelvorbau halt gegeben
+hat. Da dieser hier fehlt, musste ich die
+Bausteine 7,5 unten mit zwei Federnocken
+an der Grundplatte befestigen. Wer keinen
+alten Taster hat, kann Mini-Taster einsetzen; der Aufbau ist identisch zum
+Sockelvorbau ohne Taster, nur wird statt
+des einen Baustein 30 der Mini-Taster eingesetzt, dabei schaut der Tasthebel nach
+rechts.
+
+Was wir hier brauchen, ist einen Zähler, der
+die Impulse mitzählt und der auch abgefragt
+werden kann. Genau für diesen Zweck
+macht sich der Taktgenerator gut, denn
+durch die Entkopplung des Taktgebers wird
+dieser zu einem 8-bit Binärzähler. Für die
+Sekunden wird der Taktgenerator eingesetzt, zum Zählen der Minuten ein
+Binärzähler und für die Stunden ein
+weiterer Binärzähler. Mit Hilfe von Gattern
+wird dann abgefragt, ob 60 Takte erreicht
+wurden (vierer AND-Gatter) bzw. 24 bei
+der Stundenanzeige (zweier AND-Gatter).
+
+Damit ist bereits alles vorbereitet bis auf die
+Verdrahtung der Elektronikmodule –
+hierfür braucht ihr den Schaltplan (Abb. 6).
+Ein Hinweis noch zur Verdrahtung: Es hat
+sich als vorteilhaft erwiesen, die Kabel
+senkrecht an den Modulen herunter zu
+führen zu den Kabelführungen (Abb. 5).
+
+Ein weiteres Problem hat sich dadurch
+ergeben, dass die Elektronikmodule zwar
+sehr schnell reagieren, aber für das Zurücksetzen des Zählermoduls zu schnell. Das
+heißt, der Binärzähl wurde wieder auf null
+gesetzt, aber die Zählermodule nicht und so
+zählten diese über 60 hinaus weiter. Um
+Abhilfe zu schaffen, wurde über ein
+weiteres AND-Gatter noch ein halber Takt
+Verzögerung eingebaut, damit das Zählermodul genug Zeit hat zu reagieren. Damit
+hat sich allerdings ein anderer, aber weitaus
+geringerer Nachteil eingestellt. Nachdem
+die 60 bzw. 24 erkannt wird, ist auf der
+Anzeige vom Zählermodul für eine halbe
+Sekunde eine 60 bzw. 24 zu sehen, bevor
+
+Funktion der Schaltung
+Die Schwierigkeit bei der digitalen Uhr war
+es, einen Melder zu haben, der ein Signal
+abgibt, wenn 60 Sekunden oder Minuten
+erreicht sind. Die Zählermodule zählen nur
+die Impulse und zeigen diese an, aber es gibt
+keine Möglichkeit, den Status der Anzeige
+abzufragen.
+
+
+
+Modell
+
+der Zähler auf 00 zurückgesetzt wird –
+nobody is perfect.
+Damit die Uhr auch gestellt werden kann
+gibt es zwei Taster – eine für Minuten und
+einen zum Stellen der Stunden. Durch
+dauerhaftes Drücken des Tasters zählt der
+Zähler die Minuten bzw. Stunden im Takt
+von 0,5 Sekunden hoch. So kann die Uhr
+bequem auf die aktuelle Uhrzeit eingestellt
+werden. Achtung: Die Taster liefern Prellimpulse, daher muss der Jumper beim
+Zählermodul für Minuten und Stunden auf
+„A“ für analog gesteckt werden (beim
+Sekunden-Zählermodul auf „D“); es muss
+auch nur der Jumper für die Einer-Stelle
+
+eingesteckt werden, weil der Eingang für
+die Zehner-Stelle (Ck X in) nicht genutzt
+wird.
+
+Justierung
+Der Taktgenerator für die Sekunden muss
+für den korrekten Betrieb nun noch justiert
+werden. Am Ausgang Ck8 muss die LED
+nach 32 Sekunden angehen. Um dies zu
+erreichen, könnt ihr den Eingang
+„Stopp/Takt“ des Taktgenerators (Sekunden) über einen Schalter mit Plus (Vdd) verbinden und so den Taktgenerator anhalten.
+Mit Hilfe einer Stoppuhr (bei jedem Handy
+bzw. Smartphone enthalten) kann so relativ
+
+
+
+
+leicht gemessen werden, ob Ck8 nach 32
+Sekunden leuchtet (high). Mit dem
+Drehregler am Taktgenerator kann nun die
+Taktgeschwindigkeit solange verändert
+werden, bis der Wert erreicht wird.
+
+Und ihr habt recht, das müsste auch mit
+einem TXT-Controller zu steuern sein.
+Deshalb werde ich euch dieses Modell in
+der nächsten ft:pedia noch einmal mit einem
+Programm zur Ansteuerung der digitalen
+Uhr vorstellen.
+
+
+
+

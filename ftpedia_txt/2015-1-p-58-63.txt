@@ -1,0 +1,282 @@
+
+
+Elektronik
+
+fischertechnik-Akkulader
+Gerhard Birkenstock
+In jedem beweglichen elektronischen Gerät stecken Batterien. Aus ökologischen Gründen sind
+es heute oft Akkus – und diese müssen wieder aufgeladen werden. An einem fischertechnikLadegerät für NiCd- und NiZn-Akkus werden hier die Hintergründe der Ladetechnik erläutert.
+Ganz nebenbei bauen wir selber einen Tri-State-Ausgang, der neben „an“ und „aus“ auch
+einen hochohmigen Zustand annehmen kann.
+
+Wie funktioniert ein Ladegerät?
+
+Was wird für die Aufladung eines Akkus
+gebraucht? Nicht viel:
+
+Stark vereinfacht lädt ein Akku-Ladegerät
+einen Akku einfach durch Stromzufuhr auf,
+bis eine bestimmte Spannung erreicht wird.
+Ein solches Ladegerät lässt sich mit fischertechnik herstellen. Professionelle Ladegeräte verfügen über raffiniertere Techniken
+und laden z. B. NiCd-Akkus nicht einfach
+bis zu einer bestimmten Spannung, sondern
+bis die Spannung des Akkus bei weiterer
+Stromzufuhr sinkt anstatt steigt. Das könnte
+man durch eine entsprechend erweiterte
+Programmierung ebenfalls nachbilden.
+
+· ein Netzteil,
+· eine Leistungsendstufe,
+· einen Analog-Digital-Wandler und
+· eine Klemmvorrichtung für die Akkus.
+Noch etwas Software, und der Akkulader
+kann in Betrieb gehen. Und das alles mit
+fischertechnik-Bauteilen. Gut, bis auf vier
+Komponenten. Aber dazu gleich mehr.
+
+
+
+Elektronik
+
+Für die verschiedenen Akkutypen wird ein
+anpassbares fischertechnik-Ladegerät konstruiert, mit dem von Lady (N) über Mini
+(AAAA) bis Mono (D) alle Akku-Größen
+aufgeladen werden können.
+Der zu ladende Akku wird im Modell in die
+Ladeschale (links vorne in Abb. 1) eingelegt, die über die Schnecken links und
+rechts davon in der Höhe justiert werden
+kann. Die Z30 rechts davon dienen zusammen mit der waagerecht liegenden
+Schnecke zum Anpressen der rechten Kontaktachse. Ein Federgelenkbaustein (siehe
+
+Programmabruf
+Um die unterschiedlichen Ladeprogramme
+starten zu können, werden drei Taster am
+TX Controller angeschlossen.
+Mit dem Taster S1 wird das Laden von
+NiCd-Akkus gestartet. Mit dem Taster S2
+wird das Entladen und Aufladen für NiCdAkkus gestartet. Drückt man zuerst den
+Taster S3 und gleichzeitig S1 oder S2 werden
+die gleichen Ladeprogramme für die NiZnAkkus gestartet.
+
+
+Die Spannung der Batterie wird mit dem
+Analog-Digitalwandler an Kanal I1 eingelesen. In RoboPro wird dazu ein Farb- oder
+Spurensensor-Element verwendet, weil
+man damit einen analogen Messwert für bis
+zu 10 V erhält. In Reihe zur Batterie wird
+ein Leistungswiderstand mit ca. 54 Ω geschaltet. Dieser Leistungswiderstand übernimmt gleichzeitig zwei Funktionen: Er arbeitet als Begrenzung und Messwandler des
+Ladestroms.
+Der zweite A/D-Kanal I2 greift die Spannung auf der anderen Seite des Widerstandes ab. Damit ist man in der Lage den Strom
+mittels des Ohmschen Gesetzes zu berechnen:
+=
+
+Für die Spannung muss die Differenz der
+beiden Messstellen eingesetzt werden.
+Somit gilt:
+=
+
+−
+
+Für R wird der Lastwiderstand eingesetzt,
+in meinem Fall 54 Ω. Damit ergibt sich:
+
+Elektronische Schaltung
+Es folgt hier eine Übersicht der gesamten
+Beschaltung des TX Controllers (ROBO):
+
+− )
+Diese Gleichung wird fest in den Programmablauf eingesetzt und stetig mitlaufen gelassen. Die angezeigten Werte sind in
+mV und mA angegeben.
+=
+
+(
+
+
+
+
+regulieren und auf dem Display des TX
+Controllers den Ladestrom kontrollieren.
+Für das Entladen wurde einen zweiter
+Stromzweig aufgebaut. Der Grund ist recht
+einfach: Der Ladestrom und der Entladestrom sollen etwa gleich sein. Beim Aufladen wird die Ladeenergie von der 12 V-Versorgungsspannung entnommen. Beim Entladen, wird jedoch der Ausgang des TX
+Controllers gegen Masse gelegt. Somit ist
+der Akku die treibende Spannung.
+
+
+Und diese ist nur 1,4 V. Das Entladen würde
+über den gleichen Widerstand zehnmal länger dauern als das Aufladen. Daher sind die
+6 Ω zum Entladen die richtige Wahl.
+
+Soll der Akku mit einem höheren Strom geladen werden, so ist der Widerstand kleiner
+zu wählen. Jedoch Vorsicht! Drei Begrenzungen sind zu beachten.
+· Der zu ladende Akku muss den Ladestrom aushalten. Akkus sind mit dem
+maximal zulässigen Ladestrom beschriftet; wird dieser überschritten, wird der
+Akku zu heiß und kann sogar platzen.
+Das hier vorgestellte Ladegerät bleibt
+mit ca. 150 mA Ladestrom auf der sicheren Seite.
+· Der TX Controller darf nicht überlastet
+werden. Er ist in der Lage bis zu 1 A zu
+liefern. Das ist mehr als viele Akkus im
+Ladebetrieb aushalten können.
+· Und der Lastwiderstand muss für die entstehende Verlustleistung ausgelegt sein.
+In meinem Falle fließen 150 mA. Dabei
+werden am Widerstand fast 2 W in
+Wärme umgesetzt.
+Also Vorsicht beim Nachbauen: Akkus
+können auch Auslaufen, bersten oder
+furchtbar heiß werden!
+Wird ein geregeltes Netzteil als Spannungsquelle genutzt, kann der Ladestrom sehr
+präzise eingestellt werden. Einfach die Versorgungsspannung zwischen 7 V und 12 V
+
+
+
+Tri-State-Ausgang
+An dieser Stelle ist nun das Geheimnis mit
+den beiden Dioden zu erklären. Hierzu müssen wir uns ein Detail der Endstufe des TX
+Controllers ansehen. Die folgende Abb. 6
+zeigt zwei Halbbrücken der Ausgänge und
+die Ladeschaltung mit den beiden Dioden.
+Die Endstufen des TX-Controller-Bausteins
+sind so beschaltet, dass der gegen GND liegende Transistor stetig durchgeschaltet ist.
+Hierdurch vereinfacht sich die Steuerung
+für die Polwendung von Motoren. Man
+braucht nur einen der beiden Anschlüsse
+elektronisch anzusteuern, um den Motor zu
+
+versorgen. Die andere Seite ist automatisch
+immer mit GND verbunden.
+
+Elektronik
+
+dann den Weg zum Akku frei. Mit zwei
+Ausgängen und zwei Dioden erhält man
+also einen Tri-State-Ausgang.
+Selbst wenn eine Fehlprogrammierung passiert und alle Endstufen in Durchlassrichtung geschaltet werden, wird an der Gesamtschaltung nichts zerstört. Der Strom
+fließt über den ersten Transistor, aus O1
+heraus, über die erste Diode, über den 54 ΩWiderstand, über den 6 Ω-Widerstand, über
+die zweite Diode, in O3 hinein und über den
+GND-Transistor gegen Masse.
+
+Berechnung der Widerstände
+Jetzt können wir auch nachvollziehen, wie
+sich die Größen der Widerstände berechnen:
+· 12 V beträgt die Betriebsspannung.
+
+· 0,5 V fallen am „+“-Transistor ab.
+
+Leider kennt dadurch die Endstufe nur zwei
+Zustände: Mit + verbunden oder mit -.
+Einen hochohmigen Zustand (weder nach
+Positiv noch nach Negativ durchgesteuert,
+auch Tri-State genannt) gibt es nicht. Wird
+die Batterie nur an einen Anschluss angeschlossen, käme sie nie zur Ruhe. Es ginge
+nur Aufladen oder Entladen. Ein Ruhezustand kann nicht eingenommen werden.
+
+· 0,7 V fallen an einer Diode in Durchlassrichtung ab.
+
+Nun kommen die beiden Dioden in die
+Schaltung. Wenn ich den oberen Ladezweig
+mit GND durch schalte, fließt kein Strom.
+Der Akku steht mit seiner Spannung gegen
+die Diode.
+Gleichzeitig gebe ich dem unteren Zweig
+eine positive Spannung. Auch hier ist kein
+Stromfluss möglich. Die Versorgungsspannung steht gegen die Diode im unteren
+Zweig.
+Es ist Ruhe eingekehrt. Da kein Strom in der
+Schaltung fließt, wird an allen drei Messstellen I1, I2 und I3 die gleiche Spannung angezeigt. Es ist die Akkuspannung.
+
+· 1,4 V beträgt die Akkuspannung im
+Mittel.
+Bei 0,15 A gewünschtem Ladestrom ergibt
+sich der Ladewiderstand damit zu
+=
+
+12V − 0,5V − 0,7V − 1,4V
+0,15A
+
+Das ergibt ca. 65 Ω. Da ich einen solchen
+Widerstand nicht in der benötigten Leistungsklasse in meinem Bestand hatte, habe
+ich ihn durch drei in Serie geschaltete 18 ΩWiderstände ersetzt, was also 54 Ω ergibt.
+Analog ergibt sich die Berechnung des Entladewiderstands zu
+=
+
+1,4V − 0,7V − 0,5V
+0,15A
+
+Das ergibt nur ca. 1,3 Ω, was ich auch nicht
+parat hatte. Deshalb habe ich tatsächlich
+einen etwas größeren Widerstand verwendet.
+
+Möchte man nun Laden oder Entladen, wird
+nur der Zustand einer der beiden Brücken
+verändert. Die entsprechende Diode gibt
+
+
+
+Erhaltungsladung
+In allen Programmen wurde die Erhaltungsladung ans Ende gestellt. Dies ist in Abb. 5
+unten rechts zu sehen. Der Ausgang O1 ist
+mit der Intensität 1 beaufschlagt.
+Wie im vorangegangenen Abschnitt erläutert, kann die Endstufe nur V+ oder GND
+liefern. Und das immer voll durchgeschaltet. So ist das auch hier. fischertechnik hat
+sich der Impulsbreitensteuerung bedient.
+Dies kann man sehr gut an den beiden folgenden Oszillogrammen sehen (Abb. 7, 8).
+Es wird die Akkuspannung gegen GND dargestellt.
+Die beiden Oszillogramme sind mit unterschiedlichen Akkus gemacht worden. Alle
+anderen Einstellungen sind gleich geblieben. Die größeren Amplitudensprünge in
+
+nimmt die Ladung nicht mehr so gut auf.
+Dadurch entstehen die größeren Amplituden.
+Auf den Abbildungen ist unten rechts die
+Arbeitsfrequenz zu sehen. Die Endstufen
+werden mit 210 Hz angesteuert; ein guter
+Wert, um die ft-Motoren auf langsamer
+Fahrt in der Drehzahl regeln zu können.
+Übrigens wurden die Oszillogramme bei
+der Endstufeneinstellung vier gemacht.
+Dies hat sich aber als Erhaltungsladung
+nicht durchgesetzt. Wird während der Erhaltungsladung der Akku entnommen, wird
+das Fehlen des Akkus am Spannungsanstieg
+erkannt (Abb. 5) und die Software beginnt
+von neuem, die Taster für die Ladeart
+abzufragen.
+
+
+
+Elektronik
+
+Weitere Funktionen
+Wird an einem der Eingänge noch ein
+DCF77-Modul [1, 2] angeschlossen, wird
+der Berechnung eine präzise Zeitinformation zugeführt. Daraus ließen sich die Ladeund die Entladekapazität (mAh) eines Akkus ermitteln. Der Wirkungsgrad des Akkus
+wäre damit bestimmt.
+
+
+Da man aber auch die Spannung des Akkus
+zur Verfügung hat, wäre ein weiterer
+Schritt, den Energiehaushalt (mWh) eines
+Akkus zu messen. Die Software ist somit
+noch nicht ausgereizt.
+
+Referenzen
+
+
+[1]
+
+Dirk Fox, Dirk Ottensmeyer: Bau
+einer ft-Funkuhr. ft:pedia 3/2012,
+S. 4-10.
+
+[2]
+
+Gerhard Birkenstock: Uhrwerk mit
+Z80 und Z100. ft:pedia 4/2014,
+S. 20-24.
+
+[3]
+
+Stefan Brunner: Die Ein- und Ausgänge des TX Controllers. 4/2012, S. 28-31.
+
+
+

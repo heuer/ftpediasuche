@@ -1,0 +1,67 @@
+
+
+Editorial
+
+We Made It
+Dirk Fox, Stefan Falk
+Pünktlich zum 20. Geburtstag des Grundbausteins machte fischertechnik 1985 einen
+großen, zukunftsweisenden und damals
+sicherlich gewagten Schritt: Mit Interfaces
+für den Commodore VC20/C64, den Apple
+II, die Schneider CPC-Familie und den
+Acorn öffnete sich das Baukastensystem
+der Welt der Mikrocontroller. Damit war
+fischertechnik anderem Technik-„Spielzeug“ Längen voraus und legte den Grundstein für die spätere „Controller-Familie“
+und die grafische Programmiersprache
+ROBO Pro, deren Vorläufer als „Lucky
+Logic“ 1991 das Licht der Welt erblickte.
+
+zu einer Open-Source-Lösung ist immer
+schwieriger zu rechtfertigen, denn dank 3DDruck verliert auch das fischertechnikGehäuse an Exklusivität.
+
+In den seitdem vergangenen über 30 Jahren
+hat sich die Informationstechnik rapide entwickelt. So steckt in den heutigen Controllern weit mehr Rechenleistung als damals
+im Host-PC. Mikrocontrollersteuerungen
+sind Standard in der Industrie, es haben sich
+einheitliche Schnittstellen und Protokolle
+(wie I²C und SPI) für die Anbindung von
+Sensoren etabliert, und Mikrocontroller wie
+der Arduino haben Millionen Menschen
+einen niedrigschwelligen Zugang zur Steuerungstechnik eröffnet.
+
+∂ Blockly ermöglicht die Programmierung
+des TXT über eine Webschnittstelle im
+Stil von Scratch,
+
+Mit der Do-it-Yourself- oder „Maker“-Bewegung haben sich in den vergangenen
+Jahren aber auch die Rahmenbedingungen
+geändert: Open-Source-Projekte bieten
+transparente und günstige „Community“Lösungen, die nicht nur bei der Aktualität,
+sondern oft auch bei Qualität und Service
+im Vergleich mit „Closed-Source“-Angeboten die Nase vorn haben. Auch fischertechnik kann da immer schlechter mithalten: Die Controller werden schon heute
+extern eingekauft und der Preisunterschied
+
+Zu welchen Leistungen eine hoch motivierte, begeisterte und vernetzte Community im
+Stande ist, hat die ftc schon bei der Entwicklung der Community-Firmware für den
+TXT und den TX-Pi gezeigt. Inzwischen ist
+daraus eine ganze Familie an Entwicklungen geworden:
+∂ mit startIDE kann der TXT über den
+Touch-Screen programmiert werden,
+
+∂ Plug-and-Play-Adapter wie der ftExtender kompensieren die Schwäche des
+TXT bei der I²C-Anbindung,
+∂ der ftDuino verheiratet die fischertechnik- mit der Arduino-Welt – und damit
+zugleich mit einem riesigen Repertoire
+an Software, Sprachen und Sensoren,
+∂ und der ftPwrDrive-Controller erweitert
+die Controller um eine Ansteuerung von
+Schritt- und Servomotoren.
+Eine große Chance für fischertechnik: Die
+mit dem eigenen Bedarf vertraute FanCommunity übernimmt das Markt- und
+Entwicklungsrisiko – und jedes erfolgreiche
+Tool wertet die bunten Klötzchen auf.
+Schöne Weihnachten, Euer ft:pedia-Team
+P.S.: Am einfachsten erreicht ihr uns unter
+ftpedia@ftcommunity.de oder über die Rubrik ft:pedia im Forum der ft-Community.
+
+

@@ -1,0 +1,76 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+fischertechnik-Nutprofile selbst herstellen (2)
+Andreas Tacke
+In meinem Beitrag in der ft:pedia 1/2016 [1] habe ich vorgestellt, wie sich eine fischertechnikNut mittels einer Fräsmaschine recht einfach herstellen lässt. Dort ist die „runde“ Nut
+beschrieben. Heute zeige ich, wie man eine abgeflachte Nut herstellen kann…
+Wie wir alle wissen, gibt es bei fischertechnik zwei verschiedene Nutprofile. Die
+Standard-Nut ist so beschaffen, dass sich
+dort auch eine Achse durchführen lässt. Es
+gibt aber auch noch eine abgeflachte Nut,
+die dort zum Einsatz kommt, wo nicht
+genug Platz für die runde Nut vorhanden ist.
+
+So erhielt ich einen Formfräser für die abgeflachte Nut (Abb. 2).
+
+
+Zum Herstellen der Nuten werden auch hier
+folgende Teile benötigt:
+links die Standard-Nut, rechts abgeflacht
+
+Nun stellt sich wieder ein Problem: Woher
+bekommt man den passenden Fräser?
+Meine Anfragen bei einigen Fräserherstellern waren nicht erfolgreich. Also galt
+wieder: Selbst ist der Mann…
+
+∂ eine Fräsmaschine,
+∂ ein 3 mm-Schaftfräser und
+∂ der abgeflachte 4 mm-Kugelfräser.
+
+Für die runde Nut verwende ich, wie schon
+in [1] beschrieben, einen Kugelfräser mit
+4 mm Kopfdurchmesser. Das funktioniert
+mit diesem Werkzeug recht gut.
+Um nun die abgeflachte Nut herzustellen
+habe ich so einen Kugelfräser auf einer
+Werkzeugschleifmaschine gekürzt. Dazu
+wurde der Kopf um 1,3 mm abgeschliffen.
+
+
+
+
+
+Im ersten Schritt wird – ähnlich wie bei der
+Standard-Nut – eine 3 mm-Nut 2,8 mm tief
+gefräst (Abb. 4).
+
+Für den Powermotor habe ich mir einen
+Adapter gebaut, bei dem ich eben diese Nut
+brauchte (Abb. 7).
+
+
+Im zweiten Schritt wird nun mit dem
+Sonderfräser das Nutprofil gefräst. Die
+Tiefe beträgt hierbei ebenfalls 2,8 mm.
+
+Damit habe ich aufgelöst, wie ich das flache
+Nutprofil herstelle. Hier zeigt sich wieder,
+dass ein selbst gemachtes Werkzeug oft am
+besten funktioniert. Wer also die technischen Möglichkeiten hat, kann sich nun
+seine eigenen Bauteile herstellen…
+
+Referenzen
+[1]
+
+Nutprofil fräsen, 2,8 mm tief
+
+So entsteht das abgeflachte fischertechnikNutprofil, das sich mit allen fischertechnikTeilen kombinieren lässt.
+
+
+
+Andreas Tacke: fischertechnikNutprofile selbst herstellen. 1/2016, S. 8-9.
+
+

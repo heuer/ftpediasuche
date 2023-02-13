@@ -1,0 +1,517 @@
+
+Computing
+
+Computing
+
+fischertechnik-Roboter mit Arduino (Teil 1):
+Smartphone-Steuerung über BLE
+Dirk Fox
+In unserem Buch „fischertechnik-Roboter mit Arduino“ [1] stellen Thomas Püttmann und ich
+fünf Roboter vor, die wir mit zahlreichen Funktionen und Arduino-Steuerungen versehen
+haben. Einige unserer Modellvarianten haben – aus unterschiedlichen Gründen – nicht den
+Weg ins Buch geschafft: Sei es, weil uns die Idee zu spät kam, weil die Realisierung nur einen
+Teil der Leserinnen und Leser interessieren dürfte oder schlicht, weil die Aufnahme ins Buch
+dazu geführt hätte, dass wir das (ohnehin gedehnte) Seitenlimit des Verlags „gesprengt“
+hätten. Da inzwischen viele Leser der ft:pedia auch Leser unseres Buchs sind, möchten wir in
+loser Folge einige dieser Modellvarianten vorstellen. Die Vorschläge eignen sich auch – ganz
+unabhängig von unserem Buch – für eigene Modellideen.
+
+Smartphone-Steuerung
+Im vergangenen Jahr gab es in Deutschland
+etwa 58 Millionen Smartphone-Besitzer.
+Rund 70% der Deutschen tragen also einen
+Kleinstcomputer in der Tasche herum, der
+nicht nur eine Tastatur, einen Bildschirm,
+mehrere Kameras sowie Neigungs-, Beschleunigungs-, Lage-, Kompass-, Helligkeits-, Luftdruck- und GPS-Sensoren
+enthält, sondern auch Zugriff auf zahlreiche
+Dienste wie z. B. E-Mail, Kartendienste
+oder eine Spracherkennung hat. Da liegt es
+doch nahe, das Smartphone als „externe
+Erweiterung“ unseren Arduino-Robotern
+zugänglich zu machen, anstatt diesen mit
+weiteren Sensoren auszustatten – zumal die
+meisten Sensoren des Smartphones nur selten sinnvoll genutzt werden.
+So können wir das Smartphone z. B. als
+Fernsteuerung für die Roboter nutzen,
+sowohl über einen „virtuellen Joystick“ auf
+dem Display als auch über eine Bewegungssteuerung, die die Daten der Beschleunigungssensoren auswertet.
+Mit der Spracherkennung des Smartphones
+können wir Steuerungskommandos an den
+
+Roboter übertragen oder Nachrichten austauschen. Schließlich könnte das Smartphone auch Statusdaten von unseren Robotern empfangen, auswerten und auf dem
+Display anzeigen. Wenn wir es auf einem
+der Fahr-Roboter montieren, können die
+Sensor-Werte (GPS, Kompass) auch direkt
+genutzt werden, z. B. um eine vorgegebene
+Position anzufahren.
+In diesem ersten Beitrag der Reihe stellen
+wir vor, wie wir das Smartphone mit dem
+Arduino Verbindung aufnehmen lassen.
+Anschließend nutzen wir es als Fernsteuerung für unseren „Flitzer“.
+
+BLE-Modul
+Für die Übertragung der Daten zwischen
+Smartphone und Arduino benötigen wir
+eine Datenverbindung und ein Protokoll. Da
+die Datenübertragung bevorzugt kabellos
+erfolgen und auch dann noch funktionieren
+soll, wenn kein WLAN-Hotspot oder
+Mobilfunknetz erreichbar ist, und die
+Verbindung sowohl mit iOS- als auch mit
+Android-Smartphones möglich sein soll, ist
+eine BLE-Verbindung (Bluetooth Low
+Energy) die geeignetste Lösung.
+
+
+
+BLE ist eine seit 2009 zum Bluetooth-Standard (ab Version 4.0) zählende Erweiterung, die für möglichst geringen Energieverbrauch optimiert ist. Verbindungen zwischen BLE-Geräten sind auch ohne Pairing,
+d. h. ohne initiales Passwort möglich. Die
+Reichweite liegt bei ungefähr 10-12 Metern, die Datenübertragungsrate bei 1
+Mbit/s.
+Damit der Arduino sich via BLE mit dem
+Smartphone verbinden kann, müssen wir
+ihn mit einem BLE-Modul ausstatten. Sehr
+verbreitet (und gut geeignet) ist das Modul
+HM-10, das den Bluetooth-Standard 4.1
+erfüllt (Abb. 1). Es ist für rund 10 € im
+Elektronikhandel erhältlich.
+
+Die beiden äußeren Pins (D8: STATE, D13:
+EN) nutzen wir zunächst nicht.
+An unserem Flitzer-Modell müssen wir
+dafür den Helligkeitssensor von Pin D8 auf
+Pin D7 verschieben.
+Wie man der Aufschrift des Moduls entnehmen kann, arbeiten RxD und TxD mit 3,3V-Logik. Daher sollte man eigentlich einen
+Level-Shifter dazwischen schalten, da der
+Arduino 5-V-Logik verwendet. Es funktioniert aber auch so. Wer sicher gehen will,
+dass das Modul auch im Dauereinsatz
+keinen Schaden nimmt, sollte jedoch einen
+Level-Shifter verwenden.
+Für unseren Arduino benötigen wir nicht
+viel: Da über die beiden Pins D0 und D1 die
+Verbindung zum seriellen Monitor erfolgt,
+binden wir die integrierte Arduino-Bibliothek „SoftwareSerial“ ein, die es uns erlaubt, über zwei beliebige Pins eine weitere
+serielle Schnittstelle bereit zu stellen:
+#include <SoftwareSerial.h>
+#define BTBaud 9600 // HM-10
+#define RX 9
+#define TX 10
+SoftwareSerial BT(TX, RX);
+
+
+Die Übermittlung von Daten und Kommandos vom Arduino an das Modul (und umgekehrt) erfolgt über eine serielle Verbindung
+mit voreingestellten 9.600 Baud (8N1).
+Mit den sechs Pins können wir das Modul
+direkt in die I/O-Ports D8 bis D13 des
+Arduino stecken, mit der folgenden Zuordnung (siehe die Beschriftung auf der Rückseite des Moduls und Abb. 2):
+D9: RxD
+D10: TxD
+D11: GND
+D12: VCC
+
+
+void setup() {
+BT.begin(BTBaud);
+delay(100);
+}
+
+Die „Vertauschung“ der Anschlüsse bei der
+Verbindung von RX und TX des Senders
+mit dem Empfänger – der Sende-Pin des
+HM-10 muss mit dem Empfangs-Pin des
+Arduino verbunden werden und umgekehrt
+– nehmen wir im Sketch bei der Instanziierung SoftwareSerial BT(TX, RX); vor.
+Mit dem einfachen Sketch in Listing 1 kann
+nun die Kommunikation mit dem HM-10Modul über den seriellen Monitor getestet
+werden. Das gelingt auch ohne BLE-Verbindung über die noch aus Modem-Zeiten
+bekannten AT-Befehle, mit denen das
+Modul konfiguriert wird.
+
+
+Computing
+
+/* Bluetooth-Testprogramm
+* (AT-Kommandos) /
+#include <SoftwareSerial.h>
+#define Baud 115200 // Monitor
+#define BTBaud 9600 // HM-10
+#define RX 9
+#define TX 10
+#define GND 11
+#define VCC 12
+
+void loop() {
+while (BT.available()) {
+c = BT.read();
+Serial.print(c);
+}
+while (Serial.available()) {
+c = Serial.read();
+Serial.print(c);
+BT.print(c);
+}
+delay(100);
+}
+
+SoftwareSerial BT(TX, RX);
+
+Listing 1: Bluetooth-Testprogramm (HM-10)
+void setup() {
+Serial.begin(Baud);
+pinMode(GND, OUTPUT);
+pinMode(VCC, OUTPUT);
+digitalWrite(GND, LOW);
+digitalWrite(VCC, HIGH);
+BT.begin(BTBaud);
+Serial.println("Bluetooth
+available.");
+}
+char c;
+
+Jetzt können wir unser BLE-Modul konfigurieren. Die über die Tastatur am seriellen Monitor eingegebenen AT-Kommandos
+werden an das Modul übertragen und die
+Antworten des Moduls auf dem Monitor
+ausgegeben. Der „AT-Modus“ muss nicht
+eingestellt werden: Wenn das Modul mit
+keinem anderen BLE-Gerät verbunden ist,
+reagiert es automatisch auf AT-Befehle.
+
+
+
+
+Wir öffnen dazu den seriellen Monitor mit
+einer Baudrate von 115200 und der Formateinstellung „Neue Zeile“. Dann können
+wir uns mit dem Befehl „AT+HELP?“ alle
+vom Modul unterstützten AT-Befehle auflisten lassen. Sofern das HM-10-Modul ein
+Clone ist, weicht die Befehlsliste möglicherweise von der im Datenblatt ab [2].
+Die wichtigsten, in Tabelle 1 angeführten
+AT-Befehle sollten jedoch auch alle
+„Kopien“ des Moduls kennen und darauf
+reagieren.
+
+Mit „AT+POWE?“ können wir uns die
+Sendeleistung anzeigen lassen. Voreingestellt steht sie auf 2 (= 0dbm); der maximale
+Wert (und damit die maximale Reichweite)
+ist 3 (= 6dbm) und wird mit „AT+POWE3“
+eingestellt.
+
+AT-Kommando
+
+Bedeutung
+
+Die Übertragungsgeschwindigkeit der seriellen Verbindung können wir mit dem
+Kommando „AT+BAUD4“ auf (maximale)
+115200 Baud (bit/s) erhöhen. Die Voreinstellung sind 9600 Baud, die allerdings für
+die kurzen Kommandos unserer Fernsteuerung vollauf genügen.
+
+AT+RESET
+
+Software Reboot
+
+Smartphone-Verbindung
+
+AT+VERSION
+
+Firmware-, HCI-,
+Bluetooth-, LMPVersion
+
+AT+HELP
+
+Liste aller ATBefehle
+
+Wir können jetzt mit einer einfachen Bluetooth-Terminal-App testen, ob der Datenaustausch zwischen dem Smartphone und
+dem Modul funktioniert.
+
+AT+NAME
+
+Name des Moduls
+
+AT+PIN
+
+Sechsstellige PIN
+
+AT+ADDR
+
+MAC-Adresse
+
+AT+DEFAULT
+
+Rücksetzung auf
+Werkseinstellungen
+
+AT+BAUD
+
+Einstellung Übertragungsgeschwindigkeit
+
+AT+ROLE
+
+Master/Slave
+
+AT+START
+
+Sofortiger Start
+
+AT+SLEEP
+
+Sleep Mode
+
+AT+POWE
+Sendeleistung
+Tab. 1: Wichtigste AT-Kommandos
+
+Schließt man an einen AT-Befehl mit einem
+„?“ ab (z. B. „AT+NAME“), dann antwortet das HM-10-Modul mit dem (vor)eingestellten Wert. Hängt man stattdessen an den
+AT-Befehl einen Wert an (wie beispielsweise „AT+NAMEFlitzer“), dann wird, sofern der AT-Befehl Parameter zulässt,
+dieser Wert eingestellt (hier: der Name des
+Moduls in „Flitzer“ geändert).
+
+
+Eine solche (kostenlose) App ist „BLE Terminal“, die es sowohl für iOS als auch für
+Android gibt. Beim Start der App zeigt sie
+alle im unmittelbaren Umfeld gefundenen
+Geräte mit aktivem BLE und deren Signalstärke an.
+Das HM-10-Modul lässt sich leicht am
+Namen erkennen. Das Original trägt nach
+Werkseinstellung den Namen „HMSoft“,
+Clones melden sich ggf. mit einem anderen
+Namen. Den Namen kann man sich zuvor
+wie oben beschrieben anzeigen lassen (oder
+ihn ändern). Klickt man nun in der App auf
+den Namen des Moduls, wird (ohne
+Pairing) eine Verbindung hergestellt.
+Ab jetzt werden alle Eingaben im seriellen
+Monitor an die App übertragen (und dort in
+einem Fenster angezeigt) und alle Eingaben
+in der App (Funktion „Send ASCII“) auf
+dem seriellen Monitor der Arduino-IDE
+ausgegeben. Wenn das funktioniert, können
+wir einen Schritt weiter gehen.
+
+
+Computing
+
+Steuerungs-App
+Jetzt fehlt uns noch eine App, die nicht nur
+Text-Eingaben schicken und empfangen
+kann, sondern Sensorwerte ausliest, das
+Drücken von Touch-Tasten und den Wert
+von Schiebereglern überträgt – oder sogar
+einen virtuellen Joystick realisiert, mit dessen Auslenkungswerten wir unseren Buggy,
+Flitzer oder Greifer fernsteuern können.
+Um das zu verwirklichen gibt es grundsätzlich drei Möglichkeiten:
+ Entwicklung einer eigenen App,
+ Nutzung einer „Interpreter-App“ wie des
+MIT App Inventor, in dem kleine, in
+einer Blockly-ähnlichen Sprache entwickelte Anwendungen ausgeführt werden
+können, oder
+ Nutzung einer bereits existierenden
+BLE-App.
+Die erste Möglichkeit klammern wir erstmal aus – das ist die aufwändigste Variante.
+Die zweite Möglichkeit ist etwas für einen
+eigenständigen ft:pedia-Beitrag – damit
+eröffnen sich fantastische Möglichkeiten,
+aber die Lernkurve ist etwas länger.
+Die dritte Möglichkeit erlaubt uns, uns bei
+der Implementierung auf den Arduino zu
+konzentrieren – sofern wir eine App finden,
+die unseren Anforderungen genügt. Doch
+genau so eine App gibt es tatsächlich: Sie
+heißt „ArduinoBlue“ und ist für iOS und
+Android verfügbar. Sie wurde von Jaehyeon
+An und Professor Anurag Purwar am Computer-Aided Design and Innovation Laboratory der Stony Brook University in New
+York entwickelt [3]. Die Funktionen der
+App bieten exakt das, was wir uns für unsere BLE-Fernsteuerung wünschen: Mit der
+App können wir ein Steuerungs-Feld aus
+Touch-Tasten (bis zu 200), Schiebereglern
+(ebenfalls maximal 200) und einem „virtuellen Joystick“ (Abb. 3, 4) gestalten. Sie
+überträgt anschließend die Werte der Regler
+und des Joysticks bei jeder Änderung via
+BLE an einen verbundenen Arduino.
+
+
+
+
+Den Joystick können wir sogar an der Stelle
+auf dem Display platzieren, an der wir es
+zuert berühren, in dem wir unter Settings die
+Option „Dynamic Joystick“ aktiveren.
+Tasten und Slider werden über eine Nummer identifiziert, die bei der Konfiguration
+der App festgelegt wird, sodass die an den
+Arduino übermittelten Werte immer eindeutig zugeordnet werden können.
+Und noch ein „Schmankerl“ bietet die App:
+eine Neigungssteuerung. Dazu muss man in
+der Konfiguration (Settings) die Funktion
+„Tilt Control“ aktivieren. Die App stellt
+daraufhin den Bildschirm auf Querformat
+um, und man kann über den Menupunkt
+„Drive“ einen horizontalen und einen vertikalen Joystick durch Bewegen des Smartphones steuern (Abb. 5).
+
+Wurde kein Knopf gedrückt und kein Slider
+verändert, geben die ersten beiden Methoden den Wert „-1“ zurück.
+
+Fernsteuerung für den „Flitzer“
+Als erste einfache Steuerung für unseren
+Flitzer konfigurieren wir in unserer
+ArduinoBlue-App nun eine Steuerungsoberfläche mit einem Knopf zum Ein- und
+Ausschalten des Abblendlichts (ID 1) und
+einem Joystick für die Fahrzeugsteuerung
+(Abb. 6).
+
+
+Zur Verarbeitung der via BLE übertragenen
+Daten der „ArduinoBlue“-App in unserem
+Arduino-Sketch verwenden wir die auf
+Github bereitgestellte ArduinoBlue-Library
+[4], die wir herunterladen und in die
+Arduino-IDE integrieren.
+Mit der Einbindung des Header-Files
+#include <ArduinoBlue.h>
+
+hat unser Sketch nun Zugriff auf die folgenden Methoden:
+int getButton(); // Gedr. Knopf-Id.
+int getSliderId(); // Schieberegler-ID
+int getSliderVal(); // Wert 0-200
+int getThrottle(); // Wert 0-99
+int getSteering(); // Wert 0-99
+void sendText(String msg);
+String getText(); // Text an Arduino
+
+
+
+Die Auswertung der Joystick-Werte ist bei
+unserem Flitzer sehr einfach. Die Werte des
+„Gaspedals“ („throttle“), die der Joystick
+bzw. die vertikale Neigung des Smartphones zurückliefert, können wir leicht in
+eine Motorgeschwindigkeit umrechnen:
+motorspeed = map(abs(throttle), 0, 50,
+0, MaxSpeed);
+
+
+Computing
+
+/* ArduinoBlue-Fernsteuerung für den „Flitzer“ */
+#include <Servo.h>
+#include <Adafruit_MotorShield.h>
+#include <SoftwareSerial.h>
+#include <ArduinoBlue.h>
+#define BTBaud 9600
+#define RX 9
+#define TX 10
+#define GND 11
+#define Vcc 12
+#define Start A0
+#define ServoPin 9
+#define On 255
+#define Off 0
+#define MaxSpeed 255 // Höchstgeschwindigkeit (PWM)
+#define MaxSteer 35 // maximaler Lenkeinschlag (in Grad)
+Adafruit_MotorShield MShield = Adafruit_MotorShield(0x60);
+Adafruit_DCMotor *Motor = MShield.getMotor(1); // Antriebsmotor
+Adafruit_DCMotor *Light = MShield.getMotor(2); // Front- und Rückscheinwerfer
+Servo ServoMotor; // Lenkmotor
+SoftwareSerial BT(TX, RX);
+ArduinoBlue phone(BT);
+void setup() {
+pinMode(Start, INPUT_PULLUP);
+pinMode(GND, OUTPUT);
+pinMode(Vcc, OUTPUT);
+digitalWrite(GND, LOW); // Stromversorgung BLE Modul
+digitalWrite(Vcc, HIGH);
+BT.begin(BTBaud); // BLE-Modul starten
+delay(100);
+MShield.begin();
+ServoMotor.attach(ServoPin);
+Wire.setClock(400000); // Umstellung der I²C-Frequenz auf 400 kHz
+Light->setSpeed(Off);
+Light->run(FORWARD);
+while (digitalRead(Start)); // Tastendruck abwarten (Push = Low)
+}
+boolean LightOn = false;
+void loop() {
+int motorspeed, throttle = phone.getThrottle() - 49;
+int button = phone.getButton(), steerangle, steering = phone.getSteering() - 49;
+motorspeed = map(abs(throttle), 0, 50, 0, MaxSpeed); // Geschwindigkeit
+Motor->setSpeed(motorspeed);
+if (throttle >= 0) Motor->run(FORWARD); // Fahrtrichtung
+else if (throttle < 0) Motor->run(BACKWARD);
+steerangle = map(abs(steering), 0, 50, 0, MaxSteer); // Lenkung einschlagen
+if (steering > 5) ServoMotor.write(90+steerangle); // Lenkeinschlag rechts
+else if (steering < -5) ServoMotor.write(90-steerangle); // Lenkeinschlag links
+else ServoMotor.write(90); // Lenkeinschlag geradeaus
+if (button == 1) { // Abblendlicht
+LightOn = !LightOn;
+if (LightOn) Light->setSpeed(On); // Abblendlicht ein
+else Light->setSpeed(Off); // Abblendlicht aus
+}
+}
+
+Listing 1: Smartphone-Steuerung für den Flitzer
+
+
+
+Das Vorzeichen des throttle-Werts legt die
+Fahrtrichtung fest (Vorwärts- oder Rückwärtsfahrt). Ähnlich halten wir es mit dem
+Wert des „Steuers“ („steering“), die uns der
+Joystick oder die horizontale Neigung des
+Smartphones liefern:
+steerangle = map(abs(steering), 0, 50,
+0, MaxSteer);
+
+Wurde Knopf 1 gedrückt, dann schalten wir
+das Abblendlicht an bzw. aus.
+Listing 1 lässt sich nach Belieben erweitern
+– z. B. um einen Knopf für die Einparkhilfe,
+einen weiteren für den Warnblinker oder die
+Hupe, sowie um eine Automatik für das
+Abblendlicht, das Rückwärtsfahr- und das
+Bremslicht (Abb. 7).
+Auf der Webseite zum Buch [1] kann unter
+„Modellvarianten“ ein Sketch heruntergeladen werden, den wir bereits um diese
+Funktionen ergänzt haben.
+
+Ausblick
+Damit sind die Möglichkeiten aber noch
+nicht ausgereizt. So könnten wir den Flitzer
+Status-Informationen sammeln lassen, z. B.
+über seine aktuelle und durchschnittliche
+Geschwindigkeit, die zurückgelegte Wegstrecke, die Länge einer gefundenen Parklücke und vieles mehr. Über entsprechende
+Textkommandos könnte sich die App die
+Daten an das Smartphone schicken lassen;
+dort werden sie automatisch in einem Fenster angezeigt.
+Auf diese Weise lässt sich natürlich auch
+jedes andere fischertechnik-Modell per
+Smartphone steuern. Die vorgestellte BLEFernsteuerung mit der ArduinoBlue-App
+und dem HM-10-Modul lässt sich übrigens
+auch mit dem ftDuino nutzen. Till Harbaum
+hat einen entsprechenden Abschnitt in
+seinem ftDuino-Manual ergänzt.
+Viel Vergnügen mit der Steuerung eurer
+Modelle via Smartphone!
+
+
+
+Referenzen
+[1]
+
+Dirk Fox, Thomas Püttmann:
+fischertechnik-Roboter mit Arduino.
+dpunkt-Verlag, 2020.
+
+[2]
+
+Jinan Huamao Technology Co., Ltd.:
+Bluetooth 4.0 BLE module.
+Datasheet, V606/701, 01/2019.
+
+[3]
+
+Jaehyeon An, Anurag Purwar:
+ArduinoBlue. Tutorial, Stony Brook
+University.
+
+[4]
+
+Jaehyeon An, Anurag Purwar:
+ArduinoBlue Library. github.com.
+
+

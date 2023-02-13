@@ -1,0 +1,183 @@
+
+
+Elektromechanik
+
+Anwendungen für Magneten (2):
+Rotationstransformator
+Andreas Gail
+Zu einer Zeit, zu der man bewegte Videobilder noch auf Tonbandkassetten aufzeichnete, waren
+Rotationstransformatoren in privaten Haushalten sehr gebräuchlich: Sie waren in den
+Kopftrommeln von Videorecordern verbaut. Auch wenn genau diese Anwendung heute keine
+Bedeutung mehr hat, haben Rotationstransformatoren durchaus das Potential, für spätere
+Anwendungen genau die passende Problemlösung zu werden.
+
+Die Kopftrommel eines
+Videorecorders
+Bei den damaligen Videorecordern wurde
+das Magnetband an einer schnell rotierenden Trommel, der Kopftrommel, vorbeigeführt. Damit erfolgte die Aufzeichnung des
+bewegten Videobildes auf das Magnetband.
+Genauso wurde auch das Auslesen des
+bereits beschriebenen Bandes durchgeführt.
+Die Übertragung der Videosignale von der
+Elektronik des Videorecorders zur schnell
+rotierenden Kopftrommel bzw. umgekehrt
+wurde dabei von Rotationstransformatoren
+übernommen [1].
+Kugellager
+für Achse
+
+in auseinandergenommener Form. Wird die
+Achse in die Wellendurchführung des
+Kugellagers eingesteckt, befinden sich
+Rotor und Stator genau übereinander, d. h.
+die Spulen des Rotors liegen genau über den
+Spulen des Stators. In Abb. 2 sind die
+einzelnen Spulen gut erkennbar. Insgesamt
+verfügt der abgebildete Rotationstransformator über neun Spulenpaare, die übereinander rotieren können. Für eine gute
+Signalübertragung ist es dabei wichtig, dass
+die Spulen beider Seiten einen minimalen
+Abstand zueinander haben.
+
+Achse
+
+Spulen
+Kopftrommel eines Videorecorders:
+Links die fest stehende Spule (Stator),
+rechts die rotierende (Rotor)
+
+
+
+
+Elektromechanik
+
+Ein erster Prinziptest
+Zu den klassischen fischertechnik Bauteilen
+gehörten Elektromagnete:
+
+der Spannung, die auf der Sekundärspule
+induziert wird. Dieser Aufbau entspricht
+einem Trenntransformator [3].
+
+Herstellung eines passenden
+Magnetpaares
+
+
+Die Elektromagneten von Abb. 3 sind zum
+Aufbau eines Rotationstransformators
+ungeeignet. Doch auch hier lässt sich
+fischertechnik einfach erweitern, wie die
+folgende Abbildung zeigt:
+
+Mit diesen Elektromagneten können wir
+den ersten Prinziptest machen. Der Aufbau
+ist ähnlich der bereits früher gezeigten
+Induktionssensor-Messstrecke [2]. Der
+Unterschied ist, dass diesmal der induzierte
+Strom nicht gemessen, sondern mithilfe
+einer LED direkt gezeigt wird. Mit diesem
+Aufbau kann man selbst die obige
+Behauptung überprüfen, dass der Abstand
+der beiden Magneten möglichst gering sein
+sollte, wenn man maximalen Energieübergang erreichen möchte.
+Primärspule
+
+fischertechnik
+
+Verbaut wurden Magneten mit 20 N Haltekraft, 12 V DC, 2,5 W (Conrad Art.-Nr.
+502290). Bei der Verklebung ist die exakte
+Positionierung wichtig, damit später alles
+rund läuft. Das erreicht dieser Hilfsaufbau:
+Sekundärspule
+kleiner der Abstand der Elektromagnete
+zueinander ist. Links: Große Helligkeit bei
+geringem Abstand, rechts geringere Helligkeit
+bei größerem Abstand
+
+Als Wechselstromquelle wird ein alter
+Transformator oder der Robo(tics) TX(T)
+Controller verwendet [2]. Dieser Versuch
+funktioniert nur mit Wechselspannung. Bei
+den beiden baugleichen Magneten wird eine
+gleiche Anzahl an Spulenwindungen unterstellt. Deshalb entspricht die angelegte
+Wechselspannung auf der Primärspule auch
+
+
+
+
+
+Aufbau des Rotationstransformators
+
+Rotor-Magnet
+
+Der Aufbau geschieht ähnlich Abb. 4,
+allerdings mit den Magneten der Abb. 5.
+Wenn die beiden Magneten zueinander
+drehbar gelagert sind, ist der entscheidende
+Teil fertig:
+Rotor-Magnet
+
+Stator-Magnet
+Rotationstransformator ist grün markiert
+
+Die demontierte Detailansicht des Rotationstransformators ist in Abb. 8 und 9 zu
+sehen. Hier sind die Magneten konzentrisch
+aufgebaut. Entsprechend des Zustands der
+Wechselspannung wird mittig der Nordpol
+des Magneten entstehen und am Rand der
+Südpol oder eben umgekehrt (im steten
+Wechsel). In Abb. 8 sind die Pole blau und
+gelb dargestellt.
+
+Stator-Magnet
+
+
+Der Motor dreht die obere Plattform mit
+dem Rotor-Magneten und der LED.
+Nochmal erwähnt sei, dass der untere
+Magnet (der Stator) mit Wechselspannung
+versorgt wird – sonst kann der Transformator nicht wirken. Übrigens ist die
+Energieübertragung umso besser, je höher
+die Frequenz der Wechselspannung ist.
+
+Quellen
+[1]
+
+Wikipedia: Rotationstransformator.
+
+[2]
+
+Gail, Andreas: Anwendungen für
+Magneten (1): Induktionssensor.
+ft:pedia 2/2015, S. 40-43.
+
+[3]
+
+Wikipedia: Trenntransformator.
+
+[4]
+
+Gail, Andreas: fischertechnik:
+Rotationstransformator. YouTubeVideo, 2016.
+
+Ausgang
+Wechselspannung
+aus RotorMagnet
+
+Gleichspannung
+für Antrieb
+
+Elektromechanik
+
+LED
+
+Eingang
+Wechselspannung
+für StatorMagnet
+
+ft-Trafo mot. 4,
+liefert Gleich- und
+Wechselspannung
+
+
+
+

@@ -1,0 +1,61 @@
+
+
+Editorial
+
+Back to School
+Dirk Fox, Stefan Falk
+In den vergangenen Jahren konnte man
+gelegentlich glauben, fischertechnik habe
+seine „DNA“ verloren. Erst die gefeierten
+neuen Design-Bauteile, dann die Fokussierung auf Kugelbahn-Kästen und schließlich
+die Integration von Fremdmodellen in den
+aktuellen Junior-Kästen – alles möglicherweise sinnvolle Maßnahmen, um neue Kundengruppen im Spielwarenmarkt zu gewinnen: Aber was hat das noch mit dem zu tun,
+was wir mit diesen einzigartigen TechnikKonstruktionskästen verbinden?
+Dabei konnte man glatt übersehen, dass sich
+gleichzeitig, wenn auch eher still und leise,
+eine Rückkehr zu den Wurzeln von fischertechnik und den wirklichen Alleinstellungsmerkmalen anbahnt. So wurden Elemente
+in den Kugelbahn-Kästen stückchenweise
+technischer, und in diesem Jahr kamen der
+Kettenreaktionskasten „Funny Machines“
+und ein Hydraulik-Baukasten auf den
+Markt. Schließlich nahm fischertechnik mit
+der Öffnung des Computing-Bereichs für
+den Calliope mini und den micro:bit Tuchfühlung mit der Maker-Szene auf.
+Vor allem aber: fischertechnik drängt in die
+Schule. Dahin, wo die Baukästen in den
+70er Jahren des vergangenen Jahrhunderts
+schonmal waren. Und wo sie (auch) hingehören. Dabei unternimmt fischertechnik
+mutige Schritte: Auf den Begleitheften zu
+den Baukästen zum Calliope mini und dem
+micro:bit ist fett zu lesen: „Programmieren
+in der Grundschule“. Auch die Unterstützung der Einsteigerprogrammiersprache
+Scratch durch alle fischertechik-Controller
+wird inzwischen aktiv promotet.
+
+
+Am bedeutsamsten ist dabei sicherlich die
+Unterstützung des Arduino, dessen Fangemeinde auch dank der gigantischen Sammlung von Open-Source-Bibliotheken und
+Maker-Projekten schon lange die Millionengrenze überschritten hat. Mit den F5Shields von Didacta Advance für den
+Arduino Uno, den Arduino Mega und den
+micro:bit, die inzwischen auf der Webseite
+von fischertechnik beworben werden, und
+der von Modellvideos begleiteten prominenten Präsentation des ftDuino sendet
+fischertechnik eine deutliche Nachricht:
+Wir sind die passende Ergänzung zu allen
+Controllern, die in den vergangenen Jahren
+sowohl die Maker-Szene als auch die Klassenzimmer erobert haben.
+Und eine weitere Chance ergreift fischertechnik beim Schopf: Im September wird
+(in limitierter Auflage) ein Baukausten zum
+gerade erschienenen Buch „fischertechnikRoboter mit Arduino“ auf den Markt kommen – eine „Verbeugung“ vor der Community. So viel Aufbruch war selten in Waldachtal. Und was im Angebot fehlt, ergänzt
+wie üblich die Community: Marcel André
+stellt in dieser ft:pedia sein fischertechnikShield für den Calliope mini vor. Vielleicht
+wird ja auch daraus noch ein „offizielles“
+Produkt…
+Bleibt dran. An den Kästen, euren Ideen und
+Modellen. #wirsindfischertechnik 😊.
+Herzliche Grüße,
+Euer ft:pedia-Team
+P.S.: Am einfachsten erreicht ihr uns unter
+ftpedia@ftcommunity.de oder über die Rubrik ft:pedia im Forum der ft-Community.
+
+

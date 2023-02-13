@@ -1,0 +1,335 @@
+
+
+Computing
+
+startIDE für die Community Firmware –
+Programmieren direkt auf dem TXT oder TX-Pi
+Peter Habermehl
+Ziel bei der Entwicklung von startIDE waren schnelle und einfache Umsetzung von Mess-,
+Steuer- und Regelungsaufgaben im fischertechnik-Umfeld sowie eine einsteigergerechte
+Handhabung. Der Beitrag stellt einige Grundlagen sowie Hintergrundinformationen zu
+startIDE vor.
+
+Motivation und
+Entwicklungsgeschichte
+
+und Eingabe der Parameter über ein
+Touchscreen-Interface zu erzeugen.
+
+Sowohl der aktuelle TXT-Controller als
+auch die älteren fischertechnik-RobotikInterfaces benötigen zusätzliche Hard- und
+Software zur Programmierung von Modellen. Mit der Community Firmware und
+deren Adaption für den Raspberry Pi in
+Form des TX-Pi-Projektes lag jedoch der
+Gedanke nahe, dass man unter der
+leistungsfähigen grafischen Benutzerschnittstelle auf dem Gerät selbst Programmabläufe erstellen, d. h. programmieren könnte.
+
+Das hat den Vorteil, dass die Syntax der
+Befehlszeilen durch die automatische
+Generierung per se korrekt ist und die Parametrierung schon bei der Eingabe überwacht und ggf. korrigiert werden kann.
+Damit entfällt ein Großteil der ansonsten
+notwendigen Überwachung zur Laufzeit
+des erstellten Programmes, was wiederum
+die Programmierung des startIDE-Codeinterpreters vereinfachte.
+
+Der Besitz von Robo Interface und Robo
+I/O Extension veranlasste den Autor zusätzlich, diese Hardware einsteiger- und auch
+kindgerecht für erste Schritte auf dem Feld
+der Robotik nutzbar zu machen. So sollten
+z. B. die Modelle des Robo LT Beginner
+Lab steuerbar sein.
+Erste Versuche mit einer grafischen Programmierung durch Anordnen von entsprechenden Icons auf dem Touchscreen
+des TXT ergaben schnell, dass der Screen
+schlichtweg zu wenig Auflösung bietet, um
+eine grafische Programmierumgebung zu
+realisieren. Dies führte zu der Idee, zwar
+textuellen Programmcode zu verwenden,
+diesen aber nicht über eine Tastatur,
+sondern durch die Auswahl von Befehlen
+
+
+startIDE selbst ist als App für die Community Firmware in Python3 programmiert.
+startIDE.
+
+Das erste startIDE-Projekt –
+‚Hallo Welt‘
+Nach dem Start von startIDE zeigt sich
+zunächst die bis auf den Kommentareintrag
+„# new“ leere Codeliste, unter der sich
+sechs Buttons finden. Nach Betätigen des
+„+“-Buttons öffnet sich eine Auswahlliste,
+die verschiedene Gruppen von Befehlen zur
+Auswahl anbietet (Abb. 2).
+Aus der Gruppe „Interaktion“ wird nun der
+„Print“-Befehl ausgewählt und als auszugebender Text „Hallo Welt“ über die OnScreen-Tastatur eingegeben. Damit ist das
+„Hallo-Welt“-Programm schon erstellt. Ein
+Klick auf den Start-Button startet die
+Ausführung, die Benutzeroberfläche wechselt in den Ausführungsmodus und zeigt
+nun ein Log-Fenster sowie statt des „Start“nun einen „Stop“-Button.
+
+
+Der Button unter dem Logscreen dient nach
+dem Programmende zum Schließen des
+Logscreens und damit zur Rückkehr zum
+Programmcodeeditor.
+
+Computing
+
+Der Funktionsumfang
+Gegenwärtig kann startIDE, installiert auf
+dem TXT oder TX-Pi, die I/O des TXTControllers und jeweils eines daran über
+USB angeschlossenen Robo Interfaces,
+einer I/O Extension, eines Robo LT Controllers oder eines ftDuinos (wenn dieser
+unter ftduino_direct läuft) ansprechen. Ein
+experimenteller Support für das Intelligent
+Interface ist auch vorhanden.
+startIDE bietet in der Gruppe „Input“
+Befehle zum Abfragen und Auswerten der
+Eingänge des Controllers (beim TXT) und
+des daran angeschlossenen Interface. Die
+Eingänge können je nach Fähigkeiten der
+verwendeten Hardware digital oder analog
+ausgewertet werden, bei Analogbetrieb ist
+die Erfassung von Spannung bzw. Widerstand möglich. Die Ultraschallsensoren für
+TXT und ROBO Interface werden ebenfalls
+unterstützt.
+In der „Output“-Gruppe sind die Funktionen zur Ansteuerung der Ausgänge zusammengefasst. Neben dem einfachen Ein- und
+Ausschalten einzelner Ausgänge gibt es
+Funktionen zum Betrieb von Encodermotoren (an dazu geeigneten Interfaces)
+oder Motoren mit Impulsgeber und Endschalter, womit die Ansteuerung z. B. der
+älteren und des aktuellen IndustrieroboterBaukastens möglich ist.
+In der „Variable“-Gruppe können Variable
+definiert und mit den Befehlen der gleichnamigen Gruppe verarbeitet werden. Es
+steht eine Arithmetik-Funktion „Calc“ zur
+Verfügung, die zwei Operanden mittels
+eines Operators verknüpft. Operatoren sind
+z. B. die vier Grundrechenarten, Ganzzahldivision und Modulo (Divisionsrest), es
+können Minimum- und Maximumauswahl
+aus den Operatoren getroffen werden, zur
+Erzeugung von Zufallszahlen gibt es einen
+„Random“-Operator, es sind boole‘sche
+And- und Or-Verknüpfung möglich, ebenso
+wie es eine Reihe von Vergleichsoperatoren
+(größer, kleiner, gleich, ungleich usw.) gibt.
+
+
+
+Alle Rechenoperationen der „Calc“-Funktion werden als Integerrechnungen durchgeführt, wobei Python und damit startIDE
+keine Begrenzung des Datentyps kennen,
+die Zahlen können also „unendlich“ groß
+werden.
+
+den Sprungbefehl „Jump“ und die Definition von Sprungzielen mit dem „Tag“Befehl. Ebenso finden sich hier die
+Funktionen zur Definition von Schleifen
+(LoopTo) und zur Zeitsteuerung (Ermittlung der Laufzeit, Zeitmessung, Interrupt).
+
+Eine weitere mathematische Funktion ist
+der „FromPoly“-Befehl, der als einzige
+Funktion in startIDE Fließkommawerte
+(auch in Exponentialschreibweise) als Parameter erlaubt. Mit den vier Koeffizienten
+A-D wird ein Polynom dritten Grades in der
+Form f(x) = A*x³ + B*x² + C*x + D
+berechnet und das Ergebnis als Integerwert
+in eine startIDE-Variable geschrieben.
+
+In der Gruppe „Module“ sind die Funktionen für Unterprogramme, Module genannt, zusammengefasst. Module können
+entweder Bestandteil des Programmcodes
+(internes Modul) oder auf SD-Karte gespeichert (externes Modul) sein. Externe
+Module können von mehreren startIDEProgrammen verwendet werden.
+
+Neben vielfältigen anderen Möglichkeiten
+kann durch die Wahl entsprechender Koeffizienten einer Näherungskurve die Kennlinie z. B. eines NTC-Widerstands abgebildet werden, so dass mit dem gemessenen
+Widerstand als Eingangsgröße die äquivalente Temperatur errechnet werden kann.
+
+Befehle für die Bildschirmausgabe von
+Text, das Löschen des Logscreens sowie
+zum Aktivieren des Loggens der Ausgaben
+in eine Logdatei finden sich in der Gruppe
+„Interaktion“.
+Über das Webinterface von startIDE
+können Programme und Module vom
+Interface zum Computer gesendet, dort evtl.
+bearbeitet und zurück übertragen werden.
+Weiterhin besteht die Möglichkeit, Logfiles
+zur weiteren Bearbeitung als Rohdaten oder
+csv-konvertiert herunterzuladen.
+
+Einsteiger-Projekte
+Der Händetrockner
+Seit vielen Jahren ist der „Händetrockner“
+ein beliebtes Modell in den fischertechnik
+Robotik-Baukästen: Ein mit Luftschraube
+versehener Motor dient als Gebläse, das
+immer dann laufen soll, wenn eine davor
+befindliche Lichtschranke unterbrochen
+wird (Abb. 4).
+
+der Wert einer Variable interaktiv während des
+Programmablaufs gesetzt werden kann
+
+Die Gruppe „Steuerung“ bietet Elemente
+zur Programmablaufsteuerung, wie z. B.
+
+
+Im Beispiel wird als Hardware ein Robo LT
+Controller verwendet, an Motorausgang M1
+ist der Gebläsemotor angeschlossen, an
+Motorausgang M2 die Lampe der Lichtschranke. Die Fotodiode der Lichtschranke
+ist mit Eingang I1 des Interface verbunden.
+
+
+Computing
+
+
+Der dazugehörige startIDE-Code sieht so
+aus:
+
+False), wird in Zeile 5 zur Sprungmarke
+„FAN_ON“ (Zeile 7) verzweigt.
+
+01 # Haendetrockner
+02 Motor RIF 2 l 7
+03 Delay 100
+04 Tag START
+05 IfInDig RIF 1 False FAN_ON
+06 WaitInDig RIF 1 Falling 0
+07 Tag FAN_ON
+08 Motor RIF 1 r 7
+09 WaitInDig RIF 1 Raising 0
+10 Delay 1000
+11 Motor RIF 1 s 0
+12 Jump START
+
+Andernfalls wird in Zeile 6 auf eine fallende
+Signalflanke – also das Unterbrechen der
+Lichtschranke – gewartet. Nach dem Unterbrechen der Lichtschranke bzw. nach der
+Verzweigung in Zeile 5 wird in Zeile 8 der
+Gebläsemotor eingeschaltet und danach in
+Zeile 9 wiederum auf die Freigabe der
+Lichtschranke, also steigende Signalflanke
+an Eingang 3, gewartet.
+
+Listing 1: Händetrockner
+
+Das gesamte Projekt umfasst also lediglich
+11 Zeilen Programmcode. In Zeile 2 wird
+die Lampe der Lichtschranke eingeschaltet,
+es folgt eine 100 ms lange Pause in Zeile 3,
+damit die Fotodiode schalten kann. In Zeile
+4 wird die Sprungmarke „START“ definiert. Falls die Lichtschranke nun bereits
+unterbrochen wurde (Digitaleingang 1 =
+
+Nach einer Verzögerung von 1000ms –
+Zeile 10 – wird der Gebläsemotor wieder
+ausgeschaltet und zurück zu Zeile 4
+gesprungen, womit der Zyklus neu beginnt.
+Temperaturregler
+Als etwas komplexere Aufgabe sei hier
+exemplarisch ein Temperaturregler dargestellt. Ein NTC1k5 aus dem fischertechnikSortiment als Temperatursensor wurde
+
+
+direkt über einer Linsenglühlampe montiert. Der NTC ist an Eingang I1 eines
+ftDuino angeschlossen, die Lampe an
+Motorausgang M1.
+Die Programmieraufgabe ist nun, die
+Temperatur am NTC auf 30° Celsius
+einzuregeln; dies soll mit einem P-Regler
+geschehen.
+
+
+Der Programmcode dazu:
+01 # Temperaturregler
+02 Init R_NTC 0
+03 Init PWM_OUT 0
+04 Init Kp 2
+05 Init T_SOLL 30
+06 Init T_IST 0
+07 Init T_DELTA 0
+08 Init X 0
+09 #
+10 Log 1
+11 TimerClear
+12 Tag LOOP
+13 FromIn FTD 1 R R_NTC
+14 FromPoly T_IST R_NTC 1.19005379623e-09 1.236196074067e05 -0.047586949030459 15
+72.5923764402556
+16 Calc T_DELTA T_SOLL - T_IST
+17 Calc X T_DELTA * Kp
+18 Calc PWM_OUT PWM_OUT + X
+19 Calc PWM_OUT PWM_OUT max 0
+20 Calc PWM_OUT PWM_OUT min 512
+21 Motor FTD 1 l PWM_OUT
+22 Clear
+23 TimerQuery
+24 QueryVar T_SOLL
+25 QueryVar T_IST
+26 QueryVar PWM_OUT
+27 Delay 100
+28 Jump LOOP
+
+Listing 2: Temperaturregler
+
+
+In den Zeilen 2 bis 8 werden die verwendeten Variablen deklariert und initialisiert; in
+Zeile 10 wird das Datenlogging in Datei
+aktiviert. In der Schleife zwischen Zeile 12
+und 28 wird zunächst die Ist-Temperatur
+ermittelt. Dazu wird in Zeile 13 der
+Widerstand des NTC in die Variable
+R_NTC eingelesen und der Widerstandswert in Zeile 14 über eine Transferfunktion
+dritten Grades in die äquivalente Temperatur umgerechnet und diese in die Variable
+T_IST geschrieben.
+Die Regelabweichung T_DELTA als
+Differenz aus Soll- und Istwert wird in Zeile
+17 mit dem Verstärkungsfaktor Kp multipliziert und in die Hilfsvariable X gespeichert. In Zeile 18 wird die Stellgröße
+PWM_OUT mit dem Wert der Hilfsvariable X nachgeführt, in den Zeilen 19
+und 20 wird PWM_OUT auf einen Wert
+zwischen 0 und 512 begrenzt und schließlich der Ausgang M1 auf den errechneten
+Wert gesetzt.
+In den Zeilen 23 bis 26 werden Zeitstempel
+sowie Soll- und Ist-Temperatur und PWMWert auf den Logscreen und in die Logdatei
+ausgegeben, dann erfolgt nach 100 ms
+Wartezeit der Rücksprung zu Zeile 12. Der
+Programmablauf muss manuell über den
+Stop-Button auf dem Logscreen beendet
+werden.
+Ein exemplarischer Einregelvorgang ist in
+vom Programm erzeugten Logdatei entnommen.
+
+
+Computing
+
+
+Ausblick
+Mit startIDE steht für unter der Community
+Firmware betriebene TXT-Controller und
+TX-Pis eine App zur Verfügung, mit der
+sich Mess-, Steuer- und Regelungsaufgaben
+einfacher bis mittlerer Komplexität lösen
+lassen, wobei auf eine Vielzahl aktueller
+und älterer Hardware-Interfaces zurückgegriffen werden kann.
+Ein umfangreiches Handbuch steht über das
+Webinterface der App unter „Get more
+application info“ bzw. im GitHub-Repository [1] zur Verfügung.
+Für die Zukunft sind noch einige funktionale Erweiterungen angedacht, explizit
+Indexvariable (Arrays) sowie die Möglichkeit, Variableninhalte speichern und wieder
+laden zu können.
+
+Angedacht ist auch, in Ergänzung zum
+Handbuch noch ein Trainingsdokument zu
+erstellen, das insbesondere jungen Einsteigern anhand einfacher Beispiele analog der
+fischertechnik-Einsteigerbaukästen (Händetrockner, Lichtsignalanlagen etc. bis hin
+zu einem einfachen Spurensuch-Roboter)
+erlaubt, spielerisch erste Erfahrungen auf
+dem Gebiet der Robotik zu sammeln.
+Dabei gilt jedoch, wie bei allen Community-Projekten, dass die Ressourcen des
+Autors begrenzt sind und Mitarbeit jederzeit gern gesehen ist.
+
+Referenzen
+[1]
+
+Peter Habermehl: Handbuch
+startIDE. Github.
+
+
+

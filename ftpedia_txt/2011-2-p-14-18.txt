@@ -1,0 +1,512 @@
+
+
+Elektronik
+
+LEDs mit Vorwiderstand
+Thomas Habig
+Leuchtdioden (LEDs) sind eine sehr attraktive Alternative zu den originalen fischertechnikLeuchtmitteln – sie benötigen deutlich weniger Strom und verlängern damit die „Lebenszeit“
+Akku betriebener Modelle. Einige haben sogar eine deutlich höhere Lichtleistung. Allerdings
+sind bei der Nutzung ein paar Grundregeln zu beachten – will man die Lebensdauer der
+LEDs nicht künstlich verkürzen.
+Oft wird das Thema „Vorwiderstand und
+LED“ angesprochen, und stets wird dann
+auf die allgemein gültige Formel zur Berechnung verwiesen:
+(Uges. – ULED) : ILED = RV (mind.)
+Zu wählen ist i. d. R. der nächst größere
+Wert für RV.
+Allerdings darf man annehmen, dass vor
+allem Bastler mit eher wenig Kenntnissen
+in Elektronik sich oft diese Frage stellen,
+wenn sie die Experimentierfreude packt,
+sich aber mit der korrekten Berechnung
+eines Vorwiderstandes (im Folgenden nur
+noch RV) schwertun. Kompliziert wird die
+Suche dadurch, dass eine LED stets eine
+individuelle Schwellspannung (im Folgenden nur noch ULED) hat, die nicht immer
+bekannt ist. Als Faustformel kann man
+aber zumeist von etwa 2 Volt und einem
+maximalen Strom von 20 mA ausgehen,
+auch wenn die Bandbreite an erhältlichen
+Bautypen heute recht groß ist. Hilfreich ist
+es daher, zumindest den jeweiligen Typen
+zu kennen und ob es sich um eine „normale“ LED handelt oder um eine sogenannte „Low-current“ mit deutlich niedrigerem Strombedarf. Letztere darf nämlich
+nur mit maximal 2 mA betrieben werden.
+Die meisten LEDs in den gängigen Farben
+rot, gelb, orange, grün arbeiten gewöhnlich
+mit maximal 20 mA. Daneben gibt es die
+
+neuen LEDs in den Farben blau, weiß und
+pink, die nicht nur eine höhere ULED haben,
+sondern oft auch mit deutlich mehr als
+20 mA betrieben werden dürfen. Die dritte
+Gruppe bilden spezielle LEDs in infrarot
+oder ultraviolett, die zum Teil mit bis zu
+100 mA belastet werden dürfen.
+Viele LED-Typen sind auch in „superhell“
+zu bekommen. Diese LEDs sind besonders
+lichtintensiv.
+
+Berechnungsbeispiele
+In der Tabelle auf der letzten Seite sind
+alle gängigen RV der Reihe E24 in Relation
+zur „Restspannung“ (Uges. – ULED) aufgeführt. Die genannten Werte beziehen sich
+jeweils auf 20 mA und 50 mA. Für andere
+Ströme (z. B. 40 mA) braucht der dazugehörige RV (20 mA) lediglich halbiert zu
+werden.
+Für „Low-current“-LEDs gilt daher: Wert
+RV für 20 mA multipliziert mit 10. Damit
+sind gut 90 % aller in „unseren Kreisen“
+denkbaren LED-Schaltungen abgedeckt.
+Allerdings sollte man dabei bedenken, dass
+auch eine stabilisierte Versorgungsspannung in gewissen Grenzen schwanken
+kann. Dieser Umstand sollte bei der Auswahl für RV berücksichtigt werden. Für
+Dauerbetrieb wird daher mindestens der
+jeweils nächst höhere Wert für RV
+
+
+Elektronik
+
+empfohlen. Das betrifft auch Reihenschaltungen mit LEDs, bei denen die addierten
+ULED identisch sind mit der Versorgungsspannung oder nur geringfügig größer als
+diese. Sicherheitshalber sollte hier wenigstens ein kleiner RV gesetzt werden; dieser
+könnte in manchen Fällen nämlich rein
+rechnerisch entfallen.
+
+Vermeiden sollte man aber eine Mischung
+von LEDs unterschiedlicher Stromstärken.
+Denn die maximal zulässige Stromstärke
+orientiert sich immer an dem schwächsten
+Glied einer solchen Kette. Vor allem Lowcurrent-LEDs können dann schnell kaputt
+gehen. Eine Kombination unterschiedlicher
+Farben derselben Baureihe ist jedoch ohne
+weiteres zulässig.
+
+Beispiel 1: An einer Spannung von 9 Volt
+sollen 2 in Reihe geschaltete weiße LEDs
+(je 3,85 V/ 20 mA) betrieben werden.
+RV = 68
+
+(mind.)
+
+U Restspannung
+1,3 V
+
+mA
+
+
+V
+
+
+LEDs = 2 x 3,85 V
+
+ULED gesamt
+7,7 V
+
+0,6
+0,7
+0,7
+0,8
+0,9
+0,9
+1,0
+1,1
+1,2
+1,4
+1,5
+1,6
+
+1,5
+1,7
+1,8
+2,0
+2,2
+2,4
+2,6
+2,8
+3,1
+3,4
+3,8
+4,1
+
+max. zulässiger
+Strom (mA)
+RV ( ) mind.
+nächst höherer
+Wert der Restspannung (V)
+sicherer RV ( )
+
+Gesamtspannung = 9 Volt
+
+Ergebnis: Die Restspannung über der LED beträgt hier 1,3 Volt. Der Tabelle kann nun der
+nächst höhere Wert für RV bei 1,4 Volt – also 68 – abgelesen werden. Die Versorgungsspannung darf in diesem Beispiel aber nicht allzu groß schwanken. Deshalb ist die Restspannung eher großzügig zu bemessen und für RV besser 82 oder noch höher zu wählen.
+
+Beispiel 2: An einer Spannung von 9 Volt sollen zwei superhelle „Jumbo“-LEDs (blau und
+rot/ je 50 mA) im maximal zulässigen Bereich (also bis 50 mA) betrieben werden.
+mA
+
+
+V
+
+U=9V
+RV = 75
+
+LED (rot): 1,9 V LED (blau): 3,5 V
+
+
+0,6
+0,7
+0,7
+0,8
+0,9
+0,9
+1,0
+1,1
+1,2
+1,4
+1,5
+
+1,5
+1,7
+1,8
+2,0
+2,2
+2,4
+2,6
+2,8
+3,1
+3,4
+3,8
+
+max. zulässiger
+Strom (mA)
+RV ( ) mind.
+nächst
+höherer
+Wert der Restspannung (V)
+
+Ergebnis: Die Restspannung beträgt hier 3,6 Volt (9 - 3,5 - 1,9). In der Tabelle finden wir bei
+3,8 Volt für RV den Wert 75 , mit dem die beiden LEDs noch betrieben werden dürfen. Hier
+fließen dauerhaft etwa 48 mA. Ein sicherer Wert wäre also eher 82 oder mehr.
+
+
+
+
+Beispiel 3: An einer Spannung von 12 Volt sollen fünf in Reihe geschaltete rote Low-currentLEDs (1,85 V/ 2 mA) betrieben werden.
+mA
+
+
+V
+
+U = 12 V
+RV = 1,5 k
+
+LED 1 – 5: rot/ 1,85 V
+
+
+1,6
+1,8
+2,0
+2,2
+2,4
+2,6
+3,0
+3,2
+3,6
+4,0
+4,4
+
+4,1
+4,6
+5,0
+5,5
+6,0
+6,5
+7,5
+8,0
+9,0
+10,0
+
+max.
+zulässiger
+Strom (mA) – hier
+durch 10 zu teilen
+
+nächst
+höherer
+Wert der Restspannung (V)
+
+
+analoger RV ( )
+– hier mit 10 zu
+multiplizieren
+
+Ergebnis: Die Restspannung beträgt 2,75 Volt. Der Tabelle kann nun der (nächst höhere)
+Wert für RV bei 3 Volt entnommen werden. Dieser muss aber noch in Bezug zum weitaus
+geringeren Strombedarf von maximal 2 mA um den Faktor 10 multipliziert werden. Der
+korrekte Wert für RV lautet daher 1500
+bzw. 1,5 k . Ein sicherer Wert für RV in dieser
+Variante wäre natürlich 1,8 k oder höher.
+zeige verwendet werden, automatisch geWeitere Tipps & Anwendungen
+schieht. Als Faustformel kann auch für
+diesen Fall dieselbe Tabelle verwendet
+LED-Betrieb an Wechselspannung
+werden. Das Ergebnis zeigt für 6,8 Volt
+Hierbei ist zu berücksichtigen, dass LEDs
+Restspannung ebenfalls auf den nächst
+stets eine verhältnismäßig geringe Sperrhöheren Wert für RV von 360
+mindesspannung (verkehrt herum gepolt) haben
+tens oder 390 als empfohlener Wert. Die
+und bei falscher Polung – bei Wechselmöglichen Feinheiten bezüglich Impulsspannung unvermeidlich – schnell zerstört
+stroms u. ä. in dieser Betriebsart lasse ich
+werden können. Abhilfe schafft hier eine
+einmal außen vor.
+antiparallel geschaltete normale Diode
+LED-Kaskaden
+(z. B. 1n4148), damit der Strom ungehindert in beide Richtungen fließen kann.
+Will man eine große Anzahl LEDs
+U= 9 V~
+RV = 390
+
+Standarddiode:
+z. B. 1n4148
+
+LED grün: 2,2 V
+
+
+Alternative ist eine zweite LED für die Gegenrichtung, was bei so genannten Zweifarb-LEDs, die oft als Stromrichtungsan16
+
+betreiben, so kommt man vielleicht auf die
+Idee, hier ggf. mit nur einem RV zu
+arbeiten.
+Bezogen auf eine doppelte Leistung von
+40 mA käme man hier bei 0,6 Volt Restspannung auf rechnerisch 15 insgesamt.
+Und genau darin liegt die Crux. Denn
+aufgrund so genannter Streuungen zwischen den beiden Ketten wird die Sache
+äußerst riskant. Und sollte nur eine LED
+ausfallen oder würde der Kontakt irgendwo
+unterbrochen, so würde der dann nicht
+betroffene Zweig sofort mit einem zu
+hohen Strom belastet und diese LEDs nach
+kürzester Zeit zerstören.
+
+
+Elektronik
+
+Natürlich muss hier jeder einzelne Zweig
+separat betrachtet und immer mit einem
+eigenen RV wie gehabt versorgt werden.
+Für das Beispiel 3 (siehe Kasten) gilt daher: je 30 pro Vierer-Reihe mindestens
+bzw. 33 bis 39 als sicherer Wert.
+U=9V
+2 x RV = 33
+
+LED 1 – 8: gelb/ 2,1 V
+
+
+Mindestspannung
+Versuche mit LEDs zeigen, dass eine LED
+stets auch eine Mindestspannung benötigt,
+um minimal zu leuchten. Diese Mindestspannung liegt in etwa bei 80 % von ULED.
+Der maximal zulässige Strom einer LED
+hat darauf zunächst keinen Einfluss.
+Der Grund hierfür liegt in der Arbeitsweise
+eines Halbleiterkristalls. Bei sehr geringer
+Spannung (z. B. U = 1,5 V für Batterien)
+kann noch kein Strom fließen. Erst bei
+höherer Spannung werden ausreichend
+freie Elektronen aus dem inneren Kristallgitter des Halbleitermaterials gelöst, so
+dass ein Strom in der LED fließen kann.
+
+
+Das Diagramm (siehe Kingbright Datenblatt, Teile-Nr.: L-59SURKSGC-CA, S. 3)
+zeigt klar den Zusammenhang zwischen
+
+Spannung und Strom an einer typischen
+LED. Das Buchstabenkürzel benennt zudem die Elemente des Halbleiterkristalls
+(u. a. In = Indium). An der steilen Kurve
+ist so leicht zu erkennen, warum eine LED
+auch immer einen RV zur Strombegrenzung
+benötigt.
+Das bedeutet natürlich im Umkehrschluss,
+dass eine LED nicht mehr ausreichend mit
+Strom versorgt wird, falls z. B. an einer
+einzelnen Batterie von 1,5 Volt eine grüne
+LED (2,2 V) betrieben werden soll. UGES
+liegt dann bei ca. 68 % von ULED. Die LED
+leuchtet in dieser Kombination nicht.
+
+LED-Leuchtsteine
+Leuchtdioden haben den großen Vorteil,
+dass sie gegenüber normalen Lämpchen
+weitaus weniger Strom benötigen. Dann
+können bereits mit kleinen Stromversorgungen (z. B. der 9V-Block) interessante
+und vielseitige Lichteffekte erzielt werden.
+Ein entscheidender Nachteil aber ist, dass
+LEDs grundsätzlich mit einem Vorwiderstand betrieben werden müssen. Das bedeutet für jegliche Anwendungen einen
+gewissen Mehraufwand, und LEDs sind
+stets auf die korrekte Polung angewiesen.
+Daher verwundert es auch nicht, wenn eine
+LED Fehlschaltungen, die in der Vergangenheit auch mir unterlaufen sind, nicht
+verzeiht. Vor allem bei Spezial-Ausführungen kann so etwas schnell ins Geld gehen.
+Auf der letzten Seite zeige ich an einem
+realen Beispiel, wie man eine LED in
+einen FT-Leuchtstein sauber einfasst und
+diesen korrekt anschließt. Außerdem steht
+hier die komplette Tabelle RV zur Verfügung.
+In den Leuchtstein werden wie in Abb. 4
+zu sehen zunächst zwei einzelne Drähte
+(keine Litze!) eingelötet und danach auf ca.
+1 cm gekürzt – ebenso die Anschlüsse der
+LED. Der Kathodenanschluss kann bei
+Bedarf mit einem Edding markiert werden
+(grüner Pfeil). Danach werden beide Teile
+
+
+
+vorsichtig miteinander verlötet (unbedingt
+Temperatur beachten!).
+
+2,49 €). Um später alle LEDs leichter
+unterscheiden zu können, kann in den
+Freiraum ein kleiner Aufkleber (mit
+Pinzette) eingefügt werden.
+Abschließend wird die fertig verlötete LED
+leicht drehend nach unten gedrückt (hält ab
+jetzt von alleine). Und eine Rastleuchtkappe passt auch noch drüber!
+
+Die Tabelle
+
+
+Abbildung 5 zeigt eine simple Anwendung, wie LED und Widerstand zu kombinieren sind.
+
+Aufgeführt sind hier alle Widerstände der
+Reihe E24 (inklusive „Zwischenwerte“)
+von 10 - 620 in Relation zur jeweiligen
+Restspannung für 20 mA und 50 mA.
+Wie die Tabelle anzuwenden und zu lesen
+ist, ist ausführlich in den Beispielen 1-3
+beschrieben und illustriert. Natürlich ließe
+sich die Tabelle erheblich erweitern. Doch
+letztlich reicht der dargestellte Ausschnitt
+für die meisten Schaltvarianten mit LEDs.
+
+
+Übrigens: Die hier gezeigte LED ist natürlich purer Luxus (8 mm, 360° Abstrahlwinkel, rot – Conrad-Nr.: 184433 für
+
+mA
+
+
+
+mA
+
+
+V
+
+0,2
+0,2
+0,2
+0,3
+0,3
+0,3
+0,4
+0,4
+0,4
+0,5
+0,5
+
+
+Wer die Tabelle trotzdem nochmal für sich
+am eigenen Rechner generieren möchte,
+um z. B. weitere Werte einzubinden, muss
+sich nur an folgender Formel orientieren:
+R ( ) x I (mA) / 1000 = Restspannung
+
+mA
+
+
+V
+0,5
+0,6
+0,6
+0,7
+0,8
+0,8
+0,9
+1,0
+1,1
+1,2
+1,4
+
+
+0,6
+0,7
+0,7
+0,8
+0,9
+0,9
+1,0
+1,1
+1,2
+1,4
+1,5
+
+mA
+
+V
+1,5
+1,7
+1,8
+2,0
+2,2
+2,4
+2,6
+2,8
+3,1
+3,4
+3,8
+
+
+1,6
+1,8
+2,0
+2,2
+2,4
+2,6
+3,0
+3,2
+3,6
+4,0
+4,4
+
+) RV – mind. 0,5 W
+
+
+
+4,1
+4,6
+5,0
+5,5
+6,0
+6,5
+7,5
+8,0
+9,0
+10,0
+
+
+
+V
+4,8
+5,4
+6,0
+6,6
+7,2
+7,8
+8,6
+9,4
+10,2
+11,2
+12,4
+
+
+

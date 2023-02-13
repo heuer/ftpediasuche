@@ -1,0 +1,294 @@
+
+
+Grundlagen
+
+Planetengetriebe
+Thomas Püttmann
+Wenn Getriebe mehr als zwei An-/Abtriebe besitzen, handelt es sich um Planetengetriebe. Wir
+stellen zwei Beispiele vor und erklären daran, wie solche Getriebe funktionieren. Zum Schluss
+beschreiben wir ein Funktionsmodell eines 2-Gang-Schaltgetriebes.
+
+Geschichte
+Bei einem Planetengetriebe sind mehrere
+Drehbewegungen um eine zentrale Achse
+miteinander verkoppelt. Einige Zahnräder
+(Planeten) drehen sich um andere (Sonnen),
+die sich selbst in der Regel auch noch
+drehen. Der Name Planetengetriebe deutet
+nicht nur auf den Aufbau dieser Getriebe
+hin, sondern auch auf deren erste bekannte
+Anwendung: astronomische Vorgänge
+mechanisch nachzubilden. Zu diesem
+Zweck befanden sich Planetengetriebe im
+Mechanismus von Antikythera (ca. 100 v.
+Chr.) und in den astronomischen Uhren ab
+ca. 1300 n. Chr.
+
+Rädergebäude [1] von 1791 (Quelle: NTK
+Prag)
+
+Die erste systematische Abhandlung über
+Planetengetriebe hieß Neues Rädergebäude
+[1] und erschien im Jahr 1791. In ihr
+
+beschrieb der Barfußmönch Frater David
+Sancto Cajetano (1726-1796), wie man mit
+möglichst wenigen Zahnrädern Übersetzungen wie 1:1009 erzielt, die zur mechanischen Nachbildung bestimmter astronomischer Vorgänge gebraucht werden.
+Dieses Wissen hatte er schon ab den 60er
+Jahren des 18. Jahrhunderts zum Bau
+herausragender astronomischer Uhren
+eingesetzt.
+
+aus dem Jahr 1781 [2]
+
+Der Schotte James Watt (1736-1819)
+verwendete ein Planetengetriebe zu einem
+ganz anderen Zweck: Im Jahr 1781 wandelte er die oszillierenden Auf- und Abbewegung eines Kolbens in seiner Dampfmaschine in eine Drehbewegung um [3].
+
+
+Grundlagen
+
+Das theoretische Verständnis und der
+gezielte Entwurf von Planetengetrieben
+verbreitete sich vor allem mit dem Buch
+Principles of Mechanisms [4] von Robert
+Willis (1800-1875) aus dem Jahr 1841.
+Die ersten Patente auf Nabenschaltungen in
+Fahrrädern erhielten laut Wikipedia der
+Amerikaner Seard Thomas Johnson im Jahr
+1895 und der Engländer William Reilly im
+Jahr 1896 [5].
+Übersetzung von 5:2 erzielt wird
+
+Charlton Haigh's Patentschrift aus dem Jahr
+1897 (US Patent 588657, Quelle: Google)
+
+Unser erstes Planetengetriebe liefert genau
+diese Übersetzung von 5:2, siehe Abbildung 4. Die zentrale Komponente ist der
+Steg oder Planetenträger. In dessen Mitte
+befindet sich ein Baustein mit Ansenkung,
+in den von links eine Kunststoffachse mit
+Vierkant gesteckt ist. Auf dieser Achse
+drehen sich zwei Zahnräder Z15 frei. Sie
+bilden das erste Sonnenrad. Von rechts
+steckt in dem Baustein mit Ansenkung frei
+drehbar eine Metallachse, auf der ein Z10
+als zweites Sonnenrad fungiert.
+
+Heute finden sich Planetengetriebe an
+vielen weiteren Stellen im Fahrzeugbau,
+zum Beispiel in Automatikgetrieben oder
+bei Hybridantrieben.
+
+Übersetzung 5:2
+Eine der ersten Anwendungen von Planetengetrieben war das Erzielen von vorgegebenen Übersetzungen mit wenigen Zahnrädern, die nicht zu viele Zähne haben
+sollten [1].
+Bei Verwendung der fischertechnik-Zahnräder bekommt dieses Problem noch mehr
+Gewicht, da es nur wenige Zahnradtypen
+gibt. Somit gibt es nur sehr wenige Übersetzungen, die mit einer einzelnen Stirnradgetriebestufe erzielt werden können. Im
+Wesentlichen sind dies die Übersetzungen
+2:1, 3:1, 4:1, 3:2 und 4:3. Es gibt zum
+Beispiel keine direkte Möglichkeit, eine
+Übersetzung von 5:2 oder 15:1 zu
+realisieren.
+
+
+Die beiden Planeten sind Z15 mit
+Klemmring. Alternativ kann man freilaufende Z15 mit Papier auf der Metallachse 30 festklemmen. Das Z10-Sonnenrad
+rechts ist über eine Kette mit einem der
+beiden Z15-Planeten verbunden. Dadurch
+ergibt sich bei festgehaltenem Steg eine
+Übersetzung von 3:2 vom rechten Z10Sonnenrad auf die Planeten, d. h. wenn das
+rechte Sonnenrad drei Umdrehungen
+macht, machen die Planeten zwei Umdrehungen, siehe Abbildung 6. Auf der linken
+Seite wird nun die Drehbewegung von den
+
+
+
+Planeten auf das linke Z15-Sonnenrad
+übertragen. Dabei findet nur eine Umkehrung des Drehsinns statt. Bei festgehaltenem Steg liegt also eine Übersetzung von
+3:-2 zwischen dem rechten und dem linken
+Sonnenrad vor.
+
+
+Dreht man nun das gesamte Getriebe starr
+zwei Umdrehungen weiter, so hat man das
+schwarze Z15-Sonnenrad so zurückgedreht,
+als hätte es sich insgesamt gar nicht bewegt.
+Der Steg hat insgesamt zwei Umdrehungen
+gemacht und das rechte Sonnenrad fünf.
+Daran erkennt man, dass die Übersetzung
+zwischen dem rechten Sonnenrad und der
+mit dem Steg fest verbundenen roten Kunststoffachse mit Vierkant bei festgehaltenem
+schwarzen Z15-Sonnenrad 5:2 beträgt. Ob
+man nämlich die beiden Bewegungen (Drehung bei festem Steg und starre Drehung
+des gesamten Getriebes) nacheinander ausführt oder gleichzeitig überlagert, liefert das
+gleiche Ergebnis.
+
+
+In der Praxis wird man somit das linke der
+beiden schwarzen Z15 an der Lagerung der
+
+
+roten Kunststoffachse befestigen und die
+Übersetzung von 5:2 zwischen den beiden
+fluchtenden Achsen nutzen.
+
+Übersetzung 15:-1
+Eine der wichtigsten Anwendungen von
+Planetengetrieben ist das Erzielen hoher
+Übersetzungsverhältnisse mit wenigen
+Zahnrädern und auf kleinem Raum. Als
+Beispiel realisieren wir die Übersetzung
+von 15:-1, die man sehr gut bei Uhren als
+eine Stufe der 60:1-Übersetzung zwischen
+Sekunden- und Minutenzeiger benutzen
+kann. Das Getriebe in Abbildung 8 ist aber
+auch rein an sich wegen der stark
+verschiedenen Drehgeschwindigkeiten der
+Zahnräder und Wellen ein faszinierendes
+Anschauungsobjekt, an dem auch kleinere
+Kinder mit großer Begeisterung kurbeln.
+
+Übersetzung von 15:-1 vor.
+
+Speziell ist an diesem Modell der Einsatz
+eines Selbstbau-Z16. Es besteht aus einer
+geschlossenen Kette aus 14 roten Kettengliedern und zwei schwarzen Kettengliedern. Diese Kette wird auf eine Seilrolle mit
+O-Ring aufgezogen. Ist kein passender ORing vorhanden, so kann man auch einen
+Pneumatikschlauch auf 64 mm ablängen
+und zwischen Seilrolle und Kette einpassen.
+Dabei muss man allerdings aufpassen, dass
+beide Enden des Schlauchs nicht durch die
+Löcher der Kette herausstechen. Idealerweise verklebt man die Enden des Pneumatikschlauchs.
+
+
+Grundlagen
+
+Das Z16 kann sich an und für sich frei auf
+der schwarzen Kunststoffachse mit Vierkant frei drehen. Die seitlichen Enden der
+beiden schwarzen Rastkettenglieder passen
+aber genau in die Aussparungen zwischen
+den Federnocken und den Bausteinen 7,5 an
+der rechten Lagerung. Das Z16 kann somit
+regelrecht in den Lagerblock eingesteckt
+werden, siehe Abbildung 9.
+
+
+damit den Steg fest, so liegt zwischen Z16
+und Z15 offensichtlich eine Übersetzung
+von 15:16 vor, d. h. drehen wir das Z16 15mal, so dreht sich das Z15 16-mal im
+gleichen Sinn. Drehen wir nun das gesamte
+Getriebe starr 15-mal im Gegensinn, so
+haben wir das Z16 zurückgedreht, das Z15
+hat insgesamt eine Umdrehung gemacht
+und Kurbel und Steg insgesamt 15 im
+Gegensinn. Damit liegt bei festem Z16 eine
+Übersetzung von -15:1 oder 15:-1 von
+Kurbel auf Zeiger vor.
+Eine Stärke der Planetengetriebe sind die
+fluchtenden Wellen, die ein leichtes
+Hintereinanderschalten von Getrieben
+ermöglichen. Schaltet man beispielsweise
+zwei der Getriebe aus Abbildung 8
+hintereinander, so hat man mit 225:1 schon
+eine recht große Übersetzung ins
+Langsame.
+
+Der Steg ist bei diesem Getriebe fest mit der
+Kurbel verbunden. Hält man die Kurbel und
+
+
+
+
+Zwei-Gang-Schaltgetriebe
+Das letzte Modell dieses Beitrags ist ein
+Zwei-Gang-Schaltgetriebe mit dem üblichen
+fischertechnik-Hohlrad-Planetengetriebe, siehe Abbildung 10. Man kann an
+ihm die Vorgänge in einer Fahrradnabenschaltung grundsätzlich verstehen. Für die
+praktische Verwendung in einer Nabe
+eignet sich unser Getriebe allerdings nicht.
+Dort ist das Schalten durch das Ausziehen
+des zentralen Nabenelements günstig.
+In unserem Modell werden die Innenzahnräder mit der exzentrischen Schaltstange vor dem Getriebe nach rechts oder
+links bewegt. Im normalen Gang (Innenzahnräder rechts) liegt eine Übersetzung
+von 1:1 vor, im schnellen Gang (Innenzahnräder links) eine Übersetzung von 1:4.
+
+
+Im normalen Gang sind die Innenzahnräder
+rechts. Sonnenrad und Planetenräder liegen
+an der Drehscheibe an. Einer der Mitnehmer legt sich unter Last an den Steg an,
+siehe Abbildung 13. Das ganze Getriebe
+bewegt sich dadurch starr, und somit liegt
+eine Übersetzung von 1:1 von der Kurbel
+auf die Abgangswelle vor.
+
+
+Die Innenzahnräder sind durch eine Rastachse 20 und zwei Kunststoffachsen 30
+miteinander und mit der Drehscheibe 60
+verbunden. Die Kunststoffachsen 30 fungieren als Mitnehmer. Wie weit sie in
+welcher Richtung aus dem Verbund aus
+Drehscheibe und Innenzahnrädern herausragen, ist wesentlich und muss genau eingestellt werden.
+
+
+Innenzahnrädern im normalen Gang
+
+Im schnellen Gang sind die Innenzahnräder
+links. Der andere Mitnehmer schlägt an den
+linken unteren schwarzen Baustein 15 an
+und hält dadurch die Innenzahnräder fest,
+siehe Abbildung 14. Jetzt ergibt sich eine
+Übersetzung von 1:4 von der Kurbel auf die
+Abgangswelle.
+
+
+Grundlagen
+
+schnellen Gang
+
+Wie die Übersetzung von 1:4 zustande
+kommt, kann man Abbilddung 15 entnehmen. Hält man Kurbel und Steg fest, so
+ergibt sich vom Sonnenrad zu den Innenzahnrädern eine Übersetzung von 3:-1.
+Dreht man nun das ganze Getriebe starr eine
+Umdrehung im gleichen Sinn weiter, so hat
+die Kurbel insgesamt eine Umdrehung
+gemacht, die Innenzahnräder keine und die
+Abgangswelle vier. Somit liegt bei festen
+Innenzahnrädern eine Übersetzung von 1:4
+zwischen Kurbel und Abgangswelle vor.
+
+Literatur und Links
+[1]
+
+David a Sancto Cajetano: Neues
+Rädergebäude, Joseph Edlen von
+Kurzbeck, Wien, 1791, abrufbar in
+der NTK Digital Library Prag.
+
+[2]
+
+Eric Robinson, A. E. Musson: James
+Watt and the Steam Revolution.
+London, 1969.
+
+[3]
+
+Dirk Fox und Thomas Püttmann:
+Technikgeschichte mit fischertechnik,
+dpunkt.verlag, Heidelberg, 2015.
+
+[4]
+
+Robert Willis: Principles of
+Mechanisms, John W. Parker,
+London, 1841, abrufbar unter
+http://archive.org.
+
+[5]
+
+William Reilly und Charlton Haigh:
+Two-Speed-Driving-Gear for
+Bicyles, US- Patent 588657.
+
+
+

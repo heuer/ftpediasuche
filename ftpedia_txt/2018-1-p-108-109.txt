@@ -1,0 +1,113 @@
+
+
+Computing
+
+startIDE (1): Messen und Experimentieren
+Rolf Meingast
+Schon bald nach Einführung der ersten persönlichen Computer (PC) in den Jahren 1976/1977
+(Apple I und Commodore PET 2001) wurden diese für Messaufgaben eingesetzt. Was damals
+nur wenigen „Profis“ möglich war, kann heute jedes Kind.
+Mit dem TXT hat man ein Gerät in der
+Hand, mit dem man – besonders unter der
+TXT Community Firmware – viele Möglichkeiten zum spielerischen Messen und
+Experimentieren zur Verfügung hat. Ich
+schlage deshalb vor, in der ft:pedia in loser
+Reihenfolge Beispiele zu diesem Thema
+vorzustellen und beginne mit der
+
+Prüfung der langen
+Verschlusszeiten einer alten
+Kamera
+Eine entsprechende Messung ist sehr einfach. Eine Lichtquelle beleuchtet bei abgenommener Rückwand einen Fototransistor,
+während der Verschluss offen ist. Die
+Dauer dieser Hellphase wird mit dem TXT
+(oder einem ftDuino) registriert. Das Auslesen des timers ergibt die verstrichene Zeit
+in Millisekunden.
+
+Als Lichtquelle verwende ich eine Laserdiode, die direkt mit 3 bis 12 V betrieben
+werden kann (Conrad 816304-62). Als Empfänger dient der fischertechnik-Fototransistor, angeschlossen an Eingang I1.
+Auf der SD-Karte des freigeschalteten TXT
+befindet sich die Community Firmware, mit
+der die Programmierumgebung startIDE [2]
+im Store geladen wurde. Nach Aufruf der
+startIDE tippt man mit dem Finger auf dem
+Display des TXT die folgenden Befehle an:
++
+Eingänge
+WaitForinputDig
+Raising
+Bestätigung
++
+Steuerung
+Time
+TimerClear
++
+Eingänge
+WaitForInputDig
+Falling
+Bestätigung
++
+Steuerung
+Time
+TimerQuery
+
+Listing 1
+
+Auf dem Display sieht man nun dieses
+Programm:
+
+
+#new
+WaitInDig TXT 1 Raising 0
+TimerClear
+WaitInDig TXT 1 Falling 0
+TimerQuery
+
+
+Computing
+
+
+Startet man das Programm beginnt eine
+Zeitmessung. Es lassen sich Zeiten bis zu
+s erfassen.
+
+Je länger die Verschlusszeiten, desto
+genauer sind die Ergebnisse. Die Fehler
+liegen in der Größenordnung von wenigen
+Millisekunden.
+Um das Programm nicht ständig manuell
+starten zu müssen, empfiehlt sich eine
+Endlosschleife. Dazu wird vor den ersten
+Befehl
++
+Steuerung
+Tag
+"A"
+
+das Sprungziel „A“ gesetzt und am Schluss
+mit
+
++
+Steuerung
+Jump
+"A"
+Bestätigung
+
+der Sprungbefehl Jump A erzeugt.
+Alle Befehle von startIDE hat ihr Entwickler Peter Habermehl in [1] ausführlich
+dokumentiert.
+
+Referenzen
+[1]
+
+Peter Habermehl: startIDE
+Referenzhandbuch v1.3x auf GitHub,
+2018.
+
+[2]
+
+Peter Habermehl: startIDE für die
+Community Firmware – Programmieren direkt auf dem TXT oder TXPi. ft:pedia 1/2018.
+
+
+

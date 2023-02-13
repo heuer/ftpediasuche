@@ -1,0 +1,638 @@
+
+
+Elektronik
+
+Silberlinge: Original oder Nachbau (Teil 1)
+Peter Krijnen
+Was ist das, in einer Zeit von Smartphones und Apps, diese Vorliebe für die Silberlinge? Neu
+sind sie nicht mehr zu kaufen und über eBay werden sie wie Gold gehandelt. Obwohl es jetzt
+möglich ist, ein Modell mit einem Computer und Interfaces zu steuern, zieht die Nutzung der
+Silberlinge immer wieder an.
+Ich lese regelmäßig im Forum, dass wieder
+jemand versucht, einen der Silberlinge
+nachzubauen. Normalerweise haben sie ein
+Problem mit etwas und stellen im Forum
+Fragen in der Hoffnung auf eine Antwort,
+die ihnen weiterhelfen könnte. Ich lese
+auch, dass auf die
+Dokumentation
+verwiesen wird, die
+ich einmal in den
+1990er Jahren erstellt habe und die
+im
+Clubmagazin
+des Holland-Clubs
+abgedruckt wurde.
+Da ich herausgefunden habe, dass ich
+damals Fehler gemacht habe und es
+keine vollständige
+Dokumentation
+über die Silberlinge
+gibt, habe ich mich
+jetzt dazu entschlossen,
+das
+nachzuholen.
+
+ein Mikrofon/Lautsprecher und ein Basismodul, den Elektronik-Grundbaustein. Anschließend wurden mehrere weitere Module
+freigegeben. 1973 wurde der u-t4 hinzugefügt. Die in diesem Schulkasten enthaltenen
+
+Geschichte
+1971 kamen die Fischerwerke mit den
+elektronischen Modulen. hobby 4 enthielt einen Gleichrichter, ein Relais,
+
+
+Module haben ungefähr die gleiche Funktion wie das Modul aus den zuvor auf dem
+Markt befindlichen Kästen l-e1 und l-e2.
+1974 wurde auch das Hobby-Labor eingeführt, das zwei neue Module enthielt. 1977
+verschwanden die hobby-Kästen wieder
+und wurden durch die ec- und em-Kästen
+ersetzt. Ab 1981 ist nur noch das Relais
+RB2 vom em10 übrig. Die Schulkästen enthalten bis 1989 noch ein Relais 2. In den
+vergangenen 18 Jahren wurden insgesamt
+15 verschiedene Module hergestellt.
+
+Elektronik
+
+anderen Schaltbild ist ein Widerstand
+falsch. Wieder andere haben sich einfach an
+meine Zeichnungen gehalten – was immer
+noch die Fehler enthält, die ich selbst gemacht hatte.
+
+Dokumentation
+Seit 1981 beschäftige ich mich mit dem
+Nachbau der Silberlinge. In diesem Jahr
+wurde ich in der Schule im Entwerfen, Entwickeln und Ätzen von Leiterplatten unterrichtet. Insbesondere der Grundbaustein
+und der Relaisbaustein hatten meine Aufmerksamkeit (Abb. 2, 3).
+
+Bei der Neudokumentation bin ich von den
+Diagrammen ausgegangen, die 2003 von
+Michael Becker gezeichnet wurden und auf
+ftcommunity.de zu finden sind. Ich nahm
+alle Module auseinander und entlötete die
+Leiterplatten. Dann habe ich die Kupferseite und die Komponentenanordnung fotografiert. Ich habe auch Fotos von der Unterseite der Deckel und den Frontplatten gemacht. Auf dem Computer habe ich die Fotos von der Kupferseite gespiegelt. Dies
+machte es etwas einfacher, die Layouts zu
+zeichnen.
+
+Es stellt sich heraus, dass ich nicht allein
+bin. In den letzten Jahren waren mehrere
+Personen mit dem Nachbau der Silberlinge
+beschäftigt. Wenn ich den in den verschiedenen Beiträgen angegebenen Links folge,
+stelle ich fest, dass in jedem sichtbaren
+Schaltbild ein Fehler vorliegt. Bei einem ist
+der Wert eines Potentiometers unterschiedlich oder falsch gezeichnet, und in einem
+
+Vor dem Zeichnen der Leiterplatten habe
+ich zuerst die Schaltpläne neu gezeichnet.
+Ich mache das seit mindestens 20 Jahren mit
+Eagle [1], danach habe ich die Layouts gezeichnet. Beim Platzieren der Komponenten und Zeichnen der Leiterbahnen wurde
+schnell klar, wo die Fehler waren, die in den
+verschiedenen Schaltbildern zu finden sind.
+
+
+
+
+Allgemeine Details
+
+Besonderheiten der Module
+
+Die Gehäuse der 15 Module sind alle gleich.
+Es gibt jedoch fünf verschiedene Deckel.
+Die Potentiometer werden mit einer Mutter
+am Deckel festgeschraubt. Auf diese Mutter
+kann jedoch nicht mehr zugegriffen werden,
+da die Aluminiumfrontplatte auf den Deckel geklebt ist. Die Anschlussbuchsen sind
+im Deckel festgeklemmt und befinden sich
+in einem Raster von 8 mm · 12 mm. Für die
+beiden Module aus dem Hobby-Labor ist
+das Raster jedoch 7,5 mm · 7,5 mm.
+
+0 h4 GB – Gleichrichterbaustein
+
+
+Vorserien-Version
+
+Ein Prospekt aus dem Jahr 1971 (Abb. 4)
+enthält ein Bild der „Ur“-Versionen des
+Grundbausteins und des Relaisbausteins.
+Wenn Sie sich die Beschriftungen dieser
+Module ansehen, sehen Sie, dass die Module ursprünglich „horizontal“ ausgerichtet
+sein sollten. Später wurde es „stehend“. Das
+Gehäuse sieht auch etwas anders aus. Alle
+Module haben an allen vier Seiten 2 Kontaktleisten für die Stromversorgung. Da
+nicht jedes Modul eine interne Nummer auf
+der Leiterplatte hat, habe ich den anderen
+Modulen selbst eine Nummer gegeben.
+
+
+ Artikelnummer: 36393
+ Deckeltyp 1
+ Dieses Modul hat keine Leiterplatte. Der
+Kondensator und der Brückengleichrichter werden mit Drähten direkt an die
+Klemmen gelötet.
+ Die „Minus“-Anschlüsse befinden sich
+unten und die „Plus“-Anschlüsse oben
+im Modul.
+
+1 h4 G – Grundbaustein
+
+Elektronik
+
+2 h4 RB – Relais
+
+
+
+
+
+
+
+Artikelnummer: 36391
+Deckeltyp 1
+Die Platine ist 41 mm · 68 mm groß.
+Das Potentiometer ist in den Deckel eingeschraubt und befindet sich in der Mitte
+des Deckels.
+ Der „-“-Anschluss „3“ befindet sich
+oben links und der „+d“-Anschluss „9“
+unten rechts.
+ Version 1:
+o Widerstände vom Typ 0309/12 und
+0411/15 für 82 Ω
+o Potentiometer 50 kΩ
+ Version 2:
+o Widerstände vom Typ 0207/12 und
+0309/15 für 82 Ω
+o Potentiometer 25 kΩ
+o Das Layout ist etwas anders.
+
+
+
+
+
+
+
+Artikelnummer: 36392
+Deckeltyp 1
+Die Platine ist 41 mm · 68 mm groß.
+Der Anschluss „-“ befindet sich oben
+links und „+“ oben in der Mitte.
+ Version 1:
+o Relais, Siemens V23012-A131-A001
+o Widerstände sind vom Typ 0309/12
+ Version 2:
+o Relais, Siemens V23021-A231-A001
+o Widerstände sind vom Typ 0207/12
+o Version 2 hat eine dritte Diode in
+Reihe mit „+“, daher ist auch das Layout anders.
+
+
+
+
+3 h4 FF – Flip-Flop
+
+ Das Potentiometer ist in den Deckel eingeschraubt und befindet sich im unteren
+Teil des Deckels.
+ Version 1: Widerstände vom Typ
+0309/12 und 0411/15 für 82 Ω
+5 h4 AN - AND-NAND
+
+
+
+
+
+
+
+Artikelnummer: 36479
+Deckeltyp 1
+Die Platine ist 41 mm · 68 mm groß.
+Version 1: Widerstände vom Typ
+0309/12 und 0411/15 für 82 Ω
+
+4 h4 MF – Mono-Flop
+
+
+ Artikelnummer: 36480
+ Deckeltyp 2
+ Die Platine ist 41 mm · 68 mm groß.
+
+
+
+
+
+
+
+Artikelnummer: 36482
+Deckeltyp 1
+Die Platine ist 41 mm · 68 mm groß.
+Hat die gleiche Leiterplatte wie das ORNOR. Nur die Dioden sind umgekehrt
+und ein Widerstand ist anders angeordnet
+ Version 1: Widerstände vom Typ
+0309/12 und 0411/15 für 82 Ω
+
+5 h4 ODER – OR-NOR
+
+Elektronik
+
+
+
+
+
+
+
+Artikelnummer: 36483
+Deckeltyp 2
+Die Platine ist 41 mm · 68 mm groß.
+Hat nur eine interne „-“-Verbindung
+Version 1: Widerstände sind vom Typ
+0309/12
+
+7 u-t4 VB – Verstärkerbaustein
+
+
+
+
+
+
+
+Artikelnummer: 36481
+Deckeltyp 1
+Die Platine ist 41 mm · 68 mm groß.
+Hat die gleiche Platine wie das ANDNAND. Nur die Dioden sind umgekehrt
+und ein Widerstand ist anders angeordnet
+ Version 1: Widerstände vom Typ
+0309/12 und 0411/15 für 82 Ω
+6 h4 DA – Dynamisch-Und
+
+
+
+
+
+
+
+
+
+
+
+Artikelnummer: 36733
+Deckeltyp 3
+Die Platine ist 41 mm · 68 mm groß.
+Das Potentiometer ist in den Deckel eingeschraubt und befindet sich in der Mitte
+des Deckels.
+Der Schalter ist von der gleichen „2 · Reverse“-Version wie der Polwendeschalter 31331
+„+“ in der Mitte links und unten rechts,
+„-“ Mitte links
+Version 1: ohne 330 Ω-Widerstand zwischen Schalter und Knopf des Potentiometers
+Version 1: Widerstände sind vom Typ
+0309/12
+
+
+
+
+8 u-t4 TP – Transistor-Potentiometer
+
+9 u-t4 RB – Relaisbaustein
+
+
+
+
+
+
+
+Artikelnummer: 36735
+Deckeltyp 2
+Die Platine ist 41 mm · 68 mm groß.
+Das Potentiometer ist in den Deckel eingeschraubt und befindet sich in der Mitte
+der unteren Hälfte des Deckels.
+ Das Modul hat keine Stromanschlüsse.
+ Der Transistor hat einen Kühler.
+ Version 1: Widerstände sind vom Typ
+0309/12
+
+
+
+
+
+
+
+
+
+Artikelnummer: 36734
+Deckeltyp 1
+Die Platine ist 41 mm · 68 mm groß.
+Das Modul hat keine Stromanschlüsse.
+Relais Siemens V23012-A131-B001
+Es wurde ein Gleichrichter mit vier Dioden geschaffen, damit das Relais auch
+mit Wechselstrom gesteuert werden
+kann.
+
+10 hl PB – Potentiometer-Baustein
+
+
+
+
+
+
+
+Artikelnummer: 37158
+Deckeltyp 4
+Die Platine ist 41 mm · 68 mm groß.
+Die Leiterplatte befindet sich direkt unter dem Deckel.
+ Potentiometer sind in den Deckel eingeschraubt und befinden sich in der Mitte
+der unteren und oberen Hälfte des Deckels.
+ 2 · „+“ unten rechts, 2 · „-“ unten links
+
+Elektronik
+
+12 h3 RB II – Relaismodul
+
+11 hl EF – Experimentierfeld
+
+
+
+
+
+
+
+
+
+Artikelnummer: 37683
+Deckeltyp 1
+Die Platine ist 41 mm · 68 mm groß.
+Das Modul hat keine Stromanschlüsse.
+Relais ohne andere Elektronik
+Relais Siemens V23021-A231-A001
+
+13 h4 ML – Mikrofon/Lautsprecher
+
+
+
+
+
+
+Artikelnummer: 37140
+Deckeltyp 5
+Die Platine ist 41 mm · 68 mm groß.
+Die Leiterplatte befindet sich direkt unter dem Deckel.
+
+
+ Artikelnummer: 36394
+ Deckeltyp 1
+
+
+
+ Dieses Modul hat keine Leiterplatte.
+ Das Modul hat keine Stromanschlüsse.
+ Enthält nur ein „Piezo-Element“, das als
+Mikrofon oder als Lautsprecher verwendet werden kann.
+
+Nachbau
+In verschiedenen Themen des fischertechnik-Forums kann man sehen, wie die Nachbauten verschiedener Personen aussehen
+oder aussehen sollten. Der eine möchte seinen Nachbau so klein wie möglich, während ein anderer alles groß haben möchte.
+Einer möchte nur eine Leiterplatte ohne Gehäuse, ein anderer arbeitet mit SMDs oder
+auf Lochraster-Platinen. Mit Bundhülsen
+oder den 1,3 mm-Lötstiften – die Bandbreite ist groß.
+Ich selbst will alles jeweils in einem passenden Gehäuse. Wie bei den „Arduinos“ und
+anderen Controller-Boards ist es auch in
+Form eines „Shields“ interessant (Abb. 20).
+Ausgestattet mit Stiftleisten können dann
+mehrere „Shields“ auf ein Steckbrett gesteckt werden. Der Vorteil ist, dass keine
+Anschlussbuchsen erforderlich sind: Die
+Verbindungen zwischen den Anschlüssen
+werden mit Drahtbrücken hergestellt.
+Wenn nur eine Leiterplatte gewünscht ist,
+gibt es drei Möglichkeiten, sie in ein Modell
+einzubauen:
+1. Mit vier Löchern im 15-mm-Raster. Die
+Befestigung erfolgt dann mittels M3-
+
+Schrauben im Baustein 15 mit Ansenkung (32321), mit Abstandsring 3
+(31597). Hierauf wird die Leiterplatte
+platziert, die dann mit vier Muttern festgezogen wird.
+2. Mit vier Löchern im 15 mm-Raster. Befestigung mit M3-Schrauben und Gleitmuttern in den Schlitzen der Bausteine oder der Alu-Profile. Dies ist bei Verwendung der Makerbeam-Profile noch einfacher.
+3. Die Leiterplatte kann auch auf jeder
+Seite ca. 3,5 mm breiter gemacht werden, so dass die Leiterplatte selbst in die
+Schlitze der Bausteine passt.
+Gehäuse
+Innerhalb des fischertechnik-Programms
+gibt es zwei mögliche Teile, die als Gehäuse
+in Frage kommen: den Batteriehalter 9 V
+(32263 + 32958, Abb. 21) oder die Kassette
+grau (35359), gelb (32076, Abb. 22) oder
+rot (130961) mit Abdeckung (35360). Man
+kam auch ein eigenes Design mithilfe des
+3D-Drucks herstellen. In meinen ersten
+Nachbauten habe ich die Kassette (35359)
+verwendet. In die Ecken schraubte oder
+klebte ich quadratische Profile, in die ich
+ein Loch gebohrt hatte, um den Deckel mit
+selbstschneidenden Schrauben anzuschrauben. In einer späteren Version habe ich die
+Platine mit dem Deckel verschraubt. Das
+transparente Material des Deckels ist jedoch
+nicht darauf ausgelegt, sodass Teile abbrachen.
+
+
+
+
+Elektronik
+
+
+Frontplatte
+
+
+Die zweite Version verwendete das Batteriefach (32263). Da hier kein Platz zum
+Verschrauben der Leiterplatte vorhanden
+ist, musste ich die Leiterplatte irgendwie
+festklemmen. Zu diesem Zweck habe ich
+zwei Stücke Styrol auf die kurzen Enden
+des Deckels geklebt (Abb. 23). Diese Teile
+sind 25 mm breit, 1,5 mm dick, 15 mm
+hoch und gewährleisten den richtigen Abstand zwischen Platine und Deckel. Ich
+musste noch ein paar Stücke eines 2,5 mm
+hohen Styrol-Streifens auf die Unterseite
+kleben, um die Platine sicher festzuklemmen. Für die Abdeckung musste ich noch
+die Löcher für die Anschlussbuchsen, LED
+und Potentiometer bohren. Da die Platine
+genau in den Deckel passt, konnte ich die
+Platine selbst als Bohrschablone verwenden.
+
+Jetzt braucht man nur noch eine Frontplatte.
+Dafür habe ich das Programm FrontDesigner von Abacom [2] gekauft. Nachdem ich
+eine Weile mit diesem Programm gearbeitet
+hatte, gelang es mir sogar, die originalen
+Frontplatten zu zeichnen. Besonders die
+Skala für das Potentiometer hat mir viele
+Probleme bereitet. Aber am Ende ist es mir
+gelungen.
+Ich habe die Frontplatten-Entwürfe auf normales Druckerpapier gedruckt und wollte
+sie auf den Deckel kleben. Ich war aber
+auch mit dem 3D-Druck des Deckels beschäftigt, wobei die Texte mit gedruckt
+werden. Da ich selbst keinen 3D-Drucker
+haben wollte, ließ ich die Deckel zunächst
+bei Shapeways [3] drucken. Da dies mit einem weißen Grundmaterial gemacht wird,
+musste ich den Deckel selbst rot streichen.
+Es stellte sich schnell heraus, dass die Buchstaben viel zu klein waren und sich beim
+Drucken gefüllt hatten. Also drucke ich die
+Frontplatten wieder selbst, aber jetzt auf Fotopapier (Abb. 24).
+
+
+
+(Abb. 25 und 27). In diesen Versionen stecken die Leiterplatten zwischen den am Deckel angebrachten Abstandshaltern und den
+erhöhten Ecken im Boden des Gehäuses.
+Wie beim Original befinden sich unten vier
+Löcher, in die die Schrauben zum Festschrauben des Deckels kommen.
+
+Frontplatten (1)
+
+Frontplatten (2)
+
+
+3D-Druck
+Für die vierte und fünfte Version eines Gehäuses habe ich mit dem Programm Tinkercad eine alternative Version des SilberlingGehäuses gezeichnet (Abb. 25). Ich habe
+dies auch mit der Kassette (35359) gemacht
+(Abb. 26). Der Unterschied ist, dass ich nur
+Nuten und keine Zapfen zum Anschließen
+mehrerer Module verwende. Da ich auch
+keine Verbindungsstecker benötige, kann
+der Deckel bis zu den Rändern reichen. Dies
+führt auch zu einer geschlossenen Oberseite
+der miteinander gekoppelten Module
+
+
+
+Da ich mit der Qualität und insbesondere
+den Preisen von Shapeways nicht zufrieden
+war, lasse ich meine 3D-Designs jetzt von
+der belgischen i.materialise [4] drucken. Da
+die bedruckten Gehäuse alle weiß sind,
+musste ich sie noch selbst streichen. Zuerst
+verwendete ich dafür graue Emailfarbe
+
+
+Elektronik
+
+Nummer 127 von Humbrol. Leider ist diese
+Farbe nicht farbecht. Deshalb verwende ich
+jetzt die Aluminiumfarbe Nummer 91 von
+Revell. Für Rot verwende ich Humbrol
+Nummer 153.
+Unter [6] können die 3D-Designs heruntergeladen werden.
+Leiterplatten
+Die Reproduktion kann auf einer Kopie oder einem völlig neuen Design basieren.
+Beim exakten Kopieren gibt es zwei Probleme: Die Potentiometer und Lampenfassungen sind nicht mehr verfügbar. Man
+kann eine LED anstelle des Lämpchens verwenden, am besten eine rote oder gelbe
+LED mit geringem Stromverbrauch. Grüne,
+blaue und weiße LEDs arbeiten mit einer
+höheren Spannung und beeinträchtigen somit den Betrieb. Es gibt Potentiometer, die
+mit einer Mutter festgezogen werden können, aber diese sind größer als die in den
+Silberlingen. Außerdem ist die Welle nicht
+„D“-förmig. Es kann auch vorkommen,
+dass der Wert, den man benötigt, nicht mit
+einer 4 mm-Achse verfügbar ist, sondern
+nur mit 6 mm-Achsen. Ich persönlich benutze die PT15-Potentiometer mit den entsprechenden Einsatzwellen. Diese sind auf
+die Leiterplatte gelötet. Das führt zu Platzmangel. Widerstände, die ich unter einem
+Potentiometer projiziere, sind vom Typ
+0204 und haben 1/8 W. Diese sind so klein
+und dünn, dass problemlos ein Potentiometer darauf platziert werden kann.
+Die Abmessungen für meine „alternativen“
+Platinen sind: einseitig 40 mm · 70 mm
+(Abb. 28),
+einseitig
+56 mm · 56 mm
+(Abb. 29) und einseitig/doppelseitig 26 mm
+· 56 mm (Abb. 30). Aufgrund der Verwendung von SMDs sind meine „Shields“ doppelseitig 20 mm · 55 mm oder kürzer
+(Abb. 20). Ich habe die Leiterplatten in Belgien von der Firma Eurocircuits [5] herstellen lassen.
+
+
+
+
+
+
+
+Komponenten
+Anstelle der Lämpchen kann man problemlos gelbe oder rote Standard-LEDs mit geringem Stromverbrauch verwenden. Es ist
+jedoch am besten, die Vorwiderstände
+durch einen 3K3-Widerstand zu ersetzen.
+Für die Potentiometer stehen auch ausreichende Alternativen zur Verfügung.
+Alternativen zu den Anschlussbuchsen sind
+in Form von Bundhülsen erhältlich. Es gab
+eine Abhandlung darüber in einer der vorherigen Ausgaben ft:pedia. Ich benutze die
+Bundhülsen aus dem E-Tec-Modul, das
+einst bei Knobloch erhältlich war.
+Die in den Silberlingen verwendeten Relais
+sind nicht mehr bei dem namhaften Elektroniklieferanten erhältlich. Sie sind immer
+noch im Internet zu finden, aber zu Wucherpreisen. Alternative: Z. B. Omron G6A.
+Trotz der Tatsache, dass diese Relais auch
+in 9 V-Versionen erhältlich sind, werden sie
+von den bekannten Unternehmen in der
+Standardversion nicht angeboten. Deshalb
+habe ich alle fischer-Relais gemessen und
+festgestellt, dass sie erst bei 5,5 V anziehen.
+Die 12 V-Version zieht jedoch erst bei
+7,5 V an. Deshalb habe ich nur die 5 V-Version verwendet. Diese zieht bereits bei 3 V
+an.
+
+Die Transistoren, auf die ich gestoßen bin,
+sind die NPN BC108 und BC170, BC173
+und BC238 sowie die PNP BC250 und
+BC308. Als Alternative zum NPN kann
+man den BC548 (als SMD den BC848) und
+für den PNP den BC558 (als SMD den
+BC858) verwenden.
+Für den Schalter im Verstärkerbaustein
+habe ich alternativ einen APEM-Schalter
+vom Typ 5246 – „2 · um“ verwendet (Conrad 700192).
+Als Alternative zum Experimentierfeld aus
+dem Hobby-Labor kann man auch ein Modul mit einem kleinen Steckbrett herstellen,
+z. B. TRU COMPONENTS Breadboard
+Weis, Gesamtzahl der Stifte 170 (Conrad
+1570182, Abb. 31).
+
+Für die Dioden kann man 1N4148 (als SMD
+LL4148) und 1N4001 (als SMD LL4001)
+verwenden.
+Die in den Silberlingen enthaltenen Scheibenkondensatoren sind möglicherweise
+nicht mehr in dieser Form verfügbar. Es gibt
+jedoch viele Alternativen, z. B. als SMD
+den Typ 1206.
+In den Silberlingen werden verschiedene
+Arten von Widerständen verwendet:
+0411/15, 0309/12 und 0207/12. Diese können alle durch die 0207 ersetzt werden. Optional kann der viel kleinere 0204 auch im
+5 mm-Raster verwendet werden, als SMD
+Typ 1206.
+
+
+
+Das war es für's Erste. Im nächsten Teil
+werde ich näher auf die Beschreibung der
+verschiedenen Module eingehen. Dann gibt
+es die Schaltpläne und Layouts. Dann
+werde ich auch vier verschiedene alternative Versionen vorstellen.
+
+Links
+[1]
+
+EAGLE
+
+[2]
+
+Frontdesigner
+
+
+Elektronik
+
+[3]
+
+Shapeways
+
+[5]
+
+eurocircuits
+
+[4]
+
+i.materialise
+
+[6]
+
+Peter Krijnen auf Thingiverse
+
+
+

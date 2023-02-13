@@ -1,0 +1,198 @@
+
+
+Elektronik
+
+Ampelsteuerung
+Hans-Christian Funke
+Schon mit den ersten em-Baukästen von fischertechnik konnte man mit Hilfe von Schleifringen
+und Abnehmern eine Ampel-Schaltung herstellen. In späteren Varianten konnte man mit
+Nockenscheiben und Tastern die Umsetzung etwas eleganter lösen. Mit den Silberlingen war
+eine erste komplett elektronische Umsetzung möglich. Daran anknüpfend zeige ich hier
+verschiedene Umsetzungen mit meinen Elektronikmodulen.
+Die meisten würden dieses Problem eh mit
+einem TXT und einem kleinen Programm
+lösen, aber hier geht es ums Tüfteln und
+Knobeln mit Gattern und Speichern.
+Es gibt viele Möglichkeiten, zum Ziel zu
+gelangen. Hier stelle ich euch zwei Varianten vor – eine sehr einfache Version, die
+wirklich nur den Ablauf nachstellt (ohne
+Realitätsbezug) und eine zweite Variante,
+bei der man sämtliche Lichtphasen einzeln
+zeitlich auf den „Verkehr“ abstimmen kann.
+
+Variante 1
+
+leuchten muss – einmal mit der roten LED
+und einmal ohne die rote LED. Die Grünphase dazwischen, wenn die gelbe und rote
+LED aus (low) sind, wird mit Hilfe eines
+AND-Gatters abgefragt – allerdings benötigen wir ein logisch 1 (high), damit das
+AND-Gatter am Ausgang ebenfalls high
+wird, darum müssen beide Eingangssignale
+(gelb und rot) vorher invertiert werden.
+
+Variante 2
+Mit der Variante 1 ist zwar schon einmal die
+grundsätzliche Umsetzung zur Nachbildung
+einer Ampel-Schaltung erbracht, aber
+fernab von der Realität. Um eine realitätsnahe Simulation zu erhalten, benötigen wir
+individuelle Zeitintervalle. Dafür eignet
+sich ein Mono-Flop (70005) ideal, weil hier
+die Schaltzeiten über den eingebauten
+Regler schnell individuell eingestellt
+werden können.
+
+
+Die Umsetzung der Schaltung kann auf
+mehreren Wegen erfolgen, aber wenn man
+die Schaltzeit für jede Phase separat bestimmen möchte, braucht man pro Lichtphase
+ein Mono-Flop (MF).
+
+In Abb. 2 werden zwei Taktungen abgebildet, wie diese z. B. ein Taktgenerator
+(70004) erzeugt. Ist ein Takt auf 1 (high),
+dann leuchtet die LED. Beim längeren Takt
+ist es die rote LED („Anhalten“), der kurze
+Takt passt genau dazu, wie die gelbe LED
+
+Hier wird erst einmal nur die Schaltung für
+eine Ampel-Schaltung (Fußgängerüberweg) vorgestellt, um so das Prinzip besser
+veranschaulichen zu können. Für den
+Aufbau werden 4 MFs benötigt (2 × 70005),
+ein AND-Gatter und zwei OR-Gatter.
+
+
+
+Elektronik
+
+
+Damit für das AND-Gatter nicht extra ein
+Elektronikmodul eingesetzt werden muss,
+habe ich das AND-Gatter mit einem ORGatter simuliert (Abb. 3).
+
+
+Somit wird nur noch ein OR-NOR-Gatter
+(70013) und ein Experimentiermodul
+(70021) benötigt. Das Experimentiermodul
+wird nicht zwingend gebraucht, es beherbergt eine Starter-Schaltung aus einem
+Widerstand und einem Kondensator (der
+Widerstand ist links und der Kondensator
+rechts in Abb. 4 zu sehen), die theoretisch
+auch einfach so an den Eingang vom ORGatter gesteckt werden könnten.
+
+
+
+In der Schaltung ist ersichtlich, dass die vier
+MFs alle zu einem Ring zusammen geschaltet werden. Nach dem Einschalten der Versorgungsspannung befinden sich daher alle
+MFs im Ruhezustand, also benötigt eines
+der MFs einen Stups, damit die Schaltung
+losläuft.
+
+Gehen wir durch die Schaltung (siehe
+und es beginnt mit der roten LED (nach dem
+Einschalten sinnvoll – erst einmal alles
+anhalten). Das MF2 (gelb_1) wartet die Zeit
+ab, in der die gelbe LED nicht leuchten soll.
+Die gelbe LED wird über ein ODER-Gatter
+gesteuert und leuchtet nur, wenn MF2
+
+
+
+Elektronik
+
+(gelb_1 = nicht gelb) und MF3 (grün) beide
+low sind.
+
+Elektronikmodul-Videos
+
+Sobald MF1 und MF2 abgelaufen sind
+(beide auf low), wird MF3 gestartet – die
+grüne LED. Ist MF3 abgelaufen, sind MF2
+und auch MF3 low: Die gelbe LED leuchtet.
+Das MF4 ist somit die Leuchtdauer der
+gelben nach der grünen Phase. Damit ist der
+Kreis geschlossen; MF1 und MF2 werden
+wieder angestoßen.
+
+Quellen
+
+Abschluss
+Für eine Ampel-Schaltung mit kreuzendem
+Verkehr erhöht sich die Anzahl der
+erforderlichen Zeitglieder. Die Erweiterung
+erfolgt nach dem gleichen Prinzip.
+Man kann allerdings überlegen, ob man die
+MFs mit gleichen Zeiten z. B. für die gelben
+Phasen durch Steuerung mit Logik-Gattern
+mehrfach verwenden kann und so MFs
+einspart. Viel Spaß beim Tüfteln!
+Übrigens sind die verwendeten LEDs weiße
+1-mA-LEDs. Sie sind in die fischertechnikLeuchtsteine eingesetzt, auf die man die
+bunten neuen und alten Kappen aufsetzen
+kann. Ihr könnt aber auch die farbigen LEDBausteine verwenden (Abb. 6):
+
+
+Mit dem „Labor für digitale Elektronik“
+[11] werden auch diese LED-Bausteine im
+Online-Shop bei Franz Santjohanser erhältlich sein.
+Alles rund um die Elektronikmodule
+erhaltet ihr beim offiziellen fischertechnikServicepartner [1]. Im Online-Shop sind die
+Elektronikmodule, die Zusatzmodule,
+LED-Bausteine, Baukästen, Labore und
+Zubehör erhältlich.
+
+Auf YouTube hat „Zerobrain“ Videos unter
+Verwendung der Elektronikmodule erstellt
+mit interessanten Themen aus der digitalen
+Elektronik [2, 3, 4].
+[1]
+
+santjohanser Spielen. Lernen.
+Technik.
+
+[2]
+
+„Zerobrain“: Grundkurs Digitaltechnik 1. Auf YouTube, 2021, ca.
+34 min.
+
+[3]
+
+„Zerobrain“: Grundkurs Digitaltechnik 2: Geschwindigkeit mit
+einfachen Gattern. Auf YouTube,
+2021, ca. 17 min.
+
+[4]
+
+„Zerobrain“: Keiner versteht FlipFlops | 4 Bit Digitalzähler erklärt.
+Auf YouTube, 2021, ca. 23 min.
+
+[5]
+
+Hans-Christian Funke: Elektronikmodule (Teil 1): Einleitung. 4/2019, S. 40–46.
+
+[6]
+
+Hans-Christian Funke: Elektronikmodule (Teil 2). ft:pedia 1/2020,
+S. 52–61.
+
+[7]
+
+Hans-Christian Funke: Elektronikmodule (Teil 3). ft:pedia 2/2020,
+S. 68–81.
+
+[8]
+
+Hans-Christian Funke: ElektronikModule (Teil 4). ft:pedia 3/2020,
+S. 59–70.
+
+[9]
+
+Hans-Christian Funke: ElektronikModule (Teil 5). ft:pedia 4/2020,
+S. 80–94.
+
+[10] Hans-Christian Funke: ElektronikModule (Teil 6). ft:pedia 1/2021,
+S. 94–99.
+[11] Hans-Christian Funke: Labor für
+digitale Elektronik. ft:pedia 3/2021,
+S. 49–55.
+
+
+

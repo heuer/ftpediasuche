@@ -1,0 +1,531 @@
+
+
+Elektronik
+
+Silberlinge: Original oder Nachbau (Teil 4)
+Peter Krijnen
+Da die Silberlinge an ihren Ausgängen nur 20 mA vertragen, braucht man eine Möglichkeit,
+größere Ströme zu schalten: das Relais.
+Im Laufe der Jahre umfasste das fischertechnik-Sortiment mehrere Relais.
+
+
+fischertechnik hergestellten Relais
+
+1970 stellte fischertechnik die Licht-Elektronik-Kästen l-e1 (30081) und l-e2 (30082)
+vor. Im gleichen Gehäuse wie der Batteriestab 31041 ist ein Relais eingebaut, das von
+einem kleinen Verstärker angesteuert wird
+(31360). Diese Version war auch im Schulkasten u-t4 (30609).
+1971 kommt für die ElektromechanikKästen e-m1 (30071) und e-m2 (30072) ein
+separates Relais (35793) (Bild 89) auf den
+Markt: e-m5 (30075). Dieses 6 V-Relais
+mit zwei Wechselkontakten ist in einem
+30 × 30 × 45 mm kleinen Gehäuse eingebaut.
+
+
+1972 wurden die l-e-Kästen durch die e-cKästen ersetzt, und auch die e-m-Kästen
+werden ersetzt. Wir sehen das Relais
+
+
+Elektronik
+
+(35793) in hobby 3 (30623) und dem davon
+abgeleiteten Schulkasten u-t3 (30608).
+
+1975 wird Relais 35793 durch Relais RBII
+(37683, Abb. 88 oben Mitte und Abb. 99)
+ersetzt. Dieses Relais befindet sich ebenfalls in einem Silberling-Gehäuse. Es hat
+die gleiche Frontplatte wie das Relais
+36734, aber besitzt keine weitere Elektronik.
+
+Der neue e-c-Kasten (30085) enthält neben
+einem Gleichrichtermodul (36393) auch ein
+Relaismodul mit Verstärker (36392,
+45 × 75 × 30 mm kleinen transparenten
+Gehäuse mit silberfarbenem Deckel ausgestattet: die Silberlinge. Dieses Relais finden
+wir auch im neuen Elektronikkasten
+hobby 4 (30624).
+
+1977 wird das IC-Digital-Praktikum
+(30630) vorgestellt. Dies ist der letzte
+Kasten, die noch ein Relais (38617, Abb. 88
+rechts unten) enthält. Mit einem Verstärker
+ausgestattet, verfügt auch dieses Relais über
+zwei Wechselkontakte. Die großen Änderungen liegen in den Abmessungen
+(45 × 75 × 15 mm) und der Art der
+Anschlüsse. Die Silberlinge verwendeten
+
+1973 wird u-t4 durch eine Version mit
+Silberlingen ersetzt. Diese Box enthält
+jedoch ein weiteres Relais: Dieses Relais
+(36734, Abb. 88 rechts oben) ist mit einem
+Gleichrichter ausgestattet, der mit vier
+Dioden aufgebaut ist.
+Relais
+
+Artikel
+
+Typ
+
+Hersteller
+
+NennSpannung
+
+Widerstand
+Ohm
+
+AnsprechSpannung
+
+MaximalSpannung
+
+MinimalStrom
+
+e-m5
+
+35793
+
+?
+
+Gruner
+
+6V
+
+99 Ω
+
+2,9 V
+
+12 V
+
+30 mA
+
+e-m5
+
+35793
+
+?
+
+Gruner
+
+6V
+
+98 Ω
+
+2,4 V
+
+12 V
+
+20 mA
+
+e-m5
+
+35793
+
+?
+
+Gruner
+
+6V
+
+111 Ω
+
+3,4 V
+
+12 V
+
+30 mA
+
+e-m5
+
+35793
+
+?
+
+Gruner
+
+6V
+
+104 Ω
+
+3,0 V
+
+12 V
+
+30 mA
+
+h4 RB-v1
+
+36392
+
+V23012A0131A001
+
+Siemens
+
+9V
+
+150 Ω
+
+5,5 V
+
+16,5 V
+
+40 mA
+
+h4 RB-v2
+
+36392
+
+V23012A2131A001
+
+Siemens
+
+9V
+
+148 Ω
+
+4,9 V
+
+16,5 V
+
+30 mA
+
+u-t4 RB
+
+36734
+
+V23012A0131A001
+
+Siemens
+
+9V
+
+153 Ω
+
+5,1 V
+
+16,5 V
+
+30 mA
+
+h3 RBII
+
+37683
+
+V23012A2131A001
+
+Siemens
+
+9V
+
+153 Ω
+
+5,3 V
+
+16,5 V
+
+30 mA
+
+h3 RBII
+
+37683
+
+V23012A2131A001
+
+Siemens
+
+9V
+
+151 Ω
+
+5,0 V
+
+16,5 V
+
+30 mA
+
+h3 RBII
+
+37683
+
+V23012A2131A001
+
+Siemens
+
+9V
+
+154 Ω
+
+4,5 V
+
+16,5 V
+
+30 mA
+
+h3 RBII
+
+37683
+
+V23012A2131A001
+
+Siemens
+
+9V
+
+148 Ω
+
+5,3 V
+
+16,5 V
+
+30 mA
+
+IC DP SST
+
+38617
+
+V23012A2131A001
+
+Siemens
+
+9V
+
+154 Ω
+
+5,2 V
+
+16,5 V
+
+30 mA
+
+Tab. 1 : Kenndaten der fischertechnik-Relais
+
+
+
+Stecker, die neuen Module basieren auf
+Lötstiften.
+Nachdem das IC-Digital-Praktikum 1981
+und em10 1989 aus dem Sortiment genommen wurde, gab es kein Relais von fischertechnik mehr.
+
+Ohne Gehäuse
+Betrachtet man zunächst das eigentliche
+Relais ohne das von fischertechnik umgebaute Gehäuse, fällt als erstes auf, dass die
+Typennummern im Datenblatt [1], das im
+Internet zu finden ist, nicht zu finden sind.
+Vergleicht man auch die im Datenblatt
+abgedruckte Zeichnung des Relais mit dem
+Original-Layout (Abb. 94), sieht man, dass
+ein Wechselkontakt gedreht wurde. In der
+Tab. 1 unten habe ich alle Daten meiner
+Relais aufgenommen.
+Wenn wir nun Tab. 1 mit Tabelle 2 des
+Datenblatts [1] vergleichen, können wir die
+Relais basierend auf dem Widerstand zwischen den 5 V- und 12 V-Typen eingeben.
+Die maximale Spannung sollte dann ca.
+16,5 V betragen. Leider habe ich keine
+Informationen über die in e-m5 eingebauten
+Gruner-Relais finden können.
+
+erste Version
+
+Insgesamt gibt es fünf verschiedene Relaisbausteine. Zwei davon möchte ich hervorheben.
+Relais 36392
+Von diesem Modul (Abb. 90) gibt es zwei
+Versionen, wobei die zweite Version drei
+Dioden anstelle der zwei in der ersten
+Version hat. Es ist mir nicht klar, warum
+diese dritte Diode hinzugefügt wurde.
+
+(36392) erste Version
+
+
+
+Elektronik
+
+
+erste Version
+zweite Version
+
+
+
+
+zweite Version
+(36392) zweite Version
+
+
+
+
+Elektronik
+
+Relais RBII 37683
+Im Gegensatz zu Relais 36392 hat Relais
+37683 (Abb. 99) keinen eingebauten
+Verstärker, denn dieses Relais war für die
+Elektromechanik-Kästen gedacht. Da keine
+schwachen Signale zu erwarten sind, konnte
+auf den Einbau eines Verstärkers verzichtet
+werden.
+
+RBII (37683)
+
+(37683)
+
+(37683)
+
+
+
+
+
+Relais-Ersatz?
+Bei allen Modulen ist es ziemlich einfach,
+sie nachzubauen. Für die Potentiometer gibt
+es reichlich Ersatz. Und auch LEDs als
+Ersatz für die Lämpchen sind kein Problem.
+Ein Ersatz für das Relais war jedoch ein
+Problem, wenn auch ein kleines. Sucht man
+im Internet, bekommt man recht viele
+Treffer, leider jedoch nicht die Typen, die
+wir brauchen. Und die angebotenen Relais
+sind auch sehr teuer.
+Ein kleines Problem aber, da im CADProgramm EAGLE noch viele weitere
+Relais zur Verfügung stehen. Ich habe mir
+einfach das Kleinste herausgesucht: das
+Omron G6A. Das gibt es laut Datenblatt [2]
+in verschiedenen Ausführungen und für
+unterschiedliche Spannungen. Es gibt auch
+9 V-Versionen, diese werden jedoch von
+den namhaften Händlern nicht angeboten –
+oder man muss 5.000 Stück auf einmal
+kaufen, mit mindestens sechs Monaten
+Lieferzeit.
+
+
+Da ich möglichst alle Komponenten von
+Conrad kaufen wollte, habe ich mich
+sowohl für die 5 V- (Conrad 503801) als
+auch für die 12 V-Version (Conrad 503803)
+entschieden. Es ist jedoch zu beachten, dass
+die Mindestspannung, bei der das Relais
+anspricht, mindestens 70 % der Nennspannung beträgt. Dies gilt auch für die
+maximale Spannung: maximal 200 % der
+Nennspannung.
+Ich habe gemessen, dass die 5 V-Version
+bereits bei 3 V anspricht und die 12 VVersion erst bei 7 V. Wenn man möchte,
+dass die Silberlinge mit 5 V arbeiten, muss
+man die 5 V-Version nehmen. Die Versorgungsspannung darf jedoch 10 V nicht
+überschreiten. Dann ist es besser, mit einem
+9 V-Spannungsstabilisator zu arbeiten.
+
+Nachbauten
+Versionen.
+
+Elektronik
+
+Für Relais 36392 habe ich auch eine Ersatzplatine entworfen. Das Layout davon ist in
+Nachbau 2
+Da das von mir entworfene Gehäuse
+(45 × 75 mm) keine seitlichen Kontakte für
+die Spannungsversorgung hat, mussten auf
+der Frontplatte mehrere Anschlüsse für die
+Spannungsversorgung angebracht werden.
+Ich habe deshalb drei „+“ Anschlüsse und
+drei „-“ Anschlüsse eingebaut.
+
+Relais-Bausteine
+
+Im Gegensatz zum Grundbaustein ist auf
+der Frontplatte des Relaisbausteins genügend Platz, um mehrere Anschlüsse für die
+Spannungsversorgung einzubauen. Dies ist
+auch für die Verbindung der Bausteine
+notwendig. Dies bedeutete, dass die eigentlichen Anschlüsse des Relais um eine
+Position verschoben werden mussten.
+Nachbau 1
+
+45 × 75-Gehäuse
+
+Original Silberling-Gehäuse
+
+
+
+Leiterplatte nur wenige Bauteile vorhanden
+sind. Das Omron-Relais hat die gleiche
+Größe wie ein 16-poliger IC-Sockel. Da ich
+mir noch nicht sicher war, welches Relais
+ich verwenden würde, die 5V- oder die
+12V-Version, habe ich einfach einen ICSockel eingebaut. Dann kann ich das Relais
+wechseln, wann immer ich es für nötig
+halte.
+
+Nachbau 3
+Auch hier habe ich extra Anschlüsse für die
+Stromversorgung vorgesehen: viermal „+“
+und viermal „-“.
+
+60 × 60-Gehäuse
+
+
+Kassette (32076)
+
+
+
+
+Elektronik
+
+
+Batteriegehäuse (32263)
+
+Kassette (32076)
+
+Batteriegehäuse (32263)
+
+Nachbau 4
+Diese Version entspricht der von Nachbau
+2, nur dass sie sich in einem Batteriegehäuse (32263) befindet. Da die Leiterplatte kleiner ist, musste ich nun von einer
+doppelseitigen ausgehen.
+
+
+
+
+
+für das Batteriegehäuse (32263)
+
+Nachbau 5: Der Shield
+
+Relaisbaustein als Shield
+
+Wegen der zu verwendenden Stiftleisten
+musste ich wieder von einer doppelseitigen
+Leiterplatte ausgehen. Im Gegensatz zu den
+anderen Versionen habe ich die Anschlüsse
+des Relais direkt nach außen verlegt und
+nicht erst unter dem Relais auf die andere
+Seite verlegt.
+
+des Shields
+
+Nachdem ich nun eine Weile mit diesen
+Omron-Relais gearbeitet habe, kann ich
+berichten, dass sie gut funktionieren. Einen
+kleinen Nachteil haben sie jedoch: Sie
+machen keine Geräusche. Mein Gehör ist
+leider nicht mehr so gut, aber die SiemensRelais machen beim Schalten deutlich mehr
+Lärm.
+Es ist jedoch möglich, Diode D1 durch eine
+LED zu ersetzen. Dann gibt es zumindest
+eine optische Anzeige wie bei den anderen
+Silberlingen.
+Das war es also für dieses Mal. Teil 5 der
+Beitragsserie handelt vom FLIP-FLOP.
+Zum Schluss noch ein Hinweis: Alle Schaltbilder und Layouts der Silberlinge sind im
+Downloadbereich der ft:pedia verfügbar.
+
+Quellen
+
+
+
+[1]
+
+Siemens: V23012 Relais. Datenblatt.
+
+[2]
+
+Omron: G6A Relais. Datenblatt.
+
+

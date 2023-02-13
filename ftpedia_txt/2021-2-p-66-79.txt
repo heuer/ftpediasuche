@@ -1,0 +1,698 @@
+
+
+Modell
+
+Tresor
+Hans-Christian Funke
+Eines meiner ersten elektronisch gesteuerten Modelle war ein Tresor. Diese Idee habe ich erneut aufgegriffen und ein Modell mit viel Raffinesse entworfen. Es gibt zwei Kodierungssysteme, die zum Öffnen geknackt werden müssen, eine Zeitverlängerung bei Fehlversuchen, eine
+doppelte Türverriegelung, und wer möchte, kann auch eine Sirene integrieren, die nach dem
+zweiten Fehlversuch aktiviert wird.
+
+Funktion
+Kernstück des gesamten Systems ist eine 4Bit-Kodierung. Die Kodierung erfolgt im
+Innenraum des Tresors mittels Schalter oder
+hier einfach nur Drahtbrücken (Abb. 2). Mit
+jedem Öffnen des Tresors kann oder sollte
+die Kodierung geändert werden. So werden
+aufmerksame Beobachter davon abgehalten, durch bloßes Wiederholen der Kombination den Tresor zu öffnen.
+
+
+Wer schon einmal nebenbei gerechnet hat,
+wird wissen, dass es bei 4 Bit nur 16 mögliche Kombinationen gibt. Bei der geringen
+Anzahl von Möglichkeiten könnte man
+diese tatsächlich schnell durchprobieren
+und hätte ein leichtes Spiel. Aus diesem
+Grund gibt es eine doppelte 4-Bit-Kodie-
+
+
+rung, woraus sich 16 · 16 = 256 Möglichkeiten ergeben – nun wird es schon nicht
+mehr so einfach.
+
+
+Eine der beiden 4-Bit-Kodierungen muss
+über einen Drehschalter an der Tür eingestellt werden. Für die anderen vier Bit benötigt man ein Hilfsmittel. Ohne dieses Hilfsmittel wird man niemals in der Lage sein,
+den Tresor zu öffnen!
+
+Im Dachbereich des Tresors sind vier Reedkontakte eingebaut, die eben nur mit Magneten aktiviert werden können. Auch müssen die Magnete an der richtigen Stelle platziert werden, ansonsten schließen die Reedkontakte nicht.
+Wird mit den Magneten die korrekte 4-BitStruktur eingestellt, dann wird damit eine
+der beiden Türverriegelungen geöffnet.
+Über den Drehschalter müssen die anderen
+vier Bit korrekt eingegeben werden, damit
+sich die zweite Türverriegelung öffnen
+lässt. Erst wenn beide Türriegel geöffnet
+sind, lässt sich die Tür vom Tresor öffnen.
+Ein Beispiel
+Auf einem Experimentiermodul im Tresor
+werden die Drahtbrücken gesteckt. Drahtbrücken, die nach „+“ gesteckt sind, entsprechen einer logischen 1 (high) – hier Bit
+1, 3 und 4. Die offenen oder an „-“ gesteckten Drahtbrücken entsprechen einer logischen 0 (low) – hier Bit 2. Damit ergibt sich
+für dieses Beispiel die Kodierung 1011.
+
+
+Für die Reedkontakte gibt es eine definierte
+Reihenfolge und Position für die einzelnen
+Bits. Wem es zu kompliziert ist, sich zu
+merken, wo sich welches Bit befindet oder
+ein Magnet abgelegt werden muss, der kann
+weitere Hilfsmittel am Dach des Tresors anbringen, z. B. kleine Papierstücke, die die
+Position der Magnete kennzeichnen. Eine
+weitere Hilfe kann die Beschriftung der Papierstücke mit der Reihenfolge (1-4) sein.
+Welches Bit wohin kommt, entscheidet jeder für sich selbst bzw. wird bei der Verdrahtung des Tresors festgelegt.
+
+Modell
+
+An jeder Position, die auf high liegt, muss
+ein Magnet abgelegt werden. Wird ein
+Magnet falsch abgelegt, kann der Tresor in
+diesem Zyklus nicht mehr geöffnet werden.
+(Was ein Zyklus ist, erkläre ich später.) Liegen alle Magnete an der richtigen Position,
+öffnet sich ein Türriegel.
+Es spielt keine Rolle, ob zuerst die Magnete
+in Position gebracht werden oder der Drehschalter bedient wird. Beim Drehschalter ist
+auch nicht die Reihenfolge entscheidend,
+sondern nur das Setzen der richtigen Bits. In
+unserem Beispiel müssen die Bits 1, 3 und
+4 gesetzt werden. Somit muss der Drehschalter dreimal eingestellt werden. Dazu
+wird eine der drei Zahlen nach oben gestellt,
+sodass man diese lesen kann. Jetzt muss ein
+geheimer Bestätigungstaster gedrückt werden, der sich in der Tür befindet. Damit
+wird die erste Zahl gesetzt. Das Gleiche
+muss nun für die anderen beiden Zahlen
+wiederholt werden. Sind alle Bits korrekt
+gesetzt, öffnet sich der Türriegel. Auch hier
+gilt: Wird eine falsche Zahl gesetzt, kann
+die Tür in diesem Zyklus nicht mehr geöffnet werden.
+Leuchtet das Licht an der Außenseite des
+Tresors, können keine Eingaben über den
+Drehschalter oder mit Hilfe der Magnete
+vorgenommen werden. Das Licht signalisiert eine Wartezeit. Diese Wartezeit von
+z. B. 5 s kann über ein Mono-Flop (MF)
+eingestellt werden. Erlischt das Licht, beginnt ein Zyklus, in dem die Tür geöffnet
+werden kann. Die Länge dieses Zyklus von
+z. B. 1 min könnt ihr über ein weiteres MF
+ebenfalls selbst festlegen. Innerhalb dieses
+Zyklus müssen die Magnete an der richtigen
+Position abgelegt, die Kodierung über den
+Drehschalter eingegeben und die Tür geöffnet werden.
+Wird vergessen, die Tür zu öffnen, wird die
+Tür mit Ablauf des Zyklus wieder verriegelt. Wird die Tür rechtzeitig geöffnet, wird
+über einen Türschalter die Verriegelung
+überbrückt. So wird auch verhindert, dass
+
+
+
+
+die Verriegelung aktiviert werden kann, solange die Tür geöffnet ist.
+Mit einer optionalen Erweiterung kann man
+die Wartezeit pro abgelaufenen Zyklus verlängern – so wie es bei manchen Zugangssicherungen passiert, wenn man das Passwort falsch eingegeben hat.
+
+hoffentlich gut ersichtlich sind. Am Ende
+findet ihr noch eine Stückliste zu den verbauten Teilen.
+Hier einige Baugruppen und Details für die
+Türverriegelung:
+
+Eine weitere Möglichkeit – ebenfalls optional – ist es, ein Alarmsignal oder eine Sirene
+auszulösen, wenn der zweite Zyklus beendet wurde, ohne die Tür zu öffnen.
+Ein spannendes Modell, das nicht nur viel
+Spaß beim Aufbau mit sich bringt, sondern
+auch dazu verleitet, weitere Hindernisse oder Türsicherungen zu erfinden und einzubauen.
+
+Aufbauanleitung
+Im Folgenden habe ich verschiedene Aufbauschritte abgebildet, in denen alle Details
+
+
+
+
+Modell
+
+
+
+Beim Aufbau hatte ich keine U-Getriebe zur
+Hand, sodass ich auf einen Ersatz zurückgreifen musste. Das U-Getriebe 31078 kann
+zusammen mit einer U-Achse 40 verwendet
+werden. In Abb. 9 ist ein U-Getriebe mit einer U-Achse 60 abgebildet. Die Höhe muss
+entsprechend angepasst werden, damit das
+Ritzel die Zahnstange führen kann.
+
+
+
+Einige wenige Ergänzungen musste ich später noch vornehmen, auf die ich im Verlauf
+des Aufbaus noch eingehen werde. Zum
+Beispiel sind einige Reedkontakthalter zur
+Kabelführung an Stellen zu sehen, die ich
+später dort nicht verwendet und dafür anderswo eingesetzt habe.
+
+muss so ausgerichtet werden, dass diese minimal tiefer steht. Ansonsten hakt die Zahnstange an der Kante der Bauplatte 15 · 15.
+
+
+
+In Abb. 10 wurden die Baugruppe aus Abb.
+4 zweimal verbaut. Die liegende Baugruppe
+rechts in Abb. 6 wurde etappenweise verbaut, damit die äußeren Bauplatten besser
+eingesetzt werden können.
+In Abb. 12 wurde ein Türriegel eingesetzt.
+Der Baustein 15 mit der Bauplatte 15 · 15
+
+
+
+
+Modell
+
+miteinander verbunden. Die Vierermodule
+können dann durch Einschieben von unten
+nach oben (siehe Abb. 18, 19) in die Nischen auf der Rückseite des Tresors eingesetzt werden. Es bedarf keiner weiteren Befestigung.
+
+
+
+
+Die gezeigte Anordnung der Elektronikmodule hat sich bei der Verkabelung als sinnvoll erwiesen. Die Vierer-Baugruppen von
+Elektronikmodulen werden mit zwei senkrechten und zwei waagerechten Bauplatten
+
+mit Bauplatten 15 · 30
+
+
+
+
+
+
+Baugruppen für die Tür
+Jetzt ist der Tresorraum im Wesentlichen
+schon fertiggestellt. Was noch fehlt ist die
+Tür (Abb. 20).
+
+Explosionsdarstellung
+
+
+
+Modell
+
+
+
+
+Die Achse 110 an der Türinnenseite ist die
+Halterung für die Türriegel. Beim Zusammenbauen des Drehschalters sollte die Justierung gleich vorgenommen werden. Steht
+die „1“ oben, muss auf der Rückseite die
+Nut der Schaltscheiben ebenfalls oben sein.
+
+nach rechts
+
+
+
+des Drehschalters
+
+
+
+
+Im letzten Schritt werden die Baugruppe für
+den Drehschalter montiert und Drehgelenke
+angebracht. Auch diese müssen Stück für
+Stück zusammen mit den Winkelsteinen
+60° montiert werden.
+Für den Türschalter war zuerst ein zweiter
+Winkelstein 60° vorgesehen (siehe die
+nächsten Abbildungen). Bei späteren Tests
+hat sich aber gezeigt, dass ein Winkelstein
+30° mit Baustein 5 besser funktioniert.
+
+
+
+
+Modell
+
+
+Die fertige Tür kann nun eingesetzt werden
+und damit ist der Aufbau komplett. Bevor
+die Tür in den Tresor eingesetzt wird, sollten die vier Taster des Drehschalters justiert
+werden, sodass diese auch in jeder Drehrichtung schalten. Die Verteilerplatte (nicht
+mehr erhältlich) ist entbehrlich. Diese ist für
+die kurze Anbindung der Reedkontakte gedacht. Wer keine Verteilerplatte hat, muss
+Buchsen zur Verlängerung der Reedkontakt-Kabel verwenden.
+
+Das vollständige Modell
+
+
+Magnetmarkierungen
+
+
+
+
+Hinweis: Bei einigen Versionen des MonoFlop-Moduls 70005 wurde die Beschriftung
+von den C-Anschlüssen am MF1 vertauscht. Der C+ Anschluss ist immer oben
+und der C- Anschluss unten.
+Wer Fragen zu dem Projekt hat, kann sich
+gerne an mich wenden unter elektronik
+@funke4you.de.
+Diese Steuerung könnte man auch durch einen Controller ersetzen. Spannend wird es,
+wie die zehn Schaltkontakte dann verwaltet
+werden: entweder über eine Erweiterung
+(Extension), eine Pseudoverwaltung durch
+Doppelbelegung bzw. Kodierung der Schalter oder unter Zuhilfenahme von Ergänzungsmodulen (Multiplexmodul 70024 oder Meldemodul 70017).
+
+
+In Abb. 35 und 36 seht ihr den vollständigen
+Schaltplan, den ich auf zwei Seiten aufteilen musste.
+
+
+
+Diese Teile sind nicht mehr als Einzelteile erhältlich (nur über den Zweitmarkt).
+
+Alle Teile bis auf die Platten 180 · 90, die
+Verteilerplatte und die Dauermagnete sind
+im Online-Shop der fischertechnik-Einzelteilhändler erhältlich. Als Ersatz für die
+Dauermagnete könnten auch die Dauermagnete der Kugelhalter verwendet werden
+(119850).
+Artikel
+
+Stk.
+
+Beschreibung
+
+31010
+
+
+Winkelstein 60°
+
+31011
+
+
+Winkelstein 30°
+
+31031
+
+
+Achse 110
+
+31053
+
+
+Zahnstange 60
+
+31058
+
+
+Nabenmutter
+
+31060
+
+
+Verbindungsstück 15
+
+31064
+
+
+U-Achse 40 Z28
+
+31078
+
+
+U-Getriebe
+
+
+31322
+
+
+Dauermagnet, grün
+
+313231
+
+
+Dauermagnet, rot
+
+313281
+
+
+Verteilerplatte
+
+31336
+
+~ 90
+
+Stecker rot
+
+31337
+
+58 2
+
+Stecker grün
+
+
+
+Modell
+
+Artikel
+
+Stk.
+
+Beschreibung
+
+Artikel
+
+Stk.
+
+Beschreibung
+
+31426
+
+
+Gelenkwürfel-Zunge
+
+38240
+
+
+V15 Eck, rot
+
+31436
+
+
+Gelenkwürfel-Klaue
+
+38241
+
+
+Bauplatte 15 · 30
+
+31928
+
+
+Federnocken 15
+
+38242
+
+
+Bauplatte 15 · 45
+
+32064
+
+
+Baustein 15, rot, Loch,
+2 Zapfen
+
+38245
+
+
+Bauplatte 15 · 90
+
+38246
+
+
+Bauplatte 15 · 15
+
+32879
+
+
+Baustein 30, schwarz
+
+38251
+
+
+Bauplatte 30 · 90
+
+32881
+
+
+Baustein 15, schwarz
+
+38415
+
+
+Achse 50, schwarz
+
+32882
+
+
+Baustein 15, schwarz,
+2 Zapfen
+
+38423
+
+
+Winkelstein 10 · 15 · 15
+
+35031
+
+
+Flachnabenzange
+
+38428
+
+
+35049
+
+Baustein, rot, 15 · 30 · 5
+3 Nuten
+
+
+Baustein, rot, 15 · 30 · 5
+Nut und Zapfen
+
+116251
+
+
+Baustein 30, rot
+
+35112
+
+
+Ritzel Z10 M1,5
+
+116252
+
+
+Baustein 15, rot
+
+35113
+
+
+Spannzange
+
+137096
+
+
+Motor XS
+
+35602
+
+
+Grundplatte 390 · 270
+
+div.
+
+Kabel versch. Länge
+
+35969
+
+
+Reedkontakthalter
+
+
+Ausdruck/Beschriftung
+
+36120
+
+
+Reedkontakte
+
+71036
+
+
+LED-Baustein blau, 1 mA
+
+36293
+
+
+Winkelträger 120, schwarz
+
+70003
+
+
+Versorgungsmodul 3-14 V
+
+363211
+
+
+Platte 180 · 90, rot
+
+70005
+
+
+Mono-Flop-Modul
+
+36323
+
+
+S-Riegel 4
+
+70007
+
+
+JK-Flip-Flop-Modul
+
+36334
+
+
+Riegelscheibe, rot
+
+70008
+
+
+RS-Flip-Flop-Modul
+
+36920
+
+
+Winkelträger 30, schwarz
+
+70010
+
+
+36921
+
+AND-NAND-Modul
+(4 Eingänge)
+
+
+Winkelträger 60, schwarz
+
+70011
+
+
+36922
+
+
+Winkelträger 15, schwarz
+
+AND-NAND-Modul
+(2 Eingänge)
+
+36950
+
+
+Winkelträger 15, schwarz,
+2 Zapfen
+
+70014
+
+
+EXOR-EXNOR-Modul
+
+70018
+
+
+Relaismodul
+
+71021
+
+
+Doppellitze 50mm,
+4 Stecker
+
+70021
+
+
+Experimentiermodul
+
+71022
+
+
+Doppellitze 105mm,
+4 Stecker
+
+700062
+
+
+D-Flip-Flop-Modul
+
+700153
+
+
+Multifunktionsmodul
+
+700043
+
+
+Taktgenerator/Binärzähler
+
+700244
+
+
+Multiplexmodul
+
+71046
+
+
+Kondensatorset
+
+71047
+
+
+Widerstands- und DiodenSet
+
+37237
+
+
+Baustein 5, rot, 1 Zapfen
+
+37238
+
+
+Baustein 5, rot, 2 Zapfen
+
+37468
+
+
+Baustein 7,5, rot
+
+37679
+
+
+Klemmbuchse 5
+
+37727
+
+
+Schaltscheibe, schwarz
+
+37783
+
+
+Minitaster
+
+Optional: Zusatz für Alarmsirene nach zweitem
+Versuch.
+
+Tab. 1: Teileliste
+
+Optional: Zusatz für Zeitverzögerung bei Fehlversuchen.
+
+
+
+
+
+Anhang
+Eine PDF-Datei mit Beschriftung für die
+Flachnabe, Markierung für die Dauermagnete auf dem Dach und Zahlenstreifen für
+die Kennzeichnung auf dem Experimentiermodul steht zum Herunterladen zur Verfügung [1] (siehe Abb. 2).
+Meine Empfehlung ist, die Papierstücke
+nach dem Ausscheiden mit einem Klebestift
+aufzukleben. Der Kleber ist in der Regel
+wasserlöslich und lässt sich später problemlos mit einem feuchten Lappen wieder von
+den Teilen entfernen.
+
+Modell
+
+Außerdem gibt es den Schaltplan ebenfalls
+als PDF zum Herunterladen zur besseren
+Ansicht.
+
+Sommeraktion
+Ein kleiner Hinweis zu den Elektronikmodulen: Vom 1. Juli bis 31. August 2021 wird
+es die Elektronikmodule 20% preisreduziert
+geben. Wer dieses Modell nachbauen
+möchte, sollte diese Aktion nutzen.
+
+Quellen
+[1]
+
+Hans-Christian Funke: PDF-Downloads zu diesem Modell auf der ft:pedia-Seite der ft:Community.
+
+
+

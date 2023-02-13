@@ -1,0 +1,638 @@
+
+Computing
+
+Computing
+
+Codes der fischertechnik-InfrarotFernsteuerungen
+Dirk Uffmann
+Wer den Sender oder den Empfänger einer der fischertechnik-IR-Fernsteuerungen ersetzen
+möchte (und nicht über einen TXT verfügt), muss den von der Fernsteuerung verwendeten Code
+kennen. Der Beitrag entschlüsselt das IR-Protokoll sowie die Codierung des IR Control Set
+(30344) und des aktuellen Nachfolgers Control Set (500881).
+
+Teil 1: IR Control Set (30344)
+Motivation
+Bei der Übernahme einer gebrauchten
+fischertechnik-Sammlung bin ich in den
+Besitz eines fischertechnik-Infrarot-Empfängers aus dem IR Control Set (30344)
+gekommen, ohne passenden Sender. Diesen
+zu beschaffen erwies sich als schwierig: Bei
+fischerfriendsman ist er nicht lieferbar.
+
+diese zunächst angelernt werden: Ohne die
+originale Fernsteuerung musste ich mir also
+etwas anderes einfallen lassen.
+Ermittlung der verwendeten Codes
+Dazu habe ich mir mit einem Arduino Nano
+und ein paar Infrarot-LEDs, deren Strom
+über einen Transistor geschaltet wird, selbst
+einen Fernsteuerungs-Sender gebaut. Bekannt ist, dass fischertechnik den RC5 Code
+verwendet. Unbekannt waren die verwendete 5-bit-Adresse und die 6-bit-Kommandos. Diese musste ich durch Ausprobieren
+finden: In einem Brute-Force-Verfahren
+habe ich alle möglichen Kombinationen
+von Adressen und Kommandos getestet, bis
+der Empfänger jeweils die erwarteten
+Reaktionen gezeigt hat. Geholfen hat dabei
+auch die Steuerungsanleitung, die in der
+fischertechnik-Datenbank verfügbar ist [1].
+Listing 1 zeigt die C-Funktionen, die ich
+zum Senden des IR-Codes benutzt habe.
+Ergebnis
+
+
+Es gibt eine anscheinend baugleiche Fernbedienung Rademacher 9490 für Rollladensteuerungen – diese kostet allerdings 46 €.
+Eine anlernbare Fernbedienung wäre die
+deutlich günstigere Lösung, allerdings muss
+
+Der Empfänger arbeitet mit dem RC5-Code
+exakt nach Spezifikation, siehe z. B. die Beschreibungen auf opendcc und von Jörg
+Bredendiek [2, 3]. Mit einer 36-kHz-Trägerfrequenz konnte ich den Empfänger gut
+mit hoher Reichweite ansprechen. Ich habe
+die Kommandos jeweils doppelt gesendet
+und dabei das Toggle-Bit gewechselt.
+
+
+
+
+volatile uint8_t timer_halfperiod = 0; //incremented with TCNT1 overflow
+volatile uint8_t toggle = 0;
+void init (void) // system clock 16 MHz is used (external quartz oscillator)
+{
+PORTD = _BV(PORTD2); // pull-up resistor on PD2 for IR receiver SFH5110
+DDRD = _BV(DDD3); // output PD3 for IR LED
+TIMSK0 = _BV(TOIE0);
+TCCR0B = _BV(CS02); //start TCNT0 with prescaler clock/256
+// 16 MHz/1780/8 = 1124 Hz pwm frequency ( period of 890 µsec)
+// timer 1 is used in fast pwm mode 14, WGM13:10 = "1110": ICR1 contains the top value for TCNT1
+TIMSK1 = _BV(TOIE1);
+TCCR1A = + _BV(WGM11); //CTC mode with ICR1 as top value
+TCCR1B = _BV(WGM13) + _BV(WGM12) + _BV(CS11); //TCNT1 with prescaler clock/8 (0.5 µs/step)
+ICR1 = 1780; //adapted to result in 890 µs for half the period of IR bits
+// 16 MHz/8/55 = 36.36 kHz pwm frequency ( period of 27.5 µsec)
+// timer 2 is used in fast pwm mode 7, WGM22:20 = "111": OCR2A contains the top value for TCNT2
+TCCR2A = _BV(WGM21) + _BV(WGM20); //_BV(COM2B1) is controlled in called function
+TCCR2B = _BV(WGM22) + _BV(CS21); //start TCNT2 with prescaler clock/8
+OCR2A = 55; //defines the period, i.e. the top value 16 MHz/8/56 = 36.36 kHz -> 27.5 µs
+OCR2B = 14; //defines the pulse length value: 0.5 µs * 14 = 7 µs
+EICRA = _BV(ISC01); // falling edge generates interrupt on INT0 (IR remote control)
+EIMSK = _BV(INT0); // enable INT0
+SMCR = _BV(SE); // idle mode is set up as sleep mode
+sei (); }
+void send_0() {
+TCNT1 = 0;
+TCNT2 = 0;
+timer_halfperiod = 0; //incremented with TCNT1 overflow
+TCCR2A |= _BV(COM2B1); //activate OCR2B output to IR LEDs
+while (timer_halfperiod == 0) sleep_mode();
+TCCR2A &= ~(_BV(COM2B1)); //de-activate OCR2B output to IR LEDs
+TCNT1 = 0;
+timer_halfperiod = 0; //incremented with TCNT1 overflow
+while (timer_halfperiod == 0) sleep_mode();}
+void send_1() {
+TCNT1 = 0;
+timer_halfperiod = 0; //incremented with TCNT1 overflow
+while (timer_halfperiod == 0) sleep_mode();
+TCNT1 = 0;
+TCNT2 = 0;
+timer_halfperiod = 0; //incremented with TCNT1 overflow
+TCCR2A |= _BV(COM2B1); //activate OCR2B output to IR LEDs
+while (timer_halfperiod == 0) sleep_mode();
+TCCR2A &= ~(_BV(COM2B1)); } //de-activate OCR2B output to IR LEDs
+void send_RC5 (uint8_t address, uint8_t command) {
+uint8_t loops = 2;
+uint8_t pulse_count=14;
+uint8_t mask = 0b01000000; //mask MSB of inverted command bit C6
+if (mask & command) address |= 0x80; // add start bit and inverted command bit C6
+else address |= 0xC0; // add start bit and inverted command bit C6, toggle bit is 0
+do { //execute 2 times with pause and switch toggle bit
+mask = 0b10000000; //mask MSB of 8-bit address
+//send 8 address bits (two start bits, one toggle bit + five address bits)
+do {
+if (address & mask) send_1();
+else send_0();
+mask = mask >> 1;
+pulse_count --; } while (pulse_count > 6);
+mask = 0b00100000; //mask MSB of 6-bit command
+//send 6 command bits
+do {
+if (command & mask) send_1();
+else send_0();
+mask = mask >> 1;
+pulse_count --; } while (pulse_count);
+pulse_count = 14; //refresh for next transfer
+address |= 0x20; //set toggle bit
+loops --;
+lcd_wait_ms(89); } while (loops); }
+
+Listing 1: C-Funktionen für den Arduino Nano zum Senden von RC5-Code
+
+
+
+Computing
+
+Die zeitliche Periode wiederholter Codes
+beträgt 114 ms, d. h. es gibt eine Pause von
+89 ms zwischen den 14-bit-Übertragungen,
+die ca. 25 ms in Anspruch nehmen.
+Ein weiteres, siebtes Command Bit, das in
+der später erweiterten Spezifikation anstelle
+des zweiten Startbits invertiert vorgesehen
+wurde (~C6), wird hier nicht genutzt. Daher
+sollte dieses Bit immer als zweites Startbit
+auf 1 gesetzt werden.
+Der schwarze fischertechnik-IR-Empfänger
+(aus 30344) wird mit folgender Systemadresse angesprochen:
+0x1B (hex) bzw. 27 (dec)
+Taste
+M1 rückwärts
+M1 vorwärts
+M1 Leistung
+M2 links
+M2 rechts
+M2 Leistung
+M3 Linkslauf
+M3 Rechtslauf
+M3 Leistung
+
+Command Code
+0x07
+0x08
+0x03
+0x09
+0x0A
+0x04
+0x01
+0x02
+0x05
+
+Tab. 1: RC5-Fernsteuerungscodes für den
+fischertechnik-IR-Empfänger aus 30344
+
+In Tab. 1 sind die Command-Codes der
+Tasten dargestellt. Diese sind entsprechend
+der Nummerierung der Tasten in der Steuerungsanleitung codiert. „M1 Leistung“ bedeutet, dass bei Motor 1 die Leistungsstufe
+umgeschaltet, d. h. zwischen langsam und
+schnell hin- und hergeschaltet werden soll.
+Mit diesen Codes kann man den Empfänger
+nun z. B. mit einem Arduino-Board oder
+anderen Mikrocontrollern steuern.
+Vermutlich benötigt der blaue Zweit-Empfänger, den es als Ergänzung gab, entweder eine andere Systemadresse oder zumindest andere Kommandos. Einen solchen
+habe ich aber nicht und kann es daher nicht
+überprüfen.
+
+Teil 2: Control Set (500881)
+Motivation
+Mit der neuen Infrarot-Fernsteuerung von
+fischertechnik (500881) gab es 2008 einen
+entscheidenden Schritt zur Verbesserung
+der Steuerung von Fahrzeugen und Motoren
+allgemein, da es nun 16 Geschwindigkeitsstufen für beide Fahrtrichtungen gibt und
+eine Servo-Steuerung für Lenkungen mit
+einer Auflösung von 5 bit (oder 32 Stufen)
+möglich ist. Die Fernsteuerung lässt sich
+auch gut einsetzen, um Mikrocontrollergesteuerte Fahrzeuge zu bewegen (siehe [4,
+5]). Bei fischerfriendsman habe ich zu
+diesem Zweck einen Sender einzeln (ohne
+Empfänger) recht günstig erworben. Zur
+Implementierung eines passenden Empfängers gab es bereits in ftpedia 2/2016
+einen interessanten Beitrag [5], in dem auch
+auf die Vorarbeit von Ad im wiki der
+ft:community verwiesen wurde [6]. Für die
+Implementierung eines Empfängers fehlen
+dort aber noch ein paar Detail-Informationen, die ich hier ergänze.
+Ermittlung der verwendeten Codes
+Zunächst habe ich mit Oszilloskop, Fototransistor und Pull-up-Widerstand an 9 Volt
+die Trägerfrequenz ermittelt. Der Sender
+nutzt 38 kHz als Trägerfrequenz für die
+Modulation. Bekannt ist bereits aus [5, 6],
+dass im RC-MM-Kodierverfahren 16 Pulse
+mit Puls-Distanz-Modulation übertragen
+werden, deren 15 Zeitabstände jeweils zwei
+Bits entsprechen, in Summe also 30 Bits.
+Ich betrachte hier die Empfänger-Seite.
+Dort werden die gesendeten Pulse invertiert
+und es bietet sich daher an, die fallenden
+Flanken der empfangenen Pulse zu betrachten. Der Zeitabstand zwischen den fallenden Flanken benachbarter Pulse gibt
+jeweils den Wert der beiden codierten Bits
+an, siehe Tab. 2. Dort habe ich auch gleich
+die Wertebereiche für den Timer0 angegeben, die ich für die Erkennung mit einer
+Toleranz von ca. ±50 µs zulasse.
+
+
+
+
+Zeitabstand
+
+TCNT0 min
+
+TCNT0 max
+
+Wert
+
+800 µs
+
+
+
+0b00
+
+bzw. rechts oder links (horizontal) bis zum
+Anschlag, der jeweils mit 0xF kodiert ist.
+
+900 µs
+
+
+
+0b01
+
+1000 µs
+
+
+
+0b10
+
+i
+
+Inhalt des 4-Bit-Nibble[i]
+
+Wertebereich
+
+1100 µs
+
+
+
+0b11
+
+
+0x8 fix
+0x0 bis 0xF
+
+
+Kopf / Header
+DIP- und On/Off-Taster
+rechter Joystick:
+vertikale Auslenkung
+rechter Joystick:
+horizontale Auslenkung
+linker Joystick:
+vertikale Auslenkung
+linker Joystick:
+horizontale Auslenkung
+Auslenkungsrichtung:
+0: unten / links
+1: oben / rechts
+
+
+Schwanz (Tail) mit Parity Bit
+
+0x3 oder 0xB
+
+Tab. 2: Zuordnung des Zeitabstandes der
+fallenden Flanke der empfangenen Pulse zu
+den binär codierten Werten
+
+Weiterhin ist bereits aus [6] die Struktur der
+übertragenen Information bekannt, allerdings fehlt dort die genaue Zuordnung der
+Bits und ihrer Werte zu den Auslenkungen
+der Joysticks. Ich habe mir daher selbst aus
+einem Arduino Nano Board mit Text-LCD
+und einem SFH5110-Empfänger am Interrupt-Pin INT0 einen Empfänger aufgebaut.
+Die Auswertung der Pulsabstände und
+Zuordnung der Codes erfolgte mit der in
+Listing 2 dargestellten Interrupt-Routine.
+Das Most Signifikant Bit (MSB) wird zuerst
+gesendet. Aufgrund der Code-Struktur bot
+sich eine Segmentierung der 30 Bits in acht
+4-Bit-Nibble an. Das letzte Nibble wird von
+mir mit 0b11 hinten aufgefüllt. Die empfangenen 4-Bit-Nibble werden auf dem TextLCD dargestellt.
+Ergebnis
+Daraus ergaben sich die in Tab. 3 zusammengefassten Informationen. Zu Beginn wird das Nibble[0] übertragen. Es hat
+immer den Wert 0b1000 = 0x8. Man könnte
+dies als Systemadresse nutzen und nur dann
+mit der Dekodierung fortfahren, wenn die
+Übereinstimmung der ersten vier Bits mit
+0b1000 gegeben ist. Alternativ könnte man
+dies auch nutzen, um die verwendeten PulsZeiten im Empfänger auf 1,0 ms bzw.
+0,8 ms zu kalibrieren.
+Nibble[1] enthält den Status der beiden
+DIP-Schalter und der beiden Taster. Details
+zur Bedeutung der Einzelbits sind in Tab. 4
+angegeben. Nibble[2] bis Nibble[5] enthalten die Auslenkung der Joysticks von der
+neutralen Mittelposition, welche jeweils mit
+0 kodiert ist, nach oben oder unten (vertikal)
+
+
+
+0x0 bis 0xF
+0x0 bis 0xF
+0x0 bis 0xF
+0x0 bis 0xF
+0x0 bis 0xF
+
+Tab. 3: Bedeutung der übertragenen Bits
+
+Dieser Wert kann direkt als PWM-Wert zur
+Geschwindigkeitskontrolle eines Motors
+genutzt werden; insgesamt können so vier
+DC- oder Servo-Motoren gesteuert werden.
+Nibble[1]
+Bit 3
+Bit 2
+Bit 1
+Bit 0
+
+DIP-Schalter 2: 0: "Off", 1: "On"
+DIP-Schalter 1: 0: "Off", 1: "On"
+Taster "Off":
+
+0: nicht gedrückt
+1: gedrückt
+
+Taster "On":
+
+0: nicht gedrückt
+1: gedrückt
+
+Tab. 4: Bits in Nibble[1]
+
+Die Richtung der vier möglichen JoystickAuslenkungen (oben versus unten bzw.
+rechts versus links) kann als Drehrichtung
+für die vier Motoren interpretiert werden.
+Diese ist in Nibble[6] bitweise kodiert, und
+zwar in der gleichen Reihenfolge für die
+vier Bits 3 bis 0, in der zuvor die Nibble [2]
+bis [5] übertragen wurden (Tab. 5 und
+Bit 3
+Bit 2
+Bit 1
+Bit 0
+
+Nibble[6]
+rechter Joystick: 0: unten, 1: oben
+rechter Joystick: 0: links, 1: rechts
+linker Joystick: 0: unten, 1: oben
+linker Joystick: 0: links, 1: rechts
+
+Tab. 5: Bits in Nibble[6]
+
+
+Computing
+
+mit der Zuordnung der Richtungs-Bits in Nibble[6].
+
+Nibble[7] enthält als MSB (Bit 3) das
+Parity-Bit, welches bei ungerader Anzahl
+der zuvor gesendeten Bits mit Wert 1 den
+Wert 1 annimmt, bei gerader Anzahl den
+Wert 0. Dies kann zur Verifikation der
+Übertragung genutzt werden oder auch, wie
+im Folgenden gezeigt, zur Fehlerkorrektur.
+Das Bit 2 ist immer 0 und die Bits 1 und 0
+fülle ich absichtlich mit 0b11 auf zur
+Erkennung einer abgeschlossenen Übertragung im Hauptprogramm. Der Sender
+sendet seine 15 Pulse jeweils alle 120 ms,
+solange eine Taste betätigt wird oder ein
+Joystick außerhalb seiner Mittelstellung
+steht. Sonst ist Sendepause, um die Batterie
+zu schonen.
+
+Fehlern beim Empfang der Daten kommt.
+Zunächst habe ich die Übereinstimmung
+des Timings zwischen Sender und Empfänger überprüft. Dazu habe ich die Häufigkeit
+der TCNT0-Werte bei Pulsabständen im
+Bereich 750–850 µs ermittelt. Der Schwerpunkt lag bei TCNT0 = 50 (800µs), also
+genau passend. Der Schwingquarz auf dem
+Nano-Board macht sich für diese Anwendung bezahlt.
+Ich konnte dann durch Messungen am Empfänger feststellen, dass öfter mal kurze Pausen zwischen den Pulsen vom Empfänger
+verschluckt wurden, so dass die Zeitdauer
+zwischen zwei Pulsflanken gelegentlich bei
+1,6-1,9 ms lag, siehe Abb. 3.
+
+Fehlerkorrektur
+Bei meinen Versuchen hat sich herausgestellt, dass es immer wieder auch zu
+
+
+
+Grenzwert auf 40 abgesenkt, womit diese
+Fehlerklasse verschwand, allerdings mit
+einem Anstieg der Parity-Fehler.
+dargestellt im Logik-Analysator: nach dem
+achten Puls wurde eine Pause verschluckt.
+
+Die Puls-Pausen liegen z. T unter 130 µs
+und damit bei weniger als fünf Perioden der
+Trägerfrequenz von 38 kHz. Anscheinend
+arbeitet der fischertechnik-Infrarot-Sender
+an der Spezifikationsgrenze für die gängigen IR-Empfänger.
+Die Frage ist nun, ob die zugehörigen vier
+Bits noch ermittelt werden können. Da die
+Dauer der Pulse in etwa konstant ist (ca.
+550-650 µs) und die Puls-Pausen für die
+Modulation variiert werden, ist es naheliegend anzunehmen, dass diese Fälle immer
+bei einem führenden Pulsabstand von
+800 µs auftreten. Denn nur in diesem Fall
+wird die Dauer der Puls-Pause so kurz, dass
+sie nicht erkannt wird. Damit lassen sich die
+vier Bits entsprechend Tab. 6 ermitteln. Die
+Fehlerkorrekturen sind im Code in Listing 2
+implementiert.
+Zeitabstand
+
+TCNT0 min
+
+TCNT0 max
+
+Wert
+
+1600 µs
+1700 µs
+1800 µs
+1900 µs
+
+
+
+0b0000
+0b0001
+0b0010
+0b0011
+
+Tab. 6: Zuordnung des Zeitabstandes der
+fallenden Flanke der empfangenen Pulse zu
+den Werten bei nicht erkannter Puls-Pause
+
+Nun hat mich noch die Häufigkeit dieser
+Fehler interessiert. Ich habe daher im Programm-Code für jeden Fehlerfall einen eigenen Fehlerzähler mitlaufen lassen, auch
+für die Parity-Fehler. Ich habe bei den Versuchen sowohl die Tasten gedrückt, als
+auch die Joysticks in allen möglichen Richtungen und mit allen möglichen Kombinationen bewegt.
+Mit dem unteren Grenzwert für TCNT0 von
+47 gab es ca. 10 % Fehler mit zu kurzen
+Pulsabständen. Daher habe ich den unteren
+
+
+Tab. 7 zeigt das Ergebnis. Bei mehr als
+6000 übertragenen 30-Bit-Worten liegt die
+größte Häufigkeit der Fehler bei ParityFehlern (20 % der Übertragungen). Diese
+Fehlerklasse wird nicht korrigiert. Damit
+sind ein Fünftel der Übertragungen nicht
+brauchbar.
+nicht korrigierte
+Parity-Fehler
+
+korrigierte Fehler:
+TCNT0 = 97 bis 103
+
+20 %
+
+10 %
+
+Tab. 7: Häufigkeit der aufgetretenen Fehler bei
+ca. 6000 Übertragungen des 30-Bit Wortes
+(DIP-Schalter beide „Off“)
+
+Die Fehler mit Zeitabständen der Pulsflanken bei 1600 µs treten in 10 % der Fälle auf
+und werden korrigiert. Die anderen Fehlerklassen sind vernachlässigbar. Ich hoffe,
+das sind genug Details für eure Implementierung eines Empfängers für 500881.
+Sicher fallen euch noch mehr Möglichkeiten für Fehlerkorrekturen ein. Ein Beispiel: Übergänge von Bits in Nibble[6]
+(Richtungswechsel der Joysticks) könnten
+nur bei niedrigen Werten für die Auslenkung des entsprechenden Joysticks zugelassen werden.
+
+Quellen
+[1]
+
+fischertechnik: IR Control Set
+(30344). ft-Datenbank.
+
+[2]
+
+opendcc: RC5 IR-Codes.
+
+[3]
+
+sprut: IR-Fernsteuerung – der RC-5
+Code.
+
+[4]
+
+Dirk Wölffel: Große Modelle mit nur
+einer fischertechnik-IR-Fernsteuerung ansteuern. In dieser ft:pedia.
+
+[5]
+
+Holtz, David: Alternative Controller
+(2): Infrarot-Empfänger. 2/2016, S. 60-67.
+
+[6]
+
+Van der Weiden, Ad: IR on RI (or IR
+Control Set and the Robo Interface).
+ft:community-Wiki, 2009.
+
+
+Computing
+
+volatile uint8_t timer_IR = 0; //incremented with TCNT0 overflow
+volatile uint8_t pulse_count = 0xFF;
+volatile uint8_t RC = 0xFF;
+volatile uint8_t nibble[8] = { [0 ... 7] = 0 };
+volatile uint8_t parity_counter = 0;
+volatile uint8_t time_stamp_IR_low = 0;
+volatile uint8_t time_stamp_IR_high = 0;
+ISR (INT0_vect)
+{
+time_stamp_IR_low = TCNT0;
+time_stamp_IR_high = timer_IR;
+TCNT0 = 0;
+timer_IR = 0;
+if (time_stamp_IR_high > 5)//detect new start condition
+{
+pulse_count = 0;
+RC = 0;
+parity_counter = 0; }
+//Now the timing is synchronized to the relevant negative slope of //the inverted
+IR pulses coding. After ca 750 - 1150 µs the next
+//relevant edge should occur. positive edges in between are ignored
+else if (pulse_count < 15)
+{
+if (time_stamp_IR_low > 121) pulse_count = 0xFF;
+//longer than two pulses with 0b0011, error not fixed
+else if (time_stamp_IR_low > 115) //case 0b0011
+{
+RC = 4*RC;
+pulse_count ++;
+if (!(pulse_count & 0x01)) //treat even case
+{
+nibble[(pulse_count/2) - 1] = RC;
+RC = 0; }
+RC = (4*RC) + 3;
+pulse_count ++; }
+else if (time_stamp_IR_low > 109) //case 0b0010
+{
+RC = 4*RC;
+pulse_count ++;
+if (!(pulse_count & 0x01)) //treat even case
+{
+nibble[(pulse_count/2) - 1] = RC;
+RC = 0; }
+RC = (4*RC) + 2;
+pulse_count ++;
+parity_counter++; }
+else if (time_stamp_IR_low > 103) //case 0b0001
+{
+RC = 4*RC;
+pulse_count ++;
+if (!(pulse_count & 0x01)) //treat even case
+{
+nibble[(pulse_count/2) - 1] = RC;
+RC = 0; }
+RC = (4*RC) + 1;
+pulse_count ++;
+parity_counter++; }
+else if (time_stamp_IR_low > 96) //case 0b0000,fix error
+{
+RC = 4*RC;
+pulse_count ++;
+if (!(pulse_count & 0x01)) //treat even case
+{
+nibble[(pulse_count/2) - 1] = RC;
+RC = 0; }
+RC = (4*RC);
+pulse_count ++; }
+
+
+
+else if (time_stamp_IR_low > 71) pulse_count = 0xFF;
+else if (time_stamp_IR_low > 65 ) // case 0b11=3
+{
+RC = (4*RC) + 3;
+pulse_count ++; }
+else if (time_stamp_IR_low > 59 ) // case 0b10=2
+{
+RC = (4*RC) + 2;
+pulse_count ++;
+parity_counter ++; }
+else if (time_stamp_IR_low > 53 ) // case 0b01=1
+{
+RC = (4*RC) + 1;
+pulse_count ++;
+parity_counter ++; }
+else if (time_stamp_IR_low > 40 ) // case 0b00=0
+{
+RC = 4*RC;
+pulse_count ++; }
+else pulse_count = 0xFF; //error, pulse too short
+if (!(pulse_count & 0x01)) //do for even pulse_count
+{
+nibble[(pulse_count/2) - 1] = RC;
+RC = 0; }
+else if (pulse_count == 15)
+//check parity, adjust last nibble
+{
+if ((parity_counter&0x01)==((nibble[7]>>1)&0x01))
+nibble[7] = (4*RC) + 3;
+else nibble[7] = 0; }}}
+//skip erroneous data (marker for main program)
+
+Listing 2: Interrupt-Service-Routine zur Dekodierung der IR-Signale von 500881.
+Es wird dieselbe init()-Funktion genutzt wie beim RC5-Sender (siehe Listing 1).
+
+
+

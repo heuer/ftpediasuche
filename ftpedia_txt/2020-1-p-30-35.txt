@@ -1,0 +1,301 @@
+
+
+Modell
+
+Eierlei mit fischertechnik
+Till Harbaum
+Ostern steht vor der Tür und der arme Osterhase schwingt rund um die Uhr den Pinsel. Wir
+kommen mit fischertechnik zu seiner Rettung und automatisieren das lästige Eiermalen mit
+unserem EggBot-Mal-Roboter.
+Eggbots sind keine neue Erfindung, und
+wer nach diesem Begriff im Internet sucht,
+wird vor allem auf Lösungen aus dem 3DDrucker treffen. Diese Geräte sind in der
+Regel klein und kompakt und erreichen eine
+recht gute Zeichenqualität. Vor allem ist ein
+Eggbot aber ein kurzfristiges Spaßobjekt
+und es ist weder ökonomisch noch
+
+ökologisch sinnvoll, so ein Gerät als Dauerlösung anzuschaffen, zumal der Spaß darüber hinaus auch nicht ganz billig ist. Genau
+hier liegt bekanntermaßen die Stärke von
+Baukastensystemen. Unser Gerät wird
+daher aus sowieso vorhandenen Materialien
+gebaut und am Ende seiner wahrscheinlich
+eher kurzen Nutzungsphase wieder zerlegt
+
+
+
+Modell
+
+und die Teile anderen Verwendungen zugeführt.
+Der Original-Eggbot von Evil-Mad-Scientist [1] liefert uns dennoch eine solide Basis
+aus Konzepten und Lösungen. Die ursprüngliche Idee ist so einfach wie genial:
+Ein Stift wird von einem Plotter-artigen
+Roboter per Computer-Anweisungen gesteuert, um Eier zu bemalen. Die Technik
+des Eggbot besteht dabei aus drei Motoren
+und einem Controller-Board. Zwei Schrittmotoren drehen das Ei um seine Längsachse
+bzw. bewegen den Stift der Länge nach am
+Ei entlang. Der dritte Motor ist ein Servo,
+der den Stift auf das Ei absenkt bzw. vom Ei
+abhebt. Angesteuert werden die Motoren
+von einer speziell für den Eggbot entwickelten Controllerplatine, die ihrerseits per USB
+Befehle von einem PC entgegennimmt.
+Auf dem PC läuft schließlich eine erweiterte Version des CAD-Programms Inkscape, das den Eggbot direkt ansteuern
+kann. Auf Basis des Eggbots hat die
+
+Zeitschrift „Make:“ bereits vor zwei Jahren
+einen teilweise auf fischertechnik-Teile
+zurückgreifenden Roboter gebaut [2]. Aber
+auch hier kommen viele Fremdteile zum
+Einsatz; unter anderem benötigt man einen
+alten Flachbettscanner als Basis. Dass die
+fischertechnik-Teile teilweise mit den
+Fremdteilen verklebt und verschraubt
+werden müssen ist auch nicht jedermanns
+Sache.
+
+Fremdteilkompromisse
+Das Ziel, einen Eggbot aus fischertechnik
+zu bauen, erfordert daher einen Spagat
+zwischen möglichst großer Kompatibilität
+zum Original und möglichst wenig Fremdteilen. Einige Nachbauten des Eggbot
+nutzen einen Arduino inkl. Motor Shield als
+Controller und verwenden als Firmware den
+EggDuino-Sketch [3]. fischertechnik selbst
+hat keinen entsprechenden Arduino im
+Programm, aber der EggDuino-Sketch lässt
+sich an den ftDuino [4] anpassen. Auch
+Schrittmotoren vertreibt fischertechnik
+
+
+
+
+
+aktuell genauso wenig wie eine Möglichkeit, den fischertechnik-Servo aus den Fernsteuersets in Robotik-Projekten zu nutzen.
+Wollen wir Schrittmotoren und Servos
+nutzen, werden wir also um den Einsatz
+eines 3D-Druckers nicht ganz herumkommen.
+
+
+Für Schrittmotoren in NEMA 17-Bauweise
+gibt es auf Thingiverse passende Gehäusevorlagen [5]. Für die etwas kleineren
+NEMA 14-Motoren bietet fischertechnik
+selbst ein Gehäuse an, das zusätzlich als
+Druckvorlage im 3D-Drucker-Baukasten
+dabei war. Als Schrittmotoren kommen die
+meisten bipolaren 12V-Varianten in Frage.
+Sie lassen sich direkt an die Motorausgänge
+des ftDuino anschließen. Auf die Achsen
+
+der Schrittmotoren passende Ritzel gibt es
+ebenfalls direkt von fischertechnik [7] oder
+als 3D-Druckvorlage [8]. Alternativ findet
+man im Onlinehandel sogenannte Wellenadapter für die Verbindung der Schrittmotor-üblichen 5 mm- mit den fischertechnik-üblichen 4 mm-Achsdurchmesser.
+Es bleibt der Anschluss des fischertechnikServos an den ftDuino. Auch hier finden
+sich diverse Möglichkeiten zum Kaufen [9]
+oder Selbstbauen [10]. Diese Vorgaben sind
+eher willkürlich gewählt, weil der passende
+Controller und die Motoren aus anderen
+Projekten vorhanden waren. Es spricht aber
+nichts dagegen, statt der Schrittmotoren
+Encodermotoren einzusetzen oder statt des
+Servos einen Mini-Motor. Und der ftDuino
+lässt sich sicher durch einen TXT ersetzen.
+Die Anpassungen am EggDuino-Sketch
+werden dann allerdings deutlich aufwändiger, weil dieser auf Arduinos mit Schrittmotoren und Servos ausgelegt ist.
+Sind Controller und Motoren ausgewählt,
+dann geht es ans Bauen. Der OriginalEggBot verfolgt einen sehr einfachen und
+direkten Ansatz, an dem wir uns bei der
+Längsdrehung des Ei sehr nah orientiert
+haben. Bei der Stiftbewegung längs am Ei
+entlang sind wir etwas weiter abgewichen
+und bewegen den Stift nicht direkt über den
+
+
+Modell
+
+Schrittmotor, sondern gehen einen Umweg
+über eine Zahnstange und ein Ritzel. Damit
+untersetzen wir den Schrittmotor etwas.
+Warum brauchen wir eine Untersetzung,
+obwohl der Original-Eggbot direkt den
+Schrittmotor nutzen kann? Schrittmotoren
+bewegen sich in diskreten Schritten, daher
+der Name. Ein handelsüblicher Schrittmotor vollführt eine volle Drehung in 200
+Schritten, er lässt sich also mit einer
+Genauigkeit von 1,8° drehen.
+Durch die Nutzung eines Halbschrittverfahrens [11] kann man die Auflösung mit
+geringem Aufwand verdoppeln. Durch den
+Einsatz spezieller Microstep-Treiberchips
+kann man die Auflösung weiter erhöhen.
+Genau das macht der Eggbot, aber solche
+Treiber sind im ftDuino nicht vorhanden.
+Das reduziert die Auflösung des ftDuino
+gegenüber dem Eggbot etwas. Mit Hilfe der
+Untersetzung durch das Z10-Ritzel und die
+Zahnstange erhöht sich die Auflösung
+wieder etwas. Der Stift wird dabei durch
+einen unter dem Ei drehbar gelagerten
+Ausleger im Kreis um das Ei herumgeführt.
+Der Stift ist zusätzlich auf dem Ausleger
+leicht federnd gelagert und kann somit der
+nicht perfekt kreisförmigen Oberfläche des
+Eis unterbrechungsfrei folgen. Ein Servo
+am Ausleger kann den Stift komplett vom
+Ei abheben, indem er den Stift maximal in
+die Federung drückt. Ein Federweg von
+5 mm ist dabei ausreichend. Als Stifthalterung kommen zwei Rollenlager 15 zum
+Einsatz, in die sich gängige Stabilo-Stifte
+einfach und sicher genug einklemmen
+lassen.
+
+Gegenüber dem Originalbot verfügt unser
+Roboter über eine Kalibrierung der Stiftachse. Ein Taster an ftDuino-Eingang I1
+erkennt, wenn sich der Stift links am
+mechanischen Anschlag befindet. Beim
+Start nutzt der Roboter diesen Taster, um
+die Position des Stifts einzustellen und
+exakt in die Mittenposition zu fahren.
+Daraus ergibt sich eine große Widerholgenauigkeit, so dass man mit zwischenzeitlichen Stiftwechseln in mehreren Durchläufen auch mehrfarbig malen kann.
+Die weiteren drei Taster sind optional und
+können vor allem in der Testphase hilfreich
+sein. Sie erlauben es, eine laufende Zeichnung durch Meldung an den PC zu unterbrechen (PRG-Taster), den Stift manuell zu
+heben und zu senken oder die Schrittmotoren aus- und einzuschalten.
+Für den ftDuino werden einige Änderungen
+am EggDuino-Sketch nötig. Vor allem
+müssen die Schrittmotoren über die
+ftDuino-spezifischen Motortreiber angesprochen werden. Das geschieht am einfachsten durch die Verwendung der
+„FtduinoSimple“-Bibliothek. Auch die Eingänge des ftDuino werden mit ihrer Hilfe
+angesprochen. Weitere Anpassungen sind
+nötig, um die Auswirkung der Untersetzung
+zu kompensieren. Würden wir das nicht tun,
+dann würden aus gezeichneten Kreisen
+Ellipsen.
+Die „andere“ Seite der Software ist ein
+Plugin für das CAD-Programm Inkscape
+[12]. Als CAD-Programm arbeitet Inkscape
+durchgehend mit Vektoren statt mit Bildpunkten wie übliche Malprogramme. Damit
+
+
+
+
+
+eignet es sich besonders gut für unseren
+Eierplotter, da dieser ja funktionsbedingt
+Linien zeichnet statt punktweise zu drucken
+wie z. B. ein Tintenstahldrucker. Das Plugin
+ist Teil der Original-Eggbot-Software [13].
+Und um die Sache noch komplizierter zu
+machen, ist an dieser Software auch noch
+eine kleine Änderung nötig, damit sie den
+ftDuino als Ausgabegerät akzeptiert. Dazu
+muss in der Datei ebb_serial.py in Zeile 62
+aus der Zeichenkette „EiBotBoard“ ein
+„ftDuino“ gemacht werden. Das EggbotPlugin in Inkscape installiert zusätzlich ein
+paar Hilfsfunktionen, die man nutzen kann,
+um gefüllte Flächen mit Hilfe des Stifts ausmalen zu lassen oder Schriften in Linienzüge umzuwandeln.
+In Inkscape kann man nun auf einer Fläche
+von 3200 · 800 Pixeln ein beliebiges Bild
+zeichnen und dann auf dem Ei ausgeben.
+
+
+Warum 3200 · 800? Wie schon geschrieben
+nutzt der Original-Eggbot Microstepping.
+Damit kann er jeden Schritt des Motors in
+sechzehn Mikroschritte unterteilen. Bei 200
+Vollschritten pro Motorumdrehung macht
+das eben 3200 Mikroschritte pro voller
+Eiumdrehung. Malt man über eine Breite
+von 3200 Pixeln hinaus, dann stört das nicht
+weiter, der Roboter dreht das Ei weiter und
+der Roboter malt wieder da weiter, wo er bei
+Pixel 0 angefangen hat. Aus Sicht des
+
+Roboters ist das Ei unendlich breit, denn er
+kann es ja beliebig weit drehen.
+
+Modell
+
+wir in unserer eigenen Variante der
+EggDuino-Software unter [14] bereits angepasst.
+Unser Eggbot erreicht nicht die Präzision
+des Originals, da er mangels Microstepping
+eine geringere Auflösung hat. Vor allem
+aber hat seine komplexere Mechanik mehr
+Spiel und durch die größeren bewegten
+Massen neigt er zum Schwingen. Für lustige oder zum Lieblingsspielzeug passende
+Osterdekoration eignet er sich aber allemal.
+Und was passiert nach Ostern? Dann wird
+der Roboter in seine Bestandteile zerlegt
+und einer anderen Verwendung zugeführt.
+Spätestens um Weihnachten muss sein
+Nachfolger dann zeigen, ob personalisierte
+Christbaumkugeln die gleiche Begeisterung
+auslösen können.
+
+Quellen
+[1]
+
+Bruce Shapiro: The Original EggBot.
+
+[2]
+
+Bernd Heisterkamp: Eggbot mit Arduino und Fischertechnik selber bauen – so geht’s. Make:, 21.03.2018.
+
+[3]
+
+Joachim Cerny: EggDuino. Arduino
+Firmware for EggBot, GitHub, 2015.
+
+[4]
+
+Till Harbaum: ftDuino.
+
+
+[5]
+
+Thomas Dragon: NEMA 17-Gehäuse.
+
+Etwas anders sieht es in der Höhe aus. Hier
+kann der Original-Eggbot 800 Pixel bzw.
+Mikroschritte nutzen, was bei wiederum
+3200 Mikroschritten pro voller Umdrehung
+einer nutzbaren Hälfte der Eihöhe bzw.
+einem Winkel von 90° entspricht. In dieser
+Richtung sollte man nicht über die Grenzen
+hinausgehen, denn dann rammt der Stift
+recht bald die Halterungen, die das Ei am
+oberen und unteren Ende festhalten. Bei
+unserem Bot kommt erschwerend dazu,
+dass er für die Stiftbewegung eine Untersetzung nutzt und diese zusätzlich im
+Sketch berücksichtig werden muss, damit
+das Seitenverhältnis des gemalten Bildes
+halbwegs stimmt und Kreise auch auf dem
+Ei halbwegs rund aussehen. All das haben
+
+[6]
+
+fischertechnik: NEMA 14-Gehäuse.
+
+[7]
+
+fischertechnik: Schrittmotor-Ritzel.
+
+[8]
+
+Till Harbaum: Schrittmotor-Ritzel.
+
+[9]
+
+ft:c: Mini-Servo-Adapter, Forum der
+fischertechnik-Community.
+
+[10] Peter Habermehl: fischertechnik I2CServo. 3D-Druckvorlage.
+[11] Till Harbaum: Halbschrittsteuerung.
+Manual ftDuino, Abschnitt 6.4.2.
+[12] Inkscape (Homepage)
+[13] Evil Made Scientists: Installation des
+Inkscape-Plugins. Wiki.
+[14] Till Harbaum: EggDuino-Sketch für
+den ftDuino. GitHub, 2020.
+
+

@@ -1,0 +1,808 @@
+
+
+Computing
+
+Endliche Automaten in Robo Pro
+Dirk Fox
+Endliche Automaten sind ein zentrales Konzept der Informatik. Sie eignen sich besonders gut
+zur Modellierung autonomer IT-Systeme – wie z. B. Roboter oder Steuerungen. Die Programmierung Endlicher Automaten wird von Robo Pro hervorragend unterstützt – eine Einführung
+in Endliche Automaten sucht man in fischertechnik-Anleitungen jedoch vergebens. Das holen
+wir hiermit nach.
+
+Hintergrund
+
+Endliche Automaten
+
+Wer mit der Programmierung in Robo Pro
+beginnt, wird – auch durch die einführenden
+Beispiele in der ausführlichen Online-Hilfe
+– leicht dazu verleitet, Robo Pro-Programme grundsätzlich wie einen linearen „Programmablaufplan“ zu schreiben. Das ist
+zwar für viele einfache Aufgabenstellungen
+ein geeignetes Vorgehen, aber komplexere
+Steuerungsaufgaben lassen sich so nur sehr
+holprig verwirklichen. Das Ergebnis sind
+unübersichtliche, oft gar chaotische Programme. Sie stellen häufig wenig elegante
+Problemlösungen dar, bei der das Lösungskonzept schwer erkennbar und die Fehlersuche aufwändig ist. Vor allem aber bleiben
+sie weit hinter den Möglichkeiten von
+Robo Pro zurück – einer sehr mächtigen
+Programmierumgebung, die gerade für die
+Lösung von Steuerungsaufgaben besonders
+geeignet ist.
+
+Als ‚Endlicher Automat‘ wird ein Modell
+bezeichnet, in dem das Verhalten eines
+Systems als eine endliche Menge von
+Zuständen beschrieben wird. Der Übergang
+von einem Zustand in einen anderen wird
+dabei von Bedingungen (wie z. B. Ereignissen) ausgelöst, auf die jeweils eine
+Aktion folgt. Endliche Automaten werden
+daher auch „Zustandsmaschinen“ genannt.
+
+Diese „heimlichen“ Stärken von Robo Pro
+lassen sich besonders gut mit dem Konzept
+des ‚Endlichen Automaten‘ verstehen und
+erläutern. Daher starten wir mit einem
+kleinen Ausflug in die Welt der Endlichen
+Automaten – wem das bereits ein Begriff
+ist, der darf die beiden folgenden Abschnitte auch gerne überspringen. Anschließend werden wir die Modellierung und
+Programmierung in Robo Pro an Beispielen
+vorstellen.
+
+Endliche Automaten haben in der Informatik bei der Entwicklung von Compilern
+(‚Übersetzern‘) für Computersprachen eine
+wichtige Rolle gespielt. Aber auch eingebettete Systeme wie z. B. eine Aufzugsteuerung oder ein Roboter lassen sich
+hervorragend als Endlicher Automat modellieren (mehr dazu im nächsten Abschnitt).
+In der Theoretischen Informatik wird das
+Konzept des Endlichen Automaten verwendet, um einige fundamentale Aussagen über
+Algorithmen zu formulieren und zu beweisen – damit wollen wir uns hier aber nicht
+beschäftigen. Wer mehr über die theoretischen Hintergründe wissen möchte, dem
+empfehle ich als Lektüre das Grundlagenwerk der Automatentheorie von Hopcroft
+und Ullman [1].
+Für diesen Beitrag ist wichtig, dass sich
+prinzipiell jedes informationstechnische
+System – ein MP3-Spieler, ein Smartphone,
+
+ein Computer – als Endlicher Automat
+beschreiben bzw. ‚modellieren‘ lässt. Dabei
+entsteht ein sehr klarer Überblick über das
+(gewünschte) Systemverhalten. Wird eine
+solche Modellierung allerdings zu komplex,
+stellt sie beim Systementwurf keine große
+Hilfe mehr dar; daher versucht man, komplexe Systeme zunächst auf einer höheren
+Abstraktionsebene als Endlichen Automaten zu modellieren, damit das Systemverhalten als Ganzes noch überschaubar bleibt.
+
+fischertechnik-Automaten
+Vor allem für die Aufgabenstellungen, die
+sich mit einem fischertechnik-Interface
+oder dem TX(T)-Controller lösen lassen,
+stellt die Modellierung als Endlicher Automat eine große Hilfe bei der Programmierung dar. Warum ist das so?
+Ein Endlicher Automat – hier vielleicht
+anschaulicher Zustandsmaschine genannt –
+kennt nicht nur die Zustände, in die er,
+ausgelöst durch ein Ereignis wie ein
+bestimmter Sensorwert oder eine Tasterbetätigung, als nächstes übergeht, sondern
+auch die Zustände, die er zuvor eingenommen hat. Er verfügt also gewissermaßen
+über ein „Gedächtnis“. Damit können dieselben Sensoren (Fototransistoren, ReedKontakte etc.) abhängig vom Zustand des
+Systems unterschiedliche Aktionen veranlassen.
+Bei Systemen, die komplett durch externe
+Ereignisse gesteuert werden, ist genau diese
+Eigenschaft wesentlich – denn in der Regel
+soll sich ein solches System bei Eintritt
+eines bestimmten Ereignisses nicht in jeder
+Situation (= Zustand) gleich verhalten.
+Beispielsweise soll die Schrankensteuerung
+einer Parkgarage einem neu eintreffenden
+Fahrzeug das Ziehen eines Parktickets nur
+dann ermöglichen, wenn es noch freie Parkplätze gibt. Und das Unterbrechen der
+Lichtschranke im Fahrstuhl soll nur dann
+zum Öffnen der Türe führen, wenn sie
+gerade schließt – aber natürlich nicht während der Fahrt.
+
+Computing
+
+Modellierung
+Will man ein Programm zur Lösung einer
+bestimmten Aufgabenstellung entwickeln,
+sollte man sich immer zunächst (mindestens
+im Kopf, besser auf Papier) ein Modell von
+der Lösung machen, anstatt gleich mit der
+Programmierung zu beginnen. Erst, wenn
+das Modell auf Korrektheit geprüft ist,
+sollte man in die Tasten greifen. Wer das
+nicht tut, läuft leicht Gefahr, ein chaotisches
+Programm mit viel Flickwerk zu erzeugen –
+das er möglicherweise schon wenig später
+selbst nicht mehr so recht durchschaut.
+In einem solchen Modell versucht man, die
+Aufgabenstellung zunächst in Teilprobleme
+zu zerlegen, die sich unabhängig voneinander lösen lassen. Dann zerlegt man diese
+Teilprobleme wiederum in unabhängige
+Teilprobleme – so lange, bis nur noch
+solche Teilprobleme übrig bleiben, die sich
+nicht mehr sinnvoll weiter zerlegen lassen.
+Anschließend löst man jedes Teilproblem
+Schritt für Schritt, indem man den Lösungsweg konkret beschreibt. Das Verfahren
+ähnelt der römischen Herrschaftsstrategie
+des divide et impera („teile und herrsche“)
+– und funktioniert ebenso erfolgreich.
+Will man eine Problemlösung als Endlichen
+Automaten modellieren, muss man zunächst alle Zustände definieren, die das zu
+entwickelnde System annehmen soll, und in
+denen es einen ‚Auslöser‘ (= Bedingung)
+erwartet, um in einen anderen Zustand überzugehen und eine Aktion zu veranlassen.
+Dann wird einer dieser Zustände als Startzustand S des Endlichen Automaten gewählt. In diesem Zustand befindet sich das
+System direkt nach der Aktivierung.
+Damit die Lösung auch terminiert (d. h.
+irgendwann endet) muss der Automat mindestens einen Endzustand E besitzen.
+Anders als beim Startzustand kann der
+Automat über beliebig viele Endzustände
+verfügen, aus denen er in keinen anderen
+Zustand mehr übergeht.
+
+
+
+
+Dargestellt wird ein Endlicher Automat
+entweder grafisch als Zustandsübergangsdiagramm oder als –tabelle. Im Zustandsübergangsdiagramm werden Zustände als
+Kreise und Übergänge als Pfeile (mit
+Bedingung) zum jeweiligen Folgezustand
+dargestellt. In einer Zustandsübergangstabelle ordnet man allen Zuständen für jede
+Bedingung einen Folgezustand zu.
+
+„./.“ gekennzeichnet: Hier verbleibt der
+Automat im jeweiligen Zustand.
+
+Außerdem ist noch festzulegen, ob eine
+Aktion vor, während oder nach einem
+Zustandsübergang ausgeführt wird. Je nach
+Aufgabenstellung kann die eine oder die
+andere Variante angemessener sein, auch
+wenn grundsätzlich eine Modellierung mit
+jeder der drei Varianten möglich ist. Die
+Unterscheidung hat aber Auswirkungen auf
+die Implementierung, wie wir noch sehen
+werden [3].
+
+Auch die Darstellung als Zustandsübergangsdiagramm ist simpel. Die beiden
+Fälle, in denen der Schalter seinen Zustand
+behält, werden im Diagramm als Übergang
+in denselben Zustand gekennzeichnet.
+Natürlich könnte man die beiden Pfeile
+auch weglassen; allerdings hilft diese Darstellung dabei, zu prüfen, ob man im
+Diagramm keinen Übergang vergessen hat:
+Denn aus jedem Zustand muss für jedes
+Ereignis ein Pfeil (= Übergang) abgehen.
+
+Im Zustandsübergangsdiagramm lässt sich
+diese Unterscheidung darstellen, indem die
+Aktion oben oder unten im Zustands-Kreis
+oder am Übergangs-Pfeil eingetragen wird.
+In einer Zustandsübergangstabelle notieren
+wir die Aktion für alle drei Varianten in
+Klammern hinter dem Eintrag des Folgezustands, in oder vor dem die Aktion ausgeführt werden soll.
+Am besten lässt sich die Modellierung einer
+Problemlösung als Endlicher Automat an
+einem einfachen Beispiel illustrieren: einem
+Lichtschalter. Er besitzt zwei Zustände (Z0:
+„Aus“ und Z1: „An“) und geht bei Betätigung (= Bedingung) in den jeweils anderen
+Zustand über – und schaltet dabei den
+Stromfluss an bzw. aus (= Aktion).
+Die Zustandsübergangstabelle ist einfach.
+Da man den Lichtschalter im „An“-Zustand
+nicht erneut an- und im „Aus“-Zustand
+nicht ausschalten kann, werden die entsprechenden Einträge in der Tabelle mit
+
+
+
+Bei einem strengen Begriffsverständnis ist die
+Lösung damit gar kein Algorithmus – denn der
+ist eine terminierende Lösungsvorschrift. Viele
+Systemsteuerungen (‚eingebettete Systeme‘)
+
+anschalten ausschalten
+Z0
+
+Z1 (an)
+
+./.
+
+Z1
+
+./.
+
+Z0 (aus)
+
+Tab. 1: Zustandsübergangstabelle
+„Lichtschalter“
+
+An
+
+Aus
+
+S=Z0
+
+Aus
+
+An
+
+Z1
+
+„Lichtschalter“
+
+In diesem einfachen Beispiel ist es irrelevant, ob die Aktion (Licht ein, Licht aus)
+vor, beim oder nach dem Übergang in den
+Folgezustand ausgeführt wird. Für unser
+Zustandsübergangsdiagramm haben wir die
+Variante „während des Übergangs“ gewählt. Bei diesem Endlichen Automaten
+kann jeder der beiden Zustände als Startzustand gewählt werden; wir haben uns für
+den „Aus“-Zustand Z0 entschieden. Einen
+Endzustand besitzt der Automat nicht – das
+bedeutet, dass die Lösung nicht ‚terminiert‘.2
+
+sollen jedoch ohne Unterbrechung funktionieren
+und besitzen daher keinen Endzustand; sie
+können höchstens abgebrochen werden.
+
+Ist die Aufgabenstellung komplexer, kann
+es sinnvoll sein, die Modellierung auf unterschiedlichen Abstraktionsebenen vorzunehmen. So kann man zunächst mit einer groben Unterscheidung von Zuständen beginnen, die sich später jeweils wiederum als
+eigene Endliche Automaten darstellen
+lassen. Auf diese Weise kann durch eine
+schrittweise Konkretisierung ein Teilproblem nach dem anderen präzisiert werden,
+ohne dass dabei die Systematik der Gesamtlösung (der ursprüngliche, abstrakte Endliche Automat) verändert werden muss.
+
+Programmierung in Robo Pro
+
+Computing
+
+Treppenhausbeleuchtung
+Wir beginnen mit einem einfachen Beispiel.
+Eine Treppenhausbeleuchtung soll sowohl
+durch einen Bewegungsmelder als auch
+durch einen Taster für eine festgelegte Zeit
+(eine Minute) aktiviert werden können. Der
+Bewegungsmelder soll allerdings nur funktionieren, wenn es im Treppenhaus hinreichend dunkel ist. Für diese Steuerungsaufgabe können wir die folgenden Zustände
+unterscheiden:
+· Zustand 0: Die Treppenhausbeleuchtung
+und der Bewegungsmelder sind inaktiv
+(Startzustand).
+
+Die Unterprogramme in Robo Pro bieten
+eine hervorragende Möglichkeit, ein als
+Endlicher Automat modelliertes System
+übersichtlich und anschaulich zu programmieren: sie können nämlich mehrere Ausgänge besitzen.
+
+· Zustand 1: Die Treppenhausbeleuchtung
+ist inaktiv, aber der Bewegungsmelder
+ist aktiviert.
+
+Damit lässt sich in Robo Pro jeder Zustand
+des Zustandsübergangsdiagramms als
+Unterprogramm realisieren, das – abhängig
+von unterschiedlichen Ereignissen – über
+einen anderen Ausgang verlassen wird und
+von dort in den Folgezustand übergeht,
+sprich: ein anderes Unterprogramm aufruft.
+
+Die Übergänge zwischen diesen drei Zuständen werden durch vier Ereignisse gesteuert:
+
+Das Hauptprogramm entspricht damit dem
+Zustandsübergangsdiagramm, die Unterprogramme bilden die Zustände, die Aufrufe der Unterprogramme stellen die
+Zustandsübergänge dar. Die Endzustände
+werden durch das Programmende-Symbol
+(rotes Ampelmännchen) realisiert.
+
+Beispiele
+Wie hilfreich die Modellierung und Programmierung einer Aufgabenstellung als
+Endlicher Automat in der Praxis ist, möchten wir im Folgenden an drei Beispielen
+verdeutlichen: der Steuerung einer Treppenhausbeleuchtung, der Programmierung
+eines Spurfolger-Roboters und der Realisierung eines Morsezeichen-Dekodierers.
+
+· Zustand 2: Die Treppenhausbeleuchtung
+ist aktiv.
+
+· einen Dämmerungssensor (Fototransistor), der einen festgelegten Wert überoder unterschreitet,
+· einen Taster, mit dem die Treppenhausbeleuchtung aktiviert werden kann und
+· einen Infrarot-Bewegungsmelder, der
+bei einer Bewegung im Raum schaltet.
+Die eigentliche Aktion – das Aktivieren der
+Treppenhausbeleuchtung für eine vorgegebene Zeit – findet im Zustand Z2 statt. Die
+beiden anderen Zustände warten nur auf das
+Eintreten der Ereignisse. Damit lässt sich
+die folgende Zustandsübergangstabelle
+bilden:
+hell
+
+dunkel
+
+Taster
+
+Bewegung
+
+Z0 ./.
+
+Z1
+
+Z2
+
+./.
+
+Z1 Z0
+
+./.
+
+Z2
+
+Z2
+
+Z2 Z0
+
+Z1
+
+./.
+
+./.
+
+Tab. 2: Zustandsübergangstabelle
+Treppenhausbeleuchtung
+
+
+
+Im nachfolgenden Zustandsübergangsdiagramm ist die Aktion im Zustandskreis Z2
+eingetragen (Abb. 2).
+
+einzige für die Übergänge aus Z2 relevante
+Sensor (Abb. 4).
+
+dunkel
+
+Z1
+
+hell
+
+S=Z0
+Bewegung
+
+Taster
+
+dunkel
+
+Z2
+
+Bewegung
+
+Taster
+
+(Licht 1
+min. an)
+
+Bewegung
+
+als Endlicher Automat
+
+Die Robo Pro-Realisierung der Zustände Z0
+und Z1 ist einfach – hier werden nur die
+Werte der relevanten Sensoren abgefragt
+(I1: Taster, I2: Bewegungssensor, I3: Helligkeitssensor).
+
+
+Das Hauptprogramm bildet den Zustandsgraphen aus Abb. 2 ab – bis auf die Übergänge ohne Zustandswechsel, die wir im
+Programm weglassen können (Abb. 5).
+
+Treppenhausbeleuchtung
+
+
+Der Zustand Z2 enthält zusätzlich die Aktivierung der Treppenhausbeleuchtung für
+die Dauer von einer Minute, bevor der
+Dämmerungssensor ausgewertet wird, der
+
+
+Wer diese kleine Steuerung in einem
+Modell verwenden möchte, wird sich fragen, wie man mit fischertechnik den Bewegungsmelder realisiert. Denn es gibt keinen
+solchen fischertechnik-Sensor. Also muss
+man auf einen Fremdsensor zurückgreifen.
+Tatsächlich gibt es zahlreiche PIR (Passive
+Infrared) Sensoren, die auf Bewegungen in
+vier bis zehn Meter Entfernung reagieren
+
+und einen Umgebungswinkel von 90-180°
+abdecken – und die direkt an einen TX(T)Controller angeschlossen werden können.
+Ein solcher Sensor ist der GH-718C, der bei
+Bewegungserkennung (7 m, 110°) einen
+3,3 V-Pegel liefert und im Elektronikhandel
+für unter 8 € erhältlich ist (Abb. 6).
+Beim Anschluss an den TX(T)-Controller
+wird in Robo Pro als ‚Eingangsart‘ 10 V
+digital gewählt; dann liegt am Eingang eine
+‚1‘ an, wenn der Sensor eine Bewegung
+detektiert hat.
+
+Computing
+
+· Zustand 3: Roboter hat die Linie verloren
+Auch die Aktionen in den jeweiligen Zuständen sind unmittelbar klar: im Zustand
+Z0 muss der Roboter geradeaus fahren, im
+Zustand Z1 muss er nach links drehen, im
+Zustand Z2 nach rechts. Hat der die Linie
+verloren (Zustand Z3), benötigt er einen
+geeigneten Suchalgorithmus, der ihn wieder
+auf die Linie zurückbringt.
+Gesteuert wird der Spurfolger von den Werten zweier Infrarot-Sensoren. Damit der
+Roboter die Zustände Z1 bis Z3 unterscheiden kann, benötigen wir zwei relativ dicht
+nebeneinander liegende Sensoren, wie sie
+im fischertechnik-Spursensor verbaut sind.
+Damit können wir nun auch die Bedingungen formulieren, die zu einem Zustandsübergang führen:
+· beide Sensoren liefern den Wert 0: der
+Sensor befindet sich direkt über der Linie
+
+
+Wer keinen Fremdsensor einsetzen möchte,
+kann stattdessen auch eine Lichtschranke
+(einen Fototransistor mit Linsenlampe) oder
+den fischertechnik-Ultraschall-Abstandssensor verwenden.
+Spurfolger (Line Follower)
+Eine beliebte Aufgabe für autonome Roboter ist die Programmierung eines „Spurfolgers“ (oder „Line Followers“) – eines
+Roboters, der mittels Infrarotsensoren einer
+durchgezogenen Linie auf dem Boden folgt.
+Diese Aufgabe ist geradezu prädestiniert für
+eine Modellierung als Endlicher Automat.
+Die benötigten Zustände sind offensichtlich:
+· Zustand 0: Roboter befindet sich auf der
+Linie
+· Zustand 1: Roboter befindet sich rechts
+neben der Linie
+
+· der rechte Sensor liefert den Wert 1, der
+linke den Wert 0: der Sensor liegt leicht
+rechts von der Linie
+· der rechte Sensor liefert den Wert 0, der
+linke den Wert 1: der Sensor liegt leicht
+links von der Linie
+· beide Sensoren liefern den Wert 1: der
+Sensor hat die Linie verloren
+Die Zustandsübergangstabelle ist nun ebenfalls schnell erstellt:
+
+
+
+
+Z0
+
+./.
+
+Z1
+
+Z2
+
+Z3
+
+(links)
+
+(rechts)
+
+(Suche)
+
+Z1
+
+Z0
+
+./.
+
+Z2
+
+Z3
+
+(rechts)
+
+(Suche)
+
+Z2
+
+Z0
+
+Z1
+
+./.
+
+Z3
+
+(gerade)
+
+(links)
+
+Z3
+
+Z0
+
+Z1
+
+Z2
+
+(gerade)
+
+(links)
+
+(rechts)
+
+(gerade)
+
+(Suche)
+
+./.
+
+Tab. 3: Zustandsübergangstabelle
+Spurfolger (Line Follower)
+
+· Zustand 2: Roboter befindet sich links
+neben der Linie
+
+
+
+Die angegebenen Aktionen steuern die
+Richtung der Motoren. Zusätzlich könnte
+man das „Gedächtnis“ des Endlichen Automaten nutzen, um die Geschwindigkeit zu
+steuern: So ließe sich beispielsweise bei jedem Übergang von Zustand Z0 in Z0 (der
+Roboter fährt exakt auf der Linie) die
+Geschwindigkeit Schritt für Schritt bis zu
+einem Maximalwert erhöhen – und bei
+einem Abweichen von der Linie sofort auf
+die Minimalgeschwindigkeit setzen.
+
+Die Umsetzung dieses Automaten in ein
+Robo Pro-Programm ist sehr einfach. Das
+Hauptprogramm (Abb. 8) ist ein ziemlich
+exaktes Abbild des Zustandsübergangsdiagramms aus Abb. 7.
+Die Realisierung der vier Zustände ist
+ebenfalls sehr einfach: Zu Beginn wird die
+Steuerungs-Aktion (links, rechts, gerade)
+ausgeführt; anschließend werden die Werte
+der beiden Spursensoren für die richtigen
+Zustandsübergänge ausgewertet (Abb. 9).
+
+
+S=Z0
+(gerade)
+
+Z1
+
+(links)
+
+
+
+
+
+
+
+Z3
+
+(Suche)
+
+
+Z2
+
+(rechts)
+
+
+als Endlicher Automat
+
+Aus der Zustandsübergangstabelle lässt sich
+das Zustandsübergangsdiagramm ableiten
+(Abb. 7). Die Aktionen werden während des
+Zustandsübergangs ausgeführt. Den Zustand Z0 haben wir als Startzustand festgelegt.
+
+
+Das Unterprogramm „SteuereRoboter“ ist
+nichts anderes als das in der Online-Hilfe
+von Robo Pro im Kapitel 6.1 beschriebene
+Beispiel für die Steuerung eines Roboters
+mit zwei Antriebsmotoren (ohne „Stopp“
+und „zurück“). Natürlich kann hier auch ein
+eigenes Programm für die Steuerung des
+Roboters eingesetzt werden.
+Im Zustand Z3 wird keine Motorsteuerung
+ausgelöst, sondern parallel ein Linien-Suchprogramm gestartet. Mit Spurfolger-Robotern werden wir uns in einer der folgenden
+ft:pedia-Ausgaben noch ausführlicher beschäftigen, daher betrachten wir den Suchalgorithmus bei verlorener Linie hier nicht
+genauer. Jedoch kann man sich leicht vorstellen, dass sich dieser Algorithmus wiede-
+
+
+
+
+Computing
+
+rum als eigener Endlicher Automat modellieren lässt – ein schönes Beispiel für eine
+schrittweise Verfeinerung.
+In vielen Spurfolger-Aufgabenstellungen
+gibt es auch eine Ende-Bedingung (Ziel erreicht), für die ein (zusätzlicher) Endzustand definiert werden kann.
+Morsezeichen-Dekodierer
+Als drittes Beispiel möchten wir einen
+Morsezeichen-Dekodierer realisieren, der
+zu empfangenen Morsesignalen die zugehörigen Buchstaben ausgibt. Dabei beschränken wir uns auf die sechs Buchstaben „a“,
+„e“, „i“, „m“, „n“ und „t“, die sich mit
+maximal zwei Morsesignalen darstellen
+lassen [2] (Abb. 10).
+a
+e
+i
+m
+n
+t
+
+●─
+●
+●●
+──
+─●
+─
+
+Signalen darstellbaren Zeichen
+
+Dazu nehmen wir zunächst an, dass ein
+gegebener Empfänger lange und kurze Signale unterscheiden kann und ein Zeichenende (lange Pause) erkennt. Damit haben
+wir drei verschiedene Bedingungen, die wir
+unterscheiden müssen, um unseren Dekodierer zu steuern:
+· ein kurzes Zeichen wurde empfangen
+
+· Zustand 3: Warte auf nächstes Signal,
+nachdem ein langes empfangen wurde
+Der Automat startet im Startzustand.
+Empfängt er eine lange Pause, geht er in
+Zustand 1 über und wartet auf das nächste
+Zeichen. Empfängt er ein kurzes Signal,
+geht er in Zustand 2 über, empfängt er ein
+langes in Zustand 3. Bei einem Zeichenende-Signal bleibt er im Zustand 1.
+Aus dem Zustand 2 geht er beim nächsten
+Signal wieder in den Startzustand über und
+gibt bei einem kurzen Zeichen „i“ aus, bei
+einem langen „a“. Bei einem ZeichenendeSignal gibt er „e“ aus und geht in Zustand 1
+über. Aus dem Zustand 3 geht er beim
+nächsten Signal wieder in den Startzustand
+über und gibt bei einem kurzen Zeichen „n“
+aus, bei einem langen „m“. Bei einem
+Zeichenende-Signal gibt er „t“ aus und geht
+in Zustand 1 über.
+kurz
+
+lang
+
+Pause
+
+Z0
+
+./.
+
+./.
+
+Z1
+
+Z1
+
+Z2
+
+Z3
+
+./.
+
+Z2
+
+Z0 („i“)
+
+Z0 („a“)
+
+Z1 („e“)
+
+Z3
+
+Z0 („n“)
+
+Z0 („m“)
+
+Z1 („t“)
+
+Tab. 4: Zustandsübergangstabelle
+Morsezeichen-Dekodierer
+
+Notieren wir die Zustände und die Bedingungen für die Zustandsübergänge zunächst
+in einer Zustandsübergangstabelle (Tab. 4).
+
+· ein langes Zeichen wurde empfangen
+· ein Zeichenende (lange Pause) wurde
+empfangen.
+Weiter kann unser Morsezeichenempfänger
+vier verschiedene Zustände annehmen:
+· Zustand 0 (Startzustand): Warte auf
+Zeichenende (lange Pause)
+· Zustand 1: Warte auf nächstes Zeichen
+· Zustand 2: Warte auf nächstes Signal,
+nachdem ein kurzes empfangen wurde
+
+lang („a“)
+kurz
+
+kurz
+kurz („i“)
+
+Z2
+
+Pause („e“)
+
+S=Z0
+
+Pause
+
+Z1
+
+Pause
+Pause („t“)
+
+lang („m“)
+lang
+
+lang
+
+Z3
+
+kurz („n“)
+
+als Endlicher Automat
+
+
+
+Dazu lässt sich leicht ein Zustandsübergangsdiagramm zeichnen, das den Zustandsautomaten sehr übersichtlich darstellt
+(Abb. 11). Die Zustände lassen sich sehr
+einfach als Robo Pro-Unterprogramm realisieren. Abb. 12 zeigt den Zustand Z3, in dem
+die Signale ausgewertet werden.
+
+Diesen noch recht einfachen Endlichen
+Automaten kann man leicht zu einem vollwertigen Morsezeichen-Decoder weiterentwickeln – das sei euch als kleine Fingerübung überlassen. Beachtet dabei, dass man
+für eine saubere Lösung auch noch einen
+Fehlerzustand benötigt; schließlich kann es
+zu Übertragungsfehlern kommen.
+
+Fazit
+Die Modellierung einer Steuerungsaufgabe
+als Endlicher Automat hat einige wichtige
+Vorzüge: Die gewünschten Abläufe werden
+durch die Definition von Zuständen und
+Übergängen sauber und unzweideutig
+definiert. Auch lässt sich anhand eines
+Zustandsübergangsdiagramms sehr leicht
+überprüfen, dass keine Bedingungen übersehen wurden, denn aus jedem Zustand
+muss für jedes mögliche Ereignis genau ein
+Übergangspfeil abgehen. Allerdings kann
+es bei einer komplexen Aufgabenstellung
+herausfordernd sein, die richtige Abstraktionsebene für das Zustandsübergangsmodell zu finden.
+Morsezeichen-Dekodierers in Robo Pro
+
+Im Hauptprogramm erkennt man den Endlichen Automaten gut wieder. Das empfangene Morsesignal (‚kurz‘, ‚lang‘ oder
+‚Pause‘) wird an die gerade aktiven Zustände übergeben und dort ausgewertet; aus den
+Zuständen Z2 und Z3 wird mit dem nächsten
+Zustandsübergang jeweils das dekodierte
+Zeichen ausgegeben (Abb. 13).
+
+Hauptprogramm in Robo Pro
+
+Die Implementierung solcher Endlicher
+Automaten wird in Robo Pro hervorragend
+unterstützt – die Zustände lassen sich als
+Unterprogramm realisieren, die Übergänge
+durch Verbindungslinien im Hauptprogramm. Wer ein sauber konzipiertes und
+übersichtliches Steuerungsprogramm anstrebt, für den ist eine Modellierung als
+Endlicher Automat eine große Hilfe.
+
+Quellen
+[1]
+
+John E. Hopcroft, Jeffrey Ullman:
+Einführung in die Automatentheorie,
+formale Sprachen und Komplexitätstheorie. Addison-Wesley, 1990.
+
+[2]
+
+Dirk Fox: Morsetelegraf. 1/2014, S. 4-10.
+
+[3]
+
+Ferdinand Wagner, Ruedi Schmuki,
+Thomas Wagner, Peter Wolstenholme: Modeling Software with
+Finite State Machines. A Practical
+Approach. CRC Press, 2006.
+
+

@@ -1,0 +1,559 @@
+
+Schaltungstechnik
+
+Schaltungstechnik
+
+Motorsteuerungen (5): Schrittschaltwerke mit
+Wechselschaltung oder: Die Macht des XOR
+Stefan Falk
+In verschiedenen Beiträgen in der ft:pedia haben wir solche Schaltungen bereits verwendet,
+aber sie verdienen mal eine eigene, ausführliche Betrachtung: Die Verwendung von zwei
+Tastern für eine Schritt-Steuerung.
+
+Wechselschaltung mit Lampe
+Mit zwei Tastern oder Schaltern können wir
+eine Lampe bequem von zwei Stellen aus
+steuern [1]:
+
+Schaltung 1: Wechselschaltung
+
+Egal, ob die Lampe gerade leuchtet oder
+nicht, wir können sie von jedem der beiden
+Schalter aus umsteuern – probiert es!
+Die Lampe leuchtet in Schaltung 1 genau
+dann, wenn beide Schalter „unten“
+(betätigt) oder beide „oben“ (unbetätigt)
+stehen. Sie leuchtet nicht, wenn einer
+betätigt und der andere unbetätigt ist.
+
+Wechselschaltung mit zwei
+Verbrauchern
+Nun wollen wir das erweitern: Anstatt eine
+Verbraucher (die Lampe) wollen wir nun
+zwei (Lampen oder Motoren) so steuern,
+dass immer genau einer von beiden aktiv ist.
+Schaltung 1 muss also so ergänzt werden,
+dass es einen zweiten Verbraucher gibt, der
+genau dann Strom bekommt, wenn die
+Lampe nicht leuchtet. Wenn wir zwei
+Lampen verwenden würden, würde also
+
+eine immer dann leuchten, wenn die andere
+gerade nicht leuchtet, und umgekehrt.
+Die zweite Lampe muss also dann leuchten,
+wenn die beiden Schalter in Schaltung 1
+unterschiedlich stehen (einer betätigt, einer
+unbetätigt). Dazu gibt es mindestens zwei
+Möglichkeiten: Eine mit zwei Tastern und
+einem Relais und eine nur mit drei Tastern.
+
+Wechselschaltung mit Relais
+Das Problem dabei ist, dass wir wieder
+etwas einschalten müssen, wenn kein Strom
+anliegt (wenn unsere erste Lampe also nicht
+leuchtet). Das geht, wie wir in [1] gesehen
+haben, z. B. mit einem Relais. In Schaltung
+1 wird der Verbraucher (die Lampe) durch
+ein Relais ersetzt, das Umschaltkontakte
+bietet und so in beiden Stellungen (angezogen oder abgefallen) je einen anderen
+Verbraucher einschalten kann:
+
+Taster 1
+
+Taster 2
+
+DC
+
+M
+Motor 1
+
+M
+Motor 2
+
+Schaltung 2: Wechselschaltung für zwei
+Verbraucher mit Relais
+
+
+
+Das Relais haben wir absichtlich so verschaltet, wie Schaltung 2 zeigt, und nicht
+einfach die beiden Motoren an einem
+einzigen Wechselkontakt angeschlossen –
+wir werden gleich noch sehen, warum.
+Die Schaltung funktioniert nun so: Wenn
+beide Taster denselben Zustand haben, zieht
+das Relais an, andernfalls fällt es ab (würde
+man die beiden Leitungen zwischen den
+Tastern überkreuzen, wäre es genau andersherum). Bei angezogenem Relais läuft einer
+der Motoren (hier Motor 2, denn das Schaltbild zeigt immer die Ruhestellung), bei
+abgefallenem Relais der andere (hier also
+Motor 1).
+Kurzschlussbremse
+Durch zwei weitere Leitungen können wir
+die in [2] beschriebene Kurzschlussbremse
+verwenden. Die bewirkt, dass ein ausgeschalteter Motor nicht lange nachläuft,
+sondern schlagartig und praktisch sofort
+anhält:
+
+Taster 1
+
+Taster 2
+
+Der linke Motor dreht eine fischertechnikDrehscheibe mit Werkstücken (BS15 darauf, im Bild ist nur einer angebracht), der
+rechte Motor lässt den „Bohrer“ herunter
+ins Werkstück und wieder nach oben
+herausfahren. Die Schaltung bewirkt, dass
+immer genau einer der Motoren läuft und
+der andere stillsteht.
+Funktionsmodell mit Relais
+
+DC
+
+M
+Motor 1
+
+M
+Motor 2
+
+Schaltung 3: Wechselschaltung mit
+Kurzschlussbremse
+
+Die orangefarben eingezeichneten zusätzlichen Leitungen schließen einen auszuschaltenden Motor kurz (beide Motoranschlüsse liegen dann am selben Pol der
+Stromversorgung). Diese Erweiterung ist
+der Grund für die Art, wie herum in Schaltung 2 das Relais eingezeichnet wurde.
+Das erste mir bekannte Modell mit einer
+solchen Steuerung ist der Bohrautomat aus
+dem hobby-3-Begleitbuch 3-2:
+
+
+hobby-Begleitbuch 3-2 von 1973
+
+Unter Verwendung eines beliebigen
+fischertechnik-Relais oder des ft:pediaSelbstbau-Relais aus [1] können wir das
+einfache Funktionsmodell aus Abb. 2 bauen
+und nach Schaltung 2 oder Schaltung 3
+verdrahten.
+Jeder Motor dreht sein Z40, und deren drei
+Zapfen betätigen je einen Taster. Das Relais
+wird damit angesteuert, sodass ein Motor
+dann läuft, wenn beide Taster denselben
+Zustand haben (beide gedrückt oder beide
+nicht gedrückt, das nennt man die Identität),
+während der andere läuft, wenn beide
+Taster einen unterschiedlichen Zustand
+haben (einer gedrückt und einer nicht, das
+ist das „exklusive ‚Oder‘“, „exclusive OR“
+oder kurz „XOR“).
+
+
+Schaltungstechnik
+
+
+Wenn man die Motoren hinreichend langsam laufen lässt, erkennt man, dass der sich
+endlos wiederholende Gesamtablauf aus
+vier Teilschritten besteht. Wir fangen mit
+einem willkürlich gewählten an:
+1. Beide Taster nicht gedrückt. Der Motor
+I, der bei Identität der Taster läuft, dreht
+sein Z40, bis sein Taster betätigt wird.
+
+4. Nun haben beide Taster wieder einen
+anderen Zustand – das XOR schlägt an,
+Motor I stoppt und Motor X läuft, bis
+auch sein Zapfen seinen Taster freigibt.
+Dann haben wir wieder den Zustand wie
+in 1. und das Spiel beginnt von neuem.
+
+2. Der erste Taster wird vom Zapfen seines
+Z40 gedrückt. Motor I stoppt und der
+Motor X, der beim XOR der beiden
+Taster läuft, läuft, bis auch sein Taster
+von einem Zapfen betätigt wird.
+3. Da beide Taster wieder denselben
+Zustand haben (beide sind ja jetzt
+betätigt), stoppt Motor X wieder und
+Motor I läuft, bis der Zapfen von seinem
+Taster entfernt ist und den Taster loslässt. Das ist nur ein kurzer Moment,
+denn der Zapfen ist ja viel kleiner als der
+freie Raum zwischen zwei Zapfen.
+
+
+
+
+
+Wechselschaltung mit einem
+zusätzlichen Taster
+Jetzt kommt Trick 17: Das geht auch ohne
+Relais! Wir brauchen lediglich einen dritten
+Taster anstelle eines Relais, allerdings verlieren wir bei dieser Spar-Schaltung die
+Kurzschlussbremse. Die folgende Schaltung erfüllt aber prinzipiell denselben
+Zweck.
+Der wichtige Punkt ist, dass zwei der drei
+Taster direkt mechanisch gekoppelt
+werden. Das geht mit den fischertechnikMinitastern ganz wunderbar, denn ihr roter
+Stößel wirkt durchgehend und kann einen
+weiteren, direkt dahinter befindlichen
+Taster mit betätigen.
+
+Abb: 4: Das Schaltscheiben-Modell von vorne
+
+Das erste Modell mit den Z40 ist extra so
+gebaut, dass ihr leicht einen zweiten Taster
+anbringen könnt. Damit beide zuverlässig
+hinreichend gleichzeitig betätigt werden,
+empfiehlt es sich, die Zapfen auf Stößelseite
+z. B. mit einer Platte 5·15·30 3N (38428) zu
+fixieren. Ihr könnt Schaltung 4 also leicht
+im Z40-Modell ohne Relais ausprobieren.
+Funktionsmodell ohne Relais
+Nur zur Abwechslung sei hier eine weitere
+Konstruktionsart dargestellt:
+
+
+Taster 2a
+
+M
+Motor 1
+
+Taster 1
+DC
+
+M
+Taster 2b
+
+Schaltung 4: Wechselschaltung mit drei Tastern
+
+Motor 2
+
+
+Schaltungstechnik
+
+Hier werden in jeder der beiden Naben je
+zwei Schaltscheiben (37728 grau oder
+37727 schwarz) verwendet. Durch Verdrehen gegeneinander kann man den „offenen“
+Winkel einstellen, bei dem der daran anliegende Taster unbetätigt bleibt. Die Schaltung ist einfach Schaltung 4 – mehr
+brauchen wir nicht!
+
+Eine StangenvorschubMaschine
+Was machen wir nun mit dieser Schaltung?
+Nun, wir können sie überall einsetzen, wo
+zwei Bewegungen immer abwechselnd vor
+sich gehen sollen. Anders als bei einer zeitlichen Programmsteuerung [4] können die
+vier Teilbewegungen aber beliebig und vor
+allem unterschiedlich lang dauern, denn es
+sind die Taster, die den jeweils nächsten
+Zustand einleiten.
+
+M
+Greifer
+
+Schieber
+
+
+Es gibt einen motorbetriebenen Greifer, der
+die zu schiebende Stange festhalten oder
+loslassen kann. Dieser Greifer kann von
+einem zweiten Motor in Schubrichtung vor
+und zurück geschoben werden. Ein Schub
+nach links in Abb. 6/7 verläuft dann so:
+1. Der Greifer liegt „hinten“ (in Abb. 6/7
+wäre das also rechts, wenn die Stange
+nach links geschoben werden soll). Der
+Greifer packt zu und hält die zu
+schiebende Stange fest.
+
+Ein Beispiel ist der oben gezeigte Bohrautomat. Ein anderes ist die in Abb. 7
+gezeigte Stangen-Vorschub-Maschine. Sie
+besteht aus den grün bezeichneten Teilen:
+
+Greifer
+
+M
+
+Vorschubmotor
+
+Greifermotor
+
+Exzenter
+Zu schiebende Stange
+
+
+2. Der Schieber schiebt den Greifer nach
+„vorne“ (in Abb. 6/7 also nach links). Da
+der Greifer die Stange gerade festhält,
+wird die Stange also mit geschoben.
+3. Der Greifer lässt los.
+
+transportierende U-Träger-Schiene hergestellt. Achtet darauf, diese Führung nicht
+zu stramm zu bauen, sondern lasst den UTrägern genügend Spiel, sodass sie leichtgängig geschoben werden können.
+
+4. Der Schieber fährt zurück. Weiter bei 1,
+um die Stange immer weiter zu schieben.
+Die zu schiebende Stange ist bei uns eine
+Reihe von U-Trägern 150. Der Greifer
+wirkt wie eine Zange, die durch Gummikraft zusammen und durch einen Motor
+auseinander gedrückt wird (der wird später
+noch genauer beschrieben). Der Vorschub
+geschieht über einen Exzenter.
+Im Greifer ist ein Taster verbaut, beim
+Exzenter-Motor sind es zwei – zunächst mal
+ganz nach Schaltung 4. Der Ablauf kann
+dann z. B. so sein:
+1. Der Greifer liegt gerade rechts im
+Modell und ist geöffnet. Er packt nun die
+Stange durch seinen Motor.
+2. Sobald er fest zugegriffen hat, ändert
+sich der Zustand seines Tasters. Das setzt
+den Greifermotor still und startet den für
+den Vorschub, der die vom Greifer festgehaltene Stange nach links aus dem
+Modell schiebt.
+3. Sobald der Greifer ganz nach vorne geschoben wurde, ändert sich der Zustand
+des Vorschubmotors. Also wird der nun
+ausgeschaltet und der Greifermotor startet. Der bewirkt damit das vollständige
+Loslassen der Stange.
+4. Erst und sobald das erreicht ist, wird der
+Greifermotor wieder aus- und stattdessen der Vorschubmotor eingeschaltet. Der zieht über den Exzenter den
+Greifer in die rechte Position – weiter
+geht’s endlos ab 1.
+Das Grundgerüst
+Es beginnt alles auf einer Bauplatte 500.
+Mit wenigen BS15, Winkelbausteinen 30°
+und Statikträgern (120 und 15 mit zwei
+Zapfen) ist die Führung für die zu
+
+
+Links und rechts nebendran entsteht aus
+Statikträgern 30 und 15 mit zwei Zapfen,
+Platten 15·90 und 15·60 sowie zur Verbindung derselben Bausteine 5·15·30 3N die
+Trägerschienen für den Schlitten mit dem
+Greifer.
+Der Vorschub-Antrieb
+Ganz am Ende sitzen Statikträger 60, auf
+denen einfach per Federnocken mittig eine
+Querstange aus BS15 mit Bohrung und
+links und rechts je zwei BS30 befestigt
+werden. Diese Stange steht links und rechts
+je 7,5 mm über die Statikträger hinaus.
+
+Der S-Motor ist mit einem Verbinder 30
+(mit einer abgeflachten Seite) an den
+Grundbausteinen angebracht. Er treibt über
+ein Rast-Z10 das Z30 für den Exzenter an.
+Der sitzt mit einer Rastachse und einer
+Riegelscheibe zwischen Z30 und Bausteinen als Abstandshalter auf derselben
+Metallachse, auf der obendrauf in einer
+Flachnabe die beiden Schaltscheiben sitzen.
+Die Riegelscheibe zwischen Z30 und
+Bausteinen sorgt für den richtigen Abstand,
+sodass das Z10 satt ins Z30 eingreift, ohne
+dass etwas hakt.
+
+Schaltungstechnik
+
+Der Greifer
+Der Greifer verwendet ebenfalls einen SMotor mit angebrachten Schaltscheiben, die
+hier aber nur einen einzigen Taster zu betätigen brauchen. In seiner oberen langen Nut
+steckt ein BS15, an dem per Federnocken
+ein BS7,5 sitzt, an dem der Taster befestigt
+ist.
+An der Motor-Rückseite geht es weiter mit
+zwei Federnocken für einen BS 5·15·30 3N,
+in dessen mittlerer Nut ein BS7,5 mit
+Bohrung steckt. In die Bohrung kommt
+wieder eine Achse 30, die das andere Ende
+der Exzenter-Schubstange (der I-Strebe 75)
+aufnimmt.
+
+
+Diese betätigen das Taster-Paar. Die beiden
+Taster sind einfach mit zwei BS7,5 mit
+Verbinder 15 miteinander gekoppelt, und
+der erste Taster ist mit einem Baustein
+5·15·30 mit einer langen Nut und einem
+Federnocken an der Querstange befestigt.
+
+
+In den Seiten des BS15 mit Bohrung
+stecken zwei Tragarme, jeweils bestehend
+aus Statikträger 30, Baustein 5·15·30 und
+Statikträger 15, und zusätzlich sitzt auf dem
+nach unten ragenden Ende des roten Flachbausteins eine Platte 15·15. Die ist wichtig,
+damit der Schlitten zwar leichtgängig auf
+den Schienen geschoben werden kann, aber
+nicht zu viel Spiel in Querrichtung hat.
+
+beim Vorschub
+
+Vorne sitzen ein BS7,5 und wieder ein
+BS15 mit Bohrung. Der hält zwei gleich
+gebaute seitliche Träger. Unten wird vom
+Motor ein Rast-Z10 gedreht, und in der
+Achse des BS15 mit Bohrung sitzt eine
+Flachnabe mit einem Z20.
+
+Im Z30 steckt locker eine Achse 30 mit
+einer I-Strebe 75, oben und unten mit einem
+Klemmring gesichert. Die soll unseren
+Greifer vor und zurück schieben.
+
+Ein normales Haushaltsgummi, einige Male
+verschlungen, zieht die zwei Arme zusammen, die über Gelenkbausteine an einem
+unten am Motor angebrachten BS15 zwei
+
+
+Statikträger 60 beweglich halten. Die zwei
+S-Riegel mit Riegelscheibe sichern das
+Gummi dagegen, zu weit zu den Gelenken
+zu rutschen und also zu wenig zu ziehen.
+
+Damit – so müsst ihr die Schaltscheiben
+justieren – steht mit jeder Halbdrehung der
+Schaltscheiben die Nabenmutter zwischen
+den Greifarmen mal längs (und lässt das
+Gummi die Greifarme zupacken) und mal
+quer (und drückt die Greifarme gegen die
+Gummikraft auseinander).
+
+
+
+Ganz vorne an den Statikträgern 60 sitzen
+per Federnocke BS7,5, in denen je ein
+Pneumatik-T-Stück steckt. Darauf sitzen
+kurze (ca. 10 mm lange) Stücke PneumatikSchlauch, und so wird der Greifer
+wunderbar griffig – die zu bewegenden UTräger rutschen nicht einfach durch.
+
+
+Durch die Untersetzung von 2:1 zwischen
+Z10 und Z20 erreichen wir, dass pro halber
+Umdrehung der Schaltscheiben (also
+immer, wenn sich der Tasterzustand ändert)
+eine Vierteldrehung des Z20 mit der Flachnabe erfolgt.
+
+Nabenmutter geöffnet
+
+
+
+Schaltungstechnik
+
+M
+
+Taster 2a
+
+Motor 1
+
+Taster 1
+
+M
+Taster 2b
+
+DC
+
+Polwendeschalter
+
+Motor 2
+
+Schaltung 5: Um einen Umschalter der Bewegungsrichtung ergänzte Schaltung 4
+
+Funktionsweise
+Wenn ihr alles einfach nach Schaltung 4
+verkabelt, funktioniert das Modell wie
+folgt. Wir fangen in einem willkürlich
+gewählten Zustand an:
+1. Der Greifer ist gerade geschlossen (greift
+zu) und der Schlitten steht ganz hinten.
+Einer der Motoren läuft – nehmen wir an,
+das sei der Vorschubmotor. Der dreht
+sein Z30 eine halbe Umdrehung und
+schiebt den Greiferschlitten also nach
+vorne. Eine festgehaltene U-TrägerStange würde also nach vorne aus dem
+Modell herausgeschoben werden.
+2. Nach der halben Umdrehung ändern sich
+seine Taster, der Vorschubmotor wird
+aus- und der Greifermotor eingeschaltet.
+Der dreht seine Schaltscheiben eine
+halbe Umdrehung und seine Z20-Nabenmutter also eine viertel Umdrehung – der
+Greifer öffnet sich. Dann ändert sich der
+Zustand des Tasters am Greifer.
+3. Der Greifermotor geht also aus und der
+Vorschubmotor dreht wieder eine halbe
+Umdrehung. Also wird der geöffnete
+Greifer zurückgezogen, und zwar ohne
+die U-Träger zu bewegen. Bis die Taster
+
+des Vorschubs ihren Zustand wieder
+ändern…
+4. Dann wird der Vorschubmotor aus- und
+der Greifermotor wieder eingeschaltet.
+Seine halbe Umdrehung bewirkt eine
+Vierteldrehung der Nabenmutter, die
+steht also wieder längs zum Schlitten und
+lässt die Greifarme zupacken. Das Spiel
+geht von vorne los, indem der Greifer in
+geschlossenem Zustand wieder nach
+vorne geschoben wird.
+Umschaltbare Schubrichtung
+Es könnte aber auch andersherum laufen: Je
+nachdem, ob der Greifer immer „hinten“
+zupackt und vorne loslässt oder umgekehrt,
+wird die Stange in die eine oder die andere
+Richtung transportiert. Wenn wir die
+Schubrichtung gerne steuern möchten, so
+können wir das diesmal nicht dadurch tun,
+dass wir die Stromversorgung umpolen.
+Eine halbe Umdrehung des Exzenters im
+Vorschub bewirkt genau dasselbe, egal in
+welcher Richtung diese Drehung erfolgt,
+und analog gilt dasselbe auch für den
+Greifer.
+Wir können aber die Reihenfolge ändern,
+wenn wir einen Polwendeschalter in Schaltung 4 einbauen und so zu Schaltung 5
+
+
+
+kommen. Hier empfiehlt sich die aktuelle
+Version des Schalters (36708), weil der in
+der Mittelstellung das Modell auch gleich
+ganz ausschalten kann.
+
+Quellen
+[1]
+
+Falk, Stefan: Motorsteuerungen
+(Teil 4). ft:pedia 4/2011, S. 6-20.
+
+Wir vertauschen also nicht die Polung der
+Motore, sondern lediglich die Tatsache,
+welcher Motor bei Gleichstand aller Taster
+laufen soll und welcher bei Ungleichstand.
+Das allein ergibt den richtigen Ablauf für
+eine beliebig wählbare Transportrichtung
+der U-Träger-Stange.
+
+[2]
+
+Falk, Stefan: Motorsteuerungen
+(Teil 1). ft:pedia 1/2011, S. 4-8.
+
+[3]
+
+fischertechnik: Bohrautomat in
+Experimente + Modelle hobby 3
+Band 2. Fischer-Werke, Tumlingen,
+1971, S. 56-62.
+
+[4]
+
+Falk, Stefan: Programmsteuerungen.
+ft:pedia 1/2013, S. 4-19.
+
+[5]
+
+Falk, Stefan: Motorsteuerungen 5 –
+Schrittschaltwerk mit Wechselschaltung Mittel. Youtube, 2019.
+
+Unter [5] findet sich auch ein Video der
+Maschine. Im nächsten Beitrag dieser Reihe
+werden wir eine ähnlich wirkende Schaltung elektronisch (mit einem E-Tec-Modul)
+realisieren.
+
+
+

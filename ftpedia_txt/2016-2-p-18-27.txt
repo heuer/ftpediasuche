@@ -1,0 +1,334 @@
+
+
+Modell
+
+Urlaubskasten-Modell 3: Gabelstapler
+Stefan Falk
+Die Bauteile des Urlaubs-Baukastens aus ft:pedia 1/2016 [1] wurden ja so ausgewählt, dass
+man damit schon nicht-triviale mechanische Konstruktionen herstellen kann. Hier folgt ein
+Modellvorschlag für einen Gabelstapler, in dem ich mal keinen Kettenzug, sondern eine Hebemechanik mit Zahnstangen einsetzen wollte.
+
+
+
+
+Modell
+
+Der Gabelstapler ist auf einem von den
+lenkbaren Hinterrädern bis zum obenliegenden Zahnstangenantrieb durchgehenden Rahmen aufgebaut. Insgesamt bietet
+das Modell:
+∂ Gelenkte Hinterräder,
+∂ einen per Hebeleinstellung etwas nach
+hinten kippbaren Aufbau (damit die
+Ladung nicht herunterfällt),
+∂ Gabelstäbe, die bis ganz nah an den
+Boden heruntergefahren werden können
+sowie
+
+Der Rahmen
+Geht beim Nachbauen anhand dieses Bildes
+vor; Details könnt ihr in den weiteren
+Abbildungen „nachschlagen“. Das Bild enthält den vollständigen, normalerweise
+senkrecht stehenden Teil (oben) sowie den
+wesentlichen Teil des Fahrwerks-Rahmens.
+Die Hinterräder und ihre Lenkung sowie die
+Gabel werden später einfach angesteckt.
+
+∂ einen kurbelbetriebenen Zahnstangenantrieb zum Anheben der Gabel.
+Das Modell ist durchaus spielstabil und
+sollte also für’s Kinderzimmer gut geeignet
+sein. Beim Aufbau muss aber vermutlich
+jemand mit etwas fischertechnik-Baupraxis
+dabei sein – der Teilebestand des „Wohnzimmer-, Dienstreisen-, Urlaubs- und
+Notfall-Kastens“ wird schon ganz schön
+ausgenutzt.
+Aber der Reihe nach.
+
+
+
+
+Die Kurbel rechts in Abb. 3 geht
+über zwei Z10 auf das Z20 auf
+einer langen Achse, die links
+über ein zweites Z10 auf ein
+weiteres Z20 führt. Dieses Z20
+dreht die Ache mit dem Kettentrieb für’s Anheben der Gabel.
+Damit die lang genug wird,
+besteht sie aus zwei Rastachsen,
+die in der Mitte mit einer Rastkupplung verbunden sind. Ebenfalls in der Mitte sitzt das
+normale Z10 für die Kette.
+Zwischen Z10 und Gelenkstein
+sorgt ein Klemmring für den
+nötigen Abstand, damit die
+Kette nicht am Rahmen schleift.
+Auf derselben Achse sitzen auch
+die Vorderräder. Wichtig: Damit
+sich die Räder unabhängig vom
+Antreiben der Kette beim Fahren
+drehen können, werden für die
+Vorderräder die beiden FreilaufFlachnaben aus dem Urlaubskasten verwendet. Die Achsen
+und Freilaufräder werden mit
+einigen Klemmringen gesichert.
+Wer keine Freilaufnaben besitzt,
+verwendet normale Flachnaben
+und zieht diese nur ganz sachte
+an – schließlich dürfen sich die
+beim Fahren drehenden Vorderräder und der auf derselben
+Achse sitzende Kettentrieb nicht
+stören.
+Ebenfalls um dieselbe Achse
+oberen Bildrand wird später die Zahnstange eingehängt
+kann der Gabelträger über die
+beiden Gelenksteine gekippt
+werden. Für eine solche Mehrdazu die (später noch daran zu befesfachausnutzung derselben Achse finden
+tigende) Hebel-Mimik, die im Bild gerade
+sich in [2] noch ein paar Anregungen.
+hochgeklappt ist. Sie drückt oder zieht
+später an der quer in die beiden roten LagerDie Kippmechanik besteht aus zwei bis
+böcke eingespannten Rastachse 75. Die
+hierhin noch nicht miteinander verbunLagerböcke sind einfach an den unteren
+denen Teilen: Da wäre einmal die Kurbel
+BS30 des Gabelträgers befestigt. Die
+links unten in Abb. 3 und als Gegenstück
+Wirkungsweise der Kippmechanik werden
+wir später noch genauer betrachten.
+
+
+Modell
+
+
+Die Hinterradlenkung
+Als nächstes wird das Fahrwerk mit den
+lenkbaren Hinterrädern ergänzt. Dazu wird
+die Baugruppe in Abb. 4 hergestellt.
+
+22,5 (130593) „hängen“. Die stecken in
+einer Lagerhülse 15 (36819) in „halben
+Gelenkbausteinen“. So können die Räder
+leicht gelenkt werden.
+
+Der obere Querträger muss genau nach dem
+Bild aufgebaut werden. Für den Abstand
+des Z10 zum Rast-Z20 ist der BS7,5
+zwischen der im Bild rechten Gelenkklaue
+und dem BS15 mit Bohrung wichtig. Für
+die korrekte Breite des Querträgers ist der
+zweite BS7,5 wichtig.
+Und schließlich werden sowohl der in den
+BS15 mit Bohrung nach ganz außen
+eingeschobene Federnocken als auch der
+nach vorne zeigende Zapfen des BS15 auf
+der im Bild linken Seite benötigt, um die
+Hinterrad-Baugruppe am Rahmen zu
+befestigen. Wir schauen in Abb. 4 also
+sozusagen vom Fahrer aus nach hinten auf
+die Hinterräder.
+Die Räder selbst sitzen mit ihren durch
+Klemmringe gesicherten Achsen auf BS7,5
+mit Bohrung, die an Rastaufnahmeachsen
+
+
+
+
+Damit bei der Hecklenkung ein ordentliches
+Lenktrapez [3] herauskommt (das kurveninnere Rad sollte stärker einschlagen als das
+äußere), muss die Spurstange kürzer ausfallen als der Abstand zwischen den
+Gelenkmittelpunkten. Also sitzen auf den
+BS7,5 mit Bohrung, in denen die Radachsen
+drehen, erstmal je ein Winkelstein 30°, dann
+wieder je ein Gelenkstein, und schließlich
+die Kombination aus BS30, BS15, einem
+BS7,5 und zwei BS5. Das ergibt eine recht
+saubere Lenkgeometrie.
+
+Wie Abb. 2 zeigt, wird diese Baugruppe
+einfach an den Rahmen gesteckt. Dafür ist
+es wichtig, dass die Nut des linken BS30 am
+Ende des Rahmens waagerecht ausgerichtet
+ist – da muss ja der breite Teil des Federnockens aus Abb. 4 rein. Abb. 6 zeigt die
+eingebaute Lenkung von unten.
+Ihr habt alles richtig gebaut, wenn die
+Lenkung sich am „Lenkrad“ – der nach
+oben stehenden Flachnabe aus Abb. 4 –
+ganz leichtgängig bis in die jeweiligen Endlagen betätigen lässt.
+
+Die Kippmechanik
+Wenn ein Gabelstapler seine Last aufgenommen und hochgehoben hat, soll sie
+nicht z. B. beim Bremsen nach vorne von
+der Gabel rutschen. Deshalb wird der ganze
+senkrechte Aufbau etwas nach hinten
+gekippt. Die Gabeln zeigen dann leicht nach
+oben und verhindern das Abrutschen der
+darauf liegenden Last.
+
+gekippt
+
+von unten gesehen
+
+Zu diesem Zweck ist der senkrechte Aufbau
+an den zwei Gelenksteinen im Rahmen
+kippbar aufgehängt, denn zum Aufnehmen
+und Absetzen der Last müssen die Gabeln
+natürlich möglichst tief unten aufliegen.
+
+Der linke Teil des Rahmens, an dem sich die
+Kippmechanik befindet, ist so aufgebaut:
+
+Modell
+
+3. Letzterer hängt an der Rastachse 75, die
+über die beiden Lagerböcke mit dem
+Gabelträger verbunden ist.
+Justiert werden müssen nun die Kurbel
+(nach vorne und hinten) und der BS7,5 am
+Verbinder 15 (nach oben und unten), sodass
+es einen Schnapp-Effekt gibt. Wenn die
+Gabel (beim Fahren des Staplers) nach
+hinten gekippt ist, muss die Mechanik so
+stehen:
+
+Kippmechanik
+
+Der BS15, in dem die Kurbelachse steckt,
+sitzt also über einen Verbinder 45 auf dem
+Rahmen und kann so fein nach vorne oder
+hinten justiert werden. Die Rastachse 30
+trägt außer der Kurbel einen Rastadapter
+mit einem Verbinder 15 vornedran.
+Mit dem Gabelträger wird das wie folgt
+verbunden:
+
+
+Kipp-Kurbel
+
+Vom eben schon erwähnten Verbinder 15
+aus geht die Mechanik also so weiter:
+1. Am Verbinder sitzt eine gelenkige
+Kombination von je einem BS7,5 und
+einer S-Kupplung 15 2 (38253). Das
+Gelenk ist mit einem Seilklemmstift
+(eine andere kurze Achse tut’s auch) und
+zwei Klemmringen ausgeführt.
+
+
+2. Der letzte BS7,5 ist per Federnocken mit
+Rastadapter, Rastachse 30 und noch
+einem Rastadapter verbunden.
+
+Die Kurbeln lassen sich angenehmer
+drehen, wenn immer eine Lagerhülse 15
+(36819) aufgesteckt wird.
+
+
+
+Der Schnapp-Effekt ergibt sich, wenn der
+Seilklemmstift im Gelenk oberhalb der
+Kurbelachse zu liegen kommt. Dann rastet
+die Mechanik ein. Der Baustein 5 15 ∙ 30
+3N direkt vor der Kurbel dient als Anschlag.
+Wie man sieht, kann auch er nach Bedarf
+nach vorne oder hinten justiert werden.
+Dreht man die Kurbel nach vorne bis zu
+diesem Anschlag, wird die Gabel ganz
+abgekippt (Abb. 11).
+
+Der Kettenzug
+Auf der rechten Seite des Staplers befindet
+sich die Kurbel zum Hochheben der Gabel:
+
+rechten Fahrzeugseite von unten gesehen
+
+
+Die Kurbel geht also über eine Rastachse 45
+auf ein Rast-Z10. Eine Etage tiefer sitzt
+wieder ein Rast-Z10, hier auf einer Rastachse 30 (35061) + Kegelzahnrad Z10 m1
+45°. Das dient nur als Zwischenzahnrad
+zum nächsten Z20 (siehe Abb. 13).
+Auf der linken Fahrzeugseite geht es
+(Abb. 14) weiter mit noch einer Z10-aufZ20-Untersetzung. Abb. 15 zeigt das ganze
+Modell von unten.
+
+
+Vorderachse/Antriebsachse der Kette
+
+Damit die angehobene Gabel nicht durch
+das Gewicht der Last wieder nach unten
+rutscht, brauchen wir noch eine Sperrklinke
+[4]. Man kann immer hochkurbeln, aber
+zum Herablassen der Last muss man erst die
+Sperre lösen.
+Die Sperrklinke ist schnell aufgebaut: Wie
+Gelenkstein, Lagerbock, Achse und
+Klemmring. Die Achse greift in das Z10 an
+der Kurbel ein, das also (im Bild) gegen den
+Uhrzeigersinn frei gedreht kann, aber nicht
+
+
+Modell
+
+
+zurück. Will man die Gabel herunterkurbeln, muss man die Sperrklinke erst
+etwas anheben, um das Z10 freizugeben.
+
+
+Einhängen der Gabel
+Schließlich brauchen wir noch die Gabel
+selbst. Sie ist anhand Abb. 17 aus wenigen
+Standardteilen schnell aufgebaut. In die
+Grundbausteine sind die Zahnstangen eingeschoben. Unten klemmen die Rastachsen
+110 (richtig herum gedreht) ohne weitere
+Befestigung einfach in einer Gruppe aus
+BS7,5, Federnocken, Baustein 5 15 ∙ 30
+(35049) und Baustein 5 15 ∙ 30 3N (38428).
+Den oberen Teil des Staplers, in den die
+Gabel von unten eingeschoben wird, stellt
+Gabel gegen das dahinterliegende Z10, und
+sie hat auch seitlich nicht zu viel Spiel. Wie
+Bauplatte 30 ∙ 60 2Z (38249) auf den (in
+
+
+
+
+rechten BS7,5 aufgeschoben. Auf der
+Rückseite (Abb. 19) sieht man, wie das
+obere Rast-Z10 gerade passend in die
+Zahnstange eingreift.
+
+
+Zahnstange
+
+
+Ist die Gabel korrekt eingehängt, kommt sie
+unten direkt vor der Vorderachse an:
+
+Vorderachse
+
+Modell
+
+Quellen
+[1]
+
+Falk, Stefan: Der WohnzimmerDienstreisen-Urlaubs-Notfallkasten.
+ft:pedia 1/2016, S. 31-36.
+
+[2]
+
+Falk, Stefan: Raffiniertes mit Achsen.
+ft:pedia 3/2013, S. 38-39.
+
+[3]
+
+Fox, Dirk: Lenkungen (Teil 1).
+ft:pedia 1/2011, S. 16-21.
+
+[4]
+
+Fischer-Werke: Gesperre, in:
+hobby 1 Begleitbuch Band 1. 1972,
+S. 47-49.
+
+Damit ist der Aufbau fertig und es kann
+losgespielt werden. Die Lagerarbeiter rufen
+schon.
+
+
+

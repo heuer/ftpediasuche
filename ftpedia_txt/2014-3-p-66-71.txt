@@ -1,0 +1,281 @@
+
+
+Computing
+
+Strichcode-Leser am Robo TX Controller (1):
+Automatisiert mit RoboPro
+Andreas Gail
+Strichcodes oder auch Barcodes begegnen uns täglich bei allem, was wir im Supermarkt oder
+sonstwo kaufen. Der vorliegende Beitrag zeigt, wie ein Strichcode-Leser mit Standardfischertechnik-Bauteilen aufgebaut werden kann. Weiterhin werden zwei unterschiedliche
+Automatisierungslösungen vorgestellt: in Teil 1 unter Anwendung der RoboPro Software, in
+Teil 2 mithilfe von Microsoft Visual Basic 2010.
+
+Der Testaufbau
+Der Testaufbau des Strichcode-Lesers
+(Abb. 1) erfolgt ausschließlich mit
+Standardteilen. Die Gliederkette zur Kabelführung ist beim fischertechnik-Kooperationspartner Knobloch GmbH erhältlich.
+Zum Start des Lesevorgangs wird der Taster
+{1} (TX I8) betätigt. Die Transporteinheit
+{2} (TX M1) setzt sich daraufhin nach links
+in Bewegung, läuft unter der Leseeinheit
+{5} (TX I1-I2) hindurch und bleibt
+schließlich links stehen, wenn der Taster
+{4} (TX I4) von der Transporteinheit {2}
+ausgehend betätigt wird. Auf dieselbe Art
+und Weise kann auch ein Lesevorgang von
+links nach rechts durchgeführt werden. Zum
+Start ist erneut Taster {1} zu betätigen. Die
+Transporteinheit {2} bleibt erneut stehen,
+wenn rechts der Taster {3} (TX I3) betätigt
+wird. Abb. 5 zeigt den Anschlussplan.
+
+Die Leseeinheit {5} ist zum Abhalten von
+Störlicht mit Platten verblendet. Der eigentliche Lesesensor ist der IR-Spur-Sensor von
+fischertechnik (128598). Hierbei handelt es
+sich vermutlich um ein Bauteil ähnlich dem
+SHARP IS471F (Conrad Electronic
+185094).
+
+Code 39
+Es gibt verschiedene standardisierte Strichcodes. Die folgenden Ausführungen
+beziehen sich auf den Typ Code 39. Hiermit
+sind die Ziffern 0-9 und die Buchstaben AZ darstellbar. Zur Vereinfachung wird die
+Decodierung exemplarisch nur für Zahlencodes dargestellt; eine Buchstabenerkennung könnte analog ergänzt werden.
+Jeder Zahlenstreifencode besteht aus
+weißen und schwarzen (zur Verdeutlichung
+oben farbigen) Streifen. Zwischen den
+Zahlenstreifencodes ist immer ein dünner
+
+
+Computing
+
+weißer Streifen. Jeder eigentliche Zahlenstreifencode beginnt und endet somit mit
+einer farbigen Streifenkante. Beispielsweise
+hat der Zahlenstreifencode für die Ziffer 1
+folgende Streifen (in diesem Beispiel von
+rechts nach links gelesen):
+1 Streifen rot, breit
+1 Streifen weiß, schmal
+1 Streifen rot, schmal
+1 Streifen weiß, schmal
+1 Streifen rot, schmal
+1 Streifen weiß, breit
+1 Streifen rot, schmal
+1 Streifen weiß, schmal
+1 Streifen rot, breit
+
+Summiert man die Zahlenreihe, muss man
+als Prüfsumme immer 12 erhalten, sonst hat
+es einen Lesefehler gegeben.
+
+Zusammen sind das immer neun Streifen.
+Um die Streifenbreite einzeln erkennen zu
+können, wechseln sich die Streifenfarben
+ab: rot, weiß, rot, ... Weiterhin gibt es immer
+drei breite und sechs schmale Streifen. Für
+die Verarbeitung innerhalb der Zahlenstreifencodes ist es nicht erheblich, ob die
+Streifen farbig oder weiß sind, vielmehr ist
+nur die Breite interessant. Ein schmaler
+Streifen wird durch 1 und ein breiter
+Streifen (weil doppelt so breit) als 2 ausgedrückt. So ergibt sich für die Ziffer 1
+folgende Zahlenreihe:
+
+Ein Zahlenstreifencode kann von rechts
+oder von links gelesen werden; es ergibt
+sich jeweils eine Zahlenreihe in einander
+entgegengesetzter Richtung.
+
+Test der Leseeinheit
+Wie bereits auf Abb. 1 erkennbar ist die
+verwendete Leseeinheit für Balkenbreiten
+wie auf den erwähnten Supermarktprodukten nicht geeignet. Die Mindestbreite eines
+schmalen Balkens muss beim gewählten
+Aufbau mindestens 3 mm betragen. Zum
+Test der Lesegenauigkeit kann ein DIN A4Blatt erzeugt werden, mit Linienbreiten
+0...10 pt, wie nachfolgend gezeigt (Abb. 2).
+
+
+
+
+
+
+
+
+dieselbe Streifenfarbe gelesen wird. Im
+Idealfall werden im 1 ms-Abstand für ein
+schwarzes Messergebnis eine 0 und für ein
+weißes Messergebnis eine 1 in eine Tabelle
+geschrieben (ListeRAW). Maximal 32766
+Messungen können so erfasst werden. So
+werden die Rohdaten erfasst. Im Hauptprogramm wird immer erst mit der Datenerfassung begonnen, wenn weiß gemessen
+wurde. Schwarz ist der Dauerzustand, in
+dem der Sensor ‚ins Leere‘ blickt. Nach der
+Rohdatenerfassung beginnt die Auswertung
+in den Unterprogrammen 1-4; diese werden
+hintereinander aufgerufen. Die Funktionen
+in den Unterprogrammen wurden aufgeteilt,
+da die RoboPro-Software im Hauptprogramm bezüglich der Konfigurationsfläche
+sehr limitiert ist.
+Lesegenauigkeit des Lesesensors
+
+Neben der erforderlichen Mindeststreifenbreite ist auch der Abstand des Lesesensors
+zum Strichcode von entscheidender
+Bedeutung. Im vorliegenden Fall liegt das
+Optimum bei 8 mm Abstand. Insgesamt
+ergab sich als kleinste reproduzierbare
+Streifengröße folgender Strichcode:
+
+47mm
+
+Strichcode, breite im Original 47mm
+
+RoboPro-Konfiguration
+Kurz vorweg bemerkt: Die Automatisierung des Projekts mithilfe von RoboPro ist
+komplex, aber machbar.
+Hauptprogramm (siehe Abb. 6): Beim
+Lesevorgang wird der Zahlenstreifencode
+unter dem Lesekopf vorbeigeführt. Hierbei
+wird mit einer für den Controller maximalen Geschwindigkeit (innerhalb von ca.
+1 ms) gemessen, wie lange hintereinander
+
+Unterprogramm Auswertung1: Dieses hat
+die Aufgabe, die zuvor erzeugte ListeRAW
+auszuwerten und das Auswertungsergebnis
+in ListeAW1 zu speichern. In ListeAW1 wird
+für das Auslesen des Zahlenstreifencodes
+der Ziffer 1 folgende Zahlenfolge ermittelt:
+Die Zahlen bedeuten, dass 1 ms schwarz
+gesehen wurde, 643 ms weiß, 473 ms
+schwarz, 142 ms weiß, usw. Nur die rot
+markierten Zahlen sind dabei relevante
+Angaben. Die 513 ms am Ende bedeuten
+wieder einen weißen Streifen am Ende, und
+673 ms blickt die Sonde nach der Messung
+ins Leere, bis die festgelegte Messdauer von
+5 s abgelaufen ist.
+
+Unterprogramm Auswertung2: Dieses
+berechnet die Summe der roten Zahlen und
+legt das Ergebnis in ListSum ab. Um nur die
+roten Zahlen auszuwerten, werden nur die
+Index-Nummern 2-10 der Tabelle ListeAW1
+verwendet. Es ergibt sich ListSum=2501.
+Unterprogramm Auswertung3: Dieses
+berechnet zunächst aus ListSum die Einzelstreifenbreite, analog der Prüfsumme 12
+wird ListDiv = ListSum / 12 berechnet. Es
+ergibt sich ListDiv = 278. Nachfolgend wird
+jeder relevante Wert der Tabelle ListeAW1
+durch 278 geteilt und in der Tabelle
+ListeAW2FP als Dezimalzahl gespeichert.
+Folgende neun Zahlen befinden sich
+anschließend in der Tabelle ListeAW2FP:
+1,70
+0,51
+0,68
+0,83
+0,56
+1,84
+0,51
+0,68
+1,68
+Unterprogramm Auswertung4: Dieses
+arbeitet iterativ und nutzt seinerseits die
+Unterprogramme
+Auswertung5
+und
+Auswertung6. Alle Einträge in Tabelle
+ListeAW2FP werden kaufmännisch gerundet und unter vorheriger Verwendung eines
+Korrekturfaktors KorrFaktor in Tabelle
+ListeAW2 als ganze Zahl (natürliche Zahl
+ohne Kommastellen) abgelegt. Bei der
+ersten Berechnung ist KorrFaktor = 1, d. h.
+es findet keine Korrektur statt. Folgende
+Zahlen befinden sich dann in ListeAW2:
+
+Computing
+
+Diese Zahlenfolge entspricht dem Zahlenstreifencode für die Ziffer 1. Hierbei haben
+wir Glück, da das richtige Ergebnis nur sehr
+knapp erzielt wurde: 0,51 ergeben kaufmännisch gerundet 1; wäre eine etwas
+geringere Spaltenbreite an dieser Stelle
+gemessen worden, hätte sich ein Lesefehler
+ergeben.
+Die zuletzt erhaltene Zahlenfolge (in
+ListeAW2) ist nur die Beschreibung von
+Streifen und nicht das eigentlich
+gewünschte Ergebnis in Form einer einzigen Ziffer. Diese Umwandlung erfolgt in
+den Unterprogrammen Auswertung5 und
+Auswertung6. Zurück in Unterprogramm
+Auswertung4 wird geprüft, ob in der
+Variablen Ergebnis ein akzeptierter Wert
+erhalten wurde. Wenn nein, dann steht in
+der Variablen Ergebnis 999. Im Fehlerfall
+kommen die Korrekturfaktoren in Tabelle
+KorrWerte zum Einsatz. In der Tabelle sind
+etwa 100 solcher Korrekturfaktoren enthalten (0,999; 1,001; 0,998; 1,002; 0,997;
+1,003; ...) mit denen das Unterprogramm
+Auswertung4 versucht, doch noch ein
+stimmiges Ergebnis zu erzielen. Nach
+Abschluss
+von
+Unterprogramm
+Auswertung4 wird das Endergebnis ausgegeben.
+In den Unterprogrammen Auswertung5 und
+Auswertung6 erfolgt aus den gefundenen
+Zahlenfolgen die Umrechnung in die
+gesuchte einzelne Ziffer, in unserem
+Beispiel eine 1. Im Unterprogramm Auswertung5 wird aus der Zahlenfolge unter
+Nutzung des binären Zahlensystems gemäß
+folgendem Muster eine einzelne Zahl
+errechnet:
+
+Tab. 1: Codierung von Streifenmustern,
+gültig für vorwärts gelesene Streifen
+
+
+
+
+Bedien- und Anzeigeelemente in RoboPro
+auf ein Mindestmaß beschränkt.
+
+Tab. 2: Codierung von Streifenmustern,
+gültig für rückwärts gelesene Streifen
+
+Unsere gesuchte Ziffer 1 hat also als zugehörige Zahl die 265 oder 289. Das
+Berechnungsergebnis aus Unterprogramm
+Auswertung5 wird in der Variablen
+ErgebDec = 289 abgelegt.
+Im Unterprogramm Auswertung6 wird
+versucht, ob aus ErgebDec = 289 die
+gesuchte Ziffer ermittelt werden kann. In
+unserem Fall ist das möglich und es wird
+Ergebnis = 1 ausgegeben.
+
+RoboPro-Visualisierung
+Wie in Abb. 4 ersichtlich, sind die Möglichkeiten zur Visualisierung eher als bescheiden anzusehen. Die bei Windows übliche
+Standardfunktionalität des drag-and-drop
+von und nach RoboPro wird nicht unterstützt. So ist es z. B. nicht möglich, an
+anderen Stellen erstellte Bitmap-Grafiken
+auf die Oberfläche von RoboPro zu
+kopieren. Weiterhin sind die verfügbaren
+
+mit RoboPro zur Visualisierung der
+Automatisierungsvorgänge
+
+Ganz anders sieht das aus, wenn man die
+gestalterischen Möglichkeiten von Microsoft Visual Basic oder Ähnlichem betrachtet. In Teil 2 dieser Beitragsserie in der
+nächsten Ausgabe der ft:pedia wird hierzu
+ein Beispiel gegeben.
+
+Download
+Für den interessierten Leser steht im Downloadbereich der ft-Community die komplette RoboPro-Konfiguration zur Verfügung.
+
+
+
+
+Computing
+
+(links: Strichcode lesen und auswerten, rechts: Steuerung der Transporteinheit)
+
+
+

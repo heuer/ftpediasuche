@@ -1,0 +1,275 @@
+
+
+Kinematik
+
+Die Geradführung einer Viergelenkkette im
+Einsatz bei einer kleinen Laufmaschine
+Ralf Geerken
+In vielen Fällen der „Praktischen Getriebelehre“ wird eine Kreisbewegung in eine geradlinige Bewegung umgesetzt. Hier wird nicht nur erklärt wie man mithilfe eines Koppelkurvengetriebes einer Laufmaschine zu einem parallelen Gang verhilft, sondern auch wie man
+mithilfe einer Koppelkurvenscheibe die unterschiedlichsten Kurvenformen auf Papier bringen
+kann.
+Am Anfang hatte mein Sohn Felix die
+Idee, einen Laufroboter zu bauen. Dieser
+sollte vier Beine haben. Jedes Bein sollte
+dabei von einem eigenen Motor angetrieben werden. Gar keine schlechte Idee,
+sagte ich ihm, und überlegte schon, wie ich
+die Mechanik dazu gestalten könnte. Wir
+diskutierten ein wenig und ich kam darauf,
+dass wir ja vielleicht nur zwei Motoren
+bräuchten, die jeweils zwei schräg gegenüber liegende Beine antreiben.
+
+dass eventuell sogar ein einziger Motor
+genügen könnte. Gesagt, getan: Hugo
+entstand.
+Hugo ist ein kleiner Laufroboter, der über
+die Jahre immer ein wenig verbessert
+wurde. Die erste Version hatte zwar funktioniert, aber die Zahnräder verrutschten
+entweder gegeneinander oder die Kette
+sprang ein paar Ritzel weiter, sodass Hugo
+dann nur noch vorwärts humpelte anstatt
+richtig zu laufen. Die letzte Version vom
+September 2012 hatte dann eine höhere
+Stabilität, weniger Zahnräder, eine größere
+Kettenumschlingung
+und
+obendrein
+wesentlich weniger Gewicht. Das Gewicht
+von Hugo spielt eine sehr große Rolle, weil
+seine Art, sich vorwärts zu bewegen, eine
+ganz besondere ist.
+Der Mini-Motor muss nämlich immer das
+gesamte Gewicht von Hugo um 12 mm
+anheben. Das ist ein großer Nachteil – ich
+komme später darauf zurück. In einer seitlichen Skizze sieht die Art zu Laufen von
+Hugo so aus:
+
+
+Nach ein wenig herumprobieren kam ich
+(ab hier war der Funke auf mich übergesprungen – Felix hatte dann leider nicht
+mehr viel mit dem Projekt zu tun) darauf,
+
+
+Das sieht zwar sehr lustig aus – besonders
+ergonomisch ist das aber nicht. Übrigens:
+Der Gang eines Menschen ist zwar nicht
+ganz so extrem, er ist aber auch nicht
+besonders ergonomisch, d. h. im Klartext:
+Der Mensch braucht zu Laufen sehr viel
+Energie, weil er sein Eigengewicht bei
+jedem Schritt immer ein wenig anheben
+muss. Auch Hugo braucht ganz schön viel
+Energie beim Laufen, obwohl er sich ja
+eigentlich nur vorwärts und nicht auf und
+ab bewegen soll. Die Mechanik von Hugo
+zeigt Abb. 1.
+Die Beine stehen immer fest verankert
+durch die beiden Rast-Kurbeln senkrecht
+zum Boden. Bewegen sich jetzt das rechte
+vordere und das linke hintere Bein nach
+oben und gleichzeitig das linke vordere
+und das rechte hintere Bein nach unten,
+dann hebt sich Hugo um den Rastkurbelradius nach oben, gleichzeitig aber auch
+um den Radius nach vorne.
+Das linke vordere und das rechte hintere
+Bein bleiben dabei auf dem Boden, wie
+man in Abb. 3 sieht.
+
+
+Das Ganze ist ein wirklich sehr einfacher
+Laufantrieb. Hugo kann damit auch auf
+
+Kinematik
+
+unebenem Gelände, auf Sand, auf Teppich
+und auf glattem Untergrund sehr gut
+laufen. Auch kann er kleinere Hindernisse
+wie z. B. Teppichkanten problemlos überwinden. Zwei Sachen kann er aber nicht:
+1. Er kann nicht lenken bzw. gelenkt
+werden – jedenfalls ist mir hierzu noch
+keine einfache Lösung eingefallen.
+2. Er kann kein zusätzliches Gewicht
+tragen. Hugo muss ja nicht nur sein
+Skelett tragen, sondern auch den MiniMotor und die Batterie. Und da haben
+wir das Problem: Die Batterie hält nicht
+allzu lange und der Spielspaß ist relativ
+schnell vorbei. Legt man auch nur ein
+kleines Gewicht oben auf Hugo, bewegt
+er sich überhaupt nicht mehr.
+Alsbald kam mir aber die Idee etwas
+umzusetzen, was mir mein werter Herr
+Vater mal vor längerer Zeit erklärt hatte:
+Wie man mithilfe einer Viergelenkkette [2]
+eine Drehbewegung in eine geradlinige
+bzw. parallele Bewegung umwandeln
+kann. Er zeigte mir damals seine alte
+Koppelkurvenscheibe aus Astralon, mit der
+man mit einfachsten Mitteln die unterschiedlichsten Kurven auf Papier übertragen kann. Zur Erklärung: Eine Viergelenkkette hat nichts mit einer Zahnradkette zu tun, sondern es geht um die Verbindung (Verkettung) von vier Gelenken.
+In der klassischen Getriebelehre werden
+diese Getriebe auch Koppelgetriebe oder
+Kurbelschwinge genannt. Ich will hier aber
+gar nicht auf die ganzen Begriffe oder gar
+die mathematische Herleitung oder vielfältigen Einsatzmöglichkeiten von Kurbelschwingen eingehen. Ich möchte hier
+einmal darstellen, wie einfach es sein kann,
+mit fischertechnik eine Idee in die Praxis
+umzusetzen – und zwar ohne vorher ein
+tief greifendes Maschinenbau-Studium
+absolviert zu haben.
+Die Idee war ganz einfach: Wenn es auf
+eine mechanisch einfache Weise möglich
+ist, aus einer Drehbewegung eine Kurven5
+
+
+
+form zu generieren, bei der es Teile mit
+geradliniger Bewegung gibt, dann muss es
+auch eine Möglichkeit geben, Hugo so
+umzubauen, dass er nicht mehr sein
+Gewicht heben muss, sondern dass er sich
+parallel (oder annähernd parallel) zum
+Boden bewegt. Dabei muss er dann nicht
+mehr sein Eigengewicht, sondern nur noch
+seine Beine heben und sich selbst nur nach
+vorne schieben.
+
+
+
+Als ein klassisches Beispiel sei hier einmal
+ein Bild vom Gelenkviereck einer Teigknetmaschine gezeigt (Abb. 4). Auf der
+dargestellten Bahnkurve gibt es gleich
+zwei Geradführungen, und zwar zwischen
+den Strecken 2 und 5 sowie 10 und 1. Die
+Strecke zwischen 10 und 1 war für meine
+Zwecke die interessantere. Mit einem
+fischertechnik-Nachbau kann man die
+Bewegung sehr schön nachvollziehen
+(siehe Abb. 5 und 6).
+
+Für die Laufmaschine probierte ich also
+ein bisschen herum und fand dann schließlich ein gutes Längenverhältnis, was zur
+Rastkurbel passte und einen guten Vorschub sowie eine gute Anhebung der Füße
+hatte. Die Kurve dazu habe ich mal mit der
+alten Schablone meines Vaters aufgezeichnet.
+
+
+
+
+Diese Schablone wird folgendermaßen
+bedient: Man schneidet sich zwei Plastikoder auch Pappstreifen in der gewünschten
+Länge zurecht. Der kürzere Streifen wird
+mit einer Heftzwecke oder einem kleinen
+Nagel durch das Papier auf der Unterseite
+eines Kartons befestigt. Im richtigen
+Abstand, in unserem Fall 12 mm (das ist
+der Abstand der Achsmittelpunkte der
+Rastkurbel), steckt man eine Stecknadel so
+hindurch, dass die Spitze nach oben zeigt.
+Genauso verfährt man mit dem längeren
+Stück.
+
+
+Kinematik
+
+formen man denn bevorzugt betrachten
+möchte. Die vermeintlich besten kann man
+dann mit einem dünnen Stift auf das Papier
+übertragen (Abb. 7 und 8).
+Die Markierung der Winkel ist nicht ganz
+einfach, aber für eine spätere Entscheidung, welches Getriebe man denn aufbauen möchte, absolut notwendig. Daran
+kann man mit einiger Übung ablesen, wie
+die Geschwindigkeiten auf der kurvigen
+Bahn verteilt sind und ob es evtl. zu
+höheren oder auch zu zu hohen Beschleunigungen kommt. Bei der Teigknetmaschine gibt es z. B. zwischen 12 und 1
+sowie zwischen 1 und 2 einen sehr großen
+Geschwindigkeitsunterschied. Zwischen 1
+und 2 ist der Knetarm sehr langsam, was
+aber auch gut so ist, weil er hier sehr viel
+Kraft benötigt, um den Teig wegzudrücken. Zwischen 2 und 3 beschleunigt er
+dann wieder.
+Eine weitere Schwierigkeit waren die
+Füße. Hugo steht ja ziemlich ausgewogen
+und sicher auf zwei schräg gegenüber
+liegenden Füßen. Die übereinander liegenden Rastkurbeln geben den Beinen jeweils
+den Halt, und die Form der Füße sorgt
+dafür, dass Hugo nicht schräg umkippt.
+Die Fußsohlen von Hugo sind dadurch
+immer parallel zum Boden.
+
+Teigknetmaschine
+
+Jetzt setzt man die in unserem Fall durchsichtige Schablone im richtigen Abstand
+auf die zwei nach oben stehenden Nägel.
+Wenn man nun an dem Nagel der kürzeren
+Seite dreht, macht die gesamte Schablone
+eine taumelnde Bewegung, und man kann
+durch die vielen Löcher in der Schablone
+erst mal beobachten, welche Kurven-
+
+Bei Herrmann war das nicht so einfach,
+weil die Fußsohlen beim Aufsetzen und
+beim Anheben leider noch keine Parallelität zum Fußboden haben. Die haben sie
+erst in der Strecke der Geradführung. Aber
+ganz so schlimm war das dann doch nicht,
+weil der Winkel und die Länge der Füße
+beim Aufsetzen sowie beim Anheben dafür
+sorgen, dass der Boden schon berührt wird,
+bevor die Füße parallel zum Boden stehen.
+Jetzt noch ein bisschen probieren, wie man
+die vier Gelenkvierecke auf kleinem Raum
+unterbringt, und dann lief Herrmann.
+
+
+
+
+
+Es macht sehr viel Spaß, die beiden
+kleinen Laufmaschinen nebeneinander
+laufen zu sehen. Sie laufen in etwa gleich
+schnell, aber unterschiedlich: Hugo mit
+
+seinen etwas tapsigen Schritten und Herrmann mit seinen sehr weiten, fast schon
+ausladenden Schritten, die ihm aber zu
+einem sehr glatten Gang verhelfen.
+
+
+Kinematik
+
+Von Herrmann gibt es bereits Videos:
+Herrmann von der Seite
+Herrmann frontal
+Herrmann erklimmt die Teppichkante
+Wer die verschiedenen Generationen der
+Laufmaschine nachbauen möchte, findet
+weitere Bilder auf der ft-Community.
+
+
+
+
+
+Der Ausblick in die Zukunft: Fritz (die
+dritte Generation) mit vier Füßen, die aber
+während der gesamten Schrittbewegung
+parallel zum Boden verlaufen. Damit kann
+er dann z. B. höhere Teppichkanten überwinden. Hier ist Hugo nämlich ganz klar
+gegenüber Herrmann im Vorteil.
+Lothar (die vierte Generation) soll viel
+größer und mit einem stärkeren Motor ausgestattet werden. Die fünfte Generation
+soll dann lenken können – aber dazu gibt
+es später mehr.
+
+Quellen
+[1]
+
+Prof. Dr.-Ing. Kurt Rauh, Technische
+Hochschule Aachen: Praktische
+Getriebetechnik herausgegeben zur Jahreswende
+1937/1938
+
+[2]
+
+Fischer-Werke: Viergelenkgetriebe.
+hobby 2 Band 5, Tumlingen 1973, S.
+4-17.
+
+
+
+

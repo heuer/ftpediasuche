@@ -1,0 +1,91 @@
+
+
+Tipps & Tricks
+
+ft-Spezialteile made by TST (Teil 5)
+Andreas Tacke
+In einer lockeren Reihe stellt TST einige von ihm entwickelte Spezialteile vor, die so manche
+Lücke beim Bauen mit fischertechnik schließen. Diesmal geht es um raffinierte Modifikationen des Hubgetriebes 37272.
+In meinem heutigen Beitrag geht es um das
+Hubgetriebe. Vor einigen Jahren stand bei
+mir ein neues Projekt an: Ein Drei-AchsRoboter sollte es werden. Um sehr kompakt bauen zu können, sollte eine Achse
+per Zahnstange und Hubgetriebe bewegt
+werden.
+Da stellte sich mir die Frage, wie ich die
+Positionsabfrage vornehmen sollte. Mit
+Schaltnocken und Taster auf dem Verfahrweg wollte ich nicht arbeiten, da dies nicht
+sehr komfortabel ist.
+
+Es zeigte sich allerdings, dass das Interface
+mit der Frequenz der eingehenden Impulse
+nicht zurecht kam – es waren zu viele
+Schaltvorgänge pro Umdrehung. Ein
+weiterer Nachteil dieser Version lag darin,
+dass die Achse, an der das Impulsrad
+montiert wurde, zusätzlich angefertigt
+werden musste. Also hieß es: weitertüfteln.
+Dann kam Version 2, bei der ich das außen
+liegende Zahnrad Z11 durch ein Impulsrad
+mit Zahnrad Z11 ersetzte (Abb. 2, 3).
+
+Also suchte ich nach einer Möglichkeit,
+Wegimpulse am Hubgetriebe abzufragen
+um diese dann an das Interface zu senden.
+Nach vielen vergeblichen Versuchen hatte
+ich schließlich die zündende Idee: Ein
+Impulsrad musste her, um die Schritte
+zählen zu können. So entstand der erste
+Prototyp (Abb.1).
+
+
+
+
+Tipps & Tricks
+
+Nun werdet ihr euch mit Recht fragen:
+„Und wie genau kann man damit nun die
+Position abfragen?“
+Bei einer Umdrehung des Impulsrades legt
+die Zahnstage einen Weg von 9,44 mm
+zurück. Das entspricht je Impuls 2,36 mm
+(9,44 mm geteilt durch vier Impulse).
+
+Version 2 mit Taster 37783
+
+Dieses Impulsrad besitzt entgegen der
+ersten Version nur noch vier Schaltnocken,
+genau wie das Impulsrad 37157.
+
+Nutzt man die Möglichkeit in Robo Pro,
+die steigende und die fallende Flanke zu
+zählen, so verdoppelt sich die Genauigkeit
+auf 1,18 mm je Flankenwechsel. Dies
+reicht für die meisten Anwendungen
+normalerweise vollkommen aus.
+
+Das Impulsrad besteht aus dem Zahnrad
+75107 sowie dem Impulsrad, das ich aus
+Polyoxymethylene (POM) herstelle. Das
+originale Impulsrad 37157 konnte ich
+leider nicht verwenden, da dessen Außendurchmesser zu klein ist. Also ran ans
+CAD-Programm
+und
+selber
+eines
+entworfen (Abb. 5).
+
+im Modell verbaut
+
+Damit gelang es, für meinen Roboter die
+Bewegung der Achse recht präzise und
+ohne großen Aufwand abzufragen. Ein
+weiterer Vorteil dieser Ausführung ist,
+dass sich der Standard-Taster 37783 verwenden lässt. Es wird also kein zusätzlicher Sensor wie eine Lichtschranke oder
+Ähnliches benötigt. Und so passt das modifizierte Getriebe perfekt ins fischertechnikSystem.
+
+Und wieder mal gilt: Geht nicht, gibt’s
+nicht. Man muss sich nur etwas einfallen
+lassen...
+
+
+

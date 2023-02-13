@@ -1,0 +1,426 @@
+
+Computing
+
+Computing
+
+Preisgünstige, autarke Stepper-Motorsteuerung
+Franz Nachtsheim
+Die beste Lösung für die präzise Drehung einer Achse sind Schrittmotoren. Sie werden allerdings von den fischertechnik-Controllern nicht unterstützt. Lösungen wie der ftPwrDrive-Controller [1] oder das Adafruit-Motor-Shield sind dagegen manchmal überdimensioniert. Gesucht war eine möglichst kompakte Einheit zur Ansteuerung eines einzelnen Stepper-Motors.
+Parameter sollten eingebbar und der aktuelle Status der Steuerung jederzeit sichtbar sein. Damit auch mehrere dieser Steuerungen in einem Modell verbaut werden können, sollte die Lösung außerdem kostengünstig sein.
+
+Erste Versuche
+Die erste Lösung für eine Schrittmotorsteuerung war schnell gebaut: Ein ftDuino [2]
+inklusive Motorsteuerung über den ftPwrDrive Controller [1]. Statusinformationen
+kann man auf dem integrierten Display des
+ftDuino darstellen. Die Eingabe zur Steuerung des Motors erfolgte über den seriellen
+Monitor der Arduino IDE (Abb. 1).
+
+Der Preis dieser Ansteuerelektronik liegt allerdings bei stolzen 140 €.1 Das Ganze war
+aber für den Einsatzzweck ohnehin überdimensioniert: Der ftPwrDrive kann vier
+Steppermotoren und vier Servomotoren betreiben; benötigt wurde aber nur ein Steppermotor. Eine sehr hilfreiche Eigenschaft
+des ftPwrDrive ist, dass er Intelligenz mitbringt und seine Motoren direkt ansteuert.
+Nach der Übergabe eines Fahrbefehls an
+den ftPwrDrive beispielsweise
+Drive.setRelDistance
+(FTPWRDRIVE_M1,1000);
+Drive.startMoving (FTPWRDrive_M1);
+
+ist der ftDuino wieder frei und kann weiterarbeiten, während der Motor autark seine
+1000 Schritte fährt.
+
+und ftPwrDrive (Schlüsselschalter: Not-Aus)
+
+
+Bezugsquelle: Gundermann Hard & Softwareberatung e.K., Shop für ftDuino und Co.
+
+Die zweite Lösung war ein Arduino Uno [3,
+4] und ein Motor Shield von Adafruit2 mit
+Darstellung der Statusinformationen auf einem OLED-Display (Abb. 2). Die Eingaben erfolgten mit einem Keypad. Dieses
+war aber nicht gut zu bedienen. Das Keypad
+musste beim Drücken der Knöpfe festgehalten oder alternativ die Bauplatte des gesamten Aufbaus fixiert werden. Außerdem belegt es viele Ressourcen in Form von acht
+
+Adafruit Motor/Stepper/Servo Shield for Arduino v2 KIT – v2.3.
+
+
+
+Eingängen und war nicht immer ganz zuverlässig.3
+Dieser Aufbau war schon etwas kompakter
+und günstiger, aber immer noch eine überdimensionierte Hardware. Wenn man originale Hardware einkauft und keine Clones
+aus China liegt man bei etwa 50 €.
+
+preisgünstigere Nano Every gut geeignet.
+Selbst mit Originalteilen kostet diese Lösung nur noch etwa ca. 20 €. Der Nano
+Every hat etwas mehr Speicherplatz als die
+alte Nano-Version und ist deutlich robuster,
+was die Spannungsversorgung angeht, da er
+einen wesentlich leistungsstärkeren Spannungsregler besitzt. Ein weiterer Vorteil ist
+die größere Anzahl an Interrupts. Eine
+Übersicht der Unterschiede zeigt Tab. 1.
+
+
+Kompakte Lösung
+Um noch kompakter und preisgünstiger zu
+sein, wird die folgende Lösung vorgestellt.
+Die Intelligenz liefert ein Arduino Nano,
+die Anzeige erfolgt über ein 128x64-PixelOLED-Display4 und die Eingabe ist durch
+eine Infrarotfernbedienung5 ebenfalls vereinfacht. Diese ist trotz ihres geringen Preises zuverlässig und oft sehr praktisch. Bei
+Sichtkontakt zwischen Sensor und Fernbedienung ist ein Abstand von 5 m kein Problem. Da nur ein Motor angetrieben werden
+soll wird ein L9110 Motortreiber verwendet.6 Dieser ist sehr kompakt; dadurch kann
+das Gehäuse klein gehalten werden.
+Damit ist der Aufbau klar. Bei Tests mit
+Arduino Nanos war der relativ neue und
+
+4x4 Matrix Array Keypad, 8 Pin 16 Key Membran Keyboard für Arduino. Danke an Peter Habermehl, der kurzfristig nach einer Frage im
+Community-Forum eine einfache Möglichkeit
+konstruiert hat, um den Nummernblock in ein fischertechnik-Modell zu integrieren (Thingiverse
+Nr. 4336549).
+
+
+Nano
+
+Nano Every
+
+Controller
+
+ATmega328
+(8-bit), 16
+MHz
+
+ATmega4809
+(8-bit), 20
+MHz
+
+Anschluss
+
+Mini-USB
+
+Micro-USB
+
+Spannung
+
+5V
+
+5V
+
+VIN minmax
+
+6-9 V, empfohlen 7-9 V
+
+7-21 V
+
+Flash
+kByte
+
+
+
+EEPROM
+Byte
+
+1024
+
+
+S-RAM
+kByte
+
+
+
+Digitale
+Ein-/Ausgänge
+
+
+
+davon
+PWM
+
+
+
+analoge
+Ein-/Ausgänge
+
+8/-
+
+7/1
+
+Interface
+
+USB, I²C, SPI
+
+USB, I²C,
+SPI
+
+
+Es wurde ein 1,3" OLED Display SH1106
+(128x64), I2C, gelb/blau verwendet.
+
+
+Fernbedienungs-Modul:
+DIY Kit HX1838.
+
+
+L9110 Dual Channel Stepper Motor Drive Board
+for Arduino.
+
+IR-Empfängermodul
+
+
+Computing
+
+Nano
+
+Nano Every
+
+Interrupt
+Pins
+
+2, 3
+
+alle digitalen
+
+Abmessungen
+
+45 x 18 mm
+
+45 x 18 mm
+
+Gewicht
+(inkl. Header)
+
+7g
+
+5g
+
+Erfreulicherweise lässt sich der Infrarotsensor durch transluzentes PLA10 nutzen,
+sodass das Gehäuse bis auf die Anschlusskabel des Motors geschlossen gehalten werden kann. Das Ganze wird direkt an einem
+USB-Port betrieben oder mit einem USBNetzteil. Abb. 3 zeigt die fertig montierte
+Box.
+
+Tab. 1: Arduino Nano und
+Nano Every im Vergleich [3, 4]
+
+Leider ist der neue Nano Every nicht 100%
+kompatibel, daher können Anpassungen
+notwendig sein: Die Prozessoren sind unterschiedlich, und die Kompatibilität wird
+durch eine Software-Zwischenschicht erreicht.7
+Der Nano Every hat auf der Unterseite keine
+Bauteile, daher kann man ihn sehr gut direkt
+auflöten. Das ist auch der Grund, warum die
+Stiftleisten in der Regel nur beigelegt werden; man muss sie selber anlöten, was aber
+sehr einfach durchführbar ist. Von Nachteil
+ist, dass sich die Beschriftung auf der Unterseite befindet und somit praktisch nie
+sichtbar ist. Als Alternative habe ich mir
+eine kurze Übersicht in Folie laminiert, die
+immer griffbereit liegt. Sehr hilfreich ist ein
+Expansion Terminal Board für den Nano,
+auf das man ihn einfach aufstecken kann:
+Damit erhält man beschriftete Schraubklemmen, die sich gut nutzen lassen. 8 Auch
+kann man den Nano jederzeit entfernen,
+ohne die Verdrahtung auflösen zu müssen.
+Damit die Lösung mobil und robust ist,
+habe ich ein Gehäuse für einen 3D-Druck
+konstruiert, das alle Komponenten zusammenfasst.9
+
+
+
+Die zunächst sehr verunsichernde Fehlermeldung ‚Cannot locat „flash“ and boot“ memories
+in description‘ kann man offenbar ignorieren.
+Der HIMALAYA Basic Nano Expansion Terminal Board IO Shield Adapter for Arduino Nano
+ist sehr kompakt.
+
+
+Rechts oben ist noch Platz für eine alternative Spannungsversorgung mittels eines
+Adapters von Hohlstecker auf Schraubklemme. Der Adapter wird durch das Gehäuse am Boden und durch die Durchführungsöffnung festgeklemmt. Das kann sinnvoll sein, wenn man für ein Bauteil eine höhere Versorgungsspannung anschließen
+möchte, die man dann auch für den Vin-Eingang des Nano Every verwenden kann, da
+er alles bis 21 Volt verträgt. Das runde Loch
+links (nur der abgenommene Deckel ist
+sichtbar) ist für Erweiterungen vorgesehen,
+um zusätzliche Kabel in das Gehäuse einführen zu können. Wenn man es nicht benötigt, wird es einfach durch den klemmenden
+Deckel verschlossen. In das PLA Gehäuse
+sind Gewindehülsen eingeschmolzen11; damit lassen sich die Bauteile sicher montieren und der Deckel verschrauben.
+
+
+Gehäuse: Thingiverse Nr. 4831260.
+
+
+Verwendet: PLA transluzent von Ultimaker.
+
+
+Einschmelzhülsen (beispielsweise von Ruthex)
+kann man, wenn sie am unteren Ende einen klei-
+
+
+
+
+Für die Software gilt es, die passenden Bibliotheken zur verwendeten Hardware zu beschaffen. Folgende Bibliotheken habe ich
+verwendet:
+ IRremote.h zur Nutzung der Infrarotfernbedienung
+ Stepper.h zur Ansteuerung des Steppermotors am L9110
+ Adafruit_SSD1306.h zur Ansteuerung
+des OLED-Displays.
+Da ich gelesen hatte, dass der Nano Every
+bei der Spannungsversorgung Vorteile hat,
+habe ich einen sehr günstigen Dreierpack
+gekauft und erlebte erst einmal eine Enttäuschung: Die von mir zunächst benutzte Display-Bibliothek für ASCII-Zeichen funktionierte nicht. Aber da der Flash-Speicher
+deutlich umfangreicher ist als beim Arduino
+Nano kann man ohne Probleme die größere
+Adafruit-Graphik-Bibliothek verwenden.
+Die Spannungsversorgung erfolgt direkt
+über den Micro-USB Port. Die Verdrahtung
+zeigt Abb. 4.
+
+Ein Hinweis zum Display: Ich hatte zunächst vier Bohrungen für alle vier Montagelöcher vorgesehen. Das Display ist aber
+im unteren Bereich sehr empfindlich, da
+dort das Verbindungskabel sitzt. Ich beschädigte zwei Displays, als ich auch die
+unteren Löcher zur Montage verwenden
+wollte. Mit den beiden oberen Löchern ist
+das Display ausreichend befestigt und man
+geht allen Risiken aus dem Weg.
+Zur Programmierung: Das Auslesen der
+Tastencodes der Fernbedienung geht einfach, wenn man das Hilfsprogramm IRrecvDemo.ino benutzt. Man bekommt für jeden Tastendruck die übertragene Zahl angezeigt. Damit lassen sich auch die Fernbedienungen von Fernsehern etc. auslesen.
+Noch ein Tipp zum Motortreiber und der
+Infrarotfernbedienung: Wenn der Motor für
+N-Pulse angesteuert wird, steht der Nano
+nicht für andere Aufgaben bereit. Man
+möchte aber in der Regel jederzeit schnell
+stoppen. Das kann man einfach mit einer
+While-Schleife bewerkstelligen:
+
+neren Durchmesser haben, sehr präzise und gerade mit einem Lötkolben bei ca. 250° C einschmelzen.
+
+
+Computing
+
+while (Mode != 'S') {
+irrecv.resume();
+// Der nächste Wert wird von der
+// Fernbedienung eingelesen.
+
+Anwendung 1: Lineartisch
+Die erste Anwendung ist ein Lineartisch
+(siehe Abb. 5). Um das Spiel möglichst gering zu halten wird auch hier, wie schon öfters im Forum empfohlen, eine doppelte
+Schneckenmutter (unter dem Tisch) verwendet. Das zylindrische Bauteil aus Metall
+am Motor ist ein Wellenadapter12, um von
+der 5-mm-Welle des Steppermotors auf die
+4-mm-Welle von Fischertechnik zu adaptieren.
+
+MyStepper.step(Nsteps);
+// Motor fährt N- Schritte
+
+}
+
+if (irrecv.decode(&results)) {
+Mode = 'S';
+}
+// Bei irgendeinem Tastendruck
+// wird der
+// Operand „true“ und Mode wird
+// auf S (Stop) gesetzt
+
+Der Motor läuft dann immer rund; die kurze
+Kontrolle der Fernbedienung ist nicht merklich. Durch Drücken einer beliebigen Taste
+auf der Fernbedienung stoppt man den Motor. Mit der Wahl der „Nsteps“ kann man
+festlegen, wie schnell der Stopp erfolgen
+soll.
+Zum Schluss stelle ich noch zwei Anwendungen für die Stepper-Steuerung vor.
+
+Vorne rechts ist ein Endlagentaster verbaut.
+Die weiße Platte senkrecht auf dem beweglichen Tisch ist zur Genauigkeitsmessung
+montiert. Dazu ist ein Infrarotsensor von
+Sharp [7] im gedruckten Gehäuse13 angebracht, der einen Messbereich zwischen 2
+und 15 cm hat. Damit habe ich die Präzision
+der Positionierung vermessen. Der Sensor
+ist einfach zu handhaben; er verträgt alles
+von 3.3 bis 7 V und liefert die Entfernung
+als Analogwert. Um stabile Werte zu erhalten wird einfach über viele Messungen gemittelt.
+
+
+Bezugsquelle: Christians Technikshop.
+
+
+Sharp-Gehäuse: Thingiverse Nr. 4831011.
+
+
+
+Die Steigung der Schnecke liegt bei etwa
+4,7 mm pro Umdrehung, d. h. bei 200
+Schritten (Steps) in einer Umdrehung erhält
+man eine Auflösung von 0,0235 mm je
+Schritt. Wenn man nur zwischen zwei Positionen hin- und zurückfährt ist die Genauigkeit schon sehr gut. Ein Test über 10 Zyklen
+mit einer Hin- und Herfahrt über 1 cm erreicht die Ursprungsposition mit einer Abweichung von nur ca. 0,01 mm. Das sollte
+für viele Zwecke ausreichen.
+
+Anwendung 2: Drehteller
+
+werden durch schwarzes Alu aus dem Open-Beam-Programm verhindert. Mit den
+Endstücken lassen sie sich sehr gut in das
+fischertechnik-System integrieren. Das Open-Beam-System bietet noch zusätzliche
+Montagemöglichkeiten.
+
+Fazit
+Die gezeigte Elektronikbox sollte für viele
+einfache Zwecke ausreichen. Die Bedienung über die Infrarotschnittstelle kann
+leicht an alle Anforderungen angepasst werden und ist auch einsetzbar, wenn das Modul nicht direkt zugänglich ist. Da die Infrarotschnittstelle nicht nur empfangen, sondern auch senden kann, kann man auch mit
+weiteren Modulen kommunizieren.
+
+Quellen
+[1]
+
+Dirk Wölffel, Christian Bergschneider, Stefan Fuss, Björn Gundermann,
+Christian Lauff: Der ftPwrDriveController für Schrittmotoren und
+Servos – Teil 1. ft:pedia 4/2018,
+S. 67–70.
+
+[2]
+
+Till Harbaum: ftDuino – OpenSource trifft Konstruktions-Baukasten. ft:pedia 1/2018, S. 85–91.
+
+[3]
+
+David Holtz: Alternative Controller
+(1): Der Arduino. ft:pedia 2/2016,
+S. 56–59.
+
+[4]
+
+Arduino Home Page.
+
+[5]
+
+Dirk Fox: I²C mit dem TX(T) – Teil
+18: Keypads und GPIOPort-Erweiterung. ft:pedia 2/2019, S. 46–51.
+
+[6]
+
+Wikipedia: Liste von ArduinoBoards.
+
+[7]
+
+Sharp: GP2Y0A51SK0F. Distance
+Measuring Sensor Unit. Measuring
+Distance: 2 to 15 cm. Analog output
+type. Sheet No.: OP13007EN.
+
+
+Zahnräder für den Schrittmotor: Thingiverse Nr.
+4889074.
+
+
+Den Drehteller in Abb. 6 kann man beispielsweise dazu benutzen, um 3D-Objekte
+reproduzierbar von allen Seiten zu fotografieren. Hier das besonders attraktive Objekt
+des Flötenmanns14. Der Drehteller wird mit
+einer Kette angetrieben; dadurch kann er
+sehr flach ausfallen. Das Antriebszahnrad
+und das eigentliche Drehtellerzahnrad sind
+selbst gedruckte Zahnräder.15 Wenn Antriebszahnrad und Drehtellerzahnrad identisch sind, erreicht man eine Auflösung von
+1,8° mit gängigen Steppermotoren und die
+Reproduzierbarkeit ist gut. Bei zehn Runden über jeweils 36° Schritte liegt die Gesamtabweichung bei nur 2°. Eine größere
+Ungenauigkeit gibt es nur beim ersten Start
+bzw. bei Richtungswechsel, weil es da zu
+Schlupf kommt.
+Um Stabilität zu erhalten sind Aluträger
+verbaut. Reflexe bei intensiver Beleuchtung
+
+Aus dem Triptychon „Das jüngste Gericht“ von
+Hieronymus Bosch (ca. 1450-1516).
+
+
+

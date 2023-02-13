@@ -1,0 +1,177 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Die Welt der fischertechnik-Winkelsteine
+Rüdiger Riedel
+Dass mit den fischertechnik-Winkelbausteinen 60°, 30°, 15° und 7,5° Kreisringe, oder genauer
+gesagt kreisähnliche Vielecke gebaut werden können, ist trivial. Mischt man aber die Bausteine,
+dann erschließt sich erst die ganze Vielfalt der Möglichkeiten. Sehr hübsch war das Achteck
+aus der ft:pedia 2016-4 [1].
+Anfangen will ich mit einer Definition:
+Ergibt die Summe aller Winkel der verbauten Steine 360°, dann ist das ein
+„Kreis“, auch wenn die Figur verbeult und
+verbogen aussieht wie in Bild 1 und 2.
+
+WS 60, 2 WS30, 2 WS15 und 4 WS7,5
+
+Beschränkt man zunächst die Auswahl der
+Ringe darauf, dass die breitere Seite des
+Winkelsteins auf der Außenseite und die
+schmalere auf der Innenseite liegen soll,
+dann finde ich 138 Möglichkeiten [2].
+Allerdings sind darin nur die Summen der
+Einzelwinkel berücksichtigt, nicht die
+Varianten bei der Anordnung, siehe Abb. 2
+und 3. Bei den Anordnungsmöglichkeiten
+spricht man auch von Permutationen.
+
+
+Eine Permutation mit Wiederholung ist eine
+Anordnung von Objekten, von denen
+manche nicht unterscheidbar sind, wie in
+sich, dass die beiden obersten und die
+beiden untersten Ringe nach dem
+Umdrehen die gleiche Reihung haben.
+
+
+
+
+WS30, 4 WS15
+
+Die Figuren in Abb. 1 und 2 zeigen zweizählige Drehsymmetrien: Bei einer halben
+Kreisdrehung erscheint wieder die gleiche
+Figur. Dies gilt auch für die Ringe in
+Die möglichen Symmetrien aller kreisförmigen Ringe sind 2, 3, 4, 6, 8, 12, 16, 24,
+48. Beispiele sind in den Abb. 4 bis 7 zu
+sehen.
+
+
+Die Nuten in den gezeigten Bildern sind im
+Uhrzeigersinn ausgerichtet; von der Rückseite aus betrachtet sind sie dann im Gegenuhrzeigersinn ausgerichtet. Das gilt für alle
+fischertechnik-Ringe ohne Zusatzbauteile.
+
+
+
+
+Tipps & Tricks
+
+360° knapp verfehlen [3]. Als Grenzwert
+habe ich ± 1° gesetzt, bezogen auf den
+einzelnen Baustein. Nun tauchen 5, 7, 9, 10,
+11, 13, 15 und 17-zählige Symmetrien auf
+(Abb. 9 bis 12).
+
+
+Die vollständige Liste der fischertechnikWinkelsteinkreise ist in der Excel-Datei im
+Downloadbereich der
+fischertechnikCommunity zu finden [2]. Dort habe ich
+auch die Summen der Kantenlängen innen
+und außen aufgelistet.
+
+
+
+Fast-Kreise
+
+
+Hat man mal einen Stein zu viel oder zu
+wenig eingebaut, erkennt man die Gutmütigkeit der fischertechnik-Bausteine. Das
+habe ich systematisch untersucht und alle
+die Ringe aufgelistet, die die Winkelsumme
+
+
+In die Berechnung der Winkelsumme gehen
+die „falsch“ herum eingebauten Steine mit
+ihrem Winkel negativ ein. Beispielsweise
+ist die Winkelsumme der Figur von Bild 14
+ohne die beiden WS60: 16 ∙ 30° = 480°.
+Zieht man davon die beiden WS 60° ab,
+erhält man die gewünschten 360°.
+
+
+Negative Winkel
+
+
+Baut man einzelne Winkelsteine verkehrt
+herum ein und sorgt trotzdem für eine
+Winkelsumme der Ringe von 360°, dann
+erschließt sich eine schier unübersehbare
+Welt an Formen, angefangen mit dem
+Achteck [1].
+
+
+
+
+
+
+Tipps & Tricks
+
+
+
+
+Aber nicht alles mit der Winkelsumme 360°
+ist baubar, wie man in Bild 23 sieht. Die
+Winkelsumme beträgt:
+10 ∙ 60° - 8 ∙ 30 = 600° - 240° = 360°
+Die Enden sind parallel zueinander, aber die
+Teile behindern sich gegenseitig.
+
+
+Und dann gibt es noch…
+
+
+
+
+Die dritte Dimension
+Bis auf die Bausteinstärke von 15 mm
+waren alle Figuren bisher zweidimensional.
+Das ändert sich jetzt.
+
+
+
+WS30 und WS60
+
+Die Schraube in Bild 26 hat eine Steigung
+von 15 mm + 7,5 mm = 22,5 mm.
+
+
+
+
+
+Tipps & Tricks
+
+sich die Ebene komplett parkettieren
+
+
+Die Steigung der Schrauben in Abb. 28
+beträgt etwa 84 cm bzw. etwa 4,7 cm.
+Die starke Welle in Abb. 30 zeigt eine
+siebenfache Drehsymmetrie. Ob die wohl
+exakt ist? Beim Zusammenbau fühlte es
+sich so an, im Gegensatz zu den Wellen in
+Außer Konkurrenz und zum Abschluss:
+
+mit Achse
+
+Quellen
+[1]
+
+Ralf Geerken, Martin Westphal,
+René Trapp: Achteck-Variationen.
+ft:pedia 4/2016, S. 4-9.
+
+[2]
+
+Rüdiger Riedel: Kreisringe aus ft
+Winkelbausteinen. Downloadbereich
+der ft Community, 2017.
+
+[3]
+
+Rüdiger Riedel: ft-Ringe mit Winkelsumme nahe 360°. Downloadbereich
+der ft Community, 2017.
+
+
+
+

@@ -1,0 +1,311 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Kugelbahn: Treppenförderer
+Frank Diekmann
+Die Konstruktion des ansprechenden „Treppenförderers“ aus dem fischertechnik-Baukasten
+„Dynamic XL“, Kugelbahn-Flaggschiff des Jahres 2014, verursachte zahlreichen fischertechnikern Kopfzerbrechen und führte zu einzelnen vernichtenden Kritiken [1]. Die Probleme
+lassen sich jedoch eingrenzen – und beheben.
+
+Prolog
+Ende 2019 stellte fischertechnik die Produktion des Baukastens „Dynamic XL“ ein,
+da es vereinzelt wohl Probleme gab, bei
+dem einen oder anderen Modell einen
+störungsfreien Betrieb hinzubekommen. Da
+mich der Baukasten wegen der verschiedenen Kugelfördertechniken ansprach, legte
+ich mir einen zu, bevor dieser als Neuware
+nicht mehr verfügbar sein würde. Denn „so
+schlimm“ konnte der Baukasten eigentlich
+nicht sein und ich sah es auch als kleine
+Herausforderung an, alle Modelle zum
+„Laufen“ zu bekommen.
+
+Untersuchung des
+Teppenförderer
+Als erstes fiel mir auf, dass die Rastkurbeln
+(35088) an den schwarzen S-Winkelträgern
+(36922) scheuerten, die auf der jeweiligen
+Gelenkwürfel-Klaue (31436) befestigt sind.
+Hier entdeckte ich an allen meinen Rastkurbeln stirnseitig einen kleinen Grat (Abb.
+1). Diesen entfernte ich als Erstes (siehe
+Abschnitt „Entgratung“).
+
+Es sei aber erwähnt, dass dies nicht mein
+erster fischertechnik-Kugelbahn-Baukasten
+ist; bereits 2019 bekam ich den kleineren
+„Dynamic M“ zu meinem Geburtstag geschenkt, in dem aber alle Modelle nur über
+eine kettenbetriebene Kugelförderung verfügen.
+Erst einmal klein anfangen: Da ich den
+Treppenförderer interessant fand, begann
+ich mit diesem. Soviel vorweg: Er funktionierte bei mir auf Anhieb, aber nicht ganz
+so, wie es hätte sein können; an verschiedenen Stellen hakte es etwas im laufenden Betrieb. Die Ursachen dafür und deren Behebung möchte ich hier nachfolgend aufzeigen. Beim Aufbau hielt ich mich genau an
+die Bauanleitung inklusive Hinweisen und
+verwendete nur die Materialien aus dem
+„Dynamic XL“-Baukasten.
+
+
+Das Scheuern war damit aber noch nicht
+ganz behoben, denn die Rastkurbeln berührten vereinzelt immer noch die schwarzen SWinkelträger. Zur Behebung dieses Problems habe ich die schwarzen Lagerhülsen
+(36819), die – wie in der „Dynamic XL“Bauanleitung auf S. 5, unten beschrieben –
+in die fünf roten Gelenkwürfel-Klauen geschoben werden, etwa 0,2 mm in Richtung
+Rastkurbel vorstehen lassen (Abb. 2),
+
+
+
+sodass der Abstand zu der jeweiligen Rastkurbel vergrößert wird.
+
+kann man auch ein anderes passendes
+Werkzeug benutzen.
+Bei den Rastkurbeln lief es jetzt einwandfrei, nur die Treppenstufen hakten noch ein
+wenig untereinander. Das lag daran, dass
+die roten 7,5er Bausteine (37468) ebenfalls
+Grate aufwiesen (Abb. 5).
+
+
+Aber nicht viel mehr als 0,2 mm, da die
+Rastachsen 60 (35065), 75 (35087) und 90
+(35066) sonst nicht mehr mittig durch die
+roten Bausteine 15 mit Bohrung (32064)
+gleiten. Zum Ausgleich kann man die
+schwarzen Rastadapter (36227) an der jeweiligen Gelenkwürfel-Klaue in Richtung
+der Rastkurbeln etwas dezentrieren, so wie
+in Abb. 3 etwas übertrieben dargestellt.
+
+
+Ich verwendete zum Durchschieben der
+schwarzen Lagerhülsen einen Phasenprüfer,
+dessen Isolierung genau den richtigen
+Durchmesser aufweist (Abb. 4).
+
+
+Ein Phasenprüfer befindet sich wohl so
+ziemlich in jedem Haushalt, aber natürlich
+
+
+Ich untersuchte deshalb alle roten 7,5er
+Bausteine meines „Dynamic XL“-Baukastens auf Grate: Bei allen waren auf einer
+Seite Grate vorhanden, sodass ich sie leider
+nicht gegen gratlose tauschen konnte. Also
+sind auch diese vorsichtig zu entgraten
+(siehe Abschnitt „Entgratung“).
+Damit man nicht mehr der roten 7,5er
+Bausteine durch die Entgratung „verunstaltet“ als nötig sollten diese nach Abbau des
+Treppenförderers separat einsortiert werden. Ich besorgte mir außerdem einen roten
+Edding und markierte die Bausteine mit
+einem Punkt. Da das Rot sich von dem
+Rotton der Bausteine unterscheidet, kann
+man ihn erkennen, aber er fällt wenig auf.
+Wie in der „Dynamic XL“-Bauanleitung
+auf S. 42 oben erwähnt, müssen alle „Treppenstufen“ mit der Rückseite auf eine plane
+Unterlage (Tisch) gelegt und alle drei Bausteine fest auf die Unterlage gedrückt
+werden (Abb. 6). Bei Nichtbeachten droht
+ein Verbiegen der Rastachsen beim Motorbetrieb aufgrund verklemmter „Treppenstufen“.
+
+
+Tipps & Tricks
+
+Dafür wird der Getriebeblock (31078), der
+am Motor (32293) befestigt ist, etwas angehoben, um den Kontakt zur Motorschnecke
+zu trennen (Abb. 9).
+
+
+Jetzt wenden wir uns den schon erwähnten
+fünf schwarzen Rastachsen 60, 75 und 90
+zu, auf denen die jeweilige „Treppenstufe“
+sitzt, und bei denen man ebenfalls einen
+Grat fühlen kann – und zwar einen Längsgrat sowie an der oberen und unteren Seite
+je einen Quergrat (Abb. 7).
+
+
+Auch hier sollte eine vorsichtige Entgratung
+erfolgen, damit die Rastachsen ruckelfrei
+durch die roten 15er Bausteine mit Bohrung
+gleiten (Abb. 8).
+
+ein sauberes Gleiten in den BS 15 mit Bohrung
+
+Test von Hand
+Bevor jetzt gleich der Motor eingeschaltet
+wird, empfiehlt sich ein Test von Hand
+durch Drehen des Z40 (31022) – damit bekommt man ein Gespür dafür, wo eventuell
+noch etwas klemmt.
+
+
+Nebenbei spürt man beim Drehen von Hand
+auch deutlich die Unwucht, da es sich um
+eine ungerade Anzahl von Treppenstufen
+handelt. Sollte jetzt noch etwas scheuern
+oder klemmen, bekommt man die Ursache
+am besten dadurch heraus, indem man die
+Treppenstufen nach dem Prinzip der
+Intervallschachtelung voneinander trennt:
+Zuerst muss die mittele Treppenstufe isoliert werden. Dazu wird die rote Nabenmutter (31058) vom mittleren schwarzen Z20
+(31021) so weit gelöst, dass keine feste Verbindung zur Rastachse mehr besteht. Wird
+das schwarze Z40 jetzt wieder von Hand bewegt, sollte sich dies nur auf die mittlere
+Treppenstufe übertragen, ansonsten ist die
+rote Nabenmutter vermutlich noch nicht
+lose genug.
+Bewegt sich die mittlere Treppenstufe
+fehlerfrei, werden die unteren (linken) und
+oberen (rechten) Treppenstufen untersucht.
+Hierzu kann wie im Abschnitt „Abgleich“
+vorgegangen werden: Entfernung des Getriebeblockes, der Halterung für die Verlängerungsachse des Z40 und des Z40 selbst
+(Abb. 10).
+Dann ist die schwarze Rastkupplung von
+der Rastachse 45 zu ziehen, sodass das Z40
+zusammen mit der Nabenmutter so weit
+nach vorne geschoben werden kann, dass
+der schwarze Zahnkranz keinen Kontakt
+mehr zu den benachbarten Rastzahnrädern
+hat.
+
+
+
+
+gleitet; diese dürfen an der Verbindungsstelle nicht überstehen, sonst kann es hier
+im Betrieb zum Verklemmen mit dem Baustein 5 kommen.
+
+Abgleich
+Der Abgleich des Treppenförderers ist einmalig notwendig, da sonst die Kugeln nicht
+von einer Treppenstufe auf die nächsthöhere befördert werden können. Der Abgleich kann jederzeit erfolgen, auch nachdem das Modell komplett aufgebaut wurde.
+
+Jetzt sind die beiden unteren (linken) und
+die beiden oberen (rechten) Treppenstufen
+isoliert und können von Hand an den roten
+Rastzahnrädern bewegt werden (Abb. 11).
+
+
+Ist die Zweiergruppe mit den Treppenstufen
+gefunden, die Probleme macht, dann wird
+als Nächstes eines der beiden Rastzahnräder
+aus dieser Gruppe entfernt und das verbliebene Rastzahnrad von Hand gedreht.
+Tritt hier das Problem auf, dann ist eine
+Stelle entdeckt; läuft alles reibungslos, dann
+wird das eben gelöste Rastzahnrad wieder
+befestigt, das benachbarte gelöst und der
+Drehtest wiederholt.
+Bevor jetzt alles wieder zusammengebaut
+wird, muss wieder der Abgleich der Rastkurbeln durchgeführt werden (siehe Abschnitt „Abgleich der Rastkurbeln“).
+Zuletzt ist noch ein Blick auf die zwei übereinander geschobenen S-Winkelträger zu
+werfen (siehe Bauanleitung S. 39 und S. 41,
+jeweils rechts), an denen die letzte Treppenstufe mittels Baustein 5 (37237) entlang
+
+Als vorbereitende Arbeitsschritte sind alle
+Kugeln von den Treppenstufen zu entfernen, da diese die Rastkurbeln zusätzlich
+durch ihr Gewicht belasten würden. Ich
+empfand es hierzu als zweckmäßig, die
+Vorbauten wie nachfolgend beschrieben zu
+entfernen, da sich so mehr Bewegungsfreiheit ergibt.
+Dies beginnt mit dem Abziehen des Getriebeblocks vom Motor und dem Entfernen der
+Führung für die Rastachse des Z40. Dann
+wird das Z40 zusammen mit der schwarzen
+Rastkupplung (35073) von der Rastachse
+45 gezogen (siehe Abb. 10). Als nächstes
+wird die Nabenmutter des mittleren
+(schwarzen) Z20 gelöst und zusammen mit
+dem Zahnkranz zurückgeschoben, bis der
+Zahnkranz keinen Kontakt mehr zu den
+benachbarten Rastzahnrädern hat.
+
+
+Alle fünf Rastkurbeln müssen jetzt in einer
+gedachten waagerechten Linie ausgerichtet
+werden, wobei es egal ist, ob die Rastkurbeln alle einheitlich nach links oder rechts
+zeigen. Abb. 12 zeigt die gemeinsame Ausrichtung nach rechts, wie in der Bauanleitung auf S. 36 oben beschrieben. Dann wird
+je eines der Rastzahnräder aus der vorderen
+
+(linken) und hinteren (rechten) Rastzahnrad-Gruppe entfernt.
+Um die Ausrichtung der Rastkurbeln zu
+erreichen, hielt ich einfach meinen Finger
+unter zwei Rastkurbeln (Abb. 13). Die beiden Kurbeln werden dann ausgerichtet und
+das abgezogene Rastzahnrad vorsichtig
+wieder aufgesteckt, ohne die Lage der Rastkurbeln zu verändern. Dasselbe erfolgt dann
+für die andere Rastkurbel-Gruppe.
+
+Tipps & Tricks
+
+Mit wenigen Teilen aus dem Baukasten
+lässt sich diese zusätzliche Führung ergänzen und damit der Ablauf verbessern. Ich
+habe dafür folgende Bausteine verwendet:
+ ein BS 15 (schwarz)
+ zwei BS 30 (schwarz)
+ zwei BS 15 mit Bohrung
+
+
+Als Letztes werden die mittlere Rastkurbel
+ausgerichtet, die Nabenmutter zusammen
+mit dem Z20 (schwarzer Zahnkranz) zwischen die Rastzahnräder geschoben und die
+Nabenmutter angezogen. Die bereits ausgerichteten benachbarten Rastkurbeln dürfen sich dabei nicht verstellen.
+Damit ist der Abgleich abgeschlossen.
+Der Zusammenbau des Z40 mit Motor und
+Getriebeblock erfolgt wie in der Bauanleitung auf S. 36 unten bis S. 38 beschrieben.
+
+Verbesserungsvorschläge
+Bessere Führung
+Wenn man den Treppenförderer im Betrieb
+genau betrachtet, fällt auf, dass die oberen
+beiden (rechten) Treppenstufen etwas zittrig laufen. Grund ist der größere Abstand
+zwischen den beiden Treppenstufen und der
+jeweiligen Rastachsenführung durch die
+beiden BS 15 mit Bohrung. Die beiden
+Rastachsen sind hier mit 90 mm schon
+deutlich länger als die übrigen drei mit
+60 mm und 75 mm Länge. Die beiden 90er
+Rastachsen benötigen daher eine zusätzliche Führung.
+
+
+Dabei ist darauf zu achten, dass sich die
+beiden Rastachsen 90 nicht in den Bohrungen der roten BS 15 verkanten. Am besten
+entkoppelt man hierzu abwechselnd die
+beiden zugehörigen Rastzahnräder untereinander und vom benachbarten schwarzen
+Z20, wie soben im Abschnitt „Test von
+Hand“ beschrieben, und dreht die beiden
+Rastzahnräder getrennt von Hand. Sollte
+das Drehen schwergängig sein, so kann man
+dies durch leichtes Verschieben der beiden
+hinzugekommenen BS 15 mit Bohrung
+beheben.
+Zusätzliche Treppenstufe
+Wie oben bereits erwähnt läuft der Treppenförderer nicht 100%ig „rund“, da es sich um
+eine ungerade Anzahl von Treppenstufen
+handelt und dadurch eine Unwucht entsteht,
+die man beim Drehen des Z40 von Hand
+auch spüren kann. Daher wäre zu überlegen,
+eine sechste Treppenstufe hinzuzufügen,
+die idealerweise hinter der oberen (rechten)
+Stufe montiert werden müsste.
+Da es meines Wissens keine Rastachse mit
+der Länge 105 mm gibt, könnte diese mit
+
+
+
+Hilfe einer Rastkupplung aus einer Rastachse 60 und einer Rastachse 45 konstruiert
+werden. Die zusätzliche Rastachse 60 gibt
+der Teilevorrat des Baukastens nicht her; sie
+müsste also ggf. separat bestellt werden.
+
+Entgratung
+Zum Entgraten der Bausteine sind verschiedene Werkzeuge verwendbar, auch abhängig von der Art des zu entgratenden Bausteins. Bei mir hat sich die Schneide eines
+scharfen Metall-/Holzbohrers größeren
+Durchmessers (mind. 6 mm) bewährt, aber
+auch ein handelsübliches Teppich- oder
+
+
+Bastelmesser leistet hier gute Dienste.
+Vorsichtig angewandt können auch
+Sandpapier oder gar Muttis Nagelfeile
+benutzt werden.
+Beim Schleifen über die Bausteinflächen
+leidet leider die Optik etwas: Die 7,5er Bausteine werden an der behandelten Stelle
+etwas heller, dasselbe gilt für die schwarzen
+Rastachsen. Daher sollten nicht mehr Bausteine entgratet werden als notwendig.
+
+Verweise
+[1]
+
+Forum: Konstruktionshilfen Dynamic
+XL. ftcommunity.de.
+
+

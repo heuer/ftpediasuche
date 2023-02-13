@@ -1,0 +1,654 @@
+
+
+Modell
+
+Schrägseilbrücke und Hängebahn (Teil 2)
+Tilo Rust
+Nachdem ich im ersten Teil [4] die Architektur und Statik des Bauwerkes erläutert habe, befasst
+sich dieser Teil mit dem Antrieb und der Regelung für die Hängebahn an unserer Schrägseilbrücke.
+
+Rahmenbedingungen
+An der Fahrbahn der Schrägseilbrücke
+hängt eine Gondel auf Laufschienen. Sie ist
+mit jeweils drei Rädern von jeder Seite
+eingehängt, sodass die Halteseile der
+Brücke zwischen dem Fahrwerk hindurch
+gleiten. Da die Fahrbahn aufgrund der
+Konstruktion labil aufgebaut wurde, sich
+also vertikal verbiegt und dabei in der
+Länge variiert, scheidet ein Antrieb mit
+einem umlaufenden Seil aus. Die nötige
+Seilspannung, welche erforderlich wäre, um
+die Reibung auf dem Antriebsrad sicherzustellen, würde die Fahrbahn verformen
+und damit die Seillänge zusätzlich verändern. Die Kraft wäre (in Experimenten
+ermittelt) sogar so hoch, dass die Türme
+zueinander gezogen werden würden.
+Zudem reicht ein kleiner Stoß an einen der
+Türme z. B. auf einer Ausstellung, um
+deren Entfernung zu verringern und so die
+Seilspannung unter den Grenzwert zu
+bringen (siehe Video [2]). Zusätzlich wäre
+der Auf- und Abbau umständlicher, da
+mindestens eine Achse entfernt werden
+müsste.
+
+Zweiseil-Technik
+Die Lösung bietet ein Antrieb aus zwei
+gegenläufigen Seilen. Hierbei zieht ein Seil
+(„Unterseil“) die Gondel in Richtung Talstation (in welcher sich der Antrieb
+befindet) während das „Oberseil“ über der
+Fahrbahn (auf ihr liegend) zur Bergstation
+
+
+führt, dort um eine Welle umgelenkt wird
+und somit die Gondel zur Bergstation zieht.
+Beide Seile werden auf eigenen Rollen aufgewickelt, die mit Hilfe eines Getriebes
+gleich schnell laufen. Um die Seile gegen zu
+starken Durchhang zu spannen, befindet
+sich im Unterturm („Schacht“) der Talstation ein Spanngewicht, welches in das
+Oberseil eingehängt ist.
+
+Dilemma
+
+
+Laufen beide Rollen gleich schnell, spult
+also eine Rolle genau so viel Seil ab, wie die
+andere dieses aufrollt, ist alles in Ordnung
+(links). Doch nach einer Weile verringert
+sich der Spulendurchmesser einer Rolle (da
+Seil abgespult wurde), während auf der
+anderen Rolle der Durchmesser wächst.
+Damit wird pro Umdrehung weniger Seil
+abgegeben, als aufgenommen wird; das Seil
+verkürzt sich (rechts).
+Das Spanngewicht im Schacht wird
+dadurch nach oben gezogen – die Spannung
+selbst bleibt konstant, da das Gewicht sich
+nicht ändert.
+
+Je nach Auslegung der Rollendimensionen
+und des Flaschenzuges am Gewicht könnte
+man damit die Seillängenänderung ausgleichen oder in der Grenze der Schachtlänge halten. Aber: Das wollen wir doch gar
+nicht – dann fehlte ja der Lerneffekt!
+Also benutzen wir absichtlich schmale
+Rollen (damit sich die Durchmesser schnell
+ändern) und eine relativ kurze einfache Seilzuglänge im Schacht. Dadurch forcieren wir
+das nächste Problem (absichtlich): die Seillänge muss während (!) der Fahrt geregelt
+werden.
+
+Messgröße
+Als Messgröße bietet sich die Position des
+Spanngewichtes an. Wird das Seil „viel“ zu
+kurz, wird es „zu hoch“ gezogen – und
+entsprechend umgekehrt. Das Gewicht
+könnte einen Kontakt auslösen, der dann
+über das (Gleichlauf-)Getriebe die Spulen
+gegeneinander verdreht (s. u.).
+Die Probleme dabei sind zwei Effekte.
+ Zum einen würde die Regelung bei
+Auslösen des Kontaktes sofort Seil nachgeben, das Gewicht nach unten fahren,
+der Kontakt abfallen und das Getriebe
+angehalten (um kein Seil mehr nachzugeben). Doch dann beginnt der Prozess von neuem recht schnell, je nach
+Geschwindigkeit der Komponenten. Das
+würde zu einem Aufschaukeln, einer
+Resonanzschwingung führen. Die Gondel schwingt, die Seile schwingen, das
+Gewicht schwingt, im Extremfall die
+Türme – ganz schlecht.
+ Zum anderen ruckelt die Gondel beim
+Fahren durch Fahrbahnunebenheiten
+selbst etwas. Das System kommt damit
+schon in unregelmäßige Schwingungen.
+Dadurch würde ein sicheres Auslösen
+des Kontaktes schwer realisierbar.
+Beobachtet man das Spanngewicht bei
+der Fahrt, sieht man, wie es mehrere
+Zentimeter „hüpft“ (siehe Video [2]).
+
+Modell
+
+Hysterese
+Schnell käme man auf die Idee, eine „Zeitverzögerung“ einzubauen, also sobald der
+Kontakt geschlossen wird, noch eine Zeit zu
+warten, bis Seil gegeben wird. Und beim
+Öffnen wieder etwas Zeit zur Verzögerung.
+Das ist nett gedacht, aber technisch genau
+falsch. Denn die Seilmenge, die gegeben
+werden muss, und die Geschwindigkeit, in
+der der Fahrbetrieb die Seillänge verändert,
+sind nicht konstant. Mal wird nur ganz
+wenig Seil gebraucht, mal geht es rasend
+schnell (je nach unterschiedlichen Spulendurchmessern). Wenn also die Zeit zu kurz
+wäre, würde sich das System nur noch mehr
+aufschwingen. Ist die Zeit zu lang, könnte
+es sein, dass das Gewicht am Ende des
+Schachtes ankommt und damit die Anlage
+Schaden nimmt. Zu diesem Zweck sind
+Endabschaltungen enthalten, die einen
+kompletten Stillstand der Anlage erzwingen. Sowohl im Falle eine Seilrisses (Gewicht fällt nach unten), als auch im Fall,
+dass das Seil klemmt (Gewicht wird nach
+oben gezogen). Dann ist der Notbetrieb
+nötig – siehe unten.
+Die Lösung ist eine mechanische Hysterese.
+Dazu löst das Gewicht den Kontakt nicht
+direkt aus, sondern nimmt eine Steuerkette
+mit, welche den Kontakt betätigt. Der Trick:
+die Kette wird mit großem Spiel mitgenommen.
+Am Gewicht befindet sich also ein Mitnehmer, der die Kette mit nach oben zieht.
+Wird nun Seil gegeben, dann fährt das
+Gewicht nach unten, der Mitnehmer greift
+aber einige Zentimeter ins Leere, bevor er
+die Kette dann wieder mitnimmt und so den
+Kontakt abschaltet. Vorteil dieser Methode:
+Die Regelung setzt sofort ein, läuft aber
+mindestens so lange, wie die Wegstrecke
+der mechanischen Hysterese ist. Unabhängig von der dazu benötigten Zeit ist so
+mechanisch sichergestellt, dass Seil nachgegeben wird.
+
+
+
+
+Kontaktprobleme
+Unser Test hat gezeigt, dass das Auslösen
+von Minitastern Probleme bereitet. Das
+Gewicht selbst hängt komplett reibungsfrei
+im Schacht, geführt an Stahlstangen. Die
+Kette benötigt etwas Kraft für die Bewegung, was sich mit einem Faktor zwei durch
+den Flaschenzug auf die Kraft der Spulen
+überträgt. Käme nun ein Minitaster dazu, so
+könnte das Gewicht verkanten oder die
+Kette blockieren. Dieses Risiko gehen wir
+nicht ein. Deswegen verwenden wir Reedkontakte, die berührungsfrei auslösen. Dazu
+ist auf der Gegenseite der Steuerkette ein
+kleiner Neodymmagnet montiert. Er löst je
+einen Reedkontakt für zu kurzes oder zu
+langes Seil aus. Zur Sicherheit sind diese
+sogar doppelt ausgeführt und parallelgeschaltet.
+
+
+In Abb. 2 ist alles auf einmal zu erkennen:
+ Die Gondel (links) wird mit dem blauen
+Seil (ganz dünn unterhalb des Seriellen
+Kabels zu erkennen, welches aus der
+Gondel zu kommen scheint) zur Talstation gezogen.
+ Das Gewicht im Schacht (grüner Pfeil)
+sorgt für die Seilspannung. Bei Längenschwankung nimmt es die Steuerkette
+(weißer Pfeil) mit. Ein Neodymmagnet
+darauf (orangener Pfeil) löst die ReedKontakte aus (im BS15 mit Loch, Höhe
+des weißen Pfeils). Damit wird die Seillänge ermittelt und das Relais gesteuert.
+ Endschalter (hellblauer Pfeil) lösen den
+Notstopp bei einem Fehler aus.
+ Der Endschalter (lila Pfeil) welcher von
+der Gondel ausgelöst wird, dient als Endlage-Erkennung in der Station und hat
+mit der Seilspannung nichts zu tun – nur
+mit dem Antrieb.
+
+
+
+Die üblichen fischertechnik-Reedkontakte
+(links) sind schwer zu befestigen und unsauber zu positionieren. Es gibt zwar einige
+Tricks und Reedkontakthalter, aber wir
+haben uns entschieden, professionelle
+Industrieware zu verwenden. Diese gibt es
+in Durchmessern von 4 mm und 5 mm, als
+Öffner, Schließer oder Wechsler, sind
+wasserdicht und präzise. Mit BS7,5, BS30
+mit Bohrung und BS15 mit Loch (4 mm)
+
+oder Gelenkwürfel-Klaue (5 mm) u. a. sind
+diese Teile bestens zu positionieren.
+
+Doppellösung
+Aus der Verwendung eines Reedkontakts
+folgt ein weiteres Problem: Diese Kontakte
+können nur eine Leitung schalten. Wir
+benötigen aber beide Leitungen (Plus und
+Minus) und diese dazu auf drei Stellungen:
+a) Seil geben
+b) Stillstand (spannungsfrei; Seillänge ist
+richtig)
+c) Seil kürzen
+
+Modell
+
+Kontakten des zweiten Relais an – allerdings verpolt. Dadurch, dass dessen Öffner
+nun aktiv sind, käme es zu einem Kurzschluss. Wieder eine Lösung: Dessen
+Zuleitungen werden über die zwei weiteren
+(Öffner-)Kontakte des ersten Relais geführt
+und sind damit in diesem Moment spannungsfrei (die sogenannte „elektrische Verschränkung“).
+Somit bleibt ein Kontakt an jedem Relais
+übrig – verwenden wir ihn einfach für eine
+Anzeige auf der Fernbedienung.
+
+Wir benötigen einen Polwendeschalter mit
+Nullstellung – und das mit einem einzigen
+Reedkontakt?
+Des Rätsels Lösung ist ein Relais. Also
+haben wir einen „Selbstbau-Silberling“
+entworfen. In einer Kassette 60 · 60 mit
+Deckel befinden sich nun zwei Relais mit
+jeweils fünf Umschaltkontakten sowie
+einem Sperrkontakt (max. Schaltstrom
+2 A). Löst also nun ein Reedkontakt aus, so
+zieht eines der Relais an und gibt mit zwei
+Kontakten Spannung in der richtigen Polung auf den Motor, welcher die Seillänge
+verändert. Löst der andere Reed aus, wird
+das andere Relais tätig und die Spannung
+wird auf den Leitungen verpolt aufgegeben.
+Damit nicht beide Relais gleichzeitig anziehen (z. B. weil ein „Spielkind“ mit einem
+Magnet die beiden Reedkontakte auslöst),
+ist der sechste Kontakt der Relais als Sperrkontakt ausgeführt. Ist also ein Relais angezogen, wird die Versorgung des anderen
+Relais durch Öffnen des sechsten Kontaktes
+verhindert. (Anm.: Um den Silberling
+später in anderen Projekten verwenden zu
+können, gibt es auch eine „Override“Ansteuerung, die es prinzipiell ermöglichen
+würde, beide Relais komplett unabhängig
+zu verwenden oder den sechsten Kontakt als
+Selbsthaltung zu benutzen.)
+Doch damit nicht genug: Ist ein Relais
+angezogen, liegt die Spannung auch an den
+
+Relais 5 · UM (mit 36 Buchsen auf der
+Oberseite, daher das Kabelgewirr) und rechts
+der Brückengleichrichter
+
+Getriebe
+Wie schon erwähnt, muss diese Regelung
+während der Fahrt durchgeführt werden.
+Damit müssen zwei mechanische Bewegungen „addiert“ oder überlagert werden. Zum
+einen die Fahrbewegung (ein Seil abrollen,
+das andere aufrollen) und zum anderen die
+Seillängenveränderung, bei der eine Spule
+schneller als die andere läuft.
+Mechanisch ist das ein bekanntes Problem,
+das in jeder Raupe oder jedem Panzer gelöst
+ist. Das Gleichlaufgetriebe erlaubt es, beide
+Ketten solcher Fahrzeuge in die gleiche
+Richtung zu bewegen und zum Lenken
+deren Laufgeschwindigkeiten gegeneinander zu versetzen. Im Bilderpool gibt es dazu
+dutzende Lösungen. Das gleiche Getriebe
+setzen wir hier ein.
+
+
+
+Damit ist ein Motor für den Antrieb „Fahrt“
+zuständig, während der andere Motor über
+Relais, Reedkontakte, Steuerkette und
+Spanngewicht die Seillängen regelt. Im
+Video [2] ist schön zusehen, wie eine Spule
+fast stehen bleibt, während sich die andere
+bewegt.
+
+
+Die Seillängenänderung ist (absichtlich)
+extrem: während sich die Gondel (graue
+Kassette) nur 20 cm bewegt, ändert sich die
+Seillänge am Spanngewicht (gelbe Kassette) bedingt durch die absichtlich eng
+bemessenen Spulendurchmesser erheblich.
+Man bedenke: unser Modell besitzt eine
+Fahrbahnlänge von 360 cm.
+
+
+Automatik vs. Handbetrieb
+Über die Kabelfernsteuerung (s. u.) ist der
+Betrieb in zwei Modi möglich:
+Der Automatikbetrieb lässt die Gondel von
+einer Station in die andere durchfahren.
+Währenddessen regelt der beschriebene
+Regelkreis die Seilspannung selbsttätig.
+Am Turm angekommen unterfährt die Gondel eine „Gabel“, welche einen Minitaster
+öffnet und so den Fahrstrom unterbricht.
+Wird an der Fernbedienung die Fahrtrichtung geändert, erhält der Antrieb über eine
+Diode am Minitaster wieder Strom und die
+Fahrt in die Gegenrichtung beginnt.
+Bei einer Störung, z. B. Verklemmen der
+Steuerkette, einer Entgleisung oder anderen
+Problemen, welche von der Anlage durch
+Sensoren erkannt werden, wird die Fahrt
+unterbrochen und die Regelung der Seilspannung angehalten. Gleichzeitig leuchtet
+auf der Fernbedienung eine Warnleuchte
+auf. Nun kann eine Klappe geöffnet werden.
+Dadurch werden zwei Taster ausgelöst,
+welche den Automatikbetrieb unterbrechen
+und die Steuerung auf die Notsteuerung
+umschaltet. Es steht ein Taster zur Verfügung, der die Gondel manuell in die vorgewählte Richtung bewegen kann, außerdem
+ein Polwendetaster, mit dem es möglich ist,
+manuell die Seillänge unabhängig von der
+Regelung zu erhöhen oder das Seil zu
+verkürzen. Dazu ist keine Fahrt nötig. Erst
+wenn sich die Anlage wieder in einem
+geordneten Zustand befindet, wird die
+Klappe geschlossen und der Automatikbetrieb setzt ein.
+Damit ist die Anlage im Normalfall, also bei
+Automatikbetrieb, lediglich mit einem
+einzigen (Polwende-)Schalter zu bedienen.
+
+
+Modell
+
+
+Auf- und Abbau
+Dieser Handbetrieb (Notbetrieb) ermöglicht
+nun auch den einfachen Auf- und Abbau der
+Anlage, vorgeführt im Video [2]. Sobald
+Brücke und Fahrbahn mit Gondel stabil
+aufgebaut sind, werden die Seile von den
+Spulen abgerollt, auf denen sie zum Transport aufgewickelt waren. Dazu wird im
+Handbetrieb einfach „Seil verlängern“
+gedrückt. Sind dann beide Seile in die
+Gondel eingehängt und etwas über diese
+manuelle Steuerung gespannt, so kann der
+Automatikbetrieb beginnen. Nach zwei bis
+drei Fahrten haben sich die Spulen ausgeglichen und ein stundenlanger reibungsloser
+Betrieb ist möglich. Der Abbau erfolgt
+entsprechend umgekehrt.
+
+Kabelchaos
+Ein Blick in den Maschinenraum bringt bei
+den Betrachtern meistens ein spontanes
+Lachen und Verzweifeln mit sich: Hunderte
+von Kabeln liegen scheinbar chaotisch auf
+einem Haufen. Doch dem ist nicht so. Wie
+ich schon in [4] und [5] schilderte, sind die
+Kabel geordnet und beschriftet. Doch hier
+kommt der Kick: Vom Trafo (vergraben
+rechts neben dem weißem Bereich) führt
+der Strom über die Fernbedienung, welche
+mit einem Centronics-Stecker (unterer
+Rand, zwischen grünem und MagentaBereich) und 3 m Telefonkabel angeschlossen ist, in die Talstation, dann über ein
+serielles Kabel zur Bergstation an die oben
+erwähnte Gabel, zurück zur Talstation, zur
+
+Fernbedienung in den Polwendeschalter,
+zur Talstation, dort in dessen Gabel, zum
+Fahrmotor (linker Powermotor zwischen
+den Pfeilen), wieder in die Fernbedienung
+zur Handsteuerung, zur Talstation für die
+Notabschaltung, zur Fernbedienung zum
+Override und zurück zum Trafo. Einiges an
+Strecke, oder? Zusammen mit den Kabeln
+für die Regelung und die Beleuchtungen,
+für die Signallampen und die Wartungsmodi sind in diesem Modell über 240 m
+Litze und ca. 250 Stecker bzw. Buchsen
+verlegt (und fast unsichtbar).
+„Block“ (weißes Rechteck) leitet die Kräfte
+der Schrägseilbrücke in die Bodenplatte ein
+(vgl. [4]). Rechts daneben befindet sich der
+einzige (klassische) Trafo, der die komplette Anlage versorgt. Rechts daneben sind
+zwei Polwendeschalter zu erkennen, die
+zusammen mit den blauen Lampen die
+Anlage in „Wartung“ versetzen und Steuerbefehle nicht an die Motoren, sondern die
+Lampen übergeben. Rechts daneben sieht
+man die blaue Seilspule (linker Pfeil), den
+Motor für die Seillängenregelung (mit
+orangefarbenem Aufkleber) und darunter
+versteckt die zweite Spule (rechter Pfeil).
+Der zweite Powermotor (violetter Aufkleber) ist zuständig für die Fahrt der
+Gondel. Die beiden Motoren wirken über
+das Gleichlaufgetriebe (violettes Rechteckt)
+auf die Spulen. Links neben dem Getriebe
+sieht man das „Kabelchaos“, das durch das
+
+
+
+Auffächern des Centronics- und des seriellen Kabels entsteht.
+Die Selbstbau-Silberlinge (grüner Bereich)
+verbergen sich unter dem liegenden Polwendeschalter, der das Arbeitslicht von
+„Artur“ (siehe [4]) schaltet. Über diesem
+sitzt ein schwarzes Kästchen – das Blinkrelais für die Topplichter. Rechts unten
+neben dem grünen Bereich sieht man eine
+Lampenfassung; das ist die Steckdose für
+die Handlampe. Der freie Bereich daneben
+gibt dem Centronics-Kabel Platz.
+Der Geber für den Fahrtrichtungsanzeiger
+(gelber Bereich) greift mit einem Z40 in ein
+Z10 ein, das auf der Achse der blauen Spule
+sitzt. Zu erkennen sind dort die schwarzen
+Reedkontakte für die LED-Anzeige. Der
+Deckel, gleichzeitig das Dach der Anlage,
+besteht aus den rechts aufgestellten roten
+Bauplatten. Sobald er geschlossen wird,
+deaktiviert der kaskadierbare Taster (über
+dem weißen Bereich, mit schwarzem
+Betätiger) die gelben Warnlampen (sichtbar
+
+z. B. unter dem weißen Bereich). Der Taster
+ganz rechts oben (betätigt durch das blaue
+Federbein) schaltet bei offener Klappe die
+Arbeitsbeleuchtung im ganzen Gebäude.
+Am oberen Ende des magentafarbenen
+Bereiches sieht man ein geflochtenes rot/
+weißes Kabel, das eine Laterne – unscharf,
+direkt unter den Wartungsschaltern – aufrichtet. Zur Orientierung: die Seile laufen
+etwa mittig aus dem rechten Bildrand unter
+der Bauplatte heraus zum Turm der Talstation und von dort auf die Strecke.
+
+Stromversorgung
+Warum dieses Chaos nötig ist? Nun, meine
+Anforderung war, dass die Anlage nur einen
+einzigen Netzstecker haben darf, also einen
+Trafo, der alles versorgt. Ebenso dass die
+Fernbedienung über Kabel angeschlossen
+und wie die Fahrbahn komplett entfernt
+werden kann, damit die Steuerleitung,
+welche unter der Fahrbahn angebracht ist,
+ausgesteckt werden kann. Die Bergstation
+
+
+muss „passiv“ sein, also Spannungsversorgung und Schaltsignale über das serielle
+Kabel bekommen und damit auch die
+Beleuchtung versorgen. Außerdem wird die
+Beleuchtung der Fahrbahn (die Lichterkette
+oben zwischen den Mastspitzen) ausschließlich von der Talstation versorgt. Die
+Wartungsbeleuchtung soll leuchten, wenn
+die Abdeckung des Maschinenraumes
+geöffnet wird, zusätzlich Warnlampen auch
+an der Fernbedienung. Der Nachtbetrieb
+(Arbeitslicht an der Fernbedienung) mit
+Beleuchtung aller technischen Geräteräume
+soll so möglich sein, dass wir keine
+Taschenlampe brauchen, wenn im Garten
+ein Problem mit der Anlage auftritt.
+So kommen wir zu einer weiteren technischen Raffinesse: Der Trafo versorgt zwar
+mit seinen Gleichspannungsausgängen die
+Motoren, aber da die Beleuchtung zum
+Stromsparen aus (Selbstbau-)LEDs besteht,
+können wir keine Wechselspannung verwenden. Was liegt also näher als zwei
+Leistungs-Brückengleichrichter (5 A) mit
+gigantischen Kondensatoren (nur begrenzt
+durch die Einbaugröße) in eine weitere
+Kassette zu montieren. Nun ist die Anlage
+sogar fähig, die Beleuchtung fast 30
+Sekunden am Laufen zu halten, nachdem
+der Netzstecker gezogen wurde. (Getreu
+meines Mottos „Gigantismus kennt keine
+Grenzen.“)
+
+Beleuchtungen
+Die Anlage sollte einen Hauch von Realität
+einer professionellen Anlage widerspiegeln.
+Deswegen erfolgt beim Einstecken des
+Netzsteckers eine sofortige Aktivierung der
+Topplichter an den Mastspitzen. Diese zwei
+Lampen (!) werden über das klassische
+Blinkrelais von fischertechnik (es sitzt
+direkt über dem Relaisbaustein) synchron
+zum Blinken gebracht. Die Versorgung
+läuft über das serielle Kabel.
+
+Modell
+
+Sobald die Fernbedienung über den
+Centronics-Stecker
+eingesteckt
+wird,
+aktivieren sich die Kollisionslichter (rote
+Dauerlichter) sowohl an den Streben der
+Türme (versorgt ebenfalls über das serielle
+Kabel) als auch am Seil der Fahrbahnbeleuchtung (ausschließlich über die Talstation und das geflochtene Kabel versorgt).
+An der Fernbedienung leuchtet eine
+Betriebsanzeige.
+Im Nachtbetrieb (siehe [5], S. 67) kann der
+Bediener die Fernbedienung mit einer
+Arbeitsleuchte erhellen (gebogene Laterne)
+und separat die Bauwerks- und Fahrbahnbeleuchtung aktivieren. Hierzu gibt es auch
+eine Kontrolllampe. Die elf Ultrabright
+LEDs werden wie die Kollisionslichter
+versorgt.
+Sobald man die Abdeckung des Maschinenraumes anhebt, blinken dutzende gelbe
+Blink-LEDs, vor allem an Stellen mit
+Quetschgefahr, aber auch „Wartung“ an der
+Fernbedienung. Ist die Klappe ganz geöffnet, erhellen mehrere gut platzierte LEDs
+(weiß) alle technischen Elemente der
+Anlage (Getriebe, FahrtrichtungsanzeigeGeber, Kabelsalat, beide oberen Maschinenräume der Türme, sowie den Schacht
+von innen).
+An der Fernbedienung gibt es außerdem den
+Fahrtrichtungsanzeiger (siehe [4] und im
+Video [2]), die Warnlampe für Störung und
+für die Spannungsregelung des Seils. Die
+Hinweislichter für Handbetrieb und
+Stationsankunft werden ebenfalls mit einer
+LED angezeigt.
+Möglich ist diese Menge an Beleuchtung
+gleichzeitig an einem einzigen alten Trafo
+aber nur durch Verwendung von LEDs und
+meinem großen Gleichrichter – und den
+besagten Metern Kabelchaos.
+
+
+
+
+
+Technik der 80er
+
+Kräfte
+
+Alles in Allem ist diese Anlage also
+Technik, wie sie in den 1970er und 1980er
+Jahren bereits möglich war (ClassicMan
+eben), basierend auf reiner Elektromechanik.
+
+Abschließend noch eine genauere Betrachtung zu den Kräften, die in der Anlage
+auftreten. Diese sind additiv und enden
+letztlich im Getriebe/Motorblock.
+
+Natürlich haben wir auch darüber nachgedacht, die Anlage einmal mit meinem
+(relativ neuen) ftDuino und TX-Pi zu
+modernisieren. Doch Tests zeigen, dass die
+Reaktionszeiten der Regelung zu langsam
+sind, um einen sicheren Betrieb zu gewährleisten.
+Zudem widerstrebt es mir persönlich, für
+das Einschalten eines Lichts einen Controller zu benutzen. Das geht auch klassisch:
+Schalter ein – Strom ein – Licht ein. Keep it
+simple.
+Im Schema sind alle Komponenten der
+Anlage noch einmal im Zusammenspiel
+erkennbar.
+
+Angefangen bei der Reibungskraft, die zum
+Ziehen der Gondel überwunden werden
+muss, über die additiven Kräfte der Seilreibung und Rollreibung der Umlenkrollen
+gelangen wir zum Spanngewicht. Dieses
+muss so ausgelegt sein, dass es in der Lage
+ist, das Seil zu spannen, wenn die Anlage
+stillsteht. Da das Gewicht an einer Umlenkrolle hängt, muss es doppelt so schwer sein,
+wie zur Überwindung der erwähnten Reibungen nötig. Zusätzlich sollte Reserve
+eingeplant werden. Auf der anderen Seite
+aber bedeutet dies, dass das Getriebe dafür
+ausgelegt sein muss, diese Kräfte aufzunehmen und die Rollen so übersetzt werden
+
+müssen, dass der Motor in der Lage ist, das
+Gewicht ohne Probleme anzuheben.
+
+
+Aus den ersten Versuchen ermittelten wir,
+dass es mit geschickter Getriebewahl möglich sein sollte, die Anlage mit den alten
+großen Motoren zu betreiben. Ich besaß
+nämlich keine modernen Powermotoren –
+schließlich bin ich der ClassicMan. Von der
+Realität aber wurden wir eines Besseren
+belehrt. Schnell war das Getriebe erweitert,
+so dass ein zweiter Motor auf der gleichen
+Welle für zusätzlich Kraft sorgen sollte.
+Doch die Schneckengetriebe fressen zu viel
+Kraft und die lange Schneckenstange
+
+Modell
+
+spreizte sich in alle Richtungen, sobald Last
+auftrat.
+Nach der Süd-Convention 2018 sprang ich
+also über meinen Schatten. Dank fischerfriendsman mit seiner guten Beratung sind
+wir nun (zugegeben glückliche) Besitzer
+dreier Powermotoren. Das Getriebe wurde
+komplett neu gestaltet, verstärkt und
+verkleinert und tat von Anfang an das, was
+wir erwarteten – bis heute ohne Mucken.
+Interessant hierbei: Beide Getriebe wurden
+auf dem Kopf stehend aufgebaut. Sie sind
+als Module konzipiert und werden auf die
+Grundplatte nur mit wenigen Steinen
+eingeschoben. Alle Kräfte werden intern
+aufgenommen. Dies hat einen unschlagbaren Vorteil, den wir auch anderen
+Modellbauern empfehlen: Getriebe mit
+Motoren können als „Modul“ abgenommen, gewartet und repariert werden. Wir
+brauchen keine 20 Sekunden, um an jedes
+Rädchen zu kommen.
+
+Schnecke links oben ist noch ein Relikt aus der Entwicklung) und das wesentlich kompaktere und
+stabilere neue Getriebe mit den Powermotoren (hier liegen die Spulen unter den Motoren). Ein Z10
+greift in beiden Versionen auf die Gehäusezähne der Differenziale und verdreht diese gegeneinander,
+um die Seillänge zu verändern.
+
+
+
+Abschied
+
+Quellen
+
+Doch während ihr diese Zeilen lest, ist die
+Schrägseilbrücke und der ft:express mit
+seiner elektromechanischen Regelung
+längst Geschichte. Wie alle Bauten aus
+fischertechnik haben Jan und ich dieses
+Modell bereits wieder zerlegt. Es hat uns
+vier Jahre begleitet und vielen Besuchern
+Technik nähergebracht. In unserer 34minütigen Video-Dokumentation [2] haben
+wir alles noch einmal für die Ewigkeit
+konserviert.
+
+[1]
+
+Tilo Rust: Schrägseilbrücke
+(340 cm). Bilderpool der
+ft:Community, 2016.
+
+[2]
+
+Tilo Rust: fischertechnik Schrägseilbrücke & ft:express. Auf YouTube,
+2020.
+
+[3]
+
+Erlebnismuseum Fördertechnik
+Sinsheim (Sponsor der Seilbahn)
+
+[4]
+
+Tilo Rust: Schrägseilbrücke und
+Hängebahn. Teil 1 in 3/2020, S. 31-40.
+
+[5]
+
+Tilo Rust: Verkabelung (Teil 3). In
+ft:pedia 2/2020, S. 61-67.
+
+Die Teile aus unserem Privatbesitz geben
+meiner Frau damit wieder das Arbeitszimmer zurück und werden für ein neues
+Projekt eingesetzt: die 30 m lange kuppelbare Einseil-Umlauf-Seilbahn mit Hauptsponsor Doppelmayr Garaventa, die wir bis
+2023 im Erlebnismuseum Fördertechnik in
+Sinsheim [3] aufbauen und in der nächsten
+ft:pedia vorstellen werden.
+
+Freude – fotografiert von einer geduldigen Mama und Ehefrau.
+
+

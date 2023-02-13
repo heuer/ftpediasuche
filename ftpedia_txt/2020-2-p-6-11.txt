@@ -1,0 +1,283 @@
+
+
+Baukasten
+
+Die Box 125/1 Advanced Mini Cranes
+Peter Habermehl
+Zu Ostern 2020 wurde im Forum der fischertechnik community als kleine Überraschung die
+Anleitung für die Zusammenstellung eines kleinen Kran-Baukastens veröffentlicht. In diesem
+Beitrag wird die Entstehung des Community-Baukastens „Advanced Mini Cranes“ zusammen
+mit einigen Hintergrundinformationen dargestellt.
+In einer Interessengemeinschaft wie der
+fischertechnik community entstehen immer
+wieder Gemeinschaftsprojekte. Ein schönes
+Beispiel ist der Achterbahn-Thread [1] im
+Forum, wo unter großer Beteiligung
+gemeinsam getüftelt wurde.
+Eine Art serielles Gemeinschaftsprojekt
+war die Entwicklung eines kleinen, reisetauglichen Bausatzes, der zu Ostern 2020
+im Forum veröffentlicht wurde [2] und auf
+der Community-Homepage auch direkt
+unter [9] zu finden ist.
+
+Der Hintergrund
+Nachdem Forumsmitglied Jan (juh) die
+Grundplatte 250 als 3D-Druck-Design veröffentlicht hatte [3], die zudem noch als
+Deckel auf die fischertechnik-Sortierwanne
+250 passt, erinnerte ich mich meines alten
+Wunsches nach einer kleinen Grundplatte
+mit dem Nutsystem der aktuellen, großen
+fischertechnik-Platten 500 und 1000.
+Jan war so nett und hat auf Nachfrage die
+Grundplatte 250 nochmals halbiert und eine
+
+
+Grundplatte 125 (128 · 98 mm Außenmaß)
+entworfen.
+Das brachte mich auf den Gedanken, dass
+zu einer 125er Grundplatte auch wieder eine
+Sortierwanne gehört, die ich anschließend
+selbst konstruiert habe [4]. Als kleine
+Besonderheit wurde sie so entworfen, dass
+die original fischertechnik-Trennstege der
+Sortierwanne 250 auch in die neue Wanne
+125 eingesetzt werden können.
+
+
+Die Sortierwanne 125 rief Stefan Falk auf
+den Plan. Er bat um eine Serie von Urlaubskasten-Vorschlägen für die ft:pedia, und
+diesem Ruf möchte ich mit der Box 125/1
+Advanced Mini Cranes nachkommen.
+
+Baukasten
+
+Und welcher langjährige fischertechnikFan hat nicht die berühmte eBay-Kleinanzeigen-Konvolute-Restekiste? In meinem
+Fall hauptsächlich mit „klassischen“
+fischertechnik-Teilen in grau und rot bestückt, etwas Statik, ein paar Achsen, eben
+Teile, die gebraucht zum Kilopreis gehandelt werden.
+Und so entstand der Gedanke, aus gut
+verfügbaren Standardteilen einen Bausatz
+zusammenzustellen, der sich auch noch in
+der kleinen Sortierwanne 125 unterbringen
+lässt. Dabei sollten die Modelle zumindest
+auch eine gewisse Funktion haben und von
+der Komplexität den Anspruch des Baukastens Basic Cranes (96778) aus 2005, der
+allerdings schon die Richtung bezüglich der
+Modellauswahl beeinflusste, übertreffen.
+Ich wollte die Modelle rund um eines der
+ältesten fischertechnik-Teile herum bauen,
+die Drehscheibe (31019), die schon 1966
+ins fischertechnik-Programm kam und in
+meiner Schüttgutkiste dutzendfach vorhanden war. Ausgehend von der Drehscheibe
+entstand zunächst ein kleiner DoppellenkerHafenkran, der auf drei Beinen aus Winkelsteinen 30°, 60° und Statik-Winkelträgern
+30 und 60 steht. Zwei Winden bedienen den
+Kranhaken und die Kranarmverstellung.
+
+Die Modelle
+In der Geschichte von fischertechnik finden
+sich schon früh die ersten Bauvorschläge
+für Kräne. Und über all die Jahre gab es
+immer wieder Baukästen, die sich mit dem
+Thema beschäftigten, vom Kleinmodell
+über den riesigen Turm-Drehkran (30480)
+bis zum unübertroffenen Modellbaukasten
+Container-Brücke (30479) in den 1980er
+Jahren, gefolgt von diversen anderen Sets
+wie z. B. den Hafenkränen (30201) in 1998
+oder den Advanced Super Cranes (41862)
+von 2006.
+
+
+
+
+Nachdem das Modell seine endgültige
+Gestalt gefunden hatte, wurde es zerlegt,
+um aus den Teilen einen Baukran zu
+erstellen.
+Nach einiger Vorüberlegung kam ich zu der
+Entscheidung, einen leichten Hochbaukran
+amerikanischer Bauart (Untendreher mit
+Nadelausleger, siehe [5]) zu bauen, da ein
+Katzausleger, also ein Ausleger mit Laufkatze, in der geplanten Modellgröße nicht
+realisierbar schien, aber das Verfahren der
+Last in Richtung des Auslegers trotzdem
+möglich sein solle.
+
+Für ein Modell aus einer 13 · 10 · 4 cm
+großen Box sicherlich schon beachtliche
+Werte.
+Als Highlight des Baukastens sollte nun
+noch ein Portalkran entstehen, der einen auf
+der Kranbrücke per Seilzug verfahrbaren
+Drehkran besitzen sollte.
+Auch hier wurde wieder die Drehscheibe als
+Basis gewählt; der Aufbau des DrehkranOberteils ist gegenüber dem Hafenkran
+etwas vereinfacht mit festem Ausleger ausgeführt.
+
+Das Konstruktionsprinzip wurde auch von
+fischertechnik, zum Beispiel beim oben erwähnten Turm-Drehkran (30480), angewandt.
+Mit einem Ausleger aus Statikstreben 90
+und 120 ließ sich so ein ca. 20 cm langer
+Ausleger an einem 23 cm hohen Turm
+realisieren, was bei waagerechtem Ausleger
+eine Kranreichweite von 23 cm (gemessen
+vom Haken zur Drehachse) und eine Hubhöhe von 18 cm, und bei angehobenem
+Ausleger (ca. 65° aus der Horizontalen)
+eine Hubhöhe von 35 cm in 12 cm Entfernung von der Drehachse erlaubt, woraus
+eine horizontale Verfahrstrecke von ca.
+11 cm resultiert.
+
+Von allen drei Modellen wurden nun die
+genauen Stücklisten erstellt und abgeglichen, sodass die Bestückung für den
+Modellbaukasten ermittelt werden konnte.
+Da die Konstruktion der Modelle zwei und
+drei jeweils vom Teilesatz des Vorgängermodells ausging, war eine große Überschneidung zwischen den drei Modellen
+gegeben. Insgesamt beinhaltet der Modellbaukasten über 140 Teile.
+
+
+
+In einer mehrstündigen fischertechnikTetris-Session für Fortgeschrittene gelang
+es, alle Teile tatsächlich in der Sortierwanne
+125 unterzubringen.
+
+Ganz nebenbei wurde für die Community
+auch noch ein neues Bauteil erschlossen.
+Mir missfiel (seit meiner Kindheit…), dass
+der Kranhaken mit dem Klemmstift am Seil
+befestigt sehr leicht ist, so dass das Seil oft,
+insbesondere bei etwas schwergängigen
+Rollen, nicht sauber abspult.
+
+Baukasten
+
+An dieser Stelle sei nochmal ausdrücklich
+Dirk Wölffel (DirkW) gedankt, der mir
+innerhalb von wenigen Stunden die Grundplatte 125 und die Sortierwanne 125 für den
+fischertechnik-Designer verfügbar machte.
+Inzwischen sind die Teile im fischertechnik-Designer als Online-Update verfügbar.
+
+
+Zudem bemerkte ich, dass der Klemmstift
+wohl zu den selteneren Teilen zählt. Um
+diesen Lieferengpass zu umgehen und um
+für ein höheres Hakengewicht zu sorgen,
+wurde ein Klemmstift 15 aus Edelstahl
+erstellt. Dieser sollte inzwischen auch bei
+Stefan Roth (fischerfriendsman) erhältlich
+sein [6].
+
+Die Dokumentation
+Da das erklärte Ziel von vorneherein die
+Veröffentlichung des Bausatzes war, sollte
+nun noch eine möglichst verständliche und
+auch optisch ansprechende Bauanleitung
+erstellt werden.
+Grundlage dazu war das Programm fischertechnik-Designer [7], für das Andreas
+Gürten (laserman) ein sehr schönes Tutorial
+im Forum veröffentlicht hat [8].
+Alle drei Modelle wurden im fischertechnik-Designer nachkonstruiert und dabei in
+mehrere Bauphasen unterteilt.
+
+Da der fischertechnik-Designer es ermöglicht, zu jeder Bauphase auch die Übersicht
+der verwendeten Teile zu erstellen, waren
+die wichtigsten Informationen für die
+Dokumentation relativ schnell zusammengestellt.
+Die Anleitung sollte sowohl am Bildschirm
+als auch auf Papier zu gebrauchen sein.
+Daher wurde das Format DIN A5 quer
+gewählt.
+Eine mit dem fischertechnik-Designer erstellte Einzelteilliste sowie der ebenfalls mit
+dem fischertechnik-Designer gezeichnete
+Bestückungsplan für die Sortierwanne
+runden die Anleitung ab.
+Zu guter Letzt erfolgte ein ausgiebiger Test
+des Bausatzes und der Anleitung. Neben
+meinen Kindern, die beide die Modelle
+versuchsweise aufbauten und das Bestücken der Sortierwanne optimierten, haben
+Esther (EstherM) und Uwe (giliprimero)
+alle drei Modelle gebaut und zahlreiche
+Korrektur- und Verbesserungsvorschläge
+für die Anleitung gemacht, wofür ich ihnen
+sehr danke.
+
+
+
+
+
+Schlusswort
+Mit der Zusammenstellung dieses kleinen
+Modellbaukastens für die Community habe
+ich mir selbst einen kleinen Kindheitstraum
+erfüllt. Die Arbeit hat mir sehr viel Freude
+bereitet, das Ergebnis erfüllt meine selbst
+gesetzten Ziele.
+
+Ich würde mich sehr freuen, wenn der Eine
+oder Andere einen solchen Bausatz aus
+seiner Restewühlkiste zusammenstellt und
+vielleicht als fischertechnik-Appetithappen
+an ein Kind weitergibt, so wie ich selbst es
+zu Ostern getan und dafür glänzende
+Kinderaugen als Dank erhalten habe.
+Dabei gilt: Farben können abweichen –
+siehe Abb. 9. Nicht nur bei den Rottönen,
+sondern insgesamt kann verwendet werden,
+was gefällt oder einfach auch nur übrig ist.
+
+Quellen
+
+persönlichem Geschmack
+
+
+[1]
+
+Achterbahn-Thread auf
+ftcommunity.de.
+
+[2]
+
+Forenlink zur Veröffentlichung des
+Baukastens.
+
+[3]
+
+Thread zu den neuen Grundplatten
+auf ftcommunity.de.
+
+[4]
+
+Thread zur Sortierwanne 125 auf
+ftcommunity.de.
+
+[5]
+
+Wikipedia: Turmkran (siehe
+Abschnitt „Nadelausleger“ und
+„Katzausleger“).
+
+[6]
+
+Teilehändler fischerfriendsman
+(Klemmstift 15 Edelstahl):
+
+[7]
+
+Webseite des fischertechnikDesigners
+
+Baukasten
+
+[8]
+
+fischertechnik-Designer Tutorial im
+Forum
+
+[9]
+
+Anleitung und Dokumentation zur
+Box 125/1.
+
+[10] Falk, Stefan: Der WohnzimmerDienstreisen-Urlaubs-Notfallkasten.
+ft:pedia 1/2016, S. 37-40.
+
+
+

@@ -1,0 +1,243 @@
+
+
+Tipps & Tricks
+
+Die Welt der fischertechnik-Winkelbausteine
+(Teil 2)
+Rüdiger Riedel
+Fortsetzung des Artikels in der ft:pedia 2017-1: Jenseits von Sinn und Nützlichkeit geht es mir
+hier um den Eindruck der Bilder; Ausgangspunkt ist eine einfache Systematik. Mir persönlich
+gefällt die Vielfalt an Formen und Gestalten, die sich hier ergibt.
+
+Bausteine 15 als
+Winkelbausteine
+Die hatte ich tatsächlich übersehen: Die
+„Winkelbausteine“ 90°!
+Wieder beginnen wir mit einer Definition:
+Ergibt die Summe aller Winkel der
+verbauten Steine 360°, dann ist das ein
+geschlossener Ring, auch wenn die Figur
+verbeult und verbogen aussieht wie in
+immer Vielecke.
+In den Beschreibungen benutze ich wieder
+folgende Darstellung:
+∂
+∂
+∂
+∂
+
+Winkelstein 7,5° → WS7,5
+Winkelstein 15° → WS15
+Winkelstein 30° → WS30
+Winkelstein 60° → WS60
+
+und neu:
+∂ Winkelstein 90° → WS90
+
+
+
+Wie in Abb. 1 gezeigt, stellen wir uns einen
+halbierten Baustein 15 vor. Zeigt dessen
+90°-Spitze in das Ringinnere, dann wird der
+Winkel 90° positiv gezählt, zeigt er nach
+außen, dann wird der Winkel 90° negativ
+gezählt [1].
+
+
+Für den WS90
+Kandidaten:
+
+haben
+
+wir
+
+mehrere
+
+∂ Die verschiedenfarbigen BS15 (es gehen
+natürlich auch senkrecht gestellte BS30).
+∂ Baustein 15 Ansenkung (32321).
+∂ Baustein 15 Bohrung (32064)
+∂ V-Baustein 15 Eck (38240)
+∂ Winkelstein 10x15x15 (38423)
+∂ S-Riegelstein 15x15 (32850)
+∂ Gelenkwürfel-Zunge 7,5 (31426) mit
+Gelenkwürfel-Klaue 7,5 (31436)
+∂ S-Scharnier (36329)
+Die letzten beiden sind natürlich nur mit
+Einschränkung zu gebrauchen; wegen der
+Beweglichkeit kann sich der Winkel verändern.
+
+Je nach Bausteinen können Federnocken
+(31982) erforderlich sein.
+
+Tipps & Tricks
+
+Dreizählige Ringe
+Es gibt nur 4 dreizählige Ringe.
+
+Zweizählige Ringe
+
+
+unterschiedlichen WS90
+
+Durch Änderung der Reihung können
+weitere zweizählige Ringe erzeugt werden.
+Hier sind einige dargestellt:
+
+Der Ring in Abb. 7 hat die gleichen Steine
+wie derjenige links unten in Abb. 6, jedoch
+mit anderer Reihung.
+
+Negative Winkel
+Baut man die echten Winkelsteine verkehrt
+herum ein, also mit der breiten Seite ins
+Innere der Ringe und sorgt trotzdem für eine
+Winkelsumme der Ringe von 360° [1], dann
+ergibt
+sich
+eine
+Fülle
+weiterer
+Möglichkeinen. Die WS90 sollen zunächst
+wie in Abb. 1 eingebaut werden, also mit
+der (virtuellen) breiten Seite nach außen.
+Sechszählige Ringe
+Es gibt jetzt vier Ringe mit sechszähliger
+Symmetrie:
+
+
+
+
+
+Ändert man die Reihung des Ringes links
+unten in Abb. 8, dann erhält man den Ring
+
+6 · WS7,5 + WS90)
+
+Achtzählige Ringe
+
+
+Wir können auch die sechszählige
+Symmetrie durchbrechen und z. B. aus dem
+Ring rechts unten in Abb. 8 solche wie in
+
+
+Von achtfach symmetrischen Ringen finden
+wir 6 Stück, wenn wir die Reihung der
+Steine nicht variieren. Vier davon sind in
+den Abb. 12 bis 15 dargestellt, die
+vollständige Liste findet ihr in [2].
+
+
+Tipps & Tricks
+
+
+
+
+
+Sie sehen aus wie achtfach symmetrisch,
+aber sie sind es nicht (Abb. 16):
+
+
+
+
+
+Zwölfzählige Ringe
+Entsprechend der bisherigen Definition gibt
+es 10 Ringe mit zwölfzähliger Symmetrie.
+
+
+Sechzehnzählige Ringe
+
+
+Sechzehnfache Symmetrie habe ich
+ebenfalls zehnmal gefunden. Drei Beispiele
+sind nachfolgend dargestellt:
+
+Nabe hinzugefügt
+
+
+
+
+Tipps & Tricks
+
+24-zählige Ringe
+Es folgen 24-fache Ringe:
+
+mit Speichen und Nabe
+
+
+
+
+
+WS90 mit negativem Winkel
+Auch der WS90 kann mit negativem
+Winkel in die Ringberechnung eingehen.
+
+2 · (4 · WS60 + WS30 - WS90)
+
+
+WS15 + WS60 - WS90)
+
++ WS60 - WS90)
+
+4 · (3 · WS60 - WS90)
+
+
+
+Tipps & Tricks
+
+
++ WS60 - WS90)
+
++ WS15 - WS90)
+
+
+
+
+
+
+
+
+
+
+
+WS15 + WS30 - WS90)
+
+Gemischt
+
+Tipps & Tricks
+
+WS90 + WS30)
+
+1 · (2 · WS60 + WS90 + WS60 + WS90)
+
+
+WS90 + WS60 - WS90 + WS60)
+
+
+
+
+2 · WS7,5)
+
+Zum Abschluss ein Traum
+
+
+Quellen
+Gelb oder Blau oder… wenigstens Grau
+
+
+[1]
+
+Rüdiger Riedel: Die Welt der
+fischertechnik-Winkelbausteine.
+ft:pedia 1/2017, S. 17-23.
+
+[2]
+
+Rüdiger Riedel: Kreisringe aus ft
+Winkelbeausteinen Teil 2.xlsx.
+Downloadbereich der ft-Community,
+2018.
+
+

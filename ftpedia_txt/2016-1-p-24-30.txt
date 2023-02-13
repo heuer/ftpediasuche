@@ -1,0 +1,512 @@
+
+
+Grundlagen
+
+Geradführungen
+Dirk Fox
+Die Geschichte der Geradführungen ist eng gekoppelt mit der Entwicklung der Dampfmaschine. Inzwischen gibt es zahlreiche weitere Anwendungen für Geradführungen. Der Beitrag
+stellt einige elementrare Geradführungsgetriebe vor, die sich für unterschiedliche fischertechnik-Konstruktionen eignen.
+
+Hintergrund
+Eine der größeren Herausforderungen beim
+Bau der ersten Dampfmaschine, die die
+Kippbewegung des „Balanciers“ in eine
+Rotation, also Drehbewegung umsetzte,
+war die exakt gerade Führung der Kolbenstange, die das auf einer Kreislinie verlaufende Ende des Balanciers bewegen musste.
+Die Geradführung war erforderlich, um ein
+Verkanten oder Verbiegen der Kolbenstange zu verhindern.
+In den frühen „Kolben-Wärmekraftmaschinen“ von Thomas Newcomen (1663–1729)
+von 1712 und auch den verbesserten
+Maschinen von James Watt (1736-1819),
+die in Bergwerken als Pumpen eingesetzt
+wurden, gab es dafür kein Erfordernis, da
+der Kolben lediglich eine Zugbewegung
+ausführen musste; er wurde daher mit einer
+Kette am kreisförmig ausgebildeten Ende
+des Balanciers befestigt. Das änderte sich,
+als Watt den Wirkungsgrad der Maschinen
+verdoppeln wollte, indem er den Kolben
+wechselseitig mit Dampf befüllte und damit
+die Kolbenstange auch eine Schubbewegung ausführen ließ [1].
+Wattsches Parallelogramm
+Die Konstruktion der ersten Geradführung
+mit einem (Vier-) Gelenkgetriebe gelang
+James Watt im Jahr 1781. Damit konnte er
+die Auf- und Abbewegung des mit dem
+
+
+Balancier verbunden oberen Endes der Kolbenstange dem Verlauf einer Geraden
+annähern. Nach eigenem Bekunden war er
+auf diese Erfindung besonders stolz: „I am
+more proud of the parallel motion than of
+any other invention I have ever made.“
+aus der Patentschrift des Jahres 1784.
+
+GB Patent No. 1432 [2]
+
+Oben im Bild erkennt man die rechte Hälfte
+des Balanciers , der um einen Drehpunkt
+(links oben) wippt. Das obere Ende der
+Kolbenstange
+ist in Punkt
+an einem
+durchgehenden Gestänge
+befestigt, das
+auf der einen Seite mit dem Balancier (in
+Punkt ) und auf der anderen Seite mit einer
+Strebe (in Punkt ) verbunden ist, die sich
+um den Punkt dreht. Kippt der Balancier,
+bewegt sich der Punkt
+auf der senkrechten Geraden
+.
+
+
+Grundlagen
+
+Die Skizze in Abb. 2 zeigt die Geradführung und das zugehörige Gelenkgetriebe
+schematisch, mit etwas intuitiveren Bezeichnungen für die Gelenkpunkte.
+B
+A
+
+D
+
+P
+C
+=
+
+und
+
+=
+
+
+Sind die in der Grafik angegebenen Bedingungen
+=
+und
+=
+erfüllt,
+bewegt sich der Punkt
+näherungsweise
+auf einer Geraden. Dabei darf das Gelenkgetriebe allerdings nicht in die „Totlage“
+geraten, da es dort sperrt. Die Totlage wird
+erreicht, wenn zwei benachbarte Elemente
+des Gestänges auf einer Geraden zu liegen
+kommen.
+Im Übrigen funktioniert die Geradführung
+noch allgemeiner, wie man Watts Patentzeichnung entnehmen kann: muss nicht in
+der Mitte von
+liegen. Tatsächlich genügt
+es, dass gilt [3]:
+:
+
+=
+
+:
+
+Dabei liegt die Bewegungslinie des Punktes
+umso näher an einer exakten Geraden, je
+größer das Verhältnis
+:
+gewählt wird.
+Allerdings verkürzt sich dadurch zugleich
+die Länge des gerade verlaufenden Abschnitts der Bewegungslinie von .
+Die erste Wattsche Dampfmaschine mit Geradführung, die einen Rotationsantrieb realisierte, wurde 1782 in London in Betrieb
+genommen: Es war der erste Motor der
+Weltgeschichte. Entscheidend für diese
+Entwicklung war die Entdeckung des
+Geradführungsgetriebes durch James Watt.
+Bauart aus dem Jahr 1784.
+
+(Abbildung: Artur Fürst [4])
+
+Bei dieser Maschine verwendete Watt
+bereits eine Variante der einfachen Geradführung aus seinem Patent (im Bild vom
+Balken verdeckt): das so genannte „Wattsche Parallelogramm“. Abb. 4 zeigt diese
+Geradführung als Schemabild, in der man
+das ergänzte Gelenkparallelogramm
+(in orange) gut erkennen kann. Der Punkt
+bewegt sich nun auf einer zu der durch
+Punkt verlaufenden, parallelen Geraden;
+an Punkt wird das Ende der Kolbenstange
+befestigt.
+E
+B
+A
+
+P
+
+F
+D
+
+C
+=
+
+,
+
+=
+
+und
+
+=
+
+
+Wenn die in der Grafik angegebenen Bedingungen
+=
+,
+=
+und
+=
+erfüllt sind, bewegt sich das obere Ende
+der Kolbenstange entlang einer senkrechten
+Geraden [3]. Mit dieser Konstruktion
+konnte Watt die Dampfmaschine kompakter bauen, denn sein Hebel war nun
+(statt
+).
+
+
+
+
+Anders als die Lösung von James Watt
+unterliegt diese Konstruktion jedoch mehreren Einschränkungen. So müssen nicht nur
+die Verbindungen
+und
+gleich lang
+sein, sondern auch in einem festen Abstand
+und Längenverhältnis zu
+stehen:
+=
+2∙
+und
+= ∙
+(siehe Abb. 7).
+Die Abweichung des Punktes von einer
+exakt geraden Linie liegt – innerhalb des
+Bewegungsabschnittes, der von den Senkrechten durch die Punkte und begrenzt
+wird – bei maximal 0,5% der Länge
+[3].
+C
+
+fischertechnik
+
+Inzwischen gibt es zahlreiche weitere Anwendungen für die Wattsche Geradführung,
+wie z. B. die Führung einer gefederten Radaufhängung. Abb. 6 zeigt eine solche Konstruktion mit fischertechnik.
+Tschebyscheffsche Geradführung
+Der russische Mathematiker Pafnuti Lwowitsch Tschebyscheff (1821-1894) fand
+1850 eine weitere (Näherungs-) Lösung für
+eine Geradführung, ebenfalls mit einem
+Viergelenkgetriebe. Dazu verlegte er den
+Punkt
+neben den Drehpunkt
+und
+kreuzte die Verbindungen
+und
+.
+Diese Geradführung wurde daher auch als
+„Kreuzlenker“ bezeichnet [5].
+
+P
+
+A
+
+D
+=
+=2
+
+und
+,
+
+=
+=
+
+
+Für diese Geradführung gibt es auch eine
+elegante Anwendung: Mit einer kleinen
+Erweiterung um eine vierte Gelenkstrebe
+(siehe Abb. 8, 9) lässt sich eine geradlinige
+Horizontalverschiebung einer Fläche durch
+die Punkte und realisieren [3, 6, 7].
+
+
+B
+
+
+Grundlagen
+
+Geradführung von Roberts
+Eine weitere Variante der näherungsweisen
+Geradführung von James Watt stammt vom
+britischen Werkzeugmaschineningenieur
+und Unternehmer Richard Roberts (17891864). Roberts hob die Kreuzung der
+Verbindungen in Tschebyscheffs Geradführung auf und verlegte den Geradführungspunkt nach unten (Abb. 11).
+C
+
+B
+P
+
+F
+
+Die Geradführung von Roberts benötigt
+weniger Einschränkungen als die Tschebyscheffs: Es müssen
+=
+=
+=
+und
+=2∙
+sein, damit sich näherungsweise auf einer Geraden bewegt.
+B
+
+C
+
+E
+
+A
+
+D
+=
+
+,
+
+=
+
+Horizontalverschiebung einer Fläche
+
+Grundplatte um knapp 6 cm horizontal verschieben lässt.
+
+A
+
+D
+=
+
+P
+=
+=2
+
+=
+
+
+Die Annäherung an eine exakte Geradführung ist bei dieser Konstruktion sehr gut:
+Die Bewegung des Punktes weicht auf der
+Verbindungslinie
+maximal um 0,12%
+der Länge
+von einer Geraden ab.
+Peaucelliers exakte Geradführung
+Alle bisher betrachteten Geradführungen
+waren lediglich (wenn auch z. T. sehr gute)
+Näherungen. Die erste exakte Geradführung (im zweidimensionalen Raum) gelang
+1864 dem französischen Offizier Charles
+Nicolas Peaucellier (1832-1919) – dafür
+wurde er von der Académie Française mit
+dem Prix Montyon ausgezeichnet [6]. Auch
+wenn deren praktische Einsatzmöglichkeiten wegen der zahlreichen Gelenke (6) beschränkt sind, war sie eine Sensation – denn
+viele Mathematiker (unter ihnen Tscheby-
+
+
+
+
+
+scheff) hielten die Konstruktion einer exakten Geradführung mit einem Gelenkgetriebe für unmöglich.
+Die Skizze in Abb. 12 zeigt die Konstruktion. Die Punkte
+bilden eine Raute,
+und die Strecken
+und
+müssen gleich
+lang gewählt werden. Dann bewegt sich der
+Punkt exakt auf einer Geraden [3, 5, 8].
+und
+
+=
+
+=
+
+=
+
+B
+
+=
+
+A
+
+Geführte Geradführung
+
+P
+
+C
+
+D
+
+Ende des 19. Jahrhunderts wurden von
+Ingenieuren und Mathematikern zahlreiche
+weitere, sowohl exakte als auch genäherte
+Geradführungen entwickelt [6]. Für fischertechnik-Modelle ist jedoch noch eine
+weitere Klasse von Geradführungen von
+Bedeutung, die im Maschinenbau erst mit
+verfeinerten Verarbeitungsmethoden und
+geeigneteren Materialien stabil ausgeführt
+werden konnte.
+
+E
+
+
+Der Nachteil dieser Geradführung besteht
+in den zusätzlichen Gelenken und Streben,
+die für das Getriebe erforderlich sind. Sie
+reduzieren die Stabilität, wodurch es sich
+weniger für Mechanismen eignet, in denen
+größere Kräfte übertragen werden.
+
+Die gemeinhin John Scott Russell (18081882), dem Erbauer der Great Eastern (dem
+Schiff, das 1866 Europa und Amerika mit
+einem Telegrafenkabel verband [1] – aber
+das ist eine andere Geschichte) zugeschriebene Geradführung wurde bereits im Jahr
+1801 von James White auf der Weltausstellung in Paris vorgestellt (und von Napoleon
+ausgezeichnet) sowie 1803 vom Uhrmacher
+William Freemantle in Großbritannien
+patentiert (British Patent No. 2741 vom
+17.11.1803) [8, 9].
+
+Eine Variante dieser Geradführung stammt
+vom englischen Mathematiker James
+Joseph Sylvester (1814-1897), siehe Abb.
+13. Auch sie setzt eine Kreisbewegung in
+eine geradlinige Auf- und Abbewegung um.
+P
+
+B
+
+E
+
+James White [8, 9]
+
+A
+=
+
+=2
+und
+=
+=2
+=2
+
+D
+
+C
+
+
+
+Diese Geradführung nutzt die Erkenntnis,
+dass jeder beliebige Punkt eines Innenkreises, der an einem Außenkreis mit doppeltem Durchmesser „abrollt“, sich auf einer
+
+
+Grundlagen
+
+Geraden durch den Mittelpunkt des Außenkreises bewegt (siehe Punkt 5 in Abb. 15).
+
+
+Aus den Verbindungen 3-5 und 2-1 lässt
+sich ein Getriebe für eine exakte Geradführung konstruieren, bei der in Punkt 3
+eine „Schleife“, d. h. ein geführtes Gelenk
+eingebaut wird (Abb. 16).
+
+Der auch gelegentlich Scott-Russel-Getriebe genannte Ellipsenlenker ist übrigens der
+Grundmechanismus des Scherenhubs [10].
+
+P
+
+B
+=
+C
+
+=2
+A
+
+
+Interessant an dieser von Franz Reuleaux
+(1829-1905) als „Ellipsenlenker“ [5] bezeichneten Konstruktion ist, dass Punkt
+am Ende der Aufwärtsbewegung langsamer
+wird. Diese Eigenschaft machte sich z. B.
+der Kompressor von Owen (Abb. 17) mit
+einem doppelten Ellipsenlenker zu Nutze.
+
+
+Mechanische Koppelgetriebe bieten zahlreiche Möglichkeiten, bestimmte Bewegungsabläufe mit sehr einfachen Mechanismen zu erzeugen – und lassen sich oft
+verblüffend leicht mit fischertechnik realisieren [11, 12, 13]. Wer mehr Mechanismen
+dieser Art kennenlernen möchte, dem sei
+das (nur noch antiquarisch erhältliche)
+Buch von Brian Bolt Was hat der Bagger
+mit Mathematik zu tun? [14] ans Herz
+gelegt.
+
+
+
+[7]
+
+Dirk Fox, Thomas Püttmann: Bauen,
+erleben, begreifen: Technikgeschichte mit fischertechnik. dpunkt-Verlag,
+Heidelberg 2015.
+
+Friedrich Natalis: Genaue Geradführungen. Julius Springer, Berlin
+1930.
+
+[8]
+
+James Watt: Fire and Steam Engines.
+GP Patent No. 1432, 1784.
+
+James White: A New Century of
+Inventions. Leech and Cheetham,
+Manchester 1822.
+
+[9]
+
+Eugene S. Ferguson: Kinematics of
+Mechanisms from the Time of James
+Watt. Contribution from the Museum
+of History and Technology, Paper
+27, Bulletin 228, Smithonian
+Institution, Washington 1962.
+
+Quellen
+[1]
+
+[2]
+[3]
+
+[4]
+
+[5]
+
+[6]
+
+
+John Bryant, Chris Sangwin: How
+Round is Your Circle? Where
+Engineering and Mathematics Meet.
+Princeton University Press, 1934.
+Siehe auch die Webseite und das
+Video zum Buch.
+Artur Fürst: Das Weltreich der
+Technik. Band 4: Lastenförderung,
+Kraftmaschinen, elektrischer
+Starkstrom. Verlag Ullstein, 1927.
+Franz Reuleaux: Die praktischen
+Beziehungen der Kinematik zu
+Geometrie und Mechanik. Vieweg
+Verlag, Braunschweig, 1900.
+A. B. Kempe: How to Draw a
+Straight Line – A Lecture on
+Linkages. Macmillan & Co., London
+1877.
+
+[10] Stefan Falk: Scherenhub. 1/2016.
+[11] Harald Steinhaus: Flugzeugfahrwerke. ft:pedia 2/2012, S. 4-10.
+[12] Ralf Geerken: Die Geradführung
+einer Viergelenkkette im Einsatz bei
+einer kleinen Laufmaschine. 4/2012, S. 4-10.
+[13] Koppelgetriebe. Webseite der
+Gesellschaft zur Förderung der
+Digitalen Mechanismen- und
+Getriebebibliothek e.V. (DMG-Lib)
+[14] Brian Bolt: Was hat der Bagger mit
+Mathematik zu tun? Klett Verlag,
+Stuttgart 1995.
+
+

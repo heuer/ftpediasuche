@@ -1,0 +1,232 @@
+
+Computing
+
+Computing
+
+Strichcode-Leser am Robo TX Controller (2):
+Automatisiert mit Microsoft Visual Basic
+Andreas Gail
+Allgemeines über Strichcodes oder auch Barcodes kann im ersten Teil des Beitrags nachgelesen werden, ebenso der Bau eines Scanners mit Standard-fischertechnik-Teilen. Als Alternative
+zur RoboPro Software aus der vorherigen Ausgabe der ft:pedia soll im vorliegenden Teil 2 die
+Automatisierung vollständig mithilfe von Microsoft Visual Basic 2010 oder höher erfolgen.
+
+Warum überhaupt VB?
+fischertechnik stellt mit der RoboPro-Software eine einfach zu erlernende, sehr
+anschauliche Möglichkeit zur Automatisierung bereit. Dem Einsteiger wird so ein
+anschaulicher Weg aufgezeigt, sinnvolle
+Abläufe zunächst zu erfassen, festzulegen
+und schließlich zu programmieren. Aber wo
+Licht ist, ist auch Schatten. So bietet es
+durchaus Vorteile, eine Standard-Programmierumgebung zu verwenden, um seine
+Automatisierungspläne umzusetzen. Insbesondere Basic heißt so (BASIC = Beginners
+All System Instruction Set), weil es bis heute
+in seinen Grundzügen eine gewisse Einfachheit erhalten konnte. Durch seine
+konsequente Weiterentwicklung ist Basic
+z. B. in Form von Microsoft Visual Basic
+Express (VB) zu einen sehr mächtigen
+Werkzeug geworden, was für den Hobby
+Programmierer kaum Wünsche offen lässt.
+Obendrein stellt Microsoft diese ExpressVersion aktuell kostenfrei zur Verfügung.
+Entscheidend dabei sind jedoch die im
+Grunde unlimitierten Möglichkeiten (im
+Online-Betrieb): Viele Dinge, die unter
+Nutzung von RoboPro viele Seiten umfassender Konfigurationen erfordern, lassen
+sich unter Basic mit einer überschaubaren
+Anzahl an Codezeilen abbilden. Es können
+im Grunde Programme mit unlimitiertem
+
+Umfang und einer ebenso unlimitierten
+Anzahl an Robo TX Controllern (RTXC)
+verwirklicht werden. Auch die Visualisierung lässt kaum Wünsche offen, einschließlich einer ggf. gewünschten Kopplung mit
+dem Internet.
+Kurzum: VB ist definitiv eine Erweiterung
+der Möglichkeiten.
+
+Mehraufwand am Anfang
+Bei so vielen Vorteilen soll nicht
+verschwiegen werden, dass erstmal ein
+gewisser Mehraufwand erforderlich ist, um
+VB nutzen zu können. So muss die
+Kommunikation mit dem RTXC erstmal
+organisiert werden. Auch muss man sich
+gewisse zusätzliche Gedanken machen,
+wenn Vorgänge gleichzeitig ablaufen
+sollen. Ein Grundgerüst steht unter
+http://www.ftcommunity.de in Form eines
+vollständigen Visual Basic-Projekts zur
+Verfügung.
+
+Visualisierung
+erfolgt eine animierte Anzeige entsprechend der aktuell laufenden Vorgänge.
+Neben der bildlichen Darstellung des
+Modells wird rechts das Leseergebnis des
+Scanners angezeigt, in diesem Fall die
+Ziffer 4. Im unteren Bereich können alle
+
+
+
+Visualisierung des Programmablaufs und Anzeige aktueller Vorgänge (operation log)
+
+aktuell laufenden Vorgänge als textliche
+Abfolge (operation log) verfolgt werden.
+Die genauen Details der Bedienoberfläche
+soll hierbei nicht weiter erläutert werden;
+vielmehr soll beispielhaft aufgezeigt
+werden, was möglich ist. Ich bin auf weitere
+Beispiele der Leserschaft gespannt...
+
+Herzstück ftMscLib.dll
+Das softwareseitige Herzstück zur Ansteuerung des RTXC ist sicherlich die von
+fischertechnik bereit gestellte Programmbibliothek ftMscLib.dll. Damit wird die
+Kommunikation zwischen PC und dem
+RTXC hergestellt. Der RTXC selbst hat
+dabei nur wenige Aufgaben, wie auch bei
+der Nutzung von RoboPro im OnlineModus. Online hat der Microcontroller im
+RTXC nur die Aufgabe, Eingangszustände
+auszulesen und weiter zu melden, sowie
+
+
+vom PC gewünschte Ausgangszustände
+einzustellen (remote I/O).
+Die Hauptschwierigkeit der Nutzung von
+VB zusammen mit dem RTXC ist die Einbindung
+der
+Programmbibliothek
+ftMscLib.dll. Diese enthält „native code“
+(„unmanaged“ in .net-Sprechweise) und
+kann als solche nicht so direkt von der
+„managed code“-Welt von .net angesteuert
+werden, wie das bei einer .net-DLL der Fall
+wäre. Vielmehr müssen alle gewünschten
+Funktionen oder Prozeduren zuvor entsprechend den jeweils verwendeten Datentypen deklariert werden. Weil das alles
+andere als trivial ist, wird dies in Abb. 2
+gezeigt. Vielen Dank an Carel van Leeuwen
+(Niederlande) für entscheidende Hilfestellung. Mit den abgebildeten Beispielen lassen sich auch die restlichen fehlenden
+Funktionen der Programmbibliothek ableiten.
+
+Download
+Für den interessierten Leser stehen auf der
+ft-Community-Website die kompletten VBProjektdateien zur Verfügung [1].
+
+Was nun?
+Dieser Beitrag soll als Anregung dienen und
+viele weitere Projekte beflügeln. So könnte
+z. B. ein Erkundungsroboter Bilddaten aus
+seiner Umgebung an den PC senden, deren
+Auswertung unter VB programmiert ist.
+Oder denkt an ein autonomes Gefährt,
+welches seine aktuelle Position per GPS
+ermittelt und an den PC sendet, mit gleichzeitiger Abbildung der Position auf Satellitenbildern aus dem Internet, oder...
+
+Computing
+
+Gleichzeitig darf man gespannt sein, was
+fischertechnik der Fangemeinde mit dem
+angekündigten Robotics TXT Controller an
+neuen Möglichkeiten anbieten wird.
+
+Quellen
+[1]
+
+Gail, Andreas: Software BarcodeScanner RoboPro/Visual Basich
+2010.
+
+[2]
+
+Microsoft Developer Network:
+Exemplarische Vorgehensweise:
+Aufrufen von Windows-APIs (Visual
+Basic), 2013
+
+Imports System
+Imports System.Text
+Imports System.Runtime.InteropServices
+Public Class classFtMscLib
+'*** List of var
+Public Const dllpath As String = "C:\windows\system32\ftMscLib.dll"
+'*** List of declarations
+Public Class FtLibDeclarations
+<DllImport(dllpath, EntryPoint:="ftxGetLibVersionStr",
+CallingConvention:=CallingConvention.Cdecl)> _
+Public Shared Function ftxGetLibVersionStr(<MarshalAs(UnmanagedType.LPStr)> ByVal Foo2
+As StringBuilder, ByVal len As UInteger) As UInteger
+End Function
+<DllImport(dllpath, EntryPoint:="ftxGetLibVersion",
+CallingConvention:=CallingConvention.Cdecl)> _
+Public Shared Function ftxGetLibVersion() As UInteger
+End Function
+<DllImport(dllpath, EntryPoint:="ftxIsTransferActiv",
+CallingConvention:=CallingConvention.Cdecl)> _
+Public Shared Function ftxIsTransferActiv(ByVal fthdl As UInteger) As UInteger
+End Function
+<DllImport(dllpath, EntryPoint:="GetAvailableComPorts",
+CallingConvention:=CallingConvention.Cdecl)> _
+Public Shared Function ftxGetAvailableComPorts(ByVal selectMode As Integer) As
+UInteger
+End Function
+<DllImport(dllpath, EntryPoint:="EnumComPorts",
+CallingConvention:=CallingConvention.Cdecl)> _
+Public Shared Function ftxEnumComPorts(ByVal idx As UInteger,
+<MarshalAs(UnmanagedType.LPStr)> ByVal comstr As StringBuilder, ByVal len As UInteger) As
+UInteger
+End Function
+<DllImport(dllpath, EntryPoint:="ftxOpenComDevice",
+CallingConvention:=CallingConvention.Cdecl)> _
+Public Shared Function ftxOpenComDevice(ByVal comStr As String, ByVal bdr As UInteger,
+ByRef uint As UInteger) As UInteger
+
+
+
+
+End Function
+<DllImport(dllpath, EntryPoint:="ftxOpenComDeviceNr",
+CallingConvention:=CallingConvention.Cdecl)> _
+Public Shared Function ftxOpenComDeviceNr(ByVal comStr As UInteger, ByVal bdr As
+UInteger, ByRef uint As UInteger) As UInteger
+End Function
+<DllImport(dllpath, EntryPoint:="ftxInitLib",
+CallingConvention:=CallingConvention.Cdecl)> _
+Public Shared Function ftxInitLib() As UInteger
+End Function
+<DllImport(dllpath, EntryPoint:="ftxIsLibInit",
+CallingConvention:=CallingConvention.Cdecl)> _
+Public Shared Function ftxIsLibInit() As UInteger
+End Function
+<DllImport(dllpath, EntryPoint:="ftxIsHandleValid",
+CallingConvention:=CallingConvention.Cdecl)> _
+Public Shared Function ftxIsHandleValid(ByVal fthdl As UInteger) As UInteger
+End Function
+<DllImport(dllpath, EntryPoint:="GetComStatus",
+CallingConvention:=CallingConvention.Cdecl)> _
+Public Shared Function ftxGetComStatus(ByVal fthdl As UInteger) As UInteger
+End Function
+<DllImport(dllpath, EntryPoint:="ftxCloseLib",
+CallingConvention:=CallingConvention.Cdecl)> _
+Public Shared Function ftxCloseLib() As UInteger
+End Function
+<DllImport(dllpath, EntryPoint:="ftxGetLibErrorString",
+CallingConvention:=CallingConvention.Cdecl)> _
+Public Shared Function ftxGetLibErrorString(ByVal errCode As UInteger, ByVal typ As
+UInteger, <MarshalAs(UnmanagedType.LPStr)> ByVal buff As StringBuilder, ByVal maxLen As
+UInteger) As UInteger
+End Function
+<DllImport(dllpath, EntryPoint:="ftxCloseDevice",
+CallingConvention:=CallingConvention.Cdecl)> _
+Public Shared Function ftxCloseDevice(ByVal fthdl As UInteger) As UInteger
+End Function
+<DllImport(dllpath, EntryPoint:="ftxStartTransferArea",
+CallingConvention:=CallingConvention.Cdecl)> _
+Public Shared Function ftxStartTransferArea(ByVal fthdl As UInteger) As UInteger
+End Function
+<DllImport(dllpath, EntryPoint:="ftxStopTransferArea",
+CallingConvention:=CallingConvention.Cdecl)> _
+Public Shared Function ftxStopTransferArea(ByVal fthdl As UInteger) As UInteger
+End Function
+'hier weitere Funktionen ergänzen oder unter www.ftcommunity.de laden
+'http://ftcommunity.de/data/downloads/software/barcodescannerroboproundvisualbasic2010.zip
+End Class
+
+(getestet mit Microsoft Visual Basic 2010)
+
+
+

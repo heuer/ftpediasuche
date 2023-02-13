@@ -1,0 +1,608 @@
+
+
+Computing
+
+Ein universeller I²C-Adapter für den TX(T)
+Christian Bergschneider, Stefan Fuss
+Hersteller wie Adafruit oder Sparkfun haben für Arduino und Raspberry Pi viele Sensoren,
+Aktoren und Erweiterungs-Shields für kleines Geld im Angebot. Der Anschluss am TX(T) über
+den I²C-Bus ist nicht schwer zu realisieren. Allerdings ist es lästig, die Schaltungen jedes Mal
+auf einem Steckbrett neu zu erfinden. Mit dem hier vorgestellten I²C-Universal-Adapter läuft
+jedes Board im Handumdrehen am TX(T).
+
+Die Idee
+Breakoutboards sind Erweiterungsplatinen
+für den Arduino oder den Raspberry Pi. Die
+Boards enthalten meist einen IC, bspw.
+einen LED-Treiber, einen Gyrosensor oder
+einen Servotreiber, und können über den
+I²C-Bus angesprochen werden. Sie lassen
+sich daher mit wenig Aufwand an den
+TX(T) anschließen. Dafür benötigen sie in
+der Regel nur vier Anschlüsse: zwei I²CBus-Signale, GND und eine 3,3 V- oder
+5 V-Stromversorgung.
+Mit etwas Geschick lassen sich die Anschlüsse und erforderlichen Bauteile auf
+einem Steckbrett oder einer Lochrasterplatine zusammenbauen. Einfacher geht es
+mit dem hier vorgestellten universellen I²CAdapter ftUNIpi: Ist die fertige Platine mit
+den wenigen Bauteilen bestückt, kann das
+Breakoutboard angeschlossen und direkt in
+ROBO Pro programmiert werden.
+
+Datenblatt des IC kämpfen: Zu den Breakoutboards gibt es in der Regel gut beschriebene Beispielprogramme in Python oder C
+– Abschreiben ist ausdrücklich erlaubt.
+Alltagstauglich
+Bei der Entwicklung des Adapters stand die
+Alltagstauglichkeit im Vordergrund: klein
+und einfach nachzubauen (Abb. 1). Für den
+Aufbau sind nur geringe Elektronik- und
+normale Lötkenntnisse notwendig. Benötigt
+werden ein Lötkolben mit „Bleistiftspitze“,
+eine Pinzette und ein einfaches Multimeter.
+Die vier verwendeten SMD-Bauteile
+werden nicht immer benötigt und sind auch
+für den SMD-Neuling gut zu verarbeiten.
+
+Die in unserem I²C-Universaladapter verwendeten Grundschaltungen sind unkompliziert und vielfach im Internet bis ins
+Detail beschrieben. Dieser Beitrag ist eine
+Bauanleitung. Wer die einzelnen Teile der
+Schaltung tiefgehend verstehen möchte,
+kann dies in den angegebenen Quellen
+nachlesen.
+Die Programmierung ist nicht schwierig.
+Man muss sich dafür auch nicht durch das
+
+
+
+Computing
+
+Die Schaltung
+Der Adapter kann in vier verschiedenen
+Varianten realisiert werden, sodass entweder 3,3 V- oder 5 V-Boards entweder an
+den TX oder an den TXT angeschlossen
+werden können. Diese verschiedenen
+Schaltungsvarianten werden durch unterschiedliche Bestückung und Lötjumper erreicht. Der Schaltplan in Abb. 2 ist übersichtlich.
+Stromversorgung
+Mit einem kleinen Spannungsregler können
+bis zu 100 mA aus der 9V-fischertechnikBordspannung erzeugt werden. Durch Einsatz des passenden Reglers können alternativ 3,3 V oder 5 V bereitgestellt werden.
+Für Displays, Tastaturen und Sensoren
+reicht diese Leistung aus, für Motor- und
+Servo-HATs ist der Adapter nicht geeignet.
+Die in [1] beschriebene Methode, die 3,3 V
+beim TXT an Pin 9 abzuzweigen, ist problematisch: Der Anschluss stellt keine belastbare Stromversorgung dar; sie ist der TXAusgang der seriellen Konsole.
+Da GND vom TX(T) bereits über den EXTAnschluss am Adapter anliegt, reicht es aus,
+
+die 9 V-Versorgungsspannung über ein zusätzliches fischertechnik-Kabel anzuschließen. Damit ist der Adapter auch gegen Verpolung geschützt.
+Logikspannung
+Entsprechend der Stromversorgung ist auch
+die Logikspannung am I²C-Bus unterschiedlich. Ältere ICs, wie auch der TX,
+arbeiten mit 5 V, neuere Bausteine und der
+TXT mit 3,3 V. Schließt man 5 V- und
+3,3 V-Bauteile direkt zusammen, so funktioniert der I²C-Bus nicht. Der 3,3 V-Teilnehmer wird dabei dauerhaften Schaden
+nehmen.
+Um Bausteine mit unterschiedlichen Spannungen zusammenzuschalten, wird ein
+Levelshifter benötigt. Viele der neueren
+Boards verfügen bereits über einen integrierten Levelshifter, so dass sie wahlweise
+mit 3,3 V oder mit 5 V betrieben werden
+können.
+Der hier vorgestellte Adapter verwendet
+eine preiswerte Variante aus zwei MOSFETs und zwei Widerständen. Wird der
+Levelshifter nicht benötigt, so können die
+Bauteile einfach weggelassen werden. Die
+genaue Funktionsweise des Levelshifters ist
+in [2] beschrieben.
+
+
+
+
+Steckerleisten
+TX und TXT haben unterschiedlich große
+EXT-Stecker, die Belegung der Pins ist aber
+kompatibel. Es reicht also aus, wahlweise
+einen 6-poligen oder einen 10-poligen
+Stecker für den Anschluss des Controllers
+zu verwenden [3].
+Die meisten Breakoutboards legen die Anschlüsse auf eine einreihige Stiftleiste. Es
+gibt dafür keine Standardbelegung. 3 Der
+ftUNIpi kann über bis zu 10-polige einreihige Stiftleisten mit dem Breakoutboard
+verbunden werden. Die Zuordnung der
+Signale wird über Lötjumper festgelegt.
+
+Zusammenbau
+Bei der Auswahl eines geeigneten Breakoutboards müssen nur zwei Dinge beachtet
+werden: Das Board muss die I²C-Schnittstelle unterstützen und die Stromaufnahme
+
+darf 100 mA nicht überschreiten. Um den
+Universaladapter passend zum Board zu
+bestücken, muss die Betriebsspannung
+(3,3 V oder 5 V) in der Beschreibung oder
+dem Datenblatt nachgeschlagen werden.
+Bauteile
+Für den Adapter werden nur wenige
+Bauteile benötigt. Die Bestückung ist je
+nach Anwendungsfall unterschiedlich. Dazu muss in Tab. 1 die richtige Kombination
+von TX(T) und der Versorgungsspannung
+des Breakoutboards auswählt werden. In
+der zugehörigen Spalte stehen die benötigten Bauteile sowie die Beschaltung der
+Lötjumper. An den Bauteilen sind Links zu
+verschiedenen Web-Shops hinterlegt, damit
+sich die Bauteile leichter bestellen lassen.
+Es gibt die gleichen Bauteile jedoch auch
+bei vielen anderen Lieferanten.
+
+Controller
+
+TXT
+
+TX
+
+VCC Board
+
+3,3 V
+
+5V
+
+3,3 V
+
+5V
+
+Levelshifter
+
+nicht benötigt
+
+T1, T2: 2x BSS138
+R1: 1 kOhm SMD
+R2: 1,8 kOhm SMD
+
+T1, T2: 2x
+BSS138
+
+nicht benötigt
+
+Stromversor
+gung
+
+IC1: LP2950CZ-3,3
+C1: Tantal-Elko 47uF
+
+IC1: LP2950CZ-5
+C1: Tantal-Elko
+47uF
+
+IC1:
+LP2950CZ-3,3
+C1: Tantal-Elko
+47uF
+
+IC1: LP2950CZ-5
+C1: Tantal-Elko
+47uF
+
+Anschlüsse
+
+JP2: Wannenstecker, 10-pol, gerade
+JP3: Bundhülse zum Einlöten, l=8,4 mm
+
+JP2: Wannenstecker, 6-pol, gerade
+JP3: Bundhülse z. Einlöten, l=8,4 mm
+
+Flachbandkabel
+
+1x Flachbandkabel 10pol, grau
+2x Pfostenbuchse, 10pol, RM 2,54 mm
+
+1x Flachbandkabel 10pol, grau
+2x Pfostenbuchse, 6pol, RM 2,54 mm
+
+Lötjumper
+
+Positionen 1, 2, 3, 4
+brücken
+
+Positionen 1, 4,
+5 brücken
+
+Platine
+
+Doppelseitige Standardplatine (100x80 mm, kein Bestückungsaufdruck, keine
+Lötstoppmaske, keine Durchkontaktierung, Bohrungen: 3,2 mm (JP3), 0,6 mm
+Durchkontaktierungen, sonstige Bohrungen 1 mm)
+
+Befestigung
+
+fischertechnik Baustein 5 (37237)
+
+Positionen 2, 3, 6
+brücken
+
+Positionen 1, 2, 3, 4
+brücken
+
+Tab. 1: Teileliste
+
+
+Breitere Breakoutboards haben manchmal zwei
+Steckerleisten, die auf den Arduino angepasst
+sind. Um den ftUNIpi klein zu halten, wurde auf
+
+das Arduino-Design keine Rücksicht genommen.
+Hier muss ggf. die Stromversorgung über ein
+zusätzliches Kabel realisiert werden.
+
+Platine
+Das Platinenlayout des Adapters steht auf
+der ft-community-Seite zur Verfügung
+(s. u.). Es gibt einige preiswerte Platinenbelichter, die mit der Vorlage den Adapter
+herstellen. Wer keinen Bohrständer zur
+Verfügung hat, sollte die Platine fertig
+gebohrt bestellen. Die Herstellung dauert
+zwischen 10 und 20 Tagen.
+Beim Herstellen von Platinen wird Basismaterial mit Standardmaßen verwendet.
+Der Preis richtet sich nach der Größe des
+Basismaterials. Der Adapter ist so klein,
+dass er sechs Mal auf eine 100x80 mm
+Platine passt –Material für den Anschluss
+vieler I²C-Breakout-Boards.
+ftExtender
+Der Anschluss von I²C-Bausteinen über den
+ftUNIpi am TX(T) ist so einfach, dass man
+schnell einige Breakoutboards zusammenbekommt. Will man diese in einem Modell
+einbauen, so lässt sich dies mit dem
+ftExtender flexibel gestalten.
+Der ftExtender besteht in der TXT-Variante
+aus sieben 10-poligen Steckern, bei denen
+auf der Platine die Anschlüsse für den I²CBus verbunden sind. In der TX-Fassung
+sind es zehn 6-polige Stecker. Es kann mit
+Sekundenkleber direkt auf einer Bauplatte
+38248 befestigt werden. Ein ähnliches
+Verteilermodul mit sechs Steckern passend
+für den TX gibt es auch bei Conrad
+(192659-62, Abb. 3).
+
+Computing
+
+Auf dem Layout für das Standardmaß war
+noch Platz, sodass wir einen ftExtender mit
+untergebracht haben.
+Platinenlayout
+Im Downloadbereich der ft:pedia steht ein
+ZIP-File mit mehrere Layoutvarianten zum
+Download bereit:
+∂ Die Dateien ftunipi_TXT_multi.brd
+und ftunipi_TX_multi.brd sind große
+Vorlagen (100x80 mm), die sechs
+gleiche Universaladapter und einen
+ftExtender für TXT oder TX enthalten.
+∂ ftunipi_TXT_v11.brd enthält nur
+einen Universaladapter – für alle die ihn
+selbst noch verändern wollen.
+Die Dateien liegen im EAGLE-Format vor,
+das alle Belichtungsdienstleister verarbeiten können.
+Lötarbeiten
+Die Lötarbeiten sollten in der hier beschriebenen Reihenfolge erfolgen. Die Position
+der Bauteile kann im Bestückungsplan
+(Abb. 4) abgelesen werden.
+∂ Zunächst wird in den drei Durchkontaktierungen ein dünner Draht eingelötet.
+∂ Wird der Levelshifter benötigt, so
+müssen nun die beiden MOSFETs (T1,
+T2) auf der Rückseite aufgelötet werden.
+∂ Um SMD-Bauteile zu montieren, empfiehlt es sich die Lötpads zunächst ein
+wenig zu verzinnen. Das MOSFET mit
+der Pinzette in Position halten und kurz
+anlöten.
+∂ Anschließend die beiden SMD-Widerstände (R1, R2) auf der Vorderseite
+auflöten.
+
+
+∂ Die Lötjumper an den Widerständen und
+an den MOSFETS gemäß der Bestückungsliste oben setzen. Die Lötjumper 14 sind an beiden MOSFETs vorhanden.
+Es müssen immer die Lötjumper an
+beiden MOSFETs gesetzt werden.
+
+
+
+
+∂ Nun die Bundhülse einlöten.
+
+Name
+
+Funktion
+
+∂ Es folgen der Spannungsregler, der Elko
+und der Stecker für den EXT-Anschluss.
+
+SDA, D
+
+I²C-Bus Daten
+
+SDC, SCL, C
+
+I²C-Bus Clock
+
+Beim Elko muss auf die Polung geachtet
+werden. Der +-Pol ist mit einem Strich
+und/oder einem +-Zeichen gekennzeichnet.
+
+VCC, VSS, +
+
+Betriebsspannung, Pluspol
+
+GND, -
+
+Betriebsspannung, Minuspol
+
+Als Nächstes wird die einreihige Stiftleiste
+für den Anschluss des Breakoutboards auf
+der Unterseite angebracht. Die lange Seite
+der Stifte wird am Adapter eingelötet.
+Somit ist es möglich alle Stifte auf der
+Ober- und der Unterseite anzulöten. Das
+Breakoutboard noch nicht verbinden!
+
+Tab. 2: Unterschiedliche Bezeichnungen der
+Anschlüsse bei den Boards
+
+An den mit GND bezeichneten Anschluss
+JP4 neben dem Elko C1 kann für die
+nachfolgende Qualitätskontrolle ein Kabel
+zur Spannungsversorgung ohne TX(T)
+angelötet werden. Es wird nach der
+Kontrolle wieder entfernt.
+Qualitätskontrolle
+Bevor der Adapter mit dem TX(T) und dem
+Breakoutboard verbunden wird, sollte der
+Adapter auf Lötfehler untersucht werden.
+Schließt man den Adapter an eine 9VBatterie (JP3, JP4) an, so können die
+Spannungsversorgung und die Logikpegel
+an TX(T)- und Breakout-Anschluss mit
+dem Multimeter kontrolliert werden. Dieser
+Schritt sollte beim TXT unbedingt durchgeführt werden: 5 V am EXT-Stecker des
+TXT können diesen beschädigen.
+Fertigstellen
+Zum Abschluss wird das Hilfskabel an JP4
+wieder entfernt.
+
+
+Die Lötjumper neben der Stiftleiste müssen
+jetzt gesetzt werden. Die Belegung bitte in
+der Dokumentation des Breakout-Boards
+nachschlagen (Tab. 2).
+
+
+
+Wer auch noch einen PCA9685 wie in [3] im
+Einsatz hat, darf die Adresse 0x70 nicht vergeben. Auf diese Adresse reagiert der PCA9685
+unabhängig von seiner Basisadresse.
+
+Viele Breakoutboards haben Lötjumper um
+die I²C-Adresse des Bausteins einzustellen.
+An einem I²C-Bus darf jede Adresse nur
+einmal vergeben werden.4 Das Breakoutboard nun an der Stiftleiste anlöten. Die
+Boards sind in der Regel durchkontaktiert,
+so dass es ausreicht, den Stecker auf einer
+Seite anzulöten.
+Um Kurzschlüsse zu vermeiden, muss
+darauf geachtet werden, dass genügend
+
+
+Computing
+
+Abstand zwischen dem Adapter und den
+Bauteilen des Boards vorhanden ist.
+Den fischertechnik-Baustein 5 mit Sekundenkleber an den EXT-Stecker des ftUNIpi
+ankleben, so dass das Breakoutboard fest
+ins fischertechnik-Modell eingebaut werden kann. Dabei kann auch das eigentliche
+Breakoutboard entlastet werden.
+Zuletzt noch das Verbindungskabel zum
+TX(T) herstellen. Dazu mit einer Rohrzange vorsichtig die Kabel crimpen. Das rot
+markierte Kabel muss an der PfeilMarkierung der Buchse sein.
+Sechspoliges Flachbandkabel für den TX ist
+nur schwierig zu bekommen; alternativ
+kann man zehnpoliges Kabel einfach um
+vier Adern kürzen.
+
+Programmierung
+Für einige Bausteine gibt es bereits fertige
+ROBO Pro-Module. Zu den Breakoutboards findet man auf den Seiten der Hersteller Beispielprogramme in C oder
+Python. Die Sprachen lassen sich gut lesen,
+sodass man die notwendigen Kommandos
+leicht in ROBO Pro übersetzen kann.
+ROBO Pro
+Die I²C-Programmierung in ROBO Pro
+besteht aus zwei Kommandos. Um die
+Kommandos zu aktivieren, muss im Menüpunkt Level mindestens „Level 4: Benutzerdefinierte Befehle“ ausgewählt werden.
+Es stehen dann unter Grundelemente/
+Senden die Befehle „I2C Schreiben“ (Abb.
+5) und „I2C Lesen“ zur Verfügung [4].
+Die Parametrierung findet in den Eigenschaften des Befehls statt. Jeder I²C-Baustein hat eine Geräteadresse über die er
+adressiert wird. Diese ist entweder fest
+durch das Breakoutboard vorgegeben oder
+wird per Lötjumper gesetzt. In den Dokumentationen der Boards wird die Geräteadresse häufig hexadezimal angegeben.
+Eine hexadezimale Zahl kann in ROBO Pro
+mit dem Präfix „0x“ dargestellt werden
+(0x60 = 96).
+
+
+Hat der Baustein mehrere Register, so
+werden diese über Unteradressen adressiert.
+Bei Bausteinen mit nur einem Register
+muss das Feld auf 0x0 gesetzt werden und
+bei Länge der Unteradresse muss „Keiner“
+ausgewählt werden.
+Bei der Verwendung mehrerer Register
+wird die Adresse des Registers in der
+Unteradresse eingetragen. In den meisten
+Fällen ist der Wert „8-bit“ für die Länge der
+Unteradresse korrekt.
+Einige Bausteine arbeiten mit mehreren
+Registern ohne Unteradressen. Das Register
+ist dann in einigen Bits des zu schreibenden
+Wertes enthalten [4, 5]. Mit einem Schreibbefehl kann ein bis zu 16 Bit großer Wert
+als „Datenwert“ an den Baustein geschrieben werden. Die meisten Bausteine arbeiten
+allerdings mit acht Bit, 16-Bit-Bausteine
+vertragen in der Regel auch zwei aufeinanderfolgende 8-Bit-Übertragungen. Wegen
+eines Fehlers in der TX(T)-Firmware bei
+der 16-Bit-Übertragung im LSB-Format
+sollte besser die 8-Bit-Übertragung verwendet werden.
+Wenn das Breadboard den I²C Fast Mode
+unterstützt, sollten als Geschwindigkeit
+400 kHz gewählt werden. Führt dies zu Problemen, kann die Geschwindigkeit auf
+100 kHz reduziert werden. Die Kabellänge
+ist beim I²C-Bus unproblematisch, da der
+
+
+
+Bus mit bis zu 400 m Kabellänge
+spezifiziert ist. Bei den meisten Modellen
+verzichtet man auf eine Fehlerbehandlung
+und wählt „Wiederholen bis erfolgreich“.
+Der I²C-Bus kennt die Übertragung eines
+ganzen Datenblocks aus mehreren Bytes.
+Technisch wird über den Bus zunächst ein
+Start-Sequence-Kommando mit Bausteinadresse und ggf. Unteradresse gesendet.
+Anschließend werden ohne Wiederholung
+der Adressen die Datenbytes gesendet. Zum
+Abschluss der Übertragung wird ein StopSequence-Kommando übertragen [4, 5].
+Bei ROBO Pro gibt es keine expliziten
+Start/Stop-Sequence-Befehle. Der erste
+I²C-Senden- oder I²C-Empfangen-Befehl
+startet immer die Übertragung auf dem Bus
+mit dem „Start-Sequence-Kommando“. Ist
+die CheckBox „offen lassen“ nicht
+ausgewählt, sendet ROBO Pro nach Ende
+des I²C-Befehls das Stop-Sequence-Kommando über den Bus.
+
+fachen ROBO Pro-Programm an den Baustein senden. Läuft der TXT in einen Fehler,
+so ist entweder die Adresse des Bausteins
+falsch eingestellt, oder es liegt ein Bestückungsfehler vor. Läuft dar Befehl problemlos, so ist die Hardware richtig angeschlossen und man kann sich rein um die
+Programmierung kümmern.
+Bug in ROBO Pro
+In ROBO Pro gibt es (zumindest beim
+TXT) einen weiteren Bug mit der I²CSchnittstelle: Wartet man zwischen zwei
+Buskommandos mehr als fünf Sekunden, so
+schaltet sich der I²C-Bus ab. Alle folgenden
+Kommandos schlagen fehl.
+Mit einem I²C-Bus-Kommando ohne echte
+Funktion (z. B. Auslesen eines Registers) in
+einer eigenen nebenläufigen Schleife kann
+man das Abschalten verhindern (Abb. 6).
+
+Ist „Offen lassen“ ausgewählt, so werden
+die nächsten I²C-Bus-Befehle in dem
+gleichen Datenblock gesendet. Beim letzten
+I²C-Bus-Befehl eines Datenblocks darf
+„Offen lassen“ nicht gesetzt werden; der
+TX(T) sendet dann automatisch das StopSequence-Kommando.
+Die Interpretation des Datenblocks ist
+bausteinspezifisch. Bausteine mit Unterregistern adressieren in der Regel mit jedem
+neuen Datenbyte das nächste Unterregister.
+In C und Python sind die Start-StopKommandos über eigene Befehle (begintransmission, end-transmission) implementiert.
+Erste Tests
+Als erster Schritt sollte mit einem einfachen
+Kommando versucht werden, den Baustein
+anzusprechen. Dazu kann man in den Beispielprogrammen des Herstellers nach der
+Initialisierung des Bausteins suchen und das
+erste Kommando daraus mit einem ein-
+
+
+
+Namensänderungen
+Schnell hat man Bibliotheken mit vielen
+I²C-Befehlen aufgebaut. Achtung: größere
+ROBO Pro Programme
+können
+beim
+Speichern schon mal einige Sekunden Zeit
+benötigen.
+Den Namen von Unterprogrammen sieht
+man ihre Herkunft nicht an. Braucht man
+für zwei unterschiedliche Breakoutboards je
+ein Unterprogramm für die Initialisierung,
+so ist die mehrmalige Verwendung der
+Bezeichnung „Init“ zwar zulässig, aber
+unpraktisch.
+
+Die einfache Lösung ist, bei allen Unterprogrammen einer Bibliothek ein Präfix für
+die Bibliothek zu verwenden. In der Bibliothek ftpi.rpp würde dann aus dem Unterprogramm init ftpi_init.
+Das zweite Problem ist die feste Zuweisung
+der I²C-Adressen. Es ist nicht möglich,
+diese über einen Dateneingang am Befehl
+zu setzen. Will man zwei gleiche Breakoutboards anschließen, so muss man die
+Bibliothek duplizieren – um Konflikte zu
+vermeiden, am besten mit der Bausteinadresse im Namen.
+
+Computing
+
+Adresse 0x71 auf 0x72 umzustellen, muss
+man nach
+device="113" deviceRadix="16"
+
+suchen und alle Vorkommen mit
+device="114" deviceRadix="16"
+
+ersetzen.
+Risiken und Nebenwirkungen
+
+Die Namenskonvention
+
+Der Nachbau der Platine erfolgt auf eigenes
+Risiko. Durch die Lötjumper lassen sich
+schnell 5 V-Signale auf die falschen Anschlüsse legen, daher sollte die Schaltung
+immer zunächst ohne TX(T) und ohne
+Breakoutboard nachgemessen werden.
+
+<eigentliche Bibliothek>_
+<Bausteinadresse>_<Funktion>
+
+Quellen
+
+ergibt leicht lange Namen. ROBO Pro kann
+diese dann nicht mehr vollständig darstellen. Sinnvolle Abkürzungen des Bibliotheknamens helfen da weiter.
+Unterprogrammnamen können in ROBO
+Pro nicht geändert werden. Auch die massenweise Änderung der I²C-Kommandos ist
+fehleranfällig, so dass man für diese beiden
+Schritte auf Workarounds ausweichen
+muss: ROBO Pro-Programme werden als
+XML-Dateien gespeichert; man kann diese
+in einem ASCII-Editor wie notepad bearbeiten und sich mit Suchen & Ersetzen die
+Arbeit erleichtern.
+Bei Unterprogrammnamen reicht es aus,
+nach dem genauen Namen zu suchen und
+diesen durch den neuen Namen zu ersetzen.
+I²C-Adressen sind schwieriger. Um von
+
+[1]
+
+Dirk Fox, I²C mit dem TX(T) – Teil
+12: Temperatursensor, 4/2015, S. 44-48.
+
+[2]
+
+playground.arduino.cc: I²C bidirectional level shifter.
+
+[3]
+
+Christian Bergschneider, Stefan
+Fuss: Alternative Controller (3): Der
+ftPi – ein Motor Shield für den
+TX(T), ft:pedia 2/2016, S. 68-72.
+
+[4]
+
+Dirk Fox: I²C mit dem TX und
+ROBO Pro – Teil 1: Grundlagen.
+ft:pedia 3/2012, S. 32-37.
+
+[5]
+
+embed journal: I²C Protocol (2-Wire
+Interface) in a nut shell. 13.05.2013.
+
+[6]
+
+Christian Bergschneider, Stefan
+Fuss: ftpiLED, LED-Backpack im
+Retrodesign. ft:pedia 4/2016 (in
+dieser Ausgabe).
+
+
+

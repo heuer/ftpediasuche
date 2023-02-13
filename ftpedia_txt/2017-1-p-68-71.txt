@@ -1,0 +1,109 @@
+
+
+Modell
+
+Mammutpumpe
+Andreas Gail
+Mit der Vorstellung der sogenannten Mammutpumpe (auch Druckluftheberpumpe genannt)
+wird eine weitere Möglichkeit gezeigt, eine Pumpe mit fischertechnik aufzubauen.
+
+Das Grundprinzip
+Nachfolgend wird ein Pumpentyp beschrieben, der sich leicht mit fischertechnik aufbauen lässt. Im Gegensatz zu der früher
+gezeigten Schlauchquetschpumpe [1] handelt es sich bei der Mammutpumpe nicht um
+einen Zwangsförderer. Den prinzipiellen
+Aufbau zeigt Abb. 1:
+
+Kompressoren
+
+Lufttank
+
+Dort tritt die Druckluft in Form von Luftblasen aus. Die dabei entstehende Blasensäule steigt im Förderrohr auf und reißt
+Flüssigkeitsanteile mit, die schließlich in
+den oberen Behälter laufen.
+Beim Aufbau sind zum Schutz der Kompressoren vor Wassereintritt drei Schutzmaßnahmen getroffen worden: Erstens sind
+die Kompressoren höher angeordnet als der
+höchste Punkt der Flüssigkeitshandhabung.
+Zweitens haben die beiden Lufttanks eine
+Art Speicherfunktion, um eventuell in den
+Luftschlauch eindringendes Wasser aufzunehmen, bevor dieses in die Pumpen
+gelangen kann. Drittens kann aufsteigendes
+Wasser im Luftschlauch visuell erkannt
+werden, weil hierzu ein ausreichend durchsichtiger weißer Silikonschlauch verwendet
+wird.
+
+Modellaufbau
+Förderrohr
+
+Behälter oben
+Wasser
+Behälter unten
+
+
+Mit den Kompressoren wird zunächst
+Druckluft erzeugt. Durch zwei Lufttanks
+hindurch gelangt diese Druckluft unterhalb
+der Wasseroberfläche in das Förderrohr.
+
+In Abb. 5 wird der Gesamtaufbau des
+Modells gezeigt. Der prinzipielle Aufbau
+entspricht der Darstellung in Abb. 1. Statt
+der verwendeten chemielabortypischen
+Bechergläser können natürlich auch alte
+Marmeladengläser o. ä. verwendet werden.
+Eine gewisse Besonderheit des Modells ist
+das Förderrohr. Hierzu wurde ein PVCSchlauch aus dem Baumarkt mit 12 mm
+Außendurchmesser verwendet. Er ist recht
+widerspenstig, deshalb bedarf es einigen
+konstruktiven Aufwands, um ihn in der
+gewünschten Form zu halten. Abb. 2 bis 4
+zeigen den Aufbau. Dabei wird der
+
+
+Modell
+
+Schlauch unter Verwendung von Kabelbindern in die gewünschte Position
+gebracht. Insbesondere in Abb. 3 wird
+gezeigt, wie der Aufbau mechanisch stabilisiert wird, um die Gegenkraft des Schlauches aufzunehmen. Abb. 4 zeigt die Stelle,
+an der die Druckluft in das Förderrohr
+eingespeist wird.
+
+Quellen
+[1]
+
+Gail, Andreas: Schlauchquetschpumpe. ft:pedia 1/2016, S. 40-41.
+
+[2]
+
+Wikipedia: Mammutpumpe.
+
+[3]
+
+Gail, Andreas: fischertechnik:
+Mammutpumpe. YouTube-Video,
+2017.
+
+
+
+
+Rundhalterung im Detail
+
+
+
+
+
+Modell
+
+Lufttank
+
+Kompressoren
+
+Behälter oben
+
+Förderrohr
+
+Behälter unten
+
+Wasser
+
+
+

@@ -1,0 +1,383 @@
+
+Flugzeugtechnik
+
+Flugzeugtechnik
+
+Hubschrauberrotoren
+Dirk Fox, Johann Fox
+Hubschrauber gehören zu den faszinierendsten Fluggeräten: Sie können wie Kolibris in der
+Luft stehen, ohne Startbahn abheben, punktgenau landen und extrem wendige Manöver fliegen. Zwar ist die Idee des Hubschraubers bereits Jahrhunderte alt, realisiert wurden die
+ersten funktionsfähigen Hubschrauber aber erst vor ca. 80 Jahren – denn so einfach, wie es
+aussieht, ist das Fliegen mit Rotoren nicht.
+
+Ein wenig Geschichte
+Die Idee des Hubschraubers wird gemeinhin Leonardo da Vinci (1452-1519) zugeschrieben. So fand man in den Skizzen
+dieses genialen Florentiner Universalgelehrten – dem wir nicht nur Kunstwerke
+wie die Mona Lisa oder Das Letzte Abendmahl verdanken, sondern auch zahlreiche
+technische Erfindungen1 – die Konstruktionszeichnung eines „Luftschraubers“.
+
+Leonardo da Vinci (ca. 1483)
+
+Tatsächlich konnte dieser Luftschrauber
+(Abb. 1) nicht funktionieren. Die Idee von
+Leonardo da Vinci war, den „Luftschrauber“ wie eine archimedische Schraube in
+
+Siehe den fischertechnik-Kasten „Da Vinci Machines“ (500882).
+
+die Luft hineinzudrehen [1] und auf diese
+Weise abzuheben – ein Denkfehler.
+Das Konstruktionsprinzip heutiger Hubschrauberrotoren ist zudem erheblich älter:
+Dokumente belegen, dass es schon mehr
+als 1.000 Jahre früher, im 4. Jahrhundert
+unserer Zeitrechnung, in China Kinderspielzeuge gab, die der Gestalt des Ahornsamens nachempfunden waren und die
+Funktionsweise eines Hubschrauberrotors
+modellieren [2]. Mit etwas Geschick kann
+man sie mit Vogelfedern, einem Korkenstück und einem Schaschlikspieß nachbauen: Dreht man den Spieß schnell zwischen
+den Händen an, fliegt der kleine Rotor
+durch die Luft.
+
+
+Aus Holz kann man einen solchen Rotor
+auch kaufen (Abb. 2); es gibt ihn sogar mit
+Halterung und „Startschnur“, die um den
+Stab gewickelt wird. Zieht man am
+Schnurende, wickelt sich die Schnur ab und
+versetzt den Stab in eine schnelle Rotation
+– und der „Drehflügler“ hebt ab.
+
+
+
+Dynamischer Auftrieb
+Warum aber fliegt ein solcher Rotor? Das
+ist keineswegs selbstverständlich. Denn der
+Rotor ist schwerer als Luft – anders als ein
+„Luftschiff“ (Heißluftballon, Gasballon
+oder Zeppelin) sorgt also nicht eine geringere Dichte für Auftrieb.
+Neben einem solchen „statischen Auftrieb“, auch als Archimedisches Prinzip bekannt (die verdrängte Luft ist schwerer als
+das verdrängende Objekt), gibt es noch
+einen „dynamischen Auftrieb“. Dieser ist
+das wesentliche Funktionsprinzip des Fliegens. Dynamischer Auftrieb entsteht, wenn
+ein flügelförmiges Objekt sich durch ein
+Medium (z. B. Wasser oder Luft) bewegt.
+Die Form ist dabei wesentlich – vor allem
+der spitze Zulauf des Flügelquerschnitts am
+hinteren Ende (Abb. 3).
+Vereinfacht lässt sich der Effekt wie folgt
+erklären: Bewegt sich das flügelförmige
+Objekt „schräg“ (also in einem Anstellwinkel) zur Bewegungsrichtung, strömt das
+Medium unterschiedlich schnell an der
+Oberfläche entlang: Unterhalb der Neigung
+entsteht ein Überdruck, da das Medium
+langsam strömt; oberhalb des geneigten
+Objekts strömt das Medium schneller, dort
+entsteht ein Unterdruck. Die Differenz
+zwischen Unter- und Überdruck erzeugt
+eine Auftriebskraft, die das Objekt, sofern
+es nicht zu schwer ist, nach oben drückt
+(Abb. 4).
+
+mit Über- und Unterdruck (Quelle: Wikipedia)
+
+
+Je schneller sich das Objekt im Medium
+bewegt, desto größer ist der Druckunterschied – und desto stärker der Auftrieb.
+Aus diesem Grund benötigt ein Flugzeug
+eine lange Startbahn, da die Flügel erst ab
+einer Mindestgeschwindigkeit genügend
+Auftrieb erhalten, um das Flugzeug zu tragen. Und aus demselben Grund benötigt
+ein Rennwagen einen Spoiler (gewissermaßen eine umgedrehte Tragfläche) – dieser „drückt“ das Fahrzeug nach unten,
+damit der Auftrieb es nicht vom Boden
+abheben lässt. Damit kann ein Formel-1Rennwagen theoretisch sogar an der Decke
+fahren – solange seine Geschwindigkeit
+nicht unter ca. 200 km/h sinkt.
+Die Mindestgeschwindigkeit muss ein
+Flugzeug auch während des Fluges halten,
+damit es nicht zum „Strömungsabriss“
+kommt und das Flugzeug absackt oder gar
+ins Trudeln gerät. Aber auch zu schnell
+darf es nicht fliegen – nähert es sich der
+Schallgeschwindigkeit, reißt die Strömung
+ebenfalls ab. Und nicht nur die Geschwindigkeit kann Ursache für einen Strömungsabriss sein – auch der Anstellwinkel des
+Flügels ist kritisch, wenn er jenseits eines
+von Flügelform, Größe und Material abhängigen Grenzwinkels (deutlich unter
+45°) liegt.
+
+Drehflügler
+Bei einem Hubschrauber („Drehflügler“)
+wird – im Unterschied zum Flugzeug –
+nicht das gesamte Flugobjekt bewegt, sondern nur die Flügel im Kreis – sie werden
+daher Rotoren genannt. Auch beim Rotor
+hängt die Stärke des Auftriebs von der Geschwindigkeit und der Neigung des Rotorblatts ab.
+Da sich ein Rotorblatt an der äußersten
+Spitze sehr schnell durch die Luft bewegt –
+bei üblichen Rotordurchmessern von ca. 10
+m und 400 Umdrehungen pro Minute mehr
+als 720 km/h – und es sich daher schon bei
+verhältnismäßig niedriger Fluggeschwindigkeit (ca. 350 km/h) der Schallgeschwin-
+
+
+Flugzeugtechnik
+
+digkeit und damit der Gefahr eines Strömungsabrisses nähert, wird die Umdrehungsgeschwindigkeit des Rotors konstant
+gehalten und der Auftrieb allein über die
+Neigung des Rotorblatts, auch Pitch genannt, gesteuert.
+Die Idee der Blattverstellung geht auf den
+Amerikaner Robert Taylor zurück, der
+diese Erfindung 1842 dem Luftfahrtpionier
+Sir George Cayley (1773-1857) anbot. Der
+Bau eines Hubschraubers scheiterte jedoch
+daran, dass ausreichend leistungsfähige
+Dampfmaschinen zu schwer waren [1].
+
+Igor Sikorsky
+Das Konstruktionsprinzip von Hubschraubern der heute verbreitetsten Bauart mit
+zwei Rotoren – einem Haupt- und einem
+Heckrotor – geht auf den gebürtigen Ukrainer Igor Sikorsky (1889-1972) zurück, der
+nach der Oktoberrevolution 1919 in die
+USA emigrierte. Dort gründete er 1923 die
+Sikorsky Aircraft Corp., einen bis heute
+führenden Hersteller von Hubschraubern.
+Am 14. September 1939 gelang Sikorsky
+der Erstflug mit seinem Heckrotor-Hubschrauber; mit dem weiter entwickelten
+Modell Vought-Sikorsky VS-300 stellte er
+am 6. Mai 1941 einen neuen Flugrekord
+von über 1,5 Stunden auf (Abb. 4).
+
+beim Rekordflug 1941 [1]
+
+Die Endversion des VS-300 erhielt einen
+55 kW-Motor, eine einfache Blechverkleidung und Kufen. Ein Foto dieses ersten
+Erfolgsmodells zierte am 21. Juni 1943 die
+Titelseite des traditionsreichen LIFE
+Magazine für Fotojournalismus (Abb. 5).
+
+
+Igor Sikorskys Heckrotor-Konstruktion
+setzte sich erfolgreich gegen andere Konzepte wie die Verwendung von Doppelrotoren durch, die Paul Cornu (1881-1944)
+bei der Konstruktion seines „fliegenden
+Fahrrads“ verwendet hatte. Am 13. November 1907 hatte er damit den ersten anerkannten Drehflügler-Flug über 20 Sekunden absolviert.
+Auch der erste einsetzbare Hubschrauber,
+das Modell FW 61 des deutschen Ingenieurs und Gründers der Focke-Wulf-Werke,
+Heinrich Focke (1890-1979), präsentiert
+1937 in der Berliner Deutschlandhalle,
+verwendete zwei Hauptrotoren zum Ausgleich des Drehmoments – und stellte den
+erst von Sikorsky im Jahr 1941 gebrochenen Flugrekord von einer Stunde und 20
+Minuten auf [1].
+Sikorsky entwickelte nach Ende des zweiten Weltkriegs zahlreiche nicht nur in den
+USA sehr erfolgreiche Hubschraubermodelle vor allem für die zivile Nutzung als
+Transport- und Rettungshubschrauber. Das
+TIME Magazine widmete Igor Sikorsky in
+der Ausgabe vom 16. November 1956 die
+Titelgeschichte (Abb. 6).
+
+
+
+Der Heckrotor
+Zentrale Aufgabe des von Sikorsky entwickelten Heckrotors ist es, das Drehmoment
+des Hauptrotors auszugleichen, das sonst
+den Hubschrauber in entgegen gesetzter
+Richtung um sich selbst rotieren lassen
+würde. Dazu wird der Heckrotor senkrecht
+montiert; der Anstellwinkel (die Neigung)
+der Rotorblätter sorgt für die richtige Gegenkraft. Durch Veränderung des Winkels
+richtet man den Hubschrauber in einer
+gewünschten Richtung aus.
+Ein Funktionsmodell für einen Heckrotor
+findet sich in der Anleitung des fischertechnik-Baukastens Technical Revolutions.2 Abb. 8 zeigt eine für den Heckrotor
+optimierte Konstruktion; sie ist stabiler und
+kommt mit weniger Bauteilen aus.
+vom 16.11.1953
+
+Für sein Lebenswerk als Pionier der Hubschraubertechnik wurde Igor Sikorsky im
+Jahr 1988 in den USA mit einer 36 ct Luftpost-Briefmarke geehrt (Abb. 7).
+
+der Heckrotorblätter (Pitch)
+
+(National Postal Museum, Washington, D.C.)
+
+So viel zur Geschichte des Hubschraubers.
+Wie aber funktioniert Sikorskys Hubschrauberkonstruktion in der Praxis? Das
+wird in den folgenden Abschnitten anhand
+eines
+fischertechnik-Funktionsmodells
+erläutert.
+
+Mit dem Zugseil werden zwei Lochsteine
+auf der Rastachse verschoben. Der obere
+Lochstein ist über zwei I-Streben mit den
+Rotorblättern verbunden und dreht sich mit
+dem Rotor; wird er von dem unteren Lochstein angehoben, erhöht sich der Neigungswinkel der Rotorblätter. Die Rückstellung
+des oberen Lochsteins übernimmt eine
+Druckfeder 30 (35796).
+Die Steuerung des Pitches wird dabei im
+Modell – wie in einem echten Hubschrauber-Cockpit – durch zwei Fußpedale vor2
+
+
+Auf der Ausstellung in Schoonhoven im November 2010 hatte Max Buiting drei weitere
+Varianten eines Funktionsmodells vorgestellt.
+
+genommen, die mit einen Seilzug über
+Umlenkrollen mit dem Stellhebel verbunden sind (Abb. 9).
+
+Flugzeugtechnik
+
+der mit zwei koaxialen Doppelrotoren und
+einem 180 PS starken Motor am 18. April
+1924 einen Flugrekord über 4 Minuten und
+11 Sekunden aufstellte.
+Bis heute verwenden Hubschrauber eine
+zyklische Blattneigung für den Richtungsflug. Wie aber kann man die Blattneigung
+eines Rotorblatts während der Umdrehung
+des Rotors in einem festen Verlauf ändern?
+
+Heckrotor-Funktionsmodells
+
+Hauptrotor mit Taumelscheibe
+Wie beim Heckrotor kann man auch beim
+Hauptrotor durch die gleichzeitige Änderung des Anstellwinkels der Rotorblätter
+(„kollektive Blattneigung“) den Auftrieb
+und damit das Steigen bzw. Sinken des
+Hubschraubers steuern. Wie aber lässt sich
+ein Richtungsflug erreichen?
+Das gelingt mit dem vom dänischen Uhrmacher Jakob Christian Ellehammer
+(1871-1946) entwickelten Prinzip der „zyklischen Blattverstellung“ [1]. Dabei wird
+die Neigung der Rotorblätter während der
+Drehung des Rotors in einem zyklischen
+Ablauf verändert. Das führt dazu, dass an
+der Stelle mit dem steilsten Anstellwinkel
+der Rotorblätter der Auftrieb am größten
+ist. Dadurch „kippt“ die Rotorebene und
+der Hubschrauber fliegt in die Richtung des
+kleinsten Anstellwinkels. Leider wurde der
+Hubschrauber-Prototyp, mit dem Ellehammer diesen Rotor am 18. September
+1912 vorstellte, noch im gleichen Jahr bei
+einem Absturz vollständig zerstört.
+Mit derselben zyklischen und kollektiven
+Blattneigung arbeitete auch der Hubschrauber-Prototyp des gebürtigen Argentiniers Raúl Pateras Pescera (1890-1966),
+
+Die Lösung ist die so genannte „Taumelscheibe“.3 Sie ist beim Hauptrotor das, was
+die Lochsteine in unserem Funktionsmodell des Heckrotors sind: die Komponente,
+die über eine Verbindung mit den Rotorblättern deren Neigung verändert. Der wesentliche Unterschied zu den Lochsteinen
+besteht darin, dass die Taumelscheibe in
+alle Richtungen beweglich sein muss – auf
+immer derselben Höhe. Dazu darf sie nicht
+mit der Achse verbunden sein, sondern
+muss „lose“ um sie herum „taumeln“. Dennoch muss sie so stabil mit den Rotorblättern verbunden sein, dass sie auch bei
+hoher Umdrehungszahl nicht „nachläuft“
+und dadurch die Neigungswinkel der Rotorblätter verändert.
+Mit fischertechnik gelingt das, indem man
+eine Drehscheibe 60 ohne Nabe um die
+Rotorachse legt – und diese über I-Streben
+mit den Rotorblättern verbindet. Die Verwindungssteifigkeit erreicht man durch
+zwei – mit einem Verbindungsstopfen
+(32316) und einem Abstandsring (31597)
+stabil verbundene – auf Gelenkwürfeln gelagerte Kupplungsstücke (38260). Diese
+Konstruktion verwendet auch das genannte
+Funktionsmodell des fischertechnik-Baukastens Technical Revolutions (Abb. 10).
+Tatsächlich würde sogar eine einzige
+Verbindung über Kupplungsstücke die
+gewünschte Steifigkeit liefern, führt aber
+zu einer Unwucht im Rotorkopf.
+
+
+Es gibt auch Alternativen zur Taumelscheibe,
+z. B. die „Spinne“, siehe Harald Steinhaus’ Hinweis in der ft:c.
+
+
+dieser Lösung der Reibungswiderstand
+gering ausfällt. Dreht sich der Rotor, „gleiten“ die beiden Drehscheiben aufeinander.
+
+
+Zur Steuerung der Taumelscheibe benötigen wir einen nicht rotierenden zweiten
+Teil, über den – analog dem unteren Lochstein beim Heckrotor – die Neigung eingestellt wird. Bei einem Hubschrauberrotor
+sind diese beiden Teile über ein Lager
+drehbar miteinander verbunden. Wie
+gelingt das mit fischertechnik?
+Von Harald Steinhaus stammt die erste uns
+bekannte fischertechnik-Konstruktion einer
+Taumelscheibe vom April 2003. In einer
+deutlich stabileren Konstruktion vom
+Januar 2007 (Abb. 11) verwendete er zur
+Verbindung von Ober- und Unterseite der
+Taumelscheibe außen angebrachte Führungsplatten (32455). Die Neigung der
+Taumelscheibe ließ sich über drei Rastachsen mit Schnecke (35977) einstellen.
+
+
+Nach zahlreichen Versuchen entschieden
+wir uns für die Verwendung von Seilrollen,
+die von außen in die umlaufenden Nuten
+der beiden Drehscheiben 60 greifen, da bei
+
+durch außen angebrachte Seilrollen
+
+Damit die Seilrollen nicht bei der Rotation
+nach außen weggedrückt werden, müssen
+sie stabil mit der Drehscheibe 60 verbunden werden (Abb. 13).
+
+
+Der erste Prototyp verwendete wie Haralds
+Modell zunächst Rastachsen und Schnecken zur Verstellung des Neigungswinkels.
+Dann entwickelte Johann eine rein mechanische Lösung: Er befestigte die untere
+Drehscheibe 60 mit Lagerstücken (31772)
+und Gelenkwürfeln beweglich an drei
+Führungsstangen und montierte unter den
+drei Seilrollen jeweils einen Radhalter
+(35668) mit kleiner Seilrolle (38258).
+Damit lässt sich die Neigung der Taumelscheibe rein mechanisch und stufenlos in
+alle Richtungen über drei an den Seilrollen
+befestigte Seilzüge steuern (Abb. 14).
+
+
+Flugzeugtechnik
+
+Die Antriebsachse des Rotors wird über
+einen Rastadapter (36227) an einem B15
+befestigt, der über zwei Federnocken mit
+den Nuten eines in der Mitte der Sternlasche eingesetzten Riegelsteins (32850)
+verbunden ist. Die Achse wird in der Mitte
+der beiden unteren, fest mit dem Hubschrauber verbundenen Drehscheiben 60
+durch zwei schwarze Freilaufnaben
+(68535) geführt und von einem PowerMotor (1:20) angetrieben.
+
+
+Die – wie beim ursprünglichen Sikorsky
+VS-300 – drei Rotorblätter des Hauptrotors
+werden über eine Sternlasche (31673) miteinander verbunden; als Rotorblätter bieten
+sich die 240 mm langen Laufschienen
+(36333) an. Damit erreicht der Modellrotor
+eine Spannweite von etwa einem halben
+Meter.
+
+(nach www.hubschrauber.li)
+
+Wie in einem echten Hubschrauber kann
+nun die Steuerung über einen in X- und YRichtung
+beweglichen
+Steuerknüppel
+(Cyclic) erfolgen. Durch Verkürzung aller
+drei Zugseile mit einem zweiten Hebel
+(Collective) zur gleichzeitigen Verstellung
+der Blattneigung aller drei Rotorblätter
+lassen sich Steig- und Sinkflug steuern.
+
+Literatur
+Eine sehr anschauliche Einführung in die
+Technik und Geschichte des Hubschraubers bietet der 15minütige Film von Jörg
+Richter aus dem Jahr 2005 [2].
+
+
+[1]
+
+Sandhop, Dirk: Geschichte des Hubschraubers,
+http://www.heliport.de/lexika/geschic
+hte-des-hubschraubers/.
+
+[2]
+
+Jörg Richter: Igor Sikorsky und der
+Hubschrauber. Sendereihe ‚Meilensteine der Naturwissenschaft und
+Technik’, ARD 2005.
+http://www.youtube.com/watch?v=dg
+Wi2YBi9Vc
+
+

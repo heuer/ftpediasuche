@@ -1,0 +1,152 @@
+
+
+Computing
+
+Micro:Bit (Teil 2)
+Axel Chobe
+In Micro:Bit zur Steuerung von fischertechnik-Modellen vorgestellt. Nun gibt es von Kitronik eine
+weitere, sehr einfach gehaltene Erweiterung. Auch hier erfolgt die Programmierung mit dem
+MakeCode-Editor.
+
+Hintergrund
+Neben der Platine von DIDACTA [1] gibt
+es nun eine weiter Platine von kitronik für
+den Micro:Bit bei Reichelt-Elektronik unter
+der Artikel-Nr. BBCZ INTERFACE zum
+Preis von ca. 15 €. Sie ist so ausgelegt, dass
+der Mikrocontroller mit einer 9 V-Batterie
+von fischertechnik versorgt werden kann
+und eine geregelte 3 V-Versorgung für den
+Micro:Bit erzeugt wird. Die Platine hat vier
+Aussparungen, um sie z. B. über den Baustein 15 mit Bohrung (32064) fest auf einer
+Grundplatte zu fixieren. Als Anschlüsse
+besitzt die Platine Ausgänge für zwei Motoren für Links-/Rechtslauf, zwei Eingabe/Ausgabe-Pins sowie zwei Schaltereingänge. Des Weiteren gibt es diverse Status
+LEDs. Unter anderem ist es möglich, die
+Richtung der Motoren über grüne bzw. rote
+LEDs zu kontrollieren.
+
+
+Die GPIO-Anschlüsse (General Purpose
+Input and Output) können digital oder
+analog betrieben werden. Sie haben also die
+Fähigkeit, analoge Spannungen mit Hilfe
+eines sogenannten Analog-Digital-Wandlers (ADC) auszulesen. Die Schaltereingänge SW A und SW B entsprechen den
+Tasten A und B des Micro:Bit. Wie bei der
+Didacta-Platine sind die Steckbuchsen mit
+den fischertechnik-Steckern kompatibel.
+
+Vorbereitungen
+
+
+
+Durch Aufruf der MakeCode-Seite wird der
+Editor für den Micro:bit geöffnet. Im
+Internet gibt es zahlreiche Anleitungen für
+die Programmierung. Sie erfolgt entweder
+in der Blocksprache (ähnlich Scratch) oder
+– durch Umschalten in der oberen Zeile – in
+JavaScript. Alternativ kann der Micro:bit
+auch über den Python-Editor Mu programmiert werden.
+
+
+Computing
+
+
+
+Für die Adapterplatte von kitronik gibt es
+eine eigene Blocksatzerweiterung zur
+Steuerung. Die Installation erfolgt über den
+Erweiterungen-Menüpunkt unter „Fortgeschritten“ (Abb. 4):
+‚fischertechnik‘ in die Suchzeile eingeben
+und mit Enter bestätigen. Hier kann nun die
+kitronik-fischertechnik-Erweiterung ausgewählt werden. Damit sind die in Abb. 5
+gezeigten Elemente im MakeCode-Editor
+nutzbar.
+Wer ohne Erweiterung arbeiten möchte,
+kann das über die in Tabelle 1 angegebenen
+Pins realisieren.
+
+
+
+
+Pin
+
+Nutzung
+
+P0 1
+
+Input/Output-Pin
+
+
+Input/Output-Pin
+
+P1
+
+Die LED an P1 wird angeschaltet, wenn der
+Wert an P0 (z. B. die Helligkeit) kleiner 125
+ist.
+
+P5 / SW A
+
+Taster A des Micro:Bit
+
+P11 / SW B
+
+Taster B des Micro:Bit
+
+P8
+
+Motor 1 2
+
+P12
+
+Motor 1 2
+
+
+P2
+
+Motor 2 2
+
+P16
+
+Motor 2 2
+Tab. 1: Pin-Verwendung
+
+Die Geschwindigkeit ist zwischen 0 und
+100 wählbar. Alternativ zum Knopf A kann
+hier der Eingang SW A benutzt werden.
+
+Programmiermöglichkeiten
+
+
+Alternativ zum Knopf B kann hier der
+Eingang SW B benutzt werden.
+
+Fazit
+
+Abwechselnd wird der Wert des Fototransistors an GPIO-Pin P0 und des NTCWiderstandes an P1 angezeigt.
+
+Die hier vorgestellte Erweiterungsplatine ist
+im Gegensatz zur DIDACTA-Platine preisgünstig und in Deutschland verfügbar. Sie
+hat zwar weniger Anschlüsse, aber um eine
+Brücke zwischen den beiden Welten zu
+bauen und erste Eindrücke zu gewinnen
+reicht es allemal.
+
+Referenzen
+[1]
+
+Axel Chobe: Micro:Bit. 4/2019, S. 47-51.
+
+
+
+
+Durch die Möglichkeit analoger Erfassung lassen
+sich hier auch Foto- und NTC-Widerstände
+auslesen.
+
+
+Diese Ausgänge können gegen Masse auch zur
+Steuerung von vier LED genutzt werden.
+
+

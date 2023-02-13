@@ -1,0 +1,89 @@
+
+
+Tipps & Tricks
+
+ft-Spezialteile made by TST (Teil 6)
+Andreas Tacke
+In einer lockeren Reihe stellt TST einige von ihm entwickelte Spezialteile vor, die so manche
+Lücke beim Bauen mit fischertechnik schließen. Im heutigen Beitrag geht es um Zubehör für
+den XM- bzw. Encoder-Motor.
+In diesem Beitrag geht es um das eine oder
+andere Teil, mit dem sich die Verwendung
+bzw. der Einbau des XM- bzw. EncoderMotors verbessern lässt.
+Das schöne an diesem relativ jungen Motor
+von fischertechnik ist, dass er sich besser
+verbauen lässt als der Powermotor, da er
+durch sein Außenmaß von 30 x 30 x 60
+mm perfekt ins ft-Raster passt. An drei der
+umliegenden Seiten sind jeweils zwei ftNuten und an der vierten Seite eine ftFeder vorhanden, was den Anbau sehr
+komfortabel macht.
+Leider sind an der Stirnseite keine Befestigungsmöglichkeiten wie bei den alten MMotoren (31039/32618) vorgesehen. In
+einigen Einbaufällen fehlt das tatsächlich,
+also habe ich mir zu diesem Thema
+Gedanken gemacht. Die Idee war, eine
+ähnliche Anbauplatte zu fertigen, wie ich
+sie auch schon für den Powermotor entwickelt habe (siehe ft-pedia 03/2012 [1]).
+
+
+Damit besteht nun die Möglichkeit, auch
+an der Stirnseite des Motors anzubauen.
+Auf der Rückseite der Anbauplatte
+befinden sich neben dem Motor jeweils
+zwei Nuten, die ebenfalls zum Befestigen
+genutzt werden können.
+
+Nach einigen Versuchen hatte ich die
+Lösung. Zum Befestigen der Platte wird
+die Schraubverbindung an der Stirnseite
+verwendet, mit der der Motor im Gehäuse
+befestigt ist. Die Originalschraube wird
+durch eine Schlitzschraube M3 x 10
+ersetzt, mit der sich die Anbauplatte am
+Motor befestigen lässt (Abb. 1).
+
+
+
+Tipps & Tricks
+
+Perfekt lässt sich so mit sehr wenigen
+Bauteilen eine stabile Befestigung zum
+Differential herstellen (Abb. 3).
+
+Damit lässt sich nun auch der Getriebewinkel 32619 unter Verwendung einer
+Bodenplatte (z. B. 32859) mit dem XMMotor verbinden. Jetzt haben wir für den
+XM-Motor auch noch ein stabiles DreiGang-Getriebe.
+
+Differential
+
+
+Die M-Motoren (31039/32618) besaßen
+zudem eine fest angebaute rote Schnecke
+zum Antrieb diverser Getriebeteile. Wäre
+es nicht schön, dies auch mit dem XM
+Motor machen zu können? Dafür muss
+eine Schnecke her, die sich fest auf der
+Achse befestigen lässt (Abb. 4).
+
+Alle Abbildungen in diesem Beitrag zeigen
+den XM-Motor. Natürlich lassen sich die
+Anbauplatte und auch die Schnecke mit
+dem Encoder-Motor kombinieren. da
+dieser äußerlich baugleich mit dem XMMotor ist.
+Der XM- und auch der Encoder-Motor
+sind durch ihre kompakte Bauweise und
+die vielen Befestigungsmöglichkeiten eine
+echte Bereicherung für das fischertechnikSortiment.
+Es zeigt sich aber auch, man Gutes
+durchaus noch etwas verbessern kann …
+
+Quellen
+[1]
+
+Tacke, Andreas: ft-Spezialteile made
+by TST (Teil 2), ft:pedia 3/2012, S.
+27-28.
+
+Madenschraube zum Anbau an den XM-Motor
+
+
+

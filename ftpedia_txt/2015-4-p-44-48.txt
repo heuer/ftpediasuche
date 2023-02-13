@@ -1,0 +1,354 @@
+
+
+Computing
+
+I²C mit dem TX(T) – Teil 12: Temperatursensor
+Dirk Fox
+Seit der ft:pedia-Ausgabe 3/2012 [2] stellen wir in loser Folge I²C-Sensoren vor, die sich an
+den TX anschließen lassen – mit passenden Robo Pro-Treibern. Inzwischen ist der TX-Nachfolger TXT erschienen und unterstützt seit dem 14.12.2015 auch das I²C-Protokoll (FirmwareVersion 4.3.2). Die I²C-Anschlüsse am Erweiterungsport (EXT) des TXT entsprechen allerdings
+nicht denen des TX – es liegen nicht 5 V, sondern nur 3,3 V an. In dieser Folge stellen wir einen
+I²C-Universal-Adapter für den TXT vor – und einen Temperatursensor, der mit beiden
+Spannungen und damit auch an beiden Controllern betrieben werden kann.
+
+Vorbemerkung
+
+Anschluss von I²C-Sensoren
+
+Temperaturmessungen sind mit fischertechnik seit der Einführung der NTC-Sensoren
+(Negative Temperature Coefficient Thermistors) möglich [1] – allerdings mit sehr
+begrenzter Genauigkeit. Auch wenn man
+eine saubere Kalibrierung seiner Messeinrichtung vornimmt [3].
+
+In [4] habe ich gezeigt, wie sich in wenigen
+Minuten (und ohne Lötkolben) aus F/FJumpern und einer 6poligen Pfostenbuchse
+ein I²C-Universalkabel für den Anschluss
+an den TX konfektionieren lässt. Ganz ähnlich gelingt das mit F/F-Jumpern und einer
+10poligen Pfostenbuchse. Die I²C-Anschlüsse am EXT-Ausgang des TXT sind
+wie folgt belegt (Abb. 1):
+
+Ganz strenge Betrachter gehen noch weiter
+zurück – denn schon das Bimetall im
+Elektromechanik-Kasten em-3 von 1970
+erlaubte die Konstruktion eines einfachen
+Temperaturmessgeräts – wenn auch eines
+sehr ungenauen [5].
+Mit IC-gestützten Sensoren kommt man zu
+deutlich besseren Werten. In einer früheren
+Folge der I²C-Reihe haben wir eine RTC
+(Real Time Clock) vorgestellt, die auch eine
+Temperaturmessung vornimmt – allerdings
+mit einer noch immer wenig überzeugenden
+Genauigkeit von ± 3°C [4].
+Hervorragende Resultate erzielt man mit
+I²C-Temperatursensoren. Sie erreichen eine
+– für die meisten Anwendungen ausreichende – Genauigkeit von ± 0,25°C und liefern
+auf 0,0625°C aufgelöste Messergebnisse.
+
+
+3V3
+
+SDA
+
+EXT
+SCL
+
+GND
+
+
+am TXT
+
+Eine elegante Möglichkeit, um nicht für
+jeden Sensor ein (neues) I²C-Anschlusskabel konfektionieren zu müssen, wenn
+man schon TX-kompatible besitzt, ist die
+Verwendung eines Adapters, der die Anschlüsse von einem 2x5- auf einen 2x3Pfostenstecker „umleitet“ (Abb. 2). Anschließend können die Sensoren mit den
+von mir vorgestellten TX-I²C-Universalkabeln über einen Bus-Expander (Conrad
+Best.-Nr. 192659-62, Abb. 3) mit dem TXT
+verbunden werden.
+
+
+Computing
+
+Technische Daten
+∂ Betriebsspannung: 2,7 bis 5,5 V
+
+∂ Stromaufnahme: 200-400 μA; im Standby-Modus 0,1-2 μA.
+∂ I²C-Adresse: Die Default-Adresse des
+Device ist 0x18; zur Vermeidung einer
+Adresskollision können durch Setzen der
+Eingänge A0, A1 oder A2 direkt auf dem
+Board alternativ die Adressen 0x190x1F gewählt werden.
+∂ Geschwindigkeit: 400 kHz (Fast Mode).
+
+
+Der MCP9808
+Von Microchip Technology Inc. stammt der
+Temperatursensor MCP9808 aus dem Jahr
+2011 (Abb. 4, [6]). Er besitzt eine I²CSchnittstelle und arbeitet mit einer Betriebsspannung von 2,7-5,5V, daher lässt er
+sich sowohl am TX als auch am TXT
+betreiben. Adafruit hat ein Breakout Board
+mit dem MPC9808 entwickelt, das in
+Deutschland bei exp tech für weniger als 5 €
+erhältlich ist.
+
+(Breakout Board von Adafruit)
+
+
+∂ Genauigkeit: Im Temperaturbereich von
+-20°C bis 100°C hat der Sensor eine
+maximale Abweichung von 0,5°C
+(typisch: 0,25°C).
+Die Berechnung der Temperatur kann in
+vier Auflösungen erfolgen: 0,5°C, 0,25°C,
+0,125°C oder 0,0625°C. Der Zeitbedarf für
+die AD-Wandlung – und damit die Zahl der
+Temperaturbestimmungen pro Sekunde –
+unterscheidet sich dabei jedoch erheblich.
+Register
+Der MCP8908 verwendet für Konfiguration
+und Datenaustausch acht Register, die beschrieben (W) oder ausgelesen (R) werden
+können. 3 Dabei sind die ersten sieben (0x01
+bis 0x07) 16-Bit-Register; lediglich Register 0x08 ist ein 8-Bit-Register.
+Register
+
+Bedeutung
+
+0x01
+
+Configuration (R/W)
+
+0x02
+
+Alert Temperature
+(Upper Bound, R/W)
+
+0x03
+
+Alert Temperature
+(Lower Bound, R/W)
+
+0x04
+
+Critical Temp. (R/W)
+
+0x05
+
+Temperature (R)
+
+Es sind insgesamt 16 Register adressierbar. Einige enthalten jedoch Kalibrierungsdaten und
+sollten daher nicht verändert werden.
+
+
+
+Register
+
+Bedeutung
+
+0x06
+
+Manufacturer ID (R)
+
+0x07
+
+Device ID, Revision (R)
+
+0x08
+
+Resolution (R/W)
+
+Tab. 1: Register des MCP9808 [4]
+
+Das Auslesen und Beschreiben der Register
+erfolgt mit einem I²C-Lese- bzw. Schreibbefehl, bei dem die Adresse des Registers
+als 8-Bit-Unteradresse angegeben wird.
+Wurde zuvor bereits aus derselben Adresse
+gelesen oder an dieselbe Adresse geschrieben, kann die Unteradresse weggelassen
+werden.
+Configuration
+Im Configuration Register (0x01) werden
+mehrere zentrale Einstellungen vorgenommen:
+∂ Hysteresis: In den Bits 9 und 10 kann
+eine Hysterese (Verzögerung) eingestellt
+werden, die bei fallenden Temperaturen
+für eine verzögerte Auslösung eines
+Alarms sorgt: keine, wenn beide Bits 0
+sind (00b, default), Verzögerung von
+1,5°C mit 01 b, 3°C mit 10b und 6°C mit
+11b.
+∂ Shutdown Mode: Im Shutdown-Modus
+(Bit 8 = 1) verbraucht der Chip lediglich
+0,1 μA gegenüber ca. 400 μA im Power
+Up Mode (kontinuierliche Messungen;
+Default-Einstellung)
+∂ Lock Bits: Durch Setzen der Bits 6 und 7
+lassen sich TUpper und TLower (die Grenzen
+des Messintervalls, Register 0x02 und
+0x03) bzw. TCritical (Register 0x04) gegen
+Veränderung sperren.
+Upper, Lower, Critical Temperature
+In den drei folgenden 16-Bit-Registern
+(0x02-0x04) können drei Temperaturwerte
+eingestellt werden:
+∂ Mit der Festlegung eines Temperature
+Upper Bound (Register 0x02), TUpper,
+und eines Temperature Lower Bound
+
+(Register 0x03), TLower, kann der Messbereich begrenzt werden.
+∂ Durch die Einstellung einer Critical
+Temperature (Register 0x04), TCritical,
+kann eine Alarmierung eingestellt werden.
+Über- oder unterschreitet die Temperatur
+die Grenzen des eingestellten Messbereichs, TUpper bzw. TLower, wird das durch die
+Bits 13 und 14 des Messwerts und – falls im
+Configuration Register ausgewählt – über
+das Setzen des Alert-Pins signalisiert. Ein
+Überschreiten von TCritical wird in Bit 15 des
+Messwerts signalisiert (siehe unten).
+Die Darstellung des Temperaturwerts erfolgt als 13-bit-Zweierkomplement und entspricht der Darstellung der Messwerte.
+Temperaturmesswert
+Der aktuelle Temperaturmesswert kann aus
+Register 0x05 als 13-bit-Zweierkomplement in 16tel Grad (Celsius) ausgelesen
+werden. Der Wert wird – abhängig von der
+Auflösung (siehe unten) – mindestens vier
+und bis zu 33 Mal je Sekunde aktualisiert.
+Die oberen drei Bit signalisieren ein Überschreiten der eingestellten TCritical (Bit 15)
+bzw. eine Temperatur t außerhalb des
+vorgegebenen Messbereichs, d. h. t < TLower
+oder t > TUpper (Bit 13 und 14).
+Manufacturer & Device ID
+Die Hersteller- und Device-ID des Sensors
+ist in den Registern 0x06 und 0x07
+gespeichert (read only). Die Register sollten
+die Werte 0x0054 (Manufacturer ID, dezimal: 84) und 0x0400 (Device ID, dezimal:
+1024) enthalten. Mit dem Auslesen dieser
+beiden Werte kann geprüft werden, ob der
+Sensor korrekt antwortet.
+Resolution
+Im Resolution Register (0x08) wird die
+Auflösung der Temperaturangaben festgelegt. Je größer die Auflösung, desto zeitintensiver die A/D-Wandlung und geringer
+
+die Zahl der je Sekunde durchführbaren
+Messungen:
+∂ 0x00: 0,5°C/ca. 30 ms (33 Messungen/s)
+∂ 0x01: 0,25°C/ca. 65 ms (15 Mess./s)
+∂ 0x02: 0,125°C/ca. 130 ms (7 Mess./s)
+∂ 0x03: 0,0625°C/ca. 250 ms (4 Mess./s),
+Default-Einstellung
+Beim Einschalten des Devices (Power-Up)
+werden alle Registereinstellungen auf die
+Default-Werte gesetzt.
+
+RoboPro-Treiber
+Im Downloadbereich der ft:c findet ihr
+einen RoboPro-Treiber für den MCP9808
+zum Herunterladen.
+Die Treiber-Kommandos folgen im Wesentlichen der Registerstruktur – lediglich
+für die unterschiedlichen Einstellmöglichkeiten des Config-Registers wurden jeweils
+eigene Befehle integriert:
+∂ Die Funktionen MCP_GetManufacturerID und MCP_GetDeviceID ermöglichen einen Test des Sensors: Sie
+müssen die Werte 84 bzw. 1024 zurückliefern.
+
+Computing
+
+das eventuell gesetzte Schreibsperre-Bit
+zurückgesetzt. Die Temperaturwerte
+werden als Fließkommazahl übergeben.
+∂ Die Kommandos MCP_GetCriticalTemp und MCP_SetCriticalTemp lesen
+bzw. setzen die kritische Temperatur, ab
+der ein Alarm erfolgen soll. Dabei wird
+im Config-Register das eventuell gesetzte Schreibsperre-Bit zurückgesetzt.
+Auch hier werden die Temperaturwerte
+als Fließkommazahl übergeben.
+∂ Die Hysterese wird mit MCP_GetHysteresis gelesen (Ausgabe: Gradangabe
+als Fließkommazahl) und mit MCP_SetHysteresis gesetzt (Input: Index 0-3).
+∂ Mit MCP_GetTemp erhält man die aktuelle Umgebungstemperatur in Grad Celsius (als Fließkommazahl).
+
+Anwendungsbeispiele
+Eine simple Anwendung, die im TreiberDownload enthalten ist, ist ein Thermometer, das die aktuelle Umgebungstemperatur
+anzeigt.
+
+∂ Mit den Kommandos MCP_ShutDown
+und MCP_PowerUp lässt sich der Sensor
+in den Sleep-Modus (Stromaufnahme <
+0,2 μA) versetzten und wieder aufwecken.
+∂ Die Auflösung des Sensors kann mit den
+Funktionen MCP_GetResolution und
+MCP_SetResolution ausgelesen bzw.
+eingestellt werden. Als Parameter wird
+ein ganzzahliger Wert von 0-3 übergeben.
+∂ Mit den Befehlen MCP_GetLowerBound
+und MCP_GetUpperBound können die
+eingestellten Grenztemperaturen ausgelesen und mit den komplementären
+Kommandos MCP_SetLowerBound und
+MCP_SetUpperBound gewählt werden.
+Bei letzteren wird im Config-Register
+
+
+Aber es lassen sich – auch in Kombination
+mit anderen Sensoren – einige weitere
+interessante Anwendungen verwirklichen.
+Wetterstation
+Ein derart genauer Sensor erlaubt auch
+professionellere Anwendungen, wie z. B.
+die Realisierung einer kleinen „Wettersta-
+
+
+
+
+tion“, die die Außentemperatur (Tagesverlauf alle 15 Minuten, Tagesdurchschnitts-,
+Höchst- und Niedrigsttemperatur) protokolliert – zusammen mit dem aktuellen Luftdruck [7]. Mit einer Real Time Clock lassen
+sich die Messzeitpunkte präzise festlegen
+und protokollieren [4]. Die Messdaten
+können in einem Listenelement zwischengespeichert, als .csv-Datei exportiert und
+schließlich in einer Tabellenkalkulation anschaulich ausgewertet werden.
+Temperaturregelung
+Auch in einem Regler lässt sich der Sensor
+einsetzen: Sinkt die gemessene Temperatur
+unter eine voreingestellte Temperatur
+LowerBound, muss gewärmt werden; steigt
+sie über UpperBound, wird die Erwärmung
+gestoppt (oder, im Falle eines Kühlschranks: muss gekühlt werden).
+Alarmierung
+Schließlich kann man den Sensor für eine
+Alarmschaltung bei Überschreitung einer
+zuvor konfigurierten kritischen Temperatur
+einsetzen – sogar gleichzeitig mit den vorgenannten Anwendungen.
+
+
+Referenzen
+[1]
+
+Dirk Fox: Der Robo TX Controller
+als Messgerät. ft:pedia 1/2011, S. 3336.
+
+[2]
+
+Dirk Fox: I²C mit TX und Robo Pro –
+Teil 1: Grundlagen. ft:pedia 3/2012,
+S. 32-37.
+
+[3]
+
+Dirk Fox: Einmessen eines digitalen
+Messgeräts. ft:pedia 1/2013, S. 3948.
+
+[4]
+
+Dirk Fox: I²C mit dem TX – Teil 7:
+Real Time Clock (RTC). 4/2013, S. 28-34.
+
+[5]
+
+fischertechnik: em3 – Elektromechanik. Handbuch zum
+Baukasten, 1970, S. 62.
+
+[6]
+
+Microchip Technology Inc.:
+MCP9808. Datasheet, 02.08.2011
+
+[7]
+
+Georg Stiegler: I²C mit dem TX –
+Teil 3: Luftdruckmessung. 1/2013, S. 32-38.
+
+

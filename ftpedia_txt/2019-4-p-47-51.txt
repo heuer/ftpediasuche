@@ -1,0 +1,195 @@
+
+Computing
+
+Computing
+
+Micro:Bit
+Axel Chobe
+Seit kurzer Zeit gibt es bei fischertechnik das „Starter Set for micro:bit“ für ca. 120 € zu kaufen.
+Dabei erfolgt die Programmierung mit dem MakeCode-Editor. Es reicht aber auch, zwei
+Hardwareelemente zu kaufen, um diese Art der Programmierung und Ansteuerung zu testen.
+wurde. Das Gerät wurde als Einplatinencomputer auf der Basis eines ARM Mikrocontrollers realisiert und kann mittels verschiedener webbasierter Entwicklungsumgebungen programmiert werden. Es kann
+im Internet für ca. 15 € erworben werden.
+
+
+Herzstück des Sets [1] ist der Einplatinencomputer, der von der British Broadcasting
+Corporation (BBC) im Juli 2015 vorgestellt
+
+Für den Einsatz unter fischertechnik gibt es
+eine Erweiterungsplatine bei DIDACTA für
+28 € zu kaufen. Sie bietet, wie bei fischertechnik gewohnt, Ausgänge für acht Leuchten bzw. vier Motoren mit einem maximalen Ausgangsstrom von 600 mA pro Stecker, sowie sechs Eingänge in Form von fünf
+Analog/Digital- und einem reinen Digital-
+
+
+
+
+Eingang. Hier können alle gängigen Sensoren (Foto, Mini-Schalter, magnetisch, thermisch, etc.) verwendet werden, die bis zu
+5 V ausgeben. Außerdem ist ein Anschluss
+für eine I²C-Sensorsteuerung vorhanden.
+Die Stromversorgung erfolgt über ein Netzteil von fischertechnik, wobei außerdem
+Ausgänge für 5 V und 3,3 V vorhanden
+sind. Wichtig ist auch, dass die Eingänge
+gegen zu hohe Spannungen bis zu 9 V
+geschützt sind. Die Steckbuchsen sind mit
+den Steckern von fischertechnik kompatibel.
+
+Programmiermöglichkeit
+Durch Aufruf der MakeCode-Seite [2] wird
+der Editor für den micro:bit geöffnet.
+
+Ist das Programm fertig geschrieben, muss
+es auf den micro:bit übertragen werden.
+Wird der micro:bit über ein USB-Kabel
+angeschlossen, erhält er einen eigenen
+Laufwerksbuchstaben. Über den Button
+„Herunterladen“ wird der erzeugte HexCode auf dieses Laufwerk kopiert. Während
+des Kopiervorganges blinkt die KontrollLED auf dem micro:bit. Anschließend ist
+das Programm lauffähig, auch wenn das
+USB-Kabel entfernt wird.
+Vorbereitung
+Einige Ports werden mit der Matrix-LED
+geteilt. Dies führt zu Störungen an einigen
+Eingangspins. Eine Dokumentation darüber, welche Ports niedrig oder hochgedreht
+werden müssen, um diese Störungen zu
+vermeiden, wäre sehr hilfreich. Die Lösung
+besteht darin, beim Start den Befehl „LED
+aktivieren falsch“ zu verwenden. Des
+Weiteren ist es sinnvoll, die zu benutzenden
+Pin-Ausgänge beim Start auf 0 zu setzen,
+um Fahrfehler o. ä. zu vermeiden.
+
+
+Im Internet gibt es zahlreiche Anleitungen
+für die Programmierung. Sie erfolgt entweder in der Blocksprache (ähnlich Scratch)
+oder durch Umschalten in der oberen Zeile
+in JavaScript. Alternativ kann der micro:bit
+auch über den Python Editor Mu (Abb. 4)
+programmiert werden.
+
+
+
+
+
+Computing
+
+Ansteuerung der Ausgänge O1-O8
+
+Abfrage der Digital-Eingänge
+
+Um den gewünschten O-Ausgang anzusteuern sind im Programm die folgenden PAusgänge zu verwenden (jeweils gegen
+Masse):
+
+Die digital (bzw. analog) nutzbaren Eingänge liegen auf folgenden Anschlüssen
+(D/A = digital und analog, D = nur digital):
+
+O1 O2 O3
+
+
+
+O6 O7 O8
+
+P16 P15 P14 P13 P12 P10 P9 P8
+
+I1
+
+I2
+
+I3
+
+I4
+
+I5
+
+I6
+
+P1 P6 P4 P0 P3 P2
+D/A D D/A D/A D/A D/A
+
+
+Ansteuerung der Ausgänge M1-M4
+Für die Motorenausgänge müssen jeweils
+zwei Werte gesetzt werden:
+M1
+
+M2
+
+M3
+
+M4
+
+P16 P15 P14 P13 P12 P10 P9 P8
+Die Richtung wird festgelegt, indem einer
+der beiden Anschlüsse eines Paares auf 1
+gesetzt wird: Richtung „links“ für M1 ist
+z. B. P16 = 0 und P15 = 1, „rechts“
+andersherum (P16 = 1 und P15 = 0).
+
+für die Abfrage von I1
+
+Abfrage der Analog-Eingänge
+Die Abfrage z. B. eines Fotowiderstands
+oder eines Fototransistors erfolgt für den
+analogen Wert von Pin 1. So können Werte
+von 0 bis 1023 erfasst werden.
+
+
+
+
+
+Servosteuerung
+
+Fernbedienung mit zwei micro:bit
+
+Der Servo wird wie folgt angeschlossen:
+
+Man kann zwei micro:bit per Funk miteinander koppeln. Auf Senderseite sieht das
+zugehörige Programm etwa so aus:
+
+
+
+Der Empfänger-Teil sieht so aus:
+
+
+Über Knopf B wird der Servo um 45° bewegt. Mit Knopf A erfolgt der Weg zurück.
+
+
+Die Möglichkeit der Funkübertragung eröffnet dem Thema Fernbedienung große
+Einsatzmöglichkeiten.
+
+
+
+Computing
+
+Alternative Ansteuerung
+Michael Klein hat eine Erweiterung für
+fischertechnik auf GitHub bereitgestellt [3].
+Die Installation geschieht über den Erweiterungen-Menüpunkt:
+
+Ein- und Ausgangsbezeichnungen
+
+Quellen
+
+Nach Auswahl des Punktes Erweiterungen
+wählt man ganz unten ‚Datei importieren‘
+und dann die heruntergeladene Datei
+main.ts.
+
+[1]
+
+Didacta-Produkte für fischertechnik
+und micro:bit auf didacta.hr.
+
+[2]
+
+MakeCode-Editor auf microbit.org.
+
+Im Ergebnis ist es nun einfacher, die Ausund Eingänge anzusprechen:
+
+[3]
+
+Michael Klein: pxt-fischertechnikcalliope auf GitHub.
+
+Ein- und Ausgangsbezeichnungen
+
+
+

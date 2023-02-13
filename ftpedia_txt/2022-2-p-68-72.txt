@@ -1,0 +1,216 @@
+
+
+Elektronik
+
+Ein Labor in Aktion
+Hans-Christian Funke
+Baustellenlauflichter, Ampelschaltungen, Quizmasterschaltung, Sirene mit Blaulicht für
+Einsatzfahrzeuge, Steuerungen für Transportbänder und vieles mehr lassen sich mit den
+Elektronikmodulen realisieren und nachbauen. Über dieses Labor wird man an die Grundlagen
+herangeführt.
+
+
+In der ft:pedia 3/2021 habe ich bereits das
+„Labor für digitale Elektronik“ mit allen
+Zubehörteilen vorgestellt [1]. Seit Anfang
+April 2022 sind das Labor und sämtliches
+Zubehör im Online-Shop von Franz Santjohanser beziehbar [2].
+
+Inhalt des Labors
+In dem Labor wird mit den Grundlagen
+begonnen. Die einzigen Grundvoraussetzungen, die mitzubringen sind, sind der
+sichere Umgang mit den Grundrechenarten
+und dem Umrechnen von Maßeinheiten.
+
+
+Im ersten Schritt wird das Labor aufgebaut
+und alle Vorbereitungen werden getroffen.
+Wer nicht alle Teile dafür hat, kann sich die
+Ergänzungssets (75001-3) bestellen.
+Im Kapitel Grundlagen kann man seine
+Kenntnisse über den elektrischen Strom und
+über Zahlensysteme auffrischen oder bilden, sodass jedem ermöglicht wird, dieses
+Labor mit wirklich geringen Voraussetzungen durchzuführen. Anschließend
+werden alle Grundelemente an Gatter- und
+
+Speichertypen vorgestellt und das erlernte
+Wissen anhand von praktischen Übungsaufgaben nachhaltig vertieft. Mit dem
+neuen Wissensstand werden die Laboranten
+im letzten Teil auf die Probe gestellt, wenn
+es darum geht, durch Kombination der
+Grundelemente komplexere Strukturen wie
+Schieberegister, Binärzähler, Addierer, Deund Multiplexer oder Vergleicher selbst zu
+entwerfen und aufzubauen.
+
+Elektronik
+
+Das Zubehör
+Die Zubehörteile sind nun auch als Set
+erhältlich. Darin sind die LED-Bausteine in
+den Farben rot, gelb, grün sowie eine zufällige Farbe enthalten (71099). Die LEDBausteine wurden ebenfalls im OnlineShop mit aufgenommen; es gibt sie in acht
+verschiedenen Farben (71031 bis 71038).
+
+Die Vorteile des Labors auf einen Blick:
+1. Allein die sechs im Labor (75000) enthaltenen Module sind schon günstiger
+als beim Einzelkauf.
+2. Obendrauf bekommt man das Zubehör
+(71099) mit den vier LED-Bausteinen,
+den Elektronikteilen und acht Stecker
+mit Schraube.
+3. Das Wichtigste ist das enthaltene Lehrbuch als PDF-Datei (75006).
+Wer lieber mit dem in Abb. 2 gezeigten
+Buch (75008) arbeiten möchte, kann dies
+separat bestellen.
+
+Modelle
+Die im Lehrbuch vorgestellten Modelle
+sind nicht Bestandteil des Labors, sondern
+sollen Anregungen für weitere Projekte
+liefern. Allerdings sind die Modelle vollständig und mit Schaltplan erklärt, sodass
+jeder sie nachbauen kann. Für einige
+Modelle werden weitere bzw. noch andere
+Elektronikmodule benötigt.
+Als Bonus zu diesem Beitrag gibt es die
+Bauanleitung für die in Abb. 1 zu sehenden
+Baustellenschilder und eine Vorlage zum
+Ausschneiden und Bekleben der Bauplatte
+60 × 15 zum Herunterladen als PDF-Datei
+[3]. Von fischertechnik gibt es auch selbstklebende Aufdrucke (174322), die zum
+Bekleben der Bauplatte verwendet werden
+können.
+
+
+Ein LED-Baustein kann ohne Relais- oder
+Inverter-Plus-Modul direkt an einen Ausgang eines Elektronikmoduls angeschlossen werden. Die LED-Bausteine benötigen
+fast alle bei 9 V nur 1 mA und bei 15 V
+2 mA. Lediglich bei gelb und orange liegen
+liegt die Werte bei 3 mA bzw. 6 mA.
+
+
+
+
+
+
+
+
+
+Kondensatoren (100 nF, 2,2 µF, 10 µF, 22 µF,
+47 µF, 100 µF); auch im Multifunktionsmodul
+enthalten
+
+
+Widerstände (100 Ω, 220 Ω, 470 Ω, 1 kΩ,
+2,2 kΩ, 4,7 kΩ, 10 kΩ, 22 kΩ, 47 kΩ) und zwei
+Dioden (1N400x); auch im Experimentiermodul enthalten
+
+Weitere Zubehörsets
+Die beiden Sets Kondensatoren (Abb. 12)
+und Widerstände/Dioden (Abb. 13) sind ab
+sofort separat erhältlich – zur Ergänzung für
+den eigenen Bestand oder als Ersatzteillager
+bzw. zum Austausch.
+
+
+Doppellitzen
+Es gibt drei fertig konfektionierte Doppellitzen mit neuen Steckern. Die Längen
+passen für die direkte Verbindung zweier
+nebeneinander liegender Elektronikmodule
+(71020, 30 mm), zweier Elektronikmodule
+mit einer Lücke von einem Elektronikmodul dazwischen (71021, 50 mm) und zur
+Verbindung zweier Elektronikmodule übereinander (71022, 105 mm).
+
+
+Elektronik
+
+
+Labor für die Ausbildung
+Das Labor für digitale Elektronik gibt es in
+einer Version für Ausbilder (75004, 75009).
+Diese Version enthält das komplette
+Material für das Labor und darüber hinaus
+zwei Sortierwannen zum praktischen und
+schnellen Verstauen aller Laborteile. Das
+Labor kann im Lehrbetrieb für zwei Teilnehmer eingesetzt werden, sodass für einen
+Kurs mit 20 Teilnehmern nur 10 Labore
+benötigt werden.
+Je nach Ausstattung der Lehrräume kann
+das Labor entweder mit einer USB-Versorgung (75004) oder mit einem Akku-Pack
+(75009) bestellt werden. Die USB-Versorgung erfordert einen Anschluss 230V~ in
+den Lehrräumen und versorgt über ein
+1,5 m langes Kabel mit original fischertechnik-Steckern das Labor mit 5 V Gleichspannung. Die Variante mit einem AkkuPack ist unabhängig von der Ausstattung
+der Lehrräume, erfordert aber eine regelmäßige Überprüfung und Aufladung.
+Wer sich für eine Versorgung des Labors
+über USB entschieden hat und feststellt,
+dass die Variante mit einem Akku-Pack
+besser wäre, kann nachträglich mit dem
+Erweiterungsset A (75005) umrüsten. Ein
+Set enthält fünf Akkus sowie einen ErsatzAkku und ein Ladegerät. Umgekehrt kann
+das Labor von Akku-Pack-Versorgung mit
+
+dem Ergänzungsset V (75003) auf die
+Versorgung über USB umgestellt werden.
+Das Lehrbuch wird als Microsoft-WordTextdokument (.docx) zu Verfügung
+gestellt, damit die beigefügten Arbeitsblätter im Kopfteil leichter mit individuellen Informationen versehen werden können.
+Die Felder links und rechts von der Kopfzeile können beliebig formatiert und mit
+Text oder Grafiken versehen werden
+(Abb. 14).
+Das begleitende Lehrbuch wurde erweitert
+und mit Arbeitsblättern für den Lehrbetrieb
+versehen. So muss der Dozent lediglich die
+für ihn wichtigen Abschnitte auswählen und
+den Kopfteil mit den kursspezifischen
+Daten versehen, bevor die Arbeitsblätter
+ausgedruckt werden.
+Die Arbeitsblätter selbst sind inhaltlich
+identisch mit dem Lehrbuch, aber leicht
+modifiziert. So wurden die Seiten-, Kapitelund Abschnittszahlen wegelassen und
+Verweise auf Tabellen und Grafiken ersetzt.
+Damit können die Arbeitsblätter ganz nach
+Bedarf eingesetzt werden. Die Laborübungen und die Laboraufgaben sind so
+zugeschnitten, dass diese auf eine beidseitig
+bedruckte DIN-A4 Seite passen.
+Für weitere Informationen zu der Ausbildungsversion kann man sich an [2]
+wenden.
+
+
+
+Zum Thema Stecker
+Franz Santjohanser arbeitet an einer
+Lösung, damit es weiterhin einen Stecker
+mit Schraube im Sortiment gibt. Dies wäre
+für mich sehr wichtig, denn die Widerstände, Dioden und Kondensatoren lassen
+sich nicht mit den neuen Steckern von
+fischertechnik kombinieren und auf Eisenbahnstecker möchte ich nicht unbedingt
+ausweichen müssen.
+Der Stecker mit Schraube wird kein
+Original-fischertechnik-Stecker sein, sondern ein Nachbau. Es wird gerade noch am
+Gehäuse gefeilt, sodass das Produkt gut
+aussieht und am Ende auch zu einem
+erschwinglichen Preis zu bekommen ist.
+
+
+Damit besteht auch die Möglichkeit, die
+Stecker nicht nur in rot und grün, sondern
+auch in anderen Farben zu erhalten.
+
+Quellen
+[1]
+
+Hans-Christian Funke: Labor für
+digitale Elektronik. ft:pedia 3/2021,
+S. 49–55.
+
+[2]
+
+santjohanser Spielen. Lernen.
+Technik. Der autorisierte
+fischertechnik-Fachhändler,
+https://santjohanser.de.
+
+[3]
+
+Hans-Christian Funke: Elektronikmodule 2022-2 Baustellenschilder.
+Im Download-Bereich zu dieser
+Ausgabe der ft:pedia.
+
+

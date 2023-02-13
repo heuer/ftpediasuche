@@ -1,0 +1,312 @@
+
+
+Tipps & Tricks
+
+Neue ft-Teile selbstgemacht: Teile-Modding
+Harald Steinhaus
+Es gibt Fälle, in denen der geneigte Bastler an die Grenzen des Systems fischertechnik stößt.
+Hier verschiebt sich ein Zapfen unter Last, da ist eine Bauteilkante im Weg und der ft-Zapfen
+stört, da rutscht ein Zahnrad auf der Achse, am Räumschild möchte man etwas anbauen, und
+schließlich müsste dort eine Achse durch ein Teil hindurch.
+Das Thema „Teile-Modding“ spaltet die ftGemeinde seit den Anfängen der fischertechnik-Foren, und diverse Threads mit
+heiß geführten Diskussionen sind leider mit
+den Umzügen verloren gegangen. Im
+Bilderpool der ftcommunity findet sich
+aber der eine oder andere Thread zu diesem
+Thema.
+Es gibt einmal die Puristen, die da sagen,
+dass man ein ft-Teil einfach niemals bearbeitet (schnell wird auch von ‚verstümmelt’
+gesprochen)
+und
+bitteschön
+seine
+Konstruktion mit den Teilen aufbaut, die
+man im Kasten vorgefunden hat.
+Die anderen vertreten den Standpunkt, dass
+man mit Kauf und Bezahlung Eigentümer
+der Teile geworden ist und es weder ein
+Reinheitsgebot noch eine UN-Teileschutzkonvention gibt, die einem das Tuning oder
+Modding verbieten könnte.
+
+Das Für und Wider dieser zweitgenannten
+Position soll der vorliegende Artikel mit
+ein paar Beispielen beleuchten.
+
+Wir beginnen …
+… mit einem Kasten voller Originalteile
+und einem Bastler voller Ideale. Der Weg
+auf die schiefe Bahn ist ganz leicht: man
+möchte einen Spiegel, eine Antenne und
+einen Suchscheinwerfer am Führerhaus
+38443 oder 31140 und Konsorten haben.
+Tja, da sind keine Bohrungen und keine
+Zapfen vorgesehen. Kleben wäre eine
+Lösung, aber ein Loch hier oder dort hätte
+universelle Möglichkeiten.
+Oder der Zapfen eines Baustein 30 stört,
+und man findet heraus, dass es den
+zapfenlosen BS30 unter den Teilenummern
+35014 und 35001 gegeben hat, die aber
+nicht mehr lieferbar sind. Da könnte man
+auf die Idee verfallen, seinem am
+schlimmsten ausgeleierten Baustein 30 mit
+dem Bastelmesserchen ... – an dieser Stelle
+ist für eher zart besaitete Gemüter eine
+Schmerzgrenze erreicht. Bitte hinsetzen,
+denn es kommt noch „dicker“.
+
+Die fischerwerke tun’s ja auch!
+fischertechnik-Reifen in der Drehbank. Die
+Nabenflügel waren auch im Weg.
+
+Man kann sich darauf berufen, dass die
+fischerwerke auch nicht unschuldig sind.
+Im Baukasten u-t3 aus der Schulserie findet
+man eine Anleitung, aus dem Spurkranz
+mittels scharfem Messer eine Schaltscheibe
+
+zu machen. Nicht genug damit, findet sich
+im Buch ‚Hobby 3 – Band 2’ auf den
+Seiten 46/47 ein Zahnrad Z20, dem jeder
+zweite Zahn entfernt wurde, um es als
+Schaltrad zu verwenden – Dank an
+Schnaggels und Stefan Falk für diesen
+Hinweis. Dazu steht geschrieben: „Das
+zerstörte Zahnrad können Sie durch die
+fischertechnik-Zusatzpackung 04 ersetzen“.
+So so, hmm, hmm, „zerstört“. Darüber
+kann man diskutieren, denn wirklich
+zerstört wurde das Zahnrad ja nicht. Es
+wurde seiner ursprünglichen Funktion
+beraubt (ist nicht mehr als Zahnrad in
+einem gewöhnlichen Getriebe zu gebrauchen), aber es hat doch eine neue Funktion
+erhalten. Eine Funktion, in der es einen
+Nutzen erbringt, der mit keinem (seinerzeit) existierenden ft-Bauteil zu bewerkstelligen war.
+
+Weiter auf der schiefen Bahn:
+„Auto“-Modding
+Bauteile können im Spielgeschehen den
+einen oder anderen Schaden erleiden, der
+sie aber nicht zwangsläufig unbrauchbar
+machen muss. Beispiele sind:
+BS30 mit abgebrochenem Zapfen (siehe
+oben; manchmal braucht man solche
+Teile)
+Lochstreben 120 brechen leicht bei
+Überlast (und besonders die aus gelbem
+Material, wenn sie zu trocken und
+spröde geworden sind). Wenn sie an
+einem Ende brechen, entsteht daraus
+eine Lochstrebe 105, also eine Strebe
+mit sonst nicht erhältlicher Länge.
+
+Tipps & Tricks
+
+hohen Nutzen zu einem angemessenen,
+aber gehobenen Preis), und gerade die
+jetzige Elterngeneration musste seinerzeit
+jede Zubehörbox vom knappen Taschengeld bestreiten, so dass die Teile sprichwörtlich ‚lieb und teuer’ geworden sind.
+Diese emotionale Verbindung tritt noch
+stärker hervor, wenn anstelle eines bösen
+Unfalls nun die eigene Hand einem Bauteil
+ans Leder will.
+
+Keine Hemmungen!
+Ist man über einen bestimmten Punkt
+hinweg, kann man ins andere Extrem
+schlagen und es gibt kein Halten mehr. Auf
+das Messer folgen erst Säge und Bohrmaschine, dann Fräse und Drehbank, um
+die Bauteile zu bearbeiten. Am Ende
+werden lieber Teile verändert als dass man
+sich auf die Suche nach einer technischen
+Lösung macht, die ohne „Blutvergießen“
+auskommt. Aus dieser Zeit stammen die
+hier gezeigten Bausteine, denen die eine
+oder andere Kante mehr oder weniger weit
+entfernt wurde. Z. B. wird damit bewirkt,
+dass die Teile einer Lenkung ohne Anstoßen an Chassisträgern vorbei kommen
+(links ein BS5, rechts ein BS 5x15x30),
+siehe auch Abb. 2.
+
+
+zerbrochene BS15 mit zwei Zapfen,
+deren Innenleben ein interessantes neues
+Bauteil abgibt: einen Stahlstift mit zwei
+Zapfen, der sich sehr gut zur
+Befestigung der Power-Motoren eignet
+(weitere Beispiele hier und dort).
+
+Auch die S-Riegel waren beliebte Opfer:
+meistens ist nur der Griff im Weg, aber
+manchmal braucht man sie auch mit
+„Plattfuß“, damit sie in eine ft-Flachnut
+(etwa vom BS5) hineinpassen.
+
+So ein zerbrochenes Teil schmerzt natürlich. fischertechnik ist recht teuer (oh,
+politisch korrekt müsste man sagen: bietet
+
+Die Steigerung sind S-Riegel mit Plattfuß
+und gekappten „Zehen“, so dass sie z. B.
+mittig in die halbe Nut eines S-Winkelträ-
+
+
+
+
+gers geschoben werden können. Alle
+Varianten in Abb. 3 haben einmal einen
+besonderen Zweck erfüllt, aber ob das
+wirklich immer nötig war?
+
+
+Ein paar Highlights
+S-Riegeln mit Bohrungen und „Plattfüßen“
+
+Ein Hubgetriebe aus Riegelscheiben und
+Führungsplatte 32455 (Abb. 7)
+
+Beispiele aus wilden Zeiten
+Durchbohrte Achse als kraftvolle Seilwinde, Verstiften hält Teile zusammen,
+Anspitzen hilft beim „Einfädeln“,
+Getriebe kann man umbauen (Abb. 4).
+
+
+
+Flach gefeilte und gebohrte Achsen, das
+Differenzial kann mit der ft-Kette angetrieben werden (Abb. 5).
+
+Nur den Achsstummel im Vordergrund
+braucht man, um den XM-Motor am
+Stufengetriebe zu betreiben. Die umlaufende Nut sorgt fürs Einrasten. Rechts
+die Befestigung der Gehäuse mittels
+BS5 und V-Platte (Abb. 8).
+
+
+Mitte links das Z10 (Idee von Claus),
+dahinter eine in drei Stufen längenverstellbare Drehkupplung, rechts eine
+verstiftete Schnecke, deren Achse gegen
+Herausziehen aus dem Getriebe
+gesichert ist (Abb. 6)
+
+
+Mit der Laubsäge durchtrennte Platten,
+für Flugzeug-Tragflächen (Abb. 9)
+
+
+
+Tipps & Tricks
+
+Flachnabe mit angespitzten Griffen, als
+Schrittschaltwerk (Abb. 10)
+
+Links: Die Schneckenmutter ist keine
+mehr, das Differenzialrad 137196 passt
+sauber hinein. Rechts: Diese Schneckenmutter ist unverändert; das Differenzial-Antriebsrad 31414 ist von hinten
+plan gedreht und liegt flach auf dem
+Kugellager auf (Abb. 14).
+
+
+Zahnrad-Montagen, auf der Suche nach
+einem Schaltgetriebe in m0,5 (Abb. 11)
+
+Auszüge aus meinem
+Sündenregister
+BS15-Loch gekappt und ft-Differenzial
+ins Raster gebracht
+
+Stufengetrieb mit Stirnbohrung, zum
+Antrieb durch den XM-Motor (Abb. 12)
+
+Rollenbock 32085 angeschrägt – wegen
+Fahrwerksgeometrie
+S-Riegel mit gekapptem Plattfuß für
+halbe Flachnuten (hier im Gelenkwürfel)
+S-Riegel als Kabelhalter oder als Haken
+S-Riegel 6 geköpft, verhindert Überstrecken der Lenkklaue
+
+
+Lenkwürfel beschnitten für größeren
+Lenkeinschlag (Abb. 15)
+
+Kabelhalter aus S-Riegeln – diese Teile
+sollten ins ft-Programm aufgenommen
+werden (Abb. 13)
+
+
+Der geköpfte S-Riegel begrenzt den
+Knickwinkel beim Einsatz in einem
+Fahrwerk
+
+Riegelstein geköpft (Förderband)
+
+
+
+
+Baustein 7,5 mittig durchgesägt, sehr
+vielseitig, zum Beispiel für weit
+öffnende Türen (Abb. 16)
+
+Wenn man das Schlagwort „modding“ in
+der Bilderpool-Suche verwendet, trifft man
+alle diese Kandidaten.
+Die Dunkelziffer der heimlichen Teilemodder ist allerdings unbekannt.
+
+Für und Wider
+
+
+Hubzahnstange verbunden mit Strebenadapter (nebst Einblick in des Täters
+Psyche)
+Reifen 60 halbiert, für belastbare Radantriebe
+
+Es gibt noch weitere Täter!
+In die Öffentlichkeit getreten und namentlich bekannt sind
+Peter K: Riegelstein 32850 halbiert mit
+Kugellager 4x8x3
+quincym: M4-Gewinde auf Rastachse
+quincym: Ritzel aufgebohrt und Rastachse eingeklebt; Kardan für Direktmontage am S-Motor aufgebohrt
+Claus: Rast-Z10 verschlankt und neues
+Teil daraus erzeugt: Rastklemmbuchse
+(gezeigt an einem meiner Modelle)
+Arjen Neijsen/Ludger/TST: BS15-Loch
+abgesägt
+Triceratops: laut eigenem Geständnis
+(Beweismaterial nicht veröffentlicht)
+Thomas Püttmann: Rastkegelzahnrad in
+BS15-Loch versenkt
+C-Knobloch: die Laufschienen der
+Achterbahn sind stirnseitig gebohrt und
+verstiftet damit beim Verwinden kein
+Stoß entsteht
+
+
+Klar, man hat die Teile bezahlt und darf
+mit ihnen nach Belieben verfahren. Und
+fischertechnik selbst hat es ja auch getan.
+Wie dem auch sei, auf die Zeit der locker
+sitzenden Klingen folgt die Besinnung.
+Zum Einen sind ja aus den veränderten
+Teilen nun Spezialteile geworden, die man
+gesondert aufbewahren muss oder ständig
+beiseite räumen muss, wenn man Standardteile braucht. Schwerer wiegt der Umstand,
+dass kein anderer ein Modell nachbauen
+kann, ohne ebenfalls zum Werkzeug zu
+greifen. Gleiches gilt, wenn man ein
+Modell mehrfach aufbauen will (etwa
+Rennwagen für ein Autorennen) oder wenn
+das Modell mehrere dieser Teile braucht
+(z. B. in den Gondeln eines Riesenrads).
+Man möchte vielleicht auch den Wiederverkaufswert der Teile erhalten oder hat
+den Ehrgeiz, ein Problem mit Teilen aus
+der Schachtel zu lösen oder es zu lassen.
+Unterm Strich verläuft meine Grenzlinie
+mittlerweile genau mitten hindurch:
+Wenn es irgend geht, halte ich mich
+zurück, damit weniger Blut fließt (die
+ersten Schnitte macht immer das
+Taschenmesser...) und insbesondere,
+damit andere ein Modell auch ohne
+Werkstatt nachbauen können;
+Wenn ich aber meine, dass die Bearbeitung eines Teils einen Mehrnutzen
+gegenüber dem Original erbringt (etwa
+die Wandlung der S-Riegel zu KabelClipsen), dann gibt es kein Zurück.
+
+

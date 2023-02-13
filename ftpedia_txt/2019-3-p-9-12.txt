@@ -1,0 +1,172 @@
+
+Modell
+
+Modell
+
+Citroën Typ H
+Harald Steinhaus
+Die Karosserien von fischertechnik-Modellen real existierender Fahrzeuge erwecken nicht
+immer den Originaleindruck eines Lego-Modells – aber manchmal eben doch. Und wenn sich
+dann unter einer Haube mit hohem Wiedererkennungswert auch noch technische Kleinode
+verbergen, macht das fischertechniker-Herz kleine Sprünge.
+Den „Citroën Typ H“ oder „den HY“ kennt
+jeder. Bei fragenden, vornehmlich jungen
+Gesichtern muss man nur noch „dieser alte
+Transporter aus Wellblech“ oder „französische Gangsterfilme aus den 60ern“ oder
+„Louis de Funès“ dazu sagen, dann „klingelt“ es. Ja, es gibt schönere.
+Aber der Typ H hat innere Werte, auch
+wenn die Lärmkulisse und das Dreiganggetriebe nicht dazu zählen. Mit der üppigen
+Nutzlastkapazität von 1,8 Tonnen in einem
+großen und leicht zugänglichen Laderaum
+stellt er viele andere in den Schatten. Es gibt
+ihn in kurz, nicht ganz so kurz, etwas länger
+und so richtig lang. Die Aufbauten reichen
+
+von flacher Pritsche über Kasten und Mannschaftsbus bis zum Viehtransporter. Seit
+Jahren außer Produktion, hat der Typ H
+immer noch Fans unter Campern und
+Gemüsemarktbeschickern.
+Der Typ H spricht eine klare Formensprache: es gibt rund herum fast nur gerade
+Kanten und ebene Flächen. Das Wellblech
+wurde seinerzeit verbaut, weil es (a) nichts
+Besseres gab und (b) die Flächen dadurch
+steifer werden und weniger Materialstärke
+nötig ist. Diese Formen kann man mit
+fischertechnik besser nachbilden als irgendwelche geschwungenen.
+
+
+
+
+Das vorgestellte Modell wurde auf einem
+Streetfood-Festival gesichtet (Abb. 1). Ein
+bisschen vollmundig ist die Angebotsliste
+(siehe Beschriftungen rund herum, Abb. 2,
+3) schon, und es riecht da sicher interessant.
+
+Wenn auf den Bildern Teile schief sitzen
+oder wackeln, dann ist das natürlich nur der
+Originaltreue geschuldet. Das Fahrzeug hat
+folgende ‚Features‘:
+· Frontantrieb
+· Lenkung über Servo
+· Bluetooth-Fernbedienung
+· Gefederte Hinterachse mit Einzelradaufhängung
+· verstellbare Federung der Hinterachse
+· große Heckklappen mit niedriger Ladekante
+· Schiebetür auf der rechten Seite
+
+
+· Fahrer- und Beifahrertür sind als
+„Selbstmördertüren“ (‚suicide doors‘)
+hinten angeschlagen, so wie beim UrTyp H
+· Kabinenaufbau für einen ‚Food-Truck‘
+mit Theken links und hinten
+· Rücklicht, Frontlicht
+· Ledersitze
+· Innenbeleuchtung
+
+
+
+
+
+Modell
+
+Hinterachse
+
+Antrieb
+
+Die Hinterachse verwendet Einzelradaufhängung mit je einer Schraubenfeder. Zusätzlich gibt es einen Gummizug, der auf
+der Unterseite quer von links nach rechts
+verläuft und anschließend unterm Dach der
+Ladefläche nach vorn gespannt wird. Im
+Alkoven über den Vordersitzen befindet
+sich ein Motor, der über einen Flaschenzug
+(Abb. 5) diesen Gummizug spannt und
+damit das Fahrwerk an die aktuelle Nutzlast
+anpassen kann.
+
+Der Antrieb verwendet ein gemoddetes Teil
+von Andreas Tacke: Die Motorlagerung
+besteht aus einer Bodenplatte 30x90
+(32859), links und rechts gekürzt und mit
+einem neuen Loch für die Motorwelle
+versehen und rückseitig plan gefräst. Sie
+trägt auf der einen Seite den Motor und auf
+der anderen das Differenzial (Abb. 8).
+
+
+
+Klappen
+Die großen Klappen links und hinten
+werden mit fischertechnik-Streben gegen
+Herunterfallen gesichert. Dabei sorgen jeweils zwei ‚Statikadapter doppelt‘ (35975)
+dafür, dass die Streben nicht ungewollt zur
+falschen Seite hin einknicken. Abb. 6 zeigt
+zwei Varianten, mit denen man unterschiedliche Anstellwinkel der Heckklappe erhält.
+
+Alle vier Räder sind auf Freilaufnaben montiert. Die Vorderräder (Reifen 60, 37236)
+haben einen Zahnkranz, der zu den anderen
+fischertechnik-Teilen im Modul 1 kompatibel ist – hier wird das weiße Planetenkegelzahnrad (31412) zusammen mit dem Rastkegelzahnrad (35061) eingesetzt, um die
+Motorkraft nach zweimaliger Umlenkung
+um 90° auf die lenkbaren Räder zu übertragen.
+
+
+
+Die Lenkung ist in Abb. 8 überstreckt
+worden (das Auto liegt auf dem rechten Rad
+und drückt es in die Seite). Ein halbierter
+BS7,5 war nötig (je eine Hälfte als schlankes Achslager links und rechts), um einen
+hinreichend großen Einschlagwinkel möglich zu machen. Ein bisschen weißes Teflonband aus dem Klempnerzubehör sorgt
+für bessere Klemmung der Teile. Abb. 9
+
+
+
+zeigt den Platz, in dem der Akku baumelt.
+Er ist an der Achse befestigt, um die auch
+die Motorhaube schwenkt und die das
+Armaturenbrett trägt.
+
+
+
+Scharniere
+Die Scharniere aller Türen und Klappen
+bestehen aus einer Lenkwürfelklaue
+(35998) mit zwei ‚Hülsen mit Scheibe‘
+(35981) und einem Reedkontakthalter
+(Kabelschelle, 35969) als bewegliches Teil.
+Den Zusammenbau sieht man in der
+Bildergalerie des ft:c-Forums. Beim Aufbau mit einem fischertechnik-Scharnier
+liegt der Drehpunkt immer neben einer
+Säule. Die Anordnung mit der Lenkwürfelklaue hat den Vorteil, dass der Drehpunkt
+einer Tür mittig in eine Säule oder Strebe
+gelegt werden kann, d. h. man kann nach
+oben und unten weiter anbauen. Diesen
+Aufbau habe ich zuvor schon bei der ‚Ente‘
+(„Döschwo“ oder 2CV) verwendet. Der
+Nachteil ist ein Sprung im Raster um 7,5
+mm. Dafür kann man mit den leichten
+Statikteilen weiterarbeiten. Die Alternative
+mit dem fischertechnik-Scharnier (Abb. 10)
+bleibt im Raster, braucht aber Steine mit
+Nuten.
+
+
+Bei übermäßiger Kraftausübung gibt der
+Kabelhalter nach und das Scharnier fällt
+auseinander. Man kann es mit Hilfe einer
+Pinzette auch an seinem Einbauort wieder
+zusammensetzen: Pinzette über die beiden
+Hülsen+Scheiben schieben, vorne zusammenbiegen und den Kabelhalter über die
+Spitzen schieben. Dann die Pinzette mitsamt dem Kabelhalter zurückziehen, und
+voilà – der Kabelhalter sitzt wieder auf
+seinem Platz.
+
+
+Exotische Teile
+Die Motorhaube verwendet gleich sechs
+Mal die ‚BSB Spur N Grundplatte‘ (36093)
+– die gab es bei einem fischertechnik-Tag in
+Tumlingen frisch aus der Spritzgussmaschine. Auch die goldenen „Bretter“ der äußeren Thekenflächen sind Original-Platten
+15x45 aus der fischertechnik-Spritzgussmaschine, zum Anlass eines fischertechnikFanclub-Tags.
+
+

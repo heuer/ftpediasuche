@@ -1,0 +1,376 @@
+
+Mechanik
+
+Mechanik
+
+Nie mehr schief gewickelt
+Florian Bauer
+In diesem Beitrag geht es um verschiedene Seilführungs-Systeme mit fischertechnik.
+In diesem Beitrag werden fischertechnikModelle vorgestellt, mit denen man Fäden
+und Seile sauber aufwickeln kann:
+ Modell 1: Einlagige Seilführung mit
+fischertechnik-Schnecke
+ Modell 2: Auto-Reverse für Linearantrieb mit mechanischer Umschaltung
+ Modell 3: Seilführung für mehrlagiges
+Wickeln mit separatem elektromechanisch gesteuertem Seilführungs-Antrieb
+ Modell 4: Mehrlagige Seilführung mit
+Kreuzgewindespindel
+
+Einleitung
+Bei Kränen, Hub- und Containerbrücken
+kommen Winden für Seile zum Einsatz. Die
+Seile werden auf Motor betriebene Trommeln aufgewickelt.
+Für die meisten Fälle im Modellbau kommt
+es nicht darauf an, dass die Seile 100 %
+ordentlich aufgewickelt werden. In der
+realen Welt ist es aber wichtig, dass Seile
+sauber aufgewickelt werden, denn durch
+unordentliches Aufspulen kommt es zu
+größerer Beanspruchung von Seilen oder
+Kabeln und ungleichmäßiger Seilbelegung
+der Trommel pro Umdrehung, die sich mit
+steigender Zahl der „Fehlwicklungen“ verschlechtert. Dies ist vor allem dann problematisch, wenn mehrere Seile synchron
+gewickelt werden sollen.
+Ein anderes Einsatzgebiet ist die Wicklung
+von elektronischen Spulen, wo man eine
+möglichst gleichmäßige Wicklung benötigt.
+
+Es gibt verschiedene Ansätze um Seile
+ordentlich auf eine Winde aufzuwickeln:
+a) Wenn ein Seil in einem kleinen Winkel
+auf die Windentrommel aufläuft, legt es
+sich oft schon von selbst richtig an. Dies
+kann man beim Umspulen von Fäden
+von Nähgarn auf die Spule der Nähmaschine sehr gut beobachten.
+b) Für dickere Seile kommt in der Praxis
+die sog. LEBUS®-Rille zum Einsatz, ein
+Rillenmuster, das der Windentrommel
+eingeprägt ist. Die Breite der Rillen entspricht dem Durchmesser des aufzuwickelnden Seils. Von fischertechnik
+gab es die Seilwinden-Halbschalen mit
+der Artikelnummer 32086 (grau) bzw.
+32973 (rot), die dieses Prinzip realisieren.
+Kann man nicht sicherstellen, den Anlaufwinkel des Seils auf die Trommel in einem
+Bereich zwischen 0,25° und 1.5° zu halten,
+sollte man ein Seilführungs-System einsetzen, das das Seil entsprechend der Aufoder Abwicklung mitführt [3].
+
+Wickeln einlagiger Spulen
+In diesem Abschnitt wird eine einfache
+Seilführung für einlagige Wicklungen vorgestellt. Sie ist geeignet für Seil-Roboter
+(cable bots), bei denen es darauf ankommt,
+dass bei jeder Umdrehung der Windentrommel genau die gleiche Seillängenänderung
+erfolgt.
+
+
+
+
+sorgen dafür, dass die Winde an den Endpunkten der Seilführung abgeschaltet wird.
+
+wird von einem Getriebemotor angetrieben.
+Die Seilführung ist über einen fischertechnik-Schneckenantrieb realisiert, der über
+eine Zahnrad-Übersetzung 10:30 bewegt
+wird. Bei einer Umdrehung der Winde
+verschiebt sich der Läufer auf der Schnecke
+um 5/3 mm, was etwas mehr als eine Fadenbreite des gelben Fadens ist. Die Spule ist
+4 cm lang und wird nur einlagig mit 24
+Windungen gewickelt. Damit lässt sich eine
+Seillänge von 57 cm aufwickeln.
+
+Wickeln mehrlagiger Spulen
+In Fällen, in denen mehrlagige Wicklungen
+von Seilen, Kabeln, Schläuchen, Fäden oder
+Drähten gefordert sind, ist eine Seilführungs-Mechanik notwendig, bei der die
+Seilführungsrolle beim Erreichen der
+Spulen-Enden die Richtung umkehrt. Die
+
+Vorrichtung muss folgende Anforderungen
+erfüllen:
+1. Die Seilführung soll das Seil senkrecht
+auf die Windentrommel leiten, und zwar
+so, dass es gleichmäßig, ohne Lücke oder
+Überlappung gewickelt wird. Dazu muss
+sich die Seilführungsvorrichtung synchron zur Wicklung parallel zur Windenachse bewegen.
+2. Die Seilführung soll das Seil bei einer
+Umdrehung der Winde um eine Seilbreite nachführen.
+3. Die Wickelrichtung muss umgekehrt
+werden, wenn das Seil ein Ende der
+Winde erreicht.
+4. Wenn zwischen Auf- und Abspulen
+umgeschaltet wird, muss sich auch die
+Wickelrichtung umkehren.
+5. Der Zustand der Seilführungsrichtung
+darf beim Ausschalten nicht verloren
+gehen.
+
+
+Mechanik
+
+Motor abgeschaltet und kann durch Umpolen von S3 wieder in die andere Richtung gestartet werden.
+
+6. An den Umschaltpunkten sollte die Seilführung kraftschlüssig sein. Es soll
+keinen Totpunkt geben, an dem die Seilführung nicht greift.
+7. Nahe der Umkehrpunkte soll die Seilführung weitgehend linear arbeiten,
+sodass es nicht zu dichteren Aufwicklungen an den Enden kommt.
+
+schaltbares Getriebe mit Vor- und Rückwärtsgang angetrieben wird. Der Läufer
+bewegt bei seiner Fahrt den Hebel eines
+bistabilen Feder-Umschalt-Mechanismus,
+der jeweils an den Wendepunkten umschnappt, die Schaltachse (unten) verschiebt und dadurch zwischen Vor- und
+Rückwärtsgang umschaltet.
+
+Mechanische Wende-Vorrichtung
+
+Nachteile dieses Modells:
+
+Die rein mechanische Realisierung einer
+Umschalt-Vorrichtung für eine Seilführung
+ist eine kleine Herausforderung.
+
+Die Umschaltung erfolgt nicht instantan, da
+der Schaltmechanismus eine gewisse Zeit
+(ca. 0,5 – 1 s) braucht. Während dieser Zeit
+ist die Seilführung „ausgekoppelt“, was
+Bedingung 6 verletzt.
+
+Eine Idee besteht darin, jeweils an den
+Wendepunkten den Gang mittels eines
+schaltbaren Zwischenzahnrades zu reversieren. Abb. 3 zeigt ein Modell für eine
+mechanische Umkehrvorrichtung
+mit
+einem federbetriebenen Umschalt-Mechanismus.
+Das Modell besteht aus einer fischertechnik-Schnecke mit Läufer, der über ein
+
+Am problematischsten ist aber die Verletzung der Bedingung 3: Wird zwischen
+Auf- und Abwicklung umgeschaltet, kehrt
+sich zwar die Seilführungsrichtung um,
+jedoch befindet sich dann die Schaltachse in
+der falschen Position, um noch geschaltet
+zu werden.
+
+
+
+Man müsste also bei der Umkehrung des
+Windenantriebs auch die „Auslöserichtung“ des Schnappmechanismus umkehren.
+Dafür ist mir noch keine gute Idee
+gekommen und ich wäre an Vorschlägen
+der Leserschaft interessiert.
+Ein Seilführungssystem mit dem vorgestellten Modell wäre also nur für eine einlagige Aufwicklung geeignet.
+
+Elektromechanische Lösung
+mit „Hilfsmotor“
+Im Netz gibt es einige interessante und nützliche Modelle von Elektronik-Bastlern, die
+Mikrocontroller-gesteuerte Spulmaschinen
+für mehrlagige Spulen mit fischertechnik
+gebaut haben [4, 5]. In diesen Modellen gibt
+es neben dem Winden-Antrieb einen
+weiteren für die Seil- bzw. Drahtführung.
+Die Modelle arbeiten computergesteuert
+und erlauben deshalb eine flexible Anpassung der Spulenparameter. Im fischertechnik-Forum wurde kürzlich auch ein
+beeindruckendes Modell eines Containerbrückenkrans vorgestellt, in dem eine Seilführung mit Hilfsmotor verwendet wird [8].
+Im Folgenden beschreibe ich eine Abwandlung von Modell 1 mit einem zusätzlichen
+„Hilfsantrieb“ für die Seilführung (siehe
+
+der gleiche wie bei Modell 1. Es müssen
+lediglich die Kette entfernt und die Seilführungsschnecke mit einem Mini-Motor
+angetrieben werden.
+Die Umschaltung der Seilführung erfolgt
+über End-Taster, die jeweils beim Erreichen
+der Wendepunkte eine Relais-Schaltung
+umschalten (toggeln). Da der Winden- und
+der Seilführungsmotor von der gleichen
+Spannungsquelle (Umot) versorgt werden,
+fahren beide Antriebe immer synchron. Das
+Geschwindigkeitsverhältnis der beiden
+Motoren muss durch Getriebe so angepasst
+werden, dass der Vorschub das Seil dicht an
+dicht aufwickelt.
+Der Motor für die Seilführung wird über die
+Relais-Schaltung umgepolt, wenn ein EndTaster ausgelöst wird. Beide End-Taster
+sind parallelgeschaltet.
+Die Schaltung hat folgende Elemente:
+ M1: Winden-Motor
+ M2: Seilführungs-Motor
+ S1, S2: parallel geschaltete Taster für die
+Wende-Erkennung
+ R1: Persistentes RS-Relais (Schrack
+RT424F-06), Schaltspannung 5 V
+ R2: fischertechnik-Relais als UNDGlied für R und Q
+
+
+
+Mechanik
+
+
+ R3: fischertechnik-Relais als UNDGlied für S und ~Q
+ R4: fischertechnik-Relais für die Umpolung des Seilführungsmotors
+R1 wirkt mit der Beschaltung über R2 und
+R3 als persistentes T-Flip-Flop [9] und wird
+beim Drücken eines Tasters durch einen
+negativen Stromimpuls über den Kondensator umgeschaltet. Durch die magnetische
+Persistierung des Relais’ wird die Anforderung 5 sichergestellt.
+
+Nicht eingezeichnet ist der GleichrichterBaustein für die Spannungsversorgung der
+Relais.
+
+Der Königsweg – Seilführung
+mit Kreuzgewindespindel
+Sowohl die mechanische als auch die
+elektromechanische Lösung erfordern einen
+erheblichen erheblichen Aufwand und sind
+fehleranfällig. Daher wäre eine robuste, rein
+mechanische Realisierung von Vorteil.
+
+
+
+
+
+Reversier-Spindel (Abb. 6). In Deutschland
+fertigt zum Beispiel die Firma Bornemann
+Gewindetechnik solche Spindeln [6].
+
+(mit freundlicher Genehmigung der Fa.
+Bornemann Gewindetechnik)
+
+Tatsächlich gibt es eine solche Lösung, die
+inzwischen zum Industriestandard geworden ist: Die Kreuzgewindespindel oder
+
+Das Prinzip der Kreuzgewindespindel ist
+schnell erklärt. Auf einer Welle sind zwei
+gegenläufige Gewinde eingefräst, die an
+beiden Enden ineinander übergehen. Der
+sich entlang der Spindel bewegende Läufer,
+der das Seil führt, enthält einen Gleitstein,
+der in die Gewindespuren greift und sich
+immer nur in einer Gewindespur bewegen
+kann. Er wechselt an den Wendepunkten
+die Richtung. Die Wenden müssen so
+beschaffen sein, dass sich der Gleitstein
+ohne Verklemmung in den Wendebereichen
+drehen kann, um in die gegenläufige
+
+
+Mechanik
+
+Gewindespur zu kommen. Es muss auf
+jeden Fall sichergestellt sein, dass der Gleitstein nicht auf dem Weg zur Wende in die
+falsche Spur rutschen kann, um eine ungewollte Umkehrung zu vermeiden.
+
+
+Jan (User juh aus der fischertechnik-Community) hat die Herausforderung angenommen und mit FreeCAD ein Set von drei
+verschiedenen Teilen für eine modulare
+fischertechnik-Kreuzgewindespindel mit
+Gleitstein entworfen. Die Teile lassen sich
+auf einem 3D-Filament-Drucker mit geeigneter Kühlung ohne Support in den Gewindespuren in guter Qualität drucken (siehe
+freundlicher Genehmigung der Fa. Bornemann
+Gewindetechnik)
+
+Solche Kreuzgewindespindeln sind im Allgemeinen Maßanfertigungen. Wäre es möglich, mit 3D-Druck solche Spindeln für
+fischertechnik herzustellen? Im fischertechnik-Forum wurde diese Frage in einem
+kleinen inoffiziellen Konstruktionswettbewerb beantwortet.
+
+(Foto: Jan, User juh aus der fischertechnikcommunity)
+
+Läufer mit dem Gleitstein. Die STL-Dateien für den 3D-Druck hat Jan freundlicherweise auf Printables publiziert [7].
+fischertechnik-Kreuzgewindespindel
+
+In Abb. 8 sieht man mein erstes FreeCADModell einer Kreuzgewindespindel, Abb. 9
+den zugehörigen Gleitstein. Man erkennt
+die gegenläufigen Spuren.
+
+In Abb. 13 ist die Kreuzgewindespindel im
+Einsatz bei einer Spulvorrichtung zu sehen.
+Das längere Mittelteil, mit dem eine Verlängerung der Spule um 3 cm möglich wäre,
+kommt bei diesem Modell nicht zum Einsatz.
+
+
+
+Zwischen Antrieb der Seilwinde und der
+Seilführungsachse befindet sich ein
+Getriebe mit einer Übersetzung von zweimal 10 : 30, das den Hub der Kreuzgewindespindel an den Wickelvorschub
+anpasst.
+
+eines Hilfsmotors leicht einstellen kann,
+was bei einer Kreuzgewindespindel nicht so
+ohne Weiteres geht.
+
+Mit der Kreuzgewindespindel werden die
+oben genannten Anforderungen für eine
+Seilführung mit geringem Bauteilaufwand
+automatisch erfüllt. Nur bei Forderung 7
+muss wegen der Glättung der Wenden ein
+kleiner Abstrich gemacht werden. Da keine
+zusätzlichen Motoren und Steuerungen
+notwendig sind, ist die Kreuzgewindespindel eine robuste und zuverlässige Wahl
+für die Lösung der Seilspul-Aufgabe.
+Lösungsvarianten mit Einsatz eines zweiten
+Elektromotors für die Seilführung können
+aber trotzdem interessant sein, wenn man
+keine Kreuzgewindespindel hat.
+Ein weiterer Vorteil ist, dass man Spuldichte und Wickelbereich bei Verwendung
+
+der Fa. Bornemann Gewindetechnik, vor einer
+Schiffswinde mit Kreuzgewindespindeln für die
+Seilführung (mit freundlicher Genehmigung
+der Fa. Bornemann Gewindetechnik)
+
+(Foto: Jan, User juh aus der fischertechnik-community)
+
+
+Mechanik
+
+Wer Zugang zu einem 3D-Drucker hat,
+kann die Spindel drucken und ausprobieren.
+Auf jeden Fall zeigt sich hier wieder, wie
+man durch gezielte Entwicklung und den
+3D-Druck von Spezialteilen das fischertechnik-Ökosystem erweitern kann.
+
+[5]
+
+Oliver (User olli371): Fischertechnik
+Spulenwickelmaschine. Im RadioBastler-Forum, 2019.
+
+[6]
+
+Bornemann Gewindetechnik GmbH
+& Co. KG: Kreuzgewinde / Kreuzleitspindeln.
+
+Quellen
+
+[7]
+
+Jan (User juh der fischertechnikCommunty): Self-reversing screw for
+fischertechnik / Umkehrspindel für
+fischertechnik. Auf Printables, 2022,
+mit STL-Dateien für das Teileset.
+
+[8]
+
+User Pinot der fischertechnikCommunity: Containerbruecke &
+Spreader. Im fischertechnikCommunity-Forum, 2022.
+
+[9]
+
+GeeksforGeeks: Conversion of S-R
+Flip-Flop into T Flip-Flop. Auf
+geeksforgeeks.org, 2020.
+
+[1]
+
+Seilwinden-Halbschalen im
+fischertechnik-Forum
+
+[2]
+
+Wikipedia: Seilspul-Technologie.
+
+[3]
+
+LEBUS International Engineers
+GmbH: Die Lebus®-Kreuzgewindespindel.
+
+[4]
+
+Thomas Kaltenbrunner: fischertechnik Spulen-Wickelmaschine. Auf
+YouTube, 2015.
+
+
+

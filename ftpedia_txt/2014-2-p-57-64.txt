@@ -1,0 +1,742 @@
+
+Computing
+
+Computing
+
+I²C mit dem TX – Teil 10: Kompass-Sensoren
+Dirk Fox
+Inzwischen haben wir einige I²C-Sensoren vorgestellt, die sich direkt an den TX anschließen
+und mit Robo Pro nutzen lassen – und spannende Einsatzmöglichkeiten eröffnen. Ein echter
+„Klassiker“ fehlte bisher in der Reihe: der Kompass-Sensor.
+
+Hintergrund
+Für viele Anwendungen der Robotik wird
+eine möglichst genaue Richtungsangabe
+benötigt, damit sich beispielsweise ein
+Roboter in unbekanntem Gelände oder
+zwischen Hindernissen hindurch in Richtung eines Ziels bewegen kann. Zwar
+liefert auch ein GPS-Sensor, wie der, den
+wir in Teil 6 unserer I²C-Serie vorgestellt
+haben [1], Richtungsinformationen –
+jedoch sind die nicht besonders genau. Mit
+einem guten Kompass-Sensor lässt sich die
+GPS-Navigation erheblich verbessern –
+dazu mehr in einem eigenen Beitrag.
+Die heute verbreiteten Kompass-Sensoren
+bestimmen die Bewegungsrichtung wie
+eine Magnetnadel anhand des Magnetfelds
+der Erde. Sie liefern die Abweichung von
+der korrekten Nord-Süd-Ausrichtung in der
+Regel entsprechend der klassischen Kompassrose als einen Wert zwischen 0 und
+360°.
+Bei der Nutzung von Kompass-Sensoren
+ist zu beachten, dass sie sich wie die Kompassnadel nicht an den geographischen,
+sondern an den magnetischen Polen ausrichten (Deklination [2]). Außerdem kann
+die Richtungsangabe durch Magnetfelder
+oder metallene Gegenstände in Sensornähe
+verfälscht sein – das sollte man bei der
+Konstruktion eines Modells berücksichtigen. Bei einigen Sensoren kann man
+das durch eine Kalibrierung ausgleichen.
+
+Inzwischen bieten verschiedene Hersteller
+Kompass-Sensoren mit I²C-Schnittstelle
+an. Im Robotik-Modellbau sind Sensoren
+von Honeywell und Devantech sehr verbreitet, daher stellen wir im Folgenden
+zwei Kompass-Sensoren dieser beiden
+Hersteller vor.
+
+HMC6352
+Die amerikanische Firma Honeywell bietet
+zahlreiche Kompass-Sensoren für industrielle Anwendungen. Einige dieser Sensoren werden u. a. von Sparkfun anschlussfertig als 5 V-I²C-Modul geliefert, wie der
+2-Achs-Kompass-Sensor
+HMC6352.
+Bestellen kann man ihn für 30-35 € z. B.
+bei Watterott oder EXP (Abb. 1).
+
+
+Der Sensor verträgt Betriebsspannungen
+zwischen 2,7 und 5,2 V. Das ermöglicht
+
+
+
+
+einen direkten Anschluss an den TX ohne
+Level-Shifting. Der Sensor hat die folgenden Leistungsmerkmale:
+
+Zwischen den Betriebsarten kann im laufenden Betrieb gewechselt werden, indem
+der Wert des Registers geändert wird.
+
+· Stromverbrauch: 2-10 mA (bei 5 V)
+
+Beim Power Up wird ein voreingestellter
+Wert aus dem EEPROM (s. u.) ausgelesen
+und verwendet. Die Betriebsarten sind:
+
+· Update-Rate: 1-20 Hz (variabel)
+· Auflösung: 0,5°
+· Genauigkeit: 2,5° (mittlerer quadratischer Fehler)
+· Mittelwertbildung: 0 bis 16 Messungen
+(einstellbar, voreingesellt: 4)
+· Übertragung: I²C Standard Mode (100
+kHz)
+· Adressbereich: 0x05 bis 0x7B (voreingestellt: 0x21)
+Die voreingestellte I²C-Adresse des Sensors ist 0x21 (7 bit). Die Platine hat die
+Maße 1,5 x 1,5 cm und passt damit sogar
+genau ins ft-Raster. Die Reihenfolge der
+Pins des Sensor-Boards entspricht der des
+TX-EXT 2-Anschlusses (Abb. 2).
+
+· der Standby Mode (Operational Mode =
+0, Voreinstellung), bei dem KompassMessungen nach einem Get-Data-Kommando (s. u.) durchgeführt werden;
+· der Query Mode (Operational Mode =
+1), bei dem nur ein initiales Get-DataKommando erforderlich ist, damit nach
+jedem Auslesen der Daten eine neue
+Messung veranlasst wird, dadurch sinkt
+die Antwortzeit erheblich; und
+· der Continuous Mode (Operational
+Mode = 2), bei dem der Sensor entsprechend der ebenfalls im Operational
+Mode Register (s. u.) konfigurierten
+Messrate die Richtungsbestimmung
+durchführt und den Messwert bei einem
+Lesebefehl automatisch bereitstellt –
+ohne vorausgegangenes Get-Data-Kommando.
+In Bit 5 und Bit 6 des Operational Mode
+Register wird die Messfrequenz des Continuous Mode gewählt:
+· 1 Hz = 0,
+· 5 Hz = 1,
+
+
+Der in ft:pedia 4/2013 [4] vorgestellte
+„Universal-Adapter“ kann daher mit dem
+Board ohne eine Veränderung der Kontaktreihenfolge verbunden werden.
+Betriebsarten
+Der HMC6352 unterstützt drei Betriebsarten (Operational Modes), die im Operational Mode Register (RAM-Register
+0x74, Bit 0 und Bit 1) eingestellt werden.
+
+
+· 10 Hz = 2 oder
+· 20 Hz = 3.
+Durch das Setzen von Bit 4 kann ein periodischer Reset eingestellt werden: Dann
+wird der Sensor regelmäßig nach wenigen
+Minuten zurückgesetzt, um Fehler, die
+z. B. auf Temperaturänderungen oder die
+Erwärmung des Sensors im Betrieb
+zurückzuführen sind, zu korrigieren.
+Tabelle 1 fasst die im Operational Mode
+Register möglichen Einstellungen zusammen.
+
+
+Computing
+
+liert, bevor das Ergebnis ausgegeben
+wird.
+
+0x74
+
+Betriebsart
+
+0x00
+
+Standby Mode
+
+0x01
+
+Query Mode
+
+0x02
+
+Continuous Mode, 1 Hz
+
+0x12
+
+… with periodic reset
+
+0x22
+
+Continuous Mode, 5 Hz
+
+Kommandos
+
+0x32
+
+… with periodic reset
+
+0x42
+
+Continuous Mode, 10 Hz
+
+0x52
+
+… with periodic reset
+
+0x62
+
+Continuous Mode, 20 Hz
+
+Befehle an den Sensor werden nicht in ein
+Befehlsregister geschrieben, sondern direkt
+mit einem Schreibbefehl an den Sensor
+übermittelt. Die folgenden Kommandos
+sind im Datenblatt dokumentiert [3]:
+
+0x72
+
+… with periodic reset
+
+Tab. 1: Operational Mode Register 0x74
+
+Ausgabeformate
+Das Ergebnis einer Messung kann der
+Kompass-Sensor in fünf unterschiedlichen
+Formaten ausgeben. Das Output-Format ist
+im Output Data Mode Register (RAMRegister 0x4E) festgelegt (Tab. 2):
+
+Nach jedem Power Up ist der KompassSensor im Heading Mode; mit einem
+RAM-Schreibbefehl (s. u.) kann der Mode
+im Betrieb gewechselt werden.
+
+Wert
+
+Kommando
+
+0x41
+
+Get Data: Calculate Heading
+
+0x43
+
+Enter User Calibration Mode
+
+0x45
+
+Exit User Calibration Mode
+
+0x47
+
+Write to RAM Register
+
+0x4C
+
+Safe Op mode to EEPROM
+
+0x4F
+
+Update Bridge Offset
+
+0x4E
+
+Ausgabeformat
+
+0x53
+
+Enter Sleep Mode (sleep)
+
+0x00
+
+Heading Mode
+
+0x57
+
+Exit Sleep Mode (wakeup)
+
+0x01
+
+Raw Magnetometer X Mode
+
+0x67
+
+Read from RAM Register
+
+0x02
+
+Raw Magnetometer Y Mode
+
+0x72
+
+Read from EEPROM
+
+0x03
+
+Magnetometer X Mode
+
+0x77
+
+Write to EEPROM
+
+0x04
+
+Magnetometer Y Mode
+
+Tab. 2: Output Mode Register 0x4E
+
+· im Heading Mode wird die Abweichung
+des Kompass-Sensors von einer exakten
+Nord-Süd-Ausrichtung als ZehntelGrad-Wert (0-3599) geliefert (12 Bit in
+einem 16-bit-Wert; Voreinstellung);
+· im Raw Magnetometer X bzw. Y Mode
+wird die Ausgabe des AD-Wandlers als
+10-bit-Zweierkomplement geliefert;
+· im Magnetometer X bzw. Y Mode wird
+die Ausgabe des AD-Wandlers mit dem
+Kalibrierungs-Offset versehen und ska-
+
+Tab. 3: Kommandos des HMC6352
+
+Richtungsbestimmung (Heading)
+Im Standby Mode (s. o.) veranlasst das
+Kommando 0x41 den Sensor, die Abweichung von einer exakten Nord-Süd-Ausrichtung zu bestimmen und – nach ca. 6 ms
+– als 16-bit-Wert zurückzuliefern. In
+welchem Format das Messergebnis geliefert wird, hängt von der Wahl im Output
+Mode Register ab.
+Im Query Mode und im Continuous Mode
+kann der Mess-Befehl entfallen und der
+Zwei-Byte-Wert direkt ausgelesen werden
+(Abb. 3). Da die Messung automatisch
+direkt nach einem Auslesekommando bzw.
+
+
+
+in einem festen Takt vorgenommen wird,
+muss nicht auf das Messergebnis gewartet
+werden; das beschleunigt die Abfrage.
+
+Stromspar-Modus
+Mit dem Befehl 0x53 kann der Sensor in
+einen Strom sparenden „Schlafmodus“
+versetzt werden. Dieser Schlaf-Modus ist
+non-operational, d. h. vor der Aktivierung
+einer Betriebsart muss der Sensor mit dem
+Befehl 0x57 erst wieder aufgeweckt
+werden (0,1 ms Verzögerung).
+Set/Reset
+
+Kompass-Sensors HMC6352
+
+Auf der Platine ist die korrekte Nord-SüdAusrichtung des Sensors durch ein „N“
+und einen Pfeil gekennzeichnet (Abb. 1).
+Kalibierung
+Der Sensor wird bereits kalibriert geliefert
+und muss normalerweise nicht erneut kalibriert werden. Sollte doch eine Kalibrierung erforderlich sein, um z. B. in einem
+speziellen Modell störende (feste) Magnetfelder oder Metallgegenstände in Sensornähe bei der Richtungsbestimmung zu
+berücksichtigen, kann mit dem Befehl
+0x43 der User Calibration Mode gestartet
+werden.
+Anschließend muss der Sensor mit gleichmäßiger Geschwindigkeit – möglichst
+zweimal innerhalb von 20 Sekunden – um
+360° gedreht werden. Nach frühestens
+sechs Sekunden und spätestens drei Minuten sollte der Kalibrierungs-Modus mit
+dem Befehl 0x45 wieder verlassen werden.
+Daraufhin werden die MagnetometerOffsets und die Skalierungsfaktoren aktualisiert. Die Magnetometer-Offsets werden
+in die EEPROM-Register 0x01 bis 0x04
+geschrieben und beim nächsten Power Up
+ins RAM kopiert. Die Berechnung selbst
+benötigt etwa 14 ms.
+
+
+Die Set/Reset-Funktion berechnet OffsetWerte zum Ausgleich von thermischen
+Änderungen oder (permanenten) störenden
+Magnetfeldern, die als Bridge Offsets
+gespeichert und bei der Bestimmung der
+Richtung zu den X/Y Offsets hinzuaddiert
+werden.
+Die Funktion kann über Bit 4 des Operational Mode Register automatisch (regelmäßig nach einigen Minuten) aktiviert oder
+über den Befehl 0x4F (Update Bridge
+Offsets) direkt aufgerufen werden.
+EEPROM-Register
+Der Sensor verfügt über 9 Byte-Register
+im EEPROM, in denen Voreinstellungen
+wie z. B. die I²C-Adresse, die DefaultBetriebsart oder die Versionsnummer der
+Firmware persistent gespeichert sind
+(Tab. 4). Diese Werte werden bei Power
+Up in den RAM-Bereich des Sensors
+kopiert.
+Register Inhalt
+0x00
+
+I²C Slave Address
+(8 bit, default: 0x42)
+
+0x01-02
+
+X Offset
+
+0x03-04
+
+Y Offset
+
+0x05
+
+Time Delay
+(0-255 ms; default: 0x01)
+
+0x06
+
+Summed Measurements
+(0-16; default: 0x04)
+
+0x07
+
+Software Version
+
+
+Computing
+
+Register Inhalt
+
+Time Delay
+
+0x08
+
+Mit dem Time Delay Register 0x05 des
+EEPROMs kann eine Verzögerung
+zwischen Messbefehl und -ausführung in
+ms vorgegeben werden (1-255). Der werkseitig voreingestellte Wert 0x01 steht für
+„keine Verzögerung“. Wird der Wert verändert, ist ein Power Up des Sensors erforderlich, damit die Einstellung aktiv wird.
+
+Operational Mode
+(default: 0x00)
+Tab. 4: EEPROM-Register
+
+Die Register des EEPROMs können mit
+dem Kommando 0x77 direkt überschrieben
+werden: Auf den Schreibbefehl müssen die
+Adresse des EEPROM-Registers (0x000x08, Tab. 4) und der Bytewert folgen, der
+in dieses Register geschrieben werden soll.
+Geänderte Parameter in den EEPROMRegistern werden allerdings erst beim
+nächsten Power Up aktiv.
+I²C-Adresse
+Die voreingestellte 7-bit-I²C-Adresse 0x21
+(als 8-bit-Wert 0x42) des Sensors, die in
+Register 0x00 des EEPROMs gespeichert
+ist, kann mit dem Befehl 0x77 gefolgt von
+der EEPROM-Adresse 0x00 und der
+gewünschten Sensor-Adresse (8-bit-Wert!)
+durch eine I²C-Adresse von 0x05 bis 0x7B
+(7-bit) ersetzt werden. Die Adressänderung
+wird beim nächsten Power Up wirksam.
+Damit können theoretisch 119 HMC6352
+ohne Multiplexer [5] an demselben Bus
+getrennt adressiert werden. In jedem Fall
+lassen sich durch diese große Zahl einstellbarer Adressen Kollisionen mit anderen
+I²C-Sensoren auf dem Bus ausschließen.
+Hat man die Adresse geändert, sollte man
+sie sich tunlichst notieren – sonst muss
+man, wenn man sie vergessen hat, alle
+möglichen Adressen ausprobieren. Das ist
+zumindest mit RoboPro sehr mühsam, da
+die Adresse nicht als Parameter an einen
+Lesebefehl übergeben werden kann.
+X-/Y-Offset
+Die X- und Y-Offsets sind Korrekturwerte,
+die bei der Kalibrierung bestimmt und zu
+den vom Kompass-Sensor gelieferten RohDaten addiert werden. Sie werden beim
+Power Up ins RAM kopiert. Häufig sind
+beide Werte = 0.
+
+Mittelwertbildung
+Um Schwankungen bei den Messwerten
+abzuschwächen wird nach der werksseitigen Voreinstellung der Ausgabewert als
+Mittelwert aus den letzten vier Messwerten
+gebildet.
+Im Register 0x06 (Summed Measurements)
+kann die Zahl der für die Mittelwertberechnung verwendeten Messwerte von 0x00
+(keine Mittelwertbildung) bis 0x10 (Mittelwert aus 16 Messwerten) vorgegeben
+werden. Eine Änderung dieser Einstellung
+wird erst beim nächsten Power Up aktiv.
+Firmware-Version
+Aus Register 0x07 kann die aktuelle Firmware-Version des Sensors ausgelesen
+werden. Mein Sensor liefert den Wert 6.
+Robo Pro-Treiber
+Für die Kompass-Sensoren HMC5843 und
+HMC6352 von Honeywell sind bereits
+Treiber in der RoboPro-Bibliothek enthalten. Der von Rei Vilo entwickelte Treiber
+HMC6352 beschränkt sich auf das Auslesen der Kompass-Richtung und verwendet
+– vermutlich irrtümlich – statt der voreingestellten I²C-Adresse des Sensors (0x21)
+die Adresse 0x18; er funktioniert daher erst
+nach einer Adressänderung. Ein Treiber,
+der den gesamten Befehlsumfang des
+HMC6352 zugänglich macht, kann im
+Download-Bereich der ft:c heruntergeladen
+werden.
+Wer den Sensor in C/C++ nutzen möchte,
+dem sei die Bibliothek in [6] empfohlen.
+
+
+
+CMPS10
+Hauptnachteil des HMC6352 ist der starke
+Fehler bei Neigung: Schon eine Abweichung von einem Grad von einer exakt
+horizontalen Lage kann einen Richtungsfehler von bis zu zwei Grad verursachen
+[3]. Daher eignet er sich weniger für ein
+mobiles Modell wie bspw. ein Fahrzeug.
+Neuere Kompass-Sensoren sind zusätzlich
+mit Beschleunigungssensoren ausgestattet,
+die die Neigung des Sensors in X- und YRichtung bestimmen und neigungsbedingte
+Fehler automatisch korrigieren. Wertet
+man die Neigungsdaten aus, eröffnen sich
+zudem weitere Einsatzmöglichkeiten.
+Einer dieser besonders leistungsfähigen
+Sensoren ist der CMPS10 von Devantech,
+erhältlich z. B. bei EXP, NoDNA, ManuSystems oder roboter-teile.de für etwa 30 €
+(Abb. 3).
+5V
+SDA
+SCL
+GND
+
+Auch dieser Sensor verträgt eine Betriebsspannung von 3,3 bis 5 V und lässt sich
+direkt an den EXT2-Ausgang des TX anschließen.
+Die Platine des CMPS10 liegt mit 2,4 x 1,8
+cm leider nicht im ft-Raster; auch sind die
+beiden Löcher in der Platine zu schmal
+z. B. für eine Rastachse 20 (31690) oder
+einen
+Verbindungsstopfen
+(32316).
+Immerhin lässt er sich in zwei Winkelträger 30 (36299) ‚einpacken’.
+Ansprechbar ist der Sensor unter der voreingestellten I²C-Adresse 0x60. Über das
+Command-Register können alternativ die
+I²C-Adressen
+0x61-0x67
+eingestellt
+werden. Die eingestellte Adresse wird
+beim Einschalten der Stromversorgung
+durch ein langes und – entsprechend der
+letzten Stelle der Adresse – n kurze Signale
+der roten LED angezeigt. Bei diesem
+Sensor darf man eine geänderte Adresse
+daher getrost auch mal vergessen.
+Register
+Der Sensor verfügt über 23 Byte-Register,
+die via I²C-Kommando ausgelesen werden
+können [7].
+Register Inhalt
+0x00
+
+Firmware Version
+
+0x01
+
+Compass Bearing
+(0…255)
+
+0x02-03
+
+Compass Bearing, 16 bit
+(0…359,9°)
+
+0x04
+
+Pitch Angle (-85…85)
+
+0x05
+
+Roll Angle (-85…85)
+
+· Update-Rate: 75 Hz (fest)
+
+0x06-09
+
+Unused
+
+· Auflösung: 0,1°
+
+0x0A-0F
+
+Roh-Werte Magnetometer
+(X-/Y-/Z-Achse, je 16 bit)
+
+0x10-15
+
+Roh-Werte Accelerometer
+(X-/Y-/Z-Achse, je 16 bit)
+
+0x16
+
+Command Register
+
+N
+
+
+Seine Leistungsmerkmale:
+· Stromverbrauch: dauerhaft 25 mA (kein
+‚Stromspar-Mode’)
+
+· Genauigkeit: 0,5 %
+· Mittelwertbildung: 45 Messungen (fest)
+· Übertragung: I²C Fast Mode (400 kHz)
+
+Tab. 3: Sensor-Register
+
+Firmware Version
+Der von mir verwendete Sensor liefert bei
+Auslesen des Registers 0x00 die FirmwareVersion 8 zurück.
+Compass Bearing
+Der Kompass-Sensor liefert die Abweichung von einer exakten Nord-Süd-Ausrichtung des Sensors in den Registern 0x02
+und 0x03 als (positiven) 16 bit-Wert in
+Zehntelgrad (0 bis 3599), also auf eine
+Nachkommastelle genau zurück. Dem
+Register 0x01 kann man eine gröbere Auflösung entnehmen: Der 8-bit-Wert ist ein
+Näherungswert, der die 360° in 256 Stufen
+misst. Aus ihm gewinnt man die Gradzahl
+durch Umrechnung.
+Die beiden Werte werden als Mittelwert
+aus 45 Messungen bei einer Messfrequenz
+von 75 Hz gebildet. Damit werden einzelne
+Messfehler herausgemittelt. Der Preis:
+Eine Veränderung der Sensorlage wird erst
+nach 0,64 sec wirksam, der Sensor reagiert
+also relativ langsam.
+Pitch und Roll
+Die Neigung in X- (Pitch Angle) und YRichtung (Roll Angle) in Grad liefert der
+Sensor als vorzeichenbehafteten Byte-Wert
+zurück. Dabei wird ein Bereich von -85°
+bis +85° abgedeckt. Die Werte können den
+Registern 0x04 und 0x05 entnommen
+werden.
+Rohdaten
+Die Rohdaten des Magnetometers in X-,
+Y- und Z-Richtung sowie die des 3DBeschleunigungssensors können als 16-bitWerte aus den Registern 0x0A-0x0F bzw.
+0x10 bis 0x15 ausgelesen werden.
+Der Zugriff auf die Rohdaten ermöglicht –
+unter Inkaufnahme von Mess-Ausreißern –
+eine schnellere Reaktion auf Richtungsänderungen, da die Werte bei einer Messfrequenz von 75 Hz alle 13,3 ms aktualisiert werden. Außerdem erlauben sie die
+
+Computing
+
+Nutzung des integrierten Beschleunigungssensors – aber davon mehr in einem separaten ft:pedia-Beitrag.
+Kommandos
+Da die Messwerte in den Registern des
+Sensors abgelegt und jederzeit ausgelesen
+werden können, benötigt der CMS10 kein
+Mess-Kommando. Die Befehle, die in das
+Command Register geschrieben werden
+können, betreffen daher nur die Konfiguration des Sensors. Tabelle 4 gibt eine Übersicht der Kommandos.
+Wert Kommando
+0x20
+
+Reset to Default Offset Values
+
+0xA0 Change I²C Address
+0xF0 Enter Calibration Mode
+0xF5 Store Offset
+Tab. 4: Kommandos
+
+Rücksetzung des Sensors
+Um den Sensor auf die werksseitige Kalibrierung zurückzusetzen, wird die folgende
+Befehlsfolge (mit anschließend je 100 ms
+Pause)
+an
+das
+Command-Register
+geschickt:
+0x20, 0x2A, 0x60
+Änderung der Adresse
+Das Befehlsregister 0x16 erlaubt die Einstellung der Sensor-Adresse. Um die
+Adresse zu wechseln wird die folgende
+Kommando-Folge (mit anschließend je
+100 ms Pause) an das Register 0x16 geschickt:
+0xA0, 0xAA, 0xA5
+gefolgt von der gewünschten Adresse
+(0x60 bis 0x67).
+Kalibrierung des Sensors
+Der CMPS10 wird bereits kalibriert ausgeliefert, sodass eine Kalibrierung des Sensors in der Regel nicht erforderlich sein
+
+
+
+dürfte. Wird er stationär in der Nähe eines
+störenden Magnetfelds betrieben, kann
+eine Kalibrierung dennoch sinnvoll sein.
+Dazu sind zunächst die Himmelsrichtungen exakt zu bestimmen. Dann wird der
+Sensor nach Norden ausgerichtet. Mit dem
+Kommando 0xF0 im Command-Register
+0x16 wird nun der Kalibrierungs-Modus
+eingestellt. Der Befehl 0xF5 speichert die
+Ausrichtung als ‚Norden’ (bestätigt durch
+ein Aufleuchten der roten LED).
+Dann wird der Sensor um 90° im Uhrzeigersinn gedreht und erneut der Befehl
+0xF5 ins Command-Register geschrieben.
+Das wird zwei weitere Male wiederholt,
+dann ist der Sensor neu kalibriert.
+Robo Pro-Treiber
+Für den Vorgänger des CMPS10, den
+CMPS09, gibt es in der Robo Pro-Bibliothek einen schönen Treiber – der auch mit
+dem befehlskompatiblen CMPS10 funktioniert.
+Es fehlen lediglich Unterprogramme zur
+Adressänderung und Kalibrierung – beides
+Funktionen, die man nur in Ausnahmefällen benötigt, z. B. bei einer Adresskollision
+auf dem I²C-Bus oder einem störenden
+Magnetfeld bei einem stationären Modell.
+Diese Funktionen sind bei Bedarf schnell
+ergänzt.
+
+Fazit
+Der Honeywell-Sensor ist die richtige
+Wahl für ein nicht mobiles Modell, bei
+dem man mit dem verfügbaren Strom
+haushalten muss: Mit 1 mA hat er einen
+wesentlich geringeren Stromverbrauch als
+der Devantech-Sensor und kann sogar in
+einen „Sleep“-Modus versetzt werden.
+Außerdem verhindert er durch die quasi
+freie Adresswahl jeden möglichen I²C-
+
+
+Adresskonflikt, und die Platine passt auch
+noch perfekt ins ft-Raster.
+Dafür unterstützt der Devantech-Sensor
+mit dem I²C Fast Mode eine viermal
+höhere Übertragungsgeschwindigkeit, hat
+dank der Beschleunigungssensoren eine
+um den Faktor fünf höhere Auflösung,
+arbeitet auch bei nicht exakt horizontaler
+Ausrichtung korrekt und liefert neben der
+Richtung auch Neigungsinformationen –
+das kann einen separaten Beschleunigungssensor einsparen. Die Messrate von 75 Hz
+ist fast viermal so hoch wie die des
+Honeywell-Sensors – bei etwa gleichem
+Preis.
+Eine schöne Anwendung des Sensors
+findet ihr in einem folgenden Beitrag zum
+Thema „Navigation“, der zeigt, wie man
+aus GPS-Koordinaten die Kompass-Richtung gewinnt und so z. B. einen autonomen
+Roboter zu einem Zielpunkt steuern kann.
+
+Quellen
+[1]
+
+Dirk Fox: I²C mit dem TX – Teil 6:
+GPS-Sensor. ft:pedia 3/2013, S. 5462.
+
+[2]
+
+Wikipedia: Deklination.
+
+[3]
+
+Honeywell: 2-Axis Compass with
+Algorithms HMC6352. Datasheet,
+2009.
+
+[4]
+
+Dirk Fox: I²C mit dem TX – Teil 7:
+Real Time Clock (RTC). 4/2013, S. 28-34.
+
+[5]
+
+Georg Stiegler: I²C mit dem TX –
+Teil 5: Multiplexer. ft:pedia 2/2013,
+S. 50-52.
+
+[6]
+
+Aaron Berk: HMC6352 Class
+Reference. mbed.org, 2010.
+
+[7]
+
+Devantech: CMPS10 – Tilt
+Compensated Compass Module.
+
+

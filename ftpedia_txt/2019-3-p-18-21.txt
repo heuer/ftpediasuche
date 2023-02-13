@@ -1,0 +1,239 @@
+
+
+Getriebe
+
+Getriebe mit feiner Verzahnung
+Stefan Falk
+Die typischen fischertechnik-Getriebe bestehen aus den „groben“ Zahnrädern im Modul 1,5.
+Mit den recht vielen Teilen mit „feiner“ Verzahnung im Modul 0,5 lässt sich aber ebenfalls viel
+erreichen – ein Überblick.
+
+Zahnräder mit feiner
+Verzahnung
+
+Zähne Artikel
+
+35695
+Zahnrad Z15
+m1,5 Z22
+m0,5
+anreihbar
+
+
+31064 UAchse 40 u. ä.
+
+
+31082
+Rastachse +
+Zahnrad Z28
+m0,5
+
+
+31020
+Klemmring
+Z36 m0,5 für
+Seiltrommel
+
+
+31050
+Metallachse
+50 + Zahnrad
+Z44 m0,5 u. ä.
+
+44/18
+
+32915
+Zahnrad Z4418 m0,5
+Metallachse
+
+44/14
+
+32916
+Zahnrad Z4414 m0,5
+Metallachse
+
+Es gibt einen ganzen Zoo von verschiedenen Zahnrädern mit feiner Verzahnung
+im Modul 0,5:
+Zähne Artikel
+
+
+
+31069
+Getriebebock
++ Schnecke
+m0,5 mini
+32912 Ritzel
+Z14 m0,5 (für
+75006 MMotorGetriebe m1,5
+m0,5
+komplett)
+31067
+Getriebehalter
+50 mini
+
+
+36334
+Riegelscheibe
+
+
+35113
+Spannzange
+Z22
+
+
+Was kann man damit machen?
+Die verschiedenen Teile erlauben es, raffinierte kleine und Platz sparende Getriebe
+aufzubauen! Das kam mir z. B. in einigen
+Uhrengetrieben gerade recht, lässt sich aber
+bestimmt auch anderswo nutzbringend
+anwenden. Beispiele:
+
+Getriebe
+
+Wir benötigen also ein Zwischenzahnrad,
+und hier tut die U-Achse 40 (31064) obendrüber perfekten Dienst – alles ist im
+fischertechnik-Raster (Abb. 2).
+
+Es geht im Raster!
+Thomas Püttmann steuerte (bereits in der
+zweiten Ausgabe der ft:pedia überhaupt)
+das erste Foto eines im fischertechnikRaster liegenden Getriebes mit feinen
+Zahnrädern bei [1]. Zwei BS 7,5, verbunden mit einem BS 5 mit zwei Zapfen,
+nehmen zwei feine Zahnräder genau auf:
+
+Drehrichtung antreiben
+
+Auf einen der beiden BS 15 mit Bohrung
+kommt senkrecht ein BS 7,5, an dem per
+Federnocken ein zweiter befestigt ist. Der
+sitzt nun präzise mittig über den BS 15, und
+in sein unteres Achslager kann die U-Achse
+gesteckt werden. In diesem Beispiel wird
+sie von einem zweiten BS 7,5 (in Abb. 2 im
+Vordergrund) noch besser gelagert. Abb. 3
+zeigt eine andere Ansicht.
+
+
+Das Getriebeverhältnis ist hier also (von
+links nach rechts gesehen) 28:22, also
+gekürzt 14:11.
+Einfaches kleines Getriebe
+In Abb. 2 sollen zwei nur 15 mm auseinander liegende Achsen (die unten liegenden)
+in der gleichen Drehrichtung laufen (für das
+mehrstufige Förderband in [2] nämlich).
+
+Förderband-Stufe
+
+
+
+Das Getriebeverhältnis ist hier 22:28 ·
+28:22 = 22:22 = 1:1 – beide unteren Achsen
+laufen gleich schnell.
+Kleine Uhrengetriebe
+
+In verschiedenen Uhren konnte ich die
+feinen Zahnräder schon zum Bau relativ
+winziger 1:12-Untersetzungen zwischen
+Minuten- und Stundenzeiger verwenden.
+Das erste Mal gelang das bei einer selbststellenden Uhr – hier kam sogar eine
+Riegelscheibe als Zwischenzahnrad für die
+richtigen Drehrichtungen zum Einsatz
+(Abb. 3)
+Merke: Mit der Kombination von 44 und 22
+Zähnen erhält man leicht ein Verhältnis von
+44:22 = 2:1!
+Eine Variante davon kam in einer leicht
+manuell einstellbaren Analoguhr mit
+Schrittmotor-Antrieb zur Geltung (Abb. 4).
+In fast genau gleicher Bauart wurde dieses
+Getriebe auch für eine akkubetriebene
+kleine Uhr verwendet (Abb. 5).
+
+selbststellenden Analoguhr [3]
+
+
+stellbaren Analoguhr mit Schrittmotor [4]
+
+
+Meine jüngste Variante schließlich ist das
+kleinste Uhrengetriebe, das mir bisher
+gelang [6]. Es stammt aus einer computergesteuerten, nur mit einem durchlaufenden
+XS-Motor angetriebenen Uhr. Bei ihm trägt
+außer einem Z10 und einem Z15 nicht ein
+einziges Zahnrad mit groben Zähnen zum
+Untersetzungsgetriebe bei (Abb. 6).
+
+
+Getriebe
+
+Das klingt übel für ein Uhrengetriebe, aber
+zwischen Minuten- und Stundenzeiger
+haben wir (in Abb. 6 wieder von links nach
+rechts gesehen):
+22:44 · 14:28 · 22:44 · 10:15
+= 1:2 · 1:2 · 1:2 · 2:3
+= 1:8 · 2:3
+= 1:4 · 1:3
+= 1:12
+
+
+Und das ist ja genau das Verhältnis, das wir
+zwischen Minuten- und Stundenzeiger
+brauchen! Da stört es nicht, dass der Antrieb
+„in der Mitte“ des gesamten Getriebestrangs ansetzt (dessen Regelung ist in
+dieser Uhr komplex, aber in [6] ausführlich
+beschrieben).
+Ich kann also nur dafür werben, die feinen
+Zahnräder aus ihrem Dörnröschendasein zu
+locken und nützlichen Erfindungen zuzuführen – das Tüfteln damit macht Spaß!
+
+Quellen
+[1]
+
+Püttmann, Thomas: Zahnräder und
+Übersetzungen (Teil 1).
+ft:pedia 2/2012, S. 30.
+
+[2]
+
+Falk, Stefan: Elektronisch gesteuerte
+Sortieranlage für 3 Bausteinlängen.
+ft Community, 2017.
+
+[3]
+
+Falk, Stefan: Selbststellende
+Analoguhr mit Miniatur-Uhrwerk.
+ft Community, 2009.
+
+[4]
+
+Falk, Stefan: Leicht stellbare
+Analoguhr mit Schrittmotor.
+ft Community, hackster.io, 2018.
+
+[5]
+
+Falk, Stefan: Akkubetriebene MiniUhr. PDF auf OneDrive, 2018.
+
+[6]
+
+Falk, Stefan: Mikro-Uhr mit
+geregeltem Motorantrieb. PDF auf
+OneDrive, hackster.io, 2019.
+
+
+Hier sind die Untersetzungsverhältnisse
+etwas kniffliger, weil sich das Getriebe ab
+dem Z44 an der Motorschnecke in zwei
+Stränge verzweigt. In Richtung Minutenzeiger geht es (die Schnecke mitgezählt) so:
+1:44 · 44:22 = 1:22
+Die „22“ sind die des Zahnrads Z15 m1,5
+Z22 m0,5 (35695) anreihbar ganz links in
+In Richtung Stundenzeiger geht es so:
+1:44 · 14:28 · 22:44 · 10:15
+= 1:44 · 1:2 · 1:2 · 2:3
+= 1:44 · 1:6
+
+
+

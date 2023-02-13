@@ -1,0 +1,152 @@
+
+Elektronik
+
+Elektronik
+
+Elektronik-Module (Teil 7): Multimeter
+Hans-Christian Funke
+Eine vermehrte Nachfrage nach dem Messmodul 70022 und auch das aktuelle Thema
+Schwellenwertregler haben dazu geführt, dass dieses Elektronikmodul in Kürze ebenfalls im
+Online-Shop von Franz Santjohanser [1] erhältlich sein wird.
+
+
+Messmodul 70022
+Das Messmodul ist entstanden, um zwei
+Randfunktionen abzudecken, die immer
+mal wieder gebraucht werden: Erstens die
+Spannungs- und Strommessung und zweitens die Möglichkeit, individuell und unabhängig von irgendwelchen Funktionen
+einen regelbaren Widerstand (Potentiometer) verfügbar zu haben.
+
+Multimeterfunktion
+Spannungsmessung
+Beim Messgerät handelt es sich um ein einfaches Spannungsmessgerät (kein Präzisionsmessgerät). Die Spannungsanzeige wird
+nach der Montage kalibriert, sodass eine
+Ungenauigkeit in der Anzeige höchstens
+nach der Kommastelle auftaucht.
+
+Die Spannungsmessung erfolgt über die
+Anschlüsse Minus und V neben der Spannungsanzeige. Der Minusanschluss ist mit
+GND der internen Versorgungsspannung
+verbunden. Negative Spannungswerte
+können nicht angezeigt werden (Polung
+beachten). Für eine Überprüfung, ob ausreichend Spannung anliegt ist dieses Messgerät ideal. Durch die kleine Modulbauweise kann es auch sehr gut in Modelle
+integriert werden.
+Es können Spannungen von 0-40 V Gleichspannung gemessen werden. Die Anzeige
+kann auch Spannungswerte bis 99,9 V
+anzeigen, aber bei höheren Spannungswerte
+als 40 V besteht die Möglichkeit, dass
+Komponenten im Elektronikmodul beschädigt werden.
+
+
+
+
+Multimeterfunktion
+Strommessung
+Das Strommessgerät ist ebenfalls nur zur
+einfachen Bestimmung bzw. Überprüfung
+eines Stromflusses in einem Stromkreis
+vorgesehen. Das Elektronikmodul verkraftet einen Stromfluss bis zu 3 A, kann aber
+theoretisch Werte bis 9,99 A anzeigen. Bei
+einem Strom über 3 A werden die Kabel
+oder die Platine im Elektronikmodul zerstört. Mit dem Aufbau des Messmoduls
+wird auch das Strommessgerät einer Kalibrierung unterzogen, sodass das Messgerät
+verlässliche Werte liefert.
+Die Strommessung erfolgt über die
+Anschlüsse Minus und A neben der Stromanzeige. Bitte beachten, dass dieser Minusanschluss nicht mit GND vom Elektronikmodul verbunden ist! Für eine Strommessung muss ein bestehender Schaltkreis
+an einer Stelle unterbrochen werden. Die
+beiden Enden der Unterbrechung werden
+mit den Anschlüssen Minus und A des
+Strommessgeräts verbunden. Wie bei der
+Spannungsmessung muss auf die Polung
+geachtet werden, weil negative Ströme
+nicht angezeigt werden können.
+
+Das Potentiometer
+Beim Einbau des Potentiometers habe ich
+lange darüber nachgedacht, welchen Wert
+ich hier nehme – 500 Ω, 1 kΩ, 5 kΩ oder
+10 kΩ. Ursprünglich hatte ich sogar die
+Idee, mehrere Potentiometer in einem Elektronikmodul zu Verfügung zu stellen, aber
+diese Idee habe ich bald wieder verworfen.
+Aus verschiedenen Modellen und Schaltungen habe ich entnommen, dass ein Wert
+von 1 kΩ der am häufigsten eingesetzte
+Wert ist. Somit ist im Messmodul ein Potentiometer mit 1 kΩ und 0,25 W verbaut.
+Betrachtung der Leistung
+Bei den Elektronikmodulen kommt eine
+maximale Versorgungsspannung von 15 V
+zum Einsatz. Legt man diese Spannung an
+den beiden Enden des Potentiometers an (1)
+
+und (3), fließt ein Strom, der gerade in dem
+Bereich liegt, in dem das Potentiometer
+nicht beschädigt wird:
+
+
+𝑈 = 𝑅∙𝐼
+15V
+𝑈
+=
+= 0,015A = 15mA
+𝑅 1000Ω
+𝑃 = 𝑈 ∙ 𝐼 = 15V ∙ 15mA = 225mW
+
+𝐼=
+
+Über den Mittelanschluss (2) können in
+diesem Beispiel beliebige Spannungen
+zwischen 0 V und der angelegten Versorgungsspannung abgegriffen werden. Die
+Einstellung der abzugreifenden Spannung
+erfolgt über den Drehknopf vom Potentiometer.
+Das Potentiometer ist nicht mit der Versorgungsspannung des Messmoduls verbunden
+und kann frei verwendet werden. Zur Verwendung muss somit das Messmodul auch
+nicht mit einer Versorgungsspannung verbunden werden.
+Durch die Entkopplung kann das Potentiometer in jede beliebige Schaltung integriert
+und sogar mit höherer Spannung als 15 V
+beschaltet werden.
+Vorwiderstand
+Wird das Potentiometer mit höheren Spannungen oder anders beschaltet, sollte immer
+überprüft werden, ob die maximale vom
+Potentiometer verkraftbare Leistung überschritten wird.
+Prophylaktisch kann ein Vorwiderstand mit
+einem Potentiometer in Reihe geschaltet
+werden, um auf diese Weise das Potentiometer und andere Komponenten vor
+Schaden zu bewahren.
+
+
+Elektronik
+
+Schlussbemerkung
+Mit dem Messmodul lassen sich weitere
+interessante Bereiche der Elektronik
+erschließen. Vor allem im experimentellen
+Bereich findet das Messmodul mit dem
+unabhängigen Potentiometer seinen Einsatz.
+
+
+Der Vorwiderstand kann zwei Funktionen
+übernehmen: Entweder in der Funktion als
+Schutzwiderstand oder zum Verschieben
+des Steuerbereiches, wie im Beispiel des
+Schwellenwertreglers in Abb. 3 zu sehen
+ist.
+
+Neben dem Messmodul sind jetzt auch
+allerhand neue Zubehörteile sowie das
+Labor für digitale Elektronik erhältlich
+(siehe Beitrag „Ein Labor in Aktion“ in
+dieser Ausgabe). Für die Labore (75000,
+75004, 75009) und die Ergänzungssets
+(75001, 75002, 75003) gibt es vom 01.07.
+bis 31.08.2022 eine Sonderaktion mit einem
+Nachlass von 10 %, wenn man den Gutschein-Code FuSom22Lab bei der Bestellung angibt [1].
+
+Referenzen
+[1]
+
+santjohanser Spielen. Lernen.
+Technik. Der autorisierte
+fischertechnik-Fachhändler,
+https://santjohanser.de
+
+
+

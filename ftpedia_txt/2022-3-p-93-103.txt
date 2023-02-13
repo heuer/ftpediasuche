@@ -1,0 +1,615 @@
+
+Computing
+
+Computing
+
+Android App für den BT-Empfänger mit dem
+MIT App Inventor 2
+Thomas Kaiser
+Der Bluetooth Empfänger kann auch mit einer von fischertechnik bereitgestellten SmartphoneApp gesteuert werden, die durchaus ihren Zweck erfüllt. Aber was, wenn man eigene Ideen hat?
+
+Einführung
+Eine App für ein Android Smartphone
+selbst programmieren – dazu muss man
+nicht unbedingt Java oder Kotlin beherrschen. Vor einiger Zeit fand ich auf der
+Suche nach Alternativen den „MIT App
+Inventor“, der es ermöglicht, für Android
+(und seit kurzem auch Apple) Smartphones
+Apps grafisch zu programmieren.
+Ursprünglich 2010 von Google entwickelt,
+wird der MIT App Inventor seit 2012 vom
+MIT (Massachusetts Institute of Technology) weiterentwickelt.
+Grund für meine Suche war ursprünglich
+der Wunsch, eine App zum Steuern eines
+Arduino per Bluetooth zu entwickeln. Und
+es stellte sich heraus, dass es ebenfalls
+möglich ist, den fischertechnik-BT-Empfänger durch eine mit dem MIT App
+Inventor 2 erstellte App anzusteuern.
+Die vom fischertechnik-BT-Empfänger
+genutzte Technik, es handelt sich um ein
+Bluetooth Low-Energy (BLE) Gerät, soll
+hier nur kurz angerissen werden, da eine
+umfassende Erklärung den Rahmen des
+Beitrags sprengen würde. Der BT-Empfänger nutzt das GATT-Profil, um sich mit dem
+Smartphone zu verbinden. Dabei teilt das
+Gerät selbst mit, welche Dienste (Services)
+und Eigenschaften (Characteristics) angeboten werden.
+
+Angesprochen werden die entsprechenden
+Eigenschaften dann über sog. UUIDs (siehe
+hierzu auch den Anhang „Wie man die
+UUIDs herausfindet“).
+Die UUIDs könnten von der App auch aus
+dem Empfänger ausgelesen werden; das
+führt aber schnell zu unübersichtlichen
+Programmen. Um die Programme einfacher
+zu halten, werden die UUIDs in diesen
+Beispielen einfach als Festwert definiert.
+Hinweis: Zum gegenwärtigen Zeitpunkt
+(2022) ist der App-Inventor für das iPhone
+noch in der Entwicklung – nach meinen
+bisherigen Recherchen scheint BLE noch
+nicht unterstützt zu werden.
+
+Voraussetzungen
+Um Programme mit dem App Inventor 2 zu
+erstellen und ausführen zu lassen, braucht
+man auf dem PC/Laptop einen Browser
+(getestet habe ich mit Firefox und Edge)
+und auf dem Smartphone (oder auch Tablet)
+die App „MIT AI2 Companion“ (für
+Android zu finden im Play Store).
+Im Idealfall ist das Smartphone im gleichen
+WLAN eingeloggt wie der PC; in diesem
+Fall benötigt man nicht einmal eine USBVerbindung.
+Zuerst müssen wir uns beim MIT AppInventor einloggen. Sofern man einen
+Google-Account hat, kann man diesen verwenden; alternativ kann man sich auch ohne
+Account anonym einloggen – in diesem Fall
+
+
+sollte man sich unbedingt den „Revisit
+Code“ notieren, um weiterhin auf seine in
+der Cloud gespeicherten Programme
+zugreifen zu können. Eine Login-Seite, die
+beide Möglichkeiten anbietet, ist erreichbar
+unter http://code.appinventor.mit.edu.
+
+Erster Schritt: Design erstellen
+Mit der Schaltfläche „Neues Projekt starten“ legt man ein neues Projekt an (Abb. 2),
+das ich „FTBT_1“ genannt habe. Nun sollte
+sich der Design-Bereich des App-Inventors
+öffnen.
+
+Nachdem man sich eingeloggt hat, muss
+man einige Hinweisfenster bestätigen, um
+schließlich zum Hauptfenster zu kommen.
+Rechts oben in der Menü-Leiste lässt sich
+die Sprache auf „Deutsch“ ändern (Abb.
+1).1 Je nach Einstellung des Browsers muss
+man u. U. ein Hinweisfenster bestätigen,
+das Pop-Up-Fenster erlaubt.
+
+
+Mit der linken Maustaste (gedrückt halten)
+können wir nun unsere erste Taste auf den
+Bildschirm ziehen (Abb. 3). Die Namen
+werden automatisch erzeugt; zur besseren
+Lesbarkeit werden wir sie im nächsten
+Schritt ändern.
+
+
+Erstellen einer Android App
+Im Folgenden werden wir eine einfache
+App erstellen und Schritt für Schritt
+erweitern, die den fischertechnik-BT Empfänger ansteuern kann. Der fertige Code
+kann auch direkt von meinem GithubRepository heruntergeladen werden (Datei
+„FTBT_1_4Schieberegler.aia“).
+Die Programme des App-Inventor sind
+Ereignis-orientiert. Anders als bei ROBO
+Pro, bei dem man in einer Schleife Eingänge abfragt, wird hier automatisch beim Auslösen eines Ereignisses ein entsprechendes
+Unterprogramm ausgeführt. So wird zum
+Beispiel beim Drücken einer Taste das
+zugehörige Ereignis „wenn Taste.Klick
+mache“ ausgeführt. An dieser Stelle möchte
+ich auch auf die vom MIT zur Verfügung
+gestellten Tutorials hinweisen; man findet
+auch viele Tutorials auf Deutsch.
+
+
+Hierzu wählen wir bei „Komponenten“ die
+gerade erzeugte Taste durch Anklicken aus,
+klicken unten auf „Umbenennen“ und ändern den Namen auf „TasteSuchen“. Unter
+diesem Namen werden wir die Taste später
+in der Programmierumgebung wiederfinden, deshalb ist es sinnvoll, die Funktion
+der Taste im Namen anzugeben (Abb. 4).
+
+
+
+
+Die deutsche Übersetzung des App Inventors ist
+leider nicht überall vollständig.
+
+
+Computing
+
+Im nächsten Schritt ändern wir den Text der
+Taste. Hierzu wählen wir rechts in der
+Spalte „Eigenschaften“ das Feld „Text“
+(falls es nicht sichtbar ist, nach unten
+scrollen). Hier ändern wir den Text „Text
+für Taste1“ auf „Suchen“ (Abb. 5).
+
+wir aus der Palette einen Schieberegler auf
+den Bildschirm unter den Statustext. Den
+automatisch vergebenen Namen behalten
+wir bei, aber bei den Eigenschaften nehmen
+wir die in Abb. 6 gezeigten Änderungen
+vor.
+
+
+Beim Anklicken der Breite öffnet sich ein
+Dialog, in dem man die Prozent-Angabe
+wählen und den Wert eintragen kann (Abb.
+6, rechts). Den Haken bei „Sichtbar“ entfernen wir – dadurch verschwindet der
+Schieberegler aus der Ansicht. Wir können
+den Schieberegler später programmgesteuert wieder sichtbar machen.
+
+Diese Änderung wird uns auch sofort im
+Betrachter-Fenster angezeigt. Nun brauchen wir noch eine Möglichkeit, Statusmeldungen oder Fehlermeldungen auszugeben. Dies wird im App-Inventor mit einer
+„Bezeichnung“ gelöst. Genauso wie vorher
+die Taste, ziehen wir die Bezeichnung auf
+den Smartphone-Bildschirm. Anschließend
+benennen wir die Bezeichnung um auf
+„Status“; den Text in den Eigenschaften
+können wir unverändert lassen.
+
+Die Suche nach den Bluetooth-Geräten erstellt eine Liste der verfügbaren Geräte. Um
+diese Liste anzuzeigen und das gewünschte
+Gerät auszuwählen, nutzen wir eine
+„Listenansicht“. Diese Listenansicht ziehen
+wir aus der Palette und benennen sie in
+„ListeBT“ um. In den Eigenschaften stellen
+wir bei Breite „Fuelle alles“ und bei Höhe
+„50 percent“ ein (Abb. 7).
+
+
+Da der App Inventor von Haus aus zwar
+Bluetooth, aber nicht BLE ansteuern kann,
+müssen wir uns eine passende Extension
+(Erweiterung) herunterladen.2 Hierzu geben
+wir im Browser den folgenden Link ein:
+https://mit-cml.github.io/extensions/.
+
+In diesem ersten Versuch werden wir nur
+einen Motor (M1) ansteuern. Hierzu ziehen
+
+In der Liste der unterstützten Erweiterungen
+steht an erster Stelle die Extension „BluetoothLE“. Mit einem Klick auf BluetoothLE.aix wird die Extension heruntergeladen
+
+Beispielanwendung
+der
+BLE-Extension:
+https://iot.appinventor.mit.edu/assets/tutorials/M
+IT_App_Inventor_Basic_Connection.pdf.
+
+
+
+
+(üblicherweise in den Ordner „Downloads“
+auf dem Rechner).
+Für den Import klicken wir in der Palette
+links ganz unten auf „Extension“ und dann
+auf „Import extension“. Im nun erscheinenden Dialog klicken wir auf „Datei auswählen“ und wählen die gerade heruntergeladene .aix Datei aus. Mit einem Klick
+auf „Import“ wird die Datei installiert (Abb.
+8).
+
+
+
+Nun können wir links in der Palette die
+Erweiterung auswählen und ziehen sie
+herüber auf den Bildschirm. Die Erweiterung wird automatisch unten im Bereich
+„nicht sichtbare Komponenten“ eingeordnet (Abb. 9).
+
+Zum jetzigen Zeitpunkt haben wir nur das
+Aussehen und einige Eigenschaften festgelegt – nun erwecken wir die App durch die
+Programmierung zum Leben. Hierzu
+wechseln wir die Ansicht auf „Blöcke“
+(rechts oben im Menu).
+Zweiter Schritt: Die UUIDs festlegen
+Für unser Programm benötigen wir zwei
+UUIDs: eine für den Dienst und die zweite
+für die Eigenschaften des Motors (Abb. 11).
+
+Motoreigenschaften
+
+Den Block zum Initialisieren der Variablen
+finden wir in „Blöcke“ im Abschnitt
+„Eingebaut“ unter „Variablen“. Die UUID
+wird als Text definiert, Texte finden wir
+ebenfalls im Abschnitt „Eingebaut“.
+Als Hilfestellung hier die beiden UUIDs als
+Text zum Herauskopieren:
+
+Komponente
+
+Unser Designer-Fenster sollte nun so aussehen wie in Abb. 10.
+
+
+Service-UUID:
+2e58327e-c5c5-11e6-9d9d-cec0c932ce01
+Motor1-UUID:
+2e583378-c5c5-11e6-9d9d-cec0c932ce01
+Achtung: Bei den UUIDs sollte man gewissenhaft vorgehen. Eine falsche UUID kann
+dazu führen, dass die App abstürzt.
+
+Dritter Schritt: Programmablauf
+Beim Klick auf die „Suchen“-Taste sollen
+die Bluetooth-Umgebung durchsucht und
+die Ergebnisse angezeigt werden. Hierzu
+klicken wir links in der Blöcke-Spalte auf
+den Eintrag „TasteSuchen“ und klicken in
+dem erscheinenden Menü den Eintrag
+„Wenn TasteSuchen.Klick mache“ an. Der
+Klick platziert den Block im BetrachterFenster (Abb. 12).
+
+
+Nun klicken wir in der Blöcke-Spalte auf
+den Eintrag „BluetoothLE1“und suchen in
+der aufklappenden Liste nach der Funktion
+„StartScanning“.
+
+Computing
+
+Sobald BT-Geräte gefunden werden, wird
+ebenfalls ein Ereignis ausgelöst. Dies
+nutzen wir, um die gefundenen Geräte in
+der Liste anzeigen zu lassen (Abb. 16).
+
+
+In der Liste werden alle Geräte angezeigt,
+die unser Smartphone in der Umgebung
+findet. Mit einem Klick auf den ListenEintrag des BT-Empfängers beenden wir
+den Scan-Vorgang, bauen eine Verbindung
+auf und ändern den Text im Status.
+Außerdem wird die Liste unsichtbar
+gemacht, denn wir brauchen sie nicht mehr
+(Abb. 17). Tipp: Den Wert „falsch“ findet
+man unter „Logik“.
+
+Verbindungsaufbau
+
+Diese Funktion ziehen wir in die Lücke
+neben „mache“ (Abb. 14).
+
+Sobald die Verbindung aufgebaut ist, wird
+das Ereignis BluetoothLE1.Connected aufgerufen. Hier ändern wir den Statustext und
+machen den Schieberegler sichtbar Abb.
+18).
+
+
+Auf die gleiche Art und Weise wählen wir
+die weiteren Elemente aus und platzieren
+Sie nach und nach auf dem BetrachterFenster.
+Den Block „wenn TasteSuchen.Klick“
+ergänzen wir noch um eine Ausgabe für den
+Status (Abb. 15). Tipp: Das Status Element
+findet man unter „Blöcke“ im Abschnitt
+„Screen1“.
+
+
+Sobald der Schieberegler verändert wurde,
+wird das dazugehörige Ereignis ausgelöst.
+Der Schieberegler wird erst sichtbar, wenn
+eine Verbindung aufgebaut wurde (s. o.).
+Dadurch verhindert man, dass der Schieberegler versucht Daten zu senden, obwohl
+noch keine Verbindung mit einem Empfänger aufgebaut ist (Abb. 19).
+Die Grenzwerte -128 bis +127 sind bereits
+im Designer hinterlegt, wobei das Vor-
+
+
+
+
+zeichen die Drehrichtung des Motors bestimmt. Tipp: Die Elemente für „hole“
+findet man unter „Blöcke“ und „Variablen“.
+
+
+Verbindung und Test des
+Programms
+Sehr bequem funktioniert die Verbindung
+über WLAN; üblicherweise befindet sich
+das Smartphone im gleichen lokalen Netzwerk wie der PC (und dies ist auch die
+Voraussetzung dafür, dass die Verbindung
+aufgebaut wird).
+Auf dem Smartphone starten wir den „MIT
+AI2 Companion“. Möglicherweise fragt die
+App nach Zugriffsrechten; diese müssen
+wir zulassen. Auf dem PC wählen wir im
+Menü „Verbinden“ die Option „AI Companion“ (Abb. 20).
+
+versorgen ihn mit Spannung. Nicht vergessen: Den roten Knopf des Empfängers so
+lange drücken, bis die blaue LED schnell
+blinkt.
+Sobald wir auf dem Smartphone die
+„Suchen“ Schaltfläche gedrückt haben,
+sollte sich die Liste mit den gefunden
+Geräten aufbauen. Sie ist sortiert nach
+Empfangsstärke, d. h. das Gerät mit dem
+besten Empfang steht oben. Der BTEmpfänger wird als „BT Control Receiver“
+angezeigt – diesen Eintrag wählen wir
+durch Antippen aus.
+Tipp: Bei manchen Smartphones/Tablets
+kann die Funktionalität von BT mit anderen
+Sensoren gekoppelt sein. Beim Beta-Test
+stellte sich heraus, dass neben BT auch GPS
+eingeschaltet werden musste.
+Daraufhin sollte sich die Liste schließen
+und der Schieberegler erscheinen – und man
+kann nun mit dem Schieberegler den Motor
+in unterschiedlichen Geschwindigkeiten
+laufen lassen.
+Das Programm ist sehr stark vereinfacht; es
+werden keine Fehler abgefangen, und wenn
+die Verbindung abbricht, muss man es z. B.
+durch Auswahl von „Verbinden → Refresh
+Companion Screen“ einmal neu starten. Das
+werden wir im nächsten Schritt verbessern;
+außerdem werden wir die restlichen
+Motoren und den Servo ansteuern.
+Kosmetik
+
+
+Nun wird ein Fenster mit einem QR-Code
+und einem 6-stelligen Zeichencode angezeigt – durch Klicken auf „Scan QR Code“
+auf dem Smartphone wird die Verbindung
+zum PC aufgebaut und nach einiger Zeit
+erscheint das Design unseres Programms
+auf dem Bildschirm.
+Für den ersten Test schließen wir einen
+Motor an M1 des BT-Empfängers an und
+
+
+Im Folgenden werden wir uns mit den
+Möglichkeiten beschäftigen, das Aussehen
+unserer App etwas ansprechender zu gestalten.
+Tipp: Zwar kann man im Browser im
+Betrachter-Fenster sehen, welche Elemente
+man platziert und wohin – aber später auf
+dem Smartphone/Tablet sieht es doch sehr
+viel anders aus. Wenn man sich mit dem
+MIT AI2 Companion verbindet, kann man
+auf dem Bildschirm des Smartphone live
+mitverfolgen, wie das Layout aussehen
+wird.
+
+
+Computing
+
+
+Zunächst wechseln wir wieder zum
+Designer (Schaltfläche rechts oben). In der
+Spalte Palette klicken wir „Anordnung“ an.
+Wir ziehen eine „horizontale Ausrichtung“
+direkt unter die Taste „Suchen“ (Abb. 21).
+Tipp: An der blauen Linie kann man
+erkennen, wo das neue Element platziert
+wird. Bei Bedarf kann man die Elemente
+aber auch nachträglich noch verschieben.
+Bei den Eigenschaften der horizontalen
+Ausrichtung ändern wir die AusrichtungHorizonal auf „Mitte: 3“ und die Breite auf
+„Fuelle alles“. Nun ziehen wir die Taste
+„Suchen“ mit der Maus in die horizontale
+Ausrichtung hinein (Abb. 22).
+
+ausgerichtet
+
+Anschließend wählen wir wieder in der
+Palette den Bereich Benutzerschnittstelle
+und ziehen eine Taste rechts neben die Taste
+„Suchen“. Diese Taste benennen wir in der
+Spalte „Komponenten“ auf „TasteReset“
+um; in den Eigenschaften ändern wir den
+Text auf „Reset“ (Abb. 23).
+
+
+Nun kommen wir zum kompliziertesten
+Teil: die insgesamt vier Schieberegler. Zunächst machen wir den bestehenden
+Schieberegler sichtbar, das heißt wir setzen
+in den Eigenschaften den entsprechenden
+Haken.
+Aus der Palette → Anordnung ziehen wir
+uns eine „Tabelle“ zwischen Schieberegler
+und Listenansicht. Bei den Eigenschaften
+der Tabelle ändern wir die Breite auf
+„Fuelle alles“ und die Anzahl der Zeilen auf
+10.
+Den Schieberegler ziehen wir nun in die
+Tabelle hinein, möglichst auf die zweite
+Zeile und die rechte Spalte (blaues
+Rechteck wird angezeigt). Sollte man die
+richtige Zeile oder Spalte nicht treffen, kann
+das jederzeit geändert werden.
+Anschließen ziehen wir uns drei weitere
+Schieberegler in die Tabelle, immer mit
+einer Zeile Abstand und in die rechte Spalte.
+Bei diesen neuen Schiebereglern ändern wir
+in den Eigenschaften den „Maximalwert“
+auf 127 und den „KleinsterWert“ auf -127.
+
+
+
+Danach ziehen wir viermal eine „Bezeichnung“ in die Zeilen 1, 3, 5 und 7 (jeweils
+oberhalb bzw. unterhalb der Schieberegler).
+In den Eigenschaften ändern wir den Text
+auf „Motor 1“, „Motor 2“, „Motor 3“ und
+„Servo“.
+In die unterste Zeile (Zeile 10) ziehen wir
+eine Taste, die wir in der Komponentenspalte auf „TasteStopp“ umbenennen, und
+in den Eigenschaften ändern wir den Text
+auf „Stopp“. Diese Taste nutzen wir später,
+um sämtliche Motoren abzuschalten, denn
+es ist nicht immer ganz einfach, den
+Mittelpunkt des Schiebereglers zu finden.
+Zuletzt ziehen wir uns eine Bezeichnung in
+die Tabelle in die erste (!) Spalte und in der
+
+9. Zeile (zwischen dem Schieberegler für
+den Servo und der Stopp-Taste).
+Den Text in den Eigenschaften löschen wir,
+die Breite setzen wir auf „25 percent“ und
+die Höhe auf „5 percent“. Hier wird die
+Bezeichnung genutzt, um die Tabelle
+horizontal mittig auszurichten und eine
+Leerzeile zwischen Schieberegler und
+Stopp-Taste zu erzeugen. Nun sollte das
+Design im Betrachter so aussehen wie in
+Bevor wir zur Programmierung übergehen,
+wählen wir bei den Komponenten die
+„Tabelle1“ aus und löschen in den Eigenschaften den Haken „sichtbar“. Dadurch
+werden alle Schieberegler gleichzeitig
+unsichtbar.
+
+
+
+Programmänderung
+Zunächst brauchen wir noch die UUIDs für
+die restlichen Motoren und den Servo (Abb.
+25).
+
+
+Bei der Eingabe können wir zwei Tricks
+anwenden: Durch Rechtsklick auf die
+vorhandene „motor1Uuid“ klappt ein Menü
+auf, in dem wir „Duplizieren“ auswählen.
+Das machen wir dreimal, anschließend
+müssen wir nur die automatisch generierten
+Variablennamen abändern (Abb. 26).
+
+Computing
+
+Tipp: Rechter Mausklick auf „setze
+Schieberegler1.Sichtbar“ und dann im
+Menü „2 Blöcke löschen“. Anschließend im
+Bereich „Tabelle1“ den oben gezeigten
+Block einfügen.
+Nun müssen wir die Ereignisse für die
+hinzugekommenen Schieberegler definieren. Hier können wir ebenfalls „duplizieren“ anwenden (rechter Mausklick auf
+den „Position geändert“-Block).
+Da nach dem Duplizieren zwei Blöcke mit
+gleichem Namen existieren, wird ein rotes
+Kreuz im Block links oben angezeigt. Mit
+Klick auf das kleine Dreieck neben dem
+Namen bekommen wir eine Liste mit den
+möglichen Namen angezeigt – hier suchen
+wir nacheinander die passenden Namen aus.
+
+
+Die UUIDs unterscheiden sich nur in den
+letzten vier Ziffern der ersten Gruppe (Abb.
+27).
+„CharacteristicUUID“
+
+Motor2-UUID:
+2e58358a-c5c5-11e6-9d9d-cec0c932ce01
+
+Anschließend müssen wir bei den drei
+neuen
+Schieberegler-Ereignissen
+die
+„CharacteristicUuid“ richtig zuordnen
+(Abb. 29). Auch hier können wir mit dem
+kleinen Dreieck eine Liste aufklappen und
+die UUIDs zuordnen.
+
+Motor3-UUID:
+2e583666-c5c5-11e6-9d9d-cec0c932ce01
+
+Tipp: Nicht die serviceUuid mit der
+servoUuid verwechseln.
+
+Servo-UUID:
+2e5837b0-c5c5-11e6-9d9d-cec0c932ce01
+
+Danach fügen wir die Ereignisse für die
+neuen Tasten hinzu (Abb. 30).
+
+Das Ereignis „BluetoothLE1.Connected“
+ändern wir wie in Abb. 28 gezeigt.
+
+Tipp: Die „wenn dann“ Verzweigung findet
+man im Bereich „Eingebaut“ unter „Steuerung“, die Zahl 0 unter „Mathematik“.
+
+
+Auch hier als Hilfestellung die UUIDs als
+Text zum Kopieren:
+
+Nun fehlt nur noch die Verbindung über den
+MIT AI2 Companion (s. o.) und wir können
+das Programm testen.
+„BluetoothLE1.Connected“
+
+
+
+
+
+Aussichten
+
+Danksagung
+
+Diese Einführung zeigt nur einen Bruchteil
+der Möglichkeiten des App Inventors. Da
+gibt es noch sehr viel Potential:
+
+Bedanken möchte ich mich bei Thomas und
+Tim Brestrich, die den Artikel geprüft und
+mir wertvolle Hinweise gegeben haben.
+
+ Nutzung der eingebauten Beschleunigungssensoren, so dass man nur durch
+Bewegung des Smartphones steuert
+
+Anhang: Wie man die UUIDs
+herausfindet
+
+ Steuerung mittels virtuellem Joystick –
+wie bei der fischertechnik-App
+ zeitgesteuerte Sequenzen, um automatische Vorgänge zu steuern
+ Ansteuerung anderer Geräte, z. B. des
+BT Smart Controllers
+… und vieles mehr. Die Bluetooth-LE
+Extension bietet auch die Möglichkeit, die
+UUIDs selbst auszulesen, sodass man sich
+das Eingeben ersparen könnte. Ich habe in
+diesem Rahmen darauf verzichtet, weil das
+Programm für einen Anfänger schlecht
+nachvollziehbar und ziemlich unübersichtlich ist. Wer möchte, kann es sich aber hier
+anschauen (Datei GATT_Test.aia).
+
+
+Hierzu verwendete ich die App „nRF
+Connect for Mobile“ von Nordic Semiconductor (Abb. 31, zu finden im Play
+Store), die relativ bequem BT-Geräte auflistet und auch die Möglichkeit anbietet, das
+GATT-Profil auszulesen.
+Verbindet man diese App mit dem BTEmpfänger, erhält man zunächst eine Übersicht der Dienste – auf den ersten Blick
+viele Zahlen (Abb. 32, links). Aber durch
+einfaches Durchprobieren kommt man
+schließlich zum Ergebnis, dass sich hinter
+dem untersten „Unknown Service“ die
+Eigenschaften verbergen, die für die Nutzung des BT-Empfängers interessant sind
+(Abb. 32).
+
+
+Computing
+
+Die obigen vier Eigenschaften (Characteristics) können jeweils mit Bytes beschrieben
+und gelesen werden. Durch Versuche findet
+man heraus, dass sie zu den drei Motoren
+und dem Servo gehören (von oben nach
+unten: M1, M2, M3 und Servo).
+
+
+Gesendet wird ein Byte mit Vorzeichen,
+d. h. wir haben einen Wertebereich von
+-128 bis +127.
+
+
+
+

@@ -1,0 +1,157 @@
+
+
+Modell
+
+Das Klettermännchen
+Rüdiger Riedel
+Vor vielen Jahren habe ich auf einem Weihnachtsmarkt ein hübsches Holzfigürchen gekauft,
+das ein Seil hinaufklettern konnte. Aber wie funktioniert so ein Klettermännchen? Das Minimodell bringt es an den Tag.
+Klettern, Seilklettern … in Englisch heißt es
+rope climbing und war einmal olympische
+Disziplin.
+Unser Figürchen reißt keine Rekorde, aber
+klettern kann es.
+
+Wollen wir hinter das Geheimnis kommen
+und die Figur nachbauen, dann empfiehlt es
+sich, Gewicht zu sparen. Heraus kommt
+dann kein Männchen, sondern eine Funktionsfigur, man könnte sie als Spannerraupe
+(s. u.) interpretieren.
+
+
+Hält man in Abb. 1 das Seil oben fest und
+zieht immer wieder ruckartig unten an der
+Perle, dann klettert der kleine Schornsteinfeger das Seil hinauf. Beim Ziehen streckt
+er sich und rutscht ein kleines Stück am Seil
+nach oben, beim Lockerlassen scheint er
+sich mit den Händen am Seil festzuhalten
+und zieht die Beine hoch.
+
+
+
+den Gummiring gegeben ist. Wenn wir am
+Baustein 15 ziehen, streckt sich die Figur
+und steigt etwas nach oben.
+
+
+Modell
+
+
+Wir halten das obere Seilende fest und
+ziehen unten. Durch die Verkantung erhöht
+sich die Seilreibung an der unteren Lagerhülse, und weil der Gummiring noch lose
+hängt, kann der obere Teil der Figur etwas
+nach oben rutschen. Im Laufe der Figurstreckung erhöht sich die Seilreibung am
+Gummiring oben, es klemmt und unten
+wird das Seil nachgezogen.
+
+Gummiring. Der Gummiring wird um die
+rechte Lagerhülse gelegt und zweimal um
+die V-Achse 20 geführt (hier kann auch eine
+einfache Kunststoffachse mit zwei Klemmbuchsen verwendet werden). Das Seil wird
+durch die linke Lagerhülse gezogen und um
+die rechte Lagerhülse gelegt. Zum Schluss
+wird es unter dem Gummiring nach oben
+herausgeführt.
+Das Seil habe ich an beiden Enden mit
+Schlaufen versehen, um je einen Baustein
+30 gelegt und mit Verbindern 30 (31061)
+gesichert (siehe Abb. 2 unten).
+
+Teileliste
+31690
+
+V-Achse 20 Rastachse
+
+
+37679
+
+Klemmbuchse 5
+
+
+35049
+
+Baustein 5 15·30
+
+
+38428
+
+Baustein 5 15·30 3N
+
+
+127472 Winkelträger 30 rot
+(oder andere Farbe)
+
+
+31426
+
+Gelenkwürfel-Zunge 7,5 1
+
+31436
+
+Gelenkwürfel-Klaue 7,5
+
+
+36819
+
+Lagerhülse 15
+
+
+31982
+
+Federnocken rot
+
+
+32085
+
+Rollenbock 15
+
+
+35039
+
+Seil 600 (blau)
+
+
+Gummiring (nicht von
+fischertechnik)
+
+
+
+
+
+Die Spannerraupe
+Wir können unsere Figur auch nach dem
+Vorbild von Abb. 5 auf dem Tisch kriechen
+lassen. Das Bild stammt aus „Meyers Konversationslexikon 1894-1896“ [1] (dazu
+dem Link folgen und unten auf „Faksimile“
+oder „hochaufgelöstes Faksimile“ klicken).
+
+Wir tauschen die V-Achse 20 gegen eine
+längere Kunststoffachse, z. B. eine Achse
+50 mit zwei Klemmbuchsen 5. In Abb. 6 ist
+es eine rote V-Achse. Auf diese Weise kippt
+die Figur nicht um und vollführt Bewegungen wie der Stachelbeerspanner.
+
+Kleiner Tipp
+Die Lagerhülse in eine Gelenkwürfel-Klaue
+hinein zu drücken gelingt mit Hilfe eines
+Bausteins 30 recht einfach. Aber wie bekommen wir sie wieder heraus?
+
+grossulariata [1]
+
+Wir nehmen eine Kunststoffachse Vierkant
+(38412, 19318 oder 78237), schieben sie in
+die Lagerhülse und drücken dann die Klaue
+mit dem Vierkant auf den Tisch, wodurch
+die Hülse nach oben herausrutscht.
+
+Quellen
+[1]
+
+
+
+F. A. Brockhaus: Raupen (Tafeln).
+In: Meyers Konversationslexikon.
+Leipzig, 1894-1896.
+
+

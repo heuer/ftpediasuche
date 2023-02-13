@@ -1,0 +1,397 @@
+
+
+Elektronik
+
+Dreipunktregelung
+Stefan Falk
+In diesem Beitrag steuern wir zwei Electronics-Module von einer einzigen Fotozelle aus an, um
+eine Abstandsregelung mit Hysterese herzustellen.
+
+Die Aufgabenstellung
+Wir wollen auf einer Gleitschiene zwei
+Elemente positionieren und den Abstand
+zwischen beiden innerhalb gewisser Toleranzen gleich halten. Aber nicht dadurch,
+dass wir einfach eine Stange dazwischen
+befestigen, sondern dadurch, dass eine Baugruppe der anderen automatisch nachfolgt.
+Zur Messung des Abstandes verwenden wir
+eine einfache Kombination aus Lampe und
+Fotowiderstand (auch Fotozelle genannt) –
+nicht zu verwechseln mit einem Fototransistor. Letzterer würde uns nur ein
+digitales Ein/Aus-Signal liefern; wir benötigen aber einen Analogwert, der uns ein Maß
+für den aktuellen Abstand gibt.
+In Abb. 1 ist die linke Baugruppe die graue
+mit der Lampe und der roten Leuchtkappe
+
+mit Bohrung. Rechts davon befindet sich
+die schwarze mit dem Fotowiderstand.
+Nur wegen des Gags sitzt auf der Fotozelle
+ein „Hündchen“, das sich ja gerne vom
+Männchen links auf der Lampe streicheln
+lassen würde, aber sich doch nicht hin traut.
+Kommt das Männchen näher (nach rechts),
+geht das Hündchen vorsichtshalber auch
+nach rechts, um den Sicherheitsabstand
+einzuhalten. Bewegt sich das Männchen
+nach links, folgt das Hündchen – aber ja
+nicht zu nah, denn so ganz traut es der Sache
+nicht.
+
+Das Lösungsprinzip
+Wir platzieren Lampe und Fotozelle auf
+einer gemeinsamen Schiene verschiebbar.
+Die Lampe wird von Hand verschoben. Ein
+Motor zieht über eine Kette die Fotozelle in
+
+Angst hab‘ ich nicht,
+aber rennen kann ich!
+
+
+
+Elektronik
+
+
+die gewünschte Position, um der Lampe in
+gebührendem Abstand zu folgen. Mechanisch ist das ein einfacher Aufbau – fehlt
+nur noch die Steuerung.
+Mit einem Computer kann das ja jeder ;-)
+Wir wollen es mit Elektronik bauen und
+benötigten also eine Schaltung, die folgendes leistet:
+1. Ist der Abstand zwischen Lampe und
+Fotozelle zu klein, muss die Fotozelle
+weiter weg bewegt werden, bis der
+Abstand wieder groß genug ist – oder es
+wegen Beschränkungen der Mechanik
+nicht mehr weitergeht.
+2. Ist der Abstand hingegen zu groß, muss
+die Fotozelle zur Lampe hin bewegt
+werden, bis er wieder klein genug ist.
+3. Ist der Abstand in Ordnung (nicht zu
+groß und nicht zu klein), soll sich nichts
+bewegen, der Motor also stillstehen.
+Die Forderungen 1 und 2 könnten wir mit
+einem fischertechnik-Electronics-Modul
+als Schwellenwertschalter erfüllen. Dazu
+müssen seine DIP-Schalter auf 10111
+eingestellt werden [1] (eine App als Nachschlagewerk für die Schalterstellungen gibt
+es übrigens unter [2]). Die Fotozelle kommt
+an I1, über das Potentiometer kann der
+gewünschte Schwellenwert eingestellt werden, und die Anschlüsse M1 werden umgepolt, je nach dem, ob der durch die Fotozelle
+
+gelieferte Wert unter oder über der durch
+das Potentiometer definierten Schwelle
+liegt.
+Das Problem dabei ist, dass der Motor,
+wenn er einfach an die beiden Anschlüsse
+von M1 angeschlossen würde, immer liefe:
+Er würde die Fotozelle ständig zwischen
+„etwas zu weit“ und „etwas zu nah“ hin und
+her pendeln lassen.
+Eine Abhilfe liefern zwei getrennte
+Schwellenwertschalter, die von derselben
+(!) Fotozelle gesteuert werden. Einer lässt
+den Motor die Fotozelle von der Lampe weg
+bewegen, wenn sie zu nahe steht, der andere
+lässt den Motor die Fotozelle zur Lampe hin
+bewegen, wenn sie zu weit weg steht.
+
+Die Schaltung
+Im Experimentierbuch hobby 4 Band 5 [3]
+findet sich (neben einem Füllhorn weiterer
+spannender Modelle) eine Lösung unter
+Verwendung der fischertechnik-„Silberling“-Elektronikbausteine aus den 1970er
+Jahren mit zwei h4-Grundbausteinen als
+Schwellenwertschalter und zwei h4-Relaisbausteinen zur Steuerung des Motors. Wie
+aber können wir das mit der heutigen
+fischertechnik-Elektronik lösen?
+Da der einzige Elektronikbaustein mit
+einem justierbaren Schwellenwert das
+Electronics-Modul (152063) ist, benötigen
+wir davon also zwei Stück. Tatsächlich
+
+
+
+brauchen wir nichts an Elektronik zusätzlich, um unsere Ziele zu erreichen, wie das
+Schaltbild in Abb. 3 zeigt.
+
+gewünschten Effekt, wie Tab. 1 erläutert.
+Wir benötigen keinerlei weitere Teile wie
+Relais oder Dioden.
+
+Die Lampe wird einfach an die Stromversorgung angeschlossen, sodass sie ständig leuchtet. Zwei Dinge sind nun ungewöhnlich: Erstens wird der Fotowiderstand
+nicht einfach nur an I1 eines ElectronicsModuls angeschlossen, sondern gleichzeitig
+an zwei. I1 besteht aus den Anschlüssen E1
+und E2. E1 liegt intern auf „+“; es genügt
+ein „E1“ mit der Fotozelle zu verbinden.
+Der tatsächlich messende Anschluss ist E2,
+deshalb wird der andere Anschluss des
+Fotowiderstands an beide E2 der beiden
+Electronics-Moduln angeschlossen.
+
+Sicherheitshalber enthält das Modell einen
+Endlagen-Taster. Sollte jemand die Lampe
+immer weiter zur Fotozelle schieben, würde
+der BS7,5 ins Z10 des Motors geraten.
+Deshalb schaltet der Taster in diesem
+Zustand den entsprechenden Pol auf denselben um, an dem auch die andere Motorseite gerade liegt. So bleibt der Motor hier
+einfach stehen, lässt sich aber sehr wohl
+durch Wegziehen der Lampe wieder dazu
+bringen, die Fotozelle nachzubewegen.
+
+Der zweite Trick ist der Anschluss des
+Motors: Normalerweise wird der ja z. B. an
+M1 eines Moduls angeschlossen. Hier
+schließen wir einen Pol an O1 eines Moduls
+und den anderen (über einen EndlagenTaster, auf den wir noch zu sprechen kommen) an O2 (!) des anderen (!) Moduls an.
+Das bringt – bei passender Einstellung der
+beiden Potentiometer – tatsächlich den
+
+Das Modell ist auf zwei Grundplatten
+180·90 aufgebaut. Die werden mit zwei
+Metallachsen 30 in ihren seitlichen Bohrungen stabil miteinander verbunden und durch
+zwei Platten 30·30 mit vier Zapfen gesichert. Natürlich könnt ihr auch Bauplatten
+500 oder 1000 verwenden.
+
++
+-
+
+Zum Bau des Modells
+
+I1
+
+E1
+E2
+
+I2
+
+E3
+E4
+
+I2
+
+O1
+O2
+
+M1
+
+E5
+E6
+
+O3
+O4
+
+M2
+
+I1
+
+E1
+E2
+
+O1
+O2
+
+M1
+
+I2
+
+E3
+E4
+
+I2
+
+E5
+E6
+
+M
+
+Endlage
+O3
+O4
+
+M2
+
+
+
+Elektronik
+
+Abstand
+zwischen
+Lampe und
+Fotozelle
+
+Electronics-Moduln O2 des
+ersten
+Moduls
+
+O1 des
+zweiten
+Moduls
+
+Effekt auf den Motor
+
+zu groß
+
+Beide Module sind
+„aus“, da der Wert
+unterhalb ihres
+Schwellenwerts liegt
+
+„+“
+
+„–“
+
+Dreht sich und
+transportiert die Fotozelle
+zur Lampe hin
+
+„–“
+im gewünschten Das erste ist „an“
+Bereich
+(sein Schwellenwert
+ist erreicht), das
+zweite aber noch
+nicht (dessen
+Schwellenwert höher
+liegen muss)
+
+„–“
+
+Dreht sich nicht, weil die
+Spannungspotenziale an
+beiden Polen dieselben
+sind
+
+zu klein
+
+Beide sind „an“, da
+„–“
+nun auch der
+Schwellenwert des
+zweiten überschritten
+ist
+
+„+“
+
+Dreht sich in die andere
+Richtung und transportiert
+die Fotozelle von der
+Lampe weg
+
+zu klein und
+Endlagentaster
+betätigt
+
+Beide sind „an“
+
+„+“
+
+O1 des zweiten Moduls
+liegt zwar auf „+“, der
+betreffende Pol des Motors
+wird aber vom Endlagentaster auf „-“ gelegt. Der
+Motor steht.
+
+„–“
+
+Tab. 1: Zustände des Modells
+
+Wir benötigen zwei längere Metallachsen
+(oder müssen die Führung anders als in
+diesem Modell aufgebaut realisieren, was
+natürlich auch möglich ist).
+Der S-Motor ist direkt mit zwei Federnocken auf einer Bauplatte befestigt. Auf
+seinem U-Getriebe sitzt ein Rast-Z10,
+dessen Gegenstück auf der gegenüberliegenden Seite in derselben Höhe gelagert
+ist. Hier wurde ein normales Z10 auf einer
+Metallachse verwendet. Abb. 4 und 5
+zeigen den Aufbau.
+
+
+
+Das geschieht am Achsenende durch zwei
+Klemmkontakte (31338, siehe Abb. 6);
+alternativ kann die Litze auch direkt
+zwischen Achse und Nut des aufnehmenden
+BS15 geklemmt werden.
+
+
+
+Die Lampe bekommt ihren Strom zuverlässig von zwei Federkontakten (31306,
+Lampe natürlich auch einfach mit einem
+längeren Kabel anschließen.
+
+
+Auf der gegenüberliegenden Seite benötigen wir grundsätzlich nur die Lagerung der
+Achsen. Der Eleganz halber wird der Strom
+für die Lampe über die Führungsachsen
+selbst geleitet.
+Lampe (1)
+
+
+
+Elektronik
+
+Lampe (2)
+
+Die umlaufende Kette endet beidseitig an
+einem BS7,5 (Abb. 6), der per Federnocken
+mit einem BS30 verbunden ist, der wiederum auf den langen Achsen gleitet und so
+vom Motor entlang der Schiene bewegt
+werden kann. Auf ihm ist die Fotozelle
+angebracht.
+
+
+
+Wer das Männchen und den Hund aufstecken möchte: Der ft-Mann steckt einfach
+mit zwei Rastachsen 3 im BS7,5 über der
+Lampe (Abb. 11). Das Hündchen ist schnell
+aus wenigen Teilen gebaut und hält ebenfalls durch zwei Rastachsen 30 (Abb. 12).
+
+
+
+
+
+Zur Justage der Potentiometer
+Das Electronics-Modul, welches mit dem
+Endlagentaster verbunden ist, muss sich
+einschalten, wenn die Fotozelle zu nah an
+der Lampe steht (um sie davon weg zu
+bewegen). Das andere Modul muss sein
+Potentiometer etwas weniger weit aufgedreht bekommen. Es muss sich „ausschalten“, wenn die Lampe zu weit weg von
+der Fotozelle liegt, aber auf „an“ stehen,
+wenn sie hinreichend nahe liegt. Es muss
+also einen Bereich dazwischen geben, in
+dem das Endlagentaster-Modul „aus“ und
+das andere „an“ ist. Dann ist der
+gewünschte Abstand erreicht und der Motor
+muss stillstehen. Die Justage der Potentiometer gelingt sehr fein unter Benutzung
+
+
+eines gelben
+drehers.
+
+fischertechnik-Schrauben-
+
+Quellen
+[1]
+
+fischertechnik: Zusatzprogramme
+Electronicsmodul Art.-Nr. 152 063.
+2014, S. 9.
+
+[2]
+
+Falk, Stefan: ft Electronics für
+Windows 8 oder höher im Microsoft
+Store.
+
+[3]
+
+fischerwerke: Dreipunkt-Regelung.
+In: fischertechnik hobby 4 Band 5,
+1975, S. 10-13.
+
+[4]
+
+Spockfalk: fischertechnik Dreipunktregelung. Video, YouTube.
+
+

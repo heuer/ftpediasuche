@@ -1,0 +1,390 @@
+
+Computing
+
+Computing
+
+RoboRISC: Visual Basic für den Robotics TXT
+Andreas Gail
+Es sollte auch für den Robotics TXT Controller eine Methode gefunden werden, um eine
+Programmierung über Visual Basic 2010 Express zu ermöglichen. Im folgenden Beitrag wird
+gezeigt, wie das mithilfe des durch fischertechnik bereitgestellten C++-Projekts möglich ist.
+Unter Visual Basic steht nun ein einfacher Befehlssatz bereit, „RoboRISC“ genannt (RISC =
+Reduced Inststruction Set Computing). Das alles (bzw. sogar besser) war zwar auch schon mit
+dem alten Robo TX Controller machbar; Bei dem hier vorgestellten Projekt ist aber die Nutzung
+der Kamera und die Weiterverarbeitung der übertragenen Bilder von besonderem Interesse.
+
+fischertechnik liefert die
+Grundlage
+Über die Internetseite von fischertechnik
+wird das TXT C Programming Expert Kit
+4.1.6 (Stand 02.2016) zum Download
+bereitgestellt [1]. Dieser Download enthält
+ein C++-Projekt, welches sich unter Visual
+C++ 2010 Express öffnen lässt. Aus C++
+heraus kann prinzipiell alles programmiert
+werden.
+
+Ziel
+C++ ist zwar verbreitet, allerdings muss
+man sich mit dieser Sprache gut auskennen,
+was nicht gerade trivial ist. Deshalb war das
+Ziel die Nutzbarkeit unter Visual Basic
+2010 Express (oder höher) zu ermöglichen.
+BASIC steht für „Beginner’s All-purpose
+Symbolic Instruction Code“. Sicherlich
+geht vielen BASIC deutlich leichter von der
+Hand als C++.
+
+Konzept-Idee
+Zunächst sollten wichtige Befehle im bestehenden C++-Projekt ergänzt werden, was
+dann zusammen als DLL zu kompilieren
+wäre. Diese DLL wiederum soll dann in ein
+VB-Projekt eingebunden werden. Im VBProjekt wiederum können letztendlich alle
+Funktionalitäten programmiert werden,
+
+einmal die Windows-basierte Bedien- und
+Anzeigeoberfläche sowie die eigentliche
+Automatisierung
+des
+fischertechnik
+Modells unter Ansteuerung des Robotics
+TXTs.
+
+Optionen und Einschränkungen von RoboRISC
+Möglich ist das digitale Auslesen der Eingänge des Robotics TXT I1…8 sowie die
+digitale Ansteuerung der Ausgänge O1…8
+bzw. M1…4. Analoge Funktionalitäten
+(Analogeingänge und verschieden stark
+angesteuerte Ausgänge) sind bislang nicht
+implementiert.
+Wegen der unterschiedlichen Verarbeitungsgeschwindigkeiten der beiden unabhängigen Systeme (PC und Robotics TXT)
+dürfen aufeinander folgende Befehle nicht
+zu schnell aufeinander folgen. Dieses
+Problem wird systematisch kanalisiert unter
+Nutzung des JobDispatchers unter Visual
+Basic (siehe weiter unten). Damit werden
+Kommunikationsstörungen vermieden.
+Gleich zu Beginn soll die begrenzte Ausführungsgeschwindigkeit von RoboRISC
+nicht verschwiegen werden.
+Für den interessierten Leser sei erwähnt,
+dass die nutzbaren Funktionen als native
+
+
+
+
+code bereitgestellt werden, nicht als
+managed code. Das ist bei der späteren
+Einbindung unter Visual Basic von
+Bedeutung.
+
+geben wird (\...\ enthält dabei den vollständigen Pfad, und der Zeilenumbruch
+ist nur der Spaltenbreite geschuldet –
+bitte alles in eine Zeile eingeben):
+
+Implementierung in Visual
+Basic
+
+"C:\...\dumpbin.exe" /exports
+"C:\...\RoboTXT_v01.dll"
+
+Nach dem Kompilieren der DLL müssen
+die darin enthaltenen Funktionen für VB
+bereitgestellt werden. Hierzu muss man
+wissen, wie die Funktionen genau heißen,
+bzw. wie sie aufzurufen sind. Das kann über
+den Microsoft COFF/PE Dumper herausgefunden werden. Hierzu müssen folgende
+Schritte ausgeführt werden:
+
+∂ Im Direktfenster gemäß Abb. 2 wird das
+Analysenergebnis ausgegeben. Somit
+stehen folgende Funktionen bereit:
+
+∂ Folgendes Kommando als Direktbefehl
+im Dialogfeld Start, Ausführen… gemäß
+von Windows XP mit Service Pack 3):
+%comspec% /k
+""C:\Programme\Microsoft Visual
+Studio 10.0\VC\vcvarsall.bat"" x86
+
+?GetDigitalAll@TXT@@QAEIHHHH@Z
+?GetPicture@TXT@@QAE_NHHHH@Z
+?SetDigitalAll@TXT@@QAEIHHHHHHHH@Z
+
+Anschließend muss die Funktion unter
+Visual Basic deklariert werden (siehe
+Funktionsnamen bedeuten, ist dabei
+unerheblich.
+
+Bereitgestellte Funktionen der
+Klassenbibliothek TXT und
+deren Nutzung
+TXT.GetPicture(IPa, IPb, IPc, IPd)
+∂
+∂
+∂
+∂
+∂
+
+
+Nach der Befehlsausführung öffnet sich
+folgendes Eingabefenster:
+
+IPa = UINT16: IP Adresse 1. Zahl
+IPb = UINT16: IP Adresse 2. Zahl
+IPc = UINT16: IP Adresse 3. Zahl
+IPd = UINT16: IP Adresse 4. Zahl
+Rückgabe: Boolean: True, wenn
+erfolgreich
+
+Das übertragene Bild wird im Verzeichnis
+der aktuellen Anwendung gespeichert. Es
+hat den Dateinamen RoboTxtPic.JPG.
+Beispiel: vollständige IP-Adresse
+Controllers = 192.168.7.2
+∂
+∂
+∂
+∂
+
+des
+
+IPa = 192
+IPb = 168
+IPc = 7
+IPd = 2
+
+TXT.GetDigitalAll(IPa, IPb, IPc; IPd)
+
+∂ Das Analyseprogramm wird ausgeführt,
+indem folgende Kommandozeile einge-
+
+
+∂
+∂
+∂
+∂
+
+IPa = UINT16: IP Adresse 1. Zahl
+IPb = UINT16: IP Adresse 2. Zahl
+IPc = UINT16: IP Adresse 3. Zahl
+IPd = UINT16: IP Adresse 4. Zahl
+
+∂ Rückgabe: UINT16: Der Rückgabewert
+enthält alle acht Eingangszustände
+(I1...8)
+Beispiel: Auswertung des zurückgegebenen
+Funktionswertes
+∂
+∂
+∂
+∂
+∂
+∂
+∂
+∂
+
+I1 = 1
+I2 = 2
+I3 = 4
+I4 = 8
+I5 = 16
+I6 = 32
+I7 = 64
+I8 = 128
+
+Wenn der Rückgabewert z. B. 5 ist, dann
+waren zum Abfragezeitpunkt die Eingänge
+I1 und I3 geschaltet.
+TXT.SetDigitalAll(Output, maxTime,
+Input1, Input2, IPa, IPb, IPc, IPd)
+∂ Output = UINT16: Codierung der
+Einschaltung der Ausgänge O1...8
+∂ Input1 = UINT16: Warten auf
+Änderung von Eingang I1...8
+∂ Input2 = UINT16: Warten auf
+Änderung von Eingang I1...8
+∂ IPa = UINT16: IP Adresse 1. Zahl
+∂ IPb = UINT16: IP Adresse 2. Zahl
+∂ IPc = UINT16: IP Adresse 3. Zahl
+∂ IPd = UINT16: IP Adresse 4. Zahl
+∂ Rückgabe: UINT16: Laufzeit der
+Funktion in s
+Gemäß den Output-Parametern werden die
+Ausgänge gleichzeitig geschaltet. Die
+Ausgangsleistung ist einheitlich maximal.
+Wenn z. B. ein Motor M1 betrieben werden
+soll, so dreht sich dieser, wenn O1 = 1 und
+O2 = 0. Bei der umgekehrten Einstellung
+O1 = 0 und O2 = 1 dreht sich der Motor
+dann in die andere Richtung.
+Die Wiederabschaltung erfolgt automatisch
+entsprechend dem Wert des Parameters
+maxTime. Dieser Vorgang kann abgebrochen werden, wenn sich ein oder zwei
+digitale Eingangswerte ändern.
+
+Computing
+
+Beispiel: Output Parameter
+∂
+∂
+∂
+∂
+∂
+∂
+∂
+∂
+
+O1 = 1
+O2 = 2
+O3 = 4
+O4 = 8
+O5 = 16
+O6 = 32
+O7 = 64
+O8 = 128
+
+Wenn z. B. die Ausgänge O1 und O3
+gleichzeitig eingeschaltet werden sollen,
+wäre Output = 5 festzulegen.
+
+Der JobDispatcher
+Wie bereits oben erwähnt, sind der PC und
+der Robotics TXT zwei autarke Systeme,
+die per USB-Kabel miteinander verbunden
+sind. Beide Systeme müssen gleichzeitig
+bereit sein, um eine Kommunikation zu
+ermöglichen. Aus diesem Grund wurde
+experimentell eine gewisse Wartezeit ermittelt, nach dem der nächste Kommunikationsvorgang sicher möglich ist.
+Die Einhaltung der Wartezeiten wird dabei
+vom JobDispatcher kontrolliert. Damit das
+möglich wird, müssen alle erforderlichen
+Vorgänge in die JobList aufgenommen
+werden, aus der diese dann sequentiell
+abgearbeitet und schließlich wieder entfernt
+werden.
+Ein diesbezüglich kritischer Vorgang ist die
+Übermittlung von Bildern. Diese werden
+erst einige Zeit nach dem Absenden der
+Übermittlungsanfrage vom Robotics TXT
+zum PC übertragen. Neben immer wieder
+auftretenden Übermittlungsfehlern, die
+abgefangen werden müssen, darf auf diese
+Bilder vom PC erst dann für eine Weiterverarbeitung zugegriffen werden, wenn die
+Übertragung erfolgreich abgeschlossen ist.
+Auch das wird über den JobDispatcher
+sichergestellt.
+
+
+
+
+Verwendung des
+Beispielprogramms
+Im bereitgestellten Beispielprojekt können
+drei prinzipielle Funktionalitäten demonstriert werden (siehe Abb. 4 und [2]).
+Hierbei ist zu beachten, dass sich die Datei
+RoboTXT_v01.dll
+im
+Verzeichnis
+C:\Programme\RoboTXT_LIB
+befinden
+muss, oder alternativ in der Datei
+RoboTXT.vb der passende Pfad einzustellen
+ist.
+a) Verbindungsaufbau zwischen
+RoboTXT und PC aufbauen
+Der Verbindungsaufbau ist denkbar einfach; im Grunde reicht die Betätigung der
+Befehlsschalfläche check. Wenn eine
+Verbindung besteht, wird es angezeigt.
+b) Digitale Eingänge auslesen
+Der aktuelle digitale Zustand der Eingänge
+kann mithilfe der Befehlsschaltfläche I1…8
+digital ausgelesen werden. Fotowiderstände
+und Fototransistoren können dabei auch als
+digitale Signalgeber eingesetzt werden. Der
+aktuelle Zustand wird über die entsprechenden Kontrollkästchen angezeigt.
+c) Digitale Ausgänge einstellen
+Die Auswahl digitaler Ausgänge, die nachfolgend angesteuert werden sollen, kann
+über die zugehörigen Kontrollkästchen
+definiert werden. Für Motoren gibt es die
+Besonderheit, dass (wie oben bereits
+erwähnt) gleichzeitig zwei Ausgänge
+definiert werden müssen.
+Weiterhin muss eine Zeit festgelegt werden,
+für die die gewünschte Ansteuerung vorgenommen werden soll. Schließlich können
+maximal zwei Eingänge definiert werden,
+die zu einem Abbruch der Ausgangsansteuerung führen. Hierbei wird betrachtet, ob es zur Laufzeit zu einer Änderung der
+Eingangsbeschaltung kommt.
+
+
+d) Kamerabild anfordern
+Über die Befehlsschaltfläche Camera kann
+ein aktuelles Kamerabild angefordert
+werden.
+
+Ausblick (nah)
+Auf den ersten Blick mag der eine oder
+andere das hier vorgestellte Verfahren im
+Vergleich zu anderen Programmiermöglichkeiten des Robotics TXT als recht
+eingeschränkt empfinden. Allerdings wird
+in einem weiteren Beitrag dieser Ausgabe
+der ft:pedia gezeigt, dass durchaus recht
+komplexe Automatisierungsaufgaben unter
+Nutzung von RoboRISC und WindowsFunktionalitäten machbar sind [3].
+
+Ausblick (fern)
+Vielleicht lässt sich über die ft:pedia oder
+die ft-Community eine Programmbibliothek (DLL) erstellen, mit der alle bekannten
+Robotics TXT Controller-Funktionen in
+Microsoft .NET managed code bereitgestellt werden können. Im Idealfall wäre
+alles auch gleich kompatibel mit dem Robo
+TX Controller.
+
+Quellen
+[1]
+
+fischertechnik: ROBOTICS TXT
+Controller C-Programming Kit
+Firmware Version 4.1.6.
+Fischerwerke, 2015.
+
+[2]
+
+Gail, Andreas: RoboTXTC link to
+VisualBasic2010 digital I/O camera
+access and bar code reader. Visual
+Basic 2010-Beispiel-Programm.
+
+[3]
+
+Gail, Andreas: Hochregallager mit
+Kamera-Strichcodeleser, Microsoft
+Visual Basic 2010 und RoboRISC. In
+dieser ft:pedia.
+
+
+Computing
+
+<DllImport(dllpath, EntryPoint:="?GetDigitalAll@TXT@@QAEIHHHH@Z", _
+CallingConvention:=CallingConvention.StdCall)> _
+<DllImport(dllpath, EntryPoint:="?GetDigitalAll@TXT@@QAEIHHHH@Z", _
+CallingConvention:=CallingConvention.StdCall)> _
+Public Shared Function GetDigitalAll(ByVal IPa as integer, _
+ByVal IPb as integer, ByVal IPc as integer, ByVal IPd as integer) As UInteger
+End Function
+<DllImport(dllpath, EntryPoint:="?GetPicture@TXT@@QAE_NHHHH@Z", _
+CallingConvention:=CallingConvention.StdCall)> _
+Public Shared Function GetPicture(ByVal IPa as integer, _
+ByVal IPb as integer, ByVal IPc as integer, ByVal IPd as integer) As Boolean
+End Function
+<DllImport(dllpath, EntryPoint:="?SetDigitalAll@TXT@@QAEIHHHHHHHH@Z", _
+CallingConvention:=CallingConvention.StdCall)> _
+Public Shared Function SetDigitalAll(ByVal Output as integer, _
+ByVal maxTime as integer, ByVal Input1 as integer, ByVal Input2 as integer, _
+ByVal IPa as integer, ByVal IPb as integer, ByVal IPc as integer, _
+ByVal IPd as integer) As UInteger
+End Function
+
+
+
+
+

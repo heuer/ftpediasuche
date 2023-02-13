@@ -1,0 +1,214 @@
+
+
+Elektronik
+
+Silberlinge: Original oder Nachbau (Teil 9)
+Peter Krijnen
+In diesem letzten Beitrag in der Reihe der Silberlinge werde ich mich mit den Modulen aus
+hobbylabor 1 und dem Mikrofon-Lautsprecher-Baustein befassen. Abschließend möchte ich
+dann noch meine Nachbauten vorstellen.
+
+hobbylabor 1
+
+Ich selbst besitze kein hobbylabor 1. In
+einer großen Menge fischertechnik, die ich
+mal bei einer Schule gekauft habe, waren
+die Module aus diesem Kasten enthalten.
+Neben einem „Potentiometer-Baustein“ PB
+(37158 , Abb. 269) und einem „Experimentierfeld“ EF (37140, Abb. 273) befand sich
+auch ein „Volt-Ampere-Meter“ (37142) im
+Karton. Diese wurden auch separat verkauft.
+
+
+hobbylabor 1 wurde 1974 als Neuheit auf
+der Nürnberger Spielwarenmesse vorgestellt. Diese Kasten erhielt die Artikelnummer 30626. Warum diese Nummer
+1975 auf 30850 geändert wurde, ist mir
+nicht klar.
+In einem Katalog 1975/1976 wird auch
+angekündigt, dass ein hobbylabor 2 „Halbleiterschaltungen“ in Vorbereitung sei. Es
+blieb bei der Ansage; leider wurde dieser
+Kasten nie produziert. 1979 wurden jedoch
+die Kästen „Elektronik-Praktikum“ (30629)
+und „IC-Digital-Praktikum“ (30630) eingeführt. Mit beiden Kästen lassen sich „Halbleiterschaltungen“ bauen. Beide wurden
+1981 durch „Elektronik“ (30253) ersetzt.
+Auf die Module in den Kästen 30630 und
+30253 gehe ich in einem späteren Beitrag
+ein. 1980 endete das hobbylabor 1.
+
+
+Beide Module aus hobbylabor 1 scheinen
+die gleichen zu sein wie die ersten Module
+aus hobby 4. Es wurden jedoch drei Änderungen vorgenommen:
+ Erstens sind die Anschlussbuchsen in
+einer 7,5×7,5 mm-Matrix (9×5 Buchsen)
+anstelle der 12×8 mm-Matrix (8×3
+Buchsen) angeordnet.
+ Zweitens bestehen die Anschlussbuchsen nicht mehr aus Bundhülsen,
+sondern aus gerolltem Blechmaterial
+(Abb. 270).
+ Da die Enden offen und flach sind,
+können die Anschlussbuchsen nicht
+mehr auf die Platine gelötet werden
+(Abb. 274).
+Der Vorteil der flachen Enden der
+Anschlussbuchsen liegt darin, dass man
+auch die Anschlussdrähte eines Widerstands, Kondensators oder einer Diode
+direkt in die Buchsen stecken kann, ohne
+vorher Stecker aufschrauben zu müssen.
+
+
+Elektronik
+
+Potentiometer-Modul PB
+Zwei Potentiometer sind im PotentiometerBaustein eingebaut: Eines mit 1 kΩ und
+eines mit 10 kΩ. Das 1K-Potentiometer hat
+noch einen Vorwiderstand von 150 Ω und
+das 10K einen von 1 kΩ. Außerdem gibt es
+je zwei Anschlüsse für „+“ und „-“. Ich gehe
+davon aus, dass das „A“ für Ausgang und
+das „E“ für Eingang steht. Warum sie
+gewechselt wurden, ist mir nicht klar. „S“
+steht dann für „Schleifer“. Wie das alles
+funktioniert ist auf dem Schaltbild in
+Deckel aussieht zeigt Abb. 270, das Layout
+
+
+Experimentierfeld EF
+Das Experimentierfeld besteht aus fünf
+Reihen oder Spalten (je nach Betrachtungsweise) mit jeweils neun Buchsen. Da in den
+Modulen Platz benötigt wird, um die
+Module untereinander zu verbinden, gehen
+unten und auf der rechten Seite je ein
+Anschluss verloren.
+
+
+Insgesamt stehen also 43 Anschlussbuchsen
+verteilt auf sieben Leisten zur Verfügung: 1
+von 9, 1 von 8, 2 von 5 und 4 von 4. Es gibt
+keine interne Verbindung mit „+“ oder „-“.
+des Deckels, Abb. 275 zeigt das Layout.
+
+
+
+Mikrofon-Lautsprecher-Modul ML
+Der Mikrofon-Lautsprecher verfügt über
+ein „Kristall-System“. Dieses System wandelt einerseits elektrische Energie in akustische Schwingungen um und umgekehrt
+akustische Schwingungen in elektrische
+Energie [1]. Dies wird in [2] ab Seite 32
+weiter erklärt. In Abb. 277 ist zu erkennen,
+dass die vier Anschlussbuchsen untereinander vernetzt sind. Es ist klar, dass
+dieser Baustein jeweils nur eine Funktion
+handhaben kann. Laut [1] liegt der Frequenzbereich bei 50 – 7000 Hz.
+
+
+
+
+
+
+
+Elektronik
+
+Nachbau
+Zum Nachbau des Potentiometer-Bausteins
+verwende ich auch meine universellen
+Leiterplatten. Die 45×75-Version ist auf
+Original habe ich die „+“- und „-“-Verbindungen in eine logischere Position gebracht.
+Ich habe auch die Anschlüsse der Potentiometer verschoben. Da an „+“ oder „-“ keine
+Bauteile angeschlossen sind, könnte man
+die Platine auch um 180 ° drehen. Die „S“Anschlüsse befinden sich dann auf der rechten Seite. Es spielt keine Rolle, welchen
+Anschluss der Potentiometer man „A“ oder
+„E“ nennen möchte. In Abb. 279 sehen wir
+die Komponentenanordnung und in
+
+für das 45×75-Gehäuse
+
+Wir sind nicht verpflichtet, uns beim Nachbauen an das Original zu halten. Das heißt,
+wir können jeden gewünschten Wert für die
+Potentiometer nehmen. Für ein Projekt, an
+dem ich arbeite, brauchte ich zwei 10KPotentiometer – dachte ich. 10K erwiesen
+sich aber als zu niedrig. Also habe ich ein
+drittes Modul gebaut, aber jetzt mit zwei
+25K-Potentiometern.
+Die Abb. 281 bis 283 geben einen Blick auf
+die 60×60-Version, Abb. 284 bis 286 die
+30×60-Version.
+Für den Nachbau des Experimentierfeldes
+empfehle ich das in Abb. 275 gezeigte Layout. Dies habe ich jedoch nicht genutzt. Ich
+denke, dass der experimentelle Bereich in
+Bezug auf die Möglichkeiten etwas zu
+begrenzt ist. Wie in Abb. 287 und 288
+verwende ich ein kleines Steckbrett [3]. So
+kann ich auch ICs verwenden. Auch Widerstände, Kondensatoren und Dioden haben
+einen besseren Kontakt.
+Ich sah keinen Sinn darin, den MikrofonLautsprecher-Baustein neu zu erstellen.
+Erstens, weil ich ihn so gut wie nie benutze,
+und wenn, dann nur noch als Lautsprecher.
+Auch ein „Kristall-System“ kann ich
+nirgendwo finden.
+
+für das 45×75-Gehäuse
+
+für mein 45×75-Gehäuse
+
+
+
+
+
+für das 60×60-Gehäuse
+
+für das Batteriegehäuse (32263)
+
+für das 60×60-Gehäuse
+
+für das 30×60-Gehäuse
+
+für die 60er-Kassette (32076)
+
+für das Batteriegehäuse (32263)
+
+
+Elektronik
+
+Alternativ könnte man den Lautsprecher
+(Abb. 289) von „Elektronik“ (30253) verwenden. Eine weitere Alternative könnten
+die kleinen Lautsprecher sein, die im
+Modellbau zum Beispiel für den Sound von
+Lokomotiven verwendet werden. Ob das in
+Sachen Widerstand und Leistung mit den
+Ausgängen der Silberlinge kompatibel ist,
+muss man jedoch prüfen.
+
+Elektronikkasten (30253)
+
+Ist dies das Ende meiner Besprechungen
+über die Silberlinge? Was die Silberlinge
+betrifft: Ja. Hinsichtlich der Module: Nein.
+Es gibt nämlich noch die Module des „ICDigital-Praktikums“ (30630) und die der
+„Elektronik“ (30253).
+
+Quellen
+Alternative zum Experimentierfeld
+für das 45×75-Gehäuse
+
+[1]
+
+Fischer-Werke: fischertechnik h4 ML
+Mikrofon-Lautsprecher (39586).
+
+[2]
+
+Fischer-Werke: fischertechnik
+hobby 4 Band 2 (39542), 5/1973.
+
+[3]
+
+Conrad Electronic SE: TRU
+COMPONENTS Steckplatine Weiß
+Polzahl gesamt 170 (L x B x H)
+45.72 x 35.56 x 9.40 mm.
+
+Alternative zum Experimentierfeld
+für das 60×60-Gehäuse
+
+
+

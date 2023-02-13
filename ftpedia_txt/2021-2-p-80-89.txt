@@ -1,0 +1,315 @@
+
+
+Elektronik
+
+Silberlinge: Original oder Nachbau (Teil 2)
+Peter Krijnen
+„Volt, Watt, Ampère, Ohm – ohne mich gibt‘s keinen Strom“. Wenn sich Herr Hertz die Mühe
+macht, diese vier Herren zum Swingen zu bringen, kann das nur zu einem führen: Elektrizität.
+In diesem zweiten Teil möchte ich den Gleichrichter h4 GB (36393) vorstellen.
+Alternativ zum Gleichrichter (36393)
+könnte man auch die IC-Spannungsversorgung (35732) aus dem Kasten „Elektronik“
+(302539) verwenden.
+
+Ohne Netzteil funktioniert
+nichts
+Am Anfang musste man sich mit einem Batteriestab (31041, Abb. 32) zufriedengeben,
+der drei 1,5-V-Batterien benörigte, um zusammen bis zu 4,5 V zu liefern. Die noch
+recht schwachen Motoren waren jedoch für
+6,8 V ausgelegt.
+
+
+fischertechnik nahm jedoch bald einen
+Transformator in sein Sortiment auf. Dieser
+Transformator, der nur 5 VA liefern konnte,
+wurde als „mot. 4“ (31040, Abb. 33) vermarktet. Neben einem einstellbaren Gleichspannungsausgang bot er auch einen nicht
+regelbaren 6,8-V-Wechselspannungsausgang. Einige Jahre später wurde dieser
+
+
+Transformator durch eine 7-VA-Version ersetzt. Noch als „mot. 4“ (30173) war die
+erste Generation noch mit einem Wechselspannungsausgang ausgestattet. Die zweite
+Generation erhielt jedoch einen festen
+Gleichspannungsausgang. Man kann allerdings nicht wirklich von einer Gleichspannung sprechen. Wie sie aussieht, zeigt
+
+
+
+
+Kanal 1 (gelb) repräsentiert den Ausgang
+der Wechselspannungsversion und Kanal 3
+(violett) den Ausgang der Gleichspannungsversion. Beide sind hier noch ohne
+Last.
+Es ist deutlich zu erkennen, dass die Wechselspannungsversion eine Frequenz von
+50 Hz mit einer UTT von 25,6 V hat. Bei der
+Gleichspannungsversion ist zu erkennen,
+dass durch die Gleichrichtung der negative
+Teil der Wechselspannung umkippt und
+nun auch positiv wird. Daher beträgt die
+Frequenz jetzt 100 Hz und der UTT-Wert
+14,4 V.
+In Abb. 35 sind die Ausgänge mit einer
+Kombination aus 1 Gleichrichter, 1 Grundbaustein, 1 Relaisbaustein und 2 Lämpchen
+belastet. Wir sehen, dass sich die Form der
+Spannungen jetzt etwas geändert hat. Die
+UTT-Werte betragen jetzt 22,0 V und
+11,2 V.
+
+Elektronik
+
+Wellen, die durch die Last verursacht werden
+
+Beide Kanäle sind auf 10 V/Div eingestellt.
+Aber wie sieht es an den Ausgängen des
+Gleichrichters aus? Das ist in Abb. 36 zu sehen.
+Um einen besseren Überblick über das Geschehen zu erhalten, muss gezoomt werden.
+Ich habe jetzt beide Kanäle auf 1 V/Div eingestellt.
+Die Ausgangsspannung beträgt ungefähr
+10,5 V, aber die Last erzeugt ein welliges
+Signal. Trotz der Tatsache, dass ein großer
+Kondensator eingebaut ist, wird er zu
+schnell entladen, was zu diesen Wellen
+führt. Sie haben eine UTT von 680 und
+600 mV. Eine schwerere Belastung führt zu
+einer größeren Welle.
+
+durch Last
+
+
+
+
+Alternative Spannungsversorgung
+
+
+
+Da die fischertechnik-Transformatoren viel
+zu schwach sind, ist es besser, nach einer
+Alternative zu suchen. Glücklicherweise
+hat fischertechnik seit einigen Jahren ein
+Steckernetzteil im Sortiment. Dieses 9 V,
+2,5 A starke Steckernetzteil (Abb. 37) wird
+unter der Artikelnummer 505287 verkauft.
+Es hat jedoch im Laufe der Jahre einen anderen Stecker bekommen, allerdings nicht
+mit den bekannten 2,5-mm-Steckern.
+mit Festspannungsausgang
+
+Knobloch bot daher „Stromadapter Duo“
+(75152, Abb. 38) an, mit dem von den
+5,5-mm- und 3,5-mm-Steckern auf die
+2,5-mm-Stecker gewechselt werden konnte.
+Wenn man auch den Power-Controller
+(139778, Abb. 39) aus Plus Power Set
+
+
+(505283) besitzt, kann man den auch verwenden. Der hat nämlich einen festen Ausgang mit den 2,5 mm-Steckern. Es ist dann
+weiterhin möglich, die Drehzahl eines Motors zu steuern.
+
+Elektronik
+
+verbunden. Der Deckel wird mit vier kleinen Schrauben am Gehäuse festgeschraubt.
+
+Ich selbst benutze seit Jahren zwei Exemplare des Labor-Netzteils SPS 7330 von ELV
+(Abb. 40).
+
+
+Wenn ihr ein starkes Netzteil verwendet,
+benötigt ihr keinen Gleichrichter mehr. Es
+muss jedoch ein Satz Verbindungskabel zur
+Verfügung stehen: von 4-mm-Bananensteckern zu 2,5-mm-Steckern.
+
+h4 GB „Gleichrichter“
+Wie ich bereits in der Übersicht der Module
+in Teil 1 [1] angegeben habe, verfügt das
+Gleichrichtermodul (36393, Abb. 41) nicht
+über eine Leiterplatte, auf die die Komponenten gelötet werden. Dieses Modul besteht nur aus zwei Komponenten: dem eigentlichen Gleichrichter und einem großen
+Kondensator. Beide werden mit ihren Verbindungsdrähten direkt an die Anschlussbuchsen gelötet. Der Gleichrichter ist auf
+die Unterseite des Deckels geklebt.
+
+
+Nachbau
+Ich habe selbst sechs Gleichrichter, also
+brauche ich keine neuen mehr. Deshalb
+habe ich sie nicht nachgebaut. Trotzdem
+habe ich vier neue Layouts entworfen:
+Typ 1 (Abb. 45) kann direkt in das Originalgehäuse eingelötet werden. Typ 2
+(Abb. 46) ist für mein 4575-Gehäuse. Typ 3
+(Abb. 47) ist für mein 6060-Gehäuse und
+für die 60er-Kassette (32076). Typ 4
+(Abb. 48) ist für das Batteriegehäuse
+(32263). Für Typ 2, 3 und 4 verwende ich
+die 19,4-mm-Bundhülsen 75094.
+
+Die zwei „+“-Anschlussbuchsen sind mit
+einem roten Draht mit dem Gleichrichter
+und die „-“-Anschlussbuchsen mit einem
+blauen Draht verbunden (Abb. 42). Die
+Kontaktstreifen an den Seiten des Gehäuses
+(Abb. 43) zur Stromversorgung anderer
+Module sind ebenfalls mit einem roten und
+einem blauen Draht mit dem Kondensator
+
+
+
+
+
+
+für das Original-Silberling-Gehäuse
+
+Silberlinge
+
+
+Für Typ 1 habe ich noch den Brückengleichrichter vom Original verwendet. Ich
+persönlich mag diese Brückengleichrichter
+nicht so sehr. Normalerweise liegen die Anschlüsse sich so gegenüber, dass ich Probleme beim Verlegen der Leiterbahnen habe.
+Daher verwende ich vorzugsweise die Dioden der Serien 1N4000 oder 1N5000. Der
+1N4001 kann bis 1 A verwendet werden,
+ein 1N5401 bis 3 A und z. B. ein BY550 bis
+5 A.
+
+
+für mein alternatives Gehäuse
+
+Elektronik
+
+für das Batteriegehäuse (32263)
+
+IC-Spannungsversorgung
+35732 (Bild 49)
+1981 stellten die Fischerwerke den neuen
+Elektronikkasten (30253) vor. Neben einer
+Leistungsstufe (36296) und einem Schwellenwertschalter (36295) gibt es auch eine ICSpannungsversorgung (35732, Abb. 49).
+Die IC-Spannungsversorgung ist, wie der
+Name schon sagt, um ein IC herum aufgebaut: einen Spannungsstabilisator vom Typ
+7805.
+
+für 60er Kassetten (32076)
+
+Die Schaltung besteht neben dem IC noch
+aus einer Diode, einem 1000-µF-Kondensator am Eingang des ICs und einem 47-µFKondensator am Ausgang des ICs. Die Anschlüsse sind 1,3-mm-Lötstifte. Normalerweise wird ein U-förmiger Kühlkörper zum
+Kühlen des Stabilisator-IC verwendet. Allerdings dient bei diesem Modul eine Kupferfläche auf der Unterseite der Leiterplatte
+als Kühlplatte (Abb. 50). Die Schraube und
+Mutter, mit der der IC auf die Leiterplatte
+geschraubt wird, sorgt zusätzlich für die
+
+
+
+Ableitung der Wärme nach unten. Die Bodenwanne des Moduls ist in Abb. 51 zu sehen.
+
+
+Die Silberlinge arbeiten auch mit 5 V, aber
+es ist natürlich möglich, das IC durch eine
+9-V-Version zu ersetzen. Was möglich ist,
+seht ihr unter dem Schaltbild (Abb. 52).
+
+
+
+Nachbau
+
+
+
+Dieses Modul kann man wie das Original
+mit den 1,3-mm-Lötpins bauen (Layout in
+wollte dieses Modul wie den Gleichrichterbaustein aufbauen (Abb. 54) – mit den
+2,5-mm-Bundhülsen.
+
+
+
+Elektronik
+
+(35732) ,ohne Deckel
+
+Gegenüber dem Original musste ich die
+Bauteile verschieben und drehen. Daran
+sind die Bundhülsen schuld.
+Wenn ich mir Abb. 56 anschaue, denke ich,
+dass es besser gewesen wäre, wenn ich die
+Oberseite der Platine als Kühlplatte verwendet hätte. Mit etwas Wärmeleitpaste
+wird die Wärme des ICs besser abgeführt.
+Unterhalb des Schaltplans (Abb. 52) befindet sich eine Tabelle, aus der die Minimalund Maximalwerte ermittelt werden können, die am Eingang angeboten werden dürfen. Allerdings sollte man eine mögliche
+Welligkeit der Gleichspannung berücksichtigen. Beträgt die Welligkeit beispielsweise
+1 V, müssen bei Verwendung des 7809 am
+Eingang 12 V angelegt werden.
+(35732) in meinem alternativen Gehäuse
+
+Die Stabilisatoren der Serie 78xx gibt es in
+Versionen für 1 A, 1,5 A und 2 A. Ich persönlich finde eine 1-A-Version in der IC
+Spannungsversorgung mehr als ausreichend.
+
+
+Typ 1 (Abb. 57) kann direkt in das Originalgehäuse des Gleichrichters eingebaut
+werden.
+Typ 2 (Abb. 58) ist für mein 4575-Gehäuse
+(Abb. 55).
+
+(35732) – Lötseite
+
+für mein alternatives Gehäuse
+
+Typ 3 (Abb. 59) ist für die 60er-Kassette
+(130961).
+
+für das Original-Silberling-Gehäuse
+
+Ich habe vier Alternativen für die ICSpannungsversorgung entworfen:
+
+Kühlkörper
+
+
+Elektronik
+
+Typ 4 (Abb. 60) ist für das Batteriegehäuse
+(32263).
+
+120 VA
+
+für das Batteriegehäuse (32263)
+
+Es ist nicht sinnvoll, einen 7809 an die alten
+fischertechnik-Transformatoren
+anzuschließen: Diese bieten sehr wenig Leistung. Selbst bei einer Belastung von nur
+zwei Lampen sinkt die Ausgangsspannung
+des Stabilisators bereits unter 8 V, mit einer
+Welligkeit von fast 700 mV.
+Wer noch einen Ringkerntrafo von z. B.
+12 V/120 VA (Abb. 61) herumliegen hat,
+ist damit besser bedient. In Kombination
+mit einem Brückengleichrichter oder mit
+vier separaten Dioden aufgebaut und einem
+großen 4700 µF/35 V-Kondensator (Abb.
+62) kann man davon ausgehen, dass man
+mit 2 · 5 A genügend Strom zur Verfügung
+hat. Allerdings muss der Stabilisator dann
+mit einem Kühlkörper ausgestattet werden,
+und einige Löcher im Deckel können auch
+nicht schaden.
+
+
+Das war‘s für dieses Mal. Im nächsten Teil
+geht es um den „Grundbaustein“ h4G.
+
+Quellen
+[1]
+
+Peter Krijnen: Silberlinge: Original
+oder Nachbau (Teil 1). 1/2021, S. 80–93.
+
+[2]
+
+Peter Krijnen auf Thingiverse
+
+[3]
+
+AutoDesk Eagle Download-Seite
+
+[4]
+
+FrontDesigner 3.0 auf Abacom
+
+[5]
+
+3D-Druck-Dienst i.materialise
+
+[6]
+
+Platinenfertiger Eurocircuits
+
+
+

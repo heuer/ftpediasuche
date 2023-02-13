@@ -1,0 +1,66 @@
+
+
+Tipps & Tricks
+
+ft-Spezialteile made by TST (Teil 11)
+Andreas Tacke
+In einer lockeren Reihe stellt TST einige von ihm entwickelte Spezialteile vor, die so manche
+Lücke beim Bauen mit fischertechnik schließen. Im heutigen Beitrag geht es um die modifizierte Freilaufnabe (68535).
+Wer kennt das Problem nicht: Man hat ein
+Zahnrad mit einer Flach- oder Doppelnabenzange eingebaut und das Drehmoment ist zu hoch – die Achse dreht in der
+Nabe durch und man bekommt sein Modell
+einfach nicht richtig ans Laufen.
+
+Es gibt durchaus Tricks, wie z. B. ein Stück
+fischertechnik-Seil, ein Gummiband oder
+einen Papierstreifen zwischen Nabe und
+Achse zu klemmen. Aber manchmal hat
+auch das nicht den gewünschten Effekt.
+Also was tun? Es gibt da ja noch die Freilaufnabe (68535), da muss doch etwas
+gehen ...
+Diese Freilaufnabe habe ich mit einem
+Messingeinsatz versehen. Er lässt sich mit
+einer Madenschraube fest auf der Achse
+fixieren.
+
+
+Bei den Standardnaben von fischertechnik
+(Abb. 1) werden die Naben mittels der Nabenmutter (31058) auf der Achse fest geklemmt. Diese lassen sich mit den Nabenschlüsseln, den ich ja schon vorgestellt
+habe, richtig fest drehen (Abb. 2) [1].
+
+
+Mit diesem Bauteil bekommt man nun eine
+kraftschlüssige Verbindung zwischen
+Welle und Nabe.
+
+
+
+Tipps & Tricks
+
+Ein weiterer Vorteil dieser Lösung ist, dass
+sich diese Nabe nun ohne weiteres am XM
+bzw. am Encoder-Motor befestigen lässt.
+Das ist ja mit der Standardnabe nicht möglich. So ergeben sich ganz neue Möglichkeiten:
+
+
+und einem Zahnrad Z30
+
+Oder eine Schaltscheibe (37727) am Encodermotor:
+
+Also wieder mal ein Bauteil, bei dem aus
+einem bestehenden Problem etwas entstanden ist, was die Möglichkeiten erweitert,
+mit fischertechnik zu bauen …
+
+Referenzen
+[1]
+
+Andreas Tacke: ft-Spezialteile made
+by TST (Teil 4). ftpedia 2/2013, S.
+11-12.
+
+
+Oder eine Drehscheibe 60 (31019) direkt
+am Motor aus dem Traktorset (151178):
+
+
+

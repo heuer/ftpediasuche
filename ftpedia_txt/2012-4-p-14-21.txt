@@ -1,0 +1,389 @@
+
+
+fischertechnik-Basiswissen
+
+Perlentauchen (Teil 2)
+Stefan Falk
+In der letzten Ausgabe zeigten wir ein paar gebräuchliche und weniger gebräuchliche ältere
+fischertechnik-Teile. Heute setzen wir fort mit ein paar interessanten mechanischen Teilen
+und einem Querschnitt über die vielen früher verwendeten Motortypen und ihr Zubehör.
+
+Der erste Motor
+Fangen wir an mit dem Urahn aller
+fischertechnik-Motoren aus dem Kasten
+mot 1. Er ist für 6,8 V Gleichspannung
+ausgelegt und treibt eine direkt auf seiner
+Rotorachse fest angebrachte Schnecke an.
+Sein Gehäuse ist 30 mm breit und 45 mm
+lang – der Rest passt allerdings nicht gut
+ins Raster, denn seine Höhe hat ein etwas
+krummes Maß größer als 30 mm.
+
+Bodenplatte
+
+Bei einer jüngeren Variante ist die Bodenplatte durch die nach hinten offenen Nuten
+abnehmbar. Wie Abb. 2 zeigt, passen die
+Nuten sogar mit einem Baustein 7,5 ins
+Raster – obwohl es damals noch gar keinen
+BS7,5 gab!
+
+
+Das macht allerdings gar nichts, denn er
+besitzt eine rote Bodenplatte, die sich in
+Längsrichtung verschieben lässt, und diese
+wiederum trägt eine drehbare Platte mit
+zwei Stegen, die in die Nuten von
+Bausteinen passen. So ist dieser Motor gut
+verbaubar und kann obendrein in seiner
+Lage fein justiert werden (Abb. 1).
+
+
+
+Die Frontseite des Ur-Motors verfügt ebenfalls über zwei Stege, in die allerlei
+Zubehör eingesteckt werden kann: Eine
+Kombination aus Z10 plus Achse, ein Z10
+plus Schnecke und ein sehr flexibel
+verwendbares Stufengetriebe aus dem
+Ergänzungskasten mot 2 (Abb. 3).
+
+fischertechnik-Basiswissen
+
+Erst 1975 kam der Getriebeadapter 38203
+hinzu, der es ermöglicht, die beiden
+Aufsteckteile auch um 90° verdreht
+anzubringen:
+
+Das Stufengetriebe kann von zwei Seiten
+in allen Richtungen auf den Motor aufgesteckt werden und bietet durch das
+Verwenden von Kombinationen der mitgelieferten Untersetzungszahnräder eine
+variable Ausgangsdrehzahl (Abb. 4).
+Allerdings liegt die abgehende Achse
+nirgends im Raster – mitunter muss man
+also etwas kreativ bei der Verwendung
+werden.
+
+beim Stufengetriebe
+
+Auf eine Innenseite des Stufengetriebes
+kann noch ein Z10 gesteckt werden
+(Abb. 5), von dem ab mit grober und auch
+mit feiner Verzahnung weiter gebaut
+werden kann. Allerdings wurde dieses
+Zusatzzahnrad schon früher nur äußerst
+selten tatsächlich verwendet.
+
+
+Durch seine äußerst nützliche Bodenplatte
+kann dieser Motor in praktisch jeder
+Lebenslage so justiert werden, dass er
+perfekt in das gewünschte Abtriebszahnrad
+eingreift. Nur wenn die auftretenden Kräfte
+all zu groß werden, hält der Drehwiderstand der Bodenplatte dem nicht stand und
+der Motor dreht sich aus dem Zahnrad
+heraus, das er antreiben soll – ein einfacher
+Überlastschutz.
+Den mot 1 kann man etwa mit dem UrDifferentialgetriebe 31043 von 1968 recht
+elegant für einfache Fahrzeugantriebe
+nutzen:
+
+Fahrzeugantrieb
+
+
+Dieses Differential ist außen ein einziges
+30 mm breites Z15. Das ist nützlich für die
+Konstruktion von Schaltgetrieben, bei
+
+
+
+denen ein Zahnrad in Achsrichtung
+verschoben wird und dennoch ständig in
+Eingriff mit dem Differential bleibt. Abb. 8
+zeigt ein einfaches Schaltgetriebe im
+„schnellen Gang“ (wenn man die untere
+Achse antreibt):
+
+
+Verschiebt man die mittlere Achse, wird
+das Differential langsamer angetrieben:
+
+
+Schon kurz nach dem mot 1 kamen mit
+dem Ergänzungskasten ft 06 die Segmentund Kurvenscheiben auf den Markt:
+
+
+In deren exzentrisch angebrachten
+Bohrungen halten Achsen ohne weitere
+Mittel sehr fest.
+Die Segmentscheibe kann man für Schrittschaltgetriebe oder, wie Abb. 11 zeigt, für
+ein Hammerwerk verwenden.
+
+zum ft 200 Grundkasten [1]
+
+Die Kurvenscheiben werden natürlich
+gerne für Modelle der Ventilsteuerung
+beim KFZ-Motor verwendet (Abb. 12).
+Im Vorgriff auf die zum ElektromechanikProgramm gehörenden Teile sei kurz auf
+ein Schneckenkupplungs-Bauteil hingewiesen. In der Anordnung von Abb. 13
+sind die beiden Schnecken der Motoren
+über das Kupplungsteil direkt miteinander
+verbunden. Führt man einem Motor Strom
+zu, arbeitet der andere als Generator – eine
+an ihm angeschlossene Lampe leuchtet.
+
+
+fischertechnik-Basiswissen
+
+Minimotoren
+1969 kam schon der mini-mot 1 heraus:
+Ein Kleinstmotor in genau der Größe eines
+Bausteins 30:
+
+
+aus der Anleitung zum ft 400 Grundkasten [1]
+
+
+Ein anderer Verwendungszweck ist ein
+direkter Abtrieb auf ein Zahnrad Z10 –
+solange nicht zu viel Drehmoment
+abverlangt wurde:
+
+In Abb. 15 sieht man in der Mitte den
+Minimotor neben einem Baustein 30 zum
+Größenvergleich.
+Auch für den Minimotor existieren verschiedene Aufsteckgetriebe: Eine Untersetzung auf eine weitere kleine Schnecke,
+eine auf eine Schecke für normale
+Zahnräder mit großen Zähnen, eine
+beidseitig herausgeführte Achse sowie
+auch wieder ein aufsteckbarer Getriebeblock. Letzterer ähnelt dem mot 2-Aufsteckgetriebe für den mot 1, kann aber nur
+in zwei Richtungen aufgesetzt werden und
+hat keine variable Untersetzung. Für viele
+Zwecke passt das aber trotzdem, wie
+bereits enthaltenen Raupenbändern zeigt:
+
+
+
+
+
+Außer dass das spätere Aufsteckgetriebe
+einen Zapfen anstatt Federn an der
+Stirnseite besaß, gibt es noch einen feinen
+Unterschied: Die erste Version führt die
+Abtriebsachse nicht genau rasterkonform
+heraus, wie Abb. 17 zeigt:
+
+sener, dafür aber auch etwas kräftigerer
+Minimotor enthalten:
+
+mini-mot 1 im Vergleich
+Aufsteckgetriebes (rechts) ist nicht genau
+rasterkonform, die neue (links) schon
+
+Der spätere S-Motor ist schon wieder
+deutlich größer, aber dafür auch deutlich
+stärker, und er brauchte weniger Strom. Er
+war ab 1985 grau und ab 1990 schwarz.
+Sein Aufsteckgetriebe bietet einen Rastachsen-Abtrieb (Rastachsen gibt es erst seit
+1990).
+Wenn wir schon beim Hubgetriebe sind,
+schauen wir uns mal all die Zahnstangen
+an, die es gab bzw. gibt:
+
+
+
+Da insbesondere die kleinen Schnecken
+aus Abb. 15 überhaupt nicht im ft-Raster
+liegen, lag auch eine separate rote
+Bodenplatte bei – ganz ähnlich der fest
+angebauten des mot 1. Damit kann man
+den mini-mot 1 fein justieren, wie Abb. 18
+zeigt. Übrigens ist diese Justierplatte genau
+7,5 mm hoch. Das war also schon 1969 ein
+erster Baustein in halber Rasterhöhe –
+lange vor dem heute üblichen Baustein 7,5.
+
+Von links nach rechts zeigt Abb. 20 die
+kurzen und langen Zahnstangen mit grober
+Verzahnung (sie sind etwas länger als 30
+bzw. 60 mm). Spätere Versionen trugen
+statt eines fast massiven Steges einen Vförmigen für die Nuten der Bausteine.
+Diese Zahnstangen gab es zusammen mit
+Varianten mit feiner Verzahnung bereits
+im mot 2-Kasten. Später kamen die
+bekannten Hubzahnstangen, ebenfalls mit
+feiner Verzahnung.
+
+1974 kam das Hubgetriebe im Kasten
+mini-mot 2 heraus (das war damals eine
+kleine Sensation). Im selben Kasten war
+auch ein in der Breite auf 20 mm gewach18
+
+Ein etwas seltsam aussehendes, aber
+durchaus nützliches Bauteil ist der
+Schneckenantrieb 32886, der ins Aufsteck-
+
+getriebe der kleinen Motoren passt und
+eine Schnecke für die grobe Verzahnung
+fest trägt:
+
+fischertechnik-Basiswissen
+
+Gegenüber dem Ur-Motor hat der MMotor eine ganze Reihe von Vorteilen:
+Sein Gehäuse passt mit 30 mm x 30 mm
+x 45 mm genau ins Raster.
+Er ist kräftiger.
+Er läuft ruhiger und noch gleichmäßiger, weil im Inneren mehr Magnete
+im Stator des Elektromotors sitzen. Das
+merkt man, wenn man am Ur-Motor
+und am M-Motor von Hand dreht: Man
+spürt, dass der M-Motor in kleineren
+Winkelabständen „anzieht“.
+
+
+Das passt wunderbar zum Antrieb eines
+Drehkranzes 31393 – da sitzt nämlich alles
+perfekt im ft-Raster:
+
+Die justierbare Bodenplatte von Abb. 2
+passt auch auf den M-Motor. Wer genau
+hinschaut, sieht bei dem neuen Getriebeaufsatz mit Schnecke und beim neuen
+Stufengetriebeaufsatz in Abb. 23, dass die
+Zähne der Z10 schräg angeordnet sind. Das
+ist der Form der Motorschnecke besser
+angepasst und führt vor allem zu weniger
+Verschleiß am Zahnrad.
+Zur Perfektion weiterentwickelt wurde das
+Stufengetriebe des M-Motors:
+
+
+Der Ur-Motor wird erneuert
+Eine tolle Weiterentwicklung gab es 1987
+mit der Einführung des M-Motors 32618:
+des M-Motors
+
+
+Die Abtriebsachse sitzt jetzt im Raster (als
+ob da ein BS15 mit Bohrung verwendet
+wäre). Zudem kann man die verschiedenen
+Untersetzungsverhältnisse (1:240, 1:77 und
+1:32) erreichen, ohne dass die Abtriebsachse an ungünstiger verwendbare Positionen wandern müsste. Wie Abb. 24 zeigt,
+kann man die Aufsteckzahnräder und ein
+neues, umsteckbares kleines Zahnrad
+
+
+
+verschieden aufstecken. So erreicht man
+dieselben Untersetzungsverhältnisse wie
+beim Ur-Stufengetriebe (vgl. Abb. 4), nur
+dass die Abtriebsachse immer an
+derselben, rasterkonformen Position bleibt.
+Das neue Stufengetriebe passt übrigens
+auch auf den Ur-Motor. Es kann zwar nur
+noch von einer Seite (aber immer noch in
+vier Richtungen) aufgesteckt werden, dafür
+erhält man an der Stirnseite und an
+weiteren Stellen Nuten – besser kann man
+so einen Getriebeblock wohl nicht
+entwerfen.
+
+Powermotoren
+
+wurden, haben sie doch gegenüber ihren
+Vorgängern einen oft kritisierten Nachteil:
+Zum Anbau gibt es lediglich eine mit einer
+einzigen Schraube fixierte Platte mit vier
+Halbnuten. So mancher hat deswegen
+schon geschimpft, findige Leute fanden
+aber schon immer geeignete Lösungen [2]
+– und zum Glück hat fischertechnik diesen
+Missstand ja mit den aktuellen XM- und
+Encoder-Motoren korrigiert.
+
+Spezielle Motoren
+Ungewöhnlich geformt, selten anzutreffen
+und mitunter entsprechend begehrt ist der
+RC-Radantrieb 31259 aus dem Jahre 1983:
+
+1999 erschien wieder eine neue Generation
+Motoren, und diesmal eine richtig kräftige.
+Die Power-Motoren gibt es mit schwarzer,
+grauer und roter Kappe in ansonsten
+identischen Abmessungen. Gleich eingebaut sind nämlich Untersetzungsgetriebe
+1:8 (schwarze Kappe), 1:20 (grau) bzw.
+1:50 (rot):
+
+Er gehört zu einer Funkfernsteuerung, die
+mittlerweile von zwei Generationen von
+Infrarot-Fernsteuerungen abgelöst wurde.
+Immerhin gibt es dazu passend auch schon
+einen frühen Servomotor:
+und die drei Aufsteckteile
+
+Man verwendet also je nach Situation den
+richtigen Motor und nicht mehr wie früher
+verschieden
+konfigurierte
+Aufsteckgetriebe. Deshalb gibt es als AbtriebsZubehör zum Aufstecken auch nur einen
+Adapter für Rastachsen, ein Z10 und ein
+Kegelzahnrad, welches nur zum Antrieb
+des aktuellen Differentialgetriebes gedacht
+ist.
+Wenngleich diese Motoren mit ihren hohen
+Drehmomenten für viele der heute
+üblichen größeren Modelle unverzichtbar
+
+
+Exoten
+Ein ungewöhnliches Bauteil ist eine Kombination aus Schneckenaufsatz, Kontermutter und Spannkegel, mit dem man
+
+einen Direktantrieb mit der Achse des MMotors oder des Ur-Motors realisieren
+kann.
+
+fischertechnik-Basiswissen
+
+ihn überhaupt verbauen konnte, als auch
+damit man eine normale ft-Achse verwenden konnte, wurden Spezialteile
+benötigt. Die Ansteuerung über seine vier
+Anschlüsse erfolgt sinnvoll nur in Computing-Modellen.
+Schließlich werfen wir noch einen Blick
+auf den höchst seltenen Kraftmesser aus
+der Zusatzpackung ft 025:
+
+Motorschnecke aus
+
+
+
+Ganz besonders exotisch ist wohl der
+Schrittmotor 32311 aus dem Plotter-Baukasten von 1985.
+
+Die Packung enthielt zwei austauschbare
+Federn – eine schwache und eine starke.
+Der Kraftmesser selbst verfügt über eine in
+Millimetern ausgeführte Skala und
+verschiedene Anbaumöglichkeiten. Neben
+interessanten Kräftebeobachtungen in den
+hobby-Begleitbüchern kann man ihn auch
+als langes federndes Element verwenden,
+wie man hier sehen kann.
+
+Ausblick
+In der nächsten Folge unserer kleinen Zeitreise wenden wir uns den vielen Teilen aus
+dem Bereich Elektromechanik zu.
+
+Quellen
+[1]
+
+Bauanleitung zu den Grundkästen
+100-400, fischerwerke 1968-1972.
+
+[2]
+
+Andreas Tacke, ft-Spezialteile made
+by TST (Teil 2), ft:pedia 3/2012, S.
+27-28.
+
+
+An diesem Motor passt so gar nichts zum
+fischertechnik-Raster: Sowohl damit man
+
+
+

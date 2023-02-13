@@ -1,0 +1,109 @@
+
+
+Modell
+
+Zählsystem
+Hans-Christian Funke
+Habt ihr auch schon einmal festgestellt, dass ihr gerade gar keinen Überblick habt, wie viele
+Pakete, Kugeln oder andere Objekte sich gerade in Eurem Modell tummeln? Dafür kann man
+ideal einen Computer einsetzen, der alle eingehenden Objekte zählt und auch kontrolliert, wie
+viele Objekte das Modell wieder verlassen. Nun hat aber nicht jedes Modell einen Computer
+oder gar eine Anzeige, um den aktuellen Stand gut sichtbar anzuzeigen. Hier folgt eine einfache
+und praktikable Lösung dafür.
+
+Einleitung
+Man nehme ein Zählermodul 70002, zwei
+Sensoren oder Schalter und ein wenig
+Schaltungslogik – fertig ist unser Zählsystem.
+Mit diesen wenigen Zutaten demonstriere
+ich euch anhand einer Kugelbahn, wie ihr
+euch anzeigen lassen könnt, wie viele Kugeln sich gerade aktuell auf einer Kugelbahn befinden.
+
+
+Kugelbahnmodelle gibt es viele und darunter die tollsten Kreationen, daher überlasse
+ich es euch, euer eigenes Modell dafür zu
+verwenden. Das vorgestellte Zählsystem
+lässt sich zu jeder Bahn, Paketstation, Autowaschanlage u.v.a. hinzufügen.
+
+Zutaten
+Was ihr unbedingt benötigt, ist ein Sensor
+oder Schalter am Anfang und am Ende des
+Modelles. Bei meinem Beispiel habe ich
+mich entschieden, Lichtschranken auf der
+Kugelbahn einzusetzen (Abb. 1 und 2).
+Für die Lichtquelle kann auch eine LED
+verwendet werden. Die Störlichtkappen
+sollten bei Bedarf verwendet bzw. angepasst werden – hier sind Kappen mit 3 mmBohrung verwendet worden.
+
+
+
+Für die Anzeigen wird das Zählermodul
+70002 eingesetzt (hier mit grüner 7-Segment-Anzeige), das sowohl aufwärts als
+auch abwärts zählen kann. Bei Kugelbahnen werden in der Regel kaum mehr als 20
+Kugeln auf einmal auf der Bahn sein und
+somit reicht ein Zählermodul aus. Für andere Modelle mit mehr als 100 Objekten auf
+dem Modell kann einfach noch ein weiteres
+
+
+Modell
+
+
+Zählermodul angeschlossen werden, um
+den Zählbereich bis 9999 zu erweitern.
+Etwas Würze erhält das Ganze noch durch
+die Logik, die aus drei AND-NANDGattern mit zwei Eingängen und vier RSFlip-Flops (RS-FF) besteht. Dafür werden
+nur zwei weitere Elektronikmodule benötigt, ein AND-NAND-Modul (70011) und
+ein RS-FF-Modul (70008).
+Die Sensoren (Fotowiderstand oder Fototransistor) können direkt an den Eingängen
+der AND-NAND-Gatter angeschlossen
+werden. Die Fotozellen werden mit Licht
+beschienen und sind daher leitend und liefern damit ständig ein logisch 1 (high). Sobald eine Kugel den Lichtstrahl unterbricht,
+wird die Fotozelle hochohmig und der PullDown-Widerstand
+des
+AND-NANDGatters sorgt dafür, dass am Eingang des
+Gatters logisch 0 (low) anliegt.
+
+Die Schaltung
+Der Schaltung wurde noch ein KorrekturTaster hinzugefügt, weil es doch einmal
+vorkommen kann, dass eine Kugel ohne Erlaubnis die Bahn verlässt. In diesem Fall
+würde der Zähler auf ungleich Null stehen,
+wenn alle anderen Kugeln das Ziel erreicht
+haben. Mit dem Taster kann dieser Umstand
+korrigiert werden – durch Drücken des Tasters wird der Zähler um eine Stelle abwärts
+gezählt. Der Taster muss über ein RS-FF
+entprellt werden. Die Schaltung findet ihr in
+Bei diesem Aufbau wird nur die Einerstelle
+gezählt und somit nur der „Ck I in“-Eingang
+verwendet. Dies ist der Grund, warum nur
+ein Jumper benötigt wird, der auf der Position „D“ für „digital“ gesteckt werden kann.
+Der Zählimpuls kommt von einem anderen
+
+
+
+
+
+Elektronikmodul und muss somit nicht entprellt werden.
+Hinweis: Ein RS-FF wird zum Entprellen
+des Korrektur-Tasters benötigt und kann bei
+Modellen entfallen, wo diese Funktion nicht
+benötigt wird. Ein weiteres RS-FF steuert
+die Zählrichtung (aufwärts oder abwärts)
+des Zählermoduls.
+Zwei weitere RS-FFs sind in Reihe geschaltet und bilden lediglich ein Zeitglied. Für
+den Fall, dass die Zählrichtung sich ändert,
+braucht das RS-FF für die Zählrichtung die
+Zeit, die korrekte Zählrichtung einzustellen
+
+
+und das Zählermodul die Zeit, den neuen
+Zustand zu übernehmen. Dies muss alles
+passieren, bevor der Zählimpuls am Eingang „Ck I in“ ankommt, ansonsten könnte
+in die falsche Richtung gezählt werden.
+Das Versorgungsmodul ermöglich den Betrieb der Schaltung über den integrierten
+Steckanschluss mit einem Steckernetzteil
+von fischertechnik (505287) oder alternativ
+mit einem Trafo (mot. 4, 30173) über die
+Wechselspannungs-Ausgänge.
+Viel Spaß bei der Umsetzung des Zählsystems in eurem eigenen Modell.
+
+

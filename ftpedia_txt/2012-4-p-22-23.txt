@@ -1,0 +1,59 @@
+
+
+Getriebe
+
+Handaufzug-Mechanik
+Thomas Püttmann
+Eine mechanische Uhr kann man durch Drehen der Krone in beide Richtungen aufziehen.
+Wie die Gleichrichtung der Drehbewegung funktioniert, wird anhand eines fischertechnikModells erklärt.
+Beim Aufziehen mechanischer Armbanduhren ist es gleichgültig, in welche
+Richtung man die Krone dreht. Die
+meisten Personen drehen die Krone sogar
+zwischen zwei Fingern periodisch hin und
+her. Die Spiralfeder des Uhrwerks wird
+aber natürlich nur durch Drehbewegungen
+in einer Richtung aufgezogen. Die Drehbewegungen werden also zwischen Krone
+und Feder gleichgerichtet. Eine solche
+Gleichrichtung lässt sich sehr schnell mit
+fischertechnik nachbauen.
+
+Uhrzeigersinn gedreht wird: Die Wippe
+kippt gegen den Uhrzeigersinn und das
+rechte Zahnrad Z20 der Wippe wird gegen
+das große Zahnrad Z40 gedrückt. Die
+Ausgangswelle dreht sich damit wie die
+Eingangswelle im Uhrzeigersinn.
+
+
+
+In Abbildung 1 erkennt man den einfachen
+Aufbau des Gerüsts unseres Modells. Die
+drei Bausteine 15 mit Bohrung im Vordergrund bilden die für die Funktion wesentliche Wippe.
+In Abbildung 2 erkennt man, was passiert,
+wenn die Eingangswelle (Z20 rechts) im
+
+Wenn die Eingangswelle rechts gegen den
+Uhrzeigersinn gedreht wird, kippt die
+Wippe im Uhrzeigersinn und das linke
+Zahnrad Z20 der Wippe wird gegen das
+Zahnrad Z40 gedrückt. Die Verlängerung
+der Drehbewegungskette von der Eingangswelle zur Ausgangswelle um ein
+Zahnrad sorgt für die Richtungsumkehr:
+Das Z40 dreht sich wiederum im Uhrzeigersinn.
+
+
+Getriebe
+
+Das abgebildete Modell funktioniert schon
+so sehr gut. Verbessert werden kann es
+noch, indem man einen Abstandsring
+2 mm zwischen Wippe und Gerüst setzt,
+um die Reibung beim Wippen zu verkleinern. Der restliche Aufbau muss natürlich
+dementsprechend angepasst werden.
+Um zu erzwingen, dass sich das Z40
+tatsächlich immer im Uhrzeigersinn
+bewegt, sollte eine Sperrklinke ergänzt
+werden. Hier wurde sie der Übersichtlichkeit wegen weggelassen.
+
+
+

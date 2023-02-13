@@ -1,0 +1,261 @@
+
+
+Uhren
+
+Synchronuhr mit Schrittschaltwerk
+Dirk Fox
+In der Community gibt es zahlreiche wunderschöne Synchronuhren. Mir fehlte dabei allerdings
+immer schon ein Getriebe, das den Minutenzeiger diskret alle 60 Sekunden weiterschaltet.
+Inspiriert von der einen oder andern Konstruktion entstand eine Synchronuhr mit Schrittschaltwerk – und ich gewann einige Einsichten, die bei der Konstruktion eines fischertechnikUhrgetriebes beherzigt werden sollten.
+
+Hintergrund
+Mit dem 6,8 V-Wechselstromausgang der
+alten, grauen fischertechnik-Netzteile erhält
+man Zugriff auf die 50-Hz-Frequenz des
+Stromnetzes, die Netzfrequenz. Sie wird
+von den Stromversorgern stabil gehalten
+und bei etwaigen Abweichungen durch ein
+Über- oder Unterangebot von Strom ausgeglichen. Durch diese hohe Genauigkeit eignet sich diese Frequenz als Zeitgeber für
+Synchronuhren, erstmals von Henry Ellis
+Warren (1872-1957) im Jahr 1918 patentiert [1]. Die (kurzfristige) Abweichung der
+Synchronuhr von UTC liegt in der Regel bei
+wenigen Sekunden.
+
+Uhr konstruieren, die eine feste, allein von
+der Zahl der Permanentmagneten abhängige
+Rotationsgeschwindigkeit einnahmen. In
+der Community finden sich dafür zahleiche
+Modellvorschläge. Das älteste mir bekannte
+Modell stammt von Stefan Falk aus dem
+Jahr 2004 (Abb. 1): Sein Synchronmotor
+mit vier Dauermagneten lieferte ihm stabile
+12,5 Umdrehungen pro Sekunde [2].
+Seit der Verfügbarkeit der wesentlich stärkeren Neodym-Magneten lassen sich Synchronmotoren mit deutlich höherem Drehmoment konstruieren. In der Community
+wurden einige wunderschöne Modelle veröffentlicht, wie z. B. die Uhren von Thomas
+Püttmann (Abb. 2) und Helmut Schmücker
+(Abb. 3) [1, 3, 4].
+
+
+Mit vier der Dauermagneten und dem Elektromagneten des fischertechnik-Baukastens
+Hobby 3 aus dem Jahr 1973 ließen sich
+bereits Synchronmotoren zum Antrieb einer
+
+Püttmann, 2011 [1, 3]
+
+
+Uhren
+
+tromagneten und sechs Neodym-Stabmagneten (6 x 30 mm), die mit Reed-KontaktHaltern 7,5 außen auf ein Innenzahnrad Z30
+gesteckt werden, erhält man einen 50-HzMotor mit 500 U/min. Damit die Stabmagneten im Betrieb nicht verrutschen, habe ich
+sie mit einem Tesafilmstreifen beklebt. Das
+Innenzahnrad ist am Z30 rückseitig mit drei
+schwarzen I-Streben 15 und sechs schwarzen Verbindungsstopfen befestigt.
+
+Helmut Schmücker, 2013 [4]
+
+Einige weitere raffinierte Konstruktionen
+von Synchronmotoren hat Matthias Dettmer
+in der ft:pedia 2/2016 [5] vorgestellt.
+Eigentlich ist diesen Modellen nichts mehr
+hinzuzufügen. Zwei Wünsche aber trieben
+mich um: Ich wollte eine Uhr mit Schrittschaltwerk, die den Minutenzeiger nicht
+analog, sondern diskret weiterschaltet. Und
+ich suchte nach einem möglichst einfachen
+und leichtgängigen Getriebe für die analoge
+Zeitanzeige, die auch ein (Grund-) Schüler
+auf Anhieb verstehen kann.
+Herausgekommen ist eine sehr kompakte,
+flüsterleise 50-Hz-Synchronuhr mit einem
+sehr einfachen und überraschend leichtgängigen Getriebe – und einem Minutenzeiger,
+der sich nur einmal pro Minute bewegt.
+
+Der Antrieb
+Der Synchronmotor
+Bei der Konstruktion des Synchronmotors
+ließ ich mich von Helmuts Konstruktion
+inspirieren: Mit einem fischertechnik-Elek-
+
+
+Der Motor lässt sich recht zuverlässig „anwerfen“ – mit etwas Übung gelingt das
+sogar gleich beim ersten Mal.
+Die Untersetzung der Motorachse
+Insgesamt muss die Antriebsachse des Synchronmotors 500:1 untersetzt werden, damit wir eine Geschwindigkeit von 1 U/min
+für das Schrittschaltwerk des Minutenzeigers erhalten. In Ermangelung von Planeten- oder Zykloidgetrieben im fischertechnik-System ist die Verwendung von
+Schneckengetrieben unvermeidlich. Die
+Reibung ist dabei nicht unerheblich, da die
+Schneckenwindung unter Last an den
+Evolventen des Zahnrads entlangschleift.
+Dennoch ist eine Rastschnecke den Schnecken m = 1,5 vorzuziehen, da sie das Spiel
+der Zahnräder verringert.
+
+
+
+
+Unseren Uhrenantrieb untersetzen wir dreimal hintereinander mit einer Rastschnecke
+auf Z10 (1000:1); anschließend übersetzen
+wir mit einem Z20 auf ein Z10 (1:2) und
+erhalten so eine Antriebswelle, die sich
+genau einmal pro Minute dreht.
+
+
+(dreimal Rastschnecke auf Z10)
+
+Montieren wir die Segmentscheibe auf
+unsere (auf 1 U/min untersetzte) Antriebswelle, dreht sich die Welle der Drehscheibe
+60 alle sechs Minuten einmal. Mit einer
+Untersetzung 10:1 (Rastschnecke auf Z10)
+erhalten wir die Welle des Minutenzeigers,
+den wir nun nur noch 12:1 untersetzen müssen, um uns die Stunden anzeigen zu lassen.
+
+Das Schrittschaltwerk
+fischertechnik verfügt mit der Segmentscheibe Z12 und der Drehscheibe 60 schon
+seit 1967 über ein Schrittschaltwerk. Dabei
+greift der auf der Rückseite der Segmentscheibe angebrachte Pin in eine der sechs
+Nuten der Drehscheibe 60 und dreht diese
+je Achsumdrehung um 60°.
+Um ein unkontrolliertes (Weiter-)Drehen
+der Drehscheibe 60 zu verhindern und die
+nächste Nut an exakt der richtigen Stelle für
+den Eingriff des Pins zu halten, benötigen
+wir eine Sperrklinke. Die (leider nicht mehr
+lieferbaren) Rollenhebel der fischertechnikFesto-Pneumatik-Kästen liefern genau den
+richtigen Andruck für unsere Zwecke: nicht
+zu viel Widerstand für die Segmentscheibe
+und genügend Halt für die Drehscheibe 60.
+Eine Alternative zum Rollenhebel ist die
+„Bremse“ von Thomas Püttmann aus einem
+Rad 14, einem Radhalter, einem BS 7,5 und
+einer Bauplatte 15 x 75 [5].
+
+
+Das Uhrgetriebe
+Die Achslager
+Verwendet man einen 50-Hz-Antrieb für
+die Uhr, ist die reibungsarme Lagerung aller
+Achsen entscheidend: Der Motor hat eine
+sehr hohe Umdrehungsgeschwindigkeit,
+aber nur ein geringes Drehmoment. Die
+Lagerung darf daher auch im Dauerbetrieb
+
+nur wenig Energie absorbieren (und sollte
+auch keinen Abrieb erzeugen).
+
+Uhren
+
+Mit einem Kettenantrieb konnte ich hingegen sowohl eine erheblich leichtgängigere
+Übersetzung als auch eine genaue Zeitanzeige realisieren.
+
+
+Bei meinen Experimenten mit unterschiedlichen Lagerungen schieden BS15 mit Bohrung und die Nuten der Bausteine 15 und 30
+schnell aus. Bessere Ergebnisse lieferten die
+Nuten der Winkelsteine (15°, 30° und 60°);
+eine noch geringere Reibung haben Gelenkwürfel-Klauen mit Lagerhülse – und ganz
+vorne, sogar deutlich vor Kugellagern, liegen die Kupplungsstücke. Darin kommt die
+Achse jedoch mit etwas Spiel zu liegen;
+daher verwende ich sie nicht zur Lagerung
+der Motorachse.
+
+
+Das Ergebnis ist eine sehr einfache 12:1Untersetzung für die Anzeige der Stunden
+und Minuten: Ein Z10 auf ein Z30 (via
+Kette) und auf der Rückseite ein Z10 auf ein
+Z40 (Abb. 4, 5).
+
+Auch auf das Material der Achse kommt es
+an: Wie nicht anders zu erwarten ist die Reibung der Metallachsen in den fischertechnik-Lagern deutlich geringer als die der
+Kunststoff-Rastachsen.
+Die Getriebeelemente
+Neben den Lagern haben die verwendeten
+Getriebe-Komponenten erheblichen Einfluss auf die Reibung. So musste ich feststellen, dass die Reibung der aneinander
+entlang gleitenden Evolventen der Zahnräder das Getriebe spürbar schwergängiger
+macht. Hinzu kommt, dass ein einigermaßen leicht laufendes Zahnradgetriebe so
+viel Spiel hat, dass eine genaue (Minuten-)
+Anzeige praktisch unmöglich ist.
+
+
+
+Das Z40 hat in der Mitte eine Freilaufnabe,
+durch die sich die Achse für den Minutenzeiger (eine Rastachse 60 mit Rastadapter)
+frei drehen kann. Der Stundenzeiger (eine
+Rastachse 45) steckt in einer Drehscheibe
+60, die mit drei Rastachsen 20, je einer
+Riegelscheibe und einer Klemmbuchse 5
+als Abstandshalter auf das Z40 aufgesteckt
+wird. Der Stundenzeiger sollte ein wenig
+schräg nach vorne zeigen, damit er bei 6
+Uhr nicht am unteren Rast-Z10 hängen
+bleibt und das Uhrwerk blockiert.
+
+Sekunden sogar bei laufendem Synchronmotor gestellt werden. Dazu habe ich die
+Achse der Drehscheibe 60 mit einer Kurbel
+versehen (Abb. 11): Je Kurbelumdrehung
+wird die Uhr um sechs Minuten verstellt.
+
+Nachbau
+Am einfachsten gelingt der Nachbau der
+Uhr mit der 3D-Bauanleitung im Downloadbereich der ftc. Dort findet sich auch
+eine Bauteilliste. Die Anleitung ist in sechs
+Bauphasen unterteilt, die Schritt für Schritt
+die Konstruktion der Uhr vom Synchronmotor bis zur Anzeige nachbilden. Um die
+Bauanleitung nutzen zu können, genügen
+der kostenlose Mac-Viewer oder die
+Windows-Demoversion des fischertechnik
+designers von Michael Samek.
+Mit vier fischertechnik-Kunststoff-Federn,
+die man unten in die Aussparungen der
+Bauplatte steckt, lässt sich das Geräusch des
+Motors von etwaigen Resonanzkörpern entkoppeln. Ergänzen kann man die Uhr
+schließlich noch um ein Ziffernblatt [5].
+Und wer wissen will, wie viele Sekunden
+die Uhr gerade von der Referenzzeit UTC
+abweicht, der werfe einen Blick auf die
+aktuelle Frequenzabweichung des europäischen Verbundnetzes.
+
+Referenzen
+
+[1]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt-Verlag, 2015.
+
+[2]
+
+Stefan Falk: 50-Hz-Uhr. Bilderpool
+der ft-community, 23.04.2004.
+
+[3]
+
+Thomas Püttmann: 50-Hz-Uhr mit
+Stunden, Minuten und Sekundenzeiger. Bilderpool der ft-community,
+10.09.2011.
+
+[4]
+
+Helmut Schmücker: Und noch 'ne
+50Hz-Uhr. Bilderpool der ftcommunity, 25.01.2013.
+
+[5]
+
+Thomas Püttmann: Die RastO’Clock-Uhr. ft:pedia 1/2017, in
+dieser Ausgabe.
+
+Stellen der Uhr
+Vor Inbetriebnahme der Uhr müssen zunächst der Stunden- und Minutenzeiger
+exakt justiert werden: Um 12 Uhr müssen
+beide Zeiger übereinanderliegen und senkrecht nach oben zeigen. Dazu wird erst der
+Stundenzeiger eingestellt und anschließend
+der Rastadapter des Minutenzeigers so
+lange auf der Achse weitergedreht, bis er
+über dem Stundenzeiger zu liegen kommt.
+Da die Segmentscheibe nur 10 Sekunden je
+Minute in die Drehscheibe 60 eingreift,
+kann die Uhr in den verbleibenden 50
+
+
+Uhren
+
+
+
+
+

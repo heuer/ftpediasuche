@@ -1,0 +1,166 @@
+
+Messen
+
+Messen
+
+startIDE (5): Temperaturmessung an der
+Community-Akku-Box
+Peter Habermehl
+Versuch macht kluch…1
+Im Lauf der Entwicklung der community
+Akku-Box [1] trat bei einigen Testern das
+Problem auf, dass sich die Akku-Box beim
+Laden so stark erwärmte, dass sie sich bis
+zur Unbrauchbarkeit verformte. Daraus resultierte die Empfehlung, erstens die Akkuzellen nicht in der Box zu laden und zweitens als Druckmaterial für das Gehäuse
+ABS zu verwenden.
+
+Doch ich wollte der Sache auf den Grund
+gehen und führte daher eine kleine Versuchsreihe durch, um das Temperaturverhalten der Akkus zu untersuchen. Dabei
+erhebe ich keinen Anspruch auf Vollständigkeit oder Allgemeingültigkeit der
+Ergebnisse.
+
+
+
+Ich bitte von Hinweisen auf die korrekte Orthographie des Wortes „klug“ abzusehen; die inkorrekte Schreibweise wird hier als erheiterndes Stilelement im Rahmen eines relativ trockenen Berichts verwendet.
+
+
+
+Versuchsaufbau
+Relais wird der Ausgang der Akku-Box mit
+einem 12-Ohm-Widerstand verbunden.
+Der Deckel der Box ist mit einem Temperatursensor NTC 10k versehen, dessen
+Kontakte nach außen geführt wurden (Abb.
+2). Dieser, sowie ein zweiter NTC 10k, der
+am Lastwiderstand angebracht ist, werden
+während des Tests überwacht. Bei Überschreitung von 50°C am Lastwiderstand
+wird ein Kühlgebläse zugeschaltet.
+
+Entladevorgangs mit startIDE
+
+
+Die Lade- und Entladesteuerung obliegt
+einer Kombination aus TX-Pi, ftDuino und
+startIDE.
+
+Entladevorganges in startIDE auf dem TXPi. Da die x-Achse 55 Minuten in 15Sekunden-Auflösung darstellen kann, wird
+alle 55 Minuten und am Ende des Entladevorganges (Abb. 4) ein Screenshot abgespeichert, sodass der gesamte Entladevorgang dokumentiert ist.
+
+Zunächst wird der Testakku definiert auf
+6300 mV (gemessen unter Last) über den
+12-Ohm-Widerstand entladen. Das entspricht einer Entladeschlussspannung von
+0,9V/Zelle. Dabei beträgt der rechnerische
+Entladestrom zu Beginn, bei 8,4V, ca. 0,7A,
+bei Entladeende (6,3V) ca. 0,53A, was gemessen an den 0,1A Stromaufnahme einer
+einzelnen fischertechnik-Glühlampe einer
+durchaus moderaten Belastung entspricht.
+
+
+
+Messen
+
+Angemerkt sei, dass während aller Entladevorgänge die Temperatur in der Akku-Box
+im Bereich von 25 bis 27°C lag. Die Umgebungstemperatur betrug bei allen Versuchen 21°C.
+
+∂ Satz 2, als „Gebraucht“ referenziert, ist
+mit sieben Eneloop-Zellen des Typs
+„HR-3UTGA“, 1900 mAh bestückt, die
+gemeinsam ca. 200 Lade/EntladeZyklen erfahren haben.
+∂ Satz 3, als „Gemischt“ bezeichnet,
+besteht aus fünf Zellen des „Gebraucht“Typs sowie zwei Zellen, die ein
+unbekanntes Vorleben haben und
+deutlichen Kapazitätsverlust aufweisen
+bzw. von einem Ladegerät bereits als
+defekt erkannt wurden.
+Mit dem neuen Akku-Satz wurden drei
+Entlade-Lade-Zyklen beobachtet, mit dem
+gebrauchten und gemischten Satz jeweils
+zwei. Aufgrund der geringen Stichprobengröße wird auf weitere statistische Betrachtungen verzichtet.
+
+
+Nach einer Ruhezeit von einer Stunde wird
+statt des Widerstands ein ft-Akku-Ladegerät angeschlossen, die Adaptierung ist in
+Während des Ladevorgangs wird lediglich
+die Temperatur in der Akku-Box mitgemessen. Bei Überschreitung von 55°C
+würde der Ladevorgang unterbrochen und
+die Box durch das Relais vom Ladegerät
+getrennt. Geladen wurde jeweils bis zum
+Erreichen des durch das Ladegerät indizierten Ladeendes.
+Für diese Versuchsreihe wurde die AkkuBox mit drei verschiedenen Akkusätzen
+getestet:
+∂ Satz 1, forthin als „Neu“ referenziert, ist
+mit sieben neuen IKEA Ladda 2000
+mAh Zellen bestückt.
+
+Die Ergebnisse sind in der untenstehenden
+Tabelle (Tab. 1) dokumentiert.
+Die Ergebnisse decken sich sehr schön mit
+den bereits bekannten Beobachtungen. Die
+Temperaturentwicklung bei neuen und
+gebrauchten, intakten Zellen hält sich in
+Grenzen, die Abweichung liegt in einem
+Streubereich, der nicht nennenswert größer
+als die mit dem vorliegenden System zu
+erreichende Messgenauigkeit zu sein
+scheint.
+Der mit quasi-defekten Zellen kontaminierte gemischte Zellensatz zeigt eine deutliche Tendenz hin zu höheren Temperaturen, auch wenn die hier gemessenen
+maximalen Temperaturen mit 43 bzw. 46°C
+für die Stabilität des Gehäuses nicht kritisch
+waren. Es ist ohne weiteres vorstellbar, dass
+mit anderen Zellen, die womöglich auch
+untereinander starke Unterschiede aufweisen, und anderen Ladegeräten weitaus
+höhere Temperaturen auftreten können, so
+wie im Diskussions-Thread des ftc-Forums
+berichtet [2].
+
+Tab. 1: Ergebnisse Temperaturmessung Akku-Ladegerät
+
+
+
+
+Ich möchte nach dieser Testreihe schon aus
+Haftungsgründen keine Empfehlung für die
+Handhabung der ftc-Akkubox aussprechen.
+Da ich die bei uns in Betrieb befindlichen
+Boxen, die auch unbeaufsichtigt in Kinderhand sind, jeweils mit neuen, gleichartigen
+Zellen bestückt habe und die ersten Ladevorgänge, die beaufsichtigt stattfanden,
+absolut unproblematisch verliefen, ziehe
+ich für mich selbst aber das Fazit, dass
+gepflegte Zellensätze durchaus risikoarm in
+der Box geladen werden können. Dies sollte
+jedoch nicht völlig unkontrolliert geschehen; ein Überprüfen der Temperatur durch
+gelegentliches Handauflegen während des
+Ladevorganges sollte jedoch ausreichend
+sein, um eine Verschlechterung des Zellzustands rechtzeitig zu bemerken.
+Abschließend noch ein Wort zum
+Druckmaterial für die Boxen. Da ABS, das
+deutlich höhere Temperaturstabilität aufweist als PLA, relativ schwierig zu verarbeiten ist und dabei auch gesundheitliche
+Bedenken bezüglich der Ausdünstungen
+während des Druckes bestehen, habe ich die
+
+
+abgebildete Box mit NTC aus PETG
+gedruckt. Hierzu waren keinerlei Veränderungen an der Konstruktion erforderlich,
+lediglich die Materialparameter, insbesondere die Temperaturen, wurden für den
+Druck angepasst.
+Auch das sogenannte PLA-plus, das
+deutlich verbesserte mechanische und Temperatureigenschaften gegenüber PLA aufweist, sollte eine interessante Alternative
+sein.
+Bei uns sind außer einer ABS-Box nichtsdestotrotz mehrere PLA-Boxen im Einsatz,
+ohne dass es bislang zu Auffälligkeiten
+gekommen wäre.
+
+Quellen
+[1]
+
+Die ftc-Akkubox bei Thingiverse
+
+[2]
+
+Diskussions-Thread im ftc-Forum
+
+[3]
+
+Einzelteilbestellung der ftc-Akkubox
+bei fischerfriendsman
+
+

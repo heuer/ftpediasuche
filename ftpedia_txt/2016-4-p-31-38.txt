@@ -1,0 +1,334 @@
+
+Modell
+
+Modell
+
+Anwendungen für Magneten (3):
+Magnetkupplungen und Magnetrührer
+Andreas Gail
+Im vorliegenden Beitrag geht es im Grunde um die Anwendung von Magnetkupplungen. Hierbei
+wird eine Antriebskraft mithilfe der Haltekraft von Magneten übertragen. In den meisten Fällen
+erfolgt die Übertragung der Drehbewegung durch eine oder mehrere Wandungen hindurch.
+Als spezielles Beispiel soll hier ein gängiges Gerät eines Chemielabors gezeigt werden.
+
+Der typische Aufbau eines
+Magnetrührers
+In Abb. 1 ist ein voll funktionsfähiges
+fischertechnik-Modell eines Magnetrührers
+gezeigt. Es besteht äußerlich nur aus einem
+Gehäuse mit zwei Bedienelementen und
+einer Geschwindigkeitsanzeige.
+
+vollummantelten Stabmagneten. Derartige
+Rührfische werden in chemischen Labors
+häufig verwendet.
+
+Erlenmeyer-Kolben
+Rührfisch
+im Kolben
+Magnetrührer
+
+Stabmagnet
+
+Bedienelemente
+
+Geschwindigkeitsanzeige
+
+Magnetrührers
+
+Auf den Magnetrührer wurde ein Erlenmeyer-Kolben [1] gestellt, in dem sich eine
+inhomogene blau angefärbte Lösung
+befindet. Weiterhin wurde in den Kolben
+ein sog. Rührfisch [1] gegeben. Ein solcher
+Rührfisch ist in Abb. 2 nochmal gesondert
+gezeigt. Es handelt sich dabei um einen
+
+Anforderungen an einen
+Magnetrührer
+Bevor mit dem Aufbau begonnen wird,
+sollte vorher stets klar sein, welche Eigenschaften bzw. Funktionalitäten ein Modell
+haben soll. Für einen funktionsfähigen
+Magnetrührer müssen mindestens folgende
+Anforderungen erfüllt sein.
+a) Eine gute Durchmischung im Kolben
+muss sichergestellt sein, deshalb ist eine
+ausreichende Rührgeschwindigkeit erforderlich.
+
+
+
+b) Zumindest eine grobe Anzeige der Rührgeschwindigkeit ist erforderlich, um
+diese bei den chemischen Versuchen
+protokollieren zu können.
+c) Die Rührdrehzahl soll langsam erhöht
+oder vermindert werden können. Bei zu
+starker Beschleunigung muss ansonsten
+damit gerechnet werden, dass der Rührfisch im Kolben anfängt zu springen,
+statt einer Drehbewegung zu folgen.
+d) Bei Arbeiten im Labor ist immer damit
+zu rechnen, dass Teile der Lösung verspritzen oder auch ein Kolben kaputtgeht. Deshalb sollte eine möglichst vollständige Abdichtung des MagnetrührerInnenraums vorgesehen werden.
+
+Durchführung
+
+Integration von NeodymMagneten
+Richtige Magneten gehören derzeit offenbar nicht zum Standard-Programm von
+fischertechnik. Das ist aber kein Problem,
+denn über das Internet lassen sich schnell
+die passenden Magneten [3] beschaffen.
+Diese müssen dann nur noch passend
+verklebt und richtig beschriftet werden.
+Durchführung
+
+Neodym NdFeB, vernickelt, verklebt und
+beschriftet
+
+Damit die Verklebung möglichst genau
+erfolgen kann, ist eine eigene Vorrichtung
+hilfreich. Zum Schutz der Bauteile vor
+Klebstoffresten wurden diese mit Tesafilm
+beklebt. Abb. 4 und 5 zeigen den Aufbau:
+
+
+Nach der Verklebung kann das neue Bauteil
+aus der Vorrichtung entnommen werden.
+Anschließend ist noch die Beschriftung
+vorzunehmen. Hierzu werden ein Kompass
+und eine weitere Vorrichtung benötigt, wie
+sie in Abb. 6 und 7 gezeigt sind.
+Mit dem Aufbau gemäß Abb. 6 wird herausgefunden, dass im vorliegenden Beispiel
+der Kompass zum Magneten gerichtet die
+Nordausrichtung anzeigt. Somit muss die
+glänzende Magnetenoberfläche mit „N“ für
+Norden beklebt werden. Wird der Aufbau
+laut Abb. 6 zur Gegenprobe leicht verändert, ergibt sich Abb. 7.
+
+
+Modell
+
+magnetischen Ausrichtung: Der Kompass zeigt
+an, dass links Norden ist.
+
+Sicherung der Magnete
+Wie oben beschrieben beträgt die maximale
+Drehzahl des Magnetrührers 875 min-1. Um
+zu vermeiden, dass die Magneten aus den
+Nuten der Drehscheibe herausgeschleudert
+werden, werden sie wie in Abb. 9 befestigt:
+Magnet
+
+magnetischen Ausrichtung: Der Kompass zeigt
+an, dass links Süden ist.
+
+Magnet
+
+Drehscheibe
+
+Details des Magnetrührers
+
+Sicherheitshinweis
+
+Antrieb
+
+Bei Inbetriebnahme des Magnetrührers ohne das Gehäuse
+von Abb. 10 ist die Verwendung einer Schutzbrille erforderlich, um Augenverletzungen durch eventuell umherfliegende Teile zu vermeiden.
+Das gilt auch für Personen im Umfeld.
+
+Der verbaute Encodermotor hat eine Nenndrehzahl von 175 min-1 (175 Umdrehungen
+pro Minute). Bei kommerziellen Laborgeräten sind 1500 bis 2000 min-1 üblich.
+Deshalb wurde im Modell unter Berücksichtigung der Leistungsfähigkeit des Encodermotors ein Getriebe eingebaut. Es hat
+ein Übersetzungsverhältnis von 1:5, d. h.
+ausgehend von der Nenndrehzahl beträgt
+die maximale Drehzahl der Drehscheibe
+875 min-1.
+
+
+
+
+Schnell rotierende Magnete
+
+
+Gehäusekonstruktion
+Die Gehäusekonstruktion hat zwei Hauptmerkmale. Zum einen ist sie leicht demontierbar, wie Abb. 11 zeigt.
+
+Gehäuseteilen
+
+
+Als weiteres Hauptmerkmal zeigt Abb. 12,
+dass das Gehäuse leicht rundherum wasserdicht verschlossen werden könnte. Hierzu
+wäre eine durchsichtige selbstklebende
+Kunststofffolie vollflächig auf die glatten
+Gehäuseoberflächen aufzubringen. Die
+Bedienbarkeit wäre aufgrund der Verwendung optischer Taster weiterhin unvermindert gegeben.
+
+mit geschlossenen Gehäuseteilen
+
+
+Modell
+
+Bedienelemente
+Als Bedienelemente verfügt der Magnetrührer über zwei optische Taster. Wie oben
+erwähnt, ist der Vorteil der optischen Taster
+die einfache Gehäuseabdichtung. Damit sie
+funktionieren, muss im Raum eine Mindesthelligkeit vorherrschen, was in der Praxis
+kein Problem sein sollte (wer arbeitet schon
+in einem dunklen Labor).
+
+nach erkannter Bedienung wird die SollDrehzahl um 25 % erhöht oder erniedrigt.
+Nicht sinnvolle Bedienungen werden ignoriert, z. B. Drehzahlverminderungen bei
+stehendem Magnetrührer.
+
+Optischer Taster
+Anzeigeelemente
+
+des Magnetrührers bei geöffnetem Gehäuse
+
+Mit dem rechten optischen Taster wird eine
+schnellere Zieldrehzahl eingestellt, mit dem
+linken eine geringere. Beim Modellaufbau
+wurden als optische Taster die üblichen
+fischertechnik-Fotowiderstände verwendet.
+Diese sind in der Lage, analoge Helligkeitsmesswerte für den Robotics TXT Controller
+(RTXTC) bereitzustellen (Einstellung
+A5k). Das Grundprinzip der Erkennung der
+Bedienung ist der schnell eintretende
+Helligkeitsunterschied.
+Innerhalb von 500 ms wird der aktuelle
+Helligkeitswert der Fotowiderstände zwei
+Mal gemessen. Eine gewünschte Bedienung
+wird erkannt, wenn zwischen den beiden
+Messungen eines Fotowiderstandes innerhalb dieser Zeit eine hinreichend starke
+Abdunklung erfolgte (ROBO Pro: -800%).
+Weiterhin wird eine gewünschte Bedienung
+immer nur dann als solche gewertet, wenn
+die Helligkeitsverminderung bei nur einem
+der beiden Fotowiderstände auftrat – so hat
+das plötzliche Ausschalten der Zimmerbeleuchtung keinen Einfluss.
+
+optischen Taster, Ergebnisausgabe unter
+T1 und T2
+
+
+
+
+Anzeigeelemente
+Die Anzeigeelemente dienen als Geschwindigkeitsanzeige und haben gleichzeitig zwei
+Funktionen. Einerseits wird die Soll-Drehzahl angezeigt und andererseits die aktuelle
+Ist-Drehzahl. Zur Anzeige werden vier
+einzelne Lampen L1, L2, L3 und L4
+verwendet. L1 steht für die geringste Drehzahl und L4 für die höchste.
+
+L1
+
+L2
+L3
+
+L4
+
+mit Lampe L1, L2, L3 und L4
+
+gewählt wurde, ertönt ein Signalton. Damit
+bekommt der Bediener eine akustische
+Rückmeldung zu seinem Bedienvorgang.
+Da sich eigene Geräusche derzeit nur sehr
+umständlich in den RTXTC einspielen
+lassen, wird ein vorhandenes Geräusch
+verwendet und nach 100 ms abgebrochen.
+Rampenfahrweise
+Immer, wenn die Ist-Drehzahl ungleich der
+Soll-Drehzahl ist, muss die Ist-Drehzahl so
+lange angepasst werden, bis beide gleich
+sind. Das erfolgt durch ein eigenes Hauptprogramm. In ROBO Pro kann die Drehzahl im Bereich von 0 bis 512 eingestellt
+werden. Alle 100 ms erfolgt ein Drehzahlvergleich. Im Fall der Ungleichheit wird
+eine Anpassung um 1 durchgeführt. Es wird
+somit stets eine lineare Geschwindigkeitsanpassung vorgenommen.
+
+Rührtrombe
+
+Die aktuelle Ist-Drehzahl wird durch kontinuierliches Leuchten dargestellt. In Abb. 15
+z. B. leuchten die Lampen L1 und L2. Das
+bedeutet, dass der Magnetrührer demnach
+mit 50 % Geschwindigkeit betrieben wird.
+Ist die Soll-Drehzahl nicht erreicht, blinkt
+die entsprechende Lampe so lange, bis IstDrehzahl die Soll-Drehzahl erreicht hat.
+Wenn alle Lampen abgeschaltet sind, steht
+der Magnetrührer.
+
+für eine nach 100 ms abgebrochene
+Geräuschabspielung
+
+Signaltöne
+Immer, wenn über die optischen Taster eine
+25 %ige Geschwindigkeitsänderung vor36
+
+Lösung bei 75 % Drehzahl
+
+Abb. 17 zeigt die im Kolben gerührte
+Lösung und damit die Funktionsfähigkeit
+des Gesamtaufbaus:
+
+Einschränkungen
+Der RTXTC wurde verwendet, weil er
+Geräusche abspielen kann. Er hat jedoch bei
+der verwendeten Firmware 4.2.3 den
+gravierenden Nachteil, dass er nach dem
+Einstecken des Steckernetzteils nochmal
+extra über den eingebauten Taster unter der
+Anzeige eingeschaltet werden muss. Das
+kann das Vorgängermodell, der Robo TX
+Controller (RTXC), besser. Wenn das
+Gehäuse also wirklich mit Klebefolie
+flüssigkeitsdicht verklebt werden sollte,
+muss der RTXC zur Automatisierung verwendet werden.
+
+Sicherheit beim Umgang mit
+Neodym-Magneten
+Bei aller Experimentierfreude
+ist stets auf die eigene
+Sicherheit zu achten sowie auf
+Personen im Umfeld. Aus
+diesem Grund sind unbedingt die Gefahrenhinweise des Lieferanten zu lesen und zu
+
+Modell
+
+beachten. Übliche Gefahren sind beispielsweise Verschlucken, Zersplittern beim
+Herunterfallen und der Einfluss auf Herzschrittmacher oder andere empfindliche
+Geräte wie Armbanduhren. Von mechanischer Bearbeitung (bohren, schleifen) ist
+dringend abzuraten.
+Unter [4] findet ihr ein Video des Modells.
+Unter den Referenzen [5, 6] findet ihr
+professionelle Magnetrührer.
+
+Quellen
+[1]
+
+Laborshop 24 Laborbedarf:
+https://www.laborshop24.de
+
+[2]
+
+Wikipedia: Magnetrührer, Rührfisch
+
+[3]
+
+Quelle für Neodym-Magnete:
+https://www.supermagnete.de
+
+[4]
+
+Gail, Andreas: fischertechnik:
+Magnetrührer. YouTube-Video,
+2016.
+
+[5]
+
+IKA-Werke GmbH & Co. KG:
+Magnetrührer.
+
+[6]
+
+Heidolph: Magnetrührer.
+
+
+
+
+
+

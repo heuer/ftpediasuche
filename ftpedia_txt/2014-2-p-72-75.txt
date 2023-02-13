@@ -1,0 +1,129 @@
+
+
+Modell
+
+Detail Engineering (2) – Ansteuerung von
+Leistungsmotoren
+Andreas Gail
+Im Rahmen des Baus eines Robotermodells wurde eine Reihe von ganz unterschiedlichen
+Detaillösungen erarbeitet, die durchaus Lösungsansätze bei diversen anderen Bauprojekten
+sein könnten. Im zweiten Beitrag der Serie wird der Antrieb vorgestellt.
+
+Aufgabenstellung
+Der immerhin etwa 5 kg schwere Roboter
+gemäß Abb. 1 sollte mithilfe von vier Leistungsmotoren vom Typ Power-Motor 20:1
+angetrieben und mit dem Robo TX Controller (RTXC) automatisiert werden.
+
+weise durch fest verbaute Getriebesätze
+kompensiert werden soll.
+
+Volle Beweglichkeit
+Jeder der vier Leistungsmotoren treibt
+dabei ein einzelnes Rad an. Zwei Motoren
+und Räder einer Seite bilden einen gemeinsamen Radsatz. Dieser Aufbau (siehe
+
+vier Power-Motoren 1:20
+
+Beim RTXC gibt es vier Motorenausgänge
+mit einer Belastbarkeit von jeweils
+250 mA. Die früheren Power-Motoren
+wurden jedoch alle auf 1,1 A Stromaufnahme ausgelegt, also deutlich zu viel
+für den RTXC. Sicher aus diesem Grund
+wurde das Motorenprogramm geändert;
+alle aktuellen Motoren haben geringere
+Stromaufnahme und Leistung, was teil72
+
+Eine Rotation auf der Hochachse wird
+beispielsweise erreicht, indem ein Radsatz
+vorwärts und der andere rückwärts angetrieben wird. Ein Radsatz kann weiterhin
+mit zwei unterschiedlichen Geschwindigkeiten betrieben werden, indem die beiden
+Motoren eines Radsatzes entweder parallel
+oder in Reihe verschaltet werden.
+
+Lösung
+Letztendlich müssen die vier Motoren vom
+RTXC aus angesteuert werden. Um stets
+
+sicher zu sein, die max. Stromaufnahme
+des RTXC nicht zu überschreiten, kommen
+Relais zum Einsatz. Leider gehören die
+nicht mehr zum aktuellen fischertechnikSortiment, so dass ein Selbstbau erfolgte
+(Abb. 3).
+
+Modell
+
+sodass der angeschlossene Motor zu laufen
+beginnen würde (Abb. 4).
+
+
+Relaisschaltung Richtungseinstellung
+
+Im Gehäuse verbaut ist ein Signalrelais
+vom Typ Axicom, tyco Electronics,
+C93428,
+5-14620000-7,
+mit
+einer
+Ansteuerspannung von 3,9 V bis 14,0 V
+(Conrad #504 314).
+
+Der Relaiseingang E1 wird von einem einzelnen Ausgang des RTXC angesteuert.
+Der Motor läuft dabei immer, bei Schaltvorgängen des Relais kommt es zur Drehrichtungsänderung des Motors (Abb. 5).
+
+Wie nachfolgend gezeigt, werden für die
+Ansteuerung der vier Motoren insgesamt
+sechs Relais verwendet, d. h. für jeden
+Radsatz drei Relais. Zugehörig werden auf
+dem RTXC auch sechs digitale Ausgänge
+benötigt. Die drei Relais eines Radsatzes
+haben die folgenden Funktionen, die in der
+angegebenen Reihenfolgen verschaltet
+werden:
+· an / aus
+· Richtungseinstellung
+
+
+· Geschwindigkeitseinstellung
+
+Relaisschaltung Geschwindigkeitseinstellung
+
+Relaisschaltung an/aus
+
+Der Relaiseingang E1 wird von einem einzelnen Ausgang des RTXC angesteuert.
+Die Motoren laufen dabei immer, bei
+Schaltvorgängen des Relais kommt es zur
+Parallelschaltung dieser Motoren oder zur
+Reihenschaltung (Abb. 6).
+
+Der Relaiseingang E1 wird von einem
+einzelnen Ausgang des RTXC angesteuert.
+Wenn das der Fall ist, wird durch das
+Relais die Verbindung a1-a2 hergestellt,
+
+
+
+
+Bei Reihenschaltung laufen die Motoren
+langsam, bei Parallelschaltung schnell. Auf
+diese Weise ist es möglich, eine Geschwindigkeitsumschaltung zu erreichen. Dabei
+ist jedoch zu beachten, dass bei der
+Reihenschaltung im Fall des Blockierens
+eines Motors der andere Motor schneller
+läuft.
+In der ft Community wurde übrigens der
+Effekt der Reihenschaltung von Motoren
+bei einer anderen Anwendung (Flash) von
+Jürgen Landstuhl (chevyfahrer) beschrieben.
+Geschwindigkeitseinstellung
+
+3 Relais
+
+3 Relais
+
+
+
+Modell
+
+
+
+

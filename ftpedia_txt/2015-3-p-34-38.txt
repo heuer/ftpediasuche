@@ -1,0 +1,360 @@
+
+
+Elektrotechnik
+
+fischertechnik-Motoren richtig betreiben
+René Trapp
+In der ft:pedia 3/2013 lag der thematische Schwerpunkt auf den Elektromotoren. So wurde
+deren Grundaufbau von Dirk Fox gezeigt und die dahinter stehende Physik vom Autor in ein
+Berechnungsmodell übersetzt [1]. Was allerdings noch fehlt sind ein paar Grundlagen zum
+Betrieb eines Elektromotors: Das soll hier möglichst allgemein verständlich dargestellt werden
+– und auch, was passiert, wenn ein Motor überlastet wird.
+Immer wieder hört man Berichte über
+fischertechnik-Motoren, die nach stundenlangem Dauerbetrieb, besonders auf einer
+Ausstellung, plötzlich versagt haben. Fragt
+man die betreffenden Aussteller wie sie ihre
+Motoren denn ausgewählt haben, so lauten
+die typischen Antworten „der passte vom
+Gehäuse her da rein“ oder „den hatte ich
+gerade da“. Hin und wieder gibt auch
+jemand zu, dass der Motor immer „recht
+heiß“ wurde. Bohrt man dann noch ein
+bisschen weiter und fragt nach der Stromaufnahme, dann kommt üblicherweise die
+Antwort „den Strom messe ich nie, wozu
+denn?“
+Gerne wird auch die Argumentation „ich
+habe es exakt nach Anleitung gebaut“ ins
+Feld geführt. Das ist von daher interessant,
+da sich die Frage stellt, wie denn die Entwicklungsabteilung bei fischertechnik
+einen Motor für einen Baukasten auswählt.
+Diese spezielle Frage wird dieser Artikel
+nicht beantworten. Es ist aber davon auszugehen, dass ein stundenlanger Dauerbetrieb
+dabei nicht berücksichtigt wird.
+Warum ist denn nun der Betriebsstrom des
+Motors überhaupt so interessant? Schon im
+Artikel über das Rechenmodell [1] wurde
+im Abschnitt „Eine Anwendung für kI – der
+Motor als Drehmomentsensor“ erklärt, dass
+die Stromaufnahme des Motors ein Maß für
+die Belastung an der Welle ist: das
+
+abgeforderte Drehmoment. Mittels der
+motorindividuellen Konstanten kI ist aus
+dem Motorstrom das abgegebene Drehmoment bekannt. Und je mehr Drehmoment
+der Motor aufbringen muss, desto mehr
+Strom nimmt er auf. Nun muss man nicht
+den exakten Wert dieser Konstanten kI für
+seinen Motor kennen um dessen Lastzustand zu beurteilen. Sofern man entsprechende Angaben über den Motortyp hat,
+ermittelt man den Lastzustand anhand der
+Kennlinien, ansonsten anhand von groben
+Faustformeln.
+Für einige fischertechnik-Motoren stehen
+die entsprechenden Daten im Downloadbereich der ft-Community bereit [2].
+Sowohl numerische Werte für spezielle
+Arbeitspunkte als auch die Kennlinien für
+die dazwischenliegenden Arbeitspunkte
+sind dort zu finden. Mit Hilfe dieser
+Kennlinien gelingt es den optimalen Motor
+für ein Modell zu finden, sofern man das
+Drehmoment seines Modells vorab – oder
+überhaupt – kennt.
+Umgekehrt kann man aber auch einen xbeliebigen Motor in sein Modell einbauen
+und nach der Messung einiger weniger
+Größen den Arbeitspunkt des Motors
+beurteilen. Das soll hier einmal beispielhaft
+erklärt werden.
+
+Ein Motor in einem Modell
+Nehmen wir an, wir möchten ein fischertechnik-Modell mit einem Motor antreiben.
+Welches schnucklige Modell betrieben
+wird, ist völlig egal. Was in diesem
+Zusammenhang nur wichtig ist: Ein SMotor (32293) soll das Modell antreiben.
+An U = 9 V nimmt er dafür I = 186 mA auf.
+Schauen wir mal in seine Kennlinien, hier
+auszugsweise wiedergegeben [3]:
+
+Elektrotechnik
+
+und den Wirkungsgrad h ablesen. Es ergibt
+sich so etwa h = 51 %.
+Vergleicht man diese Angaben mit denen
+für den Arbeitspunkt „maximale Effizienz“,
+dann sieht man, dass der Motor irgendwo
+zwischen Leerlauf und maximaler Effizienz
+betrieben wird. Das ist auch im Diagramm
+sehr schön zu erkennen, da der Arbeitspunkt links vom Maximum („Buckel“) der
+grünen Kennlinie des Wirkungsgrades liegt.
+Nun, da der Arbeitspunkt klar ist, geht es
+um dessen Beurteilung. Dazu sollte man
+wissen, dass die von den Herstellern
+angegebenen Nenndaten üblicherweise den
+Betrieb mit maximalem Wirkungsgrad
+darstellen. Für genau diesen Betriebsfall ist
+der Motor entwickelt, gefertigt und manchmal sogar einzeln getestet. Seine Lebensdauerangabe gilt für diesen Betriebsfall.
+
+AP 1
+AP 2
+
+Das heißt nun, dass alle Komponenten des
+Motors vom Hersteller so ausgesucht
+wurden, dass sie den Nennbetrieb problemlos überstehen und der Motor insgesamt die
+angegebene Lebensdauer erreicht. Für die
+Motorlager sind das beispielsweise die
+Drehzahl und die diversen Kräfte. Für den
+Kommutator und die Wicklung sind es die
+Materialien, die den Strom leiten.
+Für den kleinen S-Motor aus unserem
+Beispiel ist also davon auszugehen, dass er
+in diesem Modell nicht überlastet wird. In
+dieser Nähe des Nennarbeitspunktes betrieben wird er sicher viele Betriebsstunden
+durchhalten.
+
+
+Im unteren Diagramm findet sich die
+Kennlinie für den Motorstrom I (y-Achse)
+in Abhängigkeit vom Drehmoment M (xAchse). Für den angegebenen Lastfall ist
+schon eine Hilfslinie („AP 1“) eingezeichnet. Jetzt wird nur noch abgelesen. Der
+Motor liefert also so etwa 1 mNm. Auf den
+anderen drei Kennlinien kann man für
+diesen Arbeitspunkt jeweils die abgegebene
+mechanische Leistung P, die Drehzahl n
+
+Der Motor in einem anderen
+Modell
+Nachdem auf der letzten Ausstellung so
+viele Besucher unser Modell bestaunt
+haben, haben wir es zerlegt und etwas
+Neues aus den Teilen konstruiert. Auch der
+S-Motor ist wieder dabei, und beim ersten
+Probelauf des neuen Modells wird die
+Stromaufnahme gemessen. Diesmal liegt
+sie bei I = 373 mA, ebenfalls bei U = 9 V.
+
+
+
+
+Zunächst unverdächtig, aber ein Blick auf
+die Kennlinien an der Hilfslinie „AP 2“
+zeigt diesmal ein anderes Bild. Sucht man
+sich auf der Stromkennlinie (Abb. 1) wieder
+den Wert, so landet man über das Drehmoment diesmal bei einem Arbeitspunkt
+deutlich weiter rechts in den Kennlinien. Er
+liegt in der Nähe des Maximums der
+Abgabeleistung. Der Wirkungsgrad ist auf
+h = 42 % abgesunken, aber der Motor liefert
+P = 1,4 W bei etwa 2,5 mNm. Platt ausgedrückt: der Motor arbeitet jetzt fast volle
+Pulle.
+Zunächst sieht das ja nicht wirklich schädlich aus. Der Motor dreht, das Modell
+bewegt sich und alle sind zufrieden. Nur
+dem Motor wird jetzt so richtig warm, und
+genau das ist das Problem.
+Verlustleistung des Motors
+Gemäß dem Ersatzschaltbild des Motors
+(Abb. 2) fließt der Strom durch die elektrische Maschine und den Innenwiderstand
+der Wicklung.
+
+
+Gemäß den bekannten Gesetzmäßigkeiten
+[4] errechnet sich die elektrische Verlustleistung im Motor zu
+Ploss = I 2 × RDyn
+
+Mit den Daten für den 32293 aus der ftCommunity [3] sind das 1,70 W, RDyn beträgt hier etwa 12 W. Bei Betrieb an Nennlast sind es lediglich 0,42 W.
+Man beachte bitte den quadratischen
+Zusammenhang: Doppelter Strom bedeutet
+die vierfache Verlustleistung. Das ist zwar
+etwas vereinfacht, weil der Innenwiderstand temperaturabhängig etwas ansteigt
+und sich die Stärke des Magnetfeldes verringert, aber eine so genaue Betrachtung
+würde hier zu weit führen und ändert wenig
+
+an dem Ergebnis, auf das es uns hier
+ankommt.
+Die Verlustleistung unseres S-Motors ist
+beim Übergang von Nennlast auf Volllast
+also um rund 300 % gestiegen: Der Motor
+erzeugt im Vollastbetrieb rund die vierfache
+Wärmeleistung gegenüber dem Nennbetrieb.
+Es handelt sich in beiden Fällen um die
+elektrische Verlustleistung, die den Motor
+aufheizt, nicht um dessen mechanische
+Abgabeleistung. Die mechanischen Verluste, zum Beispiel die Lagerreibung, sind
+hier noch gar nicht berücksichtigt.
+Erwärmung des Motors
+Die Nenndaten des Herstellers gelten für
+einen Einsatz des Motors bei Raumtemperatur – üblicherweise 25 °C. Dabei wird
+eine bestimmte Verlustleistung als Wärme
+an die Umgebung abgegeben, sie erhöht
+zugleich die Temperatur im Motor. Hier ist
+der eigentliche Motor gemeint, der im
+fischertechnik-Gehäuse drinsteckt, ein Beispiel findet sich im Bilderpool der ftCommunity [5].
+Baut man diesen Motor in ein Gehäuse ein,
+zum Beispiel in das Kunststoffgehäuse, das
+den eigentlichen Motor zum S-Motor mit
+fischertechnik-Teilenummer 32293 veredelt, dann verringert dies die Wärmeabfuhr.
+Oder anders ausgedrückt: Die Motortemperatur steigt bei ansonsten gleichen
+Bedingungen höher, als wenn er „nackt“ auf
+dem Tisch steht. Diese Wärme belastet die
+Bauteile des Motors. Da kein Motor nackt
+betrieben wird (es sei denn, es ist ein
+fischertechnik-Power-Motor), hat der Hersteller hier noch einen gewissen Spielraum
+eingebaut. Der ist aber nicht beliebig groß.
+Sofern man den thermischen Widerstand
+(Wärmewiderstand [6]) der Baugruppe
+kennt, lässt sich sogar präzise ausrechnen,
+um welchen Betrag die Temperatur im
+fischertechnik-Motorgehäuse
+gegenüber
+der Umgebungstemperatur steigt. Aber
+auch wenn man den Wert nicht kennt, so
+
+wie der Autor, ist es doch einzusehen, dass
+die vierfache Verlustleistung bei Vollastbetrieb auch die vierfache Temperaturerhöhung im Vergleich zum Nennbetrieb bewirkt.
+Am kritischsten ist die Temperaturerhöhung für die Isolation der Wicklungsdrähte.
+Üblicherweise sind diese mit einer Lackschicht überzogen, die ab einer bestimmten
+Temperatur verkohlt. Der Motor ist dann
+kaputt.
+Überlastung des Motors
+Insgesamt führen sowohl die größeren
+Lagerkräfte als auch die erheblich höhere
+Motortemperatur bei unserem zweiten
+Modell zur Überlastung des Motors. Er
+übersteht solch eine Überlastung auch mal
+kurzzeitig (soll heißen: wenige Minuten),
+wenn man ihn danach lange genug abkühlen
+lässt (soll heißen: ein Viertelstündchen mindestens). Eine Convention mit 6 h Dauerbetrieb führt hier allerdings zu schnellem
+Verschleiß und kann das vorzeitige Ende
+des Motors bedeuten.
+Selbst wenn die Wärme vom Motor verkraftet wird, sind die Lager meist nicht
+dauerhaft für die auftretenden Kräfte ausgelegt. Auf jeden Fall ist der Motor bei
+diesem Arbeitspunkt bereits überlastet und
+sollte so nicht weiter betrieben werden.
+Besonders drastisch sind die Verhältnisse,
+wenn der Motor blockiert ist. Dann wird die
+volle elektrische Leistung in Wärme umgesetzt. Die Motorwicklung heizt den ganzen
+Innenraum auf und recht schnell wird sogar
+das Gehäuse außen heiß. Im Falle des SMotors sind das P = 6,67 W. Nur wird
+dieser Fall meist recht schnell bemerkt und
+der Motor vom Anwender abgeschaltet
+bevor ein Schaden auftritt – so wohl die
+Hoffnung bei fischertechnik.
+Wahl eines anderen Motors
+Mit der Kenntnis der Daten von anderen
+Motoren wird es möglich, den S-Motor aus
+dem zweiten Modell durch einen besser
+
+Elektrotechnik
+
+geeigneten Antrieb zu ersetzen. Aus der
+Strommessung ergeben sich direkt das
+abgegebene Drehmoment und mittels der
+Kennlinien die erreichte Drehzahl. Derart
+ausgestattet sollte es machbar sein, einen
+geeigneten Alternativmotor anhand der vorhandenen Daten ausfindig zu machen. Das
+Kriterium hierbei: Mit dem geforderten
+Drehmoment sollte sowohl die erreichte
+Drehzahl als auch ein Betrieb in der engen
+Nachbarschaft der Nennlast dieses Motors
+erreicht werden.
+
+Faustregeln für die Praxis
+Nicht immer liegen die Kennlinien vor,
+nicht jeder besitzt die nötigen Gerätschaften, um die Daten seines Motors zu messen.
+Trotzdem soll der kostbare Motor nun
+optimal betrieben werden. Was nun? An
+den vorliegenden Kennlinien lässt sich
+erkennen, dass meist gilt:
+Der Nennbetrieb eines beliebigen fischertechnik-Motors liegt vor bei etwa
+75 % der Leerlaufdrehzahl
+oder
+25 % des Blockadestroms.
+Geht man von diesen Daten aus etwas in
+Richtung des Leerlaufs, gewinnt man
+zusätzliche Sicherheit gegen Überlast.
+Im Falle unseres gestressten S-Motors
+liefert diese Faustregel n = 7380 min-1
+beziehungsweise I = 185 mA. Beide Angaben liegen zwar nur in der Nähe des exakten
+Wertes (7685 min-1, 208 mA), aber sie sind
+in der Praxis genau genug, um den Arbeitspunkt des Motors zu beurteilen.
+
+Aussage von fischertechnik
+In der FAQ von fischertechnik zu „Technischen Fragen“ findet sich seit vielen
+Jahren die folgende Einschätzung (zuletzt
+gesehen am 15. September 2015):
+Frage: „Können Motoren kaputt gehen,
+wenn sie schwere Lasten heben müssen?“
+Antwort: „Nein, wenn die Last zu schwer ist
+bleibt der Motor stehen.“ [7]
+
+
+
+Der Leser sollte jetzt in der Lage sein, diese
+Aussage selbst zu beurteilen.
+
+Zusammenfassung
+
+Zuerst verursacht das natürlich Kosten, auf
+lange Sicht ist diese Anschaffung aber
+sicher kostengünstiger als „verheizte“
+Motoren nachzukaufen.
+
+Jeder Motor wird optimal bei Nennlast
+betrieben.
+
+Rückfragen beantwortet der Autor gerne im
+Forum [8].
+
+Ein drehender Motor kann bereits überlastet
+sein. Überlastung verkürzt die Motorlebensdauer, kann aber durch einfache
+Maßnahmen erkannt werden.
+
+Quellen
+[1]
+
+René Trapp: Kenndaten der ftMotoren. ft:pedia 3/2013, S. 9-29.
+
+Auch bei motorisierten Modellen, die exakt
+nach Anleitung gebaut sind, lohnt sich das
+Nachmessen des Motorstroms. Für
+ferngelenkte Modelle wären die Kommunikationsmöglichkeiten des aktuellen TXT
+absolut ideal – wenn der TXT denn die
+Motorströme erfassen könnte.
+
+[2]
+
+ft-Community: Daten einiger ftMotoren.
+
+[3]
+
+ft-Community: Kennlinien 32293.
+
+[4]
+
+Wikipedia: Elektrische Leistung.
+
+[5]
+
+ft-Community: Mini-Motor 31062
+zerlegt.
+
+Die aufgezeigte Methode ist einfach und
+funktioniert am genauesten bei Motoren,
+deren Daten man kennt. Kennt man die
+Motordaten nicht, kann die Nennlast anhand der angegebenen Faustregeln grob
+abgeschätzt werden.
+
+[6]
+
+Wikipedia: Wärmewiderstand.
+
+[7]
+
+fischertechnik: Technische Fragen.
+
+[8]
+
+ft-Community-Forum: Daten von ftMotoren.
+
+Hat man noch kein Messgerät, sollte man
+sich eine Anschaffung ernsthaft überlegen.
+
+
+

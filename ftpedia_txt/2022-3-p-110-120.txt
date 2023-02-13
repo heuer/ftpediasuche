@@ -1,0 +1,829 @@
+
+
+Computing
+
+TX-Simulator für den ftDuino
+Dirk Fox
+Kaum hatte fischertechnik die Weiterentwicklung von ROBO Pro abgekündigt, machte die
+Community den TXT 4.0 ROBO Pro-kompatibel [1]. Jetzt kann auch der ftDuino mit ROBO
+Pro gesteuert werden, als wäre er ein TX: Angeregt von Holger Howeys Erweiterung des
+fx1parsers [6, 10, 11] entstand ein „TX-Simulator“, der auch das I2C-Protokoll beherrscht.
+
+Das Ende von ROBO Pro?
+
+ROBO Pro für den Arduino
+
+Mit der Ankündigung von fischertechnik,
+dass ROBO Pro nicht mehr an den TXT 4.0
+angepasst wird, wurde die grafische Programmiersprache von fischertechnik Mitte
+2021 schlagartig zum „Auslaufmodell“.
+Auch wenn ROBO Pro immer ein fischertechnik-Sonderweg war, so hat die Sprache
+doch zahlreiche unbestrittene Stärken, wie
+das Multi-Threading quasi-paralleler Programme, die vom Programmfluss unabhängigen Datenflüsse oder die geniale Unterstützung der Programmierung endlicher
+Automaten in Gestalt von Zustandsübergangsdiagrammen [2].
+
+In diesem Kontext bekam auch das FanProjekt von ft-ninja (alias mr-kubikus)
+neuen Rückenwind. Im Dezember 2012
+hatte dieser einen Parser für den Arduino
+entwickelt, der sich gegenüber ROBO Pro
+als TX ausgibt. Darüber kann ein Arduino
+im Online-Mode mit ROBO Pro gesteuert
+werden [6]. Zuletzt veröffentlichte er am
+11.08.2016 die Version 0.3 des Parsers auf
+Github [7] und testete sie am 19.02.2021
+mit ROBO Pro 4.6.6 [6].
+
+ROBO Pro ist über Jahrzehnte gereift [3],
+daher ist die Zahl der bekannten Bugs
+inzwischen sehr klein. Und schließlich gibt
+es für den TX und den TXT (gar nicht zu
+sprechen vom ROBO Interface) keine
+andere (Einsteiger-) Programmiersprache –
+abgesehen von der Community-Firmware,
+mit der zumindest der TXT auch via Brickly
+[4] oder StartIDE [5] programmiert werden
+kann. Kein Wunder, dass der Aufschrei in
+der Community angesichts der Abkündigung groß war. Und prompt „bäumte“ sich
+die Fangemeinde auf – und gebar den
+ftrobopy-Server [1], über den nun auch der
+neue TXT 4.0 mit ROBO Pro (im OnlineMode) gesteuert werden kann. Das funktioniert via WLAN oder Bluetooth sogar
+kabellos – z. B. für mobile Roboter.
+
+Die Lösung unterliegt allerdings verschiedenen technischen Einschränkungen, denn
+die Eingänge des Arduino vertragen maximal 5 V, während der TX(T) bis zu 10 V
+aushält. Auch lassen sich die Ports des
+Arduino nicht universell nutzen wie beim
+TX(T), sondern nur entweder als analoger
+(6 Ports) oder als digitaler Eingang (14
+Ports).
+Der Betrieb von fischertechnik-Motoren an
+den Ports ist nur mit ergänzenden HBrücken [8] möglich, da die Ausgänge des
+Arduino mit maximal 20 mA belastet
+werden können und nicht mehr als 5 V
+liefern – das reicht bestenfalls für eine LED.
+Schließt man einen Motor an, der leicht
+200 mA Strom zieht, steigt Rauch auf…
+Zudem ist keiner der Eingänge kurzschlussfest oder gegen Überlast gesichert – eine
+
+Hauptursache für die kurze Lebenserwartung von Arduinos in Kinderzimmern und
+Schulen.
+Für die Bereitstellung von vier schnellen
+Zählereingängen benötigt man vier unabhängige Interrupt-Service-Routinen (ISR) –
+der Arduino (Uno) kennt aber lediglich
+zwei Interrupts, die über die Ports D2 und
+D3 eine ISR auslösen können. Mehr als
+zwei schnelle Zählereingänge sind mit
+einem Arduino (Uno) also grundsätzlich
+nicht realisierbar. Im Arduino-Parser sind
+sie gar nicht vorgesehen. Schließlich kann
+der fischertechnik-Ultraschall-Abstandssensor nicht genutzt werden, und auch die
+I2C-Befehle von ROBO Pro werden nicht
+unterstützt.
+Eine naheliegende Verbesserung ist die Ergänzung des Arduino um ein Adafruit
+Motor Shield (v2.3) (Abb. 1 [9]). Dessen
+vier PWM-Motor-Ausgänge können mit bis
+zu 12 V und 1,2 A belastet werden. Eine
+entsprechende Anpassung des von ft-ninja
+„fx1parser“ getauften Sketches an einen
+Arduino mit Adafruit Motor Shield hat
+Holger Howey in seinem „TX-Light“Projekt 2017 umgesetzt [10, 11].
+
+Computing
+
+Alternative: Der ftDuino
+Gegen die angeführten Beschränkungen des
+Arduino, der sich vor allem wegen der Fülle
+an Treibern und Maker-Projekten gerade
+für den Schulunterricht besonders eignet, ist
+Till Harbaum 2018 mit der Entwicklung des
+ftDuino angetreten, der auf dem Design des
+Arduino Leonardo basiert [12, 13].
+Mit dem ftDuino kann man mit nur wenigen
+Einschränkungen einen TX simulieren,
+denn sein Konzept und Layout wurden an
+zentralen Leistungsmerkmalen des TX ausgerichtet:
+ Alle Input-Ports lassen sich wie beim TX
+sowohl digital als auch analog nutzen.
+ Die Eingänge sind kurzschluss- und
+überspannungsgesichert; sie messen
+Spannungen von bis zu 10 V.
+ Widerstandsmessungen bis 10 kOhm
+sind mit einer Auflösung von 10 bit möglich (TX: 5 kOhm, Auflösung: 12 bit).
+ Die Interrupts des ftDuino reichen für
+vier schnelle Zählereingänge, sodass der
+ftDuino wie der TX vier Encodermotoren steuern kann.
+ Die Motorausgänge des ftDuino sind mit
+bis zu 600 mA (insgesamt mit 1,2 A)
+belastbar; das ist mehr, als fischertechnik
+für den TX garantiert (250 mA je Motorausgang und 1 A gesamt).
+
+
+Allerdings belegt das Shield zwei der sechs
+analogen Ports (A4, A5) für das I2C-Protokoll, über das es vom Arduino angesteuert
+wird – so bleiben maximal vier Ports, die als
+analoger Eingang genutzt werden können.
+
+ Der Wannenstecker des ftDuino zum
+Anschluss von I2C-Sensoren und –Aktoren ist Pin-kompatibel mit dem EXT2Anschluss des TX, über den dessen I2CBus erreichbar ist. Auch der I2C-Bus des
+ftDuino arbeitet mit 5V-Logik. Wie der
+TX beherrscht der ftDuino den Standard
+(100 kHz) und den Fast Mode (400 kHz).
+Damit können alle zum TX kompatiblen
+I2C-Sensoren und -Aktoren auch an den
+ftDuino angeschlossen werden.
+ Sogar der Ultraschall-Abstandssensor
+wird vom ftDuino unterstützt, allerdings
+ausschließlich am Zählereingang C1.
+
+
+
+Das verträgt sich leider nicht mit einer
+Ansteuerung aus ROBO Pro.
+
+ des Ablaufs des Protokolls zwischen
+ROBO Pro und dem TX.
+
+Fünf Abweichungen vom TX bleiben: Der
+ftDuino
+
+Dieses Wissen ist erforderlich, um einen
+„TX-Simulator“ auf dem ftDuino korrekt
+auf die Datenpakete von ROBO Pro reagieren zu lassen, wie beispielsweise das Setzen
+einer Spannung an einem Motorausgang
+oder das Auslesen eines Eingangswerts.
+
+ beherrscht (bisher) keine Synchronisierung der Encodermotoren3
+ unterstützt keine serielle Bluetooth-Verbindung als USB-Alternative,
+ besitzt keine Taster unter dem Display,
+ kann nur PWM-Werte von 0 bis 64
+verarbeiten (TX: 0-512) und
+ unterstützt keine Extensionen.4
+Das sind aber für die wenigsten Anwendungen essentielle Einschränkungen. Daher
+sollte es möglich sein, einen ftDuino aus
+ROBO Pro im Online-Mode via USB fast
+wie einen TX zu steuern.
+
+Das Fish.X1-Protokoll
+Ein Sketch, der auf dem ftDuino das Verhalten eines TX „simuliert“, muss auf Kommandos von ROBO Pro genauso reagieren
+wie ein TX. Dazu muss er dieselbe „Sprache“ sprechen wie ROBO Pro, sprich: das
+von ROBO Pro verwendete Protokoll beherrschen.
+Die Kommunikation zwischen ROBO Pro
+und dem TX erfolgt über ein von den Entwicklern „Fish.X1“ getauftes Protokoll.
+Eine Übersicht des generellen Aufbaus der
+Pakete findet sich in der Dokumentation
+von MSC [14]; es fehlen allerdings (vollständige) Dokumentationen
+ der Kommandos, die ROBO Pro im Online Mode an den TX sendet,
+ des Aufbaus der vom Protokoll mit den
+Kommandos verschickten Datenpakete
+(die „Payload“ des Protokolls) und
+
+
+Die Erweiterung der ftDuino-Funktionsbibliothek um einen Synchron-Befehl sollte prinzipiell
+möglich sein.
+
+
+Informationsrecherche
+Einen Teil der benötigten Informationen
+kann man dem Header-File des C-Programmierpakets, das MSC mit dem TX ausgeliefert hat, und dem Anhang der zugehörigen
+Dokumentation entnehmen [15] – wie z. B.
+den grundsätzlichen Aufbau der Fish.X1Protokollpakete (Abb. 2). Da dort aber in
+erster Linie die Programmierschnittstelle
+der ftMscLib dokumentiert wird, fehlen
+viele Angaben zum Fish.X1-Protokoll.
+In Ermangelung einer Dokumentation des
+Herstellers, die im Übrigen auch fischertechnik nicht vorliegt, hilft da nur ein
+„Reverse Engineering“ des Fish.X1-Protokolls. Thomas Kaiser analysierte 2009 mit
+hohem technischen Aufwand die RS-485Verbindung zwischen dem TX und den
+angeschlossenen Extensionen, die ebenfalls
+das Fish.X1-Protokoll verwendet [16];
+wenig später ergänzte Christoph Niessen
+Thomas' wertvolle Erkenntnisse um eigene
+Analysen [17].
+Ende 2012 schließlich widmete sich ft-ninja
+dem Protokoll, um einen Parser für den
+Arduino zu entwickeln. Seine Fortschritte
+kann man im Forum nachlesen [6]. Raphael
+Jakob steuerte 2018 in der ft:pedia einige
+weitere Einsichten über das Protokoll bei
+und dokumentierte die bis dahin bekannte
+Struktur der Datenpakete [18].
+
+
+Über I2C-Verbindungen könnte man weitere
+ftDuinos als Slaves nutzen und so Extensionen
+simulieren.
+
+
+Computing
+
+Dann schnitt ich die zwischen ROBO Pro
+und dem TX während des Programmablaufs
+ausgetauschten Datenpakete mit einem Protokoll-Sniffer5 mit (Abb. 3). Durch kleine
+Variationen der Testprogramme konnte ich
+über die jeweiligen Änderungen in den
+Datenpaketen den Aufbau und die Bedeutung der Einträge rekonstruieren bzw. bereits dokumentierte Strukturen bestätigen.
+
+(Quelle: MSC [15])
+
+Die Ergebnisse der verschieden Analysen
+stimmen jedoch nicht in allen Details
+überein. Sie beschränken sich zudem auf
+die einfache Motorsteuerung und das Einlesen von Inputs. Es fehlen Hinweise zur
+Ansteuerung des I2C-Protokolls, die
+fischertechnik im März 2012 mit dem
+Update der TX-Firmware auf Version 1.30
+eingeführt hatte [19].
+Reverse Engineering
+Zur Überprüfung der unterschiedlichen Angaben und um eine möglichst komplette
+Übersicht aller von ROBO Pro genutzten
+Fish.X1 Command Codes inklusive der zugehörigen Datenpakete zu erhalten, erstellte
+ich zu allen ROBO-Pro-Befehlen, die im
+Online-Mode eine Übertragung an den TX
+vornehmen, kleine Testprogramme.
+
+
+Wireshark 3.6.8 mit USBPcap 1.5.4.
+
+(blau markiert: CMD 002-Paket, I/O Request
+an Master und Extension 8)
+
+Die Ergebnisse der Analyse habe ich in
+einer separaten Dokumentation zusammengefasst, die ich nach Fertigstellung zum
+Download bereitstellen werde. Dabei waren
+die bereits existierenden Dokumentationen
+natürlich eine sehr große Hilfe – so konnte
+ich mich auf die fehlenden und uneinheitlich dargestellten Teile des Protokolls
+konzentrieren.
+Im Folgenden stelle ich den Protokollablauf
+mit einem TX ohne Extensionen vor.6
+
+Der Protokollablauf
+Nach der Auswahl des Controllers baut
+ROBO Pro zunächst via USB (UART) eine
+
+Der Ablauf mit angeschlossenen Extensionen ist
+deutlich komplexer.
+
+
+
+serielle Verbindung zum TX mit einer
+Übertragungsgeschwindigkeit von 38.400
+Baud (Bit/s), 8 Datenbits, 1 Stopp-Bit und
+ohne Parity-Bit auf. Der Timeout wird auf
+2000 ms gesetzt.
+Wird ein Programm im Online-Mode oder
+der Interface-Test gestartet, fordert ROBO
+
+Pro via Broadcast eine Fish.X1-Verbindung
+an (Abb. 4).7 Die Session ID der Verbindung legt der TX fest, sobald er den Verbindungsaufbauwunsch (Connect Request,
+CMD 001-Paket) von ROBO Pro erhalten
+hat, und gibt sie im Antwortpaket (Connect
+Reply, CMD 101-Paket) zurück.
+
+(TID: Paketnummer, SID: Verbindungsnummer, CMD 00x: Befehlspaket)
+
+
+Auch für alle folgenden Pakete verwendet
+ROBO Pro im Fish.X1-Frame die BroadcastAdresse 0x0001 als TO-Adresse. Vermutlich
+
+
+wird damit sichergestellt, dass das Paket auch
+dann den Master erreicht, wenn der PC mit einer
+Extension verbunden ist.
+
+Bei der ersten Verbindung nach dem Einschalten des TX ist die SID = 1. Es folgt ein
+Information Request (CMD 006-Paket), der
+den Namen des TX (Device ID) und dessen
+Bluetooth-MAC-Adresse anfordert.
+Daran schließt sich ein Status Request an
+(CMD 007-Paket), der nach den angeschlossenen Extensionen und BT-Verbindungen fragt.
+Nun kennt ROBO Pro die Konfiguration
+und beginnt eine neue Fish.X1-Verbindung,
+in der gleich im ersten Paket die Konfiguration der Input- und Output-Anschlüsse vorgenommen wird (Configuration Request,
+CMD 005-Paket). Der TX vergibt im Antwortpaket (CMD 105) eine neue SID.
+Danach geht ROBO Pro in einen festen
+Rhythmus über und schickt alle 0,01 Sekunden einen Input-Output (CMD 002-Paket)
+und jede Sekunde einen Status Request
+(CMD 007-Paket), um Änderungen bei den
+angeschlossenen Extensionen festzustellen.
+Dieser Ablauf wird nur von I2C-Lese(CMD 019-Paket) und -Schreibbefehlen
+(CMD 020-Paket) unterbrochen, wenn diese im ROBO Pro-Programm vorkommen.
+Das Fish.X1-Protokoll endet, wenn sowohl
+das ROBO Pro-Programm als auch der
+Interface-Test beendet oder gestoppt wurden.
+
+Der „TX-Simulator“
+Ausgangspunkt: Der fx1parser
+
+Computing
+
+Zählereingänge gibt es beim Arduino nicht
+und daher auch keine erweiterte Motorsteuerung (Abstandsbefehl).
+Anpassungen an den ftDuino
+Ein „TX-Simulator“-Sketch für den ftDuino
+erforderte, den Parser um die folgenden
+Funktionen zu erweitern:
+ Konfiguration der Input- und OutputPorts sowie der schnellen Zählereingänge (CMD 005-Pakete)
+ Auslesen und Zurücksetzen der Zählereingänge (CMD 002-Pakete)
+ Implementierung der erweiterten Motorsteuerung (Abstandsbefehle)
+ Erkennung von I2C-Steuerpaketen durch
+den Parser und
+ Implementierung der I2C-Steuerung
+(CMD 019- und CMD 020-Pakete)
+Ein paar kleine Optimierungen konnte ich
+ebenfalls am Parser vornehmen:
+ Da keine Extensionen unterstützt werden, liegt die maximale Länge der
+Fish.X1-Datenpakete bei 95 Byte. Begrenzt man die drei Puffer (rx/tx/tmp)
+entsprechend, spart man 483 Byte des
+knappen RAM-Speichers.
+ Die Bearbeitung des Empfangspuffers
+erfolgt Byte für Byte, daher verwendet
+der „TX-Simulator“ einen globalen
+Pointer, anstatt die Pointer jeweils als
+Funktionsparameter zu übergeben.
+
+Der von ft-ninja für den Arduino entwickelte Fish.X1-Parser ist sehr ausgefeilt und
+stabil. Er erkennt die 5 wichtigsten der 7
+von ROBO Pro genutzten Fish.X1-Datenpakete zuverlässig und antwortet auch auf
+das von ROBO Pro eingeschobene RemoteShell-Kommando korrekt (siehe Abb. 4).
+
+ Der Parser prüft jedes empfangene Zeichen. Am häufigsten wartet er dabei auf
+weitere Daten im Paket, am zweithäufigsten auf das Paket-Anfang-Signal (STX).
+Daher sollten diese beiden Zustände vom
+Parser zuerst überprüft werden.
+
+Für den Arduino konnte ft-ninja einige Vereinfachungen vornehmen: Die Ein- und
+Ausgänge musste er nicht konfigurieren, da
+technisch feststeht, welche Ports analog und
+welche nur digital genutzt werden können.
+
+ Auch die Bearbeitung eines CMD-Pakets lässt sich ein wenig beschleunigen,
+wenn die am häufigsten auftretenden Befehle (CMD 002 und CMD 007) zuerst
+abgefragt werden.
+
+
+
+Die Anpassung an die Befehle der ftDuinoBibliothek [20] ist nicht schwierig, da die
+Programmierschnittstelle bis auf die I2CBefehle alle benötigten Controller-Kommandos als fertige Funktionen bereitstellt.
+
+Implementierung
+Bei der Implementierung des „TX-Simulators“ waren ein paar Besonderheiten zu
+beachten und Entwurfsentscheidungen zu
+treffen.
+Controller Status (CMD 007)
+Mit einem Status Request (CMD 007) fragt
+ROBO Pro zu Beginn des Protokolls die
+Zahl der an einen TX angeschlossenen Extensionen und aktiven Bluetooth-Verbindungen ab. Diese Abfrage wird einmal pro
+Sekunde wiederholt.
+Da der „TX-Simulator“ weder Extensionen
+noch Bluetooth-Verbindungen am ftDuino
+unterstützt, wird dieser Request immer mit
+einem „leeren“ Paket (Status: offline) beantwortet.
+I/O-Konfiguration (CMD 005)
+Mit einem Configuration Request (CMD
+005) gibt ROBO Pro die Nutzung der Einund Ausgänge des TX vor. Diese Einstellungen können im Verlauf eines ROBOPro-Programms nicht geändert werden,
+daher schickt ROBO Pro sie gleich zu
+Beginn des Protokollablaufs an den TX
+(Paket 1 der zweiten Verbindung, s.o.).
+Die Einstellungen umfassen
+ die jeweils paarweise Aktivierung der 8
+Output Ports als Motorausgang,
+ den Typ der Input Ports (Widerstand/
+Spannung, analog/digital, Abstand) und
+
+Die Input Ports werden am ftDuino mit der
+Methode
+ftduino.input_set_mode(port, type)
+
+konfiguriert. Dabei unterscheidet der
+ftDuino zwischen SWITCH (digital, Widerstand), RESISTANCE (analog, Widerstand) und VOLTAGE (analog, Spannung).
+Bei Anschluss eines fischertechnik-Spursensors erwartet ROBO Pro abhängig von
+der anliegenden Spannung einen binären
+Wert (0/1). Da die Eingänge des ftDuino
+nicht auf digital/Spannung konfiguriert
+werden können, stellt der „TX-Simulator“
+einen solchen Eingang auf VOLTAGE
+(analog) und merkt sich, dass der Eingang
+für einen Spursensor konfiguriert wurde.
+Sehr einfach funktioniert die Einstellung
+der Zählmethode für die Counter:
+ftduino.counter_set_mode(cnt, type)
+
+Dabei legt der Typ fest, ob bei jeder
+(C_EDGE_ANY), nur bei fallender Flanke
+(C_EDGE_FALLING) oder nur bei steigender
+(C_EDGE_RISING) gezählt wird. Als Voreinstellung ist der Zähler beim ftDuino deaktiviert (C_EDGE_NONE). ROBO Pro setzt den
+Wert standardmäßig auf Zählung bei fallender Flanke.
+Universaleingänge (CMD 002)
+Alle 10 ms fragt ROBO Pro mit einem Input
+Output Request (CMD 002) die an den – mit
+dem vorausgegangenen Configuration
+Request eingestellten – Unversaleingängen
+anliegenden Werte ab. Dafür bietet die
+ftDuino-Bibliothek eine einfache Methode:
+ftduino.input_get(port)
+
+Der zurückgelieferte Wert ist bei
+
+ die Zählmethode der Counter (steigende/
+fallende Flanke.
+
+ einer Spannungsmessung ein Wert von 0
+bis 10.000 (= 10 V)
+
+Bei den Motorausgängen muss sich der
+„TX-Simulator“ lediglich merken, welche
+aktiv sind und nicht als separate Output
+Ports genutzt werden.
+
+ einer Widerstandsmessung ein Wert von
+0 bis 65535 (Ohm); ab ca. 10 kOhm
+werden die Werte immer ungenauer [20]
+
+
+ einem (digitalen) Schalter 0 oder 1
+
+Ist ein Eingang für einen Spursensor konfiguriert (digital, Spannung), vergleicht der
+„TX-Simulator“ den gemessenen Analogwert mit einem Schwellenwert: Ist dessen
+Wert größer, wird 0 zurückgeliefert, anderenfalls 1. Als Schwellenwert verwendet
+der „TX-Simulator“ 4000 (ca. 4V); diese
+Konstante kann bei Bedarf im Sketch angepasst werden:
+#define LINE_SENSOR_THRESHOLD 4000
+
+Zählereingänge (CMD 002)
+Mit jedem Input Output Request (CMD
+002) werden auch die Zählereingänge abgefragt. Der TX liefert sowohl den jeweiligen
+Zählerstand als auch das am Zählereingang
+anliegende Potential (high, low) zurück.
+Beim ftDuino werden diese Werte für jeden
+Zählereingang mit den Methoden
+ftduino.counter_get(cnt)
+ftduino.counter_get_state(cnt)
+
+Computing
+
+Simulator“, sofern der Motorausgang als
+„aktiv“ konfiguriert wurde, für den ftDuino
+in Drehrichtung und PWM-Wert zurückrechnen. Dabei sollte die Drehrichtung des
+Motors der beim TX entsprechen.
+Der von ROBO Pro übermittelte PWMWert hat immer eine Auflösung von 9 bit
+(1-512), auch wenn der Motor in ROBO Pro
+auf die Werte 1-8 (3 bit) eingestellt wurde.
+Die Umrechnung der Werte nimmt ROBO
+Pro vor. Für den ftDuino muss der „TXSimulator“ die empfangenen PWM-Werte
+auf die Auflösung der Motortreiber des
+ftDuino (6 bit, 1-64) umrechnen. Das erledigt der hilfreiche „map“-Befehl der Arduino-IDE.
+Die Motorausgänge des ftDuino werden
+danach mit der Methode
+ftduino.motor_set(mot, mode, pwm)
+
+und die Ausgangs-Ports mit der Methode
+
+ausgelesen.
+
+ftduino.output_set(port, mode, pwm)
+
+Dass ein Zählereingang zurückgesetzt werden soll, teilt ROBO Pro dem TX über einen
+erhöhten Zählerwert mit. Um die Änderung
+des Zählerwerts erkennen zu können, muss
+sich der „TX-Simulator“ daher den jeweils
+letzten Zählerstand merken. Die Rücksetzung eines Zählers erfolgt dann mit der
+Methode
+
+eingestellt.
+
+ftduino.counter_clear(cnt)
+
+Die erfolgte Rücksetzung des Zählers wird
+ROBO Pro zusammen mit den Werten der
+Universaleingänge und Zählerwerte im
+Antwortpaket Input Output Reply (CMD
+102) durch ein einmalig gesetztes Flag
+(cnt_resetted[cnt]) gemeldet.
+Motorsteuerung (CMD 002)
+Mit einem Input Output Request (CMD
+002) übergibt ROBO Pro die PWM-Werte
+für die Ausgänge O1 bis O8. Dafür „übersetzt“ ROBO Pro Motorgeschwindigkeit
+und Drehrichtung eines Motorausgangs in
+PWM-Werte für die beiden zugehörigen
+Output Ports. Diese Werte muss der „TX-
+
+Mit den mit dem TX eingeführten erweiterten Motorbefehlen in ROBO Pro werden
+die Encodermotoren gesteuert. Damit kann
+ein Motor für eine vorgegebene Anzahl
+Encoder-Impulse aktiviert werden.
+Um den Encoder auszuwerten, werden
+schnelle Zählereingänge benötigt. Sowohl
+beim TX als auch beim ftDuino bewältigen
+sie bis zu 1 kHz – das entspricht bei den Encodermotoren der ersten Generation (75 Impulse je Umdrehung) etwas mehr als 780
+U/min und bei den aktuellen Encodern
+(63,333… Impulse je Umdrehung) knapp
+950 U/min. Beide Werte liegen deutlich
+über der Leerlaufdrehzahl der EncoderMotoren (280-325 U/min).
+Einen erweiterten Motorbefehl signalisiert
+ROBO Pro über eine Erhöhung des Zählerwerts cnt_ext_motor_cmd_id[mot]. Die
+ftDuino-Bibliothek kennt als Entsprechung
+zum Abstandsbefehl in ROBO Pro die
+Methode
+
+
+
+ftduino.motor_counter(mot, mode, pwm,
+distance)
+
+Als Abstand wird wie in ROBO Pro die
+Zahl der Encoder-Impulse übergeben.
+Damit wird zugleich der Motor gestartet.8
+Anders als der TX, der zunächst den Zähler
+auf 0 zurücksetzt, setzt der ftDuino für die
+Abstandsmessung den Zählerstand auf die
+negative Distanz und zählt bis 0.
+Die Methode
+ftduino.motor_counter_active(mot)
+
+verrät, ob der Motor die Position bereits
+erreicht hat (false). Hat er, dann stoppt der
+Motor automatisch. Damit der Motor möglichst wenig nachläuft, muss der MotorModus brake eingestellt sein – das ist beim
+ftDuino die Default-Einstellung:
+ftduino.motor_counter_set_brake(mot,
+on)
+
+Der „TX-Simulator“ muss das Erreichen
+der Position mit dem nächsten Input-Output
+Reply (CMD 102) an ROBO Pro zurückmelden. Dazu erhöht er den Zähler
+motor_pos_reached[mot] um eins.
+Nach einem erweiterten Motorbefehl ignoriert der TX einfache Motorbefehle so
+lange, bis der Zustand mit einem Abstandsbefehl über die Distanz „0“ aufgehoben
+wird. Daher muss sich der „TX-Simulator“
+diesen Zustand merken. Auch für den
+abschließenden Abstandsbefehl muss er den
+Zähler motor_pos_reached[mot] um eins
+erhöhen und das Flag cnt_resetted[cnt]
+setzen.
+Zu beachten ist, dass das Input-OutputRequest-Paket von ROBO Pro gleich mehrere Motor-Befehle enthalten kann – so
+
+
+Leider werten TX und ftDuino den Encoder nur
+bei steigender (ftDuino) bzw. bei fallender
+Flanke (TX) aus. Würden beide Trigger ausgewertet, ließe sich damit die Auflösung der
+Encoder verdoppeln.
+So wurden z. B. für die FROM- und TO-Adressen jeweils vier Byte spendiert – obwohl von den
+
+
+z. B. einen Abstandsbefehl mit „0“ und eine
+Geschwindigkeitsvorgabe für einen normalen Motorbefehl.
+I2C-Kommandos (CMD 019/020)
+Die Fish.X1-Datenpakete I2C Write
+Request (CMD 020) und I2C Read Request
+(CMD 019), die mit dem Update der ROBO
+Pro-Version 3.1.3 und des TX auf die Firmware-Version 1.30 vom 19.03.2012 eingeführt wurden, sind nirgendwo dokumentiert.
+Sie fallen auch etwas aus dem Rahmen:
+Obwohl I2C-Befehle in ROBO Pro direkt
+einer angeschlossenen Extension zugewiesen werden können, enthalten die Fish.X1Datenpakete keine Adresse, sondern nur die
+für den I2C-Befehl relevanten Daten. Und
+während im Fish.X1-Protokoll ansonsten
+sehr großzügig mit Datenfeldern umgegangen wird9, werden die I2C-Konfigurationsdaten in ein Byte gequetscht (Tab. 1).10
+Beim I2C Write Request (CMD 020)
+werden neben der 7-bit-I2C-Adresse und
+dem Konfigurations-Byte (Tab. 1) bis zu 4
+Byte Daten übergeben, die der „TXSimulator“ abhängig von der Konfiguration
+an ein am ftDuino angeschlossenes I2CDevice übertragen muss.
+Bei einem I2C Read Request (CMD 019)
+werden – abhängig von der Konfiguration –
+bis zu zwei Byte („Unteradresse“) an das
+I2C Device geschickt, bevor ein bis zwei
+Byte gelesen werden. Bei beiden Kommandos kann der I2C-Bus „offen“ gehalten und
+damit reserviert, d. h. für andere Devices
+gesperrt werden.
+
+damit möglichen 4.294.967.296
+lediglich 9 benötigt werden…
+
+Adressen
+
+Das könnte damit zusammenhängen, dass die
+USB-Verbindung mit 38 kBit/s nur ein Zehntel
+des Datendurchsatzes des vom TX unterstützten
+I2C Fast Mode (400 kBit/s) erreicht.
+
+Bit 7
+
+Computing
+
+Bit 6
+
+Bit 5
+
+Bit 4
+
+Bit 3
+
+Bit 2
+
+Bit 1
+
+Bit 0
+
+[0]0 100 kHz
+
+ein Versuch
+
+Close
+
+-
+
+Keine Unteradr.
+
+[0]1 400 kHz
+
+10 Versuche
+
+Open
+
+8 bit Daten
+
+8 bit Unteradr.
+
+10 -
+
+bis erfolgreich
+
+-
+
+16 bit Daten
+
+16 bit Unteradr.
+
+11 -
+
+-
+
+Tab. 1: Aufschlüsselung des I2C-Konfigurations-Byte
+
+Für die I2C-Kommandos auf dem ftDuino
+muss die Bibliothek „wire.h“ eingebunden
+werden. Das Schreiben von Daten an ein
+bestimmtes I2C-Device erfolgt nach dem
+Öffnen einer Verbindung byteweise mit
+einem Write-Befehl:
+Wire.beginTransmission(i2c_addr);
+Wire.write(data);
+Wire.endTransmission();
+
+Das Lesen von Daten kann ebenfalls sehr
+einfach byteweise erfolgen:
+Wire.requestFrom(i2c_addr);
+while (Wire.available() < 0);
+data = Wire.read();
+
+Die empfangenen Daten werden in einem
+I2C Read Reply (CMD 119) an ROBO Pro
+zurückgeliefert.
+Als Default-Einstellung verwendet der
+ftDuino den I2C Standard Mode (100 kHz).
+Die Umstellung auf den Fast Mode erfolgt
+(bei geschlossener Verbindung) mit
+Wire.setClock(400000);
+
+Damit können auf dem ftDuino auch I2CSensoren genutzt werden (sofern ein ROBO
+Pro Treiber existiert), ohne dass ein SensorTreiber in den knappen Flash-Speicher des
+ftDuino geladen werden muss.
+
+Tests
+Eine der besonderen Eigenschaften von
+ROBO Pro ist der Interface-Test, der alle an
+den Ein- und Ausgängen anliegenden Werte
+des TX (bzw. in unserem Fall des einen TX
+simulierenden ftDuino) anzeigt – und der
+sogar gestartet werden kann, während
+gleichzeitig ein Programm im Online-Mode
+läuft. Damit lassen sich bei den erweiterten
+
+-
+
+Motorbefehlen beispielsweise die Werte der
+schnellen Zählereingänge oder bei den Universaleingängen Änderungen des Spursensors live mitverfolgen – eine große Hilfe bei
+der Fehlersuche oder Programmoptimierung. So kann man auch das Funktionieren
+des „TX-Simulators“ mit dem InterfaceTest leicht überprüfen. Für Tests der I2CKommandos muss man auf die in den
+meisten ROBO Pro-Treibern enthaltenen
+Beispielprogramme zurückgreifen, weil der
+Interface-Test dazu keine Daten anzeigt.
+Eine umfangreiche Sammlung mit insgesamt 27 Treibern für verbreitete I2C-Sensoren findet sich in meinem Github-Account
+zum Download [21].
+
+Ergebnis
+Der TX-Simulator für den ftDuino täuscht
+ROBO Pro einen TX Controller vor. Mit
+nur wenigen Einschränkungen (keine Extensionen, keine Synchronisation von Encoder-Motoren, keine Bluetooth-Kommunikation, kein Ultraschall-Abstandssensor)
+kann der Befehlsumfang von ROBO Pro im
+Online-Mode nahezu vollständig mit dem
+ftDuino genutzt werden – inklusive I2CSensoren, dem Oszillografen und der erweiterten Motorsteuerung für Encoder-Motoren. Damit erweitern sich die Einsatzmöglichkeiten des ftDuino vor allem in Schulen:
+Als Einsteigerprogammiersprache senkt
+ROBO Pro die Einstiegshürde, können
+dieselben ROBO Pro-Programme (mit wenigen Ausnahmen) sowohl auf dem TX(T)
+als auch auf dem ftDuino genutzt werden,
+und ermöglicht die Oszilloskopfunktion
+von ROBO Pro die Nutzung des ftDuino als
+Messgerät in (Physik-) Experimenten.
+
+
+
+Ausblick
+Über den I2C-Bus könnte man weitere
+ftDuinos als „Slaves“ ansteuern – die sich
+so via „TX-Simulator“ wie Extensionen aus
+ROBO Pro steuern ließen. Auch die Synchronisation von Encodermotoren ließe sich
+bei Bedarf auf dem ftDuino realisieren.
+Falls ROBO Pro in größerem Umfang auf
+ftDuinos zum Einsatz kommen sollte, ist
+eine entsprechende Erweiterung des „TXSimulators“ nicht ausgeschlossen… Rückmeldungen sind daher sehr willkommen.
+
+Quellen
+[1]
+
+Torsten Stuehn: ROBOPro, ftrobopy
+und ftScratch auf dem TXT 4.0.
+ft:pedia 2/2022, S. 123–129.
+
+[2]
+
+Dirk Fox: Endliche Automaten in
+Robo Pro. ft:pedia 3/2014, S. 42–50.
+
+[3]
+
+Till Harbaum: Von Lucky Logic zu
+RoboPro Coding. ft:pedia 1/2021,
+S. 103–109.
+
+[4]
+
+Till Harbaum: Brickly auf dem TXT:
+Grafische Programmierung à la
+Google-Blockly. ft:pedia 1/2017,
+S. 92–98.
+
+[5]
+
+Peter Habermehl: startIDE für die
+Community Firmware – Programmieren direkt auf dem TXT oder TXPi. ft:pedia 1/2018, S. 102–107.
+
+[6]
+
+ft-ninja: ROBO Pro + Arduino.
+Thread im Forum der ft:community.
+
+[7]
+
+mr-kubikus: fx1-arduino-parser.
+Github, zuletzt aktualisiert (Test mit
+ROBO Pro 4.6.6) am 19.02.2021.
+
+[8]
+
+Thomas Magin: Die Kunst der HBrücke: Let's Rock. ft:pedia 2/2022,
+S. 104–118.
+
+[9]
+
+
+Dirk Fox, Thomas Püttmann:
+fischertechnik-Roboter mit Arduino.
+dpunkt-Verlag, 2000.
+
+[10] Holger Howey: TX Light – Arduino
+Uno, der von RoboPro gesteuert
+wird. Bilderpool der ft:community,
+18.02.2017.
+[11] Holger Howey: TX-Light: Arduino
+(Uno/Mega) und ftduino aus ROBO
+Pro ansteuern. ft:pedia 3/2022, in
+dieser Ausgabe.
+[12] Till Harbaum: ftDuino – OpenSource trifft KonstruktionsBaukasten. ft:pedia 1/2018, S. 85–91.
+[13] Till Harbaum: ftDuino – Arduino für
+fischertechnik. github.io.
+[14] Peter Duchemin: Programmierung
+des ROBO TX Controllers. Teil 1:
+PC-Programmierung. V1.5,
+24.04.2012.
+[15] Peter Duchemin: Programmierung
+des ROBO TX Controllers. Teil 2:
+Windows Library „ftMscLib“.
+V1.5.11, 4.04.2012.
+[16] Thomas Kaiser: Die Robo-TX RS485 Schnittstelle. 17.12.2009.
+[17] Christoph Nießen: Die RS-485Schnittstelle des ROBO TX
+Controllers. 2010 (?).
+[18] Raphael Jacob: Programmierung des
+TX-Controllers mit Python. 2/2018, S. 60–67.
+[19] Dirk Fox: I²C mit TX und Robo Pro –
+Teil 1: Grundlagen. ft:pedia 3/2012,
+S. 32–37.
+[20] Till Harbaum: ftDuino – ein
+fischertechnik-kompatibler Arduino.
+Bedienungsanleitung. 12.01.2021.
+Github.io
+[21] Dirk Fox: I2C-Treiber für ROBO
+Pro. 27 ROBO Pro-Treiber für
+verbreitete I2C-Sensoren. github.com
+
+

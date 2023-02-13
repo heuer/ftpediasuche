@@ -1,0 +1,360 @@
+
+Mechanisches Rechnen
+
+Mechanisches Rechnen
+
+Consul, the Educated Monkey
+Dirk Fox
+Das 1x1 ist nicht erst für heutige Siebenjährige eine Herausforderung – schon vor 100 Jahren
+musste man „da durch“. Und schon damals haben findige Pädagogen und Tüftler darüber
+nachgedacht, wie man diesen Lernprozess ein wenig annehmlicher, anschaulicher und attraktiver gestalten kann. 1915 fand William H. Robertson eine faszinierende Lösung: Consul.
+
+Geschichte
+„Consul, The Educated Monkey“ ist eine
+mechanische Rechenhilfe für Addition und
+Multiplikation zweier ganzer Zahlen aus {1,
+…, 12} aus dem Jahr 1915 (Abb. 1). Sie ist
+kinderleicht zu bedienen: Werden die Füße
+des Affen so eingestellt, dass sie auf die
+Summanden bzw. Faktoren zeigen, dann
+erscheint im Fenster zwischen den Händen
+des Affen das Rechenergebnis. Wer die
+Funktionsweise einmal „live“ ausprobieren
+möchte, dem sei die Flash-Simulation [1]
+auf tan-gram.de und Windows-Nutzern
+außerdem die Implementierung von Reinhard Atzbach [2] empfohlen.
+
+„Consul, The Educated Monkey“ wurde im
+Jahr 1915 vom Amerikaner William H.
+Robertson aus Belmont, Ohio zum Patent
+angemeldet. Am 27.06.1916 wurde ihm das
+Patent auf den „Educated Monkey“ erteilt
+(Abb. 2); zweieinhalb Jahre später, am
+26.11.1918, erhielt er ein zweites Patent auf
+die Mechanik (Abb. 3).
+
+(US-Patent Nr. 1188490 vom 27.06.1916 [4])
+
+(Educational Novelty Company, 1915)
+
+Das von seiner Educational Novelty Company von 1915 bis 1922 verkaufte, aus
+Blech hergestellte ‚Rechenspielzeug‘ ist
+heute ein begehrtes Sammlerobjekt [5].
+
+
+
+Tatsächlich hat der ‚Consul‘ deutsche Wurzeln [5]. Der Verlag Friedrich Soennecken
+aus Bonn hatte bereits seit 1889 den „kleinen Rechner“ im Angebot (Abb. 4), eine
+mechanische „Rechenmaschine“ mit sehr
+ähnlichem Funktionsprinzip, wie das Patent
+von Friedrich Soennecken aus dem Jahr
+1889 zeigt (‚Rechenvorrichtung zum Vervielfachen und Theilen‘ [6], Abb. 5).
+
+(US-Patent Nr. 1286112 vom 26.11.1918) [4]
+
+Über den Hintergrund des Namens ‚Consul‘
+gibt es lediglich Spekulationen. Eine sehr
+plausible führt ihn auf den Dokumentarfilm
+„Consul (the Great) Crosses the Atlantic“
+des Filmpioniers Charles Urban (18671942) aus dem Jahr 1909 zurück, der den
+ersten Besuch eines in Europa berühmten
+dressierten Affen namens Consul in den
+USA zeigt.
+
+(DRP 51445 vom 13.06.1889 [6])
+
+Der fischertechnik-Consul
+Originalgetreue Nachbildungen des Consul
+kann man für 13-20 € erwerben. Für einen
+wahren fischertechniker ist das natürlich
+keine Option: ein solch feiner Mechanismus
+gehört mit fischertechnik realisiert – und
+das gesparte Geld in eine Erweiterung der
+Teilesammlung investiert.
+1889 (Quelle: rechnen-ohne-strom.de [5])
+
+
+Dafür sind aber zunächst ein paar kleine
+Hürden zu nehmen – denn hinter der
+Mechanik lauert, ihr ahnt es, Mathematik.
+
+
+Mechanisches Rechnen
+
+Die Mechanik
+Die Mechanik des Consul ist ein wenig
+trickreich. Wie man an Friedrich Soenneckens Patentzeichnung und Modell erkennt,
+liegen die Zahlen einer Zweier-, Dreier-,
+Viererreihe etc. im Unterschied zum Consul
+nicht auf einer Geraden. Das macht die
+Multiplikations- bzw. Additionstabelle
+etwas unübersichtlich und mindert die Eignung des „kleinen Rechners“ als Lernhilfe
+– schließlich soll er das Kopfrechnen nicht
+ersetzen, sondern trainieren.
+Wie aber muss man die Mechanik konstruieren, damit die Additions- und Multiplikationstabellen des Consul ein schön strukturiertes Dreieck bilden?
+Die Bedingung ist klar: Hält man ein „Bein“
+des Rechenaffen fest und bewegt das andere
+nach links oder rechts, muss die Bewegung
+der Hände auf einer Geraden liegen. Diese
+Bedingung lässt sich mathematisch ausdrücken, wenn wir den Rechenaffen als
+geometrisches Gebilde zeichnen [7, 8].
+aus den Patentzeichnungen in Abb. 2 und 3:
+y
+
+e
+
+λ
+.
+
+ω
+
+a
+
+J
+
+K
+yL
+
+Dabei interessiert uns die Bewegungsgleichung des Punktes L = (xL, yL):
+= ( )
+
+Wie aber erhalten wir die Funktionsgleichung ( )?
+
+Da hilft wieder einmal ein wenig Trigonometrie. Alle erforderlichen Hilfsgrößen –
+den Winkel λ und die Höhe e (grüne Linie)
+– sind in Abb. 6 schon eingezeichnet. Wir
+erkennen leicht:
+=
+
+−2
+
+e und yD wiederum sind Katheten zweier
+rechtwinkliger Dreiecke, daher gilt = ∙
+cos( + ) und
+= ∙
+, also folgt:
+=
+
+∙
+
+−2 ∙
+
+( + )
+
+=
+
+∙ cos − 2 ∙ (cos ∙ cos
+− sin ∙ sin )
+
+Nach den Rechenregeln für den Cosinus
+eines Winkels (Additionstheorem) gilt:
+cos( + ) = cos ∙ cos − sin ∙ sin ,
+also:
+Oder (etwas umgestellt):
+
+D
+
+yD
+
+einem festen Winkel ω mit dem zugehörigen Oberarm. Wir halten nun den linken
+„Fuß“ (Punkt E) fest und bewegen den rechten (Punkt F) auf der x-Achse.
+
+L
+
+b
+
+.
+
+= ( − 2 ∙ cos ) ∙ cos
++ 2 ∙ sin ∙ sin
+
+Dabei sind a, b und konstant, lediglich
+verändert sich, wenn der „Fuß“ F verschoben wird. Wir versuchen nun, durch xL
+„auszudrücken“. Im rechtwinkligen Dreieck mit den Ecken E, D und (xL, 0) gilt:
+cos = 1 − (sin ) und
+= ∙ sin .
+
+des Educated Monkey
+
+Damit können wir in unserer Funktionsgleichung sin und cos ersetzen und erhalten
+yL als Funktion von xL:
+
+Dabei wählen wir die „Arme“ des Rechenaffen so, dass Ober- und Unterarme gleich
+lang sind (blaue Linien, Länge a), und verbinden die „Beine“ (rote Linien, Länge b) in
+
+= ( − 2 ∙ cos ) ∙ 1 −
+
+E
+
+xL
+
+F
+
+x
+
++ 2 ∙ sin
+
+∙
+
+
+
+
+Damit
+= ( ) eine lineare Funktion ist,
+muss der Wurzel-Term unabhängig von
+gleich 0 sein. Jetzt können wir unsere Bedingung mathematisch exakt formulieren:
+Die „Hände“ des Rechenaffen bewegen
+sich genau dann auf einer Geraden,
+wenn gilt:
+− 2 ∙ cos
+bzw.
+
+= 2 ∙ cos
+
+=0
+
+Wir sehen: Damit die Bedingung erfüllt ist,
+müssen die Bein- und Armlängen unseres
+Rechenaffen in einem bestimmten Verhältnis zueinander stehen, das wiederum von
+der Größe des gewählten (festen) Winkels
+ω abhängt.
+
+Die Modellkonstruktion
+Damit die Beine unseres Rechenaffen auch
+echten Beinen ähneln, sollten sie – wie beim
+originalen Consul – ein leicht gebogenes
+Kniegelenk besitzen. Für die Wahl des richtigen Längenverhältnissen von Beinen zu
+(Ober-)Armen gehen wir aber zunächst einmal von geraden Beinen aus – die Länge
+eines abgeknickten Unterschenkels lässt
+sich später leicht experimentell bestimmen.
+In dem fischertechnik-Modell des Consul in
+gewählt, als (Ober-) Armlänge a = 11 cm.
+Daraus errechnet sich die Länge eines (geraden) Beins wie folgt:
+= 22 cm ∙ cos 30° = 11 ∙ √3
+≅ 19,05 cm
+
+
+
+Mechanisches Rechnen
+
+
+Die Konstruktion des in Abb. 7 verdeckten
+Kopfgelenks zeigt Abb. 8. Die Arme und
+Beine werden paarweise über eine Bauplatte 15x30x5 mit Nuten (38428) fest miteinander verbunden. Man erkennt gut die
+30°-Winkelsteine, mit denen die Oberarme
+abgewinkelt werden. Beide Seiten werden
+über je einen Winkelstein 60° und eine
+Gelenkklaue verknüpft.
+
+
+Fügt man im Bein nach 10,5 cm (sieben
+Bauhöhen) einen 30°-Winkelstein als Kniegelenk ein, muss man den Unterschenkel
+des Beins um 0,75 cm (= ½ Bauhöhe) verkürzen (Abb. 9).
+Durch das Kopfgelenk wird eine Metallachse 60 mit Klemmbuchse 10 gesteckt, auf
+der der Kopf des Affen montiert wird. Dafür
+habe ich eine Schwungscheibe (39006) verwendet (Abb. 11) – alternativ tun es auch
+ein Rad 23 (36581), ein Walzenrad (35386)
+oder eine Drehscheibe 60 (31019).
+
+
+Die 3D-Konstruktion in Abb. 9 zeigt die
+Mechanik des fischertechnik-Consul von
+hinten. Der gelbe Statik-Teil der Oberarme
+muss wegen der Kopfgelenk-Konstruktion
+eine Baulänge kürzer sein als der der Unterarme. Ober- und Unterarme sind über zwei
+Winkelsteine 30° und eine Gelenkklaue (als
+„Ellenbogen“) miteinander verbunden.
+In Abb. 10 seht ihr die beiden Hände des
+Rechenaffen, die eine Metallstange 30 als
+„Zeigestift“ halten, und die Füße, die sich
+auf Gelenkwürfel-Klauen (31436) mit
+Lagerhülse (36819) auf einer Metallachse
+260 (107436) verschieben lassen.
+
+
+Wer möchte, kann auf die Oberseite des
+Kopfes nun noch das Konterfei eines Affen
+kleben – wie z. B. das in Abb. 12 gezeigte,
+das unter Public Domain-Lizenz zum
+kostenlosen Download angeboten wird.
+
+
+
+
+Downloads
+Die von mir verwendete Multiplikationsund Additionstabelle habe ich zum Download bereitgestellt.
+Wer den fischertechnik-Designer verwendet, finden eine in Baugruppen strukturierte
+3D-Bauanleitung im Downloadbereich der
+ft-Community.
+Natürlich lässt sich auch ein Consul mit anderen Proportionen konstruieren – experimentiert ruhig einmal mit dem Winkel ω
+und der Oberarmlänge a.
+
+Das Multiplikationsschema
+Jetzt fehlt noch das Multiplikationsschema
+im Hintergrund. Mit einem Textprogramm
+lässt es sich sehr einfach erstellen, indem
+man eine „1“ zentriert in die Mitte des Blattes schreibt und dann Zeile für Zeile die
+Zahlenwerte einträgt, jeweils voneinander
+durch einen Tabulator getrennt. In den Diagonalen von links oben nach rechts unten
+stehen dann (von links nach rechts) die 2er,
+3er, 4er bis zur 12er Reihe – und in der ganz
+rechten alle Quadratzahlen von 1-144 (siehe
+Anschließend markiert ihr das gesamte
+Zahlendreieck und wählt die Tabulatorlänge so, dass die unterste Zeile eine Breite
+von 16 cm hat. Schließlich stellt ihr die Zeilenabstände so ein, dass die Zahlenpyramide genau 7 cm hoch ist. Mit etwas Abstand (ca. 1 cm) wird darunter eine Zeile mit
+den Faktoren von 1-12, gefolgt von einem
+„Q“ für Quadrieren eingefügt.
+Auf dieselbe Weise lässt sich ein Additionsschema erstellen – da auch die Addition
+kommutativ ist, funktioniert unser Consul
+genauso gut als Additionswerkzeug [8].
+
+
+Ich wünsche euch viel Vergnügen mit
+eurem fischertechnik-Consul!
+
+Quellen
+[1]
+
+Flash-Simulation (http://www.tangram.de/consul.pl)
+
+[2]
+
+Reinhard Atzbach: Consul the
+Educated Monkey für Windows,
+2001.
+
+[3]
+
+William H. Robertson: Toy. USPatent Nr. 1188490, 27.06.1916.
+
+[4]
+
+William H. Robertson: Calculation
+Device. US-Patent Nr. 1286112,
+26.11.1918.
+
+[5]
+
+Wilfried Denz: Rechenaffen.
+Rechnen-ohne-Strom.de.
+
+[6]
+
+Friedrich Soennecken: Rechenvorrichtung zum Vervielfachen und
+Theilen. Deutsches Reich Patent Nr.
+51445, 13.06.1889.
+
+[7]
+
+Dörte Haftendorn: Educated Monkey
+oder „Der rechnende Affe“.
+19.09.2008.
+
+[8]
+
+Sidney J. Kolpas, Gary R. Massion:
+Consul, the Educated Monkey. In:
+The Mathematics Teacher, Vol. 93,
+No. 4, April 2000, S. 276-279.
+
+

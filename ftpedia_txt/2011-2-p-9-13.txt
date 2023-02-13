@@ -1,0 +1,166 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Kaulquappen (Teil 2)
+Harald Steinhaus
+Wir rekapitulieren: Kaulquappen sind Entwürfe, die noch etwas heranreifen müssen, bis sie
+zu Fröschen werden. Davon muss man viele küssen (als technische Problemlösung ausprobieren). Das alles in der Hoffnung, dass ein paar davon zu Prinzen werden und nicht gar zu
+viele bitter schmeckende Kröten darunter sind. Im Haraldschen Froschteich herrschte reges
+Treiben und Blubbern, so dass wir hier einige weitere Exemplare vorstellen können.
+1. Mit den ft-Freilaufnaben können Lagerung und Antrieb eines Rades getrennt erfolgen. Hier kommt der Antrieb über die
+Kegelverzahnung (rechts) bzw. den Zahnkranz an der Kurbel 35071 (links). Die
+Kurbel muss ggf. noch abgetrennt werden.
+
+Mit einem zusätzlichen Gelenk wird daraus
+ein Antrieb, den man beiseite klappen
+kann. Diese Idee hatte auch jemand anderes; im Bilderpool gibt es ein Foto davon.
+3. Die Kegelzahnräder passen auch in die
+Winkelträger 15. Damit kann man einen
+Antrieb sehr kompakt um 90° abknicken.
+
+
+2. Die Kegelzahnräder können auch stirnseitig noch etwas Kraft übertragen.
+
+
+
+4. Hier dient die Kurbel als Mitnehmer für
+einen Hebel.
+
+
+
+Der Kurbelarm steckt in der Mittelbohrung
+des BS15-Loch.
+5. Es fing damit an, dass eine V-Platte 15
+in die Nut des Z30 hinein geriet. Davon
+drei im Kreis und ein zweites Z30 als Deckel obendrauf, und man hat drei Arme, die
+mit etwas Bewegungsfreiheit ausgestattet
+sind.
+
+Federverbinder. Mit zwei Federnocken als
+Achsen wird daraus eine Schubkarre oder
+ein leichtes Bugfahrwerk.
+
+
+8. Regelmäßige Fünfecke bekommt man
+mit BS7,5 und Kettengliedern. Für ein
+Achteck eignet sich der Rollenbock.
+
+6. Wenn man ein Hubgetriebe und ein UGetriebe hintereinander schaltet, kommt
+ein sehr langsamer Antrieb mit Leerlauf an
+beiden Enden heraus. Mit zwei Gummiringen kann man dafür sorgen, dass die Zahnstange an den Enden immer unter Zug nach
+innen steht und deshalb in Gegenrichtung
+wieder ins Getriebe eingreift.
+
+
+9. Die Öffnungen in den Trägern der ftFeuerwehrleiter passen zu den Klemmbuchsen und Hülsen 15 (links), den Verschlussriegeln (mitte) und den Griffen der
+S-Riegel 4/6/8 (rechts).
+
+
+
+7. Der Adapter 38203 erlaubt beim grauen
+M-Motor, die Vorsatzgetriebe um 90° verdreht aufzusetzen. Es gibt ihn in zwei
+Varianten: mit und ohne querliegenden
+
+10. Die Bohrungen in der Sternlasche (das
+ist die sechseckige) haben die richtigen
+Abstände, um mit einem Z10 von innen
+drei außen angeordnete Z15 anzutreiben.
+
+
+
+Tipps & Tricks
+
+13. A propos ‚Türen’: mit dem Rollenbock
+als Zwischenstück sollte doch etwas zu
+machen sein. Zumindest bleiben diese Anordnungen schön im ft-Raster. Irgendwie
+fehlt aber noch etwas.
+
+
+11. Der „Schalthebel“ war bisher nur ein
+einziges Mal zu etwas Sinnvollem zu gebrauchen (als Leitersprosse). Nimmt man
+aber zwei davon, könnte das mal eine
+Flugzeugtür werden. Die Lenkklaue stellt
+ein Stück Schiebetür dar.
+
+14. Der Reedkontakthalter (mit zwei
+Abstandsringen drin) als Türscharnier, das
+den Drehpunkt weit genug außen hat, so
+dass die V-Platte beim Öffnen nirgends anstößt. Der Spalt lässt sich aber nur schlecht
+verkleiden.
+
+
+
+12. Der Kugelkopf am Spurstangengelenk
+gleitet in einer ft-Nut. Dieses Gelenk für
+eine Tür oder Luke erreicht über 90°
+Öffnungswinkel.
+
+15. Eine Tür mit BS7,5 als Zwischenteil.
+Sie ist im Raster und wird erst nach außen
+und dann zur Seite geschwenkt.
+Durchgehendes Verkleiden geht hier aber
+auch nicht. Sehr elegant wird diese Bauart,
+wenn man einen BS7,5 quer zu den Nuten
+halbiert, so dass er in die Rollenlager
+hinein passt. Das wäre aber Teile-Modding
+und gehört hier nicht zum Thema.
+
+
+
+16. Rund um den Statikadapter und den UTräger-Adapter herum lassen sich auch
+schöne Gelenke aufbauen.
+
+
+
+
+17. Nach vielerlei Tändelei mit Kaulquappen und Kröten kommen wir nun zu
+einem Exemplar, das es zum Prinzen geschafft hat: mit dem „alten“ Statik-Scharnier gibt es hier eine Tür, die komplett
+versenkt eingebaut ist und damit voll in der
+Verkleidung verschwindet. Man kann sie
+nach innen öffnen (dann schwenkt nur das
+S-Scharnier) oder nach außen (dann klappt
+das S-Scharnier etwas auf, und die Tür
+dreht um die Rastachse herum).
+
+20. Hier haben wir auch einen „Prinzen“:
+eine Säule aus ‚Hülsen mit Scheibe’ kann
+ebenfalls als Mittelteil der Hubvorrichtung
+dienen.
+
+
+
+18. Die halb nach außen geöffnete Tür. Der
+Gummiring hält die Endlagen „zu“ und
+„nach außen auf“ stabil. Außerdem zieht er
+die Tür wieder zu, wenn sie nach innen
+geöffnet ist.
+
+21. Ein weiteres adliges Fundstück: Ein
+pneumatischer Greifer.
+
+
+
+19. Im Froschtümpel treiben sich auch
+Schnecken herum. Diese vier hier bilden
+den Anfang einer Hubvorrichtung. Es müssen nur noch die drei schwarzen gleichsinnig angetrieben werden.
+
+
+Das blaue Teil ist ein P-Doppelbetätiger.
+Er dient nur zum Öffnen; das Schließen erledigt ein Gummiring.
+
+Tipps & Tricks
+
+22. Die S-Streben haben den richtigen Abstand voneinander, so dass der Greifer sie
+festhalten kann.
+So viel zu den Ergebnissen der diesjährigen Kaulquappenzucht.
+Bisher waren alle Entwürfe „naturbelassen“, also so wie Artur Fischer sie schuf.
+Es gibt aber auch eine Hexenküche, in der
+sich mittels mehr oder weniger sanfter
+Gen-Manipulationen (sprich: „Modding“)
+weitere Prinzen züchten lassen. Dazu kommen wir im nächsten Beitrag.
+
+
+
+

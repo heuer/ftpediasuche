@@ -1,0 +1,555 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+Schweißen und erodieren mit fischertechnik
+Rüdiger Riedel
+Ich geb‘s zu, mit Schweißen hat dieser Artikel nichts zu tun, damit will ich nur die Aufmerksamkeit erringen! Denn wer kennt schon das Wort „Funkenerosion“ und weiß, was dahintersteckt?
+Metallbearbeitung mit fischertechnik, geht
+das? Ja, das geht tatsächlich! Wer schon mal
+mit Elektromagneten gearbeitet hat, wird
+sie bemerkt haben: Die kleinen schwarzen
+Punkte an Kontaktstellen wie dem Kommutator (Stromwender) von Gleichstrommaschinen [5].
+
+Jede Entladung erzeugt werkstückseitig
+einen Krater (Materialabtrag) und drahtseitig einen Abbrand (Verschleiß der Werkzeugelektrode).
+Es besteht zu keinem Zeitpunkt mechanischer Kontakt zwischen Elektrode und
+Werkstück! Der Abstand muss regelungstechnisch im Arbeitsbereich gehalten
+werden.
+Erodieren mit ft
+
+
+Die Punkte entstehen immer dort, wo
+Funken auftreten.
+
+Erodieren, was ist das?
+Elektroerosion (Electrical Discharging
+Machining – EDM) ist ein Bearbeitungsverfahren zur Herstellung von Matrizen, Formen und hochpräzisen Metallteilen.
+Das zu bearbeitende Werkstück (es muss
+elektrisch leitend sein, die Härte spielt aber
+keine Rolle) wird in einer nicht leitenden
+Flüssigkeit bearbeitet, dem so genannten
+Dielektrikum. Das Werkzeug weist gegenüber dem Werkstück eine Spannung auf und
+wird so nahe an das zu bearbeitende Bauteil
+herangeführt, bis es zwischen Werkzeug
+und Werkstück zu kontinuierlichen kleinen
+Entladungen kommt und damit zum
+Abtragen von Material mit Funken; man
+spricht deshalb auch von Funkenerosion.
+
+Anders als in der Industrie erzeugen wir die
+nötige Spannung durch Abschalten eines
+Elektromagneten (Art.-Nr. 31324, 32363,
+Topfmagnet 142504 oder China-Topfmagnet von ffm). Es ist das Prinzip der
+Elektromechanischen Klingel. Als Vorlage
+kann die Elektrisiermaschine aus dem Clubheft 1972-2 dienen [6].
+
+
+Das Gerät in Abb. 2 wird im Ruhezustand
+so eingestellt, dass zwischen Schwingachse
+und E-Magnet ein Luftspalt von ca. 2 mm
+vorhanden ist. Das Werkstück wird an den
+Draht (Werkzeugelektrode) herangeführt
+
+
+
+und der Abstand der Schwingachse zum EMagnet auf ca. 1 mm verringert. Beim
+Einschalten der Betriebsspannung und
+Fließen des entsprechenden Stroms entsteht
+im E-Magnet ein Magnetfeld. Dadurch wird
+die Achse vom E-Magnet angezogen und
+gleichzeitig der Kontakt zum Werkstück
+aufgehoben. Der Stromkreis wird unterbrochen und das Magnetfeld bricht
+zusammen. Dabei induziert es im E-Magnet
+eine Spannung, so dass der Stromfluss eine
+winzige Zeit lang durch die Luft aufrechterhalten wird. Der dabei entstehende Funke
+erreicht in einem sehr kleinen Volumen
+Temperaturen von mehreren Tausend Grad,
+wodurch kleinste Materialmengen verdampft werden. Durch die Federwirkung
+der Bauplatte 15·60 4Z (38464) schwingt
+die Achse zurück, der Kontakt wird wieder
+geschlossen und der Vorgang wiederholt
+sich vielfach in jeder Sekunde. Der elektrische Anschluss an die Werkzeugachse
+erfolgt durch Unterklemmen des blanken
+Drahtendes unter eine der beiden Klemmhülsen (35980). Da das Werkstück von zwei
+„Bausteinen 15 Magnet“ (108278) gehalten
+wird, kann an einem dieser Bausteine eine
+Achse von hinten eingeführt werden, die
+den anderen Anschluss hält.
+
+Teil kommt auf die Achse, die Klemmbuchsen lässt man darüber auf die Achse
+schnappen.
+
+
+Die ersten Versuche an einer Spezialklinge
+für Ceranfelder waren sehr ermutigend,
+siehe Bilder 4 und 5.
+
+0,6 und 0,2 mm
+
+Etwas Physik
+Um die Leistungsfähigkeit des Gerätes
+abschätzen zu können, brauchen wir ein
+paar Grundlagen.
+fertig zusammengesetzt
+
+Für das Werkzeug verwende ich Bindedraht
+mit einem Durchmesser von 0,4 mm. In der
+Literatur wird Kupferdraht empfohlen, aber
+den habe ich nicht in ausreichender Härte.
+Der Draht lässt sich gut mit zwei Klemmbuchsen an der Schwingachse (Achse 60)
+befestigen. Links in Abb. 3 sieht man den
+teilweise doppelt gefalteten Draht. Dieser
+
+
+Stoffgrößen von Eisen:
+kJ
+
+Spezifische Wärmekapazität: 0,444 kg∙K
+kJ
+
+Schmelzwärme: 268 kg
+Siedepunkt: 2750 °C
+
+kJ
+
+Verdampfungswärme: 6260 kg
+
+
+Tipps & Tricks
+
+Energie zum Verdampfen von Eisen:
+(0,444 ∙ 2750 + 268 + 6260)
+J
+= 7749
+g
+
+J
+g
+
+Erzeugen eines Loches mit Durchmesser
+d = 0,6 mm in 0,1 mm dickem Eisen:
+Die Dicke h der Spezialklinge für Ceranfelder mit einem Gewicht von ca. 1 g
+berechnet sich aus ihren Abmessungen und
+der Materialdichte so:
+ℎ=
+
+1g
+
+g
+cm3
+= 0,011cm ≈ 0,1mm
+5,2cm ∙ 2,2cm ∙ 7,9
+
+Für den Topfmagnet mit L = 0,06 H,
+R = 49 Ω bei U = 10 V und also I = 0,20 A
+ergibt sich:
+∙ 0,06 ∙ 0,04J = 1,2mJ
+Annahmen: Die erste brauchbare Dampfmaschine, die zur Entwässerung im Bergbau eingesetzt wurde, stammt von Thomas
+Newcomen; sie hatte einen Wirkungsgrad η
+(eta) von etwa 0,5 % [4]. Da unsere
+Maschine ebenfalls nicht optimiert ist, wird
+als erste Schätzung ein Wirkungsgrad
+η ≈ 0,5 % angenommen. Die Taktrate wird
+zu f = 100 Hz geschätzt.
+=
+
+Daraus ergibt sich die Abtragzeit zu für den
+alten E-Magnet (ft-Nr. 31324):
+
+Das Loch umfasst ein Volumen von
+≈ 0,03mm
+
+
+Die Masse ergibt sich zu
+g
+= 7,86 3 ∙ = 0,23mg
+cm
+Daraus ergibt sich die Verdampfungsenergie:
+= 7,749 ∙ 0,23J = 1,8J
+
+Für den Energieinhalt einer Induktivität
+gilt:
+∙
+Die Induktivität L der älteren E-Magnete
+(31324) ist gleich der Induktivität der
+neueren Magnete (32363), gemessen über
+den Wechselstromwiderstand:
+=
+
+≈ 0,09H
+
+Bei einem Widerstand R = 52 Ω und einer
+Spannung U = 10 V ist der Strom
+I = 0,19 A und also die Energie
+=
+
+∙ 0,09 ∙ 0,036J = 1,6mJ
+
+=
+
+=
+
+∙
+
+∙
+
+1800s
+= 2250s = 38min
+0,8
+
+Für den Topfmagneten:
+
+=
+
+=
+
+∙
+
+∙
+
+1800s
+= 3000s = 50min
+0,6
+
+Die Zeiten passen recht gut zu meinen
+Versuchen. Die Bearbeitungszeit lässt sich
+durch Parallelschaltung eines zweiten EMagneten oder Topfmagneten halbieren.
+Die Bearbeitungszeit kann weiter verringert
+werden durch Erhöhung der Spannung (ich
+arbeite gern mit 16 V [11]).
+Weißblech 0,29 mm stark
+Der Versuch, Aluminiumblech anzubohren,
+ist misslungen. Der Funke verlöscht nach
+wenigen Sekunden, weil das entstehende
+Aluminiumoxid ein guter Isolator ist. Weißblech eignet sich aber sehr gut. Das ist
+Stahlblech, dessen Oberfläche elektrolytisch mit Zinn beschichtet wurde.
+Der Durchmesser des Arbeitsdrahtes ist
+wieder 0,4 mm.
+
+
+
+der Draht passt hindurch
+
+Das Loch zu bohren dauert jetzt schon etwa
+80 Minuten, bis es groß genug ist, den
+Bohrdraht durchzulassen. Drei E-Magnete
+wurden parallelgeschaltet. Der Schweif in
+
+nach der Reinigung
+
+
+Federbronze
+Ebenfalls sehr gut bearbeiten lässt sich
+Federbronze.
+Der Streifen in Abb. 9 ist 5 mm breit und
+0,2 mm dick. Als Werkzeug habe ich
+wieder den Bindedraht mit 0,4 mm Durchmesser verwendet.
+
+vergrößert, ganz oben gereinigt
+
+
+Tipps & Tricks
+
+Kupferblech
+
+Federstahl
+
+Die Fixierung des Kupferblechs ist mir
+nicht so gut gelungen, das Resultat sieht
+man in Abb. 10.
+
+Der ft-Federstahl von Abb. 1 ist etwa
+0,15 mm dick und lässt sich problemlos
+bearbeiten, siehe Abb. 12.
+
+(31329)
+
+Da der „Erodierapparat“ Schwingungen
+erzeugt, muss das Werkstück gut befestigt
+werden, damit es nicht wandert.
+
+Erodieren und Gravieren
+Lässt man das Werkzeug nicht an einer
+Stelle arbeiten, sondern zieht das Werkstück langsam darunter weiter, ergibt sich
+ein Gravur-Effekt.
+
+Nachdem das Werkstück fixiert war, habe
+ich mehrere Stunden lang „gebohrt“. Das
+Resultat ist enttäuschend.
+
+
+Die Tiefe beträgt etwa 0,2 mm. Kupfer
+leitet ja nicht nur den Strom sehr gut,
+sondern auch Wärme, also wird die Wärme
+der Funken sehr schnell abgeleitet und führt
+kaum zur Verdampfung.
+
+Die Gravur in Abb. 13 ist etwa 10 mm lang,
+sie wurde in 90 Minuten erzeugt mit dem
+Topfmagnet und einem parallelen EMagnet an 16 V. Die Stromanzeige an
+meinem Netzgerät betrug etwa 0,27 A, das
+ist natürlich ein Mittelwert.
+
+
+
+
+
+
+Das Graviergerät (Abb. 15) arbeitet nicht
+mehr zur Seite hin, sondern nach unten. Das
+Stück Weißblech misst 100 mm ∙ 100 mm
+und wird seitlich durch vier Bausteine 5
+15x30 (35049) mit aufgesetzten WS 7,5°
+und darauf E-Magnet-Führungsplatten
+(32455) spielarm geführt.
+Der Vorschub-Mechanismus besteht aus
+einer Achse 60 in einem Baustein 15 mit
+Bohrung, zwei Seiltrommeln 15 (31016)
+mit je einem Klemmring Z36 (31020) und
+einem kleinen Klemmring links in Abb. 17.
+
+
+An den Seiltrommeln ist je ein BS30, ein
+Gelenkwürfel (31426 + 31436), ein BS5,
+noch ein Gelenkwürfel und daran eine
+Klemmhülse (35980) befestigt. Ein Neodym-Magnet mit 4 mm Durchmesser und
+10 mm Länge wird von der Klemmhülse
+
+
+
+Tipps & Tricks
+
+
+gehalten und fixiert diese auf dem Blech.
+Der Vorschub erfolgt mit der Kante des
+Gelenkwürfels.
+Diese Konstruktion ist wegen der Magnete
+nur für Stahl- (Eisen-) Blech geeignet.
+Angetrieben wird der Vorschub über den
+Klemmring Z36 einer der Seiltrommeln 15
+von einer „U-Achse 60 + Zahnrad Z28“
+(31063). Auf dieser Achse sitzt ein Z10.
+
+
+Die weiteren Getriebestufen bestehen aus
+drei Kombinationen Schnecke und Z10
+sowie einer Kombination Schnecke und
+Z20.
+Das Z20 wird von einem Schneckenantrieb
+20 (32886) oder einer Getriebeschnecke
+bewegt, die auf einem U-Getriebe mit
+Minimotor sitzen. Den Motor betreibe ich
+mit etwa 6 V. Ich habe noch eine Diode
+vorgeschaltet, so dass der Motor nur mit der
+„richtigen“ Drehrichtung laufen kann; auf
+
+
+Nach Fertigstellung der Gravur ziehe ich
+die „U-Achse 60 + Zahnrad Z28“ von der
+Seiltrommel nach oben, damit ich den
+Vorschub zurückstellen kann.
+
+
+
+
+Nebenreaktionen
+Die Entstehung von Eisenoxid wurde
+bereits erwähnt; es ist die Hauptreaktion bei
+Weißblech bzw. Stahl, da wir das Metall
+selbst entfernen wollen. Als wichtigste
+Nebenreaktionen entstehen bei elektrischen
+Entladungen Ozon = O3, und Stickoxide
+(hauptsächlich NO2), also giftige Gase.
+
+
+Eine weitere Nebenreaktion ist die Erzeugung von Funkwellen, deren Name von den
+historischen Funkensendern stammt.
+Ozonbildung
+
+
+Der Topfmagnet hängt unter einer Brücke
+aus BS30, einem BS15 und drei BS5. Der
+schwingende Teil ist aufgebaut entsprechend den Abb. 2 bis 4. Den elektrischen
+Anschluss an das Blech habe ich wieder mit
+einem Magneten hergestellt, siehe Abb. 21,
+vorne rechts.
+
+Zusammenfassung
+Mit dem „Werkzeug“ Stahldraht (Bindedraht) lassen sich in Weißblech, in Federstahl und in Federbronze Löcher erodieren.
+In Weißblech lassen sich auch Linien
+eingravieren.
+Zur Verkürzung der Bearbeitungszeit habe
+ich mehrere E-Magnete parallelgeschaltet,
+in den Abb. 15 bis 22 ist es einer auf dem
+gelben BS15. Bei dickerem Blech als
+0,1 mm und beim Gravieren habe ich außerdem die Spannung auf etwa 16 V erhöht.
+Die E-Magnete werden zwar heiß, aber
+nicht unzulässig heiß [10].
+
+
+Die EU hat schon seit längerer Zeit Richtwerte für die Ozonkonzentration festgelegt.
+Keine Gefahr für die Gesundheit besteht
+laut EU-Richtlinie durch Ozon unter einem
+Gehalt von 110 µg/m³. Ab einem EinStunden-Mittelwert von 180 µg/m³ erfolgt
+die Unterrichtung der Bevölkerung, da bei
+dieser Konzentration die Leistungsfähigkeit
+empfindlicher Menschen bereits beeinträchtigt werden kann. Ab ungefähr
+200 µg/m³ Ozon können Symptome wie
+Tränenreiz,
+Schleimhautreizungen
+in
+Rachen, Hals und Bronchien, Kopfschmerzen, verstärkter Hustenreiz, Verschlechterung der Lungenfunktion auftreten. Ab einem Ein-Stunden-Mittelwert von
+360 µg/m³ werden Warnungen ausgesprochen, da ab dieser Konzentration Gefahr für
+die menschliche Gesundheit bestehen kann
+[7].
+Der größte Teil des entstandenen Ozons
+oxidiert das verdampfte und auch das feste
+Metall zu Metalloxid (bei Eisen bzw. Stahl:
+Rost) sowie den Luftstickstoff zu Stickoxiden. Bei der großtechnischen Ozonherstellung werden Wirkungsgrade von
+etwa 10 % erreicht [7], bei unserem Prozess
+sicher deutlich weniger. Für die Erzeugung
+reinen Ozons setze ich etwa 1 % an. Da
+hiervon der größte Teil bei der Oxidation
+der heißen Metall- und Luftteilchen aufgebraucht wird, bleibt möglicherweise als
+freies Ozon ein Zehntel übrig (das scheint
+mir plausibel, da der typische Ozongeruch
+
+bei meinen Versuchen nicht wahrnehmbar
+ist). Mancher erinnert sich vielleicht an die
+ersten Laserdrucker, die hatten einen intensiven „Ozongeruch“. Allerdings waren das,
+was man roch, die vom Ozon gebildeten
+Stickoxide. Ozon selbst riecht stechendscharf bis chlorähnlich [7].
+Der Energieaufwand zur Ozonherstellung
+beträgt [8]:
+kJ
+O + 144,44
+→O
+mol
+Das bedeutet, für 1 mol Ozon = 48 g werden
+ca. 144 kJ Energie benötigt.
+Unsere Apparatur setzt mit drei parallelen
+E-Magneten und einer Taktrate von
+f = 100 Hz eine Energie um von:
+mJ
+kJ
+= 1,73
+s
+h
+Somit lässt sich unter Berücksichtigung der
+Wirkungsgrade von 1 % · 10 % folgende
+Ozonmenge erzeugen:
+= 3 ∙ 100 ∙ 1,6
+
+48g ∙ 1,73
+
+kJ 0,001
+mg
+∙
+= 0,58
+h 144kJ
+h
+
+Den EU-Grenzwert von 360 µg/m³ in Luft,
+ab dem Gefahr für die menschliche Gesundheit bestehen kann, erreichen wir bei einer
+Zimmergröße von 10 m² entsprechend
+24 m³ Rauminhalt nach knapp 15 Stunden,
+aber nur bei fehlendem Luftaustausch und
+vernachlässigtem Ozonzerfall, Ozon ist
+nämlich nicht stabil.
+Stickoxide
+Dies ist eine Sammelbezeichnung für verschiedene
+Stickstoff-Sauerstoff-Verbindungen.
+Am Arbeitsplatz sind 950 Mikrogramm
+Stickoxide pro Kubikmeter Luft erlaubt
+(MAK-Wert = Maximale Arbeitsplatzkonzentration [9]). Auf der Straße sind nach
+WHO und EU-Vorgabe nur 40 Mikrogramm erlaubt, allerdings als Jahresmittelwert.
+
+Tipps & Tricks
+
+Schlussfolgerung: Da wir uns beim Modellbau im Allgemeinen am fischertechnikArbeitsplatz befinden, nehme ich die
+950 µg/m³ als Grenzwert an.
+Zum Energieaufwand für die Herstellung
+von NO2 habe ich nichts Verwertbares
+gefunden. Sollte er mit der Herstellung von
+Ozon vergleichbar sein, gelten auch
+vergleichbare Ergebnisse.
+Was bedeuten diese Erkenntnisse?
+Halte deine Nase nicht längere Zeit über den
+Funken und sorge für gutes Lüften!
+Garantie gebe ich keine: Jeder, der die
+Experimente durchführt, macht dies in
+eigener Verantwortung.
+Funkstörungen
+Wer noch ein Koffer- oder Taschenradio
+besitzt, weiß es: AM-Empfang (Amplituden-Modulation), also Lang-, Mittel- und
+Kurzwellenempfang ist damit in einer
+Wohnung nicht mehr möglich. Das liegt an
+den Störstrahlungen von PCs (!), so genannten Energiesparlampen, vielen LED-Lampen, den Stecker-Netzteilen und auch den
+Induktionsherden.
+Unser Gerät verbreitet ebenfalls Funkstörungen im näheren Umfeld von einigen
+Metern, auch auf FM = UKW. Diese betreffen zwar nur den Radio-Empfang, lassen
+sich aber wohl grundsätzlich nicht verhindern. Das liegt an den Funken, die sich
+zwar mit einem Kondensator dämpfen
+lassen, die wir aber für unsere Zwecke
+benötigen. Durch kompakten Aufbau und
+kurze Drahtlängen lassen sich die Störungen aber vermindern. Insbesondere die
+beiden Drähte zur Funkenstrecke sollten so
+kurz wie möglich sein.
+Ansonsten ist klar: Gibt es Beschwerden,
+müssen die Versuche unterbrochen, abgebrochen oder z. B. in den Keller verlegt
+werden.
+
+
+
+
+Quellen
+[1]
+
+Was ist Erodieren?
+
+[2]
+
+Wiki der BBS Winsen: Erodieren.
+
+[3]
+
+FEOB GmbH: Was ist Erodieren?
+
+[4]
+
+Dirk Fox, Thomas Püttmann:
+Technikgeschichte mit fischertechnik.
+dpunkt.verlag, Heidelberg, 2015,
+S. 163.
+
+[5]
+
+
+Rüdiger Riedel: Funktionsmodelle
+von Gleich- und Wechselstrommotoren. ft:pedia 4/2016, S. 52-58.
+
+[6]
+
+fischertechnik: Clubheft 1972-2, S.
+22.
+
+[7]
+
+Chemie.de: Ozon.
+
+[8]
+
+Allgemeine Informationen zu Ozon.
+
+[9]
+
+Technische Regeln für Gefahrstoffe:
+Arbeitsplatzgrenzwerte TRGS 900,
+S. 42,
+
+[10] Rüdiger Riedel: Der Elektromagnet:
+Was kann er (vertragen)? 4/2016, S. 46-51.
+
+

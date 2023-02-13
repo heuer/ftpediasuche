@@ -1,0 +1,485 @@
+
+Computing
+
+Computing
+
+Wiederbelebung eines fischertechnik-BuggyModells von 2002
+Dirk Uffmann, Roland Enzenhofer
+Ein fischertechnik-Buggy von Economatics aus dem Jahr 2002, dessen Ursprünge bis in das
+Jahr 1983 zurückreichen, erreichte nie seinen ursprünglichen Einsatzweck in einer englischen
+Schule. Wir erzählen, wo er von Roland entdeckt und erworben wurde – und was wir getan
+haben, um ihn zum „Leben“ zu erwecken.
+
+Herkunft
+Als begeisterter Sammler von fischertechnik ist Roland immer wieder auf der „Jagd“
+nach Raritäten. Der Zufall wollte es, dass
+ein verirrtes Inserat samt Foto auf dem
+Bildschirm aufblitzte, welches zwar
+fischertechnik zum Inhalt hatte, aber nicht
+fischertechnik hieß. So stöberte Roland, bis
+er zu den Wurzeln von „Economatics“ fand,
+und da war sein Interesse geweckt. Ein
+Problem beim Erwerb der Sachen war, dass
+die Sammlung in einer aufgelassenen
+Schule in England war und insgesamt über
+200 kg Gewicht hatte (siehe die Bilder auf
+den ft:c-Seiten). Als Logistiker hat Roland
+auch dieses Problem gelöst und die Sammlung fand unversehrt den Weg von England
+nach Österreich in sein Raritätenkabinett.
+Neben den vielen anderen Kuriositäten und
+Seltenheiten rund um fischertechnik sollte
+der fischertechnik PIC Buggy von Economatics (Abb. 1) aber in der Sammlung kein
+funktionsloses Dasein ohne Steuerprogramm fristen müssen. Dadurch und Dank
+der ft:c-Gemeinde kam der Kontakt zu Dirk
+zustande, der sich begeistert an die Arbeit
+machte, den Buggy in Gang zu bringen und
+insbesondere dem PIC Mikrocontroller ein
+paar Funktionen „einzuhauchen“.
+
+Economatics aus dem Jahr 2002
+
+Historie
+Die Firma Economatics aus Sheffield in
+England hat von ca. 1981 bis 2008 Elektronik- und Robotik-Produkte für den
+Schulbereich angeboten. Bekannt geworden
+ist der sogenannte BBC-Buggy [1] aus dem
+Jahr 1983, der per Flachbandkabel vom
+BBC Micro, einem Heimcomputer von der
+britischen Firma Acorn, per Basic-Programm gesteuert wurde. Ein modifizierter
+Nachbau des BBC Buggy von xbach ist auf
+den Seiten der ft:c zu bewundern. Dieser
+wurde bereits mit einem PIC-Mikrocontroller gesteuert. Aus dem Jahr 2002 stammt
+
+
+
+der hier vorgestellten ft-Buggy. Economatics hat dazu auch die Software-Entwicklungsumgebung angeboten mit einer Flowchart-basierten
+Programmierumgebung
+namens „PIC-Logicator Software“ und
+einem dedizierten Hardware-Programmer
+für den PIC, der dessen Speicher beschreiben kann. Economatics ging leider 2008 in
+Konkurs. Dabei hat der industrielle Bereich
+den Ausbildungsbereich mit in die Pleite
+gezogen. Der Ausbildungsbereich wurde
+von der Firma Revolution Education Ltd.
+übernommen. Bis heute wird über PICAXE
+ein kleiner Buggy namens PICAXE-20X2
+Microbot als Produkt angeboten – leider
+nicht mehr aus fischertechnik. Die Logicator Software wird von PICAXE weiterentwickelt.
+
+und unterschiedlichen Dicken gibt es beispielsweise bei HUG Industrietechnik (Art.
+Nr. 4306000500, 60 x 5 mm).
+
+
+Aufbau des Buggy
+Die Konstruktion des Economatics-Buggy
+ist minimalistisch gehalten (siehe Abb. 2 bis
+4). Das Fahrgestell beinhaltet zwei S-Motoren für den Antrieb, die zugleich als
+tragende Elemente dienen. Zum Anbringen
+der Platine mit zwei Schrauben wurde eine
+rote Bauplatte mit zwei Löchern versehen.
+Der Batteriehalter wurde auf eine gelbe
+Bauplatte geklebt. Vorne dienen zwei gelbe
+Bauplatten mit zwei Tastern zur Detektion
+von Kollisionen.
+
+
+Die Drehscheiben 60 werden mit je einem
+O-Ring zum Antriebsrad. Passende ORinge in hervorragender Qualität (NBR70)
+
+
+Steuerungsplatine
+Auf dem Buggy ist zur Steuerung eine
+Platine mit einem PIC Flash-Mikrocontroller 16F628 und L293D Motortreiber
+angebracht (Abb. 5 und 6). Im HobbyBereich waren im Jahre 2002 Embedded
+Flash Mikrocontroller noch bei weitem
+nicht so etabliert wie heute. Bei dem
+16F628 handelt es sich um einen sogenannten Mid-Range Typen, der über 3,5
+kByte Flash-Speicher (2048 Programmworte à 14 Bit), 228 Byte RAM und 128
+Byte EEPROM verfügt, sowie einen PWMAusgang und mehrere Eingänge mit analoger Komparator-Funktion. Dieser Typ ist
+sogar heute noch bei Microchip in Produktion, wird aber nicht mehr für neue Designs
+empfohlen. Tab. 1 zeigt die Pinbelegung am
+
+PIC µC. Vier Anschlüsse am PIC µC sind
+noch frei und könnten für Erweiterungen
+genutzt werden.
+
+Computing
+
+L293D zur Steuerung der beiden Antriebsmotoren. Über weitere drei Ausgänge können zwei LEDs und ein Piezo-Lautsprecher
+angesteuert werden.
+Pin Port / Funktion
+Anschluss / Komponente
+1 RA2 / AN2 / Vref
+frei
+2 RA3 / AN3 / CMP1
+frei
+3 RA4 / TOCKI / CMP2
+frei
+4 RA5 / MCLR /Vpp
+Reset-Taster
+5 Vss
+Masse
+6 RB0 / INT
+L293D In1 / Motor A (links)
+7 RB1 / RX /DT
+L293D In2 / Motor A (links)
+8 RB2 / TX / CK
+L293D In3 / Motor B (rechts)
+9 RB3 / CCP1
+L293D In4 / Motor B (rechts)
+10 RB4 / PGM
+LED rechts
+11 RB5
+LED links
+12 RB6 / T1OSO / T1CKI / PGC Piezo-Summer
+13 RB7 / T1OSO / PGD
+frei
+14 Vdd
++5V
+15 RA6 / OSC2 / CLKOUT
+4 MHz Keramik-Oszillator
+16 RA7 / OSC1 / CLKIN
+4 MHz Keramik-Oszillator
+17 RA0 / AN0
+Taster rechts
+18 RA1 / AN1
+Taster links
+
+Eingangsklemmen für die Taster zur
+Hinderniserkennung
+
+des ft-Buggy
+
+Die Platine verfügt über zwei Eingänge für
+die Taster zur Detektion von Kollisionen
+sowie vier Ausgänge für den Motortreiber
+
+Tab. 1: Pin-Zuordnung am PIC 16F628
+zu den Komponenten
+
+Programmierung
+Leider stand weder die originale Version
+der Software PIC-Logicator von 2002 noch
+das Programmiergerät von Economatics zur
+Verfügung; es war nicht Bestandteil der
+Lieferung aus England. Von der ältesten
+verfügbaren Version der Software wird der
+16F628 nicht mehr direkt unterstützt; es
+ginge nur über einen Umweg: Man müsste
+zunächst den erstellten Flow-Chart als
+Basic-Code exportieren und diesen dann
+mit einem lizenzpflichtigen Basic-Compiler
+übersetzen. Auf diesen Umweg haben wir
+verzichtet und einen alternativen Weg
+beschritten: Wir erstellten mit der kostenlosen Entwicklungsumgebung MPLAB X
+IDE und dem ebenfalls kostenlosen CCompiler XC8 ein Programm und brannten
+es mit einem PICKit2-Clone (veraltetes
+Programmier-Gerät für PICs), inklusive
+Adapterplatine mit Nullkraftsockel für 10 €
+aus China beschafft, auf den Baustein. Auf
+der Adapterplatine musste zunächst ein
+Verdrahtungsfehler beseitigt werden, bis
+
+
+
+
+die PIC16F628 erkannt wurde und sich in
+den Programmiermodus versetzen ließ.
+
+Steuerprogramm
+Ziel des Steuerprogramms ist es, die
+wesentliche Funktion des Buggy zu implementieren, nämlich das Erkennen von Kollisionen mit Hindernissen und deren Umfahrung (Ausweichmanöver). Abb. 7 zeigt
+das Ausweichmanöver schematisch.
+
+einem Hindernis (H) auf der linken Seite
+
+Bei einer Kollision mit einem Hindernis H
+auf der linken Seite fährt zunächst nur das
+linke Rad rückwärts, bis der Buggy sich um
+90° gedreht hat (Schritt 1). Die Drehachse
+ist dabei der Aufpunkt des rechten Rades
+am Boden. Dann fährt nur das rechte Rad
+rückwärts, bis der Buggy sich wieder um
+90° zurück gedreht hat (Schritt 2). Die
+Drehachse ist dabei nun der Aufpunkt des
+linken Rades am Boden. Nun wird die
+Vorwärtsfahrt mit beiden Rädern wieder
+aufgenommen (Schritt 3). Für die rechte
+Seite ist es genau spiegelverkehrt implementiert. Wenn beide Taster gleichzeitig
+
+eine Kollision anzeigen, hat das Ausweichmanöver für Hindernis links Vorrang.
+Um die Fahrbewegungen des Buggy etwas
+interessanter zu gestalten, habe ich eine
+Software-PWM-Steuerung über den Interrupt des Timer2-8-bit-Überlauf implementiert. Beide Motoren können unabhängig
+voneinander in zehn Leistungsstufen angesteuert werden. Über die Variable Beschleunigung kann wahlweise die Leistungsstufe alle 260 ms (viermal Timer116-bit-Überlauf) um eine Stufe erhöht oder
+erniedrigt werden (innerhalb definierter
+Unter- und Obergrenzen). Bei der Vorwärtsfahrt beschleunigt der Buggy von
+Leistungsstufe 3 auf 9 innerhalb von 1,56
+Sekunden. Beim Ausweichmanöver wird
+im ersten Schritt das Rad von Leistungsstufe 3 auf 9 beschleunigt und dann im
+zweiten Schritt das andere Rad von Leistungsstufe 9 auf 3 verlangsamt, jeweils innerhalb von 1,56 Sekunden. Damit sollen
+die Steuermöglichkeiten für die Geschwindigkeit demonstriert werden.
+Daneben soll von den beiden LEDs und
+vom Piezo-Lautsprecher Gebrauch gemacht
+werden, und zwar soll ein Warnsignal
+erzeugt werden, während ein Ausweichmanöver gefahren wird. Das Warnsignal ist
+ein wechselndes Blinken der LEDs und eine
+in der Tonhöhe zwischen 400 und 600 Hz
+auf- und ablaufende Sirene.
+Tab. 2 bis 5 zeigen den erstellten C-Code.
+
+Video
+Das Verhalten des wiederbelebten ft-PICBuggy und die Reaktion auf Hindernisse
+kann in diesem Video beobachtet werden.
+
+Referenzen
+[1]
+
+fischertechniker: Wie weit fischertechnik vor 32 Jahren seiner Zeit
+voraus war. fischertechnik-blog.de
+
+
+Computing
+
+#include <xc.h>
+// #pragma config statements should precede project file includes.
+// Use project enums instead of #define for ON and OFF.
+// CONFIG
+#pragma config FOSC = XT
+// Oscillator Selection bits (XT oscillator: Crystal/resonator on
+#pragma config WDTE = OFF
+// Watchdog Timer Enable bit (WDT disabled)
+#pragma config PWRTE = ON
+// Power-up Timer Enable bit (PWRT enabled)
+#pragma config MCLRE = ON
+// RA5/MCLR pin function select (RA5/MCLR pin function is MCLR)
+#pragma config BOREN = ON
+// Brown-out Reset Enable bit (BOD Reset enabled)
+#pragma config LVP = OFF
+// Low-Voltage Programming Enable bit (RB4/PGM pin has digital I/O function)
+#pragma config CPD = OFF
+// Data Code Protection bit (Data memory code protection off)
+#pragma config CP = OFF
+// Code Protection bits (Program memory code protection off)
+#define _XTAL_FREQ 4000000
+#define pwm_max 9
+#define pwm_min 3
+#define Ausweichzeit 25
+#define Ton_tief 156
+#define Ton_hoch 100
+#define links 0
+#define rechts 1
+#define vorwaerts 2
+#define rueckwaerts 1
+#define stop 3
+
+// in Mehrfachen von 65,5 ms
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+volatile uint_fast8_t Motor_Bits_PWM=0;
+volatile uint_fast8_t Motor_Bits_Merker=0;
+volatile uint_fast8_t PWM_Zaehler = 0;
+volatile uint_fast8_t PWM_Tabelle[2];
+volatile uint_fast8_t Zeitschritte_65ms = 0;
+volatile uint_fast8_t Zeitschritte_Warnsignal = 0;
+volatile uint_fast8_t Zeitschritte_Beschleunigung = 0;
+volatile uint_fast8_t Ton_Richtung = 0;
+volatile uint_fast8_t Hindernis = 0;
+volatile uint_fast8_t Hindernis_links = 0;
+volatile uint_fast8_t Hindernis_rechts = 0;
+volatile uint_fast8_t Ton = Ton_tief;
+volatile int_fast8_t Ton_Schritt = -4;
+volatile uint_fast8_t Warnsignal = 0;
+volatile int_fast8_t Beschleunigung = 0;
+void init (void) {
+__delay_ms(1000); // 1 Sekunde warten
+CMCON = 0x07;
+//PORTA als Eingänge (Komparatoren abschalten)
+TRISB = 0;
+//PortB als Ausgänge
+OPTION_REG = 0xC2;
+// T0CS = 0; PSA = 0; PS2=0; PS1=1; PS0=0
+// i.e. clock/8 = 125 kHz bzw. 8 µs Periode
+INTCONbits.T0IE = 1; // Interrupt einschalten für den TIMER0 Überlauf
+// TIMER1 (16 bit) läuft ohne Prescaler
+// i.e. 65,5 ms Periode (16 Wiederholungen ergeben 1 Sekunde)
+T1CONbits.TMR1ON = 1; // TIMER1 (16 bit) aktivieren
+PIE1bits.TMR1IE = 1; // Interrupt einschalten für den TIMER1 Überlauf
+PR2 = 125;
+// Überlauf für TIMER2, i.e. 500 Hz (1 MHz / (16*125)
+T2CON = 0x06;
+// TIMER2 einschalten, Prescaler 1:16
+PIE1bits.TMR2IE = 1; // Interrupt einschalten für den TIMER2 Überlauf
+INTCONbits.GIE = 1; // Sämtliche Interrupts global einschalten
+}
+
+Tab. 2: C-Code erster Teil
+
+
+
+
+/*********************************************************************************
+Motor () stellt die Funktion zur Manipulation von Motor_Bits_Merker zur
+Steuerung einzelner Motoren bereit. Der pwm-Wert gilt auch bei
+Einzelbeschaltung der Ausgänge immer für beide Ausgänge.
+Motor_Nummer = 0; //linker Motor
+Motor_Nummer = 1; //rechter Motor
+pwm von 0 bis 10
+Zustand=0 => Motor aus / Minus an beiden Motorausgängen
+Zustand=1 => Motor an / rückwärts
+Zustand=2 => Motor an / vorwärts
+Zustand=3 => Motor aus / Plus an beiden Motor-Kabeln
+*********************************************************************************/
+void Motor (uint_fast8_t Motor_Nummer, uint_fast8_t Zustand, uint_fast8_t pwm) {
+//
+Abfangen unsinniger Werte
+if (Motor_Nummer > 1) return;
+if (Zustand > 3) return;
+PWM_Tabelle[Motor_Nummer] = pwm;
+Motor_Nummer = Motor_Nummer << 1;
+//
+Umrechnen von Motor_Nummer auf die Bitposition
+//
+Zunächst wird "Zustand" in "Motor_Bits_Merker" an der gewünschten Position
+//
+hinzugefügt, dazu werden zunächst die jeweiligen 2 Bits an den Bit//
+Positionen für Motor_Nummer auf 0 gesetzt
+Motor_Bits_Merker &= ~(3 << Motor_Nummer);
+//
+und dann die 2 neuen Bits dem Motor_Bits_Merker hinzugefügt
+Motor_Bits_Merker |= Zustand << Motor_Nummer;
+}
+void Ausweichen (void) {
+uint_fast8_t x=links, y=links;
+if (Hindernis_links) x=rechts;
+else y=rechts;
+Motor(x, stop, 0);
+// Motor x abschalten
+Motor(y, rueckwaerts, pwm_min); //Motor y rückwärts
+Warnsignal = 1;
+Zeitschritte_65ms = 0;
+while (Zeitschritte_65ms < Ausweichzeit); // Zeit für die Fahrt
+Motor(y, stop, 0);
+// Motor y abschalten
+Beschleunigung = -1;
+Motor(x, rueckwaerts, pwm_max); //Motor x rückwärts
+Zeitschritte_65ms = 0;
+while (Zeitschritte_65ms < Ausweichzeit); // Zeit für die Fahrt
+Warnsignal = 0;
+Beschleunigung = 1;
+Motor(links, vorwaerts, pwm_min);
+Motor(rechts, vorwaerts, pwm_min); // Vorwärtsfahrt
+}
+int main(void) {
+init();
+Motor(links, vorwaerts, pwm_min);
+Motor(rechts, vorwaerts, pwm_min); // Vorwärtsfahrt
+Beschleunigung = 1;
+while(1) {
+if (Hindernis) {
+Ausweichen();
+}
+}
+}
+
+Tab. 3: C-Code zweiter Teil
+
+
+
+Computing
+
+void interrupt Routine (void) { // interrupt function
+if (INTCONbits.T0IF) { // Prüft, ob die TIMER0 Überlauf Flagge gesetzt wurde
+// Dieser Code-Teil wird ausgeführt alle: Ton * 8µs, das entspricht der halben Periode für den Piezo-Summer
+// -> Ton = 156 -> 2.5 ms volle Periode oder 400 Hz Ton-Frequenz
+// -> Ton = 100 -> 1.6 ms volle Periode oder 600 Hz Ton-Frequenz
+INTCONbits.T0IF = 0; // lösche die Interrupt Flagge
+if (Warnsignal) {
+TMR0 -= Ton; //TIMER0 vorladen, um eine bestimmten Tonhöhe zu erzeugen
+if (RB6) RB6=0; //Ausgang für den Piezo-Summer umschalten
+else RB6=1;
+}
+}
+if (PIR1bits.TMR1IF) { // Prüft, ob die TIMER1 Überlauf Flagge gesetzt wurde
+PIR1bits.TMR1IF = 0; // lösche die Interrupt Flagge
+Zeitschritte_65ms ++;
+Hindernis = 0x03 & PORTA; //Kollision?
+Hindernis_rechts = RA0; // Kollision rechts?
+Hindernis_links = RA1; // Kollision links?
+Zeitschritte_Beschleunigung ++;
+if (Zeitschritte_Beschleunigung == 4) {
+Zeitschritte_Beschleunigung = 0;
+if (Beschleunigung > 0) {
+if (PWM_Tabelle[0] < pwm_max) PWM_Tabelle[0] ++;
+if (PWM_Tabelle[1] < pwm_max) PWM_Tabelle[1] ++;
+}
+else if (Beschleunigung < 0) {
+if (PWM_Tabelle[0] > pwm_min) PWM_Tabelle[0] --;
+if (PWM_Tabelle[1] > pwm_min) PWM_Tabelle[1] --;
+}
+}
+if (Warnsignal) {
+if (Ton == 156) Ton_Schritt = -4; // Sirene zwischen 400 und 600 Hz
+if (Ton == 100) Ton_Schritt = 4;
+Ton += Ton_Schritt;
+Zeitschritte_Warnsignal ++;
+if (Zeitschritte_Warnsignal == 4) { // LED Blinken
+Zeitschritte_Warnsignal = 0;
+if (RB4) {
+RB5 = 1;
+RB4 = 0;
+}
+else {
+RB5 = 0;
+RB4 = 1;
+}
+}
+}
+else {
+RB4 = 0;
+RB5 = 0;
+Ton = 156;
+Ton_Schritt = -4;
+}
+}
+//Fortsetzung der Interrupt-Service-Routine auf der nächsten Seite
+
+Tab. 4: C-Code dritter Teil, Beginn der Interrupt-Service-Routine
+
+
+
+
+//… Fortsetzung der Interrupt-Service-Routine von der Vorseite
+if (PIR1bits.TMR2IF) { // Prüft, ob die TIMER2 Überlauf Flagge gesetzt wurde & der Interrupt aktiv ist
+// Dieser Code-Teil wird alle 2 ms ausgeführt (10 Stufen -> PWM Frequenz 50Hz)
+// 1µs (Instruction Clock) * 125 (Überlauf gemäß PR2) * 16 (Prescaler)) = 2 ms
+PIR1bits.TMR2IF = 0; // lösche die Interrupt Flagge
+uint_fast8_t temp = 0;
+PWM_Zaehler++;
+if (PWM_Zaehler == 10) { //Ausgänge gemäß der Variable Motor_Bits_Merker einschalten
+PWM_Zaehler = 0;
+temp = PORTB; //PortB einlesen
+temp &= 0xF0; //unteres Nibble löschen
+temp |= Motor_Bits_Merker; //Motor_Bits einfügen
+PORTB = temp; //rausschreiben auf den Port B
+}
+if (PWM_Tabelle[0] == PWM_Zaehler) { // Ausgänge gemäß der PWM Tabelle [] abschalten
+RB0 = 1;
+RB1 = 1;
+}
+
+}
+
+if (PWM_Tabelle[1] == PWM_Zaehler) { // Ausgänge gemäß der PWM Tabelle [] abschalten
+RB2 = 1;
+RB3 = 1;
+}
+
+}
+
+Tab. 5: C-Code vierter Teil, Ende der Interrupt-Service-Routine
+
+
+

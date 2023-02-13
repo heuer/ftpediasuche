@@ -1,0 +1,398 @@
+
+
+Elektronik
+
+Elektronikmodule (Teil 9): Direkter Vergleich
+von Multifunktionsmodul und Grundbaustein
+Hans-Christian Funke
+In Teil 8 meiner Beitragsreihe habe ich beim Vergleich zwischen Silberlingen und Elektronikmodulen festgestellt, dass speziell beim Multifunktionsmodul und dem Grundbaustein der reine
+Vergleich der Ein- und Ausgänge in der Praxis nicht wirklich weiterhilft. Vielmehr wären reale
+Beispiele aus Modellen oder Schaltungen nützlich, um die Umsetzung und die Unterschiede zu
+verstehen und nachzuvollziehen. Dieser Erkenntnis soll mit diesem Beitrag Rechnung getragen
+werden.
+
+Der Differenzverstärker
+Der Grundbaustein h4G und das Multifunktionsmodul 70015 beinhalten beide einen
+Differenzverstärker und können somit
+grundsätzliche die gleichen Aufgaben übernehmen und austauschbar eingesetzt werden.
+
+aufgebaut sind, was der Grund für die Austauschbarkeit ist.
+
+
+
+Die Schaltung
+Vergleicht man die Schaltung der beiden
+Bausteine (Abb. 3 und 4) stellt man fest,
+dass die beiden Schaltungen sehr ähnlich
+
+Während die Verbindungen für die verschiedenen Funktionen beim h4G gesteckt
+werden müssen, können die meisten beim
+70015 durch DIP-Schalter hergestellt
+werden. Darüber lassen sich Funktionen
+schnell aktivieren, aber die Flexibilität wird
+etwas eingeschränkt, wie es bei einigen der
+praktischen Beispiele zu sehen ist.
+
+
+Elektronik
+
+Mit dieser Bandbreite an Kondensatoren ist
+man bei der Gestaltung der Schaltungen
+wesentlich flexibler und kann größere
+Bereiche abdecken bzw. diese genauer auf
+die Schaltung abstimmen.
+Tab. 1 bietet einem Überblick über die
+Anschlüsse des Grundbaustein h4G im Vergleich zum Multifunktionsmodul 70015:
+
+Differenzverstärkers des h4G
+
+Silberling
+
+Elektronikmodul
+
+Buchse 1
+
+Buchse E+
+
+Buchse 2
+
+Buchse E-
+
+Buchse 3
+
+- (GND)
+
+Buchse 4
+
+1)
+
+Buchse E1
+
+Buchse E1
+
+Buchse E2
+
+Buchse E2
+
+Buchse 5
+
+DIP-Schalter
+
+Buchse 6
+
+DIP-Schalter
+
+Buchse 7
+
+DIP-Schalter
+
+Buchse 8
+
+DIP-Schalter
+
+Buchse 9 (+) + (Vdd bzw. Versorgungsspannung)
+
+Differenzverstärkers des Moduls 70015
+
+Bei den nachfolgenden Schaltungen kommt
+der fest eingebaute Elektrolytkondensator
+beim h4G immer wieder zum Einsatz.
+Dieser übernimmt keine Funktion im Differenzverstärker selbst. Aus diesem Grund
+wurde er beim Entwurf des 70015 weggelassen. Stattdessen wird ein KondensatorSet – bestehend aus sechs unterschiedlichen
+Kondensatorwerten – mitgeliefert. Das Set
+enthält neben den Kondensatoren auch zwei
+Stecker mit Schraube. Die Werte der Kondensatoren sind 100 nF / 2,2 µF / 10 µF /
+22 µF / 47 µF / 100 µF; dieses Set kann
+auch einzeln bestellt werden (71046 [1]).
+
+Buchsen A1
+
+Buchse A
+
+Buchsen A2
+
+Buchse A
+
+---
+
+DIP-Schalter 2)
+Tab. 1: Vergleich der Anschlüsse
+von h4GB und 70015
+
+1)
+
+Beiliegendes Kondensator-Set (71046)
+mit sechs verschiedenen Kondensatoren.
+
+2)
+
+Das Multifunktionsmodul beherbergt
+noch weitere Funktionen, die der Grundbaustein nicht zur Verfügung stellt. Die
+Erklärung der Funktionen und ihrer Einsatzmöglichkeiten erfolgt im Abschnitt
+Zusatzfunktionen.
+
+
+
+
+Praktische Beispiele
+Als Grundlage für die praktischen Beispiele
+habe ich auf das Buch von fischertechnik
+hobby 4 [3] zurückgegriffen. Darin finden
+sich zahlreiche Beispiele und Modelle
+sowie Beschreibungen der einzelnen Funktionen des Grundbausteins.
+In den nachfolgenden Zeichnungen sind
+Seitenzahlen aus dem Buch hobby 4 angegeben. Auf diesen Seiten wird die Funktion
+der abgebildeten Schaltung beschrieben. Ist
+in den Zeichnungen der Drehknopf bei
+einem Elektronikbaustein grün gekennzeichnet, dann kann mit dem Drehregler die
+Funktion der Schaltung beeinflusst werden
+(siehe Abb. 5). Schwarze DIP-Schalter sind
+eingeschaltet und befinden sich in der
+Position ON (Hebel nach unten).
+
+
+mit großem Schaltabstand
+eingeschalteten DIP-Schalter 2 am 70015.
+
+Schwellenwertschaltung für Fotound NTC-Widerstand
+In Abb. 6 und 7 sind Schwellenwertschaltungen abgebildet. Die Verbindung von
+Ausgang A2 über 100 kΩ an Eingang E2
+wird beim 70015 mit dem DIP-Schalter 5
+hergestellt.
+
+
+In Abb. 7 wird der Drehregler mit eingebunden und der Schwellenwert kann über
+diesen verändert werden. Der Drehregler
+wird beim h4G dafür mit Plus verbunden;
+beim 70015 muss zur Herstellung dieser
+Verbindung der DIP-Schalter 2 eingeschaltet werden.
+
+Schwellenwertschaltung für
+Feuchtigkeitsfühler bzw. mit
+höherem Schaltabstand
+
+Elektronik
+
+und 7 (1 kΩ) zur Verfügung. Alternativ
+kann auch jeder beliebige Widerstandswert
+direkt zwischen die Anschlüsse E2 und A
+geschaltet werden; dann darf aber kein DIPSchalter 5 – 7 eingeschaltet sein, weil sonst
+eine Parallelschaltung der Widerstandswerte erfolgt.
+Für den Feuchtigkeitsfühler wird die Schaltung in Abb. 9 empfohlen – hier wird nur
+die halbe Versorgungsspannung an den
+Drehregler angelegt. Beim 70015 muss
+dafür der DIP-Schalter 1 eingeschaltet
+werden.
+Schwellenwertschaltung für
+Kleinstsignale
+
+mit höherem Schaltabstand
+
+für Kleinstsignale
+
+Für die Auswertung von Kleinstsignalen,
+wie sie vom Mikrofon beim Auftreffen von
+Schallwellen erzeugt werden oder von
+Magnetspulen bzw. Elektromagneten im
+bewegten Magnetfeld, kann die in Abb. 10
+gezeigte Schaltung verwendet werden.
+für einen Feuchtigkeitsfühler
+
+Um den Schaltabstand zu erhöhen, wird
+eine Rückkopplung des invertierenden Ausgangs über einen Widerstand nach E2 hergestellt (Abb. 8). Beim 70015 stehen dafür
+die drei DIP-Schalter 5 (100 kΩ), 6 (10 kΩ)
+
+Der Widerstand erhöht die Sensibilität des
+Differenzverstärkers und kann im Wert
+variiert werden. Im Leitfaden zu den Elektronikbausteinen von fischertechnik [4]
+wird ein 22-kΩ-Widerstand verwendet. Zur
+Herstellung dieser Verbindung im 70015
+muss der DIP-Schalter 3 mit einem Widerstandswert von 33 kΩ eingeschaltet
+werden. Die Verbindung zwischen E2 und
+
+
+Drehregler könnte auch nur über eine
+Drahtbrücke realisiert oder weggelassen
+werden. Die Praxis hat gezeigt, dass der
+Einsatz eines 22-kΩ- bzw. 33-kΩ-Widerstandswertes die besten Ergebnisse geliefert
+hat.
+
+festzusetzen, kann ein Gatter (AND, OR
+oder EXOR) verwendet werden.
+
+Differenzverstärker in einem
+Zustand festsetzen
+Bei diesen Schaltungen (Abb. 11 und 12)
+darf bei der Aktivierung über die Eingänge
+E1 und E2 nur mit Minus (low) gearbeitet
+werden: Bei Kontakt mit Plus (high) kann
+es zu unbeabsichtigtem Statuswechsel am
+Ausgang kommen – also mechanische
+Umschalter nur mit Minus beschalten. Die
+Schaltung liefert ein gutes Beispiel zur Verwendung der Buchsen (1) und (2) des h4G.
+Der 70015 verfügt über vergleichbare Eingänge – die Buchse (1) am h4G entspricht
+dem Anschluss E+ am 70015 und die
+Buchse (2) des h4G dem Anschluss E- am
+70015.
+
+
+Die Verbindung in Abb. 12 muss tatsächlich vom invertierenden Ausgang am 70015
+erfolgen.
+Taktgenerator (Taktgeber) und
+Tongenerator
+
+
+Im Prinzip befindet sich der Differenzverstärker in der Grundstellung, in der
+dieser als RS-Flip-Flop (RS-FF) fungieren
+kann – siehe hierzu die Schaltungsbeispiele
+des 70015 [2]. Um ein Schalten des RS-FF
+sicher zu verhindern bzw. in einen Zustand
+
+
+Um den Differenzverstärker als Taktgenerator (Taktgeber) oder Tongenerator
+
+
+Elektronik
+
+einzusetzen wird auf jeden Fall ein Kondensator benötigt. Es können auch andere
+Kondensatorwerte als die Werte in den
+70015 stehen sechs verschiedene Kondensatorwerte aus dem mitgelieferten Kondensator-Set zur Auswahl.
+
+Foto- oder NTC-Widerstand
+
+
+Die Rückkopplung vom invertierten Ausgang zum Drehregler wird durch Einschalten des DIP-Schalters 4 hergestellt und für
+die Rückkopplung zum Eingang E2 können
+die DIP-Schalter 5–7 verwendet werden.
+Der DIP-Schalter 8 dient zur Aktivierung
+des internen Mini-Lautsprechers des 70015.
+Taktgenerator (Taktgeber) gesteuert
+Mit diesen beiden Schaltungen kann über
+den veränderlichen Widerstand der Sensoren die Taktfrequenz verändert werden.
+In der Schaltung aus Abb. 15 muss ein
+Kondensator gewählt und der DIP-Schalter
+7 für die Rückkopplung über den 1-kΩWiderstand zum Eingang E2 eingeschaltet
+werden.
+
+Foto- oder NTC-Widerstand und Drehregler
+
+In der Schaltung aus Abb. 16 soll die Rückkopplung über eine Reihenschaltung des
+Sensors mit dem 1-kΩ-Widerstand erfolgen. Dies kann beim 70015 so nicht realisiert werden; hier muss die Reihenschaltung
+extern z. B. über ein Experimentiermodul
+aufgebaut und zwischen dem invertierenden
+Ausgang und E2 eingebracht werden. Der
+DIP-Schalter 4 aktiviert den Drehregler, der
+nun ebenfalls Einfluss auf die Taktfrequenz
+hat.
+
+
+
+
+Schaltverzögerung für mechanische
+Schalter
+
+verzögerung ist sehr kurz. Um diese Schaltung zu realisieren, muss der Schalter in
+Reihe mit dem Drehregler gebracht werden.
+Dies ist beim 70015 nicht ohne weiteres
+möglich. Dazu muss ein separates Poti
+verwendet werden, z. B. vom Messmodul
+70022, oder es wird ein fester Widerstand
+zwischen 1 kΩ und 4,7 kΩ eingesetzt.
+
+Zusatzfunktionen
+Das Multifunktionsmodul ist mit weiteren
+nützlichen Zusatzfunktionen ausgestattet
+worden:
+
+eines Tasters/Schalters
+
+ einem Minilautsprecher, der einen separaten Mikrofon-Lautsprecher-Baustein
+h4MF ersetzt bzw. überflüssig macht
+(DIP-Schalter 8);
+ einem 33-kΩ-Widerstand, der zur Erhöhung der Messsensibilität bei Bedarf
+zwischen die Eingänge E1 und E2 hinzugeschaltet werden kann (DIP-Schalter
+3);
+ einem zusätzlichen Rückkopplungswiderstand von 10 kΩ als Ergänzung zu
+den Rückkopplungswiderständen mit
+1 kΩ und 100 kΩ (DIP-Schalter 6).
+Darüber hinaus wurde dem Ausgang ein
+Gegenkopplungsverstärker spendiert, wodurch eine Schaltleistung von bis zu
+500 mW (Leistungsgrenze der Transistoren) zur Verfügung steht.
+
+Ausschalten eines Tasters/Schalters
+
+Mit dem Einschalten des DIP-Schalters 2
+(Abb. 17) wird die Verbindung zwischen
+Plus und dem Drehregler hergestellt. Es
+wird wieder ein beliebiger Kondensator aus
+dem mitgelieferten Set benötigt, der
+zwischen die Anschlüsse Minus und E1
+gesteckt werden muss. Mit dem Drehregler
+kann nun die Einschaltverzögerung des
+Schalters reguliert werden.
+In der zweiten Schaltung (Abb. 18) wird
+zwar beim Einschalten eine regulierbare
+Verzögerung erreicht, aber die Ausschalt-
+
+
+Schlusswort
+Ergänzend sollten die Schaltungsbeispielen
+aus den „Grundlagen der Elektronikmodule“ herangezogen werden, weil hier
+z. B. gezeigt wird, wie ein Fototransistor am
+70015 angeschlossen werden muss. Dieses
+Dokument enthält alles Wissenswerte über
+die Elektronik- und Zusatzmodule. Das
+Schriftstück war bis zur Süd-Convention
+2022 noch unvollständig, wurde aber vor
+kurzem fertig gestellt und kann gerne bei
+mir angefordert werden [2].
+Das Dokument ist um ein Vielfaches erweitert worden mit Informationen, Schaltun-
+
+gen, Bildern und Beispielen zu allen Elektronikmodulen und Zusatzmodulen – zu den
+veröffentlichten und den nicht veröffentlichten. Aus diesem Grund kann ich nur
+empfehlen, die alte Version, die noch vor
+September 2022 verschickt wurde, durch
+die neue, aktuelle Version zu ersetzen.
+Mit diesen Ausführungen hoffe ich nun
+jeden in die Lage versetzt zu haben, den
+70015 als Ersatz für den h4G oder diesen
+vollumfänglich in seiner Funktion für die
+eigenen Projekte einzusetzen. Wer weitere
+Fragen zu den Elektronikmodulen oder zu
+Schaltungen mit Silberlingen hat, kann
+diese per E-Mail [2] an mich richten. Gerne
+bin ich bei der Lösungsfindung und der
+Umsetzung von Problemstellungen behilflich.
+
+Elektronik
+
+Informationen zu den Elektronikmodulen,
+den Zusatzmodulen, Laboren und Zubehör
+sind auch über den Online-Shop von Franz
+Santjohanser erhältlich [1].
+
+Quellen
+[1]
+
+santjohanser: Spielen. Lernen. Technik. Autorisierter fischertechnikFachhändler.
+
+[2]
+
+Hans-Christian-Funke: Grundlagen
+der Elektronikmodule (70099).
+Erhältlich als PDF auf Anfrage beim
+Autor: elektronik@funke4you.de
+
+[3]
+
+Fischer-Werke: fischertechnik
+hobby 4 (35804), 1971.
+
+[4]
+
+Fischer-Werke: Leitfaden für die
+fischertechnik-Elektronik-Bausteine
+(39504), 1976.
+
+
+

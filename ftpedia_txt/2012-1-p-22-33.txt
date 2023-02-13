@@ -1,0 +1,625 @@
+
+
+Elektromechanik
+
+Vom Zählen und Abzählen (1)
+Stefan Falk
+In der Motorsteuerungen-Artikelserie der letzten ft:pedia-Ausgaben hatten wir ja versprochen, Maschinen zu besprechen, die sich selbst steuern. Heute machen wir den Anfang
+und wenden die bisher dargestellten Schaltungen in zählenden Maschinen an.
+„Zählen“ findet innerhalb von unzähligen
+Maschinen statt. Man denke nur an Münzzähler,
+Codeschlösser,
+Wiegeeinrichtungen, Stückgutförderung, oder auch
+das gute alte Wählscheiben-Telefon. Auch
+die zusammen mit den fischertechnik
+Computerinterfaces verwendeten Impulszähler dienen eben diesem Zweck.
+Es geht letztlich immer um eine von zwei
+Anforderungen:
+Entweder wollen wir einfach wissen,
+wie viele zu zählende Ereignisse
+eintraten,
+oder wir wollen nach Erreichen einer
+bestimmten Anzahl dieser Ereignisse
+einen anderen Vorgang auslösen.
+Überlegt einmal selbst, wie viele Anwendungsbeispiele euch dazu einfallen – es
+dürften eine ganze Menge werden. Wir
+fangen mal ganz einfach an:
+
+Zählen nur mit Mechanik
+Unser erstes Modell stellt das Problem
+„Zählen“ rein mechanisch dar: Wir bauen
+uns ein „Drehkreuz“, um zu zählen, wie
+viele Personen durch eine schmale Stelle
+gingen. Solche Drehkreuze kennt ihr
+bestimmt von Schwimmbädern oder dem
+Zoo: Es kann immer nur eine einzige
+Person zu einem Zeitpunkt hindurch. Ein
+einfaches Drehkreuz zeigt Abbildung 1:
+
+
+
+Diese Konstruktion bedient sich eines
+Statikmitnehmers (31712). Wer dieses
+Bauteil nicht zur Verfügung hat, kann
+alternativ auch ein Drehkreuz mit der Seiltrommel (31016), der Achsverschraubung
+(38844) oder einfach einer fischertechnikDrehscheibe herstellen.
+Damit ist zwar noch nichts gezählt, aber
+immerhin passt nur ein fischertechnikMännchen zu einem Zeitpunkt hindurch.
+Damit ist der Anfang gemacht, die
+Personen zu zählen.
+Rastsperre
+Der nächste Schritt besteht darin, das
+Drehkreuz durch eine geeignete Mechanik
+zu ergänzen, sodass es sich nur in eine
+Richtung drehen kann. Denn sonst könnten
+ja Personen in beide Richtungen durchs
+Kreuz gehen und würden evtl. falsch
+gezählt.
+
+
+Elektromechanik
+
+Das geht ganz einfach mit einer „Rastsperre“. Eine Strebe wird als federndes
+Element verwendet und so angebracht,
+dass sie das Zahnrad am unteren Ende der
+Drehkreuzachse nur noch in eine Richtung
+drehen lässt, in die andere aber sperrt:
+
+
+
+Ein analoges Zählwerk
+Durch einige wenige Getriebeteile
+kommen wir schon zu einer hübschen
+Anzeige der Anzahl hindurchgegangener
+Personen. Unser Modellvorschlag besteht
+aus einer Untersetzung, die in einem
+Zeiger endet, der die gezählten Personen
+auf einer Skala anzeigt:
+
+
+
+Rechnen wir einmal nach, wie weit sich
+der Zeiger bewegt, wenn eine Person
+durchs Drehkreuz geht: Pro Person dreht
+sich das Kreuz um eine Vierteldrehung,
+und mit ihm das Z20 auf seiner Achse. Das
+davon angetriebene Z10 dreht sich also
+¼ · 2 = ½ Umdrehung pro Person. Die
+Schnecke bewegt das daran anliegende
+Z40 um einen Zahn pro Umdrehung. Aus
+unserer ½ Umdrehung pro Person wird
+also ½ / 40 = 1/80 Umdrehung. Wir
+können also mit einer Umdrehung des
+Zeigers von 0 bis 79 zählen – mit so
+wenigen Bauelementen!
+
+
+
+
+Um uns eine gut ablesbare Skala zu
+basteln, teilen wir also einen Vollkreis in
+80 gleiche Teile auf. Zwischen zwei Teilstrichen liegt dann ein Winkel von
+360° / 80 = 4,5°. Wenn ihr Abb. 6 ausdruckt, ausschneidet und aufklebt, könnt
+ihr die Drehscheibe unterhalb des Zeigers
+mit einer Skala versehen.
+
+Drehkreuz sperrt. Abb. 7 und 8 zeigen eine
+Möglichkeit:
+
+
+
+Zwei Tipps: Das Loch in der Mitte
+bekommt ihr bequem ausgeschnitten, wenn
+ihr die Skalenscheibe in der Mitte faltet.
+Die Befestigung der Skala auf der Drehscheibe gelingt leicht mit zwei kleinen
+Stücken doppelseitigem Klebeband.
+Wegen Überfüllung geschlossen
+Eine weitere Funktion unseres Drehkreuzes könnte sein, nur eine bestimmte
+Anzahl von Personen hinein zu lassen.
+Zwei Dinge sind dafür erforderlich:
+
+
+Zunächst stellen wir den Zeiger z. B. senkrecht nach unten. Beim Durchlaufen von
+Personen bewegt er sich im Uhrzeigersinn
+weiter, bis er die Statikstrebe so weit verdreht hat, dass der Kipphebel freigegeben
+wird. Dessen Gegengewicht sorgt dafür,
+dass er in den Weg des Drehkreuzes
+gelangt und es damit sperrt:
+
+1. Wir müssen einstellen können, wie viele
+Personen durchgelassen werden sollen,
+und
+2. das Drehkreuz muss nach Erreichen
+dieser eingestellten Anzahl automatisch
+sperren (es ist dann in beide Richtungen
+gesperrt).
+
+
+Dazu denken wir ein wenig um: Unser
+Zeiger soll einen leichtgängigen Hebel
+betätigen, der bei Betätigung einen
+kräftigeren frei gibt, der schließlich das
+
+Für eine neue Personengruppe müssen wir
+den Zeiger wieder zurückstellen und die
+Hebel manuell in die Grundposition
+bringen.
+
+
+Zur leichteren Einstellung des Zeigers
+könnt ihr diese andersherum beschriftete
+Skala ausdrucken und verwenden:
+
+Elektromechanik
+
+mäßig. Die beiden anderen Anzeigeräder
+drehen sich schrittweise. Die rechte
+Anzeige dreht sich ungefähr ein Mal pro
+Sekunde und könnte, wenn wir Ziffern 0
+bis 9 darauf anbringen, z. B. die Zehntelsekunden einer Stoppuhr anzeigen
+(Abb. 13 könnt ihr wieder zum Ausschneiden ausdrucken). Das mittlere Rad
+zeigt dann die Einerstelle der Sekunden an,
+und das linke Rad deren Zehnerstelle.
+Unsere Stoppuhr kann also Zeiten von
+00,0 s bis 99,9 s anzeigen, wenngleich wir
+natürlich nicht erwarten dürfen, dass die
+angezeigte Zeit exakt ist – dazu ist unsere
+„Zeitbasis“ nicht genau genug.
+
+
+Damit haben wir rein mechanisch gezählt
+und bei Erreichen einer bestimmten Anzahl
+einen weiteren Vorgang ausgelöst – hier
+das Sperren des Drehkreuzes.
+
+Zählwerk mit digitaler Anzeige
+Unser erstes Zählwerk arbeitete analog.
+Der Zeiger bewegte sich nur deshalb
+schrittweise, weil unser Drehkreuz immer
+um eine Viertelumdrehung weiter gedreht
+wurde. Wenn ihr einfach am Drehkreuz
+gleichmäßig dreht, bewegt sich wegen des
+einfachen Getriebes auch der Zeiger
+gleichmäßig – er springt nicht von Ziffer
+zu Ziffer.
+
+Übertragsmechanik
+
+Unser zweites Zählwerk macht es anders:
+Nur die vom Motor direkt angetriebene
+Welle bewegt den rechten Zeiger gleich-
+
+Das ziffernweise („digitale“) Zählen
+geschieht mit einer Übertragsmechanik:
+Ein Mal pro Umdrehung einer Welle wird
+das Z10 auf der jeweils nächsten Welle um
+genau einen Zahn weiter geschaltet. Die
+dafür notwendigen Abstände passen zwar
+
+
+
+
+nicht genau ins fischertechnik-Raster, aber
+dafür gibt es ja die Nuten, in denen man
+Teile so wunderbar justieren kann.
+Wichtig sind auch die zwei eingebauten
+Federn. Die sorgen nämlich dafür, dass die
+Achsen nicht etwa durch den Schwung
+beim Umschalten zu weit drehen, sondern
+etwas gebremst werden.
+Beim Zusammenbau empfiehlt
+folgende Vorgehensweise:
+
+sich
+
+1. Lasst den Motor zunächst weg und baut
+nur die erste Welle mit den Zehntelsekunden auf.
+2. Dann baut die Einerstelle komplett dazu
+und justiert alles so, dass der Eingriff
+der Kurbel ins Z10 so weit geht, dass
+das Z10 leichtgängig, aber zuverlässig
+einen Zahn weiter geschaltet werden
+kann.
+3. Danach baut die Zehnerstelle der
+Sekunden und justiert sie ebenfalls so,
+dass alles leichtgängig und zuverlässig
+„flutscht.“
+4. Baut erst zum Schluss den Motor ein.
+Während er läuft, müsst ihr vielleicht
+nochmal etwas nachjustieren.
+Im Endeffekt muss eine perfekt funktionierende Zählmaschine heraus kommen.
+Da sie (wenigstens in etwa) Sekunden
+zählt, könnt ihr damit eine Zeitspanne messen und als aus mehreren Ziffern bestehende Zahl – digital eben – ablesen.
+Für die Justage der Zifferblätter ist es hilfreich, die Flachnaben nur leicht anzuziehen. So könnt ihr sie leicht etwas verdrehen, um die Lage der Ziffern sauber
+einzustellen.
+
+Je nachdem, wie schnell euer Motor läuft,
+könnte vielleicht eine etwas andere Untersetzung zwischen Motor und Zehntelsekundenwelle notwendig werden. Auch
+weniger „glatte“ Verhältnisse sind z. B.
+durch die Kombination Z15/Z40 möglich,
+um die Zählgeschwindigkeit besser an
+euren Motor und eure Stromversorgung
+anzupassen.
+
+Elektromechanisch zählen
+Das Zählen und Abzählen elektrischer
+Impulse wollen wir an einem echten
+fischertechnik-Klassiker darstellen. Wer
+die alten Clubhefte aus den 1970er Jahren
+kennt, schlage mal im Clubheft 1971/1 in
+der Kategorie „Aktuelles zum Nachbauen“
+nach: Dort findet sich ein faszinierendes
+Modell unter der Bezeichnung „Lichtsignale öffnen ein Garagentor“ [2].
+Wie man in Abb. 14 sieht, sitzt direkt
+rechts neben dem Tor nämlich ein Fototransistor (oder ein Fotowiderstand) als
+Lichtaufnehmer. Dessen Signal wird durch
+das E-Tec-Modul so verstärkt, dass wir
+damit Motoren betreiben können.
+Die Aufgabenstellung für das Tor lautet:
+1. Das Auto kommt an und soll drei Mal
+die Scheinwerfer aufleuchten lassen.
+Daraufhin muss sich das Garagentor
+öffnen.
+2. Wenn das Auto in die Garage gefahren
+wurde, kann man das Tor durch
+Drücken eines Tasters im Inneren der
+Garage schließen.
+3. Will man wieder hinausfahren, drückt
+man denselben Taster erneut – das Tor
+muss sich wieder öffnen.
+
+
+Elektromechanik
+
+4. Nachdem das Auto herausgefahren
+wurde, lässt man wieder drei Mal die
+Scheinwerfer aufleuchten und bewirkt
+damit das Schließen des Tores.
+Das Garagentor und seinen Antrieb können
+wir heute noch etwas naturgetreuer nachbauen, und anstelle des LichtelektronikStabes von 1969 setzen wir ein E-TecModul ein, um das Signal der Fotozelle
+bzw. des Fototransistors zu verstärken. Die
+elektrische Schaltung aber funktioniert
+praktisch genauso wie im 1971er Clubheft.
+
+Zum Bau des Modells
+Die Mechanik unseres Modellvorschlags
+ist
+einem tatsächlich existierenden
+Garagentoröffner nachempfunden: Eine
+Umlaufende Kette zieht über einen Mitnehmer das Tor auf oder zu. Die Kette
+enthält
+nämlich
+auch
+zwei
+Förderkettenglieder (37192), auf die je ein
+BS 7,5 aufgesteckt ist. Diese beiden
+betätigen den Endlagentaster beim
+Antriebsmotor (Abb. 15).
+
+
+
+
+
+
+
+Die zählende Elektromechanik
+
+
+Die in Abb. 16 sichtbare Statikstrebe ist
+mit einer V-Achse 20 (31690) mit dem
+BS 7,5 verbunden. Die beiden schwarzen
+Grundplatten 120 x 60 (35129) sind oben
+durch einen Verbinder 30 und unten
+einfach durch eine in die unterste Nut
+eingesteckte Achse verbunden.
+
+Das Hauptproblem ist natürlich: Wie
+können wir die drei Lichtimpulse abzählen,
+und wie bewirken wir nach dem dritten das
+Öffnen bzw. Schließen des Tores? Dazu
+verwendet unser Modellvorschlag eine
+Schaltwalze – hier eine Drehscheibe 60 mit
+drei darauf angebrachten Bausteinen, die
+beim Lauf des Motors nacheinander einen
+Taster kurz drücken.
+
+an seiner Unterseite. Die Gelenke werden
+oben durch einen S-Riegel 8 plus Riegelscheibe
+und
+unten
+durch
+einen
+Statikadapter (35975) gebildet. Der BS 5
+rechts oben im Bild ist für den einwandfreien Öffnungsvorgang des Tores wichtig.
+
+
+
+
+Elektromechanik
+
+Durch die geschickte Schaltung, die wir
+gleich noch ausführlich besprechen, wird
+der Steuerungsmotor die Walze so drehen,
+dass sie bei jedem Lichtimpuls um einen
+aufgesteckten Baustein weiterdreht, bis sie
+zum nächsten Baustein kommt. Die drei
+Bausteine sind auf der Drehscheibe direkt
+nebeneinander angebracht.
+Auf der anderen Seite der Drehscheibe
+steckt genau gegenüberliegend ein einzelner Baustein. Nachdem der dritte Baustein
+passiert wurde – also der dritte Lichtimpuls
+ankam – dreht sich die Schaltwalze so
+lange, bis der erste der drei Bausteine
+wieder den in Abb. 18 linken Taster
+betätigt. Und während dieser Zeit kommt
+der gegenüber liegende einzelne Baustein
+am zweiten Taster vorbei – und löst damit
+das Öffnen bzw. Schließen des Tores aus.
+
+
+Die Schaltung
+Wie
+funktioniert
+unser
+zählendes
+Garagentor nun? Schauen wir uns dazu das
+Schaltbild an (Abb. 21):
+Es gibt zwei Motoren: Einer treibt das
+Garagentor selbst an, der andere dreht
+unsere Steuerscheibe mit den Nocken, die
+die beiden Steuertaster T1 und T2 betätigen. Gehen wir zunächst von folgender
+Grundstellung unseres Modells aus:
+Das Tor ist geschlossen und der von der
+umlaufenden Kette betätigte Endlagentaster T3 ist gedrückt.
+
+des Torantriebs
+
+Außer der elektrischen Schaltung fehlt
+damit nur noch der im Garageninneren
+anzubringende Taster fürs Öffnen oder
+Schließen vom Innenraum aus. Abb. 20
+zeigt einen Bauvorschlag:
+
+Das Steuerrad steht so, dass T1 gerade
+vom ersten seiner drei Steuernocken
+gedrückt wird, während T2 unbetätigt
+ist.
+Die Lampe, die unseren Fototransistor
+beleuchtet, sei ausgeschaltet (das Auto
+ist noch gar nicht da).
+Der im Garageninneren angebrachte
+Selbstbautaster T3 ist auch gerade nicht
+gedrückt.
+Im Schaltbild sind wie üblich die Ruhezustände der Taster eingezeichnet, also
+ihre unbetätigte Stellung. Da T3 aber tatsächlich gedrückt ist, bekommt der
+Antriebsmotor keinen Strom – das Tor
+bleibt geschlossen.
+
+
+
+
+Die Elektronik kommt ins Spiel
+Das E-Tec-Modul ist durch die Stellung
+seiner DIP-Schalter auf ein „Oder“-Logikglied eingestellt. Das ist eines der Zusatzprogramme, auf die man es einstellen kann
+[1] und bewirkt, dass die Ausgänge Q1 und
+Q2 des E-Tec-Moduls umschalten, sobald
+mindestens einer der Eingänge I1, I2 oder
+I3 mit „+“ verbunden wird. Wir verwenden
+es in dieser Betriebsart einfach als Verstärker für den Fototransistor – es ist für
+unsere Schaltung unerheblich, an welchen
+der drei Eingänge ihr den Fototransistor
+anschließt. Nur müsst ihr auf die richtige
+Polung achten: Verbindet den mit „+“
+gekennzeichneten Pol des Eingangs mit
+dem rot gekennzeichneten Anschluss des
+Fototransistors. Falls ihr einen der älteren
+Fotowiderstände verwendet (man erkennt
+sie an der geriffelten Lichtaufnahmefläche), ist die Polung egal.
+
+Was passiert da nun genau? Solange der
+Eingang nicht angesteuert wird (der Fototransistor also hinreichend im Dunkeln
+liegt und deshalb den Strom kaum durchlässt), gibt das E-Tec-Modul am Ausgang
+Q1 „-“ aus. Der Ausgang Q2 liefert immer
+genau das gegenteilige Signal von Q1
+(man sagt, Q2 ist gegenüber Q1 invertiert).
+Im unbeleuchteten Zustand des Fototransistors ist das also „+“.
+Wenn der Taster T1 also wie vorausgesetzt
+vom ersten Schaltnocken betätigt ist und
+Q1 auf „-“ steht, wird durch unseren
+Steuerungsmotor kein Strom fließen, denn
+dessen zweiter Anschluss ist ebenfalls mit
+„-“ verbunden.
+Sowohl der Torantrieb als auch der
+Steuerungsmotor bleiben also still – das
+Tor rührt sich nicht.
+
+
+
+Das Auto blinkt ein Mal
+Nun kommt das Auto (welches ihr nach
+Belieben dazu bauen könnt) an und sein
+Licht wird das erste Mal eingeschaltet.
+Was passiert?
+Sofern das Licht stark genug auf den Fototransistor scheint, wird das E-Tec-Modul
+umschalten. Q1 liefert nun also „+“ und
+Q2 „-“. Nun kann von Q1 durch den betätigten Taster T1 hindurch Strom durch den
+Motor bis zurück zum Minuspol der
+Stromversorgung
+fließen.
+Der
+Steuerungsmotor dreht sich also.
+Aber nur ein kleines Stück! Im Nu ist das
+Steuerrad nämlich so weit gedreht, dass der
+erste Steuernocken an T1 vorbei gedreht
+wurde und T1 deshalb losgelassen wird.
+Damit liegen beide Anschlüsse des Motors
+wieder auf „-“ (denn Q2 liefert ja bei
+beleuchtetem Fototransistor „-“). Der
+Motor bleibt also wieder stehen.
+Wer immer im Auto sitzt, macht das Licht
+dann wieder aus (es war also nur ein
+kurzes Aufleuchten nötig). Und schon
+kehren sich die Verhältnisse wieder um:
+Q2 liegt jetzt an „+“, und wegen des immer
+noch unbetätigten Tasters T1 fließt
+wiederum Strom durch den Steuerungsmotor. Der wird sich also wieder drehen –
+bis Taster T1 von der (zweiten!) Steuernocke wieder gedrückt wird. Dann haben
+wir praktisch wieder den Grundzustand:
+Das Licht ist aus, T1 unbetätigt – alles
+bleibt still.
+Erinnert euch das nicht an etwas? Das ist
+von der Wirkungsweise her genau die
+Wechselschaltung, die wir bereits in
+ft:pedia 4/2011 (Seite 6) kennengelernt
+haben, nur dass hier statt zwei Tastern nun
+je ein Taster und ein E-Tec-Modul zum
+Einsatz kommen.
+Etwas hat sich aber doch gegenüber dem
+Urzustand geändert: Das Schaltrad ist
+durch das Ein- und wieder Ausschalten des
+Lichts am Auto um genau einen Steuernocken weiter gedreht worden. Wir haben
+
+Elektromechanik
+
+„Eins“ gezählt! Durch die geschickte
+Wechselschaltung ist es auch völlig
+gleichgültig, wie lange das Licht genau
+eingeschaltet war. Unsere Zähleinrichtung
+wartet geduldig aufs Ausschalten, bevor
+sie wieder auf Licht reagiert.
+Drei Mal geblinkt
+Wenn das Auto ein zweites Mal das Licht
+ein und wieder aus schaltet, wird unsere
+Steuerscheibe also wiederum um genau
+einen Schaltnocken weiter gedreht.
+Schließlich passiert dasselbe noch ein
+drittes Mal.
+Und plötzlich tut sich etwas: Nachdem der
+Taster vom dritten Schaltnocken wieder
+losgelassen wird (das ist bei eingeschaltetem Licht) und die Lampe wieder
+ausgeschaltet wird, dreht sich das Steuerrad ja wie beschrieben wiederum so lange,
+bis T1 wieder von einer Schaltnocke betätigt wird. Dieser Weg ist aber durch die
+Anordnung der Schaltnocken auf der Drehscheibe lang, und während dieses Laufs
+wird Taster T2 kurz gedrückt.
+T2 überbrückt nun den die ganze Zeit über
+gedrückten Endtaster T3. Dadurch läuft der
+Torantrieb los. Der Endlagentaster T3 wird
+dann losgelassen (schneller als T2) und
+versorgt den Antriebsmotor nun alleine mit
+Strom – auch wenn T2 wieder betätigt
+wird.
+Der Torantrieb läuft nun also, bis T3 das
+nächste Mal betätigt wird und die Stromzufuhr abschaltet. Durch die zwei BS 7,5
+auf der umlaufenden Kette passiert das
+immer dann, wenn das Tor ganz geöffnet
+oder ganz geschlossen ist.
+Voilà! Immer wenn man drei Mal das
+Licht am Auto hat aufleuchten lassen, wird
+das Tor sich also entweder öffnen (falls es
+geschlossen war) oder schließen (falls es
+geöffnet war). Damit können wir das Tor
+vom Auto aus bequem öffnen und
+schließen!
+
+
+
+
+Nun bleibt uns nur noch der manuell zu
+betätigende Taster T4. Dessen Wirkungsweise ist nun einfach: Er überbrückt (wie
+T2) beim Drücken den Endlagentaster T3
+des Torantriebs und startet somit ebenfalls
+einen Öffnungs- bzw. Schließvorgang.
+Vom Inneren der Garage aus kann man
+also ebenfalls das Tor öffnen und
+schließen.
+Insgesamt ist der Ablauf damit wie folgt:
+1. Das Tor ist geschlossen und wird von
+innen durch Druck auf T4 geöffnet.
+2. Das Auto fährt heraus, blinkt drei Mal
+und bewirkt damit, dass sich das Tor
+schließt.
+
+3. Wenn das Auto zurückkehrt, muss man
+wieder drei Mal blinken, um das Tor zu
+öffnen. Nun kann das Fahrzeug wieder
+in die Garage gefahren werden.
+4. Vom Garageninneren aus wird das Tor
+durch Druck auf T4 wieder geschlossen.
+Damit haben wir unseren „Klassiker“ (vgl.
+und Elektronik wieder aufleben lassen.
+Wie ihr seht, kann man mit ein wenig
+Schaltungskenntnis auch recht komplexe
+Steuerungsaufgaben ohne Computer meistern – aber das haben wir während der
+bisherigen ft:pedia-Ausgaben ja schon
+öfters erlebt.
+
+
+Wenn etwas nicht funktioniert
+Wenn euer Garagentor nicht wie vorgesehen arbeiten will, kontrolliert bitte:
+Sind die Stromversorgungspole Plus
+und Minus genau so angeschlossen wie
+in unserem Schaltbild? „Plus“ ist
+üblicherweise immer ein rot gekennzeichneter Anschluss.
+Sind die Taster genau so angeschlossen? Im Schaltbild sind die Ruhestellungen (unbetätigt) der Taster dargestellt.
+Falls der Steuerungsmotor falsch herum
+drehen
+sollte,
+vertauscht
+seine
+Anschlüsse.
+Falls die Steuerungstaster zu fest sitzen
+oder nicht zuverlässig oder lange genug
+gedrückt werden, wenn sich die Steuerscheibe dreht, justiert sie ein wenig.
+Falls das E-Tec-Modul nicht schalten
+will, auch wenn ihr den Fototransistor
+beleuchtet, genügt vielleicht das Licht
+nicht. Geht dann mit der Lampe näher
+an den Fototransistor oder verwendet
+mehrere Lampen.
+
+Elektromechanik
+
+fast alle bisher kennengelernten Schaltungstechniken zum Einsatz kommen:
+Wechselschaltungen, Relais mit Selbsthaltung und Selbstsperrung, Dioden, eine
+Lichtschranke und eine Zähleinrichtung.
+Falls ihr vorsorgen mögt: Zum Aufbau
+werden wir vier Taster (mindestens einer
+davon kann aber ein Selbstbautaster sein),
+ein Relais (bzw. unser ft:pedia-Relais aus
+Ausgabe 4/2011), eine Lampe, einen Fototransistor, ein E-Tec-Modul, zwei Dioden
+und zwei Motoren benötigen. Auch
+mechanisch ziehen wir einige Register in
+diesem Modell: Exzenter- und Linearantriebe, Zahnstangen und eine Rutschkupplung werden zum Einsatz kommen.
+Dennoch wird das Modell auf eine
+fischertechnik-Bauplatte 500 passen und
+mit relativ wenigen Bauteilen auskommen.
+Wenn ihr mit den Modellen dieser ft:pediaAusgabe „durch“ seid, könnt ihr ja schon
+mal raten, was das Modell der nächsten
+Ausgabe wohl leisten könnte. Bleibt uns
+also treu!
+
+Quellennachweis
+[1]
+
+fischertechnik: Spezialprogramme
+für Digitaltechnik (Zusatzanleitung
+zum E-Tec-Modul), ladbar von
+http://www.fischertechnik.de/home/d
+ownloads/profi-e-tech.aspx.
+
+[2]
+
+fischertechnik: Clubheft 1971-1,
+http://www.ftdatenbank.de/search.php?keyword=
+Club+Nachrichten
+
+Jetzt aber viel Spaß beim Aufbau sowie
+beim ausführlichen Testen und Verstehen
+der Wirkungsweise eures „intelligenten
+Garagentors“!
+Was kommt als nächstes?
+In der nächsten Ausgabe der werden wir ein etwas komplexeres Modell
+ausführlich vorstellen und erklären, in dem
+
+
+

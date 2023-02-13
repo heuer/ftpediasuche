@@ -1,0 +1,620 @@
+
+
+Getriebe
+
+Zahnräder und Übersetzungen (Teil 1)
+Thomas Püttmann
+Zahnräder sind zentrale Bestandteile des fischertechnik-Systems. In dieser Miniserie werden
+einige grundlegende Eigenschaften der fischertechnik-Zahnräder zusammengestellt – vor
+allem unter dem Gesichtspunkt, wie man sie gut kombiniert und welche Übersetzungen man
+damit realisieren kann. In Teil 1 geht es überwiegend um die Stirnräder. Als Anwendungsmodell dient zum Schluss eine analoge Zeitanzeige mit Stunden- und Minutenzeiger.
+Zahnräder gab es schon in der Antike. Das
+bedeutendste Fundstück ist der Mechanismus von Antikythera, der auf ca. 100 v.
+Chr. datiert wird. Es handelt sich dabei um
+eine astronomische Uhr, die die Positionen
+der damals bekannten Gestirne im Sonnensystem mit erstaunlicher Präzision vorausberechnen konnte. Dabei geht es vor allem
+darum, bestimmte gegeneinander verschobene zeitliche Zyklen zu mechanisieren. Einige Prinzipien dazu werden im
+zweiten Teil behandelt. In diesem ersten
+Teil stellen wir zunächst einige Grundlagen so zusammen, wie wir sie dann im
+zweiten Teil benötigen werden.
+
+Achsen und Wellen
+Aus dem fischertechnik-System sind dir
+Achsen als Bauteile bekannt. Sie bestehen
+aus Kunststoff oder Metall und haben alle
+einen Durchmesser von 4 mm. Dir ist
+sicher schon aufgefallen, dass es einige
+Räder und Naben gibt, die sich auf den
+Achsen frei drehen können (z. B. die Seilrolle oder die Freilaufnabe). Andere Räder
+und Naben werden mit den Achsen fest
+verbunden und drehen sich mit (z. B. die
+Rast-Zahnräder).
+Im
+Maschinenbau
+werden Achsen, die sich mitdrehen
+(Drehmomente übertragen), immer Wellen
+genannt. Wir machen diese Unterscheidung zwischen Achsen (um die sich
+
+etwas dreht) und Wellen (die sich selbst
+drehen) hier meist nicht, weil es sich im
+Rahmen des fischertechnik-Systems um
+die gleichen Bauteile handelt, für die der
+Name „Achse” festgelegt ist.
+
+Zahnradarten
+Stell dir ein ft-Männchen vor, durch das
+von oben (Kopf) nach unten (Füße) eine
+Achse verläuft und das sich um diese
+Achse dreht. Stell dir weiter vor, auf der
+Stirn dieses Männchens befindet sich ein
+Zahn. Dieser Zahn zeigt senkrecht von der
+Achse weg. Genau wegen dieser Vorstellung heißen Zahnräder, bei denen die
+Zähne senkrecht von der Achse weg
+zeigen, Stirnräder. Die meisten fischertechnik-Zahnräder sind Stirnräder. Nun
+stell dir vor, dass das ft-Männchen eine
+zackige Krone trägt. Die Zacken zeigen in
+Richtung der Achse. Zahnräder, bei denen
+die Zähne in Richtung der Achse zeigen,
+heißen deshalb Kronenräder oder kurz
+Kronräder. Im fischertechnik-System
+findet sich nur ein Kronenrad, das
+praktischerweise zugleich auch ein Stirnrad ist. Neben den Stirn- und Kronenrädern
+gibt es im ft-System auch noch Kegelzahnräder und ein Innenzahnrad (genau
+genommen werden Innenzahnräder meist
+zu den Stirnrädern gezählt – wir tun das
+hier nicht).
+
+
+Getriebe
+
+Bild 1: Zahnradarten
+
+Die Stirnräder solltest du als erstes anhand
+der Zahngröße unterscheiden. Einige Stirnräder haben große Zähne, einige kleine.
+Stirnräder mit großen Zähnen gibt es im
+fischertechnik-System mit 10, 15, 20, 30
+und 40 Zähnen. Man bezeichnet sie dem
+entsprechend mit Z10, Z15, Z20, Z30 und
+Z40. Außerdem gibt es noch den Drehkranz mit 58 Zähnen. Den Drehkranz
+kannst du aber nicht direkt mit einer Achse
+verbinden. Daher wirst du ihn normalerweise höchstens am Ende eines Getriebes
+einsetzen.
+
+Bild 2: ft-Zahnräder mit großen Zähnen
+
+Stirnräder mit kleinen Zähnen findest du
+zum Beispiel in den Getrieben vieler alter
+und neuer Motoren, an der alten Seiltrommel und an den Spannzangen. Diese
+Stirnräder werden meist Mini-Zahnräder
+genannt. Sie haben 22, 28, 36 oder 44
+Zähne. Die Riegelscheibe hat 20 Zähne,
+kann aber nur eingeschränkt als Stirnrad
+gelten, da es keine Möglichkeit gibt, sie
+mit einer Achse fest zu verbinden.
+
+Bild 3: ft-Zahnräder mit feiner Verzahnung
+
+Abmessungen
+Offensichtlich werden die Stirnräder Z10,
+Z15, Z20, Z30 und Z40 mit zunehmender
+Zahl der Zähne immer größer. Was aber
+genau ist die Größe eines Stirnrads? In der
+Schule hast du gelernt, dass man die Größe
+eines Kreises durch seinen Radius r
+(Abstand vom Mittelpunkt bis zur Kreislinie) oder durch seinen Durchmesser d
+(Länge einer Strecke von der Kreislinie
+durch den Mittelpunkt zur Kreislinie)
+beschreiben kann. Ein Durchmesser
+besteht aus zwei Radien: Es gilt also
+d = 2r. Wo aber genau ist bei einem Stirnrad die Kreislinie? Verläuft sie außen
+durch die Spitze der Zähne? Oder eher
+innen, wo die Zähne aufsetzen? Oder
+irgendwo in der Mitte? Die Antwort ist: Zu
+einem Stirnrad gehören mehrere Kreise.
+Der Kopfkreis, der das ganze Stirnrad bis
+zu den Zahnradspitzen überdeckt, der Fußkreis, den du erhältst, wenn du dir die
+Zähne wegdenkst, und der für uns wichtige
+Wälzkreis, der das Stirnrad etwa bis zur
+Mitte der Zähne überdeckt. Wenn Du in
+Gedanken die Stirnräder durch normale
+Räder ersetzt, die aneinander abrollen,
+dann müssen diese Räder genauso groß
+sein wie der Wälzkreis. Mit dem Durchmesser eines Stirnrads meinen wir immer
+den Durchmesser des Wälzkreises.
+
+
+
+Du kannst den Durchmesser auf folgende
+Weise ermitteln: Kopple zwei parallele
+Achsen mittels zweier Stirnräder gleicher
+Art und miss’ den Abstand zwischen den
+Mitten der Achsen. Dazu brauchst du nicht
+einmal ein Lineal. Du brauchst dich nur
+daran zu erinnern, dass ein großer Grundbaustein 30 mm lang ist (und daher auch
+mit BS30 abgekürzt wird) und ein kleiner
+Grundbaustein 15 mm (und daher mit
+BS15 abgekürzt wird). Als Beispiel kombinieren wir zwei Z20. Der Achsabstand
+(Mitte zu Mitte) ist offensichtlich genauso
+groß, wie ein BS30 lang ist. Also beträgt
+der Durchmesser eines Z20 genau 30 mm.
+
+Bild 4: Bestimmung des
+Wälzkreisdurchmessers
+
+Am besten ist, du bestimmst auf diese
+Weise gleich die Durchmesser aller ftStirnräder selbst. Dann wirst du zu
+folgendem Ergebnis kommen:
+Zahnrad
+
+Radius
+
+Z40
+
+30,00 mm
+
+60,00 mm
+
+Z30
+
+22,50 mm
+
+45,00 mm
+
+Z20
+
+15,00 mm
+
+30,00 mm
+
+Z15
+
+11,25 mm
+
+22,50 mm
+
+Z10
+
+7,50 mm
+
+15,00 mm
+
+Die ft-Stirnräder mit den großen Zähnen
+haben alle den Modul m = 1,5 mm. Die ftStirnräder mit den kleinen Zähnen haben
+alle den Modul m = 0,5 mm. Du kannst
+jetzt also zum Beispiel ausrechnen, dass
+ein Mini-Zahnrad mit z = 36 Zähnen den
+Durchmesser
+d = 36 · 0,5 mm = 18 mm
+hat.
+
+Zahnräder und Raster
+Zwei Stirnräder mit Modul m = 1,5 mm,
+die einander kämmen (so nennt man das,
+wenn sie ineinander greifen), können
+immer im ft-Raster gelagert werden. Was
+bedeutet das genau? Ein Beispiel: Wenn
+sich ein Z40 und ein Z20 kämmen, müssen
+die beiden Lager so weit voneinander
+entfernt sein wie die Summe der beiden
+Radien, also 30 mm + 15 mm = 45 mm.
+Du kannst also einen Baustein BS15 mit
+Bohrung, einen BS30 und einen weiteren
+BS15 mit Bohrung zusammenbauen, um
+die beiden Stirnräder im richtigen Abstand
+zu lagern.
+
+Durchmesser
+
+Wie du siehst, kann man den Durchmesser
+d aus der Anzahl der Zähne z errechnen
+und zwar nach der einfachen Formel
+d = z · 1,5 mm. Man sagt: Bei gleicher
+Zahngröße wächst der Durchmesser von
+Stirnrädern proportional zur Anzahl der
+Zähne. Die Erklärung dafür ist natürlich,
+dass der Umfang des Stirnrads proportional
+
+zum Durchmesser wächst und die Zähne
+gleichmäßig auf dem Umfang verteilt sind.
+Die Größe m = d / z heißt Modul. Der
+Modul hängt nur von der Zahngröße ab.
+
+Bild 5: Z20 und Z40 kämmen einander
+
+Ein weiteres Beispiel: Ein Z10 und ein Z20
+benötigen nach der Tabelle oben einen
+Achsabstand von 22,5 mm. Du kannst also
+einen BS15 mit Bohrung, einen BS15,
+einen BS7,5 und einen weiteren BS15 mit
+Bohrung aneinander bauen, um die beiden
+Stirnräder zu lagern.
+
+
+Getriebe
+
+BS15 mit Bohrung einschieben. Ein zweites Beispiel: Eine Kombination eines Z22
+mit einem Z28 kannst du in zwei BS7,5
+lagern, zwischen die du einen BS5
+einschiebst.
+
+Bild 6: Z10 und Z20 kämmen einander
+
+Probiere es aus oder überlege es dir anhand
+der Tabelle mit den Radien: Jede
+Kombination von Stirnrädern mit Modul
+m = 1,5 mm kannst du mit roten BS15 mit
+Bohrung und dazwischen geschobenen
+BS30, BS15 oder BS7,5 lagern, außer
+wenn eines der Stirnräder ein Z15 ist und
+das andere kein Z15 ist. Dann kannst du
+immer noch im Raster lagern, aber nicht
+mehr in den BS15 mit Bohrung, sondern
+nur in den BS7,5.
+
+Bild 8: Z22 und Z28 im Raster
+
+Natürlich musst du Stirnräder nicht unbedingt im ft-Raster lagern. Du kannst die
+Achsabstände auch frei einstellen. Im
+Raster zu bleiben hat aber mehrere
+Vorteile:
+
+Bild 7: Z15 und Z20 kämmen einander
+
+Einige Kombinationen der Mini-Zahnräder
+passen auch ins Raster: Zum Beispiel benötigt eine Kombination eines Z36 mit
+einem Z44 einen Achsabstand von
+(18 + 22) · 0,5 mm = 20 mm. Da 20 mm =
+7,5 mm + 5 mm + 7,5 mm ist, kannst du
+zur Lagerung einen BS5 zwischen zwei
+
+1. Der Abstand der Achsen ist optimal.
+Nur in diesem Fall rollen die Stirnräder
+so aneinander ab wie zwei normale
+Räder. Die Reibung ist daher reine Rollreibung. Wenn der Achsabstand nicht
+genau stimmt, tritt Gleitreibung auf. Da
+Gleitreibung größer ist als Rollreibung,
+ist das schlecht. Wenn du nur zwei oder
+drei Achsen miteinander verkoppeln
+willst, spielt das meist keine große
+Rolle, aber wenn du ein umfangreiches
+Getriebe bauen möchtest, ist es sehr
+wichtig.
+
+
+
+2. Es ist viel einfacher, ein Getriebe im
+Raster nachträglich zu erweitern, umzubauen oder aus mehreren kleineren
+Einheiten
+ein
+großes
+Getriebe
+zusammenzustellen.
+3. Du kannst Getriebe im Raster sehr
+einfach auf kariertem Papier entwerfen.
+Zum Abschluss dieses Abschnitts eine
+kleine Testfrage: Welche Bausteine solltest
+du zusammenbauen, wenn du ein Z10 mit
+einem Z40 kombinieren möchtest?
+BS15 mit Bohrung, BS15, BS15 mit
+Bohrung
+BS15 mit Bohrung, BS7,5, BS15, BS15
+mit Bohrung
+BS15 mit Bohrung, BS30, BS15 mit
+Bohrung
+
+Übersetzungen
+Mit zwei ineinander greifenden Stirnrädern
+kannst du die Drehbewegungen zweier
+paralleler Achsen koppeln. Häufig ist eine
+der beiden Achsen angetrieben (der Antrieb) und diese Bewegung wird dann auf
+die zweite Achse (den Abtrieb) übertragen.
+Wenden wir uns noch einmal Abb. 5 zu
+und drehen an der hinteren Achse des Z20.
+Das Z40 dreht sich dann auch, aber in die
+entgegengesetzte Richtung. Wenn das Z20
+zwei Umdrehungen macht, macht das Z40
+eine Umdrehung. Man sagt: Die Übersetzung ist 2:1. Das ist die Vereinbarung
+im Maschinenbau, die der Leserichtung
+von links nach rechts angepasst ist. Ist
+links der Antrieb – wie in Abb. 5 – und
+rechts der Abtrieb, so passt das dazu, dass
+die Zahl 2 links vom Doppelpunkt und die
+Zahl 1 rechts vom Doppelpunkt steht.
+
+Bild 9: Übersetzung 2:1
+
+Wie sieht das nun bei anderen Stirnradkombinationen aus? Stell dir vor, ein Stirnrad mit z1 Zähnen treibt ein anderes Stirnrad mit z2 Zähnen an. Drehst du das erste
+Stirnrad einen Zahn weiter, so dreht sich
+auch das zweite einen Zahn weiter. Macht
+das erste Stirnrad eine ganze Umdrehung
+(z1 Zähne), so wird das zweite Zahnrad
+auch um z1 Zähne weitergedreht. Diese z1
+Zähne erstrecken sich aber nicht über den
+vollen Umfang des zweiten Stirnrads,
+sondern über den z1/z2ten Teil (im Beispiel
+oben 20/40 = 1/2). Das zweite Stirnrad hat
+also z1/z2 Umdrehungen gemacht. Wenn du
+somit die Antriebsachse nicht einmal,
+sondern z2 mal herumdrehst, macht die
+Abtriebsachse z2 · (z1 / z2) = z1 Umdrehungen. Die Übersetzung beträgt also i = z2:z1.
+Weil die Zahl der Zähne zum Durchmesser
+proportional ist, kannst du die Übersetzung
+auch wie bei sich reibenden Rädern aus
+den Durchmessern ausrechnen:
+i = d2:d1.
+Am besten wäre es, wenn du jetzt gleich
+die folgende Tabelle vervollständigst:
+Antrieb
+
+Abtrieb
+
+Übersetzung
+
+Z10
+
+Z15
+
+15:10 = 3:2
+
+Z10
+
+Z20
+
+Z10
+
+Z30
+
+Z10
+
+Z40
+
+Z15
+
+Z20
+
+Z15
+
+Z30
+
+Z15
+
+Z40
+
+Z20
+
+Z30
+
+Z20
+
+Z40
+
+Z30
+
+Z40
+
+40:10 = 4:1
+
+40:15 = 8:3
+
+40:30 = 4:3
+
+Bau doch gleich eine Kombination aus
+einem Z15 und einem Z40 auf und überprüfe, dass das Z40 nur drei volle Umdrehungen macht, wenn das Z15 acht volle
+Umdrehungen macht.
+
+Mehrere Stufen
+Die folgende Abbildung zeigt dir ein zweistufiges Getriebe.
+
+Getriebe
+
+Achse sitzen. Das werden wir weiter unten
+beheben.
+Welche Übersetzungen sind nun bei mehrstufigen Getrieben mit den großen ft-Stirnrädern möglich? Das ist ein mathematisches Problem. Der Übergang von
+einem Z10 zu einem Z20 bringt eine
+Übersetzung von 2:1. Kombinierst du n
+solcher Stufen zusammen, erhältst du eine
+Übersetzung von 2n:1.
+Verwendest du eine solche Stufe in
+umgekehrter Richtung, so hat sie eine
+Übersetzung von 1:2. Die Kombination n
+solcher umgekehrter Stufen bringt eine
+Übersetzung von 1:2n. Analog bekommst
+du mit n Stufen aus Z10 und Z30 Übersetzungen der Form 3n:1 bzw. 1:3n.
+Nehmen wir einmal kurz an, du hättest
+unendlich viele Zahnräder Z10, Z20 und
+Z30, so könntest du durch Kombination
+der gerade beschriebenen Stufen alle
+Übersetzungsverhältnisse
+der
+Form
+j
+k
+m
+n
+(2 · 3 ) : (2 · 3 ) mit fischertechnik bauen.
+
+Bild 10: Zweistufiges Getriebe
+
+Ein Z30 kämmt ein Z10. Das Z10 ist mit
+einem Z40 durch eine Achse fest verbunden. Das Z40 kämmt schließlich ein
+weiteres Z10. Wenn das Z30 eine Umdrehung macht, machen das erste Z10 und
+damit auch das Z40 drei Umdrehungen.
+Das zweite Z10 macht daher 4 · 3 = 12
+volle Umdrehungen. Die Übersetzung ist
+also 1:12. Allgemein ist die Übersetzung
+eines zweistufigen Getriebes also das
+Produkt der Übersetzungen der einzelnen
+Stufen.
+Wenn du dir an die Eingangswelle und an
+die Ausgangswelle jeweils einen Zeiger
+baust, hast du die Stunden- und Minutenanzeige einer Analoguhr. Bei einer
+Analoguhr dreht sich der Stundenzeiger ja
+auch in zwölf Stunden genau einmal um
+die Achse, und in dieser Zeit hat sich der
+Minutenzeiger zwölf Male um seine Achse
+gedreht. Natürlich ist es nicht schön, dass
+die beiden Zeiger nicht auf der gleichen
+
+Mathematisch kommt durch Verwenden
+der anderen großen Stirnräder nichts Neues
+hinzu, weil alle anderen Verhältnisse in der
+Tabelle oben schon von dieser Form sind.
+Zum Beispiel ist 8:3 = 23 : 31. Praktisch
+kann man natürlich Stufen sparen, wenn
+man auch andere Stirnräder verwendet.
+Man kann kein fischertechnik-Getriebe nur
+aus großen Stirnrädern bauen, das genau
+die Übersetzung 5:1 hat. Das gleiche gilt
+für die meisten anderen Verhältnisse.
+Vielleicht erstaunt es dich aber, dass man
+jedes gewünschte Verhältnis theoretisch
+beliebig genau annähern kann. Wenn du
+zum Beispiel das Verhältnis 5:1 nur grob
+benötigst, dann reicht dir vielleicht 128:27
+= 27:33 4,74:1. Möchtest du es – sagen
+wir – bis auf zwei Stellen hinter dem
+Komma genau, so kannst du 32768:6561 =
+215:38
+4,994:1 verwenden. Um ein
+Getriebe mit dieser Übersetzung tatsächlich nur aus großen ft-Stirnrädern zu
+bauen, bräuchtest du allerdings 24 davon:
+
+
+vier Z40, drei Z10, neun Z20 und acht Z30.
+Es ist klar, dass das meist nicht sehr
+praktisch ist. Du kannst die Übersetzung
+5:1 natürlich trotzdem genau mit fischertechnik erzielen. Nur geht das nicht mit
+Stirnrädern allein: Eine Möglichkeit wäre
+die Verwendung der Schnecke. Du kannst
+aber auch das kombinierte Stirn-/Kronenrad Z40/Z32 benutzen. Wenn du es mit
+einem Z10 auf dem Kronenrad antreibst
+und mit einem Z10 auf dem Stirnrad
+abtreibst, ist die Übersetzung 40:32 = 5:4.
+Andere sehr spezielle Verhältnisse wie
+11:9, 7:11 oder 7:9 kannst du erzielen,
+wenn du die Mini-Zahnräder einsetzt. Du
+kannst auch Ketten auf normale fischertechnik-Räder aufziehen und so Stirnräder
+mit ungewöhnlich vielen Zähnen herstellen. Das wurde früher im Begleitheft
+des hobby 2-Baukastens vorgestellt und
+später von Thomas Habig systematisch
+untersucht. Wir werden im zweiten Teil
+dieser Miniserie eine ganz andere Methode
+kennenlernen, die für alle Übersetzungsverhältnisse brauchbar ist.
+
+Analoge Zeitanzeige
+Zum Schluss dieses Teils bauen wir eine
+Uhr mit Stunden- und Minutenzeiger. Über
+einen geeigneten Antrieb kannst du selbst
+nachdenken oder dir eine der unterschiedlichen Lösungen in den hobbyBüchern oder auf der ft-community Seite
+abschauen. Das ist natürlich mindestens
+genauso schwierig wie die Stunden/Minuten-Mechanik, passt aber hier nicht
+zum Thema. Ich habe diese Uhr fast
+komplett im Kopf und auf dem Papier
+entworfen, bevor ich sie dann konkret
+gebaut habe. Im Kopf und auf dem Papier
+zu arbeiten, hat folgende Vorteile: 1. Man
+konzentriert sich auf das Wesentliche. 2.
+Man kann die Entwürfe deutlich schneller
+ändern und übersieht daher selten
+Vereinfachungen. 3. Man braucht keine
+Bauteile zur Hand zu haben und kann zum
+Beispiel auch während einer Zugfahrt
+Modelle entwerfen.
+
+Wie geht man dabei vor? Das Allerwichtigste ist, das Problem so genau wie
+möglich zu formulieren. In unserem Fall
+lautet das Problem zunächst einmal:
+Mehrere Getriebestufen müssen so kombiniert werden, dass die Gesamtübersetzung 12:1 ist und dass die Eingangsachse gleich der Ausgangsachse ist.
+Ist das Problem in einer ersten Version
+formuliert, geht man gemäß dem Motto
+divide et impera (teile und herrsche) vor:
+Man zerlegt das Problem. In unserem Fall
+besteht es aus den zwei miteinander
+verwobenen Teilproblemen Gesamtübersetzung 12:1 und Eingangsachse =
+Ausgangsachse.
+Das zweite Teilproblem klingt zwar
+griffig, aber ein wenig unkonkret. Daher
+muss man sofort versuchen, es präziser zu
+machen: Auf einer Achse müssen zwei
+Zeiger unabhängig voneinander angetrieben werden. Eine einfache Lösung
+dieses Problems ist bekannt: Man verbindet einen Zeiger fest mit der Achse. Der
+andere wird an einem von außen
+angetriebenen Stirnrad befestigt, das mit
+einer Freilaufnabe auf die Achse
+geschoben wird, sich also unabhängig von
+der Achse drehen kann.
+Mit dieser Lösung des zweiten Teilproblems kann man jetzt viel genauer über
+das erste Teilproblem nachdenken: Ein
+Stirnrad, an dem ein Zeiger befestigt wird,
+kann nur ein Z30 oder ein Z40 sein. Da es
+von einem anderen Stirnrad angetrieben
+werden muss, erledigt man praktischerweise dabei die erste Getriebestufe – also
+eine Übersetzung 2:1, 3:1 oder 4:1. Die
+verbleibenden Getriebestufen müssen dann
+eine Übersetzung von 6:1, 4:1 oder 3:1
+haben und müssen so ausgelegt sein, dass
+die Ausgangsachse mit der Eingangsachse
+der ersten Stufe übereinstimmt und die
+Eingangsachse durch die Freilaufnabe
+führt. Außerdem muss man noch darauf
+achten, dass der Drehsinn der beiden
+Zeiger zum Schluss gleich ist. Das
+
+bedeutet, dass man unter Umständen noch
+ein Stirnrad dazwischen schieben oder
+einen anderen Trick finden muss, um die
+Richtung zu ändern.
+
+Getriebe
+
+gesetzt drehen. Darüber musste ich dann
+doch ein wenig nachdenken. Wenn du das
+Modell betrachtest, fällt dir sicher – wie
+meinen Kindern auch – sofort die Stelle
+auf, an denen ich das behoben habe, ohne
+ein weiteres Stirnrad dazwischen zu
+schieben.
+
+Bild 11: Entwurfszeichnung auf Papier
+
+Jetzt beginnt das systematische Probieren.
+Man beginnt bei dem Stirnrad mit Freilaufnabe, da es dort nur die beiden sinnvollen Möglichkeiten Z30 und Z40 gibt,
+und versucht auf dem Papier, die weiteren
+Stufen sinnvoll zu ergänzen. Ich zeichne
+meist auf kariertem Papier. Ein Baustein 15 nimmt 2 x 2 Quadrate ein, aber
+meist zeichne ich die Bausteine gar nicht,
+wenn es um Getriebe geht, sondern nur die
+Zahnräder und Achsen. Wo die Achsen
+durch Lager gehen, zeichne ich nur
+gestrichelte Linien. Ein Stirnrad Z10 ist bei
+mir zwei Kästchen lang und ein halbes
+Kästchen breit.
+Wenn man so zu zeichnen anfängt, ordnen
+sich die Gedanken meist ganz von selbst.
+Ich merkte recht schnell, dass das Stirnrad
+auf der Freilaufnabe ein Z30 sein muss,
+das von einem Z10 angetrieben wird
+(Übersetzung 3:1) und dass ich dazu zwei
+weitere 2:1-Stufen ergänzen musste, damit
+die Abstände alle passen. Aber da war
+noch das Problem mit der Richtungsumkehr: Jede Stufe kehrt die Richtung um,
+bei drei Stufen würden sich daher die
+beiden Zeiger zum Schluss entgegen-
+
+Bild 12: Das fertige Getriebe
+
+Zum Nachbau: Vielleicht hast du keine
+Freilaufnabe. Dann nimm einfach eine
+normale Nabe und drehe sie nur ganz
+wenig zu. Eventuell musst du vorher die
+zwei Flügel mit einem Taschenmesser auseinander biegen. Falls du kein Rast-Z20
+hast, kannst du natürlich eine längere Rastachse und ein normales Z20 mit Nabe
+verwenden. Wenn du nur ein schwarzes
+Z30 besitzt, wirst du die Zeiger vielleicht
+anders gestalten wollen. Du kannst zum
+Beispiel einen roten Strebenadapter in eine
+der Bohrungen des Z30 stecken und als
+kurzen Zeiger verwenden. Dir werden aber
+sicher eigene Ideen kommen.
+
+

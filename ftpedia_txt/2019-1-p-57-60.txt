@@ -1,0 +1,345 @@
+
+Computing
+
+Computing
+
+startIDE (7): Psychrometer
+Rolf Meingast
+Dieser Beitrag beschäftigt sich mit dem Aufbau eines fischertechnik-Psychrometers und dem
+Programm zur Steuerung, das auf dem TXT oder dem TX-Pi mit der App startIDE läuft [1].
+
+Hintergrund
+Unter einem Psychrometer, vorgestellt von
+Ernst Ferdinand August (1795-1870) im
+Jahr 1825, verbessert von Richard Aßmann
+(1845-1918) 1892, versteht man ein Gerät
+zur Bestimmung der relativen Luftfeuchtigkeit.
+Zwei Thermometer, Th1 und Th2, von
+denen das zweite um sein Quecksilbergefäß
+eine Hülle aus leichtem Gewebe trägt,
+befinden sich in einem Luftstrom. Dieser
+Luftstrom streicht an beiden Thermometergefäßen vorbei. Benetzt man die Hülle am
+zweiten Thermometer mit Wasser von
+Raumtemperatur, so verdunstet das Wasser
+umso schneller in die vorbeiströmende Luft,
+je trockener diese ist.
+
+dem Temperaturunterschied zwischen dem
+trockenen und dem feuchten auf die Feuchtigkeit der Luft schließen. Meist entnimmt
+man zur abgelesenen Temperaturdifferenz
+in Abhängigkeit von der Raumtemperatur
+den Wert der relativen Luftfeuchte aus einer
+Tabelle oder einem Diagramm, z. B. dem
+Psychrometerdiagramm in Abb. 1.
+
+Aufbau des Psychrometers
+Als Thermometer verwende ich zwei
+NTC10K Temperaturfühler.2 Der mit einem
+feuchten Papiertuch umwickelte befindet
+sich in einem kleinen Metallzylinder und ist
+am Eingang I1 des ftDuino [2] (oder eines
+TXT) angeschlossen, der zweite an I2.
+
+
+Infolge der dabei auftretenden Verdunstungskälte kühlt sich Th2 ab. Man kann aus
+
+
+
+Diese beiden Fühler hatte ich zufällig; natürlich
+kann man auch zwei beliebige andere Temperaturfühler verwenden.
+
+
+Der Motor mit Luftschraube wird an den
+Motorausgang M1 angeschlossen.
+
+
+Durchführung der Messung
+Das Papiertuch um Th2 wird befeuchtet, der
+Ventilator eingeschaltet und die beiden
+Temperaturen T1 und T2 abgelesen. Die
+Temperatur T2 sinkt nach einigen Minuten
+auf einen kleinsten Wert T2min.
+Wenn nicht mehr genügend Wasser verdunstet, steigt die Temperatur T2 wieder an.
+Anhand der Werte von T1 und der Temperaturdifferenz T1-T2min kann aus dem
+Psychrometerdiagramm die relative Luftfeuchte entnommen werden. Für Umgebungstemperaturen in der Nähe von 22°C
+wird die Luftfeuchte direkt auf dem Display
+angezeigt.
+Temperaturmessung
+Die Temperaturmessung mit einem
+NTC10k erfolgt durch Messung des elektrischen Widerstands R. Anhand einer
+T(R)-Formel kann daraus die Temperatur
+ermittelt werden.
+Ich habe mich für einen anderen Weg entschieden. Beide Heißleiter wurden zusammen mit einem Thermometer in eiskaltes
+Wasser gehalten, die Widerstände R1 und
+R2 und die Temperatur T bestimmt. Diese
+Werte R1, R2 und T wurden in den Arrays
+data_R1.arr,
+data_R2.arr
+und
+data_T12.arr gespeichert. Durch Zugabe
+von heißem Wasser wurde die Temperatur
+dann schrittweise erhöht. Zur Erhöhung der
+
+
+Genauigkeit wurde die Temperatur in
+1/10°C eingegeben.
+Hängt man die nächsten Daten an die ersten
+Daten (append) nehmen mit steigender
+Temperatur die Widerstände ab. Um aus
+gemessenen Widerstandswerten im Psychrometerprogramm die Temperaturen zu
+ermitteln, müssen die Widerstandswerte im
+R-Array aber stetig steigen. Deshalb
+werden zunächst Startwerte in die Arrays
+eingetragen und die folgenden Werte davor
+(Position 0) eingefügt. Zum Schluss werden
+die Startwerte, die sich ja dann am ArrayEnde befinden, wieder entfernt.
+Programm zur Array-Erzeugung
+# new
+# ARR_dgrad_gen23
+# Kalibrieren von
+# zwei NTC-Widerstaenden
+# an I1 und I2 des FTD
+Message ARR_dgrad_gen12'Okay
+# Eingabe der Widerstands# werte in dezi °C
+# dies muss bei der
+# Auswertung beachtet werden!
+Print Temperatur in 1/10 °C
+Delay 2000
+# Wenn sich die Werte R1 und R2
+# nicht mehr aendern:
+Print R_ENDE:Taste TX-Pi
+Delay 2000
+# Ende der Eingabe
+Print EingabeENDE:T>1000
+Delay 2000
+Init integer 0
+Init T_i 0
+Init R1_i 0
+Init R2_i 0
+ArrayInit data_T12
+ArrayInit data_R1
+ArrayInit data_R2
+# in die Arrays werden
+# Nullen als erste
+# Elemente geschrieben
+Init i 0
+Array T_i appendTo data_T12 0
+Array R1_i appendTo data_R1 0
+Array R2_i appendTo data_R2 0
+# Eingabewiederholung
+Tag A
+Clear
+FromIn FTD 1 R R1_i
+Delay 100
+FromIn FTD 2 R R2_i
+
+# Arrayindex i
+QueryVar i
+# Anzeige beider
+# Widerstandswerte
+QueryVar R1_i
+QueryVar R2_i
+Delay 100
+FromSys integer dispBtn
+Delay 100
+# Widerstandmessung Wdh.,
+# wenn keine Taste des
+# TX-Pi gedrueckt wird.
+IfVar integer == 0 A
+# Temperatureingabe
+# in dezigrad
+FromKeypad T_i -250 32768
+IfVar T_i > 1000 E
+# T und R-Werte werden
+# in die Arrays an den
+# Anfang eingefuegt
+Array T_i insertTo data_T12 0
+Array R1_i insertTo data_R1 0
+Array R2_i insertTo data_R2 0
+Calc i i + 1
+Message neue Temperatur
+einstellen!'Okay
+Jump A
+# Ende der Eingabe und
+# Speichern der Arrays
+Tag E
+ArrayStat i sizeOf data_T12
+Calc i i - 1
+Array integer removeFrom data_T12
+i
+Array Integer removeFrom data_R1 i
+Array Integer removeFrom data_T12
+i
+ArraySave data_T12 replace
+ArraySave data_R1 replace
+ArraySave data_R2 replace
+
+Listing 1: Erzeugung der Arrays
+
+Zusätzlich wurden „per Hand“ aus dem
+Psychrometerdiagramm Arrays mit Werten
+der relativen Feuchtigkeit (data_rLF.arr)
+und Temperaturdifferenz in dGrad (data_dT
+.arr) bei Raumtemperatur (22°C) erzeugt:
+100;96;92;87;83;80;76;72;68;65;61;
+57;54;50;47;44;40;38;35;31;28;25;1
+5;
+0;5;10;15;20;25;30;35;40;45;50;55;
+60;65;70;75;80;85;90;95;100;105;12
+5;
+
+Diese beiden Arrays wurden über das
+Webinterface von startIDE mit einem
+Internetbrowser auf den TX-Pi geladen.
+
+Computing
+
+
+Messprogramm (mit Kommentaren)
+# new
+# Hygrometer-36
+# 20181224
+Print Psychrometer
+Print mit TX-Pi
+Print und FTD
+Delay 2000
+Clear
+ArrayInit data_T12
+ArrayInit data_R1
+ArrayInit data_R2
+ArrayInit data_dT
+ArrayInit data_rLF
+#
+# Laden der Arrays
+# NTC10k Daten
+# erzeugt mit
+# ARR_dgrad_gen23
+# Temperatur in
+# deziCelsius Grad!
+ArrayLoad data_T12 byName
+ArrayLoad data_R1 byName
+ArrayLoad data_R2 byName
+# PsychrometerDaten
+# bei 22°C
+ArrayLoad data_dT byName
+ArrayLoad data_rLF byName
+#
+# Ventilator ein
+#
+Motor FTD 1 r 255
+#
+# Beginn der Messungen
+#
+
+
+
+Init Grad-Celsius 0
+Init Zehntelgrad 0
+Init i 0
+Init korr 0
+Init R_mess 0
+Init Temp 0
+Init Temp1 0
+Init Temp2 0
+Init rel.LF 100
+Init deltaTemp 0
+Init rel.LFmin 100
+#
+Tag Messungen
+#
+# NTC #1 an I1 des FTD
+#
+Init HL 1
+# Widerstandsmessung an I1
+FromIn FTD 1 R R_mess
+# aus R_mess wird die
+# Temperatur Temp
+LookUpTable Temp data_R1 linear
+data_T12 R_mess
+# Temp1:= Dezigrad an I1:
+Init Temp1 Temp
+#
+# NTC #2 an I2 des FTD
+#
+Init HL 2
+# Raumtemperatur in
+# dezigrad
+# Widerstandsmessung an I2
+FromIn FTD 2 R R_mess
+LookUpTable Temp data_R2 linear
+data_T12 R_mess
+# Temp2:= Temp
+Init Temp2 Temp
+Print Raumtemperatur:
+Call TEMP-Ausgabe 1
+#
+# Berechnung der
+Temperaturdifferenz
+#
+Calc deltaTemp Temp2 - Temp1
+IfVar deltaTemp <= 0 O
+Init Temp deltaTemp
+Print Abkuehlung um:
+Call TEMP-Ausgabe 1
+#
+# Berechnung der
+# rel. Luftfeuchte
+# Berücksichtigung der
+# Abweichung von 22°C
+Calc korr Temp2 - 220
+
+
+Calc korr korr * 10
+Calc korr korr + 25
+Calc korr korr / 50
+Calc deltaTemp deltaTemp - korr
+IfVar deltaTemp < 0 O
+LookUpTable rel.LF data_dT linear
+data_rLF deltaTemp
+IfVar rel.LFmin < rel.LF M
+Init rel.LFmin rel.LF
+Tag M
+Print
+QueryVar rel.LF
+Tag O
+QueryVar rel.LFmin
+Print in %
+#
+Tag weiter
+#
+Delay 2000
+Clear
+Jump Messungen
+#
+#
+Module TEMP-Ausgabe
+#
+# Wert der Temperatur in
+# dezigrad in Temp wird
+# in grad umgerechnet:
+Calc Grad-Celsius Temp div 10
+# Rest dezigrad
+Calc Zehntelgrad Temp mod 10
+#Ausgabe
+QueryVar Grad-Celsius
+QueryVar Zehntelgrad
+MEnd
+
+Listing 2: Messprogramm
+
+Referenzen
+[1]
+
+Peter Habermehl: startIDE für die
+Community Firmware – Programmieren direkt auf dem TXT oder TXPi. ft:pedia 1/2018, S. 102-107.
+
+[2]
+
+Till Harbaum: ftDuino – Open
+Source trifft Konstruktionsbaukasten.
+ft:pedia 1/2018, S. 85-91. Siehe
+auch: ftDuino.de und Till Harbaum:
+fischertechnik compatible arduino.
+GitHub.
+
+

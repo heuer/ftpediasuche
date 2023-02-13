@@ -1,0 +1,692 @@
+
+Computing
+
+Computing
+
+ft-Modellsteuerung mit selbst gebautem
+Mikrocontroller-Board
+Dirk Uffmann
+Einige kennen vielleicht diesen Wunsch: Ich habe mehrere fischertechnik-Modelle, die ich mit
+einem TX-Controller steuern möchte – aber mir fehlt das Budget für die nötige Anzahl dieser
+Bausteine. Außerdem möchte ich die Eingangssignale in Echtzeit verarbeiten, z. B. zum
+Auslösen von Interrupt-Service-Routinen, die das Hauptprogramm unterbrechen und mit
+denen die Zeit zwischen zwei Signaländerungen sehr genau gemessen werden kann. Und ich
+möchte die I/O- Pins der Steuerung flexibler nutzen, z. B. auch als Output zur Erzeugung von
+Pulsen für Lichtschranken oder zum Schalten von LEDs. Wenn ihr ähnliche Wünsche habt,
+dann zeigt euch dieser Beitrag einen Weg, mit dem ihr euch diese erfüllen könnt.
+Treiben von LEDs. Wer zudem viele
+Modelle parallel ansteuern und seinen TX
+Controller nicht immer zwischen den
+Modellen austauschen will, kommt möglicherweise an seine Budget-Grenzen.
+Dieser Beitrag beschreibt den Selbstbau
+eines einfachen Mikrocontroller-Boards für
+die automatisierte elektronische Steuerung
+von fischertechnik-Modellen (Abb. 1).
+
+
+Hintergrund
+fischertechnik bietet für die elektronische
+Steuerung von Modellen viele gelungene
+Produkte. Der TX Controller verfügt über
+tolle Möglichkeiten und ist für die meisten
+Anwender sehr gut geeignet. Manchmal
+wünscht man sich jedoch, näher an der
+Hardware programmieren zu können oder
+eine höhere Flexibilität für die Nutzung der
+Ein- und Ausgänge zur Verfügung zu
+haben. Beispiele sind das Auslösen von
+Interrupts durch die Eingangssignale, das
+Erzeugen von Pulsen oder das direkte
+
+
+Das Board wurde als zweiseitige Platine
+der Größe 80 x 100 mm (halbes Europakartenformat) entworfen. Bis auf wenige
+Ausnahmen wurden bedrahtete Bauteile im
+
+
+
+
+Raster 2,54 mm verwendet. Dadurch sind
+die Strukturgrößen der Leitbahnen relativ
+groß und gut für Hobbymittel geeignet
+(Abb. 2).
+
+Features
+Das Board bietet:
+· acht digitale Anschlüsse (jeder gepaart
+mit einer Masse-Leitung), einzeln konfigurierbar als Ein- oder Ausgang mit
+spezifischen Sonderfunktionen wie
+Interrupts oder für Kommunikationsschnittstellen
+· acht analoge Eingänge (jeder gepaart
+mit einer Masse-Leitung), alternativ
+einzeln konfigurierbar als digitaler Einoder Ausgang
+· vier PWM (Pulse Width Modulation)
+steuerbare Motor-Ausgänge mit zwei
+L293DNE Motor-Treiber ICs
+· Infrarot-Fernbedienungsempfänger
+SFH5110-38kHz zur Nutzung einer
+vorhandenen Fernbedienung
+· SPI-Kommunikationsschnittstelle
+(Serial Peripheral Interface) zu einem
+weiteren identischen Board über den 6Pin ISP-Anschluss (In System Programmer); dadurch besteht eine Erweiterungsmöglichkeit auf acht Motoren
+· I²C-Kommunikation mit bis zu 127
+Bauteilen über ein Bus-Protokoll (Beispiel: Anschluss mehrerer Ultraschallsensoren und eines I²C LC-Displays)
+· 8 bit-µController ATMEGA1284P-PU
+(ca. 6,35 € beim Reichelt ElektronikVersand) oder ATMEGA644P-PU [1]
+· Programmierung in C (GCC: Gnu CCompiler) oder in Assembler mit AVR
+Studio, einer komfortablen Entwicklungsumgebung (kostenloser Download)
+· Serielle UART-Schnittstelle (Universal
+Asynchronous Receiver Transmitter),
+
+
+vorbereitet für 3,3 V Bauteile (z. B. eine
+Handy-Kamera MCA-25)
+· 18,432 MHz Baud-Raten-Quarz (für die
+UART-Schnittstelle)
+Das Laden des Programmcodes in den
+internen Flash-Speicher erfolgt mit Hilfe
+des Programmiergerätes AVRISP MKII
+(ca. 30-40 €) über USB. Für den CodeDownload muss das Board mit Strom versorgt werden.
+Pin-Belegung am 20-poligen Flachbandstecker (oben rechts, analog)
+PA7
+GND
+
+PA6
+GND
+
+PA5
+GND
+
+PA4
+GND
+
+PA3
+GND
+
+PA2
+GND
+
+PA1
+GND
+
+PA0
+GND
+
++5V
++5V
+
++5V
+0-5V
+Poti
+
++3V3
++3V3
+
++5V
++5V
+
+Pin-Belegung am 20-poligen Flachbandstecker (unten links, digital)
+SCL
+PC0
+GND
+
+SDA
+PC1
+GND
+
+SS
+PB4
+GND
+
+RxD
+PD0
+GND
+
+TxD
+PD1
+GND
+
+INT0
+PD2
+GND
+
+INT1
+PD3
+GND
+
+ICP
+PD6
+GND
+
+Pin-Belegung am 10-poligen Flachbandstecker (Motoren, Versorgung)
+links rechts
+PC4 PC2
+rückw. Out2 Out3 +9V
+vorw. Out1 Out4 GND
+PC5 PC3
+En1
+En2
+OC1A OC1B
+PD5 PD4
+unten
+
+links
+PB1
+Out2
+Out1
+PB0
+En1
+OC0
+PB3
+oben
+
+rechts
+PC7
+Out3 rückw.
+Out4 vorw.
+PC6
+En2
+OC2
+PD7
+
+Pin-Belegung am 10-poligen Flachbandstecker für LEDs oben links
+GND GND GND GND GND
+100Ω/5V 100Ω/5V 100Ω/5V 100Ω/5V +5V
+
+außen
+innen
+
+Pin-Belegung am 10-poligen Flachbandstecker für LEDs unten
+GND
++5V
+
+100Ω/^ 100Ω/^ 100Ω/^ 100Ω/^
++5V
+
++5V
+
++5V
+
++5V
+
+innen
+außen
+
+AVR-Programmierstecker
+MISO SCK RESET
++5V
+MOSI GND
+
+Steckerleisten
+
+Die Anschlüsse sind alle mit Pfostensteckerleisten für Flachbandkabel ausgestattet (Belegung siehe Abb. 3). Dadurch
+spart man ca. 50 % der nötigen fischertechnik-Stecker ein (die ja auch häufig
+Mangelware sind). Die ft-Stecker sind
+dann nur an einem Ende des jeweiligen
+
+Kabels erforderlich. Die Breite der 20erFlachbandkabel für die beiden Eingangskontaktleisten stimmt mit der des alten
+Universal-Interfaces und des Robo-ProInterfaces überein: Die vorhandenen Flachbandkabel können also weiter verwendet
+werden.
+Da die Glühbirnen für die Leuchtsteine
+immer seltener werden und viele bereits
+5 mm-LEDs in den Leuchtsteinen einsetzen, habe ich auf zwei weiteren, 10poligen Steckerleisten auch noch eine 5 VVersorgung mit und ohne Vorwiderstände
+vorgesehen. Dann ist man nicht unbedingt
+darauf angewiesen, die Vorwiderstände in
+die Leuchtsteine mit einzubauen.
+Um LED-Licht zu schalten, kann man die
+Pins auf den 20-poligen Pfostensteckerleisten als Ausgang konfigurieren. Damit
+lassen sich LEDs direkt ansteuern und mit
+einem Strom von bis zu 40 mA treiben. Für
+weiße und blaue LEDs, die zwischen 2,7
+und 4 V Spannung benötigen, geht das
+auch gut ohne Vorwiderstand. Für rote und
+gelbe LEDs mit geringerer Spannung kann
+man jeweils zwei in Serie geschaltete
+LEDs an einem Ausgang ohne Vorwiderstand einsetzen.
+
+Computing
+
+seitigen LED-Moduls
+Bremslicht und Blinker.
+
+für
+
+Rücklicht,
+
+Für mobile Roboter und sonstige Stell- und
+Positionierungsaufgaben der Motoren bieten sich die beiden Eingänge PD2 und PD3
+an, die einen externen Interrupt auslösen,
+wenn sie entsprechend konfiguriert sind.
+Mit diesen Eingängen lassen sich nebenbei
+Impulse von Drehencodern oder Gabellichtschranken zählen (Abb. 5) und man
+kann die Zeit zwischen zwei Impulsen sehr
+genau messen, z. B. für eine Geschwindigkeitsregelung.
+
+Gabellichtschranke als Drehencoder
+
+Damit bietet dieses Mikrocontrollerboard
+viele Features, die man vom TX-Controller
+kennt. Der TX bietet darüber hinaus ein
+schönes Gehäuse und ein LC-Display. Als
+Ersatz für das Gehäuse habe ich die
+Unterseite der Platine mit einer auf 80 x
+100 mm zugeschnittenen Pappe, die von
+Gummibändern an der Platine gehalten
+wird, abgedeckt. Im Modell wird die
+Platine dann liegend mit vier Bausteinen
+V15 Eck (38240) eingefasst (Abb. 6).
+
+
+drei weiße LEDs) und Blinkern (je zwei
+gelbe LEDs), die direkt mit dem Mikrocontrollerboard angesteuert werden. Der
+Anschluss erfolgt über Flachbandkabel und
+Pfostensteckverbinder ohne einen einzigen
+ft-Stecker. An der Wand hinten rechts im
+Bild sieht man die Reflexion des rück-
+
+ein ft-Modell eingebaut werden.
+
+
+
+Ein LCD kann man an das Mikrocontroller-Board auch anschließen. So ein
+LCD ist bei der Codierung des Steuerprogramms für das Modell oft sehr nützlich, um Fehler im Programm zu finden,
+z. B. indem man die im Programm
+berechneten Variablen auf dem LCD
+darstellen lässt. Das LCD ist außerdem
+nützlich, um sich aktuelle Messwerte von
+Sensoren etc. ausgeben zu lassen (Abb. 7).
+
+Herstellung der Platine
+Nun stellt sich die Frage, wie man sich ein
+solches selbstgebautes MikrocontrollerBoard herstellen kann. Die Designdaten für
+das Entwurfsprogramm Eagle von Cadsoft
+nebst Maskenvorlagen als .eps (encapsulated postscript als Grafik in Word o. ä.
+druckbar, Abb. 8, 9) stelle ich zum Download auf meiner Website zur Verfügung.
+Das Programm Eagle selbst kann als
+kostenlose Freeware im Internet bezogen
+werden (als Light-Version bis zu einer
+Platinengröße von 80 x 100 mm und zweiseitiger Verdrahtung). Mit Eagle lässt sich
+mein Entwurf auch verändern oder weiterentwickeln.
+
+à 20 Zeichen, ergänzt um eine I²C-InterfacePlatine (auf der Unterseite angelötet)
+
+Besonders einfach geht das mit Text-LCDs
+nach Industriestandard – einem HD44780Controller. Entweder betreibt man dieses
+direkt an den I/O-Pins des MikrocontrollerBoards im 4-bit-Modus, wofür sieben I/OPins benötigt werden. Oder, noch besser,
+man verwendet ein I²C-fähiges LCD (z. B.
+mit einem PCF8574 als Interface, siehe
+auch [2]). In diesem Fall benötigt man nur
+zwei I/O-Pins. Zur Zeit kann man blaue
+vierzeilige LCD mit weißem Hintergrundlicht zum Stückpreis von ca. 5 € aus China
+in der „Bucht“ erwerben. Die passenden,
+direkt auf die LCD-Anschlusspins lötbaren
+I²C-Anschlussboards gibt es für ca. 2 € pro
+Stück (Pinbelegung beachten). Ein zweizeiliges grünes LCD gibt es komplett bei
+Pollin für 6,95 €. Zur Ansteuerung des I²CBusses und für Text-LCDs stehen im
+Internet Software-Bibliotheken für AtmelMikrocontroller zum freien Download zur
+Verfügung, z. B. von Peter Fleury. Für die
+Ansteuerung des hier vorgestellten I²CLCDs stellt der Autor passenden Code im
+Downloadpaket auf seiner Website zur
+Verfügung.
+
+Eagle (Leiterbahnen auf der Komponentenseite
+in roter, auf der Lötseite in blauer Farbe)
+
+auf der Komponentenseite. Gespiegelte Ansicht, damit sich der Toner für die Belichtung
+auf der Seite der Fotoschicht befindet
+
+Der einfachste Weg zur Herstellung von
+Platinen geht über einen Leiterplattenhersteller für Prototypen wie z. B. bilex
+(Fertigung in Bulgarien, aber Deutsch
+sprechender Kontakt und Konto in
+Deutschland). Dort kann man die EagleDesigndaten per E-Mail abgeben und sich
+für ca. 15-20 €/Stück die Leiterplatten
+belichten, ätzen, bohren und galvanisch
+durchkontaktieren lassen. Das spart viel
+Zeit.
+
+auf der Lötseite
+
+Alternativ und mit viel mehr persönlichem
+Zeitaufwand stellt man die Platinen selbst
+her. Dazu verwendet man meine fertigen
+Maskenvorlagen, druckt diese auf Overheadfolie aus und belichtet damit doppelseitig fotobeschichtete und kupferkaschierte Platinen (am besten Europakartenformat 100 x 160 mm mit zwei der
+Boards darauf nebeneinander platziert).
+Dazu klebt man die beiden Maskenseiten
+als eine Art Fototasche zusammen, so dass
+die Tonerschicht innen liegt und die
+Strukturen, besonders die Durchkontaktierungen, passgenau übereinander zu
+liegen kommen (Abb. 11).
+Direkt vor dem Belichtungsvorgang muss
+noch von beiden Seiten der Platine die
+lichtdichte Schutzfolie abgezogen werden.
+
+Computing
+
+Europakarte (Format 100 x 160 mm). Als
+„Rahmen“ dient ein rechtwinklig
+ausgeschnittenes Platinenstück, an das die
+beiden Folien mit Klebeband geklebt werden.
+
+Danach kann dann von beiden Seiten
+belichtet werden. Dazu benutze ich einen
+UVA-Oberkörperbräuner im Abstand von
+ca. 60 cm, den ich auf zwei Stühlen über
+der zu belichtenden Platine in horizontale
+Position bringe. Dabei drückt eine kleine
+Glasplatte die Overheadfolie plan auf die
+Fotoschicht. Anschließend wird die Platine
+samt Fototasche gewendet und von der
+anderen Seite belichtet. Dabei ist zu
+beachten, dass die Platine beim Wenden
+nicht in der Fototasche verrutscht. Die
+Belichtungszeit beträgt bei mir ca. 90 s.
+Dies ist von der Lichtintensität des UVLichtes abhängig und jeder sollte erst eine
+kleine Belichtungs- und Entwicklungsreihe
+mit kleinen Probestücken oder Streifen des
+Platinenmaterials machen.
+Die belichtete Platine wird dann für etwa
+2-3 min in ein Entwicklerbad aus verdünntem Natriumhydroxid (NaOH) gegeben,
+hin und her bewegt und nach dem Herauslösen der belichteten Bereiche (bei Positivlack) in Wasser gespült. Danach wird die
+entwickelte Platine in ein erwärmtes
+Ätzbad aus Natriumpersulfat (Na2S2O8;
+exakter Name: Natriumperoxodisulfat)
+gegeben. Ideal zum Ätzen wäre dafür eine
+Ätzküvette, die die Temperatur auf ca. 4050° C regelt und Luft einbläst. Es geht aber
+auch ohne Ätzküvette: Man erwärmt die
+angesetzte Lösung in einem geschlossenen
+Glas in der Mikrowelle, bis sie deutlich
+
+
+mehr als handwarm ist. Ist das Glas ausreichend groß für die Platine (evtl. großes
+Einmachglas), gibt man die Platinen in das
+Glas, schließt dieses dicht ab (verriegelter
+Deckel mit Dichtung) und schüttelt es, bis
+das Kupfer weggeätzt ist (deutlich
+sichtbare Kontraständerung, die Strukturen
+auf der hinteren Seite der Platine werden
+durchscheinend erkennbar).
+Oder aber man verwendet eine Ätzschale
+aus Kunststoff und bewegt die Platine in
+der warmen Lösung hin und her. Der
+Ätzvorgang kann dann bis zu 20 min
+dauern. Anschließend wird die Platine
+gründlich mit Wasser abgespült (erst in
+einem großen Wassereimer, dann unter
+dem Wasserhahn). Nun müssen noch die
+verbliebenen Fotolackstrukturen entfernt
+werden. Dazu kann man höher konzentrierte Entwicklerlösung ansetzen und die
+Platinen darin baden, bis der Fotolack
+vollständig aufgelöst wurde.
+
+nigt und nach dem Trocknen mit Lötlack
+eingesprüht. Für diejenigen Durchkontaktierungen
+(leitende
+Verbindungen
+zwischen den beiden Platinenseiten), in
+denen nach dem Bestücken mit Bauteilen
+kein Draht eines Bauteils sitzt, löte ich
+kurze Drähte als Durchkontaktierung ein.
+Nun kann die Platine bestückt und gelötet
+werden. Dafür kann man als Vorlage die
+Bestückungspläne aus Eagle benutzen
+(Abb. 13, 14).
+
+Komponentenseite (bitte den MEGA 8535P
+ersetzen durch ATMEGA 1284P-PU oder
+644P-PU; für den JP2 den Infrarotempfänger
+SFH 5110-38 einsetzen)
+
+Mit dem dargestellten Verfahren können sehr
+feine Strukturen hergestellt werden. Der Pitch,
+also der Abstand der SMD Pads von Mitte zu
+Mitte für dieses TQFP64-Package beträgt 0,8
+mm (Board für einen AT90USB1287).
+
+Nun muss die Platine noch gebohrt und
+durchkontaktiert werden. Zum Bohren benutze ich einen Proxxon Feinbohrschleifer
+FBS 240/E mit Bohrständer Proxxon
+MB200. Alternativ eignen sich dafür auch
+die Geräte des Wettbewerbers Dremel oder
+anderer. Nach dem Bohren wird die Platine
+nochmals mit Wasser abgespült und gerei44
+
+auf der Lötseite
+
+Beim Löten sollte man darauf achten,
+diejenigen Bauteile, deren Drähte auch als
+Durchkontaktierung zur Komponentenseite
+dienen, auch auf der Oberseite anzulöten.
+Generell ist wichtig, alle Masseflächen
+über Durchkontaktierungen auch an Masse
+anzuschließen. Am besten misst man das
+
+
+Computing
+
+* Fuse Extended:
+*
+*
+* Fuse High Byte:
+*
+*
+*
+*
+*
+*
+*
+*
+* Fuse Low Byte:
+*
+*
+*
+*
+
+mit einem Multimeter nach. Nach dem
+Bestücken und Löten kann die Platine in
+Betrieb genommen und an die externe
+Versorgungsspannung angeschlossen werden.
+
+11111100
+
+OxFC
+BOD Level 4.3 V
+
+11011001
+
+0xD9
+OCD disabled
+JTAG disabled
+SPI prog enabled
+Watch Dog Timer off
+EESAVE disabled
+Bootsize 4096 words
+BootRST not selected
+
+11110111
+0111
+
+0xF7
+Clock not divided by 8
+no Clock output on PortB
+max startup time and delay
+CKSEL = quarz 18.432 MHz
+
+ATMEGA 644P-PU
+void ioinit (void)
+{
+/* description of IO-pins:
+*
+Motor1 Motor2 Motor3 Motor4
+* forward
+PC5
+PC3
+PB0
+PC7
+=1
+* backward
+PC4
+PC2
+PB1
+PC6
+=1
+* PWM
+PD5
+PD4
+PB3
+PD7
+* OC
+1A
+1B
+*
+* Digital I/O
+* 1
+* SCL SDA
+SS
+RxD
+TxD
+INT0
+INT1
+ICP
+* PC0 PC1
+PB4
+PD0
+PD1
+PD2
+PD3
+PD6
+*
+* Analog Input or Digital I/O
+* 1
+* PA7 PA6
+PA5
+PA4
+PA3
+PA2
+PA1
+PA0
+*
+* PA0: pulse generation for the 3 down-looking reflex light barriers for floor detection
+* PA1: left side floor detection, is high if pulse is reflected by the floor
+* PA2: front floor detection, is high if pulse is reflected by the floor
+* PA3: right side floor detection, is high if pulse is reflected by the floor
+* PA4: push button left side for detection of object collision (low in case of collision)
+* PA5: push button right side for detection of object collision (low in case of collision)
+*/
+
+
+Erste Schritte sind einfache Prüfungen mit
+einem Multimeter: liegt die externe Spannung auch innen auf dem Board an?
+Liefern die Spannungsregler wie beabsichtigt 5 V bzw. 3,3 V?
+
+}
+
+Konfiguration der I/O-Pins
+void init(void)
+{
+/* system clock 18.432 MHz is used (external quartz oscillator),
+* 18.432 MHz/256/128/8=70Hz pwm frequency
+* timer 1 is used for PWM control of motor 1 and 2 in 15-bit resolution
+* ICR1 contains the top value for timer 1
+* fast pwm mode 14 is used, i.e. WGM13:10 = "1110" */
+
+Programmierung des
+Mikrocontrollers
+Spätestens jetzt sollte man mal im Datenbuch des verwendeten Mikrocontrollers
+lesen. Dann sollte man prüfen, ob der
+Mikrocontroller über den ISP-Stecker
+angesprochen werden kann und die Fuses
+programmieren. Für das Board hier habe
+ich die in Abb. 16 dargestellten FuseEinstellungen gewählt.
+Nun kann der erste Programmcode auf den
+Baustein geflasht werden. Vom Hauptprogramm sollte zunächst eine Funktion
+aufgerufen werden, die die Pins konfiguriert (Abb. 17).
+Danach müssen die Timer, der AnalogDigital-Wandler (ADC) und die Interrupts
+konfiguriert werden (Abb. 18).
+
+DDRA = _BV(PA0); /* Pin 0 on port A is output for pulse generation */
+PORTA = _BV(PA4) + _BV(PA5); /* all outputs are low, pull-ups activated on PA4 and PA5 */
+DDRB = 0x0B; /* output: PB0, PB1, PB3, remaining pins are input */
+PORTB = 0xF4; /* pull-up resistors activated on input, PB0,1,3="low"*/
+DDRC = 0xFE; /* pins 7,6,5,4,3,2,0 on port C are output, PC1 is input SDA(TWI) */
+PORTC = 0xFE; /* outputs on port C are initialized as "high" */
+DDRD = _BV(DDD1)+_BV(DDD4)+_BV(DDD5)+_BV(DDD6)+_BV(DDD7);/*output: PD1,4,5,6,7, rest input*/
+PORTD = _BV(PORTD0) + _BV(PORTD2) + _BV(PORTD3);
+/* all pull-up resistors activated for input, output PORTs="low" */
+
+TCCR1A = _BV(COM1A1) + _BV(COM1B1) + _BV(WGM11);
+TCCR1B = _BV(WGM13) + _BV(WGM12) + _BV(CS11); //timer 1 with prescaler 8
+ICR1 = 0x7FFF;
+OCR1A = 0x0000;
+OCR1B = 0x0000;
+TCCR0B = _BV(CS01); //start timer0 with prescaler clock/8
+// activate 8-bit Timer0 overflow interrupt 18.432 MHz / 256 / 8 = 3906 Hz = 256 µs
+// activate 16-bit Timer1 overflow interrupt 18.432 MHz / 256 / 128 / 8 = 70 Hz = 14.2 ms
+TIMSK0 = _BV(TOIE0);
+TIMSK1 = _BV(TOIE1);
+// activate interrupt INT0 (on PD2), INT1 (on PD3), INT2 (on PB2)
+EIMSK = _BV(INT0) + _BV(INT1) + _BV(INT2);
+/* PINA0 is used as analog input
+/* Vref=AVCC decoupled, single ended input ADC0
+ADMUX = _BV(REFS0);
+
+*/
+
+// set ADC enable and interrupt enable, prescaler 18.432 MHz / 128 = 144 kHz
+ADCSRA= _BV(ADEN) + _BV(ADIE) + _BV(ADPS2) + _BV(ADPS1) + _BV(ADPS0);
+
+}
+
+// idle mode is set up as sleep mode
+// falling edge on INT1 and INT0 generates an interrupt
+SMCR = _BV(SE);
+EICRA = _BV(ISC21) + _BV(ISC11) + _BV(ISC01);
+sei ();
+
+der Timer, des ADC und der Interrupts
+
+Die
+Interrupt-Routinen
+sollte
+man
+möglichst kurz und einfach halten, damit
+sie das Hauptprogramm nicht zu lange
+unterbrechen (siehe die Code-Beispiele in
+ihr zusammen mit einem kompletten Beispielprogramm für einen mobilen Roboter
+inkl. Ansteuerung von I²C-Modulen und
+
+
+
+den Motoren in dem bereits erwähnten
+Downloadpaket. Für alles weitere findet
+man Tutorials und Foren z. B. beim
+Roboternetz oder bei Mikrocontroller.
+In der nächsten Ausgabe der ft-pedia könnt
+ihr lesen, wie man ein oder sogar zwei FTUniversal Interfaces 30520 mit nur fünf
+I/O-Pins als Erweiterung um vier (bzw.
+acht) Motoren und acht (bzw. 16) digitale
+Eingänge an dem hier vorgestellten Board
+betreiben kann.
+
+
+
+Nun habt ihr hoffentlich Appetit bekommen, in diese Welt der MikrocontrollerSteuerungen für fischertechnik-Modelle
+einzusteigen. Ich wünsche euch viel Erfolg
+und vor allem Spaß dabei.
+
+Referenzen
+
+
+
+[1]
+
+Atmel: Datasheet ATMEGA
+644P/1284P, Rev. 8272E, 04/2013.
+
+[2]
+
+Dirk Fox: I²C mit dem TX – Teil 9:
+LC-Displays, in dieser Ausgabe der
+ft:pedia 1/2014.
+
+

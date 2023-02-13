@@ -1,0 +1,82 @@
+
+
+Tipps & Tricks
+
+Kleine Statik-Hilfe
+René Trapp
+Die Welt besteht nicht nur aus rechten Winkeln und 45°-Diagonalen. fischertechnik-Modelle
+auch nicht.
+Das Erscheinen der fischertechnik-Statikkästen 1970 erweiterte die Baumöglichkeiten erheblich. Wer sich nicht mit den
+gewohnten Konstruktionen mit Streben
+unter 90° und 45° zufrieden geben mag,
+kommt um eine rationelle Hilfe zur Strebenauswahl nicht herum – wenn er schiefe
+oder verzogene Modellkonstruktionen vermeiden möchte. Natürlich kann man auch
+immer wieder zum Taschenrechner oder
+Tabellenwerk [1] greifen.
+Übersichtlicher geht es allerdings so wie es
+bereits im Handbuch zum 1971 erschienenen Kasten „Hobby S“ dargestellt ist [2].
+Das Handbuch gibt es als Download im ftMuseum [3]. Darin gibt es auf Seite 20 ein
+Diagramm. Die Erklärung dazu ist denkbar
+kurz: „Die mit Streben herstellbaren Verbindungen zeigt Diagramm (70).“ Sehr
+hilfreich – aber leider sind in diesem Diagramm ein paar Punkte eingezeichnet, die
+eben nicht so schön auf dem Raster liegen
+wie es uns das Diagramm glauben machen
+möchte. In Rastereinheiten mag auch nicht
+jeder denken, in der Einheit ‚mm‘ skalierte
+Achsen sind universeller in der Handhabung. Und so wird es Zeit, eine neue Version anzubieten (Abb. 1).
+Ausgehend vom Koordinatenursprung ist
+auf der waagerechten Achse eine Skalierung im Raster 15 mm angebracht. Die
+Längen der I-Streben, die immer exakt im
+Raster liegen, sind als blaue Kreisbögen
+dargestellt, die Längen der X-Streben, die
+recht genaue Diagonalenmaße besitzen
+
+(etwa √2 ∙ ∙ 15 mm), haben grüne Kreisbögen bekommen. Auf der senkrechten
+Achse ist ebenfalls die Skalierung zu
+15 mm gewählt. Dazu gibt es noch ein zweites Gitternetz mit der Skalierung 21,2 mm
+(≈ √2 ∙ 15 mm). Immer dort wo ein Kreisbogen eine Kreuzung aus waagerechter und
+senkrechter Gitterlinie schneidet, ergibt
+sich die passende Länge für eine Strebe.
+Alle passenden Kreuzungspunkte sind mit
+einem roten Ring markiert, einige sind auch
+noch mit dem Ursprung verbunden, um die
+Richtung der Verbindung anzudeuten. Bei
+den Streben unter 45° Winkel wurde zu
+Gunsten der Übersicht darauf verzichtet.
+Beispiel 1
+Waagerechter Abstand 45 mm, senkrechter
+Abstand 60 mm ergibt einen Schnittpunkt
+mit einem blauen Kreisbogen. Dieser blaue
+Kreisbogen gehört zur Strebenlänge 75 mm
+(man findet das, indem man dem Kreisbogen bis an ein Ende folgt und die Länge
+an der Achsskalierung abliest).
+Beispiel 2
+Waagerechter Abstand 15 mm, senkrechter
+Abstand 42,4 mm ergibt auch einen Schnittpunkt mit einem blauen Kreisbogen, hier
+45 mm.
+Quellen
+[1]
+
+Thomas Habig: Statikhilfe.
+
+[2]
+
+Fischer-Werke: Hobby S (39550).
+
+[3]
+
+fischertechnik Museum.ch
+
+
+Tipps & Tricks
+
+
+Legende
+• I-Streben sind durch blaue, X-Streben durch grüne Kreisbögen dargestellt.
+• Immer dort, wo ein Kreisbogen eine Kreuzung aus waagerechter und senkrechter Gitterlinie
+schneidet, ergibt sich die passende Länge für eine Strebe.
+• Ausgehend vom Koordinatenursprung sind alle passenden Kreuzungspunkte mit einem
+roten Ring markiert.
+
+
+

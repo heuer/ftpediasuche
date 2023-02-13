@@ -1,0 +1,190 @@
+
+Antriebstechnik
+
+Antriebstechnik
+
+Bürstenloser Elektromotor
+Gerhard Birkenstock
+Woher bekommt man einen verschleißfreien Elektromotor für die Modell-Dauerbewegung auf
+einer ft:convention? Mit ROBO (bzw. TX/TXT) Controller, Lichtschranke, Elektromagnet und
+zwei umgekehrt gepolten Dauermagneten kann man sich seinen bürstenlosen Motor (brushless)
+selbst bauen.
+
+Die Grundidee
+
+Polwendung mit Lichtschranke
+
+Bei einem Elektromotor gibt es zwei Verschleißteile: Die Lager und der Kommutator mit seinen Schleifern. Auf die Lager
+kann man nicht verzichten (gut, Magnetlager – die sind aber zu aufwändig). Bei den
+Schleifern und dem Kommutator, da kann
+man etwas machen.
+
+Dank der Lichtschranke wird das
+wechselnde Magnetfeld mit dem sich
+drehenden Anker synchronisiert. Der Motor
+wird also immer laufen. Es sei denn, die
+Polwendung steht an einer ungünstigen
+Stelle. Dazu kommen wir aber noch.
+
+Selbst gebaute Motoren wurden schon viele
+mit fischertechnik realisiert. Das waren
+zumeist einphasige Synchronmotoren, die
+die Umpolung der Elektromagneten mit
+Taster und Relais realisierten [1, 2].
+Einen Elektromotor ohne Schleifer und
+Kommutator kann man recht einfach
+konstruieren, wenn man die Umpolung vom
+50-Hz-Wechselstrom des Stromnetzes vornehmen lässt, der an den Wechselstromanschlüssen des fischertechnik-Transformators ausgegeben wird. Solche Motoren
+sind Synchronläufer und prima geeignet,
+um Uhren zu betreiben. Sie haben jedoch
+einen großen Nachteil: Sie müssen angeworfen werden. Und wenn man den
+richtigen Dreh nicht hinbekommt, rasten sie
+nicht in die vorgegebene Phase ein. Das „in
+Gang bringen“ bedarf viel Geduld.
+Die hier vorgestellte Lösung ist ein
+einphasiger Wechselstrommotor, der statt
+Schleifer und Kommutator eine berührungslose Umpolung mit einer Lichtschranke realisiert (einphasiger BLDC).
+
+Auf dem folgenden Bild ist die Gesamtanordnung dargestellt.
+
+
+Im Hintergrund befindet sich der ROBO
+Controller. Links ist der fest stehende
+Elektromagnet zu sehen. Der Läufer mit
+den beiden Dauermagneten ist etwas von
+der oberen fischertechnik-Platte verdeckt.
+Diese Platte ist notwendig: Sie nimmt (so
+wie natürlich auch die Grundplatte) die
+Zug- und Druckkräfte auf, welche durch die
+Wechselwirkung zwischen Elektromagnet
+und Dauermagnet entstehen. Würde man
+diese Verbindung entnehmen, schwänge
+das System wie eine Stimmgabel.
+
+
+
+In der Bildmitte befinden sich die LED, das
+Segmentrad und rechts der Fotowiderstand.
+Alle drei Komponenten zusammen bilden
+die Lichtschranke. Im folgenden Bild sind
+die Details zu erkennen (Abb. 2).
+
+
+Nun noch ein paar Worte zum Programm im
+ROBO Controller. Der Ablauf ist in Abb. 3
+dargestellt:
+
+sie den Motor (sprich: den Elektromagneten) mit der umgekehrten Polungsrichtung
+B versorgt.
+Genau hier ist der Unterschied zur fest
+vorgegebenen Netzfrequenz ersichtlich. Je
+nach Rotorstellung wird das Licht vom
+Fotowiderstand gesehen oder vom Segmentrad abgedeckt. Die Polwendung wird
+immer im richtigen Moment durchgeführt.
+Versucht nicht, das Stroboskop mit einer
+fischertechnik-Glühlampe aufzubauen. Das
+funktioniert nicht: Der Glühwendel braucht
+zu lange, um sich aufzuheizen und dann
+wieder abzukühlen. Die Abbildung des
+Rotors würde verwischen.
+
+Der Umpolungszeitpunkt
+Bei dem Fan Club Tag 2015 (50 Jahre
+fischertechnik) hat der Motor munter vor
+sich hin gedreht. Das Segmentrad hatte ich
+einmal eingestellt und den Motor laufen
+lassen. Was aber passiert, wenn die Polwendung frei verstellt werden kann?
+Genau das wird bei unserem Modell mit
+dem Drehkranz realisiert. In Abb. 1 ist ganz
+rechts der große Drehkranz zu sehen.
+Eigentlich ist er die Basis für jeden
+drehbaren Kran. Hier hat dieses Drehorgan
+allerdings eine völlig andere Funktion.
+
+
+Als erster Schritt muss die Lichtschranke
+(M4) mit Strom versorgt werden. Der
+Motor (genauer: der Elektromagnet, M1)
+bekommt die Polungsrichtung A geliefert.
+Gleich darauf wird für 0,01 Sekunde die
+Stroboskop-LED (M2) mit Strom versorgt.
+Die ausgegebene elektrische Energie reicht
+gerade um die LED aufblitzen zu lassen.
+Bei abgedunkeltem Raum kann man so die
+Position des Rotors bei der Polwendung
+erkennen.
+Dann wartet die Software so lange, bis der
+Motor sich um 180 Grad gedreht hat, bevor
+
+
+Die Motorachse führt genau in der Mitte
+hindurch. Sie wird jedoch nicht mit einem
+Klemmrad festgehalten. Der fischertechnik-
+
+
+Antriebstechnik
+
+Stein, der als Lager fungiert, ist rechts
+neben dem Drehkranz in Abb. 1 und Abb. 4
+zu erkennen.
+
+mit seiner höchsten Drehzahl, hat aber
+kaum noch Drehmoment.
+
+Auf dem Drehkranz befindet sich die komplette Anordnung der Lichtschranke. Die
+Lichtschranke kann somit um die Achse des
+Motors beliebig auf einem fixen Radius
+gedreht werden. Somit ist die Position der
+Polwendung des Motors jederzeit einstellbar.
+Und es passieren unheimlich viele Dinge:
+Der Motor wird schneller und langsamer;
+man kann dies bis zur Drehrichtungsumkehr treiben. Auch die Eigenschaften des
+ROBO Controllers sind mit dieser Anordnung ergründbar; hierzu wird allerdings ein
+Oszilloskop gebraucht: nur dann kann man
+sich die entstehenden Phänomene erklären.
+Es kommt zum Aufschaukeln, Brummen,
+Rattern, ...
+Diese Erscheinungen sind der Verarbeitungsgeschwindigkeit innerhalb des Controllers geschuldet. Grundsätzlich kann man
+sagen:
+· Wird die Polwendung beim Durchgang
+eines Dauermagneten an der Spule
+gemacht, läuft der Motor langsam, aber
+kraftvoll.
+
+15,24 Hz = 914 U/Min
+
+Die beiden Oszillogramme in Abb. 5 und 6
+veranschaulichen diese beiden Zustände.
+Auf dem Kanal 1 sieht man sehr schön das
+Steuersignal. Es kommt direkt vom Fotowiderstand. Der Kanal 2 ist die Darstellung
+der Polwendung. Da ich hier jedoch nur
+einen Anschluss abgegriffen habe, sieht
+man nur positive Sprünge. Erst wenn beide
+Anschlüsse dargestellt werden, würde die
+Polwendung sichtbar.
+Würde man nun eine DCF-77-Uhr an einen
+Eingang des ROBO Controllers anschließen, könnte eine Synchronisierung stattfinden. Das Ergebnis wäre: ein gleichmäßig
+laufender Synchronmotor, der immer
+anläuft.
+
+Hinweis
+Zum Schluss noch ein Hinweis: Solltet ihr
+das Modell nachbauen, achtet auf die
+Zentrifugal-Kräfte im Rotor: Dauermagnete
+werden sehr schwer, wenn sie wegfliegen!
+
+Referenzen
+2,5 Hz = 150 U/Min
+
+· Wird hingegen die Polwendung genau
+90° später durchgeführt, läuft der Motor
+
+[1]
+
+Aktuelles zum Nachbauen, fischertechnik Club-
+[2]
+
+Dirk Fox: Der Elektromotor. 3/2013, S. 4-8.
+
+
+

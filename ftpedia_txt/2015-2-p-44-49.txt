@@ -1,0 +1,134 @@
+
+
+Modell
+
+Detail Engineering: Transformer
+Jens Lemkamp
+Schon in den 70er/80er Jahren kamen die Schleifringe mit dem Kasten (em1) auf den Markt.
+Später war er dann noch in dem in den 80er Jahren erhältlichen Kasten „Elektromechanik“
+enthalten. Mit diesem heute nicht mehr jedem bekannten Bauteil konnte man Spannungen auf
+rotierende Einheiten übertragen und Schaltwerke für z. B. eine Ampelsteuerung aufbauen. In
+meinem Kirmesmodell „Transformer“ habe ich zur Energieübertragung insgesamt fünf
+originale Fischertechnik-Schleifringe verbaut.
+getrennt auf die jeweiligen Achsen zu übertragen. Neben den Schleifringen aus den
+Elektromechanik-Kästen habe ich dazu
+insgesamt 32 Federkontakte aus den Drehschaltern verbaut. (Abb. 2 und 3).
+
+von 1981
+
+Transformer
+Der „Transformer“ ist das Modell eines
+Kirmeskarussells mit insgesamt vier
+Achsen, von denen drei um 360 Grad ohne
+Anschlag rotieren. Da ist es zwingend
+erforderlich, diverse Stromkreise mittels
+Schleifringen absolut unterbrechungsfrei
+
+
+
+Der Drehschalter ist ein Bauteil aus dem
+Elektromechanik-Baukasten em2 bzw.
+hobby 3 (1971). Die Federkontakte verwende ich, weil diese auf kleinstem Raum gute
+Kontaktiermöglichkeiten auf die Schleifringe bieten. (Abb. 3)
+
+
+Modell
+
+
+Für die zentrale, große Rotationsachse habe
+ich zwei Schleifringe „gestapelt“, um so
+insgesamt vier getrennte Stromkreise zu
+übertragen. „Getrennt“ stimmt nicht ganz
+und heißt in diesem Zusammenhang, dass
+die vier Kreise wohl eine gemeinsame
+Masse haben, welche über die Mittelachse
+mit dem nun gezeigten Aufbau übertragen
+wird, aber ansonsten autark sind.
+
+BS 30 mit Rundloch
+
+
+
+
+
+
+Spannung auf die Achse
+
+
+
+Modell
+
+Stromversorgung der Brücke
+Zur Übertragung der Spannungen auf die
+Brücke wurde folgende Konstruktion
+entworfen (Abb. 10):
+
+Spannung auf die Brücke
+
+Wie man erkennen kann, rotieren übrigens
+die Kontakte um die Schleifringe herum,
+d. h. der Schleifring „steht“ – siehe Abb. 10,
+11 und 12.
+
+auf die Brücke
+
+Zur Spannungsversorgung der Brücke ist
+dieser Aufbau zweimal vorhanden. Damit
+kann der zentrale Antrieb für die Fahrgastgondel und die Beleuchtung gespeist
+werden.
+Um die Kräfte der Rotation, welche die
+unterbrechungsfreie Spannungsversorgung
+auf die Schleifringe behindern, etwas aufzufangen, habe ich auf jeder Seite des
+Schleifrings zwei Federkontakte montiert.
+So ist auch in dem Falle, dass ein Schleifer
+keinen Kontakt mehr hat, auf der gegenüberliegenden Seite
+ein Ausgleich
+geschaffen.
+
+Spannung auf die Brücke
+
+
+
+Da sich durch die Rotation die Befestigung
+des Schleifringes immer wieder löste, habe
+ich mich dazu entschlossen, eine alte Seiltrommel mit einer Nabe (siehe Abb. 14 und
+15) mittels Zweikomponentenkleber unlösbar zu verbinden. Auf Abb. 13 und 16 sieht
+man noch eine alte Version mit StandardTeilen. In der Mitte von Abb. 16 ist der
+Abschnitt eines Kunststoffrohres zu sehen,
+welcher ein Verheddern der 2 Kabel mit den
+umlaufenden Teilen wirksam verhindert.
+
+
+Schleifring für die Beleuchtung auf der
+Fahrgastgondel.
+
+
+
+(alte Version)
+
+
+
+Modell
+
+Nach längeren Testfahrten läuft das Fahrgeschäft inzwischen sehr stabil; nur ab und
+an sind kleinere Justagen und Kontrollen
+durchzuführen. Diverse Restarbeiten im
+Dekobereich sind noch zu bewerkstelligen.
+Klar ist, dass derartige Modelle mit solchem
+Funktionsumfang leider nicht ausschließlich nur mit aktuellen Teilen bzw. ohne
+modifizierte Komponenten realisierbar
+sind. Daher ist es ein Segen, dass es noch
+heute über 30 Jahre alte Teile in sehr gutem
+Zustand gebraucht zu kaufen gibt, die einwandfrei in Zustand und Funktion sind.
+Mein Dank geht ausdrücklich mal an Stefan
+Roth (ffm), der immer kurzfristig mit Teilen
+helfen kann.
+
+Quellen
+[1]
+
+ft-Datenbank
+
+
+
+

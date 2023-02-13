@@ -1,0 +1,277 @@
+
+Modell
+
+Modell
+
+Fortbewegung einmal anders
+Rüdiger Riedel, Stefan Falk
+Es gibt ein seltsames Kinderspielzeug, Fahrzeug kann man es kaum nennen. Das Gefährt hat
+einen Sitz, hinten zwei Räder, einen Drehschemel mit zwei Rädern vorne (manchmal auch nur
+ein Rad) und daran befestigt ein Lenkrad. Wird das Lenkrad heftig nach rechts und links
+geschwenkt, bewegt sich das Ding vorwärts. Das probieren wir aus.
+
+Der Dreh- und Wackelantrieb
+Gesehen hatte ich es vor 35 Jahren im Freizeitpark Schloss Dankern. Meine Kinder,
+damals 4 und 6 Jahre alt, waren von den
+Spielmöglichkeiten im Park und in der
+Halle hellauf begeistert. Das Wetter war
+schlecht, aber in der großen Spielhalle
+konnten sie sich austoben. Da gab es so
+skurrile Dinge wie eine Wellenbahn und die
+hier vorgestellten Wackelfahrzeuge.
+
+
+Für das elektrisch betriebene Fahrzeug in
+hergestelltes Spezialteil, den Polwendeschalter (31331), den es schon 1968 gab.
+Zum Glück gibt es gebrauchte, funktionstüchtige Schalter z. B. noch bei [2] und [3].
+
+Alle hier vorgestellten Modelle sind sehr
+einfach aufgebaut. Das erste Modell hat
+eine weit ausladende Vorderachse, die es
+wild nach rechts und links schwenkt. Das
+erinnert ein wenig an heftige Schwimmbewegungen.
+
+Die Drehrichtung des Minimotors ist so eingestellt, dass sich die Drehscheibe 60
+(31019) in Abb. 2 im Uhrzeigersinn bewegt, wodurch das obere Scharnier (36329)
+den Polwendeschalter betätigt. Die Drehrichtung des Motors wechselt und die Drehscheibe mitsamt den Vorderrädern dreht
+sich entgegen dem Uhrzeigersinn. Dieser
+Vorgang wiederholt sich ständig, die
+Vorderachse schwenkt heftig hin und her,
+
+
+
+das Gefährt bewegt sich tatsächlich vorwärts.
+Alle Räder sind frei beweglich. Die Vorderräder laufen in „V-Radachsen“ (36586), die
+Hinterräder bestehen aus der Mini-Seilrolle
+12 (38258) mit O-Ring (35677) in „V-Radhaltern 10“ (35668).
+Die heftigen Umschaltungen sind sicher
+nicht gut für die Lebensdauer des MiniMotors. Mit einem Kurbeltrieb lässt sich
+das ändern.
+
+
+Der dritte Trockenschwimmer (Abb. 5 und
+6) hat eine gekröpfte Vorderachse mittels
+Winkelsteinen 60°.
+
+
+Wichtig für die Vorwärtsbewegung ist der
+Versatz der Vorderachse zur senkrechten
+Schwenkachse.
+
+
+In Abb. 6 sieht man meine modifizierte
+Batteriebox. Ich habe ein Loch hineingeschnitten, so dass ich den speziellen
+Akku von außen an ein USB-Ladegerät
+anschließen kann.
+Trockenschwimmer Nummer 2
+
+In Abb. 1 und 2 geschieht das durch die VStellung, in Abb. 3 und 4 durch einen
+Versatz nach hinten von der Vorderachse
+zur Schwenkachse. Dafür brauchen wir
+einen Baustein 5 15×30 3N (38428), zwei
+S-Winkelträger 15 (35053) und zwei VBausteine 15 Eck (38240).
+
+Der Versatz der Vorderräder lässt sich
+gedanklich so weit treiben, dass sie aufeinandertreffen; sie werden zu einem Einzelrad
+wie in Abb. 7 und 8.
+
+
+Modell
+
+Die kleine Ausführung des Gefährts
+erinnert weniger an einen Schwimmer.
+Vielleicht zeigt sie einen Entengang [1]?
+Alle Räder bestehen aus Mini-Seilrollen 12
+(38258) mit O-Ringen (35677). Es sind
+keine Rast-Seilrollen (136775)! Die Räder
+drehen sich frei in den Rastachsen.
+
+Es ist jetzt ein V-Rad 23×10 (z. B. rot
+(36581) oder schwarz (36574)) mit Vollgummireifen (34995).
+
+Die Gelenkwürfel-Klaue 7,5 (31436) mit
+der Lagerhülse 15 (36819) gleitet leicht
+über die Rastachse 60 (35065).
+
+
+Zur Entlastung des Motors habe ich dem
+Modell 3 und dem Dreirad jeweils ein
+Getriebe 2:1 verpasst.
+
+Miniaturausführung
+
+
+
+Im Tandem neigt der kleine Wackelgänger
+nach kurzer Zeit zum Synchronisieren der
+beiden Antriebsachsen.
+
+
+
+
+
+Die fischertechnik-Batterien oder Akkus
+sind für die kleinen Wackelgänger viel zu
+schwer. Mit fünf Knopfzellen LR44, eingespannt zwischen zwei Stabmagnete 15 mm
+lang, 4 mm Durchmesser und daran zwei
+Klemmkontakte (31338, wahlweise blanke
+Drähte unter die Klemmhülsen (35980)
+klemmen) kommen sie gut in Fahrt.
+
+Was ist das Geheimnis des
+Wackelvortriebs?
+
+Freiheitsgerade wie nur eines
+
+Deshalb können wir im Folgenden von nur
+einem Rad ausgehen. Das erleichtert die
+Erklärung.
+Schwung holen
+Gehen wir als Startposition davon aus, dass
+sich das schwenkbare Rad in der Extremposition – 90° ausgelenkt – befindet und der
+Schwenkmotor beginnt, das Schwenkrad
+zurück in die Mittelposition zu drehen:
+
+Experimente zeigen, dass für die Vorwärtsbewegung auf glattem Untergrund folgende
+Voraussetzungen erfüllt sein müssen:
+• Alle Räder sind frei beweglich.
+• Die Vorderachse muss gegenüber der
+senkrechten Schwenkachse nach hinten
+versetzt sein.
+• Die Räder sind gummibereifte.
+Warum nun genau? Dazu folgende Überlegungen:
+Zwei gelenkte Räder wirken wie
+eines
+Zunächst eine Vereinfachung: Die Modelle
+mit zwei Rädern an der geschwenkten
+Vorderachse sind funktional identisch mit
+solchen mit nur einem Rad an der Vorderachse (dem Dreirad). Das folgt daraus, dass
+die Vorderachse dieselben Freiheitsgerade
+hat, egal ob ein mittiges oder zwei äußere
+Räder darauf sitzen: Die Achse kann in
+Laufrichtung der Räder rollen, aber nicht
+quer dazu:
+
+
+
+Das Rad zeigt hier also quer zur zu erklärenden Fahrtrichtung (die in der Zeichnung
+nach oben verläuft). Deshalb bleibt das Rad
+auf der Stelle stehen, und das Fahrzeug wird
+über den Schwenkhebel nach vorne – in
+Fahrtrichtung – bewegt.
+Je näher das Rad seiner Mittelposition
+kommt, desto weniger stark wird diese
+Beschleunigung des Fahrzeugs sein.
+Gleichzeitig steht das Fahrzeug aber auch
+immer mehr in Laufrichtung des Rades,
+weil das Rad ja in die Fahrtrichtung hinein
+geschwenkt wird.
+
+Jetzt kommt der springende Punkt: Um die
+Mittellage herum hat das Fahrzeug also
+Schwung (Impuls) nach vorne bekommen –
+und es kann wegen des gerade passend
+stehenden Schwenkrades diesen Schwung
+auch „ausleben“ und sich nach vorne
+bewegen!
+Wenn das Schwenkrad also seine Mittellage
+erreicht und überschritten hat, hat sich das
+Fahrzeug ein kleines Stückchen nach vorne
+bewegt. Es hat Schwung geholt (als das
+Schwenkrad außen und mehr quer als längs
+zur Fahrtrichtung stand) und kann durch
+diesen Schwung etwas fahren (weil mittlerweile das Schwenkrad längs zur Fahrtrichtung steht und sich also drehen kann).
+Bremsen, aber nicht zurückrollen
+Bei der Bewegung des Schwenkrades über
+seine Mittelstellung hinaus geschieht
+zunächst das Umkehrte wie bei der Bewegung von außen in Richtung Mittellage: Das
+Rad wird relativ zum Fahrzeug gesehen
+nach vorne bewegt und stellt sich quer zur
+Fahrtrichtung auf. Das Fahrzeug wird also
+abgebremst und sogar etwas zurückbewegt.
+Aber: Es kann diesen Schwung in Rückwärtsrichtung nicht „ausnutzen“, um sich
+stärker nach hinten zu bewegen, als es durch
+die Schwenkbewegung selbst bewirkt wird
+– denn das Schwenkrad steht ja nun wieder
+quer zur Fahrtrichtung!
+
+Mitte hinaus in die andere Endlage
+
+Modell
+
+Wir haben also mindestens zwei Komponenten im gesamten Ablauf:
+a) Das Bewegen des Fahrzeugs vor und
+zurück einfach dadurch, dass das Rad auf
+seine Bahn um die Schwenkachse
+gezwungen wird, und
+b) das Schwung Holen nach vorne (!) und
+das Ausnutzen dieses Schwungs für die
+Vorwärtsbewegung (während das Rad in
+Mittelstellung und also in Fahrtrichtung
+liegt). Hingegen kann während des
+Schwenks in die andere Richtung (von
+der Mitte nach außen) eben diese
+schwungbedingte Bewegung nicht stattfinden, weil das Schwenkrad dann quer
+zur Fahrtrichtung steht.
+Die Bewegungen nach a) heben sich also
+gegenseitig auf (vor und zurück), aber die
+Bewegung laut b) wirkt nur nach vorne, in
+Fahrtrichtung. Voilà! Das Fahrzeug wird
+sich nach vorne bewegen, sofern die Lenkbewegung hinreichend schnell erfolgt.
+Diese Überlegungen gelten auch für den
+Fall, dass das Rad nicht bis zur 90°-Auslenkung bewegt wird, nur ist der Effekt
+dann weniger stark.
+Warum dürfen die Räder nicht zu
+glatt sein?
+Wir benötigen gummibereifte Räder. Vorne
+ist das leicht einzusehen, denn wir brauchen
+ja bei ausgelenktem Schwenkrad eine
+ordentliche Kraftübertragung vom Rad auf
+den Boden, um das Fahrzeug zu beschleunigen. Das Schwenkrad darf also nicht
+einfach in seiner Querrichtung durchrutschen.
+Für die Hinterräder bedarf es aber einer
+genaueren Beschreibung: Angenommen,
+die Hinterräder und der Untergrund wären
+so glatt, dass sie auch in Querrichtung leicht
+schleifen könnten. Dann würde sich
+folgende Situation ergeben:
+
+
+
+
+wäre und ansonsten frei schweben würde.
+Damit aber ist leicht einzusehen, dass das
+Fahrzeugheck einfach nur wild herumwackeln würde – längs und quer herumgezogen und -geschleudert. Dabei kann
+keine
+gerichtete
+Fahrzeugbewegung
+herauskommen. So würde das Modell also
+nicht funktionieren – wir benötigen rutschfeste Räder.
+Ansonsten gilt wie immer: Alles reiner
+Spaß!
+
+Quellen
+(rötlich, links im Bild) wirken beim Drehen der
+Lenkung, als ob sie gar nicht da wären
+(rechts im Bild)
+
+Die Räder haben also (idealisiert angenommen) überhaupt keine Reibung mit dem
+Untergrund, unabhängig von der Richtung.
+Dann wirkt das, als ob der lange Fahrzeugträger nur an der Schwenkachse befestigt
+
+
+[1]
+
+Rüdiger Riedel: Der fischertechnikTrockenschwimmer. Auf YouTube,
+2022.
+
+[2]
+
+fitec Modellbau: https://fi-tecshop.de
+
+[3]
+
+fischertechnik-Teile:
+https://fischertechnik-teile.de
+
+

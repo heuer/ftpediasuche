@@ -1,0 +1,106 @@
+
+
+Tipps & Tricks
+
+Die fischertechnik-Werkzeug-Wanne
+Gerhard Birkenstock
+Das Spielen („Arbeiten“) mit fischertechnik wird an vielen Stellen durch Werkzeug erleichtert.
+Wenn Werkzeuge sich – wohl sortiert – in einem Kasten befinden, nennt man das einen
+Werkzeugkasten. Damit die Werkzeugsammlung in das fischertechnik-System passt, kommt sie
+in die Sortierwanne.
+
+Auflistung der Werkzeuge
+In meiner ft-Werkzeug-Wanne befinden
+sich einige Schlüssel, die mir das Hantieren
+mit fischertechnik um vieles erleichtern, ja
+sogar Spaß bereiten. Im Einzelnen sind das
+die folgenden:
+
+Der originale Schraubendreher 36443 von
+fischertechnik. Er ist zum Anschließen der
+Kabel an die kleinen 2,5 mm MiniaturBananenstecker gedacht. Er wird bei jeder
+Kabelveränderung und Reparatur benötigt.
+S-Riegel-Schlüssel
+
+Nabenschlüssel
+
+
+Der S-Riegel-Schlüssel (35799) ist die einzige Montierhilfe von fischertechnik.
+Leider kommt man mit diesem kurzen
+Schlüssel sehr oft nicht an die Stellen heran,
+an denen der Riegel gesetzt werden soll. Es
+ist immer das Geschick der Hände gefragt.
+
+Die beiden Nabenschlüssel in Abb. 1 stammen von Andreas Tacke (TST) [1]. Mit
+ihnen kann man prima die Nabenmuttern
+(31058) und die Zangenmuttern (31915)
+fest ziehen und lösen.
+
+Abhilfe habe ich mir hiermit geschaffen:
+S-Riegel-Bit-Einsatz
+
+Schraubendreher
+Zentrierhülse
+
+
+
+Auf der linken Bildseite sind die Flächen für
+den Bit-Antrieb zu sehen. Nach der
+Normung haben die sechs Flächen einen
+
+Abstand von 6,35 mm. Mit Teilkopf und
+Fräsmaschine habe ich diese Flächen aufgebracht.
+Rechts ist der Schlitz für den S-Riegel eingesägt. Der Durchmesser der Metallachse
+beträgt 8 mm. Das Zentrierrohr hat außen
+10 mm Durchmesser. Um an engen Stellen
+mit dem Zentrierrohr arbeiten zu können, ist
+das Rohr auf der Drehmaschine noch abgedreht. Mit 9 mm Durchmesser komme ich
+bisher an jedem Einsatzort gut zurecht.
+
+Tipps & Tricks
+
+heran. Es macht richtig Spaß, damit die
+Riegel einzusetzten.
+
+
+Der Drehknauf ist von Conrad (824605) zugekauft. Er ist schön klein gehalten und
+doch mit dem 6,35 mm System bestückt. Da
+passt alles prima zusammen.
+
+
+
+Da der Schlüssel keine großen Kräfte übertragen muss, würde auch ein Kunststoffstab
+mit 10 mm Durchmesser mit innen liegendem Schlitz und Bit-Sechskant ausreichen.
+
+Zusammenführen der
+Werkzeuge
+In der fischertechnik-Wanne (36587)
+kommt nun alles zusammen. Und dank
+eines ausgeschnittenen Schaumstoffs bleibt
+es auch schön griffbereit an seinem Platz.
+
+Dank der vielen heutigen Möglichkeiten bei
+dem Bit-System (Verlängerung, Winkelgetriebe, ...) kommt man nun an die
+entlegensten Stellen in seinen Modellen
+
+Selbst das Stapeln der Wannen funktioniert
+dank des dünnen Schraubendreher-Heftes
+noch immer.
+
+
+
+
+Beim Anwenden der Werkzeug-Wanne ist
+mir nun aufgefallen, dass ich doch ein
+Werkzeug vergessen habe. Es lag hinter
+einer Sortierkiste: Die abgewinkelte Pinzette!
+
+Referenzen
+[1]
+
+
+Andras Tacke: ft-Spezialzeile made
+by TST (Teil 4), ftpedia 2/2013, S.
+11-12.
+
+

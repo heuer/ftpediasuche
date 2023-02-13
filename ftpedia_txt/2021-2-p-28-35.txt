@@ -1,0 +1,255 @@
+
+
+Modell
+
+Wellenflug – Wellenflieger
+Claus Ludwig
+Nachdem ich im März 2020 mit meinem Flipper fertig wurde, der Artikel für die ft:pedia geschrieben und die Fotos gemacht waren, brauchte ich eine neue Idee. Die Modellideen, die ich
+gesammelt hatte, zogen mich gerade nicht an, sodass ich nach etwas Neuem suchte. Also begann ich alle Bilderpools und Archive zu fischertechnik systematisch durchzusehen. Und dabei
+stieß ich bei den Kollegen aus den Niederlanden [1] auf die Videos von und über die Modelle
+von Alfred Pettera.
+
+Die Idee
+Da gab es in einem der Videos einen
+„StarFlyer“, der mir sehr gut gefiel und etwas vorher eine eigene Konstruktion von
+Alfred Pettera, um einen Wellenflug darzustellen. Und da zündete meine neue Idee;
+auf der Grundlage des „Star Flyer“ einen
+Wellenflug zu bauen. Ich stellte fest, dass es
+bisher nur ein Modell dazu von Harald
+Steinhaus gab, das auf der Ausstellung in
+Erbes-Büdesheim 2011 gezeigt wurde
+(Abb. 1). Und das, so lernte ich später, wo
+doch der Wellenflug/-flieger eines der am
+häufigsten gebauten Karussells ist: über
+200-mal, und in der ganzen Welt anzutreffen [2].
+
+
+
+Von Alfred Pettera entdeckte ich dann auch
+noch einen Artikel beim niederländischen
+fischertechnik-Club zu seinem „StarFlyer“
+[3].
+
+(Bild: Harald Steinhaus)
+
+Der Wellenflug oder Wellenflieger wurde
+Anfang der 1970er Jahre entwickelt. Dabei
+handelt es sich um ein Kettenkarussell, bei
+dem der Gondelträger (an dem die Sitze
+hängen) an einem Mast nach oben fährt. Der
+Mast ist zum einen im oberen Teil leicht geknickt (ca. 14 Grad) und zum anderen dreht
+er sich langsam in die entgegengesetzte
+Richtung zum sich deutlich schneller drehenden Gondelträger. Durch die gegenläufigen Bewegungen und den abgeknickten
+
+Mast entsteht dabei die Wellenbewegung
+[2].
+
+Modell
+
+gung verwendeten S-Riegel zum Teil so bearbeitet werden, dass sie einem flachen Niet
+entsprechen.
+
+(Bild: Harald Steinhaus)
+
+(Bild: Harald Steinhaus)
+
+Die Säule
+Die Säule ist als Skelett-Konstruktion gebaut. Besonders ist, dass die Querstreben
+bei zwei gegenüber liegenden Seiten außen
+und bei den anderen zwei Seiten innen liegen. Das geht nur, indem die zur Befesti-
+
+
+Als Drehkranz wurde anstelle eines normalen fischertechnik-Drehkranzes ein Drehkranz von Andreas Tacke mit Kugellager
+verwendet. Um die im Oberteil insbesondere durch den Knick auftretenden Kräfte
+
+
+
+abfangen zu können, wurde der Drehkranz
+zusätzlich mit vier Auslegern und Stützrädern versehen.
+
+
+Zur Stromversorgung des Gondelträgers
+(Antrieb und Beleuchtung) gibt es an den
+Seiten der Säule, an denen die Querstreben
+innen liegen, jeweils zwei Messingschienen. Die Stromübertragung auf den Mast erfolgt über einen 12poligen Schleifring von
+fischerfriendsman.
+
+Der Gondelträger
+Der Gondelträger wurde in Anlehnung an
+die Vorlage von Alfred Pettera erstellt. Das
+Herzstück für den Antrieb des drehbaren
+oberen Teils bildet dabei ein Innenzahnrad
+aus Kettengliedern. Der untere Teil hat zum
+einen die Aufgabe der stabilen Führung des
+drehenden Innenkranzes und zum anderen
+der sicheren Führung des gesamten Gondelträgers am Mast.
+
+Der Gondelträger ist in der Höhe etwas
+kompakter als die Vorlage, um den „Knick“
+zu durchfahren. Dazu waren an einigen
+Stellen Modifikationen von Teilen erforderlich. So wurden sowohl die oberen Rollenlager als auch die Halter der Sitz-Ausleger
+(Baustein 15 · 30 · 5 mit 3 Nuten) etwas angeschrägt. Die einzelnen Teile des gesamten Gondelträgers, insbesondere des drehbaren Teils, wurden nach Abschluss der
+Tests mit Sekundenkleber fixiert. Damit
+soll dauerhaft ein ruhiger Lauf gewährleistet werden. Das gilt auch für die Kette, die
+als Innenzahnkranz fungiert.
+
+umgedreht
+
+
+
+
+Modell
+
+
+
+Zur Stromabnahme von den Messingschienen dienen Lokfederschleifer mit entsprechender Bodenplatte, die über Federgelenksteine am unteren Teil des Gondelträgers
+befestigt sind. Damit die Lokfederschleifer
+– die im Original leicht gewölbt sind – sicher arbeiten, wurden sie plan geschliffen.
+Bei den Federgelenksteinen wurde die
+graue Variante verwendet und mit mattroter
+Modellbaufarbe lackiert – die schwarzen
+Bausteine sind schwer zu bekommen.
+
+
+
+Leider zeigte sich in der Praxis, dass meine
+Konstruktion nicht die Stabilität hatte, die
+ich mir gewünscht hätte – was dazu führte,
+dass die Betätigung der Taster zum Stoppen
+der Aufwärtsfahrt, aber insbesondere zum
+Schalten des Abknickvorganges, mal funktionierte und mal nicht. Das Ganze war zu
+labil.
+Dann probierte ich, wovon ich ursprünglich
+nicht geglaubt hatte, dass es funktioniert:
+die Säule mit einem festen Knick zu bauen.
+Und zu meinem Erstaunen schaffte der
+Gondelträger es, über den Knick zu fahren.
+Anfangs noch etwas hakelig, aber später,
+nach einigen Nacharbeiten, war ich sehr zufrieden.
+
+Sitze und Aufhängung
+
+
+Der Knick
+Meine erste Idee war es, dass der Gondelträger gerade bis ans obere Ende des Mastes
+fährt und anschließend der obere Teil des
+Mastes motorisch gekippt wird. Das Ganze
+sollte über mehrere Taster und zwei Electronics-Module gesteuert werden.
+
+
+Die Sitze und die Aufhängung wurden, soweit erkennbar, von der Idee von Alfred
+
+
+Modell
+
+
+Pettera übernommen. Jeder Sitz hängt an
+zwei mal 47 Kettengliedern (ursprünglich
+waren es je 50). Nach dem Bau der Plattform, der Aufgänge und der Geländer zeigte
+es sich, dass hier noch etwas gekürzt werden musste. Da mir rote Sitze am besten gefielen, diese aber sehr schwer zu bekommen
+sind, wurden auch hier mit Hilfe mattroter
+Modellbaufarbe aus schwarzen Sitzen rote
+Sitze.
+
+
+Die Aufhängung der Sitze an I-Streben 120
+und deren Befestigung an Rollenböcken
+führt dazu, dass die Streben leicht schräg
+nach oben geneigt sind. Das gibt dem Ganzen noch einen besonderen „Schick“.
+
+Steuerung und Antrieb
+Meine ursprüngliche Idee war ja, wie bereits beschrieben, dass der Gondelträger gerade bis ganz nach oben fährt und dann der
+obere Teil des Mastes motorisch geknickt
+wird. Dies war jetzt nicht mehr erforderlich.
+Es blieb das halbautomatische Hochfahren
+und das entsprechende Herunterfahren.
+Hierfür wird ein Electronics-Modul mit
+Grundprogramm verwendet, Endlagenschalter sowie jeweils ein Taster zum Auslösen der Aufwärtsfahrt und der Abwärtsfahrt. Als Motor dient ein alter M-Motor mit
+entsprechendem Getriebe und Seiltrommel.
+Für den Antrieb des oberen Teils des Gondelträgers haben die Tests gezeigt, dass zum
+
+
+
+
+einen zwei statt eines Motors (Alfred Pettera) sinnvoll sind – insbesondere im oberen
+Bereich der Neigung. Zum anderen können
+die 9 V nach fischertechnik-Standard begrenzend wirken. Eine Reserve von bis zu
+12 V ist sinnvoll. Daher suchte ich nach entsprechenden Reglern, die ich im Internet
+fand: PEMENOL PWM Motor Drehzahlregler, 5-30 V, max. 15 A, max. 150 W. Als
+Motoren dienen zwei S-Motoren.
+
+eine Rainbow-LED in der kleinen Kugel
+oben auf der Mastspitze.
+
+Kassenhäuschen
+
+
+
+Aus Symmetriegründen habe ich auch für
+die Steuerung der Mastdrehung den o. g.
+Regler verwendet, obwohl hier weniger als
+9 V erforderlich sind. Der Mast dreht sich ja
+mit deutlich geringer Geschwindigkeit in
+entgegengesetzter Richtung zum Gondelträger. Als Antrieb dient ein alter Powermotor 8:1.
+
+Beleuchtung
+Die Beleuchtung der blauen Bodenplatten
+erfolgt mit zehn LEDs (breit abstrahlend)
+Marke fischerfriendsman, die mit blauen
+Rastkappen kombiniert sind. Die LEDs auf
+den unteren Maststabilisatoren sowie im inneren des Mastes werden über ein Electronics-Modul als Baustellen-Lauflicht gesteuert. Auch die Blicksteuerung der vier am
+Gondelträger angebrachten LEDs erfolgt
+über ein weiteres Electronics-Modul. Am
+oberen Ende des Mastes befinden sich noch
+vier Spot-LEDs im Dauerbetrieb mit roten
+Rastleuchtkappen. Den Abschluss bildet
+
+Das Kassenhäuschen dient auf der Vorderseite als Kassenhäuschen und auf der Rückseite als Steuerzentrale für den Wellenflug.
+Die Flieger auf dem Dach und die Welle am
+oberen Teil der Vorderseite sollen den Wellenflug/-flieger symbolisieren. Angetrieben
+werden die Flieger durch einen auf ca. 3 V
+geregelten Minimotor. Der Regler (Niederspannungs-DC-Motordrehzahlregler)
+ist
+auch über das Internet bezogen. Beleuchtet
+werden die Flieger durch zwei Spot-LEDs.
+Die Ein-/Ausschalter sind für jeweils einen
+der beiden großen Regler zuständig. Die
+beiden mittleren Taster dienen zum Einund Ausschalten der Lichtfunktionen und
+für die Versorgung der Aufzugsfunktion.
+Die vorderen Taster sind für die Auf- bzw.
+Abfahrt zuständig. Drei weitere LEDs beleuchten den Innenraum und zwei Rainbow-LEDs befinden sich an den unteren
+Ecken der Vorderseite.
+
+Stromversorgung
+Die Stromversorgung erfolgt über drei
+Netzteile: jeweils eines für den Antrieb des
+Gondelträgers und den Antrieb des Mastes
+mit jeweils12 V, das dritte für die Versorgung des Aufzuges und der Beleuchtung
+mit 9 V.
+
+
+Modell
+
+
+
+Quellen
+[1]
+
+Website des niederländischen fischertechnik-Clubs: https://fischertechnikclub.nl
+
+[2]
+
+Wellenflug auf Wikipedia
+
+[3]
+
+Pettera, Alfred: Star Flyer. In Ausgabe April 2009 des niederländischen Clubheftes.
+
+[4]
+
+Steinhaus, Harald: Wellenflug. Im
+Bilderpool der ft:Community.
+
+
+
+

@@ -1,0 +1,83 @@
+
+Tipps & Tricks
+
+Tipps & Tricks
+
+ft-Spezialteile made by TST (Teil 2)
+Andreas Tacke
+In einer lockeren Reihe stellt TST einige von ihm entwickelte Spezialteile vor, die so manche
+Lücke des fischertechnik-Systems schließen. Diesmal zu einem Thema, das zweifellos schon
+viele Fans der Verzweiflung nahe gebracht hat: Wie lässt sich bloß ein Power-Motor stabil in
+einem Modell befestigen?
+In diesem Beitrag geht es rund um das
+Thema „Powermotor, Befestigung und
+Adapter“.
+Der Powermotor ist, wie der Name schon
+sagt, ein Motor mit sehr viel „POWER“.
+Nur leider passt er durch sein Getriebe,
+welches einen Durchmesser von 33 mm
+hat, und seine runde Bauform nicht wirklich gut ins Raster von fischertechnik.
+Auch die stabile Befestigung gestaltet sich
+manchmal schwierig.
+
+im fischertechnik-Raster. Daher habe ich
+eine Anbauplatte entwickelt, die die
+Befestigungsprobleme löst. Sie hat die
+Maße 30 mm x 60 mm x 7,5 mm und wird
+mit zwei Schrauben am Getriebe befestigt
+(Abb. 2). Die Schrauben greifen exakt in
+die beiden im Kopf der Power-Motoren
+bereits vorhandenen Gewinde.
+
+
+mit Anbauplatte 35090
+
+Wer kennt sie nicht, die Standard-Anbauplatte von ft: klein, kompakt und leider mit
+nur einer Schraube am Getriebe befestigt
+(Abb. 1). Dabei ginge es auch stabiler und
+
+Mit dieser Platte lässt sich der Motor nun
+stabil befestigen. Ein weiterer großer
+Vorteil dieser Lösung ist die Möglichkeit,
+auch an der Rückseite der Anbauplatte
+weiter zu bauen, um den Motor so z. B.
+fest in einem Fahrzeug zu integrieren
+(Abb. 3).
+
+
+
+Für dieses Problem habe ich einen Adapter
+4 mm auf 5 mm aus Messing entwickelt,
+der mittels Madenschrauben mit der
+Getriebewelle und der Metallachse befestigt wird (Abb. 4).
+Aber lässt sich auch eine Schnecke auf der
+Achse des Getriebes stabil befestigen?
+Auch dafür habe ich eine Lösung gefunden. Mit einem selbst gedrehten Adapter
+lässt sich die Schnecke 35109 fest mit der
+Ausgangswelle des Getriebes verbinden
+(Abb. 5).
+
+
+Der Powermotor hat zudem noch eine
+5 mm-Achse am Getriebeausgang. Wie wir
+alle wissen, liegt das Standard-Maß der ftAchsen jedoch bei 4 mm. Es gibt die
+Antriebshülse 35142, mit der sich die
+Rastachsen mit dem Powermotor verbinden lassen. Ist aber das Drehmoment zu
+hoch, versagen die Achsen oder die Hülse
+den Dienst.
+Was also tun? Metallachsen wären nicht
+schlecht, aber wie verbinden?
+
+Ganz lässt sich der Nachteil des mit 33 mm
+für das fischertechnik-Raster (5/7,5/15/
+30 mm) etwas zu großen Getriebes aber
+auch durch diese Teile nicht beseitigen.
+Dennoch gilt: Der Powermotor ist mit den
+richtigen Teilen gut zu verbauen und bringt
+so auch seine volle Kraft zur Entfaltung.
+Auch beim Power-Motor heißt es also:
+Geht nicht, gibt’s nicht! Man muss sich nur
+etwas einfallen lassen …
+
+
+

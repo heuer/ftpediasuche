@@ -1,0 +1,179 @@
+
+
+Modell
+
+Tunnelbohrmaschine
+Daniel Canonica
+Ohne die gewaltigen Tunnelbohrmaschinen wären die heutigen enormen Tunnelprojekte nicht
+machbar. Diese Maschinen sind technische Meisterwerke. Sie erlauben – verglichen mit
+herkömmlichen Baumethoden – einen weitgehend sicheren Vortrieb in verschiedenartigem
+Gestein.
+
+Der Gotthard-Basistunnel
+Im Sommer 2016 wurde mit dem GotthardBasistunnel der längste Eisenbahntunnel
+der Welt eröffnet. Seit dem 11.12.2016 ist
+er für den fahrplanmäßigen Personenverkehr mit Tempo 200 freigegeben. Der
+Hauptnutzen besteht aber darin, dass lange
+und schwere Güterzüge und Huckepackwagen in wenigen Stunden die Nord-SüdAchse Basel-Mailand befahren können, um
+einen Teil des alpenquerenden Güterverkehrs von der Straße auf die Schiene zu
+bringen.
+Für den 57 km langen Basistunnel mit zwei
+parallelen Röhren und diversen Zusatzstollen wurden von 2003 bis 2011 vier
+Tunnelbohrmaschinen mit den schönen
+Namen „Sissi“, „Heidi“, „Gabi-I“ und
+„Gabi-II“ eingesetzt. Insgesamt wurden 28
+Millionen Kubikmeter Material ausgebrochen [1, 3].
+
+meißeln und dahinter liegenden Geräten für
+den Abtransport des Ausbruchmaterials, für
+die Errichtung der Tunnelwände und für die
+Energie- und Wasserversorgung.
+Der Bohrkopf hat einen Durchmesser bis
+etwa 14 Meter, die gesamte Maschine ist bis
+zu 400 Meter lang [2].
+
+
+Die Tunnelbohrmaschine
+
+Der Bohrkopf wird mit bis zu 8000 kN
+gegen den Fels gedrückt. Dabei hält sich der
+hintere Teil der Maschine mit einer Art
+Stempel (Gripperplatten) an den Felswänden fest und der Bohrkopf wird mit Hydraulikzylindern vorgeschoben. Nach einem
+Stück Vortrieb werden die Gripper zurückgezogen, der hintere Teil der Maschine
+fährt vor und wird von neuem an der Felswand fixiert.
+
+Eine Tunnelbohrmaschine (TBM) besteht
+aus einem rotierenden Bohrkopf mit Roll-
+
+Je nach Gestein wird im Idealfall ein
+Vortrieb von bis zu 50 Metern pro Tag
+
+Der Vortrieb gelang weitgehend nach Plan.
+Zwischendurch mussten aufgrund des
+Gesteins längere Pausen eingelegt werden.
+Insbesondere der wie Zucker aussehende
+Dolomit, welcher stellenweise mit Wasser
+unter hohem Druck austreten kann, war eine
+besondere Herausforderung.
+
+
+
+Modell
+
+erreicht; dabei wird normalerweise im DreiSchichtbetrieb gearbeitet.
+
+
+Im Gotthard-Basistunnel wurden etwa 150500 Meter pro Monat und 3-12 mm pro
+Umdrehung des Bohrkopfs erreicht [3].
+
+hinten die Gripper
+
+Hier sieht man den Bohrkopf mit den Rollmeißeln:
+
+Hinter dem Bohrkopf wird die Felswand
+entweder mit Spritzbeton gesichert, oder es
+werden sogenannte Tübbinge angebracht,
+das sind vorgefertigte, abgerundete Elemente, welche etwa einem Siebtel eines
+Kreises entsprechen. Die Tübbinge werden
+ringsum an die Tunnelwand gepresst und
+mit einem Schlussstück wie beim klassischen Bogenbau gesichert.
+
+
+
+Die elektrische Leistung einer TBM liegt
+bei 250-950 kW.
+
+Das Modell
+Bei meinem Modell einer fischertechnikTunnelbohrmaschine (Abb. 4) handelt es
+sich noch um einen Prototypen – da kann
+noch vieles ergänzt und verbessert werden.
+
+Der Bohrkopf wird, wie schon erwähnt, mit
+enormem Druck gegen den Fels gepresst.
+Durch die Rotation und die Rollmeißel wird
+der Fels beinahe pulverisiert, kleine Stücke
+fallen ab und werden durch Führungen
+gegen die Mitte des Bohrkopfs auf ein
+Förderband geleitet.
+Auf dem folgenden Bild sieht man den
+Antrieb des Bohrkopfs. Dank der starken
+Untersetzung kann problemlos ein kleiner
+Motor verwendet werden (solange man
+nicht auf allzu hartes Gestein trifft …).
+
+
+
+
+
+Für den Vortrieb habe ich eine Lösung mit
+Zahnstangen und einem zweifachen
+Schneckengetriebe gewählt.
+
+
+Und hier nun die Gripper:
+
+
+Die Einheit mit der Zahnstange und der
+unteren Stange ist mit dem Bohrkopf
+verbunden, der Motor ist mit den Grippern
+verbunden. Durch Abrollen des Zahnrads
+und Gleiten der Stange im BS30 am
+Motorblock ergibt sich ein maximaler
+Vortrieb von etwa 10 cm.
+Hier noch der Vortrieb von oben gesehen
+(Abb. 8).
+
+
+
+Durch die beiden mittigen Z20 werden die
+Gripperplatten mit je zwei Zahnstangen
+gegenläufig nach außen oder innen bewegt.
+Die Verankerung mit dem Rest der Maschine geschieht auch hier mit langen Stangen,
+welche in den Nuten der BS30 laufen.
+
+
+Modell
+
+
+
+Schließlich musste ich noch ein Stück
+Tunnel bauen, damit sich die Gripperplatten
+irgendwo abstützen können (Abb. 11).
+
+Verbesserungsmöglichkeiten
+Mangels Hydraulik- bzw. Pneumatic-Teilen
+habe ich die Hauptelemente mit Zahnrädern
+und Zahnstangen gebaut. Hier gibt es viele
+Möglichkeiten, das Modell noch wesentlich
+wirklichkeitsnäher zu bauen.
+Der Vortrieb mit nur einer Zahnstange
+funktioniert zwar, hier können aber wesentlich robustere Lösungen entwickelt werden.
+Ich wünsche viel Freude beim Nachbauen
+und Austüfteln von noch ausgereifteren
+Lösungen, und bin gespannt, wann sich das
+erste Modell durch echten Sandstein
+arbeitet!
+
+
+Wenn nun die Gripper ausgefahren sind,
+funktioniert das tatsächlich (Abb. 12)
+
+Literatur
+[1]
+
+Wikipedia: Gotthard-Basistunnel
+
+[2]
+
+Wikipedia: Tunnelbohrmaschine
+
+[3]
+
+Herrenknecht: Gotthard-Basistunnel
+
+[4]
+
+Wikipedia: Tübbing
+
+
+
