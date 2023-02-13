@@ -13,7 +13,7 @@ Das Repository bringt außer der Volltext-Datenbank und dem Xapian Modul alles m
 Die Xapian-Bindings lassen sich wie folgt installieren:
 
 ```shell
-pip install sphinx, xapian-bindings
+pip install sphinx xapian-bindings
 ```
 
 Anschließend läßt sich die Volltext-Datenbank mit
