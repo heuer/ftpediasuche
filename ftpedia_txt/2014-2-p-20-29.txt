@@ -1,5 +1,114 @@
 
 
+Pneumatik
+
+Druckluftsteuerungen (Teil 2)
+Stefan Falk
+In der letzten Ausgabe haben wir die „Schlauch-Logik“ eingeführt, um auch mit aktuell produzierten Teilen von fischertechnik pneumatische Steuerungen herstellen zu können. Diese
+Reise setzen wir fort, um weitere mit den Ur-Pneumatik-Teilen machbare Steuerschaltungen
+auch mit heute noch hergestellten Teilen zu realisieren.
+Der Trick, einen Schlauch durch simples
+Abknicken zu einem 2/2-Wege-Ventil
+(zwei Anschlüsse, zwei Schaltstellungen)
+umzubauen, hat uns das „pneumatische
+Relais“, ein 4/2-Wegeventil z. B. zur
+Umschaltung eines Zylinders durch eine
+einzige Steuerleitung beschert (siehe
+ft:pedia 2014-1 [1]):
+
+· Anders als bei den Festo-Ventilen können wir alle vier Anschlüsse des 4/2Wege-Ventils beliebig verwenden. Bei
+den Festo-Ventilen ist der Abluftausgang kaum für etwas anderes
+brauchbar. Hier hingegen könnten wir
+direkt an die Abluftausgänge eine Drossel setzen, um ein langsames, gleichmäßiges Verfahren von Zylindern zu
+erreichen.
+Allerdings gibt es bei einem solchen, aus
+der Not geborenen Aufbau, natürlich auch
+Nachteile:
+· Das Ventil baut viel größer als die nur
+zwei oder drei BS15 große Kombination aus Betätigern und FestoVentilen.
+
+
+Dieses Ventil hat einige angenehme Eigenschaften:
+· Das wichtigste ist natürlich, dass man
+mit aktuell hergestellten und lieferbaren
+Pneumatik-Teilen auskommt.
+· Die Schaltzeit ist – dafür, dass wir ja
+keine Betätiger und Festo-Ventile [2]
+mehr zur Verfügung haben, sondern nur
+Zylinder – brauchbar kurz, weil der
+bewegliche Teil nur um wenige Millimeter verschoben werden muss.
+
+
+· Das Selbstbauventil benötigt durch das
+größere zu beaufschlagende Volumen
+des Zylinders mehr Druckluft für den
+Schaltvorgang als ein Betätiger.
+· Es ist schwergängiger als die Kombination Betätiger/Festo-Ventil.
+· Das Selbstbauventil springt nicht um,
+sondern wird langsam „umgedrückt“.
+Es gibt oft einen Zwischenzustand, in
+dem Druckluft unerwünscht ins Freie
+entweicht, weil beide Schläuche eines
+„Umschaltkontakts“ halb offen sind.
+
+Dieses letzten Nachteils wollen wir uns in
+dieser Ausgabe annehmen. Der bewirkt
+nämlich auch, dass wir die Druckluft zum
+Ansteuern des Ventils immer schlagartig
+zuführen oder ablassen müssen. Wir können also keine Drossel in die Steuerzuleitung einfügen, um das Ventil mit einer
+Zeitverzögerung schalten zu lassen. Es
+würde viel zu langsam umschalten, und der
+dabei in der Zwischenstellung entstehende
+Druckverlust kann den Stillstand eines
+ganzen Modells verursachen.
+
+Springkontakt
+Wir brauchen also auch bei langsamer
+Betätigung ein schlagartiges Umschalten
+des Ventils. Wer einen der älteren Betätiger besitzt, kann selber beobachten, dass
+der darin enthaltene Gummibalg tatsächlich schlagartig ein oder aus fährt. Mangels
+Gummibalg müssen wir uns aber eine
+andere Möglichkeit suchen.
+
+Pneumatik
+
+Wie die Abbildungen zeigen, wird der
+zentrale Umschaltkontakt über ein kleines,
+gebogenes, federndes Element mit der
+äußeren Betätigung verbunden. Sobald der
+Taster weit genug eingedrückt wird,
+schnappt der Kontakt schlagartig um; beim
+wieder Loslassen genauso. So ist der
+Taster immer in einem definierten Zustand,
+und der eigentliche Umschaltvorgang geht
+sehr schnell, auch wenn der Taster noch so
+langsam gedrückt oder losgelassen wird.
+Ähnlich können wir auch unser selbstgebautes Pneumatikventil schlagartig umschalten lassen, wie wir gleich sehen
+werden. Das wiederum ermöglicht es uns,
+Zeitschaltungen unter Verwendung von
+Drosseln herzustellen, die einen Zylinder
+nur ganz langsam verfahren und dennoch
+ab einem Grenzpunkt ein 4/2-Wege-Ventil
+augenblicklich umschalten lassen.
+
+Betrachten wir dazu die Mechanik im
+Inneren der elektrischen fischertechnikTaster. Die ist im aktuellen Minitaster
+identisch mit dem Ur-Taster, aber in letzterem sieht man auch von außen sehr schön
+die Funktionsweise [3]:
+
+
+Der pneumatische Wimpel
+
+
+Passend zur gerade laufenden FußballWeltmeisterschaft wollen wir den in
+gesteuerten
+Wimpel-Winker
+bauen. Vielleicht wollt ihr damit Eure
+Mannschaft (und nach der WM vielleicht
+euren eigenen Verein) bewerben. J
+
+
+
 Natürlich kommt es dabei auf die inneren
 Werte an, auf die Technik dahinter. Das
 Modell funktioniert so:

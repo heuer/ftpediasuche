@@ -7,7 +7,7 @@ Hans-Christian Funke
 Mit dem Multifunktionsmodul [1] kann man mit Hilfe von Sensoren und Fühlern interessante
 Ergänzungen z. B. für Kugelbahnen aufbauen. Kugelbahnen sind immer noch der Trend bei
 den Modellen und aus diesem Grund habe ich meine Kugelbahn hergenommen und mit
-Soundeffekt und einem Kugelzähler ausgestatten.
+Soundeffekt und einem Kugelzähler ausgestattet.
 
 Einleitung
 In diesem Beitrag stelle ich euch die Schaltungen für einen einfachen elektronischen

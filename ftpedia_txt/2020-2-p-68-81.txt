@@ -785,19 +785,11 @@ Ursprünglich wollte ich in diesem Beitragsteil noch auf die elektronischen Scha
 zum Ansteuern von Verbrauchern wie
 Motoren, Magneten, Pumpen usw.
 
-Abb.
-22:21:
-Korrekte
-Schaltung
-RS-Flip-Flop-Moduls
-70008
-Abb.
-Teilschaltung
-desdes
-Multifunktionsmoduls
-70015
 
-eingehen, aber diesen Teil verschiebe ich
+
+Elektronik
+
+eingehen, aber diesen Teil verschiebe ich
 auf die nächste Fortsetzung.
 Neben den drei Elektronikmodulen zum
 Schalten von Verbrauchern (70009, 70018
@@ -822,8 +814,6 @@ schauen oder am PC unter [1], alternativ
 auch bei eurem fischertechnik-Einzelteilhändler Franz Santjohanser [2] (Suchbegriff
 „700“).
 Fortsetzung folgt!
-
-Elektronik
 
 Korrektur
 Im zweiten Teil meiner Beitragsreihe [5]
