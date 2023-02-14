@@ -27,7 +27,7 @@ def create_fulltext_db(db_path, csv_path, text_path) -> None:
     :param db_path: Path to the fulltext index.
     :param csv_path: Path to the CSV file.
     :param text_path: Path to the text files containing the text of an article. The directory should contain text
-        files with the pattern 'YYYY-ISSUE_NUMBER-page-{FIRST_PAGE}-{LAST_PAGE}.txt'
+        files with the pattern 'YYYY-ISSUE_NUMBER-p-FIRST_PAGE-LAST_PAGE.txt'
     """
     db = xapian.WritableDatabase(db_path, xapian.DB_CREATE_OR_OPEN)
     term_generator = xapian.TermGenerator()
@@ -45,11 +45,9 @@ def create_fulltext_db(db_path, csv_path, text_path) -> None:
         term_generator.index_text(title, 1, 'S')
         term_generator.index_text(categories, 1, _PREFIX_CAT)
         term_generator.index_text(str(year), 1, _PREFIX_YEAR)
-        authors = []
         for author in article.authors:
             term_generator.index_text(author, 1, 'A')
             term_generator.increase_termpos()
-            authors.append(author)
         term_generator.index_text(title)
         term_generator.increase_termpos()
         term_generator.index_text(categories)
@@ -60,9 +58,9 @@ def create_fulltext_db(db_path, csv_path, text_path) -> None:
         doc.add_boolean_term(f'U{url}')
         doc.add_boolean_term(f'Q{identifier}')
         doc.add_value(0, xapian.sortable_serialise(year))
-        doc.set_data(json.dumps(dict(title=title, authors=authors, url=url, issue=article.issue, pages=article.pages,
-                                     main_category=main_category, category=category, year=year, issue_number=issue_no,
-                                     content=content.strip())))
+        doc.set_data(json.dumps(dict(title=title, authors=article.authors, url=url, issue=article.issue,
+                                     pages=article.pages, main_category=main_category, category=category, year=year,
+                                     issue_number=issue_no, content=content.strip())))
         db.replace_document(f'Q{identifier}', doc)
     db.flush()
     db.close()
