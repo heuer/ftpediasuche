@@ -1,3 +1,10 @@
+Unmaintained
+============
+
+Da der Vorschlag nun umgesetzt wird, schließe ich weitere Entwicklungen hier aus. 
+
+
+
 ft:pedia Volltextsuche
 ======================
 
